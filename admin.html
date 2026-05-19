@@ -556,7 +556,7 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
    BARA CONCOURS — TABLEAU D'ADMINISTRATION
    =========================================== */
 
-const ADMIN_PASSWORD_HASH = 'bara_admin_2026'; // À changer dans le code
+const ADMIN_PASSWORD_HASH = 'BaraAdmin_2026!Issoufou#OK'; // Mot de passe fort — ne pas partager
 
 const Admin = {
   state: {
@@ -678,12 +678,38 @@ const Admin = {
   },
 
   login(password) {
+    // === Protection anti-brute-force ===
+    const lockUntil = parseInt(localStorage.getItem('bara_admin_lock_until') || '0');
+    const now = Date.now();
+    if (lockUntil > now) {
+      const minutesRestantes = Math.ceil((lockUntil - now) / (60 * 1000));
+      alert('🔒 Trop d\'essais incorrects. Réessaye dans ' + minutesRestantes + ' minute(s).');
+      return false;
+    }
+
     if (password === ADMIN_PASSWORD_HASH) {
       sessionStorage.setItem('bara_admin_auth', '1');
+      // Reset les compteurs d'échec
+      localStorage.removeItem('bara_admin_fail_count');
+      localStorage.removeItem('bara_admin_lock_until');
       this.state.isAuthenticated = true;
       this.render();
       return true;
     }
+
+    // Mauvais mot de passe : on incrémente le compteur
+    const failCount = parseInt(localStorage.getItem('bara_admin_fail_count') || '0') + 1;
+    localStorage.setItem('bara_admin_fail_count', failCount.toString());
+
+    if (failCount >= 5) {
+      // Bloquer pendant 1 heure
+      const unlockTime = now + 60 * 60 * 1000;
+      localStorage.setItem('bara_admin_lock_until', unlockTime.toString());
+      alert('🔒 Trop d\'essais incorrects (5). L\'admin est bloqué pendant 1 heure.');
+    } else {
+      alert('❌ Mot de passe incorrect. ' + (5 - failCount) + ' essais restants.');
+    }
+
     return false;
   },
 
