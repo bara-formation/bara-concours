@@ -1,0 +1,3183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0F5132">
+<title>Bara Concours — Administration</title>
+
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/icon-apple.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --green-bf: #0F5132;
+  --green-bf-dark: #0a3a23;
+  --green-bf-light: #1a6b46;
+  --gold-bf: #FCD116;
+  --gold-bf-dark: #e0b800;
+  --red-bf: #CE1126;
+  --cream: #FAF7F2;
+  --cream-dark: #F0EAE0;
+  --paper: #FFFFFF;
+  --ink: #1a1a1a;
+  --ink-soft: #3f3f46;
+  --ink-mute: #6b7280;
+  --ink-light: #9ca3af;
+  --line: #e5e7eb;
+  --line-soft: #f3f4f6;
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --danger: #dc2626;
+  --info: #2563eb;
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 2px rgba(15, 81, 50, 0.06);
+  --shadow: 0 2px 8px rgba(15, 81, 50, 0.08);
+  --shadow-lg: 0 8px 24px rgba(15, 81, 50, 0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+input, select, textarea { font-family: inherit; font-size: inherit; }
+
+/* ========== LOGIN SCREEN ========== */
+.login-screen {
+  min-height: 100dvh;
+  background: linear-gradient(160deg, var(--green-bf) 0%, var(--green-bf-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.login-screen::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(252,209,22,0.12) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.login-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem 1.8rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  position: relative;
+  z-index: 1;
+}
+.login-logo {
+  width: 70px; height: 70px;
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto 1.2rem;
+}
+.login-title {
+  font-family: 'Instrument Serif', serif;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--green-bf);
+  margin-bottom: 0.3rem;
+  line-height: 1.1;
+}
+.login-title span { color: var(--gold-bf-dark); font-style: italic; }
+.login-sub {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--ink-mute);
+  margin-bottom: 1.8rem;
+}
+.login-input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  background: var(--cream);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  outline: none;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s;
+}
+.login-input:focus { border-color: var(--green-bf); background: white; }
+.login-btn {
+  width: 100%;
+  padding: 0.95rem;
+  background: var(--green-bf);
+  color: white;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+.login-btn:hover { background: var(--green-bf-dark); }
+.login-error {
+  background: #fef2f2;
+  color: #991b1b;
+  padding: 0.7rem 0.9rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  margin-bottom: 1rem;
+  border-left: 3px solid var(--danger);
+}
+
+/* ========== ADMIN LAYOUT ========== */
+.admin {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+}
+@media (max-width: 768px) {
+  .admin { grid-template-columns: 1fr; }
+  .sidebar { position: fixed; top: 0; left: -240px; height: 100vh; z-index: 100; transition: left 0.3s; }
+  .sidebar.open { left: 0; }
+  .main { padding: 1rem; }
+  .mobile-menu-btn { display: flex !important; }
+}
+
+.sidebar {
+  background: linear-gradient(180deg, var(--green-bf) 0%, var(--green-bf-dark) 100%);
+  color: white;
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+}
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0 1.2rem 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.sidebar-logo img { width: 40px; height: 40px; border-radius: 10px; }
+.sidebar-brand {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.sidebar-brand span { color: var(--gold-bf); font-style: italic; display: block; font-size: 0.7rem; opacity: 0.8; margin-top: 0.2rem; }
+
+.sidebar-nav { padding: 1rem 0; flex: 1; }
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 1.2rem;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-left: 3px solid transparent;
+}
+.nav-link:hover { background: rgba(255,255,255,0.05); color: white; }
+.nav-link.active {
+  background: rgba(252,209,22,0.1);
+  color: var(--gold-bf);
+  border-left-color: var(--gold-bf);
+}
+.nav-icon { font-size: 1.1rem; flex-shrink: 0; }
+
+.sidebar-footer {
+  padding: 1rem 1.2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.logout-btn {
+  width: 100%;
+  padding: 0.7rem;
+  background: rgba(206,17,38,0.15);
+  color: #fca5a5;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logout-btn:hover { background: rgba(206,17,38,0.25); }
+
+/* ========== MAIN ========== */
+.main {
+  padding: 2rem;
+  overflow-x: hidden;
+}
+.mobile-menu-btn {
+  display: none;
+  width: 40px; height: 40px;
+  border-radius: 8px;
+  background: white;
+  align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.page-title {
+  font-family: 'Instrument Serif', serif;
+  font-size: 2rem;
+  color: var(--ink);
+  line-height: 1.1;
+}
+.page-title span { color: var(--green-bf); font-style: italic; }
+.page-sub { font-size: 0.88rem; color: var(--ink-mute); margin-top: 0.2rem; }
+
+/* ========== STATS CARDS ========== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.stat-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.3rem 1.4rem;
+  border: 1px solid var(--line-soft);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: -20px; right: -20px;
+  width: 80px; height: 80px;
+  background: var(--accent-color, #f0fdf4);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+.stat-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+  position: relative;
+  z-index: 1;
+}
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--ink-mute);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  position: relative;
+  z-index: 1;
+}
+.stat-value {
+  font-family: 'Instrument Serif', serif;
+  font-size: 2.2rem;
+  line-height: 1;
+  margin-top: 0.3rem;
+  color: var(--accent-text, var(--green-bf));
+  position: relative;
+  z-index: 1;
+}
+.stat-value small { font-size: 0.7em; color: var(--ink-mute); font-family: 'Plus Jakarta Sans', sans-serif; }
+
+/* ========== TABLE ========== */
+.table-wrap {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line-soft);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+.table-header {
+  padding: 1.2rem 1.4rem;
+  border-bottom: 1px solid var(--line-soft);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.table-title {
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.search-input {
+  padding: 0.55rem 0.9rem 0.55rem 2.2rem;
+  background: var(--cream);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  outline: none;
+  width: 240px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%236b7280'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0.7rem center;
+  background-size: 14px;
+}
+.search-input:focus { border-color: var(--green-bf); background-color: white; }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th {
+  background: var(--cream);
+  padding: 0.8rem 1.4rem;
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--line);
+}
+.table td {
+  padding: 1rem 1.4rem;
+  font-size: 0.88rem;
+  border-bottom: 1px solid var(--line-soft);
+}
+.table tr:hover td { background: var(--cream); }
+.table tr:last-child td { border-bottom: none; }
+
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+.badge-success { background: #dcfce7; color: #166534; }
+.badge-warning { background: #fef9c3; color: #854d0e; }
+.badge-danger { background: #fee2e2; color: #991b1b; }
+.badge-info { background: #dbeafe; color: #1e40af; }
+.badge-gold { background: linear-gradient(135deg, #fef9c3, #fde68a); color: #854d0e; border: 1px solid #fbbf24; }
+
+.btn-action {
+  padding: 0.5rem 0.95rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  font-weight: 700;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.btn-action:active { transform: scale(0.97); }
+.btn-success { background: var(--success); color: white; }
+.btn-success:hover { background: #15803d; }
+.btn-danger { background: #fef2f2; color: var(--danger); border: 1px solid #fecaca; }
+.btn-danger:hover { background: var(--danger); color: white; }
+.btn-secondary {
+  background: white;
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+}
+.btn-secondary:hover { background: var(--cream); }
+
+.empty-state {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: var(--ink-mute);
+}
+.empty-icon { font-size: 3rem; margin-bottom: 0.6rem; opacity: 0.5; }
+.empty-title { font-size: 1rem; font-weight: 700; color: var(--ink); margin-bottom: 0.3rem; }
+.empty-sub { font-size: 0.85rem; }
+
+/* ========== TABS ========== */
+.tabs {
+  display: flex;
+  gap: 0.4rem;
+  border-bottom: 1.5px solid var(--line);
+  margin-bottom: 1.2rem;
+  overflow-x: auto;
+}
+.tab {
+  padding: 0.7rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-mute);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1.5px;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.tab:hover { color: var(--ink); }
+.tab.active { color: var(--green-bf); border-bottom-color: var(--green-bf); }
+.tab .tab-count {
+  display: inline-block;
+  background: var(--line);
+  color: var(--ink-soft);
+  font-size: 0.68rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  margin-left: 0.3rem;
+  font-weight: 700;
+}
+.tab.active .tab-count { background: var(--green-bf); color: white; }
+
+/* ========== MODAL ========== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadeIn 0.2s;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.modal {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.6rem;
+  max-width: 460px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalIn 0.25s;
+}
+@keyframes modalIn { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.modal-title {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.5rem;
+  color: var(--green-bf);
+  margin-bottom: 0.3rem;
+}
+.modal-desc { font-size: 0.88rem; color: var(--ink-soft); margin-bottom: 1.2rem; line-height: 1.5; }
+.modal-actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+}
+.modal-actions button { flex: 1; padding: 0.85rem; }
+
+.form-group { margin-bottom: 1rem; }
+.form-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.02em;
+}
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  background: var(--cream);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius);
+  font-size: 0.92rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--green-bf);
+  background: white;
+}
+.form-textarea { resize: vertical; min-height: 100px; }
+.form-help { font-size: 0.72rem; color: var(--ink-mute); margin-top: 0.3rem; }
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--ink);
+  color: white;
+  padding: 0.85rem 1.3rem;
+  border-radius: var(--radius);
+  font-size: 0.88rem;
+  font-weight: 600;
+  z-index: 300;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  animation: toastIn 0.3s, toastOut 0.3s 2.5s;
+}
+@keyframes toastIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes toastOut { to { opacity: 0; transform: translateY(20px); } }
+.toast.success { background: var(--success); }
+.toast.danger { background: var(--danger); }
+
+.demo-banner {
+  background: linear-gradient(135deg, #fef9c3, #fde68a);
+  border: 1px solid #fbbf24;
+  border-radius: var(--radius);
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  color: #854d0e;
+}
+.demo-banner strong { color: #713f12; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--line-soft); }
+::-webkit-scrollbar-thumb { background: var(--ink-light); border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<div id="app"></div>
+
+<!-- Charger les données de l'app principale -->
+<script src="data/concours.js"></script>
+<script src="data/questions.js"></script>
+<script src="data/premium.js"></script>
+<script src="data/annales.js"></script>
+
+<script>
+/* ===========================================
+   BARA CONCOURS — TABLEAU D'ADMINISTRATION
+   =========================================== */
+
+const ADMIN_PASSWORD_HASH = 'bara_admin_2026'; // À changer dans le code
+
+const Admin = {
+  state: {
+    isAuthenticated: false,
+    currentPage: 'dashboard',
+    currentTab: 'pending',
+    sidebarOpen: false,
+    searchQuery: '',
+    modalOpen: null,
+    modalData: null
+  },
+
+  // ============================================
+  // STORAGE - Données partagées avec l'app
+  // ============================================
+
+  loadData() {
+    // Lit les données stockées par l'app principale
+    return {
+      pendingPayments: this.getPendingPayments(),
+      users: this.getMockUsers(),
+      forumTopics: this.getForumTopics(),
+      reportedTopics: this.getReportedTopics()
+    };
+  },
+
+  getPendingPayments() {
+    try {
+      const saved = localStorage.getItem('bara_admin_pending_payments');
+      if (saved) return JSON.parse(saved);
+    } catch (e) {}
+    // Données de démo
+    return [
+      {
+        id: 'pay_1',
+        reference: 'BC-MOIP5BYY-AT0A',
+        userName: 'Adama Kaboré',
+        userPhone: '+22670123456',
+        userCity: 'Ouagadougou',
+        plan: 'monthly',
+        operator: 'orange',
+        amount: 2000,
+        status: 'pending',
+        receivedAt: Date.now() - 30 * 60 * 1000
+      },
+      {
+        id: 'pay_2',
+        reference: 'BC-MOIPABCD-EFGH',
+        userName: 'Fatim Ouédraogo',
+        userPhone: '+22675987654',
+        userCity: 'Bobo-Dioulasso',
+        plan: 'yearly',
+        operator: 'moov',
+        amount: 10000,
+        status: 'pending',
+        receivedAt: Date.now() - 2 * 60 * 60 * 1000
+      },
+      {
+        id: 'pay_3',
+        reference: 'BC-MOIPXXXX-ZZZZ',
+        userName: 'Issouf Bationo',
+        userPhone: '+22678456789',
+        userCity: 'Koudougou',
+        plan: 'weekly',
+        operator: 'wave',
+        amount: 1000,
+        status: 'pending',
+        receivedAt: Date.now() - 5 * 60 * 60 * 1000
+      }
+    ];
+  },
+
+  savePendingPayments(payments) {
+    localStorage.setItem('bara_admin_pending_payments', JSON.stringify(payments));
+  },
+
+  getMockUsers() {
+    try {
+      const saved = localStorage.getItem('bara_admin_users');
+      if (saved) return JSON.parse(saved);
+    } catch (e) {}
+    // Données de démo
+    return [
+      { id: 'u1', name: 'Adama Kaboré', phone: '+22670123456', city: 'Ouagadougou', targetConcours: 'police', isPremium: false, totalQCM: 12, joinedAt: Date.now() - 7 * 86400000 },
+      { id: 'u2', name: 'Mariam Diallo', phone: '+22676543210', city: 'Bobo-Dioulasso', targetConcours: 'police', isPremium: true, premiumPlan: 'monthly', premiumExpiresAt: new Date(Date.now() + 22 * 86400000).toISOString(), totalQCM: 47, joinedAt: Date.now() - 30 * 86400000 },
+      { id: 'u3', name: 'Ousmane Tougma', phone: '+22678456789', city: 'Koudougou', targetConcours: 'professeur_ecoles', isPremium: false, totalQCM: 8, joinedAt: Date.now() - 3 * 86400000 },
+      { id: 'u4', name: 'Aïssata Sawadogo', phone: '+22671234567', city: 'Ouahigouya', targetConcours: 'infirmier', isPremium: true, premiumPlan: 'yearly', premiumExpiresAt: new Date(Date.now() + 350 * 86400000).toISOString(), totalQCM: 89, joinedAt: Date.now() - 60 * 86400000 },
+      { id: 'u5', name: 'Boukari Compaoré', phone: '+22679876543', city: 'Banfora', targetConcours: 'tech_genie_civil', isPremium: false, totalQCM: 23, joinedAt: Date.now() - 14 * 86400000 }
+    ];
+  },
+
+  saveMockUsers(users) {
+    localStorage.setItem('bara_admin_users', JSON.stringify(users));
+  },
+
+  getForumTopics() {
+    try {
+      const saved = localStorage.getItem('bara_forum_topics');
+      if (saved) return JSON.parse(saved);
+    } catch (e) {}
+    return [];
+  },
+
+  getReportedTopics() {
+    try {
+      const saved = localStorage.getItem('bara_reports');
+      if (saved) return JSON.parse(saved);
+    } catch (e) {}
+    return [];
+  },
+
+  // ============================================
+  // AUTH
+  // ============================================
+
+  checkAuth() {
+    const stored = sessionStorage.getItem('bara_admin_auth');
+    return stored === '1';
+  },
+
+  login(password) {
+    if (password === ADMIN_PASSWORD_HASH) {
+      sessionStorage.setItem('bara_admin_auth', '1');
+      this.state.isAuthenticated = true;
+      this.render();
+      return true;
+    }
+    return false;
+  },
+
+  logout() {
+    if (!confirm('Voulez-vous vraiment vous déconnecter ?')) return;
+    sessionStorage.removeItem('bara_admin_auth');
+    this.state.isAuthenticated = false;
+    this.render();
+  },
+
+  // ============================================
+  // RENDER
+  // ============================================
+
+  render() {
+    const app = document.getElementById('app');
+
+    if (!this.state.isAuthenticated && !this.checkAuth()) {
+      app.innerHTML = this.renderLogin();
+      return;
+    }
+
+    this.state.isAuthenticated = true;
+
+    let mainHtml = '';
+    switch (this.state.currentPage) {
+      case 'dashboard': mainHtml = this.renderDashboard(); break;
+      case 'payments': mainHtml = this.renderPayments(); break;
+      case 'users': mainHtml = this.renderUsers(); break;
+      case 'forum': mainHtml = this.renderForumModeration(); break;
+      case 'questions': mainHtml = this.renderQuestionsAdmin(); break;
+      case 'annales': mainHtml = this.renderAnnalesAdmin(); break;
+      case 'settings': mainHtml = this.renderSettings(); break;
+      default: mainHtml = this.renderDashboard();
+    }
+
+    app.innerHTML = `
+      <div class="admin">
+        ${this.renderSidebar()}
+        <main class="main">
+          <button class="mobile-menu-btn" onclick="Admin.toggleSidebar()">☰</button>
+          ${mainHtml}
+        </main>
+      </div>
+      ${this.state.modalOpen ? this.renderModal() : ''}
+    `;
+  },
+
+  renderLogin() {
+    return `
+      <div class="login-screen">
+        <div class="login-card">
+          <img src="icons/icon-192.png" class="login-logo" alt="Bara Concours">
+          <div class="login-title">Bara <span>Admin</span></div>
+          <div class="login-sub">Tableau de bord d'administration</div>
+
+          <div id="loginError"></div>
+
+          <form onsubmit="Admin.handleLogin(event)">
+            <input
+              type="password"
+              class="login-input"
+              id="passwordInput"
+              placeholder="Mot de passe administrateur"
+              autocomplete="current-password"
+              autofocus>
+            <button type="submit" class="login-btn">Se connecter →</button>
+          </form>
+
+          <div style="text-align:center; font-size:0.72rem; color:var(--ink-mute); margin-top:1.5rem">
+            🔒 Accès réservé à Bara Formation
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  handleLogin(e) {
+    e.preventDefault();
+    const input = document.getElementById('passwordInput');
+    const password = input.value;
+    if (this.login(password)) {
+      this.toast('🎉 Bienvenue dans le tableau de bord', 'success');
+    } else {
+      const errEl = document.getElementById('loginError');
+      errEl.innerHTML = '<div class="login-error">⚠️ Mot de passe incorrect</div>';
+      input.value = '';
+      input.focus();
+    }
+  },
+
+  renderSidebar() {
+    const cur = this.state.currentPage;
+    const data = this.loadData();
+    const pendingCount = data.pendingPayments.filter(p => p.status === 'pending').length;
+    const reportedCount = data.reportedTopics.length;
+
+    return `
+      <aside class="sidebar ${this.state.sidebarOpen ? 'open' : ''}">
+        <div class="sidebar-logo">
+          <img src="icons/icon-192.png" alt="Bara Concours">
+          <div>
+            <div class="sidebar-brand">Bara <span>Admin</span></div>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-link ${cur === 'dashboard' ? 'active' : ''}" onclick="Admin.navigate('dashboard')">
+            <span class="nav-icon">📊</span>
+            <span>Tableau de bord</span>
+          </div>
+          <div class="nav-link ${cur === 'payments' ? 'active' : ''}" onclick="Admin.navigate('payments')">
+            <span class="nav-icon">💰</span>
+            <span>Paiements ${pendingCount > 0 ? `<span style="background:var(--gold-bf); color:var(--green-bf-dark); font-size:0.65rem; padding:0.1rem 0.5rem; border-radius:999px; margin-left:0.3rem">${pendingCount}</span>` : ''}</span>
+          </div>
+          <div class="nav-link ${cur === 'users' ? 'active' : ''}" onclick="Admin.navigate('users')">
+            <span class="nav-icon">👥</span>
+            <span>Utilisateurs</span>
+          </div>
+          <div class="nav-link ${cur === 'forum' ? 'active' : ''}" onclick="Admin.navigate('forum')">
+            <span class="nav-icon">💬</span>
+            <span>Forum ${reportedCount > 0 ? `<span style="background:var(--red-bf); color:white; font-size:0.65rem; padding:0.1rem 0.5rem; border-radius:999px; margin-left:0.3rem">${reportedCount}</span>` : ''}</span>
+          </div>
+          <div class="nav-link ${cur === 'questions' ? 'active' : ''}" onclick="Admin.navigate('questions')">
+            <span class="nav-icon">📝</span>
+            <span>Questions QCM</span>
+          </div>
+          <div class="nav-link ${cur === 'annales' ? 'active' : ''}" onclick="Admin.navigate('annales')">
+            <span class="nav-icon">📚</span>
+            <span>Annales</span>
+          </div>
+          <div class="nav-link ${cur === 'settings' ? 'active' : ''}" onclick="Admin.navigate('settings')">
+            <span class="nav-icon">⚙️</span>
+            <span>Paramètres</span>
+          </div>
+        </nav>
+
+        <div class="sidebar-footer">
+          <button class="logout-btn" onclick="Admin.logout()">
+            🚪 Se déconnecter
+          </button>
+        </div>
+      </aside>
+    `;
+  },
+
+  // ============================================
+  // PAGE: DASHBOARD
+  // ============================================
+
+  renderDashboard() {
+    const data = this.loadData();
+    const pendingCount = data.pendingPayments.filter(p => p.status === 'pending').length;
+    const totalRevenue = data.pendingPayments.filter(p => p.status === 'activated').reduce((s, p) => s + p.amount, 0);
+    const totalUsers = data.users.length;
+    const premiumUsers = data.users.filter(u => u.isPremium).length;
+    const totalQCM = data.users.reduce((s, u) => s + (u.totalQCM || 0), 0);
+
+    return `
+      <div class="page-header">
+        <div>
+          <div class="page-title">Tableau de <span>bord</span></div>
+          <div class="page-sub">Vue d'ensemble de Bara Concours</div>
+        </div>
+      </div>
+
+      <div class="demo-banner">
+        <strong>🛠️ Mode démo :</strong> les données affichées sont des exemples. Configure Firebase pour connecter ton tableau d'admin aux vraies données.
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card" style="--accent-color:#fef9c3; --accent-text:#92400e">
+          <div class="stat-icon">💰</div>
+          <div class="stat-label">Paiements en attente</div>
+          <div class="stat-value">${pendingCount}</div>
+        </div>
+        <div class="stat-card" style="--accent-color:#dcfce7; --accent-text:#15803d">
+          <div class="stat-icon">📈</div>
+          <div class="stat-label">Revenus du mois</div>
+          <div class="stat-value">${this.formatPrice(totalRevenue)}<small> FCFA</small></div>
+        </div>
+        <div class="stat-card" style="--accent-color:#dbeafe; --accent-text:#1e40af">
+          <div class="stat-icon">👥</div>
+          <div class="stat-label">Utilisateurs total</div>
+          <div class="stat-value">${totalUsers}</div>
+        </div>
+        <div class="stat-card" style="--accent-color:#f3e8ff; --accent-text:#6b21a8">
+          <div class="stat-icon">⭐</div>
+          <div class="stat-label">Membres Premium</div>
+          <div class="stat-value">${premiumUsers}</div>
+        </div>
+        <div class="stat-card" style="--accent-color:#ffe4e6; --accent-text:#9f1239">
+          <div class="stat-icon">📝</div>
+          <div class="stat-label">QCM réalisés</div>
+          <div class="stat-value">${totalQCM}</div>
+        </div>
+        <div class="stat-card" style="--accent-color:#e0f7fb; --accent-text:#0e7490">
+          <div class="stat-icon">📊</div>
+          <div class="stat-label">Taux conversion</div>
+          <div class="stat-value">${totalUsers > 0 ? Math.round(premiumUsers / totalUsers * 100) : 0}<small>%</small></div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <div class="table-header">
+          <div class="table-title">⚡ Actions rapides</div>
+        </div>
+        <div style="padding: 1.4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem">
+          <button onclick="Admin.navigate('payments')" style="padding: 1rem; background: linear-gradient(135deg, #fef9c3, white); border: 1.5px solid #fbbf24; border-radius: var(--radius); text-align: left; cursor: pointer">
+            <div style="font-size:1.3rem; margin-bottom:0.3rem">💰</div>
+            <div style="font-weight:700; font-size:0.92rem; color:var(--ink)">Traiter les paiements</div>
+            <div style="font-size:0.78rem; color:var(--ink-mute); margin-top:0.2rem">${pendingCount} en attente</div>
+          </button>
+          <button onclick="Admin.openAddUserModal()" style="padding: 1rem; background: linear-gradient(135deg, #dcfce7, white); border: 1.5px solid #16a34a; border-radius: var(--radius); text-align: left; cursor: pointer">
+            <div style="font-size:1.3rem; margin-bottom:0.3rem">⭐</div>
+            <div style="font-weight:700; font-size:0.92rem; color:var(--ink)">Activer Premium manuellement</div>
+            <div style="font-size:0.78rem; color:var(--ink-mute); margin-top:0.2rem">Pour un étudiant spécifique</div>
+          </button>
+          <button onclick="Admin.openAddQuestionModal()" style="padding: 1rem; background: linear-gradient(135deg, #dbeafe, white); border: 1.5px solid #2563eb; border-radius: var(--radius); text-align: left; cursor: pointer">
+            <div style="font-size:1.3rem; margin-bottom:0.3rem">➕</div>
+            <div style="font-weight:700; font-size:0.92rem; color:var(--ink)">Ajouter une question</div>
+            <div style="font-size:0.78rem; color:var(--ink-mute); margin-top:0.2rem">Enrichir le contenu QCM</div>
+          </button>
+          <button onclick="Admin.navigate('forum')" style="padding: 1rem; background: linear-gradient(135deg, #f3e8ff, white); border: 1.5px solid #9333ea; border-radius: var(--radius); text-align: left; cursor: pointer">
+            <div style="font-size:1.3rem; margin-bottom:0.3rem">💬</div>
+            <div style="font-weight:700; font-size:0.92rem; color:var(--ink)">Modérer le forum</div>
+            <div style="font-size:0.78rem; color:var(--ink-mute); margin-top:0.2rem">${data.reportedTopics.length} signalements</div>
+          </button>
+        </div>
+      </div>
+    `;
+  },
+
+  // ============================================
+  // PAGE: PAIEMENTS
+  // ============================================
+
+  renderPayments() {
+    const data = this.loadData();
+    const tab = this.state.currentTab;
+    const search = (this.state.searchQuery || '').toLowerCase();
+
+    const filtered = data.pendingPayments.filter(p => {
+      if (tab === 'pending' && p.status !== 'pending') return false;
+      if (tab === 'activated' && p.status !== 'activated') return false;
+      if (tab === 'rejected' && p.status !== 'rejected') return false;
+      if (search) {
+        const txt = (p.userName + ' ' + p.userPhone + ' ' + p.reference).toLowerCase();
+        if (!txt.includes(search)) return false;
+      }
+      return true;
+    });
+
+    const pendingCount = data.pendingPayments.filter(p => p.status === 'pending').length;
+    const activatedCount = data.pendingPayments.filter(p => p.status === 'activated').length;
+    const rejectedCount = data.pendingPayments.filter(p => p.status === 'rejected').length;
+
+    return `
+      <div class="page-header">
+        <div>
+          <div class="page-title">Gestion des <span>paiements</span></div>
+          <div class="page-sub">Active les abonnements Premium en 1 clic</div>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab ${tab === 'pending' ? 'active' : ''}" onclick="Admin.setTab('pending')">
+          ⏳ En attente <span class="tab-count">${pendingCount}</span>
+        </button>
+        <button class="tab ${tab === 'activated' ? 'active' : ''}" onclick="Admin.setTab('activated')">
+          ✓ Activés <span class="tab-count">${activatedCount}</span>
+        </button>
+        <button class="tab ${tab === 'rejected' ? 'active' : ''}" onclick="Admin.setTab('rejected')">
+          ✗ Rejetés <span class="tab-count">${rejectedCount}</span>
+        </button>
+      </div>
+
+      <div class="table-wrap">
+        <div class="table-header">
+          <div class="table-title">${tab === 'pending' ? '⏳ Paiements en attente de validation' : tab === 'activated' ? '✓ Paiements activés' : '✗ Paiements rejetés'}</div>
+          <input type="text" class="search-input" placeholder="Rechercher..." value="${this.state.searchQuery}" oninput="Admin.search(this.value)">
+        </div>
+
+        ${filtered.length === 0 ? `
+          <div class="empty-state">
+            <div class="empty-icon">📭</div>
+            <div class="empty-title">Aucun paiement ${tab === 'pending' ? 'en attente' : tab === 'activated' ? 'activé' : 'rejeté'}</div>
+            <div class="empty-sub">${tab === 'pending' ? 'Tous les paiements sont à jour.' : 'L’historique est vide.'}</div>
+          </div>
+        ` : `
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Référence</th>
+                <th>Utilisateur</th>
+                <th>Plan</th>
+                <th>Opérateur</th>
+                <th>Montant</th>
+                <th>Reçu</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${filtered.map(p => this.renderPaymentRow(p)).join('')}
+            </tbody>
+          </table>
+        `}
+      </div>
+    `;
+  },
+
+  renderPaymentRow(p) {
+    const plan = window.PremiumService.PLANS[p.plan];
+    const op = window.PremiumService.OPERATORS[p.operator];
+    const time = this.formatRelativeTime(p.receivedAt);
+
+    return `
+      <tr>
+        <td><code style="background:var(--cream); padding:0.2rem 0.5rem; border-radius:4px; font-size:0.8rem">${p.reference}</code></td>
+        <td>
+          <div style="font-weight:600">${p.userName}</div>
+          <div style="font-size:0.78rem; color:var(--ink-mute)">${this.formatPhone(p.userPhone)} · ${p.userCity || '-'}</div>
+        </td>
+        <td><span class="badge badge-info">${plan.icon} ${plan.name}</span></td>
+        <td>${op.icon} ${op.shortName}</td>
+        <td style="font-weight:700">${this.formatPrice(p.amount)} FCFA</td>
+        <td style="font-size:0.78rem; color:var(--ink-mute)">${time}</td>
+        <td>
+          ${p.status === 'pending' ? `
+            <button class="btn-action btn-success" onclick="Admin.activatePayment('${p.id}')">✓ Activer Premium</button>
+            <button class="btn-action btn-danger" onclick="Admin.rejectPayment('${p.id}')" style="margin-left:0.3rem">✗ Rejeter</button>
+          ` : p.status === 'activated' ? `
+            <span class="badge badge-success">✓ Activé</span>
+          ` : `
+            <span class="badge badge-danger">✗ Rejeté</span>
+          `}
+        </td>
+      </tr>
+    `;
+  },
+
+  activatePayment(id) {
+    const payments = this.getPendingPayments();
+    const p = payments.find(x => x.id === id);
+    if (!p) return;
+    if (!confirm(`Activer Premium ${window.PremiumService.PLANS[p.plan].name} pour ${p.userName} ?\\n\\nMontant : ${this.formatPrice(p.amount)} FCFA`)) return;
+
+    p.status = 'activated';
+    p.activatedAt = Date.now();
+    this.savePendingPayments(payments);
+
+    // Mettre à jour aussi dans la liste utilisateurs
+    const users = this.getMockUsers();
+    let user = users.find(u => u.phone === p.userPhone);
+    if (!user) {
+      user = {
+        id: 'u_' + Date.now(),
+        name: p.userName,
+        phone: p.userPhone,
+        city: p.userCity,
+        targetConcours: '',
+        isPremium: false,
+        totalQCM: 0,
+        joinedAt: Date.now()
+      };
+      users.push(user);
+    }
+    const updates = window.PremiumService.activatePremium(user, p.plan);
+    Object.assign(user, updates);
+    this.saveMockUsers(users);
+
+    this.toast(`✓ Premium activé pour ${p.userName}`, 'success');
+    this.render();
+  },
+
+  rejectPayment(id) {
+    const reason = prompt('Raison du rejet (optionnel) :');
+    if (reason === null) return;
+
+    const payments = this.getPendingPayments();
+    const p = payments.find(x => x.id === id);
+    if (!p) return;
+    p.status = 'rejected';
+    p.rejectedAt = Date.now();
+    p.rejectReason = reason;
+    this.savePendingPayments(payments);
+
+    this.toast('Paiement rejeté', 'danger');
+    this.render();
+  },
+
+  // ============================================
+  // PAGE: UTILISATEURS
+  // ============================================
+
+  renderUsers() {
+    const data = this.loadData();
+    const search = (this.state.searchQuery || '').toLowerCase();
+    const tab = this.state.currentTab || 'all';
+
+    let filtered = data.users;
+    if (tab === 'premium') filtered = filtered.filter(u => u.isPremium);
+    if (tab === 'free') filtered = filtered.filter(u => !u.isPremium);
+    if (search) {
+      filtered = filtered.filter(u => {
+        const txt = (u.name + ' ' + u.phone + ' ' + (u.city || '')).toLowerCase();
+        return txt.includes(search);
+      });
+    }
+
+    const total = data.users.length;
+    const premium = data.users.filter(u => u.isPremium).length;
+    const free = total - premium;
+
+    return `
+      <div class="page-header">
+        <div>
+          <div class="page-title">Gestion des <span>utilisateurs</span></div>
+          <div class="page-sub">${total} étudiant${total > 1 ? 's' : ''} inscrit${total > 1 ? 's' : ''}</div>
+        </div>
+        <button class="btn-action btn-success" onclick="Admin.openAddUserModal()" style="padding:0.7rem 1.2rem">
+          ⭐ Activer Premium
+        </button>
+      </div>
+
+      <div class="tabs">
+        <button class="tab ${tab === 'all' ? 'active' : ''}" onclick="Admin.setTab('all')">
+          Tous <span class="tab-count">${total}</span>
+        </button>
+        <button class="tab ${tab === 'premium' ? 'active' : ''}" onclick="Admin.setTab('premium')">
+          ⭐ Premium <span class="tab-count">${premium}</span>
+        </button>
+        <button class="tab ${tab === 'free' ? 'active' : ''}" onclick="Admin.setTab('free')">
+          Gratuits <span class="tab-count">${free}</span>
+        </button>
+      </div>
+
+      <div class="table-wrap">
+        <div class="table-header">
+          <div class="table-title">👥 Liste des utilisateurs</div>
+          <input type="text" class="search-input" placeholder="Nom, numéro, ville..." value="${this.state.searchQuery}" oninput="Admin.search(this.value)">
+        </div>
+
+        ${filtered.length === 0 ? `
+          <div class="empty-state">
+            <div class="empty-icon">🔍</div>
+            <div class="empty-title">Aucun utilisateur trouvé</div>
+            <div class="empty-sub">Essaie une autre recherche.</div>
+          </div>
+        ` : `
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Étudiant</th>
+                <th>Concours visé</th>
+                <th>Statut</th>
+                <th>QCM</th>
+                <th>Inscrit</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${filtered.map(u => this.renderUserRow(u)).join('')}
+            </tbody>
+          </table>
+        `}
+      </div>
+    `;
+  },
+
+  renderUserRow(u) {
+    const concours = u.targetConcours ? CONCOURS.find(c => c.id === u.targetConcours) : null;
+    const isPrem = window.PremiumService.isUserPremium(u);
+    const days = isPrem ? window.PremiumService.daysRemaining(u) : 0;
+    const planName = u.premiumPlan ? window.PremiumService.PLANS[u.premiumPlan]?.name : '';
+
+    return `
+      <tr>
+        <td>
+          <div style="font-weight:600">${u.name}</div>
+          <div style="font-size:0.78rem; color:var(--ink-mute)">${this.formatPhone(u.phone)} · ${u.city || '-'}</div>
+        </td>
+        <td>${concours ? `<span class="badge badge-info">${concours.sigle}</span>` : '<span style="color:var(--ink-mute)">-</span>'}</td>
+        <td>
+          ${isPrem ? `
+            <span class="badge badge-gold">⭐ Premium ${planName}</span>
+            <div style="font-size:0.7rem; color:var(--ink-mute); margin-top:0.2rem">${days}j restants</div>
+          ` : `<span class="badge">Gratuit</span>`}
+        </td>
+        <td style="font-weight:700">${u.totalQCM || 0}</td>
+        <td style="font-size:0.78rem; color:var(--ink-mute)">${this.formatRelativeTime(u.joinedAt)}</td>
+        <td>
+          ${!isPrem ? `
+            <button class="btn-action btn-success" onclick="Admin.openActivateModal('${u.id}')">⭐ Activer Premium</button>
+          ` : `
+            <button class="btn-action btn-secondary" onclick="Admin.extendPremium('${u.id}')">🔄 Prolonger</button>
+            <button class="btn-action btn-danger" onclick="Admin.revokePremium('${u.id}')" style="margin-left:0.3rem">✗ Révoquer</button>
+          `}
+        </td>
+      </tr>
+    `;
+  },
+
+  openActivateModal(userId) {
+    this.state.modalOpen = 'activate';
+    this.state.modalData = { userId, plan: 'monthly' };
+    this.render();
+  },
+
+  openAddUserModal() {
+    this.state.modalOpen = 'add-user';
+    this.state.modalData = { plan: 'monthly', name: '', phone: '' };
+    this.render();
+  },
+
+  extendPremium(userId) {
+    const users = this.getMockUsers();
+    const u = users.find(x => x.id === userId);
+    if (!u) return;
+    const plan = u.premiumPlan || 'monthly';
+    if (!confirm(`Prolonger l'abonnement de ${u.name} d'un ${window.PremiumService.PLANS[plan].durationLabel} ?`)) return;
+
+    const updates = window.PremiumService.activatePremium(u, plan);
+    Object.assign(u, updates);
+    this.saveMockUsers(users);
+    this.toast(`✓ Abonnement prolongé pour ${u.name}`, 'success');
+    this.render();
+  },
+
+  revokePremium(userId) {
+    const users = this.getMockUsers();
+    const u = users.find(x => x.id === userId);
+    if (!u) return;
+    if (!confirm(`Révoquer le Premium de ${u.name} ?\\n\\nL'utilisateur perdra accès aux fonctionnalités Premium.`)) return;
+
+    u.isPremium = false;
+    u.premiumPlan = null;
+    u.premiumExpiresAt = null;
+    this.saveMockUsers(users);
+    this.toast(`Premium révoqué pour ${u.name}`, 'danger');
+    this.render();
+  },
+
+  // ============================================
+  // PAGE: FORUM
+  // ============================================
+
+  renderForumModeration() {
+    const data = this.loadData();
+    const reported = data.reportedTopics;
+    const allTopics = data.forumTopics;
+
+    return `
+      <div class="page-header">
+        <div>
+          <div class="page-title">Modération du <span>forum</span></div>
+          <div class="page-sub">${reported.length} signalement${reported.length > 1 ? 's' : ''} en attente</div>
+        </div>
+      </div>
+
+      <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+        <div class="stat-card" style="--accent-color:#fee2e2; --accent-text:#991b1b">
+          <div class="stat-icon">🚩</div>
+          <div class="stat-label">Signalements</div>
+          <div class="stat-value">${reported.length}</div>
+        </div>
+        <div class="stat-card" style="--accent-color:#dbeafe; --accent-text:#1e40af">
+          <div class="stat-icon">💬</div>
+          <div class="stat-label">Sujets total</div>
+          <div class="stat-value">${allTopics.length}</div>
+        </div>
+        <div class="stat-card" style="--accent-color:#dcfce7; --accent-text:#15803d">
+          <div class="stat-icon">📈</div>
+          <div class="stat-label">Réponses total</div>
+          <div class="stat-value">${allTopics.reduce((s, t) => s + (t.replies?.length || t.replyCount || 0), 0)}</div>
+        </div>
+      </div>
+
+      ${reported.length > 0 ? `
+        <div class="table-wrap">
+          <div class="table-header">
+            <div class="table-title">🚩 Sujets signalés</div>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Sujet</th>
+                <th>Auteur</th>
+                <th>Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${reported.map(topicId => {
+                const topic = allTopics.find(t => t.id === topicId);
+                if (!topic) return '';
+                return `
+                  <tr>
+                    <td>
+                      <div style="font-weight:600; max-width:300px; overflow:hidden; text-overflow:ellipsis">${this.escapeHTML(topic.title)}</div>
+                      <div style="font-size:0.78rem; color:var(--ink-mute); max-width:300px; overflow:hidden; text-overflow:ellipsis">${this.escapeHTML((topic.body || '').substring(0, 80))}...</div>
+                    </td>
+                    <td>${topic.authorName}</td>
+                    <td style="font-size:0.78rem; color:var(--ink-mute)">${this.formatRelativeTime(topic.timestamp)}</td>
+                    <td>
+                      <button class="btn-action btn-secondary" onclick="Admin.approveSubject('${topicId}')">✓ Approuver</button>
+                      <button class="btn-action btn-danger" onclick="Admin.deleteSubject('${topicId}')" style="margin-left:0.3rem">🗑 Supprimer</button>
+                    </td>
+                  </tr>
+                `;
+              }).join('')}
+            </tbody>
+          </table>
+        </div>
+      ` : `
+        <div class="table-wrap">
+          <div class="empty-state">
+            <div class="empty-icon">✨</div>
+            <div class="empty-title">Aucun signalement en attente</div>
+            <div class="empty-sub">Le forum est tout propre ! Bonne nouvelle.</div>
+          </div>
+        </div>
+      `}
+
+      <div class="table-wrap">
+        <div class="table-header">
+          <div class="table-title">💬 Tous les sujets du forum</div>
+        </div>
+        ${allTopics.length === 0 ? `
+          <div class="empty-state">
+            <div class="empty-icon">💭</div>
+            <div class="empty-title">Aucun sujet pour l'instant</div>
+          </div>
+        ` : `
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Sujet</th>
+                <th>Auteur</th>
+                <th>Réponses</th>
+                <th>Votes</th>
+                <th>Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${allTopics.map(t => `
+                <tr>
+                  <td style="max-width:300px; overflow:hidden; text-overflow:ellipsis"><div style="font-weight:600">${this.escapeHTML(t.title)}</div></td>
+                  <td>${t.authorName}</td>
+                  <td>${t.replies?.length || t.replyCount || 0}</td>
+                  <td>${t.upvotes || 0}</td>
+                  <td style="font-size:0.78rem; color:var(--ink-mute)">${this.formatRelativeTime(t.timestamp)}</td>
+                  <td>
+                    <button class="btn-action btn-danger" onclick="Admin.deleteSubject('${t.id}')">🗑 Supprimer</button>
+                  </td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        `}
+      </div>
+    `;
+  },
+
+  approveSubject(topicId) {
+    const reports = this.getReportedTopics();
+    const idx = reports.indexOf(topicId);
+    if (idx >= 0) reports.splice(idx, 1);
+    localStorage.setItem('bara_reports', JSON.stringify(reports));
+    this.toast('✓ Sujet approuvé', 'success');
+    this.render();
+  },
+
+  deleteSubject(topicId) {
+    if (!confirm('Supprimer définitivement ce sujet et toutes ses réponses ?')) return;
+    let topics = this.getForumTopics();
+    topics = topics.filter(t => t.id !== topicId);
+    localStorage.setItem('bara_forum_topics', JSON.stringify(topics));
+    // Aussi retirer des reports
+    let reports = this.getReportedTopics();
+    reports = reports.filter(id => id !== topicId);
+    localStorage.setItem('bara_reports', JSON.stringify(reports));
+    this.toast('🗑 Sujet supprimé', 'danger');
+    this.render();
+  },
+
+  // ============================================
+  // PAGE: QUESTIONS
+  // ============================================
+
+  // ============================================
+  // PAGE: QUESTIONS QCM (ÉDITEUR COMPLET)
+  // ============================================
+
+  // Charge les questions custom + les questions par défaut
+  getAllQuestions() {
+    const customQ = JSON.parse(localStorage.getItem('bara_custom_questions') || '{}');
+    const all = {};
+
+    // Questions par défaut (depuis data/questions.js)
+    Object.keys(window.MATIERES_CATALOG).forEach(matiereId => {
+      const defaultQ = (window.QUESTIONS && window.QUESTIONS[matiereId]) ? window.QUESTIONS[matiereId] : [];
+      const customMQ = customQ[matiereId] || [];
+      all[matiereId] = [
+        ...defaultQ.map((q, i) => ({ ...q, _src: 'default', _idx: i })),
+        ...customMQ.map((q, i) => ({ ...q, _src: 'custom', _idx: i }))
+      ];
+    });
+    return all;
+  },
+
+  saveCustomQuestions(customQ) {
+    localStorage.setItem('bara_custom_questions', JSON.stringify(customQ));
+  },
+
+  getDeletedQuestions() {
+    return JSON.parse(localStorage.getItem('bara_deleted_questions') || '{}');
+  },
+
+  saveDeletedQuestions(deleted) {
+    localStorage.setItem('bara_deleted_questions', JSON.stringify(deleted));
+  },
+
+  getEditedQuestions() {
+    return JSON.parse(localStorage.getItem('bara_edited_questions') || '{}');
+  },
+
+  saveEditedQuestions(edited) {
+    localStorage.setItem('bara_edited_questions', JSON.stringify(edited));
+  },
+
+  renderQuestionsAdmin() {
+    // Si on est en train d'éditer une matière, on affiche la liste de ses questions
+    if (this.state.editingMatiere) {
+      return this.renderMatiereDetail(this.state.editingMatiere);
+    }
+
+    // Sinon, vue d'ensemble par matière
+    const matieres = Object.entries(window.MATIERES_CATALOG);
+    const allQ = this.getAllQuestions();
+    const totalQ = Object.values(allQ).reduce((s, arr) => s + arr.length, 0);
+    const search = (this.state.searchQuery || '').toLowerCase();
+
+    const filtered = matieres.filter(([id, m]) => {
+      if (!search) return true;
+      return (m.nom + ' ' + m.desc).toLowerCase().includes(search);
+    });
+
+    return `
+      <div class="page-header">
+        <div>
+          <div class="page-title">Questions <span>QCM</span></div>
+          <div class="page-sub">${totalQ} questions réparties sur ${matieres.length} matières</div>
+        </div>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap">
+          <button class="btn-action btn-secondary" onclick="Admin.exportAllQuestions()" style="padding:0.7rem 1rem">
+            📤 Exporter tout
+          </button>
+          <button class="btn-action btn-secondary" onclick="Admin.openTextImportModal()" style="padding:0.7rem 1rem; background:linear-gradient(135deg, #dbeafe, white); border-color:#2563eb; color:#1e40af">
+            📄 Importer texte
+          </button>
+          <button class="btn-action btn-secondary" onclick="Admin.openImportModal()" style="padding:0.7rem 1rem">
+            📥 Importer JSON
+          </button>
+          <button class="btn-action btn-success" onclick="Admin.openAddQuestionModal()" style="padding:0.7rem 1.2rem">
+            ➕ Nouvelle question
+          </button>
+        </div>
+      </div>
+
+      <div class="demo-banner">
+        <strong>💡 Astuce :</strong> Touche une matière pour voir et modifier ses questions. Tes modifications sont sauvegardées localement. Pour les rendre définitives pour tous les utilisateurs, exporte le fichier JSON et envoie-le à ton développeur (ou copie-le dans <code>data/questions.js</code>).
+      </div>
+
+      <div class="table-wrap">
+        <div class="table-header">
+          <div class="table-title">📚 Matières (touche pour éditer)</div>
+          <input type="text" class="search-input" placeholder="Rechercher une matière..." value="${this.state.searchQuery}" oninput="Admin.search(this.value)">
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Matière</th>
+              <th>Description</th>
+              <th>Questions</th>
+              <th>Concours concernés</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            ${filtered.map(([id, m]) => {
+              const count = (allQ[id] || []).length;
+              const concoursAvecMatiere = window.CONCOURS.filter(c => c.matieres.includes(id));
+              return `
+                <tr style="cursor:pointer" onclick="Admin.openMatiere('${id}')">
+                  <td><strong>${m.icone} ${m.nom}</strong></td>
+                  <td style="font-size:0.82rem; color:var(--ink-mute)">${m.desc}</td>
+                  <td>
+                    <span class="badge ${count >= 10 ? 'badge-success' : count >= 5 ? 'badge-warning' : count > 0 ? 'badge-info' : 'badge-danger'}">${count} question${count > 1 ? 's' : ''}</span>
+                  </td>
+                  <td style="font-size:0.72rem">
+                    ${concoursAvecMatiere.slice(0, 3).map(c => `<span class="badge badge-info" style="margin-right:0.2rem; margin-bottom:0.2rem">${c.sigle}</span>`).join('')}
+                    ${concoursAvecMatiere.length > 3 ? `<span style="color:var(--ink-mute)">+${concoursAvecMatiere.length - 3}</span>` : ''}
+                  </td>
+                  <td style="text-align:right; color:var(--ink-mute); font-size:1.2rem">›</td>
+                </tr>
+              `;
+            }).join('')}
+          </tbody>
+        </table>
+      </div>
+
+      ${this.renderBatchesSection()}
+    `;
+  },
+
+  renderBatchesSection() {
+    const batches = this.getBatches();
+    if (batches.length === 0) {
+      return `
+        <div class="table-wrap" style="margin-top:1.5rem">
+          <div class="table-header">
+            <div class="table-title">📦 Historique des lots d'import</div>
+          </div>
+          <div class="empty-state">
+            <div class="empty-icon">📦</div>
+            <div class="empty-title">Aucun lot d'import pour l'instant</div>
+            <div class="empty-sub">Quand tu importes du texte, chaque lot sera listé ici avec la possibilité de l'annuler.</div>
+          </div>
+        </div>
+      `;
+    }
+
+    const totalQuestions = batches.reduce((s, b) => s + b.count, 0);
+
+    return `
+      <div class="table-wrap" style="margin-top:1.5rem">
+        <div class="table-header">
+          <div class="table-title">📦 Historique des lots d'import (${batches.length} lots · ${totalQuestions} questions)</div>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Matière</th>
+              <th>Questions</th>
+              <th>Aperçu</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${batches.map(b => `
+              <tr>
+                <td>
+                  <div style="font-weight:600; font-size:0.85rem">${this.formatBatchDate(b.date)}</div>
+                  <div style="font-size:0.72rem; color:var(--ink-mute); margin-top:0.2rem">${this.formatRelativeTime(b.date)}</div>
+                </td>
+                <td>
+                  <div style="font-weight:600">${b.matiereIcone} ${this.escapeHTML(b.matiereNom)}</div>
+                </td>
+                <td>
+                  <span class="badge badge-success">${b.count} question${b.count > 1 ? 's' : ''}</span>
+                </td>
+                <td style="max-width:260px; font-size:0.78rem; color:var(--ink-soft); font-style:italic">
+                  "${this.escapeHTML(b.preview)}..."
+                </td>
+                <td>
+                  <button class="btn-action btn-danger" onclick="Admin.deleteBatch('${b.id}')" style="font-size:0.78rem">
+                    🗑 Annuler ce lot
+                  </button>
+                </td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+    `;
+  },
+
+  oldEndOfRenderQuestionsAdmin_NOT_USED() {
+    return `xxx`;
+  },
+
+  openMatiere(id) {
+    this.state.editingMatiere = id;
+    this.state.searchQuery = '';
+    this.render();
+  },
+
+  closeMatiere() {
+    this.state.editingMatiere = null;
+    this.state.searchQuery = '';
+    this.render();
+  },
+
+  // === DÉTAIL D'UNE MATIÈRE ===
+  renderMatiereDetail(matiereId) {
+    const matiere = window.MATIERES_CATALOG[matiereId];
+    if (!matiere) {
+      this.state.editingMatiere = null;
+      return this.renderQuestionsAdmin();
+    }
+
+    const allQ = this.getAllQuestions();
+    const questions = allQ[matiereId] || [];
+    const deleted = this.getDeletedQuestions();
+    const deletedSet = new Set(deleted[matiereId] || []);
+    const edited = this.getEditedQuestions();
+    const editedMap = edited[matiereId] || {};
+
+    // Filtrer les questions supprimées (les marquer en grisé)
+    const visibleQuestions = questions.map(q => {
+      const key = q._src + '_' + q._idx;
+      const isDeleted = deletedSet.has(key);
+      const editedVersion = editedMap[key];
+      return {
+        ...q,
+        ...(editedVersion || {}),
+        _key: key,
+        _deleted: isDeleted,
+        _edited: !!editedVersion
+      };
+    }).filter(q => !q._deleted);
+
+    const search = (this.state.searchQuery || '').toLowerCase();
+    const filtered = search
+      ? visibleQuestions.filter(q => (q.q + ' ' + q.x).toLowerCase().includes(search))
+      : visibleQuestions;
+
+    return `
+      <div class="page-header">
+        <div>
+          <button onclick="Admin.closeMatiere()" style="background:transparent; color:var(--ink-mute); padding:0.3rem 0; font-size:0.85rem; margin-bottom:0.3rem; cursor:pointer; border:none">← Retour aux matières</button>
+          <div class="page-title">${matiere.icone} <span>${matiere.nom}</span></div>
+          <div class="page-sub">${matiere.desc}</div>
+        </div>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap">
+          <button class="btn-action btn-secondary" onclick="Admin.openEditMatiereModal('${matiereId}')" style="padding:0.7rem 1rem">
+            ✏️ Modifier la matière
+          </button>
+          <button class="btn-action btn-success" onclick="Admin.openAddQuestionForMatiere('${matiereId}')" style="padding:0.7rem 1.2rem">
+            ➕ Ajouter une question
+          </button>
+        </div>
+      </div>
+
+      <div class="stats-grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
+        <div class="stat-card" style="--accent-color:#dbeafe; --accent-text:#1e40af">
+          <div class="stat-icon">📝</div>
+          <div class="stat-label">Total questions</div>
+          <div class="stat-value">${visibleQuestions.length}</div>
+        </div>
+        <div class="stat-card" style="--accent-color:#dcfce7; --accent-text:#15803d">
+          <div class="stat-icon">✏️</div>
+          <div class="stat-label">Questions modifiées</div>
+          <div class="stat-value">${visibleQuestions.filter(q => q._edited).length}</div>
+        </div>
+        <div class="stat-card" style="--accent-color:#fef9c3; --accent-text:#854d0e">
+          <div class="stat-icon">➕</div>
+          <div class="stat-label">Tes ajouts</div>
+          <div class="stat-value">${visibleQuestions.filter(q => q._src === 'custom').length}</div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <div class="table-header">
+          <div class="table-title">📝 Questions de ${matiere.nom}</div>
+          <input type="text" class="search-input" placeholder="Rechercher dans les questions..." value="${this.state.searchQuery}" oninput="Admin.search(this.value)">
+        </div>
+
+        ${filtered.length === 0 ? `
+          <div class="empty-state">
+            <div class="empty-icon">📭</div>
+            <div class="empty-title">Aucune question dans cette matière</div>
+            <div class="empty-sub">Clique sur "➕ Ajouter une question" pour commencer.</div>
+          </div>
+        ` : `
+          <div style="padding:0">
+            ${filtered.map((q, i) => this.renderQuestionItem(q, i, matiereId)).join('')}
+          </div>
+        `}
+      </div>
+    `;
+  },
+
+  renderQuestionItem(q, displayIndex, matiereId) {
+    const letters = ['A','B','C','D'];
+    return `
+      <div style="padding:1.2rem 1.4rem; border-bottom:1px solid var(--line-soft)">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; margin-bottom:0.7rem">
+          <div style="flex:1">
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.4rem">
+              <span style="background:var(--cream-dark); color:var(--ink-mute); font-size:0.72rem; font-weight:700; padding:0.15rem 0.55rem; border-radius:999px">N° ${displayIndex + 1}</span>
+              ${q._src === 'custom' ? '<span class="badge badge-success">➕ Ajoutée</span>' : ''}
+              ${q._edited ? '<span class="badge badge-warning">✏️ Modifiée</span>' : ''}
+            </div>
+            <div style="font-weight:600; font-size:0.95rem; color:var(--ink); line-height:1.4">${this.escapeHTML(q.q)}</div>
+          </div>
+          <div style="display:flex; gap:0.3rem; flex-shrink:0">
+            <button class="btn-action btn-secondary" onclick="Admin.openEditQuestion('${matiereId}', '${q._key}')" style="padding:0.4rem 0.7rem; font-size:0.78rem">✏️ Modifier</button>
+            <button class="btn-action btn-danger" onclick="Admin.deleteQuestion('${matiereId}', '${q._key}')" style="padding:0.4rem 0.7rem; font-size:0.78rem">🗑</button>
+          </div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:0.3rem; margin-top:0.7rem; margin-bottom:0.7rem">
+          ${q.o.map((opt, oi) => `
+            <div style="display:flex; align-items:center; gap:0.5rem; padding:0.5rem 0.7rem; background:${oi === q.r ? '#f0fdf4' : '#fafafa'}; border:1px solid ${oi === q.r ? 'var(--success)' : 'var(--line-soft)'}; border-radius:8px; font-size:0.85rem">
+              <span style="background:${oi === q.r ? 'var(--success)' : 'var(--cream-dark)'}; color:${oi === q.r ? 'white' : 'var(--ink-mute)'}; width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.72rem; flex-shrink:0">${letters[oi]}</span>
+              <span>${this.escapeHTML(opt)}</span>
+              ${oi === q.r ? '<span style="margin-left:auto; color:var(--success); font-size:0.72rem; font-weight:700">✓ Bonne réponse</span>' : ''}
+            </div>
+          `).join('')}
+        </div>
+
+        <div style="background:#fffbeb; border-left:3px solid var(--gold-bf-dark); padding:0.7rem 0.9rem; border-radius:0 8px 8px 0; font-size:0.82rem; color:#713f12; line-height:1.5">
+          <strong style="color:#854d0e">💡 Explication :</strong> ${this.escapeHTML(q.x)}
+        </div>
+      </div>
+    `;
+  },
+
+  openAddQuestionForMatiere(matiereId) {
+    this.state.modalOpen = 'add-question';
+    this.state.modalData = {
+      matiere: matiereId,
+      q: '',
+      options: ['', '', '', ''],
+      r: 0,
+      x: ''
+    };
+    this.render();
+  },
+
+  openEditQuestion(matiereId, key) {
+    const allQ = this.getAllQuestions();
+    const questions = allQ[matiereId] || [];
+    const edited = this.getEditedQuestions();
+    const editedMap = edited[matiereId] || {};
+
+    const q = questions.find(qq => (qq._src + '_' + qq._idx) === key);
+    if (!q) return;
+
+    const editedVersion = editedMap[key];
+    const data = editedVersion || q;
+
+    this.state.modalOpen = 'edit-question';
+    this.state.modalData = {
+      matiere: matiereId,
+      key: key,
+      src: q._src,
+      idx: q._idx,
+      q: data.q,
+      options: [...data.o],
+      r: data.r,
+      x: data.x
+    };
+    this.render();
+  },
+
+  deleteQuestion(matiereId, key) {
+    if (!confirm('Supprimer définitivement cette question ?\n\nElle ne sera plus jamais proposée aux étudiants.')) return;
+
+    const [src] = key.split('_');
+
+    if (src === 'custom') {
+      // Supprimer de la liste custom
+      const customQ = JSON.parse(localStorage.getItem('bara_custom_questions') || '{}');
+      const idx = parseInt(key.split('_')[1]);
+      if (customQ[matiereId]) {
+        customQ[matiereId].splice(idx, 1);
+        if (customQ[matiereId].length === 0) delete customQ[matiereId];
+        this.saveCustomQuestions(customQ);
+      }
+    } else {
+      // Marquer comme supprimée
+      const deleted = this.getDeletedQuestions();
+      if (!deleted[matiereId]) deleted[matiereId] = [];
+      if (!deleted[matiereId].includes(key)) deleted[matiereId].push(key);
+      this.saveDeletedQuestions(deleted);
+    }
+
+    this.toast('🗑 Question supprimée', 'danger');
+    this.render();
+  },
+
+  // === MODAL ÉDITION DE QUESTION ===
+  renderEditQuestionModal() {
+    const data = this.state.modalData;
+    const matiere = window.MATIERES_CATALOG[data.matiere];
+
+    return `
+      <div class="modal-overlay" onclick="Admin.closeModal()">
+        <div class="modal" onclick="event.stopPropagation()" style="max-width:600px">
+          <div class="modal-title">✏️ Modifier la question</div>
+          <div class="modal-desc">Matière : <strong>${matiere.icone} ${matiere.nom}</strong></div>
+
+          <div class="form-group">
+            <label class="form-label">Question</label>
+            <textarea class="form-textarea" id="qText" rows="2">${this.escapeHTML(data.q)}</textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">📋 Options de réponse — Touche le rond vert pour marquer la BONNE réponse</label>
+            <div style="background:#f0fdf4; border:1px dashed var(--success); border-radius:8px; padding:0.7rem 0.9rem; margin-bottom:0.7rem; font-size:0.78rem; color:#166534">
+              💡 <strong>Comment marquer la bonne réponse :</strong> Touche le grand rond à gauche d'une option pour la marquer comme correcte.
+            </div>
+            ${data.options.map((opt, i) => {
+              const isRight = data.r === i;
+              return `
+                <div style="display:flex; gap:0.6rem; margin-bottom:0.5rem; align-items:center; padding:0.5rem; background:${isRight ? '#f0fdf4' : 'var(--cream)'}; border-radius:8px; border:1.5px solid ${isRight ? 'var(--success)' : 'transparent'}">
+                  <button type="button" onclick="Admin.setRightAnswer(${i})" title="Touche pour marquer comme bonne réponse" style="width:42px; height:42px; border-radius:50%; background:${isRight ? 'var(--success)' : 'white'}; color:${isRight ? 'white' : 'var(--ink-mute)'}; font-weight:800; flex-shrink:0; cursor:pointer; border:2.5px solid ${isRight ? 'var(--success)' : 'var(--line)'}; font-size:1.1rem; display:flex; align-items:center; justify-content:center; transition:all 0.2s">
+                    ${isRight ? '✓' : ['A','B','C','D'][i]}
+                  </button>
+                  <input type="text" class="form-input" id="qOpt${i}" value="${this.escapeHTML(opt)}" style="flex:1; margin:0; ${isRight ? 'border-color:var(--success); background:white' : ''}">
+                  ${isRight ? '<span style="background:var(--success); color:white; font-size:0.7rem; font-weight:800; padding:0.3rem 0.6rem; border-radius:999px; flex-shrink:0">BONNE RÉPONSE</span>' : ''}
+                </div>
+              `;
+            }).join('')}
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">💡 Explication</label>
+            <textarea class="form-textarea" id="qExpl" rows="3">${this.escapeHTML(data.x)}</textarea>
+          </div>
+
+          <div class="modal-actions">
+            <button class="btn-action btn-secondary" onclick="Admin.closeModal()">Annuler</button>
+            <button class="btn-action btn-success" onclick="Admin.confirmEditQuestion()">💾 Enregistrer</button>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  confirmEditQuestion() {
+    const data = this.state.modalData;
+    const q = document.getElementById('qText').value.trim();
+    const options = [0,1,2,3].map(i => document.getElementById('qOpt' + i).value.trim());
+    const r = data.r;
+    const x = document.getElementById('qExpl').value.trim();
+
+    if (!q) { this.toast('Question obligatoire', 'danger'); return; }
+    if (options.some(o => !o)) { this.toast('Toutes les options doivent être remplies', 'danger'); return; }
+    if (!x) { this.toast('Explication obligatoire', 'danger'); return; }
+
+    const newQ = { q, o: options, r, x };
+
+    if (data.src === 'custom') {
+      // Modifier directement dans la liste custom
+      const customQ = JSON.parse(localStorage.getItem('bara_custom_questions') || '{}');
+      if (customQ[data.matiere]) {
+        customQ[data.matiere][data.idx] = newQ;
+        this.saveCustomQuestions(customQ);
+      }
+    } else {
+      // Sauvegarder comme édition par-dessus
+      const edited = this.getEditedQuestions();
+      if (!edited[data.matiere]) edited[data.matiere] = {};
+      edited[data.matiere][data.key] = newQ;
+      this.saveEditedQuestions(edited);
+    }
+
+    this.closeModal();
+    this.toast('✓ Question mise à jour', 'success');
+    this.render();
+  },
+
+  // === MODAL ÉDITION DE MATIÈRE ===
+  openEditMatiereModal(matiereId) {
+    const m = window.MATIERES_CATALOG[matiereId];
+    this.state.modalOpen = 'edit-matiere';
+    this.state.modalData = {
+      id: matiereId,
+      nom: m.nom,
+      icone: m.icone,
+      desc: m.desc,
+      couleur: m.couleur
+    };
+    this.render();
+  },
+
+  renderEditMatiereModal() {
+    const data = this.state.modalData;
+    return `
+      <div class="modal-overlay" onclick="Admin.closeModal()">
+        <div class="modal" onclick="event.stopPropagation()">
+          <div class="modal-title">✏️ Modifier la matière</div>
+          <div class="modal-desc">Modifie le nom, l'icône ou la description.</div>
+
+          <div class="form-group">
+            <label class="form-label">Nom de la matière</label>
+            <input type="text" class="form-input" id="mNom" value="${this.escapeHTML(data.nom)}" maxlength="50">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Icône (emoji)</label>
+            <input type="text" class="form-input" id="mIcone" value="${this.escapeHTML(data.icone)}" maxlength="4" style="font-size:1.5rem; text-align:center">
+            <div class="form-help">Tu peux copier-coller un emoji depuis ton téléphone (ex : 📚 🎓 🌍 ⚕️ 🔬)</div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Description courte</label>
+            <textarea class="form-textarea" id="mDesc" rows="2">${this.escapeHTML(data.desc)}</textarea>
+            <div class="form-help">Phrase qui s'affiche sous le nom de la matière</div>
+          </div>
+
+          <div class="modal-actions">
+            <button class="btn-action btn-secondary" onclick="Admin.closeModal()">Annuler</button>
+            <button class="btn-action btn-success" onclick="Admin.confirmEditMatiere()">💾 Enregistrer</button>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  confirmEditMatiere() {
+    const data = this.state.modalData;
+    const nom = document.getElementById('mNom').value.trim();
+    const icone = document.getElementById('mIcone').value.trim();
+    const desc = document.getElementById('mDesc').value.trim();
+
+    if (!nom || !icone || !desc) {
+      this.toast('Tous les champs sont obligatoires', 'danger');
+      return;
+    }
+
+    // Sauvegarder localement
+    const editedMatieres = JSON.parse(localStorage.getItem('bara_edited_matieres') || '{}');
+    editedMatieres[data.id] = { nom, icone, desc, couleur: data.couleur };
+    localStorage.setItem('bara_edited_matieres', JSON.stringify(editedMatieres));
+
+    // Mettre à jour le catalogue local pour que ça s'affiche immédiatement
+    if (window.MATIERES_CATALOG[data.id]) {
+      window.MATIERES_CATALOG[data.id].nom = nom;
+      window.MATIERES_CATALOG[data.id].icone = icone;
+      window.MATIERES_CATALOG[data.id].desc = desc;
+    }
+
+    this.closeModal();
+    this.toast('✓ Matière mise à jour', 'success');
+    this.render();
+  },
+
+  // === EXPORT / IMPORT ===
+  exportAllQuestions() {
+    const allQ = this.getAllQuestions();
+    const editedMatieres = JSON.parse(localStorage.getItem('bara_edited_matieres') || '{}');
+
+    const exportData = {
+      version: '1.0',
+      exportedAt: new Date().toISOString(),
+      questions: {},
+      matieresModifiees: editedMatieres
+    };
+
+    Object.keys(allQ).forEach(matiereId => {
+      const cleanQuestions = allQ[matiereId].map(q => ({
+        q: q.q, o: q.o, r: q.r, x: q.x
+      }));
+      if (cleanQuestions.length > 0) {
+        exportData.questions[matiereId] = cleanQuestions;
+      }
+    });
+
+    // Télécharger comme fichier JSON
+    const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'bara-concours-questions-' + new Date().toISOString().split('T')[0] + '.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    this.toast('✓ Fichier exporté', 'success');
+  },
+
+  openImportModal() {
+    this.state.modalOpen = 'import';
+    this.state.modalData = {};
+    this.render();
+  },
+
+  renderImportModal() {
+    return `
+      <div class="modal-overlay" onclick="Admin.closeModal()">
+        <div class="modal" onclick="event.stopPropagation()">
+          <div class="modal-title">📥 Importer des questions</div>
+          <div class="modal-desc">
+            Charge un fichier JSON exporté précédemment. <strong>Attention :</strong> tes modifications actuelles seront remplacées par celles du fichier.
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Fichier JSON</label>
+            <input type="file" id="importFile" accept=".json" class="form-input" style="padding:0.6rem">
+            <div class="form-help">Format : fichier exporté depuis ce tableau d'admin</div>
+          </div>
+
+          <div class="modal-actions">
+            <button class="btn-action btn-secondary" onclick="Admin.closeModal()">Annuler</button>
+            <button class="btn-action btn-success" onclick="Admin.confirmImport()">📥 Importer</button>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  confirmImport() {
+    const fileInput = document.getElementById('importFile');
+    if (!fileInput.files || fileInput.files.length === 0) {
+      this.toast('Choisis un fichier', 'danger');
+      return;
+    }
+
+    const file = fileInput.files[0];
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const data = JSON.parse(e.target.result);
+        if (!data.version || !data.questions) {
+          this.toast('Fichier invalide', 'danger');
+          return;
+        }
+
+        // Importer les questions comme custom (toutes nouvelles)
+        const customQ = {};
+        Object.keys(data.questions).forEach(matiereId => {
+          customQ[matiereId] = data.questions[matiereId];
+        });
+        this.saveCustomQuestions(customQ);
+
+        // Réinitialiser deleted et edited (puisqu'on importe tout)
+        this.saveDeletedQuestions({});
+        this.saveEditedQuestions({});
+
+        // Importer les matières modifiées
+        if (data.matieresModifiees) {
+          localStorage.setItem('bara_edited_matieres', JSON.stringify(data.matieresModifiees));
+          Object.keys(data.matieresModifiees).forEach(id => {
+            if (window.MATIERES_CATALOG[id]) {
+              Object.assign(window.MATIERES_CATALOG[id], data.matieresModifiees[id]);
+            }
+          });
+        }
+
+        this.closeModal();
+        const total = Object.values(data.questions).reduce((s, arr) => s + arr.length, 0);
+        this.toast(`✓ ${total} questions importées`, 'success');
+        this.render();
+      } catch (err) {
+        this.toast('Erreur : fichier illisible', 'danger');
+        console.error(err);
+      }
+    };
+    reader.readAsText(file);
+  },
+
+  // ============================================
+  // IMPORTEUR TEXTE INTELLIGENT (Word, .txt, .md)
+  // ============================================
+
+  openTextImportModal() {
+    this.state.modalOpen = 'text-import';
+    this.state.modalData = {
+      step: 1, // 1=upload, 2=preview
+      matiere: this.state.editingMatiere || 'francais',
+      rawText: '',
+      parsedQuestions: [],
+      parseErrors: []
+    };
+    this.render();
+  },
+
+  renderTextImportModal() {
+    const data = this.state.modalData;
+    const matieres = Object.entries(window.MATIERES_CATALOG);
+
+    if (data.step === 1) {
+      return this.renderTextImportUpload(matieres, data);
+    } else {
+      return this.renderTextImportPreview(data);
+    }
+  },
+
+  renderTextImportUpload(matieres, data) {
+    const exampleText = `Q: Quelle est la capitale du Burkina Faso ?
+A) Bobo-Dioulasso
+B) Ouagadougou
+C) Koudougou
+D) Banfora
+R: B
+E: Ouagadougou est la capitale politique et économique du Burkina Faso depuis 1960.
+
+Q: Combien de régions compte le Burkina Faso ?
+A) 11
+B) 12
+C) 13
+D) 15
+R: C
+E: Le Burkina Faso compte 13 régions administratives depuis 2001.`;
+
+    return `
+      <div class="modal-overlay" onclick="Admin.closeModal()">
+        <div class="modal" onclick="event.stopPropagation()" style="max-width:700px">
+          <div class="modal-title">📄 Importer des questions depuis un texte</div>
+          <div class="modal-desc">Charge un fichier <strong>.txt</strong> ou colle le texte directement. L'application va automatiquement détecter et créer toutes les questions.</div>
+
+          <div class="form-group">
+            <label class="form-label">Matière de destination</label>
+            <select class="form-select" id="importMatiere">
+              ${matieres.map(([id, m]) => `<option value="${id}" ${data.matiere === id ? 'selected' : ''}>${m.icone} ${m.nom}</option>`).join('')}
+            </select>
+            <div class="form-help">Toutes les questions du fichier seront ajoutées à cette matière</div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">📂 Option 1 : Charger un fichier (.txt)</label>
+            <input type="file" id="importTextFile" accept=".txt,.md" class="form-input" style="padding:0.6rem" onchange="Admin.handleTextFile(event)">
+            <div class="form-help">Tu peux préparer ton fichier dans Word et l'enregistrer en .txt</div>
+          </div>
+
+          <div style="text-align:center; margin:1rem 0; color:var(--ink-mute); font-size:0.82rem; font-weight:600">— OU —</div>
+
+          <div class="form-group">
+            <label class="form-label">✍️ Option 2 : Coller le texte directement</label>
+            <textarea class="form-textarea" id="importTextRaw" rows="10" placeholder="Colle ici tes questions au format Q:/A)/B)/C)/D)/R:/E:" style="font-family: 'Courier New', monospace; font-size: 0.82rem;">${this.escapeHTML(data.rawText)}</textarea>
+          </div>
+
+          <details style="background:#f0fdf4; border:1px dashed var(--success); border-radius:8px; padding:0.7rem 0.9rem; margin-bottom:1rem">
+            <summary style="font-size:0.85rem; font-weight:700; color:#166534; cursor:pointer">📋 Voir un exemple de format</summary>
+            <pre style="background:#1a1a1a; color:#e5e7eb; padding:0.9rem; border-radius:6px; font-size:0.75rem; overflow-x:auto; margin-top:0.6rem; line-height:1.5; white-space:pre-wrap">${this.escapeHTML(exampleText)}</pre>
+            <div style="font-size:0.78rem; color:#166534; margin-top:0.6rem; line-height:1.5">
+              <strong>Règles :</strong><br>
+              • Chaque question commence par <code style="background:white; padding:1px 4px; border-radius:3px">Q:</code><br>
+              • Les 4 options sont marquées <code style="background:white; padding:1px 4px; border-radius:3px">A)</code> <code style="background:white; padding:1px 4px; border-radius:3px">B)</code> <code style="background:white; padding:1px 4px; border-radius:3px">C)</code> <code style="background:white; padding:1px 4px; border-radius:3px">D)</code><br>
+              • La bonne réponse est marquée <code style="background:white; padding:1px 4px; border-radius:3px">R: A</code> (ou B, C, D)<br>
+              • L'explication commence par <code style="background:white; padding:1px 4px; border-radius:3px">E:</code><br>
+              • Sépare les questions par une <strong>ligne vide</strong>
+            </div>
+          </details>
+
+          <div class="modal-actions">
+            <button class="btn-action btn-secondary" onclick="Admin.closeModal()">Annuler</button>
+            <button class="btn-action btn-success" onclick="Admin.previewTextImport()">🔍 Analyser et prévisualiser</button>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  handleTextFile(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const textarea = document.getElementById('importTextRaw');
+      if (textarea) {
+        textarea.value = e.target.result;
+        this.state.modalData.rawText = e.target.result;
+      }
+    };
+    reader.readAsText(file);
+  },
+
+  // === PARSEUR DE TEXTE INTELLIGENT ===
+  parseQuestionsFromText(text) {
+    const questions = [];
+    const errors = [];
+
+    // Normaliser : retirer les espaces multiples, normaliser les sauts de ligne
+    const normalized = text
+      .replace(/\r\n/g, '\n')
+      .replace(/\r/g, '\n');
+
+    // Découper par blocs (séparés par lignes vides)
+    const blocks = normalized.split(/\n\s*\n/);
+
+    blocks.forEach((block, blockIndex) => {
+      block = block.trim();
+      if (!block) return;
+
+      // Détecter les éléments dans le bloc
+      const lines = block.split('\n').map(l => l.trim()).filter(l => l);
+
+      let q = null;
+      const options = [null, null, null, null];
+      let r = null;
+      let x = null;
+
+      let currentField = null; // 'q', 'option_X', 'r', 'x'
+
+      lines.forEach((line) => {
+        // Question : Q: ... ou question commence par Q.
+        let match;
+
+        // Question
+        if ((match = line.match(/^Q\s*[:.\-)]\s*(.+)/i))) {
+          q = match[1].trim();
+          currentField = 'q';
+          return;
+        }
+
+        // Option A) B) C) D) (ou A. A: A-)
+        if ((match = line.match(/^([A-D])\s*[\)\.\:\-]\s*(.+)/i))) {
+          const letter = match[1].toUpperCase();
+          const idx = letter.charCodeAt(0) - 65;
+          options[idx] = match[2].trim();
+          currentField = 'option_' + idx;
+          return;
+        }
+
+        // Réponse : R: B (ou Réponse: B, Reponse: B)
+        if ((match = line.match(/^(?:R|R[ée]ponse|Bonne\s*r[ée]ponse|Solution)\s*[:.\-)]\s*([A-D])/i))) {
+          r = match[1].toUpperCase().charCodeAt(0) - 65;
+          currentField = 'r';
+          return;
+        }
+
+        // Explication : E: ... ou Explication: ...
+        if ((match = line.match(/^(?:E|Explication|Justification|Commentaire)\s*[:.\-)]\s*(.+)/i))) {
+          x = match[1].trim();
+          currentField = 'x';
+          return;
+        }
+
+        // Sinon, c'est la suite de la dernière partie (multiligne)
+        if (currentField === 'q' && q !== null) {
+          q += ' ' + line;
+        } else if (currentField && currentField.startsWith('option_')) {
+          const idx = parseInt(currentField.split('_')[1]);
+          if (options[idx] !== null) options[idx] += ' ' + line;
+        } else if (currentField === 'x' && x !== null) {
+          x += ' ' + line;
+        }
+      });
+
+      // Validation du bloc
+      if (!q) {
+        if (lines.length > 0) {
+          errors.push(`Bloc ${blockIndex + 1} : pas de question détectée (commence par "Q:")`);
+        }
+        return;
+      }
+
+      const filledOptions = options.filter(o => o !== null && o.trim());
+      if (filledOptions.length < 4) {
+        errors.push(`Question "${q.substring(0, 40)}..." : seulement ${filledOptions.length}/4 options`);
+        return;
+      }
+
+      if (r === null || r < 0 || r > 3) {
+        errors.push(`Question "${q.substring(0, 40)}..." : pas de bonne réponse (R: A, B, C ou D)`);
+        return;
+      }
+
+      if (!x) {
+        // Explication facultative, on met un placeholder
+        x = '(Explication à compléter)';
+      }
+
+      questions.push({
+        q: q.trim(),
+        o: options.map(o => o.trim()),
+        r: r,
+        x: x.trim()
+      });
+    });
+
+    return { questions, errors };
+  },
+
+  previewTextImport() {
+    const matiere = document.getElementById('importMatiere').value;
+    const rawText = document.getElementById('importTextRaw').value;
+
+    if (!rawText || !rawText.trim()) {
+      this.toast('Aucun texte à analyser', 'danger');
+      return;
+    }
+
+    const result = this.parseQuestionsFromText(rawText);
+
+    this.state.modalData = {
+      step: 2,
+      matiere,
+      rawText,
+      parsedQuestions: result.questions,
+      parseErrors: result.errors
+    };
+    this.render();
+  },
+
+  renderTextImportPreview(data) {
+    const matiere = window.MATIERES_CATALOG[data.matiere];
+    const letters = ['A','B','C','D'];
+    const ok = data.parsedQuestions.length;
+    const errs = data.parseErrors.length;
+
+    return `
+      <div class="modal-overlay" onclick="Admin.closeModal()">
+        <div class="modal" onclick="event.stopPropagation()" style="max-width:780px; max-height:90vh">
+          <div class="modal-title">🔍 Prévisualisation de l'import</div>
+          <div class="modal-desc">Vérifie les questions détectées avant de les ajouter à <strong>${matiere.icone} ${matiere.nom}</strong>.</div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.7rem; margin-bottom:1rem">
+            <div style="background:#f0fdf4; border:1px solid var(--success); border-radius:8px; padding:0.85rem 1rem">
+              <div style="font-size:0.75rem; color:#166534; font-weight:700; text-transform:uppercase">✓ Détectées</div>
+              <div style="font-family:'Instrument Serif',serif; font-size:1.8rem; line-height:1; color:var(--success); margin-top:0.2rem">${ok}</div>
+              <div style="font-size:0.78rem; color:#166534">questions valides</div>
+            </div>
+            <div style="background:${errs > 0 ? '#fef2f2' : '#f0fdf4'}; border:1px solid ${errs > 0 ? 'var(--danger)' : 'var(--success)'}; border-radius:8px; padding:0.85rem 1rem">
+              <div style="font-size:0.75rem; color:${errs > 0 ? '#991b1b' : '#166534'}; font-weight:700; text-transform:uppercase">${errs > 0 ? '⚠ Erreurs' : '✓ Aucune erreur'}</div>
+              <div style="font-family:'Instrument Serif',serif; font-size:1.8rem; line-height:1; color:${errs > 0 ? 'var(--danger)' : 'var(--success)'}; margin-top:0.2rem">${errs}</div>
+              <div style="font-size:0.78rem; color:${errs > 0 ? '#991b1b' : '#166534'}">questions ignorées</div>
+            </div>
+          </div>
+
+          ${errs > 0 ? `
+            <details style="background:#fef2f2; border:1px solid #fecaca; border-radius:8px; padding:0.7rem 0.9rem; margin-bottom:1rem">
+              <summary style="font-size:0.85rem; font-weight:700; color:#991b1b; cursor:pointer">Voir les ${errs} erreur${errs > 1 ? 's' : ''}</summary>
+              <ul style="margin-top:0.6rem; padding-left:1.5rem; font-size:0.82rem; color:#991b1b; line-height:1.6">
+                ${data.parseErrors.map(e => `<li>${this.escapeHTML(e)}</li>`).join('')}
+              </ul>
+            </details>
+          ` : ''}
+
+          ${ok === 0 ? `
+            <div style="background:#fef2f2; border:1px dashed var(--danger); border-radius:8px; padding:1.5rem; text-align:center; color:#991b1b">
+              <div style="font-size:2rem; margin-bottom:0.5rem">😕</div>
+              <div style="font-weight:700">Aucune question valide détectée</div>
+              <div style="font-size:0.85rem; margin-top:0.4rem">Vérifie que ton texte respecte le format Q:/A)/B)/C)/D)/R:/E:</div>
+            </div>
+          ` : `
+            <div style="max-height:380px; overflow-y:auto; border:1px solid var(--line); border-radius:8px; padding:0.7rem; background:var(--cream)">
+              ${data.parsedQuestions.slice(0, 50).map((q, i) => `
+                <div style="background:white; border-radius:8px; padding:0.85rem 1rem; margin-bottom:0.5rem; border:1px solid var(--line-soft)">
+                  <div style="display:flex; align-items:center; gap:0.4rem; margin-bottom:0.4rem">
+                    <span style="background:var(--cream-dark); color:var(--ink-mute); font-size:0.7rem; font-weight:700; padding:0.15rem 0.5rem; border-radius:999px">N°${i + 1}</span>
+                    <span style="background:#dcfce7; color:#166534; font-size:0.7rem; font-weight:700; padding:0.15rem 0.55rem; border-radius:999px">✓ Réponse : ${letters[q.r]}</span>
+                  </div>
+                  <div style="font-weight:600; font-size:0.88rem; line-height:1.4; margin-bottom:0.5rem">${this.escapeHTML(q.q)}</div>
+                  <div style="display:flex; flex-direction:column; gap:0.2rem">
+                    ${q.o.map((opt, oi) => `
+                      <div style="display:flex; align-items:center; gap:0.4rem; padding:0.3rem 0.5rem; background:${oi === q.r ? '#f0fdf4' : 'transparent'}; border-radius:4px; font-size:0.8rem; ${oi === q.r ? 'color:#166534; font-weight:600' : 'color:var(--ink-soft)'}">
+                        <span style="font-weight:700; min-width:18px">${letters[oi]})</span>
+                        <span>${this.escapeHTML(opt)}</span>
+                        ${oi === q.r ? '<span style="margin-left:auto; color:var(--success); font-size:0.7rem">✓</span>' : ''}
+                      </div>
+                    `).join('')}
+                  </div>
+                  ${q.x ? `<div style="background:#fffbeb; border-left:2px solid var(--gold-bf-dark); padding:0.4rem 0.6rem; margin-top:0.5rem; font-size:0.78rem; color:#713f12; border-radius:0 4px 4px 0">💡 ${this.escapeHTML(q.x)}</div>` : ''}
+                </div>
+              `).join('')}
+              ${ok > 50 ? `<div style="text-align:center; padding:0.6rem; color:var(--ink-mute); font-size:0.82rem">... et ${ok - 50} autres questions ...</div>` : ''}
+            </div>
+          `}
+
+          <div class="modal-actions">
+            <button class="btn-action btn-secondary" onclick="Admin.openTextImportModal()">← Retour</button>
+            <button class="btn-action btn-secondary" onclick="Admin.closeModal()">Annuler</button>
+            ${ok > 0 ? `<button class="btn-action btn-success" onclick="Admin.confirmTextImport()">✅ Ajouter les ${ok} questions</button>` : ''}
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  confirmTextImport() {
+    const data = this.state.modalData;
+    if (!data.parsedQuestions || data.parsedQuestions.length === 0) return;
+
+    // Créer un identifiant unique pour ce lot
+    const batchId = 'batch_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6);
+    const batchDate = Date.now();
+    const matiere = window.MATIERES_CATALOG[data.matiere];
+    const matiereNom = matiere ? matiere.nom : data.matiere;
+
+    // Ajouter les questions à la matière avec leur tag de lot
+    const customQ = JSON.parse(localStorage.getItem('bara_custom_questions') || '{}');
+    if (!customQ[data.matiere]) customQ[data.matiere] = [];
+
+    data.parsedQuestions.forEach(q => {
+      customQ[data.matiere].push({
+        ...q,
+        _batchId: batchId,
+        _importedAt: batchDate
+      });
+    });
+
+    this.saveCustomQuestions(customQ);
+
+    // Enregistrer le lot dans l'historique
+    this.saveBatch({
+      id: batchId,
+      date: batchDate,
+      matiere: data.matiere,
+      matiereNom: matiereNom,
+      matiereIcone: matiere ? matiere.icone : '📝',
+      count: data.parsedQuestions.length,
+      type: 'text-import',
+      preview: data.parsedQuestions[0]?.q?.substring(0, 80) || ''
+    });
+
+    const count = data.parsedQuestions.length;
+    this.closeModal();
+    this.toast(`🎉 Lot de ${count} question${count > 1 ? 's' : ''} importé !`, 'success');
+
+    // Aller à la matière modifiée pour voir le résultat
+    this.state.editingMatiere = data.matiere;
+    this.state.currentPage = 'questions';
+    this.render();
+  },
+
+  // ============================================
+  // GESTION DES LOTS D'IMPORT (Historique)
+  // ============================================
+
+  getBatches() {
+    try {
+      return JSON.parse(localStorage.getItem('bara_import_batches') || '[]');
+    } catch(e) { return []; }
+  },
+
+  saveBatch(batch) {
+    const batches = this.getBatches();
+    batches.unshift(batch); // Plus récent en premier
+    // Garder max 100 lots dans l'historique
+    if (batches.length > 100) batches.splice(100);
+    localStorage.setItem('bara_import_batches', JSON.stringify(batches));
+  },
+
+  deleteBatch(batchId) {
+    const batches = this.getBatches();
+    const batch = batches.find(b => b.id === batchId);
+    if (!batch) {
+      this.toast('Lot introuvable', 'danger');
+      return;
+    }
+
+    if (!confirm(`⚠️ Supprimer ce lot ?\n\n${batch.matiereIcone} ${batch.matiereNom}\n${batch.count} questions importées le ${this.formatBatchDate(batch.date)}\n\nLes ${batch.count} questions de ce lot seront définitivement retirées de l'application.`)) {
+      return;
+    }
+
+    // 1. Supprimer les questions de ce lot dans la matière
+    const customQ = JSON.parse(localStorage.getItem('bara_custom_questions') || '{}');
+    if (customQ[batch.matiere]) {
+      const before = customQ[batch.matiere].length;
+      customQ[batch.matiere] = customQ[batch.matiere].filter(q => q._batchId !== batchId);
+      const after = customQ[batch.matiere].length;
+      const removed = before - after;
+
+      if (customQ[batch.matiere].length === 0) delete customQ[batch.matiere];
+      localStorage.setItem('bara_custom_questions', JSON.stringify(customQ));
+
+      // 2. Supprimer le lot de l'historique
+      const batches = this.getBatches().filter(b => b.id !== batchId);
+      localStorage.setItem('bara_import_batches', JSON.stringify(batches));
+
+      this.toast(`🗑 Lot supprimé (${removed} questions retirées)`, 'success');
+      this.render();
+    }
+  },
+
+  formatBatchDate(timestamp) {
+    const d = new Date(timestamp);
+    return d.toLocaleDateString('fr-FR', {
+      day: '2-digit',
+      month: 'long',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+  },
+
+  openAddQuestionModal() {
+    this.state.modalOpen = 'add-question';
+    this.state.modalData = {
+      matiere: 'francais',
+      q: '',
+      options: ['', '', '', ''],
+      r: 0,
+      x: ''
+    };
+    this.render();
+  },
+
+  // ============================================
+  // PAGE: SETTINGS
+  // ============================================
+
+  // ============================================
+  // PAGE: ANNALES (Accompagnement Final)
+  // ============================================
+
+  // Charger les annales (defaults + customs)
+  loadAnnalesData() {
+    if (window.AnnalesHelper && window.AnnalesHelper.loadCustomAnnales) {
+      window.AnnalesHelper.loadCustomAnnales();
+    }
+    return window.AnnalesHelper.getAllSessions();
+  },
+
+  renderAnnalesAdmin() {
+    if (this.state.editingAnnale) {
+      return this.renderAnnaleEditDetail(this.state.editingAnnale);
+    }
+
+    const sessions = this.loadAnnalesData();
+    const total = window.AnnalesHelper.countTotalSujets();
+
+    return `
+      <div class="page-header">
+        <div>
+          <div class="page-title">📚 Annales <span>(Accompagnement Final)</span></div>
+          <div class="page-sub">${total} sujet${total > 1 ? 's' : ''} disponible${total > 1 ? 's' : ''} pour les utilisateurs Premium</div>
+        </div>
+        <button class="btn-action btn-success" onclick="Admin.openAddAnnaleModal()" style="padding:0.7rem 1.2rem">
+          ➕ Ajouter une annale
+        </button>
+      </div>
+
+      <div class="demo-banner">
+        <strong>💡 Important :</strong> Les annales sont accessibles uniquement aux utilisateurs Premium dans l'app étudiante. C'est un argument de vente fort pour les inciter à s'abonner.
+      </div>
+
+      ${sessions.map(s => `
+        <div class="table-wrap" style="margin-bottom:1.5rem">
+          <div class="table-header">
+            <div class="table-title">
+              <span style="background:linear-gradient(135deg, var(--green-bf), var(--green-bf-dark)); color:var(--gold-bf); padding:0.3rem 0.7rem; border-radius:8px; font-family:'Instrument Serif',serif; font-size:0.9rem; margin-right:0.5rem">${s.annee}</span>
+              ${s.label}
+            </div>
+            <button class="btn-action btn-secondary" onclick="Admin.openAddAnnaleModalForYear('${s.annee}')" style="padding:0.5rem 0.9rem; font-size:0.78rem">
+              ➕ Ajouter à ${s.annee}
+            </button>
+          </div>
+
+          ${s.sujets.length === 0 ? `
+            <div class="empty-state">
+              <div class="empty-icon">📝</div>
+              <div class="empty-title">Aucun sujet pour ${s.annee}</div>
+              <div class="empty-sub">Clique sur "➕ Ajouter à ${s.annee}" pour commencer.</div>
+            </div>
+          ` : `
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Sujet</th>
+                  <th>Concours</th>
+                  <th>Matière</th>
+                  <th>Questions</th>
+                  <th>Difficulté</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${s.sujets.map(sujet => {
+                  const matiere = window.MATIERES_CATALOG[sujet.matiereId];
+                  return `
+                    <tr>
+                      <td>
+                        <div style="font-weight:600">${this.escapeHTML(sujet.titre)}</div>
+                        <div style="font-size:0.78rem; color:var(--ink-mute); margin-top:0.2rem">${this.escapeHTML(sujet.description || '')}</div>
+                      </td>
+                      <td><span class="badge badge-info">${sujet.sigle}</span></td>
+                      <td>${matiere ? matiere.icone + ' ' + matiere.nom : sujet.matiereId}</td>
+                      <td><span class="badge ${sujet.questions.length >= 10 ? 'badge-success' : sujet.questions.length >= 5 ? 'badge-warning' : 'badge-danger'}">${sujet.questions.length}</span></td>
+                      <td>
+                        <span class="badge ${sujet.difficulte === 'Difficile' ? 'badge-danger' : sujet.difficulte === 'Facile' ? 'badge-success' : 'badge-warning'}">${sujet.difficulte || 'Moyen'}</span>
+                      </td>
+                      <td>
+                        <button class="btn-action btn-secondary" onclick="Admin.editAnnale('${s.annee}', '${sujet.id}')" style="padding:0.4rem 0.7rem; font-size:0.78rem">✏️ Voir</button>
+                        <button class="btn-action btn-danger" onclick="Admin.deleteAnnale('${s.annee}', '${sujet.id}')" style="padding:0.4rem 0.7rem; font-size:0.78rem; margin-left:0.3rem">🗑</button>
+                      </td>
+                    </tr>
+                  `;
+                }).join('')}
+              </tbody>
+            </table>
+          `}
+        </div>
+      `).join('')}
+    `;
+  },
+
+  openAddAnnaleModal() {
+    this.openAddAnnaleModalForYear('2026');
+  },
+
+  openAddAnnaleModalForYear(annee) {
+    this.state.modalOpen = 'add-annale';
+    this.state.modalData = {
+      annee: annee,
+      concoursId: '',
+      matiereId: '',
+      titre: '',
+      description: '',
+      difficulte: 'Moyen',
+      rawText: '',
+      step: 1
+    };
+    this.render();
+  },
+
+  renderAddAnnaleModal() {
+    const data = this.state.modalData;
+    const concoursList = window.CONCOURS;
+    const matieresList = Object.entries(window.MATIERES_CATALOG);
+
+    return `
+      <div class="modal-overlay" onclick="Admin.closeModal()">
+        <div class="modal" onclick="event.stopPropagation()" style="max-width:700px">
+          <div class="modal-title">➕ Ajouter une annale</div>
+          <div class="modal-desc">Renseigne les infos du sujet, puis colle les questions au format Q:/A)/B)/C)/D)/R:/E:</div>
+
+          <div class="form-group">
+            <label class="form-label">Session (année)</label>
+            <select class="form-select" id="annaleAnnee">
+              <option value="2025" ${data.annee === '2025' ? 'selected' : ''}>Session 2025</option>
+              <option value="2026" ${data.annee === '2026' ? 'selected' : ''}>Session 2026</option>
+              <option value="2024">Session 2024</option>
+              <option value="2023">Session 2023</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Concours concerné</label>
+            <select class="form-select" id="annaleConcours">
+              <option value="">— Choisir un concours —</option>
+              ${concoursList.map(c => `<option value="${c.id}" ${data.concoursId === c.id ? 'selected' : ''}>${c.sigle} — ${c.nom}</option>`).join('')}
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Matière de l'épreuve</label>
+            <select class="form-select" id="annaleMatiere">
+              <option value="">— Choisir une matière —</option>
+              ${matieresList.map(([id, m]) => `<option value="${id}" ${data.matiereId === id ? 'selected' : ''}>${m.icone} ${m.nom}</option>`).join('')}
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Titre du sujet</label>
+            <input type="text" class="form-input" id="annaleTitre" placeholder="Ex: Culture Générale — Police Nationale 2025" value="${this.escapeHTML(data.titre)}" maxlength="100">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Description courte</label>
+            <input type="text" class="form-input" id="annaleDescription" placeholder="Ex: Épreuve officielle du concours direct..." value="${this.escapeHTML(data.description)}" maxlength="200">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Difficulté</label>
+            <select class="form-select" id="annaleDifficulte">
+              <option value="Facile" ${data.difficulte === 'Facile' ? 'selected' : ''}>🟢 Facile</option>
+              <option value="Moyen" ${data.difficulte === 'Moyen' ? 'selected' : ''}>🟡 Moyen</option>
+              <option value="Difficile" ${data.difficulte === 'Difficile' ? 'selected' : ''}>🔴 Difficile</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">📋 Questions du sujet (format Q:/A)/B)/C)/D)/R:/E:)</label>
+            <div style="background:#f0fdf4; border:1px dashed var(--success); border-radius:8px; padding:0.7rem 0.9rem; margin-bottom:0.5rem; font-size:0.78rem; color:#166534">
+              💡 Colle ici les questions du sujet. Au moins <strong>5 questions</strong> recommandées.
+            </div>
+            <textarea class="form-textarea" id="annaleQuestions" rows="10" placeholder="Q: Première question ?&#10;A) Option 1&#10;B) Option 2&#10;C) Option 3&#10;D) Option 4&#10;R: B&#10;E: Explication détaillée..." style="font-family: 'Courier New', monospace; font-size: 0.82rem;">${this.escapeHTML(data.rawText)}</textarea>
+          </div>
+
+          <div class="modal-actions">
+            <button class="btn-action btn-secondary" onclick="Admin.closeModal()">Annuler</button>
+            <button class="btn-action btn-success" onclick="Admin.confirmAddAnnale()">✅ Créer le sujet</button>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  confirmAddAnnale() {
+    const annee = document.getElementById('annaleAnnee').value;
+    const concoursId = document.getElementById('annaleConcours').value;
+    const matiereId = document.getElementById('annaleMatiere').value;
+    const titre = document.getElementById('annaleTitre').value.trim();
+    const description = document.getElementById('annaleDescription').value.trim();
+    const difficulte = document.getElementById('annaleDifficulte').value;
+    const rawText = document.getElementById('annaleQuestions').value;
+
+    // Validations
+    if (!concoursId) { this.toast('Choisis un concours', 'danger'); return; }
+    if (!matiereId) { this.toast('Choisis une matière', 'danger'); return; }
+    if (!titre) { this.toast('Le titre est obligatoire', 'danger'); return; }
+    if (!rawText.trim()) { this.toast('Ajoute au moins une question', 'danger'); return; }
+
+    // Parser les questions
+    const result = this.parseQuestionsFromText(rawText);
+    if (result.questions.length === 0) {
+      this.toast('Aucune question valide détectée. Vérifie le format.', 'danger');
+      return;
+    }
+
+    const concours = window.CONCOURS.find(c => c.id === concoursId);
+
+    const newSujet = {
+      id: 'annale_' + concoursId + '_' + annee + '_' + Date.now(),
+      concoursId: concoursId,
+      concoursNom: concours ? concours.nom : '',
+      sigle: concours ? concours.sigle : '',
+      matiereId: matiereId,
+      titre: titre,
+      description: description || `Épreuve officielle du ${concours ? concours.nom : 'concours'}, session ${annee}`,
+      nbQuestions: result.questions.length,
+      difficulte: difficulte,
+      questions: result.questions
+    };
+
+    // Sauvegarder
+    if (window.AnnalesHelper.saveCustomAnnale(annee, newSujet)) {
+      // Recharger les données
+      window.AnnalesHelper.loadCustomAnnales();
+      this.closeModal();
+      this.toast(`✓ Annale créée avec ${result.questions.length} questions`, 'success');
+      this.render();
+    } else {
+      this.toast('Erreur lors de la sauvegarde', 'danger');
+    }
+  },
+
+  editAnnale(annee, sujetId) {
+    const sujet = window.AnnalesHelper.getSujet(annee, sujetId);
+    if (!sujet) return;
+
+    this.state.editingAnnale = { annee, sujetId };
+    this.render();
+  },
+
+  renderAnnaleEditDetail(editing) {
+    const sujet = window.AnnalesHelper.getSujet(editing.annee, editing.sujetId);
+    if (!sujet) {
+      this.state.editingAnnale = null;
+      return this.renderAnnalesAdmin();
+    }
+
+    const matiere = window.MATIERES_CATALOG[sujet.matiereId];
+    const concours = window.CONCOURS.find(c => c.id === sujet.concoursId);
+    const letters = ['A','B','C','D'];
+
+    return `
+      <div class="page-header">
+        <div>
+          <button onclick="Admin.closeAnnaleEdit()" style="background:transparent; color:var(--ink-mute); padding:0.3rem 0; font-size:0.85rem; margin-bottom:0.3rem; cursor:pointer; border:none">← Retour aux annales</button>
+          <div class="page-title">📚 ${this.escapeHTML(sujet.titre)}</div>
+          <div class="page-sub">Session ${editing.annee} • ${concours ? concours.nom : sujet.concoursNom} • ${matiere ? matiere.nom : sujet.matiereId}</div>
+        </div>
+        <button class="btn-action btn-danger" onclick="Admin.deleteAnnale('${editing.annee}', '${editing.sujetId}')" style="padding:0.7rem 1.1rem">
+          🗑 Supprimer cette annale
+        </button>
+      </div>
+
+      <div class="stats-grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
+        <div class="stat-card" style="--accent-color:#dbeafe; --accent-text:#1e40af">
+          <div class="stat-icon">📝</div>
+          <div class="stat-label">Questions</div>
+          <div class="stat-value">${sujet.questions.length}</div>
+        </div>
+        <div class="stat-card" style="--accent-color:#fef9c3; --accent-text:#854d0e">
+          <div class="stat-icon">⭐</div>
+          <div class="stat-label">Difficulté</div>
+          <div class="stat-value" style="font-size:1.4rem">${sujet.difficulte || 'Moyen'}</div>
+        </div>
+        <div class="stat-card" style="--accent-color:#dcfce7; --accent-text:#15803d">
+          <div class="stat-icon">📅</div>
+          <div class="stat-label">Session</div>
+          <div class="stat-value">${editing.annee}</div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <div class="table-header">
+          <div class="table-title">📝 ${sujet.questions.length} question${sujet.questions.length > 1 ? 's' : ''}</div>
+        </div>
+        <div style="padding:0">
+          ${sujet.questions.map((q, i) => `
+            <div style="padding:1.2rem 1.4rem; border-bottom:1px solid var(--line-soft)">
+              <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.6rem">
+                <span style="background:var(--cream-dark); color:var(--ink-mute); font-size:0.72rem; font-weight:700; padding:0.15rem 0.55rem; border-radius:999px">N° ${i + 1}</span>
+              </div>
+              <div style="font-weight:600; font-size:0.95rem; color:var(--ink); line-height:1.4; margin-bottom:0.7rem">${this.escapeHTML(q.q)}</div>
+
+              <div style="display:flex; flex-direction:column; gap:0.3rem; margin-bottom:0.7rem">
+                ${q.o.map((opt, oi) => `
+                  <div style="display:flex; align-items:center; gap:0.5rem; padding:0.5rem 0.7rem; background:${oi === q.r ? '#f0fdf4' : '#fafafa'}; border:1px solid ${oi === q.r ? 'var(--success)' : 'var(--line-soft)'}; border-radius:8px; font-size:0.85rem">
+                    <span style="background:${oi === q.r ? 'var(--success)' : 'var(--cream-dark)'}; color:${oi === q.r ? 'white' : 'var(--ink-mute)'}; width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.72rem; flex-shrink:0">${letters[oi]}</span>
+                    <span>${this.escapeHTML(opt)}</span>
+                    ${oi === q.r ? '<span style="margin-left:auto; color:var(--success); font-size:0.72rem; font-weight:700">✓ Bonne réponse</span>' : ''}
+                  </div>
+                `).join('')}
+              </div>
+
+              <div style="background:#fffbeb; border-left:3px solid var(--gold-bf-dark); padding:0.7rem 0.9rem; border-radius:0 8px 8px 0; font-size:0.82rem; color:#713f12; line-height:1.5">
+                <strong style="color:#854d0e">💡 Explication :</strong> ${this.escapeHTML(q.x)}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  },
+
+  closeAnnaleEdit() {
+    this.state.editingAnnale = null;
+    this.render();
+  },
+
+  deleteAnnale(annee, sujetId) {
+    const sujet = window.AnnalesHelper.getSujet(annee, sujetId);
+    if (!sujet) return;
+    if (!confirm(`Supprimer définitivement l'annale "${sujet.titre}" ?\n\nCette action est irréversible.`)) return;
+
+    if (window.AnnalesHelper.deleteCustomAnnale(annee, sujetId)) {
+      this.state.editingAnnale = null;
+      this.toast('🗑 Annale supprimée', 'danger');
+      this.render();
+    } else {
+      this.toast('Erreur lors de la suppression. Note : les annales par défaut ne peuvent pas être supprimées via le tableau d\'admin.', 'danger');
+    }
+  },
+
+  renderSettings() {
+    return `
+      <div class="page-header">
+        <div>
+          <div class="page-title">Paramètres</div>
+          <div class="page-sub">Configuration de Bara Concours Admin</div>
+        </div>
+      </div>
+
+      <div class="table-wrap" style="padding: 1.5rem">
+        <h3 style="font-family:'Instrument Serif',serif; font-size:1.3rem; color:var(--green-bf); margin-bottom:0.8rem">🔐 Sécurité</h3>
+        <p style="font-size:0.88rem; color:var(--ink-soft); line-height:1.6; margin-bottom:1rem">
+          Le mot de passe administrateur est stocké en dur dans le code source du fichier <code style="background:var(--cream); padding:0.2rem 0.5rem; border-radius:4px">admin.html</code>. Pour le changer, ouvre le fichier et modifie la ligne :
+        </p>
+        <pre style="background:#1a1a1a; color:#e5e7eb; padding:1rem; border-radius:8px; font-size:0.82rem; overflow-x:auto">const ADMIN_PASSWORD_HASH = 'ton_nouveau_mot_de_passe';</pre>
+        <p style="font-size:0.78rem; color:var(--ink-mute); margin-top:0.5rem">⚠️ Choisis un mot de passe long et difficile à deviner.</p>
+      </div>
+
+      <div class="table-wrap" style="padding: 1.5rem">
+        <h3 style="font-family:'Instrument Serif',serif; font-size:1.3rem; color:var(--green-bf); margin-bottom:0.8rem">📞 Numéros Bara Formation</h3>
+        <p style="font-size:0.88rem; color:var(--ink-soft); line-height:1.6; margin-bottom:0.5rem">
+          Numéro WhatsApp affiché dans l'app : <strong style="color:var(--green-bf)">04 04 34 04</strong>
+        </p>
+        <p style="font-size:0.78rem; color:var(--ink-mute); line-height:1.6">
+          Pour modifier, édite le fichier <code style="background:var(--cream); padding:0.2rem 0.5rem; border-radius:4px">data/premium.js</code> dans la section <code style="background:var(--cream); padding:0.2rem 0.5rem; border-radius:4px">BARA_NUMBERS</code>.
+        </p>
+      </div>
+
+      <div class="table-wrap" style="padding: 1.5rem">
+        <h3 style="font-family:'Instrument Serif',serif; font-size:1.3rem; color:var(--green-bf); margin-bottom:0.8rem">⚙️ Connecter à Firebase</h3>
+        <p style="font-size:0.88rem; color:var(--ink-soft); line-height:1.6; margin-bottom:1rem">
+          Pour que ce tableau de bord affiche les vraies données des utilisateurs (et non les données démo), il faut configurer Firebase. Suis le guide <code style="background:var(--cream); padding:0.2rem 0.5rem; border-radius:4px">FIREBASE_SETUP.md</code>.
+        </p>
+        <p style="font-size:0.78rem; color:var(--ink-mute); line-height:1.6">
+          Une fois Firebase configuré, ce tableau d'admin se connectera automatiquement à la base de données et affichera tous tes vrais utilisateurs et paiements.
+        </p>
+      </div>
+
+      <div class="table-wrap" style="padding: 1.5rem">
+        <h3 style="font-family:'Instrument Serif',serif; font-size:1.3rem; color:var(--green-bf); margin-bottom:0.8rem">🗑️ Données démo</h3>
+        <p style="font-size:0.88rem; color:var(--ink-soft); line-height:1.6; margin-bottom:1rem">
+          Pour repartir de zéro avec des données vides (sans les exemples démo), clique ci-dessous :
+        </p>
+        <button class="btn-action btn-danger" onclick="Admin.resetDemoData()" style="padding:0.7rem 1.2rem">🗑 Effacer toutes les données démo</button>
+      </div>
+    `;
+  },
+
+  resetDemoData() {
+    if (!confirm('⚠️ Effacer TOUTES les données démo ?\\n\\nCette action est irréversible.')) return;
+    localStorage.removeItem('bara_admin_pending_payments');
+    localStorage.removeItem('bara_admin_users');
+    localStorage.removeItem('bara_forum_topics');
+    localStorage.removeItem('bara_reports');
+    this.toast('Données démo effacées', 'success');
+    this.render();
+  },
+
+  // ============================================
+  // MODALS
+  // ============================================
+
+  renderModal() {
+    const m = this.state.modalOpen;
+    if (m === 'activate') return this.renderActivateModal();
+    if (m === 'add-user') return this.renderAddUserModal();
+    if (m === 'add-question') return this.renderAddQuestionModal();
+    if (m === 'edit-question') return this.renderEditQuestionModal();
+    if (m === 'edit-matiere') return this.renderEditMatiereModal();
+    if (m === 'import') return this.renderImportModal();
+    if (m === 'text-import') return this.renderTextImportModal();
+    if (m === 'add-annale') return this.renderAddAnnaleModal();
+    return '';
+  },
+
+  renderActivateModal() {
+    const data = this.state.modalData;
+    const users = this.getMockUsers();
+    const u = users.find(x => x.id === data.userId);
+    if (!u) return '';
+
+    return `
+      <div class="modal-overlay" onclick="Admin.closeModal()">
+        <div class="modal" onclick="event.stopPropagation()">
+          <div class="modal-title">⭐ Activer Premium</div>
+          <div class="modal-desc">Active manuellement l'abonnement Premium pour <strong>${u.name}</strong> (${this.formatPhone(u.phone)})</div>
+
+          <div class="form-group">
+            <label class="form-label">Plan à activer</label>
+            <select class="form-select" id="modalPlan">
+              ${Object.values(window.PremiumService.PLANS).map(p => `
+                <option value="${p.id}" ${data.plan === p.id ? 'selected' : ''}>${p.icon} ${p.name} — ${this.formatPrice(p.price)} FCFA (${p.durationLabel})</option>
+              `).join('')}
+            </select>
+          </div>
+
+          <div class="modal-actions">
+            <button class="btn-action btn-secondary" onclick="Admin.closeModal()">Annuler</button>
+            <button class="btn-action btn-success" onclick="Admin.confirmActivate()">⭐ Activer Premium</button>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  confirmActivate() {
+    const planId = document.getElementById('modalPlan').value;
+    const userId = this.state.modalData.userId;
+    const users = this.getMockUsers();
+    const u = users.find(x => x.id === userId);
+    if (!u) return;
+
+    const updates = window.PremiumService.activatePremium(u, planId);
+    Object.assign(u, updates);
+    this.saveMockUsers(users);
+
+    this.closeModal();
+    this.toast(`✓ Premium activé pour ${u.name}`, 'success');
+    this.render();
+  },
+
+  renderAddUserModal() {
+    return `
+      <div class="modal-overlay" onclick="Admin.closeModal()">
+        <div class="modal" onclick="event.stopPropagation()">
+          <div class="modal-title">⭐ Activer Premium pour un nouvel utilisateur</div>
+          <div class="modal-desc">Si l'utilisateur n'existe pas encore, on va le créer puis activer son Premium.</div>
+
+          <div class="form-group">
+            <label class="form-label">Nom complet</label>
+            <input type="text" class="form-input" id="newUserName" placeholder="Ex: Adama Kaboré" autofocus>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Numéro de téléphone</label>
+            <input type="tel" class="form-input" id="newUserPhone" placeholder="Ex: 70 12 34 56" maxlength="11">
+            <div class="form-help">8 chiffres (avec ou sans espaces). Préfixe +226 ajouté automatiquement.</div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Plan à activer</label>
+            <select class="form-select" id="newUserPlan">
+              ${Object.values(window.PremiumService.PLANS).map(p => `
+                <option value="${p.id}">${p.icon} ${p.name} — ${this.formatPrice(p.price)} FCFA</option>
+              `).join('')}
+            </select>
+          </div>
+
+          <div class="modal-actions">
+            <button class="btn-action btn-secondary" onclick="Admin.closeModal()">Annuler</button>
+            <button class="btn-action btn-success" onclick="Admin.confirmAddUser()">Créer + Activer</button>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  confirmAddUser() {
+    const name = document.getElementById('newUserName').value.trim();
+    const phoneRaw = document.getElementById('newUserPhone').value.replace(/\s/g, '');
+    const planId = document.getElementById('newUserPlan').value;
+
+    if (!name) { this.toast('Nom obligatoire', 'danger'); return; }
+    if (phoneRaw.length !== 8) { this.toast('Numéro invalide (8 chiffres)', 'danger'); return; }
+
+    const users = this.getMockUsers();
+    const phone = '+226' + phoneRaw;
+    let u = users.find(x => x.phone === phone);
+    if (!u) {
+      u = {
+        id: 'u_' + Date.now(),
+        name, phone, city: '', targetConcours: '',
+        isPremium: false, totalQCM: 0, joinedAt: Date.now()
+      };
+      users.push(u);
+    }
+
+    const updates = window.PremiumService.activatePremium(u, planId);
+    Object.assign(u, updates);
+    this.saveMockUsers(users);
+
+    this.closeModal();
+    this.toast(`✓ Premium activé pour ${name}`, 'success');
+    this.render();
+  },
+
+  renderAddQuestionModal() {
+    const data = this.state.modalData;
+    const matieres = Object.entries(window.MATIERES_CATALOG);
+
+    return `
+      <div class="modal-overlay" onclick="Admin.closeModal()">
+        <div class="modal" onclick="event.stopPropagation()" style="max-width:560px">
+          <div class="modal-title">➕ Ajouter une question</div>
+          <div class="modal-desc">La question sera ajoutée à la matière sélectionnée.</div>
+
+          <div class="form-group">
+            <label class="form-label">Matière</label>
+            <select class="form-select" id="qMatiere">
+              ${matieres.map(([id, m]) => `<option value="${id}" ${data.matiere === id ? 'selected' : ''}>${m.icone} ${m.nom}</option>`).join('')}
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Question</label>
+            <textarea class="form-textarea" id="qText" placeholder="Tape ta question ici..." rows="2">${this.escapeHTML(data.q)}</textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">📋 Options de réponse — Touche le rond vert pour marquer la BONNE réponse</label>
+            <div style="background:#f0fdf4; border:1px dashed var(--success); border-radius:8px; padding:0.7rem 0.9rem; margin-bottom:0.7rem; font-size:0.78rem; color:#166534">
+              💡 <strong>Comment marquer la bonne réponse :</strong> Touche le grand rond à gauche d'une option pour la marquer comme correcte. Le rond devient <strong style="color:var(--success)">vert ✓</strong> quand c'est bon.
+            </div>
+            ${data.options.map((opt, i) => {
+              const isRight = data.r === i;
+              return `
+                <div style="display:flex; gap:0.6rem; margin-bottom:0.5rem; align-items:center; padding:0.5rem; background:${isRight ? '#f0fdf4' : 'var(--cream)'}; border-radius:8px; border:1.5px solid ${isRight ? 'var(--success)' : 'transparent'}">
+                  <button type="button" onclick="Admin.setRightAnswer(${i})" title="Touche pour marquer comme bonne réponse" style="width:42px; height:42px; border-radius:50%; background:${isRight ? 'var(--success)' : 'white'}; color:${isRight ? 'white' : 'var(--ink-mute)'}; font-weight:800; flex-shrink:0; cursor:pointer; border:2.5px solid ${isRight ? 'var(--success)' : 'var(--line)'}; font-size:1.1rem; display:flex; align-items:center; justify-content:center; transition:all 0.2s">
+                    ${isRight ? '✓' : ['A','B','C','D'][i]}
+                  </button>
+                  <input type="text" class="form-input" id="qOpt${i}" placeholder="Option ${['A','B','C','D'][i]}" value="${this.escapeHTML(opt)}" style="flex:1; margin:0; ${isRight ? 'border-color:var(--success); background:white' : ''}">
+                  ${isRight ? '<span style="background:var(--success); color:white; font-size:0.7rem; font-weight:800; padding:0.3rem 0.6rem; border-radius:999px; flex-shrink:0">BONNE RÉPONSE</span>' : ''}
+                </div>
+              `;
+            }).join('')}
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">💡 Explication (à afficher après la réponse à l'étudiant)</label>
+            <textarea class="form-textarea" id="qExpl" placeholder="Explique pourquoi c'est cette réponse, donne du contexte, des astuces de mémorisation..." rows="3">${this.escapeHTML(data.x)}</textarea>
+            <div class="form-help">Une bonne explication enseigne, ne se contente pas de justifier.</div>
+          </div>
+
+          <div class="modal-actions">
+            <button class="btn-action btn-secondary" onclick="Admin.closeModal()">Annuler</button>
+            <button class="btn-action btn-success" onclick="Admin.confirmAddQuestion()">➕ Ajouter</button>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  setRightAnswer(i) {
+    this.state.modalData.r = i;
+    // Capturer les valeurs avant re-render
+    const data = this.state.modalData;
+    data.matiere = document.getElementById('qMatiere').value;
+    data.q = document.getElementById('qText').value;
+    for (let j = 0; j < 4; j++) {
+      data.options[j] = document.getElementById('qOpt' + j).value;
+    }
+    data.x = document.getElementById('qExpl').value;
+    this.render();
+  },
+
+  confirmAddQuestion() {
+    const matiere = document.getElementById('qMatiere').value;
+    const q = document.getElementById('qText').value.trim();
+    const options = [0,1,2,3].map(i => document.getElementById('qOpt' + i).value.trim());
+    const r = this.state.modalData.r;
+    const x = document.getElementById('qExpl').value.trim();
+
+    if (!q) { this.toast('Question obligatoire', 'danger'); return; }
+    if (options.some(o => !o)) { this.toast('Toutes les options doivent être remplies', 'danger'); return; }
+    if (!x) { this.toast('Explication obligatoire', 'danger'); return; }
+
+    const newQ = { q, o: options, r, x };
+    const json = JSON.stringify(newQ, null, 2);
+
+    // Sauvegarder dans localStorage pour ne pas perdre
+    const customQ = JSON.parse(localStorage.getItem('bara_custom_questions') || '{}');
+    if (!customQ[matiere]) customQ[matiere] = [];
+    customQ[matiere].push(newQ);
+    localStorage.setItem('bara_custom_questions', JSON.stringify(customQ));
+
+    this.closeModal();
+    this.toast('✓ Question ajoutée. Copie le JSON dans data/questions.js', 'success');
+
+    // Afficher modal avec le code à copier
+    this.state.modalOpen = 'show-question-json';
+    this.state.modalData = { matiere, json };
+    this.render();
+  },
+
+  closeModal() {
+    this.state.modalOpen = null;
+    this.state.modalData = null;
+    this.render();
+  },
+
+  // ============================================
+  // UTILS
+  // ============================================
+
+  navigate(page) {
+    this.state.currentPage = page;
+    this.state.currentTab = page === 'payments' ? 'pending' : page === 'users' ? 'all' : '';
+    this.state.searchQuery = '';
+    this.state.sidebarOpen = false;
+    this.render();
+  },
+
+  setTab(t) {
+    this.state.currentTab = t;
+    this.render();
+  },
+
+  search(q) {
+    this.state.searchQuery = q;
+    this.render();
+  },
+
+  toggleSidebar() {
+    this.state.sidebarOpen = !this.state.sidebarOpen;
+    this.render();
+  },
+
+  escapeHTML(s) {
+    return (s || '').replace(/[&<>"']/g, c => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    })[c]);
+  },
+
+  formatPrice(amount) {
+    return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+  },
+
+  formatPhone(p) {
+    if (!p) return '';
+    if (p.startsWith('+226')) {
+      const n = p.substring(4);
+      return `+226 ${n.substring(0,2)} ${n.substring(2,4)} ${n.substring(4,6)} ${n.substring(6,8)}`;
+    }
+    return p;
+  },
+
+  formatRelativeTime(timestamp) {
+    if (!timestamp) return '-';
+    const diff = Date.now() - timestamp;
+    const min = 60 * 1000, hour = 60 * min, day = 24 * hour;
+    if (diff < min) return 'à l\'instant';
+    if (diff < hour) return `il y a ${Math.floor(diff / min)} min`;
+    if (diff < day) return `il y a ${Math.floor(diff / hour)} h`;
+    if (diff < 7 * day) return `il y a ${Math.floor(diff / day)} j`;
+    return new Date(timestamp).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' });
+  },
+
+  toast(msg, type = '') {
+    const t = document.createElement('div');
+    t.className = 'toast ' + type;
+    t.textContent = msg;
+    document.body.appendChild(t);
+    setTimeout(() => t.remove(), 3000);
+  },
+
+  // ============================================
+  // INIT
+  // ============================================
+
+  init() {
+    this.render();
+  }
+};
+
+Admin.init();
+</script>
+
+</body>
+</html>
