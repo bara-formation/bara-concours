@@ -30,6 +30,11 @@ const Notifications = {
       return { success: false, reason: 'unsupported' };
     }
 
+    // BUG #3 FIX : détecter le protocole file:// qui bloque les notifications
+    if (location.protocol === 'file:') {
+      return { success: false, reason: 'file_protocol' };
+    }
+
     if (Notification.permission === 'granted') {
       this.permission = 'granted';
       this.startDailyScheduler();
@@ -40,15 +45,20 @@ const Notifications = {
       return { success: false, reason: 'denied' };
     }
 
-    const permission = await Notification.requestPermission();
-    this.permission = permission;
+    try {
+      const permission = await Notification.requestPermission();
+      this.permission = permission;
 
-    if (permission === 'granted') {
-      this.startDailyScheduler();
-      this.showWelcomeNotification();
-      return { success: true };
+      if (permission === 'granted') {
+        this.startDailyScheduler();
+        this.showWelcomeNotification();
+        return { success: true };
+      }
+      return { success: false, reason: permission };
+    } catch (err) {
+      console.error('[Notif] Erreur requestPermission:', err);
+      return { success: false, reason: 'error' };
     }
-    return { success: false, reason: permission };
   },
 
   // === PLANIFICATEUR QUOTIDIEN ===

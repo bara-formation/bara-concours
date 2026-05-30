@@ -1,8 +1,8 @@
 // Bara Concours - Base de questions QCM
-// Fichier généré à partir de l'export admin du 29/05/2026
-// Total : 3774 questions réparties sur 35 matières
-// Source : export Issoufou (Bara Formation)
-// Inclut : 6 modifications + 37 suppressions + 100 ajouts depuis V26
+// Fichier mis à jour le 29/05/2026 avec les modifications V25 récupérées
+// Total : 3742 questions réparties sur 35 matières
+// Inclut : 26 modifications CG appliquées + 36 suppressions Français appliquées
+// Source : récupération localStorage V25 d'Issoufou
 
 const QUESTIONS = {
   "francais": [
@@ -744,28 +744,6 @@ const QUESTIONS = {
       "x": "L'expression \"au niveau de\" est vague et critiquée quand elle remplace des prépositions précises (\"concernant\", \"quant à\", \"pour\"). La phrase C utilise \"concernant\", précis et correct. Piège : employer \"au niveau de\" pour tout, ce qui signale un registre familier et appauvrit le style."
     },
     {
-      "q": "Quel est l'antonyme de \"austère\" ?",
-      "o": [
-        "Sobre",
-        "Rigide",
-        "Fastueux",
-        "Triste"
-      ],
-      "r": 2,
-      "x": "\"Austère\" désigne ce qui est sévère dans sa forme, dépourvu d'ornements. Son antonyme est \"fastueux\" (qui affiche un luxe éclatant). \"Sobre\" est un synonyme. Piège : proposer \"gai\" ou \"joyeux\" qui s'opposent à l'aspect moral de l'austérité, non à son aspect matériel."
-    },
-    {
-      "q": "Accord du participe passé avec le pronom \"en\" : \"Des problèmes, il _______ dans toutes les administrations.\"",
-      "o": [
-        "en a eus",
-        "en a eu",
-        "en a eues",
-        "en avait eue"
-      ],
-      "r": 1,
-      "x": "Le participe passé avec \"avoir\" ne s'accorde JAMAIS avec le pronom \"en\" qui précède le verbe, même si \"en\" est COD. \"En\" est un pronom partitif indéfini qui bloque l'accord. Piège fréquent : accorder en croyant que \"en\" équivaut à \"des problèmes\" (COD antéposé) — règle absolue souvent ignorée."
-    },
-    {
       "q": "Le mot \"sibyllin\" qualifie des propos :",
       "o": [
         "Clairs et précis",
@@ -973,28 +951,6 @@ const QUESTIONS = {
       ],
       "r": 1,
       "x": "Après \"sous prétexte que\", on emploie l'indicatif car on rapporte un prétexte présenté comme réel (vrai ou faux). \"Il était malade\" → indicatif imparfait. Piège : employer le subjonctif par analogie avec d'autres conjonctions de subordination — \"sous prétexte que\" est indicatif."
-    },
-    {
-      "q": "\"Exacerber\" quelque chose signifie :",
-      "o": [
-        "L'atténuer progressivement",
-        "L'aggraver, le porter à un degré extrême d'intensité",
-        "L'expliquer clairement",
-        "Le résoudre définitivement"
-      ],
-      "r": 1,
-      "x": "\"Exacerber\" (du latin \"exacerbare\" = aigrir) = pousser quelque chose à un degré extrême. Exemple : \"Cette décision a exacerbé les tensions sociales.\" Piège : confondre avec \"exaspérer\" (irriter fortement une personne) — \"exacerber\" porte sur des états ou des situations."
-    },
-    {
-      "q": "Choisissez la phrase correcte avec \"au fur et à mesure\" :",
-      "o": [
-        "Au fur et mesure que les résultats arrivent, nous les analysons.",
-        "Au fur et à mesure des résultats arrivent, nous les analysons.",
-        "Au fur et à mesure que les résultats arrivent, nous les analysons.",
-        "Au fur et à la mesure que les résultats arrivent, nous les analysons."
-      ],
-      "r": 2,
-      "x": "\"Au fur et à mesure que\" (suivi d'un verbe) est la locution conjonctive correcte. \"Au fur et à mesure de\" (suivi d'un nom) est également correct. \"Au fur et mesure\" (sans \"à\") est fautif. Piège : omettre le \"à\" devant \"mesure\" — faute très fréquente à l'oral qui contamine l'écrit."
     },
     {
       "q": "Un \"corollaire\" est :",
@@ -1305,28 +1261,6 @@ const QUESTIONS = {
       "x": "\"Ostensible\" (du latin \"ostendere\" = montrer) qualifie ce qui est volontairement apparent, montré avec intention pour être remarqué. Exemple : \"Un mépris ostensible.\" Piège : confondre avec \"ostentatoire\" (qui cherche à impressionner par un étalage de richesse) — \"ostensible\" est plus neutre."
     },
     {
-      "q": "\"Ce fonctionnaire ne travaille _______ avec autant de rigueur qu'auparavant.\" Choisissez le bon adverbe négatif.",
-      "o": [
-        "jamais",
-        "plus",
-        "guère",
-        "pas"
-      ],
-      "r": 2,
-      "x": "\"Ne...guère\" = ne...pas beaucoup (quantité ou intensité réduite). La phrase signifie \"il ne travaille pas beaucoup avec autant de rigueur\". \"Ne...plus\" indiquerait une cessation totale. \"Ne...guère\" est l'adverbe de quantité négative le plus précis ici. Piège : confondre \"guère\" (adverbe) avec \"guerre\" (nom) — homophones."
-    },
-    {
-      "q": "Dans la phrase \"Cette décision est une bombe\", \"bombe\" est employé :",
-      "o": [
-        "Au sens propre",
-        "Dans un registre technique",
-        "Dans un sens juridique",
-        "Au sens figuré"
-      ],
-      "r": 3,
-      "x": "\"Bombe\" au sens propre = engin explosif. Au sens figuré = quelque chose de choquant, d'inattendu qui produit un effet brutal. Piège : répondre \"sens propre\" car le mot \"bombe\" existe réellement — la distinction repose sur l'emploi contextuel, non sur l'existence du mot."
-    },
-    {
       "q": "\"Il faut _______ les insuffisances du système de recrutement.\" Choisissez la phrase correcte.",
       "o": [
         "palier",
@@ -1490,28 +1424,6 @@ const QUESTIONS = {
       ],
       "r": 3,
       "x": "Avant un adjectif suivi d'une complétive, on emploie \"il est\" (impersonnel neutre). \"C'est\" s'emploie devant un nom ou en langue familière. \"Il est important que + subjonctif\" est la structure correcte dans la langue soutenue. Piège : employer \"c'est\" dans tous les contextes — déconseillé dans les écrits de concours."
-    },
-    {
-      "q": "\"Récurrent\" qualifie :",
-      "o": [
-        "Ce qui se produit une seule fois",
-        "Ce qui vient de se produire",
-        "Ce qui est impossible à résoudre",
-        "Ce qui revient de façon répétée"
-      ],
-      "r": 3,
-      "x": "\"Récurrent\" (du latin \"recurrere\" = revenir en courant) désigne ce qui revient de façon périodique, répétitive. Exemple : \"Un problème récurrent dans l'administration.\" Piège : confondre avec \"récent\" (qui vient de se produire) — ressemblance phonique trompeuse."
-    },
-    {
-      "q": "\"Il a quitté la salle sans que personne _______ rien.\" Choisissez la forme correcte.",
-      "o": [
-        "remarquait",
-        "avait remarqué",
-        "remarquera",
-        "remarque"
-      ],
-      "r": 3,
-      "x": "\"Sans que\" exige le subjonctif. \"Remarque\" est le subjonctif présent (3e pers. sing.). Un \"ne\" explétif facultatif peut s'ajouter : \"sans que personne ne remarque rien\" — les deux sont corrects. Piège : employer l'indicatif imparfait \"remarquait\" ou le futur — fautes systématiquement pénalisées en concours."
     },
     {
       "q": "\"Comminatoire\" qualifie ce qui est :",
@@ -1855,39 +1767,6 @@ const QUESTIONS = {
       "x": "\"Quel que soit\" s'accorde avec le sujet du verbe \"être\". \"Votre décision\" est féminin singulier → \"Quelle que soit votre décision\". Les deux éléments \"quel\" et \"que\" encadrent le verbe \"être\" au subjonctif et s'accordent. Piège : ne pas accorder \"quel\" avec le nom féminin et écrire \"quel que soit\" — faute caractérisée très fréquente."
     },
     {
-      "q": "Un \"anachronisme\" est :",
-      "o": [
-        "La coexistence harmonieuse de deux époques",
-        "Un phénomène récurrent dans l'histoire",
-        "Une révolution politique",
-        "Ce qui est attribué à une époque où cela n'existait pas, une erreur de datation"
-      ],
-      "r": 3,
-      "x": "\"Anachronisme\" (du grec \"ana\" = contre + \"chronos\" = temps) = attribuer à une époque ce qui n'y appartient pas. Exemple : \"Dire que Napoléon avait un téléphone est un anachronisme.\" Piège : confondre avec \"archaïsme\" (emploi de formes anciennes, non nécessairement une erreur de datation)."
-    },
-    {
-      "q": "\"_______ pour montrer l'exemple, le chef doit respecter les règles.\" Choisissez la bonne locution.",
-      "o": [
-        "Ne serait-ce que",
-        "Ne fût-ce que",
-        "A et B sont corrects",
-        "Même que"
-      ],
-      "r": 2,
-      "x": "\"Ne serait-ce que\" et \"ne fût-ce que\" (plus littéraire) sont deux locutions synonymes signifiant \"même seulement\". Les deux introduisent une raison minimale mais suffisante. \"Même que\" n'existe pas dans ce sens en français standard. Piège : ne connaître qu'une des deux formes et rejeter l'autre."
-    },
-    {
-      "q": "Un \"néologisme\" est :",
-      "o": [
-        "Un mot ancien qui n'est plus utilisé",
-        "Un emprunt à une langue étrangère",
-        "Un terme technique réservé aux spécialistes",
-        "Un mot nouveau ou une nouvelle signification donnée à un mot existant"
-      ],
-      "r": 3,
-      "x": "\"Néologisme\" (du grec \"neos\" = nouveau + \"logos\" = mot) désigne un mot nouvellement créé ou un sens nouveau attribué à un mot existant. Exemple : \"Courriel\" est un néologisme créé pour remplacer \"email\". Piège : confondre avec \"emprunt\" (le mot vient d'une autre langue) — un néologisme peut être un emprunt adapté, mais pas nécessairement."
-    },
-    {
       "q": "\"Quelle chaleur il a _______ endurer cette année !\" Choisissez la forme correcte.",
       "o": [
         "fallue",
@@ -2007,39 +1886,6 @@ const QUESTIONS = {
       ],
       "r": 3,
       "x": "\"Velléité\" désigne un vouloir vague, une intention sans force ni suite. Exemple : \"Il n'a que des velléités de réforme.\" Le pluriel \"velléités\" accentue le caractère répété et inachevé. Piège : confondre avec \"volonté\" (intention ferme) — \"velléité\" insiste spécifiquement sur la faiblesse de la résolution."
-    },
-    {
-      "q": "\"Exhaustif\" qualifie :",
-      "o": [
-        "Ce qui est superficiel et incomplet",
-        "Ce qui est épuisant et difficile",
-        "Ce qui est fait rapidement",
-        "Ce qui traite un sujet dans sa totalité, sans rien omettre"
-      ],
-      "r": 3,
-      "x": "\"Exhaustif\" (du latin \"exhaurire\" = épuiser complètement) qualifie ce qui est complet, qui couvre tous les aspects sans en omettre aucun. Exemple : \"Un rapport exhaustif sur la décentralisation.\" Piège : confondre avec le sens physique d'\"épuisant\" (confusion avec l'anglais \"exhausting\") — faux ami courant en concours."
-    },
-    {
-      "q": "Choisissez la phrase correcte avec \"d'ores et déjà\" :",
-      "o": [
-        "La réforme est dores et déjà engagée.",
-        "La réforme est d'ores-et-déjà engagée.",
-        "La réforme est dors et déjà engagée.",
-        "La réforme est d'ores et déjà engagée."
-      ],
-      "r": 3,
-      "x": "\"D'ores et déjà\" s'écrit avec une apostrophe après \"d'\" et sans trait d'union entre les éléments. Elle signifie \"dès maintenant, à partir de ce moment.\" Piège : omettre l'apostrophe (\"dores et déjà\") ou mal orthographier \"ores\" (\"dors\" — confusion avec le verbe \"dormir\"). Faute fréquente par méconnaissance de l'étymologie."
-    },
-    {
-      "q": "\"_______ votre décision, elle sera respectée.\" Choisissez la bonne construction avec \"quel que soit\".",
-      "o": [
-        "Quel que soit",
-        "Quelque soit",
-        "Quelle que soit",
-        "Quels que soit"
-      ],
-      "r": 2,
-      "x": "\"Quel que soit\" s'accorde avec le sujet du verbe \"être\". \"Votre décision\" est féminin singulier → \"Quelle que soit\". Piège : ne pas accorder \"quel\" avec le nom féminin et écrire \"Quel que soit\" — faute très fréquente et caractérisée dans les concours."
     },
     {
       "q": "La \"contingence\" d'un événement désigne :",
@@ -2163,39 +2009,6 @@ const QUESTIONS = {
       "x": "\"Après que\" exige l'indicatif, contrairement à \"avant que\" qui exige le subjonctif. Action réelle et accomplie → passé composé de l'indicatif \"a terminé\". Piège majeur et très répandu : employer le subjonctif après \"après que\" par confusion avec \"avant que\" — faute considérée comme grave en concours de niveau élevé."
     },
     {
-      "q": "Quel est le pluriel correct de \"festival\" ?",
-      "o": [
-        "festivalx",
-        "festivaux",
-        "festivals",
-        "festival"
-      ],
-      "r": 2,
-      "x": "\"Festival\" fait \"festivals\" au pluriel (contrairement à \"carnaval\" → \"carnavals\" et \"bal\" → \"bals\"). Ces trois noms ne suivent pas la règle des noms en -al (→ -aux). Mémoriser : festivals, carnavals, bals, chacals, récitals sont des pluriels en -s et non en -aux. Piège : appliquer la règle -al → -aux à tous les noms en -al."
-    },
-    {
-      "q": "\"Quelque _______ efforts qu'il fasse, il ne réussira pas sans méthode.\" Choisissez la bonne forme.",
-      "o": [
-        "Quelques",
-        "Quelque",
-        "Quel que",
-        "Quels que"
-      ],
-      "r": 0,
-      "x": "\"Quelques\" est ici déterminant pluriel devant \"efforts\" (masculin pluriel) → accord en nombre requis. \"Quelque... que\" devant un adjectif est adverbe invariable (ex : \"quelque intelligents qu'ils soient\"). Devant un nom, \"quelques\" (pluriel) est le déterminant qui s'accorde. Piège : laisser \"quelque\" invariable dans tous les contextes."
-    },
-    {
-      "q": "\"Les personnes _______ sont priées de se manifester.\" Choisissez la bonne forme de \"concerné\".",
-      "o": [
-        "concernée",
-        "concernés",
-        "concernées",
-        "concerné"
-      ],
-      "r": 2,
-      "x": "\"Les personnes\" est féminin pluriel → l'adjectif épithète \"concernées\" s'accorde en féminin pluriel. Piège : accorder au masculin pluriel par défaut (\"concernés\") sans vérifier le genre du nom principal."
-    },
-    {
       "q": "\"Attendu _______ la gravité des faits, une sanction disciplinaire est prononcée.\" Choisissez la forme correcte.",
       "o": [
         "la",
@@ -2293,28 +2106,6 @@ const QUESTIONS = {
       ],
       "r": 3,
       "x": "\"Quel que soit\" + nom + verbe \"être\" au subjonctif. \"Le résultat\" est masculin singulier → \"Quel que soit le résultat\". \"Quel\" s'accorde avec le sujet du verbe \"être\". Piège : employer \"quelque\" (adverbe invariable) à la place du pronom \"quel\" variable."
-    },
-    {
-      "q": "\"L'un et l'autre candidat _______ convoqués.\" Choisissez la bonne forme verbale.",
-      "o": [
-        "a été",
-        "ont été",
-        "avaient été",
-        "sera"
-      ],
-      "r": 1,
-      "x": "\"L'un et l'autre\" (addition de deux éléments) : le verbe se met au pluriel. Équivaut à \"tous les deux\". Piège : employer le singulier en pensant à \"l'un\" (singulier) — \"l'un ET l'autre\" additionne les deux et appelle le pluriel."
-    },
-    {
-      "q": "\"Versatile\" en français (sans influence de l'anglais) signifie :",
-      "o": [
-        "Polyvalent, capable de s'adapter à plusieurs tâches",
-        "Dynamique et efficace",
-        "Expérimenté dans plusieurs domaines",
-        "Qui change facilement d'opinion, inconstant"
-      ],
-      "r": 3,
-      "x": "\"Versatile\" en français = instable, qui tourne facilement dans un sens puis dans l'autre (comme une girouette). C'est un faux ami : en anglais \"versatile\" = polyvalent. Exemple : \"Un électeur versatile est difficile à fidéliser.\" Piège fréquent : calquer le sens anglais et traduire \"versatile\" par \"polyvalent\"."
     },
     {
       "q": "\"_______ les retards accumulés, le projet a néanmoins été livré à temps.\" Choisissez la locution correcte.",
@@ -2790,28 +2581,6 @@ const QUESTIONS = {
       "x": "\"Acception\" désigne chacun des sens différents d'un mot ou d'un concept. \"Dans toute l'acception du terme\" = dans tous les sens du terme. \"Exception\" = ce qui n'entre pas dans la règle. \"Acceptation\" = le fait d'accepter. Piège : confondre \"acception\" et \"acceptation\" — les deux viennent du latin \"accipere\" mais ont des sens totalement différents."
     },
     {
-      "q": "\"Pourvu qu'il _______ présent, la réunion pourra avoir lieu.\" Choisissez la forme correcte.",
-      "o": [
-        "est",
-        "sera",
-        "soit",
-        "serait"
-      ],
-      "r": 2,
-      "x": "\"Pourvu que\" (locution exprimant un souhait conditionnel) exige le subjonctif. \"Soit\" est le subjonctif présent de \"être\". Traduction : \"à condition qu'il soit présent\". Piège : employer l'indicatif futur \"sera\" — faute très fréquente sous l'influence du sens conditionnel futur."
-    },
-    {
-      "q": "\"Il s'est _______ à cette position malgré les critiques.\" Choisissez le PP correct de \"se tenir\".",
-      "o": [
-        "tenus",
-        "tenu",
-        "tenue",
-        "tendue"
-      ],
-      "r": 1,
-      "x": "\"Se tenir à\" : \"tenir à\" est transitif indirect (tenir à une position). Le pronom \"se\" est COI → PP invariable. \"Il s'est tenu à cette position\" → \"tenu\" invariable. Piège : accorder avec le sujet masculin (ou confondre avec \"se tenir debout\" où \"tenir\" est intransitif)."
-    },
-    {
       "q": "Un texte \"prescriptif\" :",
       "o": [
         "Décrit une réalité sans la juger",
@@ -3098,28 +2867,6 @@ const QUESTIONS = {
       "x": "\"Susmentionné\" (= mentionné ci-dessus) et \"précité\" (= cité précédemment) renvoient à un élément déjà évoqué dans le texte. Équivalents de \"ledit\" ou \"dudit\". Exemple : \"Le décret susmentionné prend effet dès sa signature.\" Piège : confondre avec \"susdit\" (= ci-dessus dit) — quasi-synonymes mais \"précité\" renvoie spécifiquement à une citation antérieure."
     },
     {
-      "q": "\"Ces agents se sont _______ de leur mission.\" Choisissez le PP correct de \"se dégager\".",
-      "o": [
-        "dégagé",
-        "dégagée",
-        "dégagés",
-        "dégagées"
-      ],
-      "r": 2,
-      "x": "\"Se dégager de\" : \"dégager quelqu'un de quelque chose\" → le verbe \"dégager\" est transitif direct. Le pronom \"se\" est COD → PP s'accorde avec \"se\" (= ces agents, masculin pluriel) → \"dégagés\". Piège : croire que la préposition \"de\" qui suit implique un COI et laisser invariable — c'est la construction directe du verbe qui détermine la nature de \"se\"."
-    },
-    {
-      "q": "La nuance entre \"pertinent\" et \"judicieux\" :",
-      "o": [
-        "Ce sont des synonymes parfaits",
-        "\"Pertinent\" s'applique aux arguments, aux questions ; \"judicieux\" s'applique aux décisions et aux choix",
-        "\"Judicieux\" est plus courant que \"pertinent\" dans la langue administrative",
-        "\"Pertinent\" vient de l'anglais ; \"judicieux\" est d'origine latine"
-      ],
-      "r": 1,
-      "x": "\"Pertinent\" = qui se rapporte exactement au sujet, qui est fondé (une remarque pertinente, une question pertinente). \"Judicieux\" = qui fait preuve de bon jugement dans un choix ou une décision. Les deux sont d'usage courant en concours. Piège : les employer indifféremment et manquer la spécificité de chacun selon le contexte."
-    },
-    {
       "q": "\"Elle _______ ses cours avec assiduité depuis le début de l'année.\" Choisissez la forme correcte.",
       "o": [
         "a suivi",
@@ -3338,28 +3085,6 @@ const QUESTIONS = {
       ],
       "r": 1,
       "x": "\"Impécunieux\" (du latin \"pecunia\" = argent) = qui manque d'argent. Synonyme soutenu de \"pauvre\" ou \"sans ressources\". Exemple : \"Un fonctionnaire impécunieux n'est pas à l'abri de la tentation de la corruption.\" Piège : confondre avec \"impertinent\" ou \"impudique\" — ressemblances phoniques superficielles."
-    },
-    {
-      "q": "\"La réforme a _______ plusieurs textes obsolètes.\" Choisissez le verbe correct signifiant \"supprimé\".",
-      "o": [
-        "aboli",
-        "abrogé",
-        "amendé",
-        "aboli ou abrogé selon le type de texte"
-      ],
-      "r": 1,
-      "x": "En droit, \"abroger\" s'applique spécifiquement aux lois, règlements et textes juridiques pour les supprimer totalement. \"Abolir\" s'emploie pour des institutions, des pratiques sociales, des peines (abolition de la peine de mort). \"Amender\" = modifier partiellement. Piège : employer \"abolir\" pour les textes de loi — \"abroger\" est le terme technique exact en droit."
-    },
-    {
-      "q": "\"N'eût été son intervention, la situation aurait empiré.\" Cette phrase contient :",
-      "o": [
-        "Un indicatif plus-que-parfait",
-        "Un subjonctif imparfait",
-        "Un subjonctif plus-que-parfait",
-        "Un conditionnel passé"
-      ],
-      "r": 2,
-      "x": "\"N'eût été\" = subjonctif plus-que-parfait de \"être\" (3e personne du singulier) employé dans une construction hypothétique littéraire. Sens : \"s'il n'avait pas été présent\". Construction archaïque et littéraire équivalent à \"sans son intervention\". \"Eût\" est la marque du subjonctif imparfait de \"avoir\" et \"plus-que-parfait\" avec \"été\". Piège : identifier comme conditionnel ou indicatif."
     },
     {
       "q": "\"Que vous _______ ou non, cette règle s'applique à tous.\" Choisissez la bonne forme de \"vouloir\".",
@@ -3604,28 +3329,6 @@ const QUESTIONS = {
       "x": "\"Abnégation\" (du latin \"abnegare\" = renoncer) désigne le renoncement à ses propres intérêts, à son confort personnel au service d'une cause ou d'autrui. Exemple : \"Il a servi l'État avec abnégation pendant 30 ans.\" Piège : confondre avec \"obstination\" ou \"négation\" — ressemblances phoniques trompeuses."
     },
     {
-      "q": "\"_______ les prévisions, les résultats ont dépassé les attentes.\" Choisissez la meilleure locution pour exprimer \"au-delà de, en dépit de\".",
-      "o": [
-        "En dépassant",
-        "Contrairement à",
-        "Par-delà",
-        "Au-delà de"
-      ],
-      "r": 2,
-      "x": "\"Par-delà les prévisions\" = au-delà de, transcendant les prévisions. Locution littéraire et soutenue pour exprimer l'idée de franchir un horizon. \"Contrairement à\" marque l'opposition directe. \"Au-delà de\" est plus courant. \"Par-delà\" est la formule la plus élégante dans un contexte de style soutenu de concours. Piège : rejeter \"par-delà\" comme inhabituel — c'est précisément sa marque de niveau élevé."
-    },
-    {
-      "q": "\"Ces travaux _______ deux ans ont enfin abouti.\" Choisissez la bonne construction temporelle.",
-      "o": [
-        "de",
-        "durant",
-        "pendant",
-        "ayant duré"
-      ],
-      "r": 3,
-      "x": "\"Ayant duré deux ans\" est le participe passé composé qui exprime l'antériorité. On ne dit pas \"Ces travaux de deux ans ont abouti\" (durée sans verbe) ni \"Ces travaux pendant deux ans ont abouti\" (le circonstanciel est mal intégré dans cette structure). \"Ayant duré\" est la participe qui exprime correctement la durée accomplie avant l'aboutissement. Piège : insérer \"pendant\" entre le nom et le verbe principal, ce qui est syntaxiquement maladroit."
-    },
-    {
       "q": "\"La commission _______ de cinq membres rendra son avis dans quinze jours.\" Choisissez la bonne construction.",
       "o": [
         "composée",
@@ -3734,39 +3437,6 @@ const QUESTIONS = {
       ],
       "r": 2,
       "x": "En droit administratif, l'\"illégalité\" d'un acte = sa non-conformité à la loi, aux textes de droit. \"Illégitimité\" = manque de légitimité morale ou politique (différent). \"Irrégularité\" = défaut de forme ou de procédure. \"Incongruité\" = inadéquation générale. Piège : confondre \"illégalité\" (contraire à la loi) et \"illégitimité\" (contraire à la légitimité morale)."
-    },
-    {
-      "q": "\"Pour peu qu'il _______ , il réussira.\" Choisissez la forme correcte.",
-      "o": [
-        "travaille",
-        "travaillera",
-        "travaillerait",
-        "travaillait"
-      ],
-      "r": 0,
-      "x": "\"Pour peu que + subjonctif\" est une locution conditionnelle exprimant une condition minimale suffisante. \"Travaille\" est le subjonctif présent. Sens : \"à condition qu'il travaille un minimum, il réussira.\" Piège : employer le futur \"travaillera\" ou l'indicatif présent \"travaille\" hors subjonctif — \"pour peu que\" exige impérativement le subjonctif."
-    },
-    {
-      "q": "\"Ces candidatures _______ donneront lieu à un entretien.\" Choisissez la bonne forme.",
-      "o": [
-        "pré-sélectionnées",
-        "présélectionnées",
-        "présentées",
-        "sélectionnées de façon préalable"
-      ],
-      "r": 1,
-      "x": "\"Présélectionnées\" = participe passé de \"présélectionner\" (opérer une première sélection avant la sélection finale). Terme courant dans les concours administratifs. Le préfixe \"pré-\" (avant) est soudé sans trait d'union dans les mots courants du lexique administratif moderne. Piège : employer \"pré-sélectionnées\" avec un trait d'union — non conforme à l'orthographe actuelle."
-    },
-    {
-      "q": "\"Les travaux ont été menés _______ , c'est-à-dire en même temps.\" Choisissez l'adverbe correct.",
-      "o": [
-        "consécutivement",
-        "conjointement",
-        "subsidiairement",
-        "concomitamment"
-      ],
-      "r": 3,
-      "x": "\"Concomitamment\" = en même temps, de façon simultanée. \"Conjointement\" = ensemble, en collaboration. \"Consécutivement\" = l'un après l'autre. \"Subsidiairement\" = de façon secondaire, en dernier recours. Piège : employer \"conjointement\" (ensemble mais pas nécessairement simultanément) à la place de \"concomitamment\" (simultanément)."
     },
     {
       "q": "\"Ils n'ont _______ été informés de cette décision.\" Choisissez l'adverbe négatif qui signifie \"en aucune façon\".",
@@ -4086,28 +3756,6 @@ const QUESTIONS = {
       ],
       "r": 1,
       "x": "\"Relever du ressort de\" = être de la compétence de, dépendre de l'autorité de. \"Cette affaire est du ressort du tribunal administratif.\" Terme juridique fondamental. \"Sous la juridiction\" est également correct mais plus général. Piège : employer \"hors de la compétence\" pour signifier \"dans la compétence\" — sens inversé."
-    },
-    {
-      "q": "\"La _______ de cet accord n'a pas encore été publiée.\" Choisissez le terme désignant le texte complet d'un acte.",
-      "o": [
-        "teneur",
-        "texture",
-        "tenue",
-        "teneur ou texte selon le contexte"
-      ],
-      "r": 3,
-      "x": "\"La teneur de l'accord\" = son contenu exact, ce qu'il stipule mot pour mot. Terme administratif et diplomatique. \"Le texte de l'accord\" est l'équivalent courant. \"Texture\" = aspect physique d'une matière. \"Tenue\" = comportement ou vêtement. Piège : confondre \"teneur\" (contenu) et \"tenue\" (comportement) — homophones partiels."
-    },
-    {
-      "q": "\"Elle s'est _______ à cette procédure sans comprendre ses droits.\" Choisissez le PP correct de \"se plier\".",
-      "o": [
-        "pliée",
-        "plié",
-        "pliés",
-        "pliée ou plié selon le genre du sujet"
-      ],
-      "r": 0,
-      "x": "\"Se plier à\" : \"plier\" est transitif direct (plier soi-même à quelque chose). Le pronom \"se\" est COD → accord avec \"se\" = elle (féminin singulier) → \"pliée\". Piège : laisser invariable en croyant que \"à\" marque un COI — c'est le verbe \"plier\" lui-même qui est transitif direct ; \"à\" introduit seulement un complément circonstanciel de but/conformité."
     },
     {
       "q": "\"Mutatis mutandis\" est une locution latine employée en droit signifiant :",
@@ -9290,13 +8938,13 @@ const QUESTIONS = {
     {
       "q": "Combien de régions administratives au Burkina Faso ?",
       "o": [
-        "13",
-        "15",
         "17",
-        "47"
+        "15",
+        "13",
+        "45"
       ],
-      "r": 2,
-      "x": "17 régions, 47 provinces, 351 communes. 47 = nombre de provinces."
+      "r": 0,
+      "x": "17 régions, 47 provinces, 351 départements  au redécoupage  administratif de juillet 2025"
     },
     {
       "q": "Monnaie officielle du Burkina Faso ?",
@@ -9337,10 +8985,10 @@ const QUESTIONS = {
         "Unité, Travail, Justice",
         "Unité, Progrès, Justice",
         "Unité, Démocratie, Liberté",
-        "La  Patrie ou la Mort, nous vaincrons"
+        "La Patrie ou la Mort, nous vaincrons"
       ],
       "r": 3,
-      "x": "« La  Patrie ou la Mort, nous vaincrons » est la devise actuelle du Burkina Faso."
+      "x": "« La Patrie ou la Mort, nous vaincrons » est la devise officielle du Burkina Faso."
     },
     {
       "q": "Nombre d'étoiles sur le drapeau du Burkina Faso ?",
@@ -9384,7 +9032,7 @@ const QUESTIONS = {
         "AES"
       ],
       "r": 3,
-      "x": "Le BF n'est plus membre de la CEDEAO (Communauté Économique des États de l'Afrique de l'Ouest) depuis le 29 janvier 2025. Il est actuellement membre de l'AES (Alliance des États du Sahel) . NB: EAC=Afrique de l'Est, SADC=Sud, UMA=Maghreb."
+      "x": "Le BF est membre de l'AES (Alliance de Etats du Sahel) depuis sa création. Il s'est rétiré de la CEDEAO depuis le 29 janvier 2025 avec le Niger et le Mali. EAC=Afrique de l'Est, SADC=Sud, UMA=Maghreb."
     },
     {
       "q": "Capitale de la France ?",
@@ -10003,7 +9651,7 @@ const QUESTIONS = {
       "x": "L'or représente plus de 70% des recettes d'exportation du Burkina Faso. Le pays dispose de nombreuses mines dont Essakane, Youga et Bissa-Gold. Malgré la crise sécuritaire, l'or reste la première source de devises, suivi du coton."
     },
     {
-      "q": "Le franc CFA utilise par les pays de l'UEMOA est arrime à quelle monnaie européenne ?",
+      "q": "Le franc CFA utilisé par les pays de l'UEMOA est arrimé à quelle monnaie européenne ?",
       "o": [
         "La livre sterling britannique",
         "Le mark allemand",
@@ -10777,7 +10425,7 @@ const QUESTIONS = {
       "o": [
         "L'UNICEF",
         "Le PNUD",
-        "L'OMS (Organisation Mondiale de la Santé)",
+        "L'OMS",
         "La FAO"
       ],
       "r": 2,
@@ -11238,7 +10886,7 @@ const QUESTIONS = {
       "q": "Que signifie l'acronyme « ADSL » en informatique et en télécommunications ?",
       "o": [
         "Accès Direct aux Services en Ligne par réseau filaire",
-        "Asymmetric Digital Subscriber Line (ligne numérique asymétrique pour abonnés)",
+        "Asymmetric Digital Subscriber Line",
         "Automatisation du Système de Liaison informatique",
         "Administration des Services de Logiciels et d'applications"
       ],
@@ -11603,7 +11251,7 @@ const QUESTIONS = {
         "Éducation, Santé et Justice pour tous",
         "Liberté, Égalité et Fraternité entre les nations",
         "Paix, Prospérité et Progrès technologique",
-        "Environnement, Économie et Social (équité)"
+        "Environnement, Économie et Social"
       ],
       "r": 3,
       "x": "Le développement durable, défini en 1987 comme « répondre aux besoins des générations présentes sans compromettre ceux des générations futures », repose sur trois piliers : le respect de l'environnement, la croissance économique inclusive et l'équité sociale. Ces trois piliers sont indissociables et doivent progresser ensemble."
@@ -11702,7 +11350,7 @@ const QUESTIONS = {
         "Le débarquement allié en Normandie le 6 juin 1944",
         "La bataille de Stalingrad remportée par l'URSS",
         "La conférence de Yalta entre Roosevelt, Churchill et Staline",
-        "La capitulation sans condition de l'Allemagne nazie le 8 mai 1945"
+        "La capitulation  de l'Allemagne nazie le 8 mai 1945"
       ],
       "r": 3,
       "x": "La capitulation sans condition de l'Allemagne nazie, signée à Berlin le 8 mai 1945, a marqué la fin de la Seconde Guerre mondiale en Europe. Ce jour est commémoré comme le « Jour de la Victoire en Europe » (VE Day). La guerre dans le Pacifique a pris fin le 2 septembre 1945 avec la capitulation du Japon."
@@ -11842,10 +11490,10 @@ const QUESTIONS = {
     {
       "q": "Quel phénomène physiologique permet à certains animaux (oiseaux, mammifères) de maintenir leur température corporelle constante quelle que soit la température ambiante ?",
       "o": [
-        "La phototropie (orientation vers la lumière)",
-        "La métamorphose (transformation du corps)",
-        "L'hibernation partielle (ralentissement métabolique)",
-        "L'homéothermie (régulation interne de la température corporelle)"
+        "La phototropie",
+        "La métamorphose",
+        "L'hibernation partielle",
+        "L'homéothermie"
       ],
       "r": 3,
       "x": "L'homéothermie (ou endothermie) désigne la capacité des oiseaux et des mammifères à maintenir une température corporelle constante grâce à leur métabolisme. Les poïkilothermes (reptiles, poissons) ont une température variable selon l'environnement. Les humains maintiennent une température d'environ 37°C."
@@ -11855,7 +11503,7 @@ const QUESTIONS = {
       "o": [
         "La thalassémie",
         "L'hémophilie de type A",
-        "La drépanocytose (anémie falciforme)",
+        "La drépanocytose",
         "La leucémie lymphoïde chronique"
       ],
       "r": 2,
@@ -11908,7 +11556,7 @@ const QUESTIONS = {
     {
       "q": "De quelle couleur est la flamme d'un bec Bunsen correctement réglé, indiquant une combustion complète avec un apport suffisant d'oxygène ?",
       "o": [
-        "Bleue (bleu vif)",
+        "Bleue",
         "Orange ou jaune",
         "Rouge vif",
         "Verte translucide"
@@ -11932,7 +11580,7 @@ const QUESTIONS = {
       "o": [
         "Une très forte réactivité chimique avec l'eau froide",
         "Une radioactivité naturelle spontanée",
-        "La conductivité électrique et thermique élevée, l'éclat métallique et la malléabilité",
+        "La conductivité électrique et thermique élevée",
         "Une volatilité moléculaire à température ambiante"
       ],
       "r": 2,
@@ -12018,9 +11666,9 @@ const QUESTIONS = {
     {
       "q": "Quel est le nom du processus géologique par lequel deux plaques tectoniques entrent en collision, provoquant le plissement et le soulèvement de chaînes de montagnes ?",
       "o": [
-        "Le volcanisme de point chaud (hot spot)",
-        "La subduction (plongée d'une plaque sous une autre)",
-        "L'orogenèse (formation des reliefs montagneux par collision de plaques)",
+        "Le volcanisme de point chaud",
+        "La subduction",
+        "L'orogenèse",
         "La sédimentation fluviale en milieu deltaïque"
       ],
       "r": 2,
@@ -12104,11 +11752,11 @@ const QUESTIONS = {
       "x": "La Convention sur les Armes Chimiques (CAC), en vigueur depuis 1997 et vérifiée par l'OIAC à La Haye, est le premier traité multilatéral de désarmement interdisant toute une catégorie d'armes de destruction massive. Elle a conduit à la destruction de la quasi-totalité des arsenaux chimiques déclarés dans le monde."
     },
     {
-      "q": "Quel document fondateur du droit international humanitaire a été adopté à Genève en 1864, à l'initiative d'Henri Dunant, fondateur de la Croix-Rouge ?",
+      "q": "Quel document fondateur du droit international humanitaire a été adopté à Genève , à l'initiative d'Henri Dunant, fondateur de la Croix-Rouge ?",
       "o": [
         "La Convention de La Haye sur les lois de la guerre",
         "Le Protocole de Genève sur les gaz asphyxiants de 1925",
-        "La Convention de Genève de 1864 pour l'amélioration du sort des militaires blessés",
+        "La Convention de Genève de 1864",
         "La Déclaration de Saint-Pétersbourg de 1868"
       ],
       "r": 2,
@@ -12148,7 +11796,7 @@ const QUESTIONS = {
       "x": "L'éco est le nom de la monnaie unique envisagée par la CEDEAO pour ses 15 États membres. Ce projet, annoncé depuis les années 1980 et relancé en 2019, reste en cours d'élaboration. Les critères de convergence macroéconomique (inflation, déficit, dette) doivent être respectés par tous les membres avant son lancement."
     },
     {
-      "q": "Quelle force militaire conjointe avait été créée par les cinq pays du G5 Sahel (Burkina Faso, Mali, Mauritanie, Niger, Tchad) pour lutter contre le terrorisme avant la dissolution progressive du G5 Sahel en 2023 ?",
+      "q": "Quelle force militaire avait été créée par les cinq pays du G5 Sahel (Burkina Faso, Mali, Mauritanie, Niger, Tchad) pour lutter contre le terrorisme  ?",
       "o": [
         "La Force Barkhane (France)",
         "La MINUSMA (Mission ONU au Mali)",
@@ -12192,15 +11840,15 @@ const QUESTIONS = {
       "x": "La junte militaire malienne a demandé en 2023 le retrait immédiat de la MINUSMA, déployée depuis 2013. Les 13 000 casques bleus ont quitté le Mali avant fin décembre 2023. Cette décision s'inscrit dans la rupture des relations du Mali avec les partenaires occidentaux et le rapprochement avec la Russie et le groupe Wagner."
     },
     {
-      "q": "Quelle organisation économique régionale regroupe les pays d'Afrique centrale et dispose d'une monnaie commune, le franc CFA, émise par la BEAC (Banque des États de l'Afrique Centrale) ?",
+      "q": "Quelle organisation économique régionale regroupe les pays d'Afrique centrale  ?",
       "o": [
-        "La CEDEAO (Afrique de l'Ouest)",
-        "L'UEMOA (Afrique de l'Ouest)",
-        "La SADC (Afrique australe)",
-        "La CEMAC (Communauté Économique et Monétaire de l'Afrique Centrale)"
+        "La CEDEAO",
+        "L'UEMOA",
+        "La SADC",
+        "La CEMAC"
       ],
       "r": 3,
-      "x": "La CEMAC regroupe 6 pays d'Afrique centrale : Cameroun, Centrafrique, Congo, Gabon, Guinée équatoriale et Tchad. Ils partagent le franc CFA d'Afrique centrale (XAF), émis par la BEAC dont le siège est à Yaoundé (Cameroun). La parité est identique à celle du franc CFA d'Afrique de l'Ouest (655,957 FCFA = 1 euro)."
+      "x": "La CEMAC (Communauté Économique et Monétaire de l'Afrique Centrale) regroupe 6 pays d'Afrique centrale : Cameroun, Centrafrique, Congo, Gabon, Guinée équatoriale et Tchad."
     },
     {
       "q": "Quel est le nom du grand plan de développement continental de l'Union Africaine, lancé en 2013, qui fixe les grandes orientations économiques, politiques et sociales de l'Afrique pour les 50 prochaines années ?",
@@ -12260,13 +11908,13 @@ const QUESTIONS = {
     {
       "q": "Quelle activité agricole, pratiquée sur les berges des fleuves et des barrages en saison sèche au Burkina Faso, contribue à la sécurité alimentaire et aux revenus des femmes rurales ?",
       "o": [
-        "Le maraîchage irrigué (production de légumes en contre-saison)",
+        "Le maraîchage irrigué",
         "La culture pluviale extensive du coton et du sorgho",
         "La culture de canne à sucre en monoculture intensive",
         "La riziculture irriguée de saison sèche en grande surface"
       ],
       "r": 0,
-      "x": "Le maraîchage irrigué (production de tomates, oignons, choux, carottes, haricots verts, laitues) en saison sèche est une activité majeure des femmes rurales burkinabè. Pratiqué autour des barrages et des bas-fonds, il génère des revenus importants et contribue à la diversification alimentaire. L'oignon est le principal produit maraîcher exporté par le Burkina Faso."
+      "x": "Le maraîchage irrigué (production de tomates, oignons, choux, carottes, haricots verts, laitues) en saison sèche est une activité majeure des femmes rurales burkinabè.  L'oignon est le principal produit maraîcher exporté par le Burkina Faso."
     },
     {
       "q": "Quel problème majeur affecte la productivité agricole et la durabilité des terres cultivées au Burkina Faso, résultant de l'érosion hydrique et éolienne combinée aux pratiques culturales inadaptées ?",
@@ -12326,13 +11974,13 @@ const QUESTIONS = {
     {
       "q": "Quel site historique burkinabè est inscrit au Patrimoine Mondial de l'UNESCO depuis 2009 ?",
       "o": [
-        "Les ruines de Loropéni (province du Poni, Burkina Faso)",
+        "Les ruines de Loropéni",
         "La Grande Mosquée de Bobo-Dioulasso",
         "La réserve de la Biosphère de la Comoé",
         "Le palais du Mogho Naaba à Ouagadougou"
       ],
       "r": 0,
-      "x": "Les ruines de Loropéni, inscrites à l'UNESCO en 2009, constituent le site le mieux préservé d'un ensemble de forteresses en pierre liées au commerce de l'or. Situées dans la province du Poni (région du Djôrô), elles témoignent de l'ancienne puissance des peuples Lobi. C'est le seul site du Burkina Faso inscrit au Patrimoine Mondial de l'UNESCO dans cette liste."
+      "x": "Les ruines de Loropéni, inscrites à l'UNESCO en 2009, constituent le site le mieux préservé d'un ensemble de forteresses en pierre liées au commerce de l'or. Situées dans la province du Poni (région du Djôrô), elles témoignent de l'ancienne puissance des peuples Lobi."
     },
     {
       "q": "Quel chanteur malien albinos, descendant de la famille royale fondatrice de l'empire du Mali, a popularisé la musique mandingue sur la scène internationale depuis les années 1970 ?",
@@ -12354,7 +12002,7 @@ const QUESTIONS = {
         "Oualata (Mauritanie)"
       ],
       "r": 0,
-      "x": "Tombouctou (Mali), inscrite à l'UNESCO en 1988 et sur la liste du patrimoine en péril depuis 2012, était au XVe-XVIe siècle un centre islamique mondial avec l'université de Sankoré et plus de 25 000 étudiants. La ville abrite encore des milliers de manuscrits anciens. En 2012, des djihadistes ont détruit plusieurs mausolées de saints musulmans."
+      "x": "Tombouctou (Mali), inscrite à l'UNESCO en 1988 et sur la liste du patrimoine en péril depuis 2012, était au XVe-XVIe siècle un centre islamique mondial avec l'université de Sankoré et plus de 25 000 étudiants. La ville abrite encore des milliers de manuscrits anciens."
     },
     {
       "q": "Quelle forme d'expression culturelle africaine, utilisant masques, costumes rituels et mouvements chorégraphiés, est pratiquée au Burkina Faso lors des cérémonies funéraires, d'initiation et de demande de pluie ?",
@@ -12612,7 +12260,7 @@ const QUESTIONS = {
     {
       "q": "Quel est le nom du principe de physique qui stipule que l'énergie totale d'un système isolé reste constante : elle ne peut être ni créée ni détruite, seulement transformée d'une forme à une autre ?",
       "o": [
-        "Le premier principe de la thermodynamique (conservation de l'énergie)",
+        "Le premier principe de la thermodynamique",
         "Le principe de moindre action de Maupertuis",
         "La loi d'attraction universelle de Newton",
         "Le principe d'incertitude d'Heisenberg"
@@ -12646,20 +12294,20 @@ const QUESTIONS = {
       "q": "Quel système de notation musicale, utilisé dans l'enseignement musical dans les pays francophones et dans le monde entier, utilise les syllabes do, ré, mi, fa, sol, la et si ?",
       "o": [
         "La partition graphique contemporaine",
-        "La notation alphabétique anglo-saxonne (A, B, C, D, E, F, G)",
-        "La notation solfégique (do, ré, mi, fa, sol, la, si)",
-        "La tablature (notation pour instruments à cordes)"
+        "La notation alphabétique anglo-saxonne",
+        "La notation solfégique",
+        "La tablature"
       ],
       "r": 2,
       "x": "Le solfège (ou notation solfégique), attribué au moine italien Guido d'Arezzo (XIe siècle), utilise les syllabes do (ut), ré, mi, fa, sol, la, si pour nommer les sept notes de la gamme musicale. Dans les pays anglophones, on utilise les lettres C, D, E, F, G, A, B. Le solfège est enseigné dans les conservatoires de musique du monde francophone."
     },
     {
-      "q": "Quelle est la capitale de l'Ouganda, pays enclavé d'Afrique de l'Est, surnommé « la Perle de l'Afrique » pour la beauté de ses paysages lacustres ?",
+      "q": "Quelle est la capitale de l'Ouganda ?",
       "o": [
-        "Nairobi (Kenya)",
-        "Dar es Salaam (Tanzanie)",
-        "Kigali (Rwanda)",
-        "Kampala (Ouganda)"
+        "Nairobi",
+        "Dar es Salaam",
+        "Kigali",
+        "Kampala"
       ],
       "r": 3,
       "x": "Kampala est la capitale et la plus grande ville de l'Ouganda, située sur les rives du lac Victoria. L'Ouganda est surnommé « la Perle de l'Afrique » par Winston Churchill lors de sa visite en 1907. Le pays partage avec le Rwanda, le Kenya et la Tanzanie la gestion du lac Victoria, le plus grand lac d'Afrique."
@@ -12667,16 +12315,16 @@ const QUESTIONS = {
     {
       "q": "Quel est le nom du phénomène physique par lequel une substance solide se transforme directement en vapeur, sans passer par l'état liquide intermédiaire ?",
       "o": [
-        "La fusion (passage de l'état solide à liquide)",
-        "La vaporisation (passage de l'état liquide à vapeur)",
-        "La sublimation (passage direct du solide à la vapeur)",
-        "La condensation (passage de la vapeur à l'état liquide)"
+        "La fusion",
+        "La vaporisation",
+        "La sublimation",
+        "La condensation"
       ],
       "r": 2,
       "x": "La sublimation est le changement d'état direct du solide à la vapeur, sans passer par l'état liquide. La glace sèche (CO₂ solide) se sublime à −78,5°C. L'iode solide se sublime facilement à température ambiante. Le phénomène inverse (vapeur → solide directement) s'appelle la déposition ou solidification directe (givrage)."
     },
     {
-      "q": "Quel écrivain et aviateur français, auteur du « Petit Prince » (1943), est l'un des auteurs francophones les plus traduits et les plus lus dans le monde entier ?",
+      "q": "Quel écrivain et aviateur français, auteur du « Petit Prince » , est l'un des auteurs francophones les plus traduits et les plus lus dans le monde entier ?",
       "o": [
         "Victor Hugo (1802-1885)",
         "Albert Camus (1913-1960)",
@@ -12687,12 +12335,12 @@ const QUESTIONS = {
       "x": "Antoine de Saint-Exupéry (1900-1944) est l'auteur du « Petit Prince » (1943), conte philosophique traduit en plus de 300 langues et dialects et vendu à plus de 150 millions d'exemplaires. Pilote de ligne et de guerre, il a aussi écrit « Vol de nuit » et « Terre des hommes ». Il a disparu lors d'une mission de reconnaissance aérienne en 1944."
     },
     {
-      "q": "Quel document fondateur a été adopté le 26 juin 1945 à San Francisco, instituant officiellement l'Organisation des Nations Unies et fixant ses buts et principes fondamentaux ?",
+      "q": "Quel document fondateur a été adopté le 26 juin 1945 à San Francisco, instituant officiellement une organisation  connue ?",
       "o": [
-        "Le Traité de Versailles (1919)",
-        "La Charte des Nations Unies (1945)",
-        "La Déclaration Universelle des Droits de l'Homme (1948)",
-        "Le Pacte de la Société des Nations (1920)"
+        "Le Traité de Versailles",
+        "La Charte des Nations Unies",
+        "La Déclaration Universelle des Droits de l'Homme",
+        "Le Pacte de la Société des Nations"
       ],
       "r": 1,
       "x": "La Charte des Nations Unies, signée le 26 juin 1945 à San Francisco par 51 États fondateurs (dont la France, le Royaume-Uni, les États-Unis et l'URSS), est le traité constitutif de l'ONU. Elle définit ses buts (paix, coopération internationale), ses organes (Assemblée générale, Conseil de sécurité, CIJ) et les principes d'égalité souveraine des États."

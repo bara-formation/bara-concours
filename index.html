@@ -4329,7 +4329,16 @@ const App = {
     const q = questions[idx];
     const showAnswer = this.state.currentSessionShowAnswer;
     const userAnswer = this.state.currentSessionAnswers[idx];
-    const isAnswered = userAnswer !== undefined;
+
+    // BUG #4 FIX : pour le mode 'multi', isAnswered doit attendre la validation
+    // explicite (sinon dès qu'on coche une case, ça déclenche le feedback)
+    let isAnswered;
+    if (q.type === 'multi') {
+      // En multi, considéré "répondu" seulement si validation explicite
+      isAnswered = this.state.currentSessionAnswers[idx + '_validated'] === true;
+    } else {
+      isAnswered = userAnswer !== undefined;
+    }
 
     return `
       <div class="page">
@@ -4630,6 +4639,9 @@ const App = {
       completedAt: Date.now()
     });
 
+    // BUG #5 FIX : mettre à jour currentSessionIndex pour que renderSessionQuestions
+    // détecte la fin et affiche les résultats
+    this.state.currentSessionIndex = session.questions.length;
     this.state.currentSessionFinished = true;
     this.render();
   },
@@ -5173,8 +5185,8 @@ const App = {
 
   renderOnboarding() {
     const o = this.state.onboarding;
-    const niveaux = ['BEPC', 'BAC', 'BAC+1', 'BAC+2', 'BAC+3 et plus'];
-    const villes = ['Ouagadougou', 'Bobo-Dioulasso', 'Koudougou', 'Banfora', 'Ouahigouya', 'Kaya', 'Tenkodogo', 'Fada N\'Gourma', 'Dédougou', 'Autre'];
+    const niveaux = ['CEP', 'BEPC', 'BAC', 'Licence', 'Licence et plus'];
+    const villes = ['Ouagadougou', 'Bobo-Dioulasso', 'Koudougou', 'Banfora', 'Ouahigouya', 'Kaya', 'Tenkodogo', 'Fada N\'Gourma', 'Dédougou', 'Dori', 'Gaoua', 'Manga', 'Ziniaré', 'Bogandé', 'Djibo', 'Tougan', 'Diapaga', 'Autre'];
 
     return `
       <div class="page auth-screen">
@@ -5213,21 +5225,43 @@ const App = {
 
           ${o.step === 2 ? `
             <div class="auth-title">Quel concours vises-tu ?</div>
-            <div class="auth-subtitle">On personnalisera tes recommandations en fonction de ton objectif.</div>
+            <div class="auth-subtitle">Choisis d'abord ton niveau scolaire pour voir les concours adaptés.</div>
 
-            <div style="display:flex; flex-direction:column; gap:0.5rem; margin-bottom:1rem">
-              ${CONCOURS.slice(0, 8).map(c => `
-                <button class="toggle-row" onclick="App.selectTargetConcours('${c.id}')" style="border-color:${o.targetConcours === c.id ? 'var(--green-bf)' : 'var(--line)'}; background:${o.targetConcours === c.id ? '#f0fdf4' : 'white'}; cursor:pointer">
-                  <div class="toggle-text">
-                    <div class="toggle-label">${CATEGORIES_CONCOURS[c.categorie].icone} ${c.nom}</div>
-                    <div class="toggle-desc">${c.niveau} • ${c.ministere}</div>
-                  </div>
-                  ${o.targetConcours === c.id ? '<div style="color:var(--green-bf); font-size:1.4rem">✓</div>' : ''}
-                </button>
-              `).join('')}
+            <!-- BUG #2 FIX : filtre par niveau scolaire -->
+            <div style="display:flex; flex-wrap:wrap; gap:0.4rem; margin-bottom:0.8rem">
+              ${['Tous', 'BEPC', 'BAC', 'Licence', 'Master'].map(niv => {
+                const active = (o.filterNiveau || 'Tous') === niv;
+                return `
+                  <button onclick="App.setOnboardingNiveau('${niv}')"
+                    style="padding:0.4rem 0.85rem; border-radius:999px; border:1.5px solid ${active ? 'var(--green-bf)' : 'var(--line)'}; background:${active ? 'var(--green-bf)' : 'white'}; color:${active ? 'white' : 'var(--ink)'}; font-weight:700; font-size:0.78rem; cursor:pointer">
+                    ${niv}
+                  </button>
+                `;
+              }).join('')}
             </div>
 
-            <button onclick="App.selectTargetConcours('')" style="background:transparent; color:var(--ink-mute); padding:0.6rem; width:100%; font-size:0.85rem; text-decoration:underline; margin-bottom:0.6rem">Je ne sais pas encore →</button>
+            <div style="display:flex; flex-direction:column; gap:0.5rem; margin-bottom:1rem; max-height:340px; overflow-y:auto">
+              ${(() => {
+                const niv = o.filterNiveau || 'Tous';
+                const filtered = niv === 'Tous'
+                  ? CONCOURS
+                  : CONCOURS.filter(c => (c.niveau || '').toUpperCase().includes(niv.toUpperCase()));
+                if (filtered.length === 0) {
+                  return '<div style="text-align:center; color:var(--ink-mute); padding:1rem; font-size:0.85rem">Aucun concours de ce niveau</div>';
+                }
+                return filtered.slice(0, 20).map(c => `
+                  <button class="toggle-row" onclick="App.selectTargetConcoursAndContinue('${c.id}')" style="border-color:${o.targetConcours === c.id ? 'var(--green-bf)' : 'var(--line)'}; background:${o.targetConcours === c.id ? '#f0fdf4' : 'white'}; cursor:pointer">
+                    <div class="toggle-text">
+                      <div class="toggle-label">${CATEGORIES_CONCOURS[c.categorie].icone} ${c.nom}</div>
+                      <div class="toggle-desc">${c.niveau} • ${c.ministere}</div>
+                    </div>
+                    ${o.targetConcours === c.id ? '<div style="color:var(--green-bf); font-size:1.4rem">✓</div>' : ''}
+                  </button>
+                `).join('');
+              })()}
+            </div>
+
+            <button onclick="App.selectTargetConcoursAndContinue('')" style="background:transparent; color:var(--ink-mute); padding:0.6rem; width:100%; font-size:0.85rem; text-decoration:underline; margin-bottom:0.6rem">Je ne sais pas encore →</button>
 
             <button class="auth-btn" onclick="App.onboardingNext()">Continuer →</button>
           ` : ''}
@@ -5279,6 +5313,64 @@ const App = {
     this.render();
   },
 
+  // BUG #2 FIX : filtre par niveau dans l'onboarding
+  setOnboardingNiveau(niveau) {
+    this.state.onboarding.filterNiveau = niveau;
+    this.render();
+  },
+
+  // V34 : Filtre des concours selon le niveau scolaire de l'utilisateur
+  // Mapping niveau utilisateur → niveaux de concours acceptés
+  filterConcoursByLevel(userLevel) {
+    if (!userLevel || userLevel === '') {
+      // Pas de niveau choisi → tous les concours
+      return CONCOURS;
+    }
+
+    // Hiérarchie : un utilisateur de niveau BAC peut viser concours BEPC OU BAC
+    // Un utilisateur Licence peut viser BEPC, BAC, Licence
+    const niveauxAcceptes = {
+      'CEP': ['CEP'],
+      'BEPC': ['CEP', 'BEPC'],
+      'BAC': ['CEP', 'BEPC', 'BAC'],
+      'Licence': ['CEP', 'BEPC', 'BAC', 'Licence', 'BAC+3', 'BAC+4', 'BAC+5'],
+      'Licence et plus': ['CEP', 'BEPC', 'BAC', 'Licence', 'BAC+3', 'BAC+4', 'BAC+5', 'Master', 'Doctorat']
+    };
+
+    const accepts = niveauxAcceptes[userLevel] || [];
+    if (accepts.length === 0) return CONCOURS;
+
+    return CONCOURS.filter(c => {
+      const niv = (c.niveau || '').toUpperCase();
+      return accepts.some(a => niv.includes(a.toUpperCase()));
+    });
+  },
+
+  // V34 : quand le niveau change dans le formulaire de profil, rafraîchir la liste
+  onEditLevelChange() {
+    // Sauvegarder temporairement les valeurs en cours pour ne pas perdre la saisie
+    const tempName = document.getElementById('editName')?.value || '';
+    const tempCity = document.getElementById('editCity')?.value || '';
+    const newLevel = document.getElementById('editLevel')?.value || '';
+
+    // Mettre à jour le state temporairement
+    this.state.user = {
+      ...this.state.user,
+      name: tempName,
+      city: tempCity,
+      educationLevel: newLevel
+    };
+    // Re-render pour rafraîchir la liste des concours
+    this.render();
+  },
+
+  // BUG #1 FIX : variante qui sélectionne ET avance à l'étape suivante
+  selectTargetConcoursAndContinue(id) {
+    this.state.onboarding.targetConcours = id;
+    this.state.onboarding.step = 3;
+    this.render();
+  },
+
   async enableNotifsAndFinish() {
     const result = await Notifications.requestPermission();
     if (result.success) {
@@ -5286,6 +5378,11 @@ const App = {
       this.toast('🔔 Notifications activées !');
     } else if (result.reason === 'denied') {
       this.toast('Notifications bloquées dans les paramètres du navigateur');
+    } else if (result.reason === 'file_protocol') {
+      // BUG #3 FIX : message clair quand l'app est ouverte en file://
+      this.toast('⚠️ Les notifications ne marchent pas en local. Elles marcheront sur Play Store !');
+    } else if (result.reason === 'unsupported') {
+      this.toast('Ce navigateur ne supporte pas les notifications');
     } else {
       this.toast('Notifications non activées');
     }
@@ -5328,8 +5425,8 @@ const App = {
 
   renderEditProfile() {
     const u = this.state.user;
-    const niveaux = ['BEPC', 'BAC', 'BAC+1', 'BAC+2', 'BAC+3 et plus'];
-    const villes = ['Ouagadougou', 'Bobo-Dioulasso', 'Koudougou', 'Banfora', 'Ouahigouya', 'Kaya', 'Tenkodogo', 'Fada N\'Gourma', 'Dédougou', 'Autre'];
+    const niveaux = ['CEP', 'BEPC', 'BAC', 'Licence', 'Licence et plus'];
+    const villes = ['Ouagadougou', 'Bobo-Dioulasso', 'Koudougou', 'Banfora', 'Ouahigouya', 'Kaya', 'Tenkodogo', 'Fada N\'Gourma', 'Dédougou', 'Dori', 'Gaoua', 'Manga', 'Ziniaré', 'Bogandé', 'Djibo', 'Tougan', 'Diapaga', 'Autre'];
 
     return `
       <div class="page">
@@ -5355,15 +5452,18 @@ const App = {
             </select>
 
             <label class="auth-label" style="display:block; margin-bottom:0.4rem">Niveau scolaire</label>
-            <select class="edit-select" id="editLevel">
+            <select class="edit-select" id="editLevel" onchange="App.onEditLevelChange()">
               <option value="">— Choisir —</option>
               ${niveaux.map(n => `<option value="${n}" ${u.educationLevel === n ? 'selected' : ''}>${n}</option>`).join('')}
             </select>
 
             <label class="auth-label" style="display:block; margin-bottom:0.4rem">Concours visé</label>
+            <div style="font-size:0.78rem; color:var(--ink-mute); margin-bottom:0.3rem; font-style:italic">
+              ${u.educationLevel ? `Concours adaptés à ton niveau (${u.educationLevel})` : '💡 Choisis d\'abord ton niveau scolaire pour filtrer les concours'}
+            </div>
             <select class="edit-select" id="editConcours">
               <option value="">— Pas encore décidé —</option>
-              ${CONCOURS.map(c => `<option value="${c.id}" ${u.targetConcours === c.id ? 'selected' : ''}>${c.nom}</option>`).join('')}
+              ${this.filterConcoursByLevel(u.educationLevel).map(c => `<option value="${c.id}" ${u.targetConcours === c.id ? 'selected' : ''}>${c.nom} (${c.niveau})</option>`).join('')}
             </select>
 
             <button class="auth-btn" onclick="App.saveProfile()" style="margin-top:0.5rem">💾 Enregistrer</button>
@@ -5385,7 +5485,6 @@ const App = {
 
     this.state.user = { ...this.state.user, ...updates };
     this.save();
-
     if (window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady && window.FirebaseAuth.isLoggedIn()) {
       try {
         await window.FirebaseAuth.updateProfile({
