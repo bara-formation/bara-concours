@@ -2363,6 +2363,7 @@ img { max-width: 100%; display: block; }
 .session-choice.correct { border-color: #16a34a; background: #dcfce7; }
 .session-choice.incorrect { border-color: #dc2626; background: #fee2e2; }
 .session-choice.missed { border-color: #f59e0b; background: #fef3c7; }
+.session-choice.selected { border-color: #2563eb; background: #dbeafe; }
 .session-choice.inactive { opacity: 0.55; cursor: default; }
 .session-choice-letter {
   background: var(--cream-dark);
@@ -2379,6 +2380,7 @@ img { max-width: 100%; display: block; }
 }
 .session-choice.correct .session-choice-letter { background: #16a34a; color: white; }
 .session-choice.incorrect .session-choice-letter { background: #dc2626; color: white; }
+.session-choice.selected .session-choice-letter { background: #2563eb; color: white; }
 .session-choice-checkbox {
   font-size: 1.4rem;
   color: var(--green-bf);
@@ -3428,6 +3430,19 @@ const App = {
         this.state.user = data.user || this.state.user;
         this.state.history = data.history || [];
         this.state.matiereStats = data.matiereStats || {};
+
+        // V35 FIX : restaurer l'écran principal si l'utilisateur a déjà fait l'onboarding
+        // Multiple détections pour être robuste
+        const aDejaUtilise = this.state.user.onboardingCompleted ||
+                            this.state.user.isLoggedIn ||
+                            (this.state.user.name && this.state.user.name !== 'Apprenant' && this.state.user.name.trim() !== '') ||
+                            this.state.user.educationLevel ||
+                            this.state.user.city;
+
+        if (aDejaUtilise) {
+          // L'utilisateur a déjà utilisé l'app → aller directement à l'accueil
+          this.state.currentScreen = 'home';
+        }
       } else {
         this.state.history = [];
         this.state.matiereStats = {};
@@ -3494,6 +3509,7 @@ const App = {
       case 'annales': html = this.renderSessionsList(); break;
       case 'annales-session': html = this.renderSessionDetail(); break;
       case 'session-questions': html = this.renderSessionQuestions(); break;
+      case 'session-correction': html = this.renderSessionCorrection(); break;
       case 'annale-detail': html = this.renderAnnaleDetail(); break;
       case 'concours-detail': html = this.renderConcoursDetail(); break;
       case 'mode-select': html = this.renderModeSelect(); break;
@@ -3524,6 +3540,11 @@ const App = {
     // Modal de limite freemium atteinte
     if (this.state.showFreemiumDialog) {
       html += this.renderFreemiumDialog();
+    }
+
+    // V35 : Dialog de confirmation de sortie (au-dessus de tout)
+    if (this.state.showExitConfirm) {
+      html += this.renderExitDialog();
     }
 
     app.innerHTML = html;
@@ -3609,6 +3630,10 @@ const App = {
 
   continueWithoutAccount() {
     this.state.user.isLoggedIn = false;
+    this.state.user.onboardingCompleted = true;  // V35 : marqueur pour persistance
+    if (!this.state.user.name || this.state.user.name === 'Apprenant') {
+      this.state.user.name = 'Invité';
+    }
     this.save();
     this.navigate('home');
   },
@@ -4133,9 +4158,84 @@ const App = {
             <div class="section-title" style="margin-top:1.5rem">📅 Aperçu des sessions disponibles</div>
           ` : ''}
 
-          <div class="sessions-list">
-            ${sessions.map((s, idx) => this.renderSessionCard(s, idx, isPremium)).join('')}
-          </div>
+          <!-- V48 : Placeholder "Accompagnement 2026 — Bientôt" -->
+          ${(() => {
+            const has2026 = sessions.some(s => (s.date || '').startsWith('2026'));
+            if (has2026) return '';
+            return `
+              <div style="margin-top:0.4rem; margin-bottom:1.5rem">
+                <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.8rem; padding:0.7rem 0.8rem; background:#f5f5f4; border-radius:12px; border:1.5px dashed #d6d3d1; opacity:0.92">
+                  <div style="background:linear-gradient(135deg, #9ca3af, #6b7280); color:white; width:50px; height:50px; border-radius:12px; display:flex; flex-direction:column; align-items:center; justify-content:center; font-family:'Instrument Serif',serif; flex-shrink:0">
+                    <div style="font-size:0.6rem; font-weight:600; letter-spacing:0.05em; opacity:0.9; text-transform:uppercase">Session</div>
+                    <div style="font-size:1.1rem; font-weight:700; line-height:1">2026</div>
+                  </div>
+                  <div style="flex:1; min-width:0">
+                    <div style="font-weight:700; font-size:1rem; color:#525252; display:flex; align-items:center; gap:0.4rem">
+                      Accompagnement 2026
+                      <span style="font-size:0.95rem">🔒</span>
+                    </div>
+                    <div style="font-size:0.78rem; color:#737373; line-height:1.4">Bientôt disponible • Sessions Premium en préparation pour les concours 2026</div>
+                  </div>
+                  <div style="background:#fef3c7; color:#92400e; padding:0.3rem 0.6rem; border-radius:999px; font-size:0.7rem; font-weight:800; letter-spacing:0.05em; flex-shrink:0">
+                    À VENIR
+                  </div>
+                </div>
+                <!-- Cartes grisées factices pour donner envie -->
+                <div style="display:flex; flex-direction:column; gap:0.5rem">
+                  ${[1, 2, 3].map(n => `
+                    <div style="background:#fafaf9; border:1.5px dashed #e5e7eb; border-radius:12px; padding:0.7rem 0.9rem; display:flex; gap:0.7rem; align-items:center; opacity:0.65; filter:saturate(0.5); cursor:not-allowed">
+                      <div style="background:#e5e7eb; color:#9ca3af; font-family:'Instrument Serif',serif; font-size:1rem; font-weight:700; width:40px; height:40px; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0">N°${n}</div>
+                      <div style="flex:1; min-width:0">
+                        <div style="font-weight:600; font-size:0.88rem; color:#737373">Session N°${n} de 2026</div>
+                        <div style="font-size:0.74rem; color:#a3a3a3; margin-top:0.1rem">À venir prochainement</div>
+                      </div>
+                      <div style="color:#a3a3a3; font-size:1.2rem">🔒</div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            `;
+          })()}
+
+          <!-- V46 : Sessions groupées par année (comme les annales) -->
+          ${(() => {
+            if (sessions.length === 0) return '';
+
+            // Grouper par année (extraite de session.date "2025-08-01")
+            const byYear = {};
+            sessions.forEach(s => {
+              const year = (s.date || '').slice(0, 4) || 'Sans date';
+              if (!byYear[year]) byYear[year] = [];
+              byYear[year].push(s);
+            });
+
+            // Trier les années en ordre décroissant (la plus récente en premier)
+            const sortedYears = Object.keys(byYear).sort((a, b) => b.localeCompare(a));
+
+            return sortedYears.map(year => {
+              const yearSessions = byYear[year];
+              const nbSessions = yearSessions.length;
+              const totalQ = yearSessions.reduce((s, sess) => s + (sess.questions || []).length, 0);
+
+              return `
+                <div style="margin-top:${sortedYears.indexOf(year) === 0 ? '0.4rem' : '1.8rem'}; margin-bottom:1.5rem">
+                  <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.8rem; padding:0.7rem 0.8rem; background:white; border-radius:12px; border:1px solid var(--line); box-shadow:0 1px 3px rgba(15, 81, 50, 0.06)">
+                    <div style="background:linear-gradient(135deg, var(--green-bf), var(--green-bf-dark)); color:white; width:50px; height:50px; border-radius:12px; display:flex; flex-direction:column; align-items:center; justify-content:center; font-family:'Instrument Serif',serif; flex-shrink:0">
+                      <div style="font-size:0.6rem; font-weight:600; letter-spacing:0.05em; opacity:0.9; text-transform:uppercase">Session</div>
+                      <div style="font-size:1.1rem; font-weight:700; color:var(--gold-bf); line-height:1">${year}</div>
+                    </div>
+                    <div style="flex:1; min-width:0">
+                      <div style="font-weight:700; font-size:1rem; color:var(--ink)">Accompagnement ${year}</div>
+                      <div style="font-size:0.8rem; color:var(--ink-soft)">${nbSessions} session${nbSessions > 1 ? 's' : ''} • ${totalQ} questions</div>
+                    </div>
+                  </div>
+                  <div class="sessions-list">
+                    ${yearSessions.map((s, idx) => this.renderSessionCard(s, idx, isPremium)).join('')}
+                  </div>
+                </div>
+              `;
+            }).join('');
+          })()}
 
           ${sessions.length === 0 ? `
             <div style="background:white; border-radius:var(--radius); padding:2rem 1rem; text-align:center; color:var(--ink-mute)">
@@ -4224,35 +4324,39 @@ const App = {
       return;
     }
     this.state.currentSessionId = sessionId;
-    this.state.currentSessionIndex = 0;
-    this.state.currentSessionAnswers = {};
-    this.state.currentSessionShowAnswer = false;
-
-    // Restaurer la progression si elle existe
-    const progress = window.SessionsHelper.getProgress(sessionId);
-    if (progress && !progress.completedAt && progress.currentIndex > 0) {
-      if (confirm('🔄 Reprendre la session là où tu en étais (question ' + (progress.currentIndex + 1) + ') ?\n\nOK = Reprendre\nAnnuler = Recommencer')) {
-        this.state.currentSessionIndex = progress.currentIndex || 0;
-        this.state.currentSessionAnswers = progress.answers || {};
-      }
-    }
-
+    // V47 : on ne reset plus l'état session ici — c'est géré par les actions de sujets
     this.navigate('annales-session');
   },
 
-  // PAGE 2 : Détail d'une session - intro avant de commencer
+  // PAGE 2 : Détail d'une session - liste des sujets style Français (V47)
   renderSessionDetail() {
     const session = window.SessionsHelper.getSession(this.state.currentSessionId);
     if (!session) { this.navigate('annales'); return ''; }
 
-    const nbQ = (session.questions || []).length;
-    const dureeMin = Math.max(15, Math.round(nbQ * 2));
+    const sessionId = session.id;
+    const allQ = session.questions || [];
+    const totalQ = allQ.length;
+    const dureeMin = Math.max(15, Math.round(totalQ * 1.2));
 
-    // Compter par type
-    const stats = { open: 0, qcm3: 0, qcm4: 0, multi: 0 };
-    (session.questions || []).forEach(q => {
-      if (stats[q.type] !== undefined) stats[q.type]++;
+    // V47 : Récupérer l'historique des sujets faits sur cette session
+    const historique = this.SessionSujetsManager.getHistorique(sessionId).slice().reverse(); // récents en premier
+    const prochainNumero = this.SessionSujetsManager.getProchainNumero(sessionId);
+
+    // Compter Q déjà vues
+    const dejaVues = new Set();
+    this.SessionSujetsManager.getHistorique(sessionId).forEach(s => {
+      if (Array.isArray(s.indicesQuestions)) {
+        s.indicesQuestions.forEach(i => dejaVues.add(i));
+      }
     });
+    const qRestantes = totalQ - dejaVues.size;
+    const sessionTerminee = qRestantes <= 0;
+
+    // Taille du prochain sujet (selon la règle V47)
+    let tailleProchainSujet = this.SessionSujetsManager.calculerProchainSujetSize(totalQ, dejaVues.size);
+    if (tailleProchainSujet > 0 && this.SessionSujetsManager.shouldMergeRemains(totalQ, dejaVues.size, tailleProchainSujet)) {
+      tailleProchainSujet = qRestantes;  // Absorbe les restes
+    }
 
     return `
       <div class="page">
@@ -4262,55 +4366,207 @@ const App = {
             <div class="header-title-row">${session.titre}</div>
             <div class="header-spacer"></div>
           </div>
-          <div class="header-h1" style="font-size:1.4rem">${session.titre}</div>
-          <div class="header-sub">${session.description || ''}</div>
+          <div class="header-h1" style="font-size:1.4rem; display:flex; align-items:center; gap:0.5rem">
+            <span style="font-size:1.6rem">🎓</span> ${session.titre}
+          </div>
+          <div class="header-sub">
+            Accompagnement Final • <strong>${qRestantes}</strong> question${qRestantes > 1 ? 's' : ''} ${dejaVues.size > 0 ? 'restante' + (qRestantes > 1 ? 's' : '') : 'disponibles'}
+            ${dejaVues.size > 0 ? ` sur ${totalQ}` : ''}
+          </div>
         </header>
 
         <div class="content mt-overlap">
 
-          <div class="session-intro-card">
-            <div class="session-intro-icon">📚</div>
-            <div class="session-intro-title">Prêt à commencer ?</div>
-            <div class="session-intro-stats">
-              <div class="session-intro-stat">
-                <div class="session-intro-stat-num">${nbQ}</div>
-                <div class="session-intro-stat-lbl">questions</div>
-              </div>
-              <div class="session-intro-stat">
-                <div class="session-intro-stat-num">~${dureeMin}</div>
-                <div class="session-intro-stat-lbl">minutes</div>
-              </div>
-              <div class="session-intro-stat">
-                <div class="session-intro-stat-num">${Object.values(stats).filter(n => n > 0).length}</div>
-                <div class="session-intro-stat-lbl">types</div>
-              </div>
-            </div>
-
-            <div class="session-intro-types">
-              ${stats.open > 0 ? `<div class="session-intro-type-row">💭 <strong>${stats.open}</strong> question${stats.open > 1 ? 's' : ''} ouverte${stats.open > 1 ? 's' : ''} (réponse libre)</div>` : ''}
-              ${stats.qcm3 > 0 ? `<div class="session-intro-type-row">🔵 <strong>${stats.qcm3}</strong> QCM à 3 propositions</div>` : ''}
-              ${stats.qcm4 > 0 ? `<div class="session-intro-type-row">🔵 <strong>${stats.qcm4}</strong> QCM à 4 propositions</div>` : ''}
-              ${stats.multi > 0 ? `<div class="session-intro-type-row">🟣 <strong>${stats.multi}</strong> question${stats.multi > 1 ? 's' : ''} à plusieurs bonnes réponses</div>` : ''}
-            </div>
-
-            <div class="session-intro-tips">
-              <strong>💡 Comment ça marche :</strong>
-              <ul>
-                <li>Avance à ton rythme, pas de chronomètre</li>
-                <li>Tu peux toujours <strong>voir la réponse</strong> pour les questions ouvertes</li>
-                <li>Une <strong>explication "NB"</strong> détaille chaque correction</li>
-                <li>Ta progression est sauvegardée automatiquement</li>
-              </ul>
-            </div>
-
-            <button class="session-start-btn" onclick="App.navigate('session-questions')">
-              ${this.state.currentSessionIndex > 0 ? '🔄 Reprendre la session' : '▶️ Commencer la session'}
-            </button>
+          <!-- Section 1 : MODE LIBRE -->
+          <div style="font-weight:600; font-size:0.78rem; color:var(--ink-soft); letter-spacing:0.05em; text-transform:uppercase; margin-bottom:0.4rem; display:flex; align-items:center; gap:0.4rem">
+            📚 MODE LIBRE D'ENTRAÎNEMENT
           </div>
+          <p style="font-size:0.85rem; color:var(--ink-soft); margin:0 0 0.8rem; line-height:1.5">
+            Apprends à ton rythme avec correction immédiate. Aucune limite de temps.
+          </p>
+
+          ${sessionTerminee ? `
+            <!-- Tous les sujets ont été faits → on propose de tout recommencer -->
+            <div style="background:linear-gradient(135deg, #fef3c7, #fde68a); border:2px solid #f59e0b; border-radius:14px; padding:1.2rem; text-align:center; margin-bottom:1.5rem">
+              <div style="font-size:2.5rem; margin-bottom:0.4rem">🎉</div>
+              <div style="font-weight:800; color:#78350f; font-size:1rem; margin-bottom:0.3rem">Bravo, tu as fait tous les sujets !</div>
+              <div style="font-size:0.85rem; color:#92400e; margin-bottom:1rem">Tu as vu les ${totalQ} questions de cette session.</div>
+              <button onclick="App.resetSessionSujets()" style="background:white; color:#92400e; border:2px solid #f59e0b; padding:0.7rem 1.3rem; border-radius:10px; font-weight:700; font-size:0.88rem; cursor:pointer">
+                🔄 Tout recommencer (nouveaux tirages)
+              </button>
+            </div>
+          ` : `
+            <!-- Bouton OR pour le prochain sujet -->
+            <button onclick="App.demarrerNouveauSujet()" style="background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0; border-radius:14px; cursor:pointer; box-shadow:0 6px 16px rgba(217, 119, 6, 0.3); margin-bottom:1.5rem; width:100%; text-align:left; display:flex; align-items:center; gap:0.8rem; padding:1rem 1.1rem">
+              <div style="background:rgba(255,255,255,0.25); width:48px; height:48px; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:1.2rem">▶️</div>
+              <div style="flex:1">
+                <div style="font-family:'Instrument Serif',serif; font-size:1.4rem; line-height:1.1">Sujet ${prochainNumero}</div>
+                <div style="font-size:0.82rem; opacity:0.9; margin-top:0.15rem">Nouveau sujet de ${tailleProchainSujet} question${tailleProchainSujet > 1 ? 's' : ''}</div>
+              </div>
+              <div style="font-size:1.4rem; opacity:0.9">›</div>
+            </button>
+          `}
+
+          <!-- Section 2 : Historique des sujets déjà faits -->
+          ${historique.length > 0 ? `
+            <div style="font-weight:600; font-size:0.78rem; color:var(--ink-soft); letter-spacing:0.05em; text-transform:uppercase; margin-bottom:0.6rem; display:flex; align-items:center; gap:0.4rem">
+              📚 SUJETS DÉJÀ FAITS (${historique.length})
+            </div>
+            <div style="display:flex; flex-direction:column; gap:0.5rem; margin-bottom:1.5rem">
+              ${historique.map(s => this.renderSujetHistoriqueCard(s, sessionId)).join('')}
+            </div>
+          ` : ''}
+
+          <!-- Section 3 : MODE EXAMEN CHRONOMÉTRÉ -->
+          <div style="font-weight:600; font-size:0.78rem; color:var(--ink-soft); letter-spacing:0.05em; text-transform:uppercase; margin-bottom:0.4rem; display:flex; align-items:center; gap:0.4rem; justify-content:space-between">
+            <span>⏱️ MODE EXAMEN CHRONOMÉTRÉ</span>
+            <span style="font-weight:400; text-transform:none; letter-spacing:0; font-size:0.78rem; background:white; padding:0.2rem 0.6rem; border-radius:999px; border:1px solid var(--line)">${totalQ} Q • ${dureeMin}min</span>
+          </div>
+          <p style="font-size:0.85rem; color:var(--ink-soft); margin:0 0 0.8rem; line-height:1.5">
+            Conditions réelles d'examen. Toutes les ${totalQ} questions en ${dureeMin} minutes. Sauvegarde automatique pour reprendre plus tard.
+          </p>
+          <button onclick="App.demarrerSessionChronometree()" style="background:linear-gradient(135deg, #ca8a04, #854d0e); color:white; border:none; padding:0; border-radius:14px; cursor:pointer; box-shadow:0 6px 16px rgba(202, 138, 4, 0.3); width:100%; text-align:left; display:flex; align-items:center; gap:0.8rem; padding:1rem 1.1rem; margin-bottom:1.5rem">
+            <div style="background:rgba(255,255,255,0.25); width:48px; height:48px; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:1.4rem">⏱️</div>
+            <div style="flex:1">
+              <div style="font-family:'Instrument Serif',serif; font-size:1.4rem; line-height:1.1">Sujet examen</div>
+              <div style="font-size:0.82rem; opacity:0.9; margin-top:0.15rem">${totalQ} questions • ${dureeMin}min</div>
+            </div>
+            <div style="font-size:1.4rem; opacity:0.9">›</div>
+          </button>
 
         </div>
       </div>
     `;
+  },
+
+  // V47 : Carte d'un sujet historique (style Français)
+  renderSujetHistoriqueCard(sujet, sessionId) {
+    const pct = sujet.total > 0 ? Math.round((sujet.score / sujet.total) * 100) : 0;
+    let pctClass = 'low';
+    if (pct >= 75) pctClass = 'good';
+    else if (pct >= 50) pctClass = 'mid';
+
+    const dateStr = sujet.completedAt ? new Date(sujet.completedAt).toLocaleDateString('fr-FR', { day: '2-digit', month: 'long', year: 'numeric' }) : '';
+    const dureeStr = sujet.elapsedSeconds ? this.formatDureeSujet(sujet.elapsedSeconds) : '';
+
+    return `
+      <div style="background:white; border:1px solid var(--line); border-radius:12px; padding:0.7rem 0.9rem; display:flex; gap:0.7rem; align-items:center">
+        <div style="background:#fef3c7; color:#92400e; font-family:'Instrument Serif',serif; font-size:1.05rem; font-weight:700; width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; border:1.5px solid #fde68a">N°${sujet.numero}</div>
+        <div style="flex:1; min-width:0">
+          <div style="font-weight:700; font-size:0.92rem; color:var(--ink)">Sujet ${sujet.numero}</div>
+          <div style="font-size:0.78rem; color:var(--ink-soft); margin-top:0.1rem">${dateStr}${dureeStr ? ' • ' + dureeStr : ''}</div>
+        </div>
+        <div style="background:${pctClass === 'good' ? '#dcfce7' : pctClass === 'mid' ? '#fef9c3' : '#fee2e2'}; color:${pctClass === 'good' ? '#166534' : pctClass === 'mid' ? '#854d0e' : '#991b1b'}; padding:0.35rem 0.6rem; border-radius:8px; text-align:center; min-width:54px">
+          <div style="font-weight:800; font-size:0.95rem; line-height:1">${pct}%</div>
+          <div style="font-size:0.7rem; opacity:0.85; margin-top:0.1rem">${sujet.score}/${sujet.total}</div>
+        </div>
+        <button onclick="event.stopPropagation(); App.refaireSujetSession('${sessionId}', ${sujet.numero})" style="background:#dbeafe; color:#1e40af; border:1.5px solid #93c5fd; width:36px; height:36px; border-radius:8px; font-size:1rem; cursor:pointer; display:flex; align-items:center; justify-content:center" title="Refaire ce sujet">🔄</button>
+      </div>
+    `;
+  },
+
+  formatDureeSujet(seconds) {
+    if (!seconds) return '';
+    const m = Math.floor(seconds / 60);
+    const s = seconds % 60;
+    if (m === 0) return s + 's';
+    return m + 'min ' + (s < 10 ? '0' : '') + s + 's';
+  },
+
+  // V47 : Démarrer un NOUVEAU sujet (mode libre)
+  demarrerNouveauSujet() {
+    const session = window.SessionsHelper.getSession(this.state.currentSessionId);
+    if (!session) return;
+
+    // Générer les questions du prochain sujet
+    const tirage = this.SessionSujetsManager.genererQuestionsProchainSujet(session);
+    if (tirage.questions.length === 0) {
+      this.toast('🎉 Tu as fait tous les sujets de cette session !');
+      return;
+    }
+
+    const numero = this.SessionSujetsManager.getProchainNumero(session.id);
+
+    // Initialiser l'état de session
+    this.state.currentSessionTimerEnabled = false;
+    this.state.currentSessionStartTime = Date.now();
+    this.state.sessionPaused = false;
+    this.state.currentSessionQuestionsActive = tirage.questions;
+    this.state.currentSessionIndices = tirage.indices;  // V47 : retenir les indices pour anti-doublon
+    this.state.currentSessionTotalAvailable = (session.questions || []).length;
+    this.state.currentSessionIsAbridged = tirage.questions.length < (session.questions || []).length;
+    this.state.currentSessionAnswers = {};
+    this.state.currentSessionIndex = 0;
+    this.state.currentSessionSujetNumero = numero;
+    this.state.currentSessionMode = 'sujet';  // V47 : mode "sujet libre"
+
+    this.navigate('session-questions');
+  },
+
+  // V47 : Démarrer la session CHRONOMÉTRÉE (toutes les Q)
+  demarrerSessionChronometree() {
+    const session = window.SessionsHelper.getSession(this.state.currentSessionId);
+    if (!session) return;
+    const allQ = session.questions || [];
+    if (allQ.length === 0) {
+      this.toast('❌ Aucune question dans cette session', 'danger');
+      return;
+    }
+
+    this.state.currentSessionTimerEnabled = true;
+    this.state.currentSessionStartTime = Date.now();
+    this.state.sessionPaused = false;
+    this.state.currentSessionQuestionsActive = allQ;
+    this.state.currentSessionIndices = allQ.map((_, i) => i);
+    this.state.currentSessionTotalAvailable = allQ.length;
+    this.state.currentSessionIsAbridged = false;
+    this.state.currentSessionAnswers = {};
+    this.state.currentSessionIndex = 0;
+    this.state.currentSessionSujetNumero = null;
+    this.state.currentSessionMode = 'exam';
+
+    this.state.currentSessionTimeLeft = allQ.length * 60;
+    this.startSessionTimer();
+
+    this.navigate('session-questions');
+  },
+
+  // V47 : Refaire un sujet déjà fait (utilise les mêmes questions)
+  refaireSujetSession(sessionId, numero) {
+    const session = window.SessionsHelper.getSession(sessionId);
+    const sujet = this.SessionSujetsManager.getSujet(sessionId, numero);
+    if (!session || !sujet) return;
+
+    if (!confirm(`🔄 Refaire le Sujet ${numero} avec les mêmes ${sujet.total} questions ?`)) return;
+
+    const allQ = session.questions || [];
+    const questions = (sujet.indicesQuestions || []).map(i => allQ[i]).filter(q => q);
+    if (questions.length === 0) {
+      this.toast('❌ Impossible de retrouver les questions de ce sujet', 'danger');
+      return;
+    }
+
+    this.state.currentSessionTimerEnabled = false;
+    this.state.currentSessionStartTime = Date.now();
+    this.state.sessionPaused = false;
+    this.state.currentSessionQuestionsActive = questions;
+    this.state.currentSessionIndices = sujet.indicesQuestions;
+    this.state.currentSessionTotalAvailable = allQ.length;
+    this.state.currentSessionIsAbridged = questions.length < allQ.length;
+    this.state.currentSessionAnswers = {};
+    this.state.currentSessionIndex = 0;
+    this.state.currentSessionSujetNumero = numero;
+    this.state.currentSessionMode = 'sujet-refaire';
+
+    this.navigate('session-questions');
+  },
+
+  // V47 : Reset complet (tout recommencer)
+  resetSessionSujets() {
+    if (!confirm('🔄 Vraiment tout recommencer ?\n\nL\'historique des sujets faits sera effacé et tu pourras refaire toute la session depuis le début.')) return;
+    this.SessionSujetsManager.resetSession(this.state.currentSessionId);
+    this.toast('✅ Historique effacé, tu peux tout refaire');
+    this.render();
   },
 
   // PAGE 3 : Affichage des questions une par une (adaptatif selon le type)
@@ -4318,7 +4574,11 @@ const App = {
     const session = window.SessionsHelper.getSession(this.state.currentSessionId);
     if (!session) { this.navigate('annales'); return ''; }
 
-    const questions = session.questions || [];
+    // V45 : Utiliser les questions ACTIVES (sous-ensemble en mode libre, tout en chrono)
+    // Si pas encore initialisé (reprise par exemple), fallback sur toutes les questions
+    const questions = this.state.currentSessionQuestionsActive && this.state.currentSessionQuestionsActive.length > 0
+      ? this.state.currentSessionQuestionsActive
+      : (session.questions || []);
     const idx = this.state.currentSessionIndex || 0;
     const total = questions.length;
 
@@ -4345,12 +4605,37 @@ const App = {
         <header class="header">
           <div class="header-bar">
             <button class="header-back" onclick="App.exitSession()">✕</button>
-            <div class="header-title-row">${session.titre}</div>
+            <div class="header-title-row">${session.titre}${this.state.currentSessionSujetNumero ? ' • Sujet ' + this.state.currentSessionSujetNumero : ''}</div>
             <div class="header-spacer"></div>
           </div>
-          <div class="header-sub" style="display:flex; justify-content:space-between; align-items:center">
+          <div class="header-sub" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.4rem">
             <span>Question ${idx + 1} / ${total}</span>
-            <span>${this.renderQuestionTypeBadge(q.type)}</span>
+
+            <!-- V41 : Score en temps réel + Chrono / V44 : pas de score en chronométré + bouton pause -->
+            <div style="display:flex; gap:0.6rem; align-items:center">
+              ${!this.state.currentSessionTimerEnabled ? (() => {
+                // V44 : Score visible UNIQUEMENT en mode libre (en mode examen on cache pour éviter triche)
+                const stats = this.computeSessionLiveStats();
+                return `
+                  <span style="background:rgba(255,255,255,0.2); padding:0.2rem 0.55rem; border-radius:999px; font-weight:700; font-size:0.78rem">
+                    ✓ ${stats.correct} / ${stats.answered}
+                  </span>
+                `;
+              })() : `
+                <span style="background:rgba(255,255,255,0.2); padding:0.2rem 0.55rem; border-radius:999px; font-weight:700; font-size:0.78rem">
+                  ${this.computeSessionLiveStats().answered} répondues
+                </span>
+              `}
+              ${this.state.currentSessionTimerEnabled ? `
+                <button onclick="App.toggleSessionPause()" style="background:${this.state.sessionPaused ? 'rgba(245, 158, 11, 0.9)' : 'rgba(255,255,255,0.2)'}; border:none; color:white; padding:0.25rem 0.6rem; border-radius:999px; font-size:0.85rem; cursor:pointer; font-weight:700" title="${this.state.sessionPaused ? 'Reprendre' : 'Pause'}">
+                  ${this.state.sessionPaused ? '▶️' : '⏸️'}
+                </button>
+                <span id="session-timer" style="background:${this.state.sessionPaused ? 'rgba(245, 158, 11, 0.9)' : 'rgba(255,255,255,0.2)'}; padding:0.2rem 0.55rem; border-radius:999px; font-weight:700; font-size:0.78rem; font-family:monospace">
+                  ⏱️ ${this.formatSessionTime(this.state.currentSessionTimeLeft || 0)}
+                </span>
+              ` : ''}
+              ${this.renderQuestionTypeBadge(q.type)}
+            </div>
           </div>
           <div class="session-progress-bar">
             <div class="session-progress-fill" style="width:${((idx + 1) / total) * 100}%"></div>
@@ -4364,7 +4649,16 @@ const App = {
 
             ${this.renderQuestionInput(q, idx, isAnswered, showAnswer)}
 
-            ${(isAnswered || showAnswer) ? this.renderQuestionFeedback(q, userAnswer) : ''}
+            <!-- V44 : En mode chronométré, on cache le feedback immédiat (vraie ambiance examen) -->
+            <!-- L'utilisateur verra toutes les corrections à la fin via "Voir la correction détaillée" -->
+            ${(isAnswered || showAnswer) && !this.state.currentSessionTimerEnabled ? this.renderQuestionFeedback(q, userAnswer) : ''}
+
+            <!-- V44 : En mode chronométré, message neutre après réponse -->
+            ${isAnswered && this.state.currentSessionTimerEnabled ? `
+              <div style="background:#dbeafe; border:1px solid #93c5fd; border-radius:10px; padding:0.6rem 0.9rem; margin-top:0.7rem; text-align:center; font-size:0.85rem; color:#1e3a8a">
+                ✅ Réponse enregistrée. <strong>Correction visible à la fin</strong>.
+              </div>
+            ` : ''}
           </div>
 
           <div class="session-nav">
@@ -4411,6 +4705,8 @@ const App = {
     }
 
     if (q.type === 'qcm3' || q.type === 'qcm4') {
+      // V44 : En mode chronométré, on ne révèle pas la bonne réponse
+      const isTimedMode = this.state.currentSessionTimerEnabled;
       // QCM simple : boutons radio
       const letters = ['A', 'B', 'C', 'D'];
       return `
@@ -4418,16 +4714,24 @@ const App = {
           ${q.choices.map((choice, i) => {
             let cls = 'session-choice';
             if (isAnswered) {
-              if (i === q.r) cls += ' correct';
-              else if (i === userAnswer) cls += ' incorrect';
-              else cls += ' inactive';
+              if (isTimedMode) {
+                // V44 : Mode chronométré → on marque juste le choix de l'utilisateur, pas le bon/mauvais
+                if (i === userAnswer) cls += ' selected';
+                else cls += ' inactive';
+              } else {
+                // Mode libre → on révèle tout
+                if (i === q.r) cls += ' correct';
+                else if (i === userAnswer) cls += ' incorrect';
+                else cls += ' inactive';
+              }
             }
             return `
               <div class="${cls}" onclick="${isAnswered ? '' : `App.pickSessionAnswer(${i})`}">
                 <div class="session-choice-letter">${letters[i]}</div>
                 <div class="session-choice-text">${choice}</div>
-                ${isAnswered && i === q.r ? '<div class="session-choice-mark">✓</div>' : ''}
-                ${isAnswered && i === userAnswer && i !== q.r ? '<div class="session-choice-mark">✗</div>' : ''}
+                ${isAnswered && !isTimedMode && i === q.r ? '<div class="session-choice-mark">✓</div>' : ''}
+                ${isAnswered && !isTimedMode && i === userAnswer && i !== q.r ? '<div class="session-choice-mark">✗</div>' : ''}
+                ${isAnswered && isTimedMode && i === userAnswer ? '<div class="session-choice-mark" style="color:#2563eb">●</div>' : ''}
               </div>
             `;
           }).join('')}
@@ -4531,7 +4835,15 @@ const App = {
   // === ACTIONS ===
 
   pickSessionAnswer(choiceIdx) {
+    // V44 : ne rien faire si en pause
+    if (this.state.sessionPaused) {
+      this.toast('⏸️ Session en pause — clique sur ▶️ pour reprendre');
+      return;
+    }
     const idx = this.state.currentSessionIndex;
+    // V42 : Vérifier qu'on n'a pas déjà répondu (pour éviter double-clic)
+    if (this.state.currentSessionAnswers[idx] !== undefined) return;
+
     this.state.currentSessionAnswers[idx] = choiceIdx;
     this.saveSessionProgress();
     this.render();
@@ -4573,9 +4885,9 @@ const App = {
   },
 
   nextSessionQuestion() {
-    const session = window.SessionsHelper.getSession(this.state.currentSessionId);
-    if (!session) return;
-    if (this.state.currentSessionIndex < session.questions.length - 1) {
+    // V45 : utiliser la liste de questions ACTIVE (sous-ensemble en mode libre)
+    const activeQs = this.state.currentSessionQuestionsActive || [];
+    if (this.state.currentSessionIndex < activeQs.length - 1) {
       this.state.currentSessionIndex++;
       this.state.currentSessionShowAnswer = false;
       this.saveSessionProgress();
@@ -4591,10 +4903,182 @@ const App = {
     }
   },
 
+  // ===========================================
+  // V41 : MODE & CHRONOMÈTRE DES SESSIONS
+  // ===========================================
+
+  // Sélectionner le mode (libre ou chronométré)
+  setSessionMode(mode) {
+    this.state.sessionTimerMode = mode;
+    this.render();
+  },
+
+  // Démarrer la session avec le mode choisi
+  startSessionWithMode() {
+    const session = window.SessionsHelper.getSession(this.state.currentSessionId);
+    if (!session) return;
+
+    const mode = this.state.sessionTimerMode || 'free';
+    this.state.currentSessionTimerEnabled = (mode === 'timed');
+    this.state.currentSessionStartTime = Date.now();
+    this.state.sessionPaused = false;
+
+    // V46 FIX : détecter si on est en train de REPRENDRE (vs nouveau démarrage)
+    // Si l'utilisateur a déjà des réponses ET un index > 0, c'est une reprise
+    const isResuming = this.state.currentSessionIndex > 0 &&
+                       this.state.currentSessionAnswers &&
+                       Object.keys(this.state.currentSessionAnswers).length > 0;
+
+    // V45 : En mode libre = 25 Q aléatoires (comme QCM normaux)
+    //        En mode chronométré = toutes les questions (vraie sensation examen)
+    const SESSION_TRAIN_SIZE = 25;
+    const allQuestions = session.questions || [];
+
+    // V46 FIX : Si on reprend ET qu'on a déjà des questions actives mémorisées, on les garde
+    // Sinon on prépare un nouveau tirage
+    if (isResuming && this.state.currentSessionQuestionsActive && this.state.currentSessionQuestionsActive.length > 0) {
+      // REPRISE : on garde tout tel quel (questions actives, réponses, index)
+      // Pas de re-tirage aléatoire
+    } else {
+      // NOUVEAU DÉMARRAGE : préparer le tirage
+      if (mode === 'free' && allQuestions.length > SESSION_TRAIN_SIZE) {
+        // Mélanger et prendre 25 questions
+        const shuffled = [...allQuestions];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        this.state.currentSessionQuestionsActive = shuffled.slice(0, SESSION_TRAIN_SIZE);
+        this.state.currentSessionTotalAvailable = allQuestions.length;
+        this.state.currentSessionIsAbridged = true;
+      } else {
+        // Mode chronométré OU session avec moins de 25 Q : tout
+        this.state.currentSessionQuestionsActive = allQuestions;
+        this.state.currentSessionTotalAvailable = allQuestions.length;
+        this.state.currentSessionIsAbridged = false;
+      }
+
+      // Réinitialiser les réponses (nouveau tirage = nouvelle session)
+      this.state.currentSessionAnswers = {};
+      this.state.currentSessionIndex = 0;
+    }
+
+    if (this.state.currentSessionTimerEnabled) {
+      // 60 secondes par question
+      const totalSeconds = this.state.currentSessionQuestionsActive.length * 60;
+      this.state.currentSessionTimeLeft = totalSeconds;
+      this.startSessionTimer();
+    }
+
+    this.navigate('session-questions');
+  },
+
+  // V44 : Mettre en pause / reprendre le chrono
+  toggleSessionPause() {
+    this.state.sessionPaused = !this.state.sessionPaused;
+    if (this.state.sessionPaused) {
+      // Pause : arrêter le timer
+      this.stopSessionTimer();
+      this.toast('⏸️ Session en pause');
+    } else {
+      // Reprise : relancer le timer
+      this.startSessionTimer();
+      this.toast('▶️ Session reprise');
+    }
+    this.render();
+  },
+
+  // Démarrer le timer (mode chronométré)
+  startSessionTimer() {
+    if (this.state.currentSessionTimerInterval) {
+      clearInterval(this.state.currentSessionTimerInterval);
+    }
+    this.state.currentSessionTimerInterval = setInterval(() => {
+      this.state.currentSessionTimeLeft = Math.max(0, (this.state.currentSessionTimeLeft || 0) - 1);
+
+      // Mettre à jour seulement le timer dans le DOM (pas tout le render)
+      const timerEl = document.getElementById('session-timer');
+      if (timerEl) {
+        timerEl.textContent = '⏱️ ' + this.formatSessionTime(this.state.currentSessionTimeLeft);
+        // Couleur si peu de temps
+        if (this.state.currentSessionTimeLeft <= 30) {
+          timerEl.style.background = '#fee2e2';
+          timerEl.style.color = '#991b1b';
+        } else if (this.state.currentSessionTimeLeft <= 120) {
+          timerEl.style.background = '#fef3c7';
+          timerEl.style.color = '#92400e';
+        }
+      }
+
+      // Temps écoulé : finir automatiquement
+      if (this.state.currentSessionTimeLeft <= 0) {
+        clearInterval(this.state.currentSessionTimerInterval);
+        this.state.currentSessionTimerInterval = null;
+        this.toast('⏰ Temps écoulé ! La session se termine automatiquement.');
+        setTimeout(() => this.finishSession(), 1500);
+      }
+    }, 1000);
+  },
+
+  // Arrêter le timer (à appeler quand on sort de la session)
+  stopSessionTimer() {
+    if (this.state.currentSessionTimerInterval) {
+      clearInterval(this.state.currentSessionTimerInterval);
+      this.state.currentSessionTimerInterval = null;
+    }
+  },
+
+  // Formater le temps en MM:SS
+  formatSessionTime(seconds) {
+    const m = Math.floor(seconds / 60);
+    const s = seconds % 60;
+    return m + ':' + String(s).padStart(2, '0');
+  },
+
+  // Calculer le score en temps réel
+  computeSessionLiveStats() {
+    const session = window.SessionsHelper.getSession(this.state.currentSessionId);
+    if (!session) return { correct: 0, answered: 0, total: 0 };
+
+    // V45 : utiliser la liste de questions ACTIVE
+    const activeQs = this.state.currentSessionQuestionsActive && this.state.currentSessionQuestionsActive.length > 0
+      ? this.state.currentSessionQuestionsActive
+      : (session.questions || []);
+
+    let correct = 0;
+    let answered = 0;
+    const total = activeQs.length;
+
+    activeQs.forEach((q, i) => {
+      const userAnswer = this.state.currentSessionAnswers[i];
+
+      if (q.type === 'multi') {
+        // En multi : compté seulement si validation explicite
+        if (this.state.currentSessionAnswers[i + '_validated'] === true) {
+          answered++;
+          const expected = Array.isArray(q.r) ? [...q.r].sort() : [q.r];
+          const got = Array.isArray(userAnswer) ? [...userAnswer].sort() : [];
+          if (expected.length === got.length && expected.every((v, idx) => v === got[idx])) {
+            correct++;
+          }
+        }
+      } else if (q.type === 'open') {
+        // Question ouverte : compte seulement si "seen" (utilisateur a vu la réponse)
+        if (userAnswer === 'seen') answered++;
+      } else if (userAnswer !== undefined) {
+        // QCM mono
+        answered++;
+        if (userAnswer === q.r) correct++;
+      }
+    });
+
+    return { correct, answered, total };
+  },
+
   exitSession() {
-    if (confirm('🚪 Quitter cette session ?\n\nTa progression est sauvegardée, tu pourras reprendre plus tard.')) {
-      this.saveSessionProgress();
-      this.navigate('annales');
+    if (confirm('🚪 Quitter ce sujet ?\n\nTa progression sera perdue (les sujets en cours ne sont pas sauvegardés tant qu\'ils ne sont pas terminés).')) {
+      this.stopSessionTimer();
+      this.navigate('annales-session');
     }
   },
 
@@ -4602,7 +5086,12 @@ const App = {
     if (!this.state.currentSessionId || !window.SessionsHelper) return;
     window.SessionsHelper.saveProgress(this.state.currentSessionId, {
       currentIndex: this.state.currentSessionIndex,
-      answers: this.state.currentSessionAnswers
+      answers: this.state.currentSessionAnswers,
+      // V46 : sauvegarder le tirage actif pour la reprise (sinon nouveau tirage à chaque reprise)
+      activeQuestions: this.state.currentSessionQuestionsActive,
+      isAbridged: this.state.currentSessionIsAbridged,
+      totalAvailable: this.state.currentSessionTotalAvailable,
+      timerMode: this.state.sessionTimerMode
     });
   },
 
@@ -4610,38 +5099,104 @@ const App = {
     const session = window.SessionsHelper.getSession(this.state.currentSessionId);
     if (!session) return;
 
+    // V41 : Arrêter le timer et calculer le temps écoulé
+    this.stopSessionTimer();
+    const startTime = this.state.currentSessionStartTime || Date.now();
+    const elapsedSeconds = Math.floor((Date.now() - startTime) / 1000);
+
+    // V45 : utiliser les questions ACTIVES
+    const activeQs = this.state.currentSessionQuestionsActive && this.state.currentSessionQuestionsActive.length > 0
+      ? this.state.currentSessionQuestionsActive
+      : (session.questions || []);
+
     // Calculer le score
     let score = 0;
-    (session.questions || []).forEach((q, i) => {
+    const wrongQuestions = [];
+    activeQs.forEach((q, i) => {
       const userAnswer = this.state.currentSessionAnswers[i];
+      let isCorrect = false;
       if (q.type === 'open') {
-        // Pour les questions ouvertes, on ne peut pas vérifier automatiquement
-        if (userAnswer === 'seen') score++; // +1 si l'utilisateur a vu la réponse
+        if (userAnswer === 'seen') { score++; isCorrect = true; }
       } else if (q.type === 'multi') {
         if (Array.isArray(userAnswer)) {
           const correctSet = new Set(q.r);
           const userSet = new Set(userAnswer);
           if (correctSet.size === userSet.size && [...correctSet].every(x => userSet.has(x))) {
             score++;
+            isCorrect = true;
           }
         }
       } else {
-        if (userAnswer === q.r) score++;
+        if (userAnswer === q.r) { score++; isCorrect = true; }
+      }
+      if (!isCorrect && userAnswer !== undefined) {
+        wrongQuestions.push({ index: i, question: q });
       }
     });
 
-    // Sauvegarder le résultat final
+    // Sauvegarder le résultat final avec temps
     window.SessionsHelper.saveProgress(this.state.currentSessionId, {
-      currentIndex: session.questions.length,
+      currentIndex: activeQs.length,
       answers: this.state.currentSessionAnswers,
       score,
-      total: session.questions.length,
-      completedAt: Date.now()
+      total: activeQs.length,
+      completedAt: Date.now(),
+      // V41 : nouveau
+      elapsedSeconds: elapsedSeconds,
+      wasTimedMode: this.state.currentSessionTimerEnabled || false,
+      wrongCount: wrongQuestions.length,
+      // V45 : info session abrégée (mode libre)
+      wasAbridged: this.state.currentSessionIsAbridged || false,
+      totalAvailable: this.state.currentSessionTotalAvailable || activeQs.length
     });
 
-    // BUG #5 FIX : mettre à jour currentSessionIndex pour que renderSessionQuestions
-    // détecte la fin et affiche les résultats
-    this.state.currentSessionIndex = session.questions.length;
+    // V43 FIX : Intégrer dans les statistiques globales avec MÊME FORMAT que les QCM
+    this.state.history = this.state.history || [];
+
+    // ID virtuel pour la matière "Accompagnement Final"
+    const ACCOMPAGNEMENT_MATIERE_ID = 'accompagnement_final';
+
+    this.state.history.push({
+      date: Date.now(),
+      type: 'session',
+      sessionId: session.id,
+      sessionTitle: session.titre,
+      concoursId: null,
+      matiereId: ACCOMPAGNEMENT_MATIERE_ID,
+      mode: this.state.currentSessionTimerEnabled ? 'exam' : 'training',
+      score: score,
+      total: activeQs.length,
+      duration: elapsedSeconds,
+      pct: Math.round((score / activeQs.length) * 100)
+    });
+
+    // V43 FIX : Mettre à jour matiereStats[accompagnement_final]
+    this.state.matiereStats = this.state.matiereStats || {};
+    if (!this.state.matiereStats[ACCOMPAGNEMENT_MATIERE_ID]) {
+      this.state.matiereStats[ACCOMPAGNEMENT_MATIERE_ID] = { attempts: 0, totalScore: 0, totalQuestions: 0 };
+    }
+    this.state.matiereStats[ACCOMPAGNEMENT_MATIERE_ID].attempts++;
+    this.state.matiereStats[ACCOMPAGNEMENT_MATIERE_ID].totalScore += score;
+    this.state.matiereStats[ACCOMPAGNEMENT_MATIERE_ID].totalQuestions += activeQs.length;
+
+    // V47 : Sauvegarder le sujet dans l'historique (sauf si c'est un examen chronométré ou un refaire)
+    if (this.state.currentSessionMode === 'sujet' && this.state.currentSessionSujetNumero) {
+      this.SessionSujetsManager.saveSujet(session.id, {
+        numero: this.state.currentSessionSujetNumero,
+        score: score,
+        total: activeQs.length,
+        completedAt: Date.now(),
+        elapsedSeconds: elapsedSeconds,
+        indicesQuestions: this.state.currentSessionIndices || [],
+        wrongCount: wrongQuestions.length
+      });
+      this.SessionSujetsManager.clearPendingSujet();
+    }
+
+    this.save();
+
+    // BUG #5 FIX : navigation vers les résultats
+    this.state.currentSessionIndex = activeQs.length;
     this.state.currentSessionFinished = true;
     this.render();
   },
@@ -4649,44 +5204,305 @@ const App = {
   renderSessionResults(session) {
     const progress = window.SessionsHelper.getProgress(session.id);
     const score = progress?.score || 0;
+    // V45 : Le total est celui de la session jouée (peut être 25 en mode libre)
     const total = progress?.total || session.questions.length;
     const pct = Math.round((score / total) * 100);
+    // V41 : temps + mode
+    const elapsedSec = progress?.elapsedSeconds || 0;
+    const wasTimedMode = progress?.wasTimedMode || false;
+    // V45 : info session abrégée
+    const wasAbridged = progress?.wasAbridged || false;
+    const totalAvailable = progress?.totalAvailable || total;
+    const elapsedMin = Math.floor(elapsedSec / 60);
+    const elapsedRest = elapsedSec % 60;
+    // V42 : Affichage temps plus parlant
+    let elapsedStr;
+    if (elapsedSec === 0) {
+      elapsedStr = '—';
+    } else if (elapsedMin === 0) {
+      elapsedStr = elapsedRest + ' s';
+    } else {
+      elapsedStr = elapsedMin + ' min ' + elapsedRest + ' s';
+    }
 
     let emoji = '🎯';
     let msg = 'Continue à t\'entraîner !';
-    if (pct >= 80) { emoji = '🏆'; msg = 'Excellent travail !'; }
-    else if (pct >= 60) { emoji = '👏'; msg = 'Bon résultat !'; }
-    else if (pct >= 40) { emoji = '💪'; msg = 'Tu progresses, persévère !'; }
+    let color = '#6b7280';
+    if (pct >= 80) { emoji = '🏆'; msg = 'Excellent travail !'; color = '#16a34a'; }
+    else if (pct >= 60) { emoji = '👏'; msg = 'Bon résultat !'; color = '#2563eb'; }
+    else if (pct >= 40) { emoji = '💪'; msg = 'Tu progresses, persévère !'; color = '#d97706'; }
+    else { emoji = '📚'; msg = 'Continue à apprendre !'; color = '#dc2626'; }
+
+    const wrong = total - score;
 
     return `
       <div class="page">
         <header class="header">
           <div class="header-bar">
-            <button class="header-back" onclick="App.navigate('annales')">←</button>
+            <button class="header-back" onclick="App.navigate('annales-session')">←</button>
             <div class="header-title-row">Résultats</div>
             <div class="header-spacer"></div>
           </div>
-          <div class="header-h1">Session terminée !</div>
+          <div class="header-h1">
+            ${this.state.currentSessionSujetNumero ? `Sujet ${this.state.currentSessionSujetNumero} terminé !` : 'Session terminée !'}
+          </div>
           <div class="header-sub">${session.titre}</div>
         </header>
 
         <div class="content mt-overlap">
 
-          <div class="session-results-card">
-            <div class="session-results-emoji">${emoji}</div>
-            <div class="session-results-msg">${msg}</div>
-            <div class="session-results-score">${score} / ${total}</div>
+          <!-- BLOC SCORE PRINCIPAL -->
+          <div class="session-results-card" style="background:linear-gradient(135deg, white, #fafaf9); border:2px solid ${color}40">
+            <div class="session-results-emoji" style="font-size:4rem">${emoji}</div>
+            <div class="session-results-msg" style="color:${color}; font-weight:700">${msg}</div>
+            <div class="session-results-score" style="color:${color}">${score} / ${total}</div>
             <div class="session-results-pct">${pct}%</div>
           </div>
 
-          <div style="display:flex; gap:0.7rem; margin-top:1.5rem">
-            <button class="btn-secondary" style="flex:1" onclick="App.restartSession()">🔄 Refaire</button>
+          <!-- V41 : BLOC STATS DÉTAILLÉES -->
+          <div style="background:white; border:1px solid var(--line); border-radius:14px; padding:1rem; margin-top:1rem">
+            <div style="font-weight:700; font-size:0.95rem; margin-bottom:0.8rem; color:var(--ink)">📊 Statistiques de cette session</div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.7rem">
+              <div style="background:#f0fdf4; border-radius:10px; padding:0.7rem; text-align:center">
+                <div style="font-size:1.5rem; font-weight:800; color:#16a34a">${score}</div>
+                <div style="font-size:0.75rem; color:#15803d; font-weight:600">✅ Bonnes réponses</div>
+              </div>
+              <div style="background:#fef2f2; border-radius:10px; padding:0.7rem; text-align:center">
+                <div style="font-size:1.5rem; font-weight:800; color:#dc2626">${wrong}</div>
+                <div style="font-size:0.75rem; color:#991b1b; font-weight:600">❌ À revoir</div>
+              </div>
+              <div style="background:#dbeafe; border-radius:10px; padding:0.7rem; text-align:center">
+                <div style="font-size:1.1rem; font-weight:800; color:#1e40af; font-family:monospace">${elapsedStr}</div>
+                <div style="font-size:0.75rem; color:#1e3a8a; font-weight:600">⏱️ Temps total</div>
+              </div>
+              <div style="background:#fef9c3; border-radius:10px; padding:0.7rem; text-align:center">
+                <div style="font-size:1.1rem; font-weight:800; color:#854d0e">${wasTimedMode ? '⏱️ Chrono' : '🧘 Libre'}</div>
+                <div style="font-size:0.75rem; color:#713f12; font-weight:600">📌 Mode</div>
+              </div>
+            </div>
+
+            <!-- Bonus : moyenne par question -->
+            ${total > 0 && elapsedSec > 0 ? `
+              <div style="margin-top:0.8rem; padding-top:0.8rem; border-top:1px dashed var(--line); text-align:center; font-size:0.82rem; color:var(--ink-soft)">
+                ⏱️ ~<strong>${Math.round(elapsedSec / total)} secondes</strong> par question en moyenne
+              </div>
+            ` : ''}
+          </div>
+
+          <!-- V45 : Info session abrégée (mode libre = 25 sur N) -->
+          ${wasAbridged && totalAvailable > total ? `
+            <div style="background:linear-gradient(135deg, #ecfeff, #cffafe); border:1.5px solid #0891b2; border-radius:12px; padding:0.85rem 1rem; margin-top:1rem">
+              <div style="display:flex; gap:0.6rem; align-items:flex-start">
+                <div style="font-size:1.4rem">💡</div>
+                <div style="flex:1; font-size:0.85rem; color:#155e75; line-height:1.5">
+                  <strong>Cette session contient ${totalAvailable} questions au total.</strong><br>
+                  Tu as fait <strong>${total} questions tirées au hasard</strong>. <strong>Refais la session</strong> pour découvrir les autres questions et améliorer ta préparation.
+                </div>
+              </div>
+            </div>
+          ` : ''}
+
+          <!-- V42 : Bouton "Voir la correction détaillée" -->
+          <button onclick="App.showSessionCorrection()" style="margin-top:1rem; width:100%; background:linear-gradient(135deg, #fef3c7, #fde68a); color:#78350f; border:2px solid #f59e0b; padding:0.9rem; border-radius:12px; font-weight:800; font-size:0.95rem; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:0.5rem">
+            🔍 Voir la correction détaillée
+          </button>
+
+          <!-- Actions -->
+          <div style="display:flex; gap:0.7rem; margin-top:0.8rem">
+            <button class="btn-secondary" style="flex:1" onclick="App.navigate('annales-session')">← Retour aux sujets</button>
             <button class="btn-primary" style="flex:1" onclick="App.navigate('annales')">📚 Autres sessions</button>
           </div>
 
         </div>
       </div>
     `;
+  },
+
+  // V42 : Afficher la correction détaillée (revue de toutes les questions)
+  showSessionCorrection() {
+    this.state.currentScreen = 'session-correction';
+    this.state.correctionFilterMode = 'all';  // 'all', 'wrong', 'right'
+    this.render();
+  },
+
+  // V42 : Rendu de la page de correction détaillée
+  renderSessionCorrection() {
+    const session = window.SessionsHelper.getSession(this.state.currentSessionId);
+    if (!session) {
+      this.navigate('annales');
+      return '';
+    }
+
+    // V47 : Afficher UNIQUEMENT les questions du sujet courant (pas toute la session)
+    // Sauf si la session entière a été faite d'un coup (mode chronométré ou session < 30 Q)
+    const questions = this.state.currentSessionQuestionsActive && this.state.currentSessionQuestionsActive.length > 0
+      ? this.state.currentSessionQuestionsActive
+      : (session.questions || []);
+    const filterMode = this.state.correctionFilterMode || 'all';
+
+    // Calculer le statut de chaque question
+    const questionsWithStatus = questions.map((q, i) => {
+      const userAnswer = this.state.currentSessionAnswers[i];
+      let status = 'unanswered'; // 'correct', 'wrong', 'unanswered'
+
+      if (userAnswer === undefined && this.state.currentSessionAnswers[i + '_validated'] !== true) {
+        status = 'unanswered';
+      } else if (q.type === 'open') {
+        status = userAnswer === 'seen' ? 'seen' : 'unanswered';
+      } else if (q.type === 'multi') {
+        if (this.state.currentSessionAnswers[i + '_validated'] === true) {
+          const expected = Array.isArray(q.r) ? [...q.r].sort() : [];
+          const got = Array.isArray(userAnswer) ? [...userAnswer].sort() : [];
+          status = (expected.length === got.length && expected.every((v, idx) => v === got[idx])) ? 'correct' : 'wrong';
+        } else {
+          status = 'unanswered';
+        }
+      } else {
+        status = userAnswer === q.r ? 'correct' : 'wrong';
+      }
+
+      return { q, i, status, userAnswer };
+    });
+
+    // Filtrer selon le mode
+    let filtered = questionsWithStatus;
+    if (filterMode === 'wrong') filtered = filtered.filter(x => x.status === 'wrong');
+    else if (filterMode === 'right') filtered = filtered.filter(x => x.status === 'correct');
+
+    const nbCorrect = questionsWithStatus.filter(x => x.status === 'correct').length;
+    const nbWrong = questionsWithStatus.filter(x => x.status === 'wrong').length;
+    const nbUnanswered = questionsWithStatus.filter(x => x.status === 'unanswered' || x.status === 'seen').length;
+
+    return `
+      <div class="page">
+        <header class="header">
+          <div class="header-bar">
+            <button class="header-back" onclick="App.backToResults()">←</button>
+            <div class="header-title-row">Correction détaillée</div>
+            <div class="header-spacer"></div>
+          </div>
+          <div class="header-sub">${session.titre}</div>
+        </header>
+
+        <div class="content mt-overlap">
+
+          <!-- Filtres -->
+          <div style="display:flex; gap:0.5rem; margin-bottom:1rem; flex-wrap:wrap">
+            <button onclick="App.setCorrectionFilter('all')" style="flex:1; padding:0.6rem; border-radius:10px; font-weight:700; font-size:0.82rem; cursor:pointer; ${filterMode === 'all' ? 'background:var(--green-bf); color:white; border:none' : 'background:white; color:var(--ink); border:1.5px solid var(--line)'}">
+              Tout (${questionsWithStatus.length})
+            </button>
+            <button onclick="App.setCorrectionFilter('wrong')" style="flex:1; padding:0.6rem; border-radius:10px; font-weight:700; font-size:0.82rem; cursor:pointer; ${filterMode === 'wrong' ? 'background:#dc2626; color:white; border:none' : 'background:white; color:#991b1b; border:1.5px solid #fecaca'}">
+              ❌ Ratées (${nbWrong})
+            </button>
+            <button onclick="App.setCorrectionFilter('right')" style="flex:1; padding:0.6rem; border-radius:10px; font-weight:700; font-size:0.82rem; cursor:pointer; ${filterMode === 'right' ? 'background:#16a34a; color:white; border:none' : 'background:white; color:#15803d; border:1.5px solid #86efac'}">
+              ✅ Bonnes (${nbCorrect})
+            </button>
+          </div>
+
+          <!-- Liste des questions -->
+          ${filtered.length === 0 ? `
+            <div style="background:white; border:1.5px dashed var(--line); border-radius:12px; padding:2rem 1rem; text-align:center">
+              <div style="font-size:3rem; margin-bottom:0.5rem">${filterMode === 'wrong' ? '🎉' : '📚'}</div>
+              <div style="font-weight:700; color:var(--ink)">${filterMode === 'wrong' ? 'Aucune erreur dans ce filtre !' : 'Aucune question dans ce filtre'}</div>
+            </div>
+          ` : filtered.map(({ q, i, status, userAnswer }) => this.renderCorrectionCard(q, i, status, userAnswer)).join('')}
+
+          <div style="margin-top:1.5rem">
+            <button class="btn-primary" style="width:100%" onclick="App.backToResults()">← Retour aux résultats</button>
+          </div>
+
+        </div>
+      </div>
+    `;
+  },
+
+  renderCorrectionCard(q, idx, status, userAnswer) {
+    const letters = ['A', 'B', 'C', 'D'];
+    let statusBadge = '';
+    let borderColor = 'var(--line)';
+    let bgColor = 'white';
+
+    if (status === 'correct') {
+      statusBadge = '<span style="background:#dcfce7; color:#166534; padding:0.2rem 0.6rem; border-radius:999px; font-size:0.72rem; font-weight:800">✅ BONNE</span>';
+      borderColor = '#86efac';
+      bgColor = '#f0fdf4';
+    } else if (status === 'wrong') {
+      statusBadge = '<span style="background:#fee2e2; color:#991b1b; padding:0.2rem 0.6rem; border-radius:999px; font-size:0.72rem; font-weight:800">❌ RATÉE</span>';
+      borderColor = '#fecaca';
+      bgColor = '#fef2f2';
+    } else {
+      statusBadge = '<span style="background:#f3f4f6; color:#374151; padding:0.2rem 0.6rem; border-radius:999px; font-size:0.72rem; font-weight:800">⊘ NON RÉPONDUE</span>';
+    }
+
+    return `
+      <div style="background:${bgColor}; border:1.5px solid ${borderColor}; border-radius:12px; padding:1rem; margin-bottom:0.8rem">
+
+        <!-- En-tête -->
+        <div style="display:flex; gap:0.6rem; align-items:flex-start; margin-bottom:0.7rem">
+          <div style="background:var(--green-bf); color:white; font-weight:800; min-width:30px; height:30px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:0.85rem; flex-shrink:0">${idx + 1}</div>
+          <div style="flex:1; min-width:0">
+            <div style="font-weight:700; font-size:0.92rem; color:var(--ink); line-height:1.5; margin-bottom:0.3rem">${q.q}</div>
+            ${statusBadge}
+          </div>
+        </div>
+
+        <!-- Choix (si QCM) -->
+        ${q.choices && q.choices.length > 0 ? `
+          <div style="display:flex; flex-direction:column; gap:0.35rem; margin-bottom:0.7rem">
+            ${q.choices.map((c, i) => {
+              const isCorrect = Array.isArray(q.r) ? q.r.includes(i) : q.r === i;
+              const isUserChoice = Array.isArray(userAnswer) ? userAnswer.includes(i) : userAnswer === i;
+
+              let cls = '';
+              if (isCorrect) {
+                cls = 'background:#dcfce7; border:1.5px solid #16a34a; color:#15803d; font-weight:700';
+              } else if (isUserChoice) {
+                cls = 'background:#fee2e2; border:1.5px solid #dc2626; color:#991b1b; font-weight:700';
+              } else {
+                cls = 'background:white; border:1px solid var(--line); color:var(--ink-soft)';
+              }
+
+              return `
+                <div style="${cls}; padding:0.5rem 0.7rem; border-radius:8px; display:flex; gap:0.5rem; align-items:flex-start; font-size:0.85rem">
+                  <span style="font-weight:800; min-width:18px">${letters[i]}</span>
+                  <span style="flex:1">${c}</span>
+                  ${isCorrect ? '<span>✓</span>' : ''}
+                  ${isUserChoice && !isCorrect ? '<span>✗ Ton choix</span>' : ''}
+                </div>
+              `;
+            }).join('')}
+          </div>
+        ` : ''}
+
+        <!-- Réponse pour les questions ouvertes -->
+        ${q.type === 'open' && q.r ? `
+          <div style="background:#dcfce7; border:1.5px solid #86efac; border-radius:8px; padding:0.6rem 0.8rem; margin-bottom:0.7rem">
+            <div style="font-size:0.72rem; font-weight:800; color:#15803d; margin-bottom:0.3rem">✅ RÉPONSE</div>
+            <div style="font-size:0.88rem; color:#166534; line-height:1.5">${(q.r || '').replace(/\n/g, '<br>')}</div>
+          </div>
+        ` : ''}
+
+        <!-- Explication -->
+        ${q.nb || q.x ? `
+          <div style="background:#fef3c7; border-left:3px solid #d97706; border-radius:8px; padding:0.6rem 0.8rem">
+            <div style="font-size:0.72rem; font-weight:800; color:#92400e; margin-bottom:0.3rem">💡 EXPLICATION</div>
+            <div style="font-size:0.85rem; color:#78350f; line-height:1.5">${q.nb || q.x}</div>
+          </div>
+        ` : ''}
+
+      </div>
+    `;
+  },
+
+  setCorrectionFilter(mode) {
+    this.state.correctionFilterMode = mode;
+    this.render();
+  },
+
+  backToResults() {
+    this.state.currentScreen = 'session-questions';
+    // Le rendu va automatiquement détecter que idx >= total et afficher les résultats
+    this.render();
   },
 
   restartSession() {
@@ -4796,9 +5612,10 @@ const App = {
             <div class="annales-card-icon">📚</div>
             <div class="annales-card-content">
               <div class="annales-card-title">Accompagnement <span>Final</span></div>
-              <div class="annales-card-desc">Sujets des concours déjà tombés avec corrections détaillées</div>
+              <div class="annales-card-desc">Sessions Premium avec toutes matières et corrections détaillées</div>
               <div class="annales-card-stats">
-                <span class="annales-stat">${window.AnnalesHelper ? window.AnnalesHelper.countTotalSujets() : 0} sujets</span>
+                <span class="annales-stat">${window.SessionsHelper ? window.SessionsHelper.getAllSessions().length : 0} sessions</span>
+                <span class="annales-stat">🎯 ${window.SessionsHelper ? window.SessionsHelper.countTotalQuestions() : 0} questions</span>
                 <span class="annales-stat">⭐ Premium</span>
               </div>
             </div>
@@ -5397,7 +6214,10 @@ const App = {
       nom: o.name,
       city: o.city,
       targetConcours: o.targetConcours,
-      notificationsEnabled: notifsOK
+      educationLevel: o.educationLevel || o.filterNiveau || '',
+      phoneNumber: o.phoneNumber || this.state.user.phoneNumber || '',
+      notificationsEnabled: notifsOK,
+      onboardingCompleted: true  // Marqueur explicite : onboarding terminé
     };
     this.save();
 
@@ -5762,6 +6582,9 @@ const App = {
     const prochainTrain = this.SujetsManager.getProchainNumero(matId, 'train');
     const prochainExam = this.SujetsManager.getProchainNumero(matId, 'exam');
 
+    // V49 : vider le cache des sujets à refaire (pour ne pas accumuler à chaque rendu)
+    this._sujetRefaireCache = [];
+
     // Vérifier si un examen est en pause sur cette matière
     const pendingExam = this.SujetsManager.loadPendingExam();
     const hasPending = pendingExam && pendingExam.matiereId === matId;
@@ -5851,6 +6674,12 @@ const App = {
     const date = new Date(sujet.date).toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric' });
     const scoreClass = pct >= 70 ? 'good' : pct >= 50 ? 'mid' : 'low';
 
+    // V49 FIX : Stocker le sujet dans un cache et passer juste un index
+    // (sinon les apostrophes dans les questions cassent l'onclick HTML)
+    if (!this._sujetRefaireCache) this._sujetRefaireCache = [];
+    const cacheIdx = this._sujetRefaireCache.length;
+    this._sujetRefaireCache.push({ numero: sujet.numero, questions: sujet.questions, mode });
+
     return `
       <div class="sujet-history-card">
         <div class="sujet-history-num">N°${sujet.numero}</div>
@@ -5862,15 +6691,25 @@ const App = {
           <div class="sujet-history-score-pct">${pct}%</div>
           <div class="sujet-history-score-frac">${sujet.score}/${sujet.total}</div>
         </div>
-        <button class="sujet-history-refaire" onclick='App.refaireSujet(${JSON.stringify({numero: sujet.numero, questions: sujet.questions, mode}).replace(/"/g, "&quot;")})'>🔁</button>
+        <button class="sujet-history-refaire" onclick="App.refaireSujet(${cacheIdx})" title="Refaire ce sujet">🔁</button>
       </div>
     `;
   },
 
-  // Refaire un sujet déjà fait avec les mêmes questions
-  refaireSujet(data) {
-    if (!data || !data.questions) return;
-    this.startQCM(data.mode, { numero: data.numero, questions: data.questions });
+  // V49 FIX : Refaire un sujet — lit depuis le cache pour éviter les bugs d'échappement HTML
+  refaireSujet(cacheIdx) {
+    if (typeof cacheIdx === 'number') {
+      // Nouveau format (V49) : index dans le cache
+      const data = this._sujetRefaireCache && this._sujetRefaireCache[cacheIdx];
+      if (!data || !data.questions) {
+        this.toast('❌ Impossible de retrouver ce sujet', 'danger');
+        return;
+      }
+      this.startQCM(data.mode, { numero: data.numero, questions: data.questions });
+    } else if (cacheIdx && cacheIdx.questions) {
+      // Ancien format (compatibilité) : objet direct
+      this.startQCM(cacheIdx.mode, { numero: cacheIdx.numero, questions: cacheIdx.questions });
+    }
   },
 
   formatDuration(seconds) {
@@ -7680,6 +8519,173 @@ const App = {
   },
 
   // ===========================================
+  // V47 : GESTIONNAIRE DE SUJETS POUR LES SESSIONS D'ACCOMPAGNEMENT
+  // (Inspiré de SujetsManager, adapté au cas des Sessions Premium)
+  // ===========================================
+  SessionSujetsManager: {
+    // Configuration
+    QUESTIONS_PAR_SUJET_TRAIN: 25,
+    SEUIL_AJOUT_RESTE: 5,  // Si reste ≤ 5 après un sujet de 25, on l'ajoute au sujet précédent
+
+    // Clé localStorage
+    STORAGE_KEY: 'bara_session_sujets_historique',
+
+    // Récupérer l'historique pour une session donnée
+    getHistorique(sessionId) {
+      try {
+        const all = JSON.parse(localStorage.getItem(this.STORAGE_KEY) || '{}');
+        return all[sessionId] || [];
+      } catch(e) { return []; }
+    },
+
+    // Sauvegarder un sujet terminé
+    saveSujet(sessionId, sujetData) {
+      try {
+        const all = JSON.parse(localStorage.getItem(this.STORAGE_KEY) || '{}');
+        if (!all[sessionId]) all[sessionId] = [];
+        all[sessionId].push(sujetData);
+        if (all[sessionId].length > 30) all[sessionId] = all[sessionId].slice(-30);
+        localStorage.setItem(this.STORAGE_KEY, JSON.stringify(all));
+      } catch(e) { console.error('Erreur save session-sujet:', e); }
+    },
+
+    // Calcule le prochain numéro
+    getProchainNumero(sessionId) {
+      return this.getHistorique(sessionId).length + 1;
+    },
+
+    // Récupérer un sujet déjà fait par numéro (pour refaire)
+    getSujet(sessionId, numero) {
+      return this.getHistorique(sessionId).find(s => s.numero === numero);
+    },
+
+    // === LOGIQUE CRUCIALE : déterminer la TAILLE du prochain sujet ===
+    // Règle Issoufou V47 :
+    //   - Si reste >= 25 : nouveau sujet de 25
+    //   - Si 5 < reste < 25 : nouveau sujet de taille "reste" (mini-sujet)
+    //   - Si reste <= 5 : ajouter au sujet précédent (donc PAS de nouveau sujet possible)
+    //   - Si la session totale < 30 Q : 1 seul sujet de toutes les Q
+    calculerProchainSujetSize(sessionTotalQ, qDejaVues) {
+      const reste = sessionTotalQ - qDejaVues;
+      if (reste <= 0) return 0;  // Tout vu
+
+      // Cas spécial : si session totale < 30 et personne n'a encore rien fait → 1 seul sujet
+      if (qDejaVues === 0 && sessionTotalQ < (this.QUESTIONS_PAR_SUJET_TRAIN + this.SEUIL_AJOUT_RESTE)) {
+        return sessionTotalQ;
+      }
+
+      // Sinon : 25 si possible, ou tout le reste si < 25
+      return Math.min(this.QUESTIONS_PAR_SUJET_TRAIN, reste);
+    },
+
+    // Indique si on doit "ajouter les restes" au sujet courant (au lieu de créer un nouveau)
+    // Ex: si on génère un sujet de 25 et qu'il reste 3 Q non vues APRÈS → on ajoute les 3
+    shouldMergeRemains(sessionTotalQ, qDejaVuesAvant, tailleSujetCourant) {
+      const resteApres = sessionTotalQ - qDejaVuesAvant - tailleSujetCourant;
+      return resteApres > 0 && resteApres <= this.SEUIL_AJOUT_RESTE;
+    },
+
+    // Calculer quelles questions tirer pour le prochain sujet
+    // Anti-doublon : exclut les indices déjà tirés dans les sujets précédents
+    genererQuestionsProchainSujet(session) {
+      const allQ = session.questions || [];
+      if (allQ.length === 0) return { indices: [], questions: [] };
+
+      const historique = this.getHistorique(session.id);
+
+      // Collecter tous les indices déjà tirés
+      const dejaTires = new Set();
+      historique.forEach(sujet => {
+        if (Array.isArray(sujet.indicesQuestions)) {
+          sujet.indicesQuestions.forEach(i => dejaTires.add(i));
+        }
+      });
+
+      const qDejaVues = dejaTires.size;
+
+      // Calculer taille théorique
+      let taille = this.calculerProchainSujetSize(allQ.length, qDejaVues);
+      if (taille === 0) return { indices: [], questions: [] };
+
+      // Vérifier si on doit fusionner les restes (cas : tirage 25 alors qu'il reste 28 → 25+3)
+      if (this.shouldMergeRemains(allQ.length, qDejaVues, taille)) {
+        taille = allQ.length - qDejaVues;  // Prend tout le reste
+      }
+
+      // Indices disponibles (non encore tirés)
+      const disponibles = [];
+      for (let i = 0; i < allQ.length; i++) {
+        if (!dejaTires.has(i)) disponibles.push(i);
+      }
+
+      // Mélanger les indices disponibles
+      for (let i = disponibles.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [disponibles[i], disponibles[j]] = [disponibles[j], disponibles[i]];
+      }
+
+      // Prendre les N premiers
+      const indicesChoisis = disponibles.slice(0, taille);
+      const questions = indicesChoisis.map(i => allQ[i]);
+
+      return { indices: indicesChoisis, questions: questions };
+    },
+
+    // Indique si toutes les questions de la session ont été vues (= session terminée totalement)
+    isSessionTotalementTerminee(session) {
+      const allQ = session.questions || [];
+      const historique = this.getHistorique(session.id);
+      const dejaTires = new Set();
+      historique.forEach(sujet => {
+        if (Array.isArray(sujet.indicesQuestions)) {
+          sujet.indicesQuestions.forEach(i => dejaTires.add(i));
+        }
+      });
+      return dejaTires.size >= allQ.length;
+    },
+
+    // Reset l'historique pour une session (pour le "Tout recommencer")
+    resetSession(sessionId) {
+      try {
+        const all = JSON.parse(localStorage.getItem(this.STORAGE_KEY) || '{}');
+        delete all[sessionId];
+        localStorage.setItem(this.STORAGE_KEY, JSON.stringify(all));
+      } catch(e) {}
+    },
+
+    // === SAUVEGARDE EN COURS (sujet pas encore terminé) ===
+    SAVE_PENDING_KEY: 'bara_session_sujet_pending',
+
+    savePendingSujet(data) {
+      try {
+        localStorage.setItem(this.SAVE_PENDING_KEY, JSON.stringify({
+          ...data,
+          savedAt: Date.now()
+        }));
+      } catch(e) {}
+    },
+
+    loadPendingSujet(sessionId) {
+      try {
+        const saved = localStorage.getItem(this.SAVE_PENDING_KEY);
+        if (!saved) return null;
+        const data = JSON.parse(saved);
+        if (data.sessionId !== sessionId) return null;
+        // Plus vieux que 7 jours = ignoré
+        if (Date.now() - data.savedAt > 7 * 24 * 60 * 60 * 1000) {
+          this.clearPendingSujet();
+          return null;
+        }
+        return data;
+      } catch(e) { return null; }
+    },
+
+    clearPendingSujet() {
+      localStorage.removeItem(this.SAVE_PENDING_KEY);
+    }
+  },
+
+  // ===========================================
   // GESTIONNAIRE FREEMIUM (limite gratuite quotidienne)
   // ===========================================
   FreemiumManager: {
@@ -7864,23 +8870,61 @@ const App = {
     });
   },
 
-  // Confirmation de sortie de l'app
+  // Confirmation de sortie de l'app (V35 : dialog personnalisé robuste)
   confirmExit() {
     // Remettre l'état pour empêcher la sortie immédiate
     history.pushState({ page: 'app' }, '', '');
 
-    if (confirm('🚪 Quitter Bara Concours ?\n\nTu peux toujours revenir t\'entraîner plus tard.\n\nOK = Quitter\nAnnuler = Rester')) {
-      // L'utilisateur veut vraiment quitter
-      if (window.navigator && window.navigator.app && window.navigator.app.exitApp) {
-        // Sur certains wrappers Android (Cordova, etc.)
-        window.navigator.app.exitApp();
-      } else {
-        // Sur navigateur ou TWA Android → on essaye history.back puis window.close
-        history.back();
-        setTimeout(() => { try { window.close(); } catch(e){} }, 100);
-      }
+    // Éviter d'afficher 2 dialogs en même temps
+    if (this.state.showExitConfirm) return;
+    this.state.showExitConfirm = true;
+    this.render();
+  },
+
+  // V35 : Action quand l'utilisateur confirme qu'il veut quitter
+  doExit() {
+    this.state.showExitConfirm = false;
+    // Sauvegarder l'état avant de quitter
+    this.save();
+
+    // Tenter de fermer l'app
+    if (window.navigator && window.navigator.app && window.navigator.app.exitApp) {
+      window.navigator.app.exitApp();
+    } else {
+      // Sur navigateur ou TWA Android : history.back puis window.close
+      history.back();
+      setTimeout(() => { try { window.close(); } catch(e){} }, 100);
     }
-    // Sinon : on ne fait rien, l'utilisateur reste dans l'app
+  },
+
+  // V35 : Action quand l'utilisateur annule la sortie
+  cancelExit() {
+    this.state.showExitConfirm = false;
+    this.render();
+  },
+
+  // V35 : Rendu du dialog de confirmation de sortie (au-dessus de tout)
+  renderExitDialog() {
+    if (!this.state.showExitConfirm) return '';
+    return `
+      <div style="position:fixed; inset:0; background:rgba(0,0,0,0.6); display:flex; align-items:center; justify-content:center; z-index:9999; padding:1.5rem; animation:fadeIn 0.2s">
+        <div style="background:white; border-radius:20px; padding:1.8rem 1.5rem; max-width:340px; width:100%; box-shadow:0 20px 60px rgba(0,0,0,0.3); text-align:center">
+          <div style="font-size:3.5rem; margin-bottom:0.5rem">🚪</div>
+          <h3 style="font-family:'Instrument Serif',serif; font-size:1.5rem; color:var(--green-bf); margin-bottom:0.6rem">Quitter Bara Concours ?</h3>
+          <p style="color:var(--ink-soft); font-size:0.92rem; line-height:1.5; margin-bottom:1.5rem">
+            Tu peux toujours revenir t'entraîner plus tard. Tes données restent sauvegardées.
+          </p>
+          <div style="display:flex; flex-direction:column; gap:0.6rem">
+            <button onclick="App.cancelExit()" style="background:var(--green-bf); color:white; border:none; padding:0.9rem; border-radius:12px; font-weight:700; font-size:0.95rem; cursor:pointer; width:100%">
+              👍 Rester dans l'app
+            </button>
+            <button onclick="App.doExit()" style="background:transparent; color:var(--ink-mute); border:1.5px solid var(--line); padding:0.85rem; border-radius:12px; font-weight:600; font-size:0.9rem; cursor:pointer; width:100%">
+              Quitter
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
   },
 
   // Navigation arrière intelligente selon l'écran

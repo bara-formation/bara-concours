@@ -3965,15 +3965,25 @@ E: Le Burkina Faso compte 13 régions administratives depuis 2001.`;
       </div>
 
       <div class="card" style="margin-bottom:1rem; background:linear-gradient(135deg, #fffbeb, white); border-left:4px solid var(--gold-bf)">
-        <div style="display:flex; gap:0.8rem; align-items:center">
+        <div style="display:flex; gap:0.8rem; align-items:center; flex-wrap:wrap">
           <div style="font-size:2.2rem">📚</div>
-          <div style="flex:1">
+          <div style="flex:1; min-width:180px">
             <div style="font-weight:700; font-size:1rem; color:var(--admin-text)">Total : ${sessions.length} sessions • ${totalQ} questions</div>
             <div style="font-size:0.82rem; color:var(--admin-text-soft); margin-top:0.2rem">Toutes les sessions sont réservées aux utilisateurs Premium ⭐</div>
           </div>
-          <button onclick="Admin.startNewSession()" style="background:linear-gradient(135deg, var(--green-bf), var(--green-bf-dark)); color:white; border:none; padding:0.7rem 1.2rem; border-radius:8px; font-weight:700; font-size:0.88rem; cursor:pointer; box-shadow:0 4px 12px rgba(15, 81, 50, 0.25)">
-            ➕ Nouvelle session
-          </button>
+          <div style="display:flex; gap:0.5rem; flex-wrap:wrap">
+            ${sessions.length > 0 ? `
+              <button onclick="Admin.exportAllSessions()" style="background:white; color:var(--green-bf-dark); border:1.5px solid var(--green-bf); padding:0.7rem 1rem; border-radius:8px; font-weight:700; font-size:0.85rem; cursor:pointer" title="Télécharger toutes les sessions en JSON">
+                📤 Exporter tout
+              </button>
+              <button onclick="Admin.triggerSessionsImport()" style="background:white; color:#2563eb; border:1.5px solid #2563eb; padding:0.7rem 1rem; border-radius:8px; font-weight:700; font-size:0.85rem; cursor:pointer" title="Restaurer depuis un fichier JSON">
+                📥 Importer
+              </button>
+            ` : ''}
+            <button onclick="Admin.startNewSession()" style="background:linear-gradient(135deg, var(--green-bf), var(--green-bf-dark)); color:white; border:none; padding:0.7rem 1.2rem; border-radius:8px; font-weight:700; font-size:0.88rem; cursor:pointer; box-shadow:0 4px 12px rgba(15, 81, 50, 0.25)">
+              ➕ Nouvelle session
+            </button>
+          </div>
         </div>
       </div>
 
@@ -4022,6 +4032,7 @@ E: Le Burkina Faso compte 13 régions administratives depuis 2001.`;
           </div>
         </div>
         <div style="display:flex; gap:0.3rem">
+          <button onclick="Admin.exportSingleSession('${session.id}')" style="background:white; border:1.5px solid var(--admin-border); border-radius:8px; width:36px; height:36px; cursor:pointer; font-size:0.95rem" title="Exporter cette session en JSON">📤</button>
           <button onclick="Admin.editSession('${session.id}')" style="background:white; border:1.5px solid var(--admin-border); border-radius:8px; width:36px; height:36px; cursor:pointer; font-size:0.95rem" title="Éditer">✏️</button>
           ${!isDemo ? `<button onclick="Admin.deleteSessionAdmin('${session.id}')" style="background:white; border:1.5px solid #fecaca; border-radius:8px; width:36px; height:36px; cursor:pointer; font-size:0.95rem; color:#dc2626" title="Supprimer">🗑️</button>` : ''}
         </div>
@@ -4131,18 +4142,21 @@ E: Le Burkina Faso compte 13 régions administratives depuis 2001.`;
 
             <div style="background:#fef9c3; border:1px dashed #ca8a04; border-radius:8px; padding:0.7rem 0.9rem; margin-bottom:0.8rem">
               <div style="font-size:0.8rem; line-height:1.5; color:#713f12">
-                <strong>💡 Format attendu :</strong> chaque question commence par "Q:" (ou "-"), choix par "A)", "B)", etc.<br>
-                Le système détectera automatiquement le type :<br>
-                • <strong>Question ouverte</strong> : pas de choix A/B/C/D, juste "R: réponse"<br>
-                • <strong>QCM 3/4 choix</strong> : "R: B" (une seule lettre)<br>
-                • <strong>Multi-réponses</strong> : "R: A, C" (plusieurs lettres séparées par virgules)
+                <strong>💡 Format attendu :</strong> chaque question commence par "Q:" ou "Q1.", "Q2.", choix par "A)", "B)", etc.<br>
+                Champs reconnus :<br>
+                • <strong>Q:</strong> ou <strong>Q1.</strong> = Question<br>
+                • <strong>A)</strong> <strong>B)</strong> <strong>C)</strong> <strong>D)</strong> = Choix de réponse<br>
+                • <strong>R:</strong> = Bonne réponse (lettre A, B, C ou D)<br>
+                • <strong>E:</strong> = Explication (format Bara) ou <strong>NB:</strong> (ancien format)<br>
+                <br>
+                ⚙️ <strong>V37</strong> : par défaut, chaque QCM importé a <strong>UNE seule réponse</strong>. Tu peux convertir en multi-réponses manuellement en cliquant ✏️ sur une question.
               </div>
             </div>
 
-            <!-- Tabs : Upload Word OU Coller texte -->
+            <!-- Tabs : Upload Fichier OU Coller texte -->
             <div style="display:flex; gap:0.5rem; margin-bottom:0.8rem">
               <button onclick="Admin.setImportMode('word')" style="flex:1; padding:0.6rem; border-radius:8px; font-weight:700; font-size:0.85rem; cursor:pointer; ${(this.state.importMode || 'word') === 'word' ? 'background:#2563eb; color:white; border:none' : 'background:white; color:var(--admin-text); border:1.5px solid var(--admin-border)'}">
-                📄 Upload Word (.docx)
+                📄 Upload fichier (.docx ou .txt)
               </button>
               <button onclick="Admin.setImportMode('text')" style="flex:1; padding:0.6rem; border-radius:8px; font-weight:700; font-size:0.85rem; cursor:pointer; ${this.state.importMode === 'text' ? 'background:#2563eb; color:white; border:none' : 'background:white; color:var(--admin-text); border:1.5px solid var(--admin-border)'}">
                 ✍️ Coller texte
@@ -4152,9 +4166,9 @@ E: Le Burkina Faso compte 13 régions administratives depuis 2001.`;
             ${(this.state.importMode || 'word') === 'word' ? `
               <div style="border:2px dashed var(--admin-border); border-radius:10px; padding:1.5rem; text-align:center; background:white">
                 <div style="font-size:3rem; opacity:0.4; margin-bottom:0.5rem">📄</div>
-                <div style="font-weight:700; margin-bottom:0.3rem; font-size:0.95rem">Choisir un fichier Word</div>
-                <div style="color:var(--admin-text-soft); font-size:0.8rem; margin-bottom:1rem">Format accepté : .docx</div>
-                <input type="file" id="word-import-input" accept=".docx" onchange="Admin.handleWordFile(event)" style="display:none">
+                <div style="font-weight:700; margin-bottom:0.3rem; font-size:0.95rem">Choisir un fichier</div>
+                <div style="color:var(--admin-text-soft); font-size:0.8rem; margin-bottom:1rem">Formats acceptés : <strong>.docx</strong> ou <strong>.txt</strong></div>
+                <input type="file" id="word-import-input" accept=".docx,.txt" onchange="Admin.handleWordFile(event)" style="display:none">
                 <button onclick="document.getElementById('word-import-input').click()" style="background:#2563eb; color:white; border:none; padding:0.7rem 1.3rem; border-radius:8px; font-weight:700; cursor:pointer">
                   📤 Choisir le fichier
                 </button>
@@ -4220,6 +4234,9 @@ E: Le Burkina Faso compte 13 régions administratives depuis 2001.`;
           </div>
         `}
       </div>
+
+      <!-- V37 : Modal d'édition de question (superposé) -->
+      ${this.state.editingQuestion ? this.renderQuestionEditor() : ''}
     `;
   },
 
@@ -4230,21 +4247,104 @@ E: Le Burkina Faso compte 13 régions administratives depuis 2001.`;
       'qcm4': '🔵 QCM 4 choix',
       'multi': '🟣 Multi-réponses'
     };
-    const qPreview = (q.q || '').substring(0, 100);
+
+    // V35 : on déplie / replie l'affichage détaillé
+    const isExpanded = this.state.expandedSessionQ === idx;
+
+    // Formater la bonne réponse selon le type
+    let reponseAffichee = '—';
+    if (q.type === 'open') {
+      reponseAffichee = q.r || '(non renseignée)';
+    } else if (Array.isArray(q.r)) {
+      // multi-réponses
+      reponseAffichee = q.r.map(i => String.fromCharCode(65 + i)).join(', ');
+    } else if (typeof q.r === 'number') {
+      reponseAffichee = String.fromCharCode(65 + q.r);
+    } else {
+      reponseAffichee = q.r || '(?)';
+    }
 
     return `
-      <div style="background:white; border:1px solid var(--admin-border); border-radius:8px; padding:0.7rem 0.9rem; display:flex; gap:0.7rem; align-items:center">
-        <div style="background:var(--cream); color:var(--green-bf-dark); font-weight:800; min-width:32px; height:32px; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:0.85rem">${idx + 1}</div>
-        <div style="flex:1; min-width:0">
-          <div style="font-size:0.82rem; font-weight:600; color:var(--admin-text); margin-bottom:0.2rem">${qPreview}${q.q && q.q.length > 100 ? '...' : ''}</div>
-          <div style="display:flex; gap:0.5rem; align-items:center; font-size:0.7rem; color:var(--admin-text-soft)">
-            <span style="background:#dbeafe; color:#1e40af; padding:0.1rem 0.45rem; border-radius:4px; font-weight:700">${typeLabels[q.type] || q.type}</span>
-            ${q.choices ? `<span>${q.choices.length} choix</span>` : ''}
+      <div style="background:white; border:1px solid var(--admin-border); border-radius:10px; overflow:hidden">
+
+        <!-- LIGNE COMPACTE (toujours visible) -->
+        <div style="padding:0.7rem 0.9rem; display:flex; gap:0.7rem; align-items:center; cursor:pointer" onclick="Admin.toggleSessionQuestion(${idx})">
+          <div style="background:var(--cream); color:var(--green-bf-dark); font-weight:800; min-width:32px; height:32px; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:0.85rem">${idx + 1}</div>
+          <div style="flex:1; min-width:0">
+            <div style="font-size:0.84rem; font-weight:600; color:var(--admin-text); margin-bottom:0.2rem; ${isExpanded ? '' : 'overflow:hidden; text-overflow:ellipsis; white-space:nowrap'}">${q.q || '(question vide)'}</div>
+            <div style="display:flex; gap:0.5rem; align-items:center; font-size:0.7rem; color:var(--admin-text-soft); flex-wrap:wrap">
+              <span style="background:#dbeafe; color:#1e40af; padding:0.1rem 0.45rem; border-radius:4px; font-weight:700">${typeLabels[q.type] || q.type}</span>
+              ${q.choices ? `<span>${q.choices.length} choix</span>` : ''}
+              <span style="background:#dcfce7; color:#166534; padding:0.1rem 0.45rem; border-radius:4px; font-weight:700">✓ ${reponseAffichee}</span>
+            </div>
           </div>
+          <div style="font-size:0.75rem; color:var(--admin-text-soft); transform:rotate(${isExpanded ? '180' : '0'}deg); transition:transform 0.2s">▼</div>
+          <button onclick="event.stopPropagation(); Admin.editSessionQuestion(${idx})" style="background:white; border:1.5px solid var(--admin-border); border-radius:6px; width:32px; height:32px; cursor:pointer" title="Modifier">✏️</button>
+          <button onclick="event.stopPropagation(); Admin.deleteQuestionFromSession(${idx})" style="background:white; border:1.5px solid #fecaca; color:#dc2626; border-radius:6px; width:32px; height:32px; cursor:pointer" title="Supprimer">🗑️</button>
         </div>
-        <button onclick="Admin.deleteQuestionFromSession(${idx})" style="background:white; border:1.5px solid #fecaca; color:#dc2626; border-radius:6px; width:32px; height:32px; cursor:pointer" title="Supprimer">🗑️</button>
+
+        <!-- DÉTAILS DÉPLIÉS -->
+        ${isExpanded ? `
+          <div style="border-top:1px solid var(--admin-border); padding:0.8rem 1rem; background:var(--cream)">
+
+            <!-- Choix (si QCM) -->
+            ${q.choices && q.choices.length > 0 ? `
+              <div style="margin-bottom:0.7rem">
+                <div style="font-size:0.72rem; font-weight:700; color:var(--admin-text-soft); margin-bottom:0.3rem">CHOIX :</div>
+                <div style="display:flex; flex-direction:column; gap:0.25rem">
+                  ${q.choices.map((c, i) => {
+                    const isCorrect = Array.isArray(q.r) ? q.r.includes(i) : q.r === i;
+                    return `
+                      <div style="display:flex; gap:0.4rem; align-items:flex-start; padding:0.35rem 0.55rem; background:${isCorrect ? '#dcfce7' : 'white'}; border:1px solid ${isCorrect ? '#86efac' : 'var(--admin-border)'}; border-radius:6px">
+                        <span style="font-weight:700; color:${isCorrect ? '#166534' : 'var(--admin-text-soft)'}; min-width:18px">${String.fromCharCode(65 + i)}</span>
+                        <span style="font-size:0.82rem; flex:1">${c}</span>
+                        ${isCorrect ? '<span style="color:#16a34a; font-weight:700">✓</span>' : ''}
+                      </div>
+                    `;
+                  }).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            <!-- Réponse pour les questions ouvertes -->
+            ${q.type === 'open' && q.r ? `
+              <div style="margin-bottom:0.7rem">
+                <div style="font-size:0.72rem; font-weight:700; color:var(--admin-text-soft); margin-bottom:0.3rem">RÉPONSE :</div>
+                <div style="padding:0.5rem 0.7rem; background:#dcfce7; border:1px solid #86efac; border-radius:6px; font-size:0.84rem; color:#166534; font-weight:600">${q.r}</div>
+              </div>
+            ` : ''}
+
+            <!-- Explication -->
+            ${q.x || q.explication || q.explanation || q.nb ? `
+              <div>
+                <div style="font-size:0.72rem; font-weight:700; color:var(--admin-text-soft); margin-bottom:0.3rem">💡 EXPLICATION :</div>
+                <div style="padding:0.5rem 0.7rem; background:#fef3c7; border-left:3px solid #d97706; border-radius:6px; font-size:0.82rem; color:#78350f; line-height:1.5">${q.x || q.explication || q.explanation || q.nb}</div>
+              </div>
+            ` : '<div style="font-size:0.75rem; color:var(--admin-text-soft); font-style:italic">Aucune explication</div>'}
+
+          </div>
+        ` : ''}
       </div>
     `;
+  },
+
+  // V35 : Déplier/replier une question dans l'admin
+  toggleSessionQuestion(idx) {
+    this.state.expandedSessionQ = this.state.expandedSessionQ === idx ? null : idx;
+    this.render();
+  },
+
+  // V35 : Modifier une question existante d'une session
+  editSessionQuestion(idx) {
+    const session = window.SessionsHelper.getSession(this.state.editingSessionId);
+    if (!session || !session.questions[idx]) return;
+
+    // Copier la question dans l'éditeur
+    this.state.editingQuestion = {
+      ...JSON.parse(JSON.stringify(session.questions[idx])),
+      _editingIndex: idx
+    };
+    this.render();
   },
 
   backToSessionsList() {
@@ -4319,8 +4419,8 @@ E: Le Burkina Faso compte 13 régions administratives depuis 2001.`;
         if (currentBlock.length > 0) currentBlock.push('');
         continue;
       }
-      // Nouvelle question : commence par "Q:" ou "- " (suivi d'un caractère)
-      const isNewQ = /^(Q\s*:|-\s+[A-Za-zÀ-ÿ0-9«"'])/.test(trimmed);
+      // V37 : Nouvelle question : commence par "Q:" OU "Q1." "Q2." (Bara Formation) OU "- "
+      const isNewQ = /^(Q\s*\d*\s*[:\.]|-\s+[A-Za-zÀ-ÿ0-9«"'])/.test(trimmed);
       if (isNewQ && currentBlock.length > 0) {
         // Vérifier que le bloc précédent contient une vraie question (a au moins R:)
         const blockText = currentBlock.join('\n');
@@ -4358,101 +4458,148 @@ E: Le Burkina Faso compte 13 régions administratives depuis 2001.`;
     if (lines.length === 0) return null;
 
     // Extraire la question (première ligne, retirer "Q:" ou "- " au début)
-    let questionText = lines[0].replace(/^Q\s*:\s*/i, '').replace(/^-\s+/, '').trim();
+    let questionText = lines[0].replace(/^Q\s*\d*\s*[:\.]\s*/i, '').replace(/^-\s+/, '').trim();
     if (!questionText) return null;
 
     // Détecter les choix (lignes commençant par A), B), C), D))
     const choices = [];
     const choiceLetters = [];
     let answerLine = '';
+    let explanationLine = '';  // V37 : explication (E:) séparée
     let nbLine = '';
-    let inNB = false;
+    let currentField = null; // 'answer', 'explanation', 'nb', null
 
     for (let i = 1; i < lines.length; i++) {
       const line = lines[i];
       const choiceMatch = line.match(/^([A-D])[\)\.]\s*(.+)/);
-      if (choiceMatch && !answerLine) {
+
+      // Ligne de choix (seulement si on n'a pas encore commencé la réponse)
+      if (choiceMatch && !answerLine && currentField === null) {
         choices.push(choiceMatch[2].trim());
         choiceLetters.push(choiceMatch[1]);
         continue;
       }
-      // Ligne de réponse
+
+      // Ligne de réponse "R:" ou "Réponse:"
       if (/^R\s*éponse\s*:|^R\s*:/i.test(line)) {
         answerLine = line.replace(/^R\s*éponse\s*:|^R\s*:/i, '').trim();
-        inNB = false;
+        currentField = 'answer';
         continue;
       }
-      // Ligne NB
+
+      // V37 : Ligne d'explication "E:" (format Bara Formation)
+      if (/^E\s*xplication\s*:|^E\s*:/i.test(line)) {
+        explanationLine = line.replace(/^E\s*xplication\s*:|^E\s*:/i, '').trim();
+        currentField = 'explanation';
+        continue;
+      }
+
+      // Ligne "NB:" (note bonus, autre format)
       if (/^NB\s*:/i.test(line)) {
         nbLine = line.replace(/^NB\s*:/i, '').trim();
-        inNB = true;
+        currentField = 'nb';
         continue;
       }
-      // Suite du NB (lignes suivantes)
-      if (inNB && !line.match(/^(Q|R|A|B|C|D)[\):\s]/i)) {
-        nbLine += ' ' + line;
-        continue;
-      }
-      // Suite de la réponse (ouverte, plusieurs lignes)
-      if (answerLine && !inNB && !line.match(/^(Q|A|B|C|D)[\):\s]/i)) {
-        // Ligne de liste (commence par - ou •)
-        if (/^[-•]\s+/.test(line)) {
-          answerLine += '\n' + line.replace(/^[-•]\s*/, '• ');
-        } else {
-          answerLine += ' ' + line;
+
+      // Suite des champs (lignes suivantes après R:, E:, NB:)
+      const isNewField = line.match(/^(Q|R|E|A|B|C|D|NB)[\)\:\.\s]/i);
+      if (!isNewField) {
+        if (currentField === 'answer') {
+          // Suite de la réponse
+          if (/^[-•]\s+/.test(line)) {
+            answerLine += '\n' + line.replace(/^[-•]\s*/, '• ');
+          } else {
+            answerLine += ' ' + line;
+          }
+        } else if (currentField === 'explanation') {
+          // Suite de l'explication
+          explanationLine += ' ' + line;
+        } else if (currentField === 'nb') {
+          // Suite du NB
+          nbLine += ' ' + line;
         }
       }
     }
 
-    // Nettoyer la réponse
+    // Nettoyer
     answerLine = answerLine.trim();
+    explanationLine = explanationLine.trim();
     nbLine = nbLine.trim();
 
-    // Déterminer le type
+    // Déterminer le type — V37 : par défaut UNE SEULE réponse pour les imports .txt
+    // L'admin pourra modifier manuellement en multi si besoin
     let type, r;
     if (choices.length === 0) {
       // Question ouverte
       type = 'open';
       r = answerLine;
     } else {
-      // Détecter si multi-réponses (virgules ou "et" dans la réponse)
-      // Extraire les lettres de réponse depuis answerLine
-      const letterMatches = answerLine.match(/\b([A-D])\b/g);
-      if (letterMatches && letterMatches.length > 1) {
-        // Multi-réponses
-        type = 'multi';
-        const uniqueLetters = [...new Set(letterMatches)];
-        r = uniqueLetters.map(L => choiceLetters.indexOf(L)).filter(i => i >= 0);
-      } else if (letterMatches && letterMatches.length === 1) {
-        // Une seule réponse
-        type = choices.length === 3 ? 'qcm3' : 'qcm4';
-        r = choiceLetters.indexOf(letterMatches[0]);
-        if (r < 0) r = 0;
+      // V37 FIX : extraire UNIQUEMENT la première lettre A-D au début de answerLine
+      // Ne PAS scanner toute la ligne (qui peut contenir des "B", "C", "D" dans le texte)
+      const firstLetterMatch = answerLine.match(/^\s*([A-D])\b/);
+      if (firstLetterMatch) {
+        const letterIdx = choiceLetters.indexOf(firstLetterMatch[1]);
+        r = letterIdx >= 0 ? letterIdx : 0;
       } else {
-        // Pas de lettre trouvée, défaut sur le premier
-        type = choices.length === 3 ? 'qcm3' : 'qcm4';
+        // Pas de lettre claire, défaut sur le premier choix
         r = 0;
       }
+      // Toujours qcm3 ou qcm4 par défaut (UNE seule réponse)
+      type = choices.length === 3 ? 'qcm3' : 'qcm4';
     }
 
     const result = { type, q: questionText };
     if (choices.length > 0) result.choices = choices;
     result.r = r;
-    if (nbLine) result.nb = nbLine;
+    // V37 : prioriser E: (explication), puis NB: en fallback
+    if (explanationLine) {
+      result.x = explanationLine;  // Format standard Bara
+    } else if (nbLine) {
+      result.x = nbLine;  // Fallback pour anciens lots
+    }
 
     return result;
   },
 
-  // ===== UPLOAD DE FICHIER WORD =====
+  // ===== UPLOAD DE FICHIER (Word .docx OU texte .txt) =====
+  // V35 : accepte aussi les fichiers .txt
   handleWordFile(event) {
     const file = event.target.files[0];
     if (!file) return;
 
-    if (!file.name.endsWith('.docx')) {
-      this.toast('❌ Fichier .docx requis', 'danger');
+    const isDocx = file.name.toLowerCase().endsWith('.docx');
+    const isTxt = file.name.toLowerCase().endsWith('.txt');
+
+    if (!isDocx && !isTxt) {
+      this.toast('❌ Format requis : .docx ou .txt', 'danger');
       return;
     }
 
+    // CAS 1 : Fichier .txt — lecture directe, pas besoin de mammoth
+    if (isTxt) {
+      this.toast('⏳ Lecture du fichier texte...');
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const text = e.target.result;
+          const questions = this.parseSessionQuestionsFromText(text);
+          if (questions.length === 0) {
+            this.toast('❌ Aucune question détectée dans ce fichier', 'danger');
+            return;
+          }
+          this.state.importPreview = questions;
+          this.toast(`✅ ${questions.length} questions extraites du fichier`);
+          this.render();
+        } catch (err) {
+          this.toast('❌ Erreur lecture .txt : ' + err.message, 'danger');
+        }
+      };
+      reader.onerror = () => this.toast('❌ Impossible de lire le fichier', 'danger');
+      reader.readAsText(file, 'UTF-8');
+      return;
+    }
+
+    // CAS 2 : Fichier .docx — utilise mammoth
     this.toast('⏳ Lecture du fichier Word...');
 
     // Charger mammoth.js dynamiquement
@@ -4521,12 +4668,436 @@ E: Le Burkina Faso compte 13 régions administratives depuis 2001.`;
       q: 'Nouvelle question à éditer',
       choices: ['Choix A', 'Choix B', 'Choix C', 'Choix D'],
       r: 0,
-      nb: 'Explication'
+      x: 'Explication'
     };
     session.questions = session.questions || [];
     session.questions.push(newQ);
     window.SessionsHelper.saveCustomSession(session);
-    this.toast('➕ Question ajoutée. Tu peux maintenant la modifier via Word ou le format texte.');
+    // Ouvrir directement l'éditeur sur la nouvelle question
+    this.editSessionQuestion(session.questions.length - 1);
+  },
+
+  // V37 : Rendu du formulaire d'édition complet d'une question (modal)
+  renderQuestionEditor() {
+    const q = this.state.editingQuestion;
+    if (!q) return '';
+
+    const idx = q._editingIndex;
+    const isMulti = q.type === 'multi';
+    const isOpen = q.type === 'open';
+    const choices = q.choices || ['', '', '', ''];
+
+    return `
+      <div style="position:fixed; inset:0; background:rgba(0,0,0,0.6); display:flex; align-items:center; justify-content:center; z-index:9999; padding:1rem; overflow-y:auto">
+        <div style="background:white; border-radius:16px; padding:1.5rem; max-width:600px; width:100%; max-height:90vh; overflow-y:auto">
+
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.2rem">
+            <h2 style="margin:0; font-family:'Instrument Serif',serif; font-size:1.4rem">✏️ Modifier la question</h2>
+            <button onclick="Admin.cancelQuestionEdit()" style="background:transparent; border:none; font-size:1.5rem; cursor:pointer; color:var(--admin-text-soft)">✕</button>
+          </div>
+
+          <!-- TYPE DE QUESTION -->
+          <div style="margin-bottom:1rem">
+            <label style="display:block; font-size:0.78rem; font-weight:700; color:var(--admin-text-soft); margin-bottom:0.4rem">TYPE DE QUESTION</label>
+            <div style="display:flex; gap:0.4rem; flex-wrap:wrap">
+              ${[
+                ['qcm4', '🔵 QCM (1 seule réponse)'],
+                ['multi', '🟣 Multi-réponses'],
+                ['open', '💭 Question ouverte']
+              ].map(([t, label]) => `
+                <button onclick="Admin.updateEditingQType('${t}')" style="padding:0.5rem 0.9rem; border-radius:8px; font-weight:700; font-size:0.8rem; cursor:pointer; ${q.type === t ? 'background:var(--green-bf); color:white; border:none' : 'background:white; color:var(--admin-text); border:1.5px solid var(--admin-border)'}">
+                  ${label}
+                </button>
+              `).join('')}
+            </div>
+            ${isMulti ? `
+              <div style="margin-top:0.5rem; padding:0.5rem 0.7rem; background:#f5f3ff; border-left:3px solid #7c3aed; border-radius:6px; font-size:0.78rem; color:#5b21b6">
+                💡 En multi-réponses, l'utilisateur doit cocher TOUTES les bonnes réponses pour valider.
+              </div>
+            ` : ''}
+          </div>
+
+          <!-- TEXTE DE LA QUESTION -->
+          <div style="margin-bottom:1rem">
+            <label style="display:block; font-size:0.78rem; font-weight:700; color:var(--admin-text-soft); margin-bottom:0.4rem">📝 QUESTION</label>
+            <textarea id="qedit-q" rows="3" style="width:100%; padding:0.7rem; border:1.5px solid var(--admin-border); border-radius:8px; font-family:inherit; font-size:0.9rem; resize:vertical">${(q.q || '').replace(/"/g, '&quot;')}</textarea>
+          </div>
+
+          ${!isOpen ? `
+            <!-- CHOIX A/B/C/D -->
+            <div style="margin-bottom:1rem">
+              <label style="display:block; font-size:0.78rem; font-weight:700; color:var(--admin-text-soft); margin-bottom:0.4rem">
+                🔘 CHOIX ${isMulti ? '(coche TOUTES les bonnes réponses)' : '(coche la bonne réponse)'}
+              </label>
+              <div style="display:flex; flex-direction:column; gap:0.5rem">
+                ${[0, 1, 2, 3].map(i => {
+                  const isCorrect = isMulti
+                    ? (Array.isArray(q.r) && q.r.includes(i))
+                    : (q.r === i);
+                  return `
+                    <div style="display:flex; gap:0.5rem; align-items:center">
+                      <button onclick="Admin.toggleEditingAnswer(${i})" style="min-width:36px; height:36px; border-radius:8px; border:2px solid ${isCorrect ? 'var(--green-bf)' : 'var(--admin-border)'}; background:${isCorrect ? 'var(--green-bf)' : 'white'}; color:${isCorrect ? 'white' : 'var(--admin-text)'}; font-weight:800; cursor:pointer">
+                        ${String.fromCharCode(65 + i)}
+                      </button>
+                      <input type="text" id="qedit-choice-${i}" value="${(choices[i] || '').replace(/"/g, '&quot;')}" placeholder="Choix ${String.fromCharCode(65 + i)}" style="flex:1; padding:0.6rem 0.8rem; border:1.5px solid ${isCorrect ? 'var(--green-bf)' : 'var(--admin-border)'}; border-radius:8px; font-size:0.88rem; background:${isCorrect ? '#f0fdf4' : 'white'}">
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+          ` : `
+            <!-- RÉPONSE POUR QUESTION OUVERTE -->
+            <div style="margin-bottom:1rem">
+              <label style="display:block; font-size:0.78rem; font-weight:700; color:var(--admin-text-soft); margin-bottom:0.4rem">✅ RÉPONSE ATTENDUE</label>
+              <textarea id="qedit-r-open" rows="3" style="width:100%; padding:0.7rem; border:1.5px solid var(--admin-border); border-radius:8px; font-family:inherit; font-size:0.9rem; resize:vertical">${typeof q.r === 'string' ? q.r.replace(/"/g, '&quot;') : ''}</textarea>
+            </div>
+          `}
+
+          <!-- EXPLICATION -->
+          <div style="margin-bottom:1.2rem">
+            <label style="display:block; font-size:0.78rem; font-weight:700; color:var(--admin-text-soft); margin-bottom:0.4rem">💡 EXPLICATION</label>
+            <textarea id="qedit-x" rows="3" placeholder="Pourquoi cette réponse est correcte..." style="width:100%; padding:0.7rem; border:1.5px solid var(--admin-border); border-radius:8px; font-family:inherit; font-size:0.9rem; resize:vertical; background:#fef9c3">${((q.x || q.nb || '')).replace(/"/g, '&quot;')}</textarea>
+          </div>
+
+          <!-- BOUTONS D'ACTION -->
+          <div style="display:flex; gap:0.6rem">
+            <button onclick="Admin.saveQuestionEdit()" style="flex:1; background:linear-gradient(135deg, var(--green-bf), var(--green-bf-dark)); color:white; border:none; padding:0.85rem; border-radius:10px; font-weight:800; font-size:0.95rem; cursor:pointer">
+              💾 Enregistrer
+            </button>
+            <button onclick="Admin.cancelQuestionEdit()" style="background:white; color:var(--admin-text); border:1.5px solid var(--admin-border); padding:0.85rem 1.4rem; border-radius:10px; font-weight:700; font-size:0.9rem; cursor:pointer">
+              Annuler
+            </button>
+          </div>
+
+        </div>
+      </div>
+    `;
+  },
+
+  // V37 : Changer le type de question pendant l'édition
+  updateEditingQType(newType) {
+    const q = this.state.editingQuestion;
+    if (!q) return;
+
+    // Capturer les valeurs actuelles avant de re-render
+    const qText = document.getElementById('qedit-q');
+    if (qText) q.q = qText.value;
+
+    for (let i = 0; i < 4; i++) {
+      const el = document.getElementById('qedit-choice-' + i);
+      if (el) {
+        q.choices = q.choices || [];
+        q.choices[i] = el.value;
+      }
+    }
+    const xEl = document.getElementById('qedit-x');
+    if (xEl) q.x = xEl.value;
+
+    // Conversion intelligente
+    if (newType === 'multi') {
+      // Mono → Multi : convertir r (number) en r (array)
+      if (typeof q.r === 'number') {
+        q.r = [q.r];
+      } else if (!Array.isArray(q.r)) {
+        q.r = [];
+      }
+      if (!q.choices || q.choices.length < 2) {
+        q.choices = q.choices || [];
+        while (q.choices.length < 4) q.choices.push('');
+      }
+    } else if (newType === 'qcm3' || newType === 'qcm4') {
+      // Multi → Mono : prendre la première réponse
+      if (Array.isArray(q.r)) {
+        q.r = q.r.length > 0 ? q.r[0] : 0;
+      } else if (typeof q.r !== 'number') {
+        q.r = 0;
+      }
+    } else if (newType === 'open') {
+      // Vers ouverte : pas de choix, r = texte
+      q.r = typeof q.r === 'string' ? q.r : '';
+    }
+
+    q.type = newType;
+    // Si qcm avec 4 choix non vides → qcm4, sinon qcm3
+    if (newType === 'qcm3' || newType === 'qcm4') {
+      const nonEmpty = (q.choices || []).filter(c => c && c.trim()).length;
+      q.type = nonEmpty <= 3 ? 'qcm3' : 'qcm4';
+    }
+
+    this.render();
+  },
+
+  // V37 : Cocher/décocher une réponse
+  toggleEditingAnswer(idx) {
+    const q = this.state.editingQuestion;
+    if (!q) return;
+
+    // Capturer les autres valeurs avant re-render
+    const qText = document.getElementById('qedit-q');
+    if (qText) q.q = qText.value;
+    for (let i = 0; i < 4; i++) {
+      const el = document.getElementById('qedit-choice-' + i);
+      if (el) {
+        q.choices = q.choices || [];
+        q.choices[i] = el.value;
+      }
+    }
+    const xEl = document.getElementById('qedit-x');
+    if (xEl) q.x = xEl.value;
+
+    if (q.type === 'multi') {
+      // Toggle dans le tableau
+      q.r = Array.isArray(q.r) ? q.r : [];
+      if (q.r.includes(idx)) {
+        q.r = q.r.filter(i => i !== idx);
+      } else {
+        q.r = [...q.r, idx].sort();
+      }
+    } else {
+      // Mono : juste remplacer
+      q.r = idx;
+    }
+
+    this.render();
+  },
+
+  // V37 : Enregistrer les modifications
+  saveQuestionEdit() {
+    const q = this.state.editingQuestion;
+    if (!q) return;
+
+    // Capturer toutes les valeurs des champs
+    const qText = document.getElementById('qedit-q');
+    if (qText) q.q = qText.value.trim();
+
+    if (q.type === 'open') {
+      const rOpen = document.getElementById('qedit-r-open');
+      if (rOpen) q.r = rOpen.value.trim();
+      delete q.choices;
+    } else {
+      q.choices = [];
+      for (let i = 0; i < 4; i++) {
+        const el = document.getElementById('qedit-choice-' + i);
+        if (el && el.value.trim()) q.choices.push(el.value.trim());
+      }
+      // Ajuster qcm3 vs qcm4 selon le nombre de choix
+      if (q.type === 'qcm3' || q.type === 'qcm4') {
+        q.type = q.choices.length === 3 ? 'qcm3' : 'qcm4';
+      }
+    }
+
+    const xEl = document.getElementById('qedit-x');
+    if (xEl) q.x = xEl.value.trim();
+
+    // Validation
+    if (!q.q) {
+      this.toast('❌ La question est obligatoire', 'danger');
+      return;
+    }
+    if (q.type !== 'open' && (!q.choices || q.choices.length < 2)) {
+      this.toast('❌ Il faut au moins 2 choix', 'danger');
+      return;
+    }
+    if (q.type === 'multi' && (!Array.isArray(q.r) || q.r.length === 0)) {
+      this.toast('❌ Coche au moins une bonne réponse', 'danger');
+      return;
+    }
+
+    // Sauvegarder dans la session
+    const idx = q._editingIndex;
+    const session = window.SessionsHelper.getSession(this.state.editingSessionId);
+    if (!session || idx === undefined) {
+      this.toast('❌ Erreur de session', 'danger');
+      return;
+    }
+
+    // Nettoyer la copie de travail (retirer _editingIndex)
+    const cleanQ = { ...q };
+    delete cleanQ._editingIndex;
+    if (cleanQ.nb && !cleanQ.x) {
+      cleanQ.x = cleanQ.nb;  // Migration nb → x
+      delete cleanQ.nb;
+    }
+
+    session.questions[idx] = cleanQ;
+    window.SessionsHelper.saveCustomSession(session);
+    this.state.editingQuestion = null;
+    this.toast('✅ Question modifiée');
+    this.render();
+  },
+
+  // V37 : Annuler l'édition de question
+  cancelQuestionEdit() {
+    this.state.editingQuestion = null;
+    this.render();
+  },
+
+  // V38 : Exporter toutes les sessions (sauf les démos par défaut)
+  exportAllSessions() {
+    const allSessions = window.SessionsHelper ? window.SessionsHelper.getAllSessions() : [];
+    const demoIds = (window.DEMO_SESSIONS || []).map(d => d.id);
+
+    // Inclure aussi les sessions démo modifiées (pas seulement custom)
+    const sessionsToExport = allSessions.map(s => ({
+      id: s.id,
+      date: s.date,
+      numero: s.numero,
+      titre: s.titre,
+      description: s.description,
+      questions: s.questions || [],
+      isDemo: demoIds.includes(s.id)
+    }));
+
+    if (sessionsToExport.length === 0) {
+      this.toast('❌ Aucune session à exporter', 'danger');
+      return;
+    }
+
+    const totalQ = sessionsToExport.reduce((s, sess) => s + (sess.questions || []).length, 0);
+
+    const backup = {
+      type: 'bara_sessions_export',
+      version: 'v38',
+      exportedAt: new Date().toISOString(),
+      stats: {
+        nb_sessions: sessionsToExport.length,
+        nb_questions_total: totalQ,
+        nb_sessions_custom: sessionsToExport.filter(s => !s.isDemo).length,
+        nb_sessions_demo_modifiees: sessionsToExport.filter(s => s.isDemo).length
+      },
+      sessions: sessionsToExport
+    };
+
+    const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'bara-SESSIONS-' + new Date().toISOString().split('T')[0] + '.json';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => {
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }, 100);
+
+    this.toast(`✅ ${sessionsToExport.length} sessions (${totalQ} questions) exportées`);
+  },
+
+  // V38 : Exporter UNE seule session
+  exportSingleSession(sessionId) {
+    const session = window.SessionsHelper ? window.SessionsHelper.getSession(sessionId) : null;
+    if (!session) {
+      this.toast('❌ Session introuvable', 'danger');
+      return;
+    }
+
+    const exportData = {
+      type: 'bara_session_single',
+      version: 'v38',
+      exportedAt: new Date().toISOString(),
+      session: {
+        id: session.id,
+        date: session.date,
+        numero: session.numero,
+        titre: session.titre,
+        description: session.description,
+        questions: session.questions || []
+      }
+    };
+
+    // Nom de fichier basé sur la date et le titre
+    const safeTitle = (session.titre || 'session').replace(/[^a-z0-9]/gi, '_').toLowerCase().substring(0, 30);
+    const filename = `bara-session-${session.date || 'sans-date'}-${safeTitle}.json`;
+
+    const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => {
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }, 100);
+
+    const nbQ = (session.questions || []).length;
+    this.toast(`✅ Session "${session.titre}" exportée (${nbQ} questions)`);
+  },
+
+  // V38 : Déclencher l'import depuis un fichier
+  triggerSessionsImport() {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.json,application/json';
+    input.onchange = (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        try {
+          const data = JSON.parse(ev.target.result);
+          this.applySessionsImport(data);
+        } catch (err) {
+          this.toast('❌ Fichier JSON invalide : ' + err.message, 'danger');
+        }
+      };
+      reader.readAsText(file);
+    };
+    input.click();
+  },
+
+  // V38 : Appliquer un import (gère 2 formats : tout ou single)
+  applySessionsImport(data) {
+    if (!data || !data.type) {
+      this.toast('❌ Fichier non reconnu', 'danger');
+      return;
+    }
+
+    let sessionsToImport = [];
+    if (data.type === 'bara_sessions_export' && Array.isArray(data.sessions)) {
+      sessionsToImport = data.sessions;
+    } else if (data.type === 'bara_session_single' && data.session) {
+      sessionsToImport = [data.session];
+    } else {
+      this.toast('❌ Format de fichier non supporté', 'danger');
+      return;
+    }
+
+    if (sessionsToImport.length === 0) {
+      this.toast('❌ Aucune session dans le fichier', 'danger');
+      return;
+    }
+
+    // Compter pour la confirmation
+    const totalQ = sessionsToImport.reduce((s, sess) => s + (sess.questions || []).length, 0);
+    const existingIds = (window.SessionsHelper ? window.SessionsHelper.getAllSessions() : []).map(s => s.id);
+    const conflicts = sessionsToImport.filter(s => existingIds.includes(s.id)).length;
+
+    if (!confirm(
+      `📥 IMPORT DE SESSIONS\n\n` +
+      `Tu vas importer :\n` +
+      `• ${sessionsToImport.length} sessions\n` +
+      `• ${totalQ} questions au total\n` +
+      `${conflicts > 0 ? `\n⚠️ ${conflicts} session(s) ont le même ID que des existantes (elles seront ÉCRASÉES)\n` : ''}` +
+      `\nConfirmer l'import ?`
+    )) return;
+
+    // Appliquer
+    let imported = 0;
+    sessionsToImport.forEach(s => {
+      try {
+        // Retirer le champ isDemo qui est juste indicatif
+        const cleanSession = { ...s };
+        delete cleanSession.isDemo;
+        window.SessionsHelper.saveCustomSession(cleanSession);
+        imported++;
+      } catch (e) {
+        console.error('Erreur import session', s.id, e);
+      }
+    });
+
+    this.toast(`✅ ${imported} sessions importées avec succès`);
     this.render();
   },
 

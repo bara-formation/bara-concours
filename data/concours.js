@@ -4,6 +4,9 @@
 // 108 concours directs officiels (programmés sur 13 jours) + concours autres canaux
 
 const MATIERES_CATALOG = {
+  // === V43 : Matière virtuelle pour les Sessions d'Accompagnement Final ===
+  accompagnement_final: { nom: 'Accompagnement Final 2025', icone: '🎓', couleur: '#d97706', desc: 'Sessions Premium toutes matières mélangées' },
+
   // === Matières générales ===
   francais: { nom: 'Français', icone: '📝', couleur: '#0F5132', desc: 'Grammaire, conjugaison, rédaction, dissertation' },
   maths: { nom: 'Mathématiques (générique)', icone: '🔢', couleur: '#16a34a', desc: 'Mathématiques de base — utilisé en cas de niveau non précisé' },
