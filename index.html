@@ -5635,7 +5635,7 @@ const App = {
             <div class="premium-banner" onclick="App.navigate('premium')">
               <div class="premium-icon">⭐</div>
               <div class="premium-title">Passez Premium</div>
-              <div class="premium-desc">Accès à tous les QCM avancés, examens chronométrés illimités, fiches PDF</div>
+              <div class="premium-desc">Accès à tous les QCM avancés, examens chronométrés illimités, sessions Premium</div>
               <button class="premium-cta">Découvrir →</button>
             </div>
           ` : ''}
@@ -7393,7 +7393,7 @@ const App = {
             <div class="premium-banner" onclick="App.navigate('premium')">
               <div class="premium-icon">⭐</div>
               <div class="premium-title">Passez Premium</div>
-              <div class="premium-desc">Mode examen, QCM avancés, fiches PDF et plus encore</div>
+              <div class="premium-desc">Mode examen, QCM avancés, sessions d'accompagnement et plus encore</div>
               <button class="premium-cta">Découvrir Premium →</button>
             </div>
           ` : ''}
@@ -7601,14 +7601,35 @@ const App = {
         </header>
 
         <div class="content mt-overlap">
+
+          <!-- V51 : SECTION "J'AI UN CODE D'ACTIVATION" -->
+          <div style="background:linear-gradient(135deg, #fef3c7, #fde68a); border:2px solid #f59e0b; border-radius:var(--radius-lg); padding:1.1rem 1rem; margin-bottom:1.2rem">
+            <div style="display:flex; gap:0.6rem; align-items:center; margin-bottom:0.7rem">
+              <div style="font-size:1.5rem">🎫</div>
+              <div style="flex:1">
+                <div style="font-weight:800; font-size:0.98rem; color:#78350f">J'ai déjà un code d'activation</div>
+                <div style="font-size:0.78rem; color:#92400e">Reçu après ton paiement par WhatsApp</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:0.5rem">
+              <input type="text" id="activation-code-input" placeholder="BARA-MOIS-A3F7" maxlength="20" style="flex:1; padding:0.7rem 0.9rem; border:1.5px solid #f59e0b; border-radius:8px; font-size:0.95rem; font-weight:700; font-family:monospace; letter-spacing:0.05em; text-transform:uppercase; background:white" oninput="this.value = this.value.toUpperCase()">
+              <button onclick="App.activateWithCode()" style="background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.7rem 1.1rem; border-radius:8px; font-weight:800; font-size:0.88rem; cursor:pointer; white-space:nowrap">Activer</button>
+            </div>
+          </div>
+
+          <div style="text-align:center; margin:1rem 0; font-size:0.82rem; color:var(--ink-mute); position:relative">
+            <span style="background:var(--cream); padding:0 0.7rem; position:relative; z-index:1">OU acheter Premium ci-dessous</span>
+            <div style="border-top:1px solid var(--line); position:absolute; top:50%; left:0; right:0; z-index:0"></div>
+          </div>
+
           <div style="background:white; border-radius:var(--radius-lg); padding:1.2rem; margin-bottom:1.2rem; border:1px solid var(--line-soft)">
             <h3 style="font-family:'Instrument Serif',serif; font-size:1.2rem; color:var(--green-bf); margin-bottom:0.7rem; text-align:center">Avantages Premium</h3>
             <div style="display:flex; flex-direction:column; gap:0.5rem; font-size:0.85rem">
               ${[
                 '⏱️ Mode examen chronométré illimité',
                 '📚 Tous les QCM avancés débloqués',
+                '🎓 9 sessions Premium (451 questions)',
                 '💬 Forum communautaire actif',
-                '📄 Fiches PDF téléchargeables',
                 '📊 Statistiques avancées',
                 '🏆 Concours blancs hebdomadaires',
                 '🎯 Classement national',
@@ -7811,15 +7832,35 @@ const App = {
     const userPhone = u.phoneNumber && window.FirebaseAuth?.formatPhone ? window.FirebaseAuth.formatPhone(u.phoneNumber) : (u.phoneNumber || '');
     const waLink = window.PremiumService.getWhatsAppLink(plan.id, operatorId, userPhone, u.name, ref);
 
+    // V51 : Codes USSD pré-remplis (montant + numéro Bara) pour faciliter le paiement
+    const baraNumNoSpaces = (window.PremiumService.BARA_NUMBERS[operatorId] || '').replace(/\s/g, '');
+    const ussdOrange = `*144*10*${baraNumNoSpaces}*${plan.price}#`;
+    // V52 : Format Moov corrigé : *555*2*1*NUMERO*MONTANT#
+    const ussdMoov = `*555*2*1*${baraNumNoSpaces}*${plan.price}#`;
+    // tel: nécessite # encodé en %23
+    const telUssdOrange = `tel:${encodeURIComponent(ussdOrange)}`;
+    const telUssdMoov = `tel:${encodeURIComponent(ussdMoov)}`;
+
     let opSpecific = '';
     if (operatorId === 'orange') {
       opSpecific = `<div class="payment-step">
         <div class="payment-step-num">1</div>
         <div class="payment-step-body">
-          <strong>Compose <code style="background:#fff; padding:0.3rem 0.5rem; border-radius:6px; border:1px solid var(--line); display:inline-block; font-size:1rem; font-weight:700; margin-top:0.2rem">*144#</code> sur ton téléphone</strong>
-          <div style="font-size:0.78rem; color:var(--ink-mute); margin-top:0.4rem; line-height:1.5">
-            Ou utilise l'application <strong>Max It</strong> (téléchargeable sur Play Store).<br>
-            Choisis "Transfert d'argent" → "Vers un autre numéro Orange Money".
+          <strong>Compose ce code USSD Orange Money :</strong>
+          <div style="margin-top:0.5rem; display:flex; gap:0.5rem; align-items:stretch; flex-wrap:wrap">
+            <code style="flex:1; min-width:180px; background:#fff; padding:0.5rem 0.7rem; border-radius:8px; border:1.5px solid #FF6600; display:flex; align-items:center; font-size:1rem; font-weight:700; color:#9a3412; word-break:break-all">${ussdOrange}</code>
+            <button onclick="window.location.href='${telUssdOrange}'" style="background:linear-gradient(135deg, #FF6600, #c2410c); color:white; border:none; padding:0.5rem 0.9rem; border-radius:8px; font-weight:700; font-size:0.82rem; cursor:pointer; white-space:nowrap">📞 Composer</button>
+            <button onclick="App.copyToClipboard('${ussdOrange}', this)" style="background:white; color:#9a3412; border:1.5px solid #FF6600; padding:0.5rem 0.7rem; border-radius:8px; font-weight:700; font-size:0.82rem; cursor:pointer">📋 Copier</button>
+          </div>
+
+          <!-- V53 : Notice rassurance "Issoufou OUEDRAOGO" pour les paiements Orange -->
+          <div style="margin-top:0.6rem; padding:0.5rem 0.7rem; background:#fff4e6; border-left:3px solid #FF6600; border-radius:6px; font-size:0.78rem; color:#7c2d12; line-height:1.5">
+            ℹ️ <strong>Au moment du dépôt</strong>, le nom <strong>"Issoufou OUEDRAOGO"</strong> s'affichera comme bénéficiaire. C'est bien le compte Bara Formation, tu peux confirmer en toute confiance.
+          </div>
+
+          <div style="font-size:0.75rem; color:var(--ink-mute); margin-top:0.5rem; line-height:1.5">
+            ✅ Le <strong>numéro Bara Orange</strong> (${baraNumNoSpaces}) et le <strong>montant</strong> (${plan.price} F) sont déjà pré-remplis.<br>
+            Ou utilise l'app <strong>Max It</strong> (Play Store) → "Transfert" → "Vers Orange Money".
           </div>
         </div>
       </div>`;
@@ -7827,10 +7868,21 @@ const App = {
       opSpecific = `<div class="payment-step">
         <div class="payment-step-num">1</div>
         <div class="payment-step-body">
-          <strong>Compose <code style="background:#fff; padding:0.3rem 0.5rem; border-radius:6px; border:1px solid var(--line); display:inline-block; font-size:1rem; font-weight:700; margin-top:0.2rem">*555#</code> sur ton téléphone</strong>
-          <div style="font-size:0.78rem; color:var(--ink-mute); margin-top:0.4rem; line-height:1.5">
-            Ou utilise l'application <strong>Moov Money</strong> (Play Store).<br>
-            Choisis "Transfert d'argent".
+          <strong>Compose ce code USSD Moov Money :</strong>
+          <div style="margin-top:0.5rem; display:flex; gap:0.5rem; align-items:stretch; flex-wrap:wrap">
+            <code style="flex:1; min-width:180px; background:#fff; padding:0.5rem 0.7rem; border-radius:8px; border:1.5px solid #0066CC; display:flex; align-items:center; font-size:1rem; font-weight:700; color:#1e40af; word-break:break-all">${ussdMoov}</code>
+            <button onclick="window.location.href='${telUssdMoov}'" style="background:linear-gradient(135deg, #0066CC, #1e40af); color:white; border:none; padding:0.5rem 0.9rem; border-radius:8px; font-weight:700; font-size:0.82rem; cursor:pointer; white-space:nowrap">📞 Composer</button>
+            <button onclick="App.copyToClipboard('${ussdMoov}', this)" style="background:white; color:#1e40af; border:1.5px solid #0066CC; padding:0.5rem 0.7rem; border-radius:8px; font-weight:700; font-size:0.82rem; cursor:pointer">📋 Copier</button>
+          </div>
+
+          <!-- V52 : Notice rassurance "Issoufou" pour les paiements Moov -->
+          <div style="margin-top:0.6rem; padding:0.5rem 0.7rem; background:#dbeafe; border-left:3px solid #2563eb; border-radius:6px; font-size:0.78rem; color:#1e3a8a; line-height:1.5">
+            ℹ️ <strong>Au moment du dépôt</strong>, le nom <strong>"Issoufou"</strong> s'affichera comme bénéficiaire. C'est bien le compte Bara Formation, tu peux confirmer en toute confiance.
+          </div>
+
+          <div style="font-size:0.75rem; color:var(--ink-mute); margin-top:0.5rem; line-height:1.5">
+            ✅ Le <strong>numéro Bara Moov</strong> (${baraNumNoSpaces}) et le <strong>montant</strong> (${plan.price} F) sont déjà pré-remplis.<br>
+            Ou utilise l'app <strong>Moov Money</strong> (Play Store).
           </div>
         </div>
       </div>`;
@@ -7933,6 +7985,54 @@ const App = {
 
     this.toast('🎉 Premium activé en mode démo !');
     setTimeout(() => this.navigate('home'), 1000);
+  },
+
+  // V51 : Activation via code d'activation
+  activateWithCode() {
+    const input = document.getElementById('activation-code-input');
+    if (!input) return;
+    const code = input.value.trim().toUpperCase();
+    if (!code) {
+      this.toast('❌ Entre ton code d\'activation', 'danger');
+      return;
+    }
+
+    // Vérifier que le module est chargé
+    if (!window.ActivationCodes) {
+      this.toast('❌ Module d\'activation non disponible', 'danger');
+      return;
+    }
+
+    // Valider et utiliser le code
+    const result = window.ActivationCodes.useCode(code, this.state.user);
+    if (!result.valid) {
+      this.toast('❌ ' + (result.reason || 'Code invalide'), 'danger');
+      return;
+    }
+
+    // Activer Premium avec le plan du code
+    const planId = result.planId;
+    const updates = window.PremiumService.activatePremium(this.state.user, planId);
+    if (!updates) {
+      this.toast('❌ Plan inconnu : ' + planId, 'danger');
+      return;
+    }
+
+    this.state.user = { ...this.state.user, ...updates };
+    this.save();
+
+    // Sync Firebase si dispo
+    if (window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady && window.FirebaseAuth.isLoggedIn()) {
+      window.FirebaseAuth.updateProfile(updates).catch(e => console.error('Sync premium :', e));
+    }
+
+    const planName = window.PremiumService.PLANS[planId]?.name || 'Premium';
+    this.toast('🎉 ' + planName + ' activé avec succès !');
+    setTimeout(() => {
+      this.navigate('home');
+      // Petit délai pour faire apparaître le badge Premium
+      setTimeout(() => this.toast('⭐ Bienvenue dans Premium !'), 800);
+    }, 1500);
   },
 
   // ===========================================
