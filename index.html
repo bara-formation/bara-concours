@@ -3504,6 +3504,11 @@ const App = {
       case 'auth-phone': html = this.renderAuthPhone(); app.classList.add('no-nav'); break;
       case 'auth-otp': html = this.renderAuthOTP(); app.classList.add('no-nav'); break;
       case 'onboarding': html = this.renderOnboarding(); app.classList.add('no-nav'); break;
+      // V56 : Nouveaux écrans Firebase Auth (Google + Email)
+      case 'auth-welcome': html = this.renderAuthWelcome(); app.classList.add('no-nav'); break;
+      case 'auth-signup': html = this.renderAuthSignup(); app.classList.add('no-nav'); break;
+      case 'auth-signin': html = this.renderAuthSignin(); app.classList.add('no-nav'); break;
+      case 'auth-forgot': html = this.renderAuthForgot(); app.classList.add('no-nav'); break;
       case 'home': html = this.renderHome(); break;
       case 'session-2026': html = this.renderSession2026(); break;
       case 'annales': html = this.renderSessionsList(); break;
@@ -3529,7 +3534,7 @@ const App = {
       default: html = this.renderHome();
     }
 
-    const showNav = !['splash', 'qcm', 'auth-phone', 'auth-otp', 'onboarding', 'forum-create'].includes(this.state.currentScreen);
+    const showNav = !['splash', 'qcm', 'auth-phone', 'auth-otp', 'auth-welcome', 'auth-signup', 'auth-signin', 'auth-forgot', 'onboarding', 'forum-create'].includes(this.state.currentScreen);
     if (showNav) html += this.renderBottomNav();
 
     // Modal biométrique en superposition (si proposition active)
@@ -3612,12 +3617,16 @@ const App = {
 
   // === SPLASH ===
   renderSplash() {
+    // V57 : Router vers le bon écran selon le flag Firebase
+    const useFirebase = window.FirebaseAuth && window.FirebaseAuth.USE_FIREBASE_AUTH;
+    const ctaTarget = useFirebase ? 'auth-welcome' : 'auth-phone';
+
     return `
       <div class="splash">
         <img src="icons/icon-512.png" alt="Bara Concours" class="splash-logo">
         <div class="splash-name">Bara <span>Concours</span></div>
         <div class="splash-tagline">Préparation aux concours du Burkina Faso</div>
-        <button class="splash-cta" onclick="App.navigate('auth-phone')">
+        <button class="splash-cta" onclick="App.navigate('${ctaTarget}')">
           📱 Créer un compte / Se connecter
         </button>
         <button onclick="App.continueWithoutAccount()" style="background:transparent; color:rgba(255,255,255,0.85); padding:0.8rem 1.5rem; border-radius:999px; font-weight:600; font-size:0.92rem; margin-top:0.6rem; text-decoration:underline; border:none; cursor:pointer; position:relative; z-index:2; animation:splashFade 0.8s 0.7s both">
@@ -4358,6 +4367,14 @@ const App = {
       tailleProchainSujet = qRestantes;  // Absorbe les restes
     }
 
+    // V55 : Détecter si un examen chronométré est en pause
+    const examProgress = window.SessionsHelper.getProgress(sessionId);
+    const hasExamPaused = examProgress && !examProgress.completedAt
+                          && examProgress.timerMode === 'exam'
+                          && examProgress.currentIndex > 0
+                          && examProgress.activeQuestions
+                          && examProgress.activeQuestions.length > 0;
+
     return `
       <div class="page">
         <header class="header">
@@ -4425,14 +4442,26 @@ const App = {
           <p style="font-size:0.85rem; color:var(--ink-soft); margin:0 0 0.8rem; line-height:1.5">
             Conditions réelles d'examen. Toutes les ${totalQ} questions en ${dureeMin} minutes. Sauvegarde automatique pour reprendre plus tard.
           </p>
-          <button onclick="App.demarrerSessionChronometree()" style="background:linear-gradient(135deg, #ca8a04, #854d0e); color:white; border:none; padding:0; border-radius:14px; cursor:pointer; box-shadow:0 6px 16px rgba(202, 138, 4, 0.3); width:100%; text-align:left; display:flex; align-items:center; gap:0.8rem; padding:1rem 1.1rem; margin-bottom:1.5rem">
-            <div style="background:rgba(255,255,255,0.25); width:48px; height:48px; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:1.4rem">⏱️</div>
-            <div style="flex:1">
-              <div style="font-family:'Instrument Serif',serif; font-size:1.4rem; line-height:1.1">Sujet examen</div>
-              <div style="font-size:0.82rem; opacity:0.9; margin-top:0.15rem">${totalQ} questions • ${dureeMin}min</div>
-            </div>
-            <div style="font-size:1.4rem; opacity:0.9">›</div>
-          </button>
+          ${hasExamPaused ? `
+            <!-- V55 : Bouton de reprise visible -->
+            <button onclick="App.demarrerSessionChronometree()" style="background:linear-gradient(135deg, #f59e0b, #d97706); color:white; border:none; padding:0; border-radius:14px; cursor:pointer; box-shadow:0 6px 16px rgba(245, 158, 11, 0.35); width:100%; text-align:left; display:flex; align-items:center; gap:0.8rem; padding:1rem 1.1rem; margin-bottom:1.5rem; position:relative">
+              <div style="background:rgba(255,255,255,0.25); width:48px; height:48px; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:1.4rem">🔄</div>
+              <div style="flex:1">
+                <div style="font-family:'Instrument Serif',serif; font-size:1.4rem; line-height:1.1">Reprendre l'examen</div>
+                <div style="font-size:0.82rem; opacity:0.9; margin-top:0.15rem">Question ${(examProgress.currentIndex || 0) + 1}/${examProgress.activeQuestions.length} • ${Math.floor((examProgress.timeLeft || 0) / 60)} min restant</div>
+              </div>
+              <div style="position:absolute; top:-8px; right:8px; background:white; color:#b45309; padding:0.15rem 0.55rem; border-radius:999px; font-size:0.65rem; font-weight:800; letter-spacing:0.05em; border:1.5px solid #f59e0b">EN PAUSE</div>
+            </button>
+          ` : `
+            <button onclick="App.demarrerSessionChronometree()" style="background:linear-gradient(135deg, #ca8a04, #854d0e); color:white; border:none; padding:0; border-radius:14px; cursor:pointer; box-shadow:0 6px 16px rgba(202, 138, 4, 0.3); width:100%; text-align:left; display:flex; align-items:center; gap:0.8rem; padding:1rem 1.1rem; margin-bottom:1.5rem">
+              <div style="background:rgba(255,255,255,0.25); width:48px; height:48px; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:1.4rem">⏱️</div>
+              <div style="flex:1">
+                <div style="font-family:'Instrument Serif',serif; font-size:1.4rem; line-height:1.1">Sujet examen</div>
+                <div style="font-size:0.82rem; opacity:0.9; margin-top:0.15rem">${totalQ} questions • ${dureeMin}min</div>
+              </div>
+              <div style="font-size:1.4rem; opacity:0.9">›</div>
+            </button>
+          `}
 
         </div>
       </div>
@@ -4513,6 +4542,58 @@ const App = {
       return;
     }
 
+    // V55 : Vérifier s'il existe une progression chronométrée en cours
+    const progress = window.SessionsHelper.getProgress(session.id);
+    const hasResumable = progress && !progress.completedAt
+                         && progress.timerMode === 'exam'
+                         && progress.currentIndex > 0
+                         && progress.activeQuestions
+                         && progress.activeQuestions.length > 0;
+
+    if (hasResumable) {
+      // Proposer de reprendre
+      const qDone = progress.currentIndex + 1;
+      const qTotal = progress.activeQuestions.length;
+      const timeLeft = progress.timeLeft || 0;
+      const minLeft = Math.floor(timeLeft / 60);
+      const choice = confirm(
+        `🔄 Tu as un examen en cours dans cette session :\n\n` +
+        `   Question ${qDone}/${qTotal}\n` +
+        `   Temps restant : ${minLeft} min\n\n` +
+        `OK = Reprendre l'examen\n` +
+        `Annuler = Recommencer à zéro`
+      );
+
+      if (choice) {
+        // REPRISE : restaurer tout l'état
+        this.state.currentSessionTimerEnabled = true;
+        this.state.sessionPaused = false;
+        this.state.currentSessionStartTime = Date.now();  // Nouveau point de référence pour le timer
+        this.state.currentSessionQuestionsActive = progress.activeQuestions;
+        this.state.currentSessionIndices = progress.indices || progress.activeQuestions.map((_, i) => i);
+        this.state.currentSessionTotalAvailable = allQ.length;
+        this.state.currentSessionIsAbridged = false;
+        this.state.currentSessionAnswers = progress.answers || {};
+        this.state.currentSessionIndex = progress.currentIndex || 0;
+        this.state.currentSessionSujetNumero = null;
+        this.state.currentSessionMode = 'exam';
+        this.state.currentSessionTimeLeft = progress.timeLeft || (allQ.length * 60);
+
+        this.startSessionTimer();
+        this.navigate('session-questions');
+        return;
+      } else {
+        // RECOMMENCER : effacer la progression précédente
+        window.SessionsHelper.saveProgress(session.id, {
+          currentIndex: 0,
+          answers: {},
+          activeQuestions: null,
+          timerMode: null
+        });
+      }
+    }
+
+    // Nouveau démarrage (ou recommencer après "Annuler")
     this.state.currentSessionTimerEnabled = true;
     this.state.currentSessionStartTime = Date.now();
     this.state.sessionPaused = false;
@@ -5076,22 +5157,39 @@ const App = {
   },
 
   exitSession() {
-    if (confirm('🚪 Quitter ce sujet ?\n\nTa progression sera perdue (les sujets en cours ne sont pas sauvegardés tant qu\'ils ne sont pas terminés).')) {
-      this.stopSessionTimer();
-      this.navigate('annales-session');
+    const isExam = this.state.currentSessionMode === 'exam';
+
+    if (isExam) {
+      // V55 : Mode chronométré → on peut sauvegarder pour reprendre plus tard
+      if (confirm('🚪 Mettre l\'examen en pause ?\n\nTa progression sera sauvegardée et tu pourras reprendre exactement là où tu en es.')) {
+        this.stopSessionTimer();
+        this.saveSessionProgress();
+        this.navigate('annales-session');
+      }
+    } else {
+      // Mode libre (sujets) → comme avant, pas de sauvegarde
+      if (confirm('🚪 Quitter ce sujet ?\n\nTa progression sera perdue (les sujets libres ne sont pas sauvegardés tant qu\'ils ne sont pas terminés).')) {
+        this.stopSessionTimer();
+        this.navigate('annales-session');
+      }
     }
   },
 
   saveSessionProgress() {
     if (!this.state.currentSessionId || !window.SessionsHelper) return;
+    // V55 : sauvegarde différenciée — pour le mode chronométré, on stocke aussi le temps restant
+    const isExam = this.state.currentSessionMode === 'exam';
     window.SessionsHelper.saveProgress(this.state.currentSessionId, {
       currentIndex: this.state.currentSessionIndex,
       answers: this.state.currentSessionAnswers,
-      // V46 : sauvegarder le tirage actif pour la reprise (sinon nouveau tirage à chaque reprise)
       activeQuestions: this.state.currentSessionQuestionsActive,
+      indices: this.state.currentSessionIndices,
       isAbridged: this.state.currentSessionIsAbridged,
       totalAvailable: this.state.currentSessionTotalAvailable,
-      timerMode: this.state.sessionTimerMode
+      timerMode: isExam ? 'exam' : 'free',
+      // V55 : pour mode chronométré, on enregistre le temps qu'il reste
+      timeLeft: isExam ? (this.state.currentSessionTimeLeft || 0) : null,
+      lastSavedAt: Date.now()
     });
   },
 
@@ -5623,7 +5721,7 @@ const App = {
           </div>
 
           ${!this.state.user.isLoggedIn && totalQCM >= 2 ? `
-            <div class="signup-prompt-card" onclick="App.navigate('auth-phone')">
+            <div class="signup-prompt-card" onclick="App.navigate(window.FirebaseAuth && window.FirebaseAuth.USE_FIREBASE_AUTH ? 'auth-welcome' : 'auth-phone')">
               <div class="signup-prompt-icon">💾</div>
               <div class="signup-prompt-title">Sauvegarde tes <span>progrès</span></div>
               <div class="signup-prompt-desc">Tu as déjà fait ${totalQCM} QCM ! Crée ton compte pour ne jamais les perdre.</div>
@@ -5826,6 +5924,16 @@ const App = {
       this.startResendCooldown();
       this.navigate('auth-otp');
     } catch (e) {
+      // V56.1 : Si SMS désactivé (Firebase actif mais sans phone auth), basculer en mode démo
+      if (e.message && e.message.includes('SMS_DISABLED')) {
+        a.isLoading = false;
+        a.error = '';
+        a.pendingPhone = '+226' + cleaned;
+        a.otpInput = '';
+        this.toast('📱 Mode démo : utilise le code 123456');
+        this.navigate('auth-otp');
+        return;
+      }
       a.error = e.message || 'Erreur d\'envoi. Réessaie.';
       a.isLoading = false;
       this.render();
@@ -5965,6 +6073,26 @@ const App = {
         this.navigate('home');
       }
     } catch (e) {
+      // V56.1 : Si SMS désactivé, basculer en mode démo (accepte 123456)
+      if (e.message && e.message.includes('SMS_DISABLED')) {
+        if (a.otpInput === '123456') {
+          this.state.user = {
+            ...this.state.user,
+            isLoggedIn: true,
+            phoneNumber: a.pendingPhone,
+            uid: 'demo_' + Date.now()
+          };
+          this.save();
+          a.isLoading = false;
+          this.toast('🎉 Connexion réussie (mode démo)');
+          this.navigate('onboarding');
+        } else {
+          a.error = 'Code incorrect. En mode démo, utilise 123456';
+          a.isLoading = false;
+          this.render();
+        }
+        return;
+      }
       a.error = e.message || 'Erreur de vérification';
       a.isLoading = false;
       this.render();
@@ -5995,6 +6123,587 @@ const App = {
     this.state.auth.phoneInput = this.state.auth.pendingPhone.replace('+226', '').match(/.{1,2}/g).join(' ');
     await this.sendOTP();
   },
+
+  // =================================================================
+  // V56 : ÉCRANS FIREBASE AUTH (Google + Email/Mot de passe)
+  // En mode test : accessibles uniquement via URLs cachées
+  // Branchement complet au flux principal en V57
+  // =================================================================
+
+  // ----- ÉCRAN 1 : BIENVENUE / CHOIX MÉTHODE -----
+  renderAuthWelcome() {
+    const a = this.state.auth || {};
+    return `
+      <div class="page" style="background:linear-gradient(180deg, #f0fdf4 0%, var(--cream) 100%); min-height:100vh">
+        <div style="padding:1.5rem 1.2rem; max-width:480px; margin:0 auto">
+
+          <!-- Logo & titre -->
+          <div style="text-align:center; padding:2rem 0 1.5rem">
+            <div style="font-size:3.5rem">🎓</div>
+            <h1 style="font-family:'Instrument Serif',serif; font-size:2rem; color:var(--green-bf-dark); margin:0.6rem 0 0.3rem">Bara Concours</h1>
+            <p style="font-size:0.95rem; color:var(--ink-soft); margin:0; line-height:1.5">
+              Préparation aux concours directs<br>du Burkina Faso
+            </p>
+          </div>
+
+          <!-- Bouton Google -->
+          <button onclick="App.handleGoogleSignIn()" style="background:white; color:#3c4043; border:1.5px solid #dadce0; padding:0.85rem 1rem; border-radius:12px; cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,0.08); width:100%; display:flex; align-items:center; gap:0.7rem; margin-bottom:0.9rem; font-weight:600; font-size:0.95rem">
+            <svg width="20" height="20" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+              <path fill="#4285F4" d="M17.64 9.205c0-.639-.057-1.252-.164-1.841H9v3.481h4.844a4.14 4.14 0 0 1-1.796 2.716v2.259h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"/>
+              <path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z"/>
+              <path fill="#FBBC05" d="M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"/>
+              <path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z"/>
+            </svg>
+            <span style="flex:1; text-align:center">Continuer avec Google</span>
+          </button>
+
+          <!-- Séparateur -->
+          <div style="display:flex; align-items:center; gap:0.7rem; margin:1.2rem 0; color:var(--ink-mute); font-size:0.8rem">
+            <div style="flex:1; height:1px; background:var(--line)"></div>
+            <span>OU</span>
+            <div style="flex:1; height:1px; background:var(--line)"></div>
+          </div>
+
+          <!-- Bouton Email -->
+          <button onclick="App.navigate('auth-signup')" style="background:var(--green-bf); color:white; border:none; padding:0.85rem 1rem; border-radius:12px; cursor:pointer; box-shadow:0 4px 10px rgba(15,81,50,0.25); width:100%; display:flex; align-items:center; gap:0.7rem; margin-bottom:1rem; font-weight:700; font-size:0.95rem">
+            <span style="font-size:1.1rem">📧</span>
+            <span style="flex:1; text-align:center">Créer un compte avec Email</span>
+          </button>
+
+          <!-- Déjà inscrit -->
+          <div style="text-align:center; padding:0.8rem; font-size:0.88rem; color:var(--ink-soft)">
+            Déjà inscrit ?
+            <a onclick="App.navigate('auth-signin')" style="color:var(--green-bf-dark); font-weight:700; cursor:pointer; text-decoration:underline">Se connecter</a>
+          </div>
+
+          <!-- Message d'erreur si présent -->
+          ${a.authError ? `
+            <div style="background:#fee2e2; border:1.5px solid #fecaca; color:#991b1b; padding:0.7rem 0.9rem; border-radius:10px; font-size:0.85rem; margin-top:1rem">
+              ⚠️ ${a.authError}
+            </div>
+          ` : ''}
+
+          <!-- Note de confidentialité -->
+          <div style="margin-top:2rem; padding:0.8rem 1rem; background:white; border-radius:10px; border:1px solid var(--line); font-size:0.78rem; color:var(--ink-soft); line-height:1.55">
+            🔒 Tes données sont protégées et stockées de manière sécurisée. Nous ne partageons jamais tes informations avec des tiers.
+          </div>
+
+        </div>
+      </div>
+    `;
+  },
+
+  // ----- ÉCRAN 2 : CRÉER UN COMPTE EMAIL -----
+  renderAuthSignup() {
+    const a = this.state.auth || {};
+    const villes = ['Ouagadougou', 'Bobo-Dioulasso', 'Koudougou', 'Banfora', 'Ouahigouya', 'Kaya', 'Tenkodogo', 'Fada N\'Gourma', 'Dédougou', 'Dori', 'Gaoua', 'Manga', 'Ziniaré', 'Autre'];
+
+    return `
+      <div class="page" style="background:linear-gradient(180deg, #f0fdf4 0%, var(--cream) 100%); min-height:100vh">
+        <div style="padding:1rem 1.2rem; max-width:480px; margin:0 auto">
+
+          <!-- Header -->
+          <div style="display:flex; align-items:center; gap:0.6rem; padding:0.5rem 0 1rem">
+            <button onclick="App.navigate('auth-welcome')" style="background:white; border:1.5px solid var(--line); width:38px; height:38px; border-radius:10px; cursor:pointer; font-size:1rem">←</button>
+            <div style="flex:1">
+              <h1 style="font-family:'Instrument Serif',serif; font-size:1.5rem; color:var(--green-bf-dark); margin:0">Créer ton compte</h1>
+              <p style="font-size:0.82rem; color:var(--ink-soft); margin:0.1rem 0 0">Quelques infos pour commencer</p>
+            </div>
+          </div>
+
+          <div style="background:white; border-radius:14px; padding:1.2rem; border:1px solid var(--line); margin-bottom:1rem">
+
+            <!-- Nom -->
+            <div style="margin-bottom:0.9rem">
+              <label style="display:block; font-weight:700; font-size:0.85rem; color:var(--ink); margin-bottom:0.35rem">Nom complet *</label>
+              <input type="text" id="signup-name" placeholder="Ton nom et prénom" value="${a.signupName || ''}" oninput="App.state.auth.signupName = this.value" style="width:100%; padding:0.7rem 0.9rem; border:1.5px solid var(--line); border-radius:8px; font-size:0.95rem; box-sizing:border-box">
+            </div>
+
+            <!-- Email -->
+            <div style="margin-bottom:0.9rem">
+              <label style="display:block; font-weight:700; font-size:0.85rem; color:var(--ink); margin-bottom:0.35rem">Email *</label>
+              <input type="email" id="signup-email" placeholder="ton.email@gmail.com" value="${a.signupEmail || ''}" autocomplete="email" oninput="App.state.auth.signupEmail = this.value.trim().toLowerCase()" style="width:100%; padding:0.7rem 0.9rem; border:1.5px solid var(--line); border-radius:8px; font-size:0.95rem; box-sizing:border-box">
+              <div style="font-size:0.72rem; color:var(--ink-mute); margin-top:0.25rem">Servira pour te connecter et recevoir des informations</div>
+            </div>
+
+            <!-- Mot de passe -->
+            <div style="margin-bottom:0.9rem">
+              <label style="display:block; font-weight:700; font-size:0.85rem; color:var(--ink); margin-bottom:0.35rem">Mot de passe *</label>
+              <div style="position:relative">
+                <input type="${a.showSignupPwd ? 'text' : 'password'}" id="signup-password" placeholder="Au moins 6 caractères" value="${a.signupPassword || ''}" oninput="App.state.auth.signupPassword = this.value" style="width:100%; padding:0.7rem 2.5rem 0.7rem 0.9rem; border:1.5px solid var(--line); border-radius:8px; font-size:0.95rem; box-sizing:border-box">
+                <button type="button" onclick="App.toggleSignupPasswordVisibility()" style="position:absolute; right:0.5rem; top:50%; transform:translateY(-50%); background:none; border:none; cursor:pointer; font-size:1.1rem; color:var(--ink-mute)">${a.showSignupPwd ? '🙈' : '👁️'}</button>
+              </div>
+              <div style="font-size:0.72rem; color:var(--ink-mute); margin-top:0.25rem">Minimum 6 caractères</div>
+            </div>
+
+            <!-- Numéro WhatsApp -->
+            <div style="margin-bottom:0.9rem">
+              <label style="display:block; font-weight:700; font-size:0.85rem; color:var(--ink); margin-bottom:0.35rem">Numéro WhatsApp *</label>
+              <div style="display:flex; gap:0.4rem">
+                <div style="background:var(--cream); border:1.5px solid var(--line); padding:0.7rem 0.7rem; border-radius:8px; font-weight:700; font-size:0.9rem; color:var(--ink-soft)">+226</div>
+                <input type="tel" id="signup-phone" placeholder="70 12 34 56" value="${a.signupPhone || ''}" oninput="App.state.auth.signupPhone = this.value" style="flex:1; padding:0.7rem 0.9rem; border:1.5px solid var(--line); border-radius:8px; font-size:0.95rem; box-sizing:border-box">
+              </div>
+              <div style="font-size:0.72rem; color:var(--ink-mute); margin-top:0.25rem">Pour t'envoyer les codes Premium par WhatsApp</div>
+            </div>
+
+            <!-- Ville -->
+            <div style="margin-bottom:1rem">
+              <label style="display:block; font-weight:700; font-size:0.85rem; color:var(--ink); margin-bottom:0.35rem">Ville *</label>
+              <select id="signup-ville" onchange="App.state.auth.signupVille = this.value" style="width:100%; padding:0.7rem 0.9rem; border:1.5px solid var(--line); border-radius:8px; font-size:0.95rem; box-sizing:border-box; background:white">
+                <option value="">— Choisis ta ville —</option>
+                ${villes.map(v => `<option value="${v}" ${a.signupVille === v ? 'selected' : ''}>${v}</option>`).join('')}
+              </select>
+            </div>
+
+            <!-- Erreur -->
+            ${a.signupError ? `
+              <div style="background:#fee2e2; border:1.5px solid #fecaca; color:#991b1b; padding:0.7rem 0.9rem; border-radius:10px; font-size:0.85rem; margin-bottom:0.9rem">
+                ⚠️ ${a.signupError}
+              </div>
+            ` : ''}
+
+            <!-- Bouton créer -->
+            <button onclick="App.handleSignupEmail()" ${a.signupLoading ? 'disabled' : ''} style="background:var(--green-bf); color:white; border:none; padding:0.85rem; border-radius:10px; cursor:pointer; width:100%; font-weight:800; font-size:0.95rem; opacity:${a.signupLoading ? 0.6 : 1}">
+              ${a.signupLoading ? '⏳ Création...' : '✅ Créer mon compte'}
+            </button>
+
+            <!-- Lien connexion -->
+            <div style="text-align:center; padding-top:0.9rem; font-size:0.83rem; color:var(--ink-soft)">
+              Déjà un compte ?
+              <a onclick="App.navigate('auth-signin')" style="color:var(--green-bf-dark); font-weight:700; cursor:pointer">Se connecter</a>
+            </div>
+
+          </div>
+
+          <!-- CGU -->
+          <p style="text-align:center; font-size:0.72rem; color:var(--ink-mute); padding:0 1rem; line-height:1.5">
+            En créant ton compte, tu acceptes nos conditions d'utilisation et notre politique de confidentialité.
+          </p>
+
+        </div>
+      </div>
+    `;
+  },
+
+  // ----- ÉCRAN 3 : SE CONNECTER -----
+  renderAuthSignin() {
+    const a = this.state.auth || {};
+
+    return `
+      <div class="page" style="background:linear-gradient(180deg, #f0fdf4 0%, var(--cream) 100%); min-height:100vh">
+        <div style="padding:1rem 1.2rem; max-width:480px; margin:0 auto">
+
+          <!-- Header -->
+          <div style="display:flex; align-items:center; gap:0.6rem; padding:0.5rem 0 1rem">
+            <button onclick="App.navigate('auth-welcome')" style="background:white; border:1.5px solid var(--line); width:38px; height:38px; border-radius:10px; cursor:pointer; font-size:1rem">←</button>
+            <div style="flex:1">
+              <h1 style="font-family:'Instrument Serif',serif; font-size:1.5rem; color:var(--green-bf-dark); margin:0">Se connecter</h1>
+              <p style="font-size:0.82rem; color:var(--ink-soft); margin:0.1rem 0 0">Bon retour !</p>
+            </div>
+          </div>
+
+          <div style="background:white; border-radius:14px; padding:1.2rem; border:1px solid var(--line); margin-bottom:1rem">
+
+            <!-- Bouton Google -->
+            <button onclick="App.handleGoogleSignIn()" style="background:white; color:#3c4043; border:1.5px solid #dadce0; padding:0.75rem 0.9rem; border-radius:10px; cursor:pointer; width:100%; display:flex; align-items:center; gap:0.6rem; margin-bottom:0.9rem; font-weight:600; font-size:0.92rem">
+              <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+                <path fill="#4285F4" d="M17.64 9.205c0-.639-.057-1.252-.164-1.841H9v3.481h4.844a4.14 4.14 0 0 1-1.796 2.716v2.259h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"/>
+                <path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z"/>
+                <path fill="#FBBC05" d="M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"/>
+                <path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z"/>
+              </svg>
+              <span style="flex:1; text-align:center">Continuer avec Google</span>
+            </button>
+
+            <div style="display:flex; align-items:center; gap:0.7rem; margin:0.9rem 0; color:var(--ink-mute); font-size:0.78rem">
+              <div style="flex:1; height:1px; background:var(--line)"></div>
+              <span>OU</span>
+              <div style="flex:1; height:1px; background:var(--line)"></div>
+            </div>
+
+            <!-- Email -->
+            <div style="margin-bottom:0.9rem">
+              <label style="display:block; font-weight:700; font-size:0.85rem; color:var(--ink); margin-bottom:0.35rem">Email</label>
+              <input type="email" id="signin-email" placeholder="ton.email@gmail.com" value="${a.signinEmail || ''}" autocomplete="email" oninput="App.state.auth.signinEmail = this.value.trim().toLowerCase()" style="width:100%; padding:0.7rem 0.9rem; border:1.5px solid var(--line); border-radius:8px; font-size:0.95rem; box-sizing:border-box">
+            </div>
+
+            <!-- Mot de passe -->
+            <div style="margin-bottom:0.7rem">
+              <label style="display:block; font-weight:700; font-size:0.85rem; color:var(--ink); margin-bottom:0.35rem">Mot de passe</label>
+              <div style="position:relative">
+                <input type="${a.showSigninPwd ? 'text' : 'password'}" id="signin-password" placeholder="Ton mot de passe" value="${a.signinPassword || ''}" oninput="App.state.auth.signinPassword = this.value" style="width:100%; padding:0.7rem 2.5rem 0.7rem 0.9rem; border:1.5px solid var(--line); border-radius:8px; font-size:0.95rem; box-sizing:border-box">
+                <button type="button" onclick="App.toggleSigninPasswordVisibility()" style="position:absolute; right:0.5rem; top:50%; transform:translateY(-50%); background:none; border:none; cursor:pointer; font-size:1.1rem; color:var(--ink-mute)">${a.showSigninPwd ? '🙈' : '👁️'}</button>
+              </div>
+            </div>
+
+            <!-- Mot de passe oublié -->
+            <div style="text-align:right; margin-bottom:0.9rem">
+              <a onclick="App.navigate('auth-forgot')" style="color:var(--green-bf-dark); font-size:0.82rem; font-weight:600; cursor:pointer">Mot de passe oublié ?</a>
+            </div>
+
+            <!-- Erreur -->
+            ${a.signinError ? `
+              <div style="background:#fee2e2; border:1.5px solid #fecaca; color:#991b1b; padding:0.7rem 0.9rem; border-radius:10px; font-size:0.85rem; margin-bottom:0.9rem">
+                ⚠️ ${a.signinError}
+              </div>
+            ` : ''}
+
+            <!-- Bouton -->
+            <button onclick="App.handleSigninEmail()" ${a.signinLoading ? 'disabled' : ''} style="background:var(--green-bf); color:white; border:none; padding:0.85rem; border-radius:10px; cursor:pointer; width:100%; font-weight:800; font-size:0.95rem; opacity:${a.signinLoading ? 0.6 : 1}">
+              ${a.signinLoading ? '⏳ Connexion...' : '🔓 Se connecter'}
+            </button>
+
+            <!-- Lien création -->
+            <div style="text-align:center; padding-top:0.9rem; font-size:0.83rem; color:var(--ink-soft)">
+              Pas encore de compte ?
+              <a onclick="App.navigate('auth-signup')" style="color:var(--green-bf-dark); font-weight:700; cursor:pointer">Créer un compte</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  // ----- ÉCRAN 4 : MOT DE PASSE OUBLIÉ -----
+  renderAuthForgot() {
+    const a = this.state.auth || {};
+
+    return `
+      <div class="page" style="background:linear-gradient(180deg, #f0fdf4 0%, var(--cream) 100%); min-height:100vh">
+        <div style="padding:1rem 1.2rem; max-width:480px; margin:0 auto">
+
+          <!-- Header -->
+          <div style="display:flex; align-items:center; gap:0.6rem; padding:0.5rem 0 1rem">
+            <button onclick="App.navigate('auth-signin')" style="background:white; border:1.5px solid var(--line); width:38px; height:38px; border-radius:10px; cursor:pointer; font-size:1rem">←</button>
+            <div style="flex:1">
+              <h1 style="font-family:'Instrument Serif',serif; font-size:1.5rem; color:var(--green-bf-dark); margin:0">Mot de passe oublié ?</h1>
+              <p style="font-size:0.82rem; color:var(--ink-soft); margin:0.1rem 0 0">Pas de souci, on va t'aider</p>
+            </div>
+          </div>
+
+          <div style="background:white; border-radius:14px; padding:1.2rem; border:1px solid var(--line); margin-bottom:1rem">
+
+            ${a.forgotSuccess ? `
+              <!-- Succès -->
+              <div style="text-align:center; padding:1rem 0">
+                <div style="font-size:3rem">📧</div>
+                <h3 style="font-family:'Instrument Serif',serif; font-size:1.3rem; color:var(--green-bf-dark); margin:0.5rem 0">Email envoyé !</h3>
+                <p style="font-size:0.9rem; color:var(--ink-soft); line-height:1.6; margin:0 0 1.2rem">
+                  Nous avons envoyé un lien de réinitialisation à<br>
+                  <strong style="color:var(--ink)">${a.forgotEmail}</strong>.<br><br>
+                  Vérifie ta boîte mail (et tes spams).
+                </p>
+                <button onclick="App.navigate('auth-signin')" style="background:var(--green-bf); color:white; border:none; padding:0.75rem 1.5rem; border-radius:10px; cursor:pointer; font-weight:700; font-size:0.92rem">
+                  ← Retour à la connexion
+                </button>
+              </div>
+            ` : `
+              <p style="font-size:0.88rem; color:var(--ink-soft); margin:0 0 1rem; line-height:1.55">
+                Entre l'email de ton compte. Nous t'enverrons un lien pour créer un nouveau mot de passe.
+              </p>
+
+              <div style="margin-bottom:0.9rem">
+                <label style="display:block; font-weight:700; font-size:0.85rem; color:var(--ink); margin-bottom:0.35rem">Email</label>
+                <input type="email" id="forgot-email" placeholder="ton.email@gmail.com" value="${a.forgotEmail || ''}" autocomplete="email" oninput="App.state.auth.forgotEmail = this.value.trim().toLowerCase()" style="width:100%; padding:0.7rem 0.9rem; border:1.5px solid var(--line); border-radius:8px; font-size:0.95rem; box-sizing:border-box">
+              </div>
+
+              ${a.forgotError ? `
+                <div style="background:#fee2e2; border:1.5px solid #fecaca; color:#991b1b; padding:0.7rem 0.9rem; border-radius:10px; font-size:0.85rem; margin-bottom:0.9rem">
+                  ⚠️ ${a.forgotError}
+                </div>
+              ` : ''}
+
+              <button onclick="App.handleForgotPassword()" ${a.forgotLoading ? 'disabled' : ''} style="background:var(--green-bf); color:white; border:none; padding:0.85rem; border-radius:10px; cursor:pointer; width:100%; font-weight:800; font-size:0.95rem; opacity:${a.forgotLoading ? 0.6 : 1}">
+                ${a.forgotLoading ? '⏳ Envoi...' : '📧 Envoyer le lien'}
+              </button>
+
+              <!-- Alternative : WhatsApp -->
+              <div style="margin-top:1.2rem; padding-top:1rem; border-top:1px dashed var(--line); text-align:center">
+                <p style="font-size:0.82rem; color:var(--ink-soft); margin:0 0 0.6rem">Tu n'arrives toujours pas ?</p>
+                <a href="https://wa.me/22604043404?text=Bonjour%2C%20j'ai%20oubli%C3%A9%20mon%20mot%20de%20passe%20Bara%20Concours" target="_blank" style="display:inline-flex; align-items:center; gap:0.4rem; background:#25D366; color:white; padding:0.5rem 1rem; border-radius:8px; text-decoration:none; font-weight:700; font-size:0.85rem">
+                  💬 Contacter Bara sur WhatsApp
+                </a>
+              </div>
+            `}
+
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  // =================================================================
+  // V56 : HANDLERS POUR LES ÉCRANS AUTH
+  // =================================================================
+
+  // --- Toggle visibilité mot de passe ---
+  toggleSignupPasswordVisibility() {
+    this.state.auth = this.state.auth || {};
+    this.state.auth.showSignupPwd = !this.state.auth.showSignupPwd;
+    this.render();
+  },
+
+  toggleSigninPasswordVisibility() {
+    this.state.auth = this.state.auth || {};
+    this.state.auth.showSigninPwd = !this.state.auth.showSigninPwd;
+    this.render();
+  },
+
+  // --- Google Sign-In ---
+  async handleGoogleSignIn() {
+    if (!window.FirebaseAuth) {
+      this.toast('❌ Firebase non chargé', 'danger');
+      return;
+    }
+    this.state.auth = this.state.auth || {};
+    this.state.auth.authError = null;
+
+    // Init Firebase si pas encore fait
+    if (!window.FirebaseAuth.isFirebaseReady) {
+      this.toast('⏳ Connexion à Firebase...');
+      const ok = await window.FirebaseAuth.init();
+      if (!ok) {
+        this.state.auth.authError = 'Impossible de se connecter à Firebase. Vérifie ta connexion internet.';
+        this.render();
+        return;
+      }
+    }
+
+    const result = await window.FirebaseAuth.signInWithGoogle();
+    if (result.pending) {
+      // Redirect en cours (mode APK), l'app va recharger
+      this.toast('🔄 Redirection vers Google...');
+      return;
+    }
+    if (!result.success) {
+      this.state.auth.authError = result.error;
+      this.render();
+      return;
+    }
+
+    // Succès : on a un user Firebase + profil Firestore
+    this.toast('🎉 Connexion Google réussie !');
+    console.log('[V57] Google sign-in success:', result);
+
+    // V57 : Sauvegarder dans le state local + naviguer
+    this._handleAuthSuccess(result);
+  },
+
+  // --- Inscription Email ---
+  async handleSignupEmail() {
+    this.state.auth = this.state.auth || {};
+    const a = this.state.auth;
+    a.signupError = null;
+
+    // Validations
+    if (!a.signupName || a.signupName.trim().length < 2) {
+      a.signupError = 'Entre ton nom complet';
+      this.render();
+      return;
+    }
+    if (!a.signupEmail || !a.signupEmail.includes('@')) {
+      a.signupError = 'Email invalide';
+      this.render();
+      return;
+    }
+    if (!a.signupPassword || a.signupPassword.length < 6) {
+      a.signupError = 'Mot de passe trop court (minimum 6 caractères)';
+      this.render();
+      return;
+    }
+    if (!a.signupPhone || a.signupPhone.replace(/\D/g, '').length < 8) {
+      a.signupError = 'Numéro WhatsApp invalide (8 chiffres minimum)';
+      this.render();
+      return;
+    }
+    if (!a.signupVille) {
+      a.signupError = 'Choisis ta ville';
+      this.render();
+      return;
+    }
+
+    // Init Firebase
+    if (!window.FirebaseAuth.isFirebaseReady) {
+      this.toast('⏳ Connexion à Firebase...');
+      const ok = await window.FirebaseAuth.init();
+      if (!ok) {
+        a.signupError = 'Impossible de se connecter à Firebase. Vérifie ta connexion internet.';
+        this.render();
+        return;
+      }
+    }
+
+    a.signupLoading = true;
+    this.render();
+
+    const result = await window.FirebaseAuth.signUpWithEmail(
+      a.signupEmail,
+      a.signupPassword,
+      {
+        displayName: a.signupName.trim(),
+        phoneNumber: '+226' + a.signupPhone.replace(/\D/g, ''),
+        region: a.signupVille
+      }
+    );
+
+    a.signupLoading = false;
+
+    if (!result.success) {
+      a.signupError = result.error;
+      this.render();
+      return;
+    }
+
+    this.toast('🎉 Compte créé avec succès !');
+    console.log('[V57] Signup success:', result);
+
+    // V57 : Pré-remplir l'onboarding avec les données déjà saisies
+    this.state.onboarding = this.state.onboarding || {};
+    this.state.onboarding.firstName = a.signupName.split(' ')[0] || '';
+    this.state.onboarding.lastName = a.signupName.split(' ').slice(1).join(' ') || '';
+    this.state.onboarding.phoneNumber = '+226' + a.signupPhone.replace(/\D/g, '');
+    this.state.onboarding.ville = a.signupVille;
+
+    this._handleAuthSuccess(result);
+  },
+
+  // --- Connexion Email ---
+  async handleSigninEmail() {
+    this.state.auth = this.state.auth || {};
+    const a = this.state.auth;
+    a.signinError = null;
+
+    if (!a.signinEmail || !a.signinEmail.includes('@')) {
+      a.signinError = 'Email invalide';
+      this.render();
+      return;
+    }
+    if (!a.signinPassword) {
+      a.signinError = 'Entre ton mot de passe';
+      this.render();
+      return;
+    }
+
+    if (!window.FirebaseAuth.isFirebaseReady) {
+      this.toast('⏳ Connexion à Firebase...');
+      const ok = await window.FirebaseAuth.init();
+      if (!ok) {
+        a.signinError = 'Impossible de se connecter à Firebase. Vérifie ta connexion internet.';
+        this.render();
+        return;
+      }
+    }
+
+    a.signinLoading = true;
+    this.render();
+
+    const result = await window.FirebaseAuth.signInWithEmail(a.signinEmail, a.signinPassword);
+
+    a.signinLoading = false;
+
+    if (!result.success) {
+      a.signinError = result.error;
+      this.render();
+      return;
+    }
+
+    this.toast('🎉 Connexion réussie !');
+    console.log('[V57] Signin success:', result);
+
+    this._handleAuthSuccess(result);
+  },
+
+  // V57 : Centralise la gestion du succès d'authentification
+  // Décide où naviguer selon : nouveau compte (→ onboarding) ou existant (→ home)
+  _handleAuthSuccess(authResult) {
+    const fbUser = authResult.user;
+    const profile = authResult.profile || {};
+    const isNewUser = authResult.isNewUser;
+
+    // Mettre à jour le state local
+    this.state.user = {
+      ...this.state.user,
+      isLoggedIn: true,
+      uid: fbUser.uid,
+      email: fbUser.email || '',
+      firstName: profile.displayName ? profile.displayName.split(' ')[0] : (this.state.user.firstName || ''),
+      lastName: profile.displayName ? profile.displayName.split(' ').slice(1).join(' ') : (this.state.user.lastName || ''),
+      phoneNumber: profile.phoneNumber || this.state.user.phoneNumber || '',
+      ville: profile.region || this.state.user.ville || '',
+      photoURL: profile.photoURL || '',
+      authProvider: profile.authProvider || 'email',
+      // Premium synchronisé depuis Firestore
+      isPremium: profile.isPremium || false,
+      premiumPlan: profile.premiumPlan || null,
+      premiumExpiresAt: profile.premiumExpiresAt || null,
+      premiumActivatedAt: profile.premiumActivatedAt || null
+    };
+    this.save();
+
+    // Naviguer selon le contexte
+    if (isNewUser) {
+      // Nouveau compte → onboarding pour finaliser (concours visés, niveau)
+      // Si on a déjà des infos (depuis signup Email), on pré-saute les premières étapes
+      this.state.onboarding = this.state.onboarding || {};
+      if (!this.state.onboarding.firstName && this.state.user.firstName) {
+        this.state.onboarding.firstName = this.state.user.firstName;
+        this.state.onboarding.lastName = this.state.user.lastName;
+        this.state.onboarding.phoneNumber = this.state.user.phoneNumber;
+        this.state.onboarding.ville = this.state.user.ville;
+      }
+      // Marqueur : on vient de Firebase, l'onboarding peut sauter les questions déjà répondues
+      this.state.onboarding._fromFirebase = true;
+      this.state.onboarding._provider = profile.authProvider || 'email';
+      this.navigate('onboarding');
+    } else {
+      // Compte existant → directement home
+      this.navigate('home');
+    }
+  },
+
+  // --- Mot de passe oublié ---
+  async handleForgotPassword() {
+    this.state.auth = this.state.auth || {};
+    const a = this.state.auth;
+    a.forgotError = null;
+
+    if (!a.forgotEmail || !a.forgotEmail.includes('@')) {
+      a.forgotError = 'Email invalide';
+      this.render();
+      return;
+    }
+
+    if (!window.FirebaseAuth.isFirebaseReady) {
+      this.toast('⏳ Connexion à Firebase...');
+      const ok = await window.FirebaseAuth.init();
+      if (!ok) {
+        a.forgotError = 'Impossible de se connecter à Firebase. Vérifie ta connexion internet.';
+        this.render();
+        return;
+      }
+    }
+
+    a.forgotLoading = true;
+    this.render();
+
+    const result = await window.FirebaseAuth.sendPasswordReset(a.forgotEmail);
+
+    a.forgotLoading = false;
+
+    if (!result.success) {
+      a.forgotError = result.error;
+      this.render();
+      return;
+    }
+
+    a.forgotSuccess = true;
+    this.render();
+  },
+
+  // =================================================================
+  // FIN V56
+  // =================================================================
 
   // ===========================================
   // === ONBOARDING (après inscription)
@@ -6358,8 +7067,15 @@ const App = {
 
   async logout() {
     if (!confirm('Voulez-vous vraiment vous déconnecter ?')) return;
+    // V57 : signOut (au lieu de logout) pour le nouveau module Firebase
     if (window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady) {
-      await window.FirebaseAuth.logout();
+      try {
+        if (typeof window.FirebaseAuth.signOut === 'function') {
+          await window.FirebaseAuth.signOut();
+        } else if (typeof window.FirebaseAuth.logout === 'function') {
+          await window.FirebaseAuth.logout();
+        }
+      } catch(e) { console.warn('[V57] Erreur déconnexion Firebase :', e); }
     }
     this.state.user = {
       name: 'Apprenant',
@@ -8925,9 +9641,44 @@ const App = {
     }
 
     if (window.FirebaseAuth) {
-      if (window.FirebaseAuth) window.FirebaseAuth.init().then(ok => {
-        if (ok) console.log('[App] Firebase prêt');
-        else console.log('[App] Mode local (Firebase non configuré)');
+      window.FirebaseAuth.init().then(async (ok) => {
+        if (!ok) {
+          console.log('[App] Mode local (Firebase non configuré)');
+          return;
+        }
+        console.log('[App] Firebase prêt');
+
+        // V57 : Si l'utilisateur a déjà une session Firebase active, le reconnecter automatiquement
+        // S'abonner aux changements d'auth pour restaurer la session
+        if (window.FirebaseAuth.USE_FIREBASE_AUTH) {
+          window.FirebaseAuth.onAuthChange((user, profile) => {
+            if (user && profile && !this.state.user.isLoggedIn) {
+              // Session Firebase active mais utilisateur local pas connecté → restaurer
+              console.log('[App] Restauration session Firebase pour', user.email);
+              this.state.user = {
+                ...this.state.user,
+                isLoggedIn: true,
+                uid: user.uid,
+                email: user.email || '',
+                firstName: profile.displayName ? profile.displayName.split(' ')[0] : (this.state.user.firstName || ''),
+                lastName: profile.displayName ? profile.displayName.split(' ').slice(1).join(' ') : (this.state.user.lastName || ''),
+                phoneNumber: profile.phoneNumber || '',
+                ville: profile.region || '',
+                photoURL: profile.photoURL || '',
+                authProvider: profile.authProvider || 'email',
+                isPremium: profile.isPremium || false,
+                premiumPlan: profile.premiumPlan || null,
+                premiumExpiresAt: profile.premiumExpiresAt || null,
+                premiumActivatedAt: profile.premiumActivatedAt || null
+              };
+              this.save();
+              // Si on est sur le splash, aller à home
+              if (this.state.currentScreen === 'splash' || this.state.currentScreen === 'auth-welcome') {
+                this.navigate('home');
+              }
+            }
+          });
+        }
       });
     }
 

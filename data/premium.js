@@ -86,7 +86,7 @@ const PremiumService = {
   // === NUMÉROS BARA FORMATION POUR RECEVOIR LES PAIEMENTS ===
   BARA_NUMBERS: {
     orange: '04 04 34 04',
-    moov: '04 04 34 04',
+    moov: '70 78 39 04',
     wave: '04 04 34 04',
     whatsapp: '+22604043404'
   },
@@ -285,3 +285,188 @@ Merci de bien vouloir activer mon abonnement Premium. 🙏`;
 };
 
 window.PremiumService = PremiumService;
+
+// =================================================================
+// V51 : MODULE DE CODES D'ACTIVATION PREMIUM
+// =================================================================
+// Permet à l'admin de générer des codes (1 code = 1 plan spécifique)
+// que les utilisateurs entrent dans l'app pour activer leur Premium
+// =================================================================
+const ActivationCodes = {
+
+  // Clé localStorage pour stocker tous les codes
+  STORAGE_KEY: 'bara_activation_codes',
+
+  // Préfixes par plan (lisibles)
+  PLAN_PREFIXES: {
+    weekly: 'SEM',     // BARA-SEM-XK29
+    monthly: 'MOIS',   // BARA-MOIS-XK29
+    yearly: 'ANNEE'    // BARA-ANNEE-XK29
+  },
+
+  // === GÉNÉRATION ===
+  // Format : BARA-PLAN-XXXX (ex: BARA-MOIS-A3F7)
+  generateCode(planId) {
+    const prefix = this.PLAN_PREFIXES[planId];
+    if (!prefix) return null;
+    // 4 caractères aléatoires alphanumériques (sans 0/O/I/1 pour lisibilité)
+    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+    let random = '';
+    for (let i = 0; i < 4; i++) {
+      random += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return `BARA-${prefix}-${random}`;
+  },
+
+  // Générer N codes uniques pour un plan
+  generateBatch(planId, count) {
+    const all = this.getAllCodes();
+    const existing = new Set(all.map(c => c.code));
+    const newCodes = [];
+
+    let attempts = 0;
+    while (newCodes.length < count && attempts < count * 10) {
+      const code = this.generateCode(planId);
+      if (code && !existing.has(code)) {
+        existing.add(code);
+        newCodes.push({
+          code,
+          planId,
+          createdAt: Date.now(),
+          used: false,
+          usedAt: null,
+          usedBy: null,
+          batch: 'batch_' + Date.now()
+        });
+      }
+      attempts++;
+    }
+
+    // Sauvegarder
+    const updated = [...all, ...newCodes];
+    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(updated));
+    return newCodes;
+  },
+
+  // === LECTURE ===
+  getAllCodes() {
+    try {
+      return JSON.parse(localStorage.getItem(this.STORAGE_KEY) || '[]');
+    } catch(e) { return []; }
+  },
+
+  getCode(code) {
+    const normalized = (code || '').trim().toUpperCase();
+    return this.getAllCodes().find(c => c.code === normalized);
+  },
+
+  // === VALIDATION ===
+  // Retourne : { valid: true/false, code: ..., reason: '...' }
+  validateCode(rawCode) {
+    const code = (rawCode || '').trim().toUpperCase();
+    if (!code) return { valid: false, reason: 'Code vide' };
+
+    // Vérifier le format
+    if (!/^BARA-(SEM|MOIS|ANNEE)-[A-Z0-9]{4}$/.test(code)) {
+      return { valid: false, reason: 'Format invalide. Exemple : BARA-MOIS-A3F7' };
+    }
+
+    const found = this.getCode(code);
+    if (!found) {
+      return { valid: false, reason: 'Code introuvable' };
+    }
+
+    if (found.used) {
+      return { valid: false, reason: 'Ce code a déjà été utilisé', code: found };
+    }
+
+    return { valid: true, code: found };
+  },
+
+  // === ACTIVATION ===
+  // Marque le code comme utilisé et retourne les infos d'activation
+  useCode(rawCode, userInfo) {
+    const validation = this.validateCode(rawCode);
+    if (!validation.valid) return validation;
+
+    const all = this.getAllCodes();
+    const idx = all.findIndex(c => c.code === validation.code.code);
+    if (idx < 0) return { valid: false, reason: 'Erreur interne' };
+
+    // Marquer comme utilisé
+    all[idx].used = true;
+    all[idx].usedAt = Date.now();
+    all[idx].usedBy = {
+      userId: userInfo?.id || 'unknown',
+      phone: userInfo?.phoneNumber || '',
+      name: userInfo?.firstName ? (userInfo.firstName + ' ' + (userInfo.lastName || '')) : 'Anonyme'
+    };
+
+    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(all));
+
+    return {
+      valid: true,
+      code: all[idx],
+      planId: all[idx].planId
+    };
+  },
+
+  // === STATISTIQUES ===
+  getStats() {
+    const all = this.getAllCodes();
+    const used = all.filter(c => c.used);
+    const unused = all.filter(c => !c.used);
+
+    const byPlan = { weekly: 0, monthly: 0, yearly: 0 };
+    const usedByPlan = { weekly: 0, monthly: 0, yearly: 0 };
+    all.forEach(c => {
+      if (byPlan[c.planId] !== undefined) byPlan[c.planId]++;
+      if (c.used && usedByPlan[c.planId] !== undefined) usedByPlan[c.planId]++;
+    });
+
+    return {
+      total: all.length,
+      used: used.length,
+      unused: unused.length,
+      byPlan,
+      usedByPlan
+    };
+  },
+
+  // === EXPORT CSV (pour ton suivi Excel/cahier) ===
+  exportCSV() {
+    const all = this.getAllCodes();
+    const headers = ['Code', 'Plan', 'Créé le', 'Utilisé ?', 'Utilisé le', 'Utilisé par'];
+    const rows = all.map(c => {
+      const planLabel = c.planId === 'weekly' ? '1 semaine (1000F)' :
+                        c.planId === 'monthly' ? '1 mois (2000F)' :
+                        c.planId === 'yearly' ? '1 an (10000F)' : c.planId;
+      return [
+        c.code,
+        planLabel,
+        new Date(c.createdAt).toLocaleDateString('fr-FR'),
+        c.used ? 'OUI' : 'NON',
+        c.usedAt ? new Date(c.usedAt).toLocaleDateString('fr-FR') : '',
+        c.used && c.usedBy ? (c.usedBy.name + ' / ' + c.usedBy.phone) : ''
+      ];
+    });
+    return [headers, ...rows].map(r => r.map(v => '"' + String(v).replace(/"/g, '""') + '"').join(',')).join('\n');
+  },
+
+  // === SUPPRESSION ===
+  deleteCode(code) {
+    const all = this.getAllCodes();
+    const filtered = all.filter(c => c.code !== code);
+    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(filtered));
+  },
+
+  // Supprimer tous les codes non utilisés
+  deleteUnused() {
+    const all = this.getAllCodes();
+    const filtered = all.filter(c => c.used);
+    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(filtered));
+    return all.length - filtered.length;
+  }
+};
+
+window.ActivationCodes = ActivationCodes;

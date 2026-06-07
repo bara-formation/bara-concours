@@ -988,6 +988,7 @@ const Admin = {
       case 'concours': mainHtml = this.renderConcoursAdmin(); break;
       case 'annales': mainHtml = this.renderSessionsAdmin(); break;
       case 'session-edit': mainHtml = this.renderSessionEditAdmin(); break;
+      case 'codes': mainHtml = this.renderCodesAdmin(); break;
       case 'settings': mainHtml = this.renderSettings(); break;
       default: mainHtml = this.renderDashboard();
     }
@@ -1091,6 +1092,10 @@ const Admin = {
           <div class="nav-link ${cur === 'annales' ? 'active' : ''}" onclick="Admin.navigate('annales')">
             <span class="nav-icon">📚</span>
             <span>Annales</span>
+          </div>
+          <div class="nav-link ${cur === 'codes' ? 'active' : ''}" onclick="Admin.navigate('codes')">
+            <span class="nav-icon">🎫</span>
+            <span>Codes Premium</span>
           </div>
           <div class="nav-link ${cur === 'settings' ? 'active' : ''}" onclick="Admin.navigate('settings')">
             <span class="nav-icon">⚙️</span>
@@ -5433,6 +5438,219 @@ E: Le Burkina Faso compte 13 régions administratives depuis 2001.`;
     } else {
       this.toast('Erreur lors de la suppression. Note : les annales par défaut ne peuvent pas être supprimées via le tableau d\'admin.', 'danger');
     }
+  },
+
+  // ============================================================
+  // V51 : PAGE CODES PREMIUM (génération, suivi, export)
+  // ============================================================
+  renderCodesAdmin() {
+    if (!window.ActivationCodes) {
+      return '<div class="page-header"><div class="page-title">Codes Premium</div><div class="page-sub">⚠️ Module ActivationCodes non chargé</div></div>';
+    }
+
+    const stats = window.ActivationCodes.getStats();
+    const all = window.ActivationCodes.getAllCodes().slice().reverse(); // récents en premier
+    const filter = this.state.codesFilter || 'all';
+
+    let filtered = all;
+    if (filter === 'unused') filtered = all.filter(c => !c.used);
+    else if (filter === 'used') filtered = all.filter(c => c.used);
+    else if (filter === 'weekly' || filter === 'monthly' || filter === 'yearly') {
+      filtered = all.filter(c => c.planId === filter);
+    }
+
+    return `
+      <div class="page-header">
+        <div>
+          <div class="page-title">🎫 Codes Premium</div>
+          <div class="page-sub">Génère et gère les codes d'activation pour tes utilisateurs payants</div>
+        </div>
+      </div>
+
+      <!-- STATISTIQUES -->
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:0.8rem; margin-bottom:1.2rem">
+        <div class="card" style="padding:1rem">
+          <div style="font-size:0.75rem; color:var(--admin-text-soft); font-weight:700; letter-spacing:0.05em; text-transform:uppercase">Total codes</div>
+          <div style="font-size:1.8rem; font-weight:800; color:var(--admin-text); margin-top:0.3rem">${stats.total}</div>
+        </div>
+        <div class="card" style="padding:1rem; background:#fefce8; border-left:4px solid #ca8a04">
+          <div style="font-size:0.75rem; color:#854d0e; font-weight:700; letter-spacing:0.05em; text-transform:uppercase">Disponibles</div>
+          <div style="font-size:1.8rem; font-weight:800; color:#854d0e; margin-top:0.3rem">${stats.unused}</div>
+        </div>
+        <div class="card" style="padding:1rem; background:#dcfce7; border-left:4px solid #16a34a">
+          <div style="font-size:0.75rem; color:#166534; font-weight:700; letter-spacing:0.05em; text-transform:uppercase">Utilisés</div>
+          <div style="font-size:1.8rem; font-weight:800; color:#166534; margin-top:0.3rem">${stats.used}</div>
+        </div>
+        <div class="card" style="padding:1rem">
+          <div style="font-size:0.75rem; color:var(--admin-text-soft); font-weight:700; letter-spacing:0.05em; text-transform:uppercase">Revenu estimé</div>
+          <div style="font-size:1.4rem; font-weight:800; color:var(--admin-text); margin-top:0.3rem">${(stats.usedByPlan.weekly * 1000 + stats.usedByPlan.monthly * 2000 + stats.usedByPlan.yearly * 10000).toLocaleString('fr-FR')} F</div>
+        </div>
+      </div>
+
+      <!-- GÉNÉRATION DE CODES -->
+      <div class="card" style="margin-bottom:1.2rem; background:linear-gradient(135deg, #fffbeb, white); border-left:4px solid var(--gold-bf)">
+        <h3 style="font-family:'Instrument Serif',serif; font-size:1.3rem; color:var(--green-bf-dark); margin-bottom:0.8rem">⚡ Générer de nouveaux codes</h3>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:0.8rem">
+
+          <div style="background:white; border:1.5px solid var(--admin-border); border-radius:10px; padding:0.9rem">
+            <div style="font-weight:700; color:var(--admin-text)">1 semaine</div>
+            <div style="font-size:0.75rem; color:var(--admin-text-soft); margin-bottom:0.5rem">1 000 FCFA</div>
+            <div style="display:flex; gap:0.3rem; flex-wrap:wrap">
+              <button onclick="Admin.generateCodes('weekly', 5)" class="btn-small">+5</button>
+              <button onclick="Admin.generateCodes('weekly', 10)" class="btn-small">+10</button>
+              <button onclick="Admin.generateCodes('weekly', 50)" class="btn-small">+50</button>
+            </div>
+          </div>
+
+          <div style="background:white; border:1.5px solid var(--gold-bf); border-radius:10px; padding:0.9rem; position:relative">
+            <div style="position:absolute; top:-8px; right:8px; background:var(--gold-bf); color:white; padding:0.1rem 0.5rem; border-radius:4px; font-size:0.65rem; font-weight:800; letter-spacing:0.05em">POPULAIRE</div>
+            <div style="font-weight:700; color:var(--admin-text)">1 mois</div>
+            <div style="font-size:0.75rem; color:var(--admin-text-soft); margin-bottom:0.5rem">2 000 FCFA</div>
+            <div style="display:flex; gap:0.3rem; flex-wrap:wrap">
+              <button onclick="Admin.generateCodes('monthly', 5)" class="btn-small">+5</button>
+              <button onclick="Admin.generateCodes('monthly', 10)" class="btn-small">+10</button>
+              <button onclick="Admin.generateCodes('monthly', 50)" class="btn-small">+50</button>
+            </div>
+          </div>
+
+          <div style="background:white; border:1.5px solid var(--admin-border); border-radius:10px; padding:0.9rem">
+            <div style="font-weight:700; color:var(--admin-text)">1 an</div>
+            <div style="font-size:0.75rem; color:var(--admin-text-soft); margin-bottom:0.5rem">10 000 FCFA</div>
+            <div style="display:flex; gap:0.3rem; flex-wrap:wrap">
+              <button onclick="Admin.generateCodes('yearly', 5)" class="btn-small">+5</button>
+              <button onclick="Admin.generateCodes('yearly', 10)" class="btn-small">+10</button>
+              <button onclick="Admin.generateCodes('yearly', 20)" class="btn-small">+20</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="margin-top:0.9rem; padding-top:0.8rem; border-top:1px dashed var(--admin-border); display:flex; gap:0.5rem; flex-wrap:wrap; justify-content:space-between; align-items:center">
+          <div style="font-size:0.78rem; color:var(--admin-text-soft)">💡 Génère des codes en avance, puis envoie-les par WhatsApp après chaque paiement.</div>
+          <div style="display:flex; gap:0.4rem">
+            ${all.length > 0 ? `<button onclick="Admin.exportCodesCSV()" style="background:white; color:var(--green-bf-dark); border:1.5px solid var(--green-bf); padding:0.5rem 0.8rem; border-radius:6px; font-weight:700; font-size:0.78rem; cursor:pointer">📥 Exporter CSV</button>` : ''}
+            ${stats.unused > 0 ? `<button onclick="Admin.deleteUnusedCodes()" style="background:white; color:#dc2626; border:1.5px solid #fecaca; padding:0.5rem 0.8rem; border-radius:6px; font-weight:700; font-size:0.78rem; cursor:pointer">🗑️ Supprimer non-utilisés</button>` : ''}
+          </div>
+        </div>
+      </div>
+
+      <!-- LISTE DES CODES + FILTRES -->
+      <div class="card">
+        <div style="display:flex; gap:0.4rem; flex-wrap:wrap; margin-bottom:1rem">
+          <button onclick="Admin.setCodesFilter('all')" class="${filter === 'all' ? 'btn-tab active' : 'btn-tab'}">Tous (${all.length})</button>
+          <button onclick="Admin.setCodesFilter('unused')" class="${filter === 'unused' ? 'btn-tab active' : 'btn-tab'}">🟢 Disponibles (${stats.unused})</button>
+          <button onclick="Admin.setCodesFilter('used')" class="${filter === 'used' ? 'btn-tab active' : 'btn-tab'}">🔴 Utilisés (${stats.used})</button>
+          <div style="flex:1"></div>
+          <button onclick="Admin.setCodesFilter('weekly')" class="${filter === 'weekly' ? 'btn-tab active' : 'btn-tab'}">📅 1 sem</button>
+          <button onclick="Admin.setCodesFilter('monthly')" class="${filter === 'monthly' ? 'btn-tab active' : 'btn-tab'}">⭐ 1 mois</button>
+          <button onclick="Admin.setCodesFilter('yearly')" class="${filter === 'yearly' ? 'btn-tab active' : 'btn-tab'}">🏆 1 an</button>
+        </div>
+
+        ${filtered.length === 0 ? `
+          <div style="text-align:center; padding:2rem 1rem; color:var(--admin-text-soft)">
+            <div style="font-size:2.5rem; opacity:0.5">🎫</div>
+            <div style="font-weight:700; margin-top:0.4rem">Aucun code dans cette catégorie</div>
+            <div style="font-size:0.85rem; margin-top:0.3rem">Génère ton premier lot ci-dessus</div>
+          </div>
+        ` : `
+          <div style="display:flex; flex-direction:column; gap:0.5rem">
+            ${filtered.map(c => this.renderCodeRow(c)).join('')}
+          </div>
+        `}
+      </div>
+
+      <style>
+        .btn-small {
+          padding:0.35rem 0.7rem; border:1.5px solid var(--admin-border); background:white;
+          border-radius:6px; font-weight:700; font-size:0.78rem; cursor:pointer; color:var(--admin-text)
+        }
+        .btn-small:hover { background:var(--cream); }
+        .btn-tab {
+          padding:0.45rem 0.8rem; border:1.5px solid var(--admin-border); background:white;
+          border-radius:8px; font-weight:700; font-size:0.78rem; cursor:pointer; color:var(--admin-text-soft)
+        }
+        .btn-tab.active { background:var(--green-bf); color:white; border-color:var(--green-bf); }
+      </style>
+    `;
+  },
+
+  renderCodeRow(c) {
+    const planLabel = c.planId === 'weekly' ? '1 sem' : c.planId === 'monthly' ? '1 mois' : '1 an';
+    const planColor = c.planId === 'weekly' ? '#0891b2' : c.planId === 'monthly' ? '#d97706' : '#7c3aed';
+    const dateCreation = new Date(c.createdAt).toLocaleDateString('fr-FR');
+    const dateUsage = c.usedAt ? new Date(c.usedAt).toLocaleDateString('fr-FR') : '';
+
+    return `
+      <div style="background:${c.used ? '#fafaf9' : 'white'}; border:1px solid var(--admin-border); border-radius:10px; padding:0.7rem 0.9rem; display:flex; gap:0.7rem; align-items:center; ${c.used ? 'opacity:0.75' : ''}">
+
+        <div style="font-family:monospace; font-weight:800; font-size:0.95rem; letter-spacing:0.05em; color:${c.used ? 'var(--admin-text-soft)' : 'var(--admin-text)'}; ${c.used ? 'text-decoration:line-through' : ''}">${c.code}</div>
+
+        <span style="background:${planColor}20; color:${planColor}; padding:0.15rem 0.5rem; border-radius:999px; font-size:0.7rem; font-weight:800">${planLabel}</span>
+
+        <div style="flex:1; min-width:0; font-size:0.78rem; color:var(--admin-text-soft)">
+          ${c.used ? `🔴 Utilisé le ${dateUsage}${c.usedBy?.name ? ' par <strong>' + c.usedBy.name + '</strong>' : ''}${c.usedBy?.phone ? ' (' + c.usedBy.phone + ')' : ''}` : `🟢 Disponible • Créé le ${dateCreation}`}
+        </div>
+
+        ${!c.used ? `
+          <button onclick="Admin.copyCodeToClipboard('${c.code}')" style="background:#dbeafe; color:#1e40af; border:1.5px solid #93c5fd; padding:0.35rem 0.6rem; border-radius:6px; font-weight:700; font-size:0.75rem; cursor:pointer" title="Copier ce code">📋</button>
+          <button onclick="Admin.deleteCode('${c.code}')" style="background:white; color:#dc2626; border:1.5px solid #fecaca; padding:0.35rem 0.6rem; border-radius:6px; font-weight:700; font-size:0.75rem; cursor:pointer" title="Supprimer">🗑️</button>
+        ` : ''}
+      </div>
+    `;
+  },
+
+  // === ACTIONS ===
+  setCodesFilter(filter) {
+    this.state.codesFilter = filter;
+    this.render();
+  },
+
+  generateCodes(planId, count) {
+    const codes = window.ActivationCodes.generateBatch(planId, count);
+    const planName = planId === 'weekly' ? '1 semaine' : planId === 'monthly' ? '1 mois' : '1 an';
+    this.toast(`✅ ${codes.length} codes "${planName}" générés`);
+    this.render();
+  },
+
+  copyCodeToClipboard(code) {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(code).then(() => this.toast('✅ Code copié : ' + code));
+    } else {
+      this.toast('❌ Copie impossible, sélectionne manuellement', 'danger');
+    }
+  },
+
+  deleteCode(code) {
+    if (!confirm(`🗑️ Supprimer le code ${code} ?\n\nCette action est irréversible.`)) return;
+    window.ActivationCodes.deleteCode(code);
+    this.toast('🗑️ Code supprimé');
+    this.render();
+  },
+
+  deleteUnusedCodes() {
+    const stats = window.ActivationCodes.getStats();
+    if (!confirm(`🗑️ Supprimer les ${stats.unused} codes non utilisés ?\n\nCette action est irréversible. Les codes utilisés seront gardés pour l'historique.`)) return;
+    const nb = window.ActivationCodes.deleteUnused();
+    this.toast(`🗑️ ${nb} codes supprimés`);
+    this.render();
+  },
+
+  exportCodesCSV() {
+    const csv = window.ActivationCodes.exportCSV();
+    // Préfixer BOM UTF-8 pour Excel
+    const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'bara-codes-' + new Date().toISOString().split('T')[0] + '.csv';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => {
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }, 100);
+    this.toast('📥 CSV téléchargé');
   },
 
   renderSettings() {
