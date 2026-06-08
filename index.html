@@ -6643,18 +6643,39 @@ const App = {
 
     // Naviguer selon le contexte
     if (isNewUser) {
-      // Nouveau compte → onboarding pour finaliser (concours visés, niveau)
-      // Si on a déjà des infos (depuis signup Email), on pré-saute les premières étapes
+      // Nouveau compte → onboarding pour finaliser (niveau d'études + concours visés)
       this.state.onboarding = this.state.onboarding || {};
-      if (!this.state.onboarding.firstName && this.state.user.firstName) {
+      // Pré-remplir avec les données du signup
+      if (this.state.user.firstName) {
         this.state.onboarding.firstName = this.state.user.firstName;
+      }
+      if (this.state.user.lastName) {
         this.state.onboarding.lastName = this.state.user.lastName;
+      }
+      if (this.state.user.phoneNumber) {
         this.state.onboarding.phoneNumber = this.state.user.phoneNumber;
+      }
+      if (this.state.user.ville) {
         this.state.onboarding.ville = this.state.user.ville;
       }
-      // Marqueur : on vient de Firebase, l'onboarding peut sauter les questions déjà répondues
+      // V58.3 : Marqueurs Firebase
       this.state.onboarding._fromFirebase = true;
       this.state.onboarding._provider = profile.authProvider || 'email';
+
+      // V58.3 : Décider de l'étape de départ selon les infos déjà connues
+      const hasName = !!(this.state.onboarding.firstName);
+      const hasVille = !!(this.state.onboarding.ville);
+      if (hasName && hasVille) {
+        // Email signup : toutes les infos personnelles sont là → sauter à l'étape 2 (niveau)
+        this.state.onboarding.step = 2;
+      } else if (hasName) {
+        // Google sign-in : on a le nom mais pas la ville → étape 1 mais juste pour ville
+        this.state.onboarding.step = 1;
+      } else {
+        // Aucune info → étape 1 complète
+        this.state.onboarding.step = 1;
+      }
+
       this.navigate('onboarding');
     } else {
       // Compte existant → directement home
@@ -6714,21 +6735,26 @@ const App = {
     const niveaux = ['CEP', 'BEPC', 'BAC', 'Licence', 'Licence et plus'];
     const villes = ['Ouagadougou', 'Bobo-Dioulasso', 'Koudougou', 'Banfora', 'Ouahigouya', 'Kaya', 'Tenkodogo', 'Fada N\'Gourma', 'Dédougou', 'Dori', 'Gaoua', 'Manga', 'Ziniaré', 'Bogandé', 'Djibo', 'Tougan', 'Diapaga', 'Autre'];
 
+    // V58.3 : Adapter le total d'étapes si on vient de Firebase Email (étape 1 déjà faite)
+    const fromFirebaseEmail = o._fromFirebase && o._provider === 'email';
+    const totalSteps = fromFirebaseEmail ? 2 : 3;
+    const displayedStep = fromFirebaseEmail ? (o.step - 1) : o.step;
+
     return `
       <div class="page auth-screen">
-        ${o.step > 1 ? `<button class="auth-back" onclick="App.onboardingBack()">←</button>` : '<div style="height:55px"></div>'}
+        ${o.step > (fromFirebaseEmail ? 2 : 1) ? `<button class="auth-back" onclick="App.onboardingBack()">←</button>` : '<div style="height:55px"></div>'}
 
         <div class="auth-logo-row">
           <img src="icons/icon-192.png" class="auth-logo" alt="Bara Concours">
           <div>
             <div class="auth-brand">Personnalisation</div>
-            <div class="auth-tagline">Étape ${o.step} sur 3</div>
+            <div class="auth-tagline">Étape ${displayedStep} sur ${totalSteps}</div>
           </div>
         </div>
 
         <div class="onboarding-card">
           <div class="onboard-step-indicator">
-            <div class="onboard-dot ${o.step === 1 ? 'active' : (o.step > 1 ? 'done' : '')}"></div>
+            ${fromFirebaseEmail ? '' : `<div class="onboard-dot ${o.step === 1 ? 'active' : (o.step > 1 ? 'done' : '')}"></div>`}
             <div class="onboard-dot ${o.step === 2 ? 'active' : (o.step > 2 ? 'done' : '')}"></div>
             <div class="onboard-dot ${o.step === 3 ? 'active' : ''}"></div>
           </div>
@@ -8101,7 +8127,7 @@ const App = {
               <div class="signup-prompt-icon">📱</div>
               <div class="signup-prompt-title">Crée ton <span>compte</span></div>
               <div class="signup-prompt-desc">Sauvegarde ta progression, retrouve tes scores partout et reçois des rappels quotidiens.</div>
-              <button class="signup-prompt-cta" onclick="App.navigate('auth-phone')">Créer mon compte →</button>
+              <button class="signup-prompt-cta" onclick="App.navigate(window.FirebaseAuth && window.FirebaseAuth.USE_FIREBASE_AUTH ? 'auth-welcome' : 'auth-phone')">Créer mon compte →</button>
             </div>
           `}
 
@@ -8400,7 +8426,7 @@ const App = {
   proceedToPayment() {
     if (!this.state.user.isLoggedIn) {
       this.toast('🔒 Crée un compte pour passer Premium');
-      setTimeout(() => this.navigate('auth-phone'), 800);
+      setTimeout(() => this.navigate(window.FirebaseAuth && window.FirebaseAuth.USE_FIREBASE_AUTH ? 'auth-welcome' : 'auth-phone'), 800);
       return;
     }
     if (!this.state.premiumSelection?.plan) {
@@ -8807,7 +8833,7 @@ const App = {
           </div>
 
           ${!isLoggedIn ? `
-            <div class="signup-prompt-card" onclick="App.navigate('auth-phone')">
+            <div class="signup-prompt-card" onclick="App.navigate(window.FirebaseAuth && window.FirebaseAuth.USE_FIREBASE_AUTH ? 'auth-welcome' : 'auth-phone')">
               <div class="signup-prompt-icon">🔒</div>
               <div class="signup-prompt-title">Connecte-toi pour <span>participer</span></div>
               <div class="signup-prompt-desc">Tu peux lire les discussions, mais il faut un compte pour publier ou répondre.</div>
@@ -8937,7 +8963,7 @@ const App = {
               <button class="reply-send" onclick="App.sendReply()" aria-label="Envoyer">📤</button>
             </div>
           ` : `
-            <div class="signup-prompt-card" style="margin-top:1rem" onclick="App.navigate('auth-phone')">
+            <div class="signup-prompt-card" style="margin-top:1rem" onclick="App.navigate(window.FirebaseAuth && window.FirebaseAuth.USE_FIREBASE_AUTH ? 'auth-welcome' : 'auth-phone')">
               <div class="signup-prompt-icon">🔒</div>
               <div class="signup-prompt-title">Connecte-toi pour <span>répondre</span></div>
               <button class="signup-prompt-cta">Créer mon compte →</button>

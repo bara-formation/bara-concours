@@ -429,6 +429,30 @@ const FirebaseAuth = {
   },
 
   // ====================================================================
+  // V59 : ADMIN - LISTE DES UTILISATEURS
+  // ====================================================================
+
+  // Récupérer tous les utilisateurs Firestore (admin seulement)
+  // Filtré côté règles de sécurité — n'importe qui qui tente sera bloqué par Firestore Rules
+  async getAllUsers() {
+    if (!this.isFirebaseReady || !this.user) {
+      return { success: false, error: 'Pas connecté', users: [] };
+    }
+    try {
+      const colRef = this._fbFns.collection(this.db, 'users');
+      const snapshot = await this._fbFns.getDocs(colRef);
+      const users = [];
+      snapshot.forEach(doc => {
+        users.push({ ...doc.data(), uid: doc.id });
+      });
+      return { success: true, users };
+    } catch (e) {
+      console.error('[Firebase] Erreur getAllUsers :', e);
+      return { success: false, error: e.message, users: [] };
+    }
+  },
+
+  // ====================================================================
   // V56.1 : STUBS DE COMPATIBILITÉ ASCENDANTE
   // ====================================================================
   // L'ancien onboarding SMS (avant Firebase Email/Google) appelle ces

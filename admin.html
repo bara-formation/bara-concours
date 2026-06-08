@@ -816,13 +816,52 @@ const Admin = {
   // ============================================
 
   loadData() {
-    // Lit les données stockées par l'app principale
+    // V59 : Lit les données. Pour les users : cache local en sync + refresh Firestore en async
     return {
       pendingPayments: this.getPendingPayments(),
-      users: this.getMockUsers(),
+      users: this.getRealUsersLocal(),  // V59 : Lit le cache local des vrais users
       forumTopics: this.getForumTopics(),
       reportedTopics: this.getReportedTopics()
     };
+  },
+
+  // V59 : Refresh async des utilisateurs depuis Firestore
+  // Appelé automatiquement quand on est sur Dashboard, Users ou Payments
+  async refreshUsersFromFirestore() {
+    if (!window.FirebaseAuth || !window.FirebaseAuth.isFirebaseReady) return;
+    if (this.state._usersRefreshing) return;  // Pas de double appel
+    this.state._usersRefreshing = true;
+    try {
+      const result = await window.FirebaseAuth.getAllUsers();
+      if (!result.success) {
+        console.warn('[V59] getAllUsers échoué :', result.error);
+        this.state._usersRefreshing = false;
+        return;
+      }
+      // Sauvegarder dans le cache local
+      localStorage.setItem('bara_real_users_cache', JSON.stringify(result.users));
+      this.state._usersRefreshing = false;
+      // Re-render si on est sur une page qui affiche des users
+      if (['dashboard', 'users', 'payments'].includes(this.state.currentPage)) {
+        this.render();
+      }
+    } catch (e) {
+      console.error('[V59] Erreur refresh users :', e);
+      this.state._usersRefreshing = false;
+    }
+  },
+
+  // V59 : Lit les vrais utilisateurs depuis le cache local
+  getRealUsersLocal() {
+    try {
+      const saved = localStorage.getItem('bara_real_users_cache');
+      if (saved) {
+        const users = JSON.parse(saved);
+        if (Array.isArray(users) && users.length > 0) return users;
+      }
+    } catch(e) {}
+    // Pas de cache encore → renvoie un tableau vide (sera rempli au prochain refresh async)
+    return [];
   },
 
   getPendingPayments() {
@@ -893,6 +932,10 @@ const Admin = {
   saveMockUsers(users) {
     localStorage.setItem('bara_admin_users', JSON.stringify(users));
   },
+
+  // ====================================================================
+  // Anti-doublon : ne pas avoir 2 fois getMockUsers ci-dessous
+  // ====================================================================
 
   getForumTopics() {
     try {
@@ -1125,6 +1168,45 @@ const Admin = {
     const premiumUsers = data.users.filter(u => u.isPremium).length;
     const totalQCM = data.users.reduce((s, u) => s + (u.totalQCM || 0), 0);
 
+    // V59 : Déclencher le refresh async des vrais utilisateurs depuis Firestore
+    this.refreshUsersFromFirestore();
+
+    // V59 : Détecter état Firestore pour le banner
+    const isFirebaseReady = window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady;
+    const isLoggedIn = isFirebaseReady && window.FirebaseAuth.user;
+    const isAdminEmail = isLoggedIn && window.ActivationCodes && window.ActivationCodes.isCurrentUserAdmin();
+    const hasRealData = totalUsers > 0;
+
+    let bannerHtml = '';
+    if (!isLoggedIn) {
+      bannerHtml = `
+        <div class="demo-banner" style="background:#fef3c7; border-left:4px solid #d97706">
+          <strong>⚠️ Connexion Firebase requise :</strong> connecte-toi avec ton compte admin Google pour voir les vrais utilisateurs.
+          <button onclick="Admin.signInAdminWithGoogle()" style="background:white; color:#3c4043; border:1.5px solid #dadce0; padding:0.5rem 0.8rem; border-radius:8px; cursor:pointer; margin-left:1rem; font-weight:600; font-size:0.85rem">Se connecter avec Google</button>
+        </div>
+      `;
+    } else if (!isAdminEmail) {
+      bannerHtml = `
+        <div class="demo-banner" style="background:#fee2e2; border-left:4px solid #dc2626">
+          <strong>🚫 Compte non autorisé :</strong> Tu es connecté avec ${window.FirebaseAuth.user.email}. Connecte-toi avec <strong>bara.formation@gmail.com</strong> pour voir les vrais utilisateurs.
+          <button onclick="Admin.signOutAndReconnect()" style="background:#dc2626; color:white; border:none; padding:0.5rem 0.8rem; border-radius:8px; cursor:pointer; margin-left:1rem; font-weight:600; font-size:0.85rem">🔄 Reconnecter</button>
+        </div>
+      `;
+    } else if (!hasRealData) {
+      bannerHtml = `
+        <div class="demo-banner" style="background:#dbeafe; border-left:4px solid #2563eb">
+          <strong>⏳ Synchronisation en cours...</strong> Les utilisateurs Firestore se chargent.
+          ${this.state._usersRefreshing ? ' Patience...' : ' Aucun utilisateur trouvé pour le moment.'}
+        </div>
+      `;
+    } else {
+      bannerHtml = `
+        <div class="demo-banner" style="background:#dcfce7; border-left:4px solid #16a34a">
+          <strong>☁️ Données réelles synchronisées :</strong> ${totalUsers} utilisateur${totalUsers > 1 ? 's' : ''} chargé${totalUsers > 1 ? 's' : ''} depuis Firestore${this.state._usersRefreshing ? ' (rafraîchissement...)' : ''}.
+        </div>
+      `;
+    }
+
     return `
       <div class="page-header">
         <div>
@@ -1133,9 +1215,7 @@ const Admin = {
         </div>
       </div>
 
-      <div class="demo-banner">
-        <strong>🛠️ Mode démo :</strong> les données affichées sont des exemples. Configure Firebase pour connecter ton tableau d'admin aux vraies données.
-      </div>
+      ${bannerHtml}
 
       <div class="stats-grid">
         <div class="stat-card" style="--accent-color:#fef9c3; --accent-text:#92400e">
@@ -1230,6 +1310,10 @@ const Admin = {
           <div class="page-title">Gestion des <span>paiements</span></div>
           <div class="page-sub">Active les abonnements Premium en 1 clic</div>
         </div>
+      </div>
+
+      <div class="demo-banner" style="background:#dbeafe; border-left:4px solid #2563eb">
+        <strong>💡 Nouveau système Codes Premium :</strong> Les utilisateurs activent maintenant Premium en entrant un code que tu génères. Va dans <a onclick="Admin.navigate('codes')" style="color:#1e40af; font-weight:700; cursor:pointer; text-decoration:underline">🎫 Codes Premium</a> pour gérer ça. La section ci-dessous reste pour l'historique des paiements manuels.
       </div>
 
       <div class="tabs">
@@ -1367,30 +1451,52 @@ const Admin = {
     const search = (this.state.searchQuery || '').toLowerCase();
     const tab = this.state.currentTab || 'all';
 
-    let filtered = data.users;
+    // V59 : Refresh async des vrais utilisateurs Firestore
+    this.refreshUsersFromFirestore();
+
+    // V59 : Normaliser les données (Firestore peut utiliser displayName, email, phoneNumber, region)
+    const normalized = data.users.map(u => this.normalizeUser(u));
+
+    let filtered = normalized;
     if (tab === 'premium') filtered = filtered.filter(u => u.isPremium);
     if (tab === 'free') filtered = filtered.filter(u => !u.isPremium);
     if (search) {
       filtered = filtered.filter(u => {
-        const txt = (u.name + ' ' + u.phone + ' ' + (u.city || '')).toLowerCase();
+        const txt = (u.name + ' ' + u.phone + ' ' + (u.city || '') + ' ' + (u.email || '')).toLowerCase();
         return txt.includes(search);
       });
     }
 
-    const total = data.users.length;
-    const premium = data.users.filter(u => u.isPremium).length;
+    const total = normalized.length;
+    const premium = normalized.filter(u => u.isPremium).length;
     const free = total - premium;
+
+    // V59 : État de chargement
+    const isFirebaseReady = window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady;
+    const isAdminEmail = isFirebaseReady && window.ActivationCodes && window.ActivationCodes.isCurrentUserAdmin();
+    const showEmptyState = total === 0;
 
     return `
       <div class="page-header">
         <div>
           <div class="page-title">Gestion des <span>utilisateurs</span></div>
-          <div class="page-sub">${total} étudiant${total > 1 ? 's' : ''} inscrit${total > 1 ? 's' : ''}</div>
+          <div class="page-sub">
+            ${total} étudiant${total > 1 ? 's' : ''} inscrit${total > 1 ? 's' : ''}
+            ${isAdminEmail ? '<span style="background:#dcfce7; color:#166534; padding:0.15rem 0.5rem; border-radius:999px; font-size:0.7rem; font-weight:800; margin-left:0.5rem">☁️ FIRESTORE</span>' : ''}
+            ${this.state._usersRefreshing ? '<span style="color:#2563eb; font-size:0.78rem; margin-left:0.5rem">⏳ Synchro...</span>' : ''}
+          </div>
         </div>
         <button class="btn-action btn-success" onclick="Admin.openAddUserModal()" style="padding:0.7rem 1.2rem">
           ⭐ Activer Premium
         </button>
       </div>
+
+      ${!isAdminEmail ? `
+        <div class="demo-banner" style="background:#fef3c7; border-left:4px solid #d97706">
+          <strong>⚠️ Connexion admin requise :</strong> connecte-toi avec bara.formation@gmail.com pour voir les vrais utilisateurs.
+          <button onclick="Admin.signInAdminWithGoogle()" style="background:white; color:#3c4043; border:1.5px solid #dadce0; padding:0.5rem 0.8rem; border-radius:8px; cursor:pointer; margin-left:1rem; font-weight:600; font-size:0.85rem">Se connecter avec Google</button>
+        </div>
+      ` : ''}
 
       <div class="tabs">
         <button class="tab ${tab === 'all' ? 'active' : ''}" onclick="Admin.setTab('all')">
@@ -1407,10 +1513,16 @@ const Admin = {
       <div class="table-wrap">
         <div class="table-header">
           <div class="table-title">👥 Liste des utilisateurs</div>
-          <input type="text" class="search-input" placeholder="Nom, numéro, ville..." value="${this.state.searchQuery}" oninput="Admin.search(this.value)">
+          <input type="text" class="search-input" placeholder="Nom, email, numéro, ville..." value="${this.state.searchQuery}" oninput="Admin.search(this.value)">
         </div>
 
-        ${filtered.length === 0 ? `
+        ${showEmptyState ? `
+          <div class="empty-state">
+            <div class="empty-icon">${isAdminEmail ? '👥' : '🔒'}</div>
+            <div class="empty-title">${isAdminEmail ? 'Aucun utilisateur encore' : 'Connecte-toi pour voir les utilisateurs'}</div>
+            <div class="empty-sub">${isAdminEmail ? 'Les utilisateurs apparaîtront ici dès qu\'ils s\'inscriront via Firebase.' : 'Utilise le bouton "Se connecter avec Google" ci-dessus.'}</div>
+          </div>
+        ` : filtered.length === 0 ? `
           <div class="empty-state">
             <div class="empty-icon">🔍</div>
             <div class="empty-title">Aucun utilisateur trouvé</div>
@@ -1437,17 +1549,55 @@ const Admin = {
     `;
   },
 
+  // V59 : Normaliser un utilisateur Firestore vers le format attendu par l'admin
+  normalizeUser(u) {
+    if (!u) return u;
+    return {
+      id: u.uid || u.id,
+      name: u.displayName || u.name || (u.email ? u.email.split('@')[0] : 'Anonyme'),
+      phone: u.phoneNumber || u.phone || '',
+      email: u.email || '',
+      city: u.region || u.city || u.ville || '',
+      targetConcours: (u.concoursVises && u.concoursVises[0]) || u.targetConcours || '',
+      isPremium: u.isPremium || false,
+      premiumPlan: u.premiumPlan || null,
+      premiumExpiresAt: u.premiumExpiresAt || null,
+      premiumActivatedAt: u.premiumActivatedAt || null,
+      totalQCM: u.totalQCM || 0,
+      joinedAt: typeof u.createdAt === 'object' && u.createdAt?.seconds ? u.createdAt.seconds * 1000 : (u.createdAt || u.joinedAt || Date.now()),
+      authProvider: u.authProvider || '',
+      photoURL: u.photoURL || ''
+    };
+  },
+
   renderUserRow(u) {
     const concours = u.targetConcours ? CONCOURS.find(c => c.id === u.targetConcours) : null;
     const isPrem = window.PremiumService.isUserPremium(u);
     const days = isPrem ? window.PremiumService.daysRemaining(u) : 0;
     const planName = u.premiumPlan ? window.PremiumService.PLANS[u.premiumPlan]?.name : '';
 
+    // V59 : Construire les infos d'identification (email + phone + ville)
+    const idLines = [];
+    if (u.email) idLines.push('📧 ' + u.email);
+    if (u.phone) idLines.push('📱 ' + this.formatPhone(u.phone));
+    if (u.city) idLines.push('📍 ' + u.city);
+    const idHtml = idLines.length > 0 ? idLines.join(' · ') : '-';
+
+    // V59 : Badge provider (Google/Email)
+    const providerBadge = u.authProvider === 'google'
+      ? '<span style="background:#dbeafe; color:#1e40af; padding:0.1rem 0.4rem; border-radius:999px; font-size:0.65rem; font-weight:700; margin-left:0.4rem">G</span>'
+      : u.authProvider === 'email'
+        ? '<span style="background:#fef3c7; color:#92400e; padding:0.1rem 0.4rem; border-radius:999px; font-size:0.65rem; font-weight:700; margin-left:0.4rem">@</span>'
+        : '';
+
     return `
       <tr>
         <td>
-          <div style="font-weight:600">${u.name}</div>
-          <div style="font-size:0.78rem; color:var(--ink-mute)">${this.formatPhone(u.phone)} · ${u.city || '-'}</div>
+          <div style="font-weight:600; display:flex; align-items:center; gap:0.4rem">
+            ${u.photoURL ? `<img src="${u.photoURL}" style="width:24px; height:24px; border-radius:50%; object-fit:cover" alt="">` : ''}
+            ${u.name}${providerBadge}
+          </div>
+          <div style="font-size:0.75rem; color:var(--ink-mute); margin-top:0.15rem">${idHtml}</div>
         </td>
         <td>${concours ? `<span class="badge badge-info">${concours.sigle}</span>` : '<span style="color:var(--ink-mute)">-</span>'}</td>
         <td>
@@ -5658,6 +5808,16 @@ E: Le Burkina Faso compte 13 régions administratives depuis 2001.`;
     const dateCreation = new Date(c.createdAt).toLocaleDateString('fr-FR');
     const dateUsage = c.usedAt ? new Date(c.usedAt).toLocaleDateString('fr-FR') : '';
 
+    // V58.3 : Construire l'info "utilisé par" avec email + nom + téléphone
+    let usedByInfo = '';
+    if (c.used && c.usedBy) {
+      const parts = [];
+      if (c.usedBy.name && c.usedBy.name !== 'Anonyme') parts.push('<strong>' + c.usedBy.name + '</strong>');
+      if (c.usedBy.email) parts.push('📧 ' + c.usedBy.email);
+      if (c.usedBy.phone) parts.push('📱 ' + c.usedBy.phone);
+      usedByInfo = parts.length > 0 ? ' par ' + parts.join(' • ') : '';
+    }
+
     return `
       <div style="background:${c.used ? '#fafaf9' : 'white'}; border:1px solid var(--admin-border); border-radius:10px; padding:0.7rem 0.9rem; display:flex; gap:0.7rem; align-items:center; ${c.used ? 'opacity:0.75' : ''}">
 
@@ -5665,8 +5825,8 @@ E: Le Burkina Faso compte 13 régions administratives depuis 2001.`;
 
         <span style="background:${planColor}20; color:${planColor}; padding:0.15rem 0.5rem; border-radius:999px; font-size:0.7rem; font-weight:800">${planLabel}</span>
 
-        <div style="flex:1; min-width:0; font-size:0.78rem; color:var(--admin-text-soft)">
-          ${c.used ? `🔴 Utilisé le ${dateUsage}${c.usedBy?.name ? ' par <strong>' + c.usedBy.name + '</strong>' : ''}${c.usedBy?.phone ? ' (' + c.usedBy.phone + ')' : ''}` : `🟢 Disponible • Créé le ${dateCreation}`}
+        <div style="flex:1; min-width:0; font-size:0.78rem; color:var(--admin-text-soft); line-height:1.4">
+          ${c.used ? `🔴 Utilisé le ${dateUsage}${usedByInfo}` : `🟢 Disponible • Créé le ${dateCreation}`}
         </div>
 
         ${!c.used ? `
