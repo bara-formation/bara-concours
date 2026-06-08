@@ -287,29 +287,52 @@ Merci de bien vouloir activer mon abonnement Premium. 🙏`;
 window.PremiumService = PremiumService;
 
 // =================================================================
-// V51 : MODULE DE CODES D'ACTIVATION PREMIUM
+// V58 : MODULE DE CODES D'ACTIVATION PREMIUM (Firestore + localStorage)
 // =================================================================
 // Permet à l'admin de générer des codes (1 code = 1 plan spécifique)
-// que les utilisateurs entrent dans l'app pour activer leur Premium
+// Stockage prioritaire dans Firestore (sync entre admin/utilisateurs)
+// Fallback localStorage si pas internet ou Firebase indisponible
 // =================================================================
 const ActivationCodes = {
 
-  // Clé localStorage pour stocker tous les codes
-  STORAGE_KEY: 'bara_activation_codes',
+  // === CONFIGURATION ===
+  STORAGE_KEY: 'bara_activation_codes',  // Cache local
+  ADMIN_EMAILS: ['bara.formation@gmail.com'],  // V58 : Liste des emails admin
+  FIRESTORE_COLLECTION: 'activationCodes',  // Nom de la collection Firestore
 
-  // Préfixes par plan (lisibles)
   PLAN_PREFIXES: {
-    weekly: 'SEM',     // BARA-SEM-XK29
-    monthly: 'MOIS',   // BARA-MOIS-XK29
-    yearly: 'ANNEE'    // BARA-ANNEE-XK29
+    weekly: 'SEM',
+    monthly: 'MOIS',
+    yearly: 'ANNEE'
   },
 
-  // === GÉNÉRATION ===
-  // Format : BARA-PLAN-XXXX (ex: BARA-MOIS-A3F7)
+  // ====================================================================
+  // V58 : UTILITAIRES FIRESTORE
+  // ====================================================================
+
+  // Vérifier si l'utilisateur actuel est admin
+  isCurrentUserAdmin() {
+    if (!window.FirebaseAuth || !window.FirebaseAuth.user) return false;
+    const email = (window.FirebaseAuth.user.email || '').toLowerCase();
+    return this.ADMIN_EMAILS.includes(email);
+  },
+
+  // Firestore est-il disponible et utilisateur connecté ?
+  isFirestoreReady() {
+    return window.FirebaseAuth
+        && window.FirebaseAuth.isFirebaseReady
+        && window.FirebaseAuth.db
+        && window.FirebaseAuth._fbFns
+        && window.FirebaseAuth.user;
+  },
+
+  // ====================================================================
+  // GÉNÉRATION
+  // ====================================================================
+
   generateCode(planId) {
     const prefix = this.PLAN_PREFIXES[planId];
     if (!prefix) return null;
-    // 4 caractères aléatoires alphanumériques (sans 0/O/I/1 pour lisibilité)
     const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
     let random = '';
     for (let i = 0; i < 4; i++) {
@@ -318,21 +341,29 @@ const ActivationCodes = {
     return `BARA-${prefix}-${random}`;
   },
 
-  // Générer N codes uniques pour un plan
-  generateBatch(planId, count) {
-    const all = this.getAllCodes();
-    const existing = new Set(all.map(c => c.code));
+  // Générer N codes uniques (admin seulement)
+  // V58 : sauvegarde dans Firestore si disponible, sinon localStorage
+  async generateBatch(planId, count) {
+    if (!this.isCurrentUserAdmin()) {
+      console.error('[V58] Génération refusée : tu n\'es pas admin');
+      return { success: false, error: 'Non autorisé', codes: [] };
+    }
+
+    // Récupérer les codes existants pour éviter les doublons
+    const existing = await this.getAllCodes();
+    const existingSet = new Set(existing.map(c => c.code));
     const newCodes = [];
 
     let attempts = 0;
     while (newCodes.length < count && attempts < count * 10) {
       const code = this.generateCode(planId);
-      if (code && !existing.has(code)) {
-        existing.add(code);
+      if (code && !existingSet.has(code)) {
+        existingSet.add(code);
         newCodes.push({
           code,
           planId,
           createdAt: Date.now(),
+          createdBy: window.FirebaseAuth?.user?.email || 'admin',
           used: false,
           usedAt: null,
           usedBy: null,
@@ -343,77 +374,179 @@ const ActivationCodes = {
     }
 
     // Sauvegarder
-    const updated = [...all, ...newCodes];
-    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(updated));
-    return newCodes;
+    if (this.isFirestoreReady()) {
+      // Firestore : batch d'écritures
+      try {
+        const fb = window.FirebaseAuth;
+        const promises = newCodes.map(c => {
+          const ref = fb._fbFns.doc(fb.db, this.FIRESTORE_COLLECTION, c.code);
+          return fb._fbFns.setDoc(ref, c);
+        });
+        await Promise.all(promises);
+        console.log('[V58] ✓', newCodes.length, 'codes générés dans Firestore');
+        // Mettre à jour le cache local aussi
+        this._syncLocalCache([...existing, ...newCodes]);
+        return { success: true, codes: newCodes, source: 'firestore' };
+      } catch (e) {
+        console.error('[V58] Erreur Firestore :', e);
+        // Fallback localStorage
+      }
+    }
+
+    // Fallback localStorage
+    const all = [...existing, ...newCodes];
+    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(all));
+    return { success: true, codes: newCodes, source: 'local' };
   },
 
-  // === LECTURE ===
-  getAllCodes() {
+  // ====================================================================
+  // LECTURE (admin)
+  // ====================================================================
+
+  // Récupérer tous les codes (depuis Firestore si possible)
+  async getAllCodes() {
+    if (this.isFirestoreReady() && this.isCurrentUserAdmin()) {
+      try {
+        const fb = window.FirebaseAuth;
+        const colRef = fb._fbFns.collection(fb.db, this.FIRESTORE_COLLECTION);
+        const snapshot = await fb._fbFns.getDocs(colRef);
+        const codes = [];
+        snapshot.forEach(doc => codes.push(doc.data()));
+        // Mettre à jour le cache local
+        this._syncLocalCache(codes);
+        return codes;
+      } catch (e) {
+        console.warn('[V58] Erreur lecture Firestore, fallback local :', e);
+      }
+    }
+    // Fallback localStorage
     try {
       return JSON.parse(localStorage.getItem(this.STORAGE_KEY) || '[]');
     } catch(e) { return []; }
   },
 
-  getCode(code) {
-    const normalized = (code || '').trim().toUpperCase();
-    return this.getAllCodes().find(c => c.code === normalized);
+  // Version synchrone (pour rendu rapide) — lit depuis le cache local
+  getAllCodesLocal() {
+    try {
+      return JSON.parse(localStorage.getItem(this.STORAGE_KEY) || '[]');
+    } catch(e) { return []; }
   },
 
-  // === VALIDATION ===
-  // Retourne : { valid: true/false, code: ..., reason: '...' }
-  validateCode(rawCode) {
+  // Mettre à jour le cache local
+  _syncLocalCache(codes) {
+    try {
+      localStorage.setItem(this.STORAGE_KEY, JSON.stringify(codes));
+    } catch(e) {}
+  },
+
+  // ====================================================================
+  // VALIDATION (côté utilisateur)
+  // ====================================================================
+
+  // Valider un code (lit depuis Firestore en priorité)
+  async validateCode(rawCode) {
     const code = (rawCode || '').trim().toUpperCase();
     if (!code) return { valid: false, reason: 'Code vide' };
 
-    // Vérifier le format
     if (!/^BARA-(SEM|MOIS|ANNEE)-[A-Z0-9]{4}$/.test(code)) {
       return { valid: false, reason: 'Format invalide. Exemple : BARA-MOIS-A3F7' };
     }
 
-    const found = this.getCode(code);
-    if (!found) {
-      return { valid: false, reason: 'Code introuvable' };
+    // Essayer Firestore d'abord (le code peut exister sur le cloud sans être en local)
+    if (window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady && window.FirebaseAuth.user) {
+      try {
+        const fb = window.FirebaseAuth;
+        const ref = fb._fbFns.doc(fb.db, this.FIRESTORE_COLLECTION, code);
+        const snap = await fb._fbFns.getDoc(ref);
+        if (!snap.exists()) {
+          return { valid: false, reason: 'Code introuvable' };
+        }
+        const data = snap.data();
+        if (data.used) {
+          return { valid: false, reason: 'Ce code a déjà été utilisé', code: data };
+        }
+        return { valid: true, code: data, source: 'firestore' };
+      } catch (e) {
+        console.warn('[V58] Erreur validation Firestore :', e);
+        // Fallback localStorage
+      }
     }
 
-    if (found.used) {
-      return { valid: false, reason: 'Ce code a déjà été utilisé', code: found };
-    }
-
-    return { valid: true, code: found };
+    // Fallback localStorage
+    const found = this.getAllCodesLocal().find(c => c.code === code);
+    if (!found) return { valid: false, reason: 'Code introuvable. Vérifie ta connexion internet.' };
+    if (found.used) return { valid: false, reason: 'Ce code a déjà été utilisé', code: found };
+    return { valid: true, code: found, source: 'local' };
   },
 
-  // === ACTIVATION ===
-  // Marque le code comme utilisé et retourne les infos d'activation
-  useCode(rawCode, userInfo) {
-    const validation = this.validateCode(rawCode);
+  // ====================================================================
+  // UTILISATION (côté utilisateur)
+  // ====================================================================
+
+  // Marquer un code comme utilisé (transaction Firestore atomique)
+  async useCode(rawCode, userInfo) {
+    const validation = await this.validateCode(rawCode);
     if (!validation.valid) return validation;
 
-    const all = this.getAllCodes();
-    const idx = all.findIndex(c => c.code === validation.code.code);
-    if (idx < 0) return { valid: false, reason: 'Erreur interne' };
-
-    // Marquer comme utilisé
-    all[idx].used = true;
-    all[idx].usedAt = Date.now();
-    all[idx].usedBy = {
-      userId: userInfo?.id || 'unknown',
+    const code = validation.code.code;
+    const usedBy = {
+      userId: userInfo?.uid || userInfo?.id || 'unknown',
+      email: userInfo?.email || (window.FirebaseAuth?.user?.email) || '',
       phone: userInfo?.phoneNumber || '',
-      name: userInfo?.firstName ? (userInfo.firstName + ' ' + (userInfo.lastName || '')) : 'Anonyme'
+      name: userInfo?.firstName ? (userInfo.firstName + ' ' + (userInfo.lastName || '')).trim() : (userInfo?.displayName || 'Anonyme')
     };
+    const usedAt = Date.now();
 
+    // Marquer dans Firestore en priorité
+    if (window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady && window.FirebaseAuth.user) {
+      try {
+        const fb = window.FirebaseAuth;
+        const ref = fb._fbFns.doc(fb.db, this.FIRESTORE_COLLECTION, code);
+        // Re-vérifier avant d'écrire (anti-race-condition)
+        const snap = await fb._fbFns.getDoc(ref);
+        if (!snap.exists()) {
+          return { valid: false, reason: 'Code introuvable' };
+        }
+        const data = snap.data();
+        if (data.used) {
+          return { valid: false, reason: 'Ce code a déjà été utilisé', code: data };
+        }
+        // Mettre à jour
+        await fb._fbFns.updateDoc(ref, {
+          used: true,
+          usedAt: usedAt,
+          usedBy: usedBy
+        });
+        const updatedCode = { ...data, used: true, usedAt, usedBy };
+        return {
+          valid: true,
+          code: updatedCode,
+          planId: data.planId,
+          source: 'firestore'
+        };
+      } catch (e) {
+        console.error('[V58] Erreur useCode Firestore :', e);
+        return { valid: false, reason: 'Erreur réseau. Vérifie ta connexion internet et réessaie.' };
+      }
+    }
+
+    // Fallback localStorage (pas idéal mais sécurité)
+    const all = this.getAllCodesLocal();
+    const idx = all.findIndex(c => c.code === code);
+    if (idx < 0) return { valid: false, reason: 'Code introuvable' };
+    all[idx].used = true;
+    all[idx].usedAt = usedAt;
+    all[idx].usedBy = usedBy;
     localStorage.setItem(this.STORAGE_KEY, JSON.stringify(all));
-
-    return {
-      valid: true,
-      code: all[idx],
-      planId: all[idx].planId
-    };
+    return { valid: true, code: all[idx], planId: all[idx].planId, source: 'local' };
   },
 
-  // === STATISTIQUES ===
-  getStats() {
-    const all = this.getAllCodes();
+  // ====================================================================
+  // STATISTIQUES & EXPORT (admin)
+  // ====================================================================
+
+  async getStats() {
+    const all = await this.getAllCodes();
     const used = all.filter(c => c.used);
     const unused = all.filter(c => !c.used);
 
@@ -433,10 +566,24 @@ const ActivationCodes = {
     };
   },
 
-  // === EXPORT CSV (pour ton suivi Excel/cahier) ===
-  exportCSV() {
-    const all = this.getAllCodes();
-    const headers = ['Code', 'Plan', 'Créé le', 'Utilisé ?', 'Utilisé le', 'Utilisé par'];
+  // Version synchrone (pour rendu rapide)
+  getStatsLocal() {
+    const all = this.getAllCodesLocal();
+    const used = all.filter(c => c.used);
+    const unused = all.filter(c => !c.used);
+    const byPlan = { weekly: 0, monthly: 0, yearly: 0 };
+    const usedByPlan = { weekly: 0, monthly: 0, yearly: 0 };
+    all.forEach(c => {
+      if (byPlan[c.planId] !== undefined) byPlan[c.planId]++;
+      if (c.used && usedByPlan[c.planId] !== undefined) usedByPlan[c.planId]++;
+    });
+    return { total: all.length, used: used.length, unused: unused.length, byPlan, usedByPlan };
+  },
+
+  // Export CSV
+  async exportCSV() {
+    const all = await this.getAllCodes();
+    const headers = ['Code', 'Plan', 'Créé le', 'Utilisé ?', 'Utilisé le', 'Utilisé par', 'Email'];
     const rows = all.map(c => {
       const planLabel = c.planId === 'weekly' ? '1 semaine (1000F)' :
                         c.planId === 'monthly' ? '1 mois (2000F)' :
@@ -447,25 +594,70 @@ const ActivationCodes = {
         new Date(c.createdAt).toLocaleDateString('fr-FR'),
         c.used ? 'OUI' : 'NON',
         c.usedAt ? new Date(c.usedAt).toLocaleDateString('fr-FR') : '',
-        c.used && c.usedBy ? (c.usedBy.name + ' / ' + c.usedBy.phone) : ''
+        c.used && c.usedBy ? c.usedBy.name : '',
+        c.used && c.usedBy ? c.usedBy.email : ''
       ];
     });
     return [headers, ...rows].map(r => r.map(v => '"' + String(v).replace(/"/g, '""') + '"').join(',')).join('\n');
   },
 
-  // === SUPPRESSION ===
-  deleteCode(code) {
-    const all = this.getAllCodes();
-    const filtered = all.filter(c => c.code !== code);
-    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(filtered));
+  // ====================================================================
+  // SUPPRESSION (admin)
+  // ====================================================================
+
+  async deleteCode(code) {
+    if (!this.isCurrentUserAdmin()) return { success: false, error: 'Non autorisé' };
+
+    if (this.isFirestoreReady()) {
+      try {
+        const fb = window.FirebaseAuth;
+        const ref = fb._fbFns.doc(fb.db, this.FIRESTORE_COLLECTION, code);
+        await fb._fbFns.deleteDoc(ref);
+        // Mettre à jour cache local
+        const all = this.getAllCodesLocal().filter(c => c.code !== code);
+        localStorage.setItem(this.STORAGE_KEY, JSON.stringify(all));
+        return { success: true };
+      } catch (e) {
+        console.error('[V58] Erreur deleteCode :', e);
+        return { success: false, error: e.message };
+      }
+    }
+
+    // Fallback
+    const all = this.getAllCodesLocal().filter(c => c.code !== code);
+    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(all));
+    return { success: true };
   },
 
-  // Supprimer tous les codes non utilisés
-  deleteUnused() {
-    const all = this.getAllCodes();
-    const filtered = all.filter(c => c.used);
-    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(filtered));
-    return all.length - filtered.length;
+  async deleteUnused() {
+    if (!this.isCurrentUserAdmin()) return { success: false, error: 'Non autorisé', count: 0 };
+
+    const all = await this.getAllCodes();
+    const unused = all.filter(c => !c.used);
+    if (unused.length === 0) return { success: true, count: 0 };
+
+    if (this.isFirestoreReady()) {
+      try {
+        const fb = window.FirebaseAuth;
+        const promises = unused.map(c => {
+          const ref = fb._fbFns.doc(fb.db, this.FIRESTORE_COLLECTION, c.code);
+          return fb._fbFns.deleteDoc(ref);
+        });
+        await Promise.all(promises);
+        // Mettre à jour cache local
+        const remaining = all.filter(c => c.used);
+        localStorage.setItem(this.STORAGE_KEY, JSON.stringify(remaining));
+        return { success: true, count: unused.length };
+      } catch (e) {
+        console.error('[V58] Erreur deleteUnused :', e);
+        return { success: false, error: e.message, count: 0 };
+      }
+    }
+
+    // Fallback
+    const remaining = all.filter(c => c.used);
+    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(remaining));
+    return { success: true, count: unused.length };
   }
 };
 

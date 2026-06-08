@@ -8703,8 +8703,8 @@ const App = {
     setTimeout(() => this.navigate('home'), 1000);
   },
 
-  // V51 : Activation via code d'activation
-  activateWithCode() {
+  // V58 : Activation via code d'activation (async, vérifie Firestore)
+  async activateWithCode() {
     const input = document.getElementById('activation-code-input');
     if (!input) return;
     const code = input.value.trim().toUpperCase();
@@ -8713,14 +8713,24 @@ const App = {
       return;
     }
 
-    // Vérifier que le module est chargé
     if (!window.ActivationCodes) {
       this.toast('❌ Module d\'activation non disponible', 'danger');
       return;
     }
 
-    // Valider et utiliser le code
-    const result = window.ActivationCodes.useCode(code, this.state.user);
+    // V58 : Indiquer qu'on vérifie (latence réseau possible)
+    this.toast('⏳ Vérification du code...');
+
+    // Valider et utiliser le code (async maintenant)
+    const userInfo = {
+      uid: this.state.user.uid,
+      email: window.FirebaseAuth?.user?.email || '',
+      firstName: this.state.user.firstName,
+      lastName: this.state.user.lastName,
+      displayName: this.state.user.firstName + ' ' + (this.state.user.lastName || ''),
+      phoneNumber: this.state.user.phoneNumber
+    };
+    const result = await window.ActivationCodes.useCode(code, userInfo);
     if (!result.valid) {
       this.toast('❌ ' + (result.reason || 'Code invalide'), 'danger');
       return;
@@ -8737,16 +8747,18 @@ const App = {
     this.state.user = { ...this.state.user, ...updates };
     this.save();
 
-    // Sync Firebase si dispo
-    if (window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady && window.FirebaseAuth.isLoggedIn()) {
-      window.FirebaseAuth.updateProfile(updates).catch(e => console.error('Sync premium :', e));
+    // V58 : Synchroniser Premium dans Firestore (pour multi-appareils)
+    if (window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady && window.FirebaseAuth.user) {
+      try {
+        await window.FirebaseAuth.updateProfile(updates);
+        console.log('[V58] Premium synchronisé dans Firestore');
+      } catch(e) { console.error('Sync premium :', e); }
     }
 
     const planName = window.PremiumService.PLANS[planId]?.name || 'Premium';
     this.toast('🎉 ' + planName + ' activé avec succès !');
     setTimeout(() => {
       this.navigate('home');
-      // Petit délai pour faire apparaître le badge Premium
       setTimeout(() => this.toast('⭐ Bienvenue dans Premium !'), 800);
     }, 1500);
   },
@@ -9732,20 +9744,39 @@ const App = {
     this.render();
   },
 
-  // V35 : Action quand l'utilisateur confirme qu'il veut quitter
+  // V58.1 : Action quand l'utilisateur confirme qu'il veut quitter
   doExit() {
+    // Toujours fermer le dialogue d'abord (pour ne pas rester bloqué)
     this.state.showExitConfirm = false;
-    // Sauvegarder l'état avant de quitter
     this.save();
 
-    // Tenter de fermer l'app
-    if (window.navigator && window.navigator.app && window.navigator.app.exitApp) {
+    // Détecter l'environnement
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+    const isCordova = window.navigator && window.navigator.app && window.navigator.app.exitApp;
+
+    if (isCordova) {
+      // Vraie APK Cordova → fermer
       window.navigator.app.exitApp();
-    } else {
-      // Sur navigateur ou TWA Android : history.back puis window.close
-      history.back();
-      setTimeout(() => { try { window.close(); } catch(e){} }, 100);
+      return;
     }
+
+    if (isStandalone) {
+      // APK TWA ou PWA installée : history.back peut fermer la fenêtre
+      this.render();  // Mettre à jour l'UI d'abord
+      setTimeout(() => {
+        try { history.back(); } catch(e) {}
+        // Tenter window.close en dernier recours
+        setTimeout(() => { try { window.close(); } catch(e) {} }, 100);
+      }, 50);
+      return;
+    }
+
+    // Mode navigateur web (Chrome, Firefox...) : on NE PEUT PAS fermer l'onglet via JS
+    // Afficher un toast explicatif et fermer le dialogue
+    this.render();
+    setTimeout(() => {
+      this.toast('💡 Pour quitter, ferme cet onglet (×) ou appuie sur le bouton retour de ton navigateur.');
+    }, 100);
   },
 
   // V35 : Action quand l'utilisateur annule la sortie
@@ -9757,20 +9788,27 @@ const App = {
   // V35 : Rendu du dialog de confirmation de sortie (au-dessus de tout)
   renderExitDialog() {
     if (!this.state.showExitConfirm) return '';
+    // V58.1 : Détecter si on est en mode navigateur (Chrome web) pour adapter le message
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+    const isCordova = window.navigator && window.navigator.app && window.navigator.app.exitApp;
+    const isWebBrowser = !isStandalone && !isCordova;
+
     return `
       <div style="position:fixed; inset:0; background:rgba(0,0,0,0.6); display:flex; align-items:center; justify-content:center; z-index:9999; padding:1.5rem; animation:fadeIn 0.2s">
         <div style="background:white; border-radius:20px; padding:1.8rem 1.5rem; max-width:340px; width:100%; box-shadow:0 20px 60px rgba(0,0,0,0.3); text-align:center">
           <div style="font-size:3.5rem; margin-bottom:0.5rem">🚪</div>
           <h3 style="font-family:'Instrument Serif',serif; font-size:1.5rem; color:var(--green-bf); margin-bottom:0.6rem">Quitter Bara Concours ?</h3>
           <p style="color:var(--ink-soft); font-size:0.92rem; line-height:1.5; margin-bottom:1.5rem">
-            Tu peux toujours revenir t'entraîner plus tard. Tes données restent sauvegardées.
+            ${isWebBrowser
+              ? 'Pour fermer l\'app dans ton navigateur, utilise le bouton × de l\'onglet en haut. Tes données restent sauvegardées.'
+              : 'Tu peux toujours revenir t\'entraîner plus tard. Tes données restent sauvegardées.'}
           </p>
           <div style="display:flex; flex-direction:column; gap:0.6rem">
             <button onclick="App.cancelExit()" style="background:var(--green-bf); color:white; border:none; padding:0.9rem; border-radius:12px; font-weight:700; font-size:0.95rem; cursor:pointer; width:100%">
               👍 Rester dans l'app
             </button>
             <button onclick="App.doExit()" style="background:transparent; color:var(--ink-mute); border:1.5px solid var(--line); padding:0.85rem; border-radius:12px; font-weight:600; font-size:0.9rem; cursor:pointer; width:100%">
-              Quitter
+              ${isWebBrowser ? 'Fermer ce dialogue' : 'Quitter'}
             </button>
           </div>
         </div>
