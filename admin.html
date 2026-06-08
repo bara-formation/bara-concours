@@ -780,6 +780,7 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 <script src="data/premium.js"></script>
 <script src="data/annales.js"></script>
 <script src="data/sessions.js"></script>
+<script src="data/firebase.js"></script>
 
 <script>
 /* ===========================================
@@ -6358,6 +6359,25 @@ E: Le Burkina Faso compte 13 régions administratives depuis 2001.`;
 
   init() {
     this.render();
+
+    // V58.2 : Initialiser Firebase au démarrage de l'admin
+    if (window.FirebaseAuth) {
+      window.FirebaseAuth.init().then(ok => {
+        if (ok) {
+          console.log('[Admin] Firebase prêt');
+          // Re-render pour mettre à jour l'UI (le badge "Firebase non chargé" disparaît)
+          this.render();
+          // Écouter les changements d'auth pour re-render la page Codes Premium
+          window.FirebaseAuth.onAuthChange(() => {
+            if (this.state.currentPage === 'codes') this.render();
+          });
+        } else {
+          console.warn('[Admin] Firebase non disponible');
+        }
+      }).catch(e => {
+        console.error('[Admin] Erreur init Firebase :', e);
+      });
+    }
   }
 };
 
