@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.4 - V63.4 : Chrono live, bouton retour, actualité, logo
+// Version 6.3.5 - V63.5 : Bouton retour visible header vert
 
-const CACHE_NAME = 'bara-concours-v6-3-4';
+const CACHE_NAME = 'bara-concours-v6-3-5';
 const APP_SHELL = [
   './',
   './index.html',
