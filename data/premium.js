@@ -25,11 +25,30 @@ const PremiumService = {
       durationLabel: '1 mois',
       pricePerDay: 67,
       icon: '⭐',
-      tag: 'Le plus populaire',
+      tag: 'Pour 1 mois',
       tagColor: '#854d0e',
       tagBg: '#fef9c3',
-      popular: true
+      popular: false
     },
+    // V60 : Plan SESSION 2026 — accès jusqu'au 15 août 2026 (date fixe)
+    // Remplace l'ancien yearly (retiré pour la saison concours 2026)
+    session2026: {
+      id: 'session2026',
+      name: 'SESSION 2026 + ACC. FINAL',
+      price: 2500,
+      duration: null,  // V60 : pas une durée mais une date fixe
+      durationLabel: 'Jusqu\'au 15 août 2026',
+      expiresAt: new Date('2026-08-15T23:59:59').getTime(),  // V60 : date butoir absolue
+      pricePerDay: null,
+      icon: '🎯',
+      tag: 'Le plus demandé 🔥',
+      tagColor: '#7c2d12',
+      tagBg: '#fed7aa',
+      popular: true,  // V60 : devient le plan vedette
+      special: true   // V60 : marqueur pour traitement spécial UI
+    },
+    // V60 : yearly conservé pour compatibilité descendante (anciens codes BARA-ANNEE-XXXX)
+    //       mais retiré de l'affichage Premium (page premium n'affiche que monthly + session2026 + weekly)
     yearly: {
       id: 'yearly',
       name: 'Annuel',
@@ -42,7 +61,8 @@ const PremiumService = {
       tagColor: '#15803d',
       tagBg: '#dcfce7',
       popular: false,
-      savings: 14000
+      savings: 14000,
+      hidden: true  // V60 : caché de l'affichage
     }
   },
 
@@ -271,9 +291,21 @@ Merci de bien vouloir activer mon abonnement Premium. 🙏`;
     if (!plan) return null;
 
     const now = Date.now();
-    const currentExpiry = user.premiumExpiresAt ? new Date(user.premiumExpiresAt).getTime() : 0;
-    const startFrom = currentExpiry > now ? currentExpiry : now;
-    const newExpiry = new Date(startFrom + plan.duration * 24 * 60 * 60 * 1000);
+    let newExpiry;
+
+    // V60 : Si le plan a une date fixe (ex: session2026 → 15 août 2026), on l'utilise directement
+    if (plan.expiresAt) {
+      // Date fixe : ne pas cumuler, on fixe la date butoir absolue
+      // Mais si l'utilisateur a déjà une expiration plus tardive, on la garde
+      const currentExpiry = user.premiumExpiresAt ? new Date(user.premiumExpiresAt).getTime() : 0;
+      const targetDate = Math.max(plan.expiresAt, currentExpiry);
+      newExpiry = new Date(targetDate);
+    } else {
+      // Plan classique avec durée : cumuler à l'expiration actuelle si encore Premium
+      const currentExpiry = user.premiumExpiresAt ? new Date(user.premiumExpiresAt).getTime() : 0;
+      const startFrom = currentExpiry > now ? currentExpiry : now;
+      newExpiry = new Date(startFrom + plan.duration * 24 * 60 * 60 * 1000);
+    }
 
     return {
       isPremium: true,
@@ -303,7 +335,8 @@ const ActivationCodes = {
   PLAN_PREFIXES: {
     weekly: 'SEM',
     monthly: 'MOIS',
-    yearly: 'ANNEE'
+    yearly: 'ANNEE',
+    session2026: 'SESSION'  // V60 : BARA-SESSION-XXXX
   },
 
   // ====================================================================
@@ -448,8 +481,8 @@ const ActivationCodes = {
     const code = (rawCode || '').trim().toUpperCase();
     if (!code) return { valid: false, reason: 'Code vide' };
 
-    if (!/^BARA-(SEM|MOIS|ANNEE)-[A-Z0-9]{4}$/.test(code)) {
-      return { valid: false, reason: 'Format invalide. Exemple : BARA-MOIS-A3F7' };
+    if (!/^BARA-(SEM|MOIS|ANNEE|SESSION)-[A-Z0-9]{4}$/.test(code)) {
+      return { valid: false, reason: 'Format invalide. Exemple : BARA-SESSION-A3F7' };
     }
 
     // Essayer Firestore d'abord (le code peut exister sur le cloud sans être en local)
@@ -550,8 +583,8 @@ const ActivationCodes = {
     const used = all.filter(c => c.used);
     const unused = all.filter(c => !c.used);
 
-    const byPlan = { weekly: 0, monthly: 0, yearly: 0 };
-    const usedByPlan = { weekly: 0, monthly: 0, yearly: 0 };
+    const byPlan = { weekly: 0, monthly: 0, yearly: 0, session2026: 0 };
+    const usedByPlan = { weekly: 0, monthly: 0, yearly: 0, session2026: 0 };
     all.forEach(c => {
       if (byPlan[c.planId] !== undefined) byPlan[c.planId]++;
       if (c.used && usedByPlan[c.planId] !== undefined) usedByPlan[c.planId]++;
@@ -571,8 +604,8 @@ const ActivationCodes = {
     const all = this.getAllCodesLocal();
     const used = all.filter(c => c.used);
     const unused = all.filter(c => !c.used);
-    const byPlan = { weekly: 0, monthly: 0, yearly: 0 };
-    const usedByPlan = { weekly: 0, monthly: 0, yearly: 0 };
+    const byPlan = { weekly: 0, monthly: 0, yearly: 0, session2026: 0 };
+    const usedByPlan = { weekly: 0, monthly: 0, yearly: 0, session2026: 0 };
     all.forEach(c => {
       if (byPlan[c.planId] !== undefined) byPlan[c.planId]++;
       if (c.used && usedByPlan[c.planId] !== undefined) usedByPlan[c.planId]++;
@@ -587,6 +620,7 @@ const ActivationCodes = {
     const rows = all.map(c => {
       const planLabel = c.planId === 'weekly' ? '1 semaine (1000F)' :
                         c.planId === 'monthly' ? '1 mois (2000F)' :
+                        c.planId === 'session2026' ? 'SESSION 2026 (2500F)' :
                         c.planId === 'yearly' ? '1 an (10000F)' : c.planId;
       return [
         c.code,

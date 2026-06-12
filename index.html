@@ -3365,6 +3365,7 @@ img { max-width: 100%; display: block; }
 <script src="data/annales.js"></script>
 <script src="data/sessions.js"></script>
 <script src="data/biometric.js"></script>
+<script src="data/weekly_exam.js"></script>
 
 <script>
 /* =============================================
@@ -3509,6 +3510,15 @@ const App = {
       case 'auth-signup': html = this.renderAuthSignup(); app.classList.add('no-nav'); break;
       case 'auth-signin': html = this.renderAuthSignin(); app.classList.add('no-nav'); break;
       case 'auth-forgot': html = this.renderAuthForgot(); app.classList.add('no-nav'); break;
+      // V61 : Examen hebdomadaire
+      case 'weekly-exam': html = this.renderWeeklyExamHome(); break;
+      case 'weekly-exam-active': html = this.renderWeeklyExamActive(); app.classList.add('no-nav'); break;
+      case 'weekly-exam-result': html = this.renderWeeklyExamResult(); break;
+      // V62 : Classement & correction détaillée
+      case 'weekly-exam-ranking': html = this.renderWeeklyExamRanking(); break;
+      case 'weekly-exam-correction': html = this.renderWeeklyExamCorrection(); break;
+      // V63 : Historique des examens
+      case 'weekly-exam-history': html = this.renderWeeklyExamHistory(); break;
       case 'home': html = this.renderHome(); break;
       case 'session-2026': html = this.renderSession2026(); break;
       case 'annales': html = this.renderSessionsList(); break;
@@ -3534,7 +3544,7 @@ const App = {
       default: html = this.renderHome();
     }
 
-    const showNav = !['splash', 'qcm', 'auth-phone', 'auth-otp', 'auth-welcome', 'auth-signup', 'auth-signin', 'auth-forgot', 'onboarding', 'forum-create'].includes(this.state.currentScreen);
+    const showNav = !['splash', 'qcm', 'auth-phone', 'auth-otp', 'auth-welcome', 'auth-signup', 'auth-signin', 'auth-forgot', 'onboarding', 'forum-create', 'weekly-exam-active'].includes(this.state.currentScreen);
     if (showNav) html += this.renderBottomNav();
 
     // Modal biométrique en superposition (si proposition active)
@@ -5705,6 +5715,7 @@ const App = {
           ${this.renderResumeBanner()}
           ${this.renderFreemiumStatusBar()}
           ${this.renderSession2026Banner()}
+          ${this.renderWeeklyExamCard()}
 
           <div class="annales-card" onclick="App.navigate('annales')">
             <div class="annales-card-icon">📚</div>
@@ -8324,8 +8335,10 @@ const App = {
   },
 
   renderPremiumPlans() {
-    const selectedPlan = this.state.premiumSelection?.plan || 'monthly';
-    const plans = Object.values(window.PremiumService.PLANS);
+    // V60 : Par défaut, on propose session2026 (plan le plus demandé)
+    const selectedPlan = this.state.premiumSelection?.plan || 'session2026';
+    // V60 : Filtrer les plans cachés (yearly est caché pour la saison 2026)
+    const plans = Object.values(window.PremiumService.PLANS).filter(p => !p.hidden);
 
     return `
       <div class="page">
@@ -8354,7 +8367,7 @@ const App = {
               </div>
             </div>
             <div style="display:flex; gap:0.5rem">
-              <input type="text" id="activation-code-input" placeholder="BARA-MOIS-A3F7" maxlength="20" style="flex:1; padding:0.7rem 0.9rem; border:1.5px solid #f59e0b; border-radius:8px; font-size:0.95rem; font-weight:700; font-family:monospace; letter-spacing:0.05em; text-transform:uppercase; background:white" oninput="this.value = this.value.toUpperCase()">
+              <input type="text" id="activation-code-input" placeholder="BARA-SESSION-A3F7" maxlength="20" style="flex:1; padding:0.7rem 0.9rem; border:1.5px solid #f59e0b; border-radius:8px; font-size:0.95rem; font-weight:700; font-family:monospace; letter-spacing:0.05em; text-transform:uppercase; background:white" oninput="this.value = this.value.toUpperCase()">
               <button onclick="App.activateWithCode()" style="background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.7rem 1.1rem; border-radius:8px; font-weight:800; font-size:0.88rem; cursor:pointer; white-space:nowrap">Activer</button>
             </div>
           </div>
@@ -8387,21 +8400,33 @@ const App = {
 
           <div class="section-title">Choisis ton plan</div>
           <div class="plans-grid">
-            ${plans.map(p => `
-              <div class="plan-card ${p.popular ? 'popular' : ''} ${selectedPlan === p.id ? 'selected' : ''}" onclick="App.selectPlan('${p.id}')">
-                ${p.tag ? `<div class="plan-tag" style="background:${p.tagBg}; color:${p.tagColor}">${p.tag}</div>` : ''}
-                <div class="plan-radio">${selectedPlan === p.id ? '✓' : ''}</div>
-                <div class="plan-head">
-                  <div class="plan-name">${p.icon} ${p.name}</div>
+            ${plans.map(p => {
+              // V60 : Calcul affichage différent selon plan classique vs date fixe
+              const isSpecial = p.special;
+              let detailHtml;
+              if (isSpecial) {
+                // Plan SESSION 2026 : afficher jours restants jusqu'à la date butoir
+                const daysLeft = Math.max(0, Math.floor((p.expiresAt - Date.now()) / (24 * 60 * 60 * 1000)));
+                detailHtml = `<div class="plan-detail">📅 Accès jusqu'au 15 août 2026 (${daysLeft} jours restants)</div>`;
+              } else {
+                detailHtml = `<div class="plan-detail">${window.PremiumService.formatPrice(p.pricePerDay)} par jour ${p.savings ? '· Sans engagement' : ''}</div>`;
+              }
+              return `
+                <div class="plan-card ${p.popular ? 'popular' : ''} ${selectedPlan === p.id ? 'selected' : ''}" onclick="App.selectPlan('${p.id}')">
+                  ${p.tag ? `<div class="plan-tag" style="background:${p.tagBg}; color:${p.tagColor}">${p.tag}</div>` : ''}
+                  <div class="plan-radio">${selectedPlan === p.id ? '✓' : ''}</div>
+                  <div class="plan-head">
+                    <div class="plan-name">${p.icon} ${p.name}</div>
+                  </div>
+                  <div class="plan-price-row">
+                    <div class="plan-price">${window.PremiumService.formatPrice(p.price).replace(' FCFA','')}</div>
+                    <div class="plan-price-unit">FCFA ${isSpecial ? '(prix unique)' : '/ ' + p.durationLabel}</div>
+                  </div>
+                  ${detailHtml}
+                  ${p.savings ? `<div class="plan-savings">💰 Tu économises ${window.PremiumService.formatPrice(p.savings)}</div>` : ''}
                 </div>
-                <div class="plan-price-row">
-                  <div class="plan-price">${window.PremiumService.formatPrice(p.price).replace(' FCFA','')}</div>
-                  <div class="plan-price-unit">FCFA / ${p.durationLabel}</div>
-                </div>
-                <div class="plan-detail">${window.PremiumService.formatPrice(p.pricePerDay)} par jour ${p.savings ? '· Sans engagement' : ''}</div>
-                ${p.savings ? `<div class="plan-savings">💰 Tu économises ${window.PremiumService.formatPrice(p.savings)}</div>` : ''}
-              </div>
-            `).join('')}
+              `;
+            }).join('')}
           </div>
 
           <button class="btn-primary" onclick="App.proceedToPayment()" style="width:100%; margin-top:0.5rem">
@@ -8812,6 +8837,1254 @@ const App = {
       localStorage.setItem('bara_forum_topics', JSON.stringify(this.state.forumTopics));
     } catch (e) { console.error('Save forum :', e); }
   },
+
+  // V61 : Mini-carte d'accueil pour l'examen hebdomadaire
+  renderWeeklyExamCard() {
+    if (!window.WeeklyExam) return '';
+
+    const status = window.WeeklyExam.getCurrentStatus();
+    const hasCompleted = window.WeeklyExam.hasCompletedThisExam();
+    const hasActive = window.WeeklyExam.hasActiveExam();
+
+    // VARIANTE 1 : Examen actif (dimanche 19h30-20h30) → "EN DIRECT"
+    if (status.status === 'active' && !hasCompleted) {
+      return `
+        <div onclick="App.navigate('weekly-exam')" style="background:linear-gradient(135deg, #dc2626, #991b1b); color:white; border-radius:14px; padding:1rem 1.1rem; margin:1rem 0; cursor:pointer; display:flex; align-items:center; gap:0.8rem; box-shadow:0 6px 20px rgba(220,38,38,0.3); position:relative; overflow:hidden">
+          <div style="position:absolute; top:0.4rem; right:0.5rem; background:white; color:#dc2626; padding:0.15rem 0.5rem; border-radius:999px; font-size:0.65rem; font-weight:800; letter-spacing:0.05em; animation:pulse 1.5s infinite">● EN DIRECT</div>
+          <div style="background:rgba(255,255,255,0.2); width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.6rem; flex-shrink:0">📅</div>
+          <div style="flex:1">
+            <div style="font-family:'Instrument Serif',serif; font-size:1.25rem; line-height:1.1">${hasActive ? 'Examen en cours' : 'Examen ouvert !'}</div>
+            <div style="font-size:0.8rem; opacity:0.95; margin-top:0.15rem">${hasActive ? 'Reprendre tes questions' : '50 questions • 1 heure'}</div>
+          </div>
+          <div style="font-size:1.4rem; opacity:0.9">›</div>
+        </div>
+      `;
+    }
+
+    // VARIANTE 2 : Avant l'examen (compte à rebours)
+    const timeLeft = status.examStart - Date.now();
+    const dayOfWeek = new Date().getDay();
+    const isCloseToExam = timeLeft < 24 * 60 * 60 * 1000;  // <24h
+    const isSunday = dayOfWeek === 0;
+
+    if (isCloseToExam || isSunday) {
+      const timeLabel = window.WeeklyExam.formatTimeUntil(timeLeft);
+      return `
+        <div onclick="App.navigate('weekly-exam')" style="background:linear-gradient(135deg, #fef3c7, white); border:2px solid var(--gold-bf); border-radius:14px; padding:1rem 1.1rem; margin:1rem 0; cursor:pointer; display:flex; align-items:center; gap:0.8rem">
+          <div style="background:var(--gold-bf); width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.6rem; color:white; flex-shrink:0">📅</div>
+          <div style="flex:1">
+            <div style="font-family:'Instrument Serif',serif; font-size:1.2rem; color:var(--green-bf-dark); line-height:1.1">Examen hebdo dans ${timeLabel}</div>
+            <div style="font-size:0.8rem; color:#854d0e; margin-top:0.15rem">${hasCompleted ? '✅ Déjà terminé pour aujourd\'hui' : 'Dimanche à 19h30 • 50 questions • 1h'}</div>
+          </div>
+          <div style="font-size:1.4rem; color:var(--gold-bf-dark)">›</div>
+        </div>
+      `;
+    }
+
+    // VARIANTE 3 : Pendant la semaine (carte plus discrète)
+    return `
+      <div onclick="App.navigate('weekly-exam')" style="background:white; border:1px solid var(--line); border-radius:14px; padding:0.85rem 1rem; margin:1rem 0; cursor:pointer; display:flex; align-items:center; gap:0.7rem">
+        <div style="background:var(--cream); width:40px; height:40px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.4rem; flex-shrink:0">📅</div>
+        <div style="flex:1">
+          <div style="font-weight:700; color:var(--ink); font-size:0.95rem">Examen hebdomadaire</div>
+          <div style="font-size:0.78rem; color:var(--ink-soft)">Tous les dimanches à 19h30 • 50 Q en 1h</div>
+        </div>
+        <div style="font-size:1.2rem; color:var(--ink-mute)">›</div>
+      </div>
+    `;
+  },
+
+  // =================================================================
+  // V61 : EXAMEN HEBDOMADAIRE (dimanche 19h30 - 20h30)
+  // =================================================================
+
+  // PAGE 1 : Accueil de l'examen hebdomadaire
+  renderWeeklyExamHome() {
+    if (!window.WeeklyExam) {
+      return '<div class="page-header"><div class="page-title">⚠️ Module non chargé</div></div>';
+    }
+
+    const status = window.WeeklyExam.getCurrentStatus();
+    const hasCompleted = window.WeeklyExam.hasCompletedThisExam();
+    const hasActive = window.WeeklyExam.hasActiveExam();
+    const lastResult = window.WeeklyExam.getLastResult();
+    const allResults = window.WeeklyExam.getAllResults();
+
+    // Quota de matières (pour affichage)
+    const quotas = [
+      { icon: '🌍', label: 'Culture générale', count: 15 },
+      { icon: '📝', label: 'Français', count: 10 },
+      { icon: '🔢', label: 'Mathématiques / logique', count: 10 },
+      { icon: '📰', label: 'Actualité Burkina', count: 5 },
+      { icon: '⚖️', label: 'Droit / citoyenneté', count: 5 },
+      { icon: '💻', label: 'Informatique / divers', count: 5 }
+    ];
+
+    // Bloc principal selon le statut
+    let mainBlock = '';
+
+    if (hasActive) {
+      // Examen déjà commencé → bouton "Continuer"
+      mainBlock = `
+        <div style="background:linear-gradient(135deg, #fef3c7, #fde68a); border:2px solid #d97706; border-radius:16px; padding:1.5rem; margin-bottom:1.2rem; text-align:center">
+          <div style="font-size:3rem">⏱️</div>
+          <h2 style="font-family:'Instrument Serif',serif; color:#92400e; margin:0.5rem 0">Examen en cours</h2>
+          <p style="color:#78350f; margin:0 0 1rem; font-size:0.92rem; line-height:1.5">
+            Tu as commencé l'examen mais tu ne l'as pas encore terminé.<br>Le temps continue à courir !
+          </p>
+          <button onclick="App.navigate('weekly-exam-active')" style="background:#d97706; color:white; border:none; padding:0.85rem 1.5rem; border-radius:10px; font-weight:800; font-size:0.95rem; cursor:pointer">
+            ▶️ Reprendre l'examen
+          </button>
+        </div>
+      `;
+    } else if (hasCompleted) {
+      // Déjà passé l'examen aujourd'hui
+      mainBlock = `
+        <div style="background:linear-gradient(135deg, #dcfce7, #bbf7d0); border:2px solid #16a34a; border-radius:16px; padding:1.5rem; margin-bottom:1.2rem; text-align:center">
+          <div style="font-size:3rem">✅</div>
+          <h2 style="font-family:'Instrument Serif',serif; color:#166534; margin:0.5rem 0">Bravo, examen terminé !</h2>
+          <p style="color:#14532d; margin:0 0 1rem; font-size:0.92rem; line-height:1.5">
+            Tu as participé à l'examen de ce dimanche. Score : <strong>${lastResult ? lastResult.score + '/' + lastResult.total + ' (' + lastResult.percent + '%)' : ''}</strong>
+          </p>
+          <button onclick="App.navigate('weekly-exam-result')" style="background:#16a34a; color:white; border:none; padding:0.85rem 1.5rem; border-radius:10px; font-weight:800; font-size:0.95rem; cursor:pointer">
+            📊 Voir mon résultat
+          </button>
+          <p style="color:#166534; margin:1rem 0 0; font-size:0.82rem">
+            Prochain examen : <strong>dimanche prochain à 19h30</strong>
+          </p>
+        </div>
+      `;
+    } else if (status.status === 'active') {
+      // C'est le moment, l'utilisateur peut commencer
+      const timeLeft = status.examEnd - Date.now();
+      const minutesLeft = Math.floor(timeLeft / 60000);
+      mainBlock = `
+        <div style="background:linear-gradient(135deg, #fee2e2, #fecaca); border:2px solid #dc2626; border-radius:16px; padding:1.5rem; margin-bottom:1.2rem; text-align:center; animation:pulse 2s infinite">
+          <div style="font-size:3rem">🔴</div>
+          <div style="background:#dc2626; color:white; padding:0.3rem 0.8rem; border-radius:999px; font-size:0.78rem; font-weight:800; display:inline-block; letter-spacing:0.05em">EN DIRECT</div>
+          <h2 style="font-family:'Instrument Serif',serif; color:#991b1b; margin:0.5rem 0">L'examen est ouvert !</h2>
+          <p style="color:#7f1d1d; margin:0 0 1rem; font-size:0.92rem; line-height:1.5">
+            Tu as <strong>${minutesLeft} minute${minutesLeft > 1 ? 's' : ''}</strong> avant la clôture à 20h30.<br>
+            <strong>50 questions</strong> t'attendent.
+          </p>
+          <button onclick="App.startWeeklyExam()" style="background:#dc2626; color:white; border:none; padding:0.95rem 1.8rem; border-radius:12px; font-weight:800; font-size:1.05rem; cursor:pointer; box-shadow:0 6px 16px rgba(220,38,38,0.3)">
+            🚀 Commencer l'examen
+          </button>
+        </div>
+      `;
+    } else {
+      // Avant l'examen → compte à rebours
+      const timeLeft = status.examStart - Date.now();
+      const timeLabel = window.WeeklyExam.formatTimeUntil(timeLeft);
+      mainBlock = `
+        <div style="background:linear-gradient(135deg, #f0fdf4, white); border:2px solid var(--green-bf); border-radius:16px; padding:1.5rem; margin-bottom:1.2rem; text-align:center">
+          <div style="font-size:3rem">📅</div>
+          <h2 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:0.5rem 0">Prochain examen</h2>
+          <p style="color:var(--ink-soft); margin:0 0 0.5rem; font-size:0.9rem">
+            ${new Date(status.examStart).toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' })}<br>
+            <strong>de 19h30 à 20h30</strong>
+          </p>
+          <div style="background:white; border:2px solid var(--gold-bf); padding:0.8rem; border-radius:10px; margin:1rem 0; display:inline-block">
+            <div style="font-size:0.75rem; color:var(--ink-mute); letter-spacing:0.05em; text-transform:uppercase">Commence dans</div>
+            <div style="font-family:'Instrument Serif',serif; font-size:1.6rem; color:var(--green-bf); font-weight:700">${timeLabel}</div>
+          </div>
+          <p style="color:var(--ink-soft); margin:0; font-size:0.85rem">
+            🔔 Reviens dimanche à 19h30 pour participer
+          </p>
+        </div>
+      `;
+    }
+
+    return `
+      <div class="page" style="padding-bottom:5rem">
+        <header class="header">
+          <button class="header-btn" onclick="App.navigate('home')">←</button>
+          <div class="header-title">📅 Examen hebdomadaire</div>
+        </header>
+
+        <div style="padding:1rem 1.2rem">
+
+          ${mainBlock}
+
+          <!-- DESCRIPTION -->
+          <div style="background:white; border-radius:14px; padding:1.2rem; margin-bottom:1.2rem; border:1px solid var(--line)">
+            <h3 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:0 0 0.6rem; font-size:1.2rem">🎯 Le rituel du dimanche</h3>
+            <p style="color:var(--ink-soft); line-height:1.6; font-size:0.9rem; margin:0">
+              Chaque dimanche de <strong>19h30 à 20h30</strong>, des centaines de candidats burkinabè composent ensemble un examen blanc national. <strong>50 questions, 1 heure</strong>.
+              <br><br>Compare-toi aux autres candidats et identifie tes points faibles.
+            </p>
+          </div>
+
+          <!-- COMPOSITION -->
+          <div style="background:white; border-radius:14px; padding:1.2rem; margin-bottom:1.2rem; border:1px solid var(--line)">
+            <h3 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:0 0 0.8rem; font-size:1.2rem">📚 Composition de l'examen</h3>
+            <div style="display:grid; gap:0.5rem">
+              ${quotas.map(q => `
+                <div style="display:flex; align-items:center; gap:0.6rem; padding:0.5rem 0.7rem; background:var(--cream); border-radius:8px">
+                  <span style="font-size:1.2rem">${q.icon}</span>
+                  <span style="flex:1; font-size:0.88rem; color:var(--ink)">${q.label}</span>
+                  <span style="background:white; padding:0.15rem 0.55rem; border-radius:999px; font-size:0.78rem; font-weight:800; color:var(--green-bf-dark); border:1px solid var(--line)">${q.count} Q</span>
+                </div>
+              `).join('')}
+              <div style="text-align:right; margin-top:0.4rem; padding-top:0.4rem; border-top:1px dashed var(--line); font-weight:800; color:var(--green-bf-dark)">
+                Total : 50 questions
+              </div>
+            </div>
+          </div>
+
+          <!-- GRATUIT vs PREMIUM -->
+          <div style="background:white; border-radius:14px; padding:1.2rem; margin-bottom:1.2rem; border:1px solid var(--line)">
+            <h3 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:0 0 0.8rem; font-size:1.2rem">💎 Gratuit vs Premium</h3>
+            <table style="width:100%; border-collapse:collapse; font-size:0.85rem">
+              <thead>
+                <tr style="border-bottom:2px solid var(--line)">
+                  <th style="text-align:left; padding:0.5rem 0; font-weight:700">Fonction</th>
+                  <th style="text-align:center; padding:0.5rem 0; width:60px">Gratuit</th>
+                  <th style="text-align:center; padding:0.5rem 0; width:60px; color:var(--gold-bf-dark)">Premium ⭐</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td style="padding:0.5rem 0">Participation</td><td style="text-align:center">✅</td><td style="text-align:center">✅</td></tr>
+                <tr><td style="padding:0.5rem 0">Score immédiat</td><td style="text-align:center">✅</td><td style="text-align:center">✅</td></tr>
+                <tr><td style="padding:0.5rem 0">Correction détaillée</td><td style="text-align:center">❌</td><td style="text-align:center">✅</td></tr>
+                <tr><td style="padding:0.5rem 0">Classement national</td><td style="text-align:center">Top 10</td><td style="text-align:center">Complet</td></tr>
+                <tr><td style="padding:0.5rem 0">Historique des examens</td><td style="text-align:center">❌</td><td style="text-align:center">✅</td></tr>
+                <tr><td style="padding:0.5rem 0">Analyse par matière</td><td style="text-align:center">❌</td><td style="text-align:center">✅</td></tr>
+              </tbody>
+            </table>
+            ${!window.PremiumService.isUserPremium(this.state.user) ? `
+              <button onclick="App.navigate('premium')" style="width:100%; background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.8rem; border-radius:10px; font-weight:800; cursor:pointer; margin-top:0.9rem">
+                ⭐ Passer Premium
+              </button>
+            ` : ''}
+          </div>
+
+          ${allResults.length > 0 ? `
+            <!-- V63 : LIEN HISTORIQUE -->
+            <div onclick="App.navigate('weekly-exam-history')" style="background:white; border:1px solid var(--line); border-radius:14px; padding:1rem 1.1rem; margin-bottom:1rem; cursor:pointer; display:flex; align-items:center; gap:0.8rem">
+              <div style="background:linear-gradient(135deg, #f0fdf4, #dcfce7); width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.5rem; flex-shrink:0">📊</div>
+              <div style="flex:1">
+                <div style="font-weight:700; color:var(--ink); font-size:0.95rem">Mes examens passés</div>
+                <div style="font-size:0.78rem; color:var(--ink-soft); margin-top:0.15rem">
+                  ${allResults.length} examen${allResults.length > 1 ? 's' : ''} terminé${allResults.length > 1 ? 's' : ''}
+                  ${allResults.length >= 2 ? ' • Voir ton évolution' : ''}
+                </div>
+              </div>
+              <div style="font-size:1.4rem; color:var(--ink-mute)">›</div>
+            </div>
+          ` : ''}
+
+          <!-- V63 : NOTIFICATIONS CTA (seulement si pas encore autorisées) -->
+          ${typeof Notification !== 'undefined' && Notification.permission !== 'granted' && Notification.permission !== 'denied' ? `
+            <div style="background:linear-gradient(135deg, #eff6ff, white); border:2px dashed #2563eb; border-radius:14px; padding:1rem 1.1rem; margin-bottom:1rem; display:flex; align-items:center; gap:0.8rem">
+              <div style="font-size:2rem">🔔</div>
+              <div style="flex:1">
+                <div style="font-weight:700; color:#1e40af; font-size:0.92rem">Activer les rappels d'examen</div>
+                <div style="font-size:0.78rem; color:#1e3a8a; margin-top:0.15rem; line-height:1.45">Reçois une notification 1h avant et au démarrage de l'examen</div>
+              </div>
+              <button onclick="App.requestExamNotifications()" style="background:#2563eb; color:white; border:none; padding:0.5rem 0.8rem; border-radius:8px; font-weight:700; font-size:0.8rem; cursor:pointer; flex-shrink:0">Activer</button>
+            </div>
+          ` : ''}
+
+        </div>
+      </div>
+    `;
+  },
+
+  // Démarrer l'examen
+  async startWeeklyExam() {
+    if (!window.WeeklyExam) return;
+
+    const status = window.WeeklyExam.getCurrentStatus();
+    if (status.status !== 'active') {
+      this.toast('❌ L\'examen n\'est pas ouvert actuellement', 'danger');
+      return;
+    }
+
+    // Avertissement anti-triche
+    const ok = confirm(
+      '⚠️ AVANT DE COMMENCER\n\n' +
+      '• 50 questions à répondre\n' +
+      '• 1 question à la fois, pas de retour en arrière\n' +
+      '• L\'examen se termine à 20h30 STRICT\n' +
+      '• Bara Concours détecte les scores anormaux\n' +
+      '• Toute triche peut entraîner l\'exclusion permanente\n\n' +
+      'Es-tu prêt(e) ?'
+    );
+
+    if (!ok) return;
+
+    const result = window.WeeklyExam.startExam(this.state.user);
+    if (!result.success) {
+      this.toast('❌ ' + (result.error || 'Erreur'), 'danger');
+      return;
+    }
+
+    this.navigate('weekly-exam-active');
+  },
+
+  // PAGE 2 : Examen en cours (question par question)
+  renderWeeklyExamActive() {
+    if (!window.WeeklyExam) return '<div>Module non chargé</div>';
+
+    const state = window.WeeklyExam.getState();
+    const exam = state.activeExam;
+    if (!exam) {
+      // Pas d'examen actif → retour à la page d'accueil
+      setTimeout(() => this.navigate('weekly-exam'), 100);
+      return '<div>Redirection...</div>';
+    }
+
+    const status = window.WeeklyExam.getCurrentStatus();
+    if (status.status !== 'active') {
+      // L'examen est clôturé → finir automatiquement
+      setTimeout(() => this.finishWeeklyExam(), 100);
+      return '<div>Finalisation...</div>';
+    }
+
+    const questions = exam.questions || [];
+    const currentIdx = exam.currentIndex || 0;
+
+    // Si toutes les questions sont répondues
+    if (currentIdx >= questions.length) {
+      setTimeout(() => this.finishWeeklyExam(), 100);
+      return '<div>Calcul du score...</div>';
+    }
+
+    const q = questions[currentIdx];
+    if (!q) {
+      setTimeout(() => this.finishWeeklyExam(), 100);
+      return '<div>Erreur...</div>';
+    }
+
+    // Temps restant
+    const msLeft = exam.examEnd - Date.now();
+    const minLeft = Math.floor(msLeft / 60000);
+    const secLeft = Math.floor((msLeft % 60000) / 1000);
+    const timeLabel = minLeft + ':' + String(secLeft).padStart(2, '0');
+    const isUrgent = msLeft < 5 * 60 * 1000;  // <5 min
+
+    // Progression
+    const progress = ((currentIdx + 1) / questions.length) * 100;
+
+    return `
+      <div class="page" style="padding-bottom:1rem; min-height:100vh; background:var(--cream)">
+
+        <!-- BARRE D'EN-TÊTE FIXE -->
+        <div style="position:sticky; top:0; background:white; border-bottom:2px solid var(--line); padding:0.7rem 1rem; z-index:10; box-shadow:0 2px 8px rgba(0,0,0,0.05)">
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:1rem">
+            <div style="font-size:0.78rem; font-weight:800; color:var(--green-bf-dark); letter-spacing:0.05em">
+              📅 EXAMEN HEBDO • Q ${currentIdx + 1}/${questions.length}
+            </div>
+            <div style="background:${isUrgent ? '#fee2e2' : '#fef3c7'}; color:${isUrgent ? '#991b1b' : '#92400e'}; padding:0.3rem 0.7rem; border-radius:999px; font-weight:800; font-family:monospace; font-size:0.95rem; ${isUrgent ? 'animation:pulse 1s infinite' : ''}">
+              ⏱️ ${timeLabel}
+            </div>
+          </div>
+          <div style="height:5px; background:var(--line); border-radius:999px; margin-top:0.5rem; overflow:hidden">
+            <div style="height:100%; background:linear-gradient(90deg, var(--green-bf), var(--gold-bf)); width:${progress}%; transition:width 0.3s"></div>
+          </div>
+        </div>
+
+        <div style="padding:1.2rem 1rem">
+
+          <!-- CATÉGORIE -->
+          <div style="margin-bottom:0.7rem">
+            <span style="background:var(--green-bf); color:white; padding:0.25rem 0.65rem; border-radius:999px; font-size:0.72rem; font-weight:800; letter-spacing:0.05em; text-transform:uppercase">
+              ${this._categoryLabel(q._category)}
+            </span>
+          </div>
+
+          <!-- QUESTION -->
+          <div style="background:white; border-radius:14px; padding:1.2rem; border:1px solid var(--line); margin-bottom:1rem">
+            <div style="font-size:1.05rem; line-height:1.55; color:var(--ink); font-weight:500">
+              ${q.q}
+            </div>
+          </div>
+
+          <!-- OPTIONS -->
+          <div style="display:flex; flex-direction:column; gap:0.6rem">
+            ${['A', 'B', 'C', 'D'].map(letter => {
+              const text = q[letter.toLowerCase()];
+              if (!text) return '';
+              return `
+                <button onclick="App.answerWeeklyQuestion('${letter}')" style="background:white; border:2px solid var(--line); padding:0.9rem 1rem; border-radius:12px; text-align:left; cursor:pointer; transition:all 0.15s; display:flex; align-items:flex-start; gap:0.7rem; font-size:0.95rem; line-height:1.4">
+                  <span style="background:var(--cream); border:1.5px solid var(--line); width:32px; height:32px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-weight:800; color:var(--ink); flex-shrink:0">${letter}</span>
+                  <span style="flex:1; padding-top:0.4rem">${text}</span>
+                </button>
+              `;
+            }).join('')}
+          </div>
+
+          <!-- AVERTISSEMENT BAS -->
+          <div style="margin-top:1.2rem; padding:0.7rem 0.9rem; background:#fef3c7; border-left:3px solid #d97706; border-radius:6px; font-size:0.78rem; color:#78350f; line-height:1.45">
+            ⚠️ Une fois la réponse cliquée, tu ne peux pas revenir en arrière. Réfléchis bien.
+          </div>
+
+        </div>
+
+      </div>
+    `;
+  },
+
+  _categoryLabel(cat) {
+    const labels = {
+      'cg': '🌍 Culture générale',
+      'francais': '📝 Français',
+      'maths': '🔢 Mathématiques',
+      'actualite_bf': '📰 Actualité Burkina',
+      'droit': '⚖️ Droit',
+      'informatique': '💻 Informatique'
+    };
+    return labels[cat] || cat;
+  },
+
+  // Répondre à une question
+  answerWeeklyQuestion(letter) {
+    if (!window.WeeklyExam) return;
+    const state = window.WeeklyExam.getState();
+    const exam = state.activeExam;
+    if (!exam) return;
+
+    const currentIdx = exam.currentIndex || 0;
+    const result = window.WeeklyExam.answerQuestion(currentIdx, letter);
+    if (!result.success) {
+      this.toast('❌ ' + (result.error || 'Erreur'), 'danger');
+      return;
+    }
+
+    // Auto-démarrage du timer de mise à jour (rafraîchir l'affichage)
+    this.render();
+  },
+
+  // Terminer l'examen
+  async finishWeeklyExam() {
+    if (!window.WeeklyExam) return;
+    const result = await window.WeeklyExam.finishExam(this.state.user);
+    if (!result.success) {
+      this.toast('❌ ' + (result.error || 'Erreur'), 'danger');
+      return;
+    }
+    this.toast('✅ Examen terminé ! Score : ' + result.result.score + '/' + result.result.total);
+    this.navigate('weekly-exam-result');
+  },
+
+  // PAGE 3 : Résultats
+  renderWeeklyExamResult() {
+    if (!window.WeeklyExam) return '<div>Module non chargé</div>';
+
+    const lastResult = window.WeeklyExam.getLastResult();
+    if (!lastResult) {
+      setTimeout(() => this.navigate('weekly-exam'), 100);
+      return '<div>Pas de résultat</div>';
+    }
+
+    const isPremium = window.PremiumService.isUserPremium(this.state.user);
+    const isExcellent = lastResult.percent >= 75;
+    const isGood = lastResult.percent >= 50 && lastResult.percent < 75;
+    const scoreColor = isExcellent ? '#16a34a' : (isGood ? '#d97706' : '#dc2626');
+    const emoji = isExcellent ? '🌟' : (isGood ? '👍' : '💪');
+    const message = isExcellent ? 'Excellent !' : (isGood ? 'Bon travail !' : 'Continue de t\'entraîner !');
+
+    return `
+      <div class="page" style="padding-bottom:5rem; background:linear-gradient(180deg, #f0fdf4, var(--cream))">
+        <header class="header">
+          <button class="header-btn" onclick="App.navigate('weekly-exam')">←</button>
+          <div class="header-title">📊 Mon résultat</div>
+        </header>
+
+        <div style="padding:1rem 1.2rem">
+
+          <!-- SCORE PRINCIPAL -->
+          <div style="background:white; border-radius:20px; padding:2rem 1.5rem; text-align:center; box-shadow:0 4px 20px rgba(0,0,0,0.08); margin-bottom:1.2rem">
+            <div style="font-size:3.5rem">${emoji}</div>
+            <div style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); font-size:1.4rem; margin:0.5rem 0">${message}</div>
+            <div style="font-family:'Instrument Serif',serif; font-size:4rem; color:${scoreColor}; font-weight:700; line-height:1">${lastResult.percent}%</div>
+            <div style="font-size:1.1rem; color:var(--ink); font-weight:600; margin-top:0.3rem">${lastResult.score} / ${lastResult.total} bonnes réponses</div>
+            <div style="font-size:0.8rem; color:var(--ink-mute); margin-top:0.6rem">
+              ${new Date(lastResult.finishedAt).toLocaleDateString('fr-FR', {weekday:'long', day:'numeric', month:'long', year:'numeric'})}
+            </div>
+          </div>
+
+          <!-- ANALYSE PAR MATIÈRE -->
+          ${isPremium ? `
+            <div style="background:white; border-radius:14px; padding:1.2rem; margin-bottom:1.2rem; border:1px solid var(--line)">
+              <h3 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:0 0 0.8rem; font-size:1.15rem">📈 Analyse par matière</h3>
+              ${Object.entries(lastResult.byCategory).map(([cat, stats]) => {
+                const catLabel = this._categoryLabel(cat);
+                const catPercent = stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0;
+                const catColor = catPercent >= 70 ? '#16a34a' : (catPercent >= 50 ? '#d97706' : '#dc2626');
+                return `
+                  <div style="margin-bottom:0.8rem">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.25rem">
+                      <span style="font-size:0.9rem; font-weight:600">${catLabel}</span>
+                      <span style="font-size:0.85rem; font-weight:800; color:${catColor}">${stats.correct}/${stats.total} (${catPercent}%)</span>
+                    </div>
+                    <div style="height:6px; background:var(--line); border-radius:999px; overflow:hidden">
+                      <div style="height:100%; background:${catColor}; width:${catPercent}%; transition:width 0.5s"></div>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          ` : `
+            <div style="background:linear-gradient(135deg, #fef3c7, white); border:2px solid var(--gold-bf); border-radius:14px; padding:1.2rem; margin-bottom:1.2rem; text-align:center">
+              <div style="font-size:2rem">🔒</div>
+              <h3 style="font-family:'Instrument Serif',serif; color:#854d0e; margin:0.5rem 0">Analyse détaillée réservée Premium</h3>
+              <p style="color:#78350f; margin:0 0 1rem; font-size:0.88rem; line-height:1.5">
+                Découvre tes points forts et faibles par matière, ta position dans le classement national, et la correction détaillée de chaque question.
+              </p>
+              <button onclick="App.navigate('premium')" style="background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.8rem 1.5rem; border-radius:10px; font-weight:800; cursor:pointer">
+                ⭐ Voir les offres Premium
+              </button>
+            </div>
+          `}
+
+          <!-- V62 : ACTIONS CLASSEMENT & CORRECTION -->
+          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-bottom:1rem">
+            <button onclick="App.navigate('weekly-exam-ranking')" style="background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.95rem; border-radius:12px; font-weight:800; cursor:pointer; font-size:0.95rem; display:flex; align-items:center; justify-content:center; gap:0.4rem; box-shadow:0 4px 12px rgba(217,119,6,0.2)">
+              🏆 Voir le classement national
+            </button>
+            <button onclick="App.navigate('weekly-exam-correction')" style="background:white; color:var(--green-bf-dark); border:2px solid var(--green-bf); padding:0.9rem; border-radius:12px; font-weight:800; cursor:pointer; font-size:0.95rem; display:flex; align-items:center; justify-content:center; gap:0.4rem">
+              ${isPremium ? '✏️ Correction détaillée' : '🔒 Correction (Premium)'}
+            </button>
+          </div>
+
+          <!-- ACTIONS -->
+          <div style="display:flex; gap:0.6rem">
+            <button onclick="App.navigate('weekly-exam')" style="flex:1; background:white; color:var(--green-bf-dark); border:1.5px solid var(--green-bf); padding:0.85rem; border-radius:10px; font-weight:700; cursor:pointer">
+              ← Retour
+            </button>
+            <button onclick="App.navigate('home')" style="flex:1; background:var(--green-bf); color:white; border:none; padding:0.85rem; border-radius:10px; font-weight:700; cursor:pointer">
+              🏠 Accueil
+            </button>
+          </div>
+
+          <!-- INFO PROCHAIN EXAMEN -->
+          <div style="text-align:center; margin-top:1.5rem; padding:1rem; background:white; border-radius:10px; border:1px dashed var(--line)">
+            <div style="font-size:0.8rem; color:var(--ink-soft); margin-bottom:0.2rem">📅 Prochain examen</div>
+            <div style="font-weight:700; color:var(--green-bf-dark)">Dimanche prochain à 19h30</div>
+          </div>
+
+        </div>
+      </div>
+    `;
+  },
+
+  // =================================================================
+  // FIN V61 EXAMEN HEBDOMADAIRE
+  // =================================================================
+
+  // =================================================================
+  // V62 : CLASSEMENT NATIONAL + CORRECTION DÉTAILLÉE
+  // =================================================================
+
+  // PAGE 4 : Classement national de l'examen
+  renderWeeklyExamRanking() {
+    if (!window.WeeklyExam) return '<div>Module non chargé</div>';
+
+    // Quel examen ? Par défaut : le dernier examen passé par l'utilisateur
+    const examId = this.state.weeklyRankingExamId || (window.WeeklyExam.getLastResult()?.examId);
+    if (!examId) {
+      return `
+        <div class="page" style="padding-bottom:5rem">
+          <header class="header">
+            <button class="header-btn" onclick="App.navigate('weekly-exam')">←</button>
+            <div class="header-title">🏆 Classement</div>
+          </header>
+          <div style="padding:2rem 1.2rem; text-align:center">
+            <div style="font-size:3rem">📅</div>
+            <h3 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:1rem 0">Pas encore de classement</h3>
+            <p style="color:var(--ink-soft); font-size:0.92rem; line-height:1.55; max-width:340px; margin:0 auto">
+              Participe à l'examen hebdomadaire ce dimanche pour voir le classement national.
+            </p>
+            <button onclick="App.navigate('weekly-exam')" style="margin-top:1.2rem; background:var(--green-bf); color:white; border:none; padding:0.85rem 1.5rem; border-radius:10px; font-weight:700; cursor:pointer">
+              📅 Voir l'examen
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    const isPremium = window.PremiumService.isUserPremium(this.state.user);
+    const cache = this.state.weeklyRankingCache || {};
+    const cachedData = cache[examId];
+
+    // V62 : Refresh async du classement depuis Firestore (pattern admin codes)
+    if (!this.state._weeklyRankingLoading) {
+      this.state._weeklyRankingLoading = true;
+      window.WeeklyExam.getRanking(examId, isPremium ? 100 : 10).then(result => {
+        this.state._weeklyRankingLoading = false;
+        if (result.success) {
+          this.state.weeklyRankingCache = this.state.weeklyRankingCache || {};
+          this.state.weeklyRankingCache[examId] = result;
+          this.render();
+        }
+      });
+    }
+
+    // Affichage : si on a un cache → afficher, sinon afficher loader
+    if (!cachedData) {
+      return `
+        <div class="page" style="padding-bottom:5rem">
+          <header class="header">
+            <button class="header-btn" onclick="App.navigate('weekly-exam-result')">←</button>
+            <div class="header-title">🏆 Classement national</div>
+          </header>
+          <div style="padding:3rem 1.2rem; text-align:center">
+            <div style="font-size:2rem">⏳</div>
+            <p style="color:var(--ink-soft); margin-top:0.5rem">Chargement du classement...</p>
+          </div>
+        </div>
+      `;
+    }
+
+    const ranking = cachedData.ranking || [];
+    const total = cachedData.total || 0;
+    const userPosition = cachedData.userPosition;
+    const userResult = cachedData.userResult;
+
+    // Date affichée
+    const examDate = examId.replace('exam_', '');
+    const dateLabel = new Date(examDate).toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+
+    // État vide
+    if (ranking.length === 0) {
+      return `
+        <div class="page" style="padding-bottom:5rem">
+          <header class="header">
+            <button class="header-btn" onclick="App.navigate('weekly-exam-result')">←</button>
+            <div class="header-title">🏆 Classement national</div>
+          </header>
+          <div style="padding:2rem 1.2rem; text-align:center">
+            <div style="font-size:3rem">🌱</div>
+            <h3 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:1rem 0">Premier participant !</h3>
+            <p style="color:var(--ink-soft); font-size:0.92rem; line-height:1.55; max-width:340px; margin:0 auto">
+              Tu es le premier à passer l'examen de ce dimanche. Le classement se construit au fur et à mesure des participations.
+              <br><br>
+              Invite tes amis sur Bara Concours pour avoir une vraie compétition nationale !
+            </p>
+            <button onclick="App.shareApp()" style="margin-top:1.2rem; background:#25D366; color:white; border:none; padding:0.85rem 1.5rem; border-radius:10px; font-weight:700; cursor:pointer">
+              💬 Partager Bara Concours
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    // Construire le classement avec medailles
+    const medalEmoji = (pos) => {
+      if (pos === 1) return '🥇';
+      if (pos === 2) return '🥈';
+      if (pos === 3) return '🥉';
+      return '#' + pos;
+    };
+    const rowBackground = (pos, isMe) => {
+      if (isMe) return 'linear-gradient(135deg, #fef3c7, #fde68a)';
+      if (pos === 1) return 'linear-gradient(135deg, #fef9c3, white)';
+      if (pos <= 3) return 'linear-gradient(135deg, #f0fdf4, white)';
+      return 'white';
+    };
+
+    const myUid = window.FirebaseAuth?.user?.uid;
+
+    // Position personnelle hors top
+    let outOfTopBanner = '';
+    if (userPosition && userPosition > ranking.length) {
+      outOfTopBanner = `
+        <div style="background:linear-gradient(135deg, #fef3c7, #fde68a); border:2px solid #d97706; border-radius:12px; padding:0.9rem 1rem; margin-bottom:1rem; display:flex; align-items:center; gap:0.8rem">
+          <div style="font-size:2rem">📍</div>
+          <div style="flex:1">
+            <div style="font-weight:800; color:#92400e">Ta position</div>
+            <div style="font-size:0.85rem; color:#78350f">#${userPosition} sur ${total} • ${userResult?.score}/${userResult?.total} points</div>
+          </div>
+        </div>
+      `;
+    }
+
+    return `
+      <div class="page" style="padding-bottom:5rem">
+        <header class="header">
+          <button class="header-btn" onclick="App.navigate('weekly-exam-result')">←</button>
+          <div class="header-title">🏆 Classement national</div>
+        </header>
+
+        <div style="padding:1rem 1.2rem">
+
+          <!-- HEADER DATE -->
+          <div style="text-align:center; margin-bottom:1.2rem">
+            <div style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); font-size:1.3rem">${dateLabel}</div>
+            <div style="font-size:0.85rem; color:var(--ink-soft); margin-top:0.2rem">${total} participant${total > 1 ? 's' : ''} • Examen national hebdomadaire</div>
+          </div>
+
+          ${outOfTopBanner}
+
+          <!-- PODIUM TOP 3 (si on a au moins 3 participants) -->
+          ${ranking.length >= 3 ? `
+            <div style="display:grid; grid-template-columns:1fr 1.2fr 1fr; gap:0.4rem; margin-bottom:1.2rem; align-items:end">
+              <!-- 2ème -->
+              <div style="background:linear-gradient(180deg, #e5e7eb, white); border-radius:12px 12px 0 0; padding:0.8rem 0.5rem 1.3rem; text-align:center; border-top:4px solid #9ca3af">
+                <div style="font-size:1.8rem">🥈</div>
+                <div style="font-weight:700; font-size:0.85rem; margin-top:0.3rem; word-break:break-word">${this._truncateName(ranking[1].displayName)}</div>
+                <div style="font-size:0.75rem; color:var(--ink-mute); margin-top:0.15rem">${ranking[1].score}/${ranking[1].total}</div>
+              </div>
+              <!-- 1er -->
+              <div style="background:linear-gradient(180deg, #fef3c7, white); border-radius:12px 12px 0 0; padding:1rem 0.5rem 1.5rem; text-align:center; border-top:4px solid var(--gold-bf); transform:translateY(-8px)">
+                <div style="font-size:2.2rem">🥇</div>
+                <div style="font-weight:800; font-size:0.95rem; margin-top:0.3rem; color:var(--green-bf-dark); word-break:break-word">${this._truncateName(ranking[0].displayName)}</div>
+                <div style="font-size:0.78rem; color:#854d0e; font-weight:700; margin-top:0.15rem">${ranking[0].score}/${ranking[0].total}</div>
+              </div>
+              <!-- 3ème -->
+              <div style="background:linear-gradient(180deg, #fed7aa, white); border-radius:12px 12px 0 0; padding:0.7rem 0.5rem 1.2rem; text-align:center; border-top:4px solid #ea580c">
+                <div style="font-size:1.6rem">🥉</div>
+                <div style="font-weight:700; font-size:0.83rem; margin-top:0.3rem; word-break:break-word">${this._truncateName(ranking[2].displayName)}</div>
+                <div style="font-size:0.74rem; color:var(--ink-mute); margin-top:0.15rem">${ranking[2].score}/${ranking[2].total}</div>
+              </div>
+            </div>
+          ` : ''}
+
+          <!-- LISTE COMPLÈTE -->
+          <div style="background:white; border-radius:12px; border:1px solid var(--line); overflow:hidden">
+            ${ranking.map((r, idx) => {
+              const pos = idx + 1;
+              const isMe = r.userId === myUid;
+              return `
+                <div style="display:flex; align-items:center; gap:0.7rem; padding:0.75rem 0.9rem; background:${rowBackground(pos, isMe)}; border-bottom:1px solid var(--line); ${isMe ? 'border-left:4px solid var(--gold-bf)' : ''}">
+                  <div style="font-weight:800; font-size:${pos <= 3 ? '1.1rem' : '0.9rem'}; min-width:36px; color:${pos <= 3 ? 'var(--green-bf-dark)' : 'var(--ink-soft)'}">${medalEmoji(pos)}</div>
+                  <div style="flex:1; min-width:0">
+                    <div style="font-weight:${isMe ? 800 : 600}; font-size:0.9rem; color:var(--ink)">${this._truncateName(r.displayName)}${isMe ? ' <span style="background:var(--gold-bf); color:white; padding:0.1rem 0.4rem; border-radius:999px; font-size:0.65rem; font-weight:800; margin-left:0.3rem">TOI</span>' : ''}</div>
+                    <div style="font-size:0.75rem; color:var(--ink-mute); margin-top:0.1rem">
+                      ${r.city || ''}${r.city && r.targetConcours ? ' • ' : ''}${r.targetConcours || ''}
+                    </div>
+                  </div>
+                  <div style="text-align:right">
+                    <div style="font-weight:800; color:var(--green-bf-dark); font-size:0.95rem">${r.score}/${r.total}</div>
+                    <div style="font-size:0.72rem; color:var(--ink-mute)">${r.percent}%</div>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+
+          <!-- PROMO PREMIUM SI GRATUIT -->
+          ${!isPremium && total > 10 ? `
+            <div style="background:linear-gradient(135deg, #fef3c7, white); border:2px solid var(--gold-bf); border-radius:14px; padding:1rem 1.2rem; margin-top:1.2rem; text-align:center">
+              <div style="font-size:1.8rem">🔒</div>
+              <h3 style="font-family:'Instrument Serif',serif; color:#854d0e; margin:0.4rem 0; font-size:1.15rem">Tu vois seulement le Top 10</h3>
+              <p style="color:#78350f; margin:0 0 0.9rem; font-size:0.85rem; line-height:1.5">
+                Premium te donne accès au classement complet (${total} participants), ta position exacte, et l'analyse comparative.
+              </p>
+              <button onclick="App.navigate('premium')" style="background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.7rem 1.3rem; border-radius:8px; font-weight:800; cursor:pointer; font-size:0.88rem">
+                ⭐ Devenir Premium
+              </button>
+            </div>
+          ` : ''}
+
+        </div>
+      </div>
+    `;
+  },
+
+  _truncateName(name) {
+    if (!name) return 'Anonyme';
+    if (name.length > 22) return name.substring(0, 22) + '…';
+    return name;
+  },
+
+  shareApp() {
+    const text = '🎓 Bara Concours — Prépare-toi aux concours du Burkina Faso avec des QCM ciblés et l\'examen national hebdomadaire chaque dimanche à 19h30 ! https://bara-formation.github.io/bara-concours/';
+    if (navigator.share) {
+      navigator.share({ title: 'Bara Concours', text: text }).catch(() => {});
+    } else if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(() => this.toast('📋 Lien copié !'));
+    } else {
+      // Fallback : WhatsApp direct
+      window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank');
+    }
+  },
+
+  // PAGE 5 : Correction détaillée (Premium uniquement)
+  renderWeeklyExamCorrection() {
+    if (!window.WeeklyExam) return '<div>Module non chargé</div>';
+
+    const examId = this.state.weeklyCorrectionExamId || (window.WeeklyExam.getLastResult()?.examId);
+    const result = examId ? window.WeeklyExam.getResultByExamId(examId) : null;
+
+    if (!result) {
+      return `
+        <div class="page" style="padding-bottom:5rem">
+          <header class="header">
+            <button class="header-btn" onclick="App.navigate('weekly-exam')">←</button>
+            <div class="header-title">✏️ Correction</div>
+          </header>
+          <div style="padding:2rem 1.2rem; text-align:center">
+            <div style="font-size:3rem">📭</div>
+            <p style="color:var(--ink-soft); margin-top:1rem">Aucune correction disponible.<br>Passe l'examen d'abord !</p>
+            <button onclick="App.navigate('weekly-exam')" style="margin-top:1rem; background:var(--green-bf); color:white; border:none; padding:0.8rem 1.5rem; border-radius:10px; font-weight:700; cursor:pointer">📅 Examen hebdo</button>
+          </div>
+        </div>
+      `;
+    }
+
+    // V62 : Vérifier Premium
+    const isPremium = window.PremiumService.isUserPremium(this.state.user);
+    if (!isPremium) {
+      return `
+        <div class="page" style="padding-bottom:5rem">
+          <header class="header">
+            <button class="header-btn" onclick="App.navigate('weekly-exam-result')">←</button>
+            <div class="header-title">✏️ Correction détaillée</div>
+          </header>
+          <div style="padding:2rem 1.2rem; text-align:center">
+            <div style="font-size:3.5rem">🔒</div>
+            <h2 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:0.8rem 0">Correction détaillée réservée Premium</h2>
+            <p style="color:var(--ink-soft); font-size:0.95rem; line-height:1.6; max-width:380px; margin:0 auto">
+              Avec Premium, tu as accès à :<br>
+              ✅ La correction de chaque question avec explication<br>
+              ✅ Pourquoi tu as eu faux (raisonnement)<br>
+              ✅ Les points clés à retenir<br>
+              ✅ L'analyse de tes lacunes par matière
+            </p>
+            <button onclick="App.navigate('premium')" style="margin-top:1.5rem; background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.95rem 1.8rem; border-radius:12px; font-weight:800; cursor:pointer; font-size:1rem; box-shadow:0 4px 14px rgba(217,119,6,0.25)">
+              ⭐ Voir les plans Premium
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    // Filtre actif (toutes / fausses / correctes)
+    const filter = this.state.weeklyCorrectionFilter || 'all';
+    const details = result.detailedResults || [];
+    let filteredDetails = details;
+    if (filter === 'wrong') filteredDetails = details.filter(d => !d.isCorrect);
+    if (filter === 'correct') filteredDetails = details.filter(d => d.isCorrect);
+    if (filter && filter.startsWith('cat_')) {
+      const cat = filter.substring(4);
+      filteredDetails = details.filter(d => d.category === cat);
+    }
+
+    const wrongCount = details.filter(d => !d.isCorrect).length;
+    const correctCount = details.filter(d => d.isCorrect).length;
+
+    return `
+      <div class="page" style="padding-bottom:5rem">
+        <header class="header">
+          <button class="header-btn" onclick="App.navigate('weekly-exam-result')">←</button>
+          <div class="header-title">✏️ Correction détaillée</div>
+        </header>
+
+        <div style="padding:1rem 1.2rem">
+
+          <!-- RÉSUMÉ -->
+          <div style="background:white; border-radius:12px; padding:1rem; border:1px solid var(--line); margin-bottom:1rem">
+            <div style="display:flex; justify-content:space-around; text-align:center">
+              <div>
+                <div style="font-size:1.6rem; font-weight:800; color:#16a34a">${correctCount}</div>
+                <div style="font-size:0.75rem; color:var(--ink-mute)">Correctes</div>
+              </div>
+              <div>
+                <div style="font-size:1.6rem; font-weight:800; color:#dc2626">${wrongCount}</div>
+                <div style="font-size:0.75rem; color:var(--ink-mute)">Fausses</div>
+              </div>
+              <div>
+                <div style="font-size:1.6rem; font-weight:800; color:var(--green-bf-dark)">${result.percent}%</div>
+                <div style="font-size:0.75rem; color:var(--ink-mute)">Score</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FILTRES -->
+          <div style="display:flex; gap:0.4rem; overflow-x:auto; padding-bottom:0.4rem; margin-bottom:1rem">
+            <button onclick="App.setCorrectionFilter('all')" style="background:${filter === 'all' ? 'var(--green-bf)' : 'white'}; color:${filter === 'all' ? 'white' : 'var(--ink)'}; border:1.5px solid ${filter === 'all' ? 'var(--green-bf)' : 'var(--line)'}; padding:0.4rem 0.8rem; border-radius:999px; font-size:0.8rem; font-weight:700; cursor:pointer; white-space:nowrap">
+              Toutes (${details.length})
+            </button>
+            <button onclick="App.setCorrectionFilter('wrong')" style="background:${filter === 'wrong' ? '#dc2626' : 'white'}; color:${filter === 'wrong' ? 'white' : 'var(--ink)'}; border:1.5px solid ${filter === 'wrong' ? '#dc2626' : 'var(--line)'}; padding:0.4rem 0.8rem; border-radius:999px; font-size:0.8rem; font-weight:700; cursor:pointer; white-space:nowrap">
+              ❌ Fausses (${wrongCount})
+            </button>
+            <button onclick="App.setCorrectionFilter('correct')" style="background:${filter === 'correct' ? '#16a34a' : 'white'}; color:${filter === 'correct' ? 'white' : 'var(--ink)'}; border:1.5px solid ${filter === 'correct' ? '#16a34a' : 'var(--line)'}; padding:0.4rem 0.8rem; border-radius:999px; font-size:0.8rem; font-weight:700; cursor:pointer; white-space:nowrap">
+              ✅ Correctes (${correctCount})
+            </button>
+          </div>
+
+          <!-- LISTE -->
+          <div style="display:flex; flex-direction:column; gap:0.7rem">
+            ${filteredDetails.length === 0 ? `
+              <div style="text-align:center; padding:2rem; background:white; border-radius:12px; border:1px solid var(--line); color:var(--ink-soft)">
+                Aucune question dans ce filtre
+              </div>
+            ` : filteredDetails.map((d, idx) => {
+              const realIdx = details.indexOf(d) + 1;
+              const isCorrect = d.isCorrect;
+              const userAnswer = d.userAnswer;
+              const correctAnswer = d.correctAnswer;
+              return `
+                <div style="background:white; border-radius:12px; padding:1rem; border:1px solid var(--line); border-left:4px solid ${isCorrect ? '#16a34a' : '#dc2626'}">
+
+                  <div style="display:flex; gap:0.4rem; margin-bottom:0.6rem; flex-wrap:wrap; align-items:center">
+                    <span style="background:${isCorrect ? '#dcfce7' : '#fee2e2'}; color:${isCorrect ? '#166534' : '#991b1b'}; padding:0.2rem 0.55rem; border-radius:999px; font-size:0.7rem; font-weight:800">
+                      Q${realIdx} • ${isCorrect ? '✅ JUSTE' : '❌ FAUX'}
+                    </span>
+                    <span style="background:var(--cream); color:var(--ink-soft); padding:0.2rem 0.55rem; border-radius:999px; font-size:0.7rem; font-weight:700">
+                      ${this._categoryLabel(d.category)}
+                    </span>
+                  </div>
+
+                  <div style="font-size:0.95rem; line-height:1.5; color:var(--ink); margin-bottom:0.8rem; font-weight:500">
+                    ${d.question}
+                  </div>
+
+                  <!-- Options -->
+                  <div style="display:flex; flex-direction:column; gap:0.4rem; margin-bottom:0.7rem">
+                    ${['A', 'B', 'C', 'D'].map(letter => {
+                      const text = d.options[letter];
+                      if (!text) return '';
+                      const isUserChoice = userAnswer === letter;
+                      const isCorrectChoice = correctAnswer === letter;
+                      let bg = 'var(--cream)';
+                      let border = 'var(--line)';
+                      let icon = '';
+                      if (isCorrectChoice) { bg = '#dcfce7'; border = '#16a34a'; icon = '✓'; }
+                      else if (isUserChoice && !isCorrect) { bg = '#fee2e2'; border = '#dc2626'; icon = '✗'; }
+                      return `
+                        <div style="display:flex; gap:0.6rem; padding:0.55rem 0.7rem; background:${bg}; border:1.5px solid ${border}; border-radius:8px; align-items:center">
+                          <span style="font-weight:800; min-width:20px">${letter}.</span>
+                          <span style="flex:1; font-size:0.88rem">${text}</span>
+                          ${icon ? `<span style="font-size:1.1rem; font-weight:800; color:${isCorrectChoice ? '#16a34a' : '#dc2626'}">${icon}</span>` : ''}
+                        </div>
+                      `;
+                    }).join('')}
+                  </div>
+
+                  ${!userAnswer ? '<div style="background:#fef3c7; color:#92400e; padding:0.5rem 0.7rem; border-radius:8px; font-size:0.78rem; margin-bottom:0.5rem">⏰ Pas de réponse donnée (temps écoulé)</div>' : ''}
+
+                  ${d.explanation ? `
+                    <div style="background:#eff6ff; border-left:3px solid #2563eb; padding:0.7rem 0.9rem; border-radius:6px; font-size:0.83rem; line-height:1.5; color:#1e3a8a">
+                      <strong>💡 Explication :</strong> ${d.explanation}
+                    </div>
+                  ` : ''}
+
+                </div>
+              `;
+            }).join('')}
+          </div>
+
+        </div>
+      </div>
+    `;
+  },
+
+  setCorrectionFilter(filter) {
+    this.state.weeklyCorrectionFilter = filter;
+    this.render();
+  },
+
+  // =================================================================
+  // V63 : HISTORIQUE DES EXAMENS + NOTIFICATIONS
+  // =================================================================
+
+  renderWeeklyExamHistory() {
+    if (!window.WeeklyExam) return '<div>Module non chargé</div>';
+
+    const allResults = window.WeeklyExam.getAllResults();
+    const isPremium = window.PremiumService.isUserPremium(this.state.user);
+
+    // Premium uniquement pour l'historique complet
+    if (!isPremium && allResults.length > 0) {
+      return `
+        <div class="page" style="padding-bottom:5rem">
+          <header class="header">
+            <button class="header-btn" onclick="App.navigate('weekly-exam')">←</button>
+            <div class="header-title">📊 Mes examens</div>
+          </header>
+          <div style="padding:1.2rem 1.2rem">
+
+            <!-- Aperçu Premium -->
+            <div style="background:linear-gradient(135deg, #fef3c7, white); border:2px solid var(--gold-bf); border-radius:14px; padding:1.5rem; text-align:center">
+              <div style="font-size:3rem">🔒</div>
+              <h2 style="font-family:'Instrument Serif',serif; color:#854d0e; margin:0.6rem 0; font-size:1.3rem">Historique réservé Premium</h2>
+              <p style="color:#78350f; margin:0 0 1rem; font-size:0.9rem; line-height:1.55">
+                Avec Premium, tu accèdes à :<br>
+                ✅ Tous tes examens passés<br>
+                ✅ Évolution de tes scores semaine par semaine<br>
+                ✅ Tes matières fortes et faibles<br>
+                ✅ Comparaison avec les autres candidats
+              </p>
+              <button onclick="App.navigate('premium')" style="background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.85rem 1.5rem; border-radius:10px; font-weight:800; cursor:pointer; font-size:0.95rem">
+                ⭐ Voir les plans Premium
+              </button>
+            </div>
+
+            <!-- Dernier résultat seulement (gratuit) -->
+            ${allResults[0] ? `
+              <div style="margin-top:1.5rem">
+                <div style="font-size:0.8rem; color:var(--ink-mute); font-weight:700; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:0.5rem">Ton dernier examen</div>
+                ${this._renderHistoryRow(allResults[0])}
+              </div>
+            ` : ''}
+
+          </div>
+        </div>
+      `;
+    }
+
+    // État vide
+    if (allResults.length === 0) {
+      return `
+        <div class="page" style="padding-bottom:5rem">
+          <header class="header">
+            <button class="header-btn" onclick="App.navigate('weekly-exam')">←</button>
+            <div class="header-title">📊 Mes examens</div>
+          </header>
+          <div style="padding:2rem 1.2rem; text-align:center">
+            <div style="font-size:3rem">📭</div>
+            <h3 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:1rem 0">Aucun examen passé</h3>
+            <p style="color:var(--ink-soft); font-size:0.92rem; line-height:1.55; max-width:340px; margin:0 auto">
+              Participe à ton premier examen hebdomadaire dimanche prochain à 19h30 pour voir ton historique apparaître ici.
+            </p>
+            <button onclick="App.navigate('weekly-exam')" style="margin-top:1.2rem; background:var(--green-bf); color:white; border:none; padding:0.85rem 1.5rem; border-radius:10px; font-weight:700; cursor:pointer">
+              📅 Voir l'examen hebdo
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    // V63 : Calculer les statistiques d'évolution
+    const totalExams = allResults.length;
+    const avgScore = Math.round(allResults.reduce((s, r) => s + r.percent, 0) / totalExams);
+    const bestScore = Math.max(...allResults.map(r => r.percent));
+    const lastTwo = allResults.slice(0, 2);
+    let trend = null;
+    if (lastTwo.length === 2) {
+      trend = lastTwo[0].percent - lastTwo[1].percent;
+    }
+
+    // Analyse globale par matière (cumulé sur tous les examens)
+    const catCumul = {};
+    allResults.forEach(r => {
+      Object.entries(r.byCategory || {}).forEach(([cat, stats]) => {
+        if (!catCumul[cat]) catCumul[cat] = { correct: 0, total: 0 };
+        catCumul[cat].correct += stats.correct;
+        catCumul[cat].total += stats.total;
+      });
+    });
+    // Tri par % décroissant
+    const catSorted = Object.entries(catCumul).map(([cat, stats]) => ({
+      cat,
+      correct: stats.correct,
+      total: stats.total,
+      percent: stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0
+    })).sort((a, b) => b.percent - a.percent);
+
+    const matiereForte = catSorted[0];
+    const matiereFaible = catSorted[catSorted.length - 1];
+
+    return `
+      <div class="page" style="padding-bottom:5rem">
+        <header class="header">
+          <button class="header-btn" onclick="App.navigate('weekly-exam')">←</button>
+          <div class="header-title">📊 Mes examens</div>
+        </header>
+
+        <div style="padding:1rem 1.2rem">
+
+          <!-- STATS GÉNÉRALES -->
+          <div style="background:white; border-radius:14px; padding:1.2rem; border:1px solid var(--line); margin-bottom:1rem">
+            <h3 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:0 0 0.8rem; font-size:1.15rem">📈 Ton bilan</h3>
+            <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:0.5rem; text-align:center">
+              <div>
+                <div style="font-family:'Instrument Serif',serif; font-size:1.8rem; color:var(--green-bf-dark); font-weight:700; line-height:1">${totalExams}</div>
+                <div style="font-size:0.72rem; color:var(--ink-mute); margin-top:0.1rem">Examens passés</div>
+              </div>
+              <div>
+                <div style="font-family:'Instrument Serif',serif; font-size:1.8rem; color:var(--gold-bf-dark); font-weight:700; line-height:1">${avgScore}%</div>
+                <div style="font-size:0.72rem; color:var(--ink-mute); margin-top:0.1rem">Moyenne</div>
+              </div>
+              <div>
+                <div style="font-family:'Instrument Serif',serif; font-size:1.8rem; color:#16a34a; font-weight:700; line-height:1">${bestScore}%</div>
+                <div style="font-size:0.72rem; color:var(--ink-mute); margin-top:0.1rem">Meilleur</div>
+              </div>
+            </div>
+            ${trend !== null ? `
+              <div style="text-align:center; margin-top:0.9rem; padding-top:0.7rem; border-top:1px dashed var(--line)">
+                <div style="font-size:0.85rem; color:${trend >= 0 ? '#16a34a' : '#dc2626'}; font-weight:700">
+                  ${trend >= 0 ? '↗' : '↘'} ${trend >= 0 ? '+' : ''}${trend}% vs examen précédent
+                </div>
+              </div>
+            ` : ''}
+          </div>
+
+          <!-- ANALYSE GLOBALE PAR MATIÈRE -->
+          ${catSorted.length > 0 ? `
+            <div style="background:white; border-radius:14px; padding:1.2rem; border:1px solid var(--line); margin-bottom:1rem">
+              <h3 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:0 0 0.8rem; font-size:1.15rem">🎯 Matières fortes et faibles</h3>
+
+              ${matiereForte && matiereForte.percent > 0 ? `
+                <div style="background:#dcfce7; border-left:3px solid #16a34a; padding:0.7rem 0.9rem; border-radius:6px; margin-bottom:0.6rem">
+                  <div style="font-size:0.78rem; color:#15803d; font-weight:700">💪 Ta matière forte</div>
+                  <div style="font-weight:700; color:#166534">${this._categoryLabel(matiereForte.cat)} — ${matiereForte.percent}%</div>
+                </div>
+              ` : ''}
+
+              ${matiereFaible && matiereFaible !== matiereForte ? `
+                <div style="background:#fee2e2; border-left:3px solid #dc2626; padding:0.7rem 0.9rem; border-radius:6px; margin-bottom:0.8rem">
+                  <div style="font-size:0.78rem; color:#991b1b; font-weight:700">📚 À renforcer</div>
+                  <div style="font-weight:700; color:#7f1d1d">${this._categoryLabel(matiereFaible.cat)} — ${matiereFaible.percent}%</div>
+                </div>
+              ` : ''}
+
+              <div style="margin-top:0.5rem">
+                ${catSorted.map(c => {
+                  const color = c.percent >= 70 ? '#16a34a' : (c.percent >= 50 ? '#d97706' : '#dc2626');
+                  return `
+                    <div style="margin-bottom:0.5rem">
+                      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.2rem">
+                        <span style="font-size:0.83rem; font-weight:600">${this._categoryLabel(c.cat)}</span>
+                        <span style="font-size:0.78rem; font-weight:800; color:${color}">${c.correct}/${c.total} (${c.percent}%)</span>
+                      </div>
+                      <div style="height:5px; background:var(--line); border-radius:999px; overflow:hidden">
+                        <div style="height:100%; background:${color}; width:${c.percent}%; transition:width 0.5s"></div>
+                      </div>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+          ` : ''}
+
+          <!-- LISTE DES EXAMENS -->
+          <div>
+            <div style="font-size:0.8rem; color:var(--ink-mute); font-weight:700; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:0.5rem; padding:0 0.2rem">Tous mes examens (${totalExams})</div>
+            ${allResults.map(r => this._renderHistoryRow(r)).join('')}
+          </div>
+
+        </div>
+      </div>
+    `;
+  },
+
+  _renderHistoryRow(r) {
+    const scoreColor = r.percent >= 70 ? '#16a34a' : (r.percent >= 50 ? '#d97706' : '#dc2626');
+    const dateLabel = new Date(r.examStart).toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' });
+    return `
+      <div style="background:white; border:1px solid var(--line); border-radius:12px; padding:0.85rem 1rem; margin-bottom:0.6rem; display:flex; align-items:center; gap:0.8rem; cursor:pointer" onclick="App.openExamFromHistory('${r.examId}')">
+        <div style="background:linear-gradient(135deg, ${scoreColor}20, white); border:2px solid ${scoreColor}; border-radius:50%; width:56px; height:56px; display:flex; align-items:center; justify-content:center; flex-shrink:0">
+          <span style="font-family:'Instrument Serif',serif; font-size:1.1rem; font-weight:800; color:${scoreColor}">${r.percent}%</span>
+        </div>
+        <div style="flex:1; min-width:0">
+          <div style="font-weight:700; color:var(--ink); font-size:0.92rem; text-transform:capitalize">${dateLabel}</div>
+          <div style="font-size:0.78rem; color:var(--ink-mute); margin-top:0.15rem">${r.score}/${r.total} bonnes réponses</div>
+        </div>
+        <div style="font-size:1.4rem; color:var(--ink-mute)">›</div>
+      </div>
+    `;
+  },
+
+  openExamFromHistory(examId) {
+    this.state.weeklyCorrectionExamId = examId;
+    this.state.weeklyRankingExamId = examId;
+    this.navigate('weekly-exam-correction');
+  },
+
+  // === NOTIFICATIONS V63 (best effort) ===
+
+  // Demande la permission de notifier (à appeler à un moment opportun)
+  async requestExamNotifications() {
+    if (!('Notification' in window)) {
+      this.toast('🔕 Notifications non supportées sur ce navigateur', 'danger');
+      return false;
+    }
+    if (Notification.permission === 'granted') {
+      this.scheduleExamReminders();
+      return true;
+    }
+    if (Notification.permission === 'denied') {
+      this.toast('🔕 Notifications refusées dans les réglages', 'danger');
+      return false;
+    }
+    try {
+      const result = await Notification.requestPermission();
+      if (result === 'granted') {
+        this.toast('🔔 Tu seras notifié(e) avant chaque examen !');
+        this.scheduleExamReminders();
+        return true;
+      }
+    } catch(e) {
+      console.warn('[V63] Erreur permission notif :', e);
+    }
+    return false;
+  },
+
+  // Planifier les rappels d'examen (best effort)
+  // Limitation : ne marche que si l'utilisateur ouvre l'app au moins une fois pendant la fenêtre
+  scheduleExamReminders() {
+    if (!window.WeeklyExam) return;
+    if (Notification.permission !== 'granted') return;
+
+    const status = window.WeeklyExam.getCurrentStatus();
+    if (status.status === 'active' || status.status === 'before') {
+      // Annuler les anciens timers
+      if (this.state._examReminderTimers) {
+        this.state._examReminderTimers.forEach(id => clearTimeout(id));
+      }
+      this.state._examReminderTimers = [];
+
+      const timers = [];
+      const now = Date.now();
+      const oneHourBefore = status.examStart - 60 * 60 * 1000;
+      const tenMinBefore = status.examStart - 10 * 60 * 1000;
+      const atStart = status.examStart;
+
+      // Rappel 1h avant
+      if (oneHourBefore > now) {
+        const id = setTimeout(() => {
+          this._sendExamNotification('📅 Examen hebdomadaire dans 1 heure', 'Sois prêt(e) à 19h30 pour 50 questions en 1h !');
+        }, oneHourBefore - now);
+        timers.push(id);
+      }
+      // Rappel 10 min avant
+      if (tenMinBefore > now) {
+        const id = setTimeout(() => {
+          this._sendExamNotification('⏰ Examen dans 10 minutes', 'Prépare-toi mentalement, l\'examen commence à 19h30 !');
+        }, tenMinBefore - now);
+        timers.push(id);
+      }
+      // Rappel au démarrage
+      if (atStart > now) {
+        const id = setTimeout(() => {
+          this._sendExamNotification('🔴 EN DIRECT : L\'examen est ouvert !', 'Clique pour commencer maintenant. Tu as jusqu\'à 20h30.');
+        }, atStart - now);
+        timers.push(id);
+      }
+
+      this.state._examReminderTimers = timers;
+      console.log('[V63] Rappels d\'examen planifiés (' + timers.length + ' timers)');
+    }
+  },
+
+  _sendExamNotification(title, body) {
+    try {
+      const notif = new Notification(title, {
+        body,
+        icon: 'icons/icon-192.png',
+        badge: 'icons/icon-192.png',
+        tag: 'bara-weekly-exam',
+        requireInteraction: false,
+        renotify: true
+      });
+      notif.onclick = () => {
+        window.focus();
+        this.navigate('weekly-exam');
+        notif.close();
+      };
+    } catch(e) {
+      console.warn('[V63] Erreur notif :', e);
+    }
+  },
+
+  // =================================================================
+  // FIN V63 HISTORIQUE + NOTIFICATIONS
+  // =================================================================
 
   // === FORUM HOME (liste des sujets) ===
   renderForum() {
@@ -9676,6 +10949,19 @@ const App = {
           .then(reg => console.log('[SW] Enregistré', reg.scope))
           .catch(err => console.error('[SW] Erreur', err));
       });
+    }
+
+    // V63 : Mise à jour automatique du compte à rebours d'examen hebdo
+    // Re-render toutes les 60 secondes si l'utilisateur est sur Home ou page weekly-exam
+    setInterval(() => {
+      if (['home', 'weekly-exam'].includes(this.state.currentScreen)) {
+        this.render();
+      }
+    }, 60000);
+
+    // V63 : Si l'utilisateur a déjà autorisé les notifications, planifier les rappels
+    if ('Notification' in window && Notification.permission === 'granted') {
+      this.scheduleExamReminders();
     }
 
     if (window.FirebaseAuth) {
