@@ -1,18 +1,21 @@
 // Bara Concours - Service Worker
-// Version 3.1.0 - Ajout module biométrique
+// Version 6.3.2 - V63.2 : Fix format examen hebdo + tous les modules
 
-const CACHE_NAME = 'bara-concours-v3-1';
+const CACHE_NAME = 'bara-concours-v6-3-2';
 const APP_SHELL = [
   './',
   './index.html',
   './manifest.json',
   './data/concours.js',
   './data/questions.js',
+  './data/firebase.js',
   './data/notifications.js',
   './data/premium.js',
   './data/forum.js',
   './data/annales.js',
+  './data/sessions.js',
   './data/biometric.js',
+  './data/weekly_exam.js',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/icon-apple.png',

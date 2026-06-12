@@ -8713,15 +8713,6 @@ const App = {
         ⏱ Activation manuelle sous 30 min en moyenne<br>
         En cas de problème : appel direct au <strong style="color:var(--green-bf)">${window.PremiumService.BARA_NUMBERS.whatsapp.replace('+22','+22 ')}</strong>
       </div>
-
-      <div style="background:#fff7ed; border:1px dashed #fb923c; border-radius:var(--radius); padding:0.9rem 1rem; margin-top:0.5rem">
-        <div style="font-size:0.78rem; color:#9a3412; line-height:1.5">
-          <strong>🛠️ Mode démo :</strong> pour tester l'app sans vraiment payer, tu peux activer Premium manuellement.
-          <button onclick="App.activateDemoPremium('${plan.id}')" style="display:block; margin-top:0.5rem; background:var(--green-bf); color:white; padding:0.5rem 0.9rem; border-radius:6px; font-size:0.78rem; font-weight:700; cursor:pointer; border:none">
-            Activer Premium en mode démo →
-          </button>
-        </div>
-      </div>
     `;
   },
 
@@ -8741,17 +8732,11 @@ const App = {
     }
   },
 
+  // V63.1 : Désactivé par sécurité — empêche un utilisateur malveillant d'appeler App.activateDemoPremium() depuis la console
+  // Pour activer Premium en test, utilise un VRAI code généré dans l'admin
   activateDemoPremium(planId) {
-    const updates = window.PremiumService.activatePremium(this.state.user, planId);
-    this.state.user = { ...this.state.user, ...updates };
-    this.save();
-
-    if (window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady && window.FirebaseAuth.isLoggedIn()) {
-      window.FirebaseAuth.updateProfile(updates).catch(e => console.error('Sync premium :', e));
-    }
-
-    this.toast('🎉 Premium activé en mode démo !');
-    setTimeout(() => this.navigate('home'), 1000);
+    this.toast('❌ Mode démo désactivé. Utilise un code d\'activation valide.', 'danger');
+    return;
   },
 
   // V58 : Activation via code d'activation (async, vérifie Firestore)
@@ -9203,11 +9188,11 @@ const App = {
 
           <!-- OPTIONS -->
           <div style="display:flex; flex-direction:column; gap:0.6rem">
-            ${['A', 'B', 'C', 'D'].map(letter => {
-              const text = q[letter.toLowerCase()];
+            ${(q.o || []).map((text, optIdx) => {
               if (!text) return '';
+              const letter = ['A','B','C','D'][optIdx];
               return `
-                <button onclick="App.answerWeeklyQuestion('${letter}')" style="background:white; border:2px solid var(--line); padding:0.9rem 1rem; border-radius:12px; text-align:left; cursor:pointer; transition:all 0.15s; display:flex; align-items:flex-start; gap:0.7rem; font-size:0.95rem; line-height:1.4">
+                <button onclick="App.answerWeeklyQuestion(${optIdx})" style="background:white; border:2px solid var(--line); padding:0.9rem 1rem; border-radius:12px; text-align:left; cursor:pointer; transition:all 0.15s; display:flex; align-items:flex-start; gap:0.7rem; font-size:0.95rem; line-height:1.4; width:100%; font-family:inherit">
                   <span style="background:var(--cream); border:1.5px solid var(--line); width:32px; height:32px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-weight:800; color:var(--ink); flex-shrink:0">${letter}</span>
                   <span style="flex:1; padding-top:0.4rem">${text}</span>
                 </button>
@@ -9239,14 +9224,15 @@ const App = {
   },
 
   // Répondre à une question
-  answerWeeklyQuestion(letter) {
+  // V63.2 : optIdx est maintenant un INDEX numérique (0/1/2/3) au lieu d'une lettre
+  answerWeeklyQuestion(optIdx) {
     if (!window.WeeklyExam) return;
     const state = window.WeeklyExam.getState();
     const exam = state.activeExam;
     if (!exam) return;
 
     const currentIdx = exam.currentIndex || 0;
-    const result = window.WeeklyExam.answerQuestion(currentIdx, letter);
+    const result = window.WeeklyExam.answerQuestion(currentIdx, optIdx);
     if (!result.success) {
       this.toast('❌ ' + (result.error || 'Erreur'), 'danger');
       return;

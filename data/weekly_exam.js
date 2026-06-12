@@ -328,24 +328,33 @@ const WeeklyExam = {
     const detailedResults = [];
 
     questions.forEach((q, idx) => {
-      const userAnswer = exam.answers[idx];
-      const correct = q.r;  // Format Bara : .r = lettre (A/B/C/D)
-      const isCorrect = userAnswer === correct;
+      const userAnswer = exam.answers[idx];  // Index numérique (0/1/2/3)
+      const correctIdx = q.r;  // V63.2 : Format Bara → q.r est un INDEX numérique (0/1/2/3)
+      const isCorrect = userAnswer === correctIdx;
       if (isCorrect) correctCount++;
       const cat = q._category || 'autre';
       if (!byCategory[cat]) byCategory[cat] = { correct: 0, total: 0 };
       byCategory[cat].total++;
       if (isCorrect) byCategory[cat].correct++;
 
+      // V63.2 : Adapter au format Bara (q.o = tableau des 4 options, q.x = explication)
+      const options = q.o || [];
       detailedResults.push({
         questionIdx: idx,
         question: q.q,
-        options: { A: q.a, B: q.b, C: q.c, D: q.d },
-        correctAnswer: correct,
-        userAnswer: userAnswer || null,
+        options: {
+          A: options[0] || '',
+          B: options[1] || '',
+          C: options[2] || '',
+          D: options[3] || ''
+        },
+        correctAnswer: ['A','B','C','D'][correctIdx] || '',
+        correctAnswerIdx: correctIdx,
+        userAnswer: userAnswer !== undefined ? (['A','B','C','D'][userAnswer] || null) : null,
+        userAnswerIdx: userAnswer,
         isCorrect,
         category: cat,
-        explanation: q.e || ''
+        explanation: q.x || q.e || ''  // q.x format Bara, q.e fallback
       });
     });
 
