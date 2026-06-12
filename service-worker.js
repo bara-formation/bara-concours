@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.2 - V63.2 : Fix format examen hebdo + tous les modules
+// Version 6.3.4 - V63.4 : Chrono live, bouton retour, actualité, logo
 
-const CACHE_NAME = 'bara-concours-v6-3-2';
+const CACHE_NAME = 'bara-concours-v6-3-4';
 const APP_SHELL = [
   './',
   './index.html',

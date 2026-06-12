@@ -41237,7 +41237,7 @@ const QUESTIONS = {
       "x": "La manœuvre de Heimlich (compressions abdominales ascendantes) est le geste de référence en cas d'obstruction totale des voies aériennes chez l'enfant de plus de 1 an qui ne peut ni tousser, ni parler, ni respirer."
     }
   ],
-  "actualite_bf": [
+  "actualite": [
     {"q":"Quelle est la devise actuelle du Burkina Faso depuis la Transition ?","o":["La Patrie ou la Mort, nous vaincrons","Unité, Progrès, Justice","Dieu, Patrie, Travail","Liberté, Égalité, Fraternité"],"r":0,"x":"Depuis la Transition, le Burkina Faso a adopté la devise révolutionnaire 'La Patrie ou la Mort, nous vaincrons'."},
     {"q":"Combien de régions administratives compte actuellement le Burkina Faso depuis la réorganisation territoriale ?","o":["13 régions","15 régions","17 régions","45 provinces"],"r":2,"x":"Depuis la réorganisation territoriale de la Transition, le Burkina Faso compte 17 régions avec des noms endogènes (locaux)."},
     {"q":"Quel organe a remplacé la CENI (Commission Électorale Nationale Indépendante) dissoute ?","o":["Le Ministère de l'Administration Territoriale","L'ANEB","Aucun organe n'a été créé en remplacement","Le Conseil Constitutionnel"],"r":0,"x":"La CENI a été dissoute pendant la Transition. L'organisation des élections, lorsqu'elles auront lieu, revient au Ministère de l'Administration Territoriale."},

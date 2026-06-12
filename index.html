@@ -3564,6 +3564,15 @@ const App = {
 
     app.innerHTML = html;
     this.attachEvents();
+
+    // V63.4 : Si on est sur la page d'examen actif, démarrer le tick chrono
+    if (this.state.currentScreen === 'weekly-exam-active') {
+      this.startWeeklyExamTimer();
+    } else if (this._weeklyExamTimerId) {
+      // Sinon, arrêter le timer s'il tournait
+      clearInterval(this._weeklyExamTimerId);
+      this._weeklyExamTimerId = null;
+    }
   },
 
   renderFreemiumDialog() {
@@ -6150,7 +6159,8 @@ const App = {
 
           <!-- Logo & titre -->
           <div style="text-align:center; padding:2rem 0 1.5rem">
-            <div style="font-size:3.5rem">🎓</div>
+            <img src="icons/icon-192.png" alt="Bara Concours" style="width:88px; height:88px; border-radius:22px; box-shadow:0 6px 20px rgba(15,81,50,0.18); margin-bottom:0.3rem" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            <div style="font-size:3.5rem; display:none">🎓</div>
             <h1 style="font-family:'Instrument Serif',serif; font-size:2rem; color:var(--green-bf-dark); margin:0.6rem 0 0.3rem">Bara Concours</h1>
             <p style="font-size:0.95rem; color:var(--ink-soft); margin:0; line-height:1.5">
               Préparation aux concours directs<br>du Burkina Faso
@@ -9157,11 +9167,14 @@ const App = {
 
         <!-- BARRE D'EN-TÊTE FIXE -->
         <div style="position:sticky; top:0; background:white; border-bottom:2px solid var(--line); padding:0.7rem 1rem; z-index:10; box-shadow:0 2px 8px rgba(0,0,0,0.05)">
-          <div style="display:flex; justify-content:space-between; align-items:center; gap:1rem">
-            <div style="font-size:0.78rem; font-weight:800; color:var(--green-bf-dark); letter-spacing:0.05em">
-              📅 EXAMEN HEBDO • Q ${currentIdx + 1}/${questions.length}
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:0.7rem">
+            <!-- V63.4 : Bouton retour bien visible -->
+            <button onclick="App.confirmQuitWeeklyExam()" style="background:var(--green-bf-dark); color:white; border:none; width:36px; height:36px; border-radius:50%; font-size:1.2rem; cursor:pointer; flex-shrink:0; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.15)" title="Quitter l'examen">←</button>
+            <div style="font-size:0.78rem; font-weight:800; color:var(--green-bf-dark); letter-spacing:0.05em; flex:1; text-align:center">
+              📅 Q ${currentIdx + 1}/${questions.length}
             </div>
-            <div style="background:${isUrgent ? '#fee2e2' : '#fef3c7'}; color:${isUrgent ? '#991b1b' : '#92400e'}; padding:0.3rem 0.7rem; border-radius:999px; font-weight:800; font-family:monospace; font-size:0.95rem; ${isUrgent ? 'animation:pulse 1s infinite' : ''}">
+            <!-- V63.4 : Timer avec ID pour update direct chaque seconde -->
+            <div id="weekly-exam-timer" data-end="${exam.examEnd}" style="background:${isUrgent ? '#fee2e2' : '#fef3c7'}; color:${isUrgent ? '#991b1b' : '#92400e'}; padding:0.3rem 0.7rem; border-radius:999px; font-weight:800; font-family:monospace; font-size:0.95rem; ${isUrgent ? 'animation:pulse 1s infinite' : ''}; flex-shrink:0">
               ⏱️ ${timeLabel}
             </div>
           </div>
@@ -9216,7 +9229,8 @@ const App = {
       'cg': '🌍 Culture générale',
       'francais': '📝 Français',
       'maths': '🔢 Mathématiques',
-      'actualite_bf': '📰 Actualité Burkina',
+      'actualite': '📰 Actualité',
+      'actualite_bf': '📰 Actualité',
       'droit': '⚖️ Droit',
       'informatique': '💻 Informatique'
     };
@@ -9224,7 +9238,7 @@ const App = {
   },
 
   // Répondre à une question
-  // V63.2 : optIdx est maintenant un INDEX numérique (0/1/2/3) au lieu d'une lettre
+  // V63.4 : optIdx est maintenant un INDEX numérique (0/1/2/3) au lieu d'une lettre
   answerWeeklyQuestion(optIdx) {
     if (!window.WeeklyExam) return;
     const state = window.WeeklyExam.getState();
@@ -9240,6 +9254,75 @@ const App = {
 
     // Auto-démarrage du timer de mise à jour (rafraîchir l'affichage)
     this.render();
+  },
+
+  // V63.4 : Démarrer le tick du chrono d'examen (mise à jour chaque seconde)
+  startWeeklyExamTimer() {
+    // Arrêter l'ancien timer s'il existe
+    if (this._weeklyExamTimerId) {
+      clearInterval(this._weeklyExamTimerId);
+      this._weeklyExamTimerId = null;
+    }
+
+    const tick = () => {
+      const el = document.getElementById('weekly-exam-timer');
+      if (!el) {
+        // Plus sur la page → arrêt
+        if (this._weeklyExamTimerId) {
+          clearInterval(this._weeklyExamTimerId);
+          this._weeklyExamTimerId = null;
+        }
+        return;
+      }
+      const endTs = parseInt(el.dataset.end, 10);
+      const now = Date.now();
+      const msLeft = endTs - now;
+
+      if (msLeft <= 0) {
+        // Fin de l'examen
+        el.textContent = '⏱️ 00:00';
+        if (this._weeklyExamTimerId) {
+          clearInterval(this._weeklyExamTimerId);
+          this._weeklyExamTimerId = null;
+        }
+        this.toast('⏰ Temps écoulé !', 'danger');
+        this.finishWeeklyExam();
+        return;
+      }
+
+      const minLeft = Math.floor(msLeft / 60000);
+      const secLeft = Math.floor((msLeft % 60000) / 1000);
+      const label = '⏱️ ' + minLeft + ':' + String(secLeft).padStart(2, '0');
+      el.textContent = label;
+
+      // Couleur urgente si <5 min
+      const isUrgent = msLeft < 5 * 60 * 1000;
+      if (isUrgent && el.style.background !== 'rgb(254, 226, 226)') {
+        el.style.background = '#fee2e2';
+        el.style.color = '#991b1b';
+        if (!el.style.animation) el.style.animation = 'pulse 1s infinite';
+      }
+    };
+
+    tick();  // immédiat
+    this._weeklyExamTimerId = setInterval(tick, 1000);
+  },
+
+  // V63.4 : Confirmation avant de quitter l'examen
+  confirmQuitWeeklyExam() {
+    const ok = confirm(
+      '⚠️ QUITTER L\'EXAMEN ?\n\n' +
+      'Le temps continuera à courir.\n' +
+      'Tu pourras reprendre où tu en étais en revenant.\n\n' +
+      'Vraiment quitter ?'
+    );
+    if (ok) {
+      if (this._weeklyExamTimerId) {
+        clearInterval(this._weeklyExamTimerId);
+        this._weeklyExamTimerId = null;
+      }
+      this.navigate('weekly-exam');
+    }
   },
 
   // Terminer l'examen
@@ -10862,6 +10945,17 @@ const App = {
   // === Charger les modifications du tableau d'admin ===
   loadAdminCustomizations() {
     try {
+      // V63.4 : Injecter "actualite" comme matière de tous les concours
+      // (commune à tous les concours, gérée par Bara Formation)
+      if (window.CONCOURS && Array.isArray(window.CONCOURS)) {
+        window.CONCOURS.forEach(c => {
+          if (!c.matieres) c.matieres = [];
+          if (!c.matieres.includes('actualite')) {
+            c.matieres.push('actualite');
+          }
+        });
+      }
+
       // 0. Charger les annales personnalisées
       if (window.AnnalesHelper && window.AnnalesHelper.loadCustomAnnales) {
         window.AnnalesHelper.loadCustomAnnales();

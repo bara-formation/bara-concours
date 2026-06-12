@@ -24,7 +24,7 @@ const WeeklyExam = {
       cg: 15,           // Culture générale
       francais: 10,     // Français
       maths: 10,        // Maths (BEPC + BAC mélangés)
-      actualite_bf: 5,  // Actualité Burkina
+      actualite: 5,  // Actualité Burkina
       droit: 5,         // Droit / citoyenneté
       informatique: 5   // Informatique / divers
     }
@@ -140,7 +140,7 @@ const WeeklyExam = {
       case 'cg': return ['cg'];
       case 'francais': return ['francais'];
       case 'maths': return ['maths_bepc', 'maths_bac'];  // mélange BEPC + BAC
-      case 'actualite_bf': return ['actualite_bf'];
+      case 'actualite': return ['actualite'];
       case 'droit': return ['droitconst', 'droitadmin', 'droitshumains', 'legislation'];
       case 'informatique': return ['informatique'];
       default: return [];
