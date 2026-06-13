@@ -1,8 +1,6 @@
 // Bara Concours - Base de questions QCM
-// Fichier mis à jour le 29/05/2026 avec les modifications V25 récupérées
+// Fichier mis à jour le 2026-06-13 - V63.8 intégration des 3 modifications admin
 // Total : 3742 questions réparties sur 35 matières
-// Inclut : 26 modifications CG appliquées + 36 suppressions Français appliquées
-// Source : récupération localStorage V25 d'Issoufou
 
 const QUESTIONS = {
   "francais": [
@@ -7539,7 +7537,7 @@ const QUESTIONS = {
       "o": [
         "(3, -2)",
         "(2, 3)",
-        "(-2, -3)",
+        "(-2, 3)",
         "(3, 2)"
       ],
       "r": 1,
@@ -10481,7 +10479,7 @@ const QUESTIONS = {
         "La trypanosomiase africaine (maladie du sommeil)",
         "La schistosomiase (bilharziose)",
         "La leishmaniose cutanée",
-        "L'onchocercose (cécité des rivières)"
+        "L'onchocercose"
       ],
       "r": 3,
       "x": "L'onchocercose, dite « cécité des rivières », est causée par le ver Onchocerca volvulus, transmis par les simulies (mouches noires) vivant près des rivières rapides. Elle peut provoquer des lésions oculaires graves jusqu'à la cécité. Le Programme de Lutte contre l'Onchocercose (OCP) a permis de réduire fortement sa prévalence au Burkina."
@@ -11719,7 +11717,7 @@ const QUESTIONS = {
       "x": "La Convention relative aux droits de l'enfant (1989) place l'intérêt supérieur de l'enfant au cœur de toute décision le concernant. Elle reconnaît ses droits à la protection, à l'éducation, à la santé, à la famille et à la participation. Le Burkina Faso l'a ratifiée et a développé des politiques de protection de l'enfance."
     },
     {
-      "q": "Quel texte international adopté en 1951 définit le statut de réfugié et protège les personnes fuyant les persécutions dans leur pays d'origine ?",
+      "q": "Quel texte international définit le statut de réfugié et protège les personnes fuyant la persécution dans leur pays d'origine ?",
       "o": [
         "La Convention de Genève de 1949 sur les prisonniers de guerre",
         "La Convention de 1951 relative au statut des réfugiés",
@@ -41238,16 +41236,116 @@ const QUESTIONS = {
     }
   ],
   "actualite": [
-    {"q":"Quelle est la devise actuelle du Burkina Faso depuis la Transition ?","o":["La Patrie ou la Mort, nous vaincrons","Unité, Progrès, Justice","Dieu, Patrie, Travail","Liberté, Égalité, Fraternité"],"r":0,"x":"Depuis la Transition, le Burkina Faso a adopté la devise révolutionnaire 'La Patrie ou la Mort, nous vaincrons'."},
-    {"q":"Combien de régions administratives compte actuellement le Burkina Faso depuis la réorganisation territoriale ?","o":["13 régions","15 régions","17 régions","45 provinces"],"r":2,"x":"Depuis la réorganisation territoriale de la Transition, le Burkina Faso compte 17 régions avec des noms endogènes (locaux)."},
-    {"q":"Quel organe a remplacé la CENI (Commission Électorale Nationale Indépendante) dissoute ?","o":["Le Ministère de l'Administration Territoriale","L'ANEB","Aucun organe n'a été créé en remplacement","Le Conseil Constitutionnel"],"r":0,"x":"La CENI a été dissoute pendant la Transition. L'organisation des élections, lorsqu'elles auront lieu, revient au Ministère de l'Administration Territoriale."},
-    {"q":"L'AES (Alliance des États du Sahel) regroupe quels pays ?","o":["Burkina Faso, Mali, Niger, Tchad","Burkina Faso, Mali, Niger","Burkina Faso, Mali, Niger, Togo","Burkina Faso, Mali, Niger, Guinée"],"r":1,"x":"L'AES regroupe le Burkina Faso, le Mali et le Niger. Elle a été créée en 2023 et ces pays se sont retirés de la CEDEAO en 2024."},
-    {"q":"Qui est l'actuel Président de la Transition au Burkina Faso ?","o":["Roch Marc Christian Kaboré","Paul-Henri Sandaogo Damiba","Capitaine Ibrahim Traoré","Apollinaire Joachim Kyélem de Tambèla"],"r":2,"x":"Le Capitaine Ibrahim Traoré est Président de la Transition depuis le 30 septembre 2022."},
-    {"q":"Combien de provinces compte le Burkina Faso depuis la réorganisation territoriale ?","o":["45","47","49","30"],"r":1,"x":"Le Burkina Faso compte 47 provinces depuis la réorganisation territoriale de la Transition."},
-    {"q":"Quelle est la monnaie utilisée actuellement au Burkina Faso ?","o":["Le franc CFA (XOF)","L'ECO","Le franc burkinabè","Le naira"],"r":0,"x":"Le Burkina Faso utilise toujours le franc CFA (XOF), monnaie commune de l'UEMOA."},
-    {"q":"Quand le Burkina Faso, le Mali et le Niger ont-ils annoncé leur retrait de la CEDEAO ?","o":["En janvier 2023","En janvier 2024","En mars 2024","En juillet 2024"],"r":1,"x":"Les trois pays de l'AES ont annoncé conjointement leur retrait de la CEDEAO le 28 janvier 2024."},
-    {"q":"Le Médiateur du Faso a été supprimé pendant la Transition. Quelle était sa fonction principale ?","o":["Présider la Cour constitutionnelle","Régler à l'amiable les différends entre administrés et administration","Représenter le Burkina à l'étranger","Conseiller le Premier ministre"],"r":1,"x":"Le Médiateur du Faso, supprimé pendant la Transition, était chargé du règlement amiable des différends entre les citoyens et l'administration publique."},
-    {"q":"Quel est le nom officiel du Burkina Faso avant 1984 ?","o":["Haute-Côte d'Ivoire","Haute-Volta","Sud-Mali","République du Mossi"],"r":1,"x":"Le Burkina Faso s'appelait République de Haute-Volta jusqu'en août 1984, où Thomas Sankara l'a rebaptisé Burkina Faso ('Pays des hommes intègres')."}
+    {
+      "q": "Quelle est la devise actuelle du Burkina Faso depuis la Transition ?",
+      "o": [
+        "La Patrie ou la Mort, nous vaincrons",
+        "Unité, Progrès, Justice",
+        "Dieu, Patrie, Travail",
+        "Liberté, Égalité, Fraternité"
+      ],
+      "r": 0,
+      "x": "Depuis la Transition, le Burkina Faso a adopté la devise révolutionnaire 'La Patrie ou la Mort, nous vaincrons'."
+    },
+    {
+      "q": "Combien de régions administratives compte actuellement le Burkina Faso depuis la réorganisation territoriale ?",
+      "o": [
+        "13 régions",
+        "15 régions",
+        "17 régions",
+        "45 provinces"
+      ],
+      "r": 2,
+      "x": "Depuis la réorganisation territoriale de la Transition, le Burkina Faso compte 17 régions avec des noms endogènes (locaux)."
+    },
+    {
+      "q": "Quel organe a remplacé la CENI (Commission Électorale Nationale Indépendante) dissoute ?",
+      "o": [
+        "Le Ministère de l'Administration Territoriale",
+        "L'ANEB",
+        "Aucun organe n'a été créé en remplacement",
+        "Le Conseil Constitutionnel"
+      ],
+      "r": 0,
+      "x": "La CENI a été dissoute pendant la Transition. L'organisation des élections, lorsqu'elles auront lieu, revient au Ministère de l'Administration Territoriale."
+    },
+    {
+      "q": "L'AES (Alliance des États du Sahel) regroupe quels pays ?",
+      "o": [
+        "Burkina Faso, Mali, Niger, Tchad",
+        "Burkina Faso, Mali, Niger",
+        "Burkina Faso, Mali, Niger, Togo",
+        "Burkina Faso, Mali, Niger, Guinée"
+      ],
+      "r": 1,
+      "x": "L'AES regroupe le Burkina Faso, le Mali et le Niger. Elle a été créée en 2023 et ces pays se sont retirés de la CEDEAO en 2024."
+    },
+    {
+      "q": "Qui est l'actuel Président de la Transition au Burkina Faso ?",
+      "o": [
+        "Roch Marc Christian Kaboré",
+        "Paul-Henri Sandaogo Damiba",
+        "Capitaine Ibrahim Traoré",
+        "Apollinaire Joachim Kyélem de Tambèla"
+      ],
+      "r": 2,
+      "x": "Le Capitaine Ibrahim Traoré est Président de la Transition depuis le 30 septembre 2022."
+    },
+    {
+      "q": "Combien de provinces compte le Burkina Faso depuis la réorganisation territoriale ?",
+      "o": [
+        "45",
+        "47",
+        "49",
+        "30"
+      ],
+      "r": 1,
+      "x": "Le Burkina Faso compte 47 provinces depuis la réorganisation territoriale de la Transition."
+    },
+    {
+      "q": "Quelle est la monnaie utilisée actuellement au Burkina Faso ?",
+      "o": [
+        "Le franc CFA (XOF)",
+        "L'ECO",
+        "Le franc burkinabè",
+        "Le naira"
+      ],
+      "r": 0,
+      "x": "Le Burkina Faso utilise toujours le franc CFA (XOF), monnaie commune de l'UEMOA."
+    },
+    {
+      "q": "Quand le Burkina Faso, le Mali et le Niger ont-ils annoncé leur retrait de la CEDEAO ?",
+      "o": [
+        "En janvier 2023",
+        "En janvier 2024",
+        "En mars 2024",
+        "En juillet 2024"
+      ],
+      "r": 1,
+      "x": "Les trois pays de l'AES ont annoncé conjointement leur retrait de la CEDEAO le 28 janvier 2024."
+    },
+    {
+      "q": "Le Médiateur du Faso a été supprimé pendant la Transition. Quelle était sa fonction principale ?",
+      "o": [
+        "Présider la Cour constitutionnelle",
+        "Régler à l'amiable les différends entre administrés et administration",
+        "Représenter le Burkina à l'étranger",
+        "Conseiller le Premier ministre"
+      ],
+      "r": 1,
+      "x": "Le Médiateur du Faso, supprimé pendant la Transition, était chargé du règlement amiable des différends entre les citoyens et l'administration publique."
+    },
+    {
+      "q": "Quel est le nom officiel du Burkina Faso avant 1984 ?",
+      "o": [
+        "Haute-Côte d'Ivoire",
+        "Haute-Volta",
+        "Sud-Mali",
+        "République du Mossi"
+      ],
+      "r": 1,
+      "x": "Le Burkina Faso s'appelait République de Haute-Volta jusqu'en août 1984, où Thomas Sankara l'a rebaptisé Burkina Faso ('Pays des hommes intègres')."
+    }
   ]
 };
 

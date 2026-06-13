@@ -1934,6 +1934,10 @@ const Admin = {
           <div class="page-sub">${totalQ} questions réparties sur ${matieres.length} matières</div>
         </div>
         <div style="display:flex; gap:0.5rem; flex-wrap:wrap">
+          <!-- V63.8 : Bouton pour exporter uniquement les modifications (léger, à envoyer à Claude) -->
+          <button class="btn-action btn-secondary" onclick="Admin.exportMyModifications()" style="padding:0.7rem 1rem; background:linear-gradient(135deg, #fef3c7, white); border-color:var(--gold-bf); color:#854d0e; font-weight:700">
+            💾 Mes modifications
+          </button>
           <button class="btn-action btn-secondary" onclick="Admin.exportAllQuestions()" style="padding:0.7rem 1rem">
             📤 Exporter tout
           </button>
@@ -2426,6 +2430,52 @@ const Admin = {
   },
 
   // === EXPORT / IMPORT ===
+  // V63.8 : Exporter UNIQUEMENT les modifications (léger, à envoyer pour intégration)
+  exportMyModifications() {
+    const customQ = JSON.parse(localStorage.getItem('bara_custom_questions') || '{}');
+    const editedQ = JSON.parse(localStorage.getItem('bara_edited_questions') || '{}');
+    const deletedQ = JSON.parse(localStorage.getItem('bara_deleted_questions') || '{}');
+    const editedMatieres = JSON.parse(localStorage.getItem('bara_edited_matieres') || '{}');
+
+    let nbAjoutees = 0, nbEditees = 0, nbSupprimees = 0;
+    Object.values(customQ).forEach(arr => nbAjoutees += (arr || []).length);
+    Object.values(editedQ).forEach(obj => nbEditees += Object.keys(obj || {}).length);
+    Object.values(deletedQ).forEach(arr => nbSupprimees += (arr || []).length);
+
+    if (nbAjoutees + nbEditees + nbSupprimees === 0 && Object.keys(editedMatieres).length === 0) {
+      this.toast('ℹ️ Aucune modification à exporter', 'warning');
+      return;
+    }
+
+    const exportData = {
+      version: '1.0',
+      type: 'modifications_only',
+      exportedAt: new Date().toISOString(),
+      stats: {
+        ajoutees: nbAjoutees,
+        editees: nbEditees,
+        supprimees: nbSupprimees,
+        matieres_modifiees: Object.keys(editedMatieres).length
+      },
+      bara_custom_questions: customQ,
+      bara_edited_questions: editedQ,
+      bara_deleted_questions: deletedQ,
+      bara_edited_matieres: editedMatieres
+    };
+
+    const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'bara-modifications-' + new Date().toISOString().slice(0,10) + '.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    this.toast(`✅ ${nbAjoutees + nbEditees + nbSupprimees} modification(s) exportée(s)`);
+  },
+
   exportAllQuestions() {
     const allQ = this.getAllQuestions();
     const editedMatieres = JSON.parse(localStorage.getItem('bara_edited_matieres') || '{}');

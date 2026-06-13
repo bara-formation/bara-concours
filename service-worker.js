@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.5 - V63.5 : Bouton retour visible header vert
+// Version 6.3.8 - V63.8 : Intégration 3 modifications + bouton export modifications
 
-const CACHE_NAME = 'bara-concours-v6-3-5';
+const CACHE_NAME = 'bara-concours-v6-3-8';
 const APP_SHELL = [
   './',
   './index.html',
