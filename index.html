@@ -3499,12 +3499,12 @@ const App = {
     const sec = s % 60;
     return `${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}`;
   },
-  toast(msg) {
+  toast(msg, type, duration) {
     const t = document.createElement('div');
-    t.className = 'toast';
+    t.className = 'toast' + (type ? ' toast-' + type : '');
     t.textContent = msg;
     document.body.appendChild(t);
-    setTimeout(() => t.remove(), 3000);
+    setTimeout(() => t.remove(), duration || 3000);
   },
 
   // === ROUTING ===
@@ -3578,6 +3578,11 @@ const App = {
       html += this.renderFreemiumDialog();
     }
 
+    // V63.11 : Dialog spécifique limite actualité
+    if (this.state.showActualiteLimitDialog) {
+      html += this.renderActualiteLimitDialog();
+    }
+
     // V35 : Dialog de confirmation de sortie (au-dessus de tout)
     if (this.state.showExitConfirm) {
       html += this.renderExitDialog();
@@ -3624,6 +3629,41 @@ const App = {
           </button>
           <button class="bio-prompt-decline" onclick="App.closeFreemiumDialog()">
             Plus tard (limite remise à 0 demain)
+          </button>
+        </div>
+      </div>
+    `;
+  },
+
+  // V63.11 : Dialog spécifique limite actualité
+  renderActualiteLimitDialog() {
+    return `
+      <div class="bio-prompt-overlay" onclick="App.closeActualiteLimitDialog()">
+        <div class="bio-prompt-modal" onclick="event.stopPropagation()">
+          <div class="bio-prompt-icon">📰</div>
+          <div class="bio-prompt-title">Tu as fini ton quota d'actualités du jour !</div>
+          <div class="bio-prompt-desc">
+            Tu as répondu à <strong>${this.FreemiumManager.LIMITE_ACTUALITE_GRATUIT} questions d'actualité aujourd'hui</strong>.<br><br>
+            Les actualités sont mises à jour à chaque événement majeur — un travail de veille quotidien.<br><br>
+            <strong>Reviens demain</strong> pour ${this.FreemiumManager.LIMITE_ACTUALITE_GRATUIT} nouvelles questions OU passe Premium pour un accès illimité.
+          </div>
+
+          <div class="bio-prompt-benefits">
+            <div class="bio-prompt-benefit">📰 Actualités illimitées chaque jour</div>
+            <div class="bio-prompt-benefit">🆕 Mises à jour à chaque événement</div>
+            <div class="bio-prompt-benefit">⚡ Toutes matières illimitées</div>
+            <div class="bio-prompt-benefit">📚 Annales corrigées</div>
+          </div>
+
+          <div style="background:#fef3c7; padding:0.7rem 1rem; border-radius:10px; margin-bottom:1rem; text-align:center; font-size:0.85rem; color:#854d0e">
+            🎯 <strong>Plan SESSION 2026 : 2 500 FCFA jusqu'au 15 août</strong>
+          </div>
+
+          <button class="bio-prompt-accept" onclick="App.goToPremiumFromActu()">
+            ⭐ Voir les plans Premium
+          </button>
+          <button class="bio-prompt-decline" onclick="App.closeActualiteLimitDialog()">
+            Plus tard (reviens demain)
           </button>
         </div>
       </div>
@@ -3844,6 +3884,14 @@ const App = {
     const remaining = limit - used;
     const percentage = Math.min(100, (used / limit) * 100);
 
+    // V63.11 : Compteur actualité spécifique
+    const actuUsed = this.FreemiumManager.getActuCountToday();
+    const actuLimit = this.FreemiumManager.LIMITE_ACTUALITE_GRATUIT;
+    const actuRemaining = actuLimit - actuUsed;
+    const actuPercentage = Math.min(100, (actuUsed / actuLimit) * 100);
+    // N'afficher la barre actualité QUE si l'utilisateur en a déjà consommé au moins 1
+    const showActuBar = actuUsed > 0;
+
     let color = 'var(--green-bf)';
     let icon = '✨';
     let message = `<strong>${remaining}</strong> questions gratuites restantes aujourd'hui`;
@@ -3858,6 +3906,20 @@ const App = {
       message = `Plus que <strong>${remaining}</strong> questions • Pense au Premium`;
     }
 
+    // V63.11 : Couleur barre actualité
+    let actuColor = '#2563eb';
+    let actuIcon = '📰';
+    let actuMsg = `<strong>${actuRemaining}</strong> question${actuRemaining > 1 ? 's' : ''} d'actualité restante${actuRemaining > 1 ? 's' : ''}`;
+    if (actuRemaining === 0) {
+      actuColor = 'var(--red-bf)';
+      actuIcon = '🔒';
+      actuMsg = `Quota actualité atteint • <strong>Premium</strong> pour continuer`;
+    } else if (actuRemaining <= 2) {
+      actuColor = 'var(--gold-bf-dark)';
+      actuIcon = '⚠️';
+      actuMsg = `Plus que <strong>${actuRemaining}</strong> actualité${actuRemaining > 1 ? 's' : ''} aujourd'hui`;
+    }
+
     return `
       <div class="freemium-bar" onclick="App.navigate('premium')" style="background:white; border:1px solid var(--line); border-radius:var(--radius); padding:0.8rem 1rem; margin-bottom:1rem; cursor:pointer; box-shadow:var(--shadow-sm)">
         <div style="display:flex; align-items:center; gap:0.7rem; margin-bottom:0.5rem">
@@ -3868,6 +3930,18 @@ const App = {
         <div style="background:var(--cream-dark); border-radius:999px; height:6px; overflow:hidden">
           <div style="height:100%; width:${percentage}%; background:${color}; transition:width 0.3s"></div>
         </div>
+        ${showActuBar ? `
+          <!-- V63.11 : Barre actualité (visible dès que >0 consommées) -->
+          <div style="height:1px; background:var(--line); margin:0.7rem 0 0.6rem"></div>
+          <div style="display:flex; align-items:center; gap:0.7rem; margin-bottom:0.5rem">
+            <div style="font-size:1.1rem">${actuIcon}</div>
+            <div style="flex:1; font-size:0.82rem; color:var(--ink)">${actuMsg}</div>
+            <div style="font-size:0.72rem; color:#1e40af; font-weight:700">${actuUsed}/${actuLimit}</div>
+          </div>
+          <div style="background:var(--cream-dark); border-radius:999px; height:5px; overflow:hidden">
+            <div style="height:100%; width:${actuPercentage}%; background:${actuColor}; transition:width 0.3s"></div>
+          </div>
+        ` : ''}
       </div>
     `;
   },
@@ -7439,7 +7513,7 @@ const App = {
           <div class="section-title" style="display:flex; align-items:center; gap:0.5rem; margin-top:1.5rem">
             <span>⏱️</span>
             <span>Mode examen chronométré</span>
-            ${!isPremium ? '<span style="background:var(--gold-bf); color:var(--green-bf-dark); font-size:0.65rem; font-weight:800; padding:0.15rem 0.55rem; border-radius:999px; margin-left:auto">⭐ PREMIUM</span>' : '<span style="background:var(--cream-dark); color:var(--ink-mute); font-size:0.7rem; font-weight:700; padding:0.15rem 0.55rem; border-radius:999px; margin-left:auto">50 Q • 1h</span>'}
+            ${!isPremium ? '<span style="background:var(--gold-bf); color:var(--green-bf-dark); font-size:0.65rem; font-weight:800; padding:0.15rem 0.55rem; border-radius:999px; margin-left:auto">⭐ PREMIUM</span>' : '<span style="background:var(--cream-dark); color:var(--ink-mute); font-size:0.7rem; font-weight:700; padding:0.15rem 0.55rem; border-radius:999px; margin-left:auto">50 questions / 60 min</span>'}
           </div>
           <div style="font-size:0.82rem; color:var(--ink-soft); margin-bottom:0.7rem; line-height:1.5">Conditions réelles d'examen. 50 questions en 1 heure. Sauvegarde automatique pour reprendre plus tard.</div>
 
@@ -7747,10 +7821,16 @@ const App = {
     // === FREEMIUM : Vérifier la limite quotidienne ===
     const isPremium = window.PremiumService && window.PremiumService.isUserPremium(this.state.user);
     if (!isPremium && this.state.qcm.answers[cur] === null) {
-      // Première réponse à cette question : on incrémente
-      if (this.FreemiumManager.hasReachedLimit(this.state.user)) {
+      // V63.11 : Vérifier la limite spécifique à la matière (général + actualité)
+      const currentMatiere = this.state.qcm.matiereId || this.state.currentMatiere;
+      const check = this.FreemiumManager.canAnswerMatiere(this.state.user, currentMatiere);
+      if (!check.allowed) {
         // Limite atteinte → bloquer et proposer Premium
-        this.showFreemiumLimitDialog();
+        if (check.reason === 'actualite_limit') {
+          this.showActualiteLimitDialog();
+        } else {
+          this.showFreemiumLimitDialog();
+        }
         return;
       }
     }
@@ -7761,9 +7841,10 @@ const App = {
       this.state.qcm.score--;
     }
 
-    // Incrémenter le compteur freemium seulement à la 1ère réponse
+    // V63.11 : Incrémenter le compteur freemium (+ actualité si concerné) seulement à la 1ère réponse
     if (this.state.qcm.answers[cur] === null) {
-      this.FreemiumManager.incrementCount(this.state.user);
+      const currentMatiere = this.state.qcm.matiereId || this.state.currentMatiere;
+      this.FreemiumManager.incrementCount(this.state.user, currentMatiere);
     }
 
     this.state.qcm.answers[cur] = i;
@@ -7786,6 +7867,22 @@ const App = {
   closeFreemiumDialog() {
     this.state.showFreemiumDialog = false;
     this.render();
+  },
+
+  // V63.11 : Dialog spécifique limite actualité
+  showActualiteLimitDialog() {
+    this.state.showActualiteLimitDialog = true;
+    this.render();
+  },
+
+  closeActualiteLimitDialog() {
+    this.state.showActualiteLimitDialog = false;
+    this.render();
+  },
+
+  goToPremiumFromActu() {
+    this.state.showActualiteLimitDialog = false;
+    this.navigate('premium');
   },
 
   goToPremium() {
@@ -8915,7 +9012,7 @@ const App = {
         <div style="background:linear-gradient(135deg, #2563eb, #1d4ed8); width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.7rem; color:white; flex-shrink:0; box-shadow:0 4px 10px rgba(37,99,235,0.25)">📅</div>
         <div style="flex:1; min-width:0">
           <div style="font-family:'Instrument Serif',serif; font-size:1.3rem; color:#1e3a8a; line-height:1.15">Examen <em style="color:#2563eb">Hebdomadaire</em></div>
-          <div style="font-size:0.82rem; color:#1e40af; margin-top:0.2rem">📍 Tous les dimanches à 19h30 • 50 Q en 1h</div>
+          <div style="font-size:0.82rem; color:#1e40af; margin-top:0.2rem">📍 Tous les dimanches à 19h30 • 50 questions en 60 min</div>
           <div style="display:flex; gap:0.4rem; margin-top:0.5rem; flex-wrap:wrap">
             <span style="background:white; border:1px solid #93c5fd; color:#1e40af; padding:0.15rem 0.55rem; border-radius:999px; font-size:0.7rem; font-weight:700">🆓 Gratuit</span>
             <span style="background:white; border:1px solid #93c5fd; color:#1e40af; padding:0.15rem 0.55rem; border-radius:999px; font-size:0.7rem; font-weight:700">🏆 Classement</span>
@@ -9013,7 +9110,7 @@ const App = {
           <div style="font-size:3rem">📅</div>
           <h2 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:0.5rem 0">Prochain examen</h2>
           <p style="color:var(--ink-soft); margin:0 0 0.5rem; font-size:0.9rem">
-            ${new Date(status.examStart).toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' })}<br>
+            ${this._formatExamDate(status.examStart)}<br>
             <strong>de 19h30 à 20h30</strong>
           </p>
           <div style="background:white; border:2px solid var(--gold-bf); padding:0.8rem; border-radius:10px; margin:1rem 0; display:inline-block">
@@ -9042,7 +9139,7 @@ const App = {
           <div style="background:white; border-radius:14px; padding:1.2rem; margin-bottom:1.2rem; border:1px solid var(--line)">
             <h3 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:0 0 0.6rem; font-size:1.2rem">🎯 Le rituel du dimanche</h3>
             <p style="color:var(--ink-soft); line-height:1.6; font-size:0.9rem; margin:0">
-              Chaque dimanche de <strong>19h30 à 20h30</strong>, des centaines de candidats burkinabè composent ensemble un examen blanc national. <strong>50 questions, 1 heure</strong>.
+              Chaque dimanche de <strong>19h30 à 20h30</strong>, des centaines de candidats burkinabè composent ensemble un examen blanc national. <strong>50 questions en 60 min</strong>.
               <br><br>Compare-toi aux autres candidats et identifie tes points faibles.
             </p>
           </div>
@@ -9261,6 +9358,24 @@ const App = {
     `;
   },
 
+  // V63.13 : Formatter une date d'examen avec "Aujourd'hui" / "Demain" si pertinent
+  _formatExamDate(timestamp) {
+    const d = new Date(timestamp);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const examDay = new Date(d);
+    examDay.setHours(0, 0, 0, 0);
+
+    const diffDays = Math.round((examDay - today) / (24 * 60 * 60 * 1000));
+    if (diffDays === 0) return 'Aujourd\'hui';
+    if (diffDays === 1) return 'Demain';
+    if (diffDays === -1) return 'Hier';
+    // Pour les autres jours, format complet
+    return d.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' });
+  },
+
   _categoryLabel(cat) {
     const labels = {
       'cg': '🌍 Culture générale',
@@ -9445,15 +9560,37 @@ const App = {
             </div>
           `}
 
-          <!-- V62 : ACTIONS CLASSEMENT & CORRECTION -->
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-bottom:1rem">
-            <button onclick="App.navigate('weekly-exam-ranking')" style="background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.95rem; border-radius:12px; font-weight:800; cursor:pointer; font-size:0.95rem; display:flex; align-items:center; justify-content:center; gap:0.4rem; box-shadow:0 4px 12px rgba(217,119,6,0.2)">
-              🏆 Voir le classement national
-            </button>
-            <button onclick="App.navigate('weekly-exam-correction')" style="background:white; color:var(--green-bf-dark); border:2px solid var(--green-bf); padding:0.9rem; border-radius:12px; font-weight:800; cursor:pointer; font-size:0.95rem; display:flex; align-items:center; justify-content:center; gap:0.4rem">
-              ${isPremium ? '✏️ Correction détaillée' : '🔒 Correction (Premium)'}
-            </button>
-          </div>
+          <!-- V62 + V63.13 : ACTIONS CLASSEMENT & CORRECTION (verrouillées pendant l'examen) -->
+          ${(() => {
+            // Vérifier si l'examen est encore actif
+            const examEndTs = lastResult.examStart && window.WeeklyExam.getExamEnd
+              ? window.WeeklyExam.getExamEnd(lastResult.examStart) : null;
+            const examActive = examEndTs && Date.now() < examEndTs;
+            if (examActive) {
+              const minLeft = Math.max(1, Math.ceil((examEndTs - Date.now()) / 60000));
+              return `
+                <div style="background:linear-gradient(135deg, #fef3c7, white); border:2px solid var(--gold-bf); border-radius:14px; padding:1rem 1.1rem; margin-bottom:1rem; text-align:center">
+                  <div style="font-size:1.6rem">⏱️</div>
+                  <div style="font-family:'Instrument Serif',serif; color:#854d0e; font-size:1.1rem; margin-top:0.2rem">Classement & correction à 20h30</div>
+                  <div style="font-size:0.82rem; color:#92400e; margin-top:0.3rem; line-height:1.5">
+                    Disponibles dans <strong>${minLeft} min</strong> — quand tous les candidats auront terminé.<br>
+                    <em>Cette mesure garantit l'équité.</em>
+                  </div>
+                </div>
+              `;
+            }
+            // Examen clôturé → boutons disponibles
+            return `
+              <div style="display:flex; flex-direction:column; gap:0.6rem; margin-bottom:1rem">
+                <button onclick="App.navigate('weekly-exam-ranking')" style="background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.95rem; border-radius:12px; font-weight:800; cursor:pointer; font-size:0.95rem; display:flex; align-items:center; justify-content:center; gap:0.4rem; box-shadow:0 4px 12px rgba(217,119,6,0.2)">
+                  🏆 Voir le classement national
+                </button>
+                <button onclick="App.navigate('weekly-exam-correction')" style="background:white; color:var(--green-bf-dark); border:2px solid var(--green-bf); padding:0.9rem; border-radius:12px; font-weight:800; cursor:pointer; font-size:0.95rem; display:flex; align-items:center; justify-content:center; gap:0.4rem">
+                  ${isPremium ? '✏️ Correction détaillée' : '🔒 Correction (Premium)'}
+                </button>
+              </div>
+            `;
+          })()}
 
           <!-- ACTIONS -->
           <div style="display:flex; gap:0.6rem">
@@ -9514,6 +9651,43 @@ const App = {
     const isPremium = window.PremiumService.isUserPremium(this.state.user);
     const cache = this.state.weeklyRankingCache || {};
     const cachedData = cache[examId];
+
+    // V63.13 : ANTI-TRICHE — Bloquer le classement pendant l'examen actif
+    // (voir le score de quelqu'un à 50/50 = on peut déduire les bonnes réponses)
+    const lastRes = window.WeeklyExam.getResultByExamId(examId);
+    const rankExamEnd = lastRes && lastRes.examStart && window.WeeklyExam.getExamEnd
+      ? window.WeeklyExam.getExamEnd(lastRes.examStart)
+      : null;
+    if (rankExamEnd && Date.now() < rankExamEnd) {
+      const minutesUntil = Math.max(1, Math.ceil((rankExamEnd - Date.now()) / 60000));
+      return `
+        <div class="page" style="padding-bottom:5rem">
+          <header class="header">
+            <button class="header-btn" onclick="App.navigate('weekly-exam-result')">←</button>
+            <div class="header-title">🔒 Classement</div>
+          </header>
+          <div style="padding:2rem 1.2rem; text-align:center; max-width:480px; margin:0 auto">
+            <div style="font-size:3.5rem">🏆</div>
+            <h2 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:0.8rem 0">Classement verrouillé</h2>
+            <p style="color:var(--ink-soft); font-size:0.95rem; line-height:1.6">
+              Le classement national sera publié <strong>à 20h30</strong>, quand tous les candidats auront terminé.
+            </p>
+            <div style="background:linear-gradient(135deg, #fef3c7, white); border:2px solid var(--gold-bf); border-radius:14px; padding:1.2rem; margin-top:1.5rem">
+              <div style="font-size:1.8rem">⏳</div>
+              <div style="font-family:'Instrument Serif',serif; font-size:1.4rem; color:#854d0e; margin-top:0.3rem">${minutesUntil} min restantes</div>
+            </div>
+            <div style="display:flex; gap:0.6rem; margin-top:1.5rem; flex-wrap:wrap; justify-content:center">
+              <button onclick="App.navigate('weekly-exam-result')" style="background:white; color:var(--green-bf-dark); border:1.5px solid var(--green-bf); padding:0.85rem 1.3rem; border-radius:10px; font-weight:700; cursor:pointer">
+                📊 Mon résultat
+              </button>
+              <button onclick="App.navigate('home')" style="background:var(--green-bf); color:white; border:none; padding:0.85rem 1.3rem; border-radius:10px; font-weight:700; cursor:pointer">
+                🏠 Accueil
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
 
     // V62 : Refresh async du classement depuis Firestore (pattern admin codes)
     if (!this.state._weeklyRankingLoading) {
@@ -9726,6 +9900,49 @@ const App = {
             <div style="font-size:3rem">📭</div>
             <p style="color:var(--ink-soft); margin-top:1rem">Aucune correction disponible.<br>Passe l'examen d'abord !</p>
             <button onclick="App.navigate('weekly-exam')" style="margin-top:1rem; background:var(--green-bf); color:white; border:none; padding:0.8rem 1.5rem; border-radius:10px; font-weight:700; cursor:pointer">📅 Examen hebdo</button>
+          </div>
+        </div>
+      `;
+    }
+
+    // V63.13 : ANTI-TRICHE — Bloquer la correction tant que l'examen est en cours
+    // (entre 19h30 et 20h30 dimanche). La correction s'ouvre à 20h30 strict pour tout le monde.
+    const examEnd = result.examStart && window.WeeklyExam.getExamEnd
+      ? window.WeeklyExam.getExamEnd(result.examStart)
+      : null;
+    const now = Date.now();
+    const examStillActive = examEnd && now < examEnd;
+
+    if (examStillActive) {
+      const minutesUntil = Math.max(1, Math.ceil((examEnd - now) / 60000));
+      return `
+        <div class="page" style="padding-bottom:5rem">
+          <header class="header">
+            <button class="header-btn" onclick="App.navigate('weekly-exam-result')">←</button>
+            <div class="header-title">🔒 Correction</div>
+          </header>
+          <div style="padding:2rem 1.2rem; text-align:center; max-width:480px; margin:0 auto">
+            <div style="font-size:3.5rem">⏱️</div>
+            <h2 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:0.8rem 0">Correction verrouillée</h2>
+            <p style="color:var(--ink-soft); font-size:0.95rem; line-height:1.6">
+              La correction détaillée sera disponible <strong>à la clôture de l'examen national</strong> à <strong>20h30</strong>.
+            </p>
+            <p style="color:var(--ink-soft); font-size:0.88rem; line-height:1.5; margin-top:0.6rem">
+              Cette mesure garantit l'équité entre tous les candidats : personne ne peut tricher en consultant les réponses pendant que d'autres composent encore.
+            </p>
+            <div style="background:linear-gradient(135deg, #fef3c7, white); border:2px solid var(--gold-bf); border-radius:14px; padding:1.2rem; margin-top:1.5rem">
+              <div style="font-size:1.8rem">⏳</div>
+              <div style="font-family:'Instrument Serif',serif; font-size:1.4rem; color:#854d0e; margin-top:0.3rem">${minutesUntil} min restantes</div>
+              <div style="font-size:0.82rem; color:#92400e; margin-top:0.4rem">avant la publication de la correction</div>
+            </div>
+            <div style="display:flex; gap:0.6rem; margin-top:1.5rem; flex-wrap:wrap; justify-content:center">
+              <button onclick="App.navigate('weekly-exam-result')" style="background:white; color:var(--green-bf-dark); border:1.5px solid var(--green-bf); padding:0.85rem 1.3rem; border-radius:10px; font-weight:700; cursor:pointer">
+                📊 Mon résultat
+              </button>
+              <button onclick="App.navigate('home')" style="background:var(--green-bf); color:white; border:none; padding:0.85rem 1.3rem; border-radius:10px; font-weight:700; cursor:pointer">
+                🏠 Accueil
+              </button>
+            </div>
           </div>
         </div>
       `;
@@ -10128,44 +10345,55 @@ const App = {
     if (Notification.permission !== 'granted') return;
 
     const status = window.WeeklyExam.getCurrentStatus();
-    if (status.status === 'active' || status.status === 'before') {
-      // Annuler les anciens timers
-      if (this.state._examReminderTimers) {
-        this.state._examReminderTimers.forEach(id => clearTimeout(id));
-      }
-      this.state._examReminderTimers = [];
+    if (status.status !== 'active' && status.status !== 'before') return;
 
-      const timers = [];
-      const now = Date.now();
-      const oneHourBefore = status.examStart - 60 * 60 * 1000;
-      const tenMinBefore = status.examStart - 10 * 60 * 1000;
-      const atStart = status.examStart;
-
-      // Rappel 1h avant
-      if (oneHourBefore > now) {
-        const id = setTimeout(() => {
-          this._sendExamNotification('📅 Examen hebdomadaire dans 1 heure', 'Sois prêt(e) à 19h30 pour 50 questions en 1h !');
-        }, oneHourBefore - now);
-        timers.push(id);
-      }
-      // Rappel 10 min avant
-      if (tenMinBefore > now) {
-        const id = setTimeout(() => {
-          this._sendExamNotification('⏰ Examen dans 10 minutes', 'Prépare-toi mentalement, l\'examen commence à 19h30 !');
-        }, tenMinBefore - now);
-        timers.push(id);
-      }
-      // Rappel au démarrage
-      if (atStart > now) {
-        const id = setTimeout(() => {
-          this._sendExamNotification('🔴 EN DIRECT : L\'examen est ouvert !', 'Clique pour commencer maintenant. Tu as jusqu\'à 20h30.');
-        }, atStart - now);
-        timers.push(id);
-      }
-
-      this.state._examReminderTimers = timers;
-      console.log('[V63] Rappels d\'examen planifiés (' + timers.length + ' timers)');
+    // V63.13 : Dédoublonnage par examId
+    // Si on a déjà planifié les rappels pour CET examen précis, on ne refait rien.
+    const examId = window.WeeklyExam.getExamId(status.examStart);
+    if (this._lastScheduledExamId === examId) {
+      // Déjà planifié pour ce dimanche → on évite les doublons
+      return;
     }
+
+    // Annuler les anciens timers s'ils existaient (autre examen, plus pertinent)
+    if (this._examReminderTimers && this._examReminderTimers.length) {
+      this._examReminderTimers.forEach(id => clearTimeout(id));
+    }
+    this._examReminderTimers = [];
+
+    // V63.13 : Vérifier aussi qu'on n'a pas DÉJÀ envoyé une notif aujourd'hui (cross-session)
+    // (utile si l'utilisateur ferme l'app puis la rouvre)
+    const sentKey = 'bara_exam_notifs_sent_' + examId;
+    const alreadySent = JSON.parse(localStorage.getItem(sentKey) || '{"hour":false,"start":false}');
+
+    const timers = [];
+    const now = Date.now();
+    const oneHourBefore = status.examStart - 60 * 60 * 1000;
+    const atStart = status.examStart;
+
+    // V63.13 : Rappel 1h avant (1 SEUL — pas de "10 min avant" pour éviter le spam)
+    if (oneHourBefore > now && !alreadySent.hour) {
+      const id = setTimeout(() => {
+        this._sendExamNotification('📅 Examen hebdomadaire dans 1 heure', 'Sois prêt(e) à 19h30 pour 50 questions en 60 min !');
+        alreadySent.hour = true;
+        try { localStorage.setItem(sentKey, JSON.stringify(alreadySent)); } catch(e) {}
+      }, oneHourBefore - now);
+      timers.push(id);
+    }
+
+    // V63.13 : Rappel au démarrage (1 SEUL)
+    if (atStart > now && !alreadySent.start) {
+      const id = setTimeout(() => {
+        this._sendExamNotification('🔴 EN DIRECT : L\'examen est ouvert !', 'Clique pour commencer maintenant. Tu as jusqu\'à 20h30.');
+        alreadySent.start = true;
+        try { localStorage.setItem(sentKey, JSON.stringify(alreadySent)); } catch(e) {}
+      }, atStart - now);
+      timers.push(id);
+    }
+
+    this._examReminderTimers = timers;
+    this._lastScheduledExamId = examId;
+    console.log('[V63.13] Rappels d\'examen planifiés (' + timers.length + ' timers) pour ' + examId);
   },
 
   _sendExamNotification(title, body) {
@@ -10176,7 +10404,7 @@ const App = {
         badge: 'icons/icon-192.png',
         tag: 'bara-weekly-exam',
         requireInteraction: false,
-        renotify: true
+        renotify: false  // V63.13 : Pas de re-notification si même tag
       });
       notif.onclick = () => {
         window.focus();
@@ -10924,9 +11152,14 @@ const App = {
   FreemiumManager: {
     // Configuration
     LIMITE_QUOTIDIENNE_GRATUITE: 30, // 30 questions par jour pour les non-Premium
+    // V63.11 : Limite spécifique pour les questions d'actualité
+    LIMITE_ACTUALITE_GRATUIT: 10,    // 10 questions actualité/jour pour les non-Premium
+    // Matières considérées comme "actualité" (la limite s'applique à ces matières)
+    MATIERES_ACTUALITE: ['actualite', 'actualite_bf'],
 
     // Clé localStorage pour le compteur
     STORAGE_KEY: 'bara_freemium_counter',
+    STORAGE_KEY_ACTU: 'bara_freemium_counter_actu',  // V63.11
 
     // Récupérer l'état actuel
     getState() {
@@ -10943,14 +11176,44 @@ const App = {
       }
     },
 
+    // V63.11 : État spécifique actualité
+    getActuState() {
+      try {
+        const data = JSON.parse(localStorage.getItem(this.STORAGE_KEY_ACTU) || '{}');
+        const today = new Date().toISOString().split('T')[0];
+        if (data.date !== today) {
+          return { date: today, count: 0 };
+        }
+        return data;
+      } catch (e) {
+        return { date: new Date().toISOString().split('T')[0], count: 0 };
+      }
+    },
+
     // Combien de questions répondues aujourd'hui
     getCountToday() {
       return this.getState().count;
     },
 
+    // V63.11 : Combien de questions actualité répondues aujourd'hui
+    getActuCountToday() {
+      return this.getActuState().count;
+    },
+
     // Combien il en reste aujourd'hui
     getRemaining() {
       return Math.max(0, this.LIMITE_QUOTIDIENNE_GRATUITE - this.getCountToday());
+    },
+
+    // V63.11 : Combien de questions actualité restantes aujourd'hui
+    getActuRemaining() {
+      return Math.max(0, this.LIMITE_ACTUALITE_GRATUIT - this.getActuCountToday());
+    },
+
+    // V63.11 : Une matière est-elle considérée comme "actualité" ?
+    isActualiteMatiere(matiere) {
+      if (!matiere) return false;
+      return this.MATIERES_ACTUALITE.includes(matiere);
     },
 
     // L'utilisateur a-t-il atteint la limite ?
@@ -10962,8 +11225,38 @@ const App = {
       return this.getCountToday() >= this.LIMITE_QUOTIDIENNE_GRATUITE;
     },
 
+    // V63.11 : L'utilisateur a-t-il atteint la limite actualité ?
+    hasReachedActuLimit(user) {
+      if (window.PremiumService && window.PremiumService.isUserPremium(user)) {
+        return false;
+      }
+      return this.getActuCountToday() >= this.LIMITE_ACTUALITE_GRATUIT;
+    },
+
+    // V63.11 : Vérifier la limite pour une matière spécifique (générale OU actualité)
+    canAnswerMatiere(user, matiere) {
+      if (window.PremiumService && window.PremiumService.isUserPremium(user)) {
+        return { allowed: true };
+      }
+      if (this.isActualiteMatiere(matiere) && this.hasReachedActuLimit(user)) {
+        return {
+          allowed: false,
+          reason: 'actualite_limit',
+          message: `Tu as atteint la limite de ${this.LIMITE_ACTUALITE_GRATUIT} questions Actualité par jour. Reviens demain ou passe Premium pour un accès illimité.`
+        };
+      }
+      if (this.hasReachedLimit(user)) {
+        return {
+          allowed: false,
+          reason: 'general_limit',
+          message: `Tu as atteint la limite de ${this.LIMITE_QUOTIDIENNE_GRATUITE} questions par jour.`
+        };
+      }
+      return { allowed: true };
+    },
+
     // Incrémenter le compteur (1 question répondue)
-    incrementCount(user) {
+    incrementCount(user, matiere) {
       // Premium = on ne compte pas
       if (window.PremiumService && window.PremiumService.isUserPremium(user)) {
         return;
@@ -10971,6 +11264,13 @@ const App = {
       const state = this.getState();
       state.count++;
       localStorage.setItem(this.STORAGE_KEY, JSON.stringify(state));
+
+      // V63.11 : Incrémenter aussi le compteur actualité si la matière en est
+      if (matiere && this.isActualiteMatiere(matiere)) {
+        const actuState = this.getActuState();
+        actuState.count++;
+        localStorage.setItem(this.STORAGE_KEY_ACTU, JSON.stringify(actuState));
+      }
     },
 
     // Réinitialiser (debug/admin)
@@ -11179,32 +11479,45 @@ const App = {
     this.state.showExitConfirm = false;
     this.save();
 
-    // Détecter l'environnement
-    const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
-    const isCordova = window.navigator && window.navigator.app && window.navigator.app.exitApp;
+    // V63.9 : Détection robuste de l'environnement
+    const isCordova = !!(window.navigator && window.navigator.app && window.navigator.app.exitApp);
+    const displayMode = window.matchMedia('(display-mode: standalone)').matches
+                     || window.matchMedia('(display-mode: fullscreen)').matches
+                     || window.matchMedia('(display-mode: minimal-ui)').matches;
+    // Sur Safari iOS : navigator.standalone === true si app installée
+    const isIOSStandalone = window.navigator.standalone === true;
+    const isPWAInstalled = displayMode || isIOSStandalone;
 
+    // 1) Cordova / TWA wrappée : on peut vraiment fermer
     if (isCordova) {
-      // Vraie APK Cordova → fermer
-      window.navigator.app.exitApp();
-      return;
+      try {
+        window.navigator.app.exitApp();
+        return;
+      } catch(e) {
+        console.warn('Cordova exitApp a échoué :', e);
+      }
     }
 
-    if (isStandalone) {
-      // APK TWA ou PWA installée : history.back peut fermer la fenêtre
-      this.render();  // Mettre à jour l'UI d'abord
+    // 2) PWA installée (Add to Home Screen) : tentative window.close + history.back
+    if (isPWAInstalled) {
+      this.render();
+      // Marquer l'intention de fermeture (au cas où la fenêtre se rouvre)
+      try {
+        window.close();
+      } catch(e) {}
+      // Si window.close n'a pas marché (la plupart des cas), montrer un message
       setTimeout(() => {
-        try { history.back(); } catch(e) {}
-        // Tenter window.close en dernier recours
-        setTimeout(() => { try { window.close(); } catch(e) {} }, 100);
-      }, 50);
+        // Si on est toujours là après 200ms, c'est que rien ne s'est fermé
+        this.toast('💡 Appuie sur le bouton ACCUEIL de ton téléphone pour quitter complètement.', 'info', 5000);
+      }, 200);
       return;
     }
 
-    // Mode navigateur web (Chrome, Firefox...) : on NE PEUT PAS fermer l'onglet via JS
-    // Afficher un toast explicatif et fermer le dialogue
+    // 3) Mode navigateur web classique : impossible de fermer l'onglet via JS
+    //    Mais on peut au moins ouvrir une page neutre (about:blank) pour signaler le départ
     this.render();
     setTimeout(() => {
-      this.toast('💡 Pour quitter, ferme cet onglet (×) ou appuie sur le bouton retour de ton navigateur.');
+      this.toast('💡 Pour quitter, ferme cet onglet avec le × ou installe l\'app sur ton écran d\'accueil.', 'info', 5000);
     }, 100);
   },
 
@@ -11217,10 +11530,28 @@ const App = {
   // V35 : Rendu du dialog de confirmation de sortie (au-dessus de tout)
   renderExitDialog() {
     if (!this.state.showExitConfirm) return '';
-    // V58.1 : Détecter si on est en mode navigateur (Chrome web) pour adapter le message
-    const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
-    const isCordova = window.navigator && window.navigator.app && window.navigator.app.exitApp;
-    const isWebBrowser = !isStandalone && !isCordova;
+    // V63.9 : Détection robuste de l'environnement (alignée avec doExit)
+    const isCordova = !!(window.navigator && window.navigator.app && window.navigator.app.exitApp);
+    const displayMode = window.matchMedia('(display-mode: standalone)').matches
+                     || window.matchMedia('(display-mode: fullscreen)').matches
+                     || window.matchMedia('(display-mode: minimal-ui)').matches;
+    const isIOSStandalone = window.navigator.standalone === true;
+    const isPWAInstalled = displayMode || isIOSStandalone;
+    const isWebBrowser = !isCordova && !isPWAInstalled;
+
+    // Label & message adaptés selon contexte
+    let message, exitLabel;
+    if (isCordova) {
+      message = 'Tu peux toujours revenir t\'entraîner plus tard. Tes données restent sauvegardées.';
+      exitLabel = 'Quitter';
+    } else if (isPWAInstalled) {
+      message = 'Tes données restent sauvegardées. Pour quitter complètement, utilise le bouton ACCUEIL de ton téléphone.';
+      exitLabel = '🏠 OK, je vais à l\'accueil';
+    } else {
+      // Mode navigateur web (cas le plus courant chez Issoufou)
+      message = '💡 Astuce : installe Bara Concours sur ton écran d\'accueil pour une vraie expérience d\'app. Pour quitter maintenant, ferme cet onglet avec le ×.';
+      exitLabel = '✅ J\'ai compris';
+    }
 
     return `
       <div style="position:fixed; inset:0; background:rgba(0,0,0,0.6); display:flex; align-items:center; justify-content:center; z-index:9999; padding:1.5rem; animation:fadeIn 0.2s">
@@ -11228,16 +11559,14 @@ const App = {
           <div style="font-size:3.5rem; margin-bottom:0.5rem">🚪</div>
           <h3 style="font-family:'Instrument Serif',serif; font-size:1.5rem; color:var(--green-bf); margin-bottom:0.6rem">Quitter Bara Concours ?</h3>
           <p style="color:var(--ink-soft); font-size:0.92rem; line-height:1.5; margin-bottom:1.5rem">
-            ${isWebBrowser
-              ? 'Pour fermer l\'app dans ton navigateur, utilise le bouton × de l\'onglet en haut. Tes données restent sauvegardées.'
-              : 'Tu peux toujours revenir t\'entraîner plus tard. Tes données restent sauvegardées.'}
+            ${message}
           </p>
           <div style="display:flex; flex-direction:column; gap:0.6rem">
             <button onclick="App.cancelExit()" style="background:var(--green-bf); color:white; border:none; padding:0.9rem; border-radius:12px; font-weight:700; font-size:0.95rem; cursor:pointer; width:100%">
               👍 Rester dans l'app
             </button>
             <button onclick="App.doExit()" style="background:transparent; color:var(--ink-mute); border:1.5px solid var(--line); padding:0.85rem; border-radius:12px; font-weight:600; font-size:0.9rem; cursor:pointer; width:100%">
-              ${isWebBrowser ? 'Fermer ce dialogue' : 'Quitter'}
+              ${exitLabel}
             </button>
           </div>
         </div>

@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.8 - V63.8 : Intégration 3 modifications + bouton export modifications
+// Version 6.3.13 - V63.13 : Anti-triche + Notifs uniques + UX dates
 
-const CACHE_NAME = 'bara-concours-v6-3-8';
+const CACHE_NAME = 'bara-concours-v6-3-13';
 const APP_SHELL = [
   './',
   './index.html',
