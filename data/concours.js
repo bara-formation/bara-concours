@@ -14,7 +14,7 @@ const MATIERES_CATALOG = {
   maths_bac: { nom: 'Maths — BAC', icone: '📐', couleur: '#15803d', desc: 'Algèbre, fonctions, statistiques, probabilités (niveau BAC)' },
   maths_licence: { nom: 'Maths — Licence', icone: '∫', couleur: '#0e7d3a', desc: 'Analyse, algèbre linéaire, statistiques avancées (niveau Licence)' },
   cg: { nom: 'Culture Générale', icone: '🌍', couleur: '#1e40af', desc: 'Actualités BF, histoire, géographie, institutions' },
-  actualite: { nom: 'Actualité', icone: '📰', couleur: '#dc2626', desc: 'Actualité Burkina, AES, événements récents, institutions de la Transition' },
+  actualite: { nom: 'Actualités et Institutions', icone: '📰', couleur: '#dc2626', desc: 'Actualité Burkina, AES, événements récents, institutions de la Transition' },
   histgeo: { nom: 'Histoire-Géographie', icone: '🗺️', couleur: '#dc2626', desc: 'Histoire BF, géographie mondiale' },
   svt: { nom: 'SVT (générique)', icone: '🌱', couleur: '#16a34a', desc: 'SVT — utilisé en cas de niveau non précisé' },
   svt_bepc: { nom: 'SVT — BEPC', icone: '🌱', couleur: '#16a34a', desc: 'Reproduction, alimentation, écosystèmes (niveau BEPC)' },

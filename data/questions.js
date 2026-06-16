@@ -1,6 +1,6 @@
 // Bara Concours - Base de questions QCM
-// Fichier mis à jour le 2026-06-13 - V63.8 intégration des 3 modifications admin
-// Total : 3742 questions réparties sur 35 matières
+// Mis à jour le 2026-06-16 - V63.15 : 41 modifs cg + 6 suppressions
+// Total : 3944 questions réparties sur 36 matières
 
 const QUESTIONS = {
   "francais": [
@@ -8945,17 +8945,6 @@ const QUESTIONS = {
       "x": "17 régions, 47 provinces, 351 départements  au redécoupage  administratif de juillet 2025"
     },
     {
-      "q": "Monnaie officielle du Burkina Faso ?",
-      "o": [
-        "Franc burkinabè",
-        "Franc CFA (BCEAO)",
-        "Cedi",
-        "Dalasi"
-      ],
-      "r": 1,
-      "x": "Le BF est membre de l'UEMOA et utilise le Franc CFA émis par la BCEAO. Cedi=Ghana, Dalasi=Gambie."
-    },
-    {
       "q": "Plus long fleuve du Burkina Faso ?",
       "o": [
         "Le Nakambé",
@@ -9145,7 +9134,7 @@ const QUESTIONS = {
     {
       "q": "Blaise Compaoré a été contraint de quitter le pouvoir en 2014 à la suite de :",
       "o": [
-        "Un soulèvement populaire contre sa tentative de modifier la Constitution",
+        "Un soulèvement populaire",
         "Une défaite lors d'élections présidentielles",
         "Un coup d'État militaire de l'armée régulière",
         "Une décision de la Cour constitutionnelle l'invalidant"
@@ -9159,7 +9148,7 @@ const QUESTIONS = {
         "Par des élections présidentielles libres",
         "Par une décision de l'Assemblée nationale",
         "Par un accord entre partis politiques",
-        "Par un coup d'État militaire contre Jean-Baptiste Ouedraogo"
+        "Par un coup d'État militaire"
       ],
       "r": 3,
       "x": "Le 4 août 1983, Thomas Sankara a pris le pouvoir par un coup d'État contre le commandant Jean-Baptiste Ouedraogo. Ce mouvement fut soutenu par des militaires progressistes et présenté comme une révolution démocratique et populaire."
@@ -9330,7 +9319,7 @@ const QUESTIONS = {
       "x": "Bobo-Dioulasso est la deuxième ville du Burkina Faso avec plus de 900 000 habitants selon le RGPH de 2019. Considérée comme la capitale économique et culturelle du pays, elle abrite les principales industries agroalimentaires, textiles et les infrastructures de transport du pays."
     },
     {
-      "q": "Sur quel fleuve est construit le barrage de Bagré, le plus grand du Burkina Faso ?",
+      "q": "Sur quel fleuve est construit sur  le barrage de Bagré, le plus grand du Burkina Faso ?",
       "o": [
         "Le Mouhoun",
         "Le Nazinon",
@@ -9451,7 +9440,7 @@ const QUESTIONS = {
       "x": "L'océan Pacifique est le plus grand et le plus profond des cinq océans, couvrant environ 165 millions de km², soit plus que l'ensemble des terres émergées réunies. La fosse des Mariannes, qui s'y trouve, est le point le plus profond de la planète (environ 11 000 m)."
     },
     {
-      "q": "Quelle ville est la capitale de l'Éthiopie et abrite également le siège de l'Union Africaine ?",
+      "q": "Quelle ville est  le siège de l'Union Africaine ?",
       "o": [
         "Nairobi",
         "Le Caire",
@@ -9484,7 +9473,7 @@ const QUESTIONS = {
       "x": "Le Saint-Siège (Vatican) est le plus petit Etat souverain du monde avec une superficie de 0,44 km2. Enclave dans Rome (Italie), il est le centre de l'Eglise catholique. Monaco, avec 2,02 km2, est le deuxième plus petit Etat souverain du monde."
     },
     {
-      "q": "Quel pays d'Afrique de l'Ouest partage la plus longue frontière commune avec le Burkina Faso ?",
+      "q": "Quel pays  partage la plus longue frontière commune avec le Burkina Faso ?",
       "o": [
         "Le Ghana",
         "La Cote d'Ivoire",
@@ -9495,7 +9484,7 @@ const QUESTIONS = {
       "x": "Le Mali partage la plus longue frontière avec le Burkina Faso, d'environ 1 000 km, principalement au nord et au nord-ouest. Les deux pays ont en commun plusieurs groupes ethniques (Mossi, Peul, Bobo) et font face aux mêmes défis sécuritaires dans la zone sahélienne."
     },
     {
-      "q": "Dans quel pays se trouve le lac Volta, l'un des plus grands lacs artificiels du monde ?",
+      "q": "Dans quel pays se trouve le lac Volta ?",
       "o": [
         "Le Togo",
         "Le Ghana",
@@ -9517,7 +9506,7 @@ const QUESTIONS = {
       "x": "Le Kilimandjaro, culminant a 5 895 mètres, est le plus haut sommet d'Afrique. Il est situé dans le nord de la Tanzanie. C'est un stratovolcan dont le sommet est recouvert de neiges permanentes, en forte régression en raison du réchauffement climatique."
     },
     {
-      "q": "Quelle est la capitale fédérale du Nigeria, première économie du continent africain ?",
+      "q": "Quelle est la capitale fédérale du Nigeria ?",
       "o": [
         "Abuja",
         "Lagos",
@@ -9748,7 +9737,7 @@ const QUESTIONS = {
       "x": "La Côte d'Ivoire est le premier producteur mondial de cacao, assurant environ 40% de la production mondiale. Le Ghana est le deuxième producteur africain et mondial. Ensemble, Côte d'Ivoire et Ghana fournissent plus de 60% du cacao mondial, essentiel à la production de chocolat."
     },
     {
-      "q": "Quel dirigeant africain, premier président du Ghana indépendant, est considéré comme l'un des pères du panafricanisme ?",
+      "q": "Quel dirigeant africain  est considéré comme l'un des pères du panafricanisme ?",
       "o": [
         "Leopold Sedar Senghor",
         "Julius Nyerere",
@@ -9770,7 +9759,7 @@ const QUESTIONS = {
       "x": "Nelson Mandela et F.W. de Klerk ont partagé le Prix Nobel de la Paix en 1993 pour leur rôle dans le démantèlement pacifique de l'apartheid. Mandela avait été libéré en 1990 après 27 ans de détention et est devenu le premier président noir d'Afrique du Sud en 1994."
     },
     {
-      "q": "Quel est le nom du premier président du Sénégal, grand poète et théoricien de la Négritude ?",
+      "q": "Quel est le nom du premier président du Sénégal ?",
       "o": [
         "Cheikh Anta Diop",
         "Abdou Diouf",
@@ -9792,7 +9781,7 @@ const QUESTIONS = {
       "x": "F.W. de Klerk, dernier président blanc d'Afrique du Sud (1989-1994), a libéré Nelson Mandela en 1990 et organisé les premières élections libres en 1994, remportées par l'ANC. Il a reçu conjointement le Prix Nobel de la Paix avec Mandela en 1993."
     },
     {
-      "q": "Quel secrétaire général de l'ONU d'origine ghanéenne a reçu le Prix Nobel de la Paix en 2001 ?",
+      "q": "Quel secrétaire général de l'ONU a reçu le Prix Nobel de la Paix en 2001 ?",
       "o": [
         "Kofi Annan",
         "Boutros Boutros-Ghali",
@@ -9825,7 +9814,7 @@ const QUESTIONS = {
       "x": "La Grande Pyramide de Kheops, érigée vers 2560 av. J.-C. à Gizeh, est la seule des Sept Merveilles du monde antique encore existante. Avec ses 138,5 m de hauteur actuelle, elle a été la plus haute structure humaine pendant plus de 3 800 ans."
     },
     {
-      "q": "Quel romancier nigérian est l'auteur de \"Things Fall Apart\" (1958), considéré comme le roman africain le plus lu du monde ?",
+      "q": "Quel romancier nigérian est l'auteur de \"Things Fall Apart\" (1958) ?",
       "o": [
         "Wole Soyinka",
         "Chinua Achebe",
@@ -9946,7 +9935,7 @@ const QUESTIONS = {
       "x": "La distance moyenne entre la Terre et le Soleil est d'environ 150 millions de km (149,6 millions précisément), ce qui définit l'Unité Astronomique (UA). La lumière du Soleil met environ 8 minutes 20 secondes pour atteindre la Terre. Cette distance est fondamentale en astronomie."
     },
     {
-      "q": "Quelle nation a remporté la Coupe du Monde de football 2022, organisée au Qatar ?",
+      "q": "Quelle nation a remporté la Coupe du Monde de football 2022 ?",
       "o": [
         "L'Argentine",
         "La France",
@@ -9968,7 +9957,7 @@ const QUESTIONS = {
       "x": "Le Maroc a réalisé l'exploit historique d'atteindre les demi-finales lors du Mondial 2022. Les Lions de l'Atlas ont éliminé successivement la Belgique, l'Espagne et le Portugal avant de s'incliner face à la France (2-0). C'est la meilleure performance historique d'une sélection africaine en Coupe du Monde."
     },
     {
-      "q": "Quel athlète kenyan détient le record du monde officiel du marathon masculin et a couru sous les 2 heures lors d'un évènement non officiel ?",
+      "q": "Quel athlète kenyan détient le record du monde officiel du marathon masculin ?",
       "o": [
         "Eliud Kipchoge",
         "Haile Gebrselassie",
@@ -9979,7 +9968,7 @@ const QUESTIONS = {
       "x": "Eliud Kipchoge (Kenya) détient le record mondial officiel du marathon avec 2h00'35'' réalisé à Berlin en 2023. En 2019, il est devenu le premier homme à courir un marathon sous les 2h (1h59'40'') lors de l'Ineos Challenge de Vienne, un évènement non homologué."
     },
     {
-      "q": "Quel est le nom du plus grand festival de cinéma africain, organisé à Ouagadougou tous les deux ans ?",
+      "q": "Quel est le nom du plus grand festival de cinéma africain ?",
       "o": [
         "Le MASA (Marche des Arts du Spectacle Africain)",
         "La Semaine Nationale de la Culture",
@@ -9987,7 +9976,7 @@ const QUESTIONS = {
         "Le Festival Panafricain du Théâtre"
       ],
       "r": 2,
-      "x": "Le FESPACO (Festival Panafricain du Cinéma et de la Télévision de Ouagadougou), organisé a Ouagadougou depuis 1969, est le plus grand festival de cinéma africain, tenu les années impaires. Son grand prix est l'Étalon d'or de Yennenga. Il attire des cinéastes, producteurs et journalistes du monde entier et consacre le cinéma africain sur la scène internationale."
+      "x": "Le FESPACO (Festival Panafricain du Cinéma et de la Télévision de Ouagadougou), organisé à Ouagadougou depuis 1969, est le plus grand festival de cinéma africain, tenu les années impaires. Son grand prix est l'Étalon d'or de Yennenga."
     },
     {
       "q": "Quelle nation a remporté le plus grand nombre de titres de Coupe du Monde de football tout au long de l'histoire ?",
@@ -10020,7 +10009,7 @@ const QUESTIONS = {
         "Fatou Diome"
       ],
       "r": 0,
-      "x": "Mariama Ba (1929-1981) est l'auteure de \"Une si longue lettre\" (1979), prix Noma 1980. Ce roman épistolaire traite de la condition de la femme dans la société sénégalaise patriarcale et polygame. Il est considéré comme un chef-d'œuvre de la littérature africaine francophone."
+      "x": "Mariama Ba (1929-1981) est l'auteure de \"Une si longue lettre\" (1979), prix Noma 1980. Ce roman épistolaire traite de la condition de la femme dans la société sénégalaise patriarcale et polygame."
     },
     {
       "q": "Que signifie le mot \"philosophie\" dans son étymologie grecque ?",
@@ -10034,7 +10023,7 @@ const QUESTIONS = {
       "x": "Le mot \"philosophie\" vient du grec \"philos\" (ami, amoureux) et \"sophia\" (sagesse), signifiant littéralement \"amour de la sagesse\". Pythagore aurait été le premier a utiliser ce terme. La philosophie interroge l'existence, la connaissance, les valeurs morales et la raison."
     },
     {
-      "q": "Quel philosophe grec de l'Antiquité est l'auteur de \"La République\", qui expose l'idée d'un Etat idéal gouverné par des philosophes ?",
+      "q": "Quel philosophe grec de l'Antiquité est l'auteur de \"La République\" ?",
       "o": [
         "Aristote",
         "Socrate",
@@ -10045,7 +10034,7 @@ const QUESTIONS = {
       "x": "\"La République\" est l'œuvre majeure de Platon (428-348 av. J.-C.) traitant de la justice, de la démocratie et de la cité idéale. Platon y introduit notamment la fameuse métaphore de la caverne. Il était disciple de Socrate et maitre d'Aristote."
     },
     {
-      "q": "Quel est le prix littéraire le plus prestigieux en France, décerné depuis 1903 par l'Académie Goncourt ?",
+      "q": "Quel est le prix littéraire le plus prestigieux en France, décerné depuis 1903 ?",
       "o": [
         "Le prix Femina",
         "Le prix Goncourt",
@@ -10067,7 +10056,7 @@ const QUESTIONS = {
       "x": "L'hymne national de la Guinée, intitule \"Liberté\", compose lors de l'indépendance en 1958, se termine par \"Afrique debout !\". L'hymne du Burkina Faso s'appelle \"Ditanye\" (compose par Thomas Sankara en 1984). L'hymne national du Sénégal s'appelle \"Pincez tous vos koras, frappez les balafons\"."
     },
     {
-      "q": "Quel philosophe Français des Lumières est l'auteur de \"Du contrat social\" (1762), œuvre fondatrice de la démocratie moderne ?",
+      "q": "Quel philosophe Français des Lumières est l'auteur de \"Du contrat social\" (1762) ?",
       "o": [
         "Denis Diderot",
         "Voltaire",
@@ -10086,7 +10075,7 @@ const QUESTIONS = {
         "Victimes pour le Développement Populaire"
       ],
       "r": 0,
-      "x": "Les VDP (Volontaires pour la Défense de la Patrie) ont été créés en 2020 pour appuyer les Forces de Défense et de Sécurité (FDS) dans la lutte contre le terrorisme. Recrutés, formés et armés par l'Etat, ils jouent un rôle de soutien sécuritaire dans leurs localités d'origine."
+      "x": "Les VDP (Volontaires pour la Défense de la Patrie) ont été créés en 2020 pour appuyer les Forces de Défense et de Sécurité (FDS) dans la lutte contre le terrorisme. Recrutés, formés et armés par l'Etat, ils jouent un rôle de soutien sécuritaire dans le pays."
     },
     {
       "q": "Quel document international adopté en 1948 garantit les droits fondamentaux de tout être humain sans distinction ?",
@@ -10133,7 +10122,7 @@ const QUESTIONS = {
       "x": "L'OHADA regroupe 17 États africains dont le Burkina Faso. Elle harmonise le droit des affaires (droit commercial, droit des sociétés, droit des sûretés) pour sécuriser les investissements et faciliter les échanges commerciaux dans la zone francophone et lusophone africaine."
     },
     {
-      "q": "Quel phénomène naturel, aggrave par les activités humaines, menace particulièrement les zones sahélo-soudaniennes du Burkina Faso ?",
+      "q": "Quel phénomène naturel menace particulièrement les zones sahélo-soudaniennes du Burkina Faso ?",
       "o": [
         "La montée du niveau des mers et l'inondation des côtes",
         "La prolifération des zones marécageuses en zone sahélienne",
@@ -10155,7 +10144,7 @@ const QUESTIONS = {
       "x": "L'Alliance des États du Sahel (AES) a été créée en septembre 2023 par le Burkina Faso, le Mali et le Niger, tous gouvernés par des militaires. Cette alliance de défense mutuelle marque leur distanciation vis-à-vis de la CEDEAO et de la France, et traduit une nouvelle vision de la souveraineté régionale."
     },
     {
-      "q": "Quel est le nom officiel de l'hymne national du Burkina Faso, composé par Thomas Sankara en 1984 ?",
+      "q": "Quel est le nom officiel de l'hymne national du Burkina Faso ?",
       "o": [
         "La Voix des Hommes Intègres",
         "Le Ditanyé",
@@ -10177,7 +10166,7 @@ const QUESTIONS = {
       "x": "Le Protocole de Montréal (1987) vise à éliminer les substances appauvrissant la couche d'ozone, notamment les chlorofluorocarbures (CFC). Il est considéré comme l'un des accords environnementaux les plus réussis au monde, avec une ratification universelle par 197 parties."
     },
     {
-      "q": "De quelles deux couleurs et de quel symbole est composé le drapeau national du Burkina Faso adopté en 1984 ?",
+      "q": "De quelles couleurs et de quel symbole est composé le drapeau national du Burkina Faso ?",
       "o": [
         "Deux bandes horizontales (rouge et vert) avec une étoile jaune a cinq branches au centre",
         "Trois bandes verticales (rouge, blanc, vert) avec un soleil jaune",
@@ -10254,7 +10243,7 @@ const QUESTIONS = {
       "x": "« Rétorquer » signifie répondre de manière vive, directe et argumentée à une objection ou une critique. Exemple : « Il rétorqua que les faits prouvaient le contraire. » C'est un verbe courant dans les débats, le langage juridique et la rédaction administrative."
     },
     {
-      "q": "Quel est l'antonyme (contraire) du mot « altruisme » ?",
+      "q": "Quel est l'antonyme du mot « altruisme » ?",
       "o": [
         "Égoïsme",
         "Générosité",
@@ -10408,7 +10397,7 @@ const QUESTIONS = {
       "x": "La décentralisation consiste à transférer des compétences et des ressources de l'État central vers des collectivités territoriales autonomes (communes et régions). Au Burkina Faso, elle vise à rapprocher l'administration des citoyens et à responsabiliser les élus locaux dans la gestion du développement."
     },
     {
-      "q": "Quel est l'agent responsable du paludisme, première cause de mortalité infantile au Burkina Faso ?",
+      "q": "Quel est l'agent responsable du paludisme ?",
       "o": [
         "Un virus transmis par les piqûres de moustiques anophèles",
         "Une bactérie transmise par l'eau de boisson non traitée",
@@ -10441,7 +10430,7 @@ const QUESTIONS = {
       "x": "Le VIH se transmet par les rapports sexuels non protégés, le partage d'aiguilles contaminées et la transmission mère-enfant (grossesse, accouchement, allaitement). Il ne se transmet pas par les piqûres de moustiques, la salive, la sueur ou les contacts sociaux ordinaires."
     },
     {
-      "q": "Quel vaccin anti-méningite a été introduit dans la « ceinture de la méningite » africaine, dont fait partie le Burkina Faso, depuis 2010 ?",
+      "q": "Quel vaccin anti-méningite a été introduit dans la « ceinture de la méningite » africaine depuis 2010 ?",
       "o": [
         "Le vaccin antipaludéen RTS,S",
         "Le vaccin méningococcique MenAfriVac",
@@ -10474,7 +10463,7 @@ const QUESTIONS = {
       "x": "Le diabète sucré (types 1 et 2) est une maladie chronique caractérisée par un taux de glucose sanguin anormalement élevé. En progression rapide en Afrique de l'Ouest, il peut entraîner des complications graves : cécité, insuffisance rénale, amputations. La prévention repose sur une alimentation équilibrée et l'exercice physique."
     },
     {
-      "q": "Quel est le nom de la maladie tropicale négligée, endémique au Burkina Faso, causée par un ver parasite transmis par les mouches noires des rivières à courant rapide ?",
+      "q": "Quel est le nom de la maladie tropicale négligée causée par un ver parasite transmis par les mouches noires des rivières ?",
       "o": [
         "La trypanosomiase africaine (maladie du sommeil)",
         "La schistosomiase (bilharziose)",
@@ -10482,7 +10471,7 @@ const QUESTIONS = {
         "L'onchocercose"
       ],
       "r": 3,
-      "x": "L'onchocercose, dite « cécité des rivières », est causée par le ver Onchocerca volvulus, transmis par les simulies (mouches noires) vivant près des rivières rapides. Elle peut provoquer des lésions oculaires graves jusqu'à la cécité. Le Programme de Lutte contre l'Onchocercose (OCP) a permis de réduire fortement sa prévalence au Burkina."
+      "x": "L'onchocercose, dite « cécité des rivières », est causée par le ver Onchocerca volvulus, transmis par les simulies (mouches noires) vivant près des rivières rapides. Elle peut provoquer des lésions oculaires graves jusqu'à la cécité."
     },
     {
       "q": "Qu'est-ce que la malnutrition aiguë sévère chez l'enfant de moins de 5 ans ?",
@@ -10493,10 +10482,10 @@ const QUESTIONS = {
         "Un trouble du comportement alimentaire lié au stress familial"
       ],
       "r": 0,
-      "x": "La malnutrition aiguë sévère (MAS) est une insuffisance pondérale grave mesurée par un périmètre brachial très bas (inférieur à 115 mm) et/ou des œdèmes de carence. Mortelle sans prise en charge rapide, elle touche de nombreux enfants au Burkina Faso, aggravée par l'insécurité alimentaire liée aux crises sécuritaires."
+      "x": "La malnutrition aiguë sévère (MAS) est une insuffisance pondérale grave mesurée par un périmètre brachial très bas (inférieur à 115 mm) et/ou des œdèmes de carence. Elle est mortelle et touche de nombreux enfants au Burkina Faso."
     },
     {
-      "q": "Quelle maladie grave est prévenue par le vaccin BCG, administré à la naissance dans le cadre du Programme Élargi de Vaccination au Burkina Faso ?",
+      "q": "Quelle maladie grave est prévenue par le vaccin BCG ?",
       "o": [
         "La rougeole",
         "La diphtérie",
@@ -10515,7 +10504,7 @@ const QUESTIONS = {
         "La malnutrition sévère aiguë"
       ],
       "r": 1,
-      "x": "Le paludisme est la première cause de mortalité infantile au Burkina Faso, responsable de plus de 40 % des hospitalisations pédiatriques et d'un taux élevé de décès chez les enfants de moins de 5 ans et les femmes enceintes. La distribution de moustiquaires imprégnées d'insecticide longue durée est une priorité nationale."
+      "x": "Le paludisme est la première cause de mortalité infantile au Burkina Faso, responsable de plus de 40 % des hospitalisations pédiatriques et d'un taux élevé de décès chez les enfants de moins de 5 ans et les femmes enceintes."
     },
     {
       "q": "Un fonctionnaire perçoit un salaire mensuel de 150 000 FCFA et dépense 60 % de ce salaire. Quelle somme épargne-t-il chaque mois ?",
@@ -10628,7 +10617,7 @@ const QUESTIONS = {
       "x": "Aline Sitoé Diatta (vers 1920-1944) est la reine de Kabrousse (Casamance, Sénégal) qui a résisté à l'autorité coloniale française. Surnommée la « reine de la résistance », elle fut déportée en Mauritanie et y mourut en captivité. Yaa Asantewaa était une reine du peuple Ashanti (Ghana)."
     },
     {
-      "q": "Quel est le premier pays d'Afrique subsaharienne à avoir accédé à l'indépendance, le 6 mars 1957, sous la conduite de Kwame Nkrumah ?",
+      "q": "Quel est le premier pays d'Afrique subsaharienne à avoir accédé à l'indépendance, le 6 mars 1957 ?",
       "o": [
         "Le Ghana",
         "Le Nigeria",
@@ -10650,7 +10639,7 @@ const QUESTIONS = {
       "x": "L'Éthiopie est le princial pays d'Afrique subsaharienne à avoir résisté à la colonisation européenne. La victoire de l'armée éthiopienne à la bataille d'Adoua (1896) face à l'Italie est un symbole de résistance panafricaine. Le Liberia n'a pas été colonisé mais est resté sous forte influence américaine depuis sa fondation en 1847."
     },
     {
-      "q": "Quel mouvement littéraire et philosophique, né dans les années 1930 à Paris, a revendiqué et valorisé l'identité culturelle africaine et diasporique face au colonialisme ?",
+      "q": "Quel mouvement littéraire et philosophique a revendiqué et valorisé l'identité culturelle africaine et diasporique face au colonialisme ?",
       "o": [
         "Le panafricanisme",
         "L'afrocentrisme",
@@ -10661,7 +10650,7 @@ const QUESTIONS = {
       "x": "La Négritude est un mouvement littéraire et philosophique fondé dans les années 1930 par Aimé Césaire (Martinique), Léopold Sédar Senghor (Sénégal) et Léon-Gontran Damas (Guyane). Il valorise l'identité, l'histoire et les cultures africaines et de la diaspora face à l'assimilation et au colonialisme."
     },
     {
-      "q": "Quel chef traditionnel africain, à la tête de l'empire Wassoulou, a mené une longue résistance contre la colonisation française de 1882 jusqu'à sa capture en 1898 ?",
+      "q": "Quel chef traditionnel africain a mené une longue résistance contre la colonisation française de 1882 jusqu'à sa capture en 1898 ?",
       "o": [
         "El Hadj Omar Tall",
         "Tiéba Traoré",
@@ -10672,7 +10661,7 @@ const QUESTIONS = {
       "x": "Samory Touré (vers 1830-1900) a conduit une résistance armée contre les troupes françaises pendant près de 16 ans. Capturé en 1898, il mourut en déportation au Gabon. Il est considéré comme l'un des plus grands résistants africains à la colonisation et une figure héroïque du panafricanisme."
     },
     {
-      "q": "Quel pays africain a connu en 1994 un génocide au cours duquel environ 800 000 personnes, principalement des Tutsi, ont été massacrées en 100 jours ?",
+      "q": "Quel pays africain a connu en 1994 un génocide au cours duquel environ 800 000 personnes ont été massacrées  ?",
       "o": [
         "Le Burundi",
         "La République Démocratique du Congo",
@@ -10680,10 +10669,10 @@ const QUESTIONS = {
         "Le Rwanda"
       ],
       "r": 3,
-      "x": "Le génocide rwandais (avril-juillet 1994) a coûté la vie à environ 800 000 personnes en 100 jours, dont une majorité de Tutsi et de Hutu modérés. C'est l'une des plus grandes catastrophes humanitaires du XXe siècle. La communauté internationale a été sévèrement critiquée pour son inaction face à ces massacres."
+      "x": "Le génocide rwandais (avril-juillet 1994) a coûté la vie à environ 800 000 personnes en 100 jours, dont une majorité de Tutsi et de Hutu modérés. C'est l'une des plus grandes catastrophes humanitaires du XXe siècle."
     },
     {
-      "q": "En quelle année l'Algérie a-t-elle officiellement obtenu son indépendance, après 132 ans de colonisation française et une guerre de libération de 8 ans ?",
+      "q": "En quelle année l'Algérie a-t-elle officiellement obtenu son indépendance ?",
       "o": [
         "1958",
         "1962",
@@ -10694,7 +10683,7 @@ const QUESTIONS = {
       "x": "L'Algérie a accédé à l'indépendance le 5 juillet 1962, après une guerre d'indépendance débutée le 1er novembre 1954 (Toussaint Rouge). Les Accords d'Évian du 18 mars 1962 ont mis fin au conflit. Cette indépendance a été l'une des plus longues et des plus âpres luttes de décolonisation en Afrique."
     },
     {
-      "q": "Quel est le nom donné à la révolution populaire qui a renversé le régime de Mouammar Kadhafi en Libye en 2011, dans le contexte du Printemps arabe ?",
+      "q": "Quel est le nom donné à la révolution populaire qui a renversé le régime de Mouammar Kadhafi en Libye en 2011 ?",
       "o": [
         "La Révolution du Jasmin",
         "La Révolution de Velours",
@@ -10716,7 +10705,7 @@ const QUESTIONS = {
       "x": "L'ANC (African National Congress / Congrès National Africain), fondé en 1912, a mené la lutte contre l'apartheid pendant des décennies. Nelson Mandela, son leader, fut emprisonné de 1964 à 1990. Il a conduit les négociations de la transition démocratique et remporté les élections de 1994, devenant le premier président noir d'Afrique du Sud."
     },
     {
-      "q": "Quel romancier ivoirien est l'auteur des « Soleils des Indépendances » (1968), roman qui critique avec ironie les désillusions des indépendances africaines ?",
+      "q": "Quel romancier ivoirien est l'auteur des « Soleils des Indépendances » ?",
       "o": [
         "Séidou Badian Kouyaté",
         "Mongo Beti",
@@ -10724,7 +10713,7 @@ const QUESTIONS = {
         "Ahmadou Kourouma"
       ],
       "r": 3,
-      "x": "Ahmadou Kourouma (1927-2003) est l'auteur des « Soleils des Indépendances » (1968), œuvre fondatrice de la littérature africaine moderne. Ce roman introduit en français des structures grammaticales de la langue malinké et dénonce les régimes africains post-coloniaux. Kourouma est considéré comme un des plus grands romanciers africains."
+      "x": "Ahmadou Kourouma (1927-2003) est l'auteur des « Soleils des Indépendances » (1968), œuvre fondatrice de la littérature africaine moderne. Ce roman introduit en français des structures grammaticales de la langue malinké et dénonce les régimes africains post-coloniaux."
     },
     {
       "q": "Quel écrivain camerounais est l'auteur du roman « Le Vieux Nègre et la Médaille » (1956), qui dénonce avec humour les contradictions du système colonial ?",
@@ -10738,7 +10727,7 @@ const QUESTIONS = {
       "x": "Ferdinand Oyono (1929-2010) est l'auteur de « Le Vieux Nègre et la Médaille » et de « Une Vie de boy » (1956), deux romans qui dénoncent les illusions et les contradictions du colonialisme avec une ironie cinglante. Diplomate et ministre camerounais, il a combiné carrière littéraire et engagement politique."
     },
     {
-      "q": "Quel romancier guinéen est l'auteur de « L'Enfant noir » (1953), récit autobiographique décrivant son enfance dans une famille forgeron malinké en Guinée coloniale ?",
+      "q": "Quel romancier guinéen est l'auteur de « L'Enfant noir » (1953)?",
       "o": [
         "Cheikh Hamidou Kane",
         "Ousmane Sembène",
@@ -10760,7 +10749,7 @@ const QUESTIONS = {
       "x": "Le prix Nobel de Littérature est décerné chaque année par l'Académie suédoise à un auteur pour l'ensemble de son œuvre. Parmi les Africains lauréats, on compte : Wole Soyinka (Nigeria, 1986), Naguib Mahfouz (Égypte, 1988), Nadine Gordimer (Afrique du Sud, 1991) et J.M. Coetzee (Afrique du Sud, 2003)."
     },
     {
-      "q": "Combien de locuteurs (environ) le français compte-t-il dans le monde, faisant de lui l'une des grandes langues de communication internationale ?",
+      "q": "Combien de locuteurs (environ) le français compte-t-il dans le monde?",
       "o": [
         "Plus de 300 millions de locuteurs sur les cinq continents",
         "Environ 80 millions, principalement en Europe et en Afrique du Nord",
@@ -10771,7 +10760,7 @@ const QUESTIONS = {
       "x": "Le français est parlé par plus de 300 millions de locuteurs répartis sur les cinq continents, dans 93 États et gouvernements membres de l'Organisation Internationale de la Francophonie (OIF). L'Afrique représente désormais le continent avec le plus grand nombre de locuteurs francophones."
     },
     {
-      "q": "Quel écrivain sénégalais est l'auteur du roman philosophique « L'Aventure ambiguë » (1961), qui explore le conflit identitaire entre cultures africaine et occidentale ?",
+      "q": "Quel écrivain sénégalais est l'auteur du roman philosophique « L'Aventure ambiguë » (1961) ?",
       "o": [
         "Birago Diop",
         "Cheikh Hamidou Kane",
@@ -10782,7 +10771,7 @@ const QUESTIONS = {
       "x": "Cheikh Hamidou Kane (1928-2023) est l'auteur de « L'Aventure ambiguë », roman qui raconte le parcours initiatique de Samba Diallo entre l'enseignement coranique et l'université occidentale. C'est un classique de la littérature africaine qui interroge profondément la question de l'identité culturelle et de la colonisation."
     },
     {
-      "q": "Quelle institution internationale, dont le siège est à Paris, promeut la langue française et la coopération entre ses États membres ?",
+      "q": "Quelle institution internationale promeut la langue française et la coopération entre ses États membres ?",
       "o": [
         "L'Organisation Internationale de la Francophonie (OIF)",
         "L'Alliance Française",
@@ -10790,7 +10779,7 @@ const QUESTIONS = {
         "L'Académie française"
       ],
       "r": 0,
-      "x": "L'Organisation Internationale de la Francophonie (OIF) regroupe plusieurs États et gouvernements partageant l'usage du français. Elle promeut la langue française, la diversité culturelle, la démocratie et le développement durable. Son Sommet se tient tous les deux ans.  Le Burkina Faso a quitté l'OIF au premier trimestre 2025, conjointement avec le Niger et le Mali, au sein de l'Alliance des États du Sahel (AES)."
+      "x": "L'Organisation Internationale de la Francophonie (OIF) regroupe plusieurs États et gouvernements partageant l'usage du français.  Le Burkina Faso a quitté l'OIF au premier trimestre 2025, conjointement avec le Niger et le Mali, au sein de l'Alliance des États du Sahel (AES)."
     },
     {
       "q": "Quelle forme de transmission culturelle africaine, incarnée par le griot, transmet oralement l'histoire, les épopées et les généalogies de génération en génération ?",
@@ -10804,7 +10793,7 @@ const QUESTIONS = {
       "x": "La tradition orale africaine, incarnée par le griot, est le mode ancestral de transmission de l'histoire, des généalogies, des épopées et des valeurs morales. Les griots sont les dépositaires de la mémoire collective. L'épopée de Soundiata Keïta (fondateur de l'empire du Mali) en est l'un des plus célèbres exemples."
     },
     {
-      "q": "Quel est le roman le plus célèbre de l'écrivain malien Amadou Hampâté Bâ, grand défenseur de la tradition orale africaine ?",
+      "q": "Quel est le roman le plus célèbre de l'écrivain malien Amadou Hampâté Bâ ?",
       "o": [
         "« Les Contes d'Amadou Koumba »",
         "« Soundjata ou l'épopée mandingue »",
@@ -41237,17 +41226,6 @@ const QUESTIONS = {
   ],
   "actualite": [
     {
-      "q": "Quelle est la devise actuelle du Burkina Faso depuis la Transition ?",
-      "o": [
-        "La Patrie ou la Mort, nous vaincrons",
-        "Unité, Progrès, Justice",
-        "Dieu, Patrie, Travail",
-        "Liberté, Égalité, Fraternité"
-      ],
-      "r": 0,
-      "x": "Depuis la Transition, le Burkina Faso a adopté la devise révolutionnaire 'La Patrie ou la Mort, nous vaincrons'."
-    },
-    {
       "q": "Combien de régions administratives compte actuellement le Burkina Faso depuis la réorganisation territoriale ?",
       "o": [
         "13 régions",
@@ -41257,39 +41235,6 @@ const QUESTIONS = {
       ],
       "r": 2,
       "x": "Depuis la réorganisation territoriale de la Transition, le Burkina Faso compte 17 régions avec des noms endogènes (locaux)."
-    },
-    {
-      "q": "Quel organe a remplacé la CENI (Commission Électorale Nationale Indépendante) dissoute ?",
-      "o": [
-        "Le Ministère de l'Administration Territoriale",
-        "L'ANEB",
-        "Aucun organe n'a été créé en remplacement",
-        "Le Conseil Constitutionnel"
-      ],
-      "r": 0,
-      "x": "La CENI a été dissoute pendant la Transition. L'organisation des élections, lorsqu'elles auront lieu, revient au Ministère de l'Administration Territoriale."
-    },
-    {
-      "q": "L'AES (Alliance des États du Sahel) regroupe quels pays ?",
-      "o": [
-        "Burkina Faso, Mali, Niger, Tchad",
-        "Burkina Faso, Mali, Niger",
-        "Burkina Faso, Mali, Niger, Togo",
-        "Burkina Faso, Mali, Niger, Guinée"
-      ],
-      "r": 1,
-      "x": "L'AES regroupe le Burkina Faso, le Mali et le Niger. Elle a été créée en 2023 et ces pays se sont retirés de la CEDEAO en 2024."
-    },
-    {
-      "q": "Qui est l'actuel Président de la Transition au Burkina Faso ?",
-      "o": [
-        "Roch Marc Christian Kaboré",
-        "Paul-Henri Sandaogo Damiba",
-        "Capitaine Ibrahim Traoré",
-        "Apollinaire Joachim Kyélem de Tambèla"
-      ],
-      "r": 2,
-      "x": "Le Capitaine Ibrahim Traoré est Président de la Transition depuis le 30 septembre 2022."
     },
     {
       "q": "Combien de provinces compte le Burkina Faso depuis la réorganisation territoriale ?",
@@ -41325,17 +41270,6 @@ const QUESTIONS = {
       "x": "Les trois pays de l'AES ont annoncé conjointement leur retrait de la CEDEAO le 28 janvier 2024."
     },
     {
-      "q": "Le Médiateur du Faso a été supprimé pendant la Transition. Quelle était sa fonction principale ?",
-      "o": [
-        "Présider la Cour constitutionnelle",
-        "Régler à l'amiable les différends entre administrés et administration",
-        "Représenter le Burkina à l'étranger",
-        "Conseiller le Premier ministre"
-      ],
-      "r": 1,
-      "x": "Le Médiateur du Faso, supprimé pendant la Transition, était chargé du règlement amiable des différends entre les citoyens et l'administration publique."
-    },
-    {
       "q": "Quel est le nom officiel du Burkina Faso avant 1984 ?",
       "o": [
         "Haute-Côte d'Ivoire",
@@ -41345,6 +41279,2184 @@ const QUESTIONS = {
       ],
       "r": 1,
       "x": "Le Burkina Faso s'appelait République de Haute-Volta jusqu'en août 1984, où Thomas Sankara l'a rebaptisé Burkina Faso ('Pays des hommes intègres')."
+    },
+    {
+      "q": "Qui est le Directeur Général de la RTB (Radiodiffusion Télévision du Burkina) ?",
+      "o": [
+        "Issouf Saré",
+        "Geoffroy Vaha",
+        "Atéridar Galip Some",
+        "Ismaël Ouédraogo"
+      ],
+      "r": 2,
+      "x": "La RTB (Radiodiffusion Télévision du Burkina) est la plus ancienne télévision nationale, créée le 5 août 1963. Son slogan est \"La chaîne au cœur des grands évènements\" et son DG actuel est Atéridar Galip Some."
+    },
+    {
+      "q": "Quel est le slogan d'Omega TV au Burkina Faso ?",
+      "o": [
+        "\"L'info en temps réel\"",
+        "\"Omega, l'heure exacte pour la vie\"",
+        "\"La télé interactive\"",
+        "\"La télévision des nouvelles idées\""
+      ],
+      "r": 0,
+      "x": "Omega TV est une chaîne privée burkinabè créée en 2011. Son slogan est \"L'info en temps réel\"."
+    },
+    {
+      "q": "En quelle année BF1 a-t-elle été créée et qui en est le DG ?",
+      "o": [
+        "5 août 2008, DG : Geoffroy Vaha",
+        "3 mai 2015, DG : Issoufou Saré",
+        "18 août 2010, DG : Issoufou Saré",
+        "23 mai 2016, DG : Adam's Kaled Ouédraogo"
+      ],
+      "r": 2,
+      "x": "BF1 a été créée le 18 août 2010. Son slogan est \"Au cœur de nos défis\" et son DG est Issoufou Saré. C'est l'une des chaînes privées les plus regardées du Burkina Faso."
+    },
+    {
+      "q": "Qui est le DG de la chaîne 3TV et quel est son slogan ?",
+      "o": [
+        "Issouf Saré, \"Au cœur de nos défis\"",
+        "Edmond Coulibaly, \"La télévision du royaume des cieux\"",
+        "Geoffroy Vaha, \"La télé interactive\"",
+        "Ismaël Ouédraogo, \"Notre chaîne, notre identité\""
+      ],
+      "r": 2,
+      "x": "3TV a été créée le 23 mai 2016. Son slogan est \"La télé interactive\" et son DG est Geoffroy Vaha. Elle est connue pour ses émissions interactives et ses débats citoyens."
+    },
+    {
+      "q": "Quel est le slogan de Savane TV et qui en est le DG ?",
+      "o": [
+        "\"La télé interactive\", DG : Geoffroy Vaha",
+        "\"La télévision du royaume des cieux\", DG : Edmond Coulibaly",
+        "\"La télévision des nouvelles idées\", DG : Issaka Sourwema",
+        "\"Au cœur de nos défis\", DG : Issoufou Saré"
+      ],
+      "r": 2,
+      "x": "Savane TV a été créée en 2018. Son slogan est \"La télévision des nouvelles idées\" et son DG est Issaka Sourwema, aussi connu sous le nom de Naaba Boalga. Le fondateur est El Hadj Aboubacar Zida, dit « Sidnaaba »."
+    },
+    {
+      "q": "Qui est le DG d'Impact TV et quel est son slogan ?",
+      "o": [
+        "Ismaël Ouédraogo, \"Notre chaîne, notre identité\"",
+        "Edmond Coulibaly, \"La télévision du royaume des cieux\"",
+        "Issaka Sourwema, \"La télévision des nouvelles idées\"",
+        "Geoffroy Vaha, \"La télé interactive\""
+      ],
+      "r": 1,
+      "x": "Impact TV a été créée en juin 2010. Son slogan est \"La télévision du royaume des cieux\" et son DG est Edmond Coulibaly. C'est une chaîne à orientation chrétienne."
+    },
+    {
+      "q": "En quelle année Burkina Info TV a-t-elle été créée et qui en est le DG ?",
+      "o": [
+        "20 août 2010, DG : Issouf Saré",
+        "23 mai 2016, DG : Geoffroy Vaha",
+        "3 mai 2015, DG : Ismaël Ouédraogo",
+        "2018, DG : Issaka Sourwema"
+      ],
+      "r": 2,
+      "x": "Burkina Info TV a été créée le 3 mai 2015, date coïncidant avec la Journée mondiale de la liberté de la presse. Son DG est Ismaël Ouédraogo. Elle est spécialisée dans l'information en continu."
+    },
+    {
+      "q": "Quel est le rôle du Ouidi Naaba dans la cour du Mogho Naaba ?",
+      "o": [
+        "Ministre de l'infanterie",
+        "Ministre de la cavalerie",
+        "Porte-parole de l'Empereur",
+        "Ministre des tombes royales"
+      ],
+      "r": 1,
+      "x": "La cour du Mogho Naaba (roi des Mossi) est organisée avec 5 ministres traditionnels. Le Ouidi Naaba est le Ministre de la cavalerie, l'un des dignitaires les plus influents."
+    },
+    {
+      "q": "Quel est le rôle du Goungha Naaba dans la cour du Mogho Naaba ?",
+      "o": [
+        "Ministre de la cavalerie",
+        "Ministre de la jeunesse",
+        "Ministre de l'intendance",
+        "Ministre de l'infanterie"
+      ],
+      "r": 3,
+      "x": "La cour du Mogho Naaba comporte 5 ministres. Le Goungha Naaba est le Ministre de l'infanterie, commandant les soldats à pied et supervisant la garde royale terrestre."
+    },
+    {
+      "q": "Quel est le rôle du Baloum Naaba dans la cour du Mogho Naaba ?",
+      "o": [
+        "Ministre des tombes royales",
+        "Ministre de la cavalerie",
+        "Ministre de l'intendance",
+        "Ministre de la jeunesse"
+      ],
+      "r": 2,
+      "x": "Le Baloum Naaba cumule deux fonctions : Ministre de l'intendance et porte-parole officiel du Mogho Naaba. Il gère les affaires intérieures du palais et transmet la parole royale."
+    },
+    {
+      "q": "Quel est le rôle du Larlé Naaba dans la cour du Mogho Naaba ?",
+      "o": [
+        "Ministre de la jeunesse",
+        "Ministre des tombes royales",
+        "Ministre de l'infanterie",
+        "Ministre de l'intendance"
+      ],
+      "r": 1,
+      "x": "Le Larlé Naaba est le Ministre des tombes royales. Il préside aux cérémonies funéraires liées à la famille royale Mossi et veille sur les sépultures royales ancestrales."
+    },
+    {
+      "q": "Quel est le rôle du Kamsonghin Naaba dans la cour du Mogho Naaba ?",
+      "o": [
+        "Ministre de l'infanterie",
+        "Ministre des tombes royales",
+        "Porte-parole de l'Empereur",
+        "Ministre de la jeunesse"
+      ],
+      "r": 3,
+      "x": "Le Kamsonghin Naaba est le Ministre de la jeunesse du Mogho Naaba. Il supervise les activités liées à la jeunesse et aux initiations traditionnelles dans le royaume Mossi."
+    },
+    {
+      "q": "En quelle année l'Université de Ouagadougou a-t-elle été rebaptisée Université Joseph Ki-Zerbo ?",
+      "o": [
+        "2012",
+        "2015",
+        "2017",
+        "2020"
+      ],
+      "r": 1,
+      "x": "L'Université Joseph Ki-Zerbo (ancien nom : Université de Ouagadougou) a été fondée le 1er avril 1974 et rebaptisée en 2015. Son slogan est \"Populi Sapientia Populo\" et son président actuel est le Pr Antoine Bere (nommé en janvier 2026)."
+    },
+    {
+      "q": "Quelle est la devise de l'Université Thomas Sankara ?",
+      "o": [
+        "\"Populi Sapientia Populo\"",
+        "\"Savoir-Agir-Servir\"",
+        "\"Science-intégrité-société\"",
+        "\"Connaissance-Progrès-Paix\""
+      ],
+      "r": 2,
+      "x": "L'Université Thomas Sankara (ancien nom : Université Ouaga II) a été créée le 12 décembre 2007 et rebaptisée le 15 octobre 2020. Sa devise est \"Science-intégrité-société\" et son président est le Pr Tibi Didier Zoungrana (nommé le 13 mai 2026)."
+    },
+    {
+      "q": "Qui est la présidente de l'Université Norbert Zongo de Koudougou ?",
+      "o": [
+        "Pr Aminata Zerbo/Sabane",
+        "Pr Passowendé Pélagie Kabre",
+        "Pr Windkouni Haoua Eugénie Maiga",
+        "Pr Fatoumata Bako"
+      ],
+      "r": 2,
+      "x": "L'Université Norbert Zongo (ancien nom : Université de Koudougou) a été créée le 31 août 2005 et rebaptisée le 21 juillet 2017. Son slogan est \"Exceller par le Savoir pour mieux servir\" et sa présidente est le Pr Windkouni Haoua Eugénie Maiga (nommée le 2 avril 2025)."
+    },
+    {
+      "q": "Quel est l'ancien nom de l'Université Nazi Boni et quand a-t-elle été rebaptisée ?",
+      "o": [
+        "Université des Hauts Bassins, rebaptisée le 08 mai 2019",
+        "Université Polytechnique de Bobo-Dioulasso, rebaptisée le 8 mai 2017",
+        "Université de l'Ouest, rebaptisée en avril 2016",
+        "Université des Sciences de Bobo, rebaptisée le 08 mai 2018"
+      ],
+      "r": 1,
+      "x": "L'Université Nazi Boni (ancien nom : Université Polytechnique de Bobo-Dioulasso), créée le 19 septembre 1995, a été rebaptisée le 8 mai 2017. Son slogan est \"Savoir-Compétence-Innovation\" et son président est le Pr Hassan Bismarck Nacro."
+    },
+    {
+      "q": "Quel est le nouveau nom de l'Université de Dédougou depuis le 4 avril 2024 ?",
+      "o": [
+        "Université Lédéa Bernard Ouédraogo (ULBO)",
+        "Université Yembila Abdoulaye Toguyeni (UYAT)",
+        "Université Daniel Ouézzin Coulibaly (UDOC)",
+        "Université Sourou Migan Apithy"
+      ],
+      "r": 2,
+      "x": "L'Université Daniel Ouézzin Coulibaly (UDOC), ancien nom Université de Dédougou, a été créée le 30 décembre 2017 et rebaptisée le 4 avril 2024. Son slogan est \"La science au service de l'humanité\" et son président est le Pr Adama Ouédraogo."
+    },
+    {
+      "q": "Quel est le nouveau nom de l'Université de Ouahigouya depuis le 8 novembre 2024 ?",
+      "o": [
+        "Université Daniel Ouézzin Coulibaly (UDOC)",
+        "Université Lédéa Bernard Ouédraogo (ULBO)",
+        "Université Yembila Abdoulaye Toguyeni (UYAT)",
+        "Université Naaba Kango de Ouahigouya"
+      ],
+      "r": 1,
+      "x": "L'Université Lédéa Bernard Ouédraogo (ULBO), ancien nom Université de Ouahigouya, a été créée le 30 décembre 2017 et rebaptisée le 8 novembre 2024. Son slogan est \"Savoir-Agir-Servir\" et son président est le Pr Adama Ouéda."
+    },
+    {
+      "q": "Quel est le nouveau nom attribué à l'Université de Fada N'Gourma lors de sa rebaptisation du 16 décembre 2024 ?",
+      "o": [
+        "Université Daniel Ouézzin Coulibaly (UDOC)",
+        "Université Lédéa Bernard Ouédraogo (ULBO)",
+        "Université Yembila Abdoulaye Toguyeni (UYAT)",
+        "Université Norbert Zongo (UNZ)"
+      ],
+      "r": 2,
+      "x": "L'Université de Fada N'Gourma a été rebaptisée Université Yembila Abdoulaye Toguyeni (UYAT) le 16 décembre 2024 en hommage à cette personnalité de l'Est du Burkina Faso. son président actuel est le Pr David Yemboini Kader Toguyeni."
+    },
+    {
+      "q": "Qui est le président de l'Université Virtuelle du Burkina Faso ?",
+      "o": [
+        "Pr Adjima Thombiano",
+        "Oumarou Zallé",
+        "Pr Pam Zahonogo",
+        "Pr Antoine Bere"
+      ],
+      "r": 1,
+      "x": "L'Université Virtuelle du Burkina Faso a été officiellement créée en 2019. Son président est Oumarou Zallé (en fonction depuis le 2 mai 2025). Elle offre des formations entièrement en ligne."
+    },
+    {
+      "q": "Qui est le Ministre d'Etat chargé de la Guerre et de la Défense Patriotique ?",
+      "o": [
+        "Commandant Ismaël Sombie",
+        "Emile Zerbo",
+        "Mahamadou Sana",
+        "Célestin Simporé"
+      ],
+      "r": 3,
+      "x": "Le gouvernement du 08 décembre 2024, dirigé par Jean Rimtalba Emmanuel Ouédraogo, compte 22 ministres dont 3 ministres d'État. Le Général de Division Célestin Simporé est le 1er Ministre d'État, chargé de la Guerre et de la Défense Patriotique."
+    },
+    {
+      "q": "Qui est le Ministre d'Etat chargé de l'Agriculture, de l'Eau, des Ressources animales et halieutiques ?",
+      "o": [
+        "Général Célestin Simporé",
+        "Commandant Ismaël Sombie",
+        "Emile Zerbo",
+        "Amadou Dicko"
+      ],
+      "r": 1,
+      "x": "Le Commandant Ismaël Sombie est le 2e Ministre d'État du gouvernement du 08 décembre 2024. Il est chargé de l'Agriculture, de l'Eau, des Ressources animales et halieutiques."
+    },
+    {
+      "q": "Qui est le Ministre d'Etat chargé de l'Administration territoriale et de la Mobilité ?",
+      "o": [
+        "Mahamadou Sana",
+        "Mathias Traoré",
+        "Emile Zerbo",
+        "Karamoko Jean Marie Traoré"
+      ],
+      "r": 2,
+      "x": "Monsieur Emile Zerbo est le 3e Ministre d'État du gouvernement du 08 décembre 2024. Il est chargé de l'Administration territoriale et de la Mobilité, supervisant l'organisation administrative du territoire national."
+    },
+    {
+      "q": "Qui est le Ministre de l'Economie et des Finances ?",
+      "o": [
+        "Fatoumata Bako/Traoré",
+        "Yacouba Zabré Gouba",
+        "Aboubakar Nacanabo",
+        "Serge Gnaniodem Poda"
+      ],
+      "r": 2,
+      "x": "Monsieur Aboubakar Nacanabo est le Ministre de l'Économie et des Finances du gouvernement du 08 décembre 2024. Il est chargé de la politique fiscale, du budget et de la gestion des finances publiques."
+    },
+    {
+      "q": "Qui est le Ministre de la Sécurité dans le gouvernement du 08 décembre 2024 ?",
+      "o": [
+        "Edasso Rodrigue Bayala",
+        "Mahamadou Sana",
+        "Emile Zerbo",
+        "Karamoko Jean Marie Traoré"
+      ],
+      "r": 1,
+      "x": "Le Commissaire divisionnaire de Police Mahamadou Sana est le Ministre de la Sécurité. Il supervise la Police nationale, la sécurité intérieure et la lutte contre la criminalité au Burkina Faso."
+    },
+    {
+      "q": "Qui est le Ministre des Affaires étrangères du Burkina Faso ?",
+      "o": [
+        "Emile Zerbo",
+        "Mathias Traoré",
+        "Karamoko Jean Marie Traoré",
+        "Bebgnasgnan Stella Eldine Kabre"
+      ],
+      "r": 2,
+      "x": "Monsieur Karamoko Jean Marie Traoré est le Ministre des Affaires étrangères. Il représente le Burkina Faso dans ses relations diplomatiques internationales, notamment au sein de l'AES et auprès des partenaires bilatéraux."
+    },
+    {
+      "q": "Qui est le Ministre des serviteurs du Peuple ?",
+      "o": [
+        "Adjima Thombiano",
+        "Moumouni Zoungrana",
+        "Mikaïlou Sidibé",
+        "Mathias Traoré"
+      ],
+      "r": 3,
+      "x": "Monsieur Mathias Traoré est le Ministre des serviteurs du Peuple. Ce portefeuille unique au Burkina Faso est chargé de la fonction publique et de la réforme de l'administration au service des citoyens."
+    },
+    {
+      "q": "Qui est le Ministre de la Communication, de la Culture, des Arts et du Tourisme, porte-parole du gouvernement ?",
+      "o": [
+        "Moumouni Zoungrana",
+        "Pingdwendé Gilbert Ouédraogo",
+        "Jacques Sosthène Dingara",
+        "Adjima Thombiano"
+      ],
+      "r": 1,
+      "x": "Monsieur Pingdwendé Gilbert Ouédraogo est le Ministre de la Communication, de la Culture, des Arts et du Tourisme et porte-parole officiel du gouvernement. Il coordonne la politique de communication de l'État burkinabè."
+    },
+    {
+      "q": "Qui est Ministre de l'Action humanitaire et de la Solidarité nationale ?",
+      "o": [
+        "Aminata Zerbo/Sabane",
+        "Fatoumata Bako/Traoré",
+        "Passowendé Pélagie Kabre/Kabore",
+        "Annick Lydie Djouma Pikbougoum"
+      ],
+      "r": 2,
+      "x": "Le Lieutenant-Colonel Passowendé Pélagie Kabre/Kabore est la Ministre de l'Action humanitaire et de la Solidarité nationale. Elle est l'une des 5 femmes du gouvernement du 08 décembre 2024 qui compte 22 membres."
+    },
+    {
+      "q": "Qui est le Ministre de la Justice dans le gouvernement du 08 décembre 2024 ?",
+      "o": [
+        "Mahamadou Sana",
+        "Karamoko Jean Marie Traoré",
+        "Edasso Rodrigue Bayala",
+        "Blaise B. Bazie"
+      ],
+      "r": 2,
+      "x": "Monsieur Edasso Rodrigue Bayala est le Ministre de la Justice et des Droits Humains, Garde des Sceaux du Burkina Faso. Il est chargé du système judiciaire, de la politique pénitentiaire et de la réforme de la justice au Burkina Faso."
+    },
+    {
+      "q": "Qui est le Ministre de la Santé du Burkina Faso ?",
+      "o": [
+        "Adjima Thombiano",
+        "Robert Lucien Jean-Claude Kargougou",
+        "Yacouba Zabré Gouba",
+        "Moumouni Zoungrana"
+      ],
+      "r": 1,
+      "x": "Monsieur Robert Lucien Jean-Claude Kargougou est le Ministre de la Santé. Il supervise la politique sanitaire nationale, notamment la lutte contre le paludisme, la malnutrition et la couverture sanitaire universelle."
+    },
+    {
+      "q": "Qui est la Ministre de la Transition digitale, des Postes et des Communications électroniques ?",
+      "o": [
+        "Fatoumata Bako/Traoré",
+        "Bebgnasgnan Stella Eldine Kabre",
+        "Passowendé Pélagie Kabre",
+        "Aminata Zerbo/Sabane"
+      ],
+      "r": 3,
+      "x": "Madame Aminata Zerbo/Sabane est la Ministre de la Transition digitale, des Postes et des Communications électroniques. Elle supervise la transformation numérique du pays, notamment le déploiement de la 4G et les plateformes e-gouvernement."
+    },
+    {
+      "q": "Qui est le Ministre de l'Industrie, du Commerce et de l'Artisanat ?",
+      "o": [
+        "Mathias Traoré",
+        "Mikaïlou Sidibé",
+        "Serge Gnaniodem Poda",
+        "Amadou Dicko"
+      ],
+      "r": 2,
+      "x": "Monsieur Serge Gnaniodem Poda est le Ministre de l'Industrie, du Commerce et de l'Artisanat. Il supervise le développement industriel, les échanges commerciaux et la valorisation de l'artisanat burkinabè (dont les 5 produits labellisés)."
+    },
+    {
+      "q": "Qui est le Ministre de la construction de la Patrie ?",
+      "o": [
+        "Yacouba Zabré Gouba",
+        "Adjima Thombiano",
+        "Mikaïlou Sidibé",
+        "Moumouni Zoungrana"
+      ],
+      "r": 2,
+      "x": "Monsieur Mikaïlou Sidibé est le Ministre de la construction de la Patrie. Ce portefeuille singulier regroupe les compétences liées à l'urbanisme, à l'habitat, à la construction et à l'aménagement du territoire."
+    },
+    {
+      "q": "Qui est le Ministre de l'Energie, des Mines et des Carrières ?",
+      "o": [
+        "Aboubakar Nacanabo",
+        "Serge Gnaniodem Poda",
+        "Emile Zerbo",
+        "Yacouba Zabré Gouba"
+      ],
+      "r": 3,
+      "x": "Monsieur Yacouba Zabré Gouba est le Ministre de l'Énergie, des Mines et des Carrières. Il supervise l'exploitation de l'or (principale ressource du pays), la politique énergétique nationale et le projet de centrale nucléaire."
+    },
+    {
+      "q": "Qui est le Ministre de l'Enseignement de base, de l'Alphabétisation et de la Promotion des langues nationales ?",
+      "o": [
+        "Moumouni Zoungrana",
+        "Adjima Thombiano",
+        "Jacques Sosthène Dingara",
+        "Pingdwendé Gilbert Ouédraogo"
+      ],
+      "r": 2,
+      "x": "Monsieur Jacques Sosthène Dingara est le Ministre de l'Enseignement de base, de l'Alphabétisation et de la Promotion des langues nationales. Il supervise les 7 langues d'enseignement officiellement adoptées au Burkina Faso."
+    },
+    {
+      "q": "Qui est le Ministre de l'Enseignement secondaire, de la Formation professionnelle et technique ?",
+      "o": [
+        "Adjima Thombiano",
+        "Jacques Sosthène Dingara",
+        "Moumouni Zoungrana",
+        "Mikaïlou Sidibé"
+      ],
+      "r": 2,
+      "x": "Monsieur Moumouni Zoungrana est le Ministre de l'Enseignement secondaire, de la Formation professionnelle et technique. Il supervise les lycées, collèges et centres de formation professionnelle sur l'ensemble du territoire."
+    },
+    {
+      "q": "Qui est le Ministre de l'Enseignement supérieur, de la Recherche et de l'Innovation ?",
+      "o": [
+        "Moumouni Zoungrana",
+        "Adjima Thiombiano",
+        "Robert Kargougou",
+        "Serge Gnaniodem Poda"
+      ],
+      "r": 1,
+      "x": "Monsieur Adjima Thiombiano est le Ministre de l'Enseignement supérieur, de la Recherche et de l'Innovation. Il supervise les 7 universités publiques et les institutions de recherche scientifique du Burkina Faso."
+    },
+    {
+      "q": "Qui est la Ministre des Sports, de la Jeunesse et de l'Emploi ?",
+      "o": [
+        "Aminata Zerbo/Sabane",
+        "Passowendé Pélagie Kabre",
+        "Annick Lydie Djouma Pikbougoum/Zingue Ouatara",
+        "Bebgnasgnan Stella Eldine Kabre"
+      ],
+      "r": 2,
+      "x": "Madame Annick Lydie Djouma Pikbougoum/Zingue Ouatara est la Ministre des Sports, de la Jeunesse et de l'Emploi. Elle supervise les politiques sportives (Tour du Faso, Iron Biby) et les programmes d'insertion professionnelle des jeunes."
+    },
+    {
+      "q": "Qui est le Ministre délégué auprès du Ministre d'Etat chargé de l'Agriculture et de l'Eau ?",
+      "o": [
+        "Serge Gnaniodem Poda",
+        "Amadou Dicko",
+        "Mathias Traoré",
+        "Mikaïlou Sidibé"
+      ],
+      "r": 1,
+      "x": "Monsieur Amadou Dicko est le Ministre délégué auprès du Ministre d'État chargé de l'Agriculture, de l'Eau, des Ressources animales et halieutiques. Il appuie le Commandant Ismaël Sombie dans la gestion de ce portefeuille stratégique."
+    },
+    {
+      "q": "Qui est la Ministre déléguée auprès du Ministre de l'Economie et des Finances ?",
+      "o": [
+        "Aminata Zerbo/Sabane",
+        "Bebgnasgnan Stella Eldine Kabre",
+        "Fatoumata Bako/Traoré",
+        "Annick Lydie Djouma"
+      ],
+      "r": 2,
+      "x": "Madame Fatoumata Bako/Traoré est la Ministre déléguée auprès du Ministre de l'Économie et des Finances. Elle est l'une des 5 femmes du gouvernement du 08 décembre 2024 qui compte 22 membres au total."
+    },
+    {
+      "q": "Qui est la Ministre délégué auprès du Ministre des Affaires étrangères ?",
+      "o": [
+        "Fatoumata Bako/Traoré",
+        "Aminata Zerbo/Sabane",
+        "Annick Lydie Djouma",
+        "Bebgnasgnan Stella Eldine Kabre/Kabore"
+      ],
+      "r": 3,
+      "x": "Madame Bebgnasgnan Stella Eldine Kabre/Kabore est la Ministre délégué auprès du Ministre des Affaires étrangères. Elle est la 5e et dernière femme du gouvernement Rimtalba Jean Emmanuel Ouédraogo."
+    },
+    {
+      "q": "En combien de nouvelles régions la région de la Boucle du Mouhoun a-t-elle été divisée lors de la réforme de juillet 2025 ?",
+      "o": [
+        "1 nouvelle région : Bankui",
+        "2 nouvelles régions : Sourou et Bankui",
+        "3 nouvelles régions : Sourou, Bankui et Mouhoun",
+        "Elle a conservé le même nom"
+      ],
+      "r": 1,
+      "x": "La Boucle du Mouhoun a été divisée en 2 nouvelles régions : la région du Sourou (4 provinces : Koosin/Nouna, Nayala/Toma, Sourou/Tougan, Mouhoun/Dédougou) et la région du Bankui (2 provinces : Balé/Boromo, Bamwa/Solenzo)."
+    },
+    {
+      "q": "Quelle est la nouvelle appellation de la région des Hauts Bassins ?",
+      "o": [
+        "Tannounyan",
+        "Guiriko",
+        "Djoro",
+        "Yaadga"
+      ],
+      "r": 1,
+      "x": "La région des Hauts Bassins a été renommée région du Guiriko. Elle comprend 3 provinces : Houet (chef-lieu : Bobo-Dioulasso), Kénédougou (Orodara) et Tuy (Houndé)."
+    },
+    {
+      "q": "Quelle est la nouvelle appellation de la région des Cascades ?",
+      "o": [
+        "Guiriko",
+        "Djoro",
+        "Tannounyan",
+        "Nando"
+      ],
+      "r": 2,
+      "x": "La région des Cascades a été renommée région du Tannounyan. Elle comprend 2 provinces : Comoé (chef-lieu : Banfora) et Léraba (chef-lieu : Sindou)."
+    },
+    {
+      "q": "Quelle est la nouvelle appellation de la région du Sud-Ouest ?",
+      "o": [
+        "Tannounyan",
+        "Yaadga",
+        "Nando",
+        "Djoro"
+      ],
+      "r": 3,
+      "x": "La région du Sud-Ouest a été renommée région du Djoro. Elle comprend 4 provinces : Bougouriba (Diébougou), Ioba (Dano), Noumbiel (Batié) et Poni (Gaoua)."
+    },
+    {
+      "q": "Quelle est la nouvelle appellation de la région du Nord ?",
+      "o": [
+        "Kuilse",
+        "Yaadga",
+        "Djoro",
+        "Oubri"
+      ],
+      "r": 1,
+      "x": "La région du Nord a été renommée région du Yaadga. Elle comprend 4 provinces : Loroum (Titao), Passoré (Yako), Yatenga (Ouahigouya) et Zondoma (Gourcy)."
+    },
+    {
+      "q": "Quelle est la nouvelle appellation de la région du Centre-Ouest ?",
+      "o": [
+        "Kuilse",
+        "Nazinon",
+        "Nando",
+        "Oubri"
+      ],
+      "r": 2,
+      "x": "La région du Centre-Ouest a été renommée région du Nando. Elle comprend 4 provinces : Boulkiemdé (Koudougou), Sanguié (Réo), Sissili (Léo) et Ziro (Sapouy)."
+    },
+    {
+      "q": "Quelle est la nouvelle appellation de la région du Centre-Nord ?",
+      "o": [
+        "Oubri",
+        "Nakambe",
+        "Kuilse",
+        "Nazinon"
+      ],
+      "r": 2,
+      "x": "La région du Centre-Nord a été renommée région du Kuilse. Elle comprend 3 provinces : Bam (Kongoussi), Namentenga (Boulsa) et Sanmatenga (Kaya)."
+    },
+    {
+      "q": "Quelle est la nouvelle appellation de la région du Plateau Central ?",
+      "o": [
+        "Kuilse",
+        "Nazinon",
+        "Nakambe",
+        "Oubri"
+      ],
+      "r": 3,
+      "x": "La région du Plateau Central a été renommée région de l'Oubri. Elle comprend 3 provinces : Bassitenga (Ziniaré), Ganzourgou (Zorgho) et Kourwéogo (Boussé)."
+    },
+    {
+      "q": "Quelle est la nouvelle appellation de la région du Centre ?",
+      "o": [
+        "Nazinon",
+        "Nakambe",
+        "Kadiogo",
+        "Oubri"
+      ],
+      "r": 2,
+      "x": "La région du Centre a été renommée région du Kadiogo. Elle comprend une seule province, le Kadiogo, dont le chef-lieu est Ouagadougou, la capitale nationale et la ville la plus peuplée du pays."
+    },
+    {
+      "q": "Quelle est la nouvelle appellation de la région du Centre-Sud ?",
+      "o": [
+        "Nakambe",
+        "Nazinon",
+        "Kuilse",
+        "Oubri"
+      ],
+      "r": 1,
+      "x": "La région du Centre-Sud a été renommée région du Nazinon. Elle comprend 3 provinces : Bazèga (Kombissiri), Nahouri (Pô) et Zounwéogo (Manga)."
+    },
+    {
+      "q": "Quelle est la nouvelle appellation de la région du Centre-Est ?",
+      "o": [
+        "Oubri",
+        "Kuilse",
+        "Nazinon",
+        "Nakambe"
+      ],
+      "r": 3,
+      "x": "La région du Centre-Est a été renommée région du Nakambe. Elle comprend 3 provinces : Boulgou (Tenkodogo), Koulpelego (Ouargaye) et Kourittenga (Koupela)."
+    },
+    {
+      "q": "En combien de nouvelles régions la région du Sahel a-t-elle été divisée lors de la réforme de juillet 2025 ?",
+      "o": [
+        "Elle a conservé le même nom",
+        "3 nouvelles régions",
+        "2 nouvelles régions : Soum et Liptako",
+        "2 nouvelles régions : Soum et Nakambe"
+      ],
+      "r": 2,
+      "x": "La région du Sahel a été divisée en 2 nouvelles régions : la région du Soum (2 provinces : Djelgodji/Djibo et Karo-Peli/Arbinda) et la région du Liptako (3 provinces : Oudalan/Gorom-Gorom, Séno/Dori et Yagha/Sebba)."
+    },
+    {
+      "q": "En combien de nouvelles régions la région de l'Est a-t-elle été divisée lors de la réforme de juillet 2025 ?",
+      "o": [
+        "2 nouvelles régions",
+        "3 nouvelles régions",
+        "Elle a conservé son nom",
+        "4 nouvelles régions"
+      ],
+      "r": 1,
+      "x": "La région de l'Est a été divisée en 3 nouvelles régions : Goulmou (Gourma/Fada N'Gourma, Kompienga/Pama), Tapoa (Dyamongou/Kantchari, Gognangou/Diapaga) et Sirba (Gnagna/Bogandé, Komondjari/Gayéri)."
+    },
+    {
+      "q": "Quel est le surnom de la ville de Banfora ?",
+      "o": [
+        "La cité de Sya",
+        "La cité du paysan noir",
+        "La cité de Numadu",
+        "La cité de Naaba Kango"
+      ],
+      "r": 1,
+      "x": "Banfora est surnommée \"La cité du paysan noir\". Chef-lieu de la province de la Comoé (région du Tannounyan), elle est connue pour ses cascades de Karfiguéla, son lac Tengrela et son industrie sucrière (SOCUCO)."
+    },
+    {
+      "q": "Quel est le surnom de la ville de Batié ?",
+      "o": [
+        "La cité du cavalier rouge",
+        "La cité de Bafoudji",
+        "La cité de Damar",
+        "La cité de Massaco"
+      ],
+      "r": 2,
+      "x": "Batié est surnommée \"La cité de Damar\". Chef-lieu de la province du Noumbiel dans la région du Djoro (ancienne région du Sud-Ouest)."
+    },
+    {
+      "q": "Quel est le surnom de Bobo-Dioulasso ?",
+      "o": [
+        "La cité de Bankuy",
+        "La cité de Yendabri",
+        "La cité de Sya",
+        "La cité des cuirs et peaux"
+      ],
+      "r": 2,
+      "x": "Bobo-Dioulasso est surnommée \"La cité de Sya\", du nom de son fondateur légendaire. Deuxième ville du Burkina Faso, chef-lieu de la province du Houet (région du Guiriko), elle abrite l'Université Nazi Boni."
+    },
+    {
+      "q": "Quel est le surnom de la ville de Dédougou ?",
+      "o": [
+        "La cité de Bankuy",
+        "La cité de Rialé",
+        "La cité de Damar",
+        "La cité de Sya"
+      ],
+      "r": 0,
+      "x": "Dédougou est surnommée \"La cité de Bankuy\". Chef-lieu de la province du Mouhoun (région du Sourou), elle abrite l'Université Daniel Ouézzin Coulibaly (UDOC) et le Festival International des Masques et des Arts (FESTIMA)."
+    },
+    {
+      "q": "Quel est le surnom de la ville de Fada N'Gourma ?",
+      "o": [
+        "La cité de Bafoudji",
+        "La cité de surba",
+        "La cité de Yendabri",
+        "La cité de Massaco"
+      ],
+      "r": 2,
+      "x": "Fada N'Gourma est surnommée \"La cité de Yendabri\". Chef-lieu de la province du Gourma (région du Goulmou), elle abrite l'Université Yembila Abdoulaye Toguyeni (UYAT)."
+    },
+    {
+      "q": "Quel est le surnom de la ville de Gaoua ?",
+      "o": [
+        "La cité de Damar",
+        "La cité de Bafoudji",
+        "La cité des collines blanches",
+        "La cité de Massaco"
+      ],
+      "r": 1,
+      "x": "Gaoua est surnommée \"La cité de Bafoudji\". Chef-lieu de la province du Poni (région du Djoro), elle est connue pour son musée ethnographique des Lobi et ses paysages de savane."
+    },
+    {
+      "q": "Quel est le surnom de la ville de Gnagna (Bogandé) ?",
+      "o": [
+        "La cité de Phacochère",
+        "La cité des collines blanches",
+        "La cité de Bafoudji",
+        "La cité de Surba"
+      ],
+      "r": 3,
+      "x": "Gnagna (dont le chef-lieu est Bogandé) est surnommée \"La cité de surba\". Province de la nouvelle région du Sirba (ancienne région de l'Est)."
+    },
+    {
+      "q": "Quel est le surnom de la ville de Gorom-Gorom ?",
+      "o": [
+        "La cité de Phacochère",
+        "La cité de Surba",
+        "La cité des collines blanches",
+        "La cité du haricot vert"
+      ],
+      "r": 2,
+      "x": "Gorom-Gorom est surnommée \"La cité des collines blanches\". Chef-lieu de la province de l'Oudalan (région du Liptako), elle est réputée pour son marché hebdomadaire traditionnel très animé."
+    },
+    {
+      "q": "Quel est le surnom de la ville de Kaya ?",
+      "o": [
+        "La cité des cuirs et peaux",
+        "La cité du cavalier rouge",
+        "La cité du haricot vert",
+        "La cité de Naaba Kango"
+      ],
+      "r": 0,
+      "x": "Kaya est surnommée \"La cité des cuirs et peaux\". Chef-lieu de la province du Sanmatenga (région du Kuilse), elle est un important centre d'artisanat du cuir et un nœud routier majeur du Centre-Nord."
+    },
+    {
+      "q": "Quel est le surnom de la ville de Kongoussi ?",
+      "o": [
+        "La cité des cuirs et peaux",
+        "La cité du haricot vert",
+        "La cité du cavalier rouge",
+        "La cité de Numadu"
+      ],
+      "r": 1,
+      "x": "Kongoussi est surnommée \"La cité du haricot vert\". Chef-lieu de la province du Bam (région du Kuilse), elle est bordée par le lac Bam, important réservoir d'eau du Burkina Faso."
+    },
+    {
+      "q": "Quel est le surnom de la ville de Koudougou ?",
+      "o": [
+        "La cité de Bankuy",
+        "La cité du haricot vert",
+        "La cité du cavalier rouge",
+        "La cité des cuirs et peaux"
+      ],
+      "r": 2,
+      "x": "Koudougou est surnommée \"La cité du cavalier rouge\". Troisième ville du Burkina Faso, chef-lieu de la province du Boulkiemdé (région du Nando), elle abrite l'Université Norbert Zongo et les Nuits Atypiques de Koudougou (NAK, créées en 1996)."
+    },
+    {
+      "q": "Quel est le surnom de la ville de Loropéni ?",
+      "o": [
+        "La cité de Surba",
+        "La cité de Bafoudji",
+        "La cité de massaco",
+        "La cité de Damar"
+      ],
+      "r": 2,
+      "x": "Loropéni est surnommée \"La cité de massaco\". Loropéni est une commune rurale de la province du Poni dans la région du Djôrô. Elle est connue pour ses ruines nommée \"les Ruines de Loropéni\", site archéologique inscrit au patrimoine mondial de l'UNESCO en 2009."
+    },
+    {
+      "q": "Quel est le surnom de la ville de Manga ?",
+      "o": [
+        "La cité de l'Épervier",
+        "La cité de Rialé",
+        "La cité de massaco",
+        "La cité de Phacochère"
+      ],
+      "r": 0,
+      "x": "Manga est surnommée \"La cité de l'Épervier\". Chef-lieu de la province du Zounwéogo (région du Nazinon), elle est un centre agricole important du Centre-Sud du Burkina Faso."
+    },
+    {
+      "q": "Quel est le surnom de la ville de Niangoloko ?",
+      "o": [
+        "La cité de Rialé",
+        "La cité de Santa",
+        "La cité de Massaco",
+        "La cité de Damar"
+      ],
+      "r": 1,
+      "x": "Niangoloko est surnommée \"La cité de santa\". Commune de la province de la Comoé (région du Tannounyan), elle est un carrefour commercial proche de la frontière avec la Côte d'Ivoire."
+    },
+    {
+      "q": "Quel est le surnom de la ville de Nouna ?",
+      "o": [
+        "La cité de Numadu",
+        "La cité du haricot vert",
+        "La cité de Bankuy",
+        "La cité de Sya"
+      ],
+      "r": 0,
+      "x": "Nouna est surnommée \"La cité de Numadu\". Chef-lieu de la province de Kossi (région du Sourou), elle est le principal centre administratif de la nouvelle région du Sourou."
+    },
+    {
+      "q": "Quel est le surnom de la ville d'Orodara ?",
+      "o": [
+        "La cité de Naaba Kango",
+        "La cité du verger",
+        "La cité de Sya",
+        "La cité de Bankuy"
+      ],
+      "r": 1,
+      "x": "Orodara est surnommée \"La cité du verger\" en raison de sa production fruitière (mangues notamment). Chef-lieu de la province du Kénédougou dans la région du Guiriko (ancienne région des Hauts Bassins)."
+    },
+    {
+      "q": "Quel est le surnom de la ville de Ouahigouya ?",
+      "o": [
+        "La cité des cuirs et peaux",
+        "La cité de Naaba Kango",
+        "La cité de Phacochère",
+        "La cité du haricot vert"
+      ],
+      "r": 1,
+      "x": "Ouahigouya est surnommée \"La cité de Naaba Kango\". Quatrième ville du Burkina Faso, chef-lieu de la province du Yatenga (région du Yaadga), elle abrite l'Université Lédéa Bernard Ouédraogo (ULBO)."
+    },
+    {
+      "q": "Quel est le surnom de la ville de Pô ?",
+      "o": [
+        "La cité de Rialé",
+        "La cité de la Révolution",
+        "La cité de Massaco",
+        "La cité de Damar"
+      ],
+      "r": 1,
+      "x": "Pô est surnommée \"La cité de la Révolution\", Ce surnom historique lui a été attribué car c'est de sa garnison militaire que sont parties les troupes qui ont renversé le gouvernement en août 1983 pour porter Thomas Sankara au pouvoir."
+    },
+    {
+      "q": "Quel est le surnom de la ville de Saponé ?",
+      "o": [
+        "La cité de Phacochère",
+        "La cité de Rialé",
+        "La cité de Chapeaux majestueux",
+        "La cité du haricot vert"
+      ],
+      "r": 2,
+      "x": "Saponé est surnommée \"La cité de Chapeaux majestueux\" en référence à sa production artisanale de chapeaux en paille. Le chapeau de Saponé est l'un des 5 produits officiellement labellisés du Burkina Faso."
+    },
+    {
+      "q": "Quel est le surnom de la ville de Tenkodogo ?",
+      "o": [
+        "La cité de Phacochère",
+        "La cité de Rialé",
+        "La cité de Massaco",
+        "La cité de Murba"
+      ],
+      "r": 1,
+      "x": "Tenkodogo est surnommée \"La cité de Rialé\". Chef-lieu de la province du Boulgou (région du Nakambe), elle est l'un des plus anciens royaumes Mossi historiques du Burkina Faso."
+    },
+    {
+      "q": "Quel est le surnom de la ville de Titao ?",
+      "o": [
+        "La cité de Naaba Kango",
+        "La cité de Phacochère",
+        "La cité de Massaco",
+        "La cité du haricot vert"
+      ],
+      "r": 1,
+      "x": "Titao est surnommée \"La cité de Phacochère\". Chef-lieu de la province du Loroum (région du Yaadga), le phacochère est un animal emblématique de la savane burkinabè."
+    },
+    {
+      "q": "Quel est le surnom de la ville de Tyou ?",
+      "o": [
+        "La cité de Rialé",
+        "La cité de Naaba Koudoumier",
+        "La cité de Massaco",
+        "La cité de Surba"
+      ],
+      "r": 1,
+      "x": "Tyou est surnommée \"La cité de Naaba Koudoumier\", en référence à un chef traditionnel historique de la royauté Mossi. Commune de la région du Nazinon (ancienne région du Centre-Sud)."
+    },
+    {
+      "q": "Qui est le Directeur Général du FESPACO ?",
+      "o": [
+        "Éric Bassolé",
+        "Moussa Alex Sawadogo",
+        "Christiane Sanou/Coulibaly",
+        "Noufo Enok Kindo"
+      ],
+      "r": 1,
+      "x": "Le FESPACO (Festival Panafricain du Cinéma et de la Télévision de Ouagadougou) a été créé en 1969 et son DG actuel est Moussa Alex Sawadogo. Il se tient à Ouagadougou aux années impaires."
+    },
+    {
+      "q": "Qui est le DG du SIAO et quel est son slogan ?",
+      "o": [
+        "Moussa Alex Sawadogo, \"La Patrie ou la Mort\"",
+        "Éric Bassolé, \"La vitrine de l'artisan africain\"",
+        "Christiane Sanou, \"L'artisanat pour la paix\"",
+        "Ibrahim Saba, \"Vous faciliter la vie\""
+      ],
+      "r": 1,
+      "x": "Le SIAO (Salon International de l'Artisanat de Ouagadougou) a été créé en juin 1988. Son slogan est \"La vitrine de l'artisan africain\" et son DG est Éric Bassolé. Il se tient à Ouagadougou aux années paires."
+    },
+    {
+      "q": "Qui est la Directrice Générale de la SNC et en quelle année a-t-elle été créée ?",
+      "o": [
+        "Éric Bassolé, 1983",
+        "Moussa Alex Sawadogo, 1983",
+        "Christiane Sanou/Coulibaly, 1983",
+        "Noufo Enok Kindo, 1984"
+      ],
+      "r": 2,
+      "x": "La SNC (Semaine Nationale de la Culture) a été créée en 1983. Sa DG est Christiane Sanou/Coulibaly. Elle se tient à Bobo-Dioulasso aux années paires. La 22e édition de 2026 a pour thème \"Culture, jeunesse et transmission des valeurs sociales\"."
+    },
+    {
+      "q": "Qui est le DG de la LONAB et quel est son slogan ?",
+      "o": [
+        "Ibrahim Saba, \"Vous faciliter la vie\"",
+        "Harouna Ben Barani, \"Les lots aux heureux gagnants et les bénéfices à la nation\"",
+        "Flandin Idrissa Sourabié, \"Votre bien-être, notre raison de vivre\"",
+        "Boureima Ouattara, \"Bâtir dans un cadre sécurisé\""
+      ],
+      "r": 1,
+      "x": "La LONAB (Loterie Nationale Burkinabè) a été créée le 10 mai 1967. Son slogan est \"Les lots aux heureux gagnants et les bénéfices à la nation tout entière\" et son DG est Harouna Ben Barani."
+    },
+    {
+      "q": "Qui est le DG de l'ONEA et quel est son slogan ?",
+      "o": [
+        "Souleymane Ouédraogo, \" être au service d'une grande ambition\"",
+        "Aime Wendpenga Nongkouni, \"L'eau pour tous\"",
+        "Flandin Idrissa Sourabié, \" votre bien-être, notre raison de vivre\"",
+        "Braima Barro, \"Résilience, innovation, solidarité, excellence\""
+      ],
+      "r": 2,
+      "x": "L'ONEA (Office National de l'Eau et de l'Assainissement) a été créé le 22 juin 1985. Son slogan est \"votre bien-être, notre raison de vivre\" et son DG est Flandin Idrissa Sourabié. Il gère l'eau potable et l'assainissement en milieu urbain."
+    },
+    {
+      "q": "Qui est le DG de la SONABEL et quel est son slogan ?",
+      "o": [
+        "Flandin Idrissa Sourabié, \"ONEA, votre bien-être\"",
+        "Souleymane Ouédraogo, \"la SONABEL, être au service d'une grande ambition\"",
+        "Aime Wendpenga Nongkouni, \"L'énergie pour tous\"",
+        "Braima Barro, \"Résilience, innovation, solidarité, excellence\""
+      ],
+      "r": 1,
+      "x": "La SONABEL (Société Nationale Burkinabè de l'Électricité) a été créée en août 1984. Son slogan est \"SONABEL, être au service d'une grande ambition\" et son DG est Souleymane Ouédraogo. Elle assure la production et la distribution de l'électricité au Burkina Faso."
+    },
+    {
+      "q": "Qui est le DG de la SONABHY et en quelle année a-t-elle été créée ?",
+      "o": [
+        "Souleymane Ouédraogo, 9 octobre 1984",
+        "Braima Barro, 22 juin 1984",
+        "Aime Wendpenga Nongkouni, 9 octobre 1985",
+        "Flandin Idrissa Sourabié, 22 juin 1985"
+      ],
+      "r": 2,
+      "x": "La SONABHY (Société Nationale Burkinabè des Hydrocarbures) a été créée le 9 octobre 1985. Son DG est Aime Wendpenga Nongkouni. Elle assure l'importation, le stockage et la distribution des produits pétroliers (carburant, gaz) au Burkina Faso."
+    },
+    {
+      "q": "Qui est le DG de la SOFITEX et quel est son slogan ?",
+      "o": [
+        "Souleymane Ouédraogo, \"SONABEL, être au service d'une grande ambition\"",
+        "Noufo Enok Kindo, \"Toute info en temps réel\"",
+        "Braima Barro, \"Résilience, innovation, solidarité, excellence\"",
+        "Ibrahim Saba, \"Vous faciliter la vie\""
+      ],
+      "r": 2,
+      "x": "La SOFITEX (Société de Filature du Coton et du Textile) a pour DG Braima Barro et pour slogan \"Résilience, innovation, solidarité, excellence\". C'est le principal acteur de la filière coton au Burkina Faso, premier exportateur agricole du pays."
+    },
+    {
+      "q": "Qui est le Secrétaire général du Conseil Africain et Malgache pour l'Enseignement Supérieur (CAMES) ?",
+      "o": [
+        "Pr Bertrand Mbatchi",
+        "Pr Abou Napon",
+        "Pr Souleymane Konaté",
+        "Pr Adjima Thiombiano"
+      ],
+      "r": 2,
+      "x": "Le Secrétaire général du CAMES est le Pr Souleymane Konaté, en fonction depuis le 9 janvier 2023. Il est le 7ᵉ secrétaire général de l'institution."
+    },
+    {
+      "q": "Qui est le Secrétaire permanent de l'OHADA ?",
+      "o": [
+        "Pr Souleymane Konaté",
+        "Mahamat Idriss Deby Itno",
+        "Mayatta Ndiaye Mbaye",
+        "Patrice Talon"
+      ],
+      "r": 2,
+      "x": "L'OHADA (Organisation pour l'Harmonisation en Afrique du Droit des Affaires) a été créée le 17 octobre 1993. Son Secrétaire permanent est  Mayatta Ndiaye Mbaye. Elle s'applique dans 17 pays africains."
+    },
+    {
+      "q": "Qui est le fondateur des NAK (Nuits Atypiques de Koudougou) et en quelle année ont-elles été créées ?",
+      "o": [
+        "Moussa Alex Sawadogo, 1969",
+        "Éric Bassolé, 1988",
+        "Koudbi Koala, 1996",
+        "Christiane Sanou, 1983"
+      ],
+      "r": 2,
+      "x": "Les NAK (Nuits Atypiques de Koudougou) ont été créées en 1996 par Koudbi Koala (fondateur de l'association Bénebnooma). Ce festival culturel annuel se tient à Koudougou et promeut les musiques du monde et la culture africaine."
+    },
+    {
+      "q": "Qui est le DG de la SONAGESS et en quelle année a-t-elle été créée ?",
+      "o": [
+        "Ibrahim Saba, 28 avril 1997",
+        "Boureima Ouattara, 1997",
+        "Stéphane Gildas Tiendrebeogo, 13 juin 1994",
+        "Flandin Idrissa Sourabié, 22 juin 1985"
+      ],
+      "r": 2,
+      "x": "La SONAGESS (Société Nationale de Gestion du Stock et de Sécurité alimentaire) a été créée le 13 juin 1994. Son slogan est \"Sécurité alimentaire, la SONAGESS au service des populations\" et son DG est Stéphane Gildas Tiendrebeogo."
+    },
+    {
+      "q": "Qui est le DG de la SONAPOSTE et quel est son slogan ?",
+      "o": [
+        "Boureima Ouattara, \"Bâtir dans un cadre sécurisé\"",
+        "Ibrahim Saba, \"Vous faciliter la vie\"",
+        "Flandin Idrissa Sourabié, \"Votre bien-être\"",
+        "Aime Wendpenga Nongkouni, \"L'eau pour tous\""
+      ],
+      "r": 1,
+      "x": "La SONAPOSTE (Société Nationale de la Poste Burkinabè) a été créée le 28 avril 1997. Son slogan est \"Vous faciliter la vie\" et son DG est Ibrahim Saba. Elle est en cours de transformation en BPBF (Banque Postale du Burkina Faso), lancée le 7 octobre 2024."
+    },
+    {
+      "q": "Qui est le DG de l'AIB (Agence d'Information du Burkina) et quel est son slogan ?",
+      "o": [
+        "Moussa Alex Sawadogo, \"La Patrie ou la Mort\"",
+        "Éric Bassolé, \"La vitrine africaine\"",
+        "Noufo Enok Kindo, \"Toute l'info en temps réel\"",
+        "Stéphane Tiendrebeogo, \"Informer pour développer\""
+      ],
+      "r": 2,
+      "x": "L'AIB (Agence d'Information du Burkina) a été créée le 27 mai 1964. Son slogan est \"Toute l'info en temps réel\" et son DG est Noufo Enok Kindo. C'est l'agence de presse officielle de l'État burkinabè."
+    },
+    {
+      "q": "Qui est le DG de la SONATUR et quel est son slogan ?",
+      "o": [
+        "Flandin Idrissa Sourabié, \"L'eau pour tous\"",
+        "Ibrahim Saba, \"Vous faciliter la vie\"",
+        "Aime Wendpenga Nongkouni, \"L'énergie pour tous\"",
+        "Boureima Ouattara, \"Bâtir dans un cadre sécurisé\""
+      ],
+      "r": 3,
+      "x": "La SONATUR (Société Nationale d'Aménagement des Terrains Urbains) a été créée en 1997. Son slogan est \"Bâtir dans un cadre sécurisé\" et son DG est Boureima Ouattara. Elle est chargée du lotissement des terrains urbains au Burkina Faso."
+    },
+    {
+      "q": "Qui a été désigné meilleur joueur de la CAN Maroc 2025 ?",
+      "o": [
+        "Achraf Hakimi",
+        "Brahim Diaz",
+        "Yacine Bounou",
+        "Sadio Mané"
+      ],
+      "r": 3,
+      "x": "Sadio Mané (al Nasr FC) a été désigné meilleur joueur de la CAN Maroc 2025. Brahim Diaz (Real Madrid FC) a été le meilleur buteur et Yassine Bounou (Al Hilal FC) le meilleur gardien de la compétition."
+    },
+    {
+      "q": "Qui a été désigné meilleur gardien de la CAN Maroc 2025 ?",
+      "o": [
+        "André Onana",
+        "Yahia Fofana",
+        "Yassine Bounou",
+        "Edouard Mendy"
+      ],
+      "r": 2,
+      "x": "Le Marocain Yassine Bounou (Bono) a été désigné meilleur gardien de la CAN Maroc 2025. Il a effectué 5 matchs sans encaisser de but sur les 7 rencontres disputées. Il a encaissé seulement 2 buts sur toute la compétition."
+    },
+    {
+      "q": "Quel pays représentait Trygve Lie, 1er Secrétaire Général de l'ONU ?",
+      "o": [
+        "Suède",
+        "Norvège",
+        "Danemark",
+        "Finlande"
+      ],
+      "r": 1,
+      "x": "Trygve Lie (Norvège) était le 1er SG de l'ONU. Il a pris ses fonctions le 1er février 1946 et les a quittées le 10 avril 1953. Il a dirigé l'ONU lors de ses premières années, notamment pendant la guerre de Corée."
+    },
+    {
+      "q": "Quel pays représentait Dag Hammarskjöld, 2e Secrétaire Général de l'ONU ?",
+      "o": [
+        "Norvège",
+        "Danemark",
+        "Suède",
+        "Finlande"
+      ],
+      "r": 2,
+      "x": "Dag Hammarskjöld (Suède) était le 2e SG de l'ONU (10 avril 1953 – 18 septembre 1961). Il est mort dans un accident d'avion en mission en Afrique et a reçu le Prix Nobel de la Paix à titre posthume."
+    },
+    {
+      "q": "Quel pays représentait U Thant, 3e Secrétaire Général de l'ONU ?",
+      "o": [
+        "Thaïlande",
+        "Cambodge",
+        "Vietnam du Sud",
+        "Birmanie"
+      ],
+      "r": 3,
+      "x": "U Thant (Birmanie/Myanmar) était le 3e SG de l'ONU. D'abord intérimaire en 1961, il a été officiellement nommé le 30 novembre 1962 et a exercé jusqu'au 31 décembre 1971. Il a géré la crise des missiles de Cuba."
+    },
+    {
+      "q": "Quel pays représentait Kurt Waldheim, 4e Secrétaire Général de l'ONU ?",
+      "o": [
+        "Allemagne",
+        "Suisse",
+        "Autriche",
+        "Liechtenstein"
+      ],
+      "r": 2,
+      "x": "Kurt Waldheim (Autriche) était le 4e SG de l'ONU (1er janvier 1972 – 31 décembre 1981). Il est devenu ensuite président de l'Autriche (1986-1992). Son passé pendant la Seconde Guerre mondiale a été controversé."
+    },
+    {
+      "q": "Quel pays représentait Javier Pérez de Cuéllar, 5e Secrétaire Général de l'ONU ?",
+      "o": [
+        "Argentine",
+        "Chili",
+        "Colombie",
+        "Pérou"
+      ],
+      "r": 3,
+      "x": "Javier Pérez de Cuéllar (Pérou) était le 5e SG de l'ONU (1er janvier 1982 – 31 décembre 1991). Il a joué un rôle crucial dans la résolution de plusieurs conflits, notamment la guerre des Malouines et la question namibienne."
+    },
+    {
+      "q": "Quel pays représentait Boutros Boutros-Ghali, 6e Secrétaire Général de l'ONU ?",
+      "o": [
+        "Maroc",
+        "Tunisie",
+        "Égypte",
+        "Algérie"
+      ],
+      "r": 2,
+      "x": "Boutros Boutros-Ghali (Égypte) était le 6e SG de l'ONU (1er janvier 1992 – 31 décembre 1996). Premier Africain et premier Arabe à ce poste, il a géré la crise en ex-Yougoslavie et le génocide rwandais. Son 2e mandat a été bloqué par les États-Unis."
+    },
+    {
+      "q": "Quel pays représentait Kofi Annan, 7e Secrétaire Général de l'ONU ?",
+      "o": [
+        "Nigeria",
+        "Sénégal",
+        "Côte d'Ivoire",
+        "Ghana"
+      ],
+      "r": 3,
+      "x": "Kofi Annan (Ghana) était le 7e SG de l'ONU (1er janvier 1997 – 31 décembre 2006). Il a reçu le Prix Nobel de la Paix en 2001 conjointement avec l'ONU. Deuxième Africain à diriger l'organisation (après Boutros-Ghali), il a initié les Objectifs du Millénaire pour le Développement."
+    },
+    {
+      "q": "Quel pays représentait Ban Ki-moon, 8e Secrétaire Général de l'ONU ?",
+      "o": [
+        "Japon",
+        "Chine",
+        "Corée du Sud",
+        "Vietnam"
+      ],
+      "r": 2,
+      "x": "Ban Ki-moon (Corée du Sud) était le 8e SG de l'ONU (1er janvier 2007 – 31 décembre 2016). Il a supervisé la négociation de l'Accord de Paris sur le climat (2015) et la création des Objectifs de Développement Durable (ODD)."
+    },
+    {
+      "q": "Quel pays représente António Guterres, 9e et actuel Secrétaire Général de l'ONU ?",
+      "o": [
+        "Espagne",
+        "Italie",
+        "France",
+        "Portugal"
+      ],
+      "r": 3,
+      "x": "António Guterres (Portugal) est le 9e et actuel SG de l'ONU (depuis le 1er janvier 2017, en fonction en 2026). Ancien Premier ministre du Portugal (1995-2002), il était Haut-Commissaire de l'ONU aux réfugiés (2005-2015) avant de prendre ce poste."
+    },
+    {
+      "q": "Qui est l'actuel Premier ministre du Burkina Faso installé le 07 décembre 2024 ?",
+      "o": [
+        "Albert Ouédraogo",
+        "Jean Rimtalba Emmanuel Ouédraogo",
+        "Apollinaire Kyelem de Tambèla",
+        "Mahamadou Sana"
+      ],
+      "r": 1,
+      "x": "Jean Rimtalba Emmanuel Ouédraogo a été nommé et installé dans ses fonctions de Premier ministre du Burkina Faso le 07 décembre 2024, sous la présidence du Capitaine Ibrahim Traoré."
+    },
+    {
+      "q": "Qui est le président du Conseil national de sécurité de l'État au Burkina Faso ?",
+      "o": [
+        "Général Célestin Simporé",
+        "Commandant Ismaël Sombie",
+        "Commandant Oumarou Yabré",
+        "Colonel Hamed Herman Roumba"
+      ],
+      "r": 2,
+      "x": "Le Commandant Oumarou Yabré préside le Conseil national de sécurité de l'État (CNSE) du Burkina Faso. Cette instance est chargée d'orienter et de coordonner la politique nationale en matière de défense et de sécurité."
+    },
+    {
+      "q": "Quel est le nouveau nom de la société sucrière SN-SOSUCO depuis le 16 octobre 2025 ?",
+      "o": [
+        "SUCOBF",
+        "SOSUCO-BF",
+        "SOCUCO",
+        "SUGAFASO"
+      ],
+      "r": 2,
+      "x": "La Société Nouvelle de la Sucrerie de la Comoé (SN-SOSUCO) a été renommée SOCUCO le 16 octobre 2025. Cette entreprise est l'unique producteur de sucre industriel du Burkina Faso, implantée dans la région des Cascades."
+    },
+    {
+      "q": "Quand et où s'est tenu le Sommet du G20 en novembre 2025 ?",
+      "o": [
+        "Du 15 au 16 novembre 2025 à Rio de Janeiro",
+        "Du 22 au 23 novembre 2025 à Johannesburg",
+        "Du 18 au 19 novembre 2025 à New Delhi",
+        "Du 25 au 26 novembre 2025 au Caire"
+      ],
+      "r": 1,
+      "x": "Le Sommet du G20 s'est tenu les 22 et 23 novembre 2025 à Johannesburg, en Afrique du Sud. C'était la première fois que l'Afrique du Sud accueillait le G20, marquant la présidence africaine de ce forum économique mondial."
+    },
+    {
+      "q": "Quel est le premier pays africain à avoir lancé le projet de taxi aérien et quel est le modèle utilisé ?",
+      "o": [
+        "Nigeria, modèle Airbus Vahana",
+        "Afrique du Sud, modèle Joby Aviation",
+        "Rwanda, modèle Éhang EH 216-S",
+        "Kenya, modèle Volocopter"
+      ],
+      "r": 2,
+      "x": "Le Rwanda est le premier pays africain à avoir lancé le taxi aérien, utilisant le modèle Éhang EH 216-S. Le premier vol a été effectué le 4 septembre 2025, faisant du Rwanda un pionnier en matière de mobilité aérienne urbaine sur le continent africain."
+    },
+    {
+      "q": "À quelle date a été créée l'initiative présidentielle FASO MÊBO au Burkina Faso ?",
+      "o": [
+        "4 août 2024",
+        "16 octobre 2024",
+        "29 octobre 2024",
+        "16 décembre 2024"
+      ],
+      "r": 1,
+      "x": "L'initiative FASO MÊBO (littéralement \"construction de notre Faso\" en Mooré) a été lancée le 16 octobre 2024. Elle vise à encourager la souveraineté nationale, elle est très présente dans la construction des infrastructures étatiques."
+    },
+    {
+      "q": "Dans quel pays un espace public a-t-il été officiellement baptisé 'Parc Thomas Sankara' ?",
+      "o": [
+        "France",
+        "Allemagne",
+        "Italie",
+        "Canada"
+      ],
+      "r": 2,
+      "x": "Un parc a été officiellement baptisé \"Parc Thomas Sankara\" en Italie, en hommage au président-révolutionnaire burkinabè assassiné le 15 octobre 1987. Cet acte témoigne du rayonnement international de l'héritage de Sankara."
+    },
+    {
+      "q": "Quel est le taux de reconquête du territoire national burkinabè annoncé en 2025 ?",
+      "o": [
+        "55,30 %",
+        "67,80 %",
+        "72,70 %",
+        "80,15 %"
+      ],
+      "r": 2,
+      "x": "Le taux de reconquête du territoire national burkinabè est de 72,70 % en 2025, selon les autorités de la Transition. Ce chiffre indique la proportion du territoire sécurisé par les Forces de Défense et de Sécurité dans le cadre de la lutte contre le terrorisme."
+    },
+    {
+      "q": "Qui est le président de la Confédération de l'AES pour la période 2025-2026 ?",
+      "o": [
+        "Colonel Assimi Goïta",
+        "Général Abdourahamane Tiani",
+        "Capitaine Ibrahim Traoré",
+        "Général Daouda Traoré"
+      ],
+      "r": 2,
+      "x": "Le Capitaine Ibrahim Traoré, Président de la Transition du Burkina Faso, a été désigné président en exercice de la Confédération de l'Alliance des États du Sahel (AES) pour la période 2025-2026. Cette présidence tournante symbolise la solidarité entre les trois pays membres."
+    },
+    {
+      "q": "Quelle est la devise officielle de l'Alliance des États du Sahel (AES) ?",
+      "o": [
+        "\"Liberté, Égalité, Solidarité\"",
+        "\"Un espace, un peuple, un destin\"",
+        "\"Unité, Progrès, Justice\"",
+        "\"La Patrie avant tout\""
+      ],
+      "r": 1,
+      "x": "La devise de l'Alliance des États du Sahel est « Un espace, un peuple, un destin ». Elle reflète la vision d'intégration politique, économique et culturelle des trois pays fondateurs : le Burkina Faso, le Mali et le Niger."
+    },
+    {
+      "q": "Que signifie le sigle AES et à quelle date cette organisation a-t-elle été créée ?",
+      "o": [
+        "Association des États Sahariens, créée le 16 juillet 2023",
+        "Alliance des États du Sahel, créée le 16 septembre 2023",
+        "Autorité des États du Sahel, créée le 28 janvier 2024",
+        "Alliance Économique du Sahel, créée le 6 juillet 2024"
+      ],
+      "r": 1,
+      "x": "L'AES (Alliance des États du Sahel) a été créée le 16 septembre 2023, par la signature de la Charte du Liptako-Gourma entre le Burkina Faso, le Mali et le Niger. Elle a officiellement accédé au statut de confédération le 6 juillet 2024."
+    },
+    {
+      "q": "À quelle date les pays de l'AES ont-ils officiellement quitté la CEDEAO ?",
+      "o": [
+        "16 septembre 2023",
+        "28 janvier 2024",
+        "6 juillet 2024",
+        "22 septembre 2025"
+      ],
+      "r": 1,
+      "x": "Le Burkina Faso, le Mali et le Niger ont officiellement notifié leur retrait de la CEDEAO le 28 janvier 2024, avec un délai d'un an pour la prise d'effet. Ce retrait marque une rupture majeure dans l'architecture d'intégration régionale ouest-africaine."
+    },
+    {
+      "q": "Combien d'articles comporte la Charte de l'AES, et comment est-elle appelée ?",
+      "o": [
+        "12 articles, Charte du Liptako-Gourma",
+        "17 articles, Charte du Liptako-Gourma",
+        "21 articles, Charte de Niamey",
+        "25 articles, Charte de Bamako"
+      ],
+      "r": 1,
+      "x": "La Charte de l'AES, appelée Charte du Liptako-Gourma, comporte 17 articles. Elle définit les principes, objectifs et organes de la Confédération des États du Sahel : défense collective, développement économique intégré et souveraineté partagée."
+    },
+    {
+      "q": "Comment s'appelle l'hymne de l'Alliance des États du Sahel (AES) et quel est son compositeur ?",
+      "o": [
+        "\"Sahel Uni\", composé par Amadou Diallo",
+        "\"Sahel Benka\", composé par Abdoul Alim Ouédraogo",
+        "\"Liptako Gourma\", composé par Boubacar Traoré",
+        "\"Sahel Debout\", composé par Seydou Coulibaly"
+      ],
+      "r": 1,
+      "x": "L'hymne de l'AES s'appelle \"Sahel Benka\" (qui signifie \"l'entente du Sahel\" en langue Bamanakan). Il a été composé par Abdoul Alim Ouédraogo et comporte 3 strophes. Il a été officiellement adopté lors de la création de la Confédération."
+    },
+    {
+      "q": "Quelle est la date de lancement officiel du drapeau de l'AES ?",
+      "o": [
+        "16 septembre 2023",
+        "6 juillet 2024",
+        "22 février 2025",
+        "30 décembre 2024"
+      ],
+      "r": 2,
+      "x": "Le drapeau de l'AES a été officiellement lancé le 22 février 2025. Le logo du drapeau a été dévoilé le 30 décembre 2024. Il est composé d'un cercle orange, d'un baobab, de silhouettes de personnages et de 3 étoiles représentant les trois pays membres."
+    },
+    {
+      "q": "Quels sont les pays membres de l'AES ?",
+      "o": [
+        "Burkina Faso, Mauritanie et Niger",
+        "Burkina Faso, Sénégal et Mali",
+        "Burkina Faso, Mali et Niger",
+        "Mali, Tchad et Niger"
+      ],
+      "r": 2,
+      "x": "L'Alliance des États du Sahel (AES), devenue Confédération des États du Sahel, regroupe trois pays : le Burkina Faso, le Mali et le Niger. Ces trois pays ont quitté la CEDEAO le 28 janvier 2024 pour créer cette nouvelle entité politique et sécuritaire."
+    },
+    {
+      "q": "À quelle date les passeports de l'AES ont-ils été mis en circulation ?",
+      "o": [
+        "16 septembre 2023",
+        "4 août 2024",
+        "29 janvier 2025",
+        "22 février 2025"
+      ],
+      "r": 2,
+      "x": "Les passeports communs de l'Alliance des États du Sahel ont été officiellement mis en circulation le 29 janvier 2025. Ce document symbolise l'intégration des trois pays et vise à faciliter la libre circulation des ressortissants du Burkina Faso, du Mali et du Niger."
+    },
+    {
+      "q": "Comment s'appelle la radio officielle de l'AES et dans quel pays est-elle basée ?",
+      "o": [
+        "Sahel FM, basée au Mali",
+        "Daandé Liptako, basée au Burkina Faso",
+        "Radio AES, basée au Niger",
+        "Liptako Radio, basée au Burkina Faso"
+      ],
+      "r": 1,
+      "x": "La radio officielle de l'AES s'appelle \"Daandé Liptako\" (qui signifie \"la voix du Liptako\" en fulfulde) et est basée au Burkina Faso. Elle diffuse en plusieurs langues de la zone sahélienne pour renforcer l'intégration et l'information dans l'espace AES."
+    },
+    {
+      "q": "Quelle est la date à laquelle le Burkina Faso s'est retiré de l'Organisation Internationale de la Francophonie (OIF) ?",
+      "o": [
+        "29 octobre 2024",
+        "21 novembre 2024",
+        "28 février 2025",
+        "18 mars 2025"
+      ],
+      "r": 2,
+      "x": "Le Burkina Faso a officiellement quitté l'OIF (Organisation Internationale de la Francophonie) le 28 février 2025. Le Mali a suivi le 18 mars 2025. Ces retraits marquent une rupture avec certaines organisations multilatérales perçues comme liées à l'influence occidentale."
+    },
+    {
+      "q": "Quelle est la date à laquelle l'AES a officiellement retiré ses États membres de la CPI ?",
+      "o": [
+        "28 janvier 2024",
+        "6 juillet 2024",
+        "22 septembre 2025",
+        "30 décembre 2024"
+      ],
+      "r": 2,
+      "x": "L'Alliance des États du Sahel (AES) a officiellement notifié son retrait de la Cour Pénale Internationale (CPI) le 22 septembre 2025. Cette décision s'inscrit dans le cadre de l'affirmation de souveraineté nationale des pays de l'AES."
+    },
+    {
+      "q": "Quelle est la date d'investiture du Capitaine Ibrahim Traoré comme Président de la Transition ?",
+      "o": [
+        "30 septembre 2022",
+        "14 octobre 2022",
+        "21 octobre 2022",
+        "7 décembre 2022"
+      ],
+      "r": 2,
+      "x": "Le Capitaine Ibrahim Traoré a officiellement prêté serment et été investi Président de la Transition du Burkina Faso le 21 octobre 2022, soit trois semaines après le coup d'État du 30 septembre 2022 qui avait renversé le lieutenant-colonel Paul-Henri Sandaogo Damiba."
+    },
+    {
+      "q": "Quelle est la devise actuelle du Burkina Faso depuis le 21 novembre 2024 ?",
+      "o": [
+        "Unité-Progrès-Justice",
+        "La Patrie ou la Mort nous Vaincrons",
+        "Un peuple, un but, une foi",
+        "Liberté, Égalité, Fraternité"
+      ],
+      "r": 1,
+      "x": "La devise nationale du Burkina Faso \"La Patrie ou la Mort, nous Vaincrons\" a été officiellement promulguée le 21 novembre 2024 par le Capitaine Ibrahim Traoré. Elle a été adoptée par l'ALT par un vote unanime de 71 voix sur 71 le 29 octobre 2024, remplaçant \"Unité-Progrès-Justice\"."
+    },
+    {
+      "q": "À quelle date la Constitution du Burkina Faso a-t-elle été révisée pour la dernière fois, et combien de fois a-t-elle été modifiée au total ?",
+      "o": [
+        "25 mai 2024, modifiée 20 fois",
+        "29 octobre 2024, modifiée 25 fois",
+        "25 mai 2024, modifiée 25 fois",
+        "21 novembre 2024, modifiée 30 fois"
+      ],
+      "r": 2,
+      "x": "La Constitution du Burkina Faso a été modifiée 25 fois au total. La dernière modification majeure de la Charte du MPSR II a eu lieu le 25 mai 2024, renforçant les pouvoirs du Président de la Transition dans le contexte de lutte antiterroriste."
+    },
+    {
+      "q": "Quel est le numéro vert de la Brigade Laabal au Burkina Faso ?",
+      "o": [
+        "50 30 0505",
+        "50 40 0504",
+        "80 40 0500",
+        "50 20 0510"
+      ],
+      "r": 1,
+      "x": "Le numéro vert de la Brigade Laabal (brigade anti-corruption) est le 50 40 0504. Cette brigade, dont le nom signifie \"droiture, honnêteté, probité\" en langue Fulfuldé, a été mise en marche le 18 juin 2024 pour lutter contre la corruption au Burkina Faso."
+    },
+    {
+      "q": "Qui est le directeur général actuel de Faso Rail au Burkina Faso, nommé le 3 avril 2025 ?",
+      "o": [
+        "Ismaël Sombie",
+        "Boureima Ouattara",
+        "Edward Kabore",
+        "Ibrahim Saba"
+      ],
+      "r": 2,
+      "x": "Edward Kabore a été nommé directeur général de Faso Rail le 3 avril 2025. Faso Rail est la société nationale burkinabè chargée de la gestion et du développement du réseau ferroviaire national, qui s'étend sur environ 617 km."
+    },
+    {
+      "q": "Quelle est la longueur de la voie ferrée au Burkina Faso ?",
+      "o": [
+        "517 km",
+        "617 km",
+        "717 km",
+        "817 km"
+      ],
+      "r": 1,
+      "x": "Le réseau ferroviaire du Burkina Faso s'étend sur environ 617 km. Il relie Ouagadougou à la frontière avec le Ghana et à la Côte d'Ivoire (ligne Abidjan-Niger). Ce réseau est exploité par Faso Rail sous la supervision du gouvernement burkinabè."
+    },
+    {
+      "q": "Quelle est la date de lancement de l'autoroute Ouaga-Bobo et quelle est sa longueur ?",
+      "o": [
+        "16 décembre 2025, 250 km",
+        "16 décembre 2025, 322 km",
+        "24 décembre 2025, 300 km",
+        "11 janvier 2026, 322 km"
+      ],
+      "r": 1,
+      "x": "L'autoroute reliant Ouagadougou à Bobo-Dioulasso a été officiellement lancée le 16 décembre 2025. Elle mesure 322 km et constitue la première autoroute du Burkina Faso, un projet stratégique visant à désenclaver les régions et faciliter les échanges économiques entre les deux principales villes du pays."
+    },
+    {
+      "q": "À quelle date le gouvernement burkinabè a-t-il adopté un projet de loi visant à réintroduire la peine de mort dans la législation nationale ?",
+      "o": [
+        "4 décembre 2025",
+        "15 août 2025",
+        "23 septembre 2025",
+        "10 janvier 2026"
+      ],
+      "r": 0,
+      "x": "Le 4 décembre 2025, le Conseil des ministres a adopté un projet de loi visant à réintroduire la peine de mort dans l'arsenal juridique burkinabè. Cette adoption gouvernementale ne signifie pas automatiquement l'entrée en vigueur de la mesure, celle-ci devant suivre la procédure législative prévue."
+    },
+    {
+      "q": "Quelle est la date de la deuxième session confédérale du Conseil des ministres de l'AES ?",
+      "o": [
+        "6 au 7 juillet 2025",
+        "20 au 23 décembre 2025",
+        "22 au 25 novembre 2025",
+        "14 au 17 janvier 2026"
+      ],
+      "r": 1,
+      "x": "La deuxième session confédérale du Conseil des ministres de l'AES s'est tenue du 20 au 23 décembre 2025. Ces réunions ministérielles permettent de coordonner les politiques communes des trois États membres dans les domaines de la défense, de l'économie et de la diplomatie."
+    },
+    {
+      "q": "Qui est le premier Burkinabè à avoir conquis le mont Kilimandjaro, et à quelle date ?",
+      "o": [
+        "Iron Biby, le 12 juillet 2025",
+        "Paul Daumond, le 9 août 2025",
+        "Julio Lucrèce Bazi, le 9 juillet 2025",
+        "Kevin Mossé, le 15 juin 2025"
+      ],
+      "r": 2,
+      "x": "Julio Lucrèce Bazi est le premier Burkinabè à avoir gravi le mont Kilimandjaro (5 895 m, Tanzanie), le 9 juillet 2025. Cet exploit représente une fierté nationale et illustre la résilience et le dépassement de soi des Burkinabè."
+    },
+    {
+      "q": "Qui est le président de l'ordre des notaires du Burkina Faso ?",
+      "o": [
+        "Blaise B. Bazie",
+        "Yacouba Dembelé",
+        "Adama Ouédraogo",
+        "Idrissa Nassa"
+      ],
+      "r": 1,
+      "x": "Yacouba Dembelé préside l'ordre des notaires du Burkina Faso. Les notaires sont des officiers ministériels qui ont pour mission de rédiger et d'authentifier les actes juridiques, notamment les contrats de vente immobilière, les testaments et les actes de société."
+    },
+    {
+      "q": "À quelle date le premier pontage du cœur a-t-il été réalisé au CHU de Tengandogo au Burkina Faso ?",
+      "o": [
+        "Octobre 2024",
+        "Novembre 2024",
+        "Décembre 2024",
+        "Janvier 2025"
+      ],
+      "r": 2,
+      "x": "Le premier pontage coronarien (opération à cœur ouvert) a été réalisé au CHU de Tengandogo de Ouagadougou en décembre 2024. Cette avancée médicale majeure marque un tournant dans la chirurgie cardiaque au Burkina Faso, réduisant la dépendance aux évacuations sanitaires à l'étranger."
+    },
+    {
+      "q": "Qu'est-ce que la BPBF et quand ses activités ont-elles été lancées ?",
+      "o": [
+        "Banque Publique du Burkina Faso, lancée le 7 octobre 2024",
+        "Banque Postale du Burkina Faso, lancée le 7 octobre 2024",
+        "Banque Populaire du Burkina Faso, lancée le 7 novembre 2024",
+        "Banque Panafricaine du Burkina Faso, lancée le 1er octobre 2024"
+      ],
+      "r": 1,
+      "x": "La BPBF (Banque Postale du Burkina Faso) a officiellement lancé ses activités le 7 octobre 2024. Née de la transformation de la SONAPOSTE, elle vise à offrir des services bancaires et postaux accessibles à l'ensemble de la population burkinabè, notamment dans les zones rurales."
+    },
+    {
+      "q": "Qui est le directeur général de la plus grande mine du Burkina Faso, la mine Iam Gold Essakane ?",
+      "o": [
+        "Serge August Bayala",
+        "Karim Traoré",
+        "Tidiane Barry",
+        "Didier Sanon"
+      ],
+      "r": 2,
+      "x": "Tidiane Barry est le directeur général de la mine Iam Gold Essakane, la plus grande mine d'or industrielle du Burkina Faso. Située dans la région du Sahel (province de l'Oudalan), elle est l'une des plus importantes mines d'or d'Afrique de l'Ouest."
+    },
+    {
+      "q": "Quel mois est considéré comme le \"mois du consommons local\" au Burkina Faso ?",
+      "o": [
+        "Août",
+        "Septembre",
+        "Octobre",
+        "Novembre"
+      ],
+      "r": 2,
+      "x": "Octobre est le mois officiellement dédié à la consommation des produits locaux au Burkina Faso, dans le cadre de la promotion de la production nationale. Cette initiative vise à encourager les Burkinabè à consommer les produits fabriqués localement plutôt que les produits importés."
+    },
+    {
+      "q": "Quand a été créée la Commission nationale de confédération des États du Sahel (CN-CES) ?",
+      "o": [
+        "16 septembre 2023",
+        "6 juillet 2024",
+        "6 novembre 2024",
+        "22 février 2025"
+      ],
+      "r": 2,
+      "x": "La Commission nationale de confédération des États du Sahel (CN-CES) a été créée le 6 novembre 2024. Cette commission nationale est chargée de coordonner au niveau du Burkina Faso les activités liées à la mise en œuvre de la Confédération de l'AES."
+    },
+    {
+      "q": "Quel est le premier conseil des ministres du gouvernement Rimtalba Jean Emmanuel Ouédraogo et combien de ministres compte-t-il ?",
+      "o": [
+        "28 décembre 2024, 24 ministres",
+        "7 décembre 2024, 22 ministres",
+        "28 décembre 2024, 22 ministres",
+        "11 janvier 2025, 24 ministres"
+      ],
+      "r": 2,
+      "x": "Le premier conseil des ministres du gouvernement de Rimtalba Jean Emmanuel Ouédraogo a eu lieu le 28 décembre 2024. Ce gouvernement compte 22 membres, dont 5 femmes. Il comprend 3 ministres d'État : Général Célestin Simporé (Défense), Commandant Ismaël Sombie (Agriculture) et Emile Zerbo (Administration territoriale)."
+    },
+    {
+      "q": "Qui est le Ministre de l'Économie et des Finances du gouvernement Ouédraogo (08 décembre 2024) ?",
+      "o": [
+        "Karamoko Jean Marie Traore",
+        "Aboubakar Nacanabo",
+        "Adjima Thombiano",
+        "Yacouba Zabré Gouba"
+      ],
+      "r": 1,
+      "x": "Monsieur Aboubakar Nacanabo est le Ministre de l'Économie et des Finances du gouvernement formé le 08 décembre 2024. Ce portefeuille stratégique est chargé de la gestion des finances publiques, du budget de l'État et de la politique économique nationale."
+    },
+    {
+      "q": "Quelle est l'autre appellation de l'ALT (Assemblée Législative de la Transition) au Burkina Faso ?",
+      "o": [
+        "Assemblée du Peuple Burkinabè",
+        "Assemblée Législative du Peuple",
+        "Parlement de la Transition",
+        "Conseil Législatif National"
+      ],
+      "r": 1,
+      "x": "L'Assemblée Législative de la Transition (ALT) du Burkina Faso est également appelée \"Assemblée Législative du Peuple\". Elle est composée de 71 membres (13 femmes et 58 hommes) et joue le rôle d'organe législatif pendant la période de transition."
+    },
+    {
+      "q": "Qui est l'actuel président de l'Assemblée Législative de la Transition (ALT) du Burkina Faso ?",
+      "o": [
+        "Adama Ouédraogo",
+        "Edasso Rodrigue Bayala",
+        "Ousmane Bougma",
+        "Basolma Bazie"
+      ],
+      "r": 2,
+      "x": "Ousmane Bougma préside l'Assemblée Législative de la Transition (ALT) du Burkina Faso. En tant que président de l'organe législatif, il coordonne les travaux parlementaires et représente l'Assemblée dans ses relations institutionnelles."
+    },
+    {
+      "q": "Qui est l'actuel procureur du Faso au Burkina Faso ?",
+      "o": [
+        "Edasso Rodrigue Bayala",
+        "Adama Ouédraogo",
+        "Blaise B. Bazie",
+        "Sagado Nacanabo"
+      ],
+      "r": 2,
+      "x": "Blaise B. Bazie occupe la fonction de procureur du Faso au Burkina Faso. Le procureur du Faso est le chef du ministère public et représente la société dans les affaires pénales devant les juridictions nationales."
+    },
+    {
+      "q": "Qui est le président national de la Confédération de l'AES au niveau burkinabè, installé le 13 janvier 2025 ?",
+      "o": [
+        "Oumarou Yabré",
+        "Basolma Bazie",
+        "Blaise B. Bazie",
+        "Hamed Herman Roumba"
+      ],
+      "r": 1,
+      "x": "Basolma Bazie a été installé le 13 janvier 2025 comme président national de la Confédération des États du Sahel (CES) pour le Burkina Faso. Il coordonne au niveau national les activités liées à l'intégration confédérale avec le Mali et le Niger."
+    },
+    {
+      "q": "À quelle date le Burkina Faso a-t-il mis fin aux activités de l'ONG Target Malaria sur son territoire ?",
+      "o": [
+        "15 juin 2025",
+        "22 juillet 2025",
+        "22 août 2025",
+        "15 septembre 2025"
+      ],
+      "r": 2,
+      "x": "Le Burkina Faso a officiellement mis fin aux activités de Target Malaria sur son territoire le 22 août 2025. Cette ONG financée notamment par Bill Gates menait des recherches sur des moustiques génétiquement modifiés pour lutter contre le paludisme. La décision s'inscrit dans la politique de souveraineté nationale sur les questions sanitaires."
+    },
+    {
+      "q": "Qui a été désigné meilleur policier de l'année 2025 au Burkina Faso ?",
+      "o": [
+        "Commissaire Mahamadou Sana",
+        "Inspecteur Thierry Dofizouho Tuina",
+        "Sergent Paguindamba Thiombiano",
+        "Capitaine San Polycarpe Traoré"
+      ],
+      "r": 2,
+      "x": "Le Sergent de police Paguindamba Thiombiano a été nommé meilleur policier de l'année 2025 au Burkina Faso. Cette distinction annuelle récompense l'excellence, le dévouement et les performances remarquables d'un agent de la Police nationale burkinabè."
+    },
+    {
+      "q": "Quel est le montant total collecté par le Fonds de Soutien Patriotique (FSP) en 2025 ?",
+      "o": [
+        "105,500 milliards F CFA",
+        "157,830 milliards F CFA",
+        "212,860 milliards F CFA",
+        "285,400 milliards F CFA"
+      ],
+      "r": 2,
+      "x": "Le Fonds de Soutien Patriotique (FSP) du Burkina Faso a collecté 212,860 milliards de francs CFA en 2025. Ce fonds, lancé le 22 janvier 2023, mobilise des ressources financières citoyennes pour soutenir les Forces de Défense et de Sécurité dans leur lutte contre le terrorisme."
+    },
+    {
+      "q": "Quel est le plus haut sommet de l'AES et où se situe-t-il ?",
+      "o": [
+        "Mont Tenakourou au Burkina Faso",
+        "Mont Hombori Tondo au Mali",
+        "Mont Indoukat-n-Taglès au Niger",
+        "Mont Bagzan au Niger"
+      ],
+      "r": 2,
+      "x": "Le Mont Indoukat-n-Taglès, situé au Niger dans le massif de l'Aïr, culmine à 2 022 mètres d'altitude. C'est le plus haut sommet de l'espace AES. Le Niger possède une géographie variée avec des massifs montagneux dans sa partie nord."
+    },
+    {
+      "q": "Quelle est la superficie totale du territoire de la Confédération de l'AES ?",
+      "o": [
+        "1 850 000 km²",
+        "2 350 000 km²",
+        "2 781 200 km²",
+        "3 100 000 km²"
+      ],
+      "r": 2,
+      "x": "La Confédération des États du Sahel couvre une superficie totale de 2 781 200 km². Ce vaste territoire regroupe le Burkina Faso (274 200 km²), le Mali (1 240 000 km²) et le Niger (1 267 000 km²), faisant de l'AES l'une des plus grandes entités territoriales d'Afrique de l'Ouest."
+    },
+    {
+      "q": "À quelle date Thomas Sankara a-t-il été officiellement proclamé héros de la Nation burkinabè ?",
+      "o": [
+        "15 octobre 2022",
+        "15 octobre 2023",
+        "3 octobre 2024",
+        "15 octobre 2024"
+      ],
+      "r": 2,
+      "x": "Thomas Sankara a été officiellement proclamé héros de la Nation burkinabè le 3 octobre 2024. Le statut de \"héros de la Nation\" avait été créé en juin 2022. Cette reconnaissance officielle réhabilite la mémoire de Sankara, assassiné le 15 octobre 1987."
+    },
+    {
+      "q": "Quand le Boulevard Charles de Gaulle de Ouagadougou a-t-il été rebaptisé Boulevard Thomas Sankara ?",
+      "o": [
+        "15 octobre 2022",
+        "15 octobre 2023",
+        "15 octobre 2024",
+        "3 octobre 2024"
+      ],
+      "r": 1,
+      "x": "Le Boulevard Charles de Gaulle de Ouagadougou a été officiellement rebaptisé Boulevard Thomas Sankara le 15 octobre 2023, date anniversaire de son assassinat en 1987. Ce changement symbolique s'inscrit dans le processus de réhabilitation de la mémoire du président révolutionnaire."
+    },
+    {
+      "q": "Quel est le nom de l'opération militaire qui a permis la destruction de la plus grande base terroriste dans la province de la Banwa ?",
+      "o": [
+        "Opération Faso",
+        "Opération Liptako",
+        "Opération Tourbillon",
+        "Opération Koudbiiga"
+      ],
+      "r": 2,
+      "x": "L'Opération Tourbillon est le nom de l'opération militaire qui a permis la destruction de la plus grande base des terroristes dans la province de la Banwa, au Burkina Faso. Ces opérations s'inscrivent dans le cadre de la reconquête du territoire national par les Forces de Défense et de Sécurité."
+    },
+    {
+      "q": "À quelle date et par qui a été lancée la chaîne RTB3 ?",
+      "o": [
+        "25 décembre 2022, par Ibrahim Traoré",
+        "9 décembre 2023, présidé par Apollinaire Kyelem de Tambèla",
+        "4 août 2023, par Albert Ouédraogo",
+        "5 janvier 2024, par Rimtalba Jean Emmanuel Ouédraogo"
+      ],
+      "r": 1,
+      "x": "RTB3 a été officiellement lancée le 9 décembre 2023, sous la présidence de Me Apollinaire Kyelem de Tambèla (alors Premier ministre). Son slogan est \"Notre chaine, notre identité\". RTB3 diffuse en 12 langues nationales du Burkina Faso, en plus du français."
+    },
+    {
+      "q": "Combien de trésors humains vivants (THV) compte le Burkina Faso ?",
+      "o": [
+        "15 THV",
+        "18 THV",
+        "21 THV",
+        "25 THV"
+      ],
+      "r": 2,
+      "x": "Le Burkina Faso compte 21 Trésors Humains Vivants (THV). Ce programme, inspiré de la Convention UNESCO pour la sauvegarde du patrimoine culturel immatériel, reconnaît et valorise les dépositaires des savoir-faire traditionnels exceptionnels (tisserands, griots, forgerons, etc.)."
+    },
+    {
+      "q": "Qui est la première femme pilote militaire au Burkina Faso ?",
+      "o": [
+        "Lieutenant Aminata Zerbo",
+        "Capitaine Pélagie Kabre",
+        "Sous-lieutenant Maryse Traoré",
+        "Sergent Rachida Ouédraogo"
+      ],
+      "r": 2,
+      "x": "Le Sous-lieutenant Maryse Traoré est la première femme pilote militaire du Burkina Faso. Elle représente une fierté nationale et illustre la place croissante des femmes dans les Forces Armées Nationales du Burkina Faso (FANB)."
+    },
+    {
+      "q": "Qui dirige la Force unifiée de l'AES ?",
+      "o": [
+        "Général Célestin Simporé",
+        "Général Daouda Traoré",
+        "Colonel Hamed Herman Roumba",
+        "Général Moussa Traoré"
+      ],
+      "r": 1,
+      "x": "Le Général Daouda Traoré commande la Force unifiée de l'Alliance des États du Sahel. Cette force militaire conjointe est composée de soldats des trois pays membres (Burkina Faso, Mali, Niger) et a pour mission la lutte coordonnée contre le terrorisme dans l'espace sahélien."
+    },
+    {
+      "q": "Combien de personnes ont exercé la fonction de chef de l'État au Burkina Faso depuis l'indépendance en 1960 jusqu'en 2026 ?",
+      "o": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "r": 2,
+      "x": "Depuis l'indépendance du 5 août 1960 jusqu'en 2026, le Burkina Faso a connu 12 chefs d'État : Maurice Yaméogo, Sangoulé Lamizana, Saye Zerbo, Jean-Baptiste Ouédraogo, Thomas Sankara, Blaise Compaoré, Yacouba Isaac Zida, Michel Kafando, Gilbert Diendéré, Roch Marc Christian Kaboré, Paul-Henri Sandaogo Damiba et Ibrahim Traoré."
+    },
+    {
+      "q": "Quel est le plus grand centre d'affaires du Burkina Faso ?",
+      "o": [
+        "Centre Commercial de Ouaga 2000",
+        "Burkindi Business Center",
+        "Centre d'Affaires de Bobo-Dioulasso",
+        "Faso Plaza"
+      ],
+      "r": 1,
+      "x": "Le Burkindi Business Center est le plus grand centre d'affaires du Burkina Faso. Il constitue un pôle majeur de l'économie formelle burkinabè, abritant des bureaux d'entreprises, des salles de conférences et diverses infrastructures d'accueil pour les investisseurs nationaux et internationaux."
+    },
+    {
+      "q": "Quelles sont les dates et le thème de la SNC 2026 ?",
+      "o": [
+        "1er au 10 mai 2026, thème : \"Culture burkinabè et développement des savoir-faire traditionnels\"",
+        "25 avril au 2 mai 2026, thème : \"Culture, jeunesse et transmission des valeurs sociales\"",
+        "15 au 25 avril 2026, thème : \"Traditions et modernité\"",
+        "30 avril au 8 mai 2026, thème : \"Arts et identité nationale\""
+      ],
+      "r": 1,
+      "x": "La 22e édition de la Semaine Nationale de la Culture (SNC) se tient du 25 avril au 2 mai 2026 à Bobo-Dioulasso. Son thème est \"Culture, jeunesse et transmission des valeurs sociales\". Le Ghana est le pays invité d'honneur et la Russie l'invité spécial."
+    },
+    {
+      "q": "Quel film a représenté le Burkina Faso pour l'Étalon d'or de Yennenga au FESPACO 2025 et qui en est le réalisateur ?",
+      "o": [
+        "\"Sira\" de Apolline Traoré",
+        "\"Katanga, la danse des scorpions\" de Dani Kouyaté",
+        "\"Tasuma\" de S. Pierre Yameogo",
+        "\"Buud Yam\" de Gaston Kaboré"
+      ],
+      "r": 1,
+      "x": "Le film \"Katanga, la danse des scorpions\" du réalisateur burkinabè Dani Kouyaté a remporté l'Étalon d'or de Yennenga au FESPACO 2025. D'une durée de 1h53 minutes (115 min), ce film a également remporté 4 prix spéciaux. C'est le 3e Burkinabè à remporter ce prix suprême, après Idrissa Ouédraogo (1991) et Gaston Kaboré (1997)."
+    },
+    {
+      "q": "Combien de Burkinabè ont remporté l'Étalon d'or de Yennenga, et qui sont-ils ?",
+      "o": [
+        "2 Burkinabè : Idrissa Ouédraogo et Gaston Kaboré",
+        "3 Burkinabè : Idrissa Ouédraogo, Gaston Kaboré et Dani Kouyaté",
+        "4 Burkinabè : incluant Gaston Kaboré et Idrissa Ouédraogo deux fois chacun",
+        "1 Burkinabè : Dani Kouyaté (2025)"
+      ],
+      "r": 1,
+      "x": "Trois Burkinabè ont remporté l'Étalon d'or de Yennenga : Idrissa Ouédraogo en 1991 (pour \"Tilaï\"), Gaston Kaboré en 1997 (pour \"Buud Yam\") et Dani Kouyaté en 2025 (pour \"Katanga, la danse des scorpions\"). Le Maroc détient le record avec 4 Étalons d'or."
+    },
+    {
+      "q": "Qui est le directeur général de la police nationale du Burkina Faso ?",
+      "o": [
+        "Commissaire divisionnaire Mahamadou Sana",
+        "Inspecteur Général de Police Thierry Dofizouho Tuina",
+        "Capitaine San Polycarpe Traoré",
+        "Commandant Oumarou Yabré"
+      ],
+      "r": 1,
+      "x": "L'Inspecteur Général de Police Thierry Dofizouho Tuina est le directeur général de la police nationale du Burkina Faso. Il succède à l'Inspecteur Général de Police Wennélebsida Jean-Alexandre Darga."
+    },
+    {
+      "q": "Quel est le vainqueur du Tour du Faso 2025 ?",
+      "o": [
+        "Lamoussa Zoungrana",
+        "Paul Daumont",
+        "Kevin Mossé",
+        "Souleymane Koné"
+      ],
+      "r": 1,
+      "x": "Paul Daumont a remporté le Tour du Faso 2025, la 36e édition de cette course cycliste internationale. La compétition s'est déroulée du 24 octobre au 2 novembre 2025 sur une distance totale de 1 155,07 km, avec un top départ donné à Ouagadougou-Koudougou."
+    },
+    {
+      "q": "Quelle est la date de la dissolution de la CENI au Burkina Faso ?",
+      "o": [
+        "29 octobre 2024",
+        "21 novembre 2024",
+        "28 octobre 2025",
+        "4 décembre 2025"
+      ],
+      "r": 2,
+      "x": "La Commission Électorale Nationale Indépendante (CENI) du Burkina Faso a été officiellement dissoute le 28 octobre 2025. Cette dissolution s'inscrit dans le contexte de la période de Transition, où les élections ont été suspendues jusqu'au retour à l'ordre constitutionnel."
+    },
+    {
+      "q": "Quelles sont les dates de la première et de la deuxième phase des Journées nationales d'engagement patriotique et de participation citoyenne (JEPPC) ?",
+      "o": [
+        "Phase 1 : 1er au 15 mars ; Phase 2 : 1er au 15 octobre",
+        "Phase 1 : 26 mars au 9 avril ; Phase 2 : 2 au 16 octobre",
+        "Phase 1 : 15 au 30 avril ; Phase 2 : 15 au 31 octobre",
+        "Phase 1 : 5 au 20 mars ; Phase 2 : 5 au 20 octobre"
+      ],
+      "r": 1,
+      "x": "Les Journées nationales d'engagement patriotique et de participation citoyenne (JEPPC) se déroulent en deux phases : la première phase du 26 mars au 9 avril, et la deuxième phase du 2 au 16 octobre. Ces journées visent à renforcer la mobilisation citoyenne pour l'effort de guerre et le développement national."
+    },
+    {
+      "q": "Qui est le DGIH (Directeur général des infrastructures hydrauliques) du Burkina Faso ?",
+      "o": [
+        "Flandin Idrissa Sourabié",
+        "Souleymane Ouédraogo",
+        "Tidiane Nikiema",
+        "Samoura Alassane"
+      ],
+      "r": 2,
+      "x": "Tidiane Nikiema est le Directeur Général des Infrastructures Hydrauliques (DGIH) du Burkina Faso. Cette direction est chargée de planifier, de coordonner et de superviser la réalisation des ouvrages hydrauliques (barrages, retenues d'eau, périmètres irrigués) sur l'ensemble du territoire."
+    },
+    {
+      "q": "Quel animal est le symbole de la Réserve de Nazinga au Burkina Faso ?",
+      "o": [
+        "Le lion",
+        "L'hippopotame",
+        "L'éléphant",
+        "Le buffle"
+      ],
+      "r": 2,
+      "x": "L'éléphant d'Afrique est le mammifère emblématique de la Réserve de Nazinga, située dans la région du Centre-Sud au Burkina Faso (province du Nahouri). Cette réserve animalière abrite l'une des plus importantes populations d'éléphants en Afrique de l'Ouest."
+    },
+    {
+      "q": "Quelle est la date de création du musée national du Burkina Faso ?",
+      "o": [
+        "15 octobre 1955",
+        "5 août 1960",
+        "13 novembre 1962",
+        "11 août 1984"
+      ],
+      "r": 2,
+      "x": "Le musée national du Burkina Faso a été créé le 13 novembre 1962, sous la République de Haute-Volta. Il est situé à Ouagadougou et conserve des collections représentatives du patrimoine culturel et artistique burkinabè : masques, sculptures, objets rituels, tenues traditionnelles."
+    },
+    {
+      "q": "Combien de produits burkinabè ont été officiellement labellisés et quels sont-ils ?",
+      "o": [
+        "3 produits : Faso Danfani, beurre de karité et néré",
+        "5 produits : Faso Danfani, kôkô donda, chapeau de Saponé, beurre de karité, poulet bicyclette",
+        "4 produits : Faso Danfani, beurre de karité, soumbala et dolo",
+        "6 produits : incluant le dâ et la bière de mil"
+      ],
+      "r": 1,
+      "x": "Le Burkina Faso a officiellement labellisé 5 produits artisanaux et agroalimentaires : le Faso Danfani (tissu traditionnel), le kôkô donda (légume vert), le chapeau de Saponé, le beurre de karité et le poulet bicyclette. Ces labels garantissent l'authenticité et la qualité de ces produits d'origine burkinabè."
+    },
+    {
+      "q": "Combien d'universités publiques et assimilées compte le Burkina Faso et laquelle est la plus ancienne ?",
+      "o": [
+        "7 universités, Université Norbert Zongo fondée en 1974",
+        "8 universités, Université Nazi Boni fondée en 1993",
+        "7 universités, Université Thomas Sankara fondée en 2007",
+        "8 universités, Université Joseph Ki-Zerbo fondée en 1974"
+      ],
+      "r": 3,
+      "x": "Le Burkina Faso compte 8 universités publiques : Joseph Ki-Zerbo (Ouaga, 1974), Thomas Sankara (Ouaga 2, 2007), Norbert Zongo (Koudougou, 2005), Nazi Boni (Bobo-Dioulasso, 1995), Daniel Ouézzin Coulibaly (Dédougou, 2017), Lédéa Bernard Ouédraogo (Ouahigouya, 2017), Yembila Abdoulaye Toguyeni (Fada N'Gourma, 2017) et l'Université Virtuelle (2019)."
+    },
+    {
+      "q": "Quel est le thème de la JEPPC 2026 lancée du 26 mars au 9 avril 2026 ?",
+      "o": [
+        "\"Ensemble pour la paix et la sécurité\"",
+        "\"Produisons burkinabè, consommons burkinabè : notre assiette, notre fierté\"",
+        "\"Patriotisme et résilience face aux défis sécuritaires\"",
+        "\"Pour un Burkina Faso souverain et prospère\""
+      ],
+      "r": 1,
+      "x": "Le thème des Journées nationales d'engagement patriotique et de participation citoyenne (JEPPC) lancées le 26 mars 2026 est : \"Produisons burkinabè, consommons burkinabè : notre assiette, notre fierté\". Ce thème souligne la priorité accordée à la souveraineté alimentaire et à la promotion des produits locaux."
+    },
+    {
+      "q": "Quel est le pays qui a le plus de ressortissants dans la diaspora burkinabè ?",
+      "o": [
+        "La France",
+        "La Côte d'Ivoire",
+        "Le Ghana",
+        "L'Italie"
+      ],
+      "r": 1,
+      "x": "La diaspora burkinabè est estimée à environ 16 millions de personnes, dont la majorité réside en Côte d'Ivoire. Cette diaspora joue un rôle économique important à travers les transferts de fonds, qui représentent une source significative de revenus pour l'économie burkinabè."
+    },
+    {
+      "q": "Qui était le dernier gouverneur de la Haute-Volta avant l'indépendance en 1960 ?",
+      "o": [
+        "Henri Louveau",
+        "Gérard Kango Ouédraogo",
+        "Max Berhet (juillet 1958 – décembre 1958)",
+        "Roland Pré"
+      ],
+      "r": 2,
+      "x": "Max Berhet fut le dernier gouverneur de la Haute-Volta, en poste de juillet à décembre 1958. Après le referendum du 28 septembre 1958 et la proclamation de la République le 11 décembre 1958, la Haute-Volta accédait à l'autonomie, puis à l'indépendance le 5 août 1960."
+    },
+    {
+      "q": "Quelles sont les Retro résultats du BAC, BEPC et CEP burkinabè 2025 ?",
+      "o": [
+        "CEP : 89,68 % ; BEPC : 48,55 % ; BAC : 56,45 %",
+        "CEP : 78,50 % ; BEPC : 52,30 % ; BAC : 61,20 %",
+        "CEP : 92,10 % ; BEPC : 45,80 % ; BAC : 53,70 %",
+        "CEP : 85,40 % ; BEPC : 50,15 % ; BAC : 58,90 %"
+      ],
+      "r": 0,
+      "x": "Les résultats des examens nationaux 2025 au Burkina Faso sont : CEP (Certificat d'Études Primaires) : 89,68 % ; BEPC (Brevet d'Études du Premier Cycle) : 48,55 % ; Baccalauréat : 56,45 %. Ces résultats reflètent les défis éducatifs liés à la crise sécuritaire affectant de nombreuses écoles."
+    },
+    {
+      "q": "Quelle est la date de dissolution du gouvernement Kyelem de Tambèla mettant fin à son mandat de Premier ministre ?",
+      "o": [
+        "30 septembre 2024",
+        "6 décembre 2024",
+        "7 décembre 2024",
+        "28 décembre 2024"
+      ],
+      "r": 1,
+      "x": "Le gouvernement de Me Apollinaire Kyelem de Tambèla a été dissous le 6 décembre 2024, mettant fin à son mandat de Premier ministre. Il a été remplacé par Jean Rimtalba Emmanuel Ouédraogo, nommé et installé le 7 décembre 2024."
+    },
+    {
+      "q": "À quelle date a été inaugurée la Nouvelle Brasserie du Faso (SN-BF) à Komsilga ?",
+      "o": [
+        "25 juillet 2025",
+        "25 octobre 2025",
+        "25 novembre 2025",
+        "25 décembre 2025"
+      ],
+      "r": 2,
+      "x": "La Nouvelle Brasserie du Faso (SN-BF) a été inaugurée à Komsilga, près de Ouagadougou, le 25 novembre 2025. Cette unité industrielle contribue à la production locale de boissons et à la création d'emplois dans la capitale économique burkinabè."
+    },
+    {
+      "q": "Quel est le champion de lutte traditionnelle burkinabè 2025 ?",
+      "o": [
+        "Iron Biby",
+        "Zan Bady",
+        "Kevin Mossé",
+        "Paul Daumond"
+      ],
+      "r": 2,
+      "x": "Kevin Mossé a été sacré champion de lutte traditionnelle burkinabè en 2025. La lutte traditionnelle (la lutte \"Burkina\") est l'un des sports les plus populaires au Burkina Faso et fait partie des compétitions des Jeux Olympiques Africains."
+    },
+    {
+      "q": "Combien de pays africains bordent la mer Méditerranée et quels sont-ils ?",
+      "o": [
+        "4 pays : Maroc, Algérie, Tunisie et Égypte",
+        "5 pays : Maroc, Algérie, Tunisie, Libye et Égypte",
+        "6 pays : Maroc, Algérie, Tunisie, Libye, Égypte et Mauritanie",
+        "3 pays : Maroc, Algérie et Tunisie"
+      ],
+      "r": 1,
+      "x": "Cinq pays africains bordent la mer Méditerranée : le Maroc, l'Algérie, la Tunisie, la Libye et l'Égypte. Ces pays forment l'Afrique du Nord ou Maghreb élargi. La Méditerranée constitue une voie maritime stratégique reliant l'Afrique, l'Europe et le Moyen-Orient."
+    },
+    {
+      "q": "Qui est le premier Premier ministre de la Haute-Volta après l'indépendance ?",
+      "o": [
+        "Maurice Yaméogo",
+        "Sangoulé Lamizana",
+        "Gérard Kango Ouédraogo",
+        "Albert Ouédraogo"
+      ],
+      "r": 0,
+      "x": "Maurice Yaméogo fut le premier chef de gouvernement de la Haute-Volta à l'accession à l'autonomie en 1958 (Président du Conseil de gouvernement), puis le premier Président de la République à l'indépendance le 5 août 1960. Le Burkina Faso a connu 18 Premiers ministres au total (juin 2026)."
+    },
+    {
+      "q": "Dans quelle ville est implantée la Base aérienne 511 du Burkina Faso ?",
+      "o": [
+        "Kaya",
+        "Fada N'Gourma",
+        "Ouagadougou",
+        "Dori"
+      ],
+      "r": 2,
+      "x": "Le Burkina Faso possède quatre bases aériennes militaires : la Base aérienne 210 à Bobo-Dioulasso, la Base aérienne 511 à Ouagadougou, la Base aérienne 134 à Kaya et la Base aérienne 111 à Fada N'Gourma."
+    },
+    {
+      "q": "Qui est l'actuel président en exercice de la CEDEAO ?",
+      "o": [
+        "Patrice Talon",
+        "Alassane Ouattara",
+        "Julius Maada Bio",
+        "Omar Touray"
+      ],
+      "r": 2,
+      "x": "Le président en exercice de la CEDEAO est Julius Maada Bio, le président de la République de Sierra Leone ."
+    },
+    {
+      "q": "Quels sont les organes officiels de la Transition burkinabè ?",
+      "o": [
+        "Président, gouvernement, assemblée nationale et Sénat",
+        "Président, Assemblée Législative de Transition et gouvernement du peuple",
+        "Président, Premier ministre, Conseil des ministres et Cour constitutionnelle",
+        "Président, Conseil militaire, gouvernement et Cour suprême"
+      ],
+      "r": 1,
+      "x": "Les organes officiels de la Transition au Burkina Faso sont : le Président de la Transition (Capitaine Ibrahim Traoré), l'Assemblée Législative de Transition (ALT, 71 membres) et le gouvernement du peuple. Cette architecture institutionnelle a été définie par la Charte de la Transition."
+    },
+    {
+      "q": "À quelle date s'est tenue la deuxième session ordinaire du Collège des Chefs d'État de la Confédération des États du Sahel (AES) ?",
+      "o": [
+        "20 décembre 2025",
+        "21 décembre 2025",
+        "23 décembre 2025",
+        "25 décembre 2025"
+      ],
+      "r": 2,
+      "x": "La deuxième session ordinaire du Collège des Chefs d'État de la Confédération des États du Sahel (AES) s'est tenue le 23 décembre 2025 à Bamako (Mali). À l'issue de cette session, le Capitaine Ibrahim Traoré a notamment reçu la présidence tournante de la Confédération AES."
+    },
+    {
+      "q": "À quelle date a lieu la signature de l'accord de la centrale nucléaire au Burkina Faso ?",
+      "o": [
+        "26 mars 2024",
+        "4 août 2024",
+        "16 décembre 2024",
+        "26 mars 2025"
+      ],
+      "r": 0,
+      "x": "La feuille de route pour la construction d'une centrale nucléaire a été signée le 26 mars 2024. Cette décision illustre le choix souverain du Burkina Faso en matière énergétique."
+    },
+    {
+      "q": "Quel Burkinabè est surnommé \"l'Homme au 3000 baobabs\" et où réside-t-il ?",
+      "o": [
+        "Iron Biby, réside à Ouagadougou",
+        "El Hadj Salifou Ouédraogo, réside à Solenzo",
+        "Silvère Salga, réside à Bobo-Dioulasso",
+        "Laurent Bado, réside à Koudougou"
+      ],
+      "r": 1,
+      "x": "El Hadj Salifou Ouédraogo est surnommé \"l'Homme au 3000 baobabs\". Il réside à Solenzo dans la province des Banwa, dans la région de la Boucle du Mouhoun. Sa démarche de plantation massive de baobabs illustre l'engagement citoyen pour la préservation de l'environnement et la lutte contre la désertification."
+    },
+    {
+      "q": "À quelle date le Sommet des BRICS 2025 a-t-il eu lieu et de quelle édition s'agissait-il ?",
+      "o": [
+        "6 au 7 juin 2025 à Brasilia, 16e sommet",
+        "6 au 7 juillet 2025 à Rio de Janeiro, 17e sommet",
+        "22 au 23 novembre 2025 à Johannesburg, 17e sommet",
+        "5 au 6 septembre 2025 à Pékin, 18e sommet"
+      ],
+      "r": 1,
+      "x": "Le Sommet des BRICS 2025 (17e sommet) s'est tenu du 6 au 7 juillet 2025 à Rio de Janeiro, au Brésil. C'était le premier sommet depuis l'élargissement du groupe (incluant l'Indonésie qui a rejoint en janvier 2025)."
+    },
+    {
+      "q": "Quel est le PASD et sur combien de piliers stratégiques s'articule-t-il ?",
+      "o": [
+        "Plan d'Action pour la Sécurité et le Développement, 3 piliers",
+        "Plan d'Action pour la Stabilisation et le Développement, 4 piliers",
+        "Programme d'Action pour la Souveraineté et le Développement, 5 piliers",
+        "Plan d'Appui à la Stabilité et au Développement, 6 piliers"
+      ],
+      "r": 1,
+      "x": "Le PASD (Plan d'Action pour la Stabilisation et le Développement) a été adopté le 25 janvier 2023. Il s'articule sur 4 piliers stratégiques : (1) Sécurité et défense du territoire ; (2) Gouvernance politique et économique ; (3) Réconciliation nationale et cohésion sociale ; (4) Développement économique et social."
+    },
+    {
+      "q": "Qui assure la présidence du Conseil des ministres statutaire de l'UEMOA depuis octobre 2025 ?",
+      "o": [
+        "Adama Coulibaly",
+        "Romuald Wadagni",
+        "Abdoulaye Diop",
+        "Aboubakar Nacanabo"
+      ],
+      "r": 3,
+      "x": "Le Burkinabè Dr Aboubakar Nacanabo, ministre de l'Économie et des Finances, a été désigné président du Conseil des ministres statutaire de l'UEMOA le 6 octobre 2025 à Dakar. Il succède à l'Ivoirien Adama Coulibaly pour un mandat de deux ans"
+    },
+    {
+      "q": "Quel est le premier Africain élu député à l'Assemblée nationale française et en quelle année ?",
+      "o": [
+        "Léopold Sédar Senghor, élu en 1945",
+        "Blaise Diagne, élu en 1914",
+        "Lamine Guèye, élu en 1945",
+        "Félix Houphouët-Boigny, élu en 1945"
+      ],
+      "r": 1,
+      "x": "Blaise Diagne (1872-1931), originaire de Gorée (Sénégal), a été le premier Africain élu député à l'Assemblée nationale française en 1914. Il représentait les Quatre Communes du Sénégal et a joué un rôle important dans la mobilisation des troupes africaines durant la Première Guerre mondiale."
+    },
+    {
+      "q": "Quel Burkinabè est reconnu comme le principal investigateur du vaccin RTS contre le paludisme ?",
+      "o": [
+        "Pr Halidou Tinto",
+        "Pr Hamidou Kindo",
+        "Pr Souleymane Konaté",
+        "Pr Hassan Bismarck Nacro"
+      ],
+      "r": 0,
+      "x": "Le Professeur Halidou Tinto est le principal investigateur burkinabè du vaccin RTS,S contre le paludisme. Il dirige le Centre de Recherche en Santé de Nanoro (CRSN) qui a joué un rôle clé dans les essais cliniques de ce vaccin désormais recommandé par l'OMS."
+    },
+    {
+      "q": "À quelles dates s'est tenu le deuxième Sommet Russie–Afrique ?",
+      "o": [
+        "24 et 25 octobre 2022",
+        "15 et 16 juin 2023",
+        "27 et 28 juillet 2023",
+        "10 et 11 septembre 2023"
+      ],
+      "r": 2,
+      "x": "Le deuxième Sommet Russie–Afrique s'est tenu les 27 et 28 juillet 2023 à Saint-Pétersbourg (Russie). Il a réuni des dirigeants russes et africains afin de renforcer la coopération politique, économique et sécuritaire entre la Russie et les pays africains."
+    },
+    {
+      "q": "Qui est l'actuel président de la Commission de l'Union africaine (CUA) ?",
+      "o": [
+        "Moussa Faki Mahamat",
+        "João Lourenço",
+        "Mahmoud Ali Youssouf",
+        "Raila Odinga"
+      ],
+      "r": 2,
+      "x": "Le Djiboutien Mahmoud Ali Youssouf est le président de la Commission de l'Union africaine depuis mars 2025. Ancien ministre des Affaires étrangères de Djibouti, il a été élu lors du sommet de l'Union africaine tenu à Addis-Abeba en février 2025"
+    },
+    {
+      "q": "Qui est l'actuel président en exercice de l'UEMOA ?",
+      "o": [
+        "Alassane Ouattara",
+        "Abdoulaye Diop",
+        "Patrice Talon",
+        "Aboubakar Nacanabo"
+      ],
+      "r": 0,
+      "x": "Le Président de la République de Côte d'Ivoire, Alassane Ouattara, est le Président en exercice de la Conférence des Chefs d'État et de Gouvernement de l'UEMOA en 2026. Il ne faut pas le confondre avec Abdoulaye Diop, qui est le Président de la Commission de l'UEMOA"
+    },
+    {
+      "q": "Que signifie l'acronyme SITHO ?",
+      "o": [
+        "Salon International du Tourisme et de l'Hôtellerie de Ouagadougou",
+        "Salon International du Transport et de l'Hôtellerie de Ouagadougou",
+        "Salon International du Tourisme, de l'Hôtellerie et de la Restauration de Ouagadougou",
+        "Salon International du Tourisme et de l'Hébergement de Ouagadougou"
+      ],
+      "r": 0,
+      "x": "Le SITHO signifie Salon International du Tourisme et de l'Hôtellerie de Ouagadougou. Il constitue l'un des principaux rendez-vous de promotion du tourisme et de l'hôtellerie au Burkina Faso et en Afrique."
+    },
+    {
+      "q": "À quelles dates s'est tenue la 15ᵉ édition du SITHO en 2025 ?",
+      "o": [
+        "Du 25 au 28 septembre 2025",
+        "Du 2 au 5 octobre 2025",
+        "Du 30 octobre au 2 novembre 2025",
+        "Du 20 au 23 novembre 2025"
+      ],
+      "r": 0,
+      "x": "La 15ᵉ édition du SITHO s'est tenue à Ouagadougou du 25 au 28 septembre 2025, sous le thème « Tourisme et intégration des peuples du Sahel »."
+    },
+    {
+      "q": "À quelle date le Capitaine Ibrahim Traoré a-t-il été décoré de la Médaille des BRICS ?",
+      "o": [
+        "24 janvier 2023",
+        "12 juin 2023",
+        "27 juillet 2023",
+        "30 septembre 2023"
+      ],
+      "r": 1,
+      "x": "Le Capitaine Ibrahim Traoré a reçu la Médaille des BRICS le 12 juin 2023 des mains de Mme Larisa Zelentsova, présidente de l'Alliance internationale des projets stratégiques BRICS, pour son engagement en faveur de la souveraineté du Burkina Faso."
+    },
+    {
+      "q": "Qui est le président en exercice de l'Union africaine (UA) en 2026 ?",
+      "o": [
+        "João Lourenço",
+        "Mahmoud Ali Youssouf",
+        "Évariste Ndayishimiye",
+        "Paul Kagame"
+      ],
+      "r": 2,
+      "x": "Le président burundais Évariste Ndayishimiye assure la présidence tournante de l'Union africaine pour l'année 2026. Il a été élu lors du 39ᵉ Sommet de l'UA à Addis-Abeba et a succédé au président angolais João Lourenço."
     }
   ]
 };

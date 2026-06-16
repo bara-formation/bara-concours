@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.13 - V63.13 : Anti-triche + Notifs uniques + UX dates
+// Version 6.3.15 - V63.15 : 41 modifs cg + 6 suppressions + renommage "Actualités et Institutions"
 
-const CACHE_NAME = 'bara-concours-v6-3-13';
+const CACHE_NAME = 'bara-concours-v6-3-15';
 const APP_SHELL = [
   './',
   './index.html',
