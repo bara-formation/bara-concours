@@ -7385,7 +7385,7 @@ const App = {
   },
 
   renderMatiereCard(matId, concoursId) {
-    const m = MATIERES_CATALOG[matId];
+    const m = MATIERES_CATALOG[matId] || { icone: "📚", nom: matId || "Questions", couleur: "#0f5132" };
     if (!m) return '';
     const stats = this.getMatiereStats(matId);
     const pct = stats.attempts > 0 ? Math.round(stats.totalScore / stats.totalQuestions * 100) : 0;
@@ -7440,7 +7440,7 @@ const App = {
 
   // === MODE SELECT ===
   renderModeSelect() {
-    const m = MATIERES_CATALOG[this.state.currentMatiere];
+    const m = MATIERES_CATALOG[this.state.currentMatiere] || { icone: "📚", nom: this.state.currentMatiere || "Questions", couleur: "#0f5132" };
     const c = this.state.currentConcours;
     const matId = this.state.currentMatiere;
     const nbQ = (QUESTIONS[matId] || []).length;
@@ -7746,7 +7746,7 @@ const App = {
     const q = this.state.qcm.questions[this.state.qcm.current];
     if (!q) return this.renderResults();
 
-    const m = MATIERES_CATALOG[this.state.currentMatiere];
+    const m = MATIERES_CATALOG[this.state.currentMatiere] || { icone: "📚", nom: this.state.currentMatiere || "Questions", couleur: "#0f5132" };
     const isExam = this.state.currentMode === 'exam';
     const answer = this.state.qcm.answers[this.state.qcm.current];
     const answered = answer !== null;
@@ -7801,8 +7801,8 @@ const App = {
         </div>
 
         <div class="qcm-actions">
-          ${!isExam && this.state.qcm.current > 0 ? `<button class="btn-prev" onclick="App.prevQuestion()">← Précédent</button>` : ''}
-          <button class="btn-next" onclick="App.nextQuestion()" ${(!answered && !isExam) || (isExam && !answered) ? 'disabled' : ''}>
+          ${!isExam && this.state.qcm.current > 0 ? `<button type="button" class="btn-prev" onclick="event.preventDefault(); App.prevQuestion(); return false;">← Précédent</button>` : ''}
+          <button type="button" class="btn-next" onclick="event.preventDefault(); App.nextQuestion(); return false;" ${(!answered && !isExam) || (isExam && !answered) ? 'disabled' : ''}>
             ${this.state.qcm.current === this.state.qcm.questions.length - 1 ? 'Terminer 🏁' : 'Suivant →'}
           </button>
         </div>
@@ -7891,13 +7891,23 @@ const App = {
   },
 
   nextQuestion() {
-    if (this.state.qcm.current < this.state.qcm.questions.length - 1) {
-      this.state.qcm.current++;
-      // Sauvegarde auto en mode examen à chaque changement de question
-      if (this.state.currentMode === 'exam') this.savePendingExam();
-      this.render();
-    } else {
-      this.endQCM();
+    try {
+      if (this.state.qcm.current < this.state.qcm.questions.length - 1) {
+        this.state.qcm.current++;
+        // Sauvegarde auto en mode examen à chaque changement de question
+        if (this.state.currentMode === 'exam') {
+          try { this.savePendingExam(); } catch(e) { console.warn('[nextQuestion] savePending:', e); }
+        }
+        this.render();
+      } else {
+        this.endQCM();
+      }
+    } catch(e) {
+      console.error('[nextQuestion] Erreur :', e);
+      // Si on est à la dernière question et qu'on plante, on force la fin du QCM
+      if (this.state.qcm && this.state.qcm.current === this.state.qcm.questions.length - 1) {
+        try { this.navigate('results'); } catch(e2) {}
+      }
     }
   },
 
@@ -7924,57 +7934,44 @@ const App = {
   },
 
   endQCM() {
-    if (this.state.qcm.timerInterval) clearInterval(this.state.qcm.timerInterval);
+    // V63.16 : Sécurisation complète — On NAVIGUE toujours vers results, même si erreur dans les sauvegardes
+    console.log('[endQCM] Démarrage finalisation QCM');
+    try {
+      if (this.state.qcm.timerInterval) clearInterval(this.state.qcm.timerInterval);
+    } catch(e) { console.warn('[endQCM] timer:', e); }
+
     const duration = Math.round((Date.now() - this.state.qcm.startTime) / 1000);
 
-    // Effacer l'examen en pause s'il y en avait un (puisque finalisé)
-    if (this.state.currentMode === 'exam') {
-      this.SujetsManager.clearPendingExam();
-    }
+    // Effacer l'examen en pause (puisque finalisé)
+    try {
+      if (this.state.currentMode === 'exam' && this.SujetsManager) {
+        this.SujetsManager.clearPendingExam();
+      }
+    } catch(e) { console.warn('[endQCM] clearPending:', e); }
 
-    // Sauvegarder le sujet dans l'historique des sujets numérotés (si pas un refaire)
-    if (this.state.qcm.numero && !this.state.qcm.isRefait) {
-      this.SujetsManager.saveSujet(
-        this.state.qcm.matiereId || this.state.currentMatiere,
-        this.state.currentMode,
-        {
-          numero: this.state.qcm.numero,
-          date: Date.now(),
-          score: this.state.qcm.score,
-          total: this.state.qcm.questions.length,
-          duration,
-          concoursId: this.state.qcm.concoursId || (this.state.currentConcours && this.state.currentConcours.id),
-          questions: this.state.qcm.questions,
-          answers: this.state.qcm.answers
-        }
-      );
-    }
+    // Sauvegarder le sujet dans l'historique des sujets numérotés
+    try {
+      if (this.state.qcm.numero && !this.state.qcm.isRefait && this.SujetsManager) {
+        this.SujetsManager.saveSujet(
+          this.state.qcm.matiereId || this.state.currentMatiere,
+          this.state.currentMode,
+          {
+            numero: this.state.qcm.numero,
+            date: Date.now(),
+            score: this.state.qcm.score,
+            total: this.state.qcm.questions.length,
+            duration,
+            concoursId: this.state.qcm.concoursId || (this.state.currentConcours && this.state.currentConcours.id),
+            questions: this.state.qcm.questions,
+            answers: this.state.qcm.answers
+          }
+        );
+      }
+    } catch(e) { console.warn('[endQCM] saveSujet:', e); }
 
     // Sauvegarder dans l'historique général
-    this.state.history.push({
-      date: Date.now(),
-      concoursId: this.state.currentConcours ? this.state.currentConcours.id : null,
-      matiereId: this.state.currentMatiere,
-      mode: this.state.currentMode,
-      score: this.state.qcm.score,
-      total: this.state.qcm.questions.length,
-      duration,
-      sujetNumero: this.state.qcm.numero || null
-    });
-
-    // Mettre à jour les stats par matière
-    const matId = this.state.currentMatiere;
-    if (!this.state.matiereStats[matId]) {
-      this.state.matiereStats[matId] = { attempts: 0, totalScore: 0, totalQuestions: 0 };
-    }
-    this.state.matiereStats[matId].attempts++;
-    this.state.matiereStats[matId].totalScore += this.state.qcm.score;
-    this.state.matiereStats[matId].totalQuestions += this.state.qcm.questions.length;
-
-    this.save();
-
-    if (window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady && window.FirebaseAuth.isLoggedIn()) {
-      window.FirebaseAuth.saveQCMResult({
+    try {
+      this.state.history.push({
         date: Date.now(),
         concoursId: this.state.currentConcours ? this.state.currentConcours.id : null,
         matiereId: this.state.currentMatiere,
@@ -7983,9 +7980,43 @@ const App = {
         total: this.state.qcm.questions.length,
         duration,
         sujetNumero: this.state.qcm.numero || null
-      }).catch(e => console.error('Sync error :', e));
-    }
+      });
+    } catch(e) { console.warn('[endQCM] history:', e); }
 
+    // Mettre à jour les stats par matière
+    try {
+      const matId = this.state.currentMatiere;
+      if (matId) {
+        if (!this.state.matiereStats[matId]) {
+          this.state.matiereStats[matId] = { attempts: 0, totalScore: 0, totalQuestions: 0 };
+        }
+        this.state.matiereStats[matId].attempts++;
+        this.state.matiereStats[matId].totalScore += this.state.qcm.score;
+        this.state.matiereStats[matId].totalQuestions += this.state.qcm.questions.length;
+      }
+    } catch(e) { console.warn('[endQCM] stats:', e); }
+
+    // Sauvegarder dans localStorage
+    try { this.save(); } catch(e) { console.warn('[endQCM] save:', e); }
+
+    // Synchro Firebase (async, ne doit pas bloquer la navigation)
+    try {
+      if (window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady && window.FirebaseAuth.isLoggedIn()) {
+        window.FirebaseAuth.saveQCMResult({
+          date: Date.now(),
+          concoursId: this.state.currentConcours ? this.state.currentConcours.id : null,
+          matiereId: this.state.currentMatiere,
+          mode: this.state.currentMode,
+          score: this.state.qcm.score,
+          total: this.state.qcm.questions.length,
+          duration,
+          sujetNumero: this.state.qcm.numero || null
+        }).catch(e => console.error('[endQCM] Firebase sync:', e));
+      }
+    } catch(e) { console.warn('[endQCM] firebase block:', e); }
+
+    // GARANTI : Navigation vers résultats même si des sauvegardes ont échoué
+    console.log('[endQCM] Navigation vers results');
     this.navigate('results');
   },
 
@@ -7995,7 +8026,8 @@ const App = {
     const total = questions.length;
     const pct = Math.round(score / total * 100);
     const duration = Math.round((Date.now() - startTime) / 1000);
-    const m = MATIERES_CATALOG[this.state.currentMatiere];
+    // V63.16 : Fallback si la matière n'existe plus dans le catalog
+    const m = MATIERES_CATALOG[this.state.currentMatiere] || { icone: '📚', nom: this.state.currentMatiere || 'Questions', couleur: '#0f5132' };
 
     let mention, sub;
     if (pct >= 80) { mention = 'Excellent !'; sub = 'Tu maîtrises cette matière. Tu es prêt(e) pour le concours.'; }
@@ -8066,7 +8098,7 @@ const App = {
   renderCorrection() {
     const { questions, answers, score } = this.state.qcm;
     const total = questions.length;
-    const m = MATIERES_CATALOG[this.state.currentMatiere];
+    const m = MATIERES_CATALOG[this.state.currentMatiere] || { icone: "📚", nom: this.state.currentMatiere || "Questions", couleur: "#0f5132" };
     const letters = ['A','B','C','D'];
 
     return `

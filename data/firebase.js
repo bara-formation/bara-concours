@@ -484,6 +484,14 @@ const FirebaseAuth = {
     return [];
   },
 
+  // V63.17 : Stub pour saveQCMResult — évite le crash dans endQCM
+  // L'historique des QCM reste local au localStorage pour la saison 2026.
+  // Pour la saison 2027, on implémentera la vraie sauvegarde Firestore.
+  async saveQCMResult(qcmResult) {
+    // Stub : ne fait rien, mais retourne une Promise pour que .catch() fonctionne
+    return Promise.resolve();
+  },
+
   formatPhone(phone) {
     // Stub : reformate juste basique
     if (!phone) return '';
