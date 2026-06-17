@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.17 - V63.17 : Fix Firebase.saveQCMResult manquante (cause root du bug Terminer)
+// Version 6.3.18 - V63.18 MASTER : 93 modifs cg + 198 actualités + fixes Terminer + Firebase
 
-const CACHE_NAME = 'bara-concours-v6-3-17';
+const CACHE_NAME = 'bara-concours-v6-3-18';
 const APP_SHELL = [
   './',
   './index.html',
