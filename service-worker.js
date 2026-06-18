@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.19 - V63.19 : Fix recherche admin + Service Firestore Forum (étape 1/3)
+// Version 6.3.20 - V63.20 : Forum Firestore (UI branchée, sync temps réel)
 
-const CACHE_NAME = 'bara-concours-v6-3-19';
+const CACHE_NAME = 'bara-concours-v6-3-20';
 const APP_SHELL = [
   './',
   './index.html',

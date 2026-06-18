@@ -3510,6 +3510,12 @@ const App = {
 
   // === ROUTING ===
   navigate(screen, params = {}) {
+    // V63.20 : Si on quitte la zone forum, arrêter les listeners Firestore
+    const wasInForum = ['forum', 'forum-topic', 'forum-create'].includes(this.state.currentScreen);
+    const goingToForum = ['forum', 'forum-topic', 'forum-create'].includes(screen);
+    if (wasInForum && !goingToForum) {
+      this.stopForumLiveSync();
+    }
     this.state.currentScreen = screen;
     Object.assign(this.state, params);
     this.render();
@@ -8976,18 +8982,101 @@ const App = {
   // === PHASE 3 — FORUM COMMUNAUTAIRE
   // ===========================================
 
-  // Charge les topics depuis localStorage + ajoute les démos si vide
+  // V63.20 : Lecture des topics — Firestore prioritaire, fallback localStorage
   getForumTopics() {
+    // V63.20 : Si Firestore est prêt et qu'on a un cache récent, utiliser ça
+    if (window.ForumFirestore
+        && window.FirebaseAuth
+        && window.FirebaseAuth.isFirebaseReady
+        && window.ForumFirestore._topicsCache
+        && window.ForumFirestore._topicsCache.length > 0) {
+      // Normaliser le format Firestore vers le format attendu par l'UI
+      return window.ForumFirestore._topicsCache.map(t => ({
+        id: t.id,
+        title: t.title,
+        body: t.body,
+        authorId: t.authorUid,
+        authorName: t.authorName,
+        authorIsPremium: t.authorIsPremium,
+        authorCity: '',
+        timestamp: t.createdAt,
+        replyCount: t.repliesCount,
+        replies: [], // Chargées séparément
+        upvotes: 0,
+        upvotedBy: [],
+        isPinned: t.isPinned
+      }));
+    }
+    // Fallback localStorage (offline ou pas encore chargé)
     if (!this.state.forumTopics) {
       const saved = localStorage.getItem('bara_forum_topics');
       if (saved) {
         try { this.state.forumTopics = JSON.parse(saved); }
-        catch { this.state.forumTopics = window.ForumService.getDemoTopics(); }
+        catch { this.state.forumTopics = []; }
       } else {
-        this.state.forumTopics = window.ForumService.getDemoTopics();
+        // V63.20 : Ne PAS injecter les démos si Firestore est disponible
+        if (window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady) {
+          this.state.forumTopics = [];
+        } else {
+          this.state.forumTopics = window.ForumService.getDemoTopics();
+        }
       }
     }
     return this.state.forumTopics;
+  },
+
+  // V63.20 : Chargement initial des topics depuis Firestore (au premier affichage)
+  async loadForumTopicsFromFirestore() {
+    if (!window.ForumFirestore || !window.FirebaseAuth || !window.FirebaseAuth.isFirebaseReady) {
+      return;
+    }
+    if (this.state._forumLoading) return;
+    this.state._forumLoading = true;
+    try {
+      const result = await window.ForumFirestore.getAllTopics();
+      this.state._forumLoading = false;
+      if (result.success) {
+        // Re-render si on est sur la page forum
+        if (this.state.currentScreen === 'forum') {
+          this.render();
+        }
+      } else {
+        console.warn('[V63.20] Forum getAllTopics échoué :', result.error);
+      }
+    } catch (e) {
+      this.state._forumLoading = false;
+      console.error('[V63.20] Forum chargement :', e);
+    }
+  },
+
+  // V63.20 : Démarre un listener temps réel pour le forum
+  startForumLiveSync() {
+    if (!window.ForumFirestore || !window.FirebaseAuth || !window.FirebaseAuth.isFirebaseReady) {
+      return;
+    }
+    // Éviter les doubles listeners
+    if (this.state._forumUnsubscribe) return;
+    console.log('[V63.20] Démarrage sync temps réel du forum');
+    const unsub = window.ForumFirestore.listenToTopics((topics) => {
+      // Re-render seulement si on est sur la page forum
+      if (this.state.currentScreen === 'forum') {
+        this.render();
+      }
+    });
+    this.state._forumUnsubscribe = unsub;
+  },
+
+  // V63.20 : Arrête le listener (lors de la navigation hors forum)
+  stopForumLiveSync() {
+    if (this.state._forumUnsubscribe) {
+      try { this.state._forumUnsubscribe(); } catch(e) {}
+      this.state._forumUnsubscribe = null;
+      console.log('[V63.20] Sync forum arrêté');
+    }
+    if (this.state._topicRepliesUnsubscribe) {
+      try { this.state._topicRepliesUnsubscribe(); } catch(e) {}
+      this.state._topicRepliesUnsubscribe = null;
+    }
   },
 
   saveForumTopics() {
@@ -10455,9 +10544,23 @@ const App = {
 
   // === FORUM HOME (liste des sujets) ===
   renderForum() {
-    const topics = this.getForumTopics().sort((a,b) => b.timestamp - a.timestamp);
+    // V63.20 : Charger depuis Firestore au premier affichage + activer sync temps réel
+    if (window.ForumFirestore && window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady) {
+      // Si pas encore chargé : charger
+      if (!window.ForumFirestore._topicsCache) {
+        this.loadForumTopicsFromFirestore();
+      }
+      // Activer le listener temps réel (s'il ne tourne pas déjà)
+      this.startForumLiveSync();
+    }
+
+    const topics = this.getForumTopics().sort((a,b) => {
+      if (a.isPinned !== b.isPinned) return a.isPinned ? -1 : 1;
+      return b.timestamp - a.timestamp;
+    });
     const u = this.state.user;
     const isLoggedIn = u.isLoggedIn;
+    const isLoading = this.state._forumLoading && topics.length === 0;
 
     return `
       <div class="page">
@@ -10481,13 +10584,13 @@ const App = {
             </div>
           ` : ''}
 
-          <div class="section-title">${topics.length} discussion${topics.length > 1 ? 's' : ''}</div>
+          <div class="section-title">${topics.length} discussion${topics.length > 1 ? 's' : ''}${isLoading ? ' • ⏳ Chargement...' : ''}</div>
 
           ${topics.length === 0 ? `
             <div class="forum-empty">
-              <div style="font-size:3rem; opacity:0.4; margin-bottom:0.6rem">💭</div>
-              <div style="font-size:1rem; font-weight:700; margin-bottom:0.3rem">Aucune discussion pour l'instant</div>
-              <div style="font-size:0.85rem">Sois le premier à lancer un sujet !</div>
+              <div style="font-size:3rem; opacity:0.4; margin-bottom:0.6rem">${isLoading ? '⏳' : '💭'}</div>
+              <div style="font-size:1rem; font-weight:700; margin-bottom:0.3rem">${isLoading ? 'Chargement des discussions...' : 'Aucune discussion pour l\'instant'}</div>
+              <div style="font-size:0.85rem">${isLoading ? 'Cela ne prend que quelques secondes.' : 'Sois le premier à lancer un sujet !'}</div>
             </div>
           ` : topics.map(t => this.renderTopicCard(t)).join('')}
 
@@ -10536,14 +10639,74 @@ const App = {
 
   openTopic(id) {
     this.state.currentTopicId = id;
+    // V63.20 : Reset les réponses chargées (sera rechargé pour ce topic)
+    this.state._currentTopicReplies = null;
+    this.state._currentTopicRepliesLoaded = false;
+    // Stopper l'éventuel listener sur un autre topic
+    if (this.state._topicRepliesUnsubscribe) {
+      try { this.state._topicRepliesUnsubscribe(); } catch(e) {}
+      this.state._topicRepliesUnsubscribe = null;
+    }
     this.navigate('forum-topic');
+  },
+
+  // V63.20 : Charger les réponses d'un topic depuis Firestore + sync temps réel
+  async loadTopicRepliesFromFirestore(topicId) {
+    if (!window.ForumFirestore) return;
+    if (!topicId) return;
+    if (this.state._currentTopicRepliesLoaded && this.state._topicRepliesUnsubscribe) return;
+    // Marquer comme en cours
+    this.state._currentTopicRepliesLoaded = true;
+    // Démarrer un listener temps réel (auto-charge la liste initiale + écoute les nouveaux)
+    const unsub = window.ForumFirestore.listenToReplies(topicId, (replies) => {
+      // Mettre à jour le state
+      this.state._currentTopicReplies = replies.map(r => ({
+        id: r.id,
+        authorName: r.authorName,
+        authorIsPremium: r.authorIsPremium,
+        body: r.body,
+        timestamp: r.createdAt
+      }));
+      // Re-render si on est encore sur ce topic
+      if (this.state.currentScreen === 'forum-topic' && this.state.currentTopicId === topicId) {
+        this.render();
+      }
+    });
+    this.state._topicRepliesUnsubscribe = unsub;
   },
 
   // === DÉTAIL D'UN SUJET ===
   renderForumTopic() {
-    const topics = this.getForumTopics();
-    const topic = topics.find(t => t.id === this.state.currentTopicId);
+    // V63.20 : Charger le topic depuis le cache Firestore OU localStorage
+    let topic = null;
+    if (window.ForumFirestore && window.ForumFirestore._topicsCache) {
+      const ft = window.ForumFirestore._topicsCache.find(t => t.id === this.state.currentTopicId);
+      if (ft) {
+        topic = {
+          id: ft.id,
+          title: ft.title,
+          body: ft.body,
+          authorName: ft.authorName,
+          authorCity: '',
+          authorIsPremium: ft.authorIsPremium,
+          timestamp: ft.createdAt,
+          upvotes: 0,
+          replyCount: ft.repliesCount,
+          replies: this.state._currentTopicReplies || []
+        };
+      }
+    }
+    // Fallback localStorage
+    if (!topic) {
+      const topics = this.getForumTopics();
+      topic = topics.find(t => t.id === this.state.currentTopicId);
+    }
     if (!topic) { this.navigate('forum'); return ''; }
+
+    // V63.20 : Charger les réponses depuis Firestore (au premier render) + sync temps réel
+    if (window.ForumFirestore && window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady) {
+      this.loadTopicRepliesFromFirestore(topic.id);
+    }
 
     const F = window.ForumService;
     const u = this.state.user;
@@ -10632,7 +10795,7 @@ const App = {
             <div class="topic-meta">${time}</div>
           </div>
         </div>
-        <div class="reply-text">${this.escapeHTML(reply.text)}</div>
+        <div class="reply-text">${this.escapeHTML(reply.body || reply.text || '')}</div>
       </div>
     `;
   },
@@ -10684,7 +10847,7 @@ const App = {
     this.toast('✓ Signalement envoyé. Merci !');
   },
 
-  sendReply() {
+  async sendReply() {
     if (!this.state.user.isLoggedIn) {
       this.toast('Connecte-toi pour répondre');
       return;
@@ -10707,6 +10870,32 @@ const App = {
       return;
     }
 
+    // V63.20 : Envoi via Firestore prioritairement
+    if (window.ForumFirestore && window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady) {
+      // Vider l'input tout de suite pour UX réactive
+      const replyText = text;
+      input.value = '';
+      try {
+        const result = await window.ForumFirestore.addReply(this.state.currentTopicId, replyText);
+        if (result.success) {
+          replyHistory.push({ type: 'reply', timestamp: Date.now() });
+          localStorage.setItem('bara_reply_history', JSON.stringify(replyHistory));
+          this.toast('✓ Réponse publiée');
+          // Le listener temps réel va mettre à jour automatiquement
+        } else {
+          // Restaurer le texte en cas d'erreur
+          input.value = replyText;
+          this.toast('❌ ' + (result.error || 'Erreur d\'envoi'), 'danger', 4000);
+        }
+      } catch (e) {
+        console.error('[V63.20] sendReply Firestore exception :', e);
+        input.value = replyText;
+        this.toast('❌ Erreur réseau', 'danger', 4000);
+      }
+      return;
+    }
+
+    // Fallback localStorage
     const u = this.state.user;
     const topics = this.getForumTopics();
     const topic = topics.find(t => t.id === this.state.currentTopicId);
@@ -10727,7 +10916,7 @@ const App = {
     localStorage.setItem('bara_reply_history', JSON.stringify(replyHistory));
 
     this.saveForumTopics();
-    this.toast('✓ Réponse publiée');
+    this.toast('✓ Réponse publiée (mode local)');
     this.render();
   },
 
@@ -10817,7 +11006,7 @@ const App = {
     this.navigate('forum');
   },
 
-  publishTopic() {
+  async publishTopic() {
     if (!this.state.user.isLoggedIn) {
       this.toast('🔒 Connecte-toi pour publier');
       return;
@@ -10839,6 +11028,36 @@ const App = {
       return;
     }
 
+    // V63.20 : Tentative de publication via Firestore (prioritaire)
+    if (window.ForumFirestore && window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady) {
+      this.toast('⏳ Publication...', 'info');
+      try {
+        const result = await window.ForumFirestore.createTopic(title, body);
+        if (result.success) {
+          postHistory.push({ type: 'post', timestamp: Date.now() });
+          localStorage.setItem('bara_post_history', JSON.stringify(postHistory));
+          this.state.composerTitle = '';
+          this.state.composerBody = '';
+          this.toast('🎉 Sujet publié avec succès !', 'success');
+          // Recharger les topics depuis Firestore
+          await this.loadForumTopicsFromFirestore();
+          // Ouvrir le nouveau topic
+          this.openTopic(result.topicId);
+          return;
+        } else {
+          // Erreur Firestore : fallback ou affichage erreur
+          console.warn('[V63.20] Publication Firestore échouée :', result.error);
+          this.toast('❌ ' + (result.error || 'Erreur de publication'), 'danger', 4000);
+          return;
+        }
+      } catch (e) {
+        console.error('[V63.20] Publication Firestore exception :', e);
+        this.toast('❌ Erreur réseau. Réessaie.', 'danger', 4000);
+        return;
+      }
+    }
+
+    // Fallback localStorage (Firebase non dispo)
     const u = this.state.user;
     const newTopic = {
       id: 'topic_' + Date.now(),
@@ -10862,7 +11081,7 @@ const App = {
 
     this.state.composerTitle = '';
     this.state.composerBody = '';
-    this.toast('🎉 Sujet publié avec succès !');
+    this.toast('🎉 Sujet publié (mode local - sans synchro) !');
     this.openTopic(newTopic.id);
   },
 
