@@ -387,6 +387,115 @@ const ForumFirestore = {
     }
   },
 
+  // === V63.21 : SYSTÈME DE LIKES ===
+  /**
+   * Toggle like sur un topic (1 user = 1 like)
+   * Architecture : subcollection forum_topics/{id}/likes/{userUid}
+   */
+  async toggleTopicLike(topicId) {
+    if (!this._isReady() || !topicId) {
+      return { success: false, error: 'Firebase non prêt' };
+    }
+    const userInfo = this._getCurrentUserInfo();
+    if (!userInfo) {
+      return { success: false, error: 'Connecte-toi pour voter' };
+    }
+    try {
+      const fns = this._fns();
+      const likeRef = fns.doc(this._db(), this.COLLECTION_TOPICS, topicId, 'likes', userInfo.uid);
+      const likeSnap = await fns.getDoc(likeRef);
+      const topicRef = fns.doc(this._db(), this.COLLECTION_TOPICS, topicId);
+
+      if (likeSnap.exists()) {
+        // L'utilisateur a déjà liké → enlever le like
+        await fns.deleteDoc(likeRef);
+        // Décrémenter le compteur
+        try {
+          const topicSnap = await fns.getDoc(topicRef);
+          if (topicSnap.exists()) {
+            const current = topicSnap.data().likesCount || 0;
+            await fns.updateDoc(topicRef, { likesCount: Math.max(0, current - 1) });
+          }
+        } catch(e) { console.warn('[likes] decrement:', e); }
+        return { success: true, liked: false };
+      } else {
+        // Nouveau like
+        await fns.setDoc(likeRef, {
+          authorUid: userInfo.uid,
+          authorName: userInfo.authorName,
+          createdAt: fns.serverTimestamp()
+        });
+        // Incrémenter le compteur
+        try {
+          const topicSnap = await fns.getDoc(topicRef);
+          if (topicSnap.exists()) {
+            const current = topicSnap.data().likesCount || 0;
+            await fns.updateDoc(topicRef, { likesCount: current + 1 });
+          }
+        } catch(e) { console.warn('[likes] increment:', e); }
+        return { success: true, liked: true };
+      }
+    } catch (e) {
+      console.error('[ForumFirestore] toggleTopicLike:', e);
+      return { success: false, error: e.message };
+    }
+  },
+
+  /**
+   * Vérifie si le user courant a liké un topic
+   */
+  async hasUserLikedTopic(topicId) {
+    if (!this._isReady() || !topicId) return false;
+    const userInfo = this._getCurrentUserInfo();
+    if (!userInfo) return false;
+    try {
+      const fns = this._fns();
+      const likeRef = fns.doc(this._db(), this.COLLECTION_TOPICS, topicId, 'likes', userInfo.uid);
+      const snap = await fns.getDoc(likeRef);
+      return snap.exists();
+    } catch (e) {
+      console.warn('[ForumFirestore] hasUserLikedTopic:', e);
+      return false;
+    }
+  },
+
+  // === V63.21 : MODÉRATION ADMIN ===
+  /**
+   * Liste TOUS les topics (incluant cachés) — Admin uniquement
+   */
+  async getAllTopicsAdmin() {
+    if (!this._isReady()) {
+      return { success: false, topics: [], error: 'Firebase non prêt' };
+    }
+    try {
+      const fns = this._fns();
+      const colRef = fns.collection(this._db(), this.COLLECTION_TOPICS);
+      const q = fns.query(colRef, fns.orderBy('createdAt', 'desc'), fns.limit(100));
+      const snap = await fns.getDocs(q);
+      const topics = [];
+      snap.forEach(d => {
+        const data = d.data();
+        topics.push({
+          id: d.id,
+          title: data.title || '',
+          body: data.body || '',
+          authorUid: data.authorUid,
+          authorName: data.authorName || 'Anonyme',
+          authorEmail: data.authorEmail || '',
+          createdAt: data.createdAt ? (data.createdAt.toMillis ? data.createdAt.toMillis() : data.createdAt) : Date.now(),
+          repliesCount: data.repliesCount || 0,
+          likesCount: data.likesCount || 0,
+          isPinned: data.isPinned || false,
+          isHidden: data.isHidden || false
+        });
+      });
+      return { success: true, topics };
+    } catch (e) {
+      console.error('[ForumFirestore] getAllTopicsAdmin:', e);
+      return { success: false, topics: [], error: e.message };
+    }
+  },
+
   // === CLEANUP ===
   /**
    * Détache tous les listeners actifs (à appeler lors de la navigation hors forum)

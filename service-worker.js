@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.20 - V63.20 : Forum Firestore (UI branchée, sync temps réel)
+// Version 6.3.21 - V63.21 : Likes Firestore + Modération admin (pin/delete)
 
-const CACHE_NAME = 'bara-concours-v6-3-20';
+const CACHE_NAME = 'bara-concours-v6-3-21';
 const APP_SHELL = [
   './',
   './index.html',

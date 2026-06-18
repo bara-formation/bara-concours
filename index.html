@@ -9002,7 +9002,7 @@ const App = {
         timestamp: t.createdAt,
         replyCount: t.repliesCount,
         replies: [], // Chargées séparément
-        upvotes: 0,
+        upvotes: t.likesCount || 0,  // V63.21 : depuis Firestore
         upvotedBy: [],
         isPinned: t.isPinned
       }));
@@ -9062,6 +9062,8 @@ const App = {
       if (this.state.currentScreen === 'forum') {
         this.render();
       }
+      // V63.21 : Précharger les likes du user
+      this.preloadMyLikes();
     });
     this.state._forumUnsubscribe = unsub;
   },
@@ -10805,12 +10807,29 @@ const App = {
     el.style.height = Math.min(el.scrollHeight, 120) + 'px';
   },
 
+  // V63.21 : Cache local de likes (pour affichage instantané sans aller-retour Firestore)
   hasUpvoted(topicId) {
+    // V63.21 : Cache local des likes utilisateur
+    const cache = this.state._myLikes || {};
+    if (cache[topicId] !== undefined) return cache[topicId];
+    // Fallback localStorage (anciens votes locaux)
     const upvotes = JSON.parse(localStorage.getItem('bara_upvotes') || '[]');
     return upvotes.includes(topicId);
   },
 
-  toggleUpvote(topicId, event) {
+  // V63.21 : Récupère le compteur de likes pour un topic depuis le cache Firestore
+  getTopicLikesCount(topicId) {
+    if (window.ForumFirestore && window.ForumFirestore._topicsCache) {
+      const ft = window.ForumFirestore._topicsCache.find(t => t.id === topicId);
+      if (ft && ft.likesCount !== undefined) return ft.likesCount;
+    }
+    // Fallback : valeur dans le topic du state
+    const topics = this.state.forumTopics || [];
+    const topic = topics.find(t => t.id === topicId);
+    return (topic && topic.upvotes) || 0;
+  },
+
+  async toggleUpvote(topicId, event) {
     if (event) event.stopPropagation();
 
     if (!this.state.user.isLoggedIn) {
@@ -10818,6 +10837,44 @@ const App = {
       return;
     }
 
+    // V63.21 : Tentative Firestore
+    if (window.ForumFirestore && window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady) {
+      // Optimistic UI : on suppose que le vote va réussir et on met à jour l'affichage tout de suite
+      if (!this.state._myLikes) this.state._myLikes = {};
+      const wasLiked = this.hasUpvoted(topicId);
+      this.state._myLikes[topicId] = !wasLiked;
+      // Mettre à jour le cache Firestore pour le compteur
+      if (window.ForumFirestore._topicsCache) {
+        const ft = window.ForumFirestore._topicsCache.find(t => t.id === topicId);
+        if (ft) {
+          ft.likesCount = Math.max(0, (ft.likesCount || 0) + (wasLiked ? -1 : 1));
+        }
+      }
+      this.render();
+
+      // Envoyer au serveur
+      try {
+        const result = await window.ForumFirestore.toggleTopicLike(topicId);
+        if (!result.success) {
+          // Rollback en cas d'erreur
+          this.state._myLikes[topicId] = wasLiked;
+          if (window.ForumFirestore._topicsCache) {
+            const ft = window.ForumFirestore._topicsCache.find(t => t.id === topicId);
+            if (ft) ft.likesCount = Math.max(0, (ft.likesCount || 0) + (wasLiked ? 1 : -1));
+          }
+          this.toast('❌ ' + (result.error || 'Erreur'), 'danger', 3000);
+          this.render();
+        }
+      } catch (e) {
+        console.error('[V63.21] toggleUpvote:', e);
+        this.state._myLikes[topicId] = wasLiked;
+        this.toast('❌ Erreur réseau', 'danger');
+        this.render();
+      }
+      return;
+    }
+
+    // Fallback localStorage (Firebase non dispo)
     const upvotes = JSON.parse(localStorage.getItem('bara_upvotes') || '[]');
     const topics = this.getForumTopics();
     const topic = topics.find(t => t.id === topicId);
@@ -10835,6 +10892,33 @@ const App = {
     localStorage.setItem('bara_upvotes', JSON.stringify(upvotes));
     this.saveForumTopics();
     this.render();
+  },
+
+  // V63.21 : Précharger les likes du user pour les topics affichés
+  async preloadMyLikes() {
+    if (!window.ForumFirestore || !window.FirebaseAuth || !window.FirebaseAuth.isFirebaseReady) return;
+    if (!this.state.user.isLoggedIn) return;
+    const cache = window.ForumFirestore._topicsCache;
+    if (!cache || cache.length === 0) return;
+    if (!this.state._myLikes) this.state._myLikes = {};
+    // Charger en parallèle (mais limité aux topics actuellement affichés)
+    const toCheck = cache.slice(0, 30).filter(t => this.state._myLikes[t.id] === undefined);
+    if (toCheck.length === 0) return;
+    try {
+      await Promise.all(toCheck.map(async t => {
+        try {
+          this.state._myLikes[t.id] = await window.ForumFirestore.hasUserLikedTopic(t.id);
+        } catch(e) {
+          this.state._myLikes[t.id] = false;
+        }
+      }));
+      // Re-render si on est sur le forum
+      if (['forum', 'forum-topic'].includes(this.state.currentScreen)) {
+        this.render();
+      }
+    } catch(e) {
+      console.warn('[V63.21] preloadMyLikes:', e);
+    }
   },
 
   reportTopic(topicId) {

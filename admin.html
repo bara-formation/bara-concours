@@ -1671,91 +1671,59 @@ const Admin = {
   // PAGE: FORUM
   // ============================================
 
+  // V63.21 : Modération forum branchée sur Firestore
   renderForumModeration() {
-    const data = this.loadData();
-    const reported = data.reportedTopics;
-    const allTopics = data.forumTopics;
+    // Charger les topics depuis Firestore (asynchrone, déclenche un re-render quand prêt)
+    if (window.ForumFirestore && !this.state._forumAdminLoaded) {
+      this._loadForumAdminTopics();
+    }
+    const topics = this.state._forumAdminTopics || [];
+    const reportedCount = JSON.parse(localStorage.getItem('bara_reports') || '[]').length;
+    const isLoading = this.state._forumAdminLoading && topics.length === 0;
 
     return `
       <div class="page-header">
         <div>
           <div class="page-title">Modération du <span>forum</span></div>
-          <div class="page-sub">${reported.length} signalement${reported.length > 1 ? 's' : ''} en attente</div>
+          <div class="page-sub">${topics.length} sujet${topics.length > 1 ? 's' : ''} sur Firestore${isLoading ? ' • ⏳ Chargement...' : ''}</div>
         </div>
+        <button class="btn-action btn-secondary" onclick="Admin._loadForumAdminTopics(true)" style="padding:0.6rem 1rem">
+          🔄 Rafraîchir
+        </button>
       </div>
 
       <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
-        <div class="stat-card" style="--accent-color:#fee2e2; --accent-text:#991b1b">
-          <div class="stat-icon">🚩</div>
-          <div class="stat-label">Signalements</div>
-          <div class="stat-value">${reported.length}</div>
+        <div class="stat-card" style="--accent-color:#fef3c7; --accent-text:#854d0e">
+          <div class="stat-icon">📌</div>
+          <div class="stat-label">Épinglés</div>
+          <div class="stat-value">${topics.filter(t => t.isPinned).length}</div>
         </div>
         <div class="stat-card" style="--accent-color:#dbeafe; --accent-text:#1e40af">
           <div class="stat-icon">💬</div>
           <div class="stat-label">Sujets total</div>
-          <div class="stat-value">${allTopics.length}</div>
+          <div class="stat-value">${topics.length}</div>
         </div>
         <div class="stat-card" style="--accent-color:#dcfce7; --accent-text:#15803d">
           <div class="stat-icon">📈</div>
           <div class="stat-label">Réponses total</div>
-          <div class="stat-value">${allTopics.reduce((s, t) => s + (t.replies?.length || t.replyCount || 0), 0)}</div>
+          <div class="stat-value">${topics.reduce((s, t) => s + (t.repliesCount || 0), 0)}</div>
+        </div>
+        <div class="stat-card" style="--accent-color:#fce7f3; --accent-text:#9d174d">
+          <div class="stat-icon">👍</div>
+          <div class="stat-label">Likes total</div>
+          <div class="stat-value">${topics.reduce((s, t) => s + (t.likesCount || 0), 0)}</div>
         </div>
       </div>
 
-      ${reported.length > 0 ? `
-        <div class="table-wrap">
-          <div class="table-header">
-            <div class="table-title">🚩 Sujets signalés</div>
-          </div>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Sujet</th>
-                <th>Auteur</th>
-                <th>Date</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${reported.map(topicId => {
-                const topic = allTopics.find(t => t.id === topicId);
-                if (!topic) return '';
-                return `
-                  <tr>
-                    <td>
-                      <div style="font-weight:600; max-width:300px; overflow:hidden; text-overflow:ellipsis">${this.escapeHTML(topic.title)}</div>
-                      <div style="font-size:0.78rem; color:var(--ink-mute); max-width:300px; overflow:hidden; text-overflow:ellipsis">${this.escapeHTML((topic.body || '').substring(0, 80))}...</div>
-                    </td>
-                    <td>${topic.authorName}</td>
-                    <td style="font-size:0.78rem; color:var(--ink-mute)">${this.formatRelativeTime(topic.timestamp)}</td>
-                    <td>
-                      <button class="btn-action btn-secondary" onclick="Admin.approveSubject('${topicId}')">✓ Approuver</button>
-                      <button class="btn-action btn-danger" onclick="Admin.deleteSubject('${topicId}')" style="margin-left:0.3rem">🗑 Supprimer</button>
-                    </td>
-                  </tr>
-                `;
-              }).join('')}
-            </tbody>
-          </table>
-        </div>
-      ` : `
-        <div class="table-wrap">
-          <div class="empty-state">
-            <div class="empty-icon">✨</div>
-            <div class="empty-title">Aucun signalement en attente</div>
-            <div class="empty-sub">Le forum est tout propre ! Bonne nouvelle.</div>
-          </div>
-        </div>
-      `}
-
       <div class="table-wrap">
         <div class="table-header">
-          <div class="table-title">💬 Tous les sujets du forum</div>
+          <div class="table-title">💬 Tous les sujets du forum Firestore</div>
         </div>
-        ${allTopics.length === 0 ? `
+        ${topics.length === 0 ? `
           <div class="empty-state">
-            <div class="empty-icon">💭</div>
-            <div class="empty-title">Aucun sujet pour l'instant</div>
+            <div class="empty-icon">${isLoading ? '⏳' : '💭'}</div>
+            <div class="empty-title">${isLoading ? 'Chargement...' : 'Aucun sujet publié pour le moment'}</div>
+            <div class="empty-sub">${isLoading ? 'Récupération depuis Firestore.' : 'Le forum est vide.'}</div>
           </div>
         ` : `
           <table class="table">
@@ -1763,22 +1731,37 @@ const Admin = {
               <tr>
                 <th>Sujet</th>
                 <th>Auteur</th>
-                <th>Réponses</th>
-                <th>Votes</th>
+                <th>💬 Réponses</th>
+                <th>👍 Likes</th>
                 <th>Date</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody>
-              ${allTopics.map(t => `
-                <tr>
-                  <td style="max-width:300px; overflow:hidden; text-overflow:ellipsis"><div style="font-weight:600">${this.escapeHTML(t.title)}</div></td>
-                  <td>${t.authorName}</td>
-                  <td>${t.replies?.length || t.replyCount || 0}</td>
-                  <td>${t.upvotes || 0}</td>
-                  <td style="font-size:0.78rem; color:var(--ink-mute)">${this.formatRelativeTime(t.timestamp)}</td>
+              ${topics.map(t => `
+                <tr style="${t.isPinned ? 'background:#fef3c7' : ''}">
+                  <td style="max-width:300px">
+                    <div style="font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">
+                      ${t.isPinned ? '📌 ' : ''}${this.escapeHTML(t.title)}
+                    </div>
+                    <div style="font-size:0.75rem; color:var(--ink-mute); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:280px">
+                      ${this.escapeHTML((t.body || '').substring(0, 90))}${(t.body || '').length > 90 ? '…' : ''}
+                    </div>
+                  </td>
+                  <td>${this.escapeHTML(t.authorName)}</td>
+                  <td>${t.repliesCount || 0}</td>
+                  <td>${t.likesCount || 0}</td>
+                  <td style="font-size:0.78rem; color:var(--ink-mute)">${this.formatRelativeTime(t.createdAt)}</td>
                   <td>
-                    <button class="btn-action btn-danger" onclick="Admin.deleteSubject('${t.id}')">🗑 Supprimer</button>
+                    <div style="display:flex; gap:0.3rem; flex-wrap:wrap">
+                      <button class="btn-action" onclick="Admin.toggleTopicPin('${t.id}', ${!t.isPinned})"
+                              style="font-size:0.78rem; padding:0.35rem 0.6rem; background:${t.isPinned ? '#fef3c7' : 'white'}; border:1.5px solid var(--gold-bf); color:#854d0e">
+                        ${t.isPinned ? '📌 Désépingler' : '📌 Épingler'}
+                      </button>
+                      <button class="btn-action btn-danger" onclick="Admin.deleteForumTopic('${t.id}')" style="font-size:0.78rem; padding:0.35rem 0.6rem">
+                        🗑 Supprimer
+                      </button>
+                    </div>
                   </td>
                 </tr>
               `).join('')}
@@ -1786,7 +1769,91 @@ const Admin = {
           </table>
         `}
       </div>
+
+      ${reportedCount > 0 ? `
+        <div style="background:linear-gradient(135deg, #fef3c7, white); border:1px solid var(--gold-bf); border-radius:10px; padding:1rem; margin-top:1rem">
+          <strong>ℹ️ ${reportedCount} signalement${reportedCount > 1 ? 's' : ''} local${reportedCount > 1 ? 'aux' : ''} en attente</strong>
+          <div style="font-size:0.85rem; color:var(--ink-mute); margin-top:0.3rem">
+            Les signalements sont stockés localement par chaque utilisateur. Pour les voir, demande au user de t'envoyer son export ou consulte les sujets individuellement.
+          </div>
+        </div>
+      ` : ''}
     `;
+  },
+
+  // V63.21 : Charger les topics depuis Firestore pour l'admin
+  async _loadForumAdminTopics(forceRefresh) {
+    if (!window.ForumFirestore) return;
+    if (this.state._forumAdminLoading && !forceRefresh) return;
+    this.state._forumAdminLoading = true;
+    this.state._forumAdminLoaded = true;
+    try {
+      const result = await window.ForumFirestore.getAllTopicsAdmin();
+      this.state._forumAdminLoading = false;
+      if (result.success) {
+        this.state._forumAdminTopics = result.topics;
+        if (this.state.currentPage === 'forum') this.render();
+      } else {
+        console.warn('[V63.21] Forum admin getAll échoué :', result.error);
+        this.toast('❌ Erreur de chargement : ' + result.error, 'danger', 4000);
+      }
+    } catch (e) {
+      this.state._forumAdminLoading = false;
+      console.error('[V63.21] Forum admin :', e);
+    }
+  },
+
+  // V63.21 : Épingler/dépingler un topic
+  async toggleTopicPin(topicId, shouldPin) {
+    if (!window.ForumFirestore) {
+      this.toast('Firebase non prêt', 'danger');
+      return;
+    }
+    const action = shouldPin ? 'Épingler' : 'Désépingler';
+    if (!confirm(action + ' ce sujet ?')) return;
+    try {
+      const result = await window.ForumFirestore.togglePinTopic(topicId, shouldPin);
+      if (result.success) {
+        // Mettre à jour localement
+        const topic = (this.state._forumAdminTopics || []).find(t => t.id === topicId);
+        if (topic) topic.isPinned = shouldPin;
+        this.toast('✓ ' + (shouldPin ? 'Sujet épinglé' : 'Sujet désépinglé'), 'success');
+        this.render();
+      } else {
+        this.toast('❌ ' + (result.error || 'Erreur'), 'danger', 4000);
+      }
+    } catch (e) {
+      console.error('[V63.21] toggleTopicPin:', e);
+      this.toast('❌ Erreur', 'danger');
+    }
+  },
+
+  // V63.21 : Supprimer un topic Firestore
+  async deleteForumTopic(topicId) {
+    if (!window.ForumFirestore) {
+      this.toast('Firebase non prêt', 'danger');
+      return;
+    }
+    // Récupérer le titre depuis le cache local
+    const topic = (this.state._forumAdminTopics || []).find(t => t.id === topicId);
+    const title = topic ? topic.title : '(titre inconnu)';
+    if (!confirm('⚠️ SUPPRIMER ce sujet ?\n\n"' + title.substring(0, 80) + '"\n\nLes réponses ne seront PAS supprimées (Firestore ne fait pas le cascade automatique). Cette action est définitive.')) return;
+    try {
+      const result = await window.ForumFirestore.deleteTopic(topicId);
+      if (result.success) {
+        // Retirer de la liste locale
+        if (this.state._forumAdminTopics) {
+          this.state._forumAdminTopics = this.state._forumAdminTopics.filter(t => t.id !== topicId);
+        }
+        this.toast('🗑 Sujet supprimé', 'success');
+        this.render();
+      } else {
+        this.toast('❌ ' + (result.error || 'Erreur'), 'danger', 4000);
+      }
+    } catch (e) {
+      console.error('[V63.21] deleteForumTopic:', e);
+      this.toast('❌ Erreur', 'danger');
+    }
   },
 
   approveSubject(topicId) {
