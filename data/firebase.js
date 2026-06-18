@@ -82,7 +82,12 @@ const FirebaseAuth = {
         query: dbMod.query,
         where: dbMod.where,
         getDocs: dbMod.getDocs,
-        deleteDoc: dbMod.deleteDoc
+        deleteDoc: dbMod.deleteDoc,
+        // V63.19 : Pour le forum Firestore
+        orderBy: dbMod.orderBy,
+        limit: dbMod.limit,
+        addDoc: dbMod.addDoc,
+        onSnapshot: dbMod.onSnapshot
       };
 
       this.isFirebaseReady = true;

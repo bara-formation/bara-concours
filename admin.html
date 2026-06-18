@@ -781,6 +781,8 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 <script src="data/annales.js"></script>
 <script src="data/sessions.js"></script>
 <script src="data/firebase.js"></script>
+<script src="data/forum.js"></script>
+<script src="data/forum_firestore.js"></script>
 
 <script>
 /* ===========================================
@@ -841,9 +843,14 @@ const Admin = {
       // Sauvegarder dans le cache local
       localStorage.setItem('bara_real_users_cache', JSON.stringify(result.users));
       this.state._usersRefreshing = false;
-      // Re-render si on est sur une page qui affiche des users
-      if (['dashboard', 'users', 'payments'].includes(this.state.currentPage)) {
+      // V63.19 : Re-render seulement si on n'est PAS en train d'écrire dans la recherche
+      // (sinon l'input perd le focus à chaque lettre tapée)
+      const activeEl = document.activeElement;
+      const isTypingInSearch = activeEl && activeEl.classList && activeEl.classList.contains('search-input');
+      if (['dashboard', 'users', 'payments'].includes(this.state.currentPage) && !isTypingInSearch) {
         this.render();
+      } else if (isTypingInSearch) {
+        console.log('[V63.19] Re-render différé (saisie en cours dans la recherche)');
       }
     } catch (e) {
       console.error('[V59] Erreur refresh users :', e);
@@ -6918,7 +6925,23 @@ E: Le Burkina Faso compte 13 régions administratives depuis 2001.`;
 
   search(q) {
     this.state.searchQuery = q;
+    // V63.19 : Re-render complet, MAIS on restaure le focus + curseur sur la search-input après
+    const activeEl = document.activeElement;
+    const wasInSearch = activeEl && activeEl.classList && activeEl.classList.contains('search-input');
+    const cursorPos = wasInSearch ? activeEl.selectionStart : null;
     this.render();
+    // V63.19 : Restaurer le focus et la position du curseur
+    if (wasInSearch) {
+      setTimeout(() => {
+        const newSearchInput = document.querySelector('.search-input');
+        if (newSearchInput) {
+          newSearchInput.focus();
+          if (cursorPos !== null) {
+            try { newSearchInput.setSelectionRange(cursorPos, cursorPos); } catch(e) {}
+          }
+        }
+      }, 0);
+    }
   },
 
   toggleSidebar() {
