@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.22 - V63.22 : +1115 questions (francais, halieutique, informatique, environnement, cg)
+// Version 6.3.23 - V63.23 : Dégrisage ciblé halieutique + informatique (13 concours)
 
-const CACHE_NAME = 'bara-concours-v6-3-22';
+const CACHE_NAME = 'bara-concours-v6-3-23';
 const APP_SHELL = [
   './',
   './index.html',
