@@ -1,6 +1,6 @@
 // Bara Concours - Base de questions QCM
-// Mis à jour le 2026-06-17 - V63.18 : 93 modifications cg + tous fixes
-// Total : 3944 questions réparties sur 36 matières
+// Mis à jour le 2026-06-23 - V63.22 : +1115 questions (francais/halieutique/informatique/environnement/cg)
+// Total : 5059 questions réparties sur 37 matières
 
 const QUESTIONS = {
   "francais": [
@@ -3842,6 +3842,2206 @@ const QUESTIONS = {
       ],
       "r": 3,
       "x": "\"Notifier quelqu'un de quelque chose\" = l'informer formellement et officiellement (acte administratif). \"Avertir quelqu'un de quelque chose\" = l'informer, le prévenir. Les deux sont corrects. \"Notifier\" a une portée plus formelle et juridique. \"Rappelé à\" (rappeler à quelqu'un = lui rappeler une obligation) est différent. En concours, \"notifié\" et \"averti\" sont tous deux acceptés. Piège : croire que seul \"notifié\" est correct dans le style administratif."
+    },
+    {
+      "q": "Un poème de 14 vers composé de 2 quatrains et 2 tercets s'appelle :",
+      "o": [
+        "Une ballade",
+        "Une élégie",
+        "Un sonnet",
+        "Une ode"
+      ],
+      "r": 2,
+      "x": "Le sonnet est la forme fixe la plus connue de la poésie française classique. Structure canonique : 2 quatrains (ABBA ABBA) + 2 tercets (CCD EDE ou CCD EED)."
+    },
+    {
+      "q": "La coupe qui divise l'alexandrin en deux groupes de 6 syllabes s'appelle :",
+      "o": [
+        "La diérèse",
+        "La rime",
+        "L'enjambement",
+        "La césure"
+      ],
+      "r": 3,
+      "x": "La césure est la pause rythmique obligatoire à l'intérieur du vers, notamment après la 6e syllabe dans l'alexandrin classique. Les deux groupes de 6 syllabes s'appellent hémistiches."
+    },
+    {
+      "q": "Le schéma de rimes ABBA est dit :",
+      "o": [
+        "Croisé",
+        "Embrassé",
+        "Plat",
+        "Alterné"
+      ],
+      "r": 1,
+      "x": "Rimes embrassées : la rime B est \"embrassée\" par les deux rimes A. ABAB = rimes croisées. AABB = rimes plates ou suivies."
+    },
+    {
+      "q": "L'enjambement est le fait que :",
+      "o": [
+        "Deux vers consécutifs partagent une même rime",
+        "La syntaxe d'une phrase déborde sur le vers suivant",
+        "Un vers comporte une syllabe de trop",
+        "Le poète alterne vers courts et vers longs"
+      ],
+      "r": 1,
+      "x": "L'enjambement crée un effet de fluidité ou de tension en refusant la pause en fin de vers. Le mot rejeté au vers suivant est appelé \"rejet\"."
+    },
+    {
+      "q": "La diérèse, en versification, consiste à :",
+      "o": [
+        "Fusionner deux voyelles en une seule syllabe",
+        "Scander deux voyelles contiguës en deux syllabes distinctes",
+        "Supprimer le \"e\" muet devant une voyelle",
+        "Couper un vers en deux parties inégales"
+      ],
+      "r": 1,
+      "x": "Exemple : La diérèse consiste à prononcer séparément deux voyelles normalement réunies. \"vi-o-lon\" = 3 syllabes avec diérèse ; \"vio-lon\" = 2 syllabes avec synérèse. La synérèse est l'inverse de la diérèse."
+    },
+    {
+      "q": "Un distique est une strophe composée de :",
+      "o": [
+        "Deux vers",
+        "Trois vers",
+        "Quatre vers",
+        "Six vers"
+      ],
+      "r": 0,
+      "x": "Distique = 2 vers. Tercet = 3 vers. Quatrain = 4 vers. Sizain = 6 vers. Huitain = 8 vers. Dizain = 10 vers."
+    },
+    {
+      "q": "La rime est dite \"riche\" lorsque les deux mots rimants partagent :",
+      "o": [
+        "Uniquement la voyelle tonique finale",
+        "La voyelle tonique et une consonne",
+        "Trois sons communs ou plus",
+        "La même consonne initiale seulement"
+      ],
+      "r": 2,
+      "x": "Rime pauvre = 1 son commun. Rime suffisante = 2 sons communs. Rime riche = 3 sons communs ou plus. Exemple de rime riche : \"chante / enchante\"."
+    },
+    {
+      "q": "L'octosyllabe est un vers de :",
+      "o": [
+        "Six syllabes",
+        "Huit syllabes",
+        "Dix syllabes",
+        "Douze syllabes"
+      ],
+      "r": 1,
+      "x": "Vers fréquent dans la poésie médiévale et dans les Fables de La Fontaine. À mémoriser : octo = 8, déca = 10, alexandrin = 12."
+    },
+    {
+      "q": "La fable est caractérisée par :",
+      "o": [
+        "Un récit en prose suivi d'un épilogue",
+        "Un long poème épique en alexandrins",
+        "Un court récit versifié ou en prose suivi d'une morale",
+        "Un dialogue entre personnages nobles"
+      ],
+      "r": 2,
+      "x": "La fable met en scène des animaux ou des personnages allégoriques et se termine par une morale explicite ou implicite. La Fontaine a porté ce genre à son apogée."
+    },
+    {
+      "q": "Le \"rejet\" en versification désigne :",
+      "o": [
+        "Un vers refusé par l'éditeur",
+        "Un son répété en tête de plusieurs vers",
+        "Le premier élément d'un vers appartenant syntaxiquement au vers précédent",
+        "Un poème dont les rimes sont supprimées"
+      ],
+      "r": 2,
+      "x": "Le rejet est le fragment de phrase \"rejeté\" au début du vers suivant, créant un effet de surprise ou d'emphase. Il s'oppose à la \"contre-rejet\" qui projette un élément en fin de vers avant une pause."
+    },
+    {
+      "q": "\"Il voit le jour\" pour dire \"il naît\" est un exemple de :",
+      "o": [
+        "Métaphore",
+        "Antithèse",
+        "Synecdoque",
+        "Périphrase"
+      ],
+      "r": 3,
+      "x": "La périphrase remplace un mot par une expression détournée. À ne pas confondre avec la métonymie (relation de contiguïté) ou la métaphore (comparaison implicite)."
+    },
+    {
+      "q": "La répétition d'une même consonne dans des mots rapprochés s'appelle :",
+      "o": [
+        "Assonance",
+        "Anaphore",
+        "Allitération",
+        "Épiphore"
+      ],
+      "r": 2,
+      "x": "Allitération = répétition de consonnes. Assonance = répétition de voyelles. Anaphore = répétition d'un mot en tête de groupe. \"Pour qui sont ces serpents qui sifflent sur vos têtes\" (Racine) : allitération en [s]."
+    },
+    {
+      "q": "La répétition d'une même voyelle dans des mots rapprochés s'appelle :",
+      "o": [
+        "Allitération",
+        "Assonance",
+        "Homéotéleute",
+        "Anaphore"
+      ],
+      "r": 1,
+      "x": "Assonance = répétition de la même voyelle tonique. Exemple : \"Les sanglots longs des violons\" (Verlaine) — répétition du son [ɔ̃]. Fréquente en poésie pour créer une musicalité."
+    },
+    {
+      "q": "\"Homme libre, toujours tu chériras la mer !\" : le terme \"Homme libre\" est une :",
+      "o": [
+        "Épithète détachée",
+        "Apposition",
+        "Apostrophe",
+        "Métaphore"
+      ],
+      "r": 2,
+      "x": "L'apostrophe est l'interpellation directe d'une personne, d'un animal ou d'une chose abstraite. Ici, le poète s'adresse à \"l'homme libre\" pour lui parler de la mer. Figure caractéristique de la poésie lyrique."
+    },
+    {
+      "q": "\"La mort, c'est une nuit éternelle\" est un exemple de :",
+      "o": [
+        "Comparaison",
+        "Métaphore",
+        "Allégorie",
+        "Périphrase"
+      ],
+      "r": 1,
+      "x": "Métaphore : identification implicite sans outil comparatif. \"La mort = une nuit éternelle\" sans \"comme\". Si on avait \"la mort est comme une nuit éternelle\", ce serait une comparaison."
+    },
+    {
+      "q": "\"Dieu, que la guerre est jolie !\" quand l'auteur pense le contraire est :",
+      "o": [
+        "Une litote",
+        "Une hyperbole",
+        "Une antiphrase",
+        "Un euphémisme"
+      ],
+      "r": 2,
+      "x": "L'antiphrase dit le contraire de sa pensée sur un ton ironique. La litote dit moins pour suggérer plus. L'euphémisme atténue une réalité déplaisante sans ironie nécessaire."
+    },
+    {
+      "q": "\"Un doux parfum d'amertume\" est un exemple de :",
+      "o": [
+        "Antithèse",
+        "Oxymore",
+        "Hyperbole",
+        "Métonymie"
+      ],
+      "r": 1,
+      "x": "L'oxymore unit deux termes contradictoires dans un même groupe nominal. L'antithèse oppose deux idées dans deux propositions distinctes."
+    },
+    {
+      "q": "\"Il vit, il vit encore, il vivra éternellement\" est un exemple de :",
+      "o": [
+        "Anaphore",
+        "Accumulation",
+        "Gradation",
+        "Épizeuxe"
+      ],
+      "r": 2,
+      "x": "Gradation ascendante : intensité croissante de terme en terme. Ici : présent → présent renforcé → futur éternel. L'accumulation liste des éléments de même niveau sans progression d'intensité."
+    },
+    {
+      "q": "La figure qui consiste à croiser les éléments de deux groupes parallèles s'appelle :",
+      "o": [
+        "Anaphore",
+        "Chiasme",
+        "Parataxe",
+        "Épiphore"
+      ],
+      "r": 1,
+      "x": "Chiasme (structure AB/BA) : \"Il faut manger pour vivre et non vivre pour manger.\" Les éléments se croisent comme les deux barres du X grec (chi). Fréquent dans les proverbes et les formules mémorables."
+    },
+    {
+      "q": "\"Je le vis, je rougis, je pâlis à sa vue\" : la suppression des conjonctions entre les propositions s'appelle :",
+      "o": [
+        "Polysyndète",
+        "Zeugme",
+        "Asyndète",
+        "Parataxe"
+      ],
+      "r": 2,
+      "x": "Asyndète = juxtaposition sans conjonction, créant un effet de rapidité. La polysyndète est l'inverse : répétition excessive de conjonctions. La parataxe est plus générale (juxtaposition de phrases)."
+    },
+    {
+      "q": "\"Il perdit son argent et la tête\" unit deux COD dont l'un s'emploie au sens propre et l'autre au sens figuré. Cette figure s'appelle :",
+      "o": [
+        "Syllepse",
+        "Zeugme",
+        "Antithèse",
+        "Oxymore"
+      ],
+      "r": 1,
+      "x": "Le zeugme unit syntaxiquement deux éléments de nature incompatible sous un même verbe. Produit un effet comique ou expressif par la disparité des régimes."
+    },
+    {
+      "q": "\"Ô temps, suspends ton vol !\" (Lamartine) : cette adresse au Temps est :",
+      "o": [
+        "Une personnification",
+        "Une apostrophe",
+        "Les deux à la fois",
+        "Un euphémisme"
+      ],
+      "r": 2,
+      "x": "Apostrophe = interpellation directe du Temps. Personnification = le Temps est personnifié puisqu'il est présenté comme un être auquel on peut s'adresser et donner un ordre. Ces deux figures coexistent souvent dans la poésie romantique."
+    },
+    {
+      "q": "La prétérition consiste à :",
+      "o": [
+        "Répéter la même idée avec des mots différents",
+        "Dire qu'on ne va pas parler d'un sujet tout en en parlant",
+        "Employer un mot dans son sens étymologique",
+        "Omettre volontairement une partie de la phrase"
+      ],
+      "r": 1,
+      "x": "Exemple : \"Je ne mentionnerai pas ses nombreux échecs, ses dettes, sa lâcheté...\" La prétérition est une figure rhétorique paradoxale très utilisée dans les plaidoiries et les discours politiques."
+    },
+    {
+      "q": "\"La plume est plus forte que l'épée\" : \"la plume\" désigne l'écriture et \"l'épée\" la guerre. Cette figure est :",
+      "o": [
+        "Une synecdoque",
+        "Une métaphore",
+        "Une métonymie",
+        "Une allégorie"
+      ],
+      "r": 2,
+      "x": "Métonymie : l'instrument désigne l'activité qui l'utilise. La synecdoque désigne un tout par une de ses parties. La métaphore implique une ressemblance."
+    },
+    {
+      "q": "\"La Seine coule à Paris, mais Paris coule dans la Seine aussi.\" Le jeu syntaxique AB/BA est :",
+      "o": [
+        "Une anaphore",
+        "Un chiasme",
+        "Une gradation",
+        "Une épanalepse"
+      ],
+      "r": 1,
+      "x": "Chiasme : les termes \"la Seine\" et \"Paris\" sont croisés selon la structure AB / BA. Figure rhétorique très appréciée pour ses effets de symétrie et de paradoxe."
+    },
+    {
+      "q": "\"Même si tu insistes, je ne changerai pas d'avis.\" Le verbe de la subordonnée est :",
+      "o": [
+        "Au subjonctif présent",
+        "Au conditionnel présent",
+        "À l'indicatif présent",
+        "À l'imparfait de l'indicatif"
+      ],
+      "r": 2,
+      "x": "\"Même si\" + indicatif (contrairement à \"quand bien même\" + conditionnel). \"Même si\" introduit une hypothèse concédée à l'indicatif. \"Quand bien même il insistât/insisterait...\" serait plus soutenu avec conditionnel."
+    },
+    {
+      "q": "\"À peine avait-il terminé qu'on l'interrompit.\" L'inversion du sujet après \"à peine\" est :",
+      "o": [
+        "Facultative et stylistique",
+        "Obligatoire en langue soutenue",
+        "Uniquement possible à l'oral",
+        "Réservée au passé simple"
+      ],
+      "r": 1,
+      "x": "Après \"à peine\" en tête de phrase, l'inversion sujet-verbe est normalement exigée en langue soutenue. La construction signifie \"il avait à peine terminé que...\". Piège : omettre l'inversion en langue courante."
+    },
+    {
+      "q": "\"C'est lui qui a pris la décision.\" Cette tournure est :",
+      "o": [
+        "Une proposition relative attribut",
+        "Une mise en relief par extraction",
+        "Une proposition participiale",
+        "Une proposition infinitive"
+      ],
+      "r": 1,
+      "x": "La mise en relief par extraction (\"c'est... qui/que\") permet de focaliser sur un élément de la phrase. \"C'est lui qui\" extrait le sujet ; \"c'est lui que\" extrairait le COD. Construction très fréquente à l'oral."
+    },
+    {
+      "q": "\"Travailler, c'est sa seule passion.\" L'infinitif \"travailler\" est ici :",
+      "o": [
+        "Un complément circonstanciel",
+        "Un attribut du sujet",
+        "Le sujet de la phrase",
+        "Un COD du verbe \"c'est\""
+      ],
+      "r": 2,
+      "x": "L'infinitif peut être sujet en français. \"Travailler\" = sujet de \"c'est\". La structure \"infinitif + c'est + attribut\" est une construction nominale fréquente dans la langue soutenue."
+    },
+    {
+      "q": "\"Ce faisant, il a évité bien des erreurs.\" \"Ce faisant\" est :",
+      "o": [
+        "Un gérondif accordé avec le COD",
+        "Une locution adverbiale signifiant \"en agissant ainsi\"",
+        "Un pronom démonstratif suivi d'un participe",
+        "Un participe présent accordé avec le sujet"
+      ],
+      "r": 1,
+      "x": "\"Ce faisant\" = locution figée invariable signifiant « en agissant ainsi ». Elle exprime la simultanéité ou le moyen. Toujours invariable quelle que soit la construction de la phrase."
+    },
+    {
+      "q": "\"Nu-pieds dans le sable\" : l'accord de \"nu\" est :",
+      "o": [
+        "Accordé avec \"pieds\" au pluriel",
+        "Invariable car adverbe avant un nom",
+        "Invariable car placé avant le nom",
+        "Accordé en genre avec le nom le plus proche"
+      ],
+      "r": 2,
+      "x": "\"Nu\" placé avant un nom avec trait d'union est un préfixe invariable. En revanche, après le nom sans trait d'union, il s'accorde : \"les pieds nus\"."
+    },
+    {
+      "q": "\"Garde-à-vous\" au pluriel s'écrit :",
+      "o": [
+        "gardes-à-vous",
+        "gardes-à-voux",
+        "garde-à-vous",
+        "gardes-à-vousses"
+      ],
+      "r": 2,
+      "x": "\"Garde-à-vous\" est une locution nominale figée qui ne prend pas la marque du pluriel. Les mots composés figés avec trait d'union ont souvent un pluriel invariable quand ils fonctionnent comme interjections ou injonctions."
+    },
+    {
+      "q": "\"La moitié des agents étaient absents.\" Cet accord du verbe au pluriel est :",
+      "o": [
+        "Obligatoirement fautif",
+        "Justifié par le sens",
+        "Possible uniquement à l'oral",
+        "Réservé au conditionnel"
+      ],
+      "r": 1,
+      "x": "Avec \"la moitié de + nom pluriel\", l'accord peut se faire au singulier (avec \"la moitié\") ou au pluriel (avec \"des agents\") selon qu'on insiste sur la fraction ou sur les personnes. Les deux sont tolérés."
+    },
+    {
+      "q": "\"Force est de constater que la situation évolue.\" \"Force est de\" signifie :",
+      "o": [
+        "Il est interdit de",
+        "Il est possible de",
+        "Il est impossible de ne pas",
+        "Il est fortement déconseillé de"
+      ],
+      "r": 2,
+      "x": "\"Force est de + infinitif\" = on ne peut pas éviter de, on est contraint de. Locution impersonnelle de la langue soutenue et administrative. Équivalent de \"il faut bien reconnaître que\"."
+    },
+    {
+      "q": "\"Jadis\" se distingue de \"naguère\" en ce que :",
+      "o": [
+        "\"Jadis\" désigne un passé récent ; \"naguère\" un passé lointain",
+        "\"Jadis\" désigne un passé lointain ; \"naguère\" un passé récent",
+        "Les deux désignent un passé indéterminé",
+        "\"Naguère\" désigne l'avenir proche"
+      ],
+      "r": 1,
+      "x": "\"Jadis\" = il y a très longtemps (passé lointain). \"Naguère\" = il n'y a guère (= pas longtemps), donc passé récent. Confusion fréquente dans les copies : \"naguère\" vient de \"n'a guère\", soit \"il y a peu de temps\"."
+    },
+    {
+      "q": "\"En tant que directeur, il signe les arrêtés.\" \"En tant que\" exprime :",
+      "o": [
+        "La cause",
+        "La comparaison",
+        "La qualité",
+        "La concession"
+      ],
+      "r": 2,
+      "x": "\"En tant que\" introduit une qualité, un titre ou une fonction. Équivalent de \"en sa qualité de\", \"dans l'exercice de ses fonctions de\". À distinguer de \"comme\" qui peut avoir d'autres valeurs."
+    },
+    {
+      "q": "Le gérondif \"en travaillant\" indique que l'action est :",
+      "o": [
+        "Antérieure à celle du verbe principal",
+        "Postérieure à celle du verbe principal",
+        "Simultanée à celle du verbe principal",
+        "Hypothétique par rapport au verbe principal"
+      ],
+      "r": 2,
+      "x": "Le gérondif exprime la simultanéité avec l'action du verbe principal. Il peut aussi exprimer la cause, le moyen ou la condition selon le contexte. Il est toujours invariable et a le même sujet que le verbe principal."
+    },
+    {
+      "q": "\"Quitte à déplaire, il a dit la vérité.\" \"Quitte à\" exprime :",
+      "o": [
+        "La cause directe d'une action",
+        "La condition nécessaire à une action",
+        "L'acceptation d'un risque",
+        "L'opposition entre deux actions"
+      ],
+      "r": 2,
+      "x": "\"Quitte à + infinitif\" = au risque de, même si cela implique tel inconvénient. Construction idiomatique de la langue courante et soutenue."
+    },
+    {
+      "q": "\"Il a _______ plusieurs erreurs dans ce texte.\" Choisissez le PP correct de \"déceler\".",
+      "o": [
+        "décelés",
+        "décelée",
+        "déceler",
+        "décelé"
+      ],
+      "r": 3,
+      "x": "\"Plusieurs erreurs\" est COD féminin pluriel, mais il est placé APRÈS le verbe → PP invariable avec \"avoir\". Piège : croire que \"plusieurs erreurs\" est antéposé alors qu'il est postposé."
+    },
+    {
+      "q": "\"Combien d'agents ont réussi cette épreuve ?\" Le verbe s'accorde :",
+      "o": [
+        "Toujours au singulier avec \"combien de\"",
+        "Avec le nom qui suit \"de\" quand il est sujet réel",
+        "Obligatoirement au pluriel",
+        "Avec le pronom \"combien\" uniquement"
+      ],
+      "r": 1,
+      "x": "\"Combien de + nom\" : le verbe s'accorde avec le nom complément, sujet logique de la phrase. \"Combien d'agents ont réussi\" → accord au pluriel avec \"agents\"."
+    },
+    {
+      "q": "\"Ce sont eux qui ont rédigé ce rapport.\" \"Ce sont\" est utilisé car :",
+      "o": [
+        "\"Ce\" est toujours suivi de \"sont\" avant un pronom",
+        "Le sujet réel \"eux\" est à la troisième personne du pluriel",
+        "\"Eux\" est toujours précédé de \"ce sont\"",
+        "La mise en relief le commande systématiquement"
+      ],
+      "r": 1,
+      "x": "Règle : \"c'est\" + singulier ou \"c'est\" + pronom singulier ; \"ce sont\" + pluriel nominal ou \"ce sont\" + pronom pluriel de la 3e personne. \"Eux\" est pluriel → \"ce sont eux\"."
+    },
+    {
+      "q": "L'apostrophe comme figure de style désigne :",
+      "o": [
+        "L'interpellation directe",
+        "Un signe de ponctuation marquant l'élision",
+        "La répétition d'un même mot en tête de phrase",
+        "Un terme technique de la versification française"
+      ],
+      "r": 0,
+      "x": "L'apostrophe grammaticale = mise en relief d'un terme par interpellation directe. Elle correspond aussi à la figure de style apostrophe. Ne pas confondre avec l'apostrophe typographique (signe ')."
+    },
+    {
+      "q": "\"Avoir beau + infinitif\" exprime :",
+      "o": [
+        "Une action particulièrement bien accomplie",
+        "Une belle occasion qui se présente",
+        "Une action menée sans résultat, en vain",
+        "Une aptitude ou une capacité particulière"
+      ],
+      "r": 2,
+      "x": "\"Il a beau travailler, il ne réussit pas\" = bien qu'il travaille, sans résultat. Construction idiomatique concessive importante pour les épreuves de transformation de phrases."
+    },
+    {
+      "q": "\"Il parte ou qu'il reste, peu importe.\" Pour compléter correctement, la locution corrélative est :",
+      "o": [
+        "Soit que... ou que",
+        "Que... que",
+        "Soit que... soit que",
+        "Bien que... bien que"
+      ],
+      "r": 2,
+      "x": "\"Soit que... soit que + subjonctif\" exprime l'alternative concessive. \"Soit qu'il parte, soit qu'il reste...\" Les deux propositions doivent être au subjonctif."
+    },
+    {
+      "q": "\"La proposition infinitive\" dans \"J'entends chanter les oiseaux\" implique que :",
+      "o": [
+        "\"Chanter\" est attribut du COD",
+        "\"Les oiseaux\" est sujet de \"chanter\" et COD de \"j'entends\"",
+        "\"Chanter les oiseaux\" est un groupe nominal sujet",
+        "\"Chanter\" est un COD de \"j'entends\" sans sujet propre"
+      ],
+      "r": 1,
+      "x": "Proposition infinitive : verbe de perception + infinitif + sujet propre de l'infinitif. \"Les oiseaux\" est à la fois sujet de \"chanter\" et COD de \"j'entends\". Construction fréquente avec : voir, entendre, sentir, regarder, écouter."
+    },
+    {
+      "q": "\"Il _______ les mains avant d'entrer.\" PP de \"se laver\" dans cette construction.",
+      "o": [
+        "s'est lavé",
+        "s'est lavée",
+        "s'est lavés",
+        "s'est lavées"
+      ],
+      "r": 0,
+      "x": "\"Se laver les mains\" : \"les mains\" = COD postposé. Le pronom \"se\" = COI. PP invariable : \"lavé\". Règle: quand un COD nominal suit le verbe pronominal, le PP ne s'accorde pas."
+    },
+    {
+      "q": "\"Elle s'est _______ les mains avant d'entrer.\" PP de \"se laver\" si le sujet est féminin.",
+      "o": [
+        "lavée",
+        "lavé",
+        "lavées",
+        "lavis"
+      ],
+      "r": 1,
+      "x": "COD \"les mains\" est postposé, donc PP invariable \"lavé\" quel que soit le genre du sujet. Piège classique d'accord du PP pronominal avec COD nominal."
+    },
+    {
+      "q": "\"Voire\" dans \"il faut de la méthode, voire de la rigueur\" signifie :",
+      "o": [
+        "Cependant, néanmoins",
+        "C'est-à-dire, en d'autres termes",
+        "Et même, et plus encore",
+        "À moins que, sauf si"
+      ],
+      "r": 2,
+      "x": "\"Voire\" = renforcement qui introduit un élément supérieur ou plus fort encore. Souvent confondu avec \"voire même\" (pléonasme à éviter). Proche de \"et même\" ou \"et davantage encore\"."
+    },
+    {
+      "q": "\"De là à dire qu'il a menti...\" exprime :",
+      "o": [
+        "Une cause directe",
+        "Un passage logique difficile à franchir",
+        "Une conséquence inévitable",
+        "Une condition hypothétique"
+      ],
+      "r": 1,
+      "x": "\"De là à + infinitif\" signifie \"franchir le pas d'affirmer que...\". Implique une réserve : ce n'est pas une conclusion automatique mais une inférence jugée excessive par le locuteur."
+    },
+    {
+      "q": "La phrase \"Soudain retentit un coup de tonnerre.\" présente :",
+      "o": [
+        "Un verbe au passif",
+        "Un sujet postposé avec inversion",
+        "Un adverbe attribut du sujet",
+        "Un complément circonstanciel antéposé avec ellipse"
+      ],
+      "r": 1,
+      "x": "Inversion du sujet \"un coup de tonnerre\" après le verbe. Fréquent avec les verbes intransitifs de mouvement ou de survenance quand un adverbe ou complément ouvre la phrase. Style littéraire soutenu."
+    },
+    {
+      "q": "\"Fallacieux\" qualifie un argument :",
+      "o": [
+        "Difficile à comprendre sans aide",
+        "Trompeur, à l'apparence de vérité mais fondé sur l'erreur",
+        "Particulièrement rigoureux et logique",
+        "Exprimé de façon trop brève"
+      ],
+      "r": 1,
+      "x": "\"Fallacieux\" (du latin \"fallax\" = trompeur). Proche de \"spécieux\" mais \"fallacieux\" insiste sur l'intention de tromper, \"spécieux\" sur la belle apparence sans substance."
+    },
+    {
+      "q": "Un discours \"laudatif\" est un discours :",
+      "o": [
+        "Qui accuse et condamne sévèrement",
+        "Difficile à comprendre sans culture particulière",
+        "Qui célèbre et fait l'éloge de quelqu'un",
+        "Qui exprime la colère de l'orateur"
+      ],
+      "r": 2,
+      "x": "\"Laudatif\" (du latin \"laudare\" = louer). Proche de \"panégyrique\" mais plus courant. Antonyme : \"dépréciatif\", \"péjoratif\", \"critique\"."
+    },
+    {
+      "q": "\"Tendancieux\" qualifie ce qui :",
+      "o": [
+        "Représente fidèlement la réalité observée",
+        "Présente les faits de manière orientée pour influencer",
+        "Exprime une tendance nouvelle prometteuse",
+        "Propose une synthèse exhaustive et équilibrée"
+      ],
+      "r": 1,
+      "x": "\"Tendancieux\" = partial, orienté, qui déforme la vérité dans un sens préétabli. À distinguer de \"partial\" (qui prend parti) et de \"partisan\" (qui sert un parti)."
+    },
+    {
+      "q": "\"Rédhibitoire\" signifie :",
+      "o": [
+        "Qui peut être corrigé sans grande difficulté",
+        "Qui est relatif à la rédaction administrative",
+        "Qui constitue un obstacle insurmontable à une décision",
+        "Qui manque de clarté dans son expression"
+      ],
+      "r": 2,
+      "x": "\"Rédhibitoire\" (du latin \"reddhibere\" = retourner la marchandise) : se dit d'un défaut ou d'une condition qui empêche définitivement une chose. \"Un vice rédhibitoire\" en droit annule la vente."
+    },
+    {
+      "q": "La \"sinécure\" désigne :",
+      "o": [
+        "Un poste très exigeant et mal rémunéré",
+        "Un traitement urgent pour une maladie grave",
+        "Une mesure d'urgence prise à titre conservatoire",
+        "Un emploi bien rémunéré sans grande exigence réelle"
+      ],
+      "r": 3,
+      "x": "\"Sinécure\" (du latin \"sine cura\" = sans souci) : poste facile offrant des revenus sans travail effectif. \"Ce n'est pas une sinécure\" signifie que la tâche est difficile."
+    },
+    {
+      "q": "\"Spécieux\" qualifie ce qui :",
+      "o": [
+        "Concerne un domaine très spécialisé",
+        "A une apparence de vérité mais est faux en réalité",
+        "Est particulièrement précis et bien documenté",
+        "Traite des espèces végétales ou animales"
+      ],
+      "r": 1,
+      "x": "\"Spécieux\" (du latin \"speciosus\" = beau à voir) = ce qui semble valide en apparence mais ne l'est pas. Proche de \"fallacieux\" mais sans nécessairement l'intention de tromper."
+    },
+    {
+      "q": "Un panégyrique est :",
+      "o": [
+        "Un discours de mise en accusation devant un tribunal",
+        "Une analyse critique sévère d'une œuvre ou d'une action",
+        "Un éloge solennel d'une personne ou d'une institution",
+        "Un texte officiel résumant les décisions d'un organe"
+      ],
+      "r": 2,
+      "x": "\"Panégyrique\" (du grec \"paneguris\" = assemblée de tout le peuple). Antonyme : \"réquisitoire\" (accusation), \"diatribe\" (attaque violente)."
+    },
+    {
+      "q": "\"Vindicatif\" qualifie quelqu'un qui :",
+      "o": [
+        "Défend avec ardeur les causes de la justice",
+        "Pardonne facilement les torts qu'on lui a causés",
+        "Cherche à se venger des offenses reçues",
+        "Exprime franchement et directement ses opinions"
+      ],
+      "r": 2,
+      "x": "\"Vindicatif\" (du latin \"vindicta\" = vengeance). Ne pas confondre avec \"revendicatif\" (qui revendique des droits) — faux amis partiels."
+    },
+    {
+      "q": "\"Superfétatoire\" désigne ce qui est :",
+      "o": [
+        "Absolument indispensable et urgent",
+        "Très difficile à accomplir dans les délais",
+        "Superflu, inutile parce qu'en surplus de ce qui suffit",
+        "Particulièrement bénéfique dans ce contexte"
+      ],
+      "r": 2,
+      "x": "\"Superfétatoire\" (du latin \"superfetare\" = concevoir par-dessus). Ce mot s'emploie pour une redondance inutile ou un ornement superflu. Exemple : \"Ces précisions sont superfétatoires.\""
+    },
+    {
+      "q": "\"Édulcoré\" qualifie un discours ou un texte :",
+      "o": [
+        "Très technique et réservé aux spécialistes",
+        "Adouci, atténué, expurgé de ses éléments choquants",
+        "Particulièrement direct et sans nuance",
+        "Enrichi de nombreux exemples concrets"
+      ],
+      "r": 1,
+      "x": "\"Édulcoré\" (de \"édulcorer\" = adoucir avec du sucre). Qualifie un propos dont on a supprimé les aspects trop forts ou choquants. Connotation parfois péjorative de dénaturation de la vérité."
+    },
+    {
+      "q": "\"Abscons\" qualifie :",
+      "o": [
+        "Un texte très clair et d'accès immédiat",
+        "Un texte comportant de nombreuses lacunes",
+        "Un texte obscur et difficile à comprendre",
+        "Un texte excessivement long et redondant"
+      ],
+      "r": 2,
+      "x": "\"Abscons\" (du latin \"absconditus\" = caché). Proche de \"abstrus\" mais \"abscons\" implique davantage une obscurité voulue ou hermétique. Moins courant qu'\"abstrus\"."
+    },
+    {
+      "q": "La \"palinodie\" désigne :",
+      "o": [
+        "Un poème à refrain chanté par un chœur",
+        "La rétractation de ce qu'on avait soutenu",
+        "Un discours d'éloge solennel d'un grand homme",
+        "Un récit allégorique à portée morale"
+      ],
+      "r": 1,
+      "x": "\"Palinodie\" (du grec \"palin\" = en arrière + \"ode\" = chant). Désigne le fait de dire le contraire de ce qu'on avait affirmé. Chanter sa palinodie = se rétracter publiquement."
+    },
+    {
+      "q": "\"Stoïque\" qualifie quelqu'un qui :",
+      "o": [
+        "Varie constamment de position et d'opinion",
+        "Recherche avant tout le confort et le plaisir",
+        "Supporte les épreuves avec impassibilité",
+        "Refuse systématiquement tout compromis"
+      ],
+      "r": 2,
+      "x": "\"Stoïque\" fait référence au stoïcisme, philosophie grecque prônant la maîtrise des passions. Proche d'\"impassible\" mais \"stoïque\" insiste sur la résistance à la souffrance."
+    },
+    {
+      "q": "\"Galimatias\" désigne :",
+      "o": [
+        "Un discours très clair et bien structuré",
+        "Un registre linguistique propre à un groupe social",
+        "Un discours confus et incompréhensible",
+        "Une liste de termes techniques spécialisés"
+      ],
+      "r": 2,
+      "x": "\"Galimatias\" = charabia, propos embrouillés et sans suite logique. Proche de \"charabia\" et de \"jargon\" mais \"galimatias\" insiste sur l'absence de sens, non sur la spécialisation."
+    },
+    {
+      "q": "\"Chimérique\" qualifie ce qui est :",
+      "o": [
+        "Fondé sur des données scientifiques rigoureuses",
+        "Réalisable à court terme selon les conditions actuelles",
+        "Irréel, utopique ou purement imaginaire",
+        "Relatif aux récits mythologiques de l'Antiquité"
+      ],
+      "r": 2,
+      "x": "\"Chimérique\" vient de la Chimère, monstre mythologique. Qualifie un projet irréalisable ou une idée sans fondement dans la réalité. Proche d'\"utopique\" mais avec une connotation d'illusion plus marquée."
+    },
+    {
+      "q": "\"Apocryphe\" désigne un texte :",
+      "o": [
+        "Très ancien et rédigé dans une langue morte",
+        "Traduit d'une langue étrangère puis adapté",
+        "Dont l'authenticité ou la paternité est douteuse",
+        "Officiellement interdit par les autorités compétentes"
+      ],
+      "r": 2,
+      "x": "\"Apocryphe\" (du grec \"apokruphos\" = caché). Un texte apocryphe est attribué par erreur à un auteur ou dont l'authenticité n'est pas établie. Terme courant en histoire des textes religieux et littéraires."
+    },
+    {
+      "q": "\"Pragmatique\" qualifie celui qui :",
+      "o": [
+        "Défend des positions idéologiques avec fermeté",
+        "Refuse tout compromis dans ses principes moraux",
+        "Adapte ses décisions aux réalités concrètes",
+        "Développe des théories abstraites et complexes"
+      ],
+      "r": 2,
+      "x": "\"Pragmatique\" (du grec \"pragma\" = action). S'intéresse aux résultats pratiques plutôt qu'aux principes abstraits. Synonyme courant : \"réaliste\", \"pratique\". Antonyme : \"idéaliste\", \"dogmatique\"."
+    },
+    {
+      "q": "Un discours \"emphatique\" est un discours :",
+      "o": [
+        "Simple, direct et dépouillé de tout ornement",
+        "Qui amplifie excessivement son ton et ses effets",
+        "Qui manque de conviction dans son expression",
+        "Qui s'appuie sur des données chiffrées"
+      ],
+      "r": 1,
+      "x": "\"Emphatique\" (du grec \"emphasis\" = intensité). Qualifie un style qui recourt à des effets exagérés. Connotation souvent péjorative : le discours emphatique manque de naturel."
+    },
+    {
+      "q": "\"Sentencieux\" qualifie celui qui :",
+      "o": [
+        "Écoute avec bienveillance avant de répondre",
+        "Exprime ses idées avec une grande concision",
+        "Émet des jugements moraux sur un ton solennel et pompeux",
+        "Critique les autres avec une ironie mordante"
+      ],
+      "r": 2,
+      "x": "\"Sentencieux\" : qui parle par sentences, par maximes, avec un air de sagesse affecté. Connotation péjorative de prétention moralisatrice."
+    },
+    {
+      "q": "\"Sagace\" qualifie quelqu'un qui :",
+      "o": [
+        "Agit spontanément et sans analyse préalable",
+        "Refuse de partager ses connaissances avec autrui",
+        "Parle avec beaucoup de prudence et de réserve",
+        "Discerne avec perspicacité et pénétration d'esprit"
+      ],
+      "r": 3,
+      "x": "\"Sagace\" (du latin \"sagax\" = qui a du flair). Proche de \"perspicace\" et \"clairvoyant\". \"La sagacité\" désigne la finesse d'esprit qui permet de saisir ce qui échappe aux autres."
+    },
+    {
+      "q": "La tragédie classique française respecte la règle des trois unités. Lesquelles ?",
+      "o": [
+        "Unité de style, de personnage et de langue",
+        "Unité d'action, de lieu et de temps",
+        "Unité de registre, de versification et de dénouement",
+        "Unité de scène, de décor et d'interprétation"
+      ],
+      "r": 1,
+      "x": "Popularisées dans le classicisme français notamment par Boileau dans l'Art poétique. Une action, un lieu, un jour (24 heures). Ces contraintes visent à maintenir la vraisemblance et la cohérence de l'œuvre dramatique classique."
+    },
+    {
+      "q": "La \"didascalie\" dans un texte théâtral désigne :",
+      "o": [
+        "Le discours le plus long d'un personnage principal",
+        "Une réplique prononcée à voix basse sur scène",
+        "Une indication scénique rédigée par l'auteur",
+        "Le texte récité en ouverture d'une pièce"
+      ],
+      "r": 2,
+      "x": "Les didascalies précisent les décors, les costumes, les déplacements, les tons. Elles sont généralement en italique dans les éditions imprimées. Terme essentiel de l'analyse dramatique."
+    },
+    {
+      "q": "L'\"aparté\" se distingue du \"monologue\" en ce que :",
+      "o": [
+        "L'aparté est entendu par tous les personnages présents",
+        "Le monologue est court ; l'aparté est toujours long",
+        "L'aparté s'adresse au public mais pas aux autres personnages",
+        "Le monologue est réservé aux personnages secondaires"
+      ],
+      "r": 2,
+      "x": "L'aparté est une convention théâtrale : le personnage parle sans que les autres présents l'entendent, mais le public l'entend. Le monologue est un discours qu'un personnage tient longuement sans interlocuteur véritable."
+    },
+    {
+      "q": "Le registre \"épique\" se caractérise par :",
+      "o": [
+        "L'expression des émotions personnelles de l'auteur",
+        "La recherche du comique par des situations absurdes",
+        "L'exaltation d'actions héroïques, grandioses et collectives",
+        "La dénonciation ironique des travers de la société"
+      ],
+      "r": 2,
+      "x": "Registre épique : grandeur des personnages, des événements, du style. Hyperboles, accumulations, amplifications. Présent dans les épopées (L'Iliade, La Chanson de Roland) et dans la prose (Hugo, Michelet)."
+    },
+    {
+      "q": "Le registre \"lyrique\" se reconnaît à :",
+      "o": [
+        "La description neutre et objective de faits précis",
+        "L'expression exaltée des sentiments et émotions personnels",
+        "L'invitation au rire par des procédés comiques",
+        "L'évocation de grandes batailles et d'exploits héroïques"
+      ],
+      "r": 1,
+      "x": "Registre lyrique : \"moi\", émotions, sentiment, musicalité du langage. Associé à la poésie amoureuse, à la mélancolie, au romantisme. Verlaine, Rimbaud, Lamartine sont des poètes lyriques."
+    },
+    {
+      "q": "Un narrateur \"omniscient\" est un narrateur qui :",
+      "o": [
+        "Raconte uniquement ce qu'il observe de l'extérieur",
+        "Participe lui-même à l'histoire qu'il raconte",
+        "Connaît les pensées et les sentiments de tous les personnages",
+        "Alterne constamment entre plusieurs points de vue"
+      ],
+      "r": 2,
+      "x": "Narrateur omniscient (3e personne) = voit tout, sait tout. Narrateur interne = participe à l'histoire (1re personne). Narrateur externe = observe sans connaître les pensées (3e personne limitée)."
+    },
+    {
+      "q": "La nouvelle se distingue du roman principalement par :",
+      "o": [
+        "L'absence de tout personnage principal identifiable",
+        "Sa forme versifiée contrairement au roman",
+        "La brièveté et la concentration autour d'un seul événement",
+        "L'absence totale de dialogues entre les personnages"
+      ],
+      "r": 2,
+      "x": "La nouvelle est un genre court centré sur un événement unique, un personnage ou une situation. Le roman développe une intrigue plus complexe sur une durée plus longue."
+    },
+    {
+      "q": "L'\"épopée\" est :",
+      "o": [
+        "Un court poème lyrique sur l'amour courtois",
+        "Un long récit glorifiant des actions héroïques ou fondatrices",
+        "Un court récit en prose à portée morale",
+        "Un dialogue versifié entre deux personnages"
+      ],
+      "r": 1,
+      "x": "L'épopée (Iliade, Odyssée, Énéide, Chanson de Roland) célèbre les hauts faits d'un héros. Elle mêle le merveilleux au réel et participe à la construction d'une identité collective."
+    },
+    {
+      "q": "L'\"élégie\" est un genre poétique qui exprime :",
+      "o": [
+        "La joie et la célébration des victoires militaires",
+        "La satire des comportements humains",
+        "L'éloge des grands personnages de l'histoire",
+        "La plainte, la tristesse et la mélancolie"
+      ],
+      "r": 3,
+      "x": "Élégie = poème de deuil, de plainte amoureuse ou de mélancolie existentielle. \"L'élégie\" de Lamartine, \"Les Nuits\" de Musset en est un exemple célèbre."
+    },
+    {
+      "q": "Un \"pamphlet\" est :",
+      "o": [
+        "Un texte d'éloge destiné à célébrer une institution",
+        "Un recueil de poèmes à thème pastoral",
+        "Un court texte virulent qui attaque des personnes ou des idées",
+        "Un compte rendu officiel de séance"
+      ],
+      "r": 2,
+      "x": "Le pamphlet est un texte polémique, souvent anonyme, qui attaque avec violence une personne, une institution ou une idée. Proche du libelle et du brûlot. Figure importante dans l'histoire littéraire et politique."
+    },
+    {
+      "q": "Le Symbolisme poétique (Baudelaire, Verlaine, Rimbaud) privilégie :",
+      "o": [
+        "La description réaliste et précise de la société",
+        "L'engagement politique direct dans les œuvres",
+        "Les correspondances entre sensations, couleurs et idées",
+        "La narration d'événements historiques documentés"
+      ],
+      "r": 2,
+      "x": "Baudelaire forge le concept de \"correspondances\" : les sens se répondent les uns aux autres. Le Symbolisme cherche à suggérer plutôt qu'à décrire, à évoquer une réalité intérieure par les symboles."
+    },
+    {
+      "q": "La \"versification libre\" ou \"vers libres\" se définit par :",
+      "o": [
+        "L'absence totale de tout procédé poétique",
+        "Le refus de la rime mais le maintien d'une mesure fixe",
+        "L'abandon des contraintes de nombre de syllabes et de rime",
+        "L'utilisation d'alexandrins sans rime obligatoire"
+      ],
+      "r": 2,
+      "x": "Le vers libre rompt avec la versification régulière : ni rime obligatoire, ni mesure fixe. Inauguré par Whitman, adopté par Verlaine, Claudel, Apollinaire. Ne pas confondre avec \"prose poétique\" (absence totale de structure versifiée)."
+    },
+    {
+      "q": "Le mot « prolixe » qualifie une personne ou un texte qui est :",
+      "o": [
+        "Excessivement long et abondant en paroles ou en détails",
+        "Particulièrement obscur et difficile à comprendre",
+        "Très rigoureux dans son raisonnement",
+        "Très bref et concis"
+      ],
+      "r": 0,
+      "x": "« Prolixe » désigne quelqu'un qui parle ou écrit beaucoup, souvent plus qu'il ne le faut. Son contraire est « concis » ou « succinct ». Exemple : « Son rapport est prolixe mais manque de précision. »"
+    },
+    {
+      "q": "Le registre \"satirique\" vise à :",
+      "o": [
+        "Émouvoir le lecteur par des scènes pathétiques",
+        "Dénoncer les vices et les travers par la moquerie et l'ironie",
+        "Exalter les grandes figures héroïques de l'histoire",
+        "Exprimer les états d'âme et sentiments de l'auteur"
+      ],
+      "r": 1,
+      "x": "Registre satirique : arme de la critique sociale et politique. La Fontaine (fables), Molière (comédies), Voltaire (contes) utilisent l'ironie et l'humour pour corriger les mœurs."
+    },
+    {
+      "q": "La \"rhétorique\" est l'art de :",
+      "o": [
+        "Décoder les messages cachés dans les textes littéraires",
+        "Composer des poèmes selon des règles formelles précises",
+        "Persuader par la maîtrise du discours et de l'argumentation",
+        "Analyser la structure grammaticale des phrases"
+      ],
+      "r": 2,
+      "x": "Rhétorique (du grec \"rhetor\" = orateur) : art de bien parler et d'argumenter pour convaincre. Elle comprend l'inventio (trouver les arguments), la dispositio (les organiser) et l'elocutio (les formuler)."
+    },
+    {
+      "q": "\"Erroné\" qualifie ce qui est :",
+      "o": [
+        "Volontairement faux et destiné à tromper",
+        "Difficile à vérifier avec les moyens disponibles",
+        "Simplement incorrect, qui contient une erreur",
+        "Rédigé dans un style dépassé et archaïque"
+      ],
+      "r": 2,
+      "x": "\"Erroné\" = qui contient une erreur, sans nécessairement d'intention. À distinguer de \"mensonger\" (intentionnellement faux) et de \"fallacieux\" (trompeur avec intention)."
+    },
+    {
+      "q": "\"Délibéré\" comme adjectif signifie :",
+      "o": [
+        "Résultant d'une longue délibération collective",
+        "Soumis à l'examen d'une commission compétente",
+        "Intentionnel, voulu et accompli en connaissance de cause",
+        "Issu d'une décision prise à l'unanimité"
+      ],
+      "r": 2,
+      "x": "\"De manière délibérée\" = intentionnellement, volontairement. \"De propos délibéré\" est la locution adverbiale consacrée en droit. Piège : confondre avec \"délibération\" (processus collectif)."
+    },
+    {
+      "q": "\"Hermétique\" qualifie un texte :",
+      "o": [
+        "D'une clarté et d'une limpidité exemplaires",
+        "Très bref et condensé dans ses formulations",
+        "Accessible uniquement aux initiés ou aux spécialistes",
+        "Officiel et soumis à une diffusion restreinte"
+      ],
+      "r": 2,
+      "x": "\"Hermétique\" (d'Hermès Trismégiste, maître des sciences occultes) = fermé à la compréhension ordinaire, réservé aux initiés. Proche d'\"abstrus\" et d'\"abscons\"."
+    },
+    {
+      "q": "\"Œcuménique\" qualifie ce qui :",
+      "o": [
+        "Concerne exclusivement les questions économiques",
+        "Appartient au patrimoine de l'Église catholique",
+        "Vise à rassembler des communautés dans un esprit universel",
+        "Traite des questions environnementales mondiales"
+      ],
+      "r": 2,
+      "x": "\"Œcuménique\" (du grec \"oikoumene\" = la terre habitée). Désigne ce qui cherche à réunir, à dépasser les divisions. Utilisé en théologie (dialogue interreligieux) et en politique (rassemblement des peuples)."
+    },
+    {
+      "q": "Le mot \"manuscrit\" vient du latin \"manu scriptus\" signifiant :",
+      "o": [
+        "Texte à caractère officiel",
+        "Document certifié et authentifié",
+        "Texte traduit en langue vernaculaire",
+        "Écrit de la main"
+      ],
+      "r": 3,
+      "x": "\"Manu\" = main, \"scriptus\" = écrit. Connaissance étymologique utile en concours. Autres exemples : \"omniscient\" (omni = tout + sciens = sachant), \"bilingue\" (bi = deux + lingua = langue)."
+    },
+    {
+      "q": "\"Rétrograde\" qualifie ce qui :",
+      "o": [
+        "Progresse à grande vitesse vers l'avant",
+        "Avance prudemment et par étapes progressives",
+        "Cherche à revenir à des formes passées dépassées",
+        "Va dans le sens des évolutions modernes"
+      ],
+      "r": 2,
+      "x": "\"Rétrograde\" (du latin \"retrogradus\" = qui marche en arrière). Qualifie une position, une idée ou une mesure qui va à l'encontre du progrès. Antonyme : \"progressiste\", \"avant-gardiste\"."
+    },
+    {
+      "q": "\"Éthique\" et \"déontologie\" : la déontologie désigne plus précisément :",
+      "o": [
+        "L'ensemble des valeurs morales d'une civilisation",
+        "La philosophie des droits naturels de l'homme",
+        "Les règles de conduite propres à une profession",
+        "Le code de valeurs personnelles de l'individu"
+      ],
+      "r": 2,
+      "x": "La déontologie (du grec \"deon\" = devoir) = ensemble des obligations et règles professionnelles. L'éthique est plus large : elle désigne les principes moraux généraux. La déontologie est l'application de l'éthique à un cadre professionnel."
+    },
+    {
+      "q": "\"Nébuleux\" qualifie un raisonnement :",
+      "o": [
+        "Brillant, lumineux et d'une clarté parfaite",
+        "Très court et ramassé dans ses formulations",
+        "Parfaitement logique mais difficile d'accès",
+        "Confus, vague et difficile à saisir"
+      ],
+      "r": 3,
+      "x": "\"Nébuleux\" (du latin \"nebula\" = nuage, brouillard). Qualifie ce qui manque de clarté, ce qui est flou et mal défini. Plus général qu'\"obscur\" qui peut suggérer une profondeur."
+    },
+    {
+      "q": "\"Vénérable\" qualifie ce qui :",
+      "o": [
+        "Mérite d'être redouté et craint",
+        "Mérite admiration et respect du fait de son âge ou de sa valeur",
+        "Doit être rendu public et mis en valeur",
+        "Appartient à une autorité religieuse reconnue"
+      ],
+      "r": 1,
+      "x": "\"Vénérable\" (du latin \"venerabilis\" = qui mérite d'être vénéré). Qualifie une personne âgée ou une institution ancienne digne de respect. À ne pas confondre avec \"respectable\" (neutre) ou \"admirable\" (pour des qualités)."
+    },
+    {
+      "q": "\"Ce projet _______ plusieurs années pour aboutir.\" PP de \"nécessiter\".",
+      "o": [
+        "a nécessités",
+        "a nécessitées",
+        "nécessitait",
+        "a nécessité"
+      ],
+      "r": 3,
+      "x": "\"Plusieurs années\" = COD féminin pluriel postposé → PP invariable avec \"avoir\". \"A nécessité\" est donc la seule forme correcte. \"Nécessitait\" (imparfait) est possible selon le temps voulu mais ne répond pas à la question du PP."
+    },
+    {
+      "q": "\"Jargon\" et \"argot\" : le jargon désigne :",
+      "o": [
+        "Un langage oral uniquement pratiqué par les jeunes",
+        "Le langage codé d'un groupe social particulier",
+        "La langue spécialisée d'un domaine ou d'une profession",
+        "Un registre de langue intermédiaire entre courant et soutenu"
+      ],
+      "r": 2,
+      "x": "Jargon administratif, jargon médical, jargon juridique : vocabulaire technique d'une profession. L'argot est un vocabulaire particulier employé par un groupe social (argot des prisons, des banlieues)."
+    },
+    {
+      "q": "\"L'administration a _______ ce dossier pendant six mois.\" PP de \"instruire\".",
+      "o": [
+        "instruite",
+        "instruits",
+        "instruites",
+        "instruit"
+      ],
+      "r": 3,
+      "x": "\"Ce dossier\" = COD masculin singulier postposé → PP invariable \"instruit\". \"L'instruction d'un dossier\" est le terme administratif désignant son examen préalable."
+    },
+    {
+      "q": "\"Délibéré\" dans l'expression \"de propos délibéré\" signifie :",
+      "o": [
+        "Après consultation de toutes les parties concernées",
+        "Suite à une longue hésitation puis à une décision",
+        "Intentionnellement, en pleine conscience et volonté",
+        "Dans le cadre d'une procédure légalement encadrée"
+      ],
+      "r": 2,
+      "x": "\"De propos délibéré\" = intentionnellement. Locution adverbiale juridique figée. \"Il a agi de propos délibéré\" = il l'a fait exprès. Synonyme de \"délibérément\" et \"intentionnellement\"."
+    },
+    {
+      "q": "\"Pragmatique\" s'oppose à :",
+      "o": [
+        "Réaliste et concret dans ses approches",
+        "Pratique et orienté vers les résultats",
+        "Idéaliste et attaché aux principes abstraits",
+        "Méthodique et rigoureux dans ses analyses"
+      ],
+      "r": 2,
+      "x": "\"Pragmatique\" (grec \"pragma\" = action) = attaché aux résultats concrets. Son opposé est \"idéaliste\" ou \"dogmatique\" (qui sacrifie les résultats aux principes). Terme fondamental en philosophie et en sciences politiques."
+    },
+    {
+      "q": "Le registre \"polémique\" vise à :",
+      "o": [
+        "Émouvoir le lecteur par des récits tragiques",
+        "Informer objectivement sur des faits vérifiés",
+        "Attaquer vivement des idées ou des personnes adverses",
+        "Raconter des événements héroïques avec grandeur"
+      ],
+      "r": 2,
+      "x": "Registre polémique : ton agressif et combatif, arguments chargés d'émotion, visée persuasive partisane. Fréquent dans les pamphlets, les tribunes, les discours politiques engagés."
+    },
+    {
+      "q": "La versification française est dite \"syllabique\" car elle repose sur :",
+      "o": [
+        "Le nombre d'accents toniques dans le vers",
+        "La durée longue ou brève de chaque syllabe",
+        "Le nombre de syllabes dans le vers",
+        "La quantité de consonnes par hémistiche"
+      ],
+      "r": 2,
+      "x": "Contrairement à la versification latine (quantitative : longues/brèves), le vers français compte les syllabes. Le \"e\" muet compte ou non selon sa position et ce qui suit."
+    },
+    {
+      "q": "Un \"dizain\" est une strophe composée de :",
+      "o": [
+        "Cinq vers",
+        "Six vers",
+        "Huit vers",
+        "Dix vers"
+      ],
+      "r": 3,
+      "x": "Dizain = 10 vers. Huitain = 8 vers. Quintil = 5 vers. Sizain = 6 vers. Ces formes sont fréquentes dans la poésie de la Renaissance française (Marot, Du Bellay)."
+    },
+    {
+      "q": "Le schéma de rimes AABB est dit :",
+      "o": [
+        "Embrassé",
+        "Croisé",
+        "Plat ou suivi",
+        "Alterné"
+      ],
+      "r": 2,
+      "x": "Rimes plates ou suivies : les rimes se suivent par paires. ABAB = croisées. ABBA = embrassées. Les rimes plates créent un effet de regularité, parfois monotone."
+    },
+    {
+      "q": "La \"synérèse\" est l'opération inverse de la diérèse. Elle consiste à :",
+      "o": [
+        "Scander deux voyelles contiguës en deux syllabes",
+        "Fusionner deux voyelles contiguës en une seule syllabe",
+        "Couper le vers en deux hémistiches inégaux",
+        "Supprimer la rime dans un poème classique"
+      ],
+      "r": 1,
+      "x": "Synérèse = fusion (ex. \"lion\" = 1 syllabe en synérèse, 2 en diérèse \"li-on\"). Le poète choisit selon les besoins du mètre. Maîtriser diérèse/synérèse est essentiel pour analyser un poème."
+    },
+    {
+      "q": "Un \"hémistiche\" est :",
+      "o": [
+        "Un poème de deux strophes symétriques",
+        "La moitié d'un vers, notamment d'un alexandrin",
+        "Un type de strophe à six vers",
+        "Un vers comportant une seule rime riche"
+      ],
+      "r": 1,
+      "x": "Hémistiche = moitié de vers (grec \"hemi\" = demi). Dans l'alexandrin classique, la césure sépare deux hémistiches de 6 syllabes chacun. L'hémistiche est lui-même un groupe rythmique autonome."
+    },
+    {
+      "q": "\"Pour qui sont ces serpents qui sifflent sur vos têtes ?\" La figure dominante est :",
+      "o": [
+        "Une anaphore",
+        "Une allitération",
+        "Une métaphore",
+        "Une personnification"
+      ],
+      "r": 1,
+      "x": "Répétition du son [s] dans \"sont / ces / serpents / sifflent / sur\" → allitération. Ce vers de Racine (Andromaque) imite phonétiquement le sifflement des serpents. Exemple canonique de versification expressive."
+    },
+    {
+      "q": "Le \"quintil\" est une strophe de :",
+      "o": [
+        "Quatre vers",
+        "Cinq vers",
+        "Six vers",
+        "Sept vers"
+      ],
+      "r": 1,
+      "x": "Quintil = 5 vers. À mémoriser avec les autres formes : distique (2), tercet (3), quatrain (4), quintil (5), sizain (6), huitain (8), dizain (10)."
+    },
+    {
+      "q": "L'élégie se distingue de l'ode en ce que :",
+      "o": [
+        "L'élégie est toujours en vers libres ; l'ode en vers réguliers",
+        "L'ode est toujours plus longue que l'élégie",
+        "L'élégie exprime la plainte mélancolique ; l'ode célèbre et exalte",
+        "L'ode s'adresse à des personnes ; l'élégie à des abstractions"
+      ],
+      "r": 2,
+      "x": "Élégie = plainte, mélancolie, deuil. Ode = hymne de célébration. Horace, Ronsard, Hugo ont écrit des odes. Lamartine, Musset ont écrit des élégies romantiques."
+    },
+    {
+      "q": "Le \"décasyllabe\" est le vers de référence de :",
+      "o": [
+        "La poésie symboliste de Verlaine",
+        "La tragédie classique de Racine",
+        "La poésie médiévale épique",
+        "La fable classique de La Fontaine"
+      ],
+      "r": 2,
+      "x": "Le décasyllabe est le vers principal de la Chanson de Roland. Les tragédies de Racine utilisent l'alexandrin. La Fontaine varie les mètres selon les effets. Verlaine préfère des vers impairs."
+    },
+    {
+      "q": "Un \"quintil\" peut avoir le schéma de rimes :",
+      "o": [
+        "AABBA ou AABAB",
+        "AABB uniquement",
+        "ABAB uniquement",
+        "ABBA uniquement"
+      ],
+      "r": 0,
+      "x": "Le quintil (5 vers) admet plusieurs schémas : AABBA, AABAB, AABBB, etc. Aucun schéma unique ne s'impose, contrairement au quatrain qui a des schémas plus codifiés (ABAB, ABBA, AABB)."
+    },
+    {
+      "q": "La métonymie se distingue de la synecdoque en ce que :",
+      "o": [
+        "La métonymie s'emploie uniquement en prose ; la synecdoque en poésie",
+        "La synecdoque désigne un tout par une partie ou vice-versa ; la métonymie repose sur d'autres liens de contiguïté",
+        "La métonymie désigne une partie par le tout ; la synecdoque l'inverse",
+        "Les deux figures sont identiques et interchangeables"
+      ],
+      "r": 1,
+      "x": "Synecdoque = relation partie/tout (\"voile\" pour \"bateau\"). Métonymie = relation de contiguïté diverse : cause/effet, contenant/contenu, instrument/activité (\"boire un verre\", \"lire Voltaire\")."
+    },
+    {
+      "q": "La \"prosopopée\" consiste à :",
+      "o": [
+        "Répéter le même mot en tête de vers successifs",
+        "Faire parler un absent, un mort ou une abstraction personnifiée",
+        "Interrompre un discours pour revenir à un sujet antérieur",
+        "Employer un terme dans un sens opposé à son sens habituel"
+      ],
+      "r": 1,
+      "x": "La prosopopée donne la parole à une entité absente ou inanimée. Exemple : Rousseau faisant parler la nature. Proche de la personnification, mais la prosopopée implique que la chose absente prend effectivement la parole."
+    },
+    {
+      "q": "La \"gradation descendante\" dans \"il cria, parla, murmura\" :",
+      "o": [
+        "Exprime une progression croissante d'intensité",
+        "Exprime une progression décroissante d'intensité",
+        "Liste des actions de même niveau d'intensité",
+        "Oppose deux idées contradictoires"
+      ],
+      "r": 1,
+      "x": "Gradation descendante : intensité décroissante. Ici : crier (fort) → parler (modéré) → murmurer (faible). La gradation ascendante inverse le mouvement."
+    },
+    {
+      "q": "L'anaphore est la répétition :",
+      "o": [
+        "Du même son vocalique dans des mots proches",
+        "Du même mot ou groupe de mots à la fin de phrases successives",
+        "Du même mot ou groupe de mots en tête de phrases successives",
+        "Du même mot immédiatement, sans interruption"
+      ],
+      "r": 2,
+      "x": "Anaphore = en tête (grec \"ana\" = en haut). Épiphore = en fin (grec \"epi\" = sur). Épizeuxe = répétition immédiate sans aucun mot entre les deux. Fréquent dans les discours politiques et religieux."
+    },
+    {
+      "q": "\"L'astre de la nuit se lève sur les plaines\" : la figure employée pour désigner la lune est :",
+      "o": [
+        "Une métaphore",
+        "Une synecdoque",
+        "Une métonymie",
+        "Une périphrase"
+      ],
+      "r": 3,
+      "x": "\"L'astre de la nuit\" = la lune, désignée par une expression détournée → périphrase. La métaphore implique une ressemblance directe. La métonymie repose sur la contiguïté."
+    },
+    {
+      "q": "\"Elle a _______ les recommandations de la commission.",
+      "o": [
+        "suivi",
+        "suivis",
+        "suivie",
+        "suivies"
+      ],
+      "r": 0,
+      "x": "Le COD est \"les recommandations\". Il est placé APRÈS le participe passé. Donc pas d'accord. La règle fondamentale est : le participe passé conjugué avec l'auxiliaire avoir s'accorde avec le COD uniquement si celui-ci est placé avant le verbe."
+    },
+    {
+      "q": "\"Ces deux responsables _______ très bien.",
+      "o": [
+        "se sont entendu",
+        "s'est entendu",
+        "se sont entendus",
+        "se sont entendues"
+      ],
+      "r": 2,
+      "x": "\"S'entendre\" réciproque : \"se\" = COD → accord avec le sujet \"ces deux responsables\" (masc. plur.) → \"entendus\". Si les deux responsables étaient féminins : \"entendues\"."
+    },
+    {
+      "q": "\"La construction 'avoir beau + infinitif' exprime :",
+      "o": [
+        "Une action parfaitement bien accomplie",
+        "Une action accomplie en vain, sans résultat",
+        "Une action facile à réaliser",
+        "Une action accomplie avec beaucoup de talent"
+      ],
+      "r": 1,
+      "x": "\"Avoir beau travailler\" = \"bien qu'il travaille, sans résultat\". Construction concessive idiomatique. Souvent attendue dans les exercices de transformation à l'épreuve écrite de français."
+    },
+    {
+      "q": "\"Ne fût-ce qu'un instant, il hésita.\" \"Ne fût-ce que\" est :",
+      "o": [
+        "Une négation totale à valeur restrictive",
+        "Une locution signifiant \"même seulement\"",
+        "Un conditionnel passé à valeur de reproche",
+        "Un subjonctif imparfait à valeur hypothétique"
+      ],
+      "r": 1,
+      "x": "\"Ne fût-ce que\" = \"ne serait-ce que\" (forme littéraire soutenue). Signifie \"même seulement, si minime soit la durée\". Attendu aux concours de niveau licence."
+    },
+    {
+      "q": "\"Soit qu'il parte, _______ qu'il reste, peu importe.\" Choisissez la bonne conjonction corrélative.",
+      "o": [
+        "bien que",
+        "soit que",
+        "encore que",
+        "pour peu que"
+      ],
+      "r": 1,
+      "x": "\"Soit que... soit que + subjonctif\" = structure corrélative alternative exprimant l'indifférence face à deux éventualités. Les deux propositions sont au subjonctif. Équivalent de \"qu'il parte ou qu'il reste\"."
+    },
+    {
+      "q": "\"Force lui _______ de reconnaître son erreur.\" Choisissez la forme correcte.",
+      "o": [
+        "est",
+        "fut",
+        "sera",
+        "A et B sont corrects selon le contexte"
+      ],
+      "r": 3,
+      "x": "\"Force est de + infinitif\" (présent) et \"force lui fut de + infinitif\" (passé) sont deux constructions impersonnelles soutenues signifiant \"il ne put faire autrement que de\". Les deux temps sont corrects selon le contexte."
+    },
+    {
+      "q": "\"Travaillant sans relâche, elle réussit.\" Le participe présent \"travaillant\" exprime ici :",
+      "o": [
+        "L'opposition à l'action principale",
+        "La condition nécessaire de l'action principale",
+        "La cause de l'action principale",
+        "La conséquence de l'action principale"
+      ],
+      "r": 2,
+      "x": "Participe présent à valeur causale : \"parce qu'elle travaillait sans relâche, elle réussit.\" La valeur causale ou temporelle du participe présent dépend du contexte logique de la phrase."
+    },
+    {
+      "q": "\"Voici venir la saison froide.\" La construction \"voici + infinitif\" exprime :",
+      "o": [
+        "Un infinitif sujet de la phrase",
+        "Un infinitif complément de \"voici\"",
+        "Un infinitif attribut du sujet \"la saison\"",
+        "Un infinitif en apposition au sujet"
+      ],
+      "r": 1,
+      "x": "\"Voici + infinitif\" = présentation d'une action ou d'un événement imminent. L'infinitif est complément de \"voici\". Construction littéraire et solennelle, fréquente dans la poésie et la prose classiques."
+    },
+    {
+      "q": "\"Il _______ de longues heures sur ce dossier.\" Choisissez le PP correct de \"se pencher\".",
+      "o": [
+        "s'est penché",
+        "s'est penchée",
+        "s'est penchés",
+        "s'est penchées"
+      ],
+      "r": 0,
+      "x": "\"Se pencher\" : \"se\" = COD réfléchi → accord avec \"il\" (masc. sing.) → \"penché\". Si le sujet était féminin singulier : \"penchée\". Accord du PP pronominal avec le sujet quand \"se\" est COD."
+    },
+    {
+      "q": "\"Elle s'est _______ un tabouret pour s'asseoir.\" Choisissez le PP correct de \"se fabriquer\".",
+      "o": [
+        "fabriquée",
+        "fabriqués",
+        "fabriqué",
+        "fabriquer"
+      ],
+      "r": 2,
+      "x": "\"Se fabriquer un tabouret\" : \"un tabouret\" = COD postposé. \"Se\" = COI. PP invariable : \"fabriqué\". Règle : COD nominal postposé → PP invariable quel que soit le genre du sujet."
+    },
+    {
+      "q": "\"Quitte à déplaire, elle a dit ce qu'elle pensait.\" \"Quitte à\" exprime :",
+      "o": [
+        "La cause directe de l'action principale",
+        "La condition préalable à l'action",
+        "L'opposition à l'action principale",
+        "L'acceptation délibérée d'un risque ou d'un inconvénient"
+      ],
+      "r": 3,
+      "x": "\"Quitte à + infinitif\" = au risque de. Acceptation consciente d'un inconvénient possible. Proche de \"dût-elle déplaire\" dans la langue soutenue."
+    },
+    {
+      "q": "\"Naguère il vivait ici.\" \"Naguère\" signifie :",
+      "o": [
+        "Depuis très longtemps",
+        "Il y a peu de temps, autrefois dans un passé récent",
+        "Dans très longtemps",
+        "À une époque indéterminée et lointaine"
+      ],
+      "r": 1,
+      "x": "\"Naguère\" = \"n'a guère\" = il n'y a guère de temps. Désigne un passé relativement proche. \"Jadis\" désigne un passé beaucoup plus lointain. Confusion des deux est très pénalisée en concours."
+    },
+    {
+      "q": "\"La moitié des candidats _______ réussi.\" Les deux accords possibles sont :",
+      "o": [
+        "\"a réussi\" uniquement",
+        "\"ont réussi\" uniquement",
+        "\"a réussi\" ou \"ont réussi\" selon la mise en relief",
+        "\"avaient réussi\" uniquement"
+      ],
+      "r": 2,
+      "x": "\"La moitié de + nom pluriel\" : accord au singulier si on insiste sur la fraction (la moitié a réussi), au pluriel si on insiste sur les individus (les candidats ont réussi). Les deux sont grammaticalement défendables."
+    },
+    {
+      "q": "\"À peine _______-il entré que le téléphone sonna.\" Choisissez la forme correcte.",
+      "o": [
+        "avait",
+        "eut",
+        "a",
+        "était"
+      ],
+      "r": 3,
+      "x": "Le verbe \"entrer\" (employé ici de manière intransitive) se conjugue obligatoirement avec l'auxiliaire être. Au plus-que-parfait, à la 3e personne du singulier, on écrit donc \"il était entré\". La locution \"À peine... que\" introduit une idée de simultanéité immédiate entre deux actions au passé et impose une inversion du sujet (\"était-il\")."
+    },
+    {
+      "q": "\"Elle _______ toute la nuit pour finir à temps.\" PP de \"travailler\" avec \"avoir\".",
+      "o": [
+        "a travaillée",
+        "a travaillés",
+        "a travaillé",
+        "a travaillées"
+      ],
+      "r": 2,
+      "x": "\"Travailler\" est un verbe intransitif (pas de COD). PP avec \"avoir\" sans COD → toujours invariable. \"A travaillé\" : aucun accord possible. Piège : accorder par assimilation avec d'autres PP."
+    },
+    {
+      "q": "\"Abscons\" et \"abstrus\" sont deux synonymes. Lequel insiste davantage sur l'obscurité délibérément hermétique ?",
+      "o": [
+        "Abstrus dans tous les contextes",
+        "Abscons dans tous les contextes",
+        "Abscons pour la difficulté inhérente ; abstrus pour l'hermétisme voulu",
+        "Abscons pour l'hermétisme voulu ; abstrus pour la difficulté inhérente"
+      ],
+      "r": 3,
+      "x": "\"Abscons\" = fermé, caché, délibérément obscur. \"Abstrus\" = difficile à comprendre par sa profondeur ou complexité, sans nécessairement de volonté de cacher. Nuance attendue au concours."
+    },
+    {
+      "q": "\"Incongru\" qualifie ce qui :",
+      "o": [
+        "Manque de logique interne",
+        "Est déplacé, qui ne convient pas à la situation",
+        "Est particulièrement difficile à analyser",
+        "Contient de nombreuses contradictions"
+      ],
+      "r": 1,
+      "x": "\"Incongru\" (du latin \"incongruus\" = qui ne s'accorde pas). Désigne ce qui est hors de propos, qui choque par son inadéquation. Exemple : \"Une remarque incongrue dans ce contexte solennel.\""
+    },
+    {
+      "q": "\"Fallacieux\" se distingue de \"spécieux\" en ce que :",
+      "o": [
+        "Les deux sont parfaitement identiques",
+        "\"Fallacieux\" implique une intention de tromper ; \"spécieux\" une belle apparence sans fond",
+        "\"Spécieux\" est plus péjoratif que \"fallacieux\"",
+        "\"Fallacieux\" est plus courant à l'oral ; \"spécieux\" plus littéraire"
+      ],
+      "r": 1,
+      "x": "\"Fallacieux\" (du latin \"fallax\" = trompeur) insiste sur l'intention délibérée de tromper. \"Spécieux\" (du latin \"speciosus\" = beau) insiste sur l'apparence trompeuse sans nécessairement d'intention malveillante."
+    },
+    {
+      "q": "\"Laudatif\" s'oppose à :",
+      "o": [
+        "Prolixe",
+        "Dépréciatif",
+        "Sibyllin",
+        "Emphatique"
+      ],
+      "r": 1,
+      "x": "\"Laudatif\" = qui fait l'éloge (du latin \"laus\" = louange). Antonyme exact : \"dépréciatif\" ou \"péjoratif\" (qui dévalorise). \"Prolixe\" concerne la longueur, \"sibyllin\" l'obscurité, \"emphatique\" le ton amplifié."
+    },
+    {
+      "q": "\"Chimérique\" se distingue d'\"utopique\" en ce que :",
+      "o": [
+        "\"Utopique\" est toujours plus péjoratif que \"chimérique\"",
+        "\"Chimérique\" porte sur les projets ; \"utopique\" sur les idées",
+        "\"Chimérique\" insiste sur l'illusion ; \"utopique\" sur l'idéal irréalisable",
+        "Les deux sont parfaitement interchangeables"
+      ],
+      "r": 2,
+      "x": "\"Chimérique\" = purement illusoire, sans réalité. \"Utopique\" = idéal souhaitable mais irréalisable dans les conditions actuelles. L'utopie peut avoir une valeur positive (idéal moteur), la chimère non."
+    },
+    {
+      "q": "\"Délibéré\", \"intentionnel\" et \"volontaire\" : lequel implique le plus une préméditation ?",
+      "o": [
+        "Volontaire",
+        "Intentionnel",
+        "Délibéré",
+        "Les trois sont parfaitement équivalents"
+      ],
+      "r": 2,
+      "x": "\"Délibéré\" = après mûre réflexion, avec préméditation (\"de propos délibéré\"). \"Intentionnel\" = voulu, avec intention. \"Volontaire\" = accompli librement. \"Délibéré\" est le plus fort en termes de préméditation, surtout dans le langage juridique."
+    },
+    {
+      "q": "\"Spécieux\" est proche de :",
+      "o": [
+        "Particulier et spécifique",
+        "Réservé à des spécialistes",
+        "D'une apparence de vérité mais vide de fond",
+        "Très précis dans ses formulations"
+      ],
+      "r": 2,
+      "x": "\"Spécieux\" : qui a l'air fondé mais ne l'est pas. Ne pas confondre avec \"spécial\" ou \"spécifique\". Exemple : \"Un argument spécieux qui convainc en apparence seulement.\""
+    },
+    {
+      "q": "\"Ériger quelque chose en règle générale\" signifie :",
+      "o": [
+        "Remettre en cause une règle existante",
+        "Appliquer une règle à un cas particulier",
+        "Construire physiquement un dispositif réglementaire",
+        "Élever un cas particulier au rang de principe général"
+      ],
+      "r": 3,
+      "x": "\"Ériger en\" = transformer, élever au statut de. \"Ériger en règle\" = faire d'un cas particulier un principe applicable à tous. Locution courante dans le discours argumentatif et administratif."
+    },
+    {
+      "q": "\"Péremptoire\" et \"catégorique\" : lequel implique davantage l'impossibilité de répliquer ?",
+      "o": [
+        "Catégorique dans tous les cas",
+        "Les deux sont identiques dans leur sens",
+        "Péremptoire, qui coupe court à toute discussion",
+        "Catégorique, qui exprime l'affirmation la plus forte"
+      ],
+      "r": 2,
+      "x": "\"Péremptoire\" (du latin \"peremptorius\" = qui supprime) : coupe court à toute réplique ou discussion. \"Catégorique\" = affirmatif et sans réserve, mais n'implique pas forcément de clôture au débat. Nuance fine attendue en concours avancé."
+    },
+    {
+      "q": "\"Impécunieux\" qualifie quelqu'un qui :",
+      "o": [
+        "Manque de scrupules dans ses affaires",
+        "Manque de ressources financières",
+        "Manque de méthode dans son travail",
+        "Manque d'ambition dans sa carrière"
+      ],
+      "r": 1,
+      "x": "\"Impécunieux\" (du latin \"pecunia\" = argent). Synonyme élégant de \"pauvre\" ou \"sans ressources\". Mot classique attendu dans les épreuves de vocabulaire des concours avancés."
+    },
+    {
+      "q": "\"Superfétatoire\" et \"redondant\" : lequel insiste sur le surplus par excès de quantité ?",
+      "o": [
+        "Redondant dans tous les cas",
+        "Superfétatoire dans tous les cas",
+        "\"Redondant\" insiste sur la répétition inutile ; \"superfétatoire\" sur l'excès de quantité",
+        "Les deux sont toujours interchangeables"
+      ],
+      "r": 2,
+      "x": "\"Redondant\" = dit deux fois la même chose. \"Superfétatoire\" = ajouté en surplus de ce qui suffisait. Un argument superfétatoire est en trop ; un argument redondant répète un argument déjà formulé."
+    },
+    {
+      "q": "\"Panégyrique\" est l'antonyme de :",
+      "o": [
+        "Plaidoyer",
+        "Diatribe ou réquisitoire",
+        "Mémoire",
+        "Discours solennel"
+      ],
+      "r": 1,
+      "x": "Panégyrique = éloge total. Diatribe = attaque violente. Réquisitoire = accusation sévère. Ces termes sont structurellement opposés dans les épreuves de synonymes et d'antonymes."
+    },
+    {
+      "q": "\"Apocryphe\" peut s'appliquer à :",
+      "o": [
+        "Une décision dont l'auteur est inconnu",
+        "Un texte dont l'authenticité est douteuse",
+        "Un document officiel à diffusion restreinte",
+        "Un manuscrit traduit d'une langue étrangère"
+      ],
+      "r": 1,
+      "x": "\"Apocryphe\" = d'authenticité douteuse, attribué faussement à un auteur. Terme utilisé en histoire des textes (textes apocryphes de la Bible, lettres apocryphes de grands auteurs)."
+    },
+    {
+      "q": "\"Sentencieux\" est proche de :",
+      "o": [
+        "Rapide et efficace dans ses décisions",
+        "Pompeux et moralisateur dans son expression",
+        "Sincère et direct dans ses interventions",
+        "Sobre et concis dans ses formulations"
+      ],
+      "r": 1,
+      "x": "\"Sentencieux\" = qui parle par maximes sur un ton de suffisance. La connotation est négative : l'excès de sentences morales nuit à la sincérité et à la clarté."
+    },
+    {
+      "q": "\"Galimatias\" se distingue de \"jargon\" en ce que :",
+      "o": [
+        "Le jargon est incompréhensible par nature ; le galimatias est technique",
+        "Le galimatias est un discours confus et incohérent ; le jargon est une langue technique codifiée",
+        "Le jargon est oral ; le galimatias uniquement écrit",
+        "Les deux désignent la même réalité linguistique"
+      ],
+      "r": 1,
+      "x": "Galimatias = propos confus, sans structure ni logique. Jargon = vocabulaire spécialisé d'une profession, compréhensible par les initiés. La différence est entre incohérence (galimatias) et spécialisation (jargon)."
+    },
+    {
+      "q": "\"Rétrograde\" peut désigner une loi ou une mesure qui :",
+      "o": [
+        "Introduit de nouvelles avancées dans un domaine",
+        "Remet en cause des droits ou des acquis antérieurs",
+        "Codifie des pratiques anciennement admises",
+        "Accélère la mise en œuvre d'une réforme"
+      ],
+      "r": 1,
+      "x": "\"Mesure rétrograde\" = qui recule par rapport à un état antérieur. Dans le discours juridique et politique, le terme désigne une régression des droits ou une limitation de libertés acquises."
+    },
+    {
+      "q": "La \"palinodie\" dans le discours politique désigne :",
+      "o": [
+        "Un long discours répétant plusieurs fois le même argument",
+        "La rétractation publique d'une position antérieure",
+        "Un plaidoyer en faveur d'une cause difficile à défendre",
+        "Un discours célébrant les actions d'un parti politique"
+      ],
+      "r": 1,
+      "x": "\"Chanter sa palinodie\" = se rétracter publiquement, dire le contraire de ce qu'on avait affirmé. Connotation de manque de constance ou de retournement opportuniste."
+    },
+    {
+      "q": "\"Édulcoré\" et \"atténué\" : lequel implique une transformation de la réalité pour l'embellir ?",
+      "o": [
+        "Atténué dans tous les cas",
+        "Édulcoré, qui adoucit et embellit la réalité",
+        "Atténué, qui diminue l'intensité d'un phénomène",
+        "Les deux sont toujours interchangeables"
+      ],
+      "r": 1,
+      "x": "\"Édulcoré\" (de \"édulcorer\" = sucrer) = rendre plus agréable en supprimant ce qui choque. \"Atténué\" = rendu moins fort, moins intense, sans nécessairement d'embellissement. Un compte rendu édulcoré cache des aspects négatifs ; un son atténué est simplement plus faible."
+    },
+    {
+      "q": "\"Stoïque\" et \"impassible\" : la nuance est :",
+      "o": [
+        "\"Impassible\" implique une résistance active à la souffrance",
+        "\"Stoïque\" est plus fort et insiste sur la résistance aux épreuves",
+        "Les deux sont parfaitement synonymes sans nuance",
+        "\"Impassible\" s'emploie uniquement pour les personnes"
+      ],
+      "r": 1,
+      "x": "\"Stoïque\" = qui supporte activement les épreuves selon une philosophie de maîtrise de soi. \"Impassible\" = qui ne laisse rien paraître de ses émotions, sans nécessairement de combat intérieur. \"Stoïque\" implique une résistance, \"impassible\" une neutralité extérieure."
+    },
+    {
+      "q": "\"Sagace\" est proche de :",
+      "o": [
+        "Circonspect et prudent dans ses décisions",
+        "Persévérant malgré les obstacles rencontrés",
+        "Perspicace et pénétrant dans ses analyses",
+        "Modéré et mesuré dans ses jugements"
+      ],
+      "r": 2,
+      "x": "\"Sagace\" = qui discerne avec acuité ce qui échappe aux autres. Proche de \"perspicace\" mais \"sagace\" a une connotation de flair quasi-instinctif. \"Pondéré\" et \"circonspect\" concernent l'attitude, non la finesse intellectuelle."
+    },
+    {
+      "q": "Le registre \"tragique\" se caractérise par :",
+      "o": [
+        "La recherche du comique par des situations ridicules",
+        "La dénonciation satirique des travers de la société",
+        "L'exaltation des actions héroïques et grandioses",
+        "La fatalité, la souffrance et l'impossibilité d'échapper au destin"
+      ],
+      "r": 3,
+      "x": "Registre tragique : fatalité, destin inexorable, souffrance, mort. Présent dans la tragédie antique (Sophocle) et classique (Racine). À distinguer du registre pathétique (émotion, pitié) et épique (grandeur héroïque)."
+    },
+    {
+      "q": "La \"catharsis\" dans la tragédie antique désigne :",
+      "o": [
+        "Le dénouement heureux d'une pièce de théâtre",
+        "La purgation des passions par la pitié et la terreur",
+        "La morale explicite à la fin d'une pièce",
+        "L'unité d'action dans la tragédie classique"
+      ],
+      "r": 1,
+      "x": "Concept d'Aristote (Poétique) : le spectateur de tragédie éprouve pitié et terreur, ce qui purifie et libère ses propres passions. Terme fondamental en esthétique théâtrale."
+    },
+    {
+      "q": "Une \"tirade\" au théâtre est :",
+      "o": [
+        "Un bref échange de répliques courtes entre deux personnages",
+        "Une indication scénique adressée aux acteurs",
+        "Un long discours prononcé par un seul personnage",
+        "Un aparté adressé au public seul"
+      ],
+      "r": 2,
+      "x": "La tirade est un long monologue d'un personnage au cours d'un dialogue. Elle développe une idée, un sentiment ou une argumentation. À distinguer de la stichomythie (échange de vers courts) et de l'aparté."
+    },
+    {
+      "q": "Le mouvement \"Parnasse\" du XIXe siècle se caractérise par :",
+      "o": [
+        "L'expression débridée des émotions personnelles",
+        "La recherche d'un art pur et l'impassibilité formelle",
+        "L'engagement politique direct dans la littérature",
+        "La représentation réaliste et documentée du monde ouvrier"
+      ],
+      "r": 1,
+      "x": "Le Parnasse (Leconte de Lisle, Heredia) réagit contre le lyrisme romantique en prônant l'\"art pour l'art\" : perfection formelle, impassibilité, impersonnalité. \"Sculpte, lime, cisèle\" (Gautier)."
+    },
+    {
+      "q": "Le \"Naturalisme\" de Zola se distingue du \"Réalisme\" principalement par :",
+      "o": [
+        "Le Naturalisme décrit la vie de la haute bourgeoisie",
+        "Le Naturalisme applique une méthode scientifique à l'observation sociale",
+        "Le Réalisme exclut tout document ou enquête préalable",
+        "Le Réalisme concerne la poésie ; le Naturalisme uniquement le roman"
+      ],
+      "r": 1,
+      "x": "Zola théorise le roman expérimental : le romancier naturaliste observe et expérimente comme un scientifique. Il étudie l'influence de l'hérédité et du milieu sur les individus. Le Réalisme (Balzac, Flaubert) ne pousse pas aussi loin la démarche scientifique."
+    },
+    {
+      "q": "La \"stichomythie\" dans une pièce de théâtre désigne :",
+      "o": [
+        "Un long discours d'un seul personnage",
+        "Une scène sans dialogue ni paroles",
+        "Un échange rapide de répliques courtes alternées",
+        "Une indication scénique sur le rythme du discours"
+      ],
+      "r": 2,
+      "x": "La stichomythie crée un effet de tension, de duel verbal ou d'urgence dramatique. Elle alterne une réplique par personnage, vers par vers ou phrase par phrase. Très fréquente dans la tragédie classique."
+    },
+    {
+      "q": "Le \"Surréalisme\" se caractérise notamment par :",
+      "o": [
+        "La description réaliste et précise de la réalité quotidienne",
+        "L'application de méthodes scientifiques à la création artistique",
+        "L'exploration de l'inconscient et du rêve par l'écriture automatique",
+        "La célébration de l'histoire nationale et des valeurs traditionnelles"
+      ],
+      "r": 2,
+      "x": "Breton, Aragon, Éluard : le Surréalisme libère l'écriture des contraintes de la raison et du conscient. L'écriture automatique, le rêve et l'inconscient sont les principales sources d'inspiration."
+    },
+    {
+      "q": "La \"focalisation interne\" dans un récit signifie que :",
+      "o": [
+        "Le narrateur voit tout et connaît tout",
+        "Le lecteur en sait moins que les personnages",
+        "Le narrateur adopte le point de vue d'un personnage précis",
+        "La narration se fait à la troisième personne du pluriel"
+      ],
+      "r": 2,
+      "x": "Focalisation interne = on voit le monde à travers les yeux d'un personnage (ses pensées, ses perceptions). Focalisation zéro = narrateur omniscient. Focalisation externe = narrateur voit les actes sans les pensées."
+    },
+    {
+      "q": "La \"focalisation externe\" (ou \"vision du dehors\") signifie que :",
+      "o": [
+        "Le narrateur connaît les pensées de tous les personnages",
+        "Le narrateur voit les actes mais ne connaît pas les pensées",
+        "L'histoire est racontée par un personnage qui y participe",
+        "La narration adopte le point de vue d'un seul personnage"
+      ],
+      "r": 1,
+      "x": "Focalisation externe : le narrateur observe de l'extérieur comme une caméra sans accès aux pensées. Effet de mystère et d'objectivité. Employée par Hemingway, Robbe-Grillet."
+    },
+    {
+      "q": "Un texte \"didactique\" a pour fonction principale de :",
+      "o": [
+        "Émouvoir le lecteur par des effets pathétiques",
+        "Divertir par des effets comiques ou narratifs",
+        "Transmettre un savoir ou une morale",
+        "Persuader par des arguments polémiques"
+      ],
+      "r": 2,
+      "x": "Texte didactique (du grec \"didaskein\" = enseigner) : vise à instruire, à transmettre une connaissance ou un enseignement. Les fables, les essais philosophiques, les manuels relèvent du registre didactique."
+    },
+    {
+      "q": "\"Diatribe\" désigne :",
+      "o": [
+        "Un long plaidoyer en faveur d'une cause défendue",
+        "Un texte officiel d'une autorité administrative",
+        "Une critique violente et agressive contre une personne ou une idée",
+        "Un genre poétique caractérisé par la plainte mélancolique"
+      ],
+      "r": 2,
+      "x": "\"Diatribe\" (du grec \"diatribé\" = discussion). Désigne un discours ou un texte d'une grande violence verbale, visant à détruire une réputation ou une idée. Proche du pamphlet."
+    },
+    {
+      "q": "L'\"hypotypose\" est une figure qui consiste à :",
+      "o": [
+        "Répéter un terme au début de plusieurs propositions",
+        "Décrire une scène de façon si vive qu'elle semble présente",
+        "Employer un terme dans son sens contraire",
+        "Atténuer une réalité par une formule indirecte"
+      ],
+      "r": 1,
+      "x": "L'hypotypose = description vivante et animée qui fait voir les choses comme si elles se passaient sous les yeux. Figure du registre épique et du discours judiciaire. Proche de l'enargeia rhétorique."
+    },
+    {
+      "q": "L'\"ironie socratique\" (maïeutique) se distingue de l'ironie rhétorique en ce qu'elle :",
+      "o": [
+        "Attaque violemment une position adverse",
+        "Dit clairement le contraire de ce que l'on pense",
+        "Feint l'ignorance pour amener l'interlocuteur à découvrir lui-même la vérité",
+        "Emploie des figures d'atténuation pour critiquer"
+      ],
+      "r": 2,
+      "x": "Socrate feignait de ne rien savoir (\"je sais que je ne sais rien\") pour amener l'autre à construire lui-même sa réponse. La maïeutique = \"art d'accoucher les esprits\". L'ironie rhétorique dit le contraire de sa pensée."
+    },
+    {
+      "q": "\"Le registre comique\" englobe :",
+      "o": [
+        "Uniquement les comédies et les farces",
+        "L'humour, la satire, l'ironie et le registre burlesque",
+        "Toutes les formes d'écriture légère et distrayantes",
+        "Uniquement les œuvres destinées à un public populaire"
+      ],
+      "r": 1,
+      "x": "Le registre comique recouvre plusieurs nuances : humour (bienveillant), ironie (distance critique), satire (moquerie sociale), burlesque (comique par l'absurde ou l'excès). Il vise à provoquer le rire ou le sourire."
+    },
+    {
+      "q": "Une \"antithèse\" et un \"oxymore\" diffèrent en ce que :",
+      "o": [
+        "L'antithèse est une figure de son ; l'oxymore une figure de sens",
+        "L'oxymore unit des contraires dans un même groupe ; l'antithèse les oppose dans des propositions distinctes",
+        "L'antithèse est toujours plus longue que l'oxymore",
+        "L'oxymore n'existe qu'en poésie ; l'antithèse en prose seulement"
+      ],
+      "r": 1,
+      "x": "Oxymore = \"obscure clarté\" (contraires dans le même groupe). Antithèse = \"Je vis, je souffre, j'aime et je mourrai bientôt\" (opposition entre propositions). L'oxymore est une contradiction interne ; l'antithèse une opposition externe."
+    },
+    {
+      "q": "\"Elle _______ ce poème depuis des années.\" PP de \"réciter\" en contexte.",
+      "o": [
+        "a récitées",
+        "a récité",
+        "a récités",
+        "a réciter"
+      ],
+      "r": 1,
+      "x": "\"Ce poème\" = COD masculin singulier postposé → PP invariable \"récité\". Le PP avec \"avoir\" est invariable quand le COD est postposé. Règle fondamentale constamment vérifiée en concours."
+    },
+    {
+      "q": "\"Elle s'est _______ à cette décision sans protester.\" PP de \"se soumettre\".",
+      "o": [
+        "soumise",
+        "soumis",
+        "soumirent",
+        "soumises"
+      ],
+      "r": 0,
+      "x": "\"Se soumettre\" : \"soumettre quelqu'un\" est transitif direct. \"Se\" = COD → accord avec \"elle\" (fém. sing.) → \"soumise\". À distinguer des verbes à COI où le PP est invariable."
+    },
+    {
+      "q": "\"Il _______ le soin de rédiger ce rapport.\" PP de \"se voir confier\".",
+      "o": [
+        "s'est vu confier",
+        "s'est vue confier",
+        "s'est vus confier",
+        "s'est vu confié"
+      ],
+      "r": 0,
+      "x": "\"Se voir + infinitif\" → PP \"vu\" est toujours invariable. \"Confier\" reste à l'infinitif. Pour les verbes de perception comme voir ou entendre, le participe passé s'accorde si et seulement si deux conditions sont réunies :le COD doit être placé avant le verbe et le COD doit faire lui-même l'action exprimée par l'infinitif."
+    },
+    {
+      "q": "\"Ces agents _______  mutuellement.\" PP de \"s'entraider\".",
+      "o": [
+        "se sont entraidés",
+        "s'est entraidé",
+        "se sont entraidé",
+        "se sont entraidées"
+      ],
+      "r": 0,
+      "x": "\"S'entraider\" = verbe réciproque, \"se\" est COD → accord avec \"ces agents\" (masc. plur.) → \"entraidés\". Verbe essentiellement pronominal : son PP s'accorde avec le sujet."
+    },
+    {
+      "q": "\"Elles se sont _______ en chemin.\" PP de \"se perdre\".",
+      "o": [
+        "perdu",
+        "perdue",
+        "perdus",
+        "perdues"
+      ],
+      "r": 3,
+      "x": "\"Se perdre\" : \"perdre\" est transitif direct. \"Se\" = COD → accord avec \"elles\" (fém. plur.) → \"perdues\". Accord classique du PP des verbes pronominaux réfléchis directs."
+    },
+    {
+      "q": "\"Il _______ sans raison.\" PP de \"se plaindre\".",
+      "o": [
+        "s'est plaint",
+        "s'est plaint ou s'est plaintif selon le sens",
+        "s'est plaindu",
+        "s'est plainte"
+      ],
+      "r": 0,
+      "x": "\"Se plaindre\" fait partie des verbes pronominaux où le pronom \"se\" est COD (on plaint quelqu'un). Le participe passé s'accorde donc en genre et en nombre avec ce COD placé avant le verbe (qui renvoie au sujet). Comme le sujet est \"Il\" (masculin singulier), on écrit \"plaint\". Si le sujet avait été féminin (\"Elle\"), on aurait écrit \"s'est plainte\"."
+    },
+    {
+      "q": "\"Les résultats _______ prometteurs.\" PP de \"se révéler\".",
+      "o": [
+        "se sont révélés",
+        "se sont révélé",
+        "se sont révélées",
+        "se sont révélé ou révélés selon le sens"
+      ],
+      "r": 0,
+      "x": "\"Se révéler\" = verbe pronominal. \"Se\" est COD → accord avec le sujet \"les résultats\" (masc. plur.) → \"révélés\". Lorsque \"se révéler\" est suivi d'un attribut, l'attribut s'accorde aussi avec le sujet."
+    },
+    {
+      "q": "\"Ils _______ de cette erreur.\" PP de \"s'apercevoir\".",
+      "o": [
+        "se sont aperçus",
+        "se sont aperçu",
+        "se sont aperçus ou aperçu selon le sens",
+        "se sont aperçues"
+      ],
+      "r": 1,
+      "x": "\"S'apercevoir de\" : \"apercevoir\" + de → COI. \"Se\" = COI → PP invariable : \"aperçu\". Règle : verbes pronominaux à COI (s'apercevoir de, se souvenir de, se douter de) → PP invariable."
+    },
+    {
+      "q": "\"Elle _______ à cette tâche sans rechigner.\" PP de \"se consacrer\".",
+      "o": [
+        "s'est consacrés",
+        "s'est consacrée",
+        "s'est consacré",
+        "s'est consacrées"
+      ],
+      "r": 1,
+      "x": "On dit \"consacrer quelqu'un à quelque chose\". Le pronom \"se\" est donc COD et placé avant le verbe. Le participe passé s'accorde en genre et en nombre avec ce COD qui renvoie au sujet \"Elle\" (féminin singulier), d'où la forme \"consacrée\". À distinguer de \"se conformer à\", qui a \"à\" → COI → PP invariable."
+    },
+    {
+      "q": "\"Ces mesures _______ à la situation.\" PP de \"s'adapter\".",
+      "o": [
+        "se sont adapté",
+        "se sont adaptées",
+        "se sont adaptés",
+        "se sont adaptée"
+      ],
+      "r": 1,
+      "x": "On dit \"adapter quelque chose à une situation\". Le pronom \"se\" est donc COD et placé avant le verbe. Le participe passé s'accorde en genre et en nombre avec ce COD qui renvoie au sujet \"Ces mesures\" (féminin pluriel), d'où la forme \"adaptées\"."
+    },
+    {
+      "q": "\"Il _______ une longue carrière.\" PP de \"se forger\".",
+      "o": [
+        "s'est forgée",
+        "s'est forgé",
+        "s'est forgés",
+        "s'est forgées"
+      ],
+      "r": 1,
+      "x": "\"Se forger une longue carrière\" : \"une longue carrière\" = COD postposé. \"Se\" = COI. PP invariable : \"forgé\". Règle : COD postposé → PP invariable, quel que soit le genre du sujet."
+    },
+    {
+      "q": "L'\"exégèse\" est :",
+      "o": [
+        "La composition d'un texte fondateur dans une tradition",
+        "L'analyse et l'interprétation approfondie d'un texte",
+        "La traduction d'un texte d'une langue ancienne",
+        "La censure d'un texte jugé contraire aux bonnes mœurs"
+      ],
+      "r": 1,
+      "x": "\"Exégèse\" (du grec \"exegeisthai\" = interpréter). Désigne l'étude critique et rigoureuse d'un texte (biblique, juridique, littéraire). L'exégète = celui qui pratique l'exégèse."
+    },
+    {
+      "q": "\"Hermétisme\" désigne en littérature :",
+      "o": [
+        "Un style très clair et transparent",
+        "Un style délibérément obscur et réservé aux initiés",
+        "Un style concis et dépouillé de tout ornement",
+        "Un style amplifié par l'usage excessif des figures"
+      ],
+      "r": 1,
+      "x": "L'hermétisme littéraire (poésie hermétique de Mallarmé, Celan) cherche à dépasser le sens immédiat par un langage voilé, destiné à créer une expérience plutôt qu'à transmettre un message clair."
+    },
+    {
+      "q": "L'\"ode\" se distingue de l'\"hymne\" principalement par :",
+      "o": [
+        "L'ode est toujours en vers libres ; l'hymne en vers réguliers",
+        "L'hymne s'adresse à une collectivité ; l'ode peut être adressée à une personne ou une chose",
+        "L'ode est toujours plus courte que l'hymne",
+        "L'hymne est toujours chanté ; l'ode uniquement récité"
+      ],
+      "r": 1,
+      "x": "L'hymne célèbre une collectivité, une nation, une divinité. L'ode (Pindare, Ronsard, Hugo) peut s'adresser à un individu, une saison, un sentiment. La distinction n'est pas absolue mais cette nuance est classiquement attendue."
+    },
+    {
+      "q": "La \"paronomase\" est une figure qui rapproche :",
+      "o": [
+        "Des mots de sens contraires dans la même phrase",
+        "Des mots de sonorités proches mais de sens différents",
+        "Des mots répétés en tête de phrases successives",
+        "Des mots dont les lettres sont les mêmes mais dans un ordre différent"
+      ],
+      "r": 1,
+      "x": "Paronomase = rapprochement de mots de sonorités voisines aux sens différents. Exemple : \"Qui se ressemble s'assemble.\" Crée un effet musical et sémantique. Proche du calembour mais plus soutenu."
+    },
+    {
+      "q": "La \"polyphonie\" dans un texte littéraire désigne :",
+      "o": [
+        "L'emploi d'un seul point de vue dominant",
+        "La présence de plusieurs voix et perspectives différentes",
+        "La répétition d'un même thème musical",
+        "L'alternance entre prose et poésie"
+      ],
+      "r": 1,
+      "x": "Polyphonie (du grec \"polus\" = nombreux + \"phoné\" = voix). Bakhtine désigne par ce terme la coexistence de plusieurs voix autonomes dans un roman. Présente notamment chez Dostoïevski."
+    },
+    {
+      "q": "\"Intertextualité\" désigne :",
+      "o": [
+        "La traduction d'un texte dans plusieurs langues",
+        "La relation qu'un texte entretient avec d'autres textes",
+        "La polémique entre deux auteurs contemporains",
+        "L'étude comparée des textes d'une même époque"
+      ],
+      "r": 1,
+      "x": "L'intertextualité (Julia Kristeva, Gérard Genette) = ensemble des relations qu'un texte entretient avec d'autres textes (citations, allusions, parodie, pastiche). Tout texte est \"tissu de citations\" (Barthes)."
+    },
+    {
+      "q": "La \"paraphrase\" se distingue du \"commentaire\" en ce que :",
+      "o": [
+        "La paraphrase développe des idées personnelles ; le commentaire résume",
+        "La paraphrase reformule sans ajouter de sens ; le commentaire analyse et interprète",
+        "Le commentaire est toujours plus long que la paraphrase",
+        "La paraphrase s'emploie uniquement pour les textes poétiques"
+      ],
+      "r": 1,
+      "x": "La paraphrase = \"dire la même chose autrement\", sans ajout d'analyse. Le commentaire (ou explication de texte) analyse, interprète, met en relation forme et fond. La paraphrase est à éviter dans les exercices de commentaire littéraire."
+    },
+    {
+      "q": "L'\"ironie\" est proche de la \"dérision\" mais :",
+      "o": [
+        "L'ironie est plus violente que la dérision",
+        "L'ironie peut être légère ou fine ; la dérision tourne en ridicule de façon méprisante",
+        "La dérision peut être bienveillante ; l'ironie est toujours destructrice",
+        "Les deux sont parfaitement identiques en littérature"
+      ],
+      "r": 1,
+      "x": "L'ironie = décalage entre ce qui est dit et ce qui est pensé (peut être fine, subtile, légère). La dérision = tourner en dérision, ridiculiser avec un mépris plus marqué. La dérision est souvent une ironie blessante et dévalorisante."
+    },
+    {
+      "q": "La \"parataxe\" se distingue de l'\"hypotaxe\" en ce que :",
+      "o": [
+        "La parataxe multiplie les subordonnées ; l'hypotaxe les juxtapose",
+        "La parataxe juxtapose des propositions ; l'hypotaxe les subordonne",
+        "L'hypotaxe est propre à la poésie ; la parataxe à la prose",
+        "Les deux désignent le même phénomène syntaxique"
+      ],
+      "r": 1,
+      "x": "Parataxe = phrases juxtaposées sans conjonction de subordination (style simple, rapide, oral). Hypotaxe = phrases liées par des subordonnées (style complexe, élaboré, écrit). César : \"Veni, vidi, vici\" = parataxe."
+    },
+    {
+      "q": "Le verbe \"réciter\" est transitif direct. \"Ils ont récité leurs leçons.\" Si on antépose le COD : \"Les leçons qu'ils ont _______ .\"",
+      "o": [
+        "récité",
+        "récités",
+        "récitées",
+        "réciter"
+      ],
+      "r": 2,
+      "x": "\"Les leçons\" = COD féminin pluriel antéposé via \"que\" → accord \"récitées\". Règle : PP avec \"avoir\" s'accorde avec le COD SEULEMENT s'il précède le verbe."
+    },
+    {
+      "q": "\"Le Romantisme\" réagit contre les contraintes du :",
+      "o": [
+        "Naturalisme",
+        "Réalisme",
+        "Classicisme",
+        "Symbolisme"
+      ],
+      "r": 2,
+      "x": "Le Romantisme (Hugo, Lamartine, Musset) réagit contre la rigueur formelle et les règles du Classicisme (unités dramatiques, bienséance, hiérarchie des genres). Il prône la liberté créatrice et l'expression du \"moi\"."
+    },
+    {
+      "q": "La \"catharsis\" et le \"deus ex machina\" : le second désigne :",
+      "o": [
+        "Le dénouement tragique et inévitable d'une pièce",
+        "Un personnage divin introduit pour résoudre artificiellement l'intrigue",
+        "L'unité d'action dans la tragédie classique",
+        "La purification des passions par la pitié et la terreur"
+      ],
+      "r": 1,
+      "x": "\"Deus ex machina\" (le dieu descendant sur scène par une machine) = résolution artificielle d'une situation inextricable par un élément extérieur imprévu. Critiqué par Aristote car contraire à la vraisemblance."
+    },
+    {
+      "q": "Le \"discours indirect libre\" se caractérise par :",
+      "o": [
+        "L'emploi d'un verbe introducteur suivi de \"que\"",
+        "La fusion du discours du narrateur et de celui du personnage",
+        "La citation exacte des paroles d'un personnage entre guillemets",
+        "La narration des paroles d'un personnage à la troisième personne avec \"que\""
+      ],
+      "r": 1,
+      "x": "Discours indirect libre : ni guillemets, ni verbe introducteur. Les paroles ou pensées du personnage sont intégrées au tissu narratif avec les temps et personnes du narrateur. Exemple : \"Il partait. La vie était trop injuste.\""
+    },
+    {
+      "q": "\"Nul ne peut ignorer la loi\" emploie \"nul\" comme :",
+      "o": [
+        "Adjectif qualificatif attribut du sujet",
+        "Pronom indéfini sujet à valeur négative",
+        "Adverbe de négation renforcée",
+        "Déterminant indéfini sujet"
+      ],
+      "r": 1,
+      "x": "\"Nul\" = pronom indéfini négatif (= personne). Construit avec \"ne\" : \"Nul ne peut...\" Peut aussi être adjectif (\"nul résultat\") ou attribut (\"ce résultat est nul\"). Ici pronom sujet à valeur négative totale."
+    },
+    {
+      "q": "\"Il s'est _______ de cette responsabilité.\" PP de \"s'acquitter\".",
+      "o": [
+        "acquittée",
+        "acquittés",
+        "acquitté",
+        "acquittées"
+      ],
+      "r": 2,
+      "x": "\"S'acquitter de\" : \"acquitter\" + de → COI. \"Se\" = COI → PP invariable \"acquitté\", quel que soit le genre ou le nombre du sujet. Règle des pronominaux à COI : PP toujours invariable."
+    },
+    {
+      "q": "\"Elle s'est _______ à ses nouvelles fonctions.\" PP de \"s'habituer\".",
+      "o": [
+        "habituée",
+        "habitué",
+        "habituées",
+        "habitués"
+      ],
+      "r": 0,
+      "x": "\"S'habituer à\" : \"habituer quelqu'un à\" → transitif direct. \"Se\" = COD → accord avec \"elle\" (fém. sing.) → \"habituée\". À distinguer des verbes à COI où le PP reste invariable."
+    },
+    {
+      "q": "\"La paronomase\" rapproche des mots à sonorités proches. La phrase \"Qui se ressemble s'assemble\" est :",
+      "o": [
+        "Une allitération uniquement",
+        "Une assonance uniquement",
+        "Une paronomase et une anaphore",
+        "Une paronomase"
+      ],
+      "r": 3,
+      "x": "\"Ressemble\" et \"assemble\" ont des sonorités très proches → paronomase. Il n'y a pas d'anaphore (pas de répétition en tête). Les deux mots riment presque, créant un effet mémorable de sentence."
+    },
+    {
+      "q": "L'\"incipit\" désigne :",
+      "o": [
+        "La dernière phrase ou le dernier paragraphe d'une œuvre",
+        "Les premiers mots ou la première partie d'une œuvre",
+        "La dédicace placée au début d'un texte",
+        "Le résumé placé en quatrième de couverture"
+      ],
+      "r": 1,
+      "x": "\"Incipit\" (du latin \"incipere\" = commencer). Désigne l'ouverture d'un texte. L'excipit est la fin. L'incipit est fondamental en analyse littéraire car il établit le pacte de lecture et le ton de l'œuvre."
+    },
+    {
+      "q": "L'\"excipit\" désigne :",
+      "o": [
+        "Les premiers mots d'un texte fondateurs du pacte de lecture",
+        "La dédicace placée avant le titre de l'œuvre",
+        "Les derniers mots ou la dernière partie d'une œuvre",
+        "La note de bas de page explicative d'un terme obscur"
+      ],
+      "r": 2,
+      "x": "L'excipit est la clôture du texte. Il peut confirmer ou subvertir les attentes créées par l'incipit. \"Excipit\" et \"incipit\" sont les deux pôles structurants de l'analyse des romans et nouvelles."
+    },
+    {
+      "q": "La \"prolepse\" narrative est :",
+      "o": [
+        "Un retour en arrière dans la chronologie du récit",
+        "Une anticipation d'un événement futur dans le récit",
+        "Le ralentissement du rythme narratif par les descriptions",
+        "L'accélération du rythme par les ellipses"
+      ],
+      "r": 1,
+      "x": "Prolepse = anticipation (anachronie narrative). Analepse = retour en arrière (flashback). Ces deux notions structurelles sont essentielles dans l'analyse des récits modernes (Genette, Figures III)."
+    },
+    {
+      "q": "L'\"analepse\" narrative est :",
+      "o": [
+        "Une anticipation d'un événement futur dans le récit",
+        "Une accélération soudaine du rythme narratif",
+        "Un retour en arrière dans la chronologie du récit",
+        "Une pause descriptive interrompant l'action"
+      ],
+      "r": 2,
+      "x": "Analepse = flashback (retour en arrière). Prolepse = flash-forward (anticipation). Ces termes de Gérard Genette sont fondamentaux en narratologie et régulièrement testés dans les concours de niveau licence."
+    },
+    {
+      "q": "La \"vraisemblance\" dans le classicisme désigne :",
+      "o": [
+        "La représentation exacte et documentée de la réalité",
+        "Ce qui paraît vrai et acceptable aux yeux du public",
+        "La conformité absolue aux faits historiques attestés",
+        "L'absence totale d'éléments merveilleux ou fantastiques"
+      ],
+      "r": 1,
+      "x": "La vraisemblance classique n'est pas la vérité mais ce qui semble vrai, ce que le public peut croire. \"Il faut que la vérité semble vraie\" (Boileau). À distinguer de la \"bienséance\" (conformité aux bonnes mœurs)."
+    },
+    {
+      "q": "La \"bienséance\" dans le théâtre classique impose :",
+      "o": [
+        "Que les pièces durent exactement 24 heures",
+        "Que le dénouement soit toujours heureux",
+        "Que les actes choquants ne soient pas représentés sur scène",
+        "Que la pièce comporte exactement cinq actes"
+      ],
+      "r": 2,
+      "x": "La bienséance classique interdit de montrer sur scène la violence, la mort, l'amour trop explicite. Ces actes doivent se dérouler hors scène et être rapportés par un personnage. Contrainte dramaturgique liée à la vraisemblance et aux convenances sociales."
+    },
+    {
+      "q": "\"L'épopée\", \"la tragédie\" et \"la comédie\" sont trois genres définis par Aristote dans :",
+      "o": [
+        "L'Art poétique",
+        "La Rhétorique",
+        "La Poétique",
+        "L'Éthique à Nicomaque"
+      ],
+      "r": 2,
+      "x": "La \"Poétique\" d'Aristote est le premier traité systématique de théorie littéraire. Il définit la tragédie (imitation d'une action sérieuse), la comédie (imitation d'hommes inférieurs) et les règles de la mimèsis. Référence fondamentale des concours de licence de lettres."
     }
   ],
   "maths_bepc": [
@@ -12375,6 +14575,2360 @@ const QUESTIONS = {
       ],
       "r": 0,
       "x": "La forêt amazonienne couvre environ 5,5 millions de km² sur 9 pays d'Amérique du Sud (dont 60 % au Brésil). Elle produit environ 20 % de l'oxygène terrestre et abrite 10 % des espèces connues sur Terre. Sa déforestation accélérée constitue l'une des grandes menaces pour le climat mondial. La forêt du bassin du Congo est la deuxième plus grande forêt tropicale."
+    },
+    {
+      "q": "Qui a rédigé le projet de la Déclaration Universelle des Droits de l'Homme (DUDH) ?",
+      "o": [
+        "Winston Churchill",
+        "René Cassin",
+        "Eleanor Roosevelt",
+        "Charles de Gaulle"
+      ],
+      "r": 1,
+      "x": "René Cassin, juriste français et Prix Nobel de la Paix 1968, est le principal rédacteur de la DUDH adoptée le 10 décembre 1948. La déclaration comporte 30 articles et constitue le fondement du droit international des droits humains."
+    },
+    {
+      "q": "Qui est l'auteur du recueil de poèmes burkinabè intitulé \"Une balle sur le moral\" ?",
+      "o": [
+        "Titinga Frédéric Pacéré",
+        "Norbert Zongo",
+        "William Combary",
+        "Aristide Tarnagda"
+      ],
+      "r": 2,
+      "x": "\"Une balle sur le moral\" est un recueil de poésie du Burkinabè William Combary. Engagé dans la défense des valeurs humanistes, il fait partie des voix poétiques contemporaines du Burkina Faso."
+    },
+    {
+      "q": "Quel est le deuxième nom (surnom) de Nelson Mandela ?",
+      "o": [
+        "Ubuntu",
+        "Amandla",
+        "Madiba",
+        "Biko"
+      ],
+      "r": 2,
+      "x": "Nelson Mandela est affectueusement surnommé \"Madiba\", son nom de clan Xhosa. Premier président noir de l'Afrique du Sud (1994-1999), il a reçu le Prix Nobel de la Paix en 1993. La journée internationale Mandela est célébrée le 18 juillet."
+    },
+    {
+      "q": "Quelle capitale africaine est arrosée à la fois par le Nil Bleu et le Nil Blanc ?",
+      "o": [
+        "Le Caire",
+        "Assouan",
+        "Khartoum",
+        "Juba"
+      ],
+      "r": 2,
+      "x": "Khartoum, capitale du Soudan, est construite au confluent du Nil Bleu (venant d'Éthiopie) et du Nil Blanc (venant d'Ouganda). Leur jonction donne naissance au Nil, qui remonte vers le nord jusqu'à la Méditerranée."
+    },
+    {
+      "q": "Le diamant est la forme cristalline pure de quel élément ?",
+      "o": [
+        "Silicium",
+        "Carbone",
+        "Graphite synthétique",
+        "Quartz"
+      ],
+      "r": 1,
+      "x": "Le diamant est une forme cristalline pure du carbone, formée sous haute pression et haute température dans le manteau terrestre. C'est le minéral naturel le plus dur (10 sur l'échelle de Mohs)."
+    },
+    {
+      "q": "Quels auteurs africains ont remporté le Prix Goncourt ?",
+      "o": [
+        "Aminata Sow Fall et Véronique Tadjo",
+        "Mohamed Mbougar Sarr et Tahar Ben Jelloun",
+        "Alain Mabanckou et Léonora Miano",
+        "Achille Mbembe et Abdourahman Waberi"
+      ],
+      "r": 1,
+      "x": "Deux auteurs africains ont remporté le Prix Goncourt : Tahar Ben Jelloun (Maroc) en 1987 pour \"La Nuit sacrée\", et Mohamed Mbougar Sarr (Sénégal) en 2021 pour \"La Plus Secrète Mémoire des hommes\". Laurent Mauvignier a remporté le Prix Goncourt 2025 pour \"Maison vide\"."
+    },
+    {
+      "q": "Qui est le premier vainqueur du Tour du Faso, et quelle est sa nationalité ?",
+      "o": [
+        "Paul Daumond, burkinabè",
+        "Lamoussa Zoungrana, burkinabè",
+        "Igor Luchinko, russe",
+        "Abdou Ndiaye, sénégalais"
+      ],
+      "r": 2,
+      "x": "Le Russe Igor Luchinko a remporté la toute première édition du Tour du Faso en 1987. Cette course cycliste internationale créée par Thomas Sankara et Francis Ducreux est devenue la plus grande compétition cycliste d'Afrique subsaharienne."
+    },
+    {
+      "q": "Qui a inventé le vélocipède (ancêtre de la bicyclette) et en quelle année ?",
+      "o": [
+        "Pierre Michaux en 1861",
+        "Karl Friedrich Von Drais en 1817",
+        "Ernest Michaux en 1870",
+        "John Dunlop en 1888"
+      ],
+      "r": 1,
+      "x": "Karl Friedrich Von Drais, baron allemand, a inventé la draisienne (ou vélocipède) en 1817. Cet ancêtre de la bicyclette n'avait pas de pédales ; le cycliste avançait en poussant avec les pieds sur le sol."
+    },
+    {
+      "q": "Quel montant annuel a été convenu pour le financement climatique lors de la COP29, et où s'est-elle tenue ?",
+      "o": [
+        "200 milliards de dollars/an, Baku (Azerbaïdjan)",
+        "300 milliards de dollars/an, Baku (Azerbaïdjan)",
+        "500 milliards de dollars/an, Dubaï",
+        "150 milliards de dollars/an, Glasgow"
+      ],
+      "r": 1,
+      "x": "La COP29 s'est tenue à Bakou (Azerbaïdjan) et s'est conclue le 29 novembre 2024. L'objectif principal était de mobiliser 300 milliards de dollars par an d'ici 2035 au profit des pays en développement pour lutter contre le changement climatique."
+    },
+    {
+      "q": "Quelles sont les trois lois du mouvement de Newton ?",
+      "o": [
+        "Inertie, gravitation universelle et thermodynamique",
+        "Principe d'inertie, de la dynamique, des actions réciproques",
+        "Attraction, répulsion et équilibre des forces",
+        "Conservation de l'énergie, conservation de la quantité de mouvement, principe de relativité"
+      ],
+      "r": 1,
+      "x": "Les 3 lois de Newton sont : (1) Principe d'inertie (tout corps reste en mouvement rectiligne uniforme sans force extérieure) ; (2) Principe fondamental : F = ma ; (3) Principe des actions réciproques (toute action entraîne une réaction égale et opposée)."
+    },
+    {
+      "q": "Combien d'États membres de l'Union européenne ont des façades maritimes ?",
+      "o": [
+        "18 États",
+        "20 États",
+        "22 États",
+        "27 États"
+      ],
+      "r": 2,
+      "x": "22 des 27 États membres de l'Union européenne ont des façades maritimes (mer Baltique, Atlantique, Manche, mer du Nord, Méditerranée). Seuls 5 pays sont totalement enclavés : Autriche, Hongrie, Tchéquie, Slovaquie et Luxembourg."
+    },
+    {
+      "q": "Quelle est la hauteur totale de la Tour Eiffel à Paris ?",
+      "o": [
+        "300 m",
+        "312 m",
+        "324 m",
+        "330 m"
+      ],
+      "r": 2,
+      "x": "La Tour Eiffel mesure 324 mètres de hauteur (antenne comprise). Construite par Gustave Eiffel pour l'Exposition universelle de 1889, elle était alors la plus haute structure du monde. Elle accueille environ 7 millions de visiteurs par an."
+    },
+    {
+      "q": "Quelle bataille a marqué la fin de la guerre de Cent Ans entre la France et l'Angleterre ?",
+      "o": [
+        "La bataille d'Azincourt (1415)",
+        "La bataille de Crécy (1346)",
+        "La bataille de Castillon (1453)",
+        "La bataille de Poitiers (1356)"
+      ],
+      "r": 2,
+      "x": "La bataille de Castillon (17 juillet 1453) est la dernière bataille de la guerre de Cent Ans. La victoire française y met fin à l'occupation anglaise en Guyenne. C'est aussi l'une des premières batailles décisives où l'artillerie joua un rôle déterminant."
+    },
+    {
+      "q": "Qui a rédigé la Déclaration des Droits de l'Homme et du Citoyen de 1789 ?",
+      "o": [
+        "Maximilien de Robespierre",
+        "L'Assemblée nationale constituante",
+        "Louis XVI et ses ministres",
+        "Jean-Jacques Rousseau"
+      ],
+      "r": 1,
+      "x": "La Déclaration des Droits de l'Homme et du Citoyen du 26 août 1789 a été rédigée par l'Assemblée nationale constituante, réunie lors de la Révolution française. Elle proclame les droits naturels et imprescriptibles de l'homme : liberté, propriété, sûreté et résistance à l'oppression."
+    },
+    {
+      "q": "Quel secrétaire général du Parti communiste soviétique a lancé la Perestroïka en 1985 ?",
+      "o": [
+        "Leonid Brejnev",
+        "Youri Andropov",
+        "Nikita Khrouchtchev",
+        "Mikhaïl Gorbatchev"
+      ],
+      "r": 3,
+      "x": "Mikhaïl Gorbatchev a lancé la Perestroïka (restructuration économique) et la Glasnost (transparence politique) à partir de 1985. Ces réformes ont conduit à la dissolution de l'URSS en 1991. Il a reçu le Prix Nobel de la Paix en 1990."
+    },
+    {
+      "q": "Quelle guerre a été conclue par les Accords d'Évian signés en 1962 ?",
+      "o": [
+        "La guerre de Suez",
+        "La guerre d'Indochine",
+        "La guerre d'Algérie",
+        "La guerre du Vietnam"
+      ],
+      "r": 2,
+      "x": "Les Accords d'Évian, signés le 18 mars 1962, ont mis fin à la guerre d'Algérie (1954-1962) et accordé l'indépendance à l'Algérie. Ils ont été négociés entre le gouvernement français et le Front de Libération Nationale (FLN) algérien."
+    },
+    {
+      "q": "Qui fut le commandant en chef de l'Opération OVERLORD (débarquement en Normandie) durant la Seconde Guerre mondiale ?",
+      "o": [
+        "Bernard Montgomery",
+        "George Patton",
+        "Omar Bradley",
+        "Dwight Eisenhower"
+      ],
+      "r": 3,
+      "x": "Le Général américain Dwight D. Eisenhower commandait en chef l'Opération OVERLORD, le débarquement allié en Normandie du 6 juin 1944. Ce fut la plus grande opération amphibie de l'histoire. Eisenhower devint ensuite le 34e président des États-Unis (1953-1961)."
+    },
+    {
+      "q": "Quelles sont les trois premières puissances économiques mondiales ?",
+      "o": [
+        "États-Unis, Chine, Japon",
+        "États-Unis, Chine, Allemagne",
+        "États-Unis, Chine, Inde",
+        "États-Unis, Union européenne, Chine"
+      ],
+      "r": 1,
+      "x": "Le classement des premières puissances économiques mondiales par PIB nominal est : (1) États-Unis, (2) Chine, (3) Allemagne. Ce classement peut varier selon les méthodologies (PIB nominal ou parité de pouvoir d'achat). L'Inde progresse et est proche d'intégrer le top 3."
+    },
+    {
+      "q": "Quelle est la nationalité de Doris Lessing ?",
+      "o": [
+        "Sud-africaine",
+        "Britannique",
+        "Zimbabwéenne",
+        "Iranienne"
+      ],
+      "r": 1,
+      "x": "Doris Lessing est une écrivaine britannique née en 1919 en Perse (Iran actuel) et ayant grandi en Rhodésie du Sud (Zimbabwe actuel). Elle a obtenu le Prix Nobel de littérature en 2007  en tant qu'écrivaine britannique."
+    },
+    {
+      "q": "À qui est attribuée la citation : \"Dans la vie, rien n'est à craindre, tout est à comprendre\" ?",
+      "o": [
+        "Albert Einstein",
+        "Louis Pasteur",
+        "Marie Curie",
+        "Charles Darwin"
+      ],
+      "r": 2,
+      "x": "Cette citation est attribuée à Marie Curie (1867-1934), physicienne et chimiste polonaise naturalisée française. Double lauréate du Prix Nobel (Physique 1903 et Chimie 1911), elle est pionnière dans la recherche sur la radioactivité."
+    },
+    {
+      "q": "Quel est le premier satellite panafricain lancé en orbite et à quelle date ?",
+      "o": [
+        "NigeriaSat-1, lancé le 21 décembre 2003",
+        "RASCOM-QAF1, lancé le 21 décembre 2007",
+        "EgyptSat-1, lancé le 15 juin 2007",
+        "AlSat-1, lancé le 15 juin 2002"
+      ],
+      "r": 1,
+      "x": "RASCOM-QAF1 (Regional African Satellite Communications Organization) a été le premier satellite africain lancé en orbite le 21 décembre 2007. Il visait à réduire le coût des télécommunications en Afrique subsaharienne."
+    },
+    {
+      "q": "Qui est considéré comme le plus jeune lauréat du Prix Nobel de littérature et pour quelle œuvre est‑il le plus connu ?",
+      "o": [
+        "Rudyard Kipling pour \"Le Livre de la jungle\"",
+        "Albert Camus, pour \"L'Étranger\" en 1957",
+        "Seamus Heaney, pour ses poèmes en 1995",
+        "William Golding, pour \"Sa Majesté des Mouches\""
+      ],
+      "r": 0,
+      "x": "Rudyard Kipling a reçu le Prix Nobel de littérature en 1907 à 41 ans, ce qui en fait le plus jeune lauréat de ce prix. Il est notamment l'auteur du \"Livre de la Jungle\" et du poème \"Si\". Il était de nationalité britannique et né en Inde."
+    },
+    {
+      "q": "Quel appareil biomédical surveille l'activité électrique du cœur ?",
+      "o": [
+        "L'échographie",
+        "Le scanner",
+        "L'IRM",
+        "L'électrocardiogramme"
+      ],
+      "r": 3,
+      "x": "L'électrocardiogramme (ECG) enregistre l'activité électrique du cœur via des électrodes posées sur la peau. Il permet de détecter les arythmies, infarctus et autres pathologies cardiaques. L'EEG (électroencéphalogramme) fait de même pour le cerveau."
+    },
+    {
+      "q": "Comment appelle-t-on la science qui étudie les vaisseaux sanguins ?",
+      "o": [
+        "Cardiologie",
+        "Hématologie",
+        "Angiologie",
+        "Phlébologie"
+      ],
+      "r": 2,
+      "x": "L'angiologie est la spécialité médicale qui étudie et traite les maladies des vaisseaux sanguins (artères, veines, capillaires) et lymphatiques. Elle englobe la phlébologie (veines) et l'artériologie (artères)."
+    },
+    {
+      "q": "Comment appelle-t-on la culture de la vigne ?",
+      "o": [
+        "L'arboriculture",
+        "La viticulture",
+        "La sériciculture",
+        "La floriculture"
+      ],
+      "r": 1,
+      "x": "La viticulture est la branche de l'agriculture consacrée à la culture de la vigne pour la production de raisins (consommation directe ou vinification). La viniculture désigne plus spécifiquement la production de vin."
+    },
+    {
+      "q": "Comment appelle-t-on la diminution anormale de la production d'urine ?",
+      "o": [
+        "L'anurie",
+        "La polyurie",
+        "L'oligurie",
+        "La dysurie"
+      ],
+      "r": 2,
+      "x": "L'oligurie désigne une diminution du volume urinaire (moins de 400 ml/24h chez l'adulte). Elle peut indiquer une insuffisance rénale, une déshydratation sévère ou une obstruction urinaire. L'anurie est l'absence totale d'urine."
+    },
+    {
+      "q": "Quel est le rôle de la myéline dans le système nerveux ?",
+      "o": [
+        "Produire des neurotransmetteurs",
+        "Stocker les informations sensorielles",
+        "Permettre la circulation des impulsions électriques",
+        "Protéger les neurones contre les infections"
+      ],
+      "r": 2,
+      "x": "La myéline est une gaine lipidique qui entoure les axones des neurones. Elle accélère la transmission des influx nerveux par conduction saltatoire (l'influx saute d'un nœud de Ranvier à l'autre). Sa destruction cause des maladies comme la sclérose en plaques."
+    },
+    {
+      "q": "Quelle hormone produite par les reins régule la production de globules rouges ?",
+      "o": [
+        "La rénine",
+        "L'aldostérone",
+        "L'érythropoïétine",
+        "La calcitonine"
+      ],
+      "r": 2,
+      "x": "L'érythropoïétine (EPO) est une hormone produite par les cellules péritubulaires des reins. Elle stimule la production de globules rouges (érythropoïèse) dans la moelle osseuse. Sa forme synthétique est utilisée (et détournée comme dopage) en médecine sportive."
+    },
+    {
+      "q": "Quel type de cellule est principalement responsable de la destruction des cellules infectées par un virus ?",
+      "o": [
+        "Les macrophages",
+        "Les lymphocytes",
+        "Les plaquettes",
+        "Les monocytes"
+      ],
+      "r": 1,
+      "x": "Les lymphocytes T cytotoxiques (LTC) sont les principales cellules immunitaires chargées de détruire les cellules infectées par des virus ou cancéreuses. Les lymphocytes B produisent les anticorps, tandis que les macrophages assurent la phagocytose."
+    },
+    {
+      "q": "Quelle réaction chimique permet de transformer un alcool en alcène ?",
+      "o": [
+        "L'oxydation",
+        "La réduction",
+        "La déshydratation",
+        "L'hydrolyse"
+      ],
+      "r": 2,
+      "x": "La déshydratation d'un alcool (élimination d'une molécule d'eau H₂O) produit un alcène. Cette réaction se réalise par chauffage en présence d'un catalyseur acide. Exemple : l'éthanol (C₂H₅OH) donne l'éthylène (C₂H₄) + H₂O."
+    },
+    {
+      "q": "Quel est le rôle principal des ribosomes dans la cellule ?",
+      "o": [
+        "Synthèse des lipides",
+        "Production d'énergie (ATP)",
+        "Traduction des ARN messagers",
+        "Réplication de l'ADN"
+      ],
+      "r": 2,
+      "x": "Les ribosomes sont des organites cellulaires qui assurent la traduction : ils lisent l'information codée dans l'ARNm et assemblent les acides aminés en chaînes polypeptidiques (protéines). Ils sont présents dans le cytoplasme et sur le réticulum endoplasmique rugueux."
+    },
+    {
+      "q": "Quelle est la première hormone découverte par les scientifiques et en quelle année ?",
+      "o": [
+        "L'insuline, en 1921",
+        "L'adrénaline, en 1895",
+        "La sécrétine, en 1902",
+        "La thyroxine, en 1914"
+      ],
+      "r": 2,
+      "x": "La sécrétine a été découverte en 1902 par les physiologistes britanniques Bayliss et Starling. Produite par la muqueuse duodénale, elle stimule la sécrétion de suc pancréatique. Sa découverte a fondé le concept même d'hormone."
+    },
+    {
+      "q": "Quelles sont les cellules sentinelles du système immunitaire inné ?",
+      "o": [
+        "Les lymphocytes T et B",
+        "Les cellules dendritiques, les macrophages et les mastocytes",
+        "Les plaquettes et les érythrocytes",
+        "Les fibroblastes et les ostéoblastes"
+      ],
+      "r": 1,
+      "x": "Les cellules sentinelles de l'immunité innée sont les cellules dendritiques (présentatrices d'antigènes), les macrophages (phagocytose) et les mastocytes (réponse inflammatoire). Elles constituent la première ligne de défense avant l'activation de l'immunité adaptative."
+    },
+    {
+      "q": "Quel pays d'Afrique présente le taux de fécondité le plus élevé du continent ?",
+      "o": [
+        "Mali",
+        "Tchad",
+        "Burkina Faso",
+        "Niger"
+      ],
+      "r": 3,
+      "x": "Le Niger présente le taux de fécondité le plus élevé d'Afrique et du monde, avec 6 à 7 enfants par femme en moyenne. Cette forte natalité s'explique par les mariages précoces, le faible accès à l'éducation des filles et les traditions culturelles favorables aux grandes familles."
+    },
+    {
+      "q": "Quelle est la densité moyenne de la Terre ?",
+      "o": [
+        "3,51 g/cm³",
+        "4,20 g/cm³",
+        "5,51 g/cm³",
+        "6,80 g/cm³"
+      ],
+      "r": 2,
+      "x": "La densité moyenne de la Terre est de 5,51 g/cm³. Cette valeur élevée s'explique par le noyau terrestre très dense (fer et nickel), compensant les couches externes moins denses (manteau et croûte silicatés). La Terre est la plus dense des planètes du système solaire."
+    },
+    {
+      "q": "Quelle est la plus grande mer fermée (endoréique) du monde ?",
+      "o": [
+        "La mer Morte",
+        "La mer d'Aral",
+        "La mer Caspienne",
+        "Le lac Baikal"
+      ],
+      "r": 2,
+      "x": "La mer Caspienne est techniquement le plus grand lac du monde (371 000 km²) et la plus grande mer intérieure fermée. Bordée par la Russie, le Kazakhstan, le Turkménistan, l'Iran et l'Azerbaïdjan, elle est riche en hydrocarbures et en esturgeon (caviar)."
+    },
+    {
+      "q": "Quels sont les pays qui composent les \"4 dragons asiatiques\" ?",
+      "o": [
+        "Chine, Japon, Corée du Sud, Taïwan",
+        "Corée du Sud, Hong Kong, Taïwan et Singapour",
+        "Japon, Thaïlande, Malaisie et Singapour",
+        "Corée du Sud, Vietnam, Malaisie et Philippines"
+      ],
+      "r": 1,
+      "x": "Les \"4 dragons asiatiques\" (ou \"tigres\") sont la Corée du Sud, Hong Kong, Taïwan et Singapour. Ces quatre économies ont connu une industrialisation et une croissance économique spectaculaires entre les années 1960 et 1990, devenant des modèles de développement rapide."
+    },
+    {
+      "q": "Quand et où s'est tenu le premier Sommet France-Afrique ?",
+      "o": [
+        "12 janvier 1970 à Abidjan",
+        "13 novembre 1973 à Paris",
+        "5 mai 1975 à Lagos",
+        "8 mars 1980 à Dakar"
+      ],
+      "r": 1,
+      "x": "Le premier Sommet France-Afrique s'est tenu le 13 novembre 1973 à Paris, à l'initiative du président nigérien Hamani Diori. Ce cadre de dialogue franco-africain se réunit régulièrement pour aborder les questions politiques, économiques et sécuritaires."
+    },
+    {
+      "q": "Combien de niveaux de besoins la pyramide de Maslow comporte-t-elle ?",
+      "o": [
+        "3 niveaux",
+        "4 niveaux",
+        "5 niveaux",
+        "7 niveaux"
+      ],
+      "r": 2,
+      "x": "La pyramide de Maslow (psychologue Abraham Maslow, 1943) comporte 5 niveaux : (1) besoins physiologiques, (2) besoins de sécurité, (3) besoins d'appartenance et d'amour, (4) besoins d'estime et (5) besoins d'accomplissement de soi. Les besoins inférieurs doivent être satisfaits avant les supérieurs."
+    },
+    {
+      "q": "Quelle est la plus grande chute d'eau du monde en hauteur ?",
+      "o": [
+        "Les chutes Victoria",
+        "Les chutes du Niagara",
+        "Les chutes d'Iguazú",
+        "La chute Salto Angel"
+      ],
+      "r": 3,
+      "x": "Le Salto Angel, situé au Venezuela, est la plus haute chute d'eau du monde avec 979 mètres de dénivelé total (807 m en chute libre). Elle se trouve dans le parc national Canaima, classé au patrimoine mondial de l'UNESCO."
+    },
+    {
+      "q": "Sur quelle planète du système solaire se trouve la plus haute montagne connue ?",
+      "o": [
+        "Vénus (Maxwell Montes)",
+        "Terre (Everest)",
+        "Mars (Olympus Mons)",
+        "Io (Boösaule Montes)"
+      ],
+      "r": 2,
+      "x": "Olympus Mons sur Mars est le plus haut volcan et la plus haute montagne connue du système solaire, culminant à environ 22 km d'altitude (soit presque 3 fois l'Everest). Sa base fait environ 600 km de diamètre, ce qui en fait aussi la plus large montagne du système solaire."
+    },
+    {
+      "q": "Qui est le père de la sociologie française ?",
+      "o": [
+        "Auguste Comte",
+        "Émile Durkheim",
+        "Max Weber",
+        "Raymond Aron"
+      ],
+      "r": 1,
+      "x": "Émile Durkheim (1858-1917) est considéré comme le père de la sociologie française moderne. Il a institutionnalisé la sociologie comme discipline scientifique autonome avec des œuvres majeures comme \"De la Division du travail social\" et \"Le Suicide\" (1897)."
+    },
+    {
+      "q": "Quel philosophe utilise la formule \"Renverser la table des valeurs\" ?",
+      "o": [
+        "Arthur Schopenhauer",
+        "Sigmund Freud",
+        "Friedrich Nietzsche",
+        "Karl Marx"
+      ],
+      "r": 2,
+      "x": "Friedrich Nietzsche (1844-1900) prône le \"renversement des valeurs\" (Umwertung aller Werte), rejetant les valeurs morales traditionnelles (judéo-chrétiennes) au profit d'une affirmation de la vie, de la puissance et de la volonté. Son concept du \"surhomme\" (Übermensch) illustre cette rupture."
+    },
+    {
+      "q": "Qu'est-ce que la péréquation verticale dans la gestion des finances publiques ?",
+      "o": [
+        "Un mécanisme de contrôle des dépenses ministérielles après une période donnée",
+        "Un mécanisme de redistribution financière entre les collectivités territoriales",
+        "Un outil de planification budgétaire pluriannuelle",
+        "Un système de taxation progressive des revenus acquis sans source fiable"
+      ],
+      "r": 1,
+      "x": "La péréquation verticale est un mécanisme de redistribution des ressources financières de l'État central vers les collectivités territoriales (communes, régions) afin de réduire les inégalités territoriales. Elle complète la péréquation horizontale (entre collectivités de même niveau)."
+    },
+    {
+      "q": "Quel est le Dieu de la poésie dans la mythologie grecque ?",
+      "o": [
+        "Zeus",
+        "Hermès",
+        "Apollon",
+        "Dionysos"
+      ],
+      "r": 2,
+      "x": "Apollon est le dieu grec de la poésie, de la musique, des arts, de la lumière et de la prophétie. Il est aussi le dieu du Soleil dans la tradition poétique romaine. Son symbole est la lyre et il préside aux Muses sur le mont Parnasse."
+    },
+    {
+      "q": "Qu'est-ce qu'un hagiographe en littérature ?",
+      "o": [
+        "Un auteur de biographies politiques",
+        "Un auteur spécialisé dans la vie et les actions des saints",
+        "Un auteur de romans historiques",
+        "Un auteur de textes sacrés religieux"
+      ],
+      "r": 1,
+      "x": "Un hagiographe est un auteur qui rédige des hagiographies, c'est-à-dire des récits retraçant la vie, les miracles et les actions des saints. Par extension, le terme désigne aujourd'hui toute biographie excessivement laudative et peu critique."
+    },
+    {
+      "q": "Quels sont les principaux symboles d'un État ?",
+      "o": [
+        "La constitution, les lois et la monnaie",
+        "Le drapeau, l'emblème et la devise",
+        "L'hymne national, le chef d'État et le parlement",
+        "Le drapeau, la langue officielle et la constitution"
+      ],
+      "r": 1,
+      "x": "Les principaux symboles officiels d'un État sont : le drapeau (représentation graphique de l'identité nationale), l'emblème (insigne ou armoiries officielles) et la devise (formule exprimant les valeurs nationales). L'hymne national est souvent ajouté à cette liste."
+    },
+    {
+      "q": "Quelle est la dernière œuvre complète publiée par Ahmadou Kourouma ?",
+      "o": [
+        "\"Quand on refuse, on dit non\"",
+        "\"Allah n'est pas obligé\"",
+        "\"En attendant le vote des bêtes sauvages\"",
+        "\"Monnè, outrages et défis\""
+      ],
+      "r": 1,
+      "x": "La dernière œuvre complète publiée par Kourouma est \"Allah n'est pas obligé\" (2000, Prix Renaudot). \"Quand on refuse on dit non\" (2004) est un roman inachevé publié à titre posthume. Kourouma est décédé en décembre 2003."
+    },
+    {
+      "q": "Que signifie le sigle pH en chimie et biologie ?",
+      "o": [
+        "Potentiel hydrogène",
+        "Potentiel hydrique",
+        "Pression hydrostatique",
+        "Phase hydrolytique"
+      ],
+      "r": 0,
+      "x": "Le pH (potentiel hydrogène) mesure l'acidité ou l'alcalinité d'une solution. Il varie de 0 (très acide) à 14 (très basique), avec 7 comme valeur neutre. Le sang humain a un pH physiologique de 7,35 à 7,45."
+    },
+    {
+      "q": "Qui est l'auteur de l'ouvrage \"Éduquer ou périr\" ?",
+      "o": [
+        "Thomas Sankara",
+        "Norbert Zongo",
+        "Joseph Ki-Zerbo",
+        "Valère Somé"
+      ],
+      "r": 2,
+      "x": "\"Éduquer ou périr\" est un ouvrage de l'historien burkinabè Joseph Ki-Zerbo (1922-2006), qui plaide pour une éducation africaine ancrée dans les réalités et valeurs du continent. Ki-Zerbo est aussi l'auteur de \"Histoire de l'Afrique noire\", référence fondamentale de l'historiographie africaine."
+    },
+    {
+      "q": "Qui assure l'intérim du Président du Faso en cas d'absence ou d'empêchement ?",
+      "o": [
+        "Le président de l'Assemblée Législative",
+        "Le Premier ministre",
+        "Le président du Conseil d'État",
+        "Le ministre de la Défense"
+      ],
+      "r": 1,
+      "x": "En droit constitutionnel burkinabè, c'est le Premier ministre qui assure l'intérim du Président du Faso en cas d'absence temporaire ou d'empêchement. Pour une vacance définitive du pouvoir, d'autres dispositions s'appliquent selon la Constitution ou la Charte de la Transition."
+    },
+    {
+      "q": "Quel oiseau symbolise la liberté dans la mythologie mexicaine et guatemaltèque ?",
+      "o": [
+        "L'aigle",
+        "Le condor",
+        "Le toucan",
+        "Le quetzal"
+      ],
+      "r": 3,
+      "x": "Le quetzal est un oiseau aux plumes vert émeraude qui symbolise la liberté dans les cultures mexicaine et guatemaltèque. Selon la légende, il ne survit pas en captivité. Le quetzal donne son nom à la monnaie du Guatemala."
+    },
+    {
+      "q": "Quel est le pays le plus grand du monde par sa superficie ?",
+      "o": [
+        "Canada",
+        "Chine",
+        "États-Unis",
+        "Russie"
+      ],
+      "r": 3,
+      "x": "La Russie est le plus grand pays du monde avec une superficie d'environ 17,1 millions de km², soit environ 11 % de la superficie terrestre totale. Elle s'étend sur 11 fuseaux horaires, de l'Europe jusqu'au Pacifique."
+    },
+    {
+      "q": "Quelle est la première puissance nucléaire mondiale en nombre d'ogives ?",
+      "o": [
+        "États-Unis",
+        "Chine",
+        "Russie",
+        "France"
+      ],
+      "r": 2,
+      "x": "La Russie est la première puissance nucléaire mondiale avec environ 5 580 ogives nucléaires. Les États-Unis en possèdent environ 5 044. Ces deux pays détiennent plus de 90 % de l'arsenal nucléaire mondial. Les autres puissances reconnues (France, Chine, Royaume-Uni, Pakistan, Inde, Israël, Corée du Nord) ont des arsenaux bien moindres."
+    },
+    {
+      "q": "Combien de pays composent la CEDEAO depuis le retrait des pays de l'AES ?",
+      "o": [
+        "15 pays membres",
+        "12 pays membres",
+        "13 pays membres",
+        "10 pays membres"
+      ],
+      "r": 1,
+      "x": "Après le retrait officiel du Burkina Faso, du Mali et du Niger en janvier 2024, la CEDEAO compte 12 pays membres. L'organisation a été fondée le 28 mai 1975 par le Traité de Lagos. Sa force militaire d'interposition est l'ECOMOG."
+    },
+    {
+      "q": "Quel est l'instrument utilisé pour réaliser la synthèse de la lumière blanche en laboratoire ?",
+      "o": [
+        "Le prisme de Descartes",
+        "Le disque de Newton",
+        "Le spectromètre de Fraunhofer",
+        "Le polariseur de Malus"
+      ],
+      "r": 1,
+      "x": "Le disque de Newton est un disque divisé en secteurs peints dans les 7 couleurs du spectre visible (ROYVBIV). Lorsqu'il tourne rapidement, les couleurs se mélangent et l'œil perçoit du blanc (ou gris clair), démontrant que la lumière blanche est la synthèse de toutes les couleurs."
+    },
+    {
+      "q": "À qui Thomas Sankara a-t-il emprunté la devise \"La Patrie ou la mort, nous vaincrons\" ?",
+      "o": [
+        "Che Guevara",
+        "Ho Chi Minh",
+        "Mao Zedong",
+        "Fidel Castro"
+      ],
+      "r": 3,
+      "x": "Thomas Sankara a emprunté la devise \"La Patria o la Muerte, venceremos\" (La Patrie ou la mort, nous vaincrons) à Fidel Castro, qui l'utilisait depuis la Révolution cubaine. Cette devise a été réadoptée comme devise officielle du Burkina Faso le 21 novembre 2024."
+    },
+    {
+      "q": "Qui a été le premier homme à marcher sur la Lune et à quelle date ?",
+      "o": [
+        "Youri Gagarine, le 12 avril 1961",
+        "Buzz Aldrin, le 20 juillet 1969",
+        "Neil Armstrong, le 21 juillet 1969",
+        "Alan Shepard, le 5 mai 1961"
+      ],
+      "r": 2,
+      "x": "Neil Armstrong est devenu le premier être humain à marcher sur la Lune le 21 juillet 1969, lors de la mission Apollo 11. Sa phrase historique : \"C'est un petit pas pour l'homme, un bond de géant pour l'humanité.\" Buzz Aldrin l'a rejoint quelques minutes après. L'initiative du programme lunaire revient à John Kennedy (1961)."
+    },
+    {
+      "q": "Combien d'écrivains africains ou originaires d'Afrique ont reçu le Prix Nobel de littérature jusqu'en 2026 ?",
+      "o": [
+        "2 auteurs",
+        "4 auteurs",
+        "6 auteurs",
+        "8 auteurs"
+      ],
+      "r": 2,
+      "x": "Six auteurs africains ou originaires d'Afrique ont reçu le Prix Nobel de littérature : Wole Soyinka (Nigeria, 1986), Naguib Mahfouz (Égypte, 1988), Nadine Gordimer (Afrique du Sud, 1991), J.M. Coetzee (Afrique du Sud, 2003), Doris Lessing (Zimbabwe/Royaume-Uni, 2007) et Abdulrazak Gurnah (Tanzanie, 2021)."
+    },
+    {
+      "q": "Quel pays a organisé le Sommet du G7 en 2025 ?",
+      "o": [
+        "Japon",
+        "Italie",
+        "Canada",
+        "France"
+      ],
+      "r": 2,
+      "x": "Le Canada a accueilli le Sommet du G7 en 2025. Le G7 regroupe les sept pays les plus industrialisés : États-Unis, Canada, France, Allemagne, Italie, Japon et Royaume-Uni (l'UE y participe en tant qu'observateur). Ces sommets traitent des grandes questions économiques et géopolitiques mondiales."
+    },
+    {
+      "q": "Quel est le traité fondateur de l'Union européenne, signé en 1992 ?",
+      "o": [
+        "Le Traité de Rome",
+        "Le Traité de Paris",
+        "Le Traité de Maastricht",
+        "Le Traité de Lisbonne"
+      ],
+      "r": 2,
+      "x": "Le Traité de Maastricht, signé le 7 février 1992 et entré en vigueur le 1er novembre 1993, a fondé l'Union européenne. Il a créé la citoyenneté européenne, établi la monnaie unique (euro) et défini les trois piliers de l'UE. Il est considéré comme la pierre angulaire de la construction européenne."
+    },
+    {
+      "q": "Quelle est l'unité de mesure de la masse molaire en chimie ?",
+      "o": [
+        "Kilogramme par litre (kg/L)",
+        "Gramme par mole (g/mol)",
+        "Newton par mètre (N/m)",
+        "Joule par kelvin (J/K)"
+      ],
+      "r": 1,
+      "x": "La masse molaire est la masse d'une mole d'une substance, exprimée en grammes par mole (g/mol). Elle est numériquement égale à la masse atomique ou moléculaire en unités de masse atomique (u). Exemple : la masse molaire de l'eau (H₂O) est de 18 g/mol."
+    },
+    {
+      "q": "Combien d'étoiles le drapeau de l'Union européenne comporte-t-il ?",
+      "o": [
+        "6 étoiles",
+        "12 étoiles",
+        "15 étoiles",
+        "27 étoiles"
+      ],
+      "r": 1,
+      "x": "Le drapeau de l'Union européenne comporte 12 étoiles dorées disposées en cercle sur fond bleu. Ce nombre de 12 est fixe et symbolique (perfection, plénitude) ; il ne correspond pas au nombre d'États membres. Ce drapeau a été adopté par le Conseil de l'Europe en 1955 avant d'être repris par l'UE."
+    },
+    {
+      "q": "Quelle est la distance moyenne entre la Terre et la Lune ?",
+      "o": [
+        "284 400 km",
+        "348 500 km",
+        "384 450 km",
+        "420 000 km"
+      ],
+      "r": 2,
+      "x": "La distance moyenne Terre-Lune est d'environ 384 450 km. Cette distance varie entre 356 000 km (périgée) et 406 000 km (apogée) car l'orbite lunaire est elliptique. La lumière met environ 1,3 seconde à parcourir cette distance."
+    },
+    {
+      "q": "Quel est le plus grand gratte-ciel du monde et où se situe-t-il ?",
+      "o": [
+        "Shanghai Tower, Chine",
+        "Abraj Al-Bait, Arabie Saoudite",
+        "Burj Khalifa, Dubaï",
+        "One World Trade Center, États-Unis"
+      ],
+      "r": 2,
+      "x": "Le Burj Khalifa à Dubaï (Émirats arabes unis) est le plus grand gratte-ciel du monde avec 828 mètres de hauteur et 163 étages. Inauguré en 2010, il abrite des appartements, bureaux, hôtels et comporte le plus haut observatoire du monde. Le Saudi Arabia's Jeddah Tower devrait le dépasser à terme."
+    },
+    {
+      "q": "Qui est surnommé \"le franc-tireur de la science\" en 1879 ?",
+      "o": [
+        "Charles Darwin",
+        "Antoine Lavoisier",
+        "Louis Pasteur",
+        "Claude Bernard"
+      ],
+      "r": 2,
+      "x": "Louis Pasteur (1822-1895) a été qualifié de \"franc-tireur de la science\" pour ses découvertes révolutionnaires en microbiologie et en chimie. Il a démontré la théorie des germes, développé la pasteurisation et inventé les vaccins contre le choléra des poules, le charbon et la rage."
+    },
+    {
+      "q": "Quelle est la mer la plus salée du monde ?",
+      "o": [
+        "La mer Rouge",
+        "La mer Morte",
+        "La mer Caspienne",
+        "La mer Méditerranée"
+      ],
+      "r": 1,
+      "x": "La mer Morte (entre Israël, Jordanie et Palestine) est la plus salée du monde, avec une salinité d'environ 340 g/L (10 fois la salinité de l'océan). Aucun organisme pluricellulaire n'y survit. Sa surface se situe à environ 430 m sous le niveau de la mer, ce qui en fait le point le plus bas de la Terre."
+    },
+    {
+      "q": "Comment appelle-t-on un régime politique gouverné par la foule ?",
+      "o": [
+        "Démocratie directe",
+        "Anarchie",
+        "Ochlocratie",
+        "Oligarchie"
+      ],
+      "r": 2,
+      "x": "L'ochlocratie (ou ocklocratie, du grec ochlos = foule et kratos = pouvoir) désigne un régime où la foule ou la masse irrationnelle exerce le pouvoir de manière chaotique, sans loi ni ordre. Aristote la présentait comme la forme dégénérée de la démocratie."
+    },
+    {
+      "q": "Quel est l'appareil utilisé pour mesurer l'ensoleillement ?",
+      "o": [
+        "Le baromètre",
+        "L'héliomètre",
+        "L'héliographe",
+        "L'actinomètre"
+      ],
+      "r": 2,
+      "x": "L'héliographe est l'instrument météorologique qui mesure la durée d'ensoleillement quotidien. Le modèle classique (Campbell-Stokes) utilise une sphère de verre qui concentre les rayons solaires sur une bande de papier graduée qui se brûle proportionnellement à l'intensité du soleil."
+    },
+    {
+      "q": "Que désigne l'expression \"Wall Street\" ?",
+      "o": [
+        "Le gouvernement fédéral américain",
+        "La Réserve fédérale américaine (Fed)",
+        "La Bourse américaine",
+        "Le département du Trésor américain"
+      ],
+      "r": 2,
+      "x": "\"Wall Street\" désigne la rue éponyme de Manhattan (New York) où se trouve la Bourse de New York (NYSE), et par extension l'ensemble du milieu financier américain. Le terme symbolise le capitalisme financier mondial. Wall Street abrite aussi les sièges des principales banques d'investissement."
+    },
+    {
+      "q": "Quel est le pays comptant le plus grand nombre de musulmans au monde ?",
+      "o": [
+        "Arabie Saoudite",
+        "Pakistan",
+        "Bangladesh",
+        "Indonésie"
+      ],
+      "r": 3,
+      "x": "L'Indonésie est le pays avec la plus grande population musulmane du monde, avec environ 230 millions de musulmans, soit près de 87 % de sa population totale d'environ 275 millions d'habitants. Elle représente environ 13 % des musulmans mondiaux."
+    },
+    {
+      "q": "Comment appelle-t-on le dieu romain Mercure dans la mythologie grecque ?",
+      "o": [
+        "Arès",
+        "Hermès",
+        "Poséidon",
+        "Héphaïstos"
+      ],
+      "r": 1,
+      "x": "Hermès est l'équivalent grec de Mercure (romain). Messager des dieux, dieu du commerce, des voyageurs et des voleurs, il est représenté avec des sandales ailées et un caducée (bâton entouré de deux serpents). Mercure/Hermès a donné son nom à la planète la plus proche du Soleil."
+    },
+    {
+      "q": "À quelle date et où s'est célébrée la 50e anniversaire de la CEDEAO ?",
+      "o": [
+        "28 mai 2025 à Lagos, Nigeria",
+        "22 avril 2025 à Accra, Ghana",
+        "5 janvier 2025 à Abuja, Nigeria",
+        "16 juillet 2025 à Dakar, Sénégal"
+      ],
+      "r": 1,
+      "x": "Le 50e anniversaire de la CEDEAO (Communauté Économique des États de l'Afrique de l'Ouest) a été célébré le 22 avril 2025 à Accra (Ghana). La CEDEAO a été fondée le 28 mai 1975 par le Traité de Lagos. Après le retrait des pays de l'AES, elle compte 12 membres."
+    },
+    {
+      "q": "Comment se nomme la force militaire d'interposition de la CEDEAO ?",
+      "o": [
+        "FOMAC",
+        "ECOMOG",
+        "AFISMA",
+        "MISMA"
+      ],
+      "r": 1,
+      "x": "L'ECOMOG (ECOWAS Monitoring Group) est la force militaire d'interposition de la CEDEAO. Elle est intervenue au Libéria (1990), Sierra Leone (1997), Guinée-Bissau (1998) et en Côte d'Ivoire. Elle représente le bras armé de l'organisation régionale pour le maintien de la paix."
+    },
+    {
+      "q": "Quelle est la date de la première révolution arabe moderne et dans quel pays ?",
+      "o": [
+        "25 janvier 2011 en Égypte",
+        "17 décembre 2010 en Tunisie",
+        "15 mars 2011 en Syrie",
+        "14 janvier 2011 en Libye"
+      ],
+      "r": 1,
+      "x": "La première révolution arabe du \"Printemps arabe\" a débuté le 17 décembre 2010 en Tunisie, avec l'immolation de Mohamed Bouazizi à Sidi Bouzid. Elle a conduit à la fuite du président Ben Ali le 14 janvier 2011. Elle a ensuite inspiré des mouvements similaires en Égypte, Libye, Syrie et Yémen."
+    },
+    {
+      "q": "Quel est le plus grand désert le plus froid du monde ?",
+      "o": [
+        "Le Sahara",
+        "Le désert de Gobi",
+        "L'Arctique",
+        "L'Antarctique"
+      ],
+      "r": 3,
+      "x": "L'Antarctique est le plus grand désert du monde (13,8 millions de km²) et aussi le plus froid. Un désert est défini par ses faibles précipitations (moins de 250 mm/an), non par la chaleur. La température la plus basse jamais enregistrée sur Terre (-89,2°C) a été mesurée en Antarctique."
+    },
+    {
+      "q": "Que désigne-t-on par l'expression \"le poumon de la Terre\" ?",
+      "o": [
+        "La forêt boréale sibérienne",
+        "L'Amazonie",
+        "Les forêts d'Afrique centrale",
+        "Les récifs coralliens"
+      ],
+      "r": 1,
+      "x": "L'Amazonie est surnommée \"le poumon de la Terre\" car cette forêt tropicale de 5,5 millions de km² (majoritairement au Brésil) absorbe d'énormes quantités de CO₂ et produit de l'oxygène. Elle abrite 10 % des espèces vivantes connues et joue un rôle crucial dans la régulation du climat mondial."
+    },
+    {
+      "q": "Qu'est-ce que l'abibliophobie ?",
+      "o": [
+        "La peur des bibliothèques publiques",
+        "La peur de manquer de livres",
+        "La peur de lire à voix haute",
+        "La peur des auteurs célèbres"
+      ],
+      "r": 1,
+      "x": "L'abibliophobie est la peur irraisonnée de manquer de livres à lire. Ce terme forgé récemment (préfixe grec a- = sans + biblion = livre + phobos = peur) décrit l'angoisse ressentie à l'idée de ne plus avoir de nouveaux livres disponibles. Elle touche les grands lecteurs passionnés."
+    },
+    {
+      "q": "Comment appelle-t-on la science qui étudie les projectiles en vol ?",
+      "o": [
+        "La balistique",
+        "La pyrotechnie",
+        "La mécanique des fluides",
+        "La dynamique des gaz"
+      ],
+      "r": 0,
+      "x": "La balistique est la science qui étudie le mouvement des projectiles (balles, obus, missiles) depuis leur lancement jusqu'à leur impact. Elle se divise en balistique intérieure (dans le canon), extérieure (en vol) et terminale (à l'impact). Elle a des applications militaires, sportives et médicolégales."
+    },
+    {
+      "q": "Quel est le premier pays africain à avoir organisé la Coupe du Monde de football ?",
+      "o": [
+        "Nigeria en 2009",
+        "Afrique du Sud en 2010",
+        "Maroc en 2025",
+        "Égypte en 2006"
+      ],
+      "r": 1,
+      "x": "L'Afrique du Sud a été le premier pays africain à accueillir la Coupe du Monde FIFA en 2010. La compétition a été remportée par l'Espagne (1-0 contre les Pays-Bas en finale). L'organisation a été saluée comme un succès majeur pour le continent africain."
+    },
+    {
+      "q": "Quel président africain détient la plus longue longévité au pouvoir ?",
+      "o": [
+        "Paul Biya (Cameroun)",
+        "Teodoro Obiang Nguema (Guinée équatoriale)",
+        "Faure Gnassingbé (Togo)",
+        "Denis Sassou Nguesso (Congo)"
+      ],
+      "r": 1,
+      "x": "Teodoro Obiang Nguema Mbasogo dirige la Guinée équatoriale depuis le 3 août 1979, ce qui en fait le chef d'État africain (et mondial) avec la plus longue longévité au pouvoir. Il a renversé son oncle Francisco Macías Nguema lors d'un coup d'État militaire."
+    },
+    {
+      "q": "Quel pays s'est retiré de l'OPEP en 2024 ?",
+      "o": [
+        "Nigeria",
+        "Gabon",
+        "Angola",
+        "Équateur"
+      ],
+      "r": 2,
+      "x": "L'Angola a officiellement quitté l'OPEP (Organisation des Pays Exportateurs de Pétrole) en 2024, arguant que les quotas de production imposés limitaient son développement économique. Le pays avait rejoint l'OPEP en 2007 et reste un producteur pétrolier majeur d'Afrique subsaharienne."
+    },
+    {
+      "q": "Quel est le plus petit oiseau du monde ?",
+      "o": [
+        "Le colibri d'Elena",
+        "Le moineau domestique",
+        "Le rouge-gorge",
+        "La mésange charbonnière"
+      ],
+      "r": 0,
+      "x": "Le colibri d'Elena (Mellisuga helenae), endémique de Cuba, est le plus petit oiseau du monde. Il mesure environ 5 à 6 cm et pèse moins de 2 grammes, soit à peine plus qu'une abeille."
+    },
+    {
+      "q": "Où et quand a été instituée l'architecture du nouveau Système Monétaire International (SMI) ?",
+      "o": [
+        "À Washington en décembre 1945",
+        "À Bretton Woods en juillet 1944",
+        "À Genève en mai 1946",
+        "À New York en janvier 1945"
+      ],
+      "r": 1,
+      "x": "Le nouveau Système Monétaire International (SMI) a été institué lors de la Conférence de Bretton Woods (New Hampshire, USA) en juillet 1944. Cette conférence a créé le FMI et la Banque mondiale, établi l'étalon or-dollar, et posé les bases de l'ordre économique international d'après-guerre."
+    },
+    {
+      "q": "Quelle est la circonférence totale de la Terre ?",
+      "o": [
+        "35 000 km",
+        "38 000 km",
+        "40 000 km",
+        "42 500 km"
+      ],
+      "r": 2,
+      "x": "La circonférence de la Terre est d'environ 40 075 km à l'équateur et 40 008 km selon un méridien. Cette mesure fut estimée avec remarquable précision par Ératosthène vers 240 av. J.-C. La Terre est légèrement aplatie aux pôles (sphéroïde)."
+    },
+    {
+      "q": "Combien de pays sont membres de l'espace Schengen en Europe ?",
+      "o": [
+        "22 pays",
+        "25 pays",
+        "27 pays",
+        "29 pays"
+      ],
+      "r": 3,
+      "x": "L'espace Schengen compte 29 pays membres (25 pays de l'UE et 4 pays associés (Islande, Liechtenstein, Norvège, Suisse)). Il permet la libre circulation des personnes sans contrôle aux frontières intérieures."
+    },
+    {
+      "q": "Qu'a racheté le milliardaire Elon Musk en 2022 ?",
+      "o": [
+        "YouTube",
+        "LinkedIn",
+        "Twitter",
+        "TikTok"
+      ],
+      "r": 2,
+      "x": "Elon Musk a racheté Twitter en octobre 2022 pour environ 44 milliards de dollars. Il a ensuite rebaptisé la plateforme \"X\" et procédé à des changements radicaux : licenciements massifs, réintégration de comptes bannis, modification des règles de modération et introduction de l'abonnement payant."
+    },
+    {
+      "q": "Quel est le pays le plus peuplé du monde en 2026 ?",
+      "o": [
+        "Chine",
+        "États-Unis",
+        "Inde",
+        "Indonésie"
+      ],
+      "r": 2,
+      "x": "L'Inde a officiellement dépassé la Chine pour devenir le pays le plus peuplé du monde en 2026, avec plus de 1,44 milliard d'habitants. La population mondiale totale dépasse désormais 8 milliards d'habitants. Le Niger est le pays avec la population la plus jeune du monde."
+    },
+    {
+      "q": "Dans quel pays se trouve le siège de la Banque Africaine de Développement (BAD) ?",
+      "o": [
+        "Nigeria (Abuja)",
+        "Éthiopie (Addis-Abeba)",
+        "Sénégal (Dakar)",
+        "Côte d'Ivoire (Abidjan)"
+      ],
+      "r": 3,
+      "x": "La Banque Africaine de Développement (BAD) a son siège à Abidjan (Côte d'Ivoire) depuis sa création en 1964. Elle a pour mission de financer le développement économique et social de l'Afrique. Elle avait été temporairement délocalisée à Tunis (2003-2014) en raison de la crise ivoirienne."
+    },
+    {
+      "q": "Quel est le plus haut sommet du continent africain et où se situe-t-il ?",
+      "o": [
+        "Mont Kenya, Kenya",
+        "Ras Dejen, Éthiopie",
+        "Toubkal, Maroc",
+        "Mont Kilimandjaro, Tanzanie"
+      ],
+      "r": 3,
+      "x": "Le Kilimandjaro (5 895 m), situé en Tanzanie, est le plus haut sommet d'Afrique. Ce volcan éteint à trois cônes (Kibo, Mawenzi, Shira) est inscrit au patrimoine mondial de l'UNESCO. Son sommet (Uhuru Peak) est accessible aux randonneurs, accueillant environ 50 000 grimpeurs par an."
+    },
+    {
+      "q": "Quel est le plus long fleuve du continent africain ?",
+      "o": [
+        "Le Congo",
+        "Le Niger",
+        "Le Zambèze",
+        "Le Nil"
+      ],
+      "r": 3,
+      "x": "Le Nil est le plus long fleuve d'Afrique (et traditionnellement du monde) avec environ 6 650 km. Il prend sa source au lac Victoria (Ouganda) et se jette dans la Méditerranée en Égypte. Le Nil Blanc et le Nil Bleu se rejoignent à Khartoum (Soudan)."
+    },
+    {
+      "q": "Quel est le plus haut sommet du monde et combien mesure-t-il ?",
+      "o": [
+        "K2 (8 911 m), Pakistan",
+        "Lhotse (8 516 m), Népal",
+        "Kangchenjunga (8 586 m), Népal-Inde",
+        "Everest (8 848 m), Chine"
+      ],
+      "r": 3,
+      "x": "L'Everest, situé dans la chaîne himalayenne à la frontière entre le Népal et le Tibet (Chine), culmine à 8 848 mètres. Il a été conquis pour la première fois le 29 mai 1953 par Edmund Hillary (Nouvelle-Zélande) et Tenzing Norgay (Népal)."
+    },
+    {
+      "q": "Quels pays organisent la Coupe du Monde de football 2030, et combien sont-ils ?",
+      "o": [
+        "2 pays : Maroc et Espagne",
+        "3 pays : Maroc, Portugal et Espagne",
+        "4 pays : Maroc, Portugal, Espagne et Argentine",
+        "6 pays : Europe et Amérique du Sud"
+      ],
+      "r": 1,
+      "x": "La Coupe du Monde 2030 sera organisée conjointement par 3 pays : le Maroc, le Portugal et l'Espagne. Des matches commémoratifs (pour les 100 ans du Mondial) se dérouleront aussi en Argentine, Uruguay et Paraguay. C'est la première fois qu'une édition s'étend sur deux continents."
+    },
+    {
+      "q": "Quelle est la devise officielle des Jeux Olympiques ?",
+      "o": [
+        "\"Paix, amitié, solidarité\"",
+        "\"Plus vite, plus haut, plus fort\"",
+        "\"L'essentiel est de participer\"",
+        "\"Sport, fraternité, olympisme\""
+      ],
+      "r": 1,
+      "x": "La devise olympique est \"Citius, Altius, Fortius\" (en latin), soit \"Plus vite, plus haut, plus fort\" en français. Elle a été adoptée par le Comité International Olympique (CIO) en 1894 et proposée par le père Henri Didon. En 2021, le mot \"Ensemble\" y a été ajouté."
+    },
+    {
+      "q": "Quel est le premier pays africain à avoir remporté la Coupe d'Afrique des Nations, et en quelle année ?",
+      "o": [
+        "Nigeria en 1963",
+        "Égypte en 1957",
+        "Ghana en 1963",
+        "Éthiopie en 1962"
+      ],
+      "r": 1,
+      "x": "L'Égypte a remporté la toute première Coupe d'Afrique des Nations (CAN) organisée en 1957 au Soudan. Seuls 3 pays y ont participé : l'Égypte (vainqueur), l'Éthiopie et le Soudan. L'Égypte est le pays le plus titré de la compétition avec 7 trophées."
+    },
+    {
+      "q": "Quel est le plus petit vertébré connu au monde ?",
+      "o": [
+        "Colibri d'Elena",
+        "Chauve-souris bourdon de Kitti",
+        "Paedophryne amauensis",
+        "Musaraigne étrusque"
+      ],
+      "r": 2,
+      "x": "Paedophryne amauensis est une minuscule grenouille découverte en Papouasie-Nouvelle-Guinée. Avec une longueur moyenne d'environ 7,7 mm, elle est considérée comme le plus petit vertébré connu au monde."
+    },
+    {
+      "q": "Qui est connue sous le nom de « doyenne de la musique féminine burkinabè » ?",
+      "o": [
+        "Bibata Ouédraogo",
+        "Fatimata Koné",
+        "Wendyida Opportune Tapsoba",
+        "Mariam Sanogo"
+      ],
+      "r": 2,
+      "x": "Wendyida Opportune Tapsoba est reconnue comme la doyenne de la musique féminine burkinabè. Pionnière dans un milieu longtemps dominé par les hommes, elle a ouvert la voie aux nombreuses artistes féminines burkinabè qui ont suivi."
+    },
+    {
+      "q": "Quel regroupement de pays émergents est souvent présenté comme une alternative économique au G7 ?",
+      "o": [
+        "L'ASEAN",
+        "Les BRICS",
+        "L'Organisation de Coopération de Shanghai",
+        "Le G20"
+      ],
+      "r": 1,
+      "x": "Les BRICS (Brésil, Russie, Inde, Chine, Afrique du Sud + 5 nouveaux membres depuis 2024) constituent le principal bloc économique alternatif au G7. Représentant près de 40 % du PIB mondial en parité de pouvoir d'achat, ils prônent un ordre mondial multipolaire et une réforme des institutions financières internationales."
+    },
+    {
+      "q": "Quelle technologie connaît la croissance la plus rapide dans les investissements mondiaux au cours des années 2020 ?",
+      "o": [
+        "La robotique industrielle",
+        "L'énergie nucléaire civile",
+        "L'intelligence artificielle",
+        "La biotechnologie génomique"
+      ],
+      "r": 2,
+      "x": "L'intelligence artificielle (IA) connaît la croissance la plus rapide de la décennie 2020. Elle transforme tous les secteurs économiques : santé (diagnostic), éducation (personnalisation), finance (trading algorithmique), industrie (automatisation), transport (véhicules autonomes) et culture (génération de contenu)."
+    },
+    {
+      "q": "Quelle ressource minérale est considérée comme essentielle à la fabrication des batteries des véhicules électriques ?",
+      "o": [
+        "Le manganèse",
+        "Le phosphate",
+        "Le zinc",
+        "Le lithium"
+      ],
+      "r": 3,
+      "x": "Le lithium est un composant indispensable des batteries rechargeables utilisées dans les véhicules électriques et les appareils électroniques, ce qui en fait une ressource stratégique mondiale."
+    },
+    {
+      "q": "Qui est l'auteur de l'œuvre \"la défaite du yargha\" au Burkina Faso ?",
+      "o": [
+        "Pierre Claver Ilboudo",
+        "Norbert Zongo",
+        "Aristide Tarnagda",
+        "Songré Étienne Sawadogo"
+      ],
+      "r": 3,
+      "x": "\"La défaite du yargha\" est une œuvre de l'auteur burkinabè Songré Étienne Sawadogo. Le yargha est un concept culturel burkinabè lié à la résistance et à la détermination. Cette œuvre explore des thèmes liés à l'identité culturelle et aux transformations sociales du Burkina Faso."
+    },
+    {
+      "q": "Quel est le premier animal à avoir effectué une orbite autour de la Terre ?",
+      "o": [
+        "Une souris",
+        "Un singe rhésus",
+        "Un chimpanzé",
+        "Un chien"
+      ],
+      "r": 3,
+      "x": "La chienne soviétique Laïka fut la première à orbiter autour de la Terre. Elle a été lancée par l'Union Soviétique à bord de la capsule spatiale Spoutnik 2 le 3 novembre 1957."
+    },
+    {
+      "q": "Quels pays souhaitaient intégrer l'OTAN en 2024 ?",
+      "o": [
+        "Finlande, Suède, Géorgie, Ukraine",
+        "Bosnie-Herzégovine, Géorgie et Ukraine",
+        "Moldavie, Ukraine, Géorgie et Azerbaïdjan",
+        "Serbie, Kosovo, Macédoine du Nord et Géorgie"
+      ],
+      "r": 1,
+      "x": "En 2024, les principaux pays candidats à l'adhésion à l'OTAN étaient la Bosnie-Herzégovine, la Géorgie et l'Ukraine. La Finlande et la Suède avaient déjà adhéré (2023 et 2024). La candidature de l'Ukraine est bloquée par la guerre russo-ukrainienne et le veto de certains membres."
+    },
+    {
+      "q": "Quelle est la nouvelle appellation officielle de l'Organisation Mondiale du Tourisme (OMT) ?",
+      "o": [
+        "Organisation Internationale du Tourisme Durable",
+        "ONU Tourisme",
+        "Agence Mondiale des Voyages et du Tourisme",
+        "Commission Mondiale du Tourisme"
+      ],
+      "r": 1,
+      "x": "L'Organisation Mondiale du Tourisme (OMT) a officiellement changé de nom pour devenir \"ONU Tourisme\". Ce changement reflète son appartenance au système des Nations Unies et sa vocation mondiale en matière de développement touristique durable, économique et social."
+    },
+    {
+      "q": "Qui est le père du grégarisme africain ?",
+      "o": [
+        "Norbert Zongo",
+        "Thomas Sankara",
+        "Laurent Bado",
+        "Joseph Ki-Zerbo"
+      ],
+      "r": 2,
+      "x": "Laurent Bado est un intellectuel et homme politique burkinabè reconnu comme le théoricien du grégarisme africain, une doctrine qui valorise la solidarité communautaire et les valeurs collectives africaines comme alternative au libéralisme individualiste occidental."
+    },
+    {
+      "q": "Quelle journée internationale est célébrée le 4 février ?",
+      "o": [
+        "Journée mondiale de la Femme",
+        "Journée mondiale de lutte contre le cancer",
+        "Journée mondiale de la Francophonie",
+        "Journée mondiale de l'eau"
+      ],
+      "r": 1,
+      "x": "Le 4 février est la Journée mondiale de lutte contre le cancer. Cette journée vise à sensibiliser le public aux moyens de prévention et de lutte contre les cancers dans le monde."
+    },
+    {
+      "q": "Quelle journée internationale est célébrée le 6 février ?",
+      "o": [
+        "Journée mondiale de la santé",
+        "Journée internationale des malades",
+        "Journée mondiale de lutte contre le cancer",
+        "Journée internationale de lutte contre les mutilations génitales féminines"
+      ],
+      "r": 3,
+      "x": "Le 6 février est la Journée internationale de lutte contre les mutilations génitales féminines (MGF). Elle vise à mobiliser les communautés et gouvernements pour l'abandon de cette pratique néfaste touchant des millions de filles et femmes dans le monde."
+    },
+    {
+      "q": "Quelle journée internationale est célébrée le 11 février ?",
+      "o": [
+        "Journée mondiale de la Femme",
+        "Journée internationale des malades",
+        "Journée mondiale de la Francophonie",
+        "Journée mondiale du diabète"
+      ],
+      "r": 1,
+      "x": "Le 11 février est la Journée internationale des malades, instituée par le pape Jean-Paul II en 1992. Elle invite à prier pour les malades et à sensibiliser aux questions de santé dans le monde."
+    },
+    {
+      "q": "Quelle journée est célébrée le 8 mars dans le monde entier ?",
+      "o": [
+        "Journée mondiale de la Francophonie",
+        "Journée mondiale de l'eau",
+        "Journée internationale de la Femme",
+        "Journée internationale de la jeunesse"
+      ],
+      "r": 2,
+      "x": "Le 8 mars est la Journée internationale de la Femme. Célébrée depuis 1977 sur décision de l'ONU, elle honore les luttes des femmes pour l'égalité des droits et la justice sociale dans le monde entier."
+    },
+    {
+      "q": "Quelle journée est célébrée le 20 mars dans le monde francophone ?",
+      "o": [
+        "Journée mondiale de l'eau",
+        "Journée mondiale de la Francophonie",
+        "Journée mondiale de la météorologie",
+        "Journée nationale de pardon au Burkina Faso"
+      ],
+      "r": 1,
+      "x": "Le 20 mars est la Journée mondiale de la Francophonie, célébrée dans les 88 États et gouvernements membres de l'Organisation Internationale de la Francophonie (OIF). Elle promeut la langue française et la diversité culturelle francophone."
+    },
+    {
+      "q": "Quelle journée internationale est célébrée le 22 mars ?",
+      "o": [
+        "Journée mondiale de la Francophonie",
+        "Journée mondiale de la météorologie",
+        "Journée mondiale de l'eau",
+        "Journée mondiale de la Terre"
+      ],
+      "r": 2,
+      "x": "Le 22 mars est la Journée mondiale de l'eau, proclamée par l'ONU en 1993. Elle attire l'attention sur la gestion durable des ressources en eau douce, enjeu crucial pour les pays sahéliens comme le Burkina Faso."
+    },
+    {
+      "q": "Quelle journée internationale est célébrée le 23 mars ?",
+      "o": [
+        "Journée mondiale de l'eau",
+        "Journée mondiale de la météorologie",
+        "Journée mondiale de la Terre",
+        "Journée mondiale de la santé"
+      ],
+      "r": 1,
+      "x": "Le 23 mars est la Journée mondiale de la météorologie, créée en 1950 pour marquer l'entrée en vigueur de la Convention de l'Organisation Météorologique Mondiale (OMM). Elle sensibilise à l'importance des prévisions météorologiques et climatiques."
+    },
+    {
+      "q": "Quelle journée spécifique au Burkina Faso est célébrée le 30 mars ?",
+      "o": [
+        "Journée nationale de l'indépendance",
+        "Journée nationale de pardon",
+        "Journée nationale de l'armée",
+        "Journée nationale de la culture"
+      ],
+      "r": 1,
+      "x": "Le 30 mars est la Journée nationale de pardon au Burkina Faso. Cette journée invite les Burkinabè à se pardonner mutuellement leurs torts, à promouvoir la réconciliation nationale et la cohésion sociale, valeurs essentielles en période de transition."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 7 avril ?",
+      "o": [
+        "Journée mondiale de l'art",
+        "Journée mondiale de la santé",
+        "Journée mondiale de la Terre",
+        "Journée mondiale de lutte contre le paludisme"
+      ],
+      "r": 1,
+      "x": "Le 7 avril est la Journée mondiale de la santé, marquant l'anniversaire de la création de l'Organisation Mondiale de la Santé (OMS) en 1948. Chaque année, un thème prioritaire de santé publique mondiale est choisi."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 15 avril ?",
+      "o": [
+        "Journée mondiale de la santé",
+        "Journée mondiale de la Terre",
+        "Journée mondiale de l'art",
+        "Journée internationale des monuments et des sites"
+      ],
+      "r": 2,
+      "x": "Le 15 avril est la Journée mondiale de l'art, proclamée par l'International Association of Art (IAA) en 2012. Elle coïncide avec l'anniversaire de naissance de Léonard de Vinci et célèbre la créativité artistique mondiale."
+    },
+    {
+      "q": "Quelle journée internationale est célébrée le 18 avril ?",
+      "o": [
+        "Journée mondiale de l'art",
+        "Journée mondiale de la Terre",
+        "Journée internationale des monuments et des sites",
+        "Journée mondiale du paludisme"
+      ],
+      "r": 2,
+      "x": "Le 18 avril est la Journée internationale des monuments et des sites (ou Journée du patrimoine mondial), initiée par l'ICOMOS. Elle célèbre la diversité du patrimoine culturel et encourage sa préservation pour les générations futures."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 22 avril ?",
+      "o": [
+        "Journée mondiale de la santé",
+        "Journée mondiale de l'environnement",
+        "Journée mondiale de la Terre",
+        "Journée internationale des monuments"
+      ],
+      "r": 2,
+      "x": "Le 22 avril est la Journée mondiale de la Terre (Earth Day), lancée en 1970 aux États-Unis. Elle mobilise des millions de personnes pour la protection de l'environnement et la lutte contre le changement climatique."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 25 avril ?",
+      "o": [
+        "Journée mondiale de l'environnement",
+        "Journée mondiale de lutte contre le paludisme",
+        "Journée internationale du travail",
+        "Journée mondiale de la Terre"
+      ],
+      "r": 1,
+      "x": "Le 25 avril est la Journée mondiale de lutte contre le paludisme (malaria). Le paludisme est la première cause de mortalité au Burkina Faso et dans la sous-région. Le vaccin RTS,S, dont l'investigateur burkinabè est le Pr Halidou Tinto, constitue une avancée majeure."
+    },
+    {
+      "q": "Quelle journée internationale est célébrée le 1er mai ?",
+      "o": [
+        "Journée mondiale de l'environnement",
+        "Journée internationale de la liberté de la presse",
+        "Journée internationale du travail",
+        "Journée mondiale de la santé"
+      ],
+      "r": 2,
+      "x": "Le 1er mai est la Journée internationale du travail (Fête du Travail). Elle commémore les émeutes ouvrières de Chicago de 1886 et célèbre les droits des travailleurs dans le monde entier."
+    },
+    {
+      "q": "Quelle journée internationale est célébrée le 3 mai ?",
+      "o": [
+        "Journée internationale du travail",
+        "Journée internationale de la liberté de la presse",
+        "Journée mondiale de l'environnement",
+        "Journée mondiale de l'hypertension artérielle"
+      ],
+      "r": 1,
+      "x": "Le 3 mai est la Journée internationale de la liberté de la presse. Elle rappelle l'importance fondamentale d'une presse libre pour la démocratie et les droits de l'homme. Burkina Info TV a été créée ce même jour en 2015."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 17 mai ?",
+      "o": [
+        "Journée mondiale de l'environnement",
+        "Journée mondiale de la liberté de la presse",
+        "Journée mondiale de l'hypertension artérielle",
+        "Journée mondiale du travail des enfants"
+      ],
+      "r": 2,
+      "x": "Le 17 mai est la Journée mondiale de l'hypertension artérielle. L'hypertension est l'un des principaux facteurs de risque cardiovasculaire mondial, responsable de millions d'accidents vasculaires cérébraux et d'infarctus chaque année."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 5 juin ?",
+      "o": [
+        "Journée mondiale de la Francophonie",
+        "Journée mondiale de l'environnement",
+        "Journée mondiale de lutte contre la désertification",
+        "Journée mondiale des réfugiés"
+      ],
+      "r": 1,
+      "x": "Le 5 juin est la Journée mondiale de l'environnement, instituée par l'ONU en 1972 lors de la Conférence de Stockholm. C'est la principale plateforme mondiale de sensibilisation aux enjeux environnementaux."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 12 juin ?",
+      "o": [
+        "Journée mondiale de l'enfant africain",
+        "Journée mondiale de lutte contre le travail des enfants",
+        "Journée mondiale des réfugiés",
+        "Journée mondiale de la fête de musique"
+      ],
+      "r": 1,
+      "x": "Le 12 juin est la Journée mondiale de lutte contre le travail des enfants, créée par l'OIT (Organisation Internationale du Travail) en 2002. Elle dénonce le travail des enfants qui prive des millions d'enfants de leur droit à l'éducation."
+    },
+    {
+      "q": "Quelle journée est célébrée le 16 juin en Afrique ?",
+      "o": [
+        "Journée mondiale des réfugiés",
+        "Journée mondiale de lutte contre la désertification",
+        "Journée mondiale de l'enfant africain",
+        "Journée mondiale de la fête de musique"
+      ],
+      "r": 2,
+      "x": "Le 16 juin est la Journée mondiale de l'enfant africain, proclamée par l'OUA en 1991. Elle commémore le soulèvement des élèves de Soweto (Afrique du Sud) le 16 juin 1976, réprimé dans le sang, et promeut les droits des enfants africains."
+    },
+    {
+      "q": "Quelle journée internationale est célébrée le 17 juin ?",
+      "o": [
+        "Journée mondiale de l'enfant africain",
+        "Journée mondiale des réfugiés",
+        "Journée mondiale de lutte contre la désertification",
+        "Journée mondiale de la fête de musique"
+      ],
+      "r": 2,
+      "x": "Le 17 juin est la Journée mondiale de lutte contre la désertification et la sécheresse, proclamée par l'ONU en 1995. Elle revêt une importance particulière au Burkina Faso et au Sahel où l'avancée du désert constitue une menace majeure pour les populations."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 20 juin ?",
+      "o": [
+        "Journée mondiale de la fête de musique",
+        "Journée mondiale des réfugiés",
+        "Journée mondiale de la fonction publique",
+        "Journée mondiale de lutte contre la tuberculose"
+      ],
+      "r": 1,
+      "x": "Le 20 juin est la Journée mondiale des réfugiés, créée par l'ONU en 2000. Elle honore le courage et la résilience des millions de personnes contraintes de fuir leur pays à cause des guerres, des persécutions ou des catastrophes naturelles."
+    },
+    {
+      "q": "Quelle journée internationale est célébrée le 21 juin ?",
+      "o": [
+        "Journée mondiale des réfugiés",
+        "Journée mondiale de la fonction publique",
+        "Journée internationale de la fête de la musique",
+        "Journée mondiale de lutte contre la tuberculose"
+      ],
+      "r": 2,
+      "x": "Le 21 juin est la Journée internationale de la fête de la musique (coïncidant avec le solstice d'été dans l'hémisphère nord). Cette fête, née en France en 1982, célèbre la musique sous toutes ses formes à travers le monde."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 23 juin ?",
+      "o": [
+        "Journée mondiale de la fête de musique",
+        "Journée mondiale de lutte contre la drogue",
+        "Journée mondiale de la fonction publique",
+        "Journée mondiale des réfugiés"
+      ],
+      "r": 2,
+      "x": "Le 23 juin est la Journée mondiale de la fonction publique, proclamée par l'ONU en 2003. Elle célèbre la contribution des agents de la fonction publique au développement de la société et sensibilise à leur rôle essentiel dans la gouvernance."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 24 mars ?",
+      "o": [
+        "Journée mondiale de la fonction publique",
+        "Journée mondiale de lutte contre la tuberculose",
+        "Journée mondiale de la fête de musique",
+        "Journée mondiale de lutte contre la drogue"
+      ],
+      "r": 1,
+      "x": "La journée mondiale de la tuberculose est officiellement célébrée le 24 mars (date de la découverte du bacille par Robert Koch en 1882). La tuberculose reste une maladie infectieuse majeure affectant des millions de personnes dans le monde, notamment en Afrique subsaharienne."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 26 juin ?",
+      "o": [
+        "Journée mondiale de lutte contre la tuberculose",
+        "Journée mondiale de population",
+        "Journée mondiale de lutte contre la drogue",
+        "Journée mondiale de lutte contre l'hépatite"
+      ],
+      "r": 2,
+      "x": "Le 26 juin est la Journée mondiale de lutte contre la drogue et le trafic illicite, proclamée par l'ONU en 1987. Elle vise à sensibiliser le public aux dangers liés à l'abus des drogues et à renforcer la coopération internationale contre ce fléau."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 11 juillet ?",
+      "o": [
+        "Journée mondiale de lutte contre la drogue",
+        "Journée mondiale de population",
+        "Journée mondiale de lutte contre l'hépatite",
+        "Journée internationale de la jeunesse"
+      ],
+      "r": 1,
+      "x": "Le 11 juillet est la Journée mondiale de la population, proclamée par l'ONU en 1990. Elle attire l'attention sur l'urgence et l'importance des questions démographiques, notamment dans le contexte africain où la croissance démographique est rapide."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 28 juillet ?",
+      "o": [
+        "Journée mondiale de population",
+        "Journée internationale de la jeunesse",
+        "Journée mondiale de lutte contre l'hépatite",
+        "Journée internationale de l'alphabétisation"
+      ],
+      "r": 2,
+      "x": "Le 28 juillet est la Journée mondiale de lutte contre l'hépatite, proclamée par l'OMS en 2010. Elle sensibilise aux hépatites virales B et C qui touchent des centaines de millions de personnes et peuvent évoluer vers la cirrhose ou le cancer du foie."
+    },
+    {
+      "q": "Quelle journée internationale est célébrée le 12 août ?",
+      "o": [
+        "Journée mondiale de lutte contre l'hépatite",
+        "Journée internationale de la jeunesse",
+        "Journée internationale de l'alphabétisation",
+        "Journée mondiale de la Paix"
+      ],
+      "r": 1,
+      "x": "Le 12 août est la Journée internationale de la jeunesse, proclamée par l'ONU en 1999. Elle met en lumière les défis et les opportunités auxquels font face les jeunes du monde entier et encourage leur participation active dans la société."
+    },
+    {
+      "q": "Quelle journée internationale est célébrée le 8 septembre ?",
+      "o": [
+        "Journée internationale de la jeunesse",
+        "Journée mondiale de la Paix",
+        "Journée internationale de l'alphabétisation",
+        "Journée mondiale du Tourisme"
+      ],
+      "r": 2,
+      "x": "Le 8 septembre est la Journée internationale de l'alphabétisation, proclamée par l'UNESCO en 1966. L'alphabétisation reste un défi majeur au Burkina Faso, d'où l'existence d'un ministère dédié à l'alphabétisation et à la promotion des langues nationales."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 21 septembre ?",
+      "o": [
+        "Journée mondiale du Tourisme",
+        "Journée internationale des personnes âgées",
+        "Journée mondiale de la Paix",
+        "Journée mondiale de l'enseignement"
+      ],
+      "r": 2,
+      "x": "Le 21 septembre est la Journée mondiale de la Paix, établie par l'ONU en 1981. Elle est célébrée dans tous les pays du monde pour promouvoir la résolution pacifique des conflits et la non-violence."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 27 septembre ?",
+      "o": [
+        "Journée mondiale de la Paix",
+        "Journée mondiale du Tourisme",
+        "Journée internationale des personnes âgées",
+        "Journée mondiale de l'enseignement"
+      ],
+      "r": 1,
+      "x": "Le 27 septembre est la Journée mondiale du Tourisme, créée par l'Organisation Mondiale du Tourisme (OMT, rebaptisée ONU Tourisme) en 1980. Elle célèbre le rôle du tourisme dans le développement économique et la compréhension entre les peuples."
+    },
+    {
+      "q": "Quelle journée internationale est célébrée le 1er octobre ?",
+      "o": [
+        "Journée mondiale du Tourisme",
+        "Journée mondiale de l'enseignement",
+        "Journée internationale des personnes âgées",
+        "Journée mondiale de la Poste"
+      ],
+      "r": 2,
+      "x": "Le 1er octobre est la Journée internationale des personnes âgées, proclamée par l'ONU en 1990. Elle sensibilise aux défis du vieillissement de la population mondiale et promeut le respect et la dignité des personnes âgées."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 5 octobre ?",
+      "o": [
+        "Journée mondiale de la Poste",
+        "Journée mondiale de l'enseignement",
+        "Journée mondiale de l'alimentation",
+        "Journée internationale des personnes âgées"
+      ],
+      "r": 1,
+      "x": "Le 5 octobre est la Journée mondiale de l'enseignement. Elle célèbre le rôle des enseignants dans le développement humain et social. Elle coïncide également avec la Journée mondiale des enseignants célébrée par l'UNESCO."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 9 octobre ?",
+      "o": [
+        "Journée mondiale de l'enseignement",
+        "Journée mondiale de la Poste",
+        "Journée mondiale de l'alimentation",
+        "Journée mondiale du refus de la misère"
+      ],
+      "r": 1,
+      "x": "Le 9 octobre est la Journée mondiale de la Poste, créée par l'Union Postale Universelle (UPU) en 1969. Elle marque l'anniversaire de la fondation de l'UPU à Berne en 1874. La SONAPOSTE, rebaptisée « La Poste Burkina Faso », est l'acteur postal burkinabè."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 16 octobre ?",
+      "o": [
+        "Journée mondiale de la Poste",
+        "Journée mondiale de l'alimentation",
+        "Journée mondiale du refus de la misère",
+        "Journée africaine des droits de l'homme"
+      ],
+      "r": 1,
+      "x": "Le 16 octobre est la Journée mondiale de l'alimentation, célébrée depuis 1979 pour commémorer la fondation de la FAO en 1945. Elle attire l'attention sur la faim dans le monde et promeut la souveraineté alimentaire, priorité de la Transition burkinabè."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 17 octobre ?",
+      "o": [
+        "Journée mondiale de l'alimentation",
+        "Journée africaine des droits de l'homme",
+        "Journée mondiale du refus de la misère",
+        "Journée mondiale de Nations-Unies"
+      ],
+      "r": 2,
+      "x": "Le 17 octobre est la Journée mondiale du refus de la misère, créée en 1987 par Joseph Wresinski, fondateur d'ATD Quart Monde. Elle invite à reconnaître la dignité des personnes vivant dans l'extrême pauvreté et à lutter contre l'exclusion sociale."
+    },
+    {
+      "q": "Quelle journée est célébrée le 21 octobre en Afrique ?",
+      "o": [
+        "Journée mondiale de l'alimentation",
+        "Journée africaine des droits de l'homme et des peuples",
+        "Journée mondiale de Nations-Unies",
+        "Journée mondiale du refus de la misère"
+      ],
+      "r": 1,
+      "x": "Le 21 octobre est la Journée africaine des droits de l'homme et des peuples. C'est la date d'anniversaire de la création de la Commission africaine des droits de l’homme et des peuples (1986)."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 24 octobre ?",
+      "o": [
+        "Journée africaine des droits de l'homme",
+        "Journée mondiale de Nations-Unies",
+        "Journée mondiale du refus de la misère",
+        "Journée mondiale du diabète"
+      ],
+      "r": 1,
+      "x": "Le 24 octobre est la Journée mondiale des Nations-Unies, commémorant l'entrée en vigueur de la Charte des Nations Unies le 24 octobre 1945. L'ONU, fondée après la Seconde Guerre mondiale, compte actuellement 193 États membres."
+    },
+    {
+      "q": "Quelle journée est célébrée du 11 novembre chaque année ?",
+      "o": [
+        "Journée mondiale des droits de l'enfant",
+        "Journée mondiale de Nations-Unies",
+        "Semaine internationale de science et de la Paix",
+        "Journée mondiale du diabète"
+      ],
+      "r": 2,
+      "x": "Le 11 novembre marque le début de la Semaine internationale de science et de la Paix, proclamée par l'ONU en 1988. Elle souligne le rôle positif que la science peut jouer pour la paix et le développement durable."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 14 novembre ?",
+      "o": [
+        "Journée mondiale des droits de l'enfant",
+        "Journée mondiale du diabète",
+        "Journée mondiale de lutte contre le Sida",
+        "Journée mondiale des personnes handicapées"
+      ],
+      "r": 1,
+      "x": "Le 14 novembre est la Journée mondiale du diabète, créée en 1991 par la Fédération Internationale du Diabète (FID) et l'OMS. Elle coïncide avec l'anniversaire de naissance de Frederick Banting, co-découvreur de l'insuline."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 20 novembre ?",
+      "o": [
+        "Journée mondiale du diabète",
+        "Journée mondiale de lutte contre le Sida",
+        "Journée mondiale des droits de l'enfant",
+        "Journée mondiale des personnes handicapées"
+      ],
+      "r": 2,
+      "x": "Le 20 novembre est la Journée mondiale des droits de l'enfant. Elle commémore l'adoption de la Convention des Nations Unies relative aux droits de l'enfant (CIDE) le 20 novembre 1989, ratifiée par presque tous les pays du monde."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 1er décembre ?",
+      "o": [
+        "Journée mondiale des droits de l'enfant",
+        "Journée mondiale de lutte contre le Sida",
+        "Journée mondiale des personnes handicapées",
+        "Journée mondiale du volontariat"
+      ],
+      "r": 1,
+      "x": "Le 1er décembre est la Journée mondiale de lutte contre le Sida, créée en 1988. Le ruban rouge est son symbole. En Afrique subsaharienne, le VIH/SIDA reste un problème de santé publique majeur malgré les progrès thérapeutiques."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 3 décembre ?",
+      "o": [
+        "Journée mondiale de lutte contre le Sida",
+        "Journée mondiale des personnes handicapées",
+        "Journée mondiale du volontariat",
+        "Journée internationale de la lutte anti-corruption"
+      ],
+      "r": 1,
+      "x": "Le 3 décembre est la Journée mondiale des personnes handicapées, proclamée par l'ONU en 1992. Elle promeut l'inclusion et la pleine participation des personnes en situation de handicap dans tous les aspects de la vie sociale, économique et culturelle."
+    },
+    {
+      "q": "Quelle journée mondiale est célébrée le 5 décembre ?",
+      "o": [
+        "Journée mondiale des personnes handicapées",
+        "Journée internationale de la lutte anti-corruption",
+        "Journée mondiale du volontariat",
+        "Journée internationale des droits de l'homme"
+      ],
+      "r": 2,
+      "x": "Le 5 décembre est la Journée mondiale du volontariat, créée par l'ONU en 1985. Elle reconnaît la contribution des millions de bénévoles à travers le monde. Le Burkina Faso célèbre sa Journée nationale du volontariat le 8 décembre."
+    },
+    {
+      "q": "Quelle journée internationale est célébrée le 9 décembre ?",
+      "o": [
+        "Journée mondiale du volontariat",
+        "Journée internationale des droits de l'homme",
+        "Journée internationale de la lutte anti-corruption",
+        "Fête nationale de l'indépendance du Burkina Faso"
+      ],
+      "r": 2,
+      "x": "Le 9 décembre est la Journée internationale de la lutte anti-corruption, proclamée par l'ONU en 2003 suite à l'adoption de la Convention des Nations Unies contre la Corruption (CNUCC). Au Burkina Faso, l'institution étatique de contrôle est l'ASCE-LC, fortement épaulée sur le plan citoyen par le REN-LAC, un réseau majeur de la société civile créé en 1997."
+    },
+    {
+      "q": "Quelle journée internationale est célébrée le 10 décembre ?",
+      "o": [
+        "Journée internationale de la lutte anti-corruption",
+        "Journée mondiale du volontariat",
+        "Journée internationale des droits de l'homme",
+        "Fête nationale de l'indépendance du Burkina Faso"
+      ],
+      "r": 2,
+      "x": "Le 10 décembre est la Journée internationale des droits de l'homme. Elle commémore l'adoption par l'ONU de la Déclaration Universelle des Droits de l'Homme (DUDH) le 10 décembre 1948, rédigée par René Cassin."
+    },
+    {
+      "q": "Quelle fête nationale burkinabè est célébrée le 11 décembre ?",
+      "o": [
+        "Journée internationale des droits de l'homme",
+        "Fête nationale de l'indépendance",
+        "Journée mondiale du volontariat",
+        "Journée de la lutte anti-corruption"
+      ],
+      "r": 1,
+      "x": "Elle commémore le 11 décembre 1958, date à laquelle la Haute-Volta (devenue Burkina Faso en 1984) a été proclamée République autonome au sein de la Communauté franco-africaine, deux ans avant son indépendance totale obtenue le 5 août 1960."
+    },
+    {
+      "q": "Qui a inventé l'ampoule électrique et en quelle année ?",
+      "o": [
+        "Nicolas Tesla, 1882",
+        "Thomas Edison, 1879",
+        "Alexander Graham Bell, 1876",
+        "James Watt, 1769"
+      ],
+      "r": 1,
+      "x": "Thomas Edison a inventé l'ampoule électrique en 1879. Ce pionnier américain de l'électricité est aussi à l'origine du phonographe et de nombreuses innovations en électricité. Son invention a révolutionné l'éclairage artificiel dans le monde."
+    },
+    {
+      "q": "Qui a inventé la radio et en quelle année ?",
+      "o": [
+        "Nicolas Tesla, 1882",
+        "Alexander Graham Bell, 1876",
+        "Guglielmo Marconi, 1896",
+        "James Clerk Maxwell, 1865"
+      ],
+      "r": 2,
+      "x": "Guglielmo Marconi a inventé la radio en 1896. Ce physicien et inventeur italien a réalisé la première transmission radio sans fil sur longue distance. Il a reçu le Prix Nobel de Physique en 1909. La radio reste un média essentiel au Burkina Faso (RTB3 lancée en 2023)."
+    },
+    {
+      "q": "Qui a inventé le courant alternatif (AC) et en quelle année ?",
+      "o": [
+        "Thomas Edison, 1879",
+        "James Clerk Maxwell, 1865",
+        "Nikola Tesla, 1882",
+        "Alexander Graham Bell, 1876"
+      ],
+      "r": 2,
+      "x": "Nikola Tesla a développé le système de courant alternatif (AC) en 1882. Ce brillant ingénieur et inventeur serbo-américain a révolutionné la distribution de l'électricité, rendant possible son transport sur de longues distances."
+    },
+    {
+      "q": "Qui a inventé le télescope et en quelle année ?",
+      "o": [
+        "Hans Lippershey, 1608",
+        "Galileo Galilée, 1609",
+        "Niels Bohr, 1913",
+        "Johannes Gutenberg, 1450"
+      ],
+      "r": 0,
+      "x": "L'opticien Hans Lippershey dépose le tout premier brevet du télescope en octobre 1608. L'appareil utilise des lentilles de verre pour grossir les objets lointains. Galileo Galilée a par la suite amélioré le télescope pour le volet astronomique en 1609."
+    },
+    {
+      "q": "Qui a découvert la pénicilline et en quelle année ?",
+      "o": [
+        "Edward Jenner, 1796",
+        "Louis Pasteur, 1879",
+        "Alexander Fleming, 1928",
+        "James Watson, 1953"
+      ],
+      "r": 2,
+      "x": "Alexander Fleming a découvert la pénicilline en 1928. Ce médecin britannique observa qu'une moisissure (Penicillium) détruisait les bactéries staphylocoques. Cette découverte est à l'origine des antibiotiques, révolutionnant la médecine moderne."
+    },
+    {
+      "q": "Qui a mis au point le vaccin contre la variole et en quelle année ?",
+      "o": [
+        "Louis Pasteur, 1885",
+        "Edward Jenner, 1796",
+        "Alexander Fleming, 1928",
+        "Robert Koch, 1882"
+      ],
+      "r": 1,
+      "x": "Edward Jenner a mis au point le premier vaccin au monde contre la variole en 1796. Ce médecin britannique observa que les vachères immunisées contre la vaccine (variole des vaches) étaient protégées contre la variole humaine. Il est le père de la vaccination."
+    },
+    {
+      "q": "Qui a inventé la machine analytique, précurseur de l'ordinateur et en quelle année ?",
+      "o": [
+        "Alan Turing, 1936",
+        "Mark Zuckerberg, 2004",
+        "Charles Babbage, 1834",
+        "Larry Page, 1998"
+      ],
+      "r": 2,
+      "x": "E : Charles Babbage conçut en 1834 la machine analytique (Analytical Engine), considérée comme le précurseur de l'ordinateur moderne. Ce mathématicien britannique est souvent appelé le « père de l'ordinateur ». Sa machine comportait déjà les principaux éléments d'un ordinateur moderne (mémoire, unité de calcul et système de programmation par cartes perforées), posant ainsi les bases théoriques de l'informatique."
+    },
+    {
+      "q": "Qui a inventé l'avion et en quelle année ?",
+      "o": [
+        "Richard Trevithick, 1804",
+        "Joseph Nicéphore Niépcé, 1826",
+        "Wilbur Wright et Orville Wright, 1903",
+        "James Watt, 1769"
+      ],
+      "r": 2,
+      "x": "Les frères Wilbur Wright et Orville Wright ont réalisé le premier vol motorisé contrôlé en 1903 à Kitty Hawk (États-Unis). Leur avion \"Flyer I\" a volé 36 mètres en 12 secondes. Cette invention a transformé le transport mondial."
+    },
+    {
+      "q": "Qui a perfectionné et breveté la machine à vapeur moderne en 1769 ?",
+      "o": [
+        "Denis Papin",
+        "Thomas Newcomen",
+        "James Watt",
+        "Robert Fulton"
+      ],
+      "r": 2,
+      "x": "Bien que Thomas Newcomen ait créé un premier modèle en 1712, c'est l'ingénieur écossais James Watt qui invente et brevète la machine à vapeur moderne en 1769 grâce à l'introduction du condensateur séparé, une innovation qui a transformé l'industrie et les transports."
+    },
+    {
+      "q": "Qui a inventé le cinéma et en quelle année ?",
+      "o": [
+        "Thomas Edison, 1879",
+        "Auguste et Louis Lumière, 1895",
+        "Joseph Nicéphore Niépcé, 1826",
+        "Mark Zuckerberg, 2004"
+      ],
+      "r": 1,
+      "x": "Auguste et Louis Lumière ont inventé le cinématographe en 1895. Ces frères lyonnais ont organisé la première projection publique payante le 28 décembre 1895 à Paris. Le cinéma africain est célébré chaque année au FESPACO de Ouagadougou (créé en 1969)."
+    },
+    {
+      "q": "Qui a fondé Google et en quelle année ?",
+      "o": [
+        "Mark Zuckerberg et Eduardo Saverin, 2004",
+        "Bill Gates et Paul Allen, 1975",
+        "Larry Page et Sergey Brin, 1998",
+        "Steve Jobs et Steve Wozniak, 1976"
+      ],
+      "r": 2,
+      "x": "Larry Page et Sergey Brin ont fondé Google en 1998. Ces deux étudiants de l'Université Stanford ont créé le moteur de recherche le plus utilisé au monde. Google est aujourd'hui l'une des entreprises les plus valorisées au monde (Alphabet)."
+    },
+    {
+      "q": "Qui a fondé Facebook et en quelle année ?",
+      "o": [
+        "Larry Page, 1998",
+        "Elon Musk, 2004",
+        "Bill Gates, 2000",
+        "Mark Zuckerberg, février 2004"
+      ],
+      "r": 3,
+      "x": "Mark Zuckerberg a fondé Facebook en février 2004. Ce jeune informaticien américain a lancé le réseau social depuis sa chambre de l'Université Harvard. Facebook (rebaptisé Meta) est aujourd'hui la plus grande plateforme de réseaux sociaux du monde."
+    },
+    {
+      "q": "Qui a inventé le train et en quelle année ?",
+      "o": [
+        "James Watt, 1769",
+        "Richard Trevithick, 1804",
+        "Charles Babbage, 1830",
+        "Auguste Lumière, 1895"
+      ],
+      "r": 1,
+      "x": "Richard Trevithick a inventé la première locomotive à vapeur en 1804. Cet ingénieur britannique a réalisé le premier voyage en train à Merthyr Tydfil (Pays de Galles). Le Burkina Faso dispose d'un réseau ferroviaire conséquent géré par Faso Rail, créée le 14 août 2024."
+    },
+    {
+      "q": "Qui a inventé la photographie et en quelle année ?",
+      "o": [
+        "Auguste Lumière, 1895",
+        "Thomas Edison, 1877",
+        "Joseph Nicéphore Niépcé, 1826",
+        "Galileo Galilée, 1609"
+      ],
+      "r": 2,
+      "x": "Joseph Nicéphore Niépcé a réalisé la première photographie permanente en 1826 à Chalon-sur-Saône (France). Il a collaboré ensuite avec Louis Daguerre pour perfectionner la technique. Cette invention a révolutionné la représentation visuelle du monde."
+    },
+    {
+      "q": "Qui a dirigé la conception de la bombe atomique et en quelle date de test ?",
+      "o": [
+        "Albert Einstein, 16 juillet 1944",
+        "Robert Oppenheimer, 16 juillet 1945",
+        "Niels Bohr, 6 août 1945",
+        "Enrico Fermi, 2 décembre 1942"
+      ],
+      "r": 1,
+      "x": "Robert Oppenheimer a dirigé le Projet Manhattan qui a conduit au premier test nucléaire (\"Trinity\") le 16 juillet 1945 à Alamogordo (Nouveau-Mexique, USA). Deux bombes furent ensuite larguées sur Hiroshima (6 août 1945) et Nagasaki (9 août 1945)."
+    },
+    {
+      "q": "Qui a découvert la structure en double hélice de l'ADN et en quelle année ?",
+      "o": [
+        "Gregor Mendel et Charles Darwin, 1866",
+        "Louis Pasteur et Robert Koch, 1876",
+        "James Watson et Francis Crick, 1953",
+        "Niels Bohr et Erwin Schrödinger, 1926"
+      ],
+      "r": 2,
+      "x": "James Watson et Francis Crick ont découvert la structure en double hélice de l'ADN en 1953. Cette découverte fondamentale a révolutionné la biologie moléculaire et la génétique. Ils ont reçu le Prix Nobel de Médecine en 1962 avec Maurice Wilkins."
+    },
+    {
+      "q": "Qui a inventé la machine à coudre et en quelle année ?",
+      "o": [
+        "James Watt, 1769",
+        "Charles Babbage, 1830",
+        "Richard Trevithick, 1804",
+        "Barthélémy Thimonnier, 1830"
+      ],
+      "r": 3,
+      "x": "Barthélémy Thimonnier a inventé la première machine à coudre fonctionnelle en 1830. Ce tailleur français de Saint-Étienne a déposé son brevet en 1829. Sa machine fut détruite par des ouvriers tailleurs qui craignaient pour leurs emplois."
+    },
+    {
+      "q": "Qui a développé le modèle atomique de Bohr et en quelle année ?",
+      "o": [
+        "Erwin Schrödinger, 1926",
+        "James Clerk Maxwell, 1865",
+        "Niels Bohr, 1913",
+        "Isaac Newton, 1687"
+      ],
+      "r": 2,
+      "x": "Niels Bohr a développé son modèle de l'atome en 1913. Ce physicien danois a proposé que les électrons orbitent autour du noyau sur des trajectoires précises. Ce modèle a constitué une étape fondamentale vers la mécanique quantique."
+    },
+    {
+      "q": "Qui a développé la théorie de l'électromagnétisme et en quelle année ?",
+      "o": [
+        "Niels Bohr, 1913",
+        "Erwin Schrödinger, 1926",
+        "Isaac Newton, 1687",
+        "James Clerk Maxwell, 1865"
+      ],
+      "r": 3,
+      "x": "James Clerk Maxwell a formulé la théorie de l'électromagnétisme en 1865, unifiant électricité et magnétisme en quatre équations fondamentales. Ce physicien écossais a prédit l'existence des ondes électromagnétiques, confirmée par Hertz en 1888."
+    },
+    {
+      "q": "Qui a développé la mécanique ondulatoire et en quelle année ?",
+      "o": [
+        "Niels Bohr, 1913",
+        "Erwin Schrödinger, 1926",
+        "James Clerk Maxwell, 1865",
+        "Isaac Newton, 1687"
+      ],
+      "r": 1,
+      "x": "Erwin Schrödinger a développé la mécanique ondulatoire en 1926. Ce physicien autrichien a formulé l'équation de Schrödinger, fondement de la mécanique quantique. Il est aussi célèbre pour son expérience de pensée du \"chat de Schrödinger\"."
+    },
+    {
+      "q": "Qui a formulé les lois du mouvement et en quelle année ?",
+      "o": [
+        "Galileo Galilée, 1609",
+        "Erwin Schrödinger, 1926",
+        "James Clerk Maxwell, 1865",
+        "Isaac Newton, 1687"
+      ],
+      "r": 3,
+      "x": "Isaac Newton a formulé ses 3 lois du mouvement en 1687 dans son œuvre \"Principia Mathematica\". Ces lois (inertie, F=ma, action-réaction) sont les fondements de la mécanique classique. Il a aussi formulé la loi de la gravitation universelle."
+    },
+    {
+      "q": "Qui a inventé le téléphone et à quelle date exacte ?",
+      "o": [
+        "Guglielmo Marconi, 1896",
+        "Thomas Edison, 1877",
+        "Alexander Graham Bell, 7 mars 1876",
+        "Nicolas Tesla, 1882"
+      ],
+      "r": 2,
+      "x": "Alexander Graham Bell a breveté le téléphone le 7 mars 1876. Ce scientifique et inventeur écossais-américain a prononcé la première phrase transmise par téléphone : \"Mr Watson, venez ici, j'ai besoin de vous\". Le téléphone a révolutionné la communication mondiale."
+    },
+    {
+      "q": "Qui a inventé l'imprimerie et en quelle année ?",
+      "o": [
+        "Joseph Nicéphore Niépcé, 1826",
+        "Richard Trevithick, 1804",
+        "Barthélémy Thimonnier, 1830",
+        "Johannes Gutenberg, 1450"
+      ],
+      "r": 3,
+      "x": "Johannes Gutenberg a inventé l'imprimerie à caractères mobiles en 1450 à Mayence (Allemagne). Cette invention révolutionnaire a permis la diffusion massive des livres et du savoir, dont la Bible de Gutenberg, et constitue l'une des plus grandes inventions de l'humanité."
+    },
+    {
+      "q": "Qui a découvert la radioactivité et en quelle année réelle ?",
+      "o": [
+        "Pierre Curie, 1898",
+        "Marie Curie, 1903",
+        "Henri Becquerel, 1896",
+        "Niels Bohr, 1913"
+      ],
+      "r": 2,
+      "x": "Henri Becquerel a découvert la radioactivité en 1896. Ce physicien français observa qu'un sel d'uranium émettait spontanément des rayonnements pouvant impressionner une plaque photographique. Marie et Pierre Curie approfondirent ensuite ses travaux."
+    },
+    {
+      "q": "Qui a remporté le Prix Nobel de la Paix 2025 ?",
+      "o": [
+        "António Guterres (Portugal)",
+        "María Corina Machado (Venezuela)",
+        "Volodymyr Zelensky (Ukraine)",
+        "Greta Thunberg (Suède)"
+      ],
+      "r": 1,
+      "x": "Le Prix Nobel de la Paix 2025 a été attribué à María Corina Machado du Venezuela. Elle est une figure de l'opposition politique vénézuélienne connue pour sa lutte pour la démocratie et les droits humains face au régime de Nicolás Maduro."
+    },
+    {
+      "q": "Qui a remporté le Prix Nobel de Physique 2025 ?",
+      "o": [
+        "Katalin Karikó, Drew Weissman et Pieter Cullis",
+        "Michel H. Devoret (France), John Clarke (Royaume-Uni) et John M. Martinis (USA)",
+        "Pierre Agostini, Ferenc Krausz et Anne L'Huillier",
+        "Alain Aspect, John Clauser et Anton Zeilinger"
+      ],
+      "r": 1,
+      "x": "Le Prix Nobel de Physique 2025 a été attribué à Michel H. Devoret (France), John Clarke (Royaume-Uni) et John M. Martinis (USA) pour leurs travaux en physique quantique."
+    },
+    {
+      "q": "Qui a remporté le Prix Nobel de Médecine 2025 ?",
+      "o": [
+        "Svante Pääbo",
+        "David Julius et Ardem Patapoutian",
+        "Shimon Sakaguchi (Japon), Mary E. Brunkow et Fred Ramsdell (USA)",
+        "Katalin Karikó et Drew Weissman"
+      ],
+      "r": 2,
+      "x": "Le Prix Nobel de Médecine 2025 a été attribué à Shimon Sakaguchi (Japon), Mary E. Brunkow (USA) et Fred Ramsdell (USA) pour leurs recherches en immunologie, notamment sur les lymphocytes T régulateurs."
+    },
+    {
+      "q": "Qui a remporté le Prix Nobel de Littérature 2025 ?",
+      "o": [
+        "Peter Handke (Autriche)",
+        "Abdulrazak Gurnah (Tanzanie)",
+        "Annie Ernaux (France)",
+        "László Krasznahorkai (Hongrie)"
+      ],
+      "r": 3,
+      "x": "Le Prix Nobel de Littérature 2025 a été attribué au romancier hongrois László Krasznahorkai. Auteur d'une œuvre dense et philosophique traduite dans de nombreuses langues, il est considéré comme l'un des grands écrivains européens contemporains."
+    },
+    {
+      "q": "Qui a remporté le Prix Pritzker (Nobel de l'Architecture) 2025 ?",
+      "o": [
+        "Wang Shu (Chine)",
+        "Balkrishna Doshi (Inde)",
+        "Liu Jiakun (Chine)",
+        "Diébédo Francis Kéré (Burkina Faso)"
+      ],
+      "r": 2,
+      "x": "Le Prix Pritzker 2025 (récompense suprême en architecture, souvent comparée au Prix Nobel) a été attribué à l'architecte chinois Liu Jiakun. Diébédo Francis Kéré (Burkina Faso) avait remporté ce même prix en 2022, premier Africain à l'obtenir."
+    },
+    {
+      "q": "Qui a remporté le Prix Nobel de Chimie 2025 ?",
+      "o": [
+        "David Baker, Demis Hassabis et John Jumper",
+        "Carolyn Bertozzi, Morten Meldal et Karl Barry Sharpless",
+        "Susumu Kitagawa (Japon), Omar M. Yaghi (Jordanie/USA) et Richard Robson (Royaume-Uni)",
+        "Moungi Bawendi, Louis Brus et Alexei Ekimov"
+      ],
+      "r": 2,
+      "x": "Le Prix Nobel de Chimie 2025 a été attribué à Susumu Kitagawa (Japon), Omar M. Yaghi (Jordanie/USA) et Richard Robson (Royaume-Uni) pour leurs travaux sur les matériaux poreux (MOF : Metal-Organic Frameworks)."
+    },
+    {
+      "q": "Qui a remporté le Prix Nobel d'Economie 2025 ?",
+      "o": [
+        "Ben Bernanke, Douglas Diamond et Philip Dybvig",
+        "Claudia Goldin",
+        "Philippe Aghion (France), Joel Mokyr (USA/Israël) et Peter Howitt (Canada)",
+        "Daron Acemoglu, Simon Johnson et James Robinson"
+      ],
+      "r": 2,
+      "x": "Le Prix Nobel d'Économie 2025 a été attribué à Philippe Aghion (France), Joel Mokyr (USA/Israël) et Peter Howitt (Canada) pour leurs travaux sur la croissance économique, l'innovation et le progrès technologique."
+    },
+    {
+      "q": "Quel est le plus long fleuve d'Afrique et quelle est sa longueur ?",
+      "o": [
+        "Le Congo (4 700 km)",
+        "Le Niger (4 180 km)",
+        "Le Nil (6 650 km)",
+        "Le Zambèze (2 693 km)"
+      ],
+      "r": 2,
+      "x": "Le Nil est le plus long fleuve d'Afrique avec 6 650 km. Il prend sa source au lac Victoria (Ouganda/Tanzanie) et se jette dans la Méditerranée en Égypte. Le Nil Bleu (Éthiopie) et le Nil Blanc (Ouganda) se rejoignent à Khartoum (Soudan)."
+    },
+    {
+      "q": "Quel est le plus long fleuve d'Europe et quelle est sa longueur ?",
+      "o": [
+        "Le Danube (2 860 km)",
+        "La Volga (3 530 km)",
+        "Le Rhin (1 230 km)",
+        "Le Rhône (812 km)"
+      ],
+      "r": 1,
+      "x": "La Volga est le plus long fleuve d'Europe avec 3 530 km. Elle traverse la Russie du nord au sud et se jette dans la mer Caspienne. C'est le fleuve le plus important de Russie, surnommé \"mère Volga\"."
+    },
+    {
+      "q": "Quel est le plus long fleuve d'Amérique et quelle est sa longueur ?",
+      "o": [
+        "Le Mississippi (6 270 km)",
+        "Le Paraná (4 880 km)",
+        "L'Amazone (6 400 km)",
+        "L'Orénoque (2 140 km)"
+      ],
+      "r": 2,
+      "x": "L'Amazone est le plus long fleuve d'Amérique avec 6 400 km. Situé principalement au Brésil, il traverse aussi le Pérou et la Colombie. L'Amazonie est surnommée \"le poumon de la Terre\" et abrite 10 % des espèces vivantes connues."
+    },
+    {
+      "q": "Quel est le plus long fleuve d'Océanie et quelle est sa longueur ?",
+      "o": [
+        "Le Darling (2 739 km)",
+        "Le Murray (2 508 km)",
+        "Le Murrumbidgee (1 690 km)",
+        "Le Lachlan (1 448 km)"
+      ],
+      "r": 1,
+      "x": "Le Murray est le plus long fleuve d'Océanie avec 2 508 km. Il coule en Australie et se jette dans l'océan Indien. Avec le Darling, il forme le système Murray-Darling, principale ressource en eau agricole de l'Australie."
+    },
+    {
+      "q": "Quel est le plus long fleuve d'Asie et quelle est sa longueur ?",
+      "o": [
+        "Le Gange (2 525 km)",
+        "Le Mékong (4 350 km)",
+        "L'Ob (5 410 km)",
+        "Le Yang-Tse-Kiang (6 300 km)"
+      ],
+      "r": 3,
+      "x": "Le Yang-Tse-Kiang (ou Yangtsé) est le plus long fleuve d'Asie avec 6 300 km. Il traverse la Chine d'ouest en est et se jette dans la mer de Chine orientale. C'est le troisième plus long fleuve du monde."
+    },
+    {
+      "q": "Quelle science étudie la peau et ses maladies ?",
+      "o": [
+        "Podologie",
+        "Pédologie",
+        "Dermatologie",
+        "Andrologie"
+      ],
+      "r": 2,
+      "x": "La dermatologie (du grec derma = peau) est la spécialité médicale qui étudie et traite les maladies de la peau, des ongles et des cheveux. Le dermatologue traite l'eczéma, le psoriasis, les mélanomes et autres affections cutanées."
+    },
+    {
+      "q": "Quelle science étudie les pieds ?",
+      "o": [
+        "Dermatologie",
+        "Podologie",
+        "Pédologie",
+        "Podiatrie uniquement en anglais"
+      ],
+      "r": 1,
+      "x": "La podologie (du grec pous = pied) est la science médicale qui étudie et traite les affections du pied : cors, verrues plantaires, ongles incarnés, troubles de la statique. Le podologue confectionne aussi des semelles orthopédiques."
+    },
+    {
+      "q": "Quelle science étudie les sols ?",
+      "o": [
+        "Pédologie",
+        "Podologie",
+        "Géologie",
+        "Sédimentologie"
+      ],
+      "r": 0,
+      "x": "La pédologie (du grec pedon = sol) est la science qui étudie la formation, la structure et les propriétés des sols. Elle est fondamentale pour l'agriculture et la gestion des terres."
+    },
+    {
+      "q": "Quelle science étudie les arbres ?",
+      "o": [
+        "Botanique",
+        "Sylviculture",
+        "Dendrologie",
+        "Phytologie"
+      ],
+      "r": 2,
+      "x": "La dendrologie (du grec dendron = arbre) est la branche de la botanique qui étudie les arbres et arbustes ligneux. Elle s'intéresse à leur identification, classification, écologie et croissance. Elle est utile en foresterie et en agroforesterie."
+    },
+    {
+      "q": "Quelle science étudie la genèse et la propagation des ondes sismiques ?",
+      "o": [
+        "Volcanologie",
+        "Sismologie",
+        "Géophysique",
+        "Lithologie"
+      ],
+      "r": 1,
+      "x": "La sismologie (du grec seismos = tremblement de terre) étudie les tremblements de terre, les tsunamis et la structure interne de la Terre à travers les ondes sismiques. L'instrument de mesure est le sismographe, et l'échelle de Richter mesure la magnitude."
+    },
+    {
+      "q": "Quelle science étudie les maladies de l'œil ?",
+      "o": [
+        "Optométrie",
+        "Neurologie",
+        "Ophtalmologie",
+        "Otologie"
+      ],
+      "r": 2,
+      "x": "L'ophtalmologie (du grec ophthalmos = œil) est la spécialité médicale qui étudie et traite les maladies des yeux : cataracte, glaucome, myopie, DMLA. L'ophtalmologue est un médecin spécialiste, à distinguer de l'optométriste."
+    },
+    {
+      "q": "Quelle science étudie la grossesse et l'accouchement ?",
+      "o": [
+        "Gynécologie",
+        "Pédiatrie",
+        "Néonatologie",
+        "Obstétrique"
+      ],
+      "r": 3,
+      "x": "L'obstétrique est la spécialité médicale qui prend en charge la grossesse, l'accouchement et le post-partum. La sage-femme et le médecin obstétricien travaillent ensemble. Elle est souvent regroupée avec la gynécologie sous le terme gynécologie-obstétrique."
+    },
+    {
+      "q": "Quelle science étudie les serpents ?",
+      "o": [
+        "Ichtyologie",
+        "Herpétologie",
+        "Ophiologie",
+        "Entomologie"
+      ],
+      "r": 2,
+      "x": "L'ophiologie (du grec ophis = serpent) est la branche de la zoologie qui étudie les serpents (ophidiens). Elle s'intéresse à leur biologie, venin, comportement et classification. L'herpétologie englobe l'ophiologie et l'étude des autres reptiles et amphibiens."
+    },
+    {
+      "q": "Quelle science étudie les cancers ?",
+      "o": [
+        "Hématologie",
+        "Oncologie",
+        "Pathologie",
+        "Immunologie"
+      ],
+      "r": 1,
+      "x": "L'oncologie (du grec oncos = masse, tumeur) est la spécialité médicale qui étudie, diagnostique et traite les cancers. L'oncologue utilise la chirurgie, la chimiothérapie, la radiothérapie et l'immunothérapie. Le cancer est la 2e cause de mortalité mondiale."
+    },
+    {
+      "q": "Quelle science étudie les maladies liées aux poumons ?",
+      "o": [
+        "Cardiologie",
+        "Oncologie",
+        "Pneumologie",
+        "Gastroentérologie"
+      ],
+      "r": 2,
+      "x": "La pneumologie (du grec pneumon = poumon) est la spécialité médicale qui étudie et traite les maladies respiratoires : asthme, bronchite chronique, tuberculose, pneumonie, cancer du poumon."
+    },
+    {
+      "q": "Quelle science étudie le tube digestif ?",
+      "o": [
+        "Hépato-gastroentérologie",
+        "Gastroentérologie",
+        "Stomatologie",
+        "Hépatologie"
+      ],
+      "r": 1,
+      "x": "La gastroentérologie (du grec gaster = estomac + enteron = intestin) étudie les maladies du tube digestif : gastrite, ulcère, colon irritable, cancer colorectal. Le gastroentérologue réalise des coloscopies et endoscopies."
+    },
+    {
+      "q": "Quelle science étudie la bouche ?",
+      "o": [
+        "Orthodontie",
+        "Odontologie",
+        "Stomatologie",
+        "Otologie"
+      ],
+      "r": 2,
+      "x": "La stomatologie (du grec stoma = bouche) est la spécialité médicale qui étudie et traite les maladies de la bouche, des dents et des mâchoires. Elle est étroitement liée à la chirurgie dentaire et maxillo-faciale."
+    },
+    {
+      "q": "Quelle science étudie le sang ?",
+      "o": [
+        "Cardiologie",
+        "Hématologie",
+        "Néphrologie",
+        "Immunologie"
+      ],
+      "r": 1,
+      "x": "L'hématologie (du grec haima = sang) est la spécialité médicale qui étudie le sang, la moelle osseuse et les maladies sanguines : anémie, leucémie, hémophilie, lymphome. L'hématologue analyse les numération-formules sanguines (NFS)."
+    },
+    {
+      "q": "Quelle science étudie les reins ?",
+      "o": [
+        "Urologie",
+        "Hématologie",
+        "Endocrinologie",
+        "Néphrologie"
+      ],
+      "r": 3,
+      "x": "La néphrologie (du grec nephros = rein) est la spécialité médicale qui étudie et traite les maladies des reins : insuffisance rénale, néphrite, syndrome néphrotique. Le néphrologue supervise aussi la dialyse et prépare les transplantations rénales."
+    },
+    {
+      "q": "Quelle science étudie les personnes âgées ?",
+      "o": [
+        "Gérontologie",
+        "Gériatrie",
+        "Pédiatrie",
+        "Andrologie"
+      ],
+      "r": 0,
+      "x": "La gérontologie (du grec geron = vieillard) est la science qui étudie les personnes âgées. La spécialité médicale qui prend en charge les maladies et problèmes de santé des personnes âgées est la gériatrie."
+    },
+    {
+      "q": "Quelle science étudie la santé masculine ?",
+      "o": [
+        "Endocrinologie",
+        "Urologie",
+        "Andrologie",
+        "Gérontologie"
+      ],
+      "r": 2,
+      "x": "L'andrologie (du grec aner = homme) est la spécialité médicale consacrée à la santé reproductive et sexuelle masculine : infertilité, dysfonction érectile, maladies de la prostate. C'est l'équivalent masculin de la gynécologie."
+    },
+    {
+      "q": "Quelle science étudie les insectes ?",
+      "o": [
+        "Zoologie",
+        "Ornithologie",
+        "Entomologie",
+        "Ophiologie"
+      ],
+      "r": 2,
+      "x": "L'entomologie (du grec entomon = insecte) est la branche de la zoologie qui étudie les insectes. Les insectes représentent plus de 80 % des espèces animales connues. L'entomologie médicale s'intéresse aux insectes vecteurs de maladies (moustiques, mouches tsé-tsé)."
+    },
+    {
+      "q": "Quelle science étudie les oiseaux ?",
+      "o": [
+        "Entomologie",
+        "Ophiologie",
+        "Ornithologie",
+        "Zoologie"
+      ],
+      "r": 2,
+      "x": "L'ornithologie (du grec ornis = oiseau) est la branche de la zoologie qui étudie les oiseaux. Le quetzal est l'oiseau symbole de la liberté. L'Afrique subsaharienne abrite une extraordinaire diversité avifaunistique, objet de nombreuses études ornithologiques."
+    },
+    {
+      "q": "Quelle science étudie les vins ?",
+      "o": [
+        "Viticulture",
+        "Œnologie",
+        "Ampélologie",
+        "Viniculture"
+      ],
+      "r": 1,
+      "x": "L'œnologie (du grec oinos = vin) est la science qui étudie la fabrication, la conservation et la dégustation des vins. L'œnologue accompagne le vigneron dans toutes les étapes de la vinification. La viticulture désigne la culture de la vigne."
+    },
+    {
+      "q": "Quel est le 1er art dans la classification académique des arts ?",
+      "o": [
+        "La peinture",
+        "La sculpture",
+        "La musique",
+        "L'architecture"
+      ],
+      "r": 3,
+      "x": "L'architecture est le 1er art dans la classification académique. Elle est considérée comme l'art majeur car elle organise l'espace habitable. La 2e est la sculpture, la 3e les arts visuels (peinture), la 4e la musique et la 5e la littérature."
+    },
+    {
+      "q": "Quel est le 2e art dans la classification académique des arts ?",
+      "o": [
+        "L'architecture",
+        "La sculpture",
+        "La peinture",
+        "La musique"
+      ],
+      "r": 1,
+      "x": "La sculpture est le 2e art. Elle crée des œuvres en volume à partir de matériaux divers (pierre, bois, métal, argile). Le Symposium international de sculptures sur granite de Laongo au Burkina Faso (14e édition en 2024) illustre cet art."
+    },
+    {
+      "q": "Quel est le 3e art dans la classification académique des arts ?",
+      "o": [
+        "La sculpture",
+        "La musique",
+        "Les arts visuels (peinture)",
+        "La littérature"
+      ],
+      "r": 2,
+      "x": "Les arts visuels (ou peinture au sens large) constituent le 3e art. Ils englobent la peinture, le dessin, la gravure et les arts plastiques bidimensionnels. Les 3 premiers arts (architecture, sculpture, arts visuels) sont souvent regroupés sous le terme \"arts plastiques\"."
+    },
+    {
+      "q": "Quel est le 4e art dans la classification académique des arts ?",
+      "o": [
+        "La littérature",
+        "La musique",
+        "Les arts de la scène",
+        "Le cinéma"
+      ],
+      "r": 1,
+      "x": "La musique est le 4e art. Art universel basé sur les sons organisés, elle comprend la musique classique, traditionnelle, jazz, pop, etc. Le Kundé d'or burkinabè (24e édition le 8 mai 2026) récompense les artistes musicaux burkinabè."
+    },
+    {
+      "q": "Quel est le 5e art dans la classification académique des arts ?",
+      "o": [
+        "La musique",
+        "Les arts de la scène",
+        "La littérature",
+        "Le cinéma"
+      ],
+      "r": 2,
+      "x": "La littérature est le 5e art. Elle regroupe tous les écrits à valeur artistique : romans, poésie, théâtre, essais. L'écrivain burkinabè Titinga Frédéric Pacéré est le premier avocat du Burkina et figure littéraire majeure, décédé le 8 novembre 2024 à 81 ans."
+    },
+    {
+      "q": "Quel est le 6e art dans la classification académique des arts ?",
+      "o": [
+        "Le cinéma",
+        "Les arts médiatiques",
+        "La littérature",
+        "Les arts de la scène"
+      ],
+      "r": 3,
+      "x": "Les arts de la scène sont le 6e art. Ils regroupent le théâtre, la danse, l'opéra, le mime et toutes les formes d'expression artistique vivante devant un public. La Semaine Nationale de la Culture (SNC) au Burkina Faso célèbre ces arts."
+    },
+    {
+      "q": "Quel est le 7e art dans la classification académique des arts ?",
+      "o": [
+        "Les arts médiatiques",
+        "La bande dessinée",
+        "Le cinéma",
+        "Le jeu vidéo"
+      ],
+      "r": 2,
+      "x": "Le cinéma est le 7e art, désignation créée par le critique Ricciotto Canudo en 1911. Art issu de l'invention des frères Lumière (1895), il occupe une place centrale dans la culture africaine, célébrée par le FESPACO (créé en 1969 à Ouagadougou)."
     }
   ],
   "histgeo": [
@@ -28702,17 +33256,6 @@ const QUESTIONS = {
       "x": "La Journée Mondiale de l'Environnement est le 5 juin (instaurée par l'ONU en 1972). Le 22 avril = Jour de la Terre."
     },
     {
-      "q": "Animal en voie de disparition au BF ?",
-      "o": [
-        "Mouton",
-        "Éléphant",
-        "Poulet",
-        "Chèvre"
-      ],
-      "r": 1,
-      "x": "L'éléphant africain est menacé par le braconnage pour l'ivoire. Population du BF en forte baisse. Présent surtout dans les parcs WAP."
-    },
-    {
       "q": "Le réchauffement climatique est causé par :",
       "o": [
         "Les volcans",
@@ -28744,6 +33287,2228 @@ const QUESTIONS = {
       ],
       "r": 1,
       "x": "La désertification est la dégradation des terres en zones arides, semi-arides et subhumides sèches. Le BF lutte activement contre ce phénomène."
+    },
+    {
+      "q": "Qu'appelle-t-on biocénose dans un écosystème ?",
+      "o": [
+        "L'ensemble des facteurs abiotiques caractérisant un milieu de vie",
+        "L'espace géographique délimité et occupé par une seule espèce animale",
+        "L'ensemble des organismes vivants coexistant dans un même milieu",
+        "L'ensemble des relations trophiques entre les espèces d'un écosystème"
+      ],
+      "r": 2,
+      "x": "La biocénose désigne la communauté d'êtres vivants (végétaux, animaux, micro-organismes) peuplant un milieu donné. Elle s'oppose au biotope — milieu physico-chimique — avec lequel elle forme l'écosystème."
+    },
+    {
+      "q": "Quel est l'objectif principal fixé par l'Accord de Paris lors de la COP21 ?",
+      "o": [
+        "Limiter le réchauffement à moins de 2°C et viser 1,5°C au-dessus des niveaux préindustriels",
+        "Stabiliser les températures à un maximum de 3°C par rapport aux niveaux de l'ère préindustrielle",
+        "Réduire de moitié les émissions mondiales de gaz à effet de serre par rapport aux niveaux de 2005",
+        "Parvenir à la neutralité carbone pour tous les États signataires d'ici l'horizon 2035"
+      ],
+      "r": 0,
+      "x": "L'Accord de Paris (COP21, décembre 2015) engage les États à contenir le réchauffement bien en dessous de 2°C par rapport aux niveaux préindustriels, en visant 1,5°C. Il est entré en vigueur le 4 novembre 2016."
+    },
+    {
+      "q": "Quelle est la mission principale de l'Initiative de la Grande Muraille Verte pour le Sahara et le Sahel ?",
+      "o": [
+        "Construire des ouvrages hydrauliques pour irriguer les zones arides de la bande sahélienne",
+        "Créer un corridor de biodiversité reliant l'Atlantique à l'océan Indien en Afrique centrale",
+        "Exploiter durablement les ressources minières des zones frontalières sahélo-sahariennes",
+        "Restaurer les terres dégradées et lutter contre la désertification dans la bande sahélienne"
+      ],
+      "r": 3,
+      "x": "Lancée en 2007 par l'Union africaine, la Grande Muraille Verte vise à restaurer 100 millions d'hectares sur 8 000 km (Dakar–Djibouti), séquestrer 250 millions de tonnes de carbone et créer 10 millions d'emplois verts d'ici 2030."
+    },
+    {
+      "q": "Depuis le remaniement gouvernemental du 12 janvier 2026, quel ministère assure la tutelle des questions liées à l'eau et à l'environnement au Burkina Faso ?",
+      "o": [
+        "Le Ministère de l'Environnement, de l'Eau et de l'Assainissement",
+        "Le Ministère de l'Agriculture, de l'Eau, des Ressources animales et halieutiques",
+        "Le Ministère de la Construction de la Patrie et du Développement durable",
+        "Le Secrétariat d'État chargé des ressources naturelles et de la biodiversité"
+      ],
+      "r": 1,
+      "x": "Le remaniement du 12 janvier 2026 a fusionné l'ancien Ministère de l'Environnement, de l'Eau et de l'Assainissement avec celui de l'Agriculture, formant le Ministère de l'Agriculture, de l'Eau, des Ressources animales et halieutiques."
+    },
+    {
+      "q": "Quelle est la principale conséquence écologique de l'eutrophisation des eaux de surface ?",
+      "o": [
+        "Une augmentation de la salinité entraînant la disparition progressive des espèces dulçaquicoles",
+        "Une accumulation de métaux lourds dans les sédiments rendant l'eau impropre à la consommation",
+        "Un enrichissement en oxygène dissous favorisant la prolifération des espèces aquatiques rares",
+        "Un appauvrissement en oxygène dissous entraînant la mort des organismes aquatiques aérobies"
+      ],
+      "r": 3,
+      "x": "L'excès de nutriments (azote, phosphore) provoque la prolifération d'algues dont la décomposition par des bactéries aérobies consomme l'oxygène dissous, créant des zones hypoxiques responsables de mortalités massives d'organismes aquatiques."
+    },
+    {
+      "q": "Dans une chaîne alimentaire, à quel niveau trophique se situent les producteurs primaires ?",
+      "o": [
+        "Au premier niveau, ils fabriquent la matière organique par photosynthèse",
+        "Au deuxième niveau, ils consomment les producteurs pour se nourrir et se développer",
+        "Au troisième niveau, ils régulent les populations des consommateurs primaires herbivores",
+        "À tous les niveaux, car ils interviennent dans la décomposition de la matière organique"
+      ],
+      "r": 0,
+      "x": "Les producteurs primaires (plantes, algues, cyanobactéries) occupent le premier niveau trophique. Ils synthétisent la matière organique à partir de la lumière solaire et du CO2 via la photosynthèse, constituant la base de toutes les chaînes alimentaires."
+    },
+    {
+      "q": "Qu'est-ce que la niche écologique d'une espèce ?",
+      "o": [
+        "L'habitat physique précis dans lequel une espèce s'établit et se reproduit exclusivement",
+        "L'ensemble des relations de prédation qu'une espèce entretient avec les autres espèces",
+        "La place et le rôle d'une espèce dans son écosystème, incluant ses ressources et interactions",
+        "La superficie minimale de territoire nécessaire à la survie d'une population animale donnée"
+      ],
+      "r": 2,
+      "x": "La niche écologique décrit l'ensemble des conditions et ressources (nourriture, espace, température) dont une espèce a besoin pour survivre, ainsi que ses interactions avec les autres. Deux espèces ne peuvent occuper durablement la même niche dans un même milieu."
+    },
+    {
+      "q": "Quel terme désigne une région abritant une biodiversité exceptionnellement riche et fortement menacée ?",
+      "o": [
+        "Un refuge faunique agréé par les conventions internationales de protection de la nature",
+        "Un point chaud de biodiversité ou « biodiversity hotspot » selon le concept de Myers",
+        "Un parc naturel intégral classé sur la liste du patrimoine mondial de l'UNESCO",
+        "Une zone humide inscrite sur la liste des sites protégés par la Convention de Ramsar"
+      ],
+      "r": 1,
+      "x": "Le concept de « biodiversity hotspot », introduit par Norman Myers en 1988, désigne des régions qui abritent au moins 1 500 espèces végétales endémiques et ont perdu plus de 70 % de leur végétation originelle. On en dénombre 36 dans le monde."
+    },
+    {
+      "q": "Parmi les gaz suivants, lequel contribue le plus au changement climatique en termes de volume d'émissions mondiales ?",
+      "o": [
+        "Le méthane (CH4), émis principalement par l'élevage bovin et les rizières inondées",
+        "Le protoxyde d'azote (N2O), issu des engrais azotés et de certaines activités industrielles",
+        "Les hydrofluorocarbures (HFC), utilisés dans les systèmes de climatisation et réfrigération",
+        "Le dioxyde de carbone (CO2), issu de la combustion des énergies fossiles et de la déforestation"
+      ],
+      "r": 3,
+      "x": "Le CO2 est le principal gaz à effet de serre anthropique en volume : il représente environ 75 % des émissions mondiales de GES en équivalent CO2. Ses sources majeures sont la combustion des énergies fossiles (charbon, pétrole, gaz) et la déforestation."
+    },
+    {
+      "q": "Que mesure la demande biochimique en oxygène (DBO5) dans une analyse de la qualité des eaux ?",
+      "o": [
+        "La concentration totale en oxygène dissous présente dans un échantillon d'eau de surface analysé",
+        "La quantité d'oxygène consommée par les micro-organismes pour dégrader la matière organique en 5 jours",
+        "Le taux de nitrates et de phosphates responsables de la fertilisation excessive des milieux aquatiques",
+        "La capacité tampon d'un cours d'eau à neutraliser les apports acides d'origine industrielle ou agricole"
+      ],
+      "r": 1,
+      "x": "La DBO5 mesure la quantité d'oxygène (mg/L) consommée par les micro-organismes aérobies pour décomposer la matière organique d'un échantillon à 20°C en 5 jours. C'est un indicateur clé de la pollution organique des eaux usées et des cours d'eau."
+    },
+    {
+      "q": "Quel est le phénomène physique à l'origine de l'effet de serre naturel de la Terre ?",
+      "o": [
+        "L'absorption du rayonnement infrarouge terrestre par certains gaz atmosphériques, qui le réémettent vers la surface",
+        "La réflexion directe des rayons ultraviolets solaires par les nuages et la couche d'ozone stratosphérique",
+        "La conversion de l'énergie solaire en chaleur par les surfaces sombres comme les océans et les forêts",
+        "La condensation de la vapeur d'eau en haute altitude, qui libère de l'énergie sous forme de chaleur sensible"
+      ],
+      "r": 0,
+      "x": "L'effet de serre naturel résulte de l'absorption par les GES (vapeur d'eau, CO2, CH4) du rayonnement infrarouge émis par la surface terrestre. Ces gaz le réémettent en partie vers la surface, maintenant une température moyenne de +15°C au lieu de -18°C sans effet de serre."
+    },
+    {
+      "q": "Lequel des gaz suivants présente le potentiel de réchauffement global (PRG) le plus élevé sur 100 ans ?",
+      "o": [
+        "Le dioxyde de carbone (CO2), principal gaz à effet de serre en volume émis dans l'atmosphère mondiale",
+        "Le méthane (CH4), produit par la décomposition anaérobie des matières organiques et l'élevage ruminant",
+        "Le protoxyde d'azote (N2O), issu principalement des activités agricoles et des engrais azotés minéraux",
+        "L'hexafluorure de soufre (SF6), utilisé dans les appareillages électriques haute tension industriels"
+      ],
+      "r": 3,
+      "x": "L'hexafluorure de soufre (SF6) possède un PRG de 23 500 sur 100 ans, ce qui en fait le gaz à effet de serre le plus puissant répertorié par le GIEC. Le CO2 sert de référence (PRG = 1), le CH4 = 28 et le N2O ≈ 265."
+    },
+    {
+      "q": "Quelle est la part de l'eau douce dans le volume total des eaux de la planète ?",
+      "o": [
+        "Environ 50 % des ressources hydriques mondiales sont constituées d'eau douce accessible et utilisable",
+        "Environ 20 % des ressources hydriques mondiales, dont la majorité stockée dans les grands lacs tropicaux",
+        "Environ 2,5 % du volume total des eaux de la planète, dont les deux tiers sous forme de glaces polaires",
+        "Environ 10 % du volume total, dont la moitié est stockée dans les nappes phréatiques profondes mondiales"
+      ],
+      "r": 2,
+      "x": "Sur les 1 386 millions de km³ d'eau présents sur Terre, seulement 2,5 % sont de l'eau douce. De cette fraction, environ 69 % est immobilisée dans les glaces polaires et glaciers, 30 % dans les eaux souterraines, et moins de 1 % constitue les eaux de surface accessibles."
+    },
+    {
+      "q": "Qu'entend-on par déforestation nette dans le cadre de la gestion des ressources forestières ?",
+      "o": [
+        "La disparition des forêts primaires au profit de forêts secondaires plantées ou en régénération naturelle",
+        "La différence entre la superficie forestière perdue et celle regagnée par reboisement sur une période donnée",
+        "La destruction des forêts tropicales causée uniquement par les pratiques d'agriculture itinérante sur brûlis",
+        "La réduction du couvert forestier due exclusivement à l'exploitation commerciale du bois d'œuvre tropical"
+      ],
+      "r": 1,
+      "x": "La déforestation nette désigne la perte nette de surface forestière, calculée en soustrayant les surfaces reboisées ou en régénération naturelle des surfaces déboisées. C'est l'indicateur utilisé par la FAO dans ses rapports périodiques sur l'état des forêts du monde."
+    },
+    {
+      "q": "Laquelle des pratiques suivantes contribue le mieux à la conservation de la fertilité des sols agricoles ?",
+      "o": [
+        "La mise en place d'une rotation culturale associée à l'apport de matière organique et à des jachères",
+        "L'application intensive d'engrais minéraux pour compenser rapidement les carences en nutriments du sol",
+        "Le labour profond répété permettant d'aérer le sol et d'éliminer les organismes pathogènes nuisibles",
+        "L'irrigation permanente par aspersion pour maintenir une humidité constante dans le profil pédologique"
+      ],
+      "r": 0,
+      "x": "La rotation culturale alterne les espèces végétales sur une même parcelle, limitant l'épuisement en nutriments et la prolifération de parasites spécifiques. Associée à des apports de matière organique et à des jachères périodiques, elle préserve la structure et la fertilité biologique du sol."
+    },
+    {
+      "q": "Quels sont les trois piliers fondamentaux du développement durable selon le rapport Brundtland (1987) ?",
+      "o": [
+        "Croissance économique, bien-être social et modernisation technologique des pays en développement",
+        "Protection des ressources naturelles, développement agricole et réduction des inégalités mondiales",
+        "Éducation environnementale, gouvernance locale et participation des communautés aux décisions",
+        "Équité sociale, efficacité économique et préservation de l'environnement, de manière interdépendante"
+      ],
+      "r": 3,
+      "x": "Le rapport Brundtland (« Notre avenir à tous », CMED, 1987) a posé les bases du développement durable en identifiant trois piliers indissociables : la durabilité sociale (équité), la durabilité économique (efficacité) et la durabilité environnementale (préservation des écosystèmes)."
+    },
+    {
+      "q": "Qu'est-ce que l'économie verte selon le Programme des Nations Unies pour l'Environnement (PNUE) ?",
+      "o": [
+        "Un système économique fondé exclusivement sur l'exploitation des énergies renouvelables solaire et éolienne",
+        "Une économie planifiée par les États pour orienter les investissements uniquement vers les secteurs écologiques",
+        "Une économie qui améliore le bien-être humain et l'équité sociale tout en réduisant les risques environnementaux",
+        "Un modèle réservé aux pays développés pour financer leur transition vers les technologies propres et bas-carbone"
+      ],
+      "r": 2,
+      "x": "Selon le PNUE, l'économie verte est une économie « à faibles émissions de carbone, efficiente dans l'utilisation des ressources et socialement inclusive ». Elle vise à décarboner la croissance économique tout en protégeant les écosystèmes et en réduisant la pauvreté."
+    },
+    {
+      "q": "Quel principe fondamental distingue l'économie circulaire de l'économie linéaire traditionnelle ?",
+      "o": [
+        "L'économie circulaire prône la croissance nulle et le renoncement à toute consommation de masse mondiale",
+        "L'économie circulaire maintient la valeur des produits, matières et ressources le plus longtemps possible",
+        "L'économie circulaire transfère la responsabilité de la gestion des déchets aux seuls consommateurs finals",
+        "L'économie circulaire impose la relocalisation de toute production industrielle dans les pays consommateurs"
+      ],
+      "r": 1,
+      "x": "Contrairement au modèle linéaire « extraire–fabriquer–jeter », l'économie circulaire vise à maintenir la valeur des ressources le plus longtemps possible dans le cycle économique par la réutilisation, la réparation, le reconditionnement et le recyclage, en minimisant la génération de déchets."
+    },
+    {
+      "q": "Quelle est la principale cause anthropique de la désertification au Sahel ?",
+      "o": [
+        "La surexploitation des terres (surpâturage, déforestation, pratiques agricoles inadaptées) aggravée par la sécheresse",
+        "La migration des dunes de sable sous l'effet des vents dominants en direction des zones cultivées habitées",
+        "L'ensablement des cours d'eau entraînant la disparition des zones d'inondation et la recharge des nappes",
+        "L'augmentation naturelle de la variabilité pluviométrique liée aux cycles solaires de longue durée"
+      ],
+      "r": 0,
+      "x": "La désertification résulte principalement de la surexploitation des terres (surpâturage, défrichements, monocultures) combinée aux épisodes de sécheresse. Au Sahel, la pression démographique accentue ces pratiques, dégradant la couverture végétale et accélérant l'érosion éolienne et hydrique."
+    },
+    {
+      "q": "Quelle conséquence directe la désertification entraîne-t-elle sur la sécurité alimentaire des populations sahéliennes ?",
+      "o": [
+        "Une diversification des pratiques agricoles conduisant à l'adoption de nouvelles cultures résistantes adaptées",
+        "Une migration des populations vers les zones côtières plus humides, dynamisant ainsi l'économie littorale",
+        "Une augmentation des rendements agricoles grâce à l'adaptation spontanée des variétés locales au stress",
+        "Une réduction des terres arables et de la productivité agricole, aggravant la pauvreté et l'insécurité alimentaire"
+      ],
+      "r": 3,
+      "x": "La désertification réduit la superficie et la fertilité des terres cultivables, diminuant les rendements agricoles et la disponibilité alimentaire. Au Burkina Faso, cela entraîne une insécurité alimentaire chronique, des migrations forcées et une aggravation de la pauvreté rurale dans les zones sahéliennes."
+    },
+    {
+      "q": "Quelle technique de restauration des terres dégradées est la plus pratiquée au Burkina Faso ?",
+      "o": [
+        "L'installation de filets brise-vent en fibres synthétiques le long des champs et des zones agricoles",
+        "L'irrigation goutte-à-goutte solaire pour reverdir les zones arides et semi-arides fortement dégradées",
+        "La régénération naturelle assistée (RNA) des ligneux et la construction de cordons pierreux et de zaï",
+        "La plantation de jatropha en haies vives pour limiter l'érosion et produire du biocarburant végétal local"
+      ],
+      "r": 2,
+      "x": "La Régénération Naturelle Assistée (RNA) consiste à protéger et favoriser la repousse des arbres et arbustes spontanés. Le zaï (poquets creusés pour concentrer eau et matière organique) est une technique traditionnelle popularisée au Burkina par Yacouba Sawadogo, permettant de restaurer les sols encroûtés."
+    },
+    {
+      "q": "Quel est l'ordre de priorité recommandé par la hiérarchie de gestion des déchets ?",
+      "o": [
+        "Prévention, réutilisation, recyclage, valorisation, élimination comme dernier recours",
+        "Recyclage, réduction à la source, réutilisation, compostage, élimination finale en décharge",
+        "Élimination contrôlée, valorisation thermique, recyclage, réemploi, puis prévention en amont",
+        "Valorisation, compostage, réemploi, réduction à la source, puis enfouissement sanitaire contrôlé"
+      ],
+      "r": 0,
+      "x": "La hiérarchie des déchets place en premier la prévention (éviter la production), puis la réutilisation, le recyclage, les autres formes de valorisation (énergétique, organique), et enfin l'élimination comme dernier recours. Ce principe guide les politiques modernes de gestion des déchets."
+    },
+    {
+      "q": "Qu'est-ce que le compostage aérobie et quel type de déchets valorise-t-il principalement ?",
+      "o": [
+        "Un procédé chimique de traitement des déchets ménagers par acidification en milieu fermé et anaérobie",
+        "Un processus biologique de décomposition des déchets organiques par des micro-organismes en présence d'air",
+        "Une technique d'incinération contrôlée des déchets verts pour produire de la chaleur et de l'électricité verte",
+        "Un système de fermentation des déchets plastiques biodégradables en présence d'eau et de bactéries sélectionnées"
+      ],
+      "r": 1,
+      "x": "Le compostage aérobie est la décomposition biologique naturelle de la matière organique (déchets alimentaires, déchets verts, résidus agricoles) par des micro-organismes en présence d'oxygène. Il produit le compost, un amendement organique riche utilisé pour améliorer la fertilité des sols."
+    },
+    {
+      "q": "Quel est le principal avantage de l'énergie solaire photovoltaïque par rapport aux énergies fossiles ?",
+      "o": [
+        "Elle produit une énergie continue et constante, indépendamment des conditions météorologiques locales",
+        "Elle nécessite des investissements initiaux très faibles et une maintenance quasi nulle dans les zones rurales",
+        "Son rendement est supérieur à 80 %, ce qui en fait la source d'énergie la plus efficace actuellement disponible",
+        "Elle génère de l'électricité sans consommer de combustible fossile ni émettre de CO2 lors de la production"
+      ],
+      "r": 3,
+      "x": "L'énergie solaire photovoltaïque convertit la lumière solaire en électricité sans combustion, donc sans émission directe de CO2 ou autres polluants lors de la production. C'est un avantage décisif face aux énergies fossiles dans la lutte contre le changement climatique mondial."
+    },
+    {
+      "q": "Sur quel principe physique repose le fonctionnement d'un barrage hydroélectrique ?",
+      "o": [
+        "La conversion de l'énergie thermique de l'eau en électricité par différence de température entre surfaces",
+        "La production d'électricité par l'effet piézoélectrique exercé par le courant d'eau sur des cristaux spéciaux",
+        "La conversion de l'énergie cinétique et potentielle de l'eau en électricité via des turbines et alternateurs",
+        "La captation de l'énergie chimique contenue dans les sédiments transportés par les cours d'eau tropicaux"
+      ],
+      "r": 2,
+      "x": "Un barrage crée une retenue d'eau en hauteur (énergie potentielle). Lorsque l'eau est relâchée, elle entraîne des turbines (énergie cinétique) couplées à des alternateurs produisant l'électricité. Ce procédé ne génère pas d'émissions de GES directes en phase de fonctionnement."
+    },
+    {
+      "q": "Quelle est la principale source de biomasse énergie utilisée en milieu rural au Burkina Faso ?",
+      "o": [
+        "Le bois-énergie (bois de chauffe et charbon de bois) pour la cuisson des aliments et le chauffage",
+        "Les résidus de canne à sucre (bagasse) valorisés dans des centrales thermiques à cogénération industrielle",
+        "Les déjections animales traitées dans des digesteurs pour produire du biogaz domestique et industriel",
+        "Les cultures dédiées de jatropha et karité transformées en huile végétale pour les groupes électrogènes"
+      ],
+      "r": 0,
+      "x": "Au Burkina Faso, le bois-énergie (bois de chauffe et charbon de bois) représente plus de 80 % de la consommation énergétique des ménages ruraux. Cette dépendance constitue l'une des principales causes de déforestation et de dégradation des ressources ligneuses dans le pays."
+    },
+    {
+      "q": "Quel facteur environnemental est indispensable pour l'implantation d'un parc éolien rentable ?",
+      "o": [
+        "La proximité d'un cours d'eau pour assurer le refroidissement des génératrices en cas de surchauffe",
+        "Une vitesse du vent régulière et suffisante, généralement supérieure à 5 à 6 m/s à hauteur de rotor",
+        "Un sol argileux imperméable permettant l'ancrage profond et sécurisé des mâts des éoliennes industrielles",
+        "Une altitude supérieure à 1 000 mètres pour bénéficier de vents plus forts et plus réguliers en altitude"
+      ],
+      "r": 1,
+      "x": "La rentabilité d'un parc éolien dépend principalement de la vitesse et de la régularité du vent sur le site. En dessous de 5 à 6 m/s en moyenne à hauteur de moyeu, la production est insuffisante pour rentabiliser l'investissement. La puissance éolienne est proportionnelle au cube de la vitesse du vent."
+    },
+    {
+      "q": "Lors de quelle conférence internationale la Convention sur la diversité biologique (CDB) a-t-elle été adoptée ?",
+      "o": [
+        "Lors du Sommet de Johannesburg sur le développement durable, en septembre 2002 en Afrique du Sud",
+        "Lors de la Conférence de Nairobi en 1989, à l'initiative du Programme des Nations Unies pour l'Environnement",
+        "Lors du Sommet de la Terre de Rio de Janeiro (CNUED) en juin 1992, en même temps que la CCNUCC",
+        "Lors de la COP3 de Kyoto en 1997, parallèlement à l'adoption du Protocole sur les gaz à effet de serre"
+      ],
+      "r": 2,
+      "x": "La Convention sur la diversité biologique a été ouverte à la signature lors du Sommet de la Terre de Rio de Janeiro (CNUED) en juin 1992. Elle est entrée en vigueur en décembre 1993 et compte aujourd'hui 196 Parties dans le monde."
+    },
+    {
+      "q": "Quels types de milieux sont spécifiquement protégés par la Convention de Ramsar (1971) ?",
+      "o": [
+        "Les zones forestières tropicales denses présentant une biodiversité floristique d'importance internationale",
+        "Les zones arides et semi-arides menacées par la désertification dans les régions sahéliennes et sahariennes",
+        "Les habitats côtiers et marins, notamment les récifs coralliens et les mangroves des zones tropicales humides",
+        "Les zones humides, incluant marais, tourbières, plaines inondables, lacs, estuaires et milieux côtiers"
+      ],
+      "r": 3,
+      "x": "La Convention de Ramsar (Iran, 1971) est le premier traité environnemental international à vocation spécifique. Elle porte sur la conservation et l'utilisation rationnelle des zones humides (marais, tourbières, mangroves, deltas, lacs) et maintient une liste de sites d'importance internationale."
+    },
+    {
+      "q": "Qu'est-ce que la Convention de Stockholm (2001) vise à contrôler ?",
+      "o": [
+        "Les polluants organiques persistants (POPs) qui s'accumulent dans les chaînes trophiques mondiales",
+        "Le commerce international d'espèces sauvages menacées d'extinction par la chasse et le braconnage",
+        "Les émissions de gaz à effet de serre des pays industrialisés dans le cadre de la transition énergétique",
+        "Les déversements d'hydrocarbures en mer provenant des pétroliers et des plateformes de forage offshore"
+      ],
+      "r": 0,
+      "x": "La Convention de Stockholm (2001) vise l'élimination ou la réduction des polluants organiques persistants (POPs) : DDT, dioxines, furanes, PCB, etc. Ces substances résistent à la dégradation, s'accumulent dans les graisses des organismes (bioaccumulation) et remontent les chaînes trophiques."
+    },
+    {
+      "q": "Quel est l'objet principal de la Convention de Bâle sur les déchets dangereux ?",
+      "o": [
+        "Interdire tout déversement de déchets industriels dans les eaux territoriales des États signataires",
+        "Contrôler les mouvements transfrontaliers de déchets dangereux et promouvoir leur gestion écologique",
+        "Fixer des normes internationales de traitement thermique des déchets radioactifs d'origine militaire",
+        "Créer un fonds mondial d'indemnisation des victimes de catastrophes industrielles liées aux déchets toxiques"
+      ],
+      "r": 1,
+      "x": "Adoptée en 1989 et entrée en vigueur en 1992, la Convention de Bâle réglemente les mouvements transfrontaliers de déchets dangereux afin d'éviter leur transfert des pays riches vers les pays en développement. Elle promeut une gestion écologiquement rationnelle des déchets."
+    },
+    {
+      "q": "Quel est l'objectif principal de la Convention-cadre des Nations Unies sur les changements climatiques (CCNUCC) ?",
+      "o": [
+        "Fixer des quotas contraignants de réduction des émissions de GES pour chaque État signataire individuellement",
+        "Financer la transition énergétique des pays en développement grâce aux contributions obligatoires des pays du Nord",
+        "Stabiliser les concentrations de gaz à effet de serre à un niveau empêchant toute perturbation climatique dangereuse",
+        "Créer une autorité mondiale chargée de surveiller et de sanctionner les États pollueurs les plus importants"
+      ],
+      "r": 2,
+      "x": "La CCNUCC, adoptée lors du Sommet de la Terre de Rio en 1992, a pour objectif ultime de « stabiliser les concentrations de GES dans l'atmosphère à un niveau qui empêche toute perturbation anthropique dangereuse du système climatique » (article 2). Elle constitue le cadre juridique de toutes les COP."
+    },
+    {
+      "q": "Quel est le pourcentage du territoire du Burkina Faso couvert par des aires protégées (parcs et réserves) ?",
+      "o": [
+        "Environ 5 % de la superficie nationale, soit moins de 1,5 million d'hectares au total sur le territoire",
+        "Environ 10 % du territoire national, dont plus de la moitié est concentrée dans la région du Liptako",
+        "Environ 20 % du territoire national, répartis entre parcs nationaux et réserves partielles de faune",
+        "Environ 15 % de la superficie nationale, dont les zones cynégétiques aménagées et les forêts classées"
+      ],
+      "r": 3,
+      "x": "Les aires protégées (parcs nationaux, réserves de biosphère, réserves de faune, zones cynégétiques, forêts classées) couvrent environ 15 % du territoire burkinabè. Elles constituent un réseau important pour la conservation de la biodiversité et jouent un rôle de puits de carbone naturel."
+    },
+    {
+      "q": "Quel complexe d'aires protégées transfrontalier est reconnu comme réserve de biosphère de l'UNESCO et partagé entre le Burkina Faso, le Bénin et le Niger ?",
+      "o": [
+        "Le Complexe W-Arly-Pendjari (WAP), l'un des plus vastes écosystèmes protégés d'Afrique de l'Ouest",
+        "Le Parc National de Kaboré Tambi, partagé entre le Burkina Faso et le Ghana au centre-sud du pays",
+        "La Réserve de biosphère du Sahel, partagée entre le Burkina Faso, le Mali et le Niger dans le Nord",
+        "Le Parc National de la Comoé, parc transfrontalier géré conjointement avec la Côte d'Ivoire et le Ghana"
+      ],
+      "r": 0,
+      "x": "Le Complexe W-Arly-Pendjari (WAP) est un ensemble transfrontalier partagé entre le Burkina Faso, le Niger et le Bénin. Classé réserve de biosphère de l'UNESCO, il représente l'un des derniers grands écosystèmes de savane arborée d'Afrique de l'Ouest, abritant éléphants, lions et hippopotames."
+    },
+    {
+      "q": "Quelle est la principale distinction entre un parc national et une réserve partielle de faune au Burkina Faso ?",
+      "o": [
+        "Le parc national est géré par des ONG internationales, la réserve de faune par les collectivités locales",
+        "Dans une réserve partielle de faune, certaines activités humaines réglementées sont tolérées en périphérie",
+        "Le parc national est exclusivement destiné à la recherche scientifique, la réserve à l'écotourisme payant",
+        "La réserve de faune est entièrement clôturée pour protéger les espèces, le parc national reste totalement ouvert"
+      ],
+      "r": 1,
+      "x": "Dans un parc national, toute activité humaine est en principe interdite (chasse, pâturage, agriculture). Dans une réserve partielle de faune, des usages réglementés par les communautés riveraines (pêche, cueillette, pâturage saisonnier) sont tolérés dans des zones tampons, sous contrôle de l'administration forestière."
+    },
+    {
+      "q": "Quelle avancée majeure a été enregistrée lors de la COP28, tenue à Dubaï (Émirats arabes unis) en décembre 2023 ?",
+      "o": [
+        "La signature par 196 États d'un accord de sortie immédiate des énergies fossiles d'ici l'horizon 2030",
+        "L'adoption d'un objectif mondial de 100 % d'énergies renouvelables dans la production électrique d'ici 2035",
+        "L'engagement pour la première fois d'une transition pour s'éloigner des combustibles fossiles dans une décision finale",
+        "La création d'une cour pénale environnementale chargée de sanctionner les États les plus émetteurs de GES"
+      ],
+      "r": 2,
+      "x": "La COP28 de Dubaï (décembre 2023) a marqué une première historique : la décision finale a inclus un engagement à « opérer une transition pour s'éloigner des combustibles fossiles dans les systèmes énergétiques ». C'est la première fois qu'un texte de COP mentionnait explicitement les énergies fossiles."
+    },
+    {
+      "q": "Parmi les énergies renouvelables, laquelle a connu la plus forte croissance en termes de capacité installée en Afrique subsaharienne ces dix dernières années ?",
+      "o": [
+        "L'énergie éolienne offshore, grâce aux côtes atlantiques du Sénégal et de la Côte d'Ivoire aménagées",
+        "La géothermie, grâce au potentiel exceptionnel de la vallée du Grand Rift en Éthiopie et au Kenya",
+        "L'hydroélectricité, grâce aux grands projets comme le barrage Grand Renaissance sur le Nil bleu éthiopien",
+        "L'énergie solaire photovoltaïque, dont les coûts ont chuté de plus de 80 % en une décennie mondiale"
+      ],
+      "r": 3,
+      "x": "L'énergie solaire photovoltaïque a connu la croissance la plus rapide en Afrique subsaharienne, portée par l'effondrement des coûts des panneaux (–80 % entre 2010 et 2023) et la forte irradiation solaire du continent. Elle est désormais la source d'énergie renouvelable la moins chère à installer."
+    },
+    {
+      "q": "Parmi les polluants suivants, lesquels contaminent le plus les sols agricoles lors de l'usage d'engrais chimiques ?",
+      "o": [
+        "L'accumulation de nitrates et de phosphates dans le sol, entraînant l'acidification et le lessivage vers les nappes",
+        "L'infiltration d'eaux usées industrielles chargées en solvants organiques et en métaux lourds dissous",
+        "Le dépôt de suies et de particules fines provenant de la combustion de biomasse agricole sur les parcelles",
+        "L'accumulation de résidus plastiques issus des sachets d'emballage des engrais dans les couches superficielles"
+      ],
+      "r": 0,
+      "x": "L'usage excessif d'engrais azotés et phosphatés entraîne leur accumulation dans les sols. L'excès de nitrates se retrouve dans les eaux souterraines (risque sanitaire), tandis que les phosphates peuvent provoquer l'acidification du sol et la perturbation de sa microfaune bénéfique."
+    },
+    {
+      "q": "Selon l'Organisation Mondiale de la Santé (OMS), à partir de quel niveau sonore l'exposition prolongée devient-elle dangereuse pour l'audition humaine ?",
+      "o": [
+        "À partir de 120 décibels (dB), seuil de douleur physique immédiate chez l'adulte et l'enfant",
+        "À partir de 85 décibels (dB) en exposition prolongée, correspondant à plus de 8 heures par jour",
+        "À partir de 60 décibels (dB), seuil recommandé par l'OMS pour les zones d'habitation nocturnes",
+        "À partir de 45 décibels (dB), niveau correspondant au bruit d'une conversation normale en milieu urbain"
+      ],
+      "r": 1,
+      "x": "L'OMS recommande de ne pas dépasser 85 dB sur 8 heures de travail quotidien pour prévenir les pertes auditives permanentes. Au-delà de ce seuil, chaque augmentation de 3 dB nécessite de diviser par deux la durée d'exposition maximale admissible pour protéger l'audition."
+    },
+    {
+      "q": "Quel est l'impact écologique le plus documenté de la pollution lumineuse nocturne sur la faune sauvage ?",
+      "o": [
+        "La dégradation de la qualité des eaux de surface par photolyse des contaminants organiques nocturnes",
+        "L'augmentation de la température de l'air en milieu urbain par émission calorique des éclairages publics",
+        "La désorientation et la perturbation des cycles biologiques des espèces nocturnes et migratrices",
+        "La réduction de la couverture nuageuse nocturne modifiant les précipitations en zones périurbaines"
+      ],
+      "r": 2,
+      "x": "La pollution lumineuse désorganise les cycles biologiques naturels des espèces nocturnes : elle attire et tue les insectes, désoriente les oiseaux migrateurs, perturbe la ponte des tortues marines et altère les cycles circadiens de nombreux mammifères et plantes à floraison photopériode-dépendante."
+    },
+    {
+      "q": "Parmi les déchets suivants, lesquels sont classés comme déchets dangereux selon la Convention de Bâle ?",
+      "o": [
+        "Les déchets ménagers ordinaires, les résidus de jardinage et les déchets alimentaires ménagers non triés",
+        "Les déchets verts issus de la taille des haies et des arbres en milieu rural et périurbain en Afrique",
+        "Les papiers, cartons et emballages plastiques rigides collectés lors des opérations de tri sélectif",
+        "Les huiles usées, piles, batteries, peintures, médicaments périmés et pesticides obsolètes"
+      ],
+      "r": 3,
+      "x": "Les déchets dangereux regroupent les substances présentant des propriétés toxiques, corrosives, inflammables, écotoxiques ou infectieuses. La Convention de Bâle classe dans cette catégorie : huiles usées, solvants, piles, batteries, produits phytosanitaires périmés et résidus hospitaliers infectieux."
+    },
+    {
+      "q": "Dans un réseau trophique terrestre, quel rôle jouent les détritivores (termites, vers de terre, cloportes) ?",
+      "o": [
+        "Ils décomposent la matière organique morte, libèrent les nutriments et améliorent la structure du sol",
+        "Ils constituent le deuxième niveau trophique en se nourrissant exclusivement de producteurs primaires vivants",
+        "Ils prédatent les herbivores pour réguler les populations de consommateurs primaires dans l'écosystème",
+        "Ils synthétisent la matière organique à partir de composés minéraux par chimiosynthèse ou photosynthèse"
+      ],
+      "r": 0,
+      "x": "Les détritivores fragmentent la matière organique morte (litière, cadavres) et facilitent son décomposition par les micro-organismes (bactéries, champignons). Ce processus libère les nutriments minéraux (azote, phosphore) qui seront recyclés par les végétaux, fermant ainsi le cycle biogéochimique des éléments."
+    },
+    {
+      "q": "Qu'est-ce qui constitue le biotope d'un écosystème lacustre ?",
+      "o": [
+        "L'ensemble des poissons, amphibiens et invertébrés aquatiques peuplant les eaux du lac concerné",
+        "Les paramètres physico-chimiques du milieu aquatique : température, lumière, pH, turbidité et teneur en sel",
+        "L'ensemble des relations trophiques entre les organismes aquatiques producteurs et consommateurs du lac",
+        "La communauté végétale aquatique constituée par les macrophytes, algues et plancton du milieu lacustre"
+      ],
+      "r": 1,
+      "x": "Le biotope d'un lac correspond à l'ensemble des facteurs abiotiques (physiques et chimiques) qui définissent le milieu : température, pH, lumière, oxygène dissous, turbidité, salinité, nature des sédiments. Il constitue le « support » dans lequel vit la biocénose (communauté des êtres vivants)."
+    },
+    {
+      "q": "Quelle est la principale cause de perte de biodiversité mondiale identifiée par l'IPBES dans son rapport de 2019 ?",
+      "o": [
+        "La pollution chimique par les pesticides organochlorés et les métaux lourds d'origine industrielle mondiale",
+        "La surexploitation des espèces sauvages par la chasse commerciale, la pêche et le trafic d'espèces protégées",
+        "La destruction et la dégradation des habitats naturels par l'urbanisation, l'agriculture et la déforestation",
+        "L'introduction d'espèces exotiques envahissantes dans les écosystèmes insulaires et continentaux fragiles"
+      ],
+      "r": 2,
+      "x": "Selon le rapport mondial de l'IPBES (Plateforme intergouvernementale scientifique et politique sur la biodiversité et les services écosystémiques) (2019), la principale menace pour la biodiversité est la destruction des habitats naturels (conversion agricole, déforestation, urbanisation), suivie de la surexploitation des espèces, du changement climatique, de la pollution et des espèces envahissantes."
+    },
+    {
+      "q": "Qu'entend-on par neutralité carbone pour un pays ou une organisation quelconque ?",
+      "o": [
+        "L'absence totale d'émissions de CO2 sur l'ensemble du territoire national à l'horizon fixé par les accords",
+        "Un équilibre entre les émissions de CO2 réduites et le maintien des niveaux de production économique actuelle",
+        "L'interdiction de tout projet industriel ou agricole émetteur de gaz à effet de serre sur le territoire national",
+        "Un équilibre entre les émissions de gaz à effet de serre et leur absorption par les puits de carbone naturels"
+      ],
+      "r": 3,
+      "x": "La neutralité carbone (ou « zéro émission nette ») signifie que les émissions anthropiques de GES sont entièrement compensées par des absorptions équivalentes (forêts, sols, captage-stockage). Elle ne suppose pas l'absence totale d'émissions, mais un bilan net égal à zéro, objectif visé à l'horizon 2050."
+    },
+    {
+      "q": "Quelle mesure illustre le mieux l'adaptation au changement climatique dans un contexte agricole sahélien ?",
+      "o": [
+        "L'adoption de variétés culturales tolérantes à la sécheresse et de pratiques agro-forestières locales adaptées",
+        "L'installation de panneaux solaires pour réduire les émissions de CO2 liées à la consommation d'électricité",
+        "La construction de centrales nucléaires pour garantir une énergie stable face aux aléas climatiques croissants",
+        "La réduction des émissions de méthane par les ruminants grâce à des suppléments alimentaires spéciaux"
+      ],
+      "r": 0,
+      "x": "L'adaptation climatique consiste à ajuster les systèmes humains et naturels aux effets du changement climatique. Au Sahel, cela inclut l'utilisation de variétés résistantes à la sécheresse, l'agroforesterie, la gestion des eaux de pluie (zaï, cordons pierreux) et la diversification des sources de revenus."
+    },
+    {
+      "q": "En quoi consiste l'atténuation du changement climatique, par opposition à l'adaptation ?",
+      "o": [
+        "Elle vise à protéger les populations des impacts du changement climatique déjà en cours à l'échelle locale",
+        "Elle regroupe les actions visant à réduire les émissions de GES ou à renforcer les puits de carbone naturels",
+        "Elle consiste à déplacer les populations vulnérables vers des zones moins exposées aux risques climatiques",
+        "Elle désigne les investissements technologiques permettant de géo-ingénier le système climatique mondial"
+      ],
+      "r": 1,
+      "x": "L'atténuation vise à limiter les causes du changement climatique en réduisant les émissions de GES (efficacité énergétique, énergies renouvelables, arrêt de la déforestation) ou en renforçant les puits de carbone naturels (reboisement, agriculture de conservation, protection des tourbières)."
+    },
+    {
+      "q": "Quelle est la principale menace pesant sur la faune sauvage des savanes burkinabè ?",
+      "o": [
+        "La concurrence interspécifique avec les espèces domestiques introduites par des projets d'élevage extensif",
+        "Les épidémies de maladies virales transmises par les vecteurs biologiques présents dans les cours d'eau",
+        "Le braconnage, la réduction et la fragmentation des habitats naturels par l'agriculture et l'élevage extensif",
+        "Les prédateurs naturels envahissants issus de pays voisins dans le cadre des migrations saisonnières"
+      ],
+      "r": 2,
+      "x": "La faune sauvage burkinabè est principalement menacée par le braconnage (chasse illicite pour la viande de brousse et le trafic d'espèces), la réduction des espaces naturels liée à l'expansion agricole et pastorale, et la fragmentation des habitats qui isole les populations animales et réduit leur viabilité génétique."
+    },
+    {
+      "q": "Quel principal risque environnemental est associé à l'exploitation minière artisanale (orpaillage) au Burkina Faso ?",
+      "o": [
+        "L'épuisement accéléré des nappes phréatiques dans les zones arides par l'irrigation des exploitations minières",
+        "La libération de poussières de silice entraînant des maladies respiratoires exclusivement chez les mineurs",
+        "L'érosion côtière et la perturbation des courants marins due aux rejets de sédiments dans les fleuves",
+        "La contamination des sols et des eaux au mercure utilisé pour l'amalgamation de l'or artisanal"
+      ],
+      "r": 3,
+      "x": "L'orpaillage artisanal au Burkina Faso utilise largement le mercure pour amalgamer l'or des sédiments alluviaux. Ce métal lourd neurotoxique se retrouve dans les eaux de surface, les sédiments et les nappes phréatiques, contaminant les chaînes alimentaires locales (poissons, légumes irrigués)."
+    },
+    {
+      "q": "Quelle pratique constitue la base de la gestion durable des ressources halieutiques continentales ?",
+      "o": [
+        "La mise en place de quotas de pêche fondés sur l'évaluation scientifique des stocks et du rendement maximal durable",
+        "L'interdiction permanente de la pêche commerciale dans les 200 milles nautiques des zones économiques exclusives",
+        "Le remplacement de la pêche traditionnelle par l'aquaculture industrielle intensive pour préserver les stocks sauvages",
+        "L'autorisation exclusive de la pêche aux engins sélectifs pour les communautés de pêcheurs artisanaux côtiers"
+      ],
+      "r": 0,
+      "x": "La gestion durable des ressources halieutiques repose sur la détermination du Rendement Maximal Durable (RMD) — volume maximal de poissons pouvant être prélevé sans compromettre le renouvellement du stock. Les quotas sont fixés sur la base d'évaluations scientifiques régulières des populations de poissons."
+    },
+    {
+      "q": "En quoi consiste le principe pollueur-payeur en matière de responsabilité environnementale ?",
+      "o": [
+        "L'obligation pour les États de compenser les pays voisins victimes des pollutions transfrontalières",
+        "L'imputation au responsable d'une pollution du coût des mesures de prévention, de réduction et de réparation",
+        "La taxation systématique de toute activité industrielle émetteuse de polluants atmosphériques ou hydriques",
+        "Le financement par les entreprises privées des actions de reboisement compensatoire après exploitation forestière"
+      ],
+      "r": 1,
+      "x": "Le principe pollueur-payeur, adopté par l'OCDE en 1972 et intégré dans de nombreux droits nationaux, stipule que les coûts des mesures de prévention, de contrôle et de réparation des pollutions doivent être supportés par l'auteur de la pollution et non socialisés ou reportés sur la collectivité."
+    },
+    {
+      "q": "Quel comportement de consommation illustre le mieux la consommation durable au sens des ODD ?",
+      "o": [
+        "Acheter exclusivement des produits fabriqués localement, en évitant tout produit importé d'un autre continent",
+        "Adopter un régime alimentaire végétarien strict et renoncer à tout déplacement en véhicule motorisé",
+        "Réduire sa consommation d'énergie et de ressources, privilégier les produits éco-labellisés et limiter les déchets",
+        "Consommer davantage de produits neufs issus de la production nationale pour soutenir l'économie locale"
+      ],
+      "r": 2,
+      "x": "La consommation durable (ODD 12) consiste à satisfaire ses besoins tout en minimisant l'impact environnemental et social. Elle inclut la réduction de la consommation d'énergie et d'eau, le choix de produits durables, éco-certifiés ou réparables, et la réduction de la génération de déchets à toutes les étapes."
+    },
+    {
+      "q": "Qu'est-ce que la restauration des terres dans le cadre de la Décennie des Nations Unies pour la restauration des écosystèmes (2021-2030) ?",
+      "o": [
+        "La conversion de terres dégradées en zones industrielles ou résidentielles par des projets de développement",
+        "L'assainissement chimique des sols pollués par les industries pétrolières et minières pour y replanter des cultures",
+        "L'irrigation permanente de terres arides pour les transformer en zones agricoles productives et rentables",
+        "Le processus de récupération de terres dégradées pour retrouver leur structure, leur fertilité et leur biodiversité"
+      ],
+      "r": 3,
+      "x": "La restauration des terres vise à retrouver les fonctions écologiques des sols dégradés : structure physique, fertilité biologique, couverture végétale et biodiversité associée. La Décennie ONU 2021–2030 vise à restaurer 1 milliard d'hectares d'écosystèmes dégradés dans le monde entier."
+    },
+    {
+      "q": "Qu'est-ce que la valorisation énergétique des déchets ?",
+      "o": [
+        "La production d'énergie électrique ou thermique à partir de la combustion contrôlée ou de la méthanisation des déchets",
+        "La transformation des déchets plastiques en carburant liquide par craquage thermique en conditions industrielles",
+        "La vente de déchets recyclables à des pays tiers pour financer les infrastructures de traitement nationales",
+        "La conversion des déchets ménagers en engrais organiques directement utilisables par les agriculteurs ruraux"
+      ],
+      "r": 0,
+      "x": "La valorisation énergétique consiste à récupérer l'énergie contenue dans les déchets non recyclables matière par incinération avec récupération de chaleur ou d'électricité (UIOM), ou par méthanisation produisant du biogaz utilisable comme combustible ou pour générer de l'électricité."
+    },
+    {
+      "q": "Quelle est la règle des 3R en gestion des déchets et dans quel ordre de priorité s'appliquent-ils ?",
+      "o": [
+        "Recycler, Réduire, Récupérer — dans cet ordre de priorité décroissante selon les politiques environnementales",
+        "Réduire, Réutiliser, Recycler — dans cet ordre, la réduction à la source étant la priorité absolue",
+        "Réemployer, Rénover, Réaffecter — principes de l'économie circulaire appliqués aux biens de consommation",
+        "Réguler, Responsabiliser, Récupérer — principes de gouvernance appliqués aux filières de collecte des déchets"
+      ],
+      "r": 1,
+      "x": "Les 3R (Réduire, Réutiliser, Recycler) constituent la hiérarchie fondamentale de gestion des déchets. La réduction à la source (consommer moins) est prioritaire, suivie de la réutilisation (prolonger la durée de vie des produits) et enfin du recyclage (transformer en nouvelle matière première)."
+    },
+    {
+      "q": "Laquelle des caractéristiques suivantes est propre aux énergies fossiles par rapport aux énergies renouvelables ?",
+      "o": [
+        "Elles nécessitent des investissements initiaux très élevés et une maintenance constante des équipements installés",
+        "Leur production d'énergie est aléatoire et dépendante des conditions météorologiques et des saisons",
+        "Elles sont épuisables, se forment sur des millions d'années et émettent du CO2 lors de leur combustion",
+        "Leur coût de production a fortement augmenté ces dix dernières années du fait de la raréfaction des gisements"
+      ],
+      "r": 2,
+      "x": "Les énergies fossiles (charbon, pétrole, gaz naturel) sont des ressources non renouvelables issues de la décomposition de matière organique sur des millions d'années. Leur combustion libère du CO2 fossilisé dans l'atmosphère, aggravant l'effet de serre anthropique et le changement climatique mondial."
+    },
+    {
+      "q": "Parmi les impacts du changement climatique en Afrique subsaharienne, lequel est actuellement le plus documenté ?",
+      "o": [
+        "La montée du niveau des mers entraînant la salinisation des nappes phréatiques côtières d'Afrique de l'Ouest",
+        "L'apparition de nouveaux pathogènes viraux rendus actifs par la hausse des températures en zone tropicale",
+        "La multiplication des épisodes d'El Niño modifiant les régimes pluviométriques sur toute la façade atlantique",
+        "L'accentuation des sécheresses, l'irrégularité des pluies et la réduction des rendements agricoles au Sahel"
+      ],
+      "r": 3,
+      "x": "L'Afrique subsaharienne est l'une des régions les plus vulnérables au changement climatique. Les études du GIEC documentent une intensification des sécheresses, une plus grande variabilité des précipitations et une hausse des températures qui réduisent les rendements agricoles et menacent la sécurité alimentaire."
+    },
+    {
+      "q": "Quel est le principal défi environnemental identifié dans les politiques de développement du Burkina Faso ?",
+      "o": [
+        "La restauration des terres dégradées et la gestion durable des ressources naturelles face à la désertification",
+        "La réduction des importations de produits chimiques polluants issus des industries textiles et pharmaceutiques",
+        "La dépollution des zones industrielles de Ouagadougou et Bobo-Dioulasso contaminées par les métaux lourds",
+        "La gestion des déchets plastiques dans les grandes villes et leur impact sur les cours d'eau et les retenues"
+      ],
+      "r": 0,
+      "x": "La gestion durable des ressources naturelles et la lutte contre la désertification figurent parmi les priorités transversales des politiques de développement du Burkina Faso. La dégradation des terres, la déforestation et la pression sur les ressources en eau constituent les principaux enjeux environnementaux nationaux."
+    },
+    {
+      "q": "Quelle institution burkinabè est principalement chargée de la conduite et du suivi des études d'impact environnemental ?",
+      "o": [
+        "Le Centre National de la Recherche Scientifique et Technologique (CNRST) de Ouagadougou",
+        "Le Bureau National des Évaluations Environnementales (BUNEE), organisme spécialisé compétent",
+        "L'Office National de l'Eau et de l'Assainissement (ONEA), établissement public sous tutelle étatique",
+        "Le Conseil National pour l'Environnement et le Développement Durable (CONEDD), organe consultatif"
+      ],
+      "r": 1,
+      "x": "Le Bureau National des Évaluations Environnementales (BUNEE) est l'institution compétente au Burkina Faso pour la conduite des évaluations environnementales stratégiques et des études d'impact environnemental et social (EIES). Il veille à l'intégration de la dimension environnementale dans les projets de développement."
+    },
+    {
+      "q": "Quel code législatif constitue la principale référence juridique en matière d'environnement au Burkina Faso ?",
+      "o": [
+        "Le Code Rural du Burkina Faso adopté par la Réorganisation Agraire et Foncière (RAF) de 1984",
+        "Le Code de l'eau du Burkina Faso régissant la gestion, la protection et l'utilisation des ressources hydriques",
+        "Le Code de l'environnement du Burkina Faso, définissant le cadre légal de protection de l'environnement",
+        "Le Code forestier du Burkina Faso définissant le régime juridique des forêts, de la faune et des ressources"
+      ],
+      "r": 2,
+      "x": "Le Code de l'environnement du Burkina Faso (Loi N°006-2013/AN) est le texte juridique de référence en matière environnementale. Il définit les principes fondamentaux de la politique nationale, les obligations en matière d'EIE, les sanctions pour atteinte à l'environnement et le cadre institutionnel de gestion."
+    },
+    {
+      "q": "Quelle stratégie le Burkina Faso a-t-il adoptée pour lutter contre la dégradation des terres dans le cadre de la CNULD ?",
+      "o": [
+        "La Politique Nationale de Gestion des Aires Protégées et de la Faune Sauvage (PNAP-FS) de 2022",
+        "Le Programme National de Gestion Intégrée des Ressources en Eau (PNGIRE) adopté en 2015",
+        "Le Programme de Reboisement National visant la plantation de 10 millions d'arbres chaque année",
+        "Le Programme d'Action National de Lutte contre la Désertification (PAN-LCD) aligné sur la CNULD"
+      ],
+      "r": 3,
+      "x": "Le Programme d'Action National de Lutte contre la Désertification (PAN-LCD) est le principal instrument de planification du Burkina Faso pour répondre aux obligations de la CNULD (Convention des Nations Unies sur la Lutte contre la Désertification). Il vise la réhabilitation des terres dégradées et la gestion durable des ressources naturelles."
+    },
+    {
+      "q": "En quelle année le Protocole de Nagoya sur l'accès aux ressources génétiques et le partage des avantages a-t-il été adopté ?",
+      "o": [
+        "En 2010, lors de la COP10 de la Convention sur la diversité biologique, à Nagoya au Japon",
+        "En 2005, lors de la Conférence mondiale sur la biodiversité organisée par l'UICN à Bangkok en Thaïlande",
+        "En 1992, en même temps que la Convention sur la diversité biologique lors du Sommet de Rio de Janeiro",
+        "En 2015, lors du Sommet sur la biodiversité organisé en marge de l'Assemblée générale des Nations Unies"
+      ],
+      "r": 0,
+      "x": "Le Protocole de Nagoya sur l'accès aux ressources génétiques et le partage juste et équitable des avantages (APA) a été adopté lors de la COP10 de la CDB à Nagoya (Japon) en octobre 2010. Il est entré en vigueur le 12 octobre 2014, instaurant un cadre international pour l'utilisation des ressources génétiques."
+    },
+    {
+      "q": "Laquelle des espèces animales suivantes est particulièrement menacée sur le territoire du Burkina Faso ?",
+      "o": [
+        "Le gorille des plaines occidentales, dont une population résiduelle subsiste dans les forêts du Djôrô",
+        "Le lycaon ou chien sauvage d'Afrique, dont les effectifs sont très réduits au Burkina Faso",
+        "Le dromadaire, dont les populations sauvages ont entièrement disparu des zones sahéliennes burkinabè",
+        "Le cobe de Buffon, présent en grand nombre dans les vastes plaines inondables de l'Ouest burkinabè"
+      ],
+      "r": 1,
+      "x": "Le lycaon (Lycaon pictus), ou chien sauvage africain, figure parmi les canidés les plus menacés d'Afrique (espèce en danger selon l'UICN). Au Burkina Faso, ses effectifs sont très réduits du fait de la réduction de son habitat, de la fragmentation des aires protégées et des conflits avec les communautés d'éleveurs."
+    },
+    {
+      "q": "Quelle est la principale voie de contamination des écosystèmes par les pesticides organochlorés rémanents ?",
+      "o": [
+        "L'inhalation de particules de pesticides en suspension par les populations vivant près des champs traités",
+        "L'absorption cutanée des pesticides en solution aqueuse lors de baignades dans les rivières rurales contaminées",
+        "La bioaccumulation dans les graisses des organismes et la bioamplification au fil des chaînes trophiques",
+        "La contamination directe des graines lors du traitement des semences avant le semis de la campagne agricole"
+      ],
+      "r": 2,
+      "x": "Les pesticides organochlorés (DDT, lindane, endrine) sont liposolubles et résistent à la dégradation. Ils s'accumulent dans les tissus adipeux (bioaccumulation) et voient leur concentration augmenter à chaque niveau trophique (bioamplification), atteignant des niveaux dangereux chez les prédateurs au sommet des chaînes."
+    },
+    {
+      "q": "Quelle est la principale conséquence environnementale de la pollution plastique des écosystèmes aquatiques ?",
+      "o": [
+        "L'augmentation du pH des eaux océaniques provoquant la dissolution progressive des coquilles des mollusques",
+        "La réduction de la pénétration de la lumière dans les plans d'eau entraînant la mort des algues et des plantes",
+        "La contamination chimique des sédiments côtiers par les additifs des matières plastiques au fil du temps",
+        "L'ingestion de macro- et microplastiques par les organismes aquatiques, entraînant blocages et intoxications"
+      ],
+      "r": 3,
+      "x": "Les plastiques dans les milieux aquatiques se fragmentent en microplastiques ingérés par les organismes à tous les niveaux trophiques (zooplancton, poissons, oiseaux, mammifères marins), causant des occlusions digestives, une fausse satiété et l'ingestion de contaminants chimiques adsorbés sur les plastiques."
+    },
+    {
+      "q": "Qu'est-ce qu'une succession écologique primaire ?",
+      "o": [
+        "La colonisation progressive d'un milieu stérile (roche nue, lave, dune) par des organismes pionniers puis des communautés de plus en plus complexes",
+        "Le remplacement d'une communauté végétale mature par une communauté plus jeune sous l'effet des perturbations naturelles",
+        "La réinstallation spontanée des espèces animales dans une zone perturbée après un incendie ou une inondation",
+        "L'évolution d'une communauté forestière vers un stade climacique plus stable et diversifié en milieu tropical"
+      ],
+      "r": 0,
+      "x": "La succession primaire est la colonisation d'un substrat vierge (roche nue, île volcanique, moraine glaciaire) par des organismes pionniers (lichens, mousses) qui modifient progressivement le milieu, permettant l'installation d'espèces de plus en plus complexes jusqu'au stade climacique."
+    },
+    {
+      "q": "Quelle est la définition exacte d'un écosystème en écologie moderne ?",
+      "o": [
+        "L'ensemble des organismes vivants peuplant une zone géographique délimitée par ses frontières administratives",
+        "L'ensemble formé par une communauté d'êtres vivants (biocénose) et son milieu abiotique (biotope) en interaction",
+        "L'ensemble des espèces végétales d'une région biogéographique partageant les mêmes caractéristiques climatiques",
+        "L'ensemble des flux d'énergie et de matière entre les espèces animales d'un même territoire naturel défini"
+      ],
+      "r": 1,
+      "x": "Un écosystème (terme introduit par A. Tansley en 1935) désigne l'ensemble formé par une biocénose (communauté d'êtres vivants) et son biotope (milieu physico-chimique), unis par des échanges d'énergie et de matière. C'est l'unité fonctionnelle de base de l'écologie moderne."
+    },
+    {
+      "q": "Quel est le principal problème lié à la gestion des ressources en eau au Burkina Faso ?",
+      "o": [
+        "L'excès d'eau de surface dû aux crues saisonnières qui rendent les terres agricoles inutilisables pendant des mois",
+        "La pollution des eaux souterraines par les rejets d'effluents industriels des zones minières en milieu urbain",
+        "La forte saisonnalité des pluies, l'accès limité à l'eau potable et la dégradation des bassins versants",
+        "La compétition avec les pays voisins pour le contrôle exclusif des cours d'eau transfrontaliers internationaux"
+      ],
+      "r": 2,
+      "x": "Le Burkina Faso fait face à un triple défi hydrique : une pluviométrie concentrée sur 3 à 4 mois, une capacité de stockage insuffisante et la dégradation des bassins versants réduisant la recharge des nappes. Près de 30 % de la population n'a toujours pas accès à l'eau potable, surtout en milieu rural."
+    },
+    {
+      "q": "Lequel des barrages suivants est l'un des principaux ouvrages hydroélectriques du Burkina Faso ?",
+      "o": [
+        "Le barrage de Ziga, construit sur le Nakambé pour alimenter Ouagadougou en eau potable sécurisée",
+        "Le barrage de Comoé, situé dans la région du Djôrô pour permettre l'irrigation des périmètres agricoles de la zone",
+        "Le barrage des Deux Balé, construit sur le Mouhoun pour développer les cultures irriguées de l'Ouest",
+        "Le barrage de Kompienga, situé dans la région du Goulmou, d'une capacité installée de 14 mégawatts"
+      ],
+      "r": 3,
+      "x": "Le barrage de Kompienga, achevé en 1988 sur la rivière Kompienga (région du Goulmou), est l'un des premiers et principaux ouvrages hydroélectriques du Burkina Faso avec une capacité installée de 14 MW. Il produit une part importante de l'électricité nationale, en complément du barrage de Bagré."
+    },
+    {
+      "q": "Comment le Burkina Faso valorise-t-il son potentiel solaire exceptionnel ?",
+      "o": [
+        "Par le développement de centrales solaires photovoltaïques, dont Zagtouli, et par le pompage solaire rural",
+        "Par l'exportation de l'électricité solaire vers les pays voisins grâce à des interconnexions régionales récentes",
+        "Par la construction de centrales thermo-solaires à concentration dans les régions sahéliennes du nord du pays",
+        "Par l'installation de fermes solaires flottantes sur les plans d'eau pour préserver les terres arables agricoles"
+      ],
+      "r": 0,
+      "x": "Le Burkina Faso bénéficie d'un ensoleillement exceptionnel (environ 5 à 6 kWh/m²/jour). Ce potentiel est valorisé par la construction de centrales solaires photovoltaïques (dont Zagtouli, inaugurée en 2017), le pompage solaire pour l'eau potable rurale et les kits solaires domestiques hors réseau."
+    },
+    {
+      "q": "Quel amendement à la Convention de Bâle interdit les exportations de déchets dangereux vers les pays en développement ?",
+      "o": [
+        "L'Amendement de Rotterdam (1998) sur la procédure de consentement préalable en connaissance de cause",
+        "L'Amendement Ban (Bâle III), adopté en 1995 par la COP3 de la Convention de Bâle, entré en vigueur en 2019",
+        "L'Amendement de Genève (2004) instituant une liste de déchets dangereux et une liste de déchets verts",
+        "L'Amendement de Nairobi (2011), créant un fonds de compensation pour les victimes de déchets dangereux"
+      ],
+      "r": 1,
+      "x": "L'Amendement Ban (Bâle III), adopté lors de la COP3 de la Convention de Bâle en 1995, interdit les exportations de déchets dangereux des pays de l'OCDE vers les pays en développement, même pour recyclage. Il est entré en vigueur le 5 décembre 2019, après ratification par le nombre requis de Parties."
+    },
+    {
+      "q": "Lors de la COP29, tenue à Bakou (Azerbaïdjan) en novembre 2024, quel accord financier majeur a été conclu ?",
+      "o": [
+        "La création d'un marché carbone mondial unifié permettant aux pays de commercer leurs quotas d'émissions",
+        "La suppression du Fonds vert pour le Climat au profit d'un mécanisme bilatéral de financement climatique",
+        "Un engagement de financement climatique de 300 milliards de dollars par an pour les pays en développement d'ici 2035",
+        "La fixation d'un objectif mondial contraignant de 2 000 milliards de dollars de financement vert d'ici 2030"
+      ],
+      "r": 2,
+      "x": "La COP29 de Bakou (novembre 2024) a abouti à un accord sur le Nouvel Objectif Collectif Quantifié (NOCQ) : les pays développés s'engagent à mobiliser 300 milliards de dollars par an pour les pays en développement d'ici 2035, pour l'adaptation et l'atténuation climatiques, avec ambition de 1 300 milliards en intégrant les financements privés."
+    },
+    {
+      "q": "Quel impact du réchauffement climatique est attendu sur les rendements agricoles en Afrique subsaharienne d'ici 2050 ?",
+      "o": [
+        "Une augmentation globale des rendements de 20 à 30 % grâce à l'effet fertilisant du CO2 atmosphérique",
+        "Une stabilité des rendements céréaliers grâce à l'adaptation spontanée des variétés locales au stress hydrique",
+        "Une légère hausse des rendements dans les zones équatoriales humides, compensant la baisse dans les zones sèches",
+        "Une réduction des rendements de 10 à 25 % pour les cultures céréalières, avec des impacts variés selon les zones"
+      ],
+      "r": 3,
+      "x": "Selon le GIEC (6e Rapport d'évaluation, 2022), le changement climatique devrait réduire les rendements agricoles de 10 à 25 % en Afrique subsaharienne d'ici 2050. Le maïs, le sorgho, le mil et le riz sont parmi les cultures les plus vulnérables aux stress thermiques et hydriques accrus."
+    },
+    {
+      "q": "Comment le Burkina Faso participe-t-il à l'Initiative de la Grande Muraille Verte ?",
+      "o": [
+        "Il a achevé 100 % de sa portion de la Grande Muraille Verte et exporte son expertise technique aux pays voisins",
+        "Il contribue à travers des programmes de RNA et de plantation dans les zones sahéliennes dégradées du pays",
+        "Il a renoncé à sa participation à la Grande Muraille Verte au profit de projets d'irrigation à grande échelle",
+        "Il est le pays leader de l'initiative continentale et coordonne les actions des 11 pays membres au niveau régional"
+      ],
+      "r": 1,
+      "x": "Le Burkina Faso participe à la Grande Muraille Verte via des programmes de Régénération Naturelle Assistée (RNA), de plantation d'espèces locales et de restauration des terres dégradées dans les régions sahéliennes. Selon l'Union africaine, l'ensemble des pays avaient réalisé environ 15 % de l'objectif global en 2021."
+    },
+    {
+      "q": "Lequel des parcs nationaux suivants est partagé entre le Burkina Faso, le Niger et le Bénin ?",
+      "o": [
+        "Le Parc National de la Comoé, partagé entre le Burkina Faso, la Côte d'Ivoire et le Ghana à l'Ouest",
+        "Le Complexe W-Arly-Pendjari, dont la partie W est partagée entre le Burkina Faso, le Niger et le Bénin",
+        "Le Parc National de Kaboré Tambi, à la frontière entre le Burkina Faso et le Ghana au sud du pays",
+        "La Réserve de biosphère du Sahel, partagée entre le Burkina Faso, le Mali et le Niger dans le Nord"
+      ],
+      "r": 1,
+      "x": "Le Parc National W (du méandre en W que fait le fleuve Niger) est un parc transfrontalier partagé entre le Burkina Faso, le Niger et le Bénin. Avec la Réserve Arly (Burkina) et le Parc Pendjari (Bénin), il forme le complexe WAP, l'un des plus grands écosystèmes protégés d'Afrique de l'Ouest."
+    },
+    {
+      "q": "Qu'est-ce qu'une réserve de biosphère selon le Programme Man and Biosphere (MAB) de l'UNESCO ?",
+      "o": [
+        "Une zone strictement protégée de toute activité humaine, dédiée exclusivement à la recherche scientifique",
+        "Un espace marin protégé permettant la régénération des populations de poissons surexploitées en haute mer",
+        "Un territoire alliant conservation de la biodiversité, utilisation durable des ressources et développement local",
+        "Un site du patrimoine mondial de l'humanité désigné pour ses caractéristiques géologiques exceptionnelles"
+      ],
+      "r": 2,
+      "x": "Les réserves de biosphère, créées dans le cadre du programme MAB de l'UNESCO, sont des espaces organisés en zones concentriques : une zone centrale strictement protégée, une zone tampon pour la recherche et une zone de coopération pour le développement durable des populations locales."
+    },
+    {
+      "q": "Quel animal emblématique est aujourd'hui quasi disparu des zones non protégées au Burkina Faso ?",
+      "o": [
+        "Le lion (Panthera leo), dont les populations se concentrent désormais dans les aires protégées du complexe WAP",
+        "Le chimpanzé commun (Pan troglodytes), dont quelques individus subsistent dans les forêts du Sud-Ouest",
+        "Le rhinocéros blanc (Ceratotherium simum), dont la réintroduction dans le Parc W a échoué depuis 2006",
+        "Le guépard (Acinonyx jubatus), considéré comme fonctionnellement éteint dans toutes les zones sahéliennes"
+      ],
+      "r": 0,
+      "x": "Le lion a pratiquement disparu des zones non protégées du Burkina Faso sous l'effet du braconnage, de la réduction de ses proies et des conflits avec les éleveurs. Ses populations subsistantes se concentrent principalement dans le complexe WAP, l'un des derniers refuges de l'espèce en Afrique de l'Ouest."
+    },
+    {
+      "q": "Lequel des Objectifs de Développement Durable (ODD) concerne directement l'accès à une énergie fiable, durable et renouvelable pour tous ?",
+      "o": [
+        "L'ODD 7 — Énergie propre et d'un coût abordable, visant l'accès universel à des services énergétiques durables",
+        "L'ODD 13 — Mesures relatives à la lutte contre les changements climatiques pour réduire leurs impacts",
+        "L'ODD 14 — Conservation et exploitation durable des océans, des mers et des ressources marines mondiales",
+        "L'ODD 15 — Préservation des écosystèmes terrestres, des forêts et la lutte contre la désertification"
+      ],
+      "r": 0,
+      "x": "L'ODD 7 vise à garantir l'accès de tous à des services énergétiques fiables, durables et modernes à un coût abordable d'ici 2030. Il comprend des cibles sur l'accès universel à l'électricité, le doublement du taux d'efficacité énergétique et l'augmentation de la part des énergies renouvelables dans le mix mondial."
+    },
+    {
+      "q": "Quel concept de l'économie circulaire consiste à intégrer les critères environnementaux dès la phase de conception d'un produit ?",
+      "o": [
+        "Le recyclage intégré, visant à transformer 100 % des matériaux usagés en nouvelles matières premières valorisables",
+        "L'éco-conception, qui intègre les critères environnementaux (durabilité, recyclabilité, réparabilité) dès la conception",
+        "La valorisation thermique, qui transforme les déchets non recyclables en énergie par combustion contrôlée",
+        "La symbiose industrielle, qui organise des échanges de flux de matières et d'énergie entre entreprises voisines"
+      ],
+      "r": 1,
+      "x": "L'éco-conception (ou design for environment) intègre les critères environnementaux — choix des matériaux, durabilité, recyclabilité, facilité de réparation — dès la conception du produit. Elle réduit l'impact environnemental tout au long du cycle de vie et facilite la circularité des matières."
+    },
+    {
+      "q": "Quelle est la principale source de pollution des eaux de surface au Burkina Faso en milieu urbain ?",
+      "o": [
+        "Les rejets de centrales thermiques au fuel qui déversent des hydrocarbures dans les rivières et marigots",
+        "La pollution agricole due aux engrais chimiques utilisés dans les périmètres irrigués des zones périurbaines",
+        "Les rejets d'eaux usées domestiques et industrielles non traitées dans les cours d'eau et les retenues d'eau",
+        "Les déchets solides d'origine médicale rejetés par les hôpitaux publics dans les canaux d'assainissement"
+      ],
+      "r": 2,
+      "x": "Dans les villes burkinabè (Ouagadougou, Bobo-Dioulasso), le faible taux de raccordement aux réseaux d'assainissement et l'insuffisance des stations d'épuration font que les eaux usées domestiques et industrielles sont souvent rejetées directement dans les marigots et retenues d'eau, entraînant leur pollution sévère."
+    },
+    {
+      "q": "Quel processus est responsable du ravinement sur les pentes agricoles déboisées ?",
+      "o": [
+        "L'érosion éolienne, qui enlève les particules fines du sol sous l'action des vents dominants en saison sèche",
+        "La compaction du sol par les engins agricoles lourds réduisant sa perméabilité et favorisant le ruissellement",
+        "La dissolution chimique des carbonates du sol sous l'action des précipitations acides d'origine industrielle",
+        "L'érosion hydrique par ruissellement concentré qui creuse des rigoles puis des ravines sur les versants déboisés"
+      ],
+      "r": 3,
+      "x": "L'érosion hydrique en nappe se concentre progressivement en filets puis en rigoles qui s'approfondissent en ravines sous l'effet du ruissellement sur des pentes déboisées. Ce processus est aggravé par la disparition du couvert végétal, la compaction du sol et l'intensité des pluies tropicales."
+    },
+    {
+      "q": "Quelle est la surface forestière mondiale perdue par déforestation chaque année selon la FAO ?",
+      "o": [
+        "Environ 10 millions d'hectares de forêts perdus par an en superficie brute (avant comptabilisation des reboisements)",
+        "Environ 3 à 4 millions d'hectares, principalement dans les forêts tempérées d'Amérique du Nord et d'Europe",
+        "Environ 50 millions d'hectares par an, soit l'équivalent de la superficie de la France entière chaque année",
+        "Environ 1 million d'hectares par an, une tendance en baisse constante grâce aux politiques de reboisement"
+      ],
+      "r": 0,
+      "x": "Selon le rapport de la FAO « État des forêts du monde » (2020), le monde a perdu en moyenne 10 millions d'hectares de forêts par an entre 2015 et 2020 (pertes brutes), avec une perte nette d'environ 4,7 millions d'hectares/an après comptabilisation des reboisements. L'Afrique et l'Amérique du Sud sont les plus touchées."
+    },
+    {
+      "q": "Quel phénomène menace actuellement les récifs coralliens des océans tropicaux du fait du changement climatique ?",
+      "o": [
+        "La prolifération de méduses due à la surpêche, qui empêche la photosynthèse dans les zones récifales peu profondes",
+        "La disparition des poissons-perroquets qui entretiennent la propreté et la santé des écosystèmes coralliens tropicaux",
+        "Le blanchissement corallien causé par l'expulsion des algues symbiotiques due à la hausse des températures de l'eau",
+        "La destruction mécanique des récifs par l'intensification des cyclones et des tempêtes tropicales en zone intertropicale"
+      ],
+      "r": 2,
+      "x": "Le blanchissement corallien résulte de l'expulsion des zooxanthelles (algues symbiotiques) par les coraux soumis à des températures d'eau anormalement élevées. Privés de leurs symbiotes qui leur fournissent 90 % de leur énergie, les coraux blanchissent et meurent si le stress thermique se prolonge plusieurs semaines."
+    },
+    {
+      "q": "Quel est l'objectif principal de la Convention sur le commerce international des espèces menacées d'extinction (CITES) ?",
+      "o": [
+        "Interdire totalement tout commerce d'espèces sauvages entre l'ensemble des États signataires de la convention",
+        "Financer des programmes de reproduction en captivité pour les espèces menacées d'extinction à l'échelle mondiale",
+        "Réglementer et contrôler le commerce international des espèces sauvages pour ne pas menacer leur survie",
+        "Créer un réseau mondial d'aires marines protégées pour préserver la biodiversité des zones côtières tropicales"
+      ],
+      "r": 2,
+      "x": "Adoptée et signée le 3 mars 1973 et entrée en vigueur en 1975, la CITES classe les espèces en trois annexes selon leur degré de menace et réglemente le commerce international via un système de permis et certificats. Elle protège plus de 38 000 espèces animales et végétales à travers près de 183 pays membres."
+    },
+    {
+      "q": "Qu'est-ce qui distingue fondamentalement le Protocole de Kyoto (1997) de l'Accord de Paris (2015) en matière d'engagements des États ?",
+      "o": [
+        "Kyoto imposait des objectifs d'émissions à tous les pays, tandis que Paris ne soumet que les pays développés",
+        "Kyoto exemptait les pays développés de tout objectif, les engagements ne portant que sur les pays du Sud",
+        "Paris exclut les émissions du secteur agricole, contrairement à Kyoto qui les incluait dans ses calculs",
+        "Kyoto n'imposait d'objectifs contraignants qu'aux pays développés, tandis que Paris engage tous les pays via les NDC"
+      ],
+      "r": 3,
+      "x": "Le Protocole de Kyoto établissait une distinction nette entre pays développés (Annexe I, soumis à des objectifs contraignants) et pays en développement (sans objectifs chiffrés). L'Accord de Paris rompt avec cette logique : tous les pays soumettent des Contributions Déterminées Nationalement (NDC), bien que les efforts restent différenciés."
+    },
+    {
+      "q": "Quel est le principal avantage environnemental des énergies renouvelables dans la lutte contre le changement climatique ?",
+      "o": [
+        "Elles ne génèrent pas ou très peu d'émissions de gaz à effet de serre durant leur phase de production d'énergie",
+        "Elles permettent de supprimer totalement la consommation d'eau nécessaire aux processus industriels de refroidissement",
+        "Elles ne nécessitent aucun investissement en infrastructures et peuvent être déployées sans planification préalable",
+        "Elles produisent une énergie de qualité supérieure, compatible avec tous les équipements électroniques existants"
+      ],
+      "r": 0,
+      "x": "L'avantage climatique décisif des énergies renouvelables (solaire, éolien, hydraulique) est leur très faible bilan en GES sur leur cycle de vie. Contrairement aux énergies fossiles dont la combustion libère du CO2 fossilisé, les renouvelables produisent de l'énergie sans émissions directes, contribuant à la décarbonation."
+    },
+    {
+      "q": "Quelle forme de valorisation de la biomasse est la plus adaptée aux ménages ruraux en Afrique subsaharienne ?",
+      "o": [
+        "La production de bioéthanol à partir de la canne à sucre ou du maïs pour les transports motorisés ruraux",
+        "La méthanisation des déjections animales et des résidus agricoles pour produire du biogaz domestique",
+        "La production de biodiesel à partir des graines de jatropha pour alimenter les groupes électrogènes ruraux",
+        "La cogénération d'électricité et de chaleur à partir de la bagasse dans les usines sucrières régionales"
+      ],
+      "r": 1,
+      "x": "En Afrique subsaharienne rurale, la méthanisation des déjections animales (bovins, porcins, volailles) et des résidus agricoles pour produire du biogaz est la forme de valorisation de la biomasse la plus adaptée à l'échelle des ménages ruraux et des petites exploitations agricoles pour la cuisson."
+    },
+    {
+      "q": "Quel pourcentage du territoire burkinabè est affecté par la dégradation des terres selon les estimations disponibles ?",
+      "o": [
+        "Environ 10 % des terres sont dégradées, principalement dans les zones minières du Nord-Ouest du pays",
+        "Moins de 5 % de la superficie nationale, grâce aux politiques de reboisement mises en œuvre depuis 2000",
+        "Plus de 34 % des terres, principalement dans les régions du Liptako, du  Soum et du Yaadga",
+        "Environ 70 % du territoire national, ce qui en fait l'un des pays les plus dégradés d'Afrique de l'Ouest"
+      ],
+      "r": 2,
+      "x": "Plusieurs rapports nationaux et internationaux indiquent que plus du tiers des terres burkinabè (environ 34 % selon certaines sources) présentent des signes de dégradation modérée à sévère. Les régions sahéliennes (Liptako, Soum et Yaadga) et la région d'Oubri sont les plus fortement affectées."
+    },
+    {
+      "q": "Dans sa Contribution Déterminée Nationalement (NDC) sous l'Accord de Paris, sur quoi le Burkina Faso met-il l'accent prioritaire ?",
+      "o": [
+        "La réduction rapide des émissions de méthane agricole grâce à la modernisation de l'élevage extensif national",
+        "Le développement massif de l'énergie nucléaire comme alternative aux énergies fossiles importées à grand coût",
+        "La suppression totale de l'orpaillage artisanal, responsable de plus de 40 % des émissions nationales de GES",
+        "L'adaptation aux impacts climatiques et la résilience des populations vulnérables, vu la faible part du pays dans les émissions"
+      ],
+      "r": 3,
+      "x": "Comme la plupart des pays les moins avancés, le Burkina Faso contribue très peu aux émissions mondiales de GES. Sa NDC met donc l'accent sur l'adaptation climatique (résilience agricole, gestion des ressources en eau) et le développement des énergies renouvelables, avec le soutien de la communauté internationale."
+    },
+    {
+      "q": "Qu'illustre la pyramide des biomasses dans un écosystème ?",
+      "o": [
+        "La diminution progressive de la biomasse totale à chaque niveau trophique en remontant la chaîne alimentaire",
+        "La proportion de l'énergie solaire captée par les producteurs primaires pour la photosynthèse en forêt tropicale",
+        "La répartition spatiale des biomasses végétales et animales dans les différentes strates de la forêt tropicale",
+        "La hiérarchie des consommateurs selon leur taille corporelle, du plus petit au plus grand prédateur de l'écosystème"
+      ],
+      "r": 0,
+      "x": "La pyramide des biomasses représente la masse totale de matière vivante à chaque niveau trophique. En règle générale, la biomasse diminue en remontant la chaîne alimentaire, car un rendement écologique moyen d'environ 10 % seulement de la biomasse est transféré d'un niveau trophique au suivant."
+    },
+    {
+      "q": "Quels sont les effets sanitaires les plus graves de l'exposition chronique au plomb pour les populations humaines ?",
+      "o": [
+        "La nécrose hépatique et la défaillance rénale aiguë chez les adultes exposés à de faibles doses prolongées",
+        "Les troubles neurologiques irréversibles chez l'enfant (baisse du QI, retard développemental) et l'insuffisance rénale",
+        "Les cancers cutanés et pulmonaires liés à l'accumulation de plomb dans les tissus mous des organes vitaux",
+        "L'immunodépression sévère et la susceptibilité accrue aux infections virales chez les sujets exposés en milieu urbain"
+      ],
+      "r": 1,
+      "x": "Le plomb est un métal lourd neurotoxique particulièrement dangereux pour les enfants : il traverse la barrière hémato-encéphalique et cause des atteintes neurologiques irréversibles (baisse du QI, troubles du comportement et de l'apprentissage). Il est aussi néphrotoxique chez l'adulte et peut provoquer l'hypertension artérielle."
+    },
+    {
+      "q": "Qu'est-ce que la gestion intégrée des ressources en eau (GIRE) ?",
+      "o": [
+        "Un système de gestion centralisée de l'eau par les États, excluant toute participation des acteurs privés et locaux",
+        "Un cadre de planification sectorielle visant à optimiser exclusivement la production d'hydroélectricité dans les bassins",
+        "Une approche qui promeut la gestion coordonnée de l'eau, des terres et des ressources connexes pour le bien-être commun",
+        "Un mécanisme financier permettant aux pays déficitaires en eau d'acheter des droits d'eau auprès des pays excédentaires"
+      ],
+      "r": 2,
+      "x": "La GIRE (Gestion Intégrée des Ressources en Eau), promue par le Partenariat Mondial de l'Eau (GWP), est une approche qui promeut la gestion coordonnée et durable de l'eau, des terres et des ressources connexes, afin de maximiser le bien-être économique et social sans compromettre la durabilité des écosystèmes."
+    },
+    {
+      "q": "Quel terme désigne la capacité d'un système socio-écologique à absorber les chocs climatiques et à se réorganiser ?",
+      "o": [
+        "La vulnérabilité climatique, qui mesure le degré d'exposition d'une population aux risques liés au climat",
+        "L'atténuation climatique, qui regroupe les actions visant à réduire les causes du changement climatique mondial",
+        "L'adaptation passive, qui désigne l'ajustement spontané des espèces végétales face aux stress thermiques accrus",
+        "La résilience climatique, qui désigne la capacité à absorber les perturbations et à se réorganiser en les intégrant"
+      ],
+      "r": 3,
+      "x": "La résilience climatique est la capacité d'un système (communauté, écosystème, infrastructure) à absorber des perturbations climatiques (sécheresse, inondation), à s'adapter et à se transformer si nécessaire, tout en maintenant ses fonctions essentielles. Renforcer la résilience est un objectif clé de l'Accord de Paris."
+    },
+    {
+      "q": "Laquelle des cibles suivantes appartient directement à l'ODD 13 (Action climatique) de l'Agenda 2030 des Nations Unies ?",
+      "o": [
+        "Intégrer des mesures relatives aux changements climatiques dans les politiques, les stratégies et les plans nationaux",
+        "Garantir l'accès universel à l'eau potable salubre et à des services d'assainissement de qualité d'un coût abordable",
+        "Mettre fin à la déforestation et restaurer 350 millions d'hectares de forêts dégradées dans le monde d'ici 2030",
+        "Parvenir à l'accès universel à des services énergétiques fiables, durables et modernes à un coût abordable"
+      ],
+      "r": 0,
+      "x": "L'ODD 13 (Action climatique) comprend plusieurs cibles, dont celle de « renforcer dans tous les pays la résilience et les capacités d'adaptation face aux aléas climatiques ». La cible 13.2 vise explicitement à intégrer les mesures climatiques dans les politiques, stratégies et plans nationaux de développement."
+    },
+    {
+      "q": "Quel protocole international a permis la réduction significative des substances appauvrissant la couche d'ozone stratosphérique ?",
+      "o": [
+        "Le Protocole de Stockholm (2001), qui a interdit les polluants organiques persistants responsables de l'amincissement",
+        "Le Protocole de Montréal (1987), qui a réglementé puis progressivement éliminé les CFC et les halons",
+        "Le Protocole de Kyoto (1997), dont la réduction des GES a indirectement bénéficié à la couche d'ozone stratosphérique",
+        "Le Protocole de Nagoya (2010), qui a interdit les substances industrielles chlorées détruisant l'ozone atmosphérique"
+      ],
+      "r": 1,
+      "x": "Le Protocole de Montréal (1987), relatif aux substances appauvrissant la couche d'ozone, a réglementé puis progressivement éliminé les chlorofluorocarbures (CFC) et les halons. Il est considéré comme le traité environnemental international le plus efficacement appliqué : la couche d'ozone est en voie de guérison."
+    },
+    {
+      "q": "Qu'est-ce que le phénomène El Niño et quel impact climatique produit-il en Afrique de l'Ouest ?",
+      "o": [
+        "Un courant marin froid de l'Atlantique Sud provoquant des pluies abondantes sur le Sahel en année El Niño",
+        "Un phénomène de refroidissement des eaux du Pacifique équatorial qui intensifie la mousson ouest-africaine",
+        "Un réchauffement anormal des eaux du Pacifique équatorial entraînant des perturbations des régimes pluviométriques",
+        "Un déplacement saisonnier de la zone de convergence intertropicale vers le nord, favorisant les pluies sahéliennes"
+      ],
+      "r": 2,
+      "x": "El Niño est un réchauffement anormal et périodique des eaux de surface du Pacifique équatorial. En Afrique de l'Ouest, les années El Niño sont souvent associées à une réduction des précipitations estivales sur le Sahel, aggravant les sécheresses et les risques d'insécurité alimentaire des populations."
+    },
+    {
+      "q": "Quelle technique d'élimination des déchets solides est la plus controversée sur le plan environnemental ?",
+      "o": [
+        "Le compostage des déchets organiques, en raison des odeurs nauséabondes et des risques de contamination des sols",
+        "L'enfouissement sanitaire contrôlé (CET), critiqué pour son imperméabilisation des terres agricoles disponibles",
+        "Le recyclage des plastiques, mis en cause pour sa consommation d'eau et d'énergie plus élevée que la production neuve",
+        "L'incinération des déchets, critiquée pour ses émissions de dioxines, furannes et métaux lourds dans l'atmosphère"
+      ],
+      "r": 3,
+      "x": "L'incinération des déchets est contestée en raison des émissions de polluants organiques persistants (dioxines, furanes), de particules fines et de métaux lourds liées à la combustion incomplète. Même avec des technologies modernes de traitement des fumées, des préoccupations sanitaires subsistent pour les riverains."
+    },
+    {
+      "q": "Quel est le rôle environnemental majeur de la photosynthèse à l'échelle planétaire ?",
+      "o": [
+        "La fixation du CO2 atmosphérique et la production d'oxygène, régulant la composition de l'atmosphère terrestre",
+        "La décomposition de la matière organique morte permettant le recyclage des nutriments dans les écosystèmes",
+        "La transformation des nitrates du sol en azote atmosphérique, équilibrant le cycle de l'azote dans la biosphère",
+        "La production de vapeur d'eau par transpiration des végétaux, qui influence les précipitations à l'échelle continentale"
+      ],
+      "r": 0,
+      "x": "La photosynthèse capte environ 120 milliards de tonnes de CO2 atmosphérique par an et produit l'oxygène qui constitue 21 % de l'atmosphère. Les forêts, le phytoplancton et les végétaux terrestres jouent ainsi un rôle de puits de carbone naturel essentiel dans la régulation du climat planétaire."
+    },
+    {
+      "q": "Qu'entend-on par services écosystémiques dans le cadre de l'Évaluation des Écosystèmes pour le Millénaire (EM) ?",
+      "o": [
+        "Les revenus financiers générés par l'exploitation commerciale des ressources naturelles dans les aires protégées",
+        "Les bénéfices que les populations humaines tirent des écosystèmes (approvisionnement, régulation, culturels, supports)",
+        "Les services techniques de surveillance et de contrôle assurés par les agents forestiers dans les parcs nationaux",
+        "Les aides financières versées par les organisations internationales pour la conservation des zones protégées mondiales"
+      ],
+      "r": 1,
+      "x": "L'Évaluation des Écosystèmes pour le Millénaire (2005) définit les services écosystémiques comme les bénéfices que les humains retirent des écosystèmes : services d'approvisionnement (nourriture, eau, bois), de régulation (climat, crues, maladies), culturels (loisirs, spiritualité) et de soutien (cycle des nutriments, formation des sols)."
+    },
+    {
+      "q": "Quel est le cadre national de référence pour la gestion durable des ressources forestières au Burkina Faso ?",
+      "o": [
+        "La Politique Nationale de l'Eau, visant à protéger les forêts galeries des berges des cours d'eau nationaux",
+        "Le Plan d'Action Forestier National (PAFN), visant à porter le couvert forestier national à 25 % du territoire",
+        "La Politique Forestière Nationale (PFN), visant à maintenir et restaurer le couvert forestier national durable",
+        "La Stratégie Nationale REDD+, visant à réduire les émissions liées à la déforestation et la dégradation forestière"
+      ],
+      "r": 2,
+      "x": "La Politique Forestière Nationale (PFN) du Burkina Faso est le cadre de référence pour la gestion durable des ressources ligneuses nationales. Elle vise la conservation et la restauration du couvert forestier, la promotion de l'agroforesterie et la participation des communautés locales à la gestion des forêts."
+    },
+    {
+      "q": "Quelle loi porte le Code forestier au Burkina Faso ?",
+      "o": [
+        "Loi n°006-2013/AN du 2 avril 2013",
+        "Loi n°003-2013/AN du 2 avril 2013",
+        "Loi n°012-2014/AN du 18 mai 2014",
+        "Loi n°002-2012/AN du 10 mars 2012"
+      ],
+      "r": 1,
+      "x": "Le Code forestier burkinabè est régi par la Loi n°003-2013/AN du 2 avril 2013. Ce texte législatif fixe les règles relatives à la gestion durable, à la protection et à la valorisation des ressources forestières, de la faune et des ressources halieutiques."
+    },
+    {
+      "q": "Quelle loi régit le Code de l'environnement au Burkina Faso ?",
+      "o": [
+        "Loi n°003-2013/AN du 2 avril 2013",
+        "Loi n°005-2011/AN du 12 juin 2011",
+        "Loi n°006-2013/AN du 2 avril 2013",
+        "Loi n°015-2016/AN du 15 octobre 2016"
+      ],
+      "r": 2,
+      "x": "Le Code de l'environnement en vigueur au Burkina Faso est la Loi n°006-2013/AN du 2 avril 2013. Elle établit les principes fondamentaux visant à préserver l'environnement, lutter contre les pollutions et nuisances, et encadre notamment l'obligation des Études d'Impact Environnemental et Social (EIES) pour les grands projets."
+    },
+    {
+      "q": "Dans les relations interspécifiques, comment caractérise-t-on le mutualisme ?",
+      "o": [
+        "Une relation bénéfique pour les deux espèces impliquées, qui en tirent toutes deux un avantage réciproque",
+        "Une relation où une espèce bénéficie de la présence d'une autre sans lui causer ni bénéfice ni préjudice",
+        "Une relation dans laquelle une espèce se nourrit aux dépens d'une autre sans la tuer immédiatement",
+        "Une relation de compétition entre deux espèces pour les mêmes ressources dans un même habitat naturel"
+      ],
+      "r": 0,
+      "x": "Le mutualisme est une interaction interspécifique bénéfique pour les deux partenaires (exemple : fixation de l'azote par les rhizobiums dans les nodosités des légumineuses). Il se distingue du commensalisme (bénéfice pour une seule espèce) et du parasitisme (bénéfice d'une espèce au détriment de l'autre)."
+    },
+    {
+      "q": "Quel impact majeur les espèces exotiques envahissantes exercent-elles sur la biodiversité locale ?",
+      "o": [
+        "Elles favorisent la diversification génétique en apportant de nouveaux gènes aux populations locales indigènes",
+        "Elles peuvent éliminer les espèces indigènes par compétition, prédation ou transmission de pathogènes nouveaux",
+        "Elles renforcent la résilience des écosystèmes en augmentant le nombre d'espèces dans les milieux perturbés",
+        "Elles stimulent la reproduction des espèces locales grâce à la compétition interspécifique accrue entre espèces"
+      ],
+      "r": 1,
+      "x": "Les espèces exotiques envahissantes constituent l'une des principales causes de perte de biodiversité mondiale. En l'absence de prédateurs naturels, elles supplantent les espèces locales par compétition pour les ressources, les prédatent ou introduisent de nouvelles maladies auxquelles les espèces indigènes ne sont pas adaptées."
+    },
+    {
+      "q": "Pourquoi les particules fines PM2,5 sont-elles considérées comme particulièrement dangereuses pour la santé humaine ?",
+      "o": [
+        "Parce qu'elles bloquent la pénétration des rayons ultraviolets nécessaires à la synthèse de la vitamine D cutanée",
+        "Parce qu'elles provoquent des irritations cutanées sévères en se déposant sur la peau des populations exposées",
+        "Parce que leur faible diamètre (inférieur à 2,5 micromètres) leur permet d'atteindre les alvéoles pulmonaires et le sang",
+        "Parce qu'elles réagissent avec l'oxygène atmosphérique pour produire du CO2 supplémentaire dans les villes"
+      ],
+      "r": 2,
+      "x": "Les PM2,5, de diamètre inférieur à 2,5 micromètres, pénètrent profondément dans les voies respiratoires jusqu'aux alvéoles pulmonaires et passent dans le sang. Elles sont associées à des maladies cardiovasculaires, respiratoires et cancers pulmonaires, causant plus de 7 millions de décès prématurés par an selon l'OMS."
+    },
+    {
+      "q": "Que représentent les scénarios SSP (Shared Socioeconomic Pathways) utilisés dans le 6e Rapport du GIEC ?",
+      "o": [
+        "Des modèles calculant la concentration maximale de CO2 compatible avec une hausse de 1,5°C du climat mondial",
+        "Des projections de l'évolution des forêts tropicales selon différents scénarios de déforestation et de reboisement",
+        "Des protocoles de coopération internationale sur la réduction des émissions de GES entre pays développés uniquement",
+        "Des trajectoires socioéconomiques combinant des niveaux d'émissions de GES et des hypothèses de développement futur"
+      ],
+      "r": 3,
+      "x": "Les SSP combinent différentes hypothèses de développement socioéconomique mondial (croissance démographique, économie, technologie) avec des niveaux d'émissions de GES, permettant au GIEC de projeter des fourchettes de réchauffement climatique à l'horizon 2100 selon différents scénarios de société."
+    },
+    {
+      "q": "Qu'est-ce qu'un aquifère fossile et quel problème de gestion pose-t-il dans les zones sahéliennes ?",
+      "o": [
+        "Un aquifère dont les eaux se sont formées durant des périodes climatiques passées et ne se renouvellent pas",
+        "Un aquifère alimenté saisonnièrement par les précipitations et se vidant naturellement en saison sèche",
+        "Un aquifère transfrontalier partagé entre plusieurs pays et soumis à des tensions politiques régionales",
+        "Un aquifère contaminé par des dépôts géologiques naturels de fluor ou d'arsenic en zone sédimentaire"
+      ],
+      "r": 0,
+      "x": "Les aquifères fossiles contiennent des eaux infiltrées il y a des millénaires lors de périodes plus humides. Leur taux de recharge actuel est quasi nul, ce qui en fait des ressources non renouvelables à l'échelle humaine. Au Sahel, leur exploitation non contrôlée entraîne un épuisement irréversible menaçant la sécurité hydrique."
+    },
+    {
+      "q": "Que mesure l'empreinte écologique d'une population ou d'un pays ?",
+      "o": [
+        "La quantité totale de déchets produits par habitant et par an dans les zones urbaines et rurales du territoire",
+        "La surface de terres et d'eaux productives nécessaire pour fournir les ressources et absorber les déchets produits",
+        "Le volume total des émissions de gaz à effet de serre imputables aux activités économiques du pays concerné",
+        "Le niveau de dégradation des sols agricoles causée par les pratiques intensives sur le territoire national entier"
+      ],
+      "r": 1,
+      "x": "L'empreinte écologique, développée par Mathis Wackernagel et William Rees dans les années 1990, mesure la surface biologiquement productive (en hectares globaux) nécessaire pour subvenir aux besoins d'une population et absorber ses déchets. Si l'empreinte dépasse la biocapacité, la planète est en dépassement écologique."
+    },
+    {
+      "q": "Quelle est la principale conséquence de l'excès de nitrates dans le cycle de l'azote causé par les activités agricoles ?",
+      "o": [
+        "Une réduction de la fixation symbiotique de l'azote atmosphérique par les bactéries rhizobiennes des sols agricoles",
+        "Une acidification des eaux de pluie par transformation de l'ammoniac en acide nitrique dans l'atmosphère urbaine",
+        "Une pollution des nappes phréatiques et une eutrophisation des eaux de surface par excès de nutriments azotés",
+        "Une diminution de la teneur en oxygène des sols entraînant la mort des organismes aérobies du sol agricole"
+      ],
+      "r": 2,
+      "x": "L'excès d'engrais azotés provoque le lessivage des nitrates vers les nappes phréatiques (risque de méthémoglobinémie chez les nourrissons) et leur ruissellement vers les eaux de surface, accélérant l'eutrophisation. Ce phénomène est à l'origine de la prolifération d'algues et de zones mortes dans les lacs et cours d'eau."
+    },
+    {
+      "q": "Pourquoi la fonte du pergélisol (permafrost) arctique est-elle considérée comme un point de basculement climatique ?",
+      "o": [
+        "Parce qu'elle réduit la superficie des terres agricoles disponibles dans les zones boréales et subarctiques mondiales",
+        "Parce qu'elle accélère la montée du niveau des mers en libérant de grandes quantités d'eau dans les océans",
+        "Parce qu'elle détruit les infrastructures des communautés autochtones arctiques de manière irréversible et rapide",
+        "Parce qu'elle libère des quantités massives de méthane et de CO2 stockés, amplifiant le réchauffement climatique"
+      ],
+      "r": 3,
+      "x": "Le pergélisol contient environ 1 500 milliards de tonnes de carbone organique gelé. Sa fonte libère du méthane (CH4) et du CO2, créant une boucle de rétroaction positive qui amplifie le réchauffement et peut s'emballer de façon irréversible au-delà d'un certain seuil de température atmosphérique."
+    },
+    {
+      "q": "Quelle est la principale source de contamination des eaux souterraines par les nitrates en zone rurale sahélienne ?",
+      "o": [
+        "Les lixiviats des fosses d'aisances, latrines non étanches et dépôts d'ordures ménagères à proximité des puits",
+        "Les rejets d'effluents des tanneries et abattoirs artisanaux situés en périphérie des agglomérations rurales",
+        "Les dépôts atmosphériques d'azote issus de la combustion de biomasse agricole et des feux de brousse saisonniers",
+        "La dissolution des minéraux azotés naturellement présents dans les formations géologiques des zones cristallines"
+      ],
+      "r": 0,
+      "x": "En milieu rural africain, les eaux souterraines sont contaminées aux nitrates principalement par les lixiviats des latrines, fosses septiques non étanches et dépôts d'ordures situés trop près des puits. L'excès de nitrates dans l'eau de boisson provoque la méthémoglobinémie (maladie du bébé bleu) chez les nourrissons. NB: Dans les zones agricoles intensives du monde, les engrais azotés sont la première source."
+    },
+    {
+      "q": "Sur quelles sources d'énergie repose principalement la production d'électricité au Burkina Faso ?",
+      "o": [
+        "Principalement sur l'énergie nucléaire et les centrales à charbon construites récemment dans les zones minières",
+        "Sur les centrales thermiques au fioul, les barrages hydroélectriques et un parc solaire photovoltaïque en expansion",
+        "Exclusivement sur l'hydroélectricité des barrages du Mouhoun et de la Comoé pour l'ensemble du territoire",
+        "Principalement sur l'énergie éolienne grâce aux vents du nord et le solaire thermique dans les zones sahéliennes"
+      ],
+      "r": 1,
+      "x": "La production d'électricité au Burkina Faso repose sur les centrales thermiques au fioul lourd et au gaz (pilier actuel du réseau), les barrages hydroélectriques (Kompienga, Bagré) et un parc solaire en expansion rapide (dont la centrale de Zagtouli). La dépendance aux importations d'énergie reste élevée."
+    },
+    {
+      "q": "Qu'est-ce que la capacité de charge (carrying capacity) d'un milieu naturel ?",
+      "o": [
+        "La quantité maximale de biomasse végétale qu'un sol peut produire en conditions optimales de fertilité et d'irrigation",
+        "La résistance mécanique d'un sol à la compaction par les véhicules agricoles lourds sur les parcelles cultivées",
+        "La taille maximale de population qu'un milieu peut soutenir durablement compte tenu de ses ressources disponibles",
+        "La capacité d'un écosystème à absorber les pollutions anthropiques sans modification de sa structure biologique"
+      ],
+      "r": 2,
+      "x": "La capacité de charge (K) désigne la population maximale qu'un milieu peut supporter durablement, compte tenu de la disponibilité en nourriture, eau, espace et autres ressources. Au-delà de K, la compétition pour les ressources entraîne une mortalité accrue et une réduction des effectifs de la population concernée."
+    },
+    {
+      "q": "Qu'est-ce qu'un point de basculement climatique (tipping point) ?",
+      "o": [
+        "La température minimale à partir de laquelle les émissions de méthane dépassent celles du CO2 dans l'atmosphère",
+        "Le moment où les négociations climatiques internationales deviennent irréversibles et les accords contraignants",
+        "Le niveau de concentration en CO2 au-delà duquel l'effet de serre s'emballe de façon instantanée et totale",
+        "Un seuil critique du système climatique au-delà duquel des changements irréversibles et auto-amplifiés s'enclenchent"
+      ],
+      "r": 3,
+      "x": "Un point de basculement est un seuil du système climatique au-delà duquel un sous-système bascule dans un nouvel état potentiellement irréversible. Exemples identifiés par le GIEC : la fonte de la calotte groenlandaise, la déforestation de l'Amazonie ou le dégel du permafrost arctique."
+    },
+    {
+      "q": "Qu'est-ce qu'un corridor biologique et quel est son intérêt pour la conservation de la biodiversité ?",
+      "o": [
+        "Une bande de végétation naturelle reliant des habitats fragmentés, permettant les déplacements des espèces sauvages",
+        "Un axe routier aménagé avec des passages spéciaux pour permettre la traversée sécurisée des animaux sauvages",
+        "Une zone tampon séparant une aire protégée des zones agricoles pour limiter les conflits hommes-animaux sauvages",
+        "Un réseau de zones humides interconnectées le long des fleuves pour conserver les espèces amphibies migratrices"
+      ],
+      "r": 0,
+      "x": "Un corridor biologique est une structure de végétation naturelle ou semi-naturelle reliant des habitats fragmentés. Il permet aux espèces de se déplacer entre les fragments, favorisant les échanges génétiques, la recolonisation après extinction locale et l'adaptation aux changements climatiques."
+    },
+    {
+      "q": "En quoi consiste la gestion intégrée des bassins versants dans le contexte burkinabè ?",
+      "o": [
+        "La construction systématique de barrages sur tous les cours d'eau pour sécuriser les ressources en eau agricoles",
+        "La coordination des usages de l'eau, des terres et des ressources naturelles à l'échelle d'un bassin versant entier",
+        "Le transfert de la gestion des ressources en eau aux seules collectivités locales sans intervention de l'État central",
+        "La privatisation de la gestion de l'eau au profit d'entreprises spécialisées en distribution d'eau potable commerciale"
+      ],
+      "r": 1,
+      "x": "La gestion intégrée des bassins versants coordonne l'ensemble des usages de l'eau (irrigation, eau potable, hydroélectricité) et des pratiques terrestres (agriculture, élevage, reboisement) à l'échelle d'un bassin, afin de prévenir la dégradation des ressources et les conflits d'usage entre acteurs."
+    },
+    {
+      "q": "Quel est l'objet du Protocole de Cartagena sur la prévention des risques biotechnologiques (2000) ?",
+      "o": [
+        "Réglementer l'utilisation des ressources génétiques marines dans les zones économiques exclusives mondiales",
+        "Interdire l'utilisation des organismes génétiquement modifiés dans l'agriculture des pays en développement",
+        "Réglementer les mouvements transfrontaliers d'organismes vivants modifiés (OVM) pour protéger la biodiversité",
+        "Établir des normes internationales de biosécurité pour les laboratoires manipulant des agents pathogènes dangereux"
+      ],
+      "r": 2,
+      "x": "Le Protocole de Cartagena (2000) réglemente les mouvements transfrontaliers d'organismes vivants modifiés (OVM) issus des biotechnologies modernes. Il vise à protéger la biodiversité des risques potentiels des OGM, en imposant notamment un accord préalable en connaissance de cause (CPCC) du pays importateur."
+    },
+    {
+      "q": "Quel organisme intergouvernemental est chargé de la gestion concertée des eaux du bassin de la Volta ?",
+      "o": [
+        "L'Office National de l'Eau et de l'Assainissement (ONEA), établissement public à caractère industriel et commercial",
+        "La Commission du Bassin du Niger (CBN), organisation intergouvernementale de gestion du fleuve Niger",
+        "Le Programme des Nations Unies pour l'Environnement (PNUE), coordonnant les eaux transfrontalières d'Afrique",
+        "L'Autorité du Bassin de la Volta (ABV), organisation intergouvernementale regroupant les 6 pays riverains de la Volta"
+      ],
+      "r": 3,
+      "x": "L'Autorité du Bassin de la Volta (ABV), créée en 2007, regroupe le Burkina Faso, le Ghana, le Mali, le Bénin, la Côte d'Ivoire et le Togo. Elle coordonne la gestion durable et équitable des ressources en eau du bassin de la Volta, qui alimente en eau douce une grande partie du territoire burkinabè."
+    },
+    {
+      "q": "Quel outil de surveillance par satellite est utilisé pour mesurer l'état du couvert végétal et détecter la désertification ?",
+      "o": [
+        "L'indice de végétation par différence normalisée (NDVI), calculé à partir des images satellitaires multispectrales",
+        "L'indice de l'état de l'humidité du sol (SWI), qui mesure les variations de la teneur en eau à la surface des sols",
+        "Le coefficient d'albédo terrestre (CAT), qui quantifie la réflectivité de la surface et la dégradation végétale",
+        "L'indice de chaleur radiative (ICR), mesurant les températures de surface pour détecter les zones désertifiées"
+      ],
+      "r": 0,
+      "x": "Le NDVI (Normalized Difference Vegetation Index) est calculé à partir des réflectances dans le rouge et le proche infrarouge captées par satellite. Les valeurs proches de 1 indiquent une végétation dense, les valeurs proches de 0 signalent des zones dégradées ou arides. C'est l'outil de référence pour le suivi de la désertification."
+    },
+    {
+      "q": "Quelle menace émergente représentent les résidus médicamenteux pour les ressources en eau en Afrique subsaharienne ?",
+      "o": [
+        "L'empoisonnement aigu des populations rurales consommant de l'eau chargée en antibiotiques thérapeutiques usagés",
+        "La perturbation endocrinienne des organismes aquatiques et le développement de bactéries résistantes aux antibiotiques",
+        "La contamination radioactive des eaux souterraines par les produits pharmaceutiques radioactifs des hôpitaux urbains",
+        "L'eutrophisation des retenues d'eau causée par les excipients phosphatés des médicaments génériques locaux"
+      ],
+      "r": 1,
+      "x": "Les résidus médicamenteux (antibiotiques, hormones, antiparasitaires) présents dans les eaux perturbent le système endocrinien des organismes aquatiques et contribuent au développement de bactéries résistantes aux antibiotiques. Cette menace sanitaire et environnementale reste encore sous-évaluée dans les pays sahéliens."
+    },
+    {
+      "q": "Qu'est-ce que la radioactivité naturelle d'origine tellurique (NORM) et quel risque peut-elle poser ?",
+      "o": [
+        "La radioactivité des déchets nucléaires enterrés dans des formations géologiques stables à haute profondeur",
+        "Les émissions radioactives des matériaux de construction utilisés dans les bâtiments résidentiels et industriels",
+        "La radioactivité présente naturellement dans les roches, sols et eaux, qui peut être concentrée par l'activité minière",
+        "La contamination radioactive des sols agricoles causée par les retombées des essais nucléaires atmosphériques"
+      ],
+      "r": 2,
+      "x": "Les NORM (Naturally Occurring Radioactive Materials) sont des radioéléments naturels (uranium, thorium, radium) présents dans les roches et sols. Les activités minières (exploitation aurifère, phosphatière) peuvent concentrer et exposer ces matériaux, augmentant les risques de contamination des eaux et d'exposition des travailleurs et riverains."
+    },
+    {
+      "q": "Quel rôle joue l'albédo dans la régulation du bilan radiatif terrestre ?",
+      "o": [
+        "Il mesure la capacité des océans à absorber le CO2 atmosphérique par dissolution dans les eaux froides profondes",
+        "Il quantifie l'efficacité de la végétation tropicale à émettre de la vapeur d'eau par évapotranspiration intensive",
+        "Il représente la fraction de chaleur absorbée par les surfaces sombres et réémise sous forme d'infrarouge terrestre",
+        "Il représente la fraction du rayonnement solaire réfléchie par une surface, influençant le bilan énergétique planétaire"
+      ],
+      "r": 3,
+      "x": "L'albédo mesure la proportion du rayonnement solaire réfléchie par une surface (neige ≈ 0,85 ; forêt ≈ 0,15 ; sol nu ≈ 0,25). La fonte des glaces et la déforestation réduisent l'albédo global, augmentant l'absorption d'énergie solaire et amplifiant le réchauffement climatique par rétroaction positive."
+    },
+    {
+      "q": "Quel est l'objectif principal de la Convention des Nations Unies sur la lutte contre la désertification (CNULD, 1994) ?",
+      "o": [
+        "Lutter contre la désertification et atténuer les effets de la sécheresse dans les pays affectés, notamment en Afrique",
+        "Réduire les émissions de CO2 liées à la déforestation dans les pays tropicaux membres des Nations Unies",
+        "Garantir la souveraineté alimentaire des pays sahéliens par le développement de l'irrigation à grande échelle",
+        "Protéger les droits fonciers des communautés rurales menacées par l'avancée des terres désertiques africaines"
+      ],
+      "r": 0,
+      "x": "La CNULD, adoptée en 1994 et entrée en vigueur en 1996, est la troisième Convention de Rio dédiée à la lutte contre la désertification dans les zones arides, semi-arides et subhumides sèches. Elle engage les pays parties à élaborer et mettre en œuvre des Programmes d'Action Nationaux (PAN-LCD) pour restaurer les terres dégradées."
+    },
+    {
+      "q": "Qu'est-ce que l'Analyse du Cycle de Vie (ACV) d'un produit ou d'un service ?",
+      "o": [
+        "L'évaluation de la durabilité mécanique d'un produit industriel sur toute sa durée d'utilisation commerciale prévue",
+        "L'évaluation de l'ensemble des impacts environnementaux d'un produit, de l'extraction des matières à l'élimination finale",
+        "L'analyse économique de la rentabilité d'un investissement industriel en tenant compte des coûts environnementaux",
+        "L'étude de la trajectoire d'un produit sur le marché, depuis son lancement jusqu'à son retrait commercial définitif"
+      ],
+      "r": 1,
+      "x": "L'ACV est une méthode normalisée (ISO 14040/14044) d'évaluation des impacts environnementaux d'un produit ou service « du berceau à la tombe » : extraction des matières premières, fabrication, transport, utilisation et fin de vie (recyclage ou élimination). Elle permet d'identifier les étapes les plus impactantes."
+    },
+    {
+      "q": "Quel est le principe de fonctionnement d'une centrale géothermique à haute enthalpie ?",
+      "o": [
+        "Elle capte l'énergie solaire concentrée par des miroirs pour chauffer un fluide et produire de la vapeur motrice",
+        "Elle utilise la chaleur générée par la fermentation anaérobie de la biomasse agricole pour produire de l'électricité",
+        "Elle exploite la vapeur ou l'eau chaude provenant des réservoirs géothermaux pour entraîner des turbines électriques",
+        "Elle capte la chaleur de l'air extérieur par échangeurs thermiques pour alimenter des systèmes de chauffage urbain"
+      ],
+      "r": 2,
+      "x": "Une centrale géothermique haute enthalpie capte la vapeur ou l'eau surchauffée (T > 150°C) issue de réservoirs naturels dans les zones tectoniquement actives. Cette vapeur entraîne des turbines couplées à des alternateurs. C'est une énergie renouvelable peu émettrice de GES, développée notamment en Éthiopie et au Kenya."
+    },
+    {
+      "q": "À quel moment une Étude d'Impact Environnemental et Social (EIES) doit-elle obligatoirement être réalisée au Burkina Faso ?",
+      "o": [
+        "Après la réalisation du projet, pour évaluer les impacts effectivement constatés sur l'environnement et les populations",
+        "Simultanément à la phase de construction, pour permettre des ajustements techniques environnementaux en temps réel",
+        "Uniquement pour les projets financés par des bailleurs de fonds internationaux exigeant des garanties sociales",
+        "Avant le démarrage du projet, afin d'identifier les impacts potentiels et proposer des mesures d'atténuation adéquates"
+      ],
+      "r": 3,
+      "x": "Conformément au Code de l'environnement du Burkina Faso, l'EIES est obligatoire avant le démarrage de tout projet susceptible d'affecter l'environnement. Elle permet d'identifier les impacts potentiels, de proposer des mesures d'atténuation et de définir un Plan de Gestion Environnementale et Sociale (PGES) contraignant."
+    },
+    {
+      "q": "Quelles sont les catégories de statut de protection des espèces établies par l'UICN dans sa Liste Rouge mondiale ?",
+      "o": [
+        "Éteinte (EX), En danger critique (CR), En danger (EN), Vulnérable (VU), Quasi-menacée (NT), Préoccupation mineure (LC)",
+        "Critique, Menacée, Sensible, Stable, Abondante, Très abondante — du plus au moins préoccupant mondialement",
+        "Protégée, Semi-protégée, Non protégée — selon le niveau de réglementation appliqué dans chaque pays membre",
+        "Endémique, Exotique, Invasive, Commune, Rare — classement établi selon la distribution géographique des espèces"
+      ],
+      "r": 0,
+      "x": "La Liste Rouge de l'UICN classe les espèces selon le risque d'extinction : Éteinte (EX), Éteinte à l'état sauvage (EW), En danger critique (CR), En danger (EN), Vulnérable (VU), Quasi-menacée (NT), Préoccupation mineure (LC), Données insuffisantes (DD), Non évaluée (NE). C'est la référence mondiale pour évaluer l'état de la biodiversité."
+    },
+    {
+      "q": "Qu'est-ce que la certification FSC (Forest Stewardship Council) garantit pour les produits forestiers ?",
+      "o": [
+        "Que le bois certifié provient de forêts plantées artificiellement sans déforestation de forêts primaires naturelles",
+        "Que le bois ou les produits dérivés proviennent de forêts gérées de manière responsable sur les plans sociaux et environnementaux",
+        "Que la chaîne de production du bois est entièrement mécanisée et exempte de toute exploitation par le travail humain",
+        "Que les produits forestiers ont été traités thermiquement pour être exempts d'organismes nuisibles à l'importation"
+      ],
+      "r": 1,
+      "x": "La certification FSC garantit que le bois et ses dérivés (papier, carton, mobilier) proviennent de forêts gérées de manière responsable sur les plans environnemental, social et économique. Elle couvre toute la chaîne de contrôle du produit, de la forêt au consommateur final, via un système d'audit indépendant accrédité."
+    },
+    {
+      "q": "Qu'est-ce que les DEEE (Déchets d'Équipements Électriques et Électroniques) ?",
+      "o": [
+        "Des déchets organiques issus de la décomposition des câbles électriques en plastique biodégradable en fin de vie",
+        "Des résidus liquides issus des processus de refroidissement des équipements informatiques dans les data centers",
+        "Des équipements électroniques usagés contenant des substances toxiques (plomb, mercure, cadmium)",
+        "Des déchets radioactifs générés par les centrales nucléaires et les appareils médicaux d'imagerie diagnostique"
+      ],
+      "r": 2,
+      "x": "Les DEEE (téléphones, ordinateurs, télévisions, électroménagers en fin de vie) contiennent des métaux lourds (plomb, mercure, cadmium) et des polluants organiques (PBDE, PCB). Mal recyclés, ils contaminent les sols et les eaux. Leur volume augmente rapidement à l'échelle mondiale, menaçant les pays récepteurs en Afrique."
+    },
+    {
+      "q": "Quel est le principal défi technique actuel du stockage de l'énergie solaire photovoltaïque à grande échelle ?",
+      "o": [
+        "Le coût élevé des panneaux photovoltaïques, qui reste supérieur à celui des centrales thermiques au charbon",
+        "L'absence de technologie capable de transporter l'électricité solaire sur de longues distances sans pertes notables",
+        "Le manque de silicium pur disponible mondialement pour fabriquer des cellules photovoltaïques en quantité",
+        "Le coût et la durée de vie limitée des systèmes de stockage par batteries, notamment les batteries lithium-ion"
+      ],
+      "r": 3,
+      "x": "Le principal défi du solaire PV est l'intermittence de la production (nuages, nuit). Les batteries lithium-ion permettent le stockage mais restent coûteuses (durée de vie de 10 à 15 ans). Des alternatives (batteries à flux, hydrogène vert, stockage par gravité) sont en cours de développement pour y répondre."
+    },
+    {
+      "q": "Qu'est-ce que la Convention d'Aarhus (1998) établit comme droits environnementaux pour les citoyens ?",
+      "o": [
+        "Le droit d'accès à l'information, de participation aux décisions et d'accès à la justice en matière d'environnement",
+        "Le droit de tout citoyen à un environnement sain et à des réparations en cas de préjudice environnemental subi",
+        "L'obligation pour les États de financer des procédures judiciaires gratuites pour les victimes de pollutions",
+        "Le droit des États d'exproprier les entreprises polluantes sans compensation en cas d'atteinte grave à l'environnement"
+      ],
+      "r": 0,
+      "x": "La Convention d'Aarhus (1998, CEE-ONU) établit trois piliers des droits environnementaux des citoyens : (1) le droit d'accès à l'information environnementale ; (2) le droit de participation du public aux décisions ayant un impact sur l'environnement ; (3) le droit d'accès à la justice en matière d'environnement."
+    },
+    {
+      "q": "Quelles sont les deux principales causes de déforestation tropicale à l'échelle mondiale selon la FAO ?",
+      "o": [
+        "L'exploitation forestière illégale pour le bois d'œuvre et la construction de barrages hydroélectriques tropicaux",
+        "L'expansion des surfaces agricoles (élevage bovin, soja, huile de palme) et l'exploitation forestière commerciale",
+        "L'urbanisation des zones forestières tropicales et la construction d'infrastructures routières en forêt amazonienne",
+        "Les feux de brousse incontrôlés d'origine naturelle et l'exploitation minière artisanale dans les zones forestières"
+      ],
+      "r": 1,
+      "x": "Selon la FAO et Global Forest Watch, l'expansion agricole (conversion des forêts en pâturages, plantations de soja et d'huile de palme) est la première cause de déforestation tropicale (plus de 70 % des pertes). L'exploitation forestière commerciale constitue la deuxième cause majeure identifiée à l'échelle mondiale."
+    },
+    {
+      "q": "Quels sont les principaux impacts environnementaux des décharges non contrôlées au Burkina Faso ?",
+      "o": [
+        "La disparition de terres arables due à l'occupation permanente par les déchets sur les surfaces les plus fertiles",
+        "L'augmentation de la radioactivité dans les zones péri-urbaines due aux déchets médicaux mélangés en décharge",
+        "La contamination des sols et des nappes phréatiques par les lixiviats et la pollution de l'air par les brûlages sauvages",
+        "La dégradation des monuments culturels et architecturaux des villes historiques par les émanations de méthane"
+      ],
+      "r": 2,
+      "x": "Au Burkina Faso, les décharges non contrôlées génèrent des lixiviats qui infiltrent les sols et contaminent les nappes phréatiques. Les brûlages sauvages de déchets émettent des dioxines, du CO2 et des particules fines. Ces impacts sont particulièrement marqués en périphérie de Ouagadougou et Bobo-Dioulasso."
+    },
+    {
+      "q": "Quel indicateur est utilisé pour mesurer l'intensité énergétique d'une économie nationale ?",
+      "o": [
+        "Le PIB vert, qui soustrait au PIB conventionnel la valeur des ressources naturelles dépensées par l'économie",
+        "L'indice de performance environnementale (IPE), classant les pays selon leur efficacité dans l'utilisation des ressources",
+        "Le taux d'accès à l'énergie renouvelable, calculé comme la proportion de renouvelables dans le mix énergétique",
+        "La quantité d'énergie consommée par unité de PIB produit, exprimée en tep (tonnes d'équivalent pétrole) par dollar"
+      ],
+      "r": 3,
+      "x": "L'intensité énergétique (énergie consommée / PIB) mesure l'efficacité avec laquelle une économie utilise l'énergie pour produire de la richesse. Une intensité décroissante indique une amélioration de l'efficacité énergétique, objectif clé de l'ODD 7 et des politiques de décarbonation économique mondiales."
+    },
+    {
+      "q": "Quelles espèces font l'objet de l'interdiction la plus stricte au titre de l'Annexe I de la CITES ?",
+      "o": [
+        "Les espèces menacées d'extinction dont tout commerce commercial international est totalement interdit",
+        "Les espèces nécessitant une réglementation du commerce pour éviter une utilisation incompatible avec leur survie",
+        "Les espèces protégées uniquement dans certains pays membres signataires ayant émis des réserves spécifiques",
+        "Les espèces nécessitant uniquement un certificat d'origine pour être légalement commercialisées entre pays signataires"
+      ],
+      "r": 0,
+      "x": "L'Annexe I de la CITES classe les espèces les plus menacées d'extinction : tout commerce commercial international est totalement interdit. Elle inclut les grands félins (tigres, léopards, guépards), les rhinocéros, les gorilles et certaines espèces végétales rares. Les échanges à des fins non commerciales nécessitent un permis spécial."
+    },
+    {
+      "q": "Quels sont les principaux avantages environnementaux de l'agroforesterie dans les zones sahéliennes ?",
+      "o": [
+        "La fixation de l'azote, la protection des sols contre l'érosion, l'amélioration du microclimat et le soutien à la biodiversité",
+        "L'augmentation des rendements céréaliers grâce aux engrais chimiques libérés par la décomposition des feuilles",
+        "La suppression totale des ravageurs agricoles grâce aux substances allélopathiques exsudées par les racines des arbres",
+        "La réduction des besoins en eau d'irrigation grâce à l'ombre portée des arbres sur les cultures intercalaires"
+      ],
+      "r": 0,
+      "x": "L'agroforesterie (association d'arbres et de cultures ou d'élevage) apporte de multiples bénéfices au Sahel : fixation de l'azote (Faidherbia albida), protection des sols contre l'érosion éolienne et hydrique, création d'un microclimat favorable, diversification des productions et renforcement de la biodiversité fonctionnelle locale."
+    },
+    {
+      "q": "Quelle est la principale cause de l'acidification des océans observée depuis l'ère industrielle ?",
+      "o": [
+        "La dissolution des polluants acides industriels (SO2, NO2) dans les eaux marines lors des pluies acides océaniques",
+        "L'augmentation de la température des eaux de surface réduisant leur capacité à retenir les sels basiques naturels",
+        "L'absorption par les océans du CO2 atmosphérique excédentaire formant de l'acide carbonique dans l'eau de mer",
+        "Le déversement massif d'acides industriels et d'engrais acides dans les eaux fluviales drainant vers les océans"
+      ],
+      "r": 2,
+      "x": "Les océans absorbent environ 25 % du CO2 anthropique émis, formant de l'acide carbonique (H2CO3) qui se dissocie et libère des protons, réduisant le pH des eaux marines. Depuis l'ère industrielle, le pH moyen des océans est passé de 8,2 à 8,1, menaçant les organismes à coquille calcaire (mollusques, coraux, ptéropodes)."
+    },
+    {
+      "q": "Quelle est la mission principale du Groupe d'Experts Intergouvernemental sur l'Évolution du Climat (GIEC) ?",
+      "o": [
+        "Un organisme de l'ONU qui effectue ses propres recherches climatiques et publie des données primaires sur le climat",
+        "Un groupe d'experts nommés par les gouvernements pour définir les politiques de réduction des GES nationalement",
+        "Une institution scientifique affiliée à la NASA chargée de surveiller les émissions de GES par satellite depuis 1988",
+        "Un organe intergouvernemental qui synthétise la littérature scientifique existante sur les changements climatiques"
+      ],
+      "r": 3,
+      "x": "Créé en 1988 par l'OMM et le PNUE, le GIEC (IPCC) ne mène pas de recherches propres mais évalue et synthétise les publications scientifiques existantes sur le changement climatique. Ses rapports d'évaluation (publiés environ tous les 7 ans) constituent la référence mondiale pour les décideurs politiques et les négociateurs."
+    },
+    {
+      "q": "La Convention de Minamata sur le mercure, adoptée en 2013, vise quel objectif principal ?",
+      "o": [
+        "Protéger la santé humaine et l'environnement contre les émissions et rejets anthropiques de mercure",
+        "Réglementer le commerce international du mercure entre les pays producteurs et les pays utilisateurs industriels",
+        "Interdire toute activité minière aurifère dans les zones à risque de contamination mercurielle naturellement élevée",
+        "Instaurer un fonds d'indemnisation des victimes d'empoisonnement au mercure dans les pays en développement"
+      ],
+      "r": 0,
+      "x": "La Convention de Minamata (2013), nommée en référence à la catastrophe japonaise des années 1950, vise à protéger la santé humaine et l'environnement contre les rejets anthropiques de mercure, notamment liés à l'orpaillage artisanal, aux centrales à charbon et aux produits manufacturés contenant du mercure."
+    },
+    {
+      "q": "Quelle population est la plus vulnérable aux effets de la pollution sonore chronique en milieu urbain africain ?",
+      "o": [
+        "Les adultes de plus de 60 ans dont le système immunitaire est fragilisé par les agents pathogènes environnementaux",
+        "Les nourrissons, les enfants et les personnes souffrant de troubles cardiovasculaires ou psychologiques préexistants",
+        "Les travailleurs agricoles exposés aux bruits des machines lors de la récolte et du labour des champs cultivés",
+        "Les personnes immunodéprimées dont le système nerveux central est sensibilisé aux stimuli sonores extérieurs"
+      ],
+      "r": 1,
+      "x": "Les populations les plus vulnérables à la pollution sonore chronique sont les nourrissons et enfants (développement cognitif affecté), les personnes souffrant de maladies cardiovasculaires (hypertension, infarctus) et les personnes à troubles anxieux. En milieu urbain africain, la densification accentue l'exposition aux bruits de la circulation et des activités commerciales."
+    },
+    {
+      "q": "Comment les microplastiques pénètrent-ils dans la chaîne alimentaire humaine ?",
+      "o": [
+        "Uniquement par l'ingestion directe de produits de la mer pêchés dans des zones marines fortement contaminées",
+        "Principalement par inhalation des fibres plastiques de vêtements synthétiques dans les espaces domestiques confinés",
+        "Par l'ingestion d'eau, de sel marin, de poissons, de fruits de mer et de légumes cultivés sur des sols contaminés",
+        "Exclusivement par contact cutané avec des emballages alimentaires plastifiés contenant des plastifiants migratoires"
+      ],
+      "r": 2,
+      "x": "Les microplastiques contaminent la chaîne alimentaire humaine par de multiples voies : eau du robinet et embouteillée, sel marin, poissons et fruits de mer, légumes arrosés avec des eaux contaminées et inhalation de fibres textiles. Des microplastiques ont été détectés dans le sang, les poumons et le placenta humains."
+    },
+    {
+      "q": "Qu'est-ce que l'Initiative « 4 pour 1000 » lancée lors de la COP21 de Paris en 2015 ?",
+      "o": [
+        "Un programme international visant à quadrupler la superficie des forêts mondiales à l'horizon 2050 planétaire",
+        "Un mécanisme financier permettant aux pays du Sud de recevoir 4 dollars pour chaque tonne de CO2 séquestrée",
+        "Un programme visant à augmenter de 4 % par an les capacités énergétiques renouvelables des pays membres",
+        "Une initiative visant à augmenter annuellement de 0,4 % le taux de carbone organique dans les sols agricoles mondiaux"
+      ],
+      "r": 3,
+      "x": "L'initiative « 4 pour 1000 » démontre que si le stock de carbone organique des sols agricoles mondiaux augmentait de 0,4 % par an, cela suffirait à compenser l'ensemble des émissions anthropiques de CO2. Elle promeut l'agriculture de conservation et l'agroforesterie pour stocker du carbone dans les sols."
+    },
+    {
+      "q": "Quelles caractéristiques permettent au mil (Pennisetum glaucum) de résister à la sécheresse au Sahel ?",
+      "o": [
+        "Un système racinaire profond, une cuticule épaisse, un cycle végétatif court et une haute efficience hydrique en C4",
+        "Une photosynthèse nocturne de type CAM permettant de fermer les stomates le jour pour limiter la transpiration",
+        "La capacité d'entrer en état de quiescence totale pendant plusieurs mois puis de reprendre sa croissance après la pluie",
+        "Une teneur élevée en mucilages racinaires permettant de retenir l'humidité dans la rhizosphère en sol sableux"
+      ],
+      "r": 0,
+      "x": "Le mil est une plante en C4, particulièrement efficace dans l'utilisation de l'eau et du CO2. Ses adaptations à la sécheresse incluent un système racinaire fasciculé profond, une cuticule foliaire épaisse limitant la transpiration et un cycle végétatif court (60 à 90 jours) adapté aux saisons des pluies courtes du Sahel."
+    },
+    {
+      "q": "Quelles sont les valeurs de la biodiversité reconnues par la Convention sur la diversité biologique (CDB) ?",
+      "o": [
+        "Valeurs commerciales uniquement, centrées sur l'exploitation des ressources biologiques et l'industrie pharmaceutique",
+        "Valeurs intrinsèques, écologiques, génétiques, économiques, scientifiques, éducatives, culturelles et esthétiques",
+        "Valeurs strictement économiques mesurables par les marchés, seuls indicateurs objectifs de l'importance des espèces",
+        "Valeurs patrimoniales uniquement, définies par les traditions culturelles des communautés locales concernées"
+      ],
+      "r": 1,
+      "x": "La CDB reconnaît les valeurs multiples de la biodiversité : valeur intrinsèque (droit d'exister indépendamment de l'utilité humaine), valeur écologique (services écosystémiques), valeur génétique (ressources pour la biotechnologie), valeur économique (alimentation, médicaments), valeur scientifique, culturelle, esthétique et spirituelle."
+    },
+    {
+      "q": "Quel est le rendement écologique moyen du transfert d'énergie entre deux niveaux trophiques consécutifs ?",
+      "o": [
+        "Environ 50 %, car la moitié de l'énergie consommée par un organisme est transférée au niveau trophique supérieur",
+        "Environ 30 %, car les organismes consacrent 70 % de leur énergie à la croissance et à la reproduction individuelle",
+        "Environ 10 %, car la majeure partie de l'énergie est dissipée sous forme de chaleur par la respiration cellulaire",
+        "Environ 1 %, car la photosynthèse ne capte qu'une infime fraction du rayonnement solaire incident disponible"
+      ],
+      "r": 2,
+      "x": "Le rendement trophique (règle des 10 %) stipule qu'environ 10 % seulement de l'énergie stockée à un niveau trophique est transférée au niveau supérieur. Le reste est dissipé sous forme de chaleur par la respiration cellulaire, perdu dans les déjections ou dans la matière non assimilable par les consommateurs."
+    },
+    {
+      "q": "Quel est le contenu principal du Plan National d'Adaptation aux changements climatiques (PNA) du Burkina Faso ?",
+      "o": [
+        "Un programme de réduction des émissions de GES basé sur la substitution des énergies fossiles par les renouvelables",
+        "Un plan de construction d'infrastructures hydrauliques pour faire face aux inondations saisonnières récurrentes",
+        "Un programme de surveillance par satellite des indicateurs de dégradation des terres et du couvert végétal national",
+        "Un cadre stratégique identifiant les risques climatiques et les actions d'adaptation prioritaires dans les secteurs vulnérables"
+      ],
+      "r": 3,
+      "x": "Le Plan National d'Adaptation (PNA) du Burkina Faso identifie les risques et vulnérabilités aux changements climatiques dans les secteurs prioritaires (agriculture, eau, santé, énergie) et définit des actions d'adaptation à court, moyen et long terme. Il s'inscrit dans le cadre de l'Accord de Paris et des engagements NDC du pays."
+    },
+    {
+      "q": "Quelle est la fonction principale des forêts classées dans le système de gestion des ressources forestières au Burkina Faso ?",
+      "o": [
+        "Protéger les bassins versants, conserver la biodiversité forestière et produire du bois de manière contrôlée et durable",
+        "Permettre une exploitation commerciale intensive du bois d'œuvre pour financer les programmes de reboisement",
+        "Servir exclusivement de zones de recherche scientifique pour les instituts forestiers et les universités nationales",
+        "Abriter les populations d'animaux sauvages chassés en dehors des réserves de faune officiellement délimitées"
+      ],
+      "r": 0,
+      "x": "Les forêts classées au Burkina Faso sont des espaces forestiers délimités et soumis à un régime légal de protection. Elles remplissent plusieurs fonctions : protection des bassins versants, conservation de la biodiversité, production de bois sous plan d'aménagement, et régulation du cycle de l'eau dans les zones environnantes."
+    },
+    {
+      "q": "Qu'est-ce que la comptabilité du capital naturel dans le cadre de la richesse inclusive ?",
+      "o": [
+        "La substitution du PIB par un indice mesurant uniquement les flux financiers liés à l'exploitation des ressources",
+        "L'intégration de la valeur des actifs naturels (forêts, eau, sols, biodiversité) dans les systèmes de comptabilité nationale",
+        "La taxation des entreprises proportionnellement au volume de ressources naturelles extraites sur le territoire national",
+        "L'interdiction de comptabiliser les revenus issus de l'exploitation des ressources naturelles non renouvelables"
+      ],
+      "r": 1,
+      "x": "La comptabilité du capital naturel (Système de Comptabilité Économique et Environnementale des Nations Unies, SCEE) intègre dans les systèmes comptables nationaux la valeur des actifs naturels (forêts, sol, eau, biodiversité). Elle vise à rendre visible la déperdition du capital naturel invisible dans le PIB conventionnel."
+    },
+    {
+      "q": "Quel est le principal indicateur utilisé pour évaluer et communiquer sur la qualité de l'air dans les villes ?",
+      "o": [
+        "La concentration en ozone troposphérique (O3) mesurée à 2 mètres de hauteur dans les zones résidentielles urbaines",
+        "Le taux de dioxyde de soufre (SO2) dans l'air ambiant, issu principalement de la combustion du charbon industriel",
+        "L'indice de qualité de l'air (IQA) basé sur les concentrations de polluants réglementés (PM2,5, PM10, CO, NO2, O3)",
+        "Le taux d'humidité relative combiné à la température ambiante pour évaluer le confort thermique en zone urbaine"
+      ],
+      "r": 2,
+      "x": "L'Indice de Qualité de l'Air (IQA ou AQI), calculé à partir des concentrations de polluants réglementés (PM2,5, PM10, CO, NO2, O3, SO2), est le principal outil de communication sur la qualité de l'air. Il est exprimé sur une échelle allant de « bon » à « dangereux » et permet d'alerter les populations lors des pics de pollution."
+    },
+    {
+      "q": "Quels sont les principaux sous-produits du processus de méthanisation anaérobie des matières organiques ?",
+      "o": [
+        "Du dioxygène et de l'eau, produits par la dégradation complète de la matière organique en conditions anaérobies",
+        "De l'azote gazeux et des phosphates, libérés par les bactéries nitrifiantes dans les digesteurs biologiques fermés",
+        "Du CO2 et de l'eau uniquement, résultant de la combustion contrôlée de la biomasse en chambre fermée étanche",
+        "Du biogaz (mélange de CH4 et CO2) et du digestat, résidu organique riche en éléments fertilisants réutilisables"
+      ],
+      "r": 3,
+      "x": "La méthanisation anaérobie produit deux sous-produits principaux : le biogaz (50 à 70 % de méthane et 30 à 50 % de CO2), utilisable comme combustible ou pour produire de l'électricité, et le digestat, résidu liquide et solide riche en azote, phosphore et potassium, utilisable directement comme fertilisant organique."
+    },
+    {
+      "q": "Qu'énonce la loi du minimum de Liebig en écologie et en agronomie ?",
+      "o": [
+        "La croissance d'un organisme est déterminée par le facteur du milieu qui se trouve en quantité minimale (facteur limitant)",
+        "L'abondance d'une espèce est proportionnelle à la quantité minimale de ressources disponibles dans son écosystème",
+        "La productivité d'un écosystème est inversement proportionnelle à la biomasse de ses prédateurs au sommet trophique",
+        "Le rendement d'une culture est toujours limité par la densité de semis minimale appliquée lors de la plantation"
+      ],
+      "r": 0,
+      "x": "La loi du minimum de Liebig (1840) stipule que la croissance d'un organisme est limitée par le facteur le plus déficient, même si tous les autres sont abondants. En agronomie, si l'azote est insuffisant, la plante croît peu même avec un excès de phosphore. Ce principe s'applique à tous les facteurs abiotiques limitants."
+    },
+    {
+      "q": "Quelles sont les principales espèces de poissons exploitées dans les ressources halieutiques intérieures du Burkina Faso ?",
+      "o": [
+        "La truite et le saumon d'eau douce, introduits dans les barrages du nord pour diversifier les espèces aquacoles",
+        "Le capitaine (Lates niloticus), le tilapia (Oreochromis spp.), les carpes et les silures dans les cours d'eau et retenues",
+        "La crevette d'eau douce et l'anguille de rivière, espèces dominantes dans les fleuves du Mouhoun et du Nakambé",
+        "Le bar de mer introduit dans les retenues d'eau et le poisson-chat commun élevé dans les fermes aquacoles rurales"
+      ],
+      "r": 1,
+      "x": "Les ressources halieutiques intérieures du Burkina Faso sont dominées par le tilapia (Oreochromis niloticus), le capitaine (Lates niloticus), les silures (Clarias spp.) et les carpes. La pêche est pratiquée principalement dans les retenues d'eau (barrages de Kompienga, Bagré, Ziga) et les fleuves permanents (Mouhoun, Nakambé)."
+    },
+    {
+      "q": "Quelle est la principale limite au recyclage des plastiques dans les pays en développement comme le Burkina Faso ?",
+      "o": [
+        "L'absence totale d'installations de collecte et de tri des plastiques dans les zones rurales et périurbaines du pays",
+        "La nature chimique des plastiques thermodurcissables qui les rend absolument impossibles à recycler ou à fondre",
+        "Le manque d'infrastructures de tri et de recyclage, la faible valeur économique et la contamination des déchets",
+        "L'interdiction réglementaire du recyclage des emballages alimentaires usagés pour des raisons sanitaires nationales"
+      ],
+      "r": 2,
+      "x": "Au Burkina Faso, le recyclage des plastiques est limité par l'insuffisance des infrastructures industrielles de tri et de traitement, la faible valeur économique de la plupart des fractions plastiques, la contamination des déchets collectés en mélange et l'informalité de la filière. Des initiatives locales de recyclage artisanal existent mais restent marginales."
+    },
+    {
+      "q": "En quoi consiste l'approche « One Health » (Une seule santé) dans le domaine de la santé et de l'environnement ?",
+      "o": [
+        "Un programme de vaccination universelle contre les zoonoses touchant simultanément humains et animaux domestiques",
+        "Une stratégie de développement hospitalier visant à harmoniser les soins de santé dans les pays en développement",
+        "Une initiative de l'OMS pour universaliser l'accès aux médicaments essentiels dans les zones rurales africaines",
+        "Une approche intégrée reconnaissant l'interdépendance entre la santé humaine, animale et la santé des écosystèmes"
+      ],
+      "r": 3,
+      "x": "L'approche « One Health » (OMS, FAO, OMSA) reconnaît que la santé humaine, la santé animale et la santé des écosystèmes sont interdépendantes. Elle promeut une collaboration multisectorielle pour prévenir les zoonoses émergentes, gérer les résistances aux antibiotiques et préserver les écosystèmes qui régulent les risques sanitaires."
+    },
+    {
+      "q": "Qu'est-ce que la procédure de Consentement Préalable en Connaissance de Cause (PIC) instaurée par la Convention de Rotterdam ?",
+      "o": [
+        "L'obligation pour les pays exportateurs d'obtenir l'accord des pays importateurs avant d'exporter des produits chimiques dangereux",
+        "L'obligation pour les entreprises minières d'obtenir le consentement des communautés locales avant toute exploitation",
+        "L'obligation pour les États d'informer les populations des risques environnementaux avant l'installation d'industries",
+        "L'obligation pour les bailleurs de fonds de consulter les bénéficiaires avant le financement de projets de développement"
+      ],
+      "r": 0,
+      "x": "La Convention de Rotterdam (1998) instaure la procédure PIC (Prior Informed Consent) : les pays exportateurs doivent obtenir l'accord explicite des pays importateurs avant d'exporter certains produits chimiques dangereux et pesticides très toxiques. Elle protège les pays en développement contre les importations non souhaitées de substances dangereuses."
+    },
+    {
+      "q": "Comment a évolué la couverture forestière et ligneuse du Burkina Faso selon les estimations disponibles ?",
+      "o": [
+        "Elle est restée stable à environ 30 % depuis l'Indépendance grâce aux politiques de reboisement continues menées",
+        "Elle a progressivement diminué sous l'effet de la déforestation, du surpâturage et de l'extension des terres cultivées",
+        "Elle a fortement augmenté depuis 2000, passant de 15 % à plus de 28 % grâce aux campagnes de reboisement massif",
+        "Elle n'a jamais dépassé 5 % du territoire en raison du climat sahélien défavorable au développement des arbres"
+      ],
+      "r": 1,
+      "x": "La couverture forestière et ligneuse du Burkina Faso a sensiblement diminué depuis l'Indépendance, en raison de la pression démographique, de l'extension des terres agricoles, du surpâturage et de la coupe de bois pour l'énergie. Les campagnes de reboisement et la RNA contribuent à freiner ce recul sans totalement l'inverser."
+    },
+    {
+      "q": "Qu'est-ce que la pollution thermique des eaux et quels en sont les principaux impacts écologiques ?",
+      "o": [
+        "L'augmentation de la température des eaux due aux déversements d'eau de refroidissement industrielle, réduisant l'oxygène dissous",
+        "Le réchauffement des eaux pluviales par le soleil avant leur écoulement dans les cours d'eau lors des périodes caniculaires",
+        "La contamination des eaux par des fluides caloriporteurs issus des circuits de chauffage des bâtiments industriels",
+        "L'augmentation naturelle des températures des eaux de surface due au changement climatique et à l'effet de serre"
+      ],
+      "r": 0,
+      "x": "La pollution thermique résulte du rejet d'eaux de refroidissement industrielles à températures élevées dans les cours d'eau. L'échauffement des eaux réduit l'oxygène dissous, perturbe la reproduction des poissons, favorise les espèces thermophiles envahissantes et peut provoquer la prolifération d'algues toxiques et de cyanobactéries."
+    },
+    {
+      "q": "Quelle est la mission principale de l'Office National de l'Eau et de l'Assainissement (ONEA) au Burkina Faso ?",
+      "o": [
+        "Gérer les ressources en eau des bassins versants et prévenir les inondations dans les zones à risque hydraulique",
+        "Réglementer les activités d'exploitation des eaux souterraines par les entreprises minières et agricoles privées",
+        "Financer et construire les barrages hydroélectriques pour augmenter la capacité de production d'électricité nationale",
+        "Produire et distribuer l'eau potable en milieu urbain et périurbain et assurer la gestion des eaux usées collectées"
+      ],
+      "r": 3,
+      "x": "L'ONEA (Office National de l'Eau et de l'Assainissement) est un établissement public burkinabè à caractère industriel et commercial. Il est responsable de la production, du transport et de la distribution de l'eau potable dans les centres urbains et périurbains, ainsi que de la collecte et du traitement des eaux usées urbaines."
+    },
+    {
+      "q": "Quel est le principal fleuve du Burkina Faso et quelles sont ses caractéristiques hydrologiques essentielles ?",
+      "o": [
+        "Le Mouhoun (anciennement Volta Noire), seul fleuve pérenne du pays, prenant sa source dans le Massif du Banfora",
+        "Le Nakambé (anciennement Volta Blanche), plus long cours d'eau du pays, alimentant les barrages du Centre-Est",
+        "La Comoé, fleuve méridional du Burkina Faso, seul cours d'eau à régime permanent tout au long de l'année",
+        "Le Sirba, affluent du Niger, constituant le principal axe hydrologique du nord-est du Burkina Faso"
+      ],
+      "r": 0,
+      "x": "Le Mouhoun (ex-Volta Noire) est le seul fleuve pérenne du Burkina Faso et le plus important en termes de débit. Il prend sa source dans le Massif du Banfora (Sud-Ouest) et coule sur environ 1 352 km avant de rejoindre le lac Volta au Ghana, constituant la principale ressource en eau de surface du pays."
+    },
+    {
+      "q": "Comment fonctionne la valorisation énergétique du biogaz produit dans les centres d'enfouissement technique ?",
+      "o": [
+        "Par injection directe du méthane capté dans le réseau de gaz naturel domestique sans traitement préalable possible",
+        "Par captage du méthane via un réseau de puits forés dans la décharge, puis combustion pour produire chaleur et électricité",
+        "Par combustion à l'air libre des effluents gazeux de la décharge, permettant de réduire les émissions de méthane",
+        "Par transformation chimique du méthane capté en hydrogène vert utilisable dans les piles à combustible urbaines"
+      ],
+      "r": 1,
+      "x": "Dans les centres d'enfouissement technique (CET), la décomposition anaérobie des déchets organiques produit du biogaz riche en méthane. Des réseaux de puits permettent de le collecter et de l'acheminer vers des unités de valorisation (moteurs à gaz, turbines) qui produisent de l'électricité ou de la chaleur, réduisant les émissions atmosphériques de méthane."
+    },
+    {
+      "q": "Qu'entend-on par migrants environnementaux ou réfugiés climatiques ?",
+      "o": [
+        "Des personnes déplacées par des conflits armés dans des régions affectées par la sécheresse et la pénurie d'eau",
+        "Des populations bénéficiant du statut de réfugié reconnu par la Convention de Genève en raison du dérèglement climatique",
+        "Des personnes contraintes de quitter leur lieu de résidence en raison de perturbations environnementales graves",
+        "Des experts en climatologie déployés dans des zones de crise pour évaluer les impacts des changements climatiques"
+      ],
+      "r": 2,
+      "x": "Les migrants environnementaux sont des personnes contraintes de quitter leur lieu de résidence à cause de perturbations graves (sécheresse, inondations, montée des eaux, désertification). La Banque mondiale estime que 216 millions de personnes pourraient être déplacées à l'intérieur de leur pays d'ici 2050 sous l'effet du changement climatique."
+    },
+    {
+      "q": "Quel est le taux d'accès à l'électricité en Afrique subsaharienne et quels en sont les principaux obstacles ?",
+      "o": [
+        "Plus de 90 % de la population a accès à l'électricité ; le principal obstacle est son coût élevé pour les ménages ruraux",
+        "Environ 70 % de la population a accès à l'électricité ; le principal obstacle est le vieillissement des infrastructures",
+        "Environ 50 % de la population a accès à l'électricité ; le principal obstacle est le manque de ressources en eau",
+        "Moins de 50 % de la population a accès à l'électricité, avec de fortes disparités entre zones urbaines et rurales"
+      ],
+      "r": 3,
+      "x": "En Afrique subsaharienne, moins de 50 % de la population a accès à l'électricité, avec d'immenses disparités entre milieu urbain (plus de 70 %) et rural (moins de 30 %). Les principaux obstacles sont la faiblesse des investissements dans les réseaux, l'éloignement des zones rurales et le faible pouvoir d'achat des ménages."
+    },
+    {
+      "q": "Dans le cadre de l'Accord de Paris, quel mécanisme le Burkina Faso utilise-t-il pour planifier son adaptation climatique à long terme ?",
+      "o": [
+        "Le Plan National d'Adaptation (PNA), qui traduit les engagements de la NDC en actions d'adaptation sectorielle concrètes",
+        "Le Programme National de Réduction des Émissions de GES (PNRGES) coordonnant les acteurs publics et privés nationaux",
+        "Le Fonds National Vert pour le Climat (FNVC), mécanisme budgétaire dédié aux investissements d'adaptation climatique",
+        "Le Plan de Convergence de l'UEMOA pour l'adaptation climatique, commun aux huit États membres de l'Union"
+      ],
+      "r": 0,
+      "x": "Le Plan National d'Adaptation (PNA) est le principal outil du Burkina Faso pour planifier et mettre en œuvre des mesures d'adaptation à moyen et long terme dans les secteurs prioritaires (eau, agriculture, santé, énergie, forêts). Il s'articule avec les Contributions Déterminées Nationalement (NDC) sous l'Accord de Paris."
+    },
+    {
+      "q": "Quels sont les perturbateurs endocriniens et pourquoi représentent-ils une menace environnementale particulière ?",
+      "o": [
+        "Des agents biologiques pathogènes qui perturbent le système hormonal des organismes lors de forte exposition aiguë",
+        "Des substances chimiques qui imitent, bloquent ou altèrent le fonctionnement du système hormonal des organismes",
+        "Des composés minéraux naturels qui interfèrent avec la synthèse des enzymes digestives des mammifères marins",
+        "Des polluants radioactifs dont les rayonnements ionisants détruisent les glandes endocrines des vertébrés exposés"
+      ],
+      "r": 1,
+      "x": "Les perturbateurs endocriniens (bisphénol A, phtalates, pesticides organochlorés, parabènes) imitent, bloquent ou altèrent les hormones naturelles. Même à faibles doses, ils perturbent le développement, la reproduction, le métabolisme et l'immunité des organismes, et s'accumulent dans les chaînes trophiques alimentaires."
+    },
+    {
+      "q": "Quel phénomène biologique est directement déclenché par les variations de la durée du jour (photopériode) chez les oiseaux migrateurs ?",
+      "o": [
+        "La modification de la couleur du plumage pour s'adapter aux saisons et améliorer le camouflage dans l'environnement",
+        "La variation du rythme cardiaque permettant une meilleure thermorégulation lors des vols longue distance migratoires",
+        "Des modifications hormonales induisant les comportements de migration, de reproduction et de mue saisonnière",
+        "La modification de l'alimentation et du régime hydrique pour constituer des réserves avant les migrations annuelles"
+      ],
+      "r": 2,
+      "x": "La photopériode (durée quotidienne d'ensoleillement) est le principal signal environnemental qui déclenche chez les oiseaux migrateurs des modifications hormonales (mélatonine, prolactine, LH) entraînant l'hyperphagie préparatoire, le dépôt de graisses de réserve, et les comportements migratoires et reproducteurs selon les saisons."
+    },
+    {
+      "q": "Quel est l'objet du Règlement européen sur la déforestation importée (EUDR), adopté en 2023 ?",
+      "o": [
+        "Interdire l'importation en Europe de tout bois tropical, quelle que soit son origine ou sa certification forestière",
+        "Taxer les exportations de produits agricoles des pays tropicaux dont le bilan de déforestation est jugé négatif",
+        "Imposer aux entreprises européennes de compenser les déforestations causées par leurs activités dans les pays tiers",
+        "Interdire l'importation en Europe de certains produits (bois, soja, café, cacao) issus de terres récemment déforestées"
+      ],
+      "r": 3,
+      "x": "L'EUDR (EU Deforestation Regulation) interdit la mise sur le marché européen de sept produits clés (bois, bovins, soja, huile de palme, café, cacao, caoutchouc) et de leurs dérivés s'ils proviennent de terres ayant subi une déforestation après le 31 décembre 2020. Ce texte réglementaire vise à réduire l'impact direct de la consommation des citoyens européens sur la dégradation des forêts mondiales."
+    },
+    {
+      "q": "Quel est l'objectif central du Cadre mondial pour la biodiversité de Kunming-Montréal adopté à la COP15 de la CBD en 2022 ?",
+      "o": [
+        "Protéger 30 % des terres et des océans de la planète d'ici 2030 et restaurer 30 % des écosystèmes dégradés (objectif 30x30)",
+        "Éliminer entièrement la liste des espèces menacées d'extinction d'ici 2030 grâce à des programmes de conservation",
+        "Augmenter de 30 % les financements publics dédiés à la biodiversité dans les pays de l'OCDE d'ici l'horizon 2025",
+        "Créer un réseau de 30 000 aires protégées interconnectées représentant 30 % de la surface continentale mondiale"
+      ],
+      "r": 0,
+      "x": "Le Cadre de Kunming-Montréal (COP15 CBD, décembre 2022) fixe l'objectif « 30x30 » : protéger 30 % des terres, eaux intérieures, côtes et océans d'ici 2030, et restaurer 30 % des écosystèmes dégradés. Il inclut également des objectifs sur la réduction des pesticides, les espèces envahissantes et le financement de la biodiversité."
+    },
+    {
+      "q": "Quelles techniques de conservation de l'eau et des sols (CES) sont les plus efficaces dans les zones dégradées du Burkina Faso ?",
+      "o": [
+        "Les cordons pierreux, les demi-lunes, le zaï et le paillage constituent les principales techniques CES de conservation",
+        "L'irrigation goutte-à-goutte solaire et le sous-solage profond des terres encroûtées par labour mécanisé intensif",
+        "La construction de grands barrages collinaires et la mise en place de canaux d'irrigation gravitaire à grande échelle",
+        "Le traitement chimique des sols par chaulage et phosphatage pour rétablir leur fertilité avant les techniques CES"
+      ],
+      "r": 0,
+      "x": "Au Burkina Faso, les principales techniques CES comprennent : les cordons pierreux (rangées de cailloux perpendiculaires à la pente), les demi-lunes (cuvettes concentrant l'eau de pluie), le zaï (poquets de plantation enrichis en matière organique) et le paillage pour réduire l'évaporation et protéger le sol de l'érosion."
+    },
+    {
+      "q": "Qu'est-ce que le mécanisme REDD+ et quel rôle joue-t-il dans la lutte contre le changement climatique ?",
+      "o": [
+        "Un mécanisme d'adaptation climatique finançant la relocalisation des populations menacées par la désertification",
+        "Un programme international de replantation d'arbres en forêt boréale pour compenser les émissions industrielles",
+        "Un mécanisme de financement récompensant les pays en développement qui réduisent leurs émissions liées aux forêts",
+        "Un réseau de surveillance des émissions de GES liées à la déforestation dans les 50 pays tropicaux signataires"
+      ],
+      "r": 2,
+      "x": "REDD+ (Réduction des Émissions liées à la Déforestation et à la Dégradation des forêts) récompense financièrement les pays en développement pour leurs résultats de réduction des émissions de CO2 liées aux forêts (déforestation évitée, gestion forestière durable, reboisement), en mobilisant des financements du Fonds Vert pour le Climat et de donateurs bilatéraux."
+    },
+    {
+      "q": "Quels sont les principaux impacts environnementaux de l'industrie extractive minière industrielle au Burkina Faso ?",
+      "o": [
+        "La contamination atmosphérique au dioxyde de soufre et les pluies acides dans les zones d'exploitation intensives",
+        "La salinisation des terres agricoles par les rejets de sels minéraux des concentrateurs de minerai d'or burkinabè",
+        "La réduction de la biodiversité marine dans les zones côtières voisines des principaux sites miniers industriels",
+        "La déforestation des sites miniers, la contamination des eaux aux cyanures et l'érosion des terrains décapés"
+      ],
+      "r": 3,
+      "x": "L'exploitation minière industrielle au Burkina Faso (or, manganèse, zinc) est associée à la déforestation totale des sites, la contamination des eaux de surface et souterraines aux cyanures (lixiviation de l'or) et aux métaux lourds, l'érosion des terrains décapés et la destruction des habitats terrestres dans les zones concernées."
+    },
+    {
+      "q": "Quel est le principal apport du Cadre de Kunming-Montréal (2022) par rapport aux précédents Objectifs d'Aichi (2010-2020) ?",
+      "o": [
+        "Des objectifs quantifiés plus précis (30x30), des mécanismes de suivi renforcés et des engagements financiers explicites",
+        "L'abandon de la protection des espèces au profit d'une gestion des services écosystémiques par les marchés carbone",
+        "La réduction du nombre de cibles de 20 à 4 objectifs prioritaires pour améliorer la mise en œuvre par les États",
+        "L'introduction de sanctions contraignantes pour les États n'atteignant pas leurs objectifs de protection de la biodiversité"
+      ],
+      "r": 0,
+      "x": "Les Objectifs d'Aichi (2010-2020) avaient largement échoué car trop vagues et sans mécanisme de financement précis. Le Cadre de Kunming-Montréal apporte des objectifs chiffrés (30x30), un cadre de suivi renforcé par des indicateurs et des engagements financiers explicites (30 milliards de dollars par an pour la biodiversité d'ici 2030)."
+    },
+    {
+      "q": "Comment fonctionne une cellule photovoltaïque et quel matériau est le plus utilisé pour sa fabrication industrielle ?",
+      "o": [
+        "Par effet thermoélectrique convertissant le gradient de température en surface en courant électrique continu utilisable",
+        "Par effet photoélectrique, principalement avec des cellules en silicium cristallin (monocristallin ou polycristallin)",
+        "Par fluorescence solaire qui réoriente les photons vers des cellules collectrices placées en bordure du panneau",
+        "Par réaction chimique entre des électrolytes liquides activés par la lumière solaire dans des cellules photo-électrochimiques"
+      ],
+      "r": 1,
+      "x": "Une cellule photovoltaïque convertit la lumière solaire en électricité grâce à l'effet photoélectrique : les photons libèrent des électrons dans le matériau semi-conducteur. Le silicium cristallin (monocristallin et polycristallin) représente plus de 90 % du marché mondial des cellules PV, en raison de son abondance, de son efficience (15–22 %) et de sa durabilité."
+    },
+    {
+      "q": "Quelle est la principale source de pollution de l'air intérieur dans les ménages ruraux du Burkina Faso ?",
+      "o": [
+        "Les émanations de radon provenant des matériaux de construction en latérite utilisés dans les zones rurales sahéliennes",
+        "Les produits chimiques de traitement antiparasitaires pulvérisés à l'intérieur des habitations contre les insectes",
+        "La combustion de biomasse (bois, charbon, résidus agricoles) dans des foyers ouverts mal ventilés pour la cuisson",
+        "La volatilisation de pesticides agricoles stockés dans les habitations rurales à défaut de lieux de stockage sécurisés"
+      ],
+      "r": 2,
+      "x": "La combustion de biomasse (bois, charbon de bois, résidus de récolte) dans des foyers ouverts ou des cuisinières à faible rendement génère des concentrations élevées de PM2,5, de monoxyde de carbone (CO) et d'hydrocarbures aromatiques polycycliques (HAP). L'OMS estime à plusieurs millions le nombre de décès annuels dus à la pollution de l'air intérieur dans les pays en développement."
+    },
+    {
+      "q": "La COP30 sur le changement climatique, tenue à Belém (Brésil) en novembre 2025, revêt une importance particulière. Pourquoi ?",
+      "o": [
+        "Parce que c'est la première COP organisée en Afrique subsaharienne, consacrant le rôle du continent dans la lutte climatique",
+        "Parce qu'elle coïncide avec la fin de la première période d'engagement de l'Accord de Paris et le premier bilan mondial",
+        "Parce qu'elle entérine la suppression du Protocole de Kyoto et son remplacement par un nouveau régime climatique",
+        "Parce qu'elle est organisée au cœur de l'Amazonie, symbolisant la priorité à la déforestation dans les débats climatiques"
+      ],
+      "r": 3,
+      "x": "La COP30 de Belém est symboliquement organisée à proximité de l'Amazonie, la plus vaste forêt tropicale du monde. Elle constitue une échéance cruciale pour la révision des NDC, les pays devant soumettre des contributions plus ambitieuses alignées sur l'objectif de limitation du réchauffement à 1,5°C."
+    },
+    {
+      "q": "Quelles mesures d'atténuation des impacts environnementaux sont imposées aux sociétés minières au Burkina Faso ?",
+      "o": [
+        "Le dépôt d'une caution environnementale, la mise en œuvre d'un PGES et la réhabilitation des sites après exploitation",
+        "L'installation de stations de traitement des eaux à distance des sites pour éviter toute contamination des aquifères",
+        "Le paiement d'une taxe carbone proportionnelle aux émissions générées lors des opérations d'extraction et traitement",
+        "L'obligation de compenser chaque hectare déboisé par la plantation de dix hectares d'arbres dans d'autres zones"
+      ],
+      "r": 0,
+      "x": "Le Code minier du Burkina Faso oblige les sociétés minières à réaliser une EIES avant l'exploitation, à déposer une caution environnementale couvrant les coûts de réhabilitation du site, et à mettre en œuvre un Plan de Gestion Environnementale et Sociale (PGES) incluant la remise en état du site à la fin de l'exploitation."
+    },
+    {
+      "q": "Quel est le rôle des zones humides dans la régulation naturelle des crues et des inondations ?",
+      "o": [
+        "Elles accélèrent l'écoulement des eaux de surface vers les cours d'eau pour réduire les périodes d'inondation",
+        "Elles absorbent et retiennent les excès d'eau lors des épisodes pluvieux, réduisant les pics de crue en aval",
+        "Elles pompent l'eau excédentaire par évapotranspiration intensive, limitant le ruissellement vers les rivières",
+        "Elles dirigent les eaux de ruissellement vers des zones de rétention souterraines grâce à leurs racines profondes"
+      ],
+      "r": 1,
+      "x": "Les zones humides (marais, plaines inondables, tourbières) fonctionnent comme des éponges naturelles : elles absorbent les précipitations et les eaux de crue, les retiennent temporairement et les restituent progressivement. Ce service de régulation hydraulique réduit l'intensité et la durée des inondations en aval, protégeant populations et infrastructures."
+    },
+    {
+      "q": "Quels risques sanitaires sont liés à l'excès de nitrates dans l'eau de boisson ?",
+      "o": [
+        "Des troubles hépatiques graves et une fibrose du foie chez les adultes exposés pendant plus de cinq années",
+        "Des allergies cutanées sévères et des éruptions dermatologiques chez les enfants de moins de cinq ans concernés",
+        "La méthémoglobinémie chez les nourrissons et un risque accru de cancers gastriques chez l'adulte",
+        "Des troubles rénaux chroniques et une insuffisance rénale progressive chez les personnes âgées consommatrices"
+      ],
+      "r": 2,
+      "x": "L'excès de nitrates dans l'eau (seuil OMS : 50 mg/L) provoque chez les nourrissons la méthémoglobinémie (maladie du bébé bleu) : les nitrates réduits en nitrites dans l'estomac immature, oxydent l'hémoglobine en méthémoglobine incapable de transporter l'oxygène (cyanose). Chez l'adulte, les nitrates sont associés à un risque accru de cancers gastriques."
+    },
+    {
+      "q": "Qu'est-ce que le traité international sur les plastiques, dont les négociations ont débuté sous l'égide du PNUE en 2022 ?",
+      "o": [
+        "Un accord commercial réduisant les droits de douane sur les matériaux plastiques recyclés entre pays signataires",
+        "Une convention interdisant la production de nouveaux plastiques à partir de 2030 dans les pays développés signataires",
+        "Un programme de financement international pour construire des usines de recyclage dans les pays en développement",
+        "Un instrument juridique contraignant couvrant l'ensemble du cycle de vie des plastiques pour en réduire la pollution"
+      ],
+      "r": 3,
+      "x": "Depuis la résolution de l'UNEA-5 en 2022, des négociations sont en cours pour un traité international juridiquement contraignant sur les plastiques. Il vise à couvrir l'ensemble du cycle de vie (production, conception, utilisation, déchets) pour mettre fin à la pollution plastique, y compris dans les milieux marins, à l'horizon 2040."
+    },
+    {
+      "q": "Quelles sont les principales sources de pollution atmosphérique identifiées dans les grandes villes burkinabè ?",
+      "o": [
+        "Les émissions des deux-roues motorisés, la poussière de latérite des voies non revêtues et les brûlages de déchets",
+        "Les rejets des industries textiles et chimiques concentrées dans les zones industrielles de la périphérie des villes",
+        "Les émanations gazeuses des centrales hydroélectriques et les aérosols produits par les usines de traitement d'or",
+        "Les effluents gazeux des abattoirs industriels et les émissions de méthane des grandes décharges contrôlées urbaines"
+      ],
+      "r": 0,
+      "x": "À Ouagadougou, la pollution atmosphérique est principalement due aux émissions des deux-roues motorisés (parc vieillissant, carburant de mauvaise qualité), à la poussière soulevée sur les nombreuses voies non revêtues en latérite, et aux brûlages sauvages de déchets solides ménagers et agricoles en périphérie de la ville."
+    },
+    {
+      "q": "En quoi l'agroécologie contribue-t-elle à la conservation de la biodiversité dans les agrosystèmes sahéliens ?",
+      "o": [
+        "En remplaçant toutes les cultures locales par des variétés hybrides sélectionnées à haut rendement et résistantes",
+        "En favorisant la diversité des espèces cultivées, les associations de cultures et les habitats refuges pour la faune auxiliaire",
+        "En éliminant tous les organismes compétiteurs et ravageurs des cultures par des traitements chimiques préventifs",
+        "En clôturant hermétiquement les parcelles agricoles pour empêcher l'entrée des espèces sauvages nuisibles aux cultures"
+      ],
+      "r": 1,
+      "x": "L'agroécologie promeut des pratiques qui imitent les processus naturels des écosystèmes : diversification des cultures (associations, polycultures), maintien de haies et bandes enherbées, réduction des pesticides. Ces pratiques favorisent la biodiversité fonctionnelle (pollinisateurs, auxiliaires, décomposeurs) et renforcent la résilience des agrosystèmes."
+    },
+    {
+      "q": "Quels sont les impacts projetés du changement climatique sur la sécurité alimentaire en Afrique de l'Ouest à l'horizon 2050 ?",
+      "o": [
+        "Une amélioration globale de la disponibilité alimentaire grâce à l'allongement des saisons agricoles dans le Sahel",
+        "Une stabilité des systèmes alimentaires grâce à l'adaptation spontanée des variétés cultivées aux nouvelles conditions",
+        "Une aggravation de l'insécurité alimentaire par la réduction des rendements, le manque d'eau et l'instabilité climatique",
+        "Un déplacement des zones de production agricole vers le nord, libérant des terres au sud pour d'autres usages"
+      ],
+      "r": 2,
+      "x": "Le GIEC projette une aggravation de l'insécurité alimentaire en Afrique de l'Ouest à l'horizon 2050 : baisse des rendements céréaliers (maïs, mil, sorgho), réduction des ressources en eau d'irrigation, intensification des événements extrêmes (sécheresses, inondations) et instabilité accrue des productions agricoles affectant les ménages ruraux."
+    },
+    {
+      "q": "Qu'est-ce que le Fonds vert pour le Climat (FVC) et quel est son rôle dans le financement climatique international ?",
+      "o": [
+        "Un fonds souverain géré par les banques centrales pour financer la transition énergétique des pays développés",
+        "Un mécanisme bilatéral entre l'Union européenne et les pays ACP pour financer les projets d'adaptation en Afrique",
+        "Un programme de l'ONU finançant exclusivement les projets de reboisement dans les pays les moins avancés",
+        "Un fonds opérationnel sous l'égide de la CCNUCC pour mobiliser des financements vers les pays en développement pour le climat"
+      ],
+      "r": 3,
+      "x": "Le Fonds vert pour le Climat (FVC), créé lors de la COP16 (Cancún, 2010) et opérationnel depuis 2015, est le principal instrument financier de la CCNUCC. Il mobilise des ressources des pays développés pour financer des projets d'atténuation et d'adaptation climatiques dans les pays en développement et les pays les moins avancés."
+    },
+    {
+      "q": "Comment la transition agroécologique est-elle mise en œuvre au Burkina Faso dans le contexte de la sécurité alimentaire ?",
+      "o": [
+        "Par le développement de pratiques intégrant la fertilisation organique, la RNA, la gestion intégrée des ravageurs et les semences locales",
+        "Par le remplacement de toutes les cultures traditionnelles par des cultures de rente orientées vers l'exportation mondiale",
+        "Par la mécanisation intensive de l'agriculture familiale grâce à des crédits gouvernementaux pour les équipements",
+        "Par la conversion de toutes les terres cultivées en forêts classées pour renforcer la séquestration carbone nationale"
+      ],
+      "r": 0,
+      "x": "La transition agroécologique au Burkina Faso s'appuie sur des pratiques combinant fertilisation organique (compost, fumure), Régénération Naturelle Assistée (RNA), gestion intégrée des ravageurs, conservation des semences paysannes et techniques CES (cordons pierreux, zaï), pour améliorer durablement la productivité sans intrants chimiques coûteux."
+    },
+    {
+      "q": "Quel est le rôle des organismes du sol dans le maintien de la fertilité des terres agricoles ?",
+      "o": [
+        "Ils imperméabilisent la surface du sol par sécrétion de mucilages pour réduire l'évaporation de l'eau du sol",
+        "Ils décomposent la matière organique, fixent l'azote atmosphérique, contrôlent les ravageurs et structurent le sol",
+        "Ils absorbent et accumulent les métaux lourds présents dans les engrais chimiques pour protéger les cultures",
+        "Ils synthétisent des pesticides naturels protégeant les plantes cultivées contre les maladies et les insectes ravageurs"
+      ],
+      "r": 1,
+      "x": "La vie du sol (bactéries, champignons, vers de terre, nématodes, arthropodes) joue des rôles fondamentaux : décomposition de la matière organique et libération des nutriments, fixation symbiotique de l'azote (légumineuses–rhizobiums), associations mycorhiziennes facilitant l'absorption des phosphates, et activité des vers améliorant la structure du sol."
+    },
+    {
+      "q": "Quel est le mix de production d'électricité visé par le Burkina Faso dans sa politique énergétique à l'horizon 2030 ?",
+      "o": [
+        "Atteindre 100 % d'énergies renouvelables en remplaçant totalement les centrales thermiques au fioul importé",
+        "Maintenir le statu quo avec les centrales thermiques au fioul en ajoutant quelques installations solaires marginales",
+        "Porter la part des énergies renouvelables à environ 30 % du mix électrique national, avec une priorité au solaire",
+        "Développer exclusivement l'hydroélectricité sur les cours d'eau permanents et les retenues d'eau existantes"
+      ],
+      "r": 2,
+      "x": "La politique énergétique du Burkina Faso vise à augmenter significativement la part des énergies renouvelables dans son mix électrique, avec pour objectif d'atteindre environ 30 % de renouvelables à l'horizon 2030, principalement via le développement de l'énergie solaire photovoltaïque, tout en réduisant la dépendance aux importations de fioul."
+    },
+    {
+      "q": "Quel est le lien entre la destruction des écosystèmes naturels et l'émergence de nouvelles maladies infectieuses zoonotiques ?",
+      "o": [
+        "La disparition des habitats naturels réduit les populations d'insectes ravageurs qui transmettent les maladies infectieuses",
+        "La dégradation des milieux naturels augmente la biodiversité microbienne des sols, source de nouveaux antibiotiques",
+        "La destruction des forêts réduit les populations de singes, principaux réservoirs des virus à risque de pandémie mondiale",
+        "La destruction des habitats naturels augmente les contacts entre animaux sauvages, animaux domestiques et humains, favorisant les zoonoses"
+      ],
+      "r": 3,
+      "x": "La déforestation et la fragmentation des écosystèmes poussent les animaux sauvages (réservoirs de pathogènes) à se rapprocher des zones habitées, augmentant les contacts entre faune sauvage, bétail et humains. Ce phénomène facilite le « débordement » (spillover) de pathogènes zoonotiques, à l'origine de la majorité des maladies infectieuses émergentes (COVID-19, Ebola, Nipah)."
+    },
+    {
+      "q": "Comment les changements climatiques affectent-ils concrètement la production agricole au Burkina Faso ?",
+      "o": [
+        "Par la modification des calendriers agricoles, la réduction des pluies utiles, la hausse des températures et l'irrégularité des précipitations",
+        "Par une augmentation significative des précipitations dans les zones sahéliennes permettant de nouvelles cultures humides",
+        "Par un allongement de la saison sèche favorable à la mécanisation agricole et à l'adoption de cultures thermophiles",
+        "Par la réduction de la pression parasitaire grâce aux hivers plus rigoureux éliminant les insectes ravageurs des cultures"
+      ],
+      "r": 0,
+      "x": "Au Burkina Faso, les changements climatiques se traduisent par une irrégularité accrue des précipitations, un raccourcissement de la saison des pluies, une hausse des températures et une multiplication des sécheresses et inondations. Ces modifications perturbent les calendriers agricoles, réduisent les rendements des céréales et aggravent l'insécurité alimentaire."
+    },
+    {
+      "q": "Quelles espèces sauvages sont les plus affectées par la pollution lumineuse nocturne en milieu tropical africain ?",
+      "o": [
+        "Les grands mammifères herbivores diurnes dont les cycles de pâturage nocturne sont perturbés par l'éclairage artificiel",
+        "Les insectes nocturnes (coléoptères, papillons de nuit, éphémères) et les reptiles à orientation visuelle nocturne",
+        "Les oiseaux diurnes dont les cycles de reproduction sont accélérés par l'éclairage nocturne artificiel en milieu urbain",
+        "Les poissons des zones côtières dont la migration reproductrice est bloquée par les lumières des bateaux de pêche"
+      ],
+      "r": 1,
+      "x": "En milieu tropical, la pollution lumineuse affecte principalement les insectes nocturnes (attirés et tués par les lumières artificielles), les reptiles nocturnes (geckos, crocodiles), les chauves-souris (modification des comportements de chasse) et les plantes à floraison nocturne (perturbation de la pollinisation par les insectes nocturnes)."
+    },
+    {
+      "q": "Qu'est-ce que la biomagnification dans le contexte de la contamination par les polluants organiques persistants (POPs) ?",
+      "o": [
+        "Le processus par lequel une substance augmente spontanément sa toxicité lorsque la température du milieu augmente",
+        "La capacité de certains champignons à amplifier biologiquement la toxicité des polluants organiques dans le sol",
+        "L'augmentation progressive de la concentration d'un polluant à chaque niveau trophique de la chaîne alimentaire",
+        "La multiplication des effets toxiques d'un polluant lorsqu'il est combiné à d'autres substances chimiques du milieu"
+      ],
+      "r": 2,
+      "x": "La biomagnification désigne l'augmentation progressive de la concentration d'un contaminant liposoluble (DDT, PCB, mercure méthylé) à chaque niveau trophique. Les prédateurs au sommet des chaînes alimentaires (grands poissons, oiseaux rapaces, mammifères marins, humains) accumulent des concentrations bien plus élevées que celles du milieu."
+    },
+    {
+      "q": "Quel enjeu environnemental et éthique pose le commerce non réglementé des ressources génétiques africaines ?",
+      "o": [
+        "L'appauvrissement des variétés locales par croisement accidentel avec des espèces génétiquement modifiées importées",
+        "La pollution génétique des espèces sauvages africaines par les variétés hybrides commerciales introduites depuis l'Europe",
+        "La déperdition des connaissances traditionnelles associées aux plantes médicinales du fait de l'urbanisation rapide",
+        "La biopiraterie : l'utilisation sans compensation des ressources génétiques et savoirs traditionnels africains par des entreprises"
+      ],
+      "r": 3,
+      "x": "La biopiraterie désigne l'appropriation et la brevetabilité de ressources génétiques (plantes, micro-organismes) ou de savoirs traditionnels associés, sans le consentement ni la compensation des communautés ou États d'origine. Le Protocole de Nagoya (2010) vise à lutter contre cette pratique en établissant des règles de partage équitable des avantages."
+    },
+    {
+      "q": "Quels sont les principaux impacts environnementaux de l'élevage extensif au Burkina Faso dans le contexte climatique actuel ?",
+      "o": [
+        "La dégradation du couvert végétal par surpâturage, les émissions de méthane entérique et la compaction des sols",
+        "L'enrichissement en nutriments des sols de pâturage grâce aux déjections animales renforçant leur fertilité naturelle",
+        "La réduction de la pression sur les ressources ligneuses grâce à l'alimentation des troupeaux en résidus agricoles",
+        "L'amélioration de la biodiversité des prairies sahéliennes grâce au pâturage contrôlé des troupeaux transhumants"
+      ],
+      "r": 0,
+      "x": "L'élevage extensif au Burkina Faso contribue à la dégradation de l'environnement par le surpâturage (disparition du couvert végétal, érosion des sols), les émissions de méthane entérique des ruminants (GES puissant), la compaction des sols par le piétinement et la pression sur les ressources ligneuses en saison sèche."
+    },
+    {
+      "q": "Qu'est-ce que le principe de précaution en droit de l'environnement et dans quel contexte s'applique-t-il ?",
+      "o": [
+        "L'obligation d'indemniser les victimes de catastrophes environnementales avant que leur causalité soit établie",
+        "L'obligation de prendre des mesures préventives face à des risques potentiels graves pour l'environnement, même sans certitude scientifique absolue",
+        "L'interdiction absolue de toute activité industrielle présentant un risque environnemental non nul pour la nature",
+        "L'obligation pour les entreprises de démontrer scientifiquement l'innocuité d'un produit avant sa mise sur le marché"
+      ],
+      "r": 1,
+      "x": "Le principe de précaution, consacré par la Déclaration de Rio (1992) et intégré dans de nombreux droits nationaux, impose de prendre des mesures de prévention face à des risques graves et irréversibles, même lorsque la certitude scientifique est incomplète. Il s'applique notamment aux OGM, nanotechnologies et perturbateurs endocriniens."
+    },
+    {
+      "q": "Qu'est-ce que la Responsabilité Élargie du Producteur (REP) en matière de gestion des déchets ?",
+      "o": [
+        "L'obligation légale pour les distributeurs de reprendre et traiter les produits défectueux retournés par les consommateurs",
+        "La responsabilité pénale des dirigeants d'entreprise pour les pollutions causées par leurs produits en fin de vie",
+        "Le principe selon lequel les producteurs sont responsables de la gestion des déchets issus de leurs produits en fin de vie",
+        "L'obligation pour les États de financer le recyclage des déchets industriels au titre de la solidarité environnementale"
+      ],
+      "r": 2,
+      "x": "La REP étend la responsabilité des fabricants au-delà de la vente : ils doivent organiser et financer la collecte, le tri et le recyclage de leurs produits en fin de vie (emballages, DEEE, pneus, piles). Ce principe, adopté dans de nombreux pays, internalise le coût environnemental dans le prix des produits mis sur le marché."
+    },
+    {
+      "q": "Quelle est la relation entre l'agroécologie et la lutte contre les changements climatiques en Afrique subsaharienne ?",
+      "o": [
+        "L'agroécologie augmente les besoins en eau d'irrigation, aggravant la pression sur les ressources hydriques limitées",
+        "L'agroécologie produit des rendements inférieurs à l'agriculture conventionnelle, menaçant la sécurité alimentaire",
+        "L'agroécologie n'a aucun lien direct avec la lutte climatique car elle n'est pas une source significative de GES",
+        "L'agroécologie séquestre du carbone, réduit les émissions agricoles et renforce la résilience face aux aléas climatiques"
+      ],
+      "r": 3,
+      "x": "L'agroécologie contribue à la lutte climatique de deux façons : l'atténuation, par la séquestration de carbone dans les sols et la réduction des émissions (moins d'engrais azotés, moins de mécanisation), et l'adaptation, en renforçant la résilience des agrosystèmes face aux sécheresses, inondations et irrégularités pluviométriques."
+    },
+    {
+      "q": "Quels types de zones humides au Burkina Faso bénéficient du statut de site Ramsar (zones humides d'importance internationale) ?",
+      "o": [
+        "Des mares permanentes, des plaines inondables et des zones lacustres identifiées pour leur biodiversité et leur rôle écologique",
+        "Exclusivement les retenues d'eau créées par les grands barrages hydroélectriques du fait de leur volume d'eau important",
+        "Le Burkina Faso ne dispose d'aucun site Ramsar car son statut de pays enclavé l'exclut des zones humides côtières",
+        "Uniquement les forêts galeries des cours d'eau permanents protégées pour leur rôle de puits de carbone naturel"
+      ],
+      "r": 0,
+      "x": "Le Burkina Faso possède plusieurs sites inscrits à la liste Ramsar, dont la mare d'Oursi (région du Sahel), le fleuve Sourou et d'autres zones humides intérieures. Ces sites sont reconnus pour leur biodiversité (oiseaux migrateurs, reptiles, amphibiens, poissons) et leur rôle vital pour les communautés humaines riveraines."
+    },
+    {
+      "q": "Quel service environnemental fondamental les zones humides rendent-elles aux communautés rurales du Burkina Faso ?",
+      "o": [
+        "La production d'électricité verte par les micro-turbines installées sur les cours d'eau traversant les marais",
+        "La fourniture de ressources alimentaires (poissons, végétaux aquatiques, gibier d'eau), d'eau et de fourrage en saison sèche",
+        "La fabrication de matériaux de construction biosourcés à partir des plantes aquatiques des zones marécageuses",
+        "La purification biologique des eaux usées domestiques par filtration naturelle à travers les plantes aquatiques"
+      ],
+      "r": 1,
+      "x": "Les zones humides burkinabè fournissent des services vitaux aux communautés rurales : ressources alimentaires (pêche, chasse au gibier d'eau, végétaux aquatiques comestibles), eau pour la boisson et l'abreuvement du bétail, et fourrage de saison sèche (herbiers aquatiques) essentiel pour la survie des troupeaux en période de soudure."
+    },
+    {
+      "q": "Quel risque environnemental grave est associé à l'utilisation du cyanure dans le traitement industriel de l'or ?",
+      "o": [
+        "La formation de dépôts solides imperméables dans les cours d'eau empêchant la migration des poissons migrateurs",
+        "La contamination radioactive des eaux de surface par des isotopes du cyanure instables présents dans les solutions",
+        "La contamination mortelle des eaux de surface et souterraines par déversement accidentel de solutions cyanurées",
+        "La génération de gaz cyanhydrique diffusé dans l'atmosphère causant des pluies acides dans un rayon de 50 km"
+      ],
+      "r": 2,
+      "x": "Le procédé de cyanuration dissout l'or dans une solution basique de cyanure de sodium. Un déversement accidentel (rupture de digue de stériles) peut contaminer les cours d'eau et nappes phréatiques, causant des mortalités massives d'organismes aquatiques et des risques sanitaires graves pour les communautés riveraines dépendantes de ces ressources en eau."
+    },
+    {
+      "q": "Comment le développement des énergies renouvelables peut-il contribuer à réduire la pauvreté en Afrique subsaharienne ?",
+      "o": [
+        "En réduisant le coût de l'électricité de 50 % grâce à la suppression des taxes d'importation sur les panneaux solaires",
+        "En permettant aux gouvernements de réorienter les subventions aux combustibles fossiles vers les politiques sociales",
+        "En augmentant la valeur des exportations africaines de pétrole grâce à la réduction de la concurrence mondiale",
+        "En permettant l'accès à l'électricité des ménages ruraux pour l'éclairage, la pompe à eau et les activités lucratives"
+      ],
+      "r": 3,
+      "x": "L'accès à l'électricité via les énergies renouvelables (solaire hors réseau, mini-réseaux) transforme les conditions de vie rurales : éclairage des habitations et des écoles, pompage solaire pour l'eau potable et l'irrigation, réfrigération des aliments et des vaccins, et développement d'activités économiques (artisanat, commerce, transformation agro-alimentaire)."
+    },
+    {
+      "q": "En quoi l'écotourisme peut-il contribuer à la conservation de la biodiversité dans les aires protégées du Burkina Faso ?",
+      "o": [
+        "En générant des revenus finançant la gestion des aires protégées et en associant les communautés locales à la conservation",
+        "En attirant des scientifiques étrangers qui réalisent gratuitement des études d'impact environnemental dans les parcs",
+        "En réduisant le braconnage grâce à la présence de touristes armés servant de dissuasion pour les chasseurs illégaux",
+        "En créant des emplois pour les agents forestiers gouvernementaux licenciés lors des réductions budgétaires de l'État"
+      ],
+      "r": 0,
+      "x": "L'écotourisme bien géré génère des revenus (droits d'entrée, guides, hébergement) permettant de financer la gestion des aires protégées et les salaires des gardiens, et associe les communautés locales à la valorisation des ressources naturelles, créant une incitation économique à leur protection sur le long terme."
+    },
+    {
+      "q": "Comment les changements climatiques peuvent-ils contribuer à l'aggravation des conflits au Sahel ?",
+      "o": [
+        "En provoquant des migrations climatiques qui déstabilisent les institutions politiques des États d'accueil sahéliens",
+        "En accentuant la compétition pour les ressources (eau, pâturages, terres agricoles) entre agriculteurs et éleveurs",
+        "En réduisant les revenus fiscaux des États liés à l'exploitation agricole, limitant leurs capacités de maintien de la paix",
+        "En favorisant le développement des organisations extrémistes exploitant la frustration des populations déplacées"
+      ],
+      "r": 1,
+      "x": "Les changements climatiques aggravent les conflits au Sahel en intensifiant la compétition pour les ressources naturelles. La réduction des pluies, la dégradation des pâturages et la raréfaction de l'eau accentuent les tensions entre agriculteurs sédentaires et éleveurs transhumants sur les terres et les points d'eau, contribuant à l'instabilité sécuritaire dans la région."
+    },
+    {
+      "q": "Quel lien existe-t-il entre désertification et migrations internes au Burkina Faso ?",
+      "o": [
+        "La désertification entraîne une amélioration des terres côtières, concentrant les migrations vers les villes portuaires",
+        "Les migrations liées à la désertification sont principalement des migrations internationales vers les pays côtiers voisins",
+        "La dégradation des terres pousse les populations rurales à migrer vers les villes ou vers des zones agricoles moins dégradées",
+        "La désertification n'influence pas les migrations car les populations s'adaptent toujours localement aux nouvelles conditions"
+      ],
+      "r": 2,
+      "x": "La désertification, en réduisant la productivité agricole et les ressources disponibles, est l'un des principaux facteurs de déplacement interne au Burkina Faso. Les populations des zones sahéliennes dégradées migrent vers les zones agricoles du Centre-Ouest ou vers les villes, générant des tensions foncières et sociales dans les zones d'accueil."
+    },
+    {
+      "q": "Quelle est la contribution relative du Burkina Faso aux émissions mondiales de gaz à effet de serre ?",
+      "o": [
+        "Le Burkina Faso émet environ 5 % des émissions africaines de GES en raison de sa production industrielle croissante",
+        "Le Burkina Faso est responsable d'environ 2 % des émissions mondiales du fait de sa forte dépendance aux fossiles",
+        "Les émissions du Burkina Faso représentent environ 10 % des émissions de l'Afrique subsaharienne par sa population",
+        "Le Burkina Faso est un très faible émetteur mondial de GES, ses émissions étant surtout liées à l'agriculture"
+      ],
+      "r": 3,
+      "x": "Comme la plupart des pays les moins avancés, le Burkina Faso contribue très marginalement aux émissions mondiales de GES (moins de 0,1 %). Ses émissions sont principalement liées à l'agriculture (méthane entérique du bétail), aux changements d'affectation des terres (déforestation) et à la combustion de biomasse, et non à l'industrie lourde."
     }
   ],
   "douane": [
@@ -30180,6 +36945,2206 @@ const QUESTIONS = {
       ],
       "r": 1,
       "x": "Un navigateur web (Chrome, Firefox, Edge, Safari) permet de consulter les sites Internet. Il interprète le code HTML/CSS/JS."
+    },
+    {
+      "q": "Qui est considéré comme le père de l'informatique théorique pour ses travaux sur les machines à calculer universelles ?",
+      "o": [
+        "Bill Gates",
+        "John von Neumann",
+        "Alan Turing",
+        "Steve Jobs"
+      ],
+      "r": 2,
+      "x": "Alan Turing a formalisé le concept de machine universelle capable d'exécuter n'importe quel algorithme. John von Neumann a quant à lui posé les bases de l'architecture des ordinateurs modernes."
+    },
+    {
+      "q": "En quelle décennie est apparu le premier microprocesseur commercial, l'Intel 4004 ?",
+      "o": [
+        "Les années 1950",
+        "Les années 1970",
+        "Les années 1960",
+        "Les années 1980"
+      ],
+      "r": 1,
+      "x": "L'Intel 4004, premier microprocesseur commercial, a été lancé en novembre 1971, soit dans les années 1970. Il comportait 2 300 transistors et fonctionnait à 740 kHz."
+    },
+    {
+      "q": "Quel est le nom du premier ordinateur entièrement électronique à usage général, mis en service en 1945 aux États-Unis ?",
+      "o": [
+        "IBM 360",
+        "Altair 8800",
+        "ENIAC",
+        "Apple I"
+      ],
+      "r": 2,
+      "x": "L'ENIAC (Electronic Numerical Integrator and Computer) a été mis en service en 1945 à l'Université de Pennsylvanie. L'IBM 360 date de 1964 et l'Apple I de 1976."
+    },
+    {
+      "q": "Selon la loi de Moore formulée en 1965, quel paramètre double environ tous les deux ans ?",
+      "o": [
+        "La capacité des disques durs",
+        "La vitesse des connexions Internet",
+        "La taille des écrans d'ordinateurs",
+        "Le nombre de transistors sur un processeur"
+      ],
+      "r": 3,
+      "x": "La loi de Moore prédit que le nombre de transistors sur un processeur double environ tous les deux ans, entraînant une augmentation continue de la puissance de calcul. Cette loi a guidé l'industrie informatique pendant plusieurs décennies."
+    },
+    {
+      "q": "Quelle unité sert à mesurer la fréquence d'horloge d'un processeur ?",
+      "o": [
+        "Le hertz",
+        "L'octet",
+        "Le pixel",
+        "Le watt"
+      ],
+      "r": 0,
+      "x": "La fréquence d'horloge d'un processeur se mesure en hertz (Hz) et ses multiples (MHz, GHz). L'octet mesure la capacité de stockage, le pixel est l'unité d'image et le watt mesure la puissance électrique consommée."
+    },
+    {
+      "q": "Quel composant assure le stockage permanent des données lorsque l'ordinateur est éteint ?",
+      "o": [
+        "La mémoire cache",
+        "Le disque dur",
+        "La mémoire vive",
+        "Le processeur central"
+      ],
+      "r": 1,
+      "x": "Le disque dur assure le stockage permanent des données même hors tension. La mémoire vive (RAM) et la mémoire cache sont des mémoires volatiles qui perdent leur contenu à l'extinction de l'ordinateur."
+    },
+    {
+      "q": "Que signifie l'acronyme RAM dans le domaine informatique ?",
+      "o": [
+        "Read Action Module",
+        "Rapid Application Memory",
+        "Random Access Memory",
+        "Real Allocation Module"
+      ],
+      "r": 2,
+      "x": "RAM signifie Random Access Memory (mémoire à accès aléatoire). C'est la mémoire de travail de l'ordinateur, volatile, qui stocke temporairement les données des programmes en cours d'exécution."
+    },
+    {
+      "q": "Quelle interface de connexion est aujourd'hui la plus répandue pour connecter des périphériques externes à un ordinateur ?",
+      "o": [
+        "Le port VGA",
+        "Le port parallèle",
+        "Le port série",
+        "Le port USB"
+      ],
+      "r": 3,
+      "x": "Le port USB (Universal Serial Bus) est l'interface standard pour connecter les périphériques (clés USB, souris, claviers, disques externes). Le port VGA est réservé à l'affichage, le port parallèle et le port série sont devenus obsolètes."
+    },
+    {
+      "q": "Quelle technologie de stockage interne est plus rapide et plus résistante aux chocs qu'un disque dur magnétique classique ?",
+      "o": [
+        "Le disque SSD",
+        "La clé USB",
+        "Le DVD-ROM",
+        "Le disque optique"
+      ],
+      "r": 0,
+      "x": "Le disque SSD (Solid State Drive) utilise de la mémoire flash sans pièce mobile, ce qui le rend plus rapide, silencieux et résistant aux chocs que le disque dur magnétique. Les autres options ne constituent pas un stockage interne principal."
+    },
+    {
+      "q": "Quelle est la capacité d'un gigaoctet exprimée en mégaoctets ?",
+      "o": [
+        "512 Mo",
+        "1 024 Mo",
+        "256 Mo",
+        "2 048 Mo"
+      ],
+      "r": 1,
+      "x": "Un gigaoctet (Go) est égal à 1 024 mégaoctets (Mo), car les unités informatiques sont basées sur des puissances de 2. Ainsi 1 Go = 2^10 Mo = 1 024 Mo."
+    },
+    {
+      "q": "Qu'est-ce qu'un logiciel libre ?",
+      "o": [
+        "Un logiciel gratuit disponible sur Internet",
+        "Un logiciel fourni avec tout ordinateur neuf",
+        "Un logiciel dont le code source est accessible, modifiable et redistribuable",
+        "Un logiciel appartenant au domaine public"
+      ],
+      "r": 2,
+      "x": "Un logiciel libre garantit quatre libertés : utiliser, étudier, modifier et redistribuer le programme. La gratuité n'est pas une condition obligatoire du logiciel libre, contrairement à l'accès au code source."
+    },
+    {
+      "q": "Parmi les suites bureautiques suivantes, laquelle est entièrement libre et gratuite ?",
+      "o": [
+        "Microsoft Office",
+        "Google Workspace",
+        "Adobe Creative Suite",
+        "LibreOffice"
+      ],
+      "r": 3,
+      "x": "LibreOffice est une suite bureautique libre, gratuite et open source comprenant traitement de texte, tableur et logiciel de présentation. Microsoft Office et Adobe sont propriétaires et payants, Google Workspace est en ligne avec une version gratuite limitée."
+    },
+    {
+      "q": "Qu'est-ce qu'un pilote informatique (driver) ?",
+      "o": [
+        "Un logiciel permettant au système d'exploitation de piloter un périphérique",
+        "Un programme antivirus intégré au système",
+        "Un outil de compression et d'archivage de fichiers",
+        "Un utilitaire de sauvegarde automatique des données"
+      ],
+      "r": 0,
+      "x": "Un pilote est un logiciel intermédiaire permettant au système d'exploitation de communiquer avec un périphérique matériel (imprimante, carte graphique, clavier). Sans pilote, le système ne peut pas reconnaître ni utiliser le périphérique."
+    },
+    {
+      "q": "Quelle est la différence fondamentale entre un logiciel propriétaire et un logiciel open source ?",
+      "o": [
+        "Le logiciel propriétaire est toujours payant tandis que l'open source est toujours gratuit",
+        "Le logiciel propriétaire interdit l'accès et la modification de son code source",
+        "Le logiciel open source nécessite une connexion Internet permanente",
+        "Le logiciel propriétaire offre systématiquement de meilleures performances"
+      ],
+      "r": 1,
+      "x": "La différence fondamentale réside dans l'accès au code source : le logiciel propriétaire le garde secret et interdit sa modification, tandis que l'open source le rend librement accessible. La gratuité n'est pas le critère déterminant."
+    },
+    {
+      "q": "Quel type de logiciel est principalement utilisé pour gérer, organiser et analyser des données tabulaires ?",
+      "o": [
+        "Un traitement de texte",
+        "Un logiciel de présentation",
+        "Un tableur",
+        "Un navigateur web"
+      ],
+      "r": 2,
+      "x": "Le tableur organise les données en lignes et colonnes et permet d'effectuer des calculs, créer des graphiques et analyser des données. Microsoft Excel et LibreOffice Calc sont les tableurs les plus utilisés dans les administrations."
+    },
+    {
+      "q": "Quel est le rôle fondamental d'un système d'exploitation ?",
+      "o": [
+        "Naviguer sur Internet et afficher des pages web",
+        "Créer et éditer des documents bureautiques",
+        "Protéger l'ordinateur contre les virus et malwares",
+        "Gérer les ressources matérielles et coordonner les logiciels"
+      ],
+      "r": 3,
+      "x": "Le système d'exploitation gère les ressources matérielles (processeur, mémoire, périphériques) et fournit une interface entre l'utilisateur, les logiciels et le matériel. Il permet l'exécution des applications installées."
+    },
+    {
+      "q": "Parmi les systèmes d'exploitation suivants, lequel est distribué sous licence open source ?",
+      "o": [
+        "Linux",
+        "Windows 11",
+        "macOS Ventura",
+        "MS-DOS"
+      ],
+      "r": 0,
+      "x": "Linux est un noyau open source distribué sous licence GNU GPL, dont le code source est librement accessible et modifiable. Windows et macOS sont des systèmes propriétaires à code fermé. MS-DOS était également un système propriétaire de Microsoft."
+    },
+    {
+      "q": "Dans un système Linux, quel répertoire contient les fichiers de configuration du système ?",
+      "o": [
+        "/home",
+        "/etc",
+        "/bin",
+        "/usr"
+      ],
+      "r": 1,
+      "x": "Le répertoire /etc contient les fichiers de configuration du système Linux. /home héberge les dossiers des utilisateurs, /bin contient les exécutables essentiels, et /usr regroupe les logiciels installés par l'administrateur."
+    },
+    {
+      "q": "Quelle commande Linux permet d'afficher le contenu d'un répertoire ?",
+      "o": [
+        "pwd",
+        "cd",
+        "ls",
+        "rm"
+      ],
+      "r": 2,
+      "x": "La commande ls (list) affiche le contenu d'un répertoire sous Linux. pwd affiche le répertoire courant, cd permet de changer de répertoire, et rm supprime des fichiers ou des dossiers."
+    },
+    {
+      "q": "Qu'est-ce que le noyau (kernel) dans un système d'exploitation ?",
+      "o": [
+        "L'interface graphique permettant à l'utilisateur d'interagir avec le système",
+        "Le gestionnaire de fichiers du système d'exploitation",
+        "Le programme antivirus intégré au système",
+        "La partie centrale gérant les ressources matérielles et logicielles"
+      ],
+      "r": 3,
+      "x": "Le noyau est le composant central du système d'exploitation qui gère directement les ressources matérielles (mémoire, processeur, périphériques). L'interface graphique est une couche distincte, superposée au noyau."
+    },
+    {
+      "q": "Quelle combinaison de touches ouvre l'écran de sécurité donnant accès au gestionnaire des tâches sous Windows ?",
+      "o": [
+        "Ctrl + Alt + Suppr",
+        "Ctrl + Z",
+        "Alt + F4",
+        "Windows + D"
+      ],
+      "r": 0,
+      "x": "Ctrl + Alt + Suppr ouvre l'écran de sécurité Windows permettant d'accéder au gestionnaire des tâches, de verrouiller la session ou de déconnecter l'utilisateur. Ctrl + Z annule une action, Alt + F4 ferme une fenêtre, Windows + D affiche le bureau."
+    },
+    {
+      "q": "Que signifie l'acronyme LAN dans le domaine des réseaux informatiques ?",
+      "o": [
+        "Large Area Network",
+        "Local Area Network",
+        "Linked Application Node",
+        "Long Access Network"
+      ],
+      "r": 1,
+      "x": "LAN signifie Local Area Network (réseau local). Il connecte des appareils dans un espace limité comme un bureau ou un bâtiment. Le WAN couvre de grandes distances, le MAN couvre une ville, et le PAN couvre la zone personnelle d'un utilisateur."
+    },
+    {
+      "q": "Quel protocole attribue automatiquement une adresse IP à un appareil lors de sa connexion à un réseau ?",
+      "o": [
+        "DNS",
+        "FTP",
+        "DHCP",
+        "SMTP"
+      ],
+      "r": 2,
+      "x": "Le protocole DHCP (Dynamic Host Configuration Protocol) attribue automatiquement les adresses IP aux appareils d'un réseau. DNS traduit les noms de domaine, FTP permet le transfert de fichiers, et SMTP gère l'envoi des courriels."
+    },
+    {
+      "q": "Combien de bits compose une adresse IPv4 standard ?",
+      "o": [
+        "16 bits",
+        "64 bits",
+        "8 bits",
+        "32 bits"
+      ],
+      "r": 3,
+      "x": "Une adresse IPv4 est composée de 32 bits, représentée en quatre groupes de 8 bits séparés par des points (ex. : 192.168.1.1). L'IPv6 utilise 128 bits pour pallier l'épuisement des adresses disponibles."
+    },
+    {
+      "q": "Quel protocole réseau traduit les noms de domaine en adresses IP ?",
+      "o": [
+        "DNS",
+        "SMTP",
+        "FTP",
+        "DHCP"
+      ],
+      "r": 0,
+      "x": "Le DNS (Domain Name System) fait office d'annuaire d'Internet en traduisant les noms de domaine lisibles par l'humain en adresses IP numériques. Sans le DNS, les utilisateurs devraient mémoriser les adresses IP de chaque site."
+    },
+    {
+      "q": "Qu'est-ce qu'un pare-feu (firewall) dans un réseau informatique ?",
+      "o": [
+        "Un protocole de chiffrement des données en transit sur le réseau",
+        "Un dispositif filtrant le trafic réseau selon des règles de sécurité",
+        "Un routeur dédié exclusivement aux connexions sans fil",
+        "Un logiciel antivirus installé sur le serveur principal"
+      ],
+      "r": 1,
+      "x": "Le pare-feu analyse et filtre les paquets de données entrants et sortants selon des règles prédéfinies. Il protège le réseau contre les accès non autorisés. Il diffère de l'antivirus qui cible les fichiers malveillants."
+    },
+    {
+      "q": "Quel type de réseau couvre une très grande zone géographique comme un pays ou un continent ?",
+      "o": [
+        "LAN",
+        "PAN",
+        "WAN",
+        "MAN"
+      ],
+      "r": 2,
+      "x": "Le WAN (Wide Area Network) couvre de très larges zones géographiques. Internet est le plus grand WAN existant. Le LAN est local, le MAN couvre une ville, et le PAN couvre la zone personnelle immédiate d'un utilisateur."
+    },
+    {
+      "q": "Quelle technologie sans fil est la plus utilisée pour connecter des appareils à Internet dans les bureaux et domiciles ?",
+      "o": [
+        "Bluetooth",
+        "NFC",
+        "Infrarouge",
+        "Wi-Fi"
+      ],
+      "r": 3,
+      "x": "Le Wi-Fi est la technologie sans fil standard pour l'accès à Internet dans les environnements domestiques et professionnels. Bluetooth est limité en portée et débit, NFC en distance, et l'infrarouge est devenu obsolète."
+    },
+    {
+      "q": "Quel protocole permet le transfert sécurisé de fichiers entre un client et un serveur sur un réseau ?",
+      "o": [
+        "SFTP",
+        "HTTP",
+        "POP3",
+        "IMAP"
+      ],
+      "r": 0,
+      "x": "SFTP (Secure File Transfer Protocol) transfère des fichiers en les chiffrant via SSH. HTTP est un protocole de navigation web, POP3 et IMAP servent à la réception des courriels électroniques."
+    },
+    {
+      "q": "Que signifie l'acronyme URL dans le domaine d'Internet ?",
+      "o": [
+        "Universal Reference Link",
+        "Uniform Resource Locator",
+        "Unified Remote Location",
+        "Universal Resource Loader"
+      ],
+      "r": 1,
+      "x": "URL signifie Uniform Resource Locator. C'est l'adresse permettant de localiser une ressource sur Internet. Elle comprend le protocole, le nom de domaine et le chemin de la ressource (ex. : https://www.exemple.com/page)."
+    },
+    {
+      "q": "Quel protocole est utilisé pour l'envoi des courriers électroniques ?",
+      "o": [
+        "POP3",
+        "IMAP",
+        "SMTP",
+        "FTP"
+      ],
+      "r": 2,
+      "x": "SMTP (Simple Mail Transfer Protocol) est le protocole standard pour l'envoi de courriels entre serveurs de messagerie. POP3 et IMAP servent à la réception des courriels, et FTP est destiné au transfert de fichiers."
+    },
+    {
+      "q": "Qu'est-ce qu'un navigateur web ?",
+      "o": [
+        "Un logiciel permettant de créer et publier des sites Internet",
+        "Un programme utilisé pour envoyer et recevoir des courriels",
+        "Un outil de gestion des réseaux locaux d'entreprise",
+        "Un logiciel permettant d'accéder et de consulter des pages web"
+      ],
+      "r": 3,
+      "x": "Un navigateur web (Firefox, Chrome, Edge) interprète et affiche les pages HTML récupérées sur les serveurs via HTTP ou HTTPS. Il ne crée pas de sites, ne gère pas les courriels et ne pilote pas les réseaux locaux."
+    },
+    {
+      "q": "Que désigne l'expression World Wide Web ?",
+      "o": [
+        "Un système mondial de documents hypertextes interconnectés accessibles via Internet",
+        "Un réseau privé réservé aux institutions gouvernementales mondiales",
+        "Un protocole de communication entre serveurs et navigateurs web",
+        "Un ensemble de câbles sous-marins reliant les continents entre eux"
+      ],
+      "r": 0,
+      "x": "Le World Wide Web est un système d'information mondial basé sur des documents hypertextes reliés par des liens, accessibles via Internet. Il a été inventé par Tim Berners-Lee en 1989. Internet est l'infrastructure réseau sur laquelle le Web repose."
+    },
+    {
+      "q": "Qu'est-ce qu'un cookie dans le contexte de la navigation sur Internet ?",
+      "o": [
+        "Un virus téléchargé lors de la visite d'un site non sécurisé",
+        "Un fichier stocké par le navigateur contenant des informations sur l'utilisateur",
+        "Un protocole de sécurisation des échanges en ligne",
+        "Un logiciel publicitaire s'installant à l'insu de l'utilisateur"
+      ],
+      "r": 1,
+      "x": "Un cookie est un petit fichier texte enregistré par le navigateur sur l'ordinateur de l'utilisateur pour mémoriser ses préférences, sa session ou son comportement de navigation. Les cookies ne sont pas des virus mais posent des questions de vie privée."
+    },
+    {
+      "q": "Quel protocole sécurise les échanges entre un navigateur et un serveur web grâce au chiffrement TLS ?",
+      "o": [
+        "HTTP",
+        "FTP",
+        "HTTPS",
+        "SMTP"
+      ],
+      "r": 2,
+      "x": "HTTPS (HyperText Transfer Protocol Secure) est la version sécurisée de HTTP. Il utilise TLS pour chiffrer les données échangées, garantissant confidentialité et intégrité. Un cadenas dans la barre d'adresse indique une connexion HTTPS."
+    },
+    {
+      "q": "Qu'est-ce qu'un moteur de recherche ?",
+      "o": [
+        "Un logiciel permettant de créer et gérer un site web",
+        "Un protocole permettant d'accélérer la connexion Internet",
+        "Un programme analysant et filtrant le contenu des courriels entrants",
+        "Un outil indexant les pages web et permettant d'y rechercher des informations"
+      ],
+      "r": 3,
+      "x": "Un moteur de recherche (Google, Bing, Yahoo) parcourt et indexe les pages web à l'aide de robots, puis permet de trouver des informations par mots-clés. Il ne crée pas de sites ni ne gère les connexions Internet."
+    },
+    {
+      "q": "Qu'est-ce qu'un virus informatique ?",
+      "o": [
+        "Un programme malveillant capable de se reproduire et d'infecter d'autres fichiers",
+        "Un logiciel qui ralentit volontairement la connexion Internet",
+        "Un outil de surveillance du trafic sur le réseau",
+        "Un programme de compression de données corrompues"
+      ],
+      "r": 0,
+      "x": "Un virus informatique est un code malveillant qui se réplique en s'attachant à d'autres fichiers. Il peut endommager le système ou voler des données. Il se distingue du ver, qui se propage seul sans avoir besoin d'un fichier hôte."
+    },
+    {
+      "q": "Que signifie l'acronyme VPN dans le domaine de la cybersécurité ?",
+      "o": [
+        "Verified Private Node",
+        "Virtual Private Network",
+        "Virtual Protocol Navigator",
+        "Very Protected Navigation"
+      ],
+      "r": 1,
+      "x": "VPN signifie Virtual Private Network (réseau privé virtuel). Il crée un tunnel chiffré entre l'appareil de l'utilisateur et un serveur distant, masquant l'adresse IP et sécurisant les communications, notamment sur les réseaux Wi-Fi publics."
+    },
+    {
+      "q": "Qu'est-ce que le chiffrement des données ?",
+      "o": [
+        "La compression des fichiers pour réduire l'espace de stockage occupé",
+        "La suppression définitive et irréversible des données sensibles",
+        "La conversion des données en un format illisible sans clé de déchiffrement",
+        "La duplication des données sur un serveur de sauvegarde distant"
+      ],
+      "r": 2,
+      "x": "Le chiffrement transforme des données lisibles en données codées grâce à un algorithme et une clé. Seul le détenteur de la clé peut les déchiffrer. C'est le fondement de la sécurité des communications numériques."
+    },
+    {
+      "q": "Quel type de logiciel malveillant se déguise en programme légitime pour tromper l'utilisateur ?",
+      "o": [
+        "Un ver informatique",
+        "Un logiciel espion",
+        "Un logiciel publicitaire",
+        "Un cheval de Troie"
+      ],
+      "r": 3,
+      "x": "Un cheval de Troie se présente comme un programme utile pour inciter l'utilisateur à l'installer. Il peut ouvrir une porte dérobée, voler des données ou installer d'autres malwares. Il ne se réplique pas, contrairement au virus."
+    },
+    {
+      "q": "Qu'est-ce que l'authentification à deux facteurs ?",
+      "o": [
+        "Une méthode de sécurité exigeant deux formes d'identification distinctes pour accéder à un compte",
+        "Un système antivirus utilisant deux moteurs de détection simultanément",
+        "Un protocole réseau requérant deux connexions successives pour chaque session",
+        "Un système de sauvegarde utilisant deux disques durs en parallèle"
+      ],
+      "r": 0,
+      "x": "L'authentification à deux facteurs (2FA) combine deux éléments distincts : quelque chose que l'utilisateur connaît (mot de passe) et quelque chose qu'il possède (code SMS, application). Elle renforce significativement la sécurité des comptes."
+    },
+    {
+      "q": "Qu'est-ce que le hameçonnage (phishing) ?",
+      "o": [
+        "Une attaque saturant un serveur pour le rendre inaccessible aux utilisateurs",
+        "Une tentative de vol d'informations via de faux messages ou sites frauduleux",
+        "Un logiciel qui surveille et enregistre les activités d'un utilisateur",
+        "Une intrusion dans un système via une faille du code source du logiciel"
+      ],
+      "r": 1,
+      "x": "Le hameçonnage consiste à usurper l'identité d'un organisme de confiance par courriel ou faux site web pour soutirer des identifiants, mots de passe ou numéros bancaires à la victime."
+    },
+    {
+      "q": "Quelle pratique consiste à tester légalement la sécurité d'un système informatique avec l'autorisation de son propriétaire ?",
+      "o": [
+        "L'espionnage industriel numérique",
+        "La surveillance passive du trafic réseau",
+        "Le test d'intrusion (pentest)",
+        "L'analyse forensique après un incident de sécurité"
+      ],
+      "r": 2,
+      "x": "Le test d'intrusion est une démarche autorisée visant à simuler des attaques pour identifier les vulnérabilités d'un système. Il est réalisé par des experts en sécurité mandatés par l'organisation propriétaire du système testé."
+    },
+    {
+      "q": "Que désigne le terme RGPD dans le domaine de la protection des données ?",
+      "o": [
+        "Un protocole réseau de sécurisation des échanges numériques en Europe",
+        "Un standard de chiffrement adopté par les entreprises de l'Union Européenne",
+        "Un antivirus développé et certifié par les autorités de l'Union Européenne",
+        "Un règlement européen encadrant la collecte et le traitement des données personnelles"
+      ],
+      "r": 3,
+      "x": "Le RGPD (Règlement Général sur la Protection des Données), entré en vigueur en 2018, encadre la collecte, le traitement et la conservation des données personnelles en Europe. Il accorde des droits renforcés aux citoyens sur leurs données."
+    },
+    {
+      "q": "Que signifie l'acronyme SGBD dans le domaine informatique ?",
+      "o": [
+        "Système de Gestion de Base de Données",
+        "Serveur de Gestion de Bases Distribuées",
+        "Structure Globale de Bases de Données",
+        "Service de Gestion des Bases de Données"
+      ],
+      "r": 0,
+      "x": "SGBD signifie Système de Gestion de Base de Données. C'est un logiciel permettant de créer, gérer et interroger des bases de données. MySQL, Oracle, PostgreSQL et SQL Server sont des exemples courants de SGBD."
+    },
+    {
+      "q": "Dans une base de données relationnelle, quel élément identifie de manière unique chaque enregistrement d'une table ?",
+      "o": [
+        "L'index secondaire",
+        "La clé primaire",
+        "La clé étrangère",
+        "L'attribut calculé"
+      ],
+      "r": 1,
+      "x": "La clé primaire est un champ dont la valeur est unique pour chaque enregistrement d'une table. Elle garantit l'unicité et l'intégrité des données. La clé étrangère relie une table à une autre, l'index secondaire accélère les recherches."
+    },
+    {
+      "q": "Quelle commande SQL est utilisée pour extraire des données d'une table ?",
+      "o": [
+        "INSERT",
+        "DELETE",
+        "SELECT",
+        "UPDATE"
+      ],
+      "r": 2,
+      "x": "La commande SELECT permet d'interroger une base de données et d'extraire les données répondant à des critères définis. INSERT ajoute des enregistrements, UPDATE modifie des données existantes, et DELETE supprime des enregistrements."
+    },
+    {
+      "q": "Qu'est-ce qu'une clé étrangère dans une base de données relationnelle ?",
+      "o": [
+        "Une clé de chiffrement protégeant les données sensibles d'une table",
+        "Un identifiant unique attribué automatiquement à chaque enregistrement",
+        "Un champ dont la valeur est calculée à partir d'autres colonnes de la table",
+        "Un champ faisant référence à la clé primaire d'une autre table"
+      ],
+      "r": 3,
+      "x": "Une clé étrangère est un champ d'une table qui référence la clé primaire d'une autre table, permettant d'établir des liens entre les tables. Elle garantit l'intégrité référentielle et modélise les relations entre entités."
+    },
+    {
+      "q": "Qu'est-ce qu'une base de données NoSQL ?",
+      "o": [
+        "Un système de gestion de données non strictement relationnelles adapté aux volumes massifs",
+        "Une base de données fonctionnant uniquement hors connexion réseau",
+        "Une base de données conçue exclusivement pour les grandes entreprises multinationales",
+        "Une base de données développée par Microsoft sans recours au langage SQL"
+      ],
+      "r": 0,
+      "x": "Les bases de données NoSQL stockent les données sans schéma fixe (documents, clés-valeurs, graphes). Elles sont adaptées au Big Data et aux applications nécessitant une grande scalabilité. MongoDB et Cassandra en sont des exemples."
+    },
+    {
+      "q": "Dans Microsoft Word, quel raccourci clavier annule la dernière action effectuée ?",
+      "o": [
+        "Ctrl + Y",
+        "Ctrl + Z",
+        "Ctrl + X",
+        "Ctrl + V"
+      ],
+      "r": 1,
+      "x": "Ctrl + Z annule la dernière action dans Word et la plupart des applications Windows. Ctrl + Y rétablit une action annulée, Ctrl + X coupe une sélection et Ctrl + V colle le contenu du presse-papiers."
+    },
+    {
+      "q": "Dans Microsoft Excel, quelle formule calcule la somme de toutes les valeurs de la plage A1 à A10 ?",
+      "o": [
+        "=MOYENNE(A1:A10)",
+        "=MAX(A1:A10)",
+        "=SOMME(A1:A10)",
+        "=NB(A1:A10)"
+      ],
+      "r": 2,
+      "x": "La fonction SOMME additionne toutes les valeurs d'une plage de cellules. MOYENNE calcule la moyenne arithmétique, MAX retourne la valeur la plus élevée, et NB compte le nombre de cellules contenant des valeurs numériques."
+    },
+    {
+      "q": "Dans Microsoft Excel, que réalise la fonction NB.SI ?",
+      "o": [
+        "Elle additionne les cellules d'une plage répondant à un critère",
+        "Elle calcule la moyenne des cellules non vides d'une plage",
+        "Elle recherche une valeur dans la première colonne d'un tableau",
+        "Elle compte les cellules d'une plage répondant à un critère spécifique"
+      ],
+      "r": 3,
+      "x": "NB.SI compte le nombre de cellules d'une plage satisfaisant un critère donné. SOMME.SI additionne selon un critère, MOYENNE.SI calcule une moyenne conditionnelle, et RECHERCHEV effectue une recherche verticale dans un tableau."
+    },
+    {
+      "q": "Dans Microsoft PowerPoint, quel mode d'affichage permet de visualiser toutes les diapositives sous forme de miniatures pour les réorganiser ?",
+      "o": [
+        "Le mode Trieuse de diapositives",
+        "Le mode Présentateur",
+        "Le mode Lecture",
+        "Le mode Plan"
+      ],
+      "r": 0,
+      "x": "Le mode Trieuse de diapositives affiche toutes les diapositives en miniatures, permettant leur réorganisation par glisser-déposer. Le mode Présentateur s'utilise lors de la projection, le mode Lecture affiche en plein écran, et le mode Plan montre le texte hiérarchisé."
+    },
+    {
+      "q": "Dans Microsoft Word, quel outil permet de générer automatiquement des courriers personnalisés à partir d'une liste de contacts ?",
+      "o": [
+        "Le suivi des modifications",
+        "Le publipostage",
+        "La table des matières",
+        "Le correcteur orthographique"
+      ],
+      "r": 1,
+      "x": "Le publipostage fusionne un document modèle avec une source de données (liste Excel ou Access) pour générer automatiquement des courriers ou étiquettes personnalisés pour chaque destinataire de la liste."
+    },
+    {
+      "q": "Dans Microsoft Excel, que désigne une référence absolue comme $A$1 dans une formule ?",
+      "o": [
+        "Une cellule dont la valeur est verrouillée et ne peut pas être modifiée",
+        "Une cellule appartenant à une plage nommée définie par l'utilisateur",
+        "Une cellule dont l'adresse ne change pas lors de la copie de la formule",
+        "Une cellule liée à une feuille de calcul externe au classeur"
+      ],
+      "r": 2,
+      "x": "Une référence absolue ($A$1) fixe les coordonnées d'une cellule. Lors de la copie d'une formule, l'adresse ne change pas. Une référence relative (A1) s'adapte automatiquement à la nouvelle position lors de la copie."
+    },
+    {
+      "q": "Dans Microsoft PowerPoint, que permet la fonctionnalité Transition ?",
+      "o": [
+        "Modifier la mise en page de toutes les diapositives simultanément",
+        "Insérer des animations sur les objets d'une diapositive",
+        "Appliquer un thème visuel cohérent à l'ensemble de la présentation",
+        "Définir un effet visuel lors du passage d'une diapositive à la suivante"
+      ],
+      "r": 3,
+      "x": "Les transitions sont des effets visuels appliqués au changement de diapositive. Elles diffèrent des animations, qui s'appliquent aux objets à l'intérieur d'une diapositive. On peut régler la durée et le déclencheur de chaque transition."
+    },
+    {
+      "q": "Dans Microsoft Word, quel outil génère automatiquement la liste des titres du document avec leurs numéros de page ?",
+      "o": [
+        "La table des matières automatique",
+        "Le renvoi automatique",
+        "Le signet de navigation",
+        "Le pied de page dynamique"
+      ],
+      "r": 0,
+      "x": "La table des matières automatique collecte tous les titres formatés avec les styles Titre 1, Titre 2, etc., et génère une liste paginée mise à jour en un clic. Elle facilite la navigation dans les documents administratifs longs."
+    },
+    {
+      "q": "Dans Microsoft Excel, quelle fonction recherche une valeur dans la première colonne d'un tableau et retourne une valeur correspondante dans la même ligne ?",
+      "o": [
+        "=INDEX()",
+        "=RECHERCHEV()",
+        "=EQUIV()",
+        "=SIERREUR()"
+      ],
+      "r": 1,
+      "x": "RECHERCHEV (recherche verticale) cherche une valeur dans la première colonne d'un tableau et retourne la valeur d'une colonne spécifiée dans la même ligne. INDEX et EQUIV sont souvent combinés pour des recherches plus flexibles."
+    },
+    {
+      "q": "Quel est le format de fichier natif des classeurs Microsoft Excel depuis la version 2007 ?",
+      "o": [
+        ".xls",
+        ".ods",
+        ".xlsx",
+        ".csv"
+      ],
+      "r": 2,
+      "x": "Depuis Office 2007, le format natif d'Excel est .xlsx, basé sur le standard XML. L'ancien format .xls date d'avant 2007, .ods est le format de LibreOffice Calc, et .csv est un format texte universel sans mise en forme."
+    },
+    {
+      "q": "Qu'est-ce que le machine learning (apprentissage automatique) ?",
+      "o": [
+        "Un programme fonctionnant sans système d'exploitation",
+        "Un langage de programmation dédié aux interfaces graphiques",
+        "Un protocole permettant à des machines de communiquer sur un réseau",
+        "Une technique permettant aux systèmes d'apprendre à partir de données"
+      ],
+      "r": 3,
+      "x": "Le machine learning est une branche de l'IA où les algorithmes apprennent à partir de données d'entraînement pour effectuer des prédictions ou prendre des décisions, sans être explicitement programmés pour chaque tâche."
+    },
+    {
+      "q": "Qu'est-ce que l'intelligence artificielle générative ?",
+      "o": [
+        "Un type d'IA capable de créer des contenus originaux tels que textes, images et sons",
+        "Un algorithme spécialisé dans la détection de virus et de logiciels malveillants",
+        "Un système d'IA fonctionnant uniquement à partir de règles prédéfinies par des experts",
+        "Un programme d'optimisation des ressources matérielles d'un ordinateur"
+      ],
+      "r": 0,
+      "x": "L'IA générative produit des contenus inédits (textes, images, musique, code) à partir de grandes quantités de données d'entraînement. Des outils comme ChatGPT ou Midjourney illustrent cette technologie, distincte de l'IA basée sur des règles fixes."
+    },
+    {
+      "q": "Quel terme désigne la capacité d'un programme à comprendre, analyser et générer du langage humain ?",
+      "o": [
+        "La vision par ordinateur",
+        "Le traitement automatique du langage naturel",
+        "L'apprentissage par renforcement",
+        "La reconnaissance de formes géométriques"
+      ],
+      "r": 1,
+      "x": "Le traitement automatique du langage naturel (TALN ou NLP) permet aux machines de comprendre et générer le langage humain. Il est à la base des assistants vocaux, des chatbots et des traducteurs automatiques."
+    },
+    {
+      "q": "Dans le domaine de l'intelligence artificielle, que signifie l'acronyme GPU ?",
+      "o": [
+        "General Processing Unit",
+        "Graphical Program Utility",
+        "Graphics Processing Unit",
+        "Global Parallel Updater"
+      ],
+      "r": 2,
+      "x": "GPU signifie Graphics Processing Unit (unité de traitement graphique). Conçu pour le rendu d'images, il est massivement utilisé en IA car il peut effectuer des milliers de calculs en parallèle, accélérant l'entraînement des modèles d'apprentissage profond."
+    },
+    {
+      "q": "Qu'est-ce qu'un réseau de neurones artificiels ?",
+      "o": [
+        "Un câblage spécifique interconnectant les serveurs d'un centre de données",
+        "Un système de routage inspiré du cerveau humain",
+        "Un protocole de communication standardisé entre différents systèmes d'IA",
+        "Un modèle constitué de couches de neurones formels interconnectés"
+      ],
+      "r": 3,
+      "x": "Un réseau de neurones est composé de couches de neurones formels reliés par des poids ajustables. Inspiré du cerveau biologique, il apprend à reconnaître des schémas dans les données à travers un processus d'entraînement. C'est la base du deep learning."
+    },
+    {
+      "q": "Parmi les modèles de service cloud suivants, lequel permet d'utiliser des logiciels directement via Internet sans installation locale ?",
+      "o": [
+        "SaaS (Software as a Service)",
+        "IaaS (Infrastructure as a Service)",
+        "PaaS (Platform as a Service)",
+        "DaaS (Desktop as a Service)"
+      ],
+      "r": 0,
+      "x": "Le SaaS fournit des applications accessibles via un navigateur web sans installation ni maintenance locales. IaaS loue des ressources matérielles virtualisées, PaaS offre un environnement de développement, et DaaS propose un bureau virtuel à distance."
+    },
+    {
+      "q": "Dans le cloud computing, que désigne le modèle IaaS ?",
+      "o": [
+        "Un modèle offrant des applications logicielles accessibles directement en ligne",
+        "Un modèle fournissant des ressources matérielles virtualisées comme serveurs et stockage",
+        "Un modèle proposant un environnement de développement et de déploiement en ligne",
+        "Un modèle offrant un bureau virtuel complet accessible depuis n'importe quel appareil"
+      ],
+      "r": 1,
+      "x": "IaaS (Infrastructure as a Service) met à disposition des ressources informatiques virtualisées via Internet. L'entreprise gère le système d'exploitation et les applications, tandis que le fournisseur gère l'infrastructure physique sous-jacente."
+    },
+    {
+      "q": "Quel avantage économique du cloud computing permet aux entreprises de payer uniquement les ressources effectivement consommées ?",
+      "o": [
+        "La redondance automatique des données hébergées",
+        "L'accès permanent aux dernières versions des logiciels",
+        "La facturation à l'usage",
+        "La sécurité intégrée des données stockées en ligne"
+      ],
+      "r": 2,
+      "x": "La facturation à l'usage (pay-as-you-go) permet à l'entreprise de payer uniquement les ressources consommées, sans immobilisation de capital. Ce modèle adapte les dépenses informatiques aux besoins réels de l'organisation."
+    },
+    {
+      "q": "Qu'est-ce qu'un cloud privé ?",
+      "o": [
+        "Un service cloud réservé exclusivement aux particuliers et aux associations",
+        "Un service cloud géré uniquement par des fournisseurs basés hors du pays",
+        "Un service cloud accessible librement sans identifiant ni authentification",
+        "Une infrastructure cloud dédiée à une seule organisation et non partagée"
+      ],
+      "r": 3,
+      "x": "Un cloud privé est une infrastructure réservée à une seule organisation, gérée en interne ou par un prestataire. Il offre plus de contrôle et de sécurité qu'un cloud public, mais implique des coûts d'investissement plus élevés."
+    },
+    {
+      "q": "Quelle expression désigne un environnement cloud combinant des ressources publiques et privées ?",
+      "o": [
+        "Le cloud hybride",
+        "Le cloud communautaire",
+        "Le cloud souverain",
+        "Le cloud distribué"
+      ],
+      "r": 0,
+      "x": "Le cloud hybride combine des infrastructures cloud publiques et privées. L'organisation peut placer les données sensibles en cloud privé et les charges moins critiques en cloud public, optimisant flexibilité et coûts."
+    },
+    {
+      "q": "Qu'est-ce qu'un algorithme en informatique ?",
+      "o": [
+        "Un langage de programmation de bas niveau proche du matériel",
+        "Une suite finie et ordonnée d'instructions permettant de résoudre un problème",
+        "Un programme exécutable sur tous les systèmes d'exploitation existants",
+        "Un composant matériel accélérant les calculs mathématiques complexes"
+      ],
+      "r": 1,
+      "x": "Un algorithme est une séquence finie d'étapes bien définies permettant de résoudre un problème ou accomplir une tâche. Il est indépendant de tout langage de programmation et peut être exprimé en pseudocode ou en organigramme."
+    },
+    {
+      "q": "En programmation, que désigne une boucle ?",
+      "o": [
+        "Une instruction conditionnelle permettant de choisir entre plusieurs blocs de code",
+        "Un sous-programme réutilisable appelé depuis le programme principal",
+        "Une structure permettant de répéter un bloc d'instructions plusieurs fois",
+        "Une variable permettant de stocker plusieurs valeurs de types différents"
+      ],
+      "r": 2,
+      "x": "Une boucle (for, while, do-while) est une structure de contrôle qui répète un bloc d'instructions tant qu'une condition est vraie ou un nombre de fois déterminé. Elle évite la répétition manuelle du code."
+    },
+    {
+      "q": "Qu'est-ce qu'un langage de programmation interprété ?",
+      "o": [
+        "Un langage dont le code est entièrement traduit en code machine avant exécution",
+        "Un langage utilisé exclusivement pour le développement d'applications web",
+        "Un langage réservé au développement de systèmes d'exploitation sous Linux",
+        "Un langage dont le code source est exécuté ligne par ligne sans compilation préalable"
+      ],
+      "r": 3,
+      "x": "Un langage interprété (Python, JavaScript, PHP) est exécuté directement par un interpréteur ligne par ligne. Un langage compilé (C, C++) est d'abord traduit entièrement en code machine par un compilateur avant toute exécution."
+    },
+    {
+      "q": "Que signifie l'acronyme HTML utilisé pour créer des pages web ?",
+      "o": [
+        "HyperText Markup Language",
+        "High Transfer Markup Language",
+        "HyperText Machine Language",
+        "High Text Modeling Language"
+      ],
+      "r": 0,
+      "x": "HTML (HyperText Markup Language) est le langage de balisage standard pour structurer et afficher le contenu des pages web. Il utilise des balises comme <h1>, <p> ou <a> pour définir titres, paragraphes et liens hypertextes."
+    },
+    {
+      "q": "Quelle structure de données suit le principe LIFO (dernier entré, premier sorti) ?",
+      "o": [
+        "La file d'attente",
+        "La pile",
+        "La liste chaînée",
+        "Le tableau associatif"
+      ],
+      "r": 1,
+      "x": "La pile (stack) fonctionne selon le principe LIFO : le dernier élément ajouté est le premier retiré, comme une pile d'assiettes. La file d'attente (queue) suit le principe FIFO (premier entré, premier sorti)."
+    },
+    {
+      "q": "En programmation orientée objet, que représente une classe ?",
+      "o": [
+        "Un fichier contenant les variables globales et les constantes du programme",
+        "Un module indépendant gérant les entrées et sorties du programme",
+        "Un modèle définissant les attributs et les comportements d'un objet",
+        "Une structure de données de type tableau à plusieurs dimensions"
+      ],
+      "r": 2,
+      "x": "En programmation orientée objet, une classe est un modèle définissant les attributs (propriétés) et les méthodes (comportements) d'un type d'objet. Les objets sont des instances créées à partir de ce modèle."
+    },
+    {
+      "q": "Qu'est-ce qu'une variable en programmation ?",
+      "o": [
+        "Une instruction permettant d'interrompre l'exécution d'un programme",
+        "Un bloc de code exécuté automatiquement au démarrage du programme",
+        "Une fonction mathématique intégrée dans le langage de programmation",
+        "Un espace mémoire nommé permettant de stocker une valeur modifiable"
+      ],
+      "r": 3,
+      "x": "Une variable est un emplacement mémoire identifié par un nom, qui contient une valeur susceptible de changer pendant l'exécution du programme. Elle possède un nom, un type de données (entier, texte, etc.) et une valeur."
+    },
+    {
+      "q": "Parmi les langages suivants, lequel est principalement utilisé pour le développement web côté serveur ?",
+      "o": [
+        "PHP",
+        "HTML",
+        "CSS",
+        "XML"
+      ],
+      "r": 0,
+      "x": "PHP est un langage de script côté serveur largement utilisé pour créer des sites web dynamiques. HTML structure les pages, CSS les met en forme, et XML est un format d'échange de données. HTML et CSS s'exécutent côté client, pas sur le serveur."
+    },
+    {
+      "q": "Que signifie l'acronyme BI dans le domaine des systèmes d'information ?",
+      "o": [
+        "Binary Integration",
+        "Business Intelligence",
+        "Big Infrastructure",
+        "Base Informatique"
+      ],
+      "r": 1,
+      "x": "BI signifie Business Intelligence (informatique décisionnelle). C'est un ensemble de technologies et d'outils permettant d'analyser les données de l'entreprise pour faciliter la prise de décision stratégique. Les tableaux de bord et rapports analytiques en font partie."
+    },
+    {
+      "q": "Qu'est-ce qu'un entrepôt de données (data warehouse) ?",
+      "o": [
+        "Un serveur dédié au stockage de fichiers multimédias en réseau local",
+        "Un disque dur externe utilisé pour les sauvegardes automatiques quotidiennes",
+        "Un système centralisé regroupant des données historiques",
+        "Un logiciel de gestion électronique des documents administratifs"
+      ],
+      "r": 2,
+      "x": "Un entrepôt de données centralise des données historiques provenant de diverses sources (bases de données, ERP, CRM) dans un format optimisé pour l'analyse et le reporting. Il est au cœur des dispositifs d'informatique décisionnelle."
+    },
+    {
+      "q": "Dans l'informatique décisionnelle, que désigne le terme Big Data ?",
+      "o": [
+        "Un logiciel d'analyse de données massives développé par Microsoft",
+        "Un réseau de serveurs dédié au stockage des données des grandes entreprises",
+        "Un protocole de transfert de très gros fichiers entre serveurs distants",
+        "Des ensembles de données caractérisés par leur volume, variété et vitesse de traitement"
+      ],
+      "r": 3,
+      "x": "Le Big Data désigne des données tellement massives, variées et produites si rapidement qu'elles dépassent les capacités des outils traditionnels. On parle des 3V : Volume, Variété et Vélocité. Des technologies comme Hadoop et Spark permettent de les traiter."
+    },
+    {
+      "q": "Que désigne un système d'information (SI) en entreprise ?",
+      "o": [
+        "Un ensemble organisé de ressources permettant de collecter, traiter et diffuser l'information",
+        "Un logiciel de gestion comptable et financière installé sur le réseau de l'entreprise",
+        "Un protocole réseau sécurisant les échanges de données entre les services",
+        "Un département informatique chargé de la maintenance du parc matériel"
+      ],
+      "r": 0,
+      "x": "Un système d'information regroupe les ressources humaines, techniques et organisationnelles pour collecter, stocker, traiter et diffuser l'information nécessaire au fonctionnement de l'organisation et à la prise de décision."
+    },
+    {
+      "q": "Que signifie l'acronyme ERP dans le domaine des systèmes d'information ?",
+      "o": [
+        "Electronic Resource Provider",
+        "Enterprise Resource Planning",
+        "Extended Resource Protocol",
+        "Efficient Routing Platform"
+      ],
+      "r": 1,
+      "x": "ERP (Enterprise Resource Planning), ou Progiciel de Gestion Intégré (PGI), centralise la gestion des ressources d'une entreprise (comptabilité, stocks, RH, achats) dans un système unique et intégré. SAP et Oracle ERP en sont des exemples."
+    },
+    {
+      "q": "Qu'est-ce qu'un système CRM ?",
+      "o": [
+        "Un logiciel de gestion des ressources humaines et de la paie",
+        "Un protocole réseau de communication sécurisée entre entreprises partenaires",
+        "Un système de gestion de la relation client",
+        "Un outil de planification et de suivi des projets informatiques"
+      ],
+      "r": 2,
+      "x": "CRM (Customer Relationship Management) centralise les informations sur les clients, gère les contacts, suit les ventes et analyse les comportements d'achat. Il améliore la satisfaction client et la performance commerciale de l'organisation."
+    },
+    {
+      "q": "Qu'est-ce que l'interopérabilité entre systèmes d'information ?",
+      "o": [
+        "La capacité d'un système à fonctionner de manière autonome sans connexion Internet",
+        "La sécurisation des échanges de données sensibles entre deux serveurs distants",
+        "La possibilité d'accéder à un système d'information depuis tout appareil mobile",
+        "La capacité de différents systèmes à échanger et exploiter mutuellement leurs données"
+      ],
+      "r": 3,
+      "x": "L'interopérabilité est la capacité de systèmes hétérogènes à communiquer et travailler ensemble. Elle est essentielle dans l'administration publique où différents ministères doivent partager des données de manière cohérente et fluide."
+    },
+    {
+      "q": "Qu'est-ce qu'une mise à jour logicielle ?",
+      "o": [
+        "Une correction ou amélioration apportée à un logiciel déjà installé",
+        "La réinstallation complète du système d'exploitation sur un ordinateur",
+        "Une procédure de récupération de données après une panne matérielle",
+        "Un contrôle automatique des performances du matériel informatique"
+      ],
+      "r": 0,
+      "x": "Une mise à jour logicielle apporte des corrections de bogues, des améliorations de performances ou des correctifs de sécurité à un logiciel existant. Les mises à jour régulières sont essentielles pour protéger un système contre les vulnérabilités connues."
+    },
+    {
+      "q": "Qu'est-ce que la défragmentation d'un disque dur magnétique ?",
+      "o": [
+        "La suppression définitive des fichiers temporaires et inutiles du système",
+        "La réorganisation des données fragmentées pour améliorer les performances de lecture",
+        "Le formatage complet du disque dur afin d'effacer toutes les données stockées",
+        "La création d'une image de sauvegarde intégrale du disque dur"
+      ],
+      "r": 1,
+      "x": "Au fil du temps, les fichiers d'un disque dur se fragmentent. La défragmentation réorganise ces fragments pour que chaque fichier soit stocké de manière contiguë, améliorant la vitesse de lecture. Cette opération est inutile et déconseillée sur les disques SSD."
+    },
+    {
+      "q": "Quelle est la règle de sauvegarde 3-2-1 en informatique ?",
+      "o": [
+        "Sauvegarder toutes les données tous les trois jours sur deux supports dont un hors ligne",
+        "Effectuer deux sauvegardes complètes et une sauvegarde incrémentielle chaque semaine",
+        "Conserver trois copies des données sur deux supports différents dont une copie hors site",
+        "Réaliser trois sauvegardes journalières sur un support externe unique et dédié"
+      ],
+      "r": 2,
+      "x": "La règle 3-2-1 préconise 3 copies des données, sur 2 types de supports différents, dont 1 copie hors site (autre bâtiment ou cloud). Elle protège contre les pannes matérielles, les sinistres et les cyberattaques de type ransomware."
+    },
+    {
+      "q": "Que désigne la dématérialisation dans le contexte de l'administration publique ?",
+      "o": [
+        "Le remplacement des agents publics par des systèmes informatiques automatisés",
+        "La suppression de l'ensemble des archives physiques de l'administration",
+        "La réduction du nombre de postes informatiques dans les services de l'État",
+        "Le passage des procédures administratives du support papier au format numérique"
+      ],
+      "r": 3,
+      "x": "La dématérialisation consiste à remplacer documents et procédures papier par leurs équivalents numériques. Elle améliore la rapidité, réduit les coûts, facilite le partage d'information et s'inscrit dans la modernisation des services publics."
+    },
+    {
+      "q": "Que signifie l'acronyme TIC dans le contexte de la transformation numérique ?",
+      "o": [
+        "Technologies de l'Information et de la Communication",
+        "Traitement Informatique Centralisé",
+        "Transfert d'Informations et de Contenus",
+        "Technologie Intégrée de Communication"
+      ],
+      "r": 0,
+      "x": "TIC signifie Technologies de l'Information et de la Communication. Ce terme regroupe l'ensemble des outils numériques (ordinateurs, Internet, téléphonie, logiciels) permettant de collecter, traiter, stocker et transmettre des informations."
+    },
+    {
+      "q": "Que désigne l'expression « e-administration » ?",
+      "o": [
+        "La suppression des administrations publiques traditionnelles",
+        "L'utilisation des TIC pour fournir des services administratifs en ligne",
+        "La gestion exclusive des administrations par des entreprises privées",
+        "L'automatisation complète des décisions administratives"
+      ],
+      "r": 1,
+      "x": "L'e-administration consiste à utiliser les technologies de l'information et de la communication pour faciliter les démarches administratives et améliorer les relations entre l'administration et les usagers."
+    },
+    {
+      "q": "Que désigne le concept d'e-gouvernement (gouvernement électronique) ?",
+      "o": [
+        "L'équipement exclusif des bureaux administratifs en matériel informatique moderne",
+        "La surveillance électronique des fonctionnaires par leur administration de tutelle",
+        "L'utilisation des TIC pour offrir des services publics en ligne aux citoyens",
+        "Le remplacement des agents de l'État par des systèmes automatisés intelligents"
+      ],
+      "r": 2,
+      "x": "L'e-gouvernement désigne l'utilisation des technologies numériques pour moderniser les services publics, faciliter les démarches administratives en ligne et améliorer les échanges entre l'administration, les citoyens et les entreprises."
+    },
+    {
+      "q": "Qu'est-ce que la signature électronique dans les échanges administratifs ?",
+      "o": [
+        "Une image numérisée de la signature manuscrite d'un fonctionnaire apposée sur un document",
+        "Un mot de passe complexe utilisé pour valider et authentifier un document officiel",
+        "Un filigrane numérique apposé automatiquement sur les documents officiels scannés",
+        "Un procédé cryptographique permettant d'authentifier l'auteur et l'intégrité d'un document"
+      ],
+      "r": 3,
+      "x": "La signature électronique utilise la cryptographie pour garantir l'identité du signataire et l'intégrité du document. Elle a la même valeur juridique que la signature manuscrite dans les contextes réglementaires qui la reconnaissent."
+    },
+    {
+      "q": "Que désigne la gouvernance numérique dans le contexte public ?",
+      "o": [
+        "L'ensemble des règles, politiques et pratiques encadrant l'usage des technologies numériques",
+        "La gestion technique quotidienne des infrastructures réseau d'un pays",
+        "Le contrôle et la restriction de l'accès à Internet par les autorités de l'État",
+        "La formation obligatoire des agents publics aux outils informatiques bureautiques"
+      ],
+      "r": 0,
+      "x": "La gouvernance numérique englobe les cadres réglementaires, les politiques publiques et les pratiques guidant le développement et l'usage responsable des technologies numériques dans la société et l'administration."
+    },
+    {
+      "q": "Qu'est-ce que l'inclusion numérique ?",
+      "o": [
+        "L'équipement prioritaire des grandes villes en infrastructures à très haut débit",
+        "L'effort visant à permettre à tous les citoyens d'accéder aux technologies numériques",
+        "La numérisation intégrale des archives historiques et patrimoniales nationales",
+        "La restriction de l'accès aux services numériques aux seuls usages professionnels"
+      ],
+      "r": 1,
+      "x": "L'inclusion numérique vise à réduire les inégalités d'accès aux outils et services numériques en assurant connectivité, formation et accompagnement de toutes les populations, notamment les plus vulnérables ou éloignées des grandes villes."
+    },
+    {
+      "q": "Que désigne la fracture numérique ?",
+      "o": [
+        "Une panne généralisée affectant les réseaux informatiques d'un pays entier",
+        "Un virus informatique ciblant spécifiquement les institutions et services publics",
+        "L'inégalité d'accès et d'usage des technologies numériques entre différentes populations",
+        "La rupture de câbles sous-marins affectant la connectivité internationale d'un pays"
+      ],
+      "r": 2,
+      "x": "La fracture numérique désigne les inégalités d'accès, d'utilisation et de maîtrise des technologies numériques entre groupes sociaux, générations, zones géographiques ou pays. Elle constitue un défi majeur pour le développement inclusif en Afrique."
+    },
+    {
+      "q": "Que désigne le terme souveraineté numérique pour un État ?",
+      "o": [
+        "La capacité d'un pays à interdire totalement l'accès aux services numériques étrangers",
+        "L'obligation légale d'utiliser uniquement des logiciels développés sur le territoire national",
+        "Le droit exclusif de l'État de contrôler toutes les communications numériques des citoyens",
+        "La capacité d'un État à maîtriser ses données, ses infrastructures et ses technologies numériques"
+      ],
+      "r": 3,
+      "x": "La souveraineté numérique est la capacité d'un État à contrôler ses données stratégiques et ses infrastructures numériques critiques sans dépendance excessive vis-à-vis de puissances étrangères. Elle est un enjeu stratégique majeur pour les pays africains."
+    },
+    {
+      "q": "Qu'est-ce que l'open data (données ouvertes) ?",
+      "o": [
+        "La mise à disposition libre, gratuite et réutilisable de données publiques pour tous",
+        "Un logiciel permettant de partager des fichiers entre utilisateurs sur un réseau local",
+        "Un protocole sécurisé de protection des données gouvernementales sensibles",
+        "Une base de données accessible uniquement aux chercheurs accrédités par l'État"
+      ],
+      "r": 0,
+      "x": "L'open data consiste à rendre des données publiques accessibles librement et gratuitement dans des formats réutilisables. Les gouvernements publient ainsi des données statistiques, géographiques ou budgétaires pour favoriser la transparence et l'innovation."
+    },
+    {
+      "q": "Que désigne le terme internaute ?",
+      "o": [
+        "Un technicien spécialisé dans la maintenance et l'administration des réseaux Internet",
+        "Une personne qui navigue et utilise les services proposés sur Internet",
+        "Un développeur créant des applications et services destinés au Web",
+        "Un administrateur gérant les serveurs d'un fournisseur d'accès à Internet"
+      ],
+      "r": 1,
+      "x": "L'internaute est toute personne utilisant Internet pour naviguer, consulter ses courriels, utiliser des réseaux sociaux ou accéder à des services en ligne. Le terme est d'usage courant depuis les années 1990 dans les pays francophones."
+    },
+    {
+      "q": "Qu'est-ce que la netiquette ?",
+      "o": [
+        "Un protocole technique de sécurisation des échanges et communications sur Internet",
+        "Un logiciel de filtrage du contenu web installé dans les écoles et administrations",
+        "Un ensemble de règles de bonne conduite et de politesse à respecter sur Internet",
+        "Une charte juridique encadrant les droits et devoirs des utilisateurs d'Internet"
+      ],
+      "r": 2,
+      "x": "La netiquette regroupe les règles de savoir-vivre sur Internet : respecter les interlocuteurs, éviter les majuscules abusives (perçues comme crier), citer ses sources, ne pas partager de contenus illicites. Elle s'applique aux courriels, forums, réseaux sociaux et messageries."
+    },
+    {
+      "q": "Dans le contexte numérique, qu'est-ce qu'un identifiant numérique ?",
+      "o": [
+        "Un numéro de série unique attribué à chaque appareil par son fabricant",
+        "Un protocole de connexion sécurisée entre deux appareils distants",
+        "Un code de chiffrement utilisé pour protéger les fichiers personnels d'un utilisateur",
+        "Un ensemble de données permettant d'identifier une personne ou une entité en ligne"
+      ],
+      "r": 3,
+      "x": "L'identifiant numérique regroupe les données permettant d'identifier et d'authentifier une personne dans un environnement numérique : nom d'utilisateur, adresse courriel, numéro d'identification ou empreinte biométrique numérique."
+    },
+    {
+      "q": "Quel composant relie et interconnecte tous les éléments matériels d'un ordinateur ?",
+      "o": [
+        "La carte mère",
+        "Le disque dur",
+        "Le processeur central",
+        "L'alimentation électrique"
+      ],
+      "r": 0,
+      "x": "La carte mère est le circuit principal de l'ordinateur sur lequel sont connectés le processeur, la mémoire, les disques et les périphériques. Elle assure la communication entre tous les composants via des bus de données internes."
+    },
+    {
+      "q": "Quelle technologie de transmission utilise des impulsions lumineuses pour transporter les données à très haute vitesse ?",
+      "o": [
+        "Le câble coaxial",
+        "La fibre optique",
+        "Le câble à paires torsadées",
+        "La connexion satellite"
+      ],
+      "r": 1,
+      "x": "La fibre optique transmet des données sous forme d'impulsions lumineuses dans un filament de verre ou de plastique. Elle offre des débits très élevés et est insensible aux perturbations électromagnétiques, contrairement aux câbles en cuivre."
+    },
+    {
+      "q": "Quelle technologie sans fil à courte portée permet de connecter des appareils comme des écouteurs ou des claviers sans câble ?",
+      "o": [
+        "Le Wi-Fi",
+        "Le NFC",
+        "Le Bluetooth",
+        "La connexion 4G"
+      ],
+      "r": 2,
+      "x": "Bluetooth est une technologie de communication sans fil à courte portée, généralement de l'ordre de quelques mètres à plusieurs dizaines de mètres selon la classe de l'appareil. Il connecte des périphériques personnels tels que claviers, souris et casques."
+    },
+    {
+      "q": "Que désigne la résolution d'un écran ?",
+      "o": [
+        "La luminosité maximale mesurée en candelas par mètre carré",
+        "Le taux de rafraîchissement exprimé en images par seconde",
+        "La profondeur des couleurs exprimée en bits par pixel affiché",
+        "Le nombre de pixels affichés en largeur et en hauteur"
+      ],
+      "r": 3,
+      "x": "La résolution exprime le nombre de pixels affichés, par exemple 1920 x 1080 pour le Full HD. Plus elle est élevée, plus l'image est nette. Elle ne doit pas être confondue avec la taille physique de l'écran mesurée en pouces."
+    },
+    {
+      "q": "Qui est considérée comme la première programmeuse de l'histoire pour ses travaux sur la machine analytique de Charles Babbage ?",
+      "o": [
+        "Ada Lovelace",
+        "Grace Hopper",
+        "Margaret Hamilton",
+        "Katherine Johnson"
+      ],
+      "r": 0,
+      "x": "Ada Lovelace a rédigé au XIXe siècle le premier algorithme destiné à être exécuté par une machine. Grace Hopper a inventé le compilateur, Margaret Hamilton a dirigé la programmation du logiciel d'Apollo 11, et Katherine Johnson était mathématicienne à la NASA."
+    },
+    {
+      "q": "Quel réseau précurseur d'Internet, créé par le département de la défense américain, a été mis en service en 1969 ?",
+      "o": [
+        "Minitel",
+        "ARPANET",
+        "CompuServe",
+        "BITNET"
+      ],
+      "r": 1,
+      "x": "ARPANET (Advanced Research Projects Agency Network) est le réseau précurseur d'Internet développé par le département américain de la défense. Il a expérimenté la communication par paquets entre ordinateurs distants dès octobre 1969."
+    },
+    {
+      "q": "Qui a inventé le World Wide Web en proposant un système de documents hypertextes interconnectés en 1989 ?",
+      "o": [
+        "Steve Jobs",
+        "Bill Gates",
+        "Tim Berners-Lee",
+        "Vint Cerf"
+      ],
+      "r": 2,
+      "x": "Tim Berners-Lee, chercheur au CERN en Suisse, a inventé le Web en 1989 en proposant des documents hypertextes accessibles via Internet. Vint Cerf est co-créateur du protocole TCP/IP, fondement technique d'Internet."
+    },
+    {
+      "q": "Quel appareil lancé en 2007 a révolutionné la téléphonie mobile grâce à son interface entièrement tactile et son écosystème d'applications ?",
+      "o": [
+        "Le Nokia N95",
+        "Le Blackberry Bold",
+        "Le Samsung Galaxy S",
+        "L'iPhone d'Apple"
+      ],
+      "r": 3,
+      "x": "L'iPhone, lancé par Steve Jobs en juin 2007, a redéfini le concept de smartphone avec son interface tactile et sa boutique d'applications. Il a transformé les usages mobiles dans le monde entier et relancé Apple comme leader de l'industrie technologique."
+    },
+    {
+      "q": "Qu'est-ce qu'Internet ?",
+      "o": [
+        "Un réseau mondial interconnecté permettant l'échange de données entre des milliards d'appareils",
+        "Un logiciel de navigation permettant de consulter des pages web depuis un ordinateur",
+        "Un protocole de communication sécurisée entre les administrations publiques mondiales",
+        "Un câble sous-marin reliant les continents pour les échanges téléphoniques internationaux"
+      ],
+      "r": 0,
+      "x": "Internet est un réseau mondial de réseaux interconnectés fonctionnant via les protocoles TCP/IP. Il supporte le Web, la messagerie, le cloud, le streaming et bien d'autres services. Le Web n'est qu'un des nombreux services accessibles via Internet."
+    },
+    {
+      "q": "Quel système de communication précurseur du Web, lancé en France dans les années 1980, permettait d'accéder à des services en ligne via le réseau téléphonique ?",
+      "o": [
+        "CompuServe",
+        "Minitel",
+        "ARPANET",
+        "BBS"
+      ],
+      "r": 1,
+      "x": "Le Minitel, lancé en France en 1982, permettait aux abonnés d'accéder à des services d'information, de réservation et d'annuaire via le réseau téléphonique. Il est considéré comme un précurseur majeur des services en ligne avant l'avènement du Web."
+    },
+    {
+      "q": "Quel système de fichiers est utilisé par défaut sur les partitions Windows depuis Windows NT ?",
+      "o": [
+        "FAT32",
+        "exFAT",
+        "NTFS",
+        "ext4"
+      ],
+      "r": 2,
+      "x": "NTFS (New Technology File System) est le système de fichiers standard de Windows depuis Windows NT. Il gère les grandes partitions, les permissions d'accès, la compression et le chiffrement. ext4 est utilisé sous Linux, FAT32 et exFAT sur les supports amovibles."
+    },
+    {
+      "q": "Que désigne la mémoire virtuelle dans un système d'exploitation ?",
+      "o": [
+        "Une mémoire cache ultra-rapide intégrée directement au processeur",
+        "Une zone de mémoire réservée exclusivement aux pilotes matériels du système",
+        "Une mémoire supplémentaire fournie par une carte d'extension sur la carte mère",
+        "Une extension de la mémoire vive utilisant une partie du disque dur comme mémoire temporaire"
+      ],
+      "r": 3,
+      "x": "La mémoire virtuelle utilise une portion du disque (fichier d'échange ou swap) pour simuler de la mémoire vive supplémentaire. Elle permet d'exécuter des programmes nécessitant plus de RAM que celle physiquement disponible, au prix de performances réduites."
+    },
+    {
+      "q": "Qu'est-ce que le multitâche dans un système d'exploitation ?",
+      "o": [
+        "La capacité d'exécuter plusieurs programmes de manière simultanée ou alternée",
+        "La capacité d'un processeur à traiter plusieurs jeux de données par cycle d'horloge",
+        "La fonctionnalité permettant à plusieurs utilisateurs de partager le même compte",
+        "La possibilité de connecter plusieurs écrans à un seul ordinateur simultanément"
+      ],
+      "r": 0,
+      "x": "Le multitâche permet à un système d'exploitation d'exécuter plusieurs programmes en apparence simultanément, en répartissant le temps processeur entre eux. Sur un processeur unique, le changement rapide de contexte crée l'illusion de simultanéité."
+    },
+    {
+      "q": "Dans Windows, quel outil permet de visualiser les processus actifs, la consommation des ressources et de forcer la fermeture d'un programme bloqué ?",
+      "o": [
+        "Le panneau de configuration",
+        "Le gestionnaire des tâches",
+        "L'éditeur de registre",
+        "La console de gestion Microsoft"
+      ],
+      "r": 1,
+      "x": "Le gestionnaire des tâches (accessible via Ctrl + Shift + Échap) affiche les processus actifs, la consommation CPU et mémoire, et permet de terminer un processus bloqué. Il est un outil de diagnostic essentiel dans l'environnement Windows."
+    },
+    {
+      "q": "Quel logiciel de sécurité est intégré nativement dans Windows 10 et Windows 11 pour protéger contre les virus et logiciels malveillants ?",
+      "o": [
+        "McAfee Antivirus",
+        "Norton Security",
+        "Microsoft Defender",
+        "Avast Free Antivirus"
+      ],
+      "r": 2,
+      "x": "Microsoft Defender (anciennement Windows Defender) est l'antivirus et antimalware intégré gratuitement dans Windows 10 et 11. Il assure une protection en temps réel sans installation supplémentaire. McAfee, Norton et Avast sont des solutions tierces payantes ou freemium."
+    },
+    {
+      "q": "Dans un système Linux, que permet la commande chmod ?",
+      "o": [
+        "Changer le propriétaire d'un fichier ou d'un répertoire",
+        "Afficher l'utilisation de l'espace disque par répertoire",
+        "Copier un fichier vers un autre emplacement du système",
+        "Modifier les permissions d'accès à un fichier ou à un répertoire"
+      ],
+      "r": 3,
+      "x": "chmod (change mode) modifie les permissions d'accès à un fichier ou répertoire sous Linux. Les permissions concernent trois catégories (propriétaire, groupe, autres) et trois actions (lecture r, écriture w, exécution x)."
+    },
+    {
+      "q": "Quelle commande Linux permet de rechercher une chaîne de caractères dans un fichier ou un flux de texte ?",
+      "o": [
+        "grep",
+        "find",
+        "cat",
+        "tail"
+      ],
+      "r": 0,
+      "x": "grep recherche des motifs textuels dans des fichiers ou des sorties de commandes. Par exemple, grep \"erreur\" journal.log affiche toutes les lignes contenant le mot \"erreur\". find localise des fichiers, cat affiche leur contenu, tail en affiche la fin."
+    },
+    {
+      "q": "Que signifie la commande sudo dans un terminal Linux ?",
+      "o": [
+        "Afficher l'identité de l'utilisateur connecté et ses groupes d'appartenance",
+        "Exécuter une commande avec les privilèges d'administrateur",
+        "Passer définitivement au compte superutilisateur du système",
+        "Changer de session utilisateur sans fermer la session en cours"
+      ],
+      "r": 1,
+      "x": "sudo (superuser do) permet à un utilisateur autorisé d'exécuter une commande avec les droits du superutilisateur (root), sans se connecter directement en tant que root. C'est une pratique de sécurité essentielle dans l'administration des systèmes Linux."
+    },
+    {
+      "q": "Quelle commande Linux permet de déplacer ou renommer un fichier ?",
+      "o": [
+        "cp",
+        "rm",
+        "mv",
+        "ln"
+      ],
+      "r": 2,
+      "x": "mv (move) déplace un fichier vers un autre emplacement ou le renomme. mv fichier.txt /home/user/ déplace le fichier, et mv ancien.txt nouveau.txt le renomme. cp copie un fichier, rm le supprime, et ln crée des liens symboliques ou physiques."
+    },
+    {
+      "q": "Combien de couches comporte le modèle OSI de référence pour les réseaux informatiques ?",
+      "o": [
+        "Quatre couches",
+        "Cinq couches",
+        "Six couches",
+        "Sept couches"
+      ],
+      "r": 3,
+      "x": "Le modèle OSI comporte sept couches : physique, liaison de données, réseau, transport, session, présentation et application. Chaque couche gère une fonction spécifique et communique avec les couches adjacentes. Il sert de référence pour concevoir les protocoles réseau."
+    },
+    {
+      "q": "Qu'est-ce qu'une adresse MAC dans un réseau informatique ?",
+      "o": [
+        "Un identifiant physique unique attribué à chaque carte réseau par son fabricant",
+        "Un protocole gérant l'accès aux ressources partagées sur un réseau local",
+        "Une adresse logique attribuée dynamiquement par le serveur DHCP du réseau",
+        "Un système de chiffrement des communications entre deux appareils en réseau"
+      ],
+      "r": 0,
+      "x": "L'adresse MAC (Media Access Control) est un identifiant physique de 48 bits gravé dans la carte réseau par le fabricant. Elle identifie de façon unique chaque interface réseau et opère au niveau 2 du modèle OSI, la couche liaison de données."
+    },
+    {
+      "q": "Que désigne la bande passante d'une connexion réseau ?",
+      "o": [
+        "La distance maximale de transmission d'un signal sans amplification sur un réseau",
+        "La quantité maximale de données pouvant être transmises par unité de temps",
+        "Le nombre maximal d'appareils connectables simultanément sur un réseau donné",
+        "La fréquence radio utilisée par un réseau Wi-Fi pour transmettre les données"
+      ],
+      "r": 1,
+      "x": "La bande passante est la capacité maximale de transmission d'un réseau, exprimée en bits par seconde et ses multiples. Une bande passante élevée permet de transférer davantage de données simultanément, réduisant les délais de téléchargement."
+    },
+    {
+      "q": "Que signifie l'acronyme TCP/IP dans le domaine des réseaux ?",
+      "o": [
+        "Text Communication Protocol / Internet Protocol",
+        "Transfer Control Protocol / Integrated Protocol",
+        "Transmission Control Protocol / Internet Protocol",
+        "Terminal Connection Protocol / Interface Protocol"
+      ],
+      "r": 2,
+      "x": "TCP/IP (Transmission Control Protocol / Internet Protocol) est la suite de protocoles fondamentale d'Internet. TCP assure la transmission fiable des données en les découpant en paquets numérotés, tandis qu'IP gère leur adressage et leur acheminement vers la destination."
+    },
+    {
+      "q": "Que désigne la latence dans un réseau informatique ?",
+      "o": [
+        "La quantité maximale de données transmissibles par seconde sur une connexion",
+        "La stabilité et la régularité du débit d'une connexion réseau dans le temps",
+        "La capacité d'un réseau à supporter simultanément un grand nombre d'utilisateurs",
+        "Le délai de transmission d'un paquet de données entre son émetteur et son destinataire"
+      ],
+      "r": 3,
+      "x": "La latence mesure le temps mis par un paquet de données pour aller d'un point à un autre, exprimée en millisecondes. Une faible latence est indispensable pour les applications temps réel comme la visioconférence, les jeux en ligne et la VoIP."
+    },
+    {
+      "q": "Dans quel type de réseau les données sont-elles découpées en paquets indépendants pouvant emprunter des chemins différents pour atteindre leur destination ?",
+      "o": [
+        "Le réseau à commutation de paquets",
+        "Le réseau à commutation de circuits",
+        "Le réseau à diffusion générale",
+        "Le réseau à anneau à jeton"
+      ],
+      "r": 0,
+      "x": "Dans la commutation de paquets, les données sont divisées en paquets indépendants acheminés par le chemin optimal disponible. Internet utilise ce modèle. La commutation de circuits, utilisée par l'ancien réseau téléphonique, établit un canal dédié pour toute la durée de la communication."
+    },
+    {
+      "q": "Dans le développement web, à quoi sert le langage CSS ?",
+      "o": [
+        "À structurer et organiser le contenu des pages web avec des balises sémantiques",
+        "À définir la présentation visuelle et la mise en forme des pages web",
+        "À rendre les pages web interactives grâce à des scripts côté client",
+        "À gérer les bases de données et les formulaires côté serveur"
+      ],
+      "r": 1,
+      "x": "CSS (Cascading Style Sheets) contrôle l'apparence visuelle des pages web : couleurs, typographies, mises en page et espacements. Il est associé à HTML qui structure le contenu et à JavaScript qui gère l'interactivité côté navigateur."
+    },
+    {
+      "q": "Quel langage de programmation est principalement utilisé pour rendre les pages web interactives côté navigateur ?",
+      "o": [
+        "PHP",
+        "Python",
+        "JavaScript",
+        "SQL"
+      ],
+      "r": 2,
+      "x": "JavaScript est le langage de script exécuté directement dans le navigateur. Il anime les pages, valide des formulaires, crée des menus dynamiques et interagit avec l'utilisateur sans recharger la page. PHP et Python s'exécutent côté serveur et non dans le navigateur."
+    },
+    {
+      "q": "Qu'est-ce qu'un podcast ?",
+      "o": [
+        "Un logiciel permettant de diffuser des émissions de radio en direct sur Internet",
+        "Un format vidéo compressé destiné au partage sur les plateformes de streaming",
+        "Un système de messagerie instantanée audio entre utilisateurs distants",
+        "Un fichier ou série de fichiers audio disponible en téléchargement ou en écoute en ligne"
+      ],
+      "r": 3,
+      "x": "Un podcast est une émission audio (ou vidéo) disponible sur Internet, accessible à la demande. L'utilisateur peut le télécharger ou l'écouter en streaming. Il s'y abonne via des plateformes (Spotify, Apple Podcasts) pour recevoir automatiquement les nouveaux épisodes."
+    },
+    {
+      "q": "Quelle version du langage HTML a introduit des balises natives pour l'audio, la vidéo et la géolocalisation sans extensions tierces ?",
+      "o": [
+        "HTML5",
+        "HTML4",
+        "XHTML",
+        "HTML3"
+      ],
+      "r": 0,
+      "x": "HTML5, standardisé en 2014 par le W3C, a introduit les balises audio, video et canvas, ainsi que des API pour la géolocalisation et le stockage local. Il a rendu obsolète la dépendance à Flash pour les contenus multimédias sur le Web."
+    },
+    {
+      "q": "Que désigne le streaming dans le contexte des contenus numériques ?",
+      "o": [
+        "Le téléchargement complet d'un fichier avant de pouvoir le lire ou le visionner",
+        "La lecture de contenus audio ou vidéo en temps réel sans téléchargement préalable",
+        "La compression de fichiers multimédias pour réduire leur taille de stockage",
+        "La synchronisation automatique de fichiers entre plusieurs appareils connectés"
+      ],
+      "r": 1,
+      "x": "Le streaming permet de lire des contenus audio ou vidéo au fur et à mesure de leur réception, sans attendre le téléchargement complet du fichier. Netflix, YouTube et Spotify fonctionnent par streaming et nécessitent une connexion réseau stable et suffisante."
+    },
+    {
+      "q": "Qu'est-ce qu'une attaque par déni de service distribué ?",
+      "o": [
+        "Une attaque ciblant les bases de données via des requêtes malveillantes injectées",
+        "Une technique de vol de session en interceptant les communications réseau",
+        "Une attaque saturant un serveur de requêtes massives pour le rendre inaccessible",
+        "Une intrusion dans un système via des identifiants volés par hameçonnage ciblé"
+      ],
+      "r": 2,
+      "x": "Une attaque DDoS (Distributed Denial of Service) inonde un serveur de millions de requêtes simultanées émises depuis de nombreuses machines compromises (botnet) jusqu'à le saturer et le rendre indisponible pour les utilisateurs légitimes."
+    },
+    {
+      "q": "Que désigne l'ingénierie sociale en cybersécurité ?",
+      "o": [
+        "Le développement de logiciels automatisant les tests de vulnérabilité d'un système",
+        "La conception de réseaux informatiques sécurisés pour les entreprises et administrations",
+        "La protection des infrastructures critiques contre les cyberattaques de grande envergure",
+        "La manipulation psychologique d'individus pour les amener à divulguer des informations confidentielles"
+      ],
+      "r": 3,
+      "x": "L'ingénierie sociale exploite la psychologie humaine plutôt que les failles techniques. Elle pousse les victimes à révéler des mots de passe, cliquer sur des liens malveillants ou accorder des accès non autorisés. Le hameçonnage en est la forme la plus répandue."
+    },
+    {
+      "q": "Que désigne l'authentification biométrique ?",
+      "o": [
+        "L'identification d'une personne à partir de ses caractéristiques physiques ou comportementales",
+        "L'authentification par un code secret à usage unique envoyé par SMS sur le téléphone",
+        "La vérification de l'identité par un jeton matériel physique tel qu'une clé USB",
+        "L'accès sécurisé par reconnaissance du réseau Wi-Fi habituel de l'utilisateur"
+      ],
+      "r": 0,
+      "x": "L'authentification biométrique utilise des caractéristiques physiques (empreinte digitale, reconnaissance faciale, iris) ou comportementales (voix, frappe au clavier) pour identifier une personne. Elle est utilisée sur les smartphones et aux postes frontaliers."
+    },
+    {
+      "q": "Qu'est-ce qu'un keylogger ?",
+      "o": [
+        "Un programme bloquant les connexions non autorisées sur un réseau d'entreprise",
+        "Un logiciel enregistrant discrètement toutes les frappes effectuées au clavier",
+        "Un outil analysant le trafic réseau à la recherche de comportements anormaux",
+        "Un logiciel de compression chiffrant les fichiers pour les rendre illisibles"
+      ],
+      "r": 1,
+      "x": "Un keylogger (enregistreur de frappe) capture silencieusement tout ce que l'utilisateur tape, y compris les mots de passe et les données bancaires. Il peut être un logiciel malveillant installé à l'insu de l'utilisateur ou, légalement, un outil de surveillance parentale."
+    },
+    {
+      "q": "Que désigne une vulnérabilité informatique ?",
+      "o": [
+        "Une panne matérielle affectant les performances d'un serveur en production",
+        "Un contenu numérique inapproprié accessible sur des sites web non sécurisés",
+        "Une faille dans un logiciel ou un système pouvant être exploitée par un attaquant",
+        "Une interruption de service réseau causée par une surcharge de trafic légitime"
+      ],
+      "r": 2,
+      "x": "Une vulnérabilité est une faiblesse dans un logiciel, un système ou une configuration qui peut être exploitée par un attaquant. Appliquer régulièrement des correctifs de sécurité (patches) est la pratique fondamentale pour réduire l'exposition aux vulnérabilités connues."
+    },
+    {
+      "q": "Quel objectif vise la normalisation d'une base de données relationnelle ?",
+      "o": [
+        "Accélérer les requêtes en dupliquant les données dans plusieurs tables spécialisées",
+        "Chiffrer les données sensibles pour garantir leur confidentialité et leur sécurité",
+        "Réduire la taille physique de la base de données occupée sur le disque de stockage",
+        "Éliminer les redondances et les anomalies pour garantir la cohérence des données"
+      ],
+      "r": 3,
+      "x": "La normalisation organise les tables pour éliminer les redondances et les incohérences. Elle se décline en formes normales (1NF, 2NF, 3NF). Elle garantit l'intégrité des données au détriment parfois des performances de lecture dans les requêtes complexes."
+    },
+    {
+      "q": "En bases de données, que garantissent les propriétés ACID d'une transaction ?",
+      "o": [
+        "Atomicité, Cohérence, Isolation et Durabilité des opérations sur les données",
+        "Accès, Contrôle, Intégrité et Disponibilité des données stockées en base",
+        "Authenticité, Confidentialité, Intégrité et Distribution des informations stockées",
+        "Archivage, Compression, Indexation et Déduplication des enregistrements en base"
+      ],
+      "r": 0,
+      "x": "ACID garantit : Atomicité (tout ou rien), Cohérence (état valide avant et après), Isolation (transactions indépendantes), Durabilité (résistance aux pannes). Ces propriétés sont fondamentales dans les SGBD relationnels pour garantir l'intégrité des données."
+    },
+    {
+      "q": "Qu'est-ce qu'une procédure stockée dans une base de données ?",
+      "o": [
+        "Une méthode de sauvegarde automatique des données à intervalles réguliers",
+        "Un programme SQL précompilé stocké dans la base et exécutable sur demande",
+        "Un fichier journal enregistrant toutes les modifications apportées à une table",
+        "Un index optimisé permettant d'accélérer les recherches dans une grande table"
+      ],
+      "r": 1,
+      "x": "Une procédure stockée est un ensemble d'instructions SQL précompilées, stockées et exécutées directement sur le serveur de base de données. Elle améliore les performances, sécurise les accès aux données et centralise la logique métier de l'application."
+    },
+    {
+      "q": "Qu'est-ce qu'une vue dans une base de données relationnelle ?",
+      "o": [
+        "Un rapport statistique généré automatiquement à partir des données d'une table",
+        "Un index optimisé pour accélérer les requêtes sur des colonnes fréquemment interrogées",
+        "Une table virtuelle basée sur le résultat d'une requête SQL enregistrée dans la base",
+        "Une copie physique d'une table conservée sur un serveur de sauvegarde distant"
+      ],
+      "r": 2,
+      "x": "Une vue est une table virtuelle construite à partir d'une requête SELECT enregistrée. Elle n'occupe généralement pas d'espace physique mais présente les données comme une vraie table. Elle simplifie les requêtes complexes et permet de restreindre l'accès à certaines colonnes sensibles."
+    },
+    {
+      "q": "Quel est le rôle d'un index dans une base de données ?",
+      "o": [
+        "Protéger les données sensibles contre les accès non autorisés des utilisateurs",
+        "Maintenir automatiquement l'ordre alphabétique des enregistrements d'une table",
+        "Relier logiquement deux tables par leurs clés primaires et étrangères respectives",
+        "Accélérer les recherches en permettant un accès rapide aux enregistrements ciblés"
+      ],
+      "r": 3,
+      "x": "Un index est une structure de données permettant d'accéder rapidement aux enregistrements sans parcourir toutes les lignes d'une table. Comme l'index d'un livre, il accélère les requêtes SELECT mais peut légèrement ralentir les insertions et mises à jour."
+    },
+    {
+      "q": "Dans Microsoft Excel, quelle fonction retourne une valeur selon qu'une condition est vraie ou fausse ?",
+      "o": [
+        "La fonction SI",
+        "La fonction ESTNA",
+        "La fonction CHOISIR",
+        "La fonction OU"
+      ],
+      "r": 0,
+      "x": "La fonction SI évalue une condition et retourne une valeur si elle est vraie, une autre si elle est fausse. Syntaxe : =SI(condition ; valeur_si_vrai ; valeur_si_faux). Elle est l'une des fonctions les plus utilisées dans les tableurs pour les calculs conditionnels."
+    },
+    {
+      "q": "Dans Microsoft Excel, quelle fonctionnalité applique automatiquement une mise en forme aux cellules répondant à un critère donné ?",
+      "o": [
+        "La validation des données",
+        "La mise en forme conditionnelle",
+        "Le filtre automatique",
+        "Le tri personnalisé"
+      ],
+      "r": 1,
+      "x": "La mise en forme conditionnelle colorise ou formate automatiquement les cellules selon des règles définies (valeur au-dessus d'un seuil, doublons, valeurs négatives). Elle facilite la lecture visuelle et l'analyse rapide des données dans les tableaux."
+    },
+    {
+      "q": "Dans Microsoft Excel, quel outil permet de résumer et de croiser des données en les regroupant selon plusieurs dimensions ?",
+      "o": [
+        "La validation des données",
+        "Le gestionnaire de noms",
+        "Le tableau croisé dynamique",
+        "La mise en forme conditionnelle"
+      ],
+      "r": 2,
+      "x": "Le tableau croisé dynamique synthétise de grandes quantités de données en les regroupant par catégories et en calculant automatiquement des totaux, des moyennes ou des comptages. C'est un outil d'analyse très puissant et courant dans les environnements administratifs."
+    },
+    {
+      "q": "Dans Microsoft Excel, quelle fonctionnalité permet de garder des lignes ou des colonnes visibles lors du défilement d'un grand tableau ?",
+      "o": [
+        "La protection de la feuille de calcul",
+        "La mise en page et les zones d'impression",
+        "Le filtre automatique sur les colonnes",
+        "Le blocage des volets"
+      ],
+      "r": 3,
+      "x": "Le blocage des volets (Figer les volets) maintient en place des lignes ou colonnes sélectionnées lors du défilement vertical ou horizontal. Cette fonctionnalité est très utile pour conserver les en-têtes visibles en permanence dans de grands tableaux de données."
+    },
+    {
+      "q": "Dans Microsoft Excel, quel type de graphique est le plus adapté pour représenter l'évolution d'une valeur au fil du temps ?",
+      "o": [
+        "Le graphique en courbes",
+        "Le graphique en secteurs",
+        "Le graphique en anneau",
+        "Le graphique en radar"
+      ],
+      "r": 0,
+      "x": "Le graphique en courbes visualise l'évolution d'une ou plusieurs valeurs dans le temps (ventes mensuelles, températures, effectifs). Le graphique en secteurs représente la répartition proportionnelle d'un tout, et le radar compare plusieurs variables catégorielles."
+    },
+    {
+      "q": "Dans Microsoft Word, à quoi sert l'application de styles comme Titre 1, Titre 2 ou Normal à un texte ?",
+      "o": [
+        "Modifier la couleur d'arrière-plan des paragraphes sélectionnés dans le document",
+        "Appliquer une mise en forme cohérente et faciliter la table des matières et la navigation",
+        "Insérer automatiquement des numéros de page dans les en-têtes du document",
+        "Traduire automatiquement les titres dans la langue configurée du document"
+      ],
+      "r": 1,
+      "x": "Les styles définissent une mise en forme cohérente pour chaque type de contenu. Ils permettent aussi de générer automatiquement la table des matières et d'utiliser le volet de navigation pour se déplacer rapidement dans les documents longs."
+    },
+    {
+      "q": "Dans Microsoft Word, qu'est-ce qu'un en-tête et un pied de page ?",
+      "o": [
+        "La première et la dernière ligne du corps du texte de chaque page du document",
+        "Les marges supérieure et inférieure définissant les bordures d'impression du document",
+        "Des zones de texte répétées en haut et en bas de chaque page du document imprimé",
+        "Les titres de niveaux 1 et 2 apparaissant dans la table des matières du document"
+      ],
+      "r": 2,
+      "x": "L'en-tête est une zone répétée en haut de chaque page, le pied de page en bas. Ils contiennent généralement le titre du document, le nom de l'organisation, les numéros de page ou la date. Ils s'affichent uniformément sur toutes les pages concernées."
+    },
+    {
+      "q": "Dans Microsoft Word, quelle fonctionnalité enregistre les modifications d'un document en les affichant visiblement pour permettre leur validation ?",
+      "o": [
+        "Le mode lecture protégé",
+        "La protection par mot de passe",
+        "La comparaison de documents",
+        "Le suivi des modifications"
+      ],
+      "r": 3,
+      "x": "Le suivi des modifications enregistre chaque ajout, suppression ou changement de format en l'attribuant à son auteur avec une couleur distinctive. L'auteur principal peut ensuite accepter ou rejeter chaque modification individuellement ou globalement."
+    },
+    {
+      "q": "Dans Microsoft Word, comment insérer un commentaire dans un document sans modifier le texte principal ?",
+      "o": [
+        "Via le menu Révision puis Nouveau commentaire ou le raccourci Ctrl + Alt + M",
+        "En sélectionnant le texte et en activant le mode suivi des modifications",
+        "En insérant une note de bas de page liée au texte concerné du document",
+        "Via le menu Insertion puis Zone de texte flottante en marge du document"
+      ],
+      "r": 0,
+      "x": "Les commentaires permettent d'annoter un document sans modifier le texte. Ils apparaissent dans la marge et sont attribués à leur auteur. Ils sont utilisés pour les révisions collaboratives et les remarques destinées aux co-auteurs d'un document partagé."
+    },
+    {
+      "q": "Dans Microsoft Word, à quoi sert un saut de section ?",
+      "o": [
+        "Forcer le début d'un nouveau paragraphe à la ligne suivante du document",
+        "Diviser un document en sections indépendantes avec des mises en page différentes",
+        "Insérer un numéro de page automatique au début de chaque partie du document",
+        "Créer un saut de colonne dans un texte organisé en colonnes parallèles"
+      ],
+      "r": 1,
+      "x": "Un saut de section divise le document en parties indépendantes pouvant avoir chacune sa propre mise en page : orientation, marges, en-têtes, pieds de page ou numérotation différents. Il est indispensable pour les rapports et documents administratifs complexes."
+    },
+    {
+      "q": "Dans Microsoft PowerPoint, que permet le masque des diapositives ?",
+      "o": [
+        "Protéger la présentation par un mot de passe contre toute modification non autorisée",
+        "Afficher les notes de l'orateur invisibles au public pendant la projection en salle",
+        "Définir une mise en page et une charte graphique appliquées à toutes les diapositives",
+        "Enregistrer la durée d'affichage de chaque diapositive pour une diffusion automatique"
+      ],
+      "r": 2,
+      "x": "Le masque des diapositives est un modèle maître définissant disposition, polices, couleurs et logos appliqués à toute la présentation. Toute modification du masque se répercute automatiquement sur l'ensemble des diapositives concernées."
+    },
+    {
+      "q": "Dans Microsoft PowerPoint, quelle est la différence entre une animation et une transition ?",
+      "o": [
+        "L'animation concerne le thème visuel, la transition modifie l'ordre des diapositives",
+        "L'animation s'applique à une diapositive entière, la transition à un objet spécifique",
+        "L'animation affecte la vitesse de défilement, la transition affecte la couleur de fond",
+        "L'animation s'applique aux objets d'une diapositive, la transition au passage entre diapositives"
+      ],
+      "r": 3,
+      "x": "Les animations s'appliquent aux objets (textes, images, formes) à l'intérieur d'une diapositive pour les faire apparaître ou se déplacer. Les transitions s'appliquent au changement d'une diapositive à la suivante lors de la projection devant un public."
+    },
+    {
+      "q": "Dans Microsoft PowerPoint, comment exporter une présentation au format PDF ?",
+      "o": [
+        "Via Fichier puis Exporter ou Enregistrer sous en choisissant le format PDF",
+        "En utilisant le raccourci Ctrl + P pour imprimer directement vers un fichier PDF",
+        "Via le menu Révision puis Publier en sélectionnant le format de sortie PDF",
+        "En partageant la présentation vers OneDrive puis en la convertissant en ligne"
+      ],
+      "r": 0,
+      "x": "L'export PDF dans PowerPoint s'effectue via Fichier puis Exporter (ou Enregistrer sous) en sélectionnant le format PDF. Ce format préserve la mise en forme, les polices et la disposition, rendant la présentation lisible sur tout appareil sans PowerPoint."
+    },
+    {
+      "q": "Qu'est-ce que l'apprentissage profond ?",
+      "o": [
+        "Une technique d'IA basée sur des règles et des arbres de décision prédéfinis par des experts",
+        "Une branche du machine learning utilisant des réseaux de neurones à plusieurs couches",
+        "Un algorithme de recherche optimale dans de grands espaces de données non structurées",
+        "Un système d'IA capable d'expliquer ses décisions de manière transparente"
+      ],
+      "r": 1,
+      "x": "L'apprentissage profond (deep learning) utilise des réseaux de neurones artificiels à de nombreuses couches cachées pour apprendre automatiquement des représentations complexes. Il est à la base de la reconnaissance vocale, de la vision par ordinateur et des grands modèles de langage."
+    },
+    {
+      "q": "Qu'est-ce qu'un chatbot ?",
+      "o": [
+        "Un logiciel de surveillance des conversations sur les réseaux sociaux d'une organisation",
+        "Un système de messagerie instantanée sécurisé pour les communications professionnelles",
+        "Un programme simulant une conversation humaine pour répondre automatiquement aux questions",
+        "Un outil de traduction automatique intégré aux plateformes de communication en ligne"
+      ],
+      "r": 2,
+      "x": "Un chatbot est un programme capable de simuler une conversation via texte ou voix. Les chatbots modernes s'appuient sur l'IA et le traitement du langage naturel pour répondre aux questions, orienter les utilisateurs et automatiser le service client."
+    },
+    {
+      "q": "Que désigne la vision par ordinateur en intelligence artificielle ?",
+      "o": [
+        "La technologie permettant à un ordinateur de contrôler un écran à distance",
+        "Un protocole permettant à des capteurs de transmettre des images en temps réel",
+        "Un algorithme générant automatiquement des images à partir de descriptions textuelles",
+        "La capacité des systèmes informatiques à interpréter et à analyser des images et des vidéos"
+      ],
+      "r": 3,
+      "x": "La vision par ordinateur est une branche de l'IA permettant aux machines d'analyser et de comprendre des images et vidéos. Elle est utilisée dans la reconnaissance faciale, la conduite autonome, le contrôle qualité industriel et le diagnostic médical par imagerie."
+    },
+    {
+      "q": "Quel type de système d'IA analyse les préférences passées d'un utilisateur pour lui suggérer des contenus susceptibles de l'intéresser ?",
+      "o": [
+        "Le système de recommandation",
+        "Le réseau de neurones convolutif",
+        "L'algorithme de classification supervisée",
+        "Le modèle de régression linéaire"
+      ],
+      "r": 0,
+      "x": "Les systèmes de recommandation analysent le comportement et les préférences des utilisateurs pour suggérer des produits, films, musiques ou articles pertinents. Netflix, Amazon et Spotify en font un usage intensif pour personnaliser l'expérience de chaque utilisateur."
+    },
+    {
+      "q": "Que désigne le modèle de cloud appelé informatique sans serveur ?",
+      "o": [
+        "Un modèle où l'entreprise gère entièrement ses propres serveurs physiques sur site",
+        "Un modèle où le fournisseur cloud gère l'infrastructure et facture à l'exécution du code",
+        "Un modèle où les données sont stockées localement sans recours à un serveur distant",
+        "Un modèle de déploiement utilisant exclusivement des ordinateurs personnels en réseau"
+      ],
+      "r": 1,
+      "x": "L'informatique sans serveur (serverless) permet aux développeurs de déployer du code sans gérer de serveurs. Le fournisseur cloud gère automatiquement l'infrastructure et facture uniquement le temps d'exécution réel du code, offrant une grande scalabilité."
+    },
+    {
+      "q": "Qu'est-ce qu'un conteneur dans le domaine du développement logiciel et du cloud ?",
+      "o": [
+        "Un disque dur virtuel hébergé dans le cloud pour le stockage de données partagées",
+        "Un environnement de développement intégré permettant de coder sur tout système",
+        "Un environnement d'exécution léger et isolé regroupant une application et ses dépendances",
+        "Un protocole de communication sécurisé entre les instances d'un serveur cloud distribué"
+      ],
+      "r": 2,
+      "x": "Un conteneur (Docker) empaquette une application et toutes ses dépendances dans un environnement léger, portable et isolé. Il garantit que l'application fonctionne de manière identique quel que soit l'environnement d'exécution (développement, test, production)."
+    },
+    {
+      "q": "Que désigne l'Internet des objets ?",
+      "o": [
+        "Un réseau social connectant des fabricants de matériel informatique à l'échelle mondiale",
+        "Un protocole réseau dédié aux échanges de données entre les grands centres de données",
+        "Une technologie de communication sans fil à très longue portée pour appareils mobiles",
+        "L'ensemble des objets physiques connectés à Internet capables d'échanger des données"
+      ],
+      "r": 3,
+      "x": "L'Internet des objets (IoT) regroupe les objets physiques connectés (capteurs, appareils, véhicules, équipements) capables de collecter et d'échanger des données via Internet. Il est à la base des villes intelligentes, de l'agriculture de précision et de l'industrie 4.0."
+    },
+    {
+      "q": "Que désigne le concept de ville intelligente ?",
+      "o": [
+        "Une ville utilisant les technologies numériques pour optimiser ses services et améliorer la vie",
+        "Une ville entièrement gérée par des systèmes d'intelligence artificielle sans intervention humaine",
+        "Une ville dont tous les bâtiments sont équipés de panneaux solaires connectés en réseau",
+        "Une ville où tous les citoyens disposent obligatoirement d'un équipement numérique personnel"
+      ],
+      "r": 0,
+      "x": "La ville intelligente (smart city) utilise les TIC, les capteurs et l'analyse de données pour optimiser la gestion des transports, de l'énergie, de l'eau et des services publics. L'objectif est d'améliorer la qualité de vie des habitants et l'efficacité des services urbains."
+    },
+    {
+      "q": "Qu'est-ce que la technologie blockchain ?",
+      "o": [
+        "Un protocole de chiffrement des communications sur les réseaux Wi-Fi publics",
+        "Un registre distribué dans lequel les transactions sont enregistrées par blocs chaînés",
+        "Un système de stockage de données en nuage réparti sur plusieurs serveurs distants",
+        "Un algorithme de compression permettant de réduire la taille des fichiers volumineux"
+      ],
+      "r": 1,
+      "x": "La blockchain est un registre décentralisé où les transactions sont regroupées en blocs liés cryptographiquement les uns aux autres. Sa décentralisation et son immuabilité la rendent presque infalsifiable. Elle est à la base des cryptomonnaies et de nombreuses applications de confiance numérique."
+    },
+    {
+      "q": "Qu'est-ce qu'une cryptomonnaie ?",
+      "o": [
+        "Un protocole sécurisé d'envoi de fonds entre banques centrales via le réseau SWIFT",
+        "Une monnaie numérique émise et garantie par un gouvernement ou une banque centrale",
+        "Une monnaie numérique décentralisée basée sur la cryptographie et la technologie blockchain",
+        "Un système de paiement électronique sécurisé réservé exclusivement aux grandes entreprises"
+      ],
+      "r": 2,
+      "x": "Une cryptomonnaie est une monnaie numérique décentralisée utilisant la cryptographie pour sécuriser les transactions et contrôler l'émission de nouvelles unités. Le Bitcoin, créé en 2009, est la première et la plus connue des cryptomonnaies au monde."
+    },
+    {
+      "q": "Quelle technologie de code-barres bidimensionnel peut stocker des données et se lire rapidement avec l'appareil photo d'un smartphone ?",
+      "o": [
+        "Le code EAN à treize chiffres",
+        "Le code Data Matrix industriel",
+        "La puce RFID à radiofréquence",
+        "Le code QR à deux dimensions"
+      ],
+      "r": 3,
+      "x": "Le code QR (Quick Response) est un code-barres 2D pouvant encoder des URL, textes, contacts ou informations de paiement. Lisible rapidement par un smartphone, il est largement utilisé pour le marketing, les paiements mobiles et les menus de restaurants."
+    },
+    {
+      "q": "Quel système d'exploitation mobile développé par Google, basé sur le noyau Linux, équipe la majorité des smartphones dans le monde ?",
+      "o": [
+        "Android",
+        "iOS",
+        "HarmonyOS",
+        "Windows Mobile"
+      ],
+      "r": 0,
+      "x": "Android est le système d'exploitation mobile open source de Google, basé sur Linux. Il équipe la majorité des smartphones dans le monde. iOS d'Apple équipe uniquement les iPhones, HarmonyOS est de Huawei, et Windows Mobile a été abandonné par Microsoft."
+    },
+    {
+      "q": "Quel système d'exploitation mobile est exclusivement réservé aux appareils fabriqués par Apple ?",
+      "o": [
+        "Android",
+        "iOS",
+        "Windows Phone",
+        "Symbian"
+      ],
+      "r": 1,
+      "x": "iOS est le système d'exploitation propriétaire d'Apple, disponible uniquement sur iPhone tandis qu'iPadOS est utilisé sur les iPad. Il est fermé et non portable. Android est de Google, Windows Phone de Microsoft et Symbian était le système de Nokia avant l'ère des smartphones modernes."
+    },
+    {
+      "q": "Que désigne le terme responsive design en développement web ?",
+      "o": [
+        "Un site web dont le contenu se charge instantanément quelle que soit la connexion",
+        "Un site web doté d'animations s'adaptant aux préférences de chaque utilisateur",
+        "Une conception web permettant à un site de s'adapter à la taille de l'écran",
+        "Un site capable de fonctionner entièrement sans connexion Internet disponible"
+      ],
+      "r": 2,
+      "x": "Le responsive design est une approche permettant à un site de s'adapter automatiquement à tout type d'écran (ordinateur, tablette, smartphone). Il utilise des grilles flexibles, des images adaptatives et des règles CSS media queries pour garantir une expérience optimale."
+    },
+    {
+      "q": "Quelle est la différence fondamentale entre une application native et une application web progressive ?",
+      "o": [
+        "L'application native fonctionne sur tous les systèmes, la web progressive sur Android uniquement",
+        "L'application native est gratuite, la web progressive est toujours distribuée avec abonnement",
+        "L'application native est développée en HTML, la web progressive nécessite un compilateur dédié",
+        "L'application native est développée pour un système spécifique, la web progressive fonctionne sur navigateur"
+      ],
+      "r": 3,
+      "x": "Une application native est développée spécifiquement pour iOS ou Android et s'installe depuis un magasin d'applications. Une application web progressive (PWA) fonctionne via le navigateur, peut s'installer sur l'écran d'accueil et opérer partiellement hors connexion."
+    },
+    {
+      "q": "Que permet la technologie NFC dans les appareils mobiles ?",
+      "o": [
+        "Des échanges de données sans contact à très courte portée pour le paiement ou le partage",
+        "La connexion automatique à un réseau Wi-Fi sans saisie de mot de passe",
+        "Le partage de connexion Internet mobile entre plusieurs appareils simultanément",
+        "La synchronisation automatique des contacts entre plusieurs appareils de marques différentes"
+      ],
+      "r": 0,
+      "x": "NFC (Near Field Communication) permet des échanges de données entre appareils à très courte portée (quelques centimètres). Elle est utilisée pour le paiement sans contact, les cartes d'accès, le partage de liens et la lecture d'étiquettes NFC intelligentes."
+    },
+    {
+      "q": "Quel format de fichier image utilise une compression avec perte, largement adopté pour les photographies sur le Web ?",
+      "o": [
+        "PNG",
+        "JPEG",
+        "BMP",
+        "TIFF"
+      ],
+      "r": 1,
+      "x": "JPEG utilise une compression avec perte qui réduit significativement la taille du fichier en supprimant des détails peu perceptibles. Il est idéal pour les photographies. PNG utilise une compression sans perte, BMP est non compressé, et TIFF est utilisé pour l'impression professionnelle."
+    },
+    {
+      "q": "Que signifie l'acronyme PDF et quelle est sa principale utilité ?",
+      "o": [
+        "Protected Data Format, un format sécurisé d'échange de données entre applications",
+        "Printable Document File, un format conçu exclusivement pour l'impression professionnelle",
+        "Portable Document Format, un format préservant la mise en forme d'un document sur tout appareil",
+        "Public Distribution Format, un format libre de droits pour la diffusion de documents officiels"
+      ],
+      "r": 2,
+      "x": "PDF (Portable Document Format) a été créé par Adobe pour présenter des documents avec une mise en forme identique sur tout appareil, système et imprimante. Standardisé ISO, il est très utilisé pour les documents officiels, contrats et formulaires administratifs."
+    },
+    {
+      "q": "Quel format de fichier audio utilise une compression avec perte en éliminant les fréquences peu perceptibles par l'oreille humaine ?",
+      "o": [
+        "WAV",
+        "FLAC",
+        "AIFF",
+        "MP3"
+      ],
+      "r": 3,
+      "x": "MP3 (MPEG Audio Layer 3) compresse les fichiers audio en supprimant les sons peu perceptibles, réduisant la taille jusqu'à 90 % par rapport au WAV. WAV et AIFF sont non compressés et de qualité maximale. FLAC utilise une compression sans perte, conservant toute la qualité sonore."
+    },
+    {
+      "q": "Quel format de conteneur vidéo est le plus répandu sur Internet et compatible avec la majorité des lecteurs et navigateurs modernes ?",
+      "o": [
+        "MP4",
+        "AVI",
+        "MKV",
+        "WMV"
+      ],
+      "r": 0,
+      "x": "MP4 est le format vidéo le plus universellement supporté sur le Web et les appareils mobiles. Il utilise généralement la compression H.264 pour la vidéo et AAC pour l'audio. AVI et WMV sont des formats anciens de Microsoft, MKV est open source mais moins universel."
+    },
+    {
+      "q": "Qu'est-ce qu'un format de compression sans perte ?",
+      "o": [
+        "Un format réduisant la taille d'un fichier en supprimant définitivement les données redondantes",
+        "Un format réduisant la taille d'un fichier tout en permettant de le restaurer à l'identique",
+        "Un format de chiffrement empêchant la lecture sans clé de déchiffrement appropriée",
+        "Un format optimisant la vitesse de chargement des fichiers sur les connexions lentes"
+      ],
+      "r": 1,
+      "x": "La compression sans perte réduit la taille d'un fichier en encodant plus efficacement ses données, sans en supprimer. La décompression restaure le fichier exactement à l'identique de l'original. PNG, FLAC, ZIP et RAR utilisent la compression sans perte."
+    },
+    {
+      "q": "Parmi les descriptions suivantes, laquelle définit le mieux les réseaux sociaux numériques ?",
+      "o": [
+        "Des sites web proposant des actualités et des informations générales à leurs abonnés",
+        "Des plateformes de commerce en ligne permettant d'acheter et de vendre des produits",
+        "Des plateformes permettant aux utilisateurs de créer, partager et interagir autour de contenus",
+        "Des applications de messagerie permettant uniquement des échanges privés entre utilisateurs"
+      ],
+      "r": 2,
+      "x": "Les réseaux sociaux permettent de créer des profils, publier des contenus, interagir avec d'autres utilisateurs et partager des informations. Facebook, X (Twitter), Instagram, LinkedIn et TikTok en sont des exemples majeurs à l'audience mondiale."
+    },
+    {
+      "q": "Quelle bonne pratique est recommandée lors de l'envoi d'un courriel professionnel ?",
+      "o": [
+        "Utiliser systématiquement la mise en copie cachée pour tous les destinataires internes",
+        "Rédiger l'objet du message après avoir entièrement rédigé le corps du courriel",
+        "Mettre en majuscule les mots importants pour en faciliter la lecture et la compréhension",
+        "Indiquer un objet clair et précis résumant le contenu du message dans la ligne d'objet"
+      ],
+      "r": 3,
+      "x": "Un objet clair et précis permet au destinataire d'identifier immédiatement le sujet et la priorité du message. Les majuscules intégrales sont à éviter car elles équivalent à \"crier\" dans la communication numérique. La copie cachée est réservée à des usages spécifiques et justifiés."
+    },
+    {
+      "q": "Quelle pratique renforce le plus efficacement la sécurité d'un mot de passe ?",
+      "o": [
+        "Utiliser une phrase de passe longue combinant lettres, chiffres et caractères spéciaux",
+        "Utiliser le même mot de passe robuste sur tous les comptes importants pour le mémoriser",
+        "Changer son mot de passe chaque semaine en incrémentant uniquement le chiffre final",
+        "Utiliser uniquement des informations personnelles facilement mémorisables comme une date"
+      ],
+      "r": 0,
+      "x": "Un mot de passe fort est long, aléatoire et combine différents types de caractères. Une phrase de passe mémorisable (ex. : Mon$Chat_Boit3Cafés!) est à la fois longue et robuste. Réutiliser un même mot de passe est dangereux car une seule fuite compromet tous les comptes."
+    },
+    {
+      "q": "Que permet un gestionnaire de mots de passe ?",
+      "o": [
+        "Récupérer automatiquement les mots de passe oubliés via le courriel de récupération",
+        "Stocker et gérer de manière sécurisée des mots de passe complexes et uniques",
+        "Tester la robustesse des mots de passe en tentant de les deviner par force brute",
+        "Synchroniser les mots de passe entre tous les appareils d'une même marque"
+      ],
+      "r": 1,
+      "x": "Un gestionnaire de mots de passe génère, stocke et remplit automatiquement des mots de passe uniques et complexes pour chaque compte. L'utilisateur ne retient qu'un seul mot de passe maître sécurisé. Bitwarden, 1Password et KeePass en sont des exemples populaires."
+    },
+    {
+      "q": "Quel micrologiciel stocké sur la carte mère est le premier programme exécuté lors du démarrage d'un ordinateur ?",
+      "o": [
+        "Le chargeur de démarrage du système d'exploitation",
+        "Le noyau du système d'exploitation chargé en mémoire",
+        "Le BIOS ou son successeur UEFI",
+        "Le gestionnaire de périphériques du système"
+      ],
+      "r": 2,
+      "x": "Le BIOS (Basic Input/Output System) ou son successeur UEFI (Unified Extensible Firmware Interface) est gravé sur la carte mère. Il initialise le matériel, effectue l'autodiagnostic POST et charge le chargeur de démarrage qui lance ensuite le système d'exploitation."
+    },
+    {
+      "q": "Quelle méthode de sauvegarde copie uniquement les fichiers modifiés depuis la dernière sauvegarde complète ou incrémentielle ?",
+      "o": [
+        "La sauvegarde complète",
+        "La sauvegarde miroir",
+        "La sauvegarde différentielle",
+        "La sauvegarde incrémentielle"
+      ],
+      "r": 3,
+      "x": "La sauvegarde incrémentielle copie uniquement les fichiers modifiés depuis la dernière sauvegarde (qu'elle soit complète ou incrémentielle). Elle est rapide et économe en espace. La sauvegarde différentielle, elle, copie tout ce qui a changé depuis la dernière sauvegarde complète uniquement."
+    },
+    {
+      "q": "Quel organisme de l'Union africaine coordonne les politiques de développement numérique à l'échelle du continent africain ?",
+      "o": [
+        "La Commission de l'Union africaine",
+        "La Banque africaine de développement",
+        "L'Union économique et monétaire ouest-africaine",
+        "La Communauté économique des États de l'Afrique de l'Ouest"
+      ],
+      "r": 0,
+      "x": "La Commission de l'Union africaine coordonne les politiques numériques continentales, notamment à travers l'Agenda 2063 et la Stratégie de transformation numérique de l'Afrique. Elle définit le cadre des TIC et de l'économie numérique pour les États membres."
+    },
+    {
+      "q": "Que désigne le terme monnaie mobile dans le contexte africain ?",
+      "o": [
+        "Un système de paiement en ligne nécessitant obligatoirement une connexion Internet haut débit",
+        "Un service permettant d'envoyer, de recevoir et de stocker de l'argent via un téléphone mobile",
+        "Une application bancaire réservée aux clients disposant d'un compte dans une banque conventionnelle",
+        "Un système de paiement par carte de crédit sans contact intégré aux téléphones récents"
+      ],
+      "r": 1,
+      "x": "La monnaie mobile (Mobile Money) permet d'effectuer des transactions financières via un simple téléphone, sans compte bancaire traditionnel. Orange Money et Moov Money sont très répandus en Afrique de l'Ouest, notamment au Burkina Faso, pour les paiements du quotidien."
+    },
+    {
+      "q": "Que désigne la littératie numérique ?",
+      "o": [
+        "La capacité à taper rapidement au clavier et à utiliser des logiciels de traitement de texte",
+        "La maîtrise des langages de programmation et du développement de logiciels et applications informatiques",
+        "L'ensemble des compétences permettant d'utiliser, d'évaluer et de créer des contenus numériques",
+        "La connaissance des lois et réglementations encadrant l'usage d'Internet dans un pays"
+      ],
+      "r": 2,
+      "x": "La littératie numérique regroupe les compétences pour naviguer, utiliser et évaluer de manière critique les outils numériques, et créer des contenus. Elle inclut la sécurité en ligne, la compréhension des algorithmes et la capacité à identifier les fausses informations."
+    },
+    {
+      "q": "Que désigne le terme infox dans le contexte de la communication numérique ?",
+      "o": [
+        "Un logiciel générant automatiquement des actualités fictives à des fins commerciales",
+        "Un protocole réseau diffusant des informations erronées sur les serveurs de messagerie",
+        "Un type d'attaque informatique ciblant les médias en ligne pour perturber leur activité",
+        "La diffusion intentionnelle de fausses informations via les canaux numériques"
+      ],
+      "r": 3,
+      "x": "L'infox (ou fake news) est la diffusion délibérée de fausses informations via Internet et les réseaux sociaux dans le but de tromper, manipuler ou influencer l'opinion publique. La vérification des sources et le recours à des sites de fact-checking sont des pratiques essentielles pour la combattre."
+    },
+    {
+      "q": "Quelle licence open source impose que tout logiciel dérivé soit distribué sous la même licence que l'original ?",
+      "o": [
+        "La licence GNU GPL",
+        "La licence MIT",
+        "La licence BSD",
+        "La licence Apache 2.0"
+      ],
+      "r": 0,
+      "x": "La licence GNU GPL (General Public License) est une licence copyleft : tout logiciel dérivé doit être distribué sous la même licence GPL, garantissant que le code reste libre. Les licences MIT, BSD et Apache sont plus permissives et n'imposent pas cette réciprocité."
+    },
+    {
+      "q": "Parmi les méthodes d'authentification suivantes, laquelle est considérée comme la plus robuste pour protéger un compte en ligne ?",
+      "o": [
+        "Un mot de passe long composé de plus de vingt caractères aléatoires",
+        "Une clé de sécurité physique combinée à un mot de passe",
+        "Une question secrète basée sur des informations personnelles de l'utilisateur",
+        "Un code à quatre chiffres envoyé par SMS sur le numéro enregistré du compte"
+      ],
+      "r": 1,
+      "x": "La clé de sécurité physique (FIDO2/WebAuthn) est l'authentification à deux facteurs la plus robuste. Elle résiste au hameçonnage car elle vérifie cryptographiquement le site légitime. Les codes SMS sont vulnérables aux attaques de substitution de carte SIM (SIM swapping)."
+    },
+    {
+      "q": "Quelle technologie est utilisée par les administrations pour garantir l'authenticité des documents officiels transmis électroniquement ?",
+      "o": [
+        "Un filigrane numérique visible apposé automatiquement sur chaque document partagé",
+        "Un code-barres bidimensionnel imprimé sur le document et vérifié par application mobile",
+        "Un cachet électronique basé sur des certificats numériques délivrés par une autorité de confiance",
+        "Une copie horodatée automatiquement enregistrée par le serveur de messagerie institutionnel"
+      ],
+      "r": 2,
+      "x": "Le cachet électronique serveur, basé sur des certificats numériques PKI, garantit l'authenticité et l'intégrité des documents officiels en ligne. Il permet au destinataire de vérifier que le document émane bien de l'organisation émettrice et qu'il n'a pas été modifié."
+    },
+    {
+      "q": "Dans l'administration publique, à quoi sert un système de gestion intégré des ressources ?",
+      "o": [
+        "À surveiller en temps réel les connexions Internet des agents sur le réseau institutionnel",
+        "À gérer les archives physiques et numériques des différents ministères et services publics",
+        "À former les agents publics aux outils bureautiques via des modules en ligne adaptés",
+        "À centraliser la gestion des ressources humaines, financières et matérielles de l'État"
+      ],
+      "r": 3,
+      "x": "Un ERP ou système de gestion intégré dans l'administration centralise la gestion des ressources humaines (paie, carrières), financières (budget, comptabilité) et matérielles. Il améliore l'efficacité, la transparence et la qualité du service public rendu aux citoyens."
+    },
+    {
+      "q": "Qu'est-ce qu'un intranet dans une organisation ?",
+      "o": [
+        "Un réseau informatique privé interne utilisant les technologies web, accessible uniquement aux membres de l'organisation",
+        "Un réseau d'entreprises partenaires partageant des ressources via une connexion Internet sécurisée",
+        "Un réseau sans fil couvrant l'ensemble des bâtiments d'une administration publique",
+        "Un service de messagerie interne fonctionnant exclusivement par SMS entre agents d'un ministère"
+      ],
+      "r": 0,
+      "x": "L'intranet est un réseau privé interne utilisant les technologies web et Internet, mais accessible uniquement aux membres de l'organisation. Il sert à partager des informations, documents et applications en interne, à l'opposé d'Internet qui est accessible à tous."
+    },
+    {
+      "q": "Qu'est-ce qu'un extranet ?",
+      "o": [
+        "Une version améliorée et sécurisée d'un réseau Wi-Fi public dans un espace de travail",
+        "Une extension sécurisée de l'intranet permettant à des partenaires externes d'accéder à certaines ressources",
+        "Un réseau privatif reliant exclusivement les différents ministères d'un même gouvernement",
+        "Un protocole de communication sécurisée entre deux succursales d'une même organisation"
+      ],
+      "r": 1,
+      "x": "L'extranet est une extension de l'intranet accessible à des partenaires extérieurs autorisés (fournisseurs, clients, autres administrations) via Internet. Il leur donne accès à une partie limitée des ressources internes et facilite la collaboration inter-organisationnelle sécurisée."
+    },
+    {
+      "q": "Parmi les services suivants, lequel désigne un service de stockage en nuage permettant de synchroniser et partager des fichiers entre appareils ?",
+      "o": [
+        "Google Maps",
+        "Microsoft Teams",
+        "Google Drive",
+        "Adobe Premiere"
+      ],
+      "r": 2,
+      "x": "Google Drive est un service de stockage en nuage permettant de stocker, synchroniser et partager des fichiers entre différents appareils. Microsoft OneDrive et Dropbox proposent des fonctionnalités similaires. Teams est un outil collaboratif et Maps un service de cartographie."
+    },
+    {
+      "q": "Parmi les défis suivants, lequel représente un obstacle majeur à la transformation numérique dans les pays en développement ?",
+      "o": [
+        "L'excès de compétences numériques dans la population active locale",
+        "La surproduction de contenus numériques dans les langues nationales",
+        "L'omniprésence des infrastructures numériques dans les zones rurales reculées",
+        "Le manque d'infrastructures numériques, d'énergie fiable et de compétences locales"
+      ],
+      "r": 3,
+      "x": "La transformation numérique en Afrique est freinée par l'insuffisance des infrastructures (réseau, électricité), le coût élevé des équipements et de la connectivité, et le déficit de compétences numériques locales, particulièrement prononcé dans les zones rurales éloignées."
+    },
+    {
+      "q": "Que désigne le télétravail dans le contexte de la transformation numérique du travail ?",
+      "o": [
+        "Une organisation permettant à un agent d'exercer ses fonctions à distance grâce aux TIC",
+        "Une réunion professionnelle organisée en visioconférence entre collègues d'une même ville",
+        "Un système de surveillance des performances des agents publics via des outils numériques",
+        "Un programme de formation en ligne obligatoire pour les agents de l'administration publique"
+      ],
+      "r": 0,
+      "x": "Le télétravail permet à un employé d'exercer ses fonctions depuis son domicile ou tout autre lieu distant du bureau, grâce aux outils numériques (messagerie, visioconférence, VPN). Il a connu un essor considérable depuis la pandémie de Covid-19 à partir de 2020."
+    },
+    {
+      "q": "Que désigne le terme e-learning dans le domaine de la formation professionnelle ?",
+      "o": [
+        "Un programme de certification professionnelle en informatique délivré par des universités en ligne",
+        "L'apprentissage à distance utilisant des outils numériques, Internet et des plateformes dédiées",
+        "Un logiciel de gestion des formations en présentiel dans les établissements professionnels",
+        "Un système de notation automatisée des examens par des algorithmes d'intelligence artificielle"
+      ],
+      "r": 1,
+      "x": "Le e-learning désigne toute forme de formation utilisant des supports numériques et Internet : cours en vidéo, quiz interactifs, forums, classes virtuelles. Il offre une flexibilité d'accès aux savoirs sans contrainte géographique ni horaire, adaptée aux apprenants en activité professionnelle."
+    },
+    {
+      "q": "Dans le cadre de la modernisation administrative, que désigne la notion de guichet unique numérique ?",
+      "o": [
+        "Un bureau physique centralisant tous les services administratifs dans une seule salle",
+        "Un service postal permettant d'envoyer des documents officiels par voie électronique",
+        "Un portail en ligne centralisant plusieurs démarches administratives accessibles depuis un seul point",
+        "Un dispositif biométrique d'identification des citoyens dans les structures administratives"
+      ],
+      "r": 2,
+      "x": "Le guichet unique numérique est un portail web centralisant de nombreuses démarches administratives permettant aux citoyens et entreprises de les accomplir en ligne depuis un seul point d'accès. Il réduit les déplacements, les délais de traitement et les coûts administratifs."
+    },
+    {
+      "q": "Dans le cadre de la cybersécurité institutionnelle, que désigne une politique de sécurité des systèmes d'information ?",
+      "o": [
+        "Un catalogue des équipements informatiques agréés pour les services de l'État",
+        "Un ensemble de règles techniques définissant les configurations des postes de travail",
+        "Un contrat de prestation liant l'État à un fournisseur de services de sécurité informatique",
+        "Un document définissant les règles, responsabilités et mesures pour protéger les systèmes d'information"
+      ],
+      "r": 3,
+      "x": "Une politique de sécurité des systèmes d'information (PSSI) formalise les règles, responsabilités, procédures et mesures techniques pour protéger les systèmes et données d'une organisation. Elle est le fondement de toute démarche de cybersécurité institutionnelle sérieuse."
+    },
+    {
+      "q": "Que désigne l'identité numérique d'un citoyen dans le contexte des services publics en ligne ?",
+      "o": [
+        "L'ensemble des attributs numériques permettant d'identifier et d'authentifier un citoyen en ligne",
+        "La liste de ses comptes sur les réseaux sociaux et les plateformes numériques commerciales",
+        "Son adresse courriel institutionnelle attribuée par l'administration à laquelle il est rattaché",
+        "Son numéro national couplé à son numéro de téléphone mobile personnel déclaré"
+      ],
+      "r": 0,
+      "x": "L'identité numérique citoyenne regroupe les attributs (nom, numéro national, données biométriques) et les moyens d'authentification (certificat, code) permettant à un citoyen de s'identifier de manière sécurisée sur les portails des services publics dématérialisés."
+    },
+    {
+      "q": "Quel programme de l'Union africaine vise à accélérer la transformation numérique du continent à l'horizon 2030 ?",
+      "o": [
+        "L'Initiative Connectivité Africaine pour le développement",
+        "La Stratégie de Transformation Numérique de l'Afrique",
+        "Le Plan Numérique Continental de l'Union africaine",
+        "L'Agenda Africain pour la Gouvernance Numérique"
+      ],
+      "r": 1,
+      "x": "La Stratégie de Transformation Numérique de l'Afrique 2020-2030, adoptée par l'Union africaine, guide les États membres dans leur développement numérique. Elle couvre les infrastructures, les compétences, l'innovation, la cybersécurité et l'économie numérique."
+    },
+    {
+      "q": "Que désigne la protection des données personnelles dans le contexte numérique ?",
+      "o": [
+        "Le cryptage obligatoire de toutes les communications entre citoyens et administrations publiques",
+        "La suppression automatique des données collectées par les applications après une période définie",
+        "L'ensemble des droits et obligations encadrant la collecte et l'utilisation des données personnelles",
+        "La conservation des données citoyennes exclusivement sur des serveurs situés sur le territoire national"
+      ],
+      "r": 2,
+      "x": "La protection des données personnelles encadre la manière dont les organisations collectent, traitent, conservent et partagent les données des individus. Au Burkina Faso, la Commission de l'Informatique et des Libertés (CIL) veille à cette protection, en s'inspirant des standards internationaux."
+    },
+    {
+      "q": "Au Burkina Faso, quelle institution est chargée de veiller à la protection des données personnelles et au respect des libertés individuelles dans l'usage de l'informatique ?",
+      "o": [
+        "Le ministère de la Justice et des Droits humains",
+        "Le ministère de la Transition digitale et des Postes",
+        "L'Autorité de Régulation des Communications Électroniques et des Postes",
+        "La Commission de l'Informatique et des Libertés"
+      ],
+      "r": 3,
+      "x": "La CIL (Commission de l'Informatique et des Libertés) est l'autorité administrative indépendante du Burkina Faso chargée de veiller à ce que l'informatique ne porte pas atteinte aux libertés individuelles et à la vie privée. Elle contrôle les fichiers contenant des données personnelles."
     }
   ],
   "agriculture": [
@@ -43457,6 +52422,3308 @@ const QUESTIONS = {
       ],
       "r": 2,
       "x": "Le président burundais Évariste Ndayishimiye assure la présidence tournante de l'Union africaine pour l'année 2026. Il a été élu lors du 39ᵉ Sommet de l'UA à Addis-Abeba et a succédé au président angolais João Lourenço."
+    }
+  ],
+  "halieutique": [
+    {
+      "q": "L'halieutique est la science qui étudie :",
+      "o": [
+        "La qualité physicochimique des eaux continentales et marines",
+        "L'exploitation, la gestion et la biologie des ressources aquatiques vivantes",
+        "La culture des algues et des plantes aquatiques à des fins commerciales",
+        "Les techniques de conservation et de transformation des produits de la mer"
+      ],
+      "r": 1,
+      "x": "L'halieutique couvre l'étude des ressources aquatiques vivantes exploitables, leur biologie, leur dynamique et leur gestion durable. Elle englobe aussi bien la pêche que l'aquaculture."
+    },
+    {
+      "q": "Les ressources halieutiques désignent :",
+      "o": [
+        "L'ensemble des organismes aquatiques exploitables par l'homme (poissons, crustacés, mollusques)",
+        "Uniquement les espèces de poissons d'eau douce élevées en aquaculture continentale",
+        "Les espèces végétales aquatiques utilisées dans l'alimentation humaine traditionnelle",
+        "Les ressources en eau disponibles pour l'irrigation et la consommation domestique rurale"
+      ],
+      "r": 0,
+      "x": "Les ressources halieutiques désignent tous les organismes aquatiques vivants exploités par l'homme, incluant poissons, crustacés, mollusques et invertébrés, en eau douce comme en mer."
+    },
+    {
+      "q": "On appelle « stock halieutique » :",
+      "o": [
+        "La totalité des poissons présents dans un plan d'eau donné, toutes espèces confondues",
+        "L'ensemble des captures annuelles réalisées par les pêcheurs d'une région donnée",
+        "Un groupe d'individus d'une même espèce dans une zone délimitée, exploité comme unité de gestion",
+        "La quantité de poissons disponibles à la vente sur un marché local à un instant donné"
+      ],
+      "r": 2,
+      "x": "Un stock halieutique est une unité de gestion composée d'individus d'une même espèce dans une aire géographique définie, suffisamment isolée pour être gérée indépendamment des stocks voisins."
+    },
+    {
+      "q": "La filière pêche se déroule logiquement selon l'ordre suivant :",
+      "o": [
+        "Transformation, commercialisation, production, financement et consommation finale",
+        "Financement, consommation, production, commercialisation et transformation artisanale",
+        "Production, consommation, commercialisation, transformation et mise en marché",
+        "Production, transformation, commercialisation puis consommation finale"
+      ],
+      "r": 3,
+      "x": "La filière halieutique s'organise de la production (capture ou élevage) vers la transformation éventuelle, puis la commercialisation et enfin la consommation. Chaque maillon conditionne la valeur ajoutée finale."
+    },
+    {
+      "q": "La distinction fondamentale entre pêche artisanale et pêche industrielle réside dans :",
+      "o": [
+        "L'utilisation de moyens simples et de faible capacité par la pêche artisanale, ciblant les marchés locaux",
+        "Le fait que la pêche artisanale est exclusivement pratiquée en mer, contrairement à la pêche fluviale",
+        "L'interdiction de la pêche artisanale dans les pays en développement en raison de son impact environnemental",
+        "L'obligation d'utiliser des filets maillants en pêche artisanale contre des chaluts en pêche industrielle"
+      ],
+      "r": 0,
+      "x": "La pêche artisanale se caractérise par ses moyens simples (pirogues, engins légers) et son ancrage local. La pêche industrielle mobilise des navires puissants visant des volumes commerciaux élevés."
+    },
+    {
+      "q": "En halieutique, le terme « débarquement » désigne :",
+      "o": [
+        "Le transport des poissons vivants d'un étang vers un autre pour l'alevinage ou la vente",
+        "La mise à l'eau d'une pirogue ou d'un bateau de pêche au début d'une campagne",
+        "La quantité de poissons effectivement apportée à terre par les pêcheurs après une sortie",
+        "Le rejet des poissons indésirables ou sous-taille capturés accidentellement lors d'une sortie"
+      ],
+      "r": 2,
+      "x": "Le débarquement représente la quantité de poissons mise à terre par les pêcheurs. Il diffère de la capture totale car une partie peut être rejetée ou consommée à bord pendant la sortie de pêche."
+    },
+    {
+      "q": "Au Burkina Faso, le poisson constitue une source importante de protéines car :",
+      "o": [
+        "La viande bovine est disponible en abondance mais trop chère pour les populations rurales pauvres",
+        "Il représente une source de protéines animales bon marché, accessible aux populations rurales et urbaines",
+        "La volaille locale est insuffisante pour couvrir les besoins en protéines des zones périurbaines",
+        "Les insectes comestibles sont la principale source de protéines animales dans les villages sahéliens"
+      ],
+      "r": 1,
+      "x": "Le poisson est une source de protéines animales économique et accessible, couvrant une part significative des besoins nutritionnels des ménages burkinabè grâce à la pêche sur les barrages et retenues d'eau."
+    },
+    {
+      "q": "La ligne latérale chez les poissons est un organe sensoriel qui permet de :",
+      "o": [
+        "Détecter les variations de lumière et orienter la nage vers les zones éclairées et chaudes de l'eau",
+        "Réguler la pression gazeuse interne de la vessie natatoire lors des descentes en eau profonde",
+        "Identifier la trajectoire précise des proies par l'analyse des substances chimiques odorantes dissoutes",
+        "Percevoir les vibrations, les mouvements de l'eau et les variations de pression hydrodynamique"
+      ],
+      "r": 3,
+      "x": "La ligne latérale est un système de mécanoréception composé de neuromastes. Elle permet au poisson de capter les moindres déplacements d'eau, vibrations et gradients de pression autour de lui. Elle est essentielle pour la navigation dans le noir, la cohésion des bancs et la détection des proies ou des prédateurs."
+    },
+    {
+      "q": "La vessie natatoire des poissons téléostéens remplit principalement la fonction suivante :",
+      "o": [
+        "Assurer la flottabilité en régulant la densité corporelle du poisson dans la colonne d'eau",
+        "Stocker des réserves d'oxygène pour la respiration lors d'apnées prolongées sous les rochers",
+        "Produire les hormones sexuelles nécessaires à la maturation des gonades en période de reproduction",
+        "Filtrer l'eau ingérée pour extraire les micro-organismes servant à l'alimentation planctonique"
+      ],
+      "r": 0,
+      "x": "La vessie natatoire ajuste la flottabilité du poisson en modifiant son volume gazeux interne, lui permettant de se maintenir à une profondeur donnée sans effort musculaire continu."
+    },
+    {
+      "q": "Les branchies des poissons assurent simultanément deux fonctions essentielles :",
+      "o": [
+        "La digestion des aliments et la régulation thermique du corps en milieu aquatique",
+        "La production d'hormones de croissance et le maintien de l'équilibre acido-basique sanguin",
+        "Les échanges gazeux (O2/CO2) et l'osmorégulation ionique avec le milieu extérieur",
+        "La filtration des particules alimentaires et la détection chimique des prédateurs à distance"
+      ],
+      "r": 2,
+      "x": "Les branchies assurent à la fois la respiration (absorption d'O2 et rejet de CO2) et l'osmorégulation (échanges ioniques Na+, Cl-, K+) entre le sang et le milieu aquatique environnant."
+    },
+    {
+      "q": "L'osmorégulation chez les poissons d'eau douce implique que :",
+      "o": [
+        "Ils éliminent l'excès de sels par la peau pour maintenir l'équilibre osmotique permanent",
+        "Ils produisent une urine très diluée et abondante pour éliminer l'eau entrant par osmose",
+        "Ils boivent en permanence une grande quantité d'eau pour compenser les pertes ioniques branchiales",
+        "Ils accumulent des sels dans le sang pour atteindre la même concentration que le milieu extérieur"
+      ],
+      "r": 1,
+      "x": "En eau douce, le milieu est hypotonique par rapport au sang ; l'eau entre passivement dans l'organisme par osmose. Les poissons produisent une urine très diluée et abondante pour compenser cet afflux constant."
+    },
+    {
+      "q": "La principale adaptation respiratoire de Clarias gariepinus lui permettant de survivre en eau peu oxygénée est :",
+      "o": [
+        "La présence d'un organe suprabranchial arborescent permettant la respiration aérienne directe",
+        "Une capacité d'apnée prolongée pouvant dépasser 48 heures sans ventilation branchiale active",
+        "Des branchies hypertrophiées dont la surface d'échange est dix fois supérieure aux autres espèces",
+        "Un métabolisme anaérobie exclusif lui permettant de fonctionner totalement sans oxygène dissous"
+      ],
+      "r": 0,
+      "x": "Clarias gariepinus possède un organe suprabranchial arborescent vascularisé lui permettant de respirer l'air atmosphérique. Cette adaptation lui confère une résistance exceptionnelle aux eaux désoxygénées."
+    },
+    {
+      "q": "La fécondité d'un poisson est définie comme :",
+      "o": [
+        "La capacité d'un poisson à se reproduire plusieurs fois au cours de sa vie adulte",
+        "Le nombre de fois que la femelle pond au cours d'une même saison de reproduction annuelle",
+        "La durée en jours séparant deux pontes successives chez une femelle en activité reproductrice",
+        "Le nombre d'oeufs produits par une femelle lors d'une ponte ou par unité de temps déterminée"
+      ],
+      "r": 3,
+      "x": "La fécondité mesure le potentiel reproducteur d'une femelle en quantifiant les oeufs produits par ponte ou par an. Elle est un paramètre clé de la dynamique des populations et de la gestion des stocks."
+    },
+    {
+      "q": "Parmi les modes de reproduction suivants, lequel qualifie une espèce qui pond ses oeufs dans le milieu sans les garder ?",
+      "o": [
+        "Viviparité : l'embryon se développe dans l'utérus de la femelle jusqu'à la naissance",
+        "Ovoviviparité : les oeufs se développent à l'intérieur de la femelle sans placenta fonctionnel",
+        "Oviparité sans soins : les oeufs sont libérés dans le milieu et abandonnés après fécondation",
+        "Incubation buccale : les oeufs sont retenus dans la cavité buccale d'un des deux géniteurs"
+      ],
+      "r": 2,
+      "x": "L'oviparité sans soins parentaux concerne des espèces qui pondent de nombreux oeufs dans le milieu, misent sur la quantité pour assurer la survie de l'espèce malgré la forte mortalité des oeufs et des larves."
+    },
+    {
+      "q": "Le modèle de croissance de Von Bertalanffy décrit :",
+      "o": [
+        "La relation entre le poids d'un poisson et la surface de ses écailles à différents stades de vie",
+        "La croissance en longueur d'un poisson qui tend asymptotiquement vers une taille maximale L infini",
+        "La vitesse de reproduction d'une population en fonction de la disponibilité alimentaire du milieu",
+        "La mortalité naturelle d'une cohorte de poissons en fonction des conditions du milieu aquatique"
+      ],
+      "r": 1,
+      "x": "Le modèle de Von Bertalanffy est l'équation de croissance standard en halieutique. Il décrit une croissance qui ralentit progressivement à mesure que l'individu approche de sa taille maximale théorique L infini."
+    },
+    {
+      "q": "La lecture des otolithes (pierres d'oreille) chez les poissons permet de déterminer :",
+      "o": [
+        "L'âge précis du poisson grâce aux anneaux de croissance annuels ou journaliers qu'ils portent",
+        "Le régime alimentaire du poisson à partir des acides gras incorporés dans leur structure calcifiée",
+        "La résistance aux maladies parasitaires par analyse de la microstructure cristalline de l'otolithe",
+        "La zone géographique d'origine par comparaison isotopique avec des référentiels régionaux connus"
+      ],
+      "r": 0,
+      "x": "Les otolithes forment des anneaux de croissance périodiques (quotidiens ou annuels) similaires aux cernes des arbres. Leur lecture permet de déterminer l'âge précis des poissons, indispensable à la dynamique des populations."
+    },
+    {
+      "q": "Oreochromis niloticus adulte est principalement :",
+      "o": [
+        "Carnivore strict, se nourrissant de petits poissons et d'invertébrés benthiques variés",
+        "Insectivore, capturant des larves d'insectes aquatiques à la surface de l'eau en saison des pluies",
+        "Herbivore strict, consommant exclusivement des macrophytes aquatiques submergés ou flottants",
+        "Phytoplanctonophage et détritivore, filtrant les micro-algues et la matière organique en suspension"
+      ],
+      "r": 3,
+      "x": "O. niloticus adulte est principalement phytoplanctonophage et détritivore. Les juvéniles sont plus omnivores, se nourrissant aussi de zooplancton. Cette plasticité trophique en fait une espèce idéale pour la pisciculture."
+    },
+    {
+      "q": "Les migrations des poissons en milieu continental africain sont principalement déclenchées par :",
+      "o": [
+        "Les variations de la pression atmosphérique et les changements de direction des vents saisonniers",
+        "La disponibilité en oxygène dissous qui force les poissons à se déplacer vers les zones aérées",
+        "Les variations saisonnières du niveau d'eau et des débits liées aux cycles de crues et d'étiage",
+        "La compétition interspécifique intense pour l'espace et la nourriture dans les zones de pêche"
+      ],
+      "r": 2,
+      "x": "En Afrique subsaharienne, les crues saisonnières déclenchent les migrations de reproduction vers les plaines inondables. Le retrait des eaux stimule les migrations de retour vers les chenaux permanents."
+    },
+    {
+      "q": "Lates niloticus (perche du Nil) est une espèce :",
+      "o": [
+        "Herbivore de grande taille, principale espèce d'aquaculture extensive au Burkina Faso et au Ghana",
+        "Carnivore prédateur apical, introduite dans certains lacs africains avec des impacts écologiques majeurs",
+        "Détritivore benthique, vivant exclusivement dans les sédiments des grands fleuves d'Afrique centrale",
+        "Filtreur planctonophage, capturant le phytoplancton grâce à ses branchiospines très développées"
+      ],
+      "r": 1,
+      "x": "Lates niloticus est un grand prédateur carnivore. Son introduction dans le lac Victoria dans les années 1960 a conduit à l'extinction de nombreuses espèces endémiques de cichlidés, exemple emblématique d'impact écologique négatif."
+    },
+    {
+      "q": "Heterotis niloticus se distingue par sa capacité à :",
+      "o": [
+        "Respirer l'air atmosphérique grâce à un organe suprabranchial et à filtrer le phytoplancton",
+        "Vivre hors de l'eau pendant plusieurs jours grâce à sa peau très mucifiée et résistante",
+        "Chasser en groupe de manière coordonnée comme les poissons prédateurs sociaux côtiers",
+        "Supporter des salinités élevées lors des périodes d'assèchement des mares temporaires du Sahel"
+      ],
+      "r": 0,
+      "x": "Heterotis niloticus possède un organe respiratoire labyrinthique permettant la respiration aérienne et un appareil branchial modifié pour la filtration du phytoplancton, combinaison unique parmi les espèces africaines."
+    },
+    {
+      "q": "Les Synodontis spp. (poissons-chats épineux) sont caractérisés par :",
+      "o": [
+        "La présence d'écailles très développées formant une cuirasse protectrice contre les prédateurs",
+        "Un comportement exclusivement diurne et territorial dans les zones de frayères rocheuses",
+        "Une alimentation strictement herbivore limitée aux algues filamenteuses benthiques des rivières",
+        "L'absence d'écailles, la présence de barbillons sensoriels et une nage parfois inversée ventre en l'air"
+      ],
+      "r": 3,
+      "x": "Les Synodontis sont des siluriformes sans écailles, dotés de barbillons gustatifs et d'épines érectiles aux nageoires. Certaines espèces nagent régulièrement ventre en l'air pour brouter les algues sous les rochers."
+    },
+    {
+      "q": "Les Chrysichthys spp. présentent l'intérêt commercial suivant au Burkina Faso :",
+      "o": [
+        "Ils constituent l'espèce la plus élevée en cage flottante dans le barrage de Bagré actuellement",
+        "Ils sont principalement exportés vers les marchés européens pour la qualité de leur chair ferme",
+        "Ils font partie des espèces les plus appréciées des consommateurs locaux pour leur chair savoureuse",
+        "Ils sont utilisés exclusivement comme poissons fourrage dans les élevages intensifs de Clarias"
+      ],
+      "r": 2,
+      "x": "Les Chrysichthys (poissons-chats squales) sont très appréciés sur les marchés burkinabè et ouest-africains pour leur chair blanche, ferme et savoureuse. Ils figurent parmi les espèces à forte valeur commerciale dans les pêcheries continentales."
+    },
+    {
+      "q": "Dans une chaîne trophique aquatique, les producteurs primaires sont :",
+      "o": [
+        "Le phytoplancton et les macrophytes qui synthétisent la matière organique par photosynthèse",
+        "Les zooplanctons herbivores qui consomment les micro-algues en suspension dans la colonne d'eau",
+        "Les poissons herbivores comme le tilapia qui broutent les algues filamenteuses du benthos",
+        "Les bactéries décomposeurs qui minéralisent la matière organique dans les sédiments lacustres"
+      ],
+      "r": 0,
+      "x": "Les producteurs primaires (phytoplancton, macrophytes) constituent la base de la chaîne trophique en convertissant l'énergie solaire en matière organique par photosynthèse, alimentant ainsi tous les niveaux supérieurs."
+    },
+    {
+      "q": "La productivité primaire d'un plan d'eau est principalement limitée par :",
+      "o": [
+        "La densité des poissons prédateurs qui contrôlent la biomasse de zooplancton disponible",
+        "La disponibilité en nutriments (azote, phosphore) et la pénétration de la lumière dans l'eau",
+        "La vitesse du courant qui détermine la durée de séjour des nutriments dans la zone euphotique",
+        "La température de l'eau qui détermine uniquement la vitesse de reproduction des organismes benthiques"
+      ],
+      "r": 1,
+      "x": "La production primaire est limitée par les nutriments (N, P) et la lumière (zone euphotique). En milieu tropical, le phosphore est souvent le facteur limitant, d'où l'intérêt des fertilisants phosphatés en pisciculture."
+    },
+    {
+      "q": "L'eutrophisation d'un plan d'eau se définit comme :",
+      "o": [
+        "La diminution progressive de la biodiversité aquatique due à une surpêche intensive et non régulée",
+        "L'augmentation de la température de l'eau liée au réchauffement climatique et à la déforestation",
+        "La contamination de l'eau par les métaux lourds issus des activités minières ou industrielles proches",
+        "L'enrichissement excessif en nutriments entraînant une prolifération algale et une désoxygénation nocturne"
+      ],
+      "r": 3,
+      "x": "L'eutrophisation résulte d'un excès d'apports en azote et phosphore stimulant la prolifération algale. La décomposition nocturne des algues consomme l'oxygène dissous et peut provoquer des mortalités piscicoles massives."
+    },
+    {
+      "q": "La prolifération de cyanobactéries dans un étang piscicole peut provoquer :",
+      "o": [
+        "Une augmentation de la biodiversité par apport de substrats nutritifs supplémentaires pour le zooplancton",
+        "Une stimulation de la croissance des poissons grâce à l'apport de protéines végétales supplémentaires",
+        "Une mortalité des poissons par libération de cyanotoxines et par chute de l'oxygène dissous nocturne",
+        "Une amélioration de la qualité de l'eau par fixation de l'azote atmosphérique dans les sédiments"
+      ],
+      "r": 2,
+      "x": "Les cyanobactéries produisent des toxines hépatotoxiques et neurotoxiques létales pour les poissons. Leur décomposition nocturne crée simultanément une anoxie sévère, cumulant deux causes de mortalité piscicole."
+    },
+    {
+      "q": "Un écosystème lentique désigne :",
+      "o": [
+        "Un milieu aquatique aux eaux stagnantes ou à très faible courant, comme un étang, un lac ou un barrage",
+        "Un milieu aquatique aux eaux courantes et bien oxygénées, comme une rivière ou un fleuve permanent",
+        "Un milieu aquatique côtier soumis aux marées et aux intrusions salines saisonnières périodiques",
+        "Un milieu aquatique temporaire alimenté uniquement par les pluies et les eaux de ruissellement"
+      ],
+      "r": 0,
+      "x": "Les milieux lentiques (lacs, étangs, barrages) s'opposent aux milieux lotiques (cours d'eau). Les barrages du Burkina Faso sont des milieux lentiques artificiels à fort potentiel halieutique et aquacole."
+    },
+    {
+      "q": "Le zooplancton joue un rôle crucial dans les écosystèmes aquatiques car il assure :",
+      "o": [
+        "La fixation du phosphore dans les sédiments, réduisant ainsi le risque d'eutrophisation du plan d'eau",
+        "Le transfert d'énergie entre les producteurs primaires (phytoplancton) et les poissons planctivores",
+        "La décomposition de la matière organique particulaire dans toute la colonne d'eau lacustre",
+        "La production d'oxygène dissous par photolyse de l'eau lors de sa respiration métabolique nocturne"
+      ],
+      "r": 1,
+      "x": "Le zooplancton constitue le maillon intermédiaire clé de la chaîne trophique, transformant l'énergie produite par le phytoplancton en biomasse accessible aux poissons planctivores comme le tilapia juvénile."
+    },
+    {
+      "q": "L'oxygène dissous dans l'eau est généralement exprimé en :",
+      "o": [
+        "Pourcentage de saturation uniquement, sans unité de concentration absolue normalisée possible",
+        "Unités de turbidité néphélométrique (NTU) standardisées par les normes ISO internationales",
+        "Moles par litre (mol/L) selon la convention internationale de chimie des solutions aqueuses",
+        "Milligrammes par litre (mg/L) ou en pourcentage de saturation par rapport à l'air atmosphérique"
+      ],
+      "r": 3,
+      "x": "L'oxygène dissous est mesuré en mg/L (concentration absolue) ou en % de saturation (valeur relative par rapport à la solubilité maximale à une température et pression données). Ces deux unités sont complémentaires."
+    },
+    {
+      "q": "Chez les poissons (organismes poïkilothermes), une augmentation de 10 °C de la température de l'eau entraîne approximativement :",
+      "o": [
+        "Une réduction de moitié de la vitesse des réactions métaboliques pour économiser l'énergie",
+        "Un doublement de la solubilité de l'oxygène dissous, optimisant la respiration branchiale",
+        "Un doublement de la vitesse des réactions biochimiques et du métabolisme (coefficient Q10​≈2)",
+        "Une baisse automatique du pH de l'eau de 2 unités par acidification thermique directe"
+      ],
+      "r": 2,
+      "x": "Les poissons étant des animaux à sang froid (poïkilothermes), leur température interne dépend de celle de l'eau. Le coefficient Q10​≈2 indique que le taux métabolique double pour chaque augmentation de 10 °C, ce qui accroît proportionnellement leurs besoins en oxygène et en nourriture durant les périodes chaudes."
+    },
+    {
+      "q": "La plage de pH optimale pour l'élevage de la majorité des espèces piscicoles tropicales se situe entre :",
+      "o": [
+        "6,5 et 8,5, avec une préférence pour des valeurs proches de la neutralité (pH 7)",
+        "4,0 et 6,0, correspondant aux eaux naturellement acides des forêts tropicales humides",
+        "9,0 et 11,0, pour des eaux alcalines favorables aux algues calcifiantes et aux mollusques",
+        "3,0 et 5,0, reproduisant les conditions des eaux noires acides des milieux tourbeux tropicaux"
+      ],
+      "r": 0,
+      "x": "La plupart des espèces tropicales d'élevage (tilapia, Clarias) tolèrent un pH de 6,5 à 8,5. Des valeurs extrêmes (< 5 ou > 10) provoquent des lésions branchiales, une toxicité et des mortalités rapides."
+    },
+    {
+      "q": "Une turbidité élevée dans un étang piscicole réduit la production car elle :",
+      "o": [
+        "Augmente la compétition entre espèces en réduisant les territoires de frayères disponibles",
+        "Réduit la pénétration de la lumière, limitant la photosynthèse et donc la production naturelle",
+        "Augmente la viscosité de l'eau, rendant la nage plus difficile et augmentant les dépenses énergétiques",
+        "Provoque une alcalinisation qui inhibe l'activité des enzymes digestives des poissons d'élevage"
+      ],
+      "r": 1,
+      "x": "La turbidité bloque le rayonnement solaire et réduit la zone euphotique. La photosynthèse du phytoplancton diminue, réduisant la production naturelle de nourriture et la teneur en oxygène dissous de l'étang."
+    },
+    {
+      "q": "La conductivité électrique de l'eau est un indicateur de :",
+      "o": [
+        "La quantité d'oxygène dissous et la capacité de l'eau à soutenir la vie des organismes aquatiques",
+        "La clarté de l'eau et la profondeur jusqu'à laquelle la photosynthèse est possible dans un lac",
+        "La température de l'eau et la vitesse des réactions chimiques dans le milieu aquatique tropical",
+        "La concentration totale en ions dissous (sels minéraux) et la minéralisation globale de l'eau"
+      ],
+      "r": 3,
+      "x": "La conductivité mesure l'aptitude de l'eau à conduire le courant électrique, directement proportionnelle à la concentration en ions dissous (Ca2+, Mg2+, Na+, Cl-). Elle renseigne sur la minéralisation totale de l'eau."
+    },
+    {
+      "q": "L'alcalinité de l'eau est importante en pisciculture car elle :",
+      "o": [
+        "Indique la concentration en nitrates et phosphates disponibles pour la production phytoplanctonique",
+        "Mesure la présence de matière organique dissoute pouvant nuire aux branchies des poissons d'élevage",
+        "Reflète la capacité tampon de l'eau à résister aux variations de pH et à soutenir la productivité biologique",
+        "Renseigne sur la concentration en oxygène dissous et le potentiel respiratoire du milieu aquatique"
+      ],
+      "r": 2,
+      "x": "L'alcalinité (exprimée en mg CaCO3/L) traduit la capacité tampon de l'eau. Une alcalinité > 50 mg/L stabilise le pH et favorise la productivité biologique en pisciculture, évitant les fluctuations journalières extrêmes."
+    },
+    {
+      "q": "L'ammoniac libre (NH3) est toxique pour les poissons principalement parce qu'il :",
+      "o": [
+        "Perturbe les échanges gazeux au niveau des branchies et altère le fonctionnement du système nerveux",
+        "Précipite les sels de calcium, provoquant une reminéralisation brutale et soudaine de l'eau de l'étang",
+        "Oxyde l'hémoglobine en méthémoglobine, réduisant fortement la capacité respiratoire du sang",
+        "Abaisse le pH de l'eau en dessous de 5, rendant le milieu léthal pour les alevins et adultes"
+      ],
+      "r": 0,
+      "x": "NH3 est la forme toxique de l'azote ammoniacal, dominant à pH élevé et haute température. Il provoque des lésions branchiales, perturbe l'osmorégulation et affecte le système nerveux central des poissons."
+    },
+    {
+      "q": "La thermocline dans un lac ou un barrage profond correspond à :",
+      "o": [
+        "La couche de surface où la température est maximale grâce à l'exposition directe au rayonnement solaire",
+        "La couche d'eau intermédiaire où la température chute rapidement avec la profondeur (gradient élevé)",
+        "La zone profonde et froide du lac, constamment à 4°C quelle que soit la saison ou le climat",
+        "L'interface entre l'eau douce de surface et les eaux saumâtres profondes dans les zones estuariennes"
+      ],
+      "r": 1,
+      "x": "La thermocline est une couche de transition où le gradient de température est maximal. Elle sépare les eaux chaudes de surface des eaux froides profondes et peut bloquer les échanges d'oxygène vers le fond en saison sèche."
+    },
+    {
+      "q": "Un filet maillant est principalement dimensionné en fonction de :",
+      "o": [
+        "Sa longueur totale déployée et la résistance de ses flotteurs à la pression de l'eau à la profondeur cible",
+        "Le nombre de nappes superposées et la profondeur maximale de pose autorisée par la réglementation",
+        "La maille (ouverture entre les noeuds) qui détermine la taille minimale des poissons capturés",
+        "Son poids total en plomb et la densité du fil utilisé pour la fabrication des nappes de filet"
+      ],
+      "r": 2,
+      "x": "La maille (distance entre deux noeuds opposés, exprimée en mm) est le paramètre sélectif clé du filet maillant. Elle détermine la taille minimale des poissons capturés, conditionnant l'impact du filet sur le stock."
+    },
+    {
+      "q": "La senne de plage fonctionne selon le principe suivant :",
+      "o": [
+        "Elle est calée de nuit perpendiculairement au courant pour intercepter les poissons en migration",
+        "Elle flotte en surface et est maintenue par des ancres pour capturer les poissons pélagiques côtiers",
+        "Elle est posée sur le fond en demi-cercle pour capturer les espèces benthiques nocturnes actives",
+        "Elle est tirée depuis la rive par deux équipes encerclant un volume d'eau et ramenant les poissons à terre"
+      ],
+      "r": 3,
+      "x": "La senne de plage est déployée en demi-cercle depuis la rive puis tirée par deux équipes pour encercler et ramener les poissons. Elle est très efficace mais peu sélective en termes de taille des individus capturés."
+    },
+    {
+      "q": "La palangre est un engin de pêche composé de :",
+      "o": [
+        "Une ligne principale portant des avançons avec des hameçons appâtés à intervalles réguliers",
+        "Un filet en forme de poche maintenu ouvert par des armatures rigides et remorqué lentement",
+        "Une série de nasses cylindriques reliées entre elles et disposées en ligne sur le fond de l'eau",
+        "Un filet dérivant en surface, maintenu vertical par des flotteurs et lesté en plomb pour la profondeur"
+      ],
+      "r": 0,
+      "x": "La palangre (longue ligne) est composée d'une ligne mère portant des avançons terminés par des hameçons appâtés. Elle est utilisée pour les espèces carnivores benthiques comme Clarias et Chrysichthys au Burkina Faso."
+    },
+    {
+      "q": "Les nasses et casiers sont particulièrement adaptés à la capture de :",
+      "o": [
+        "Les espèces pélagiques rapides comme les espèces du genre Alestes et Brycinus en pleine eau",
+        "Les espèces benthiques comme les Clarias, les Synodontis et les crustacés d'eau douce",
+        "Le phytoplancton et les micro-algues utilisés comme aliment vivant dans les élevages aquacoles",
+        "Les espèces migratrices qui remontent les cours d'eau en saison des pluies pour frayer sur les hauts-fonds"
+      ],
+      "r": 1,
+      "x": "Les nasses et casiers, placés sur le fond près des abris (rochers, végétation), sont sélectifs des espèces benthiques nocturnes. Ils permettent une pêche ciblée avec des captures vivantes, facilitant la commercialisation."
+    },
+    {
+      "q": "L'effort de pêche est une notion qui exprime :",
+      "o": [
+        "La motivation et la disponibilité des pêcheurs professionnels à exercer leur activité en saison de pêche",
+        "La puissance des moteurs hors-bord utilisés par les pirogues motorisées sur les grands barrages nationaux",
+        "La quantité de travail déployée pour capturer les poissons (nombre de sorties, durée, engins utilisés)",
+        "La résistance des filets et des engins de pêche à l'usure en conditions climatiques tropicales difficiles"
+      ],
+      "r": 2,
+      "x": "L'effort de pêche quantifie l'activité de pêche exercée sur un stock (sorties × durée × type d'engin). Il est utilisé pour calculer la CPUE et surveiller l'intensité d'exploitation du stock halieutique."
+    },
+    {
+      "q": "Un pêcheur réalise 25 sorties en un mois et capture un total de 375 kg de poissons. Quelle est sa CPUE par sortie ?",
+      "o": [
+        "10 kg par sortie",
+        "12 kg par sortie",
+        "18 kg par sortie",
+        "15 kg par sortie"
+      ],
+      "r": 3,
+      "x": "CPUE = Captures totales / Effort = 375 kg / 25 sorties = 15 kg par sortie. La CPUE est un indicateur clé de l'abondance relative du stock et de la productivité de l'effort de pêche déployé sur le plan d'eau."
+    },
+    {
+      "q": "La pêche à l'électricité est, en Afrique de l'Ouest :",
+      "o": [
+        "Autorisée uniquement pour les inventaires scientifiques et strictement interdite pour la pêche commerciale",
+        "La méthode de pêche la plus efficace recommandée par la FAO pour les petits pêcheurs artisanaux",
+        "Pratiquée légalement au Burkina Faso pour augmenter les rendements des pêcheurs professionnels",
+        "Une technique douce qui ne provoque aucune mortalité accidentelle des espèces non ciblées"
+      ],
+      "r": 0,
+      "x": "La pêche électrique est très efficace mais destructrice. Elle est légalement réservée aux études scientifiques (inventaires ichtyologiques) et strictement interdite pour tout usage commercial au Burkina Faso."
+    },
+    {
+      "q": "Parmi les engins suivants, lequel est considéré comme le plus destructeur pour les ressources halieutiques ?",
+      "o": [
+        "Le filet maillant de grande maille posé perpendiculairement à la berge durant la nuit",
+        "La palangre de fond appâtée avec des lombrics pour capturer les poissons benthiques nocturnes",
+        "La nasse cylindrique en grillage placée dans les herbiers à la tombée de la nuit en saison sèche",
+        "L'épervier à très petite maille qui capture indistinctement toutes les tailles de poissons présents"
+      ],
+      "r": 3,
+      "x": "Les petites mailles capturent alevins et juvéniles avant leur première reproduction, compromettant le renouvellement du stock. L'épervier à petite maille est l'un des engins les plus réglementés au Burkina Faso."
+    },
+    {
+      "q": "L'aquaculture se définit comme :",
+      "o": [
+        "La pêche pratiquée dans les eaux intérieures (fleuves, lacs, barrages) par opposition à la pêche maritime",
+        "L'ensemble des activités de conservation et de transformation des produits halieutiques après la capture",
+        "L'étude scientifique des écosystèmes aquatiques et de la dynamique des populations de poissons",
+        "L'élevage contrôlé d'organismes aquatiques (poissons, crustacés, mollusques) par des individus ou entreprises"
+      ],
+      "r": 3,
+      "x": "L'aquaculture (définition FAO) est la production d'organismes aquatiques dans des conditions de maîtrise totale ou partielle du cycle biologique par l'homme, incluant la pisciculture, la crevetticulture et l'ostréiculture."
+    },
+    {
+      "q": "En pisciculture extensive, la production repose principalement sur :",
+      "o": [
+        "L'apport quotidien d'aliments complets formulés couvrant l'intégralité des besoins nutritionnels",
+        "La recirculation de l'eau filtrée et le contrôle précis de tous les paramètres physicochimiques",
+        "La productivité naturelle du plan d'eau sans apport significatif d'intrants extérieurs",
+        "L'utilisation exclusive de cages flottantes à haute densité dans les retenues d'eau des grands barrages"
+      ],
+      "r": 2,
+      "x": "La pisciculture extensive repose uniquement sur la production naturelle de l'étang (plancton, invertébrés). Elle implique de faibles densités de peuplement, aucun aliment artificiel et des rendements limités (500-1 000 kg/ha/an)."
+    },
+    {
+      "q": "Un étang piscicole de 500 m² est empoissionné à raison de 2 alevins/m². Combien d'alevins sont nécessaires ?",
+      "o": [
+        "500 alevins",
+        "750 alevins",
+        "1 000 alevins",
+        "1 500 alevins"
+      ],
+      "r": 2,
+      "x": "Nombre d'alevins = Surface × Densité = 500 m² × 2 alevins/m² = 1 000 alevins. Cette densité correspond à un système semi-intensif adapté à l'élevage du tilapia en étang terrien au Burkina Faso."
+    },
+    {
+      "q": "En pisciculture intensive en système de recirculation, la densité de charge peut atteindre :",
+      "o": [
+        "0,5 à 2 kg de poissons par m³ d'eau, niveau similaire aux étangs extensifs traditionnels",
+        "20 à 100 kg de poissons par m³ grâce au contrôle continu des paramètres et à l'oxygénation forcée",
+        "5 à 10 kg de poissons par m³, soit la densité maximale réalisable dans les étangs en terre",
+        "200 à 500 kg par m³, rendant la pisciculture intensive la plus rentable de toutes les techniques"
+      ],
+      "r": 1,
+      "x": "Les systèmes d'élevage en recirculation (RAS) permettent des densités de 20 à 100 kg/m³ grâce à la filtration biologique, l'oxygénation artificielle et le contrôle permanent des paramètres physicochimiques."
+    },
+    {
+      "q": "La polyculture piscicole associe plusieurs espèces dans un même étang pour :",
+      "o": [
+        "Réduire les risques de maladies par la diversification génétique des individus en co-élevage",
+        "Faciliter le contrôle sanitaire en maintenant les espèces sensibles séparées dans l'étang",
+        "Exploiter différentes niches trophiques et maximiser l'utilisation des ressources naturelles disponibles",
+        "Respecter les réglementations halieutiques qui imposent un minimum de deux espèces par étang"
+      ],
+      "r": 2,
+      "x": "La polyculture associe des espèces occupant des niches trophiques complémentaires (tilapia phytoplanctonophage + Clarias carnivore). Elle optimise l'utilisation des ressources naturelles et augmente la production totale par ha."
+    },
+    {
+      "q": "Les cages flottantes en aquaculture présentent l'avantage principal suivant :",
+      "o": [
+        "Elles permettent un contrôle plus précis du pH et de la conductivité de l'eau d'élevage",
+        "Elles éliminent totalement les risques de maladies par le renouvellement permanent de l'eau",
+        "Elles ne nécessitent aucun investissement initial car elles utilisent des plans d'eau existants",
+        "Elles permettent d'exploiter les plans d'eau naturels (barrages, lacs) sans aménagement du sol"
+      ],
+      "r": 3,
+      "x": "Les cages flottantes valorisent les plans d'eau existants (barrages de Bagré, Kompienga) sans travaux de terrassement. Le renouvellement naturel de l'eau dilue les déchets métaboliques et réduit les besoins en gestion."
+    },
+    {
+      "q": "La construction d'un étang piscicole doit prendre en compte prioritairement :",
+      "o": [
+        "La topographie du terrain, la disponibilité en eau, la qualité des sols et l'accessibilité du site",
+        "La proximité d'une ville pour faciliter la commercialisation quotidienne des poissons vivants",
+        "La présence d'une végétation arborée dense fournissant de l'ombre pour réguler la température",
+        "L'orientation est-ouest de la digue principale pour bénéficier d'un ensoleillement maximal quotidien"
+      ],
+      "r": 0,
+      "x": "L'implantation d'un étang piscicole nécessite une topographie favorable (légère pente), un sol imperméable (argileux), une source d'eau pérenne suffisante et un accès facilité pour les intrants et la commercialisation."
+    },
+    {
+      "q": "L'alevinage d'un étang désigne l'opération consistant à :",
+      "o": [
+        "Vider et assécher périodiquement l'étang pour contrôler les parasites et prédateurs indésirables",
+        "Introduire dans l'étang des jeunes poissons (alevins) destinés à être élevés jusqu'à la taille marchande",
+        "Fertiliser l'étang avec des engrais organiques ou minéraux pour développer le plancton nourricier",
+        "Récolter les poissons adultes arrivés à la taille marchande pour les vendre ou les transformer"
+      ],
+      "r": 1,
+      "x": "L'alevinage consiste à introduire des alevins (juvéniles sevrés) dans l'étang au début du cycle d'élevage. La qualité des alevins (taille, état sanitaire, espèce) conditionne directement les performances zootechniques du cycle."
+    },
+    {
+      "q": "La production nette d'un étang à tilapia est de 800 kg/ha/an en semi-intensif. Un pisciculteur disposant de 0,5 ha, quelle est sa production annuelle estimée ?",
+      "o": [
+        "200 kg",
+        "300 kg",
+        "400 kg",
+        "600 kg"
+      ],
+      "r": 2,
+      "x": "Production = 800 kg/ha/an × 0,5 ha = 400 kg/an. Cette estimation suppose une gestion semi-intensive régulière avec fertilisation et alimentation complémentaire, conditions courantes pour les pisciculteurs encadrés au Burkina Faso."
+    },
+    {
+      "q": "La monoculture piscicole présente l'inconvénient principal suivant :",
+      "o": [
+        "La sous-exploitation des ressources alimentaires naturelles et une compétition intraspécifique accrue",
+        "L'impossibilité de contrôler la reproduction naturelle dans l'étang en l'absence d'autres espèces",
+        "Une meilleure efficacité alimentaire en raison de l'absence de compétition interspécifique pour la nourriture",
+        "Une réduction automatique du risque de maladies grâce à l'uniformité génétique du cheptel en élevage"
+      ],
+      "r": 0,
+      "x": "En monoculture, toutes les niches trophiques disponibles ne sont pas exploitées, réduisant l'efficacité de conversion des ressources naturelles. La compétition intraspécifique intense peut aussi limiter la croissance individuelle."
+    },
+    {
+      "q": "Le changement climatique affecte principalement l'aquaculture au Burkina Faso par :",
+      "o": [
+        "L'augmentation des précipitations qui entraîne des crues récurrentes détruisant les étangs en terre",
+        "La baisse des températures nocturnes qui ralentit la croissance des espèces tropicales d'élevage",
+        "L'allongement de la saison froide qui réduit la durée favorable à l'élevage du tilapia et de Clarias",
+        "La réduction de la disponibilité en eau et l'augmentation des températures affectant les ressources hydriques"
+      ],
+      "r": 3,
+      "x": "Au Burkina Faso, le changement climatique réduit la pluviométrie et raccourcit la saison des pluies, diminuant les ressources en eau. L'augmentation des températures peut aussi dégrader la qualité de l'eau des étangs piscicoles."
+    },
+    {
+      "q": "La fertilisation à l'urée d'un étang piscicole augmente la production car :",
+      "o": [
+        "L'azote de l'urée est directement assimilé par les poissons pour la synthèse de leurs protéines musculaires",
+        "L'apport d'azote stimule la croissance du phytoplancton, base de la chaîne alimentaire aquatique",
+        "L'urée abaisse le pH de l'eau, créant des conditions optimales pour la croissance du tilapia adulte",
+        "L'engrais azoté élimine les organismes pathogènes par action bactéricide dans l'eau de l'étang"
+      ],
+      "r": 1,
+      "x": "L'urée apporte de l'azote minéral qui stimule la production de phytoplancton, nourrissant le zooplancton, qui nourrit à son tour les poissons. La fertilisation azotée peut multiplier la productivité naturelle de l'étang par 2 à 3."
+    },
+    {
+      "q": "Les besoins en protéines alimentaires chez les alevins de tilapia sont généralement :",
+      "o": [
+        "Inférieurs à 15% de la ration, les glucides étant la principale source d'énergie à ce stade larvaire",
+        "Similaires aux adultes (20-25%), les besoins en protéines ne variant pas significativement avec l'âge",
+        "Élevés (30-45%), car les alevins sont en phase de croissance intense nécessitant une forte synthèse protéique",
+        "Nuls durant les 30 premiers jours, les réserves vitellines du sac vitellin couvrant tous les besoins"
+      ],
+      "r": 2,
+      "x": "Les alevins en croissance intense nécessitent des rations à 35-45% de protéines brutes. À mesure que les poissons grandissent et que la croissance ralentit, les besoins protéiques relatifs diminuent (20-30% chez les adultes)."
+    },
+    {
+      "q": "Un éleveur utilise 1 800 kg d'aliment pour produire 1 200 kg de poissons. Quel est le taux de conversion alimentaire (TCA) ?",
+      "o": [
+        "1,5",
+        "0,67",
+        "2,0",
+        "1,2"
+      ],
+      "r": 0,
+      "x": "TCA = Quantité d'aliment / Gain de poids = 1 800 / 1 200 = 1,5. Un TCA de 1,5 signifie qu'il faut 1,5 kg d'aliment pour produire 1 kg de poisson, valeur acceptable pour le tilapia en pisciculture semi-intensive."
+    },
+    {
+      "q": "Les lipides jouent un rôle majeur dans l'alimentation des poissons car ils :",
+      "o": [
+        "Constituent la principale source d'azote pour la synthèse des acides aminés essentiels non substituables",
+        "Servent exclusivement de réserve d'énergie stockée dans les muscles lors des efforts de nage intense",
+        "Fournissent les acides aminés essentiels que les poissons ne peuvent pas synthétiser eux-mêmes",
+        "Constituent une énergie concentrée et sont indispensables à l'absorption des vitamines liposolubles"
+      ],
+      "r": 3,
+      "x": "Les lipides fournissent 9 kcal/g (2,25 fois l'énergie des glucides), épargnant les protéines pour la croissance musculaire. Ils sont essentiels au transport et à l'absorption des vitamines liposolubles A, D, E, K dans l'intestin."
+    },
+    {
+      "q": "La carence en vitamine C chez les poissons d'élevage provoque principalement :",
+      "o": [
+        "Une cécité progressive et une dépigmentation de la peau chez les espèces à coloration vive",
+        "Des déformations de la colonne vertébrale (scoliose, lordose) et une fragilité immunitaire accrue",
+        "Une accumulation de graisses dans le foie conduisant à une stéatose hépatique progressive",
+        "Une paralysie des branchies réduisant drastiquement la capacité respiratoire des poissons adultes"
+      ],
+      "r": 1,
+      "x": "La vitamine C (acide ascorbique) est essentielle à la synthèse du collagène. Sa carence provoque des malformations squelettiques (scoliose, lordose) et une immunodépression chez les poissons d'élevage intensif."
+    },
+    {
+      "q": "Le taux de rationnement journalier recommandé pour le tilapia adulte en pisciculture semi-intensive est environ :",
+      "o": [
+        "10 à 15% de la biomasse par jour, à distribuer en une seule distribution matinale concentrée",
+        "0,5 à 1% de la biomasse par jour, la production naturelle de l'étang couvrant les besoins restants",
+        "5 à 8% de la biomasse par jour pour compenser l'absence totale de production naturelle d'aliment",
+        "2 à 5% de la biomasse par jour en plusieurs distributions selon la température de l'eau du moment"
+      ],
+      "r": 3,
+      "x": "Le taux de rationnement varie selon la température (plus élevé en saison chaude) et la taille des poissons (plus élevé pour les alevins). Une distribution en 2 à 3 repas améliore l'ingestion et réduit les pertes alimentaires."
+    },
+    {
+      "q": "Un aliment de bonne qualité pour les espèces carnivores comme Clarias gariepinus doit contenir :",
+      "o": [
+        "Un taux de protéines d'au moins 35-45% de matière sèche avec des acides aminés essentiels équilibrés",
+        "Un maximum de 10% de protéines pour éviter la surcharge rénale et la mortalité par urémie",
+        "Une teneur élevée en glucides (60-70%) pour couvrir les besoins énergétiques de base de l'espèce",
+        "Un taux de lipides inférieur à 2% pour éviter le rancissement rapide en conditions tropicales chaudes"
+      ],
+      "r": 0,
+      "x": "Clarias gariepinus, omnivore à tendance carnivore, nécessite des aliments riches en protéines (35-45%) avec un profil équilibré en acides aminés essentiels. Les glucides y jouent un rôle énergétique secondaire à ne pas exagérer."
+    },
+    {
+      "q": "En pisciculture semi-intensive, la nourriture naturelle présente dans l'étang :",
+      "o": [
+        "Doit être éliminée par filtration car elle compétitionne avec l'aliment distribué pour l'alimentation",
+        "N'a aucune valeur nutritive pour les poissons en élevage, seuls les aliments formulés étant efficaces",
+        "Apporte des nutriments essentiels complémentaires et réduit la quantité d'aliment artificiel nécessaire",
+        "Est uniquement utile pour les espèces herbivores comme le tilapia, sans intérêt pour Clarias gariepinus"
+      ],
+      "r": 2,
+      "x": "La production naturelle (phytoplancton, zooplancton, invertébrés benthiques) couvre une part des besoins nutritionnels en semi-intensif, réduisant les quantités d'aliment artificiel à distribuer et donc le coût de production."
+    },
+    {
+      "q": "La maladie des points rouges (hémorragies cutanées et septiques) chez les poissons d'élevage est souvent causée par :",
+      "o": [
+        "Un champignon du genre Saprolegnia attaquant les écailles et provoquant des hémorragies dermiques",
+        "Des bactéries du genre Aeromonas hydrophila, agents majeurs des septicémies hémorragiques des poissons",
+        "Un virus de la famille des Reoviridae provoquant des lésions hémorragiques dans les muscles rouges",
+        "Un parasite copépode du genre Ergasilus s'attachant aux branchies et causant des lésions vasculaires"
+      ],
+      "r": 1,
+      "x": "Aeromonas hydrophila est l'agent bactérien le plus fréquent des septicémies hémorragiques en pisciculture tropicale. Les facteurs favorisants sont la surpopulation, le stress, les blessures et les mauvaises conditions de l'eau."
+    },
+    {
+      "q": "Ichthyophthirius multifiliis (maladie des points blancs) est :",
+      "o": [
+        "Une maladie bactérienne chronique touchant principalement le système nerveux des poissons d'élevage",
+        "Une infection virale très contagieuse transmise par les fientes des oiseaux piscivores comme le martin-pêcheur",
+        "Un parasite cilié protozoaire provoquant des pustules blanches visibles sur la peau et les nageoires",
+        "Un champignon filamenteux de l'eau colonisant les branchies et entraînant une asphyxie progressive"
+      ],
+      "r": 2,
+      "x": "Ichthyophthirius multifiliis (Ich) est un protozoaire cilié formant des kystes blancs sous l'épiderme. La maladie est très contagieuse, notamment dans les étangs surpeuplés ou soumis à des variations thermiques importantes."
+    },
+    {
+      "q": "La prévention des maladies en pisciculture repose prioritairement sur :",
+      "o": [
+        "La pratique du vide sanitaire, la désinfection des étangs et le strict respect des densités d'élevage",
+        "L'administration préventive systématique d'antibiotiques à tous les lots dès le 30e jour d'élevage",
+        "L'utilisation de fongicides chimiques dissous dans l'eau de l'étang à intervalles hebdomadaires réguliers",
+        "La vaccination obligatoire des géniteurs avant chaque cycle de reproduction en écloserie nationale"
+      ],
+      "r": 0,
+      "x": "La prophylaxie en pisciculture repose sur l'assèchement et la désinfection des étangs entre les cycles, le respect des densités de peuplement, la qualité des alevins et la surveillance régulière des paramètres de l'eau."
+    },
+    {
+      "q": "La saprolegniose est une maladie fongique des poissons caractérisée par :",
+      "o": [
+        "Des ulcères profonds sur les flancs du poisson accompagnés d'une nécrose musculaire progressive",
+        "Des hémorragies sous-cutanées et une distension abdominale liées à une infection systémique bactérienne",
+        "Une opacification progressive des yeux (cataracte) et une perte d'orientation spatiale dans l'étang",
+        "L'apparition de filaments cotonneux blanchâtres sur la peau, les nageoires ou les oeufs en incubation"
+      ],
+      "r": 3,
+      "x": "Saprolegnia spp. est un oomycète aquatique dont les hyphes forment des touffes cotonneuses visibles à l'oeil nu. Elle affecte les zones lésées ou stressées du poisson, souvent en association avec des infections bactériennes."
+    },
+    {
+      "q": "Un pisciculteur observe une mortalité massive juste après l'introduction d'un lot d'alevins. La cause la plus probable est :",
+      "o": [
+        "Un stress osmotique ou thermique causé par une différence entre les conditions de transport et l'étang",
+        "Une attaque virale systémique déclenchée par le bruit et les vibrations du transport en véhicule",
+        "Une déficience en vitamine D causée par l'absence d'ensoleillement pendant un transport nocturne",
+        "Une intoxication aux métaux lourds présents dans les sacs en polyéthylène du transport des alevins"
+      ],
+      "r": 0,
+      "x": "Les mortalités post-alevinage résultent souvent d'un choc thermique ou osmotique lors du transfert si la qualité d'eau de transport diffère fortement de celle de l'étang. L'acclimatation progressive est indispensable."
+    },
+    {
+      "q": "Le Rendement Maximal Durable (RMD) est défini comme :",
+      "o": [
+        "La production totale annuelle mesurée lors de la meilleure année de pêche historiquement enregistrée",
+        "Le niveau de prélèvement maximum d'un stock pouvant être maintenu indéfiniment sans compromettre son renouvellement",
+        "Le niveau de capture permettant de maximiser le profit économique à court terme pour les pêcheurs locaux",
+        "La biomasse totale d'un stock estimée par écho-intégration acoustique lors d'une campagne scientifique"
+      ],
+      "r": 1,
+      "x": "Le RMD (MSY en anglais) est le concept central de la gestion halieutique. Il représente le niveau de prélèvement annuel maximal que le stock peut supporter à long terme grâce au recrutement naturel et à la croissance."
+    },
+    {
+      "q": "La surexploitation d'un stock de poissons se manifeste principalement par :",
+      "o": [
+        "Une diminution progressive des captures malgré un effort de pêche constant ou en augmentation",
+        "Une augmentation de la taille moyenne des poissons capturés liée à la sélection naturelle par la pêche",
+        "Une réduction spontanée de l'effort de pêche des pêcheurs face à l'abondance croissante des ressources",
+        "Une prolifération des espèces concurrentes dans les zones non exploitées du même plan d'eau lacustre"
+      ],
+      "r": 0,
+      "x": "La baisse de la CPUE malgré un effort maintenu ou croissant est le signe classique de surexploitation. Le stock ne se renouvelle plus assez vite pour compenser les prélèvements effectués par les pêcheurs."
+    },
+    {
+      "q": "Le recrutement en dynamique des populations de poissons désigne :",
+      "o": [
+        "L'embauche et la formation de nouveaux pêcheurs artisanaux dans les coopératives de pêche locales",
+        "La mise en place d'un suivi scientifique des stocks par les agents des eaux et forêts compétents",
+        "Le processus par lequel les jeunes individus (juvéniles) rejoignent la fraction exploitable du stock",
+        "L'introduction artificielle de poissons adultes provenant d'une écloserie dans un plan d'eau appauvri"
+      ],
+      "r": 2,
+      "x": "Le recrutement représente l'entrée annuelle de juvéniles dans la fraction du stock vulnérable à la pêche. Il conditionne le renouvellement du stock et dépend directement de la biomasse des géniteurs reproducteurs."
+    },
+    {
+      "q": "La mortalité totale (Z) d'un stock est liée à la mortalité par pêche (F) et à la mortalité naturelle (M) par :",
+      "o": [
+        "Z = F x M (produit des deux mortalités selon l'équation multiplicative de Beverton et Holt)",
+        "Z = F - M (différence entre la mortalité par pêche et la mortalité naturelle du stock exploité)",
+        "Z = F x M / (F + M) selon la formule de Ricker pour les stocks d'eaux tempérées surexploités",
+        "Z = F + M (somme des deux composantes de la mortalité dans l'équation de dynamique des stocks)"
+      ],
+      "r": 3,
+      "x": "La relation Z = F + M est l'équation fondamentale de la dynamique des populations exploitées. Z est estimé par l'analyse des courbes de capture ; M et F peuvent être distingués pour calculer le taux d'exploitation E."
+    },
+    {
+      "q": "Le modèle de production de Schaefer (1954) permet de :",
+      "o": [
+        "Calculer la température optimale de l'eau pour maximiser la production naturelle des espèces cibles",
+        "Estimer le Rendement Maximal Durable et l'effort de pêche optimal à partir des données de pêcherie",
+        "Mesurer la biodiversité spécifique d'un plan d'eau en fonction du niveau actuel d'exploitation",
+        "Déterminer la taille minimale légale de capture pour chaque espèce commerciale exploitée"
+      ],
+      "r": 1,
+      "x": "Le modèle de Schaefer relie le rendement de la pêche à l'effort via une courbe en dôme. Il permet d'identifier l'effort optimal (EMRD) et le rendement maximal durable d'une pêcherie artisanale continentale."
+    },
+    {
+      "q": "La taille de première capture (Lc) est fixée de manière à garantir que :",
+      "o": [
+        "Les poissons ont eu au moins une occasion de se reproduire avant d'être prélevés par la pêche",
+        "Les agents de la police des pêches puissent contrôler facilement les captures sur les débarcadères",
+        "Les coûts de transformation soient réduits en sélectionnant uniquement les poissons de plus grande valeur",
+        "Les captures des différents pêcheurs soient homogènes pour faciliter l'établissement des statistiques"
+      ],
+      "r": 0,
+      "x": "La Lc est fixée supérieure à la longueur de première maturité sexuelle (Lm) pour permettre la reproduction avant la capture. Ce principe garantit le renouvellement du stock et la durabilité de l'exploitation halieutique."
+    },
+    {
+      "q": "Le taux d'exploitation (E) d'un stock halieutique est calculé par :",
+      "o": [
+        "E = M/Z, exprimant la part de la mortalité naturelle dans la mortalité totale du stock exploité",
+        "E = Z/F, représentant la proportion de mortalité totale due aux seuls facteurs environnementaux",
+        "E = F/(F+M) = F/Z, représentant la proportion de la mortalité totale imputable à la pêche",
+        "E = (F-M)/Z, mesurant l'excédent de pêche par rapport à la capacité de renouvellement naturel"
+      ],
+      "r": 2,
+      "x": "Le taux d'exploitation E = F/Z mesure l'intensité de la pêche sur le stock. Une valeur E > 0,5 signifie que la mortalité par pêche dépasse la mortalité naturelle, signe potentiel de surexploitation du stock considéré."
+    },
+    {
+      "q": "Une réduction de l'effort de pêche est recommandée sur un barrage lorsque :",
+      "o": [
+        "La CPUE actuelle dépasse la CPUE de référence calculée à l'époque du RMD historiquement estimé",
+        "Le nombre de pêcheurs actifs augmente de 30% pour maintenir un effort total constant sur le plan d'eau",
+        "Les espèces non-cibles représentent plus de 30% des captures totales enregistrées annuellement",
+        "La CPUE actuelle est inférieure à la CPUE de référence correspondant au niveau du RMD du stock"
+      ],
+      "r": 3,
+      "x": "Une CPUE inférieure à la CPUE de référence (niveau RMD) indique que le stock est surexploité. Réduire l'effort permet à la biomasse de se reconstituer, augmentant à terme les captures totales et la CPUE."
+    },
+    {
+      "q": "Les réserves de pêche (zones de protection temporaire) ont pour objectif principal de :",
+      "o": [
+        "Réserver certaines zones exclusivement aux pêcheurs professionnels munis de permis annuels en règle",
+        "Permettre la régénération des populations de poissons en protégeant les frayères et nourriceries vitales",
+        "Développer le tourisme de pêche sportive dans les zones à forte biodiversité halieutique reconnue",
+        "Délimiter les zones concédées aux sociétés d'aquaculture pour l'élevage intensif en cage flottante"
+      ],
+      "r": 1,
+      "x": "Les réserves de pêche protègent les habitats critiques (frayères, nourriceries) et permettent la reconstitution des stocks. Elles constituent un outil de gestion spatiale complémentaire aux quotas et à la réglementation des engins."
+    },
+    {
+      "q": "La gestion participative des ressources halieutiques implique :",
+      "o": [
+        "L'association des communautés de pêcheurs à la définition et à l'application des règles de gestion locale",
+        "La participation financière obligatoire des pêcheurs artisanaux à la recherche halieutique nationale",
+        "L'attribution à chaque pêcheur d'un quota individuel de pêche défini unilatéralement par l'administration",
+        "La gestion exclusive des ressources par des ONG internationales spécialisées en conservation des espèces"
+      ],
+      "r": 0,
+      "x": "La cogestion halieutique associe les pêcheurs, l'État et les partenaires locaux à la définition des règles (zones, saisons, engins). Elle améliore l'acceptation et le respect des réglementations, renforçant la conservation."
+    },
+    {
+      "q": "Le repos biologique (fermeture saisonnière de la pêche) est généralement fixé pendant :",
+      "o": [
+        "La saison sèche, car la baisse du niveau d'eau facilite la pêche au filet sur les bancs de sable",
+        "La saison des pluies, période pendant laquelle les poissons migrent et se reproduisent activement",
+        "La saison de récolte agricole, pour libérer les pêcheurs et optimiser la main-d'oeuvre agricole disponible",
+        "La période de forte demande commerciale, pour éviter la surproduction et stabiliser les prix du poisson"
+      ],
+      "r": 1,
+      "x": "La saison des pluies correspond à la période de reproduction et de migration des poissons vers les zones d'inondation. La fermeture de la pêche pendant cette période protège les géniteurs et assure un bon recrutement."
+    },
+    {
+      "q": "La maille minimale des filets réglementaires est fixée pour :",
+      "o": [
+        "Réduire le coût de fabrication des filets et les rendre accessibles aux petits pêcheurs artisanaux pauvres",
+        "Faciliter l'entretien et le séchage des filets en réduisant la surface totale de filet nécessaire à l'activité",
+        "Standardiser les équipements de pêche pour faciliter les statistiques des services forestiers régionaux",
+        "Permettre aux jeunes poissons n'ayant pas encore atteint la maturité sexuelle de s'échapper des filets"
+      ],
+      "r": 3,
+      "x": "La maille minimale est fixée supérieure à la taille des poissons immatures pour qu'ils se reproduisent avant d'être pêchés. Elle est un outil réglementaire clé pour assurer la durabilité de l'exploitation des stocks."
+    },
+    {
+      "q": "Le fumage du poisson agit comme méthode de conservation par :",
+      "o": [
+        "La destruction des micro-organismes par la chaleur et les composés bactériostatiques de la fumée",
+        "La congélation rapide à coeur permettant d'inhiber toute activité enzymatique et microbienne",
+        "L'immersion dans une saumure saturée créant une pression osmotique défavorable aux bactéries",
+        "L'irradiation aux rayons UV détruisant les spores et formes végétatives des bactéries sporulées"
+      ],
+      "r": 0,
+      "x": "Le fumage combine l'action de la chaleur (cuisson partielle), le dessèchement (réduction de l'activité de l'eau) et les composés phénoliques antibactériens de la fumée. Il prolonge la conservation du poisson de plusieurs semaines."
+    },
+    {
+      "q": "Le séchage solaire du poisson au Burkina Faso présente l'inconvénient principal suivant :",
+      "o": [
+        "Il est inapplicable en saison sèche en raison du rayonnement solaire insuffisant dans la région sahélienne",
+        "Il nécessite des investissements lourds en infrastructure rendant la technique inaccessible aux pêcheurs",
+        "Il détruit toutes les vitamines et tous les acides aminés essentiels de la chair du poisson séché",
+        "Il expose le poisson aux insectes, à la poussière et aux contaminations, réduisant la qualité sanitaire"
+      ],
+      "r": 3,
+      "x": "Le séchage solaire artisanal expose le poisson aux mouches (infestation par asticots), à la poussière et aux intempéries. L'utilisation de claies surélevées et de séchoirs améliorés réduit ces contaminations significativement."
+    },
+    {
+      "q": "Le salage du poisson agit comme conservateur principalement par :",
+      "o": [
+        "L'abaissement de l'activité de l'eau (aw), créant un milieu osmotique défavorable aux micro-organismes",
+        "L'augmentation du pH intracellulaire qui inhibe les enzymes responsables de la putréfaction du poisson",
+        "La fixation de l'oxygène dissous dans les tissus du poisson, bloquant la respiration des bactéries",
+        "La formation d'une couche de sel cristallisé isolante qui empêche physiquement toute contamination"
+      ],
+      "r": 0,
+      "x": "Le sel extrait l'eau des tissus et cellules microbiennes par osmose, abaissant l'activité de l'eau (aw). Une aw < 0,85 inhibe la majorité des bactéries de la putréfaction, assurant une conservation prolongée du poisson."
+    },
+    {
+      "q": "La conservation du poisson frais en chaîne du froid nécessite une température de :",
+      "o": [
+        "-18°C en permanence, seule température garantissant une conservation de 12 mois minimum",
+        "0 à 4°C pour le poisson réfrigéré destiné à une consommation dans les 48 à 72 heures suivantes",
+        "-5°C pour le poisson semi-congelé, intermédiaire entre la réfrigération et la congélation longue durée",
+        "10 à 15°C pour le poisson glacé vendu sur les marchés locaux des villes secondaires du pays"
+      ],
+      "r": 1,
+      "x": "La réfrigération entre 0 et 4°C ralentit la multiplication bactérienne et les réactions enzymatiques sans congeler la chair. Elle permet de conserver le poisson frais 48 à 72h. Au-delà, la congélation à -18°C est nécessaire."
+    },
+    {
+      "q": "Au Burkina Faso, le principal mode de conservation du poisson en zone rurale est :",
+      "o": [
+        "La réfrigération en camion frigorifique acheminant le poisson frais des barrages vers les marchés urbains",
+        "La congélation dans des chambres froides communautaires financées par les coopératives de pêcheurs",
+        "Le fumage et le séchage artisanaux permettant une conservation longue durée sans équipement frigorifique",
+        "La mise en conserve dans des boîtes métalliques hermétiques produites par des unités agro-industrielles"
+      ],
+      "r": 2,
+      "x": "En l'absence de chaîne du froid opérationnelle en zone rurale burkinabè, le fumage et le séchage artisanaux dominent. Ces méthodes permettent de commercialiser le poisson loin des lieux de capture et sur plusieurs semaines."
+    },
+    {
+      "q": "Une CPUE en déclin régulier sur 3 années consécutives sur un barrage indique le plus probablement :",
+      "o": [
+        "Une amélioration des techniques de pêche permettant de cibler plus précisément les zones productives",
+        "Une augmentation de la biomasse du stock liée à un recrutement exceptionnellement élevé des juvéniles",
+        "Une baisse du niveau d'eau qui concentre les poissons et facilite leur capture par les filets déployés",
+        "Une réduction progressive de la biomasse exploitable du stock, signalant un risque de surexploitation"
+      ],
+      "r": 3,
+      "x": "La CPUE est un indicateur de l'abondance relative du stock. Sa baisse régulière, à effort constant, traduit une réduction de la biomasse exploitable et constitue un signal d'alerte précoce de surexploitation pour le gestionnaire."
+    },
+    {
+      "q": "La méthode de dépletion de Leslie permet d'estimer :",
+      "o": [
+        "La taille du stock en observant la diminution des CPUE lors d'une opération de pêche intensive contrôlée",
+        "La mortalité naturelle des poissons en analysant les courbes de croissance sur des échantillons annuels",
+        "La durée de repos biologique nécessaire à la reconstitution complète d'un stock fortement surexploité",
+        "Le taux de recrutement annuel d'une espèce en dénombrant les cohortes de juvéniles sur les frayères"
+      ],
+      "r": 0,
+      "x": "La méthode de Leslie utilise la relation linéaire entre la CPUE et les captures cumulées lors d'une pêche intensive (dépletion). L'extrapolation à CPUE = 0 donne une estimation de la taille initiale du stock."
+    },
+    {
+      "q": "Un pisciculteur produit 600 kg de tilapia sur 2 000 m² en 6 mois. Quelle est sa productivité en kg/ha/an ?",
+      "o": [
+        "3 000 kg/ha/an",
+        "6 000 kg/ha/an",
+        "1 500 kg/ha/an",
+        "4 500 kg/ha/an"
+      ],
+      "r": 1,
+      "x": "Production/surface = 600 kg / 0,2 ha = 3 000 kg/ha en 6 mois. Annualisée (x 2) = 6 000 kg/ha/an. Cette productivité élevée correspond à un système intensif avec alimentation complète et gestion rigoureuse des paramètres."
+    },
+    {
+      "q": "L'indice de condition de Fulton (K) est calculé par :",
+      "o": [
+        "K = Poids (g) x Longueur (cm), exprimant la relation linéaire entre poids et longueur totale du poisson",
+        "K = Longueur (cm) / Poids (g) x 100, comparant la longueur relative au poids corporel mesuré",
+        "K = Poids (g) x 100 / Longueur3 (cm3), évaluant l'embonpoint du poisson par rapport à sa longueur",
+        "K = Longueur2 (cm2) / Poids (g), calculant le rapport surface/poids pour estimer la condition physique"
+      ],
+      "r": 2,
+      "x": "K = 100 x P / L3 mesure l'état nutritionnel et la condition physique du poisson. Un K élevé indique un poisson bien nourri et en bonne condition. Il est utilisé pour suivre la qualité des individus et l'état des stocks."
+    },
+    {
+      "q": "Les statistiques halieutiques au Burkina Faso sont principalement collectées par :",
+      "o": [
+        "L'Institut National de la Statistique et de la Démographie (INSD) lors des recensements généraux",
+        "La Direction Générale des Ressources Halieutiques (DGRH) via ses services régionaux et agents terrain",
+        "Les coopératives de pêcheurs qui transmettent leurs données directement au Ministère chargé de l'eau",
+        "Les universités burkinabè qui réalisent des campagnes d'évaluation mensuelles sur les principaux barrages"
+      ],
+      "r": 1,
+      "x": "La DGRH est la structure technique nationale chargée de la collecte et de l'analyse des statistiques halieutiques au Burkina Faso. Elle coordonne les agents de terrain sur les principaux sites de pêche et d'aquaculture nationaux."
+    },
+    {
+      "q": "Au Burkina Faso, la gestion, l'aménagement et l'exploitation durable des ressources halieutiques sont spécifiquement régis par :",
+      "o": [
+        "Le Code forestier et ses décrets d'application relatifs à la faune sauvage terrestre",
+        "La Loi portant Code d'aménagement et de gestion des ressources halieutiques",
+        "Le Code de l'eau, qui encadre exclusivement les droits de pêche sur le domaine public",
+        "Le Code de l'environnement, qui gère directement l'attribution des permis de pêche"
+      ],
+      "r": 1,
+      "x": "Au Burkina Faso, la gestion, l'aménagement et l'exploitation durable des ressources halieutiques sont spécifiquement régis par la Loi n°020-2017/AN du 27 juin 2017 portant Code d'aménagement et de gestion des ressources halieutiques."
+    },
+    {
+      "q": "Le permis de pêche professionnelle au Burkina Faso :",
+      "o": [
+        "Est délivré gratuitement à tout citoyen burkinabè souhaitant exercer la pêche à titre professionnel",
+        "Est délivré par les services compétents des Eaux et Forêts moyennant le paiement d'une redevance",
+        "N'existe pas, la pêche artisanale étant complètement libre sur tous les plans d'eau du domaine public",
+        "Est valable uniquement pour le plan d'eau précisément mentionné et non cessible à un autre pêcheur"
+      ],
+      "r": 1,
+      "x": "La pêche professionnelle est soumise à l'obtention d'un permis délivré par les services des Eaux et Forêts contre paiement d'une redevance. Cette redevance contribue au financement de la gestion des ressources halieutiques."
+    },
+    {
+      "q": "Au Burkina Faso, le contrôle de l'application de la réglementation sur la pêche (police des pêches) est principalement assuré sur le terrain par :",
+      "o": [
+        "Les forces de police nationale et de gendarmerie, seules habilitées à saisir les filets non réglementaires",
+        "Les agents des Eaux et Forêts et les inspecteurs assermentés du ministère chargé des ressources halieutiques",
+        "Les comités villageois de développement (CVD) et les chefs de terre locaux de manière exclusive",
+        "Les agents de la douane burkinabè, qui détiennent le monopole des contrôles sur les plans d'eau nationaux"
+      ],
+      "r": 1,
+      "x": "La police des pêches et la constatation des infractions sur le terrain relèvent de la compétence des structures techniques de l'État. Ce rôle est dévolu aux agents des Eaux et Forêts  ainsi qu'aux cadres et inspecteurs des ressources halieutiques dûment assermentés."
+    },
+    {
+      "q": "La pêche est généralement interdite ou réglementée dans les zones suivantes au Burkina Faso :",
+      "o": [
+        "Les bras morts et zones de faible profondeur en saison sèche, pour protéger les espèces résidentes",
+        "Les zones d'aquaculture privée concédées à des opérateurs et balisées par arrêté ministériel formel",
+        "Les zones à fort courant près des évacuateurs des barrages hydroélectriques, pour des raisons de sécurité",
+        "Les frayères et les zones d'alevinage pendant les périodes de reproduction fixées par arrêté annuel"
+      ],
+      "r": 3,
+      "x": "Les frayères et nourriceries sont des habitats critiques dont la protection pendant la reproduction est essentielle au renouvellement des stocks. Les arrêtés préfectoraux délimitent ces zones et fixent les périodes de fermeture annuelle."
+    },
+    {
+      "q": "Les engins à maille non réglementaire (trop petite) sont interdits car :",
+      "o": [
+        "Ils augmentent le coût de fabrication et réduisent la rentabilité des pêcheurs artisanaux à faibles revenus",
+        "Ils capturent des alevins et juvéniles n'ayant pas encore atteint la maturité sexuelle et reproductrice",
+        "Ils nécessitent un effort de pêche plus intense qui fatigue davantage les pêcheurs et leurs embarcations",
+        "Ils sont facilement confondus avec des filets de contrebande importés illégalement des pays limitrophes"
+      ],
+      "r": 1,
+      "x": "Les petites mailles capturent les juvéniles avant leur première reproduction, empêchant le renouvellement naturel du stock. Cette pratique entraîne une réduction progressive des captures et l'appauvrissement des ressources halieutiques."
+    },
+    {
+      "q": "Le barrage de Kompienga est situé dans la région du Burkina Faso suivante :",
+      "o": [
+        "La région de Guiriko, principal pôle agricole et commercial du pays à l'ouest du territoire",
+        "La région du Goulmou,  l'un des principaux sites halieutiques à fort potentiel lacustre du pays",
+        "La région de Kadiogo, à proximité de la capitale Ouagadougou pour alimenter les marchés urbains proches",
+        "La région du Liptako, dans une zone semi-aride à faible potentiel halieutique naturel permanent"
+      ],
+      "r": 1,
+      "x": "Le barrage de Kompienga, construit sur la rivière Kompienga (bassin de la Volta blanche), est situé dans la province éponyme au sein de la région du Goulmou. À vocation hydroélectrique, son réservoir constitue l'une des zones de pêche artisanale et de production halieutique les plus actives du pays"
+    },
+    {
+      "q": "La Vallée du Sourou est régulièrement citée dans les statistiques halieutiques burkinabè car elle abrite :",
+      "o": [
+        "Le plus grand élevage de poissons en cage flottante d'Afrique de l'Ouest subsaharienne continentale",
+        "Une centrale hydroélectrique qui alimente en énergie les installations piscicoles de toute la région",
+        "Une importante pêcherie artisanale associée à une vaste zone de riziculture irriguée productive",
+        "Le principal laboratoire national d'ichtyologie et de limnologie de l'Afrique de l'Ouest sahélienne"
+      ],
+      "r": 2,
+      "x": "La Vallée du Sourou, aménagée pour la riziculture irriguée dans la province du Sourou, abrite une pêche artisanale active. Cette association riziculture-pêche en fait une zone emblématique de la production agropiscicole burkinabè."
+    },
+    {
+      "q": "La principale contrainte au développement de l'aquaculture au Burkina Faso est :",
+      "o": [
+        "L'absence totale de marchés locaux pour la commercialisation du poisson d'élevage dans le pays",
+        "L'interdiction par la réglementation nationale de l'élevage de tilapia et de Clarias en étang privé",
+        "La surproduction chronique qui fait chuter les prix et rend l'aquaculture durablement non rentable",
+        "Le coût élevé des aliments formulés importés et la difficulté d'accès aux alevins de qualité certifiée"
+      ],
+      "r": 3,
+      "x": "Le coût élevé des aliments composés (souvent importés) représente 60-70% des charges opérationnelles. La difficulté d'approvisionnement en alevins de qualité certifiée constitue l'autre frein majeur au développement aquacole national."
+    },
+    {
+      "q": "Dans les pêcheries artisanales des barrages du Burkina Faso, les espèces qui dominent les captures sont :",
+      "o": [
+        "Lates niloticus (perche du Nil), introduite dans le barrage de Bagré pour développer la pêche sportive",
+        "Heterotis niloticus, principale espèce élevée en cage flottante sur le barrage de Kompienga actuellement",
+        "Les tilapias (Oreochromis niloticus et Sarotherodon galilaeus), représentant la majorité des débarquements",
+        "Clarias gariepinus exclusivement, espèce dominante en milieu continental africain grâce à sa résistance"
+      ],
+      "r": 2,
+      "x": "Les tilapias (notamment O. niloticus et S. galilaeus) dominent largement les captures dans les pêcheries artisanales burkinabè. Leur forte productivité, leur omnivorie et leur adaptation aux eaux tropicales expliquent cette dominance."
+    },
+    {
+      "q": "La principale menace pesant sur les ressources halieutiques du barrage de Bagré est :",
+      "o": [
+        "L'acidification progressive de l'eau liée aux pluies acides provenant des zones industrielles environnantes",
+        "L'introduction d'espèces exotiques comme la carpe commune qui compétitionne avec le tilapia indigène",
+        "La prolifération de végétation aquatique submergée empêchant la navigation et la pêche au filet",
+        "La pression croissante de pêche due à l'afflux de pêcheurs et l'utilisation d'engins non réglementaires"
+      ],
+      "r": 3,
+      "x": "L'afflux croissant de pêcheurs sur le barrage de Bagré, combiné à l'utilisation d'engins non réglementaires (petites mailles, pêche électrique), constitue la principale menace d'une surexploitation des ressources halieutiques nationales."
+    },
+    {
+      "q": "Le protoptère africain (Protopterus annectens) est le seul poisson capable de :",
+      "o": [
+        "Survivre à une complète dessiccation de son milieu grâce à une estivation dans un cocon de mucus",
+        "Se reproduire par parthénogenèse sans intervention de gamètes mâles dans les mares temporaires",
+        "Tolérer des températures supérieures à 50°C grâce à des protéines de choc thermique très développées",
+        "Produire de l'électricité pour localiser ses proies dans les eaux très turbides des fleuves sahéliens"
+      ],
+      "r": 0,
+      "x": "Le protoptère survit à la saison sèche en s'enterrant dans un cocon de mucus durci et en respirant l'air via ses poumons rudimentaires. Cette estivation peut durer plusieurs mois jusqu'au retour des eaux."
+    },
+    {
+      "q": "Gymnarchus niloticus (gymnote africain) se repère dans les eaux turbides grâce à :",
+      "o": [
+        "Un système auditif très développé détectant les ultrasons réfléchis par les obstacles environnants",
+        "Des champs électriques faibles qu'il génère et dont il perçoit les déformations causées par les objets",
+        "Des cellules olfactives hypersensibles détectant les phéromones émises par les proies à distance",
+        "Une vision nocturne exceptionnelle grâce à des yeux à tapetum lucidum très réfléchissant"
+      ],
+      "r": 1,
+      "x": "Gymnarchus niloticus génère un champ électrique faible via son organe caudal. Des récepteurs ampullaires lui permettent de détecter les perturbations de ce champ créées par les objets et les proies dans les eaux turbides."
+    },
+    {
+      "q": "La nageoire caudale hétérocerque, caractéristique des requins et des esturgeons, présente :",
+      "o": [
+        "Ses deux lobes parfaitement symétriques, assurant une propulsion rectiligne optimale à grande vitesse",
+        "Une absence totale chez les espèces de grande profondeur où la propulsion latérale domine",
+        "Une réduction à un filament caudal chez les espèces d'eau douce africaines comme le protoptère",
+        "Un lobe supérieur (épaxial) plus développé que l'inférieur, la colonne vertébrale se prolongeant dedans"
+      ],
+      "r": 3,
+      "x": "La nageoire caudale hétérocerque est asymétrique : le lobe dorsal (épaxial) est plus grand, la colonne vertébrale s'y prolonge. Elle génère une force de portance orientant le museau vers le bas lors de la nage."
+    },
+    {
+      "q": "Chez Oreochromis niloticus, le dimorphisme sexuel se manifeste principalement par :",
+      "o": [
+        "La taille corporelle plus grande des mâles, leur croissance étant nettement supérieure à celle des femelles",
+        "La coloration vive rouge-orange des femelles pendant la période de reproduction nuptiale",
+        "La présence de gonopodes (organes copulateurs) visibles uniquement chez les mâles adultes matures",
+        "L'absence totale de dimorphisme sexuel externe rendant le sexage impossible sans examen des gonades"
+      ],
+      "r": 0,
+      "x": "Les mâles de O. niloticus croissent significativement plus vite que les femelles (30 à 100% de gain de poids supérieur). Ce dimorphisme de croissance justifie la production d'alevins monosexes mâles en aquaculture pour maximiser les rendements."
+    },
+    {
+      "q": "Un poisson physostome se distingue d'un poisson physocliste par le fait que sa vessie natatoire :",
+      "o": [
+        "Est totalement absente, la flottabilité étant assurée exclusivement par des dépôts lipidiques dans le foie",
+        "Est reliée à l'oesophage par un canal pneumatique permettant l'ajustement gazeux par déglutition d'air",
+        "Est composée de deux chambres distinctes assurant respectivement la flottabilité et la respiration accessoire",
+        "Est remplie d'oxygène pur synthétisé par des cellules sécrétrices spécialisées sans connexion digestive"
+      ],
+      "r": 1,
+      "x": "Les physostomes (carpes, anguilles) ont une vessie natatoire reliée à l'oesophage par un canal pneumatique permettant l'échange gazeux direct. Les physoclistes (perches, tilapias) ajustent leur flottabilité via sécrétion/réabsorption de gaz au niveau du réseau miraculeux."
+    },
+    {
+      "q": "Les dents pharyngées chez les cichlidés (tilapia, Oreochromis) sont situées sur :",
+      "o": [
+        "Les mâchoires buccales supérieure et inférieure, servant à broyer les végétaux macrophytes",
+        "Les os pharyngiens cérato-branchiaux, servant à broyer la nourriture après ingestion buccale",
+        "Les arcs branchiaux principaux, servant à filtrer le phytoplancton lors de l'alimentation pélagique",
+        "Les os opercoulaires, servant à maintenir les proies animales pendant la déglutition"
+      ],
+      "r": 1,
+      "x": "Les dents pharyngées des cichlidés se trouvent sur les os pharyngiens inférieurs dans le fond de la gorge. Elles écrasent et broyent la nourriture après ingestion buccale. Leur morphologie varie selon le régime alimentaire de l'espèce (granivore, herbivore, molluscivore)."
+    },
+    {
+      "q": "Une espèce diadrome anadrome est une espèce qui :",
+      "o": [
+        "Vit en eau douce et migre vers la mer pour se reproduire puis revient en eau douce pour mourir ensuite",
+        "Vit en mer et migre vers les eaux douces pour s'alimenter en saison chaude avant de revenir en mer",
+        "Migre horizontalement dans les deltas entre les eaux saumâtres et les eaux douces selon les saisons",
+        "Vit en mer et migre vers les eaux douces pour se reproduire, comme le saumon atlantique"
+      ],
+      "r": 3,
+      "x": "Les espèces anadromes (ex : saumon) vivent en mer et remontent en eau douce pour se reproduire. Les espèces catadromes (anguille) font l'inverse. Ces migrations diadromes n'existent pas au Burkina Faso, pays enclavé sans accès maritime."
+    },
+    {
+      "q": "L'olfaction joue un rôle crucial chez les poissons car elle permet :",
+      "o": [
+        "La détection des vibrations de basse fréquence dans le milieu aquatique par les cellules ciliées nasales",
+        "La détection des variations de pression et le positionnement précis dans la colonne d'eau",
+        "La détection des phéromones sexuelles, des proies, des prédateurs et le retour aux frayères natales",
+        "La régulation osmotique via les fosses nasales directement reliées aux chambres branchiales"
+      ],
+      "r": 2,
+      "x": "Les poissons possèdent des fosses nasales très développées détectant des concentrations infinitésimales de substances chimiques. L'olfaction guide les migrations de reproduction, la reconnaissance des congénères et la détection des prédateurs et des proies."
+    },
+    {
+      "q": "Clarias gariepinus peut survivre temporairement hors de l'eau grâce à :",
+      "o": [
+        "Sa capacité à absorber l'oxygène atmosphérique directement à travers sa peau très vascularisée",
+        "Son organe suprabranchial arborescent et sa capacité à se déplacer sur terre en reptation musculaire",
+        "Des branchies externes persistantes de type larvaire qui restent fonctionnelles à l'âge adulte",
+        "Une réduction métabolique profonde comparable à l'hibernation des mammifères en régions froides"
+      ],
+      "r": 1,
+      "x": "Clarias gariepinus combine son organe suprabranchial (respiration aérienne) et des muscles pectoraux robustes lui permettant de se déplacer sur terrains humides entre deux points d'eau, colonisant de nouveaux habitats lors des crues saisonnières."
+    },
+    {
+      "q": "Chez les poissons, les xanthophores et érythrophores sont des chromatophores qui produisent respectivement :",
+      "o": [
+        "Des couleurs noires et brunes par synthèse de mélanine à partir de la tyrosine alimentaire",
+        "Des reflets irisés et métalliques par diffraction et réflexion de la lumière sur des cristaux de guanine",
+        "Des couleurs bleues et vertes par absorption sélective de certaines longueurs d'onde lumineuses",
+        "Des couleurs jaunes/orangées et rouges grâce aux pigments caroténoïdes d'origine alimentaire"
+      ],
+      "r": 3,
+      "x": "Les xanthophores (jaunes/orangés) et érythrophores (rouges) contiennent des caroténoïdes que les poissons ne synthétisent pas eux-mêmes. Chez les salmonidés d'élevage, l'astaxanthine est ajoutée aux aliments pour obtenir la couleur rose caractéristique de la chair."
+    },
+    {
+      "q": "La production de sons chez les poissons est réalisée principalement par :",
+      "o": [
+        "Des organes électriques spécialisés produisant des signaux bioélectriques audibles sous l'eau",
+        "La vibration de la vessie natatoire, les frottements d'os ou la cavitation lors de mouvements rapides",
+        "Des cellules ciliées spécialisées à la surface des opercules vibrant à des fréquences spécifiques",
+        "Des poumons rudimentaires produisant des bulles de gaz éclatant à la sortie de la cavité buccale"
+      ],
+      "r": 1,
+      "x": "Les poissons produisent des sons par contraction des muscles de la vessie natatoire (tambourinement), stridulation (frottement de pièces osseuses) ou cavitation. Ces sons jouent un rôle dans la communication interspécifique, la reproduction et les comportements territoriaux."
+    },
+    {
+      "q": "La régénération des écailles après une blessure chez les poissons :",
+      "o": [
+        "Est impossible, la perte définitive d'écailles fragilisant la barrière osmotique de manière permanente",
+        "S'effectue en quelques heures grâce à la multiplication rapide des cellules de la dermique adjacente",
+        "Produit une nouvelle écaille sans anneaux de croissance initiaux, perturbant la lecture de l'âge",
+        "Se produit normalement et la nouvelle écaille porte des marques d'accident identifiables à la scalimétrie"
+      ],
+      "r": 3,
+      "x": "Les écailles régénérées après blessure forment des anneaux de croissance perturbés (marque traumatique ou anneau d'accident). Cette caractéristique peut compliquer la lecture de l'âge par scalimétrie mais permet d'identifier des événements traumatiques dans la vie du poisson."
+    },
+    {
+      "q": "L'hémoglobine des poissons téléostéens présente la particularité suivante par rapport à celle des mammifères :",
+      "o": [
+        "Elle est remplacée par de la myoglobine à haute affinité pour l'O2 dans les milieux très oxygénés",
+        "Elle peut fixer l'O2 à des concentrations très faibles grâce à une affinité constante indépendante du pH",
+        "Elle présente plusieurs isoformes avec des affinités différentes adaptées aux variations de pH et de CO2",
+        "Elle est localisée exclusivement dans les cellules musculaires rouges et non dans les érythrocytes"
+      ],
+      "r": 2,
+      "x": "Les poissons téléostéens possèdent plusieurs isoformes d'hémoglobine (effet Bohr, effet Root) avec des propriétés d'affinité variables. Ce polymorphisme leur permet de s'adapter aux variations de pH, de CO2 et d'O2 de leur milieu aquatique, optimisant le transport de l'oxygène."
+    },
+    {
+      "q": "Chez les mâles de tilapia en période de reproduction, le creusement d'un nid sur fond sableux répond à la fonction suivante :",
+      "o": [
+        "Construire un abri protecteur contre les courants et les prédateurs pour les oeufs et les larves",
+        "Libérer des phéromones de croissance par frottement des nageoires sur le sable pour nourrir les futurs alevins.",
+        "Créer une dépression où les oeufs s'accumuleront avant d'être collectés par la femelle pour l'incubation buccale",
+        "Préparer un site d'alimentation benthique riche en invertébrés dérangés par le creusement du substrat"
+      ],
+      "r": 2,
+      "x": "Le mâle tilapia creuse un nid circulaire sur substrat sableux pour attirer les femelles. Après la parade nuptiale et la ponte, la femelle récolte les oeufs fécondés dans sa bouche pour l'incubation buccale. Le nid joue aussi un rôle dans la hiérarchie sociale entre mâles."
+    },
+    {
+      "q": "Le Polypterus senegalus (bichir), présent dans les bassins fluviaux d'Afrique de l'Ouest, est considéré comme un fossile vivant car :",
+      "o": [
+        "Il possède des structures primitives comme des nageoires à bases charnues et des poumons fonctionnels",
+        "Il est incapable de se reproduire naturellement et nécessite une assistance humaine pour la fécondation",
+        "Il a une espérance de vie exceptionnelle dépassant 500 ans dans les conditions naturelles africaines",
+        "Il se nourrit exclusivement de fossiles d'invertébrés marins déposés dans les sédiments lacustres"
+      ],
+      "r": 0,
+      "x": "Polypterus est un actinoptérygien (ou cladistien) primitif dont les nageoires pectorales sont à base charnue et qui possède des poumons primitifs permettant la respiration aérienne. Sa morphologie inchangée depuis le Dévonien en fait un modèle d'étude de l'évolution des vertébrés terrestres."
+    },
+    {
+      "q": "Le disque de Secchi est utilisé en limnologie pour mesurer :",
+      "o": [
+        "La transparence de l'eau, indiquant indirectement la turbidité et la profondeur de la zone euphotique",
+        "La conductivité électrique de l'eau par mesure de la résistance au passage du courant alternatif",
+        "La concentration en nitrates par colorimétrie au disque de référence coloré standardisé",
+        "La vitesse de sédimentation des particules en suspension par chronométrage de la descente du disque"
+      ],
+      "r": 0,
+      "x": "Le disque de Secchi (blanc et noir, 30 cm) est immergé jusqu'à sa disparition visuelle puis remonté. La moyenne des deux profondeurs donne la profondeur de Secchi (Zs). La zone euphotique est estimée à environ 2,5 × Zs."
+    },
+    {
+      "q": "La Demande Chimique en Oxygène (DCO) se distingue de la DBO5 car elle mesure :",
+      "o": [
+        "La quantité d'oxygène produite par les algues lors de la photosynthèse en conditions standardisées",
+        "Uniquement la fraction biodégradable de la matière organique dissoute dans les effluents aquatiques",
+        "La concentration en oxygène résiduel après 24 heures de consommation biologique en eau stagnante",
+        "La quantité d'oxygène nécessaire à l'oxydation chimique totale de toute la matière organique par dichromate"
+      ],
+      "r": 3,
+      "x": "La DCO (par oxydation au dichromate de potassium K2Cr2O7) mesure la totalité de la matière organique oxydable (biodégradable et récalcitrante) en 2h. La DCO est toujours supérieure à la DBO5 car elle inclut la fraction non dégradée biologiquement en 5 jours."
+    },
+    {
+      "q": "Le dosage de l'azote Kjeldahl total (NTK) dans un effluent piscicole mesure :",
+      "o": [
+        "La teneur en nitrates et nitrites, indicateurs de la nitrification complète des effluents d'élevage",
+        "La somme de l'azote ammoniacal (NH4+) et de l'azote organique (protéines, urée) dans l'eau analysée",
+        "La teneur en azote gazeux dissous (N2) résultant de la dénitrification dans les zones anoxiques",
+        "L'azote total de l'eau souterraine utilisée pour alimenter les bassins piscicoles en recirculation"
+      ],
+      "r": 1,
+      "x": "L'azote Kjeldahl total (NTK) est la somme de l'azote ammoniacal (NH4+) et de l'azote organique (protéines, urée). C'est un indicateur clé de la charge azotée des effluents piscicoles et de leur impact potentiel sur les milieux récepteurs en aval."
+    },
+    {
+      "q": "Le potentiel d'oxydo-réduction (Eh ou potentiel redox) d'un sédiment aquatique est un indicateur de :",
+      "o": [
+        "La concentration en oxygène dissous dans la couche d'eau au-dessus des sédiments à l'interface",
+        "La température des sédiments qui détermine la vitesse des réactions de dénitrification bactérienne",
+        "La richesse en matière organique des sédiments, un Eh élevé indiquant une forte charge organique",
+        "L'état d'oxydation du milieu sédimentaire, un Eh négatif indiquant un milieu anoxique et réducteur"
+      ],
+      "r": 3,
+      "x": "Le potentiel redox (Eh) mesure la tendance du milieu à accepter ou céder des électrons. Un Eh > +200 mV indique un milieu aérobie (oxique) ; un Eh < 0 mV un milieu anaérobie (réducteur). Les sédiments anoxiques libèrent des composés toxiques (H2S, NH3, CH4) dangereux pour les organismes benthiques."
+    },
+    {
+      "q": "La mesure de la concentration en chlorophylle-a dans un plan d'eau est utilisée pour estimer :",
+      "o": [
+        "La biomasse phytoplanctonique et le niveau de productivité primaire du plan d'eau considéré",
+        "La concentration en oxygène dissous dans la couche de surface à un instant donné de la journée",
+        "La quantité de matière organique particulaire sédimentée sur le fond du plan d'eau lacustre",
+        "La diversité spécifique des algues présentes, chaque espèce ayant une teneur en chlorophylle distinctive"
+      ],
+      "r": 0,
+      "x": "La chlorophylle-a est le pigment photosynthétique commun à toutes les algues et cyanobactéries. Sa concentration (en µg/L par spectrophotométrie ou fluorimétrie) est un indicateur standardisé de la biomasse phytoplanctonique et du niveau trophique d'un plan d'eau."
+    },
+    {
+      "q": "Dans l'eau d'un étang piscicole, l'ammoniac toxique (NH3) représente une fraction plus importante lorsque :",
+      "o": [
+        "Le pH est faible (< 6) et la température basse, favorisant la forme ionisée NH4+ peu toxique",
+        "Le pH est élevé (> 8) et la température haute, déplaçant l'équilibre vers la forme libre NH3 toxique",
+        "La conductivité est élevée, les ions dissous stabilisant la forme ionisée NH4+ non toxique",
+        "La turbidité est forte, les particules en suspension adsorbant préférentiellement la forme NH3 toxique"
+      ],
+      "r": 1,
+      "x": "L'équilibre NH4+ vers NH3 + H+ est déplacé vers NH3 (toxique) quand le pH et la température augmentent. En étang tropical (pH 8-9 après photosynthèse intense), la fraction NH3 peut atteindre des niveaux dangereux même avec une concentration totale modérée."
+    },
+    {
+      "q": "En aquaculture d'altitude, la concentration en oxygène dissous à saturation dans l'eau est :",
+      "o": [
+        "Plus élevée qu'au niveau de la mer car les températures plus basses augmentent la solubilité des gaz",
+        "Identique à celle du niveau de la mer car l'oxygène est un gaz à comportement idéal non affecté",
+        "Plus faible qu'au niveau de la mer en raison de la pression atmosphérique réduite à altitude élevée",
+        "Variable selon la saison uniquement, la pression atmosphérique étant constante à toute altitude"
+      ],
+      "r": 2,
+      "x": "La solubilité de l'O2 dans l'eau dépend de la pression partielle de l'O2 atmosphérique (loi de Henry). À haute altitude, la pression atmosphérique réduite diminue la pression partielle de l'O2 et donc sa solubilité, même si l'eau froide compense partiellement cet effet."
+    },
+    {
+      "q": "La période de conditionnement des géniteurs avant la ponte en écloserie consiste à :",
+      "o": [
+        "Les maintenir dans l'obscurité totale pendant 48h pour inhiber l'axe hypothalamo-hypophysaire",
+        "Les nourrir intensivement à 10% de leur poids en aliments protéinés pour accélérer la gamétogenèse",
+        "Les maintenir dans des conditions optimales de température, d'alimentation et de photopériode pour maturité",
+        "Les séparer rigoureusement des congénères pour éviter les combats territoriaux avant la reproduction"
+      ],
+      "r": 2,
+      "x": "Le conditionnement des géniteurs vise à amener les reproductrices à maturité maximale : température optimale (26-28°C pour tilapia), alimentation enrichie en vitamines et acides gras essentiels, photopériode favorable. Un bon conditionnement garantit des pontes abondantes et des oeufs de qualité."
+    },
+    {
+      "q": "En aquaculture en cage flottante sur barrage, le grossissement du tilapia peut être affecté par :",
+      "o": [
+        "Les variations de courant qui empêchent les poissons d'atteindre les zones d'alimentation dans la cage",
+        "La stratification thermique et l'anoxie du fond qui affectent le bien-être des poissons en profondeur",
+        "L'absence totale de lumière naturelle en profondeur rendant les poissons incapables de trouver leur nourriture",
+        "La pression hydrostatique excessive à partir de 3 mètres comprimant la vessie natatoire des poissons"
+      ],
+      "r": 1,
+      "x": "La stratification thermique en saison sèche crée une thermocline et une zone anoxique en profondeur. Les cages trop profondes exposent les poissons du bas à des températures sous-optimales et à un manque d'oxygène, réduisant la croissance et augmentant les mortalités."
+    },
+    {
+      "q": "Lors de la formulation d'un aliment composé pour tilapia, la méthode des carrés de Pearson ou du bilan matriciel permet de :",
+      "o": [
+        "Calculer la durée optimale de conservation de l'aliment selon le niveau d'humidité résiduelle cible",
+        "Déterminer la taille des granulés selon la taille des poissons auxquels l'aliment est destiné",
+        "Estimer le temps de cuisson optimal pour améliorer la digestibilité des amidons dans les granulés",
+        "Calculer les proportions des ingrédients pour atteindre les teneurs en nutriments cibles définies"
+      ],
+      "r": 3,
+      "x": "La méthode des carrés de Pearson (deux ingrédients) ou les bilans matriciels (multi-ingrédients) permettent de calculer les proportions optimales des matières premières pour atteindre un profil nutritionnel cible (protéines, énergie, acides aminés) au coût minimal de fabrication."
+    },
+    {
+      "q": "Les aliments extrudés (flottants) présentent l'avantage suivant par rapport aux aliments pelletisés (coulants) :",
+      "o": [
+        "Ils sont moins coûteux à produire car l'extrusion nécessite moins d'énergie que la pelletisation classique",
+        "Ils permettent une observation directe de l'appétit des poissons à la surface, réduisant les gaspillages",
+        "Ils contiennent systématiquement plus de protéines que les pellets coulants pour un même coût",
+        "Ils résistent mieux aux moisissures grâce à leur teneur en eau nulle obtenue lors du traitement thermique"
+      ],
+      "r": 1,
+      "x": "Les aliments extrudés flottants restent en surface 5-10 minutes, permettant aux pisciculteurs d'observer l'appétit des poissons et d'arrêter la distribution quand l'alimentation ralentit. Cela réduit les gaspillages et la pollution organique de l'eau par les refus alimentaires non consommés."
+    },
+    {
+      "q": "Les aflatoxines présentes dans les matières premières (tourteau d'arachide, maïs) des aliments piscicoles sont dangereuses car elles :",
+      "o": [
+        "Réduisent la valeur protéique des aliments en dénaturant les acides aminés essentiels lors du stockage",
+        "Augmentent la solubilité des vitamines liposolubles dans l'eau, causant des carences vitamiques aiguës",
+        "Bloquent les enzymes digestives pancréatiques, réduisant l'efficacité de la digestion des protéines",
+        "Sont hépatotoxiques et immunosuppresseurs chez les poissons, causant des hépatocarcinomes à long terme"
+      ],
+      "r": 3,
+      "x": "Les aflatoxines (B1, B2, G1, G2) produites par Aspergillus flavus sont des mycotoxines hautement toxiques. Chez les poissons elles causent lésions hépatiques (nécrose, cirrhose), immunosuppression et hépatocarcinomes. Le tourteau d'arachide tropical est particulièrement à risque en conditions de stockage humide."
+    },
+    {
+      "q": "Un élevage de Clarias démarre avec 5 000 alevins. Après 90 jours, 4 250 poissons de 250 g en moyenne sont récoltés. La production totale est de :",
+      "o": [
+        "1 062,5 kg",
+        "850 kg",
+        "750 kg",
+        "1 250 kg"
+      ],
+      "r": 0,
+      "x": "Production = Effectif récolté × Poids moyen = 4 250 × 0,250 kg = 1 062,5 kg. Le taux de survie est de 4 250/5 000 = 85%. Ces résultats sont excellents pour l'élevage de Clarias en bassin semi-intensif en conditions tropicales burkinabè."
+    },
+    {
+      "q": "La pisciculture de subsistance se distingue de la pisciculture commerciale principalement par :",
+      "o": [
+        "L'utilisation obligatoire d'espèces exotiques importées, les espèces locales étant réservées à la pêche",
+        "La production destinée principalement à l'autoconsommation familiale avec des intrants minimaux",
+        "L'interdiction de vendre les excédents de production sur les marchés locaux par la réglementation",
+        "L'utilisation exclusive d'aliments naturels prélevés dans le milieu sans aucun apport extérieur payant"
+      ],
+      "r": 1,
+      "x": "La pisciculture de subsistance vise l'autoconsommation familiale pour améliorer la sécurité alimentaire et nutritionnelle. Elle utilise des intrants limités et des pratiques extensives. La pisciculture commerciale vise le profit sur les marchés, nécessitant des investissements plus importants."
+    },
+    {
+      "q": "Le ratio géniteurs mâles/femelles recommandé pour la reproduction du tilapia en écloserie est généralement de :",
+      "o": [
+        "1 mâle pour 1 femelle (1:1), les deux sexes ayant des rôles égaux dans la reproduction",
+        "1 mâle pour 3 à 5 femelles (1:3-5), un mâle pouvant féconder plusieurs femelles simultanément",
+        "3 mâles pour 1 femelle (3:1), pour maximiser la compétition spermatique et la qualité des oeufs",
+        "1 mâle pour 10 femelles (1:10), le sperme étant produit en quantité très supérieure aux oeufs"
+      ],
+      "r": 1,
+      "x": "Un mâle tilapia peut féconder plusieurs femelles. Le ratio 1 mâle pour 3 à 5 femelles optimise le taux de fécondation tout en réduisant les comportements agressifs des mâles territoriaux qui stresseraient les femelles gravides dans les bacs de reproduction en écloserie."
+    },
+    {
+      "q": "Les bassins hors-sol en géomembrane PEHD (polyéthylène haute densité) présentent l'avantage suivant :",
+      "o": [
+        "Ils retiennent mieux la chaleur solaire que les étangs en terre grâce à leur surface imperméable noire",
+        "Ils permettent une filtration naturelle de l'eau par les plantes aquatiques poussant sur les berges",
+        "Ils sont facilement installables sur tout type de terrain, même en zone non inondable ou rocheuse",
+        "Ils s'auto-remplissent grâce à la capillarité du sol sous les géomembranes en saison des pluies"
+      ],
+      "r": 2,
+      "x": "Les bassins hors-sol en géomembrane PEHD sont flexibles, étanches et installables sur tout type de terrain (sol rocheux, sableux, en pente). Ils permettent l'aquaculture là où des étangs en terre seraient impossibles à construire, comme en zone péri-urbaine sur terrain non argileux."
+    },
+    {
+      "q": "Le jeûne des poissons pendant 24 à 48 heures avant la récolte est recommandé car il permet de :",
+      "o": [
+        "Augmenter le poids des poissons par accumulation de réserves lipidiques mobilisées lors du jeûne",
+        "Réduire le contenu digestif, améliorant la qualité du poisson vivant, la manutention et la durée de vie en vivier",
+        "Stimuler l'appétit des poissons qui mangent davantage lors de la remise en alimentation post-récolte",
+        "Réduire la teneur en protéines musculaires, produisant une chair plus tendre pour la commercialisation"
+      ],
+      "r": 1,
+      "x": "Le jeûne pré-récolte vide le tube digestif, réduisant les contaminations fécales pendant la manutention et le transport. Il améliore la qualité hygiénique du poisson, réduit l'ammoniaque rejeté dans les viviers de transport et améliore la survie lors du transport du poisson vivant."
+    },
+    {
+      "q": "L'association de Clarias gariepinus et d'Oreochromis niloticus dans le même étang peut poser le problème suivant :",
+      "o": [
+        "La compétition alimentaire intense entre les deux espèces pour les mêmes aliments naturels du benthos",
+        "La confusion des eaux entre les deux espèces lors de la fécondation, produisant des hybrides stériles",
+        "La prédation du tilapia par Clarias, espèce carnivore pouvant consommer les juvéniles de tilapia",
+        "L'incompatibilité osmotique entre les deux espèces nécessitant des salinités différentes dans l'étang"
+      ],
+      "r": 2,
+      "x": "Clarias gariepinus est un prédateur carnivore opportuniste capable de consommer les juvéniles et alevins de tilapia présents dans l'étang. Pour réussir cet élevage mixte, il faut s'assurer que les tilapias sont suffisamment grands pour ne pas être prédatés par les Clarias."
+    },
+    {
+      "q": "Les distributions d'aliments nocturnes sont déconseillées en pisciculture tropicale car :",
+      "o": [
+        "La vision des poissons est réduite la nuit, rendant la détection et la consommation des granulés impossible",
+        "Les granulés se dissolvent plus rapidement la nuit à cause des températures plus basses nocturnes",
+        "La croissance des poissons est exclusivement diurne, l'alimentation nocturne étant inutilement coûteuse",
+        "L'O2 dissous est minimum à l'aube et la digestion nocturne augmente la consommation en oxygène"
+      ],
+      "r": 3,
+      "x": "En fin de nuit et à l'aube, l'O2 dissous est au minimum (photosynthèse arrêtée). Une distribution nocturne stimule l'activité métabolique et la digestion, augmentant la consommation en O2 au moment où l'eau est déjà appauvrie, risquant des mortalités par anoxie."
+    },
+    {
+      "q": "Le rendement en filet d'un tilapia (chair sans peau ni arêtes) par rapport au poids vif est généralement de :",
+      "o": [
+        "15 à 20%, le reste étant constitué d'arêtes, de viscères, d'écailles, de tête et de peau du poisson",
+        "55 à 65%, le tilapia étant l'une des espèces à plus fort rendement en filet de l'aquaculture mondiale",
+        "30 à 40%, valeur typique pour un tilapia de taille commerciale traité en conditions artisanales à industrielles",
+        "70 à 80%, ce qui explique le prix premium du tilapia d'élevage par rapport aux poissons artisanaux entiers"
+      ],
+      "r": 2,
+      "x": "Le rendement en filet du tilapia sans peau est de 30 à 40% du poids vif. Les grandes tailles (> 500g) donnent des rendements supérieurs. La tête représente 25-30%, les viscères 10-15%, la peau et les écailles 5-8% du poids total vif."
+    },
+    {
+      "q": "La biosécurité en aquaculture désigne l'ensemble des mesures visant à :",
+      "o": [
+        "Protéger les travailleurs contre les risques d'accidents lors de la manipulation des grands poissons carnivores",
+        "Garantir la sécurité financière des investissements aquacoles contre les risques de faillite ou de sinistres",
+        "Prévenir l'introduction et la propagation des agents pathogènes dans les élevages et les plans d'eau naturels",
+        "Contrôler les impacts environnementaux de l'aquaculture sur les écosystèmes naturels adjacents aux fermes"
+      ],
+      "r": 2,
+      "x": "La biosécurité aquacole regroupe les mesures préventives pour éviter l'introduction de maladies (quarantaine, désinfection, contrôle des alevins, gestion des visiteurs). Elle maintient le statut sanitaire des élevages et prévient la propagation des pathogènes vers les milieux naturels."
+    },
+    {
+      "q": "Lors du transport d'alevins de tilapia en sacs oxygénés, la densité de chargement est limitée par :",
+      "o": [
+        "La résistance mécanique des sacs qui se déchirent sous le poids excessif des poissons en surcharge",
+        "L'accumulation de CO2 et d'ammoniac excrétés par les poissons qui dégradent la qualité de l'eau",
+        "Le volume d'oxygène disponible dans le sac qui ne peut pas être réapprovisionné pendant le transport",
+        "La chaleur métabolique dégagée par les poissons qui augmente la température et réduit l'O2 dissous"
+      ],
+      "r": 1,
+      "x": "L'accumulation de CO2 (acidose) et d'ammoniac excrétés par les poissons dégrade rapidement la qualité de l'eau et peut provoquer des mortalités. La densité de chargement est calculée pour maintenir ces métabolites sous les seuils toxiques pendant toute la durée du transport."
+    },
+    {
+      "q": "Les besoins en calcium et phosphore des poissons d'eau douce diffèrent de ceux des mammifères car :",
+      "o": [
+        "Les poissons peuvent absorber directement le calcium et le magnésium dissous dans l'eau par leurs branchies",
+        "Les poissons n'ont pas besoin de calcium puisque leurs os sont constitués de cartilage non calcifié permanent",
+        "Les poissons absorbent le phosphore directement depuis l'eau, ne nécessitant pas de phosphore alimentaire",
+        "Les poissons excrètent tout l'excès de calcium et de phosphore directement dans les sédiments du fond"
+      ],
+      "r": 0,
+      "x": "Les poissons d'eau douce absorbent une fraction importante de leurs besoins en calcium directement par leurs branchies depuis l'eau ambiante. Cette absorption branchiale réduit leurs besoins alimentaires en calcium comparés aux mammifères qui dépendent totalement des apports alimentaires."
+    },
+    {
+      "q": "Les phytates présents dans les graines de légumineuses (soja, niébé) réduisent la valeur nutritive des aliments piscicoles car ils :",
+      "o": [
+        "Augmentent la viscosité intestinale, ralentissant fortement l'absorption des nutriments dans la lumière",
+        "Inhibent les enzymes digestives (pepsine, trypsine) réduisant la digestion des protéines des aliments",
+        "Forment des complexes insolubles avec les minéraux (Zn, Fe, Ca, P) et les protéines, réduisant leur biodisponibilité",
+        "Stimulent la prolifération de bactéries pathogènes intestinales par leur action prébiotique non spécifique"
+      ],
+      "r": 2,
+      "x": "L'acide phytique (inositol hexaphosphate) chélate les cations divalents (Zn2+, Fe2+, Ca2+, Mg2+) et se lie aux protéines, formant des complexes insolubles. Cette chélation réduit la biodisponibilité des minéraux et des protéines alimentaires, limitant la valeur nutritive des aliments végétaux pour les poissons."
+    },
+    {
+      "q": "Le rancissement oxydatif des lipides dans les aliments pour poissons est détectable par :",
+      "o": [
+        "Une augmentation de la teneur en protéines brutes mesurée par la méthode Kjeldahl standardisée",
+        "Une odeur rance caractéristique, une modification de la couleur et un taux d'indice de peroxyde élevé",
+        "Une diminution de la teneur en eau sous 10%, indiquant une déshydratation des lipides par oxydation",
+        "Une augmentation du pH de l'aliment vers des valeurs alcalines par décomposition des lipides saturés"
+      ],
+      "r": 1,
+      "x": "Le rancissement oxydatif des lipides insaturés (oméga-3, oméga-6) produit des hydroperoxydes, aldéhydes et cétones, responsables de l'odeur rance. L'indice de peroxyde (mEq O2/kg) et le test TBA (acide thiobarbiturique) quantifient le niveau d'oxydation des aliments stockés."
+    },
+    {
+      "q": "Les farines d'insectes (mouche soldat noire, vers de farine) sont prometteuses comme substitut protéique car elles :",
+      "o": [
+        "Contiennent exclusivement des acides aminés non essentiels réduisant les coûts de formulation des aliments",
+        "Ont une teneur en matière sèche nulle, permettant une distribution directe en moulée humide fraîche",
+        "Nécessitent des terres agricoles importantes pour leur production, limitant la pression sur les forêts",
+        "Présentent une teneur en protéines de 40-65%, un bon profil d'acides aminés et peuvent être produits localement"
+      ],
+      "r": 3,
+      "x": "Les larves de mouche soldat noire (Hermetia illucens) contiennent 40-65% de protéines avec un profil en acides aminés équilibré. Leur production valorise les déchets organiques et leur disponibilité locale au Burkina Faso en fait une alternative durable à la farine de poisson importée."
+    },
+    {
+      "q": "La vitamine E (tocophérol) dans l'alimentation des poissons d'élevage sert principalement à :",
+      "o": [
+        "Stimuler la synthèse de cortisol par les glandes surrénales lors des situations de stress chronique d'élevage",
+        "Protéger les acides gras polyinsaturés (AGPI) des membranes cellulaires contre l'oxydation radicalaire",
+        "Assurer la calcification des os et des écailles en régulant l'absorption intestinale du calcium alimentaire",
+        "Synthétiser les prostaglandines qui régulent les fonctions reproductives des géniteurs en période de ponte"
+      ],
+      "r": 1,
+      "x": "La vitamine E est le principal antioxydant liposoluble protégeant les AGPI (EPA, DHA) des membranes cellulaires contre la peroxydation radicalaire. Elle est particulièrement importante dans les aliments riches en huiles de poisson, où elle prévient l'oxydation des oméga-3 essentiels lors du stockage."
+    },
+    {
+      "q": "La carence en zinc chez les poissons d'élevage se manifeste principalement par :",
+      "o": [
+        "Une dépigmentation de la peau et une cécité progressive par atrophie des cellules pigmentaires rétiniennes",
+        "Des malformations squelettiques, une anémie et une réduction marquée des défenses immunitaires",
+        "Une hypertrophie hépatique et une accumulation anormale de graisses dans les cellules musculaires",
+        "Une perte des réflexes de fuite et une léthargie progressive liée à la dégénérescence nerveuse périphérique"
+      ],
+      "r": 1,
+      "x": "Le zinc est un cofacteur indispensable de nombreuses enzymes (carboanhydrase, ADN polymérase). Sa carence provoque une croissance réduite, des malformations squelettiques, une immunodépression et une anémie chez les poissons d'élevage. Les aliments végétaux pauvres en zinc sont particulièrement à risque."
+    },
+    {
+      "q": "Pour prévenir la dégradation des aliments composés pour poissons en conditions tropicales, il est recommandé de :",
+      "o": [
+        "Les stocker directement au soleil pour que la chaleur détruise les moisissures et les insectes nuisibles",
+        "Les immerger partiellement dans l'eau de l'étang pour maintenir une humidité résiduelle stable à 20%",
+        "Les conserver dans un local frais, sec et ventilé, à l'abri de la lumière, avec une humidité < 12%",
+        "Les mélanger avec du sel de cuisine (NaCl) à 5% pour inhiber la croissance des moisissures toxigènes"
+      ],
+      "r": 2,
+      "x": "Les aliments piscicoles se dégradent rapidement en conditions tropicales humides (moisissures, rancissement). Un stockage en local frais (< 30°C), sec (humidité ambiante < 70%, teneur en eau de l'aliment < 12%), ventilé et à l'abri de la lumière permet une conservation de 3 à 6 mois."
+    },
+    {
+      "q": "Trichodina spp. (parasite cilié ectoparasite) se développe préférentiellement en cas de :",
+      "o": [
+        "Faible température de l'eau (< 15°C) et eaux très claires à haute teneur en oxygène dissous",
+        "Eau fortement alcaline (pH > 10) et forte irradiation UV naturelle en saison sèche au Sahel",
+        "Surpopulation des étangs, mauvaise qualité de l'eau et accumulation de matières organiques",
+        "Eau très froide en saison sèche permettant une multiplication rapide des formes kystiques dormantes"
+      ],
+      "r": 2,
+      "x": "Trichodina est présent dans tous les plans d'eau mais prolifère pathologiquement en cas de surpopulation, mauvaise qualité de l'eau (faible O2, ammoniac élevé) et stress chronique qui réduisent les défenses immunitaires des poissons, favorisant l'infestation massive des branchies et de la peau."
+    },
+    {
+      "q": "Gyrodactylus spp. (parasite monogène) se distingue de Dactylogyrus par :",
+      "o": [
+        "Son absence totale d'hapteur lui permettant de nager librement dans la colonne d'eau entre deux hôtes",
+        "Sa reproduction ovovivipare permettant une augmentation rapide de la population sur l'hôte sans stade libre",
+        "Sa localisation exclusive sur les branchies des poissons adultes, sans affecter la peau des juvéniles",
+        "Sa résistance exceptionnelle aux traitements chimiques classiques grâce à sa cuticule imperméable épaisse"
+      ],
+      "r": 1,
+      "x": "Gyrodactylus est ovovivipare (l'embryon se développe dans la femelle) avec un cycle direct sans stade libre dans l'eau. Cela permet une multiplication très rapide sur l'hôte et des infestations massives. Dactylogyrus, lui, est ovipare et affecte principalement les branchies des juvéniles."
+    },
+    {
+      "q": "Le permanganate de potassium (KMnO4) est utilisé en pisciculture pour traiter :",
+      "o": [
+        "Les carences en minéraux par apport de manganèse biodisponible directement assimilable par les branchies",
+        "La suralcalinité des eaux de source par neutralisation chimique de l'excès d'ions hydroxyde dans l'eau",
+        "Les ectoparasites (Trichodina, Gyrodactylus, bactéries filamenteuses) par son action oxydante puissante",
+        "L'anoxie des fonds d'étang en libérant de l'oxygène actif au contact des sédiments organiques réducteurs"
+      ],
+      "r": 2,
+      "x": "Le KMnO4 est un oxydant puissant utilisé contre les ectoparasites (Trichodina, Gyrodactylus) et bactéries filamenteuses (Flavobacterium columnare). La dose thérapeutique est de 2-5 mg/L en bain court ou 2-4 mg/L en traitement d'étang, avec surveillance de la déplétion en O2."
+    },
+    {
+      "q": "L'examen parasitologique d'un poisson suspecté d'infestation en élevage commence par :",
+      "o": [
+        "Un prélèvement sanguin par ponction cardiaque pour analyse sérologique des anticorps spécifiques",
+        "Une biopsie hépatique par ponction abdominale pour analyse histopathologique des lésions internes",
+        "Un examen direct des frottis de mucus, branchies et nageoires au microscope optique grossissant",
+        "Une mise en culture des organes internes sur milieu gélosé sélectif pour isolement des agents bactériens"
+      ],
+      "r": 2,
+      "x": "L'examen parasitologique direct commence par des frottis de peau (mucus), branchies et nageoires examinés au microscope (objectif 10× à 40×). Cette technique rapide permet d'identifier les ectoparasites courants (Trichodina, Ichthyophthirius, Gyrodactylus, Dactylogyrus) sans équipement coûteux."
+    },
+    {
+      "q": "La Nécrose Hématopoïétique Épizootique (NHE) est une maladie virale qui est classée par l'OIE (OMSA) comme :",
+      "o": [
+        "Une maladie bénigne non notifiable ne nécessitant pas de déclaration aux autorités vétérinaires nationales",
+        "Une maladie à déclaration obligatoire présentant un risque de propagation internationale sérieux",
+        "Une mycose systémique causée par un champignon de l'ordre des oomycètes affectant les salmonidés",
+        "Une pathologie nutritionnelle causée par une carence en vitamines liposolubles chez les poissons d'eau froide"
+      ],
+      "r": 1,
+      "x": "La NHE est une maladie à déclaration obligatoire auprès de l'OIE/OMSA. Elle provoque des mortalités massives chez les poissons d'eau douce et représente un risque de propagation internationale par le commerce d'alevins et de géniteurs entre pays producteurs d'aquaculture."
+    },
+    {
+      "q": "Le stress chronique en élevage provoque une immunosuppression chez les poissons car :",
+      "o": [
+        "Le cortisol libéré inhibe la prolifération des lymphocytes et réduit l'activité immunitaire globale",
+        "L'adrénaline sécrétée lors du stress détruit les cellules immunitaires du thymus et de la rate",
+        "Le stress réduit la production d'hémoglobine, diminuant le transport d'O2 vers les organes immunitaires",
+        "La mélatonine secrétée pendant le stress nocturne inhibe les réponses inflammatoires des macrophages"
+      ],
+      "r": 0,
+      "x": "Le cortisol (hormone glucocorticoïde de stress) inhibe la prolifération des lymphocytes T et B, réduit l'activité des phagocytes et diminue la production d'anticorps. Un stress chronique maintient des niveaux élevés de cortisol, rendant les poissons d'élevage plus vulnérables aux pathogènes opportunistes."
+    },
+    {
+      "q": "Les quotas individuels transférables (QIT) en gestion des pêches permettent de :",
+      "o": [
+        "Allouer un droit de pêche individuel échangeable, orientant la pêche vers les opérateurs les plus efficaces",
+        "Créer un registre officiel de tous les pêcheurs artisanaux pour faciliter la distribution des aides de l'État",
+        "Répartir équitablement les captures entre toutes les coopératives de pêcheurs selon leur ancienneté",
+        "Fixer un quota global ensuite divisé par loterie entre tous les détenteurs de licences actives"
+      ],
+      "r": 0,
+      "x": "Les QIT sont des droits de pêche individuels, quantifiés (fraction du TAC) et cessibles sur un marché. Leur transférabilité permet aux pêcheurs les plus efficaces d'acquérir des quotas supplémentaires, tendant vers une optimisation économique de l'effort de pêche dans la pêcherie concernée."
+    },
+    {
+      "q": "L'évaluation participative des ressources halieutiques associe les pêcheurs au suivi des stocks car :",
+      "o": [
+        "Leur connaissance locale de la ressource et leur accès aux données de terrain complètent les méthodes scientifiques",
+        "Leur participation financière est obligatoire pour couvrir les coûts des campagnes d'évaluation halieutique",
+        "Les méthodes scientifiques conventionnelles sont inefficaces et doivent être remplacées par le savoir traditionnel",
+        "La loi internationale FAO impose la participation obligatoire des pêcheurs à toutes les évaluations"
+      ],
+      "r": 0,
+      "x": "Le savoir écologique local (SEL) des pêcheurs (zones de pêche, espèces, saisonnalité, tendances historiques) est une source d'information complémentaire aux méthodes scientifiques. Cette approche participative améliore l'acceptation des mesures de gestion par les communautés de pêcheurs."
+    },
+    {
+      "q": "Les méthodes hydroacoustiques (écho-intégration) sont utilisées en halieutique pour :",
+      "o": [
+        "Mesurer la température et la conductivité des eaux profondes lors des campagnes d'évaluation limnologique",
+        "Estimer la biomasse et la distribution spatiale des bancs de poissons dans les lacs et grands barrages",
+        "Enregistrer les sons émis par les poissons pour identifier les espèces sans les capturer ni les perturber",
+        "Déterminer la profondeur de la thermocline pour optimiser le placement des cages flottantes aquacoles"
+      ],
+      "r": 1,
+      "x": "L'écho-intégration acoustique envoie des ondes sonores dans l'eau et mesure l'énergie rétrodiffusée par les poissons. Elle permet d'estimer la biomasse et la distribution spatiale des stocks sans les capturer. C'est une méthode clé pour les grands plans d'eau comme les barrages burkinabè."
+    },
+    {
+      "q": "Un plan d'aménagement d'une pêcherie continentale doit obligatoirement contenir :",
+      "o": [
+        "Un état des lieux du stock, des objectifs de gestion, des mesures réglementaires et un dispositif de suivi-évaluation",
+        "Un calendrier de privatisation progressive des droits de pêche par vente aux enchères sur 10 ans",
+        "La liste exhaustive de tous les pêcheurs autorisés avec leurs coordonnées GPS et leurs embarcations",
+        "Un budget détaillé pour l'acquisition de navires de recherche océanographique par le Ministère des pêches"
+      ],
+      "r": 0,
+      "x": "Un plan d'aménagement halieutique comprend : le diagnostic de l'état du stock, les objectifs de gestion (durabilité biologique, économique, sociale), les mesures de gestion (engins, saisons, zones, quotas) et un dispositif de suivi-évaluation pour adapter les mesures en continu."
+    },
+    {
+      "q": "La pêche récréative (sportive) se distingue de la pêche artisanale par :",
+      "o": [
+        "L'utilisation obligatoire d'hameçons sans ardillons pour faciliter la remise à l'eau des poissons capturés",
+        "Le fait que les captures sont entièrement rejetées à l'eau après pesée, sans aucune consommation autorisée",
+        "Son objectif principal de loisir, avec des captures généralement moindres mais un impact économique local",
+        "Son interdiction formelle dans tous les plans d'eau publics du Burkina Faso par arrêté ministériel"
+      ],
+      "r": 2,
+      "x": "La pêche récréative vise le loisir et peut générer des revenus locaux (guides, hébergement, matériel). Son impact sur les stocks est généralement inférieur à la pêche artisanale professionnelle, bien que sa pratique et la politique de catch-and-release varient selon les réglementations locales."
+    },
+    {
+      "q": "Un registre de débarquement fiable dans une pêcherie artisanale doit enregistrer au minimum :",
+      "o": [
+        "Le nom des pêcheurs, la date, le plan d'eau, l'espèce, le poids total débarqué et l'effort de pêche exercé",
+        "Uniquement le poids total débarqué et la valeur marchande du poisson pour le calcul des taxes de pêche",
+        "Les coordonnées GPS de chaque sortie, la profondeur de pêche et le type de fond exploré par les pêcheurs",
+        "La biologie détaillée des poissons capturés incluant sexe, stade de maturité et teneur en lipides"
+      ],
+      "r": 0,
+      "x": "Un registre minimal doit inclure : nom du pêcheur, date, plan d'eau, espèce(s), poids débarqué, type d'engin et nombre de sorties (effort). Ces données permettent de calculer la CPUE, de suivre les tendances temporelles et d'évaluer l'état du stock halieutique sur le long terme."
+    },
+    {
+      "q": "Parmi les indicateurs suivants, lequel signale le mieux la bonne santé d'un stock halieutique exploité ?",
+      "o": [
+        "Une CPUE stable ou en légère augmentation avec un effort de pêche constant sur plusieurs années",
+        "Une augmentation du nombre de pêcheurs actifs sur le plan d'eau au cours des cinq dernières années",
+        "Une diminution de la taille minimale des poissons capturés dans les filets au fil des saisons de pêche",
+        "Une augmentation des captures totales annuelles obtenue grâce à l'usage d'engins de pêche plus destructeurs"
+      ],
+      "r": 0,
+      "x": "La CPUE (Capture par Unité d'Effort) reflète directement la densité et l'abondance de la ressource. Une CPUE stable ou en légère hausse à effort constant sur plusieurs années démontre que le stock se renouvelle au moins aussi vite qu'il est prélevé."
+    },
+    {
+      "q": "Les coopératives de pêcheurs artisanaux au Burkina Faso peuvent contribuer à la gestion durable en :",
+      "o": [
+        "Appliquant des règles locales (zones, saisons, engins), en collectant des données et en gérant les conflits",
+        "Achetant tous les droits de pêche du gouvernement pour privatiser la gestion des ressources halieutiques",
+        "Imposant une taxe sur les captures à tous les pêcheurs non membres comme contribution à la conservation",
+        "Interdisant unilatéralement la pêche aux non-résidents du village sans autorisation administrative"
+      ],
+      "r": 0,
+      "x": "Les coopératives peuvent jouer un rôle central dans la cogestion : établir des règles d'usage locales, surveiller leur respect, collecter des données et servir d'interlocuteurs avec l'administration. Cette gouvernance décentralisée améliore l'efficacité de la gestion des ressources communes."
+    },
+    {
+      "q": "Les signes de fraîcheur d'un poisson entier vendu sur le marché incluent tous les éléments suivants, SAUF :",
+      "o": [
+        "Des écailles bien adhérentes, brillantes et difficiles à décoller de la peau du poisson",
+        "Des yeux bombés, transparents et cornée claire sans opacification ni enfoncement",
+        "Des branchies rouge vif, bien humides et sans odeur acide ou putride déplaisante",
+        "Un abdomen distendu et ferme, avec une odeur forte caractéristique des espèces fraîches"
+      ],
+      "r": 3,
+      "x": "Un abdomen distendu est signe de putréfaction (production de gaz bactériens) et non de fraîcheur. Les indicateurs de fraîcheur sont : yeux bombés et clairs, branchies rouges et humides, écailles adhérentes, chair ferme élastique et odeur marine légère et non putride."
+    },
+    {
+      "q": "Par rapport au poisson frais, le poisson séché présente la valeur nutritive suivante :",
+      "o": [
+        "Une teneur en lipides nulle, l'oxydation complète des lipides étant la principale cause du rancissement",
+        "Une concentration en nutriments (protéines, lipides, minéraux) deux à quatre fois supérieure par déshydratation",
+        "Une teneur en protéines réduite de 80% par dénaturation et hydrolyse thermique lors du séchage solaire",
+        "Une valeur énergétique identique au poisson frais, l'eau n'apportant aucune énergie aux consommateurs"
+      ],
+      "r": 1,
+      "x": "Le séchage élimine 60 à 75% de l'eau du poisson, concentrant les nutriments. Un poisson séché peut contenir 3 à 4 fois plus de protéines et de minéraux par 100g que le poisson frais correspondant, en faisant un aliment très nutritif pour les populations enclavées sans accès à la réfrigération."
+    },
+    {
+      "q": "Le Codex Alimentarius en matière de produits halieutiques établit des normes concernant principalement :",
+      "o": [
+        "Les prix de référence minimaux du poisson sur les marchés internationaux pour protéger les pays en développement",
+        "Les techniques de pêche autorisées et la taille minimale des mailles des filets dans les eaux internationales",
+        "Les capacités maximales des flottilles de pêche des pays membres de l'Organisation Mondiale du Commerce",
+        "Les limites maximales en contaminants (métaux lourds, pesticides), les normes d'hygiène et d'étiquetage des produits"
+      ],
+      "r": 3,
+      "x": "Le Codex Alimentarius (FAO/OMS) établit des normes pour la sécurité sanitaire des aliments incluant les produits halieutiques : limites maximales en contaminants (Hg, Pb, Cd, PCB), critères microbiologiques, normes d'hygiène de transformation et exigences d'étiquetage pour protéger les consommateurs."
+    },
+    {
+      "q": "La durée de conservation du poisson fumé-séché correctement produit et stocké peut atteindre :",
+      "o": [
+        "2 à 5 jours seulement, le fumage n'étant pas une méthode de conservation à long terme en milieu tropical",
+        "12 à 24 mois, le fumage étant équivalent à la stérilisation industrielle en boîte de conserve hermétique",
+        "1 à 3 mois en conditions ambiantes tropicales, sous réserve d'un stockage sec et abrité des insectes",
+        "6 à 12 mois grâce à l'action bactériostatique combinée des composés phénoliques et du faible aw"
+      ],
+      "r": 3,
+      "x": "Un poisson correctement fumé-séché (aw < 0,70) peut se conserver 6 à 12 mois en conditions ambiantes sèches, grâce aux composés phénoliques antibactériens et à la faible teneur en eau. Une humidification accidentelle réduit drastiquement cette durée en permettant la reprise des moisissures."
+    },
+    {
+      "q": "La détérioration du poisson frais après la pêche est principalement causée par :",
+      "o": [
+        "L'action combinée des enzymes autolytiques internes et des bactéries qui dégradent les protéines en composés odorants",
+        "La déshydratation rapide de la chair par évaporation de l'eau cuticulaire en conditions tropicales chaudes",
+        "L'oxydation des pigments et des lipides par l'action de l'oxygène de l'air sur les surfaces exposées",
+        "La cristallisation des protéines musculaires lors du refroidissement post-mortem en chambre froide"
+      ],
+      "r": 0,
+      "x": "La détérioration résulte de deux mécanismes combinés : l'autolyse (enzymes endogènes du muscle dégradant les protéines) et l'activité bactérienne (décomposition des protéines en amines biogènes malodorantes comme la putrescine et la cadavérine). La température accélère ces deux processus."
+    },
+    {
+      "q": "Le rendement de transformation en poisson entier éviscéré (poids éviscéré/poids vif × 100) est généralement de :",
+      "o": [
+        "45 à 55% pour le tilapia, les viscères, la tête et les écailles représentant 45 à 55% du poids vif",
+        "90 à 95% pour les poissons sans écailles comme Clarias gariepinus éviscéré sans découpe de la tête",
+        "80 à 90% pour la plupart des espèces, les viscères seuls représentant 10 à 20% du poids vif total",
+        "20 à 30% pour les poissons osseux à grand squelette comme Lates niloticus des grands barrages africains"
+      ],
+      "r": 2,
+      "x": "L'éviscération représente une perte de 10 à 20% du poids vif pour la plupart des poissons téléostéens, donnant un rendement de 80 à 90% en poisson entier éviscéré. Cette étape réduit la charge bactérienne intestinale et prolonge la durée de conservation du produit frais."
+    },
+    {
+      "q": "L'analyse de la structure démographique d'une population de poissons montre un manque de petits individus. Cela indique :",
+      "o": [
+        "Un excellent recrutement récent ayant déplacé les jeunes individus vers les zones de nurserie en amont",
+        "Une faible fécondité des géniteurs due à une carence nutritionnelle en vitamines et acides gras essentiels",
+        "Une croissance individuelle très rapide des juvéniles ayant rapidement atteint la classe de taille supérieure",
+        "Un recrutement insuffisant ou une mortalité élevée des jeunes générations, signalant une perturbation du stock"
+      ],
+      "r": 3,
+      "x": "L'absence de petits individus dans la structure démographique peut indiquer un mauvais recrutement (faible reproduction), une mortalité élevée des juvéniles (prédation, mauvaise qualité des nurseries) ou un problème de sélectivité des engins de pêche capturant tous les individus de toute taille."
+    },
+    {
+      "q": "L'indicateur biologique F/Fmsy (rapport entre la mortalité par pêche actuelle et celle au RMD) s'interprète ainsi :",
+      "o": [
+        "Un F/Fmsy > 1 indique une surexploitation (pêche excessive), un F/Fmsy < 1 une sous-exploitation du stock",
+        "Un F/Fmsy = 1 signifie que le stock est en voie d'effondrement et que la pêche doit être arrêtée immédiatement",
+        "Un F/Fmsy > 2 indique que le stock est en bonne santé avec des réserves pour augmenter les captures",
+        "Un F/Fmsy < 0,5 signifie que l'effort de pêche est au double du niveau optimal pour le RMD estimé"
+      ],
+      "r": 0,
+      "x": "F/Fmsy = 1 représente la situation optimale de pêche au RMD. Au-delà (F > Fmsy), la mortalité par pêche est excessive et le stock décline. En dessous (F < Fmsy), le stock n'est pas pleinement exploité. Cet indicateur est central dans les rapports d'évaluation FAO sur l'état des pêcheries mondiales."
+    },
+    {
+      "q": "L'enquête cadre dans une pêcherie artisanale est un inventaire réalisé à intervalles réguliers pour recenser :",
+      "o": [
+        "Les espèces de poissons présentes dans le plan d'eau par campagne de pêche expérimentale standardisée",
+        "L'état de santé des poissons sauvages par prélèvement et analyse sanitaire d'un échantillon représentatif",
+        "Les pêcheurs actifs, les embarcations, les engins de pêche et les unités de pêche opérationnelles",
+        "La biomasse totale des poissons présents par méthode de dépletion intensive sur le plan d'eau entier"
+      ],
+      "r": 2,
+      "x": "L'enquête cadre (frame survey) est un recensement exhaustif des unités de pêche (pêcheurs, pirogues, engins) à un moment donné. Elle sert à définir la population de référence pour les enquêtes de captures et d'effort et à suivre l'évolution du parc de pêche dans le temps."
+    },
+    {
+      "q": "L'erreur d'échantillonnage dans les enquêtes halieutiques est réduite principalement par :",
+      "o": [
+        "L'utilisation exclusive de méthodes subjectives basées sur le jugement des agents de terrain expérimentés",
+        "La collecte de données uniquement pendant la haute saison de pêche pour maximiser la taille des échantillons",
+        "L'exclusion des petits pêcheurs artisanaux dont les captures sont jugées insignifiantes pour les statistiques",
+        "L'augmentation de la taille de l'échantillon, la randomisation des sites et la standardisation des méthodes"
+      ],
+      "r": 3,
+      "x": "L'erreur d'échantillonnage diminue mécaniquement par l'augmentation de la taille de l'échantillon, ce qui accroît la précision des estimations. Parallèlement, la randomisation des sites élimine les biais de sélection, tandis que la standardisation des protocoles sur le terrain permet de minimiser les erreurs de mesure."
+    },
+    {
+      "q": "La déclaration obligatoire des captures par les pêcheurs artisanaux est importante car :",
+      "o": [
+        "Elle permet à l'administration de calculer les taxes sur les revenus des pêcheurs avec précision",
+        "Elle assure le versement automatique de subventions aux pêcheurs atteignant leurs quotas déclarés",
+        "Elle fournit les données de base indispensables pour évaluer l'état des stocks et gérer la pêcherie",
+        "Elle est obligatoire selon les accords commerciaux de l'UEMOA pour exporter du poisson dans la région"
+      ],
+      "r": 2,
+      "x": "Les données déclarées (captures, espèces, effort) sont la matière première des évaluations de stocks. Sans statistiques fiables de captures, il est impossible de calculer la CPUE, d'estimer la mortalité par pêche ou d'évaluer si une pêcherie est durable. La déclaration reste un défi majeur dans les pêcheries artisanales africaines."
+    },
+    {
+      "q": "Les plans d'eau privés (étangs piscicoles propriété d'un particulier) au Burkina Faso :",
+      "o": [
+        "Sont soumis aux mêmes règles que la pêche dans les plans d'eau publics, sans exception ni dérogation",
+        "Sont totalement libres pour le propriétaire et ses invités, sans aucune limitation d'espèce ou d'engin",
+        "Sont interdits par le Code forestier qui ne reconnaît que la propriété publique de toutes les eaux continentales",
+        "Relèvent du droit privé du propriétaire du fonds, sous réserve du respect des normes sanitaires et environnementales"
+      ],
+      "r": 3,
+      "x": "Les étangs créés sur propriété privée relèvent du droit de propriété du fonds. Le propriétaire gère son élevage librement, mais doit respecter les normes sanitaires (qualité de l'eau rejetée) et les réglementations aquacoles nationales (espèces, médicaments vétérinaires, déclaration d'activité)."
+    },
+    {
+      "q": "L'homologation des médicaments vétérinaires utilisés en pisciculture est nécessaire car :",
+      "o": [
+        "Elle garantit l'efficacité et l'innocuité des traitements et contrôle les résidus dans les poissons consommés",
+        "Elle permet aux distributeurs de vendre leurs produits sans ordonnance vétérinaire au détail dans les marchés",
+        "Elle fixe les prix réglementés des médicaments vétérinaires pour éviter la spéculation dans les zones rurales",
+        "Elle autorise les pisciculteurs à importer librement les médicaments des pays voisins francophones"
+      ],
+      "r": 0,
+      "x": "L'homologation vétérinaire garantit que les médicaments sont efficaces, sans toxicité pour les poissons et consommateurs (délais d'attente avant commercialisation) et sans impact environnemental grave. Les antibiotiques non homologués peuvent laisser des résidus dangereux dans les chairs des poissons commercialisés."
+    },
+    {
+      "q": "La réglementation sur l'introduction d'espèces exotiques en aquaculture est stricte car :",
+      "o": [
+        "Les espèces exotiques nécessitent obligatoirement une alimentation importée non disponible localement",
+        "Leur élevage est plus difficile et coûteux, décourageant les pisciculteurs d'investir dans des espèces inconnues",
+        "Les espèces exotiques transmettent systématiquement des maladies létales aux espèces indigènes africaines",
+        "Leur introduction accidentelle dans les milieux naturels peut perturber les écosystèmes aquatiques indigènes"
+      ],
+      "r": 3,
+      "x": "Les espèces exotiques (carpe commune, tilapia du Mozambique) peuvent, si elles s'échappent des élevages, coloniser les milieux naturels, compétitionner avec les espèces indigènes, hybrider avec elles ou introduire des pathogènes nouveaux. Une évaluation des risques est indispensable avant toute introduction."
+    },
+    {
+      "q": "La pêche au harpon (sagaie) pratiquée par plongée est généralement réglementée car :",
+      "o": [
+        "Elle est très sélective mais peut cibler des individus adultes reproducteurs dans les zones de frayères protégées",
+        "Elle nécessite des équipements de plongée coûteux dont l'importation est soumise à un régime douanier spécial",
+        "Elle introduit des métaux lourds dans le milieu aquatique par corrosion des pointes d'harpon en acier inoxydable",
+        "Elle est interdite dans les eaux douces mais autorisée dans les plans d'eau salés des régions côtières africaines"
+      ],
+      "r": 0,
+      "x": "La pêche au harpon est sélective (ne capture que l'individu ciblé) mais peut prélever des adultes reproducteurs dans des zones de reproduction si pratiquée dans les frayères. Sa réglementation vise à protéger les géniteurs pendant la reproduction et dans les zones de protection des ressources halieutiques."
+    },
+    {
+      "q": "La réglementation des activités aquacoles peut inclure une obligation d'étude d'impact environnemental (EIE) pour :",
+      "o": [
+        "Tout petit étang de subsistance de moins de 500 m², quelle que soit sa localisation géographique",
+        "Les étangs familiaux de moins de 2 000 m² construits par les agriculteurs pour l'autoconsommation familiale",
+        "Les projets aquacoles de grande taille susceptibles d'affecter significativement les ressources en eau ou l'environnement",
+        "Uniquement les projets aquacoles financés par des bailleurs internationaux (Banque Mondiale, FAO, IFAD)"
+      ],
+      "r": 2,
+      "x": "L'étude d'impact environnemental est requise pour les projets importants pouvant affecter significativement l'environnement aquatique. Elle évalue les impacts sur la qualité de l'eau, les espèces indigènes et les communautés riveraines, permettant d'intégrer des mesures d'atténuation dès la conception du projet."
+    },
+    {
+      "q": "La SONAGESS peut intervenir dans le secteur halieutique burkinabè en :",
+      "o": [
+        "Subventionnant directement les équipements de pêche (filets, pirogues) des coopératives artisanales nationales",
+        "Gérant les écloseries nationales et distribuant gratuitement des alevins aux pisciculteurs enregistrés",
+        "Fixant les prix du marché du poisson fumé et réfrigéré sur tous les marchés de gros du pays",
+        "Constituant et gérant des stocks de sécurité de poisson séché pour faire face aux périodes de soudure alimentaire"
+      ],
+      "r": 3,
+      "x": "La SONAGESS gère les stocks alimentaires de sécurité du Burkina Faso. Elle peut intégrer le poisson séché dans ses stocks stratégiques pour stabiliser les approvisionnements en protéines animales lors des périodes de soudure ou de crises alimentaires affectant les communautés rurales."
+    },
+    {
+      "q": "La FAO soutient le secteur halieutique burkinabè principalement en :",
+      "o": [
+        "Fournissant une assistance technique, des formations et des financements pour développer la pêche et l'aquaculture durables",
+        "Achetant directement le poisson burkinabè pour le redistribuer aux pays voisins en insécurité alimentaire",
+        "Gérant directement les barrages halieutiques du Burkina Faso au nom du gouvernement burkinabè",
+        "Interdisant aux pêcheurs burkinabè d'utiliser certains engins jugés non conformes aux normes de la FAO"
+      ],
+      "r": 0,
+      "x": "La FAO apporte une assistance technique (formations des pêcheurs et techniciens), un appui institutionnel (renforcement des capacités de la DGRH), des données de référence (FISHSTAT) et des financements de projets pour le développement durable du secteur halieutique au Burkina Faso."
+    },
+    {
+      "q": "Le secteur halieutique est intégré dans le Schéma Directeur de Développement Rural (SDDR) du Burkina Faso car :",
+      "o": [
+        "Le Burkina Faso prévoit de devenir exportateur net de poisson vers les pays côtiers de l'UEMOA d'ici 2030",
+        "La pêche maritime est considérée comme un secteur prioritaire pour le développement des villes du pays",
+        "La pêche et l'aquaculture contribuent à la sécurité alimentaire et aux revenus des populations rurales",
+        "Le secteur halieutique représente plus de 20% du PIB agricole national et est le principal pourvoyeur d'emplois"
+      ],
+      "r": 2,
+      "x": "Le SDDR du Burkina Faso reconnaît la contribution de la pêche et de l'aquaculture à la sécurité alimentaire (protéines animales) et aux revenus des ménages ruraux riverains des plans d'eau. Le secteur est intégré aux stratégies de développement rural et de réduction de la pauvreté."
+    },
+    {
+      "q": "Les pêcheurs migrants présents sur les barrages du Burkina Faso ont, sur le plan légal :",
+      "o": [
+        "Une situation précaire car ils ne maîtrisent pas les langues locales, rendant impossible leur enregistrement",
+        "Un statut d'étrangers les excluant automatiquement de tout droit de pêche sur les plans d'eau burkinabè",
+        "Une exemption de permis de pêche, leur statut de migrants leur conférant des droits coutumiers reconnus",
+        "Un permis de pêche annuel soumis aux mêmes conditions que celui des pêcheurs résidents burkinabè"
+      ],
+      "r": 3,
+      "x": "Les pêcheurs migrants (souvent ressortissants maliens ou nigériens) doivent obtenir un permis de pêche auprès des services burkinabè des ressources halieutiques, comme tout pêcheur actif au Burkina Faso. Ils sont soumis aux mêmes réglementations, bien que leur enregistrement puisse poser des difficultés pratiques."
+    },
+    {
+      "q": "La Journée Nationale de la Pêche au Burkina Faso est célébrée annuellement pour :",
+      "o": [
+        "Sensibiliser les populations et les décideurs à l'importance du secteur halieutique et à la gestion durable",
+        "Organiser la compétition annuelle de pêche sportive ouverte à tous les détenteurs de permis de pêche valides",
+        "Redistribuer les produits de la taxe de pêche aux coopératives ayant déclaré le plus de captures légales",
+        "Marquer le début officiel de la saison de pêche légale après la période de repos biologique obligatoire"
+      ],
+      "r": 0,
+      "x": "La Journée Nationale de la Pêche mobilise les acteurs du secteur (pêcheurs, aquaculteurs, techniciens, décideurs) pour promouvoir la pêche et l'aquaculture durables, valoriser les produits halieutiques locaux et sensibiliser à la gestion responsable des ressources en eau et des stocks nationaux."
+    },
+    {
+      "q": "La vallée du Beli, dans le Sahel burkinabè, a une ressource halieutique principalement menacée par :",
+      "o": [
+        "La forte pluviométrie qui inonde les plaines et noie les communautés de pêcheurs saisonniers locaux",
+        "La prolifération d'espèces invasives introduites par les projets d'aménagement hydraulique sahéliens",
+        "La sécheresse chronique et l'ensablement des cours d'eau réduisant les habitats aquatiques disponibles",
+        "La surpêche industrielle par des sociétés étrangères opérant sans autorisation dans la zone sahélienne"
+      ],
+      "r": 2,
+      "x": "Le Sahel burkinabè est particulièrement affecté par la désertification et la raréfaction des ressources en eau. La sécheresse chronique réduit les surfaces en eau disponibles, concentre les populations de poissons dans des espaces réduits et intensifie la pression de pêche sur des ressources déjà limitées."
+    },
+    {
+      "q": "La base de données FISHSTAT de la FAO renseigne sur la production halieutique du Burkina Faso par :",
+      "o": [
+        "Des données collectées en temps réel par des agents FAO présents en permanence sur tous les barrages du pays",
+        "Des données satellitaires de surveillance des plans d'eau permettant d'estimer la production à distance",
+        "Des données histologiques prélevées sur des échantillons de poissons exportés vers les marchés extérieurs",
+        "Des statistiques de captures et d'aquaculture transmises annuellement par le gouvernement burkinabè à la FAO"
+      ],
+      "r": 3,
+      "x": "FISHSTAT est la base de données mondiale de la FAO sur les pêches et l'aquaculture. Elle est alimentée par les statistiques nationales officielles transmises annuellement par les États membres via leur département halieutique. Ces données servent aux analyses régionales et mondiales de l'état des pêcheries."
+    },
+    {
+      "q": "Le barrage de Kompienga se distingue du barrage de Bagré par sa vocation principale qui est :",
+      "o": [
+        "La pêche artisanale industrialisée avec des quotas annuels d'exportation vers les marchés régionaux de l'UEMOA",
+        "La production hydroélectrique, le barrage alimentant en électricité les régions du Goulmou, Tapoa, Sirba et Nakambé",
+        "L'aquaculture intensive en cage flottante, avec plusieurs opérateurs privés bénéficiant de concessions",
+        "L'irrigation agricole des périmètres maraîchers de la région du Goulmou pour l'agriculture toute l'année"
+      ],
+      "r": 1,
+      "x": "Le barrage de Kompienga est avant tout à vocation hydroélectrique, alimentant une centrale d'environ 14,5 MW. La pêche y est pratiquée comme activité secondaire. Le barrage de Bagré a une double vocation hydroélectrique et d'irrigation, avec un lac offrant un immense potentiel halieutique national."
+    },
+    {
+      "q": "La Direction des Ressources Halieutiques (DRH) et la Direction de la Faune et des Aires Conservées (DFAC) au Burkina Faso collaborent activement dans :",
+      "o": [
+        "La tutelle unique du Ministère de l'Environnement pour l'ensemble de leurs décisions et budgets",
+        "La gestion exclusive des espèces d'eau douce introduites par les projets d'aide internationale",
+        "La gestion concertée et durable des sites et zones humides d'importance internationale (Ramsar)",
+        "La collecte centralisée d'une taxe unique fusionnant les permis de pêche et les permis de chasse"
+      ],
+      "r": 2,
+      "x": "Bien que la DRH relève du ministère des Ressources Animales et Halieutiques et la DFAC du ministère de l'Environnement, ces deux directions partagent une responsabilité technique directe sur les sites Ramsar du Burkina Faso (comme Mare aux Hippopotames, Tengréla, ou Bagré). Elles y coordonnent la protection des habitats (DFAC) et la réglementation de l'exploitation des poissons (DRH)"
+    },
+    {
+      "q": "Les femmes jouent un rôle important dans la filière halieutique burkinabè principalement au niveau de :",
+      "o": [
+        "La pêche active sur les barrages, les femmes représentant 60% des pêcheurs artisanaux professionnels",
+        "La gestion des écloseries nationales, les femmes étant traditionnellement recrutées pour cette activité",
+        "La transformation (fumage, séchage...) et la commercialisation des produits halieutiques sur les marchés",
+        "La recherche halieutique, les universités burkinabè formant majoritairement des femmes en ichtyologie"
+      ],
+      "r": 2,
+      "x": "En Afrique subsaharienne, les femmes dominent la transformation et la commercialisation des produits halieutiques. Elles assurent le fumage, le séchage et la vente sur les marchés locaux, contribuant significativement aux revenus des ménages de pêcheurs dans les communautés riveraines des barrages burkinabè."
+    },
+    {
+      "q": "Les changements de noms des fleuves burkinabè (Volta Noire vers Mouhoun, Volta Blanche vers Nakambé) ont été officialisés pour :",
+      "o": [
+        "Respecter les conventions hydrographiques internationales adoptées par la CEDEAO en 1984",
+        "Harmoniser la nomenclature avec les pays côtiers (Ghana, Togo) partageant le bassin versant de la Volta",
+        "Faciliter l'accès des touristes étrangers aux plans d'eau burkinabè en adoptant des noms plus prononçables",
+        "Affirmer l'identité culturelle nationale en restaurant les noms traditionnels africains des cours d'eau"
+      ],
+      "r": 3,
+      "x": "Le changement de noms des fleuves burkinabè lors de la révolution de Thomas Sankara (qui a renommé la Haute-Volta en Burkina Faso en 1984) visait à affirmer l'identité culturelle africaine en remplaçant les dénominations coloniales d'origine portugaise par des noms autochtones."
+    },
+    {
+      "q": "Le CILSS (Comité Inter-États de Lutte contre la Sécheresse dans le Sahel) intervient dans le secteur halieutique en :",
+      "o": [
+        "Finançant directement les coopératives de pêcheurs sahéliens pour l'achat de pirogues et de filets modernes",
+        "Coordonnant les politiques de gestion des ressources en eau partagées et soutenant des programmes halieutiques durables",
+        "Gérant les quotas de pêche dans les bassins du Niger et du Sénégal partagés entre les pays membres",
+        "Interdisant la pêche dans les zones classées à risque de désertification avancée dans les pays membres"
+      ],
+      "r": 1,
+      "x": "Le CILSS coordonne les efforts de lutte contre la sécheresse et la désertification dans les pays sahéliens dont le Burkina Faso. Il soutient la gestion durable des ressources en eau partagées, dont les ressources halieutiques des bassins fluviaux transfrontaliers sahéliens comme le Niger et le Volta."
+    },
+    {
+      "q": "La pêche dans le Parc national du W du Burkina Faso (zone de la Pendjari/Niger) est :",
+      "o": [
+        "Autorisée avec un permis spécial délivré uniquement aux communautés riveraines ayant des droits coutumiers",
+        "Réservée exclusivement aux opérateurs de tourisme de pêche sportive bénéficiant de concessions officielles",
+        "Interdite ou très strictement réglementée pour protéger la biodiversité aquatique dans ce parc transfrontalier",
+        "Libre pour tous les citoyens burkinabè munis d'un permis de pêche ordinaire sans restriction supplémentaire"
+      ],
+      "r": 2,
+      "x": "Le Parc national du W (partagé entre Burkina Faso, Niger et Bénin) est une aire protégée stricte où les activités extractives dont la pêche sont interdites ou très strictement réglementées. La protection des ressources aquatiques dans ce parc contribue à maintenir un réservoir de biodiversité pour les pêcheries adjacentes."
+    },
+    {
+      "q": "La pression sur les ressources du lac de Bagré a conduit à des conflits entre pêcheurs concernant principalement :",
+      "o": [
+        "La propriété des pirogues utilisées par des membres non résidents des villages de la zone du lac de Bagré",
+        "La langue officielle de communication lors des réunions des comités locaux de gestion des pêcheries du lac",
+        "Le contrôle des circuits de commercialisation du poisson fumé vers les marchés de Ouagadougou et Tenkodogo",
+        "La délimitation des zones de pêche entre pêcheurs migrants (Bozo) et pêcheurs résidents autochtones"
+      ],
+      "r": 3,
+      "x": "L'afflux de pêcheurs migrants (Bozo, Somono du Mali) sur le lac de Bagré génère des tensions avec les pêcheurs locaux (Gourmantché, Bissa) pour le contrôle des meilleures zones de pêche. Ces conflits d'usage sont un défi majeur pour la gestion participative des ressources halieutiques du barrage."
+    },
+    {
+      "q": "Les projets d'aquaculture communautaire soutenus par des partenaires internationaux visent au Burkina Faso à :",
+      "o": [
+        "Développer une aquaculture paysanne accessible aux petits producteurs ruraux pour améliorer leur sécurité alimentaire",
+        "Créer des fermes aquacoles industrielles en partenariat avec des investisseurs étrangers sur les grands barrages",
+        "Former des techniciens supérieurs en aquaculture pour remplacer les experts expatriés dans les structures publiques",
+        "Implanter des cages flottantes en haute densité sur le lac de Bagré pour exporter du tilapia vers la Côte d'Ivoire"
+      ],
+      "r": 0,
+      "x": "Les projets d'aquaculture communautaire diffusent des techniques piscicoles adaptées aux petits paysans, avec des étangs de subsistance améliorés, un accès aux alevins et aux intrants, et un encadrement technique rapproché. L'objectif est l'amélioration de la nutrition et des revenus des ménages ruraux burkinabè."
+    },
+    {
+      "q": "Le cours du poisson importé congelé sur les marchés burkinabè est principalement influencé par :",
+      "o": [
+        "La qualité du poisson local vendu sur les mêmes marchés qui fixe le prix plafond par concurrence directe",
+        "Les décisions tarifaires unilatérales des importateurs qui fixent librement leurs marges sans régulation",
+        "Les cours mondiaux du poisson, le taux de change du FCFA, les coûts de transport et les droits de douane",
+        "Les quotas d'importation fixés annuellement par le Ministère en charge du commerce burkinabè"
+      ],
+      "r": 2,
+      "x": "Le prix du poisson importé congelé dépend du cours mondial (marchés mauritaniens, sénégalais), du taux de change FCFA/€ ou USD, des coûts de transport (port d'Abidjan ou Lomé vers Ouagadougou) et des droits de douane. Ces facteurs expliquent la volatilité des prix sur les marchés burkinabè."
+    },
+    {
+      "q": "La surveillance de la contamination des poissons aux métaux lourds dans les eaux du Burkina Faso est prioritaire car :",
+      "o": [
+        "Ces polluants s'accumulent dans les tissus des poissons et peuvent atteindre des concentrations toxiques pour les consommateurs",
+        "Ces métaux accélèrent la croissance des poissons d'élevage en servant de cofacteurs enzymatiques essentiels",
+        "Ces polluants améliorent la qualité organoleptique du poisson fumé en renforçant l'arôme et la couleur",
+        "Ces contaminations sont facilement détectables à l'œil nu par modification de la coloration des écailles"
+      ],
+      "r": 0,
+      "x": "Les métaux lourds (Hg, Cd, Pb, As) s'accumulent dans les tissus musculaires et les organes des poissons par bioaccumulation et bioamplification le long de la chaîne alimentaire. La consommation chronique de poissons contaminés cause des intoxications rénales, neurologiques et hépatiques chez l'homme."
+    },
+    {
+      "q": "Les sites Ramsar burkinabè (Mare d'Oursi, lac de Tingrela, Parc du W) sont protégés par la convention Ramsar car ils remplissent des critères incluant :",
+      "o": [
+        "Leur richesse en ressources minières exploitables sous les plans d'eau classés patrimoine naturel mondial",
+        "Leur importance pour les espèces d'oiseaux d'eau migrateurs et la biodiversité aquatique d'intérêt mondial",
+        "La production halieutique exceptionnelle de ces plans d'eau supérieure à 10 000 tonnes par an chacun",
+        "La présence exclusive d'espèces endémiques de poissons non décrites par la science avant le classement Ramsar"
+      ],
+      "r": 1,
+      "x": "La convention de Ramsar classe les zones humides d'importance internationale pour leur biodiversité (oiseaux migrateurs d'eau, espèces menacées) et leurs fonctions écologiques. Les sites Ramsar burkinabè abritent des espèces aquatiques remarquables et fournissent des services écosystémiques cruciaux."
+    },
+    {
+      "q": "Le développement rapide de l'orpaillage artisanal dans les bassins versants burkinabè constitue une menace pour les ressources halieutiques car :",
+      "o": [
+        "Les orpailleurs utilisent des explosifs qui perturbent les fonds rocheux et détruisent les habitats benthiques",
+        "Les rejets de boues mercurielles et cyanurées contaminent les eaux, tuent les poissons et contaminent les survivants",
+        "L'augmentation de la main-d'œuvre locale réduit le nombre de pêcheurs professionnels actifs sur les cours d'eau",
+        "Les galeries et puits creusés capturent accidentellement des poissons lors des crues, réduisant les stocks"
+      ],
+      "r": 1,
+      "x": "L'orpaillage artisanal utilise du cyanure et du mercure pour extraire l'or. Les rejets dans les cours d'eau provoquent des mortalités piscicoles massives et contaminent la chair des poissons survivants avec des métaux lourds (Hg, As, Pb), menaçant la santé des consommateurs et les moyens de subsistance des pêcheurs."
+    },
+    {
+      "q": "L'augmentation de la charge en sédiments fins dans les cours d'eau liée à l'érosion agricole affecte les poissons en :",
+      "o": [
+        "Colmatant les frayères et réduisant l'oxygène interstitiel des graviers, augmentant la mortalité des œufs incubés",
+        "Apportant des nutriments organiques bénéfiques stimulant la production naturelle de plancton alimentaire",
+        "Refroidissant les eaux de surface par effet de protection thermique des particules argileuses en suspension",
+        "Créant des conditions de forte basicité (pH > 9) toxiques pour les espèces sensibles à l'alcalinité de l'eau"
+      ],
+      "r": 0,
+      "x": "Les sédiments fins transportés par érosion agricole se déposent dans les interstices des substrats graveleux, colmatant les frayères des espèces lithophiles et réduisant la circulation d'eau oxygénée nécessaire à l'incubation des œufs. La mortalité embryonnaire dans les frayères colmatées compromet le recrutement."
+    },
+    {
+      "q": "L'augmentation des températures de l'eau des plans d'eau burkinabè liée au changement climatique va probablement :",
+      "o": [
+        "Favoriser l'expansion des espèces de haute altitude vers les plaines grâce à l'amélioration des connexions fluviales",
+        "Déplacer les espèces vers des zones plus profondes et fraîches, modifiant leur accessibilité pour les pêcheurs",
+        "Améliorer généralement la croissance de toutes les espèces tropicales dont le métabolisme augmente avec la chaleur",
+        "Éliminer définitivement les espèces d'eau froide qui ne peuvent pas migrer vers des zones plus fraîches"
+      ],
+      "r": 1,
+      "x": "L'élévation des températures de surface pousse les poissons vers les zones profondes et plus fraîches des barrages, modifiant leur distribution et leur accessibilité pour la pêche. Elle peut aussi aggraver la stratification thermique et les phénomènes d'anoxie hypolimnétique, réduisant l'habitat aquatique disponible."
+    },
+    {
+      "q": "Dans le cadre de la Gestion Intégrée des Ressources en Eau (GIRE), le débit minimum environnemental est important pour :",
+      "o": [
+        "Maximiser la production hydroélectrique des barrages en maintenant des niveaux d'eau élevés en permanence",
+        "Permettre l'expansion des surfaces irriguées en mobilisant l'intégralité des ressources hydriques disponibles",
+        "Assurer un financement durable des projets halieutiques en fixant des tarifs de l'eau pour les pisciculteurs",
+        "Maintenir les conditions hydrologiques nécessaires à la survie et la reproduction des poissons dans les cours d'eau"
+      ],
+      "r": 3,
+      "x": "Le débit minimum environnemental (ou débit écologique) est le débit en dessous duquel les fonctions écologiques du cours d'eau (habitat, migration, reproduction des poissons) sont compromises. La GIRE doit intégrer ces exigences dans la planification des usages de l'eau pour ne pas sacrifier les écosystèmes aquatiques."
+    },
+    {
+      "q": "La biodiversité ichtyologique du Burkina Faso est distribuée principalement dans les bassins versants des fleuves :",
+      "o": [
+        "Mouhoun (Volta Noire), Nakambé (Volta Blanche), Niger et Comoé qui drainent l'ensemble du territoire national",
+        "Niger exclusivement, le fleuve Niger étant le seul cours d'eau permanent à haut débit dans le pays",
+        "Sénégal et Gambie qui drainent l'ouest du Burkina Faso avant de rejoindre l'Atlantique à l'ouest du continent",
+        "Nil uniquement, toutes les espèces africaines de poissons d'eau douce étant d'origine nilotique commune"
+      ],
+      "r": 0,
+      "x": "Le Burkina Faso est drainé par quatre bassins versants principaux : la Volta (Mouhoun, Nakambé, Nazinon, Pendjari) au centre et au sud, le Niger au nord-est, et de petites portions des bassins de la Comoé et du Bandama au sud-ouest. Cette diversité de bassins contribue à la richesse ichtyologique nationale."
+    },
+    {
+      "q": "La Mare aux Hippopotames de Bala (province du Houet, Burkina Faso) est protégée en tant que forêt classée principalement pour :",
+      "o": [
+        "Ses importantes réserves de poisson frais disponibles pour alimenter la ville de Bobo-Dioulasso en permanence",
+        "Sa production aquacole intensive en cages flottantes qui en fait le principal site piscicole de la région",
+        "Les importants gisements de minerais de fer et de bauxite présents sous la nappe phréatique adjacente",
+        "Sa biodiversité exceptionnelle incluant des hippopotames et une ichtyofaune riche dans un écosystème forestier préservé"
+      ],
+      "r": 3,
+      "x": "La Mare aux Hippopotames de Bala est une forêt-galerie classée et proposée au patrimoine mondial UNESCO. Elle abrite une population d'hippopotames et une ichtyofaune diversifiée dans la région du Guiriko (ex. Hauts-Bassins), représentant un îlot de biodiversité aquatique et terrestre remarquable à préserver."
+    },
+    {
+      "q": "La gestion des plantes aquatiques envahissantes (jacinthe d'eau, Salvinia) peut faire appel au contrôle biologique utilisant :",
+      "o": [
+        "Des insectes phytophages spécialisés (ex : Neochetina eichhorniae pour la jacinthe d'eau) qui consomment les parties aériennes",
+        "Des herbicides chimiques sélectifs (glyphosate, imazapyr) appliqués par épandage aérien sur les tapis végétaux",
+        "Des poissons herbivores comme Tilapia zillii qui consomment les macrophytes envahissants dans les plans d'eau",
+        "Des canards domestiques spécialement entraînés à brouter les plantes aquatiques envahissantes en surface"
+      ],
+      "r": 0,
+      "x": "Le contrôle biologique de la jacinthe d'eau (Eichhornia crassipes) utilise des insectes phytophages spécialisés comme le charançon Neochetina eichhorniae et N. bruchi, originaires d'Amérique du Sud. Ce contrôle biologique est plus durable et économique que les méthodes chimiques ou mécaniques en zones tropicales."
+    },
+    {
+      "q": "La biosurveillance des cours d'eau utilisant les macroinvertébrés benthiques comme indicateurs biologiques permet de :",
+      "o": [
+        "Remplacer totalement les analyses physicochimiques par des indicateurs biologiques moins coûteux et plus précis",
+        "Estimer la production halieutique potentielle d'un plan d'eau par comptage des invertébrés disponibles",
+        "Évaluer la qualité écologique d'un milieu aquatique grâce à la sensibilité différentielle des organismes à la pollution",
+        "Mesurer directement les concentrations en polluants chimiques adsorbés sur les exosquelettes des invertébrés"
+      ],
+      "r": 2,
+      "x": "Les indices biotiques (IBGN, BMWP) utilisent la composition des communautés de macroinvertébrés benthiques pour évaluer la qualité écologique. Les espèces sensibles (éphéméroptères, plécoptères, trichoptères) disparaissent avec la pollution, révélant l'état sanitaire du milieu mieux que les seules analyses physicochimiques."
+    },
+    {
+      "q": "L'hormone de croissance (GH) chez les poissons est principalement sécrétée par :",
+      "o": [
+        "Les cellules beta des îlots de Langerhans du pancréas endocrine des poissons téléostéens",
+        "Les cellules somatotropes de l'adénohypophyse (lobe antérieur de l'hypophyse)",
+        "Les cellules chromaffines des glandes surrénales situées au voisinage des reins des poissons",
+        "Les cellules endothéliales des branchies sous l'influence directe des ions dissous dans l'eau"
+      ],
+      "r": 1,
+      "x": "La GH est sécrétée par les cellules somatotropes de l'adénohypophyse. Son action passe par la stimulation hépatique de l'IGF-1 (Insulin-like Growth Factor 1). En aquaculture, la GH recombinante est étudiée pour stimuler la croissance des espèces d'intérêt."
+    },
+    {
+      "q": "La formation de bancs chez les poissons comme les Alestes spp. confère les avantages suivants :",
+      "o": [
+        "Une meilleure reproduction par synchronisation des cycles de ponte des femelles du groupe",
+        "Un accès prioritaire aux ressources alimentaires grâce à la compétition intrabancaire réduite",
+        "Une meilleure résistance aux épidémies par dilution des agents pathogènes dans le banc",
+        "Une protection contre les prédateurs par confusion visuelle et dilution du risque individuel"
+      ],
+      "r": 3,
+      "x": "Les bancs offrent une protection antiprédatrice par confusion (perturbation visuelle du prédateur) et dilution du risque (chaque individu réduit sa probabilité d'être capturé). Cette stratégie est particulièrement avantageuse contre les prédateurs visuels comme les oiseaux piscivores."
+    },
+    {
+      "q": "Les hormones thyroïdiennes (T3, T4) jouent chez les poissons un rôle primordial dans :",
+      "o": [
+        "La régulation du métabolisme, la croissance et le déclenchement des métamorphoses larvaires",
+        "La régulation de la pression osmotique branchiale et de la balance ionique en eau douce",
+        "La production d'anticorps spécifiques lors des infections bactériennes chroniques des poissons",
+        "La synthèse des caroténoïdes responsables de la pigmentation des nageoires des poissons tropicaux"
+      ],
+      "r": 0,
+      "x": "Les hormones thyroïdiennes (T3 active et T4 précurseur) régulent le métabolisme de base, la croissance et les métamorphoses larvaires. Leur carence (iode insuffisant dans l'eau) provoque un goitre chez les poissons d'élevage, visible à la base des branchies."
+    },
+    {
+      "q": "La bioluminescence chez certaines espèces de poissons des eaux profondes est produite par :",
+      "o": [
+        "Des pigments fluorescents absorbant la lumière ultraviolette et la restituant dans le visible",
+        "Des cellules spéciales (photophores) contenant des cristaux de guanine réfléchissant la lumière",
+        "Des réactions chimiques enzymatiques impliquant la luciférine et la luciférase, avec émission de photons",
+        "Des symbioses avec des algues photosynthétiques logées dans des organes spécialisés de la peau"
+      ],
+      "r": 2,
+      "x": "La bioluminescence résulte de la réaction luciférine + O2 → oxyluciférine + lumière, catalysée par la luciférase. Elle sert à la communication intraspécifique, à l'attraction des proies, à la reconnaissance des congénères et à la perturbation des prédateurs en eaux profondes."
+    },
+    {
+      "q": "L'immunité innée (non spécifique) des poissons comprend :",
+      "o": [
+        "Les anticorps circulants (IgM, IgT) produits par les lymphocytes B après reconnaissance spécifique",
+        "Les barrières physiques (mucus, écailles), les cellules phagocytaires et les protéines du complément",
+        "La mémoire immunologique permettant une réponse secondaire plus rapide lors d'une deuxième infection",
+        "Les lymphocytes T cytotoxiques capables de détruire sélectivement les cellules infectées par des virus"
+      ],
+      "r": 1,
+      "x": "L'immunité innée inclut : les barrières physiques (mucus contenant des enzymes antimicrobiennes, écailles protectrices), les cellules phagocytaires (macrophages, neutrophiles), les protéines du complément et les cytokines pro-inflammatoires. Elle constitue la première réponse non spécifique aux infections."
+    },
+    {
+      "q": "Le programme GIFT (Genetic Improvement of Farmed Tilapias) a permis d'obtenir une souche de tilapia :",
+      "o": [
+        "Résistante à 100% des maladies bactériennes et virales grâce à une mutagenèse dirigée ciblée",
+        "Capable de tolérer des salinités de 30 g/L pour développer l'aquaculture marine dans les pays sahéliens",
+        "Hermaphrodite séquentielle permettant de contrôler le ratio sexuel sans recours aux hormones synthétiques",
+        "À croissance améliorée de 85-100% par rapport aux souches sauvages après plusieurs générations de sélection"
+      ],
+      "r": 3,
+      "x": "Le programme GIFT (WorldFish, 1988-2000) a utilisé la sélection génétique quantitative pour améliorer la croissance du tilapia du Nil. Les souches GIFT et dérivées montrent des gains de croissance de 85 à 100% par rapport aux souches sauvages, améliorant considérablement les rendements aquacoles."
+    },
+    {
+      "q": "L'aquaponie est un système intégré qui associe :",
+      "o": [
+        "L'élevage de poissons en eau de mer et la culture de microalgues pour la production de biocarburants",
+        "L'élevage de poissons en cage flottante et la culture de riz inondé dans la même retenue d'eau",
+        "L'élevage de poissons et la culture hydroponique de plantes, les déchets des poissons nourrissant les plantes",
+        "L'élevage de poissons et l'apiculture, les abeilles pollinisant les plantes qui fertilisent les étangs"
+      ],
+      "r": 2,
+      "x": "L'aquaponie intègre un élevage aquacole (poissons) et une culture hydroponique (légumes, aromates) en circuit fermé. Les effluents riches en azote des poissons fertilisent les plantes qui filtrent et épurent l'eau retournant aux poissons. Ce système économise l'eau et produit deux denrées alimentaires simultanément."
+    },
+    {
+      "q": "La triploïdie artificielle induite chez les poissons (3n chromosomes) est utilisée en aquaculture car :",
+      "o": [
+        "Les individus triploïdes sont stériles, l'énergie non investie dans la reproduction profitant à la croissance",
+        "Elle triple automatiquement la croissance en doublant le nombre de chromosomes d'une génération à l'autre",
+        "Elle confère une immunité renforcée contre les maladies bactériennes et parasitaires en élevage",
+        "Elle permet d'obtenir des individus à chair exclusivement blanche, très appréciée sur les marchés premium"
+      ],
+      "r": 0,
+      "x": "La triploïdie (induite par choc thermique, de pression ou chimique sur les oeufs fécondés) produit des individus stériles à 3 jeux de chromosomes. L'énergie qui serait consacrée à la reproduction est réorientée vers la croissance somatique, améliorant les performances zootechniques en élevage."
+    },
+    {
+      "q": "Les rythmes circadiens chez les poissons (cycles journaliers d'activité) sont principalement régulés par :",
+      "o": [
+        "Les variations de pression barométrique qui déclenchent les migrations verticales dans la colonne d'eau",
+        "La photopériode (durée d'ensoleillement) et la mélatonine sécrétée par la glande pinéale à l'obscurité",
+        "La disponibilité en nourriture qui synchronise les horloges biologiques de manière exclusive sans lumière",
+        "La température de l'eau dont les oscillations diurnes déclenchent les périodes d'activité et de repos"
+      ],
+      "r": 1,
+      "x": "La glande pinéale des poissons détecte directement la lumière et sécrète la mélatonine à l'obscurité. Cette hormone synchronise les rythmes biologiques journaliers (activité, alimentation, reproduction). La photopériode artificielle est utilisée en aquaculture pour contrôler la reproduction des espèces d'intérêt."
+    },
+    {
+      "q": "La pigmentation rosée de la chair des salmonidés et son absence chez le tilapia d'élevage résultent du fait que :",
+      "o": [
+        "Les salmonidés synthétisent de l'astaxanthine de novo grâce à des enzymes de biosynthèse absentes chez le tilapia",
+        "Les salmonidés sont des espèces primitives dont la pigmentation génétique produit naturellement des caroténoïdes",
+        "Le tilapia est une espèce mutante ayant perdu les gènes de pigmentation au cours de la domestication récente",
+        "Les caroténoïdes (astaxanthine, cantaxanthine) sont apportés par l'alimentation naturelle des salmonidés"
+      ],
+      "r": 3,
+      "x": "Les poissons ne peuvent pas synthétiser les caroténoïdes de novo. La chair rosée des salmonidés vient des crustacés et copépodes riches en astaxanthine ingérés dans leur alimentation naturelle. En élevage intensif, l'astaxanthine de synthèse est ajoutée aux aliments pour reproduire cette pigmentation appréciée."
+    },
+    {
+      "q": "Malapterurus electricus (silure électrique africain) utilise son organe électrique pour :",
+      "o": [
+        "Électrocuter ses proies et se défendre contre les prédateurs grâce à des décharges pouvant atteindre 350 volts",
+        "Se localiser dans les eaux turbides par électrolocalisation passive des champs électriques ambiants",
+        "Communiquer avec ses congénères par émission de signaux électriques de très faible intensité modulés",
+        "Filtrer les particules alimentaires en suspension par électrophorèse à travers ses plaques branchiales"
+      ],
+      "r": 0,
+      "x": "Malapterurus electricus est le silure électrique d'Afrique, capable de produire des décharges allant jusqu'à 350 volts via son organe électrique tégumentaire. Il est redouté des pêcheurs artisanaux et peut être présent dans certains plans d'eau burkinabè lors des grandes crues saisonnières."
+    },
+    {
+      "q": "La gamétogenèse saisonnière chez les poissons des régions tropicales est principalement déclenchée par :",
+      "o": [
+        "La diminution de la conductivité de l'eau en saison des pluies due à la dilution par les précipitations",
+        "L'augmentation de la pression hydrostatique lors de la montée des eaux des crues saisonnières africaines",
+        "Les variations de photopériode, de température et les signaux hydrologiques (crues) de début de saison des pluies",
+        "L'augmentation du phytoplancton qui signale la disponibilité alimentaire aux géniteurs prêts à se reproduire"
+      ],
+      "r": 2,
+      "x": "En milieu tropical africain, la reproduction est déclenchée par un ensemble de signaux saisonniers : changements de photopériode, augmentation des précipitations (changements de turbidité, conductivité) et crues qui inondent les plaines servant de frayères et nourriceries essentielles au recrutement."
+    },
+    {
+      "q": "Les poissons téléostéens possèdent une immunité adaptative (spécifique) qui se distingue de celle des mammifères par :",
+      "o": [
+        "L'absence totale de lymphocytes B fonctionnels, les anticorps étant produits uniquement par le thymus",
+        "La présence d'une seule classe majeure d'immunoglobulines (IgM) circulantes, sans équivalents IgG ni IgE",
+        "L'absence de réponse secondaire (mémoire immunologique) rendant la vaccination totalement inefficace",
+        "La production d'anticorps uniquement contre les parasites extracellulaires, sans réponse antivirale spécifique"
+      ],
+      "r": 1,
+      "x": "Contrairement aux mammifères qui possèdent plusieurs classes d'immunoglobulines, les poissons produisent principalement des IgM dans le sang et des IgT sur les muqueuses. Cette diversité limitée des immunoglobulines restreint la gamme de la réponse humorale des poissons comparée à celle des mammifères."
+    },
+    {
+      "q": "La destruction des frayères naturelles des poissons dans les cours d'eau africains est principalement due à :",
+      "o": [
+        "La prédation intensive des oeufs par les oiseaux aquatiques qui colonisent massivement les berges en saison sèche",
+        "La prolifération des espèces invasives comme la jacinthe d'eau qui recouvre les substrats de frai naturels",
+        "L'augmentation de la prédation interspécifique des oeufs par les poissons adultes lors des périodes de jeûne",
+        "L'envasement par les sédiments, le défrichement des berges, les extractions de sable et les petits barrages agricoles"
+      ],
+      "r": 3,
+      "x": "Les frayères (substrats graveleux ou herbiers littoraux de ponte) sont détruites par la sédimentation liée à l'érosion agricole, le défrichement des végétations rivulaires, les extractions de sable dans les lits des rivières et la construction de petits barrages agricoles qui modifient les régimes hydrauliques saisonniers."
+    },
+    {
+      "q": "Le brassage saisonnier (turnover) des lacs diffère dans les lacs tropicaux africains par rapport aux lacs tempérés car :",
+      "o": [
+        "Les variations de température saisonnières sont moins marquées en zone tropicale, limitant la stratification prolongée",
+        "Les lacs tropicaux n'ont aucune stratification thermique étant donné la température constante de l'eau tropicale",
+        "Le brassage tropical se produit exclusivement en profondeur sans affecter les eaux de surface et le plancton",
+        "Les vents tropicaux sont trop faibles pour provoquer un brassage mécanique efficace des eaux lacustres profondes"
+      ],
+      "r": 0,
+      "x": "En zones tropicales, les températures sont élevées toute l'année avec de faibles écarts saisonniers (5-10°C), ce qui rend la stratification thermique moins stable et plus facilement perturbée par les vents. Le brassage peut survenir en saison fraîche ou lors des vents forts (harmattan), différemment des lacs tempérés."
+    },
+    {
+      "q": "Dans les écosystèmes aquatiques, le CO2 peut être fixé par la photosynthèse du phytoplancton mais aussi produit par :",
+      "o": [
+        "L'oxydation photochimique de la matière organique dissoute sous l'action des rayons UV solaires en surface",
+        "La décomposition exclusive des matières végétales (phytoplancton mort) par les bactéries aérobies de surface",
+        "La synthèse de carbonates de calcium par les mollusques qui libèrent du CO2 lors de la calcification",
+        "La respiration de tous les organismes vivants et la décomposition bactérienne de la matière organique"
+      ],
+      "r": 3,
+      "x": "La respiration de tous les organismes (poissons, zooplancton, bactéries, phytoplancton) et la décomposition bactérienne de la matière organique produisent continuellement du CO2. En absence de photosynthèse (nuit, eau profonde), ce CO2 s'accumule et peut atteindre des concentrations défavorables aux poissons."
+    },
+    {
+      "q": "L'épilimnion d'un lac stratifié thermiquement correspond à :",
+      "o": [
+        "La couche intermédiaire caractérisée par un gradient thermique abrupt (métalimnion ou thermocline)",
+        "La couche d'eau chaude de surface, bien oxygénée et productive, en contact direct avec l'atmosphère",
+        "La couche profonde froide et anoxique où se décompose la matière organique sédimentée (hypolimnion)",
+        "La zone de transition entre le sédiment et l'eau où vit l'essentiel de la faune benthique (interface)"
+      ],
+      "r": 1,
+      "x": "L'épilimnion est la couche d'eau superficielle chaude, bien oxygénée par photosynthèse et mélange avec l'atmosphère. Le métalimnion est la zone de transition thermique abrupte. L'hypolimnion est la couche profonde froide, souvent anoxique, séparée de la surface par la thermocline."
+    },
+    {
+      "q": "Le rapport de Redfield (C:N:P = 106:16:1) en milieu aquatique indique que :",
+      "o": [
+        "Pour chaque tonne de carbone fixé par photosynthèse, il faut 6 tonnes d'azote et 1 tonne de phosphore",
+        "L'azote est toujours le facteur limitant de la productivité primaire dans tous les écosystèmes aquatiques",
+        "Le phytoplancton incorpore les éléments C, N et P dans des proportions relativement constantes",
+        "Le ratio C:N:P ne varie jamais quelle que soit l'espèce de phytoplancton ou les conditions du milieu"
+      ],
+      "r": 2,
+      "x": "Le rapport de Redfield (106C:16N:1P en atomes) décrit la composition élémentaire moyenne du phytoplancton. Il est utilisé pour identifier l'élément limitant : si N:P > 16, le phosphore est limitant ; si N:P < 16, l'azote est limitant. En eaux douces tropicales, le phosphore est généralement limitant."
+    },
+    {
+      "q": "Les groupes EPT (Éphéméroptères, Plécoptères, Trichoptères) utilisés en biosurveillance sont considérés comme indicateurs de bonne qualité car :",
+      "o": [
+        "Ils sont très sensibles à la pollution organique et disparaissent rapidement des milieux dégradés",
+        "Ils colonisent exclusivement les eaux polluées, leur présence indiquant une eutrophisation avancée",
+        "Ils constituent la base alimentaire exclusive des poissons carnivores dans les cours d'eau non pollués",
+        "Leur absence indique une forte teneur en oxygène défavorable aux espèces tolérantes à la pollution"
+      ],
+      "r": 0,
+      "x": "Les Éphéméroptères, Plécoptères et Trichoptères sont des larves d'insectes aquatiques très sensibles à la pollution organique, à l'eutrophisation et aux pesticides. Leur présence en abondance indique un cours d'eau en bonne santé écologique, classé en catégorie I ou II de qualité biologique."
+    },
+    {
+      "q": "La prolifération de bactéries filamenteuses dans les effluents piscicoles est problématique car elle :",
+      "o": [
+        "Produit des toxines solubles fatales pour les poissons présents en aval des zones de rejet des effluents",
+        "Bloque la nitrification dans les filtres biologiques en entrant en compétition avec les bactéries nitrifiantes",
+        "Synthétise des gaz odoriférants (H2S, mercaptans) causant des nuisances olfactives pour les riverains",
+        "Provoque des problèmes de bulking (gonflement des boues) et colmate les filtres de traitement des eaux"
+      ],
+      "r": 3,
+      "x": "Les bactéries filamenteuses (Sphaerotilus, Thiothrix) prolifèrent dans les effluents riches en matières organiques et causent des problèmes de bulking (difficulté de décantation des boues) et de colmatage des filtres dans les stations de traitement des effluents piscicoles avant rejet dans les milieux récepteurs."
+    },
+    {
+      "q": "L'harmattan (vent du nord-est sec soufflant en saison sèche sur le Burkina Faso) influence les ressources halieutiques car il :",
+      "o": [
+        "Réchauffe les eaux de surface des barrages, stimulant la croissance rapide des poissons tropicaux",
+        "Provoque un mélange des couches d'eau et peut rompre la stratification thermique des barrages profonds",
+        "Apporte de l'humidité qui augmente les niveaux d'eau des barrages pendant la saison sèche",
+        "Refroidit les eaux en dessous de 10°C, entrant dans la zone de tolérance thermique minimale des tilapias"
+      ],
+      "r": 1,
+      "x": "L'harmattan provoque des vents forts (30-50 km/h) qui créent une agitation de surface et favorisent le mélange des eaux des barrages. Ce brassage peut briser la stratification thermique, remontant des eaux anoxiques (upwelling) et pouvant provoquer des mortalités piscicoles si la déstratification est soudaine."
+    },
+    {
+      "q": "L'aquaculture multi-trophique intégrée (AMTI) consiste à associer dans un même système :",
+      "o": [
+        "L'élevage de plusieurs espèces de poissons à même niveau trophique dans des cages séparées adjacentes",
+        "La production de poissons carnivores et herbivores dans un étang unique sans partition physique",
+        "Des espèces à différents niveaux trophiques (poissons, mollusques, algues) valorisant mutuellement leurs déchets",
+        "L'aquaculture marine et continentale dans un même bassin à salinité variable selon les saisons"
+      ],
+      "r": 2,
+      "x": "L'AMTI associe des espèces extractives (mollusques, holothuries filtrant les particules organiques) et inorganiques (algues assimilant les nutriments dissous) aux poissons producteurs de déchets. Ce modèle réduit l'impact environnemental, améliore l'efficacité globale du système et diversifie les productions aquacoles."
+    },
+    {
+      "q": "Le seuil de rentabilité d'une exploitation piscicole correspond au niveau de production pour lequel :",
+      "o": [
+        "Le chiffre d'affaires (recettes totales) est exactement égal aux charges totales fixes et variables de l'exploitation",
+        "Le bénéfice net après impôts atteint 20% du capital investi, niveau jugé satisfaisant pour les investisseurs",
+        "La production par hectare d'étang dépasse 1 000 kg/ha/an, valeur de référence pour la semi-intensivité",
+        "Le taux de survie des poissons est supérieur à 80% sur l'ensemble du cycle de production semi-intensif"
+      ],
+      "r": 0,
+      "x": "Le seuil de rentabilité (point mort) est atteint quand les recettes totales égalent les charges totales (fixes + variables). En deçà, l'exploitation génère des pertes ; au-delà, elle dégage un bénéfice. Son calcul est fondamental pour dimensionner correctement une unité aquacole et fixer le prix de vente minimum."
+    },
+    {
+      "q": "La certification ASC (Aquaculture Stewardship Council) en aquaculture garantit que :",
+      "o": [
+        "Les produits aquacoles ont été traités uniquement avec des médicaments homologués dans l'Union Européenne",
+        "Les poissons certifiés ont été élevés exclusivement avec des aliments d'origine 100% végétale sans farine de poisson",
+        "La ferme aquacole a atteint une production minimale de 500 tonnes par an pour justifier l'audit international",
+        "La ferme aquacole respecte des normes sociales et environnementales strictes vérifiées par un auditeur tiers"
+      ],
+      "r": 3,
+      "x": "La certification ASC (créée par WWF et IDH) atteste que les produits aquacoles proviennent de fermes respectant des standards environnementaux (qualité de l'eau, biodiversité, alimentation responsable) et sociaux (conditions de travail, droits communautaires). Elle est de plus en plus demandée par les distributeurs européens."
+    },
+    {
+      "q": "La traçabilité des produits halieutiques permet de :",
+      "o": [
+        "Calculer automatiquement la valeur marchande optimale du poisson selon les cours mondiaux du marché",
+        "Suivre le parcours du poisson de la production à la consommation et identifier rapidement toute contamination",
+        "Garantir que les poissons vendus sont issus exclusivement d'élevages biologiques certifiés sans antibiotiques",
+        "Fixer les prix minimaux légaux applicables à chaque espèce piscicole commercialisée sur les marchés nationaux"
+      ],
+      "r": 1,
+      "x": "La traçabilité (traçage par lots, codes barres, RFID) permet de suivre chaque lot de poisson de l'écloserie au marché et d'identifier rapidement la source d'une contamination ou d'une fraude sur l'espèce. Elle est obligatoire dans l'UE pour tous les produits de la mer commercialisés."
+    },
+    {
+      "q": "Les contraintes spécifiques de l'aquaculture en zone sahélienne comme le nord du Burkina Faso incluent :",
+      "o": [
+        "Des températures trop basses limitant la croissance des espèces tropicales en dessous de leur optimum",
+        "Une eau trop riche en oxygène qui favorise les pathologies respiratoires des poissons en saison froide",
+        "La disponibilité limitée en eau, la forte évaporation, l'ensablement des sources et les sécheresses récurrentes",
+        "Une pluviométrie excessive qui noie les étangs et emporte les digues lors des crues de la saison des pluies"
+      ],
+      "r": 2,
+      "x": "En zone sahélienne, l'aquaculture fait face à des contraintes majeures : pluviométrie faible et irrégulière (< 600 mm/an), forte évaporation (jusqu'à 2 500 mm/an), ensablement des mares et cours d'eau, et sécheresses récurrentes réduisant les ressources en eau disponibles pour alimenter et maintenir les étangs piscicoles."
+    },
+    {
+      "q": "Un pisciculteur achète 200 kg d'alevins à 500 F CFA/kg et revend 800 kg de poissons adultes à 1 500 F CFA/kg. Sa recette brute totale est de :",
+      "o": [
+        "1 200 000 F CFA",
+        "900 000 F CFA",
+        "600 000 F CFA",
+        "1 500 000 F CFA"
+      ],
+      "r": 0,
+      "x": "Recette brute = Quantité vendue × Prix de vente = 800 kg × 1 500 F CFA/kg = 1 200 000 F CFA. Pour calculer le bénéfice, il faudrait déduire : achat des alevins (100 000 F CFA) + coûts des aliments, de la main-d'oeuvre, des intrants et l'amortissement des infrastructures."
+    },
+    {
+      "q": "Les analogues de la GnRH (Gonadotropin Releasing Hormone) utilisés pour l'hypophysation en aquaculture agissent en :",
+      "o": [
+        "Inhibant directement la production de cortisol pour réduire le stress des géniteurs lors de la manipulation",
+        "Stimulant directement les gonades pour produire des oeufs et du sperme sans passer par l'hypophyse",
+        "Bloquant les récepteurs de l'oestrogène pour provoquer une inversion sexuelle chez les alevins traités",
+        "Stimulant la libération de gonadotropines (LH, FSH) par l'hypophyse, déclenchant l'ovulation et la spermiation"
+      ],
+      "r": 3,
+      "x": "Les analogues de GnRH (buséréline, LHRH-a, ovaprim) stimulent l'hypophyse à libérer LH et FSH. Ces gonadotropines induisent l'ovulation chez la femelle et la spermiation chez le mâle en conditions contrôlées d'écloserie. Ils sont plus stables et plus efficaces que la GnRH naturelle."
+    },
+    {
+      "q": "L'aquaculture offshore (au large des côtes) se développe pour :",
+      "o": [
+        "Permettre l'élevage des espèces d'eau douce comme le tilapia dans des eaux marines peu profondes",
+        "S'éloigner des zones côtières surexploitées et bénéficier de meilleure qualité d'eau et d'espace disponible",
+        "Protéger les élevages des tempêtes côtières grâce aux eaux plus calmes en haute mer",
+        "Éviter les réglementations environnementales nationales qui s'appliquent uniquement dans les eaux territoriales"
+      ],
+      "r": 1,
+      "x": "L'aquaculture offshore utilise des cages immergées ou semi-submersibles dans des eaux profondes (> 20 m) éloignées des côtes. Elle bénéficie de meilleure qualité d'eau (sans pollution côtière), de courants qui dispersent les déchets et de l'espace disponible pour réduire les conflits d'usage avec d'autres activités."
+    },
+    {
+      "q": "Une cage flottante de 4 m × 4 m × 2 m (volume 32 m³) produit 2 400 kg de tilapia en 6 mois. La densité de production finale est de :",
+      "o": [
+        "50 kg/m³",
+        "100 kg/m³",
+        "75 kg/m³",
+        "60 kg/m³"
+      ],
+      "r": 2,
+      "x": "Densité = Biomasse / Volume = 2 400 kg / 32 m³ = 75 kg/m³. Cette densité élevée correspond à une aquaculture intensive en cage bien gérée, avec alimentation complète et renouvellement d'eau suffisant par les courants naturels du barrage ainsi qu'une surveillance rapprochée des paramètres d'élevage."
+    },
+    {
+      "q": "Pour améliorer la commercialisation du poisson d'élevage local face au poisson congelé importé, la stratégie la plus efficace est :",
+      "o": [
+        "Valoriser la fraîcheur, la qualité gustative et l'origine locale par un étiquetage clair et une différenciation sur les marchés",
+        "Demander à l'État d'interdire totalement les importations de poisson congelé pour protéger la production nationale",
+        "Baisser les prix de vente en dessous du coût de production pour conquérir la clientèle à court terme",
+        "Produire uniquement en grande quantité pour bénéficier des économies d'échelle et réduire le prix de revient"
+      ],
+      "r": 0,
+      "x": "La différenciation qualitative (fraîcheur, saveur supérieure, origine locale connue) est la stratégie la plus durable contre la concurrence du poisson congelé importé moins cher. L'étiquetage d'origine locale, les circuits courts et la vente directe au consommateur valorisent ces atouts distinctifs."
+    },
+    {
+      "q": "Les distributeurs automatiques d'aliments (feeders à capteur d'appétit) en pisciculture permettent de :",
+      "o": [
+        "Remplacer totalement la main-d'oeuvre humaine en élevage, réduisant de 100% les coûts salariaux",
+        "Doubler automatiquement les rations distribuées lors des pointes de croissance en saison chaude",
+        "Détecter les maladies précocement grâce aux capteurs de poids intégrés dans le mécanisme de distribution",
+        "Optimiser la quantité d'aliment distribuée selon l'appétit réel des poissons, réduisant gaspillages et pollution"
+      ],
+      "r": 3,
+      "x": "Les feeders à déclenchement acoustique ou par capteur de refus détectent quand les poissons cessent de consommer et arrêtent la distribution. Cela réduit le gaspillage alimentaire (parfois 20-30% de la ration), améliore la qualité de l'eau et réduit les coûts d'alimentation sans requérir une présence humaine permanente."
+    },
+    {
+      "q": "Un groupement veut produire 200 kg de tilapia par cycle en 6 mois sur 1 000 m², avec 80% de survie et 200 g de poids moyen récolte. La densité d'empoissonnement nécessaire est de :",
+      "o": [
+        "1 alevin/m² (1 000 alevins)",
+        "1,25 alevin/m² (1 250 alevins)",
+        "2 alevins/m² (2 000 alevins)",
+        "2,5 alevins/m² (2 500 alevins)"
+      ],
+      "r": 1,
+      "x": "Nombre d'alevins = (Production cible / Poids moyen récolte) / Taux de survie = (200 kg / 0,200 kg) / 0,80 = 1 250 alevins, soit 1,25 alevin/m². Cette densité est adaptée à un système semi-intensif avec fertilisation et alimentation complémentaire en étang terrien au Burkina Faso."
+    },
+    {
+      "q": "L'irradiation UV est utilisée en aquaculture pour traiter l'eau des systèmes de recirculation car elle :",
+      "o": [
+        "Augmente la teneur en oxygène dissous de l'eau en décomposant les molécules d'eau par photolyse",
+        "Élimine tous les métaux lourds et les pesticides présents dans l'eau d'alimentation des bassins intensifs",
+        "Inactive les agents pathogènes (virus, bactéries, spores) sans laisser de résidu chimique toxique dans l'eau",
+        "Améliore l'appétit des poissons en stimulant la production de vitamine D3 par photolyse cutanée"
+      ],
+      "r": 2,
+      "x": "Les lampes UV (254 nm) inactivent les microorganismes (bactéries, virus, parasites) en endommageant leur ADN, empêchant leur réplication. L'irradiation UV ne laisse aucun résidu chimique dans l'eau et est compatible avec la présence des poissons. Elle est complémentaire aux traitements chimiques dans les RAS."
+    },
+    {
+      "q": "Les obstacles spécifiques rencontrés par les femmes piscicultrices en Afrique subsaharienne incluent principalement :",
+      "o": [
+        "L'interdiction légale dans plusieurs pays africains pour les femmes d'exercer des activités piscicoles commerciales",
+        "Le manque d'intérêt des femmes pour l'aquaculture, préférant se concentrer sur l'agriculture vivrière exclusive",
+        "La résistance des technologies d'élevage inadaptées aux contextes socioculturels des femmes rurales africaines",
+        "Le faible accès au foncier, au crédit, aux intrants et aux formations techniques dans les zones rurales africaines"
+      ],
+      "r": 3,
+      "x": "Les femmes piscicultrices font face à des barrières structurelles : accès limité à la terre (nécessaire pour construire un étang), aux crédits agricoles (exigences de garanties difficiles à satisfaire), aux alevins, aliments et aux formations techniques. Ces obstacles freinent le développement de l'aquaculture féminine en Afrique."
+    },
+    {
+      "q": "Un aliment avec un ratio Protéines/Énergie (P/E) trop élevé (excès de protéines par rapport à l'énergie) provoque :",
+      "o": [
+        "Une utilisation des protéines comme source d'énergie (déamination) plutôt que pour la croissance musculaire",
+        "Une hyperactivité des poissons due à l'excès d'acides aminés stimulant le système nerveux central",
+        "Une accumulation de graisses intramusculaires liée à la conversion des protéines en acides gras à longue chaîne",
+        "Une carence en énergie compensée par la synthèse de glucides à partir des protéines alimentaires excédentaires"
+      ],
+      "r": 0,
+      "x": "Quand les protéines sont en excès par rapport à l'énergie non protéique (lipides + glucides), les poissons dégradent les protéines par déamination pour en extraire l'énergie, gaspillant des acides aminés coûteux. Un ratio P/E optimal minimise ce gaspillage et améliore l'efficacité protéique nette de l'aliment."
+    },
+    {
+      "q": "La carence en iode chez les poissons d'élevage peut se manifester par :",
+      "o": [
+        "Une décoloration progressive des écailles et un blocage de la synthèse des pigments caroténoïdes",
+        "Un goitre (hypertrophie de la thyroïde) visible à la base des branchies et une réduction de la croissance",
+        "Une accumulation de lipides dans le foie et une insuffisance hépatique progressive (stéatose hépatique)",
+        "Une faiblesse musculaire et une incapacité à nager contre les courants même modérés dans les bassins"
+      ],
+      "r": 1,
+      "x": "L'iode est indispensable à la synthèse des hormones thyroïdiennes (T3, T4). Sa carence provoque une hypertrophie compensatrice de la thyroïde (goitre) visible à la base des branchies. Elle entraîne une hypothyroïdie, ralentissant le métabolisme et la croissance des poissons d'élevage intensif."
+    },
+    {
+      "q": "Les immunostimulants ajoutés aux aliments des poissons (β-glucanes, levures, extraits de plantes) agissent principalement en :",
+      "o": [
+        "Créant une immunité vaccinale spécifique contre les principaux pathogènes des poissons d'élevage tropicaux",
+        "Remplaçant les anticorps naturels dont la production est insuffisante chez les alevins en phase larvaire",
+        "Stimulant non spécifiquement l'immunité innée (macrophages, lysozyme, protéines du complément) des poissons",
+        "Augmentant directement la teneur en vitamine C des poissons pour améliorer leur résistance aux infections"
+      ],
+      "r": 2,
+      "x": "Les immunostimulants (β-1,3/1,6-glucanes de levure, extraits de plantes comme l'aloe vera, le curcuma) stimulent l'immunité innée non spécifique : activation des macrophages, augmentation du lysozyme et des protéines du complément dans le mucus. Ils réduisent la mortalité sans remplacer les vaccins spécifiques."
+    },
+    {
+      "q": "En saison fraîche au Burkina Faso (novembre-février), les besoins alimentaires des tilapias en élevage :",
+      "o": [
+        "Augmentent significativement car les poissons ont besoin de plus d'énergie pour maintenir leur température",
+        "Restent identiques toute l'année car le tilapia est une espèce homéotherme insensible aux variations thermiques",
+        "Augmentent légèrement car les tilapias doublent leur activité de nage pour compenser la baisse de température",
+        "Diminuent car le métabolisme des poissons (poïkilothermes) ralentit avec la baisse de température de l'eau"
+      ],
+      "r": 3,
+      "x": "Les poissons sont poïkilothermes : leur métabolisme suit le coefficient Q10 (environ 2 par 10°C). En saison fraîche au Burkina Faso (eau à 20-22°C vs 28-30°C en saison chaude), le métabolisme ralentit, réduisant les besoins alimentaires de 30 à 50%. Le taux de rationnement doit être ajusté en conséquence."
+    },
+    {
+      "q": "La méthionine et la cystéine (acides aminés soufrés) sont essentiels dans l'alimentation des poissons car ils :",
+      "o": [
+        "Participent à la synthèse de la taurine, du glutathion (antioxydant) et des protéines structurales de la chair",
+        "Fournissent l'énergie nécessaire à la nage en étant les principaux substrats de la bêta-oxydation musculaire",
+        "Sont les précurseurs exclusifs des neurotransmetteurs (sérotonine, dopamine) du cerveau des poissons",
+        "Inhibent la production de cortisol en cas de stress, jouant un rôle anxiolytique chez les poissons d'élevage"
+      ],
+      "r": 0,
+      "x": "La méthionine est un acide aminé essentiel précurseur de la cystéine. Ensemble, ils participent à la synthèse de la taurine (régulation des membranes), du glutathion (principal antioxydant cellulaire) et entrent dans la structure de nombreuses protéines musculaires et enzymatiques des poissons."
+    },
+    {
+      "q": "Les artémies (Artemia salina) sont utilisées comme aliment vivant pour les larves de poissons car :",
+      "o": [
+        "Elles contiennent des hormones de croissance naturelles accélérant de 200% la croissance des larves",
+        "Leur taille (nauplii de 400-600 µm) et leur valeur nutritive (protéines, acides gras AGPI) sont adaptées aux larves",
+        "Elles synthétisent des antibiotiques naturels qui protègent les larves contre les infections bactériennes",
+        "Leur couleur rouge attrayante stimule le réflexe visuel de capture des larves dès le premier jour post-éclosion"
+      ],
+      "r": 1,
+      "x": "Les nauplii d'Artemia sont des crustacés miniatures (400-600 µm) facilement ingérés par les larves. Riches en protéines (60%) et acides gras AGPI essentiels (EPA, DHA), ils peuvent être enrichis par des émulsions lipidiques pour améliorer leur profil nutritionnel avant distribution aux larves en écloserie."
+    },
+    {
+      "q": "La fermentation des tourteaux végétaux avant incorporation dans les aliments piscicoles permet de :",
+      "o": [
+        "Augmenter la teneur en glucides fermentescibles qui constituent l'essentiel de l'énergie métabolisable",
+        "Produire des toxines fermentaires qui améliorent la palatabilité des aliments pour le tilapia",
+        "Réduire les facteurs antinutritionnels (phytates, inhibiteurs de trypsine), améliorant la digestibilité",
+        "Synthétiser des acides aminés essentiels nouveaux absents dans les matières premières végétales non fermentées"
+      ],
+      "r": 2,
+      "x": "La fermentation microbienne (bactéries lactiques, levures, champignons) hydrolyse l'acide phytique, dégrade les inhibiteurs de trypsine et les saponines. Elle améliore la digestibilité des protéines et des minéraux et augmente la valeur nutritive et la palatabilité des aliments piscicoles à base de matières premières végétales."
+    },
+    {
+      "q": "La streptococcose des poissons (Streptococcus agalactiae, S. iniae) se manifeste par :",
+      "o": [
+        "Des lésions cutanées en forme de selle de cheval sur le dos, typiques des infections à Flavobacterium",
+        "Des taches blanches visibles sur les nageoires et la peau, causées par un protozoaire cilié envahissant",
+        "Une diarrhée profuse et une perte d'appétit liées à une entérite bactérienne aiguë de type inflammatoire",
+        "Une exophtalmie bilatérale (yeux exorbités), des hémorragies et une mortalité élevée en eau chaude (> 25°C)"
+      ],
+      "r": 3,
+      "x": "La streptococcose cause une septicémie aiguë chez le tilapia et d'autres espèces d'eau chaude. Les signes cliniques incluent l'exophtalmie (yeux exorbités), les hémorragies cutanées, la nage en spirale (méningite), l'anorexie et des mortalités importantes, notamment lors de stress thermique en élevage intensif."
+    },
+    {
+      "q": "La furonculose, causée par Aeromonas salmonicida, est une maladie bactérienne qui affecte principalement :",
+      "o": [
+        "Les salmonidés (truites, saumons) et peut causer des pertes importantes en élevage en eau froide",
+        "Les tilapias et les poissons-chats tropicaux dans les élevages intensifs en eau chaude du Burkina Faso",
+        "Les poissons ornementaux tropicaux (poissons rouges, koi) uniquement dans les aquariums domestiques",
+        "Les espèces marines en cage offshore, la bactérie ne pouvant survivre dans les eaux douces continentales"
+      ],
+      "r": 0,
+      "x": "Aeromonas salmonicida typique est l'agent de la furonculose, principale bactériose des salmonidés en eau froide. Elle provoque des ulcères musculaires profonds (furoncles), des septicémies et des mortalités importantes. Des souches atypiques peuvent aussi affecter d'autres espèces comme les carpes d'eau douce."
+    },
+    {
+      "q": "Les trématodes digenèses (douves) parasitant les poissons ont un cycle biologique nécessitant :",
+      "o": [
+        "Un seul hôte définitif (le poisson) où se développe la forme adulte reproductrice dans les intestins",
+        "Au moins deux hôtes intermédiaires (souvent un mollusque puis un poisson) et un hôte définitif vertébré",
+        "Une transmission directe de poisson à poisson par contact physique lors de la reproduction ou du frai",
+        "Un hôte unique commun à toutes les espèces de trématodes (escargot d'eau douce du genre Bulinus)"
+      ],
+      "r": 1,
+      "x": "Les trématodes digenèses ont un cycle complexe : oeufs libérés dans l'eau → miracidium → mollusque (hôte intermédiaire 1) → poisson (hôte intermédiaire 2, métacercaires enkystées dans les muscles) → vertébré prédateur (hôte définitif). La présence de mollusques dans les étangs favorise la transmission de ce parasite."
+    },
+    {
+      "q": "L'utilisation abusive d'antibiotiques en pisciculture est préoccupante car elle contribue à :",
+      "o": [
+        "Réduire drastiquement les bactéries nitrifiantes des biofiltres, provoquant des crises d'ammoniaque aiguës",
+        "Augmenter la sensibilité des poissons aux infections fongiques (Saprolegnia) par immunosuppression directe",
+        "La sélection de bactéries résistantes aux antibiotiques (souches multi-résistantes) transmissibles à l'homme",
+        "La contamination des eaux de surface avec des molécules actives détruisant tous les organismes aquatiques"
+      ],
+      "r": 2,
+      "x": "L'usage abusif d'antibiotiques en aquaculture sélectionne des souches bactériennes résistantes. Ces gènes de résistance peuvent se transférer horizontalement à des bactéries pathogènes pour l'homme, compromettant l'efficacité des traitements médicaux humains. C'est un enjeu de santé publique mondial majeur."
+    },
+    {
+      "q": "L'utilisation de plantes médicinales (ail, moringa, neem) comme alternatives aux antibiotiques en pisciculture présente l'avantage de :",
+      "o": [
+        "Guérir définitivement toutes les maladies bactériennes, virales et parasitaires des poissons d'élevage",
+        "Produire des vaccins naturels oraux administrés directement dans l'aliment des poissons d'élevage",
+        "Remplacer totalement les contrôles vétérinaires officiels par des pratiques traditionnelles autorisées",
+        "Réduire l'usage d'antibiotiques, diminuant les risques de résistances et les résidus dans les produits"
+      ],
+      "r": 3,
+      "x": "Les extraits de plantes (allicine de l'ail, nimbiline du neem, tanins du moringa) ont des propriétés antimicrobiennes, antiparasitaires et immunostimulantes documentées. Leur usage réduit la dépendance aux antibiotiques et les risques de résistances, bien que leur efficacité soit variable et souvent non standardisée."
+    },
+    {
+      "q": "La principale maladie affectant les oeufs de tilapia en incubation en écloserie est :",
+      "o": [
+        "La saprolegniose causée par Saprolegnia spp. qui colonise les oeufs non fécondés ou morts, puis contamine les vivants",
+        "La streptococcose bactérienne qui pénètre à travers le chorion des oeufs fertilisés et tue les embryons",
+        "L'ichtyophthirose due à Ichthyophthirius multifiliis qui forme des kystes visibles sur les oeufs en incubation",
+        "L'aflatoxicose causée par les moisissures toxigènes présentes dans l'eau d'incubation non stérilisée"
+      ],
+      "r": 0,
+      "x": "Saprolegnia (oomycète) colonise d'abord les oeufs non fécondés ou morts puis envahit les oeufs viables adjacents, causant des pertes importantes en écloserie. Le retrait régulier des oeufs morts, la filtration UV de l'eau et le traitement au sel ou au peroxyde d'hydrogène réduisent ce risque."
+    },
+    {
+      "q": "La pêche INN (Illicite, Non déclarée, Non réglementée) représente un problème majeur car elle :",
+      "o": [
+        "Constitue la principale source de revenus légaux pour les pêcheurs artisanaux des pays en développement",
+        "Soustrait des millions de tonnes de poissons du contrôle scientifique, biaisant l'évaluation des stocks",
+        "Est pratiquée uniquement par les flottes industrielles des pays développés en dehors de leurs eaux nationales",
+        "Améliore la sécurité alimentaire des populations pauvres en rendant le poisson accessible hors taxation"
+      ],
+      "r": 1,
+      "x": "La pêche INN échappe aux systèmes statistiques et réglementations, rendant les évaluations de stocks erronées et les mesures de gestion inefficaces. La FAO estime que la pêche INN représente 11 à 26 millions de tonnes par an mondialement, soit des pertes économiques de 10 à 23 milliards de dollars annuellement."
+    },
+    {
+      "q": "La biomasse de précaution (Bpa) en gestion halieutique est définie comme :",
+      "o": [
+        "La biomasse minimale de géniteurs nécessaire pour assurer un recrutement minimal suffisant pour le stock",
+        "La biomasse totale d'un stock à un instant donné estimée par une campagne acoustique de référence",
+        "La biomasse maximale qu'un stock peut atteindre en l'absence totale de pêche (biomasse vierge K)",
+        "Le niveau de biomasse au-dessus duquel le gestionnaire peut pêcher avec des règles normales de précaution"
+      ],
+      "r": 3,
+      "x": "La Bpa est le niveau au-dessus duquel l'état du stock est jugé sûr pour une exploitation normale. Entre Bpa et Blim (limite inférieure), des restrictions s'appliquent. En dessous de Blim, la pêche doit être drastiquement réduite ou arrêtée pour éviter l'effondrement du stock exploité."
+    },
+    {
+      "q": "La restauration des habitats aquatiques dégradés (reméandrement, végétalisation des berges) peut bénéficier aux ressources halieutiques en :",
+      "o": [
+        "Rétablissant la diversité des habitats (frayères, nourriceries, refuges) et en réduisant l'érosion des berges",
+        "Augmentant directement la productivité en poissons par apport de nutriments depuis les nouvelles plantations",
+        "Éliminant définitivement les espèces invasives (jacinthe d'eau) par compétition des plantes ripariennes",
+        "Réduisant le niveau d'eau des cours d'eau, concentrant les poissons pour faciliter leur capture par les pêcheurs"
+      ],
+      "r": 0,
+      "x": "La restauration des habitats (replantation de végétation rivulaire, reméandrement, création d'embâcles) améliore la diversité morphologique des cours d'eau, restaure les frayères et nourriceries, réduit l'érosion et améliore la qualité de l'eau. Elle favorise la reconstitution naturelle des stocks piscicoles dégradés."
+    },
+    {
+      "q": "Le modèle bioéconomique de Gordon-Schaefer combine la biologie et l'économie pour identifier :",
+      "o": [
+        "Uniquement le niveau de pêche biologiquement optimal (RMD) maximisant les captures à long terme",
+        "Le niveau d'effort où la mortalité par pêche est égale à la mortalité naturelle (F = M) du stock exploité",
+        "L'effort de pêche maximisant le revenu net (rente économique) des pêcheurs, différent du RMD biologique",
+        "La taille optimale de la flottille de pêche pour couvrir exactement les besoins alimentaires de la population"
+      ],
+      "r": 2,
+      "x": "Le modèle de Gordon-Schaefer introduit les coûts de pêche dans l'analyse. Il identifie l'effort économiquement optimal (EME) qui maximise la rente économique (recettes - coûts). L'EME est généralement inférieur à l'effort biologique optimal (EMRD), permettant des captures presque aussi élevées à moindre coût."
+    },
+    {
+      "q": "Parmi les indicateurs socio-économiques importants pour évaluer l'état d'une pêcherie artisanale, on inclut :",
+      "o": [
+        "Uniquement la production totale annuelle en tonnes, indicateur suffisant pour décider des mesures de gestion",
+        "Le revenu moyen par pêcheur, le niveau d'emploi dans le secteur et la sécurité alimentaire des ménages",
+        "Le prix de l'action en bourse des sociétés halieutiques nationales cotées sur les marchés financiers régionaux",
+        "Le niveau de formation académique des agents des services forestiers gérant les ressources halieutiques"
+      ],
+      "r": 1,
+      "x": "Une gestion halieutique efficace intègre des indicateurs socio-économiques : revenu des pêcheurs (pour évaluer leur bien-être), emplois générés (pour mesurer le poids social du secteur), contribution à la sécurité alimentaire, valeur ajoutée locale et dépendance des communautés par rapport à la ressource halieutique."
+    },
+    {
+      "q": "Les Systèmes d'Information Géographique (SIG) appliqués à la gestion des pêches permettent de :",
+      "o": [
+        "Calculer automatiquement la mortalité par pêche à partir des données GPS des pirogues de pêche",
+        "Produire en temps réel les estimations de stocks pour toutes les pêcheries africaines sans collecte de données",
+        "Remplacer les évaluations biologiques traditionnelles par des analyses spatiales satellitaires exclusives",
+        "Cartographier les zones de pêche, les habitats critiques, les frayères et visualiser la distribution des ressources"
+      ],
+      "r": 3,
+      "x": "Les SIG permettent de spatialiser les données halieutiques : cartographier les zones de pêche (activité, CPUE par zone), délimiter les habitats critiques (frayères, nourriceries), suivre les migrations et visualiser les impacts de l'exploitation sur la distribution des ressources. Ils sont des outils d'aide à la décision essentiels."
+    },
+    {
+      "q": "Les Comités Locaux de Gestion des Pêches (CLGP) au Burkina Faso sont des structures qui :",
+      "o": [
+        "Associent pêcheurs, autorités locales et services techniques pour gérer collectivement les ressources du plan d'eau",
+        "Sont composés uniquement de fonctionnaires du Ministère sans participation des pêcheurs et riverains",
+        "Ont le pouvoir de modifier unilatéralement la réglementation nationale des pêches pour leur zone géographique",
+        "Gèrent exclusivement les revenus de la taxe de pêche collectée sur le plan d'eau dont ils ont la charge"
+      ],
+      "r": 0,
+      "x": "Les CLGP associent les pêcheurs, les représentants des villages riverains, les autorités administratives et les services techniques. Ils définissent des règles d'usage locales complémentaires à la réglementation nationale, favorisant une gestion participative adaptée au contexte local de chaque plan d'eau."
+    },
+    {
+      "q": "La rente de rareté dans une pêcherie désigne :",
+      "o": [
+        "Les bénéfices exceptionnels réalisés par les pêcheurs lors des bonnes années de pêche abondantes et peu coûteuses",
+        "La perte économique subie par les pêcheurs en raison de la surexploitation qui réduit leurs captures annuelles",
+        "La valeur économique générée par la ressource naturelle rare (le stock de poissons) que la gestion doit préserver",
+        "Les taxes prélevées par l'État sur les recettes des pêcheurs pour financer la recherche halieutique nationale"
+      ],
+      "r": 2,
+      "x": "La rente de rareté est la valeur économique intrinsèque d'une ressource naturelle limitée. En l'absence de gestion, la libre accession conduit à la dissipation de cette rente (surexploitation). La gestion halieutique vise à préserver et à capturer cette rente pour les générations actuelles et futures."
+    },
+    {
+      "q": "Le fumage à froid (< 30°C) se distingue du fumage à chaud (> 60°C) par le fait qu'il :",
+      "o": [
+        "Cuit totalement la chair du poisson, produisant un produit sec prêt à la consommation immédiate",
+        "Dégrade entièrement les protéines par dénaturation thermique, augmentant la digestibilité du produit",
+        "Stérilise complètement le produit en détruisant tous les agents pathogènes y compris les spores bactériennes",
+        "Préserve une texture crue et une chair moelleuse mais nécessite une réfrigération car il ne cuit pas le poisson"
+      ],
+      "r": 3,
+      "x": "Le fumage à froid (< 30°C, 12-48h) imprègne le poisson de composés bactériostatiques de la fumée sans le cuire. La chair reste crue, souple et moelleuse. Le produit nécessite une conservation au froid car il n'est pas cuit ni stérilisé, contrairement au fumage à chaud qui cuit partiellement le poisson."
+    },
+    {
+      "q": "La méthode QIM (Quality Index Method) est utilisée pour évaluer la fraîcheur du poisson en :",
+      "o": [
+        "Attribuant des scores objectifs à des caractères sensoriels (yeux, branchies, peau) pour calculer un indice",
+        "Mesurant la concentration en ammoniaque produite par la putréfaction pour estimer l'âge post-mortem",
+        "Analysant la composition chimique (pH, ABVT) par chromatographie gazeuse pour dater précisément la mort",
+        "Comparant le profil électrophorétique des protéines musculaires à un référentiel de fraîcheur standardisé"
+      ],
+      "r": 0,
+      "x": "La méthode QIM attribue des pénalités (scores 0 à 3) à des paramètres sensoriels objectifs : aspect des yeux (clarté, renflement), odeur des branchies, aspect de la peau et texture de la chair. La somme des scores corrèle avec le temps post-mortem, permettant une estimation pratique de la durée de vie restante."
+    },
+    {
+      "q": "Le marinage du poisson dans un mélange acide (vinaigre, jus de citron) et sel permet de conserver le produit en :",
+      "o": [
+        "Stérilisant complètement le produit par destruction thermique de tous les agents pathogènes présents",
+        "Abaissant le pH en dessous de 4,5, inhibant la croissance de la plupart des bactéries pathogènes",
+        "Créant une couche de sel cristallisé imperméable bloquant physiquement toute contamination bactérienne",
+        "Activant les enzymes lysosomiales du poisson qui autodétruisent les bactéries dans les tissus musculaires"
+      ],
+      "r": 1,
+      "x": "Le marinage acidifie la chair du poisson par diffusion de l'acide acétique (vinaigre) ou citrique (jus de citron) en dessous de pH 4,5. À ce pH, la croissance de la majorité des bactéries pathogènes (Listeria, Salmonella, Staphylococcus) est inhibée. Le sel complète l'action en abaissant l'activité de l'eau."
+    },
+    {
+      "q": "La texture ferme de la chair de poisson frais se dégrade lors de la conservation par :",
+      "o": [
+        "La cristallisation des protéines myofibrillaires qui les rend trop dures et caoutchouteuses au toucher",
+        "La synthèse de nouvelles protéines de structure par les bactéries de putréfaction dans les myocytes",
+        "L'action des enzymes protéolytiques endogènes (cathepsines, calpaïnes) qui hydrolysent les myofibrilles",
+        "L'oxydation des protéines sarcoplasmiques par les radicaux libres produits lors de la respiration cellulaire"
+      ],
+      "r": 2,
+      "x": "L'autolyse post-mortem est due à l'activation des protéases endogènes (cathepsines lysosomiales, calpaïnes) qui hydrolysent les myofibrilles et le collagène. Cette protéolyse ramollit la texture de la chair (perte de fermeté) lors d'une conservation réfrigérée prolongée ou mal maîtrisée en conditions tropicales."
+    },
+    {
+      "q": "L'emballage sous atmosphère modifiée (MAP) du poisson frais consiste à :",
+      "o": [
+        "Remplacer l'air dans l'emballage par un mélange de gaz (CO2, N2, O2) inhibant la croissance bactérienne",
+        "Vider totalement l'air de l'emballage pour créer un vide poussé empêchant toute respiration aérobie",
+        "Injecter de l'ozone actif (O3) dans l'emballage pour stériliser chimiquement le produit sans irradiation",
+        "Emballer le poisson dans des films plastiques microperforés permettant la respiration du produit frais"
+      ],
+      "r": 0,
+      "x": "Le MAP remplace l'air ambiant par un mélange gazeux : généralement CO2 (30-40%, bactériostatique), N2 (60-70%, inerte, évite l'écrasement) et parfois O2. Le CO2 inhibe la croissance bactérienne, prolongeant la durée de conservation commerciale (DLC) de 1,5 à 3 fois par rapport à un emballage air standard."
+    },
+    {
+      "q": "La découpe du poisson en filets, sa surgélation et son emballage permettent de :",
+      "o": [
+        "Réduire le prix de vente final en éliminant la valeur des parties non consommables comme la tête et les arêtes",
+        "Réduire les pertes post-récolte en améliorant uniquement les conditions de stockage sans créer de valeur ajoutée",
+        "Créer une valeur ajoutée en améliorant la praticité d'utilisation, la durée de conservation et la présentation",
+        "Transformer intégralement la production locale sans aucun intrant importé, améliorant la balance commerciale"
+      ],
+      "r": 2,
+      "x": "La transformation (filetage, surgélation, emballage sous vide) crée de la valeur ajoutée : praticité (poisson prêt à l'emploi), durée de conservation (12-18 mois vs 2 jours pour le frais) et présentation attractive. Elle ouvre l'accès à des marchés à plus haute valeur ajoutée (supermarchés, restaurants, export)."
+    },
+    {
+      "q": "La télédétection satellitaire est utilisée dans le secteur halieutique pour :",
+      "o": [
+        "Compter directement les poissons dans les plans d'eau par imagerie infrarouge haute résolution depuis l'espace",
+        "Mesurer la concentration en oxygène dissous dans les lacs africains par spectroscopie satellitaire",
+        "Peser les captures des pêcheurs artisanaux par traitement d'images haute résolution des débarcadères",
+        "Cartographier les zones de productivité, la température de surface et identifier les zones de pêche potentielles"
+      ],
+      "r": 3,
+      "x": "Les images satellitaires (MODIS, Sentinel) permettent de cartographier la chlorophylle-a (indicateur de productivité primaire), la température de surface des plans d'eau, les anomalies thermiques et les variations du niveau des lacs et barrages. Ces données orientent les efforts de pêche et la gestion des ressources."
+    },
+    {
+      "q": "Le modèle de Beverton et Holt (1957) en dynamique des populations halieutiques permet de calculer :",
+      "o": [
+        "Le rendement par recrue (Y/R) en fonction de la mortalité par pêche, de l'âge de première capture et de la croissance",
+        "La biomasse totale d'un stock à partir des données de captures déclarées sur les 10 dernières années",
+        "Le nombre optimal d'alevins à relâcher dans un plan d'eau pour maximiser la production halieutique annuelle",
+        "La durée optimale du repos biologique nécessaire à la reconstitution d'un stock après une pêche excessive"
+      ],
+      "r": 0,
+      "x": "Le modèle de Beverton et Holt calcule le rendement par recrue (Y/R = kg de poisson produit par individu recruté) en fonction de F (mortalité par pêche), Lc (taille de première capture), L∞ (taille maximale) et K (coefficient de croissance). Il identifie l'effort et la taille de première capture optimaux."
+    },
+    {
+      "q": "En gestion halieutique, appliquer le principe de précaution revient principalement à accepter :",
+      "o": [
+        "Un risque élevé de type II (conclure à tort que le stock est en bon état quand il est surexploité)",
+        "Un risque de type I (déclarer à tort qu'un stock est en danger pour éviter d'ignorer une surexploitation réelle)",
+        "Un risque d'erreur nul en ayant suffisamment de données pour éliminer toute incertitude statistique",
+        "Un risque de type II uniquement quand les données sont suffisamment nombreuses et précises pour le valider"
+      ],
+      "r": 1,
+      "x": "Le principe de précaution accepte un risque d'erreur de type I (fausse alarme : limiter la pêche alors que le stock serait en bon état) pour éviter à tout prix l'erreur de type II (ignorer une surexploitation réelle). Les conséquences d'un effondrement du stock étant irréversibles, la prudence prédomine dans la gestion."
+    },
+    {
+      "q": "L'utilisation du big data (données massives) dans la gestion des pêches continentales africaines permet de :",
+      "o": [
+        "Remplacer totalement les campagnes d'évaluation de terrain par des algorithmes prédictifs infaillibles",
+        "Calculer automatiquement les quotas de pêche sans intervention humaine grâce à l'intelligence artificielle",
+        "Combiner des données hétérogènes (GPS, statistiques, télédétection, données socio-économiques) pour améliorer la gestion",
+        "Accéder en temps réel aux données de prix de vente des poissons sur tous les marchés de gros africains"
+      ],
+      "r": 2,
+      "x": "Le big data en halieutique intègre des données disparates : positions GPS des pirogues, statistiques de débarquement via applications mobiles, données satellitaires de productivité, données climatiques et informations socio-économiques. Ces données combinées améliorent la précision des évaluations et la réactivité de la gestion."
+    },
+    {
+      "q": "Le Code de conduite pour une pêche responsable (CCPR) adopté par la FAO en 1995 est :",
+      "o": [
+        "Non contraignant mais de référence mondiale établissant les principes d'une pêche et d'une aquaculture durables",
+        "Contraignant juridiquement et imposant des sanctions financières aux États ne respectant pas ses dispositions",
+        "Applicable uniquement aux pêches maritimes et excluant explicitement les pêcheries continentales d'eau douce",
+        "Réservé aux flottes industrielles de plus de 24 mètres, exempt pour les pêcheurs artisanaux en pirogue"
+      ],
+      "r": 0,
+      "x": "Le CCPR (1995) est un document volontaire, non contraignant, mais reconnu comme la référence mondiale pour la gestion durable des pêches et de l'aquaculture. Il couvre la pêche maritime, continentale et l'aquaculture. Il a inspiré de nombreuses législations nationales halieutiques dont les politiques burkinabè."
+    },
+    {
+      "q": "Un partenariat public-privé (PPP) dans le secteur halieutique burkinabè peut prendre la forme de :",
+      "o": [
+        "La nationalisation totale des ressources halieutiques par le gouvernement avec indemnisation des opérateurs privés",
+        "La cession gratuite et définitive de tous les droits de pêche à des opérateurs privés sans contrepartie",
+        "L'interdiction totale de tout investissement privé dans le secteur halieutique réservé aux coopératives publiques",
+        "La concession de zones aquacoles ou de pêche à des opérateurs privés sous conditions fixées par l'État partenaire"
+      ],
+      "r": 3,
+      "x": "Les PPP halieutiques permettent à l'État de valoriser ses ressources naturelles (plans d'eau publics) en mobilisant des investissements privés pour le développement de l'aquaculture. La concession fixe les obligations de l'opérateur (production, emploi local, normes environnementales) et les droits d'usage accordés par l'État."
+    },
+    {
+      "q": "En droit burkinabè, les cours d'eau, lacs et barrages appartiennent au :",
+      "o": [
+        "Secteur privé, les investisseurs pouvant acheter des portions de plans d'eau pour développer l'aquaculture",
+        "Domaine public de l'État, l'usage en étant accordé par concession, autorisation ou permis selon les activités",
+        "Domaine des collectivités territoriales décentralisées (communes, régions) depuis la décentralisation de 2004",
+        "Domaine des communautés riveraines traditionnelles, les droits coutumiers prévalant sur le droit moderne"
+      ],
+      "r": 1,
+      "x": "En droit burkinabè (et droit UEMOA), les eaux continentales constituent des ressources naturelles appartenant au domaine public de l'État. Leur utilisation (pêche, aquaculture, irrigation, eau potable) est accordée par l'État via des permis, autorisations ou concessions selon la nature et l'ampleur de l'activité."
+    },
+    {
+      "q": "Les taxes et redevances perçues sur les activités halieutiques devraient idéalement être utilisées pour :",
+      "o": [
+        "Financer la gestion des ressources (surveillance, recherche, formation des pêcheurs) et les infrastructures sectorielles",
+        "Alimenter le budget général de l'État sans affectation spécifique au secteur halieutique qui les a générées",
+        "Rémunérer exclusivement les agents forestiers affectés au contrôle de la pêche sur les plans d'eau",
+        "Financer les importations de poisson congelé nécessaires pour combler le déficit halieutique national"
+      ],
+      "r": 0,
+      "x": "Idéalement, les recettes fiscales du secteur halieutique devraient être réinvesties dans la gestion durable des ressources : surveillance des pêcheries, recherche halieutique, formation des pêcheurs, alevinage des plans d'eau et développement des infrastructures. Cependant, en droit des finances publiques, le principe d'universalité budgétaire tend à orienter ces recettes vers le budget général de l'État (option B)."
+    },
+    {
+      "q": "La recherche halieutique nationale au Burkina Faso est principalement conduite par :",
+      "o": [
+        "Les coopératives de pêcheurs qui financent elles-mêmes leurs propres programmes de recherche appliquée",
+        "Les laboratoires privés des entreprises aquacoles qui publient leurs résultats dans des revues scientifiques",
+        "L'Institut de l'Environnement et de Recherches Agricoles (INERA) et les universités burkinabè (IDR, UFR-SVT)",
+        "Les agences internationales (FAO, WorldFish) qui gèrent directement toute la recherche halieutique nationale"
+      ],
+      "r": 2,
+      "x": "L'INERA conduit des recherches sur les ressources halieutiques et aquacoles au Burkina Faso. Les universités (Institut du Développement Rural de Bobo-Dioulasso, UFR Sciences de la Vie et de la Terre de Ouagadougou) forment les techniciens et conduisent des recherches académiques en halieutique et aquaculture."
+    },
+    {
+      "q": "La mise en place de registres de débarquements via des applications mobiles smartphone présente l'avantage de :",
+      "o": [
+        "Remplacer totalement les enquêtes de terrain, les téléphones collectant automatiquement toutes les données",
+        "Garantir une précision absolue des données collectées, éliminant toutes les erreurs humaines de déclaration",
+        "Fonctionner parfaitement même sans connexion internet dans les zones rurales reculées des pays sahéliens",
+        "Faciliter la collecte en temps réel, réduire les délais de traitement et améliorer la couverture géographique"
+      ],
+      "r": 3,
+      "x": "Les applications mobiles (ODK, KoBoToolbox) facilitent la saisie des données sur le terrain, permettent la transmission immédiate au serveur central (quand la connexion est disponible) et réduisent les erreurs de transcription. Elles améliorent la couverture et la réactivité des systèmes statistiques halieutiques nationaux."
+    },
+    {
+      "q": "La notion de biodiversité ichtyologique endémique est moins marquée au Burkina Faso que dans certains pays africains car :",
+      "o": [
+        "Le Burkina Faso est un pays sahélien avec trop peu d'espèces de poissons pour développer des espèces endémiques",
+        "Les sécheresses récurrentes ont éliminé toutes les espèces endémiques depuis 1970 sans laisser de fossiles",
+        "L'ichtyofaune burkinabè a été entièrement remplacée par des espèces introduites lors des projets de développement",
+        "Le pays n'a pas de bassins versants très anciens et isolés propices au développement d'un fort endémisme"
+      ],
+      "r": 3,
+      "x": "L'endémisme ichtyologique est maximal dans les vieux bassins lacustres isolés (lacs Tanganyika, Malawi, Victoria). Les bassins fluviaux du Burkina Faso sont plus récents et connectés aux grands systèmes ouest-africains (Volta, Niger), limitant l'endémisme local et favorisant des ichtyofaunes partagées avec les pays voisins."
+    },
+    {
+      "q": "L'Institut du Développement Rural (IDR) de Bobo-Dioulasso forme des spécialistes en halieutique qui peuvent exercer comme :",
+      "o": [
+        "Exclusivement comme chercheurs dans les laboratoires de l'INERA sans possibilité d'exercer dans le secteur privé",
+        "Techniciens et ingénieurs en pisciculture, conseillers en gestion des pêches ou responsables de projets aquacoles",
+        "Agents des douanes spécialisés dans le contrôle sanitaire des importations de poisson congelé aux frontières",
+        "Enseignants exclusivement dans les lycées agricoles sans accréditation pour le secteur de la pêche nationale"
+      ],
+      "r": 1,
+      "x": "L'IDR (Université Nazi Boni, Bobo-Dioulasso) forme des ingénieurs agronomes avec spécialisations en halieutique. Les diplômés peuvent travailler comme pisciculteurs privés, conseillers en gestion des pêches dans les ONG, responsables de projets aquacoles dans les administrations ou la recherche halieutique nationale."
+    },
+    {
+      "q": "Les marchés de poisson les plus importants de Ouagadougou (marché de Rood Woko) distribuent principalement :",
+      "o": [
+        "Du poisson d'élevage local (tilapia, Clarias) provenant exclusivement des fermes péri-urbaines ouagalaises",
+        "Du poisson séché artisanal provenant de la pêche maritime des pêcheurs sénégalais côtiers importé en sacs",
+        "Du poisson congelé importé et du poisson fumé artisanal local provenant des barrages burkinabè",
+        "Des espèces de poissons d'eau douce ornementaux destinés aux aquariums des familles aisées de Ouagadougou"
+      ],
+      "r": 2,
+      "x": "Les marchés de poisson à Ouagadougou proposent deux types principaux : le poisson congelé importé (chinchard, maquereau à prix abordable pour les ménages modestes) et le poisson fumé ou séché artisanal burkinabè issu des pêcheries des barrages. Le poisson frais local reste rare et réservé aux consommateurs plus aisés."
+    },
+    {
+      "q": "Le bassin versant de la Comoé dans le sud-ouest du Burkina Faso présente un intérêt halieutique car :",
+      "o": [
+        "Sa végétation soudanienne dense et ses eaux permanentes abritent une ichtyofaune plus diversifiée qu'en zone sahélienne",
+        "Il constitue la principale source d'approvisionnement en poissons frais pour les marchés de Bobo-Dioulasso",
+        "Il est le principal site de production aquacole en cage flottante du Burkina Faso grâce à ses eaux profondes",
+        "Il constitue le seul bassin fluvial permanent du Burkina Faso capable d'alimenter des fermes aquacoles intensives"
+      ],
+      "r": 0,
+      "x": "La zone soudanienne du sud-ouest burkinabè (bassin de la Comoé, région du Tannounyan) bénéficie de précipitations plus élevées (1 100-1 200 mm/an) et d'une végétation dense. Les cours d'eau y sont plus permanents et la biodiversité ichtyologique plus riche qu'en zone sahélienne plus au nord."
+    },
+    {
+      "q": "La Mare d'Oursi, zone Ramsar dans le Sahel burkinabè, est écologiquement remarquable car :",
+      "o": [
+        "Elle constitue le plus grand lac naturel du Burkina Faso avec une superficie dépassant 100 000 hectares",
+        "Elle est alimentée par un cours d'eau permanent garantissant un niveau d'eau stable toute l'année en saison sèche",
+        "Elle est le principal site de reproduction du crocodile du Nil (Crocodylus niloticus) au Burkina Faso septentrional",
+        "C'est une zone humide temporaire sahélienne abritant des milliers d'oiseaux migrateurs et une ichtyofaune adaptée"
+      ],
+      "r": 3,
+      "x": "La Mare d'Oursi (province d'Oudalan, Liptako) est une zone humide temporaire sahélienne classée Ramsar. Elle accueille des dizaines de milliers d'oiseaux d'eau migrateurs (anatidés, limicoles) et une ichtyofaune adaptée aux conditions variables (températures élevées, teneurs en O2 fluctuantes selon les saisons)."
+    },
+    {
+      "q": "La crise sécuritaire au Burkina Faso (depuis 2015) et les déplacements de populations ont affecté le secteur halieutique en :",
+      "o": [
+        "Augmentant significativement la production nationale grâce aux nouveaux pêcheurs déplacés installés sur les barrages",
+        "Perturbant l'accès aux zones de pêche, réduisant les activités dans certaines régions et aggravant l'insécurité alimentaire",
+        "Forçant les communautés de pêcheurs à s'organiser en coopératives fortement capitalisées pour maintenir leurs activités",
+        "Stimulant les importations de poissons à un niveau record, comblant entièrement le déficit de production nationale"
+      ],
+      "r": 1,
+      "x": "La dégradation de la situation sécuritaire dans plusieurs localités du Burkina Faso a restreint l'accès à certaines zones de pêche et entraîné le déplacement de nombreuses populations riveraines. Ces perturbations ont affecté la production halieutique, réduit les revenus des acteurs de la filière et accru les risques d'insécurité alimentaire dans les zones touchées."
+    },
+    {
+      "q": "Le lac de Tingrela (province de la Léraba, Tannounyan) est particulièrement connu pour abriter :",
+      "o": [
+        "La principale ferme aquacole semi-industrielle du Burkina Faso produisant du tilapia pour l'exportation",
+        "La plus grande colonie de pélicans blancs d'Afrique de l'Ouest qui pêche intensivement dans ses eaux",
+        "Une population d'hippopotames (Hippopotamus amphibius) et une richesse piscicole remarquable dans la région",
+        "Les premiers essais d'élevage de crevettes d'eau douce (Macrobrachium rosenbergii) au Burkina Faso"
+      ],
+      "r": 2,
+      "x": "Le lac de Tingrela dans la région de Tannounyan (ex. Cascades) est réputé pour sa population d'hippopotames et sa richesse en poissons. Cette zone humide forestière en zone soudano-guinéenne abrite une biodiversité aquatique remarquable. Le tourisme d'observation des hippopotames s'y développe en complément de la pêche artisanale traditionnelle."
+    },
+    {
+      "q": "La pisciculture péri-urbaine à Ouagadougou est développée principalement autour de :",
+      "o": [
+        "Des anciens barrages d'irrigation et des mares aménagées dans la périphérie de la capitale burkinabè",
+        "Des usines de traitement des eaux usées qui fournissent des effluents riches en nutriments pour les étangs",
+        "Des tunnels souterrains de recirculation utilisant les eaux résiduaires du réseau d'assainissement urbain",
+        "Des bassins en béton armé construits sur les toits-terrasses des immeubles résidentiels du centre-ville"
+      ],
+      "r": 0,
+      "x": "La pisciculture péri-urbaine à Ouagadougou se développe autour des aménagements hydrauliques de la périphérie : petits barrages collinaires, mares aménagées, étangs en terre dans les zones maraîchères périurbaines. Ces piscicultures approvisionnent en poisson frais (tilapia, Clarias) les marchés et restaurants de la capitale."
+    },
+    {
+      "q": "La principale organisation représentant les pêcheurs et aquaculteurs burkinabè au niveau national est :",
+      "o": [
+        "La Fédération Nationale des Entreprises Agro-Alimentaires du Burkina Faso (FENAPAB)",
+        "L'Union Nationale des Pêcheurs Artisanaux du Burkina Faso (UNPABF) ou une structure faîtière équivalente",
+        "La Chambre des Métiers de l'Agriculture du Burkina Faso (CMA-BF) qui intègre toutes les filières rurales",
+        "L'Association des Exportateurs de Poisson du Burkina Faso (AEPBF) qui représente les grands opérateurs"
+      ],
+      "r": 1,
+      "x": "Le secteur halieutique burkinabè est organisé en coopératives et unions locales fédérées au niveau national dans des structures faîtières (UNPABF ou équivalents). Ces organisations représentent les intérêts des producteurs, facilitent l'accès aux intrants et assurent la commercialisation collective du poisson."
+    },
+    {
+      "q": "Des conflits d'usage de l'eau existent entre alimentation en eau potable et aquaculture dans certaines communes car :",
+      "o": [
+        "L'aquaculture utilise du chlore pour désinfecter les étangs, contaminant les nappes phréatiques d'eau potable",
+        "Les poissons d'élevage consomment l'eau potable traitée des forages, épuisant les réserves villageoises",
+        "Les mêmes retenues collinaires servent à la fois de réserve d'eau potable et de site potentiel pour les étangs",
+        "La réglementation burkinabè interdit formellement l'aquaculture à moins de 5 km de tout captage d'eau potable"
+      ],
+      "r": 2,
+      "x": "Dans les communes rurales burkinabè, les petits barrages collinaires servent à la fois de source d'eau potable, d'abreuvement du bétail, d'irrigation maraîchère et de site potentiel pour l'aquaculture. Cette multifonctionnalité génère des conflits d'usage nécessitant une planification concertée de la GIRE locale."
+    },
+    {
+      "q": "Le poisson-chat africain (Clarias gariepinus) est commercialisé au Burkina Faso principalement sous la forme :",
+      "o": [
+        "De filets frais réfrigérés vendus dans les supermarchés des grandes villes, ciblant les ménages à revenus élevés",
+        "De poisson entier congelé importé de Côte d'Ivoire via les circuits commerciaux formels de la région CEDEAO",
+        "D'exportations massives vers le Nigeria et le Ghana qui sont les principaux marchés régionaux de cette espèce",
+        "De poisson fumé ou séché vendu sur les marchés locaux, ou vivant dans des bassins de vente aux particuliers"
+      ],
+      "r": 3,
+      "x": "Clarias gariepinus burkinabè est commercialisé sous deux formes principales : fumé ou séché pour la conservation longue durée sur les marchés ruraux et urbains, et vivant dans des bassins d'eau ou des sacs oxygénés pour les consommateurs souhaitant du poisson frais dans les villes burkinabè."
+    },
+    {
+      "q": "La variabilité interannuelle de la pluviométrie au Burkina Faso affecte directement les ressources halieutiques car :",
+      "o": [
+        "Les niveaux d'eau des barrages et la superficie des plans d'eau varient fortement selon les années hydrologiques",
+        "Les pluies acides liées à la pollution atmosphérique régionale acidifient les plans d'eau en années sèches",
+        "Les années de sécheresse augmentent la salinité des eaux de surface rendant le milieu impropre aux espèces dulçaquicoles",
+        "La surcharge de phosphore apportée par les pluies torrentielles cause une eutrophisation systématique des barrages"
+      ],
+      "r": 0,
+      "x": "En années de faible pluviométrie (déficit de pluie), les niveaux d'eau des barrages burkinabè chutent significativement, réduisant les surfaces en eau et concentrant les poissons dans des zones restreintes. Cette variation annuelle des plans d'eau affecte directement la production halieutique et les revenus des pêcheurs."
+    },
+    {
+      "q": "Le poisson contribue à la nutrition des populations burkinabè principalement en apportant :",
+      "o": [
+        "Des glucides complexes essentiels à l'apport énergétique des populations rurales en période de soudure alimentaire",
+        "Des protéines animales à haute valeur biologique, des acides gras essentiels et des minéraux (calcium, iode, zinc)",
+        "Des vitamines liposolubles (A, D, K) uniquement disponibles dans le poisson et absentes de l'alimentation locale",
+        "Des fibres alimentaires solubles nécessaires au bon fonctionnement du transit intestinal des populations rurales"
+      ],
+      "r": 1,
+      "x": "Le poisson est une excellente source de protéines animales à haute valeur biologique (acides aminés essentiels), d'acides gras oméga-3 (santé cardiovasculaire, développement cérébral), de calcium (os) et d'iode (thyroïde). Ces nutriments sont souvent déficients dans les régimes à base de céréales et légumineuses des populations burkinabè."
+    },
+    {
+      "q": "L'élevage de la crevette d'eau douce géante (Macrobrachium rosenbergii) au Burkina Faso est marginal car :",
+      "o": [
+        "La crevette d'eau douce est une espèce marine qui ne peut pas survivre dans les eaux douces continentales africaines",
+        "La réglementation burkinabè interdit formellement l'introduction de tout crustacé exotique dans les plans d'eau",
+        "La maîtrise technique de sa reproduction en écloserie et ses exigences en eau claire et oxygénée la rendent difficile",
+        "Le marché burkinabè n'a aucune demande pour les crevettes d'eau douce, les consommateurs ne les connaissant pas"
+      ],
+      "r": 2,
+      "x": "Macrobrachium rosenbergii nécessite des larves élevées en eau légèrement saumâtre (complexité de l'écloserie), puis un grossissement en eau douce claire et bien oxygénée. Ces exigences techniques et la nécessité de maîtriser la reproduction en captivité limitent son développement au Burkina Faso malgré un potentiel commercial intéressant."
+    },
+    {
+      "q": "Sous la Transition au Burkina Faso (décret 2026-0006), la gestion des ressources halieutiques relève du Ministère chargé de :",
+      "o": [
+        "L'Environnement et de la Lutte contre la Désertification, qui gère toutes les ressources naturelles nationales",
+        "L'Économie et des Finances, les ressources halieutiques étant reclassées comme ressources extractibles nationales",
+        "L'Enseignement Supérieur, la recherche halieutique devant précéder tout développement du secteur aquacole",
+        "L'Agriculture, de l'Eau et des Ressources Animales et Halieutiques"
+      ],
+      "r": 3,
+      "x": "Selon le Décret N°2026-0006/PF/PRIM du 12 janvier 2026, les ressources animales et halieutiques relèvent du Ministère de l'Agriculture, de l'Eau et des Ressources animales et halieutiques. Ce ministère intégré gère à la fois l'agriculture, les ressources en eau, l'élevage et les ressources halieutiques."
+    },
+    {
+      "q": "Le fleuve Nazinon (anciennement Volta Rouge) dans la région du Nazinon (ex centre-sud) présente un potentiel halieutique :",
+      "o": [
+        "Limité par la faible permanence de ses eaux et sa forte saisonnalité, mais avec une pêche artisanale active en saison",
+        "Très élevé avec une production annuelle supérieure à celle du barrage de Bagré grâce à sa longueur exceptionnelle",
+        "Nul, les eaux du Nazinon étant trop polluées par les activités agricoles intensives de la région du Nazinon",
+        "Exclusivement orienté vers l'aquaculture industrielle grâce aux concessions accordées à des entreprises privées"
+      ],
+      "r": 0,
+      "x": "Le Nazinon (Volta Rouge) est un fleuve saisonnier à crues estivales et à étiage sévère en saison sèche. Sa permanence est insuffisante pour soutenir une pêche intensive. La pêche artisanale saisonnière y est pratiquée lors des crues, profitant des migrations reproductives des poissons vers les plaines inondées."
+    },
+    {
+      "q": "Les perturbateurs endocriniens (pesticides, plastifiants, hormones synthétiques) présents dans les eaux affectent les poissons en :",
+      "o": [
+        "Augmentant la croissance des poissons par action anabolisante directe sur les récepteurs aux hormones de croissance",
+        "Perturbant la reproduction (féminisation des mâles, intersexualité) et le système hormonal des poissons exposés",
+        "Réduisant la production de mélanine et dépigmentant les écailles des espèces à coloration vive",
+        "Stimulant l'hyperactivité des poissons et leur comportement migratoire par action sur le système nerveux central"
+      ],
+      "r": 1,
+      "x": "Les perturbateurs endocriniens (BPA, phtalates, certains pesticides, hormones stéroïdes des effluents urbains) miment ou bloquent les hormones naturelles des poissons. Les cas les plus documentés incluent la féminisation des mâles et l'intersexualité chez les poissons vivant dans les eaux polluées par des effluents urbains ou agricoles."
+    },
+    {
+      "q": "La pollution lumineuse (éclairage nocturne artificiel) peut affecter les ressources halieutiques en :",
+      "o": [
+        "Augmentant la productivité primaire nocturne par photosynthèse artificielle des algues dans les plans d'eau urbains",
+        "Réduisant la prédation nocturne des oiseaux piscivores, augmentant paradoxalement les stocks piscicoles",
+        "Perturbant les comportements migratoires nocturnes, la reproduction et les cycles circadiens des poissons",
+        "Stimulant la concentration des poissons phototactiques dans les zones éclairées, facilitant leur capture artisanale"
+      ],
+      "r": 2,
+      "x": "La pollution lumineuse perturbe les cycles biologiques des poissons qui utilisent la photopériode pour synchroniser leur reproduction, leurs migrations et leur activité nocturne. Elle attire certaines espèces phototactiques positives vers les zones éclairées où elles peuvent être prédatées ou pêchées de manière plus intensive."
+    },
+    {
+      "q": "Les poissons sont utilisés comme espèces sentinelles de la qualité de l'eau car :",
+      "o": [
+        "Ils sont les seuls organismes aquatiques capables d'accumuler tous les types de contaminants chimiques",
+        "Leur état de santé, leur comportement et leur présence/absence reflètent la qualité globale du milieu aquatique",
+        "Ils peuvent être facilement prélevés et analysés en laboratoire sans perturbation de l'écosystème aquatique",
+        "Les dosages de contaminants dans leur chair sont moins coûteux que les analyses chimiques directes de l'eau"
+      ],
+      "r": 1,
+      "x": "Les poissons intègrent dans le temps les effets des contaminants et des perturbations de l'écosystème. Leur présence/absence, leur diversité spécifique, leur état pathologique (lésions, intersexualité) et les teneurs en contaminants dans leurs tissus sont des indicateurs pertinents de la qualité globale du milieu aquatique."
+    },
+    {
+      "q": "La restauration d'une mare permanente asséchée dans le Sahel burkinabè peut bénéficier aux ressources halieutiques en :",
+      "o": [
+        "Permettant l'introduction d'espèces marines adaptées à tolérer la salinité temporaire de l'eau restaurée",
+        "Créant immédiatement une pêcherie productive grâce aux poissons de la nappe phréatique qui remonte en surface",
+        "Remplaçant la végétation terrestre par des espèces aquatiques dont la biomasse fertilise immédiatement le plan d'eau",
+        "Reconstituant un habitat aquatique et favorisant la recolonisation naturelle depuis les plans d'eau adjacents"
+      ],
+      "r": 3,
+      "x": "La restauration d'une mare (curage, revégétalisation des berges, alimentation par petites retenues) recrée un habitat aquatique. Si des plans d'eau permanents subsistent à proximité, la recolonisation naturelle par les poissons se produit lors des crues qui établissent des connexions hydrologiques temporaires entre les plans d'eau."
+    },
+    {
+      "q": "Parmi les indicateurs de l'impact du changement climatique sur les pêcheries burkinabè, le plus directement mesurable par les pêcheurs locaux est :",
+      "o": [
+        "L'évolution du niveau d'eau des barrages au fil des années sèches et humides successives",
+        "La modification de la composition isotopique des otolithes des poissons capturés en saison sèche",
+        "Le décalage du niveau de la thermocline dans les barrages profonds entre les saisons sèche et humide",
+        "La variation de la concentration en CO2 dissous dans les eaux de surface en fonction de la température ambiante"
+      ],
+      "r": 0,
+      "x": "Les pêcheurs observent directement et quotidiennement les niveaux d'eau des barrages et leurs variations interannuelles. La tendance à la baisse des niveaux maximaux et à l'intensification des étiages est perceptible par les communautés de pêcheurs, qui constituent une source précieuse de données sur les changements climatiques à long terme."
+    },
+    {
+      "q": "Les nanoparticules métalliques (TiO2, nAg, ZnO) utilisées dans l'industrie et les cosmétiques représentent un risque pour les écosystèmes aquatiques car elles :",
+      "o": [
+        "Augmentent la conductivité des eaux réceptrices à des niveaux toxiques pour les espèces benthiques sensibles",
+        "Forment des précipités alcalins qui augmentent le pH des plans d'eau à des niveaux létaux pour les poissons",
+        "Présentent une toxicité encore mal connue et des effets potentiels sur les organismes aquatiques à faibles concentrations",
+        "Détruisent la couche d'ozone des étangs, augmentant l'exposition des poissons aux rayonnements UV nocifs"
+      ],
+      "r": 2,
+      "x": "Les nanomatériaux présentent des propriétés physico-chimiques différentes de leurs formes macroscopiques (très grande surface spécifique, réactivité accrue). Leur toxicité aquatique est émergente et encore mal documentée, mais des effets sur la reproduction et le développement des poissons ont été observés à de très faibles concentrations."
+    },
+    {
+      "q": "Le bruit sous-marin produit par les pirogues à moteur hors-bord sur les barrages burkinabè peut affecter les poissons en :",
+      "o": [
+        "Augmentant leur production de mucus protecteur, ce qui améliore paradoxalement leur résistance aux parasites",
+        "Perturbant leur communication acoustique, leur comportement et provoquant un stress chronique par exposition répétée",
+        "Stimulant leur appétit par l'effet vibratoire des moteurs sur les parois de la cavité buccale des poissons",
+        "Améliorant la dispersion spatiale des poissons sur l'ensemble du barrage, réduisant la pression de pêche locale"
+      ],
+      "r": 1,
+      "x": "Les poissons utilisent les sons pour communiquer (parade nuptiale), détecter les prédateurs et s'orienter. Le bruit des moteurs hors-bord crée une pollution sonore sous-marine qui masque ces signaux biologiques, provoque des fuites, une désorientation et un stress chronique réduisant les performances reproductives des poissons."
+    },
+    {
+      "q": "La fragmentation des habitats aquatiques par les petits barrages agricoles dans les cours d'eau burkinabè affecte les poissons en :",
+      "o": [
+        "Augmentant la productivité en poissons dans les zones amont grâce à l'accumulation de nutriments retenus",
+        "Permettant aux espèces invasives de coloniser les zones isolées protégées des prédateurs naturels migrateurs",
+        "Bloquant les migrations des poissons et isolant génétiquement les populations des différents tronçons",
+        "Améliorant la qualité de l'eau en aval par filtration naturelle des sédiments dans la retenue formée"
+      ],
+      "r": 2,
+      "x": "Les seuils et petits barrages agricoles constituent des obstacles aux migrations des poissons (reproductrices, alimentaires). Ils isolent génétiquement les populations des différents tronçons de cours d'eau et peuvent provoquer des extinctions locales des espèces migratrices obligatoires qui ne peuvent plus accéder à leurs frayères."
+    },
+    {
+      "q": "La Politique Nationale de l'Eau du Burkina Faso intègre les ressources halieutiques dans ses objectifs car :",
+      "o": [
+        "Les activités de pêche représentent la principale demande en eau du secteur agricole burkinabè en volume",
+        "L'eau est la ressource fondamentale des écosystèmes aquatiques et une gestion équilibrée est nécessaire",
+        "Les droits halieutiques sont exclusivement définis dans la Politique Nationale de l'Eau et nulle part ailleurs",
+        "Les barrages burkinabè sont construits principalement pour les besoins de la pêche artisanale nationale"
+      ],
+      "r": 1,
+      "x": "La Politique Nationale de l'Eau du Burkina Faso vise une gestion équilibrée et durable des ressources en eau. Elle intègre les besoins des écosystèmes aquatiques (débits écologiques) et des secteurs usagers dont la pêche et l'aquaculture, reconnaissant leur contribution à la sécurité alimentaire et aux revenus ruraux."
+    },
+    {
+      "q": "La découverte de microplastiques dans les poissons des barrages burkinabè constituerait une préoccupation de santé publique car :",
+      "o": [
+        "Les microplastiques augmentent la durée de conservation du poisson en le préservant naturellement de la putréfaction",
+        "Ils améliorent la qualité nutritive du poisson en apportant des minéraux traces essentiels aux consommateurs",
+        "Les plastiques servent d'habitat aux bactéries bénéfiques qui améliorent la productivité halieutique des barrages",
+        "Ils peuvent véhiculer des contaminants chimiques adsorbés et s'accumulent dans la chair consommée par l'homme"
+      ],
+      "r": 3,
+      "x": "Les microplastiques (fibres de vêtements, fragments d'emballages) sont croissants dans les milieux d'eau douce africains. Ingérés par les poissons, ils peuvent obstruer le tube digestif et libérer dans les tissus des contaminants chimiques adsorbés (PCB, phtalates, bisphénol A), menaçant la sécurité sanitaire des produits halieutiques."
+    },
+    {
+      "q": "Les lacs et barrages (milieux lentiques) peuvent contribuer à l'émission de gaz à effet de serre car :",
+      "o": [
+        "La décomposition anaérobie de la matière organique dans les sédiments anoxiques produit du méthane (CH4)",
+        "La photosynthèse du phytoplancton produit de l'oxyde nitreux (N2O) qui s'accumule dans l'eau puis s'échappe",
+        "La dissolution du CO2 atmosphérique dans l'eau libère de l'oxygène dans l'atmosphère par la photolyse",
+        "Les poissons expirent du CO2 en grandes quantités lors de leur respiration branchiale en eau chaude tropicale"
+      ],
+      "r": 0,
+      "x": "Les sédiments anoxiques des lacs et barrages tropicaux sont des sources importantes de méthane (CH4, 25 fois plus puissant que le CO2 comme gaz à effet de serre). La décomposition anaérobie de la matière organique sédimentée produit du CH4 qui s'échappe sous forme de bulles vers l'atmosphère."
+    },
+    {
+      "q": "L'indicateur biologique indice d'intégrité biotique (IBI) évalue la santé écologique d'un plan d'eau en se basant sur :",
+      "o": [
+        "Uniquement la concentration en chlorophylle-a et la transparence de Secchi mesurées mensuellement",
+        "La température de l'eau et le pH mesurant les conditions physicochimiques globales favorables à la vie aquatique",
+        "La composition, la diversité et l'abondance des communautés de poissons par rapport à un état de référence non perturbé",
+        "Le volume total d'eau disponible et sa variation saisonnière sur l'ensemble de l'année hydrologique"
+      ],
+      "r": 2,
+      "x": "L'IBI (Index of Biotic Integrity) évalue la santé écologique d'un milieu aquatique par comparaison de la communauté piscicole actuelle (diversité, structure trophique, état de santé des individus) à une communauté de référence non perturbée. Un IBI faible révèle une dégradation anthropique significative du plan d'eau."
     }
   ]
 };

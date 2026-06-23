@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.21 - V63.21 : Likes Firestore + Modération admin (pin/delete)
+// Version 6.3.22 - V63.22 : +1115 questions (francais, halieutique, informatique, environnement, cg)
 
-const CACHE_NAME = 'bara-concours-v6-3-21';
+const CACHE_NAME = 'bara-concours-v6-3-22';
 const APP_SHELL = [
   './',
   './index.html',
