@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.24 - V63.24 : Fix SW intercepte plus Firebase/Firestore (résout bug forum likes)
+// Version 6.3.25 - V63.25 : Fix likesCount manquant dans getAllTopics/listenToTopics
 
-const CACHE_NAME = 'bara-concours-v6-3-24';
+const CACHE_NAME = 'bara-concours-v6-3-25';
 const APP_SHELL = [
   './',
   './index.html',

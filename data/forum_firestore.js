@@ -75,6 +75,7 @@ const ForumFirestore = {
           authorIsPremium: data.authorIsPremium || false,
           createdAt: data.createdAt ? (data.createdAt.toMillis ? data.createdAt.toMillis() : data.createdAt) : Date.now(),
           repliesCount: data.repliesCount || 0,
+          likesCount: data.likesCount || 0,  // V63.25 : Lire le compteur de likes
           isPinned: data.isPinned || false,
           isHidden: data.isHidden || false
         });
@@ -134,6 +135,7 @@ const ForumFirestore = {
           authorIsPremium: data.authorIsPremium || false,
           createdAt: data.createdAt ? (data.createdAt.toMillis ? data.createdAt.toMillis() : data.createdAt) : Date.now(),
           repliesCount: data.repliesCount || 0,
+          likesCount: data.likesCount || 0,  // V63.25 : Lire le compteur de likes
           isPinned: data.isPinned || false,
           isHidden: data.isHidden || false
         });
