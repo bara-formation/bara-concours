@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.23 - V63.23 : Dégrisage ciblé halieutique + informatique (13 concours)
+// Version 6.3.24 - V63.24 : Fix SW intercepte plus Firebase/Firestore (résout bug forum likes)
 
-const CACHE_NAME = 'bara-concours-v6-3-23';
+const CACHE_NAME = 'bara-concours-v6-3-24';
 const APP_SHELL = [
   './',
   './index.html',
@@ -54,6 +54,32 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   // Ignorer les requêtes non-GET
   if (event.request.method !== 'GET') return;
+
+  const url = event.request.url;
+
+  // V63.24 : NE PAS intercepter les requêtes Firebase / Firestore / Google APIs
+  // Ces requêtes sont des WebSockets/streaming temps réel qui ne doivent JAMAIS être cachées
+  // Sinon le SW les fait planter et le forum / auth ne marche plus
+  if (
+    url.includes('firestore.googleapis.com') ||
+    url.includes('firebaseio.com') ||
+    url.includes('identitytoolkit.googleapis.com') ||
+    url.includes('securetoken.googleapis.com') ||
+    url.includes('firebaseapp.com') ||
+    url.includes('googleapis.com/google.firestore') ||
+    url.includes('firebase.googleapis.com')
+  ) {
+    // On laisse le navigateur gérer ces requêtes directement, sans interception
+    return;
+  }
+
+  // V63.24 : Ne pas intercepter les requêtes vers d'autres origines non-cacheables
+  // (analytics, tracking, etc.) — seulement notre domaine + fonts Google
+  const isOurDomain = url.startsWith(self.location.origin);
+  const isGoogleFonts = url.includes('fonts.googleapis.com') || url.includes('fonts.gstatic.com');
+  if (!isOurDomain && !isGoogleFonts) {
+    return;
+  }
 
   event.respondWith(
     caches.match(event.request)
