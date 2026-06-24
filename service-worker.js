@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.25 - V63.25 : Fix likesCount manquant dans getAllTopics/listenToTopics
+// Version 6.3.26 - V63.26 : +25 questions actualité (228 total)
 
-const CACHE_NAME = 'bara-concours-v6-3-25';
+const CACHE_NAME = 'bara-concours-v6-3-26';
 const APP_SHELL = [
   './',
   './index.html',

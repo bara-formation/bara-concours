@@ -1,6 +1,6 @@
 // Bara Concours - Base de questions QCM
-// Mis à jour le 2026-06-23 - V63.22 : +1115 questions (francais/halieutique/informatique/environnement/cg)
-// Total : 5059 questions réparties sur 37 matières
+// Mis à jour le 2026-06-24 - V63.26 : +25 questions actualité
+// Total : 5084 questions réparties sur 37 matières
 
 const QUESTIONS = {
   "francais": [
@@ -52422,6 +52422,281 @@ const QUESTIONS = {
       ],
       "r": 2,
       "x": "Le président burundais Évariste Ndayishimiye assure la présidence tournante de l'Union africaine pour l'année 2026. Il a été élu lors du 39ᵉ Sommet de l'UA à Addis-Abeba et a succédé au président angolais João Lourenço."
+    },
+    {
+      "q": "Qui a remporté le Super Galian 2025 lors de la 28e édition des Prix Galian ?",
+      "o": [
+        "Hervé Kaboré de la RTB Radio",
+        "Jeanne Coulibaly, journaliste senior",
+        "Daouda Zongo de Wakat Séra",
+        "Liradan Philippe Ada de la RTB Télé"
+      ],
+      "r": 3,
+      "x": "Liradan Philippe Ada, journaliste à la RTB Télé, a remporté le Super Galian 2025 lors de la 28e édition de la Nuit des Galian (13 juin 2025, CENASA, Ouagadougou). C'est son 2e Super Galian, le premier ayant été décroché en 2022. Contrairement à l'édition 2024 qui était infructueuse, le jury n'a pas hésité cette fois à décerner la plus haute distinction."
+    },
+    {
+      "q": "Quelle était la numérotation de l'édition des Prix Galian remportée par Liradan Philippe Ada en 2025 ?",
+      "o": [
+        "La 28e édition",
+        "La 26e édition",
+        "La 29e édition",
+        "La 27e édition"
+      ],
+      "r": 0,
+      "x": "La 28e édition de la Nuit des Galian s'est tenue le vendredi 13 juin 2025 au CENASA (Centre National des Arts, des Spectacles et de l'Audiovisuel) à Ouagadougou. La cérémonie était placée sous le patronage du Président de l'ALT, Dr Ousmane Bougouma, et présidée par le ministre Pingdwendé Gilbert Ouédraogo."
+    },
+    {
+      "q": "Où s'est tenue la 28e édition de la Nuit des Galian 2025 ?",
+      "o": [
+        "Palais des Sports de Ouagadougou",
+        "Salle des Banquets de Ouagadougou",
+        "CENASA, Ouagadougou",
+        "Maison de la Culture de Bobo-Dioulasso"
+      ],
+      "r": 2,
+      "x": "La 28e Nuit des Galian s'est tenue au CENASA (Centre National des Arts, des Spectacles et de l'Audiovisuel) à Ouagadougou le vendredi 13 juin 2025. La cérémonie a regroupé des professionnels des médias, des responsables institutionnels et de nombreux partenaires."
+    },
+    {
+      "q": "Quelle note Liradan Philippe Ada a-t-il obtenue pour décrocher le Super Galian 2025 ?",
+      "o": [
+        "18,5/20",
+        "17,2/20",
+        "16,8/20",
+        "15,9/20"
+      ],
+      "r": 1,
+      "x": "Liradan Philippe Ada a obtenu la note de 17,2/20 pour ses deux reportages réalisés sur le front ouest du Burkina Faso. Sa dotation comprend : un trophée, une attestation, une enveloppe de 3 millions de FCFA, une villa d'une valeur de 18,5 millions de FCFA offerte par le Groupe Kastor Africa, et un bon d'assurance Sunu Assurances."
+    },
+    {
+      "q": "Combien de fois Liradan Philippe Ada a-t-il remporté le Super Galian au total, et en quelles années ?",
+      "o": [
+        "3 fois : 2019, 2022 et 2025",
+        "1 fois : uniquement en 2025",
+        "2 fois : 2020 et 2025",
+        "2 fois : 2022 et 2025"
+      ],
+      "r": 3,
+      "x": "Liradan Philippe Ada a remporté le Super Galian 2 fois : en 2022 (1ère fois) et en 2025 (2e fois). Cette double consécration le hisse parmi les figures les plus marquantes du paysage médiatique burkinabè. Il a dédié son trophée aux Forces de défense et de sécurité (FDS) et aux Volontaires pour la Défense de la Patrie (VDP)."
+    },
+    {
+      "q": "Avec quelles œuvres Liradan Philippe Ada a-t-il concouru pour le Super Galian 2025 ?",
+      "o": [
+        "\"Grand-Ouest, le tournant décisif\" et \"Le Kiaarima 2 : voyage au bout d'une mission à haut risque\"",
+        "\"Les FDS dans le Sahel : le prix de la liberté\" et \"Sur le front du Liptako\"",
+        "\"Reconquête de Kidal : victoire ou illusion ?\" et \"Le Sahel résiste\"",
+        "\"Opération Tourbillon : la bataille de la Banwa\" et \"Retour dans les zones libérées\""
+      ],
+      "r": 0,
+      "x": "Liradan Philippe Ada a concouru avec deux reportages réalisés dans des conditions extrêmes sur le front ouest du Burkina : \"Grand-Ouest, le tournant décisif\" et \"Le Kiaarima 2 : voyage au bout d'une mission à haut risque\". Il a obtenu la note de 17,2/20 et décroché aussi le Prix du meilleur grand reportage en catégorie télévision."
+    },
+    {
+      "q": "La dotation accordée au Super Galian 2025 comprenait:",
+      "o": [
+        "Trophée, attestation, 5 millions de FCFA, un véhicule",
+        "Trophée, attestation, 2 millions de FCFA, un véhicule",
+        "Trophée, attestation, 3 millions de FCFA, une villa",
+        "Trophée, attestation, 1 millions de FCFA, une villa"
+      ],
+      "r": 2,
+      "x": "La dotation du Super Galian 2025 comprenait : un trophée, une attestation signée par le Président du Faso, une enveloppe de 3 millions de FCFA, une villa d'une valeur de 18,5 millions de FCFA offerte par le Groupe Kastor Africa (parrain de l'édition) et un bon d'assurance de la société Sunu Assurances."
+    },
+    {
+      "q": "Qui était la présidente d'honneur de la 28e édition des Prix Galian 2025 ?",
+      "o": [
+        "Aïcha Diombélé/Kabré, journaliste RTB",
+        "Jeanne Coulibaly, journaliste senior",
+        "Nadège Sawadogo, journaliste Sidwaya",
+        "Pierrette Carine Zongo, journaliste Filinfo.net"
+      ],
+      "r": 1,
+      "x": "La journaliste Jeanne Coulibaly a été la présidente d'honneur de la 28e édition des Prix Galian 2025. Dans son discours, elle a invité la jeune génération à s'inscrire dans la dynamique de responsabilité journalistique : \"Le Burkina Faso a plus que jamais besoin d'une presse forte, lucide, constructive et patriote\"."
+    },
+    {
+      "q": "Combien d'œuvres ont été soumises lors de la 28e édition des Prix Galian 2025 ?",
+      "o": [
+        "268 œuvres",
+        "420 œuvres",
+        "368 œuvres",
+        "378 œuvres"
+      ],
+      "r": 3,
+      "x": "La 28e édition des Prix Galian a enregistré 378 œuvres soumises dans toutes les catégories (presse écrite, presse en ligne, radio, télévision et langues nationales). Au total, 25 prix officiels, une trentaine de prix spéciaux et un Super Galian ont été décernés. Les Éditions Sidwaya ont raflé 15 prix dont 3 officiels."
+    },
+    {
+      "q": "Qui a remporté le prix spécial de la Présidence du Faso en langues nationales lors des Galian 2025 ?",
+      "o": [
+        "Lassina Coulibaly de la RTB Sud-Ouest, en langue jula",
+        "Ahmed Kam Ouédraogo de Savane FM/Bobo, pour une production en dioula",
+        "Aïcha Diombélé/Kabré de la RTB Radio, en mooré",
+        "Hervé Kaboré de la RTB Radio, pour un reportage en langue nationale"
+      ],
+      "r": 0,
+      "x": "Lassina Coulibaly de la RTB Sud-Ouest a remporté le prix spécial de la Présidence du Faso en langues nationales pour son reportage \"VDP, acteur de la cohésion sociale\", diffusé en langue nationale jula le 16 août 2024. Les 5 prix spéciaux de la Présidence du Faso ont été remis par M. Ousmane Sandwidi (Chef de cabinet du Président du Faso) et M. Sougrinoma Ibrahim Guigma (Directeur de la Communication)."
+    },
+    {
+      "q": "Au Burkina Faso, le concours annuel des « Prix Galian » est organisé par :",
+      "o": [
+        "Le Conseil Supérieur de la Communication (CSC)",
+        "Le Ministère chargé de la Communication et de la Culture",
+        "L'Association des Journalistes du Burkina (AJB)",
+        "Le Ministère chargé de la Transition Numérique et des Postes"
+      ],
+      "r": 1,
+      "x": "Créés en 1997, les Prix Galian sont la plus haute distinction nationale décernée aux professionnels des médias (presse écrite, radio, télévision, presse en ligne). Ils sont placés sous la tutelle et l'organisation directe du Ministère de la Communication, de la Culture, des Arts et du Tourisme, qui décerne chaque année le trophée du « Super Galian »."
+    },
+    {
+      "q": "Qui a remporté le Super Galian 2026 lors de la 29e édition des Prix Galian ?",
+      "o": [
+        "Françoise Tougry du média QueenMafa",
+        "Nadège Sawadogo des Éditions Sidwaya",
+        "Liradan Philippe Ada de la RTB télé",
+        "Aïcha Diombélé/Kabré de la RTB Radio"
+      ],
+      "r": 3,
+      "x": "Aïcha Diombélé/Kabré, journaliste à la RTB Radio en langues nationales, est la lauréate du Super Galian 2026 lors de la 29e édition des Prix Galian (19 juin 2026, Ouagadougou). Elle devient ainsi la première femme à remporter cette distinction suprême du journalisme burkinabè depuis la création du concours."
+    },
+    {
+      "q": "Quelle note Aïcha Diombélé/Kabré a-t-elle obtenue pour décrocher le Super Galian 2026 ?",
+      "o": [
+        "16,50/20",
+        "18,00/20",
+        "15,75/20",
+        "17,22/20"
+      ],
+      "r": 3,
+      "x": "Aïcha Diombélé/Kabré a obtenu la note de 17,22/20, la meilleure de toute la 29e édition. Elle a concouru dans la catégorie magazine de la section production radio sonore en langue nationale. Sa dotation comprend un trophée, un chèque de 3 millions de FCFA et une villa offerte par le parrain de l'édition."
+    },
+    {
+      "q": "Quelle édition de la Nuit des Galian s'est tenue le 19 juin 2026 à Ouagadougou ?",
+      "o": [
+        "La 29e édition",
+        "La 27e édition",
+        "La 28e édition",
+        "La 30e édition"
+      ],
+      "r": 0,
+      "x": "La 29e édition de la Nuit des Galian s'est tenue le vendredi 19 juin 2026 à Ouagadougou. Elle a été organisée par le ministère de la Communication, de la Culture, des Arts et du Tourisme sous la direction de Pingdwendé Gilbert Ouédraogo. La 28e édition avait eu lieu le 13 juin 2025 et la Super Galian avait été remportée par Liradan Philippe Ada de la RTB."
+    },
+    {
+      "q": "À quelle date s'est tenue la 29e édition de la Nuit des Galian 2026 ?",
+      "o": [
+        "Samedi 20 juin 2026",
+        "Vendredi 19 juin 2026",
+        "Vendredi 13 juin 2025",
+        "Samedi 21 juin 2026"
+      ],
+      "r": 1,
+      "x": "La 29e édition de la Nuit des Galian s'est tenue le vendredi 19 juin 2026 à Ouagadougou. La cérémonie a regroupé des professionnels des médias, des responsables institutionnels et des partenaires autour de la célébration du mérite journalistique burkinabè."
+    },
+    {
+      "q": "Dans quelle catégorie Aïcha Diombélé/Kabré a-t-elle remporté le Super Galian 2026 ?",
+      "o": [
+        "Meilleur reportage en presse écrite",
+        "Meilleure émission télévisée en langue nationale",
+        "Magazine de la production radio sonore en langue nationale",
+        "Meilleur documentaire radiophonique en français"
+      ],
+      "r": 2,
+      "x": "Aïcha Diombélé/Kabré a remporté le Super Galian dans la catégorie magazine de la section production radio sonore en langue nationale. Ses deux œuvres primées étaient : \"Mankan : paralysie cérébrale des enfants, naître sous l'accusation\" (sept-oct 2025) et \"Koumankan : enfant en conflit avec la loi, l'enfant en sursis\" (15 sept - 1er oct 2025)."
+    },
+    {
+      "q": "Quelles premières historiques la victoire d'Aïcha Diombélé/Kabré représente-t-elle pour le Super Galian ?",
+      "o": [
+        "Première femme lauréate, première production radiophonique et première œuvre en langue nationale",
+        "Première journaliste de la RTB, première production en langue dioula et première de la région du Yaadga",
+        "Première femme, première journaliste du Centre et première œuvre sur la santé infantile",
+        "Première production radio, première œuvre sur l'enfance et première journaliste de Ouagadougou"
+      ],
+      "r": 0,
+      "x": "La victoire d'Aïcha Diombélé/Kabré marque trois premières historiques : c'est la 1ère fois qu'une femme remporte le Super Galian, la 1ère fois qu'une production radiophonique l'obtient et la 1ère fois qu'une œuvre réalisée en langue nationale est sacrée Super Galian depuis la création du concours."
+    },
+    {
+      "q": "Quelle est la dotation accordée à la lauréate du Super Galian 2026 ?",
+      "o": [
+        "Un trophée et un chèque de 1 million de FCFA",
+        "Un trophée, un chèque de 3 millions de FCFA et une villa",
+        "Un trophée, un chèque de 5 millions de FCFA et une voiture",
+        "Un trophée, une médaille d'or et un chèque de 2 millions de FCFA"
+      ],
+      "r": 1,
+      "x": "La Super Galian 2026 Aïcha Diombélé/Kabré a reçu : un trophée, une enveloppe financière de 3 millions de FCFA et une villa offerte par le parrain de la 29e édition, en reconnaissance de son talent, de son professionnalisme et de son engagement au service de l'information."
+    },
+    {
+      "q": "Combien de candidatures et d'œuvres la 29e édition des Prix Galian 2026 a-t-elle enregistrées ?",
+      "o": [
+        "120 candidatures pour 210 œuvres",
+        "150 candidatures pour 300 œuvres",
+        "134 candidatures pour 268 œuvres",
+        "100 candidatures pour 180 œuvres"
+      ],
+      "r": 2,
+      "x": "La 29e édition des Prix Galian a enregistré 134 candidatures pour 268 œuvres. Ces productions étaient réparties entre 5 catégories : 68 œuvres en presse écrite, 70 en radiodiffusion sonore, 28 en télévision, 58 en presse en ligne et 34 en langues nationales."
+    },
+    {
+      "q": "Qui est le Président d'honneur de la 29e édition des Prix Galian 2026 ?",
+      "o": [
+        "Pingdwendé Gilbert Ouédraogo, Ministre de la Communication",
+        "Hamado Ouangrawa, Président de l'Observatoire Burkinabè des Médias (OBM)",
+        "Dr Ousmane Bougouma, Président de l'ALT",
+        "Capitaine Martha Céleste Anderson Dekomwin Médah, Directeur de cabinet du Président"
+      ],
+      "r": 1,
+      "x": "Hamado Ouangrawa, Président de l'Observatoire Burkinabè des Médias (OBM), a été le Président d'honneur de la 29e édition des Prix Galian. Il a qualifié la presse burkinabè de \"résiliente\" malgré le contexte sécuritaire difficile et encouragé les journalistes dans leur mission d'information."
+    },
+    {
+      "q": "Qui a remis les prix spéciaux de la Présidence du Faso lors de la Nuit des Galian 2026 ?",
+      "o": [
+        "Pingdwendé Gilbert Ouédraogo, Ministre de la Communication",
+        "Dr Ousmane Bougouma, Président de l'ALT",
+        "Capitaine Martha Céleste Anderson Dekomwin Médah",
+        "Hamado Ouangrawa, Président de l'OBM"
+      ],
+      "r": 2,
+      "x": "Le Capitaine Martha Céleste Anderson Dekomwin Médah, Ministre Directeur de cabinet du Président du Faso, a remis les 5 prix spéciaux de la Présidence du Faso lors de la Nuit des Galian 2026. Ces prix récompensaient des œuvres journalistiques traitant des initiatives présidentielles."
+    },
+    {
+      "q": "Qui a remporté le prix spécial de la Présidence du Faso en catégorie langues nationales lors des Galian 2026 ?",
+      "o": [
+        "Ahmed Kam Ouédraogo de la radio Savane FM/Bobo, en langue dioula",
+        "Aïcha Diombélé/Kabré de la RTB Radio, en mooré",
+        "Frédéric Tensaba de la RTB radio Bobo, en fulfuldé",
+        "Karim Bikienga de la RTB télé, en dioula"
+      ],
+      "r": 0,
+      "x": "Ahmed Kam Ouédraogo de la radio Savane FM/Bobo a remporté le prix spécial de la Présidence du Faso en catégorie langues nationales avec sa production \"Les avantages/bienfaits des innovations technologiques agricoles\" diffusée en langue dioula. Ce prix était doté d'un trophée, une attestation et un chèque d'un million de FCFA."
+    },
+    {
+      "q": "Qui a reçu le prix spécial de l'ONASER (Office national de la sécurité routière) lors des Galian 2026 ?",
+      "o": [
+        "Françoise Tougry (QueenMafa)",
+        "Farida Thiombiano (Lefaso.net)",
+        "Nadège Sawadogo (Éditions Sidwaya)",
+        "Assétou Maïga (QueenMafa)"
+      ],
+      "r": 2,
+      "x": "Nadège Sawadogo, journaliste aux Éditions Sidwaya, a reçu le prix spécial de l'ONASER (Office national de la sécurité routière) lors des Galian 2026. Ce prix spécial récompense les productions journalistiques qui ont traité de la sécurité routière au Burkina Faso."
+    },
+    {
+      "q": "Qui a proclamé le nom de la lauréate du Super Galian 2026 lors de la cérémonie de clôture ?",
+      "o": [
+        "Dr Ousmane Bougouma, Président de l'Assemblée législative de transition",
+        "Pingdwendé Gilbert Ouédraogo, Ministre de la Communication",
+        "Hamado Ouangrawa, Président de l'OBM",
+        "Capitaine Martha Céleste Anderson Dekomwin Médah"
+      ],
+      "r": 0,
+      "x": "Dr Ousmane Bougouma, Président de l'Assemblée législative de transition (ALT), a proclamé le nom de la lauréate du Super Galian 2026 lors de la cérémonie de clôture. C'est lui qui a officiellement sacré Aïcha Diombélé/Kabré, journaliste de la RTB Radio en langues nationales."
+    },
+    {
+      "q": "Qui est le ministère organisateur des Prix Galian au Burkina Faso et quel ministre l'a présidé en 2026 ?",
+      "o": [
+        "Le ministère de la Culture, organisé par Me Apollinaire Kyelem de Tambèla",
+        "Le ministère de l'Éducation, organisé par Jacques Sosthène Dingara",
+        "Le ministère de la Communication, de la Culture, des Arts et du Tourisme, organisé par Pingdwendé Gilbert Ouédraogo",
+        "Le ministère de l'Enseignement supérieur, organisé par Adjima Thombiano"
+      ],
+      "r": 2,
+      "x": "Les Prix Galian sont organisés chaque année par le ministère en charge de la Communication. En 2026, c'est Pingdwendé Gilbert Ouédraogo, Ministre de la Communication, de la Culture, des Arts et du Tourisme et porte-parole du gouvernement, qui a présidé la 29e édition. Il a installé les 5 jurys le 8 mai 2026 et appelé à un journalisme patriotique."
     }
   ],
   "halieutique": [
@@ -55728,7 +56003,6 @@ const QUESTIONS = {
   ]
 };
 
-// Export global pour l'app et l'admin
 if (typeof window !== 'undefined') {
   window.QUESTIONS = QUESTIONS;
 }
