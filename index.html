@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Bara Concours">
-<meta name="description" content="Préparation aux concours directs du Burkina Faso. QCM par matière, examens chronométrés, statistiques. Édité par Bara Formation.">
+<meta name="description" content="Préparation aux concours de la fonction publique du Burkina Faso. QCM par matière, examens chronométrés, statistiques. Édité par Bara Formation.">
 
 <title>Bara Concours — Préparation aux concours BF</title>
 
@@ -2591,6 +2591,8 @@ img { max-width: 100%; display: block; }
   margin-bottom: 0.5rem;
 }
 .annales-card-stats { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.annales-card-benefits { margin-top: 0.7rem; display: flex; flex-direction: column; gap: 0.25rem; }
+.annales-card-benefits .benefit-line { font-size: 0.78rem; color: #444; line-height: 1.35; font-weight: 500; }
 .annales-stat {
   background: white;
   border: 1px solid var(--gold-bf-dark);
@@ -5844,11 +5846,16 @@ const App = {
             <div class="annales-card-icon">📚</div>
             <div class="annales-card-content">
               <div class="annales-card-title">Accompagnement <span>Final</span></div>
-              <div class="annales-card-desc">Sessions Premium avec toutes matières et corrections détaillées</div>
+              <div class="annales-card-desc">Corrigés <strong>bien détaillés</strong> des concours avec explications complètes</div>
               <div class="annales-card-stats">
                 <span class="annales-stat">${window.SessionsHelper ? window.SessionsHelper.getAllSessions().length : 0} sessions</span>
                 <span class="annales-stat">🎯 ${window.SessionsHelper ? window.SessionsHelper.countTotalQuestions() : 0} questions</span>
                 <span class="annales-stat">⭐ Premium</span>
+              </div>
+              <div class="annales-card-benefits">
+                <div class="benefit-line">✅ Questions probables</div>
+                <div class="benefit-line">✅ Conseils de composition</div>
+                <div class="benefit-line">✅ Révisions de dernière minute</div>
               </div>
             </div>
             <div class="annales-card-arrow">›</div>
@@ -6277,7 +6284,7 @@ const App = {
             <div style="font-size:3.5rem; display:none; text-align:center">🎓</div>
             <h1 style="font-family:'Instrument Serif',serif; font-size:2rem; color:var(--green-bf-dark); margin:0.4rem 0 0.3rem; text-align:center">Bara Concours</h1>
             <p style="font-size:0.95rem; color:var(--ink-soft); margin:0; line-height:1.5; text-align:center">
-              Préparation aux concours directs<br>du Burkina Faso
+              Préparation aux concours de la fonction publique<br>du Burkina Faso
             </p>
           </div>
 
@@ -8443,7 +8450,7 @@ const App = {
           <div style="background:white; border-radius:var(--radius-lg); padding:1.2rem; box-shadow:var(--shadow-sm); border:1px solid var(--line-soft); margin-bottom:1rem">
             <h3 style="font-family:'Instrument Serif',serif; font-size:1.3rem; color:var(--green-bf); margin-bottom:0.6rem">Notre mission</h3>
             <p style="font-size:0.92rem; color:var(--ink-soft); line-height:1.6">
-              Bara Concours est l'application officielle de <strong>Bara Formation</strong>, dédiée à la préparation des étudiants burkinabè aux concours directs de la fonction publique.
+              Bara Concours est l'application officielle de <strong>Bara Formation</strong>, dédiée à la préparation des étudiants burkinabè aux concours de la fonction publique.
             </p>
             <p style="font-size:0.92rem; color:var(--ink-soft); line-height:1.6; margin-top:0.6rem">
               Notre objectif : démocratiser l'accès à une préparation de qualité pour tous, partout au Burkina Faso.

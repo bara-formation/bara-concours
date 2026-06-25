@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.27 - V63.27 : Vraies dates d'épreuves (15-22 juillet 2026) + splits JOUR 3/8
+// Version 6.3.28 - V63.28 : UX wording (Accompagnement Final enrichi + concours fonction publique)
 
-const CACHE_NAME = 'bara-concours-v6-3-27';
+const CACHE_NAME = 'bara-concours-v6-3-28';
 const APP_SHELL = [
   './',
   './index.html',
