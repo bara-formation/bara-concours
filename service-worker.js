@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.26 - V63.26 : +25 questions actualité (228 total)
+// Version 6.3.27 - V63.27 : Vraies dates d'épreuves (15-22 juillet 2026) + splits JOUR 3/8
 
-const CACHE_NAME = 'bara-concours-v6-3-26';
+const CACHE_NAME = 'bara-concours-v6-3-27';
 const APP_SHELL = [
   './',
   './index.html',

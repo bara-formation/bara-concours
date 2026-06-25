@@ -7273,6 +7273,7 @@ const App = {
     const isOfficiel = c.session2026 === true;
     const isAutreCanal = c.autre_canal === true;
     const dates = isOfficiel && window.getDatesInscription ? window.getDatesInscription(c) : null;
+    const dateEpreuve = isOfficiel && window.getDateEpreuve ? window.getDateEpreuve(c) : null;
 
     return `
       <div class="page">
@@ -7303,10 +7304,17 @@ const App = {
                 <div class="info-officiel-title">Calendrier officiel — Session 2026</div>
               </div>
               <div class="info-officiel-grid">
-                <div class="info-officiel-item">
-                  <div class="info-officiel-label">Jour de composition</div>
-                  <div class="info-officiel-value">JOUR ${c.jour} <span style="font-size:0.7rem; opacity:0.7">(#${c.numeroConcours}/108)</span></div>
-                </div>
+                ${dateEpreuve ? `
+                  <div class="info-officiel-item" style="background:linear-gradient(135deg, #fef3c7, #fde68a); border:2px solid var(--gold-bf)">
+                    <div class="info-officiel-label">📝 Date de composition</div>
+                    <div class="info-officiel-value" style="font-weight:700; color:#854d0e">${dateEpreuve.label}</div>
+                  </div>
+                ` : `
+                  <div class="info-officiel-item">
+                    <div class="info-officiel-label">Jour de composition</div>
+                    <div class="info-officiel-value">JOUR ${c.jour}</div>
+                  </div>
+                `}
                 ${dates ? `
                   <div class="info-officiel-item">
                     <div class="info-officiel-label">Inscriptions en ligne</div>
@@ -7318,6 +7326,13 @@ const App = {
                   <div class="info-officiel-value"><a href="https://www.econcours.gov.bf" target="_blank" style="color:var(--green-bf-dark)">econcours.gov.bf</a></div>
                 </div>
               </div>
+              ${dateEpreuve ? `
+                <div style="margin-top:0.8rem; padding:0.7rem 0.9rem; background:white; border-radius:8px; border-left:3px solid var(--gold-bf); font-size:0.78rem; color:var(--ink-mute); line-height:1.5">
+                  ℹ️ <strong>Lieu</strong> : épreuves dans les <strong>13 chefs-lieux de région</strong>.
+                  <strong>Pièces obligatoires</strong> : récépissé physique d'inscription + CNIB (ou CI-AES) ayant servi à l'inscription.
+                  <br><span style="opacity:0.7">Source : Communiqué N°26-00696/MSP/SG/AGRE du 24 juin 2026</span>
+                </div>
+              ` : ''}
             </div>
           ` : ''}
 

@@ -98,6 +98,33 @@ function getDatesInscription(concours) {
   return DATES_INSCRIPTION_2026[concours.niveau] || DATES_INSCRIPTION_2026.BAC;
 }
 
+// === DATES D'ÉPREUVES OFFICIELLES (session 2026) — V63.27 ===
+// Source : Communiqué N°26-00696/MSP/SG/AGRE du 24 juin 2026
+// 13 jours de composition du 15 au 22 juillet 2026
+const DATES_EPREUVES_2026 = {
+  1:   { date: '15 juillet 2026', horaire: '14h-15h30', dateISO: '2026-07-15T14:00', label: 'Mer. 15 juillet 2026 (14h-15h30)' },
+  2:   { date: '15 juillet 2026', horaire: '7h30-9h',   dateISO: '2026-07-15T07:30', label: 'Mer. 15 juillet 2026 (7h30-9h)' },
+  3:   { date: '19 juillet 2026', horaire: '7h30-9h',   dateISO: '2026-07-19T07:30', label: 'Dim. 19 juillet 2026 (7h30-9h)' },
+  3.5: { date: '19 juillet 2026', horaire: '14h-15h30', dateISO: '2026-07-19T14:00', label: 'Dim. 19 juillet 2026 (14h-15h30)' },
+  4:   { date: '18 juillet 2026', horaire: '14h-15h30', dateISO: '2026-07-18T14:00', label: 'Sam. 18 juillet 2026 (14h-15h30)' },
+  5:   { date: '18 juillet 2026', horaire: '7h30-9h',   dateISO: '2026-07-18T07:30', label: 'Sam. 18 juillet 2026 (7h30-9h)' },
+  6:   { date: '21 juillet 2026', horaire: '7h30-9h',   dateISO: '2026-07-21T07:30', label: 'Mar. 21 juillet 2026 (7h30-9h)' },
+  7:   { date: '21 juillet 2026', horaire: '14h-15h30', dateISO: '2026-07-21T14:00', label: 'Mar. 21 juillet 2026 (14h-15h30)' },
+  8:   { date: '17 juillet 2026', horaire: '7h30-9h',   dateISO: '2026-07-17T07:30', label: 'Ven. 17 juillet 2026 (7h30-9h)' },
+  8.5: { date: '17 juillet 2026', horaire: '14h-15h30', dateISO: '2026-07-17T14:00', label: 'Ven. 17 juillet 2026 (14h-15h30)' },
+  9:   { date: '20 juillet 2026', horaire: '14h-15h30', dateISO: '2026-07-20T14:00', label: 'Lun. 20 juillet 2026 (14h-15h30)' },
+  10:  { date: '20 juillet 2026', horaire: '7h30-9h',   dateISO: '2026-07-20T07:30', label: 'Lun. 20 juillet 2026 (7h30-9h)' },
+  11:  { date: '16 juillet 2026', horaire: '7h30-9h',   dateISO: '2026-07-16T07:30', label: 'Jeu. 16 juillet 2026 (7h30-9h)' },
+  12:  { date: '22 juillet 2026', horaire: '14h-15h30', dateISO: '2026-07-22T14:00', label: 'Mer. 22 juillet 2026 (14h-15h30)' },
+  13:  { date: '22 juillet 2026', horaire: '7h30-9h',   dateISO: '2026-07-22T07:30', label: 'Mer. 22 juillet 2026 (7h30-9h)' }
+};
+
+// V63.27 : Récupère la date d'épreuve pour un concours
+function getDateEpreuve(concours) {
+  if (!concours || !concours.session2026 || concours.jour === undefined) return null;
+  return DATES_EPREUVES_2026[concours.jour] || null;
+}
+
 const CONCOURS = [
 
   // ============================================================
@@ -126,7 +153,7 @@ const CONCOURS = [
 
   // ============== JOUR 3 ==============
   { id: 'ifpb_cycle_b', nom: 'IFPB CYCLE B (ex ENAREF Cycle B)', sigle: 'IFPB-B', categorie: 'administration', niveau: 'BAC', postes: 198, ministere: 'Économie et Finances', description: 'Contrôleurs des impôts, du trésor, des douanes (cycle B)', matieres: ['francais', 'finpub', 'economie', 'comptabilite', 'maths_bac'], session2026: true, jour: 3, numeroConcours: 16 },
-  { id: 'ifpb_cycle_c', nom: 'IFPB CYCLE C (ex ENAREF Cycle C)', sigle: 'IFPB-C', categorie: 'administration', niveau: 'BEPC', postes: 192, ministere: 'Économie et Finances', description: 'Agents des impôts, du trésor, des douanes (cycle C)', matieres: ['francais', 'maths_bepc', 'cg', 'comptabilite', 'redaction'], session2026: true, jour: 3, numeroConcours: 17 },
+  { id: 'ifpb_cycle_c', nom: 'IFPB CYCLE C (ex ENAREF Cycle C)', sigle: 'IFPB-C', categorie: 'administration', niveau: 'BEPC', postes: 192, ministere: 'Économie et Finances', description: 'Agents des impôts, du trésor, des douanes (cycle C)', matieres: ['francais', 'maths_bepc', 'cg', 'comptabilite', 'redaction'], session2026: true, jour: 3.5, numeroConcours: 17 },
 
   // ============== JOUR 4 ==============
   { id: 'ifpb_cycle_a', nom: 'IFPB CYCLE A (ex ENAREF Cycle A)', sigle: 'IFPB-A', categorie: 'administration', niveau: 'LICENCE', postes: 145, ministere: 'Économie et Finances', description: 'Inspecteurs des impôts, du trésor, des douanes (cycle A)', matieres: ['francais', 'finpub', 'economie', 'droitadmin', 'comptabilite'], session2026: true, jour: 4, numeroConcours: 18 },
@@ -179,7 +206,7 @@ const CONCOURS = [
   { id: 'admin_services_sante', nom: 'Administrateur des Services de Santé', sigle: 'ASS', categorie: 'sante', niveau: 'LICENCE', postes: 60, ministere: 'Santé', description: 'Administration des services de santé', matieres: ['francais', 'santepub', 'droitadmin', 'cg', 'rh'], session2026: true, jour: 7, numeroConcours: 59 },
 
   // ============== JOUR 8 ==============
-  { id: 'educateur_petite_enfance', nom: 'Éducateur de la Petite Enfance', sigle: 'EPE', categorie: 'enseignement', niveau: 'BAC', postes: 2000, ministere: 'Éducation Nationale', description: 'Éducation des jeunes enfants (le plus gros concours BAC 2026)', matieres: ['francais', 'petite_enfance', 'pedagogie', 'psychologie', 'cg'], session2026: true, jour: 8, numeroConcours: 60 },
+  { id: 'educateur_petite_enfance', nom: 'Éducateur de la Petite Enfance', sigle: 'EPE', categorie: 'enseignement', niveau: 'BAC', postes: 2000, ministere: 'Éducation Nationale', description: 'Éducation des jeunes enfants (le plus gros concours BAC 2026)', matieres: ['francais', 'petite_enfance', 'pedagogie', 'psychologie', 'cg'], session2026: true, jour: 8.5, numeroConcours: 60 },
   { id: 'tech_hygiene_hospitaliere', nom: 'Technicien d\'Hygiène Hospitalière', sigle: 'THH', categorie: 'sante', niveau: 'BEPC', postes: 200, ministere: 'Santé', description: 'Hygiène et stérilisation en milieu hospitalier', matieres: ['francais', 'hygiene', 'svt_bepc', 'santepub', 'cg'], session2026: true, jour: 8, numeroConcours: 61 },
   { id: 'agent_sante_communautaire', nom: 'Agent de Santé Communautaire', sigle: 'ASC', categorie: 'sante', niveau: 'BEPC', postes: 200, ministere: 'Santé', description: 'Santé de proximité, sensibilisation communautaire', matieres: ['francais', 'santepub', 'scoutisme', 'cg', 'svt_bepc'], session2026: true, jour: 8, numeroConcours: 62 },
 
@@ -353,4 +380,6 @@ window.MATIERES_CATALOG = MATIERES_CATALOG;
 window.CATEGORIES_CONCOURS = CATEGORIES_CONCOURS;
 window.DATES_INSCRIPTION_2026 = DATES_INSCRIPTION_2026;
 window.getDatesInscription = getDatesInscription;
+window.DATES_EPREUVES_2026 = DATES_EPREUVES_2026;
+window.getDateEpreuve = getDateEpreuve;
 window.DEFAULT_CONCOURS_OVERRIDES = DEFAULT_CONCOURS_OVERRIDES;
