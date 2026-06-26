@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.30 - V63.30 : Page admin Accompagnement Final 2026 (Phase 2/4)
+// Version 6.3.32 - V63.32 : Refonte UX titres de section Accompagnement Final (séparation claire)
 
-const CACHE_NAME = 'bara-concours-v6-3-30';
+const CACHE_NAME = 'bara-concours-v6-3-32';
 const APP_SHELL = [
   './',
   './index.html',

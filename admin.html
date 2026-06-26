@@ -6497,10 +6497,22 @@ E: Le Burkina Faso compte 13 régions administratives depuis 2001.`;
         </div>
 
         <button onclick="Admin._addAccompQuestion()" style="width:100%; padding:0.7rem; background:linear-gradient(135deg, var(--green-bf), var(--green-bf-dark)); color:white; border:none; border-radius:8px; font-weight:600; cursor:pointer">
-          ➕ Ajouter cette question
+          ${this.state._accompEditingQIdx !== undefined && this.state._accompEditingQIdx !== null ? '✏️ Mettre à jour la question' : '➕ Ajouter cette question'}
         </button>
+        ${this.state._accompEditingQIdx !== undefined && this.state._accompEditingQIdx !== null ? `
+          <button onclick="Admin._cancelEditAccompQuestion()" style="width:100%; margin-top:0.4rem; padding:0.5rem; background:white; color:var(--ink-mute); border:1px solid var(--line); border-radius:8px; font-weight:500; cursor:pointer; font-size:0.85rem">
+            ❌ Annuler la modification
+          </button>
+        ` : ''}
       </div>
     `;
+  },
+
+  // V63.31 : Annuler la modification en cours d'une question
+  _cancelEditAccompQuestion() {
+    this.state._accompEditingQIdx = null;
+    this.state._accompNewQ = { type: 'qcm4', q: '', choices: ['', '', '', ''], r: 0, nb: '' };
+    this.render();
   },
 
   _renderAccompImport() {
@@ -6539,18 +6551,47 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
       const idx = typeof q.r === 'number' ? q.r : 0;
       answerDisplay = 'Bonne : ' + String.fromCharCode(65 + idx);
     }
+    // V63.31 : indicateur si cette question est en cours d'édition
+    const isEditing = this.state._accompEditingQIdx === i;
 
     return `
-      <div style="background:white; border:1px solid var(--line); border-radius:8px; padding:0.7rem; margin-bottom:0.5rem; display:flex; gap:0.6rem; align-items:flex-start">
-        <div style="background:var(--green-bf); color:white; min-width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.85rem">${i + 1}</div>
+      <div style="background:${isEditing ? '#fef3c7' : 'white'}; border:${isEditing ? '2px solid var(--gold-bf)' : '1px solid var(--line)'}; border-radius:8px; padding:0.7rem; margin-bottom:0.5rem; display:flex; gap:0.6rem; align-items:flex-start">
+        <div style="background:${isEditing ? 'var(--gold-bf)' : 'var(--green-bf)'}; color:${isEditing ? '#854d0e' : 'white'}; min-width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.85rem">${i + 1}</div>
         <div style="flex:1; min-width:0">
-          <div style="font-size:0.7rem; color:var(--gold-bf); font-weight:700; text-transform:uppercase; margin-bottom:0.2rem">${typeLabel}</div>
+          <div style="font-size:0.7rem; color:var(--gold-bf); font-weight:700; text-transform:uppercase; margin-bottom:0.2rem">${typeLabel}${isEditing ? ' • ✏️ EN COURS DE MODIFICATION' : ''}</div>
           <div style="font-weight:600; font-size:0.9rem; margin-bottom:0.3rem; overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical">${this.escapeHTML(q.q)}</div>
           <div style="font-size:0.78rem; color:var(--ink-mute)">${answerDisplay}</div>
         </div>
-        <button onclick="Admin._removeAccompQuestion(${i})" style="background:#fee2e2; color:#991b1b; border:none; border-radius:6px; padding:0.3rem 0.5rem; cursor:pointer; font-size:0.85rem" title="Supprimer">🗑</button>
+        <div style="display:flex; flex-direction:column; gap:0.3rem">
+          <button onclick="Admin._editAccompQuestion(${i})" style="background:#dbeafe; color:#1e40af; border:none; border-radius:6px; padding:0.3rem 0.5rem; cursor:pointer; font-size:0.85rem" title="Modifier">✏️</button>
+          <button onclick="Admin._removeAccompQuestion(${i})" style="background:#fee2e2; color:#991b1b; border:none; border-radius:6px; padding:0.3rem 0.5rem; cursor:pointer; font-size:0.85rem" title="Supprimer">🗑</button>
+        </div>
       </div>
     `;
+  },
+
+  // V63.31 : Mettre une question existante en édition
+  _editAccompQuestion(idx) {
+    if (!this.state._accompForm) return;
+    const q = this.state._accompForm.questions[idx];
+    if (!q) return;
+    // Charger la question dans le formulaire
+    this.state._accompNewQ = {
+      type: q.type,
+      q: q.q || '',
+      choices: q.choices ? [...q.choices] : (q.type === 'qcm3' ? ['', '', ''] : ['', '', '', '']),
+      r: Array.isArray(q.r) ? [...q.r] : q.r,
+      nb: q.nb || ''
+    };
+    this.state._accompEditingQIdx = idx;
+    this.state._accompImportMode = 'form'; // Forcer le mode formulaire
+    this.toast('✏️ Modification en cours — clique sur "Mettre à jour" quand terminé', 'info', 4000);
+    this.render();
+    // Scroller vers le formulaire
+    setTimeout(() => {
+      const el = document.getElementById('accomp-q-text');
+      if (el) { el.focus(); el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+    }, 100);
   },
 
   // === HELPERS ÉDITEUR ===
@@ -6616,7 +6657,7 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
     this.render();
   },
 
-  // === AJOUT D'UNE QUESTION ===
+  // === AJOUT OU MODIFICATION D'UNE QUESTION ===
   _addAccompQuestion() {
     if (!this.state._accompForm) return;
     const q = this.state._accompNewQ;
@@ -6637,7 +6678,7 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
       this.toast('⚠️ La réponse attendue est requise', 'danger');
       return;
     }
-    // Ajouter
+    // Construire l'objet propre
     const cleaned = {
       type: q.type,
       q: q.q.trim(),
@@ -6649,10 +6690,20 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
       cleaned.choices = q.choices.map(c => c.trim());
       cleaned.r = q.r;
     }
-    this.state._accompForm.questions.push(cleaned);
+    // V63.31 : Mode édition ou mode ajout ?
+    const editIdx = this.state._accompEditingQIdx;
+    if (editIdx !== undefined && editIdx !== null && this.state._accompForm.questions[editIdx]) {
+      // Mode édition : remplacer la question existante
+      this.state._accompForm.questions[editIdx] = cleaned;
+      this.state._accompEditingQIdx = null;
+      this.toast('✓ Question modifiée', 'success');
+    } else {
+      // Mode ajout : ajouter à la fin
+      this.state._accompForm.questions.push(cleaned);
+      this.toast('✓ Question ajoutée', 'success');
+    }
     // Reset le formulaire
     this.state._accompNewQ = { type: q.type, q: '', choices: q.type === 'qcm3' ? ['', '', ''] : ['', '', '', ''], r: q.type === 'multi' ? [] : 0, nb: '' };
-    this.toast('✓ Question ajoutée', 'success');
     this.render();
   },
 

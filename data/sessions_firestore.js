@@ -333,7 +333,11 @@ const SessionsFirestore = {
     try {
       const fns = this._fns();
       await fns.deleteDoc(fns.doc(this._db(), this.COLLECTION_SESSIONS, sessionId));
-      this._sessionsCache = null;
+      // V63.31 : Retirer immédiatement du cache local (au lieu d'attendre le listener)
+      if (this._sessionsCache) {
+        this._sessionsCache = this._sessionsCache.filter(s => s.id !== sessionId);
+      }
+      this._sessionsCacheTime = 0; // Forcer un refetch au prochain getSessionsCached
       return { success: true };
     } catch (e) {
       console.error('[SessionsFirestore] deleteSession:', e);
