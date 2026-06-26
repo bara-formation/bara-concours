@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.29 - V63.29 : Architecture Firestore Accompagnement Final 2026 (Phase 1/4)
+// Version 6.3.30 - V63.30 : Page admin Accompagnement Final 2026 (Phase 2/4)
 
-const CACHE_NAME = 'bara-concours-v6-3-29';
+const CACHE_NAME = 'bara-concours-v6-3-30';
 const APP_SHELL = [
   './',
   './index.html',

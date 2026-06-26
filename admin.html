@@ -1040,6 +1040,9 @@ const Admin = {
       case 'concours': mainHtml = this.renderConcoursAdmin(); break;
       case 'annales': mainHtml = this.renderSessionsAdmin(); break;
       case 'session-edit': mainHtml = this.renderSessionEditAdmin(); break;
+      // V63.30 : Nouveau système Firestore pour Accompagnement Final 2026
+      case 'accompagnement': mainHtml = this.renderAccompagnementAdmin(); break;
+      case 'accompagnement-edit': mainHtml = this.renderAccompagnementEdit(); break;
       case 'codes': mainHtml = this.renderCodesAdmin(); break;
       case 'settings': mainHtml = this.renderSettings(); break;
       default: mainHtml = this.renderDashboard();
@@ -1144,6 +1147,10 @@ const Admin = {
           <div class="nav-link ${cur === 'annales' ? 'active' : ''}" onclick="Admin.navigate('annales')">
             <span class="nav-icon">📚</span>
             <span>Annales</span>
+          </div>
+          <div class="nav-link ${cur === 'accompagnement' || cur === 'accompagnement-edit' ? 'active' : ''}" onclick="Admin.navigate('accompagnement')">
+            <span class="nav-icon">🎓</span>
+            <span>Accompagnement <span style="background:linear-gradient(135deg, #fef3c7, #fde68a); color:#854d0e; font-size:0.6rem; font-weight:700; padding:0.1rem 0.5rem; border-radius:999px; margin-left:0.3rem">2026</span></span>
           </div>
           <div class="nav-link ${cur === 'codes' ? 'active' : ''}" onclick="Admin.navigate('codes')">
             <span class="nav-icon">🎫</span>
@@ -6114,6 +6121,688 @@ E: Le Burkina Faso compte 13 régions administratives depuis 2001.`;
     } else {
       this.toast('Erreur lors de la suppression. Note : les annales par défaut ne peuvent pas être supprimées via le tableau d\'admin.', 'danger');
     }
+  },
+
+  // ============================================================
+  // V63.30 : ACCOMPAGNEMENT FINAL 2026 (Firestore)
+  // ============================================================
+
+  // === PAGE LISTE DES SESSIONS ===
+  renderAccompagnementAdmin() {
+    // Charger depuis Firestore au premier affichage
+    if (!this.state._accompLoaded) {
+      this._loadAccompSessions();
+    }
+    const sessions = this.state._accompSessions || [];
+    const isLoading = this.state._accompLoading && sessions.length === 0;
+    const publishedCount = sessions.filter(s => s.statut === 'publie').length;
+    const draftCount = sessions.filter(s => s.statut === 'brouillon').length;
+    const totalQuestions = sessions.reduce((sum, s) => sum + ((s.questions || []).length), 0);
+
+    return `
+      <div class="page-header">
+        <div>
+          <div class="page-title">Accompagnement <span>Final 2026</span></div>
+          <div class="page-sub">${sessions.length} session${sessions.length > 1 ? 's' : ''} • ${publishedCount} publiée${publishedCount > 1 ? 's' : ''} • ${draftCount} brouillon${draftCount > 1 ? 's' : ''}${isLoading ? ' • ⏳ Chargement...' : ''}</div>
+        </div>
+        <div style="display:flex; gap:0.5rem">
+          <button class="btn-action btn-secondary" onclick="Admin._loadAccompSessions(true)" style="padding:0.6rem 1rem">
+            🔄 Rafraîchir
+          </button>
+          <button class="btn-action" onclick="Admin.navigate('accompagnement-edit')" style="background:linear-gradient(135deg, var(--green-bf), var(--green-bf-dark)); color:white; padding:0.6rem 1.2rem; border:none">
+            ➕ Nouvelle session
+          </button>
+        </div>
+      </div>
+
+      <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+        <div class="stat-card" style="--accent-color:#dcfce7; --accent-text:#15803d">
+          <div class="stat-icon">✅</div>
+          <div class="stat-label">Publiées</div>
+          <div class="stat-value">${publishedCount}</div>
+        </div>
+        <div class="stat-card" style="--accent-color:#fef3c7; --accent-text:#854d0e">
+          <div class="stat-icon">📝</div>
+          <div class="stat-label">Brouillons</div>
+          <div class="stat-value">${draftCount}</div>
+        </div>
+        <div class="stat-card" style="--accent-color:#dbeafe; --accent-text:#1e40af">
+          <div class="stat-icon">🎯</div>
+          <div class="stat-label">Questions totales</div>
+          <div class="stat-value">${totalQuestions}</div>
+        </div>
+        <div class="stat-card" style="--accent-color:#fce7f3; --accent-text:#9d174d">
+          <div class="stat-icon">⏱️</div>
+          <div class="stat-label">Distribution</div>
+          <div class="stat-value" style="font-size:1rem">< 30 sec</div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <div class="table-header">
+          <div class="table-title">📚 Toutes les sessions (Firestore — temps réel)</div>
+        </div>
+        ${sessions.length === 0 ? `
+          <div class="empty-state">
+            <div class="empty-icon">${isLoading ? '⏳' : '🎓'}</div>
+            <div class="empty-title">${isLoading ? 'Chargement...' : 'Aucune session pour le moment'}</div>
+            <div class="empty-sub">${isLoading ? 'Récupération depuis Firestore.' : 'Clique sur "Nouvelle session" pour commencer.'}</div>
+          </div>
+        ` : `
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Titre</th>
+                <th>Date</th>
+                <th>Questions</th>
+                <th>Statut</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${sessions.map(s => `
+                <tr style="${s.statut === 'brouillon' ? 'background:#fef3c7' : ''}">
+                  <td style="max-width:300px">
+                    <div style="font-weight:600">${this.escapeHTML(s.titre)}</div>
+                    ${s.description ? `<div style="font-size:0.75rem; color:var(--ink-mute); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:280px">${this.escapeHTML(s.description.substring(0, 80))}${s.description.length > 80 ? '…' : ''}</div>` : ''}
+                  </td>
+                  <td>${s.date || '—'}</td>
+                  <td>${(s.questions || []).length}</td>
+                  <td>
+                    ${s.statut === 'publie'
+                      ? '<span style="background:#dcfce7; color:#15803d; padding:0.25rem 0.6rem; border-radius:999px; font-size:0.75rem; font-weight:600">✅ Publié</span>'
+                      : '<span style="background:#fef3c7; color:#854d0e; padding:0.25rem 0.6rem; border-radius:999px; font-size:0.75rem; font-weight:600">📝 Brouillon</span>'
+                    }
+                  </td>
+                  <td>
+                    <div style="display:flex; gap:0.3rem; flex-wrap:wrap">
+                      <button class="btn-action" onclick="Admin.editAccompSession('${s.id}')" style="font-size:0.78rem; padding:0.35rem 0.6rem; background:white; border:1.5px solid var(--gold-bf); color:#854d0e">
+                        ✏️ Éditer
+                      </button>
+                      ${s.statut === 'brouillon'
+                        ? `<button class="btn-action" onclick="Admin.publishAccompSession('${s.id}')" style="font-size:0.78rem; padding:0.35rem 0.6rem; background:linear-gradient(135deg, var(--green-bf), var(--green-bf-dark)); color:white; border:none">🚀 Publier</button>`
+                        : `<button class="btn-action btn-secondary" onclick="Admin.unpublishAccompSession('${s.id}')" style="font-size:0.78rem; padding:0.35rem 0.6rem">📥 Dépublier</button>`
+                      }
+                      <button class="btn-action btn-danger" onclick="Admin.deleteAccompSession('${s.id}')" style="font-size:0.78rem; padding:0.35rem 0.6rem">
+                        🗑 Supprimer
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        `}
+      </div>
+
+      <div style="background:linear-gradient(135deg, #dbeafe, white); border:1px solid #93c5fd; border-radius:10px; padding:1rem; margin-top:1rem; font-size:0.85rem; color:#1e40af; line-height:1.5">
+        ℹ️ <strong>Comment ça marche ?</strong> Les sessions créées ici sont stockées dans Firestore (cloud).
+        Dès que tu cliques "🚀 Publier", elles deviennent visibles dans l'app de TOUS les utilisateurs Premium,
+        <strong>sans mise à jour de l'app</strong>. Distribution instantanée (~30 secondes).
+      </div>
+    `;
+  },
+
+  // === Charger les sessions depuis Firestore ===
+  async _loadAccompSessions(forceRefresh) {
+    if (!window.SessionsFirestore) return;
+    if (this.state._accompLoading && !forceRefresh) return;
+    this.state._accompLoading = true;
+    this.state._accompLoaded = true;
+    try {
+      const result = await window.SessionsFirestore.getAllSessionsAdmin();
+      this.state._accompLoading = false;
+      if (result.success) {
+        this.state._accompSessions = result.sessions;
+        if (this.state.currentPage === 'accompagnement') this.render();
+      } else {
+        this.toast('❌ Erreur chargement : ' + result.error, 'danger', 4000);
+      }
+    } catch (e) {
+      this.state._accompLoading = false;
+      console.error('[V63.30] _loadAccompSessions:', e);
+    }
+  },
+
+  // === Naviguer vers l'éditeur (création ou édition) ===
+  editAccompSession(sessionId) {
+    this.state._accompEditingId = sessionId;
+    this.navigate('accompagnement-edit');
+  },
+
+  // === Publier une session ===
+  async publishAccompSession(sessionId) {
+    const session = (this.state._accompSessions || []).find(s => s.id === sessionId);
+    if (!session) return;
+    if ((session.questions || []).length === 0) {
+      this.toast('⚠️ Impossible de publier : la session n\'a aucune question', 'danger', 4000);
+      return;
+    }
+    if (!confirm('🚀 Publier "' + session.titre + '" ?\n\nLes utilisateurs Premium verront cette session immédiatement.')) return;
+    try {
+      const result = await window.SessionsFirestore.publishSession(sessionId);
+      if (result.success) {
+        const s = this.state._accompSessions.find(x => x.id === sessionId);
+        if (s) s.statut = 'publie';
+        this.toast('🎉 Session publiée — distribution en cours', 'success');
+        this.render();
+      } else {
+        this.toast('❌ ' + (result.error || 'Erreur'), 'danger', 4000);
+      }
+    } catch (e) {
+      console.error('[V63.30] publishAccompSession:', e);
+      this.toast('❌ Erreur', 'danger');
+    }
+  },
+
+  // === Dépublier une session ===
+  async unpublishAccompSession(sessionId) {
+    const session = (this.state._accompSessions || []).find(s => s.id === sessionId);
+    if (!session) return;
+    if (!confirm('📥 Dépublier "' + session.titre + '" ?\n\nLes utilisateurs ne la verront plus dans l\'app.')) return;
+    try {
+      const result = await window.SessionsFirestore.unpublishSession(sessionId);
+      if (result.success) {
+        const s = this.state._accompSessions.find(x => x.id === sessionId);
+        if (s) s.statut = 'brouillon';
+        this.toast('📥 Session dépubliée (brouillon)', 'success');
+        this.render();
+      } else {
+        this.toast('❌ ' + (result.error || 'Erreur'), 'danger', 4000);
+      }
+    } catch (e) {
+      console.error('[V63.30] unpublishAccompSession:', e);
+      this.toast('❌ Erreur', 'danger');
+    }
+  },
+
+  // === Supprimer une session ===
+  async deleteAccompSession(sessionId) {
+    const session = (this.state._accompSessions || []).find(s => s.id === sessionId);
+    if (!session) return;
+    if (!confirm('⚠️ SUPPRIMER définitivement "' + session.titre + '" ?\n\nCette action est irréversible.')) return;
+    try {
+      const result = await window.SessionsFirestore.deleteSession(sessionId);
+      if (result.success) {
+        this.state._accompSessions = this.state._accompSessions.filter(s => s.id !== sessionId);
+        this.toast('🗑 Session supprimée', 'success');
+        this.render();
+      } else {
+        this.toast('❌ ' + (result.error || 'Erreur'), 'danger', 4000);
+      }
+    } catch (e) {
+      console.error('[V63.30] deleteAccompSession:', e);
+      this.toast('❌ Erreur', 'danger');
+    }
+  },
+
+  // === PAGE ÉDITEUR (CRÉATION / MODIFICATION) ===
+  renderAccompagnementEdit() {
+    // Initialiser l'état de l'éditeur si pas déjà fait
+    if (!this.state._accompForm) {
+      const editing = this.state._accompEditingId;
+      if (editing && this.state._accompSessions) {
+        const existing = this.state._accompSessions.find(s => s.id === editing);
+        if (existing) {
+          this.state._accompForm = {
+            id: existing.id,
+            titre: existing.titre,
+            numero: existing.numero || 0,
+            date: existing.date || new Date().toISOString().slice(0, 10),
+            description: existing.description || '',
+            questions: JSON.parse(JSON.stringify(existing.questions || [])),
+            isPremium: existing.isPremium !== false,
+            statut: existing.statut || 'brouillon'
+          };
+        }
+      }
+      if (!this.state._accompForm) {
+        // Nouveau
+        this.state._accompForm = {
+          id: null,
+          titre: '',
+          numero: ((this.state._accompSessions || []).length + 1),
+          date: new Date().toISOString().slice(0, 10),
+          description: '',
+          questions: [],
+          isPremium: true,
+          statut: 'brouillon'
+        };
+      }
+    }
+
+    const form = this.state._accompForm;
+    const isEditing = !!form.id;
+    const mode = this.state._accompImportMode || 'form';
+
+    return `
+      <div class="page-header">
+        <div>
+          <div class="page-title">${isEditing ? 'Éditer' : 'Nouvelle'} <span>session</span></div>
+          <div class="page-sub">${isEditing ? 'Modification d\'une session existante' : 'Création d\'une nouvelle session Accompagnement Final'}</div>
+        </div>
+        <button class="btn-action btn-secondary" onclick="Admin.cancelAccompEdit()" style="padding:0.6rem 1rem">
+          ← Retour à la liste
+        </button>
+      </div>
+
+      <!-- INFORMATIONS GÉNÉRALES -->
+      <div class="card" style="padding:1.2rem; margin-bottom:1rem">
+        <h3 style="margin:0 0 1rem 0; font-family:'Instrument Serif',serif; font-size:1.3rem">📋 Informations générales</h3>
+
+        <div style="display:grid; grid-template-columns:2fr 1fr 1fr; gap:1rem; margin-bottom:1rem">
+          <div>
+            <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem">Titre *</label>
+            <input type="text" id="accomp-titre" value="${this.escapeHTML(form.titre)}" placeholder="Ex: Session N°1 de juillet 2026" oninput="Admin._accompUpdate('titre', this.value)" style="width:100%; padding:0.6rem; border:1.5px solid var(--line); border-radius:8px; font-size:0.95rem">
+          </div>
+          <div>
+            <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem">N°</label>
+            <input type="number" id="accomp-numero" value="${form.numero}" min="0" oninput="Admin._accompUpdate('numero', parseInt(this.value)||0)" style="width:100%; padding:0.6rem; border:1.5px solid var(--line); border-radius:8px">
+          </div>
+          <div>
+            <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem">Date *</label>
+            <input type="date" id="accomp-date" value="${form.date}" oninput="Admin._accompUpdate('date', this.value)" style="width:100%; padding:0.6rem; border:1.5px solid var(--line); border-radius:8px">
+          </div>
+        </div>
+
+        <div style="margin-bottom:1rem">
+          <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem">Description (optionnelle)</label>
+          <textarea id="accomp-desc" oninput="Admin._accompUpdate('description', this.value)" placeholder="Ex: Accompagnement Final 2026 : réponses + explications détaillées" style="width:100%; padding:0.6rem; border:1.5px solid var(--line); border-radius:8px; min-height:60px; font-family:inherit; font-size:0.9rem">${this.escapeHTML(form.description)}</textarea>
+        </div>
+      </div>
+
+      <!-- QUESTIONS -->
+      <div class="card" style="padding:1.2rem; margin-bottom:1rem">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem">
+          <h3 style="margin:0; font-family:'Instrument Serif',serif; font-size:1.3rem">🎯 Questions (${form.questions.length})</h3>
+          <div style="display:flex; gap:0.5rem">
+            <button onclick="Admin._setAccompMode('form')" style="padding:0.5rem 0.9rem; border-radius:8px; border:1.5px solid var(--gold-bf); background:${mode === 'form' ? 'var(--gold-bf)' : 'white'}; color:${mode === 'form' ? '#854d0e' : 'var(--ink)'}; font-weight:600; font-size:0.85rem; cursor:pointer">
+              ➕ Formulaire
+            </button>
+            <button onclick="Admin._setAccompMode('import')" style="padding:0.5rem 0.9rem; border-radius:8px; border:1.5px solid var(--gold-bf); background:${mode === 'import' ? 'var(--gold-bf)' : 'white'}; color:${mode === 'import' ? '#854d0e' : 'var(--ink)'}; font-weight:600; font-size:0.85rem; cursor:pointer">
+              📥 Importer
+            </button>
+          </div>
+        </div>
+
+        ${mode === 'import' ? this._renderAccompImport() : this._renderAccompFormQuestions()}
+
+        ${form.questions.length > 0 ? `
+          <div style="margin-top:1.2rem; border-top:1px solid var(--line); padding-top:1rem">
+            <h4 style="margin:0 0 0.8rem 0; font-size:1rem">📋 Questions ajoutées</h4>
+            <div style="max-height:500px; overflow-y:auto">
+              ${form.questions.map((q, i) => this._renderAccompQuestionRow(q, i)).join('')}
+            </div>
+          </div>
+        ` : ''}
+      </div>
+
+      <!-- BOUTONS D'ACTION -->
+      <div class="card" style="padding:1.2rem; display:flex; gap:0.7rem; justify-content:flex-end; flex-wrap:wrap">
+        <button class="btn-action btn-secondary" onclick="Admin.cancelAccompEdit()" style="padding:0.7rem 1.2rem">
+          Annuler
+        </button>
+        <button class="btn-action" onclick="Admin.saveAccompSession('brouillon')" style="padding:0.7rem 1.2rem; background:white; border:1.5px solid #fbbf24; color:#854d0e; font-weight:600">
+          💾 Sauvegarder en brouillon
+        </button>
+        <button class="btn-action" onclick="Admin.saveAccompSession('publie')" style="padding:0.7rem 1.2rem; background:linear-gradient(135deg, var(--green-bf), var(--green-bf-dark)); color:white; border:none; font-weight:600">
+          🚀 Publier immédiatement
+        </button>
+      </div>
+    `;
+  },
+
+  // === SOUS-COMPOSANTS ÉDITEUR ===
+  _renderAccompFormQuestions() {
+    const q = this.state._accompNewQ || { type: 'qcm4', q: '', choices: ['', '', '', ''], r: 0, nb: '' };
+
+    return `
+      <div style="background:#f9fafb; border-radius:10px; padding:1rem; border:1px dashed #d1d5db">
+        <div style="margin-bottom:0.8rem">
+          <label style="display:block; font-size:0.8rem; font-weight:600; margin-bottom:0.3rem">Type de question</label>
+          <select onchange="Admin._accompChangeType(this.value)" style="width:100%; padding:0.5rem; border:1.5px solid var(--line); border-radius:8px">
+            <option value="qcm4" ${q.type === 'qcm4' ? 'selected' : ''}>QCM 4 choix (A/B/C/D)</option>
+            <option value="qcm3" ${q.type === 'qcm3' ? 'selected' : ''}>QCM 3 choix (A/B/C)</option>
+            <option value="multi" ${q.type === 'multi' ? 'selected' : ''}>QCM multi-réponses (plusieurs bonnes)</option>
+            <option value="open" ${q.type === 'open' ? 'selected' : ''}>Question ouverte</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom:0.8rem">
+          <label style="display:block; font-size:0.8rem; font-weight:600; margin-bottom:0.3rem">Énoncé</label>
+          <textarea id="accomp-q-text" oninput="Admin._accompNewQUpdate('q', this.value)" placeholder="Quelle partie du cerveau..." style="width:100%; padding:0.5rem; border:1.5px solid var(--line); border-radius:8px; min-height:60px; font-family:inherit">${this.escapeHTML(q.q)}</textarea>
+        </div>
+
+        ${q.type === 'open' ? `
+          <div style="margin-bottom:0.8rem">
+            <label style="display:block; font-size:0.8rem; font-weight:600; margin-bottom:0.3rem">Réponse attendue</label>
+            <input type="text" oninput="Admin._accompNewQUpdate('r', this.value)" value="${this.escapeHTML(q.r || '')}" placeholder="La réponse..." style="width:100%; padding:0.5rem; border:1.5px solid var(--line); border-radius:8px">
+          </div>
+        ` : `
+          <div style="margin-bottom:0.8rem">
+            <label style="display:block; font-size:0.8rem; font-weight:600; margin-bottom:0.3rem">Choix (cocher la/les bonne(s))</label>
+            ${(q.choices || []).map((c, i) => `
+              <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem">
+                <input type="${q.type === 'multi' ? 'checkbox' : 'radio'}" name="accomp-correct" ${this._isAccompCorrect(q, i) ? 'checked' : ''} onchange="Admin._accompToggleCorrect(${i}, ${q.type === 'multi'})">
+                <span style="font-weight:600; min-width:20px">${String.fromCharCode(65 + i)}.</span>
+                <input type="text" value="${this.escapeHTML(c)}" oninput="Admin._accompNewQChoice(${i}, this.value)" placeholder="Choix ${String.fromCharCode(65 + i)}" style="flex:1; padding:0.4rem; border:1.5px solid var(--line); border-radius:6px">
+              </div>
+            `).join('')}
+          </div>
+        `}
+
+        <div style="margin-bottom:0.8rem">
+          <label style="display:block; font-size:0.8rem; font-weight:600; margin-bottom:0.3rem">Explication (NB) — affichée après la réponse</label>
+          <textarea id="accomp-q-nb" oninput="Admin._accompNewQUpdate('nb', this.value)" placeholder="Le cervelet est la structure cérébrale dédiée à..." style="width:100%; padding:0.5rem; border:1.5px solid var(--line); border-radius:8px; min-height:80px; font-family:inherit">${this.escapeHTML(q.nb)}</textarea>
+        </div>
+
+        <button onclick="Admin._addAccompQuestion()" style="width:100%; padding:0.7rem; background:linear-gradient(135deg, var(--green-bf), var(--green-bf-dark)); color:white; border:none; border-radius:8px; font-weight:600; cursor:pointer">
+          ➕ Ajouter cette question
+        </button>
+      </div>
+    `;
+  },
+
+  _renderAccompImport() {
+    return `
+      <div style="background:#f9fafb; border-radius:10px; padding:1rem; border:1px dashed #d1d5db">
+        <div style="margin-bottom:0.6rem; font-size:0.85rem; color:var(--ink-mute); line-height:1.5">
+          Colle ton lot de questions au format Bara ci-dessous. Le système les parse automatiquement.<br>
+          <strong>Format attendu</strong> (chaque question = 6 lignes consécutives) :
+        </div>
+        <pre style="background:white; padding:0.6rem; border-radius:6px; font-size:0.75rem; margin:0 0 0.8rem 0; border:1px solid var(--line); overflow-x:auto">Q1: Quelle partie du cerveau est responsable de l'équilibre ?
+A. L'hypothalamus
+B. Le cervelet
+C. La moelle épinière
+D. Le tronc cérébral
+R: B
+X: Le cervelet est la structure cérébrale dédiée à la coordination motrice...</pre>
+
+        <textarea id="accomp-import-text" placeholder="Colle tes questions ici..." style="width:100%; padding:0.6rem; border:1.5px solid var(--line); border-radius:8px; min-height:200px; font-family:'Courier New', monospace; font-size:0.85rem"></textarea>
+
+        <button onclick="Admin._parseAccompImport()" style="margin-top:0.6rem; width:100%; padding:0.7rem; background:linear-gradient(135deg, var(--green-bf), var(--green-bf-dark)); color:white; border:none; border-radius:8px; font-weight:600; cursor:pointer">
+          📥 Parser et ajouter les questions
+        </button>
+      </div>
+    `;
+  },
+
+  _renderAccompQuestionRow(q, i) {
+    const typeLabel = { qcm4: 'QCM 4', qcm3: 'QCM 3', multi: 'Multi', open: 'Ouvert' }[q.type] || q.type;
+    let answerDisplay = '';
+    if (q.type === 'open') {
+      answerDisplay = '<em>Réponse libre</em>: ' + this.escapeHTML((q.r || '').substring(0, 60));
+    } else if (q.type === 'multi') {
+      const indices = Array.isArray(q.r) ? q.r : [q.r];
+      answerDisplay = 'Bonnes : ' + indices.map(idx => String.fromCharCode(65 + idx)).join(', ');
+    } else {
+      const idx = typeof q.r === 'number' ? q.r : 0;
+      answerDisplay = 'Bonne : ' + String.fromCharCode(65 + idx);
+    }
+
+    return `
+      <div style="background:white; border:1px solid var(--line); border-radius:8px; padding:0.7rem; margin-bottom:0.5rem; display:flex; gap:0.6rem; align-items:flex-start">
+        <div style="background:var(--green-bf); color:white; min-width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.85rem">${i + 1}</div>
+        <div style="flex:1; min-width:0">
+          <div style="font-size:0.7rem; color:var(--gold-bf); font-weight:700; text-transform:uppercase; margin-bottom:0.2rem">${typeLabel}</div>
+          <div style="font-weight:600; font-size:0.9rem; margin-bottom:0.3rem; overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical">${this.escapeHTML(q.q)}</div>
+          <div style="font-size:0.78rem; color:var(--ink-mute)">${answerDisplay}</div>
+        </div>
+        <button onclick="Admin._removeAccompQuestion(${i})" style="background:#fee2e2; color:#991b1b; border:none; border-radius:6px; padding:0.3rem 0.5rem; cursor:pointer; font-size:0.85rem" title="Supprimer">🗑</button>
+      </div>
+    `;
+  },
+
+  // === HELPERS ÉDITEUR ===
+  _isAccompCorrect(q, idx) {
+    if (q.type === 'multi') {
+      const indices = Array.isArray(q.r) ? q.r : [];
+      return indices.includes(idx);
+    }
+    return q.r === idx;
+  },
+
+  _accompUpdate(field, value) {
+    if (!this.state._accompForm) return;
+    this.state._accompForm[field] = value;
+  },
+
+  _accompNewQUpdate(field, value) {
+    if (!this.state._accompNewQ) this.state._accompNewQ = { type: 'qcm4', q: '', choices: ['', '', '', ''], r: 0, nb: '' };
+    this.state._accompNewQ[field] = value;
+  },
+
+  _accompNewQChoice(idx, value) {
+    if (!this.state._accompNewQ) this.state._accompNewQ = { type: 'qcm4', q: '', choices: ['', '', '', ''], r: 0, nb: '' };
+    if (!this.state._accompNewQ.choices) this.state._accompNewQ.choices = ['', '', '', ''];
+    this.state._accompNewQ.choices[idx] = value;
+  },
+
+  _accompToggleCorrect(idx, isMulti) {
+    if (!this.state._accompNewQ) this.state._accompNewQ = { type: 'qcm4', q: '', choices: ['', '', '', ''], r: 0, nb: '' };
+    if (isMulti) {
+      if (!Array.isArray(this.state._accompNewQ.r)) this.state._accompNewQ.r = [];
+      const i = this.state._accompNewQ.r.indexOf(idx);
+      if (i >= 0) this.state._accompNewQ.r.splice(i, 1);
+      else this.state._accompNewQ.r.push(idx);
+      this.state._accompNewQ.r.sort();
+    } else {
+      this.state._accompNewQ.r = idx;
+    }
+  },
+
+  _accompChangeType(type) {
+    if (!this.state._accompNewQ) this.state._accompNewQ = {};
+    this.state._accompNewQ.type = type;
+    if (type === 'qcm4') {
+      this.state._accompNewQ.choices = this.state._accompNewQ.choices && this.state._accompNewQ.choices.length === 4
+        ? this.state._accompNewQ.choices : ['', '', '', ''];
+      this.state._accompNewQ.r = 0;
+    } else if (type === 'qcm3') {
+      this.state._accompNewQ.choices = ['', '', ''];
+      this.state._accompNewQ.r = 0;
+    } else if (type === 'multi') {
+      this.state._accompNewQ.choices = this.state._accompNewQ.choices && this.state._accompNewQ.choices.length >= 3
+        ? this.state._accompNewQ.choices : ['', '', '', ''];
+      this.state._accompNewQ.r = [];
+    } else if (type === 'open') {
+      this.state._accompNewQ.r = '';
+    }
+    this.render();
+  },
+
+  _setAccompMode(mode) {
+    this.state._accompImportMode = mode;
+    this.render();
+  },
+
+  // === AJOUT D'UNE QUESTION ===
+  _addAccompQuestion() {
+    if (!this.state._accompForm) return;
+    const q = this.state._accompNewQ;
+    if (!q || !q.q || !q.q.trim()) {
+      this.toast('⚠️ L\'énoncé est requis', 'danger');
+      return;
+    }
+    if (q.type !== 'open') {
+      if (!q.choices || q.choices.some(c => !c || !c.trim())) {
+        this.toast('⚠️ Tous les choix doivent être remplis', 'danger');
+        return;
+      }
+      if (q.type === 'multi' && (!Array.isArray(q.r) || q.r.length === 0)) {
+        this.toast('⚠️ Coche au moins une bonne réponse', 'danger');
+        return;
+      }
+    } else if (!q.r || !q.r.trim()) {
+      this.toast('⚠️ La réponse attendue est requise', 'danger');
+      return;
+    }
+    // Ajouter
+    const cleaned = {
+      type: q.type,
+      q: q.q.trim(),
+      nb: (q.nb || '').trim()
+    };
+    if (q.type === 'open') {
+      cleaned.r = q.r.trim();
+    } else {
+      cleaned.choices = q.choices.map(c => c.trim());
+      cleaned.r = q.r;
+    }
+    this.state._accompForm.questions.push(cleaned);
+    // Reset le formulaire
+    this.state._accompNewQ = { type: q.type, q: '', choices: q.type === 'qcm3' ? ['', '', ''] : ['', '', '', ''], r: q.type === 'multi' ? [] : 0, nb: '' };
+    this.toast('✓ Question ajoutée', 'success');
+    this.render();
+  },
+
+  // === SUPPRIMER UNE QUESTION ===
+  _removeAccompQuestion(idx) {
+    if (!this.state._accompForm) return;
+    if (!confirm('Supprimer cette question ?')) return;
+    this.state._accompForm.questions.splice(idx, 1);
+    this.render();
+  },
+
+  // === PARSER L'IMPORT TEXTE ===
+  _parseAccompImport() {
+    const ta = document.getElementById('accomp-import-text');
+    if (!ta) return;
+    const text = ta.value.trim();
+    if (!text) {
+      this.toast('⚠️ Colle du texte à parser', 'danger');
+      return;
+    }
+    const blocks = text.split(/\n(?=Q\d*\s*[:.])/g);
+    const newQuestions = [];
+    let errors = 0;
+    blocks.forEach((block, blockIdx) => {
+      const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
+      if (lines.length < 6) { errors++; return; }
+      // Q1: ...
+      const qMatch = lines[0].match(/^Q\d*\s*[:.]\s*(.+)$/);
+      if (!qMatch) { errors++; return; }
+      // A. B. C. D.
+      const choices = [];
+      let rIdx = -1, xIdx = -1;
+      for (let i = 1; i < lines.length; i++) {
+        const choiceMatch = lines[i].match(/^[A-D][.)\s]+(.+)$/);
+        const rMatch = lines[i].match(/^R\s*[:.]\s*([A-D])\s*$/i);
+        const xMatch = lines[i].match(/^X\s*[:.]\s*(.+)$/i);
+        if (choiceMatch && rIdx < 0) {
+          choices.push(choiceMatch[1].trim());
+        } else if (rMatch) {
+          rIdx = rMatch[1].toUpperCase().charCodeAt(0) - 65;
+        } else if (xMatch) {
+          xIdx = i;
+          break;
+        }
+      }
+      if (choices.length < 3 || choices.length > 4 || rIdx < 0) { errors++; return; }
+      // Récupérer l'explication (X: et lignes suivantes)
+      let nb = '';
+      if (xIdx >= 0) {
+        const xMatch = lines[xIdx].match(/^X\s*[:.]\s*(.+)$/i);
+        nb = xMatch[1];
+        // Lignes après X (continuation)
+        for (let i = xIdx + 1; i < lines.length; i++) {
+          nb += ' ' + lines[i];
+        }
+      }
+      newQuestions.push({
+        type: choices.length === 4 ? 'qcm4' : 'qcm3',
+        q: qMatch[1].trim(),
+        choices: choices,
+        r: rIdx,
+        nb: nb.trim()
+      });
+    });
+    if (newQuestions.length === 0) {
+      this.toast('❌ Aucune question valide trouvée. Vérifie le format.', 'danger', 5000);
+      return;
+    }
+    this.state._accompForm.questions.push(...newQuestions);
+    ta.value = '';
+    this.toast(`✓ ${newQuestions.length} question${newQuestions.length > 1 ? 's' : ''} importée${newQuestions.length > 1 ? 's' : ''}${errors > 0 ? ' (' + errors + ' erreur' + (errors > 1 ? 's' : '') + ')' : ''}`, 'success', 4000);
+    this.render();
+  },
+
+  // === SAUVEGARDER (création ou modification) ===
+  async saveAccompSession(statut) {
+    if (!this.state._accompForm) return;
+    const form = this.state._accompForm;
+    // Validation
+    if (!form.titre || form.titre.trim().length < 5) {
+      this.toast('⚠️ Le titre doit faire au moins 5 caractères', 'danger');
+      return;
+    }
+    if (!form.date) {
+      this.toast('⚠️ La date est requise', 'danger');
+      return;
+    }
+    if (statut === 'publie' && form.questions.length === 0) {
+      this.toast('⚠️ Impossible de publier une session sans question', 'danger', 4000);
+      return;
+    }
+    // Vérifier doublon de titre (V63.30 — Q4 : bloquer)
+    const existingSessions = this.state._accompSessions || [];
+    const duplicate = existingSessions.find(s =>
+      s.id !== form.id
+      && s.titre.trim().toLowerCase() === form.titre.trim().toLowerCase()
+    );
+    if (duplicate) {
+      this.toast('⚠️ Une session avec ce titre existe déjà', 'danger', 4000);
+      return;
+    }
+    const sessionData = {
+      titre: form.titre.trim(),
+      numero: form.numero || 0,
+      date: form.date,
+      description: form.description.trim(),
+      questions: form.questions,
+      isPremium: form.isPremium,
+      statut: statut
+    };
+    try {
+      let result;
+      if (form.id) {
+        // Modification
+        result = await window.SessionsFirestore.updateSession(form.id, sessionData);
+      } else {
+        // Création
+        result = await window.SessionsFirestore.createSession(sessionData);
+      }
+      if (result.success) {
+        this.toast(form.id
+          ? (statut === 'publie' ? '✅ Session mise à jour et publiée' : '✅ Session mise à jour')
+          : (statut === 'publie' ? '🚀 Session créée et publiée !' : '💾 Brouillon créé'),
+          'success', 3000);
+        // Reset l'état + retour à la liste
+        this.state._accompForm = null;
+        this.state._accompEditingId = null;
+        this.state._accompNewQ = null;
+        this.state._accompImportMode = 'form';
+        await this._loadAccompSessions(true);
+        this.navigate('accompagnement');
+      } else {
+        this.toast('❌ ' + (result.error || 'Erreur'), 'danger', 4000);
+      }
+    } catch (e) {
+      console.error('[V63.30] saveAccompSession:', e);
+      this.toast('❌ Erreur', 'danger');
+    }
+  },
+
+  // === ANNULER ===
+  cancelAccompEdit() {
+    if (this.state._accompForm && (this.state._accompForm.titre || this.state._accompForm.questions.length > 0)) {
+      if (!confirm('Abandonner les modifications ?')) return;
+    }
+    this.state._accompForm = null;
+    this.state._accompEditingId = null;
+    this.state._accompNewQ = null;
+    this.state._accompImportMode = 'form';
+    this.navigate('accompagnement');
   },
 
   // ============================================================
