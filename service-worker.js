@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.28 - V63.28 : UX wording (Accompagnement Final enrichi + concours fonction publique)
+// Version 6.3.29 - V63.29 : Architecture Firestore Accompagnement Final 2026 (Phase 1/4)
 
-const CACHE_NAME = 'bara-concours-v6-3-28';
+const CACHE_NAME = 'bara-concours-v6-3-29';
 const APP_SHELL = [
   './',
   './index.html',
@@ -13,6 +13,7 @@ const APP_SHELL = [
   './data/premium.js',
   './data/forum.js',
   './data/forum_firestore.js',
+  './data/sessions_firestore.js',
   './data/annales.js',
   './data/sessions.js',
   './data/biometric.js',

@@ -3294,9 +3294,17 @@
       }
     },
 
-    // Récupérer une session par ID
+    // Récupérer une session par ID — V63.29 : cherche aussi dans Firestore
     getSession(sessionId) {
-      return this.getAllSessions().find(s => s.id === sessionId);
+      // 1) Code (sessions.js)
+      const codeSession = this.getAllSessions().find(s => s.id === sessionId);
+      if (codeSession) return codeSession;
+      // 2) Firestore (cache local)
+      if (window.SessionsFirestore && window.SessionsFirestore._sessionsCache) {
+        const fsSession = window.SessionsFirestore._sessionsCache.find(s => s.id === sessionId);
+        if (fsSession) return fsSession;
+      }
+      return undefined;
     },
 
     // Sauvegarder une session custom (depuis l'admin)

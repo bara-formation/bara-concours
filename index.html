@@ -3388,6 +3388,7 @@ img { max-width: 100%; display: block; }
 <script src="data/forum_firestore.js"></script>
 <script src="data/annales.js"></script>
 <script src="data/sessions.js"></script>
+<script src="data/sessions_firestore.js"></script>
 <script src="data/biometric.js"></script>
 <script src="data/weekly_exam.js"></script>
 
@@ -3517,6 +3518,12 @@ const App = {
     const goingToForum = ['forum', 'forum-topic', 'forum-create'].includes(screen);
     if (wasInForum && !goingToForum) {
       this.stopForumLiveSync();
+    }
+    // V63.29 : Idem pour les sessions Accompagnement Final
+    const wasInSessions = ['annales', 'session-view', 'session-exam'].includes(this.state.currentScreen);
+    const goingToSessions = ['annales', 'session-view', 'session-exam'].includes(screen);
+    if (wasInSessions && !goingToSessions) {
+      this.stopSessionsLiveSync();
     }
     this.state.currentScreen = screen;
     Object.assign(this.state, params);
@@ -4247,12 +4254,108 @@ const App = {
   // === 4 types de questions adaptatifs
   // ===========================================
 
+  // V63.29 : Charger les sessions Firestore (premier appel)
+  async loadSessionsFirestore() {
+    if (!window.SessionsFirestore || !window.FirebaseAuth || !window.FirebaseAuth.isFirebaseReady) {
+      return;
+    }
+    if (this.state._sessionsLoading) return;
+    this.state._sessionsLoading = true;
+    try {
+      const result = await window.SessionsFirestore.getAllPublishedSessions();
+      this.state._sessionsLoading = false;
+      if (result.success) {
+        // Re-render si on est sur la page Accompagnement Final
+        if (this.state.currentScreen === 'annales') {
+          this.render();
+        }
+      } else {
+        console.warn('[V63.29] Sessions Firestore échec :', result.error);
+      }
+    } catch (e) {
+      this.state._sessionsLoading = false;
+      console.error('[V63.29] Sessions Firestore exception :', e);
+    }
+  },
+
+  // V63.29 : Démarrer le listener temps réel des sessions
+  startSessionsLiveSync() {
+    if (!window.SessionsFirestore || !window.FirebaseAuth || !window.FirebaseAuth.isFirebaseReady) {
+      return;
+    }
+    if (this.state._sessionsUnsubscribe) return; // Déjà actif
+    console.log('[V63.29] Démarrage sync temps réel des sessions Accompagnement Final');
+    const unsub = window.SessionsFirestore.listenToSessions((sessions) => {
+      if (['annales', 'session-view', 'session-exam'].includes(this.state.currentScreen)) {
+        this.render();
+      }
+    });
+    this.state._sessionsUnsubscribe = unsub;
+  },
+
+  // V63.29 : Arrêter le listener
+  stopSessionsLiveSync() {
+    if (this.state._sessionsUnsubscribe) {
+      try { this.state._sessionsUnsubscribe(); } catch(e) {}
+      this.state._sessionsUnsubscribe = null;
+      console.log('[V63.29] Sync sessions arrêté');
+    }
+  },
+
+  // V63.29 : Fusionner sessions code (sessions.js 2025) + Firestore (2026+)
+  // Tri par date décroissante (les plus récentes en premier)
+  getMergedAccompagnementSessions() {
+    // Sessions du code (2025)
+    const codeSessions = window.SessionsHelper
+      ? window.SessionsHelper.getAllSessions().map(s => ({
+          ...s,
+          source: 'code',
+          datePublication: s.date ? new Date(s.date).getTime() : 0
+        }))
+      : [];
+    // Sessions Firestore (2026+)
+    const firestoreSessions = (window.SessionsFirestore && window.SessionsFirestore._sessionsCache)
+      ? window.SessionsFirestore._sessionsCache
+      : [];
+    // Fusion + tri décroissant (plus récentes en premier)
+    const all = [...firestoreSessions, ...codeSessions];
+    all.sort((a, b) => (b.datePublication || 0) - (a.datePublication || 0));
+    return all;
+  },
+
+  // V63.29 : Récupérer une session par ID (code OU Firestore)
+  getSessionByIdMerged(sessionId) {
+    if (!sessionId) return null;
+    // Essayer code d'abord
+    if (window.SessionsHelper) {
+      const codeSession = window.SessionsHelper.getSession(sessionId);
+      if (codeSession) return { ...codeSession, source: 'code' };
+    }
+    // Essayer Firestore
+    if (window.SessionsFirestore && window.SessionsFirestore._sessionsCache) {
+      const fsSession = window.SessionsFirestore._sessionsCache.find(s => s.id === sessionId);
+      if (fsSession) return fsSession;
+    }
+    return null;
+  },
+
   // PAGE 1 : Liste des sessions disponibles
   renderSessionsList() {
     const u = this.state.user;
     const isPremium = window.PremiumService && window.PremiumService.isUserPremium(u);
-    const sessions = window.SessionsHelper ? window.SessionsHelper.getAllSessions() : [];
-    const totalQuestions = window.SessionsHelper ? window.SessionsHelper.countTotalQuestions() : 0;
+    // V63.29 : Charger les sessions Firestore au premier affichage + sync temps réel
+    if (window.SessionsFirestore && window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady) {
+      // Si pas encore chargé : charger
+      if (!window.SessionsFirestore._sessionsCache) {
+        this.loadSessionsFirestore();
+      }
+      // Activer le listener temps réel (s'il ne tourne pas déjà)
+      this.startSessionsLiveSync();
+    }
+    // V63.29 : Fusion sessions code (2025) + Firestore (2026+)
+    const sessions = this.getMergedAccompagnementSessions();
+    const totalQuestions = sessions.reduce((sum, s) => sum + (s.questions || []).length, 0);
+    const isLoading = this.state._sessionsLoading && sessions.length === 0;
 
     return `
       <div class="page">
@@ -4263,7 +4366,7 @@ const App = {
             <div class="header-spacer"></div>
           </div>
           <div class="header-h1" style="font-size:1.5rem">Sessions <span>d'Accompagnement</span></div>
-          <div class="header-sub">${sessions.length} session${sessions.length > 1 ? 's' : ''} • ${totalQuestions} questions au total</div>
+          <div class="header-sub">${sessions.length} session${sessions.length > 1 ? 's' : ''} • ${totalQuestions} questions au total${isLoading ? ' • ⏳ Chargement...' : ''}</div>
         </header>
 
         <div class="content mt-overlap">
