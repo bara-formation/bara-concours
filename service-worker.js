@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.32 - V63.32 : Refonte UX titres de section Accompagnement Final (séparation claire)
+// Version 6.3.33 - V63.33 : Badge "Nouveau" sur sessions Firestore récentes + Documentation (Phase 4 finale)
 
-const CACHE_NAME = 'bara-concours-v6-3-32';
+const CACHE_NAME = 'bara-concours-v6-3-33';
 const APP_SHELL = [
   './',
   './index.html',

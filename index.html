@@ -2172,6 +2172,32 @@ img { max-width: 100%; display: block; }
   border-color: var(--green-bf);
 }
 .session-card.locked { opacity: 0.65; }
+
+/* V63.33 : Badge "Nouveau" pour les sessions Firestore récentes (< 7 jours) */
+.session-card-new {
+  position: relative;
+  border: 2px solid var(--gold-bf);
+  box-shadow: 0 2px 12px rgba(245, 158, 11, 0.15);
+}
+.session-new-badge {
+  position: absolute;
+  top: -10px;
+  right: 12px;
+  background: linear-gradient(135deg, var(--gold-bf), #f59e0b);
+  color: white;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+  z-index: 2;
+  animation: pulse-new 2s ease-in-out infinite;
+}
+@keyframes pulse-new {
+  0%, 100% { transform: scale(1); box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4); }
+  50% { transform: scale(1.05); box-shadow: 0 3px 12px rgba(245, 158, 11, 0.6); }
+}
 .session-card-date-badge {
   background: linear-gradient(135deg, var(--green-bf), var(--green-bf-dark));
   color: white;
@@ -4576,8 +4602,17 @@ const App = {
     };
     const typesDisplay = [...types].map(t => typesLabels[t]).filter((v, i, a) => a.indexOf(v) === i);
 
+    // V63.33 : Badge "Nouveau" pour les sessions Firestore publiées récemment (< 7 jours)
+    let isNew = false;
+    if (session.source === 'firestore' && session.datePublication) {
+      const ageMs = Date.now() - session.datePublication;
+      const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000;
+      isNew = ageMs >= 0 && ageMs < SEVEN_DAYS_MS;
+    }
+
     return `
-      <div class="session-card ${!isPremium ? 'locked' : ''}" onclick="App.openSession('${session.id}')">
+      <div class="session-card ${!isPremium ? 'locked' : ''} ${isNew ? 'session-card-new' : ''}" onclick="App.openSession('${session.id}')">
+        ${isNew ? '<div class="session-new-badge">🆕 Nouveau</div>' : ''}
         <div class="session-card-date-badge">
           <div class="session-card-day">${this.formatSessionDay(session.date)}</div>
           <div class="session-card-month">${this.formatSessionMonth(session.date)}</div>
