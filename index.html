@@ -3487,6 +3487,7 @@ img { max-width: 100%; display: block; }
 <script src="data/annales.js"></script>
 <script src="data/sessions.js"></script>
 <script src="data/sessions_firestore.js"></script>
+<script src="data/texts_firestore.js"></script>
 <script src="data/biometric.js"></script>
 <script src="data/weekly_exam.js"></script>
 
@@ -6026,9 +6027,9 @@ const App = {
     return `
       <div class="page">
         <header class="header">
-          <div class="header-greet">${this.getGreeting()}, futur cadre 🇧🇫</div>
+          <div class="header-greet">${this.getGreeting()}, ${typeof window.getText === 'function' ? this.escapeHTML(window.getText('home_greeting', 'futur cadre 🇧🇫')) : 'futur cadre 🇧🇫'}</div>
           <div class="header-h1">Bara <span>Concours</span></div>
-          <div class="header-sub">Choisis ton concours et démarre l'entraînement</div>
+          <div class="header-sub">${typeof window.getText === 'function' ? this.escapeHTML(window.getText('home_subtitle', 'Choisis ton concours et démarre l\'entraînement')) : 'Choisis ton concours et démarre l\'entraînement'}</div>
         </header>
 
         <div class="content mt-overlap">
@@ -6056,7 +6057,7 @@ const App = {
             <div class="annales-card-icon">📚</div>
             <div class="annales-card-content">
               <div class="annales-card-title">Accompagnement <span>Final</span></div>
-              <div class="annales-card-desc">Corrigés <strong>bien détaillés</strong> des concours avec explications complètes</div>
+              <div class="annales-card-desc">${typeof window.getText === 'function' ? this.escapeHTML(window.getText('accomp_desc', 'Corrigés bien détaillés des concours avec explications complètes')) : 'Corrigés <strong>bien détaillés</strong> des concours avec explications complètes'}</div>
               <div class="annales-card-stats">
                 <span class="annales-stat">${window.SessionsHelper ? window.SessionsHelper.getAllSessions().length : 0} sessions</span>
                 <span class="annales-stat">🎯 ${window.SessionsHelper ? window.SessionsHelper.countTotalQuestions() : 0} questions</span>
@@ -6494,7 +6495,7 @@ const App = {
             <div style="font-size:3.5rem; display:none; text-align:center">🎓</div>
             <h1 style="font-family:'Instrument Serif',serif; font-size:2rem; color:var(--green-bf-dark); margin:0.4rem 0 0.3rem; text-align:center">Bara Concours</h1>
             <p style="font-size:0.95rem; color:var(--ink-soft); margin:0; line-height:1.5; text-align:center">
-              Préparation aux concours de la fonction publique<br>du Burkina Faso
+              ${typeof window.getText === 'function' ? this.escapeHTML(window.getText('auth_subtitle', 'Préparation aux concours de la fonction publique du Burkina Faso')) : 'Préparation aux concours de la fonction publique<br>du Burkina Faso'}
             </p>
           </div>
 
@@ -8654,16 +8655,16 @@ const App = {
           <div class="profile-card">
             <div class="profile-avatar">🇧🇫</div>
             <div class="profile-name">Bara Formation</div>
-            <div class="profile-status">Le pays des hommes intègres</div>
+            <div class="profile-status">${typeof window.getText === 'function' ? this.escapeHTML(window.getText('about_baseline', 'Le pays des hommes intègres')) : 'Le pays des hommes intègres'}</div>
           </div>
 
           <div style="background:white; border-radius:var(--radius-lg); padding:1.2rem; box-shadow:var(--shadow-sm); border:1px solid var(--line-soft); margin-bottom:1rem">
             <h3 style="font-family:'Instrument Serif',serif; font-size:1.3rem; color:var(--green-bf); margin-bottom:0.6rem">Notre mission</h3>
             <p style="font-size:0.92rem; color:var(--ink-soft); line-height:1.6">
-              Bara Concours est l'application officielle de <strong>Bara Formation</strong>, dédiée à la préparation des étudiants burkinabè aux concours de la fonction publique.
+              ${typeof window.getText === 'function' ? this.escapeHTML(window.getText('about_mission', 'Bara Concours est l\'application officielle de Bara Formation, dédiée à la préparation des étudiants burkinabè aux concours de la fonction publique.')) : 'Bara Concours est l\'application officielle de <strong>Bara Formation</strong>, dédiée à la préparation des étudiants burkinabè aux concours de la fonction publique.'}
             </p>
             <p style="font-size:0.92rem; color:var(--ink-soft); line-height:1.6; margin-top:0.6rem">
-              Notre objectif : démocratiser l'accès à une préparation de qualité pour tous, partout au Burkina Faso.
+              ${typeof window.getText === 'function' ? this.escapeHTML(window.getText('about_objectif', 'Notre objectif : démocratiser l\'accès à une préparation de qualité pour tous, partout au Burkina Faso.')) : 'Notre objectif : démocratiser l\'accès à une préparation de qualité pour tous, partout au Burkina Faso.'}
             </p>
           </div>
 
@@ -10800,13 +10801,13 @@ const App = {
       <div class="page">
         <header class="header">
           <div class="header-h1" style="font-size:1.6rem">💬 <span>Forum</span></div>
-          <div class="header-sub">Échange avec les autres candidats du Burkina</div>
+          <div class="header-sub">${typeof window.getText === 'function' ? this.escapeHTML(window.getText('forum_welcome', 'Échange avec les autres candidats du Burkina')) : 'Échange avec les autres candidats du Burkina'}</div>
         </header>
 
         <div class="content mt-overlap">
 
           <div class="forum-rules">
-            <strong>📌 Règles du forum :</strong> Sois respectueux. Pas de spam, pas d'insultes, pas de liens externes. Les messages inappropriés sont automatiquement bloqués.
+            <strong>📌 Règles du forum :</strong> ${typeof window.getText === 'function' ? this.escapeHTML(window.getText('forum_rules', 'Sois respectueux. Pas de spam, pas d\'insultes, pas de liens externes. Les messages inappropriés sont automatiquement bloqués.')) : 'Sois respectueux. Pas de spam, pas d\'insultes, pas de liens externes. Les messages inappropriés sont automatiquement bloqués.'}
           </div>
 
           ${!isLoggedIn ? `
@@ -11956,6 +11957,20 @@ const App = {
           return;
         }
         console.log('[App] Firebase prêt');
+
+        // V63.34 : Charger les textes Firestore dès l'init + listener temps réel
+        if (window.TextsFirestore) {
+          window.TextsFirestore.getAllTexts().then(result => {
+            if (result.success) {
+              console.log('[V63.34] Textes Firestore chargés');
+              this.render(); // Re-render avec les nouveaux textes
+            }
+          }).catch(e => console.warn('[V63.34] Textes:', e));
+          // Listener temps réel : si l'admin modifie un texte, l'app le voit en direct
+          window.TextsFirestore.listenToTexts((texts) => {
+            this.render();
+          });
+        }
 
         // V57 : Si l'utilisateur a déjà une session Firebase active, le reconnecter automatiquement
         // S'abonner aux changements d'auth pour restaurer la session

@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.33 - V63.33 : Badge "Nouveau" sur sessions Firestore récentes + Documentation (Phase 4 finale)
+// Version 6.3.34 - V63.34 : CMS Textes editables Firestore (16 textes courants)
 
-const CACHE_NAME = 'bara-concours-v6-3-33';
+const CACHE_NAME = 'bara-concours-v6-3-34';
 const APP_SHELL = [
   './',
   './index.html',
@@ -14,6 +14,7 @@ const APP_SHELL = [
   './data/forum.js',
   './data/forum_firestore.js',
   './data/sessions_firestore.js',
+  './data/texts_firestore.js',
   './data/annales.js',
   './data/sessions.js',
   './data/biometric.js',

@@ -782,6 +782,7 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 <script src="data/sessions.js"></script>
 <script src="data/firebase.js"></script>
 <script src="data/sessions_firestore.js"></script>
+<script src="data/texts_firestore.js"></script>
 <script src="data/forum.js"></script>
 <script src="data/forum_firestore.js"></script>
 
@@ -1043,6 +1044,8 @@ const Admin = {
       // V63.30 : Nouveau système Firestore pour Accompagnement Final 2026
       case 'accompagnement': mainHtml = this.renderAccompagnementAdmin(); break;
       case 'accompagnement-edit': mainHtml = this.renderAccompagnementEdit(); break;
+      // V63.34 : Textes éditables de l'app
+      case 'textes': mainHtml = this.renderTextesAdmin(); break;
       case 'codes': mainHtml = this.renderCodesAdmin(); break;
       case 'settings': mainHtml = this.renderSettings(); break;
       default: mainHtml = this.renderDashboard();
@@ -1151,6 +1154,10 @@ const Admin = {
           <div class="nav-link ${cur === 'accompagnement' || cur === 'accompagnement-edit' ? 'active' : ''}" onclick="Admin.navigate('accompagnement')">
             <span class="nav-icon">🎓</span>
             <span>Accompagnement <span style="background:linear-gradient(135deg, #fef3c7, #fde68a); color:#854d0e; font-size:0.6rem; font-weight:700; padding:0.1rem 0.5rem; border-radius:999px; margin-left:0.3rem">2026</span></span>
+          </div>
+          <div class="nav-link ${cur === 'textes' ? 'active' : ''}" onclick="Admin.navigate('textes')">
+            <span class="nav-icon">🎨</span>
+            <span>Textes de l'app</span>
           </div>
           <div class="nav-link ${cur === 'codes' ? 'active' : ''}" onclick="Admin.navigate('codes')">
             <span class="nav-icon">🎫</span>
@@ -6854,6 +6861,166 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
     this.state._accompNewQ = null;
     this.state._accompImportMode = 'form';
     this.navigate('accompagnement');
+  },
+
+  // ============================================================
+  // V63.34 : TEXTES ÉDITABLES DE L'APP (Firestore)
+  // ============================================================
+
+  renderTextesAdmin() {
+    if (!window.TextsFirestore) {
+      return '<div class="page-header"><div class="page-title">Textes de l\'app</div><div class="page-sub">⚠️ Module TextsFirestore non chargé</div></div>';
+    }
+
+    // Charger depuis Firestore au premier affichage
+    if (!this.state._textesLoaded) {
+      this._loadTextesFirestore();
+    }
+
+    const textsMeta = window.TextsFirestore.TEXTS_METADATA;
+    const cache = window.TextsFirestore._textsCache || window.TextsFirestore.DEFAULT_TEXTS;
+    const defaults = window.TextsFirestore.DEFAULT_TEXTS;
+    const isLoading = this.state._textesLoading;
+
+    // Grouper par catégorie
+    const byCategory = {};
+    Object.keys(textsMeta).forEach(key => {
+      const cat = textsMeta[key].category || 'Autres';
+      if (!byCategory[cat]) byCategory[cat] = [];
+      byCategory[cat].push(key);
+    });
+
+    const categoryOrder = ['Accueil', 'Inscription', 'À propos', 'Premium', 'Forum', 'Bannière'];
+    const sortedCategories = categoryOrder.filter(c => byCategory[c]).concat(
+      Object.keys(byCategory).filter(c => !categoryOrder.includes(c))
+    );
+
+    // Compter les modifs vs défaut
+    let modifiedCount = 0;
+    Object.keys(textsMeta).forEach(key => {
+      if (cache[key] !== defaults[key]) modifiedCount++;
+    });
+
+    return `
+      <div class="page-header">
+        <div>
+          <div class="page-title">🎨 Textes de <span>l'app</span></div>
+          <div class="page-sub">${Object.keys(textsMeta).length} textes éditables • ${modifiedCount} personnalisé${modifiedCount > 1 ? 's' : ''}${isLoading ? ' • ⏳ Chargement...' : ''}</div>
+        </div>
+        <button class="btn-action btn-secondary" onclick="Admin._loadTextesFirestore(true)" style="padding:0.6rem 1rem">
+          🔄 Rafraîchir
+        </button>
+      </div>
+
+      <div style="background:linear-gradient(135deg, #dbeafe, white); border:1px solid #93c5fd; border-radius:10px; padding:1rem; margin-bottom:1rem; font-size:0.85rem; color:#1e40af; line-height:1.5">
+        ℹ️ <strong>Mode d'emploi :</strong> Modifie les textes directement, puis clique sur <strong>💾 Enregistrer</strong>. La mise à jour est <strong>instantanée</strong> (moins de 30s) pour tous les utilisateurs, <strong>sans MAJ de l'app</strong>. Tu peux à tout moment revenir au texte par défaut.
+      </div>
+
+      ${sortedCategories.map(cat => `
+        <div class="card" style="padding:1.2rem; margin-bottom:1rem">
+          <h3 style="margin:0 0 1rem 0; font-family:'Instrument Serif',serif; font-size:1.3rem; color:var(--green-bf-dark)">📂 ${this.escapeHTML(cat)}</h3>
+
+          ${byCategory[cat].map(key => {
+            const meta = textsMeta[key];
+            const current = cache[key] !== undefined ? cache[key] : defaults[key];
+            const isDefault = current === defaults[key];
+            const isLongText = (current || '').length > 80 || (defaults[key] || '').length > 80;
+
+            return `
+              <div style="margin-bottom:1.2rem; padding-bottom:1.2rem; border-bottom:1px solid var(--line)">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.3rem; flex-wrap:wrap; gap:0.5rem">
+                  <div>
+                    <label style="font-size:0.9rem; font-weight:700; color:var(--ink)">${this.escapeHTML(meta.label)}</label>
+                    ${!isDefault ? '<span style="background:#fef3c7; color:#854d0e; font-size:0.65rem; font-weight:700; padding:0.15rem 0.5rem; border-radius:999px; margin-left:0.5rem; letter-spacing:0.05em">✏️ MODIFIÉ</span>' : ''}
+                  </div>
+                  <div style="display:flex; gap:0.3rem">
+                    ${!isDefault ? `
+                      <button onclick="Admin._resetTexte('${key}')" style="font-size:0.75rem; padding:0.3rem 0.6rem; background:white; border:1px solid var(--line); border-radius:6px; cursor:pointer; color:var(--ink-mute)" title="Restaurer la valeur par défaut">
+                        ↩️ Défaut
+                      </button>
+                    ` : ''}
+                  </div>
+                </div>
+                <div style="font-size:0.78rem; color:var(--ink-mute); margin-bottom:0.4rem; line-height:1.4">${this.escapeHTML(meta.help || '')}</div>
+                ${isLongText ? `
+                  <textarea id="texte-${key}" style="width:100%; padding:0.6rem; border:1.5px solid var(--line); border-radius:8px; min-height:80px; font-family:inherit; font-size:0.9rem; line-height:1.5">${this.escapeHTML(current)}</textarea>
+                ` : `
+                  <input type="text" id="texte-${key}" value="${this.escapeHTML(current)}" style="width:100%; padding:0.6rem; border:1.5px solid var(--line); border-radius:8px; font-size:0.9rem">
+                `}
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.5rem; gap:0.5rem; flex-wrap:wrap">
+                  <div style="font-size:0.7rem; color:var(--ink-mute); font-family:'Courier New', monospace; opacity:0.65">Clé : ${key}</div>
+                  <button onclick="Admin._saveTexte('${key}')" style="padding:0.4rem 0.9rem; background:linear-gradient(135deg, var(--green-bf), var(--green-bf-dark)); color:white; border:none; border-radius:6px; font-weight:600; font-size:0.8rem; cursor:pointer">
+                    💾 Enregistrer
+                  </button>
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      `).join('')}
+
+      <div style="background:linear-gradient(135deg, #dcfce7, white); border:1px solid #86efac; border-radius:10px; padding:1rem; margin-top:1rem; font-size:0.85rem; color:#15803d; line-height:1.5">
+        💡 <strong>Astuce :</strong> Les modifications sont enregistrées <strong>une par une</strong>. Tu peux modifier plusieurs textes puis cliquer sur 💾 sur chacun. Les emojis sont acceptés (copie-colle depuis WhatsApp par exemple).
+      </div>
+    `;
+  },
+
+  async _loadTextesFirestore(forceRefresh) {
+    if (!window.TextsFirestore) return;
+    if (this.state._textesLoading && !forceRefresh) return;
+    this.state._textesLoading = true;
+    this.state._textesLoaded = true;
+    try {
+      const result = await window.TextsFirestore.getAllTexts();
+      this.state._textesLoading = false;
+      if (result.success) {
+        if (this.state.currentPage === 'textes') this.render();
+      } else {
+        this.toast('❌ Erreur : ' + result.error, 'danger', 4000);
+      }
+    } catch (e) {
+      this.state._textesLoading = false;
+      console.error('[V63.34] _loadTextesFirestore:', e);
+    }
+  },
+
+  async _saveTexte(key) {
+    const el = document.getElementById('texte-' + key);
+    if (!el) return;
+    const value = el.value.trim();
+    if (!value) {
+      this.toast('⚠️ Le texte ne peut pas être vide', 'danger');
+      return;
+    }
+    try {
+      const result = await window.TextsFirestore.setText(key, value);
+      if (result.success) {
+        this.toast('💾 Texte enregistré — distribution en cours', 'success', 2500);
+        this.render();
+      } else {
+        this.toast('❌ ' + (result.error || 'Erreur'), 'danger', 4000);
+      }
+    } catch (e) {
+      console.error('[V63.34] _saveTexte:', e);
+      this.toast('❌ Erreur', 'danger');
+    }
+  },
+
+  async _resetTexte(key) {
+    const meta = window.TextsFirestore.TEXTS_METADATA[key];
+    if (!confirm('↩️ Restaurer le texte par défaut pour "' + meta.label + '" ?\n\nLa valeur sera réinitialisée immédiatement.')) return;
+    try {
+      const result = await window.TextsFirestore.resetText(key);
+      if (result.success) {
+        this.toast('↩️ Texte restauré au défaut', 'success', 2500);
+        this.render();
+      } else {
+        this.toast('❌ ' + (result.error || 'Erreur'), 'danger', 4000);
+      }
+    } catch (e) {
+      console.error('[V63.34] _resetTexte:', e);
+      this.toast('❌ Erreur', 'danger');
+    }
   },
 
   // ============================================================
