@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.35 - V63.35 : +31 questions actualite (259 total) + DG SONABHY actualise
+// Version 6.3.36 - V63.36 : Workflow lots d'import avec statuts (en_attente, integre, a_supprimer, annule)
 
-const CACHE_NAME = 'bara-concours-v6-3-35';
+const CACHE_NAME = 'bara-concours-v6-3-36';
 const APP_SHELL = [
   './',
   './index.html',

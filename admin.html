@@ -2093,8 +2093,20 @@ const Admin = {
   },
 
   renderBatchesSection() {
-    const batches = this.getBatches();
-    if (batches.length === 0) {
+    const allBatches = this.getBatches();
+    // V63.36 : Migration automatique des anciens lots (sans statut → en_attente)
+    let needsMigration = false;
+    allBatches.forEach(b => {
+      if (!b.statut) {
+        b.statut = 'en_attente';
+        needsMigration = true;
+      }
+    });
+    if (needsMigration) {
+      localStorage.setItem('bara_import_batches', JSON.stringify(allBatches));
+    }
+
+    if (allBatches.length === 0) {
       return `
         <div class="table-wrap" style="margin-top:1.5rem">
           <div class="table-header">
@@ -2103,66 +2115,179 @@ const Admin = {
           <div class="empty-state">
             <div class="empty-icon">📦</div>
             <div class="empty-title">Aucun lot d'import pour l'instant</div>
-            <div class="empty-sub">Quand tu importes du texte, chaque lot sera listé ici avec la possibilité de l'annuler.</div>
+            <div class="empty-sub">Quand tu importes du texte, chaque lot sera listé ici avec la possibilité de l'annuler ou le marquer pour suppression.</div>
           </div>
         </div>
       `;
     }
+
+    // V63.36 : Filtres
+    const filter = this.state._batchFilter || 'all';
+    const filterFn = {
+      'all': () => true,
+      'en_attente': b => b.statut === 'en_attente',
+      'integre': b => b.statut === 'integre',
+      'a_supprimer': b => b.statut === 'a_supprimer',
+      'annule': b => b.statut === 'annule'
+    }[filter] || (() => true);
+    const batches = allBatches.filter(filterFn);
+
+    // Stats par statut
+    const countByStatut = {
+      en_attente: 0, integre: 0, a_supprimer: 0, annule: 0
+    };
+    allBatches.forEach(b => {
+      if (countByStatut[b.statut] !== undefined) countByStatut[b.statut]++;
+    });
 
     const totalQuestions = batches.reduce((s, b) => s + b.count, 0);
 
     return `
       <div class="table-wrap" style="margin-top:1.5rem">
         <div class="table-header">
-          <div class="table-title">📦 Historique des lots d'import (${batches.length} lots · ${totalQuestions} questions)</div>
+          <div class="table-title">📦 Historique des lots d'import (${batches.length} lot${batches.length > 1 ? 's' : ''} affiché${batches.length > 1 ? 's' : ''} · ${totalQuestions} questions)</div>
         </div>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Matière</th>
-              <th>Questions</th>
-              <th>Aperçu</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${batches.map(b => `
+
+        <!-- V63.36 : Filtres par statut -->
+        <div style="padding:0.8rem 1rem; background:#fafaf9; border-bottom:1px solid var(--line); display:flex; gap:0.5rem; flex-wrap:wrap">
+          <button onclick="Admin.setBatchFilter('all')" style="padding:0.4rem 0.8rem; border-radius:999px; border:1.5px solid ${filter==='all'?'var(--green-bf-dark)':'#d4d4d4'}; background:${filter==='all'?'var(--green-bf)':'white'}; color:${filter==='all'?'white':'var(--ink)'}; font-size:0.78rem; font-weight:600; cursor:pointer">
+            📦 Tous (${allBatches.length})
+          </button>
+          <button onclick="Admin.setBatchFilter('en_attente')" style="padding:0.4rem 0.8rem; border-radius:999px; border:1.5px solid ${filter==='en_attente'?'#92400e':'#d4d4d4'}; background:${filter==='en_attente'?'#fef3c7':'white'}; color:${filter==='en_attente'?'#854d0e':'var(--ink)'}; font-size:0.78rem; font-weight:600; cursor:pointer">
+            🟡 En attente (${countByStatut.en_attente})
+          </button>
+          <button onclick="Admin.setBatchFilter('integre')" style="padding:0.4rem 0.8rem; border-radius:999px; border:1.5px solid ${filter==='integre'?'#15803d':'#d4d4d4'}; background:${filter==='integre'?'#dcfce7':'white'}; color:${filter==='integre'?'#15803d':'var(--ink)'}; font-size:0.78rem; font-weight:600; cursor:pointer">
+            ✅ Intégrés (${countByStatut.integre})
+          </button>
+          <button onclick="Admin.setBatchFilter('a_supprimer')" style="padding:0.4rem 0.8rem; border-radius:999px; border:1.5px solid ${filter==='a_supprimer'?'#1e40af':'#d4d4d4'}; background:${filter==='a_supprimer'?'#dbeafe':'white'}; color:${filter==='a_supprimer'?'#1e40af':'var(--ink)'}; font-size:0.78rem; font-weight:600; cursor:pointer">
+            🔵 À supprimer (${countByStatut.a_supprimer})
+          </button>
+          <button onclick="Admin.setBatchFilter('annule')" style="padding:0.4rem 0.8rem; border-radius:999px; border:1.5px solid ${filter==='annule'?'#525252':'#d4d4d4'}; background:${filter==='annule'?'#e5e5e5':'white'}; color:${filter==='annule'?'#262626':'var(--ink)'}; font-size:0.78rem; font-weight:600; cursor:pointer">
+            ⛔ Annulés (${countByStatut.annule})
+          </button>
+        </div>
+
+        ${batches.length === 0 ? `
+          <div class="empty-state" style="padding:2rem">
+            <div class="empty-icon" style="font-size:2rem">🔍</div>
+            <div class="empty-title">Aucun lot dans ce filtre</div>
+            <div class="empty-sub">Change de filtre pour voir d'autres lots.</div>
+          </div>
+        ` : `
+          <table class="table">
+            <thead>
               <tr>
-                <td>
-                  <div style="font-weight:600; font-size:0.85rem">${this.formatBatchDate(b.date)}</div>
-                  <div style="font-size:0.72rem; color:var(--ink-mute); margin-top:0.2rem">${this.formatRelativeTime(b.date)}</div>
-                </td>
-                <td>
-                  <div style="font-weight:600">${b.matiereIcone} ${this.escapeHTML(b.matiereNom)}</div>
-                </td>
-                <td>
-                  <span class="badge badge-success">${b.count} question${b.count > 1 ? 's' : ''}</span>
-                </td>
-                <td style="max-width:260px; font-size:0.78rem; color:var(--ink-soft); font-style:italic">
-                  "${this.escapeHTML(b.preview)}..."
-                </td>
-                <td>
-                  <div style="display:flex; gap:0.3rem; flex-wrap:wrap">
-                    <button class="btn-action" onclick="Admin.openBatchEdit('${b.id}')" style="font-size:0.75rem; background:linear-gradient(135deg, #dbeafe, white); border:1.5px solid #2563eb; color:#1e40af; padding:0.4rem 0.6rem">
-                      ✏️ Éditer
-                    </button>
-                    <button class="btn-action" onclick="Admin.exportBatch('${b.id}')" style="font-size:0.75rem; background:white; border:1.5px solid var(--line); color:var(--ink); padding:0.4rem 0.6rem">
-                      📥 Exporter
-                    </button>
-                    <button class="btn-action" onclick="Admin.replaceBatch('${b.id}')" style="font-size:0.75rem; background:linear-gradient(135deg, #fef3c7, white); border:1.5px solid var(--gold-bf); color:#854d0e; padding:0.4rem 0.6rem">
-                      🔄 Remplacer
-                    </button>
-                    <button class="btn-action btn-danger" onclick="Admin.deleteBatch('${b.id}')" style="font-size:0.75rem; padding:0.4rem 0.6rem">
-                      🗑 Supprimer
-                    </button>
-                  </div>
-                </td>
+                <th>Statut</th>
+                <th>Date</th>
+                <th>Matière</th>
+                <th>Questions</th>
+                <th>Aperçu</th>
+                <th>Actions</th>
               </tr>
-            `).join('')}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              ${batches.map(b => this._renderBatchRow(b)).join('')}
+            </tbody>
+          </table>
+        `}
       </div>
+
+      <!-- V63.36 : Aide contextuelle -->
+      <div style="background:linear-gradient(135deg, #dbeafe, white); border:1px solid #93c5fd; border-radius:10px; padding:1rem; margin-top:1rem; font-size:0.85rem; color:#1e40af; line-height:1.6">
+        ℹ️ <strong>Comprendre les statuts</strong><br>
+        🟡 <strong>En attente</strong> : Tu viens d'importer, questions dans ton navigateur. <strong>Annulable.</strong><br>
+        ✅ <strong>Intégré</strong> : Questions intégrées dans le code source (version marquée). <strong>Tu peux les marquer pour suppression.</strong><br>
+        🔵 <strong>À supprimer</strong> : Marqué pour suppression — envoie-moi un export pour que je retire du code.<br>
+        ⛔ <strong>Annulé</strong> : Lot annulé avant intégration (historique uniquement).
+      </div>
+    `;
+  },
+
+  // V63.36 : Helper pour render une ligne de lot avec son statut
+  _renderBatchRow(b) {
+    const statusBadge = {
+      'en_attente': '<span style="background:#fef3c7; color:#854d0e; padding:0.25rem 0.6rem; border-radius:999px; font-size:0.72rem; font-weight:700; white-space:nowrap">🟡 En attente</span>',
+      'integre': '<span style="background:#dcfce7; color:#15803d; padding:0.25rem 0.6rem; border-radius:999px; font-size:0.72rem; font-weight:700; white-space:nowrap" title="' + (b.version_integration || '?') + '">✅ Intégré' + (b.version_integration ? ' <span style="font-size:0.65rem;opacity:0.85">' + b.version_integration + '</span>' : '') + '</span>',
+      'a_supprimer': '<span style="background:#dbeafe; color:#1e40af; padding:0.25rem 0.6rem; border-radius:999px; font-size:0.72rem; font-weight:700; white-space:nowrap">🔵 À supprimer</span>',
+      'annule': '<span style="background:#e5e5e5; color:#525252; padding:0.25rem 0.6rem; border-radius:999px; font-size:0.72rem; font-weight:700; white-space:nowrap">⛔ Annulé</span>'
+    }[b.statut] || '<span style="color:#999">?</span>';
+
+    const rowBg = {
+      'en_attente': 'background:#fffbeb',
+      'integre': '',
+      'a_supprimer': 'background:#eff6ff',
+      'annule': 'background:#fafafa; opacity:0.7'
+    }[b.statut] || '';
+
+    // Actions selon le statut
+    let actions = '';
+    if (b.statut === 'en_attente') {
+      actions = `
+        <button class="btn-action" onclick="Admin.openBatchEdit('${b.id}')" style="font-size:0.75rem; background:linear-gradient(135deg, #dbeafe, white); border:1.5px solid #2563eb; color:#1e40af; padding:0.4rem 0.6rem">
+          ✏️ Éditer
+        </button>
+        <button class="btn-action" onclick="Admin.exportSingleBatch('${b.id}')" style="font-size:0.75rem; background:white; border:1.5px solid var(--green-bf-dark); color:var(--green-bf-dark); padding:0.4rem 0.6rem" title="Exporter ce lot seul pour l'envoyer au dev">
+          📤 Export lot
+        </button>
+        <button class="btn-action btn-danger" onclick="Admin.cancelBatch('${b.id}')" style="font-size:0.75rem; padding:0.4rem 0.6rem">
+          ❌ Annuler
+        </button>
+      `;
+    } else if (b.statut === 'integre') {
+      actions = `
+        <button class="btn-action" onclick="Admin.exportSingleBatch('${b.id}')" style="font-size:0.75rem; background:white; border:1.5px solid var(--line); color:var(--ink); padding:0.4rem 0.6rem">
+          📤 Export
+        </button>
+        <button class="btn-action" onclick="Admin.markBatchForDeletion('${b.id}')" style="font-size:0.75rem; background:linear-gradient(135deg, #dbeafe, white); border:1.5px solid #1e40af; color:#1e40af; padding:0.4rem 0.6rem">
+          🔵 Marquer pour suppression
+        </button>
+      `;
+    } else if (b.statut === 'a_supprimer') {
+      actions = `
+        <button class="btn-action" onclick="Admin.exportSingleBatch('${b.id}')" style="font-size:0.75rem; background:white; border:1.5px solid var(--green-bf-dark); color:var(--green-bf-dark); padding:0.4rem 0.6rem">
+          📤 Export pour dev
+        </button>
+        <button class="btn-action" onclick="Admin.unmarkBatchForDeletion('${b.id}')" style="font-size:0.75rem; background:white; border:1.5px solid var(--line); color:var(--ink-mute); padding:0.4rem 0.6rem">
+          ↩️ Annuler marquage
+        </button>
+      `;
+    } else if (b.statut === 'annule') {
+      actions = `
+        <button class="btn-action btn-danger" onclick="Admin.purgeBatchFromHistory('${b.id}')" style="font-size:0.75rem; padding:0.4rem 0.6rem">
+          🗑 Purger
+        </button>
+      `;
+    }
+
+    // Preview détaillé : 1ère question + indication s'il y en a plus
+    const previewQ = (b.questions_preview && b.questions_preview[0]) || b.preview || '';
+    const morePreview = b.questions_preview && b.questions_preview.length > 1
+      ? `<div style="font-size:0.7rem; color:var(--ink-mute); margin-top:0.2rem">+ ${b.count - 1} autres question${b.count - 1 > 1 ? 's' : ''}</div>`
+      : '';
+
+    return `
+      <tr style="${rowBg}">
+        <td>${statusBadge}</td>
+        <td>
+          <div style="font-weight:600; font-size:0.85rem">${this.formatBatchDate(b.date)}</div>
+          <div style="font-size:0.72rem; color:var(--ink-mute); margin-top:0.2rem">${this.formatRelativeTime(b.date)}</div>
+        </td>
+        <td>
+          <div style="font-weight:600">${b.matiereIcone} ${this.escapeHTML(b.matiereNom)}</div>
+        </td>
+        <td>
+          <span class="badge badge-success">${b.count} Q</span>
+        </td>
+        <td style="max-width:260px; font-size:0.78rem; color:var(--ink-soft); font-style:italic">
+          "${this.escapeHTML((previewQ || '').substring(0, 90))}${(previewQ || '').length > 90 ? '...' : ''}"
+          ${morePreview}
+        </td>
+        <td>
+          <div style="display:flex; gap:0.3rem; flex-wrap:wrap">
+            ${actions}
+          </div>
+        </td>
+      </tr>
     `;
   },
 
@@ -3065,7 +3190,11 @@ E: Le Burkina Faso compte 13 régions administratives depuis 2001.`;
       matiereIcone: matiere ? matiere.icone : '📝',
       count: data.parsedQuestions.length,
       type: 'text-import',
-      preview: data.parsedQuestions[0]?.q?.substring(0, 80) || ''
+      preview: data.parsedQuestions[0]?.q?.substring(0, 80) || '',
+      // V63.36 : Workflow lots avec statuts
+      statut: 'en_attente',  // en_attente | integre | a_supprimer | annule
+      questions_preview: data.parsedQuestions.slice(0, 5).map(q => q.q || ''),
+      version_integration: null  // Sera renseigné quand intégré (ex. "V63.40")
     });
 
     const count = data.parsedQuestions.length;
@@ -3094,6 +3223,178 @@ E: Le Burkina Faso compte 13 régions administratives depuis 2001.`;
     // Garder max 100 lots dans l'historique
     if (batches.length > 100) batches.splice(100);
     localStorage.setItem('bara_import_batches', JSON.stringify(batches));
+  },
+
+  // V63.36 : Workflow lots avec statuts
+  /**
+   * Annule un lot EN ATTENTE (supprime les questions du localStorage + marque le lot comme annulé)
+   */
+  cancelBatch(batchId) {
+    const batches = this.getBatches();
+    const batch = batches.find(b => b.id === batchId);
+    if (!batch) return { success: false, error: 'Lot introuvable' };
+    if (batch.statut !== 'en_attente') {
+      return { success: false, error: 'Seuls les lots EN ATTENTE peuvent être annulés' };
+    }
+    if (!confirm(`⚠️ Annuler définitivement le lot du ${new Date(batch.date).toLocaleDateString('fr-FR')} ?\n\n${batch.count} question${batch.count > 1 ? 's' : ''} (${batch.matiereNom}) ${batch.count > 1 ? 'seront supprimées' : 'sera supprimée'} de ton navigateur.`)) {
+      return { success: false, error: 'Annulé' };
+    }
+    // Supprimer les questions correspondantes du localStorage
+    const customQ = JSON.parse(localStorage.getItem('bara_custom_questions') || '{}');
+    if (customQ[batch.matiere]) {
+      customQ[batch.matiere] = customQ[batch.matiere].filter(q => q._batchId !== batchId);
+      if (customQ[batch.matiere].length === 0) delete customQ[batch.matiere];
+      localStorage.setItem('bara_custom_questions', JSON.stringify(customQ));
+    }
+    // Marquer le lot comme annulé
+    batch.statut = 'annule';
+    batch.date_annulation = Date.now();
+    localStorage.setItem('bara_import_batches', JSON.stringify(batches));
+    this.toast(`⛔ Lot annulé : ${batch.count} question${batch.count > 1 ? 's' : ''} supprimée${batch.count > 1 ? 's' : ''}`, 'success', 3000);
+    this.render();
+    return { success: true };
+  },
+
+  /**
+   * Marque un lot intégré comme à supprimer (pour notification au dev)
+   */
+  markBatchForDeletion(batchId) {
+    const batches = this.getBatches();
+    const batch = batches.find(b => b.id === batchId);
+    if (!batch) return;
+    if (batch.statut !== 'integre') {
+      this.toast('⚠️ Seuls les lots INTÉGRÉS peuvent être marqués pour suppression', 'danger');
+      return;
+    }
+    if (!confirm(`🔵 Marquer ce lot pour suppression ?\n\nLot du ${new Date(batch.date).toLocaleDateString('fr-FR')} (${batch.count} questions, ${batch.matiereNom}).\n\nCela ne supprime PAS encore les questions du code. Tu devras m'envoyer l'export et je les retirerai à la prochaine version.`)) return;
+    batch.statut = 'a_supprimer';
+    batch.date_marquage_suppression = Date.now();
+    localStorage.setItem('bara_import_batches', JSON.stringify(batches));
+    this.toast('🔵 Lot marqué pour suppression — envoie-moi un export', 'success', 4000);
+    this.render();
+  },
+
+  /**
+   * Annule le marquage "à supprimer" → repasse en "intégré"
+   */
+  unmarkBatchForDeletion(batchId) {
+    const batches = this.getBatches();
+    const batch = batches.find(b => b.id === batchId);
+    if (!batch || batch.statut !== 'a_supprimer') return;
+    batch.statut = 'integre';
+    delete batch.date_marquage_suppression;
+    localStorage.setItem('bara_import_batches', JSON.stringify(batches));
+    this.toast('✓ Marquage annulé — lot toujours intégré', 'success');
+    this.render();
+  },
+
+  /**
+   * Marque un lot comme intégré dans une version (commande utilisée après intégration code)
+   * Usage : Admin.markBatchAsIntegrated('batch_xxx', 'V63.40')
+   */
+  markBatchAsIntegrated(batchId, version) {
+    const batches = this.getBatches();
+    const batch = batches.find(b => b.id === batchId);
+    if (!batch) {
+      console.error('Lot introuvable:', batchId);
+      return;
+    }
+    batch.statut = 'integre';
+    batch.version_integration = version || 'V?.?';
+    batch.date_integration = Date.now();
+    localStorage.setItem('bara_import_batches', JSON.stringify(batches));
+    console.log('✓ Lot ' + batchId + ' marqué comme intégré dans ' + version);
+    this.render();
+  },
+
+  /**
+   * Marque automatiquement tous les lots EN ATTENTE comme intégrés (utile après une grosse intégration)
+   */
+  markAllPendingAsIntegrated(version) {
+    const batches = this.getBatches();
+    let count = 0;
+    batches.forEach(b => {
+      if (b.statut === 'en_attente') {
+        b.statut = 'integre';
+        b.version_integration = version;
+        b.date_integration = Date.now();
+        count++;
+      }
+    });
+    if (count > 0) {
+      localStorage.setItem('bara_import_batches', JSON.stringify(batches));
+      console.log('✓ ' + count + ' lots marqués comme intégrés dans ' + version);
+      this.toast(`✓ ${count} lots marqués INTÉGRÉS (${version})`, 'success', 3000);
+      this.render();
+    } else {
+      console.log('Aucun lot EN ATTENTE à marquer.');
+    }
+    return count;
+  },
+
+  /**
+   * Exporte UN seul lot (pour envoyer au dev pour intégration)
+   */
+  exportSingleBatch(batchId) {
+    const batches = this.getBatches();
+    const batch = batches.find(b => b.id === batchId);
+    if (!batch) return;
+    const customQ = JSON.parse(localStorage.getItem('bara_custom_questions') || '{}');
+    const batchQuestions = (customQ[batch.matiere] || []).filter(q => q._batchId === batchId);
+    const exportData = {
+      version: '1.0',
+      type: 'single_batch_export',
+      exportedAt: new Date().toISOString(),
+      batch: {
+        id: batch.id,
+        date: batch.date,
+        matiere: batch.matiere,
+        matiereNom: batch.matiereNom,
+        count: batch.count,
+        statut: batch.statut,
+        version_integration: batch.version_integration,
+        preview: batch.preview
+      },
+      bara_custom_questions: {
+        [batch.matiere]: batchQuestions.map(q => {
+          const clean = { ...q };
+          delete clean._batchId;
+          delete clean._importedAt;
+          return clean;
+        })
+      }
+    };
+    // Télécharger
+    const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `bara-lot-${batch.matiere}-${new Date(batch.date).toISOString().slice(0, 10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    this.toast(`✓ Lot exporté (${batchQuestions.length} questions)`, 'success', 3000);
+  },
+
+  /**
+   * Supprime définitivement un lot ANNULÉ de l'historique (purge)
+   */
+  purgeBatchFromHistory(batchId) {
+    const batches = this.getBatches();
+    const batch = batches.find(b => b.id === batchId);
+    if (!batch) return;
+    if (!confirm(`🗑 Supprimer définitivement ce lot de l'historique ?\n\nCette action est irréversible. Le lot ne sera plus visible.`)) return;
+    const newBatches = batches.filter(b => b.id !== batchId);
+    localStorage.setItem('bara_import_batches', JSON.stringify(newBatches));
+    this.toast('🗑 Lot supprimé de l\'historique', 'success');
+    this.render();
+  },
+
+  /**
+   * Change le filtre actif de la liste des lots
+   */
+  setBatchFilter(filter) {
+    this.state._batchFilter = filter;
+    this.render();
   },
 
   // V63.10 : Ouvrir la vue d'édition d'un lot précis
