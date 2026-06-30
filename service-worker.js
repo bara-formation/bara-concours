@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.34 - V63.34 : CMS Textes editables Firestore (16 textes courants)
+// Version 6.3.35 - V63.35 : +31 questions actualite (259 total) + DG SONABHY actualise
 
-const CACHE_NAME = 'bara-concours-v6-3-34';
+const CACHE_NAME = 'bara-concours-v6-3-35';
 const APP_SHELL = [
   './',
   './index.html',

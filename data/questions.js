@@ -51163,11 +51163,11 @@ const QUESTIONS = {
       "o": [
         "Souleymane Ouédraogo, 9 octobre 1984",
         "Braima Barro, 22 juin 1984",
-        "Aime Wendpenga Nongkouni, 9 octobre 1985",
+        "Patrice Forogo, 9 octobre 1985",
         "Flandin Idrissa Sourabié, 22 juin 1985"
       ],
       "r": 2,
-      "x": "La SONABHY (Société Nationale Burkinabè des Hydrocarbures) a été créée le 9 octobre 1985. Son DG est Aime Wendpenga Nongkouni. Elle assure l'importation, le stockage et la distribution des produits pétroliers (carburant, gaz) au Burkina Faso."
+      "x": "La SONABHY (Société Nationale Burkinabè des Hydrocarbures) a été créée le 9 octobre 1985. Son DG est Patrice Forogo (nommé le 25/06/2026). Elle assure l'importation, le stockage et la distribution des produits pétroliers (carburant, gaz) au Burkina Faso."
     },
     {
       "q": "Qui est le DG de la SOFITEX et quel est son slogan ?",
@@ -52697,6 +52697,347 @@ const QUESTIONS = {
       ],
       "r": 2,
       "x": "Les Prix Galian sont organisés chaque année par le ministère en charge de la Communication. En 2026, c'est Pingdwendé Gilbert Ouédraogo, Ministre de la Communication, de la Culture, des Arts et du Tourisme et porte-parole du gouvernement, qui a présidé la 29e édition. Il a installé les 5 jurys le 8 mai 2026 et appelé à un journalisme patriotique."
+    },
+    {
+      "q": "Quel est le montant total du Plan RELANCE 2026-2030, nouveau référentiel national de développement du Burkina Faso ?",
+      "o": [
+        "18 000 milliards FCFA",
+        "28 500 milliards FCFA",
+        "36 000 milliards FCFA",
+        "45 000 milliards FCFA"
+      ],
+      "r": 2,
+      "x": "Le Plan RELANCE 2026-2030, adopté en Conseil des ministres le 29 janvier 2026, est évalué à 36 000 milliards de FCFA. Près de deux tiers de ce financement doivent provenir des ressources souveraines, selon le Ministre de l'Économie Dr Aboubakar Nacanabo."
+    },
+    {
+      "q": "Sur combien de piliers stratégiques repose le Plan RELANCE 2026-2030 du Burkina Faso ?",
+      "o": [
+        "4 piliers",
+        "3 piliers",
+        "5 piliers",
+        "6 piliers"
+      ],
+      "r": 0,
+      "x": "Le Plan RELANCE 2026-2030 repose sur 4 piliers : (1) consolidation de la sécurité, cohésion sociale et paix ; (2) refondation de l'État et amélioration de la gouvernance ; (3) développement du capital humain ; (4) transformation économique. Il vise notamment à réduire le taux de pauvreté de 42% à 35% et à améliorer l'espérance de vie de 61 à 68 ans."
+    },
+    {
+      "q": "À quelle date les partis et formations politiques ont-ils été dissous au Burkina Faso ?",
+      "o": [
+        "4 décembre 2025",
+        "29 janvier 2026",
+        "26 mars 2026",
+        "20 juin 2026"
+      ],
+      "r": 1,
+      "x": "Un décret portant dissolution des partis et formations politiques au Burkina Faso a été adopté en Conseil des ministres le 29 janvier 2026. Ce même Conseil a adopté un projet de loi portant abrogation des lois encadrant leur fonctionnement, leur financement et le statut du Chef de file de l'opposition."
+    },
+    {
+      "q": "À quelle date Célestin Simporé a-t-il été promu au grade de Général de division ?",
+      "o": [
+        "21 octobre 2025",
+        "11 décembre 2025",
+        "4 décembre 2025",
+        "30 décembre 2025"
+      ],
+      "r": 3,
+      "x": "Célestin Simporé a été promu au grade de Général de division par un décret présidentiel signé le 30 décembre 2025, avec une prise d'effet officielle fixée au 1ᵉʳ janvier 2026. Il occupe actuellement le poste de Ministre d'État, Ministre de la Guerre et de la Défense patriotique au sein du gouvernement burkinabè."
+    },
+    {
+      "q": "Combien d'articles et de titres comporte la loi sur les libertés religieuses adoptée en 2026 ?",
+      "o": [
+        "80 articles répartis en 4 titres",
+        "95 articles répartis en 5 titres",
+        "110 articles répartis en 6 titres",
+        "120 articles répartis en 7 titres"
+      ],
+      "r": 2,
+      "x": "La loi sur les libertés religieuses, adoptée le 20 juin 2026, comporte 110 articles répartis en 6 titres. Elle marque une étape importante dans la volonté des autorités de mieux réguler les activités religieuses au Burkina Faso dans un contexte sécuritaire marqué par l'instrumentalisation religieuse."
+    },
+    {
+      "q": "À quelle date l'Assemblée Législative du Peuple (ALP) du Burkina Faso a-t-elle adopté la loi sur les libertés religieuses ?",
+      "o": [
+        "20 juin 2026",
+        "7 mai 2026",
+        "26 mars 2026",
+        "29 janvier 2026"
+      ],
+      "r": 0,
+      "x": "L'ALP (Assemblée Législative du Peuple, ancien nom : ALT) a adopté à l'unanimité la loi sur les libertés religieuses le 20 juin 2026, lors d'une séance plénière présidée par le Camarade Dr Ousmane Bougouma. Ce texte de 110 articles répartis en 6 titres constitue un cadre juridique inédit au Burkina Faso."
+    },
+    {
+      "q": "Quel objectif le Gouvernement s'est-il fixé en matière de réservistes militaires d'ici fin 2026 ?",
+      "o": [
+        "50 000 réservistes",
+        "100 000 réservistes",
+        "75 000 réservistes",
+        "200 000 réservistes"
+      ],
+      "r": 1,
+      "x": "Suite à l'adoption de la loi précisant le statut de la réserve militaire par l'Assemblée législative, le ministre de la Guerre a fixé l'objectif de compter 100 000 réservistes avant la fin 2026. Cette loi vise à élargir la base de défense nationale au-delà des effectifs réguliers des FANB."
+    },
+    {
+      "q": "Combien d'agents le Conseil des ministres du 5 mars 2026 a-t-il prévu de recruter par concours professionnels et concours directs au Burkina Faso ?",
+      "o": [
+        "10 500 agents",
+        "12 300 agents",
+        "18 000 agents",
+        "15 512 agents"
+      ],
+      "r": 3,
+      "x": "Le Conseil des ministres du 5 mars 2026 a prévu le recrutement de 15 512 agents par concours professionnels et concours directs dans la fonction publique burkinabè. Ces recrutements concernent plusieurs ministères, notamment les secteurs de l'éducation, de la santé et de la sécurité."
+    },
+    {
+      "q": "Quel est le nouveau nom de l'Assemblée Législative de Transition (ALT) du Burkina Faso ?",
+      "o": [
+        "Assemblée Nationale du Peuple Burkinabè",
+        "Parlement de la Révolution Progressiste",
+        "Assemblée Législative du Peuple",
+        "Conseil Législatif National Populaire"
+      ],
+      "r": 2,
+      "x": "L'Assemblée Législative de Transition (ALT) du Burkina Faso a été rebaptisée Assemblée Législative du Peuple (ALP). Cette dénomination reflète l'ancrage populaire de la Révolution Progressiste Populaire (RPP) portée par le Président Ibrahim Traoré. L'ALP est présidée par le Dr Ousmane Bougouma et compte 71 membres."
+    },
+    {
+      "q": "Quelle distinction le Ministre burkinabè de l'Économie et des Finances, Dr Aboubakar Nacanabo, a-t-il obtenue au sein d'une organisation financière internationale ?",
+      "o": [
+        "Élu président du Conseil des gouverneurs de la BID",
+        "Nommé vice-président de la Banque Mondiale",
+        "Désigné représentant du FMI pour l'Afrique de l'Ouest",
+        "Élu au Conseil d'administration de la BCEAO"
+      ],
+      "r": 0,
+      "x": "Dr Aboubakar Nacanabo, Ministre de l'Économie et des Finances du Burkina Faso, a été élu président du Conseil des gouverneurs de la Banque Islamique de Développement (BID) en marge des assemblées annuelles du Groupe BID. Cette distinction illustre le rayonnement du Burkina Faso au sein des institutions financières islamiques."
+    },
+    {
+      "q": "En quelle période la société SOCOMA a-t-elle fermé ses activités ?",
+      "o": [
+        "Octobre 2024",
+        "Juillet 2025",
+        "Décembre 2025",
+        "Mars 2026"
+      ],
+      "r": 1,
+      "x": "SOCOMA (Société Cotonnière du Gourma) a fermé ses activités en juillet 2025. Cette fermeture a impacté la production cotonnière nationale dans un contexte déjà affecté par la baisse des cours mondiaux du coton et les défis sécuritaires."
+    },
+    {
+      "q": "Quand est entrée en production la mine d'or de Kiaka au Burkina Faso ?",
+      "o": [
+        "Janvier 2025",
+        "Avril 2025",
+        "Octobre 2025",
+        "Juin 2025"
+      ],
+      "r": 3,
+      "x": "La mine d'or de Kiaka est entrée en production à la fin du mois de juin 2025. Cette entrée en production renforce la capacité nationale de production d'or. L'or reste la principale ressource d'exportation du Burkina Faso, représentant environ 70 à 80% des recettes d'exportation."
+    },
+    {
+      "q": "Quelle est la mission principale de la Société Faso Transit et Logistique (FTL) créée par l'État burkinabè ?",
+      "o": [
+        "Gérer les importations d'hydrocarbures au profit de la SONABHY",
+        "Assurer le transport du coton de la SOFITEX vers les ports",
+        "Maîtriser des circuits d'approvisionnement et d'écoulement",
+        "Coordonner les achats groupés de l'État burkinabè à l'international"
+      ],
+      "r": 2,
+      "x": "Faso Transit et Logistique (FTL) a été créée pour contribuer à la maîtrise des circuits d'approvisionnement et d'écoulement de certains produits stratégiques. Elle s'inscrit dans la dynamique de reconquête de l'intégralité du territoire national et de quête de souveraineté économique de l'État burkinabè."
+    },
+    {
+      "q": "Quel montant la Banque Ouest-Africaine de Développement (BOAD) a-t-elle alloué au Burkina Faso dans le cadre du Projet de Promotion de la Finance Inclusive (PPFIP), 3e phase ?",
+      "o": [
+        "12,250 milliards de FCFA",
+        "25,500 milliards de FCFA",
+        "8,750 milliards de FCFA",
+        "18,000 milliards de FCFA"
+      ],
+      "r": 0,
+      "x": "La BOAD (Banque Ouest-Africaine de Développement) a alloué 12,250 milliards de FCFA au Burkina Faso dans le cadre du PPFIP (Projet de Promotion de la Finance Inclusive), 3e phase. Le coût global du projet s'élève à plus de 44 milliards de FCFA. Ce financement, ratifié par le Conseil des ministres du 19 février 2026, vise à renforcer l'inclusion financière des populations burkinabè."
+    },
+    {
+      "q": "À quelle date la LONAB (Loterie Nationale Burkinabè) a-t-elle été certifiée ISO 9001:2015 ?",
+      "o": [
+        "4 août 2025",
+        "2 juin 2026",
+        "11 décembre 2025",
+        "29 janvier 2026"
+      ],
+      "r": 1,
+      "x": "La LONAB (Loterie Nationale Burkinabè) a obtenu la certification ISO 9001:2015 le 2 juin 2026. Cette certification internationale atteste de la conformité du système de management de la qualité de la LONAB aux normes internationales d'excellence."
+    },
+    {
+      "q": "De combien a augmenté la production maraîchère au Burkina Faso lors de la saison agricole 2025-2026 par rapport à la campagne précédente ?",
+      "o": [
+        "8,2%",
+        "11,5%",
+        "20,3%",
+        "14,4%"
+      ],
+      "r": 3,
+      "x": "La production maraîchère au Burkina Faso a augmenté de 14,4% lors de la saison agricole 2025-2026 par rapport à la campagne précédente. Cette hausse témoigne des efforts de l'État dans le cadre de l'Initiative présidentielle pour la Production agricole et l'Autosuffisance alimentaire."
+    },
+    {
+      "q": "Dans le cadre de quelle loi s'inscrit le projet d'exploitation industrielle de la grande mine d'or de la société NORDGOLD NIOU SA au Burkina Faso ?",
+      "o": [
+        "Loi n°024-2019/AN du 22 mai 2019 portant Code minier",
+        "Loi n°008-2020/AN du 26 mars 2020 portant Code des investissements",
+        "Loi n°016-2024/ALT du 18 juillet 2024 portant Code minier du Burkina Faso",
+        "Décret n°2023-1120/PRES du 15 décembre 2023 sur les ressources minières"
+      ],
+      "r": 2,
+      "x": "Le projet d'exploitation industrielle de la grande mine d'or de NORDGOLD NIOU SA s'inscrit dans le cadre de la loi n°016-2024/ALT du 18 juillet 2024 portant Code minier du Burkina Faso. Ce nouveau Code minier vise à renforcer la souveraineté de l'État sur les ressources minières et à maximiser les retombées économiques pour le pays."
+    },
+    {
+      "q": "Combien d'enfants mineurs de militaires et agents de sécurité tombés au combat ont été adoptés en qualité de pupilles de la Nation lors du Conseil des ministres du 24 avril 2025 ?",
+      "o": [
+        "158 enfants",
+        "120 enfants",
+        "200 enfants",
+        "85 enfants"
+      ],
+      "r": 0,
+      "x": "Le Conseil des ministres du 24 avril 2025 a adopté 158 enfants mineurs d'éléments des Forces de défense et de sécurité disparus ou tombés sur le champ d'honneur, d'un agent des Douanes et d'un inspecteur de l'enseignement, en qualité de pupilles de la Nation. Ce geste traduit la reconnaissance de l'État envers les familles des soldats sacrifiés."
+    },
+    {
+      "q": "Quel est le taux de succès global au BEPC au Burkina Faso en 2026 ?",
+      "o": [
+        "48,55%",
+        "54,06%",
+        "55,30%",
+        "43,70%"
+      ],
+      "r": 1,
+      "x": "Le taux de succès global au BEPC 2026 au Burkina Faso est de 54,06%. Ce taux marque une légère amélioration par rapport au BEPC 2025 (48,55%)."
+    },
+    {
+      "q": "Quel est le thème de la 7e édition de la Journée Nationale de l'Arbre (JNA) 2025 au Burkina Faso ?",
+      "o": [
+        "\"L'arbre, rempart contre la désertification au Sahel\"",
+        "\"Verdissons le Burkina pour un avenir souverain\"",
+        "\"Réconcilier l'homme avec son environnement naturel\"",
+        "\"Plantes médicinales : source de résilience sanitaire et climatique des communautés\""
+      ],
+      "r": 3,
+      "x": "La 7e édition de la Journée Nationale de l'Arbre (JNA) a eu lieu le 21 juin 2025 dans la région du Centre-Sud. Son thème était \"Plantes médicinales : source de résilience sanitaire et climatique des communautés\"."
+    },
+    {
+      "q": "À quelle date le Président béninois a-t-il effectué une visite d'amitié et de travail au Burkina Faso ?",
+      "o": [
+        "15 juin 2026",
+        "7 mai 2026",
+        "2 juin 2026",
+        "26 mars 2026"
+      ],
+      "r": 2,
+      "x": "Le Président du Bénin a effectué une visite d'amitié et de travail au Burkina Faso le 2 juin 2026. Cette visite diplomatique s'est tenue dans un contexte de renforcement des relations bilatérales entre les deux pays voisins."
+    },
+    {
+      "q": "Quand les ministres chargés du Commerce des pays de l'AES ont-ils tenu leur réunion stratégique autour des orientations du Capitaine Ibrahim Traoré ?",
+      "o": [
+        "15 juin 2026",
+        "2 juin 2026",
+        "20 juin 2026",
+        "7 mai 2026"
+      ],
+      "r": 0,
+      "x": "Les ministres chargés du Commerce des trois pays de l'AES (Burkina Faso, Mali, Niger) ont tenu une réunion stratégique le 15 juin 2026 pour affiner leur stratégie commune de commerce, conformément aux orientations du Président en exercice de l'AES, le Capitaine Ibrahim Traoré."
+    },
+    {
+      "q": "Quel grand projet d'infrastructure est annoncé pour une mise en service en 2026 ?",
+      "o": [
+        "Le barrage de Samendéni (2e tranche)",
+        "Le nouvel aéroport de Ouagadougou-Donsin",
+        "L'autoroute Ouagadougou-Koudougou",
+        "Le centre hospitalier universitaire de Kaya"
+      ],
+      "r": 1,
+      "x": "La finalisation du nouvel aéroport de Ouagadougou-Donsin est annoncée pour une mise en service en 2026. Cet aéroport moderne, situé à Donsin à environ 35 km de Ouagadougou, a vocation à remplacer l'actuel aéroport international de Ouagadougou (Aéroport international Thomas Sankara), avec une capacité nettement supérieure."
+    },
+    {
+      "q": "Quelle artiste burkinabè a remporté le Kundé d'or 2026 ?",
+      "o": [
+        "Smarty",
+        "Reman Yolchido",
+        "Privat 4.5",
+        "Tanya"
+      ],
+      "r": 3,
+      "x": "Tanya a remporté le Kundé d'or 2026, la distinction musicale la plus prestigieuse du Burkina Faso. Elle s'est imposée lors de la 23e édition du Kundé d'or (8 mai 2026) face à Reman Yolchido et Privat 4.5. Tanya a enchaîné les distinctions en 2026, s'imposant également à la 13e édition des Faso Music Awards."
+    },
+    {
+      "q": "Quelles distinctions Tanya a-t-elle remportées à la 13e édition des Faso Music Awards 2026 ?",
+      "o": [
+        "Meilleure artiste féminine et meilleure chanson",
+        "Meilleure artiste révélation et meilleur concert",
+        "Album de l'année (avec \"Gondal\") et Artiste de l'année",
+        "Prix de la chanson patriotique et Prix du public"
+      ],
+      "r": 2,
+      "x": "Tanya a remporté deux trophées à la 13e édition des Faso Music Awards : l'Album de l'année avec \"Gondal\" et le titre d'Artiste de l'année. Après son Kundé d'or 2026, cette double consécration récompense ses performances artistiques en 2026."
+    },
+    {
+      "q": "Qui est l'actuel Directeur général des douanes burkinabè ?",
+      "o": [
+        "Dr Yves Kafando",
+        "Tidiane Nikiema",
+        "Edward Kaboré",
+        "Sagado Nacanabo"
+      ],
+      "r": 0,
+      "x": "Le Dr Yves Kafando (inspecteur divisionnaire des douanes) a été nommé Directeur général des douanes burkinabè en Conseil des ministres le 18 juin 2025, succédant à Adama Ilboudo. Avant de prendre la tête de l'institution, il occupait le poste de coordonnateur national de la lutte contre la fraude (CNLF)."
+    },
+    {
+      "q": "À quelle date la mission habitée Artemis II, transportant les astronautes à bord de la capsule Orion, a-t-elle été lancée vers la Lune ?",
+      "o": [
+        "16 novembre 2024",
+        "1ᵉʳ avril 2026",
+        "12 mai 2026",
+        "20 juin 2026"
+      ],
+      "r": 1,
+      "x": "La mission Artemis II a été lancée avec succès le 1ᵉʳ avril 2026 depuis le Centre spatial Kennedy (Floride). Cette mission habitée, d'une durée d'environ dix jours, a constitué le premier vol d'astronautes autour de la Lune depuis la mission Apollo 17 en 1972."
+    },
+    {
+      "q": "Dans quel océan la capsule Orion de la mission Artemis II a-t-elle amerri à l'issue de son vol ?",
+      "o": [
+        "Dans l'océan Atlantique",
+        "Dans l'océan Indien",
+        "Dans l'océan Pacifique",
+        "Dans le golfe du Mexique"
+      ],
+      "r": 2,
+      "x": "E : La capsule Orion a achevé sa mission le 10 avril 2026 en amerrissant dans l'océan Pacifique, où elle a été récupérée par les équipes de la NASA et de l'US Navy après le retour en toute sécurité des quatre astronautes."
+    },
+    {
+      "q": "Dans quelle ville s'est tenue la cérémonie officielle de la 8ᵉ Journée nationale de l'Arbre (JNA) le 20 juin 2026 ?",
+      "o": [
+        "À Bobo-Dioulasso",
+        "À Ouagadougou",
+        "À Koudougou",
+        "À Kaya"
+      ],
+      "r": 1,
+      "x": "La 8e édition de la Journée nationale de l'arbre s'est déroulée à Ouagadougou le samedi 20 juin 2026 sous la présidence du chef de l'État, le capitaine Ibrahim Traoré. Cette journée a marqué le lancement de la campagne de reforestation sur l'ensemble du territoire national."
+    },
+    {
+      "q": "Quel objectif citoyen le Capitaine Ibrahim Traoré a-t-il fixé lors de la Journée nationale de l'Arbre du 20 juin 2026 ?",
+      "o": [
+        "Mettre en terre 500 000 plants médicinaux",
+        "Mettre en terre 5 millions de plants en une heure",
+        "Créer une forêt classée par commune rurale",
+        "Reforester uniquement les camps militaires"
+      ],
+      "r": 1,
+      "x": "À l'occasion de la 8ᵉ Journée nationale de l'Arbre, le Président du Faso a lancé une opération patriotique visant à mettre en terre 5 millions de plants en une heure sur l'ensemble du territoire national."
+    },
+    {
+      "q": "Quel a été le thème central retenu pour la Journée nationale de l'arbre 2026 au Burkina Faso ?",
+      "o": [
+        "Ma concession, mon arbre",
+        "Préservation de la biodiversité : notre engagement citoyen pour la patrie",
+        "Restauration des terres dégradées pour une souveraineté alimentaire durable",
+        "Planter des arbres pour reverdir le Sahel et sécuriser nos villages"
+      ],
+      "r": 0,
+      "x": "Ce thème vise à encourager chaque ménage à planter et à entretenir au moins un arbre dans sa concession afin de contribuer durablement au reverdissement du pays. À cette occasion, une opération patriotique de mise en terre de 5 millions de plants en une heure a également été organisée."
     }
   ],
   "halieutique": [
