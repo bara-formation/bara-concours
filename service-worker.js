@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.40 - V63.40 : Fix modal freemium adapte au statut + skip etape onboarding redondante
+// Version 6.3.41 - V63.41 : Fix limite quotidienne gratuite (30 -> 10)
 
-const CACHE_NAME = 'bara-concours-v6-3-40';
+const CACHE_NAME = 'bara-concours-v6-3-41';
 const APP_SHELL = [
   './',
   './index.html',
