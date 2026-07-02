@@ -3719,37 +3719,94 @@ const App = {
   },
 
   renderFreemiumDialog() {
-    const remaining = 24 - new Date().getHours(); // Heures avant minuit (approx.)
+    // V63.40 : Le modal s'adapte au statut de l'utilisateur ET au type de limite atteint
+    const user = this.state.user;
+    const limits = this.FreemiumManager.getLimits(user);
+    const isAnonymous = limits.statut === 'anonyme';
+    const context = this.state._freemiumContext || {}; // { reason: 'matiere_limit'/'general_limit', matiere: 'francais' }
+
+    // Titre et description selon le contexte
+    let title, desc, primaryAction, secondaryText;
+
+    if (context.reason === 'matiere_limit') {
+      // Limite par matière atteinte
+      const matiereNom = context.matiere && window.MATIERES_CATALOG && window.MATIERES_CATALOG[context.matiere]
+        ? window.MATIERES_CATALOG[context.matiere].nom
+        : (context.matiere || 'cette matière');
+      title = `Limite atteinte pour ${matiereNom}`;
+      desc = isAnonymous
+        ? `Tu as fait tes <strong>${limits.parMatiere} QCM</strong> en <strong>${matiereNom}</strong> aujourd'hui.<br><br>Pour continuer avec <strong>${this.FreemiumManager.LIMITE_PAR_MATIERE_INSCRIT} QCM par matière</strong>, inscris-toi gratuitement !`
+        : `Tu as atteint la limite gratuite de <strong>${limits.parMatiere} QCM par matière</strong> aujourd'hui.<br><br>Tu peux continuer avec une autre matière, ou passer <strong>Premium</strong> pour un accès illimité.`;
+      primaryAction = isAnonymous
+        ? { onClick: "App.goToSignup()", label: '✅ M\'inscrire gratuitement' }
+        : { onClick: "App.goToPremium()", label: '⭐ Passer Premium maintenant' };
+    } else {
+      // Limite quotidienne totale atteinte
+      title = 'Tu as révisé fort aujourd\'hui !';
+      desc = isAnonymous
+        ? `Tu as atteint la limite gratuite de <strong>${limits.quotidien} QCM/jour</strong> pour les utilisateurs non-inscrits.<br><br>Inscris-toi <strong>GRATUITEMENT</strong> pour passer à <strong>${this.FreemiumManager.LIMITE_QUOTIDIENNE_INSCRIT} QCM/jour</strong> !`
+        : `Tu as atteint la limite gratuite de <strong>${limits.quotidien} QCM/jour</strong>.<br><br>Pour continuer à t'entraîner sans limite, passe <strong>Premium</strong>.`;
+      primaryAction = isAnonymous
+        ? { onClick: "App.goToSignup()", label: '✅ M\'inscrire gratuitement' }
+        : { onClick: "App.goToPremium()", label: '⭐ Passer Premium maintenant' };
+    }
+
+    secondaryText = context.reason === 'matiere_limit'
+      ? 'Fermer (essayer une autre matière)'
+      : 'Plus tard (limite remise à 0 demain)';
+
+    // Bénéfices affichés
+    const benefits = isAnonymous ? [
+      { icon: '📈', text: `${this.FreemiumManager.LIMITE_QUOTIDIENNE_INSCRIT} QCM/jour (au lieu de ${this.FreemiumManager.LIMITE_QUOTIDIENNE_ANONYME})` },
+      { icon: '🎯', text: `${this.FreemiumManager.LIMITE_PAR_MATIERE_INSCRIT} QCM/matière (au lieu de ${this.FreemiumManager.LIMITE_PAR_MATIERE_ANONYME})` },
+      { icon: '📊', text: 'Suivi de progression sur plusieurs jours' },
+      { icon: '⏱️', text: 'Examen hebdomadaire du dimanche' }
+    ] : [
+      { icon: '⚡', text: 'Questions illimitées' },
+      { icon: '⏱️', text: 'Mode examen chronométré' },
+      { icon: '📚', text: 'Annales corrigées' },
+      { icon: '🏆', text: 'Classement national' }
+    ];
+
+    // Bandeau prix (uniquement pour Premium)
+    const priceBanner = isAnonymous ? `
+      <div style="background:#dcfce7; padding:0.7rem 1rem; border-radius:10px; margin-bottom:1rem; text-align:center; font-size:0.85rem; color:#15803d">
+        🎁 <strong>C'est 100% gratuit, aucun paiement requis</strong>
+      </div>
+    ` : `
+      <div style="background:#dcfce7; padding:0.7rem 1rem; border-radius:10px; margin-bottom:1rem; text-align:center; font-size:0.85rem; color:#15803d">
+        💰 <strong>À partir de 1 000 FCFA/semaine</strong>
+      </div>
+    `;
+
     return `
       <div class="bio-prompt-overlay" onclick="App.closeFreemiumDialog()">
         <div class="bio-prompt-modal" onclick="event.stopPropagation()">
           <div class="bio-prompt-icon">🎯</div>
-          <div class="bio-prompt-title">Tu as révisé fort aujourd'hui !</div>
-          <div class="bio-prompt-desc">
-            Tu as atteint la <strong>limite gratuite</strong> de <strong>${this.FreemiumManager.LIMITE_QUOTIDIENNE_GRATUITE} questions/jour</strong>.<br><br>
-            Pour continuer à t'entraîner sans limite et accéder à toutes les fonctionnalités, passe <strong>Premium</strong>.
-          </div>
+          <div class="bio-prompt-title">${title}</div>
+          <div class="bio-prompt-desc">${desc}</div>
 
           <div class="bio-prompt-benefits">
-            <div class="bio-prompt-benefit">⚡ Questions illimitées</div>
-            <div class="bio-prompt-benefit">⏱️ Mode examen chronométré</div>
-            <div class="bio-prompt-benefit">📚 Annales corrigées</div>
-            <div class="bio-prompt-benefit">🏆 Classement national (bientôt)</div>
+            ${benefits.map(b => `<div class="bio-prompt-benefit">${b.icon} ${b.text}</div>`).join('')}
           </div>
 
-          <div style="background:#dcfce7; padding:0.7rem 1rem; border-radius:10px; margin-bottom:1rem; text-align:center; font-size:0.85rem; color:#15803d">
-            💰 <strong>À partir de 1 000 FCFA/semaine</strong>
-          </div>
+          ${priceBanner}
 
-          <button class="bio-prompt-accept" onclick="App.goToPremium()">
-            ⭐ Passer Premium maintenant
+          <button class="bio-prompt-accept" onclick="${primaryAction.onClick}">
+            ${primaryAction.label}
           </button>
           <button class="bio-prompt-decline" onclick="App.closeFreemiumDialog()">
-            Plus tard (limite remise à 0 demain)
+            ${secondaryText}
           </button>
         </div>
       </div>
     `;
+  },
+
+  // V63.40 : Aller directement à la page d'inscription
+  goToSignup() {
+    this.closeFreemiumDialog();
+    this.navigate('auth-signup');
   },
 
   // V63.11 : Dialog spécifique limite actualité
@@ -6549,7 +6606,6 @@ const App = {
   // ----- ÉCRAN 2 : CRÉER UN COMPTE EMAIL -----
   renderAuthSignup() {
     const a = this.state.auth || {};
-    const villes = ['Ouagadougou', 'Bobo-Dioulasso', 'Koudougou', 'Banfora', 'Ouahigouya', 'Kaya', 'Tenkodogo', 'Fada N\'Gourma', 'Dédougou', 'Dori', 'Gaoua', 'Manga', 'Ziniaré', 'Autre'];
 
     return `
       <div class="page" style="background:linear-gradient(180deg, #f0fdf4 0%, var(--cream) 100%); min-height:100vh">
@@ -6560,23 +6616,32 @@ const App = {
             <button onclick="App.navigate('auth-welcome')" style="background:white; border:1.5px solid var(--line); width:38px; height:38px; border-radius:10px; cursor:pointer; font-size:1rem">←</button>
             <div style="flex:1">
               <h1 style="font-family:'Instrument Serif',serif; font-size:1.5rem; color:var(--green-bf-dark); margin:0">Créer ton compte</h1>
-              <p style="font-size:0.82rem; color:var(--ink-soft); margin:0.1rem 0 0">Quelques infos pour commencer</p>
+              <p style="font-size:0.82rem; color:var(--ink-soft); margin:0.1rem 0 0">Rapide et gratuit — 4 champs seulement</p>
             </div>
+          </div>
+
+          <!-- V63.39 : Bénéfices de l'inscription (motivation) -->
+          <div style="background:linear-gradient(135deg, #fef3c7, #fef9c3); border:1.5px solid var(--gold-bf); border-radius:12px; padding:0.9rem 1rem; margin-bottom:1rem; font-size:0.85rem; color:#78350f; line-height:1.5">
+            <div style="font-weight:700; margin-bottom:0.3rem">🎁 En t'inscrivant, tu obtiens :</div>
+            <div>✅ <strong>30 QCM par jour</strong> (au lieu de 10)</div>
+            <div>✅ <strong>10 QCM par matière</strong> (au lieu de 5)</div>
+            <div>✅ Suivi de progression sur plusieurs jours</div>
+            <div>✅ Participation à l'examen hebdomadaire</div>
           </div>
 
           <div style="background:white; border-radius:14px; padding:1.2rem; border:1px solid var(--line); margin-bottom:1rem">
 
-            <!-- Nom -->
+            <!-- V63.39 : Prénom au lieu de Nom complet -->
             <div style="margin-bottom:0.9rem">
-              <label style="display:block; font-weight:700; font-size:0.85rem; color:var(--ink); margin-bottom:0.35rem">Nom complet *</label>
-              <input type="text" id="signup-name" placeholder="Ton nom et prénom" value="${a.signupName || ''}" oninput="App.state.auth.signupName = this.value" style="width:100%; padding:0.7rem 0.9rem; border:1.5px solid var(--line); border-radius:8px; font-size:0.95rem; box-sizing:border-box">
+              <label style="display:block; font-weight:700; font-size:0.85rem; color:var(--ink); margin-bottom:0.35rem">Prénom *</label>
+              <input type="text" id="signup-name" placeholder="Ton prénom" value="${a.signupName || ''}" oninput="App.state.auth.signupName = this.value" style="width:100%; padding:0.7rem 0.9rem; border:1.5px solid var(--line); border-radius:8px; font-size:0.95rem; box-sizing:border-box">
             </div>
 
-            <!-- Email -->
+            <!-- Email (obligatoire pour Firebase) -->
             <div style="margin-bottom:0.9rem">
               <label style="display:block; font-weight:700; font-size:0.85rem; color:var(--ink); margin-bottom:0.35rem">Email *</label>
               <input type="email" id="signup-email" placeholder="ton.email@gmail.com" value="${a.signupEmail || ''}" autocomplete="email" oninput="App.state.auth.signupEmail = this.value.trim().toLowerCase()" style="width:100%; padding:0.7rem 0.9rem; border:1.5px solid var(--line); border-radius:8px; font-size:0.95rem; box-sizing:border-box">
-              <div style="font-size:0.72rem; color:var(--ink-mute); margin-top:0.25rem">Servira pour te connecter et recevoir des informations</div>
+              <div style="font-size:0.72rem; color:var(--ink-mute); margin-top:0.25rem">📱 On te contactera surtout via WhatsApp, pas par email</div>
             </div>
 
             <!-- Mot de passe -->
@@ -6590,22 +6655,13 @@ const App = {
             </div>
 
             <!-- Numéro WhatsApp -->
-            <div style="margin-bottom:0.9rem">
+            <div style="margin-bottom:1rem">
               <label style="display:block; font-weight:700; font-size:0.85rem; color:var(--ink); margin-bottom:0.35rem">Numéro WhatsApp *</label>
               <div style="display:flex; gap:0.4rem">
                 <div style="background:var(--cream); border:1.5px solid var(--line); padding:0.7rem 0.7rem; border-radius:8px; font-weight:700; font-size:0.9rem; color:var(--ink-soft)">+226</div>
                 <input type="tel" id="signup-phone" placeholder="70 12 34 56" value="${a.signupPhone || ''}" oninput="App.state.auth.signupPhone = this.value" style="flex:1; padding:0.7rem 0.9rem; border:1.5px solid var(--line); border-radius:8px; font-size:0.95rem; box-sizing:border-box">
               </div>
-              <div style="font-size:0.72rem; color:var(--ink-mute); margin-top:0.25rem">Pour t'envoyer les codes Premium par WhatsApp</div>
-            </div>
-
-            <!-- Ville -->
-            <div style="margin-bottom:1rem">
-              <label style="display:block; font-weight:700; font-size:0.85rem; color:var(--ink); margin-bottom:0.35rem">Ville *</label>
-              <select id="signup-ville" onchange="App.state.auth.signupVille = this.value" style="width:100%; padding:0.7rem 0.9rem; border:1.5px solid var(--line); border-radius:8px; font-size:0.95rem; box-sizing:border-box; background:white">
-                <option value="">— Choisis ta ville —</option>
-                ${villes.map(v => `<option value="${v}" ${a.signupVille === v ? 'selected' : ''}>${v}</option>`).join('')}
-              </select>
+              <div style="font-size:0.72rem; color:var(--ink-mute); margin-top:0.25rem">Pour recevoir tes codes Premium et les notifications importantes</div>
             </div>
 
             <!-- Erreur -->
@@ -6870,11 +6926,7 @@ const App = {
       this.render();
       return;
     }
-    if (!a.signupVille) {
-      a.signupError = 'Choisis ta ville';
-      this.render();
-      return;
-    }
+    // V63.39 : Ville retirée du formulaire (sera demandée plus tard si besoin)
 
     // Init Firebase
     if (!window.FirebaseAuth.isFirebaseReady) {
@@ -6896,7 +6948,7 @@ const App = {
       {
         displayName: a.signupName.trim(),
         phoneNumber: '+226' + a.signupPhone.replace(/\D/g, ''),
-        region: a.signupVille
+        region: a.signupVille || ''  // V63.39 : vide par défaut
       }
     );
 
@@ -6913,10 +6965,11 @@ const App = {
 
     // V57 : Pré-remplir l'onboarding avec les données déjà saisies
     this.state.onboarding = this.state.onboarding || {};
-    this.state.onboarding.firstName = a.signupName.split(' ')[0] || '';
-    this.state.onboarding.lastName = a.signupName.split(' ').slice(1).join(' ') || '';
+    // V63.39 : signupName contient juste le prénom
+    this.state.onboarding.firstName = a.signupName.trim();
+    this.state.onboarding.lastName = '';
     this.state.onboarding.phoneNumber = '+226' + a.signupPhone.replace(/\D/g, '');
-    this.state.onboarding.ville = a.signupVille;
+    this.state.onboarding.ville = a.signupVille || '';
 
     this._handleAuthSuccess(result);
   },
@@ -7015,14 +7068,14 @@ const App = {
       this.state.onboarding._fromFirebase = true;
       this.state.onboarding._provider = profile.authProvider || 'email';
 
-      // V58.3 : Décider de l'étape de départ selon les infos déjà connues
+      // V63.40 : Décider de l'étape de départ selon les infos déjà connues
       const hasName = !!(this.state.onboarding.firstName);
-      const hasVille = !!(this.state.onboarding.ville);
-      if (hasName && hasVille) {
-        // Email signup : toutes les infos personnelles sont là → sauter à l'étape 2 (niveau)
+      const isEmailSignup = (profile.authProvider || 'email') === 'email';
+      if (hasName && isEmailSignup) {
+        // Email signup V63.39+ : le prénom est déjà là (ville optionnelle) → sauter à l'étape 2 (concours)
         this.state.onboarding.step = 2;
       } else if (hasName) {
-        // Google sign-in : on a le nom mais pas la ville → étape 1 mais juste pour ville
+        // Google sign-in : on a le nom mais pas la ville → étape 1 pour ville optionnelle
         this.state.onboarding.step = 1;
       } else {
         // Aucune info → étape 1 complète
@@ -8065,11 +8118,16 @@ const App = {
       const currentMatiere = this.state.qcm.matiereId || this.state.currentMatiere;
       const check = this.FreemiumManager.canAnswerMatiere(this.state.user, currentMatiere);
       if (!check.allowed) {
-        // Limite atteinte → bloquer et proposer Premium
+        // Limite atteinte → bloquer et proposer inscription/Premium
         if (check.reason === 'actualite_limit') {
           this.showActualiteLimitDialog();
         } else {
-          this.showFreemiumLimitDialog();
+          // V63.40 : Passer le contexte pour message adapté
+          this.showFreemiumLimitDialog({
+            reason: check.reason,      // 'matiere_limit' ou 'general_limit'
+            matiere: currentMatiere,
+            suggestSignup: check.suggestSignup
+          });
         }
         return;
       }
@@ -8099,13 +8157,16 @@ const App = {
   },
 
   // Afficher le dialogue de limite freemium atteinte
-  showFreemiumLimitDialog() {
+  // V63.40 : Accepte un contexte pour adapter le message
+  showFreemiumLimitDialog(context) {
     this.state.showFreemiumDialog = true;
+    this.state._freemiumContext = context || { reason: 'general_limit' };
     this.render();
   },
 
   closeFreemiumDialog() {
     this.state.showFreemiumDialog = false;
+    this.state._freemiumContext = null;
     this.render();
   },
 
@@ -8498,18 +8559,56 @@ const App = {
             </div>
 
             ${matPerf.length > 0 ? `
-              <div class="section-title" style="margin-top:1.2rem">Performance par matière</div>
-              ${matPerf.map(p => `
-                <div class="matiere-perf">
-                  <div class="matiere-perf-head">
-                    <div class="matiere-perf-name">${p.m.icone} ${p.m.nom}</div>
-                    <div class="matiere-perf-pct" style="color:${p.m.couleur}">${p.pct}%</div>
-                  </div>
-                  <div class="matiere-perf-bar">
-                    <div class="matiere-perf-bar-fill" style="width:${p.pct}%; background:${p.m.couleur}"></div>
-                  </div>
+              <!-- V63.39 : Bandeau de fiabilité statistique -->
+              <div style="background:linear-gradient(135deg, #eff6ff, white); border:1px solid #93c5fd; border-radius:12px; padding:0.9rem 1rem; margin:1.2rem 0 0.8rem 0; font-size:0.85rem; color:#1e40af; line-height:1.6">
+                <div style="font-weight:700; margin-bottom:0.4rem">📊 Fiabilité de tes statistiques</div>
+                <div style="font-size:0.78rem; color:#334155; line-height:1.5">
+                  Plus tu fais de QCM par matière, plus les statistiques sont fiables :<br>
+                  • <strong>5 QCM</strong> : indicatif seulement (± 45%)<br>
+                  • <strong>15 QCM</strong> : bon niveau (± 25%)<br>
+                  • <strong>30 QCM</strong> : fiable ✅ (± 18%)<br>
+                  • <strong>100 QCM+</strong> : très fiable ⭐ (± 10%)
                 </div>
-              `).join('')}
+              </div>
+
+              <div class="section-title" style="margin-top:1.2rem">Performance par matière</div>
+              ${matPerf.map(p => {
+                // V63.39 : Calcul du niveau de fiabilité
+                const nbQ = p.attempts;
+                let fiabiliteLabel, fiabiliteColor, fiabiliteEmoji;
+                if (nbQ < 15) {
+                  fiabiliteLabel = 'Faible (fais plus de QCM)';
+                  fiabiliteColor = '#f59e0b';
+                  fiabiliteEmoji = '⚠️';
+                } else if (nbQ < 30) {
+                  fiabiliteLabel = 'Bon niveau';
+                  fiabiliteColor = '#2563eb';
+                  fiabiliteEmoji = '📊';
+                } else if (nbQ < 100) {
+                  fiabiliteLabel = 'Fiable';
+                  fiabiliteColor = '#16a34a';
+                  fiabiliteEmoji = '✅';
+                } else {
+                  fiabiliteLabel = 'Très fiable';
+                  fiabiliteColor = '#7c3aed';
+                  fiabiliteEmoji = '⭐';
+                }
+                return `
+                  <div class="matiere-perf">
+                    <div class="matiere-perf-head">
+                      <div class="matiere-perf-name">${p.m.icone} ${p.m.nom}</div>
+                      <div class="matiere-perf-pct" style="color:${p.m.couleur}">${p.pct}%</div>
+                    </div>
+                    <div class="matiere-perf-bar">
+                      <div class="matiere-perf-bar-fill" style="width:${p.pct}%; background:${p.m.couleur}"></div>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.4rem; font-size:0.72rem">
+                      <span style="color:var(--ink-mute)">${nbQ} QCM répondu${nbQ > 1 ? 's' : ''}</span>
+                      <span style="color:${fiabiliteColor}; font-weight:600">${fiabiliteEmoji} ${fiabiliteLabel}</span>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
             ` : ''}
           `}
         </div>
@@ -9399,11 +9498,12 @@ const App = {
     // Quota de matières (pour affichage)
     const quotas = [
       { icon: '🌍', label: 'Culture générale', count: 15 },
-      { icon: '📝', label: 'Français', count: 10 },
-      { icon: '🔢', label: 'Mathématiques / logique', count: 10 },
+      { icon: '📝', label: 'Français', count: 8 },
+      { icon: '🔢', label: 'Mathématiques', count: 8 },
+      { icon: '🧠', label: 'Logique', count: 7 },
       { icon: '📰', label: 'Actualité Burkina', count: 5 },
       { icon: '⚖️', label: 'Droit / citoyenneté', count: 5 },
-      { icon: '💻', label: 'Informatique / divers', count: 5 }
+      { icon: '💻', label: 'Informatique', count: 2 }
     ];
 
     // Bloc principal selon le statut
@@ -9738,6 +9838,7 @@ const App = {
       'cg': '🌍 Culture générale',
       'francais': '📝 Français',
       'maths': '🔢 Mathématiques',
+      'logique': '🧠 Logique',
       'actualite': '📰 Actualité',
       'actualite_bf': '📰 Actualité',
       'droit': '⚖️ Droit',
@@ -11716,125 +11817,198 @@ const App = {
   },
 
   // ===========================================
-  // GESTIONNAIRE FREEMIUM (limite gratuite quotidienne)
+  // GESTIONNAIRE FREEMIUM V63.39 (limites différenciées : anonyme / inscrit / premium)
   // ===========================================
   FreemiumManager: {
-    // Configuration
-    LIMITE_QUOTIDIENNE_GRATUITE: 30, // 30 questions par jour pour les non-Premium
-    // V63.11 : Limite spécifique pour les questions d'actualité
-    LIMITE_ACTUALITE_GRATUIT: 10,    // 10 questions actualité/jour pour les non-Premium
-    // Matières considérées comme "actualité" (la limite s'applique à ces matières)
+    // === CONFIGURATION V63.39 ===
+    // Non-inscrits (anonymes)
+    LIMITE_QUOTIDIENNE_ANONYME: 10,   // 10 questions/jour total
+    LIMITE_PAR_MATIERE_ANONYME: 5,     // 5 questions/matière/jour max
+
+    // Inscrits gratuits
+    LIMITE_QUOTIDIENNE_INSCRIT: 30,    // 30 questions/jour total
+    LIMITE_PAR_MATIERE_INSCRIT: 10,    // 10 questions/matière/jour max
+
+    // Rétrocompatibilité (ancien nom encore utilisé ailleurs)
+    LIMITE_QUOTIDIENNE_GRATUITE: 30,
+
+    // Limite spécifique actualité (garde-fou)
+    LIMITE_ACTUALITE_GRATUIT: 10,
     MATIERES_ACTUALITE: ['actualite', 'actualite_bf'],
 
-    // Clé localStorage pour le compteur
-    STORAGE_KEY: 'bara_freemium_counter',
-    STORAGE_KEY_ACTU: 'bara_freemium_counter_actu',  // V63.11
+    // Clés localStorage
+    STORAGE_KEY: 'bara_freemium_counter',              // Total quotidien
+    STORAGE_KEY_ACTU: 'bara_freemium_counter_actu',    // Actualité
+    STORAGE_KEY_PAR_MATIERE: 'bara_freemium_counter_matiere',  // V63.39 : par matière
 
-    // Récupérer l'état actuel
+    // === HELPERS ===
+
+    /**
+     * Détermine si l'utilisateur est inscrit (a un compte Firebase)
+     * V63.39 : anonyme = uid vide OU pas de user
+     */
+    isRegistered(user) {
+      if (!user) return false;
+      // Un utilisateur inscrit a un uid Firebase ET un email
+      return !!(user.uid && user.email);
+    },
+
+    /**
+     * Retourne les limites applicables pour cet utilisateur
+     */
+    getLimits(user) {
+      if (this.isRegistered(user)) {
+        return {
+          quotidien: this.LIMITE_QUOTIDIENNE_INSCRIT,
+          parMatiere: this.LIMITE_PAR_MATIERE_INSCRIT,
+          statut: 'inscrit'
+        };
+      }
+      return {
+        quotidien: this.LIMITE_QUOTIDIENNE_ANONYME,
+        parMatiere: this.LIMITE_PAR_MATIERE_ANONYME,
+        statut: 'anonyme'
+      };
+    },
+
+    // === COMPTEUR TOTAL QUOTIDIEN ===
     getState() {
       try {
         const data = JSON.parse(localStorage.getItem(this.STORAGE_KEY) || '{}');
-        const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
-        // Si on est un nouveau jour, on reset
-        if (data.date !== today) {
-          return { date: today, count: 0 };
-        }
+        const today = new Date().toISOString().split('T')[0];
+        if (data.date !== today) return { date: today, count: 0 };
         return data;
       } catch (e) {
         return { date: new Date().toISOString().split('T')[0], count: 0 };
       }
     },
 
-    // V63.11 : État spécifique actualité
     getActuState() {
       try {
         const data = JSON.parse(localStorage.getItem(this.STORAGE_KEY_ACTU) || '{}');
         const today = new Date().toISOString().split('T')[0];
-        if (data.date !== today) {
-          return { date: today, count: 0 };
-        }
+        if (data.date !== today) return { date: today, count: 0 };
         return data;
       } catch (e) {
         return { date: new Date().toISOString().split('T')[0], count: 0 };
       }
     },
 
-    // Combien de questions répondues aujourd'hui
-    getCountToday() {
-      return this.getState().count;
+    // V63.39 : État par matière (compteur pour chaque matière)
+    getMatiereState() {
+      try {
+        const data = JSON.parse(localStorage.getItem(this.STORAGE_KEY_PAR_MATIERE) || '{}');
+        const today = new Date().toISOString().split('T')[0];
+        if (data.date !== today) return { date: today, counts: {} };
+        return data;
+      } catch (e) {
+        return { date: new Date().toISOString().split('T')[0], counts: {} };
+      }
     },
 
-    // V63.11 : Combien de questions actualité répondues aujourd'hui
-    getActuCountToday() {
-      return this.getActuState().count;
+    getCountToday() { return this.getState().count; },
+    getActuCountToday() { return this.getActuState().count; },
+
+    // V63.39 : Compteur pour une matière précise
+    getCountForMatiere(matiere) {
+      const state = this.getMatiereState();
+      return (state.counts && state.counts[matiere]) || 0;
     },
 
-    // Combien il en reste aujourd'hui
-    getRemaining() {
-      return Math.max(0, this.LIMITE_QUOTIDIENNE_GRATUITE - this.getCountToday());
+    // V63.39 : Reste par matière
+    getRemainingForMatiere(user, matiere) {
+      const limits = this.getLimits(user);
+      return Math.max(0, limits.parMatiere - this.getCountForMatiere(matiere));
     },
 
-    // V63.11 : Combien de questions actualité restantes aujourd'hui
+    getRemaining(user) {
+      const limits = this.getLimits(user);
+      return Math.max(0, limits.quotidien - this.getCountToday());
+    },
+
     getActuRemaining() {
       return Math.max(0, this.LIMITE_ACTUALITE_GRATUIT - this.getActuCountToday());
     },
 
-    // V63.11 : Une matière est-elle considérée comme "actualité" ?
     isActualiteMatiere(matiere) {
       if (!matiere) return false;
       return this.MATIERES_ACTUALITE.includes(matiere);
     },
 
-    // L'utilisateur a-t-il atteint la limite ?
     hasReachedLimit(user) {
-      // Premium = pas de limite
-      if (window.PremiumService && window.PremiumService.isUserPremium(user)) {
-        return false;
-      }
-      return this.getCountToday() >= this.LIMITE_QUOTIDIENNE_GRATUITE;
+      if (window.PremiumService && window.PremiumService.isUserPremium(user)) return false;
+      const limits = this.getLimits(user);
+      return this.getCountToday() >= limits.quotidien;
     },
 
-    // V63.11 : L'utilisateur a-t-il atteint la limite actualité ?
+    // V63.39 : Limite par matière atteinte ?
+    hasReachedMatiereLimit(user, matiere) {
+      if (window.PremiumService && window.PremiumService.isUserPremium(user)) return false;
+      const limits = this.getLimits(user);
+      return this.getCountForMatiere(matiere) >= limits.parMatiere;
+    },
+
     hasReachedActuLimit(user) {
-      if (window.PremiumService && window.PremiumService.isUserPremium(user)) {
-        return false;
-      }
+      if (window.PremiumService && window.PremiumService.isUserPremium(user)) return false;
       return this.getActuCountToday() >= this.LIMITE_ACTUALITE_GRATUIT;
     },
 
-    // V63.11 : Vérifier la limite pour une matière spécifique (générale OU actualité)
+    // V63.39 : Vérification complète pour une matière
     canAnswerMatiere(user, matiere) {
       if (window.PremiumService && window.PremiumService.isUserPremium(user)) {
         return { allowed: true };
       }
+      const limits = this.getLimits(user);
+      // 1) Limite par matière (nouveau V63.39)
+      if (this.hasReachedMatiereLimit(user, matiere)) {
+        const msg = limits.statut === 'anonyme'
+          ? `Tu as fait tes ${limits.parMatiere} QCM en cette matière aujourd'hui. Inscris-toi (gratuit) pour ${this.LIMITE_PAR_MATIERE_INSCRIT} QCM/matière ou passe Premium pour un accès illimité.`
+          : `Tu as atteint ${limits.parMatiere} QCM par matière aujourd'hui. Passe Premium pour un accès illimité.`;
+        return {
+          allowed: false,
+          reason: 'matiere_limit',
+          message: msg,
+          suggestSignup: limits.statut === 'anonyme'
+        };
+      }
+      // 2) Limite spécifique actualité
       if (this.isActualiteMatiere(matiere) && this.hasReachedActuLimit(user)) {
         return {
           allowed: false,
           reason: 'actualite_limit',
-          message: `Tu as atteint la limite de ${this.LIMITE_ACTUALITE_GRATUIT} questions Actualité par jour. Reviens demain ou passe Premium pour un accès illimité.`
+          message: `Tu as atteint la limite de ${this.LIMITE_ACTUALITE_GRATUIT} questions Actualité par jour. Reviens demain ou passe Premium.`
         };
       }
+      // 3) Limite quotidienne totale
       if (this.hasReachedLimit(user)) {
+        const msg = limits.statut === 'anonyme'
+          ? `Tu as atteint ${limits.quotidien} QCM aujourd'hui. Inscris-toi gratuitement pour ${this.LIMITE_QUOTIDIENNE_INSCRIT} QCM/jour !`
+          : `Tu as atteint ${limits.quotidien} QCM aujourd'hui. Passe Premium pour un accès illimité.`;
         return {
           allowed: false,
           reason: 'general_limit',
-          message: `Tu as atteint la limite de ${this.LIMITE_QUOTIDIENNE_GRATUITE} questions par jour.`
+          message: msg,
+          suggestSignup: limits.statut === 'anonyme'
         };
       }
       return { allowed: true };
     },
 
-    // Incrémenter le compteur (1 question répondue)
+    // Incrémenter (1 question répondue)
     incrementCount(user, matiere) {
-      // Premium = on ne compte pas
-      if (window.PremiumService && window.PremiumService.isUserPremium(user)) {
-        return;
-      }
+      if (window.PremiumService && window.PremiumService.isUserPremium(user)) return;
+      // Total quotidien
       const state = this.getState();
       state.count++;
       localStorage.setItem(this.STORAGE_KEY, JSON.stringify(state));
-
-      // V63.11 : Incrémenter aussi le compteur actualité si la matière en est
+      // Par matière V63.39
+      if (matiere) {
+        const matState = this.getMatiereState();
+        if (!matState.counts) matState.counts = {};
+        matState.counts[matiere] = (matState.counts[matiere] || 0) + 1;
+        localStorage.setItem(this.STORAGE_KEY_PAR_MATIERE, JSON.stringify(matState));
+      }
+      // Actualité
       if (matiere && this.isActualiteMatiere(matiere)) {
         const actuState = this.getActuState();
         actuState.count++;
@@ -11842,9 +12016,10 @@ const App = {
       }
     },
 
-    // Réinitialiser (debug/admin)
     reset() {
       localStorage.removeItem(this.STORAGE_KEY);
+      localStorage.removeItem(this.STORAGE_KEY_ACTU);
+      localStorage.removeItem(this.STORAGE_KEY_PAR_MATIERE);
     }
   },
 

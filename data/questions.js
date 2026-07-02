@@ -1,6 +1,22 @@
+// ====================================================================
+// © 2026 BARA FORMATION - TOUS DROITS RÉSERVÉS
+// ====================================================================
+// Cette base de données de questions QCM est la PROPRIÉTÉ EXCLUSIVE
+// de Bara Formation (Ouagadougou, Burkina Faso).
+//
+// Toute reproduction, copie, redistribution, extraction automatisée
+// ou utilisation commerciale est STRICTEMENT INTERDITE sans
+// autorisation écrite préalable de Bara Formation.
+//
+// Contact : bara.formation@gmail.com | +226 04 04 34 04
+// Voir LICENSE.md pour les détails complets.
+//
+// Protection légale : Loi n°032-99/AN du 22 décembre 1999 (Burkina Faso)
+// + Convention de Berne + Accord ADPIC
+// ====================================================================
 // Bara Concours - Base de questions QCM
-// Mis à jour le 2026-06-24 - V63.26 : +25 questions actualité
-// Total : 5084 questions réparties sur 37 matières
+// Mis à jour le 2026-06-30 - V63.36 : 5115 questions au total
+// Total : 5115 questions réparties sur 37 matières
 
 const QUESTIONS = {
   "francais": [

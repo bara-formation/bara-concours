@@ -2,11 +2,12 @@
 // V61 : MODULE EXAMEN HEBDOMADAIRE
 // =================================================================
 // Examen synchronisé tous les dimanches de 19h30 à 20h30
-// - 50 questions selon quotas (15 cg / 10 fr / 10 maths / 5 actu / 5 droit / 5 info)
+// - 50 questions selon quotas (15 cg / 8 fr / 8 maths / 7 logique / 5 actu / 5 droit / 2 info)
 // - Mêmes 50 questions pour tous, ordre différent par étudiant
 // - Fin stricte à 20h30 (même si démarrage à 20h25 → 5 min restants)
 // - Gratuit, mais résultats détaillés réservés Premium
 // - Sync Firestore pour classement national
+// - V63.38 : Ajout catégorie "logique" (7 Q depuis matière psycho)
 // =================================================================
 const WeeklyExam = {
 
@@ -22,11 +23,12 @@ const WeeklyExam = {
     FIRESTORE_COLLECTION: 'weeklyExams',  // Collection pour les résultats
     QUOTA: {
       cg: 15,           // Culture générale
-      francais: 10,     // Français
-      maths: 10,        // Maths (BEPC + BAC mélangés)
-      actualite: 5,  // Actualité Burkina
+      francais: 8,      // Français (V63.38 : 10 → 8)
+      maths: 8,         // Maths (BEPC + BAC mélangés) (V63.38 : 10 → 8)
+      logique: 7,       // Logique / raisonnement (V63.38 : NOUVEAU depuis matière psycho)
+      actualite: 5,     // Actualité Burkina
       droit: 5,         // Droit / citoyenneté
-      informatique: 5   // Informatique / divers
+      informatique: 2   // Informatique (V63.38 : 5 → 2)
     }
   },
 
@@ -140,6 +142,7 @@ const WeeklyExam = {
       case 'cg': return ['cg'];
       case 'francais': return ['francais'];
       case 'maths': return ['maths_bepc', 'maths_bac'];  // mélange BEPC + BAC
+      case 'logique': return ['psycho'];  // V63.38 : logique/raisonnement depuis test psychotechnique
       case 'actualite': return ['actualite'];
       case 'droit': return ['droitconst', 'droitadmin', 'droitshumains', 'legislation'];
       case 'informatique': return ['informatique'];

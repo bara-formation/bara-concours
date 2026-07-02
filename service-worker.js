@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.36 - V63.36 : Workflow lots d'import avec statuts (en_attente, integre, a_supprimer, annule)
+// Version 6.3.40 - V63.40 : Fix modal freemium adapte au statut + skip etape onboarding redondante
 
-const CACHE_NAME = 'bara-concours-v6-3-36';
+const CACHE_NAME = 'bara-concours-v6-3-40';
 const APP_SHELL = [
   './',
   './index.html',
