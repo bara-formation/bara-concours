@@ -1,5 +1,5 @@
 // Bara Concours - Service Worker
-// Version 6.3.43 - V63.43 : Psychotechnique ajouté à 70 concours (admin, santé, enseignement admin)
+// Version 6.3.43 - V63.43 : Psychotechnique ajouté à 70 concours (admin, santé, enseignement admin) + bouton "Marquer intégré" dans admin
 
 const CACHE_NAME = 'bara-concours-v6-3-43';
 const APP_SHELL = [
