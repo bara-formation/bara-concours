@@ -1,6 +1,6 @@
 // Bara Concours - Base de questions QCM
-// Mis à jour le 2026-07-05 - V63.46 : +99 questions SVT BAC
-// Total : 5389 questions réparties sur 37 matières
+// Mis à jour le 2026-07-05 - V63.47 : +100 questions SVT BAC (2e lot)
+// Total : 5489 questions réparties sur 37 matières
 
 const QUESTIONS = {
   "francais": [
@@ -19334,6 +19334,1107 @@ const QUESTIONS = {
       ],
       "r": 1,
       "x": "Les campagnes de sensibilisation visent à informer les populations et à encourager des comportements favorables à la prévention des maladies. Elles complètent ainsi l'action des centres de santé sur le terrain."
+    },
+  
+    {
+      "q": "Quel organite cellulaire est responsable de la production d'énergie sous forme d'ATP ?",
+      "o": [
+        "Le noyau",
+        "La mitochondrie",
+        "Le ribosome",
+        "L'appareil de Golgi"
+      ],
+      "r": 1,
+      "x": "La mitochondrie transforme l'énergie chimique des nutriments en ATP grâce à la respiration cellulaire. Elle est surnommée la centrale énergétique de la cellule car elle utilise l'oxygène pour produire cette énergie."
+    },
+    {
+      "q": "Quelle structure cellulaire contient l'information génétique sous forme d'ADN ?",
+      "o": [
+        "Le cytoplasme",
+        "Le noyau",
+        "La membrane plasmique",
+        "Le réticulum endoplasmique"
+      ],
+      "r": 1,
+      "x": "Le noyau renferme l'ADN organisé en chromosomes, support de l'information génétique de la cellule. Il contrôle ainsi l'ensemble des activités cellulaires en dirigeant la synthèse des protéines."
+    },
+    {
+      "q": "Quel organite est responsable de la synthèse des protéines dans la cellule ?",
+      "o": [
+        "La mitochondrie",
+        "Le lysosome",
+        "L'appareil de Golgi",
+        "Le ribosome"
+      ],
+      "r": 3,
+      "x": "Les ribosomes traduisent l'ARN messager en chaînes d'acides aminés pour former les protéines. Ils peuvent être libres dans le cytoplasme ou fixés sur le réticulum endoplasmique."
+    },
+    {
+      "q": "Quelle est la principale différence entre une cellule animale et une cellule végétale ?",
+      "o": [
+        "La cellule végétale possède une paroi de cellulose que la cellule animale n'a pas",
+        "La cellule animale possède un noyau que la cellule végétale n'a pas",
+        "La cellule végétale ne possède pas de mitochondries",
+        "La cellule animale possède des chloroplastes que la cellule végétale n'a pas"
+      ],
+      "r": 0,
+      "x": "La paroi pecto-cellulosique rigide entourant la membrane plasmique est propre aux cellules végétales et leur donne leur forme. Elle assure aussi une protection mécanique que ne possède pas la cellule animale."
+    },
+    {
+      "q": "Quel pigment permet aux chloroplastes de capter l'énergie lumineuse ?",
+      "o": [
+        "L'hémoglobine",
+        "La mélanine",
+        "La chlorophylle",
+        "La kératine"
+      ],
+      "r": 2,
+      "x": "La chlorophylle absorbe la lumière, principalement dans le rouge et le bleu, pour alimenter la photosynthèse. C'est ce pigment qui donne leur couleur verte aux feuilles et aux tiges chlorophylliennes."
+    },
+    {
+      "q": "Quelle est la fonction principale de la membrane plasmique ?",
+      "o": [
+        "Stocker l'ADN de la cellule",
+        "Produire l'énergie cellulaire",
+        "Contrôler les échanges entre la cellule et son milieu",
+        "Synthétiser les protéines cellulaires"
+      ],
+      "r": 2,
+      "x": "La membrane plasmique est sélectivement perméable et régule les entrées et sorties de substances de la cellule. Elle est composée d'une double couche de phospholipides dans laquelle sont insérées des protéines."
+    },
+    {
+      "q": "Quel processus permet à une cellule mère de donner deux cellules filles identiques ?",
+      "o": [
+        "La mitose",
+        "La méiose",
+        "La fécondation",
+        "La mutation"
+      ],
+      "r": 0,
+      "x": "La mitose produit deux cellules filles génétiquement identiques à la cellule mère, avec le même nombre de chromosomes. Elle permet la croissance de l'organisme et le renouvellement des tissus."
+    },
+    {
+      "q": "Où se déroule la respiration cellulaire productrice d'ATP ?",
+      "o": [
+        "Dans le noyau",
+        "Dans le réticulum endoplasmique",
+        "Dans la mitochondrie",
+        "Dans l'appareil de Golgi"
+      ],
+      "r": 2,
+      "x": "La mitochondrie oxyde le glucose en présence d'oxygène pour libérer l'énergie stockée sous forme d'ATP. Ce processus, appelé respiration cellulaire, produit aussi du dioxyde de carbone et de l'eau comme déchets."
+    },
+    {
+      "q": "Quel organite modifie, trie et achemine les protéines vers leur destination finale ?",
+      "o": [
+        "L'appareil de Golgi",
+        "Le lysosome",
+        "Le ribosome",
+        "Le noyau"
+      ],
+      "r": 0,
+      "x": "L'appareil de Golgi reçoit les protéines du réticulum endoplasmique, les modifie puis les redistribue dans la cellule. Il joue ainsi un rôle clé dans le tri et l'expédition des molécules cellulaires."
+    },
+    {
+      "q": "Quel organite contient des enzymes capables de digérer les déchets cellulaires ?",
+      "o": [
+        "La mitochondrie",
+        "Le ribosome",
+        "Le noyau",
+        "Le lysosome"
+      ],
+      "r": 3,
+      "x": "Le lysosome renferme des enzymes digestives qui dégradent les déchets et les organites usés de la cellule. Il participe ainsi au recyclage des constituants cellulaires devenus inutiles."
+    },
+    {
+      "q": "Quelle molécule constitue l'unité de base des membranes cellulaires ?",
+      "o": [
+        "Le glucose",
+        "L'acide aminé",
+        "Le phospholipide",
+        "L'amidon"
+      ],
+      "r": 2,
+      "x": "Les phospholipides forment une bicouche qui constitue la structure de base de toute membrane biologique. Leurs têtes hydrophiles et leurs queues hydrophobes expliquent cette organisation en deux feuillets."
+    },
+    {
+      "q": "Quel est le rôle du noyau dans une cellule eucaryote ?",
+      "o": [
+        "Contrôler l'activité cellulaire en abritant l'ADN",
+        "Produire l'énergie nécessaire à la cellule",
+        "Digérer les substances indésirables",
+        "Assurer les échanges avec le milieu extérieur"
+      ],
+      "r": 0,
+      "x": "Le noyau contient le matériel génétique et coordonne les activités de la cellule via l'expression des gènes. Il est délimité par une enveloppe nucléaire percée de pores permettant les échanges avec le cytoplasme."
+    },
+    {
+      "q": "Comment appelle-t-on l'ensemble des réactions chimiques qui se déroulent dans une cellule ?",
+      "o": [
+        "La photosynthèse",
+        "La mitose",
+        "Le métabolisme",
+        "L'homéostasie"
+      ],
+      "r": 2,
+      "x": "Le métabolisme regroupe toutes les réactions chimiques permettant à la cellule de produire et d'utiliser de l'énergie. On distingue les réactions de synthèse (anabolisme) et de dégradation (catabolisme)."
+    },
+    {
+      "q": "Quelle structure permet aux cellules végétales de stocker l'eau et les substances de réserve ?",
+      "o": [
+        "Le chloroplaste",
+        "Le noyau",
+        "La vacuole",
+        "La mitochondrie"
+      ],
+      "r": 2,
+      "x": "La vacuole est une cavité remplie de liquide qui occupe une grande partie du volume de la cellule végétale adulte. Elle stocke l'eau, les nutriments et parfois des substances de défense de la plante."
+    },
+    {
+      "q": "Quel type de cellule ne possède pas de noyau individualisé ?",
+      "o": [
+        "La cellule végétale",
+        "La cellule animale",
+        "La cellule bactérienne",
+        "La cellule fongique"
+      ],
+      "r": 2,
+      "x": "Les bactéries sont des cellules procaryotes dont l'ADN est libre dans le cytoplasme, sans enveloppe nucléaire. Elles ne possèdent pas non plus d'organites délimités par une membrane comme les mitochondries."
+    },
+    {
+      "q": "Quel phénomène décrit le passage de l'eau à travers une membrane semi-perméable, du milieu le moins concentré vers le plus concentré ?",
+      "o": [
+        "La diffusion simple",
+        "L'osmose",
+        "Le transport actif",
+        "L'endocytose"
+      ],
+      "r": 1,
+      "x": "L'osmose est le déplacement passif de l'eau du milieu le moins concentré (hypotonique) vers le milieu le plus concentré (hypertonique) à travers une membrane semi-perméable. Ce phénomène ne nécessite aucune dépense d'énergie de la part de la cellule."
+    },
+    {
+      "q": "Quelle molécule sert de source d'énergie directement utilisable par la cellule ?",
+      "o": [
+        "Le glucose",
+        "L'ATP",
+        "L'ADN",
+        "La cellulose"
+      ],
+      "r": 1,
+      "x": "L'ATP libère de l'énergie lors de l'hydrolyse de sa liaison phosphate, énergie directement exploitable par la cellule. Elle est régénérée en permanence grâce à la respiration cellulaire."
+    },
+    {
+      "q": "Quel est le rôle du réticulum endoplasmique rugueux ?",
+      "o": [
+        "Digérer les déchets cellulaires",
+        "Stocker l'eau cellulaire",
+        "Produire l'énergie cellulaire",
+        "Synthétiser les protéines"
+      ],
+      "r": 3,
+      "x": "Le réticulum endoplasmique rugueux porte des ribosomes qui assurent la synthèse des protéines destinées à être sécrétées ou intégrées aux membranes. Ces protéines sont ensuite modifiées et acheminées vers l'appareil de Golgi."
+    },
+    {
+      "q": "Quel constituant cellulaire est responsable de la couleur verte des feuilles ?",
+      "o": [
+        "La vacuole",
+        "Le noyau",
+        "La mitochondrie",
+        "Le chloroplaste"
+      ],
+      "r": 3,
+      "x": "Le chloroplaste contient la chlorophylle, pigment vert indispensable à la photosynthèse. Il capte l'énergie lumineuse pour la convertir en énergie chimique utilisable par la plante."
+    },
+    {
+      "q": "Comment appelle-t-on le passage direct de molécules à travers la membrane sans dépense d'énergie, du milieu le plus concentré vers le moins concentré ?",
+      "o": [
+        "Le transport actif",
+        "La diffusion simple",
+        "L'endocytose",
+        "L'exocytose"
+      ],
+      "r": 1,
+      "x": "La diffusion simple se fait spontanément selon le gradient de concentration, sans consommation d'énergie par la cellule. Elle permet par exemple le passage de petites molécules comme le dioxygène à travers la membrane."
+    },
+    {
+      "q": "Quelle molécule porte l'information génétique chez les êtres vivants ?",
+      "o": [
+        "L'ARN messager",
+        "L'ADN",
+        "Les protéines",
+        "Les lipides"
+      ],
+      "r": 1,
+      "x": "L'ADN est le support universel de l'information héréditaire, transmis des parents aux descendants. Il est constitué d'une double hélice de nucléotides portant le code génétique."
+    },
+    {
+      "q": "Combien de chromosomes possède une cellule somatique humaine normale ?",
+      "o": [
+        "46",
+        "44",
+        "23",
+        "48"
+      ],
+      "r": 0,
+      "x": "L'être humain possède 46 chromosomes répartis en 23 paires dans chaque cellule somatique. La moitié provient du père et l'autre moitié de la mère, via les gamètes."
+    },
+    {
+      "q": "Comment appelle-t-on les différentes versions possibles d'un même gène ?",
+      "o": [
+        "Les chromosomes",
+        "Les allèles",
+        "Les gamètes",
+        "Les protéines"
+      ],
+      "r": 1,
+      "x": "Les allèles sont des variantes d'un même gène occupant le même locus sur des chromosomes homologues. Ils peuvent être identiques (homozygotie) ou différents (hétérozygotie) chez un même individu."
+    },
+    {
+      "q": "Quel type de cellule résulte de la méiose chez l'être humain ?",
+      "o": [
+        "Les cellules somatiques",
+        "Les cellules souches",
+        "Les cellules musculaires",
+        "Les gamètes"
+      ],
+      "r": 3,
+      "x": "La méiose produit des gamètes haploïdes contenant la moitié du nombre de chromosomes de la cellule mère. Elle permet ainsi de conserver un nombre constant de chromosomes lors de la fécondation."
+    },
+    {
+      "q": "Un individu de génotype Aa est dit :",
+      "o": [
+        "Homozygote dominant",
+        "Homozygote récessif",
+        "Hémizygote",
+        "Hétérozygote"
+      ],
+      "r": 3,
+      "x": "Un individu hétérozygote possède deux allèles différents pour un même gène, ici A et a. Son phénotype dépend alors du caractère dominant ou récessif de chacun des deux allèles."
+    },
+    {
+      "q": "Chez l'homme, quels chromosomes déterminent le sexe masculin ?",
+      "o": [
+        "XX",
+        "XY",
+        "XXY",
+        "YY"
+      ],
+      "r": 1,
+      "x": "La combinaison XY, avec un chromosome Y hérité du père, détermine le sexe masculin chez l'être humain. La mère, elle, ne peut transmettre qu'un chromosome X à sa descendance."
+    },
+    {
+      "q": "Un croisement entre deux individus hétérozygotes Aa x Aa donne, en théorie, quelle proportion de génotypes aa ?",
+      "o": [
+        "100%",
+        "50%",
+        "75%",
+        "25%"
+      ],
+      "r": 3,
+      "x": "Selon la loi de pureté des gamètes de Mendel, le croisement de deux hétérozygotes (Aa x Aa) donne en F2 les proportions génotypiques : 25% [AA], 50% [Aa] et 25% [aa]. Cette répartition illustre la ségrégation indépendante des allèles lors de la formation des gamètes."
+    },
+    {
+      "q": "Comment appelle-t-on une modification accidentelle et héréditaire de la séquence d'ADN ?",
+      "o": [
+        "Une méiose",
+        "Une mutation",
+        "Une mitose",
+        "Une fécondation"
+      ],
+      "r": 1,
+      "x": "Une mutation est un changement dans la séquence des nucléotides de l'ADN, pouvant être transmis à la descendance. Elle peut être spontanée ou provoquée par des agents mutagènes comme certains rayonnements."
+    },
+    {
+      "q": "Quelle base azotée de l'ADN s'apparie toujours avec l'adénine ?",
+      "o": [
+        "La cytosine",
+        "La guanine",
+        "L'uracile",
+        "La thymine"
+      ],
+      "r": 3,
+      "x": "Dans l'ADN, l'adénine s'apparie avec la thymine par deux liaisons hydrogène, selon la règle de complémentarité. Cette complémentarité des bases assure la fidélité de la réplication de l'ADN."
+    },
+    {
+      "q": "Quel est le rôle de l'ARN messager dans la cellule ?",
+      "o": [
+        "Stocker l'information génétique de façon permanente",
+        "Transporter l'information génétique du noyau vers les ribosomes",
+        "Catalyser les réactions chimiques cellulaires",
+        "Constituer la membrane du noyau"
+      ],
+      "r": 1,
+      "x": "L'ARN messager copie l'information d'un gène et la transporte du noyau vers les ribosomes pour la traduction en protéine. Cette molécule est produite lors de la transcription et sert de modèle pour la synthèse des protéines lors de la traduction"
+    },
+    {
+      "q": "Un gène dominant s'exprime chez un individu :",
+      "o": [
+        "Dès qu'il est présent en un seul exemplaire",
+        "Uniquement s'il est présent en deux exemplaires",
+        "Jamais chez les hétérozygotes",
+        "Uniquement chez les femelles"
+      ],
+      "r": 0,
+      "x": "Un allèle dominant masque l'expression de l'allèle récessif dès qu'il est présent, même à l'état hétérozygote. L'allèle récessif ne s'exprime donc que lorsqu'il est présent en double exemplaire."
+    },
+    {
+      "q": "Quel scientifique est considéré comme le fondateur de la génétique moderne grâce à ses travaux sur les petits pois ?",
+      "o": [
+        "Charles Darwin",
+        "Gregor Mendel",
+        "Louis Pasteur",
+        "James Watson"
+      ],
+      "r": 1,
+      "x": "Gregor Mendel a établi les lois de l'hérédité au XIXe siècle en étudiant la transmission des caractères chez le petit pois. Ses travaux ont posé les bases de la génétique moderne."
+    },
+    {
+      "q": "Comment appelle-t-on l'ensemble des caractères observables d'un individu ?",
+      "o": [
+        "Le génotype",
+        "Le caryotype",
+        "Le phénotype",
+        "L'allèle"
+      ],
+      "r": 2,
+      "x": "Le phénotype désigne l'ensemble des caractères visibles ou mesurables d'un individu, résultant de son génotype et de l'environnement. Deux individus de même génotype peuvent ainsi avoir un phénotype légèrement différent."
+    },
+    {
+      "q": "Quelle structure permet de visualiser et classer les chromosomes d'un individu ?",
+      "o": [
+        "Le génotype",
+        "Le phénotype",
+        "Le caryotype",
+        "L'allèle"
+      ],
+      "r": 2,
+      "x": "Le caryotype est la représentation ordonnée des chromosomes d'une cellule, classés par taille et par paires. Il permet de détecter certaines anomalies chromosomiques comme les trisomies."
+    },
+    {
+      "q": "Une personne trisomique au niveau du chromosome 21 possède combien de chromosomes en tout ?",
+      "o": [
+        "44",
+        "46",
+        "47",
+        "48"
+      ],
+      "r": 2,
+      "x": "La trisomie 21 correspond à la présence d'un chromosome 21 surnuméraire, portant le total à 47 chromosomes. Cette anomalie est à l'origine du syndrome de Down."
+    },
+    {
+      "q": "Quel processus assure le brassage génétique lors de la méiose ?",
+      "o": [
+        "La réplication de l'ADN",
+        "Le crossing-over",
+        "La traduction de l'ARN",
+        "La duplication des centrioles"
+      ],
+      "r": 1,
+      "x": "Le crossing-over échange des fragments d'ADN entre chromosomes homologues, augmentant la diversité génétique des gamètes. Il se produit lors de la prophase de la première division de la méiose."
+    },
+    {
+      "q": "Chez les groupes sanguins ABO, quel génotype correspond à un individu de groupe O ?",
+      "o": [
+        "AA",
+        "AO",
+        "BB",
+        "OO"
+      ],
+      "r": 3,
+      "x": "Le groupe O résulte de la présence de deux allèles récessifs O, l'allèle O n'exprimant ni antigène A ni antigène B. C'est pourquoi ce groupe est souvent qualifié de donneur universel."
+    },
+    {
+      "q": "Comment appelle-t-on une maladie génétique due à la mutation d'un seul gène, comme la drépanocytose ?",
+      "o": [
+        "Une maladie infectieuse",
+        "Une maladie chromosomique",
+        "Une maladie monogénique",
+        "Une maladie environnementale"
+      ],
+      "r": 2,
+      "x": "Une maladie monogénique résulte de la mutation d'un seul gène, comme c'est le cas pour la drépanocytose très présente en Afrique de l'Ouest. Elle se transmet selon les lois classiques de l'hérédité mendélienne."
+    },
+    {
+      "q": "Quel est le rôle des enzymes de restriction utilisées en génie génétique ?",
+      "o": [
+        "Assembler des brins d'ADN entre eux",
+        "Copier l'ADN à l'identique",
+        "Traduire l'ARN en protéines",
+        "Couper l'ADN à des séquences précises"
+      ],
+      "r": 3,
+      "x": "Les enzymes de restriction reconnaissent des séquences spécifiques d'ADN et les sectionnent, un outil clé du génie génétique. Elles permettent notamment de découper et d'insérer des gènes d'intérêt."
+    },
+    {
+      "q": "Combien de chromosomes contient un gamète humain normal ?",
+      "o": [
+        "23",
+        "46",
+        "22",
+        "24"
+      ],
+      "r": 0,
+      "x": "Chaque gamète humain est haploïde et contient 23 chromosomes, soit la moitié du nombre présent dans une cellule somatique. La fécondation rétablit le nombre normal de 46 chromosomes chez l'embryon."
+    },
+    {
+      "q": "Où débute la digestion des glucides dans le tube digestif ?",
+      "o": [
+        "Dans l'estomac",
+        "Dans la bouche",
+        "Dans l'intestin grêle",
+        "Dans le gros intestin"
+      ],
+      "r": 1,
+      "x": "La salive contient de l'amylase salivaire qui commence à dégrader l'amidon dès la bouche. La mastication favorise également ce premier travail chimique en fragmentant les aliments."
+    },
+    {
+      "q": "Quel organe produit la bile nécessaire à la digestion des graisses ?",
+      "o": [
+        "Le foie",
+        "Le pancréas",
+        "L'estomac",
+        "La vésicule biliaire"
+      ],
+      "r": 0,
+      "x": "Le foie fabrique la bile, ensuite stockée dans la vésicule biliaire avant d'être déversée dans l'intestin grêle. NB: la vésicule ne produit pas la bile, elle ne fait que la stocker et la concentrer. La bile facilite la digestion des graisses en les émulsionnant."
+    },
+    {
+      "q": "Quel est le rôle principal de l'intestin grêle dans la digestion ?",
+      "o": [
+        "Stocker les aliments avant digestion",
+        "Absorber les nutriments issus de la digestion",
+        "Produire l'insuline nécessaire au métabolisme",
+        "Éliminer les déchets solides de l'organisme"
+      ],
+      "r": 1,
+      "x": "L'intestin grêle, grâce à ses villosités, absorbe la majorité des nutriments issus de la digestion vers le sang. Sa très grande surface interne optimise cette absorption."
+    },
+    {
+      "q": "Quelle enzyme gastrique commence la digestion des protéines dans l'estomac ?",
+      "o": [
+        "L'amylase",
+        "La pepsine",
+        "La lipase",
+        "La trypsine"
+      ],
+      "r": 1,
+      "x": "La pepsine, activée par l'acidité gastrique, découpe les protéines alimentaires en fragments plus courts. Cette digestion se poursuit ensuite dans l'intestin grêle grâce à d'autres enzymes."
+    },
+    {
+      "q": "Quel organe transforme les aliments en une bouillie appelée chyme grâce à ses contractions ?",
+      "o": [
+        "L'estomac",
+        "Le foie",
+        "Le pancréas",
+        "L'œsophage"
+      ],
+      "r": 0,
+      "x": "L'estomac malaxe les aliments avec le suc gastrique pour former le chyme, prêt à passer dans l'intestin. Ce brassage mécanique complète l'action chimique des enzymes digestives."
+    },
+    {
+      "q": "Quel nutriment fournit le plus d'énergie par gramme lors de sa dégradation ?",
+      "o": [
+        "Les glucides",
+        "Les protéines",
+        "Les lipides",
+        "Les vitamines"
+      ],
+      "r": 2,
+      "x": "Les lipides libèrent environ 9 kilocalories par gramme, soit plus du double des glucides ou des protéines. Ils constituent ainsi la principale réserve d'énergie de l'organisme."
+    },
+    {
+      "q": "Quel est le rôle du pancréas dans la digestion ?",
+      "o": [
+        "Stocker la bile produite par le foie",
+        "Absorber les nutriments digérés",
+        "Sécréter des enzymes digestives",
+        "Filtrer le sang pour éliminer les toxines"
+      ],
+      "r": 2,
+      "x": "Le pancréas sécrète des enzymes comme l'amylase, la lipase et la trypsine qui poursuivent la digestion dans l'intestin grêle. Il joue aussi un rôle hormonal en régulant la glycémie."
+    },
+    {
+      "q": "Comment appelle-t-on l'absorption des nutriments à travers la paroi intestinale vers le sang ?",
+      "o": [
+        "L'ingestion",
+        "L'excrétion",
+        "L'absorption intestinale",
+        "L'égestion"
+      ],
+      "r": 2,
+      "x": "L'absorption intestinale permet le passage des nutriments simples du tube digestif vers le sang, à travers les villosités. Ces nutriments sont ensuite distribués à toutes les cellules de l'organisme."
+    },
+    {
+      "q": "Quelle carence alimentaire provoque le kwashiorkor observé chez certains enfants ?",
+      "o": [
+        "Une carence en protéines",
+        "Une carence en glucides",
+        "Une carence en lipides",
+        "Une carence en eau"
+      ],
+      "r": 0,
+      "x": "Le kwashiorkor résulte d'une carence sévère en protéines malgré un apport calorique parfois suffisant en glucides. Il touche particulièrement les jeunes enfants après le sevrage dans certaines régions."
+    },
+    {
+      "q": "Quel est le rôle des fibres alimentaires dans la digestion ?",
+      "o": [
+        "Fournir l'essentiel de l'énergie de l'organisme",
+        "Faciliter le transit intestinal",
+        "Remplacer les protéines dans l'alimentation",
+        "Détruire les microbes intestinaux"
+      ],
+      "r": 1,
+      "x": "Les fibres ne sont pas digérées mais stimulent le transit intestinal et favorisent une bonne santé digestive. Elles contribuent aussi à réguler l'absorption des sucres et des graisses."
+    },
+    {
+      "q": "Quel produit final résulte de la digestion complète de l'amidon ?",
+      "o": [
+        "Des acides aminés",
+        "Des acides gras",
+        "Du glycérol",
+        "Du glucose"
+      ],
+      "r": 3,
+      "x": "L'amidon, un polymère de glucose, est dégradé par les enzymes digestives jusqu'aux molécules simples de glucose. Ce glucose est ensuite absorbé et utilisé comme principale source d'énergie."
+    },
+    {
+      "q": "Quelle partie du tube digestif est principalement responsable de la réabsorption de l'eau ?",
+      "o": [
+        "L'estomac",
+        "Le gros intestin",
+        "L'œsophage",
+        "La bouche"
+      ],
+      "r": 1,
+      "x": "Le gros intestin (côlon) réabsorbe une grande partie de l'eau restante, formant les selles avant l'évacuation. Il abrite aussi une flore bactérienne utile à la digestion."
+    },
+    {
+      "q": "Quel produit final résulte de la digestion complète des protéines ?",
+      "o": [
+        "Des acides aminés",
+        "Du glucose",
+        "Des acides gras",
+        "Du glycérol"
+      ],
+      "r": 0,
+      "x": "Les protéines sont hydrolysées en chaînes puis en acides aminés, unités absorbables au niveau de l'intestin grêle. Ces acides aminés servent ensuite à construire les protéines de l'organisme."
+    },
+    {
+      "q": "Quelle maladie est provoquée par une carence prolongée en vitamine C ?",
+      "o": [
+        "Le rachitisme",
+        "Le béribéri",
+        "Le scorbut",
+        "La pellagre"
+      ],
+      "r": 2,
+      "x": "Le scorbut résulte d'une carence en vitamine C, entraînant fatigue, saignements des gencives et fragilité vasculaire. Il était autrefois fréquent chez les marins privés de fruits frais. Retiens: vitamine C → Scorbut ; vitamine D → Rachitisme ; vitamine B1 → Béribéri ; vitamine B3 → Pellagre."
+    },
+    {
+      "q": "Quel est le rôle de l'eau dans l'organisme humain ?",
+      "o": [
+        "Assurer le transport des substances et réguler la température",
+        "Fournir l'essentiel de l'énergie cellulaire",
+        "Construire les tissus musculaires",
+        "Stocker l'information génétique"
+      ],
+      "r": 0,
+      "x": "L'eau, majoritaire dans le corps humain, sert de solvant, de moyen de transport et de régulateur thermique. Une hydratation suffisante est essentielle au bon fonctionnement de tous les organes."
+    },
+    {
+      "q": "Quel organe assure les échanges gazeux entre l'air et le sang ?",
+      "o": [
+        "Le cœur",
+        "Les poumons",
+        "Le foie",
+        "Les reins"
+      ],
+      "r": 1,
+      "x": "Les poumons, grâce aux alvéoles pulmonaires, permettent le passage de l'oxygène vers le sang et du dioxyde de carbone vers l'air. Cet échange gazeux est indispensable à la respiration cellulaire."
+    },
+    {
+      "q": "Quelle structure pulmonaire est le siège des échanges gazeux ?",
+      "o": [
+        "La trachée",
+        "Les bronches pulmonaires",
+        "Les alvéoles pulmonaires",
+        "Le larynx"
+      ],
+      "r": 2,
+      "x": "Les alvéoles pulmonaires, très fines et richement vascularisées, offrent une grande surface d'échange entre l'air et le sang. Leur nombre élevé permet d'optimiser les échanges gazeux."
+    },
+    {
+      "q": "Quel muscle joue un rôle essentiel dans les mouvements respiratoires ?",
+      "o": [
+        "Le biceps",
+        "Le cœur",
+        "Le diaphragme",
+        "Le triceps"
+      ],
+      "r": 2,
+      "x": "Le diaphragme se contracte et s'abaisse à l'inspiration, augmentant le volume de la cage thoracique pour faire entrer l'air. Il se relâche ensuite lors de l'expiration."
+    },
+    {
+      "q": "Quel gaz est rejeté par l'organisme lors de l'expiration ?",
+      "o": [
+        "Le dioxyde de carbone",
+        "L'oxygène",
+        "L'azote",
+        "L'hydrogène"
+      ],
+      "r": 0,
+      "x": "Le dioxyde de carbone, déchet de la respiration cellulaire, est évacué vers l'air lors de l'expiration. Son accumulation excessive dans le sang serait toxique pour l'organisme."
+    },
+    {
+      "q": "Comment appelle-t-on la respiration qui utilise l'oxygène pour produire de l'énergie ?",
+      "o": [
+        "La respiration anaérobie",
+        "La fermentation",
+        "La respiration aérobie",
+        "La photosynthèse"
+      ],
+      "r": 2,
+      "x": "La respiration aérobie utilise l'oxygène pour oxyder complètement le glucose et produire une grande quantité d'ATP. Elle est bien plus efficace énergétiquement que la respiration sans oxygène."
+    },
+    {
+      "q": "Quel phénomène permet à l'oxygène de passer des alvéoles pulmonaires vers le sang ?",
+      "o": [
+        "La diffusion à travers la paroi alvéolaire",
+        "Le transport actif par les globules rouges",
+        "La filtration rénale",
+        "L'osmose plasmatique"
+      ],
+      "r": 0,
+      "x": "L'oxygène diffuse passivement de l'air alvéolaire vers le sang, où sa concentration est plus faible. Ce transfert se fait à travers la fine paroi des alvéoles et des capillaires."
+    },
+    {
+      "q": "Quelle molécule sanguine transporte principalement l'oxygène vers les tissus ?",
+      "o": [
+        "L'hémoglobine",
+        "Le glucose",
+        "Le fibrinogène",
+        "L'albumine"
+      ],
+      "r": 0,
+      "x": "L'hémoglobine, présente dans les globules rouges, se lie à l'oxygène dans les poumons et le libère dans les tissus. Chaque molécule d'hémoglobine peut fixer plusieurs molécules d'oxygène."
+    },
+    {
+      "q": "Quel est le rôle des cils vibratiles présents dans les voies respiratoires ?",
+      "o": [
+        "Évacuer poussières et microbes",
+        "Réchauffer l'air inspiré",
+        "Produire les globules rouges",
+        "Absorber l'oxygène de l'air"
+      ],
+      "r": 0,
+      "x": "Les cils vibratiles balaient en permanence le mucus chargé de particules et de microbes vers l'extérieur des voies respiratoires. Ce mécanisme protège les poumons contre les infections et les impuretés."
+    },
+    {
+      "q": "Quelle maladie respiratoire touche fréquemment les enfants en zone sahélienne, favorisée par la poussière et la pollution ?",
+      "o": [
+        "Le diabète",
+        "L'anémie",
+        "L'asthme",
+        "La drépanocytose"
+      ],
+      "r": 2,
+      "x": "L'asthme est une maladie respiratoire chronique aggravée par la poussière, la pollution et certains allergènes fréquents en zone sahélienne. Elle se manifeste par des crises de gêne respiratoire et de toux."
+    },
+    {
+      "q": "Quel est le trajet normal de l'air inspiré jusqu'aux alvéoles ?",
+      "o": [
+        "Bouche ou nez, alvéoles, bronches, trachée",
+        "Trachée, bouche ou nez, bronches, alvéoles",
+        "Alvéoles, bronches, trachée, bouche ou nez",
+        "Bouche ou nez, trachée, bronches, alvéoles"
+      ],
+      "r": 3,
+      "x": "L'air suit un trajet précis : il entre par le nez ou la bouche, traverse la trachée, puis les bronches avant d'atteindre les alvéoles. Ce trajet réchauffe et filtre progressivement l'air inspiré."
+    },
+    {
+      "q": "Quel volume d'air correspond à la quantité inspirée et expirée lors d'une respiration normale au repos ?",
+      "o": [
+        "Le volume courant",
+        "La capacité vitale",
+        "Le volume résiduel",
+        "La fréquence respiratoire"
+      ],
+      "r": 0,
+      "x": "Le volume courant désigne le volume d'air mobilisé lors d'un cycle respiratoire normal, sans effort particulier. Il augmente naturellement lors d'un effort physique pour répondre aux besoins en oxygène."
+    },
+    {
+      "q": "Quel organe pompe le sang riche en dioxyde de carbone vers les poumons pour l'oxygéner ?",
+      "o": [
+        "Le foie",
+        "Les reins",
+        "La rate",
+        "Le cœur"
+      ],
+      "r": 3,
+      "x": "Le cœur, via le ventricule droit, envoie le sang pauvre en oxygène vers les poumons par l'artère pulmonaire. Le sang y est ensuite rechargé en oxygène avant de revenir vers le cœur."
+    },
+    {
+      "q": "Quelle est la conséquence d'un manque prolongé d'oxygène dans les tissus ?",
+      "o": [
+        "Une amélioration du métabolisme cellulaire",
+        "Une souffrance cellulaire",
+        "Une augmentation de la production de globules blancs",
+        "Une meilleure digestion des aliments"
+      ],
+      "r": 1,
+      "x": "Sans oxygène suffisant, les cellules ne peuvent plus produire assez d'ATP, ce qui entraîne leur souffrance puis leur mort. Ce manque d'oxygène est appelé hypoxie et peut toucher n'importe quel organe."
+    },
+    {
+      "q": "Quel est le rôle de la trachée dans l'appareil respiratoire ?",
+      "o": [
+        "Filtrer le sang veineux",
+        "Produire le mucus digestif",
+        "Assurer les échanges gazeux",
+        "Conduire l'air vers les bronches"
+      ],
+      "r": 3,
+      "x": "La trachée est un conduit rigide, maintenu ouvert par des anneaux cartilagineux, qui achemine l'air vers les bronches. Elle se divise ensuite en deux bronches, une pour chaque poumon."
+    },
+    {
+      "q": "Quelle activité augmente naturellement la fréquence respiratoire ?",
+      "o": [
+        "L'effort physique intense",
+        "Le sommeil profond",
+        "La digestion au repos",
+        "La lecture silencieuse"
+      ],
+      "r": 0,
+      "x": "L'effort physique augmente les besoins en oxygène des muscles, ce qui accélère la fréquence respiratoire pour y répondre. Le rythme cardiaque augmente également pour accompagner cet effort."
+    },
+    {
+      "q": "Combien de cavités possède le cœur humain ?",
+      "o": [
+        "Quatre",
+        "Deux",
+        "Trois",
+        "Six"
+      ],
+      "r": 0,
+      "x": "Le cœur humain comprend quatre cavités : deux oreillettes et deux ventricules, séparées par des cloisons et des valves. Cette organisation permet de séparer la circulation pulmonaire de la circulation générale."
+    },
+    {
+      "q": "Quel vaisseau transporte le sang riche en oxygène du cœur vers les organes ?",
+      "o": [
+        "La veine cave",
+        "L'artère pulmonaire",
+        "La veine pulmonaire",
+        "L'aorte"
+      ],
+      "r": 3,
+      "x": "L'aorte est la plus grosse artère du corps, elle part du ventricule gauche et distribue le sang oxygéné aux organes. Elle se ramifie ensuite en artères plus petites dans tout l'organisme."
+    },
+    {
+      "q": "Quel type de vaisseau ramène le sang des organes vers le cœur ?",
+      "o": [
+        "L'artère",
+        "Le capillaire",
+        "La veine",
+        "L'aorte"
+      ],
+      "r": 2,
+      "x": "Les veines ramènent le sang, généralement pauvre en oxygène, des organes vers le cœur. Elles possèdent des valvules qui empêchent le reflux du sang vers le bas."
+    },
+    {
+      "q": "Quelle est la fonction des globules blancs dans le sang ?",
+      "o": [
+        "Transporter l'oxygène vers les tissus",
+        "Participer à la coagulation du sang",
+        "Transporter les nutriments digérés",
+        "Défendre l'organisme contre les infections"
+      ],
+      "r": 3,
+      "x": "Les globules blancs, ou leucocytes, constituent la principale défense immunitaire de l'organisme contre les agents infectieux. Ils sont produits dans la moelle osseuse et circulent dans tout le sang."
+    },
+    {
+      "q": "Quel élément sanguin est essentiel à la coagulation en cas de blessure ?",
+      "o": [
+        "Les globules rouges",
+        "Le plasma",
+        "Les plaquettes",
+        "Les globules blancs"
+      ],
+      "r": 2,
+      "x": "Les plaquettes s'agrègent au niveau d'une plaie et déclenchent la cascade de coagulation pour stopper le saignement. Elles forment ainsi un caillot qui referme temporairement la blessure."
+    },
+    {
+      "q": "Comment appelle-t-on la partie liquide du sang, dépourvue de cellules ?",
+      "o": [
+        "Le sérum",
+        "L'hémoglobine",
+        "Le lymphe",
+        "Le plasma"
+      ],
+      "r": 3,
+      "x": "Le plasma est la fraction liquide du sang, composée majoritairement d'eau, dans laquelle circulent les cellules sanguines. Il transporte aussi les nutriments, les déchets et de nombreuses protéines."
+    },
+    {
+      "q": "Quelle cavité cardiaque reçoit le sang oxygéné venant des poumons ?",
+      "o": [
+        "L'oreillette droite",
+        "L'oreillette gauche",
+        "Le ventricule droit",
+        "Le ventricule gauche"
+      ],
+      "r": 1,
+      "x": "Le sang oxygéné revient des poumons par les veines pulmonaires et pénètre dans l'oreillette gauche. Il passe ensuite dans le ventricule gauche avant d'être propulsé vers tout l'organisme."
+    },
+    {
+      "q": "Quel est le rôle des valves cardiaques ?",
+      "o": [
+        "Produire les battements du cœur",
+        "Filtrer les impuretés du sang",
+        "Empêcher le reflux du sang dans le mauvais sens",
+        "Fabriquer les globules rouges"
+      ],
+      "r": 2,
+      "x": "Les valves cardiaques s'ouvrent et se ferment pour assurer une circulation du sang à sens unique dans le cœur. Leur dysfonctionnement peut provoquer des souffles cardiaques ou des reflux sanguins."
+    },
+    {
+      "q": "Où sont fabriqués les globules rouges chez l'adulte ?",
+      "o": [
+        "Dans le foie",
+        "Dans la rate",
+        "Dans les poumons",
+        "Dans la moelle osseuse"
+      ],
+      "r": 3,
+      "x": "Chez l'adulte, la moelle osseuse rouge des os plats est le principal site de production des globules rouges. Ce processus, appelé érythropoïèse, est stimulé notamment par une hormone rénale."
+    },
+    {
+      "q": "Quelle maladie génétique du sang, fréquente en Afrique de l'Ouest, déforme les globules rouges en faucille ?",
+      "o": [
+        "L'hémophilie",
+        "Le diabète",
+        "L'anémie ferriprive",
+        "La drépanocytose"
+      ],
+      "r": 3,
+      "x": "La drépanocytose est une maladie héréditaire qui déforme les globules rouges, gênant leur passage dans les petits vaisseaux. Cette maladie génétique est particulièrement fréquente en Afrique de l'Ouest."
+    },
+    {
+      "q": "Quel est le rôle principal des capillaires sanguins ?",
+      "o": [
+        "Pomper le sang dans tout l'organisme",
+        "Stocker les réserves de sang",
+        "Permettre les échanges entre le sang et les tissus",
+        "Produire les cellules sanguines"
+      ],
+      "r": 2,
+      "x": "Les capillaires, très fins, permettent les échanges de gaz, de nutriments et de déchets entre le sang et les cellules. Leur paroi est suffisamment mince pour laisser passer ces substances."
+    },
+    {
+      "q": "Quel muscle assure les contractions permettant la circulation du sang dans l'organisme ?",
+      "o": [
+        "Le diaphragme",
+        "Le myocarde",
+        "Le biceps",
+        "L'intestin"
+      ],
+      "r": 1,
+      "x": "Le myocarde est le muscle cardiaque dont les contractions rythmiques propulsent le sang dans tout l'organisme. Il fonctionne de manière autonome grâce à des cellules spécialisées qui génèrent son rythme."
+    },
+    {
+      "q": "Quel paramètre mesure-t-on lors de la prise de la tension artérielle ?",
+      "o": [
+        "La quantité de globules rouges dans le sang",
+        "La pression exercée par le sang les artères",
+        "La vitesse de coagulation du sang",
+        "Le taux de glucose dans le sang"
+      ],
+      "r": 1,
+      "x": "La tension artérielle mesure la pression qu'exerce le sang sur les parois des artères lors de la circulation. Une tension trop élevée de façon prolongée fatigue le cœur et les vaisseaux."
+    },
+    {
+      "q": "Quel est le rôle du système lymphatique en lien avec la circulation sanguine ?",
+      "o": [
+        "Pomper le sang vers les poumons",
+        "Produire l'hémoglobine",
+        "Filtrer l'urine",
+        "Drainer les liquides tissulaires et participer à l'immunité"
+      ],
+      "r": 3,
+      "x": "Le système lymphatique collecte l'excès de liquide des tissus et contribue à la défense immunitaire de l'organisme. Il draine ce liquide, appelé lymphe, à travers un réseau de vaisseaux et de ganglions."
+    },
+    {
+      "q": "Quelle est la principale cause de l'hypertension artérielle chronique ?",
+      "o": [
+        "Un excès de globules blancs",
+        "Une carence en fer",
+        "Un excès de globules rouges uniquement",
+        "Un rétrécissement ou une rigidité des vaisseaux sanguins"
+      ],
+      "r": 3,
+      "x": "L'hypertension résulte souvent d'un durcissement ou d'un rétrécissement des artères, augmentant la résistance à l'écoulement du sang. Non traitée, elle augmente le risque d'accident vasculaire cérébral et de maladies cardiaques."
+    },
+    {
+      "q": "Quelle cellule est l'unité fonctionnelle de base du système nerveux ?",
+      "o": [
+        "Le neurone",
+        "Le globule rouge",
+        "La cellule musculaire",
+        "L'ostéocyte"
+      ],
+      "r": 0,
+      "x": "Le neurone est la cellule spécialisée qui reçoit, traite et transmet les messages nerveux dans l'organisme. Il communique avec d'autres neurones grâce à des prolongements appelés axone et dendrites."
+    },
+    {
+      "q": "Quel est le rôle du cerveau dans le système nerveux ?",
+      "o": [
+        "Produire les hormones digestives",
+        "Filtrer le sang",
+        "Centraliser et traiter les informations nerveuses",
+        "Fabriquer les globules blancs"
+      ],
+      "r": 2,
+      "x": "Le cerveau, centre nerveux principal, reçoit les informations sensorielles, les traite et élabore les réponses appropriées. Il est protégé par le crâne et les méninges, membranes qui l'enveloppent."
+    },
+    {
+      "q": "Comment appelle-t-on le point de connexion entre deux neurones ?",
+      "o": [
+        "L'axone",
+        "La dendrite",
+        "Le corps cellulaire",
+        "La synapse"
+      ],
+      "r": 3,
+      "x": "La synapse est la zone de contact où l'influx nerveux passe d'un neurone à un autre, souvent via des neurotransmetteurs. Ces molécules chimiques traversent l'espace synaptique pour transmettre le message."
+    },
+    {
+      "q": "Quel réflexe permet de retirer rapidement la main d'une source de chaleur, sans réflexion consciente ?",
+      "o": [
+        "Le réflexe médullaire",
+        "Le réflexe conditionné",
+        "Le réflexe cérébral",
+        "Le réflexe volontaire"
+      ],
+      "r": 0,
+      "x": "Le réflexe médullaire est une réponse rapide et involontaire, contrôlée directement par la moelle épinière sans passer par le cerveau. Cette rapidité protège l'organisme d'un danger immédiat, comme une brûlure."
+    },
+    {
+      "q": "Quelle partie du neurone conduit l'influx nerveux vers d'autres cellules ?",
+      "o": [
+        "Le noyau",
+        "Les dendrites",
+        "L'axone",
+        "Le corps cellulaire"
+      ],
+      "r": 2,
+      "x": "L'axone est le prolongement du neurone qui conduit l'influx nerveux du corps cellulaire vers les autres neurones ou organes. Il peut être entouré d'une gaine de myéline qui accélère la transmission."
+    },
+    {
+      "q": "Quel organe protège le cerveau des chocs et des infections ?",
+      "o": [
+        "La peau",
+        "Le cervelet",
+        "La moelle épinière",
+        "Le crâne et les méninges"
+      ],
+      "r": 3,
+      "x": "Le crâne, os rigide, et les méninges, membranes protectrices, entourent et protègent le cerveau des agressions extérieures. Le liquide céphalo-rachidien, situé entre les méninges, amortit également les chocs."
+    },
+    {
+      "q": "Quel système nerveux régule les fonctions involontaires comme le rythme cardiaque et la digestion ?",
+      "o": [
+        "Le système nerveux autonome",
+        "Le système nerveux somatique",
+        "Le système nerveux périphérique volontaire",
+        "Le système musculaire"
+      ],
+      "r": 0,
+      "x": "Le système nerveux autonome contrôle automatiquement les fonctions vitales, sans intervention de la volonté consciente. Il régule par exemple le rythme cardiaque, la digestion et la respiration au repos."
+    },
+    {
+      "q": "Quel neurotransmetteur est libéré au niveau de la jonction neuromusculaire pour déclencher la contraction musculaire ?",
+      "o": [
+        "L'acétylcholine",
+        "La mélatonine",
+        "L'insuline",
+        "L'adrénaline uniquement"
+      ],
+      "r": 0,
+      "x": "L'acétylcholine, libérée par le neurone moteur, se fixe sur le muscle et déclenche sa contraction. Ce neurotransmetteur est ensuite rapidement dégradé pour permettre un nouveau signal."
+    },
+    {
+      "q": "Quelle structure relie le cerveau au reste du corps et transmet les messages nerveux ?",
+      "o": [
+        "Le cervelet",
+        "La moelle épinière",
+        "L'hypothalamus",
+        "Le bulbe olfactif"
+      ],
+      "r": 1,
+      "x": "La moelle épinière, protégée par la colonne vertébrale, conduit les messages nerveux entre le cerveau et le corps. Elle assure aussi certains réflexes sans intervention directe du cerveau."
+    },
+    {
+      "q": "Quelle partie du cerveau est principalement responsable de la coordination des mouvements et de l'équilibre ?",
+      "o": [
+        "Le cortex cérébral",
+        "Le cervelet",
+        "L'hypothalamus",
+        "Le bulbe rachidien"
+      ],
+      "r": 1,
+      "x": "Le cervelet coordonne les mouvements volontaires et assure le maintien de l'équilibre du corps. Une lésion de cette structure entraîne souvent des troubles de la coordination motrice."
+    },
+    {
+      "q": "Comment appelle-t-on la vitesse à laquelle l'influx nerveux se propage le long d'un axone myélinisé ?",
+      "o": [
+        "Elle est plus lente que sur un axone non myélinisé",
+        "Elle est plus rapide grâce à la gaine de myéline",
+        "Elle est nulle sur un axone myélinisé",
+        "Elle ne dépend pas de la myéline"
+      ],
+      "r": 1,
+      "x": "La gaine de myéline isole l'axone et accélère la conduction de l'influx nerveux par saut d'un nœud à l'autre. Sa dégradation, comme dans la sclérose en plaques, ralentit fortement cette transmission."
+    },
+    {
+      "q": "Quel organe des sens transforme la lumière en signaux nerveux interprétés par le cerveau ?",
+      "o": [
+        "L'oreille",
+        "La peau",
+        "La langue",
+        "L'œil"
+      ],
+      "r": 3,
+      "x": "L'œil, grâce à la rétine, convertit les rayons lumineux en signaux nerveux transmis au cerveau par le nerf optique. C'est le cerveau qui interprète ensuite ces signaux pour former une image."
+    },
+    {
+      "q": "Quel est le rôle des dendrites d'un neurone ?",
+      "o": [
+        "Recevoir les signaux nerveux venant d'autres neurones",
+        "Conduire l'influx nerveux vers d'autres cellules",
+        "Produire l'énergie du neurone",
+        "Stocker l'information génétique du neurone"
+      ],
+      "r": 0,
+      "x": "Les dendrites sont de courts prolongements ramifiés qui reçoivent les messages nerveux issus d'autres neurones. Elles transmettent ensuite ce signal vers le corps cellulaire du neurone."
+    },
+    {
+      "q": "Quelle glande du cerveau régule de nombreuses fonctions hormonales de l'organisme ?",
+      "o": [
+        "L'hypophyse",
+        "La rate",
+        "Le pancréas",
+        "La thyroïde uniquement"
+      ],
+      "r": 0,
+      "x": "L'hypophyse, reliée à l'hypothalamus, sécrète des hormones qui contrôlent l'activité de nombreuses autres glandes du corps. On la surnomme parfois la glande maîtresse du système hormonal."
+    },
+    {
+      "q": "Quelle est la conséquence d'une lésion grave de la moelle épinière au niveau du cou ?",
+      "o": [
+        "Une amélioration de la vue",
+        "Une perte totale de l'odorat uniquement",
+        "Aucune conséquence motrice",
+        "Une paralysie"
+      ],
+      "r": 3,
+      "x": "Une lésion de la moelle épinière interrompt la transmission des messages nerveux, provoquant une paralysie sous le niveau atteint. Plus la lésion est haute sur la colonne vertébrale, plus la paralysie est étendue."
     }
   ],
   "svt_licence": [
