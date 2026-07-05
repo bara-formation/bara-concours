@@ -1,7 +1,8 @@
 // Bara Concours - Service Worker
-// Version 6.3.44 - V63.44 : Robustesse offline (install non-atomique, cache Firebase SDK, fallback élargi)
+// Version 6.3.45 - V63.45 : Robustesse offline (install non-atomique, cache Firebase SDK, fallback élargi) + fix truncature Session N°2 Juillet 2025 + fix doublon Q46
+// (regroupe V63.44 non déployée + fix Q46)
 
-const CACHE_NAME = 'bara-concours-v6-3-44';
+const CACHE_NAME = 'bara-concours-v6-3-45';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)
