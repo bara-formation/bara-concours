@@ -2510,375 +2510,376 @@
       ]
     },
     {
-      id: 'session_2026_06_02_1780400917486',
-      date: '2025-07-20',
-      titre: 'Session N°2 de Juillet  2025',
+      id: "session_2026_06_02_1780400917486",
+      date: "2025-07-20",
+      titre: "Session N°2 de Juillet  2025",
       numero: 8,
-      description: 'Accompagnement Final 2025 :  réponses + explications bien détaillées',
+      description: "Accompagnement Final 2025 :  réponses + explications bien détaillées",
       questions: [
         {
-          type: 'qcm4',
-          q: 'Comment s\'appelle la partie la plus centrale et la plus profonde de la Terre ?',
-          choices: ['La graine', 'Le noyau externe', 'Le manteau', 'La croûte'],
+          type: "qcm4",
+          q: "Comment s'appelle la partie la plus centrale et la plus profonde de la Terre ?",
+          choices: ["La graine", "Le noyau externe", "Le manteau", "La croûte"],
           r: 0,
-          nb: 'Le noyau interne de la Terre, situé au centre exact de la planète, est appelé « la graine » en géologie française. Composé essentiellement de fer et de nickel à l\'état solide, il atteint des températures supérieures à 5 000°C. Il est entouré par le noyau externe (liquide), lui-même recouvert par le manteau puis la croûte.'
+          nb: "Le noyau interne de la Terre, situé au centre exact de la planète, est appelé « la graine » en géologie française. Composé essentiellement de fer et de nickel à l'état solide, il atteint des températures supérieures à 5 000°C. Il est entouré par le noyau externe (liquide), lui-même recouvert par le manteau puis la croûte."
         },
         {
-          type: 'qcm4',
-          q: 'Qui a été nommé Secrétaire général du ministère de la Fonction publique et de la Protection sociale du Burkina Faso le 29 janvier 2025 ?',
-          choices: ['Rodrigue S. Oboulbiga', 'Rodrigue S. Ky', 'Rodrigue S. Sana', 'Rodrigue S. Lompo'],
+          type: "qcm4",
+          q: "Qui a été nommé Secrétaire général du ministère de la Fonction publique et de la Protection sociale du Burkina Faso le 29 janvier 2025 ?",
+          choices: ["Rodrigue S. Oboulbiga", "Rodrigue S. Ky", "Rodrigue S. Sana", "Rodrigue S. Lompo"],
           r: 0,
-          nb: 'Suanyaba Rodrigue Oboulbiga a été nommé Secrétaire général du ministère de la Fonction publique et de la Protection sociale du Burkina Faso le 29 janvier 2025 et officiellement installé à son poste le 3 février 2025.'
+          nb: "Suanyaba Rodrigue Oboulbiga a été nommé Secrétaire général du ministère de la Fonction publique et de la Protection sociale du Burkina Faso le 29 janvier 2025 et officiellement installé à son poste le 3 février 2025."
         },
         {
-          type: 'qcm4',
-          q: 'Que désigne le terme zoologique « lemming » ?',
-          choices: ['Un petit rongeur des régions arctiques', 'Un oiseau migrateur des zones tempérées', 'Un reptile aquatique d\'eau douce', 'Un arbre tropical à feuilles persistantes'],
+          type: "qcm4",
+          q: "Que désigne le terme zoologique « lemming » ?",
+          choices: ["Un petit rongeur des régions arctiques", "Un oiseau migrateur des zones tempérées", "Un reptile aquatique d'eau douce", "Un arbre tropical à feuilles persistantes"],
           r: 0,
-          nb: 'Le lemming est un petit mammifère rongeur (famille des Cricétidés) vivant principalement dans les régions arctiques et subarctiques. Il est célèbre pour ses migrations massives périodiques. Contrairement à la légende populaire, les lemmings ne se jettent pas volontairement dans la mer.'
+          nb: "Le lemming est un petit mammifère rongeur (famille des Cricétidés) vivant principalement dans les régions arctiques et subarctiques. Il est célèbre pour ses migrations massives périodiques. Contrairement à la légende populaire, les lemmings ne se jettent pas volontairement dans la mer."
         },
         {
-          type: 'qcm4',
-          q: 'Qui a été nommé directeur des systèmes d\'information du ministère de la Fonction publique du Burkina Faso en janvier 2025 ?',
-          choices: ['Ouedraogo Ousseni', 'Raogo Fidèle Désiré', 'Ousseni Gombané', 'Ima Moussa'],
+          type: "qcm4",
+          q: "Qui a été nommé directeur des systèmes d'information du ministère de la Fonction publique du Burkina Faso en janvier 2025 ?",
+          choices: ["Ouedraogo Ousseni", "Raogo Fidèle Désiré", "Ousseni Gombané", "Ima Moussa"],
           r: 1,
-          nb: 'Raogo Fidèle Désiré a été nommé directeur des systèmes d\'information du ministère de la Fonction publique en Conseil des ministres du 9 janvier 2025, et installé dans ses fonctions le 30 janvier 2025.'
+          nb: "Raogo Fidèle Désiré a été nommé directeur des systèmes d'information du ministère de la Fonction publique en Conseil des ministres du 9 janvier 2025, et installé dans ses fonctions le 30 janvier 2025."
         },
         {
-          type: 'qcm4',
-          q: 'Combien d\'années Samory Touré a-t-il résisté à la colonisation française en Afrique de l\'Ouest ?',
-          choices: ['17 ans', '18 ans', '19 ans', '20 ans'],
+          type: "qcm4",
+          q: "Combien d'années Samory Touré a-t-il résisté à la colonisation française en Afrique de l'Ouest ?",
+          choices: ["17 ans", "18 ans", "19 ans", "20 ans"],
           r: 2,
-          nb: 'Samory Touré a mené une résistance armée contre la colonisation française de 1879 à 1898, soit environ 19 ans. Chef de l\'Empire Wassoulou, il employa la stratégie de la terre brûlée et des retraites tactiques. Il fut finalement capturé le 29 septembre 1898 par le capitaine Gouraud et mourut en captivité en 1900.'
+          nb: "Samory Touré a mené une résistance armée contre la colonisation française de 1879 à 1898, soit environ 19 ans. Chef de l'Empire Wassoulou, il employa la stratégie de la terre brûlée et des retraites tactiques. Il fut finalement capturé le 29 septembre 1898 par le capitaine Gouraud et mourut en captivité en 1900."
         },
         {
-          type: 'qcm4',
-          q: 'Quel est le slogan officiel de l\'Agence d\'Information du Burkina (AIB) ?',
-          choices: ['Toute l\'info en temps réel', 'La radio au cœur des événements', 'La radio en temps réel', 'La première radio en temps réel'],
+          type: "qcm4",
+          q: "Quel est le slogan officiel de l'Agence d'Information du Burkina (AIB) ?",
+          choices: ["Toute l'info en temps réel", "La radio au cœur des événements", "La radio en temps réel", "La première radio en temps réel"],
           r: 0,
-          nb: 'Le slogan de l\'Agence d\'Information du Burkina (AIB) est « Toute l\'info en temps réel », reflétant sa mission d\'agence de presse officielle de l\'État burkinabè chargée de collecter, traiter et diffuser l\'information nationale de façon rapide et fiable.'
+          nb: "Le slogan de l'Agence d'Information du Burkina (AIB) est « Toute l'info en temps réel », reflétant sa mission d'agence de presse officielle de l'État burkinabè chargée de collecter, traiter et diffuser l'information nationale de façon rapide et fiable."
         },
         {
-          type: 'qcm4',
-          q: 'En quelle date l\'Agence d\'Information du Burkina (AIB) a-t-elle été créée ?',
-          choices: ['25 mai 1964', '26 mai 1964', '27 mai 1964', '28 mai 1964'],
+          type: "qcm4",
+          q: "En quelle date l'Agence d'Information du Burkina (AIB) a-t-elle été créée ?",
+          choices: ["25 mai 1964", "26 mai 1964", "27 mai 1964", "28 mai 1964"],
           r: 2,
-          nb: 'L\'Agence d\'Information du Burkina (AIB) a été fondée le 27 mai 1964, quelques années après l\'indépendance de la Haute-Volta (1960). Organe officiel d\'information de l\'État burkinabè, elle joue un rôle central dans la diffusion des informations gouvernementales et nationales.'
+          nb: "L'Agence d'Information du Burkina (AIB) a été fondée le 27 mai 1964, quelques années après l'indépendance de la Haute-Volta (1960). Organe officiel d'information de l'État burkinabè, elle joue un rôle central dans la diffusion des informations gouvernementales et nationales."
         },
         {
-          type: 'qcm4',
-          q: 'Quelle était l\'ancienne appellation internationale du pays qui se nomme aujourd\'hui Iran ?',
-          choices: ['Abyssinie', 'Perse', 'Siam', 'Formose'],
+          type: "qcm4",
+          q: "Quelle était l'ancienne appellation internationale du pays qui se nomme aujourd'hui Iran ?",
+          choices: ["Abyssinie", "Perse", "Siam", "Formose"],
           r: 1,
-          nb: 'L\'Iran était internationalement connu sous le nom de Perse jusqu\'en 1935, date à laquelle le shah Reza Pahlavi demanda officiellement aux autres pays d\'utiliser le nom Iran (qui signifie « pays des Aryens » en persan). Abyssinie est l\'ancien nom de l\'Éthiopie, Siam de la Thaïlande et Formose de Taïwan.'
+          nb: "L'Iran était internationalement connu sous le nom de Perse jusqu'en 1935, date à laquelle le shah Reza Pahlavi demanda officiellement aux autres pays d'utiliser le nom Iran (qui signifie « pays des Aryens » en persan). Abyssinie est l'ancien nom de l'Éthiopie, Siam de la Thaïlande et Formose de Taïwan."
         },
         {
-          type: 'qcm4',
-          q: 'Parmi les pays africains suivants, lequel est surnommé « le toit du monde » ?',
-          choices: ['Tanzanie', 'Kenya', 'Afrique du Sud', 'Aucun de ces pays'],
+          type: "qcm4",
+          q: "Parmi les pays africains suivants, lequel est surnommé « le toit du monde » ?",
+          choices: ["Tanzanie", "Kenya", "Afrique du Sud", "Aucun de ces pays"],
           r: 3,
-          nb: 'Aucun de ces pays africains n\'est surnommé « le toit du monde ». Ce surnom désigne le Tibet (Asie centrale), une région de Chine dont le plateau présente une altitude moyenne d\'environ 4 500 mètres au-dessus du niveau de la mer. La question teste la capacité à ne pas confondre géographies africaine et asiatique.'
+          nb: "Aucun de ces pays africains n'est surnommé « le toit du monde ». Ce surnom désigne le Tibet (Asie centrale), une région de Chine dont le plateau présente une altitude moyenne d'environ 4 500 mètres au-dessus du niveau de la mer. La question teste la capacité à ne pas confondre géographies africaine et asiatique."
         },
         {
-          type: 'qcm4',
-          q: 'Combien de membres complets comptent les BRICS après l\'adhésion de l\'Indonésie en janvier 2025 ?',
-          choices: ['5 membres', '10 membres', '11 membres', '15 membres'],
+          type: "qcm4",
+          q: "Combien de membres complets comptent les BRICS après l'adhésion de l'Indonésie en janvier 2025 ?",
+          choices: ["5 membres", "10 membres", "11 membres", "15 membres"],
           r: 1,
-          nb: 'Après l\'adhésion de l\'Indonésie en janvier 2025, les BRICS comptent 10 membres : Brésil, Russie, Inde, Chine, Afrique du Sud (fondateurs), plus Égypte, Éthiopie, Émirats arabes unis et Iran (adhérents de janvier 2024), et Indonésie (janvier 2025). L\'Arabie saoudite a été invitée mais n\'a pas encore officiellement rejoint le groupe.'
+          nb: "Après l'adhésion de l'Indonésie en janvier 2025, les BRICS comptent 10 membres : Brésil, Russie, Inde, Chine, Afrique du Sud (fondateurs), plus Égypte, Éthiopie, Émirats arabes unis et Iran (adhérents de janvier 2024), et Indonésie (janvier 2025). L'Arabie saoudite a été invitée mais n'a pas encore officiellement rejoint le groupe."
         },
         {
-          type: 'qcm4',
-          q: 'Parmi les pays suivants, lequel est devenu officiellement membre des BRICS en janvier 2025 ?',
-          choices: ['Nigeria', 'Indonésie', 'Malaisie', 'Argentine'],
+          type: "qcm4",
+          q: "Parmi les pays suivants, lequel est devenu officiellement membre des BRICS en janvier 2025 ?",
+          choices: ["Nigeria", "Indonésie", "Malaisie", "Argentine"],
           r: 1,
-          nb: 'L\'Indonésie a officiellement intégré les BRICS en janvier 2025, lors du Sommet de Kazan (Russie, octobre 2024) où son adhésion avait été actée. L\'Argentine avait été invitée mais a refusé sous le gouvernement Milei. Le Nigeria et la Malaisie n\'ont pas encore rejoint le groupe.'
+          nb: "L'Indonésie a officiellement intégré les BRICS en janvier 2025, lors du Sommet de Kazan (Russie, octobre 2024) où son adhésion avait été actée. L'Argentine avait été invitée mais a refusé sous le gouvernement Milei. Le Nigeria et la Malaisie n'ont pas encore rejoint le groupe."
         },
         {
-          type: 'qcm4',
-          q: 'Quelle part approximative du PIB mondial représentent les BRICS après leur expansion en 2025 ?',
-          choices: ['33 %', '40 %', '46 %', '55 %'],
+          type: "qcm4",
+          q: "Quelle part approximative du PIB mondial représentent les BRICS après leur expansion en 2025 ?",
+          choices: ["33 %", "40 %", "46 %", "55 %"],
           r: 1,
-          nb: 'Après leur expansion, les BRICS représentent environ 40 % du PIB mondial en parité de pouvoir d\'achat, soit un poids économique supérieur à celui du G7. Cette expansion confère aux BRICS un rôle croissant dans la gouvernance économique mondiale et leur permet de porter des alternatives aux institutions de Bretton Woods.'
+          nb: "Après leur expansion, les BRICS représentent environ 40 % du PIB mondial en parité de pouvoir d'achat, soit un poids économique supérieur à celui du G7. Cette expansion confère aux BRICS un rôle croissant dans la gouvernance économique mondiale et leur permet de porter des alternatives aux institutions de Bretton Woods."
         },
         {
-          type: 'qcm4',
-          q: 'Qui a co-fondé le moteur de recherche Google, officiellement créé le 4 septembre 1998 ?',
-          choices: ['Bill Gates et Paul Allen', 'Larry Page et Sergey Brin', 'Mark Zuckerberg et Eduardo Saverin', 'Steve Jobs et Steve Wozniak'],
+          type: "qcm4",
+          q: "Qui a co-fondé le moteur de recherche Google, officiellement créé le 4 septembre 1998 ?",
+          choices: ["Bill Gates et Paul Allen", "Larry Page et Sergey Brin", "Mark Zuckerberg et Eduardo Saverin", "Steve Jobs et Steve Wozniak"],
           r: 1,
-          nb: 'Google a été co-fondé par Larry Page et Sergey Brin, deux étudiants en doctorat de l\'Université Stanford, le 4 septembre 1998. Le projet a débuté comme un moteur de recherche académique appelé « BackRub » avant de devenir Google. Aujourd\'hui, Google est une filiale d\'Alphabet Inc.'
+          nb: "Google a été co-fondé par Larry Page et Sergey Brin, deux étudiants en doctorat de l'Université Stanford, le 4 septembre 1998. Le projet a débuté comme un moteur de recherche académique appelé « BackRub » avant de devenir Google. Aujourd'hui, Google est une filiale d'Alphabet Inc."
         },
         {
-          type: 'qcm4',
-          q: 'Quelle est la date de création du G5 Sahel, organisation régionale de sécurité et de développement ?',
-          choices: ['16 février 2014', '5 août 2010', '12 décembre 2017', '30 avril 2015'],
+          type: "qcm4",
+          q: "Quelle est la date de création du G5 Sahel, organisation régionale de sécurité et de développement ?",
+          choices: ["16 février 2014", "5 août 2010", "12 décembre 2017", "30 avril 2015"],
           r: 0,
-          nb: 'Le G5 Sahel a été créé le 16 février 2014 à Nouakchott (Mauritanie), par cinq pays sahéliens : Burkina Faso, Mali, Mauritanie, Niger et Tchad. Cette organisation vise à coordonner les politiques de sécurité (notamment la Force conjointe G5 Sahel) et de développement dans une zone confrontée au terrorisme et à la crise humanitaire.'
+          nb: "Le G5 Sahel a été créé le 16 février 2014 à Nouakchott (Mauritanie), par cinq pays sahéliens : Burkina Faso, Mali, Mauritanie, Niger et Tchad. Cette organisation vise à coordonner les politiques de sécurité (notamment la Force conjointe G5 Sahel) et de développement dans une zone confrontée au terrorisme et à la crise humanitaire."
         },
         {
-          type: 'qcm4',
-          q: 'Quel président des États-Unis a démissionné en 1974 à la suite du scandale du Watergate ?',
-          choices: ['Gerald Ford', 'Richard Nixon', 'Jimmy Carter', 'Lyndon Johnson'],
+          type: "qcm4",
+          q: "Quel président des États-Unis a démissionné en 1974 à la suite du scandale du Watergate ?",
+          choices: ["Gerald Ford", "Richard Nixon", "Jimmy Carter", "Lyndon Johnson"],
           r: 1,
-          nb: 'Richard Nixon est le seul président américain à avoir démissionné de ses fonctions, le 9 août 1974. Le scandale du Watergate avait révélé que son gouvernement avait espionné le siège du Parti démocrate en 1972 et tenté d\'étouffer l\'affaire. Son vice-président Gerald Ford lui a succédé.'
+          nb: "Richard Nixon est le seul président américain à avoir démissionné de ses fonctions, le 9 août 1974. Le scandale du Watergate avait révélé que son gouvernement avait espionné le siège du Parti démocrate en 1972 et tenté d'étouffer l'affaire. Son vice-président Gerald Ford lui a succédé."
         },
         {
-          type: 'qcm4',
-          q: 'À qui est attribuée la citation philosophique : « Je ne perds pas, j\'apprends » ?',
-          choices: ['Nelson Mandela', 'Albert Einstein', 'Winston Churchill', 'Martin Luther King'],
+          type: "qcm4",
+          q: "À qui est attribuée la citation philosophique : « Je ne perds pas, j'apprends » ?",
+          choices: ["Nelson Mandela", "Albert Einstein", "Winston Churchill", "Martin Luther King"],
           r: 0,
-          nb: 'Cette citation illustrant la résilience face à l\'échec est attribuée à Nelson Mandela (1918-2013), ancien président de l\'Afrique du Sud. Elle reflète sa philosophie forgée par 27 années d\'emprisonnement à Robben Island : chaque épreuve est une opportunité d\'apprentissage, non une défaite.'
+          nb: "Cette citation illustrant la résilience face à l'échec est attribuée à Nelson Mandela (1918-2013), ancien président de l'Afrique du Sud. Elle reflète sa philosophie forgée par 27 années d'emprisonnement à Robben Island : chaque épreuve est une opportunité d'apprentissage, non une défaite."
         },
         {
-          type: 'qcm4',
-          q: 'Que signifie le sigle SIAO ?',
-          choices: ['Salon International d\'Artisanat de l\'Ouest africain', 'Salon International de l\'Artisanat de Ouagadougou', 'Société Internationale des Arts de l\'Afrique de l\'Ouest', 'Syndicat International des Artisans de Ouagadougou'],
+          type: "qcm4",
+          q: "Que signifie le sigle SIAO ?",
+          choices: ["Salon International d'Artisanat de l'Ouest africain", "Salon International de l'Artisanat de Ouagadougou", "Société Internationale des Arts de l'Afrique de l'Ouest", "Syndicat International des Artisans de Ouagadougou"],
           r: 1,
-          nb: 'Le SIAO (Salon International de l\'Artisanat de Ouagadougou) est un événement biennal majeur de promotion de l\'artisanat africain, organisé à Ouagadougou (Burkina Faso). Il constitue l\'une des plus grandes foires artisanales du continent africain et un espace de commerce et d\'échanges culturels.'
+          nb: "Le SIAO (Salon International de l'Artisanat de Ouagadougou) est un événement biennal majeur de promotion de l'artisanat africain, organisé à Ouagadougou (Burkina Faso). Il constitue l'une des plus grandes foires artisanales du continent africain et un espace de commerce et d'échanges culturels."
         },
         {
-          type: 'qcm4',
-          q: 'Dans quel pays s\'est tenue la Coupe d\'Afrique des Nations des moins de 17 ans (CAN U17) en 2025 ?',
-          choices: ['Sénégal', 'Ghana', 'Côte d\'Ivoire', 'Maroc'],
+          type: "qcm4",
+          q: "Dans quel pays s'est tenue la Coupe d'Afrique des Nations des moins de 17 ans (CAN U17) en 2025 ?",
+          choices: ["Sénégal", "Ghana", "Côte d'Ivoire", "Maroc"],
           r: 3,
-          nb: 'La CAN U-17 2025 (Coupe d\'Afrique des Nations des moins de 17 ans) s\'est déroulée au Maroc du 30 mars au 19 avril 2025. Le Maroc a accueilli ce tournoi continental de football qui réunit les meilleures sélections africaines de la tranche d\'âge des moins de 17 ans.'
+          nb: "La CAN U-17 2025 (Coupe d'Afrique des Nations des moins de 17 ans) s'est déroulée au Maroc du 30 mars au 19 avril 2025. Le Maroc a accueilli ce tournoi continental de football qui réunit les meilleures sélections africaines de la tranche d'âge des moins de 17 ans."
         },
         {
-          type: 'qcm4',
-          q: 'Combien de membres comptait le gouvernement burkinabè formé en décembre 2024 et en fonction en janvier 2025 ?',
-          choices: ['20 ministres', '22 ministres', '24 ministres', '28 ministres'],
+          type: "qcm4",
+          q: "Combien de membres comptait le gouvernement burkinabè formé en décembre 2024 et en fonction en janvier 2025 ?",
+          choices: ["20 ministres", "22 ministres", "24 ministres", "28 ministres"],
           r: 2,
-          nb: 'Après la nomination du Premier ministre Rimtalba Jean Emmanuel Ouédraogo en décembre 2024, le gouvernement mis en place comptait 24 membres dont 20 hommes et 4 femmes.'
+          nb: "Après la nomination du Premier ministre Rimtalba Jean Emmanuel Ouédraogo en décembre 2024, le gouvernement mis en place comptait 24 membres dont 20 hommes et 4 femmes."
         },
         {
-          type: 'qcm4',
-          q: 'Quelle est la capitale fédérale de la Suisse, siège du gouvernement fédéral ?',
-          choices: ['Genève', 'Zurich', 'Lausanne', 'Berne'],
+          type: "qcm4",
+          q: "Quelle est la capitale fédérale de la Suisse, siège du gouvernement fédéral ?",
+          choices: ["Genève", "Zurich", "Lausanne", "Berne"],
           r: 3,
-          nb: 'Berne est la capitale fédérale de la Suisse (Bundeshauptstadt en allemand). Contrairement à Genève (siège d\'organisations internationales) et Zurich (principal centre économique et financier), Berne abrite le Parlement fédéral, le Conseil fédéral et les principales institutions gouvernementales suisses.'
+          nb: "Berne est la capitale fédérale de la Suisse (Bundeshauptstadt en allemand). Contrairement à Genève (siège d'organisations internationales) et Zurich (principal centre économique et financier), Berne abrite le Parlement fédéral, le Conseil fédéral et les principales institutions gouvernementales suisses."
         },
         {
-          type: 'qcm4',
-          q: 'En 2023, quel pays a dépassé la Chine pour devenir le pays le plus peuplé du monde ?',
-          choices: ['Nigéria', 'États-Unis', 'Indonésie', 'Inde'],
+          type: "qcm4",
+          q: "En 2023, quel pays a dépassé la Chine pour devenir le pays le plus peuplé du monde ?",
+          choices: ["Nigéria", "États-Unis", "Indonésie", "Inde"],
           r: 3,
-          nb: 'En 2023, l\'Inde a officiellement dépassé la Chine pour devenir le pays le plus peuplé du monde, avec plus de 1,4 milliard d\'habitants. Cette transition démographique marque un tournant historique, la Chine ayant longtemps détenu ce titre. Les projections prévoient que l\'Inde maintiendra la première place pour plusieurs décennies.'
+          nb: "En 2023, l'Inde a officiellement dépassé la Chine pour devenir le pays le plus peuplé du monde, avec plus de 1,4 milliard d'habitants. Cette transition démographique marque un tournant historique, la Chine ayant longtemps détenu ce titre. Les projections prévoient que l'Inde maintiendra la première place pour plusieurs décennies."
         },
         {
-          type: 'qcm4',
-          q: 'Où se trouve le siège de la Banque Africaine de Développement (BAD) ?',
-          choices: ['Dakar (Sénégal)', 'Addis-Abeba (Éthiopie)', 'Abidjan (Côte d\'Ivoire)', 'Nairobi (Kenya)'],
+          type: "qcm4",
+          q: "Où se trouve le siège de la Banque Africaine de Développement (BAD) ?",
+          choices: ["Dakar (Sénégal)", "Addis-Abeba (Éthiopie)", "Abidjan (Côte d'Ivoire)", "Nairobi (Kenya)"],
           r: 2,
-          nb: 'La Banque Africaine de Développement (BAD), fondée en 1964, a son siège social à Abidjan en Côte d\'Ivoire. Elle a officiellement commencé ses opérations en 1967. Son mandat est de promouvoir le développement économique et le progrès social de l\'Afrique par le financement de projets d\'investissement.'
+          nb: "La Banque Africaine de Développement (BAD), fondée en 1964, a son siège social à Abidjan en Côte d'Ivoire. Elle a officiellement commencé ses opérations en 1967. Son mandat est de promouvoir le développement économique et le progrès social de l'Afrique par le financement de projets d'investissement."
         },
         {
-          type: 'qcm4',
-          q: 'Qui occupait le poste de Directeur de la Justice militaire du Burkina Faso depuis son installation le 11 avril 2024 ?',
-          choices: ['Lieutenant-colonel Boureima Ouédraogo', 'Capitaine San Polycarpe Traoré', 'Commandant Issouf Kaboré', 'Colonel Idrissa Sawadogo'],
+          type: "qcm4",
+          q: "Qui occupait le poste de Directeur de la Justice militaire du Burkina Faso depuis son installation le 11 avril 2024 ?",
+          choices: ["Lieutenant-colonel Boureima Ouédraogo", "Capitaine San Polycarpe Traoré", "Commandant Issouf Kaboré", "Colonel Idrissa Sawadogo"],
           r: 1,
-          nb: 'Le Capitaine San Polycarpe Traoré a été installé dans ses fonctions de Directeur de la Justice militaire du Burkina Faso le jeudi 11 avril 2024. Il supervise les affaires judiciaires relevant du domaine militaire au sein des Forces armées nationales du Burkina Faso.'
+          nb: "Le Capitaine San Polycarpe Traoré a été installé dans ses fonctions de Directeur de la Justice militaire du Burkina Faso le jeudi 11 avril 2024. Il supervise les affaires judiciaires relevant du domaine militaire au sein des Forces armées nationales du Burkina Faso."
         },
         {
-          type: 'qcm4',
-          q: 'À quelle date les passeports de l\'Alliance des États du Sahel (AES) ont-ils été mis en circulation ?',
-          choices: ['4 août 2024', '11 décembre 2024', '29 janvier 2025', '28 mars 2025'],
+          type: "qcm4",
+          q: "À quelle date les passeports de l'Alliance des États du Sahel (AES) ont-ils été mis en circulation ?",
+          choices: ["4 août 2024", "11 décembre 2024", "29 janvier 2025", "28 mars 2025"],
           r: 2,
-          nb: 'Le passeport de l\'Alliance des États du Sahel (AES), regroupant le Burkina Faso, le Mali et le Niger, a été officiellement mis en circulation le 29 janvier 2025. Ce document vise à renforcer l\'intégration régionale et la libre circulation des ressortissants des trois États membres de l\'AES.'
+          nb: "Le passeport de l'Alliance des États du Sahel (AES), regroupant le Burkina Faso, le Mali et le Niger, a été officiellement mis en circulation le 29 janvier 2025. Ce document vise à renforcer l'intégration régionale et la libre circulation des ressortissants des trois États membres de l'AES."
         },
         {
-          type: 'qcm4',
-          q: 'À quelle date les Volontaires Adjoints de Défense et de Sécurité (VADS) ont-ils été institués au Burkina Faso ?',
-          choices: ['Octobre 2011', 'Octobre 2012', 'Octobre 2013', 'Octobre 2014'],
+          type: "qcm4",
+          q: "À quelle date les Volontaires Adjoints de Défense et de Sécurité (VADS) ont-ils été institués au Burkina Faso ?",
+          choices: ["Octobre 2011", "Octobre 2012", "Octobre 2013", "Octobre 2014"],
           r: 2,
-          nb: 'Les VADS ont été créés en octobre 2013 pour appuyer notamment les actions de sécurité routière et certaines missions de sécurité publique. En 2023, ils ont célébré leur 10ᵉ anniversaire d\'existence.'
+          nb: "Les VADS ont été créés en octobre 2013 pour appuyer notamment les actions de sécurité routière et certaines missions de sécurité publique. En 2023, ils ont célébré leur 10ᵉ anniversaire d'existence."
         },
         {
-          type: 'qcm4',
-          q: 'Quel rang occupait Albert Ouédraogo dans l\'ordre des Premiers ministres du Burkina Faso lors de sa nomination en mars 2022 ?',
-          choices: ['14e Premier ministre', '15e Premier ministre', '16e Premier ministre', '17e Premier ministre'],
+          type: "qcm4",
+          q: "Quel rang occupait Albert Ouédraogo dans l'ordre des Premiers ministres du Burkina Faso lors de sa nomination en mars 2022 ?",
+          choices: ["14e Premier ministre", "15e Premier ministre", "16e Premier ministre", "17e Premier ministre"],
           r: 2,
-          nb: 'Albert Ouédraogo était le 16e Premier ministre du Burkina Faso lors de sa nomination en mars 2022, sous la présidence du lieutenant-colonel Paul-Henri Sandaogo Damiba (MPSR I). Il a succédé à Lassina Zerbo, le 15e Premier ministre, nommé après le coup d\'État de janvier 2022 contre Roch Marc Christian Kaboré.'
+          nb: "Albert Ouédraogo était le 16e Premier ministre du Burkina Faso lors de sa nomination en mars 2022, sous la présidence du lieutenant-colonel Paul-Henri Sandaogo Damiba (MPSR I). Il a succédé à Lassina Zerbo, le 15e Premier ministre, nommé après le coup d'État de janvier 2022 contre Roch Marc Christian Kaboré."
         },
         {
-          type: 'qcm4',
-          q: 'Au Burkina Faso, qui est chargé de nommer le Premier ministre ?',
-          choices: ['L\'Assemblée Législative de la Transition', 'Le Conseil d\'État', 'Le Président du Faso', 'Le Conseil des ministres'],
+          type: "qcm4",
+          q: "Au Burkina Faso, qui est chargé de nommer le Premier ministre ?",
+          choices: ["L'Assemblée Législative de la Transition", "Le Conseil d'État", "Le Président du Faso", "Le Conseil des ministres"],
           r: 2,
-          nb: 'Au Burkina Faso, le Premier ministre est nommé par le Président du Faso (chef de l\'État) qui lui confère son mandat et définit les orientations de son action gouvernementale. Cette investiture traduit la relation de confiance et de subordination constitutionnelle qui lie le Premier ministre au chef de l\'État.'
+          nb: "Au Burkina Faso, le Premier ministre est nommé par le Président du Faso (chef de l'État) qui lui confère son mandat et définit les orientations de son action gouvernementale. Cette investiture traduit la relation de confiance et de subordination constitutionnelle qui lie le Premier ministre au chef de l'État."
         },
         {
-          type: 'qcm4',
-          q: 'À quoi fait référence la loi N°081-2015/CNT du 24 novembre 2015 au Burkina Faso ?',
-          choices: ['Au Code pénal burkinabè', 'Au Code électoral national', 'Au Statut Général de la Fonction Publique d\'État', 'À la loi organique sur les libertés publiques'],
+          type: "qcm4",
+          q: "À quoi fait référence la loi N°081-2015/CNT du 24 novembre 2015 au Burkina Faso ?",
+          choices: ["Au Code pénal burkinabè", "Au Code électoral national", "Au Statut Général de la Fonction Publique d'État", "À la loi organique sur les libertés publiques"],
           r: 2,
-          nb: 'La loi N°081-2015/CNT du 24 novembre 2015 définit le Statut Général de la Fonction Publique d\'État du Burkina Faso. Elle fixe les droits et obligations des agents de l\'État, les règles relatives à leur recrutement, leur avancement, leur rémunération et leur retraite. C\'est le texte de référence pour tout candidat aux concours de la fonction publique.'
+          nb: "La loi N°081-2015/CNT du 24 novembre 2015 définit le Statut Général de la Fonction Publique d'État du Burkina Faso. Elle fixe les droits et obligations des agents de l'État, les règles relatives à leur recrutement, leur avancement, leur rémunération et leur retraite. C'est le texte de référence pour tout candidat aux concours de la fonction publique."
         },
         {
-          type: 'qcm4',
-          q: 'Par quelle expression populaire désigne-t-on l\'institution militaire en France et dans les pays francophones ?',
-          choices: ['La force silencieuse', 'La grande muette', 'Le bras armé de l\'État', 'La main de fer'],
+          type: "qcm4",
+          q: "Par quelle expression populaire désigne-t-on l'institution militaire en France et dans les pays francophones ?",
+          choices: ["La force silencieuse", "La grande muette", "Le bras armé de l'État", "La main de fer"],
           r: 1,
-          nb: 'L\'armée est surnommée « la grande muette » en raison de son devoir de réserve et de discrétion : les militaires ne sont pas censés exprimer publiquement des opinions politiques ni critiquer le pouvoir civil. Cette expression date du XIXe siècle en France et reste très usitée dans les pays francophones.'
+          nb: "L'armée est surnommée « la grande muette » en raison de son devoir de réserve et de discrétion : les militaires ne sont pas censés exprimer publiquement des opinions politiques ni critiquer le pouvoir civil. Cette expression date du XIXe siècle en France et reste très usitée dans les pays francophones."
         },
         {
-          type: 'qcm4',
-          q: 'Quel est le plus long fleuve d\'Afrique de l\'Ouest, traversant plusieurs pays de la région ?',
-          choices: ['Le fleuve Niger', 'Le fleuve Gambie', 'Le fleuve Volta', 'Le fleuve Sénégal'],
-          r: 3,
-          nb: 'Le fleuve Niger (environ 4 180 km) est le plus long fleuve d\'Afrique de l\'Ouest. Il traverse la Guinée (source), le Mali, le Niger, le Bénin et le Nigeria (embouchure). C\'est également le 3e plus long fleuve d\'Afrique. Son delta intérieur au Mali et son delta maritime au Nigeria sont des zones écologiques d\'une richesse exceptionnelle.'
-        },
-        {
-          type: 'qcm4',
-          q: 'Laquelle de ces graphies est l\'orthographe correcte du mot désignant la loi fondamentale d\'un État ?',
-          choices: ['constitution', 'contitution', 'constutition', 'constutution'],
+          type: "qcm4",
+          q: "Quel est le plus long fleuve d'Afrique de l'Ouest, traversant plusieurs pays de la région ?",
+          choices: ["Le fleuve Niger", "Le fleuve Gambie", "Le fleuve Volta", "Le fleuve Sénégal"],
           r: 0,
-          nb: 'La graphie correcte est « constitution » (c-o-n-s-t-i-t-u-t-i-o-n). Les autres formes sont des fautes d\'orthographe fréquentes : « contitution » omet un « s », « constutition » inverse des lettres, « constutution » cumule plusieurs erreurs. Ce mot est souvent mal orthographié dans les concours.'
+          nb: "Le fleuve Niger (environ 4 180 km) est le plus long fleuve d'Afrique de l'Ouest. Il traverse la Guinée (source), le Mali, le Niger, le Bénin et le Nigeria (embouchure). C'est également le 3e plus long fleuve d'Afrique. Son delta intérieur au Mali et son delta maritime au Nigeria sont des zones écologiques d'une richesse exceptionnelle.",
+          x: "Le fleuve Niger (environ 4 180 km) est le plus long fleuve d'Afrique de l'Ouest. Il traverse la Guinée (source), le Mali, le Niger, le Bénin et le Nigeria (embouchure). C'est également le 3e plus long fleuve d'Afrique. Son delta intérieur au Mali et son delta maritime au Nigeria sont des zones écologiques d'une richesse exceptionnelle."
         },
         {
-          type: 'qcm4',
-          q: 'En juillet 2025, combien de Premiers ministres Emmanuel Macron avait-il nommés depuis le début de son premier mandat présidentiel en 2017 ?',
-          choices: ['4 Premiers ministres', '5 Premiers ministres', '6 Premiers ministres', '7 Premiers ministres'],
-          r: 2,
-          nb: 'En juillet 2025, Emmanuel Macron avait nommé 6 Premiers ministres dans l\'ordre : Édouard Philippe (2017-2020), Jean Castex (2020-2022), Élisabeth Borne (2022-2024), Gabriel Attal (2024), Michel Barnier (2024), et François Bayrou (depuis janvier 2025). François Bayrou était donc le 6e Premier ministre de Macron.'
-        },
-        {
-          type: 'qcm4',
-          q: 'Quel film du réalisateur mauritanien Abderrahmane Sissako a officiellement ouvert le FESPACO 2025 ?',
-          choices: ['Timbuktu', 'Bamako', 'Attentes', 'Black Tea'],
-          r: 3,
-          nb: 'C\'est le film « Black Tea » du réalisateur mauritanien Abderrahmane Sissako qui a été choisi pour l\'ouverture officielle de la 29e édition du FESPACO 2025 à Ouagadougou. Sissako est également connu pour « Timbuktu » (2014), Ours d\'or à Berlin, et « Bamako » (2006). « Black Tea » est une coproduction internationale sur la rencontre entre cultures africaines et asiatiques.'
-        },
-        {
-          type: 'qcm4',
-          q: 'Sur quel doigt porte-t-on la bague de mariage lors du mariage civil en France et dans les pays francophones d\'Afrique ?',
-          choices: ['L\'index droit', 'Le majeur gauche', 'L\'annulaire droit', 'L\'annulaire gauche'],
-          r: 3,
-          nb: 'Dans la tradition française et dans de nombreux pays francophones (dont le Burkina Faso), la bague de mariage est portée à l\'annulaire de la main gauche. Cette tradition remonte à la croyance romaine selon laquelle une veine, la « vena amoris » (veine de l\'amour), reliait directement ce doigt au cœur.'
-        },
-        {
-          type: 'qcm4',
-          q: 'Combien de communes urbaines comptait le Burkina Faso avant le redécoupage administratif du 2 juillet 2025 ?',
-          choices: ['45 communes urbaines', '49 communes urbaines', '52 communes urbaines', '55 communes urbaines'],
-          r: 1,
-          nb: 'Avant le redécoupage administratif du 2 juillet 2025, le Burkina Faso comptait 49 communes urbaines, dont 45 chefs-lieux de province et 4 autres villes majeures (Ouagadougou, Bobo-Dioulasso, Koudougou et Banfora). Depuis le redécoupage qui a porté le nombre de provinces à 47, ce chiffre a évolué.'
-        },
-        {
-          type: 'qcm4',
-          q: 'Que signifie l\'adjectif « perplexe » en français ?',
-          choices: ['Indécis, hésitant et troublé face à une situation', 'Convaincu et déterminé dans ses décisions', 'Satisfait et serein face à une bonne nouvelle', 'Agacé et impatient face à une attente prolongée'],
+          type: "qcm4",
+          q: "Laquelle de ces graphies est l'orthographe correcte du mot désignant la loi fondamentale d'un État ?",
+          choices: ["constitution", "contitution", "constutition", "constutution"],
           r: 0,
-          nb: '« Perplexe » vient du latin « perplexus » (entrelacé, embrouillé). Il qualifie une personne qui ne sait quelle décision ou opinion adopter face à une situation complexe ou ambiguë. Synonymes : embarrassé, désorienté, hésitant. Antonymes : décidé, résolu, certain.'
+          nb: "La graphie correcte est « constitution » (c-o-n-s-t-i-t-u-t-i-o-n). Les autres formes sont des fautes d'orthographe fréquentes : « contitution » omet un « s », « constutition » inverse des lettres, « constutution » cumule plusieurs erreurs. Ce mot est souvent mal orthographié dans les concours."
         },
         {
-          type: 'qcm4',
-          q: 'Combien de poètes officiels comptait le groupe littéraire français connu sous le nom de « La Pléiade » au XVIe siècle ?',
-          choices: ['5 poètes', '7 poètes', '9 poètes', '12 poètes'],
-          r: 1,
-          nb: 'La Pléiade comptait 7 poètes, par référence aux sept étoiles de la constellation des Pléiades. Ce groupe de poètes de la Renaissance française (XVIe siècle) comprenait Pierre de Ronsard, Joachim du Bellay, Jean-Antoine de Baïf, Pontus de Tyard, Étienne Jodelle, Rémi Belleau et Jean Dorat. Leur manifeste est la « Défense et Illustration de la Langue française » (1549).'
-        },
-        {
-          type: 'qcm4',
-          q: 'Quelle est la forme algébrique du nombre complexe z = (1 – i)² ?',
-          choices: ['2 – 2i', '1 – 2i', '–2i', '2i'],
+          type: "qcm4",
+          q: "En juillet 2025, combien de Premiers ministres Emmanuel Macron avait-il nommés depuis le début de son premier mandat présidentiel en 2017 ?",
+          choices: ["4 Premiers ministres", "5 Premiers ministres", "6 Premiers ministres", "7 Premiers ministres"],
           r: 2,
-          nb: 'On développe par la formule (a – b)² = a² – 2ab + b² : (1 – i)² = 1² – 2(1)(i) + i² = 1 – 2i + (–1) = –2i. La forme algébrique est donc z = 0 – 2i = –2i (partie réelle nulle, partie imaginaire égale à –2).'
+          nb: "En juillet 2025, Emmanuel Macron avait nommé 6 Premiers ministres dans l'ordre : Édouard Philippe (2017-2020), Jean Castex (2020-2022), Élisabeth Borne (2022-2024), Gabriel Attal (2024), Michel Barnier (2024), et François Bayrou (depuis janvier 2025). François Bayrou était donc le 6e Premier ministre de Macron."
         },
         {
-          type: 'qcm4',
-          q: 'Soit le nombre complexe z = –3 + 4i. Quel est son module |z| ?',
-          choices: ['3', '4', '5', '7'],
-          r: 2,
-          nb: 'Le module d\'un nombre complexe z = a + bi est |z| = √(a² + b²). Ici : |z| = √((–3)² + 4²) = √(9 + 16) = √25 = 5. Le module mesure la distance de l\'image du complexe à l\'origine dans le plan de Gauss.'
-        },
-        {
-          type: 'qcm4',
-          q: 'Quelle est la nationalité de l\'écrivaine Fatou Diome, auteure du roman « Le Ventre de l\'Atlantique » ?',
-          choices: ['Guinéenne', 'Malienne', 'Ivoirienne', 'Sénégalaise'],
+          type: "qcm4",
+          q: "Quel film du réalisateur mauritanien Abderrahmane Sissako a officiellement ouvert le FESPACO 2025 ?",
+          choices: ["Timbuktu", "Bamako", "Attentes", "Black Tea"],
           r: 3,
-          nb: 'Fatou Diome est une romancière sénégalaise née à Ndioum (Sénégal). Elle vit et enseigne en France depuis les années 1990. Son roman « Le Ventre de l\'Atlantique » (2003), qui traite des illusions de l\'immigration africaine, l\'a rendue célèbre. Elle est également connue pour ses prises de position engagées sur les médias.'
+          nb: "C'est le film « Black Tea » du réalisateur mauritanien Abderrahmane Sissako qui a été choisi pour l'ouverture officielle de la 29e édition du FESPACO 2025 à Ouagadougou. Sissako est également connu pour « Timbuktu » (2014), Ours d'or à Berlin, et « Bamako » (2006). « Black Tea » est une coproduction internationale sur la rencontre entre cultures africaines et asiatiques."
         },
         {
-          type: 'qcm4',
-          q: 'Quel est le dernier pays africain à avoir accédé à l\'indépendance ?',
-          choices: ['Érythrée', 'Timor oriental', 'Kosovo', 'Soudan du Sud'],
+          type: "qcm4",
+          q: "Sur quel doigt porte-t-on la bague de mariage lors du mariage civil en France et dans les pays francophones d'Afrique ?",
+          choices: ["L'index droit", "Le majeur gauche", "L'annulaire droit", "L'annulaire gauche"],
           r: 3,
-          nb: 'Le Soudan du Sud a déclaré son indépendance le 9 juillet 2011, après un référendum où 98,83 % des Soudanais du Sud ont voté pour la séparation d\'avec le Soudan. C\'est le 54e pays africain et le dernier en date à avoir accédé à l\'indépendance sur le continent africain.'
+          nb: "Dans la tradition française et dans de nombreux pays francophones (dont le Burkina Faso), la bague de mariage est portée à l'annulaire de la main gauche. Cette tradition remonte à la croyance romaine selon laquelle une veine, la « vena amoris » (veine de l'amour), reliait directement ce doigt au cœur."
         },
         {
-          type: 'qcm4',
-          q: 'Qui a été nommé Premier ministre lors de la première transition au Burkina Faso, après la chute de Blaise Compaoré en 2014 ?',
-          choices: ['Zéphirin Diabré', 'Paul Kaba Thiéba', 'Roch Marc Christian Kaboré', 'Yacouba Isaac Zida'],
+          type: "qcm4",
+          q: "Combien de communes urbaines comptait le Burkina Faso avant le redécoupage administratif du 2 juillet 2025 ?",
+          choices: ["45 communes urbaines", "49 communes urbaines", "52 communes urbaines", "55 communes urbaines"],
+          r: 1,
+          nb: "Avant le redécoupage administratif du 2 juillet 2025, le Burkina Faso comptait 49 communes urbaines, dont 45 chefs-lieux de province et 4 autres villes majeures (Ouagadougou, Bobo-Dioulasso, Koudougou et Banfora). Depuis le redécoupage qui a porté le nombre de provinces à 47, ce chiffre a évolué."
+        },
+        {
+          type: "qcm4",
+          q: "Que signifie l'adjectif « perplexe » en français ?",
+          choices: ["Indécis, hésitant et troublé face à une situation", "Convaincu et déterminé dans ses décisions", "Satisfait et serein face à une bonne nouvelle", "Agacé et impatient face à une attente prolongée"],
+          r: 0,
+          nb: "« Perplexe » vient du latin « perplexus » (entrelacé, embrouillé). Il qualifie une personne qui ne sait quelle décision ou opinion adopter face à une situation complexe ou ambiguë. Synonymes : embarrassé, désorienté, hésitant. Antonymes : décidé, résolu, certain."
+        },
+        {
+          type: "qcm4",
+          q: "Combien de poètes officiels comptait le groupe littéraire français connu sous le nom de « La Pléiade » au XVIe siècle ?",
+          choices: ["5 poètes", "7 poètes", "9 poètes", "12 poètes"],
+          r: 1,
+          nb: "La Pléiade comptait 7 poètes, par référence aux sept étoiles de la constellation des Pléiades. Ce groupe de poètes de la Renaissance française (XVIe siècle) comprenait Pierre de Ronsard, Joachim du Bellay, Jean-Antoine de Baïf, Pontus de Tyard, Étienne Jodelle, Rémi Belleau et Jean Dorat. Leur manifeste est la « Défense et Illustration de la Langue française » (1549)."
+        },
+        {
+          type: "qcm4",
+          q: "Quelle est la forme algébrique du nombre complexe z = (1 – i)² ?",
+          choices: ["2 – 2i", "1 – 2i", "–2i", "2i"],
+          r: 2,
+          nb: "On développe par la formule (a – b)² = a² – 2ab + b² : (1 – i)² = 1² – 2(1)(i) + i² = 1 – 2i + (–1) = –2i. La forme algébrique est donc z = 0 – 2i = –2i (partie réelle nulle, partie imaginaire égale à –2)."
+        },
+        {
+          type: "qcm4",
+          q: "Soit le nombre complexe z = –3 + 4i. Quel est son module |z| ?",
+          choices: ["3", "4", "5", "7"],
+          r: 2,
+          nb: "Le module d'un nombre complexe z = a + bi est |z| = √(a² + b²). Ici : |z| = √((–3)² + 4²) = √(9 + 16) = √25 = 5. Le module mesure la distance de l'image du complexe à l'origine dans le plan de Gauss."
+        },
+        {
+          type: "qcm4",
+          q: "Quelle est la nationalité de l'écrivaine Fatou Diome, auteure du roman « Le Ventre de l'Atlantique » ?",
+          choices: ["Guinéenne", "Malienne", "Ivoirienne", "Sénégalaise"],
           r: 3,
-          nb: 'Après la chute de Blaise Compaoré le 31 octobre 2014, Yacouba Isaac Zida (lieutenant-colonel) a d\'abord assuré la direction de la transition avant de devenir Premier ministre sous la présidence de Michel Kafando. Il a exercé ces fonctions jusqu\'au coup d\'État manqué de septembre 2015, avant la présidentielle de novembre 2015.'
+          nb: "Fatou Diome est une romancière sénégalaise née à Ndioum (Sénégal). Elle vit et enseigne en France depuis les années 1990. Son roman « Le Ventre de l'Atlantique » (2003), qui traite des illusions de l'immigration africaine, l'a rendue célèbre. Elle est également connue pour ses prises de position engagées sur les médias."
         },
         {
-          type: 'qcm4',
-          q: 'Combien de pays membres composent l\'Union Africaine (UA) depuis le retour du Maroc en 2017 ?',
-          choices: ['50 pays', '52 pays', '54 pays', '55 pays'],
+          type: "qcm4",
+          q: "Quel est le dernier pays africain à avoir accédé à l'indépendance ?",
+          choices: ["Érythrée", "Timor oriental", "Kosovo", "Soudan du Sud"],
           r: 3,
-          nb: 'L\'Union Africaine (UA) compte 55 États membres depuis la réintégration du Maroc en janvier 2017 (le Maroc avait quitté l\'Organisation de l\'Unité Africaine en 1984 en protestation contre l\'admission de la RASD). L\'UA est l\'organisation panafricaine de référence pour l\'intégration et le développement du continent.'
+          nb: "Le Soudan du Sud a déclaré son indépendance le 9 juillet 2011, après un référendum où 98,83 % des Soudanais du Sud ont voté pour la séparation d'avec le Soudan. C'est le 54e pays africain et le dernier en date à avoir accédé à l'indépendance sur le continent africain."
         },
         {
-          type: 'qcm4',
-          q: 'Quelle est la devise latine de l\'Organisation Internationale du Travail (OIT), créée en 1919 ?',
-          choices: ['« Per aspera ad astra »', '« In varietate concordia »', '« Si vis pacem, cole justitiam »', '« Labor omnia vincit »'],
+          type: "qcm4",
+          q: "Qui a été nommé Premier ministre lors de la première transition au Burkina Faso, après la chute de Blaise Compaoré en 2014 ?",
+          choices: ["Zéphirin Diabré", "Paul Kaba Thiéba", "Roch Marc Christian Kaboré", "Yacouba Isaac Zida"],
+          r: 3,
+          nb: "Après la chute de Blaise Compaoré le 31 octobre 2014, Yacouba Isaac Zida (lieutenant-colonel) a d'abord assuré la direction de la transition avant de devenir Premier ministre sous la présidence de Michel Kafando. Il a exercé ces fonctions jusqu'au coup d'État manqué de septembre 2015, avant la présidentielle de novembre 2015."
+        },
+        {
+          type: "qcm4",
+          q: "Combien de pays membres composent l'Union Africaine (UA) depuis le retour du Maroc en 2017 ?",
+          choices: ["50 pays", "52 pays", "54 pays", "55 pays"],
+          r: 3,
+          nb: "L'Union Africaine (UA) compte 55 États membres depuis la réintégration du Maroc en janvier 2017 (le Maroc avait quitté l'Organisation de l'Unité Africaine en 1984 en protestation contre l'admission de la RASD). L'UA est l'organisation panafricaine de référence pour l'intégration et le développement du continent."
+        },
+        {
+          type: "qcm4",
+          q: "Quelle est la devise latine de l'Organisation Internationale du Travail (OIT), créée en 1919 ?",
+          choices: ["« Per aspera ad astra »", "« In varietate concordia »", "« Si vis pacem, cole justitiam »", "« Labor omnia vincit »"],
           r: 2,
-          nb: 'La devise de l\'OIT est « Si vis pacem, cole justitiam » (Si tu veux la paix, cultive la justice). L\'OIT a été créée en 1919 dans le cadre du Traité de Versailles, avec pour mission de promouvoir les droits au travail, les conditions d\'emploi décentes et le dialogue social. Son siège est à Genève (Suisse).'
+          nb: "La devise de l'OIT est « Si vis pacem, cole justitiam » (Si tu veux la paix, cultive la justice). L'OIT a été créée en 1919 dans le cadre du Traité de Versailles, avec pour mission de promouvoir les droits au travail, les conditions d'emploi décentes et le dialogue social. Son siège est à Genève (Suisse)."
         },
         {
-          type: 'qcm4',
-          q: 'Quelle région du monde est surnommée « le toit du monde » en raison de son altitude exceptionnelle ?',
-          choices: ['Les hauts plateaux des Andes (Amérique du Sud)', 'Le Tibet (Asie centrale, Chine)', 'Les massifs de l\'Atlas (Afrique du Nord)', 'Le plateau éthiopien (Afrique de l\'Est)'],
+          type: "qcm4",
+          q: "Quelle région du monde est surnommée « le toit du monde » en raison de son altitude exceptionnelle ?",
+          choices: ["Les hauts plateaux des Andes (Amérique du Sud)", "Le Tibet (Asie centrale, Chine)", "Les massifs de l'Atlas (Afrique du Nord)", "Le plateau éthiopien (Afrique de l'Est)"],
           r: 1,
-          nb: 'Le Tibet est surnommé « le toit du monde » car son plateau présente une altitude moyenne d\'environ 4 500 mètres au-dessus du niveau de la mer. C\'est la région habitée la plus élevée de la planète. Elle est rattachée politiquement à la Chine depuis 1951, et abrite notamment le mont Everest à sa bordure himalayenne.'
+          nb: "Le Tibet est surnommé « le toit du monde » car son plateau présente une altitude moyenne d'environ 4 500 mètres au-dessus du niveau de la mer. C'est la région habitée la plus élevée de la planète. Elle est rattachée politiquement à la Chine depuis 1951, et abrite notamment le mont Everest à sa bordure himalayenne."
         },
         {
-          type: 'qcm4',
-          q: 'Quel est le féminin du nom « enchanteur » en français ?',
-          choices: ['Enchanteuse', 'Enchanteure', 'Enchanteresse', 'Enchanteuse'],
+          type: "qcm4",
+          q: "Quel est le féminin du nom « enchanteur » en français ?",
+          choices: ["Enchanteuse", "Enchanteure", "Enchanteresse", "Enchantrice"],
           r: 2,
-          nb: 'Le féminin de « enchanteur » est « enchanteresse ». Ici la transformation suit le modèle des mots en -eur → -eresse (comme pécheur/pécheresse, défenseur/défenderesse). « Enchanteresse » évoque souvent une figure de sorcière ou de fée.'
+          nb: "Le féminin de « enchanteur » est « enchanteresse ». Ici la transformation suit le modèle des mots en -eur → -eresse (comme pécheur/pécheresse, défenseur/défenderesse). « Enchanteresse » évoque souvent une figure de sorcière ou de fée."
         },
         {
-          type: 'qcm4',
-          q: 'Quel est le nom du parlement de la République islamique d\'Iran ?',
-          choices: ['La Douma', 'La Knesset', 'Le Majlis', 'Le Bundestag'],
+          type: "qcm4",
+          q: "Quel est le nom du parlement de la République islamique d'Iran ?",
+          choices: ["La Douma", "La Knesset", "Le Majlis", "Le Bundestag"],
           r: 2,
-          nb: 'Le parlement iranien est appelé le Majlis (en persan : مجلس), abréviation de Majlis-e Shura-ye Eslami (Assemblée Consultative Islamique). Il est composé de 290 membres élus au suffrage universel pour un mandat de quatre ans. La Douma est le parlement russe, la Knesset le parlement israélien et le Bundestag le parlement allemand.'
+          nb: "Le parlement iranien est appelé le Majlis (en persan : مجلس), abréviation de Majlis-e Shura-ye Eslami (Assemblée Consultative Islamique). Il est composé de 290 membres élus au suffrage universel pour un mandat de quatre ans. La Douma est le parlement russe, la Knesset le parlement israélien et le Bundestag le parlement allemand."
         },
         {
-          type: 'qcm4',
-          q: 'Quel prestigieux prix littéraire africain a été décerné à Aristide Tarnagda en 2018 ?',
-          choices: ['Prix Noma', 'Prix Ahmadou-Kourouma', 'Grand Prix littéraire d\'Afrique noire', 'Prix RFI Théâtre'],
+          type: "qcm4",
+          q: "Quel prestigieux prix littéraire africain a été décerné à Aristide Tarnagda en 2018 ?",
+          choices: ["Prix Noma", "Prix Ahmadou-Kourouma", "Grand Prix littéraire d'Afrique noire", "Prix RFI Théâtre"],
           r: 2,
-          nb: 'Aristide Tarnagda a reçu le Grand Prix littéraire d\'Afrique noire pour l\'ensemble de son œuvre dramatique, devenant l\'un des rares Burkinabè à obtenir cette distinction.'
+          nb: "Aristide Tarnagda a reçu le Grand Prix littéraire d'Afrique noire pour l'ensemble de son œuvre dramatique, devenant l'un des rares Burkinabè à obtenir cette distinction."
         },
         {
-          type: 'qcm4',
-          q: 'Quelle est la date de la première greffe de cœur réalisée sur un être humain ?',
-          choices: ['3 décembre 1952', '2 décembre 1977', '3 décembre 1967', '5 juillet 1960'],
+          type: "qcm4",
+          q: "Quelle est la date de la première greffe de cœur réalisée sur un être humain ?",
+          choices: ["3 décembre 1952", "2 décembre 1977", "3 décembre 1967", "5 juillet 1960"],
           r: 2,
-          nb: 'La première greffe cardiaque humaine a été réalisée le 3 décembre 1967 par le chirurgien sud-africain Christiaan Barnard à l\'hôpital Groote Schuur du Cap (Afrique du Sud). Le receveur, Louis Washkansky, a vécu 18 jours après l\'opération. Cette prouesse médicale a révolutionné la chirurgie cardiaque mondiale.'
+          nb: "La première greffe cardiaque humaine a été réalisée le 3 décembre 1967 par le chirurgien sud-africain Christiaan Barnard à l'hôpital Groote Schuur du Cap (Afrique du Sud). Le receveur, Louis Washkansky, a vécu 18 jours après l'opération. Cette prouesse médicale a révolutionné la chirurgie cardiaque mondiale."
         },
         {
-          type: 'qcm4',
-          q: 'Le score d\'Apgar, utilisé pour évaluer l\'état de santé d\'un nouveau-né, repose sur quels cinq critères ?',
-          choices: ['Température, Respiration, Réflexes, Taille, Cœur', 'Couleur, Réflexes, Température, Respiration, Pouls', 'Apparence, Pouls, Grimace, Activité, Respiration', 'Activité, Poids, Respiration, Tonus, Température'],
+          type: "qcm4",
+          q: "Le score d'Apgar, utilisé pour évaluer l'état de santé d'un nouveau-né, repose sur quels cinq critères ?",
+          choices: ["Température, Respiration, Réflexes, Taille, Cœur", "Couleur, Réflexes, Température, Respiration, Pouls", "Apparence, Pouls, Grimace, Activité, Respiration", "Activité, Poids, Respiration, Tonus, Température"],
           r: 2,
-          nb: 'Le score d\'Apgar (acronyme de l\'anglais) évalue 5 paramètres à 1, 5 et 10 minutes après la naissance : Appearance (couleur de peau), Pulse (fréquence cardiaque), Grimace (réflexes), Activity (tonus musculaire) et Respiration. Chaque critère est noté de 0 à 2, pour un total maximal de 10. Un score ≥ 7 est considéré normal.'
+          nb: "Le score d'Apgar (acronyme de l'anglais) évalue 5 paramètres à 1, 5 et 10 minutes après la naissance : Appearance (couleur de peau), Pulse (fréquence cardiaque), Grimace (réflexes), Activity (tonus musculaire) et Respiration. Chaque critère est noté de 0 à 2, pour un total maximal de 10. Un score ≥ 7 est considéré normal."
         },
         {
-          type: 'qcm4',
-          q: 'Qu\'est-ce que le canal de Guyon, situé au niveau du poignet ?',
-          choices: ['Canal de passage de l\'artère fémorale', 'Canal de passage du nerf ulnaire au poignet', 'Canal rachidien cervical', 'Canal auditif interne'],
+          type: "qcm4",
+          q: "Qu'est-ce que le canal de Guyon, situé au niveau du poignet ?",
+          choices: ["Canal de passage de l'artère fémorale", "Canal de passage du nerf ulnaire au poignet", "Canal rachidien cervical", "Canal auditif interne"],
           r: 1,
-          nb: 'Le canal de Guyon (ou tunnel ulnaire) est un espace fibro-osseux situé à la face palmaire du poignet, entre le pisiforme et l\'hamulus de l\'hamatum. Il permet le passage du nerf ulnaire et de l\'artère ulnaire. Sa compression peut provoquer le syndrome du canal de Guyon, avec paresthésies et faiblesse des muscles intrinsèques de la main.'
+          nb: "Le canal de Guyon (ou tunnel ulnaire) est un espace fibro-osseux situé à la face palmaire du poignet, entre le pisiforme et l'hamulus de l'hamatum. Il permet le passage du nerf ulnaire et de l'artère ulnaire. Sa compression peut provoquer le syndrome du canal de Guyon, avec paresthésies et faiblesse des muscles intrinsèques de la main."
         },
         {
-          type: 'qcm4',
-          q: 'Parmi les étiologies suivantes, lesquelles sont les principales causes de la cirrhose hépatique ?',
-          choices: ['Diabète, Tuberculose, Sida', 'Alcool, Hépatite B/C, NASH et certains médicaments', 'Ulcère, Appendicite, Typhoïde', 'Paludisme, Asthme, Pneumonie'],
+          type: "qcm4",
+          q: "Parmi les étiologies suivantes, lesquelles sont les principales causes de la cirrhose hépatique ?",
+          choices: ["Diabète, Tuberculose, Sida", "Alcool, Hépatite B/C, NASH et certains médicaments", "Ulcère, Appendicite, Typhoïde", "Paludisme, Asthme, Pneumonie"],
           r: 1,
-          nb: 'La cirrhose hépatique est une maladie chronique irréversible du foie dont les principales causes sont : l\'alcoolisme chronique (1ère cause dans les pays occidentaux), les hépatites virales B et C, la NASH (stéatohépatite non alcoolique liée à l\'obésité et au diabète) et certains médicaments hépatotoxiques.'
+          nb: "La cirrhose hépatique est une maladie chronique irréversible du foie dont les principales causes sont : l'alcoolisme chronique (1ère cause dans les pays occidentaux), les hépatites virales B et C, la NASH (stéatohépatite non alcoolique liée à l'obésité et au diabète) et certains médicaments hépatotoxiques."
         }
       ]
     },

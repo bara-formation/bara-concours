@@ -1,22 +1,6 @@
-// ====================================================================
-// © 2026 BARA FORMATION - TOUS DROITS RÉSERVÉS
-// ====================================================================
-// Cette base de données de questions QCM est la PROPRIÉTÉ EXCLUSIVE
-// de Bara Formation (Ouagadougou, Burkina Faso).
-//
-// Toute reproduction, copie, redistribution, extraction automatisée
-// ou utilisation commerciale est STRICTEMENT INTERDITE sans
-// autorisation écrite préalable de Bara Formation.
-//
-// Contact : bara.formation@gmail.com | +226 04 04 34 04
-// Voir LICENSE.md pour les détails complets.
-//
-// Protection légale : Loi n°032-99/AN du 22 décembre 1999 (Burkina Faso)
-// + Convention de Berne + Accord ADPIC
-// ====================================================================
 // Bara Concours - Base de questions QCM
-// Mis à jour le 2026-06-30 - V63.36 : 5115 questions au total
-// Total : 5115 questions réparties sur 37 matières
+// Mis à jour le 2026-07-05 - V63.47 : +100 questions SVT BAC (2e lot)
+// Total : 5489 questions réparties sur 37 matières
 
 const QUESTIONS = {
   "francais": [
@@ -18260,6 +18244,2197 @@ const QUESTIONS = {
       ],
       "r": 3,
       "x": "Les UV-B provoquent la formation de dimères de thymine (liaison covalente entre deux thymines adjacentes), lesquels bloquent la réplication et la transcription de l'ADN. Si non réparés par les enzymes de réparation (photolyases, NER), ces lésions conduisent à des mutations pouvant déclencher des mélanomes et carcinomes cutanés. La mélanine et les crèmes solaires protègent contre ces effets."
+    },
+  
+    {
+      "q": "Où se déroule normalement la fécondation chez la femme ?",
+      "o": [
+        "Dans l'utérus",
+        "Dans le vagin",
+        "Dans la trompe utérine",
+        "Dans l'ovaire"
+      ],
+      "r": 2,
+      "x": "La fécondation, rencontre entre l'ovule et le spermatozoïde, a lieu généralement dans le tiers supérieur de la trompe utérine. L'œuf ainsi formé migre ensuite vers l'utérus pour s'y implanter."
+    },
+    {
+      "q": "Quel organe produit les spermatozoïdes chez l'homme ?",
+      "o": [
+        "La prostate",
+        "Le testicule",
+        "L'épididyme",
+        "L'urètre"
+      ],
+      "r": 1,
+      "x": "Les testicules produisent les spermatozoïdes ainsi que la testostérone, hormone sexuelle masculine. Cette production débute à la puberté et se poursuit tout au long de la vie adulte."
+    },
+    {
+      "q": "Quel organe produit les ovules chez la femme ?",
+      "o": [
+        "L'ovaire",
+        "L'utérus",
+        "Le vagin",
+        "La trompe utérine"
+      ],
+      "r": 0,
+      "x": "Les ovaires libèrent un ovule à chaque cycle menstruel, généralement vers le quatorzième jour du cycle. Ils produisent également les hormones sexuelles féminines, œstrogènes et progestérone."
+    },
+    {
+      "q": "Quelle hormone déclenche l'ovulation au milieu du cycle menstruel ?",
+      "o": [
+        "Le LH",
+        "L'insuline",
+        "L'adrénaline",
+        "La testostérone"
+      ],
+      "r": 0,
+      "x": "Un pic d'hormone lutéinisante (LH) déclenche la rupture du follicule ovarien et la libération de l'ovule. Cette ovulation se produit habituellement au milieu du cycle menstruel."
+    },
+    {
+      "q": "Combien de temps dure environ une grossesse humaine normale ?",
+      "o": [
+        "6 mois",
+        "7 mois",
+        "9 mois",
+        "12 mois"
+      ],
+      "r": 2,
+      "x": "Une grossesse dure environ neuf mois, soit 38 semaines après la fécondation ou 40 semaines d'aménorrhée calculées à partir du premier jour des dernières règles. Elle se décompose en trois trimestres marqués par des étapes précises du développement fœtal."
+    },
+    {
+      "q": "À quel niveau de l'appareil génital féminin se déroule la nidation (ou implantation) de l'embryon ?",
+      "o": [
+        "Dans la paroi de l'utérus",
+        "Dans l'ovaire",
+        "Dans la trompe utérine",
+        "Dans le vagin"
+      ],
+      "r": 0,
+      "x": "L'embryon migre vers l'utérus et s'implante dans son endomètre, où il poursuivra son développement. Cette implantation, appelée nidation, marque le véritable début de la grossesse."
+    },
+    {
+      "q": "Quel organe assure les échanges nutritifs entre la mère et le fœtus pendant la grossesse ?",
+      "o": [
+        "Le placenta",
+        "L'ovaire",
+        "La trompe utérine",
+        "Le col de l'utérus"
+      ],
+      "r": 0,
+      "x": "Le placenta permet les échanges de nutriments, d'oxygène et de déchets entre la circulation maternelle et fœtale. Il agit aussi comme une barrière protectrice contre certains agents pathogènes."
+    },
+    {
+      "q": "Quelle méthode contraceptive empêche la rencontre entre spermatozoïde et ovule par une barrière physique ?",
+      "o": [
+        "La pilule contraceptive",
+        "Le préservatif",
+        "Le stérilet hormonal",
+        "L'implant sous-cutané"
+      ],
+      "r": 1,
+      "x": "Le préservatif forme une barrière physique qui empêche le contact direct entre les spermatozoïdes et l'ovule. Il protège également contre la transmission de nombreuses infections sexuellement transmissibles."
+    },
+    {
+      "q": "Comment appelle-t-on l'arrêt définitif des cycles menstruels chez la femme, en général après 45-55 ans ?",
+      "o": [
+        "La puberté",
+        "La ménopause",
+        "L'ovulation",
+        "La fécondation"
+      ],
+      "r": 1,
+      "x": "La ménopause marque l'arrêt naturel et définitif de l'activité ovarienne et des cycles menstruels chez la femme. Elle s'accompagne souvent de changements hormonaux comme des bouffées de chaleur."
+    },
+    {
+      "q": "Quelle est la principale fonction de la testostérone chez l'homme ?",
+      "o": [
+        "Réguler le cycle menstruel",
+        "Stimuler la production de lait maternel",
+        "Développer les caractères sexuels masculins",
+        "Provoquer l'ovulation"
+      ],
+      "r": 2,
+      "x": "La testostérone, sécrétée par les testicules, est responsable des caractères sexuels secondaires masculins et de la production des spermatozoïdes. Elle influence aussi la masse musculaire et la voix grave."
+    },
+    {
+      "q": "À quel moment de la puberté chez la fille apparaissent en général les premières règles ?",
+      "o": [
+        "Avant 8 ans",
+        "Entre 20 et 30 ans",
+        "Dès la naissance",
+        "Entre 11 et 15 ans"
+      ],
+      "r": 3,
+      "x": "Les premières règles surviennent le plus souvent entre 11 et 15 ans, marquant le début de la fonction reproductrice. Cet âge peut varier selon les individus et certains facteurs génétiques ou nutritionnels."
+    },
+    {
+      "q": "Quelle infection sexuellement transmissible affaiblit progressivement le système immunitaire ?",
+      "o": [
+        "Le paludisme",
+        "La grippe",
+        "Le VIH/SIDA",
+        "La tuberculose"
+      ],
+      "r": 2,
+      "x": "Le VIH attaque spécifiquement les lymphocytes T CD4, véritables chefs d'orchestre du système immunitaire, provoquant à terme le syndrome d'immunodéficience acquise (SIDA). Sans traitement, l'organisme devient alors vulnérable à de nombreuses infections opportunistes."
+    },
+    {
+      "q": "Quel est le rôle du cordon ombilical pendant la grossesse ?",
+      "o": [
+        "Protéger le fœtus des chocs extérieurs",
+        "Produire les hormones de grossesse",
+        "Filtrer les toxines de la mère",
+        "Relier le fœtus au placenta"
+      ],
+      "r": 3,
+      "x": "Le cordon ombilical relie le fœtus au placenta et permet le passage des nutriments, de l'oxygène et des déchets. Il est sectionné à la naissance, laissant la cicatrice appelée nombril."
+    },
+    {
+      "q": "Quel examen médical permet de visualiser le fœtus pendant la grossesse ?",
+      "o": [
+        "La radiographie",
+        "L'échographie",
+        "L'électrocardiogramme",
+        "La prise de tension"
+      ],
+      "r": 1,
+      "x": "L'échographie, utilisant les ultrasons, permet de visualiser le fœtus et de suivre son développement sans danger. Elle permet aussi de détecter d'éventuelles anomalies au cours de la grossesse."
+    },
+    {
+      "q": "Comment appelle-t-on la période de transformations physiques marquant le début de la capacité de reproduction ?",
+      "o": [
+        "La ménopause",
+        "La puberté",
+        "La gestation",
+        "La fécondation"
+      ],
+      "r": 1,
+      "x": "La puberté correspond à l'ensemble des transformations physiques et hormonales qui rendent l'organisme apte à se reproduire. Elle s'accompagne de l'apparition des caractères sexuels secondaires chez le garçon et la fille."
+    },
+    {
+      "q": "Quel est le rôle principal du système immunitaire ?",
+      "o": [
+        "Défendre l'organisme contre les agents pathogènes",
+        "Transporter l'oxygène vers les tissus",
+        "Digérer les aliments ingérés",
+        "Assurer les mouvements du corps"
+      ],
+      "r": 0,
+      "x": "Le système immunitaire reconnaît et élimine les agents pathogènes (virus, bactéries, parasites) qui menacent l'organisme. Il fait intervenir plusieurs types de cellules et de molécules spécialisées dans cette défense."
+    },
+    {
+      "q": "Quelles cellules sanguines sont principalement impliquées dans la défense immunitaire ?",
+      "o": [
+        "Les globules rouges",
+        "Les plaquettes",
+        "Les globules blancs",
+        "Les cellules du foie"
+      ],
+      "r": 2,
+      "x": "Les globules blancs, ou leucocytes, regroupent plusieurs types de cellules spécialisées dans la reconnaissance et l'élimination des agents infectieux. On distingue notamment les phagocytes et les lymphocytes."
+    },
+    {
+      "q": "Comment appelle-t-on une substance capable de déclencher une réponse immunitaire spécifique ?",
+      "o": [
+        "Un anticorps",
+        "Une hormone",
+        "Une enzyme",
+        "Un antigène"
+      ],
+      "r": 3,
+      "x": "Un antigène est une molécule étrangère reconnue par le système immunitaire, déclenchant la production d'anticorps spécifiques. Il peut être porté par un microbe, un pollen ou une cellule transplantée."
+    },
+    {
+      "q": "Quelle molécule produite par les lymphocytes B neutralise spécifiquement un antigène ?",
+      "o": [
+        "L'hémoglobine",
+        "L'anticorps",
+        "L'insuline",
+        "La mélanine"
+      ],
+      "r": 1,
+      "x": "Les lymphocytes B produisent des anticorps spécifiques qui se lient à l'antigène pour faciliter son élimination. Chaque anticorps ne reconnaît en général qu'un seul type d'antigène."
+    },
+    {
+      "q": "Quel est le principe de la vaccination ?",
+      "o": [
+        "Introduire un antigène atténué pour stimuler une mémoire immunitaire",
+        "Détruire directement les microbes par un médicament",
+        "Remplacer le sang du patient par du sang immunisé",
+        "Bloquer totalement la reproduction des microbes dans l'air"
+      ],
+      "r": 0,
+      "x": "La vaccination expose l'organisme à agent pathogène atténué, inactivé ou à une partie de celui-ci (antigène), permettant de développer une mémoire immunitaire protectrice. En cas d'infection réelle ultérieure, la réponse immunitaire sera alors plus rapide et efficace."
+    },
+    {
+      "q": "Quel agent pathogène est responsable du paludisme, maladie très répandue au Burkina Faso ?",
+      "o": [
+        "Une bactérie",
+        "Un parasite",
+        "Un virus",
+        "Un champignon"
+      ],
+      "r": 1,
+      "x": "Le paludisme est causé par un parasite du genre Plasmodium, transmis à l'homme par la piqûre du moustique anophèle femelle. Il reste l'une des principales causes de mortalité infantile en Afrique subsaharienne."
+    },
+    {
+      "q": "Quel insecte transmet le parasite responsable du paludisme ?",
+      "o": [
+        "La mouche tsé-tsé",
+        "Le moustique culex",
+        "La punaise",
+        "Le moustique anophèle"
+      ],
+      "r": 3,
+      "x": "Seule la femelle du moustique anophèle, en piquant pour se nourrir de sang, transmet le parasite du paludisme. Elle pique généralement durant la nuit, d'où l'intérêt des moustiquaires imprégnées."
+    },
+    {
+      "q": "Comment appelle-t-on la mémoire immunitaire qui permet une réponse plus rapide lors d'un second contact avec un même agent pathogène ?",
+      "o": [
+        "La mémoire immunitaire",
+        "L'immunité innée",
+        "La phagocytose",
+        "L'inflammation"
+      ],
+      "r": 0,
+      "x": "La mémoire immunitaire, acquise après un premier contact ou une vaccination, permet une réponse plus rapide et plus efficace lors d'une réinfection. C'est le principe fondamental sur lequel repose la vaccination."
+    },
+    {
+      "q": "Quel type de cellules immunitaires est capable d'ingérer et de détruire directement les microbes, sans reconnaissance spécifique ?",
+      "o": [
+        "Les lymphocytes B",
+        "Les lymphocytes T",
+        "Les phagocytes",
+        "Les plaquettes"
+      ],
+      "r": 2,
+      "x": "Les phagocytes englobent et digèrent les agents pathogènes par phagocytose, une défense immunitaire non spécifique. Cette réponse rapide constitue une première ligne de défense de l'organisme."
+    },
+    {
+      "q": "Quelle maladie infectieuse bactérienne touche principalement les poumons et se transmet par voie aérienne ?",
+      "o": [
+        "Le paludisme",
+        "La drépanocytose",
+        "Le diabète",
+        "La tuberculose"
+      ],
+      "r": 3,
+      "x": "La tuberculose est une maladie bactérienne contagieuse qui affecte surtout les poumons et se transmet par la toux. Un traitement antibiotique prolongé est nécessaire pour en venir à bout."
+    },
+    {
+      "q": "Quel comportement réduit efficacement la transmission des maladies sexuellement transmissibles ?",
+      "o": [
+        "Le partage d'objets tranchants",
+        "L'absence de traitement de l'eau",
+        "Le contact avec des animaux malades",
+        "L'usage systématique du préservatif"
+      ],
+      "r": 3,
+      "x": "L'usage correct et régulier du préservatif limite fortement la transmission des infections sexuellement transmissibles, dont le VIH. C'est aujourd'hui le moyen de prévention le plus accessible et le plus efficace."
+    },
+    {
+      "q": "Comment se transmet principalement le choléra dans les zones à faible accès à l'eau potable ?",
+      "o": [
+        "Par l'ingestion d'aliments contaminés",
+        "Par piqûre d'insecte",
+        "Par contact avec la peau uniquement",
+        "Par voie aérienne"
+      ],
+      "r": 0,
+      "x": "Le choléra se transmet principalement par l'ingestion d'eau ou d'aliments souillés par la bactérie Vibrio cholerae. Il provoque des diarrhées sévères pouvant entraîner une déshydratation rapide et mortelle."
+    },
+    {
+      "q": "Quelle mesure d'hygiène simple limite le plus efficacement la transmission de nombreuses maladies infectieuses ?",
+      "o": [
+        "Éviter de boire de l'eau",
+        "Rester à l'intérieur en permanence",
+        "Éviter tout contact avec d'autres personnes",
+        "Se laver régulièrement les mains au savon"
+      ],
+      "r": 3,
+      "x": "Le lavage régulier des mains au savon élimine une grande partie des microbes et réduit significativement la transmission des maladies. C'est l'un des gestes d'hygiène les plus simples et les plus efficaces."
+    },
+    {
+      "q": "Quel est le rôle des lymphocytes T dans la réponse immunitaire ?",
+      "o": [
+        "Détruire les cellules infectées",
+        "Transporter l'oxygène vers les organes",
+        "Produire la bile digestive",
+        "Filtrer les déchets rénaux"
+      ],
+      "r": 0,
+      "x": "Les lymphocytes T détruisent directement les cellules infectées et aident à coordonner l'ensemble de la réponse immunitaire. Certains d'entre eux gardent aussi en mémoire l'agent pathogène rencontré."
+    },
+    {
+      "q": "Pourquoi la vaccination de masse permet-elle de protéger indirectement les personnes non vaccinées ?",
+      "o": [
+        "Parce qu'elle guérit instantanément toutes les maladies existantes",
+        "Grâce à l'immunité collective qui limite la circulation de l'agent pathogène",
+        "Parce qu'elle élimine tous les moustiques de la zone vaccinée",
+        "Parce qu'elle rend les microbes totalement inoffensifs pour tous"
+      ],
+      "r": 1,
+      "x": "Lorsqu'une large majorité de la population est vaccinée, la circulation de l'agent pathogène diminue, protégeant indirectement les personnes non vaccinées. Ce phénomène est appelé immunité collective ou immunité de groupe."
+    },
+    {
+      "q": "Quel organe de la plante absorbe principalement l'eau et les sels minéraux du sol ?",
+      "o": [
+        "La feuille",
+        "La racine",
+        "La tige",
+        "La fleur"
+      ],
+      "r": 1,
+      "x": "Les racines, grâce à leurs poils absorbants, captent l'eau et les sels minéraux nécessaires à la plante. Cette absorption se fait principalement au niveau des jeunes racines proches de leur extrémité."
+    },
+    {
+      "q": "Quel organe de la plante est le principal siège de la photosynthèse ?",
+      "o": [
+        "La racine",
+        "La tige",
+        "La feuille",
+        "La fleur"
+      ],
+      "r": 2,
+      "x": "La feuille, riche en chloroplastes, capte la lumière et réalise la majeure partie de la photosynthèse de la plante. Sa grande surface favorise aussi les échanges gazeux avec l'atmosphère."
+    },
+    {
+      "q": "Comment appelle-t-on le transport de la sève brute des racines vers les feuilles ?",
+      "o": [
+        "La transpiration",
+        "l'ascension de la sève brute",
+        "La photosynthèse",
+        "La respiration végétale"
+      ],
+      "r": 1,
+      "x": "Le xylème (ou bois) conduit la sève brute, chargée d'eau et de minéraux, des racines vers les feuilles. Ce transport se fait grâce à la transpiration foliaire qui aspire la sève vers le haut."
+    },
+    {
+      "q": "Quel gaz les plantes absorbent-elles principalement pour réaliser la photosynthèse ?",
+      "o": [
+        "Le dioxyde de carbone",
+        "L'azote",
+        "Le dioxygène",
+        "L'hydrogène"
+      ],
+      "r": 0,
+      "x": "Les plantes absorbent le dioxyde de carbone de l'air, qu'elles transforment en matière organique grâce à la lumière. Ce gaz pénètre principalement par les stomates situés sur les feuilles."
+    },
+    {
+      "q": "Quel tissu végétal transporte la sève élaborée, riche en sucres, des feuilles vers le reste de la plante ?",
+      "o": [
+        "Le phloème",
+        "Le xylème",
+        "L'épiderme",
+        "Le méristème"
+      ],
+      "r": 0,
+      "x": "Le phloème (ou liber) conduit la sève élaborée, riche en produits de la photosynthèse, vers les organes de la plante. Il alimente notamment les racines, les fruits et les zones de croissance."
+    },
+    {
+      "q": "Quel est le rôle des stomates situés sur les feuilles ?",
+      "o": [
+        "Réguler les échanges gazeux et la transpiration",
+        "Absorber l'eau du sol",
+        "Produire les graines",
+        "Assurer le transport de la sève brute"
+      ],
+      "r": 0,
+      "x": "Les stomates sont de petits pores qui s'ouvrent et se ferment pour réguler les échanges gazeux et limiter la perte d'eau. Leur ouverture dépend notamment de la lumière et de la disponibilité en eau."
+    },
+    {
+      "q": "Comment appelle-t-on la reproduction sexuée des plantes à fleurs impliquant le transfert du pollen ?",
+      "o": [
+        "Le bouturage",
+        "La pollinisation",
+        "La photosynthèse",
+        "La germination"
+      ],
+      "r": 1,
+      "x": "La pollinisation est le transfert du pollen des étamines vers le pistil, étape indispensable à la fécondation chez les plantes à fleurs. Elle peut être assurée par le vent, l'eau ou des insectes pollinisateurs."
+    },
+    {
+      "q": "Quel organe floral produit les grains de pollen ?",
+      "o": [
+        "Le pistil",
+        "L'ovaire",
+        "L'étamine",
+        "Le pétale"
+      ],
+      "r": 2,
+      "x": "L'étamine, organe reproducteur mâle de la fleur, porte l'anthère où sont produits les grains de pollen. Une fleur peut posséder plusieurs étamines autour de son pistil central."
+    },
+    {
+      "q": "Quel organe floral, après fécondation, se transforme généralement en fruit ?",
+      "o": [
+        "Le pétale",
+        "L'étamine",
+        "Le sépale",
+        "L'ovaire"
+      ],
+      "r": 3,
+      "x": "Après la fécondation, l'ovaire se développe et se transforme en fruit, tandis que les ovules deviennent des graines. Ce fruit protège les graines et facilite souvent leur dissémination."
+    },
+    {
+      "q": "Quel facteur n'est PAS indispensable à la germination d'une graine ?",
+      "o": [
+        "L'eau",
+        "Une température favorable",
+        "L'oxygène",
+        "La lumière directe du soleil"
+      ],
+      "r": 3,
+      "x": "La germination nécessite eau, température favorable et oxygène, mais de nombreuses graines germent même dans l'obscurité. La lumière n'est donc pas un facteur indispensable, contrairement à ces trois éléments."
+    },
+    {
+      "q": "Comment appelle-t-on un mode de reproduction végétale sans intervention de graines, à partir d'un fragment de plante ?",
+      "o": [
+        "La pollinisation",
+        "La germination",
+        "La reproduction végétative",
+        "La fécondation croisée"
+      ],
+      "r": 2,
+      "x": "La reproduction végétative permet à une plante de se multiplier à partir d'un fragment (tige, racine) sans passer par la formation de graines. Cette technique, comme le bouturage, donne des plantes génétiquement identiques au plant d'origine."
+    },
+    {
+      "q": "Quelle est la fonction principale de la cuticule cireuse recouvrant les feuilles ?",
+      "o": [
+        "Capter davantage de lumière",
+        "Faciliter l'entrée du dioxyde de carbone",
+        "Attirer les insectes pollinisateurs",
+        "Limiter la perte d'eau par évaporation"
+      ],
+      "r": 3,
+      "x": "La cuticule cireuse imperméabilise la surface des feuilles et réduit la perte d'eau par évaporation. Elle protège aussi la plante contre certains agents pathogènes et les rayons ultraviolets."
+    },
+    {
+      "q": "Quel type de plante ne produit pas de fleurs et se reproduit par des spores ?",
+      "o": [
+        "La fougère",
+        "Le manguier",
+        "Le maïs",
+        "Le haricot"
+      ],
+      "r": 0,
+      "x": "La fougère est une plante sans fleurs qui se reproduit grâce à des spores libérées par des structures situées sous ses frondes. Ces spores donnent naissance à un prothalle qui participera ensuite à la reproduction de la fougère."
+    },
+    {
+      "q": "Quel est le rôle des racines dans la fixation de la plante au sol ?",
+      "o": [
+        "Elles n'ont aucun rôle dans la fixation",
+        "Elles servent uniquement à la photosynthèse",
+        "Elles ancrent solidement la plante dans le sol",
+        "Elles produisent le pollen de la plante"
+      ],
+      "r": 2,
+      "x": "Le système racinaire ancre solidement la plante dans le sol, lui permettant de résister au vent et à l'érosion. Il joue ainsi un rôle mécanique en plus de sa fonction d'absorption."
+    },
+    {
+      "q": "Quel processus permet à une plante de perdre de l'eau sous forme de vapeur par ses feuilles ?",
+      "o": [
+        "La photosynthèse",
+        "La transpiration",
+        "La germination",
+        "La pollinisation"
+      ],
+      "r": 1,
+      "x": "La transpiration foliaire évacue l'eau sous forme de vapeur à travers les stomates, favorisant la montée de la sève brute. Elle contribue aussi à réguler la température de la plante."
+    },
+    {
+      "q": "Quelle culture vivrière est particulièrement adaptée aux zones semi-arides du Burkina Faso ?",
+      "o": [
+        "Le mil",
+        "Le riz irrigué",
+        "Le cacaoyer",
+        "Le théier"
+      ],
+      "r": 0,
+      "x": "Le mil est une céréale résistante à la sécheresse, particulièrement cultivée dans les zones sahéliennes du Burkina Faso. Il constitue une base alimentaire importante pour de nombreuses populations rurales."
+    },
+    {
+      "q": "Quel élément minéral, présent dans les engrais, favorise particulièrement la croissance des racines ?",
+      "o": [
+        "L'azote seul",
+        "Le carbone",
+        "L'oxygène",
+        "Le phosphore"
+      ],
+      "r": 3,
+      "x": "Le phosphore stimule le développement racinaire des plantes et favorise la formation des fleurs et des fruits. Il est souvent associé à l'azote et au potassium dans les engrais complets."
+    },
+    {
+      "q": "Comment appelle-t-on l'association bénéfique entre certaines racines et des champignons du sol ?",
+      "o": [
+        "Le parasitisme",
+        "La compétition",
+        "La prédation",
+        "La mycorhize"
+      ],
+      "r": 3,
+      "x": "La mycorhize est une association symbiotique entre les racines et un champignon, améliorant l'absorption de l'eau et des minéraux. La plante fournit en retour au champignon des sucres issus de la photosynthèse."
+    },
+    {
+      "q": "Quelles bactéries fixatrices d'azote vivent en symbiose dans les racines des légumineuses comme le haricot ?",
+      "o": [
+        "Les lactobacilles",
+        "Les cyanobactéries marines",
+        "Les rhizobiums",
+        "Les salmonelles"
+      ],
+      "r": 2,
+      "x": "Les rhizobiums, logés dans des nodosités racinaires, transforment l'azote de l'air en une forme utilisable par la plante. Cette symbiose enrichit naturellement le sol en azote, utile aux cultures suivantes."
+    },
+    {
+      "q": "Quel facteur limite le plus souvent la croissance des cultures en saison sèche au Sahel ?",
+      "o": [
+        "Le manque d'eau disponible",
+        "L'excès de lumière solaire",
+        "Le manque de dioxyde de carbone",
+        "L'excès d'humidité du sol"
+      ],
+      "r": 0,
+      "x": "En saison sèche, le manque d'eau disponible pour les plantes constitue le principal facteur limitant des cultures au Sahel. C'est pourquoi l'irrigation et le choix de cultures résistantes sont essentiels dans cette zone."
+    },
+    {
+      "q": "Comment appelle-t-on l'ensemble des êtres vivants et du milieu physique où ils interagissent ?",
+      "o": [
+        "La biosphère",
+        "L'écosystème",
+        "La biodiversité",
+        "La chaîne alimentaire"
+      ],
+      "r": 1,
+      "x": "Un écosystème regroupe une communauté d'êtres vivants (biocénose) et le milieu physique (biotope) dans lequel ils vivent et interagissent. Ces interactions assurent un équilibre dynamique entre les espèces et leur environnement."
+    },
+    {
+      "q": "Dans une chaîne alimentaire, quel organisme occupe le premier maillon ?",
+      "o": [
+        "Le carnivore",
+        "Le décomposeur",
+        "Le producteur primaire",
+        "Le prédateur"
+      ],
+      "r": 2,
+      "x": "Le producteur primaire, généralement une plante, produit sa propre matière organique et constitue la base de toute chaîne alimentaire. Tous les autres organismes de la chaîne dépendent directement ou indirectement de lui."
+    },
+    {
+      "q": "Comment appelle-t-on un organisme qui se nourrit exclusivement de végétaux ?",
+      "o": [
+        "Un carnivore",
+        "Un décomposeur",
+        "Un omnivore",
+        "Un herbivore"
+      ],
+      "r": 3,
+      "x": "Un herbivore est un consommateur primaire qui se nourrit exclusivement de matière végétale. Il constitue le deuxième maillon de la chaîne alimentaire, juste après les producteurs."
+    },
+    {
+      "q": "Quel phénomène décrit le transfert de matière et d'énergie d'un maillon à l'autre d'une chaîne alimentaire ?",
+      "o": [
+        "La photosynthèse",
+        "La pollinisation",
+        "La transpiration",
+        "Le flux de matière et d'énergie"
+      ],
+      "r": 3,
+      "x": "Le flux de matière et d'énergie circule des producteurs vers les consommateurs successifs, avec des pertes à chaque niveau. Cette perte d'énergie limite généralement le nombre de maillons d'une chaîne alimentaire."
+    },
+    {
+      "q": "Comment appelle-t-on l'ensemble des interactions alimentaires interconnectées d'un écosystème ?",
+      "o": [
+        "La chaîne alimentaire simple",
+        "Le réseau trophique",
+        "La biosphère",
+        "La niche écologique"
+      ],
+      "r": 1,
+      "x": "Le réseau trophique représente l'ensemble des chaînes alimentaires reliées entre elles au sein d'un même écosystème. Il illustre la complexité des relations alimentaires entre les différentes espèces."
+    },
+    {
+      "q": "Quel est le principal gaz responsable de l'effet de serre et du réchauffement climatique ?",
+      "o": [
+        "Le dioxygène",
+        "L'azote",
+        "L'hydrogène",
+        "Le dioxyde de carbone"
+      ],
+      "r": 3,
+      "x": "Le dioxyde de carbone, émis notamment par la combustion des énergies fossiles, retient la chaleur dans l'atmosphère terrestre. Son accumulation excessive est la principale cause du réchauffement climatique actuel."
+    },
+    {
+      "q": "Quelle activité humaine contribue le plus à la déforestation au Burkina Faso ?",
+      "o": [
+        "L'agriculture extensive et le bois de chauffe",
+        "La reforestation systématique",
+        "La protection stricte des forêts classées",
+        "L'agriculture biologique intensive"
+      ],
+      "r": 0,
+      "x": "La coupe de bois pour le charbon et le bois de chauffe, ainsi que l'extension des terres agricoles, sont des causes majeures de déforestation. Cette déforestation accélère aussi l'érosion et la dégradation des sols."
+    },
+    {
+      "q": "Comment appelle-t-on la variété des espèces vivantes présentes dans un milieu donné ?",
+      "o": [
+        "L'écosystème",
+        "La chaîne alimentaire",
+        "Le biotope",
+        "La biodiversité"
+      ],
+      "r": 3,
+      "x": "La biodiversité désigne la diversité des espèces animales, végétales et microbiennes présentes dans un milieu. Elle est essentielle à l'équilibre et à la résilience des écosystèmes."
+    },
+    {
+      "q": "Quelle conséquence directe la désertification a-t-elle sur les sols sahéliens ?",
+      "o": [
+        "Une amélioration de la fertilité des sols",
+        "Une perte de fertilité et une dégradation des sols",
+        "Une augmentation de la biodiversité végétale",
+        "Une réduction de l'érosion éolienne"
+      ],
+      "r": 1,
+      "x": "La désertification entraîne une perte de fertilité, une érosion accrue et une dégradation progressive des sols sahéliens. Elle est aggravée par la surexploitation des terres et le changement climatique."
+    },
+    {
+      "q": "Quel est le rôle des arbres dans la lutte contre l'érosion des sols ?",
+      "o": [
+        "Leurs racines retiennent la terre et limitent son entraînement par l'eau et le vent",
+        "Ils accélèrent l'érosion en asséchant le sol",
+        "Ils n'ont aucun effet sur la structure du sol",
+        "Ils favorisent uniquement l'évaporation de l'eau du sol"
+      ],
+      "r": 0,
+      "x": "Le système racinaire des arbres stabilise le sol et limite son entraînement par le ruissellement et le vent. C'est pourquoi le reboisement est une stratégie clé contre l'érosion et la désertification."
+    },
+    {
+      "q": "Comment appelle-t-on la relation où deux espèces vivent ensemble au bénéfice mutuel des deux partenaires ?",
+      "o": [
+        "Le parasitisme",
+        "La prédation",
+        "Le mutualisme",
+        "La compétition"
+      ],
+      "r": 2,
+      "x": "Le mutualisme est une association durable entre deux espèces dont chacune tire un bénéfice de la relation. Ce type d'interaction favorise souvent la survie des deux partenaires impliqués."
+    },
+    {
+      "q": "Comment appelle-t-on la relation où une espèce se nourrit d'une autre en lui causant du tort sans forcément la tuer ?",
+      "o": [
+        "Le mutualisme",
+        "Le parasitisme",
+        "La compétition",
+        "La prédation directe"
+      ],
+      "r": 1,
+      "x": "Dans le parasitisme, le parasite vit aux dépens de son hôte, lui causant un préjudice sans nécessairement le tuer immédiatement. Cette relation peut néanmoins affaiblir durablement l'organisme parasité."
+    },
+    {
+      "q": "Quel phénomène décrit la diminution progressive de la quantité d'énergie disponible à chaque niveau trophique ?",
+      "o": [
+        "La photosynthèse",
+        "La bioaccumulation",
+        "La perte d'énergie tropique",
+        "La symbiose"
+      ],
+      "r": 2,
+      "x": "À chaque niveau trophique, une grande partie de l'énergie est perdue sous forme de chaleur, ce qui limite le nombre de maillons d'une chaîne alimentaire. C'est pourquoi les grands prédateurs sont généralement peu nombreux dans un écosystème."
+    },
+    {
+      "q": "Quelle pratique agricole permet de préserver la fertilité des sols en alternant les cultures d'une saison à l'autre ?",
+      "o": [
+        "La monoculture intensive",
+        "La rotation des cultures",
+        "Le brûlis systématique",
+        "L'irrigation excessive"
+      ],
+      "r": 1,
+      "x": "La rotation des cultures évite l'épuisement des sols en alternant des plantes aux besoins nutritifs différents d'une saison à l'autre. Elle limite aussi la prolifération de certains parasites spécifiques à une culture."
+    },
+    {
+      "q": "Quel phénomène climatique caractérise la variabilité des précipitations dans la zone sahélienne ?",
+      "o": [
+        "Une pluviométrie stable toute l'année",
+        "Un climat équatorial constant",
+        "Une alternance entre les saisons",
+        "Des chutes de neige régulières"
+      ],
+      "r": 2,
+      "x": "Le climat sahélien se caractérise par une saison sèche longue et une saison des pluies courte et parfois irrégulière. Cette variabilité pluviométrique influence fortement les calendriers agricoles de la région."
+    },
+    {
+      "q": "Comment appelle-t-on une espèce dont la présence ou l'absence renseigne sur la qualité d'un milieu ?",
+      "o": [
+        "Une espèce invasive",
+        "Une espèce bioindicatrice",
+        "Une espèce endémique",
+        "Une espèce domestique"
+      ],
+      "r": 1,
+      "x": "Une espèce bioindicatrice est sensible aux variations du milieu, sa présence ou son absence renseignant sur l'état de l'écosystème. Elle permet ainsi de surveiller la qualité d'un milieu sans analyses complexes."
+    },
+    {
+      "q": "Quel est l'impact principal de la surpêche sur les écosystèmes aquatiques ?",
+      "o": [
+        "Une augmentation durable des populations de poissons",
+        "un appauvrissement des ressources halieutiques",
+        "Une amélioration de la qualité de l'eau",
+        "Une diminution des prédateurs marins uniquement bénéfique"
+      ],
+      "r": 1,
+      "x": "La surpêche épuise les stocks de poissons plus vite qu'ils ne se renouvellent, déséquilibrant les écosystèmes aquatiques. Elle menace à terme la sécurité alimentaire des populations qui dépendent de la pêche."
+    },
+    {
+      "q": "Quelle mesure contribue efficacement à la lutte contre la désertification au Sahel ?",
+      "o": [
+        "Le reboisement et la mise en place de cordons pierreux anti-érosion",
+        "L'augmentation du surpâturage",
+        "La suppression totale de la végétation existante",
+        "L'abandon des pratiques agroforestières"
+      ],
+      "r": 0,
+      "x": "Le reboisement et les techniques comme les cordons pierreux limitent le ruissellement et favorisent la régénération des sols dégradés. Ces méthodes sont largement utilisées dans les programmes de lutte contre la désertification au Sahel."
+    },
+    {
+      "q": "Comment appelle-t-on l'accumulation progressive de substances toxiques le long d'une chaîne alimentaire ?",
+      "o": [
+        "La photosynthèse",
+        "La symbiose",
+        "La décomposition",
+        "La Bioamplification"
+      ],
+      "r": 3,
+      "x": "La bioamplification ou Biomagnification désigne l'augmentation de la concentration d'une substance toxique à mesure qu'elle progresse le long de la chaîne alimentaire. Les prédateurs situés au sommet sont donc souvent les plus exposés à ces substances."
+    },
+    {
+      "q": "Quel rôle jouent les zones humides dans la régulation de l'environnement ?",
+      "o": [
+        "Elles régulent l'eau et favorisent la biodiversité.",
+        "Elles n'ont aucune utilité écologique.",
+        "Elles accélèrent la désertification.",
+        "Elles empêchent la vie aquatique."
+      ],
+      "r": 0,
+      "x": "Les zones humides filtrent naturellement l'eau, atténuent les crues, rechargent les nappes phréatiques et constituent des habitats riches en biodiversité. Leur préservation est essentielle pour maintenir l'équilibre des écosystèmes."
+    },
+    {
+      "q": "Quel scientifique est à l'origine de la théorie de l'évolution par sélection naturelle ?",
+      "o": [
+        "Charles Darwin",
+        "Gregor Mendel",
+        "Louis Pasteur",
+        "Antoine Lavoisier"
+      ],
+      "r": 0,
+      "x": "Charles Darwin a proposé au XIXe siècle la théorie de l'évolution des espèces par sélection naturelle. Ses travaux se sont notamment appuyés sur ses observations lors de son voyage sur le Beagle."
+    },
+    {
+      "q": "Comment appelle-t-on le mécanisme par lequel les individus les mieux adaptés à leur milieu se reproduisent davantage ?",
+      "o": [
+        "La sélection naturelle",
+        "La mutation spontanée",
+        "La dérive génétique",
+        "La domestication"
+      ],
+      "r": 0,
+      "x": "La sélection naturelle favorise la survie et la reproduction des individus les mieux adaptés à leur environnement. Ce mécanisme explique progressivement la transformation des espèces au fil des générations."
+    },
+    {
+      "q": "Quelle est l'unité de base utilisée pour classer les êtres vivants en groupes capables de se reproduire entre eux ?",
+      "o": [
+        "L'espèce",
+        "Le règne",
+        "La famille",
+        "L'embranchement"
+      ],
+      "r": 0,
+      "x": "L'espèce regroupe des individus interféconds, capables de se reproduire entre eux et de donner une descendance viable. C'est l'unité de base de la classification du vivant."
+    },
+    {
+      "q": "Quel indice fossile ou anatomique constitue une preuve classique de l'évolution des espèces ?",
+      "o": [
+        "La présence d'organes homologues chez des espèces différentes",
+        "L'absence totale de fossiles dans les roches",
+        "L'identité parfaite entre toutes les espèces vivantes",
+        "L'invariabilité totale des espèces au cours du temps"
+      ],
+      "r": 0,
+      "x": "Les organes homologues, de structure semblable mais de fonction parfois différente, témoignent d'un ancêtre commun entre espèces. Ils constituent l'une des principales preuves anatomiques de l'évolution."
+    },
+    {
+      "q": "Comment appelle-t-on l'ensemble des restes ou traces d'organismes anciens conservés dans les roches ?",
+      "o": [
+        "Les gènes",
+        "Les allèles",
+        "Les chromosomes",
+        "Les fossiles"
+      ],
+      "r": 3,
+      "x": "Les fossiles sont des restes ou empreintes d'organismes anciens conservés dans les roches sédimentaires, témoins de l'histoire de la vie. Leur étude, la paléontologie, permet de reconstituer l'évolution des espèces au fil du temps."
+    },
+    {
+      "q": "Quel grand groupe rassemble les organismes unicellulaires dépourvus de noyau, comme les bactéries ?",
+      "o": [
+        "Les eucaryotes",
+        "Les champignons",
+        "Les procaryotes",
+        "Les animaux"
+      ],
+      "r": 2,
+      "x": "Les procaryotes regroupent les organismes unicellulaires sans noyau individualisé, comme les bactéries et les archées. Ils constituent les formes de vie les plus anciennes et les plus simples connues."
+    },
+    {
+      "q": "Comment appelle-t-on la classification hiérarchique des êtres vivants en groupes emboîtés ?",
+      "o": [
+        "La sélection naturelle",
+        "La mutation",
+        "L'évolution convergente",
+        "La taxonomie"
+      ],
+      "r": 3,
+      "x": "La taxonomie organise les êtres vivants en groupes hiérarchisés (règne, embranchement, classe, ordre, famille, genre, espèce). Ce classement reflète les liens de parenté évolutive entre les espèces."
+    },
+    {
+      "q": "Quel règne du vivant regroupe des organismes eucaryotes se nourrissant par absorption, comme les champignons ?",
+      "o": [
+        "Le règne animal",
+        "Le règne fongique",
+        "Le règne végétal",
+        "Le règne bactérien"
+      ],
+      "r": 1,
+      "x": "Le règne fongique regroupe les champignons, des organismes eucaryotes qui absorbent leurs nutriments plutôt que de les ingérer ou les synthétiser. Ils jouent un rôle essentiel de décomposeurs dans les écosystèmes."
+    },
+    {
+      "q": "Comment appelle-t-on l'apparition progressive de nouvelles espèces à partir d'une espèce ancestrale ?",
+      "o": [
+        "La reproduction asexuée",
+        "La spéciation",
+        "La photosynthèse",
+        "La mitose"
+      ],
+      "r": 1,
+      "x": "La spéciation est le processus par lequel une population évolue progressivement jusqu'à former une nouvelle espèce distincte. Elle résulte souvent d'un isolement géographique ou reproductif prolongé."
+    },
+    {
+      "q": "Quel type d'évolution se produit lorsque des espèces non apparentées développent des caractères similaires à cause d'un même environnement ?",
+      "o": [
+        "L'évolution divergente",
+        "La spéciation allopatrique",
+        "L'évolution convergente",
+        "La sélection artificielle"
+      ],
+      "r": 2,
+      "x": "L'évolution convergente désigne l'apparition de traits similaires chez des espèces non apparentées, adaptées à des milieux comparables. Les ailes des oiseaux et des chauves-souris en sont un exemple classique."
+    },
+    {
+      "q": "Quel est le rôle des mutations dans le processus d'évolution des espèces ?",
+      "o": [
+        "Elles empêchent les variations génétiques.",
+        "Elles n'ont aucun effet sur l'évolution.",
+        "Elles réduisent la diversité génétique.",
+        "Elles créent de nouvelles variations génétiques."
+      ],
+      "r": 3,
+      "x": "Les mutations introduisent de nouvelles variations génétiques dans une population, constituant la matière première sur laquelle agit la sélection naturelle. Sans cette diversité génétique, les populations ne pourraient pas évoluer ni s'adapter aux changements de leur environnement."
+    },
+    {
+      "q": "Comment appelle-t-on la sélection opérée volontairement par l'homme sur les espèces domestiques ?",
+      "o": [
+        "La sélection naturelle",
+        "La dérive génétique",
+        "La sélection artificielle",
+        "La spéciation sympatrique"
+      ],
+      "r": 2,
+      "x": "La sélection artificielle consiste à choisir volontairement les reproducteurs présentant des caractères désirés, comme pour les races d'animaux domestiques. Elle a permis à l'homme de créer de nombreuses variétés agricoles et animales."
+    },
+    {
+      "q": "Quel grand groupe d'êtres vivants regroupe les organismes eucaryotes capables de réaliser la photosynthèse grâce à la chlorophylle ?",
+      "o": [
+        "Les champignons",
+        "Les bactéries",
+        "Les végétaux",
+        "Les protozoaires"
+      ],
+      "r": 2,
+      "x": "Les végétaux sont des eucaryotes photosynthétiques, capables de produire leur propre matière organique grâce à la chlorophylle. Ils constituent la base de la plupart des chaînes alimentaires terrestres."
+    },
+    {
+      "q": "Quelle est la principale différence entre l'évolution et l'adaptation individuelle ?",
+      "o": [
+        "Elles désignent exactement le même phénomène.",
+        "L'adaptation individuelle est toujours héréditaire.",
+        "L'évolution concerne uniquement un individu au cours de sa vie.",
+        "L'évolution agit sur les populations au fil des générations."
+      ],
+      "r": 3,
+      "x": "L'évolution est un changement des fréquences génétiques d'une population sur plusieurs générations, contrairement à l'adaptation individuelle, qui correspond à des modifications non héréditaires chez un organisme au cours de sa vie."
+    },
+    {
+      "q": "Quel est l'intérêt de la diversité génétique au sein d'une espèce face aux changements environnementaux ?",
+      "o": [
+        "Elle rend l'espèce totalement vulnérable à toute maladie",
+        "Elle empêche toute reproduction future de l'espèce",
+        "Elle augmente les chances de survie de l'espèce",
+        "Elle n'a aucune influence sur la survie de l'espèce"
+      ],
+      "r": 2,
+      "x": "Une grande diversité génétique augmente la probabilité qu'une partie de la population survive et se reproduise face à un changement environnemental. À l'inverse, une population peu diversifiée est plus vulnérable à l'extinction."
+    },
+    {
+      "q": "Quelle maladie infantile évitable par la vaccination provoque une paralysie irréversible chez certains enfants ?",
+      "o": [
+        "Le paludisme",
+        "La poliomyélite",
+        "La rougeole uniquement bénigne",
+        "La grippe saisonnière"
+      ],
+      "r": 1,
+      "x": "La poliomyélite, virus attaquant le système nerveux, peut entraîner des paralysies définitives chez les enfants non vaccinés. La vaccination systématique a permis de faire fortement reculer cette maladie dans le monde."
+    },
+    {
+      "q": "Quelle pratique alimentaire prévient efficacement la malnutrition infantile durant les six premiers mois de vie ?",
+      "o": [
+        "L'allaitement maternel exclusif",
+        "L'introduction précoce d'aliments solides dès la naissance",
+        "L'arrêt total de l'allaitement dès la naissance",
+        "L'alimentation exclusive à base de céréales sèches"
+      ],
+      "r": 0,
+      "x": "L'allaitement maternel exclusif durant les six premiers mois apporte tous les nutriments et anticorps nécessaires au nourrisson. Il renforce aussi son immunité naturelle contre de nombreuses infections."
+    },
+    {
+      "q": "Quel signe clinique majeur permet souvent de suspecter le paludisme chez un enfant ?",
+      "o": [
+        "Une perte totale de l'appétit uniquement",
+        "Une fièvre élevée accompagnée de frissons",
+        "Une amélioration soudaine de l'état général",
+        "Une croissance accélérée"
+      ],
+      "r": 1,
+      "x": "Une fièvre élevée avec frissons est un signe clinique fréquent du paludisme, nécessitant une consultation rapide et un test diagnostique. Un traitement précoce évite l'évolution vers une forme grave de la maladie."
+    },
+    {
+      "q": "Quelle méthode de prévention réduit efficacement les piqûres de moustiques responsables du paludisme la nuit ?",
+      "o": [
+        "L'utilisation de moustiquaires imprégnées d'insecticide",
+        "Le port de vêtements légers uniquement le jour",
+        "L'évitement total du sommeil",
+        "La consommation d'aliments sucrés avant le coucher"
+      ],
+      "r": 0,
+      "x": "Les moustiquaires imprégnées d'insecticide protègent efficacement contre les piqûres du moustique anophèle, actif surtout la nuit. Elles constituent l'un des moyens de prévention les plus efficaces contre le paludisme."
+    },
+    {
+      "q": "Quel est l'intérêt principal du dépistage précoce des maladies chroniques comme le diabète ?",
+      "o": [
+        "Il aggrave systématiquement la maladie",
+        "Il n'apporte aucun bénéfice au patient",
+        "Il permet une prise en charge rapide",
+        "Il remplace totalement le besoin de traitement médical"
+      ],
+      "r": 2,
+      "x": "Un dépistage précoce permet d'adapter rapidement le traitement et le mode de vie, limitant ainsi les complications à long terme. C'est particulièrement important pour des maladies chroniques comme le diabète ou l'hypertension."
+    },
+    {
+      "q": "Quelle est la principale cause de transmission de la bilharziose ?",
+      "o": [
+        "La piqûre de moustique",
+        "La consommation d'aliments avariés",
+        "Le contact avec un animal enragé",
+        "Le contact avec de l'eau infestée"
+      ],
+      "r": 3,
+      "x": "La bilharziose se transmet par pénétration de larves parasitaires à travers la peau, lors du contact avec une eau douce infestée. Elle touche fréquemment les personnes se baignant ou travaillant près des points d'eau stagnante."
+    },
+    {
+      "q": "Quelle vitamine, apportée notamment par l'exposition au soleil, est essentielle à la minéralisation des os ?",
+      "o": [
+        "La vitamine C",
+        "La vitamine A",
+        "La vitamine D",
+        "La vitamine B12"
+      ],
+      "r": 2,
+      "x": "La vitamine D, synthétisée sous l'effet du soleil, favorise l'absorption du calcium et la bonne minéralisation des os. Sa carence peut provoquer le rachitisme chez l'enfant."
+    },
+    {
+      "q": "Quelle mesure d'hygiène alimentaire réduit le risque d'intoxication par des aliments avariés ?",
+      "o": [
+        "Conserver les aliments cuits à température ambiante plusieurs jours",
+        "Consommer systématiquement des aliments crus non lavés",
+        "Respecter la chaîne du froid et bien cuire les aliments",
+        "Ignorer les dates de péremption des produits"
+      ],
+      "r": 2,
+      "x": "Le respect de la chaîne du froid et une cuisson suffisante détruisent la plupart des germes responsables des intoxications alimentaires. Ces précautions simples réduisent fortement le risque de maladies d'origine alimentaire."
+    },
+    {
+      "q": "Quel facteur augmente significativement le risque de maladies cardiovasculaires ?",
+      "o": [
+        "Une activité physique régulière",
+        "Une alimentation riche en fruits et légumes",
+        "Un sommeil suffisant et régulier",
+        "Le tabagisme régulier"
+      ],
+      "r": 3,
+      "x": "Le tabagisme favorise l'athérosclérose et augmente fortement le risque d'infarctus et d'accident vasculaire cérébral. Arrêter de fumer reste l'une des mesures les plus efficaces pour préserver la santé cardiovasculaire."
+    },
+    {
+      "q": "Quel est le rôle des centres de santé communautaires dans la prévention sanitaire en zone rurale ?",
+      "o": [
+        "Ils n'ont aucun rôle dans la prévention.",
+        "Ils remplacent totalement les hôpitaux.",
+        "Ils se limitent à la vente de médicaments.",
+        "Ils assurent les soins de santé de premier niveau."
+      ],
+      "r": 3,
+      "x": "Les centres de santé communautaires assurent les soins de santé primaires, notamment la vaccination, la sensibilisation, les consultations de base et certaines activités de prévention. Ils rapprochent les services de santé des populations rurales et jouent un rôle essentiel dans la prévention des maladies"
+    },
+    {
+      "q": "Quelle est la principale conséquence d'une déshydratation sévère chez un enfant souffrant de diarrhée ?",
+      "o": [
+        "Une amélioration rapide de son état général",
+        "Un risque vital nécessitant une réhydratation",
+        "Une croissance accélérée immédiate",
+        "Une immunité renforcée durablement"
+      ],
+      "r": 1,
+      "x": "Une diarrhée sévère peut entraîner une perte importante d'eau et de sels minéraux, mettant la vie de l'enfant en danger sans réhydratation rapide. Les jeunes enfants sont particulièrement vulnérables à ce risque de déshydratation."
+    },
+    {
+      "q": "Quelle solution simple permet de réhydrater un enfant souffrant de diarrhée, recommandée par l'OMS ?",
+      "o": [
+        "Le lait concentré sucré",
+        "L'eau gazeuse",
+        "Le jus de fruit industriel",
+        "La solution de réhydratation orale"
+      ],
+      "r": 3,
+      "x": "La solution de réhydratation orale, à base d'eau, de sel et de sucre, compense efficacement les pertes hydriques dues à la diarrhée. Elle est simple à préparer et largement recommandée par l'OMS."
+    },
+    {
+      "q": "Quelle pratique d'hygiène corporelle limite la transmission des maladies de la peau et des yeux ?",
+      "o": [
+        "Éviter tout lavage du visage",
+        "Partager systématiquement les serviettes de toilette",
+        "Se laver le visage et le corps avec de l'eau propre",
+        "Utiliser une eau stagnante non traitée pour la toilette"
+      ],
+      "r": 2,
+      "x": "Un lavage régulier du visage et du corps avec de l'eau propre réduit le risque d'infections cutanées et oculaires comme le trachome. Cette pratique simple contribue à préserver la santé publique dans les communautés."
+    },
+    {
+      "q": "Quel est l'objectif principal des campagnes de sensibilisation sanitaire menées dans les villages ?",
+      "o": [
+        "Vendre des médicaments aux populations",
+        "Informer pour prévenir les maladies",
+        "Remplacer totalement les soins médicaux",
+        "Décourager la fréquentation des centres de santé"
+      ],
+      "r": 1,
+      "x": "Les campagnes de sensibilisation visent à informer les populations et à encourager des comportements favorables à la prévention des maladies. Elles complètent ainsi l'action des centres de santé sur le terrain."
+    },
+  
+    {
+      "q": "Quel organite cellulaire est responsable de la production d'énergie sous forme d'ATP ?",
+      "o": [
+        "Le noyau",
+        "La mitochondrie",
+        "Le ribosome",
+        "L'appareil de Golgi"
+      ],
+      "r": 1,
+      "x": "La mitochondrie transforme l'énergie chimique des nutriments en ATP grâce à la respiration cellulaire. Elle est surnommée la centrale énergétique de la cellule car elle utilise l'oxygène pour produire cette énergie."
+    },
+    {
+      "q": "Quelle structure cellulaire contient l'information génétique sous forme d'ADN ?",
+      "o": [
+        "Le cytoplasme",
+        "Le noyau",
+        "La membrane plasmique",
+        "Le réticulum endoplasmique"
+      ],
+      "r": 1,
+      "x": "Le noyau renferme l'ADN organisé en chromosomes, support de l'information génétique de la cellule. Il contrôle ainsi l'ensemble des activités cellulaires en dirigeant la synthèse des protéines."
+    },
+    {
+      "q": "Quel organite est responsable de la synthèse des protéines dans la cellule ?",
+      "o": [
+        "La mitochondrie",
+        "Le lysosome",
+        "L'appareil de Golgi",
+        "Le ribosome"
+      ],
+      "r": 3,
+      "x": "Les ribosomes traduisent l'ARN messager en chaînes d'acides aminés pour former les protéines. Ils peuvent être libres dans le cytoplasme ou fixés sur le réticulum endoplasmique."
+    },
+    {
+      "q": "Quelle est la principale différence entre une cellule animale et une cellule végétale ?",
+      "o": [
+        "La cellule végétale possède une paroi de cellulose que la cellule animale n'a pas",
+        "La cellule animale possède un noyau que la cellule végétale n'a pas",
+        "La cellule végétale ne possède pas de mitochondries",
+        "La cellule animale possède des chloroplastes que la cellule végétale n'a pas"
+      ],
+      "r": 0,
+      "x": "La paroi pecto-cellulosique rigide entourant la membrane plasmique est propre aux cellules végétales et leur donne leur forme. Elle assure aussi une protection mécanique que ne possède pas la cellule animale."
+    },
+    {
+      "q": "Quel pigment permet aux chloroplastes de capter l'énergie lumineuse ?",
+      "o": [
+        "L'hémoglobine",
+        "La mélanine",
+        "La chlorophylle",
+        "La kératine"
+      ],
+      "r": 2,
+      "x": "La chlorophylle absorbe la lumière, principalement dans le rouge et le bleu, pour alimenter la photosynthèse. C'est ce pigment qui donne leur couleur verte aux feuilles et aux tiges chlorophylliennes."
+    },
+    {
+      "q": "Quelle est la fonction principale de la membrane plasmique ?",
+      "o": [
+        "Stocker l'ADN de la cellule",
+        "Produire l'énergie cellulaire",
+        "Contrôler les échanges entre la cellule et son milieu",
+        "Synthétiser les protéines cellulaires"
+      ],
+      "r": 2,
+      "x": "La membrane plasmique est sélectivement perméable et régule les entrées et sorties de substances de la cellule. Elle est composée d'une double couche de phospholipides dans laquelle sont insérées des protéines."
+    },
+    {
+      "q": "Quel processus permet à une cellule mère de donner deux cellules filles identiques ?",
+      "o": [
+        "La mitose",
+        "La méiose",
+        "La fécondation",
+        "La mutation"
+      ],
+      "r": 0,
+      "x": "La mitose produit deux cellules filles génétiquement identiques à la cellule mère, avec le même nombre de chromosomes. Elle permet la croissance de l'organisme et le renouvellement des tissus."
+    },
+    {
+      "q": "Où se déroule la respiration cellulaire productrice d'ATP ?",
+      "o": [
+        "Dans le noyau",
+        "Dans le réticulum endoplasmique",
+        "Dans la mitochondrie",
+        "Dans l'appareil de Golgi"
+      ],
+      "r": 2,
+      "x": "La mitochondrie oxyde le glucose en présence d'oxygène pour libérer l'énergie stockée sous forme d'ATP. Ce processus, appelé respiration cellulaire, produit aussi du dioxyde de carbone et de l'eau comme déchets."
+    },
+    {
+      "q": "Quel organite modifie, trie et achemine les protéines vers leur destination finale ?",
+      "o": [
+        "L'appareil de Golgi",
+        "Le lysosome",
+        "Le ribosome",
+        "Le noyau"
+      ],
+      "r": 0,
+      "x": "L'appareil de Golgi reçoit les protéines du réticulum endoplasmique, les modifie puis les redistribue dans la cellule. Il joue ainsi un rôle clé dans le tri et l'expédition des molécules cellulaires."
+    },
+    {
+      "q": "Quel organite contient des enzymes capables de digérer les déchets cellulaires ?",
+      "o": [
+        "La mitochondrie",
+        "Le ribosome",
+        "Le noyau",
+        "Le lysosome"
+      ],
+      "r": 3,
+      "x": "Le lysosome renferme des enzymes digestives qui dégradent les déchets et les organites usés de la cellule. Il participe ainsi au recyclage des constituants cellulaires devenus inutiles."
+    },
+    {
+      "q": "Quelle molécule constitue l'unité de base des membranes cellulaires ?",
+      "o": [
+        "Le glucose",
+        "L'acide aminé",
+        "Le phospholipide",
+        "L'amidon"
+      ],
+      "r": 2,
+      "x": "Les phospholipides forment une bicouche qui constitue la structure de base de toute membrane biologique. Leurs têtes hydrophiles et leurs queues hydrophobes expliquent cette organisation en deux feuillets."
+    },
+    {
+      "q": "Quel est le rôle du noyau dans une cellule eucaryote ?",
+      "o": [
+        "Contrôler l'activité cellulaire en abritant l'ADN",
+        "Produire l'énergie nécessaire à la cellule",
+        "Digérer les substances indésirables",
+        "Assurer les échanges avec le milieu extérieur"
+      ],
+      "r": 0,
+      "x": "Le noyau contient le matériel génétique et coordonne les activités de la cellule via l'expression des gènes. Il est délimité par une enveloppe nucléaire percée de pores permettant les échanges avec le cytoplasme."
+    },
+    {
+      "q": "Comment appelle-t-on l'ensemble des réactions chimiques qui se déroulent dans une cellule ?",
+      "o": [
+        "La photosynthèse",
+        "La mitose",
+        "Le métabolisme",
+        "L'homéostasie"
+      ],
+      "r": 2,
+      "x": "Le métabolisme regroupe toutes les réactions chimiques permettant à la cellule de produire et d'utiliser de l'énergie. On distingue les réactions de synthèse (anabolisme) et de dégradation (catabolisme)."
+    },
+    {
+      "q": "Quelle structure permet aux cellules végétales de stocker l'eau et les substances de réserve ?",
+      "o": [
+        "Le chloroplaste",
+        "Le noyau",
+        "La vacuole",
+        "La mitochondrie"
+      ],
+      "r": 2,
+      "x": "La vacuole est une cavité remplie de liquide qui occupe une grande partie du volume de la cellule végétale adulte. Elle stocke l'eau, les nutriments et parfois des substances de défense de la plante."
+    },
+    {
+      "q": "Quel type de cellule ne possède pas de noyau individualisé ?",
+      "o": [
+        "La cellule végétale",
+        "La cellule animale",
+        "La cellule bactérienne",
+        "La cellule fongique"
+      ],
+      "r": 2,
+      "x": "Les bactéries sont des cellules procaryotes dont l'ADN est libre dans le cytoplasme, sans enveloppe nucléaire. Elles ne possèdent pas non plus d'organites délimités par une membrane comme les mitochondries."
+    },
+    {
+      "q": "Quel phénomène décrit le passage de l'eau à travers une membrane semi-perméable, du milieu le moins concentré vers le plus concentré ?",
+      "o": [
+        "La diffusion simple",
+        "L'osmose",
+        "Le transport actif",
+        "L'endocytose"
+      ],
+      "r": 1,
+      "x": "L'osmose est le déplacement passif de l'eau du milieu le moins concentré (hypotonique) vers le milieu le plus concentré (hypertonique) à travers une membrane semi-perméable. Ce phénomène ne nécessite aucune dépense d'énergie de la part de la cellule."
+    },
+    {
+      "q": "Quelle molécule sert de source d'énergie directement utilisable par la cellule ?",
+      "o": [
+        "Le glucose",
+        "L'ATP",
+        "L'ADN",
+        "La cellulose"
+      ],
+      "r": 1,
+      "x": "L'ATP libère de l'énergie lors de l'hydrolyse de sa liaison phosphate, énergie directement exploitable par la cellule. Elle est régénérée en permanence grâce à la respiration cellulaire."
+    },
+    {
+      "q": "Quel est le rôle du réticulum endoplasmique rugueux ?",
+      "o": [
+        "Digérer les déchets cellulaires",
+        "Stocker l'eau cellulaire",
+        "Produire l'énergie cellulaire",
+        "Synthétiser les protéines"
+      ],
+      "r": 3,
+      "x": "Le réticulum endoplasmique rugueux porte des ribosomes qui assurent la synthèse des protéines destinées à être sécrétées ou intégrées aux membranes. Ces protéines sont ensuite modifiées et acheminées vers l'appareil de Golgi."
+    },
+    {
+      "q": "Quel constituant cellulaire est responsable de la couleur verte des feuilles ?",
+      "o": [
+        "La vacuole",
+        "Le noyau",
+        "La mitochondrie",
+        "Le chloroplaste"
+      ],
+      "r": 3,
+      "x": "Le chloroplaste contient la chlorophylle, pigment vert indispensable à la photosynthèse. Il capte l'énergie lumineuse pour la convertir en énergie chimique utilisable par la plante."
+    },
+    {
+      "q": "Comment appelle-t-on le passage direct de molécules à travers la membrane sans dépense d'énergie, du milieu le plus concentré vers le moins concentré ?",
+      "o": [
+        "Le transport actif",
+        "La diffusion simple",
+        "L'endocytose",
+        "L'exocytose"
+      ],
+      "r": 1,
+      "x": "La diffusion simple se fait spontanément selon le gradient de concentration, sans consommation d'énergie par la cellule. Elle permet par exemple le passage de petites molécules comme le dioxygène à travers la membrane."
+    },
+    {
+      "q": "Quelle molécule porte l'information génétique chez les êtres vivants ?",
+      "o": [
+        "L'ARN messager",
+        "L'ADN",
+        "Les protéines",
+        "Les lipides"
+      ],
+      "r": 1,
+      "x": "L'ADN est le support universel de l'information héréditaire, transmis des parents aux descendants. Il est constitué d'une double hélice de nucléotides portant le code génétique."
+    },
+    {
+      "q": "Combien de chromosomes possède une cellule somatique humaine normale ?",
+      "o": [
+        "46",
+        "44",
+        "23",
+        "48"
+      ],
+      "r": 0,
+      "x": "L'être humain possède 46 chromosomes répartis en 23 paires dans chaque cellule somatique. La moitié provient du père et l'autre moitié de la mère, via les gamètes."
+    },
+    {
+      "q": "Comment appelle-t-on les différentes versions possibles d'un même gène ?",
+      "o": [
+        "Les chromosomes",
+        "Les allèles",
+        "Les gamètes",
+        "Les protéines"
+      ],
+      "r": 1,
+      "x": "Les allèles sont des variantes d'un même gène occupant le même locus sur des chromosomes homologues. Ils peuvent être identiques (homozygotie) ou différents (hétérozygotie) chez un même individu."
+    },
+    {
+      "q": "Quel type de cellule résulte de la méiose chez l'être humain ?",
+      "o": [
+        "Les cellules somatiques",
+        "Les cellules souches",
+        "Les cellules musculaires",
+        "Les gamètes"
+      ],
+      "r": 3,
+      "x": "La méiose produit des gamètes haploïdes contenant la moitié du nombre de chromosomes de la cellule mère. Elle permet ainsi de conserver un nombre constant de chromosomes lors de la fécondation."
+    },
+    {
+      "q": "Un individu de génotype Aa est dit :",
+      "o": [
+        "Homozygote dominant",
+        "Homozygote récessif",
+        "Hémizygote",
+        "Hétérozygote"
+      ],
+      "r": 3,
+      "x": "Un individu hétérozygote possède deux allèles différents pour un même gène, ici A et a. Son phénotype dépend alors du caractère dominant ou récessif de chacun des deux allèles."
+    },
+    {
+      "q": "Chez l'homme, quels chromosomes déterminent le sexe masculin ?",
+      "o": [
+        "XX",
+        "XY",
+        "XXY",
+        "YY"
+      ],
+      "r": 1,
+      "x": "La combinaison XY, avec un chromosome Y hérité du père, détermine le sexe masculin chez l'être humain. La mère, elle, ne peut transmettre qu'un chromosome X à sa descendance."
+    },
+    {
+      "q": "Un croisement entre deux individus hétérozygotes Aa x Aa donne, en théorie, quelle proportion de génotypes aa ?",
+      "o": [
+        "100%",
+        "50%",
+        "75%",
+        "25%"
+      ],
+      "r": 3,
+      "x": "Selon la loi de pureté des gamètes de Mendel, le croisement de deux hétérozygotes (Aa x Aa) donne en F2 les proportions génotypiques : 25% [AA], 50% [Aa] et 25% [aa]. Cette répartition illustre la ségrégation indépendante des allèles lors de la formation des gamètes."
+    },
+    {
+      "q": "Comment appelle-t-on une modification accidentelle et héréditaire de la séquence d'ADN ?",
+      "o": [
+        "Une méiose",
+        "Une mutation",
+        "Une mitose",
+        "Une fécondation"
+      ],
+      "r": 1,
+      "x": "Une mutation est un changement dans la séquence des nucléotides de l'ADN, pouvant être transmis à la descendance. Elle peut être spontanée ou provoquée par des agents mutagènes comme certains rayonnements."
+    },
+    {
+      "q": "Quelle base azotée de l'ADN s'apparie toujours avec l'adénine ?",
+      "o": [
+        "La cytosine",
+        "La guanine",
+        "L'uracile",
+        "La thymine"
+      ],
+      "r": 3,
+      "x": "Dans l'ADN, l'adénine s'apparie avec la thymine par deux liaisons hydrogène, selon la règle de complémentarité. Cette complémentarité des bases assure la fidélité de la réplication de l'ADN."
+    },
+    {
+      "q": "Quel est le rôle de l'ARN messager dans la cellule ?",
+      "o": [
+        "Stocker l'information génétique de façon permanente",
+        "Transporter l'information génétique du noyau vers les ribosomes",
+        "Catalyser les réactions chimiques cellulaires",
+        "Constituer la membrane du noyau"
+      ],
+      "r": 1,
+      "x": "L'ARN messager copie l'information d'un gène et la transporte du noyau vers les ribosomes pour la traduction en protéine. Cette molécule est produite lors de la transcription et sert de modèle pour la synthèse des protéines lors de la traduction"
+    },
+    {
+      "q": "Un gène dominant s'exprime chez un individu :",
+      "o": [
+        "Dès qu'il est présent en un seul exemplaire",
+        "Uniquement s'il est présent en deux exemplaires",
+        "Jamais chez les hétérozygotes",
+        "Uniquement chez les femelles"
+      ],
+      "r": 0,
+      "x": "Un allèle dominant masque l'expression de l'allèle récessif dès qu'il est présent, même à l'état hétérozygote. L'allèle récessif ne s'exprime donc que lorsqu'il est présent en double exemplaire."
+    },
+    {
+      "q": "Quel scientifique est considéré comme le fondateur de la génétique moderne grâce à ses travaux sur les petits pois ?",
+      "o": [
+        "Charles Darwin",
+        "Gregor Mendel",
+        "Louis Pasteur",
+        "James Watson"
+      ],
+      "r": 1,
+      "x": "Gregor Mendel a établi les lois de l'hérédité au XIXe siècle en étudiant la transmission des caractères chez le petit pois. Ses travaux ont posé les bases de la génétique moderne."
+    },
+    {
+      "q": "Comment appelle-t-on l'ensemble des caractères observables d'un individu ?",
+      "o": [
+        "Le génotype",
+        "Le caryotype",
+        "Le phénotype",
+        "L'allèle"
+      ],
+      "r": 2,
+      "x": "Le phénotype désigne l'ensemble des caractères visibles ou mesurables d'un individu, résultant de son génotype et de l'environnement. Deux individus de même génotype peuvent ainsi avoir un phénotype légèrement différent."
+    },
+    {
+      "q": "Quelle structure permet de visualiser et classer les chromosomes d'un individu ?",
+      "o": [
+        "Le génotype",
+        "Le phénotype",
+        "Le caryotype",
+        "L'allèle"
+      ],
+      "r": 2,
+      "x": "Le caryotype est la représentation ordonnée des chromosomes d'une cellule, classés par taille et par paires. Il permet de détecter certaines anomalies chromosomiques comme les trisomies."
+    },
+    {
+      "q": "Une personne trisomique au niveau du chromosome 21 possède combien de chromosomes en tout ?",
+      "o": [
+        "44",
+        "46",
+        "47",
+        "48"
+      ],
+      "r": 2,
+      "x": "La trisomie 21 correspond à la présence d'un chromosome 21 surnuméraire, portant le total à 47 chromosomes. Cette anomalie est à l'origine du syndrome de Down."
+    },
+    {
+      "q": "Quel processus assure le brassage génétique lors de la méiose ?",
+      "o": [
+        "La réplication de l'ADN",
+        "Le crossing-over",
+        "La traduction de l'ARN",
+        "La duplication des centrioles"
+      ],
+      "r": 1,
+      "x": "Le crossing-over échange des fragments d'ADN entre chromosomes homologues, augmentant la diversité génétique des gamètes. Il se produit lors de la prophase de la première division de la méiose."
+    },
+    {
+      "q": "Chez les groupes sanguins ABO, quel génotype correspond à un individu de groupe O ?",
+      "o": [
+        "AA",
+        "AO",
+        "BB",
+        "OO"
+      ],
+      "r": 3,
+      "x": "Le groupe O résulte de la présence de deux allèles récessifs O, l'allèle O n'exprimant ni antigène A ni antigène B. C'est pourquoi ce groupe est souvent qualifié de donneur universel."
+    },
+    {
+      "q": "Comment appelle-t-on une maladie génétique due à la mutation d'un seul gène, comme la drépanocytose ?",
+      "o": [
+        "Une maladie infectieuse",
+        "Une maladie chromosomique",
+        "Une maladie monogénique",
+        "Une maladie environnementale"
+      ],
+      "r": 2,
+      "x": "Une maladie monogénique résulte de la mutation d'un seul gène, comme c'est le cas pour la drépanocytose très présente en Afrique de l'Ouest. Elle se transmet selon les lois classiques de l'hérédité mendélienne."
+    },
+    {
+      "q": "Quel est le rôle des enzymes de restriction utilisées en génie génétique ?",
+      "o": [
+        "Assembler des brins d'ADN entre eux",
+        "Copier l'ADN à l'identique",
+        "Traduire l'ARN en protéines",
+        "Couper l'ADN à des séquences précises"
+      ],
+      "r": 3,
+      "x": "Les enzymes de restriction reconnaissent des séquences spécifiques d'ADN et les sectionnent, un outil clé du génie génétique. Elles permettent notamment de découper et d'insérer des gènes d'intérêt."
+    },
+    {
+      "q": "Combien de chromosomes contient un gamète humain normal ?",
+      "o": [
+        "23",
+        "46",
+        "22",
+        "24"
+      ],
+      "r": 0,
+      "x": "Chaque gamète humain est haploïde et contient 23 chromosomes, soit la moitié du nombre présent dans une cellule somatique. La fécondation rétablit le nombre normal de 46 chromosomes chez l'embryon."
+    },
+    {
+      "q": "Où débute la digestion des glucides dans le tube digestif ?",
+      "o": [
+        "Dans l'estomac",
+        "Dans la bouche",
+        "Dans l'intestin grêle",
+        "Dans le gros intestin"
+      ],
+      "r": 1,
+      "x": "La salive contient de l'amylase salivaire qui commence à dégrader l'amidon dès la bouche. La mastication favorise également ce premier travail chimique en fragmentant les aliments."
+    },
+    {
+      "q": "Quel organe produit la bile nécessaire à la digestion des graisses ?",
+      "o": [
+        "Le foie",
+        "Le pancréas",
+        "L'estomac",
+        "La vésicule biliaire"
+      ],
+      "r": 0,
+      "x": "Le foie fabrique la bile, ensuite stockée dans la vésicule biliaire avant d'être déversée dans l'intestin grêle. NB: la vésicule ne produit pas la bile, elle ne fait que la stocker et la concentrer. La bile facilite la digestion des graisses en les émulsionnant."
+    },
+    {
+      "q": "Quel est le rôle principal de l'intestin grêle dans la digestion ?",
+      "o": [
+        "Stocker les aliments avant digestion",
+        "Absorber les nutriments issus de la digestion",
+        "Produire l'insuline nécessaire au métabolisme",
+        "Éliminer les déchets solides de l'organisme"
+      ],
+      "r": 1,
+      "x": "L'intestin grêle, grâce à ses villosités, absorbe la majorité des nutriments issus de la digestion vers le sang. Sa très grande surface interne optimise cette absorption."
+    },
+    {
+      "q": "Quelle enzyme gastrique commence la digestion des protéines dans l'estomac ?",
+      "o": [
+        "L'amylase",
+        "La pepsine",
+        "La lipase",
+        "La trypsine"
+      ],
+      "r": 1,
+      "x": "La pepsine, activée par l'acidité gastrique, découpe les protéines alimentaires en fragments plus courts. Cette digestion se poursuit ensuite dans l'intestin grêle grâce à d'autres enzymes."
+    },
+    {
+      "q": "Quel organe transforme les aliments en une bouillie appelée chyme grâce à ses contractions ?",
+      "o": [
+        "L'estomac",
+        "Le foie",
+        "Le pancréas",
+        "L'œsophage"
+      ],
+      "r": 0,
+      "x": "L'estomac malaxe les aliments avec le suc gastrique pour former le chyme, prêt à passer dans l'intestin. Ce brassage mécanique complète l'action chimique des enzymes digestives."
+    },
+    {
+      "q": "Quel nutriment fournit le plus d'énergie par gramme lors de sa dégradation ?",
+      "o": [
+        "Les glucides",
+        "Les protéines",
+        "Les lipides",
+        "Les vitamines"
+      ],
+      "r": 2,
+      "x": "Les lipides libèrent environ 9 kilocalories par gramme, soit plus du double des glucides ou des protéines. Ils constituent ainsi la principale réserve d'énergie de l'organisme."
+    },
+    {
+      "q": "Quel est le rôle du pancréas dans la digestion ?",
+      "o": [
+        "Stocker la bile produite par le foie",
+        "Absorber les nutriments digérés",
+        "Sécréter des enzymes digestives",
+        "Filtrer le sang pour éliminer les toxines"
+      ],
+      "r": 2,
+      "x": "Le pancréas sécrète des enzymes comme l'amylase, la lipase et la trypsine qui poursuivent la digestion dans l'intestin grêle. Il joue aussi un rôle hormonal en régulant la glycémie."
+    },
+    {
+      "q": "Comment appelle-t-on l'absorption des nutriments à travers la paroi intestinale vers le sang ?",
+      "o": [
+        "L'ingestion",
+        "L'excrétion",
+        "L'absorption intestinale",
+        "L'égestion"
+      ],
+      "r": 2,
+      "x": "L'absorption intestinale permet le passage des nutriments simples du tube digestif vers le sang, à travers les villosités. Ces nutriments sont ensuite distribués à toutes les cellules de l'organisme."
+    },
+    {
+      "q": "Quelle carence alimentaire provoque le kwashiorkor observé chez certains enfants ?",
+      "o": [
+        "Une carence en protéines",
+        "Une carence en glucides",
+        "Une carence en lipides",
+        "Une carence en eau"
+      ],
+      "r": 0,
+      "x": "Le kwashiorkor résulte d'une carence sévère en protéines malgré un apport calorique parfois suffisant en glucides. Il touche particulièrement les jeunes enfants après le sevrage dans certaines régions."
+    },
+    {
+      "q": "Quel est le rôle des fibres alimentaires dans la digestion ?",
+      "o": [
+        "Fournir l'essentiel de l'énergie de l'organisme",
+        "Faciliter le transit intestinal",
+        "Remplacer les protéines dans l'alimentation",
+        "Détruire les microbes intestinaux"
+      ],
+      "r": 1,
+      "x": "Les fibres ne sont pas digérées mais stimulent le transit intestinal et favorisent une bonne santé digestive. Elles contribuent aussi à réguler l'absorption des sucres et des graisses."
+    },
+    {
+      "q": "Quel produit final résulte de la digestion complète de l'amidon ?",
+      "o": [
+        "Des acides aminés",
+        "Des acides gras",
+        "Du glycérol",
+        "Du glucose"
+      ],
+      "r": 3,
+      "x": "L'amidon, un polymère de glucose, est dégradé par les enzymes digestives jusqu'aux molécules simples de glucose. Ce glucose est ensuite absorbé et utilisé comme principale source d'énergie."
+    },
+    {
+      "q": "Quelle partie du tube digestif est principalement responsable de la réabsorption de l'eau ?",
+      "o": [
+        "L'estomac",
+        "Le gros intestin",
+        "L'œsophage",
+        "La bouche"
+      ],
+      "r": 1,
+      "x": "Le gros intestin (côlon) réabsorbe une grande partie de l'eau restante, formant les selles avant l'évacuation. Il abrite aussi une flore bactérienne utile à la digestion."
+    },
+    {
+      "q": "Quel produit final résulte de la digestion complète des protéines ?",
+      "o": [
+        "Des acides aminés",
+        "Du glucose",
+        "Des acides gras",
+        "Du glycérol"
+      ],
+      "r": 0,
+      "x": "Les protéines sont hydrolysées en chaînes puis en acides aminés, unités absorbables au niveau de l'intestin grêle. Ces acides aminés servent ensuite à construire les protéines de l'organisme."
+    },
+    {
+      "q": "Quelle maladie est provoquée par une carence prolongée en vitamine C ?",
+      "o": [
+        "Le rachitisme",
+        "Le béribéri",
+        "Le scorbut",
+        "La pellagre"
+      ],
+      "r": 2,
+      "x": "Le scorbut résulte d'une carence en vitamine C, entraînant fatigue, saignements des gencives et fragilité vasculaire. Il était autrefois fréquent chez les marins privés de fruits frais. Retiens: vitamine C → Scorbut ; vitamine D → Rachitisme ; vitamine B1 → Béribéri ; vitamine B3 → Pellagre."
+    },
+    {
+      "q": "Quel est le rôle de l'eau dans l'organisme humain ?",
+      "o": [
+        "Assurer le transport des substances et réguler la température",
+        "Fournir l'essentiel de l'énergie cellulaire",
+        "Construire les tissus musculaires",
+        "Stocker l'information génétique"
+      ],
+      "r": 0,
+      "x": "L'eau, majoritaire dans le corps humain, sert de solvant, de moyen de transport et de régulateur thermique. Une hydratation suffisante est essentielle au bon fonctionnement de tous les organes."
+    },
+    {
+      "q": "Quel organe assure les échanges gazeux entre l'air et le sang ?",
+      "o": [
+        "Le cœur",
+        "Les poumons",
+        "Le foie",
+        "Les reins"
+      ],
+      "r": 1,
+      "x": "Les poumons, grâce aux alvéoles pulmonaires, permettent le passage de l'oxygène vers le sang et du dioxyde de carbone vers l'air. Cet échange gazeux est indispensable à la respiration cellulaire."
+    },
+    {
+      "q": "Quelle structure pulmonaire est le siège des échanges gazeux ?",
+      "o": [
+        "La trachée",
+        "Les bronches pulmonaires",
+        "Les alvéoles pulmonaires",
+        "Le larynx"
+      ],
+      "r": 2,
+      "x": "Les alvéoles pulmonaires, très fines et richement vascularisées, offrent une grande surface d'échange entre l'air et le sang. Leur nombre élevé permet d'optimiser les échanges gazeux."
+    },
+    {
+      "q": "Quel muscle joue un rôle essentiel dans les mouvements respiratoires ?",
+      "o": [
+        "Le biceps",
+        "Le cœur",
+        "Le diaphragme",
+        "Le triceps"
+      ],
+      "r": 2,
+      "x": "Le diaphragme se contracte et s'abaisse à l'inspiration, augmentant le volume de la cage thoracique pour faire entrer l'air. Il se relâche ensuite lors de l'expiration."
+    },
+    {
+      "q": "Quel gaz est rejeté par l'organisme lors de l'expiration ?",
+      "o": [
+        "Le dioxyde de carbone",
+        "L'oxygène",
+        "L'azote",
+        "L'hydrogène"
+      ],
+      "r": 0,
+      "x": "Le dioxyde de carbone, déchet de la respiration cellulaire, est évacué vers l'air lors de l'expiration. Son accumulation excessive dans le sang serait toxique pour l'organisme."
+    },
+    {
+      "q": "Comment appelle-t-on la respiration qui utilise l'oxygène pour produire de l'énergie ?",
+      "o": [
+        "La respiration anaérobie",
+        "La fermentation",
+        "La respiration aérobie",
+        "La photosynthèse"
+      ],
+      "r": 2,
+      "x": "La respiration aérobie utilise l'oxygène pour oxyder complètement le glucose et produire une grande quantité d'ATP. Elle est bien plus efficace énergétiquement que la respiration sans oxygène."
+    },
+    {
+      "q": "Quel phénomène permet à l'oxygène de passer des alvéoles pulmonaires vers le sang ?",
+      "o": [
+        "La diffusion à travers la paroi alvéolaire",
+        "Le transport actif par les globules rouges",
+        "La filtration rénale",
+        "L'osmose plasmatique"
+      ],
+      "r": 0,
+      "x": "L'oxygène diffuse passivement de l'air alvéolaire vers le sang, où sa concentration est plus faible. Ce transfert se fait à travers la fine paroi des alvéoles et des capillaires."
+    },
+    {
+      "q": "Quelle molécule sanguine transporte principalement l'oxygène vers les tissus ?",
+      "o": [
+        "L'hémoglobine",
+        "Le glucose",
+        "Le fibrinogène",
+        "L'albumine"
+      ],
+      "r": 0,
+      "x": "L'hémoglobine, présente dans les globules rouges, se lie à l'oxygène dans les poumons et le libère dans les tissus. Chaque molécule d'hémoglobine peut fixer plusieurs molécules d'oxygène."
+    },
+    {
+      "q": "Quel est le rôle des cils vibratiles présents dans les voies respiratoires ?",
+      "o": [
+        "Évacuer poussières et microbes",
+        "Réchauffer l'air inspiré",
+        "Produire les globules rouges",
+        "Absorber l'oxygène de l'air"
+      ],
+      "r": 0,
+      "x": "Les cils vibratiles balaient en permanence le mucus chargé de particules et de microbes vers l'extérieur des voies respiratoires. Ce mécanisme protège les poumons contre les infections et les impuretés."
+    },
+    {
+      "q": "Quelle maladie respiratoire touche fréquemment les enfants en zone sahélienne, favorisée par la poussière et la pollution ?",
+      "o": [
+        "Le diabète",
+        "L'anémie",
+        "L'asthme",
+        "La drépanocytose"
+      ],
+      "r": 2,
+      "x": "L'asthme est une maladie respiratoire chronique aggravée par la poussière, la pollution et certains allergènes fréquents en zone sahélienne. Elle se manifeste par des crises de gêne respiratoire et de toux."
+    },
+    {
+      "q": "Quel est le trajet normal de l'air inspiré jusqu'aux alvéoles ?",
+      "o": [
+        "Bouche ou nez, alvéoles, bronches, trachée",
+        "Trachée, bouche ou nez, bronches, alvéoles",
+        "Alvéoles, bronches, trachée, bouche ou nez",
+        "Bouche ou nez, trachée, bronches, alvéoles"
+      ],
+      "r": 3,
+      "x": "L'air suit un trajet précis : il entre par le nez ou la bouche, traverse la trachée, puis les bronches avant d'atteindre les alvéoles. Ce trajet réchauffe et filtre progressivement l'air inspiré."
+    },
+    {
+      "q": "Quel volume d'air correspond à la quantité inspirée et expirée lors d'une respiration normale au repos ?",
+      "o": [
+        "Le volume courant",
+        "La capacité vitale",
+        "Le volume résiduel",
+        "La fréquence respiratoire"
+      ],
+      "r": 0,
+      "x": "Le volume courant désigne le volume d'air mobilisé lors d'un cycle respiratoire normal, sans effort particulier. Il augmente naturellement lors d'un effort physique pour répondre aux besoins en oxygène."
+    },
+    {
+      "q": "Quel organe pompe le sang riche en dioxyde de carbone vers les poumons pour l'oxygéner ?",
+      "o": [
+        "Le foie",
+        "Les reins",
+        "La rate",
+        "Le cœur"
+      ],
+      "r": 3,
+      "x": "Le cœur, via le ventricule droit, envoie le sang pauvre en oxygène vers les poumons par l'artère pulmonaire. Le sang y est ensuite rechargé en oxygène avant de revenir vers le cœur."
+    },
+    {
+      "q": "Quelle est la conséquence d'un manque prolongé d'oxygène dans les tissus ?",
+      "o": [
+        "Une amélioration du métabolisme cellulaire",
+        "Une souffrance cellulaire",
+        "Une augmentation de la production de globules blancs",
+        "Une meilleure digestion des aliments"
+      ],
+      "r": 1,
+      "x": "Sans oxygène suffisant, les cellules ne peuvent plus produire assez d'ATP, ce qui entraîne leur souffrance puis leur mort. Ce manque d'oxygène est appelé hypoxie et peut toucher n'importe quel organe."
+    },
+    {
+      "q": "Quel est le rôle de la trachée dans l'appareil respiratoire ?",
+      "o": [
+        "Filtrer le sang veineux",
+        "Produire le mucus digestif",
+        "Assurer les échanges gazeux",
+        "Conduire l'air vers les bronches"
+      ],
+      "r": 3,
+      "x": "La trachée est un conduit rigide, maintenu ouvert par des anneaux cartilagineux, qui achemine l'air vers les bronches. Elle se divise ensuite en deux bronches, une pour chaque poumon."
+    },
+    {
+      "q": "Quelle activité augmente naturellement la fréquence respiratoire ?",
+      "o": [
+        "L'effort physique intense",
+        "Le sommeil profond",
+        "La digestion au repos",
+        "La lecture silencieuse"
+      ],
+      "r": 0,
+      "x": "L'effort physique augmente les besoins en oxygène des muscles, ce qui accélère la fréquence respiratoire pour y répondre. Le rythme cardiaque augmente également pour accompagner cet effort."
+    },
+    {
+      "q": "Combien de cavités possède le cœur humain ?",
+      "o": [
+        "Quatre",
+        "Deux",
+        "Trois",
+        "Six"
+      ],
+      "r": 0,
+      "x": "Le cœur humain comprend quatre cavités : deux oreillettes et deux ventricules, séparées par des cloisons et des valves. Cette organisation permet de séparer la circulation pulmonaire de la circulation générale."
+    },
+    {
+      "q": "Quel vaisseau transporte le sang riche en oxygène du cœur vers les organes ?",
+      "o": [
+        "La veine cave",
+        "L'artère pulmonaire",
+        "La veine pulmonaire",
+        "L'aorte"
+      ],
+      "r": 3,
+      "x": "L'aorte est la plus grosse artère du corps, elle part du ventricule gauche et distribue le sang oxygéné aux organes. Elle se ramifie ensuite en artères plus petites dans tout l'organisme."
+    },
+    {
+      "q": "Quel type de vaisseau ramène le sang des organes vers le cœur ?",
+      "o": [
+        "L'artère",
+        "Le capillaire",
+        "La veine",
+        "L'aorte"
+      ],
+      "r": 2,
+      "x": "Les veines ramènent le sang, généralement pauvre en oxygène, des organes vers le cœur. Elles possèdent des valvules qui empêchent le reflux du sang vers le bas."
+    },
+    {
+      "q": "Quelle est la fonction des globules blancs dans le sang ?",
+      "o": [
+        "Transporter l'oxygène vers les tissus",
+        "Participer à la coagulation du sang",
+        "Transporter les nutriments digérés",
+        "Défendre l'organisme contre les infections"
+      ],
+      "r": 3,
+      "x": "Les globules blancs, ou leucocytes, constituent la principale défense immunitaire de l'organisme contre les agents infectieux. Ils sont produits dans la moelle osseuse et circulent dans tout le sang."
+    },
+    {
+      "q": "Quel élément sanguin est essentiel à la coagulation en cas de blessure ?",
+      "o": [
+        "Les globules rouges",
+        "Le plasma",
+        "Les plaquettes",
+        "Les globules blancs"
+      ],
+      "r": 2,
+      "x": "Les plaquettes s'agrègent au niveau d'une plaie et déclenchent la cascade de coagulation pour stopper le saignement. Elles forment ainsi un caillot qui referme temporairement la blessure."
+    },
+    {
+      "q": "Comment appelle-t-on la partie liquide du sang, dépourvue de cellules ?",
+      "o": [
+        "Le sérum",
+        "L'hémoglobine",
+        "Le lymphe",
+        "Le plasma"
+      ],
+      "r": 3,
+      "x": "Le plasma est la fraction liquide du sang, composée majoritairement d'eau, dans laquelle circulent les cellules sanguines. Il transporte aussi les nutriments, les déchets et de nombreuses protéines."
+    },
+    {
+      "q": "Quelle cavité cardiaque reçoit le sang oxygéné venant des poumons ?",
+      "o": [
+        "L'oreillette droite",
+        "L'oreillette gauche",
+        "Le ventricule droit",
+        "Le ventricule gauche"
+      ],
+      "r": 1,
+      "x": "Le sang oxygéné revient des poumons par les veines pulmonaires et pénètre dans l'oreillette gauche. Il passe ensuite dans le ventricule gauche avant d'être propulsé vers tout l'organisme."
+    },
+    {
+      "q": "Quel est le rôle des valves cardiaques ?",
+      "o": [
+        "Produire les battements du cœur",
+        "Filtrer les impuretés du sang",
+        "Empêcher le reflux du sang dans le mauvais sens",
+        "Fabriquer les globules rouges"
+      ],
+      "r": 2,
+      "x": "Les valves cardiaques s'ouvrent et se ferment pour assurer une circulation du sang à sens unique dans le cœur. Leur dysfonctionnement peut provoquer des souffles cardiaques ou des reflux sanguins."
+    },
+    {
+      "q": "Où sont fabriqués les globules rouges chez l'adulte ?",
+      "o": [
+        "Dans le foie",
+        "Dans la rate",
+        "Dans les poumons",
+        "Dans la moelle osseuse"
+      ],
+      "r": 3,
+      "x": "Chez l'adulte, la moelle osseuse rouge des os plats est le principal site de production des globules rouges. Ce processus, appelé érythropoïèse, est stimulé notamment par une hormone rénale."
+    },
+    {
+      "q": "Quelle maladie génétique du sang, fréquente en Afrique de l'Ouest, déforme les globules rouges en faucille ?",
+      "o": [
+        "L'hémophilie",
+        "Le diabète",
+        "L'anémie ferriprive",
+        "La drépanocytose"
+      ],
+      "r": 3,
+      "x": "La drépanocytose est une maladie héréditaire qui déforme les globules rouges, gênant leur passage dans les petits vaisseaux. Cette maladie génétique est particulièrement fréquente en Afrique de l'Ouest."
+    },
+    {
+      "q": "Quel est le rôle principal des capillaires sanguins ?",
+      "o": [
+        "Pomper le sang dans tout l'organisme",
+        "Stocker les réserves de sang",
+        "Permettre les échanges entre le sang et les tissus",
+        "Produire les cellules sanguines"
+      ],
+      "r": 2,
+      "x": "Les capillaires, très fins, permettent les échanges de gaz, de nutriments et de déchets entre le sang et les cellules. Leur paroi est suffisamment mince pour laisser passer ces substances."
+    },
+    {
+      "q": "Quel muscle assure les contractions permettant la circulation du sang dans l'organisme ?",
+      "o": [
+        "Le diaphragme",
+        "Le myocarde",
+        "Le biceps",
+        "L'intestin"
+      ],
+      "r": 1,
+      "x": "Le myocarde est le muscle cardiaque dont les contractions rythmiques propulsent le sang dans tout l'organisme. Il fonctionne de manière autonome grâce à des cellules spécialisées qui génèrent son rythme."
+    },
+    {
+      "q": "Quel paramètre mesure-t-on lors de la prise de la tension artérielle ?",
+      "o": [
+        "La quantité de globules rouges dans le sang",
+        "La pression exercée par le sang les artères",
+        "La vitesse de coagulation du sang",
+        "Le taux de glucose dans le sang"
+      ],
+      "r": 1,
+      "x": "La tension artérielle mesure la pression qu'exerce le sang sur les parois des artères lors de la circulation. Une tension trop élevée de façon prolongée fatigue le cœur et les vaisseaux."
+    },
+    {
+      "q": "Quel est le rôle du système lymphatique en lien avec la circulation sanguine ?",
+      "o": [
+        "Pomper le sang vers les poumons",
+        "Produire l'hémoglobine",
+        "Filtrer l'urine",
+        "Drainer les liquides tissulaires et participer à l'immunité"
+      ],
+      "r": 3,
+      "x": "Le système lymphatique collecte l'excès de liquide des tissus et contribue à la défense immunitaire de l'organisme. Il draine ce liquide, appelé lymphe, à travers un réseau de vaisseaux et de ganglions."
+    },
+    {
+      "q": "Quelle est la principale cause de l'hypertension artérielle chronique ?",
+      "o": [
+        "Un excès de globules blancs",
+        "Une carence en fer",
+        "Un excès de globules rouges uniquement",
+        "Un rétrécissement ou une rigidité des vaisseaux sanguins"
+      ],
+      "r": 3,
+      "x": "L'hypertension résulte souvent d'un durcissement ou d'un rétrécissement des artères, augmentant la résistance à l'écoulement du sang. Non traitée, elle augmente le risque d'accident vasculaire cérébral et de maladies cardiaques."
+    },
+    {
+      "q": "Quelle cellule est l'unité fonctionnelle de base du système nerveux ?",
+      "o": [
+        "Le neurone",
+        "Le globule rouge",
+        "La cellule musculaire",
+        "L'ostéocyte"
+      ],
+      "r": 0,
+      "x": "Le neurone est la cellule spécialisée qui reçoit, traite et transmet les messages nerveux dans l'organisme. Il communique avec d'autres neurones grâce à des prolongements appelés axone et dendrites."
+    },
+    {
+      "q": "Quel est le rôle du cerveau dans le système nerveux ?",
+      "o": [
+        "Produire les hormones digestives",
+        "Filtrer le sang",
+        "Centraliser et traiter les informations nerveuses",
+        "Fabriquer les globules blancs"
+      ],
+      "r": 2,
+      "x": "Le cerveau, centre nerveux principal, reçoit les informations sensorielles, les traite et élabore les réponses appropriées. Il est protégé par le crâne et les méninges, membranes qui l'enveloppent."
+    },
+    {
+      "q": "Comment appelle-t-on le point de connexion entre deux neurones ?",
+      "o": [
+        "L'axone",
+        "La dendrite",
+        "Le corps cellulaire",
+        "La synapse"
+      ],
+      "r": 3,
+      "x": "La synapse est la zone de contact où l'influx nerveux passe d'un neurone à un autre, souvent via des neurotransmetteurs. Ces molécules chimiques traversent l'espace synaptique pour transmettre le message."
+    },
+    {
+      "q": "Quel réflexe permet de retirer rapidement la main d'une source de chaleur, sans réflexion consciente ?",
+      "o": [
+        "Le réflexe médullaire",
+        "Le réflexe conditionné",
+        "Le réflexe cérébral",
+        "Le réflexe volontaire"
+      ],
+      "r": 0,
+      "x": "Le réflexe médullaire est une réponse rapide et involontaire, contrôlée directement par la moelle épinière sans passer par le cerveau. Cette rapidité protège l'organisme d'un danger immédiat, comme une brûlure."
+    },
+    {
+      "q": "Quelle partie du neurone conduit l'influx nerveux vers d'autres cellules ?",
+      "o": [
+        "Le noyau",
+        "Les dendrites",
+        "L'axone",
+        "Le corps cellulaire"
+      ],
+      "r": 2,
+      "x": "L'axone est le prolongement du neurone qui conduit l'influx nerveux du corps cellulaire vers les autres neurones ou organes. Il peut être entouré d'une gaine de myéline qui accélère la transmission."
+    },
+    {
+      "q": "Quel organe protège le cerveau des chocs et des infections ?",
+      "o": [
+        "La peau",
+        "Le cervelet",
+        "La moelle épinière",
+        "Le crâne et les méninges"
+      ],
+      "r": 3,
+      "x": "Le crâne, os rigide, et les méninges, membranes protectrices, entourent et protègent le cerveau des agressions extérieures. Le liquide céphalo-rachidien, situé entre les méninges, amortit également les chocs."
+    },
+    {
+      "q": "Quel système nerveux régule les fonctions involontaires comme le rythme cardiaque et la digestion ?",
+      "o": [
+        "Le système nerveux autonome",
+        "Le système nerveux somatique",
+        "Le système nerveux périphérique volontaire",
+        "Le système musculaire"
+      ],
+      "r": 0,
+      "x": "Le système nerveux autonome contrôle automatiquement les fonctions vitales, sans intervention de la volonté consciente. Il régule par exemple le rythme cardiaque, la digestion et la respiration au repos."
+    },
+    {
+      "q": "Quel neurotransmetteur est libéré au niveau de la jonction neuromusculaire pour déclencher la contraction musculaire ?",
+      "o": [
+        "L'acétylcholine",
+        "La mélatonine",
+        "L'insuline",
+        "L'adrénaline uniquement"
+      ],
+      "r": 0,
+      "x": "L'acétylcholine, libérée par le neurone moteur, se fixe sur le muscle et déclenche sa contraction. Ce neurotransmetteur est ensuite rapidement dégradé pour permettre un nouveau signal."
+    },
+    {
+      "q": "Quelle structure relie le cerveau au reste du corps et transmet les messages nerveux ?",
+      "o": [
+        "Le cervelet",
+        "La moelle épinière",
+        "L'hypothalamus",
+        "Le bulbe olfactif"
+      ],
+      "r": 1,
+      "x": "La moelle épinière, protégée par la colonne vertébrale, conduit les messages nerveux entre le cerveau et le corps. Elle assure aussi certains réflexes sans intervention directe du cerveau."
+    },
+    {
+      "q": "Quelle partie du cerveau est principalement responsable de la coordination des mouvements et de l'équilibre ?",
+      "o": [
+        "Le cortex cérébral",
+        "Le cervelet",
+        "L'hypothalamus",
+        "Le bulbe rachidien"
+      ],
+      "r": 1,
+      "x": "Le cervelet coordonne les mouvements volontaires et assure le maintien de l'équilibre du corps. Une lésion de cette structure entraîne souvent des troubles de la coordination motrice."
+    },
+    {
+      "q": "Comment appelle-t-on la vitesse à laquelle l'influx nerveux se propage le long d'un axone myélinisé ?",
+      "o": [
+        "Elle est plus lente que sur un axone non myélinisé",
+        "Elle est plus rapide grâce à la gaine de myéline",
+        "Elle est nulle sur un axone myélinisé",
+        "Elle ne dépend pas de la myéline"
+      ],
+      "r": 1,
+      "x": "La gaine de myéline isole l'axone et accélère la conduction de l'influx nerveux par saut d'un nœud à l'autre. Sa dégradation, comme dans la sclérose en plaques, ralentit fortement cette transmission."
+    },
+    {
+      "q": "Quel organe des sens transforme la lumière en signaux nerveux interprétés par le cerveau ?",
+      "o": [
+        "L'oreille",
+        "La peau",
+        "La langue",
+        "L'œil"
+      ],
+      "r": 3,
+      "x": "L'œil, grâce à la rétine, convertit les rayons lumineux en signaux nerveux transmis au cerveau par le nerf optique. C'est le cerveau qui interprète ensuite ces signaux pour former une image."
+    },
+    {
+      "q": "Quel est le rôle des dendrites d'un neurone ?",
+      "o": [
+        "Recevoir les signaux nerveux venant d'autres neurones",
+        "Conduire l'influx nerveux vers d'autres cellules",
+        "Produire l'énergie du neurone",
+        "Stocker l'information génétique du neurone"
+      ],
+      "r": 0,
+      "x": "Les dendrites sont de courts prolongements ramifiés qui reçoivent les messages nerveux issus d'autres neurones. Elles transmettent ensuite ce signal vers le corps cellulaire du neurone."
+    },
+    {
+      "q": "Quelle glande du cerveau régule de nombreuses fonctions hormonales de l'organisme ?",
+      "o": [
+        "L'hypophyse",
+        "La rate",
+        "Le pancréas",
+        "La thyroïde uniquement"
+      ],
+      "r": 0,
+      "x": "L'hypophyse, reliée à l'hypothalamus, sécrète des hormones qui contrôlent l'activité de nombreuses autres glandes du corps. On la surnomme parfois la glande maîtresse du système hormonal."
+    },
+    {
+      "q": "Quelle est la conséquence d'une lésion grave de la moelle épinière au niveau du cou ?",
+      "o": [
+        "Une amélioration de la vue",
+        "Une perte totale de l'odorat uniquement",
+        "Aucune conséquence motrice",
+        "Une paralysie"
+      ],
+      "r": 3,
+      "x": "Une lésion de la moelle épinière interrompt la transmission des messages nerveux, provoquant une paralysie sous le niveau atteint. Plus la lésion est haute sur la colonne vertébrale, plus la paralysie est étendue."
     }
   ],
   "svt_licence": [
@@ -19362,6 +21537,1657 @@ const QUESTIONS = {
       ],
       "r": 0,
       "x": "Les fils reçoivent leur X de leur MÈRE (Y du père). La mère (X^d X) transmet X^d ou X^D avec p = 1/2 chacun → parmi les FILS, 1/2 est daltonien. B = probabilité dans l'ensemble des enfants (1/4)"
+    },
+  
+    {
+      "q": "Quelle est la formule chimique du glucose ?",
+      "o": [
+        "C6H12O6",
+        "C5H10O5",
+        "C6H10O5",
+        "C12H22O11"
+      ],
+      "r": 0,
+      "x": "Le glucose (C6H12O6) est un monosaccharide hexose et le principal carburant cellulaire. Ne pas confondre avec le ribose (C5H10O5, pentose de l'ARN) ni avec le saccharose (C12H22O11, disaccharide)."
+    },
+    {
+      "q": "L'ADN est composé de combien de brins ?",
+      "o": [
+        "1 brin",
+        "2 brins",
+        "3 brins",
+        "4 brins"
+      ],
+      "r": 1,
+      "x": "L'ADN est une double hélice antiparallèle composée de deux brins complémentaires liés par des liaisons hydrogène, découverte par Watson et Crick en 1953. Les bases s'apparient selon la règle A-T (2 liaisons H) et G-C (3 liaisons H)."
+    },
+    {
+      "q": "Quel acide aminé contient du soufre ?",
+      "o": [
+        "Glycine",
+        "Alanine",
+        "Cystéine",
+        "Sérine"
+      ],
+      "r": 2,
+      "x": "La cystéine et la méthionine sont les deux seuls acides aminés standards contenant du soufre. La cystéine (groupement thiol -SH) peut former des ponts disulfure (-S-S-) qui stabilisent la structure tertiaire des protéines."
+    },
+    {
+      "q": "Le nombre d'acides aminés standard est de :",
+      "o": [
+        "18",
+        "22",
+        "24",
+        "20"
+      ],
+      "r": 3,
+      "x": "Les 20 acides aminés protéinogènes standard sont codés par les 61 codons sens du code génétique universel. On distingue les acides aminés essentiels (non synthétisés par l'organisme) des non-essentiels."
+    },
+    {
+      "q": "Quelle vitamine est synthétisée par la peau sous l'action des UV ?",
+      "o": [
+        "Vitamine D",
+        "Vitamine A",
+        "Vitamine E",
+        "Vitamine C"
+      ],
+      "r": 0,
+      "x": "La vitamine D3 (cholécalciférol) est synthétisée dans la peau à partir du 7-déhydrocholestérol sous l'action des rayons UVB (290-315 nm). Elle est ensuite hydroxylée dans le foie (25-OH-D3) puis dans les reins pour donner la forme active (calcitriol, 1,25-dihydroxycholécalciférol)."
+    },
+    {
+      "q": "L'enzyme responsable de la réplication de l'ADN est :",
+      "o": [
+        "L'ARN polymérase",
+        "L'ADN polymérase",
+        "La ligase",
+        "L'hélicase"
+      ],
+      "r": 1,
+      "x": "L'ADN polymérase III est l'enzyme principale de la réplication procaryote ; les ADN polymérases δ et ε assurent cette fonction chez les eucaryotes. L'hélicase déroule la double hélice en amont et l'ADN polymérase synthétise toujours dans le sens 5'→3'."
+    },
+    {
+      "q": "Le codon d'initiation de la traduction est :",
+      "o": [
+        "UAG",
+        "UGA",
+        "UAA",
+        "AUG"
+      ],
+      "r": 3,
+      "x": "AUG est le codon initiateur universel codant pour la méthionine (formyl-méthionine chez les procaryotes) et sert de signal de démarrage de la synthèse protéique. UAG, UAA et UGA sont les trois codons stop qui terminent la traduction sans incorporer d'acide aminé."
+    },
+    {
+      "q": "La liaison qui unit les nucléotides dans l'ADN est :",
+      "o": [
+        "Liaison hydrogène",
+        "Liaison peptidique",
+        "Liaison phosphodiester",
+        "Liaison ionique"
+      ],
+      "r": 2,
+      "x": "La liaison phosphodiester unit le groupement phosphate en 5' d'un nucléotide au groupement hydroxyle en 3' du nucléotide suivant, formant l'ossature sucre-phosphate des acides nucléiques. Les liaisons hydrogène, elles, unissent les bases complémentaires des deux brins."
+    },
+    {
+      "q": "Combien de liaisons hydrogène existent entre A et T ?",
+      "o": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "r": 1,
+      "x": "L'adénine (A) et la thymine (T) forment 2 liaisons hydrogène, tandis que la guanine (G) et la cytosine (C) en forment 3. Un contenu en G-C élevé augmente la température de dénaturation (Tm) de l'ADN."
+    },
+    {
+      "q": "Le site actif d'une enzyme est :",
+      "o": [
+        "Le site de fixation du substrat",
+        "Le site de fixation du cofacteur",
+        "Le site de régulation allostérique",
+        "Le site de dénaturation"
+      ],
+      "r": 0,
+      "x": "Le site actif est la région tridimensionnelle de l'enzyme où le substrat se fixe spécifiquement (modèle de l'ajustement induit) pour former le complexe enzyme-substrat (ES). La catalyse enzymatique abaisse l'énergie d'activation de la réaction sans être consommée."
+    },
+    {
+      "q": "La constante de Michaelis (Km) représente :",
+      "o": [
+        "La vitesse maximale de l'enzyme",
+        "L'activité spécifique de l'enzyme",
+        "Le pH optimal de l'enzyme",
+        "La concentration de substrat pour V = Vmax/2"
+      ],
+      "r": 3,
+      "x": "Le Km est la concentration en substrat à laquelle la vitesse de la réaction est égale à la moitié de la Vmax. Un Km faible indique une haute affinité de l'enzyme pour son substrat ; il est utilisé pour comparer l'affinité de différentes enzymes ou d'un même enzyme pour différents substrats."
+    },
+    {
+      "q": "Quelle est la fonction principale du NADH ?",
+      "o": [
+        "Transport d'électrons",
+        "Stockage d'énergie",
+        "Synthèse protéique",
+        "Réplication de l'ADN"
+      ],
+      "r": 0,
+      "x": "Le NADH (nicotinamide adénine dinucléotide réduit) cède ses électrons au complexe I de la chaîne respiratoire mitochondriale, contribuant à la création du gradient de protons nécessaire à la synthèse d'ATP. Chaque NADH produit environ 2,5 ATP lors de la phosphorylation oxydative."
+    },
+    {
+      "q": "Le cholestérol appartient à la famille des :",
+      "o": [
+        "Glucides",
+        "Protéines",
+        "Lipides",
+        "Acides nucléiques"
+      ],
+      "r": 2,
+      "x": "Le cholestérol est un stérol (stéroïde à groupement hydroxyle) appartenant à la famille des lipides. Il est indispensable à la structure des membranes plasmiques et constitue le précurseur des hormones stéroïdiennes, des acides biliaires et de la vitamine D."
+    },
+    {
+      "q": "L'urée est principalement éliminée par :",
+      "o": [
+        "Les poumons",
+        "La peau",
+        "Le foie",
+        "Les reins"
+      ],
+      "r": 3,
+      "x": "L'urée est synthétisée dans le foie par le cycle de l'urée à partir de l'ammoniac issu du catabolisme des acides aminés. Filtrée par le glomérule rénal et partiellement réabsorbée dans les tubules, elle est éliminée dans l'urine comme principal déchet azoté."
+    },
+    {
+      "q": "La dénaturation d'une protéine affecte :",
+      "o": [
+        "Sa structure primaire",
+        "Ses structures secondaire et tertiaire",
+        "Uniquement sa structure quaternaire",
+        "Sa séquence d'acides aminés"
+      ],
+      "r": 1,
+      "x": "La dénaturation rompt les liaisons non covalentes (liaisons H, ioniques, interactions hydrophobes) stabilisant les structures secondaire et tertiaire, entraînant le dépliement de la protéine et la perte de son activité biologique. La structure primaire (liaisons peptidiques covalentes) est préservée."
+    },
+    {
+      "q": "Le ribose diffère du désoxyribose par :",
+      "o": [
+        "Le nombre de carbones",
+        "La présence d'un groupe OH en position 2'",
+        "La présence d'un groupe phosphate",
+        "Sa configuration stéréochimique"
+      ],
+      "r": 1,
+      "x": "Le désoxyribose (présent dans l'ADN) ne possède pas de groupement hydroxyle (-OH) en position 2' contrairement au ribose (présent dans l'ARN). Cette différence confère à l'ADN une plus grande stabilité chimique, car l'hydroxyle en 2' du ribose rend l'ARN susceptible à l'autohydrolyse."
+    },
+    {
+      "q": "Quel ion est essentiel pour l'activité de nombreuses enzymes ?",
+      "o": [
+        "Mg2+",
+        "Na+",
+        "K+",
+        "Cl-"
+      ],
+      "r": 0,
+      "x": "Le magnésium (Mg2+) est un cofacteur ionique indispensable à plus de 300 enzymes, dont les kinases (phosphorylation de l'ATP), les ADN et ARN polymérases. Il stabilise également les structures des acides nucléiques en neutralisant les charges négatives des groupements phosphates."
+    },
+    {
+      "q": "La glycémie normale à jeun est approximativement :",
+      "o": [
+        "0,5-0,7 g/L",
+        "1,1-1,5 g/L",
+        "1,5-2,0 g/L",
+        "0,7-1,1 g/L"
+      ],
+      "r": 3,
+      "x": "La glycémie normale à jeun est comprise entre 0,70 et 1,10 g/L (3,9-6,1 mmol/L) ; un taux ≥ 1,26 g/L confirmé à deux reprises signe un diabète sucré. L'insuline (cellules β) et le glucagon (cellules α) du pancréas régulent cet équilibre glycémique de manière antagoniste."
+    },
+    {
+      "q": "L'hémoglobine glyquée (HbA1c) reflète :",
+      "o": [
+        "La glycémie instantanée",
+        "La glycémie de la semaine passée",
+        "La glycémie des 2-3 derniers mois",
+        "La glycémie postprandiale"
+      ],
+      "r": 2,
+      "x": "L'HbA1c est formée par glycation non enzymatique de l'hémoglobine et reflète la glycémie moyenne des 2 à 3 derniers mois, correspondant à la durée de vie des érythrocytes (≈ 120 jours). Un objectif thérapeutique < 7% est visé chez le diabétique bien équilibré."
+    },
+    {
+      "q": "Le facteur intrinsèque est nécessaire pour l'absorption de :",
+      "o": [
+        "La vitamine B1",
+        "La vitamine B6",
+        "La vitamine B2",
+        "La vitamine B12"
+      ],
+      "r": 3,
+      "x": "Le facteur intrinsèque, glycoprotéine sécrétée par les cellules pariétales de l'estomac, se fixe à la vitamine B12 pour former un complexe absorbé dans l'iléon terminal. Son absence (gastrite atrophique, gastrectomie) provoque une anémie pernicieuse par carence en B12."
+    },
+    {
+      "q": "La créatinine est un marqueur de :",
+      "o": [
+        "La fonction hépatique",
+        "La fonction rénale",
+        "La fonction cardiaque",
+        "La fonction pulmonaire"
+      ],
+      "r": 1,
+      "x": "La créatinine est un déchet du métabolisme de la créatine musculaire, produite à un rythme constant et filtrée par le glomérule rénal. Son taux plasmatique est inversement proportionnel au débit de filtration glomérulaire (DFG), ce qui en fait un marqueur fiable de la fonction rénale."
+    },
+    {
+      "q": "L'albumine est synthétisée dans :",
+      "o": [
+        "Le foie",
+        "Les reins",
+        "La rate",
+        "Les muscles"
+      ],
+      "r": 0,
+      "x": "L'albumine, principale protéine plasmatique (environ 60% des protéines totales), est exclusivement synthétisée par le foie. Elle assure le maintien de la pression oncotique et transporte de nombreuses substances (acides gras, bilirubine, médicaments) ; une hypoalbuminémie témoigne souvent d'une insuffisance hépatocellulaire."
+    },
+    {
+      "q": "Le pH sanguin est maintenu principalement par le système tampon :",
+      "o": [
+        "Phosphate",
+        "Bicarbonate",
+        "Protéique",
+        "Acétate"
+      ],
+      "r": 1,
+      "x": "Le système HCO₃⁻/H₂CO₃ est le principal tampon extracellulaire car il est doublement régulé : les poumons contrôlent la PCO₂ et les reins contrôlent la bicarbonatémie. Cette régulation coordonnée lui confère une grande efficacité malgré un pKa (6,1) éloigné du pH sanguin de 7,40."
+    },
+    {
+      "q": "La bilirubine provient de la dégradation de :",
+      "o": [
+        "La myoglobine",
+        "L'albumine",
+        "L'hémoglobine",
+        "La transferrine"
+      ],
+      "r": 2,
+      "x": "La bilirubine est formée lors de la dégradation des globules rouges sénescents : l'hème est clivé en biliverdine puis réduit en bilirubine libre. Elle est ensuite conjuguée au glucuronate dans le foie avant d'être excrétée dans la bile ; son accumulation cause l'ictère."
+    },
+    {
+      "q": "L'enzyme ALT (ALAT) est spécifique de :",
+      "o": [
+        "Le cœur",
+        "Les muscles",
+        "Les reins",
+        "Le foie"
+      ],
+      "r": 3,
+      "x": "L'ALAT (alanine aminotransférase) est une transaminase présente en grande quantité dans les hépatocytes, libérée dans le sang lors de leur destruction (cytolyse hépatique). Son élévation est un marqueur sensible et relativement spécifique d'atteinte hépatique (hépatites virales, médicamenteuses, alcoolique)."
+    },
+    {
+      "q": "Le test de tolérance au glucose explore :",
+      "o": [
+        "La fonction rénale",
+        "La fonction hépatique",
+        "Le métabolisme glucidique",
+        "La fonction thyroïdienne"
+      ],
+      "r": 2,
+      "x": "Le test de tolérance au glucose (HGPO : 75 g de glucose par voie orale) évalue la capacité de l'organisme à réguler la glycémie après une charge glucidique. Une glycémie ≥ 2 g/L (11,1 mmol/L) à 2 heures confirme un diabète sucré, et entre 1,4 et 2 g/L signe une intolérance au glucose."
+    },
+    {
+      "q": "La protéine C-réactive (CRP) est un marqueur de :",
+      "o": [
+        "L'inflammation",
+        "L'infection virale",
+        "La fonction rénale",
+        "L'anémie"
+      ],
+      "r": 0,
+      "x": "La CRP est une protéine de la phase aiguë de l'inflammation synthétisée par le foie sous l'effet de l'IL-6 ; elle peut augmenter de plus de 1000 fois en 24-48 heures lors d'un processus infectieux ou inflammatoire. C'est un marqueur sensible mais non spécifique, utilisé pour le suivi de nombreuses pathologies."
+    },
+    {
+      "q": "Le cholestérol HDL est considéré comme :",
+      "o": [
+        "Le \"mauvais\" cholestérol",
+        "Le \"bon\" cholestérol",
+        "Neutre pour la santé",
+        "Toxique à toute concentration"
+      ],
+      "r": 1,
+      "x": "Les HDL (High Density Lipoproteins) captent le cholestérol en excès dans les tissus périphériques et le ramènent vers le foie pour élimination (transport inverse du cholestérol). Un taux élevé de HDL-cholestérol est associé à un risque cardiovasculaire réduit, tandis qu'un taux bas est un facteur de risque athérogène."
+    },
+    {
+      "q": "La troponine est un marqueur spécifique de :",
+      "o": [
+        "L'insuffisance rénale",
+        "L'hépatite",
+        "La pancréatite",
+        "L'infarctus du myocarde"
+      ],
+      "r": 3,
+      "x": "Les troponines cardiaques I (cTnI) et T (cTnT) sont libérées dans le sang lors de la nécrose des cardiomyocytes et s'élèvent dans les 3 à 6 heures suivant un infarctus du myocarde. Leur haute spécificité cardiaque en fait les biomarqueurs de référence des syndromes coronariens aigus."
+    },
+    {
+      "q": "L'acide urique provient du métabolisme des :",
+      "o": [
+        "Purines",
+        "Glucides",
+        "Lipides",
+        "Pyrimidines"
+      ],
+      "r": 0,
+      "x": "L'acide urique est le produit terminal du catabolisme des bases puriques (adénine et guanine) via la xanthine oxydase dans le foie. Une hyperuricémie peut conduire à la goutte (dépôts de cristaux d'urate monosodique dans les articulations) ou à des lithiases rénales."
+    },
+    {
+      "q": "La ferritine est un marqueur de :",
+      "o": [
+        "Les réserves en fer",
+        "L'inflammation",
+        "L'anémie",
+        "La fonction hépatique"
+      ],
+      "r": 0,
+      "x": "La ferritine est la principale protéine de stockage intracellulaire du fer ; sa concentration sérique reflète les réserves ferritines de l'organisme. Une ferritinémie basse signe une carence en fer, tandis qu'une valeur élevée peut témoigner d'une surcharge ferrique (hémochromatose) ou d'un syndrome inflammatoire."
+    },
+    {
+      "q": "Le dosage des D-dimères est utilisé pour :",
+      "o": [
+        "Diagnostiquer l'anémie",
+        "Diagnostiquer le diabète",
+        "Exclure une thrombose",
+        "Évaluer la fonction rénale"
+      ],
+      "r": 2,
+      "x": "Les D-dimères sont des fragments de fibrine produits lors de la dégradation d'un caillot par la plasmine. Leur valeur diagnostique réside dans leur valeur prédictive négative : un taux normal permet d'exclure une embolie pulmonaire ou une thrombose veineuse profonde avec une grande fiabilité."
+    },
+    {
+      "q": "La lactatémie s'élève en cas de :",
+      "o": [
+        "Hyperglycémie",
+        "Hypercholestérolémie",
+        "Hypocalcémie",
+        "Hypoxie tissulaire"
+      ],
+      "r": 3,
+      "x": "Le lactate s'accumule lorsque l'apport en oxygène est insuffisant pour les besoins métaboliques (choc, hypoxie sévère), forçant le recours à la glycolyse anaérobie. Une lactatémie > 2 mmol/L évoque une hypoperfusion tissulaire et > 5 mmol/L est associée à une mortalité élevée."
+    },
+    {
+      "q": "L'ammoniaque est détoxifiée en :",
+      "o": [
+        "Acide urique",
+        "Créatinine",
+        "Urée",
+        "Bilirubine"
+      ],
+      "r": 2,
+      "x": "L'ammoniac (NH₃/NH₄⁺), issu du catabolisme des acides aminés et de l'activité bactérienne intestinale, est transformé en urée non toxique par le cycle de l'urée hépatique. Une insuffisance hépatique grave entraîne une hyperammoniémie responsable d'encéphalopathie hépatique."
+    },
+    {
+      "q": "La thyroglobuline est un marqueur de :",
+      "o": [
+        "La fonction thyroïdienne",
+        "L'hyperthyroïdie",
+        "Le cancer thyroïdien",
+        "L'hypothyroïdie"
+      ],
+      "r": 2,
+      "x": "La thyroglobuline est la protéine de stockage des hormones thyroïdiennes dans les follicules thyroïdiens. Après thyroïdectomie totale pour cancer différencié de la thyroïde, toute réascension de son taux sérique signe une récidive ou des métastases."
+    },
+    {
+      "q": "Le peptide C est co-sécrété avec :",
+      "o": [
+        "L'insuline",
+        "Le glucagon",
+        "Le cortisol",
+        "L'hormone de croissance"
+      ],
+      "r": 0,
+      "x": "Le peptide C est libéré en quantité équimolaire avec l'insuline lors du clivage de la pro-insuline par les cellules β pancréatiques. Son dosage reflète fidèlement la sécrétion endogène d'insuline (contrairement à l'insuline exogène injectée), notamment utile chez les diabétiques sous insulinothérapie."
+    },
+    {
+      "q": "La calcitonine est sécrétée par :",
+      "o": [
+        "Les parathyroïdes",
+        "Les surrénales",
+        "Le pancréas",
+        "La thyroïde"
+      ],
+      "r": 3,
+      "x": "La calcitonine est sécrétée par les cellules parafolliculaires (cellules C) de la thyroïde en réponse à l'hypercalcémie ; elle freine la résorption osseuse ostéoclastique. Son dosage sérique est utilisé comme marqueur tumoral du cancer médullaire de la thyroïde."
+    },
+    {
+      "q": "L'hormone parathyroïdienne (PTH) régule :",
+      "o": [
+        "La glycémie",
+        "La calcémie",
+        "La natrémie",
+        "La kaliémie"
+      ],
+      "r": 1,
+      "x": "La PTH, sécrétée par les glandes parathyroïdes en réponse à l'hypocalcémie, augmente la calcémie en stimulant la résorption osseuse, la réabsorption tubulaire rénale du calcium et l'activation de la vitamine D (favorisant l'absorption intestinale de Ca²⁺). Un hyperparathyroïdisme est une cause fréquente d'hypercalcémie."
+    },
+    {
+      "q": "Le cortisol est sécrété par :",
+      "o": [
+        "La médullosurrénale",
+        "L'hypophyse",
+        "Le cortex surrénalien",
+        "La thyroïde"
+      ],
+      "r": 2,
+      "x": "Le cortisol est le principal glucocorticoïde humain, synthétisé par la zone fasciculée du cortex surrénalien sous le contrôle de l'ACTH hypophysaire. Il exerce des effets anti-inflammatoires, immunosuppresseurs, hyperglycémiants (néoglucogenèse) et cataboliques sur les protéines musculaires."
+    },
+    {
+      "q": "L'aldostérone régule principalement :",
+      "o": [
+        "La glycémie",
+        "Le métabolisme lipidique",
+        "La fonction thyroïdienne",
+        "L'équilibre hydro-électrolytique"
+      ],
+      "r": 3,
+      "x": "L'aldostérone, minéralocorticoïde sécrété par la zone glomérulée du cortex surrénalien, agit sur le tubule distal et le tube collecteur rénal pour augmenter la réabsorption de Na⁺ et l'excrétion de K⁺. Elle est principalement régulée par l'angiotensine II (système rénine-angiotensine-aldostérone), contrôlant ainsi la volémie et la pression artérielle."
+    },
+    {
+      "q": "La prolactine est sécrétée par :",
+      "o": [
+        "L'hypothalamus",
+        "L'hypophyse antérieure",
+        "L'hypophyse postérieure",
+        "Les ovaires"
+      ],
+      "r": 1,
+      "x": "La prolactine est synthétisée par les cellules lactotropes de l'adénohypophyse (hypophyse antérieure) et est régulée négativement par la dopamine hypothalamique. Elle stimule la lactogenèse après l'accouchement et inhibe les fonctions gonadiques ; une hyperprolactinémie peut causer aménorrhée et infertilité."
+    },
+    {
+      "q": "L'hormone de croissance (GH) stimule :",
+      "o": [
+        "La croissance et l'anabolisme",
+        "Uniquement la croissance osseuse",
+        "La sécrétion d'insuline",
+        "La fonction thyroïdienne"
+      ],
+      "r": 0,
+      "x": "La GH (growth hormone/somatotropine) stimule la croissance linéaire via l'IGF-1 hépatique et exerce des effets anaboliques protéiques, lipolytiques et hyperglycémiants sur de nombreux tissus. Ses effets somatomèdes passent principalement par l'IGF-1, tandis que ses effets métaboliques directs agissent indépendamment."
+    },
+    {
+      "q": "L'IGF-1 (facteur de croissance insuline-like) est produit par :",
+      "o": [
+        "L'hypophyse",
+        "Le foie",
+        "Les muscles",
+        "Les os"
+      ],
+      "r": 1,
+      "x": "L'IGF-1 est synthétisé principalement par le foie sous la stimulation de la GH hypophysaire. Il médie les effets de croissance de la GH sur le squelette et les muscles et son dosage est utilisé comme marqueur indirect de la sécrétion de GH (plus stable que la GH elle-même)."
+    },
+    {
+      "q": "La TSH stimule :",
+      "o": [
+        "Les surrénales",
+        "Les parathyroïdes",
+        "Le pancréas",
+        "La thyroïde"
+      ],
+      "r": 3,
+      "x": "La TSH (Thyroid Stimulating Hormone), sécrétée par l'hypophyse antérieure sous le contrôle de la TRH hypothalamique, stimule la captation d'iode, la synthèse de thyroglobuline et la sécrétion de T3 et T4 par les thyréocytes. Un TSH élevé signe une hypothyroïdie ; un TSH bas signe une hyperthyroïdie."
+    },
+    {
+      "q": "La T3 est :",
+      "o": [
+        "Plus active que la T4",
+        "Moins active que la T4",
+        "Identique à la T4",
+        "Sans activité biologique"
+      ],
+      "r": 0,
+      "x": "La T3 (triiodothyronine) est 3 à 4 fois plus active que la T4 (thyroxine) car elle se lie avec une plus grande affinité aux récepteurs nucléaires des hormones thyroïdiennes. La T3 est produite en majorité par désiodation périphérique de la T4 dans les tissus cibles (foie, reins, muscles)."
+    },
+    {
+      "q": "L'insuline est sécrétée par :",
+      "o": [
+        "Les cellules α du pancréas",
+        "Les cellules β du pancréas",
+        "Les cellules δ du pancréas",
+        "Le foie"
+      ],
+      "r": 1,
+      "x": "L'insuline est sécrétée exclusivement par les cellules β des îlots de Langerhans en réponse à l'hyperglycémie postprandiale. Elle favorise le transport cellulaire du glucose (via GLUT4 dans les muscles et adipocytes), la glycogénèse et la lipogenèse, tout en inhibant la glycogénolyse et la néoglucogenèse."
+    },
+    {
+      "q": "Le glucagon a un effet :",
+      "o": [
+        "Hypoglycémiant",
+        "Neutre sur la glycémie",
+        "Hyperglycémiant",
+        "Variable selon les conditions"
+      ],
+      "r": 2,
+      "x": "Le glucagon, sécrété par les cellules α des îlots de Langerhans en réponse à l'hypoglycémie, stimule la glycogénolyse hépatique et la néoglucogenèse via l'AMPc et la PKA, libérant du glucose dans la circulation. Il est l'hormone antagoniste de l'insuline dans la régulation de la glycémie."
+    },
+    {
+      "q": "L'adrénaline est sécrétée par :",
+      "o": [
+        "Le cortex surrénalien",
+        "La médullosurrénale",
+        "L'hypophyse",
+        "La thyroïde"
+      ],
+      "r": 1,
+      "x": "L'adrénaline (épinéphrine) est une catécholamine synthétisée par les cellules chromaffines de la médullosurrénale à partir de la noradrénaline via la PNMT. Libérée lors du stress (réaction de fuite ou combat), elle provoque tachycardie, bronchodilatation, hyperglycémie et vasoconstriction."
+    },
+    {
+      "q": "La noradrénaline a principalement un effet :",
+      "o": [
+        "Chronotrope positif",
+        "Inotrope positif",
+        "Vasoconstricteur",
+        "Bronchodilatateur"
+      ],
+      "r": 2,
+      "x": "La noradrénaline agit préférentiellement sur les récepteurs α-adrénergiques (vasoconstriction artériolaire) et β1-adrénergiques (effets cardiaques modérés). Sa principale action physiologique est une vasoconstriction périphérique augmentant les résistances vasculaires et la pression artérielle."
+    },
+    {
+      "q": "L'ocytocine est sécrétée par :",
+      "o": [
+        "L'hypophyse antérieure",
+        "L'hypothalamus",
+        "Les ovaires",
+        "L'hypophyse postérieure"
+      ],
+      "r": 3,
+      "x": "L'ocytocine est synthétisée dans les noyaux paraventriculaires et supraoptiques de l'hypothalamus, puis transportée et stockée dans les terminaisons nerveuses de la neurohypophyse (hypophyse postérieure). Elle est libérée lors de l'accouchement (contractions utérines) et de la tétée (éjection du lait)."
+    },
+    {
+      "q": "La ghréline est sécrétée par :",
+      "o": [
+        "L'estomac",
+        "L'intestin grêle",
+        "Le pancréas",
+        "Le foie"
+      ],
+      "r": 0,
+      "x": "La ghréline est une hormone peptidique sécrétée principalement par les cellules oxyntiques du fundus gastrique ; elle stimule l'appétit et est appelée \"hormone de la faim\". Son taux augmente avant les repas et diminue après l'ingestion de nourriture, jouant un rôle clé dans la régulation de la prise alimentaire."
+    },
+    {
+      "q": "Les catécholamines incluent :",
+      "o": [
+        "Adrénaline et noradrénaline uniquement",
+        "Adrénaline, noradrénaline et dopamine",
+        "Uniquement l'adrénaline",
+        "Cortisol et aldostérone"
+      ],
+      "r": 1,
+      "x": "Les catécholamines comprennent la dopamine, la noradrénaline et l'adrénaline. Elles sont synthétisées à partir de la tyrosine. L'adrénaline est principalement produite par la médullosurrénale, tandis que la dopamine et la noradrénaline sont également produites par certains neurones."
+    },
+    {
+      "q": "La testostérone est produite par :",
+      "o": [
+        "L'hypophyse",
+        "La prostate",
+        "Les cellules de Leydig",
+        "Les vésicules séminales"
+      ],
+      "r": 2,
+      "x": "Les cellules de Leydig, situées dans l'interstitium testiculaire, produisent la testostérone sous la stimulation de la LH hypophysaire. La testostérone est indispensable au développement des caractères sexuels secondaires masculins, à la spermatogenèse et au maintien de la libido."
+    },
+    {
+      "q": "Les œstrogènes sont produits par :",
+      "o": [
+        "L'hypophyse uniquement",
+        "L'utérus",
+        "Les glandes mammaires",
+        "Les follicules ovariens"
+      ],
+      "r": 3,
+      "x": "Les œstrogènes (estradiol, estriol, estrone) sont principalement synthétisés par les cellules de la granulosa des follicules ovariens sous la stimulation de la FSH. Ils régulent le cycle menstruel, préparent l'endomètre à la nidation et maintiennent les caractères sexuels secondaires féminins."
+    },
+    {
+      "q": "La progestérone est principalement sécrétée par :",
+      "o": [
+        "Le corps jaune",
+        "Les follicules ovariens",
+        "L'endomètre",
+        "Le placenta"
+      ],
+      "r": 0,
+      "x": "Le corps jaune, formé après l'ovulation à partir des cellules de la granulosa et de la thèque lutéinisées, est la principale source de progestérone durant la phase lutéale. En l'absence de fécondation, il régresse (lutéolyse) ; en cas de grossesse, il est maintenu par l'hCG placentaire."
+    },
+    {
+      "q": "La FSH stimule chez la femme :",
+      "o": [
+        "L'ovulation",
+        "Le développement folliculaire",
+        "La sécrétion de progestérone",
+        "La menstruation"
+      ],
+      "r": 1,
+      "x": "La FSH (hormone folliculo-stimulante) hypophysaire stimule la croissance et la maturation des follicules ovariens ainsi que la production d'œstrogènes par les cellules de la granulosa. Elle agit en synergie avec la LH pour assurer le bon déroulement du cycle ovarien."
+    },
+    {
+      "q": "La LH déclenche chez la femme :",
+      "o": [
+        "La menstruation",
+        "Le développement folliculaire",
+        "L'ovulation",
+        "La sécrétion d'œstrogènes"
+      ],
+      "r": 2,
+      "x": "Le pic de LH (hormone lutéinisante) en milieu de cycle, déclenché par le rétrocontrôle positif des œstrogènes, provoque la rupture du follicule mûr et la libération de l'ovocyte (ovulation). Il initie également la lutéinisation des cellules folliculaires pour former le corps jaune sécréteur de progestérone."
+    },
+    {
+      "q": "L'enzyme qui convertit l'angiotensine I en angiotensine II est :",
+      "o": [
+        "La rénine",
+        "L'angiotensinogène",
+        "L'aldostérone synthase",
+        "L'enzyme de conversion (ACE)"
+      ],
+      "r": 3,
+      "x": "L'enzyme de conversion de l'angiotensine (ACE), principalement exprimée dans les cellules endothéliales pulmonaires, convertit l'angiotensine I (décapeptide) en angiotensine II (octapeptide) actif. L'angiotensine II est un puissant vasoconstricteur et stimule la sécrétion d'aldostérone par les surrénales."
+    },
+    {
+      "q": "Le système rénine-angiotensine-aldostérone régule :",
+      "o": [
+        "La pression artérielle",
+        "La glycémie",
+        "La calcémie",
+        "La thyroïde"
+      ],
+      "r": 0,
+      "x": "Le système rénine-angiotensine-aldostérone (SRAA) est un axe hormonal essentiel à l'homéostasie tensionnelle et à l'équilibre hydro-électrolytique. La rénine rénale convertit l'angiotensinogène en angiotensine I, transformée en angiotensine II (vasoconstrictrice) qui stimule l'aldostérone (réabsorption sodée rénale)."
+    },
+    {
+      "q": "L'érythropoïétine est produite par :",
+      "o": [
+        "La moelle osseuse",
+        "Les reins",
+        "Le foie",
+        "La rate"
+      ],
+      "r": 1,
+      "x": "L'érythropoïétine (EPO) est produite à plus de 90% par les cellules péritubulaires des reins en réponse à l'hypoxie tissulaire. Elle stimule l'érythropoïèse médullaire (prolifération et différenciation des progéniteurs érythroïdes) et est utilisée en thérapeutique dans les anémies d'insuffisance rénale chronique."
+    },
+    {
+      "q": "La vitamine D active (calcitriol) est produite par :",
+      "o": [
+        "La peau",
+        "Le foie",
+        "Les reins",
+        "L'intestin"
+      ],
+      "r": 2,
+      "x": "Le calcitriol (1,25-dihydroxyvitamine D3) est produit par la 1α-hydroxylase des cellules tubulaires proximales rénales à partir du 25-OH-vitamine D3 (calcidiol hépatique). Il régule l'absorption intestinale du calcium et du phosphore, est indispensable à la minéralisation osseuse et son déficit entraîne le rachitisme/ostéomalacie."
+    },
+    {
+      "q": "Le BNP (peptide natriurétique) est sécrété par :",
+      "o": [
+        "Les reins",
+        "Le foie",
+        "Les poumons",
+        "Le cœur"
+      ],
+      "r": 3,
+      "x": "Le BNP (B-type Natriuretic Peptide) est sécrété par les cardiomyocytes ventriculaires en réponse à l'augmentation des pressions et du volume intracavitaire. Son taux s'élève en cas d'insuffisance cardiaque et il exerce des effets natriurétiques, vasodilatateurs et antagonistes du SRAA ; son dosage est utilisé pour le diagnostic et le suivi de l'insuffisance cardiaque."
+    },
+    {
+      "q": "L'inhibine est produite par :",
+      "o": [
+        "Les gonades",
+        "L'hypophyse",
+        "Les surrénales",
+        "La thyroïde"
+      ],
+      "r": 0,
+      "x": "L'inhibine (A et B) est produite par les cellules de la granulosa ovarienne et les cellules de Sertoli testiculaires. Elle exerce un rétrocontrôle négatif sélectif sur la sécrétion hypophysaire de FSH, régulant ainsi la gamétogenèse ; un dosage de l'inhibine B est utile pour évaluer la réserve ovarienne."
+    },
+    {
+      "q": "L'activine a un effet :",
+      "o": [
+        "Identique à l'inhibine",
+        "Opposé à l'inhibine",
+        "Sur la glycémie",
+        "Sur la calcémie"
+      ],
+      "r": 1,
+      "x": "L'activine, appartenant à la famille du TGF-β, stimule la sécrétion de FSH par l'hypophyse, contrairement à l'inhibine qui l'inhibe. Ce couple inhibine/activine constitue un système de régulation locale et endocrine fine de la fonction gonadique."
+    },
+    {
+      "q": "La relaxine est sécrétée pendant :",
+      "o": [
+        "La puberté",
+        "La ménopause",
+        "La grossesse",
+        "Les règles"
+      ],
+      "r": 2,
+      "x": "La relaxine est sécrétée par le corps jaune de grossesse et le placenta. Elle induit le ramollissement et l'assouplissement des ligaments pelviens et du col utérin pour faciliter l'accouchement, et inhibe les contractions utérines prématurées."
+    },
+    {
+      "q": "L'hormone placentaire hCG est détectée :",
+      "o": [
+        "Dès la fécondation",
+        "Au 2e trimestre uniquement",
+        "Seulement à l'accouchement",
+        "Dès l'implantation"
+      ],
+      "r": 3,
+      "x": "L'hCG (gonadotrophine chorionique humaine) est produite par le trophoblaste dès l'implantation de l'embryon (8-10 jours après la fécondation) et constitue la base des tests de grossesse. Elle maintient le corps jaune actif jusqu'à ce que le placenta prenne le relais de la production de progestérone (vers 8-10 semaines de gestation)."
+    },
+    {
+      "q": "La somatomédine C est :",
+      "o": [
+        "L'IGF-1",
+        "L'hormone de croissance",
+        "La prolactine",
+        "La TSH"
+      ],
+      "r": 0,
+      "x": "La somatomédine C est l'ancien nom de l'IGF-1 (Insulin-like Growth Factor-1), produite principalement par le foie sous stimulation de la GH. Elle médie les effets de croissance de la GH et son dosage est plus stable que celui de la GH elle-même, ce qui en fait un marqueur utile de l'activité somatotrope."
+    },
+    {
+      "q": "L'enzyme responsable de la synthèse de l'adrénaline à partir de la noradrénaline est :",
+      "o": [
+        "La tyrosine hydroxylase",
+        "La phényléthanolamine N-méthyltransférase",
+        "La DOPA décarboxylase",
+        "La monoamine oxydase"
+      ],
+      "r": 1,
+      "x": "La PNMT (phényléthanolamine N-méthyltransférase) est une enzyme présente dans les cellules chromaffines de la médullosurrénale qui méthyle la noradrénaline pour former l'adrénaline. La tyrosine hydroxylase est la première enzyme de la voie (tyrosine → L-DOPA) et représente l'étape limitante de la biosynthèse des catécholamines."
+    },
+    {
+      "q": "La demi-vie de l'insuline dans la circulation est d'environ :",
+      "o": [
+        "2-3 minutes",
+        "30 minutes",
+        "5-10 minutes",
+        "2 heures"
+      ],
+      "r": 2,
+      "x": "La courte demi-vie de l'insuline (5-10 minutes) permet une régulation rapide et précise de la glycémie postprandiale. Elle est principalement dégradée par l'insulinase hépatique (50%) et rénale (30-40%), ce qui explique l'accumulation d'insuline et le risque d'hypoglycémie en cas d'insuffisance rénale chez le diabétique."
+    },
+    {
+      "q": "Le récepteur de l'insuline est :",
+      "o": [
+        "Un récepteur à 7 domaines transmembranaires",
+        "Un récepteur nucléaire",
+        "Un canal ionique",
+        "Un récepteur à activité tyrosine kinase"
+      ],
+      "r": 3,
+      "x": "Le récepteur de l'insuline est un récepteur transmembranaire hétérotétramère (α₂β₂) à activité tyrosine kinase intrinsèque. La liaison de l'insuline déclenche l'autophosphorylation du récepteur → activation de la voie PI3K/Akt → translocation des transporteurs GLUT4 à la membrane → entrée cellulaire du glucose."
+    },
+    {
+      "q": "L'effet Somogyi se caractérise par :",
+      "o": [
+        "Une hyperglycémie matinale réactionnelle",
+        "Une hypoglycémie nocturne",
+        "Une cétose diabétique",
+        "Une résistance à l'insuline"
+      ],
+      "r": 0,
+      "x": "L'effet Somogyi (rebond hyperglycémique) est une hyperglycémie matinale consécutive à une hypoglycémie nocturne non ressentie, déclenchant une sécrétion de contre-régulateurs (glucagon, cortisol, GH, adrénaline). À distinguer du phénomène de l'aube (hyperglycémie matinale physiologique sans hypoglycémie nocturne préalable)."
+    },
+    {
+      "q": "Le phénomène de l'aube correspond à :",
+      "o": [
+        "Une hypoglycémie matinale",
+        "Une hyperglycémie matinale physiologique",
+        "Une cétose",
+        "Une résistance à l'insuline"
+      ],
+      "r": 1,
+      "x": "Le phénomène de l'aube est une hyperglycémie matinale physiologique due à la sécrétion circadienne nocturne des hormones contra-régulatrices (GH, cortisol, glucagon) qui stimulent la néoglucogenèse hépatique. Il est plus marqué chez les diabétiques en raison du déficit de sécrétion ou d'action de l'insuline."
+    },
+    {
+      "q": "La néphrogénèse s'achève :",
+      "o": [
+        "À la naissance",
+        "À 6 mois de vie",
+        "vers 36 semaines de gestation",
+        "À 2 ans"
+      ],
+      "r": 2,
+      "x": "La formation des néphrons (néphrogénèse) se termine vers 34-36 semaines de gestation ; les prématurés ont donc un nombre définitif de néphrons réduit. Un faible nombre de néphrons à la naissance est un facteur de risque d'hypertension artérielle et d'insuffisance rénale à l'âge adulte."
+    },
+    {
+      "q": "Le débit de filtration glomérulaire normal chez l'adulte est d'environ :",
+      "o": [
+        "60 mL/min/1,73m²",
+        "90 mL/min/1,73m²",
+        "150 mL/min/1,73m²",
+        "120 mL/min/1,73m²"
+      ],
+      "r": 3,
+      "x": "Le DFG normal chez l'adulte jeune est d'environ 120 mL/min/1,73m², soit environ 180 litres de filtrat glomérulaire par jour. Le DFG diminue physiologiquement avec l'âge (environ 1 mL/min/an après 40 ans) et sa réduction est le marqueur de la progression de la maladie rénale chronique."
+    },
+    {
+      "q": "La clairance de la créatinine :",
+      "o": [
+        "Surestime le DFG",
+        "Sous-estime le DFG",
+        "Équivaut exactement au DFG",
+        "N'a pas de rapport avec le DFG"
+      ],
+      "r": 0,
+      "x": "La créatinine est légèrement sécrétée activement par les tubules rénaux en plus de la filtration glomérulaire, ce qui entraîne une surestimation du DFG par rapport à la clairance de l'inuline (gold standard). Cette surestimation est plus marquée en cas d'insuffisance rénale sévère."
+    },
+    {
+      "q": "L'équation CKD-EPI estime le DFG principalement à partir de :",
+      "o": [
+        "Uniquement la créatininémie",
+        "Créatininémie, âge et sexe",
+        "Uniquement l'âge et le sexe",
+        "La cystatine C"
+      ],
+      "r": 1,
+      "x": "L'équation CKD-EPI (Chronic Kidney Disease Epidemiology Collaboration) intègre la créatininémie, l'âge et le sexe pour estimer le DFG avec une meilleure précision que la formule de Cockcroft-Gault, notamment aux valeurs de DFG > 60 mL/min/1,73m². Des versions combinant créatinine et cystatine C sont encore plus précises."
+    },
+    {
+      "q": "La cystatine C est :",
+      "o": [
+        "Sécrétée par les tubules",
+        "Réabsorbée par les tubules",
+        "Uniquement filtrée",
+        "Métabolisée par les reins"
+      ],
+      "r": 2,
+      "x": "La cystatine C est produite par toutes les cellules nucléées à un débit constant, filtrée librement par le glomérule et complètement métabolisée dans les cellules tubulaires sans sécrétion ni réabsorption nette. Elle est un marqueur de filtration glomérulaire plus fiable que la créatinine, notamment en cas de sarcopénie ou de variation de la masse musculaire."
+    },
+    {
+      "q": "L'osmolalité urinaire maximale chez l'adulte sain est d'environ :",
+      "o": [
+        "600 mOsm/kg",
+        "900 mOsm/kg",
+        "1500 mOsm/kg",
+        "1200 mOsm/kg"
+      ],
+      "r": 3,
+      "x": "La capacité de concentration maximale des reins est d'environ 1200 mOsm/kg chez l'adulte sain, grâce au gradient osmotique médullaire et à l'action de l'ADH (vasopressine). Cette capacité de concentration diminue avec l'âge et dans la maladie rénale chronique, entraînant une polyurie hyposthénurique."
+    },
+    {
+      "q": "Le pH urinaire normal varie entre :",
+      "o": [
+        "4,5 et 8,0",
+        "6,0 et 7,0",
+        "7,0 et 8,0",
+        "5,0 et 6,0"
+      ],
+      "r": 0,
+      "x": "Le rein peut acidifier l'urine jusqu'à un pH minimum de 4,5 (en cas d'acidose) ou l'alcaliniser jusqu'à 8,0 (en cas d'alcalose), reflétant sa capacité de régulation acido-basique. Un pH urinaire chroniquement acide favorise la lithiase urique, tandis qu'un pH alcalin prédispose aux lithiases phosphocalciques."
+    },
+    {
+      "q": "La protéinurie physiologique est inférieure à :",
+      "o": [
+        "50 mg/24h",
+        "150 mg/24h",
+        "300 mg/24h",
+        "500 mg/24h"
+      ],
+      "r": 1,
+      "x": "La protéinurie physiologique est inférieure à 150 mg/24h et comprend principalement des protéines plasmatiques filtrées (albumine, β2-microglobuline) et des protéines tubulaires (protéine de Tamm-Horsfall). Une protéinurie > 150 mg/24h est pathologique ; > 3,5 g/24h définit le syndrome néphrotique."
+    },
+    {
+      "q": "L'albuminurie physiologique est inférieure à :",
+      "o": [
+        "10 mg/24h",
+        "50 mg/24h",
+        "30 mg/24h",
+        "100 mg/24h"
+      ],
+      "r": 2,
+      "x": "Une albuminurie entre 30 et 300 mg/24h (ou 30-300 mg/g de créatinine urinaire) définit la microalbuminurie, signe précoce de néphropathie diabétique ou hypertensive. Au-delà de 300 mg/24h, on parle de macroalbuminurie (protéinurie clinique), marqueur de lésion glomérulaire établie."
+    },
+    {
+      "q": "Le rapport albumine/créatinine urinaire normal est inférieur à :",
+      "o": [
+        "10 mg/g",
+        "50 mg/g",
+        "100 mg/g",
+        "30 mg/g"
+      ],
+      "r": 3,
+      "x": "Le rapport albumine/créatinine (RAC) urinaire sur échantillon permet de dépister facilement la microalbuminurie sans recueil des urines de 24h. Un RAC > 30 mg/g mais < 300 mg/g définit la microalbuminurie ; > 300 mg/g définit la protéinurie (macroalbuminurie), stade de néphropathie déclarée."
+    },
+    {
+      "q": "La fraction d'excrétion du sodium normale est inférieure à :",
+      "o": [
+        "1%",
+        "0,5%",
+        "2%",
+        "5%"
+      ],
+      "r": 0,
+      "x": "La fraction d'excrétion du sodium (FENa) = (Na urinaire × Créat. plasmatique) / (Na plasmatique × Créat. urinaire) × 100. Une FENa < 1% traduit une réabsorption tubulaire intense du sodium et oriente vers une insuffisance rénale fonctionnelle (pré-rénale) ; > 2% évoque une atteinte tubulaire (insuffisance rénale organique)."
+    },
+    {
+      "q": "L'acide δ-aminolévulinique (ALA) urinaire est élevé dans :",
+      "o": [
+        "L'intoxication au plomb",
+        "La porphyrie",
+        "L'anémie ferriprive",
+        "A et B sont correctes"
+      ],
+      "r": 3,
+      "x": "L'ALA s'accumule dans les porphyries (par déficit des enzymes de la voie de synthèse de l'hème) et dans l'intoxication au plomb (saturnisme, le plomb inhibant la synthèse de l'hème). Ces deux situations se distinguent par le profil complet des porphyrines urinaires et le dosage de la plombémie."
+    },
+    {
+      "q": "Les porphyrines urinaires sont élevées dans :",
+      "o": [
+        "Les porphyries uniquement",
+        "L'insuffisance rénale",
+        "L'hémolyse",
+        "Toutes les réponses sont correctes"
+      ],
+      "r": 3,
+      "x": "Les porphyrines urinaires peuvent s'élever dans les porphyries (accumulation d'intermédiaires de la biosynthèse de l'hème), mais aussi dans l'insuffisance rénale (élimination réduite), l'hémolyse, les hépatopathies et certaines intoxications. L'interprétation du profil des porphyrines urinaires permet d'orienter vers l'étiologie."
+    },
+    {
+      "q": "La clairance de l'inuline mesure :",
+      "o": [
+        "Le débit sanguin rénal",
+        "La sécrétion tubulaire",
+        "Le débit de filtration glomérulaire",
+        "La réabsorption tubulaire"
+      ],
+      "r": 2,
+      "x": "L'inuline (polysaccharide exogène) est librement filtrée par le glomérule sans sécrétion ni réabsorption tubulaire, ce qui en fait le gold standard pour mesurer le DFG. Sa clairance est égale à la clairance du glomérule et représente la mesure de référence à laquelle les équations estimées (CKD-EPI, Cockcroft-Gault) sont comparées."
+    },
+    {
+      "q": "La clairance du PAH (acide para-aminohippurique) mesure :",
+      "o": [
+        "Le débit plasmatique rénal",
+        "Le débit de filtration glomérulaire",
+        "Le débit sanguin rénal",
+        "La fonction tubulaire"
+      ],
+      "r": 0,
+      "x": "Le PAH est filtré par le glomérule et sécrété activement par les tubules proximaux ; à faible concentration, il est totalement extrait du plasma rénal en un seul passage. Sa clairance mesure donc le débit plasmatique rénal effectif (ERPF ≈ 650 mL/min) ; en divisant par la clairance de l'inuline, on obtient la fraction de filtration (≈ 20%)."
+    },
+    {
+      "q": "L'hyperuricémie peut être due à :",
+      "o": [
+        "Une surproduction d'acide urique",
+        "Toutes les réponses sont correctes",
+        "Une sous-excrétion d'acide urique",
+        "Un traitement diurétique"
+      ],
+      "r": 1,
+      "x": "L'hyperuricémie peut résulter d'une surproduction d'acide urique (alimentation riche en purines, troubles myéloprolifératifs, déficits enzymatiques), d'une sous-excrétion rénale (cas le plus fréquent, 90% des gouttes primaires) ou de causes médicamenteuses (diurétiques thiazidiques, aspirine à faible dose). Un traitement approprié dépend de l'identification du mécanisme dominant."
+    },
+    {
+      "q": "La xanthine oxydase catalyse :",
+      "o": [
+        "La synthèse des purines",
+        "La synthèse de l'ADN",
+        "La dégradation des purines",
+        "La réplication de l'ADN"
+      ],
+      "r": 2,
+      "x": "La xanthine oxydase catalyse la conversion de l'hypoxanthine en xanthine puis de la xanthine en acide urique, les deux dernières étapes du catabolisme des purines, avec production de radicaux libres (H₂O₂). Son inhibition par l'allopurinol (analogue de l'hypoxanthine) réduit la production d'acide urique dans le traitement de la goutte."
+    },
+    {
+      "q": "L'allopurinol inhibe :",
+      "o": [
+        "La synthèse des purines",
+        "L'excrétion d'acide urique",
+        "La réabsorption d'acide urique",
+        "La xanthine oxydase"
+      ],
+      "r": 3,
+      "x": "L'allopurinol est un analogue structural de l'hypoxanthine qui inhibe compétitivement la xanthine oxydase, réduisant la production d'acide urique. Son métabolite actif, l'oxypurinol, inhibe également cette enzyme de façon non compétitive, justifiant son utilisation à long terme dans la prévention des crises de goutte et des lithiases uriques."
+    },
+    {
+      "q": "Le syndrome de Lesch-Nyhan est dû à un déficit en :",
+      "o": [
+        "HGPRT (hypoxanthine-guanine phosphoribosyltransférase)",
+        "Xanthine oxydase",
+        "Adénine phosphoribosyltransférase",
+        "Uricase"
+      ],
+      "r": 0,
+      "x": "Le déficit en HGPRT (lié à l'X, donc affectant quasi-exclusivement les garçons) bloque le recyclage de l'hypoxanthine et de la guanine → accumulation d'acide urique → hyperuricémie sévère + goutte + lithiases rénales. Le tableau neurologique (retard mental, automutilation, chorée) résulte du déficit en purines dans le SNC."
+    },
+    {
+      "q": "La goutte primaire résulte principalement de :",
+      "o": [
+        "Une surproduction d'acide urique",
+        "Une sous-excrétion d'acide urique",
+        "Un déficit enzymatique",
+        "Une alimentation riche en purines"
+      ],
+      "r": 1,
+      "x": "Dans 90% des cas de goutte primaire, l'hyperuricémie résulte d'une sous-excrétion rénale d'acide urique (défaut des transporteurs tubulaires URAT1 et OAT4), souvent d'origine génétique. La surproduction métabolique (10% des cas) et les facteurs alimentaires (alcool, purines) sont des facteurs aggravants mais rarement la cause principale."
+    },
+    {
+      "q": "Les cristaux d'acide urique dans l'urine sont favorisés par :",
+      "o": [
+        "Un pH alcalin",
+        "Une forte diurèse",
+        "Un pH acide",
+        "Une faible concentration"
+      ],
+      "r": 2,
+      "x": "L'acide urique (pKa ≈ 5,75) précipite en milieu acide sous sa forme non dissociée peu soluble. L'alcalinisation des urines (pH > 6,5 par bicarbonate ou citrate de potassium) augmente sa solubilité et prévient la formation de calculs uriques, d'où son intérêt thérapeutique chez les patients goutteux."
+    },
+    {
+      "q": "La colchicine agit dans la goutte par :",
+      "o": [
+        "Inhibition de la xanthine oxydase",
+        "Augmentation de l'excrétion d'acide urique",
+        "Alcalinisation des urines",
+        "Effet anti-inflammatoire"
+      ],
+      "r": 3,
+      "x": "La colchicine inhibe la polymérisation de la tubuline et bloque la phagocytose des cristaux d'urate monosodique par les neutrophiles, interrompant ainsi le cycle inflammatoire de la crise goutteuse. Elle n'agit pas sur le métabolisme de l'acide urique (contrairement à l'allopurinol) ni sur son excrétion (contrairement aux uricosuriques)."
+    },
+    {
+      "q": "Le probénécide est :",
+      "o": [
+        "Un uricosurique",
+        "Un inhibiteur de la xanthine oxydase",
+        "Un anti-inflammatoire",
+        "Un alcalinisant"
+      ],
+      "r": 0,
+      "x": "Le probénécide est un uricosurique qui inhibe la réabsorption tubulaire rénale de l'acide urique (via les transporteurs URAT1) et augmente ainsi son excrétion urinaire. Il est utilisé dans la prévention des crises de goutte chez les patients sous-excréteurs ; il est contre-indiqué en cas de lithiase urique (car il augmente la concentration urinaire d'acide urique)."
+    },
+    {
+      "q": "La pseudogoutte est due à des cristaux de :",
+      "o": [
+        "Acide urique",
+        "Pyrophosphate de calcium",
+        "Oxalate de calcium",
+        "Phosphate de calcium"
+      ],
+      "r": 1,
+      "x": "La pseudogoutte (chondrocalcinose articulaire) est causée par le dépôt de cristaux de pyrophosphate de calcium dihydraté (CPPD) dans les cartilages articulaires (notamment le genou). Elle se distingue de la goutte (cristaux d'urate monosodique biréfringents négativement) par la biréfringence positive des cristaux de CPPD en microscopie en lumière polarisée."
+    },
+    {
+      "q": "L'enzymologie cardiaque comprend classiquement :",
+      "o": [
+        "Uniquement les troponines",
+        "LDH uniquement",
+        "CK-MB, troponines, myoglobine",
+        "Transaminases uniquement"
+      ],
+      "r": 2,
+      "x": "Le bilan enzymatique cardiaque classique comprend la myoglobine (marqueur précoce, s'élève en 1-2h), la CK-MB (spécifique du myocarde, s'élève en 6-12h) et les troponines I ou T (très spécifiques, s'élèvent en 3-6h et persistent 7-14 jours). Leurs cinétiques différentes permettent une évaluation du timing et de l'étendue de la nécrose myocardique."
+    },
+    {
+      "q": "La CK-MB s'élève :",
+      "o": [
+        "2-4 heures après l'IDM",
+        "24 heures après l'IDM",
+        "48 heures après l'IDM",
+        "6-12 heures après l'IDM"
+      ],
+      "r": 3,
+      "x": "La CK-MB (isoforme MB de la créatine kinase, spécifique du myocarde) s'élève 6-12 heures après l'infarctus du myocarde, atteint son pic vers 24 heures et se normalise en 48-72 heures. Sa normalisation rapide la rend utile pour diagnostiquer une réocclusion ou un infarctus du myocarde péri-procédural."
+    },
+    {
+      "q": "Les troponines restent élevées :",
+      "o": [
+        "7-14 jours",
+        "24-48 heures",
+        "3-5 jours",
+        "21 jours"
+      ],
+      "r": 0,
+      "x": "Les troponines cardiaques (cTnI et cTnT) s'élèvent 3-6 heures après l'IDM et restent élevées pendant 7 à 14 jours, ce qui permet un diagnostic rétrospectif. Cette longue fenêtre diagnostique contraste avec la CK-MB (48-72h) et la myoglobine (12-24h) qui retournent à la normale beaucoup plus rapidement."
+    },
+    {
+      "q": "La myoglobine s'élève :",
+      "o": [
+        "Après les autres marqueurs cardiaques",
+        "Avant les autres marqueurs cardiaques",
+        "En même temps que la CK-MB",
+        "Uniquement en cas de rhabdomyolyse"
+      ],
+      "r": 1,
+      "x": "La myoglobine est le premier marqueur cardiaque à s'élever (dès 1-2 heures après l'IDM), grâce à sa petite taille (18 kDa) facilitant sa diffusion hors des cellules nécrosées. Cependant, elle manque de spécificité cardiaque (elle est aussi libérée lors de toute lyse musculaire : traumatisme, exercice intense, rhabdomyolyse), ce qui limite son utilisation clinique."
+    },
+    {
+      "q": "La troponine I est :",
+      "o": [
+        "Plus spécifique que la troponine T",
+        "Moins spécifique que la troponine T",
+        "Identique à la troponine T",
+        "Présente uniquement dans le muscle squelettique"
+      ],
+      "r": 0,
+      "x": "La troponine I cardiaque est plus spécifique que la T, notamment en insuffisance rénale où la troponine T peut être faussement élevée. Les deux restent les biomarqueurs de référence pour le diagnostic d'infarctus du myocarde."
+    },
+    {
+      "q": "Le dosage des troponines est recommandé :",
+      "o": [
+        "Immédiatement à l'admission",
+        "À l'admission puis 6-12h après",
+        "6 heures après le début des symptômes",
+        "12 heures après le début des symptômes"
+      ],
+      "r": 1,
+      "x": "Un dosage initial négatif doit être répété 6-12h après le début des symptômes pour exclure un IDM. Les protocoles rapides (0h/3h) avec troponines ultrasensibles sont désormais validés en pratique."
+    },
+    {
+      "q": "Le BNP s'élève en cas de :",
+      "o": [
+        "Insuffisance cardiaque uniquement",
+        "Surcharge volémique",
+        "Toutes les réponses sont correctes",
+        "Dysfonction ventriculaire"
+      ],
+      "r": 2,
+      "x": "Le BNP s'élève dans toutes les situations de surcharge volumique ou de dysfonction cardiaque (insuffisance cardiaque, embolie pulmonaire, insuffisance rénale). L'obésité abaisse le BNP, ce qui peut fausser l'interprétation."
+    },
+    {
+      "q": "Le NT-proBNP a une demi-vie :",
+      "o": [
+        "Plus courte que le BNP",
+        "Identique au BNP",
+        "Variable selon l'âge",
+        "Plus longue que le BNP"
+      ],
+      "r": 3,
+      "x": "La demi-vie du NT-proBNP (1-2 heures) est plus longue que celle du BNP (20 minutes), rendant son dosage plus stable. Son seuil diagnostique varie selon l'âge (450/900/1800 pg/mL par tranche d'âge)."
+    },
+    {
+      "q": "Les valeurs de BNP varient selon :",
+      "o": [
+        "L'âge, le sexe, la fonction rénale et l'IMC",
+        "L'âge uniquement",
+        "Le sexe uniquement",
+        "La fonction rénale uniquement"
+      ],
+      "r": 0,
+      "x": "Le BNP est influencé par l'âge (↑), le sexe (plus élevé chez la femme), la fonction rénale (↑ en cas d'IRA/IRC) et l'IMC (↓ en cas d'obésité). Cette interprétation multiparamétrique est indispensable pour éviter les erreurs diagnostiques."
+    },
+    {
+      "q": "La CRP s'élève :",
+      "o": [
+        "Immédiatement après l'agression",
+        "6-12 heures après l'agression",
+        "24 heures après l'agression",
+        "48 heures après l'agression"
+      ],
+      "r": 1,
+      "x": "La CRP, synthétisée par le foie sous l'effet de l'IL-6, s'élève rapidement (6-12h) et peut augmenter de plus de 1000 fois en cas d'inflammation sévère. Sa demi-vie courte (~19h) permet un suivi dynamique de l'évolution infectieuse ou inflammatoire."
+    },
+    {
+      "q": "La procalcitonine s'élève spécifiquement en cas de :",
+      "o": [
+        "Inflammation virale",
+        "Inflammation stérile",
+        "Infection bactérienne",
+        "Allergie"
+      ],
+      "r": 2,
+      "x": "La procalcitonine (PCT) est spécifique d'une infection bactérienne systémique ; elle reste basse lors d'une inflammation virale ou stérile. Un taux > 0,5 ng/mL oriente vers un sepsis et guide la décision d'antibiothérapie."
+    },
+    {
+      "q": "Les transaminases ALAT sont plus spécifiques de :",
+      "o": [
+        "L'atteinte cardiaque",
+        "L'atteinte musculaire",
+        "L'atteinte rénale",
+        "L'atteinte hépatique"
+      ],
+      "r": 3,
+      "x": "L'ALAT est localisée principalement dans les hépatocytes, ce qui lui confère une spécificité hépatique supérieure aux ASAT. Son élévation est un marqueur fiable de cytolyse hépatique (hépatites virales, médicamenteuses, alcoolique)."
+    },
+    {
+      "q": "Les ASAT sont présentes dans :",
+      "o": [
+        "Le foie, le cœur et les muscles",
+        "Le foie uniquement",
+        "Le cœur uniquement",
+        "Les reins uniquement"
+      ],
+      "r": 0,
+      "x": "Les ASAT sont présentes dans le foie, le myocarde, les muscles squelettiques et les érythrocytes, d'où leur moindre spécificité hépatique. Une élévation isolée des ASAT sans ALAT oriente vers une atteinte cardiaque ou musculaire."
+    },
+    {
+      "q": "Les phosphatases alcalines s'élèvent en cas de :",
+      "o": [
+        "Cholestase uniquement",
+        "Cholestase et atteinte osseuse",
+        "Atteinte osseuse uniquement",
+        "Cytolyse hépatique"
+      ],
+      "r": 1,
+      "x": "Les PAL ont deux isoenzymes principales : hépatobiliaire (↑ en cas de cholestase) et osseuse (↑ lors d'ostéopathie active). La GGT aide à distinguer l'origine : élevée si origine hépatique, normale si atteinte osseuse isolée."
+    },
+    {
+      "q": "La GGT s'élève spécifiquement en cas de :",
+      "o": [
+        "Cytolyse hépatique",
+        "Cholestase",
+        "Consommation d'alcool",
+        "B et C sont correctes"
+      ],
+      "r": 3,
+      "x": "La GGT est un marqueur sensible de cholestase et d'induction enzymatique par l'alcool ou certains médicaments. Associée à des PAL élevées, elle confirme l'origine hépatobiliaire ; isolée, elle témoigne d'une consommation alcoolique chronique."
+    },
+    {
+      "q": "La bilirubine conjuguée s'élève en cas de :",
+      "o": [
+        "Hémolyse",
+        "Syndrome de Gilbert",
+        "Cholestase",
+        "Jeûne prolongé"
+      ],
+      "r": 2,
+      "x": "La bilirubine conjuguée (directe, hydrosoluble) s'élève quand l'excrétion biliaire est perturbée (cholestase intra- ou extra-hépatique). Contrairement à la bilirubine libre, elle est filtrée par le rein et rend les urines foncées lors d'un ictère cholestatique."
+    },
+    {
+      "q": "La bilirubine non conjuguée s'élève en cas de :",
+      "o": [
+        "Toutes les réponses sont correctes",
+        "Hémolyse",
+        "Déficit en glucuronyl-transférase",
+        "Syndrome de Gilbert"
+      ],
+      "r": 0,
+      "x": "La bilirubine non conjuguée augmente lors d'une production excessive (hémolyse), d'un déficit de conjugaison (déficit en UGT1A1, syndrome de Gilbert) ou d'un défaut de captation hépatique. Plusieurs mécanismes peuvent se combiner chez un même patient."
+    },
+    {
+      "q": "L'albumine a une demi-vie de :",
+      "o": [
+        "2-3 jours",
+        "20 jours",
+        "7-10 jours",
+        "30 jours"
+      ],
+      "r": 1,
+      "x": "La longue demi-vie de l'albumine (≈ 20 jours) en fait un marqueur de l'état nutritionnel chronique et de la fonction hépatique de synthèse. Sa concentration baisse dans les dénutritions prolongées, les cirrhoses et les syndromes néphrotiques."
+    },
+    {
+      "q": "La préalbumine a une demi-vie de :",
+      "o": [
+        "12 heures",
+        "7 jours",
+        "2-3 jours",
+        "20 jours"
+      ],
+      "r": 2,
+      "x": "La courte demi-vie de la préalbumine (transthyrétine, 2-3 jours) permet un suivi rapide de l'état nutritionnel et de la réponse à la renutrition. C'est un marqueur précoce et plus sensible que l'albumine pour détecter une dénutrition aiguë."
+    },
+    {
+      "q": "Le facteur V a une demi-vie de :",
+      "o": [
+        "12 heures",
+        "24 heures",
+        "48 heures",
+        "6 heures"
+      ],
+      "r": 3,
+      "x": "La courte demi-vie du facteur V (6 heures) en fait un marqueur précoce et sensible de l'insuffisance hépatocellulaire aiguë. Un facteur V < 50% chez un patient ictérique oriente vers une hépatite fulminante et peut indiquer une transplantation hépatique en urgence."
+    },
+    {
+      "q": "Le temps de Quick (TP) explore :",
+      "o": [
+        "La voie intrinsèque de la coagulation",
+        "La fibrinolyse",
+        "La voie extrinsèque de la coagulation",
+        "L'agrégation plaquettaire"
+      ],
+      "r": 2,
+      "x": "Le TP explore la voie extrinsèque (facteur VII) et la voie commune (X, V, II, fibrinogène). Il est exprimé en % ou en INR, notamment pour la surveillance des anticoagulants anti-vitamine K."
+    },
+    {
+      "q": "Le TCA explore :",
+      "o": [
+        "La voie extrinsèque de la coagulation",
+        "La voie intrinsèque de la coagulation",
+        "La fibrinolyse",
+        "L'agrégation plaquettaire"
+      ],
+      "r": 1,
+      "x": "Le TCA explore la voie intrinsèque (facteurs XII, XI, IX, VIII) et la voie commune (X, V, II, fibrinogène). Son allongement isolé évoque un déficit en facteur VIII/IX (hémophilies A ou B) ou la présence d'anticoagulants lupiques."
+    },
+    {
+      "q": "Le fibrinogène s'élève en cas de :",
+      "o": [
+        "Inflammation",
+        "Coagulation intravasculaire disséminée",
+        "Fibrinolyse",
+        "A uniquement"
+      ],
+      "r": 0,
+      "x": "Le fibrinogène est une protéine de la phase aiguë synthétisée par le foie, qui s'élève en réponse aux cytokines pro-inflammatoires. En cas de CIVD ou de fibrinolyse, il est au contraire consommé et donc diminué."
+    },
+    {
+      "q": "L'antithrombine III est :",
+      "o": [
+        "Un facteur de coagulation",
+        "Un activateur de la fibrinolyse",
+        "Un marqueur d'hémolyse",
+        "Un inhibiteur de la coagulation"
+      ],
+      "r": 3,
+      "x": "L'antithrombine III est le principal inhibiteur physiologique de la thrombine, du facteur Xa et d'autres sérine-protéases. L'héparine potentialise son action 1000 fois ; un déficit en AT III est une thrombophilie héréditaire exposant aux thromboses."
+    },
+    {
+      "q": "La protéine C est :",
+      "o": [
+        "Un inhibiteur de la coagulation",
+        "Un facteur de coagulation",
+        "Une protéine de l'inflammation",
+        "Un marqueur hépatique"
+      ],
+      "r": 0,
+      "x": "La protéine C activée (avec son cofacteur protéine S) inhibe les facteurs Va et VIIIa, limitant la génération de thrombine. Un déficit en protéine C ou S est une thrombophilie héréditaire avec risque de thromboses veineuses récidivantes."
+    },
+    {
+      "q": "Le dosage de l'haptoglobine est utile pour :",
+      "o": [
+        "Diagnostiquer une hémolyse",
+        "Évaluer l'inflammation",
+        "A et B sont correctes",
+        "Diagnostiquer une infection"
+      ],
+      "r": 2,
+      "x": "L'haptoglobine chute en cas d'hémolyse (complexe Hb-haptoglobine capté par le foie) et s'élève en cas d'inflammation (protéine de la phase aiguë). Ces deux effets opposés doivent être intégrés dans l'interprétation."
+    },
+    {
+      "q": "La LDH s'élève en cas de :",
+      "o": [
+        "Hémolyse uniquement",
+        "Hémolyse et nécrose tissulaire",
+        "Nécrose tissulaire uniquement",
+        "Inflammation uniquement"
+      ],
+      "r": 1,
+      "x": "La LDH est une enzyme ubiquitaire libérée lors de toute lyse cellulaire : hémolyse, infarctus myocardique, nécrose hépatique, lymphomes. Sa faible spécificité impose de l'interpréter avec d'autres marqueurs plus spécifiques."
+    },
+    {
+      "q": "La vitamine B12 est stockée principalement dans :",
+      "o": [
+        "Les muscles",
+        "Les reins",
+        "La moelle osseuse",
+        "Le foie"
+      ],
+      "r": 3,
+      "x": "Les réserves hépatiques de vitamine B12 représentent environ 3 à 5 ans de besoins quotidiens (2-3 µg/j). C'est pourquoi les carences en B12 sont lentes à s'installer mais sévères lorsqu'elles se manifestent."
+    },
+    {
+      "q": "La carence en vitamine B12 entraîne :",
+      "o": [
+        "Une anémie macrocytaire",
+        "Une anémie microcytaire",
+        "Une anémie normocytaire",
+        "Une polyglobulie"
+      ],
+      "r": 0,
+      "x": "La carence en B12 perturbe la synthèse d'ADN des précurseurs érythroïdes → mégaloblastes → anémie macrocytaire (VGM > 100 fL). Elle s'accompagne souvent d'une neuropathie démyélinisante (sclérose combinée subaiguë de la moelle)."
+    },
+    {
+      "q": "L'homocystéine s'élève en cas de carence en :",
+      "o": [
+        "Vitamine B6 uniquement",
+        "B6, B12 et folates",
+        "Vitamine B12 uniquement",
+        "Folates uniquement"
+      ],
+      "r": 1,
+      "x": "L'homocystéine est métabolisée par deux voies nécessitant la B12 et les folates (reméthylation) et la B6 (transsulfuration). Un déficit en l'une de ces vitamines entraîne une hyperhomocystéinémie, facteur de risque cardiovasculaire et thrombotique."
+    },
+    {
+      "q": "L'acide méthylmalonique s'élève spécifiquement en cas de carence en :",
+      "o": [
+        "Vitamine B6",
+        "Folates",
+        "Vitamine B12",
+        "Vitamine B1"
+      ],
+      "r": 2,
+      "x": "L'acide méthylmalonique (AMM) est le substrat de la méthylmalonyl-CoA mutase, enzyme dépendante de la cobalamide. Son élévation est un marqueur fonctionnel spécifique de carence en B12, même lorsque la B12 sérique est encore normale."
+    },
+    {
+      "q": "La ferritine est :",
+      "o": [
+        "Une protéine de transport du fer",
+        "Une protéine de stockage du fer",
+        "Un marqueur d'inflammation",
+        "B et C sont correctes"
+      ],
+      "r": 3,
+      "x": "La ferritine stocke le fer intracellulaire (jusqu'à 4500 atomes de fer par molécule) et est aussi une protéine de la phase aiguë. En cas de syndrome inflammatoire, la ferritine peut être faussement normale ou élevée, masquant une carence martiale associée."
+    },
+    {
+      "q": "La transferrine :",
+      "o": [
+        "Transporte le fer dans le plasma",
+        "Stocke le fer dans les tissus",
+        "Élimine le fer par les urines",
+        "Synthétise le fer"
+      ],
+      "r": 0,
+      "x": "La transferrine est la principale glycoprotéine de transport du fer plasmatique (synthèse hépatique) ; chaque molécule peut transporter 2 ions Fe³⁺. Sa synthèse augmente en cas de carence martiale et diminue en cas d'inflammation ou de dénutrition."
+    },
+    {
+      "q": "Le coefficient de saturation de la transferrine normal est de :",
+      "o": [
+        "10-20%",
+        "20-40%",
+        "40-60%",
+        "60-80%"
+      ],
+      "r": 1,
+      "x": "Le coefficient de saturation (CST = fer sérique / capacité totale de fixation × 100) est normalement de 20-40%. Un CST < 20% évoque une carence martiale ; > 60% signe une surcharge en fer (hémochromatose)."
+    },
+    {
+      "q": "L'hepcidine régule :",
+      "o": [
+        "L'absorption intestinale du fer",
+        "La libération du fer par les macrophages",
+        "Toutes les réponses sont correctes",
+        "L'export du fer par la ferroportine"
+      ],
+      "r": 2,
+      "x": "L'hepcidine hépatique inhibe la ferroportine (exportateur du fer) dans les entérocytes, les macrophages et les hépatocytes. Élevée en cas d'inflammation (anémie inflammatoire) ou de surcharge en fer, elle est basse en cas de carence martiale."
+    },
+    {
+      "q": "Dans l'anémie ferriprive, on observe :",
+      "o": [
+        "Ferritine élevée, transferrine basse",
+        "Ferritine et transferrine basses",
+        "Ferritine et transferrine élevées",
+        "Ferritine basse, transferrine élevée"
+      ],
+      "r": 3,
+      "x": "La carence en fer stimule la synthèse de transferrine et épuise les réserves → ferritine basse + CST < 20%. Ce profil (ferritine < 30 µg/L + transferrine élevée) est pathognomonique de la carence martiale."
+    },
+    {
+      "q": "Dans l'anémie inflammatoire, on observe :",
+      "o": [
+        "Ferritine élevée, transferrine basse",
+        "Ferritine basse, transferrine élevée",
+        "Ferritine et transferrine basses",
+        "Ferritine et transferrine élevées"
+      ],
+      "r": 0,
+      "x": "L'inflammation élève la ferritine (protéine de la phase aiguë) et inhibe la synthèse de transferrine tout en réduisant le CST. Ce profil distingue l'anémie inflammatoire de la carence martiale ; les deux peuvent coexister."
+    },
+    {
+      "q": "La thalassémie β majeure se caractérise par :",
+      "o": [
+        "Une absence de chaînes β-globine",
+        "Une diminution des chaînes β-globine",
+        "Une augmentation des chaînes β-globine",
+        "Une anomalie des chaînes α-globine"
+      ],
+      "r": 1,
+      "x": "La β-thalassémie majeure résulte d'une synthèse réduite ou absente des chaînes β-globine → excès de chaînes α → corps d'inclusion → destruction des érythrocytes. Elle se manifeste dès la petite enfance par une anémie sévère nécessitant des transfusions régulières."
+    },
+    {
+      "q": "L'électrophorèse de l'hémoglobine dans la thalassémie β majeure montre :",
+      "o": [
+        "Diminution de HbA2 et HbF",
+        "HbS uniquement",
+        "Augmentation de HbA2 et HbF",
+        "HbC uniquement"
+      ],
+      "r": 2,
+      "x": "L'absence de chaînes β entraîne une compensation par une augmentation de HbA2 (α₂δ₂) et surtout de HbF (α₂γ₂). Dans la forme majeure homozygote, HbA est absente ou très réduite ; les formes intermédiaire et mineure montrent des profils intermédiaires."
+    },
+    {
+      "q": "La drépanocytose est due à :",
+      "o": [
+        "Une délétion du gène β-globine",
+        "Une substitution Glu→Lys en position 6 de la β-globine",
+        "Une duplication du gène α-globine",
+        "Une substitution Glu→Val en position 6 de la β-globine"
+      ],
+      "r": 3,
+      "x": "La substitution Glu→Val en position 6 de la chaîne β crée l'HbS (hydrophobe). En désoxygénation, l'HbS polymérise en filaments → falciformation des GR → occlusions microvasculaires et hémolyse chronique."
+    },
+    {
+      "q": "Le test de falciformation (test d'Emmel) est positif dans :",
+      "o": [
+        "La drépanocytose",
+        "La thalassémie",
+        "L'anémie ferriprive",
+        "L'anémie inflammatoire"
+      ],
+      "r": 0,
+      "x": "Le test d'Emmel expose les GR à un agent désoxygénant (bisulfite de sodium) → déformation falciforme en présence d'HbS. Il est positif chez les drépanocytaires homozygotes (HbSS) et hétérozygotes (HbAS = trait drépanocytaire)."
+    },
+    {
+      "q": "L'HbA1c reflète l'équilibre glycémique sur :",
+      "o": [
+        "1 semaine",
+        "2-3 mois",
+        "2-3 semaines",
+        "6 mois"
+      ],
+      "r": 1,
+      "x": "L'HbA1c est formée par glycation non enzymatique de l'hémoglobine ; sa concentration reflète la glycémie moyenne sur 2-3 mois (durée de vie des GR ≈ 120 jours). Elle est faussée par les hémoglobinopathies et les conditions altérant la survie des GR."
+    },
+    {
+      "q": "L'objectif d'HbA1c chez la plupart des diabétiques est :",
+      "o": [
+        "< 6%",
+        "< 8%",
+        "< 7%",
+        "< 9%"
+      ],
+      "r": 2,
+      "x": "L'objectif général d'HbA1c < 7% réduit les complications microvasculaires du diabète. Cet objectif peut être adapté : < 6,5% pour les diabètes récents, < 8-9% pour les sujets âgés fragiles ou à risque d'hypoglycémie sévère."
+    },
+    {
+      "q": "La fructosamine reflète l'équilibre glycémique sur :",
+      "o": [
+        "1 semaine",
+        "2-3 mois",
+        "6 mois",
+        "2-3 semaines"
+      ],
+      "r": 3,
+      "x": "La fructosamine (albumine glyquée) reflète la glycémie moyenne des 2-3 semaines (demi-vie albumine ≈ 20 jours). Elle est utile lorsque l'HbA1c est ininterprétable (hémolyse, hémoglobinopathie) ou pour un suivi rapide à court terme."
+    },
+    {
+      "q": "L'hypoglycémie est définie par une glycémie :",
+      "o": [
+        "< 0,70 g/L",
+        "< 0,60 g/L",
+        "< 0,80 g/L",
+        "< 0,90 g/L"
+      ],
+      "r": 0,
+      "x": "Le seuil d'hypoglycémie est fixé à 0,70 g/L (3,9 mmol/L). En dessous, les symptômes adrénergiques (tachycardie, tremblements) apparaissent, suivis de symptômes neuroglycopéniques (confusion, coma) si la glycémie continue de baisser."
+    },
+    {
+      "q": "Le syndrome métabolique associe :",
+      "o": [
+        "Obésité abdominale uniquement",
+        "Obésité abdominale, dyslipidémie, HTA et troubles glucidiques",
+        "Diabète et hypertension uniquement",
+        "Uniquement des troubles lipidiques"
+      ],
+      "r": 1,
+      "x": "Le syndrome métabolique est défini par une obésité abdominale (tour de taille > 94 cm homme, > 80 cm femme) et au moins 2 critères parmi : TG élevés, HDL bas, HTA, glycémie à jeun élevée. Il majore le risque cardiovasculaire et de diabète de type 2."
+    },
+    {
+      "q": "L'insulinorésistance se caractérise par :",
+      "o": [
+        "Une diminution de la sécrétion d'insuline",
+        "Une augmentation de la dégradation de l'insuline",
+        "Une diminution de la sensibilité à l'insuline",
+        "Une anomalie du récepteur de l'insuline"
+      ],
+      "r": 2,
+      "x": "L'insulinorésistance est une diminution de la réponse biologique des tissus cibles à l'insuline, précédant le diabète de type 2. Elle est compensée par une hypersécrétion d'insuline jusqu'à l'épuisement de la réserve β-pancréatique."
+    },
+    {
+      "q": "L'index HOMA évalue :",
+      "o": [
+        "La sécrétion d'insuline",
+        "L'insulinorésistance",
+        "La sensibilité à l'insuline",
+        "B et C sont correctes"
+      ],
+      "r": 3,
+      "x": "HOMA-IR (insulinémie à jeun × glycémie à jeun / 22,5) évalue l'insulinorésistance ; HOMA-β évalue la fonction des cellules β. Ces deux index issus d'une simple prise de sang à jeun permettent une estimation indirecte mais pratique."
+    },
+    {
+      "q": "Le diabète de type MODY est :",
+      "o": [
+        "Un diabète monogénique",
+        "Un diabète auto-immun",
+        "Un diabète secondaire",
+        "Un diabète gestationnel"
+      ],
+      "r": 0,
+      "x": "Le diabète MODY résulte de mutations monogéniques autosomiques dominantes affectant la fonction β-pancréatique (GCK, HNF1A, HNF4A). Il se distingue du DT1 (auto-immun) et du DT2 (polygénique) par son mode de transmission et sa réponse thérapeutique spécifique."
+    },
+    {
+      "q": "La cétonémie s'élève en cas de :",
+      "o": [
+        "Jeûne prolongé",
+        "Toutes les réponses sont correctes",
+        "Diabète décompensé",
+        "Régime cétogène"
+      ],
+      "r": 1,
+      "x": "La cétogenèse hépatique est activée lors de tout déficit énergétique en glucose : jeûne, régime cétogène (physiologique) ou manque absolu d'insuline (DT1 décompensé, pathologique). La cétonémie capillaire permet un dépistage rapide au chevet."
+    },
+    {
+      "q": "L'acidocétose diabétique associe :",
+      "o": [
+        "Hypoglycémie, cétonémie, acidose",
+        "Hyperglycémie uniquement",
+        "Hyperglycémie, cétonémie, acidose",
+        "Cétonémie uniquement"
+      ],
+      "r": 2,
+      "x": "L'acidocétose diabétique (ACD) est une urgence métabolique du DT1 (carence absolue en insuline → lipolyse → cétogénèse → acidose métabolique à trou anionique élevé). Elle est définie par glycémie > 2,5 g/L + pH < 7,3 + cétonémie > 3 mmol/L."
+    },
+    {
+      "q": "Le coma hyperosmolaire survient préférentiellement dans :",
+      "o": [
+        "Le diabète de type 1",
+        "Le diabète MODY",
+        "Le diabète gestationnel",
+        "Le diabète de type 2"
+      ],
+      "r": 3,
+      "x": "Le coma hyperosmolaire (CHH) affecte surtout les diabétiques de type 2 âgés, souvent déclenchés par une infection ou une déshydratation. Il se distingue de l'ACD par une hyperglycémie extrême (> 6 g/L) et l'absence de cétonémie significative."
+    },
+    {
+      "q": "La néphropathie diabétique se caractérise initialement par :",
+      "o": [
+        "Une microalbuminurie",
+        "Une protéinurie massive",
+        "Une hématurie",
+        "Une insuffisance rénale"
+      ],
+      "r": 0,
+      "x": "La microalbuminurie (30-300 mg/24h) est le premier signe de néphropathie diabétique, précédant la protéinurie franche de plusieurs années. Son dépistage annuel et le contrôle glycémique/tensionnel permettent de ralentir la progression vers l'IRC."
+    },
+    {
+      "q": "La rétinopathie diabétique non proliférante se caractérise par :",
+      "o": [
+        "Néovascularisation",
+        "Microanévrismes et exsudats",
+        "Décollement rétinien",
+        "Hémorragie vitréenne"
+      ],
+      "r": 1,
+      "x": "La rétinopathie non proliférante (RDNP) présente des microanévrismes, hémorragies en taches et exsudats secs sans néovascularisation. La forme proliférante (RDP) se caractérise par la néovascularisation pouvant entraîner hémorragies vitréennes et décollement de rétine."
     }
   ],
   "pc_bepc": [
@@ -53054,6 +56880,282 @@ const QUESTIONS = {
       ],
       "r": 0,
       "x": "Ce thème vise à encourager chaque ménage à planter et à entretenir au moins un arbre dans sa concession afin de contribuer durablement au reverdissement du pays. À cette occasion, une opération patriotique de mise en terre de 5 millions de plants en une heure a également été organisée."
+    },
+  
+    {
+      "q": "À quelle date l'Assemblée Législative du Peuple (ALP) du Burkina Faso a-t-elle adopté la Charte de la Révolution (RPP) ?",
+      "o": [
+        "29 janvier 2026",
+        "27 mars 2026",
+        "16 avril 2026",
+        "7 mai 2026"
+      ],
+      "r": 1,
+      "x": "La Charte de la Révolution a été adoptée le 27 mars 2026 à l'unanimité des 70 votants de l'ALP. Elle remplace la Charte de la Transition et officialise la Révolution Progressiste Populaire (RPP). Elle consacre notamment le renommage du \"Gouvernement de la Transition\" en \"Gouvernement du peuple\" et de l'ALT en \"Assemblée Législative du Peuple (ALP)\"."
+    },
+    {
+      "q": "Quels sont le numéro et la date du décret portant remaniement du Gouvernement burkinabè en janvier 2026 ?",
+      "o": [
+        "Décret n°2026-0006/PF/PRIM du 12 janvier 2026",
+        "Décret n°2026-0001/PF/PRIM du 7 janvier 2026",
+        "Décret n°2025-1600/PF/PRIM du 28 décembre 2025",
+        "Décret n°2026-0012/PF/PRIM du 29 janvier 2026"
+      ],
+      "r": 0,
+      "x": "Le remaniement gouvernemental de 2026 a été opéré par le Décret n°2026-0006/PF/PRIM du 12 janvier 2026. Ce décret a restructuré la composition du gouvernement burkinabè dont la formation initiale datait du 8 décembre 2024."
+    },
+    {
+      "q": "Le Burkina Faso a rompu ses relations diplomatiques avec la France. À quelle date cette rupture officielle a-t-elle été annoncée ?",
+      "o": [
+        "15 juin 2026",
+        "20 juin 2026",
+        "26 juin 2026",
+        "30 juin 2026"
+      ],
+      "r": 2,
+      "x": "Le Burkina Faso a officiellement annoncé la rupture de ses relations diplomatiques avec la France le vendredi 26 juin 2026. Cette décision historique a été communiquée via un communiqué officiel par le gouvernement burkinabè. Elle intervient dans le contexte de la réorientation diplomatique du pays vers de nouveaux partenaires."
+    },
+    {
+      "q": "Combien de protocoles additionnels au Traité de l'AES ont été signés à Bamako le 23 décembre 2025 ?",
+      "o": [
+        "3 protocoles",
+        "5 protocoles",
+        "2 protocoles",
+        "4 protocoles"
+      ],
+      "r": 3,
+      "x": "Le 23 décembre 2025 à Bamako (Mali), 4 protocoles additionnels au Traité de la Confédération des États du Sahel (AES) ont été signés : sessions confédérales des Parlements, défense et sécurité, coordination de l'action diplomatique et coordination des actions de développement. Ils ont été ratifiés lors du Conseil des ministres du 22 janvier 2026."
+    },
+    {
+      "q": "Quelle innovation majeure introduit le nouveau Code des douanes du Burkina Faso (loi n°003-2025/ALT du 24 mars 2025) ?",
+      "o": [
+        "La création d'une police des frontières unifiée",
+        "L'institution du droit de transaction douanière",
+        "L'instauration d'un régime spécial pour les marchandises de l'AES",
+        "La suppression des postes de douane aux frontières intérieures de l'UEMOA"
+      ],
+      "r": 1,
+      "x": "Le nouveau Code des douanes (loi n°003-2025/ALT du 24 mars 2025) institue le droit de transaction, qui permet à l'administration douanière de conclure un accord avec les contrevenants pour mettre fin aux poursuites. Ce mécanisme accélère le règlement des litiges, désencombre les tribunaux et améliore le recouvrement des créances douanières."
+    },
+    {
+      "q": "Quelle loi adoptée le 1er septembre 2025 concerne l'état civil et la vie privée des personnes au Burkina Faso ?",
+      "o": [
+        "Loi n°012-2025/ALT du 1er septembre 2025",
+        "Loi n°010-2025/ALT du 1er septembre 2025",
+        "Loi n°014-2025/ALT du 1er septembre 2025",
+        "Loi n°009-2025/ALT du 1er septembre 2025"
+      ],
+      "r": 0,
+      "x": "La loi n°012-2025/ALT du 1er septembre 2025 porte Code des personnes et de la famille au Burkina Faso. Ce texte régit notamment l'état civil, le mariage, les successions et les droits des personnes. Elle sert de référence pour l'octroi du statut de résident permanent aux étrangers au Burkina Faso."
+    },
+    {
+      "q": "Quelle loi encadre le fonctionnement des associations au Burkina Faso ?",
+      "o": [
+        "Loi n°009-2025/ALT du 17 juillet 2025",
+        "Loi n°013-2025/ALT du 17 juillet 2025",
+        "Loi n°011-2025/ALT du 17 juillet 2025",
+        "Loi n°015-2025/ALT du 17 juillet 2025"
+      ],
+      "r": 2,
+      "x": "La loi n°011-2025/ALT du 17 juillet 2025 portant liberté d'association au Burkina Faso encadre la création, le fonctionnement et la dissolution des associations. C'est sur la base de cette loi que 118 associations ont été dissoutes le 15 avril 2026 pour non-conformité aux nouvelles exigences légales, par décision du Ministre d'État Emile Zerbo."
+    },
+    {
+      "q": "Selon le projet de loi adopté en Conseil des ministres du 25 juin 2026, à combien de jours est réduit le délai d'entrée en vigueur des lois et actes réglementaires au Burkina Faso ?",
+      "o": [
+        "5 jours (au lieu de 15 jours)",
+        "7 jours (au lieu de 10 jours)",
+        "2 jours (au lieu de 5 jours)",
+        "3 jours (au lieu de 8 jours)"
+      ],
+      "r": 3,
+      "x": "Le projet de loi adopté le 25 juin 2026 réduit le délai d'entrée en vigueur des lois, ordonnances et actes réglementaires à 3 jours (au lieu de 8 jours) après leur publication au Journal Officiel. Il prévoit également la possibilité de publier les textes par voie numérique (TIC) et de notifier les actes administratifs individuels par voie électronique."
+    },
+    {
+      "q": "À quel ministère la Société burkinabè de télédiffusion (SBT) a-t-elle été rattachée lors du Conseil des ministres du 25 juin 2026 ?",
+      "o": [
+        "Ministère de la Transition digitale, des Postes et des Communications électroniques",
+        "Ministère de la Communication, de la Culture, des Arts et du Tourisme",
+        "Ministère de la Construction de la Patrie",
+        "Ministère de l'Industrie, du Commerce et de l'Artisanat"
+      ],
+      "r": 0,
+      "x": "La Société burkinabè de télédiffusion (SBT) a été rattachée au ministère de la Transition digitale, des Postes et des Communications électroniques, dirigé par Madame Aminata Zerbo/Sabane. Ce rattachement fait suite à la révision de l'organisation du ministère de la Communication, conformément au Décret n°2025-1545/PF/PRIM du 1er décembre 2025 portant organisation-type des départements ministériels."
+    },
+    {
+      "q": "Quel montant de recettes globales la Loi de finances pour l'exercice 2026 du Burkina Faso prévoit-elle ?",
+      "o": [
+        "2 800 milliards FCFA",
+        "3 431,5 milliards FCFA",
+        "4 000 milliards FCFA",
+        "2 500 milliards FCFA"
+      ],
+      "r": 1,
+      "x": "La Loi de finances 2026, adoptée par l'ALT le 27 décembre 2025, prévoit des recettes globales de 3 431,5 milliards FCFA (dont 3 216,5 milliards de recettes ordinaires, en hausse de 3,4%, et 215 milliards de recettes extraordinaires). Cette hausse est soutenue par la facture électronique certifiée et le projet Smart Douane."
+    },
+    {
+      "q": "De combien de fonds nationaux le FBDES Tõogo (Fonds Burkinabè de Développement Économique et Social) est-il issu et quand a-t-il été créé ?",
+      "o": [
+        "Fusion de 5 fonds, créé le 4 décembre 2025",
+        "Fusion de 10 fonds, créé le 22 janvier 2026",
+        "Fusion de 7 fonds, créé le 17 décembre 2025",
+        "Fusion de 3 fonds, créé le 29 janvier 2026"
+      ],
+      "r": 2,
+      "x": "Le FBDES Tõogo a été créé le 17 décembre 2025 par la fusion de 7 fonds nationaux. Il dispose d'un effectif de 409 agents. Son DG est Ahmadé Nour Guenda. Par ailleurs, le Fonds d'appui à la presse privée (FAPP) a été fusionné dans le Fonds Wassa Bondo (sport et presse privée) et le FDCT dans le FBDES Tõogo."
+    },
+    {
+      "q": "Qui est le premier Directeur Général du FBDES Tõogo (Fonds Burkinabè de Développement Économique et Social) ?",
+      "o": [
+        "Braïma Barro",
+        "Aboubakar Nacanabo",
+        "Serge Gnaniodem Poda",
+        "Ahmadé Nour Guenda"
+      ],
+      "r": 3,
+      "x": "Ahmadé Nour Guenda, Économiste (Mle 204 606 J, 2e classe, 6e échelon), est le premier DG du FBDES Tõogo. Il a été nommé lors du Conseil des ministres du 22 janvier 2026. Le FBDES Tõogo, issu de la fusion de 7 fonds nationaux, vise à financer le développement économique et social du Burkina Faso."
+    },
+    {
+      "q": "Quel pourcentage du capital de la SOFITEX l'État burkinabè a-t-il racheté pour nationaliser la société en avril 2026 ?",
+      "o": [
+        "10% du capital",
+        "5,537% du capital",
+        "25,25% du capital",
+        "49,525% du capital"
+      ],
+      "r": 1,
+      "x": "L'État a racheté les 5,537 % du capital détenus par les actionnaires privés, devenant ainsi l'unique actionnaire de la SOFITEX (le reste appartenant déjà à l'État). Le nouveau DG de la SOFITEX est Braïma Barro, nommé le 22 janvier 2026."
+    },
+    {
+      "q": "Dans quelle ville et commune est implantée la société TEXFORCES-BF (Textile des Forces du Burkina Faso) ?",
+      "o": [
+        "Logofourousso, commune urbaine de Bobo-Dioulasso",
+        "Gampéla, commune de Saaba (Ouagadougou)",
+        "Komsilga, périphérie de Ouagadougou",
+        "Peni, commune de Bobo-Dioulasso"
+      ],
+      "r": 0,
+      "x": "La société TEXFORCES-BF est implantée à Logofourousso, commune urbaine de Bobo-Dioulasso. Sa déclaration d'utilité publique urgente a été adoptée en Conseil des ministres le 25 juin 2026. Les deux terrains concernés couvrent une superficie de 5 hectares 69 ares 90 centiares."
+    },
+    {
+      "q": "Quelle est la production totale de coton graine au Burkina Faso lors de la campagne cotonnière 2025-2026 ?",
+      "o": [
+        "294 507 tonnes, en baisse de 5%",
+        "250 000 tonnes, en baisse de 10%",
+        "314 293 tonnes, en hausse de 7%",
+        "380 000 tonnes, en hausse de 15%"
+      ],
+      "r": 2,
+      "x": "La campagne cotonnière 2025-2026 a produit 314 293 tonnes de coton graine (conventionnel et biologique), contre 294 507 tonnes lors de la campagne précédente, soit une hausse de 7%. Ce bilan a été présenté en Conseil des ministres le 25 juin 2026 par le Ministre Serge Gnaniodem Poda."
+    },
+    {
+      "q": "Quelle superficie a été emblavée lors de la campagne cotonnière 2025-2026 au Burkina Faso ?",
+      "o": [
+        "310 000 ha, en hausse de 3%",
+        "346 778 ha, en hausse de 0%",
+        "450 000 ha, en hausse de 20%",
+        "391 407 ha, en hausse de 13%"
+      ],
+      "r": 3,
+      "x": "La campagne cotonnière 2025-2026 a emblavé 391 407 hectares, contre 346 778 ha lors de la campagne précédente, soit une hausse de 13%. Pour la campagne 2026-2027, le gouvernement a fixé le prix de cession à crédit des engrais à 17 500 FCFA le sac de 50 kg."
+    },
+    {
+      "q": "À quelle date la facture électronique certifiée a-t-elle été généralisée au Burkina Faso pour lutter contre la fraude fiscale ?",
+      "o": [
+        "Octobre 2025",
+        "Dès janvier 2026",
+        "Juillet 2026",
+        "Avril 2026"
+      ],
+      "r": 1,
+      "x": "La facture électronique certifiée a été généralisée au Burkina Faso dès janvier 2026 afin d'assainir les transactions commerciales et améliorer la maîtrise de la TVA. Cette réforme, s'accompagne du projet Smart Douane pour moderniser les capacités de la douane. Ces deux mesures visent à augmenter les recettes fiscales prévues dans la loi de finances 2026."
+    },
+    {
+      "q": "Dans quelle fusion le Fonds d'Appui à la Presse Privée (FAPP) a-t-il été intégré en 2026 ?",
+      "o": [
+        "Fusionné dans le Fonds Wassa Bondo (Fonds d'appui au sport et à la presse privée)",
+        "Fusionné dans le FBDES Tõogo",
+        "Fusionné dans le Fonds d'appui au développement culturel",
+        "Fusionné dans le FDCT (Fonds de développement culturel et touristique)"
+      ],
+      "r": 0,
+      "x": "Le FAPP (Fonds d'Appui à la Presse Privée) a été fusionné dans le Fonds Wassa Bondo (Fonds d'appui au sport et à la presse privée), lors de la réorganisation du ministère de la Communication du 25 juin 2026. Parallèlement, le FDCT (Fonds de développement culturel et touristique) a été fusionné dans le FBDES Tõogo."
+    },
+    {
+      "q": "Quand une délégation burkinabè s'est-elle rendue à Moscou en visite de travail ?",
+      "o": [
+        "Les 27 et 28 juillet 2025",
+        "Les 22 et 23 janvier 2026",
+        "Les 12 et 13 février 2026",
+        "Les 5 et 6 mars 2026"
+      ],
+      "r": 2,
+      "x": "Une délégation burkinabè s'est rendue à Moscou (Fédération de Russie) les 12 et 13 février 2026 dans le cadre d'une visite de travail. Cette visite s'inscrit dans le renforcement de la coopération bilatérale entre le Burkina Faso et la Russie, partenaire privilégié dans les domaines sécuritaire et économique."
+    },
+    {
+      "q": "Combien de patients atteints d'hydrocèle ont été pris en charge chirurgicalement gratuitement en 2025 au Burkina Faso ?",
+      "o": [
+        "1 200 patients dans 10 régions sanitaires",
+        "3 500 patients dans 13 régions sanitaires",
+        "2 519 patients dans 16 régions sanitaires",
+        "800 patients dans 8 régions sanitaires"
+      ],
+      "r": 2,
+      "x": "En 2025, 2 519 patients atteints d'hydrocèle ont été pris en charge chirurgicalement dans 16 régions sanitaires du Burkina Faso. Le suivi post-opératoire indique une évolution favorable. Ces résultats illustrent les efforts du gouvernement pour réduire la charge de la filariose lymphatique à travers la prise en charge chirurgicale gratuite."
+    },
+    {
+      "q": "Combien de personnes déplacées internes (PDI) ont regagné leurs localités d'origine au Burkina Faso en mars 2025 ?",
+      "o": [
+        "300 000 PDI dans 200 localités",
+        "500 000 PDI dans 400 localités",
+        "750 000 PDI dans 600 localités",
+        "1 million de PDI dans 700 localités"
+      ],
+      "r": 3,
+      "x": "En mars 2025, plus d'un million de personnes déplacées internes (PDI) ont été réinstallées dans environ 700 localités de leur région d'origine au Burkina Faso. Ce résultat est lié aux opérations de reconquête territoriale menées par les FANB et les VDP. Le pays avait recensé 2,01 millions de PDI au 30 mars 2023."
+    },
+    {
+      "q": "Quelle décision majeure a été prise concernant les enseignants communautaires au Burkina Faso ?",
+      "o": [
+        "Intégration des enseignants communautaires dans la fonction publique",
+        "Augmentation de leurs indemnités de 50%",
+        "Création d'un statut spécial d'enseignant auxiliaire",
+        "Déploiement de 10 000 enseignants communautaires dans les zones rurales"
+      ],
+      "r": 0,
+      "x": "Le gouvernement burkinabè a accordé le feu vert à l'intégration des enseignants communautaires dans la fonction publique, les reconnaissant comme \"VDP (Volontaires pour la Défense de la Patrie) de l'éducation\". Cette mesure permet à ces agents contractuels de l'éducation nationale d'accéder au statut de fonctionnaire."
+    },
+    {
+      "q": "Qui a été sacrée Super Enseignante de l'Année 2025 lors de la Journée de l'Excellence Scolaire au Burkina Faso ?",
+      "o": [
+        "Mahaoua Baoula/Kanyoulou",
+        "Windkouni Haoua Eugénie Maiga",
+        "Fatoumata Bako/Traoré",
+        "Passowendé Pélagie Kabre/Kabore"
+      ],
+      "r": 0,
+      "x": "Mahaoua Baoula/Kanyoulou a été sacrée Super Enseignante de l'Année 2025 lors de la Journée de l'Excellence Scolaire organisée par le MEBAPLN (Ministère de l'Enseignement de Base, de l'Alphabétisation et de la Promotion des Langues Nationales), dirigé par le Ministre Jacques Sosthène Dingara."
+    },
+    {
+      "q": "Quelle nouvelle exigence s'impose désormais aux Burkinabè souhaitant poursuivre des études supérieures à l'étranger ?",
+      "o": [
+        "Obtenir une caution bancaire auprès du Trésor public",
+        "Présenter un casier judiciaire vierge à la représentation diplomatique burkinabè",
+        "Obtenir une autorisation préalable du ministère de l'Enseignement supérieur",
+        "Justifier d'une bourse d'études officielle burkinabè ou étrangère"
+      ],
+      "r": 2,
+      "x": "Les Burkinabè souhaitant poursuivre des études supérieures à l'étranger doivent désormais obtenir une autorisation préalable du ministère de l'Enseignement supérieur, de la Recherche et de l'Innovation (dirigé par Adjima Thombiano). Cette mesure vise à mieux encadrer les flux estudiantins vers l'étranger et à maintenir les compétences au service du développement national."
+    },
+    {
+      "q": "Lors du Conseil des ministres du 25 juin 2026, quel décret majeur a été adopté concernant les bourses d'études de l'enseignement supérieur ?",
+      "o": [
+        "Suppression des bourses pour les filières non prioritaires",
+        "Doublement des montants des bourses nationales",
+        "Création de nouvelles bourses d'excellence pour les meilleurs étudiants",
+        "Révision du régime des bourses d'études de l'enseignement supérieur et de la recherche"
+      ],
+      "r": 3,
+      "x": "Le Conseil des ministres du 25 juin 2026 a adopté un décret portant révision du régime des bourses d'études de l'enseignement supérieur et de la recherche, présenté par le Ministre Adjima Thombiano. Il s'agit d'une relecture du décret de 2021 visant à adapter le régime des bourses aux nouvelles orientations de l'enseignement supérieur."
     }
   ],
   "halieutique": [
