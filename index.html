@@ -3726,7 +3726,7 @@ const App = {
           <div class="bio-prompt-icon">🎯</div>
           <div class="bio-prompt-title">Tu as révisé fort aujourd'hui !</div>
           <div class="bio-prompt-desc">
-            Tu as atteint la <strong>limite gratuite</strong> de <strong>${this.FreemiumManager.LIMITE_QUOTIDIENNE_GRATUITE} questions/jour</strong>.<br><br>
+            Tu as atteint la <strong>limite gratuite</strong> de <strong>${this.FreemiumManager.getLimit(this.state.user)} questions/jour</strong>.<br><br>
             Pour continuer à t'entraîner sans limite et accéder à toutes les fonctionnalités, passe <strong>Premium</strong>.
           </div>
 
@@ -3760,9 +3760,9 @@ const App = {
           <div class="bio-prompt-icon">📰</div>
           <div class="bio-prompt-title">Tu as fini ton quota d'actualités du jour !</div>
           <div class="bio-prompt-desc">
-            Tu as répondu à <strong>${this.FreemiumManager.LIMITE_ACTUALITE_GRATUIT} questions d'actualité aujourd'hui</strong>.<br><br>
+            Tu as répondu à <strong>${this.FreemiumManager.getActuLimit(this.state.user)} questions d'actualité aujourd'hui</strong>.<br><br>
             Les actualités sont mises à jour à chaque événement majeur — un travail de veille quotidien.<br><br>
-            <strong>Reviens demain</strong> pour ${this.FreemiumManager.LIMITE_ACTUALITE_GRATUIT} nouvelles questions OU passe Premium pour un accès illimité.
+            <strong>Reviens demain</strong> pour ${this.FreemiumManager.getActuLimit(this.state.user)} nouvelles questions OU passe Premium pour un accès illimité.
           </div>
 
           <div class="bio-prompt-benefits">
@@ -3997,13 +3997,13 @@ const App = {
     if (isPremium) return ''; // Pas de barre pour les Premium
 
     const used = this.FreemiumManager.getCountToday();
-    const limit = this.FreemiumManager.LIMITE_QUOTIDIENNE_GRATUITE;
+    const limit = this.FreemiumManager.getLimit(this.state.user);
     const remaining = limit - used;
     const percentage = Math.min(100, (used / limit) * 100);
 
     // V63.11 : Compteur actualité spécifique
     const actuUsed = this.FreemiumManager.getActuCountToday();
-    const actuLimit = this.FreemiumManager.LIMITE_ACTUALITE_GRATUIT;
+    const actuLimit = this.FreemiumManager.getActuLimit(this.state.user);
     const actuRemaining = actuLimit - actuUsed;
     const actuPercentage = Math.min(100, (actuUsed / actuLimit) * 100);
     // N'afficher la barre actualité QUE si l'utilisateur en a déjà consommé au moins 1
@@ -11719,16 +11719,36 @@ const App = {
   // GESTIONNAIRE FREEMIUM (limite gratuite quotidienne)
   // ===========================================
   FreemiumManager: {
-    // Configuration
-    LIMITE_QUOTIDIENNE_GRATUITE: 10, // 10 questions par jour pour les non-Premium
-    // V63.11 : Limite spécifique pour les questions d'actualité
-    LIMITE_ACTUALITE_GRATUIT: 10,    // 10 questions actualité/jour pour les non-Premium
+    // === V63.48 : Distinction anonyme / inscrit gratuit / Premium ===
+    LIMITE_QUOTIDIENNE_ANONYME: 10,       // Anonyme : 10 QCM/jour au total
+    LIMITE_QUOTIDIENNE_INSCRIT: 30,       // Inscrit gratuit : 30 QCM/jour
+    LIMITE_ACTUALITE_ANONYME: 5,          // Anonyme : 5 actualité/jour
+    LIMITE_ACTUALITE_INSCRIT: 10,         // Inscrit gratuit : 10 actualité/jour
+    // Rétrocompatibilité (anciennes constantes conservées, ne pas retirer sans audit)
+    LIMITE_QUOTIDIENNE_GRATUITE: 10,
+    LIMITE_ACTUALITE_GRATUIT: 5,
     // Matières considérées comme "actualité" (la limite s'applique à ces matières)
     MATIERES_ACTUALITE: ['actualite', 'actualite_bf'],
 
     // Clé localStorage pour le compteur
     STORAGE_KEY: 'bara_freemium_counter',
     STORAGE_KEY_ACTU: 'bara_freemium_counter_actu',  // V63.11
+
+    // === V63.48 : Détecter si l'utilisateur est inscrit (compte Firebase existant) ===
+    isRegistered(user) {
+      const u = user || (window.FirebaseAuth && window.FirebaseAuth.user);
+      return !!u;
+    },
+
+    // === V63.48 : Limite quotidienne totale applicable pour cet utilisateur ===
+    getLimit(user) {
+      return this.isRegistered(user) ? this.LIMITE_QUOTIDIENNE_INSCRIT : this.LIMITE_QUOTIDIENNE_ANONYME;
+    },
+
+    // === V63.48 : Limite actualité applicable pour cet utilisateur ===
+    getActuLimit(user) {
+      return this.isRegistered(user) ? this.LIMITE_ACTUALITE_INSCRIT : this.LIMITE_ACTUALITE_ANONYME;
+    },
 
     // Récupérer l'état actuel
     getState() {
@@ -11769,14 +11789,14 @@ const App = {
       return this.getActuState().count;
     },
 
-    // Combien il en reste aujourd'hui
-    getRemaining() {
-      return Math.max(0, this.LIMITE_QUOTIDIENNE_GRATUITE - this.getCountToday());
+    // Combien il en reste aujourd'hui (V63.48 : selon anonyme / inscrit)
+    getRemaining(user) {
+      return Math.max(0, this.getLimit(user) - this.getCountToday());
     },
 
-    // V63.11 : Combien de questions actualité restantes aujourd'hui
-    getActuRemaining() {
-      return Math.max(0, this.LIMITE_ACTUALITE_GRATUIT - this.getActuCountToday());
+    // V63.11 : Combien de questions actualité restantes aujourd'hui (V63.48 : selon anonyme / inscrit)
+    getActuRemaining(user) {
+      return Math.max(0, this.getActuLimit(user) - this.getActuCountToday());
     },
 
     // V63.11 : Une matière est-elle considérée comme "actualité" ?
@@ -11785,21 +11805,21 @@ const App = {
       return this.MATIERES_ACTUALITE.includes(matiere);
     },
 
-    // L'utilisateur a-t-il atteint la limite ?
+    // L'utilisateur a-t-il atteint la limite ? (V63.48 : selon anonyme / inscrit)
     hasReachedLimit(user) {
       // Premium = pas de limite
       if (window.PremiumService && window.PremiumService.isUserPremium(user)) {
         return false;
       }
-      return this.getCountToday() >= this.LIMITE_QUOTIDIENNE_GRATUITE;
+      return this.getCountToday() >= this.getLimit(user);
     },
 
-    // V63.11 : L'utilisateur a-t-il atteint la limite actualité ?
+    // V63.11 : L'utilisateur a-t-il atteint la limite actualité ? (V63.48 : selon anonyme / inscrit)
     hasReachedActuLimit(user) {
       if (window.PremiumService && window.PremiumService.isUserPremium(user)) {
         return false;
       }
-      return this.getActuCountToday() >= this.LIMITE_ACTUALITE_GRATUIT;
+      return this.getActuCountToday() >= this.getActuLimit(user);
     },
 
     // V63.11 : Vérifier la limite pour une matière spécifique (générale OU actualité)
@@ -11811,14 +11831,14 @@ const App = {
         return {
           allowed: false,
           reason: 'actualite_limit',
-          message: `Tu as atteint la limite de ${this.LIMITE_ACTUALITE_GRATUIT} questions Actualité par jour. Reviens demain ou passe Premium pour un accès illimité.`
+          message: `Tu as atteint la limite de ${this.getActuLimit(user)} questions Actualité par jour. Reviens demain ou passe Premium pour un accès illimité.`
         };
       }
       if (this.hasReachedLimit(user)) {
         return {
           allowed: false,
           reason: 'general_limit',
-          message: `Tu as atteint la limite de ${this.LIMITE_QUOTIDIENNE_GRATUITE} questions par jour.`
+          message: `Tu as atteint la limite de ${this.getLimit(user)} questions par jour.`
         };
       }
       return { allowed: true };

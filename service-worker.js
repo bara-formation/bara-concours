@@ -1,8 +1,8 @@
 // Bara Concours - Service Worker
-// Version 6.3.47 - V63.47 : +100 questions SVT BAC (2e lot)
-// (regroupe V63.45 + V63.46 si pas encore déployées : robustesse offline + fix Session N°2 + fix Q46 + 99 SVT BAC)
+// Version 6.3.48 - V63.48 : Fix limite freemium (anonyme 10 / inscrit 30 / Premium illimité + actualité 5/10/illimité)
+// (regroupe V63.43-V63.47 non déployées si nécessaire)
 
-const CACHE_NAME = 'bara-concours-v6-3-47';
+const CACHE_NAME = 'bara-concours-v6-3-48';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)
