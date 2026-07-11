@@ -1,8 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.48 - V63.48 : Fix limite freemium (anonyme 10 / inscrit 30 / Premium illimité + actualité 5/10/illimité)
-// (regroupe V63.43-V63.47 non déployées si nécessaire)
+// Version 6.3.49 - V63.49 : Auth anonyme Firebase (activation Premium sans compte) + messages d'erreur honnêtes
 
-const CACHE_NAME = 'bara-concours-v6-3-48';
+const CACHE_NAME = 'bara-concours-v6-3-49';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)
