@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.49 - V63.49 : Auth anonyme Firebase (activation Premium sans compte) + messages d'erreur honnêtes
+// Version 6.3.50 - V63.50 : Fix sync Premium admin (setDoc merge + doc user anonyme + auto-réparation historique)
 
-const CACHE_NAME = 'bara-concours-v6-3-49';
+const CACHE_NAME = 'bara-concours-v6-3-50';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)

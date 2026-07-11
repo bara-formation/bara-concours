@@ -100,6 +100,31 @@ const FirebaseAuth = {
           this.user = user;
           // Charger le profil étendu depuis Firestore
           await this._loadUserProfile(user.uid);
+          // V63.50 : Auto-réparation des Premium historiques désynchronisés
+          //   → si le localStorage dit "Premium valide" mais Firestore dit "Gratuit",
+          //     on répare pour que le tableau de bord admin voie le vrai statut.
+          //   → couvre les users dont l'activation Premium avait raté la sync Firestore
+          //     (bug 1 = updateDoc silencieux si doc user inexistant, avant V63.50)
+          try {
+            const localState = JSON.parse(localStorage.getItem('bara_concours_state') || '{}');
+            const localUser = localState.user;
+            if (localUser && localUser.isPremium && localUser.premiumExpiresAt) {
+              const localExpiry = new Date(localUser.premiumExpiresAt).getTime();
+              const isStillValid = localExpiry > Date.now();
+              const firestoreIsPremium = this.userProfile && this.userProfile.isPremium;
+              if (isStillValid && !firestoreIsPremium) {
+                console.log('[V63.50] 🔧 Réparation Premium historique (local → Firestore)');
+                await this.updateProfile({
+                  isPremium: true,
+                  premiumPlan: localUser.premiumPlan || null,
+                  premiumExpiresAt: localUser.premiumExpiresAt,
+                  premiumActivatedAt: localUser.premiumActivatedAt || new Date().toISOString()
+                });
+              }
+            }
+          } catch(e) {
+            console.warn('[V63.50] Auto-réparation Premium impossible :', e);
+          }
         } else {
           this.user = null;
           this.userProfile = null;
@@ -128,8 +153,18 @@ const FirebaseAuth = {
       // → si l'utilisateur crée un compte email plus tard, on pourra lier les 2 (V63.50)
       if (!this.auth.currentUser) {
         try {
-          await this._fbFns.signInAnonymously(this.auth);
+          const anonResult = await this._fbFns.signInAnonymously(this.auth);
           console.log('[Firebase] ✓ Connexion anonyme automatique');
+          // V63.50 : Créer le doc user pour les anonymes aussi
+          // → sinon updateDoc échouera à la première activation Premium
+          //   ET le user restera invisible dans le tableau de bord admin
+          if (anonResult && anonResult.user) {
+            try {
+              await this._ensureUserDoc(anonResult.user, 'anonymous');
+            } catch(err) {
+              console.warn('[Firebase] Création doc user anonyme échouée :', err);
+            }
+          }
         } catch(e) {
           console.warn('[Firebase] Auth anonyme impossible (activer Anonymous dans Firebase Console) :', e);
           // Non-bloquant : l'app tourne quand même en mode local dégradé
@@ -398,6 +433,9 @@ const FirebaseAuth = {
   },
 
   // Mettre à jour le profil dans Firestore
+  // V63.50 : setDoc(merge) au lieu de updateDoc — crée le doc s'il n'existe pas
+  //   (résout le bug des Premium invisibles côté admin quand le doc user n'avait
+  //    jamais été créé, ce qui faisait échouer updateDoc silencieusement)
   async updateProfile(updates) {
     if (!this.isFirebaseReady || !this.user) {
       return { success: false, error: 'Pas connecté' };
@@ -409,7 +447,11 @@ const FirebaseAuth = {
       Object.keys(updates).forEach(k => {
         if (updates[k] !== undefined) cleanUpdates[k] = updates[k];
       });
-      await this._fbFns.updateDoc(userRef, cleanUpdates);
+      // V63.50 : Toujours inclure l'uid pour identification, et un lastLoginAt frais
+      cleanUpdates.uid = this.user.uid;
+      cleanUpdates.lastLoginAt = this._fbFns.serverTimestamp();
+      // V63.50 : setDoc avec merge crée le doc s'il n'existe pas, sinon met à jour
+      await this._fbFns.setDoc(userRef, cleanUpdates, { merge: true });
       // Mettre à jour le cache local
       this.userProfile = { ...this.userProfile, ...cleanUpdates };
       return { success: true };
