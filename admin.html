@@ -7118,7 +7118,8 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
       for (let i = 1; i < lines.length; i++) {
         const choiceMatch = lines[i].match(/^[A-D][.)\s]+(.+)$/);
         const rMatch = lines[i].match(/^R\s*[:.]\s*([A-D])\s*$/i);
-        const xMatch = lines[i].match(/^X\s*[:.]\s*(.+)$/i);
+        // V63.52 : accepter E: (format Bara Formation) en plus de X: (ancien format)
+        const xMatch = lines[i].match(/^(?:E|X)\s*[:.]\s*(.+)$/i);
         if (choiceMatch && rIdx < 0) {
           choices.push(choiceMatch[1].trim());
         } else if (rMatch) {
@@ -7129,10 +7130,11 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
         }
       }
       if (choices.length < 3 || choices.length > 4 || rIdx < 0) { errors++; return; }
-      // Récupérer l'explication (X: et lignes suivantes)
+      // Récupérer l'explication (E: ou X: et lignes suivantes)
       let nb = '';
       if (xIdx >= 0) {
-        const xMatch = lines[xIdx].match(/^X\s*[:.]\s*(.+)$/i);
+        // V63.52 : accepter E: et X:
+        const xMatch = lines[xIdx].match(/^(?:E|X)\s*[:.]\s*(.+)$/i);
         nb = xMatch[1];
         // Lignes après X (continuation)
         for (let i = xIdx + 1; i < lines.length; i++) {
