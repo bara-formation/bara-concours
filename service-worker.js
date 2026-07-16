@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.53 - V63.53 : Plan Hebdomadaire caché au public (visible admin uniquement)
+// Version 6.3.54 - V63.54 : Protection défensive isCurrentUserAdmin (évite crash si premium.js pas uploadé)
 
-const CACHE_NAME = 'bara-concours-v6-3-53';
+const CACHE_NAME = 'bara-concours-v6-3-54';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)
