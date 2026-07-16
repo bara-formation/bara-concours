@@ -15,7 +15,12 @@ const PremiumService = {
       tag: 'Pour tester',
       tagColor: '#2563eb',
       tagBg: '#dbeafe',
-      popular: false
+      popular: false,
+      // V63.53 : Plan caché au public — visible uniquement pour les admins.
+      //   → évite que des étudiants s'abonnent en Hebdo à 1000 F juste pour accéder
+      //     à l'accompagnement final (qui est normalement à 2000/2500 F).
+      //   → l'admin garde ce plan pour l'utiliser à d'autres fins (tests, cadeaux, etc.).
+      adminOnly: true
     },
     monthly: {
       id: 'monthly',

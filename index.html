@@ -8753,8 +8753,15 @@ const App = {
   renderPremiumPlans() {
     // V60 : Par défaut, on propose session2026 (plan le plus demandé)
     const selectedPlan = this.state.premiumSelection?.plan || 'session2026';
-    // V60 : Filtrer les plans cachés (yearly est caché pour la saison 2026)
-    const plans = Object.values(window.PremiumService.PLANS).filter(p => !p.hidden);
+    // V63.53 : Filtrer les plans cachés (hidden) ET les plans réservés admin (adminOnly)
+    //   → Le plan Hebdomadaire (weekly) est marqué adminOnly : seul l'admin le voit,
+    //     pour éviter les abus (étudiants s'abonnant à 1000 F au lieu de 2500 F session).
+    const isAdmin = window.PremiumService.isCurrentUserAdmin();
+    const plans = Object.values(window.PremiumService.PLANS).filter(p => {
+      if (p.hidden) return false;
+      if (p.adminOnly && !isAdmin) return false;
+      return true;
+    });
 
     return `
       <div class="page">

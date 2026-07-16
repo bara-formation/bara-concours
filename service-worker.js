@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.51 - V63.51 : Fix affichage explications dans Accompagnement Final (aligne user sur admin — cherche x/explication/explanation/nb)
+// Version 6.3.53 - V63.53 : Plan Hebdomadaire caché au public (visible admin uniquement)
 
-const CACHE_NAME = 'bara-concours-v6-3-51';
+const CACHE_NAME = 'bara-concours-v6-3-53';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)
