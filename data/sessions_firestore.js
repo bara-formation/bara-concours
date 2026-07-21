@@ -1,4 +1,5 @@
-// Bara Concours - Service Firestore Accompagnement Final 2026 (V63.55)
+// Bara Concours - Service Firestore Accompagnement Final 2026 (V63.56)
+// V63.56 : Fix cache offline (auto-init depuis localStorage + suppression callback synchrone qui ralentissait l'app)
 // V63.55 : Cache persistant localStorage — sessions disponibles offline pour toujours
 // Architecture cloud pour publication instantanée des sessions
 // Format IDENTIQUE à sessions.js (qcm3, qcm4, open, multi)
@@ -153,11 +154,10 @@ const SessionsFirestore = {
   listenToSessions(callback) {
     // V63.55 : Init cache mémoire depuis localStorage si pas déjà fait
     this._initFromLocalStorage();
-    // V63.55 : Servir immédiatement depuis le cache offline en attendant la 1ère réponse Firestore
-    //   → l'utilisateur voit les sujets tout de suite, sans latence perçue
-    if (this._sessionsCache && this._sessionsCache.length > 0) {
-      try { callback(this._sessionsCache); } catch(e) { console.error('[SessionsFirestore] callback err (cache):', e); }
-    }
+    // V63.56 : Ne PAS rappeler callback synchronement ici — ça provoquait une chaîne
+    //   de renders (listener → callback → render → startSessionsLiveSync → listener → ...)
+    //   qui rendait l'app très lente. Le rendu utilise déjà _sessionsCache directement
+    //   dans getMergedAccompagnementSessions() dès qu'il est peuplé (V63.56).
 
     if (!this._isReady()) {
       console.warn('[SessionsFirestore] listenToSessions : Firebase non prêt — mode offline');
@@ -451,4 +451,14 @@ const SessionsFirestore = {
 // Export global
 if (typeof window !== 'undefined') {
   window.SessionsFirestore = SessionsFirestore;
+  // V63.56 : Auto-init le cache depuis localStorage dès le chargement du module.
+  //   → Assure que _sessionsCache est peuplé au premier render de renderSessionsList(),
+  //     même quand Firebase n'est pas prêt (offline / mode avion / réseau instable).
+  //   → C'est ce qui permet à getMergedAccompagnementSessions() de voir les sessions
+  //     Firestore 2026 offline (fix du bug où le placeholder "À VENIR" apparaissait).
+  try {
+    SessionsFirestore._initFromLocalStorage();
+  } catch(e) {
+    console.warn('[SessionsFirestore] Auto-init depuis localStorage échoué :', e);
+  }
 }
