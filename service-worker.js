@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.55 - V63.55 : Cache persistant localStorage pour les sessions Accompagnement Final (disponibles offline pour toujours)
+// Version 6.3.56 - V63.56 : Fix cache offline sessions Accompagnement (auto-init depuis localStorage + fix lenteur)
 
-const CACHE_NAME = 'bara-concours-v6-3-55';
+const CACHE_NAME = 'bara-concours-v6-3-56';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)
