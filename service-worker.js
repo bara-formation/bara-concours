@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.54 - V63.54 : Protection défensive isCurrentUserAdmin (évite crash si premium.js pas uploadé)
+// Version 6.3.55 - V63.55 : Cache persistant localStorage pour les sessions Accompagnement Final (disponibles offline pour toujours)
 
-const CACHE_NAME = 'bara-concours-v6-3-54';
+const CACHE_NAME = 'bara-concours-v6-3-55';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)
