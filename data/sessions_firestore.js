@@ -1,4 +1,5 @@
-// Bara Concours - Service Firestore Accompagnement Final 2026 (V63.29)
+// Bara Concours - Service Firestore Accompagnement Final 2026 (V63.55)
+// V63.55 : Cache persistant localStorage — sessions disponibles offline pour toujours
 // Architecture cloud pour publication instantanée des sessions
 // Format IDENTIQUE à sessions.js (qcm3, qcm4, open, multi)
 
@@ -8,7 +9,12 @@ const SessionsFirestore = {
   MAX_SESSIONS_LOADED: 50,         // Limite pour économiser les reads Firestore
   CACHE_TTL_MS: 60 * 1000,         // 60 secondes (sessions changent rarement)
 
-  // Cache local
+  // V63.55 : Cache persistant localStorage pour disponibilité offline permanente
+  //   → Une fois une session chargée en ligne, elle reste dispo offline pour toujours.
+  //   → Résout le bug où les étudiants perdaient les sujets en coupant le réseau.
+  LOCAL_STORAGE_KEY: 'bara_accompagnement_sessions_cache',
+
+  // Cache local en mémoire (rapide, mais perdu à chaque rechargement)
   _sessionsCache: null,
   _sessionsCacheTime: 0,
 
@@ -31,13 +37,58 @@ const SessionsFirestore = {
     return window.FirebaseAuth.db;
   },
 
+  // V63.55 : Sauvegarder le cache dans localStorage (persiste entre sessions)
+  _persistCache(sessions) {
+    try {
+      localStorage.setItem(this.LOCAL_STORAGE_KEY, JSON.stringify({
+        sessions,
+        savedAt: Date.now()
+      }));
+    } catch(e) {
+      // Quota localStorage dépassé (peu probable — les sessions font <1MB au total)
+      console.warn('[SessionsFirestore] Persistance cache impossible :', e.message);
+    }
+  },
+
+  // V63.55 : Charger le cache depuis localStorage au démarrage
+  _loadPersistedCache() {
+    try {
+      const raw = localStorage.getItem(this.LOCAL_STORAGE_KEY);
+      if (!raw) return null;
+      const parsed = JSON.parse(raw);
+      return Array.isArray(parsed.sessions) ? parsed.sessions : null;
+    } catch(e) {
+      return null;
+    }
+  },
+
+  // V63.55 : Initialiser le cache mémoire depuis localStorage (appelé une fois au chargement)
+  _initFromLocalStorage() {
+    if (this._sessionsCache !== null) return; // déjà init
+    const persisted = this._loadPersistedCache();
+    if (persisted && persisted.length > 0) {
+      this._sessionsCache = persisted;
+      // On ne met PAS _sessionsCacheTime = Date.now() pour forcer un refresh au premier appel en ligne
+      // (le TTL 60s décidera si on refetch)
+      console.log('[SessionsFirestore] ✓ ' + persisted.length + ' session(s) restaurée(s) depuis le cache offline');
+    }
+  },
+
   // === LECTURE DES SESSIONS ===
   /**
    * Récupère TOUTES les sessions publiées (statut = 'publie')
    * Triées par date de publication (plus récentes en premier)
    */
   async getAllPublishedSessions() {
+    // V63.55 : Init cache mémoire depuis localStorage si pas déjà fait
+    this._initFromLocalStorage();
+
     if (!this._isReady()) {
+      // V63.55 : Firebase pas prêt (offline au démarrage) → servir depuis le cache persistant
+      const persisted = this._loadPersistedCache();
+      if (persisted && persisted.length > 0) {
+        return { success: true, sessions: persisted, fromPersistedCache: true };
+      }
       return { success: false, sessions: [], error: 'Firebase non prêt' };
     }
     try {
@@ -65,13 +116,20 @@ const SessionsFirestore = {
           source: 'firestore'  // Pour différencier des sessions code
         });
       });
-      // Mettre en cache
+      // Mettre en cache mémoire
       this._sessionsCache = sessions;
       this._sessionsCacheTime = Date.now();
+      // V63.55 : Persister aussi dans localStorage pour disponibilité offline permanente
+      this._persistCache(sessions);
       return { success: true, sessions };
     } catch (e) {
       console.error('[SessionsFirestore] getAllPublishedSessions:', e);
-      return { success: false, sessions: this._sessionsCache || [], error: e.message };
+      // V63.55 : Firestore a échoué (offline, timeout...) → servir depuis le cache persistant
+      const persisted = this._sessionsCache || this._loadPersistedCache();
+      if (persisted && persisted.length > 0) {
+        return { success: true, sessions: persisted, fromPersistedCache: true, error: e.message };
+      }
+      return { success: false, sessions: [], error: e.message };
     }
   },
 
@@ -79,6 +137,8 @@ const SessionsFirestore = {
    * Récupère les sessions depuis le cache si < 60s, sinon refetch
    */
   async getSessionsCached() {
+    // V63.55 : Init cache mémoire depuis localStorage au premier appel
+    this._initFromLocalStorage();
     if (this._sessionsCache && (Date.now() - this._sessionsCacheTime < this.CACHE_TTL_MS)) {
       return { success: true, sessions: this._sessionsCache, fromCache: true };
     }
@@ -91,8 +151,16 @@ const SessionsFirestore = {
    * @returns {Function} unsubscribe
    */
   listenToSessions(callback) {
+    // V63.55 : Init cache mémoire depuis localStorage si pas déjà fait
+    this._initFromLocalStorage();
+    // V63.55 : Servir immédiatement depuis le cache offline en attendant la 1ère réponse Firestore
+    //   → l'utilisateur voit les sujets tout de suite, sans latence perçue
+    if (this._sessionsCache && this._sessionsCache.length > 0) {
+      try { callback(this._sessionsCache); } catch(e) { console.error('[SessionsFirestore] callback err (cache):', e); }
+    }
+
     if (!this._isReady()) {
-      console.warn('[SessionsFirestore] listenToSessions : Firebase non prêt');
+      console.warn('[SessionsFirestore] listenToSessions : Firebase non prêt — mode offline');
       return () => {};
     }
     const fns = this._fns();
@@ -121,6 +189,9 @@ const SessionsFirestore = {
       });
       this._sessionsCache = sessions;
       this._sessionsCacheTime = Date.now();
+      // V63.55 : Persister dans localStorage à chaque snapshot
+      //   → Les futures ouvertures offline auront toujours les données à jour
+      this._persistCache(sessions);
       try { callback(sessions); } catch(e) { console.error('[SessionsFirestore] callback err:', e); }
     }, (error) => {
       console.error('[SessionsFirestore] listenToSessions error:', error);
