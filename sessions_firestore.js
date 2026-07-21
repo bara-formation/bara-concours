@@ -1,4 +1,5 @@
-// Bara Concours - Service Firestore Accompagnement Final 2026 (V63.29)
+// Bara Concours - Service Firestore Accompagnement Final 2026 (V63.55)
+// V63.55 : Cache persistant localStorage — sessions disponibles offline pour toujours
 // Architecture cloud pour publication instantanée des sessions
 // Format IDENTIQUE à sessions.js (qcm3, qcm4, open, multi)
 
