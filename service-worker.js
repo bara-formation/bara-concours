@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.57 - V63.57 : Filet de sécurité offline — lecture directe du localStorage dans le rendu des sessions
+// Version 6.3.58 - V63.58 : Garde-fou anti-écrasement du cache sessions par une réponse vide
 
-const CACHE_NAME = 'bara-concours-v6-3-57';
+const CACHE_NAME = 'bara-concours-v6-3-58';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)
