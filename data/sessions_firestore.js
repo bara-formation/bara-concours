@@ -1,4 +1,4 @@
-// Bara Concours - Service Firestore Accompagnement Final 2026 (V63.56)
+// Bara Concours - Service Firestore Accompagnement Final 2026 (V63.58)
 // V63.56 : Fix cache offline (auto-init depuis localStorage + suppression callback synchrone qui ralentissait l'app)
 // V63.55 : Cache persistant localStorage — sessions disponibles offline pour toujours
 // Architecture cloud pour publication instantanée des sessions
@@ -40,6 +40,17 @@ const SessionsFirestore = {
 
   // V63.55 : Sauvegarder le cache dans localStorage (persiste entre sessions)
   _persistCache(sessions) {
+    // V63.58 : GARDE-FOU — ne JAMAIS écraser un cache plein par un cache vide.
+    //   Sans ça, une réponse Firestore vide (offline, CORS, erreur de règles, requête
+    //   filtrée qui ne renvoie rien) effaçait toutes les sessions déjà en cache,
+    //   et l'étudiant se retrouvait avec le placeholder "À VENIR" au lieu des sujets.
+    if (!Array.isArray(sessions) || sessions.length === 0) {
+      const existing = this._loadPersistedCache();
+      if (existing && existing.length > 0) {
+        console.warn('[SessionsFirestore] Persistance vide ignorée — ' + existing.length + ' session(s) conservée(s) en cache');
+        return;
+      }
+    }
     try {
       localStorage.setItem(this.LOCAL_STORAGE_KEY, JSON.stringify({
         sessions,
@@ -187,6 +198,13 @@ const SessionsFirestore = {
           source: 'firestore'
         });
       });
+      // V63.58 : Ne pas vider le cache mémoire sur un snapshot vide si on avait des données
+      //   (protège contre les réponses partielles/erreurs réseau qui feraient disparaître
+      //    les sujets côté étudiant)
+      if (sessions.length === 0 && this._sessionsCache && this._sessionsCache.length > 0) {
+        console.warn('[SessionsFirestore] Snapshot vide ignoré — cache conservé');
+        return;
+      }
       this._sessionsCache = sessions;
       this._sessionsCacheTime = Date.now();
       // V63.55 : Persister dans localStorage à chaque snapshot
