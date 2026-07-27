@@ -4415,9 +4415,29 @@ const App = {
         }))
       : [];
     // Sessions Firestore (2026+)
-    const firestoreSessions = (window.SessionsFirestore && window.SessionsFirestore._sessionsCache)
+    let firestoreSessions = (window.SessionsFirestore && window.SessionsFirestore._sessionsCache)
       ? window.SessionsFirestore._sessionsCache
       : [];
+    // V63.57 : Filet de sécurité offline — si le cache mémoire est vide,
+    //   lire directement le localStorage. Couvre les cas où le module n'a pas
+    //   pu s'auto-initialiser (SW servant une ancienne version, ordre de chargement, etc.)
+    if (firestoreSessions.length === 0) {
+      try {
+        const raw = localStorage.getItem('bara_accompagnement_sessions_cache');
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (Array.isArray(parsed.sessions) && parsed.sessions.length > 0) {
+            firestoreSessions = parsed.sessions;
+            // Repeupler le cache mémoire pour les prochains appels
+            if (window.SessionsFirestore) {
+              window.SessionsFirestore._sessionsCache = parsed.sessions;
+            }
+          }
+        }
+      } catch(e) {
+        console.warn('[V63.57] Lecture cache offline échouée :', e);
+      }
+    }
     // Fusion + tri décroissant (plus récentes en premier)
     const all = [...firestoreSessions, ...codeSessions];
     all.sort((a, b) => (b.datePublication || 0) - (a.datePublication || 0));
@@ -4432,11 +4452,23 @@ const App = {
       const codeSession = window.SessionsHelper.getSession(sessionId);
       if (codeSession) return { ...codeSession, source: 'code' };
     }
-    // Essayer Firestore
+    // Essayer Firestore (cache mémoire)
     if (window.SessionsFirestore && window.SessionsFirestore._sessionsCache) {
       const fsSession = window.SessionsFirestore._sessionsCache.find(s => s.id === sessionId);
       if (fsSession) return fsSession;
     }
+    // V63.57 : Filet de sécurité offline — chercher dans le localStorage
+    //   (permet d'ouvrir et composer une session même si le cache mémoire est vide)
+    try {
+      const raw = localStorage.getItem('bara_accompagnement_sessions_cache');
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (Array.isArray(parsed.sessions)) {
+          const cached = parsed.sessions.find(s => s.id === sessionId);
+          if (cached) return cached;
+        }
+      }
+    } catch(e) {}
     return null;
   },
 
