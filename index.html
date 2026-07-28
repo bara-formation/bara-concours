@@ -7019,6 +7019,11 @@ const App = {
       || (this.state.user.name && this.state.user.name !== 'Apprenant' && this.state.user.name !== 'Invité' ? this.state.user.name : '')
       || '';
 
+    // V63.61 : Ville — le champ canonique dans l'app est `city`, mais l'inscription
+    //   l'enregistrait dans `ville` et Firestore dans `region`. On aligne les trois
+    //   pour que la ville choisie à l'inscription apparaisse bien sur le profil.
+    const resolvedCity = profile.city || profile.region || this.state.user.city || this.state.user.ville || '';
+
     // Mettre à jour le state local
     this.state.user = {
       ...this.state.user,
@@ -7030,7 +7035,12 @@ const App = {
       firstName: profile.displayName ? profile.displayName.split(' ')[0] : (this.state.user.firstName || ''),
       lastName: profile.displayName ? profile.displayName.split(' ').slice(1).join(' ') : (this.state.user.lastName || ''),
       phoneNumber: profile.phoneNumber || this.state.user.phoneNumber || '',
-      ville: profile.region || this.state.user.ville || '',
+      // V63.61 : Écrire dans les deux champs pour compatibilité (city = canonique)
+      city: resolvedCity,
+      ville: resolvedCity,
+      // V63.61 : Restaurer aussi le concours visé et le niveau depuis Firestore
+      targetConcours: profile.targetConcours || this.state.user.targetConcours || '',
+      educationLevel: profile.educationLevel || this.state.user.educationLevel || '',
       photoURL: profile.photoURL || '',
       authProvider: profile.authProvider || 'email',
       // Premium synchronisé depuis Firestore
@@ -7055,8 +7065,10 @@ const App = {
       if (this.state.user.phoneNumber) {
         this.state.onboarding.phoneNumber = this.state.user.phoneNumber;
       }
-      if (this.state.user.ville) {
-        this.state.onboarding.ville = this.state.user.ville;
+      if (this.state.user.city || this.state.user.ville) {
+        // V63.61 : renseigner les deux clés — l'onboarding lit `city` selon l'étape
+        this.state.onboarding.city = this.state.user.city || this.state.user.ville;
+        this.state.onboarding.ville = this.state.user.city || this.state.user.ville;
       }
       // V58.3 : Marqueurs Firebase
       this.state.onboarding._fromFirebase = true;
@@ -7369,7 +7381,9 @@ const App = {
         await window.FirebaseAuth.updateProfile({
           displayName: composedName,
           city: o.city || o.ville || '',
+          region: o.city || o.ville || '',
           targetConcours: o.targetConcours,
+          educationLevel: o.educationLevel || o.filterNiveau || '',
           notificationsEnabled: notifsOK
         });
       } catch (e) { console.error('Update profile :', e); }
@@ -8579,16 +8593,34 @@ const App = {
     // V63.60 : Auto-réparation du nom pour les comptes créés avant le fix.
     //   Ces étudiants avaient bien saisi leur nom à l'inscription, mais il n'était
     //   pas recopié dans `name`. On le récupère depuis firstName/lastName ou Firebase.
-    if (isLoggedIn && (!u.name || u.name === 'Apprenant' || u.name === 'Invité')) {
-      const recovered = [u.firstName, u.lastName].filter(Boolean).join(' ').trim()
-        || (window.FirebaseAuth && window.FirebaseAuth.userProfile && window.FirebaseAuth.userProfile.displayName)
-        || (window.FirebaseAuth && window.FirebaseAuth.user && window.FirebaseAuth.user.displayName)
-        || '';
-      if (recovered) {
-        u.name = recovered;
-        u.nom = recovered;
-        this.save();
+    // V63.61 : Idem pour la ville (écrite dans `ville`/`region` au lieu de `city`)
+    //   et pour le concours visé / niveau scolaire restés en Firestore.
+    if (isLoggedIn) {
+      const fsProfile = (window.FirebaseAuth && window.FirebaseAuth.userProfile) || {};
+      let repaired = false;
+
+      if (!u.name || u.name === 'Apprenant' || u.name === 'Invité') {
+        const recovered = [u.firstName, u.lastName].filter(Boolean).join(' ').trim()
+          || fsProfile.displayName
+          || (window.FirebaseAuth && window.FirebaseAuth.user && window.FirebaseAuth.user.displayName)
+          || '';
+        if (recovered) { u.name = recovered; u.nom = recovered; repaired = true; }
       }
+
+      if (!u.city) {
+        const recoveredCity = u.ville || fsProfile.city || fsProfile.region || '';
+        if (recoveredCity) { u.city = recoveredCity; u.ville = recoveredCity; repaired = true; }
+      }
+
+      if (!u.targetConcours && fsProfile.targetConcours) {
+        u.targetConcours = fsProfile.targetConcours; repaired = true;
+      }
+
+      if (!u.educationLevel && fsProfile.educationLevel) {
+        u.educationLevel = fsProfile.educationLevel; repaired = true;
+      }
+
+      if (repaired) this.save();
     }
     const targetConcours = u.targetConcours ? CONCOURS.find(c => c.id === u.targetConcours) : null;
     const notifsStatus = Notifications.getStatus();

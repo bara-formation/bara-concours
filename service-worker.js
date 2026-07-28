@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.60 - V63.60 : Fix nom utilisateur non affiche sur le profil apres inscription
+// Version 6.3.61 - V63.61 : Fix ville / concours vise / niveau non restaures sur le profil (alignement city vs ville)
 
-const CACHE_NAME = 'bara-concours-v6-3-60';
+const CACHE_NAME = 'bara-concours-v6-3-61';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)
