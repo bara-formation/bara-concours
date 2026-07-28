@@ -72,6 +72,11 @@ const FirebaseAuth = {
         onAuthStateChanged: authMod.onAuthStateChanged,
         sendPasswordResetEmail: authMod.sendPasswordResetEmail,
         updateProfile: authMod.updateProfile,
+        // V63.59 : Auth anonyme + liaison de comptes
+        signInAnonymously: authMod.signInAnonymously,
+        linkWithPopup: authMod.linkWithPopup,
+        linkWithCredential: authMod.linkWithCredential,
+        EmailAuthProvider: authMod.EmailAuthProvider,
         // Firestore
         doc: dbMod.doc,
         setDoc: dbMod.setDoc,
@@ -99,6 +104,26 @@ const FirebaseAuth = {
           this.user = user;
           // Charger le profil étendu depuis Firestore
           await this._loadUserProfile(user.uid);
+          // V63.59 : Auto-réparation des Premium historiques désynchronisés
+          //   → si le localStorage dit "Premium valide" mais Firestore dit "Gratuit",
+          //     on répare pour que le tableau de bord admin voie le vrai statut.
+          try {
+            const localState = JSON.parse(localStorage.getItem('bara_concours_state') || '{}');
+            const localUser = localState.user;
+            if (localUser && localUser.isPremium && localUser.premiumExpiresAt) {
+              const stillValid = new Date(localUser.premiumExpiresAt).getTime() > Date.now();
+              const firestoreIsPremium = this.userProfile && this.userProfile.isPremium;
+              if (stillValid && !firestoreIsPremium) {
+                console.log('[V63.59] 🔧 Réparation Premium (local → Firestore)');
+                await this.updateProfile({
+                  isPremium: true,
+                  premiumPlan: localUser.premiumPlan || null,
+                  premiumExpiresAt: localUser.premiumExpiresAt,
+                  premiumActivatedAt: localUser.premiumActivatedAt || new Date().toISOString()
+                });
+              }
+            }
+          } catch(e) { /* non bloquant */ }
         } else {
           this.user = null;
           this.userProfile = null;
@@ -118,6 +143,25 @@ const FirebaseAuth = {
         }
       } catch(e) {
         // Pas grave, c'est juste qu'il n'y avait pas de redirect en attente
+      }
+
+      // === V63.59 : Auth anonyme automatique ===
+      //   → chaque visiteur reçoit un user.uid dès le démarrage, même sans compte.
+      //   → permet : activation de code Premium sans inscription, accès Firestore,
+      //     ET surtout comptage/suivi des visiteurs "sans compte" dans l'admin.
+      //   → si l'utilisateur crée un compte plus tard (Google ou email), le compte
+      //     anonyme est LIÉ (linkWithPopup / linkWithCredential) : aucune perte de données.
+      //   ⚠️ Nécessite "Anonymous" activé dans Firebase Console > Authentication > Sign-in method
+      if (!this.auth.currentUser) {
+        try {
+          const anonResult = await this._fbFns.signInAnonymously(this.auth);
+          console.log('[Firebase] ✓ Connexion anonyme automatique');
+          if (anonResult && anonResult.user) {
+            await this._ensureUserDoc(anonResult.user, 'anonymous');
+          }
+        } catch(e) {
+          console.warn('[Firebase] Auth anonyme impossible (activer "Anonymous" dans Firebase Console) :', e.code || e.message);
+        }
       }
 
       return true;
@@ -153,8 +197,30 @@ const FirebaseAuth = {
         // Mode APK : redirect (le résultat sera traité au prochain init via getRedirectResult)
         await this._fbFns.signInWithRedirect(this.auth, provider);
         return { success: true, pending: true };  // L'app va recharger
+      }
+
+      // V63.59 : Si l'utilisateur est actuellement ANONYME, on LIE le compte Google
+      //   au compte anonyme au lieu d'en créer un nouveau.
+      //   → sans ça, Firebase refusait l'inscription Google une fois dans l'app
+      //     (l'utilisateur était déjà connecté en anonyme).
+      //   → avantage : l'historique, le Premium et les stats de l'anonyme sont conservés.
+      const current = this.auth.currentUser;
+      if (current && current.isAnonymous) {
+        try {
+          result = await this._fbFns.linkWithPopup(current, provider);
+          console.log('[V63.59] ✓ Compte anonyme lié à Google (données conservées)');
+        } catch(linkErr) {
+          // Ce compte Google existe déjà ailleurs → connexion normale (on abandonne l'anonyme)
+          if (linkErr.code === 'auth/credential-already-in-use' ||
+              linkErr.code === 'auth/email-already-in-use') {
+            console.log('[V63.59] Compte Google déjà existant → connexion classique');
+            result = await this._fbFns.signInWithPopup(this.auth, provider);
+          } else {
+            throw linkErr;
+          }
+        }
       } else {
-        // Mode navigateur : popup
+        // Mode navigateur classique : popup
         result = await this._fbFns.signInWithPopup(this.auth, provider);
       }
 
@@ -205,7 +271,28 @@ const FirebaseAuth = {
     }
 
     try {
-      const cred = await this._fbFns.createUserWithEmailAndPassword(this.auth, email, password);
+      let cred;
+      // V63.59 : Si l'utilisateur est ANONYME, on lie l'email/mot de passe au compte
+      //   anonyme existant → conserve son historique, ses stats et son Premium.
+      const current = this.auth.currentUser;
+      if (current && current.isAnonymous) {
+        try {
+          const emailCred = this._fbFns.EmailAuthProvider.credential(email, password);
+          cred = await this._fbFns.linkWithCredential(current, emailCred);
+          console.log('[V63.59] ✓ Compte anonyme lié à l\'email (données conservées)');
+        } catch(linkErr) {
+          if (linkErr.code === 'auth/credential-already-in-use' ||
+              linkErr.code === 'auth/email-already-in-use') {
+            // Email déjà pris → laisser remonter l'erreur avec un message clair
+            throw linkErr;
+          }
+          // Autre souci de liaison → création classique en dernier recours
+          console.warn('[V63.59] Liaison anonyme échouée, création classique :', linkErr.code);
+          cred = await this._fbFns.createUserWithEmailAndPassword(this.auth, email, password);
+        }
+      } else {
+        cred = await this._fbFns.createUserWithEmailAndPassword(this.auth, email, password);
+      }
       const user = cred.user;
 
       // Mettre à jour le displayName si fourni
@@ -341,16 +428,27 @@ const FirebaseAuth = {
       return this.userProfile;
     }
 
+    // V63.59 : Numéro de visiteur lisible pour les comptes anonymes
+    //   → permet de les identifier et suivre dans le tableau de bord admin
+    //   → format court dérivé de l'uid (stable, unique) : ex. "VISITEUR-K3F9"
+    const isAnon = authProvider === 'anonymous' || user.isAnonymous;
+    const visitorNumber = isAnon
+      ? 'VISITEUR-' + user.uid.replace(/[^a-zA-Z0-9]/g, '').slice(-4).toUpperCase()
+      : '';
+
     // Nouveau profil
     const newProfile = {
       uid: user.uid,
       email: user.email || '',
-      displayName: user.displayName || (additionalInfo && additionalInfo.displayName) || '',
+      displayName: user.displayName || (additionalInfo && additionalInfo.displayName) || (isAnon ? visitorNumber : ''),
       photoURL: user.photoURL || '',
       phoneNumber: (additionalInfo && additionalInfo.phoneNumber) || '',
       region: (additionalInfo && additionalInfo.region) || '',
       concoursVises: (additionalInfo && additionalInfo.concoursVises) || [],
-      authProvider: authProvider,  // 'google' ou 'email'
+      authProvider: authProvider,  // 'google', 'email' ou 'anonymous'
+      // V63.59 : Champs de suivi des visiteurs anonymes
+      isAnonymous: isAnon,
+      visitorNumber: visitorNumber,
       isPremium: false,
       premiumPlan: null,
       premiumExpiresAt: null,
@@ -359,7 +457,7 @@ const FirebaseAuth = {
       lastLoginAt: this._fbFns.serverTimestamp()
     };
 
-    await this._fbFns.setDoc(userRef, newProfile);
+    await this._fbFns.setDoc(userRef, newProfile, { merge: true });
     this.userProfile = { ...newProfile, _isNewUser: true };
     return this.userProfile;
   },
@@ -393,7 +491,12 @@ const FirebaseAuth = {
       Object.keys(updates).forEach(k => {
         if (updates[k] !== undefined) cleanUpdates[k] = updates[k];
       });
-      await this._fbFns.updateDoc(userRef, cleanUpdates);
+      // V63.59 : setDoc(merge) au lieu de updateDoc — crée le doc s'il n'existe pas.
+      //   Sans ça, updateDoc échouait silencieusement quand le doc user n'existait pas,
+      //   et le Premium restait invisible dans le tableau de bord admin.
+      cleanUpdates.uid = this.user.uid;
+      cleanUpdates.lastLoginAt = this._fbFns.serverTimestamp();
+      await this._fbFns.setDoc(userRef, cleanUpdates, { merge: true });
       // Mettre à jour le cache local
       this.userProfile = { ...this.userProfile, ...cleanUpdates };
       return { success: true };
