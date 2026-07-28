@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.58 - V63.58 : Garde-fou anti-écrasement du cache sessions par une réponse vide
+// Version 6.3.59 - V63.59 : Auth anonyme + liaison de comptes (Google/email) + suivi des visiteurs dans l admin
 
-const CACHE_NAME = 'bara-concours-v6-3-58';
+const CACHE_NAME = 'bara-concours-v6-3-59';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)

@@ -1603,21 +1603,30 @@ const Admin = {
     if (u.email) idLines.push('📧 ' + u.email);
     if (u.phone) idLines.push('📱 ' + this.formatPhone(u.phone));
     if (u.city) idLines.push('📍 ' + u.city);
+    // V63.59 : Visiteur anonyme — afficher son numéro de suivi
+    if (u.isAnonymous && u.visitorNumber) idLines.push('👤 ' + u.visitorNumber);
     const idHtml = idLines.length > 0 ? idLines.join(' · ') : '-';
 
-    // V59 : Badge provider (Google/Email)
+    // V59 : Badge provider (Google/Email) — V63.59 : + Anonyme
     const providerBadge = u.authProvider === 'google'
       ? '<span style="background:#dbeafe; color:#1e40af; padding:0.1rem 0.4rem; border-radius:999px; font-size:0.65rem; font-weight:700; margin-left:0.4rem">G</span>'
       : u.authProvider === 'email'
         ? '<span style="background:#fef3c7; color:#92400e; padding:0.1rem 0.4rem; border-radius:999px; font-size:0.65rem; font-weight:700; margin-left:0.4rem">@</span>'
-        : '';
+        : (u.authProvider === 'anonymous' || u.isAnonymous)
+          ? '<span style="background:#f3f4f6; color:#4b5563; padding:0.1rem 0.4rem; border-radius:999px; font-size:0.65rem; font-weight:700; margin-left:0.4rem" title="Visiteur sans compte">👤 Anonyme</span>'
+          : '';
+
+    // V63.59 : Nom affiché — pour un anonyme sans nom, montrer son numéro de visiteur
+    const displayName = u.name && u.name !== 'Invité' && u.name !== 'Apprenant'
+      ? u.name
+      : (u.visitorNumber || u.name || 'Visiteur');
 
     return `
       <tr>
         <td>
           <div style="font-weight:600; display:flex; align-items:center; gap:0.4rem">
             ${u.photoURL ? `<img src="${u.photoURL}" style="width:24px; height:24px; border-radius:50%; object-fit:cover" alt="">` : ''}
-            ${u.name}${providerBadge}
+            ${displayName}${providerBadge}
           </div>
           <div style="font-size:0.75rem; color:var(--ink-mute); margin-top:0.15rem">${idHtml}</div>
         </td>
