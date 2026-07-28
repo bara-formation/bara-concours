@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.59 - V63.59 : Auth anonyme + liaison de comptes (Google/email) + suivi des visiteurs dans l admin
+// Version 6.3.60 - V63.60 : Fix nom utilisateur non affiche sur le profil apres inscription
 
-const CACHE_NAME = 'bara-concours-v6-3-59';
+const CACHE_NAME = 'bara-concours-v6-3-60';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)

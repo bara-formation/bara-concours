@@ -7010,12 +7010,23 @@ const App = {
     const profile = authResult.profile || {};
     const isNewUser = authResult.isNewUser;
 
+    // V63.60 : Nom complet à afficher — priorité au displayName saisi à l'inscription,
+    //   puis au displayName Google, puis au nom déjà présent en local.
+    //   Sans ça, le champ `name` restait à "Apprenant" et l'étudiant ne voyait
+    //   jamais son nom sur son profil malgré l'avoir saisi à l'inscription.
+    const resolvedName = (profile.displayName && profile.displayName.trim())
+      || (fbUser.displayName && fbUser.displayName.trim())
+      || (this.state.user.name && this.state.user.name !== 'Apprenant' && this.state.user.name !== 'Invité' ? this.state.user.name : '')
+      || '';
+
     // Mettre à jour le state local
     this.state.user = {
       ...this.state.user,
       isLoggedIn: true,
       uid: fbUser.uid,
       email: fbUser.email || '',
+      // V63.60 : Renseigner `name` (utilisé par l'écran Profil et le tableau de bord admin)
+      name: resolvedName || this.state.user.name || 'Apprenant',
       firstName: profile.displayName ? profile.displayName.split(' ')[0] : (this.state.user.firstName || ''),
       lastName: profile.displayName ? profile.displayName.split(' ').slice(1).join(' ') : (this.state.user.lastName || ''),
       phoneNumber: profile.phoneNumber || this.state.user.phoneNumber || '',
@@ -7332,11 +7343,19 @@ const App = {
 
   async finishOnboarding(notifsOK) {
     const o = this.state.onboarding;
+    // V63.60 : Reconstituer le nom si o.name n'a pas été renseigné.
+    //   À l'inscription email, on remplit onboarding.firstName / lastName mais pas .name,
+    //   ce qui laissait `name` undefined → l'étudiant voyait "Apprenant" sur son profil.
+    const composedName = (o.name && o.name.trim())
+      || [o.firstName, o.lastName].filter(Boolean).join(' ').trim()
+      || (this.state.user.name && this.state.user.name !== 'Apprenant' ? this.state.user.name : '')
+      || 'Apprenant';
+
     this.state.user = {
       ...this.state.user,
-      name: o.name,
-      nom: o.name,
-      city: o.city,
+      name: composedName,
+      nom: composedName,
+      city: o.city || this.state.user.city || o.ville || '',
       targetConcours: o.targetConcours,
       educationLevel: o.educationLevel || o.filterNiveau || '',
       phoneNumber: o.phoneNumber || this.state.user.phoneNumber || '',
@@ -7348,15 +7367,15 @@ const App = {
     if (window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady && window.FirebaseAuth.isLoggedIn()) {
       try {
         await window.FirebaseAuth.updateProfile({
-          displayName: o.name,
-          city: o.city,
+          displayName: composedName,
+          city: o.city || o.ville || '',
           targetConcours: o.targetConcours,
           notificationsEnabled: notifsOK
         });
       } catch (e) { console.error('Update profile :', e); }
     }
 
-    this.toast('🎉 Bienvenue ' + o.name + ' !');
+    this.toast('🎉 Bienvenue ' + composedName + ' !');
     this.navigate('home');
 
     // Proposer l'activation biométrique après 1.5s (laisser l'écran d'accueil charger)
@@ -8557,6 +8576,20 @@ const App = {
   renderProfile() {
     const u = this.state.user;
     const isLoggedIn = u.isLoggedIn;
+    // V63.60 : Auto-réparation du nom pour les comptes créés avant le fix.
+    //   Ces étudiants avaient bien saisi leur nom à l'inscription, mais il n'était
+    //   pas recopié dans `name`. On le récupère depuis firstName/lastName ou Firebase.
+    if (isLoggedIn && (!u.name || u.name === 'Apprenant' || u.name === 'Invité')) {
+      const recovered = [u.firstName, u.lastName].filter(Boolean).join(' ').trim()
+        || (window.FirebaseAuth && window.FirebaseAuth.userProfile && window.FirebaseAuth.userProfile.displayName)
+        || (window.FirebaseAuth && window.FirebaseAuth.user && window.FirebaseAuth.user.displayName)
+        || '';
+      if (recovered) {
+        u.name = recovered;
+        u.nom = recovered;
+        this.save();
+      }
+    }
     const targetConcours = u.targetConcours ? CONCOURS.find(c => c.id === u.targetConcours) : null;
     const notifsStatus = Notifications.getStatus();
 
