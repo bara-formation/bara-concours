@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.62 - V63.62 : Re-application du flag adminOnly sur le plan Hebdomadaire (jamais deploye en V63.53)
+// Version 6.3.63 - V63.63 : Couche d'acces unifiee aux champs utilisateur (data/user-fields.js)
 
-const CACHE_NAME = 'bara-concours-v6-3-62';
+const CACHE_NAME = 'bara-concours-v6-3-63';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)
@@ -9,6 +9,7 @@ const CRITICAL_ASSETS = [
   './',
   './index.html',
   './manifest.json',
+  './data/user-fields.js',
   './data/questions.js',
   './data/concours.js',
   './data/firebase.js',

@@ -3477,6 +3477,7 @@ img { max-width: 100%; display: block; }
 <div id="recaptcha-container"></div>
 
 <!-- Données de l'application -->
+<script src="data/user-fields.js"></script>
 <script src="data/concours.js"></script>
 <script src="data/questions.js"></script>
 <script src="data/firebase.js"></script>
@@ -7010,19 +7011,15 @@ const App = {
     const profile = authResult.profile || {};
     const isNewUser = authResult.isNewUser;
 
-    // V63.60 : Nom complet à afficher — priorité au displayName saisi à l'inscription,
-    //   puis au displayName Google, puis au nom déjà présent en local.
-    //   Sans ça, le champ `name` restait à "Apprenant" et l'étudiant ne voyait
-    //   jamais son nom sur son profil malgré l'avoir saisi à l'inscription.
-    const resolvedName = (profile.displayName && profile.displayName.trim())
+    // V63.63 : Résolution via UserFields — cherche la donnée dans TOUTES ses
+    //   variantes connues (name/nom/displayName, city/ville/region, ...).
+    //   Remplace les chaînes de `||` qui oubliaient régulièrement une variante.
+    const UF = window.UserFields;
+    const resolvedName = UF.getName(profile, '')
       || (fbUser.displayName && fbUser.displayName.trim())
-      || (this.state.user.name && this.state.user.name !== 'Apprenant' && this.state.user.name !== 'Invité' ? this.state.user.name : '')
-      || '';
-
-    // V63.61 : Ville — le champ canonique dans l'app est `city`, mais l'inscription
-    //   l'enregistrait dans `ville` et Firestore dans `region`. On aligne les trois
-    //   pour que la ville choisie à l'inscription apparaisse bien sur le profil.
-    const resolvedCity = profile.city || profile.region || this.state.user.city || this.state.user.ville || '';
+      || UF.getName(this.state.user, '');
+    const resolvedCity = UF.getCity(profile, '') || UF.getCity(this.state.user, '');
+    const resolvedPhone = UF.getPhone(profile, '') || UF.getPhone(this.state.user, '');
 
     // Mettre à jour le state local
     this.state.user = {
@@ -7030,17 +7027,6 @@ const App = {
       isLoggedIn: true,
       uid: fbUser.uid,
       email: fbUser.email || '',
-      // V63.60 : Renseigner `name` (utilisé par l'écran Profil et le tableau de bord admin)
-      name: resolvedName || this.state.user.name || 'Apprenant',
-      firstName: profile.displayName ? profile.displayName.split(' ')[0] : (this.state.user.firstName || ''),
-      lastName: profile.displayName ? profile.displayName.split(' ').slice(1).join(' ') : (this.state.user.lastName || ''),
-      phoneNumber: profile.phoneNumber || this.state.user.phoneNumber || '',
-      // V63.61 : Écrire dans les deux champs pour compatibilité (city = canonique)
-      city: resolvedCity,
-      ville: resolvedCity,
-      // V63.61 : Restaurer aussi le concours visé et le niveau depuis Firestore
-      targetConcours: profile.targetConcours || this.state.user.targetConcours || '',
-      educationLevel: profile.educationLevel || this.state.user.educationLevel || '',
       photoURL: profile.photoURL || '',
       authProvider: profile.authProvider || 'email',
       // Premium synchronisé depuis Firestore
@@ -7049,6 +7035,15 @@ const App = {
       premiumExpiresAt: profile.premiumExpiresAt || null,
       premiumActivatedAt: profile.premiumActivatedAt || null
     };
+
+    // V63.63 : Écriture via UserFields → renseigne toutes les variantes d'un coup,
+    //   pour que n'importe quel écran de l'app trouve la donnée.
+    UF.setName(this.state.user, resolvedName || 'Apprenant');
+    UF.setCity(this.state.user, resolvedCity);
+    UF.setPhone(this.state.user, resolvedPhone);
+    UF.setTargetConcours(this.state.user, UF.getTargetConcours(profile, '') || UF.getTargetConcours(this.state.user, ''));
+    UF.setEducationLevel(this.state.user, UF.getEducationLevel(profile, '') || UF.getEducationLevel(this.state.user, ''));
+
     this.save();
 
     // Naviguer selon le contexte
@@ -7355,35 +7350,34 @@ const App = {
 
   async finishOnboarding(notifsOK) {
     const o = this.state.onboarding;
-    // V63.60 : Reconstituer le nom si o.name n'a pas été renseigné.
-    //   À l'inscription email, on remplit onboarding.firstName / lastName mais pas .name,
-    //   ce qui laissait `name` undefined → l'étudiant voyait "Apprenant" sur son profil.
-    const composedName = (o.name && o.name.trim())
-      || [o.firstName, o.lastName].filter(Boolean).join(' ').trim()
-      || (this.state.user.name && this.state.user.name !== 'Apprenant' ? this.state.user.name : '')
-      || 'Apprenant';
+    const UF = window.UserFields;
+
+    // V63.63 : Résolution via UserFields — l'onboarding remplit selon les cas
+    //   `name` OU `firstName`/`lastName`, `city` OU `ville`. On récupère tout.
+    const composedName = UF.getName(o, '') || UF.getName(this.state.user, '') || 'Apprenant';
+    const composedCity = UF.getCity(o, '') || UF.getCity(this.state.user, '');
 
     this.state.user = {
       ...this.state.user,
-      name: composedName,
-      nom: composedName,
-      city: o.city || this.state.user.city || o.ville || '',
-      targetConcours: o.targetConcours,
-      educationLevel: o.educationLevel || o.filterNiveau || '',
-      phoneNumber: o.phoneNumber || this.state.user.phoneNumber || '',
       notificationsEnabled: notifsOK,
       onboardingCompleted: true  // Marqueur explicite : onboarding terminé
     };
+
+    // V63.63 : Écriture dans toutes les variantes
+    UF.setName(this.state.user, composedName);
+    UF.setCity(this.state.user, composedCity);
+    UF.setTargetConcours(this.state.user, o.targetConcours || '');
+    UF.setEducationLevel(this.state.user, o.educationLevel || o.filterNiveau || '');
+    UF.setPhone(this.state.user, UF.getPhone(o, '') || UF.getPhone(this.state.user, ''));
+
     this.save();
 
     if (window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady && window.FirebaseAuth.isLoggedIn()) {
       try {
+        // V63.63 : toFirestorePayload renseigne tous les alias d'un coup
+        //   → le tableau de bord admin trouvera la donnée quel que soit le champ qu'il lit
         await window.FirebaseAuth.updateProfile({
-          displayName: composedName,
-          city: o.city || o.ville || '',
-          region: o.city || o.ville || '',
-          targetConcours: o.targetConcours,
-          educationLevel: o.educationLevel || o.filterNiveau || '',
+          ...UF.toFirestorePayload(this.state.user),
           notificationsEnabled: notifsOK
         });
       } catch (e) { console.error('Update profile :', e); }
@@ -8590,37 +8584,15 @@ const App = {
   renderProfile() {
     const u = this.state.user;
     const isLoggedIn = u.isLoggedIn;
-    // V63.60 : Auto-réparation du nom pour les comptes créés avant le fix.
-    //   Ces étudiants avaient bien saisi leur nom à l'inscription, mais il n'était
-    //   pas recopié dans `name`. On le récupère depuis firstName/lastName ou Firebase.
-    // V63.61 : Idem pour la ville (écrite dans `ville`/`region` au lieu de `city`)
-    //   et pour le concours visé / niveau scolaire restés en Firestore.
-    if (isLoggedIn) {
-      const fsProfile = (window.FirebaseAuth && window.FirebaseAuth.userProfile) || {};
-      let repaired = false;
-
-      if (!u.name || u.name === 'Apprenant' || u.name === 'Invité') {
-        const recovered = [u.firstName, u.lastName].filter(Boolean).join(' ').trim()
-          || fsProfile.displayName
-          || (window.FirebaseAuth && window.FirebaseAuth.user && window.FirebaseAuth.user.displayName)
-          || '';
-        if (recovered) { u.name = recovered; u.nom = recovered; repaired = true; }
+    // V63.63 : Auto-réparation via UserFields.repair()
+    //   Récupère chaque donnée dans n'importe quelle variante (locale ou Firestore)
+    //   et la recopie dans toutes les autres. Couvre les comptes créés avant
+    //   l'harmonisation des noms de champs (bugs V63.60 nom / V63.61 ville).
+    if (isLoggedIn && window.UserFields) {
+      const fsProfile = (window.FirebaseAuth && window.FirebaseAuth.userProfile) || null;
+      if (window.UserFields.repair(u, fsProfile)) {
+        this.save();
       }
-
-      if (!u.city) {
-        const recoveredCity = u.ville || fsProfile.city || fsProfile.region || '';
-        if (recoveredCity) { u.city = recoveredCity; u.ville = recoveredCity; repaired = true; }
-      }
-
-      if (!u.targetConcours && fsProfile.targetConcours) {
-        u.targetConcours = fsProfile.targetConcours; repaired = true;
-      }
-
-      if (!u.educationLevel && fsProfile.educationLevel) {
-        u.educationLevel = fsProfile.educationLevel; repaired = true;
-      }
-
-      if (repaired) this.save();
     }
     const targetConcours = u.targetConcours ? CONCOURS.find(c => c.id === u.targetConcours) : null;
     const notifsStatus = Notifications.getStatus();
