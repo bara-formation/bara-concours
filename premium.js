@@ -18,8 +18,8 @@ const PremiumService = {
       popular: false,
       // V63.53 : Plan caché au public — visible uniquement pour les admins.
       //   → évite que des étudiants s'abonnent en Hebdo à 1000 F juste pour accéder
-      //     à l'accompagnement final (qui est normalement à 2000/2500 F).
-      //   → l'admin garde ce plan pour l'utiliser à d'autres fins (tests, cadeaux, etc.).
+      //     à l'accompagnement final (normalement à 2000/2500 F).
+      //   → l'admin garde ce plan pour d'autres usages (tests, cadeaux, cas particuliers).
       adminOnly: true
     },
     monthly: {
@@ -490,47 +490,30 @@ const ActivationCodes = {
       return { valid: false, reason: 'Format invalide. Exemple : BARA-SESSION-A3F7' };
     }
 
-    // V63.49 : Détecter offline pour messages d'erreur précis
-    const isOnline = (typeof navigator !== 'undefined' && typeof navigator.onLine === 'boolean') ? navigator.onLine : true;
-
-    // Essayer Firestore d'abord (avec auth anonyme V63.49, user est presque toujours défini)
+    // Essayer Firestore d'abord (le code peut exister sur le cloud sans être en local)
     if (window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady && window.FirebaseAuth.user) {
       try {
         const fb = window.FirebaseAuth;
         const ref = fb._fbFns.doc(fb.db, this.FIRESTORE_COLLECTION, code);
         const snap = await fb._fbFns.getDoc(ref);
         if (!snap.exists()) {
-          // Firestore répond : code vraiment inexistant (pas un souci de connexion)
-          return { valid: false, reason: 'Ce code n\'existe pas. Vérifie que tu l\'as bien tapé (avec les tirets, ex : BARA-SESSION-XXXX).' };
+          return { valid: false, reason: 'Code introuvable' };
         }
         const data = snap.data();
         if (data.used) {
-          return { valid: false, reason: 'Ce code a déjà été utilisé.', code: data };
+          return { valid: false, reason: 'Ce code a déjà été utilisé', code: data };
         }
         return { valid: true, code: data, source: 'firestore' };
       } catch (e) {
-        console.warn('[V63.49] Erreur validation Firestore :', e);
-        // Distinguer offline vs autre erreur
-        if (!isOnline) {
-          return { valid: false, reason: 'Tu es hors connexion. Connecte-toi à internet (Wi-Fi ou données mobiles) pour activer ton code.' };
-        }
-        // Firestore erreur en ligne → probablement timeout / lenteur
-        return { valid: false, reason: 'Connexion trop lente. Attends 10 secondes et réessaie.' };
+        console.warn('[V58] Erreur validation Firestore :', e);
+        // Fallback localStorage
       }
     }
 
-    // V63.49 : Firebase pas prêt
-    if (!isOnline) {
-      return { valid: false, reason: 'Tu es hors connexion. Connecte-toi à internet pour activer ton code.' };
-    }
-    if (!window.FirebaseAuth || !window.FirebaseAuth.isFirebaseReady) {
-      return { valid: false, reason: 'L\'application n\'a pas fini de se connecter au serveur. Attends 5 secondes puis réessaie.' };
-    }
-
-    // Fallback localStorage (cas rare avec auth anonyme active)
+    // Fallback localStorage
     const found = this.getAllCodesLocal().find(c => c.code === code);
-    if (!found) return { valid: false, reason: 'Ce code n\'existe pas ou n\'est pas encore synchronisé. Attends 30 secondes et réessaie.' };
-    if (found.used) return { valid: false, reason: 'Ce code a déjà été utilisé.', code: found };
+    if (!found) return { valid: false, reason: 'Code introuvable. Vérifie ta connexion internet.' };
+    if (found.used) return { valid: false, reason: 'Ce code a déjà été utilisé', code: found };
     return { valid: true, code: found, source: 'local' };
   },
 

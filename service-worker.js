@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.61 - V63.61 : Fix ville / concours vise / niveau non restaures sur le profil (alignement city vs ville)
+// Version 6.3.62 - V63.62 : Re-application du flag adminOnly sur le plan Hebdomadaire (jamais deploye en V63.53)
 
-const CACHE_NAME = 'bara-concours-v6-3-61';
+const CACHE_NAME = 'bara-concours-v6-3-62';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)
