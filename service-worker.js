@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.65 - V63.65 : Suivi d'activite reel (compteurs QCM + derniere activite + onglet inactifs)
+// Version 6.3.66 - V63.66 : Page admin des examens hebdomadaires (participants, classement, export CSV)
 
-const CACHE_NAME = 'bara-concours-v6-3-65';
+const CACHE_NAME = 'bara-concours-v6-3-66';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)

@@ -1044,6 +1044,8 @@ const Admin = {
       // V63.30 : Nouveau système Firestore pour Accompagnement Final 2026
       case 'accompagnement': mainHtml = this.renderAccompagnementAdmin(); break;
       case 'accompagnement-edit': mainHtml = this.renderAccompagnementEdit(); break;
+      // V63.66 : Résultats des examens hebdomadaires
+      case 'examens': mainHtml = this.renderExamensAdmin(); break;
       // V63.34 : Textes éditables de l'app
       case 'textes': mainHtml = this.renderTextesAdmin(); break;
       case 'codes': mainHtml = this.renderCodesAdmin(); break;
@@ -1154,6 +1156,10 @@ const Admin = {
           <div class="nav-link ${cur === 'accompagnement' || cur === 'accompagnement-edit' ? 'active' : ''}" onclick="Admin.navigate('accompagnement')">
             <span class="nav-icon">🎓</span>
             <span>Accompagnement <span style="background:linear-gradient(135deg, #fef3c7, #fde68a); color:#854d0e; font-size:0.6rem; font-weight:700; padding:0.1rem 0.5rem; border-radius:999px; margin-left:0.3rem">2026</span></span>
+          </div>
+          <div class="nav-link ${cur === 'examens' ? 'active' : ''}" onclick="Admin.navigate('examens')">
+            <span class="nav-icon">🏆</span>
+            <span>Examens hebdo</span>
           </div>
           <div class="nav-link ${cur === 'textes' ? 'active' : ''}" onclick="Admin.navigate('textes')">
             <span class="nav-icon">🎨</span>
@@ -7345,6 +7351,245 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
   // ============================================================
   // V63.34 : TEXTES ÉDITABLES DE L'APP (Firestore)
   // ============================================================
+
+  // ==================================================================
+  // V63.66 : EXAMENS HEBDOMADAIRES — participants et scores
+  // ==================================================================
+  // Les résultats sont déjà enregistrés dans Firestore (collection weeklyExams)
+  // par data/weekly_exam.js, mais rien ne les affichait côté admin.
+
+  async loadExamResults() {
+    if (this.state._examLoading) return;
+    this.state._examLoading = true;
+    try {
+      const fb = window.FirebaseAuth;
+      if (!fb || !fb.isFirebaseReady) {
+        this.state._examResults = [];
+        this.state._examLoading = false;
+        return;
+      }
+      const colRef = fb._fbFns.collection(fb.db, 'weeklyExams');
+      const snap = await fb._fbFns.getDocs(colRef);
+      const results = [];
+      snap.forEach(d => results.push({ _docId: d.id, ...d.data() }));
+      // Plus récents en premier
+      results.sort((a, b) => (b.finishedAt || 0) - (a.finishedAt || 0));
+      this.state._examResults = results;
+      this.state._examLoaded = true;
+    } catch (e) {
+      console.error('[V63.66] Chargement résultats examens :', e);
+      this.state._examResults = [];
+      this.state._examError = e.message;
+    }
+    this.state._examLoading = false;
+    this.render();
+  },
+
+  renderExamensAdmin() {
+    // Chargement au premier affichage
+    if (!this.state._examLoaded && !this.state._examLoading) {
+      this.loadExamResults();
+    }
+
+    const results = this.state._examResults || [];
+    const loading = this.state._examLoading;
+    const selectedExam = this.state._examSelected || null;
+
+    // Regrouper par examen
+    const parExamen = {};
+    results.forEach(r => {
+      const id = r.examId || 'inconnu';
+      if (!parExamen[id]) parExamen[id] = [];
+      parExamen[id].push(r);
+    });
+    const examIds = Object.keys(parExamen).sort().reverse();
+
+    // Statistiques globales
+    const totalParticipations = results.length;
+    const participantsUniques = new Set(results.map(r => r.userId)).size;
+    const moyenneGlobale = totalParticipations > 0
+      ? Math.round(results.reduce((s, r) => s + (r.percent || 0), 0) / totalParticipations)
+      : 0;
+
+    // Résultats de l'examen sélectionné (ou du plus récent)
+    const examCourant = selectedExam || examIds[0] || null;
+    const resultatsExamen = examCourant ? (parExamen[examCourant] || []) : [];
+    const classement = [...resultatsExamen].sort((a, b) => {
+      if ((b.percent || 0) !== (a.percent || 0)) return (b.percent || 0) - (a.percent || 0);
+      return (a.finishedAt || 0) - (b.finishedAt || 0);  // à score égal, le plus rapide devant
+    });
+
+    return `
+      <div class="page-header">
+        <div>
+          <div class="page-title">🏆 Examens <span>hebdomadaires</span></div>
+          <div class="page-sub">
+            ${loading ? 'Chargement des résultats...' :
+              `${totalParticipations} participation${totalParticipations > 1 ? 's' : ''} ·
+               ${participantsUniques} candidat${participantsUniques > 1 ? 's' : ''} ·
+               ${examIds.length} examen${examIds.length > 1 ? 's' : ''}`}
+          </div>
+        </div>
+        <button class="btn-primary" onclick="Admin.state._examLoaded=false; Admin.loadExamResults()">
+          🔄 Actualiser
+        </button>
+      </div>
+
+      ${loading ? `
+        <div class="table-wrap" style="padding:3rem; text-align:center; color:var(--ink-mute)">
+          ⏳ Chargement des résultats depuis Firestore...
+        </div>
+      ` : totalParticipations === 0 ? `
+        <div class="table-wrap" style="padding:3rem; text-align:center">
+          <div style="font-size:2.5rem; margin-bottom:0.8rem">📭</div>
+          <div style="font-weight:700; margin-bottom:0.4rem">Aucune participation enregistrée</div>
+          <div style="color:var(--ink-mute); font-size:0.9rem; max-width:480px; margin:0 auto">
+            Les résultats apparaîtront ici dès qu'un candidat aura terminé un examen hebdomadaire.
+            Rappel : l'examen a lieu le dimanche à 19h30.
+          </div>
+        </div>
+      ` : `
+        <!-- Statistiques -->
+        <div class="stats-grid" style="margin-bottom:1.2rem">
+          <div class="stat-card">
+            <div class="stat-value">${participantsUniques}</div>
+            <div class="stat-label">Candidats uniques</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">${totalParticipations}</div>
+            <div class="stat-label">Participations totales</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">${moyenneGlobale}%</div>
+            <div class="stat-label">Moyenne générale</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">${examIds.length}</div>
+            <div class="stat-label">Examens organisés</div>
+          </div>
+        </div>
+
+        <!-- Sélecteur d'examen -->
+        <div class="tabs" style="flex-wrap:wrap">
+          ${examIds.slice(0, 8).map(id => `
+            <button class="tab ${examCourant === id ? 'active' : ''}"
+                    onclick="Admin.state._examSelected='${id}'; Admin.render()">
+              ${this.formatExamId(id)}
+              <span class="tab-count">${parExamen[id].length}</span>
+            </button>
+          `).join('')}
+        </div>
+
+        <!-- Classement de l'examen sélectionné -->
+        <div class="table-wrap">
+          <div class="table-header">
+            <div class="table-title">
+              🏅 Classement — ${this.formatExamId(examCourant)}
+              <span style="font-weight:400; color:var(--ink-mute); font-size:0.85rem">
+                (${classement.length} participant${classement.length > 1 ? 's' : ''})
+              </span>
+            </div>
+            <button class="btn-action btn-secondary" onclick="Admin.exportExamResults('${examCourant}')">
+              📥 Exporter CSV
+            </button>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th style="width:60px">Rang</th>
+                <th>Candidat</th>
+                <th>Concours visé</th>
+                <th>Score</th>
+                <th>Résultat</th>
+                <th>Terminé</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${classement.map((r, i) => this.renderExamRow(r, i + 1)).join('')}
+            </tbody>
+          </table>
+        </div>
+      `}
+    `;
+  },
+
+  renderExamRow(r, rang) {
+    const pct = r.percent || 0;
+    // Médaille pour le podium
+    const medaille = rang === 1 ? '🥇' : rang === 2 ? '🥈' : rang === 3 ? '🥉' : '';
+    // Couleur selon la performance
+    const couleurScore = pct >= 70 ? '#15803d' : pct >= 50 ? '#ca8a04' : '#dc2626';
+    const styleLigne = rang <= 3
+      ? 'background:linear-gradient(90deg,#fffbeb,#fffef7); border-left:4px solid #f59e0b'
+      : '';
+    const concours = r.targetConcours ? CONCOURS.find(c => c.id === r.targetConcours) : null;
+
+    return `
+      <tr style="${styleLigne}">
+        <td style="font-weight:800; font-size:1rem">${medaille || rang}</td>
+        <td>
+          <div style="font-weight:600">${r.displayName || 'Anonyme'}</div>
+          ${r.city ? `<div style="font-size:0.72rem; color:var(--ink-mute)">📍 ${r.city}</div>` : ''}
+        </td>
+        <td>${concours
+          ? `<span class="badge badge-info">${concours.sigle}</span>`
+          : '<span style="color:var(--ink-mute)">-</span>'}</td>
+        <td style="font-weight:700">${r.score || 0} / ${r.total || 0}</td>
+        <td>
+          <div style="display:flex; align-items:center; gap:0.5rem">
+            <div style="flex:1; max-width:90px; height:7px; background:#f1f5f9; border-radius:999px; overflow:hidden">
+              <div style="width:${pct}%; height:100%; background:${couleurScore}"></div>
+            </div>
+            <span style="font-weight:800; color:${couleurScore}; font-size:0.9rem">${pct}%</span>
+          </div>
+        </td>
+        <td style="font-size:0.78rem; color:var(--ink-mute)">${this.formatRelativeTime(r.finishedAt)}</td>
+      </tr>
+    `;
+  },
+
+  /** Transforme un examId technique en libellé lisible */
+  formatExamId(id) {
+    if (!id) return 'Examen';
+    // Format attendu : exam_2026-08-02
+    const m = String(id).match(/(\d{4})-(\d{2})-(\d{2})/);
+    if (m) {
+      const mois = ['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+      return `${parseInt(m[3], 10)} ${mois[parseInt(m[2], 10) - 1]} ${m[1]}`;
+    }
+    return id;
+  },
+
+  /** Export CSV du classement d'un examen (pour publication ou archivage) */
+  exportExamResults(examId) {
+    const results = (this.state._examResults || []).filter(r => r.examId === examId);
+    if (results.length === 0) {
+      this.toast('Aucun résultat à exporter', 'warning');
+      return;
+    }
+    const classement = [...results].sort((a, b) => (b.percent || 0) - (a.percent || 0));
+    const lignes = [['Rang', 'Candidat', 'Ville', 'Concours', 'Score', 'Total', 'Pourcentage']];
+    classement.forEach((r, i) => {
+      lignes.push([
+        i + 1,
+        r.displayName || 'Anonyme',
+        r.city || '',
+        r.targetConcours || '',
+        r.score || 0,
+        r.total || 0,
+        (r.percent || 0) + '%'
+      ]);
+    });
+    const csv = lignes.map(l => l.map(c => `"${String(c).replace(/"/g, '""')}"`).join(',')).join('\n');
+    const blob = new Blob(['\ufeff' + csv], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `classement-${examId}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+    this.toast('✓ Classement exporté', 'success');
+  },
 
   renderTextesAdmin() {
     if (!window.TextsFirestore) {
