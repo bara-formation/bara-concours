@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.67 - V63.67 : Notification nouvelle correction + carte Accompagnement Final contextuelle
+// Version 6.3.68 - V63.68 : Pile de navigation (fin des retours brutaux a l accueil) + acces direct aux corrections deja vues
 
-const CACHE_NAME = 'bara-concours-v6-3-67';
+const CACHE_NAME = 'bara-concours-v6-3-68';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)

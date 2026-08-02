@@ -3613,6 +3613,12 @@ const App = {
 
   // === ROUTING ===
   navigate(screen, params = {}) {
+    // V63.68 : Empiler l'écran quitté pour un retour fiable.
+    //   Avant, le retour reposait sur une carte codée en dur (retourMap) qui ne
+    //   couvrait que 14 des 36 écrans — les 22 autres renvoyaient brutalement à
+    //   l'accueil, faisant perdre sa place à l'utilisateur.
+    this._pushNavStack(screen);
+
     // V63.20 : Si on quitte la zone forum, arrêter les listeners Firestore
     const wasInForum = ['forum', 'forum-topic', 'forum-create'].includes(this.state.currentScreen);
     const goingToForum = ['forum', 'forum-topic', 'forum-create'].includes(screen);
@@ -4801,6 +4807,12 @@ const App = {
               🔄 En cours — Question ${(progress.currentIndex || 0) + 1}/${nbQ}
             </div>
           ` : ''}
+          ${isPremium && this.getCorrectionVue(session.id) ? `
+            <button onclick="event.stopPropagation(); App.rouvrirCorrection('${session.id}')"
+                    style="margin-top:0.5rem; width:100%; background:linear-gradient(135deg,#fef3c7,#fffbeb); border:1.5px solid #f59e0b; color:#92400e; padding:0.5rem 0.8rem; border-radius:8px; font-weight:700; font-size:0.8rem; cursor:pointer">
+              💡 Revoir la correction
+            </button>
+          ` : ''}
         </div>
         <div class="session-card-arrow">${!isPremium ? '🔒' : '›'}</div>
       </div>
@@ -4893,6 +4905,21 @@ const App = {
         </header>
 
         <div class="content mt-overlap">
+
+          ${this.getCorrectionVue(session.id) ? `
+            <!-- V63.68 : Accès direct à la dernière correction consultée -->
+            <div onclick="App.rouvrirCorrection('${session.id}')"
+                 style="background:linear-gradient(135deg,#fef3c7,#fffbeb); border:2px solid #f59e0b; border-radius:14px; padding:0.9rem 1.1rem; margin-bottom:1.2rem; cursor:pointer; display:flex; align-items:center; gap:0.8rem">
+              <div style="font-size:1.6rem">💡</div>
+              <div style="flex:1">
+                <div style="font-weight:800; color:#92400e; font-size:0.95rem">Revoir la correction</div>
+                <div style="font-size:0.78rem; color:#a16207">
+                  Tu as déjà consulté cette correction — reprends là où tu veux
+                </div>
+              </div>
+              <div style="font-size:1.2rem; color:#92400e">›</div>
+            </div>
+          ` : ''}
 
           <!-- Section 1 : MODE LIBRE -->
           <div style="font-weight:600; font-size:0.78rem; color:var(--ink-soft); letter-spacing:0.05em; text-transform:uppercase; margin-bottom:0.4rem; display:flex; align-items:center; gap:0.4rem">
@@ -5935,9 +5962,51 @@ const App = {
 
   // V42 : Afficher la correction détaillée (revue de toutes les questions)
   showSessionCorrection() {
+    // V63.68 : Mémoriser cette correction pour pouvoir y revenir directement.
+    //   Un candidat qui a déjà consulté une correction veut souvent la relire
+    //   (vérifier une question, revoir une explication) — sans refaire le sujet.
+    try {
+      const sid = this.state.currentSessionId;
+      if (sid) {
+        const vues = JSON.parse(localStorage.getItem('bara_corrections_vues') || '{}');
+        vues[sid] = {
+          consulteeLe: Date.now(),
+          questions: this.state.currentSessionQuestionsActive || null,
+          reponses: this.state.sessionAnswers || null,
+          numeroSujet: this.state.currentSujetNumero || null
+        };
+        localStorage.setItem('bara_corrections_vues', JSON.stringify(vues));
+      }
+    } catch(e) { /* non bloquant */ }
+
     this.state.currentScreen = 'session-correction';
     this.state.correctionFilterMode = 'all';  // 'all', 'wrong', 'right'
     this.render();
+  },
+
+  /**
+   * V63.68 : Y a-t-il une correction déjà consultée pour cette session ?
+   */
+  getCorrectionVue(sessionId) {
+    try {
+      const vues = JSON.parse(localStorage.getItem('bara_corrections_vues') || '{}');
+      return vues[sessionId] || null;
+    } catch(e) { return null; }
+  },
+
+  /**
+   * V63.68 : Rouvrir directement la dernière correction consultée,
+   * sans repasser par le sujet.
+   */
+  rouvrirCorrection(sessionId) {
+    const vue = this.getCorrectionVue(sessionId);
+    if (!vue) { this.toast('Aucune correction enregistrée'); return; }
+    this.state.currentSessionId = sessionId;
+    if (vue.questions) this.state.currentSessionQuestionsActive = vue.questions;
+    if (vue.reponses) this.state.sessionAnswers = vue.reponses;
+    if (vue.numeroSujet) this.state.currentSujetNumero = vue.numeroSujet;
+    this.state.correctionFilterMode = 'all';
+    this.navigate('session-correction');
   },
 
   // V42 : Rendu de la page de correction détaillée
@@ -12213,15 +12282,14 @@ const App = {
             if (user && profile && !this.state.user.isLoggedIn) {
               // Session Firebase active mais utilisateur local pas connecté → restaurer
               console.log('[App] Restauration session Firebase pour', user.email);
+              // V63.68 : Restauration via UserFields (l'ancien code écrivait dans
+              //   `ville` au lieu de `city` et oubliait `name` — mêmes bugs que V63.60/61)
+              const UF = window.UserFields;
               this.state.user = {
                 ...this.state.user,
                 isLoggedIn: true,
                 uid: user.uid,
                 email: user.email || '',
-                firstName: profile.displayName ? profile.displayName.split(' ')[0] : (this.state.user.firstName || ''),
-                lastName: profile.displayName ? profile.displayName.split(' ').slice(1).join(' ') : (this.state.user.lastName || ''),
-                phoneNumber: profile.phoneNumber || '',
-                ville: profile.region || '',
                 photoURL: profile.photoURL || '',
                 authProvider: profile.authProvider || 'email',
                 isPremium: profile.isPremium || false,
@@ -12229,6 +12297,13 @@ const App = {
                 premiumExpiresAt: profile.premiumExpiresAt || null,
                 premiumActivatedAt: profile.premiumActivatedAt || null
               };
+              if (UF) {
+                UF.setName(this.state.user, UF.getName(profile, '') || user.displayName || UF.getName(this.state.user, 'Apprenant'));
+                UF.setCity(this.state.user, UF.getCity(profile, '') || UF.getCity(this.state.user, ''));
+                UF.setPhone(this.state.user, UF.getPhone(profile, '') || UF.getPhone(this.state.user, ''));
+                UF.setTargetConcours(this.state.user, UF.getTargetConcours(profile, '') || UF.getTargetConcours(this.state.user, ''));
+                UF.setEducationLevel(this.state.user, UF.getEducationLevel(profile, '') || UF.getEducationLevel(this.state.user, ''));
+              }
               this.save();
               // Si on est sur le splash, aller à home
               if (this.state.currentScreen === 'splash' || this.state.currentScreen === 'auth-welcome') {
@@ -12392,29 +12467,130 @@ const App = {
   },
 
   // Navigation arrière intelligente selon l'écran
+  // ==================================================================
+  // V63.68 : PILE DE NAVIGATION
+  // ==================================================================
+  // L'ancienne version utilisait une carte codée en dur (`retourMap`) listant
+  // 14 écrans sur 36 — et trois de ses entrées ne correspondaient même à aucun
+  // écran réel. Résultat : un retour depuis 22 écrans renvoyait à l'accueil,
+  // et l'utilisateur perdait sa place.
+  //
+  // On garde désormais la trace du chemin réellement parcouru.
+
+  // Écrans "racines" : on ne revient jamais en arrière depuis eux
+  NAV_ROOTS: ['home', 'splash', 'stats', 'profile', 'forum'],
+
+  // Écrans à ne jamais empiler (transitoires ou sensibles)
+  NAV_SKIP: ['splash', 'onboarding', 'auth-otp'],
+
+  _pushNavStack(nextScreen) {
+    if (!this._navStack) this._navStack = [];
+    const current = this.state.currentScreen;
+    if (!current || current === nextScreen) return;
+    if (this.NAV_SKIP.includes(current)) return;
+
+    // Mémoriser l'écran quitté + le contexte nécessaire pour le reconstituer
+    this._navStack.push({
+      screen: current,
+      context: {
+        currentConcours: this.state.currentConcours,
+        currentMatiere: this.state.currentMatiere,
+        currentSessionId: this.state.currentSessionId,
+        currentTopicId: this.state.currentTopicId,
+        currentAnnaleId: this.state.currentAnnaleId
+      },
+      scrollY: window.scrollY || 0
+    });
+
+    // Limiter la profondeur (évite une pile infinie sur des allers-retours)
+    if (this._navStack.length > 25) this._navStack.shift();
+  },
+
+  /**
+   * Retour arrière : dépile l'écran précédent réellement visité.
+   * Restaure aussi le contexte (quel concours, quelle session...) et la
+   * position de défilement, pour que l'utilisateur retrouve exactement sa place.
+   */
   handleBackNavigation() {
     const screen = this.state.currentScreen;
 
-    // Carte de retour : depuis chaque écran, où va-t-on ?
-    const retourMap = {
+    // Depuis un écran racine, on ne remonte pas plus haut
+    if (this.NAV_ROOTS.includes(screen)) {
+      if (screen !== 'home') this.navigate('home');
+      return;
+    }
+
+    if (!this._navStack) this._navStack = [];
+
+    // Dépiler en ignorant les entrées qui pointent sur l'écran courant
+    let entree = null;
+    while (this._navStack.length > 0) {
+      const candidat = this._navStack.pop();
+      if (candidat && candidat.screen && candidat.screen !== screen) {
+        entree = candidat;
+        break;
+      }
+    }
+
+    if (!entree) {
+      // Pile vide (arrivée directe, rechargement) → repli raisonnable
+      this.navigate(this._fallbackParent(screen));
+      return;
+    }
+
+    // Restaurer le contexte de l'écran précédent
+    const ctx = entree.context || {};
+    Object.keys(ctx).forEach(k => {
+      if (ctx[k] !== undefined) this.state[k] = ctx[k];
+    });
+
+    // Naviguer SANS ré-empiler (sinon on tournerait en rond)
+    this.state.currentScreen = entree.screen;
+    this.render();
+
+    // Restaurer la position de défilement
+    const y = entree.scrollY || 0;
+    requestAnimationFrame(() => window.scrollTo({ top: y, behavior: 'instant' }));
+  },
+
+  /**
+   * Repli quand la pile est vide : parent logique le plus probable.
+   * Utilisé après un rechargement de page ou une arrivée directe.
+   */
+  _fallbackParent(screen) {
+    const parents = {
       'concours-detail': 'home',
       'mode-select': 'concours-detail',
       'qcm': 'mode-select',
       'results': 'mode-select',
+      'correction': 'results',
       'session-2026': 'home',
-      'session-jour-detail': 'session-2026',
+      'annales': 'home',
+      'annales-session': 'annales',
+      'annale-detail': 'annales',
+      'session-questions': 'annales',
+      'session-correction': 'annales',
       'forum-create': 'forum',
-      'forum-detail': 'forum',
+      'forum-topic': 'forum',
       'premium': 'profile',
+      'premium-payment': 'premium',
+      'premium-renew': 'profile',
       'edit-profile': 'profile',
-      'auth-otp': 'auth-phone',
-      'onboarding': 'home',
-      'annales-list': 'home',
-      'annale-detail': 'annales-list'
+      'about': 'profile',
+      'auth-signup': 'auth-welcome',
+      'auth-signin': 'auth-welcome',
+      'auth-forgot': 'auth-signin',
+      'auth-welcome': 'home',
+      'auth-phone': 'home',
+      'weekly-exam-active': 'weekly-exam',
+      'weekly-exam-result': 'weekly-exam',
+      'weekly-exam-correction': 'weekly-exam-result',
+      'weekly-exam-ranking': 'weekly-exam',
+      'weekly-exam-history': 'weekly-exam',
+      'weekly-exam': 'home',
+      'stats': 'home'
     };
-
-    const target = retourMap[screen] || 'home';
-    this.navigate(target);
+    return parents[screen] || 'home';
   }
 };
 
