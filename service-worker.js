@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.66 - V63.66 : Page admin des examens hebdomadaires (participants, classement, export CSV)
+// Version 6.3.67 - V63.67 : Notification nouvelle correction + carte Accompagnement Final contextuelle
 
-const CACHE_NAME = 'bara-concours-v6-3-66';
+const CACHE_NAME = 'bara-concours-v6-3-67';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)

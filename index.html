@@ -4064,6 +4064,137 @@ const App = {
     `;
   },
 
+  /**
+   * V63.67 : Carte Accompagnement Final adaptée à la période.
+   *
+   * Le produit n'est pas l'archive, c'est le service en direct : deux publications
+   * par jour (11h30 et 19h30) pendant la saison des concours. Un candidat qui sort
+   * de l'épreuve veut savoir tout de suite s'il a bon.
+   *
+   * La carte affiche donc :
+   *   - moins de 48h  → mode EN DIRECT, fraîcheur mise en avant
+   *   - 2 à 30 jours  → dernières corrections datées
+   *   - au-delà       → pitch archive avec les totaux réels
+   */
+  renderAccompagnementCard() {
+    const sessions = this.getMergedAccompagnementSessions();
+    const nbSessions = sessions.length;
+    const nbQuestions = sessions.reduce((s, sess) => s + ((sess.questions && sess.questions.length) || 0), 0);
+
+    // Session la plus récente (les sessions sont déjà triées par date décroissante)
+    const derniere = sessions[0] || null;
+    const dateDerniere = derniere ? (derniere.datePublication || 0) : 0;
+    const heuresDepuis = dateDerniere ? (Date.now() - dateDerniere) / 3600000 : Infinity;
+    const joursDepuis = heuresDepuis / 24;
+
+    const isPremium = window.PremiumService && window.PremiumService.isUserPremium(this.state.user);
+
+    // Nouvelles corrections non encore consultées
+    let nbNouvelles = 0;
+    try { nbNouvelles = parseInt(localStorage.getItem('bara_new_corrections_count') || '0', 10) || 0; } catch(e) {}
+
+    // ---- MODE EN DIRECT : publication de moins de 48h ----
+    if (heuresDepuis < 48 && derniere) {
+      const fraicheur = heuresDepuis < 1
+        ? 'il y a quelques minutes'
+        : heuresDepuis < 24
+          ? 'il y a ' + Math.floor(heuresDepuis) + 'h'
+          : 'hier';
+      const nbQDerniere = (derniere.questions && derniere.questions.length) || 0;
+
+      return `
+        <div class="annales-card" onclick="App.navigate('annales')"
+             style="border:2px solid #dc2626; background:linear-gradient(135deg,#fff5f5,#fffbeb)">
+          <div class="annales-card-icon">📚</div>
+          <div class="annales-card-content">
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.3rem; flex-wrap:wrap">
+              <span style="background:#dc2626; color:white; font-size:0.65rem; font-weight:800; padding:0.15rem 0.55rem; border-radius:999px; letter-spacing:0.03em">
+                🔴 EN DIRECT
+              </span>
+              ${nbNouvelles > 0 ? `
+                <span style="background:#f59e0b; color:white; font-size:0.65rem; font-weight:800; padding:0.15rem 0.55rem; border-radius:999px">
+                  ${nbNouvelles} nouveau${nbNouvelles > 1 ? 'x' : ''}
+                </span>
+              ` : ''}
+            </div>
+            <div class="annales-card-title">Accompagnement <span>Final</span></div>
+            <div class="annales-card-desc">
+              <strong>Corrections du jour · 11h30 et 19h30</strong><br>
+              ${this.escapeHTML(derniere.titre || '')} — publiée ${fraicheur}
+            </div>
+            <div class="annales-card-stats">
+              <span class="annales-stat" style="background:#fee2e2; color:#991b1b">🎯 ${nbQDerniere} questions corrigées</span>
+              ${!isPremium ? '<span class="annales-stat">🔒 Premium</span>' : ''}
+            </div>
+            <div class="annales-card-benefits">
+              <div class="benefit-line">✅ Les questions réellement tombées, recensées le jour même</div>
+              <div class="benefit-line">✅ Corrigées et expliquées par Bara Formation</div>
+              <div class="benefit-line">✅ Connais ton score avant les résultats officiels</div>
+            </div>
+            ${!isPremium ? `
+              <button onclick="event.stopPropagation(); App.navigate('premium')"
+                      style="margin-top:0.7rem; background:var(--green-bf-dark); color:white; border:none; padding:0.6rem 1.2rem; border-radius:999px; font-weight:700; font-size:0.85rem; cursor:pointer; width:100%">
+                Débloquer les corrections →
+              </button>
+            ` : ''}
+          </div>
+          <div class="annales-card-arrow">›</div>
+        </div>
+      `;
+    }
+
+    // ---- MODE RÉCENT : entre 2 et 30 jours ----
+    if (joursDepuis < 30 && derniere) {
+      const dateStr = new Date(dateDerniere).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long' });
+      return `
+        <div class="annales-card" onclick="App.navigate('annales')">
+          <div class="annales-card-icon">📚</div>
+          <div class="annales-card-content">
+            <div class="annales-card-title">Accompagnement <span>Final</span></div>
+            <div class="annales-card-desc">
+              <strong>Vérifie tes réponses</strong> — dernières corrections du ${dateStr}
+            </div>
+            <div class="annales-card-stats">
+              <span class="annales-stat">${nbSessions} sessions</span>
+              <span class="annales-stat">🎯 ${nbQuestions} questions</span>
+              ${!isPremium ? '<span class="annales-stat">⭐ Premium</span>' : ''}
+            </div>
+            <div class="annales-card-benefits">
+              <div class="benefit-line">✅ Les questions réellement tombées aux concours</div>
+              <div class="benefit-line">✅ Chaque réponse expliquée en détail</div>
+              <div class="benefit-line">✅ Estime ton score avant les résultats</div>
+            </div>
+          </div>
+          <div class="annales-card-arrow">›</div>
+        </div>
+      `;
+    }
+
+    // ---- MODE ARCHIVE : hors saison ----
+    return `
+      <div class="annales-card" onclick="App.navigate('annales')">
+        <div class="annales-card-icon">📚</div>
+        <div class="annales-card-content">
+          <div class="annales-card-title">Accompagnement <span>Final</span></div>
+          <div class="annales-card-desc">
+            Toutes les questions <strong>réellement tombées</strong> aux concours, corrigées et expliquées
+          </div>
+          <div class="annales-card-stats">
+            <span class="annales-stat">${nbSessions} sessions</span>
+            <span class="annales-stat">🎯 ${nbQuestions} questions</span>
+            <span class="annales-stat">📅 2025 et 2026</span>
+          </div>
+          <div class="annales-card-benefits">
+            <div class="benefit-line">✅ Les vraies épreuves, pas des questions inventées</div>
+            <div class="benefit-line">✅ Chaque réponse expliquée en détail</div>
+            <div class="benefit-line">✅ Prépare-toi sur ce qui tombe vraiment</div>
+          </div>
+        </div>
+        <div class="annales-card-arrow">›</div>
+      </div>
+    `;
+  },
+
   renderResumeBanner() {
     const pending = this.SujetsManager.loadPendingExam();
     if (!pending) return '';
@@ -4475,6 +4606,8 @@ const App = {
 
   // PAGE 1 : Liste des sessions disponibles
   renderSessionsList() {
+    // V63.67 : L'utilisateur consulte les corrections → on efface la pastille "nouveau"
+    try { localStorage.removeItem('bara_new_corrections_count'); } catch(e) {}
     const u = this.state.user;
     const isPremium = window.PremiumService && window.PremiumService.isUserPremium(u);
     // V63.29 : Charger les sessions Firestore au premier affichage + sync temps réel
@@ -6103,24 +6236,7 @@ const App = {
           ${this.renderSession2026Banner()}
           ${this.renderWeeklyExamCard()}
 
-          <div class="annales-card" onclick="App.navigate('annales')">
-            <div class="annales-card-icon">📚</div>
-            <div class="annales-card-content">
-              <div class="annales-card-title">Accompagnement <span>Final</span></div>
-              <div class="annales-card-desc">${typeof window.getText === 'function' ? this.escapeHTML(window.getText('accomp_desc', 'Corrigés bien détaillés des concours avec explications complètes')) : 'Corrigés <strong>bien détaillés</strong> des concours avec explications complètes'}</div>
-              <div class="annales-card-stats">
-                <span class="annales-stat">${window.SessionsHelper ? window.SessionsHelper.getAllSessions().length : 0} sessions</span>
-                <span class="annales-stat">🎯 ${window.SessionsHelper ? window.SessionsHelper.countTotalQuestions() : 0} questions</span>
-                <span class="annales-stat">⭐ Premium</span>
-              </div>
-              <div class="annales-card-benefits">
-                <div class="benefit-line">✅ Questions probables</div>
-                <div class="benefit-line">✅ Conseils de composition</div>
-                <div class="benefit-line">✅ Révisions de dernière minute</div>
-              </div>
-            </div>
-            <div class="annales-card-arrow">›</div>
-          </div>
+          ${this.renderAccompagnementCard()}
 
           ${!this.state.user.isLoggedIn && totalQCM >= 2 ? `
             <div class="signup-prompt-card" onclick="App.navigate(window.FirebaseAuth && window.FirebaseAuth.USE_FIREBASE_AUTH ? 'auth-welcome' : 'auth-phone')">
