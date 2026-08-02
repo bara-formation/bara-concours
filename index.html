@@ -5972,8 +5972,7 @@ const App = {
         vues[sid] = {
           consulteeLe: Date.now(),
           questions: this.state.currentSessionQuestionsActive || null,
-          reponses: this.state.sessionAnswers || null,
-          numeroSujet: this.state.currentSujetNumero || null
+          reponses: this.state.currentSessionAnswers || null
         };
         localStorage.setItem('bara_corrections_vues', JSON.stringify(vues));
       }
@@ -6003,8 +6002,7 @@ const App = {
     if (!vue) { this.toast('Aucune correction enregistrée'); return; }
     this.state.currentSessionId = sessionId;
     if (vue.questions) this.state.currentSessionQuestionsActive = vue.questions;
-    if (vue.reponses) this.state.sessionAnswers = vue.reponses;
-    if (vue.numeroSujet) this.state.currentSujetNumero = vue.numeroSujet;
+    if (vue.reponses) this.state.currentSessionAnswers = vue.reponses;
     this.state.correctionFilterMode = 'all';
     this.navigate('session-correction');
   },
@@ -12333,24 +12331,31 @@ const App = {
     history.pushState({ page: 'init' }, '', '');
 
     window.addEventListener('popstate', (e) => {
-      // Si on est sur l'écran d'accueil (home) ou splash → demander confirmation pour quitter
       const screen = this.state.currentScreen;
       const screensAccueil = ['home', 'splash'];
 
       if (screensAccueil.includes(screen)) {
         // Empêcher la sortie immédiate, demander confirmation
         this.confirmExit();
-      } else if (screen === 'qcm' && this.state.currentMode === 'exam') {
-        // Pendant un examen, demander confirmation spéciale
-        history.pushState({ page: 'app' }, '', ''); // empêcher la sortie
-        if (confirm('⚠️ Tu es en plein examen !\n\nVeux-tu vraiment quitter ?\nTon progrès sera sauvegardé.')) {
-          this.pauseExam();
-        }
-      } else {
-        // Sur les autres écrans : remettre l'état et naviguer vers l'écran précédent
-        history.pushState({ page: 'app' }, '', '');
-        this.handleBackNavigation();
+        return;
       }
+
+      // V63.69 : Protéger TOUT écran où une progression est en cours.
+      //   Avant, seul le mode examen était protégé : un retour accidentel pendant
+      //   un QCM d'entraînement ou une session d'accompagnement faisait tout perdre.
+      const garde = this._getExitGuard(screen);
+      if (garde) {
+        history.pushState({ page: 'app' }, '', ''); // bloquer la sortie
+        if (confirm(garde.message)) {
+          if (typeof garde.onConfirm === 'function') garde.onConfirm();
+          else this.handleBackNavigation();
+        }
+        return;
+      }
+
+      // Écrans sans progression : retour normal
+      history.pushState({ page: 'app' }, '', '');
+      this.handleBackNavigation();
     });
   },
 
@@ -12511,6 +12516,66 @@ const App = {
    * Restaure aussi le contexte (quel concours, quelle session...) et la
    * position de défilement, pour que l'utilisateur retrouve exactement sa place.
    */
+  /**
+   * V63.69 : Détermine s'il faut confirmer avant de quitter un écran.
+   *
+   * Un retour accidentel (bouton Android, geste de balayage) pendant un QCM
+   * faisait perdre toute la progression sans avertissement. Seul le mode examen
+   * était protégé. Cette fonction couvre tous les écrans où du travail est en cours.
+   *
+   * @returns {Object|null} { message, onConfirm } ou null si aucune garde
+   */
+  _getExitGuard(screen) {
+    // --- QCM (entraînement ou examen) ---
+    if (screen === 'qcm') {
+      const q = this.state.qcm;
+      if (!q || !Array.isArray(q.answers)) return null;
+      const repondues = q.answers.filter(a => a !== null && a !== undefined).length;
+
+      // Mode examen : progression sauvegardée, on peut mettre en pause
+      if (this.state.currentMode === 'exam') {
+        return {
+          message: '⚠️ Tu es en plein examen !\n\nVeux-tu vraiment quitter ?\nTon progrès sera sauvegardé.',
+          onConfirm: () => this.pauseExam()
+        };
+      }
+
+      // Entraînement : aucune sauvegarde, la progression est perdue
+      if (repondues > 0) {
+        return {
+          message: `⚠️ Tu as répondu à ${repondues} question${repondues > 1 ? 's' : ''} sur ${q.questions.length}.\n\n`
+                 + 'Si tu quittes maintenant, ta progression sera perdue.\n\nVeux-tu vraiment quitter ?'
+        };
+      }
+      return null;  // aucune réponse donnée : rien à perdre
+    }
+
+    // --- Session d'accompagnement en cours ---
+    if (screen === 'session-questions') {
+      const rep = this.state.currentSessionAnswers;
+      const nb = rep
+        ? Object.keys(rep).filter(k => !k.endsWith('_validated') && rep[k] !== null && rep[k] !== undefined).length
+        : 0;
+      if (nb > 0) {
+        return {
+          message: `⚠️ Tu as répondu à ${nb} question${nb > 1 ? 's' : ''} de cette session.\n\n`
+                 + 'Ta progression sera sauvegardée, tu pourras reprendre plus tard.\n\nQuitter maintenant ?'
+        };
+      }
+      return null;
+    }
+
+    // --- Examen hebdomadaire en cours ---
+    if (screen === 'weekly-exam-active') {
+      return {
+        message: '⚠️ Tu es en plein examen hebdomadaire !\n\n'
+               + 'Le classement national est en jeu.\n\nVeux-tu vraiment quitter ?'
+      };
+    }
+
+    return null;
+  },
+
   handleBackNavigation() {
     const screen = this.state.currentScreen;
 
