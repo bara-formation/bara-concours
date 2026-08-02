@@ -1482,6 +1482,8 @@ const Admin = {
     let filtered = normalized;
     if (tab === 'premium') filtered = filtered.filter(u => u.isPremium);
     if (tab === 'free') filtered = filtered.filter(u => !u.isPremium);
+    // V63.64 : Premium qui expirent dans 7 jours ou moins — à relancer
+    if (tab === 'expiring') filtered = filtered.filter(u => u.isPremium && window.PremiumService.daysRemaining(u) <= 7);
     if (search) {
       filtered = filtered.filter(u => {
         const txt = (u.name + ' ' + u.phone + ' ' + (u.city || '') + ' ' + (u.email || '')).toLowerCase();
@@ -1489,9 +1491,24 @@ const Admin = {
       });
     }
 
+    // V63.64 : Dans l'onglet "Tous", remonter les Premium en tête de liste.
+    //   Sans ça, avec 59 utilisateurs dont 7 Premium, il fallait scroller pour
+    //   les trouver. Les plus urgents (expiration proche) passent en premier.
+    if (tab === 'all') {
+      filtered = [...filtered].sort((a, b) => {
+        if (a.isPremium !== b.isPremium) return a.isPremium ? -1 : 1;
+        if (a.isPremium && b.isPremium) {
+          return window.PremiumService.daysRemaining(a) - window.PremiumService.daysRemaining(b);
+        }
+        return 0;
+      });
+    }
+
     const total = normalized.length;
     const premium = normalized.filter(u => u.isPremium).length;
     const free = total - premium;
+    // V63.64 : Compteur des Premium bientôt expirés (opportunité de relance)
+    const expiring = normalized.filter(u => u.isPremium && window.PremiumService.daysRemaining(u) <= 7).length;
 
     // V59 : État de chargement
     const isFirebaseReady = window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady;
@@ -1520,16 +1537,25 @@ const Admin = {
         </div>
       ` : ''}
 
+      <!-- V63.64 : Onglets colorés — repérage immédiat du segment consulté -->
       <div class="tabs">
         <button class="tab ${tab === 'all' ? 'active' : ''}" onclick="Admin.setTab('all')">
           Tous <span class="tab-count">${total}</span>
         </button>
-        <button class="tab ${tab === 'premium' ? 'active' : ''}" onclick="Admin.setTab('premium')">
-          ⭐ Premium <span class="tab-count">${premium}</span>
+        <button class="tab ${tab === 'premium' ? 'active' : ''}" onclick="Admin.setTab('premium')"
+                style="${tab === 'premium' ? '' : 'border-color:#fbbf24; color:#854d0e'}">
+          ⭐ Premium <span class="tab-count" style="background:#fde68a; color:#854d0e">${premium}</span>
         </button>
         <button class="tab ${tab === 'free' ? 'active' : ''}" onclick="Admin.setTab('free')">
           Gratuits <span class="tab-count">${free}</span>
         </button>
+        ${expiring > 0 ? `
+          <button class="tab ${tab === 'expiring' ? 'active' : ''}" onclick="Admin.setTab('expiring')"
+                  style="${tab === 'expiring' ? '' : 'border-color:#f97316; color:#c2410c'}"
+                  title="Premium expirant dans 7 jours ou moins — pense à les relancer">
+            ⏳ Expire bientôt <span class="tab-count" style="background:#fed7aa; color:#c2410c">${expiring}</span>
+          </button>
+        ` : ''}
       </div>
 
       <div class="table-wrap">
@@ -1621,11 +1647,22 @@ const Admin = {
       ? u.name
       : (u.visitorNumber || u.name || 'Visiteur');
 
+    // V63.64 : Ligne entière colorée selon le statut — repérage immédiat dans la liste.
+    //   Premium actif  → fond doré + bordure gauche épaisse
+    //   Premium < 7j   → fond orangé (alerte : à relancer bientôt)
+    //   Gratuit        → neutre
+    const rowStyle = isPrem
+      ? (days <= 7
+          ? 'background:linear-gradient(90deg,#fff7ed,#fffbf5); border-left:4px solid #f97316'
+          : 'background:linear-gradient(90deg,#fffbeb,#fffef7); border-left:4px solid #f59e0b')
+      : '';
+
     return `
-      <tr>
+      <tr style="${rowStyle}">
         <td>
           <div style="font-weight:600; display:flex; align-items:center; gap:0.4rem">
             ${u.photoURL ? `<img src="${u.photoURL}" style="width:24px; height:24px; border-radius:50%; object-fit:cover" alt="">` : ''}
+            ${isPrem ? '<span title="Compte Premium">⭐</span>' : ''}
             ${displayName}${providerBadge}
           </div>
           <div style="font-size:0.75rem; color:var(--ink-mute); margin-top:0.15rem">${idHtml}</div>
@@ -1634,8 +1671,10 @@ const Admin = {
         <td>
           ${isPrem ? `
             <span class="badge badge-gold">⭐ Premium ${planName}</span>
-            <div style="font-size:0.7rem; color:var(--ink-mute); margin-top:0.2rem">${days}j restants</div>
-          ` : `<span class="badge">Gratuit</span>`}
+            <div style="font-size:0.7rem; font-weight:700; margin-top:0.2rem; color:${days <= 7 ? '#ea580c' : 'var(--ink-mute)'}">
+              ${days <= 7 ? '⚠️ ' : ''}${days}j restants
+            </div>
+          ` : `<span class="badge" style="background:#f3f4f6; color:#6b7280; border:1px solid #e5e7eb">Gratuit</span>`}
         </td>
         <td style="font-weight:700">${u.totalQCM || 0}</td>
         <td style="font-size:0.78rem; color:var(--ink-mute)">${this.formatRelativeTime(u.joinedAt)}</td>
