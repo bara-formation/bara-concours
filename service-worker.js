@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
-// Version 6.3.64 - V63.64 : Lisibilite Premium / Gratuit dans le tableau de bord admin
+// Version 6.3.65 - V63.65 : Suivi d'activite reel (compteurs QCM + derniere activite + onglet inactifs)
 
-const CACHE_NAME = 'bara-concours-v6-3-64';
+const CACHE_NAME = 'bara-concours-v6-3-65';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)

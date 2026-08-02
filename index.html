@@ -5648,6 +5648,19 @@ const App = {
     this.state.matiereStats[ACCOMPAGNEMENT_MATIERE_ID].totalScore += score;
     this.state.matiereStats[ACCOMPAGNEMENT_MATIERE_ID].totalQuestions += activeQs.length;
 
+    // V63.65 : Comptabiliser aussi les sessions d'accompagnement dans les
+    //   compteurs d'activité (elles ne passaient pas par endQCM, donc
+    //   n'étaient jamais remontées au tableau de bord admin).
+    try {
+      if (window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady && window.FirebaseAuth.isLoggedIn()) {
+        window.FirebaseAuth.saveQCMResult({
+          score: score,
+          total: activeQs.length,
+          duration: elapsedSeconds
+        });
+      }
+    } catch(e) { console.warn('[session] saveQCMResult:', e); }
+
     // V47 : Sauvegarder le sujet dans l'historique (sauf si c'est un examen chronométré ou un refaire)
     if (this.state.currentSessionMode === 'sujet' && this.state.currentSessionSujetNumero) {
       this.SessionSujetsManager.saveSujet(session.id, {

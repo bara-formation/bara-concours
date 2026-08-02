@@ -1484,6 +1484,13 @@ const Admin = {
     if (tab === 'free') filtered = filtered.filter(u => !u.isPremium);
     // V63.64 : Premium qui expirent dans 7 jours ou moins — à relancer
     if (tab === 'expiring') filtered = filtered.filter(u => u.isPremium && window.PremiumService.daysRemaining(u) <= 7);
+    // V63.65 : Inscrits sans aucune activité, ou inactifs depuis plus de 30 jours
+    if (tab === 'inactive') {
+      filtered = filtered.filter(u => {
+        if (!u.lastActivityAt) return true;
+        return (Date.now() - u.lastActivityAt) > 30 * 86400000;
+      });
+    }
     if (search) {
       filtered = filtered.filter(u => {
         const txt = (u.name + ' ' + u.phone + ' ' + (u.city || '') + ' ' + (u.email || '')).toLowerCase();
@@ -1509,6 +1516,8 @@ const Admin = {
     const free = total - premium;
     // V63.64 : Compteur des Premium bientôt expirés (opportunité de relance)
     const expiring = normalized.filter(u => u.isPremium && window.PremiumService.daysRemaining(u) <= 7).length;
+    // V63.65 : Compteur des inactifs (jamais actifs ou > 30 jours)
+    const inactive = normalized.filter(u => !u.lastActivityAt || (Date.now() - u.lastActivityAt) > 30 * 86400000).length;
 
     // V59 : État de chargement
     const isFirebaseReady = window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady;
@@ -1556,6 +1565,13 @@ const Admin = {
             ⏳ Expire bientôt <span class="tab-count" style="background:#fed7aa; color:#c2410c">${expiring}</span>
           </button>
         ` : ''}
+        ${inactive > 0 ? `
+          <button class="tab ${tab === 'inactive' ? 'active' : ''}" onclick="Admin.setTab('inactive')"
+                  style="${tab === 'inactive' ? '' : 'border-color:#94a3b8; color:#475569'}"
+                  title="Jamais actifs, ou sans activité depuis plus de 30 jours">
+            😴 Inactifs <span class="tab-count" style="background:#e2e8f0; color:#475569">${inactive}</span>
+          </button>
+        ` : ''}
       </div>
 
       <div class="table-wrap">
@@ -1584,6 +1600,7 @@ const Admin = {
                 <th>Concours visé</th>
                 <th>Statut</th>
                 <th>QCM</th>
+                <th>Dernière activité</th>
                 <th>Inscrit</th>
                 <th>Actions</th>
               </tr>
@@ -1612,10 +1629,39 @@ const Admin = {
       premiumExpiresAt: u.premiumExpiresAt || null,
       premiumActivatedAt: u.premiumActivatedAt || null,
       totalQCM: u.totalQCM || 0,
+      // V63.65 : Compteurs d'activité (renseignés à chaque QCM terminé)
+      totalQuestions: u.totalQuestions || 0,
+      totalCorrect: u.totalCorrect || 0,
+      lastActivityAt: typeof u.lastActivityAt === 'object' && u.lastActivityAt?.seconds
+        ? u.lastActivityAt.seconds * 1000
+        : (u.lastActivityAt || null),
       joinedAt: typeof u.createdAt === 'object' && u.createdAt?.seconds ? u.createdAt.seconds * 1000 : (u.createdAt || u.joinedAt || Date.now()),
       authProvider: u.authProvider || '',
       photoURL: u.photoURL || ''
     };
+  },
+
+  /**
+   * V63.65 : Cellule "Dernière activité" avec code couleur d'engagement.
+   *   Permet de repérer d'un coup d'œil :
+   *   - qui s'est inscrit sans jamais rien faire (à relancer)
+   *   - qui était actif et a décroché (à relancer aussi)
+   *   - qui utilise l'app régulièrement
+   */
+  renderActivityCell(u) {
+    if (!u.lastActivityAt) {
+      // Jamais aucun QCM enregistré
+      return u.totalQCM > 0
+        ? '<span style="color:var(--ink-mute)">-</span>'
+        : '<span style="color:#dc2626; font-weight:600" title="Inscrit mais aucun QCM commencé">✗ Jamais</span>';
+    }
+    const jours = Math.floor((Date.now() - u.lastActivityAt) / 86400000);
+    let couleur, libelle;
+    if (jours <= 2)       { couleur = '#15803d'; libelle = jours === 0 ? "Aujourd'hui" : (jours === 1 ? 'Hier' : 'Il y a 2j'); }
+    else if (jours <= 7)  { couleur = '#65a30d'; libelle = 'Il y a ' + jours + 'j'; }
+    else if (jours <= 30) { couleur = '#ea580c'; libelle = 'Il y a ' + jours + 'j'; }
+    else                  { couleur = '#dc2626'; libelle = 'Il y a ' + Math.floor(jours / 30) + ' mois'; }
+    return `<span style="color:${couleur}; font-weight:600">${libelle}</span>`;
   },
 
   renderUserRow(u) {
@@ -1676,7 +1722,18 @@ const Admin = {
             </div>
           ` : `<span class="badge" style="background:#f3f4f6; color:#6b7280; border:1px solid #e5e7eb">Gratuit</span>`}
         </td>
-        <td style="font-weight:700">${u.totalQCM || 0}</td>
+        <td>
+          <!-- V63.65 : Activité réelle — nombre de QCM, taux de réussite, dernière visite -->
+          <div style="font-weight:700; font-size:0.95rem; color:${u.totalQCM > 0 ? 'var(--ink)' : '#d4d4d4'}">
+            ${u.totalQCM || 0}
+          </div>
+          ${u.totalQuestions > 0 ? `
+            <div style="font-size:0.68rem; color:var(--ink-mute); margin-top:0.1rem">
+              ${Math.round((u.totalCorrect / u.totalQuestions) * 100)}% · ${u.totalQuestions}q
+            </div>
+          ` : ''}
+        </td>
+        <td style="font-size:0.75rem">${this.renderActivityCell(u)}</td>
         <td style="font-size:0.78rem; color:var(--ink-mute)">${this.formatRelativeTime(u.joinedAt)}</td>
         <td>
           ${!isPrem ? `
