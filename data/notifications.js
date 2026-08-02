@@ -112,6 +112,27 @@ const Notifications = {
     } catch (e) { console.error('[Notif] Erreur :', e); }
   },
 
+  // V63.67 : Notification quand une nouvelle correction est publiée
+  //   Déclenchée par le listener temps réel de sessions_firestore.js.
+  //   Publications à 11h30 et 19h30 pendant la saison des concours.
+  async showNewCorrectionNotification(session) {
+    if (this.permission !== 'granted' || !this.swRegistration || !session) return;
+    const nbQ = (session.questions && session.questions.length) || 0;
+    try {
+      await this.swRegistration.showNotification('📢 Nouvelle correction en ligne !', {
+        body: (session.titre || 'Accompagnement Final')
+          + (nbQ ? ' — ' + nbQ + ' questions corrigées' : '')
+          + '\nVérifie tes réponses maintenant.',
+        icon: 'icons/icon-192.png',
+        badge: 'icons/icon-96.png',
+        vibrate: [200, 100, 200, 100, 200],
+        tag: 'new-correction-' + (session.id || Date.now()),
+        requireInteraction: true,   // reste affichée : l'info est importante
+        data: { type: 'new-correction', sessionId: session.id, url: './' }
+      });
+    } catch (e) { console.error('[Notif] Erreur correction :', e); }
+  },
+
   async showWelcomeNotification() {
     if (this.permission !== 'granted' || !this.swRegistration) return;
     try {

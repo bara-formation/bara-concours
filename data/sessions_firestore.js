@@ -38,6 +38,24 @@ const SessionsFirestore = {
     return window.FirebaseAuth.db;
   },
 
+  // V63.67 : Mémoriser les sessions déjà vues, pour détecter les nouveautés
+  SEEN_SESSIONS_KEY: 'bara_seen_session_ids',
+
+  _getSeenSessionIds() {
+    try {
+      const raw = localStorage.getItem(this.SEEN_SESSIONS_KEY);
+      const parsed = raw ? JSON.parse(raw) : [];
+      return Array.isArray(parsed) ? parsed : [];
+    } catch(e) { return []; }
+  },
+
+  _setSeenSessionIds(ids) {
+    try {
+      // Garder les 200 derniers max (évite que la clé grossisse indéfiniment)
+      localStorage.setItem(this.SEEN_SESSIONS_KEY, JSON.stringify(ids.slice(-200)));
+    } catch(e) {}
+  },
+
   // V63.55 : Sauvegarder le cache dans localStorage (persiste entre sessions)
   _persistCache(sessions) {
     // V63.58 : GARDE-FOU — ne JAMAIS écraser un cache plein par un cache vide.
@@ -205,6 +223,29 @@ const SessionsFirestore = {
         console.warn('[SessionsFirestore] Snapshot vide ignoré — cache conservé');
         return;
       }
+
+      // V63.67 : Détecter les corrections nouvellement publiées.
+      //   Le rythme est de 2 publications/jour (11h30 et 19h30) pendant la saison.
+      //   Sans ça, un candidat qui a payé ne savait pas qu'une correction était en ligne.
+      try {
+        const dejaVues = this._getSeenSessionIds();
+        const nouvelles = sessions.filter(s => s.id && !dejaVues.includes(s.id));
+        // Ne notifier que si on avait déjà un cache (sinon = premier chargement,
+        // on ne veut pas notifier les 18 sessions existantes d'un coup)
+        const premierChargement = !this._sessionsCache || this._sessionsCache.length === 0;
+        if (!premierChargement && nouvelles.length > 0 && window.Notifications) {
+          // Notifier la plus récente uniquement
+          const plusRecente = nouvelles.sort((a, b) => (b.datePublication || 0) - (a.datePublication || 0))[0];
+          window.Notifications.showNewCorrectionNotification(plusRecente);
+        }
+        // Mémoriser toutes les sessions vues
+        this._setSeenSessionIds(sessions.map(s => s.id).filter(Boolean));
+        // Marqueur pour la pastille "nouveau" dans l'app
+        if (!premierChargement && nouvelles.length > 0) {
+          try { localStorage.setItem('bara_new_corrections_count', String(nouvelles.length)); } catch(e) {}
+        }
+      } catch(e) { console.warn('[SessionsFirestore] Détection nouveautés :', e); }
+
       this._sessionsCache = sessions;
       this._sessionsCacheTime = Date.now();
       // V63.55 : Persister dans localStorage à chaque snapshot
