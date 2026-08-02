@@ -83,6 +83,8 @@ const FirebaseAuth = {
         getDoc: dbMod.getDoc,
         updateDoc: dbMod.updateDoc,
         serverTimestamp: dbMod.serverTimestamp,
+        // V63.65 : increment atomique pour les compteurs d'activité
+        increment: dbMod.increment,
         collection: dbMod.collection,
         query: dbMod.query,
         where: dbMod.where,
@@ -122,6 +124,17 @@ const FirebaseAuth = {
                   premiumActivatedAt: localUser.premiumActivatedAt || new Date().toISOString()
                 });
               }
+            }
+          } catch(e) { /* non bloquant */ }
+
+          // V63.65 : Récupération unique de l'historique déjà accumulé en local.
+          //   Les compteurs d'activité démarrent à zéro, or beaucoup d'étudiants
+          //   ont déjà des dizaines de QCM dans leur localStorage. On les envoie
+          //   une seule fois (marqueur historyBackfilled côté Firestore).
+          try {
+            const st = JSON.parse(localStorage.getItem('bara_concours_state') || '{}');
+            if (Array.isArray(st.history) && st.history.length > 0) {
+              this.backfillActivityFromLocal(st.history);
             }
           } catch(e) { /* non bloquant */ }
         } else {
@@ -592,12 +605,96 @@ const FirebaseAuth = {
     return [];
   },
 
-  // V63.17 : Stub pour saveQCMResult — évite le crash dans endQCM
-  // L'historique des QCM reste local au localStorage pour la saison 2026.
-  // Pour la saison 2027, on implémentera la vraie sauvegarde Firestore.
+  // ==================================================================
+  // V63.65 : SUIVI D'ACTIVITÉ — compteurs agrégés sur le profil
+  // ==================================================================
+  //
+  // Remplace le stub V63.17 qui ne faisait rien (d'où la colonne QCM
+  // toujours à 0 dans le tableau de bord admin).
+  //
+  // Principe : on n'enregistre PAS chaque QCM comme un document séparé
+  // (coûteux et redondant — l'app calcule déjà les stats détaillées en local).
+  // On incrémente quelques compteurs sur le document utilisateur :
+  //   totalQCM, totalQuestions, totalCorrect, lastActivityAt
+  //
+  // Coût : 1 écriture Firestore par QCM terminé. Avec ~60 utilisateurs actifs,
+  // on reste très loin du quota gratuit (20 000 écritures/jour).
+  //
+  // increment() est atomique côté serveur : deux appareils du même compte
+  // peuvent écrire en même temps sans perte de comptage.
+
   async saveQCMResult(qcmResult) {
-    // Stub : ne fait rien, mais retourne une Promise pour que .catch() fonctionne
-    return Promise.resolve();
+    if (!this.isFirebaseReady || !this.user || !qcmResult) {
+      return Promise.resolve();
+    }
+    try {
+      const inc = this._fbFns.increment;
+      if (typeof inc !== 'function') {
+        // increment non disponible (ancien SDK) → fallback non bloquant
+        console.warn('[V63.65] increment() indisponible, comptage ignoré');
+        return Promise.resolve();
+      }
+
+      const nbQuestions = Number(qcmResult.total) || 0;
+      const nbCorrect = Number(qcmResult.score) || 0;
+      const duree = Number(qcmResult.duration) || 0;
+
+      const userRef = this._fbFns.doc(this.db, 'users', this.user.uid);
+      await this._fbFns.setDoc(userRef, {
+        uid: this.user.uid,
+        totalQCM: inc(1),
+        totalQuestions: inc(nbQuestions),
+        totalCorrect: inc(nbCorrect),
+        totalDuration: inc(duree),
+        lastActivityAt: this._fbFns.serverTimestamp()
+      }, { merge: true });
+
+      return Promise.resolve();
+    } catch (e) {
+      // Ne jamais bloquer la navigation de l'étudiant pour un souci de statistiques
+      console.warn('[V63.65] saveQCMResult :', e.message);
+      return Promise.resolve();
+    }
+  },
+
+  /**
+   * V63.65 : Récupération de l'historique déjà accumulé en local.
+   *
+   * Les compteurs démarrent à zéro alors que beaucoup d'étudiants ont déjà
+   * fait des dizaines de QCM (stockés dans localStorage). Cette fonction envoie
+   * ce total une seule fois, au premier lancement après la mise à jour.
+   *
+   * Le marqueur `historyBackfilled` évite tout double comptage.
+   */
+  async backfillActivityFromLocal(history) {
+    if (!this.isFirebaseReady || !this.user) return;
+    if (!Array.isArray(history) || history.length === 0) return;
+    // Déjà fait pour ce compte ?
+    if (this.userProfile && this.userProfile.historyBackfilled) return;
+
+    try {
+      const totalQCM = history.length;
+      const totalQuestions = history.reduce((s, h) => s + (Number(h.total) || 0), 0);
+      const totalCorrect = history.reduce((s, h) => s + (Number(h.score) || 0), 0);
+      const totalDuration = history.reduce((s, h) => s + (Number(h.duration) || 0), 0);
+
+      const userRef = this._fbFns.doc(this.db, 'users', this.user.uid);
+      // set (pas increment) : on pose la valeur de référence issue du local
+      await this._fbFns.setDoc(userRef, {
+        uid: this.user.uid,
+        totalQCM: totalQCM,
+        totalQuestions: totalQuestions,
+        totalCorrect: totalCorrect,
+        totalDuration: totalDuration,
+        historyBackfilled: true,
+        historyBackfilledAt: this._fbFns.serverTimestamp()
+      }, { merge: true });
+
+      if (this.userProfile) this.userProfile.historyBackfilled = true;
+      console.log('[V63.65] ✓ Historique local récupéré : ' + totalQCM + ' QCM');
+    } catch (e) {
+      console.warn('[V63.65] backfill :', e.message);
+    }
   },
 
   formatPhone(phone) {
