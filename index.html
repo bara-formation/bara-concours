@@ -221,16 +221,61 @@ img { max-width: 100%; display: block; }
   position: relative;
   z-index: 1;
 }
+/* V63.72 : bouton retour agrandi et libelle, pour etre reconnu au premier coup d'oeil */
 .header-back {
-  width: 38px; height: 38px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.12);
-  display: flex; align-items: center; justify-content: center;
+  min-width: 52px;
+  padding: 0.3rem 0.55rem 0.35rem;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.16);
+  border: 1.5px solid rgba(255,255,255,0.3);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 1px;
   color: white;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
+  line-height: 1;
   transition: background 0.2s;
+  flex-shrink: 0;
 }
-.header-back:active { background: rgba(255,255,255,0.22); }
+.header-back::after {
+  content: 'Retour';
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  opacity: 0.92;
+  line-height: 1;
+}
+.header-back:active { background: rgba(255,255,255,0.3); }
+
+/* V63.72 : barre de retour flottante.
+   Le bandeau vert defile avec la page ; passe un certain point, le candidat
+   n'avait plus aucun moyen de revenir en arriere sans remonter tout en haut.
+   Cette barre reprend l'action du bouton retour de l'ecran courant. */
+#sticky-back {
+  position: fixed;
+  top: 0; left: 50%;
+  transform: translateX(-50%) translateY(-120%);
+  width: 100%;
+  max-width: 600px;
+  z-index: 120;
+  display: flex; align-items: center; gap: 0.6rem;
+  padding: 0.55rem 0.9rem;
+  padding-top: calc(0.55rem + env(safe-area-inset-top));
+  background: var(--green-bf-dark, #0a3d25);
+  color: white;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+  transition: transform 0.22s ease;
+  cursor: pointer;
+}
+#sticky-back.visible { transform: translateX(-50%) translateY(0); }
+#sticky-back .sb-arrow { font-size: 1.25rem; line-height: 1; }
+#sticky-back .sb-label { font-size: 0.9rem; font-weight: 700; }
+#sticky-back .sb-title {
+  margin-left: auto;
+  font-size: 0.82rem;
+  opacity: 0.85;
+  max-width: 55%;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
 /* V63.5 : Bouton de retour rendu visible sur fond vert foncé */
 .header-btn {
   width: 38px; height: 38px;
@@ -3491,6 +3536,13 @@ img { max-width: 100%; display: block; }
 
 <div id="app"></div>
 
+<!-- V63.72 : barre de retour flottante, visible des que l'en-tete a defile -->
+<div id="sticky-back" role="button" aria-label="Retour">
+  <span class="sb-arrow">←</span>
+  <span class="sb-label">Retour</span>
+  <span class="sb-title"></span>
+</div>
+
 <!-- Container reCAPTCHA invisible (requis par Firebase Phone Auth) -->
 <div id="recaptcha-container"></div>
 
@@ -3732,6 +3784,7 @@ const App = {
 
     app.innerHTML = html;
     this.attachEvents();
+    this.refreshStickyBack();
 
     // V63.4 : Si on est sur la page d'examen actif, démarrer le tick chrono
     if (this.state.currentScreen === 'weekly-exam-active') {
@@ -3741,6 +3794,69 @@ const App = {
       clearInterval(this._weeklyExamTimerId);
       this._weeklyExamTimerId = null;
     }
+  },
+
+  /**
+   * V63.72 : Barre de retour flottante.
+   *
+   *   Le bandeau vert defile avec la page. Passe quelques centaines de pixels,
+   *   le candidat n'avait plus aucun bouton de retour a l'ecran : il devait
+   *   remonter tout en haut avant de pouvoir ressortir.
+   *
+   *   Plutot que de figer tout l'en-tete (qui mange un quart de l'ecran sur
+   *   telephone), on affiche une barre compacte des que le bouton retour de
+   *   l'ecran courant est sorti du champ. Elle rejoue simplement le clic de
+   *   ce bouton, donc elle suit automatiquement la logique de navigation de
+   *   chaque ecran, sans avoir a la dupliquer.
+   */
+  refreshStickyBack() {
+    const bar = document.getElementById('sticky-back');
+    if (!bar) return;
+
+    const back = document.querySelector('#app .header-back');
+    this._stickyBackTarget = back || null;
+
+    if (!back) {
+      bar.classList.remove('visible');
+      return;
+    }
+
+    // Rappeler le titre de l'ecran, quand il y en a un
+    const titre = document.querySelector('#app .header-title-row');
+    const sbTitle = bar.querySelector('.sb-title');
+    if (sbTitle) sbTitle.textContent = titre ? (titre.textContent || '').trim() : '';
+
+    if (!this._stickyBackBound) {
+      this._stickyBackBound = true;
+
+      bar.addEventListener('click', () => {
+        const target = this._stickyBackTarget;
+        if (target) target.click();
+      });
+
+      const onScroll = () => {
+        if (this._stickyBackTick) return;
+        this._stickyBackTick = true;
+        window.requestAnimationFrame(() => {
+          this._stickyBackTick = false;
+          const b = document.getElementById('sticky-back');
+          const t = this._stickyBackTarget;
+          if (!b) return;
+          if (!t || !t.isConnected) { b.classList.remove('visible'); return; }
+          // Visible des que le bouton d'origine est passe au-dessus du champ
+          const sorti = t.getBoundingClientRect().bottom < 4;
+          b.classList.toggle('visible', sorti);
+        });
+      };
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      this._stickyBackOnScroll = onScroll;
+    }
+
+    // Nouvel ecran : on repart en haut, barre masquee
+    bar.classList.remove('visible');
+    if (this._stickyBackOnScroll) this._stickyBackOnScroll();
   },
 
   renderFreemiumDialog() {
