@@ -1444,6 +1444,24 @@ img { max-width: 100%; display: block; }
   font-variant-numeric: tabular-nums;
   position: relative; z-index: 1;
 }
+/* V63.70 : e-mail du compte, affiché et copiable depuis le profil */
+.profile-email {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  max-width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.3rem 0.7rem;
+  background: rgba(255,255,255,0.15);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.95);
+  cursor: pointer;
+  position: relative; z-index: 1;
+  -webkit-user-select: text; user-select: text;
+}
+.profile-email .profile-email-text {
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.profile-email:active { background: rgba(255,255,255,0.28); }
 .profile-info-row {
   display: flex; gap: 0.5rem; flex-wrap: wrap;
   margin-top: 0.7rem;
@@ -8589,6 +8607,38 @@ const App = {
     `;
   },
 
+  /**
+   * V63.70 : Copier l'e-mail du compte dans le presse-papiers.
+   *   Objectif : permettre au candidat de relever l'adresse reliee a sa
+   *   progression avant une desinstallation ou un changement de telephone.
+   *   Repli sur execCommand pour les WebView anciennes ou hors HTTPS,
+   *   ou clipboard.writeText n'est pas disponible.
+   */
+  async copyEmail() {
+    const UF = window.UserFields;
+    const mail = (UF && UF.getEmail) ? UF.getEmail(this.state.user, '') : (this.state.user.email || '');
+    if (!mail) { this.toast('Aucun e-mail associe a ce compte'); return; }
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(mail);
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = mail;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+      this.toast('E-mail copie : ' + mail, 'success');
+    } catch (e) {
+      // Dernier recours : on affiche l'adresse pour qu'elle soit notee a la main
+      this.toast('Ton e-mail : ' + mail);
+    }
+  },
+
   // === CORRECTION DÉTAILLÉE (mode examen) ===
   showCorrection() {
     this.navigate('correction');
@@ -8808,6 +8858,19 @@ const App = {
               <div class="profile-name">${u.name || 'Apprenant'}</div>
               <div class="profile-status">${(window.PremiumService && window.PremiumService.isUserPremium(u)) ? `⭐ Premium · ${window.PremiumService.daysRemaining(u)}j restant${window.PremiumService.daysRemaining(u) > 1 ? 's' : ''}` : '👤 Compte Gratuit'}</div>
               ${u.phoneNumber ? `<div class="profile-phone">${(window.FirebaseAuth && window.FirebaseAuth.formatPhone) ? window.FirebaseAuth.formatPhone(u.phoneNumber) : (u.phoneNumber || "")}</div>` : ''}
+              ${(() => {
+                // V63.70 : e-mail du compte, visible et copiable.
+                //   Beaucoup de candidats ont plusieurs adresses et ne savent plus
+                //   laquelle est reliee a leur progression — utile avant une
+                //   desinstallation/reinstallation.
+                const mail = (window.UserFields && window.UserFields.getEmail) ? window.UserFields.getEmail(u, '') : (u.email || '');
+                if (!mail) return '';
+                return `<div class="profile-email" onclick="App.copyEmail()" title="Toucher pour copier">
+                  <span>\u2709\uFE0F</span>
+                  <span class="profile-email-text">${this.escapeHTML(mail)}</span>
+                  <span style="opacity:.75">\u29C9</span>
+                </div>`;
+              })()}
               <div class="profile-info-row">
                 ${u.city ? `<span class="profile-info-tag">📍 ${u.city}</span>` : ''}
                 ${u.educationLevel ? `<span class="profile-info-tag">🎓 ${u.educationLevel}</span>` : ''}
