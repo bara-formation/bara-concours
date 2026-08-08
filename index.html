@@ -416,6 +416,23 @@ img { max-width: 100%; display: block; }
   transform: scale(0.98);
   box-shadow: var(--shadow);
 }
+/* V63.74 : reperage du dernier concours consulte */
+.concours-card.is-last-visited {
+  border: 2px solid var(--green-bf);
+  background: linear-gradient(180deg, rgba(15,81,50,0.05), white 60%);
+}
+.concours-badge-reprendre {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: var(--green-bf);
+  color: white;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  vertical-align: middle;
+}
 .concours-card::before {
   content: '';
   position: absolute;
@@ -3610,7 +3627,9 @@ const App = {
     currentConcours: null,
     currentMatiere: null,
     currentMode: 'train',
-    currentTab: 'enseignement',
+    // V63.74 : on repart sur la derniere categorie consultee
+    currentTab: (function(){ try { return localStorage.getItem('bara_last_tab') || 'enseignement'; } catch(e) { return 'enseignement'; } })(),
+    lastConcoursId: (function(){ try { return localStorage.getItem('bara_last_concours') || null; } catch(e) { return null; } })(),
     currentSujet: null, // numéro du sujet en cours (1, 2, 3...)
     pendingExam: null,  // examen en pause à reprendre
     showResumeDialog: false, // popup "reprendre l'examen ?"
@@ -3739,10 +3758,24 @@ const App = {
       // V63.31 : Reset le flag pour forcer un refresh à la prochaine entrée
       this.state._sessionsListEntered = false;
     }
+    // V63.74 : memoriser ou en etait le candidat sur l'ecran qu'il quitte.
+    //   Sans ca, chaque retour le ramenait tout en haut de l'accueil : il devait
+    //   refaire defiler jusqu'aux categories de concours a chaque fois.
+    if (this.state.currentScreen && this.state.currentScreen !== screen) {
+      this._scrollMem = this._scrollMem || {};
+      this._scrollMem[this.state.currentScreen] = window.scrollY || 0;
+    }
+
     this.state.currentScreen = screen;
     Object.assign(this.state, params);
     this.render();
-    window.scrollTo({ top: 0, behavior: 'instant' });
+
+    const memo = (this._scrollMem && this._scrollMem[screen]) || 0;
+    window.scrollTo({ top: memo, behavior: 'instant' });
+    if (memo > 0) {
+      // Le contenu peut grandir apres le rendu (images, listes) : on repositionne
+      window.requestAnimationFrame(() => window.scrollTo({ top: memo, behavior: 'instant' }));
+    }
   },
 
   // === RENDER ===
@@ -3821,6 +3854,23 @@ const App = {
     app.innerHTML = html;
     this.attachEvents();
     this.refreshStickyBack();
+
+    // V63.74 : amener l'onglet de categorie actif dans le champ de vision.
+    //   La barre defile horizontalement : sans ca, un candidat sur la 3e
+    //   categorie revenait sur une barre calee a gauche et croyait avoir
+    //   perdu sa selection.
+    const tabActif = document.querySelector('#app .cat-tabs .cat-tab.active');
+    if (tabActif) {
+      window.requestAnimationFrame(() => {
+        try {
+          tabActif.scrollIntoView({ behavior: 'instant', inline: 'center', block: 'nearest' });
+        } catch(e) {
+          // WebView ancienne : repli sur un calcul manuel
+          const barre = tabActif.parentElement;
+          if (barre) barre.scrollLeft = tabActif.offsetLeft - (barre.clientWidth - tabActif.clientWidth) / 2;
+        }
+      });
+    }
 
     // V63.4 : Si on est sur la page d'examen actif, démarrer le tick chrono
     if (this.state.currentScreen === 'weekly-exam-active') {
@@ -6579,13 +6629,14 @@ const App = {
     const isOfficiel = c.session2026 === true;
     const isAutreCanal = c.autre_canal === true;
     return `
-      <div class="concours-card ${isAutreCanal ? 'autre-canal' : ''}" onclick="App.openConcours('${c.id}')" style="--cat-color:${cat.couleur}; --cat-color-light:${cat.couleur}15">
+      <div class="concours-card ${isAutreCanal ? 'autre-canal' : ''} ${this.state.lastConcoursId === c.id ? 'is-last-visited' : ''}" onclick="App.openConcours('${c.id}')" style="--cat-color:${cat.couleur}; --cat-color-light:${cat.couleur}15">
         <div class="concours-icon">${cat.icone}</div>
         <div class="concours-info">
           <div class="concours-title">
             ${c.nom}
             ${isOfficiel && c.jour ? `<span class="concours-badge-jour">J${c.jour}</span>` : ''}
             ${isAutreCanal ? '<span class="concours-badge-canal">École</span>' : ''}
+            ${this.state.lastConcoursId === c.id ? '<span class="concours-badge-reprendre">Reprendre</span>' : ''}
           </div>
           <div class="concours-meta">
             <span>📚 ${c.matieres.length} matières</span>
@@ -6599,10 +6650,19 @@ const App = {
     `;
   },
 
-  setTab(t) { this.state.currentTab = t; this.render(); },
+  setTab(t) {
+    this.state.currentTab = t;
+    // V63.74 : la categorie choisie survit a la fermeture de l'application
+    try { localStorage.setItem('bara_last_tab', t); } catch(e) {}
+    this.render();
+  },
 
   openConcours(id) {
     this.state.currentConcours = CONCOURS.find(c => c.id === id);
+    // V63.74 : marquer ce concours comme le dernier consulte, pour que le
+    //   candidat se repere dans la liste quand il revient.
+    this.state.lastConcoursId = id;
+    try { localStorage.setItem('bara_last_concours', id); } catch(e) {}
     this.navigate('concours-detail');
   },
 
