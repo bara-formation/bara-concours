@@ -757,7 +757,28 @@ img { max-width: 100%; display: block; }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.qcm-actions { display: flex; gap: 0.6rem; }
+/* V63.73 : barre d'action du QCM ancree en bas de l'ecran.
+   Avant, les boutons etaient en fin de page : sur une question longue avec
+   4 propositions, le candidat devait defiler jusqu'en bas apres chaque
+   reponse pour trouver "Suivant". Sur 50 questions, la perte de temps etait
+   considerable. La barre reste desormais visible en permanence. */
+.qcm-actions {
+  display: flex; gap: 0.6rem;
+  position: fixed;
+  left: 50%; bottom: 0;
+  transform: translateX(-50%);
+  width: 100%; max-width: 600px;
+  padding: 0.7rem 1rem;
+  padding-bottom: calc(0.7rem + env(safe-area-inset-bottom));
+  background: rgba(253,251,247,0.97);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -4px 14px rgba(0,0,0,0.06);
+  z-index: 110;
+}
+/* Reserve la place occupee par la barre fixe */
+.qcm-container { padding-bottom: calc(88px + env(safe-area-inset-bottom)) !important; }
 .btn-prev, .btn-next {
   flex: 1;
   padding: 0.95rem;
@@ -2574,10 +2595,25 @@ img { max-width: 100%; display: block; }
 }
 
 /* Navigation */
+/* V63.73 : meme traitement pour l'Accompagnement Final.
+   Cet ecran conserve la barre de navigation du bas : on place donc la barre
+   d'action juste au-dessus d'elle. */
 .session-nav {
   display: flex;
   gap: 0.7rem;
+  position: fixed;
+  left: 50%; bottom: calc(62px + env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  width: 100%; max-width: 600px;
+  padding: 0.7rem 1rem;
+  background: rgba(253,251,247,0.97);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -4px 14px rgba(0,0,0,0.06);
+  z-index: 99;
 }
+.session-questions-page { padding-bottom: calc(150px + env(safe-area-inset-bottom)); }
 .session-nav-btn {
   flex: 1;
   padding: 0.9rem 1.2rem;
@@ -5396,7 +5432,7 @@ const App = {
     }
 
     return `
-      <div class="page">
+      <div class="page session-questions-page">
         <header class="header">
           <div class="header-bar">
             <button class="header-back" onclick="App.exitSession()">✕</button>
