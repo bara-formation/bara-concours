@@ -416,6 +416,13 @@ img { max-width: 100%; display: block; }
   transform: scale(0.98);
   box-shadow: var(--shadow);
 }
+/* V63.75 : meme reperage pour les matieres et les sessions */
+.matiere-card.is-last-visited,
+.session-card.is-last-visited {
+  border: 2px solid var(--green-bf);
+  background: linear-gradient(180deg, rgba(15,81,50,0.05), white 60%);
+}
+
 /* V63.74 : reperage du dernier concours consulte */
 .concours-card.is-last-visited {
   border: 2px solid var(--green-bf);
@@ -3630,6 +3637,9 @@ const App = {
     // V63.74 : on repart sur la derniere categorie consultee
     currentTab: (function(){ try { return localStorage.getItem('bara_last_tab') || 'enseignement'; } catch(e) { return 'enseignement'; } })(),
     lastConcoursId: (function(){ try { return localStorage.getItem('bara_last_concours') || null; } catch(e) { return null; } })(),
+    // V63.75 : meme reperage pour les matieres et les sessions
+    lastMatiereId: (function(){ try { return localStorage.getItem('bara_last_matiere') || null; } catch(e) { return null; } })(),
+    lastSessionId: (function(){ try { return localStorage.getItem('bara_last_session') || null; } catch(e) { return null; } })(),
     currentSujet: null, // numéro du sujet en cours (1, 2, 3...)
     pendingExam: null,  // examen en pause à reprendre
     showResumeDialog: false, // popup "reprendre l'examen ?"
@@ -5004,14 +5014,14 @@ const App = {
     }
 
     return `
-      <div class="session-card ${!isPremium ? 'locked' : ''} ${isNew ? 'session-card-new' : ''}" onclick="App.openSession('${session.id}')">
+      <div class="session-card ${!isPremium ? 'locked' : ''} ${isNew ? 'session-card-new' : ''} ${this.state.lastSessionId === session.id ? 'is-last-visited' : ''}" onclick="App.openSession('${session.id}')">
         ${isNew ? '<div class="session-new-badge">🆕 Nouveau</div>' : ''}
         <div class="session-card-date-badge">
           <div class="session-card-day">${this.formatSessionDay(session.date)}</div>
           <div class="session-card-month">${this.formatSessionMonth(session.date)}</div>
         </div>
         <div class="session-card-body">
-          <div class="session-card-title">${session.titre || 'Session'}</div>
+          <div class="session-card-title">${session.titre || 'Session'}${this.state.lastSessionId === session.id ? '<span class="concours-badge-reprendre">Reprendre</span>' : ''}</div>
           <div class="session-card-desc">${session.description || ''}</div>
           <div class="session-card-meta">
             <span>🎯 ${nbQ} questions</span>
@@ -5065,6 +5075,9 @@ const App = {
       return;
     }
     this.state.currentSessionId = sessionId;
+    // V63.75 : marquer cette session comme la derniere ouverte
+    this.state.lastSessionId = sessionId;
+    try { localStorage.setItem('bara_last_session', sessionId); } catch(e) {}
     // V47 : on ne reset plus l'état session ici — c'est géré par les actions de sujets
     this.navigate('annales-session');
   },
@@ -8201,10 +8214,10 @@ const App = {
     }
 
     return `
-      <div class="matiere-card" onclick="App.openMatiere('${matId}')" style="--mat-color:${m.couleur}; --mat-color-light:${m.couleur}20">
+      <div class="matiere-card ${this.state.lastMatiereId === matId ? 'is-last-visited' : ''}" onclick="App.openMatiere('${matId}')" style="--mat-color:${m.couleur}; --mat-color-light:${m.couleur}20">
         <div class="matiere-icon">${m.icone}</div>
         <div class="matiere-body">
-          <div class="matiere-name">${m.nom}</div>
+          <div class="matiere-name">${m.nom}${this.state.lastMatiereId === matId ? '<span class="concours-badge-reprendre">Reprendre</span>' : ''}</div>
           <div class="matiere-stats">${nbQ} nouvelles questions disponibles${stats.attempts > 0 ? ` • ${stats.attempts} session${stats.attempts > 1 ? 's' : ''}` : ''}</div>
           ${stats.attempts > 0 ? `
             <div class="matiere-progress">
@@ -8224,6 +8237,9 @@ const App = {
 
   openMatiere(matId) {
     this.state.currentMatiere = matId;
+    // V63.75 : marquer cette matiere comme la derniere travaillee
+    this.state.lastMatiereId = matId;
+    try { localStorage.setItem('bara_last_matiere', matId); } catch(e) {}
     this.navigate('mode-select');
   },
 
