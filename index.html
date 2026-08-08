@@ -8129,7 +8129,12 @@ const App = {
     // (sinon les apostrophes dans les questions cassent l'onclick HTML)
     if (!this._sujetRefaireCache) this._sujetRefaireCache = [];
     const cacheIdx = this._sujetRefaireCache.length;
-    this._sujetRefaireCache.push({ numero: sujet.numero, questions: sujet.questions, mode });
+    // V63.71 : on met aussi les reponses et le score dans le cache, pour pouvoir
+    //   rouvrir le corrige du sujet sans le refaire.
+    this._sujetRefaireCache.push({
+      numero: sujet.numero, questions: sujet.questions, mode,
+      answers: sujet.answers, score: sujet.score, total: sujet.total
+    });
 
     return `
       <div class="sujet-history-card">
@@ -8142,9 +8147,44 @@ const App = {
           <div class="sujet-history-score-pct">${pct}%</div>
           <div class="sujet-history-score-frac">${sujet.score}/${sujet.total}</div>
         </div>
+        <button class="sujet-history-refaire" onclick="App.voirCorrectionSujetMatiere(${cacheIdx})" title="Voir le corrigé de ce sujet" style="background:#fef3c7; color:#92400e; border-color:#fcd34d">📖</button>
         <button class="sujet-history-refaire" onclick="App.refaireSujet(${cacheIdx})" title="Refaire ce sujet">🔁</button>
       </div>
     `;
+  },
+
+  /**
+   * V63.71 : Rouvrir le corrige d'un sujet de matiere deja fait.
+   *
+   *   Sans ca, une fois un sujet termine et l'ecran de resultats quitte,
+   *   le candidat n'avait plus aucun moyen de revoir les questions ni les
+   *   explications : le seul bouton disponible etait "refaire".
+   *
+   *   L'historique conserve deja les questions ET les reponses donnees
+   *   (SujetsManager.saveSujet), donc le corrige est reconstruit a
+   *   l'identique, avec le marquage juste/faux.
+   */
+  voirCorrectionSujetMatiere(cacheIdx) {
+    const data = this._sujetRefaireCache && this._sujetRefaireCache[cacheIdx];
+    if (!data || !Array.isArray(data.questions) || data.questions.length === 0) {
+      this.toast('Impossible de retrouver ce sujet', 'danger');
+      return;
+    }
+    if (!data.answers) {
+      // Sujet enregistre par une version tres ancienne : pas de reponses stockees.
+      this.toast('Corrigé affiché sans tes réponses (sujet trop ancien)');
+    }
+    this.state.qcm = {
+      questions: data.questions,
+      answers: data.answers || {},
+      score: typeof data.score === 'number' ? data.score : 0,
+      numero: data.numero,
+      matiereId: this.state.currentMatiere,
+      index: data.questions.length,
+      finished: true,
+      fromHistorique: true
+    };
+    this.navigate('correction');
   },
 
   // V49 FIX : Refaire un sujet — lit depuis le cache pour éviter les bugs d'échappement HTML
@@ -8718,7 +8758,7 @@ const App = {
       <div class="page">
         <header class="header">
           <div class="header-bar">
-            <button class="header-back" onclick="App.navigate('results')">←</button>
+            <button class="header-back" onclick="App.navigate(App.state.qcm && App.state.qcm.fromHistorique ? 'mode-select' : 'results')">←</button>
             <div class="header-title-row">Corrigé détaillé</div>
             <div class="header-spacer"></div>
           </div>
