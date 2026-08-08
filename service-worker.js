@@ -1,7 +1,7 @@
 // Bara Concours - Service Worker
 // Version 6.3.69 - V63.69 : Confirmation avant de quitter un QCM ou une session en cours
 
-const CACHE_NAME = 'bara-concours-v6-3-70';
+const CACHE_NAME = 'bara-concours-v6-3-71';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)

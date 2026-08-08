@@ -5034,9 +5034,62 @@ const App = {
           <div style="font-weight:800; font-size:0.95rem; line-height:1">${pct}%</div>
           <div style="font-size:0.7rem; opacity:0.85; margin-top:0.1rem">${sujet.score}/${sujet.total}</div>
         </div>
+        <button onclick="event.stopPropagation(); App.voirCorrectionSujet('${sessionId}', ${sujet.numero})" style="background:#fef3c7; color:#92400e; border:1.5px solid #fcd34d; width:36px; height:36px; border-radius:8px; font-size:1rem; cursor:pointer; display:flex; align-items:center; justify-content:center" title="Voir le corrigé de ce sujet">📖</button>
         <button onclick="event.stopPropagation(); App.refaireSujetSession('${sessionId}', ${sujet.numero})" style="background:#dbeafe; color:#1e40af; border:1.5px solid #93c5fd; width:36px; height:36px; border-radius:8px; font-size:1rem; cursor:pointer; display:flex; align-items:center; justify-content:center" title="Refaire ce sujet">🔄</button>
       </div>
     `;
+  },
+
+  /**
+   * V63.71 : Ouvrir le corrige d'un sujet deja fait, sans le refaire.
+   *
+   *   Probleme corrige : une fois un sujet termine, ses questions sortent du
+   *   tirage (anti-doublon) et l'ecran de resultats n'est plus atteignable.
+   *   Le candidat n'avait plus aucun moyen de revoir les questions ni les
+   *   explications, sauf a refaire tout le sujet.
+   *
+   *   On reconstruit les questions a partir des indices memorises dans
+   *   l'historique, et les reponses depuis `reponses` (present a partir de
+   *   la V63.71). Pour les sujets faits AVANT cette version, `reponses` est
+   *   absent : le corrige s'affiche alors sans marquer juste/faux, mais les
+   *   bonnes reponses et les explications restent lisibles.
+   */
+  voirCorrectionSujet(sessionId, numero) {
+    const session = window.SessionsHelper.getSession(sessionId);
+    if (!session) { this.toast('Session introuvable'); return; }
+
+    const sujet = this.SessionSujetsManager.getSujet(sessionId, numero);
+    if (!sujet) { this.toast('Sujet introuvable'); return; }
+
+    const toutes = session.questions || [];
+    const indices = Array.isArray(sujet.indicesQuestions) ? sujet.indicesQuestions : [];
+    const questions = indices.map(i => toutes[i]).filter(Boolean);
+
+    if (questions.length === 0) {
+      this.toast('Les questions de ce sujet ne sont plus disponibles');
+      return;
+    }
+
+    this.state.currentSessionId = sessionId;
+    this.state.currentSessionQuestionsActive = questions;
+    this.state.currentSessionAnswers = sujet.reponses || {};
+    this.state.currentSessionSujetNumero = numero;
+    this.state.currentSessionFinished = true;
+    this.state.correctionFilterMode = 'all';
+    this.state.correctionDepuisHistorique = true;
+
+    // Memoriser cette consultation pour le raccourci "Revoir la correction"
+    try {
+      const vues = JSON.parse(localStorage.getItem('bara_corrections_vues') || '{}');
+      vues[sessionId] = {
+        consulteeLe: Date.now(),
+        questions: questions,
+        reponses: sujet.reponses || {}
+      };
+      localStorage.setItem('bara_corrections_vues', JSON.stringify(vues));
+    } catch(e) { /* non bloquant */ }
+
+    this.navigate('session-correction');
   },
 
   formatDureeSujet(seconds) {
@@ -5848,7 +5901,10 @@ const App = {
         completedAt: Date.now(),
         elapsedSeconds: elapsedSeconds,
         indicesQuestions: this.state.currentSessionIndices || [],
-        wrongCount: wrongQuestions.length
+        wrongCount: wrongQuestions.length,
+        // V63.71 : on memorise les reponses donnees, pour pouvoir rouvrir
+        //   le corrige de ce sujet plus tard sans avoir a le refaire.
+        reponses: this.state.currentSessionAnswers || {}
       });
       this.SessionSujetsManager.clearPendingSujet();
     }
@@ -6200,6 +6256,14 @@ const App = {
   },
 
   backToResults() {
+    // V63.71 : si la correction a ete ouverte depuis l'historique des sujets,
+    //   il n'y a pas de session en cours a reafficher -> on revient au detail
+    //   de la session plutot que sur un ecran de resultats vide.
+    if (this.state.correctionDepuisHistorique) {
+      this.state.correctionDepuisHistorique = false;
+      this.navigate('annales-session');
+      return;
+    }
     this.state.currentScreen = 'session-questions';
     // Le rendu va automatiquement détecter que idx >= total et afficher les résultats
     this.render();
