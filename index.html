@@ -9411,8 +9411,9 @@ const App = {
   },
 
   renderPremiumPlans() {
-    // V60 : Par défaut, on propose session2026 (plan le plus demandé)
-    const selectedPlan = this.state.premiumSelection?.plan || 'session2026';
+    // V63.76 : la session 2026 est terminée — le plan proposé par défaut est
+    //   désormais l'annuel, qui couvre la préparation jusqu'aux concours 2027.
+    const selectedPlan = this.state.premiumSelection?.plan || 'yearly';
     // V63.53 : Filtrer les plans cachés (hidden) ET les plans réservés admin (adminOnly)
     //   → Le plan Hebdomadaire (weekly) est marqué adminOnly : seul l'admin le voit,
     //     pour éviter les abus (étudiants s'abonnant à 1000 F au lieu de 2500 F session).
