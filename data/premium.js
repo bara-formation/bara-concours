@@ -44,8 +44,13 @@ const PremiumService = {
       tag: 'Le plus demandé 🔥',
       tagColor: '#7c2d12',
       tagBg: '#fed7aa',
-      popular: true,  // V60 : devient le plan vedette
-      special: true   // V60 : marqueur pour traitement spécial UI
+      popular: false, // V63.76 : n'est plus le plan vedette
+      special: true,  // V60 : marqueur pour traitement spécial UI
+      // V63.76 : masqué de l'affichage. Sa date butoir (15 août 2026) est
+      //   passée ou imminente : le vendre reviendrait à vendre un accès qui
+      //   expire dans quelques jours. Conservé dans PLANS pour que les
+      //   abonnés actuels et les anciens codes restent valides.
+      hidden: true
     },
     // V60 : yearly conservé pour compatibilité descendante (anciens codes BARA-ANNEE-XXXX)
     //       mais retiré de l'affichage Premium (page premium n'affiche que monthly + session2026 + weekly)
@@ -60,9 +65,13 @@ const PremiumService = {
       tag: 'Économie de 14 000 F',
       tagColor: '#15803d',
       tagBg: '#dcfce7',
-      popular: false,
+      // V63.76 : redevient le plan vedette pour la saison 2027.
+      //   La session 2026 étant terminée, l'horizon utile d'un candidat est
+      //   désormais l'année entière : mars 2027 pour les concours
+      //   professionnels, mi-2027 pour les concours directs.
+      popular: true,
       savings: 14000,
-      hidden: true  // V60 : caché de l'affichage
+      hidden: false
     }
   },
 
