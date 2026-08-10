@@ -5,124 +5,153 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Politique de Confidentialité — Bara Concours</title>
 <style>
-  body {
-    font-family: -apple-system, system-ui, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    line-height: 1.6;
-    color: #1a1a1a;
-  }
-  h1 { color: #0F5132; border-bottom: 3px solid #FCD116; padding-bottom: 0.5rem; }
-  h2 { color: #0F5132; margin-top: 2rem; }
-  .date { color: #6b7280; font-style: italic; }
-  ul { padding-left: 1.5rem; }
-  .contact {
-    background: #f0fdf4;
-    border-left: 4px solid #16a34a;
-    padding: 1rem 1.5rem;
-    margin: 1.5rem 0;
-    border-radius: 8px;
-  }
+body {
+font-family: -apple-system, system-ui, sans-serif;
+max-width: 800px;
+margin: 0 auto;
+padding: 2rem 1rem;
+line-height: 1.6;
+color: #1a1a1a;
+}
+h1 { color: #0F5132; border-bottom: 3px solid #FCD116; padding-bottom: 0.5rem; }
+h2 { color: #0F5132; margin-top: 2rem; }
+.date { color: #6b7280; font-style: italic; }
+ul { padding-left: 1.5rem; }
+.contact {
+background: #f0fdf4;
+border-left: 4px solid #16a34a;
+padding: 1rem 1.5rem;
+margin: 1.5rem 0;
+border-radius: 8px;
+}
+.alert {
+background: #fffbeb;
+border-left: 4px solid #FCD116;
+padding: 1rem 1.5rem;
+margin: 1.5rem 0;
+border-radius: 8px;
+}
 </style>
 </head>
 <body>
 
 <h1>Politique de Confidentialité</h1>
-<p class="date">Dernière mise à jour : 18 mai 2026</p>
+<p class="date">Dernière mise à jour : 6 août 2026</p>
 
-<p>Bara Formation respecte votre vie privée. Cette politique explique quelles informations nous collectons via l'application <strong>Bara Concours</strong>, comment nous les utilisons, et vos droits.</p>
+<p>Bara Formation respecte votre vie privée. Cette politique explique quelles informations sont collectées via l'application <strong>Bara Concours</strong>, comment elles sont utilisées, et quels sont vos droits.</p>
+
+<p><strong>Responsable du traitement :</strong> Bara Formation, Ouagadougou, Burkina Faso — bara.formation@gmail.com</p>
 
 <h2>1. Informations collectées</h2>
 
-<p>L'application Bara Concours collecte les informations suivantes :</p>
-
+<h3>1.1 Lors de la création d'un compte</h3>
+<p>L'inscription se fait via <strong>Google ou par adresse e-mail</strong>. Les informations suivantes sont alors collectées :</p>
 <ul>
-  <li><strong>Numéro de téléphone</strong> : utilisé pour créer votre compte et envoyer les codes de vérification SMS.</li>
-  <li><strong>Nom (optionnel)</strong> : que vous fournissez lors de l'inscription pour personnaliser votre expérience.</li>
-  <li><strong>Ville (optionnel)</strong> : pour localiser géographiquement les utilisateurs.</li>
-  <li><strong>Concours visé</strong> : pour personnaliser le contenu affiché.</li>
-  <li><strong>Historique de QCM</strong> : vos scores et progression, stockés <strong>uniquement sur votre appareil</strong>.</li>
-  <li><strong>Empreinte digitale (optionnel)</strong> : utilisée pour la connexion biométrique. <strong>Cette donnée ne quitte JAMAIS votre téléphone</strong>.</li>
+<li><strong>Adresse e-mail</strong> : identifiant unique de votre compte, nécessaire à l'authentification.</li>
+<li><strong>Nom ou pseudonyme (optionnel)</strong> : pour personnaliser votre expérience et vous identifier dans le classement et le forum.</li>
+<li><strong>Ville (optionnel)</strong> : pour connaître la répartition géographique des utilisateurs.</li>
+<li><strong>Concours visé (optionnel)</strong> : pour adapter le contenu affiché.</li>
+</ul>
+<p>L'authentification est assurée par <strong>Firebase Authentication</strong> (Google). Bara Concours ne stocke aucun mot de passe.</p>
+
+<h3>1.2 Utilisation sans compte</h3>
+<p>Vous pouvez utiliser l'application sans créer de compte, dans la limite du quota gratuit. Dans ce cas, un <strong>identifiant technique anonyme</strong> (de type VISITEUR-XXXX) est attribué à votre session afin de gérer ce quota et d'établir des statistiques d'usage. Cet identifiant n'est relié à aucune information personnelle.</p>
+
+<h3>1.3 Pendant l'utilisation</h3>
+<ul>
+<li><strong>Progression et résultats</strong> : scores aux QCM, matières travaillées, historique des examens hebdomadaires.</li>
+<li><strong>Messages du forum</strong> : le contenu que vous publiez sur le forum communautaire (voir section 3).</li>
+<li><strong>Statut Premium</strong> : code d'activation utilisé et date d'expiration de l'abonnement.</li>
+<li><strong>Données techniques</strong> : préférences d'affichage et de notification, enregistrées sur votre appareil.</li>
 </ul>
 
 <h2>2. Utilisation des informations</h2>
-
 <p>Vos informations sont utilisées exclusivement pour :</p>
-
 <ul>
-  <li>Vous authentifier de manière sécurisée</li>
-  <li>Sauvegarder votre progression et vos résultats</li>
-  <li>Vous envoyer des notifications de révision (uniquement si vous l'acceptez)</li>
-  <li>Améliorer l'expérience utilisateur</li>
+<li>vous authentifier de manière sécurisée ;</li>
+<li>sauvegarder votre progression et la retrouver sur un autre appareil ;</li>
+<li>afficher votre position dans le classement, si vous y participez ;</li>
+<li>faire fonctionner le forum communautaire ;</li>
+<li>vous envoyer des notifications de révision, uniquement si vous les avez acceptées ;</li>
+<li>gérer votre abonnement Premium ;</li>
+<li>améliorer l'application à partir de statistiques d'usage agrégées.</li>
 </ul>
 
-<p><strong>Nous ne vendons JAMAIS vos données.</strong> Nous ne partageons rien avec des tiers à des fins commerciales.</p>
+<div class="alert">
+<strong>Nous ne vendons jamais vos données.</strong> Aucune information n'est transmise à des tiers à des fins commerciales ou publicitaires. L'application ne contient aucune publicité.
+</div>
 
-<h2>3. Stockage des données</h2>
-
-<p>La grande majorité de vos données sont stockées <strong>localement sur votre téléphone</strong> (localStorage). Si vous activez la synchronisation cloud (optionnelle), les données suivantes sont stockées sur les serveurs Firebase de Google :</p>
-
+<h2>3. Contenus publics : forum et classement</h2>
+<p>Deux fonctionnalités rendent certaines informations visibles par les autres utilisateurs de l'application :</p>
 <ul>
-  <li>Numéro de téléphone</li>
-  <li>Profil (nom, ville, concours visé)</li>
-  <li>Historique des scores</li>
+<li><strong>Le forum communautaire</strong> : les messages que vous publiez, ainsi que le nom ou pseudonyme associé à votre compte, sont visibles par tous les autres utilisateurs. Ne publiez pas d'informations personnelles sensibles (numéro de téléphone, adresse, données financières) dans vos messages.</li>
+<li><strong>Le classement national</strong> : si vous y participez, votre nom ou pseudonyme et vos scores sont visibles par les autres utilisateurs.</li>
+</ul>
+<p>Vous pouvez choisir un pseudonyme plutôt que votre nom réel afin de préserver votre anonymat. Vous pouvez demander la suppression de vos messages du forum en nous contactant.</p>
+
+<h2>4. Stockage et conservation des données</h2>
+<p>Une partie de vos données est conservée <strong>localement sur votre appareil</strong> (préférences, contenu mis en cache pour le mode hors ligne, progression récente).</p>
+<p>Les données liées à votre compte — adresse e-mail, profil, progression, messages du forum, statut Premium — sont stockées sur les serveurs <strong>Firebase (Google Cloud)</strong>, qui appliquent des standards internationaux de sécurité. Ces serveurs peuvent être situés hors du Burkina Faso.</p>
+<p>Vos données sont conservées tant que votre compte est actif. En cas de suppression du compte, elles sont effacées selon la procédure décrite à la section 7.</p>
+
+<h2>5. Authentification biométrique</h2>
+<p>Si vous activez la connexion par empreinte digitale :</p>
+<ul>
+<li>votre empreinte est traitée <strong>uniquement par le système d'exploitation de votre téléphone</strong> ;</li>
+<li>l'application Bara Concours ne reçoit <strong>jamais</strong> votre empreinte digitale ;</li>
+<li>l'application reçoit uniquement une confirmation que le déverrouillage a réussi ;</li>
+<li>vous pouvez désactiver cette fonction à tout moment dans les paramètres.</li>
 </ul>
 
-<p>Ces serveurs respectent les standards internationaux de sécurité.</p>
+<h2>6. Paiement de l'abonnement Premium</h2>
+<p>L'abonnement Premium s'active au moyen d'un code fourni après paiement. Le paiement s'effectue <strong>en dehors de l'application</strong>, par mobile money ou tout autre moyen convenu avec Bara Formation. L'application ne collecte, ne traite et ne stocke <strong>aucune donnée bancaire ni aucun numéro de compte de paiement</strong>.</p>
 
-<h2>4. Authentification biométrique</h2>
-
-<p>Si vous activez la connexion par empreinte digitale, sachez que :</p>
-
+<h2 id="suppression">7. Suppression de votre compte et de vos données</h2>
+<p>Vous pouvez demander à tout moment la suppression de votre compte Bara Concours et des données associées.</p>
+<p><strong>Comment procéder :</strong></p>
 <ul>
-  <li>Votre empreinte est traitée <strong>uniquement par le système d'exploitation de votre téléphone</strong></li>
-  <li>L'application Bara Concours ne reçoit JAMAIS votre empreinte digitale</li>
-  <li>L'application reçoit uniquement une <strong>confirmation cryptographique</strong> que vous êtes l'utilisateur autorisé</li>
-  <li>Vous pouvez désactiver cette fonction à tout moment dans les paramètres</li>
+<li>envoyez une demande à <strong>bara.formation@gmail.com</strong> depuis l'adresse e-mail de votre compte, avec pour objet « Suppression de compte » ;</li>
+<li>ou écrivez au <strong>+226 04 04 34 04</strong> sur WhatsApp en précisant l'adresse e-mail de votre compte.</li>
 </ul>
+<p><strong>Ce qui est supprimé :</strong> votre compte d'authentification, votre profil (nom, ville, concours visé), votre progression et vos résultats, votre statut Premium, et vos messages du forum si vous le demandez expressément.</p>
+<p><strong>Délai :</strong> la suppression est effectuée sous <strong>30 jours</strong> à compter de la réception de la demande. Des statistiques agrégées et anonymes, qui ne permettent pas de vous identifier, peuvent être conservées.</p>
 
-<h2>5. Vos droits</h2>
-
+<h2>8. Vos droits</h2>
 <p>Vous avez le droit de :</p>
-
 <ul>
-  <li>Accéder à vos données personnelles</li>
-  <li>Demander la suppression de votre compte (en nous contactant)</li>
-  <li>Désactiver les notifications à tout moment</li>
-  <li>Désactiver la biométrie à tout moment</li>
-  <li>Refuser la synchronisation cloud</li>
+<li>accéder aux données personnelles vous concernant ;</li>
+<li>demander leur rectification si elles sont inexactes ;</li>
+<li>demander la suppression de votre compte (section 7) ;</li>
+<li>désactiver les notifications à tout moment ;</li>
+<li>désactiver l'authentification biométrique à tout moment ;</li>
+<li>utiliser l'application sans créer de compte, dans la limite du quota gratuit.</li>
 </ul>
+<p>Pour exercer ces droits, contactez-nous aux coordonnées indiquées en section 11.</p>
 
-<h2>6. Sécurité</h2>
-
-<p>Nous prenons des mesures techniques pour protéger vos données :</p>
-
+<h2>9. Sécurité</h2>
 <ul>
-  <li>Transmission chiffrée HTTPS</li>
-  <li>Pas de stockage de mots de passe (utilisation de SMS et biométrie)</li>
-  <li>Sécurité Google Firebase pour la synchronisation cloud</li>
+<li>Transmission chiffrée en HTTPS sur l'ensemble de l'application.</li>
+<li>Authentification déléguée à Firebase Authentication ; aucun mot de passe n'est stocké par Bara Concours.</li>
+<li>Règles de sécurité Firestore limitant l'accès aux données de chaque utilisateur.</li>
 </ul>
+<p>Aucun système n'étant infaillible, nous vous invitons à ne pas partager vos identifiants et à nous signaler tout comportement suspect.</p>
 
-<h2>7. Mineurs</h2>
+<h2>10. Public concerné</h2>
+<p>Bara Concours s'adresse exclusivement aux candidats aux concours de la fonction publique du Burkina Faso. <strong>Ces concours sont réservés aux personnes majeures, âgées de 18 ans et plus</strong>, quel que soit le niveau de diplôme requis (CEPE, BEPC, BAC ou Licence).</p>
+<p>L'application n'est donc ni destinée ni dirigée vers les enfants, et aucune donnée n'est sciemment collectée auprès de mineurs. Si vous constatez qu'un mineur a créé un compte, contactez-nous : le compte et les données associées seront supprimés selon la procédure de la section 7.</p>
 
-<p>L'application est destinée aux candidats des concours directs au Burkina Faso, généralement âgés de 18 ans et plus. Les mineurs souhaitant utiliser l'application doivent obtenir l'accord de leurs parents ou tuteurs.</p>
-
-<h2>8. Modifications de cette politique</h2>
-
-<p>Cette politique peut être mise à jour. La date de "Dernière mise à jour" en haut de cette page indique la version actuelle. Les changements majeurs vous seront communiqués via l'application.</p>
-
-<h2>9. Contact</h2>
-
+<h2>11. Contact</h2>
 <div class="contact">
 <strong>Bara Formation</strong><br>
 📞 Téléphone / WhatsApp : +226 04 04 34 04<br>
+📱 Moov : +226 70 78 39 04<br>
 📍 Ouagadougou, Burkina Faso<br>
 ✉️ Email : bara.formation@gmail.com<br>
 🌐 Application : Bara Concours
 </div>
 
-<p>Pour toute question concernant cette politique de confidentialité ou vos données personnelles, n'hésitez pas à nous contacter.</p>
+<h2>12. Modifications de cette politique</h2>
+<p>Cette politique peut être mise à jour. La date de « Dernière mise à jour » en haut de cette page indique la version en vigueur. Les changements importants vous seront signalés dans l'application.</p>
 
 <hr style="margin: 3rem 0 1rem; border: none; border-top: 1px solid #e5e7eb;">
 <p style="text-align: center; color: #6b7280; font-size: 0.9rem;">
