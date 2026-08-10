@@ -7507,6 +7507,45 @@ const App = {
     this._handleAuthSuccess(result);
   },
 
+  /**
+   * V63.78 : Reconstituer le Premium apres connexion, s'il manque.
+   *
+   *   Appele apres chaque connexion reussie. Ne fait rien si le compte est
+   *   deja Premium et valide. Sinon, interroge les codes d'activation
+   *   enregistres dans Firestore : si l'un d'eux a ete utilise par ce compte
+   *   et couvre encore aujourd'hui, on restaure l'abonnement et on le
+   *   reecrit dans le profil pour que le probleme ne se repose plus.
+   *
+   *   Volontairement non bloquant : la connexion n'attend pas ce controle.
+   */
+  async _recoverPremiumIfMissing() {
+    try {
+      const u = this.state.user;
+      if (window.PremiumService && window.PremiumService.isPremiumActive(u)) return;
+      if (!window.ActivationCodes || !window.ActivationCodes.recoverPremiumFromCodes) return;
+
+      const uid = u && u.uid;
+      if (!uid) return;
+
+      const restaure = await window.ActivationCodes.recoverPremiumFromCodes(uid);
+      if (!restaure) return;
+
+      this.state.user = { ...this.state.user, ...restaure };
+      this.save();
+
+      // Reecrire dans le profil pour que la prochaine connexion le trouve
+      if (window.FirebaseAuth && window.FirebaseAuth.user) {
+        try { await window.FirebaseAuth.updateProfile(restaure); } catch(e) {}
+      }
+
+      const nom = (window.PremiumService.PLANS[restaure.premiumPlan] || {}).name || 'Premium';
+      this.toast('⭐ Ton abonnement ' + nom + ' a été retrouvé et restauré');
+      this.render();
+    } catch (e) {
+      console.error('[V63.78] Restauration Premium :', e);
+    }
+  },
+
   // V57 : Centralise la gestion du succès d'authentification
   // Décide où naviguer selon : nouveau compte (→ onboarding) ou existant (→ home)
   _handleAuthSuccess(authResult) {
@@ -7548,6 +7587,12 @@ const App = {
     UF.setEducationLevel(this.state.user, UF.getEducationLevel(profile, '') || UF.getEducationLevel(this.state.user, ''));
 
     this.save();
+
+    // V63.78 : filet de securite — si le profil Firestore ne porte aucun
+    //   Premium valide, on regarde si un code d'activation a deja ete utilise
+    //   par ce compte et on reconstitue l'abonnement. Evite qu'un candidat
+    //   ayant paye se retrouve en gratuit apres une deconnexion.
+    this._recoverPremiumIfMissing();
 
     // Naviguer selon le contexte
     if (isNewUser) {
@@ -9873,11 +9918,24 @@ const App = {
     this.save();
 
     // V58 : Synchroniser Premium dans Firestore (pour multi-appareils)
+    // V63.78 : l'echec n'est plus silencieux. Avant, si l'ecriture echouait,
+    //   le Premium n'existait qu'en local et disparaissait a la deconnexion —
+    //   l'utilisateur se retrouvait en gratuit sans comprendre pourquoi.
     if (window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady && window.FirebaseAuth.user) {
       try {
-        await window.FirebaseAuth.updateProfile(updates);
-        console.log('[V58] Premium synchronisé dans Firestore');
-      } catch(e) { console.error('Sync premium :', e); }
+        const sync = await window.FirebaseAuth.updateProfile(updates);
+        if (sync && sync.success === false) {
+          console.error('[V63.78] Sync Premium refusée :', sync.error);
+          this.toast('⚠️ Premium activé, mais la sauvegarde en ligne a échoué. Reconnecte-toi une fois connecté à internet.', 'danger');
+        } else {
+          console.log('[V58] Premium synchronisé dans Firestore');
+        }
+      } catch(e) {
+        console.error('Sync premium :', e);
+        this.toast('⚠️ Premium activé, mais la sauvegarde en ligne a échoué. Reconnecte-toi une fois connecté à internet.', 'danger');
+      }
+    } else {
+      this.toast('⚠️ Premium activé hors ligne. Connecte-toi à internet pour le sauvegarder.', 'danger');
     }
 
     const planName = window.PremiumService.PLANS[planId]?.name || 'Premium';
