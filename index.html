@@ -7521,7 +7521,7 @@ const App = {
   async _recoverPremiumIfMissing() {
     try {
       const u = this.state.user;
-      if (window.PremiumService && window.PremiumService.isPremiumActive(u)) return;
+      if (window.PremiumService && window.PremiumService.isUserPremium(u)) return;
       if (!window.ActivationCodes || !window.ActivationCodes.recoverPremiumFromCodes) return;
 
       const uid = u && u.uid;
@@ -7533,13 +7533,13 @@ const App = {
       this.state.user = { ...this.state.user, ...restaure };
       this.save();
 
-      // Reecrire dans le profil pour que la prochaine connexion le trouve
+      // V63.79 : on tente la reecriture, mais sans en dependre : les regles
+      //   Firestore la refusent cote client. Le local suffit, puisque la
+      //   restauration est rejouee a chaque connexion depuis les codes.
       if (window.FirebaseAuth && window.FirebaseAuth.user) {
-        try { await window.FirebaseAuth.updateProfile(restaure); } catch(e) {}
+        try { await window.FirebaseAuth.updateProfile(restaure); } catch(e) { /* refus attendu */ }
       }
 
-      const nom = (window.PremiumService.PLANS[restaure.premiumPlan] || {}).name || 'Premium';
-      this.toast('⭐ Ton abonnement ' + nom + ' a été retrouvé et restauré');
       this.render();
     } catch (e) {
       console.error('[V63.78] Restauration Premium :', e);
@@ -9925,14 +9925,18 @@ const App = {
       try {
         const sync = await window.FirebaseAuth.updateProfile(updates);
         if (sync && sync.success === false) {
-          console.error('[V63.78] Sync Premium refusée :', sync.error);
-          this.toast('⚠️ Premium activé, mais la sauvegarde en ligne a échoué. Reconnecte-toi une fois connecté à internet.', 'danger');
+          // V63.79 : les regles Firestore interdisent au client d'ecrire les
+          //   champs Premium — et c'est voulu, sinon n'importe qui pourrait
+          //   s'octroyer un abonnement depuis la console du navigateur.
+          //   Ce n'est donc pas une panne : le code d'activation, lui, est bien
+          //   enregistre, et c'est lui qui fait foi. L'abonnement sera
+          //   reconstitue a chaque connexion depuis ce code.
+          console.warn('[V63.79] Profil non modifiable par le client (normal) :', sync.error);
         } else {
           console.log('[V58] Premium synchronisé dans Firestore');
         }
       } catch(e) {
-        console.error('Sync premium :', e);
-        this.toast('⚠️ Premium activé, mais la sauvegarde en ligne a échoué. Reconnecte-toi une fois connecté à internet.', 'danger');
+        console.warn('[V63.79] Sync premium :', e);
       }
     } else {
       this.toast('⚠️ Premium activé hors ligne. Connecte-toi à internet pour le sauvegarder.', 'danger');
@@ -12734,6 +12738,10 @@ const App = {
             if (user && profile && !this.state.user.isLoggedIn) {
               // Session Firebase active mais utilisateur local pas connecté → restaurer
               console.log('[App] Restauration session Firebase pour', user.email);
+                // V63.79 : rejouer la reconstitution du Premium depuis les codes
+                //   d'activation, car les regles Firestore empechent de le
+                //   stocker dans le profil.
+                setTimeout(() => { try { App._recoverPremiumIfMissing(); } catch(e) {} }, 1200);
               // V63.68 : Restauration via UserFields (l'ancien code écrivait dans
               //   `ville` au lieu de `city` et oubliait `name` — mêmes bugs que V63.60/61)
               const UF = window.UserFields;
