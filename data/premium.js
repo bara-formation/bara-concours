@@ -571,31 +571,50 @@ const ActivationCodes = {
       const snap = await fb._fbFns.getDocs(q);
       if (snap.empty) return null;
 
-      // Rejouer les codes du plus ancien au plus recent, pour que le cumul
-      // des durees donne la meme date d'expiration qu'a l'origine.
       const codes = [];
       snap.forEach(d => codes.push(d.data()));
       codes.sort((a, b) => (a.usedAt || 0) - (b.usedAt || 0));
 
-      let etat = { premiumExpiresAt: null };
+      // V63.79 : on rejoue chaque code A PARTIR DE SA DATE REELLE d'utilisation.
+      //   La version precedente repartait de "maintenant", ce qui aurait
+      //   redonne un abonnement complet a quelqu'un dont le code datait de
+      //   plusieurs mois — donc du Premium offert par erreur.
+      let expiration = 0;      // en millisecondes
       let dernierPlan = null;
+      let premiereActivation = null;
+
       for (const c of codes) {
-        const maj = window.PremiumService.activatePremium(etat, c.planId);
-        if (maj) { etat = maj; dernierPlan = c.planId; }
+        const plan = window.PremiumService.PLANS[c.planId];
+        if (!plan) continue;
+        const utiliseLe = c.usedAt || 0;
+        if (!utiliseLe) continue;
+        if (premiereActivation === null) premiereActivation = utiliseLe;
+
+        if (plan.expiresAt) {
+          // Plan a date butoir fixe (ex. session2026)
+          expiration = Math.max(expiration, plan.expiresAt);
+        } else if (plan.duration) {
+          // Plan a duree : cumule si l'abonnement courait encore, sinon repart
+          // de la date d'utilisation du code.
+          const depart = expiration > utiliseLe ? expiration : utiliseLe;
+          expiration = depart + plan.duration * 24 * 60 * 60 * 1000;
+        } else {
+          continue;
+        }
+        dernierPlan = c.planId;
       }
 
-      if (!etat.premiumExpiresAt) return null;
-      // Perime : rien a restaurer
-      if (new Date(etat.premiumExpiresAt).getTime() <= Date.now()) return null;
+      if (!expiration) return null;
+      if (expiration <= Date.now()) return null;   // deja perime : rien a restaurer
 
       return {
         isPremium: true,
         premiumPlan: dernierPlan,
-        premiumExpiresAt: etat.premiumExpiresAt,
-        premiumActivatedAt: etat.premiumActivatedAt || new Date().toISOString()
+        premiumExpiresAt: new Date(expiration).toISOString(),
+        premiumActivatedAt: new Date(premiereActivation || Date.now()).toISOString()
       };
     } catch (e) {
-      console.error('[V63.78] Recuperation Premium impossible :', e);
+      console.error('[V63.79] Recuperation Premium impossible :', e);
       return null;
     }
   },
