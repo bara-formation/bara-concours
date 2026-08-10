@@ -542,6 +542,64 @@ const ActivationCodes = {
   // ====================================================================
 
   // Marquer un code comme utilisé (transaction Firestore atomique)
+  /**
+   * V63.78 : Retrouver le Premium d'un utilisateur a partir des codes qu'il a
+   *   deja utilises.
+   *
+   *   Probleme corrige : si l'ecriture du statut Premium dans le document
+   *   utilisateur echoue (regles Firestore, coupure reseau, session pas encore
+   *   prete au moment de l'activation), le Premium n'existe plus qu'en local.
+   *   A la deconnexion, le local est remis a zero — et l'utilisateur se
+   *   retrouve en gratuit alors qu'il a bel et bien paye.
+   *
+   *   Le code d'activation, lui, reste marque "utilise par <uid>" dans
+   *   Firestore. C'est donc la source de verite la plus fiable : on s'en sert
+   *   pour reconstituer l'abonnement a la connexion.
+   *
+   *   Retourne les champs Premium a appliquer, ou null si rien a restaurer.
+   */
+  async recoverPremiumFromCodes(uid) {
+    if (!uid) return null;
+    const fb = window.FirebaseAuth;
+    if (!fb || !fb.isFirebaseReady || !fb.db) return null;
+
+    try {
+      const q = fb._fbFns.query(
+        fb._fbFns.collection(fb.db, this.FIRESTORE_COLLECTION),
+        fb._fbFns.where('usedBy.userId', '==', uid)
+      );
+      const snap = await fb._fbFns.getDocs(q);
+      if (snap.empty) return null;
+
+      // Rejouer les codes du plus ancien au plus recent, pour que le cumul
+      // des durees donne la meme date d'expiration qu'a l'origine.
+      const codes = [];
+      snap.forEach(d => codes.push(d.data()));
+      codes.sort((a, b) => (a.usedAt || 0) - (b.usedAt || 0));
+
+      let etat = { premiumExpiresAt: null };
+      let dernierPlan = null;
+      for (const c of codes) {
+        const maj = window.PremiumService.activatePremium(etat, c.planId);
+        if (maj) { etat = maj; dernierPlan = c.planId; }
+      }
+
+      if (!etat.premiumExpiresAt) return null;
+      // Perime : rien a restaurer
+      if (new Date(etat.premiumExpiresAt).getTime() <= Date.now()) return null;
+
+      return {
+        isPremium: true,
+        premiumPlan: dernierPlan,
+        premiumExpiresAt: etat.premiumExpiresAt,
+        premiumActivatedAt: etat.premiumActivatedAt || new Date().toISOString()
+      };
+    } catch (e) {
+      console.error('[V63.78] Recuperation Premium impossible :', e);
+      return null;
+    }
+  },
+
   async useCode(rawCode, userInfo) {
     const validation = await this.validateCode(rawCode);
     if (!validation.valid) return validation;
