@@ -11893,14 +11893,37 @@ const App = {
     }
   },
 
-  reportTopic(topicId) {
+  /**
+   * V63.80 : Signaler un sujet du forum.
+   *   Avant, le signalement n'etait ecrit que dans le localStorage du
+   *   telephone : il ne parvenait jamais a l'administrateur, et le contenu
+   *   signale restait visible de tous. Il remonte desormais dans Firestore.
+   */
+  async reportTopic(topicId) {
     if (!confirm('Voulez-vous signaler ce sujet pour modération ?')) return;
+
+    const motif = prompt('Motif du signalement (facultatif) :\nExemples : contenu injurieux, hors sujet, publicité, fausse information') || '';
+
+    // Trace locale : evite qu'un meme candidat signale deux fois
     const reports = JSON.parse(localStorage.getItem('bara_reports') || '[]');
     if (!reports.includes(topicId)) {
       reports.push(topicId);
       localStorage.setItem('bara_reports', JSON.stringify(reports));
     }
-    this.toast('✓ Signalement envoyé. Merci !');
+
+    const topic = (this.state.forumTopics || []).find(t => t.id === topicId);
+    const titre = topic ? topic.title : '';
+
+    if (window.ForumFirestore && window.ForumFirestore.reportTopic) {
+      const r = await window.ForumFirestore.reportTopic(topicId, titre, motif);
+      if (r && r.success) {
+        this.toast('✓ Signalement transmis. Merci !');
+        return;
+      }
+      this.toast('⚠️ Signalement enregistré mais non transmis (hors ligne). Réessaie plus tard.', 'danger');
+      return;
+    }
+    this.toast('✓ Signalement enregistré. Merci !');
   },
 
   async sendReply() {

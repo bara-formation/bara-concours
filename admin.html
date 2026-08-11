@@ -1797,6 +1797,29 @@ const Admin = {
   // PAGE: FORUM
   // ============================================
 
+  // V63.80 : chargement et traitement des signalements du forum
+  async _loadForumReports(force) {
+    if (this.state._reportsLoading) return;
+    if (this.state._reportsLoaded && !force) return;
+    this.state._reportsLoading = true;
+    this.state._reportsLoaded = true;
+    try {
+      this.state._forumReports = await window.ForumFirestore.getAllReports();
+    } catch (e) {
+      console.error('[V63.80] Chargement des signalements :', e);
+      this.state._forumReports = [];
+    }
+    this.state._reportsLoading = false;
+    this.render();
+  },
+
+  async resolveReport(reportId) {
+    if (!window.ForumFirestore) return;
+    await window.ForumFirestore.resolveReport(reportId);
+    this.state._reportsLoaded = false;
+    await this._loadForumReports(true);
+  },
+
   // V63.21 : Modération forum branchée sur Firestore
   renderForumModeration() {
     // Charger les topics depuis Firestore (asynchrone, déclenche un re-render quand prêt)
@@ -1804,7 +1827,13 @@ const Admin = {
       this._loadForumAdminTopics();
     }
     const topics = this.state._forumAdminTopics || [];
-    const reportedCount = JSON.parse(localStorage.getItem('bara_reports') || '[]').length;
+    // V63.80 : les signalements viennent desormais de Firestore, plus du
+    //   localStorage de l'administrateur (qui ne contenait que ses propres
+    //   signalements et ne servait donc a rien).
+    if (window.ForumFirestore && !this.state._reportsLoaded) this._loadForumReports();
+    const reports = this.state._forumReports || [];
+    const reportsNouveaux = reports.filter(r => r.status !== 'traite');
+    const reportedCount = reportsNouveaux.length;
     const isLoading = this.state._forumAdminLoading && topics.length === 0;
 
     return `
@@ -1817,6 +1846,29 @@ const Admin = {
           🔄 Rafraîchir
         </button>
       </div>
+
+      ${reportsNouveaux.length > 0 ? `
+        <div style="background:#fef2f2; border:2px solid #dc2626; border-radius:12px; padding:1rem; margin-bottom:1.2rem">
+          <div style="font-weight:800; color:#991b1b; margin-bottom:0.7rem">
+            🚩 ${reportsNouveaux.length} signalement${reportsNouveaux.length > 1 ? 's' : ''} à traiter
+          </div>
+          ${reportsNouveaux.map(r => `
+            <div style="background:white; border:1px solid #fecaca; border-radius:8px; padding:0.7rem; margin-bottom:0.5rem">
+              <div style="font-weight:700; font-size:0.9rem">${(r.topicTitle || '(sujet sans titre)')}</div>
+              <div style="font-size:0.8rem; color:#6b7280; margin:0.25rem 0">
+                Motif : ${r.reason ? r.reason : '(non précisé)'}
+              </div>
+              <div style="font-size:0.75rem; color:#9ca3af">
+                Signalé par ${(r.reportedBy && r.reportedBy.name) || 'Anonyme'}
+                le ${new Date(r.reportedAt || 0).toLocaleString('fr-FR')}
+              </div>
+              <button onclick="Admin.resolveReport('${r.id}')" class="btn-small" style="margin-top:0.5rem">
+                ✓ Marquer traité
+              </button>
+            </div>
+          `).join('')}
+        </div>
+      ` : ''}
 
       <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
         <div class="stat-card" style="--accent-color:#fef3c7; --accent-text:#854d0e">
