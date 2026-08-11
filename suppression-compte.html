@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supprimer mon compte — Bara Concours</title>
+<meta name="description" content="Procédure de demande de suppression du compte Bara Concours et des données associées.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf9f6;
+    --surface: #ffffff;
+    --ink: #16211b;
+    --body: #3f4a44;
+    --muted: #6b7772;
+    --line: #e4e6e1;
+    --accent: #1f5c3d;
+    --accent-soft: #eef4f0;
+    --warn-bg: #fdf6ec;
+    --warn-line: #e8d5b5;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background: var(--bg);
+    color: var(--body);
+    font-family: 'Outfit', 'Segoe UI', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 1.25rem 5rem; }
+
+  header.top {
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
+    padding: 1.1rem 0;
+  }
+  header.top .wrap { padding-bottom: 0; display: flex; align-items: baseline; gap: .7rem; flex-wrap: wrap; }
+  .brand { font-weight: 700; color: var(--ink); font-size: 1.05rem; letter-spacing: -0.01em; }
+  .brand span { color: var(--accent); }
+  .by { color: var(--muted); font-size: .88rem; }
+
+  h1 {
+    font-size: clamp(1.9rem, 5.5vw, 2.9rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    font-weight: 700;
+    margin: 3rem 0 .6rem;
+  }
+  .lede { font-size: 1.08rem; color: var(--body); max-width: 62ch; margin: 0 0 .4rem; }
+  .maj { color: var(--muted); font-size: .9rem; margin-top: 1.4rem; }
+
+  h2 {
+    font-size: 1.3rem;
+    color: var(--ink);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    margin: 3rem 0 .9rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--line);
+  }
+  h3 { font-size: 1.02rem; color: var(--ink); font-weight: 600; margin: 1.8rem 0 .5rem; }
+  p { max-width: 65ch; }
+
+  ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 1.2rem 0 0; }
+  ol.steps li {
+    counter-increment: s;
+    position: relative;
+    padding: 0 0 1.5rem 3.1rem;
+    max-width: 65ch;
+  }
+  ol.steps li::before {
+    content: counter(s);
+    position: absolute;
+    left: 0; top: -1px;
+    width: 2.1rem; height: 2.1rem;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 600;
+    font-size: .95rem;
+    display: grid;
+    place-items: center;
+  }
+  ol.steps strong { color: var(--ink); font-weight: 600; }
+
+  .mail {
+    display: inline-block;
+    margin: .35rem 0;
+    padding: .55rem .95rem;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: .98rem;
+    transition: background .18s ease, transform .12s ease;
+  }
+  .mail:hover { background: #17492f; }
+  .mail:active { transform: translateY(1px) scale(.985); }
+
+  .alt { display: inline-block; margin-top: .55rem; font-size: .95rem; color: var(--muted); }
+  .alt strong { color: var(--ink); font-weight: 600; }
+
+  .modele {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 1.1rem 1.25rem;
+    margin: 1rem 0 0;
+    font-size: .96rem;
+    color: var(--body);
+    max-width: 65ch;
+  }
+  .modele p { margin: .35rem 0; }
+  .modele .obj { color: var(--muted); font-size: .86rem; text-transform: uppercase; letter-spacing: .06em; margin-bottom: .5rem; }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.2rem; }
+  @media (max-width: 640px) { .grid2 { grid-template-columns: 1fr; } }
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.15rem 1.25rem;
+  }
+  .panel h4 { margin: 0 0 .7rem; font-size: .82rem; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); font-weight: 600; }
+  .panel ul { margin: 0; padding-left: 1.1rem; }
+  .panel li { margin-bottom: .45rem; font-size: .96rem; }
+  .panel li:last-child { margin-bottom: 0; }
+
+  .note {
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-line);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    margin-top: 1.4rem;
+    font-size: .96rem;
+    max-width: 65ch;
+  }
+  .note strong { color: var(--ink); }
+
+  footer {
+    border-top: 1px solid var(--line);
+    margin-top: 4rem;
+    padding-top: 1.6rem;
+    font-size: .92rem;
+    color: var(--muted);
+  }
+  footer a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .18s ease; }
+  footer a:hover { border-bottom-color: var(--accent); }
+  footer nav { margin-bottom: .7rem; display: flex; gap: 1.4rem; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">Bara <span>Concours</span></div>
+    <div class="by">édité par Bara Formation, Ouagadougou, Burkina Faso</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <h1>Supprimer mon compte et mes données</h1>
+  <p class="lede">Cette page explique comment demander la suppression de votre compte Bara Concours ainsi que des données qui y sont rattachées. La demande est gratuite et n'a pas à être motivée.</p>
+  <p class="maj">Application concernée : Bara Concours — Développeur : Bara Formation</p>
+
+  <h2>Comment faire la demande</h2>
+
+  <ol class="steps">
+    <li>
+      <strong>Envoyez un e-mail à l'adresse ci-dessous</strong>, depuis l'adresse e-mail avec laquelle vous vous êtes inscrit sur Bara Concours. Cette vérification simple nous permet de nous assurer que la demande vient bien du titulaire du compte.
+      <br>
+      <a class="mail" href="mailto:bara.formation@gmail.com?subject=Suppression%20de%20mon%20compte%20Bara%20Concours">bara.formation@gmail.com</a>
+      <br>
+      <span class="alt">Vous pouvez aussi nous écrire sur WhatsApp au <strong>+226 04 04 34 04</strong>, en précisant l'adresse e-mail de votre compte.</span>
+    </li>
+    <li>
+      <strong>Indiquez comme objet</strong> : « Suppression de compte ». Si vous souhaitez également que vos sujets et réponses publiés sur le forum soient effacés, <strong>demandez-le expressément dans votre message</strong> : sans cette précision, ils restent en ligne.
+    </li>
+    <li>
+      <strong>Nous accusons réception sous 72 heures</strong> et procédons à la suppression dans un délai maximum de 30 jours à compter de la demande. Vous recevez une confirmation par e-mail une fois l'opération effectuée.
+    </li>
+  </ol>
+
+  <h3>Modèle de message</h3>
+  <div class="modele">
+    <p class="obj">Objet : Suppression de mon compte Bara Concours</p>
+    <p>Bonjour,</p>
+    <p>Je demande la suppression de mon compte Bara Concours et des données associées.</p>
+    <p>Adresse e-mail du compte : (votre adresse)</p>
+    <p>Cordialement,</p>
+  </div>
+
+  <h2>Ce qui est supprimé, ce qui est conservé</h2>
+
+  <div class="grid2">
+    <div class="panel">
+      <h4>Supprimé définitivement</h4>
+      <ul>
+        <li>Votre compte d'authentification (adresse e-mail ou identifiant Google)</li>
+        <li>Votre profil : nom, ville, concours visé</li>
+        <li>Votre progression : QCM effectués, scores, résultats, historique de révision</li>
+        <li>Votre statut Premium, sans remboursement de la période restante</li>
+        <li>Vos sujets et réponses du forum, si vous en faites la demande expresse</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4>Conservé après suppression</h4>
+      <ul>
+        <li>Des statistiques agrégées et anonymes sur l'usage de l'application, qui ne permettent pas de vous identifier</li>
+        <li>Vos sujets et réponses du forum, si vous n'avez pas demandé leur effacement — ils restent alors publiés sans lien avec votre compte supprimé</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Deux points à connaître avant d'envoyer votre demande.</strong> La suppression est définitive : ni votre progression, ni votre abonnement Premium ne pourront être rétablis, y compris si vous recréez un compte avec la même adresse. Et si votre abonnement Premium est encore actif, il sera perdu sans contrepartie — attendez son terme si vous souhaitez en profiter jusqu'au bout.
+  </div>
+
+  <h2>Une question avant de supprimer ?</h2>
+  <p>Si votre difficulté porte sur un bug, un code Premium qui ne fonctionne pas ou un message du forum que vous voulez retirer, écrivez-nous à la même adresse : nous pouvons souvent régler le problème sans supprimer votre compte.</p>
+
+  <footer>
+    <nav>
+      <a href="https://bara-formation.github.io/bara-concours/">Application Bara Concours</a>
+      <a href="https://bara-formation.github.io/bara-concours/privacy-policy.html">Politique de confidentialité</a>
+      <a href="mailto:bara.formation@gmail.com">Nous écrire</a>
+    </nav>
+    <div>Bara Formation — Ouagadougou, Burkina Faso — Dernière mise à jour : 11 août 2026</div>
+  </footer>
+
+</div>
+
+</body>
+</html>
