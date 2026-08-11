@@ -6,6 +6,10 @@ const ForumFirestore = {
   // === CONFIGURATION ===
   COLLECTION_TOPICS: 'forum_topics',
   COLLECTION_REPLIES: 'forum_replies',
+  // V63.80 : les signalements remontent enfin jusqu'a l'administrateur.
+  //   Avant, App.reportTopic ne les ecrivait que dans le localStorage du
+  //   telephone qui signalait : personne ne les voyait jamais.
+  COLLECTION_REPORTS: 'forum_reports',
   MAX_TOPICS_LOADED: 50,         // Limite pour économiser les reads Firestore
   MAX_REPLIES_PER_TOPIC: 100,
 
@@ -502,6 +506,69 @@ const ForumFirestore = {
   /**
    * Détache tous les listeners actifs (à appeler lors de la navigation hors forum)
    */
+  /**
+   * V63.80 : Signaler un sujet du forum.
+   *   Ecrit dans une collection dediee, lisible depuis le panneau admin.
+   *   Un meme utilisateur ne peut signaler qu'une fois le meme sujet :
+   *   l'identifiant du document combine les deux.
+   */
+  async reportTopic(topicId, topicTitle, reason) {
+    if (!this._isReady()) return { success: false, error: 'Hors ligne' };
+    try {
+      const fns = this._fns();
+      const auteur = this._getCurrentUserInfo();
+      const signaleurId = (auteur && auteur.userId) || 'anonyme';
+      const docId = topicId + '__' + signaleurId;
+
+      await fns.setDoc(fns.doc(this._db(), this.COLLECTION_REPORTS, docId), {
+        topicId: topicId,
+        topicTitle: topicTitle || '',
+        reason: reason || '',
+        reportedBy: {
+          userId: signaleurId,
+          name: (auteur && auteur.userName) || 'Anonyme'
+        },
+        reportedAt: Date.now(),
+        status: 'nouveau'
+      }, { merge: true });
+
+      return { success: true };
+    } catch (e) {
+      console.error('[V63.80] Signalement impossible :', e);
+      return { success: false, error: e.message };
+    }
+  },
+
+  /** V63.80 : Lire tous les signalements (panneau admin). */
+  async getAllReports() {
+    if (!this._isReady()) return [];
+    try {
+      const fns = this._fns();
+      const snap = await fns.getDocs(fns.collection(this._db(), this.COLLECTION_REPORTS));
+      const out = [];
+      snap.forEach(d => out.push({ id: d.id, ...d.data() }));
+      out.sort((a, b) => (b.reportedAt || 0) - (a.reportedAt || 0));
+      return out;
+    } catch (e) {
+      console.error('[V63.80] Lecture des signalements impossible :', e);
+      return [];
+    }
+  },
+
+  /** V63.80 : Marquer un signalement comme traite. */
+  async resolveReport(reportId) {
+    if (!this._isReady()) return { success: false };
+    try {
+      const fns = this._fns();
+      await fns.setDoc(fns.doc(this._db(), this.COLLECTION_REPORTS, reportId),
+        { status: 'traite', resolvedAt: Date.now() }, { merge: true });
+      return { success: true };
+    } catch (e) {
+      console.error('[V63.80] resolveReport :', e);
+      return { success: false };
+    }
+  },
+
   unsubscribeAll() {
     this._activeListeners.forEach(unsub => {
       try { if (typeof unsub === 'function') unsub(); } catch(e) {}
