@@ -1,7 +1,9 @@
 // Bara Concours - Service Worker
-// Version 6.3.69 - V63.69 : Confirmation avant de quitter un QCM ou une session en cours
+// Version 6.3.81 - V63.81 : Retrait de l'allégation « centaines de candidats »,
+//                  accord singulier du compteur de bonnes réponses,
+//                  mise en cache de la page de suppression de compte (exigée par Play Store)
 
-const CACHE_NAME = 'bara-concours-v6-3-80';
+const CACHE_NAME = 'bara-concours-v6-3-81';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)
@@ -33,6 +35,10 @@ const OPTIONAL_ASSETS = [
   './icons/icon-apple.png',
   './offline.html',
   './privacy-policy.html',
+  // V63.81 : page publique de demande de suppression de compte.
+  //   Google Play exige qu'elle reste atteignable ; la mettre en cache évite
+  //   un écran blanc si un examinateur l'ouvre avec une connexion instable.
+  './suppression-compte.html',
   // V63.44 : Firebase SDK cachés pour démarrage rapide offline
   'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js',
   'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js',
@@ -42,7 +48,7 @@ const OPTIONAL_ASSETS = [
 
 // Installation : d'abord les ressources critiques (atomique), puis les optionnelles (best-effort)
 self.addEventListener('install', event => {
-  console.log('[SW] Installation V6.3.44');
+  console.log('[SW] Installation V6.3.81');
   event.waitUntil(
     caches.open(CACHE_NAME).then(async cache => {
       // 1) Ressources critiques : addAll atomique
@@ -73,7 +79,7 @@ self.addEventListener('install', event => {
 
 // Activation : nettoyage des anciens caches (avec sécurité)
 self.addEventListener('activate', event => {
-  console.log('[SW] Activation V6.3.44');
+  console.log('[SW] Activation V6.3.81');
   event.waitUntil(
     (async () => {
       // Sécurité : vérifier que le nouveau cache contient bien index.html avant de supprimer l'ancien

@@ -8662,7 +8662,7 @@ const App = {
 
         <div class="qcm-meta-row">
           <div class="qcm-num">${m.icone} ${m.nom} ${this.state.qcm.numero ? `• Sujet ${this.state.qcm.numero}` : ''} • Q${this.state.qcm.current + 1}/${this.state.qcm.questions.length}</div>
-          <div class="qcm-score-mini">${this.state.qcm.score} bonnes</div>
+          <div class="qcm-score-mini">${this.state.qcm.score} bonne${this.state.qcm.score > 1 ? 's' : ''}</div>
         </div>
 
         <div class="qcm-card">
@@ -10235,7 +10235,7 @@ const App = {
           <div style="background:white; border-radius:14px; padding:1.2rem; margin-bottom:1.2rem; border:1px solid var(--line)">
             <h3 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:0 0 0.6rem; font-size:1.2rem">🎯 Le rituel du dimanche</h3>
             <p style="color:var(--ink-soft); line-height:1.6; font-size:0.9rem; margin:0">
-              Chaque dimanche de <strong>19h30 à 20h30</strong>, des centaines de candidats burkinabè composent ensemble un examen blanc national. <strong>50 questions en 60 min</strong>.
+              Chaque dimanche de <strong>19h30 à 20h30</strong>, les candidats burkinabè composent ensemble un examen blanc national. <strong>50 questions en 60 min</strong>.
               <br><br>Compare-toi aux autres candidats et identifie tes points faibles.
             </p>
           </div>
