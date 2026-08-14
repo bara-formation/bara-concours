@@ -3,7 +3,7 @@
 //                  accord singulier du compteur de bonnes réponses,
 //                  mise en cache de la page de suppression de compte (exigée par Play Store)
 
-const CACHE_NAME = 'bara-concours-v6-3-81';
+const CACHE_NAME = 'bara-concours-v6-3-82';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)
