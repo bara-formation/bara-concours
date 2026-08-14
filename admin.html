@@ -1936,26 +1936,23 @@ const Admin = {
                               style="font-size:0.78rem; padding:0.35rem 0.6rem; background:${t.isPinned ? '#fef3c7' : 'white'}; border:1.5px solid var(--gold-bf); color:#854d0e">
                         ${t.isPinned ? '📌 Désépingler' : '📌 Épingler'}
                       </button>
+                      <button class="btn-action" onclick="Admin.toggleForumReplies('${t.id}')"
+                              style="font-size:0.78rem; padding:0.35rem 0.6rem; background:${this.state._forumRepliesOpen === t.id ? '#dbeafe' : 'white'}; border:1.5px solid #2563eb; color:#1e40af">
+                        ${this.state._forumRepliesOpen === t.id ? '▲ Masquer' : '💬 Réponses'}
+                      </button>
                       <button class="btn-action btn-danger" onclick="Admin.deleteForumTopic('${t.id}')" style="font-size:0.78rem; padding:0.35rem 0.6rem">
                         🗑 Supprimer
                       </button>
                     </div>
                   </td>
                 </tr>
+                ${this.state._forumRepliesOpen === t.id ? this.renderForumRepliesRow(t.id) : ''}
               `).join('')}
             </tbody>
           </table>
         `}
       </div>
 
-      ${reportedCount > 0 ? `
-        <div style="background:linear-gradient(135deg, #fef3c7, white); border:1px solid var(--gold-bf); border-radius:10px; padding:1rem; margin-top:1rem">
-          <strong>ℹ️ ${reportedCount} signalement${reportedCount > 1 ? 's' : ''} local${reportedCount > 1 ? 'aux' : ''} en attente</strong>
-          <div style="font-size:0.85rem; color:var(--ink-mute); margin-top:0.3rem">
-            Les signalements sont stockés localement par chaque utilisateur. Pour les voir, demande au user de t'envoyer son export ou consulte les sujets individuellement.
-          </div>
-        </div>
-      ` : ''}
     `;
   },
 
@@ -2015,7 +2012,11 @@ const Admin = {
     // Récupérer le titre depuis le cache local
     const topic = (this.state._forumAdminTopics || []).find(t => t.id === topicId);
     const title = topic ? topic.title : '(titre inconnu)';
-    if (!confirm('⚠️ SUPPRIMER ce sujet ?\n\n"' + title.substring(0, 80) + '"\n\nLes réponses ne seront PAS supprimées (Firestore ne fait pas le cascade automatique). Cette action est définitive.')) return;
+    const nbRep = topic ? (topic.repliesCount || 0) : 0;
+    const mentionRep = nbRep > 0
+      ? 'Ses ' + nbRep + ' réponse' + (nbRep > 1 ? 's seront supprimées' : ' sera supprimée') + ' également.\n\n'
+      : '';
+    if (!confirm('⚠️ SUPPRIMER ce sujet ?\n\n"' + title.substring(0, 80) + '"\n\n' + mentionRep + 'Cette action est définitive.')) return;
     try {
       const result = await window.ForumFirestore.deleteTopic(topicId);
       if (result.success) {
@@ -2023,7 +2024,11 @@ const Admin = {
         if (this.state._forumAdminTopics) {
           this.state._forumAdminTopics = this.state._forumAdminTopics.filter(t => t.id !== topicId);
         }
-        this.toast('🗑 Sujet supprimé', 'success');
+        // V63.82 : purger aussi le panneau de réponses éventuellement ouvert
+        if (this.state._forumReplies) delete this.state._forumReplies[topicId];
+        if (this.state._forumRepliesOpen === topicId) this.state._forumRepliesOpen = null;
+        const nbSup = result.repliesDeleted || 0;
+        this.toast('🗑 Sujet supprimé' + (nbSup > 0 ? ' (' + nbSup + ' réponse' + (nbSup > 1 ? 's' : '') + ')' : ''), 'success');
         this.render();
       } else {
         this.toast('❌ ' + (result.error || 'Erreur'), 'danger', 4000);
@@ -2032,6 +2037,116 @@ const Admin = {
       console.error('[V63.21] deleteForumTopic:', e);
       this.toast('❌ Erreur', 'danger');
     }
+  },
+
+  // ==================================================================
+  // V63.82 : MODÉRATION DES RÉPONSES
+  // ==================================================================
+  //   Jusqu'ici, l'admin ne pouvait agir que sur les sujets. Face à une
+  //   réponse injurieuse sous un fil légitime, la seule option était de
+  //   détruire toute la discussion — en punissant l'auteur du sujet et tous
+  //   ceux qui avaient répondu correctement.
+
+  async toggleForumReplies(topicId) {
+    this.state._forumRepliesOpen = (this.state._forumRepliesOpen === topicId) ? null : topicId;
+    this.render();
+    if (!this.state._forumRepliesOpen) return;
+
+    this.state._forumReplies = this.state._forumReplies || {};
+    if (this.state._forumReplies[topicId]) return; // déjà en cache
+
+    if (!window.ForumFirestore) {
+      this.toast('Firebase non prêt', 'danger');
+      return;
+    }
+    this.state._forumRepliesLoading = topicId;
+    this.render();
+    try {
+      const result = await window.ForumFirestore.getReplies(topicId);
+      this.state._forumRepliesLoading = null;
+      if (result.success) {
+        this.state._forumReplies[topicId] = result.replies || [];
+      } else {
+        this.toast('❌ ' + (result.error || 'Chargement impossible'), 'danger', 4000);
+        this.state._forumReplies[topicId] = [];
+      }
+      this.render();
+    } catch (e) {
+      this.state._forumRepliesLoading = null;
+      console.error('[V63.82] toggleForumReplies:', e);
+      this.toast('❌ Erreur réseau', 'danger');
+      this.render();
+    }
+  },
+
+  async deleteForumReply(topicId, replyId) {
+    if (!window.ForumFirestore) {
+      this.toast('Firebase non prêt', 'danger');
+      return;
+    }
+    const liste = (this.state._forumReplies && this.state._forumReplies[topicId]) || [];
+    const rep = liste.find(r => r.id === replyId);
+    const extrait = rep ? (rep.body || '').substring(0, 100) : '';
+    const entete = rep ? 'De ' + (rep.authorName || 'Anonyme') + ' :\n« ' + extrait + ' »\n\n' : '';
+    if (!confirm('⚠️ SUPPRIMER cette réponse ?\n\n' + entete + 'Le sujet et les autres réponses sont conservés. Cette action est définitive.')) return;
+
+    try {
+      const result = await window.ForumFirestore.deleteReply(topicId, replyId);
+      if (result.success) {
+        if (this.state._forumReplies && this.state._forumReplies[topicId]) {
+          this.state._forumReplies[topicId] = this.state._forumReplies[topicId].filter(r => r.id !== replyId);
+        }
+        const topic = (this.state._forumAdminTopics || []).find(t => t.id === topicId);
+        if (topic) topic.repliesCount = Math.max(0, (topic.repliesCount || 0) - 1);
+        this.toast('🗑 Réponse supprimée', 'success');
+        this.render();
+      } else {
+        this.toast('❌ ' + (result.error || 'Erreur'), 'danger', 4000);
+      }
+    } catch (e) {
+      console.error('[V63.82] deleteForumReply:', e);
+      this.toast('❌ Erreur', 'danger');
+    }
+  },
+
+  renderForumRepliesRow(topicId) {
+    const enCours = this.state._forumRepliesLoading === topicId;
+    const liste = (this.state._forumReplies && this.state._forumReplies[topicId]) || null;
+
+    let contenu;
+    if (enCours || liste === null) {
+      contenu = '<div style="padding:0.8rem; color:#6b7280; font-size:0.85rem">⏳ Chargement des réponses…</div>';
+    } else if (liste.length === 0) {
+      contenu = '<div style="padding:0.8rem; color:#6b7280; font-size:0.85rem">Aucune réponse sur ce sujet.</div>';
+    } else {
+      contenu = liste.map(r => `
+        <div style="background:white; border:1px solid #e5e7eb; border-radius:8px; padding:0.7rem 0.9rem; margin-bottom:0.5rem; display:flex; gap:0.8rem; align-items:flex-start">
+          <div style="flex:1; min-width:0">
+            <div style="font-weight:700; font-size:0.85rem">
+              ${this.escapeHTML(r.authorName || 'Anonyme')}
+              ${r.authorIsPremium ? '<span style="background:#fef3c7; color:#854d0e; font-size:0.65rem; font-weight:800; padding:0.1rem 0.4rem; border-radius:999px; margin-left:0.3rem">PRO</span>' : ''}
+              <span style="font-weight:400; color:#6b7280; font-size:0.75rem; margin-left:0.4rem">${this.formatRelativeTime(r.createdAt)}</span>
+            </div>
+            <div style="font-size:0.85rem; color:#3f4a44; margin-top:0.25rem; white-space:pre-wrap; word-break:break-word">${this.escapeHTML(r.body || '')}</div>
+          </div>
+          <button class="btn-action btn-danger" onclick="Admin.deleteForumReply('${topicId}', '${r.id}')"
+                  style="font-size:0.75rem; padding:0.3rem 0.55rem; flex-shrink:0">
+            🗑 Supprimer
+          </button>
+        </div>
+      `).join('');
+    }
+
+    return `
+      <tr>
+        <td colspan="6" style="background:#f9fafb; padding:0.9rem 1rem">
+          <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:#6b7280; margin-bottom:0.6rem">
+            Réponses de ce sujet
+          </div>
+          ${contenu}
+        </td>
+      </tr>
+    `;
   },
 
   approveSubject(topicId) {
