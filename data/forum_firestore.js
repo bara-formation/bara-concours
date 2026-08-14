@@ -343,13 +343,54 @@ const ForumFirestore = {
     }
     try {
       const fns = this._fns();
+
+      // V63.82 : suppression en cascade des réponses.
+      //   Avant, seul le document du sujet était supprimé : ses réponses
+      //   restaient indéfiniment dans Firestore. Un message injurieux
+      //   survivait donc à la suppression du fil qui le contenait — invisible
+      //   dans l'app, mais toujours stocké, et toujours comptabilisé.
+      const suppr = await this.deleteAllReplies(topicId);
+      if (!suppr.success) {
+        // On n'abandonne pas la suppression du sujet pour autant : mieux vaut
+        // un sujet retiré avec quelques réponses résiduelles que rien du tout.
+        console.warn('[ForumFirestore] Réponses non supprimées :', suppr.error);
+      }
+
       await fns.deleteDoc(fns.doc(this._db(), this.COLLECTION_TOPICS, topicId));
-      // Note : les réponses ne sont pas supprimées en cascade — c'est OK pour un MVP
       this._topicsCache = null;
-      return { success: true };
+      return { success: true, repliesDeleted: suppr.count || 0 };
     } catch (e) {
       console.error('[ForumFirestore] deleteTopic:', e);
       return { success: false, error: e.message };
+    }
+  },
+
+  /**
+   * V63.82 : supprime toutes les réponses d'un sujet.
+   *   Firestore ne supprime pas les sous-collections avec le document parent :
+   *   il faut les parcourir et les effacer une à une.
+   */
+  async deleteAllReplies(topicId) {
+    if (!this._isReady() || !topicId) {
+      return { success: false, error: 'Firebase non prêt', count: 0 };
+    }
+    try {
+      const fns = this._fns();
+      const colRef = fns.collection(this._db(), this.COLLECTION_REPLIES, topicId, 'replies');
+      const snap = await fns.getDocs(colRef);
+      let n = 0;
+      for (const d of snap.docs) {
+        try {
+          await fns.deleteDoc(d.ref);
+          n++;
+        } catch (e) {
+          console.warn('[ForumFirestore] réponse non supprimée :', d.id, e.message);
+        }
+      }
+      return { success: true, count: n };
+    } catch (e) {
+      console.error('[ForumFirestore] deleteAllReplies:', e);
+      return { success: false, error: e.message, count: 0 };
     }
   },
 
@@ -386,6 +427,24 @@ const ForumFirestore = {
       await fns.deleteDoc(
         fns.doc(this._db(), this.COLLECTION_REPLIES, topicId, 'replies', replyId)
       );
+
+      // V63.82 : décrémenter le compteur du sujet.
+      //   Sans ça, le nombre de réponses affiché ne baissait jamais : après
+      //   quelques modérations, un fil annonçait « 5 réponses » et n'en
+      //   montrait que 2. Non bloquant si l'écriture échoue.
+      try {
+        const inc = fns.increment;
+        if (typeof inc === 'function') {
+          await fns.updateDoc(
+            fns.doc(this._db(), this.COLLECTION_TOPICS, topicId),
+            { repliesCount: inc(-1) }
+          );
+        }
+      } catch (e) {
+        console.warn('[ForumFirestore] compteur de réponses non mis à jour :', e.message);
+      }
+
+      this._topicsCache = null;
       return { success: true };
     } catch (e) {
       console.error('[ForumFirestore] deleteReply:', e);
