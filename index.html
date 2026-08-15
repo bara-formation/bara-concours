@@ -4657,6 +4657,36 @@ const App = {
             </div>
           </div>
 
+          ${this.renderMentionIndependance()}
+
+        </div>
+      </div>
+    `;
+  },
+
+  /**
+   * V63.83 : Mention d'independance vis-a-vis de l'administration.
+   *
+   *   Google Play a refuse la premiere soumission au motif de sa politique sur
+   *   les declarations trompeuses : une application qui relaie des informations
+   *   gouvernementales (calendrier des concours, dates d'inscription, textes
+   *   officiels) doit indiquer clairement qu'elle n'emane pas de l'administration,
+   *   et renvoyer vers la source officielle.
+   *
+   *   Cette mention est affichee partout ou des informations officielles
+   *   apparaissent, et dans l'ecran A propos.
+   */
+  renderMentionIndependance() {
+    return `
+      <div style="background:#f3f4f6; border:1px solid #d1d5db; border-radius:var(--radius); padding:0.9rem 1rem; margin-top:1rem">
+        <div style="font-size:0.78rem; color:#4b5563; line-height:1.55">
+          <strong style="color:#1f2937">Application independante.</strong>
+          Bara Concours est editee par Bara Formation, entreprise privee. Elle n'est ni affiliee,
+          ni approuvee, ni geree par le gouvernement du Burkina Faso ou par une administration publique.
+          Les informations officielles sur les concours — calendrier, inscriptions, resultats — sont
+          publiees par l'administration sur
+          <a href="https://www.econcours.gov.bf" target="_blank" rel="noopener" style="color:var(--green-bf); font-weight:600">econcours.gov.bf</a>,
+          seule source faisant foi. En cas de difference, ce sont les publications officielles qui prevalent.
         </div>
       </div>
     `;
@@ -8175,7 +8205,9 @@ const App = {
             </div>
           ` : ''}
 
-          <div class="section-title">Matières au programme (${this.getEffectiveMatieres(c).length})</div>
+          ${isOfficiel ? this.renderMentionIndependance() : ''}
+
+          <div class="section-title" style="margin-top:1.2rem">Matières au programme (${this.getEffectiveMatieres(c).length})</div>
           <div class="matieres-list">
             ${this.getEffectiveMatieres(c).map(mid => this.renderMatiereCard(mid, c.id)).join('')}
           </div>
@@ -9390,6 +9422,8 @@ const App = {
               <div class="menu-arrow">›</div>
             </a>
           </div>
+
+          ${this.renderMentionIndependance()}
 
           <div style="text-align:center; margin-top:2rem; color:var(--ink-mute); font-size:0.78rem">
             Version 1.0.0 — Phase 1<br>
