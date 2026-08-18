@@ -785,6 +785,7 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 <script src="data/texts_firestore.js"></script>
 <script src="data/forum.js"></script>
 <script src="data/forum_firestore.js"></script>
+<script src="data/announcements.js"></script>
 
 <script>
 /* ===========================================
@@ -1048,6 +1049,7 @@ const Admin = {
       case 'examens': mainHtml = this.renderExamensAdmin(); break;
       // V63.34 : Textes éditables de l'app
       case 'textes': mainHtml = this.renderTextesAdmin(); break;
+      case 'annonces': mainHtml = this.renderAnnonces(); break;
       case 'codes': mainHtml = this.renderCodesAdmin(); break;
       case 'settings': mainHtml = this.renderSettings(); break;
       default: mainHtml = this.renderDashboard();
@@ -1164,6 +1166,10 @@ const Admin = {
           <div class="nav-link ${cur === 'textes' ? 'active' : ''}" onclick="Admin.navigate('textes')">
             <span class="nav-icon">🎨</span>
             <span>Textes de l'app</span>
+          </div>
+          <div class="nav-link ${cur === 'annonces' ? 'active' : ''}" onclick="Admin.navigate('annonces')">
+            <span class="nav-icon">📢</span>
+            <span>Annonces</span>
           </div>
           <div class="nav-link ${cur === 'codes' ? 'active' : ''}" onclick="Admin.navigate('codes')">
             <span class="nav-icon">🎫</span>
@@ -1482,8 +1488,14 @@ const Admin = {
     // V59 : Refresh async des vrais utilisateurs Firestore
     this.refreshUsersFromFirestore();
 
+    // V63.84 : charger les codes d'activation (source de vérité du Premium)
+    this.refreshCodesForUsers();
+
     // V59 : Normaliser les données (Firestore peut utiliser displayName, email, phoneNumber, region)
-    const normalized = data.users.map(u => this.normalizeUser(u));
+    let normalized = data.users.map(u => this.normalizeUser(u));
+    // V63.84 : statut Premium reconstitué, puis numérotation des visiteurs
+    normalized = this.enrichPremiumFromCodes(normalized);
+    normalized = this.assignVisitorNumbers(normalized);
 
     let filtered = normalized;
     if (tab === 'premium') filtered = filtered.filter(u => u.isPremium);
@@ -1643,8 +1655,149 @@ const Admin = {
         : (u.lastActivityAt || null),
       joinedAt: typeof u.createdAt === 'object' && u.createdAt?.seconds ? u.createdAt.seconds * 1000 : (u.createdAt || u.joinedAt || Date.now()),
       authProvider: u.authProvider || '',
-      photoURL: u.photoURL || ''
+      photoURL: u.photoURL || '',
+      // V63.84 : distinguer les visiteurs sans compte des inscrits
+      isAnonymous: (u.isAnonymous === true)
+                   || u.authProvider === 'anonymous'
+                   || (!u.email && !u.phoneNumber && !u.phone),
+      visitorNumber: u.visitorNumber || ''
     };
+  },
+
+  // ==================================================================
+  // V63.84 : NUMÉROTATION DES VISITEURS SANS COMPTE
+  // ==================================================================
+  //   Tous les visiteurs anonymes s'affichaient sous le même libellé
+  //   « Anonyme », impossible de les distinguer ni de savoir lequel est
+  //   arrivé en premier. On les numérote par ordre d'arrivée : le plus
+  //   ancien devient « Visiteur 1 ».
+  //
+  //   La numérotation est calculée à l'affichage, à partir de la date de
+  //   création du compte. Rien n'est écrit dans Firestore, donc aucun
+  //   risque de collision ni d'écriture refusée par les règles.
+  assignVisitorNumbers(users) {
+    const anonymes = users
+      .filter(u => u.isAnonymous)
+      .sort((a, b) => (a.joinedAt || 0) - (b.joinedAt || 0));
+    anonymes.forEach((u, i) => {
+      u.visitorIndex = i + 1;
+      u.name = 'Visiteur ' + (i + 1);
+    });
+    return users;
+  },
+
+  // ==================================================================
+  // V63.84 : STATUT PREMIUM RECONSTITUÉ DEPUIS LES CODES D'ACTIVATION
+  // ==================================================================
+  //   Les règles Firestore interdisent au client d'écrire les champs
+  //   Premium dans le document utilisateur — protection volontaire, sans
+  //   laquelle n'importe qui s'octroierait un abonnement depuis la console
+  //   du navigateur. Conséquence : `isPremium` y reste toujours à false,
+  //   et le tableau de bord affichait « Gratuit » pour tout le monde,
+  //   y compris pour des abonnés payants.
+  //
+  //   La source de vérité est donc la collection des codes d'activation :
+  //   on rejoue chaque code utilisé depuis sa date réelle d'utilisation.
+
+  /**
+   * V63.85 : rejoue les codes d'un compte exactement comme le fait
+   *   ActivationCodes.recoverPremiumFromCodes() côté application.
+   *
+   *   Point clé : les codes se CUMULENT. Un abonné qui active un mois alors
+   *   qu'il lui reste dix jours obtient quarante jours, pas trente. Prendre
+   *   simplement le code le plus lointain sous-estimait ces abonnements.
+   */
+  _rejouerCodes(codes) {
+    const P = window.PremiumService && window.PremiumService.PLANS;
+    if (!P) return null;
+    const tries = codes.slice().sort((a, b) => (a.usedAt || 0) - (b.usedAt || 0));
+
+    let expiration = 0;
+    let dernierPlan = null;
+    let premiereActivation = null;
+
+    for (const c of tries) {
+      const plan = P[c.planId];
+      if (!plan) continue;
+      const utiliseLe = c.usedAt || 0;
+      if (!utiliseLe) continue;
+      if (premiereActivation === null) premiereActivation = utiliseLe;
+
+      if (plan.expiresAt) {
+        expiration = Math.max(expiration, plan.expiresAt);
+      } else if (plan.duration) {
+        const depart = expiration > utiliseLe ? expiration : utiliseLe;
+        expiration = depart + plan.duration * 24 * 60 * 60 * 1000;
+      } else {
+        continue;
+      }
+      dernierPlan = c.planId;
+    }
+
+    if (!expiration) return null;
+    return { expiration, dernierPlan, premiereActivation };
+  },
+
+  /**
+   * Rapproche chaque utilisateur des codes qu'il a utilisés.
+   *   Rapprochement sur usedBy.userId, avec l'e-mail en secours pour les
+   *   activations faites avant que l'identifiant ne soit enregistré.
+   */
+  enrichPremiumFromCodes(users) {
+    if (!window.ActivationCodes || !window.ActivationCodes.getAllCodesLocal) return users;
+    let codes = [];
+    try { codes = window.ActivationCodes.getAllCodesLocal() || []; } catch (e) { return users; }
+
+    const parUid = {}, parEmail = {};
+    codes.forEach(c => {
+      if (!c || !c.used || !c.usedBy) return;
+      const uid = c.usedBy.userId || '';
+      const mail = (c.usedBy.email || '').toLowerCase();
+      if (uid) (parUid[uid] = parUid[uid] || []).push(c);
+      else if (mail) (parEmail[mail] = parEmail[mail] || []).push(c);
+    });
+
+    const maintenant = Date.now();
+    users.forEach(u => {
+      const lot = parUid[u.id] || (u.email ? parEmail[u.email.toLowerCase()] : null);
+      if (!lot || lot.length === 0) return;
+      const r = this._rejouerCodes(lot);
+      if (!r) return;
+      u.premiumPlan = r.dernierPlan;
+      u.premiumActivatedAt = r.premiereActivation ? new Date(r.premiereActivation).toISOString() : null;
+      u.premiumExpiresAt = new Date(r.expiration).toISOString();
+      u.premiumCodesCount = lot.length;
+      u.isPremium = r.expiration > maintenant;
+      u.premiumExpire = !u.isPremium;
+      u.premiumSource = 'code';
+    });
+    return users;
+  },
+
+  /**
+   * Charge les codes depuis Firestore si ce n'est pas déjà fait, puis
+   * rafraîchit l'affichage. Sans ça, la page Utilisateurs afficherait le
+   * statut Premium seulement après un passage par l'onglet Codes Premium.
+   */
+  refreshCodesForUsers() {
+    if (!window.ActivationCodes || !window.ActivationCodes.getAllCodes) return;
+    if (this.state._codesRefreshing) return;
+    const dejaLa = (window.ActivationCodes.getAllCodesLocal &&
+                    (window.ActivationCodes.getAllCodesLocal() || []).length > 0);
+    if (dejaLa && this.state._codesLoadedOnce) return;
+    this.state._codesRefreshing = true;
+    window.ActivationCodes.getAllCodes().then(() => {
+      this.state._codesRefreshing = false;
+      this.state._codesLoadedOnce = true;
+      if (['dashboard', 'users', 'payments'].includes(this.state.currentPage)) {
+        const el = document.activeElement;
+        const saisie = el && el.classList && el.classList.contains('search-input');
+        if (!saisie) this.render();
+      }
+    }).catch(e => {
+      this.state._codesRefreshing = false;
+      console.warn('[V63.84] Chargement des codes :', e);
+    });
   },
 
   /**
@@ -1725,6 +1878,11 @@ const Admin = {
             <span class="badge badge-gold">⭐ Premium ${planName}</span>
             <div style="font-size:0.7rem; font-weight:700; margin-top:0.2rem; color:${days <= 7 ? '#ea580c' : 'var(--ink-mute)'}">
               ${days <= 7 ? '⚠️ ' : ''}${days}j restants
+            </div>
+          ` : u.premiumExpire ? `
+            <span class="badge" style="background:#fee2e2; color:#991b1b; border:1px solid #fecaca">Premium expiré</span>
+            <div style="font-size:0.7rem; color:var(--ink-mute); margin-top:0.2rem">
+              ${u.premiumPlan ? (window.PremiumService.PLANS[u.premiumPlan]?.name || u.premiumPlan) : ''} · à relancer
             </div>
           ` : `<span class="badge" style="background:#f3f4f6; color:#6b7280; border:1px solid #e5e7eb">Gratuit</span>`}
         </td>
@@ -7917,6 +8075,345 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
   // ============================================================
   // V51 : PAGE CODES PREMIUM (génération, suivi, export)
   // ============================================================
+  // ==================================================================
+  // V63.85 : ANNONCES DIFFUSÉES DANS L'APPLICATION
+  // ==================================================================
+  //   Un bandeau en haut de l'accueil, ciblé selon le statut du candidat.
+  //   Rien ne s'affiche tant qu'aucune annonce n'est créée ET activée :
+  //   la fonctionnalité peut donc être déployée sans effet visible.
+
+  _annonceForm() {
+    if (!this.state._annonceForm) {
+      this.state._annonceForm = {
+        id: null, title: '', body: '', level: 'info', audience: 'all',
+        targetUids: [], startAt: '', endAt: '', active: false
+      };
+    }
+    return this.state._annonceForm;
+  },
+
+  setAnnonceField(champ, valeur) {
+    const f = this._annonceForm();
+    f[champ] = valeur;
+    if (champ === 'audience' && valeur !== 'custom') f.targetUids = [];
+    this.render();
+  },
+
+  toggleAnnonceCible(uid) {
+    const f = this._annonceForm();
+    const i = f.targetUids.indexOf(uid);
+    if (i >= 0) f.targetUids.splice(i, 1);
+    else f.targetUids.push(uid);
+    this.render();
+  },
+
+  nouvelleAnnonce() {
+    this.state._annonceForm = null;
+    this.state._annonceEdition = true;
+    this.render();
+  },
+
+  annulerAnnonce() {
+    this.state._annonceForm = null;
+    this.state._annonceEdition = false;
+    this.render();
+  },
+
+  editerAnnonce(id) {
+    const a = (window.Announcements.getAllLocal() || []).find(x => x.id === id);
+    if (!a) return;
+    const iso = (ms) => {
+      if (!ms) return '';
+      const d = new Date(ms);
+      const p = n => String(n).padStart(2, '0');
+      return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()) + 'T' + p(d.getHours()) + ':' + p(d.getMinutes());
+    };
+    this.state._annonceForm = {
+      id: a.id, title: a.title, body: a.body, level: a.level, audience: a.audience,
+      targetUids: (a.targetUids || []).slice(),
+      startAt: iso(a.startAt), endAt: iso(a.endAt), active: a.active
+    };
+    this.state._annonceEdition = true;
+    this.render();
+  },
+
+  async enregistrerAnnonce() {
+    const f = this._annonceForm();
+    const titre = (document.getElementById('annonceTitre') || {}).value || f.title;
+    const corps = (document.getElementById('annonceCorps') || {}).value || f.body;
+    const debut = (document.getElementById('annonceDebut') || {}).value || f.startAt;
+    const fin = (document.getElementById('annonceFin') || {}).value || f.endAt;
+
+    if (!titre || titre.trim().length < 3) { this.toast('Le titre est trop court', 'danger'); return; }
+    if (!corps || corps.trim().length < 5) { this.toast('Le message est trop court', 'danger'); return; }
+    if (f.audience === 'custom' && f.targetUids.length === 0) {
+      this.toast('Sélectionne au moins un compte', 'danger'); return;
+    }
+
+    const msDebut = debut ? new Date(debut).getTime() : Date.now();
+    const msFin = fin ? new Date(fin).getTime() : null;
+    if (msFin && msFin <= msDebut) { this.toast('La fin doit être après le début', 'danger'); return; }
+
+    const data = {
+      title: titre.trim(), body: corps.trim(), level: f.level, audience: f.audience,
+      targetUids: f.targetUids, startAt: msDebut, endAt: msFin, active: f.active === true
+    };
+
+    const r = f.id
+      ? await window.Announcements.update(f.id, data)
+      : await window.Announcements.create(data);
+
+    if (r.success) {
+      this.toast(f.id ? '✓ Annonce mise à jour' : '✓ Annonce créée', 'success');
+      this.state._annonceForm = null;
+      this.state._annonceEdition = false;
+      await window.Announcements.getAll();
+      this.render();
+    } else {
+      this.toast('❌ ' + (r.error || 'Erreur'), 'danger', 4000);
+    }
+  },
+
+  async basculerAnnonce(id, actif) {
+    const r = await window.Announcements.update(id, { active: actif });
+    if (r.success) {
+      this.toast(actif ? '📢 Annonce diffusée' : '⏸ Diffusion arrêtée', 'success');
+      await window.Announcements.getAll();
+      this.render();
+    } else {
+      this.toast('❌ ' + (r.error || 'Erreur'), 'danger', 4000);
+    }
+  },
+
+  async supprimerAnnonce(id) {
+    if (!confirm('⚠️ Supprimer définitivement cette annonce ?')) return;
+    const r = await window.Announcements.remove(id);
+    if (r.success) {
+      this.toast('🗑 Annonce supprimée', 'success');
+      await window.Announcements.getAll();
+      this.render();
+    } else {
+      this.toast('❌ ' + (r.error || 'Erreur'), 'danger', 4000);
+    }
+  },
+
+  _libelleCible(a) {
+    const l = {
+      all: 'Tout le monde', premium: 'Abonnés Premium', free: 'Comptes gratuits',
+      anonymous: 'Visiteurs sans compte', expired: 'Abonnements expirés', custom: 'Comptes choisis'
+    };
+    const base = l[a.audience] || a.audience;
+    return a.audience === 'custom' ? base + ' (' + (a.targetUids || []).length + ')' : base;
+  },
+
+  _etatAnnonce(a) {
+    const t = Date.now();
+    if (!a.active) return { texte: 'Arrêtée', couleur: '#6b7280', fond: '#f3f4f6' };
+    if (a.startAt && t < a.startAt) return { texte: 'Programmée', couleur: '#1e40af', fond: '#dbeafe' };
+    if (a.endAt && t > a.endAt) return { texte: 'Terminée', couleur: '#92400e', fond: '#fef3c7' };
+    return { texte: 'En diffusion', couleur: '#166534', fond: '#dcfce7' };
+  },
+
+  renderAnnonces() {
+    if (!window.Announcements) {
+      return '<div class="page-header"><div class="page-title">Annonces</div><div class="page-sub">⚠️ Module Announcements non chargé</div></div>';
+    }
+
+    // Chargement initial
+    if (!this.state._annoncesChargees) {
+      this.state._annoncesChargees = true;
+      window.Announcements.getAll().then(() => this.render());
+    }
+
+    const liste = window.Announcements.getAllLocal() || [];
+    const enEdition = this.state._annonceEdition;
+
+    return `
+      <div class="page-header">
+        <div class="page-title">📢 Annonces</div>
+        <div class="page-sub">Diffuser un message dans un bandeau en haut de l'accueil de l'application</div>
+      </div>
+
+      ${!enEdition ? `
+        <button class="btn btn-primary" onclick="Admin.nouvelleAnnonce()" style="margin-bottom:1rem">
+          ➕ Nouvelle annonce
+        </button>
+      ` : this.renderAnnonceForm()}
+
+      ${liste.length === 0 ? `
+        <div style="background:white; border:1.5px dashed var(--line, #e5e7eb); border-radius:12px; padding:2rem 1rem; text-align:center; color:#6b7280">
+          <div style="font-size:2.5rem; opacity:0.4">📭</div>
+          <div style="font-weight:700; color:#1f2937; margin-top:0.5rem">Aucune annonce</div>
+          <div style="font-size:0.85rem; margin-top:0.3rem">Rien ne s'affiche dans l'application tant qu'aucune annonce n'est créée et activée.</div>
+        </div>
+      ` : `
+        <div style="display:flex; flex-direction:column; gap:0.7rem">
+          ${liste.map(a => this.renderAnnonceCard(a)).join('')}
+        </div>
+      `}
+    `;
+  },
+
+  renderAnnonceCard(a) {
+    const e = this._etatAnnonce(a);
+    const couleurs = { info: '#2563eb', warning: '#d97706', urgent: '#dc2626' };
+    const icones = { info: 'ℹ️', warning: '⚠️', urgent: '🔴' };
+    const c = couleurs[a.level] || '#2563eb';
+    const fmt = (ms) => ms ? new Date(ms).toLocaleString('fr-FR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }) : '—';
+
+    return `
+      <div style="background:white; border:1px solid #e5e7eb; border-left:4px solid ${c}; border-radius:12px; padding:1rem 1.1rem">
+        <div style="display:flex; align-items:flex-start; gap:0.8rem; flex-wrap:wrap">
+          <div style="flex:1; min-width:220px">
+            <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem">
+              <span style="font-size:1.1rem">${icones[a.level] || 'ℹ️'}</span>
+              <strong style="font-size:1rem">${this.escapeHTML(a.title)}</strong>
+              <span style="background:${e.fond}; color:${e.couleur}; padding:0.15rem 0.55rem; border-radius:999px; font-size:0.7rem; font-weight:800">${e.texte}</span>
+            </div>
+            <div style="font-size:0.88rem; color:#3f4a44; white-space:pre-wrap; margin-bottom:0.5rem">${this.escapeHTML(a.body)}</div>
+            <div style="font-size:0.75rem; color:#6b7280">
+              🎯 ${this._libelleCible(a)} &nbsp;·&nbsp; 🕘 ${fmt(a.startAt)} → ${fmt(a.endAt)}
+            </div>
+          </div>
+          <div style="display:flex; gap:0.4rem; flex-wrap:wrap">
+            <button class="btn-action" onclick="Admin.basculerAnnonce('${a.id}', ${!a.active})"
+                    style="font-size:0.78rem; padding:0.35rem 0.6rem; border:1.5px solid ${a.active ? '#d97706' : '#16a34a'}; color:${a.active ? '#92400e' : '#166534'}; background:white">
+              ${a.active ? '⏸ Arrêter' : '▶️ Diffuser'}
+            </button>
+            <button class="btn-action" onclick="Admin.editerAnnonce('${a.id}')" style="font-size:0.78rem; padding:0.35rem 0.6rem">✏️ Modifier</button>
+            <button class="btn-action btn-danger" onclick="Admin.supprimerAnnonce('${a.id}')" style="font-size:0.78rem; padding:0.35rem 0.6rem">🗑</button>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  renderAnnonceForm() {
+    const f = this._annonceForm();
+    const cibles = [
+      ['all', 'Tout le monde'],
+      ['premium', 'Abonnés Premium'],
+      ['free', 'Comptes gratuits'],
+      ['anonymous', 'Visiteurs sans compte'],
+      ['expired', 'Abonnements expirés'],
+      ['custom', 'Comptes choisis']
+    ];
+    const niveaux = [['info', 'ℹ️ Information'], ['warning', '⚠️ Avertissement'], ['urgent', '🔴 Urgent']];
+
+    // Liste des comptes pour le ciblage nominatif
+    let comptes = [];
+    if (f.audience === 'custom') {
+      const data = this.loadData();
+      comptes = this.enrichPremiumFromCodes(data.users.map(u => this.normalizeUser(u)))
+        .filter(u => !u.isAnonymous)
+        .sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+      const rech = (this.state._annonceRecherche || '').toLowerCase();
+      if (rech) {
+        comptes = comptes.filter(u => ((u.name || '') + ' ' + (u.email || '') + ' ' + (u.phone || '')).toLowerCase().includes(rech));
+      }
+    }
+
+    return `
+      <div style="background:white; border:1px solid #e5e7eb; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem">
+        <div style="font-weight:800; font-size:1.05rem; margin-bottom:0.9rem">
+          ${f.id ? '✏️ Modifier l\'annonce' : '➕ Nouvelle annonce'}
+        </div>
+
+        <label style="display:block; font-weight:700; font-size:0.85rem; margin-bottom:0.3rem">Titre</label>
+        <input type="text" id="annonceTitre" value="${this.escapeHTML(f.title)}" maxlength="80"
+               placeholder="Ex : Résultats ENAM publiés"
+               style="width:100%; padding:0.65rem 0.85rem; border:1.5px solid #e5e7eb; border-radius:8px; margin-bottom:0.9rem; box-sizing:border-box">
+
+        <label style="display:block; font-weight:700; font-size:0.85rem; margin-bottom:0.3rem">Message</label>
+        <textarea id="annonceCorps" maxlength="500" rows="3"
+                  placeholder="Le texte qui s'affichera dans le bandeau."
+                  style="width:100%; padding:0.65rem 0.85rem; border:1.5px solid #e5e7eb; border-radius:8px; margin-bottom:0.9rem; box-sizing:border-box; font-family:inherit; resize:vertical">${this.escapeHTML(f.body)}</textarea>
+
+        <label style="display:block; font-weight:700; font-size:0.85rem; margin-bottom:0.3rem">Niveau</label>
+        <div style="display:flex; gap:0.4rem; margin-bottom:0.9rem; flex-wrap:wrap">
+          ${niveaux.map(([v, l]) => `
+            <button onclick="Admin.setAnnonceField('level', '${v}')"
+                    style="padding:0.45rem 0.85rem; border-radius:999px; font-size:0.82rem; font-weight:700; cursor:pointer;
+                           border:1.5px solid ${f.level === v ? '#0F5132' : '#e5e7eb'};
+                           background:${f.level === v ? '#0F5132' : 'white'}; color:${f.level === v ? 'white' : '#1f2937'}">${l}</button>
+          `).join('')}
+        </div>
+
+        <label style="display:block; font-weight:700; font-size:0.85rem; margin-bottom:0.3rem">Destinataires</label>
+        <div style="display:flex; gap:0.4rem; margin-bottom:0.9rem; flex-wrap:wrap">
+          ${cibles.map(([v, l]) => `
+            <button onclick="Admin.setAnnonceField('audience', '${v}')"
+                    style="padding:0.45rem 0.85rem; border-radius:999px; font-size:0.82rem; font-weight:700; cursor:pointer;
+                           border:1.5px solid ${f.audience === v ? '#0F5132' : '#e5e7eb'};
+                           background:${f.audience === v ? '#0F5132' : 'white'}; color:${f.audience === v ? 'white' : '#1f2937'}">${l}</button>
+          `).join('')}
+        </div>
+
+        ${f.audience === 'custom' ? `
+          <div style="background:#f9fafb; border:1px solid #e5e7eb; border-radius:10px; padding:0.8rem; margin-bottom:0.9rem">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem">
+              <strong style="font-size:0.85rem">${f.targetUids.length} compte${f.targetUids.length > 1 ? 's' : ''} sélectionné${f.targetUids.length > 1 ? 's' : ''}</strong>
+              <input type="text" class="search-input" placeholder="Rechercher un compte…"
+                     value="${this.escapeHTML(this.state._annonceRecherche || '')}"
+                     oninput="Admin.state._annonceRecherche = this.value; Admin.render()"
+                     style="padding:0.4rem 0.7rem; border:1.5px solid #e5e7eb; border-radius:8px; font-size:0.82rem">
+            </div>
+            <div style="max-height:260px; overflow-y:auto; display:flex; flex-direction:column; gap:0.3rem">
+              ${comptes.length === 0 ? '<div style="color:#6b7280; font-size:0.85rem; padding:0.5rem">Aucun compte trouvé.</div>' : comptes.map(u => {
+                const choisi = f.targetUids.includes(u.id);
+                return `
+                  <div onclick="Admin.toggleAnnonceCible('${u.id}')"
+                       style="display:flex; align-items:center; gap:0.6rem; padding:0.45rem 0.6rem; border-radius:8px; cursor:pointer;
+                              background:${choisi ? '#dcfce7' : 'white'}; border:1px solid ${choisi ? '#16a34a' : '#e5e7eb'}">
+                    <span style="font-size:1rem">${choisi ? '☑' : '☐'}</span>
+                    <div style="flex:1; min-width:0">
+                      <div style="font-weight:600; font-size:0.85rem">${this.escapeHTML(u.name || '')}</div>
+                      <div style="font-size:0.72rem; color:#6b7280">${this.escapeHTML(u.email || u.phone || '')}</div>
+                    </div>
+                    ${u.isPremium ? '<span style="font-size:0.7rem; background:#fef3c7; color:#92400e; padding:0.1rem 0.4rem; border-radius:999px; font-weight:700">Premium</span>' : ''}
+                    ${u.premiumExpire ? '<span style="font-size:0.7rem; background:#fee2e2; color:#991b1b; padding:0.1rem 0.4rem; border-radius:999px; font-weight:700">Expiré</span>' : ''}
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        <div style="display:flex; gap:0.8rem; flex-wrap:wrap; margin-bottom:0.9rem">
+          <div style="flex:1; min-width:180px">
+            <label style="display:block; font-weight:700; font-size:0.85rem; margin-bottom:0.3rem">Début de diffusion</label>
+            <input type="datetime-local" id="annonceDebut" value="${f.startAt}"
+                   style="width:100%; padding:0.6rem; border:1.5px solid #e5e7eb; border-radius:8px; box-sizing:border-box">
+            <div style="font-size:0.72rem; color:#6b7280; margin-top:0.2rem">Vide = immédiatement</div>
+          </div>
+          <div style="flex:1; min-width:180px">
+            <label style="display:block; font-weight:700; font-size:0.85rem; margin-bottom:0.3rem">Fin de diffusion</label>
+            <input type="datetime-local" id="annonceFin" value="${f.endAt}"
+                   style="width:100%; padding:0.6rem; border:1.5px solid #e5e7eb; border-radius:8px; box-sizing:border-box">
+            <div style="font-size:0.72rem; color:#6b7280; margin-top:0.2rem">Vide = sans fin</div>
+          </div>
+        </div>
+
+        <div onclick="Admin.setAnnonceField('active', ${!f.active})"
+             style="display:flex; align-items:center; gap:0.7rem; padding:0.7rem 0.9rem; border-radius:10px; cursor:pointer; margin-bottom:1rem;
+                    background:${f.active ? '#dcfce7' : '#f3f4f6'}; border:1.5px solid ${f.active ? '#16a34a' : '#e5e7eb'}">
+          <span style="font-size:1.2rem">${f.active ? '✅' : '⏸'}</span>
+          <div style="flex:1">
+            <div style="font-weight:700; font-size:0.9rem">${f.active ? 'Diffusion activée' : 'Diffusion désactivée'}</div>
+            <div style="font-size:0.75rem; color:#6b7280">
+              ${f.active ? 'Le bandeau apparaîtra dans l\'application pendant la fenêtre choisie.' : 'L\'annonce est enregistrée mais rien ne s\'affiche.'}
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:0.6rem">
+          <button class="btn btn-primary" onclick="Admin.enregistrerAnnonce()">💾 Enregistrer</button>
+          <button class="btn" onclick="Admin.annulerAnnonce()" style="background:white; border:1.5px solid #e5e7eb">Annuler</button>
+        </div>
+      </div>
+    `;
+  },
+
   renderCodesAdmin() {
     if (!window.ActivationCodes) {
       return '<div class="page-header"><div class="page-title">Codes Premium</div><div class="page-sub">⚠️ Module ActivationCodes non chargé</div></div>';

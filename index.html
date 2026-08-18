@@ -3621,6 +3621,7 @@ img { max-width: 100%; display: block; }
 <script src="data/texts_firestore.js"></script>
 <script src="data/biometric.js"></script>
 <script src="data/weekly_exam.js"></script>
+<script src="data/announcements.js"></script>
 
 <script>
 /* =============================================
@@ -4429,6 +4430,91 @@ const App = {
         <div class="annales-card-arrow">›</div>
       </div>
     `;
+  },
+
+  // ==================================================================
+  // V63.85 : BANDEAU D'ANNONCE
+  // ==================================================================
+  //   Message diffusé par Bara Formation, ciblé selon le statut du candidat.
+  //   Le candidat peut refermer un bandeau qui le gêne ; tant que l'annonce
+  //   est diffusée, une pastille discrète permet de la rouvrir.
+  //
+  //   Rien ne s'affiche tant qu'aucune annonce n'est créée et activée dans
+  //   l'administration : la fonctionnalité est donc inerte par défaut.
+
+  renderAnnonceBanner() {
+    if (!window.Announcements) return '';
+
+    // Chargement + écoute temps réel, une seule fois
+    if (!this.state._annoncesInit && window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady) {
+      this.state._annoncesInit = true;
+      window.Announcements.getAll().then(() => {
+        if (this.state.currentScreen === 'home') this.render();
+      });
+      window.Announcements.listen(() => {
+        if (this.state.currentScreen === 'home') this.render();
+      });
+    }
+
+    const pourMoi = window.Announcements.pourUtilisateur(this.state.user) || [];
+    if (pourMoi.length === 0) return '';
+
+    const visibles = pourMoi.filter(a => !window.Announcements.estMasquee(a.id));
+    const masquees = pourMoi.length - visibles.length;
+
+    let html = visibles.map(a => this.renderUneAnnonce(a)).join('');
+
+    // Pastille de réouverture : le message reste accessible après fermeture
+    if (masquees > 0) {
+      html += `
+        <div onclick="App.reafficherAnnonces()"
+             style="display:inline-flex; align-items:center; gap:0.45rem; margin-bottom:1rem; padding:0.4rem 0.8rem;
+                    background:white; border:1.5px dashed var(--line); border-radius:999px; cursor:pointer;
+                    font-size:0.78rem; font-weight:600; color:var(--ink-soft)">
+          📢 ${masquees} message${masquees > 1 ? 's' : ''} masqué${masquees > 1 ? 's' : ''} — revoir
+        </div>
+      `;
+    }
+    return html;
+  },
+
+  renderUneAnnonce(a) {
+    const styles = {
+      info:    { bord: '#2563eb', fond: 'linear-gradient(135deg,#eff6ff,white)', texte: '#1e3a8a', icone: 'ℹ️' },
+      warning: { bord: '#d97706', fond: 'linear-gradient(135deg,#fffbeb,white)', texte: '#78350f', icone: '⚠️' },
+      urgent:  { bord: '#dc2626', fond: 'linear-gradient(135deg,#fef2f2,white)', texte: '#7f1d1d', icone: '🔴' }
+    };
+    const s = styles[a.level] || styles.info;
+
+    return `
+      <div style="background:${s.fond}; border:1.5px solid ${s.bord}; border-left:4px solid ${s.bord};
+                  border-radius:var(--radius-lg); padding:0.95rem 1.05rem; margin-bottom:1rem;
+                  display:flex; gap:0.8rem; align-items:flex-start">
+        <div style="font-size:1.3rem; flex-shrink:0; line-height:1.2">${s.icone}</div>
+        <div style="flex:1; min-width:0">
+          <div style="font-weight:800; font-size:0.95rem; color:${s.texte}; margin-bottom:0.2rem">
+            ${this.escapeHTML(a.title)}
+          </div>
+          <div style="font-size:0.85rem; color:${s.texte}; line-height:1.5; white-space:pre-wrap">
+            ${this.escapeHTML(a.body)}
+          </div>
+        </div>
+        <button onclick="event.stopPropagation(); App.masquerAnnonce('${a.id}')"
+                aria-label="Masquer ce message"
+                style="background:transparent; border:none; color:${s.texte}; opacity:0.6; font-size:1.1rem;
+                       cursor:pointer; flex-shrink:0; padding:0 0.2rem; line-height:1">✕</button>
+      </div>
+    `;
+  },
+
+  masquerAnnonce(id) {
+    if (window.Announcements) window.Announcements.masquer(id);
+    this.render();
+  },
+
+  reafficherAnnonces() {
+    if (window.Announcements) window.Announcements.reafficherTout();
+    this.render();
   },
 
   renderResumeBanner() {
@@ -6625,6 +6711,7 @@ const App = {
             </div>
           </div>
 
+          ${this.renderAnnonceBanner()}
           ${this.renderResumeBanner()}
           ${this.renderFreemiumStatusBar()}
           ${this.renderSession2026Banner()}

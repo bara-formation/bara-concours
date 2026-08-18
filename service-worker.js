@@ -1,8 +1,9 @@
 // Bara Concours - Service Worker
-// Version 6.3.83 - V63.83 : Mention d'indépendance vis-à-vis de l'administration
-//                  (exigée par Google Play — politique sur les déclarations trompeuses)
+// Version 6.3.85 - V63.85 : Système d'annonces (bandeau ciblé sur l'accueil),
+//                  statut Premium reconstitué depuis les codes dans l'admin,
+//                  numérotation des visiteurs sans compte
 
-const CACHE_NAME = 'bara-concours-v6-3-83';
+const CACHE_NAME = 'bara-concours-v6-3-85';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)
@@ -29,6 +30,7 @@ const OPTIONAL_ASSETS = [
   './data/texts_firestore.js',
   './data/annales.js',
   './data/biometric.js',
+  './data/announcements.js',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/icon-apple.png',
@@ -47,7 +49,7 @@ const OPTIONAL_ASSETS = [
 
 // Installation : d'abord les ressources critiques (atomique), puis les optionnelles (best-effort)
 self.addEventListener('install', event => {
-  console.log('[SW] Installation V6.3.83');
+  console.log('[SW] Installation V6.3.85');
   event.waitUntil(
     caches.open(CACHE_NAME).then(async cache => {
       // 1) Ressources critiques : addAll atomique
@@ -78,7 +80,7 @@ self.addEventListener('install', event => {
 
 // Activation : nettoyage des anciens caches (avec sécurité)
 self.addEventListener('activate', event => {
-  console.log('[SW] Activation V6.3.83');
+  console.log('[SW] Activation V6.3.85');
   event.waitUntil(
     (async () => {
       // Sécurité : vérifier que le nouveau cache contient bien index.html avant de supprimer l'ancien
