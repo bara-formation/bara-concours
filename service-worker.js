@@ -1,9 +1,8 @@
 // Bara Concours - Service Worker
-// Version 6.3.85 - V63.85 : Système d'annonces (bandeau ciblé sur l'accueil),
-//                  statut Premium reconstitué depuis les codes dans l'admin,
-//                  numérotation des visiteurs sans compte
+// Version 6.3.86 - V63.86 : Allègement de l'écran détail d'un concours
+//                  (retrait du calendrier de la session écoulée)
 
-const CACHE_NAME = 'bara-concours-v6-3-85';
+const CACHE_NAME = 'bara-concours-v6-3-86';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)
@@ -49,7 +48,7 @@ const OPTIONAL_ASSETS = [
 
 // Installation : d'abord les ressources critiques (atomique), puis les optionnelles (best-effort)
 self.addEventListener('install', event => {
-  console.log('[SW] Installation V6.3.85');
+  console.log('[SW] Installation V6.3.86');
   event.waitUntil(
     caches.open(CACHE_NAME).then(async cache => {
       // 1) Ressources critiques : addAll atomique
@@ -80,7 +79,7 @@ self.addEventListener('install', event => {
 
 // Activation : nettoyage des anciens caches (avec sécurité)
 self.addEventListener('activate', event => {
-  console.log('[SW] Activation V6.3.85');
+  console.log('[SW] Activation V6.3.86');
   event.waitUntil(
     (async () => {
       // Sécurité : vérifier que le nouveau cache contient bien index.html avant de supprimer l'ancien
