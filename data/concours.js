@@ -267,13 +267,34 @@ const CONCOURS = [
   { id: 'chauffeur', nom: 'Chauffeur', sigle: 'CHAUFF', categorie: 'administration', niveau: 'CEPE', postes: 171, ministere: 'Fonction Publique', description: 'Chauffeur de l\'administration — CEPE + permis B, C, D, E', matieres: ['francais', 'code_route', 'transport', 'cg', 'maths_bepc', 'psycho'], session2026: true, jour: 13, numeroConcours: 108 },
 
   // ============================================================
-  // CONCOURS PAR AUTRES CANAUX D'INSCRIPTION
-  // (Écoles avec inscription directe, hors econcours.gov.bf)
+  // CONCOURS PARAMILITAIRES À ÉPREUVES QCM
+  // ------------------------------------------------------------
+  // Police, Gendarmerie et Sapeurs-Pompiers ont été retirés :
+  // leurs épreuves écrites ne sont pas au format QCM, l'application
+  // ne les prépare donc pas réellement.
+  //
+  // Les six concours ci-dessous, eux, composent bien en QCM :
+  // un test de niveau sur 30 points et une culture générale sur 20,
+  // suivis d'épreuves sportives éliminatoires sous 12/20.
+  // Inscription sur econcours.gov.bf.
   // ============================================================
 
-  { id: 'police', nom: 'Police Nationale', sigle: 'POL', categorie: 'forces', niveau: 'BAC', ministere: 'Sécurité', description: 'Maintien de l\'ordre, sécurité publique — Concours direct Officiers de Police', matieres: ['francais', 'maths_bac', 'cg', 'police', 'psycho'], epreuvesPhysiques: true, autre_canal: true, canal_info: 'Inscription directe à la Direction Générale de la Police Nationale (academiedepolice.bf)' },
-  { id: 'gendarmerie', nom: 'Gendarmerie Nationale', sigle: 'GEND', categorie: 'forces', niveau: 'BAC', ministere: 'Défense', description: 'Sécurité, force militaire à statut civil — Concours direct Officiers', matieres: ['francais', 'maths_bac', 'cg', 'militaire', 'psycho'], epreuvesPhysiques: true, autre_canal: true, canal_info: 'Inscription directe à l\'État-Major de la Gendarmerie' },
-  { id: 'sapeurs', nom: 'Sapeurs-Pompiers', sigle: 'SP', categorie: 'forces', niveau: 'BEPC', ministere: 'Sécurité', description: 'Secours, lutte contre les incendies — Concours direct', matieres: ['francais', 'maths_bepc', 'cg', 'pc_bepc', 'psycho'], epreuvesPhysiques: true, autre_canal: true, canal_info: 'Inscription directe à la Brigade Nationale des Sapeurs-Pompiers' }
+  // --- Sécurité Pénitentiaire (Ministère de la Justice) ---
+  // Écrit 70 % · Sport 30 %
+  { id: 'asp', nom: 'Assistants de Sécurité Pénitentiaire', sigle: 'ASP', categorie: 'forces', niveau: 'BEPC', postes: 500, ministere: 'Justice', description: 'Garde de sécurité pénitentiaire — BEPC, 18 à 25 ans. Écrit en QCM (70 %) et épreuves sportives (30 %). Taille minimale : 170 cm hommes, 166 cm femmes', matieres: ['francais', 'maths_bepc', 'cg', 'penitentiaire', 'psycho'], epreuvesPhysiques: true },
+  { id: 'csp', nom: 'Contrôleurs de Sécurité Pénitentiaire', sigle: 'CSP', categorie: 'forces', niveau: 'BAC', postes: 20, ministere: 'Justice', description: 'Encadrement pénitentiaire — BAC, 18 à 30 ans. Écrit en QCM (70 %) et épreuves sportives (30 %)', matieres: ['francais', 'maths_bac', 'cg', 'penitentiaire', 'psycho'], epreuvesPhysiques: true },
+  { id: 'isp', nom: 'Inspecteurs de Sécurité Pénitentiaire', sigle: 'ISP', categorie: 'forces', niveau: 'LICENCE', postes: 5, ministere: 'Justice', description: 'Corps d\'inspection pénitentiaire — Licence, 18 à 30 ans. Écrit en QCM (70 %) et épreuves sportives (30 %)', matieres: ['francais', 'maths_licence', 'cg', 'penitentiaire', 'legislation', 'psycho'], epreuvesPhysiques: true },
+
+  // --- Eaux et Forêts (Ministère de la Sécurité, école ENEF) ---
+  // Attention : l'écrit ne compte que pour 40 %, le sport pour 60 %
+  { id: 'aef', nom: 'Assistants des Eaux et Forêts', sigle: 'AEF', categorie: 'forces', niveau: 'BEPC', postes: 500, ministere: 'Sécurité', description: 'Agent forestier, formation à l\'ENEF — BEPC, 18 à 28 ans. Écrit en QCM (40 %) et épreuves sportives (60 %)', matieres: ['francais', 'maths_bepc', 'cg', 'environnement', 'psycho'], epreuvesPhysiques: true },
+  { id: 'cef', nom: 'Contrôleurs des Eaux et Forêts', sigle: 'CEF', categorie: 'forces', niveau: 'BAC', postes: 40, ministere: 'Sécurité', description: 'Encadrement forestier, formation à l\'ENEF — BAC, 18 à 37 ans. Écrit en QCM (40 %) et épreuves sportives (60 %)', matieres: ['francais', 'maths_bac', 'cg', 'environnement', 'svt_bac', 'psycho'], epreuvesPhysiques: true },
+  { id: 'ief', nom: 'Inspecteurs des Eaux et Forêts', sigle: 'IEF', categorie: 'forces', niveau: 'LICENCE', postes: 15, ministere: 'Sécurité', description: 'Corps d\'inspection forestière, formation à l\'ENEF — Licence, 18 à 37 ans. Écrit en QCM (40 %) et épreuves sportives (60 %)', matieres: ['francais', 'maths_licence', 'cg', 'environnement', 'svt_licence', 'psycho'], epreuvesPhysiques: true },
+
+  // --- Douanes (Ministère de l'Économie et des Finances, école IFPB) ---
+  // Écrit 70 % · Sport 30 %. À ne pas confondre avec les concours IFPB
+  // cycles A/B/C, qui recrutent aussi des douaniers mais sans épreuve sportive.
+  { id: 'adou', nom: 'Assistants des Douanes', sigle: 'ADOU', categorie: 'forces', niveau: 'BEPC', postes: 20, ministere: 'Économie et Finances', description: 'Agent des douanes, formation à l\'IFPB — BEPC, 18 à 37 ans. Écrit en QCM (70 %) et épreuves sportives (30 %). Acuité visuelle 10/10 sans correction, taille minimale 1,65 m', matieres: ['francais', 'maths_bepc', 'cg', 'douane', 'psycho'], epreuvesPhysiques: true }
 ];
 
 const CATEGORIES_CONCOURS = {
@@ -340,7 +361,6 @@ const DEFAULT_CONCOURS_OVERRIDES = {
   'cons_rh': { added: [], removed: [], hidden: [], greyed: ['rh'] },
   'cons_statistique': { added: [], removed: [], hidden: [], greyed: [] },
   'controleur_travail': { added: [], removed: [], hidden: [], greyed: ['emploifor'] },
-  'gendarmerie': { added: [], removed: [], hidden: [], greyed: ['militaire'] },
   'gestionnaire_sante': { added: [], removed: [], hidden: [], greyed: ['rh'] },
   'ing_genie_civil': { added: [], removed: [], hidden: [], greyed: ['geniecivil', 'pc_licence'] },
   'ing_geometre': { added: [], removed: [], hidden: [], greyed: ['geometre'] },
@@ -351,11 +371,9 @@ const DEFAULT_CONCOURS_OVERRIDES = {
   'insp_education_specialisee': { added: [], removed: [], hidden: [], greyed: ['travailsoc'] },
   'insp_travail': { added: [], removed: [], hidden: [], greyed: ['emploifor'] },
   'instructeur_jeunesse': { added: [], removed: [], hidden: [], greyed: ['jeunesse'] },
-  'police': { added: [], removed: [], hidden: [], greyed: ['police'] },
   'prep_pharmacie': { added: [], removed: [], hidden: [], greyed: ['pharmacie'] },
   'prof_aps': { added: [], removed: [], hidden: [], greyed: ['eps'] },
   'prof_ceg_eps': { added: [], removed: [], hidden: [], greyed: ['eps'] },
-  'sapeurs': { added: [], removed: [], hidden: [], greyed: ['pc_bepc'] },
   'secretaire_affaires_etrangeres': { added: [], removed: [], hidden: [], greyed: ['diplo', 'secretariat'] },
   'tech_assistance_reeducation': { added: [], removed: [], hidden: [], greyed: ['eps'] },
   'tech_biomedical': { added: [], removed: [], hidden: [], greyed: ['electricite', 'biomedical'] },
