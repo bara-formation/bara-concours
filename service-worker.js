@@ -1,9 +1,8 @@
 // Bara Concours - Service Worker
-// Version 6.3.87 - V63.87 : Catégorie Forces de Défense & Sécurité recentrée
-//                  sur les concours à épreuves QCM (sécurité pénitentiaire,
-//                  eaux et forêts) — retrait de Police, Gendarmerie, Sapeurs-Pompiers
+// Version 6.3.88 - V63.88 : Ajout des Assistants des Douanes et retrait des
+//                  pastilles « J1 / J2 » (jour de composition de la session écoulée)
 
-const CACHE_NAME = 'bara-concours-v6-3-87';
+const CACHE_NAME = 'bara-concours-v6-3-88';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)
@@ -49,7 +48,7 @@ const OPTIONAL_ASSETS = [
 
 // Installation : d'abord les ressources critiques (atomique), puis les optionnelles (best-effort)
 self.addEventListener('install', event => {
-  console.log('[SW] Installation V6.3.87');
+  console.log('[SW] Installation V6.3.88');
   event.waitUntil(
     caches.open(CACHE_NAME).then(async cache => {
       // 1) Ressources critiques : addAll atomique
@@ -80,7 +79,7 @@ self.addEventListener('install', event => {
 
 // Activation : nettoyage des anciens caches (avec sécurité)
 self.addEventListener('activate', event => {
-  console.log('[SW] Activation V6.3.87');
+  console.log('[SW] Activation V6.3.88');
   event.waitUntil(
     (async () => {
       // Sécurité : vérifier que le nouveau cache contient bien index.html avant de supprimer l'ancien

@@ -6756,7 +6756,6 @@ const App = {
 
   renderConcoursCard(c) {
     const cat = CATEGORIES_CONCOURS[c.categorie];
-    const isOfficiel = c.session2026 === true;
     const isAutreCanal = c.autre_canal === true;
     return `
       <div class="concours-card ${isAutreCanal ? 'autre-canal' : ''} ${this.state.lastConcoursId === c.id ? 'is-last-visited' : ''}" onclick="App.openConcours('${c.id}')" style="--cat-color:${cat.couleur}; --cat-color-light:${cat.couleur}15">
@@ -6764,7 +6763,6 @@ const App = {
         <div class="concours-info">
           <div class="concours-title">
             ${c.nom}
-            ${isOfficiel && c.jour ? `<span class="concours-badge-jour">J${c.jour}</span>` : ''}
             ${isAutreCanal ? '<span class="concours-badge-canal">École</span>' : ''}
             ${this.state.lastConcoursId === c.id ? '<span class="concours-badge-reprendre">Reprendre</span>' : ''}
           </div>
