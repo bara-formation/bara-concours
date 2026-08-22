@@ -3771,6 +3771,8 @@ const App = {
     const goingToForum = ['forum', 'forum-topic', 'forum-create'].includes(screen);
     if (wasInForum && !goingToForum) {
       this.stopForumLiveSync();
+      this.state._forumMenu = null;   // V63.91
+      this.state._forumEdit = null;
     }
     // V63.29 : Idem pour les sessions Accompagnement Final
     const wasInSessions = ['annales', 'session-view', 'session-exam'].includes(this.state.currentScreen);
@@ -3856,6 +3858,14 @@ const App = {
     // Modal biométrique en superposition (si proposition active)
     if (this.state.showBiometricPrompt) {
       html += this.renderBiometricPrompt();
+    }
+
+    // V63.91 : menu contextuel et fenêtre de modification du forum
+    if (this.state._forumMenu) {
+      html += this.renderForumMenu();
+    }
+    if (this.state._forumEdit) {
+      html += this.renderForumEdit();
     }
 
     // Modal de limite freemium atteinte
@@ -10056,6 +10066,7 @@ const App = {
         authorId: t.authorUid,
         authorUid: t.authorUid,        // V63.89
         isDeleted: t.isDeleted === true, // V63.90
+        editedAt: t.editedAt || null,    // V63.91
         authorName: t.authorName,
         authorIsPremium: t.authorIsPremium,
         authorCity: '',
@@ -11759,6 +11770,7 @@ const App = {
         authorIsPremium: r.authorIsPremium,
         body: r.body,
         isDeleted: r.isDeleted === true, // V63.90
+        editedAt: r.editedAt || null,    // V63.91
         timestamp: r.createdAt
       }));
       // Re-render si on est encore sur ce topic
@@ -11782,11 +11794,15 @@ const App = {
           body: ft.body,
           authorUid: ft.authorUid,      // V63.89
           isDeleted: ft.isDeleted === true, // V63.90
+          editedAt: ft.editedAt || null,    // V63.91
           authorName: ft.authorName,
           authorCity: '',
           authorIsPremium: ft.authorIsPremium,
           timestamp: ft.createdAt,
-          upvotes: 0,
+          // V63.92 : le compteur était écrit en dur à 0. Un candidat qui
+          //   ouvrait une discussion aimée par quatre personnes voyait « 0 »,
+          //   et son propre like semblait ne rien changer.
+          upvotes: ft.likesCount || 0,
           replyCount: ft.repliesCount,
           replies: this.state._currentTopicReplies || []
         };
@@ -11822,7 +11838,8 @@ const App = {
         </header>
 
         <div class="content mt-overlap">
-          <div class="topic-detail-card ${this.estMonMessage(topic.authorUid) ? 'topic-mine' : ''}">
+          <div class="topic-detail-card ${this.estMonMessage(topic.authorUid) ? 'topic-mine' : ''}"
+               ${this.estMonMessage(topic.authorUid) && !topic.isDeleted ? this._attrsPress('topic', topic.id, '', topic.authorUid) : ''}>
             <div class="topic-head">
               <div class="avatar" style="background:${this.estMonMessage(topic.authorUid) ? 'var(--green-bf)' : color}">${initials}</div>
               <div class="author-info">
@@ -11830,7 +11847,7 @@ const App = {
                   ${this.estMonMessage(topic.authorUid) ? 'Vous' : this.escapeHTML(topic.authorName || '')}
                   ${topic.authorIsPremium ? '<span class="premium-badge-mini">⭐ PRO</span>' : ''}
                 </div>
-                <div class="topic-meta">${topic.authorCity ? topic.authorCity + ' • ' : ''}${time}</div>
+                <div class="topic-meta">${topic.authorCity ? topic.authorCity + ' • ' : ''}${time}${topic.editedAt ? ' · modifié' : ''}</div>
               </div>
             </div>
             <div class="topic-detail-title">${topic.isDeleted
@@ -11845,8 +11862,8 @@ const App = {
               </button>
               <div class="topic-stat">💬 ${replies.length}</div>
               ${this.estMonMessage(topic.authorUid) && !topic.isDeleted ? `
-                <button class="topic-stat" onclick="App.supprimerMonSujet('${topic.id}')" style="margin-left:auto; color:var(--danger)">
-                  🗑 Supprimer
+                <button class="topic-stat" onclick="App.ouvrirMenuMessage('topic','${topic.id}','','${topic.authorUid || ''}')" style="margin-left:auto; color:var(--ink-mute); font-size:1.1rem; letter-spacing:1px">
+                  ⋯
                 </button>
               ` : `
                 <button class="topic-stat" onclick="App.reportTopic('${topic.id}')" style="margin-left:auto; color:var(--ink-mute)">
@@ -11886,6 +11903,149 @@ const App = {
   // ==================================================================
   // V63.89 : RECONNAÎTRE ET SUPPRIMER SES PROPRES MESSAGES
   // ==================================================================
+
+  // ==================================================================
+  // V63.91 : MENU CONTEXTUEL SUR SES PROPRES MESSAGES
+  // ==================================================================
+  //   Une corbeille affichée en permanence invite à supprimer. On passe
+  //   par un appui long (téléphone) ou un clic droit (ordinateur), qui
+  //   ouvre une petite feuille d'actions : Modifier ou Supprimer.
+
+  _pressStart(type, id, replyId, authorUid) {
+    this._annulerPress();
+    this._pressTimer = setTimeout(() => {
+      this._pressTimer = null;
+      if (navigator.vibrate) { try { navigator.vibrate(15); } catch(e) {} }
+      this.ouvrirMenuMessage(type, id, replyId, authorUid);
+    }, 500);
+  },
+
+  _annulerPress() {
+    if (this._pressTimer) { clearTimeout(this._pressTimer); this._pressTimer = null; }
+  },
+
+  ouvrirMenuMessage(type, id, replyId, authorUid) {
+    this.state._forumMenu = { type, id, replyId: replyId || null, authorUid: authorUid || '' };
+    this.render();
+  },
+
+  fermerMenuMessage() {
+    this.state._forumMenu = null;
+    this.render();
+  },
+
+  renderForumMenu() {
+    const m = this.state._forumMenu;
+    if (!m) return '';
+    const estSujet = m.type === 'topic';
+    return `
+      <div class="modal-overlay" onclick="App.fermerMenuMessage()">
+        <div class="modal" onclick="event.stopPropagation()" style="padding-bottom:1.4rem">
+          <div class="modal-handle"></div>
+          <div style="font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; color:var(--ink-mute); text-align:center; margin-bottom:1rem">
+            ${estSujet ? 'Votre message' : 'Votre réponse'}
+          </div>
+          <button onclick="App.ouvrirEditionMessage()"
+                  style="width:100%; display:flex; align-items:center; gap:0.9rem; padding:0.95rem 1rem; background:white; border:1px solid var(--line); border-radius:var(--radius); margin-bottom:0.6rem; font-size:0.95rem; font-weight:600; color:var(--ink); cursor:pointer">
+            <span style="font-size:1.2rem">✏️</span> Modifier
+          </button>
+          <button onclick="App.confirmerSuppressionMessage()"
+                  style="width:100%; display:flex; align-items:center; gap:0.9rem; padding:0.95rem 1rem; background:white; border:1px solid #fecaca; border-radius:var(--radius); margin-bottom:0.9rem; font-size:0.95rem; font-weight:600; color:var(--danger); cursor:pointer">
+            <span style="font-size:1.2rem">🗑</span> Supprimer
+          </button>
+          <button onclick="App.fermerMenuMessage()"
+                  style="width:100%; padding:0.8rem; background:transparent; border:none; color:var(--ink-mute); font-size:0.9rem; font-weight:600; cursor:pointer">
+            Annuler
+          </button>
+        </div>
+      </div>
+    `;
+  },
+
+  confirmerSuppressionMessage() {
+    const m = this.state._forumMenu;
+    if (!m) return;
+    this.state._forumMenu = null;
+    if (m.type === 'topic') this.supprimerMonSujet(m.id);
+    else this.supprimerMaReponse(m.replyId, m.authorUid);
+  },
+
+  // --- Modification ---
+  ouvrirEditionMessage() {
+    const m = this.state._forumMenu;
+    if (!m) return;
+    if (m.type === 'topic') {
+      const t = this.getForumTopics().find(x => x.id === m.id);
+      if (!t) { this.toast('Message introuvable'); return; }
+      this.state._forumEdit = { type: 'topic', id: m.id, title: t.title || '', body: t.body || '' };
+    } else {
+      const r = (this.state._currentTopicReplies || []).find(x => x.id === m.replyId);
+      if (!r) { this.toast('Réponse introuvable'); return; }
+      this.state._forumEdit = { type: 'reply', id: m.replyId, authorUid: m.authorUid, body: r.body || '' };
+    }
+    this.state._forumMenu = null;
+    this.render();
+  },
+
+  fermerEditionMessage() {
+    this.state._forumEdit = null;
+    this.render();
+  },
+
+  renderForumEdit() {
+    const e = this.state._forumEdit;
+    if (!e) return '';
+    const estSujet = e.type === 'topic';
+    return `
+      <div class="modal-overlay" onclick="App.fermerEditionMessage()">
+        <div class="modal" onclick="event.stopPropagation()">
+          <div class="modal-handle"></div>
+          <div class="modal-title">Modifier ${estSujet ? 'le message' : 'la réponse'}</div>
+          ${estSujet ? `
+            <label class="auth-label" style="display:block; margin-bottom:0.3rem">Titre</label>
+            <input type="text" id="editTopicTitle" class="composer-input" maxlength="150" value="${this.escapeHTML(e.title)}">
+          ` : ''}
+          <label class="auth-label" style="display:block; margin-bottom:0.3rem">Message</label>
+          <textarea id="editTopicBody" class="composer-textarea" maxlength="${estSujet ? 2500 : 1500}" style="min-height:120px">${this.escapeHTML(e.body)}</textarea>
+          <div class="modal-actions">
+            <button class="btn-secondary" onclick="App.fermerEditionMessage()">Annuler</button>
+            <button class="btn-primary" onclick="App.enregistrerEditionMessage()">Enregistrer</button>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  async enregistrerEditionMessage() {
+    const e = this.state._forumEdit;
+    if (!e) return;
+    const corps = (document.getElementById('editTopicBody') || {}).value || '';
+    let r;
+    if (e.type === 'topic') {
+      const titre = (document.getElementById('editTopicTitle') || {}).value || '';
+      r = await window.ForumFirestore.editMyTopic(e.id, titre, corps);
+    } else {
+      r = await window.ForumFirestore.editMyReply(this.state.currentTopicId, e.id, corps, e.authorUid);
+    }
+    if (r.success) {
+      this.state._forumEdit = null;
+      this.toast('✓ Message modifié');
+      if (e.type === 'topic') await window.ForumFirestore.getAllTopics();
+      this.render();
+    } else {
+      this.toast('❌ ' + (r.error || 'Modification impossible'), 'danger', 4000);
+    }
+  },
+
+  /** Attributs d'écoute de l'appui long, à poser sur une carte de message. */
+  _attrsPress(type, id, replyId, authorUid) {
+    const args = `'${type}','${id}','${replyId || ''}','${authorUid || ''}'`;
+    return `oncontextmenu="event.preventDefault(); App.ouvrirMenuMessage(${args}); return false;"`
+      + ` ontouchstart="App._pressStart(${args})"`
+      + ` ontouchend="App._annulerPress()"`
+      + ` ontouchmove="App._annulerPress()"`
+      + ` ontouchcancel="App._annulerPress()"`;
+  },
 
   /** Identifiant du compte actuellement connecté, quelle que soit la source. */
   monUid() {
@@ -11936,7 +12096,8 @@ const App = {
     const aMoi = this.estMonMessage(reply.authorUid);
 
     return `
-      <div class="reply-card ${aMoi ? 'reply-mine' : ''}">
+      <div class="reply-card ${aMoi ? 'reply-mine' : ''}"
+           ${aMoi && !reply.isDeleted ? this._attrsPress('reply', this.state.currentTopicId, reply.id, reply.authorUid) : ''}>
         <div class="topic-head" style="margin-bottom:0">
           <div class="avatar" style="background:${aMoi ? 'var(--green-bf)' : color}; width:30px; height:30px; font-size:0.72rem">${initials}</div>
           <div class="author-info">
@@ -11944,12 +12105,12 @@ const App = {
               ${aMoi ? 'Vous' : this.escapeHTML(reply.authorName || '')}
               ${reply.authorIsPremium ? '<span class="premium-badge-mini">⭐ PRO</span>' : ''}
             </div>
-            <div class="topic-meta">${time}</div>
+            <div class="topic-meta">${time}${reply.editedAt ? ' · modifié' : ''}</div>
           </div>
           ${aMoi && !reply.isDeleted ? `
-            <button onclick="event.stopPropagation(); App.supprimerMaReponse('${reply.id}', '${reply.authorUid || ''}')"
-                    aria-label="Supprimer ma réponse"
-                    style="background:transparent; border:none; color:var(--ink-mute); font-size:0.95rem; cursor:pointer; padding:0 0.2rem; flex-shrink:0">🗑</button>
+            <button onclick="event.stopPropagation(); App.ouvrirMenuMessage('reply','${this.state.currentTopicId}','${reply.id}','${reply.authorUid || ''}')"
+                    aria-label="Actions sur ma réponse"
+                    style="background:transparent; border:none; color:var(--ink-light); font-size:1.1rem; cursor:pointer; padding:0 0.3rem; flex-shrink:0; letter-spacing:1px">⋯</button>
           ` : ''}
         </div>
         <div class="reply-text">${reply.isDeleted
