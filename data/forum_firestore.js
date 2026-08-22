@@ -157,7 +157,8 @@ const ForumFirestore = {
           isPinned: data.isPinned || false,
           isHidden: data.isHidden || false,
           isDeleted: data.isDeleted === true,
-          deletedAt: data.deletedAt || null
+          deletedAt: data.deletedAt || null,
+          editedAt: data.editedAt || null
         });
       });
       // Pinned en premier, puis par date
@@ -226,7 +227,8 @@ const ForumFirestore = {
           isPinned: data.isPinned || false,
           isHidden: data.isHidden || false,
           isDeleted: data.isDeleted === true,
-          deletedAt: data.deletedAt || null
+          deletedAt: data.deletedAt || null,
+          editedAt: data.editedAt || null
         });
       });
       topics.sort((a, b) => {
@@ -324,7 +326,8 @@ const ForumFirestore = {
           createdAt: data.createdAt ? (data.createdAt.toMillis ? data.createdAt.toMillis() : data.createdAt) : Date.now(),
           isHidden: data.isHidden || false,
           isDeleted: data.isDeleted === true,
-          deletedAt: data.deletedAt || null
+          deletedAt: data.deletedAt || null,
+          editedAt: data.editedAt || null
         });
       });
       this._persistReplies(topicId, replies);   // V63.89
@@ -362,7 +365,8 @@ const ForumFirestore = {
           createdAt: data.createdAt ? (data.createdAt.toMillis ? data.createdAt.toMillis() : data.createdAt) : Date.now(),
           isHidden: data.isHidden || false,
           isDeleted: data.isDeleted === true,
-          deletedAt: data.deletedAt || null
+          deletedAt: data.deletedAt || null,
+          editedAt: data.editedAt || null
         });
       });
       this._persistReplies(topicId, replies);   // V63.89
@@ -434,6 +438,62 @@ const ForumFirestore = {
   /**
    * Supprime un topic (admin uniquement)
    */
+  /**
+   * V63.91 : modification par l'auteur.
+   *   Sans possibilité de corriger, un candidat qui repère une faute ou une
+   *   erreur n'a d'autre choix que de supprimer et republier — ce qui perd
+   *   les réponses déjà reçues.
+   */
+  async editMyTopic(topicId, title, body) {
+    if (!this._isReady() || !topicId) return { success: false, error: 'Firebase non prêt' };
+    const user = window.FirebaseAuth.user;
+    if (!user) return { success: false, error: 'Authentification requise' };
+    const t = (this._topicsCache || []).find(x => x.id === topicId);
+    if (t && t.authorUid && t.authorUid !== user.uid) {
+      return { success: false, error: 'Vous ne pouvez modifier que vos propres messages' };
+    }
+    const ti = (title || '').trim(), bo = (body || '').trim();
+    if (ti.length < 10 || ti.length > 150) return { success: false, error: 'Le titre doit faire entre 10 et 150 caractères' };
+    if (bo.length < 20 || bo.length > 2500) return { success: false, error: 'Le message doit faire entre 20 et 2500 caractères' };
+    try {
+      const fns = this._fns();
+      await fns.updateDoc(fns.doc(this._db(), this.COLLECTION_TOPICS, topicId), {
+        title: ti, body: bo, editedAt: Date.now()
+      });
+      if (this._topicsCache) {
+        this._topicsCache = this._topicsCache.map(x =>
+          x.id === topicId ? { ...x, title: ti, body: bo, editedAt: Date.now() } : x);
+        this._persistTopics(this._topicsCache);
+      }
+      return { success: true };
+    } catch (e) {
+      console.error('[ForumFirestore] editMyTopic:', e);
+      return { success: false, error: e.message };
+    }
+  },
+
+  async editMyReply(topicId, replyId, body, authorUid) {
+    if (!this._isReady() || !topicId || !replyId) return { success: false, error: 'Firebase non prêt' };
+    const user = window.FirebaseAuth.user;
+    if (!user) return { success: false, error: 'Authentification requise' };
+    if (authorUid && authorUid !== user.uid) {
+      return { success: false, error: 'Vous ne pouvez modifier que vos propres messages' };
+    }
+    const bo = (body || '').trim();
+    if (bo.length < 1 || bo.length > 1500) return { success: false, error: 'La réponse doit faire entre 1 et 1500 caractères' };
+    try {
+      const fns = this._fns();
+      await fns.updateDoc(
+        fns.doc(this._db(), this.COLLECTION_REPLIES, topicId, 'replies', replyId),
+        { body: bo, editedAt: Date.now() }
+      );
+      return { success: true };
+    } catch (e) {
+      console.error('[ForumFirestore] editMyReply:', e);
+      return { success: false, error: e.message };
+    }
+  },
+
   /**
    * V63.89 : suppression par l'auteur lui-même.
    *   Un candidat qui publiait un message n'avait plus aucun moyen de le
@@ -634,15 +694,25 @@ const ForumFirestore = {
       const likeSnap = await fns.getDoc(likeRef);
       const topicRef = fns.doc(this._db(), this.COLLECTION_TOPICS, topicId);
 
+      // V63.92 : compteur mis à jour de façon atomique.
+      //   L'ancienne version lisait le compteur puis réécrivait la valeur.
+      //   Deux candidats aimant la même publication au même moment lisaient
+      //   la même valeur de départ : un des deux likes était perdu.
+      //   increment() est appliqué côté serveur, sans lecture préalable.
+      const inc = fns.increment;
+
       if (likeSnap.exists()) {
         // L'utilisateur a déjà liké → enlever le like
         await fns.deleteDoc(likeRef);
-        // Décrémenter le compteur
         try {
-          const topicSnap = await fns.getDoc(topicRef);
-          if (topicSnap.exists()) {
-            const current = topicSnap.data().likesCount || 0;
-            await fns.updateDoc(topicRef, { likesCount: Math.max(0, current - 1) });
+          if (typeof inc === 'function') {
+            await fns.updateDoc(topicRef, { likesCount: inc(-1) });
+          } else {
+            const topicSnap = await fns.getDoc(topicRef);
+            if (topicSnap.exists()) {
+              const current = topicSnap.data().likesCount || 0;
+              await fns.updateDoc(topicRef, { likesCount: Math.max(0, current - 1) });
+            }
           }
         } catch(e) { console.warn('[likes] decrement:', e); }
         return { success: true, liked: false };
@@ -653,12 +723,15 @@ const ForumFirestore = {
           authorName: userInfo.authorName,
           createdAt: fns.serverTimestamp()
         });
-        // Incrémenter le compteur
         try {
-          const topicSnap = await fns.getDoc(topicRef);
-          if (topicSnap.exists()) {
-            const current = topicSnap.data().likesCount || 0;
-            await fns.updateDoc(topicRef, { likesCount: current + 1 });
+          if (typeof inc === 'function') {
+            await fns.updateDoc(topicRef, { likesCount: inc(1) });
+          } else {
+            const topicSnap = await fns.getDoc(topicRef);
+            if (topicSnap.exists()) {
+              const current = topicSnap.data().likesCount || 0;
+              await fns.updateDoc(topicRef, { likesCount: current + 1 });
+            }
           }
         } catch(e) { console.warn('[likes] increment:', e); }
         return { success: true, liked: true };
@@ -716,7 +789,8 @@ const ForumFirestore = {
           isPinned: data.isPinned || false,
           isHidden: data.isHidden || false,
           isDeleted: data.isDeleted === true,
-          deletedAt: data.deletedAt || null
+          deletedAt: data.deletedAt || null,
+          editedAt: data.editedAt || null
         });
       });
       return { success: true, topics };
