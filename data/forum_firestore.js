@@ -54,8 +54,82 @@ const ForumFirestore = {
    * Récupère tous les topics du forum (les plus récents en premier)
    * @returns {Promise<{success, topics, error}>}
    */
+  // ==================================================================
+  // V63.89 : PERSISTANCE LOCALE — le forum survit à la coupure réseau
+  // ==================================================================
+  //   Le service ne gardait ses données qu'en mémoire vive. Dès que la
+  //   connexion tombait — ou simplement à la réouverture de l'application
+  //   hors réseau — le cache était vide et le forum apparaissait désert :
+  //   impossible de relire ne serait-ce qu'un ancien message.
+  //
+  //   Les sujets et les réponses sont désormais recopiés dans le stockage
+  //   du téléphone à chaque chargement. Le forum reste consultable hors
+  //   connexion, en lecture seule.
+
+  LOCAL_TOPICS_KEY: 'bara_forum_topics_cache',
+  LOCAL_REPLIES_KEY: 'bara_forum_replies_cache',
+
+  _persistTopics(topics) {
+    try {
+      localStorage.setItem(this.LOCAL_TOPICS_KEY, JSON.stringify({ topics, savedAt: Date.now() }));
+    } catch (e) { /* quota dépassé : non bloquant */ }
+  },
+
+  loadPersistedTopics() {
+    try {
+      const raw = localStorage.getItem(this.LOCAL_TOPICS_KEY);
+      if (!raw) return null;
+      const parsed = JSON.parse(raw);
+      return Array.isArray(parsed.topics) ? parsed.topics : null;
+    } catch (e) { return null; }
+  },
+
+  _persistReplies(topicId, replies) {
+    try {
+      const raw = localStorage.getItem(this.LOCAL_REPLIES_KEY);
+      const all = raw ? (JSON.parse(raw) || {}) : {};
+      all[topicId] = { replies, savedAt: Date.now() };
+      // On ne garde que les 20 discussions les plus récemment consultées
+      const cles = Object.keys(all).sort((a, b) => (all[b].savedAt || 0) - (all[a].savedAt || 0));
+      const garde = {};
+      cles.slice(0, 20).forEach(k => garde[k] = all[k]);
+      localStorage.setItem(this.LOCAL_REPLIES_KEY, JSON.stringify(garde));
+    } catch (e) { /* non bloquant */ }
+  },
+
+  loadPersistedReplies(topicId) {
+    try {
+      const raw = localStorage.getItem(this.LOCAL_REPLIES_KEY);
+      if (!raw) return null;
+      const all = JSON.parse(raw) || {};
+      const e = all[topicId];
+      return e && Array.isArray(e.replies) ? e.replies : null;
+    } catch (e) { return null; }
+  },
+
+  /**
+   * Restaure le cache mémoire depuis le stockage local.
+   * Appelé au chargement du module, pour que le forum s'affiche
+   * immédiatement même sans réseau.
+   */
+  _initFromLocalStorage() {
+    if (this._topicsCache) return;
+    const p = this.loadPersistedTopics();
+    if (p && p.length > 0) {
+      this._topicsCache = p;
+      console.log('[ForumFirestore] ✓ ' + p.length + ' sujet(s) restauré(s) hors connexion');
+    }
+  },
+
   async getAllTopics() {
+    this._initFromLocalStorage();
     if (!this._isReady()) {
+      // V63.89 : hors connexion → servir la dernière copie enregistrée
+      const p = this.loadPersistedTopics();
+      if (p && p.length > 0) {
+        this._topicsCache = p;
+        return { success: true, topics: p, fromCache: true, offline: true };
+      }
       return { success: false, topics: [], error: 'Firebase non prêt' };
     }
     try {
@@ -81,7 +155,9 @@ const ForumFirestore = {
           repliesCount: data.repliesCount || 0,
           likesCount: data.likesCount || 0,  // V63.25 : Lire le compteur de likes
           isPinned: data.isPinned || false,
-          isHidden: data.isHidden || false
+          isHidden: data.isHidden || false,
+          isDeleted: data.isDeleted === true,
+          deletedAt: data.deletedAt || null
         });
       });
       // Pinned en premier, puis par date
@@ -92,10 +168,17 @@ const ForumFirestore = {
       // Mettre en cache
       this._topicsCache = topics;
       this._topicsCacheTime = Date.now();
+      this._persistTopics(topics);   // V63.89
       return { success: true, topics };
     } catch (e) {
       console.error('[ForumFirestore] getAllTopics:', e);
-      return { success: false, topics: this._topicsCache || [], error: e.message };
+      // V63.89 : réseau tombé en cours de route → dernière copie connue
+      const secours = this._topicsCache || this.loadPersistedTopics() || [];
+      if (secours.length > 0) {
+        this._topicsCache = secours;
+        return { success: true, topics: secours, fromCache: true, error: e.message };
+      }
+      return { success: false, topics: [], error: e.message };
     }
   },
 
@@ -141,7 +224,9 @@ const ForumFirestore = {
           repliesCount: data.repliesCount || 0,
           likesCount: data.likesCount || 0,  // V63.25 : Lire le compteur de likes
           isPinned: data.isPinned || false,
-          isHidden: data.isHidden || false
+          isHidden: data.isHidden || false,
+          isDeleted: data.isDeleted === true,
+          deletedAt: data.deletedAt || null
         });
       });
       topics.sort((a, b) => {
@@ -150,6 +235,7 @@ const ForumFirestore = {
       });
       this._topicsCache = topics;
       this._topicsCacheTime = Date.now();
+      this._persistTopics(topics);   // V63.89
       try { callback(topics); } catch(e) { console.error('[ForumFirestore] callback err:', e); }
     }, (error) => {
       console.error('[ForumFirestore] listenToTopics error:', error);
@@ -212,6 +298,9 @@ const ForumFirestore = {
    */
   async getReplies(topicId) {
     if (!this._isReady() || !topicId) {
+      // V63.89 : hors connexion → dernière copie enregistrée
+      const p = this.loadPersistedReplies(topicId);
+      if (p) return { success: true, replies: p, fromCache: true, offline: true };
       return { success: false, replies: [], error: 'Firebase non prêt' };
     }
     try {
@@ -233,12 +322,17 @@ const ForumFirestore = {
           authorName: data.authorName || 'Anonyme',
           authorIsPremium: data.authorIsPremium || false,
           createdAt: data.createdAt ? (data.createdAt.toMillis ? data.createdAt.toMillis() : data.createdAt) : Date.now(),
-          isHidden: data.isHidden || false
+          isHidden: data.isHidden || false,
+          isDeleted: data.isDeleted === true,
+          deletedAt: data.deletedAt || null
         });
       });
+      this._persistReplies(topicId, replies);   // V63.89
       return { success: true, replies };
     } catch (e) {
       console.error('[ForumFirestore] getReplies:', e);
+      const p = this.loadPersistedReplies(topicId);
+      if (p) return { success: true, replies: p, fromCache: true, error: e.message };
       return { success: false, replies: [], error: e.message };
     }
   },
@@ -266,9 +360,12 @@ const ForumFirestore = {
           authorName: data.authorName || 'Anonyme',
           authorIsPremium: data.authorIsPremium || false,
           createdAt: data.createdAt ? (data.createdAt.toMillis ? data.createdAt.toMillis() : data.createdAt) : Date.now(),
-          isHidden: data.isHidden || false
+          isHidden: data.isHidden || false,
+          isDeleted: data.isDeleted === true,
+          deletedAt: data.deletedAt || null
         });
       });
+      this._persistReplies(topicId, replies);   // V63.89
       try { callback(replies); } catch(e) { console.error('[ForumFirestore] callback err:', e); }
     }, (error) => {
       console.error('[ForumFirestore] listenToReplies error:', error);
@@ -337,6 +434,72 @@ const ForumFirestore = {
   /**
    * Supprime un topic (admin uniquement)
    */
+  /**
+   * V63.89 : suppression par l'auteur lui-même.
+   *   Un candidat qui publiait un message n'avait plus aucun moyen de le
+   *   retirer — même en cas d'erreur ou de doublon. Il devait écrire à
+   *   l'administrateur. La suppression reste en cascade sur les réponses.
+   *
+   *   Le contrôle réel est fait par les règles Firestore ; la vérification
+   *   ci-dessous ne sert qu'à afficher un message clair côté application.
+   */
+  async deleteMyTopic(topicId) {
+    if (!this._isReady() || !topicId) return { success: false, error: 'Firebase non prêt' };
+    const user = window.FirebaseAuth.user;
+    if (!user) return { success: false, error: 'Authentification requise' };
+    const t = (this._topicsCache || []).find(x => x.id === topicId);
+    if (t && t.authorUid && t.authorUid !== user.uid) {
+      return { success: false, error: 'Vous ne pouvez supprimer que vos propres messages' };
+    }
+    // V63.90 : on ne détruit pas le document, on le marque supprimé.
+    //   Effacer un sujet emportait toutes les réponses reçues : une
+    //   discussion utile à dix personnes disparaissait parce que son auteur
+    //   se ravisait. Le fil survit, le contenu s'efface.
+    try {
+      const fns = this._fns();
+      await fns.updateDoc(fns.doc(this._db(), this.COLLECTION_TOPICS, topicId), {
+        isDeleted: true,
+        deletedAt: Date.now(),
+        title: '',
+        body: ''
+      });
+      if (this._topicsCache) {
+        this._topicsCache = this._topicsCache.map(x =>
+          x.id === topicId ? { ...x, isDeleted: true, title: '', body: '' } : x);
+        this._persistTopics(this._topicsCache);
+      }
+      return { success: true };
+    } catch (e) {
+      console.error('[ForumFirestore] deleteMyTopic:', e);
+      return { success: false, error: e.message };
+    }
+  },
+
+  /**
+   * V63.89 : suppression d'une de ses propres réponses.
+   */
+  async deleteMyReply(topicId, replyId, authorUid) {
+    if (!this._isReady() || !topicId || !replyId) return { success: false, error: 'Firebase non prêt' };
+    const user = window.FirebaseAuth.user;
+    if (!user) return { success: false, error: 'Authentification requise' };
+    if (authorUid && authorUid !== user.uid) {
+      return { success: false, error: 'Vous ne pouvez supprimer que vos propres messages' };
+    }
+    // V63.90 : trace conservée, comme pour les sujets. Le compteur de
+    //   réponses n'est pas décrémenté : la réponse existe toujours dans le fil.
+    try {
+      const fns = this._fns();
+      await fns.updateDoc(
+        fns.doc(this._db(), this.COLLECTION_REPLIES, topicId, 'replies', replyId),
+        { isDeleted: true, deletedAt: Date.now(), body: '' }
+      );
+      return { success: true };
+    } catch (e) {
+      console.error('[ForumFirestore] deleteMyReply:', e);
+      return { success: false, error: e.message };
+    }
+  },
+
   async deleteTopic(topicId) {
     if (!this._isReady() || !topicId) {
       return { success: false, error: 'Firebase non prêt' };
@@ -551,7 +714,9 @@ const ForumFirestore = {
           repliesCount: data.repliesCount || 0,
           likesCount: data.likesCount || 0,
           isPinned: data.isPinned || false,
-          isHidden: data.isHidden || false
+          isHidden: data.isHidden || false,
+          isDeleted: data.isDeleted === true,
+          deletedAt: data.deletedAt || null
         });
       });
       return { success: true, topics };
@@ -639,4 +804,9 @@ const ForumFirestore = {
 // Export global
 if (typeof window !== 'undefined') {
   window.ForumFirestore = ForumFirestore;
+  // V63.89 : restaurer immédiatement la dernière copie connue, pour que le
+  //   forum s'affiche même si l'application démarre sans réseau.
+  try { ForumFirestore._initFromLocalStorage(); } catch(e) {
+    console.warn('[ForumFirestore] restauration hors connexion :', e);
+  }
 }
