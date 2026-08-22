@@ -3483,6 +3483,17 @@ img { max-width: 100%; display: block; }
   margin-bottom: 0.5rem;
   border: 1px solid var(--line-soft);
 }
+/* V63.89 : messages du candidat lui-même, à la manière d'une messagerie */
+.reply-card.reply-mine {
+  background: #e7f6ec;
+  border-color: #b7e2c6;
+  margin-left: 1.6rem;
+}
+.reply-card.reply-mine .reply-text { color: #14532d; }
+.topic-detail-card.topic-mine {
+  background: #e7f6ec;
+  border-color: #b7e2c6;
+}
 .reply-text {
   font-size: 0.88rem;
   color: var(--ink-soft);
@@ -10043,6 +10054,8 @@ const App = {
         title: t.title,
         body: t.body,
         authorId: t.authorUid,
+        authorUid: t.authorUid,        // V63.89
+        isDeleted: t.isDeleted === true, // V63.90
         authorName: t.authorName,
         authorIsPremium: t.authorIsPremium,
         authorCity: '',
@@ -10055,6 +10068,20 @@ const App = {
       }));
     }
     // Fallback localStorage (offline ou pas encore chargé)
+    // V63.89 : hors connexion, servir la dernière copie du forum Firestore
+    if (window.ForumFirestore && window.ForumFirestore.loadPersistedTopics) {
+      const p = window.ForumFirestore.loadPersistedTopics();
+      if (p && p.length > 0) {
+        return p.map(t => ({
+          id: t.id, title: t.title, body: t.body,
+          authorId: t.authorUid, authorUid: t.authorUid,
+          authorName: t.authorName, authorIsPremium: t.authorIsPremium,
+          authorCity: '', timestamp: t.createdAt,
+          replyCount: t.repliesCount, replies: [],
+          upvotes: t.likesCount || 0, upvotedBy: [], isPinned: t.isPinned
+        }));
+      }
+    }
     if (!this.state.forumTopics) {
       const saved = localStorage.getItem('bara_forum_topics');
       if (saved) {
@@ -11603,7 +11630,12 @@ const App = {
       this.startForumLiveSync();
     }
 
-    const topics = this.getForumTopics().sort((a,b) => {
+    // V63.90 : un sujet supprimé sans aucune réponse n'a plus d'intérêt —
+    //   on le retire de la liste. S'il a des réponses, on garde la trace
+    //   pour que le fil reste lisible.
+    const topics = this.getForumTopics()
+      .filter(t => !t.isDeleted || (t.replyCount || 0) > 0)
+      .sort((a,b) => {
       if (a.isPinned !== b.isPinned) return a.isPinned ? -1 : 1;
       return b.timestamp - a.timestamp;
     });
@@ -11619,6 +11651,13 @@ const App = {
         </header>
 
         <div class="content mt-overlap">
+
+          ${(!window.FirebaseAuth || !window.FirebaseAuth.isFirebaseReady) ? `
+            <div style="background:#f3f4f6; border:1px solid #d1d5db; border-radius:var(--radius); padding:0.7rem 0.9rem; margin-bottom:1rem; font-size:0.82rem; color:#4b5563; display:flex; gap:0.6rem; align-items:center">
+              <span style="font-size:1.1rem">📴</span>
+              <span>Vous êtes hors connexion. Vous pouvez relire les discussions déjà chargées, mais pas publier ni répondre.</span>
+            </div>
+          ` : ''}
 
           <div class="forum-rules">
             <strong>📌 Règles du forum :</strong> ${typeof window.getText === 'function' ? this.escapeHTML(window.getText('forum_rules', 'Sois respectueux. Pas de spam, pas d\'insultes, pas de liens externes. Les messages inappropriés sont automatiquement bloqués.')) : 'Sois respectueux. Pas de spam, pas d\'insultes, pas de liens externes. Les messages inappropriés sont automatiquement bloqués.'}
@@ -11670,8 +11709,12 @@ const App = {
             <div class="topic-meta">${topic.authorCity ? topic.authorCity + ' • ' : ''}${time}</div>
           </div>
         </div>
-        <div class="topic-title">${this.escapeHTML(topic.title)}</div>
-        <div class="topic-body">${this.escapeHTML(topic.body)}</div>
+        <div class="topic-title">${topic.isDeleted
+          ? '<span style="color:var(--ink-light); font-style:italic; font-weight:600">🚫 Message supprimé</span>'
+          : this.escapeHTML(topic.title)}</div>
+        ${topic.isDeleted
+          ? '<div class="topic-body" style="color:var(--ink-light); font-style:italic">L\'auteur a supprimé ce message. Les réponses restent consultables.</div>'
+          : `<div class="topic-body">${this.escapeHTML(topic.body)}</div>`}
         <div class="topic-footer">
           <div class="topic-stat">💬 ${topic.replyCount || 0}</div>
           <div class="topic-stat">👍 ${topic.upvotes || 0}</div>
@@ -11711,9 +11754,11 @@ const App = {
       // Mettre à jour le state
       this.state._currentTopicReplies = replies.map(r => ({
         id: r.id,
+        authorUid: r.authorUid,          // V63.89 : nécessaire pour reconnaître ses propres messages
         authorName: r.authorName,
         authorIsPremium: r.authorIsPremium,
         body: r.body,
+        isDeleted: r.isDeleted === true, // V63.90
         timestamp: r.createdAt
       }));
       // Re-render si on est encore sur ce topic
@@ -11735,6 +11780,8 @@ const App = {
           id: ft.id,
           title: ft.title,
           body: ft.body,
+          authorUid: ft.authorUid,      // V63.89
+          isDeleted: ft.isDeleted === true, // V63.90
           authorName: ft.authorName,
           authorCity: '',
           authorIsPremium: ft.authorIsPremium,
@@ -11775,27 +11822,37 @@ const App = {
         </header>
 
         <div class="content mt-overlap">
-          <div class="topic-detail-card">
+          <div class="topic-detail-card ${this.estMonMessage(topic.authorUid) ? 'topic-mine' : ''}">
             <div class="topic-head">
-              <div class="avatar" style="background:${color}">${initials}</div>
+              <div class="avatar" style="background:${this.estMonMessage(topic.authorUid) ? 'var(--green-bf)' : color}">${initials}</div>
               <div class="author-info">
                 <div class="author-name">
-                  ${topic.authorName}
+                  ${this.estMonMessage(topic.authorUid) ? 'Vous' : this.escapeHTML(topic.authorName || '')}
                   ${topic.authorIsPremium ? '<span class="premium-badge-mini">⭐ PRO</span>' : ''}
                 </div>
                 <div class="topic-meta">${topic.authorCity ? topic.authorCity + ' • ' : ''}${time}</div>
               </div>
             </div>
-            <div class="topic-detail-title">${this.escapeHTML(topic.title)}</div>
-            <div class="topic-detail-body">${this.escapeHTML(topic.body)}</div>
+            <div class="topic-detail-title">${topic.isDeleted
+              ? '<span style="color:var(--ink-light); font-style:italic">🚫 Message supprimé</span>'
+              : this.escapeHTML(topic.title)}</div>
+            <div class="topic-detail-body">${topic.isDeleted
+              ? '<span style="color:var(--ink-light); font-style:italic">L\'auteur a supprimé ce message. Les réponses ci-dessous restent consultables.</span>'
+              : this.escapeHTML(topic.body)}</div>
             <div class="topic-footer">
               <button class="topic-stat ${this.hasUpvoted(topic.id) ? 'upvoted' : ''}" onclick="App.toggleUpvote('${topic.id}', event)">
                 👍 ${topic.upvotes || 0} ${this.hasUpvoted(topic.id) ? '· Voté' : ''}
               </button>
               <div class="topic-stat">💬 ${replies.length}</div>
-              <button class="topic-stat" onclick="App.reportTopic('${topic.id}')" style="margin-left:auto; color:var(--ink-mute)">
-                🚩 Signaler
-              </button>
+              ${this.estMonMessage(topic.authorUid) && !topic.isDeleted ? `
+                <button class="topic-stat" onclick="App.supprimerMonSujet('${topic.id}')" style="margin-left:auto; color:var(--danger)">
+                  🗑 Supprimer
+                </button>
+              ` : `
+                <button class="topic-stat" onclick="App.reportTopic('${topic.id}')" style="margin-left:auto; color:var(--ink-mute)">
+                  🚩 Signaler
+                </button>
+              `}
             </div>
           </div>
 
@@ -11826,25 +11883,78 @@ const App = {
     `;
   },
 
+  // ==================================================================
+  // V63.89 : RECONNAÎTRE ET SUPPRIMER SES PROPRES MESSAGES
+  // ==================================================================
+
+  /** Identifiant du compte actuellement connecté, quelle que soit la source. */
+  monUid() {
+    if (window.FirebaseAuth && window.FirebaseAuth.user) return window.FirebaseAuth.user.uid;
+    return (this.state.user && this.state.user.uid) || null;
+  },
+
+  estMonMessage(authorUid) {
+    const moi = this.monUid();
+    return !!(moi && authorUid && authorUid === moi);
+  },
+
+  async supprimerMonSujet(topicId) {
+    if (!window.ForumFirestore) { this.toast('Connexion requise'); return; }
+    if (!confirm('Supprimer votre message ?\n\nLe texte sera effacé et remplacé par « Message supprimé ». Les réponses reçues restent visibles.')) return;
+    const r = await window.ForumFirestore.deleteMyTopic(topicId);
+    if (r.success) {
+      this.toast('🗑 Message supprimé');
+      await window.ForumFirestore.getAllTopics();
+      this.render();
+    } else {
+      this.toast('❌ ' + (r.error || 'Suppression impossible'), 'danger', 4000);
+    }
+  },
+
+  async supprimerMaReponse(replyId, authorUid) {
+    if (!window.ForumFirestore) { this.toast('Connexion requise'); return; }
+    if (!confirm('Supprimer votre réponse ?\n\nLe texte sera effacé et remplacé par « Message supprimé ».')) return;
+    const r = await window.ForumFirestore.deleteMyReply(this.state.currentTopicId, replyId, authorUid);
+    if (r.success) {
+      if (this.state._currentTopicReplies) {
+        this.state._currentTopicReplies = this.state._currentTopicReplies.filter(x => x.id !== replyId);
+      }
+      this.toast('🗑 Réponse supprimée');
+      this.render();
+    } else {
+      this.toast('❌ ' + (r.error || 'Suppression impossible'), 'danger', 4000);
+    }
+  },
+
   renderReply(reply) {
     const F = window.ForumService;
     const initials = F.getInitials(reply.authorName);
     const color = F.getAvatarColor(reply.authorName);
     const time = F.formatRelativeTime(reply.timestamp);
 
+    // V63.89 : les messages du candidat lui-même se distinguent visuellement
+    const aMoi = this.estMonMessage(reply.authorUid);
+
     return `
-      <div class="reply-card">
+      <div class="reply-card ${aMoi ? 'reply-mine' : ''}">
         <div class="topic-head" style="margin-bottom:0">
-          <div class="avatar" style="background:${color}; width:30px; height:30px; font-size:0.72rem">${initials}</div>
+          <div class="avatar" style="background:${aMoi ? 'var(--green-bf)' : color}; width:30px; height:30px; font-size:0.72rem">${initials}</div>
           <div class="author-info">
             <div class="author-name" style="font-size:0.8rem">
-              ${reply.authorName}
+              ${aMoi ? 'Vous' : this.escapeHTML(reply.authorName || '')}
               ${reply.authorIsPremium ? '<span class="premium-badge-mini">⭐ PRO</span>' : ''}
             </div>
             <div class="topic-meta">${time}</div>
           </div>
+          ${aMoi && !reply.isDeleted ? `
+            <button onclick="event.stopPropagation(); App.supprimerMaReponse('${reply.id}', '${reply.authorUid || ''}')"
+                    aria-label="Supprimer ma réponse"
+                    style="background:transparent; border:none; color:var(--ink-mute); font-size:0.95rem; cursor:pointer; padding:0 0.2rem; flex-shrink:0">🗑</button>
+          ` : ''}
         </div>
-        <div class="reply-text">${this.escapeHTML(reply.body || reply.text || '')}</div>
+        <div class="reply-text">${reply.isDeleted
+          ? '<span style="color:var(--ink-light); font-style:italic">🚫 Message supprimé</span>'
+          : this.escapeHTML(reply.body || reply.text || '')}</div>
       </div>
     `;
   },

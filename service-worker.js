@@ -1,8 +1,8 @@
 // Bara Concours - Service Worker
-// Version 6.3.88 - V63.88 : Ajout des Assistants des Douanes et retrait des
-//                  pastilles « J1 / J2 » (jour de composition de la session écoulée)
+// Version 6.3.90 - V63.90 : La suppression par l'auteur laisse une trace
+//                  « Message supprimé » — le fil de discussion survit
 
-const CACHE_NAME = 'bara-concours-v6-3-88';
+const CACHE_NAME = 'bara-concours-v6-3-90';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)
@@ -48,7 +48,7 @@ const OPTIONAL_ASSETS = [
 
 // Installation : d'abord les ressources critiques (atomique), puis les optionnelles (best-effort)
 self.addEventListener('install', event => {
-  console.log('[SW] Installation V6.3.88');
+  console.log('[SW] Installation V6.3.90');
   event.waitUntil(
     caches.open(CACHE_NAME).then(async cache => {
       // 1) Ressources critiques : addAll atomique
@@ -79,7 +79,7 @@ self.addEventListener('install', event => {
 
 // Activation : nettoyage des anciens caches (avec sécurité)
 self.addEventListener('activate', event => {
-  console.log('[SW] Activation V6.3.88');
+  console.log('[SW] Activation V6.3.90');
   event.waitUntil(
     (async () => {
       // Sécurité : vérifier que le nouveau cache contient bien index.html avant de supprimer l'ancien
