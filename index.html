@@ -9009,19 +9009,53 @@ const App = {
   },
 
   // === RESULTS ===
+  /**
+   * V63.93 : Écran de résultats d'une matière, refondu.
+   *
+   *   C'est l'écran que voit chaque visiteur gratuit dès son premier QCM :
+   *   la vitrine de l'application, pas son arrière-boutique. Il reprend le
+   *   soin apporté à l'Accompagnement Final — retour personnalisé selon le
+   *   score, statistiques détaillées, rythme par question — et place à
+   *   l'endroit le plus opportun l'invitation à passer Premium : juste
+   *   après un effort, quand le candidat s'intéresse à son niveau.
+   */
   renderResults() {
     const { score, questions, startTime } = this.state.qcm;
     const total = questions.length;
-    const pct = Math.round(score / total * 100);
+    const pct = total > 0 ? Math.round(score / total * 100) : 0;
     const duration = Math.round((Date.now() - startTime) / 1000);
-    // V63.16 : Fallback si la matière n'existe plus dans le catalog
+    const erreurs = total - score;
     const m = MATIERES_CATALOG[this.state.currentMatiere] || { icone: '📚', nom: this.state.currentMatiere || 'Questions', couleur: '#0f5132' };
+    const isExam = this.state.currentMode === 'exam';
+    const isPremium = window.PremiumService && window.PremiumService.isUserPremium(this.state.user);
 
-    let mention, sub;
-    if (pct >= 80) { mention = 'Excellent !'; sub = 'Tu maîtrises cette matière. Tu es prêt(e) pour le concours.'; }
-    else if (pct >= 60) { mention = 'Bien'; sub = 'Bon niveau. Continue à réviser pour viser l\'excellence.'; }
-    else if (pct >= 40) { mention = 'Passable'; sub = 'Des efforts supplémentaires sont nécessaires. Refais le QCM.'; }
-    else { mention = 'À retravailler'; sub = 'Ne te décourage pas ! Reprends les bases avant de réessayer.'; }
+    // Retour adapté au score
+    let emoji, mention, sub, couleur;
+    if (pct >= 80)      { emoji = '🏆'; mention = 'Excellent !';      sub = 'Tu maîtrises cette matière. Garde ce rythme jusqu\'au concours.'; couleur = '#16a34a'; }
+    else if (pct >= 60) { emoji = '👏'; mention = 'Bien';             sub = 'Bon niveau. Encore un effort pour viser l\'excellence.';        couleur = '#2563eb'; }
+    else if (pct >= 40) { emoji = '💪'; mention = 'Passable';         sub = 'Tu progresses. Revois le corrigé, puis refais un sujet.';       couleur = '#d97706'; }
+    else                { emoji = '📚'; mention = 'À retravailler';   sub = 'Ne te décourage pas. Reprends les bases avec le corrigé.';      couleur = '#dc2626'; }
+
+    // Rythme moyen — utile pour un concours chronométré
+    const secondesParQ = total > 0 ? Math.round(duration / total) : 0;
+    const rythme = secondesParQ >= 60
+      ? Math.floor(secondesParQ / 60) + ' min ' + (secondesParQ % 60) + ' s'
+      : secondesParQ + ' s';
+
+    // Comparaison avec la moyenne du candidat sur cette matière
+    const stats = this.getMatiereStats(this.state.currentMatiere);
+    let comparaison = '';
+    if (stats.attempts > 1 && stats.totalQuestions > 0) {
+      const moyenne = Math.round(stats.totalScore / stats.totalQuestions * 100);
+      const ecart = pct - moyenne;
+      if (Math.abs(ecart) >= 3) {
+        comparaison = ecart > 0
+          ? '<span style="color:#16a34a; font-weight:700">↗ +' + ecart + ' points</span> par rapport à ta moyenne dans cette matière'
+          : '<span style="color:#dc2626; font-weight:700">↘ ' + ecart + ' points</span> par rapport à ta moyenne dans cette matière';
+      } else {
+        comparaison = 'Au niveau de ta moyenne habituelle dans cette matière';
+      }
+    }
 
     return `
       <div class="page">
@@ -9032,7 +9066,7 @@ const App = {
             <div class="header-spacer"></div>
           </div>
           <div class="header-h1" style="font-size:1.5rem">${m.icone} ${m.nom}</div>
-          <div class="header-sub">${this.state.currentMode === 'exam' ? 'Mode examen chronométré' : 'Mode entraînement'}</div>
+          <div class="header-sub">${isExam ? '⏱️ Mode examen chronométré' : '📝 Mode entraînement'}${this.state.qcm.numero ? ' • Sujet ' + this.state.qcm.numero : ''}</div>
         </header>
 
         <div class="results">
@@ -9043,8 +9077,15 @@ const App = {
             </div>
           </div>
 
-          <div class="results-mention">${mention}</div>
+          <div style="font-size:2.6rem; line-height:1; margin-bottom:0.3rem">${emoji}</div>
+          <div class="results-mention" style="color:${couleur}">${mention}</div>
           <div class="results-sub">${sub}</div>
+
+          ${comparaison ? `
+            <div style="background:white; border:1px solid var(--line-soft); border-radius:var(--radius); padding:0.7rem 1rem; margin-bottom:1.2rem; width:100%; text-align:center; font-size:0.85rem; color:var(--ink-soft); box-shadow:var(--shadow-sm)">
+              ${comparaison}
+            </div>
+          ` : ''}
 
           <div class="results-stats">
             <div class="results-stat">
@@ -9052,8 +9093,8 @@ const App = {
               <div class="results-stat-label">Bonnes</div>
             </div>
             <div class="results-stat">
-              <div class="results-stat-num red">${total - score}</div>
-              <div class="results-stat-label">Erreurs</div>
+              <div class="results-stat-num red">${erreurs}</div>
+              <div class="results-stat-label">À revoir</div>
             </div>
             <div class="results-stat">
               <div class="results-stat-num gold">${pct}%</div>
@@ -9061,18 +9102,60 @@ const App = {
             </div>
           </div>
 
-          <div class="results-stats" style="margin-bottom:1.5rem">
-            <div class="results-stat" style="grid-column:span 3">
-              <div class="results-stat-num" style="color:var(--green-bf)">${this.formatTime(duration)}</div>
-              <div class="results-stat-label">Durée totale</div>
+          <div class="results-stats" style="margin-bottom:1.2rem">
+            <div class="results-stat">
+              <div class="results-stat-num" style="color:var(--green-bf); font-size:1.2rem">${this.formatTime(duration)}</div>
+              <div class="results-stat-label">Durée</div>
+            </div>
+            <div class="results-stat">
+              <div class="results-stat-num" style="color:var(--green-bf); font-size:1.2rem">${rythme}</div>
+              <div class="results-stat-label">Par question</div>
+            </div>
+            <div class="results-stat">
+              <div class="results-stat-num" style="color:var(--green-bf); font-size:1.2rem">${isExam ? '⏱️' : '🧘'}</div>
+              <div class="results-stat-label">${isExam ? 'Chrono' : 'Libre'}</div>
             </div>
           </div>
 
+          ${erreurs > 0 ? `
+            <div style="background:linear-gradient(135deg,#fffbeb,white); border:1.5px solid var(--gold-bf-dark); border-radius:var(--radius); padding:0.9rem 1rem; margin-bottom:1.2rem; width:100%; display:flex; gap:0.7rem; align-items:flex-start">
+              <div style="font-size:1.3rem; flex-shrink:0">💡</div>
+              <div style="font-size:0.85rem; color:#713f12; line-height:1.5">
+                <strong>${erreurs} question${erreurs > 1 ? 's' : ''} à revoir.</strong>
+                Le corrigé explique chaque bonne réponse, et pourquoi les autres propositions sont fausses. C'est là qu'on progresse le plus vite.
+              </div>
+            </div>
+          ` : `
+            <div style="background:linear-gradient(135deg,#f0fdf4,white); border:1.5px solid var(--success); border-radius:var(--radius); padding:0.9rem 1rem; margin-bottom:1.2rem; width:100%; text-align:center; font-size:0.88rem; color:#166534">
+              🎯 <strong>Sans faute.</strong> Tente un sujet plus long ou une autre matière.
+            </div>
+          `}
+
           <div class="results-actions">
             <button class="btn-primary" onclick="App.showCorrection()">📖 Voir le corrigé détaillé</button>
-            <button class="btn-secondary" onclick="App.startQCM('${this.state.currentMode}')">🔄 Refaire un QCM</button>
+            <button class="btn-secondary" onclick="App.startQCM('${this.state.currentMode}')">🔄 Refaire un sujet</button>
             <button class="btn-secondary" onclick="App.navigate('concours-detail')">← Retour aux matières</button>
           </div>
+
+          ${!isPremium ? `
+            <div onclick="App.navigate('premium')"
+                 style="margin-top:1.4rem; width:100%; background:linear-gradient(135deg, var(--green-bf), var(--green-bf-dark)); color:white; border-radius:var(--radius-lg); padding:1.2rem 1.1rem; cursor:pointer; position:relative; overflow:hidden">
+              <div style="position:absolute; top:-30px; right:-30px; width:130px; height:130px; background:radial-gradient(circle, rgba(252,209,22,0.22), transparent 70%); border-radius:50%"></div>
+              <div style="position:relative; z-index:1">
+                <div style="font-family:'Instrument Serif',serif; font-size:1.25rem; margin-bottom:0.5rem">
+                  Pour aller plus loin
+                </div>
+                <div style="display:flex; flex-direction:column; gap:0.35rem; font-size:0.85rem; opacity:0.95; margin-bottom:0.9rem">
+                  <div>⏱️ Le mode examen, dans les conditions du concours</div>
+                  <div>⚡ Des questions sans limite quotidienne</div>
+                  <div>📚 Les sujets réellement tombés, corrigés</div>
+                </div>
+                <span style="display:inline-block; background:var(--gold-bf); color:var(--green-bf-dark); padding:0.55rem 1.2rem; border-radius:999px; font-weight:700; font-size:0.85rem">
+                  Découvrir Premium →
+                </span>
+              </div>
+            </div>
+          ` : ''}
         </div>
       </div>
     `;
