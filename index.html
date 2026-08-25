@@ -9718,12 +9718,9 @@ const App = {
                 const sess = this.getMergedAccompagnementSessions();
                 const nbSess = sess.length;
                 const nbQ = sess.reduce((s, x) => s + ((x.questions && x.questions.length) || 0), 0);
-                const nbQCM = (typeof QUESTIONS === 'object')
-                  ? Object.keys(QUESTIONS).reduce((s, k) => s + (QUESTIONS[k] || []).length, 0) : 0;
-                const arrondi = nbQCM >= 100 ? (Math.floor(nbQCM / 100) * 100).toLocaleString('fr-FR') : nbQCM;
                 return [
                   '🎓 Accompagnement Final : ' + (nbQ > 0 ? nbQ.toLocaleString('fr-FR') + ' questions réellement tombées' : 'les questions réellement tombées') + (nbSess > 0 ? ', ' + nbSess + ' sessions' : ''),
-                  '⚡ Questions sans limite quotidienne' + (nbQCM > 0 ? ' — plus de ' + arrondi + ' QCM' : ''),
+                  '⚡ Questions sans limite quotidienne — plusieurs milliers de QCM',
                   '⏱️ Mode examen chronométré, dans les conditions du concours',
                   '📖 Correction détaillée de l\'examen du dimanche',
                   '🏆 Classement national complet et historique de tes examens',
@@ -10474,8 +10471,11 @@ const App = {
     return `
       <div class="page" style="padding-bottom:5rem">
         <header class="header">
-          <button class="header-btn" onclick="App.navigate('home')">←</button>
-          <div class="header-title">📅 Examen hebdomadaire</div>
+          <div class="header-bar">
+            <button class="header-back" onclick="App.navigate('home')">←</button>
+            <div class="header-title-row">📅 Examen hebdomadaire</div>
+            <div class="header-spacer"></div>
+          </div>
         </header>
 
         <div style="padding:1rem 1.2rem">
@@ -10856,8 +10856,11 @@ const App = {
     return `
       <div class="page" style="padding-bottom:5rem; background:linear-gradient(180deg, #f0fdf4, var(--cream))">
         <header class="header">
-          <button class="header-btn" onclick="App.navigate('weekly-exam')">←</button>
-          <div class="header-title">📊 Mon résultat</div>
+          <div class="header-bar">
+            <button class="header-back" onclick="App.navigate('weekly-exam')">←</button>
+            <div class="header-title-row">📊 Mon résultat</div>
+            <div class="header-spacer"></div>
+          </div>
         </header>
 
         <div style="padding:1rem 1.2rem">
@@ -10978,8 +10981,11 @@ const App = {
       return `
         <div class="page" style="padding-bottom:5rem">
           <header class="header">
-            <button class="header-btn" onclick="App.navigate('weekly-exam')">←</button>
-            <div class="header-title">🏆 Classement</div>
+            <div class="header-bar">
+              <button class="header-back" onclick="App.navigate('weekly-exam')">←</button>
+              <div class="header-title-row">🏆 Classement</div>
+              <div class="header-spacer"></div>
+            </div>
           </header>
           <div style="padding:2rem 1.2rem; text-align:center">
             <div style="font-size:3rem">📅</div>
@@ -11010,8 +11016,11 @@ const App = {
       return `
         <div class="page" style="padding-bottom:5rem">
           <header class="header">
-            <button class="header-btn" onclick="App.navigate('weekly-exam-result')">←</button>
-            <div class="header-title">🔒 Classement</div>
+            <div class="header-bar">
+              <button class="header-back" onclick="App.navigate('weekly-exam-result')">←</button>
+              <div class="header-title-row">🔒 Classement</div>
+              <div class="header-spacer"></div>
+            </div>
           </header>
           <div style="padding:2rem 1.2rem; text-align:center; max-width:480px; margin:0 auto">
             <div style="font-size:3.5rem">🏆</div>
@@ -11054,8 +11063,11 @@ const App = {
       return `
         <div class="page" style="padding-bottom:5rem">
           <header class="header">
-            <button class="header-btn" onclick="App.navigate('weekly-exam-result')">←</button>
-            <div class="header-title">🏆 Classement national</div>
+            <div class="header-bar">
+              <button class="header-back" onclick="App.navigate('weekly-exam-result')">←</button>
+              <div class="header-title-row">🏆 Classement national</div>
+              <div class="header-spacer"></div>
+            </div>
           </header>
           <div style="padding:3rem 1.2rem; text-align:center">
             <div style="font-size:2rem">⏳</div>
@@ -11079,8 +11091,11 @@ const App = {
       return `
         <div class="page" style="padding-bottom:5rem">
           <header class="header">
-            <button class="header-btn" onclick="App.navigate('weekly-exam-result')">←</button>
-            <div class="header-title">🏆 Classement national</div>
+            <div class="header-bar">
+              <button class="header-back" onclick="App.navigate('weekly-exam-result')">←</button>
+              <div class="header-title-row">🏆 Classement national</div>
+              <div class="header-spacer"></div>
+            </div>
           </header>
           <div style="padding:2rem 1.2rem; text-align:center">
             <div style="font-size:3rem">🌱</div>
@@ -11131,8 +11146,11 @@ const App = {
     return `
       <div class="page" style="padding-bottom:5rem">
         <header class="header">
-          <button class="header-btn" onclick="App.navigate('weekly-exam-result')">←</button>
-          <div class="header-title">🏆 Classement national</div>
+          <div class="header-bar">
+            <button class="header-back" onclick="App.navigate('weekly-exam-result')">←</button>
+            <div class="header-title-row">🏆 Classement national</div>
+            <div class="header-spacer"></div>
+          </div>
         </header>
 
         <div style="padding:1rem 1.2rem">
@@ -11240,8 +11258,11 @@ const App = {
       return `
         <div class="page" style="padding-bottom:5rem">
           <header class="header">
-            <button class="header-btn" onclick="App.navigate('weekly-exam')">←</button>
-            <div class="header-title">✏️ Correction</div>
+            <div class="header-bar">
+              <button class="header-back" onclick="App.navigate('weekly-exam')">←</button>
+              <div class="header-title-row">✏️ Correction</div>
+              <div class="header-spacer"></div>
+            </div>
           </header>
           <div style="padding:2rem 1.2rem; text-align:center">
             <div style="font-size:3rem">📭</div>
@@ -11265,8 +11286,11 @@ const App = {
       return `
         <div class="page" style="padding-bottom:5rem">
           <header class="header">
-            <button class="header-btn" onclick="App.navigate('weekly-exam-result')">←</button>
-            <div class="header-title">🔒 Correction</div>
+            <div class="header-bar">
+              <button class="header-back" onclick="App.navigate('weekly-exam-result')">←</button>
+              <div class="header-title-row">🔒 Correction</div>
+              <div class="header-spacer"></div>
+            </div>
           </header>
           <div style="padding:2rem 1.2rem; text-align:center; max-width:480px; margin:0 auto">
             <div style="font-size:3.5rem">⏱️</div>
@@ -11301,8 +11325,11 @@ const App = {
       return `
         <div class="page" style="padding-bottom:5rem">
           <header class="header">
-            <button class="header-btn" onclick="App.navigate('weekly-exam-result')">←</button>
-            <div class="header-title">✏️ Correction détaillée</div>
+            <div class="header-bar">
+              <button class="header-back" onclick="App.navigate('weekly-exam-result')">←</button>
+              <div class="header-title-row">✏️ Correction détaillée</div>
+              <div class="header-spacer"></div>
+            </div>
           </header>
           <div style="padding:2rem 1.2rem; text-align:center">
             <div style="font-size:3.5rem">🔒</div>
@@ -11339,8 +11366,11 @@ const App = {
     return `
       <div class="page" style="padding-bottom:5rem">
         <header class="header">
-          <button class="header-btn" onclick="App.navigate('weekly-exam-result')">←</button>
-          <div class="header-title">✏️ Correction détaillée</div>
+          <div class="header-bar">
+            <button class="header-back" onclick="App.navigate('weekly-exam-result')">←</button>
+            <div class="header-title-row">✏️ Correction détaillée</div>
+            <div class="header-spacer"></div>
+          </div>
         </header>
 
         <div style="padding:1rem 1.2rem">
@@ -11463,8 +11493,11 @@ const App = {
       return `
         <div class="page" style="padding-bottom:5rem">
           <header class="header">
-            <button class="header-btn" onclick="App.navigate('weekly-exam')">←</button>
-            <div class="header-title">📊 Mes examens</div>
+            <div class="header-bar">
+              <button class="header-back" onclick="App.navigate('weekly-exam')">←</button>
+              <div class="header-title-row">📊 Mes examens</div>
+              <div class="header-spacer"></div>
+            </div>
           </header>
           <div style="padding:1.2rem 1.2rem">
 
@@ -11502,8 +11535,11 @@ const App = {
       return `
         <div class="page" style="padding-bottom:5rem">
           <header class="header">
-            <button class="header-btn" onclick="App.navigate('weekly-exam')">←</button>
-            <div class="header-title">📊 Mes examens</div>
+            <div class="header-bar">
+              <button class="header-back" onclick="App.navigate('weekly-exam')">←</button>
+              <div class="header-title-row">📊 Mes examens</div>
+              <div class="header-spacer"></div>
+            </div>
           </header>
           <div style="padding:2rem 1.2rem; text-align:center">
             <div style="font-size:3rem">📭</div>
@@ -11552,8 +11588,11 @@ const App = {
     return `
       <div class="page" style="padding-bottom:5rem">
         <header class="header">
-          <button class="header-btn" onclick="App.navigate('weekly-exam')">←</button>
-          <div class="header-title">📊 Mes examens</div>
+          <div class="header-bar">
+            <button class="header-back" onclick="App.navigate('weekly-exam')">←</button>
+            <div class="header-title-row">📊 Mes examens</div>
+            <div class="header-spacer"></div>
+          </div>
         </header>
 
         <div style="padding:1rem 1.2rem">
