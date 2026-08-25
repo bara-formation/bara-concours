@@ -70,6 +70,16 @@ const ForumFirestore = {
   LOCAL_REPLIES_KEY: 'bara_forum_replies_cache',
 
   _persistTopics(topics) {
+    // V63.96 : une liste vide n'écrase jamais la copie enregistrée.
+    //   Firestore peut émettre un instantané vide quand la connexion vacille
+    //   — sans lever d'erreur. L'ancienne version enregistrait ce vide
+    //   par-dessus la sauvegarde, puis l'application, ne trouvant plus rien,
+    //   retombait sur les discussions de démonstration. Le forum semblait
+    //   « disparaître au moindre manque de connexion ».
+    if (!Array.isArray(topics) || topics.length === 0) {
+      console.warn('[ForumFirestore] instantané vide ignoré — sauvegarde conservée');
+      return;
+    }
     try {
       localStorage.setItem(this.LOCAL_TOPICS_KEY, JSON.stringify({ topics, savedAt: Date.now() }));
     } catch (e) { /* quota dépassé : non bloquant */ }
@@ -85,6 +95,8 @@ const ForumFirestore = {
   },
 
   _persistReplies(topicId, replies) {
+    // V63.96 : idem, une liste vide n'écrase pas les réponses enregistrées
+    if (!Array.isArray(replies) || replies.length === 0) return;
     try {
       const raw = localStorage.getItem(this.LOCAL_REPLIES_KEY);
       const all = raw ? (JSON.parse(raw) || {}) : {};
@@ -166,10 +178,14 @@ const ForumFirestore = {
         if (a.isPinned !== b.isPinned) return a.isPinned ? -1 : 1;
         return b.createdAt - a.createdAt;
       });
-      // Mettre en cache
+      // V63.96 : même protection sur le chargement ponctuel
+      const dejaCharge = this._topicsCache && this._topicsCache.length > 0;
+      if (topics.length === 0 && dejaCharge) {
+        return { success: true, topics: this._topicsCache, fromCache: true };
+      }
       this._topicsCache = topics;
       this._topicsCacheTime = Date.now();
-      this._persistTopics(topics);   // V63.89
+      this._persistTopics(topics);
       return { success: true, topics };
     } catch (e) {
       console.error('[ForumFirestore] getAllTopics:', e);
@@ -235,9 +251,16 @@ const ForumFirestore = {
         if (a.isPinned !== b.isPinned) return a.isPinned ? -1 : 1;
         return b.createdAt - a.createdAt;
       });
+      // V63.96 : un instantané vide ne remplace pas une liste déjà chargée.
+      //   Il n'est retenu que si le forum était réellement vide auparavant.
+      const dejaCharge = this._topicsCache && this._topicsCache.length > 0;
+      if (topics.length === 0 && dejaCharge) {
+        console.warn('[ForumFirestore] instantané vide reçu — liste en place conservée');
+        return;
+      }
       this._topicsCache = topics;
       this._topicsCacheTime = Date.now();
-      this._persistTopics(topics);   // V63.89
+      this._persistTopics(topics);
       try { callback(topics); } catch(e) { console.error('[ForumFirestore] callback err:', e); }
     }, (error) => {
       console.error('[ForumFirestore] listenToTopics error:', error);
