@@ -10221,6 +10221,7 @@ const App = {
         return p.map(t => ({
           id: t.id, title: t.title, body: t.body,
           authorId: t.authorUid, authorUid: t.authorUid,
+          isDeleted: t.isDeleted === true, editedAt: t.editedAt || null,
           authorName: t.authorName, authorIsPremium: t.authorIsPremium,
           authorCity: '', timestamp: t.createdAt,
           replyCount: t.repliesCount, replies: [],
@@ -10234,12 +10235,12 @@ const App = {
         try { this.state.forumTopics = JSON.parse(saved); }
         catch { this.state.forumTopics = []; }
       } else {
-        // V63.20 : Ne PAS injecter les démos si Firestore est disponible
-        if (window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady) {
-          this.state.forumTopics = [];
-        } else {
-          this.state.forumTopics = window.ForumService.getDemoTopics();
-        }
+        // V63.96 : plus aucune discussion de démonstration.
+        //   Elles s'affichaient dès que rien n'était trouvé — y compris à un
+        //   candidat hors connexion, qui voyait alors trois faux messages
+        //   signés de faux noms à la place de son forum. Mieux vaut un écran
+        //   vide honnête, qui explique la situation, que du contenu fictif.
+        this.state.forumTopics = [];
       }
     }
     return this.state.forumTopics;
@@ -11862,13 +11863,29 @@ const App = {
 
           <div class="section-title">${topics.length} discussion${topics.length > 1 ? 's' : ''}${isLoading ? ' • ⏳ Chargement...' : ''}</div>
 
-          ${topics.length === 0 ? `
-            <div class="forum-empty">
-              <div style="font-size:3rem; opacity:0.4; margin-bottom:0.6rem">${isLoading ? '⏳' : '💭'}</div>
-              <div style="font-size:1rem; font-weight:700; margin-bottom:0.3rem">${isLoading ? 'Chargement des discussions...' : 'Aucune discussion pour l\'instant'}</div>
-              <div style="font-size:0.85rem">${isLoading ? 'Cela ne prend que quelques secondes.' : 'Sois le premier à lancer un sujet !'}</div>
-            </div>
-          ` : topics.map(t => this.renderTopicCard(t)).join('')}
+          ${topics.length === 0 ? (() => {
+            // V63.96 : trois situations distinctes, trois messages distincts.
+            const horsLigne = !window.FirebaseAuth || !window.FirebaseAuth.isFirebaseReady;
+            if (isLoading) {
+              return `<div class="forum-empty">
+                <div style="font-size:3rem; opacity:0.4; margin-bottom:0.6rem">⏳</div>
+                <div style="font-size:1rem; font-weight:700; margin-bottom:0.3rem">Chargement des discussions…</div>
+                <div style="font-size:0.85rem">Cela ne prend que quelques secondes.</div>
+              </div>`;
+            }
+            if (horsLigne) {
+              return `<div class="forum-empty">
+                <div style="font-size:3rem; opacity:0.4; margin-bottom:0.6rem">📴</div>
+                <div style="font-size:1rem; font-weight:700; margin-bottom:0.3rem">Aucune discussion enregistrée</div>
+                <div style="font-size:0.85rem; line-height:1.5">Connecte-toi à internet une première fois : les discussions seront ensuite consultables même sans réseau.</div>
+              </div>`;
+            }
+            return `<div class="forum-empty">
+              <div style="font-size:3rem; opacity:0.4; margin-bottom:0.6rem">💭</div>
+              <div style="font-size:1rem; font-weight:700; margin-bottom:0.3rem">Aucune discussion pour l'instant</div>
+              <div style="font-size:0.85rem">Sois le premier à lancer un sujet !</div>
+            </div>`;
+          })() : topics.map(t => this.renderTopicCard(t)).join('')}
 
         </div>
 
