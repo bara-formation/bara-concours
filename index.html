@@ -5014,25 +5014,39 @@ const App = {
         <div class="content mt-overlap">
 
           ${!isPremium ? `
+            <!-- V63.94 : on annonce la valeur avant la restriction.
+                 L'ancien écran ouvrait sur « Accès Premium requis » — un refus
+                 lu avant même de savoir ce qui est refusé — et décrivait le
+                 contenu en termes techniques (« 4 types de questions »,
+                 « reprise automatique »). L'argument unique de Bara Formation,
+                 les questions RÉELLEMENT TOMBÉES aux concours, n'apparaissait
+                 nulle part sur l'écran censé convaincre. -->
             <div class="premium-paywall">
-              <div class="premium-paywall-icon">⭐</div>
-              <div class="premium-paywall-title">Accès Premium requis</div>
+              <div class="premium-paywall-icon">🎯</div>
+              <div class="premium-paywall-title">
+                ${totalQuestions > 0 ? totalQuestions.toLocaleString('fr-FR') + ' questions réellement tombées' : 'Les questions réellement tombées'}
+              </div>
               <div class="premium-paywall-desc">
-                Les <strong>Sessions d'Accompagnement Final</strong> sont l'expérience Bara Formation complète : toutes matières mélangées, questions variées, corrections détaillées avec explications.
+                Recensées le jour même de l'épreuve, corrigées et expliquées par Bara Formation.
+                ${sessions.length > 0 ? '<strong>' + sessions.length + ' sessions</strong> depuis 2025.' : ''}
               </div>
               <div class="premium-paywall-benefits">
-                <div class="premium-paywall-benefit">📅 Sessions hebdomadaires avec date</div>
-                <div class="premium-paywall-benefit">🎯 4 types de questions (QCM, multi-choix, ouvertes)</div>
-                <div class="premium-paywall-benefit">📚 Toutes matières dans chaque session</div>
-                <div class="premium-paywall-benefit">💡 Explications "NB" détaillées</div>
-                <div class="premium-paywall-benefit">🔄 Reprise automatique de la session</div>
+                <div class="premium-paywall-benefit">✅ Vérifie tes réponses avant les résultats officiels</div>
+                <div class="premium-paywall-benefit">✅ Comprends chaque erreur, pas seulement la bonne réponse</div>
+                <div class="premium-paywall-benefit">✅ Prépare-toi sur ce qui tombe vraiment, pas sur des questions inventées</div>
               </div>
               <button class="premium-paywall-cta" onclick="App.navigate('premium')">
-                ⭐ Passer Premium maintenant
+                Débloquer l'Accompagnement Final →
               </button>
+              <div style="margin-top:0.7rem; font-size:0.78rem; opacity:0.85">
+                Inclus dans tous les abonnements Premium
+              </div>
             </div>
 
-            <div class="section-title" style="margin-top:1.5rem">📅 Aperçu des sessions disponibles</div>
+            <div class="section-title" style="margin-top:1.5rem">📅 Les sessions disponibles</div>
+            <div style="font-size:0.83rem; color:var(--ink-soft); margin-bottom:0.8rem; line-height:1.5">
+              Voici ce que contient l'Accompagnement Final. Touche une session pour découvrir le détail.
+            </div>
           ` : ''}
 
           <!-- V63.32 : Placeholder "Accompagnement 2026 — Bientôt" (header section refondu) -->
@@ -9693,16 +9707,30 @@ const App = {
           <div style="background:white; border-radius:var(--radius-lg); padding:1.2rem; margin-bottom:1.2rem; border:1px solid var(--line-soft)">
             <h3 style="font-family:'Instrument Serif',serif; font-size:1.2rem; color:var(--green-bf); margin-bottom:0.7rem; text-align:center">Avantages Premium</h3>
             <div style="display:flex; flex-direction:column; gap:0.5rem; font-size:0.85rem">
-              ${[
-                '⏱️ Mode examen chronométré illimité',
-                '📚 Tous les QCM avancés débloqués',
-                '🎓 9 sessions Premium (451 questions)',
-                '💬 Forum communautaire actif',
-                '📊 Statistiques avancées',
-                '🏆 Concours blancs hebdomadaires',
-                '🎯 Classement national',
-                '🔔 Notifications personnalisées'
-              ].map(t => `
+              ${(() => {
+                // V63.94 : les chiffres sont désormais lus dans les données.
+                //   La liste annonçait « 9 sessions (451 questions) », le total
+                //   de l'archive 2025, alors que l'Accompagnement Final en
+                //   compte trois fois plus — l'argument le plus fort était
+                //   sous-vendu sur l'écran où le candidat décide de payer.
+                //   Deux entrées étaient également fausses : l'examen
+                //   hebdomadaire et le classement sont accessibles à tous.
+                const sess = this.getMergedAccompagnementSessions();
+                const nbSess = sess.length;
+                const nbQ = sess.reduce((s, x) => s + ((x.questions && x.questions.length) || 0), 0);
+                const nbQCM = (typeof QUESTIONS === 'object')
+                  ? Object.keys(QUESTIONS).reduce((s, k) => s + (QUESTIONS[k] || []).length, 0) : 0;
+                const arrondi = nbQCM >= 100 ? (Math.floor(nbQCM / 100) * 100).toLocaleString('fr-FR') : nbQCM;
+                return [
+                  '🎓 Accompagnement Final : ' + (nbQ > 0 ? nbQ.toLocaleString('fr-FR') + ' questions réellement tombées' : 'les questions réellement tombées') + (nbSess > 0 ? ', ' + nbSess + ' sessions' : ''),
+                  '⚡ Questions sans limite quotidienne' + (nbQCM > 0 ? ' — plus de ' + arrondi + ' QCM' : ''),
+                  '⏱️ Mode examen chronométré, dans les conditions du concours',
+                  '📖 Correction détaillée de l\'examen du dimanche',
+                  '🏆 Classement national complet et historique de tes examens',
+                  '📊 Analyse de ton niveau matière par matière',
+                  '🔔 Notifications personnalisées'
+                ];
+              })().map(t => `
                 <div style="display:flex; gap:0.5rem; align-items:flex-start">
                   <span style="color:var(--success); font-weight:800">✓</span>
                   <span>${t}</span>
@@ -9749,6 +9777,33 @@ const App = {
           <div style="text-align:center; font-size:0.78rem; color:var(--ink-mute); padding:1rem 0.5rem">
             🔒 Paiement sécurisé via Mobile Money<br>
             Sans engagement • Annulable à tout moment
+          </div>
+
+          <!-- V63.94 : réassurance. Le candidat hésite moins quand il sait
+               comment il paie, en combien de temps son accès s'ouvre, et ce
+               qui se passe s'il change de téléphone. -->
+          <div style="background:white; border:1px solid var(--line-soft); border-radius:var(--radius-lg); padding:1.1rem 1.2rem; margin-bottom:1.2rem">
+            <div style="font-size:0.78rem; font-weight:800; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-mute); margin-bottom:0.8rem">
+              Comment ça se passe
+            </div>
+            <div style="display:flex; flex-direction:column; gap:0.7rem; font-size:0.85rem; color:var(--ink-soft); line-height:1.5">
+              <div style="display:flex; gap:0.7rem; align-items:flex-start">
+                <span style="font-size:1.1rem; flex-shrink:0">📱</span>
+                <span>Tu paies par <strong>Orange Money</strong> ou <strong>Moov Money</strong>, depuis ton téléphone.</span>
+              </div>
+              <div style="display:flex; gap:0.7rem; align-items:flex-start">
+                <span style="font-size:1.1rem; flex-shrink:0">🎫</span>
+                <span>Tu reçois un <strong>code d'activation par WhatsApp</strong>, en général sous 30 minutes.</span>
+              </div>
+              <div style="display:flex; gap:0.7rem; align-items:flex-start">
+                <span style="font-size:1.1rem; flex-shrink:0">⚡</span>
+                <span>Tu saisis le code dans l'application : l'accès s'ouvre <strong>immédiatement</strong>.</span>
+              </div>
+              <div style="display:flex; gap:0.7rem; align-items:flex-start">
+                <span style="font-size:1.1rem; flex-shrink:0">🔄</span>
+                <span>Ton abonnement suit ton compte : tu le retrouves si tu changes de téléphone.</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
