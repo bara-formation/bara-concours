@@ -52,8 +52,38 @@ const PremiumService = {
       //   abonnés actuels et les anciens codes restent valides.
       hidden: true
     },
+    // V63.97 : Plan vedette de la saison 2027.
+    //   Il remplace l'Annuel à 10 000 F. Le positionnement change autant que
+    //   le prix : le candidat n'achète pas douze mois d'abonnement, il achète
+    //   sa préparation jusqu'à son concours, Accompagnement Final compris.
+    //   À 15 000 F, l'offre reste très en dessous des centres de renom
+    //   (22 500 F sans accompagnement final) tout en cessant de se présenter
+    //   comme un produit d'appoint. Les promotions ponctuelles ramèneront
+    //   ponctuellement le prix à 10 000 F.
+    //
+    //   Pas de date butoir pour l'instant : le calendrier des concours 2027
+    //   n'est pas publié. On applique donc une durée d'un an. Dès que les
+    //   dates seront connues, remplacer `duration` par `expiresAt` — le
+    //   moteur d'activation gère déjà les deux cas.
+    session2027: {
+      id: 'session2027',
+      name: 'SESSION 2027 + ACC. FINAL',
+      price: 15000,
+      duration: 365,
+      durationLabel: 'jusqu\'aux concours 2027',
+      pricePerDay: 41,
+      icon: '🎯',
+      tag: 'Le plus complet 🔥',
+      tagColor: '#7c2d12',
+      tagBg: '#fed7aa',
+      popular: true,
+      savings: 9000,
+      hidden: false
+    },
+
     // V60 : yearly conservé pour compatibilité descendante (anciens codes BARA-ANNEE-XXXX)
-    //       mais retiré de l'affichage Premium (page premium n'affiche que monthly + session2026 + weekly)
+    // V63.97 : retiré de l'affichage — remplacé par session2027. Les abonnés
+    //   en cours et les codes déjà distribués restent valides.
     yearly: {
       id: 'yearly',
       name: 'Annuel',
@@ -62,16 +92,10 @@ const PremiumService = {
       durationLabel: '1 an',
       pricePerDay: 27,
       icon: '🏆',
-      tag: 'Économie de 14 000 F',
       tagColor: '#15803d',
       tagBg: '#dcfce7',
-      // V63.76 : redevient le plan vedette pour la saison 2027.
-      //   La session 2026 étant terminée, l'horizon utile d'un candidat est
-      //   désormais l'année entière : mars 2027 pour les concours
-      //   professionnels, mi-2027 pour les concours directs.
-      popular: true,
-      savings: 14000,
-      hidden: false
+      popular: false,
+      hidden: true
     }
   },
 
@@ -345,7 +369,8 @@ const ActivationCodes = {
     weekly: 'SEM',
     monthly: 'MOIS',
     yearly: 'ANNEE',
-    session2026: 'SESSION'  // V60 : BARA-SESSION-XXXX
+    session2026: 'SESSION',   // V60 : BARA-SESSION-XXXX
+    session2027: 'S2027'      // V63.97 : BARA-S2027-XXXX
   },
 
   // ====================================================================
@@ -685,8 +710,8 @@ const ActivationCodes = {
     const used = all.filter(c => c.used);
     const unused = all.filter(c => !c.used);
 
-    const byPlan = { weekly: 0, monthly: 0, yearly: 0, session2026: 0 };
-    const usedByPlan = { weekly: 0, monthly: 0, yearly: 0, session2026: 0 };
+    const byPlan = { weekly: 0, monthly: 0, yearly: 0, session2026: 0, session2027: 0 };
+    const usedByPlan = { weekly: 0, monthly: 0, yearly: 0, session2026: 0, session2027: 0 };
     all.forEach(c => {
       if (byPlan[c.planId] !== undefined) byPlan[c.planId]++;
       if (c.used && usedByPlan[c.planId] !== undefined) usedByPlan[c.planId]++;
@@ -706,8 +731,8 @@ const ActivationCodes = {
     const all = this.getAllCodesLocal();
     const used = all.filter(c => c.used);
     const unused = all.filter(c => !c.used);
-    const byPlan = { weekly: 0, monthly: 0, yearly: 0, session2026: 0 };
-    const usedByPlan = { weekly: 0, monthly: 0, yearly: 0, session2026: 0 };
+    const byPlan = { weekly: 0, monthly: 0, yearly: 0, session2026: 0, session2027: 0 };
+    const usedByPlan = { weekly: 0, monthly: 0, yearly: 0, session2026: 0, session2027: 0 };
     all.forEach(c => {
       if (byPlan[c.planId] !== undefined) byPlan[c.planId]++;
       if (c.used && usedByPlan[c.planId] !== undefined) usedByPlan[c.planId]++;
@@ -723,7 +748,8 @@ const ActivationCodes = {
       const planLabel = c.planId === 'weekly' ? '1 semaine (1000F)' :
                         c.planId === 'monthly' ? '1 mois (2000F)' :
                         c.planId === 'session2026' ? 'SESSION 2026 (2500F)' :
-                        c.planId === 'yearly' ? '1 an (10000F)' : c.planId;
+                        c.planId === 'yearly' ? '1 an (10000F)' :
+                        c.planId === 'session2027' ? 'Session 2027 (15000F)' : c.planId;
       return [
         c.code,
         planLabel,
