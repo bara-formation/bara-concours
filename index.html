@@ -3997,7 +3997,7 @@ const App = {
           </div>
 
           <div style="background:#dcfce7; padding:0.7rem 1rem; border-radius:10px; margin-bottom:1rem; text-align:center; font-size:0.85rem; color:#15803d">
-            💰 <strong>À partir de 1 000 FCFA/semaine</strong>
+            💰 <strong>À partir de 2 000 FCFA le mois</strong>
           </div>
 
           <button class="bio-prompt-accept" onclick="App.goToPremium()">
@@ -4032,7 +4032,7 @@ const App = {
           </div>
 
           <div style="background:#fef3c7; padding:0.7rem 1rem; border-radius:10px; margin-bottom:1rem; text-align:center; font-size:0.85rem; color:#854d0e">
-            🎯 <strong>Plan SESSION 2026 : 2 500 FCFA jusqu'au 15 août</strong>
+            🎯 <strong>Session 2027 + Accompagnement Final : 15 000 FCFA</strong>
           </div>
 
           <button class="bio-prompt-accept" onclick="App.goToPremiumFromActu()">
@@ -9651,7 +9651,9 @@ const App = {
   renderPremiumPlans() {
     // V63.76 : la session 2026 est terminée — le plan proposé par défaut est
     //   désormais l'annuel, qui couvre la préparation jusqu'aux concours 2027.
-    const selectedPlan = this.state.premiumSelection?.plan || 'yearly';
+    // V63.97 : le plan vedette est désormais SESSION 2027. Laisser 'yearly'
+    //   aurait présélectionné un plan masqué : aucune carte cochée à l'écran.
+    const selectedPlan = this.state.premiumSelection?.plan || 'session2027';
     // V63.53 : Filtrer les plans cachés (hidden) ET les plans réservés admin (adminOnly)
     //   → Le plan Hebdomadaire (weekly) est marqué adminOnly : seul l'admin le voit,
     //     pour éviter les abus (étudiants s'abonnant à 1000 F au lieu de 2500 F session).
@@ -9820,14 +9822,14 @@ const App = {
       return;
     }
     if (!this.state.premiumSelection?.plan) {
-      this.state.premiumSelection = { plan: 'monthly' };
+      this.state.premiumSelection = { plan: 'session2027' };
     }
     this.navigate('premium-payment');
   },
 
   // === PAGE PAIEMENT ===
   renderPremiumPayment() {
-    const sel = this.state.premiumSelection || { plan: 'monthly' };
+    const sel = this.state.premiumSelection || { plan: 'session2027' };
     const plan = window.PremiumService.PLANS[sel.plan];
     const operator = sel.operator || 'orange';
     const operators = Object.values(window.PremiumService.OPERATORS);

@@ -1,9 +1,8 @@
 // Bara Concours - Service Worker
-// Version 6.3.96 - V63.96 : Forum — un instantané vide de Firestore n'écrase
-//                  plus la copie enregistrée, et les discussions de
-//                  démonstration ne s'affichent plus jamais
+// Version 6.3.97 - V63.97 : Nouveau plan vedette « SESSION 2027 + ACC. FINAL »
+//                  à 15 000 F en remplacement de l'Annuel à 10 000 F
 
-const CACHE_NAME = 'bara-concours-v6-3-96';
+const CACHE_NAME = 'bara-concours-v6-3-97';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)
@@ -49,7 +48,7 @@ const OPTIONAL_ASSETS = [
 
 // Installation : d'abord les ressources critiques (atomique), puis les optionnelles (best-effort)
 self.addEventListener('install', event => {
-  console.log('[SW] Installation V6.3.96');
+  console.log('[SW] Installation V6.3.97');
   event.waitUntil(
     caches.open(CACHE_NAME).then(async cache => {
       // 1) Ressources critiques : addAll atomique
@@ -80,7 +79,7 @@ self.addEventListener('install', event => {
 
 // Activation : nettoyage des anciens caches (avec sécurité)
 self.addEventListener('activate', event => {
-  console.log('[SW] Activation V6.3.96');
+  console.log('[SW] Activation V6.3.97');
   event.waitUntil(
     (async () => {
       // Sécurité : vérifier que le nouveau cache contient bien index.html avant de supprimer l'ancien
