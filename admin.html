@@ -1796,15 +1796,49 @@ const Admin = {
    * rafraîchit l'affichage. Sans ça, la page Utilisateurs afficherait le
    * statut Premium seulement après un passage par l'onglet Codes Premium.
    */
+  /**
+   * V63.99 : CORRECTION D'UNE BOUCLE DE LECTURES FIRESTORE
+   *
+   *   La version V63.84 s'arrêtait à la condition « des codes sont en cache
+   *   ET le chargement a déjà eu lieu ». Quand la liste revenait vide — aucun
+   *   code généré, ou lecture refusée — la première condition restait fausse
+   *   en permanence : la fonction relançait la lecture, dont le retour
+   *   appelait render(), qui la rappelait. Boucle infinie, à la vitesse du
+   *   réseau, tant que la page Utilisateurs de l'administration restait
+   *   ouverte. Plusieurs millions de lectures par jour, et le quota gratuit
+   *   Firestore épuisé en quelques heures.
+   *
+   *   Trois garde-fous désormais :
+   *     1. Le drapeau de chargement est posé quoi qu'il arrive, y compris
+   *        en cas d'échec ou de liste vide.
+   *     2. Un délai minimum de 5 minutes entre deux lectures.
+   *     3. Un plafond de tentatives, pour qu'une erreur répétée ne relance
+   *        jamais indéfiniment.
+   */
+  DELAI_RECHARGEMENT_CODES_MS: 5 * 60 * 1000,
+  MAX_TENTATIVES_CODES: 3,
+
   refreshCodesForUsers() {
     if (!window.ActivationCodes || !window.ActivationCodes.getAllCodes) return;
     if (this.state._codesRefreshing) return;
-    const dejaLa = (window.ActivationCodes.getAllCodesLocal &&
-                    (window.ActivationCodes.getAllCodesLocal() || []).length > 0);
-    if (dejaLa && this.state._codesLoadedOnce) return;
+
+    const maintenant = Date.now();
+    const dernier = this.state._codesLoadedAt || 0;
+    if (dernier && (maintenant - dernier) < this.DELAI_RECHARGEMENT_CODES_MS) return;
+
+    this.state._codesTentatives = (this.state._codesTentatives || 0);
+    if (this.state._codesTentatives >= this.MAX_TENTATIVES_CODES && !dernier) {
+      return; // échecs répétés : on cesse d'insister
+    }
+
     this.state._codesRefreshing = true;
+    this.state._codesTentatives++;
+
     window.ActivationCodes.getAllCodes().then(() => {
       this.state._codesRefreshing = false;
+      // Posé dans tous les cas, même si la collection est vide : c'est
+      // l'absence de ce marqueur qui provoquait la boucle.
+      this.state._codesLoadedAt = Date.now();
       this.state._codesLoadedOnce = true;
       if (['dashboard', 'users', 'payments'].includes(this.state.currentPage)) {
         const el = document.activeElement;
@@ -1813,7 +1847,10 @@ const Admin = {
       }
     }).catch(e => {
       this.state._codesRefreshing = false;
-      console.warn('[V63.84] Chargement des codes :', e);
+      // En cas d'échec on marque aussi la tentative : sans cela, une lecture
+      // refusée par les règles relancerait la boucle indéfiniment.
+      this.state._codesLoadedAt = Date.now();
+      console.warn('[V63.99] Chargement des codes :', e);
     });
   },
 
