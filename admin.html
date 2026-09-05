@@ -1681,7 +1681,24 @@ const Admin = {
       .sort((a, b) => (a.joinedAt || 0) - (b.joinedAt || 0));
     anonymes.forEach((u, i) => {
       u.visitorIndex = i + 1;
-      u.name = 'Visiteur ' + (i + 1);
+      // V63.98 : le numéro ne remplace le nom QUE si le candidat n'en a pas
+      //   renseigné. La version précédente écrasait systématiquement le nom
+      //   des comptes anonymes : un visiteur qui complétait son profil
+      //   restait affiché « Visiteur 12 », seule sa ville apparaissait —
+      //   il devenait impossible de l'identifier depuis le tableau de bord.
+      const nomSaisi = (u.name || '').trim();
+      const auto = !nomSaisi
+        || nomSaisi === 'Apprenant'
+        || nomSaisi === 'Invité'
+        || nomSaisi === 'Anonyme'
+        || /^VISITEUR-/i.test(nomSaisi)
+        || /^Visiteur \d+$/i.test(nomSaisi);
+      u.numeroVisiteur = 'Visiteur ' + (i + 1);
+      if (auto) {
+        u.name = u.numeroVisiteur;
+      }
+      // Sinon on conserve le nom saisi ; le numéro reste disponible dans
+      // u.numeroVisiteur et s'affiche à côté, pour garder l'ordre d'arrivée.
     });
     return users;
   },
@@ -1835,7 +1852,13 @@ const Admin = {
     if (u.phone) idLines.push('📱 ' + this.formatPhone(u.phone));
     if (u.city) idLines.push('📍 ' + u.city);
     // V63.59 : Visiteur anonyme — afficher son numéro de suivi
-    if (u.isAnonymous && u.visitorNumber) idLines.push('👤 ' + u.visitorNumber);
+    // V63.98 : on affiche le numéro d'ordre calculé (« Visiteur 12 »), qui dit
+    //   l'ordre d'arrivée, plutôt que l'identifiant technique VISITEUR-XXXX.
+    //   Il apparaît même quand le candidat a renseigné son nom, pour qu'on
+    //   sache toujours à quel visiteur on a affaire.
+    if (u.isAnonymous && (u.numeroVisiteur || u.visitorNumber)) {
+      idLines.push('👤 ' + (u.numeroVisiteur || u.visitorNumber));
+    }
     const idHtml = idLines.length > 0 ? idLines.join(' · ') : '-';
 
     // V59 : Badge provider (Google/Email) — V63.59 : + Anonyme
@@ -1850,7 +1873,7 @@ const Admin = {
     // V63.59 : Nom affiché — pour un anonyme sans nom, montrer son numéro de visiteur
     const displayName = u.name && u.name !== 'Invité' && u.name !== 'Apprenant'
       ? u.name
-      : (u.visitorNumber || u.name || 'Visiteur');
+      : (u.numeroVisiteur || u.visitorNumber || u.name || 'Visiteur');
 
     // V63.64 : Ligne entière colorée selon le statut — repérage immédiat dans la liste.
     //   Premium actif  → fond doré + bordure gauche épaisse
