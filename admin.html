@@ -832,10 +832,45 @@ const Admin = {
 
   // V59 : Refresh async des utilisateurs depuis Firestore
   // Appelé automatiquement quand on est sur Dashboard, Users ou Payments
-  async refreshUsersFromFirestore() {
+  /**
+   * V63.99 : CORRECTION D'UNE BOUCLE DE LECTURES FIRESTORE
+   *
+   *   Cette fonction est appelée à chaque rendu du tableau de bord et de la
+   *   page Utilisateurs. Elle remettait son drapeau `_usersRefreshing` à
+   *   false, puis appelait render() — qui la rappelait immédiatement, le
+   *   drapeau étant à nouveau libre. Boucle infinie, et chaque tour relisait
+   *   la collection `users` entière.
+   *
+   *   C'était le foyer principal des millions de lectures quotidiennes. Il
+   *   ne se déclenchait que lorsque l'administration restait ouverte, ce qui
+   *   explique les journées à zéro quand l'ordinateur n'était pas allumé.
+   *
+   *   Un délai minimum de deux minutes sépare désormais deux lectures. Le
+   *   bouton de rafraîchissement manuel reste immédiat grâce au paramètre
+   *   `force`.
+   */
+  DELAI_RECHARGEMENT_USERS_MS: 2 * 60 * 1000,
+
+  /** V63.99 : rechargement manuel, hors du délai de deux minutes. */
+  rechargerUtilisateurs() {
+    this.state._usersLoadedAt = 0;
+    this.state._codesLoadedAt = 0;
+    this.state._codesTentatives = 0;
+    this.refreshUsersFromFirestore(true);
+    this.refreshCodesForUsers();
+    this.toast('🔄 Actualisation…');
+  },
+
+  async refreshUsersFromFirestore(force) {
     if (!window.FirebaseAuth || !window.FirebaseAuth.isFirebaseReady) return;
     if (this.state._usersRefreshing) return;  // Pas de double appel
+
+    const dernier = this.state._usersLoadedAt || 0;
+    if (!force && dernier && (Date.now() - dernier) < this.DELAI_RECHARGEMENT_USERS_MS) return;
+
     this.state._usersRefreshing = true;
+    // Posé dès maintenant : même en cas d'échec, on ne relance pas en boucle.
+    this.state._usersLoadedAt = Date.now();
     try {
       const result = await window.FirebaseAuth.getAllUsers();
       if (!result.success) {
@@ -1595,7 +1630,15 @@ const Admin = {
       <div class="table-wrap">
         <div class="table-header">
           <div class="table-title">👥 Liste des utilisateurs</div>
-          <input type="text" class="search-input" placeholder="Nom, email, numéro, ville..." value="${this.state.searchQuery}" oninput="Admin.search(this.value)">
+          <div style="display:flex; gap:0.5rem; align-items:center">
+            <input type="text" class="search-input" placeholder="Nom, email, numéro, ville..." value="${this.state.searchQuery}" oninput="Admin.search(this.value)">
+            <!-- V63.99 : la liste ne se recharge plus qu'une fois par tranche de
+                 deux minutes. Ce bouton force une lecture immédiate. -->
+            <button class="btn-action btn-secondary" onclick="Admin.rechargerUtilisateurs()"
+                    title="Recharger depuis Firestore" style="padding:0.5rem 0.8rem; white-space:nowrap">
+              🔄 Actualiser
+            </button>
+          </div>
         </div>
 
         ${showEmptyState ? `
