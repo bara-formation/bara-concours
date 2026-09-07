@@ -3868,6 +3868,11 @@ const App = {
       html += this.renderForumEdit();
     }
 
+    // V64.01 : compte requis avant activation d'un code
+    if (this.state.showCompteRequisDialog) {
+      html += this.renderCompteRequisDialog();
+    }
+
     // Modal de limite freemium atteinte
     if (this.state.showFreemiumDialog) {
       html += this.renderFreemiumDialog();
@@ -7744,6 +7749,10 @@ const App = {
     //   ayant paye se retrouve en gratuit apres une deconnexion.
     this._recoverPremiumIfMissing();
 
+    // V64.01 : le candidat créait son compte pour activer un code —
+    //   on le ramène à l'écran Premium avec son code déjà saisi.
+    if (this.reprendreActivationEnAttente()) return;
+
     // Naviguer selon le contexte
     if (isNewUser) {
       // Nouveau compte → onboarding pour finaliser (niveau d'études + concours visés)
@@ -9695,8 +9704,16 @@ const App = {
                 <div style="font-size:0.78rem; color:#92400e">Reçu après ton paiement par WhatsApp</div>
               </div>
             </div>
+            ${this.estCompteAnonyme() ? `
+              <!-- V64.01 : prévenir avant le paiement, pas au moment du refus -->
+              <div style="background:white; border:1px solid #f59e0b; border-radius:8px; padding:0.6rem 0.8rem; margin-bottom:0.7rem; font-size:0.8rem; color:#78350f; line-height:1.5">
+                ℹ️ Un compte est nécessaire pour activer un code : c'est lui qui
+                conserve ton abonnement si tu changes de téléphone.
+                <span onclick="App.demanderCompteAvantActivation('')" style="color:var(--green-bf); font-weight:700; text-decoration:underline; cursor:pointer">Créer mon compte</span>
+              </div>
+            ` : ''}
             <div style="display:flex; gap:0.5rem">
-              <input type="text" id="activation-code-input" placeholder="BARA-SESSION-A3F7" maxlength="20" style="flex:1; padding:0.7rem 0.9rem; border:1.5px solid #f59e0b; border-radius:8px; font-size:0.95rem; font-weight:700; font-family:monospace; letter-spacing:0.05em; text-transform:uppercase; background:white" oninput="this.value = this.value.toUpperCase()">
+              <input type="text" id="activation-code-input" placeholder="BARA-S2027-A3F7K9" maxlength="20" style="flex:1; padding:0.7rem 0.9rem; border:1.5px solid #f59e0b; border-radius:8px; font-size:0.95rem; font-weight:700; font-family:monospace; letter-spacing:0.05em; text-transform:uppercase; background:white" oninput="this.value = this.value.toUpperCase()">
               <button onclick="App.activateWithCode()" style="background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.7rem 1.1rem; border-radius:8px; font-weight:800; font-size:0.88rem; cursor:pointer; white-space:nowrap">Activer</button>
             </div>
           </div>
@@ -10107,6 +10124,113 @@ const App = {
   },
 
   // V58 : Activation via code d'activation (async, vérifie Firestore)
+  // ==================================================================
+  // V64.01 : UN COMPTE EST REQUIS POUR ACTIVER UN CODE
+  // ==================================================================
+  //   Un compte anonyme n'existe que sur l'appareil : son identifiant est
+  //   généré au premier lancement et disparaît définitivement si le candidat
+  //   réinstalle l'application, vide ses données ou change de téléphone.
+  //
+  //   Or l'abonnement est rattaché à cet identifiant. Un candidat qui payait
+  //   sans compte perdait donc son accès sans recours — et il était même
+  //   impossible de l'identifier pour le secourir, puisque rien ne le
+  //   rattachait à un e-mail ou à un numéro.
+  //
+  //   On laisse donc découvrir l'application librement, mais on demande un
+  //   compte au moment précis où le candidat engage de l'argent. Rien n'est
+  //   perdu : linkWithPopup et linkWithCredential rattachent le compte
+  //   anonyme existant, avec sa progression et son historique.
+
+  estCompteAnonyme() {
+    const u = window.FirebaseAuth && window.FirebaseAuth.user;
+    if (!u) return true;                 // pas encore authentifié
+    if (u.isAnonymous) return true;
+    return !u.email && !this.state.user.isLoggedIn;
+  },
+
+  demanderCompteAvantActivation(code) {
+    // On garde le code saisi : le candidat n'aura pas à le retaper après
+    // avoir créé son compte.
+    if (code) {
+      try { localStorage.setItem('bara_code_en_attente', code); } catch(e) {}
+    }
+    this.state.showCompteRequisDialog = true;
+    this.render();
+  },
+
+  fermerCompteRequisDialog() {
+    this.state.showCompteRequisDialog = false;
+    this.render();
+  },
+
+  renderCompteRequisDialog() {
+    return `
+      <div class="bio-prompt-overlay" onclick="App.fermerCompteRequisDialog()">
+        <div class="bio-prompt-modal" onclick="event.stopPropagation()">
+          <div class="bio-prompt-icon">🔐</div>
+          <div class="bio-prompt-title">Crée ton compte pour activer</div>
+          <div class="bio-prompt-desc">
+            Ton abonnement sera rattaché à ton compte, pas à ce téléphone.
+            Sans compte, tu perdrais ton accès en cas de réinstallation ou de
+            changement d'appareil — et nous ne pourrions pas te le restituer.
+          </div>
+
+          <div class="bio-prompt-benefits">
+            <div class="bio-prompt-benefit">🔄 Ton Premium te suit sur tout appareil</div>
+            <div class="bio-prompt-benefit">💾 Ta progression est sauvegardée</div>
+            <div class="bio-prompt-benefit">🆘 Nous pouvons t'aider en cas de souci</div>
+          </div>
+
+          <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px; padding:0.7rem 0.9rem; margin-bottom:1rem; font-size:0.82rem; color:#166534; line-height:1.5">
+            ✅ Tes QCM déjà faits et tes statistiques sont conservés.
+          </div>
+
+          <button class="bio-prompt-accept" onclick="App.creerCompteDepuisActivation('google')">
+            Continuer avec Google
+          </button>
+          <button class="bio-prompt-accept" onclick="App.creerCompteDepuisActivation('email')"
+                  style="background:white; color:var(--green-bf); border:1.5px solid var(--green-bf); box-shadow:none; margin-top:0.5rem">
+            📧 Créer un compte avec e-mail
+          </button>
+          <button class="bio-prompt-decline" onclick="App.fermerCompteRequisDialog()">
+            Plus tard
+          </button>
+        </div>
+      </div>
+    `;
+  },
+
+  creerCompteDepuisActivation(methode) {
+    this.state.showCompteRequisDialog = false;
+    if (methode === 'google') {
+      this.handleGoogleSignIn();
+    } else {
+      this.navigate('auth-signup');
+    }
+  },
+
+  /**
+   * Après création du compte, on remet le candidat sur l'écran Premium avec
+   * son code déjà saisi. Appelé depuis _handleAuthSuccess.
+   */
+  reprendreActivationEnAttente() {
+    let code = null;
+    try { code = localStorage.getItem('bara_code_en_attente'); } catch(e) {}
+    if (!code) return false;
+    this.state.codeEnAttente = code;
+    try { localStorage.removeItem('bara_code_en_attente'); } catch(e) {}
+    this.navigate('premium');
+    setTimeout(() => {
+      const input = document.getElementById('activation-code-input');
+      if (input) {
+        input.value = code;
+        input.focus();
+      }
+      this.toast('Ton code t\'attend — touche « Activer »');
+    }, 400);
+    return true;
+  },
+
   async activateWithCode() {
     const input = document.getElementById('activation-code-input');
     if (!input) return;
@@ -10118,6 +10242,12 @@ const App = {
 
     if (!window.ActivationCodes) {
       this.toast('❌ Module d\'activation non disponible', 'danger');
+      return;
+    }
+
+    // V64.01 : un compte est nécessaire avant d'engager un paiement
+    if (this.estCompteAnonyme()) {
+      this.demanderCompteAvantActivation(code);
       return;
     }
 
