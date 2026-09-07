@@ -8602,7 +8602,8 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
     let filtered = all;
     if (filter === 'unused') filtered = all.filter(c => !c.used);
     else if (filter === 'used') filtered = all.filter(c => c.used);
-    else if (filter === 'weekly' || filter === 'monthly' || filter === 'yearly' || filter === 'session2026') {
+    else if (window.PremiumService && window.PremiumService.PLANS[filter]) {
+      // V64.03 : filtrage générique sur n'importe quel plan défini
       filtered = all.filter(c => c.planId === filter);
     }
 
@@ -8641,53 +8642,57 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
       <div class="card" style="margin-bottom:1.2rem; background:linear-gradient(135deg, #fffbeb, white); border-left:4px solid var(--gold-bf)">
         <h3 style="font-family:'Instrument Serif',serif; font-size:1.3rem; color:var(--green-bf-dark); margin-bottom:0.8rem">⚡ Générer de nouveaux codes</h3>
 
+        <!-- V64.03 : les cartes sont construites à partir de PremiumService.PLANS.
+             Elles étaient auparavant écrites en dur : après le changement de
+             tarif du 22 août, l'administration proposait toujours « 1 AN,
+             10 000 FCFA » comme plan le plus rentable, alors que le plan
+             vedette côté candidats était devenu SESSION 2027 à 15 000 F.
+             Le générateur suit désormais automatiquement toute évolution
+             de la grille tarifaire. -->
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:0.8rem">
+          ${(() => {
+            const P = (window.PremiumService && window.PremiumService.PLANS) || {};
+            const plans = Object.values(P);
+            if (plans.length === 0) {
+              return '<div style="color:var(--admin-text-soft)">⚠️ Plans indisponibles — data/premium.js non chargé</div>';
+            }
+            // Plans actifs d'abord, plans retirés ensuite
+            plans.sort((a, b) => {
+              if (!!a.hidden !== !!b.hidden) return a.hidden ? 1 : -1;
+              return (a.price || 0) - (b.price || 0);
+            });
+            return plans.map(p => {
+              const prix = (p.price || 0).toLocaleString('fr-FR') + ' FCFA';
+              const duree = p.expiresAt
+                ? 'butoir ' + new Date(p.expiresAt).toLocaleDateString('fr-FR')
+                : (p.duration ? p.duration + ' jours' : '');
+              const retire = !!p.hidden;
+              const vedette = p.popular === true && !retire;
 
-          <div style="background:white; border:1.5px solid var(--admin-border); border-radius:10px; padding:0.9rem">
-            <div style="font-weight:700; color:var(--admin-text)">📅 1 semaine</div>
-            <div style="font-size:0.75rem; color:var(--admin-text-soft); margin-bottom:0.5rem">1 000 FCFA</div>
-            <div style="display:flex; gap:0.3rem; flex-wrap:wrap">
-              <button onclick="Admin.generateCodes('weekly', 5)" class="btn-small">+5</button>
-              <button onclick="Admin.generateCodes('weekly', 10)" class="btn-small">+10</button>
-              <button onclick="Admin.generateCodes('weekly', 50)" class="btn-small">+50</button>
-            </div>
-          </div>
+              const cadre = retire
+                ? 'background:#f8fafc; border:1.5px dashed #cbd5e1; opacity:0.75'
+                : vedette
+                  ? 'background:linear-gradient(135deg, #ddd6fe, white); border:1.5px solid #7c3aed'
+                  : 'background:white; border:1.5px solid var(--admin-border)';
 
-          <div style="background:white; border:1.5px solid var(--admin-border); border-radius:10px; padding:0.9rem">
-            <div style="font-weight:700; color:var(--admin-text)">⭐ 1 mois</div>
-            <div style="font-size:0.75rem; color:var(--admin-text-soft); margin-bottom:0.5rem">2 000 FCFA</div>
-            <div style="display:flex; gap:0.3rem; flex-wrap:wrap">
-              <button onclick="Admin.generateCodes('monthly', 5)" class="btn-small">+5</button>
-              <button onclick="Admin.generateCodes('monthly', 10)" class="btn-small">+10</button>
-              <button onclick="Admin.generateCodes('monthly', 50)" class="btn-small">+50</button>
-            </div>
-          </div>
+              const lots = retire ? [5] : (vedette ? [5, 10, 50, 1] : [5, 10, 50]);
 
-          <!-- V63.77 : le plan ANNUEL redevient le plan vedette côté admin.
-               SESSION 2026 est conservé plus bas pour les codes déjà en
-               circulation, mais son butoir du 15 août 2026 le rend inutile
-               à générer. -->
-          <div style="background:linear-gradient(135deg, #ddd6fe, white); border:1.5px solid #7c3aed; border-radius:10px; padding:0.9rem; position:relative">
-            <div style="position:absolute; top:-8px; right:8px; background:#7c3aed; color:white; padding:0.1rem 0.5rem; border-radius:4px; font-size:0.65rem; font-weight:800; letter-spacing:0.05em">LE PLUS RENTABLE 🔥</div>
-            <div style="font-weight:700; color:var(--admin-text)">🏆 1 AN</div>
-            <div style="font-size:0.75rem; color:var(--admin-text-soft); margin-bottom:0.5rem">10 000 FCFA · 365 jours</div>
-            <div style="display:flex; gap:0.3rem; flex-wrap:wrap">
-              <button onclick="Admin.generateCodes('yearly', 5)" class="btn-small">+5</button>
-              <button onclick="Admin.generateCodes('yearly', 10)" class="btn-small">+10</button>
-              <button onclick="Admin.generateCodes('yearly', 50)" class="btn-small">+50</button>
-              <button onclick="Admin.generateCodes('yearly', 1)" class="btn-small">+1</button>
-            </div>
-          </div>
-
-          <!-- V63.77 : SESSION 2026 relégué, butoir dépassé -->
-          <div style="background:#f8fafc; border:1.5px dashed #cbd5e1; border-radius:10px; padding:0.9rem; opacity:0.75">
-            <div style="font-weight:700; color:var(--admin-text-soft)">🎯 SESSION 2026 (clos)</div>
-            <div style="font-size:0.75rem; color:var(--admin-text-soft); margin-bottom:0.5rem">2 500 FCFA · butoir 15 août 2026</div>
-            <div style="display:flex; gap:0.3rem; flex-wrap:wrap">
-              <button onclick="Admin.generateCodes('session2026', 5)" class="btn-small">+5</button>
-            </div>
-          </div>
-
+              return `
+                <div style="${cadre}; border-radius:10px; padding:0.9rem; position:relative">
+                  ${vedette ? '<div style="position:absolute; top:-8px; right:8px; background:#7c3aed; color:white; padding:0.1rem 0.5rem; border-radius:4px; font-size:0.65rem; font-weight:800; letter-spacing:0.05em">LE PLUS RENTABLE 🔥</div>' : ''}
+                  <div style="font-weight:700; color:var(--admin-text${retire ? '-soft' : ''})">
+                    ${p.icon || '🎫'} ${this.escapeHTML(p.name || p.id)}${retire ? ' (retiré)' : ''}
+                  </div>
+                  <div style="font-size:0.75rem; color:var(--admin-text-soft); margin-bottom:0.5rem">
+                    ${prix}${duree ? ' · ' + duree : ''}
+                  </div>
+                  <div style="display:flex; gap:0.3rem; flex-wrap:wrap">
+                    ${lots.map(n => `<button onclick="Admin.generateCodes('${p.id}', ${n})" class="btn-small">+${n}</button>`).join('')}
+                  </div>
+                </div>
+              `;
+            }).join('');
+          })()}
         </div>
 
         <div style="margin-top:0.9rem; padding-top:0.8rem; border-top:1px dashed var(--admin-border); display:flex; gap:0.5rem; flex-wrap:wrap; justify-content:space-between; align-items:center">
@@ -8706,10 +8711,16 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
           <button onclick="Admin.setCodesFilter('unused')" class="${filter === 'unused' ? 'btn-tab active' : 'btn-tab'}">🟢 Disponibles (${stats.unused})</button>
           <button onclick="Admin.setCodesFilter('used')" class="${filter === 'used' ? 'btn-tab active' : 'btn-tab'}">🔴 Utilisés (${stats.used})</button>
           <div style="flex:1"></div>
-          <button onclick="Admin.setCodesFilter('weekly')" class="${filter === 'weekly' ? 'btn-tab active' : 'btn-tab'}">📅 1 sem</button>
-          <button onclick="Admin.setCodesFilter('monthly')" class="${filter === 'monthly' ? 'btn-tab active' : 'btn-tab'}">⭐ 1 mois</button>
-          <button onclick="Admin.setCodesFilter('yearly')" class="${filter === 'yearly' ? 'btn-tab active' : 'btn-tab'}">🏆 1 an</button>
-          <button onclick="Admin.setCodesFilter('session2026')" class="${filter === 'session2026' ? 'btn-tab active' : 'btn-tab'}">🎯 SESSION 2026</button>
+          ${(() => {
+            // V64.03 : un filtre par plan existant, y compris les plans retirés
+            //   dont des codes circulent encore.
+            const P = (window.PremiumService && window.PremiumService.PLANS) || {};
+            return Object.values(P).map(p => {
+              const n = all.filter(c => c.planId === p.id).length;
+              if (n === 0 && p.hidden) return '';   // plan retiré et sans code : inutile
+              return `<button onclick="Admin.setCodesFilter('${p.id}')" class="${filter === p.id ? 'btn-tab active' : 'btn-tab'}">${p.icon || '🎫'} ${this.escapeHTML(p.name || p.id)} (${n})</button>`;
+            }).join('');
+          })()}
         </div>
 
         ${filtered.length === 0 ? `
