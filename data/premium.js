@@ -397,12 +397,21 @@ const ActivationCodes = {
   // GÉNÉRATION
   // ====================================================================
 
+  // V64.00 : partie aléatoire portée de 4 à 6 caractères.
+  //   Les règles Firestore interdisent désormais de parcourir la collection :
+  //   pour utiliser un code, il faut le connaître exactement. La seule
+  //   attaque restante est de deviner. Avec 4 caractères, un million de
+  //   combinaisons — atteignable. Avec 6, plus d'un milliard, et chaque essai
+  //   consomme une lecture, donc l'attaque devient visible et coûteuse.
+  //   Les codes déjà distribués (4 caractères) restent valides.
+  LONGUEUR_CODE: 6,
+
   generateCode(planId) {
     const prefix = this.PLAN_PREFIXES[planId];
     if (!prefix) return null;
     const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
     let random = '';
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < this.LONGUEUR_CODE; i++) {
       random += chars.charAt(Math.floor(Math.random() * chars.length));
     }
     return `BARA-${prefix}-${random}`;
@@ -515,8 +524,10 @@ const ActivationCodes = {
     const code = (rawCode || '').trim().toUpperCase();
     if (!code) return { valid: false, reason: 'Code vide' };
 
-    if (!/^BARA-(SEM|MOIS|ANNEE|SESSION)-[A-Z0-9]{4}$/.test(code)) {
-      return { valid: false, reason: 'Format invalide. Exemple : BARA-SESSION-A3F7' };
+    // V64.00 : accepte les anciens codes (4 caractères), les nouveaux (6) et
+    //   le préfixe S2027 introduit avec le plan Session 2027.
+    if (!/^BARA-(SEM|MOIS|ANNEE|SESSION|S2027)-[A-Z0-9]{4,8}$/.test(code)) {
+      return { valid: false, reason: 'Format invalide. Exemple : BARA-S2027-A3F7K9' };
     }
 
     // V63.62 : Détecter l'état réseau pour donner un message d'erreur exact
@@ -649,8 +660,19 @@ const ActivationCodes = {
     if (!validation.valid) return validation;
 
     const code = validation.code.code;
+
+    // V64.00 : l'identifiant inscrit dans le code DOIT être celui du compte
+    //   authentifié. Les règles Firestore l'exigent désormais — un candidat
+    //   ne peut plus attribuer un code à quelqu'un d'autre — et c'est aussi
+    //   ce qui permet de lui restituer son abonnement plus tard.
+    const uidAuth = (window.FirebaseAuth && window.FirebaseAuth.user)
+      ? window.FirebaseAuth.user.uid : null;
+    if (!uidAuth) {
+      return { valid: false, reason: 'Connexion requise pour activer un code. Réessaie dans quelques secondes.' };
+    }
+
     const usedBy = {
-      userId: userInfo?.uid || userInfo?.id || 'unknown',
+      userId: uidAuth,
       email: userInfo?.email || (window.FirebaseAuth?.user?.email) || '',
       phone: userInfo?.phoneNumber || '',
       name: userInfo?.firstName ? (userInfo.firstName + ' ' + (userInfo.lastName || '')).trim() : (userInfo?.displayName || 'Anonyme')
