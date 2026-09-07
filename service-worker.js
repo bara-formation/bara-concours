@@ -1,8 +1,9 @@
 // Bara Concours - Service Worker
-// Version 6.3.97 - V63.97 : Nouveau plan vedette « SESSION 2027 + ACC. FINAL »
-//                  à 15 000 F en remplacement de l'Annuel à 10 000 F
+// Version 6.4.00 - V64.00 : Sécurisation des codes d'activation — la
+//                  collection n'est plus parcourable, les codes passent à
+//                  6 caractères et sont liés au compte qui les active
 
-const CACHE_NAME = 'bara-concours-v6-3-97';
+const CACHE_NAME = 'bara-concours-v6-4-00';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)
@@ -48,7 +49,7 @@ const OPTIONAL_ASSETS = [
 
 // Installation : d'abord les ressources critiques (atomique), puis les optionnelles (best-effort)
 self.addEventListener('install', event => {
-  console.log('[SW] Installation V6.3.97');
+  console.log('[SW] Installation V6.4.00');
   event.waitUntil(
     caches.open(CACHE_NAME).then(async cache => {
       // 1) Ressources critiques : addAll atomique
@@ -79,7 +80,7 @@ self.addEventListener('install', event => {
 
 // Activation : nettoyage des anciens caches (avec sécurité)
 self.addEventListener('activate', event => {
-  console.log('[SW] Activation V6.3.97');
+  console.log('[SW] Activation V6.4.00');
   event.waitUntil(
     (async () => {
       // Sécurité : vérifier que le nouveau cache contient bien index.html avant de supprimer l'ancien
