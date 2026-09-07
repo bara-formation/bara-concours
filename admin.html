@@ -1883,7 +1883,7 @@ const Admin = {
       // l'absence de ce marqueur qui provoquait la boucle.
       this.state._codesLoadedAt = Date.now();
       this.state._codesLoadedOnce = true;
-      if (['dashboard', 'users', 'payments'].includes(this.state.currentPage)) {
+      if (['dashboard', 'users', 'payments', 'codes'].includes(this.state.currentPage)) {
         const el = document.activeElement;
         const saisie = el && el.classList && el.classList.contains('search-input');
         if (!saisie) this.render();
@@ -8588,18 +8588,16 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
     const all = window.ActivationCodes.getAllCodesLocal().slice().reverse();
     const filter = this.state.codesFilter || 'all';
 
-    // Déclencher un refresh async depuis Firestore (pour mettre à jour le cache)
-    if (firestoreReady && !this.state._codesRefreshing) {
-      this.state._codesRefreshing = true;
-      window.ActivationCodes.getAllCodes().then(() => {
-        this.state._codesRefreshing = false;
-        // Re-render si on est toujours sur cette page
-        if (this.state.currentPage === 'codes') this.render();
-      }).catch(e => {
-        this.state._codesRefreshing = false;
-        console.warn('[V58] Refresh codes échoué :', e);
-      });
-    }
+    // V64.02 : CORRECTION D'UNE SECONDE BOUCLE DE LECTURES FIRESTORE
+    //
+    //   Même schéma que celui corrigé en V63.99 sur la page Utilisateurs :
+    //   la lecture était déclenchée à chaque rendu, le verrou libéré, puis
+    //   render() appelé — ce qui relançait aussitôt la lecture. Boucle
+    //   infinie tant que la page Codes Premium restait ouverte.
+    //
+    //   On réutilise le même garde-fou : un délai minimum entre deux
+    //   lectures, et un horodatage posé même en cas d'échec.
+    this.refreshCodesForUsers();
 
     let filtered = all;
     if (filter === 'unused') filtered = all.filter(c => !c.used);
