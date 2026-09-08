@@ -3,7 +3,7 @@
 //                  code — un abonnement acheté sans compte était perdu sans
 //                  recours en cas de changement d'appareil
 
-const CACHE_NAME = 'bara-concours-v6-4-01';
+const CACHE_NAME = 'bara-concours-v6-4-03';
 
 // Ressources CRITIQUES : sans elles l'app ne peut pas démarrer offline
 // Si UNE SEULE échoue à cacher, on n'active pas le SW (l'ancien continue à servir)
