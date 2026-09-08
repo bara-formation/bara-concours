@@ -135,6 +135,8 @@ const FirebaseAuth = {
             const st = JSON.parse(localStorage.getItem('bara_concours_state') || '{}');
             if (Array.isArray(st.history) && st.history.length > 0) {
               this.backfillActivityFromLocal(st.history);
+              // V64.04 : meme principe pour le detail par matiere
+              this.backfillMatiereStatsFromLocal(st.history);
             }
           } catch(e) { /* non bloquant */ }
         } else {
@@ -640,20 +642,134 @@ const FirebaseAuth = {
       const duree = Number(qcmResult.duration) || 0;
 
       const userRef = this._fbFns.doc(this.db, 'users', this.user.uid);
-      await this._fbFns.setDoc(userRef, {
+
+      const donnees = {
         uid: this.user.uid,
         totalQCM: inc(1),
         totalQuestions: inc(nbQuestions),
         totalCorrect: inc(nbCorrect),
         totalDuration: inc(duree),
         lastActivityAt: this._fbFns.serverTimestamp()
-      }, { merge: true });
+      };
+
+      // V64.04 : DETAIL PAR MATIERE (suivi individuel des candidats)
+      //   Jusqu'ici `matiereId` etait transmis par endQCM puis ignore ici :
+      //   le tableau de bord ne pouvait afficher qu'un total, jamais le detail.
+      //
+      //   On stocke une table compacte dans le document utilisateur :
+      //     matiereStats: { <matiereId>: { n, q, c, t } }
+      //       n = nombre de sessions terminees
+      //       q = nombre de questions traitees
+      //       c = nombre de bonnes reponses
+      //       t = date du dernier passage (ms)
+      //
+      //   Choix volontaire : PAS un document par QCM. La table entiere pese
+      //   quelques centaines d'octets et se lit avec le profil, donc ouvrir
+      //   la fiche d'un candidat ne coute aucune lecture supplementaire.
+      //
+      //   increment() fonctionne a l'interieur d'une carte imbriquee, et
+      //   setDoc({merge:true}) ne touche que la matiere concernee : les
+      //   autres matieres du candidat sont preservees.
+      const matId = this._cleMatiere(qcmResult.matiereId);
+      if (matId) {
+        donnees.matiereStats = {};
+        donnees.matiereStats[matId] = {
+          n: inc(1),
+          q: inc(nbQuestions),
+          c: inc(nbCorrect),
+          t: Date.now()
+        };
+      }
+
+      await this._fbFns.setDoc(userRef, donnees, { merge: true });
 
       return Promise.resolve();
     } catch (e) {
       // Ne jamais bloquer la navigation de l'étudiant pour un souci de statistiques
       console.warn('[V63.65] saveQCMResult :', e.message);
       return Promise.resolve();
+    }
+  },
+
+  /**
+   * V64.04 : Valide un identifiant de matière avant de s'en servir comme clé
+   *   de carte Firestore. Les clés ne peuvent pas contenir de point ni de
+   *   barre oblique — un identifiant mal formé ferait échouer toute
+   *   l'écriture, y compris les compteurs globaux.
+   */
+  _cleMatiere(id) {
+    if (!id) return null;
+    const propre = String(id).trim();
+    if (!propre) return null;
+    if (/[.\/\[\]*~`]/.test(propre)) {
+      console.warn('[V64.04] Identifiant de matière écarté (caractère interdit) :', propre);
+      return null;
+    }
+    return propre;
+  },
+
+  /**
+   * V64.04 : Reconstitution unique de la table par matière depuis le local.
+   *
+   *   Sans ça, les candidats déjà inscrits repartiraient d'une fiche vide :
+   *   tout leur historique est dans le localStorage de leur téléphone. On le
+   *   rejoue une fois, au premier lancement après la mise à jour.
+   *
+   *   L'historique local contient la date de chaque session, donc la date de
+   *   dernier passage par matière est reconstituée elle aussi, pas seulement
+   *   les totaux.
+   *
+   *   Marqueur dédié `matiereStatsBackfilled` : le marqueur V63.65
+   *   `historyBackfilled` est déjà à true pour les comptes existants, s'en
+   *   servir ici empêcherait toute reprise.
+   */
+  async backfillMatiereStatsFromLocal(history) {
+    if (!this.isFirebaseReady || !this.user) return;
+    if (!Array.isArray(history) || history.length === 0) return;
+    if (this.userProfile && this.userProfile.matiereStatsBackfilled) return;
+
+    try {
+      const table = {};
+      history.forEach(h => {
+        const matId = this._cleMatiere(h && h.matiereId);
+        if (!matId) return;
+        if (!table[matId]) table[matId] = { n: 0, q: 0, c: 0, t: 0 };
+        table[matId].n += 1;
+        table[matId].q += Number(h.total) || 0;
+        table[matId].c += Number(h.score) || 0;
+        const quand = Number(h.date) || 0;
+        if (quand > table[matId].t) table[matId].t = quand;
+      });
+
+      if (Object.keys(table).length === 0) return;
+
+      // Si des sessions ont déjà été remontées depuis un autre appareil, on
+      // garde la valeur la plus élevée plutôt que d'écraser le nuage.
+      const dejaLa = (this.userProfile && this.userProfile.matiereStats) || {};
+      Object.keys(dejaLa).forEach(matId => {
+        const cloud = dejaLa[matId] || {};
+        if (!table[matId]) { table[matId] = { n: 0, q: 0, c: 0, t: 0 }; }
+        table[matId].n = Math.max(table[matId].n, Number(cloud.n) || 0);
+        table[matId].q = Math.max(table[matId].q, Number(cloud.q) || 0);
+        table[matId].c = Math.max(table[matId].c, Number(cloud.c) || 0);
+        table[matId].t = Math.max(table[matId].t, Number(cloud.t) || 0);
+      });
+
+      const userRef = this._fbFns.doc(this.db, 'users', this.user.uid);
+      await this._fbFns.setDoc(userRef, {
+        uid: this.user.uid,
+        matiereStats: table,
+        matiereStatsBackfilled: true,
+        matiereStatsBackfilledAt: this._fbFns.serverTimestamp()
+      }, { merge: true });
+
+      if (this.userProfile) {
+        this.userProfile.matiereStatsBackfilled = true;
+        this.userProfile.matiereStats = table;
+      }
+      console.log('[V64.04] \u2713 Detail par matiere reconstitue : ' + Object.keys(table).length + ' matieres');
+    } catch (e) {
+      console.warn('[V64.04] backfill matieres :', e.message);
     }
   },
 
