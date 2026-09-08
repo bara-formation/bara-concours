@@ -1693,6 +1693,12 @@ const Admin = {
       // V63.65 : Compteurs d'activité (renseignés à chaque QCM terminé)
       totalQuestions: u.totalQuestions || 0,
       totalCorrect: u.totalCorrect || 0,
+      // V64.04 : détail par matière — { <matiereId>: { n, q, c, t } }
+      //   normalizeUser reconstruit un objet champ par champ : sans cette
+      //   ligne, la table serait lue depuis Firestore puis jetée avant
+      //   d'atteindre l'affichage.
+      matiereStats: u.matiereStats || {},
+      totalDuration: u.totalDuration || 0,
       lastActivityAt: typeof u.lastActivityAt === 'object' && u.lastActivityAt?.seconds
         ? u.lastActivityAt.seconds * 1000
         : (u.lastActivityAt || null),
@@ -2003,6 +2009,7 @@ const Admin = {
         <td style="font-size:0.75rem">${this.renderActivityCell(u)}</td>
         <td style="font-size:0.78rem; color:var(--ink-mute)">${this.formatRelativeTime(u.joinedAt)}</td>
         <td>
+          <button class="btn-action btn-secondary" onclick="Admin.openCandidateModal('${u.id}')" style="margin-right:0.3rem">📊 Fiche</button>
           ${!isPrem ? `
             <button class="btn-action btn-success" onclick="Admin.openActivateModal('${u.id}')">⭐ Activer Premium</button>
           ` : `
@@ -9161,6 +9168,7 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
   renderModal() {
     const m = this.state.modalOpen;
     if (m === 'activate') return this.renderActivateModal();
+    if (m === 'candidate') return this.renderCandidateModal();
     if (m === 'add-user') return this.renderAddUserModal();
     if (m === 'add-question') return this.renderAddQuestionModal();
     if (m === 'edit-question') return this.renderEditQuestionModal();
@@ -9169,6 +9177,254 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
     if (m === 'text-import') return this.renderTextImportModal();
     if (m === 'add-annale') return this.renderAddAnnaleModal();
     return '';
+  },
+
+  // ==================================================================
+  // V64.04 : FICHE CANDIDAT — SUIVI INDIVIDUEL PAR MATIÈRE
+  // ==================================================================
+  //   Le tableau de bord n'affichait qu'un total de QCM par candidat.
+  //   Impossible de savoir OÙ un abonné bute, donc impossible de lui
+  //   renvoyer autre chose qu'un encouragement générique.
+  //
+  //   Coût de lecture : zéro. La table `matiereStats` arrive avec le
+  //   document utilisateur, déjà chargé pour la liste. Ouvrir une fiche
+  //   ne déclenche aucune requête Firestore supplémentaire.
+
+  /** Retrouve un candidat enrichi (Premium reconstitué depuis les codes). */
+  _getCandidat(userId) {
+    const data = this.loadData();
+    const liste = this.assignVisitorNumbers(
+      this.enrichPremiumFromCodes(data.users.map(u => this.normalizeUser(u)))
+    );
+    return liste.find(x => x.id === userId) || null;
+  },
+
+  /** Libellé lisible d'une matière, avec repli sur l'identifiant brut. */
+  _nomMatiere(matId) {
+    if (matId === 'accompagnement_final') return '🎯 Accompagnement Final';
+    const m = window.MATIERES_CATALOG && window.MATIERES_CATALOG[matId];
+    if (!m) return matId;
+    return (m.icone ? m.icone + ' ' : '') + (m.nom || matId);
+  },
+
+  /**
+   * Transforme la table brute en lignes triées et exploitables.
+   *   Les matières sont classées par taux croissant : ce qui est à
+   *   travailler apparaît en premier, c'est l'information utile.
+   */
+  _lignesMatieres(u) {
+    const table = (u && u.matiereStats) || {};
+    return Object.keys(table).map(matId => {
+      const v = table[matId] || {};
+      const q = Number(v.q) || 0;
+      const c = Number(v.c) || 0;
+      return {
+        id: matId,
+        nom: this._nomMatiere(matId),
+        sessions: Number(v.n) || 0,
+        questions: q,
+        justes: c,
+        pct: q > 0 ? Math.round((c / q) * 100) : 0,
+        dernier: Number(v.t) || 0
+      };
+    }).sort((a, b) => a.pct - b.pct);
+  },
+
+  /** Matières du concours visé que le candidat n'a jamais ouvertes. */
+  _matieresNonAbordees(u) {
+    if (!u || !u.targetConcours || !window.CONCOURS) return [];
+    const concours = window.CONCOURS.find(c => c.id === u.targetConcours);
+    if (!concours || !Array.isArray(concours.matieres)) return [];
+    const faites = Object.keys((u && u.matiereStats) || {});
+    return concours.matieres
+      .filter(mid => faites.indexOf(mid) === -1)
+      .map(mid => this._nomMatiere(mid));
+  },
+
+  _couleurTaux(pct) {
+    if (pct >= 70) return '#15803d';
+    if (pct >= 50) return '#ea580c';
+    return '#dc2626';
+  },
+
+  _depuis(ts) {
+    if (!ts) return 'jamais';
+    const jours = Math.floor((Date.now() - ts) / 86400000);
+    if (jours <= 0) return "aujourd'hui";
+    if (jours === 1) return 'hier';
+    if (jours < 30) return 'il y a ' + jours + ' jours';
+    const mois = Math.floor(jours / 30);
+    return 'il y a ' + mois + ' mois';
+  },
+
+  openCandidateModal(userId) {
+    this.state.modalOpen = 'candidate';
+    this.state.modalData = { userId };
+    this.render();
+  },
+
+  renderCandidateModal() {
+    const data = this.state.modalData;
+    const u = this._getCandidat(data.userId);
+    if (!u) return '';
+
+    const lignes = this._lignesMatieres(u);
+    const nonAbordees = this._matieresNonAbordees(u);
+    const isPrem = window.PremiumService.isUserPremium(u);
+    const tauxGlobal = u.totalQuestions > 0
+      ? Math.round((u.totalCorrect / u.totalQuestions) * 100)
+      : 0;
+
+    const enTete = `
+      <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-bottom:1rem">
+        <div style="flex:1; min-width:110px; background:#f8fafc; border:1px solid #e5e7eb; border-radius:10px; padding:0.6rem">
+          <div style="font-size:0.68rem; color:var(--ink-mute); font-weight:600">QCM terminés</div>
+          <div style="font-size:1.35rem; font-weight:800">${u.totalQCM || 0}</div>
+        </div>
+        <div style="flex:1; min-width:110px; background:#f8fafc; border:1px solid #e5e7eb; border-radius:10px; padding:0.6rem">
+          <div style="font-size:0.68rem; color:var(--ink-mute); font-weight:600">Questions</div>
+          <div style="font-size:1.35rem; font-weight:800">${u.totalQuestions || 0}</div>
+        </div>
+        <div style="flex:1; min-width:110px; background:#f8fafc; border:1px solid #e5e7eb; border-radius:10px; padding:0.6rem">
+          <div style="font-size:0.68rem; color:var(--ink-mute); font-weight:600">Réussite</div>
+          <div style="font-size:1.35rem; font-weight:800; color:${this._couleurTaux(tauxGlobal)}">${tauxGlobal}%</div>
+        </div>
+      </div>
+    `;
+
+    const corps = lignes.length === 0
+      ? `<div style="background:#fef3c7; border-left:4px solid #d97706; padding:0.8rem; border-radius:8px; font-size:0.85rem; line-height:1.5">
+           Aucun détail par matière pour ce candidat.
+           ${(u.totalQCM || 0) > 0
+             ? "Ses QCM ont été faits avant la mise à jour : le détail remontera à sa prochaine ouverture de l'application."
+             : "Il n'a encore terminé aucun QCM."}
+         </div>`
+      : `<table style="width:100%; border-collapse:collapse; font-size:0.82rem">
+           <thead>
+             <tr style="text-align:left; color:var(--ink-mute); font-size:0.7rem; text-transform:uppercase">
+               <th style="padding:0.4rem 0.3rem">Matière</th>
+               <th style="padding:0.4rem 0.3rem; text-align:center">Faites</th>
+               <th style="padding:0.4rem 0.3rem; text-align:center">Justes</th>
+               <th style="padding:0.4rem 0.3rem; text-align:center">Taux</th>
+               <th style="padding:0.4rem 0.3rem">Dernier passage</th>
+             </tr>
+           </thead>
+           <tbody>
+             ${lignes.map(l => `
+               <tr style="border-top:1px solid #f1f5f9">
+                 <td style="padding:0.45rem 0.3rem; font-weight:600">${l.nom}</td>
+                 <td style="padding:0.45rem 0.3rem; text-align:center">${l.questions}</td>
+                 <td style="padding:0.45rem 0.3rem; text-align:center">${l.justes}</td>
+                 <td style="padding:0.45rem 0.3rem; text-align:center; font-weight:800; color:${this._couleurTaux(l.pct)}">${l.pct}%</td>
+                 <td style="padding:0.45rem 0.3rem; color:var(--ink-mute)">${this._depuis(l.dernier)}</td>
+               </tr>
+             `).join('')}
+           </tbody>
+         </table>`;
+
+    const restant = nonAbordees.length > 0
+      ? `<div style="margin-top:0.9rem; font-size:0.78rem; color:var(--ink-mute); line-height:1.5">
+           <strong>Jamais abordées</strong> (${nonAbordees.length}) :
+           ${nonAbordees.slice(0, 6).join(', ')}${nonAbordees.length > 6 ? '…' : ''}
+         </div>`
+      : '';
+
+    return `
+      <div class="modal-overlay" onclick="Admin.closeModal()">
+        <div class="modal" onclick="event.stopPropagation()" style="max-width:680px">
+          <div class="modal-title">📊 ${u.name}</div>
+          <div class="modal-desc">
+            ${isPrem ? '⭐ Premium' : 'Compte gratuit'}
+            ${u.phone ? ' · ' + this.formatPhone(u.phone) : ''}
+            ${u.city ? ' · ' + u.city : ''}
+            · dernière activité ${this._depuis(u.lastActivityAt)}
+          </div>
+
+          ${enTete}
+          ${corps}
+          ${restant}
+
+          <div class="modal-actions" style="margin-top:1.2rem">
+            <button class="btn-action btn-secondary" onclick="Admin.closeModal()">Fermer</button>
+            <button class="btn-action btn-success" onclick="Admin.copierBilanCandidat('${u.id}')">📋 Copier le bilan WhatsApp</button>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  /**
+   * Construit le message à envoyer au candidat.
+   *   C'est ce texte qui fait la différence avec un formateur qui distribue
+   *   un PDF : il est nominatif, chiffré, et se termine par une consigne.
+   */
+  construireBilanCandidat(u) {
+    const lignes = this._lignesMatieres(u);
+    const prenom = (u.name || '').split(' ')[0] || 'Bonjour';
+    const tauxGlobal = u.totalQuestions > 0
+      ? Math.round((u.totalCorrect / u.totalQuestions) * 100)
+      : 0;
+
+    const out = [];
+    out.push('📊 *BARA CONCOURS — Ton bilan*');
+    out.push('');
+    out.push('Bonjour ' + prenom + ',');
+    out.push('Voici où tu en es dans ta préparation :');
+    out.push('');
+    out.push('✅ ' + (u.totalQCM || 0) + ' QCM terminés');
+    out.push('📝 ' + (u.totalQuestions || 0) + ' questions traitées');
+    out.push('🎯 ' + tauxGlobal + '% de bonnes réponses');
+
+    if (lignes.length > 0) {
+      out.push('');
+      out.push('*Matière par matière :*');
+      // Ordre de lecture : les points forts d'abord, ça encourage ;
+      // les points faibles ensuite, juste avant la consigne.
+      lignes.slice().sort((a, b) => b.pct - a.pct).forEach(l => {
+        const puce = l.pct >= 70 ? '🟢' : (l.pct >= 50 ? '🟠' : '🔴');
+        out.push(puce + ' ' + l.nom + ' — ' + l.pct + '% (' + l.questions + ' questions)');
+      });
+
+      const faibles = lignes.filter(l => l.questions >= 5 && l.pct < 70).slice(0, 3);
+      if (faibles.length > 0) {
+        out.push('');
+        out.push('*À travailler en priorité :*');
+        faibles.forEach(l => out.push('👉 ' + l.nom + ' (' + l.pct + '%)'));
+      }
+    }
+
+    const nonAbordees = this._matieresNonAbordees(u);
+    if (nonAbordees.length > 0) {
+      out.push('');
+      out.push('*Pas encore ouvertes* : ' + nonAbordees.slice(0, 5).join(', ')
+        + (nonAbordees.length > 5 ? ' et ' + (nonAbordees.length - 5) + ' autres' : ''));
+    }
+
+    out.push('');
+    out.push('Continue, tu progresses. 💪');
+    out.push('_Bara Formation_');
+
+    return out.join('\n');
+  },
+
+  copierBilanCandidat(userId) {
+    const u = this._getCandidat(userId);
+    if (!u) return;
+    const texte = this.construireBilanCandidat(u);
+
+    const secours = () => {
+      // Presse-papiers indisponible (page non sécurisée, vieux navigateur) :
+      // on affiche le texte pour qu'il reste sélectionnable à la main.
+      window.prompt('Copie le bilan ci-dessous :', texte);
+    };
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(texte)
+        .then(() => this.toast('📋 Bilan copié — colle-le dans WhatsApp', 'success'))
+        .catch(secours);
+    } else {
+      secours();
+    }
   },
 
   renderActivateModal() {

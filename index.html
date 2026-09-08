@@ -6249,6 +6249,7 @@ const App = {
     this.state.matiereStats[ACCOMPAGNEMENT_MATIERE_ID].attempts++;
     this.state.matiereStats[ACCOMPAGNEMENT_MATIERE_ID].totalScore += score;
     this.state.matiereStats[ACCOMPAGNEMENT_MATIERE_ID].totalQuestions += activeQs.length;
+    this.state.matiereStats[ACCOMPAGNEMENT_MATIERE_ID].lastAt = Date.now();
 
     // V63.65 : Comptabiliser aussi les sessions d'accompagnement dans les
     //   compteurs d'activité (elles ne passaient pas par endQCM, donc
@@ -6256,6 +6257,12 @@ const App = {
     try {
       if (window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady && window.FirebaseAuth.isLoggedIn()) {
         window.FirebaseAuth.saveQCMResult({
+          // V64.04 : l'Accompagnement Final etait le seul parcours a ne pas
+          //   transmettre sa matiere : il alimentait les compteurs globaux
+          //   mais restait invisible dans le detail par matiere du tableau
+          //   de bord. C'est pourtant l'offre a suivre en priorite.
+          matiereId: ACCOMPAGNEMENT_MATIERE_ID,
+          date: Date.now(),
           score: score,
           total: activeQs.length,
           duration: elapsedSeconds
@@ -8406,7 +8413,7 @@ const App = {
   },
 
   getMatiereStats(matId) {
-    return this.state.matiereStats[matId] || { attempts: 0, totalScore: 0, totalQuestions: 0 };
+    return this.state.matiereStats[matId] || { attempts: 0, totalScore: 0, totalQuestions: 0, lastAt: 0 };
   },
 
   // === MODE SELECT ===
@@ -9004,6 +9011,9 @@ const App = {
         this.state.matiereStats[matId].attempts++;
         this.state.matiereStats[matId].totalScore += this.state.qcm.score;
         this.state.matiereStats[matId].totalQuestions += this.state.qcm.questions.length;
+        // V64.04 : date du dernier passage — necessaire au suivi individuel
+        //   (elle n'etait stockee nulle part, meme en local).
+        this.state.matiereStats[matId].lastAt = Date.now();
       }
     } catch(e) { console.warn('[endQCM] stats:', e); }
 
