@@ -157,7 +157,9 @@ const FirebaseAuth = {
           await this._ensureUserDoc(result.user, 'google');
         }
       } catch(e) {
-        // Pas grave, c'est juste qu'il n'y avait pas de redirect en attente
+        // V64.05 : on trace au lieu d'avaler. Un retour de redirection qui
+        //   échoue silencieusement était impossible à diagnostiquer.
+        console.warn('[Firebase] getRedirectResult :', e.code || e.message);
       }
 
       // === V63.59 : Auth anonyme automatique ===
@@ -167,6 +169,19 @@ const FirebaseAuth = {
       //   → si l'utilisateur crée un compte plus tard (Google ou email), le compte
       //     anonyme est LIÉ (linkWithPopup / linkWithCredential) : aucune perte de données.
       //   ⚠️ Nécessite "Anonymous" activé dans Firebase Console > Authentication > Sign-in method
+      // V64.05 : ATTENDRE la restauration de la session enregistrée.
+      //   Firebase restaure l'utilisateur persisté de façon asynchrone.
+      //   Sans cette attente, `currentUser` pouvait encore valoir null alors
+      //   qu'une session existait : on créait alors un SECOND compte anonyme.
+      //   Conséquence observée dans l'admin : un « nouvel inscrit » daté de
+      //   l'instant, qui récupérait aussitôt tout l'historique local via le
+      //   backfill — d'où des visiteurs à 290 questions inscrits « à l'instant ».
+      try {
+        if (typeof this.auth.authStateReady === 'function') {
+          await this.auth.authStateReady();
+        }
+      } catch(e) { /* non bloquant */ }
+
       if (!this.auth.currentUser) {
         try {
           const anonResult = await this._fbFns.signInAnonymously(this.auth);
@@ -200,44 +215,28 @@ const FirebaseAuth = {
       }
     }
 
+    // V64.05 : le provider est créé AVANT le try pour rester accessible
+    //   dans le bloc d'erreur (secours redirect).
+    const provider = new this._fbFns.GoogleAuthProvider();
+    provider.setCustomParameters({ prompt: 'select_account' });  // Force choix du compte
+
     try {
-      const provider = new this._fbFns.GoogleAuthProvider();
-      provider.setCustomParameters({ prompt: 'select_account' });  // Force choix du compte
-
-      // Sur APK Android (TWA), popup peut être bloqué → utiliser redirect
-      const isAPK = window.matchMedia('(display-mode: standalone)').matches;
-      let result;
-
-      if (isAPK) {
-        // Mode APK : redirect (le résultat sera traité au prochain init via getRedirectResult)
-        await this._fbFns.signInWithRedirect(this.auth, provider);
-        return { success: true, pending: true };  // L'app va recharger
-      }
-
-      // V63.59 : Si l'utilisateur est actuellement ANONYME, on LIE le compte Google
-      //   au compte anonyme au lieu d'en créer un nouveau.
-      //   → sans ça, Firebase refusait l'inscription Google une fois dans l'app
-      //     (l'utilisateur était déjà connecté en anonyme).
-      //   → avantage : l'historique, le Premium et les stats de l'anonyme sont conservés.
-      const current = this.auth.currentUser;
-      if (current && current.isAnonymous) {
-        try {
-          result = await this._fbFns.linkWithPopup(current, provider);
-          console.log('[V63.59] ✓ Compte anonyme lié à Google (données conservées)');
-        } catch(linkErr) {
-          // Ce compte Google existe déjà ailleurs → connexion normale (on abandonne l'anonyme)
-          if (linkErr.code === 'auth/credential-already-in-use' ||
-              linkErr.code === 'auth/email-already-in-use') {
-            console.log('[V63.59] Compte Google déjà existant → connexion classique');
-            result = await this._fbFns.signInWithPopup(this.auth, provider);
-          } else {
-            throw linkErr;
-          }
-        }
-      } else {
-        // Mode navigateur classique : popup
-        result = await this._fbFns.signInWithPopup(this.auth, provider);
-      }
+      // V64.05 : POPUP SUR TOUTES LES PLATEFORMES.
+      //
+      //   L'ancien code basculait sur signInWithRedirect dès que l'app
+      //   tournait en mode installé (APK ou PWA). Or notre authDomain
+      //   (bara-concours.firebaseapp.com) diffère du domaine de l'app
+      //   (bara-formation.github.io). Les navigateurs cloisonnent le
+      //   stockage entre origines : dans ce cas, getRedirectResult renvoie
+      //   null SANS erreur, la connexion n'aboutit jamais, et l'auth
+      //   anonyme automatique reprend la main — l'utilisateur « revenait
+      //   sans compte ». C'est le contournement recommandé par Firebase
+      //   pour les apps hébergées hors Firebase Hosting.
+      //
+      //   Dans une TWA le contenu s'exécute dans Chrome : le popup marche.
+      //   Le redirect reste en dernier recours, uniquement si le popup est
+      //   explicitement bloqué (voir le bloc catch).
+      const result = await this._connexionGoogle(provider);
 
       const user = result.user;
       const profile = await this._ensureUserDoc(user, 'google');
@@ -251,8 +250,24 @@ const FirebaseAuth = {
 
     } catch(error) {
       console.error('[Firebase] Erreur Google sign-in :', error);
+
+      // V64.05 : secours. Si et seulement si le popup a été bloqué par
+      //   l'environnement, on tente le redirect. Le résultat sera traité
+      //   au prochain init par getRedirectResult.
+      if (error.code === 'auth/popup-blocked' ||
+          error.code === 'auth/operation-not-supported-in-this-environment') {
+        try {
+          console.warn('[V64.05] Popup bloqué → bascule sur redirect');
+          await this._fbFns.signInWithRedirect(this.auth, provider);
+          return { success: true, pending: true };  // L'app va recharger
+        } catch(redirErr) {
+          console.error('[V64.05] Redirect impossible aussi :', redirErr);
+        }
+      }
+
       let msg = 'Erreur de connexion Google';
-      if (error.code === 'auth/popup-closed-by-user') {
+      if (error.code === 'auth/popup-closed-by-user' ||
+          error.code === 'auth/cancelled-popup-request') {
         msg = 'Tu as fermé la fenêtre de connexion';
       } else if (error.code === 'auth/popup-blocked') {
         msg = 'Le popup a été bloqué. Autorise les popups pour ce site.';
@@ -263,6 +278,40 @@ const FirebaseAuth = {
       }
       return { success: false, error: msg, errorCode: error.code };
     }
+  },
+
+  /**
+   * V64.05 : ouvre la fenêtre Google et renvoie le UserCredential.
+   *
+   *   Si l'utilisateur est actuellement ANONYME, on LIE le compte Google au
+   *   compte anonyme plutôt que d'en créer un nouveau : l'historique, le
+   *   Premium et les statistiques du visiteur sont conservés.
+   *
+   *   Cette liaison s'applique maintenant à TOUTES les plateformes. Elle
+   *   était auparavant sautée en mode installé, où le compte anonyme était
+   *   purement et simplement abandonné.
+   */
+  async _connexionGoogle(provider) {
+    const current = this.auth.currentUser;
+
+    if (current && current.isAnonymous) {
+      try {
+        const lie = await this._fbFns.linkWithPopup(current, provider);
+        console.log('[V64.05] ✓ Compte anonyme lié à Google (données conservées)');
+        return lie;
+      } catch(linkErr) {
+        // Ce compte Google existe déjà ailleurs → connexion normale
+        // (on abandonne l'anonyme, il n'y a pas d'autre issue).
+        if (linkErr.code === 'auth/credential-already-in-use' ||
+            linkErr.code === 'auth/email-already-in-use') {
+          console.log('[V64.05] Compte Google déjà existant → connexion classique');
+          return await this._fbFns.signInWithPopup(this.auth, provider);
+        }
+        throw linkErr;
+      }
+    }
+
+    return await this._fbFns.signInWithPopup(this.auth, provider);
   },
 
   // ====================================================================
