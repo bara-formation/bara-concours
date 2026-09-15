@@ -1702,7 +1702,12 @@ const Admin = {
       lastActivityAt: typeof u.lastActivityAt === 'object' && u.lastActivityAt?.seconds
         ? u.lastActivityAt.seconds * 1000
         : (u.lastActivityAt || null),
-      joinedAt: typeof u.createdAt === 'object' && u.createdAt?.seconds ? u.createdAt.seconds * 1000 : (u.createdAt || u.joinedAt || Date.now()),
+      // V64.05 : plus de repli sur Date.now(). Quand le document Firestore
+      //   n'a pas de date de création, on laissait l'admin afficher l'heure
+      //   courante, recalculée à chaque rechargement : tous ces comptes
+      //   paraissaient inscrits « à l'instant ». Une case vide vaut mieux
+      //   qu'une date fausse.
+      joinedAt: typeof u.createdAt === 'object' && u.createdAt?.seconds ? u.createdAt.seconds * 1000 : (u.createdAt || u.joinedAt || null),
       authProvider: u.authProvider || '',
       photoURL: u.photoURL || '',
       // V63.84 : distinguer les visiteurs sans compte des inscrits
@@ -1725,9 +1730,13 @@ const Admin = {
   //   création du compte. Rien n'est écrit dans Firestore, donc aucun
   //   risque de collision ni d'écriture refusée par les règles.
   assignVisitorNumbers(users) {
+    // V64.05 : les comptes sans date connue se retrouvaient tous à égalité
+    //   et changeaient de numéro d'un rechargement à l'autre. On départage
+    //   sur l'identifiant, qui lui est stable.
     const anonymes = users
       .filter(u => u.isAnonymous)
-      .sort((a, b) => (a.joinedAt || 0) - (b.joinedAt || 0));
+      .sort((a, b) => ((a.joinedAt || 0) - (b.joinedAt || 0))
+                      || String(a.id).localeCompare(String(b.id)));
     anonymes.forEach((u, i) => {
       u.visitorIndex = i + 1;
       // V63.98 : le numéro ne remplace le nom QUE si le candidat n'en a pas
