@@ -624,6 +624,24 @@ const FirebaseAuth = {
     }
   },
 
+  /**
+   * V64.07 : masquage d'un profil depuis le tableau de bord admin.
+   *   Écrit uniquement le champ `adminHidden`. Les règles Firestore
+   *   autorisent l'admin (bara.formation@gmail.com) à modifier n'importe
+   *   quel document utilisateur ; un autre compte serait refusé.
+   *   updateDoc et non setDoc : on ne crée jamais un document fantôme
+   *   pour un identifiant qui n'existerait pas.
+   */
+  async adminSetUserHidden(uid, masquer) {
+    if (!this.isFirebaseReady || !this.db) {
+      throw new Error('Firebase non initialisé');
+    }
+    if (!uid) throw new Error('Identifiant utilisateur manquant');
+    const ref = this._fbFns.doc(this.db, 'users', uid);
+    await this._fbFns.updateDoc(ref, { adminHidden: !!masquer });
+    return true;
+  },
+
   // ====================================================================
   // V56.1 : STUBS DE COMPATIBILITÉ ASCENDANTE
   // ====================================================================
