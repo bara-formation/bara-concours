@@ -197,6 +197,19 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 }
 .nav-icon { font-size: 1.1rem; flex-shrink: 0; }
 
+/* V64.07 : barre latérale figée sur ordinateur.
+   Placée dans une media query : la règle mobile plus haut la passe en
+   position:fixed (menu coulissant) et ne doit pas être écrasée. */
+@media (min-width: 769px) {
+  .sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    align-self: start;
+  }
+}
+
 .sidebar-footer {
   padding: 1rem 1.2rem;
   border-top: 1px solid rgba(255,255,255,0.1);
@@ -219,7 +232,26 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 /* ========== MAIN ========== */
 .main {
   padding: 2rem;
-  overflow-x: hidden;
+  /* V64.07 : clip au lieu de hidden. overflow-x:hidden transforme .main en
+     conteneur de défilement, ce qui neutralise position:sticky pour tout
+     ce qu'il contient : l'en-tête figé ne tiendrait jamais. */
+  overflow-x: clip;
+}
+
+/* V64.07 : bloc d'en-tête figé (titre + onglets). Les marges négatives
+   étendent le fond crème sur toute la largeur, pour que les lignes du
+   tableau ne soient pas visibles en transparence en passant dessous. */
+.entete-fige {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--cream);
+  margin: -2rem -2rem 0;
+  padding: 1.2rem 2rem 0.1rem;
+  box-shadow: 0 6px 10px -8px rgba(0,0,0,0.18);
+}
+@media (max-width: 768px) {
+  .entete-fige { margin: -1rem -1rem 0; padding: 0.8rem 1rem 0.1rem; }
 }
 .mobile-menu-btn {
   display: none;
@@ -1233,9 +1265,11 @@ const Admin = {
     const data = this.loadData();
     const pendingCount = data.pendingPayments.filter(p => p.status === 'pending').length;
     const totalRevenue = data.pendingPayments.filter(p => p.status === 'activated').reduce((s, p) => s + p.amount, 0);
-    const totalUsers = data.users.length;
-    const premiumUsers = data.users.filter(u => u.isPremium).length;
-    const totalQCM = data.users.reduce((s, u) => s + (u.totalQCM || 0), 0);
+    // V64.07 : les profils masqués (tests, doublons) ne faussent plus les chiffres
+    const usersVisibles = data.users.filter(u => !u.adminHidden);
+    const totalUsers = usersVisibles.length;
+    const premiumUsers = usersVisibles.filter(u => u.isPremium).length;
+    const totalQCM = usersVisibles.reduce((s, u) => s + (u.totalQCM || 0), 0);
 
     // V59 : Déclencher le refresh async des vrais utilisateurs depuis Firestore
     this.refreshUsersFromFirestore();
@@ -1518,7 +1552,9 @@ const Admin = {
   renderUsers() {
     const data = this.loadData();
     const search = (this.state.searchQuery || '').toLowerCase();
-    const tab = this.state.currentTab || 'all';
+    // V64.07 : en mode « Masqués », aucun onglet ne s'applique
+    const voirMasques = !!this.state.voirMasques;
+    const tab = voirMasques ? '__masques' : (this.state.currentTab || 'all');
 
     // V59 : Refresh async des vrais utilisateurs Firestore
     this.refreshUsersFromFirestore();
@@ -1532,7 +1568,13 @@ const Admin = {
     normalized = this.enrichPremiumFromCodes(normalized);
     normalized = this.assignVisitorNumbers(normalized);
 
-    let filtered = normalized;
+    // V64.07 : les profils masqués (tests, doublons) sortent de la liste ET
+    //   de tous les compteurs. Les chiffres affichés reflètent ainsi les vrais
+    //   candidats. Le bouton « Masqués » permet de les revoir et les réafficher.
+    const masques = normalized.filter(u => u.adminHidden);
+    normalized = normalized.filter(u => !u.adminHidden);
+
+    let filtered = voirMasques ? masques : normalized;
     if (tab === 'premium') filtered = filtered.filter(u => u.isPremium);
     if (tab === 'free') filtered = filtered.filter(u => !u.isPremium);
     // V63.64 : Premium qui expirent dans 7 jours ou moins — à relancer
@@ -1578,11 +1620,13 @@ const Admin = {
     const showEmptyState = total === 0;
 
     return `
+      <div class="entete-fige">
       <div class="page-header">
         <div>
           <div class="page-title">Gestion des <span>utilisateurs</span></div>
           <div class="page-sub">
             ${total} étudiant${total > 1 ? 's' : ''} inscrit${total > 1 ? 's' : ''}
+            ${masques.length > 0 ? `<span style="color:var(--ink-mute); font-size:0.78rem"> · ${masques.length} masqué${masques.length > 1 ? 's' : ''}</span>` : ''}
             ${isAdminEmail ? '<span style="background:#dcfce7; color:#166534; padding:0.15rem 0.5rem; border-radius:999px; font-size:0.7rem; font-weight:800; margin-left:0.5rem">☁️ FIRESTORE</span>' : ''}
             ${this.state._usersRefreshing ? '<span style="color:#2563eb; font-size:0.78rem; margin-left:0.5rem">⏳ Synchro...</span>' : ''}
           </div>
@@ -1626,6 +1670,14 @@ const Admin = {
           </button>
         ` : ''}
       </div>
+      </div>
+      <!-- V64.07 : fin du bloc d'en-tête figé -->
+
+      ${voirMasques ? `
+        <div style="background:#f1f5f9; border-left:4px solid #64748b; padding:0.7rem 1rem; border-radius:8px; margin:0.8rem 0; font-size:0.85rem">
+          🙈 <strong>Profils masqués</strong> — ils n'apparaissent ni dans la liste ni dans les statistiques. Utilise « Réafficher » pour en remettre un.
+        </div>
+      ` : ''}
 
       <div class="table-wrap">
         <div class="table-header">
@@ -1638,6 +1690,12 @@ const Admin = {
                     title="Recharger depuis Firestore" style="padding:0.5rem 0.8rem; white-space:nowrap">
               🔄 Actualiser
             </button>
+            ${(masques.length > 0 || voirMasques) ? `
+              <button class="btn-action btn-secondary" onclick="Admin.basculerMasques()"
+                      style="padding:0.5rem 0.8rem; white-space:nowrap">
+                ${voirMasques ? '← Retour à la liste' : '🙈 Masqués (' + masques.length + ')'}
+              </button>
+            ` : ''}
           </div>
         </div>
 
@@ -1698,6 +1756,8 @@ const Admin = {
       //   ligne, la table serait lue depuis Firestore puis jetée avant
       //   d'atteindre l'affichage.
       matiereStats: u.matiereStats || {},
+      // V64.07 : profil masqué par l'admin (comptes de test, doublons)
+      adminHidden: !!u.adminHidden,
       totalDuration: u.totalDuration || 0,
       lastActivityAt: typeof u.lastActivityAt === 'object' && u.lastActivityAt?.seconds
         ? u.lastActivityAt.seconds * 1000
@@ -2019,6 +2079,9 @@ const Admin = {
         <td style="font-size:0.78rem; color:var(--ink-mute)">${this.formatRelativeTime(u.joinedAt)}</td>
         <td>
           <button class="btn-action btn-secondary" onclick="Admin.openCandidateModal('${u.id}')" style="margin-right:0.3rem">📊 Fiche</button>
+          <button class="btn-action btn-secondary" onclick="Admin.masquerUtilisateur('${u.id}', ${u.adminHidden ? 'false' : 'true'})"
+                  title="${u.adminHidden ? 'Remettre ce profil dans la liste' : 'Retirer ce profil de la liste et des statistiques (compte de test, doublon)'}"
+                  style="margin-right:0.3rem">${u.adminHidden ? '👁 Réafficher' : '🙈'}</button>
           ${!isPrem ? `
             <button class="btn-action btn-success" onclick="Admin.openActivateModal('${u.id}')">⭐ Activer Premium</button>
           ` : `
@@ -9676,7 +9739,54 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
 
   setTab(t) {
     this.state.currentTab = t;
+    this.state.voirMasques = false;  // V64.07 : un onglet ramène à la liste normale
     this.render();
+  },
+
+  // V64.07 : bascule entre la liste normale et la liste des profils masqués
+  basculerMasques() {
+    this.state.voirMasques = !this.state.voirMasques;
+    this.render();
+  },
+
+  /**
+   * V64.07 : masque ou réaffiche un profil.
+   *   Le drapeau `adminHidden` est écrit dans le document Firestore de
+   *   l'utilisateur (les règles autorisent l'admin à le faire). Choix
+   *   délibéré plutôt que le localStorage : le masquage suit l'admin sur
+   *   tous ses appareils, et ne coûte aucune lecture puisqu'il arrive avec
+   *   le document déjà chargé pour la liste.
+   *   Rien n'est supprimé : le compte reste intact et réversible.
+   */
+  async masquerUtilisateur(userId, masquer) {
+    if (masquer && !confirm("Masquer ce profil ?\n\nIl disparaîtra de la liste et des statistiques, mais reste intact dans Firestore. Tu pourras le réafficher à tout moment depuis le bouton « Masqués ».")) {
+      return;
+    }
+
+    const majCache = (valeur) => {
+      try {
+        const cache = JSON.parse(localStorage.getItem('bara_real_users_cache') || '[]');
+        cache.forEach(u => { if ((u.uid || u.id) === userId) u.adminHidden = valeur; });
+        localStorage.setItem('bara_real_users_cache', JSON.stringify(cache));
+      } catch(e) {}
+    };
+
+    // Affichage immédiat, sans attendre Firestore
+    majCache(!!masquer);
+    this.render();
+
+    try {
+      if (!window.FirebaseAuth || typeof window.FirebaseAuth.adminSetUserHidden !== 'function') {
+        throw new Error('firebase.js pas à jour (V64.07 requise)');
+      }
+      await window.FirebaseAuth.adminSetUserHidden(userId, !!masquer);
+      this.toast(masquer ? '🙈 Profil masqué' : '👁 Profil réaffiché', 'success');
+    } catch(e) {
+      // Échec : on revient en arrière pour ne pas afficher un état faux
+      majCache(!masquer);
+      this.render();
+      this.toast('Échec : ' + (e.message || e), 'danger');
+    }
   },
 
   search(q) {
