@@ -222,8 +222,14 @@ const Announcements = {
     if (!this._isReady()) return { success: false, error: 'Firebase non prêt' };
     const user = window.FirebaseAuth.user;
     if (!user) return { success: false, error: 'Authentification requise' };
-    if (!data.title || data.title.trim().length < 3) {
-      return { success: false, error: 'Le titre doit faire au moins 3 caractères' };
+    // V64.09 : le titre est FACULTATIF. Le bandeau de l'application fusionne
+    //   titre et message sur une seule ligne ; quand le message se suffit à
+    //   lui-même, imposer un titre obligeait à écrire un doublon.
+    //   Une amorce de frappe (1 ou 2 caractères) reste refusée : c'est
+    //   presque toujours une fausse manipulation, pas une intention.
+    const titre = (data.title || '').trim();
+    if (titre.length > 0 && titre.length < 3) {
+      return { success: false, error: 'Titre trop court : mets au moins 3 caractères, ou laisse-le vide' };
     }
     if (!data.body || data.body.trim().length < 5) {
       return { success: false, error: 'Le message doit faire au moins 5 caractères' };
@@ -232,7 +238,7 @@ const Announcements = {
       const fns = this._fns();
       const colRef = fns.collection(this._db(), this.COLLECTION);
       const doc = {
-        title: data.title.trim(),
+        title: titre,
         body: data.body.trim(),
         level: data.level || 'info',
         audience: data.audience || 'all',
