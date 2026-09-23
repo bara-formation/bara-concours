@@ -8328,7 +8328,14 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
     const debut = (document.getElementById('annonceDebut') || {}).value || f.startAt;
     const fin = (document.getElementById('annonceFin') || {}).value || f.endAt;
 
-    if (!titre || titre.trim().length < 3) { this.toast('Le titre est trop court', 'danger'); return; }
+    // V64.09 : le titre devient FACULTATIF. Le bandeau de l'app fusionne
+    //   titre et message sur une ligne : quand le message se suffit à
+    //   lui-même, imposer un titre obligeait à inventer un doublon.
+    //   S'il est rempli, on garde le minimum de 3 caractères pour éviter
+    //   les saisies accidentelles d'un ou deux caractères.
+    if (titre && titre.trim().length > 0 && titre.trim().length < 3) {
+      this.toast('Le titre est trop court (laisse-le vide si tu n\'en veux pas)', 'danger'); return;
+    }
     if (!corps || corps.trim().length < 5) { this.toast('Le message est trop court', 'danger'); return; }
     if (f.audience === 'custom' && f.targetUids.length === 0) {
       this.toast('Sélectionne au moins un compte', 'danger'); return;
@@ -8339,7 +8346,7 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
     if (msFin && msFin <= msDebut) { this.toast('La fin doit être après le début', 'danger'); return; }
 
     const data = {
-      title: titre.trim(), body: corps.trim(), level: f.level, audience: f.audience,
+      title: (titre || '').trim(), body: corps.trim(), level: f.level, audience: f.audience,
       targetUids: f.targetUids, startAt: msDebut, endAt: msFin, active: f.active === true
     };
 
@@ -8451,7 +8458,9 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
           <div style="flex:1; min-width:220px">
             <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.35rem">
               <span style="font-size:1.1rem">${icones[a.level] || 'ℹ️'}</span>
-              <strong style="font-size:1rem">${this.escapeHTML(a.title)}</strong>
+              <strong style="font-size:1rem">${a.title && a.title.trim()
+                  ? this.escapeHTML(a.title)
+                  : this.escapeHTML((a.body || '').slice(0, 60)) + ((a.body || '').length > 60 ? '…' : '')}</strong>
               <span style="background:${e.fond}; color:${e.couleur}; padding:0.15rem 0.55rem; border-radius:999px; font-size:0.7rem; font-weight:800">${e.texte}</span>
             </div>
             <div style="font-size:0.88rem; color:#3f4a44; white-space:pre-wrap; margin-bottom:0.5rem">${this.escapeHTML(a.body)}</div>
@@ -8503,9 +8512,11 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
           ${f.id ? '✏️ Modifier l\'annonce' : '➕ Nouvelle annonce'}
         </div>
 
-        <label style="display:block; font-weight:700; font-size:0.85rem; margin-bottom:0.3rem">Titre</label>
+        <label style="display:block; font-weight:700; font-size:0.85rem; margin-bottom:0.3rem">
+          Titre <span style="font-weight:500; color:var(--ink-mute); font-size:0.78rem">— facultatif</span>
+        </label>
         <input type="text" id="annonceTitre" value="${this.escapeHTML(f.title)}" maxlength="80"
-               placeholder="Ex : Résultats ENAM publiés"
+               placeholder="Ex : Résultats ENAM publiés (ou laisse vide)"
                style="width:100%; padding:0.65rem 0.85rem; border:1.5px solid #e5e7eb; border-radius:8px; margin-bottom:0.9rem; box-sizing:border-box">
 
         <label style="display:block; font-weight:700; font-size:0.85rem; margin-bottom:0.3rem">Message</label>
