@@ -3601,6 +3601,99 @@ img { max-width: 100%; display: block; }
   padding: 3rem 1.5rem;
   color: var(--ink-mute);
 }
+
+/* ==================================================================
+   V64.08 : BANDEAU D'ANNONCE DÉFILANT
+   ------------------------------------------------------------------
+   Pastille de niveau figée à gauche, texte défilant à droite, sur une
+   bande fine. Inspiré des bandeaux « dernière minute » des sites
+   d'information.
+
+   Trois partis pris :
+   - Le défilement n'est appliqué QUE si le texte dépasse la largeur
+     disponible (classe `defile` posée par App.ajusterAnnonces()).
+     Un message court reste immobile, donc lisible.
+   - L'animation est en CSS, pas en JavaScript : sur les téléphones
+     d'entrée de gamme, une boucle JS permanente chauffe le processeur
+     et vide la batterie.
+   - Le défilement se met en pause au survol et au toucher, le temps
+     de lire.
+   ================================================================== */
+.annonce-bande {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  height: 34px;
+  margin-bottom: 0.7rem;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--annonce-fond, #f8fafc);
+  border: 1px solid var(--annonce-couleur, #64748b);
+}
+.annonce-pastille {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 0.7rem;
+  background: var(--annonce-couleur, #64748b);
+  color: white;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+.annonce-piste {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.annonce-texte {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 0 0.7rem;
+  font-size: 0.79rem;
+  font-weight: 600;
+  color: var(--annonce-texte, #1e293b);
+  line-height: 34px;
+}
+/* Le défilement n'existe que si la classe est posée après mesure */
+.annonce-piste.defile .annonce-texte {
+  padding-left: 100%;
+  will-change: transform;
+  animation-name: annonce-defile;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.annonce-bande:hover .annonce-texte,
+.annonce-bande:active .annonce-texte {
+  animation-play-state: paused;
+}
+@keyframes annonce-defile {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
+}
+/* Respect du réglage système « réduire les animations » */
+@media (prefers-reduced-motion: reduce) {
+  .annonce-piste.defile .annonce-texte {
+    animation: none;
+    padding-left: 0.7rem;
+  }
+}
+.annonce-fermer {
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  color: var(--annonce-texte, #1e293b);
+  opacity: 0.5;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0 0.55rem;
+  line-height: 1;
+}
+.annonce-fermer:hover { opacity: 1; }
 </style>
 </head>
 <body>
@@ -3891,6 +3984,10 @@ const App = {
     app.innerHTML = html;
     this.attachEvents();
     this.refreshStickyBack();
+
+    // V64.08 : mesurer les bandeaux d'annonce une fois le HTML posé.
+    //   Dans une frame d'animation, pour que les largeurs soient calculées.
+    window.requestAnimationFrame(() => this.ajusterAnnonces());
 
     // V63.74 : amener l'onglet de categorie actif dans le champ de vision.
     //   La barre defile horizontalement : sans ca, un candidat sur la 3e
@@ -4505,32 +4602,69 @@ const App = {
   },
 
   renderUneAnnonce(a) {
+    // V64.08 : la pastille prend la COULEUR DU NIVEAU, pas le rouge partout.
+    //   Si toutes les annonces sont rouges, le rouge ne signale plus rien et
+    //   la vraie alerte se noie dans les messages ordinaires.
     const styles = {
-      info:    { bord: '#2563eb', fond: 'linear-gradient(135deg,#eff6ff,white)', texte: '#1e3a8a', icone: 'ℹ️' },
-      warning: { bord: '#d97706', fond: 'linear-gradient(135deg,#fffbeb,white)', texte: '#78350f', icone: '⚠️' },
-      urgent:  { bord: '#dc2626', fond: 'linear-gradient(135deg,#fef2f2,white)', texte: '#7f1d1d', icone: '🔴' }
+      info:    { couleur: '#0F5132', fond: '#f0f7f3', texte: '#14532d', libelle: 'INFO' },
+      warning: { couleur: '#d97706', fond: '#fffbeb', texte: '#78350f', libelle: 'ATTENTION' },
+      urgent:  { couleur: '#dc2626', fond: '#fef2f2', texte: '#7f1d1d', libelle: 'URGENT' }
     };
     const s = styles[a.level] || styles.info;
 
+    // Titre et corps fusionnés sur une seule ligne : la bande fait 34 px,
+    // il n'y a pas la place pour deux niveaux de texte.
+    const titre = (a.title || '').trim();
+    const corps = (a.body || '').replace(/\s*\n\s*/g, ' ').trim();
+    const texte = titre && corps ? titre + ' — ' + corps : (titre || corps);
+    if (!texte) return '';
+
     return `
-      <div style="background:${s.fond}; border:1.5px solid ${s.bord}; border-left:4px solid ${s.bord};
-                  border-radius:var(--radius-lg); padding:0.95rem 1.05rem; margin-bottom:1rem;
-                  display:flex; gap:0.8rem; align-items:flex-start">
-        <div style="font-size:1.3rem; flex-shrink:0; line-height:1.2">${s.icone}</div>
-        <div style="flex:1; min-width:0">
-          <div style="font-weight:800; font-size:0.95rem; color:${s.texte}; margin-bottom:0.2rem">
-            ${this.escapeHTML(a.title)}
-          </div>
-          <div style="font-size:0.85rem; color:${s.texte}; line-height:1.5; white-space:pre-wrap">
-            ${this.escapeHTML(a.body)}
-          </div>
+      <div class="annonce-bande"
+           style="--annonce-couleur:${s.couleur}; --annonce-fond:${s.fond}; --annonce-texte:${s.texte}">
+        <div class="annonce-pastille">${s.libelle}</div>
+        <div class="annonce-piste">
+          <div class="annonce-texte">${this.escapeHTML(texte)}</div>
         </div>
-        <button onclick="event.stopPropagation(); App.masquerAnnonce('${a.id}')"
-                aria-label="Masquer ce message"
-                style="background:transparent; border:none; color:${s.texte}; opacity:0.6; font-size:1.1rem;
-                       cursor:pointer; flex-shrink:0; padding:0 0.2rem; line-height:1">✕</button>
+        <button class="annonce-fermer"
+                onclick="event.stopPropagation(); App.masquerAnnonce('${a.id}')"
+                aria-label="Masquer ce message">✕</button>
       </div>
     `;
+  },
+
+  /**
+   * V64.08 : décide quelles bandes doivent défiler, et à quelle vitesse.
+   *
+   *   Une feuille de style ne sait pas mesurer un texte : c'est le seul
+   *   point où le JavaScript est nécessaire. Il s'exécute une fois par
+   *   affichage, pas en continu — l'animation elle-même reste en CSS.
+   *
+   *   Vitesse constante (55 px/s) plutôt que durée constante : sans ça un
+   *   message long mettrait une minute à défiler et personne n'attendrait.
+   */
+  ajusterAnnonces() {
+    const pistes = document.querySelectorAll('#app .annonce-piste');
+    if (!pistes.length) return;
+
+    pistes.forEach(piste => {
+      const texte = piste.querySelector('.annonce-texte');
+      if (!texte) return;
+
+      // Retirer l'état précédent avant de mesurer, sinon on mesure la
+      // largeur gonflée par le padding-left:100% du défilement en cours.
+      piste.classList.remove('defile');
+      texte.style.animationDuration = '';
+
+      const largeurTexte = texte.scrollWidth;
+      const largeurPiste = piste.clientWidth;
+      if (largeurTexte <= largeurPiste) return;  // tient en entier : pas de défilement
+
+      const distance = largeurTexte + largeurPiste;
+      const duree = Math.max(8, Math.round(distance / 55));
+      texte.style.animationDuration = duree + 's';
+      piste.classList.add('defile');
+    });
   },
 
   masquerAnnonce(id) {
