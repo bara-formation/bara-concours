@@ -1,6 +1,6 @@
 // Bara Concours - Base de questions QCM
-// Mis à jour le 2026-07-05 - V63.47 : +100 questions SVT BAC (2e lot)
-// Total : 5489 questions réparties sur 37 matières
+// Mis à jour le 2026-10-01 - Culture Générale : 51 questions reformulées, 46 retirées
+// Total : 5443 questions réparties sur 37 matières
 
 const QUESTIONS = {
   "francais": [
@@ -11123,61 +11123,6 @@ const QUESTIONS = {
   ],
   "cg": [
     {
-      "q": "Année d'indépendance du Burkina Faso (Haute-Volta) ?",
-      "o": [
-        "1958",
-        "1960",
-        "1962",
-        "1964"
-      ],
-      "r": 1,
-      "x": "Indépendance le 5 août 1960. Rebaptisé Burkina Faso le 4 août 1984 par Thomas Sankara (« Pays des hommes intègres »)."
-    },
-    {
-      "q": "Combien de régions administratives au Burkina Faso ?",
-      "o": [
-        "17",
-        "15",
-        "13",
-        "45"
-      ],
-      "r": 0,
-      "x": "17 régions, 47 provinces, 351 départements  au redécoupage  administratif de juillet 2025"
-    },
-    {
-      "q": "Plus long fleuve du Burkina Faso ?",
-      "o": [
-        "Le Nakambé",
-        "Le Niger",
-        "Le Mouhoun",
-        "Le Sissili"
-      ],
-      "r": 2,
-      "x": "Le Mouhoun (ex-Volta Noire) est le plus long fleuve du BF. Le Nakambé (Volta Blanche) et le Nazinon (Volta Rouge) sont aussi importants."
-    },
-    {
-      "q": "Capitale économique du Burkina Faso ?",
-      "o": [
-        "Ouagadougou",
-        "Bobo-Dioulasso",
-        "Koudougou",
-        "Banfora"
-      ],
-      "r": 1,
-      "x": "Ouagadougou est la capitale politique, Bobo-Dioulasso est la capitale économique, surnommée « Sya »."
-    },
-    {
-      "q": "Devise du Burkina Faso ?",
-      "o": [
-        "Unité, Travail, Justice",
-        "Unité, Progrès, Justice",
-        "Unité, Démocratie, Liberté",
-        "La Patrie ou la Mort, nous vaincrons"
-      ],
-      "r": 3,
-      "x": "« La Patrie ou la Mort, nous vaincrons » est la devise officielle du Burkina Faso."
-    },
-    {
       "q": "Nombre d'étoiles sur le drapeau du Burkina Faso ?",
       "o": [
         "Aucune",
@@ -11189,28 +11134,6 @@ const QUESTIONS = {
       "x": "Le drapeau a une seule étoile jaune au centre, symbolisant la lumière qui guide la révolution. Couleurs : rouge (lutte) et vert (espoir)."
     },
     {
-      "q": "Premier président du Burkina Faso (alors Haute-Volta) ?",
-      "o": [
-        "Thomas Sankara",
-        "Maurice Yaméogo",
-        "Aboubakar Lamizana",
-        "Saye Zerbo"
-      ],
-      "r": 1,
-      "x": "Maurice Yaméogo est le premier président de la République de Haute-Volta (1960-1966)."
-    },
-    {
-      "q": "Festival de cinéma majeur de Ouagadougou ?",
-      "o": [
-        "FIFA",
-        "FESPACO",
-        "FESTIMA",
-        "SIAO"
-      ],
-      "r": 1,
-      "x": "Le FESPACO (Festival Panafricain du Cinéma de Ouagadougou) est le plus grand festival de cinéma africain. Le SIAO concerne l'artisanat."
-    },
-    {
       "q": "Le Burkina Faso est membre de quelle organisation sous-régionale ?",
       "o": [
         "EAC",
@@ -11220,17 +11143,6 @@ const QUESTIONS = {
       ],
       "r": 3,
       "x": "Le BF est membre de l'AES (Alliance de Etats du Sahel) depuis sa création. Il s'est rétiré de la CEDEAO depuis le 29 janvier 2025 avec le Niger et le Mali. EAC=Afrique de l'Est, SADC=Sud, UMA=Maghreb."
-    },
-    {
-      "q": "Capitale de la France ?",
-      "o": [
-        "Lyon",
-        "Marseille",
-        "Paris",
-        "Lille"
-      ],
-      "r": 2,
-      "x": "Paris est la capitale et la plus grande ville de France."
     },
     {
       "q": "Le siège de l'ONU se trouve à :",
@@ -11277,17 +11189,6 @@ const QUESTIONS = {
       "x": "Le Kilimandjaro (5 895m) en Tanzanie est le plus haut sommet d'Afrique."
     },
     {
-      "q": "La Haute-Volta (actuel Burkina Faso) a proclamé son indépendance de la France le :",
-      "o": [
-        "4 aout 1958",
-        "5 aout 1960",
-        "11 août 1960",
-        "3 janvier 1966"
-      ],
-      "r": 1,
-      "x": "La Haute-Volta a proclamé son indépendance le 5 août 1960. Maurice Yameogo devient alors le premier président de la République de Haute-Volta, avec le soutien du Rassemblement démocratique africain (RDA). Toutefois, la fête nationale du Burkina Faso est célébrée le 11 décembre."
-    },
-    {
       "q": "Quel officier militaire a renversé Maurice Yameogo en 1966 et gouverné la Haute-Volta jusqu'en 1980 ?",
       "o": [
         "Saye Zerbo",
@@ -11330,17 +11231,6 @@ const QUESTIONS = {
       ],
       "r": 2,
       "x": "Le changement de nom de Haute-Volta en Burkina Faso a eu lieu le 4 août 1984. Ce nouveau nom associe le terme mooré \"Burkina\" (hommes intègres) et le terme dioula \"Faso\" (pays, patrie). Ce changement symbolisait la rupture avec l'héritage colonial."
-    },
-    {
-      "q": "Blaise Compaoré a été contraint de quitter le pouvoir en 2014 à la suite de :",
-      "o": [
-        "Un soulèvement populaire",
-        "Une défaite lors d'élections présidentielles",
-        "Un coup d'État militaire de l'armée régulière",
-        "Une décision de la Cour constitutionnelle l'invalidant"
-      ],
-      "r": 0,
-      "x": "Le 31 octobre 2014, Blaise Compaore a été renversé par un soulèvement populaire après 27 ans au pouvoir. La tentative de modifier l'article 37 de la Constitution pour se maintenir au pouvoir a provoqué de violentes manifestations qui l'ont obligé à fuir pour Côte d'Ivoire."
     },
     {
       "q": "Blaise Compaoré a été contraint de quitter le pouvoir en 2014 à la suite de :",
@@ -11464,17 +11354,6 @@ const QUESTIONS = {
       "x": "La région de Ouagadougou porte le nom endogène de Kadiogo depuis le redécoupage du 2 juillet 2025. Oubri est la région de Ziniaré (ancienne Plateau Central), Nando est la région de Koudougou (ancienne Centre-Ouest) et Kuilse est la région de Kaya (ancienne Centre-Nord)."
     },
     {
-      "q": "Quel est le statut actuel du Français dans la Constitution du Burkina Faso révisée en 2023 ?",
-      "o": [
-        "Seule langue officielle et langue de travail",
-        "Langue supprimée au profit des seules langues nationales",
-        "Langue co-officielle avec le mooré et le dioula",
-        "Langue de travail, les langues nationales étant devenues officielles"
-      ],
-      "r": 3,
-      "x": "La révision constitutionnelle de décembre 2023 a institué les langues nationales comme langues officielles du Burkina Faso. Le français n'est désormais plus une langue officielle mais seulement une \"langue de travail\". Ce changement valorise l'identité culturelle endogène du pays."
-    },
-    {
       "q": "Quel est le nom du Premier ministre du Burkina Faso en fonction depuis décembre 2024 ?",
       "o": [
         "Apollinaire Kyelem de Tambela",
@@ -11519,18 +11398,7 @@ const QUESTIONS = {
       "x": "Bobo-Dioulasso est la deuxième ville du Burkina Faso avec plus de 900 000 habitants selon le RGPH de 2019. Considérée comme la capitale économique et culturelle du pays, elle abrite les principales industries agroalimentaires, textiles et les infrastructures de transport du pays."
     },
     {
-      "q": "Sur quel fleuve est construit sur  le barrage de Bagré, le plus grand du Burkina Faso ?",
-      "o": [
-        "Le Mouhoun",
-        "Le Nazinon",
-        "La Comoe",
-        "Le Nakambé"
-      ],
-      "r": 3,
-      "x": "Le barrage de Bagré est construit sur le Nakambé (anciennement Volta Blanche), dans la région du Centre-Est (Nakambé). Il est utilisé pour l'irrigation des terres agricoles, la production d'énergie électrique et la pêche artisanale."
-    },
-    {
-      "q": "Sur quel fleuve est construit sur  le barrage de Bagré, le plus grand du Burkina Faso ?",
+      "q": "Sur quel fleuve est construit le barrage de Bagré, le plus grand du Burkina Faso ?",
       "o": [
         "Le Mouhoun",
         "Le Nazinon",
@@ -11585,7 +11453,7 @@ const QUESTIONS = {
       "x": "L'agriculture vivrière et de rente occupe plus de 80% de la population active burkinabè. Les principales cultures vivrières sont le sorgho, le mil et le maïs. L'or et le coton sont les principales activités génératrices de devises d'exportation."
     },
     {
-      "q": "Quelle ville du Burkina Faso est considérée comme la \"capitale du coton\", première culture de rente agricole du pays ?",
+      "q": "Quelle ville du Burkina Faso est considérée comme la \"capitale du coton\" ?",
       "o": [
         "Kaya",
         "Fada N'Gourma",
@@ -11640,18 +11508,7 @@ const QUESTIONS = {
       "x": "L'océan Pacifique est le plus grand et le plus profond des cinq océans, couvrant environ 165 millions de km², soit plus que l'ensemble des terres émergées réunies. La fosse des Mariannes, qui s'y trouve, est le point le plus profond de la planète (environ 11 000 m)."
     },
     {
-      "q": "Quelle ville est  le siège de l'Union Africaine ?",
-      "o": [
-        "Nairobi",
-        "Le Caire",
-        "Addis-Abeba",
-        "Dakar"
-      ],
-      "r": 2,
-      "x": "Addis-Abeba est la capitale de l'Éthiopie et accueille le siège de l'Union Africaine depuis sa création en 2002, ainsi que la Commission économique des Nations Unies pour l'Afrique (CEA). Elle est considérée comme la \"capitale diplomatique\" du continent africain."
-    },
-    {
-      "q": "Quelle ville est  le siège de l'Union Africaine ?",
+      "q": "Quelle ville est le siège de l'Union Africaine ?",
       "o": [
         "Nairobi",
         "Le Caire",
@@ -11665,7 +11522,7 @@ const QUESTIONS = {
       "q": "Quel est le plus petit Etat souverain du monde par la superficie ?",
       "o": [
         "Monaco",
-        "Le Saint-Siège (Vatican)",
+        "Le Vatican",
         "Le Liechtenstein",
         "Saint-Marin"
       ],
@@ -11673,18 +11530,7 @@ const QUESTIONS = {
       "x": "Le Saint-Siège (Vatican) est le plus petit Etat souverain du monde avec une superficie de 0,44 km2. Enclave dans Rome (Italie), il est le centre de l'Eglise catholique. Monaco, avec 2,02 km2, est le deuxième plus petit Etat souverain du monde."
     },
     {
-      "q": "Quel pays  partage la plus longue frontière commune avec le Burkina Faso ?",
-      "o": [
-        "Le Ghana",
-        "La Cote d'Ivoire",
-        "Le Niger",
-        "Le Mali"
-      ],
-      "r": 3,
-      "x": "Le Mali partage la plus longue frontière avec le Burkina Faso, d'environ 1 000 km, principalement au nord et au nord-ouest. Les deux pays ont en commun plusieurs groupes ethniques (Mossi, Peul, Bobo) et font face aux mêmes défis sécuritaires dans la zone sahélienne."
-    },
-    {
-      "q": "Quel pays  partage la plus longue frontière commune avec le Burkina Faso ?",
+      "q": "Quel pays partage la plus longue frontière commune avec le Burkina Faso ?",
       "o": [
         "Le Ghana",
         "La Cote d'Ivoire",
@@ -11704,17 +11550,6 @@ const QUESTIONS = {
       ],
       "r": 1,
       "x": "Le lac Volta, créé par le barrage d'Akosombo en 1965, est situe au Ghana avec une superficie d'environ 8 500 km2. C'est l'un des plus grands réservoirs artificiels du monde. Les fleuves Mouhoun, Nakambé et Nazinon du Burkina Faso s'y jettent."
-    },
-    {
-      "q": "Quelle est la capitale fédérale du Nigeria ?",
-      "o": [
-        "Abuja",
-        "Lagos",
-        "Kano",
-        "Ibadan"
-      ],
-      "r": 0,
-      "x": "Abuja est la capitale fédérale du Nigeria depuis 1991, en remplacement de Lagos. Elle abrite aussi le siège de la CEDEAO. Lagos reste la plus grande métropole du Nigeria et l'une des villes les plus peuplées d'Afrique."
     },
     {
       "q": "Quelle est la capitale fédérale du Nigeria ?",
@@ -11761,7 +11596,7 @@ const QUESTIONS = {
       "x": "La BCEAO, dont le siège est a Dakar (Sénégal), émet le franc CFA de l'Afrique de l'Ouest (XOF). La BEAC est son homologue pour les pays de la CEMAC en Afrique centrale. La BAD et la BOAD sont des banques de développement, non des banques d'émission monétaire."
     },
     {
-      "q": "Quelles sont les trois langues officielles de la CEDEAO (Communauté Economique des Etats de l'Afrique de l'Ouest) ?",
+      "q": "Quelles sont les trois langues officielles de la CEDEAO ?",
       "o": [
         "L'anglais, le Français et le portugais",
         "L'anglais, le Français et l'arabe",
@@ -11805,7 +11640,7 @@ const QUESTIONS = {
       "x": "Le Conseil de Sécurité de l'ONU est l'organe principal charge du maintien de la paix. Il compte 5 membres permanents (Etats-Unis, Russie, Chine, France, Royaume-Uni) disposant du droit de veto, et 10 membres non permanents élus pour deux ans par l'Assemblée Générale."
     },
     {
-      "q": "Dans quelle ville est basée la Cour Pénale Internationale (CPI), chargée de juger les crimes contre l'humanité ?",
+      "q": "Dans quelle ville est basée la Cour Pénale Internationale (CPI) ?",
       "o": [
         "Bruxelles (Belgique)",
         "Genève (Suisse)",
@@ -11816,7 +11651,7 @@ const QUESTIONS = {
       "x": "La CPI est basée a La Haye (Pays-Bas). Créée par le Statut de Rome en 1998 et opérationnelle depuis 2002, elle est compétente pour juger les génocides, crimes contre l'humanité et crimes de guerre. La Cour Internationale de Justice (CIJ) y est également basée."
     },
     {
-      "q": "En quelle année a été fondée la Communauté Economique des Etats de l'Afrique de l'Ouest (CEDEAO) ?",
+      "q": "En quelle année a été fondée la CEDEAO ?",
       "o": [
         "1963",
         "1975",
@@ -11937,18 +11772,7 @@ const QUESTIONS = {
       "x": "La Côte d'Ivoire est le premier producteur mondial de cacao, assurant environ 40% de la production mondiale. Le Ghana est le deuxième producteur africain et mondial. Ensemble, Côte d'Ivoire et Ghana fournissent plus de 60% du cacao mondial, essentiel à la production de chocolat."
     },
     {
-      "q": "Quel dirigeant africain  est considéré comme l'un des pères du panafricanisme ?",
-      "o": [
-        "Leopold Sedar Senghor",
-        "Julius Nyerere",
-        "Jomo Kenyatta",
-        "Kwame Nkrumah"
-      ],
-      "r": 3,
-      "x": "Kwame Nkrumah a conduit le Ghana à l'indépendance le 6 mars 1957, faisant du Ghana le premier pays d'Afrique subsaharienne a se libérer de la colonisation. Ardent défenseur du panafricanisme, il fut cofondateur de l'OUA en 1963 et milita pour les États-Unis d'Afrique."
-    },
-    {
-      "q": "Quel dirigeant africain  est considéré comme l'un des pères du panafricanisme ?",
+      "q": "Quel dirigeant africain est considéré comme l'un des pères du panafricanisme ?",
       "o": [
         "Leopold Sedar Senghor",
         "Julius Nyerere",
@@ -11968,28 +11792,6 @@ const QUESTIONS = {
       ],
       "r": 3,
       "x": "Leopold Sédar Senghor fut le premier président du Sénégal (1960-1980), philosophe, poète et cocréateur du mouvement de la Négritude avec Aime Césaire. Il fut le premier Africain élu a l'Académie française en 1983 et un défenseur de la Francophonie."
-    },
-    {
-      "q": "Quel est le nom du premier président du Sénégal ?",
-      "o": [
-        "Cheikh Anta Diop",
-        "Abdou Diouf",
-        "Mamadou Dia",
-        "Leopold Sédar Senghor"
-      ],
-      "r": 3,
-      "x": "Leopold Sédar Senghor fut le premier président du Sénégal (1960-1980), philosophe, poète et cocréateur du mouvement de la Négritude avec Aime Césaire. Il fut le premier Africain élu a l'Académie française en 1983 et un défenseur de la Francophonie."
-    },
-    {
-      "q": "Quel secrétaire général de l'ONU a reçu le Prix Nobel de la Paix en 2001 ?",
-      "o": [
-        "Kofi Annan",
-        "Boutros Boutros-Ghali",
-        "Salim Ahmed Salim",
-        "Amara Essy"
-      ],
-      "r": 0,
-      "x": "Kofi Annan (Ghana) a dirigé l'ONU de 1997 à 2006 et reçu le Prix Nobel de la Paix en 2001, conjointement avec l'ONU. Boutros Boutros-Ghali (Egypte) était son prédécesseur (1992-1996). Kofi Annan est considéré comme le premier Africain subsaharien à avoir dirigé l'ONU."
     },
     {
       "q": "Quel secrétaire général de l'ONU a reçu le Prix Nobel de la Paix en 2001 ?",
@@ -12025,18 +11827,7 @@ const QUESTIONS = {
       "x": "Chinua Achebé (1930-2013) est l'auteur de \"Things Fall Apart\", traduit en plus de 50 langues et vendu a plus de 20 millions d'exemplaires. Ce roman décrit l'impact de la colonisation sur une communauté igbo au Nigeria. Wolé Soyinka est le premier Africain à recevoir le Prix Nobel de littérature (1986)."
     },
     {
-      "q": "Quel romancier nigérian est l'auteur de \"Things Fall Apart\" (1958) ?",
-      "o": [
-        "Wole Soyinka",
-        "Chinua Achebe",
-        "Ben Okri",
-        "Chimamanda Ngozi Adichie"
-      ],
-      "r": 1,
-      "x": "Chinua Achebé (1930-2013) est l'auteur de \"Things Fall Apart\", traduit en plus de 50 langues et vendu a plus de 20 millions d'exemplaires. Ce roman décrit l'impact de la colonisation sur une communauté igbo au Nigeria. Wolé Soyinka est le premier Africain à recevoir le Prix Nobel de littérature (1986)."
-    },
-    {
-      "q": "Quelle philosophe et romancière française a écrit \"Le Deuxième Sexe\" (1949), œuvre fondatrice du féminisme moderne ?",
+      "q": "Quelle philosophe et romancière française a écrit \"Le Deuxième Sexe\" (1949) ?",
       "o": [
         "Marguerite Yourcenar",
         "Marguerite Duras",
@@ -12124,7 +11915,7 @@ const QUESTIONS = {
       "x": "Le symbole chimique du fer est Fe, tiré du latin \"ferrum\". Le fer (numéro atomique 26) est le métal le plus abondant sur Terre et le composant principal de l'acier. Fr est le francium, Fl le flerovium, et ces symboles n'ont aucun rapport avec le fer."
     },
     {
-      "q": "Quelle est la distance moyenne entre la Terre et le Soleil, équivalent à une Unité Astronomique (UA) ?",
+      "q": "Quelle est la distance moyenne entre la Terre et le Soleil ?",
       "o": [
         "15 millions de km",
         "50 millions de km",
@@ -12144,28 +11935,6 @@ const QUESTIONS = {
       ],
       "r": 0,
       "x": "L'Argentine a remporté la Coupe du Monde 2022 au Qatar en battant la France en finale aux tirs au but (3-3 après prolongations, 4-2 aux penalties). C'est le troisième titre mondial argentin (1978, 1986, 2022). Lionel Messi a été sacré meilleur joueur du tournoi."
-    },
-    {
-      "q": "Quelle nation a remporté la Coupe du Monde de football 2022 ?",
-      "o": [
-        "L'Argentine",
-        "La France",
-        "Le Maroc",
-        "La Croatie"
-      ],
-      "r": 0,
-      "x": "L'Argentine a remporté la Coupe du Monde 2022 au Qatar en battant la France en finale aux tirs au but (3-3 après prolongations, 4-2 aux penalties). C'est le troisième titre mondial argentin (1978, 1986, 2022). Lionel Messi a été sacré meilleur joueur du tournoi."
-    },
-    {
-      "q": "Quel athlète kenyan détient le record du monde officiel du marathon masculin ?",
-      "o": [
-        "Eliud Kipchoge",
-        "Haile Gebrselassie",
-        "Paul Tergat",
-        "Kenenisa Bekele"
-      ],
-      "r": 0,
-      "x": "Eliud Kipchoge (Kenya) détient le record mondial officiel du marathon avec 2h00'35'' réalisé à Berlin en 2023. En 2019, il est devenu le premier homme à courir un marathon sous les 2h (1h59'40'') lors de l'Ineos Challenge de Vienne, un évènement non homologué."
     },
     {
       "q": "Quel athlète kenyan détient le record du monde officiel du marathon masculin ?",
@@ -12212,28 +11981,6 @@ const QUESTIONS = {
       "x": "Mariama Ba (1929-1981) est l'auteure de \"Une si longue lettre\" (1979), prix Noma 1980. Ce roman épistolaire traite de la condition de la femme dans la société sénégalaise patriarcale et polygame."
     },
     {
-      "q": "Quel grand écrivain sénégalais est l'auteur du roman épistolaire \"Une si longue lettre\", prix Noma 1980 ?",
-      "o": [
-        "Mariama Ba",
-        "Ousmane Sembene",
-        "Aminata Sow Fall",
-        "Fatou Diome"
-      ],
-      "r": 0,
-      "x": "Mariama Ba (1929-1981) est l'auteure de \"Une si longue lettre\" (1979), prix Noma 1980. Ce roman épistolaire traite de la condition de la femme dans la société sénégalaise patriarcale et polygame."
-    },
-    {
-      "q": "Quel philosophe grec de l'Antiquité est l'auteur de \"La République\" ?",
-      "o": [
-        "Aristote",
-        "Socrate",
-        "Epicure",
-        "Platon"
-      ],
-      "r": 3,
-      "x": "\"La République\" est l'œuvre majeure de Platon (428-348 av. J.-C.) traitant de la justice, de la démocratie et de la cité idéale. Platon y introduit notamment la fameuse métaphore de la caverne. Il était disciple de Socrate et maitre d'Aristote."
-    },
-    {
       "q": "Quel philosophe grec de l'Antiquité est l'auteur de \"La République\" ?",
       "o": [
         "Aristote",
@@ -12254,17 +12001,6 @@ const QUESTIONS = {
       ],
       "r": 1,
       "x": "Le prix Goncourt, créé en 1903, est le prix littéraire le plus célèbre de la francophonie. Il est décerné chaque novembre au meilleur roman en langue française. Le lauréat recoit symboliquement 10 euros, mais le prix garantit des ventes massives et une reconnaissance mondiale."
-    },
-    {
-      "q": "Quel philosophe Français des Lumières est l'auteur de \"Du contrat social\" (1762) ?",
-      "o": [
-        "Denis Diderot",
-        "Voltaire",
-        "Montesquieu",
-        "Jean-Jacques Rousseau"
-      ],
-      "r": 3,
-      "x": "\"Du contrat social\" de Jean-Jacques Rousseau (1712-1778) développe les concepts de souveraineté populaire et de volonté générale. Cette œuvre a profondément influencé la Révolution française (1789) et les démocraties modernes, dont les constitutions de nombreux pays."
     },
     {
       "q": "Quel philosophe Français des Lumières est l'auteur de \"Du contrat social\" (1762) ?",
@@ -12333,17 +12069,6 @@ const QUESTIONS = {
       "x": "La désertification (dégradation des terres en zones arides et semi-arides) menace sévèrement le Burkina Faso, notamment dans les régions du Liptako, du Soum et du Yaadga. Elle résulte de la sécheresse chronique, du surpâturage, de la déforestation et du changement climatique."
     },
     {
-      "q": "Quel phénomène naturel menace particulièrement les zones sahélo-soudaniennes du Burkina Faso ?",
-      "o": [
-        "La montée du niveau des mers et l'inondation des côtes",
-        "La prolifération des zones marécageuses en zone sahélienne",
-        "La désertification et la dégradation des terres arides",
-        "L'augmentation de la pluviométrie dans les zones les plus arides"
-      ],
-      "r": 2,
-      "x": "La désertification (dégradation des terres en zones arides et semi-arides) menace sévèrement le Burkina Faso, notamment dans les régions du Liptako, du Soum et du Yaadga. Elle résulte de la sécheresse chronique, du surpâturage, de la déforestation et du changement climatique."
-    },
-    {
       "q": "Quel est le nom officiel de l'hymne national du Burkina Faso ?",
       "o": [
         "La Voix des Hommes Intègres",
@@ -12353,28 +12078,6 @@ const QUESTIONS = {
       ],
       "r": 1,
       "x": "Le \"Ditanye\" (\"hymne de la victoire\" en dioula) est l'hymne national du Burkina Faso. Composé par Thomas Sankara en 1984, il a remplacé l'ancienne hymne \"Fiere Volta\" lors du changement de nom du pays le 4 août 1984."
-    },
-    {
-      "q": "Quel est le nom officiel de l'hymne national du Burkina Faso ?",
-      "o": [
-        "La Voix des Hommes Intègres",
-        "Le Ditanyé",
-        "L'Hymne de la Patrie",
-        "La Marche des Étalons"
-      ],
-      "r": 1,
-      "x": "Le \"Ditanye\" (\"hymne de la victoire\" en dioula) est l'hymne national du Burkina Faso. Composé par Thomas Sankara en 1984, il a remplacé l'ancienne hymne \"Fiere Volta\" lors du changement de nom du pays le 4 août 1984."
-    },
-    {
-      "q": "De quelles couleurs et de quel symbole est composé le drapeau national du Burkina Faso ?",
-      "o": [
-        "Deux bandes horizontales (rouge et vert) avec une étoile jaune a cinq branches au centre",
-        "Trois bandes verticales (rouge, blanc, vert) avec un soleil jaune",
-        "Une bande rouge avec une étoile blanche et des rayures vertes",
-        "Deux bandes (vert et rouge) avec un croissant et une étoile jaunes"
-      ],
-      "r": 0,
-      "x": "Le drapeau du Burkina Faso, adopté le 4 août 1984 par Thomas Sankara, comporte deux bandes horizontales égales (rouge en haut, vert en bas) avec une étoile jaune a cinq branches au centre. Le rouge symbolise la révolution, le vert les richesses naturelles et l'étoile la voie a suivre."
     },
     {
       "q": "De quelles couleurs et de quel symbole est composé le drapeau national du Burkina Faso ?",
@@ -12454,17 +12157,6 @@ const QUESTIONS = {
       "x": "L'altruisme désigne le dévouement désintéressé aux autres et le souci du bien d'autrui. Son contraire est l'égoïsme, attitude d'une personne centrée sur ses propres intérêts. L'altruisme est une valeur fondamentale attendue dans les métiers du service public."
     },
     {
-      "q": "Quel est l'antonyme du mot « altruisme » ?",
-      "o": [
-        "Égoïsme",
-        "Générosité",
-        "Compassion",
-        "Solidarité"
-      ],
-      "r": 0,
-      "x": "L'altruisme désigne le dévouement désintéressé aux autres et le souci du bien d'autrui. Son contraire est l'égoïsme, attitude d'une personne centrée sur ses propres intérêts. L'altruisme est une valeur fondamentale attendue dans les métiers du service public."
-    },
-    {
       "q": "Quel terme désigne des mots ayant la même prononciation mais une orthographe et un sens différents ?",
       "o": [
         "Des synonymes",
@@ -12489,13 +12181,13 @@ const QUESTIONS = {
     {
       "q": "Quel est l'organe législatif actuellement en fonction au Burkina Faso sous la période de transition ?",
       "o": [
-        "L'Assemblée Législative de Transition (ALT)",
+        "L'Assemblée Législative du Peuple",
         "L'Assemblée Nationale du Peuple",
-        "Le Congrès National du Peuple",
+        "L'Assemblée Législative de Transition",
         "Le Parlement Révolutionnaire du Faso"
       ],
       "r": 0,
-      "x": "L'Assemblée Législative de Transition (ALT) est l'organe législatif du Burkina Faso sous la transition. Elle a adopté la révision constitutionnelle de décembre 2023 instituant les langues nationales comme langues officielles. Ses membres sont nommés et non élus dans le cadre de la transition."
+      "x": "L'Assemblée Législative du Peuple est l'organe législatif du Burkina Faso sous la transition actuelle. Elle a adopté la révision constitutionnelle de décembre 2023 instituant les langues nationales comme langues officielles."
     },
     {
       "q": "Quel code réglemente les relations professionnelles entre employeurs et salariés au Burkina Faso ?",
@@ -12608,28 +12300,6 @@ const QUESTIONS = {
       "x": "Le paludisme est causé par des parasites du genre Plasmodium (principalement P. falciparum au Burkina Faso), transmis par la piqûre de l'anophèle femelle. C'est la première cause de mortalité infantile dans le pays. La prévention passe par les moustiquaires imprégnées et les antipaludéens."
     },
     {
-      "q": "Quel est l'agent responsable du paludisme ?",
-      "o": [
-        "Un virus transmis par les piqûres de moustiques anophèles",
-        "Une bactérie transmise par l'eau de boisson non traitée",
-        "Un champignon présent dans les sols humides des zones tropicales",
-        "Un parasite du genre Plasmodium transmis par l'anophèle femelle"
-      ],
-      "r": 3,
-      "x": "Le paludisme est causé par des parasites du genre Plasmodium (principalement P. falciparum au Burkina Faso), transmis par la piqûre de l'anophèle femelle. C'est la première cause de mortalité infantile dans le pays. La prévention passe par les moustiquaires imprégnées et les antipaludéens."
-    },
-    {
-      "q": "Quel est le principal mode de transmission du VIH/SIDA ?",
-      "o": [
-        "Par les piqûres de moustiques et d'autres insectes vecteurs",
-        "Par la consommation d'eau contaminée par le virus",
-        "Par simple contact avec la sueur d'une personne infectée",
-        "Par les rapports sexuels non protégés et le partage d'aiguilles souillées"
-      ],
-      "r": 3,
-      "x": "Le VIH se transmet par les rapports sexuels non protégés, le partage d'aiguilles contaminées et la transmission mère-enfant (grossesse, accouchement, allaitement). Il ne se transmet pas par les piqûres de moustiques, la salive, la sueur ou les contacts sociaux ordinaires."
-    },
-    {
       "q": "Quel vaccin anti-méningite a été introduit dans la « ceinture de la méningite » africaine depuis 2010 ?",
       "o": [
         "Le vaccin antipaludéen RTS,S",
@@ -12638,18 +12308,7 @@ const QUESTIONS = {
         "Le vaccin antipneumococcique PCV"
       ],
       "r": 1,
-      "x": "Le MenAfriVac est le vaccin anti-méningite développé spécifiquement pour la « ceinture de la méningite » africaine (dont le Burkina Faso), introduit à partir de 2010. Il protège contre la méningite à méningocoque A, principale souche épidémique. Le Burkina Faso a été parmi les premiers pays à l'adopter."
-    },
-    {
-      "q": "Quel vaccin anti-méningite a été introduit dans la « ceinture de la méningite » africaine depuis 2010 ?",
-      "o": [
-        "Le vaccin antipaludéen RTS,S",
-        "Le vaccin méningococcique MenAfriVac",
-        "Le vaccin BCG contre la tuberculose",
-        "Le vaccin antipneumococcique PCV"
-      ],
-      "r": 1,
-      "x": "Le MenAfriVac est le vaccin anti-méningite développé spécifiquement pour la « ceinture de la méningite » africaine (dont le Burkina Faso), introduit à partir de 2010. Il protège contre la méningite à méningocoque A, principale souche épidémique. Le Burkina Faso a été parmi les premiers pays à l'adopter."
+      "x": "Le MenAfriVac est le vaccin anti-méningite développé spécifiquement pour la « ceinture de la méningite » africaine (dont le Burkina Faso), introduit à partir de 2010. Il protège contre la méningite à méningocoque A, principale souche épidémique."
     },
     {
       "q": "Quelle maladie chronique en progression rapide au Burkina Faso est causée par un excès de glucose dans le sang ?",
@@ -12661,17 +12320,6 @@ const QUESTIONS = {
       ],
       "r": 1,
       "x": "Le diabète sucré (types 1 et 2) est une maladie chronique caractérisée par un taux de glucose sanguin anormalement élevé. En progression rapide en Afrique de l'Ouest, il peut entraîner des complications graves : cécité, insuffisance rénale, amputations. La prévention repose sur une alimentation équilibrée et l'exercice physique."
-    },
-    {
-      "q": "Quel est le nom de la maladie tropicale négligée causée par un ver parasite transmis par les mouches noires des rivières ?",
-      "o": [
-        "La trypanosomiase africaine (maladie du sommeil)",
-        "La schistosomiase (bilharziose)",
-        "La leishmaniose cutanée",
-        "L'onchocercose"
-      ],
-      "r": 3,
-      "x": "L'onchocercose, dite « cécité des rivières », est causée par le ver Onchocerca volvulus, transmis par les simulies (mouches noires) vivant près des rivières rapides. Elle peut provoquer des lésions oculaires graves jusqu'à la cécité."
     },
     {
       "q": "Quel est le nom de la maladie tropicale négligée causée par un ver parasite transmis par les mouches noires des rivières ?",
@@ -12762,17 +12410,6 @@ const QUESTIONS = {
       "x": "Bénéfice = 10 000 − 8 000 = 2 000 FCFA. Taux de bénéfice = (2 000 / 8 000) × 100 = 25 %. Ce type de calcul est fondamental en commerce et en gestion. À ne pas confondre avec la marge sur prix de vente : (2 000 / 10 000) × 100 = 20 %."
     },
     {
-      "q": "Quelle est l'aire d'un terrain rectangulaire de 40 mètres de longueur et 25 mètres de largeur ?",
-      "o": [
-        "800 m²",
-        "1 000 m²",
-        "1 200 m²",
-        "1 500 m²"
-      ],
-      "r": 1,
-      "x": "Aire du rectangle = longueur × largeur = 40 × 25 = 1 000 m². Rappel : 1 000 m² = 10 ares = 0,1 hectare. Ces conversions sont utiles en agriculture, cadastre et gestion foncière. 1 hectare = 10 000 m² = 100 ares."
-    },
-    {
       "q": "Un agent perçoit un salaire de base de 175 000 FCFA et une prime mensuelle de 25 000 FCFA. Quelle est son allocation annuelle totale ?",
       "o": [
         "2 100 000 FCFA",
@@ -12806,7 +12443,7 @@ const QUESTIONS = {
       "x": "La conférence de Berlin (novembre 1884 — février 1885) a réuni uniquement les puissances coloniales européennes (France, Royaume-Uni, Allemagne, Portugal, Belgique, etc.) pour fixer les règles du partage de l'Afrique. Aucun représentant africain n'y a participé. Elle a abouti à la colonisation quasi totale du continent avant 1914."
     },
     {
-      "q": "Quelle résistante sénégalaise, reine de Kabrousse en Casamance, a combattu l'autorité coloniale française avant d'être déportée et de mourir en captivité en 1944 ?",
+      "q": "Quelle résistante sénégalaise a combattu l'autorité coloniale française avant d'être déportée et de mourir en captivité en 1944 ?",
       "o": [
         "Yaa Asantewaa",
         "Aline Sitoé Diatta",
@@ -12826,28 +12463,6 @@ const QUESTIONS = {
       ],
       "r": 0,
       "x": "Le Ghana, ancienne Côte de l'Or britannique, a été le premier pays d'Afrique subsaharienne à accéder à l'indépendance le 6 mars 1957, sous la direction de Kwame Nkrumah. La Guinée a suivi en 1958 (sous Sékou Touré), le Nigeria et le Sénégal en 1960."
-    },
-    {
-      "q": "Quel est le premier pays d'Afrique subsaharienne à avoir accédé à l'indépendance, le 6 mars 1957 ?",
-      "o": [
-        "Le Ghana",
-        "Le Nigeria",
-        "La Guinée",
-        "Le Sénégal"
-      ],
-      "r": 0,
-      "x": "Le Ghana, ancienne Côte de l'Or britannique, a été le premier pays d'Afrique subsaharienne à accéder à l'indépendance le 6 mars 1957, sous la direction de Kwame Nkrumah. La Guinée a suivi en 1958 (sous Sékou Touré), le Nigeria et le Sénégal en 1960."
-    },
-    {
-      "q": "Quel mouvement littéraire et philosophique a revendiqué et valorisé l'identité culturelle africaine et diasporique face au colonialisme ?",
-      "o": [
-        "Le panafricanisme",
-        "L'afrocentrisme",
-        "Le mouvement des Droits civiques",
-        "La Négritude"
-      ],
-      "r": 3,
-      "x": "La Négritude est un mouvement littéraire et philosophique fondé dans les années 1930 par Aimé Césaire (Martinique), Léopold Sédar Senghor (Sénégal) et Léon-Gontran Damas (Guyane). Il valorise l'identité, l'histoire et les cultures africaines et de la diaspora face à l'assimilation et au colonialisme."
     },
     {
       "q": "Quel mouvement littéraire et philosophique a revendiqué et valorisé l'identité culturelle africaine et diasporique face au colonialisme ?",
@@ -12872,7 +12487,7 @@ const QUESTIONS = {
       "x": "Samory Touré (vers 1830-1900) a conduit une résistance armée contre les troupes françaises pendant près de 16 ans. Capturé en 1898, il mourut en déportation au Gabon. Il est considéré comme l'un des plus grands résistants africains à la colonisation et une figure héroïque du panafricanisme."
     },
     {
-      "q": "Quel pays africain a connu en 1994 un génocide au cours duquel environ 800 000 personnes ont été massacrées  ?",
+      "q": "Quel pays africain a connu en 1994 un génocide au cours duquel environ 800 000 personnes ont été massacrées ?",
       "o": [
         "Le Burundi",
         "La République Démocratique du Congo",
@@ -12916,17 +12531,6 @@ const QUESTIONS = {
       "x": "Ahmadou Kourouma (1927-2003) est l'auteur des « Soleils des Indépendances » (1968), œuvre fondatrice de la littérature africaine moderne. Ce roman introduit en français des structures grammaticales de la langue malinké et dénonce les régimes africains post-coloniaux."
     },
     {
-      "q": "Quel romancier ivoirien est l'auteur des « Soleils des Indépendances » ?",
-      "o": [
-        "Séidou Badian Kouyaté",
-        "Mongo Beti",
-        "Ferdinand Oyono",
-        "Ahmadou Kourouma"
-      ],
-      "r": 3,
-      "x": "Ahmadou Kourouma (1927-2003) est l'auteur des « Soleils des Indépendances » (1968), œuvre fondatrice de la littérature africaine moderne. Ce roman introduit en français des structures grammaticales de la langue malinké et dénonce les régimes africains post-coloniaux."
-    },
-    {
       "q": "Quel romancier guinéen est l'auteur de « L'Enfant noir » (1953)?",
       "o": [
         "Cheikh Hamidou Kane",
@@ -12936,28 +12540,6 @@ const QUESTIONS = {
       ],
       "r": 3,
       "x": "Camara Laye (1928-1980) est l'auteur de « L'Enfant noir » (1953), l'une des premières grandes œuvres de la littérature africaine francophone. Ce récit autobiographique et poétique décrit sa vie dans une famille malinké traditionnelle et son arrachement à ses racines pour aller étudier en France."
-    },
-    {
-      "q": "Quel romancier guinéen est l'auteur de « L'Enfant noir » (1953)?",
-      "o": [
-        "Cheikh Hamidou Kane",
-        "Ousmane Sembène",
-        "Mongo Beti",
-        "Camara Laye"
-      ],
-      "r": 3,
-      "x": "Camara Laye (1928-1980) est l'auteur de « L'Enfant noir » (1953), l'une des premières grandes œuvres de la littérature africaine francophone. Ce récit autobiographique et poétique décrit sa vie dans une famille malinké traditionnelle et son arrachement à ses racines pour aller étudier en France."
-    },
-    {
-      "q": "Combien de locuteurs (environ) le français compte-t-il dans le monde?",
-      "o": [
-        "Plus de 300 millions de locuteurs sur les cinq continents",
-        "Environ 80 millions, principalement en Europe et en Afrique du Nord",
-        "Environ 200 millions, uniquement en Europe et en Amérique",
-        "Plus de 500 millions, ce qui en fait la deuxième langue mondiale"
-      ],
-      "r": 0,
-      "x": "Le français est parlé par plus de 300 millions de locuteurs répartis sur les cinq continents, dans 93 États et gouvernements membres de l'Organisation Internationale de la Francophonie (OIF). L'Afrique représente désormais le continent avec le plus grand nombre de locuteurs francophones."
     },
     {
       "q": "Combien de locuteurs (environ) le français compte-t-il dans le monde?",
@@ -12984,24 +12566,13 @@ const QUESTIONS = {
     {
       "q": "Quelle institution internationale promeut la langue française et la coopération entre ses États membres ?",
       "o": [
-        "L'Organisation Internationale de la Francophonie (OIF)",
+        "L'OIF",
         "L'Alliance Française",
         "L'UNESCO",
         "L'Académie française"
       ],
       "r": 0,
       "x": "L'Organisation Internationale de la Francophonie (OIF) regroupe plusieurs États et gouvernements partageant l'usage du français.  Le Burkina Faso a quitté l'OIF au premier trimestre 2025, conjointement avec le Niger et le Mali, au sein de l'Alliance des États du Sahel (AES)."
-    },
-    {
-      "q": "Quel est le roman le plus célèbre de l'écrivain malien Amadou Hampâté Bâ ?",
-      "o": [
-        "« Les Contes d'Amadou Koumba »",
-        "« Soundjata ou l'épopée mandingue »",
-        "« L'Étrange Destin de Wangrin »",
-        "« Kaidara »"
-      ],
-      "r": 2,
-      "x": "« L'Étrange Destin de Wangrin » (1973) est le roman le plus connu d'Amadou Hampâté Bâ (1900-1991). Il raconte l'histoire vraie d'un interprète africain rusé sous la colonisation française. Hampâté Bâ est célèbre pour sa phrase : « En Afrique, quand un vieillard meurt, c'est une bibliothèque qui brûle. »"
     },
     {
       "q": "Quel est le roman le plus célèbre de l'écrivain malien Amadou Hampâté Bâ ?",
@@ -13064,7 +12635,7 @@ const QUESTIONS = {
         "Le service PayPal",
         "Le virement bancaire ordinaire par SWIFT",
         "Le service Western Union en ligne",
-        "Le mobile money (Orange Money, Moov Money, Wave)"
+        "Le mobile money"
       ],
       "r": 3,
       "x": "Les services de mobile money comme Orange Money, Moov Money et Wave permettent de transférer de l'argent, de payer des factures et de faire des achats via un simple téléphone portable. Ils ont révolutionné l'accès aux services financiers pour les populations non bancarisées en Afrique de l'Ouest, dont une grande partie au Burkina Faso."
@@ -13095,7 +12666,7 @@ const QUESTIONS = {
       "q": "Que désigne le concept d'« e-gouvernement » ou « gouvernement électronique » dans l'administration publique moderne ?",
       "o": [
         "La formation des fonctionnaires à l'utilisation des outils bureautiques",
-        "L'utilisation des technologies numériques pour améliorer et moderniser les services publics",
+        "L'utilisation des technologies numériques pour améliorer  les services publics",
         "Le vote électronique lors des élections nationales et locales",
         "La surveillance des citoyens par caméras intelligentes connectées à internet"
       ],
@@ -13136,7 +12707,7 @@ const QUESTIONS = {
       "x": "Yacouba Sawadogo, surnommé « l'homme qui arrête le désert », a popularisé et perfectionné la technique traditionnelle du zaï (petits trous dans le sol pour collecter l'eau et les nutriments) permettant de reverdir des terres arides au Sahel. Son action exemplaire lui a valu le prix Right Livelihood Award (Prix Nobel Alternatif) en 2018."
     },
     {
-      "q": "Quel journaliste burkinabè a été assassiné le 13 décembre 1998 et est devenu le symbole de la liberté de presse au Burkina Faso ?",
+      "q": "Quel journaliste burkinabè a été assassiné le 13 décembre 1998 ?",
       "o": [
         "Abdoulaye Barry",
         "Halidou Ouédraogo",
@@ -13144,10 +12715,10 @@ const QUESTIONS = {
         "Salif Traoré"
       ],
       "r": 2,
-      "x": "Norbert Zongo (1949-1998) a été assassiné dans des circonstances partiellement élucidées. Sa mort a déclenché une grave crise politique au Burkina Faso. Chaque 13 décembre est commémoré comme « Journée nationale de la liberté de presse » au Burkina Faso en sa mémoire et en hommage à tous les journalistes victimes de leur engagement."
+      "x": "Norbert Zongo (1949-1998) a été assassiné dans des circonstances partiellement élucidées. Chaque 13 décembre est commémoré comme « Journée nationale de la liberté de presse » au Burkina Faso en sa mémoire et en hommage à tous les journalistes victimes de leur engagement."
     },
     {
-      "q": "Quel militaire burkinabè est considéré comme une icône révolutionnaire africaine, ayant dirigé le pays de 1983 à 1987 sous le nom de « Che Guevara africain » ?",
+      "q": "Quel militaire burkinabè est considéré comme une icône révolutionnaire africaine ?",
       "o": [
         "Sangoulé Lamizana",
         "Saye Zerbo",
@@ -13155,7 +12726,7 @@ const QUESTIONS = {
         "Thomas Sankara"
       ],
       "r": 3,
-      "x": "Thomas Sankara (1949-1987) a mené la Révolution démocratique et populaire du Burkina Faso de 1983 à 1987. Figure emblématique du panafricanisme, du tiers-mondisme et de l'anti-impérialisme, il est surnommé le « Che Guevara africain ». Ses réformes sociales radicales ont transformé le pays et son image reste très vivace en Afrique."
+      "x": "Thomas Sankara (1949-1987) a mené la Révolution démocratique et populaire du Burkina Faso de 1983 à 1987. Figure emblématique du panafricanisme, du tiers-mondisme et de l'anti-impérialisme, il est surnommé le « Che Guevara africain »."
     },
     {
       "q": "Quel est le nom du grand festival culturel biennal du Burkina Faso, organisé à Bobo-Dioulasso aux années paires ?",
@@ -13180,7 +12751,7 @@ const QUESTIONS = {
       "x": "Le mooré est la langue du peuple Mossi, groupe ethnique le plus important du Burkina Faso avec environ 52,9 % de la population (RGPH 2019). Le dioula est la langue commerciale la plus répandue dans l'ouest du pays. Le fulfuldé est parlé par les Peuls dans le nord et l'est. Ces trois langues sont les plus largement utilisées au Burkina Faso."
     },
     {
-      "q": "Tous les combien d'années se tient le  Salon International de l'Artisanat de Ouagadougou (SIAO) ?",
+      "q": "Tous les combien d'années se tient le Salon International de l'Artisanat de Ouagadougou (SIAO) ?",
       "o": [
         "Tous les ans",
         "Tous les trois ans",
@@ -13213,7 +12784,7 @@ const QUESTIONS = {
       "x": "Les Bobo et les Bwa (région de Bobo-Dioulasso et de Dédougou) sont réputés pour leurs masques traditionnels en fibres végétales et en bois, à décoration géométrique abstraite. Ces masques foliaires et planches sont utilisés lors des cérémonies d'initiation, des funérailles et pour invoquer les forces naturelles."
     },
     {
-      "q": "Quel est le titre du chef suprême des Mossi qui joue un rôle d'autorité morale et de médiation sociale au Burkina Faso ?",
+      "q": "Quel est le titre du chef suprême des Mossi ?",
       "o": [
         "Le Mogho Naaba",
         "Le Larlé Naaba",
@@ -13221,7 +12792,7 @@ const QUESTIONS = {
         "Le Kamsaoko Naaba"
       ],
       "r": 0,
-      "x": "Le Mogho Naaba (littéralement « Chef du monde » en mooré) est le roi des Mossi et principal chef coutumier du Burkina Faso, résidant à Ouagadougou. Il joue un rôle historique de médiation sociale et de représentation culturelle. L'actuel Mogho Naaba est Baongo, intronisé en 2016."
+      "x": "Le Mogho Naaba (littéralement « Chef du monde » en mooré) est le roi des Mossi et principal chef coutumier du Burkina Faso, résidant à Ouagadougou. Il joue un rôle historique de médiation sociale et de représentation culturelle."
     },
     {
       "q": "Quelle cérémonie symbolique se déroule chaque vendredi matin au palais du Mogho Naaba de Ouagadougou ?",
@@ -13246,7 +12817,7 @@ const QUESTIONS = {
       "x": "La kora est un instrument à cordes composé de 21 cordes tendues sur une calebasse-résonateur recouverte de peau. Joué traditionnellement par les griots mandingues, elle est répandue au Mali, Sénégal, Gambie, Guinée et Burkina Faso. Le balafon est un xylophone à lames de bois, le djembé un tambour à main, le bendrè une percussion mossi."
     },
     {
-      "q": "Quel est le plat traditionnel de base de la cuisine burkinabè, préparé à partir de farine de sorgho, de mil ou de maïs cuite dans de l'eau jusqu'à former une pâte épaisse ?",
+      "q": "Lequel est le plat traditionnel de base de la cuisine burkinabè ?",
       "o": [
         "Le thiéboudienne",
         "Le mafé",
@@ -13254,7 +12825,7 @@ const QUESTIONS = {
         "L'attiéké"
       ],
       "r": 2,
-      "x": "Le « tô » est le plat de base de la cuisine burkinabè et sahélienne. Cette pâte épaisse et ferme préparée à partir de farine de sorgho, de mil ou de maïs est consommée avec diverses sauces : feuilles vertes, arachide, gombo ou beurre de karité. Le thiéboudienne est un plat sénégalais, le mafé un plat d'Afrique de l'Ouest et l'attiéké un plat ivoirien."
+      "x": "Le « tô » est le plat de base de la cuisine burkinabè et sahélienne.  Le thiéboudienne est un plat sénégalais, le mafé un plat d'Afrique de l'Ouest et l'attiéké un plat ivoirien."
     },
     {
       "q": "Quelle pratique traditionnelle consiste à offrir des biens à la famille de la future épouse pour officialiser une union matrimoniale ?",
@@ -13301,7 +12872,7 @@ const QUESTIONS = {
       "x": "Les BRICS (Brésil, Russie, Inde, Chine, Afrique du Sud) forment un groupement des grandes économies émergentes. En 2024, ils se sont élargis à de nouveaux membres dont l'Arabie Saoudite, l'Iran et l'Éthiopie. Ils se positionnent comme une alternative aux institutions économiques dominées par les pays occidentaux (FMI, Banque Mondiale, G7)."
     },
     {
-      "q": "Quel événement majeur survenu au Niger le 26 juillet 2023 a conduit au retrait des ambassadeurs et des troupes militaires françaises du  pays ?",
+      "q": "Quel événement majeur survenu au Niger le 26 juillet 2023 a conduit au retrait des ambassadeurs et des troupes militaires françaises du pays ?",
       "o": [
         "Le coup d'État militaire",
         "Le retrait négocié de la France dans le cadre d'accords bilatéraux révisés",
@@ -13320,7 +12891,7 @@ const QUESTIONS = {
         "La Ligue arabe"
       ],
       "r": 2,
-      "x": "L'OTAN (Organisation du Traité de l'Atlantique Nord) a été fondée en 1949. Son article 5 prévoit la défense collective de ses membres. La Russie invoque l'expansion de l'OTAN vers l'Est et l'éventuelle adhésion de l'Ukraine comme raison de son intervention militaire. L'OTAN compte 32 membres depuis l'adhésion de la Finlande et de la Suède."
+      "x": "L'OTAN (Organisation du Traité de l'Atlantique Nord) a été fondée en 1949. Son article 5 prévoit la défense collective de ses membres. La Russie invoque l'expansion de l'OTAN vers l'Est et l'éventuelle adhésion de l'Ukraine comme raison de son intervention militaire."
     },
     {
       "q": "Quel pays du Golfe persique a accueilli la Coupe du Monde de football 2022 ?",
@@ -13334,7 +12905,7 @@ const QUESTIONS = {
       "x": "Le Qatar a accueilli la Coupe du Monde 2022, première édition organisée dans un pays arabe et dans l'hémisphère Est.  La compétition a été marquée par la performance historique du Maroc atteignant les demi-finales."
     },
     {
-      "q": "Quelle organisation régionale regroupe 22 États arabes d'Afrique du Nord et du Moyen-Orient, dont le siège est au Caire (Égypte) ?",
+      "q": "Quelle organisation régionale regroupe 22 États arabes d'Afrique du Nord et du Moyen-Orient ?",
       "o": [
         "L'Union du Maghreb Arabe (UMA)",
         "Le Conseil de Coopération du Golfe (CCG)",
@@ -13342,7 +12913,7 @@ const QUESTIONS = {
         "La Ligue des États arabes"
       ],
       "r": 3,
-      "x": "La Ligue des États arabes, fondée en 1945 au Caire (Égypte), regroupe 22 pays arabes d'Afrique du Nord et du Moyen-Orient. Elle vise à coordonner les politiques économiques, culturelles et politiques de ses membres. La suspension de la Syrie de 2011 à 2023 en est l'un des épisodes récents les plus marquants."
+      "x": "La Ligue des États arabes, fondée en 1945 au Caire (Égypte), regroupe 22 pays arabes d'Afrique du Nord et du Moyen-Orient. Elle vise à coordonner les politiques économiques, culturelles et politiques de ses membres."
     },
     {
       "q": "Quel continent concentre la grande majorité des Pays les Moins Avancés (PMA) selon le classement des Nations Unies ?",
@@ -13367,39 +12938,6 @@ const QUESTIONS = {
       "x": "La « solution à deux États » est le cadre de négociation soutenu par la majorité de la communauté internationale pour résoudre le conflit israélo-palestinien. Elle prévoit la création d'un État palestinien indépendant coexistant avec l'État d'Israël. Ce processus reste bloqué malgré des décennies de négociations et de médiations internationales."
     },
     {
-      "q": "Que désigne le droit de pétition reconnu aux citoyens burkinabè dans un État de droit ?",
-      "o": [
-        "Le droit de soumettre des demandes ou réclamations collectives aux autorités publiques",
-        "Le droit exclusif de voter lors des consultations référendaires nationales",
-        "Le droit de se présenter à n'importe quel concours de la fonction publique",
-        "Le droit de refuser légalement de payer un impôt jugé injuste"
-      ],
-      "r": 0,
-      "x": "Le droit de pétition permet à tout citoyen ou groupe de citoyens de soumettre des demandes, suggestions ou réclamations aux autorités publiques (gouvernement, parlement, collectivités). C'est un droit fondamental de participation citoyenne reconnu dans les démocraties modernes et les textes constitutionnels."
-    },
-    {
-      "q": "Que désigne le principe de « laïcité » comme mode d'organisation de l'État ?",
-      "o": [
-        "L'obligation pour tout citoyen d'appartenir à une religion reconnue officiellement par l'État",
-        "La séparation stricte entre les institutions de l'État et les organisations religieuses",
-        "La promotion officielle des valeurs religieuses dans les programmes scolaires publics",
-        "L'interdiction totale de toute pratique religieuse dans tout espace public"
-      ],
-      "r": 1,
-      "x": "La laïcité est le principe de séparation entre les institutions de l'État et les organisations religieuses. Elle garantit la liberté de conscience et la neutralité de l'État envers toutes les religions. En France, elle est un principe constitutionnel depuis 1905. Au Burkina Faso, la Constitution reconnaît la liberté religieuse et le caractère laïc de l'État."
-    },
-    {
-      "q": "Que désigne le terme « corruption » dans le contexte de la gestion des affaires publiques ?",
-      "o": [
-        "L'abus d'une fonction ou d'un pouvoir public à des fins d'enrichissement personnel",
-        "L'erreur administrative involontaire commise par un fonctionnaire dans l'exercice de ses fonctions",
-        "Le simple retard dans le traitement d'un dossier par un agent de l'État",
-        "L'utilisation légale de ressources de l'État pour des activités autorisées par la loi"
-      ],
-      "r": 0,
-      "x": "La corruption est l'abus d'un pouvoir ou d'une fonction publique à des fins d'enrichissement personnel : sollicitation de pots-de-vin, détournement de fonds publics, favoritisme dans l'attribution de marchés. Au Burkina Faso, l'Autorité Supérieure de Contrôle d'État et de Lutte contre la Corruption (ASCE-LC) est chargée de la combattre."
-    },
-    {
       "q": "Quel est le principe démocratique fondamental selon lequel le pouvoir politique appartient au peuple et s'exerce en son nom ?",
       "o": [
         "Le principe de légalité des actes administratifs",
@@ -13422,7 +12960,7 @@ const QUESTIONS = {
       "x": "Dans « L'Esprit des Lois » (1748), Montesquieu défend que la liberté politique requiert la séparation entre le pouvoir exécutif (appliquer les lois), le législatif (élaborer les lois) et le judiciaire (sanctionner les violations)."
     },
     {
-      "q": "Quelle institution, anciennement incarnée au Burkina Faso par le Médiateur du Faso (supprimé en 2023), est chargée de recevoir et traiter les plaintes des citoyens contre l'administration ?",
+      "q": "Quelle institution est chargée de recevoir et traiter les plaintes des citoyens contre l'administration ?",
       "o": [
         "Un agent de sécurité chargé de protéger les membres du gouvernement",
         "Un expert indépendant chargé d'auditer les finances des ministères",
@@ -13430,7 +12968,7 @@ const QUESTIONS = {
         "Un haut fonctionnaire chargé de superviser les procédures de marchés publics"
       ],
       "r": 2,
-      "x": "L'ombudsman (ou médiateur) est une institution indépendante qui reçoit et traite les plaintes des citoyens contre l'administration. Au Burkina Faso, cette fonction était assurée par le Médiateur du Faso, supprimé par la révision constitutionnelle de 2023. Ses attributions ont été reprises par le Conseil national des communautés."
+      "x": "L'ombudsman (ou médiateur) est une institution indépendante qui reçoit et traite les plaintes des citoyens contre l'administration. Au Burkina Faso, cette fonction était assurée par le Médiateur du Faso, supprimé par la révision constitutionnelle de 2023."
     },
     {
       "q": "Quels sont les trois piliers fondamentaux du développement durable ?",
@@ -13466,18 +13004,7 @@ const QUESTIONS = {
       "x": "Les ODD (Objectifs de Développement Durable), adoptés par l'ONU en 2015 dans l'Agenda 2030, sont 17 objectifs visant à éradiquer la pauvreté, protéger la planète et assurer la prospérité pour tous. Ils couvrent l'éducation, la santé, l'égalité des sexes, l'eau potable, l'énergie propre et la paix. Le Burkina Faso est engagé dans leur réalisation."
     },
     {
-      "q": "Que garantit le principe du « contradictoire » dans toute procédure judiciaire ou administrative ?",
-      "o": [
-        "Le droit pour chaque partie de connaître et de discuter les arguments et preuves de l'autre partie",
-        "L'obligation pour un juge de rendre un verdict opposé à la demande d'une des parties",
-        "L'interdiction pour un accusé de témoigner en sa propre faveur devant un tribunal",
-        "La règle qui impose au juge de rendre un verdict dans un délai légalement prescrit"
-      ],
-      "r": 0,
-      "x": "Le principe du contradictoire garantit que chaque partie dans un procès ou une procédure administrative peut prendre connaissance des arguments et des preuves de l'autre partie et y répondre. C'est un principe fondamental du droit processuel burkinabè et international, indispensable à la garantie d'un procès équitable."
-    },
-    {
-      "q": "Quelle révolution politique et sociale de 1789 a renversé la monarchie absolue en France et conduit à la proclamation des droits de l'homme et du citoyen ?",
+      "q": "Quelle révolution politique et sociale de 1789 a renversé la monarchie absolue en France ?",
       "o": [
         "La Révolution industrielle anglaise",
         "La Révolution française",
@@ -13499,7 +13026,7 @@ const QUESTIONS = {
       "x": "La Déclaration d'Indépendance des États-Unis a été adoptée le 4 juillet 1776. Ce document fondateur affirmait que « tous les hommes sont créés égaux » et dotés de droits inaliénables. Le 4 juillet est toujours célébré comme fête nationale aux États-Unis. Ce texte a inspiré de nombreuses constitutions africaines."
     },
     {
-      "q": "Quel dirigeant soviétique, arrivé au pouvoir en 1985, a lancé les politiques de « perestroïka » (restructuration) et de « glasnost » (transparence) qui ont conduit à la chute de l'URSS ?",
+      "q": "Quel dirigeant soviétique a lancé les politiques de « perestroïka » et de « glasnost » qui ont conduit à la chute de l'URSS ?",
       "o": [
         "Léonid Brejnev",
         "Mikhaïl Gorbatchev",
@@ -13510,7 +13037,7 @@ const QUESTIONS = {
       "x": "Mikhaïl Gorbatchev (1931-2022), secrétaire général du Parti communiste soviétique de 1985 à 1991, a lancé des réformes profondes qui ont conduit à la démocratisation et à la dissolution de l'URSS en 1991. Il a reçu le Prix Nobel de la Paix en 1990 pour son rôle dans la fin de la Guerre froide."
     },
     {
-      "q": "En quelle année le mur de Berlin, symbole de la division de l'Allemagne et de la Guerre froide, a-t-il été démoli par la population ?",
+      "q": "En quelle année le mur de Berlin a-t-il été démoli par la population ?",
       "o": [
         "1989",
         "1991",
@@ -13521,7 +13048,7 @@ const QUESTIONS = {
       "x": "Le mur de Berlin a été ouvert dans la nuit du 9 au 10 novembre 1989, après 28 ans de division de la ville. Sa démolition par des citoyens est devenue le symbole de la fin de la Guerre froide et du bloc soviétique. L'Allemagne a été officiellement réunifiée le 3 octobre 1990."
     },
     {
-      "q": "Quel empire africain, fondé par Soundiata Keïta au XIIIe siècle, était l'un des plus puissants et des plus riches d'Afrique de l'Ouest médiévale ?",
+      "q": "Quel empire africain était l'un des plus puissants et des plus riches d'Afrique de l'Ouest médiévale ?",
       "o": [
         "L'empire Songhaï",
         "L'empire du Ghana ancien",
@@ -13532,15 +13059,15 @@ const QUESTIONS = {
       "x": "L'empire du Mali, fondé par Soundiata Keïta après la bataille de Kirina en 1235, était l'un des empires les plus puissants d'Afrique médiévale. Le roi Mansa Moussa (1312-1337), le plus célèbre souverain, effectua un célèbre pèlerinage à La Mecque en 1324 avec des tonnes d'or qui provoquèrent une inflation en Égypte."
     },
     {
-      "q": "Quel événement marqua officiellement la fin de la Seconde Guerre mondiale en Europe le 8 mai 1945 ?",
+      "q": "Quel événement marqua officiellement la fin de la Seconde Guerre mondiale en Europe ?",
       "o": [
-        "Le débarquement allié en Normandie le 6 juin 1944",
+        "Le débarquement allié en Normandie",
         "La bataille de Stalingrad remportée par l'URSS",
         "La conférence de Yalta entre Roosevelt, Churchill et Staline",
-        "La capitulation  de l'Allemagne nazie le 8 mai 1945"
+        "La capitulation  de l'Allemagne nazie"
       ],
       "r": 3,
-      "x": "La capitulation sans condition de l'Allemagne nazie, signée à Berlin le 8 mai 1945, a marqué la fin de la Seconde Guerre mondiale en Europe. Ce jour est commémoré comme le « Jour de la Victoire en Europe » (VE Day). La guerre dans le Pacifique a pris fin le 2 septembre 1945 avec la capitulation du Japon."
+      "x": "La capitulation sans condition de l'Allemagne nazie, signée à Berlin le 8 mai 1945, a marqué la fin de la Seconde Guerre mondiale en Europe. La guerre dans le Pacifique a pris fin le 2 septembre 1945 avec la capitulation du Japon."
     },
     {
       "q": "Quel grand empire africain du XVIe siècle, sous le règne d'Askia le Grand, avait pour centres intellectuels et commerciaux Tombouctou et Djenné en Afrique de l'Ouest ?",
@@ -13565,7 +13092,7 @@ const QUESTIONS = {
       "x": "L'armistice du 11 novembre 1918 à 11 heures a mis fin aux combats de la Grande Guerre (1914-1918). Ce conflit a causé plus de 20 millions de morts. Le Traité de Versailles (28 juin 1919) a officiellement mis fin à la guerre. Le 11 novembre est commémoré comme jour du souvenir dans de nombreux pays."
     },
     {
-      "q": "Comment appelle-t-on l'état de tension et d'opposition idéologique entre les États-Unis et l'URSS qui a duré de 1947 à 1991, sans conflit armé direct entre les deux superpuissances ?",
+      "q": "Comment appelle-t-on l'état de tension et d'opposition idéologique entre les États-Unis et l'URSS qui a duré de 1947 à 1991 ?",
       "o": [
         "La guerre des étoiles (Strategic Defense Initiative)",
         "La guerre idéologique du rideau de fer",
@@ -13620,7 +13147,7 @@ const QUESTIONS = {
       "x": "L'ADN (acide désoxyribonucléique) est organisé en double hélice et porte les gènes, unités de l'information héréditaire. Il est localisé dans le noyau des cellules. L'ARN est une copie partielle de l'ADN qui sert à la fabrication des protéines. La découverte de la structure de l'ADN par Watson et Crick date de 1953."
     },
     {
-      "q": "Quel type de reproduction nécessite l'intervention de deux individus de sexes différents et produit une descendance génétiquement variée ?",
+      "q": "Quel type de reproduction nécessite l'intervention de deux individus de sexes différents ?",
       "o": [
         "La reproduction asexuée par bouturage",
         "La parthénogenèse (développement sans fécondation)",
@@ -13697,7 +13224,7 @@ const QUESTIONS = {
       "x": "La drépanocytose (ou anémie falciforme) est une maladie héréditaire due à une mutation du gène de l'hémoglobine. Les globules rouges prennent une forme en faucille, provoquant des occlusions vasculaires douloureuses et une anémie chronique. Elle est très répandue en Afrique subsaharienne, où elle confère une certaine protection contre le paludisme."
     },
     {
-      "q": "Quelle relation correcte lie la tension électrique , l'intensité du courant et la résistance  ?",
+      "q": "Quelle relation correcte lie la tension électrique , l'intensité du courant et la résistance ?",
       "o": [
         "U = I + R",
         "U = I − R",
@@ -13710,16 +13237,16 @@ const QUESTIONS = {
     {
       "q": "Quelle est l'unité de mesure de l'intensité du courant électrique dans le Système International d'Unités (SI) ?",
       "o": [
-        "Le volt (V) — unité de tension électrique",
+        "Le volt (V)",
         "L'ampère (A)",
-        "L'ohm (Ω) — unité de résistance électrique",
-        "Le watt (W) — unité de puissance électrique"
+        "L'ohm (Ω)",
+        "Le watt (W)"
       ],
       "r": 1,
       "x": "L'ampère (A) est l'unité de mesure de l'intensité du courant électrique dans le Système International. Il doit son nom au physicien français André-Marie Ampère (1775-1836). Le volt mesure la tension, l'ohm la résistance et le watt la puissance électrique (P = U × I)."
     },
     {
-      "q": "Quelle est la formule chimique de l'eau, molécule indispensable à toute forme de vie connue sur Terre ?",
+      "q": "Quelle est la formule chimique de l'eau ?",
       "o": [
         "CO₂ (dioxyde de carbone)",
         "O₂ (dioxygène moléculaire)",
@@ -13727,7 +13254,7 @@ const QUESTIONS = {
         "H₂O (deux atomes d'hydrogène et un d'oxygène)"
       ],
       "r": 3,
-      "x": "La formule H₂O indique que chaque molécule d'eau est composée de deux atomes d'hydrogène (H) et d'un atome d'oxygène (O). L'eau est essentielle à toute vie connue. Elle bout à 100°C et gèle à 0°C sous pression normale. Elle couvre environ 71 % de la surface terrestre."
+      "x": "La formule H₂O indique que chaque molécule d'eau est composée de deux atomes d'hydrogène (H) et d'un atome d'oxygène (O). L'eau  bout à 100°C et gèle à 0°C sous pression normale. Elle couvre environ 71 % de la surface terrestre."
     },
     {
       "q": "Quel principe physique fondamental stipule que tout corps plongé dans un fluide subit une poussée verticale de bas en haut égale au poids du fluide déplacé ?",
@@ -13939,7 +13466,7 @@ const QUESTIONS = {
       "x": "La Convention sur les Armes Chimiques (CAC), en vigueur depuis 1997 et vérifiée par l'OIAC à La Haye, est le premier traité multilatéral de désarmement interdisant toute une catégorie d'armes de destruction massive. Elle a conduit à la destruction de la quasi-totalité des arsenaux chimiques déclarés dans le monde."
     },
     {
-      "q": "Quel document fondateur du droit international humanitaire a été adopté à  l'initiative d'Henri Dunant, fondateur de la Croix-Rouge ?",
+      "q": "Quel document fondateur du droit international humanitaire a été adopté à l'initiative d'Henri Dunant, fondateur de la Croix-Rouge ?",
       "o": [
         "La Convention de La Haye sur les lois de la guerre",
         "Le Protocole de Genève sur les gaz asphyxiants de 1925",
@@ -13961,7 +13488,7 @@ const QUESTIONS = {
       "x": "Le principe de distinction, pierre angulaire du droit international humanitaire (Conventions de Genève), oblige les parties à un conflit à faire la distinction entre combattants (cibles légitimes) et civils (non-combattants protégés). Les attaques intentionnelles contre des civils constituent des crimes de guerre."
     },
     {
-      "q": "Quel pays d'Afrique de l'Ouest a connu une grave crise post-électorale en 2010-2011  ?",
+      "q": "Quel pays d'Afrique de l'Ouest a connu une grave crise post-électorale en 2010-2011 ?",
       "o": [
         "Le Sénégal",
         "Le Ghana",
@@ -13980,10 +13507,10 @@ const QUESTIONS = {
         "Le mandé panafricain"
       ],
       "r": 2,
-      "x": "L'éco est le nom de la monnaie unique envisagée par la CEDEAO pour ses 15 États membres. Ce projet, annoncé depuis les années 1980 et relancé en 2019, reste en cours d'élaboration. Les critères de convergence macroéconomique (inflation, déficit, dette) doivent être respectés par tous les membres avant son lancement."
+      "x": "L'éco est le nom de la monnaie unique envisagée par la CEDEAO pour ses  États membres. Ce projet, annoncé depuis les années 1980 et relancé en 2019, reste en cours d'élaboration."
     },
     {
-      "q": "Quelle force militaire avait été créée par les cinq pays du G5 Sahel (Burkina Faso, Mali, Mauritanie, Niger, Tchad) pour lutter contre le terrorisme  ?",
+      "q": "Quelle force militaire avait été créée par les cinq pays du G5 Sahel (Burkina Faso, Mali, Mauritanie, Niger, Tchad) pour lutter contre le terrorisme ?",
       "o": [
         "La Force Barkhane (France)",
         "La MINUSMA (Mission ONU au Mali)",
@@ -14016,18 +13543,18 @@ const QUESTIONS = {
       "x": "Le Conseil de Paix et de Sécurité (CPS) de l'Union Africaine, créé en 2004, est l'organe décisionnel chargé de la prévention, de la gestion et du règlement des conflits en Afrique. Il peut décider de missions de soutien à la paix et imposer des sanctions. Il est composé de 15 membres élus pour deux ou trois ans."
     },
     {
-      "q": "La MINUSMA (Mission Multidimensionnelle Intégrée des Nations Unies pour la Stabilisation au Mali) a été dissoute en décembre 2023 à la suite de quelle décision ?",
+      "q": "La MINUSMA a été dissoute en décembre 2023 à la suite de quelle décision ?",
       "o": [
         "Une résolution du Conseil de Sécurité de l'ONU mettant fin à son mandat",
-        "La demande du gouvernement de transition malien de retrait immédiat des casques bleus",
+        "La demande du gouvernement de transition malien du retrait immédiat",
         "Le désengagement financier des pays contributeurs de troupes de l'ONU",
         "Un accord de paix global entre le gouvernement malien et tous les groupes armés"
       ],
       "r": 1,
-      "x": "La junte militaire malienne a demandé en 2023 le retrait immédiat de la MINUSMA, déployée depuis 2013. Les 13 000 casques bleus ont quitté le Mali avant fin décembre 2023. Cette décision s'inscrit dans la rupture des relations du Mali avec les partenaires occidentaux et le rapprochement avec la Russie et le groupe Wagner."
+      "x": "Le gouvernement malien a demandé en 2023 le retrait immédiat de la MINUSMA (Mission Multidimensionnelle Intégrée des Nations Unies pour la Stabilisation au Mali), déployée depuis 2013. Les 13 000 casques bleus ont quitté le Mali avant fin décembre 2023."
     },
     {
-      "q": "Quelle organisation économique régionale regroupe les pays d'Afrique centrale  ?",
+      "q": "Quelle organisation économique régionale regroupe les pays d'Afrique centrale ?",
       "o": [
         "La CEDEAO",
         "L'UEMOA",
@@ -14181,26 +13708,15 @@ const QUESTIONS = {
       "x": "Salif Keïta (né en 1949), surnommé « la Voix de l'Afrique », est un chanteur malien atteint d'albinisme. Descendant présumé de Soundiata Keïta, il a débuté avec l'orchestre Rail Band de Bamako avant de s'exporter en Europe. Son album « Soro » (1987) l'a rendu célèbre dans le monde entier."
     },
     {
-      "q": "Quel site du Mali, inscrit au Patrimoine Mondial de l'UNESCO et classé « en péril » depuis 2012, était au Moyen Âge un grand centre islamique, commercial et intellectuel avec des milliers de manuscrits précieux ?",
+      "q": "Quel site du Mali était au Moyen Âge un grand centre islamique, commercial et intellectuel avec des milliers de manuscrits précieux ?",
       "o": [
         "Tombouctou",
-        "Djenné (la Grande Mosquée)",
-        "Agadez (Niger)",
-        "Oualata (Mauritanie)"
+        "Djenné",
+        "Agadez",
+        "Oualata"
       ],
       "r": 0,
       "x": "Tombouctou (Mali), inscrite à l'UNESCO en 1988 et sur la liste du patrimoine en péril depuis 2012, était au XVe-XVIe siècle un centre islamique mondial avec l'université de Sankoré et plus de 25 000 étudiants. La ville abrite encore des milliers de manuscrits anciens."
-    },
-    {
-      "q": "Quelle forme d'expression culturelle africaine, utilisant masques, costumes rituels et mouvements chorégraphiés, est pratiquée au Burkina Faso lors des cérémonies funéraires, d'initiation et de demande de pluie ?",
-      "o": [
-        "Le théâtre de la griotterie épique",
-        "La musique de chambre royale mossi",
-        "La danse masquée traditionnelle",
-        "La peinture rupestre cérémonielle en plein air"
-      ],
-      "r": 2,
-      "x": "La danse masquée est l'une des formes d'expression culturelle les plus riches du Burkina Faso. Les masques (bwa, mossi, lobi, bobo, nuna, winiama) sont des entités spirituelles qui « descendent » lors des cérémonies. Ils incarnent les ancêtres, les esprits de la nature ou les forces protectrices et jouent un rôle essentiel dans la cohésion sociale."
     },
     {
       "q": "Quelle chanteuse béninoise, surnommée « la Déesse de l'Afrique », a remporté plusieurs Grammy Awards et est devenue l'une des ambassadrices culturelles les plus célèbres du continent africain ?",
@@ -14214,7 +13730,7 @@ const QUESTIONS = {
       "x": "Angélique Kidjo (née en 1960 à Cotonou, Bénin) est l'une des artistes africaines les plus récompensées au monde, avec plusieurs Grammy Awards. Chanteuse aux influences afrobeat, funk et musiques traditionnelles béninoises, elle est aussi ambassadrice de l'UNICEF."
     },
     {
-      "q": "Quel genre musical sénégalais urbain, popularisé par Youssou N'Dour depuis les années 1970, mêle influences traditionnelles sérères, wolof et percussions modernes ?",
+      "q": "Quel genre musical urbain, popularisé par Youssou N'Dour depuis les années 1970, mêle influences traditionnelles sérères, wolof et percussions modernes ?",
       "o": [
         "Le soukous congolais (rumba africaine)",
         "Le mbalax sénégalais",
@@ -14222,10 +13738,10 @@ const QUESTIONS = {
         "Le highlife ghanéen classique"
       ],
       "r": 1,
-      "x": "Le mbalax est le genre musical populaire sénégalais par excellence, né dans les années 1970 à Dakar. Youssou N'Dour, avec son groupe l'Étoile de Dakar puis le Super Étoile, en est la figure emblématique mondiale. Le mbalax se caractérise par des rythmes de sabar (percussions traditionnelles wolof) associés à des instruments modernes."
+      "x": "Le mbalax est le genre musical populaire sénégalais par excellence, né dans les années 1970 à Dakar. Le mbalax se caractérise par des rythmes de sabar (percussions traditionnelles wolof) associés à des instruments modernes."
     },
     {
-      "q": "Quelle ville éthiopienne, ancienne capitale de l'Empire chrétien du Zagwe, abrite une série d'églises monolithiques creusées dans le roc au XIIe siècle, classées au Patrimoine Mondial de l'UNESCO ?",
+      "q": "Quelle ville éthiopienne abrite une série d'églises monolithiques creusées dans le roc au XIIe siècle, classées au Patrimoine Mondial de l'UNESCO ?",
       "o": [
         "Axoum (Éthiopie du Nord)",
         "Lalibela (Éthiopie centrale)",
@@ -14280,29 +13796,7 @@ const QUESTIONS = {
       "x": "Prime = 10 % × 200 000 = 20 000 FCFA. Cotisation mutuelle = 5 % × 20 000 = 0,05 × 20 000 = 1 000 FCFA. Il faut bien appliquer le pourcentage sur la prime, pas sur le salaire de base. Ce type de calcul en deux étapes est courant dans les épreuves de gestion des concours directs."
     },
     {
-      "q": "Une école compte 480 élèves, dont 25 % sont en classe de CM2. Combien d'élèves sont inscrits en CM2 ?",
-      "o": [
-        "100 élèves",
-        "110 élèves",
-        "120 élèves",
-        "140 élèves"
-      ],
-      "r": 2,
-      "x": "25 % de 480 = (25 × 480) ÷ 100 = 12 000 ÷ 100 = 120 élèves. Méthode rapide : 25 % = 1/4 ; 480 ÷ 4 = 120 élèves. Ce type de calcul de pourcentage est fondamental pour les épreuves de mathématiques pratiques des concours directs burkinabè."
-    },
-    {
-      "q": "Un terrain rectangulaire a un périmètre de 60 mètres. Sa longueur mesure 20 mètres. Quelle est sa largeur ?",
-      "o": [
-        "5 mètres",
-        "8 mètres",
-        "12 mètres",
-        "10 mètres"
-      ],
-      "r": 3,
-      "x": "Périmètre d'un rectangle = 2 × (longueur + largeur). Donc : 60 = 2 × (20 + largeur) → 30 = 20 + largeur → largeur = 30 − 20 = 10 mètres. Aire de ce terrain = 20 × 10 = 200 m². Ce type de problème géométrique est fréquent dans les concours de gestion et d'administration."
-    },
-    {
-      "q": "Dans un triangle rectangle, les deux côtés de l'angle droit mesurent respectivement 3 cm et 4 cm. Quelle est la longueur de l'hypoténuse selon le théorème de Pythagore ?",
+      "q": "Dans un triangle rectangle, les deux côtés de l'angle droit mesurent respectivement 3 cm et 4 cm. Quelle est la longueur de l'hypoténuse ?",
       "o": [
         "6 cm",
         "6,5 cm",
@@ -14313,7 +13807,7 @@ const QUESTIONS = {
       "x": "Théorème de Pythagore : hypoténuse² = 3² + 4² = 9 + 16 = 25 → hypoténuse = √25 = 5 cm. Le triplet (3, 4, 5) est le triangle rectangle entier le plus simple à mémoriser. D'autres triplets courants : (5, 12, 13) et (8, 15, 17). Cette formule est fondamentale en géométrie."
     },
     {
-      "q": "Combien de litres d'eau peut contenir un récipient cubique dont chaque arête mesure 50 cm ? (Rappel : 1 litre = 1 dm³ = 1 000 cm³)",
+      "q": "Combien de litres d'eau peut contenir un récipient cubique dont chaque arête mesure 50 cm ?",
       "o": [
         "50 litres",
         "125 litres",
@@ -14343,7 +13837,7 @@ const QUESTIONS = {
         "La comparaison des prix des produits entre deux pays partenaires commerciaux"
       ],
       "r": 0,
-      "x": "La balance commerciale mesure la différence entre la valeur des exportations (produits vendus à l'étranger) et celle des importations (produits achetés à l'étranger). Si les exportations > importations : excédent commercial. Si importations > exportations : déficit commercial. Le Burkina Faso connaît généralement un déficit commercial car ses importations (hydrocarbures, biens manufacturés) dépassent ses exportations (or, coton)."
+      "x": "La balance commerciale mesure la différence entre la valeur des exportations (produits vendus à l'étranger) et celle des importations (produits achetés à l'étranger). Si les exportations > importations : excédent commercial. Si importations > exportations : déficit commercial."
     },
     {
       "q": "Quelle est la principale place boursière mondiale par la capitalisation totale des sociétés cotées ?",
@@ -14365,7 +13859,7 @@ const QUESTIONS = {
         "La politique de la BCEAO pour encadrer les très petites transactions quotidiennes"
       ],
       "r": 0,
-      "x": "La microfinance offre des services financiers (petits crédits, épargne, assurance) à des personnes à faibles revenus exclues des banques classiques. Au Burkina Faso, des institutions comme le Réseau des Caisses Populaires du Burkina (RCPB) fournissent des micros crédits aux agriculteurs, artisans et petits commerçants. Muhammad Yunus (Bangladesh) a reçu le prix Nobel de la Paix en 2006 pour son travail pionnier en microfinance."
+      "x": "La microfinance offre des services financiers (petits crédits, épargne, assurance) à des personnes à faibles revenus exclues des banques classiques. Au Burkina Faso, des institutions comme le Réseau des Caisses Populaires du Burkina (RCPB) fournissent des micros crédits aux agriculteurs, artisans et petits commerçants."
     },
     {
       "q": "Quel est le nom de la politique économique qui vise à protéger les industries et les producteurs nationaux de la concurrence étrangère ?",
@@ -14376,7 +13870,7 @@ const QUESTIONS = {
         "Le mercantilisme moderne"
       ],
       "r": 2,
-      "x": "Le protectionnisme est la politique économique qui protège les producteurs nationaux de la concurrence internationale par des droits de douane (taxes sur les importations), des quotas (limitations de volume) ou des subventions aux industries locales. Il s'oppose au libre-échange, promu par l'OMC. Les pays en développement l'utilisent parfois pour protéger leurs industries naissantes."
+      "x": "Le protectionnisme est la politique économique qui protège les producteurs nationaux de la concurrence internationale par des droits de douane (taxes sur les importations), des quotas (limitations de volume) ou des subventions aux industries locales. Il s'oppose au libre-échange, promu par l'OMC."
     },
     {
       "q": "Que signifie l'acronyme « PIB », principal indicateur de richesse économique d'un pays ?",
@@ -14442,7 +13936,7 @@ const QUESTIONS = {
         "La jachère améliorée aux légumineuses fixatrices d'azote"
       ],
       "r": 1,
-      "x": "La rotation des cultures consiste à alterner des espèces végétales différentes sur les mêmes parcelles pour rompre les cycles de maladies, d'insectes nuisibles et d'adventices, et pour renouveler les nutriments du sol. Par exemple : coton suivi de sorgho, puis niébé (légumineuse fixatrice d'azote). C'est une pratique recommandée pour l'agriculture durable au Burkina Faso."
+      "x": "La rotation des cultures consiste à alterner des espèces végétales différentes sur les mêmes parcelles pour rompre les cycles de maladies, d'insectes nuisibles et d'adventices, et pour renouveler les nutriments du sol. Par exemple : coton suivi de sorgho, puis niébé (légumineuse fixatrice d'azote)."
     },
     {
       "q": "Quel est le nom du principe de physique qui stipule que l'énergie totale d'un système isolé reste constante ?",
@@ -14458,10 +13952,10 @@ const QUESTIONS = {
     {
       "q": "Quel prix international annuel récompense des contributions exceptionnelles en physique, chimie, médecine, littérature, paix et économie ?",
       "o": [
-        "Le prix Pulitzer (journalisme et arts américains)",
-        "Le prix Booker international (littérature anglophone)",
+        "Le prix Pulitzer",
+        "Le prix Booker international",
         "Le prix Nobel",
-        "Le prix Abel (mathématiques nordiques)"
+        "Le prix Abel"
       ],
       "r": 2,
       "x": "Le prix Nobel, fondé par Alfred Nobel (inventeur de la dynamite) et décerné pour la première fois en 1901, est la distinction la plus prestigieuse dans ses domaines. Le prix Nobel de la Paix est décerné à Oslo (Norvège) et les autres à Stockholm (Suède). Des Africains comme Wole Soyinka, Naguib Mahfouz, Nelson Mandela et Wangari Maathai en sont lauréats."
@@ -14472,10 +13966,10 @@ const QUESTIONS = {
         "Les pays africains qui refusent les accords d'intégration régionale comme la CEDEAO",
         "Les migrants africains en situation administrative irrégulière en Europe ou en Amérique",
         "Les pays à majorité africaine non membres de l'Union Africaine",
-        "Les communautés de personnes d'origine africaine vivant hors du continent africain"
+        "Les communautés de personnes d'origine africaine vivant hors de l'Afrique"
       ],
       "r": 3,
-      "x": "La diaspora africaine désigne l'ensemble des communautés de personnes d'origine africaine établies en dehors du continent : Afro-Américains, Afro-Caribéens, Afro-Européens, Afro-Brésiliens, etc. Elle représente des centaines de millions de personnes et joue un rôle économique majeur (transferts de fonds) et culturel. L'Union Africaine reconnaît officiellement la diaspora comme « sixième région » d'Afrique."
+      "x": "La diaspora africaine désigne l'ensemble des communautés de personnes d'origine africaine établies en dehors du continent : Afro-Américains, Afro-Caribéens, Afro-Européens, Afro-Brésiliens, etc. Elle représente des centaines de millions de personnes et joue un rôle économique majeur  et culturel. L'Union Africaine reconnaît officiellement la diaspora comme « sixième région » d'Afrique."
     },
     {
       "q": "Quel système de notation musicale, utilisé dans l'enseignement musical dans les pays francophones et dans le monde entier, utilise les syllabes do, ré, mi, fa, sol, la et si ?",
@@ -14511,7 +14005,7 @@ const QUESTIONS = {
       "x": "La sublimation est le changement d'état direct du solide à la vapeur, sans passer par l'état liquide. La glace sèche (CO₂ solide) se sublime à −78,5°C. L'iode solide se sublime facilement à température ambiante. Le phénomène inverse (vapeur → solide directement) s'appelle la déposition ou solidification directe (givrage)."
     },
     {
-      "q": "Quel écrivain et aviateur français est l'auteur de « Petit Prince »  ?",
+      "q": "Quel écrivain et aviateur français est l'auteur de « Petit Prince » ?",
       "o": [
         "Victor Hugo (1802-1885)",
         "Albert Camus (1913-1960)",
@@ -14522,7 +14016,7 @@ const QUESTIONS = {
       "x": "Antoine de Saint-Exupéry (1900-1944) est l'auteur du « Petit Prince » (1943), conte philosophique traduit en plus de 300 langues et dialects et vendu à plus de 150 millions d'exemplaires. Pilote de ligne et de guerre, il a aussi écrit « Vol de nuit » et « Terre des hommes ». Il a disparu lors d'une mission de reconnaissance aérienne en 1944."
     },
     {
-      "q": "Quel document fondateur a été adopté le 26 juin 1945 à San Francisco, instituant officiellement une organisation  connue ?",
+      "q": "Quel document fondateur a été adopté le 26 juin 1945 à San Francisco ?",
       "o": [
         "Le Traité de Versailles",
         "La Charte des Nations Unies",
@@ -14541,7 +14035,7 @@ const QUESTIONS = {
         "Office de Normalisation Géographique internationale"
       ],
       "r": 1,
-      "x": "Une ONG (Organisation Non Gouvernementale) est une association à but non lucratif, indépendante des gouvernements, qui œuvre dans des domaines variés : aide humanitaire, santé, éducation, droits humains, environnement. Au Burkina Faso, de nombreuses ONG nationales et internationales interviennent face aux crises sécuritaires et alimentaires."
+      "x": "Une ONG (Organisation Non Gouvernementale) est une association à but non lucratif, indépendante des gouvernements, qui œuvre dans des domaines variés : aide humanitaire, santé, éducation, droits humains, environnement."
     },
     {
       "q": "Dans la classification biologique du vivant, quel est le niveau taxonomique de base permettant de regrouper des individus pouvant se reproduire entre eux et donner une descendance fertile ?",
@@ -14552,7 +14046,7 @@ const QUESTIONS = {
         "L'ordre"
       ],
       "r": 0,
-      "x": "L'espèce est l'unité fondamentale de la classification biologique. Deux individus appartiennent à la même espèce s'ils peuvent se reproduire et donner une descendance fertile. Homo sapiens est l'espèce humaine. Les chiens et les loups appartiennent au même genre (Canis) mais à des espèces différentes. Au-dessus de l'espèce viennent : genre, famille, ordre, classe, embranchement, règne."
+      "x": "L'espèce est l'unité fondamentale de la classification biologique. Deux individus appartiennent à la même espèce s'ils peuvent se reproduire et donner une descendance fertile. Homo sapiens est l'espèce humaine.  Au-dessus de l'espèce viennent : genre, famille, ordre, classe, embranchement, règne."
     },
     {
       "q": "Quel terme de démographie et de géographie désigne le nombre moyen d'habitants qui vivent sur chaque kilomètre carré d'un territoire donné ?",
@@ -14911,7 +14405,7 @@ const QUESTIONS = {
       "o": [
         "Synthèse des lipides",
         "Production d'énergie (ATP)",
-        "Traduction des ARN messagers",
+        "Traduction des ARNm",
         "Réplication de l'ADN"
       ],
       "r": 2,
@@ -15237,7 +14731,7 @@ const QUESTIONS = {
       "x": "Le Canada a accueilli le Sommet du G7 en 2025. Le G7 regroupe les sept pays les plus industrialisés : États-Unis, Canada, France, Allemagne, Italie, Japon et Royaume-Uni (l'UE y participe en tant qu'observateur). Ces sommets traitent des grandes questions économiques et géopolitiques mondiales."
     },
     {
-      "q": "Quel est le traité fondateur de l'Union européenne, signé en 1992 ?",
+      "q": "Quel est le traité fondateur de l'Union européenne signé en 1992 ?",
       "o": [
         "Le Traité de Rome",
         "Le Traité de Paris",
@@ -15718,7 +15212,7 @@ const QUESTIONS = {
         "Commission Mondiale du Tourisme"
       ],
       "r": 1,
-      "x": "L'Organisation Mondiale du Tourisme (OMT) a officiellement changé de nom pour devenir \"ONU Tourisme\". Ce changement reflète son appartenance au système des Nations Unies et sa vocation mondiale en matière de développement touristique durable, économique et social."
+      "x": "Dévoilé officiellement le 24 janvier 2024 à l'occasion de l'ouverture du Salon international du Tourisme (Fitur) à Madrid, ce changement de nom historique vise à s'affranchir des acronymes complexes comme l'OMT ou l'UNWTO."
     },
     {
       "q": "Qui est le père du grégarisme africain ?",
@@ -16375,7 +15869,7 @@ const QUESTIONS = {
         "Larry Page, 1998",
         "Elon Musk, 2004",
         "Bill Gates, 2000",
-        "Mark Zuckerberg, février 2004"
+        "Mark Zuckerberg, 2004"
       ],
       "r": 3,
       "x": "Mark Zuckerberg a fondé Facebook en février 2004. Ce jeune informaticien américain a lancé le réseau social depuis sa chambre de l'Université Harvard. Facebook (rebaptisé Meta) est aujourd'hui la plus grande plateforme de réseaux sociaux du monde."
