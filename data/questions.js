@@ -1,6 +1,6 @@
 // Bara Concours - Base de questions QCM
-// Mis à jour le 2026-10-01 - Culture Générale : 51 questions reformulées, 46 retirées
-// Total : 5443 questions réparties sur 37 matières
+// Mis à jour le 2026-10-09 - Actualité, SVT Cycle B, Psychotechnique : 45 questions corrigées, 132 retirées
+// Total : 5311 questions réparties sur 37 matières
 
 const QUESTIONS = {
   "francais": [
@@ -16689,7 +16689,7 @@ const QUESTIONS = {
         "Produire les anticorps circulants",
         "Assurer la coagulation du sang",
         "Phagocyter les agents pathogènes",
-        "Transporter le dioxygène des poumons aux tissus"
+        "Transporter le dioxygène"
       ],
       "r": 3,
       "x": "Les globules rouges contiennent l'hémoglobine, une protéine qui fixe l'O2 au niveau des poumons et le libère dans les tissus. Un adulte possède environ 5 millions de globules rouges par mm3 de sang. Leur durée de vie est d'environ 120 jours."
@@ -16704,17 +16704,6 @@ const QUESTIONS = {
       ],
       "r": 0,
       "x": "Le goitre est un grossissement de la glande thyroïde dû à un manque d'iode. L'iode est indispensable à la synthèse des hormones thyroïdiennes (T3 et T4). Dans les zones enclavées du Burkina Faso, loin de la mer, les carences en iode sont fréquentes chez les populations."
-    },
-    {
-      "q": "Quel est le premier maillon d'une chaîne alimentaire dans un écosystème ?",
-      "o": [
-        "Les décomposeurs qui minéralisent la matière",
-        "Les producteurs primaires qui réalisent la photosynthèse",
-        "Les herbivores consommateurs de plantes",
-        "Les carnivores secondaires prédateurs"
-      ],
-      "r": 1,
-      "x": "Les producteurs primaires (herbes, arbustes, acacia, karité) captent l'énergie solaire par photosynthèse. Ils constituent la base de toutes les chaînes alimentaires. Au Sahel burkinabè, leur raréfaction due à la désertification fragilise l'ensemble des niveaux trophiques dépendants."
     },
     {
       "q": "Quel type de division cellulaire produit des cellules haploïdes chez les organismes à reproduction sexuée ?",
@@ -16750,17 +16739,6 @@ const QUESTIONS = {
       "x": "La tuberculose est causée par la bactérie Mycobacterium tuberculosis (bacille de Koch). Elle se transmet par voie aérienne (gouttelettes de salive). Elle touche principalement les poumons et le Burkina Faso figure parmi les pays à forte prévalence tuberculeuse en Afrique de l'Ouest."
     },
     {
-      "q": "Quel est le rôle du foie dans la digestion des graisses ?",
-      "o": [
-        "Il stocke les graisses sous forme de glycogène hépatique",
-        "Il produit la bile qui émulsifie les graisses dans le duodénum",
-        "Il produit la lipase qui dégrade les triglycérides",
-        "Il absorbe directement les acides gras dans le sang portal"
-      ],
-      "r": 1,
-      "x": "Le foie produit la bile, un liquide jaune-verdâtre stocké dans la vésicule biliaire. La bile est déversée dans le duodénum lors de la digestion pour émulsifier les graisses en petites gouttelettes, facilitant leur digestion par les lipases pancréatiques et leur absorption intestinale."
-    },
-    {
       "q": "Chez l'humain, combien de paires de chromosomes les cellules somatiques contiennent-elles ?",
       "o": [
         "46 paires de chromosomes homologues",
@@ -16781,39 +16759,6 @@ const QUESTIONS = {
       ],
       "r": 3,
       "x": "Anopheles gambiae est le principal vecteur du paludisme en Afrique subsaharienne. La femelle infectée transmet le parasite Plasmodium falciparum lors de sa piqûre nocturne. Le Burkina Faso est l'un des pays les plus touchés, avec le paludisme comme première cause de mortalité infantile."
-    },
-    {
-      "q": "Quelle structure de l'ADN a été décrite par Watson et Crick en 1953 ?",
-      "o": [
-        "Une double hélice antiparallèle stabilisée par des liaisons hydrogène",
-        "Une simple chaîne linéaire repliée sur elle-même",
-        "Une double hélice parallèle à bases azotées externes",
-        "Une triple hélice parallèle stabilisée par des ponts ioniques"
-      ],
-      "r": 0,
-      "x": "L'ADN est formé de deux brins antiparallèles enroulés en double hélice. Les bases azotées s'apparient selon des règles strictes : adénine avec thymine (A-T) et guanine avec cytosine (G-C). Cette complémentarité est la base de la réplication fidèle et de la transcription génique."
-    },
-    {
-      "q": "Qu'est-ce que l'osmose dans les systèmes biologiques ?",
-      "o": [
-        "La diffusion facilitée des ions à travers des canaux membranaires spécifiques",
-        "Le passage passif de l'eau d'un milieu hypotonique vers un milieu hypertonique à travers une membrane semi-perméable",
-        "L'absorption active de l'eau par les cellules racinaires grâce à des pompes ioniques",
-        "Le transport actif de l'eau contre son gradient de concentration avec consommation d'ATP"
-      ],
-      "r": 1,
-      "x": "L'osmose est un phénomène passif par lequel l'eau se déplace à travers une membrane semi-perméable du milieu hypotonique (moins concentré) vers le milieu hypertonique (plus concentré). Ce phénomène est fondamental pour la turgescence des cellules végétales et l'absorption d'eau par les racines des plantes sahéliennes."
-    },
-    {
-      "q": "Quel est le principal gaz à effet de serre dont la concentration augmente à cause des activités humaines ?",
-      "o": [
-        "L'ozone (O3) stratosphérique",
-        "Le protoxyde d'azote (N2O) agricole",
-        "Le dioxyde de carbone (CO2) issu des combustibles fossiles",
-        "Le méthane (CH4) issu des rizières uniquement"
-      ],
-      "r": 2,
-      "x": "Le CO2 atmosphérique a augmenté de 280 ppm avant l'ère industrielle à plus de 420 ppm aujourd'hui, principalement à cause de la combustion des énergies fossiles et de la déforestation. Cette augmentation amplifie l'effet de serre naturel et contribue au réchauffement climatique mondial."
     },
     {
       "q": "Dans la cellule végétale, quel organite est absent dans la cellule animale ?",
@@ -16838,83 +16783,6 @@ const QUESTIONS = {
       "x": "Les décomposeurs (bactéries, champignons) minéralisent la matière organique morte (feuilles, cadavres), libérant des sels minéraux réutilisables par les plantes. Ce recyclage de la matière est indispensable au fonctionnement des écosystèmes et à la fertilité des sols cultivés au Burkina Faso."
     },
     {
-      "q": "Quel est le rôle principal des lymphocytes B dans la réponse immunitaire adaptative ?",
-      "o": [
-        "Sécréter des cytokines pro-inflammatoires comme l'IL-6",
-        "Se différencier en plasmocytes producteurs d'anticorps spécifiques",
-        "Détruire directement les cellules infectées par cytolyse",
-        "Phagocyter les bactéries et présenter les antigènes"
-      ],
-      "r": 1,
-      "x": "Les lymphocytes B activés se différencient en plasmocytes qui sécrètent des anticorps (immunoglobulines) spécifiques d'un antigène. Ces anticorps neutralisent les agents pathogènes ou facilitent leur élimination. Une fraction se différencie en cellules mémoire, assurant une réponse plus rapide lors d'une deuxième exposition au même antigène."
-    },
-    {
-      "q": "Quelle est la définition biologique d'une espèce ?",
-      "o": [
-        "Un ensemble d'individus ayant le même régime alimentaire et mode de vie",
-        "Un groupe d'individus présentant des caractères morphologiques identiques",
-        "Un ensemble d'individus pouvant se reproduire entre eux et donner une descendance fertile",
-        "Un groupe d'individus occupant le même territoire géographique"
-      ],
-      "r": 2,
-      "x": "Le concept biologique d'espèce (Mayr, 1942) définit une espèce comme un groupe de populations naturelles qui s'interfécondent et sont isolées reproductivement d'autres groupes. Ainsi, le cheval et l'âne sont deux espèces différentes car leur hybride (mulet) est stérile et ne peut donc se reproduire."
-    },
-    {
-      "q": "Quel est le rôle de la mélanine dans la peau humaine ?",
-      "o": [
-        "Permettre la synthèse de la vitamine C par voie cutanée",
-        "Réguler la température corporelle par vasodilatation dermique",
-        "Assurer l'imperméabilité de la peau aux agents infectieux",
-        "Protéger les cellules contre les rayonnements ultraviolets du soleil"
-      ],
-      "r": 3,
-      "x": "La mélanine est un pigment brun-noir produit par les mélanocytes dans l'épiderme. Elle absorbe les rayonnements UV, protégeant ainsi l'ADN des cellules contre les mutations potentiellement cancérigènes. La pigmentation plus sombre de la peau des populations africaines est une adaptation évolutive à l'intense ensoleillement tropical."
-    },
-    {
-      "q": "Quel est le phénomène par lequel les plaques tectoniques s'écartent l'une de l'autre ?",
-      "o": [
-        "L'expansion océanique au niveau des dorsales médio-océaniques",
-        "La collision frontale entre deux plaques continentales",
-        "La transform ation latérale au niveau des failles décrochantes",
-        "La subduction d'une plaque sous une autre au niveau des fosses"
-      ],
-      "r": 0,
-      "x": "Aux dorsales océaniques, du magma remonte et se solidifie, créant de nouvelles croûtes océaniques. Ce phénomène d'expansion repousse les plaques de part et d'autre. À contrario, aux zones de subduction, une plaque plonge sous une autre, provoquant des séismes et des volcans en surface."
-    },
-    {
-      "q": "Quel est le rôle des stomates dans la feuille des végétaux ?",
-      "o": [
-        "Stocker l'amidon produit lors de la photosynthèse diurne",
-        "Permettre les échanges gazeux (CO2, O2) et la transpiration",
-        "Synthétiser la chlorophylle dans les thylakoïdes foliaires",
-        "Absorber l'eau et les sels minéraux dissous dans le sol"
-      ],
-      "r": 1,
-      "x": "Les stomates sont des pores microscopiques présents surtout sur la face inférieure des feuilles. Ils permettent les entrées de CO2 pour la photosynthèse et les sorties d'O2 et d'eau. En période de chaleur au Sahel, ils se ferment pour réduire la perte en eau et éviter la déshydratation de la plante."
-    },
-    {
-      "q": "Comment la vaccination protège-t-elle contre les maladies infectieuses ?",
-      "o": [
-        "En augmentant la température corporelle de base pour inhiber la croissance microbienne",
-        "En tuant directement les agents pathogènes présents dans l'organisme par des anticorps préformés",
-        "En stimulant le système immunitaire à produire une mémoire immunitaire spécifique sans provoquer la maladie grave",
-        "En renforçant la barrière cutanée et muqueuse contre les agents pathogènes extérieurs"
-      ],
-      "r": 2,
-      "x": "La vaccination introduit un antigène (agent atténué, inactivé, toxine modifiée ou antigène recombinant) qui déclenche une réponse immunitaire primaire sans maladie grave. Des cellules mémoire sont produites. Lors d'une exposition réelle, la réponse secondaire est rapide et intense. Les vaccinations contre la méningite et la rougeole ont réduit la mortalité au Burkina Faso."
-    },
-    {
-      "q": "Qu'est-ce que la niche écologique d'une espèce ?",
-      "o": [
-        "Le nombre d'individus d'une espèce vivant dans un milieu donné",
-        "La position exclusive d'une espèce au sommet d'une chaîne alimentaire",
-        "Le territoire géographique maximal occupé par une population",
-        "L'ensemble des conditions environnementales et ressources utilisées par une espèce dans un écosystème"
-      ],
-      "r": 3,
-      "x": "La niche écologique décrit le \"rôle\" d'une espèce dans son écosystème : ce qu'elle mange, comment elle se reproduit, ses conditions climatiques requises, ses interactions avec d'autres espèces. Deux espèces ne peuvent pas coexister longtemps dans la même niche (principe d'exclusion compétitive de Gause)."
-    },
-    {
       "q": "Quel gaz est produit lors de la fermentation alcoolique par les levures ?",
       "o": [
         "Le dioxyde de carbone (CO2) produit avec l'éthanol",
@@ -16937,809 +16805,16 @@ const QUESTIONS = {
       "x": "La transcription est réalisée par l'ARN polymérase qui synthétise un brin d'ARNm complémentaire à la séquence d'ADN matrice. Chez les eucaryotes, l'ARNm prémessager subit des modifications (épissage, coiffage, polyadénylation) avant d'être exporté du noyau vers les ribosomes pour la traduction."
     },
     {
-      "q": "Quel est le rôle du système nerveux central dans l'organisme ?",
-      "o": [
-        "Transporter l'oxygène et les nutriments vers tous les organes",
-        "Sécréter les hormones de croissance et les hormones sexuelles",
-        "Coordonner et intégrer les informations sensorielles et motrices",
-        "Assurer la digestion et l'absorption des nutriments alimentaires"
-      ],
-      "r": 2,
-      "x": "Le système nerveux central (cerveau et moelle épinière) reçoit les informations sensorielles, les traite et envoie des ordres moteurs aux effecteurs (muscles, glandes). Il est protégé par les méninges et le liquide céphalo-rachidien. Les maladies neurologiques représentent un enjeu de santé publique croissant en Afrique de l'Ouest."
-    },
-    {
-      "q": "Quel est l'effet de la déforestation sur le cycle de l'eau dans les régions sahéliennes ?",
-      "o": [
-        "Elle n'a aucun effet mesurable sur le cycle de l'eau à l'échelle locale",
-        "Elle augmente les précipitations locales par évapotranspiration accrue",
-        "Elle améliore la rétention d'eau dans les sols par réduction du couvert végétal",
-        "Elle réduit l'évapotranspiration, perturbe le cycle hydrologique et accentue l'érosion"
-      ],
-      "r": 3,
-      "x": "Les arbres jouent un rôle crucial dans le cycle de l'eau : leurs racines retiennent l'eau, leurs feuilles rejettent de la vapeur d'eau (évapotranspiration) qui alimente les nuages. La déforestation au Sahel réduit ces processus, accentue le ruissellement, l'érosion des sols et réduit les précipitations locales, aggravant la sécheresse au Burkina Faso."
-    },
-    {
-      "q": "Quel est le rôle du foie dans le métabolisme des glucides ?",
-      "o": [
-        "Stocker le glucose sous forme de glycogène et le libérer en cas de besoin",
-        "Éliminer le glucose en excès directement dans la bile digestive",
-        "Synthétiser le glucose exclusivement à partir des acides gras alimentaires",
-        "Dégrader les glucides en acides aminés pour la synthèse protéique"
-      ],
-      "r": 0,
-      "x": "Le foie est le principal régulateur de la glycémie. Sous l'effet de l'insuline, il stocke le glucose en glycogène (glycogénogenèse). Sous l'effet du glucagon, il libère du glucose dans le sang (glycogénolyse) ou le synthétise à partir d'autres précurseurs comme les acides aminés (néoglucogenèse)."
-    },
-    {
-      "q": "Qu'est-ce que la succession écologique primaire dans un écosystème ?",
-      "o": [
-        "La compétition interspécifique aboutissant à l'élimination des espèces faibles",
-        "La colonisation progressive d'un milieu vierge (roche nue) par des communautés biologiques successives",
-        "Le remplacement d'une forêt mature par une culture agricole intensive",
-        "La migration saisonnière des animaux entre zones de pâturage sahéliennes"
-      ],
-      "r": 1,
-      "x": "La succession primaire part d'un milieu vierge (roche nue, dune de sable). Les organismes pionniers (lichens, mousses) préparent progressivement le substrat pour des communautés plus complexes. Au Sahel, les incendies de brousse peuvent déclencher des successions secondaires (recolonisation d'un milieu perturbé) influençant durablement la composition végétale."
-    },
-    {
-      "q": "Quel est le rôle de l'hémoglobine dans le transport du dioxygène ?",
-      "o": [
-        "L'hémoglobine régule la pression artérielle par vasoconstriction capillaire",
-        "L'hémoglobine transporte exclusivement le CO2 dans le plasma sanguin",
-        "L'hémoglobine fixe l'O2 dans les poumons grâce au fer de l'hème et le libère dans les tissus",
-        "L'hémoglobine solubilise l'O2 dans le plasma en augmentant sa concentration"
-      ],
-      "r": 2,
-      "x": "L'hémoglobine est une protéine tétramérique contenant 4 groupes hème, chacun portant un atome de fer (Fe2+) qui fixe réversiblement une molécule d'O2. Dans les poumons (forte PO2), l'O2 se fixe ; dans les tissus (faible PO2), il est libéré. La drépanocytose altère cette protéine, réduisant sa capacité de transport."
-    },
-    {
-      "q": "Quel est l'effet principal de l'augmentation de la température sur les enzymes ?",
-      "o": [
-        "Elle améliore toujours la spécificité des enzymes pour leur substrat",
-        "Elle augmente l'activité enzymatique de façon illimitée et proportionnelle",
-        "Elle n'a aucun effet sur la structure tridimensionnelle des enzymes",
-        "Au-delà d'une température optimale, la dénaturation de l'enzyme entraîne la perte de son activité"
-      ],
-      "r": 3,
-      "x": "Les enzymes ont une température optimale (environ 37°C chez l'humain). Au-delà, la chaleur provoque la dénaturation (perte de la structure tridimensionnelle) et l'inactivation irréversible de l'enzyme. En dessous de l'optimum, l'activité diminue mais l'enzyme reste fonctionnelle et réactivable par réchauffement."
-    },
-    {
-      "q": "Quelle est la différence entre une roche plutonique et une roche volcanique ?",
-      "o": [
-        "Les roches plutoniques cristallisent lentement en profondeur, les volcaniques refroidissent rapidement en surface",
-        "Les roches volcaniques se forment en profondeur avec de grands cristaux visibles",
-        "Les roches plutoniques se forment par dépôt de sédiments dans les bassins océaniques",
-        "Les roches plutoniques et volcaniques ont exactement la même composition minéralogique"
-      ],
-      "r": 0,
-      "x": "Les roches plutoniques (granite, gabbro) se forment par cristallisation lente du magma en profondeur, donnant de grands cristaux visibles. Les roches volcaniques (basalte, rhyolite) se forment par refroidissement rapide en surface, donnant de petits cristaux ou une structure amorphe (verre volcanique) comme l'obsidienne."
-    },
-    {
-      "q": "Quel est le rôle du principal mécanisme par lequel les antibiotiques combattent les infections bactériennes ?",
-      "o": [
-        "Les antibiotiques détruisent tous les micro-organismes, bactéries et virus confondus",
-        "Les antibiotiques inhibent des structures ou processus spécifiques aux bactéries (paroi, ribosomes)",
-        "Les antibiotiques renforcent directement le système immunitaire de l'hôte",
-        "Les antibiotiques augmentent la fièvre pour inhiber la croissance bactérienne"
-      ],
-      "r": 1,
-      "x": "Les antibiotiques agissent de façon sélective sur des cibles bactériennes absentes ou différentes chez les cellules humaines : la synthèse de la paroi bactérienne (pénicillines, céphalosporines), la synthèse protéique bactérienne (aminosides, tétracyclines), ou l'ADN bactérien (fluoroquinolones). Ils sont totalement inefficaces contre les virus."
-    },
-    {
       "q": "Quelle est la principale hormone qui abaisse la glycémie après un repas ?",
       "o": [
-        "Le glucagon sécrété par les cellules alpha du pancréas",
-        "L'adrénaline sécrétée par les glandes surrénales en réponse au stress",
-        "L'insuline sécrétée par les cellules bêta des îlots de Langerhans",
-        "Le cortisol sécrété par le cortex surrénalien en réponse à l'hypoglycémie"
+        "Le glucagon",
+        "L'adrénaline",
+        "L'insuline",
+        "Le cortisol"
       ],
       "r": 2,
-      "x": "L'insuline, sécrétée par les cellules bêta des îlots de Langerhans du pancréas, abaisse la glycémie en favorisant l'entrée du glucose dans les cellules et sa mise en réserve sous forme de glycogène dans le foie et les muscles. Le diabète de type 2 est très répandu au Burkina Faso, lié aux changements de mode de vie et d'alimentation."
+      "x": "L'insuline, sécrétée par les cellules bêta des îlots de Langerhans du pancréas, abaisse la glycémie en favorisant l'entrée du glucose dans les cellules et sa mise en réserve sous forme de glycogène dans le foie et les muscles."
     },
-    {
-      "q": "Quel est le principal agent de la bilharziose (schistosomiase) présente au Burkina Faso ?",
-      "o": [
-        "Un champignon microscopique proliférant dans les eaux des barrages",
-        "Un virus transmis par les mollusques d'eau douce comme vecteur",
-        "Une bactérie Gram-négatif résistante aux antibiotiques courants",
-        "Un ver plat (trématode du genre Schistosoma) dont les larves pénètrent la peau"
-      ],
-      "r": 3,
-      "x": "La bilharziose est causée par des vers plats du genre Schistosoma. Les larves (cercaires) se développent dans des mollusques d'eau douce (bulins) et pénètrent la peau lors du contact avec l'eau. Au Burkina Faso, les barrages et retenues d'eau (Bagré, Kompienga) sont des foyers importants de transmission de cette parasitose."
-    },
-    {
-      "q": "Qu'est-ce que la reproduction asexuée chez les plantes ?",
-      "o": [
-        "La production de descendants génétiquement identiques à la plante mère sans gamètes",
-        "La dispersion des graines par le vent après fécondation sexuée",
-        "La pollinisation croisée entre deux plantes de la même espèce",
-        "La fécondation entre gamètes mâles et femelles d'une même fleur"
-      ],
-      "r": 0,
-      "x": "La reproduction asexuée (bouturage, stolons, rhizomes, bulbes, multiplication végétative) produit des clones génétiquement identiques au parent. Elle est avantageuse en milieu stable mais réduit la diversité génétique. De nombreuses plantes cultivées au Burkina Faso (manioc, igname, patate douce) se reproduisent végétativement."
-    },
-    {
-      "q": "Quel est le phénotype d'un individu hétérozygote Aa si l'allèle A est dominant ?",
-      "o": [
-        "Il exprime uniquement le phénotype récessif correspondant à l'allèle a",
-        "Il exprime uniquement le phénotype dominant correspondant à l'allèle A",
-        "Il exprime simultanément les phénotypes dominant et récessif en mosaïque",
-        "Il n'exprime aucun phénotype car les deux allèles s'annulent mutuellement"
-      ],
-      "r": 1,
-      "x": "En cas de dominance complète, l'allèle dominant (A) masque l'expression de l'allèle récessif (a). L'individu hétérozygote (Aa) a donc le même phénotype que l'individu homozygote dominant (AA). Seul l'individu homozygote récessif (aa) exprime le caractère récessif, comme dans la drépanocytose homozygote."
-    },
-    {
-      "q": "Quel est le principal risque sanitaire lié à la consommation d'eau non traitée en zone rurale au Burkina Faso ?",
-      "o": [
-        "Les maladies cardiovasculaires liées aux excès de minéraux",
-        "Le paludisme transmis par les larves de moustiques dans l'eau",
-        "Les maladies diarrhéiques, le choléra, la typhoïde et les parasitoses intestinales",
-        "Les maladies respiratoires causées par les microorganismes volatils"
-      ],
-      "r": 2,
-      "x": "L'eau non traitée peut contenir des agents pathogènes (Vibrio cholerae, Salmonella typhi, Escherichia coli pathogènes, vers intestinaux) responsables de maladies diarrhéiques graves. Au Burkina Faso, les maladies diarrhéiques sont la deuxième cause de mortalité infantile. L'accès à l'eau potable reste insuffisant dans de nombreuses zones rurales du pays."
-    },
-    {
-      "q": "Qu'est-ce que la biodiversité et à quels niveaux se mesure-t-elle ?",
-      "o": [
-        "La biodiversité correspond uniquement à la diversité des écosystèmes forestiers tropicaux",
-        "La biodiversité est le nombre total d'individus vivants dans une zone géographique définie",
-        "La biodiversité ne mesure que le nombre d'espèces animales vertébrées",
-        "La biodiversité représente la variété du vivant au niveau des gènes, des espèces et des écosystèmes"
-      ],
-      "r": 3,
-      "x": "La biodiversité comprend trois niveaux : la diversité génétique (variabilité au sein d'une espèce), la diversité spécifique (nombre d'espèces) et la diversité écosystémique (variété des milieux). Au Burkina Faso, la biodiversité est menacée par la déforestation, la désertification et le changement climatique."
-    },
-    {
-      "q": "Quel est le rôle de l'ADN polymérase lors de la réplication de l'ADN ?",
-      "o": [
-        "Elle synthétise un nouveau brin d'ADN complémentaire en utilisant le brin parental comme matrice",
-        "Elle démêle la double hélice d'ADN en amont de la fourche de réplication",
-        "Elle dégrade les brins d'ADN endommagés par les mutations spontanées",
-        "Elle transcrit l'ADN en ARNm lors de l'expression génique"
-      ],
-      "r": 0,
-      "x": "Lors de la réplication de l'ADN, l'ADN polymérase synthétise le nouveau brin d'ADN en ajoutant des nucléotides complémentaires au brin matrice, toujours dans le sens 5' vers 3'. La réplication est semi-conservative : chaque molécule fille conserve un brin parental et possède un brin néo-synthétisé."
-    },
-    {
-      "q": "Quel est le principal mécanisme de résistance aux antibiotiques chez les bactéries ?",
-      "o": [
-        "Les bactéries réduisent leur métabolisme en entrant en dormance pour échapper à l'action",
-        "Les mutations génétiques et le transfert horizontal de gènes de résistance entre bactéries",
-        "Les bactéries s'adaptent morphologiquement en changeant de forme pour éviter l'antibiotique",
-        "Les bactéries produisent des anticorps spécifiques contre les antibiotiques comme les humains"
-      ],
-      "r": 1,
-      "x": "La résistance aux antibiotiques émerge par mutation aléatoire ou par acquisition de plasmides de résistance (transfert horizontal). L'usage abusif d'antibiotiques sélectionne les souches résistantes. Au Burkina Faso, l'automédication et les antibiotiques de mauvaise qualité contribuent à l'émergence de résistances."
-    },
-    {
-      "q": "Quel est le rôle des décomposeurs dans le cycle du carbone ?",
-      "o": [
-        "Transformer le CO2 en O2 dans les couches supérieures de l'atmosphère",
-        "Stocker le carbone dans les sols de façon permanente sans le libérer",
-        "Dégrader la matière organique morte en libérant le CO2 dans l'atmosphère par respiration",
-        "Fixer le CO2 atmosphérique dans la matière organique par photosynthèse"
-      ],
-      "r": 2,
-      "x": "Les décomposeurs (bactéries et champignons) dégradent la matière organique morte (feuilles, animaux morts) en matière minérale. Leur respiration libère du CO2 dans l'atmosphère et des sels minéraux dans le sol. Ce processus est essentiel pour le recyclage des nutriments dans les écosystèmes sahéliens du Burkina Faso."
-    },
-    {
-      "q": "Quel est l'impact du changement climatique sur la santé humaine en Afrique de l'Ouest ?",
-      "o": [
-        "Le changement climatique améliore la santé en réduisant les maladies liées au froid",
-        "Le changement climatique réduit les maladies infectieuses par l'augmentation des températures",
-        "Le changement climatique n'a pas d'impact sur la santé humaine en zone tropicale",
-        "Le changement climatique étend les zones d'endémie des maladies vectorielles et aggrave la malnutrition"
-      ],
-      "r": 3,
-      "x": "Le changement climatique affecte la santé en Afrique de l'Ouest par : extension géographique des vecteurs (moustiques, mouches tsé-tsé), aggravation de la sécheresse et de la malnutrition, multiplication des vagues de chaleur, réduction de la disponibilité en eau potable. Au Burkina Faso, ces impacts s'ajoutent à la fragilité des systèmes de santé existants."
-    },
-    {
-      "q": "Qu'est-ce qu'une mutation génétique ponctuelle ?",
-      "o": [
-        "Une modification permanente d'un ou quelques nucléotides de la séquence d'ADN",
-        "Un changement du nombre de chromosomes suite à une erreur de méiose",
-        "Un changement dans la structure des protéines sans modification de la séquence d'ADN",
-        "Un transfert de gènes entre chromosomes homologues lors de la méiose"
-      ],
-      "r": 0,
-      "x": "Une mutation ponctuelle est une altération d'un ou quelques nucléotides de la séquence d'ADN (substitution, délétion ou insertion). Elle peut être neutre, bénéfique ou délétère. La mutation ponctuelle à l'origine de la drépanocytose (substitution Glu→Val en position 6 de la bêta-globine) illustre l'impact majeur d'un changement d'une seule base sur la santé."
-    },
-    {
-      "q": "Quel est le rôle de la mitochondrie dans la cellule ?",
-      "o": [
-        "Stocker l'information génétique sous forme d'ADN circulaire mitochondrial",
-        "Produire l'ATP par la respiration cellulaire aérobie (oxydation du glucose)",
-        "Synthétiser les lipides membranaires par la voie des acides gras",
-        "Assurer la synthèse des protéines à partir des acides aminés cytoplasmiques"
-      ],
-      "r": 1,
-      "x": "La mitochondrie est le siège de la respiration cellulaire aérobie : glycolyse (cytoplasme), cycle de Krebs (matrice mitochondriale) et chaîne respiratoire (membrane interne). Elle produit environ 30 à 32 molécules d'ATP par molécule de glucose. Elle possède son propre ADN circulaire, hérité uniquement de la mère."
-    },
-    {
-      "q": "Quel est le rôle de la symbiose mycorhizienne pour les plantes sahéliennes ?",
-      "o": [
-        "Une association pathogène entre champignons et racines provoquant des maladies fongiques",
-        "Une compétition entre les hyphes fongiques et les poils absorbants pour les nutriments du sol",
-        "Une association mutualiste améliorant l'absorption de l'eau et des minéraux au profit des deux partenaires",
-        "Un mécanisme de défense des plantes contre les champignons phytopathogènes du sol"
-      ],
-      "r": 2,
-      "x": "Les mycorhizes sont des associations symbiotiques entre des champignons du sol et les racines de la plupart des plantes. Le champignon étend considérablement la surface d'absorption des racines, améliorant l'absorption de l'eau, du phosphore et des micronutriments. En échange, la plante lui fournit des glucides issus de la photosynthèse. En milieu aride sahélien, les mycorhizes sont essentielles à la survie des plantes cultivées."
-    },
-    {
-      "q": "Quel est l'effet des pesticides organochlorés sur les écosystèmes aquatiques ?",
-      "o": [
-        "Les pesticides organochlorés sont rapidement biodégradés sans accumulation dans les chaînes alimentaires",
-        "Les pesticides organochlorés améliorent la qualité de l'eau en éliminant les algues nuisibles",
-        "Les pesticides organochlorés augmentent la biodiversité aquatique en réduisant les espèces compétitrices",
-        "Les pesticides organochlorés s'accumulent dans les chaînes alimentaires et provoquent des troubles hormonaux chez les prédateurs"
-      ],
-      "r": 3,
-      "x": "Les pesticides organochlorés (DDT, endosulfan) sont des perturbateurs endocriniens persistants qui s'accumulent dans les tissus adipeux des organismes (bioaccumulation) et se concentrent à chaque niveau trophique (bioamplification). Les prédateurs au sommet des chaînes alimentaires aquatiques accumulent les concentrations les plus élevées, provoquant des troubles de la reproduction et du développement."
-    },
-    {
-      "q": "Quel est le rôle de la valve mitrale dans le cœur humain ?",
-      "o": [
-        "Empêcher le reflux du sang du ventricule gauche vers l'oreillette gauche lors de la systole",
-        "Réguler le rythme cardiaque en contrôlant l'influx nerveux sinusal",
-        "Séparer les deux ventricules pour éviter le mélange du sang oxygéné et désoxygéné",
-        "Empêcher le reflux du sang de l'aorte vers le ventricule gauche lors de la diastole"
-      ],
-      "r": 0,
-      "x": "La valve mitrale (valve bicuspide) est située entre l'oreillette gauche et le ventricule gauche. Elle s'ouvre pour laisser le sang passer de l'oreillette au ventricule, puis se ferme lors de la systole ventriculaire pour éviter le reflux sanguin. Son dysfonctionnement cause l'insuffisance mitrale, une pathologie cardiovasculaire grave."
-    },
-    {
-      "q": "Qu'est-ce que la photopériode et quel est son effet sur la floraison des céréales sahéliennes ?",
-      "o": [
-        "L'intensité lumineuse totale reçue par une plante durant toute sa vie végétative",
-        "La durée relative du jour et de la nuit, influençant la floraison et d'autres processus physiologiques",
-        "La longueur d'onde spécifique de la lumière absorbée par la chlorophylle b",
-        "La quantité totale de rayonnement solaire reçue par unité de surface cultivée par an"
-      ],
-      "r": 1,
-      "x": "La photopériode est le rapport durée du jour/nuit. Les plantes de jours courts (comme le sorgho et le mil cultivés au Burkina Faso) fleurissent quand les nuits sont longues, en fin de saison des pluies. Ce signal est perçu par le phytochrome et synchronise la floraison avec les conditions favorables à la fructification."
-    },
-    {
-      "q": "Quel est l'organite cellulaire siège de la synthèse des protéines ?",
-      "o": [
-        "Le noyau, où sont stockés les gènes codant pour les protéines",
-        "La mitochondrie, qui possède ses propres ribosomes pour les protéines membranaires",
-        "Le ribosome, composé d'ARN ribosomique et de protéines associées",
-        "Le réticulum endoplasmique lisse, spécialisé dans la synthèse lipidique"
-      ],
-      "r": 2,
-      "x": "Les ribosomes sont les usines de fabrication des protéines. Ils lisent la séquence de l'ARNm et assemblent les acides aminés apportés par les ARNt en chaînes polypeptidiques. Les ribosomes libres synthétisent les protéines cytosoliques ; les ribosomes fixés au réticulum endoplasmique rugueux synthétisent les protéines membranaires et sécrétées."
-    },
-    {
-      "q": "Quel est le phénomène d'eutrophisation dans les barrages du Burkina Faso ?",
-      "o": [
-        "La purification naturelle de l'eau par les plantes aquatiques macrophytes",
-        "L'augmentation de la salinité des retenues d'eau due à l'évaporation intense",
-        "La disparition progressive de l'eau des barrages par évaporation sahélienne",
-        "L'enrichissement excessif en nutriments provoquant une prolifération d'algues et un appauvrissement en oxygène"
-      ],
-      "r": 3,
-      "x": "L'eutrophisation résulte des rejets agricoles (engrais) et urbains riches en azote et phosphore. La prolifération d'algues (bloom algal) réduit la pénétration de la lumière, puis leur décomposition consomme tout l'oxygène dissous, asphyxiant la faune aquatique. Les barrages de Bagré et Kompienga au Burkina Faso sont menacés par ce phénomène."
-    },
-    {
-      "q": "Quel est le rôle de la testostérone dans l'organisme masculin ?",
-      "o": [
-        "Assurer le développement des caractères sexuels secondaires et stimuler la spermatogenèse",
-        "Contrôler la pression artérielle par action sur les reins et les vaisseaux sanguins",
-        "Réguler la glycémie en stimulant la production d'insuline pancréatique",
-        "Stimuler la production des globules rouges par la moelle osseuse uniquement"
-      ],
-      "r": 0,
-      "x": "La testostérone est la principale hormone sexuelle masculine, produite par les cellules de Leydig des testicules sous contrôle de la LH hypophysaire. Elle stimule la spermatogenèse, le développement des organes génitaux, la pilosité, la masse musculaire et la voix grave. Sa production commence à la puberté et diminue progressivement avec l'âge."
-    },
-    {
-      "q": "Comment se nomme la couche externe solide de la Terre découpée en plaques tectoniques ?",
-      "o": [
-        "La mésosphère profonde du manteau inférieur rigide",
-        "La lithosphère comprenant la croûte et le manteau supérieur rigide",
-        "La barysphère constituant le noyau interne solide de la Terre",
-        "L'asthénosphère plastique sur laquelle reposent les plaques"
-      ],
-      "r": 1,
-      "x": "La lithosphère est la couche rigide externe de la Terre, épaisse d'environ 70 à 150 km, découpée en plaques tectoniques. Elle repose sur l'asthénosphère, zone plastique du manteau supérieur sur laquelle elle peut se déplacer. La théorie des plaques tectoniques explique les séismes, volcans et la formation des reliefs montagneux."
-    },
-    {
-      "q": "Quel est le rôle des vitamines dans l'organisme humain ?",
-      "o": [
-        "Fournir de l'énergie calorique comme les glucides et les lipides",
-        "Constituer les structures cellulaires osseuses comme le calcium et le phosphore",
-        "Agir comme cofacteurs enzymatiques et réguler des réactions métaboliques en très faibles quantités",
-        "Servir de réserve énergétique mobilisable comme le glycogène musculaire"
-      ],
-      "r": 2,
-      "x": "Les vitamines sont des molécules organiques indispensables en très petites quantités. Elles ne fournissent pas d'énergie mais participent à de nombreuses réactions biochimiques comme cofacteurs ou précurseurs de coenzymes. Leur carence provoque des maladies spécifiques : scorbut (vit. C), rachitisme (vit. D), béribéri (vit. B1), cécité nocturne (vit. A)."
-    },
-    {
-      "q": "Quelle est la définition de l'endémisme en biologie ?",
-      "o": [
-        "Une maladie présente en permanence dans une population humaine à taux stable",
-        "Un organisme adapté aux conditions environnementales extrêmes (désert, haute altitude)",
-        "Une espèce introduite dans un nouveau milieu géographique par l'action humaine",
-        "Une espèce native présente uniquement dans une zone géographique délimitée et nulle part ailleurs"
-      ],
-      "r": 3,
-      "x": "Une espèce endémique est native et exclusivement présente dans une zone géographique précise. Le Burkina Faso abrite plusieurs espèces végétales et animales endémiques ou sub-endémiques de la zone soudano-sahélienne. L'endémisme est un critère important pour définir les zones prioritaires de conservation de la biodiversité."
-    },
-    {
-      "q": "Quel est le rôle de l'intestin grêle dans la digestion et l'absorption ?",
-      "o": [
-        "Absorber la majorité des nutriments grâce aux villosités et microvillosités intestinales",
-        "Stocker les aliments mastiqués avant leur digestion chimique acide",
-        "Dégrader les aliments par l'acide chlorhydrique et la pepsine",
-        "Éliminer les déchets solides de la digestion par péristaltisme"
-      ],
-      "r": 0,
-      "x": "L'intestin grêle (duodénum, jéjunum, iléon) est le principal site d'absorption des nutriments grâce aux villosités et microvillosités qui augmentent considérablement la surface d'absorption (environ 200 m2). Les enzymes pancréatiques et la bile y complètent la digestion et permettent l'absorption des glucides, lipides, protéines et vitamines."
-    },
-    {
-      "q": "Qu'est-ce que la dérive génétique et dans quel type de population est-elle la plus forte ?",
-      "o": [
-        "La modification adaptative des fréquences alléliques sous l'action de la sélection naturelle dans de grandes populations",
-        "Le changement aléatoire des fréquences alléliques d'une population, plus important dans les petites populations isolées",
-        "L'augmentation constante de la diversité génétique dans toute population au fil des générations",
-        "Le transfert de gènes entre populations de même espèce par migration et flux génique"
-      ],
-      "r": 1,
-      "x": "La dérive génétique est un phénomène aléatoire (hasard de la reproduction) qui modifie les fréquences alléliques d'une génération à l'autre, indépendamment de la valeur sélective des allèles. Elle est d'autant plus forte que la population est petite. Elle peut conduire à la fixation ou à la perte d'allèles, réduisant la diversité génétique des populations isolées."
-    },
-    {
-      "q": "Quel est le rôle des macrophages dans la réponse immunitaire innée ?",
-      "o": [
-        "Produire des lymphocytes T et B à partir de cellules souches hématopoïétiques",
-        "Produire des anticorps spécifiques contre les antigènes bactériens et viraux",
-        "Phagocyter les agents pathogènes, présenter les antigènes aux lymphocytes T et sécréter des cytokines pro-inflammatoires",
-        "Détruire exclusivement les cellules tumorales par reconnaissance des néoantigènes"
-      ],
-      "r": 2,
-      "x": "Les macrophages sont des phagocytes professionnels issus des monocytes sanguins. Ils phagocytent et détruisent les agents pathogènes (bactéries, parasites), présentent les fragments antigéniques aux lymphocytes T (cellules présentatrices d'antigènes), et sécrètent des cytokines (IL-1, TNF-α, IL-6) qui orchestrent la réponse inflammatoire locale et systémique."
-    },
-    {
-      "q": "Quel est le rôle de la progestérone dans le cycle menstruel féminin ?",
-      "o": [
-        "Stimuler la croissance et la maturation des follicules ovariens en phase folliculaire",
-        "Provoquer les menstruations en augmentant brutalement sa sécrétion en fin de cycle",
-        "Déclencher l'ovulation par une augmentation brusque de sa concentration sanguine",
-        "Préparer la muqueuse utérine (endomètre) à l'implantation d'un éventuel embryon après l'ovulation"
-      ],
-      "r": 3,
-      "x": "La progestérone est sécrétée par le corps jaune après l'ovulation. Elle épaissit l'endomètre et le prépare à la nidation. En l'absence de fécondation, le corps jaune dégénère, la progestérone chute, et les menstruations surviennent. La pilule contraceptive combine estrogène et progestérone pour bloquer l'ovulation."
-    },
-    {
-      "q": "Qu'est-ce que la polyploïdie et quel est son intérêt pour les plantes cultivées ?",
-      "o": [
-        "La présence d'un nombre de chromosomes supérieur au nombre diploïde normal, résultant souvent d'une duplication du génome",
-        "La mutation ponctuelle d'un seul gène affectant la taille et la vigueur de la plante cultivée",
-        "La perte aléatoire de chromosomes lors d'une division cellulaire anormale au cours du développement",
-        "La présence d'un seul chromosome au lieu de deux dans les cellules somatiques, provoquant la stérilité"
-      ],
-      "r": 0,
-      "x": "La polyploïdie (tétraploïdie, hexaploïdie, etc.) est très fréquente chez les plantes cultivées. Le blé tendre (hexaploïde, 6n=42), le coton (tétraploïde) et la banane (triploïde stérile) en sont des exemples. La polyploïdie produit souvent des plantes plus vigoureuses (vigueur hybride) avec des fruits plus gros, exploitée en amélioration variétale."
-    },
-    {
-      "q": "Quel est le rôle de la paroi cellulaire dans les bactéries et les plantes ?",
-      "o": [
-        "Elle est uniquement présente dans les cellules végétales et absente chez toutes les bactéries",
-        "Elle confère rigidité et protection mécanique, régule les échanges osmotiques et maintient la forme cellulaire",
-        "Elle assure la respiration cellulaire dans les deux types de cellules biologiques",
-        "Elle sert exclusivement de réservoir d'énergie sous forme de polysaccharides de réserve"
-      ],
-      "r": 1,
-      "x": "La paroi cellulaire végétale (cellulose) et bactérienne (peptidoglycane) confèrent toutes deux rigidité et protection mécanique. Chez les végétaux, elle permet la turgescence sans éclater. Chez les bactéries, le peptidoglycane est la cible des antibiotiques (pénicillines, vancomycine). L'absence de paroi chez les cellules animales les distingue fondamentalement."
-    },
-    {
-      "q": "Quel est l'impact de l'exploitation minière artisanale (orpaillage) sur les écosystèmes aquatiques au Burkina Faso ?",
-      "o": [
-        "L'orpaillage n'a pas d'impact mesurable sur les écosystèmes aquatiques en dehors des sites d'extraction",
-        "L'orpaillage enrichit les eaux en minéraux bénéfiques pour les organismes aquatiques et riverains",
-        "L'orpaillage pollue les eaux par le mercure et les cyanures, détruisant la faune et la flore aquatiques",
-        "L'orpaillage améliore la qualité des eaux par des processus de filtration naturelle des sédiments"
-      ],
-      "r": 2,
-      "x": "L'orpaillage artisanal au Burkina Faso utilise du mercure pour amalgamer l'or, rejetant ce métal lourd dans les rivières et nappes phréatiques. Le mercure s'accumule dans la chaîne alimentaire (bioamplification) et provoque des troubles neurologiques graves. Les cyanures utilisés dans les mines industrielles présentent également des risques majeurs pour les populations riveraines."
-    },
-    {
-      "q": "Qu'est-ce que le phénomène de bioaccumulation dans les chaînes alimentaires ?",
-      "o": [
-        "L'absorption des polluants uniquement par les producteurs primaires sans transfert aux niveaux supérieurs",
-        "La dégradation progressive des polluants à chaque niveau trophique par les enzymes",
-        "La dispersion des polluants dans l'environnement par les prédateurs lors de leurs déplacements",
-        "La concentration croissante de polluants persistants (DDT, mercure) dans les organismes vivants à chaque niveau trophique"
-      ],
-      "r": 3,
-      "x": "Les polluants lipophiles et persistants (DDT, PCB, mercure) s'accumulent dans les tissus adipeux des organismes. À chaque niveau trophique, la concentration augmente car les prédateurs consomment de grandes quantités de proies contaminées (bioamplification). Les prédateurs au sommet des chaînes (humains, grands rapaces, crocodiles) accumulent les concentrations les plus élevées."
-    },
-    {
-      "q": "Quel est le rôle des arbres à usages multiples comme le néré et le karité dans les agroforêts sahéliennes du Burkina Faso ?",
-      "o": [
-        "Ces arbres fournissent des produits alimentaires et économiques tout en améliorant la fertilité des sols et luttant contre la désertification",
-        "Ces arbres appauvrissent les sols en nutriments et réduisent significativement les rendements agricoles",
-        "Ces arbres sont uniquement maintenus dans les champs pour leur ombre rafraîchissante en saison chaude",
-        "Ces arbres sont principalement exploités pour le bois de construction et le bois de chauffe"
-      ],
-      "r": 0,
-      "x": "Le néré (soumbala) et le karité (beurre de karité) sont des arbres à usages multiples essentiels aux agroforêts sahéliennes. Ils fixent les sols, réduisent l'érosion éolienne et hydrique, enrichissent les sols en matière organique, régulent le microclimat et constituent une source majeure de revenus pour les femmes rurales du Burkina Faso."
-    },
-    {
-      "q": "Quel est le rôle des cellules NK (Natural Killer) dans la défense anti-tumorale ?",
-      "o": [
-        "Les cellules NK activent les lymphocytes B pour produire des anticorps anti-tumoraux circulants",
-        "Les cellules NK détruisent les cellules tumorales en reconnaissant l'absence de molécules CMH-I à leur surface",
-        "Les cellules NK produisent des anticorps spécifiques contre les antigènes tumoraux de surface",
-        "Les cellules NK phagocytent les cellules tumorales comme les macrophages tissulaires"
-      ],
-      "r": 1,
-      "x": "Les cellules NK (Natural Killer) sont des lymphocytes de l'immunité innée qui détruisent les cellules tumorales et infectées par des virus sans reconnaissance antigénique préalable. Elles utilisent le principe de \"soi manquant\" : les cellules tumorales qui ont perdu leurs molécules CMH-I sont reconnues et détruites par cytolyse (perforines, granzymes)."
-    },
-    {
-      "q": "Qu'est-ce que la coévolution entre l'hôte et le parasite Plasmodium falciparum ?",
-      "o": [
-        "La convergence morphologique de deux espèces non apparentées occupant le même milieu géographique",
-        "L'évolution d'une espèce sous l'unique influence des facteurs abiotiques de son milieu de vie",
-        "L'évolution parallèle et réciproque du parasite et de l'hôte humain, chacun exerçant des pressions de sélection sur l'autre",
-        "L'évolution simultanée de deux espèces non liées dans le même environnement climatique"
-      ],
-      "r": 2,
-      "x": "La coévolution décrit l'évolution réciproque de deux espèces en interaction étroite. P. falciparum développe des résistances aux traitements (chloroquine, artémisinine) pendant que l'humain développe des adaptations génétiques (drépanocytose, trait thalassémique, absence d'antigène Duffy) conférant une protection partielle. Cette \"course aux armements\" évolutive est un défi majeur pour la lutte contre le paludisme au Burkina Faso."
-    },
-    {
-      "q": "Quel est le rôle de l'apoptose dans l'organisme et son importance dans la prévention du cancer ?",
-      "o": [
-        "L'apoptose favorise la prolifération cellulaire en libérant des facteurs de croissance lors de la nécrose",
-        "L'apoptose est un processus pathologique destructeur qui détruit les tissus normaux sains",
-        "L'apoptose est uniquement un mécanisme de défense spécifique contre les infections virales",
-        "L'apoptose est une mort cellulaire programmée qui élimine les cellules endommagées, surnuméraires ou potentiellement cancéreuses de façon contrôlée"
-      ],
-      "r": 3,
-      "x": "L'apoptose est une mort cellulaire programmée (suicide cellulaire) physiologique essentielle. Elle est indispensable au développement embryonnaire et à l'homéostasie tissulaire adulte. Elle élimine les cellules dont l'ADN est irréparablement endommagé, prévenant leur transformation en cellules cancéreuses. La dérégulation de l'apoptose est une caractéristique fondamentale des cellules cancéreuses."
-    },
-    {
-      "q": "Qu'est-ce que l'épigénétique et quels sont ses mécanismes principaux ?",
-      "o": [
-        "L'étude des modifications héréditaires de l'expression génique ne modifiant pas la séquence d'ADN (méthylation de l'ADN, modifications des histones)",
-        "L'étude des mutations dans la séquence d'ADN transmises de génération en génération",
-        "L'étude de l'influence de l'environnement sur l'évolution des espèces sur de longues périodes géologiques",
-        "L'étude des interactions entre gènes situés sur des chromosomes différents (épistasie)"
-      ],
-      "r": 0,
-      "x": "L'épigénétique étudie les modifications réversibles et héréditaires de l'expression génique sans changement de la séquence d'ADN. Ses mécanismes principaux sont : la méthylation de l'ADN (cytosines CpG), les modifications post-traductionnelles des histones (acétylation, méthylation) et les ARN non codants (miARN). Ces marques épigénétiques peuvent être influencées par l'environnement (alimentation, stress, polluants)."
-    },
-    {
-      "q": "Quel est le mécanisme d'action du système CRISPR-Cas9 en biotechnologie ?",
-      "o": [
-        "Un système de vaccination utilisant des fragments d'ADN viral pour induire une immunité préventive",
-        "Un système de ciseaux moléculaires permettant de couper et modifier précisément des séquences d'ADN spécifiques dans le génome",
-        "Un système d'amplification de l'ADN par réaction en chaîne à haute température (PCR)",
-        "Un mécanisme de transfert de gènes entre espèces réalisé exclusivement par les bactériophages"
-      ],
-      "r": 1,
-      "x": "CRISPR-Cas9 est un système d'édition génomique dérivé d'un mécanisme immunitaire bactérien. L'ARN guide dirige la protéase Cas9 vers une séquence cible de l'ADN où elle réalise une coupure double brin. La cellule répare cette coupure, permettant de corriger des mutations, d'inactiver des gènes ou d'insérer de nouvelles séquences dans le génome."
-    },
-    {
-      "q": "Quel est le rôle du système rénine-angiotensine-aldostérone (SRAA) dans l'organisme ?",
-      "o": [
-        "Le SRAA diminue systématiquement la pression artérielle en dilatant les artérioles périphériques",
-        "Le SRAA régule la glycémie en réponse aux variations du volume sanguin et de la natriémie",
-        "Le SRAA régule la pression artérielle et le volume sanguin via la vasoconstriction et la rétention de sodium",
-        "Le SRAA agit exclusivement sur la fréquence cardiaque par voie nerveuse sympathique"
-      ],
-      "r": 2,
-      "x": "Le SRAA est un système hormonal complexe : la chute de pression artérielle stimule la sécrétion de rénine par les reins, qui active l'angiotensine II (puissant vasoconstricteur). L'angiotensine II stimule la sécrétion d'aldostérone qui augmente la réabsorption de sodium et d'eau, augmentant la volémie et la pression artérielle. Les inhibiteurs de l'ECA et les sartans ciblent ce système dans le traitement de l'hypertension."
-    },
-    {
-      "q": "Quel est le mécanisme de formation des roches métamorphiques ?",
-      "o": [
-        "Les roches métamorphiques se forment par dépôt et compaction de sédiments dans les fonds marins",
-        "Les roches métamorphiques se forment exclusivement par l'action de l'érosion chimique en surface",
-        "Les roches métamorphiques se forment par refroidissement lent du magma en profondeur (plutonisme)",
-        "Les roches métamorphiques résultent de la transformation de roches préexistantes sous l'effet de la chaleur et de la pression sans fusion complète"
-      ],
-      "r": 3,
-      "x": "Le métamorphisme est la transformation à l'état solide de roches préexistantes sous l'effet de températures élevées (>200°C) et/ou de pressions importantes lors d'enfouissement ou de collisions tectoniques. Au Burkina Faso, des formations métamorphiques précambriennes (ceintures de roches vertes) abritent les gisements aurifères exploités dans les mines d'or du pays."
-    },
-    {
-      "q": "Quel est le rôle du complexe majeur d'histocompatibilité (CMH/HLA) dans la réponse immunitaire ?",
-      "o": [
-        "Il présente les fragments peptidiques antigéniques à la surface des cellules pour leur reconnaissance par les lymphocytes T",
-        "Il assure le transport de l'oxygène dans les globules rouges par liaison à l'hémoglobine",
-        "Il produit les anticorps circulants lors d'une infection bactérienne ou virale",
-        "Il forme la barrière physique cutanée contre les agents pathogènes extérieurs"
-      ],
-      "r": 0,
-      "x": "Les molécules du CMH (HLA chez l'humain) sont des protéines membranaires qui présentent des fragments peptidiques (antigènes) à la surface des cellules. Les CMH de classe I présentent les peptides intracellulaires aux lymphocytes T CD8+ (cytotoxiques) ; les CMH de classe II présentent les peptides extracellulaires aux lymphocytes T CD4+ (auxiliaires). Le CMH détermine la compatibilité tissulaire lors des transplantations d'organes."
-    },
-    {
-      "q": "Quel est le rôle de la bioinformatique dans la surveillance épidémiologique des maladies infectieuses en Afrique ?",
-      "o": [
-        "La bioinformatique n'a pas d'application pratique en Afrique subsaharienne en raison du manque d'infrastructure",
-        "La bioinformatique permet d'analyser des données génomiques pour identifier des variants de pathogènes, surveiller les résistances aux médicaments et développer des diagnostics adaptés",
-        "La bioinformatique est uniquement utilisée pour stocker les données génomiques sans traitement analytique",
-        "La bioinformatique remplace entièrement les analyses en laboratoire de biologie médicale clinique"
-      ],
-      "r": 1,
-      "x": "La bioinformatique est indispensable à l'ère génomique : elle permet d'analyser les séquences génomiques de P. falciparum pour surveiller l'émergence de résistances aux artémésinines au Burkina Faso, de caractériser la diversité génétique des vecteurs et d'identifier des biomarqueurs de maladies. Des institutions comme le Centre MURAZ à Bobo-Dioulasso contribuent à ces avancées pour la santé publique en Afrique de l'Ouest."
-    },
-    {
-      "q": "Quel est le rôle des bactéries fixatrices d'azote dans les agroécosystèmes sahéliens du Burkina Faso ?",
-      "o": [
-        "Ces bactéries produisent des toxines qui inhibent la croissance des racines des céréales",
-        "Ces bactéries n'ont aucun rôle significatif dans le cycle de l'azote au Sahel",
-        "Ces bactéries (Rhizobium, Azotobacter) fixent l'azote atmosphérique en ammonium, enrichissant les sols cultivés en azote assimilable",
-        "Ces bactéries consomment l'azote minéral du sol, appauvrissant ainsi les terres agricoles"
-      ],
-      "r": 2,
-      "x": "Les bactéries fixatrices d'azote jouent un rôle crucial dans le cycle de l'azote : les Rhizobium en symbiose avec les légumineuses (niébé, arachide) et les Azotobacter libres dans le sol fixent le N2 atmosphérique en NH4+. Au Burkina Faso, la culture intercalaire de légumineuses enrichit naturellement les sols pauvres en azote et réduit le besoin en engrais chimiques coûteux."
-    },
-    {
-      "q": "Quel est le mécanisme de résistance de Plasmodium falciparum à la chloroquine au Burkina Faso ?",
-      "o": [
-        "Le parasite produit des enzymes qui dégradent la chloroquine avant qu'elle n'atteigne sa cible",
-        "La chloroquine ne pénètre plus dans les globules rouges parasités en raison de modifications membranaires",
-        "Le parasite développe une paroi protectrice imperméable à la chloroquine dans les vacuoles digestives",
-        "Des mutations dans le gène pfcrt permettent au parasite d'expulser la chloroquine hors de sa vacuole digestive"
-      ],
-      "r": 3,
-      "x": "La résistance à la chloroquine chez P. falciparum est principalement due à des mutations dans le gène pfcrt (Plasmodium falciparum chloroquine resistance transporter). Ces mutations permettent au parasite d'expulser la chloroquine hors de sa vacuole digestive, empêchant son accumulation à des niveaux toxiques. Cette résistance généralisée au Burkina Faso depuis les années 1990 a conduit à l'adoption des artémésinines en traitement de première ligne."
-    },
-    {
-      "q": "Qu'est-ce que la pluripotence des cellules souches embryonnaires et quelle est son importance médicale ?",
-      "o": [
-        "La capacité des cellules souches embryonnaires à se différencier en n'importe quel type cellulaire de l'organisme",
-        "La capacité des cellules souches à migrer spécifiquement vers les tissus lésés pour les réparer",
-        "La capacité des cellules souches à se diviser indéfiniment sans jamais se différencier en types spécialisés",
-        "La capacité des cellules souches adultes à se transformer en cellules embryonnaires après stimulation chimique"
-      ],
-      "r": 0,
-      "x": "Les cellules souches embryonnaires (CSE) sont pluripotentes : elles peuvent se différencier en toutes les cellules de l'organisme (plus de 200 types cellulaires). Cette propriété ouvre des perspectives thérapeutiques considérables (médecine régénératrice). Les cellules souches adultes (moelle osseuse, tissu adipeux) sont multipotentes, avec une différenciation limitée à quelques types cellulaires."
-    },
-    {
-      "q": "Quelle est la loi de Hardy-Weinberg et dans quelles conditions s'applique-t-elle ?",
-      "o": [
-        "Une loi stipulant que les fréquences alléliques augmentent sous l'effet de la sélection naturelle dans de grandes populations",
-        "Un principe stipulant que les fréquences alléliques et génotypiques d'une population restent constantes de génération en génération en l'absence de forces évolutives",
-        "Une loi décrivant exclusivement la transmission des caractères liés au chromosome X (hémizygotie)",
-        "Un principe expliquant la dominance et la récessivité des allèles dans les croisements mendéliens"
-      ],
-      "r": 1,
-      "x": "L'équilibre de Hardy-Weinberg stipule que dans une grande population idéale (panmixie, pas de mutation, pas de sélection, pas de migration, pas de dérive), les fréquences alléliques (p et q) et génotypiques (p², 2pq, q²) restent constantes. Cet équilibre sert de référence pour détecter des forces évolutives (sélection, dérive) en comparant les fréquences observées aux fréquences théoriques."
-    },
-    {
-      "q": "Quel est le rôle de la protéine p53 dans la prévention des cancers ?",
-      "o": [
-        "Elle inhibe le système immunitaire pour éviter le rejet des cellules tumorales immunogènes",
-        "Elle active la télomérase pour permettre la division cellulaire illimitée des cellules normales",
-        "Elle agit comme gardien du génome en déclenchant l'arrêt du cycle cellulaire ou l'apoptose en réponse aux dommages de l'ADN",
-        "Elle stimule la prolifération cellulaire incontrôlée lors des dommages de l'ADN"
-      ],
-      "r": 2,
-      "x": "La protéine p53 (codée par le gène TP53) est le suppresseur de tumeur le plus fréquemment muté dans les cancers humains (>50% des cancers). En réponse à des dommages de l'ADN, p53 active des gènes d'arrêt du cycle cellulaire (pour permettre la réparation) ou d'apoptose (mort cellulaire programmée) si les dommages sont irréparables. Sa mutation permet aux cellules cancéreuses de proliférer malgré leurs anomalies génomiques."
-    },
-    {
-      "q": "Comment appelle-t-on le phénomène par lequel la lumière oriente la croissance des tiges végétales ?",
-      "o": [
-        "Le thigmotropisme répondant aux contacts mécaniques répétés",
-        "L'hydrotropisme orientant les racines vers les zones humides du sol",
-        "Le gravitropisme positif orientant la tige vers le bas",
-        "Le phototropisme positif orientant la tige vers la source lumineuse"
-      ],
-      "r": 3,
-      "x": "Le phototropisme est la croissance orientée d'une plante vers la source lumineuse (phototropisme positif des tiges) ou à l'opposé (phototropisme négatif des racines). Il est médié par l'auxine (AIA) qui se redistribue vers le côté ombragé, stimulant sa croissance et faisant courber la tige vers la lumière. Ce mécanisme optimise la surface de capture lumineuse pour la photosynthèse."
-    },
-    {
-      "q": "Quel est le rôle des lymphocytes T régulateurs (Treg) dans l'homéostasie immunitaire ?",
-      "o": [
-        "Les Treg suppriment l'activité des autres cellules immunitaires pour prévenir l'auto-immunité et limiter l'inflammation",
-        "Les Treg activent et amplifient la réponse immunitaire contre les agents pathogènes envahisseurs",
-        "Les Treg produisent des anticorps de haute affinité lors des infections chroniques persistantes",
-        "Les Treg phagocytent les débris cellulaires après une réponse inflammatoire intense prolongée"
-      ],
-      "r": 0,
-      "x": "Les lymphocytes T régulateurs (CD4+CD25+FoxP3+) sont des régulateurs négatifs de la réponse immunitaire. Ils préviennent les maladies auto-immunes en supprimant les lymphocytes auto-réactifs ayant échappé à la sélection thymique. Ils maintiennent la tolérance aux antigènes alimentaires et aux antigènes du soi. Leur déficit cause des maladies auto-immunes graves ; leur excès favorise l'échappement tumoral au contrôle immunitaire."
-    },
-    {
-      "q": "Quel est le principal mécanisme d'action des vaccins à ARNm développés contre la COVID-19 ?",
-      "o": [
-        "Ils activent directement les lymphocytes T sans passer par la production d'un antigène protéique",
-        "Ils introduisent un ARNm codant pour un antigène viral que les cellules hôtes traduisent en protéine immunogène",
-        "Ils injectent directement des fragments protéiques viraux purifiés pour déclencher une réponse immunitaire",
-        "Ils utilisent un virus vivant atténué incapable de se répliquer pour coloniser les cellules cibles"
-      ],
-      "r": 1,
-      "x": "Les vaccins ARNm contiennent un ARNm encapsulé dans des nanoparticules lipidiques. Une fois injecté, l'ARNm est capté par les cellules qui le traduisent en protéine antigénique (ex : protéine Spike du SARS-CoV-2). Cette protéine déclenche une réponse immunitaire humorale et cellulaire. L'ARNm n'entre pas dans le noyau et ne modifie pas l'ADN. Cette technologie ouvre des perspectives pour des vaccins contre le paludisme et la tuberculose."
-    },
-    {
-      "q": "Qu'est-ce que la régulation de l'expression génique par l'opéron lac chez les bactéries ?",
-      "o": [
-        "Un système de réplication accélérée de l'ADN bactérien en présence de nutriments abondants",
-        "Un mécanisme exclusivement eucaryote de régulation post-transcriptionnelle de l'expression génique",
-        "Un système de régulation où la présence du lactose lève la répression et permet la transcription des enzymes de dégradation du lactose",
-        "Un mécanisme de recombinaison génétique entre bactéries lors de la conjugaison bactérienne"
-      ],
-      "r": 2,
-      "x": "L'opéron lac de E. coli est un exemple classique de régulation génique chez les procaryotes. En absence de lactose, le répresseur se fixe sur l'opérateur et bloque la transcription des gènes lacZ, lacY, lacA. En présence de lactose (inducteur), le répresseur est inactivé et les gènes sont transcrits, produisant les enzymes nécessaires au catabolisme du lactose."
-    },
-    {
-      "q": "Quel est le rôle des microARN (miARN) dans la régulation post-transcriptionnelle ?",
-      "o": [
-        "Les miARN activent directement la transcription de gènes cibles en se liant à l'ADN promoteur",
-        "Les miARN codent pour de petites protéines régulatrices du cycle cellulaire et de la différenciation",
-        "Les miARN participent uniquement à la réparation des dommages de l'ADN par excision de bases",
-        "Les miARN sont de petits ARN non codants qui répriment l'expression génique en se liant à l'ARNm cible et en inhibant sa traduction"
-      ],
-      "r": 3,
-      "x": "Les microARN (miARN) sont de petits ARN non codants (~22 nucléotides) qui régulent l'expression génique après la transcription. En se liant de façon complémentaire à la région 3'UTR de leur ARNm cible, ils bloquent sa traduction ou déclenchent sa dégradation. Les miARN régulent de nombreux processus biologiques et leur dérégulation est impliquée dans de nombreux cancers."
-    },
-    {
-      "q": "Quel est le rôle de l'acrosome dans le spermatozoïde lors de la fécondation ?",
-      "o": [
-        "Contenir des enzymes permettant de pénétrer la zone pellucide de l'ovule",
-        "Fournir l'énergie nécessaire à la motilité du flagelle par production d'ATP",
-        "Transporter directement l'ADN paternel jusqu'au noyau de l'ovule",
-        "Protéger l'ADN spermatique contre les radicaux libres du milieu génital"
-      ],
-      "r": 0,
-      "x": "L'acrosome est une vésicule membranaire à la tête du spermatozoïde. Il contient des enzymes (acrosine, hyaluronidase) libérées lors de la réaction acrosomique, permettant au spermatozoïde de pénétrer la zone pellucide de l'ovule pour réaliser la fécondation. Ce processus est indispensable à la reproduction sexuée chez les mammifères."
-    },
-    {
-      "q": "Qu'est-ce que la loi de ségrégation des allèles (1ère loi de Mendel) ?",
-      "o": [
-        "Les allèles de deux gènes différents sont toujours transmis ensemble si les gènes sont proches",
-        "Lors de la formation des gamètes, les deux allèles d'un même gène se séparent et chaque gamète ne reçoit qu'un seul allèle",
-        "L'allèle dominant masque systématiquement l'expression de l'allèle récessif chez l'hétérozygote",
-        "Les fréquences alléliques restent constantes de génération en génération en l'absence de sélection"
-      ],
-      "r": 1,
-      "x": "La loi de ségrégation (1ère loi de Mendel) stipule que les deux allèles d'un individu diploïde se séparent lors de la méiose et que chaque gamète ne reçoit qu'un seul allèle. Lors de la fécondation, chaque parent transmet aléatoirement un allèle à sa descendance, restaurant la diploïdie."
-    },
-    {
-      "q": "Quel est le rôle du cancer du col de l'utérus dans les priorités de santé publique au Burkina Faso ?",
-      "o": [
-        "Ce cancer est absent au Burkina Faso car les femmes africaines sont naturellement protégées",
-        "Ce cancer est peu fréquent et ne constitue pas une priorité de santé publique en Afrique de l'Ouest",
-        "Ce cancer ne peut pas être prévenu par vaccination car il est d'origine bactérienne",
-        "Ce cancer, causé par le HPV, est l'un des cancers les plus fréquents chez la femme et peut être prévenu par vaccination et dépistage"
-      ],
-      "r": 3,
-      "x": "Le cancer du col de l'utérus est causé dans plus de 99% des cas par une infection persistante au HPV (Human Papillomavirus), principalement les souches HPV 16 et 18. Il est l'un des cancers les plus fréquents chez la femme au Burkina Faso. Le vaccin anti-HPV et le dépistage par frottis cervico-vaginal sont les principales stratégies de prévention disponibles."
-    },
-    {
-      "q": "Qu'est-ce que la minéralisation osseuse et quels minéraux y participent principalement ?",
-      "o": [
-        "La minéralisation est le dépôt de carbonate de calcium uniquement sous forme de calcite cristalline",
-        "La minéralisation ne nécessite pas de minéraux mais uniquement des protéines de structure comme le collagène",
-        "La minéralisation est le dépôt de cristaux d'hydroxyapatite (calcium et phosphore) sur la trame de collagène de type I",
-        "La minéralisation implique uniquement le fer et le zinc dans les zones d'ossification primaire"
-      ],
-      "r": 2,
-      "x": "L'os est composé d'une matrice organique (collagène de type I) minéralisée par des cristaux d'hydroxyapatite [Ca10(PO4)6(OH)2], qui représentent environ 70% de la masse osseuse. La vitamine D, le calcium et le phosphore sont indispensables à cette minéralisation. La carence en vitamine D provoque le rachitisme chez l'enfant, encore observé dans les zones rurales du Burkina Faso."
-    },
-    {
-      "q": "Qu'est-ce que la zonation altitudinale de la végétation ?",
-      "o": [
-        "La répartition des végétaux uniquement en fonction de la distance à la mer et de l'humidité océanique",
-        "La disparition totale de toute végétation au-delà d'une certaine altitude critique universelle",
-        "La répartition aléatoire des espèces végétales sans relation avec les facteurs climatiques de l'altitude",
-        "La succession de ceintures de végétation différentes avec l'altitude, liée à la diminution de la température et aux variations des précipitations"
-      ],
-      "r": 3,
-      "x": "La zonation altitudinale reflète les variations climatiques avec l'altitude : la température diminue d'environ 0,6°C par 100 m d'élévation et les précipitations varient. En Afrique de l'Ouest, les reliefs du Burkina Faso (Sindou, Dôs) présentent des variations floristiques avec l'altitude, avec des espèces hygrophiles dans les bas-fonds et des espèces xérophytes sur les versants exposés."
-    },
-    {
-      "q": "Qu'est-ce que la spectrométrie de masse en géochronologie ?",
-      "o": [
-        "Une technique visuelle d'identification des minéraux à l'œil nu sur les affleurements rocheux",
-        "Une méthode de cartographie des reliefs par satellite et télédétection radar",
-        "Une technique d'analyse de la composition chimique des eaux souterraines uniquement",
-        "Une technique permettant de mesurer les rapports isotopiques dans les minéraux pour déterminer l'âge absolu des roches"
-      ],
-      "r": 3,
-      "x": "La spectrométrie de masse mesure les rapports isotopiques (ex : Rb/Sr, U/Pb, K/Ar) dans les minéraux. Ces rapports varient de façon prévisible selon la désintégration radioactive, permettant de calculer l'âge absolu des roches (géochronologie). Cette technique a permis de dater les formations géologiques précambriennes du Burkina Faso à plus de 2 milliards d'années."
-    },
-    {
-      "q": "Quel est le rôle des cytokines dans la réponse immunitaire ?",
-      "o": [
-        "Les cytokines transportent l'oxygène dans le sang comme l'hémoglobine des globules rouges",
-        "Les cytokines sont des messagers protéiques qui régulent et coordonnent la communication entre les cellules immunitaires",
-        "Les cytokines forment une barrière physique muqueuse contre les agents pathogènes",
-        "Les cytokines sont des anticorps spécialisés dans la destruction des cellules infectées par des virus"
-      ],
-      "r": 1,
-      "x": "Les cytokines (interleukines, interférons, TNF, chimiokines) sont de petites protéines de signalisation sécrétées par les cellules immunitaires et d'autres cellules. Elles régulent l'inflammation, la prolifération, la différenciation et la migration des cellules immunitaires. Un dysfonctionnement de la production de cytokines (tempête cytokinique) peut provoquer des réponses immunitaires excessives dangereuses."
-    },
-    {
-      "q": "Quel est l'impact de la malnutrition protéino-énergétique sur le système immunitaire de l'enfant ?",
-      "o": [
-        "La malnutrition renforce paradoxalement le système immunitaire en stimulant ses défenses adaptatives",
-        "La malnutrition n'a pas d'effet cliniquement significatif sur le système immunitaire de l'enfant",
-        "La malnutrition augmente uniquement les maladies non infectieuses comme le diabète infantile",
-        "La malnutrition affaiblit le système immunitaire, augmentant la susceptibilité aux infections et la gravité des maladies"
-      ],
-      "r": 3,
-      "x": "La malnutrition protéino-énergétique (kwashiorkor, marasme) entraîne une atrophie du thymus, une réduction des lymphocytes T, une diminution des anticorps et une altération des fonctions des cellules phagocytaires. Cette immunodépression rend les enfants vulnérables aux infections opportunistes. Au Burkina Faso, la malnutrition infantile reste un problème majeur de santé publique."
-    },
-    {
-      "q": "Quel est le rôle de la reverse transcriptase chez les rétrovirus comme le VIH ?",
-      "o": [
-        "Elle transcrit l'ARN viral en ARN messager humain directement exploitable par les ribosomes",
-        "Elle synthétise de l'ADN double brin à partir de l'ARN viral, permettant son intégration dans le génome de la cellule hôte",
-        "Elle détruit l'ADN de la cellule hôte pour libérer de l'espace pour la réplication virale",
-        "Elle traduit directement l'ARN viral en protéines virales sans passer par une étape ADN"
-      ],
-      "r": 1,
-      "x": "La reverse transcriptase (transcriptase inverse) est une enzyme clé des rétrovirus : elle copie l'ARN viral en ADN complémentaire (ADNc) qui est ensuite intégré dans le génome de la cellule hôte par l'intégrase virale. Cet ADN proviral est transcrit et traduit pour produire de nouveaux virus. Les inhibiteurs de la reverse transcriptase (zidovudine, tenofovir) constituent une classe majeure d'antirétroviraux utilisés au Burkina Faso."
-    },
-    {
-      "q": "Quel est le rôle des forêts classées et réserves naturelles du Burkina Faso ?",
-      "o": [
-        "Elles servent uniquement de réserves de bois pour la construction et le bois de chauffe domestique",
-        "Elles n'ont aucun rôle dans la conservation de la biodiversité sahélo-soudanienne",
-        "Elles sont uniquement exploitées pour l'agriculture intensive et l'élevage semi-industriel",
-        "Elles constituent des refuges pour la faune et la flore sauvages, des corridors biologiques et des puits de carbone"
-      ],
-      "r": 3,
-      "x": "Les forêts classées et réserves naturelles du Burkina Faso (Ranch de Gibier de Nazinga, Parc National d'Arly, Réserve du W) préservent des écosystèmes sahélo-soudaniens et leur biodiversité (éléphants, hippopotames, lions, crocodiles, oiseaux migrateurs). Elles jouent également un rôle de puits de carbone et protègent les bassins versants hydrographiques du pays."
-    },
-    {
-      "q": "Quel est le rôle des cellules de Leydig dans le testicule ?",
-      "o": [
-        "Produire les spermatozoïdes dans les tubes séminifères lors de la spermatogenèse",
-        "Nourrir et soutenir les cellules germinales en développement dans les tubes séminifères",
-        "Sécréter la testostérone sous la stimulation de la LH hypophysaire",
-        "Produire les hormones FSH et LH régulant la fonction gonadique masculine"
-      ],
-      "r": 2,
-      "x": "Les cellules de Leydig sont des cellules interstitielles du testicule situées entre les tubes séminifères. Stimulées par la LH (hormone lutéinisante) sécrétée par l'hypophyse, elles produisent la testostérone, principale hormone sexuelle masculine. Cette testostérone est indispensable à la spermatogenèse, au développement des caractères sexuels secondaires et à la libido."
-    },
-    {
-      "q": "Qu'est-ce que le mimétisme batésien en écologie évolutive ?",
-      "o": [
-        "La ressemblance entre deux espèces toxiques qui se protègent mutuellement des prédateurs",
-        "Le camouflage d'une espèce dans son environnement par similitude de couleur ou de texture",
-        "La migration conjointe de deux espèces vers le même territoire saisonnier de nourrissage",
-        "La ressemblance d'une espèce inoffensive à une espèce toxique ou dangereuse pour tromper les prédateurs"
-      ],
-      "r": 3,
-      "x": "Le mimétisme batésien est une adaptation évolutive par laquelle une espèce inoffensive ressemble à une espèce toxique ou dangereuse pour tromper les prédateurs et éviter la prédation. Le modèle toxique est imité par le mimétique inoffensif qui bénéficie ainsi d'une protection sans produire lui-même les défenses chimiques coûteuses. Ce phénomène illustre parfaitement la sélection naturelle et la coévolution prédateur-proie."
-    },
-    {
-      "q": "Quel est le rôle des arbres fixateurs d'azote dans les agroforêts du Burkina Faso ?",
-      "o": [
-        "Ces arbres consomment l'azote du sol et appauvrissent ainsi les terres agricoles environnantes",
-        "Ces arbres produisent des toxines allélopathiques qui inhibent la croissance des cultures annuelles associées",
-        "Ces arbres (Faidherbia albida, Piliostigma reticulatum) enrichissent les sols en azote par leur association avec des bactéries fixatrices",
-        "Ces arbres n'ont aucun effet mesurable sur la fertilité des sols cultivés sous leur ombrage"
-      ],
-      "r": 2,
-      "x": "Dans les agroforêts sahéliennes, des arbres comme Faidherbia albida (gonakié) et Piliostigma reticulatum hébergent des bactéries fixatrices d'azote (Rhizobium, Bradyrhizobium) dans leurs nodosités racinaires. Ces arbres enrichissent les sols en azote organique par leurs feuilles tombantes et leurs nodosités. Le système agroforestier Faidherbia-céréales au Burkina Faso améliore significativement les rendements du sorgho, du mil et du maïs cultivés à proximité."
-    },
-    {
-      "q": "Quelle est la définition de la biodiversité fonctionnelle dans un écosystème ?",
-      "o": [
-        "Le nombre total d'espèces animales vertébrées présentes dans un écosystème donné",
-        "La diversité des traits fonctionnels (régimes alimentaires, stratégies reproductives) des espèces qui détermine les services écosystémiques rendus",
-        "La diversité génétique au sein d'une seule espèce clé de voûte d'un écosystème",
-        "La diversité des espèces végétales productrices primaires d'un écosystème forestier"
-      ],
-      "r": 1,
-      "x": "La biodiversité fonctionnelle décrit la diversité des traits fonctionnels (régimes alimentaires, stratégies reproductives, tolérance à la sécheresse) des espèces d'un écosystème. Elle détermine les services écosystémiques fournis (fertilité des sols, pollinisation, régulation de l'eau). Dans les écosystèmes sahéliens du Burkina Faso, cette diversité fonctionnelle est essentielle pour la résilience face aux perturbations climatiques croissantes."
-    },
-    {
-      "q": "Quel est l'effet des rayonnements UV sur l'ADN des cellules cutanées ?",
-      "o": [
-        "Ils stimulent la réplication de l'ADN et favorisent la croissance et le renouvellement cellulaire",
-        "Ils n'ont aucun effet sur l'ADN des cellules cutanées protégées par la mélanine",
-        "Ils activent uniquement la production de mélanine sans dommage direct sur l'ADN cellulaire",
-        "Ils provoquent des dimères de thymine  pouvant entraîner des mutations et des cancers de la peau"
-      ],
-      "r": 3,
-      "x": "Les UV-B provoquent la formation de dimères de thymine (liaison covalente entre deux thymines adjacentes), lesquels bloquent la réplication et la transcription de l'ADN. Si non réparés par les enzymes de réparation (photolyases, NER), ces lésions conduisent à des mutations pouvant déclencher des mélanomes et carcinomes cutanés. La mélanine et les crèmes solaires protègent contre ces effets."
-    },
-  
     {
       "q": "Où se déroule normalement la fécondation chez la femme ?",
       "o": [
@@ -17785,17 +16860,6 @@ const QUESTIONS = {
       "x": "Un pic d'hormone lutéinisante (LH) déclenche la rupture du follicule ovarien et la libération de l'ovule. Cette ovulation se produit habituellement au milieu du cycle menstruel."
     },
     {
-      "q": "Combien de temps dure environ une grossesse humaine normale ?",
-      "o": [
-        "6 mois",
-        "7 mois",
-        "9 mois",
-        "12 mois"
-      ],
-      "r": 2,
-      "x": "Une grossesse dure environ neuf mois, soit 38 semaines après la fécondation ou 40 semaines d'aménorrhée calculées à partir du premier jour des dernières règles. Elle se décompose en trois trimestres marqués par des étapes précises du développement fœtal."
-    },
-    {
       "q": "À quel niveau de l'appareil génital féminin se déroule la nidation (ou implantation) de l'embryon ?",
       "o": [
         "Dans la paroi de l'utérus",
@@ -17829,7 +16893,7 @@ const QUESTIONS = {
       "x": "Le préservatif forme une barrière physique qui empêche le contact direct entre les spermatozoïdes et l'ovule. Il protège également contre la transmission de nombreuses infections sexuellement transmissibles."
     },
     {
-      "q": "Comment appelle-t-on l'arrêt définitif des cycles menstruels chez la femme, en général après 45-55 ans ?",
+      "q": "Comment appelle-t-on l'arrêt définitif des cycles menstruels chez la femme ?",
       "o": [
         "La puberté",
         "La ménopause",
@@ -17838,39 +16902,6 @@ const QUESTIONS = {
       ],
       "r": 1,
       "x": "La ménopause marque l'arrêt naturel et définitif de l'activité ovarienne et des cycles menstruels chez la femme. Elle s'accompagne souvent de changements hormonaux comme des bouffées de chaleur."
-    },
-    {
-      "q": "Quelle est la principale fonction de la testostérone chez l'homme ?",
-      "o": [
-        "Réguler le cycle menstruel",
-        "Stimuler la production de lait maternel",
-        "Développer les caractères sexuels masculins",
-        "Provoquer l'ovulation"
-      ],
-      "r": 2,
-      "x": "La testostérone, sécrétée par les testicules, est responsable des caractères sexuels secondaires masculins et de la production des spermatozoïdes. Elle influence aussi la masse musculaire et la voix grave."
-    },
-    {
-      "q": "À quel moment de la puberté chez la fille apparaissent en général les premières règles ?",
-      "o": [
-        "Avant 8 ans",
-        "Entre 20 et 30 ans",
-        "Dès la naissance",
-        "Entre 11 et 15 ans"
-      ],
-      "r": 3,
-      "x": "Les premières règles surviennent le plus souvent entre 11 et 15 ans, marquant le début de la fonction reproductrice. Cet âge peut varier selon les individus et certains facteurs génétiques ou nutritionnels."
-    },
-    {
-      "q": "Quelle infection sexuellement transmissible affaiblit progressivement le système immunitaire ?",
-      "o": [
-        "Le paludisme",
-        "La grippe",
-        "Le VIH/SIDA",
-        "La tuberculose"
-      ],
-      "r": 2,
-      "x": "Le VIH attaque spécifiquement les lymphocytes T CD4, véritables chefs d'orchestre du système immunitaire, provoquant à terme le syndrome d'immunodéficience acquise (SIDA). Sans traitement, l'organisme devient alors vulnérable à de nombreuses infections opportunistes."
     },
     {
       "q": "Quel est le rôle du cordon ombilical pendant la grossesse ?",
@@ -17904,17 +16935,6 @@ const QUESTIONS = {
       ],
       "r": 1,
       "x": "La puberté correspond à l'ensemble des transformations physiques et hormonales qui rendent l'organisme apte à se reproduire. Elle s'accompagne de l'apparition des caractères sexuels secondaires chez le garçon et la fille."
-    },
-    {
-      "q": "Quel est le rôle principal du système immunitaire ?",
-      "o": [
-        "Défendre l'organisme contre les agents pathogènes",
-        "Transporter l'oxygène vers les tissus",
-        "Digérer les aliments ingérés",
-        "Assurer les mouvements du corps"
-      ],
-      "r": 0,
-      "x": "Le système immunitaire reconnaît et élimine les agents pathogènes (virus, bactéries, parasites) qui menacent l'organisme. Il fait intervenir plusieurs types de cellules et de molécules spécialisées dans cette défense."
     },
     {
       "q": "Quelles cellules sanguines sont principalement impliquées dans la défense immunitaire ?",
@@ -17961,7 +16981,7 @@ const QUESTIONS = {
       "x": "La vaccination expose l'organisme à agent pathogène atténué, inactivé ou à une partie de celui-ci (antigène), permettant de développer une mémoire immunitaire protectrice. En cas d'infection réelle ultérieure, la réponse immunitaire sera alors plus rapide et efficace."
     },
     {
-      "q": "Quel agent pathogène est responsable du paludisme, maladie très répandue au Burkina Faso ?",
+      "q": "Quel agent pathogène est responsable du paludisme ?",
       "o": [
         "Une bactérie",
         "Un parasite",
@@ -18060,17 +17080,6 @@ const QUESTIONS = {
       "x": "Les lymphocytes T détruisent directement les cellules infectées et aident à coordonner l'ensemble de la réponse immunitaire. Certains d'entre eux gardent aussi en mémoire l'agent pathogène rencontré."
     },
     {
-      "q": "Pourquoi la vaccination de masse permet-elle de protéger indirectement les personnes non vaccinées ?",
-      "o": [
-        "Parce qu'elle guérit instantanément toutes les maladies existantes",
-        "Grâce à l'immunité collective qui limite la circulation de l'agent pathogène",
-        "Parce qu'elle élimine tous les moustiques de la zone vaccinée",
-        "Parce qu'elle rend les microbes totalement inoffensifs pour tous"
-      ],
-      "r": 1,
-      "x": "Lorsqu'une large majorité de la population est vaccinée, la circulation de l'agent pathogène diminue, protégeant indirectement les personnes non vaccinées. Ce phénomène est appelé immunité collective ou immunité de groupe."
-    },
-    {
       "q": "Quel organe de la plante absorbe principalement l'eau et les sels minéraux du sol ?",
       "o": [
         "La feuille",
@@ -18115,7 +17124,7 @@ const QUESTIONS = {
       "x": "Les plantes absorbent le dioxyde de carbone de l'air, qu'elles transforment en matière organique grâce à la lumière. Ce gaz pénètre principalement par les stomates situés sur les feuilles."
     },
     {
-      "q": "Quel tissu végétal transporte la sève élaborée, riche en sucres, des feuilles vers le reste de la plante ?",
+      "q": "Quel tissu végétal transporte la sève élaborée ?",
       "o": [
         "Le phloème",
         "Le xylème",
@@ -18214,17 +17223,6 @@ const QUESTIONS = {
       "x": "La fougère est une plante sans fleurs qui se reproduit grâce à des spores libérées par des structures situées sous ses frondes. Ces spores donnent naissance à un prothalle qui participera ensuite à la reproduction de la fougère."
     },
     {
-      "q": "Quel est le rôle des racines dans la fixation de la plante au sol ?",
-      "o": [
-        "Elles n'ont aucun rôle dans la fixation",
-        "Elles servent uniquement à la photosynthèse",
-        "Elles ancrent solidement la plante dans le sol",
-        "Elles produisent le pollen de la plante"
-      ],
-      "r": 2,
-      "x": "Le système racinaire ancre solidement la plante dans le sol, lui permettant de résister au vent et à l'érosion. Il joue ainsi un rôle mécanique en plus de sa fonction d'absorption."
-    },
-    {
       "q": "Quel processus permet à une plante de perdre de l'eau sous forme de vapeur par ses feuilles ?",
       "o": [
         "La photosynthèse",
@@ -18234,17 +17232,6 @@ const QUESTIONS = {
       ],
       "r": 1,
       "x": "La transpiration foliaire évacue l'eau sous forme de vapeur à travers les stomates, favorisant la montée de la sève brute. Elle contribue aussi à réguler la température de la plante."
-    },
-    {
-      "q": "Quelle culture vivrière est particulièrement adaptée aux zones semi-arides du Burkina Faso ?",
-      "o": [
-        "Le mil",
-        "Le riz irrigué",
-        "Le cacaoyer",
-        "Le théier"
-      ],
-      "r": 0,
-      "x": "Le mil est une céréale résistante à la sécheresse, particulièrement cultivée dans les zones sahéliennes du Burkina Faso. Il constitue une base alimentaire importante pour de nombreuses populations rurales."
     },
     {
       "q": "Quel élément minéral, présent dans les engrais, favorise particulièrement la croissance des racines ?",
@@ -18357,17 +17344,6 @@ const QUESTIONS = {
       "x": "Le dioxyde de carbone, émis notamment par la combustion des énergies fossiles, retient la chaleur dans l'atmosphère terrestre. Son accumulation excessive est la principale cause du réchauffement climatique actuel."
     },
     {
-      "q": "Quelle activité humaine contribue le plus à la déforestation au Burkina Faso ?",
-      "o": [
-        "L'agriculture extensive et le bois de chauffe",
-        "La reforestation systématique",
-        "La protection stricte des forêts classées",
-        "L'agriculture biologique intensive"
-      ],
-      "r": 0,
-      "x": "La coupe de bois pour le charbon et le bois de chauffe, ainsi que l'extension des terres agricoles, sont des causes majeures de déforestation. Cette déforestation accélère aussi l'érosion et la dégradation des sols."
-    },
-    {
       "q": "Comment appelle-t-on la variété des espèces vivantes présentes dans un milieu donné ?",
       "o": [
         "L'écosystème",
@@ -18377,28 +17353,6 @@ const QUESTIONS = {
       ],
       "r": 3,
       "x": "La biodiversité désigne la diversité des espèces animales, végétales et microbiennes présentes dans un milieu. Elle est essentielle à l'équilibre et à la résilience des écosystèmes."
-    },
-    {
-      "q": "Quelle conséquence directe la désertification a-t-elle sur les sols sahéliens ?",
-      "o": [
-        "Une amélioration de la fertilité des sols",
-        "Une perte de fertilité et une dégradation des sols",
-        "Une augmentation de la biodiversité végétale",
-        "Une réduction de l'érosion éolienne"
-      ],
-      "r": 1,
-      "x": "La désertification entraîne une perte de fertilité, une érosion accrue et une dégradation progressive des sols sahéliens. Elle est aggravée par la surexploitation des terres et le changement climatique."
-    },
-    {
-      "q": "Quel est le rôle des arbres dans la lutte contre l'érosion des sols ?",
-      "o": [
-        "Leurs racines retiennent la terre et limitent son entraînement par l'eau et le vent",
-        "Ils accélèrent l'érosion en asséchant le sol",
-        "Ils n'ont aucun effet sur la structure du sol",
-        "Ils favorisent uniquement l'évaporation de l'eau du sol"
-      ],
-      "r": 0,
-      "x": "Le système racinaire des arbres stabilise le sol et limite son entraînement par le ruissellement et le vent. C'est pourquoi le reboisement est une stratégie clé contre l'érosion et la désertification."
     },
     {
       "q": "Comment appelle-t-on la relation où deux espèces vivent ensemble au bénéfice mutuel des deux partenaires ?",
@@ -18467,50 +17421,6 @@ const QUESTIONS = {
       "x": "Une espèce bioindicatrice est sensible aux variations du milieu, sa présence ou son absence renseignant sur l'état de l'écosystème. Elle permet ainsi de surveiller la qualité d'un milieu sans analyses complexes."
     },
     {
-      "q": "Quel est l'impact principal de la surpêche sur les écosystèmes aquatiques ?",
-      "o": [
-        "Une augmentation durable des populations de poissons",
-        "un appauvrissement des ressources halieutiques",
-        "Une amélioration de la qualité de l'eau",
-        "Une diminution des prédateurs marins uniquement bénéfique"
-      ],
-      "r": 1,
-      "x": "La surpêche épuise les stocks de poissons plus vite qu'ils ne se renouvellent, déséquilibrant les écosystèmes aquatiques. Elle menace à terme la sécurité alimentaire des populations qui dépendent de la pêche."
-    },
-    {
-      "q": "Quelle mesure contribue efficacement à la lutte contre la désertification au Sahel ?",
-      "o": [
-        "Le reboisement et la mise en place de cordons pierreux anti-érosion",
-        "L'augmentation du surpâturage",
-        "La suppression totale de la végétation existante",
-        "L'abandon des pratiques agroforestières"
-      ],
-      "r": 0,
-      "x": "Le reboisement et les techniques comme les cordons pierreux limitent le ruissellement et favorisent la régénération des sols dégradés. Ces méthodes sont largement utilisées dans les programmes de lutte contre la désertification au Sahel."
-    },
-    {
-      "q": "Comment appelle-t-on l'accumulation progressive de substances toxiques le long d'une chaîne alimentaire ?",
-      "o": [
-        "La photosynthèse",
-        "La symbiose",
-        "La décomposition",
-        "La Bioamplification"
-      ],
-      "r": 3,
-      "x": "La bioamplification ou Biomagnification désigne l'augmentation de la concentration d'une substance toxique à mesure qu'elle progresse le long de la chaîne alimentaire. Les prédateurs situés au sommet sont donc souvent les plus exposés à ces substances."
-    },
-    {
-      "q": "Quel rôle jouent les zones humides dans la régulation de l'environnement ?",
-      "o": [
-        "Elles régulent l'eau et favorisent la biodiversité.",
-        "Elles n'ont aucune utilité écologique.",
-        "Elles accélèrent la désertification.",
-        "Elles empêchent la vie aquatique."
-      ],
-      "r": 0,
-      "x": "Les zones humides filtrent naturellement l'eau, atténuent les crues, rechargent les nappes phréatiques et constituent des habitats riches en biodiversité. Leur préservation est essentielle pour maintenir l'équilibre des écosystèmes."
-    },
-    {
       "q": "Quel scientifique est à l'origine de la théorie de l'évolution par sélection naturelle ?",
       "o": [
         "Charles Darwin",
@@ -18544,17 +17454,6 @@ const QUESTIONS = {
       "x": "L'espèce regroupe des individus interféconds, capables de se reproduire entre eux et de donner une descendance viable. C'est l'unité de base de la classification du vivant."
     },
     {
-      "q": "Quel indice fossile ou anatomique constitue une preuve classique de l'évolution des espèces ?",
-      "o": [
-        "La présence d'organes homologues chez des espèces différentes",
-        "L'absence totale de fossiles dans les roches",
-        "L'identité parfaite entre toutes les espèces vivantes",
-        "L'invariabilité totale des espèces au cours du temps"
-      ],
-      "r": 0,
-      "x": "Les organes homologues, de structure semblable mais de fonction parfois différente, témoignent d'un ancêtre commun entre espèces. Ils constituent l'une des principales preuves anatomiques de l'évolution."
-    },
-    {
       "q": "Comment appelle-t-on l'ensemble des restes ou traces d'organismes anciens conservés dans les roches ?",
       "o": [
         "Les gènes",
@@ -18566,7 +17465,7 @@ const QUESTIONS = {
       "x": "Les fossiles sont des restes ou empreintes d'organismes anciens conservés dans les roches sédimentaires, témoins de l'histoire de la vie. Leur étude, la paléontologie, permet de reconstituer l'évolution des espèces au fil du temps."
     },
     {
-      "q": "Quel grand groupe rassemble les organismes unicellulaires dépourvus de noyau, comme les bactéries ?",
+      "q": "Quel grand groupe rassemble les organismes unicellulaires dépourvus de noyau ?",
       "o": [
         "Les eucaryotes",
         "Les champignons",
@@ -18588,7 +17487,7 @@ const QUESTIONS = {
       "x": "La taxonomie organise les êtres vivants en groupes hiérarchisés (règne, embranchement, classe, ordre, famille, genre, espèce). Ce classement reflète les liens de parenté évolutive entre les espèces."
     },
     {
-      "q": "Quel règne du vivant regroupe des organismes eucaryotes se nourrissant par absorption, comme les champignons ?",
+      "q": "Quel règne du vivant regroupe des organismes eucaryotes se nourrissant par absorption ?",
       "o": [
         "Le règne animal",
         "Le règne fongique",
@@ -18654,28 +17553,6 @@ const QUESTIONS = {
       "x": "Les végétaux sont des eucaryotes photosynthétiques, capables de produire leur propre matière organique grâce à la chlorophylle. Ils constituent la base de la plupart des chaînes alimentaires terrestres."
     },
     {
-      "q": "Quelle est la principale différence entre l'évolution et l'adaptation individuelle ?",
-      "o": [
-        "Elles désignent exactement le même phénomène.",
-        "L'adaptation individuelle est toujours héréditaire.",
-        "L'évolution concerne uniquement un individu au cours de sa vie.",
-        "L'évolution agit sur les populations au fil des générations."
-      ],
-      "r": 3,
-      "x": "L'évolution est un changement des fréquences génétiques d'une population sur plusieurs générations, contrairement à l'adaptation individuelle, qui correspond à des modifications non héréditaires chez un organisme au cours de sa vie."
-    },
-    {
-      "q": "Quel est l'intérêt de la diversité génétique au sein d'une espèce face aux changements environnementaux ?",
-      "o": [
-        "Elle rend l'espèce totalement vulnérable à toute maladie",
-        "Elle empêche toute reproduction future de l'espèce",
-        "Elle augmente les chances de survie de l'espèce",
-        "Elle n'a aucune influence sur la survie de l'espèce"
-      ],
-      "r": 2,
-      "x": "Une grande diversité génétique augmente la probabilité qu'une partie de la population survive et se reproduise face à un changement environnemental. À l'inverse, une population peu diversifiée est plus vulnérable à l'extinction."
-    },
-    {
       "q": "Quelle maladie infantile évitable par la vaccination provoque une paralysie irréversible chez certains enfants ?",
       "o": [
         "Le paludisme",
@@ -18685,50 +17562,6 @@ const QUESTIONS = {
       ],
       "r": 1,
       "x": "La poliomyélite, virus attaquant le système nerveux, peut entraîner des paralysies définitives chez les enfants non vaccinés. La vaccination systématique a permis de faire fortement reculer cette maladie dans le monde."
-    },
-    {
-      "q": "Quelle pratique alimentaire prévient efficacement la malnutrition infantile durant les six premiers mois de vie ?",
-      "o": [
-        "L'allaitement maternel exclusif",
-        "L'introduction précoce d'aliments solides dès la naissance",
-        "L'arrêt total de l'allaitement dès la naissance",
-        "L'alimentation exclusive à base de céréales sèches"
-      ],
-      "r": 0,
-      "x": "L'allaitement maternel exclusif durant les six premiers mois apporte tous les nutriments et anticorps nécessaires au nourrisson. Il renforce aussi son immunité naturelle contre de nombreuses infections."
-    },
-    {
-      "q": "Quel signe clinique majeur permet souvent de suspecter le paludisme chez un enfant ?",
-      "o": [
-        "Une perte totale de l'appétit uniquement",
-        "Une fièvre élevée accompagnée de frissons",
-        "Une amélioration soudaine de l'état général",
-        "Une croissance accélérée"
-      ],
-      "r": 1,
-      "x": "Une fièvre élevée avec frissons est un signe clinique fréquent du paludisme, nécessitant une consultation rapide et un test diagnostique. Un traitement précoce évite l'évolution vers une forme grave de la maladie."
-    },
-    {
-      "q": "Quelle méthode de prévention réduit efficacement les piqûres de moustiques responsables du paludisme la nuit ?",
-      "o": [
-        "L'utilisation de moustiquaires imprégnées d'insecticide",
-        "Le port de vêtements légers uniquement le jour",
-        "L'évitement total du sommeil",
-        "La consommation d'aliments sucrés avant le coucher"
-      ],
-      "r": 0,
-      "x": "Les moustiquaires imprégnées d'insecticide protègent efficacement contre les piqûres du moustique anophèle, actif surtout la nuit. Elles constituent l'un des moyens de prévention les plus efficaces contre le paludisme."
-    },
-    {
-      "q": "Quel est l'intérêt principal du dépistage précoce des maladies chroniques comme le diabète ?",
-      "o": [
-        "Il aggrave systématiquement la maladie",
-        "Il n'apporte aucun bénéfice au patient",
-        "Il permet une prise en charge rapide",
-        "Il remplace totalement le besoin de traitement médical"
-      ],
-      "r": 2,
-      "x": "Un dépistage précoce permet d'adapter rapidement le traitement et le mode de vie, limitant ainsi les complications à long terme. C'est particulièrement important pour des maladies chroniques comme le diabète ou l'hypertension."
     },
     {
       "q": "Quelle est la principale cause de transmission de la bilharziose ?",
@@ -18753,50 +17586,6 @@ const QUESTIONS = {
       "x": "La vitamine D, synthétisée sous l'effet du soleil, favorise l'absorption du calcium et la bonne minéralisation des os. Sa carence peut provoquer le rachitisme chez l'enfant."
     },
     {
-      "q": "Quelle mesure d'hygiène alimentaire réduit le risque d'intoxication par des aliments avariés ?",
-      "o": [
-        "Conserver les aliments cuits à température ambiante plusieurs jours",
-        "Consommer systématiquement des aliments crus non lavés",
-        "Respecter la chaîne du froid et bien cuire les aliments",
-        "Ignorer les dates de péremption des produits"
-      ],
-      "r": 2,
-      "x": "Le respect de la chaîne du froid et une cuisson suffisante détruisent la plupart des germes responsables des intoxications alimentaires. Ces précautions simples réduisent fortement le risque de maladies d'origine alimentaire."
-    },
-    {
-      "q": "Quel facteur augmente significativement le risque de maladies cardiovasculaires ?",
-      "o": [
-        "Une activité physique régulière",
-        "Une alimentation riche en fruits et légumes",
-        "Un sommeil suffisant et régulier",
-        "Le tabagisme régulier"
-      ],
-      "r": 3,
-      "x": "Le tabagisme favorise l'athérosclérose et augmente fortement le risque d'infarctus et d'accident vasculaire cérébral. Arrêter de fumer reste l'une des mesures les plus efficaces pour préserver la santé cardiovasculaire."
-    },
-    {
-      "q": "Quel est le rôle des centres de santé communautaires dans la prévention sanitaire en zone rurale ?",
-      "o": [
-        "Ils n'ont aucun rôle dans la prévention.",
-        "Ils remplacent totalement les hôpitaux.",
-        "Ils se limitent à la vente de médicaments.",
-        "Ils assurent les soins de santé de premier niveau."
-      ],
-      "r": 3,
-      "x": "Les centres de santé communautaires assurent les soins de santé primaires, notamment la vaccination, la sensibilisation, les consultations de base et certaines activités de prévention. Ils rapprochent les services de santé des populations rurales et jouent un rôle essentiel dans la prévention des maladies"
-    },
-    {
-      "q": "Quelle est la principale conséquence d'une déshydratation sévère chez un enfant souffrant de diarrhée ?",
-      "o": [
-        "Une amélioration rapide de son état général",
-        "Un risque vital nécessitant une réhydratation",
-        "Une croissance accélérée immédiate",
-        "Une immunité renforcée durablement"
-      ],
-      "r": 1,
-      "x": "Une diarrhée sévère peut entraîner une perte importante d'eau et de sels minéraux, mettant la vie de l'enfant en danger sans réhydratation rapide. Les jeunes enfants sont particulièrement vulnérables à ce risque de déshydratation."
-    },
-    {
       "q": "Quelle solution simple permet de réhydrater un enfant souffrant de diarrhée, recommandée par l'OMS ?",
       "o": [
         "Le lait concentré sucré",
@@ -18806,17 +17595,6 @@ const QUESTIONS = {
       ],
       "r": 3,
       "x": "La solution de réhydratation orale, à base d'eau, de sel et de sucre, compense efficacement les pertes hydriques dues à la diarrhée. Elle est simple à préparer et largement recommandée par l'OMS."
-    },
-    {
-      "q": "Quelle pratique d'hygiène corporelle limite la transmission des maladies de la peau et des yeux ?",
-      "o": [
-        "Éviter tout lavage du visage",
-        "Partager systématiquement les serviettes de toilette",
-        "Se laver le visage et le corps avec de l'eau propre",
-        "Utiliser une eau stagnante non traitée pour la toilette"
-      ],
-      "r": 2,
-      "x": "Un lavage régulier du visage et du corps avec de l'eau propre réduit le risque d'infections cutanées et oculaires comme le trachome. Cette pratique simple contribue à préserver la santé publique dans les communautés."
     },
     {
       "q": "Quel est l'objectif principal des campagnes de sensibilisation sanitaire menées dans les villages ?",
@@ -18829,7 +17607,6 @@ const QUESTIONS = {
       "r": 1,
       "x": "Les campagnes de sensibilisation visent à informer les populations et à encourager des comportements favorables à la prévention des maladies. Elles complètent ainsi l'action des centres de santé sur le terrain."
     },
-  
     {
       "q": "Quel organite cellulaire est responsable de la production d'énergie sous forme d'ATP ?",
       "o": [
@@ -19150,28 +17927,6 @@ const QUESTIONS = {
       "x": "Dans l'ADN, l'adénine s'apparie avec la thymine par deux liaisons hydrogène, selon la règle de complémentarité. Cette complémentarité des bases assure la fidélité de la réplication de l'ADN."
     },
     {
-      "q": "Quel est le rôle de l'ARN messager dans la cellule ?",
-      "o": [
-        "Stocker l'information génétique de façon permanente",
-        "Transporter l'information génétique du noyau vers les ribosomes",
-        "Catalyser les réactions chimiques cellulaires",
-        "Constituer la membrane du noyau"
-      ],
-      "r": 1,
-      "x": "L'ARN messager copie l'information d'un gène et la transporte du noyau vers les ribosomes pour la traduction en protéine. Cette molécule est produite lors de la transcription et sert de modèle pour la synthèse des protéines lors de la traduction"
-    },
-    {
-      "q": "Un gène dominant s'exprime chez un individu :",
-      "o": [
-        "Dès qu'il est présent en un seul exemplaire",
-        "Uniquement s'il est présent en deux exemplaires",
-        "Jamais chez les hétérozygotes",
-        "Uniquement chez les femelles"
-      ],
-      "r": 0,
-      "x": "Un allèle dominant masque l'expression de l'allèle récessif dès qu'il est présent, même à l'état hétérozygote. L'allèle récessif ne s'exprime donc que lorsqu'il est présent en double exemplaire."
-    },
-    {
       "q": "Quel scientifique est considéré comme le fondateur de la génétique moderne grâce à ses travaux sur les petits pois ?",
       "o": [
         "Charles Darwin",
@@ -19282,7 +18037,7 @@ const QUESTIONS = {
       "x": "La salive contient de l'amylase salivaire qui commence à dégrader l'amidon dès la bouche. La mastication favorise également ce premier travail chimique en fragmentant les aliments."
     },
     {
-      "q": "Quel organe produit la bile nécessaire à la digestion des graisses ?",
+      "q": "Quel organe produit la bile ?",
       "o": [
         "Le foie",
         "Le pancréas",
@@ -19425,17 +18180,6 @@ const QUESTIONS = {
       "x": "Le scorbut résulte d'une carence en vitamine C, entraînant fatigue, saignements des gencives et fragilité vasculaire. Il était autrefois fréquent chez les marins privés de fruits frais. Retiens: vitamine C → Scorbut ; vitamine D → Rachitisme ; vitamine B1 → Béribéri ; vitamine B3 → Pellagre."
     },
     {
-      "q": "Quel est le rôle de l'eau dans l'organisme humain ?",
-      "o": [
-        "Assurer le transport des substances et réguler la température",
-        "Fournir l'essentiel de l'énergie cellulaire",
-        "Construire les tissus musculaires",
-        "Stocker l'information génétique"
-      ],
-      "r": 0,
-      "x": "L'eau, majoritaire dans le corps humain, sert de solvant, de moyen de transport et de régulateur thermique. Une hydratation suffisante est essentielle au bon fonctionnement de tous les organes."
-    },
-    {
       "q": "Quel organe assure les échanges gazeux entre l'air et le sang ?",
       "o": [
         "Le cœur",
@@ -19566,17 +18310,6 @@ const QUESTIONS = {
       ],
       "r": 3,
       "x": "Le cœur, via le ventricule droit, envoie le sang pauvre en oxygène vers les poumons par l'artère pulmonaire. Le sang y est ensuite rechargé en oxygène avant de revenir vers le cœur."
-    },
-    {
-      "q": "Quelle est la conséquence d'un manque prolongé d'oxygène dans les tissus ?",
-      "o": [
-        "Une amélioration du métabolisme cellulaire",
-        "Une souffrance cellulaire",
-        "Une augmentation de la production de globules blancs",
-        "Une meilleure digestion des aliments"
-      ],
-      "r": 1,
-      "x": "Sans oxygène suffisant, les cellules ne peuvent plus produire assez d'ATP, ce qui entraîne leur souffrance puis leur mort. Ce manque d'oxygène est appelé hypoxie et peut toucher n'importe quel organe."
     },
     {
       "q": "Quel est le rôle de la trachée dans l'appareil respiratoire ?",
@@ -19744,28 +18477,6 @@ const QUESTIONS = {
       "x": "La tension artérielle mesure la pression qu'exerce le sang sur les parois des artères lors de la circulation. Une tension trop élevée de façon prolongée fatigue le cœur et les vaisseaux."
     },
     {
-      "q": "Quel est le rôle du système lymphatique en lien avec la circulation sanguine ?",
-      "o": [
-        "Pomper le sang vers les poumons",
-        "Produire l'hémoglobine",
-        "Filtrer l'urine",
-        "Drainer les liquides tissulaires et participer à l'immunité"
-      ],
-      "r": 3,
-      "x": "Le système lymphatique collecte l'excès de liquide des tissus et contribue à la défense immunitaire de l'organisme. Il draine ce liquide, appelé lymphe, à travers un réseau de vaisseaux et de ganglions."
-    },
-    {
-      "q": "Quelle est la principale cause de l'hypertension artérielle chronique ?",
-      "o": [
-        "Un excès de globules blancs",
-        "Une carence en fer",
-        "Un excès de globules rouges uniquement",
-        "Un rétrécissement ou une rigidité des vaisseaux sanguins"
-      ],
-      "r": 3,
-      "x": "L'hypertension résulte souvent d'un durcissement ou d'un rétrécissement des artères, augmentant la résistance à l'écoulement du sang. Non traitée, elle augmente le risque d'accident vasculaire cérébral et de maladies cardiaques."
-    },
-    {
       "q": "Quelle cellule est l'unité fonctionnelle de base du système nerveux ?",
       "o": [
         "Le neurone",
@@ -19775,17 +18486,6 @@ const QUESTIONS = {
       ],
       "r": 0,
       "x": "Le neurone est la cellule spécialisée qui reçoit, traite et transmet les messages nerveux dans l'organisme. Il communique avec d'autres neurones grâce à des prolongements appelés axone et dendrites."
-    },
-    {
-      "q": "Quel est le rôle du cerveau dans le système nerveux ?",
-      "o": [
-        "Produire les hormones digestives",
-        "Filtrer le sang",
-        "Centraliser et traiter les informations nerveuses",
-        "Fabriquer les globules blancs"
-      ],
-      "r": 2,
-      "x": "Le cerveau, centre nerveux principal, reçoit les informations sensorielles, les traite et élabore les réponses appropriées. Il est protégé par le crâne et les méninges, membranes qui l'enveloppent."
     },
     {
       "q": "Comment appelle-t-on le point de connexion entre deux neurones ?",
@@ -19885,17 +18585,6 @@ const QUESTIONS = {
       ],
       "r": 1,
       "x": "La gaine de myéline isole l'axone et accélère la conduction de l'influx nerveux par saut d'un nœud à l'autre. Sa dégradation, comme dans la sclérose en plaques, ralentit fortement cette transmission."
-    },
-    {
-      "q": "Quel organe des sens transforme la lumière en signaux nerveux interprétés par le cerveau ?",
-      "o": [
-        "L'oreille",
-        "La peau",
-        "La langue",
-        "L'œil"
-      ],
-      "r": 3,
-      "x": "L'œil, grâce à la rétine, convertit les rayons lumineux en signaux nerveux transmis au cerveau par le nerf optique. C'est le cerveau qui interprète ensuite ces signaux pour former une image."
     },
     {
       "q": "Quel est le rôle des dendrites d'un neurone ?",
@@ -24923,17 +23612,6 @@ const QUESTIONS = {
       "x": "Alphabet à l'envers : Z, Y, X, W, V. On recule d'une lettre à chaque fois."
     },
     {
-      "q": "Si BLEU = 2125, comment écrit-on ROUGE en suivant la même logique (A=1) ?",
-      "o": [
-        "18215",
-        "181521575",
-        "1815757",
-        "182157"
-      ],
-      "r": 1,
-      "x": "R=18, O=15, U=21, G=7, E=5 → 181521575. Chaque lettre = sa position dans l'alphabet."
-    },
-    {
       "q": "Une horloge marque 15h00. Quel angle entre les aiguilles ?",
       "o": [
         "45°",
@@ -25044,28 +23722,6 @@ const QUESTIONS = {
       "x": "Le médecin exerce à l'hôpital ; le juge exerce au tribunal. Relation = personne / lieu d'exercice. Piège : \"Prison\" est attractif car liée à la justice — mais c'est le lieu d'exécution, non d'exercice."
     },
     {
-      "q": "Parmi les séquences, laquelle est différente ?",
-      "o": [
-        "1221",
-        "1221",
-        "1212",
-        "1221"
-      ],
-      "r": 2,
-      "x": "A, B et D sont identiques (1221). Seul C est 1212 — inversion de la 3e et 4e chiffre. Piège : la ressemblance visuelle trompe en lecture rapide."
-    },
-    {
-      "q": "Quel est le résultat de 15 % de 300 ?",
-      "o": [
-        "35",
-        "40",
-        "45",
-        "50"
-      ],
-      "r": 2,
-      "x": "15 % de 300 = 300 × 0,15 = 45. Méthode rapide : 10 % = 30, 5 % = 15 → 30 + 15 = 45. Piège : calculer 300 × 15 = 4 500 sans placer la virgule."
-    },
-    {
       "q": "Lequel de ces nombres est premier ?",
       "o": [
         "21",
@@ -25097,17 +23753,6 @@ const QUESTIONS = {
       ],
       "r": 1,
       "x": "L'eau satisfait la soif ; la nourriture satisfait la faim. Relation = remède / besoin. Piège : \"Repas\" est séduisant car associé à la nourriture — mais ce n'est pas le besoin comblé."
-    },
-    {
-      "q": "Un rectangle a une longueur de 12 cm et une largeur de 5 cm. Quel est son périmètre ?",
-      "o": [
-        "17 cm",
-        "24 cm",
-        "34 cm",
-        "60 cm"
-      ],
-      "r": 2,
-      "x": "Périmètre = 2 × (longueur + largeur) = 2 × (12 + 5) = 2 × 17 = 34 cm. Piège : 17 cm est longueur + largeur sans × 2 ; 60 cm est l'aire."
     },
     {
       "q": "Quelle lettre vient ensuite ? Z, X, V, T, __",
@@ -25163,17 +23808,6 @@ const QUESTIONS = {
       ],
       "r": 2,
       "x": "3/4 de 200 = (200 ÷ 4) × 3 = 50 × 3 = 150. Piège : calculer 200 × 3 = 600 puis oublier de diviser par 4."
-    },
-    {
-      "q": "Dans le mot EXAMEN, combien y a-t-il de voyelles ?",
-      "o": [
-        "2",
-        "3",
-        "4",
-        "5"
-      ],
-      "r": 1,
-      "x": "E-X-A-M-E-N → voyelles : E, A, E = 3 voyelles. Piège : compter le X comme voyelle ou oublier le second E."
     },
     {
       "q": "Un robinet remplit un réservoir en 4 heures. Un autre le vide en 6 heures. Si les deux fonctionnent en même temps, en combien de temps le réservoir sera-t-il plein (départ vide) ?",
@@ -25506,17 +24140,6 @@ const QUESTIONS = {
       "x": "Fils = F, père = 4F. Dans 6 ans : 4F+6 = 3(F+6) → 4F+6 = 3F+18 → F = 12. Piège : résoudre 4F = 3F donne F = 0 — oublier les +6 dans l'équation."
     },
     {
-      "q": "Quel est le résultat de 144 ÷ 12 ?",
-      "o": [
-        "10",
-        "11",
-        "12",
-        "13"
-      ],
-      "r": 2,
-      "x": "144 ÷ 12 = 12 (12 × 12 = 144, carré de 12). Piège : répondre 13 par confusion avec 13² = 169."
-    },
-    {
       "q": "Lequel de ces mots est l'antonyme de \"bénévole\" ?",
       "o": [
         "Volontaire",
@@ -25537,17 +24160,6 @@ const QUESTIONS = {
       ],
       "r": 2,
       "x": "Ce sont les nombres premiers dans l'ordre : après 13, le suivant est 17. Piège : ajouter 2 donne 15 — mais 15 = 3×5 n'est pas premier."
-    },
-    {
-      "q": "Quelle est la superficie d'un carré de côté 9 cm ?",
-      "o": [
-        "36 cm²",
-        "72 cm²",
-        "81 cm²",
-        "90 cm²"
-      ],
-      "r": 2,
-      "x": "Aire = côté² = 9² = 81 cm². Piège : 36 cm² est l'aire d'un carré de côté 6 ; 72 = 9 × 8 (confusion périmètre/aire)."
     },
     {
       "q": "Si SOLEIL = 123456, alors LIES = ?",
@@ -25616,17 +24228,6 @@ const QUESTIONS = {
       "x": "Mars, Jupiter et Saturne sont des planètes du système solaire. Le Soleil est une étoile. Piège : tous appartiennent au système solaire — distinguer planète et étoile."
     },
     {
-      "q": "Si le périmètre d'un carré est 48 cm, quelle est la longueur d'un côté ?",
-      "o": [
-        "8 cm",
-        "10 cm",
-        "12 cm",
-        "16 cm"
-      ],
-      "r": 2,
-      "x": "Périmètre = 4 × côté → côté = 48 ÷ 4 = 12 cm. Piège : diviser par 2 comme un rectangle donne 24, puis ne pas rediviser."
-    },
-    {
       "q": "Quel mot complète l'analogie ? Chaton est à Chat ce que Poulain est à :",
       "o": [
         "Bœuf",
@@ -25669,17 +24270,6 @@ const QUESTIONS = {
       ],
       "r": 3,
       "x": "Diviseurs de 24 : 1,2,3,4,6,8,12,24. Diviseurs de 36 : 1,2,3,4,6,9,12,18,36. PGCD = 12. Piège : répondre 6 (diviseur commun mais pas le plus grand)."
-    },
-    {
-      "q": "Lequel de ces mots est un verbe à l'infinitif ?",
-      "o": [
-        "Beauté",
-        "Courir",
-        "Rapidement",
-        "Bleu"
-      ],
-      "r": 1,
-      "x": "Courir est un verbe à l'infinitif. Beauté = nom, Rapidement = adverbe, Bleu = adjectif. Piège : \"Rapidement\" peut sembler verbal car il décrit une action."
     },
     {
       "q": "Une voiture consomme 8 litres d'essence aux 100 km. Pour 350 km, combien de litres faut-il ?",
@@ -25869,7 +24459,7 @@ const QUESTIONS = {
       "x": "Suite en reculant d'une lettre dans l'alphabet : P→O→N→M→L. Piège : répondre K (reculer de 2) — confusion de pas."
     },
     {
-      "q": "Si un ouvrier gagne 15 000 FCFA par semaine, combien gagne-t-il en 4 mois (16 semaines) ?",
+      "q": "Si un ouvrier gagne 15 000 FCFA par semaine, combien gagne-t-il en 4 mois (1 mois = 4 semaines) ?",
       "o": [
         "200 000 FCFA",
         "220 000 FCFA",
@@ -26820,7 +25410,7 @@ const QUESTIONS = {
         "3 cm",
         "4 cm",
         "5 cm",
-        "6 cm"
+        "8 cm"
       ],
       "r": 1,
       "x": "Volume = arête³ → arête = ∛64 = 4 cm. 4³ = 64. Piège : √64 = 8 (racine carrée, non cubique) — confusion racine 2 / racine 3."
@@ -53560,17 +52150,6 @@ const QUESTIONS = {
       "x": "Le Burkina Faso utilise toujours le franc CFA (XOF), monnaie commune de l'UEMOA."
     },
     {
-      "q": "Quand le Burkina Faso, le Mali et le Niger ont-ils annoncé leur retrait de la CEDEAO ?",
-      "o": [
-        "En janvier 2023",
-        "En janvier 2024",
-        "En mars 2024",
-        "En juillet 2024"
-      ],
-      "r": 1,
-      "x": "Les trois pays de l'AES ont annoncé conjointement leur retrait de la CEDEAO le 28 janvier 2024."
-    },
-    {
       "q": "Quel est le nom officiel du Burkina Faso avant 1984 ?",
       "o": [
         "Haute-Côte d'Ivoire",
@@ -53714,7 +52293,7 @@ const QUESTIONS = {
       "x": "Le Kamsonghin Naaba est le Ministre de la jeunesse du Mogho Naaba. Il supervise les activités liées à la jeunesse et aux initiations traditionnelles dans le royaume Mossi."
     },
     {
-      "q": "En quelle année l'Université de Ouagadougou a-t-elle été rebaptisée Université Joseph Ki-Zerbo ?",
+      "q": "En quelle année l'Université de Ouagadougou a-t-elle été rebaptisée pour porter le nom du Professeur Joseph Ki-Zerbo ?",
       "o": [
         "2012",
         "2015",
@@ -53890,7 +52469,7 @@ const QUESTIONS = {
       "x": "Monsieur Pingdwendé Gilbert Ouédraogo est le Ministre de la Communication, de la Culture, des Arts et du Tourisme et porte-parole officiel du gouvernement. Il coordonne la politique de communication de l'État burkinabè."
     },
     {
-      "q": "Qui est Ministre de l'Action humanitaire et de la Solidarité nationale ?",
+      "q": "Qui est la Ministre de la Famille et de la Solidarité ?",
       "o": [
         "Aminata Zerbo/Sabane",
         "Fatoumata Bako/Traoré",
@@ -53898,7 +52477,7 @@ const QUESTIONS = {
         "Annick Lydie Djouma Pikbougoum"
       ],
       "r": 2,
-      "x": "Le Lieutenant-Colonel Passowendé Pélagie Kabre/Kabore est la Ministre de l'Action humanitaire et de la Solidarité nationale. Elle est l'une des 5 femmes du gouvernement du 08 décembre 2024 qui compte 22 membres."
+      "x": "Le Lieutenant-Colonel Passowendé Pélagie Kabre/Kabore dirige ce département, appelé Ministère de l'Action humanitaire et de la Solidarité nationale jusqu'au remaniement du 12 janvier 2026, date à laquelle il est devenu Ministère de la Famille et de la Solidarité."
     },
     {
       "q": "Qui est le Ministre de la Justice dans le gouvernement du 08 décembre 2024 ?",
@@ -54052,7 +52631,7 @@ const QUESTIONS = {
         "Elle a conservé le même nom"
       ],
       "r": 1,
-      "x": "La Boucle du Mouhoun a été divisée en 2 nouvelles régions : la région du Sourou (4 provinces : Koosin/Nouna, Nayala/Toma, Sourou/Tougan, Mouhoun/Dédougou) et la région du Bankui (2 provinces : Balé/Boromo, Bamwa/Solenzo)."
+      "x": "La Boucle du Mouhoun a donné naissance à 2 régions : le Bankui (chef-lieu Dédougou ; provinces Mouhoun/Dédougou, Balé/Boromo, Bamwa/Solenzo) et la nouvelle région du Sourou (chef-lieu Tougan ; provinces Sourou/Tougan, Kossi/Nouna, Nayala/Toma)."
     },
     {
       "q": "Quelle est la nouvelle appellation de la région des Hauts Bassins ?",
@@ -54228,7 +52807,7 @@ const QUESTIONS = {
         "La cité de Sya"
       ],
       "r": 0,
-      "x": "Dédougou est surnommée \"La cité de Bankuy\". Chef-lieu de la province du Mouhoun (région du Sourou), elle abrite l'Université Daniel Ouézzin Coulibaly (UDOC) et le Festival International des Masques et des Arts (FESTIMA)."
+      "x": "Dédougou est surnommée \"La cité de Bankuy\". Chef-lieu de la province du Mouhoun et de la région du Bankui, elle abrite l'Université Daniel Ouézzin Coulibaly (UDOC) et le Festival International des Masques et des Arts (FESTIMA)."
     },
     {
       "q": "Quel est le surnom de la ville de Fada N'Gourma ?",
@@ -54349,7 +52928,7 @@ const QUESTIONS = {
         "La cité de Sya"
       ],
       "r": 0,
-      "x": "Nouna est surnommée \"La cité de Numadu\". Chef-lieu de la province de Kossi (région du Sourou), elle est le principal centre administratif de la nouvelle région du Sourou."
+      "x": "Nouna est surnommée \"La cité de Numadu\". Chef-lieu de la province de la Kossi, elle appartient à la nouvelle région du Sourou, dont le chef-lieu est Tougan."
     },
     {
       "q": "Quel est le surnom de la ville d'Orodara ?",
@@ -54429,7 +53008,7 @@ const QUESTIONS = {
       "x": "Tyou est surnommée \"La cité de Naaba Koudoumier\", en référence à un chef traditionnel historique de la royauté Mossi. Commune de la région du Nazinon (ancienne région du Centre-Sud)."
     },
     {
-      "q": "Qui est le Directeur Général du FESPACO ?",
+      "q": "Qui dirige l'Agence burkinabè de la cinématographie et de l'audiovisuel (ABCA), structure qui organise désormais le FESPACO ?",
       "o": [
         "Éric Bassolé",
         "Moussa Alex Sawadogo",
@@ -54437,7 +53016,7 @@ const QUESTIONS = {
         "Noufo Enok Kindo"
       ],
       "r": 1,
-      "x": "Le FESPACO (Festival Panafricain du Cinéma et de la Télévision de Ouagadougou) a été créé en 1969 et son DG actuel est Moussa Alex Sawadogo. Il se tient à Ouagadougou aux années impaires."
+      "x": "Créée en novembre 2024, l'ABCA a absorbé la Délégation générale du FESPACO. Elle est dirigée par Moussa Alex Sawadogo, ancien délégué général du FESPACO. Le FESPACO, créé en 1969, se tient aux années impaires ; sa 30e édition est prévue en 2027."
     },
     {
       "q": "Qui est le DG du SIAO et quel est son slogan ?",
@@ -54448,7 +53027,7 @@ const QUESTIONS = {
         "Ibrahim Saba, \"Vous faciliter la vie\""
       ],
       "r": 1,
-      "x": "Le SIAO (Salon International de l'Artisanat de Ouagadougou) a été créé en juin 1988. Son slogan est \"La vitrine de l'artisan africain\" et son DG est Éric Bassolé. Il se tient à Ouagadougou aux années paires."
+      "x": "Le SIAO (Salon International de l'Artisanat de Ouagadougou) a été créé en juin 1988. Son slogan est \"La vitrine de l'artisan africain\" et son DG est Éric Bassolé. Il se tient à Ouagadougou aux années paires ; la 18e édition est prévue du 30 octobre au 8 novembre 2026."
     },
     {
       "q": "Qui est la Directrice Générale de la SNC et en quelle année a-t-elle été créée ?",
@@ -54464,13 +53043,13 @@ const QUESTIONS = {
     {
       "q": "Qui est le DG de la LONAB et quel est son slogan ?",
       "o": [
-        "Ibrahim Saba, \"Vous faciliter la vie\"",
-        "Harouna Ben Barani, \"Les lots aux heureux gagnants et les bénéfices à la nation\"",
-        "Flandin Idrissa Sourabié, \"Votre bien-être, notre raison de vivre\"",
-        "Boureima Ouattara, \"Bâtir dans un cadre sécurisé\""
+        "Ibrahim Saba",
+        "Ibrahim Ben Harouna Zarani",
+        "Flandin Idrissa Sourabié",
+        "Boureima Ouattara"
       ],
       "r": 1,
-      "x": "La LONAB (Loterie Nationale Burkinabè) a été créée le 10 mai 1967. Son slogan est \"Les lots aux heureux gagnants et les bénéfices à la nation tout entière\" et son DG est Harouna Ben Barani."
+      "x": "La LONAB (Loterie Nationale Burkinabè) a été créée le 10 mai 1967. Son slogan est \"Les lots aux heureux gagnants et les bénéfices à la nation tout entière\" et son DG est Ibrahim Ben Harouna Zarani."
     },
     {
       "q": "Qui est le DG de l'ONEA et quel est son slogan ?",
@@ -54712,7 +53291,7 @@ const QUESTIONS = {
         "Portugal"
       ],
       "r": 3,
-      "x": "António Guterres (Portugal) est le 9e et actuel SG de l'ONU (depuis le 1er janvier 2017, en fonction en 2026). Ancien Premier ministre du Portugal (1995-2002), il était Haut-Commissaire de l'ONU aux réfugiés (2005-2015) avant de prendre ce poste."
+      "x": "António Guterres (Portugal) est le 9e et actuel SG de l'ONU depuis le 1er janvier 2017. Ancien Premier ministre du Portugal (1995-2002), il était Haut-Commissaire de l'ONU aux réfugiés (2005-2015) avant de prendre ce poste.  Son second mandat s'achève le 31 décembre 2026."
     },
     {
       "q": "Qui est l'actuel Premier ministre du Burkina Faso installé le 07 décembre 2024 ?",
@@ -54792,15 +53371,15 @@ const QUESTIONS = {
       "x": "Un parc a été officiellement baptisé \"Parc Thomas Sankara\" en Italie, en hommage au président-révolutionnaire burkinabè assassiné le 15 octobre 1987. Cet acte témoigne du rayonnement international de l'héritage de Sankara."
     },
     {
-      "q": "Quel est le taux de reconquête du territoire national burkinabè annoncé en 2025 ?",
+      "q": "Quel est le taux de reconquête du territoire national burkinabè annoncé le 27 juillet 2026 ?",
       "o": [
-        "55,30 %",
-        "67,80 %",
         "72,70 %",
+        "73,60 %",
+        "74,53 %",
         "80,15 %"
       ],
       "r": 2,
-      "x": "Le taux de reconquête du territoire national burkinabè est de 72,70 % en 2025, selon les autorités de la Transition. Ce chiffre indique la proportion du territoire sécurisé par les Forces de Défense et de Sécurité dans le cadre de la lutte contre le terrorisme."
+      "x": "Le 27 juillet 2026, le Ministre d'État Célestin Simporé a annoncé un taux de reconquête de 74,53 % du territoire, contre 73,56 % en décembre 2025. Ce chiffre désigne les zones reconquises, sécurisées et où l'administration revient progressivement."
     },
     {
       "q": "Qui est le président de la Confédération de l'AES pour la période 2025-2026 ?",
@@ -54836,15 +53415,15 @@ const QUESTIONS = {
       "x": "L'AES (Alliance des États du Sahel) a été créée le 16 septembre 2023, par la signature de la Charte du Liptako-Gourma entre le Burkina Faso, le Mali et le Niger. Elle a officiellement accédé au statut de confédération le 6 juillet 2024."
     },
     {
-      "q": "À quelle date les pays de l'AES ont-ils officiellement quitté la CEDEAO ?",
+      "q": "À quelle date le retrait du Burkina Faso, du Mali et du Niger de la CEDEAO est-il devenu effectif ?",
       "o": [
-        "16 septembre 2023",
         "28 janvier 2024",
+        "29 janvier 2025",
         "6 juillet 2024",
-        "22 septembre 2025"
+        "15 décembre 2024"
       ],
       "r": 1,
-      "x": "Le Burkina Faso, le Mali et le Niger ont officiellement notifié leur retrait de la CEDEAO le 28 janvier 2024, avec un délai d'un an pour la prise d'effet. Ce retrait marque une rupture majeure dans l'architecture d'intégration régionale ouest-africaine."
+      "x": "Annoncé le 28 janvier 2024, le retrait des trois pays de l'AES est devenu effectif le 29 janvier 2025, à l'expiration du délai d'un an prévu par l'article 91 du Traité révisé de la CEDEAO. Le 6 juillet 2024 correspond à la création de la Confédération AES."
     },
     {
       "q": "Combien d'articles comporte la Charte de l'AES, et comment est-elle appelée ?",
@@ -54888,7 +53467,7 @@ const QUESTIONS = {
         "Mali, Tchad et Niger"
       ],
       "r": 2,
-      "x": "L'Alliance des États du Sahel (AES), devenue Confédération des États du Sahel, regroupe trois pays : le Burkina Faso, le Mali et le Niger. Ces trois pays ont quitté la CEDEAO le 28 janvier 2024 pour créer cette nouvelle entité politique et sécuritaire."
+      "x": "La Confédération des États du Sahel (AES) regroupe le Burkina Faso, le Mali et le Niger. Ces trois pays ont annoncé leur retrait de la CEDEAO le 28 janvier 2024, retrait devenu effectif le 29 janvier 2025."
     },
     {
       "q": "À quelle date les passeports de l'AES ont-ils été mis en circulation ?",
@@ -54957,15 +53536,15 @@ const QUESTIONS = {
       "x": "La devise nationale du Burkina Faso \"La Patrie ou la Mort, nous Vaincrons\" a été officiellement promulguée le 21 novembre 2024 par le Capitaine Ibrahim Traoré. Elle a été adoptée par l'ALT par un vote unanime de 71 voix sur 71 le 29 octobre 2024, remplaçant \"Unité-Progrès-Justice\"."
     },
     {
-      "q": "À quelle date la Constitution du Burkina Faso a-t-elle été révisée pour la dernière fois, et combien de fois a-t-elle été modifiée au total ?",
+      "q": "À quelle date l'ALT a-t-elle adopté la révision constitutionnelle portant sur les articles 101, 143 et 144 ?",
       "o": [
-        "25 mai 2024, modifiée 20 fois",
-        "29 octobre 2024, modifiée 25 fois",
-        "25 mai 2024, modifiée 25 fois",
-        "21 novembre 2024, modifiée 30 fois"
+        "25 mai 2024",
+        "29 octobre 2024",
+        "20 janvier 2026",
+        "27 novembre 2026"
       ],
       "r": 2,
-      "x": "La Constitution du Burkina Faso a été modifiée 25 fois au total. La dernière modification majeure de la Charte du MPSR II a eu lieu le 25 mai 2024, renforçant les pouvoirs du Président de la Transition dans le contexte de lutte antiterroriste."
+      "x": "Le 20 janvier 2026, l'ALT a adopté la révision des articles 101, 143 et 144 de la Constitution. Elle crée un organe unique de régulation des communications et de protection des données (fusion CSC/CIL) et remplace l'ASCE-LC par une nouvelle structure de contrôle. Le 27 mars 2026 est la date d'adoption de la Charte de la Révolution."
     },
     {
       "q": "Quel est le numéro vert de la Brigade Laabal au Burkina Faso ?",
@@ -55111,15 +53690,15 @@ const QUESTIONS = {
       "x": "La Commission nationale de confédération des États du Sahel (CN-CES) a été créée le 6 novembre 2024. Cette commission nationale est chargée de coordonner au niveau du Burkina Faso les activités liées à la mise en œuvre de la Confédération de l'AES."
     },
     {
-      "q": "Quel est le premier conseil des ministres du gouvernement Rimtalba Jean Emmanuel Ouédraogo et combien de ministres compte-t-il ?",
+      "q": "Combien de ministres compte le gouvernement Rimtalba Jean Emmanuel Ouédraogo après le remaniement du 12 janvier 2026 ?",
       "o": [
-        "28 décembre 2024, 24 ministres",
-        "7 décembre 2024, 22 ministres",
-        "28 décembre 2024, 22 ministres",
-        "11 janvier 2025, 24 ministres"
+        "24 ministres",
+        "23 ministres",
+        "22 ministres",
+        "21ministres"
       ],
       "r": 2,
-      "x": "Le premier conseil des ministres du gouvernement de Rimtalba Jean Emmanuel Ouédraogo a eu lieu le 28 décembre 2024. Ce gouvernement compte 22 membres, dont 5 femmes. Il comprend 3 ministres d'État : Général Célestin Simporé (Défense), Commandant Ismaël Sombie (Agriculture) et Emile Zerbo (Administration territoriale)."
+      "x": "Le décret du 12 janvier 2026 a ramené le gouvernement de 24 à 22 ministres, par la fusion de plusieurs départements. Les 3 ministres d'État sont le Général Célestin Simporé (Guerre et Défense patriotique), le Commandant Ismaël Sombié (Agriculture, Eau, Ressources animales et halieutiques) et Emile Zerbo (Administration territoriale et Mobilité)."
     },
     {
       "q": "Qui est le Ministre de l'Économie et des Finances du gouvernement Ouédraogo (08 décembre 2024) ?",
@@ -55133,18 +53712,18 @@ const QUESTIONS = {
       "x": "Monsieur Aboubakar Nacanabo est le Ministre de l'Économie et des Finances du gouvernement formé le 08 décembre 2024. Ce portefeuille stratégique est chargé de la gestion des finances publiques, du budget de l'État et de la politique économique nationale."
     },
     {
-      "q": "Quelle est l'autre appellation de l'ALT (Assemblée Législative de la Transition) au Burkina Faso ?",
+      "q": "Quel est le nom actuel de l'organe législatif du Burkina Faso ?",
       "o": [
-        "Assemblée du Peuple Burkinabè",
+        "Assemblée Nationale",
         "Assemblée Législative du Peuple",
         "Parlement de la Transition",
-        "Conseil Législatif National"
+        "Assemblée Législative de la Transition"
       ],
       "r": 1,
-      "x": "L'Assemblée Législative de la Transition (ALT) du Burkina Faso est également appelée \"Assemblée Législative du Peuple\". Elle est composée de 71 membres (13 femmes et 58 hommes) et joue le rôle d'organe législatif pendant la période de transition."
+      "x": "La Charte de la Révolution, adoptée à l'unanimité le 27 mars 2026, a transformé l'Assemblée Législative de Transition (ALT) en Assemblée Législative du Peuple (ALP). Les lois portent désormais le suffixe /ALP, par exemple la loi n°013-2026/ALP portant code du travail."
     },
     {
-      "q": "Qui est l'actuel président de l'Assemblée Législative de la Transition (ALT) du Burkina Faso ?",
+      "q": "Qui est le président de l'Assemblée Législative du Peuple (ALP) du Burkina Faso ?",
       "o": [
         "Adama Ouédraogo",
         "Edasso Rodrigue Bayala",
@@ -55152,7 +53731,7 @@ const QUESTIONS = {
         "Basolma Bazie"
       ],
       "r": 2,
-      "x": "Ousmane Bougma préside l'Assemblée Législative de la Transition (ALT) du Burkina Faso. En tant que président de l'organe législatif, il coordonne les travaux parlementaires et représente l'Assemblée dans ses relations institutionnelles."
+      "x": "Ousmane Bougouma préside l'organe législatif depuis 2022 : d'abord l'Assemblée Législative de Transition (ALT), puis l'Assemblée Législative du Peuple (ALP) depuis la Charte de la Révolution du 27 mars 2026. Edasso Rodrigue Bayala est ministre de la Justice."
     },
     {
       "q": "Qui est l'actuel procureur du Faso au Burkina Faso ?",
@@ -55232,15 +53811,15 @@ const QUESTIONS = {
       "x": "La Confédération des États du Sahel couvre une superficie totale de 2 781 200 km². Ce vaste territoire regroupe le Burkina Faso (274 200 km²), le Mali (1 240 000 km²) et le Niger (1 267 000 km²), faisant de l'AES l'une des plus grandes entités territoriales d'Afrique de l'Ouest."
     },
     {
-      "q": "À quelle date Thomas Sankara a-t-il été officiellement proclamé héros de la Nation burkinabè ?",
+      "q": "À quelle date Thomas Sankara a-t-il été officiellement élevé au rang de héros de la Nation burkinabè ?",
       "o": [
         "15 octobre 2022",
         "15 octobre 2023",
-        "3 octobre 2024",
-        "15 octobre 2024"
+        "4 octobre 2023",
+        "3 octobre 2024"
       ],
       "r": 2,
-      "x": "Thomas Sankara a été officiellement proclamé héros de la Nation burkinabè le 3 octobre 2024. Le statut de \"héros de la Nation\" avait été créé en juin 2022. Cette reconnaissance officielle réhabilite la mémoire de Sankara, assassiné le 15 octobre 1987."
+      "x": "Le Conseil des ministres du 4 octobre 2023 a adopté le décret conférant à Thomas Sankara le statut de héros de la Nation. Ce statut avait été créé par une loi adoptée en juin 2022. Sankara a été assassiné le 15 octobre 1987."
     },
     {
       "q": "Quand le Boulevard Charles de Gaulle de Ouagadougou a-t-il été rebaptisé Boulevard Thomas Sankara ?",
@@ -55350,7 +53929,7 @@ const QUESTIONS = {
         "\"Buud Yam\" de Gaston Kaboré"
       ],
       "r": 1,
-      "x": "Le film \"Katanga, la danse des scorpions\" du réalisateur burkinabè Dani Kouyaté a remporté l'Étalon d'or de Yennenga au FESPACO 2025. D'une durée de 1h53 minutes (115 min), ce film a également remporté 4 prix spéciaux. C'est le 3e Burkinabè à remporter ce prix suprême, après Idrissa Ouédraogo (1991) et Gaston Kaboré (1997)."
+      "x": "Le film \"Katanga, la danse des scorpions\" du réalisateur burkinabè Dani Kouyaté a remporté l'Étalon d'or de Yennenga au FESPACO 2025. Dani Kouyaté est le 3e Burkinabè à remporter ce prix suprême, après Idrissa Ouédraogo (1991) et Gaston Kaboré (1997)."
     },
     {
       "q": "Combien de Burkinabè ont remporté l'Étalon d'or de Yennenga, et qui sont-ils ?",
@@ -55361,7 +53940,7 @@ const QUESTIONS = {
         "1 Burkinabè : Dani Kouyaté (2025)"
       ],
       "r": 1,
-      "x": "Trois Burkinabè ont remporté l'Étalon d'or de Yennenga : Idrissa Ouédraogo en 1991 (pour \"Tilaï\"), Gaston Kaboré en 1997 (pour \"Buud Yam\") et Dani Kouyaté en 2025 (pour \"Katanga, la danse des scorpions\"). Le Maroc détient le record avec 4 Étalons d'or."
+      "x": "Trois Burkinabè ont remporté l'Étalon d'or de Yennenga : Idrissa Ouédraogo en 1991 (pour \"Tilaï\"), Gaston Kaboré en 1997 (pour \"Buud Yam\") et Dani Kouyaté en 2025 (pour \"Katanga, la danse des scorpions\"). La 30e édition du FESPACO est prévue en 2027."
     },
     {
       "q": "Qui est le directeur général de la police nationale du Burkina Faso ?",
@@ -55558,8 +54137,8 @@ const QUESTIONS = {
         "Gérard Kango Ouédraogo",
         "Albert Ouédraogo"
       ],
-      "r": 0,
-      "x": "Maurice Yaméogo fut le premier chef de gouvernement de la Haute-Volta à l'accession à l'autonomie en 1958 (Président du Conseil de gouvernement), puis le premier Président de la République à l'indépendance le 5 août 1960. Le Burkina Faso a connu 18 Premiers ministres au total (juin 2026)."
+      "r": 2,
+      "x": "Gérard Kango Ouédraogo est devenu le premier Premier ministre de la Haute-Volta indépendante le 13 février 1971, sous la présidence de Sangoulé Lamizana. Maurice Yaméogo avait été président du Conseil de gouvernement (1958) puis premier Président de la République (1960), mais pas Premier ministre."
     },
     {
       "q": "Dans quelle ville est implantée la Base aérienne 511 du Burkina Faso ?",
@@ -55578,21 +54157,21 @@ const QUESTIONS = {
         "Patrice Talon",
         "Alassane Ouattara",
         "Julius Maada Bio",
-        "Omar Touray"
+        "Bassirou Diomaye Faye"
       ],
-      "r": 2,
-      "x": "Le président en exercice de la CEDEAO est Julius Maada Bio, le président de la République de Sierra Leone ."
+      "r": 3,
+      "x": "Le chef de l'État sénégalais Bassirou Diomaye Faye a été officiellement porté à la tête de la Conférence des chefs d'État et de gouvernement de l'organisation le 19 juillet 2026 lors du 69e sommet ordinaire à Lungi, en Sierra Leone, succédant au président sierra-léonais Julius Maada Bio."
     },
     {
-      "q": "Quels sont les organes officiels de la Transition burkinabè ?",
+      "q": "Quels sont les organes officiels du pouvoir au Burkina Faso selon la Charte de la Révolution de 2026 ?",
       "o": [
         "Président, gouvernement, assemblée nationale et Sénat",
-        "Président, Assemblée Législative de Transition et gouvernement du peuple",
+        "Président du Faso, Assemblée Législative du Peuple et Gouvernement du Peuple",
         "Président, Premier ministre, Conseil des ministres et Cour constitutionnelle",
         "Président, Conseil militaire, gouvernement et Cour suprême"
       ],
       "r": 1,
-      "x": "Les organes officiels de la Transition au Burkina Faso sont : le Président de la Transition (Capitaine Ibrahim Traoré), l'Assemblée Législative de Transition (ALT, 71 membres) et le gouvernement du peuple. Cette architecture institutionnelle a été définie par la Charte de la Transition."
+      "x": "La Charte de la Révolution, adoptée le 27 mars 2026 (datée du 1er avril 2026 dans les visas officiels), a remplacé la Charte de la Transition. L'ALT est devenue l'Assemblée Législative du Peuple (ALP) et le gouvernement de Transition le Gouvernement du Peuple."
     },
     {
       "q": "À quelle date s'est tenue la deuxième session ordinaire du Collège des Chefs d'État de la Confédération des États du Sahel (AES) ?",
@@ -55936,15 +54515,15 @@ const QUESTIONS = {
       "x": "Aïcha Diombélé/Kabré a remporté le Super Galian dans la catégorie magazine de la section production radio sonore en langue nationale. Ses deux œuvres primées étaient : \"Mankan : paralysie cérébrale des enfants, naître sous l'accusation\" (sept-oct 2025) et \"Koumankan : enfant en conflit avec la loi, l'enfant en sursis\" (15 sept - 1er oct 2025)."
     },
     {
-      "q": "Quelles premières historiques la victoire d'Aïcha Diombélé/Kabré représente-t-elle pour le Super Galian ?",
+      "q": "Quelle première historique la victoire d'Aïcha Diombélé/Kabré représente-t-elle pour le Super Galian ?",
       "o": [
-        "Première femme lauréate, première production radiophonique et première œuvre en langue nationale",
-        "Première journaliste de la RTB, première production en langue dioula et première de la région du Yaadga",
-        "Première femme, première journaliste du Centre et première œuvre sur la santé infantile",
-        "Première production radio, première œuvre sur l'enfance et première journaliste de Ouagadougou"
+        "Première femme à remporter le Super Galian",
+        "Première journaliste de la RTB à remporter le Super Galian",
+        "Première journaliste de la région du Yaadga à remporter le Super Galian",
+        "Première journaliste de Ouagadougou à remporter le Super  Galian"
       ],
       "r": 0,
-      "x": "La victoire d'Aïcha Diombélé/Kabré marque trois premières historiques : c'est la 1ère fois qu'une femme remporte le Super Galian, la 1ère fois qu'une production radiophonique l'obtient et la 1ère fois qu'une œuvre réalisée en langue nationale est sacrée Super Galian depuis la création du concours."
+      "x": "Aïcha Diombélé/Kabré est devenue en 2026 la première femme à remporter le Super Galian, la plus haute distinction des Prix Galian."
     },
     {
       "q": "Quelle est la dotation accordée à la lauréate du Super Galian 2026 ?",
@@ -55966,7 +54545,7 @@ const QUESTIONS = {
         "100 candidatures pour 180 œuvres"
       ],
       "r": 2,
-      "x": "La 29e édition des Prix Galian a enregistré 134 candidatures pour 268 œuvres. Ces productions étaient réparties entre 5 catégories : 68 œuvres en presse écrite, 70 en radiodiffusion sonore, 28 en télévision, 58 en presse en ligne et 34 en langues nationales."
+      "x": "La 29e édition des Prix Galian a enregistré 134 candidatures pour 268 œuvres. Ces productions étaient réparties entre 5 catégories : œuvres en presse écrite, radiodiffusion sonore, télévision, presse en ligne et langues nationales."
     },
     {
       "q": "Qui est le Président d'honneur de la 29e édition des Prix Galian 2026 ?",
@@ -56015,7 +54594,7 @@ const QUESTIONS = {
     {
       "q": "Qui a proclamé le nom de la lauréate du Super Galian 2026 lors de la cérémonie de clôture ?",
       "o": [
-        "Dr Ousmane Bougouma, Président de l'Assemblée législative de transition",
+        "Dr Ousmane Bougouma, Président de l'ALT",
         "Pingdwendé Gilbert Ouédraogo, Ministre de la Communication",
         "Hamado Ouangrawa, Président de l'OBM",
         "Capitaine Martha Céleste Anderson Dekomwin Médah"
@@ -56024,15 +54603,15 @@ const QUESTIONS = {
       "x": "Dr Ousmane Bougouma, Président de l'Assemblée législative de transition (ALT), a proclamé le nom de la lauréate du Super Galian 2026 lors de la cérémonie de clôture. C'est lui qui a officiellement sacré Aïcha Diombélé/Kabré, journaliste de la RTB Radio en langues nationales."
     },
     {
-      "q": "Qui est le ministère organisateur des Prix Galian au Burkina Faso et quel ministre l'a présidé en 2026 ?",
+      "q": "Quel ministère a organisé la 29e édition des Prix Galian en 2026 et quel ministre en assurait la direction ?",
       "o": [
-        "Le ministère de la Culture, organisé par Me Apollinaire Kyelem de Tambèla",
-        "Le ministère de l'Éducation, organisé par Jacques Sosthène Dingara",
-        "Le ministère de la Communication, de la Culture, des Arts et du Tourisme, organisé par Pingdwendé Gilbert Ouédraogo",
-        "Le ministère de l'Enseignement supérieur, organisé par Adjima Thombiano"
+        "Le ministère de la Culture, assuré par Me Apollinaire Kyelem de Tambèla",
+        "Le ministère de l'Éducation, assuré par Jacques Sosthène Dingara",
+        "Le ministère de la Communication, de la Culture, des Arts et du Tourisme, assuré par Pingdwendé Gilbert Ouédraogo",
+        "Le ministère de l'Enseignement supérieur, assuré par Adjima Thombiano"
       ],
       "r": 2,
-      "x": "Les Prix Galian sont organisés chaque année par le ministère en charge de la Communication. En 2026, c'est Pingdwendé Gilbert Ouédraogo, Ministre de la Communication, de la Culture, des Arts et du Tourisme et porte-parole du gouvernement, qui a présidé la 29e édition. Il a installé les 5 jurys le 8 mai 2026 et appelé à un journalisme patriotique."
+      "x": "Les Prix Galian sont organisés chaque année par le ministère en charge de la Communication. En 2026, c'est Pingdwendé Gilbert Ouédraogo, Ministre de la Communication, de la Culture, des Arts et du Tourisme et porte-parole du gouvernement, qui a présidé la 29e édition."
     },
     {
       "q": "Quel est le montant total du Plan RELANCE 2026-2030, nouveau référentiel national de développement du Burkina Faso ?",
@@ -56083,11 +54662,11 @@ const QUESTIONS = {
       "o": [
         "80 articles répartis en 4 titres",
         "95 articles répartis en 5 titres",
-        "110 articles répartis en 6 titres",
+        "112 articles répartis en 6 titres",
         "120 articles répartis en 7 titres"
       ],
       "r": 2,
-      "x": "La loi sur les libertés religieuses, adoptée le 20 juin 2026, comporte 110 articles répartis en 6 titres. Elle marque une étape importante dans la volonté des autorités de mieux réguler les activités religieuses au Burkina Faso dans un contexte sécuritaire marqué par l'instrumentalisation religieuse."
+      "x": "La loi sur les libertés religieuses, adoptée le 20 juin 2026, comporte 112 articles répartis en 6 titres. Elle marque une étape importante dans la volonté des autorités de mieux réguler les activités religieuses au Burkina Faso dans un contexte sécuritaire marqué par l'instrumentalisation religieuse."
     },
     {
       "q": "À quelle date l'Assemblée Législative du Peuple (ALP) du Burkina Faso a-t-elle adopté la loi sur les libertés religieuses ?",
@@ -56098,7 +54677,7 @@ const QUESTIONS = {
         "29 janvier 2026"
       ],
       "r": 0,
-      "x": "L'ALP (Assemblée Législative du Peuple, ancien nom : ALT) a adopté à l'unanimité la loi sur les libertés religieuses le 20 juin 2026, lors d'une séance plénière présidée par le Camarade Dr Ousmane Bougouma. Ce texte de 110 articles répartis en 6 titres constitue un cadre juridique inédit au Burkina Faso."
+      "x": "L'ALP (Assemblée Législative du Peuple, ancien nom : ALT) a adopté à l'unanimité la loi sur les libertés religieuses le 20 juin 2026, lors d'une séance plénière présidée par le Camarade Dr Ousmane Bougouma. Ce texte de 112 articles répartis en 6 titres constitue un cadre juridique inédit au Burkina Faso."
     },
     {
       "q": "Quel objectif le Gouvernement s'est-il fixé en matière de réservistes militaires d'ici fin 2026 ?",
@@ -56145,7 +54724,7 @@ const QUESTIONS = {
       "x": "Dr Aboubakar Nacanabo, Ministre de l'Économie et des Finances du Burkina Faso, a été élu président du Conseil des gouverneurs de la Banque Islamique de Développement (BID) en marge des assemblées annuelles du Groupe BID. Cette distinction illustre le rayonnement du Burkina Faso au sein des institutions financières islamiques."
     },
     {
-      "q": "En quelle période la société SOCOMA a-t-elle fermé ses activités ?",
+      "q": "En quelle période la société SOCOMA a-t-elle suspendu ses activités ?",
       "o": [
         "Octobre 2024",
         "Juillet 2025",
@@ -56153,7 +54732,7 @@ const QUESTIONS = {
         "Mars 2026"
       ],
       "r": 1,
-      "x": "SOCOMA (Société Cotonnière du Gourma) a fermé ses activités en juillet 2025. Cette fermeture a impacté la production cotonnière nationale dans un contexte déjà affecté par la baisse des cours mondiaux du coton et les défis sécuritaires."
+      "x": "SOCOMA (Société Cotonnière du Gourma) a suspendu ses activités en juillet 2025. Cette fermeture a impacté la production cotonnière nationale dans un contexte déjà affecté par la baisse des cours mondiaux du coton et les défis sécuritaires."
     },
     {
       "q": "Quand est entrée en production la mine d'or de Kiaka au Burkina Faso ?",
@@ -56277,17 +54856,6 @@ const QUESTIONS = {
       "x": "Les ministres chargés du Commerce des trois pays de l'AES (Burkina Faso, Mali, Niger) ont tenu une réunion stratégique le 15 juin 2026 pour affiner leur stratégie commune de commerce, conformément aux orientations du Président en exercice de l'AES, le Capitaine Ibrahim Traoré."
     },
     {
-      "q": "Quel grand projet d'infrastructure est annoncé pour une mise en service en 2026 ?",
-      "o": [
-        "Le barrage de Samendéni (2e tranche)",
-        "Le nouvel aéroport de Ouagadougou-Donsin",
-        "L'autoroute Ouagadougou-Koudougou",
-        "Le centre hospitalier universitaire de Kaya"
-      ],
-      "r": 1,
-      "x": "La finalisation du nouvel aéroport de Ouagadougou-Donsin est annoncée pour une mise en service en 2026. Cet aéroport moderne, situé à Donsin à environ 35 km de Ouagadougou, a vocation à remplacer l'actuel aéroport international de Ouagadougou (Aéroport international Thomas Sankara), avec une capacité nettement supérieure."
-    },
-    {
       "q": "Quelle artiste burkinabè a remporté le Kundé d'or 2026 ?",
       "o": [
         "Smarty",
@@ -56296,7 +54864,7 @@ const QUESTIONS = {
         "Tanya"
       ],
       "r": 3,
-      "x": "Tanya a remporté le Kundé d'or 2026, la distinction musicale la plus prestigieuse du Burkina Faso. Elle s'est imposée lors de la 23e édition du Kundé d'or (8 mai 2026) face à Reman Yolchido et Privat 4.5. Tanya a enchaîné les distinctions en 2026, s'imposant également à la 13e édition des Faso Music Awards."
+      "x": "Tanya a remporté le Kundé d'or 2026, la distinction musicale la plus prestigieuse du Burkina Faso. Elle s'est imposée lors de la 24e édition du Kundé d'or (8 mai 2026) face à Reman Yolchido et Privat 4.5. Tanya a enchaîné les distinctions en 2026, s'imposant également à la 13e édition des Faso Music Awards."
     },
     {
       "q": "Quelles distinctions Tanya a-t-elle remportées à la 13e édition des Faso Music Awards 2026 ?",
@@ -56354,10 +54922,10 @@ const QUESTIONS = {
       "x": "La 8e édition de la Journée nationale de l'arbre s'est déroulée à Ouagadougou le samedi 20 juin 2026 sous la présidence du chef de l'État, le capitaine Ibrahim Traoré. Cette journée a marqué le lancement de la campagne de reforestation sur l'ensemble du territoire national."
     },
     {
-      "q": "Quel objectif citoyen le Capitaine Ibrahim Traoré a-t-il fixé lors de la Journée nationale de l'Arbre du 20 juin 2026 ?",
+      "q": "Quel objectif national a été fixé dans le cadre de l'Heure patriotique pour reverdir le Faso ?",
       "o": [
         "Mettre en terre 500 000 plants médicinaux",
-        "Mettre en terre 5 millions de plants en une heure",
+        "Mettre en terre 5 millions de plants",
         "Créer une forêt classée par commune rurale",
         "Reforester uniquement les camps militaires"
       ],
@@ -56375,7 +54943,6 @@ const QUESTIONS = {
       "r": 0,
       "x": "Ce thème vise à encourager chaque ménage à planter et à entretenir au moins un arbre dans sa concession afin de contribuer durablement au reverdissement du pays. À cette occasion, une opération patriotique de mise en terre de 5 millions de plants en une heure a également été organisée."
     },
-  
     {
       "q": "À quelle date l'Assemblée Législative du Peuple (ALP) du Burkina Faso a-t-elle adopté la Charte de la Révolution (RPP) ?",
       "o": [
@@ -56399,7 +54966,7 @@ const QUESTIONS = {
       "x": "Le remaniement gouvernemental de 2026 a été opéré par le Décret n°2026-0006/PF/PRIM du 12 janvier 2026. Ce décret a restructuré la composition du gouvernement burkinabè dont la formation initiale datait du 8 décembre 2024."
     },
     {
-      "q": "Le Burkina Faso a rompu ses relations diplomatiques avec la France. À quelle date cette rupture officielle a-t-elle été annoncée ?",
+      "q": "À quelle date le Burkina Faso a rompu ses relations diplomatiques avec la France ?",
       "o": [
         "15 juin 2026",
         "20 juin 2026",
@@ -56440,7 +55007,7 @@ const QUESTIONS = {
         "Loi n°009-2025/ALT du 1er septembre 2025"
       ],
       "r": 0,
-      "x": "La loi n°012-2025/ALT du 1er septembre 2025 porte Code des personnes et de la famille au Burkina Faso. Ce texte régit notamment l'état civil, le mariage, les successions et les droits des personnes. Elle sert de référence pour l'octroi du statut de résident permanent aux étrangers au Burkina Faso."
+      "x": "La loi n°012-2025/ALT du 1er septembre 2025 porte Code des personnes et de la famille au Burkina Faso. Ce texte régit notamment l'état civil, le mariage, les successions et les droits des personnes."
     },
     {
       "q": "Quelle loi encadre le fonctionnement des associations au Burkina Faso ?",
@@ -56520,7 +55087,7 @@ const QUESTIONS = {
       "x": "L'État a racheté les 5,537 % du capital détenus par les actionnaires privés, devenant ainsi l'unique actionnaire de la SOFITEX (le reste appartenant déjà à l'État). Le nouveau DG de la SOFITEX est Braïma Barro, nommé le 22 janvier 2026."
     },
     {
-      "q": "Dans quelle ville et commune est implantée la société TEXFORCES-BF (Textile des Forces du Burkina Faso) ?",
+      "q": "Dans quelle localité et quelle commune est implantée la société TEXFORCES-BF ?",
       "o": [
         "Logofourousso, commune urbaine de Bobo-Dioulasso",
         "Gampéla, commune de Saaba (Ouagadougou)",
@@ -56528,7 +55095,7 @@ const QUESTIONS = {
         "Peni, commune de Bobo-Dioulasso"
       ],
       "r": 0,
-      "x": "La société TEXFORCES-BF est implantée à Logofourousso, commune urbaine de Bobo-Dioulasso. Sa déclaration d'utilité publique urgente a été adoptée en Conseil des ministres le 25 juin 2026. Les deux terrains concernés couvrent une superficie de 5 hectares 69 ares 90 centiares."
+      "x": "La société TEXFORCES-BF  (Textile des Forces du Burkina Faso) est implantée à Logofourousso, commune urbaine de Bobo-Dioulasso. Sa déclaration d'utilité publique urgente a été adoptée en Conseil des ministres le 25 juin 2026."
     },
     {
       "q": "Quelle est la production totale de coton graine au Burkina Faso lors de la campagne cotonnière 2025-2026 ?",
@@ -56553,15 +55120,15 @@ const QUESTIONS = {
       "x": "La campagne cotonnière 2025-2026 a emblavé 391 407 hectares, contre 346 778 ha lors de la campagne précédente, soit une hausse de 13%. Pour la campagne 2026-2027, le gouvernement a fixé le prix de cession à crédit des engrais à 17 500 FCFA le sac de 50 kg."
     },
     {
-      "q": "À quelle date la facture électronique certifiée a-t-elle été généralisée au Burkina Faso pour lutter contre la fraude fiscale ?",
+      "q": "À quelle date la facture électronique certifiée (FEC) a-t-elle été officiellement lancée au Burkina Faso ?",
       "o": [
-        "Octobre 2025",
-        "Dès janvier 2026",
-        "Juillet 2026",
-        "Avril 2026"
+        "5 Octobre 2025",
+        "6 janvier 2026",
+        "5 Juillet 2026",
+        "6 Avril 2026"
       ],
       "r": 1,
-      "x": "La facture électronique certifiée a été généralisée au Burkina Faso dès janvier 2026 afin d'assainir les transactions commerciales et améliorer la maîtrise de la TVA. Cette réforme, s'accompagne du projet Smart Douane pour moderniser les capacités de la douane. Ces deux mesures visent à augmenter les recettes fiscales prévues dans la loi de finances 2026."
+      "x": "La Facture électronique certifiée (FEC) a été officiellement lancée le 6 janvier 2026 à Ouagadougou par le ministre de l’Économie et des Finances. Elle vise notamment à moderniser la facturation, sécuriser les recettes fiscales et lutter contre la fraude."
     },
     {
       "q": "Dans quelle fusion le Fonds d'Appui à la Presse Privée (FAPP) a-t-il été intégré en 2026 ?",
@@ -56573,17 +55140,6 @@ const QUESTIONS = {
       ],
       "r": 0,
       "x": "Le FAPP (Fonds d'Appui à la Presse Privée) a été fusionné dans le Fonds Wassa Bondo (Fonds d'appui au sport et à la presse privée), lors de la réorganisation du ministère de la Communication du 25 juin 2026. Parallèlement, le FDCT (Fonds de développement culturel et touristique) a été fusionné dans le FBDES Tõogo."
-    },
-    {
-      "q": "Quand une délégation burkinabè s'est-elle rendue à Moscou en visite de travail ?",
-      "o": [
-        "Les 27 et 28 juillet 2025",
-        "Les 22 et 23 janvier 2026",
-        "Les 12 et 13 février 2026",
-        "Les 5 et 6 mars 2026"
-      ],
-      "r": 2,
-      "x": "Une délégation burkinabè s'est rendue à Moscou (Fédération de Russie) les 12 et 13 février 2026 dans le cadre d'une visite de travail. Cette visite s'inscrit dans le renforcement de la coopération bilatérale entre le Burkina Faso et la Russie, partenaire privilégié dans les domaines sécuritaire et économique."
     },
     {
       "q": "Combien de patients atteints d'hydrocèle ont été pris en charge chirurgicalement gratuitement en 2025 au Burkina Faso ?",
@@ -56606,17 +55162,6 @@ const QUESTIONS = {
       ],
       "r": 3,
       "x": "En mars 2025, plus d'un million de personnes déplacées internes (PDI) ont été réinstallées dans environ 700 localités de leur région d'origine au Burkina Faso. Ce résultat est lié aux opérations de reconquête territoriale menées par les FANB et les VDP. Le pays avait recensé 2,01 millions de PDI au 30 mars 2023."
-    },
-    {
-      "q": "Quelle décision majeure a été prise concernant les enseignants communautaires au Burkina Faso ?",
-      "o": [
-        "Intégration des enseignants communautaires dans la fonction publique",
-        "Augmentation de leurs indemnités de 50%",
-        "Création d'un statut spécial d'enseignant auxiliaire",
-        "Déploiement de 10 000 enseignants communautaires dans les zones rurales"
-      ],
-      "r": 0,
-      "x": "Le gouvernement burkinabè a accordé le feu vert à l'intégration des enseignants communautaires dans la fonction publique, les reconnaissant comme \"VDP (Volontaires pour la Défense de la Patrie) de l'éducation\". Cette mesure permet à ces agents contractuels de l'éducation nationale d'accéder au statut de fonctionnaire."
     },
     {
       "q": "Qui a été sacrée Super Enseignante de l'Année 2025 lors de la Journée de l'Excellence Scolaire au Burkina Faso ?",
