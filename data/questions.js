@@ -1,6 +1,6 @@
 // Bara Concours - Base de questions QCM
-// Mis à jour le 2026-10-09 - Actualité, SVT Cycle B, Psychotechnique : 45 questions corrigées, 132 retirées
-// Total : 5311 questions réparties sur 37 matières
+// Mis à jour le 2026-10-09 (soir) - +1 324 QCM : Culture Générale, SVT Cycle B, Psychotechnique
+// Total : 6635 questions réparties sur 37 matières
 
 const QUESTIONS = {
   "francais": [
@@ -16423,6 +16423,6584 @@ const QUESTIONS = {
       ],
       "r": 2,
       "x": "Le cinéma est le 7e art, désignation créée par le critique Ricciotto Canudo en 1911. Art issu de l'invention des frères Lumière (1895), il occupe une place centrale dans la culture africaine, célébrée par le FESPACO (créé en 1969 à Ouagadougou)."
+    },
+    {
+      "q": "L'Organisation mondiale de la santé (OMS) a été créée le :",
+      "o": [
+        "16 octobre 1945",
+        "11 décembre 1946",
+        "10 décembre 1948",
+        "7 avril 1948"
+      ],
+      "r": 3,
+      "x": "L'OMS est créée le 7 avril 1948, date célébrée chaque année comme Journée mondiale de la santé, et son siège est à Genève. Le 16 octobre 1945 correspond à la création de la FAO et le 11 décembre 1946 à celle de l'UNICEF."
+    },
+    {
+      "q": "Le siège de l'Organisation des Nations unies pour l'alimentation et l'agriculture (FAO) se trouve à :",
+      "o": [
+        "Rome",
+        "Genève",
+        "Vienne",
+        "Nairobi"
+      ],
+      "r": 0,
+      "x": "La FAO, créée le 16 octobre 1945, a son siège à Rome, en Italie. Genève abrite l'OMS et l'OIT, tandis que Vienne accueille l'AIEA et l'OPEP."
+    },
+    {
+      "q": "L'Organisation internationale du travail (OIT) a été créée en :",
+      "o": [
+        "1919, par le traité de Versailles",
+        "1929, après la crise économique",
+        "1945, par la Charte de l'ONU",
+        "1948, par l'Assemblée générale"
+      ],
+      "r": 0,
+      "x": "L'OIT naît en 1919 d'une clause du traité de Versailles et devient en 1946 la première institution spécialisée des Nations unies. Son siège est à Genève et elle repose sur un fonctionnement tripartite associant États, employeurs et travailleurs."
+    },
+    {
+      "q": "Le Fonds monétaire international (FMI) a été créé lors de la conférence de :",
+      "o": [
+        "Yalta, en février 1945",
+        "Potsdam, en août 1945",
+        "San Francisco, en juin 1945",
+        "Bretton Woods, en juillet 1944"
+      ],
+      "r": 3,
+      "x": "Le FMI et la Banque mondiale sont créés à la conférence de Bretton Woods en juillet 1944, aux États-Unis. Le siège du FMI est à Washington et il compte aujourd'hui plus de 190 États membres."
+    },
+    {
+      "q": "L'Organisation mondiale du commerce (OMC) est entrée en fonction le :",
+      "o": [
+        "30 octobre 1947",
+        "1er janvier 1948",
+        "15 avril 1994",
+        "1er janvier 1995"
+      ],
+      "r": 3,
+      "x": "L'OMC entre en fonction le 1er janvier 1995 et succède au GATT signé le 30 octobre 1947. Son siège est à Genève et elle règle les différends commerciaux entre ses membres."
+    },
+    {
+      "q": "Le Fonds des Nations unies pour l'enfance (UNICEF) a été créé le :",
+      "o": [
+        "24 octobre 1945",
+        "20 novembre 1989",
+        "20 novembre 1959",
+        "11 décembre 1946"
+      ],
+      "r": 3,
+      "x": "L'UNICEF est créé le 11 décembre 1946 pour secourir les enfants de l'Europe d'après-guerre, avec siège à New York. Le 20 novembre 1989 correspond à l'adoption de la Convention relative aux droits de l'enfant."
+    },
+    {
+      "q": "Le Haut-Commissariat des Nations unies pour les réfugiés (HCR) a été institué en :",
+      "o": [
+        "1945",
+        "1950",
+        "1961",
+        "1972"
+      ],
+      "r": 1,
+      "x": "Le HCR a été créé le 14 décembre 1950 par l'Assemblée générale des Nations unies. Il a commencé ses activités en 1951, année de l'adoption de la Convention relative au statut des réfugiés. Son siège est à Genève et il a reçu le prix Nobel de la paix en 1954 puis en 1981."
+    },
+    {
+      "q": "L'Agence internationale de l'énergie atomique (AIEA) a été créée en :",
+      "o": [
+        "1945",
+        "1949",
+        "1957",
+        "1968"
+      ],
+      "r": 2,
+      "x": "L'AIEA est créée en 1957 et son siège est à Vienne, en Autriche. Le traité de non-prolifération nucléaire dont elle contrôle l'application date, lui, de 1968."
+    },
+    {
+      "q": "La Cour internationale de justice (CIJ), organe judiciaire de l'ONU, siège à :",
+      "o": [
+        "La Haye",
+        "Genève",
+        "Strasbourg",
+        "Bruxelles"
+      ],
+      "r": 0,
+      "x": "La CIJ siège au Palais de la Paix à La Haye, aux Pays-Bas, et compte quinze juges élus pour neuf ans. Strasbourg abrite la Cour européenne des droits de l'homme et Bruxelles les institutions de l'Union européenne."
+    },
+    {
+      "q": "Le Statut de Rome instituant la Cour pénale internationale (CPI) a été adopté le :",
+      "o": [
+        "26 juin 1945",
+        "9 décembre 1948",
+        "17 juillet 1998",
+        "1er juillet 2002"
+      ],
+      "r": 2,
+      "x": "Le Statut de Rome est adopté le 17 juillet 1998 et entre en vigueur le 1er juillet 2002, date de naissance effective de la CPI. Elle siège à La Haye et juge le génocide, les crimes contre l'humanité, les crimes de guerre et le crime d'agression."
+    },
+    {
+      "q": "Le Conseil de sécurité des Nations unies compte :",
+      "o": [
+        "10 membres dont 5 permanents",
+        "15 membres dont 5 permanents",
+        "20 membres dont 7 permanents",
+        "25 membres dont 8 permanents"
+      ],
+      "r": 1,
+      "x": "Le Conseil de sécurité réunit quinze membres, dont cinq permanents disposant du droit de veto et dix élus pour deux ans. Les cinq permanents sont les États-Unis, la Russie, la Chine, le Royaume-Uni et la France."
+    },
+    {
+      "q": "Le nombre d'États membres de l'Organisation des Nations unies (ONU) s'élève à :",
+      "o": [
+        "185",
+        "189",
+        "193",
+        "198"
+      ],
+      "r": 2,
+      "x": "L'ONU compte 193 États membres en 2026, le Soudan du Sud ayant été le dernier admis en juillet 2011. Elle en comptait 51 à sa fondation en 1945."
+    },
+    {
+      "q": "Le mandat du Secrétaire général des Nations unies est d'une durée de :",
+      "o": [
+        "3 ans renouvelable",
+        "4 ans renouvelable",
+        "5 ans renouvelable",
+        "7 ans non renouvelable"
+      ],
+      "r": 2,
+      "x": "Le Secrétaire général est nommé pour cinq ans renouvelables, sur recommandation du Conseil de sécurité. Boutros Boutros-Ghali est le seul à n'avoir pas obtenu de second mandat, bloqué par le veto américain."
+    },
+    {
+      "q": "L'Union postale universelle (UPU) a été fondée en :",
+      "o": [
+        "1865, à Paris",
+        "1874, à Berne",
+        "1899, à La Haye",
+        "1919, à Versailles"
+      ],
+      "r": 1,
+      "x": "L'UPU est fondée à Berne en 1874 par le traité qui organise les échanges postaux internationaux, et son anniversaire est célébré le 9 octobre. Elle devient institution spécialisée des Nations unies en 1948."
+    },
+    {
+      "q": "L'Organisation de l'aviation civile internationale (OACI) est née de la Convention de :",
+      "o": [
+        "Paris, signée en 1919",
+        "Varsovie, signée en 1929",
+        "Chicago, signée en 1944",
+        "Montréal, signée en 1971"
+      ],
+      "r": 2,
+      "x": "L'OACI naît de la Convention de Chicago signée en 1944 et son siège est établi à Montréal. La Convention de Varsovie de 1929 régit, elle, la responsabilité du transporteur aérien."
+    },
+    {
+      "q": "L'Organisation du traité de l'Atlantique Nord (OTAN) a été créée le :",
+      "o": [
+        "4 avril 1949",
+        "14 mai 1955",
+        "25 mars 1957",
+        "9 novembre 1989"
+      ],
+      "r": 0,
+      "x": "L'OTAN est créée le 4 avril 1949 par le traité de Washington, signé par douze États fondateurs. Le pacte de Varsovie, son pendant du bloc de l'Est, est signé le 14 mai 1955."
+    },
+    {
+      "q": "Le siège du Conseil de l'Europe se trouve à :",
+      "o": [
+        "Bruxelles",
+        "Strasbourg",
+        "Luxembourg",
+        "Francfort"
+      ],
+      "r": 1,
+      "x": "Le Conseil de l'Europe, créé en 1949, siège à Strasbourg, tout comme la Cour européenne des droits de l'homme. Il est distinct de l'Union européenne, dont la Commission siège à Bruxelles."
+    },
+    {
+      "q": "L'Organisation des pays exportateurs de pétrole (OPEP) a été créée en :",
+      "o": [
+        "1948, à Genève",
+        "1960, à Bagdad",
+        "1973, à Vienne",
+        "1979, à Téhéran"
+      ],
+      "r": 1,
+      "x": "L'OPEP est fondée en septembre 1960 à Bagdad par cinq pays : Arabie saoudite, Irak, Iran, Koweït et Venezuela. Son siège est installé à Vienne depuis 1965."
+    },
+    {
+      "q": "L'Organisation météorologique mondiale (OMM) est devenue institution spécialisée de l'ONU en :",
+      "o": [
+        "1946",
+        "1950",
+        "1957",
+        "1963"
+      ],
+      "r": 1,
+      "x": "L'OMM devient institution spécialisée des Nations unies en 1950, date d'entrée en vigueur de sa convention, célébrée chaque 23 mars. Elle succède à l'Organisation météorologique internationale créée en 1873."
+    },
+    {
+      "q": "Le Programme alimentaire mondial (PAM), prix Nobel de la paix 2020, a été créé en :",
+      "o": [
+        "1945",
+        "1950",
+        "1961",
+        "1972"
+      ],
+      "r": 2,
+      "x": "Le PAM est créé en 1961 et son siège est à Rome, comme celui de la FAO. Il reçoit le prix Nobel de la paix en 2020 pour son action contre la faim dans les zones de conflit."
+    },
+    {
+      "q": "La Première Guerre mondiale s'est achevée par l'armistice du :",
+      "o": [
+        "28 juin 1914",
+        "28 juillet 1914",
+        "11 novembre 1918",
+        "28 juin 1919"
+      ],
+      "r": 2,
+      "x": "L'armistice est signé à Rethondes le 11 novembre 1918, mettant fin aux combats de la Première Guerre mondiale. Le 28 juin 1919 correspond à la signature du traité de Versailles et le 28 juin 1914 à l'attentat de Sarajevo."
+    },
+    {
+      "q": "Le traité de Versailles a été signé le :",
+      "o": [
+        "11 novembre 1918",
+        "18 janvier 1919",
+        "28 juin 1919",
+        "10 janvier 1920"
+      ],
+      "r": 2,
+      "x": "Le traité de Versailles est signé le 28 juin 1919, cinq ans jour pour jour après l'attentat de Sarajevo, et entre en vigueur le 10 janvier 1920. Il crée la Société des Nations et impose de lourdes réparations à l'Allemagne."
+    },
+    {
+      "q": "La Seconde Guerre mondiale a débuté le :",
+      "o": [
+        "30 janvier 1933",
+        "1er septembre 1939",
+        "3 septembre 1939",
+        "22 juin 1941"
+      ],
+      "r": 1,
+      "x": "La guerre commence le 1er septembre 1939 avec l'invasion de la Pologne par l'Allemagne, la France et le Royaume-Uni déclarant la guerre le 3 septembre. Le 22 juin 1941 correspond au déclenchement de l'opération Barbarossa contre l'URSS."
+    },
+    {
+      "q": "La première bombe atomique employée contre une ville a été larguée sur Hiroshima le :",
+      "o": [
+        "16 juillet 1945",
+        "6 août 1945",
+        "9 août 1945",
+        "2 septembre 1945"
+      ],
+      "r": 1,
+      "x": "La bombe frappe Hiroshima le 6 août 1945 et Nagasaki le 9 août, précipitant la capitulation japonaise signée le 2 septembre. Le 16 juillet 1945 correspond au premier essai nucléaire américain, dit essai Trinity."
+    },
+    {
+      "q": "La prise de la Bastille, qui ouvre la Révolution française, a eu lieu le :",
+      "o": [
+        "5 mai 1789",
+        "20 juin 1789",
+        "14 juillet 1789",
+        "26 août 1789"
+      ],
+      "r": 2,
+      "x": "La Bastille est prise le 14 juillet 1789, devenue fête nationale française. Le 26 août 1789 correspond à l'adoption de la Déclaration des droits de l'homme et du citoyen."
+    },
+    {
+      "q": "La révolution bolchevique qui porte Lénine au pouvoir en Russie a eu lieu en :",
+      "o": [
+        "février 1905",
+        "mars 1917",
+        "octobre 1917",
+        "décembre 1922"
+      ],
+      "r": 2,
+      "x": "La révolution d'Octobre 1917 porte les bolcheviks au pouvoir, après la révolution de février qui avait renversé le tsar. L'Union soviétique est officiellement constituée en décembre 1922."
+    },
+    {
+      "q": "Le krach boursier qui déclenche la Grande Dépression s'est produit en :",
+      "o": [
+        "octobre 1929",
+        "mars 1933",
+        "septembre 1939",
+        "juillet 1944"
+      ],
+      "r": 0,
+      "x": "Le krach de Wall Street survient en octobre 1929, avec le jeudi noir du 24 octobre et le mardi noir du 29. Il ouvre une décennie de crise économique mondiale marquée par un chômage de masse."
+    },
+    {
+      "q": "L'expression « rideau de fer » a été popularisée en 1946 par le discours de :",
+      "o": [
+        "Franklin Roosevelt, à Yalta",
+        "Winston Churchill, à Fulton",
+        "Harry Truman, à Washington",
+        "Joseph Staline, à Moscou"
+      ],
+      "r": 1,
+      "x": "Winston Churchill prononce le discours de Fulton en mars 1946, employant l'expression « rideau de fer » pour décrire la division de l'Europe. Ce discours est considéré comme l'un des actes fondateurs de la guerre froide."
+    },
+    {
+      "q": "La crise des missiles qui a opposé les États-Unis et l'URSS s'est déroulée en :",
+      "o": [
+        "juin 1948, à Berlin",
+        "octobre 1962, à Cuba",
+        "août 1968, à Prague",
+        "décembre 1979, en Afghanistan"
+      ],
+      "r": 1,
+      "x": "La crise des missiles de Cuba, en octobre 1962, marque le point culminant de la guerre froide et le risque le plus sérieux de conflit nucléaire. Elle se dénoue par le retrait des missiles soviétiques contre l'engagement américain de ne pas envahir l'île."
+    },
+    {
+      "q": "La Déclaration d'indépendance des États-Unis a été adoptée le :",
+      "o": [
+        "4 juillet 1776",
+        "14 juillet 1789",
+        "17 septembre 1787",
+        "30 avril 1789"
+      ],
+      "r": 0,
+      "x": "La Déclaration d'indépendance est adoptée le 4 juillet 1776 par les treize colonies, date de la fête nationale américaine. La Constitution des États-Unis est, elle, signée le 17 septembre 1787."
+    },
+    {
+      "q": "La bataille considérée comme le tournant du front de l'Est durant la Seconde Guerre mondiale est :",
+      "o": [
+        "Dunkerque, en 1940",
+        "Stalingrad, en 1942-1943",
+        "El-Alamein, en 1942",
+        "Koursk, en 1943"
+      ],
+      "r": 1,
+      "x": "La bataille de Stalingrad, de l'été 1942 à février 1943, s'achève par la capitulation de la VIe armée allemande et inverse le cours du conflit à l'Est. El-Alamein est le tournant du front nord-africain la même année."
+    },
+    {
+      "q": "Le plan d'aide économique américain à l'Europe d'après-guerre, lancé en 1947, porte le nom de :",
+      "o": [
+        "plan Dawes",
+        "plan Marshall",
+        "plan Schuman",
+        "plan Monnet"
+      ],
+      "r": 1,
+      "x": "Le plan Marshall, annoncé en juin 1947, accorde une aide massive à la reconstruction européenne et vise à contenir l'influence soviétique. Le plan Schuman de 1950 prépare, lui, la construction européenne."
+    },
+    {
+      "q": "L'année qualifiée d'« année de l'Afrique », marquée par dix-sept indépendances, est :",
+      "o": [
+        "1956",
+        "1958",
+        "1960",
+        "1963"
+      ],
+      "r": 2,
+      "x": "Dix-sept pays africains accèdent à l'indépendance en 1960, dont la Haute-Volta le 5 août, d'où l'expression « année de l'Afrique ». L'année 1963 correspond, elle, à la fondation de l'OUA."
+    },
+    {
+      "q": "La conférence qui réunit en 1955 les pays d'Asie et d'Afrique et annonce le non-alignement s'est tenue à :",
+      "o": [
+        "Bandung",
+        "Belgrade",
+        "Casablanca",
+        "Accra"
+      ],
+      "r": 0,
+      "x": "La conférence de Bandung, en Indonésie, réunit en avril 1955 vingt-neuf pays d'Asie et d'Afrique et condamne le colonialisme. Le mouvement des non-alignés sera formellement créé à Belgrade en 1961."
+    },
+    {
+      "q": "Nelson Mandela a été libéré de prison le :",
+      "o": [
+        "11 février 1990",
+        "27 avril 1994",
+        "10 mai 1994",
+        "5 décembre 2013"
+      ],
+      "r": 0,
+      "x": "Nelson Mandela est libéré le 11 février 1990 après vingt-sept ans de détention, avant d'être élu président en 1994. Le 27 avril 1994 correspond aux premières élections multiraciales d'Afrique du Sud, devenues jour de la Liberté."
+    },
+    {
+      "q": "Les attentats contre les tours du World Trade Center ont eu lieu le :",
+      "o": [
+        "26 février 1993",
+        "7 juillet 2005",
+        "11 mars 2004",
+        "11 septembre 2001"
+      ],
+      "r": 3,
+      "x": "Les attentats du 11 septembre 2001 frappent New York et Washington et font près de trois mille morts. Ils entraînent l'intervention américaine en Afghanistan lancée en octobre de la même année."
+    },
+    {
+      "q": "La dissolution officielle de l'Union soviétique est intervenue le :",
+      "o": [
+        "9 novembre 1989",
+        "3 octobre 1990",
+        "19 août 1991",
+        "26 décembre 1991"
+      ],
+      "r": 3,
+      "x": "L'URSS est officiellement dissoute le 26 décembre 1991, au lendemain de la démission de Mikhaïl Gorbatchev. Le 19 août 1991 correspond au putsch manqué de Moscou qui précipite cette fin."
+    },
+    {
+      "q": "La guerre de Sécession américaine s'est déroulée de :",
+      "o": [
+        "1776 à 1783",
+        "1812 à 1815",
+        "1861 à 1865",
+        "1898 à 1902"
+      ],
+      "r": 2,
+      "x": "La guerre de Sécession oppose de 1861 à 1865 les États du Nord à ceux du Sud, principalement sur la question de l'esclavage. Elle s'achève par la victoire nordiste et l'abolition de l'esclavage par le treizième amendement."
+    },
+    {
+      "q": "L'abolition définitive de l'esclavage dans les colonies françaises date du :",
+      "o": [
+        "4 février 1794",
+        "20 mai 1802",
+        "10 mai 2001",
+        "27 avril 1848"
+      ],
+      "r": 3,
+      "x": "Le décret d'abolition définitive est signé le 27 avril 1848, sur l'initiative de Victor Schœlcher. Une première abolition de 1794 avait été annulée par Napoléon Bonaparte en 1802."
+    },
+    {
+      "q": "Le traité de Rome, acte fondateur de la Communauté économique européenne (CEE), a été signé le :",
+      "o": [
+        "9 mai 1950",
+        "18 avril 1951",
+        "25 mars 1957",
+        "7 février 1992"
+      ],
+      "r": 2,
+      "x": "Le traité de Rome est signé le 25 mars 1957 par six États et institue la CEE. Le traité de Maastricht, signé le 7 février 1992, lui succède en créant l'Union européenne."
+    },
+    {
+      "q": "L'empire du Ghana, premier grand empire ouest-africain, était aussi appelé :",
+      "o": [
+        "Wagadou",
+        "Kanem-Bornou",
+        "Sosso",
+        "Ouaddaï"
+      ],
+      "r": 0,
+      "x": "L'empire du Ghana, appelé Wagadou par les Soninkés, prospère du VIIIe au XIe siècle grâce au commerce transsaharien de l'or et du sel. Il ne correspond pas géographiquement au Ghana actuel mais au sud-est de la Mauritanie et à l'ouest du Mali."
+    },
+    {
+      "q": "Soundiata Keïta fonde l'empire du Mali après sa victoire à la bataille de :",
+      "o": [
+        "Tondibi, en 1591",
+        "Isandhlwana, en 1879",
+        "Ouadi, en 1324",
+        "Kirina, en 1235"
+      ],
+      "r": 3,
+      "x": "Soundiata Keïta défait Soumaoro Kanté à Kirina en 1235, fondant l'empire du Mali. La bataille de Tondibi, en 1591, marque au contraire l'effondrement de l'empire Songhaï face aux Marocains."
+    },
+    {
+      "q": "Le souverain malien dont le pèlerinage à La Mecque en 1324 fit chuter le cours de l'or est :",
+      "o": [
+        "Soundiata Keïta",
+        "Askia Mohamed",
+        "Sonni Ali Ber",
+        "Mansa Moussa"
+      ],
+      "r": 3,
+      "x": "Mansa Moussa effectue en 1324 un pèlerinage si fastueux que ses distributions d'or dépriment durablement les cours au Caire. Il fait construire à Tombouctou la mosquée Djingareyber, toujours debout."
+    },
+    {
+      "q": "Le souverain qui porte l'empire Songhaï à son apogée à partir de 1493 est :",
+      "o": [
+        "Sonni Ali Ber",
+        "Soumaoro Kanté",
+        "Mansa Moussa",
+        "Askia Mohamed"
+      ],
+      "r": 3,
+      "x": "Askia Mohamed règne de 1493 à 1528 et donne à l'empire Songhaï son organisation administrative la plus aboutie. Il succède à Sonni Ali Ber, qui avait conquis Tombouctou et Djenné."
+    },
+    {
+      "q": "La Charte du Manden, considérée comme l'une des premières déclarations de droits, date de :",
+      "o": [
+        "1222",
+        "1236",
+        "1324",
+        "1493"
+      ],
+      "r": 1,
+      "x": "La Charte du Manden est proclamée vers 1236 à Kouroukan Fouga, après la victoire de Soundiata Keïta. Inscrite au patrimoine immatériel de l'UNESCO en 2009, elle proclame notamment l'abolition de l'esclavage par razzia."
+    },
+    {
+      "q": "L'université africaine médiévale la plus réputée, située à Tombouctou, est celle de :",
+      "o": [
+        "Sankoré",
+        "Djenné",
+        "Gao",
+        "Oualata"
+      ],
+      "r": 0,
+      "x": "L'université de Sankoré, à Tombouctou, rayonne du XIVe au XVIe siècle et rassemble des milliers d'étudiants en théologie, droit et astronomie. Tombouctou est inscrite au patrimoine mondial de l'UNESCO depuis 1988."
+    },
+    {
+      "q": "Le fondateur de l'empire zoulou au début du XIXe siècle est :",
+      "o": [
+        "Chaka",
+        "Moshoeshoe",
+        "Lobengula",
+        "Cetshwayo"
+      ],
+      "r": 0,
+      "x": "Chaka fonde et étend l'empire zoulou entre 1816 et 1828, en réformant en profondeur la tactique militaire. Cetshwayo, son successeur lointain, remporte la victoire d'Isandhlwana contre les Britanniques en 1879."
+    },
+    {
+      "q": "Le résistant à la colonisation française fondateur de l'empire du Wassoulou, capturé en 1898, est :",
+      "o": [
+        "Behanzin",
+        "Lat Dior Diop",
+        "Samory Touré",
+        "El Hadj Omar Tall"
+      ],
+      "r": 2,
+      "x": "Samory Touré résiste pendant près de dix-huit ans avant d'être capturé en 1898 et déporté au Gabon, où il meurt en 1900. Il est surnommé l'Almamy et reste une figure majeure de la résistance ouest-africaine."
+    },
+    {
+      "q": "Le roi du Dahomey déporté en Martinique après sa résistance à la France est :",
+      "o": [
+        "Behanzin",
+        "Glélé",
+        "Ghezo",
+        "Agadja"
+      ],
+      "r": 0,
+      "x": "Behanzin, dernier roi indépendant du Dahomey, résiste de 1890 à 1894 avant d'être déporté en Martinique puis en Algérie, où il meurt en 1906. Il succédait à son père Glélé."
+    },
+    {
+      "q": "Le canal de Suez relie la mer Méditerranée à :",
+      "o": [
+        "la mer Rouge",
+        "la mer Noire",
+        "le golfe Persique",
+        "la mer Caspienne"
+      ],
+      "r": 0,
+      "x": "Le canal de Suez, inauguré en 1869 et long de près de 193 km, relie la Méditerranée à la mer Rouge. Il évite aux navires le contournement de l'Afrique par le cap de Bonne-Espérance."
+    },
+    {
+      "q": "Le canal de Panama a été ouvert à la navigation en :",
+      "o": [
+        "1869",
+        "1904",
+        "1914",
+        "1999"
+      ],
+      "r": 2,
+      "x": "Le canal de Panama est ouvert en 1914 et relie l'océan Atlantique à l'océan Pacifique sur environ 80 km. Sa gestion est transférée du contrôle américain au Panama le 31 décembre 1999."
+    },
+    {
+      "q": "Le détroit qui sépare l'Europe de l'Afrique à leur point le plus proche est celui de :",
+      "o": [
+        "Gibraltar",
+        "Bosphore",
+        "Malacca",
+        "Ormuz"
+      ],
+      "r": 0,
+      "x": "Le détroit de Gibraltar sépare l'Espagne du Maroc sur une largeur minimale d'environ 14 km. Le Bosphore sépare, lui, la partie européenne de la partie asiatique de la Turquie."
+    },
+    {
+      "q": "Le détroit stratégique par lequel transite une grande partie du pétrole du golfe Persique est celui de :",
+      "o": [
+        "Bab el-Mandeb",
+        "Malacca",
+        "Ormuz",
+        "Magellan"
+      ],
+      "r": 2,
+      "x": "Le détroit d'Ormuz, entre l'Iran et Oman, voit passer une part majeure des exportations pétrolières mondiales. Le détroit de Malacca, entre la Malaisie et Sumatra, est le principal passage entre l'océan Indien et le Pacifique."
+    },
+    {
+      "q": "La plus grande île du monde est :",
+      "o": [
+        "Madagascar",
+        "Bornéo",
+        "la Nouvelle-Guinée",
+        "le Groenland"
+      ],
+      "r": 3,
+      "x": "Le Groenland, avec plus de 2,1 millions de km², est la plus grande île du monde, l'Australie étant classée comme continent. Madagascar arrive en quatrième position avec environ 587 000 km²."
+    },
+    {
+      "q": "Le plus grand océan du globe est :",
+      "o": [
+        "l'océan Atlantique",
+        "l'océan Indien",
+        "l'océan Pacifique",
+        "l'océan Arctique"
+      ],
+      "r": 2,
+      "x": "L'océan Pacifique couvre environ un tiers de la surface du globe, soit plus de 165 millions de km². Il abrite la fosse des Mariannes, point le plus profond des océans avec près de 11 000 mètres."
+    },
+    {
+      "q": "La capitale politique de l'Afrique du Sud, siège du gouvernement, est :",
+      "o": [
+        "Pretoria",
+        "Le Cap",
+        "Johannesburg",
+        "Bloemfontein"
+      ],
+      "r": 0,
+      "x": "L'Afrique du Sud a trois capitales : Pretoria pour l'exécutif, Le Cap pour le législatif et Bloemfontein pour le judiciaire. Johannesburg, la plus grande ville, n'a aucun statut de capitale."
+    },
+    {
+      "q": "La capitale fédérale du Nigeria depuis 1991 est :",
+      "o": [
+        "Lagos",
+        "Ibadan",
+        "Kano",
+        "Abuja"
+      ],
+      "r": 3,
+      "x": "Abuja devient capitale fédérale du Nigeria en 1991, remplaçant Lagos jugée trop excentrée et surpeuplée. Lagos demeure toutefois la plus grande ville et le poumon économique du pays."
+    },
+    {
+      "q": "La monnaie officielle du Japon est :",
+      "o": [
+        "le yuan",
+        "le ringgit",
+        "le won",
+        "le yen"
+      ],
+      "r": 3,
+      "x": "Le yen est la monnaie du Japon, tandis que le yuan est chinois et le won sud-coréen. Le ringgit est, lui, la monnaie de la Malaisie."
+    },
+    {
+      "q": "La monnaie commune adoptée par les pays de la zone euro est entrée en circulation fiduciaire le :",
+      "o": [
+        "7 février 1992",
+        "1er janvier 1999",
+        "1er juillet 2002",
+        "1er janvier 2002"
+      ],
+      "r": 3,
+      "x": "Les pièces et billets en euros entrent en circulation le 1er janvier 2002, trois ans après l'adoption de la monnaie scripturale en 1999. Le traité de Maastricht qui en pose le principe date, lui, du 7 février 1992."
+    },
+    {
+      "q": "Le plus grand désert chaud du monde est :",
+      "o": [
+        "le Kalahari",
+        "le Sahara",
+        "le désert de Gobi",
+        "le désert d'Atacama"
+      ],
+      "r": 1,
+      "x": "Le Sahara s'étend sur plus de neuf millions de km² à travers une dizaine de pays africains. Le désert d'Atacama, au Chili, est quant à lui le plus aride du monde."
+    },
+    {
+      "q": "Le lac le plus profond du monde est :",
+      "o": [
+        "le lac Baïkal",
+        "le lac Tanganyika",
+        "le lac Supérieur",
+        "le lac Victoria"
+      ],
+      "r": 0,
+      "x": "Le lac Baïkal, en Sibérie, atteint plus de 1 600 mètres de profondeur et contient environ un cinquième des réserves mondiales d'eau douce de surface. Le lac Tanganyika, deuxième plus profond, dépasse 1 400 mètres."
+    },
+    {
+      "q": "En Afrique de l'Ouest, le méridien de Greenwich traverse notamment :",
+      "o": [
+        "le Sénégal et la Guinée",
+        "le Ghana et le Burkina Faso",
+        "le Nigeria et le Niger",
+        "la Côte d'Ivoire et le Liberia"
+      ],
+      "r": 1,
+      "x": "Le méridien de Greenwich traverse le Ghana, le Burkina Faso, le Togo, le Mali et l'Algérie. Son intersection avec l'équateur se situe en pleine mer, dans le golfe de Guinée, et ne concerne donc aucun pays."
+    },
+    {
+      "q": "La ligne imaginaire située à 23° 26' de latitude nord porte le nom de :",
+      "o": [
+        "tropique du Cancer",
+        "tropique du Capricorne",
+        "cercle polaire arctique",
+        "équateur céleste"
+      ],
+      "r": 0,
+      "x": "Le tropique du Cancer marque la latitude maximale à laquelle le Soleil passe au zénith dans l'hémisphère nord, au solstice de juin. Son équivalent austral est le tropique du Capricorne."
+    },
+    {
+      "q": "Le pays comptant le plus grand nombre de fuseaux horaires est :",
+      "o": [
+        "les États-Unis",
+        "la Russie",
+        "la France",
+        "le Canada"
+      ],
+      "r": 2,
+      "x": "La France, avec ses territoires ultramarins répartis sur tous les océans, couvre douze fuseaux horaires, devant la Russie et les USA qui en comptent onze chacun. Le Canada en compte six ."
+    },
+    {
+      "q": "Le point le plus profond des océans, la fosse des Mariannes, atteint environ :",
+      "o": [
+        "6 000 mètres",
+        "8 000 mètres",
+        "11 000 mètres",
+        "14 000 mètres"
+      ],
+      "r": 2,
+      "x": "La fosse des Mariannes, dans le Pacifique occidental, atteint près de 11 000 mètres de profondeur au niveau du gouffre Challenger. L'Everest, avec ses 8 849 mètres, y disparaîtrait entièrement."
+    },
+    {
+      "q": "Le fleuve qui traverse ou borde le plus grand nombre de pays au monde est :",
+      "o": [
+        "le Danube",
+        "le Nil",
+        "l'Amazone",
+        "le Congo"
+      ],
+      "r": 0,
+      "x": "Le Danube traverse ou borde dix pays européens, de l'Allemagne à l'Ukraine. Le Nil, plus long, n'en traverse que 5 si l'on ne compte pas son bassin versant."
+    },
+    {
+      "q": "Le pays d'Amérique du Sud dépourvu de façade maritime, avec la Bolivie, est :",
+      "o": [
+        "l'Équateur",
+        "le Paraguay",
+        "l'Uruguay",
+        "le Venezuela"
+      ],
+      "r": 1,
+      "x": "Le Paraguay et la Bolivie sont les deux seuls pays enclavés d'Amérique du Sud. La Bolivie a perdu son accès à l'océan Pacifique lors de la guerre du Pacifique contre le Chili, entre 1879 et 1884."
+    },
+    {
+      "q": "Le continent qui compte le plus grand nombre d'États est :",
+      "o": [
+        "l'Afrique",
+        "l'Asie",
+        "l'Europe",
+        "l'Amérique"
+      ],
+      "r": 0,
+      "x": "L'Afrique compte 54 États reconnus par l'ONU, devant l'Asie et l'Europe. C'est aussi le continent le plus jeune démographiquement, avec un âge médian inférieur à vingt ans."
+    },
+    {
+      "q": "La chaîne de montagnes qui sépare l'Europe de l'Asie est :",
+      "o": [
+        "les Alpes",
+        "les Carpates",
+        "l'Oural",
+        "le Caucase"
+      ],
+      "r": 2,
+      "x": "La chaîne de l'Oural, orientée nord-sud sur environ 2 500 km, constitue la limite conventionnelle entre l'Europe et l'Asie. Le Caucase marque, lui, la frontière méridionale entre les deux continents."
+    },
+    {
+      "q": "La vitesse de la lumière dans le vide est d'environ :",
+      "o": [
+        "150 000 km/s",
+        "200 000 km/s",
+        "300 000 km/s",
+        "450 000 km/s"
+      ],
+      "r": 2,
+      "x": "La lumière se propage dans le vide à 299 792 458 mètres par seconde, soit environ 300 000 km/s. Cette constante, notée c, sert depuis 1983 à définir le mètre."
+    },
+    {
+      "q": "L'unité de mesure de la force dans le Système international est :",
+      "o": [
+        "le joule",
+        "le pascal",
+        "le watt",
+        "le newton"
+      ],
+      "r": 3,
+      "x": "Le newton mesure la force et correspond à la force donnant à une masse d'un kilogramme une accélération d'un mètre par seconde carrée. Le joule mesure l'énergie, le watt la puissance et le pascal la pression."
+    },
+    {
+      "q": "L'unité de mesure de la puissance électrique est :",
+      "o": [
+        "l'ampère",
+        "le volt",
+        "l'ohm",
+        "le watt"
+      ],
+      "r": 3,
+      "x": "Le watt mesure la puissance et correspond au produit de la tension par l'intensité. L'ampère mesure l'intensité du courant, le volt la tension et l'ohm la résistance."
+    },
+    {
+      "q": "Le tableau périodique des éléments a été établi en 1869 par :",
+      "o": [
+        "Antoine Lavoisier",
+        "Niels Bohr",
+        "John Dalton",
+        "Dmitri Mendeleïev"
+      ],
+      "r": 3,
+      "x": "Dmitri Mendeleïev publie son tableau périodique en 1869 et laisse des cases vides pour des éléments encore inconnus, dont il prédit les propriétés. Lavoisier avait auparavant établi la première nomenclature chimique moderne."
+    },
+    {
+      "q": "Le symbole chimique du fer est :",
+      "o": [
+        "F",
+        "Fr",
+        "Fe",
+        "Ph"
+      ],
+      "r": 2,
+      "x": "Le symbole du fer est Fe, du latin ferrum, et son numéro atomique est 26. F désigne le fluor et Fr le francium."
+    },
+    {
+      "q": "Le symbole chimique de l'or est :",
+      "o": [
+        "Ag",
+        "Pt",
+        "Or",
+        "Au"
+      ],
+      "r": 3,
+      "x": "L'or a pour symbole Au, du latin aurum, et son numéro atomique est 79. Ag désigne l'argent, du latin argentum, et Pt le platine."
+    },
+    {
+      "q": "Le gaz le plus abondant dans l'atmosphère terrestre est :",
+      "o": [
+        "le diazote",
+        "le dioxygène",
+        "le dioxyde de carbone",
+        "l'argon"
+      ],
+      "r": 0,
+      "x": "Le diazote représente environ 78 % de l'atmosphère terrestre, contre près de 21 % pour le dioxygène. Le dioxyde de carbone n'en constitue qu'environ 0,04 %, malgré son rôle majeur dans l'effet de serre."
+    },
+    {
+      "q": "L'eau bout, sous la pression atmosphérique normale, à une température de :",
+      "o": [
+        "90 °C",
+        "95 °C",
+        "100 °C",
+        "110 °C"
+      ],
+      "r": 2,
+      "x": "L'eau pure bout à 100 °C sous une pression de 1 013 hectopascals au niveau de la mer. Cette température diminue avec l'altitude, à mesure que la pression atmosphérique baisse."
+    },
+    {
+      "q": "Le zéro absolu correspond à une température de :",
+      "o": [
+        "−100 °C",
+        "−173 °C",
+        "−273 °C",
+        "−373 °C"
+      ],
+      "r": 2,
+      "x": "Le zéro absolu correspond à −273,15 °C, soit 0 kelvin, température à laquelle l'agitation thermique est minimale. Cette limite est inatteignable en pratique selon le troisième principe de la thermodynamique."
+    },
+    {
+      "q": "La loi de la gravitation universelle a été formulée par :",
+      "o": [
+        "Galilée",
+        "Johannes Kepler",
+        "Isaac Newton",
+        "Albert Einstein"
+      ],
+      "r": 2,
+      "x": "Isaac Newton formule la loi de la gravitation universelle dans ses Principia de 1687. Einstein la reformulera en 1915 dans le cadre de la relativité générale."
+    },
+    {
+      "q": "La théorie de la relativité restreinte a été publiée par Albert Einstein en :",
+      "o": [
+        "1895",
+        "1905",
+        "1915",
+        "1925"
+      ],
+      "r": 1,
+      "x": "Einstein publie la relativité restreinte en 1905, son « année miraculeuse », et la relativité générale en 1915. C'est pour l'effet photoélectrique, et non pour la relativité, qu'il reçoit le prix Nobel en 1921."
+    },
+    {
+      "q": "Le pH d'une solution neutre à 25 °C est de :",
+      "o": [
+        "0",
+        "7",
+        "10",
+        "14"
+      ],
+      "r": 1,
+      "x": "Une solution neutre a un pH de 7 à 25 °C, les valeurs inférieures indiquant l'acidité et les supérieures la basicité. L'échelle du pH s'étend conventionnellement de 0 à 14."
+    },
+    {
+      "q": "La formule chimique du méthane est :",
+      "o": [
+        "CO2",
+        "CH4",
+        "C2H6",
+        "NH3"
+      ],
+      "r": 1,
+      "x": "Le méthane a pour formule CH4 et constitue le principal composant du gaz naturel. C'est aussi un gaz à effet de serre bien plus puissant que le dioxyde de carbone, dont la formule est CO2."
+    },
+    {
+      "q": "L'énergie libérée lors de la fission nucléaire provient de :",
+      "o": [
+        "la rupture d'un noyau lourd",
+        "la fusion de deux noyaux légers",
+        "la combustion du carbone",
+        "l'oxydation du métal"
+      ],
+      "r": 0,
+      "x": "La fission consiste en la rupture d'un noyau lourd, comme l'uranium 235, sous l'impact d'un neutron. La fusion, à l'inverse, assemble des noyaux légers et alimente l'énergie des étoiles."
+    },
+    {
+      "q": "L'unité de mesure de la fréquence est :",
+      "o": [
+        "le décibel",
+        "le lumen",
+        "le candela",
+        "le hertz"
+      ],
+      "r": 3,
+      "x": "Le hertz mesure le nombre de cycles par seconde et doit son nom au physicien Heinrich Hertz. Le décibel mesure l'intensité sonore et la candela l'intensité lumineuse."
+    },
+    {
+      "q": "Le nombre pi vaut approximativement :",
+      "o": [
+        "2,718",
+        "6,022",
+        "1,618",
+        "3,142"
+      ],
+      "r": 3,
+      "x": "Pi, rapport de la circonférence d'un cercle à son diamètre, vaut environ 3,14159. Le nombre 2,718 correspond à e, 1,618 au nombre d'or et 6,022 × 10²³ au nombre d'Avogadro."
+    },
+    {
+      "q": "Le nombre d'or vaut approximativement :",
+      "o": [
+        "1,414",
+        "1,618",
+        "2,718",
+        "3,142"
+      ],
+      "r": 1,
+      "x": "Le nombre d'or, souvent noté phi, vaut environ 1,618 et se retrouve dans de nombreuses proportions architecturales et artistiques. Le nombre 1,414 correspond, lui, à la racine carrée de deux."
+    },
+    {
+      "q": "Le théorème affirmant que le carré de l'hypoténuse égale la somme des carrés des deux autres côtés est celui de :",
+      "o": [
+        "Thalès",
+        "Archimède",
+        "Euclide",
+        "Pythagore"
+      ],
+      "r": 3,
+      "x": "Le théorème de Pythagore s'applique à tout triangle rectangle et constitue l'un des résultats les plus anciens de la géométrie. Le théorème de Thalès porte, lui, sur la proportionnalité des segments découpés par des droites parallèles."
+    },
+    {
+      "q": "La somme des angles d'un triangle en géométrie euclidienne est de :",
+      "o": [
+        "90 degrés",
+        "180 degrés",
+        "270 degrés",
+        "360 degrés"
+      ],
+      "r": 1,
+      "x": "La somme des angles d'un triangle vaut toujours 180 degrés dans le plan euclidien. Celle des angles d'un quadrilatère vaut, elle, 360 degrés."
+    },
+    {
+      "q": "Le plus petit nombre premier est :",
+      "o": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "r": 2,
+      "x": "Le nombre 2 est le plus petit nombre premier et le seul à être pair. Le nombre 1 est exclu par convention, car il n'a qu'un seul diviseur."
+    },
+    {
+      "q": "Un nombre divisible par 9 se reconnaît au fait que :",
+      "o": [
+        "son dernier chiffre est 9",
+        "la somme de ses chiffres est divisible par 9",
+        "il se termine par deux zéros",
+        "il est aussi divisible par 4"
+      ],
+      "r": 1,
+      "x": "Un entier est divisible par 9 si et seulement si la somme de ses chiffres l'est également. Le même raisonnement s'applique à la divisibilité par 3."
+    },
+    {
+      "q": "Le volume d'une sphère de rayon R est donné par la formule :",
+      "o": [
+        "2πR",
+        "πR²",
+        "4πR²",
+        "4/3 πR³"
+      ],
+      "r": 3,
+      "x": "Le volume d'une sphère vaut quatre tiers de pi R au cube, tandis que sa surface vaut 4πR². La formule πR² correspond, elle, à l'aire d'un disque."
+    },
+    {
+      "q": "Un angle de 90 degrés est qualifié d'angle :",
+      "o": [
+        "aigu",
+        "plat",
+        "obtus",
+        "droit"
+      ],
+      "r": 3,
+      "x": "L'angle droit mesure exactement 90 degrés, l'angle aigu est inférieur et l'angle obtus supérieur. L'angle plat mesure, lui, 180 degrés."
+    },
+    {
+      "q": "Le système de numération utilisé en informatique, à deux chiffres, est le système :",
+      "o": [
+        "binaire",
+        "décimal",
+        "octal",
+        "hexadécimal"
+      ],
+      "r": 0,
+      "x": "Le système binaire n'utilise que les chiffres 0 et 1 et constitue le langage fondamental des ordinateurs. Le système hexadécimal, à seize symboles, sert surtout à écrire de façon compacte les adresses mémoire."
+    },
+    {
+      "q": "Un octet est composé de :",
+      "o": [
+        "4 bits",
+        "8 bits",
+        "16 bits",
+        "32 bits"
+      ],
+      "r": 1,
+      "x": "Un octet regroupe huit bits et permet de coder 256 valeurs différentes. Le terme anglais correspondant est byte, à ne pas confondre avec bit."
+    },
+    {
+      "q": "La racine carrée de 144 est :",
+      "o": [
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "r": 1,
+      "x": "La racine carrée de 144 est 12, puisque 12 multiplié par lui-même donne 144. Celle de 169 vaut 13 et celle de 196 vaut 14."
+    },
+    {
+      "q": "Le pourcentage correspondant à la fraction trois quarts est :",
+      "o": [
+        "25 %",
+        "33 %",
+        "66 %",
+        "75 %"
+      ],
+      "r": 3,
+      "x": "Trois quarts équivalent à 75 %, soit 0,75 en écriture décimale. Un tiers correspond, lui, à environ 33 % et deux tiers à environ 66 %."
+    },
+    {
+      "q": "L'unité de mesure de la quantité de matière est :",
+      "o": [
+        "le kilogramme",
+        "le litre",
+        "la mole",
+        "le gramme"
+      ],
+      "r": 2,
+      "x": "La mole est l'unité de quantité de matière et correspond au nombre d'Avogadro, soit environ 6,022 × 10²³ entités élémentaires. Le kilogramme mesure, lui, la masse."
+    },
+    {
+      "q": "L'appareil servant à mesurer la pression atmosphérique est :",
+      "o": [
+        "le baromètre",
+        "l'anémomètre",
+        "le pluviomètre",
+        "l'hygromètre"
+      ],
+      "r": 0,
+      "x": "Le baromètre mesure la pression atmosphérique, l'anémomètre la vitesse du vent et le pluviomètre les précipitations. L'hygromètre mesure, lui, l'humidité de l'air."
+    },
+    {
+      "q": "Le nombre de chromosomes que contient une cellule humaine normale est de :",
+      "o": [
+        "23",
+        "44",
+        "46",
+        "48"
+      ],
+      "r": 2,
+      "x": "La cellule humaine contient 46 chromosomes répartis en 23 paires, dont une paire de chromosomes sexuels. Les gamètes n'en contiennent que 23, soit la moitié."
+    },
+    {
+      "q": "L'organe humain le plus volumineux du corps est :",
+      "o": [
+        "le foie",
+        "la peau",
+        "le cerveau",
+        "les poumons"
+      ],
+      "r": 1,
+      "x": "La peau est le plus grand organe du corps humain, avec une surface d'environ deux mètres carrés chez l'adulte. Le foie est, lui, le plus volumineux des organes internes."
+    },
+    {
+      "q": "Le nombre de dents d'un adulte humain, dents de sagesse comprises, est de :",
+      "o": [
+        "20",
+        "28",
+        "32",
+        "36"
+      ],
+      "r": 2,
+      "x": "L'adulte possède 32 dents définitives, dont quatre dents de sagesse, contre 20 dents de lait chez l'enfant. L'absence congénitale des dents de sagesse est cependant fréquente."
+    },
+    {
+      "q": "Le sang est pompé vers l'ensemble du corps à partir de :",
+      "o": [
+        "l'oreillette droite",
+        "l'oreillette gauche",
+        "le ventricule droit",
+        "le ventricule gauche"
+      ],
+      "r": 3,
+      "x": "Le ventricule gauche éjecte le sang oxygéné dans l'aorte, ce qui explique l'épaisseur de sa paroi musculaire. Le ventricule droit envoie, lui, le sang vers les poumons par l'artère pulmonaire."
+    },
+    {
+      "q": "Le groupe sanguin qualifié de donneur universel est :",
+      "o": [
+        "O négatif",
+        "O positif",
+        "AB négatif",
+        "AB positif"
+      ],
+      "r": 0,
+      "x": "Le groupe O négatif est donneur universel car il ne porte ni antigène A ou B, ni facteur Rhésus. Le groupe AB positif est, à l'inverse, receveur universel."
+    },
+    {
+      "q": "L'organe qui produit l'insuline est :",
+      "o": [
+        "le foie",
+        "le pancréas",
+        "la rate",
+        "la thyroïde"
+      ],
+      "r": 1,
+      "x": "L'insuline est sécrétée par les cellules bêta des îlots de Langerhans du pancréas et régule la glycémie. Son défaut ou son inefficacité est à l'origine du diabète."
+    },
+    {
+      "q": "Le nombre de paires de côtes que possède l'être humain est de :",
+      "o": [
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "r": 1,
+      "x": "L'être humain possède douze paires de côtes, dont les deux dernières sont dites flottantes. Elles protègent le cœur, les poumons et une partie des organes abdominaux."
+    },
+    {
+      "q": "L'unité fonctionnelle du rein, siège de la filtration du sang, est :",
+      "o": [
+        "le néphron",
+        "l'alvéole",
+        "le neurone",
+        "le glomérule seul"
+      ],
+      "r": 0,
+      "x": "Le néphron est l'unité fonctionnelle du rein, qui en compte environ un million par organe. Il comprend le glomérule, où s'effectue la filtration, et le tubule, où se produisent réabsorption et sécrétion."
+    },
+    {
+      "q": "L'échange gazeux entre l'air et le sang s'effectue au niveau :",
+      "o": [
+        "de la trachée",
+        "des bronches",
+        "des alvéoles pulmonaires",
+        "du diaphragme"
+      ],
+      "r": 2,
+      "x": "Les alvéoles pulmonaires, au nombre de plusieurs centaines de millions, assurent le passage de l'oxygène vers le sang et du gaz carbonique vers l'air expiré. Le diaphragme est, lui, le principal muscle de la respiration."
+    },
+    {
+      "q": "La vitamine synthétisée par la peau sous l'effet du rayonnement solaire est la vitamine :",
+      "o": [
+        "A",
+        "C",
+        "D",
+        "K"
+      ],
+      "r": 2,
+      "x": "La vitamine D est synthétisée par la peau sous l'action des rayons ultraviolets et intervient dans la fixation du calcium. Sa carence provoque le rachitisme chez l'enfant et l'ostéomalacie chez l'adulte."
+    },
+    {
+      "q": "La carence en vitamine C provoque une maladie appelée :",
+      "o": [
+        "le scorbut",
+        "le béribéri",
+        "la pellagre",
+        "le rachitisme"
+      ],
+      "r": 0,
+      "x": "Le scorbut résulte d'une carence en vitamine C et frappait autrefois les marins privés de fruits frais. Le béribéri est dû à une carence en vitamine B1 et la pellagre à une carence en vitamine B3."
+    },
+    {
+      "q": "Le plus long os du corps humain est :",
+      "o": [
+        "l'humérus",
+        "le tibia",
+        "le radius",
+        "le fémur"
+      ],
+      "r": 3,
+      "x": "Le fémur, os de la cuisse, est à la fois le plus long et le plus résistant du squelette humain. L'humérus est, lui, l'os long du bras."
+    },
+    {
+      "q": "Le nombre de litres de sang que contient en moyenne le corps d'un adulte est d'environ :",
+      "o": [
+        "3 litres",
+        "5 litres",
+        "8 litres",
+        "10 litres"
+      ],
+      "r": 1,
+      "x": "Un adulte contient en moyenne cinq litres de sang, soit environ 7 % de sa masse corporelle. Une perte supérieure à un tiers de ce volume met le pronostic vital en jeu."
+    },
+    {
+      "q": "La partie du cerveau qui contrôle l'équilibre et la coordination des mouvements est :",
+      "o": [
+        "le cervelet",
+        "le bulbe rachidien",
+        "l'hypothalamus",
+        "le cortex frontal"
+      ],
+      "r": 0,
+      "x": "Le cervelet, situé à l'arrière du crâne, coordonne les mouvements et maintient l'équilibre. Le bulbe rachidien régule, lui, des fonctions vitales comme la respiration et le rythme cardiaque."
+    },
+    {
+      "q": "La photosynthèse permet aux végétaux chlorophylliens de produire :",
+      "o": [
+        "du dioxyde de carbone et de l'eau",
+        "du méthane et de l'hydrogène",
+        "de l'azote et de l'ammoniac",
+        "du glucose et du dioxygène"
+      ],
+      "r": 3,
+      "x": "La photosynthèse transforme le dioxyde de carbone et l'eau en glucose et en dioxygène, grâce à l'énergie lumineuse captée par la chlorophylle. Elle constitue la base de presque toutes les chaînes alimentaires."
+    },
+    {
+      "q": "La théorie de l'évolution par sélection naturelle a été exposée en 1859 par :",
+      "o": [
+        "Jean-Baptiste de Lamarck",
+        "Gregor Mendel",
+        "Charles Darwin",
+        "Louis Pasteur"
+      ],
+      "r": 2,
+      "x": "Charles Darwin publie De l'origine des espèces en 1859 et y expose la sélection naturelle. Gregor Mendel établit, lui, les lois de l'hérédité à partir de 1865."
+    },
+    {
+      "q": "Les lois de l'hérédité ont été établies à partir de croisements de petits pois par :",
+      "o": [
+        "Charles Darwin",
+        "Claude Bernard",
+        "Louis Pasteur",
+        "Gregor Mendel"
+      ],
+      "r": 3,
+      "x": "Gregor Mendel, moine autrichien, établit les lois de l'hérédité à partir de 1865 en croisant des variétés de pois. Ses travaux, longtemps ignorés, ne sont redécouverts qu'au début du XXe siècle."
+    },
+    {
+      "q": "La maladie transmise à l'homme par la piqûre de l'anophèle femelle est :",
+      "o": [
+        "la dengue",
+        "la fièvre jaune",
+        "le paludisme",
+        "la trypanosomiase"
+      ],
+      "r": 2,
+      "x": "Le paludisme est transmis par l'anophèle femelle, qui inocule un parasite du genre Plasmodium. La dengue et la fièvre jaune sont transmises par le moustique Aedes et la trypanosomiase par la mouche tsé-tsé."
+    },
+    {
+      "q": "La trypanosomiase africaine, ou maladie du sommeil, est transmise par :",
+      "o": [
+        "l'anophèle femelle",
+        "la simulie",
+        "le moustique Aedes",
+        "la mouche tsé-tsé"
+      ],
+      "r": 3,
+      "x": "La maladie du sommeil est transmise par la mouche tsé-tsé, du genre Glossina. La simulie transmet, elle, l'onchocercose ou cécité des rivières, longtemps endémique dans les vallées burkinabè."
+    },
+    {
+      "q": "Le premier vaccin contre le paludisme recommandé par l'OMS porte le nom de :",
+      "o": [
+        "BCG",
+        "VPO",
+        "DTC",
+        "RTS,S"
+      ],
+      "r": 3,
+      "x": "Le vaccin RTS,S, recommandé par l'OMS depuis 2021, est le premier homologué contre le paludisme. Le BCG protège contre la tuberculose, le DTC contre la diphtérie, le tétanos et la coqueluche."
+    },
+    {
+      "q": "Une figure de style qui rapproche deux termes contradictoires s'appelle :",
+      "o": [
+        "une litote",
+        "un oxymore",
+        "une hyperbole",
+        "une métonymie"
+      ],
+      "r": 1,
+      "x": "L'oxymore réunit deux mots de sens opposés, comme dans « une obscure clarté ». La litote, à l'inverse, dit moins pour suggérer davantage."
+    },
+    {
+      "q": "La figure de style consistant à atténuer l'expression pour en renforcer le sens est :",
+      "o": [
+        "la litote",
+        "l'hyperbole",
+        "l'anaphore",
+        "la périphrase"
+      ],
+      "r": 0,
+      "x": "La litote dit moins pour faire entendre davantage, comme dans « Va, je ne te hais point ». L'hyperbole procède au contraire par exagération."
+    },
+    {
+      "q": "La répétition d'un même mot en début de plusieurs vers ou phrases s'appelle :",
+      "o": [
+        "une allitération",
+        "une assonance",
+        "une gradation",
+        "une anaphore"
+      ],
+      "r": 3,
+      "x": "L'anaphore répète un mot ou un groupe de mots en tête de phrases ou de vers successifs. L'allitération répète, elle, une même consonne et l'assonance une même voyelle."
+    },
+    {
+      "q": "La figure qui désigne une réalité par un mot voisin, comme « boire un verre », est :",
+      "o": [
+        "la comparaison",
+        "la métaphore",
+        "la métonymie",
+        "la personnification"
+      ],
+      "r": 2,
+      "x": "La métonymie désigne une chose par un terme qui lui est logiquement lié, ici le contenant pour le contenu. La métaphore établit, elle, une analogie sans outil de comparaison."
+    },
+    {
+      "q": "Un vers de douze syllabes en poésie française se nomme :",
+      "o": [
+        "un octosyllabe",
+        "un décasyllabe",
+        "un alexandrin",
+        "un hendécasyllabe"
+      ],
+      "r": 2,
+      "x": "L'alexandrin compte douze syllabes et domine la poésie classique française. Le décasyllabe en compte dix et l'octosyllabe huit."
+    },
+    {
+      "q": "Le mouvement littéraire du XVIIe siècle prônant la raison, la mesure et l'imitation des Anciens est :",
+      "o": [
+        "l'humanisme",
+        "le réalisme",
+        "le romantisme",
+        "le classicisme"
+      ],
+      "r": 3,
+      "x": "Le classicisme s'épanouit en France au XVIIe siècle autour de la raison et des règles héritées de l'Antiquité. Le romantisme, au XIXe siècle, valorisera au contraire le sentiment et l'imagination."
+    },
+    {
+      "q": "Le mouvement littéraire fondé par Aimé Césaire, Léopold Sédar Senghor et Léon-Gontran Damas est :",
+      "o": [
+        "la négritude",
+        "le surréalisme",
+        "le naturalisme",
+        "le symbolisme"
+      ],
+      "r": 0,
+      "x": "La négritude naît dans les années 1930 autour de Césaire, Senghor et Damas, et revendique les valeurs culturelles du monde noir. Césaire emploie le terme pour la première fois dans Cahier d'un retour au pays natal."
+    },
+    {
+      "q": "L'auteur du roman L'Enfant noir, publié en 1953, est :",
+      "o": [
+        "Camara Laye",
+        "Mongo Beti",
+        "Cheikh Hamidou Kane",
+        "Ferdinand Oyono"
+      ],
+      "r": 0,
+      "x": "Camara Laye, écrivain guinéen, publie L'Enfant noir en 1953, récit largement autobiographique de son enfance en Haute-Guinée. Cheikh Hamidou Kane est, lui, l'auteur de L'Aventure ambiguë paru en 1961."
+    },
+    {
+      "q": "Le roman L'Aventure ambiguë a pour auteur :",
+      "o": [
+        "Camara Laye",
+        "Cheikh Hamidou Kane",
+        "Ahmadou Kourouma",
+        "Sembène Ousmane"
+      ],
+      "r": 1,
+      "x": "Cheikh Hamidou Kane publie L'Aventure ambiguë en 1961 et y interroge la rencontre entre l'islam africain et l'école occidentale. Sembène Ousmane est, lui, l'auteur des Bouts de bois de Dieu paru en 1960."
+    },
+    {
+      "q": "L'auteur du roman Les Bouts de bois de Dieu, consacré à la grève des cheminots du Dakar-Niger, est :",
+      "o": [
+        "Ferdinand Oyono",
+        "Mongo Beti",
+        "Sembène Ousmane",
+        "Bernard Dadié"
+      ],
+      "r": 2,
+      "x": "Sembène Ousmane publie Les Bouts de bois de Dieu en 1960, inspiré de la grève de 1947-1948 sur la ligne Dakar-Niger. Il est également considéré comme le père du cinéma africain."
+    },
+    {
+      "q": "Le premier roman d'Ahmadou Kourouma, publié en 1968, s'intitule :",
+      "o": [
+        "Les Soleils des indépendances",
+        "Monnè, outrages et défis",
+        "En attendant le vote des bêtes sauvages",
+        "Allah n'est pas obligé"
+      ],
+      "r": 0,
+      "x": "Les Soleils des indépendances paraît en 1968 au Canada avant d'être publié en France en 1970. Allah n'est pas obligé, paru en 2000, vaudra à Kourouma le prix Renaudot."
+    },
+    {
+      "q": "L'écrivain nigérian auteur de Le Monde s'effondre, roman fondateur de la littérature africaine anglophone, est :",
+      "o": [
+        "Wole Soyinka",
+        "Chinua Achebe",
+        "Ben Okri",
+        "Ngugi wa Thiong'o"
+      ],
+      "r": 1,
+      "x": "Chinua Achebe publie Things Fall Apart en 1958, traduit en français sous le titre Le Monde s'effondre. Wole Soyinka, également nigérian, est le premier Africain lauréat du prix Nobel de littérature en 1986."
+    },
+    {
+      "q": "L'auteur des Misérables et de Notre-Dame de Paris est :",
+      "o": [
+        "Victor Hugo",
+        "Honoré de Balzac",
+        "Émile Zola",
+        "Gustave Flaubert"
+      ],
+      "r": 0,
+      "x": "Victor Hugo publie Notre-Dame de Paris en 1831 et Les Misérables en 1862, et domine le romantisme français. Émile Zola est, lui, le chef de file du naturalisme avec le cycle des Rougon-Macquart."
+    },
+    {
+      "q": "L'écrivain considéré comme le chef de file du naturalisme est :",
+      "o": [
+        "Victor Hugo",
+        "Émile Zola",
+        "Alphonse de Lamartine",
+        "Charles Baudelaire"
+      ],
+      "r": 1,
+      "x": "Émile Zola théorise le naturalisme et l'applique dans les vingt romans du cycle des Rougon-Macquart. Il est aussi l'auteur de l'article « J'accuse » publié en 1898 lors de l'affaire Dreyfus."
+    },
+    {
+      "q": "Le recueil poétique Les Fleurs du mal a été publié en 1857 par :",
+      "o": [
+        "Arthur Rimbaud",
+        "Paul Verlaine",
+        "Charles Baudelaire",
+        "Stéphane Mallarmé"
+      ],
+      "r": 2,
+      "x": "Charles Baudelaire publie Les Fleurs du mal en 1857 et est aussitôt condamné pour outrage aux bonnes mœurs. Rimbaud et Verlaine appartiennent à la génération suivante, marquée par le symbolisme."
+    },
+    {
+      "q": "Une œuvre théâtrale dont le dénouement est malheureux et les personnages nobles relève de :",
+      "o": [
+        "la comédie",
+        "la tragédie",
+        "le drame bourgeois",
+        "la farce"
+      ],
+      "r": 1,
+      "x": "La tragédie classique met en scène des personnages de haut rang et s'achève sur un dénouement funeste. La comédie, à l'inverse, met en scène des personnages ordinaires et se termine bien."
+    },
+    {
+      "q": "La règle des trois unités du théâtre classique porte sur :",
+      "o": [
+        "le lieu, le temps et l'action",
+        "le lieu, les personnages et le style",
+        "le temps, le langage et la morale",
+        "l'action, le décor et le costume"
+      ],
+      "r": 0,
+      "x": "La règle des trois unités impose une seule action, en un seul lieu et en une seule journée. Elle s'accompagne des règles de bienséance et de vraisemblance dans le théâtre classique du XVIIe siècle."
+    },
+    {
+      "q": "L'auteur des pièces Le Misanthrope, L'Avare et Le Malade imaginaire est :",
+      "o": [
+        "Jean Racine",
+        "Pierre Corneille",
+        "Molière",
+        "Alfred de Musset"
+      ],
+      "r": 2,
+      "x": "Molière, de son vrai nom Jean-Baptiste Poquelin, domine la comédie classique française au XVIIe siècle. Racine et Corneille sont, eux, les grands auteurs de la tragédie de la même période."
+    },
+    {
+      "q": "Un récit bref mettant en scène des animaux pour délivrer une morale s'appelle :",
+      "o": [
+        "une fable",
+        "une nouvelle",
+        "une épopée",
+        "une ode"
+      ],
+      "r": 0,
+      "x": "La fable est un court récit allégorique, souvent animalier, conclu par une morale. Jean de La Fontaine en est le maître en langue française, s'inspirant d'Ésope et de Phèdre."
+    },
+    {
+      "q": "Le procédé consistant à attribuer des caractéristiques humaines à un objet ou un animal est :",
+      "o": [
+        "la comparaison",
+        "la personnification",
+        "l'euphémisme",
+        "l'antithèse"
+      ],
+      "r": 1,
+      "x": "La personnification prête des traits humains à une réalité non humaine, comme dans « le vent hurlait ». L'antithèse oppose, elle, deux idées dans une même phrase."
+    },
+    {
+      "q": "La formule « Je pense, donc je suis » est de :",
+      "o": [
+        "Blaise Pascal",
+        "Emmanuel Kant",
+        "Baruch Spinoza",
+        "René Descartes"
+      ],
+      "r": 3,
+      "x": "René Descartes énonce le cogito dans le Discours de la méthode publié en 1637. Cette proposition constitue pour lui la première certitude résistant au doute méthodique."
+    },
+    {
+      "q": "L'auteur de la Critique de la raison pure, publiée en 1781, est :",
+      "o": [
+        "Emmanuel Kant",
+        "Georg Hegel",
+        "Arthur Schopenhauer",
+        "Jean-Jacques Rousseau"
+      ],
+      "r": 0,
+      "x": "Emmanuel Kant publie la Critique de la raison pure en 1781 et y fonde l'idéalisme transcendantal. Il y examine les limites et les conditions de possibilité de la connaissance."
+    },
+    {
+      "q": "Le philosophe grec condamné à boire la ciguë en 399 avant notre ère est :",
+      "o": [
+        "Platon",
+        "Aristote",
+        "Épicure",
+        "Socrate"
+      ],
+      "r": 3,
+      "x": "Socrate est condamné à mort en 399 avant notre ère pour impiété et corruption de la jeunesse. Il n'a laissé aucun écrit et sa pensée nous est connue par Platon et Xénophon."
+    },
+    {
+      "q": "L'élève de Platon et précepteur d'Alexandre le Grand est :",
+      "o": [
+        "Socrate",
+        "Aristote",
+        "Épicure",
+        "Zénon"
+      ],
+      "r": 1,
+      "x": "Aristote étudie vingt ans à l'Académie de Platon avant de devenir le précepteur d'Alexandre le Grand. Il fonde ensuite le Lycée à Athènes et pose les bases de la logique formelle."
+    },
+    {
+      "q": "Le philosophe auteur du Contrat social, paru en 1762, est :",
+      "o": [
+        "Voltaire",
+        "Denis Diderot",
+        "Jean-Jacques Rousseau",
+        "John Locke"
+      ],
+      "r": 2,
+      "x": "Jean-Jacques Rousseau publie Du contrat social en 1762 et y développe la théorie de la volonté générale. L'ouvrage nourrira directement la pensée révolutionnaire française."
+    },
+    {
+      "q": "L'auteur du Manifeste du parti communiste, publié en 1848 avec Friedrich Engels, est :",
+      "o": [
+        "Karl Marx",
+        "Pierre-Joseph Proudhon",
+        "Mikhaïl Bakounine",
+        "Vladimir Lénine"
+      ],
+      "r": 0,
+      "x": "Karl Marx et Friedrich Engels publient le Manifeste du parti communiste en 1848. Marx développe ensuite sa critique de l'économie politique dans Le Capital, dont le premier livre paraît en 1867."
+    },
+    {
+      "q": "Le courant philosophique affirmant que l'existence précède l'essence est :",
+      "o": [
+        "le positivisme",
+        "l'existentialisme",
+        "le structuralisme",
+        "l'empirisme"
+      ],
+      "r": 1,
+      "x": "L'existentialisme, formulé notamment par Jean-Paul Sartre, pose que l'être humain se définit par ses actes et non par une nature préétablie. Le positivisme d'Auguste Comte privilégie, lui, la connaissance scientifique des faits."
+    },
+    {
+      "q": "L'allégorie de la caverne se trouve dans un ouvrage de :",
+      "o": [
+        "Aristote",
+        "Saint Augustin",
+        "Sénèque",
+        "Platon"
+      ],
+      "r": 3,
+      "x": "L'allégorie de la caverne figure au livre VII de La République de Platon et illustre le passage de l'opinion à la connaissance. Les prisonniers y prennent les ombres projetées pour la réalité elle-même."
+    },
+    {
+      "q": "L'auteur de l'ouvrage La Philosophie bantoue, publié en 1945, est :",
+      "o": [
+        "Placide Tempels",
+        "Cheikh Anta Diop",
+        "Paulin Hountondji",
+        "Kwame Nkrumah"
+      ],
+      "r": 0,
+      "x": "Placide Tempels, missionnaire belge, publie La Philosophie bantoue en 1945 et ouvre le débat sur l'existence d'une philosophie africaine. Paulin Hountondji en fera plus tard une critique méthodique sur la philosophie africaine."
+    },
+    {
+      "q": "Le produit intérieur brut (PIB) mesure :",
+      "o": [
+        "la valeur des biens et services produits sur un territoire",
+        "le total des revenus des nationaux à l'étranger",
+        "la somme des dépenses publiques d'un État",
+        "la valeur des réserves de change d'un pays"
+      ],
+      "r": 0,
+      "x": "Le PIB mesure la valeur de l'ensemble des biens et services produits sur un territoire au cours d'une année. Le produit national brut y ajoute les revenus des nationaux à l'étranger et en retire ceux des étrangers sur le territoire."
+    },
+    {
+      "q": "L'inflation se définit comme :",
+      "o": [
+        "une baisse générale et durable des prix",
+        "une hausse générale et durable des prix",
+        "une stagnation prolongée de la production",
+        "une réduction de la masse monétaire"
+      ],
+      "r": 1,
+      "x": "L'inflation désigne une hausse générale et durable du niveau des prix, qui érode le pouvoir d'achat. Son contraire, la déflation, correspond à une baisse générale et durable des prix."
+    },
+    {
+      "q": "La situation combinant stagnation économique et forte inflation porte le nom de :",
+      "o": [
+        "déflation",
+        "désinflation",
+        "stagflation",
+        "récession"
+      ],
+      "r": 2,
+      "x": "La stagflation associe croissance faible, chômage élevé et inflation forte, comme dans les pays occidentaux après le choc pétrolier de 1973. La désinflation désigne, elle, un simple ralentissement de la hausse des prix."
+    },
+    {
+      "q": "La balance commerciale d'un pays enregistre :",
+      "o": [
+        "les flux de capitaux entrants et sortants",
+        "le solde du budget de l'État",
+        "les transferts des travailleurs migrants",
+        "les échanges de biens avec l'extérieur"
+      ],
+      "r": 3,
+      "x": "La balance commerciale retrace les exportations et importations de biens, son solde étant excédentaire ou déficitaire. Elle constitue une composante de la balance des paiements, qui couvre l'ensemble des échanges avec l'étranger."
+    },
+    {
+      "q": "Le franc CFA utilisé par les pays de l'UEMOA est émis par :",
+      "o": [
+        "la Banque africaine de développement",
+        "la Banque des États de l'Afrique centrale",
+        "la Banque centrale des États de l'Afrique de l'Ouest",
+        "la Banque ouest-africaine de développement"
+      ],
+      "r": 2,
+      "x": "La BCEAO émet le franc CFA pour les huit pays de l'UEMOA et son siège est à Dakar. La BEAC joue le même rôle pour les six pays de la CEMAC, avec siège à Yaoundé."
+    },
+    {
+      "q": "Le secteur primaire de l'économie regroupe les activités :",
+      "o": [
+        "d'extraction et de production de matières premières",
+        "de transformation industrielle des produits",
+        "de commerce et de services aux entreprises",
+        "de recherche et de développement technologique"
+      ],
+      "r": 0,
+      "x": "Le secteur primaire rassemble l'agriculture, l'élevage, la pêche, la sylviculture et les industries extractives. Le secteur secondaire correspond à l'industrie de transformation et le tertiaire aux services."
+    },
+    {
+      "q": "Le budget de l'État est en déficit lorsque :",
+      "o": [
+        "les recettes dépassent les dépenses",
+        "les importations dépassent les exportations",
+        "la dette publique diminue",
+        "les dépenses dépassent les recettes"
+      ],
+      "r": 3,
+      "x": "Le déficit budgétaire apparaît lorsque les dépenses de l'État excèdent ses recettes sur un exercice. Son accumulation au fil des années alimente la dette publique."
+    },
+    {
+      "q": "Le critère de convergence de l'UEMOA plafonne le déficit budgétaire global, dons compris, à :",
+      "o": [
+        "1 % du PIB",
+        "3 % du PIB",
+        "5 % du PIB",
+        "7 % du PIB"
+      ],
+      "r": 1,
+      "x": "Le pacte de convergence de l'UEMOA fixe un plafond de 3 % du PIB pour le déficit budgétaire global et de 70 % pour l'encours de la dette publique. Ces critères s'inspirent de ceux du traité de Maastricht."
+    },
+    {
+      "q": "Le taux de chômage se calcule en rapportant le nombre de chômeurs :",
+      "o": [
+        "à la population totale",
+        "à la population en âge de travailler",
+        "à la population active",
+        "à la population occupée"
+      ],
+      "r": 2,
+      "x": "Le taux de chômage rapporte les chômeurs à la population active, c'est-à-dire aux actifs occupés augmentés des chômeurs. Un chômeur au sens du Bureau international du travail est sans emploi, disponible et en recherche effective."
+    },
+    {
+      "q": "La microfinance a pour objet principal :",
+      "o": [
+        "le financement des grandes entreprises",
+        "l'assurance des risques agricoles majeurs",
+        "la gestion des réserves de change des États",
+        "l'octroi de petits crédits aux populations exclues du système bancaire"
+      ],
+      "r": 3,
+      "x": "La microfinance fournit de petits crédits et des services d'épargne aux populations sans accès au crédit bancaire classique. Muhammad Yunus, fondateur de la Grameen Bank, a reçu le prix Nobel de la paix en 2006 pour cette approche."
+    },
+    {
+      "q": "L'impôt prélevé sur la consommation, inclus dans le prix payé par le client, est :",
+      "o": [
+        "l'impôt sur le revenu",
+        "l'impôt sur les sociétés",
+        "la taxe sur la valeur ajoutée",
+        "la taxe foncière"
+      ],
+      "r": 2,
+      "x": "La TVA est un impôt indirect supporté par le consommateur final et collecté par les entreprises. L'impôt sur le revenu et l'impôt sur les sociétés sont, eux, des impôts directs."
+    },
+    {
+      "q": "Un impôt est dit progressif lorsque :",
+      "o": [
+        "son taux augmente avec le revenu imposable",
+        "son taux reste identique quel que soit le revenu",
+        "son taux diminue quand le revenu augmente",
+        "son montant est fixé par avance pour tous"
+      ],
+      "r": 0,
+      "x": "L'impôt progressif applique des taux croissants par tranches de revenu et vise une redistribution. L'impôt proportionnel applique, lui, un taux unique, comme la TVA qui pèse relativement plus sur les bas revenus."
+    },
+    {
+      "q": "L'offre et la demande se rencontrent, en économie de marché, pour déterminer :",
+      "o": [
+        "le volume de production maximal",
+        "le niveau de l'impôt",
+        "le taux d'intérêt directeur",
+        "le prix d'équilibre"
+      ],
+      "r": 3,
+      "x": "Le prix d'équilibre est atteint lorsque la quantité offerte égale la quantité demandée. Au-dessus de ce prix apparaît une offre excédentaire, en dessous une pénurie."
+    },
+    {
+      "q": "Une situation de marché où un seul vendeur fait face à de nombreux acheteurs s'appelle :",
+      "o": [
+        "un oligopole",
+        "une concurrence pure",
+        "un monopsone",
+        "un monopole"
+      ],
+      "r": 3,
+      "x": "Le monopole désigne la présence d'un vendeur unique face à une multitude d'acheteurs. L'oligopole compte quelques vendeurs et le monopsone un acheteur unique face à de nombreux vendeurs."
+    },
+    {
+      "q": "La Banque mondiale et le Fonds monétaire international (FMI) sont issus des accords de :",
+      "o": [
+        "Yalta",
+        "Bretton Woods",
+        "Rome",
+        "Lomé"
+      ],
+      "r": 1,
+      "x": "Les accords de Bretton Woods de juillet 1944 créent le FMI et la Banque internationale pour la reconstruction et le développement. Les conventions de Lomé organisent, elles, la coopération entre l'Europe et les pays ACP à partir de 1975."
+    },
+    {
+      "q": "La hiérarchie des normes place au sommet de l'ordre juridique interne :",
+      "o": [
+        "la loi organique",
+        "la Constitution",
+        "le décret",
+        "l'arrêté ministériel"
+      ],
+      "r": 1,
+      "x": "La Constitution occupe le sommet de la hiérarchie des normes, suivie des traités, des lois puis des règlements. Cette construction théorique est due au juriste autrichien Hans Kelsen."
+    },
+    {
+      "q": "Un texte voté par le Parlement porte le nom de :",
+      "o": [
+        "décret",
+        "loi",
+        "arrêté",
+        "circulaire"
+      ],
+      "r": 1,
+      "x": "La loi est votée par le pouvoir législatif, tandis que le décret émane du pouvoir exécutif. L'arrêté est pris par un ministre, un gouverneur ou un maire, et la circulaire ne fait qu'interpréter un texte existant."
+    },
+    {
+      "q": "Le droit qui régit les rapports entre les particuliers est :",
+      "o": [
+        "le droit privé",
+        "le droit public",
+        "le droit international",
+        "le droit pénal"
+      ],
+      "r": 0,
+      "x": "Le droit privé régit les relations entre personnes privées et comprend notamment le droit civil et le droit commercial. Le droit public organise, lui, les rapports entre l'État et les particuliers."
+    },
+    {
+      "q": "Au Burkina Faso, la juridiction compétente pour juger les crimes en 2026 est :",
+      "o": [
+        "La chambre correctionnelle du TGI",
+        "La chambre criminelle du TGI",
+        "Le tribunal administratif",
+        "Le tribunal de commerce"
+      ],
+      "r": 1,
+      "x": "Au Burkina Faso, la juridiction de droit commun désormais compétente pour juger les crimes au premier degré est la chambre criminelle du Tribunal de grande instance (TGI). La loi N°040-2019/AN portant organisation judiciaire au Burkina Faso a supprimé la Cour d'assises au profit des chambres criminelles des TGI."
+    },
+    {
+      "q": "La présomption d'innocence signifie que :",
+      "o": [
+        "l'accusé doit prouver son innocence",
+        "les témoignages priment sur les preuves matérielles",
+        "le juge doit condamner en cas de doute",
+        "toute personne est présumée innocente jusqu'à preuve de sa culpabilité"
+      ],
+      "r": 3,
+      "x": "La présomption d'innocence impose que la charge de la preuve pèse sur l'accusation et non sur l'accusé. Elle est consacrée par l'article 11 de la Déclaration universelle des droits de l'homme."
+    },
+    {
+      "q": "Le principe selon lequel nul n'est censé ignorer la loi implique que :",
+      "o": [
+        "l'ignorance de la loi excuse son non-respect",
+        "la loi ne s'applique qu'après information individuelle",
+        "seuls les juristes sont tenus de connaître la loi",
+        "l'ignorance de la loi ne peut être invoquée pour échapper à son application"
+      ],
+      "r": 3,
+      "x": "Ce principe interdit d'invoquer son ignorance pour se soustraire à l'application de la loi. Il justifie l'obligation de publier les textes au Journal officiel avant leur entrée en vigueur."
+    },
+    {
+      "q": "Une loi qui ne s'applique pas aux faits antérieurs à son entrée en vigueur illustre le principe de :",
+      "o": [
+        "la non-rétroactivité",
+        "la légalité des délits",
+        "la proportionnalité des peines",
+        "l'autorité de la chose jugée"
+      ],
+      "r": 0,
+      "x": "Le principe de non-rétroactivité interdit d'appliquer une loi nouvelle à des faits antérieurs, sauf lorsqu'elle est plus douce en matière pénale. Il garantit la sécurité juridique des citoyens."
+    },
+    {
+      "q": "Le référendum est une procédure par laquelle :",
+      "o": [
+        "le Parlement révise seul la Constitution",
+        "le juge constitutionnel censure une loi",
+        "le gouvernement légifère par ordonnance",
+        "le peuple se prononce directement par un vote"
+      ],
+      "r": 3,
+      "x": "Le référendum permet au corps électoral de se prononcer directement sur un texte ou une question. Il constitue une expression de la démocratie directe, par opposition à la démocratie représentative."
+    },
+    {
+      "q": "L'acte par lequel un chef d'État dispense un condamné d'exécuter tout ou partie de sa peine est :",
+      "o": [
+        "l'amnistie",
+        "la grâce",
+        "la prescription",
+        "la relaxe"
+      ],
+      "r": 1,
+      "x": "La grâce est une mesure individuelle qui dispense d'exécuter la peine sans effacer la condamnation. L'amnistie, votée par le Parlement, efface au contraire l'infraction elle-même."
+    },
+    {
+      "q": "Le sculpteur de la statue de la Liberté, offerte par la France aux États-Unis, est :",
+      "o": [
+        "Auguste Rodin",
+        "Auguste Bartholdi",
+        "Gustave Eiffel",
+        "Camille Claudel"
+      ],
+      "r": 1,
+      "x": "Auguste Bartholdi conçoit la statue de la Liberté, inaugurée en 1886, dont Gustave Eiffel a réalisé la charpente métallique. Auguste Rodin est, lui, l'auteur du Penseur."
+    },
+    {
+      "q": "La Joconde, conservée au musée du Louvre, a été peinte par :",
+      "o": [
+        "Michel-Ange",
+        "Raphaël",
+        "Léonard de Vinci",
+        "Sandro Botticelli"
+      ],
+      "r": 2,
+      "x": "Léonard de Vinci peint La Joconde au début du XVIe siècle, tableau conservé au Louvre depuis la Révolution française. Michel-Ange est, lui, l'auteur des fresques de la chapelle Sixtine."
+    },
+    {
+      "q": "Le mouvement pictural né en France à la fin du XIXe siècle autour de Claude Monet est :",
+      "o": [
+        "le cubisme",
+        "l'expressionnisme",
+        "le surréalisme",
+        "l'impressionnisme"
+      ],
+      "r": 3,
+      "x": "L'impressionnisme tire son nom du tableau Impression, soleil levant de Claude Monet exposé en 1874. Le cubisme naît, lui, au début du XXe siècle avec Picasso et Braque."
+    },
+    {
+      "q": "Le compositeur allemand devenu sourd, auteur de neuf symphonies, est :",
+      "o": [
+        "Wolfgang Amadeus Mozart",
+        "Franz Schubert",
+        "Jean-Sébastien Bach",
+        "Ludwig van Beethoven"
+      ],
+      "r": 3,
+      "x": "Ludwig van Beethoven compose neuf symphonies malgré une surdité progressive apparue dès la trentaine. Sa Neuvième symphonie, achevée en 1824, contient l'Hymne à la joie devenu hymne européen."
+    },
+    {
+      "q": "L'instrument de musique à cordes frottées le plus aigu de l'orchestre symphonique est :",
+      "o": [
+        "le violon",
+        "l'alto",
+        "le violoncelle",
+        "la contrebasse"
+      ],
+      "r": 0,
+      "x": "Le violon est le plus aigu des cordes frottées, suivi de l'alto, du violoncelle et de la contrebasse. Le quatuor à cordes classique associe deux violons, un alto et un violoncelle."
+    },
+    {
+      "q": "L'instrument de musique traditionnel à vingt et une cordes joué par les griots mandingues est :",
+      "o": [
+        "le balafon",
+        "le ngoni",
+        "le djembé",
+        "la kora"
+      ],
+      "r": 3,
+      "x": "La kora, harpe-luth à vingt et une cordes, accompagne traditionnellement la parole des griots mandingues. Le balafon est un xylophone à lames de bois et le djembé un tambour à peau frappé à mains nues."
+    },
+    {
+      "q": "Le balafon des Sénoufo, classé par l'UNESCO, est un instrument :",
+      "o": [
+        "à cordes pincées",
+        "à vent",
+        "à percussion à lames de bois",
+        "à cordes frottées"
+      ],
+      "r": 2,
+      "x": "Le balafon est un xylophone à lames de bois équipé de calebasses résonatrices, joué avec des baguettes. La pratique du balafon des Sénoufo du Burkina Faso, du Mali et de la Côte d'Ivoire est inscrite au patrimoine immatériel de l'UNESCO depuis 2012."
+    },
+    {
+      "q": "Les Jeux olympiques modernes ont été rétablis en 1896 sur l'initiative de :",
+      "o": [
+        "Pierre de Coubertin",
+        "Jules Rimet",
+        "Juan Antonio Samaranch",
+        "Avery Brundage"
+      ],
+      "r": 0,
+      "x": "Pierre de Coubertin rétablit les Jeux olympiques modernes, dont la première édition se tient à Athènes en 1896. Jules Rimet est, lui, à l'origine de la Coupe du monde de football créée en 1930."
+    },
+    {
+      "q": "La première Coupe du monde de football s'est tenue en :",
+      "o": [
+        "1924, en France",
+        "1930, en Uruguay",
+        "1934, en Italie",
+        "1938, au Brésil"
+      ],
+      "r": 1,
+      "x": "La première Coupe du monde se déroule en Uruguay en 1930 et est remportée par le pays hôte. Elle doit son existence à Jules Rimet, alors président de la FIFA."
+    },
+    {
+      "q": "Les anneaux olympiques, au nombre de cinq, représentent :",
+      "o": [
+        "les cinq disciplines fondatrices",
+        "les cinq continents",
+        "les cinq valeurs olympiques",
+        "les cinq premières éditions des Jeux"
+      ],
+      "r": 1,
+      "x": "Les cinq anneaux entrelacés symbolisent l'union des cinq continents et la rencontre des athlètes du monde entier. Leurs couleurs, associées au fond blanc, permettent de reproduire tous les drapeaux nationaux."
+    },
+    {
+      "q": "La périodicité des Jeux olympiques d'été est de :",
+      "o": [
+        "deux ans",
+        "trois ans",
+        "quatre ans",
+        "cinq ans"
+      ],
+      "r": 2,
+      "x": "Les Jeux olympiques d'été se tiennent tous les quatre ans, intervalle appelé olympiade. Les Jeux d'hiver, également quadriennaux, sont décalés de deux ans depuis 1994."
+    },
+    {
+      "q": "Le marathon se court sur une distance officielle de :",
+      "o": [
+        "21,097 km",
+        "30,500 km",
+        "42,195 km",
+        "50,000 km"
+      ],
+      "r": 2,
+      "x": "Le marathon se court sur 42,195 km, distance utilisée lors des Jeux de Londres en 1908 puis standardisée en 1921. Le semi-marathon correspond à la moitié, soit 21,097 km."
+    },
+    {
+      "q": "Le sport dans lequel le Burkinabè Hugues Fabrice Zango s'est illustré au niveau mondial est :",
+      "o": [
+        "le saut en hauteur",
+        "le triple saut",
+        "le lancer du javelot",
+        "le sprint sur 400 mètres"
+      ],
+      "r": 1,
+      "x": "Hugues Fabrice Zango est spécialiste du triple saut et a offert au Burkina Faso sa première médaille olympique à Tokyo en 2021. Il est devenu champion du monde de la discipline à Budapest en 2023."
+    },
+    {
+      "q": "Le premier président de la Haute-Volta indépendante, en 1960, est :",
+      "o": [
+        "Maurice Yaméogo",
+        "Sangoulé Lamizana",
+        "Saye Zerbo",
+        "Jean-Baptiste Ouédraogo"
+      ],
+      "r": 0,
+      "x": "Maurice Yaméogo devient président à l'indépendance du 5 août 1960 et le reste jusqu'au soulèvement populaire du 3 janvier 1966. Sangoulé Lamizana lui succède à la tête de l'État."
+    },
+    {
+      "q": "Le pays a pris le nom de Burkina Faso le :",
+      "o": [
+        "5 août 1960",
+        "4 août 1983",
+        "4 août 1984",
+        "15 octobre 1987"
+      ],
+      "r": 2,
+      "x": "La Haute-Volta devient Burkina Faso le 4 août 1984, au premier anniversaire de la Révolution démocratique et populaire. Le 4 août 1983 correspond au déclenchement de cette révolution et le 15 octobre 1987 à l'assassinat de Thomas Sankara."
+    },
+    {
+      "q": "L'ethnie la plus nombreuse du Burkina Faso est celle des :",
+      "o": [
+        "Mossi",
+        "Peuls",
+        "Gourmantché",
+        "Bobo"
+      ],
+      "r": 0,
+      "x": "Les Mossi représentent près de la moitié de la population burkinabè et occupent principalement le plateau central. Les Peuls, les Gourmantché, les Bobo et les Lobi comptent parmi la soixantaine d'autres groupes ethniques du pays."
+    },
+    {
+      "q": "Le souverain traditionnel du royaume mossi de Ouagadougou porte le titre de :",
+      "o": [
+        "Mogho Naaba",
+        "Yatenga Naaba",
+        "Larlé Naaba",
+        "Baloum Naaba"
+      ],
+      "r": 0,
+      "x": "Le Mogho Naaba est le souverain du royaume mossi de Ouagadougou, dont la cour compte plusieurs ministres traditionnels. Le Larlé Naaba et le Baloum Naaba sont précisément deux de ces dignitaires de la cour."
+    },
+    {
+      "q": "Les ruines de Loropéni, premier site burkinabè inscrit au patrimoine mondial de l'UNESCO, l'ont été en :",
+      "o": [
+        "1996",
+        "2009",
+        "2012",
+        "2019"
+      ],
+      "r": 1,
+      "x": "Les ruines de Loropéni sont inscrites au patrimoine mondial de l'UNESCO en 2009, devenant le premier site burkinabè de cette liste. Ces murailles de pierre témoignent du commerce transsaharien de l'or entre le XIe et le XVIIe siècle."
+    },
+    {
+      "q": "Le pic de Nahouri, site touristique remarquable, se situe dans la province :",
+      "o": [
+        "du Poni",
+        "du Nahouri",
+        "de la Comoé",
+        "du Yatenga"
+      ],
+      "r": 1,
+      "x": "Le pic de Nahouri culmine à environ 447 mètres dans la province du Nahouri, dont le chef-lieu est Pô. Le site est un lieu de pèlerinage traditionnel et un point de vue prisé sur la savane du Centre-Sud."
+    },
+    {
+      "q": "Les dômes de Fabédougou, formations rocheuses spectaculaires, se trouvent près de :",
+      "o": [
+        "Banfora",
+        "Gaoua",
+        "Dori",
+        "Koudougou"
+      ],
+      "r": 0,
+      "x": "Les dômes de Fabédougou se situent à une dizaine de kilomètres de Banfora, non loin des cascades de Karfiguéla. Ces formations gréseuses résultent d'une érosion vieille de plusieurs centaines de millions d'années."
+    },
+    {
+      "q": "La monnaie en circulation au Burkina Faso est :",
+      "o": [
+        "le franc CFA de la zone UEMOA",
+        "le franc CFA de la zone CEMAC",
+        "le cedi",
+        "le naira"
+      ],
+      "r": 0,
+      "x": "Le Burkina Faso utilise le franc CFA émis par la BCEAO pour les huit pays de l'UEMOA. Le cedi est la monnaie du Ghana et le naira celle du Nigeria."
+    },
+    {
+      "q": "Le Burkina Faso est membre de l'Alliance des États du Sahel (AES) aux côtés :",
+      "o": [
+        "du Mali et du Niger",
+        "du Mali et du Tchad",
+        "du Niger et de la Mauritanie",
+        "du Tchad et de la Mauritanie"
+      ],
+      "r": 0,
+      "x": "L'Alliance des États du Sahel réunit le Burkina Faso, le Mali et le Niger depuis sa création en septembre 2023. Ces trois pays se sont retirés de la CEDEAO et ont formé une confédération en juillet 2024."
+    },
+    {
+      "q": "La plus haute distinction honorifique du Burkina Faso est :",
+      "o": [
+        "l'Ordre du mérite burkinabè",
+        "l'Ordre des palmes académiques",
+        "la Médaille du travail",
+        "l'Ordre de l'Étalon"
+      ],
+      "r": 3,
+      "x": "L'Ordre de l'Étalon constitue la plus haute distinction honorifique burkinabè et comporte plusieurs grades, du chevalier à la grand-croix. L'étalon est aussi l'emblème sportif national et le symbole du cheval de la princesse Yennenga."
+    },
+    {
+      "q": "La princesse Yennenga, figure fondatrice de l'histoire mossi, est la mère de :",
+      "o": [
+        "Naaba Oubri",
+        "Rialé",
+        "Naaba Kango",
+        "Ouédraogo"
+      ],
+      "r": 3,
+      "x": "Yennenga, princesse guerrière du Dagomba, est la mère de Ouédraogo, considéré comme l'ancêtre fondateur des royaumes mossi. Son nom est donné à l'Étalon d'or du FESPACO, plus haute récompense du cinéma africain."
+    },
+    {
+      "q": "La langue officielle du Burkina Faso jusqu'en 2023 était :",
+      "o": [
+        "le mooré",
+        "le fulfuldé",
+        "le dioula",
+        "le français"
+      ],
+      "r": 3,
+      "x": "Le français était la langue officielle jusqu'à la révision constitutionnelle du 30 décembre 2023, qui l'a rétrogradé au rang de langue de travail, ainsi que l'anglais. Les langues nationales, dont le mooré, le dioula et le fulfuldé, sont devenues langues officielles."
+    },
+    {
+      "q": "Le Burkina Faso est entouré par un nombre de pays frontaliers égal à :",
+      "o": [
+        "quatre",
+        "cinq",
+        "six",
+        "sept"
+      ],
+      "r": 2,
+      "x": "Le Burkina Faso partage ses frontières avec six pays : le Mali, le Niger, le Bénin, le Togo, le Ghana et la Côte d'Ivoire. Cet enclavement explique l'importance stratégique des corridors routiers vers les ports du golfe de Guinée."
+    },
+    {
+      "q": "La doyenne des institutions de coopération sous-régionale ouest-africaine, créée le 29 mai 1959, est :",
+      "o": [
+        "le Conseil de l'Entente",
+        "l'Autorité du Liptako-Gourma",
+        "la Communauté économique ouest-africaine",
+        "l'Union monétaire ouest-africaine"
+      ],
+      "r": 0,
+      "x": "Le Conseil de l'Entente est créé le 29 mai 1959 à l'initiative de Félix Houphouët-Boigny, ce qui en fait la plus ancienne structure de coopération interétatique de la sous-région. L'Autorité du Liptako-Gourma date de 1970 et la CEDEAO de 1975."
+    },
+    {
+      "q": "Les quatre États fondateurs du Conseil de l'Entente sont :",
+      "o": [
+        "la Côte d'Ivoire, le Sénégal, le Mali et le Niger",
+        "la Côte d'Ivoire, la Haute-Volta, le Dahomey et le Niger",
+        "la Haute-Volta, le Togo, le Ghana et le Niger",
+        "le Sénégal, la Guinée, le Mali et le Dahomey"
+      ],
+      "r": 1,
+      "x": "Les fondateurs sont la Côte d'Ivoire, la Haute-Volta, le Dahomey et le Niger, rejoints par le Togo en 1966. L'organisation compte donc aujourd'hui cinq États membres."
+    },
+    {
+      "q": "Le Togo a rejoint le Conseil de l'Entente en :",
+      "o": [
+        "1959",
+        "1962",
+        "1966",
+        "1970"
+      ],
+      "r": 2,
+      "x": "Le Togo devient le cinquième membre du Conseil de l'Entente en 1966. Le siège de l'organisation a été fixé à Abidjan, en Côte d'Ivoire."
+    },
+    {
+      "q": "Le siège du Conseil de l'Entente est établi à :",
+      "o": [
+        "Ouagadougou",
+        "Cotonou",
+        "Lomé",
+        "Abidjan"
+      ],
+      "r": 3,
+      "x": "Le secrétariat permanent du Conseil de l'Entente siège à Abidjan depuis 1966, statut confirmé par la réforme de 2011. Lomé abrite, elle, les sièges de la BOAD et de la BIDC."
+    },
+    {
+      "q": "La Banque ouest-africaine de développement (BOAD) a été créée par un accord signé le :",
+      "o": [
+        "14 novembre 1973",
+        "28 mai 1975",
+        "12 octobre 1974",
+        "10 janvier 1994"
+      ],
+      "r": 0,
+      "x": "La BOAD est instituée par l'accord du 14 novembre 1973 entre les États de l'Union monétaire ouest-africaine et devient opérationnelle en 1976. Le 10 janvier 1994 correspond à la création de l'UEMOA."
+    },
+    {
+      "q": "Le siège de la Banque ouest-africaine de développement (BOAD) se trouve à :",
+      "o": [
+        "Dakar",
+        "Ouagadougou",
+        "Abidjan",
+        "Lomé"
+      ],
+      "r": 3,
+      "x": "La BOAD siège à Lomé, au Togo, tout comme la Banque d'investissement et de développement de la CEDEAO. Dakar abrite la BCEAO et Ouagadougou la Commission de l'UEMOA."
+    },
+    {
+      "q": "La Banque d'investissement et de développement de la CEDEAO (BIDC) a son siège à :",
+      "o": [
+        "Abuja",
+        "Accra",
+        "Lomé",
+        "Bamako"
+      ],
+      "r": 2,
+      "x": "La BIDC siège à Lomé et a commencé ses activités opérationnelles en 1979 sous la forme du Fonds de la CEDEAO. Abuja abrite, elle, la Commission de la CEDEAO."
+    },
+    {
+      "q": "L'institution commune de financement du développement des huit États de l'UEMOA est :",
+      "o": [
+        "la BCEAO",
+        "la BIDC",
+        "la BAD",
+        "la BOAD"
+      ],
+      "r": 3,
+      "x": "La BOAD est l'institution commune de financement du développement des États de l'Union monétaire ouest-africaine. La BCEAO est, elle, l'institut d'émission monétaire commun aux mêmes États."
+    },
+    {
+      "q": "Le CILSS a été créé à la suite :",
+      "o": [
+        "des grandes sécheresses des années 1970",
+        "de la crise pétrolière de 1973",
+        "de la famine éthiopienne de 1984",
+        "des inondations sahéliennes de 1969"
+      ],
+      "r": 0,
+      "x": "Le CILSS naît de la réponse politique aux grandes sécheresses qui frappent le Sahel au début des années 1970 et déciment le cheptel. Il regroupe aujourd'hui treize États membres."
+    },
+    {
+      "q": "Parmi les États membres du CILSS, le seul État insulaire est :",
+      "o": [
+        "la Guinée-Bissau",
+        "le Cap-Vert",
+        "la Gambie",
+        "la Mauritanie"
+      ],
+      "r": 1,
+      "x": "Le Cap-Vert est le seul État insulaire des treize membres du CILSS, aux côtés de huit États côtiers et de quatre États enclavés. Le Burkina Faso figure parmi ces derniers avec le Mali, le Niger et le Tchad."
+    },
+    {
+      "q": "L'Institut du Sahel, institution spécialisée du CILSS, est basé à :",
+      "o": [
+        "Dakar",
+        "Niamey",
+        "Ouagadougou",
+        "Bamako"
+      ],
+      "r": 3,
+      "x": "L'Institut du Sahel est basé à Bamako, au Mali, tandis que le Centre régional AGRHYMET se trouve à Niamey. Ces deux institutions spécialisées complètent le Secrétariat exécutif installé à Ouagadougou."
+    },
+    {
+      "q": "Le Centre régional AGRHYMET, spécialisé dans le climat et l'hydrologie, est basé à :",
+      "o": [
+        "Bamako",
+        "Niamey",
+        "Ouagadougou",
+        "N'Djamena"
+      ],
+      "r": 1,
+      "x": "Le Centre climatique régional AGRHYMET est installé à Niamey, au Niger, et forme les spécialistes de l'agrométéorologie et de l'hydrologie du Sahel. Il constitue, avec l'Institut du Sahel et le Secrétariat exécutif, l'une des trois entités du CILSS."
+    },
+    {
+      "q": "Le CILSS regroupe aujourd'hui :",
+      "o": [
+        "neuf États membres",
+        "onze États membres",
+        "treize États membres",
+        "quinze États membres"
+      ],
+      "r": 2,
+      "x": "Le CILSS regroupe treize États membres, dont huit côtiers, quatre enclavés et un insulaire, le Cap-Vert. Il intervient toutefois dans dix-sept pays, soit l'espace CEDEAO élargi à la Mauritanie et au Tchad."
+    },
+    {
+      "q": "La zone géographique couverte par l'Autorité du Liptako-Gourma (ALG) a pour axe central :",
+      "o": [
+        "le bassin de la Volta",
+        "le bassin du fleuve Sénégal",
+        "le bassin du lac Tchad",
+        "le bassin du fleuve Niger"
+      ],
+      "r": 3,
+      "x": "L'ALG couvre la zone de convergence des trois frontières, avec le bassin du fleuve Niger comme axe central. Elle correspond au Liptako, au nord-est du Burkina Faso, et au Gourma."
+    },
+    {
+      "q": "L'Autorité du Liptako-Gourma (ALG) a été créée à la suite des recommandations d'une mission conduite par :",
+      "o": [
+        "la Banque mondiale et le Fonds monétaire international",
+        "la Commission économique des Nations unies pour l'Afrique et le PNUD",
+        "l'Organisation de l'unité africaine et la Ligue arabe",
+        "la Communauté économique européenne et la France"
+      ],
+      "r": 1,
+      "x": "L'ALG naît des recommandations d'une mission multidisciplinaire conduite entre 1969 et 1970 par la Commission économique des Nations unies pour l'Afrique et le PNUD. Son protocole d'accord est signé par les chefs d'État de Haute-Volta, du Mali et du Niger."
+    },
+    {
+      "q": "Le siège de l'Autorité du Liptako-Gourma (ALG) se trouve à :",
+      "o": [
+        "Bamako",
+        "Niamey",
+        "Ouagadougou",
+        "Dori"
+      ],
+      "r": 2,
+      "x": "L'ALG siège à Ouagadougou depuis son institution en 1970. La zone du Liptako correspond au nord-est du Burkina Faso et celle du Gourma s'étend de part et d'autre de la boucle du Niger."
+    },
+    {
+      "q": "Les domaines d'intervention de l'Autorité du Liptako-Gourma (ALG) ont été élargis à :",
+      "o": [
+        "la sécurité",
+        "la santé publique",
+        "l'éducation de base",
+        "la culture et le tourisme"
+      ],
+      "r": 0,
+      "x": "L'ALG a vu ses domaines d'intervention élargis à la sécurité, ce qui en fait une organisation de coopération en matière de développement et de sécurité. Elle intervenait à l'origine sur les seules ressources minières, énergétiques, hydrauliques et agropastorales."
+    },
+    {
+      "q": "L'Organisation ouest-africaine de la santé (OOAS) a démarré effectivement ses activités en :",
+      "o": [
+        "1987",
+        "1993",
+        "1998",
+        "2000"
+      ],
+      "r": 3,
+      "x": "L'OOAS démarre ses activités en mars 2000 à Bobo-Dioulasso, après la décision des chefs d'État d'octobre 1998 fixant le siège. Le protocole de création datait, lui, de 1987."
+    },
+    {
+      "q": "L'Organisation ouest-africaine de la santé (OOAS) résulte de la fusion de :",
+      "o": [
+        "la WAHO et l'OCCGE",
+        "l'OMS Afrique et l'OOAS",
+        "l'OCCGE et l'ASECNA",
+        "la WAHO et l'UNICEF Afrique"
+      ],
+      "r": 0,
+      "x": "L'OOAS naît du regroupement de la West African Health Organisation anglophone et de l'Organisation de coopération et de coordination pour la lutte contre les grandes endémies francophone. Cette fusion visait à doter la CEDEAO d'une autorité sanitaire unique."
+    },
+    {
+      "q": "La Banque centrale des États de l'Afrique de l'Ouest (BCEAO) a son siège à :",
+      "o": [
+        "Dakar",
+        "Abidjan",
+        "Lomé",
+        "Ouagadougou"
+      ],
+      "r": 0,
+      "x": "La BCEAO, institut d'émission commun aux huit États de l'UEMOA, siège à Dakar. Ouagadougou abrite, elle, la Commission de l'UEMOA."
+    },
+    {
+      "q": "Le siège de la Commission de l'UEMOA est établi à :",
+      "o": [
+        "Dakar",
+        "Abidjan",
+        "Ouagadougou",
+        "Bamako"
+      ],
+      "r": 2,
+      "x": "La Commission de l'UEMOA siège à Ouagadougou depuis la création de l'Union le 10 janvier 1994 à Dakar. Le Burkina Faso accueille ainsi l'organe exécutif de l'intégration économique ouest-africaine."
+    },
+    {
+      "q": "L'Autorité du bassin du Niger (ABN) a son siège à :",
+      "o": [
+        "Bamako",
+        "Niamey",
+        "Abuja",
+        "Conakry"
+      ],
+      "r": 1,
+      "x": "L'Autorité du bassin du Niger siège à Niamey et regroupe les neuf États riverains du fleuve. Le Niger, troisième plus long fleuve d'Afrique, traverse ou borde le Burkina Faso sur sa frontière orientale."
+    },
+    {
+      "q": "L'Autorité du bassin de la Volta (ABV) regroupe :",
+      "o": [
+        "quatre États riverains",
+        "cinq États riverains",
+        "six États riverains",
+        "sept États riverains"
+      ],
+      "r": 2,
+      "x": "L'Autorité du bassin de la Volta réunit six États : le Burkina Faso, le Bénin, la Côte d'Ivoire, le Ghana, le Mali et le Togo. Son siège est établi à Ouagadougou."
+    },
+    {
+      "q": "L'École nationale d'administration et de magistrature (ENAM) du Burkina Faso a été créée le :",
+      "o": [
+        "4 décembre 1959",
+        "5 août 1960",
+        "11 décembre 1958",
+        "4 août 1984"
+      ],
+      "r": 0,
+      "x": "L'ENAM est créée par décret présidentiel le 4 décembre 1959, à la veille de l'indépendance, et reçoit ses premiers stagiaires dès janvier 1960. Elle prend sa dénomination actuelle en 1984 en ouvrant une section pour les auditeurs de justice."
+    },
+    {
+      "q": "L'École nationale d'administration (ENA) du Burkina Faso a pris le nom d'École nationale d'administration et de magistrature en :",
+      "o": [
+        "1974",
+        "1980",
+        "1984",
+        "1991"
+      ],
+      "r": 2,
+      "x": "L'ENA devient l'ENAM en 1984, année où elle ouvre une section accueillant les auditeurs de justice. C'est aussi l'année où la Haute-Volta prend le nom de Burkina Faso."
+    },
+    {
+      "q": "L'ENAM du Burkina Faso est placée sous la tutelle technique du ministère chargé :",
+      "o": [
+        "de la Justice",
+        "de la Fonction publique",
+        "de l'Enseignement supérieur",
+        "de l'Administration territoriale"
+      ],
+      "r": 1,
+      "x": "L'ENAM relève de la tutelle technique du ministère chargé de la Fonction publique et de la tutelle financière du ministère des Finances. Elle forme notamment les administrateurs civils et les magistrats."
+    },
+    {
+      "q": "L'Institut des finances publiques du Burkina est né du regroupement :",
+      "o": [
+        "de l'ENAM et de l'ENAREF",
+        "de l'ENAREF et de l'École nationale des douanes",
+        "de l'ENAM et de l'École nationale des douanes",
+        "de l'ENAREF et de l'École nationale de police"
+      ],
+      "r": 1,
+      "x": "L'Institut des finances publiques du Burkina résulte de la fusion de l'École nationale des régies financières et de l'École nationale des douanes, dont les statuts particuliers ont été adoptés en janvier 2025. Il ambitionne de devenir un pôle de référence en formation et conseil en finances publiques."
+    },
+    {
+      "q": "Le Conseil constitutionnel du Burkina Faso est né de l'éclatement :",
+      "o": [
+        "de la Cour suprême",
+        "du Conseil d'État",
+        "de la Cour de cassation",
+        "de la Haute Cour de justice"
+      ],
+      "r": 0,
+      "x": "Le Conseil constitutionnel naît de l'éclatement de la Cour suprême opéré en 2000, ses premiers juges ayant prêté serment le 9 décembre 2002. La Cour suprême donne également naissance au Conseil d'État, à la Cour de cassation et à la Cour des comptes."
+    },
+    {
+      "q": "Les premiers membres du Conseil constitutionnel du Burkina Faso ont prêté serment le :",
+      "o": [
+        "26 avril 2000",
+        "16 mai 2000",
+        "9 décembre 2002",
+        "3 mars 2015"
+      ],
+      "r": 2,
+      "x": "Les premiers juges constitutionnels burkinabè prêtent serment le 9 décembre 2002. La loi organique qui régit l'institution est antérieure : elle date du 26 avril 2000."
+    },
+    {
+      "q": "La Cour des comptes du Burkina Faso est chargée :",
+      "o": [
+        "de la régulation des médias",
+        "du contentieux administratif",
+        "de la constitutionnalité des lois",
+        "du contrôle des finances publiques"
+      ],
+      "r": 3,
+      "x": "La Cour des comptes contrôle les finances publiques, juge les comptes des comptables publics et établit un rapport général public annuel. Le contentieux administratif relève, lui, du Conseil d'État."
+    },
+    {
+      "q": "L'organe suprême de contrôle administratif et de lutte contre la corruption au Burkina Faso est :",
+      "o": [
+        "la Cour des comptes",
+        "l'Inspection générale d'État",
+        "l'ASCE-LC",
+        "le RENLAC"
+      ],
+      "r": 2,
+      "x": "L'Autorité supérieure de contrôle d'État et de lutte contre la corruption est l'organe suprême de contrôle administratif prévu par la Constitution. Le RENLAC est, lui, un réseau de la société civile et non une institution de l'État."
+    },
+    {
+      "q": "L'autorité administrative indépendante chargée de réguler la communication au Burkina Faso est :",
+      "o": [
+        "le Conseil supérieur de la communication",
+        "l'Observatoire burkinabè des médias",
+        "le Conseil national de la presse",
+        "l'Autorité de régulation des communications électroniques"
+      ],
+      "r": 0,
+      "x": "Le Conseil supérieur de la communication est l'autorité administrative indépendante de régulation de la communication au public, consacrée par la Constitution. L'Observatoire burkinabè des médias est, lui, une instance d'autorégulation de la profession."
+    },
+    {
+      "q": "La loi organique relative à la Cour des comptes du Burkina Faso date du :",
+      "o": [
+        "26 avril 2000",
+        "16 mai 2000",
+        "28 juin 2000",
+        "14 juin 2005"
+      ],
+      "r": 1,
+      "x": "La Cour des comptes est régie par la loi organique n°014-2000/AN du 16 mai 2000. La loi organique du 26 avril 2000 concerne, elle, le Conseil constitutionnel."
+    },
+    {
+      "q": "L'Alliance des États du Sahel (AES) a été créée par la Charte du Liptako-Gourma signée le :",
+      "o": [
+        "3 décembre 1970",
+        "28 janvier 2024",
+        "16 septembre 2023",
+        "6 juillet 2024"
+      ],
+      "r": 2,
+      "x": "La Charte du Liptako-Gourma instituant l'AES est signée le 16 septembre 2023 par le Burkina Faso, le Mali et le Niger. Le 6 juillet 2024 marque la transformation de l'Alliance en Confédération."
+    },
+    {
+      "q": "L'Alliance des États du Sahel (AES) s'est transformée en Confédération le :",
+      "o": [
+        "16 septembre 2023",
+        "28 janvier 2024",
+        "6 juillet 2024",
+        "22 février 2025"
+      ],
+      "r": 2,
+      "x": "La Confédération des États du Sahel est proclamée le 6 juillet 2024 lors du premier sommet des chefs d'État de l'AES. Le 28 janvier 2024 correspond à l'annonce du retrait de la CEDEAO par les trois pays."
+    },
+    {
+      "q": "Le nombre d'États membres restants de la CEDEAO après le retrait des pays de l'AES est de :",
+      "o": [
+        "douze",
+        "treize",
+        "quatorze",
+        "quinze"
+      ],
+      "r": 0,
+      "x": "La CEDEAO compte douze membres après le retrait du Burkina Faso, du Mali et du Niger. Elle en comptait quinze depuis l'indépendance du Cap-Vert, admis en 1977."
+    },
+    {
+      "q": "Le siège de la Commission de la CEDEAO se trouve à :",
+      "o": [
+        "Accra",
+        "Lomé",
+        "Abuja",
+        "Lagos"
+      ],
+      "r": 2,
+      "x": "La Commission de la CEDEAO siège à Abuja, capitale fédérale du Nigeria depuis 1991. Le traité fondateur avait toutefois été signé à Lagos en 1975."
+    },
+    {
+      "q": "La ZLECAf constitue un projet phare :",
+      "o": [
+        "de l'Agenda 2063 de l'Union africaine",
+        "du Programme des Nations unies pour le développement",
+        "du Nouveau partenariat pour le développement de l'Afrique",
+        "de la Communauté économique africaine"
+      ],
+      "r": 0,
+      "x": "La ZLECAf est l'un des projets phares de l'Agenda 2063, cadre stratégique cinquantenaire de l'Union africaine. Elle couvre le commerce des biens et des services, l'investissement et la propriété intellectuelle."
+    },
+    {
+      "q": "L'accord instituant la ZLECAf a été adopté lors d'un sommet tenu en mars 2018 à :",
+      "o": [
+        "Accra",
+        "Addis-Abeba",
+        "Kigali",
+        "Niamey"
+      ],
+      "r": 2,
+      "x": "L'accord est adopté à Kigali, au Rwanda, en mars 2018, avec quarante-quatre signataires initiaux. Le lancement de la phase opérationnelle sera décidé à Niamey en juillet 2019."
+    },
+    {
+      "q": "Le nombre d'États africains fondateurs de l'Organisation de l'unité africaine (OUA) en 1963 était de :",
+      "o": [
+        "22",
+        "27",
+        "32",
+        "40"
+      ],
+      "r": 2,
+      "x": "Trente-deux chefs d'État africains signent la Charte de l'OUA le 25 mai 1963 à Addis-Abeba. L'Union africaine qui lui succède compte aujourd'hui cinquante-cinq membres."
+    },
+    {
+      "q": "Le Parlement panafricain de l'Union africaine (UA) siège à :",
+      "o": [
+        "Addis-Abeba, en Éthiopie",
+        "Abuja, au Nigeria",
+        "Arusha, en Tanzanie",
+        "Midrand, en Afrique du Sud"
+      ],
+      "r": 3,
+      "x": "Le Parlement panafricain siège à Midrand, en Afrique du Sud, tandis que la Commission de l'Union africaine est à Addis-Abeba. La Cour africaine de justice se trouve, elle, à Arusha en Tanzanie."
+    },
+    {
+      "q": "Le Conseil de paix et de sécurité de l'Union africaine (UA) est composé de :",
+      "o": [
+        "neuf membres",
+        "douze membres",
+        "quinze membres",
+        "dix-huit membres"
+      ],
+      "r": 2,
+      "x": "Le Conseil de paix et de sécurité de l'Union africaine compte quinze membres soumis au principe de rotation et siège à Addis-Abeba. Il constitue l'organe permanent de décision en matière de paix et de sécurité sur le continent."
+    },
+    {
+      "q": "La Cour africaine des droits de l'homme et des peuples siège à :",
+      "o": [
+        "Addis-Abeba",
+        "Midrand",
+        "Banjul",
+        "Arusha"
+      ],
+      "r": 3,
+      "x": "La Cour africaine siège à Arusha, en Tanzanie. Banjul abrite, elle, la Commission africaine des droits de l'homme et des peuples, créée par la Charte adoptée dans cette même ville en 1981."
+    },
+    {
+      "q": "Le plan stratégique à long terme de l'Union africaine (UA), adopté en 2015, porte le nom de :",
+      "o": [
+        "Agenda 2030",
+        "Vision 2050",
+        "Plan Marshall africain",
+        "Agenda 2063"
+      ],
+      "r": 3,
+      "x": "L'Agenda 2063 est le cadre stratégique de l'Union africaine pour la transformation du continent sur cinquante ans, dont la ZLECAf constitue un projet phare. L'Agenda 2030 désigne, lui, les objectifs de développement durable des Nations unies."
+    },
+    {
+      "q": "Le franc CFA de la zone UEMOA est émis par :",
+      "o": [
+        "la Banque africaine de développement",
+        "la Banque des États de l'Afrique centrale",
+        "la Banque centrale des États de l'Afrique de l'Ouest",
+        "la Banque ouest-africaine de développement"
+      ],
+      "r": 2,
+      "x": "La BCEAO émet le franc CFA pour les huit pays de l'UEMOA et son siège est à Dakar. La BEAC joue le même rôle pour les six pays de la CEMAC, avec siège à Yaoundé."
+    },
+    {
+      "q": "La colonie de la Haute-Volta a été créée par un décret du :",
+      "o": [
+        "11 décembre 1958",
+        "5 septembre 1932",
+        "4 septembre 1947",
+        "1er mars 1919"
+      ],
+      "r": 3,
+      "x": "Le décret du 1er mars 1919 crée la colonie de la Haute-Volta par partition du Haut-Sénégal et Niger, avec Ouagadougou pour chef-lieu. Elle sera supprimée en 1932 avant d'être reconstituée en 1947."
+    },
+    {
+      "q": "La colonie de la Haute-Volta a été supprimée par un décret du :",
+      "o": [
+        "1er mars 1919",
+        "5 septembre 1932",
+        "4 septembre 1947",
+        "11 décembre 1958"
+      ],
+      "r": 1,
+      "x": "Le décret du 5 septembre 1932, pris par le ministre des Colonies Albert Sarraut, supprime la Haute-Volta et répartit son territoire entre le Niger, le Soudan français et la Côte d'Ivoire. Cette suppression durera quinze ans."
+    },
+    {
+      "q": "Entre 1932 et 1947, le territoire de la Haute-Volta a été réparti entre :",
+      "o": [
+        "la Côte d'Ivoire, le Sénégal et le Niger",
+        "la Côte d'Ivoire, le Soudan français et le Niger",
+        "le Dahomey, le Niger et la Côte d'Ivoire",
+        "le Soudan français, la Guinée et le Niger"
+      ],
+      "r": 1,
+      "x": "Le territoire voltaïque est réparti entre la Côte d'Ivoire, le Soudan français et le Niger, la part la plus importante revenant à la Côte d'Ivoire. Cette situation fait de la Haute-Volta un réservoir de main-d'œuvre pour les plantations ivoiriennes."
+    },
+    {
+      "q": "La Haute-Volta a été reconstituée dans ses frontières initiales le :",
+      "o": [
+        "1er mars 1919",
+        "5 septembre 1932",
+        "4 septembre 1947",
+        "5 août 1960"
+      ],
+      "r": 2,
+      "x": "La loi n°47-1707 du 4 septembre 1947 rétablit la Haute-Volta comme territoire d'outre-mer au sein de l'Union française, dans les limites qui étaient les siennes en 1932. Ouagadougou en redevient le chef-lieu."
+    },
+    {
+      "q": "La République de Haute-Volta, autonome au sein de la Communauté française, est proclamée le :",
+      "o": [
+        "4 septembre 1947",
+        "28 septembre 1958",
+        "11 décembre 1958",
+        "5 août 1960"
+      ],
+      "r": 2,
+      "x": "La République de Haute-Volta est proclamée le 11 décembre 1958, date devenue fête nationale de la proclamation de la République. L'indépendance totale interviendra le 5 août 1960."
+    },
+    {
+      "q": "L'indépendance de la Haute-Volta a été proclamée le :",
+      "o": [
+        "11 décembre 1958",
+        "5 août 1960",
+        "3 janvier 1966",
+        "4 août 1984"
+      ],
+      "r": 1,
+      "x": "La Haute-Volta accède à l'indépendance le 5 août 1960, sous la présidence de Maurice Yaméogo. Elle prendra le nom de Burkina Faso le 4 août 1984."
+    },
+    {
+      "q": "Le président renversé par le soulèvement populaire du 3 janvier 1966 en Haute-Volta est :",
+      "o": [
+        "Maurice Yaméogo",
+        "Sangoulé Lamizana",
+        "Saye Zerbo",
+        "Jean-Baptiste Ouédraogo"
+      ],
+      "r": 0,
+      "x": "Maurice Yaméogo est renversé par le soulèvement populaire du 3 janvier 1966, après six années au pouvoir. Le colonel Sangoulé Lamizana lui succède à la tête de l'État."
+    },
+    {
+      "q": "Le soulèvement populaire qui renverse Maurice Yaméogo a eu lieu le :",
+      "o": [
+        "4 août 1983",
+        "25 novembre 1980",
+        "7 novembre 1982",
+        "3 janvier 1966"
+      ],
+      "r": 3,
+      "x": "Le soulèvement populaire du 3 janvier 1966 porte le colonel Sangoulé Lamizana au pouvoir. Le 25 novembre 1980 correspond au coup d'État de Saye Zerbo et le 7 novembre 1982 à celui du Conseil du salut du peuple."
+    },
+    {
+      "q": "La Révolution démocratique et populaire a été déclenchée le :",
+      "o": [
+        "25 novembre 1980",
+        "7 novembre 1982",
+        "17 mai 1983",
+        "4 août 1983"
+      ],
+      "r": 3,
+      "x": "Le 4 août 1983, les commandos de Pô renversent le régime du Conseil de salut du peuple et Thomas Sankara proclame le Conseil national de la révolution. Le 17 mai 1983 correspond à son arrestation comme Premier ministre."
+    },
+    {
+      "q": "La Haute-Volta a pris le nom de Burkina Faso le :",
+      "o": [
+        "5 août 1960",
+        "4 août 1983",
+        "4 août 1984",
+        "15 octobre 1987"
+      ],
+      "r": 2,
+      "x": "Le pays devient le Burkina Faso le 4 août 1984, au premier anniversaire de la Révolution démocratique et populaire. Le même décret adopte le Ditanyè comme nouvel hymne national."
+    },
+    {
+      "q": "Le Ditanyè a remplacé un hymne national antérieur appelé :",
+      "o": [
+        "l'Hymne voltaïque",
+        "le Chant de la liberté",
+        "l'Hymne de l'AOF",
+        "le Chant des Mossi"
+      ],
+      "r": 0,
+      "x": "Le Ditanyè remplace en 1984 l'Hymne national voltaïque, adopté à l'indépendance de 1960. Son titre signifie Hymne de la victoire et l'œuvre est aussi connue sous le nom d'Une seule nuit."
+    },
+    {
+      "q": "Thomas Sankara a été assassiné le :",
+      "o": [
+        "4 août 1983",
+        "4 août 1984",
+        "15 octobre 1987",
+        "31 octobre 2014"
+      ],
+      "r": 2,
+      "x": "Thomas Sankara est assassiné le 15 octobre 1987 à Ouagadougou, à l'âge de trente-sept ans. Le 31 octobre 2014 correspond, lui, à l'insurrection populaire qui met fin au régime de Blaise Compaoré."
+    },
+    {
+      "q": "L'insurrection populaire qui met fin au régime de Blaise Compaoré s'est déroulée les :",
+      "o": [
+        "30 et 31 octobre 2014",
+        "16 et 17 septembre 2015",
+        "24 et 25 janvier 2022",
+        "30 septembre 2022"
+      ],
+      "r": 0,
+      "x": "L'insurrection populaire des 30 et 31 octobre 2014 met fin à vingt-sept années de pouvoir de Blaise Compaoré. Le coup d'État manqué de septembre 2015 visera ensuite la transition qui lui succède."
+    },
+    {
+      "q": "Le nom « Burkina Faso » est formé à partir :",
+      "o": [
+        "du mooré et du dioula",
+        "du fulfuldé et du gourmantchéma",
+        "du dagara et du bissa",
+        "du lobiri et du san"
+      ],
+      "r": 0,
+      "x": "« Burkina » vient du mooré et signifie intègre, tandis que « Faso » vient du dioula et désigne la patrie. Le suffixe « bè » de Burkinabè est, lui, emprunté au fulfuldé."
+    },
+    {
+      "q": "L'ancêtre fondateur des royaumes mossi, fils de la princesse Yennenga, est :",
+      "o": [
+        "Naaba Oubri",
+        "Ouédraogo",
+        "Naaba Kango",
+        "Rialé"
+      ],
+      "r": 1,
+      "x": "Ouédraogo, fils de la princesse Yennenga et du chasseur Rialé, est considéré comme l'ancêtre fondateur des royaumes mossi. Son nom signifie étalon mâle en mooré."
+    },
+    {
+      "q": "Le ministre chargé de la jeunesse à la cour du Mogho Naaba porte le titre de :",
+      "o": [
+        "Ouidi Naaba",
+        "Goungha Naaba",
+        "Kamsonghin Naaba",
+        "Larlé Naaba"
+      ],
+      "r": 2,
+      "x": "Le Kamsonghin Naaba est chargé de la jeunesse à la cour du Mogho Naaba. Le Larlé Naaba veille, lui, sur les tombes royales."
+    },
+    {
+      "q": "Le ministre de la cavalerie à la cour du Mogho Naaba porte le titre de :",
+      "o": [
+        "Ouidi Naaba",
+        "Goungha Naaba",
+        "Baloum Naaba",
+        "Larlé Naaba"
+      ],
+      "r": 0,
+      "x": "Le Ouidi Naaba est le ministre de la cavalerie, l'un des dignitaires les plus influents de la cour. Le Goungha Naaba commande, lui, l'infanterie."
+    },
+    {
+      "q": "Le porte-parole du Mogho Naaba, également chargé de l'intendance du palais, est :",
+      "o": [
+        "le Ouidi Naaba",
+        "le Goungha Naaba",
+        "le Baloum Naaba",
+        "le Kamsonghin Naaba"
+      ],
+      "r": 2,
+      "x": "Le Baloum Naaba cumule les fonctions de ministre de l'intendance et de porte-parole officiel du Mogho Naaba. Le Kamsonghin Naaba est, lui, chargé de la jeunesse."
+    },
+    {
+      "q": "Le commerce qui fit la prospérité des grands empires ouest-africains portait principalement sur :",
+      "o": [
+        "l'ivoire et le bois",
+        "le coton et l'indigo",
+        "le cuivre et l'étain",
+        "l'or et le sel"
+      ],
+      "r": 3,
+      "x": "Le commerce transsaharien de l'or et du sel fonde la prospérité des empires du Ghana, du Mali et du Songhaï. Les caravanes échangeaient l'or du Bambouk et du Bouré contre le sel des mines sahariennes."
+    },
+    {
+      "q": "Le souverain vaincu par Soundiata Keïta à la bataille de Kirina était :",
+      "o": [
+        "Soumaoro Kanté",
+        "Askia Mohamed",
+        "Sonni Ali Ber",
+        "Mansa Moussa"
+      ],
+      "r": 0,
+      "x": "Soumaoro Kanté, roi du Sosso, est défait par Soundiata Keïta à Kirina en 1235. Cette victoire marque la naissance de l'empire du Mali."
+    },
+    {
+      "q": "La mosquée de Tombouctou édifiée sous Mansa Moussa porte le nom de :",
+      "o": [
+        "Djingareyber",
+        "Sankoré",
+        "Sidi Yahia",
+        "Larabanga"
+      ],
+      "r": 0,
+      "x": "La mosquée Djingareyber est édifiée à Tombouctou sur ordre de Mansa Moussa après son pèlerinage de 1324. Sankoré désigne, elle, la mosquée-université voisine."
+    },
+    {
+      "q": "La Charte du Manden, proclamée à Kouroukan Fouga, date de :",
+      "o": [
+        "1222",
+        "1236",
+        "1324",
+        "1493"
+      ],
+      "r": 1,
+      "x": "La Charte du Manden est proclamée vers 1236 après la victoire de Soundiata Keïta et figure au patrimoine immatériel de l'UNESCO depuis 2009. Elle proclame notamment l'abolition de l'esclavage par razzia."
+    },
+    {
+      "q": "L'empire Songhaï s'effondre après la bataille de Tondibi, livrée en :",
+      "o": [
+        "1235",
+        "1493",
+        "1591",
+        "1898"
+      ],
+      "r": 2,
+      "x": "La bataille de Tondibi, en 1591, voit les troupes marocaines défaire l'armée songhaï grâce aux armes à feu. Cette défaite met fin au dernier grand empire du Soudan occidental."
+    },
+    {
+      "q": "La ville de Tombouctou a été inscrite au patrimoine mondial de l'UNESCO en :",
+      "o": [
+        "1979",
+        "1988",
+        "1996",
+        "2009"
+      ],
+      "r": 1,
+      "x": "Tombouctou est inscrite au patrimoine mondial en 1988, notamment pour ses mosquées de terre et ses manuscrits. Les ruines de Loropéni, au Burkina Faso, le seront en 2009."
+    },
+    {
+      "q": "Samory Touré, capturé en 1898, est mort en déportation :",
+      "o": [
+        "au Gabon",
+        "en Martinique",
+        "en Algérie",
+        "à Madagascar"
+      ],
+      "r": 0,
+      "x": "Samory Touré meurt en 1900 au Gabon, où il avait été déporté après sa capture. Behanzin, roi du Dahomey, fut quant à lui déporté en Martinique puis en Algérie."
+    },
+    {
+      "q": "Le royaume africain dont les guerrières étaient appelées les Amazones est :",
+      "o": [
+        "le Dahomey",
+        "le Cayor",
+        "l'Ashanti",
+        "le Yatenga"
+      ],
+      "r": 0,
+      "x": "Le royaume du Dahomey entretenait un corps militaire féminin que les Européens ont surnommé les Amazones. Ces combattantes ont participé à la résistance contre la conquête française menée sous Behanzin."
+    },
+    {
+      "q": "La ligne de chemin de fer dont Lat Dior Diop refusa le passage reliait :",
+      "o": [
+        "Dakar à Saint-Louis",
+        "Abidjan à Ouagadougou",
+        "Conakry à Kankan",
+        "Cotonou à Parakou"
+      ],
+      "r": 0,
+      "x": "Lat Dior Diop s'oppose au passage de la voie ferrée Dakar-Saint-Louis à travers le Cayor et meurt à la bataille de Dékhélé en 1886. Le chemin de fer Abidjan-Ouagadougou sera, lui, achevé en 1954."
+    },
+    {
+      "q": "La conquête du Moogo par les troupes françaises s'achève en :",
+      "o": [
+        "1885",
+        "1897",
+        "1919",
+        "1932"
+      ],
+      "r": 1,
+      "x": "La conquête du royaume mossi s'achève en 1897 avec la prise de Ouagadougou, ouvrant la voie à la création de la colonie de Haute-Volta en 1919. La conférence de Berlin de 1885 avait auparavant fixé les règles du partage colonial."
+    },
+    {
+      "q": "La fédération coloniale à laquelle appartenait la Haute-Volta portait le nom de :",
+      "o": [
+        "Afrique-Équatoriale française",
+        "Communauté des États sahéliens",
+        "Union française du Sahel",
+        "Afrique-Occidentale française"
+      ],
+      "r": 3,
+      "x": "La Haute-Volta appartenait à l'Afrique-Occidentale française, fédération dont le gouvernement général siégeait à Dakar. L'Afrique-Équatoriale française regroupait, elle, les colonies d'Afrique centrale."
+    },
+    {
+      "q": "Le premier romancier burkinabè, auteur de Crépuscule des temps anciens en 1962, est :",
+      "o": [
+        "Nazi Boni",
+        "Joseph Ki-Zerbo",
+        "Titinga Frédéric Pacéré",
+        "Roger Nikièma"
+      ],
+      "r": 0,
+      "x": "Nazi Boni publie Crépuscule des temps anciens en 1962, premier roman d'un écrivain de Haute-Volta. L'université de Bobo-Dioulasso porte aujourd'hui son nom."
+    },
+    {
+      "q": "L'historien burkinabè auteur de Histoire de l'Afrique noire, paru en 1972, est :",
+      "o": [
+        "Nazi Boni",
+        "Joseph Ki-Zerbo",
+        "Cheikh Anta Diop",
+        "Titinga Frédéric Pacéré"
+      ],
+      "r": 1,
+      "x": "Joseph Ki-Zerbo publie Histoire de l'Afrique noire en 1972, ouvrage de référence à l'échelle continentale. L'université de Ouagadougou porte son nom depuis 2015."
+    },
+    {
+      "q": "L'auteur burkinabè des Maximes, pensées et devinettes mossi, publiées en 1934, est :",
+      "o": [
+        "Nazi Boni",
+        "Joseph Ki-Zerbo",
+        "Dim-Dolobsom Ouédraogo",
+        "Roger Nikièma"
+      ],
+      "r": 2,
+      "x": "Dim-Dolobsom Ouédraogo publie en 1934 ces Maximes, pensées et devinettes mossi qui recueillent la tradition orale du royaume. Il est également l'auteur de L'Empire du Mogho-Naba."
+    },
+    {
+      "q": "Le poète et avocat burkinabè qui a théorisé la littérature des tam-tams et des masques est :",
+      "o": [
+        "Nazi Boni",
+        "Jean-Pierre Guingané",
+        "Jacques Prosper Bazié",
+        "Titinga Frédéric Pacéré"
+      ],
+      "r": 3,
+      "x": "Titinga Frédéric Pacéré développe le concept de littérature des tam-tams et des masques, notamment dans son ouvrage de 1992. Premier avocat du Burkina Faso, il est aussi le fondateur du musée de Manéga."
+    },
+    {
+      "q": "Le musée de Manéga a été fondé par :",
+      "o": [
+        "Nazi Boni",
+        "Joseph Ki-Zerbo",
+        "Titinga Frédéric Pacéré",
+        "Gaston Kaboré"
+      ],
+      "r": 2,
+      "x": "Titinga Frédéric Pacéré fonde en 1997 le musée de Manéga, situé à une cinquantaine de kilomètres de Ouagadougou. Ce musée ethnographique conserve un important patrimoine mossi."
+    },
+    {
+      "q": "Le groupe ethnolinguistique traditionnellement associé à l'élevage pastoral et à la transhumance est :",
+      "o": [
+        "Mossi",
+        "Peuls",
+        "Bobo",
+        "Lobi"
+      ],
+      "r": 1,
+      "x": "Les Peuls sont traditionnellement des éleveurs pratiquant la transhumance, présents dans tout le Sahel. Les Mossi, Bobo et Lobi sont, eux, majoritairement agriculteurs sédentaires."
+    },
+    {
+      "q": "L'Alliance des États du Sahel (AES) a été créée par un texte fondateur appelé :",
+      "o": [
+        "la Charte du Liptako-Gourma",
+        "le Pacte de Bamako",
+        "l'Accord de Niamey",
+        "la Déclaration de Ouagadougou"
+      ],
+      "r": 0,
+      "x": "La Charte du Liptako-Gourma, signée le 16 septembre 2023, institue l'Alliance des États du Sahel. Elle emprunte son nom à la région transfrontalière que couvre déjà l'ALG depuis 1970."
+    },
+    {
+      "q": "Le symbole national burkinabè repris sur les armoiries et l'emblème sportif est :",
+      "o": [
+        "le lion",
+        "l'étalon",
+        "l'aigle",
+        "le baobab"
+      ],
+      "r": 1,
+      "x": "L'étalon, monture de la princesse Yennenga, figure sur les armoiries et donne son nom à l'équipe nationale de football. Il a également inspiré le nom de l'Ordre de l'Étalon et de l'Étalon d'or de Yennenga."
+    },
+    {
+      "q": "Les couleurs du drapeau du Burkina Faso, adopté en 1984, sont :",
+      "o": [
+        "le vert, le jaune et le rouge",
+        "le rouge, le vert et le jaune de l'étoile",
+        "le bleu, le blanc et le vert",
+        "le noir, le rouge et le blanc"
+      ],
+      "r": 1,
+      "x": "Le drapeau comporte deux bandes horizontales rouge et verte frappées d'une étoile jaune à cinq branches. Le rouge symbolise la révolution, le vert l'abondance agricole et l'étoile la lumière qui guide la nation."
+    },
+    {
+      "q": "L'Étalon d'or de Yennenga récompense :",
+      "o": [
+        "le meilleur long métrage du FESPACO",
+        "le meilleur artisan du SIAO",
+        "le meilleur journaliste des Galian",
+        "le meilleur athlète national"
+      ],
+      "r": 0,
+      "x": "L'Étalon d'or de Yennenga est la récompense suprême décernée au meilleur long métrage du FESPACO. Le Galian récompense, lui, les journalistes burkinabè."
+    },
+    {
+      "q": "Le Burkina Faso partage ses frontières avec :",
+      "o": [
+        "quatre pays",
+        "cinq pays",
+        "six pays",
+        "sept pays"
+      ],
+      "r": 2,
+      "x": "Le Burkina Faso a six voisins : le Mali, le Niger, le Bénin, le Togo, le Ghana et la Côte d'Ivoire. Cet enclavement explique l'importance stratégique des corridors routiers vers les ports du golfe de Guinée."
+    },
+    {
+      "q": "Le barrage burkinabè construit sur le Nakambé et mis en service en 1992 est celui de :",
+      "o": [
+        "Ziga",
+        "Kompienga",
+        "Samendeni",
+        "Bagré"
+      ],
+      "r": 3,
+      "x": "Le barrage de Bagré est édifié sur le Nakambé, ou Volta blanche, et mis en service en 1992 avec une capacité d'environ 1,7 milliards de mètres cubes. Il sert à la fois à la production hydroélectrique et à l'irrigation."
+    },
+    {
+      "q": "Le barrage de Samendeni est construit sur le fleuve :",
+      "o": [
+        "Nakambé",
+        "Nazinon",
+        "Mouhoun",
+        "Comoé"
+      ],
+      "r": 2,
+      "x": "Le barrage de Samendeni est édifié sur le Mouhoun, à une cinquantaine de kilomètres de Bobo-Dioulasso dans la province du Houet. C'est le troisième plus grand barrage du pays après ceux de Kompienga et de Bagré."
+    },
+    {
+      "q": "La mise en eau du barrage de Samendeni est intervenue en :",
+      "o": [
+        "2008",
+        "2013",
+        "2017",
+        "2021"
+      ],
+      "r": 2,
+      "x": "La mise en eau du barrage de Samendeni intervient le 7 juillet 2017, neuf ans après le lancement des travaux en janvier 2008. L'ouvrage atteint son taux de remplissage maximal en septembre 2018."
+    },
+    {
+      "q": "L'ancien nom du fleuve Mouhoun est :",
+      "o": [
+        "la Volta noire",
+        "la Volta blanche",
+        "la Volta rouge",
+        "la Pendjari"
+      ],
+      "r": 0,
+      "x": "Le Mouhoun correspond à l'ancienne Volta noire, tandis que le Nakambé est l'ancienne Volta blanche. Ces cours d'eau ont été rebaptisés sous la Révolution de 1984."
+    },
+    {
+      "q": "L'ancien nom du fleuve Nakambé est :",
+      "o": [
+        "la Volta noire",
+        "la Pendjari",
+        "la Volta rouge",
+        "la Volta blanche"
+      ],
+      "r": 3,
+      "x": "Le Nakambé correspond à l'ancienne Volta blanche, le Mouhoun à la Volta noire et le Nazinon à la Volta rouge. Ces trois cours d'eau confluent au Ghana pour former la Volta."
+    },
+    {
+      "q": "Le point culminant du Burkina Faso est :",
+      "o": [
+        "le pic de Nahouri",
+        "le mont Tenakourou",
+        "les aiguilles de Sindou",
+        "le mont Bagoué"
+      ],
+      "r": 1,
+      "x": "Le mont Tenakourou culmine à 749 mètres dans la province de la Léraba, à l'ouest du pays. Le pic de Nahouri, dans le Centre-Sud, ne dépasse pas 450 mètres."
+    },
+    {
+      "q": "La réserve burkinabè la plus réputée pour ses éléphants est celle de :",
+      "o": [
+        "Nazinga",
+        "Arly",
+        "Bala",
+        "Deux Balés"
+      ],
+      "r": 0,
+      "x": "Le ranch de Nazinga, créé en 1979 près de Pô, s'étend sur plus de 90 000 hectares et abrite plusieurs centaines d'éléphants. La mare aux hippopotames de Bala est, elle, une réserve de biosphère de l'ouest du pays."
+    },
+    {
+      "q": "Le parc national d'Arly a été créé en :",
+      "o": [
+        "1937",
+        "1954",
+        "1979",
+        "1996"
+      ],
+      "r": 1,
+      "x": "Le parc national d'Arly est créé en 1954 dans le sud-est du pays, en continuité avec le parc de la Pendjari au Bénin. Le ranch de Nazinga date, lui, de 1979."
+    },
+    {
+      "q": "Le complexe W-Arly-Pendjari est partagé entre le Burkina Faso et :",
+      "o": [
+        "le Ghana et le Togo",
+        "le Bénin et le Niger",
+        "le Mali et le Niger",
+        "la Côte d'Ivoire et le Ghana"
+      ],
+      "r": 1,
+      "x": "Le complexe W-Arly-Pendjari s'étend sur le Burkina Faso, le Bénin et le Niger, et constitue la plus vaste aire protégée d'Afrique de l'Ouest. C'est le seul site burkinabè classé par l'UNESCO au titre de critères naturels."
+    },
+    {
+      "q": "Les ruines de Loropéni témoignent d'une activité historique liée :",
+      "o": [
+        "au commerce transsaharien de l'or",
+        "à la traite atlantique",
+        "à l'extraction du sel",
+        "à la culture du coton"
+      ],
+      "r": 0,
+      "x": "Les murailles de pierre de Loropéni témoignent du commerce transsaharien de l'or entre le XIe et le XVIIe siècle. Le site est inscrit au patrimoine mondial de l'UNESCO depuis 2009."
+    },
+    {
+      "q": "La pratique du balafon des Sénoufo est inscrite au patrimoine immatériel de l'UNESCO depuis :",
+      "o": [
+        "2009",
+        "2012",
+        "2016",
+        "2021"
+      ],
+      "r": 1,
+      "x": "Le balafon des Sénoufo du Burkina Faso, du Mali et de la Côte d'Ivoire est inscrit au patrimoine immatériel de l'UNESCO en 2012. Cet instrument est un xylophone à lames de bois équipé de calebasses résonatrices."
+    },
+    {
+      "q": "Les cascades de Karfiguéla se situent à proximité de :",
+      "o": [
+        "Banfora",
+        "Gaoua",
+        "Dédougou",
+        "Ouahigouya"
+      ],
+      "r": 0,
+      "x": "Les cascades de Karfiguéla se trouvent près de Banfora, non loin des dômes de Fabédougou et du lac de Tengréla. Cette zone constitue le principal pôle touristique naturel du sud-ouest burkinabè."
+    },
+    {
+      "q": "Les aiguilles de Sindou se situent dans la province :",
+      "o": [
+        "du Houet",
+        "de la Léraba",
+        "de la Comoé",
+        "du Poni"
+      ],
+      "r": 1,
+      "x": "Les aiguilles de Sindou sont une chaîne de formations gréseuses ciselées, située dans la province de la Léraba. Sindou en est le chef-lieu, dans la région du Tannounyan."
+    },
+    {
+      "q": "Le lac naturel burkinabè le plus étendu est :",
+      "o": [
+        "le lac Bam",
+        "le lac de Tengréla",
+        "le lac de Ziga",
+        "le lac de Bagré"
+      ],
+      "r": 0,
+      "x": "Le lac Bam, situé près de Kongoussi, est le plus vaste lac naturel du Burkina Faso. Ziga et Bagré sont, eux, des lacs de barrage artificiels."
+    },
+    {
+      "q": "La deuxième ville du Burkina Faso par la population est :",
+      "o": [
+        "Koudougou",
+        "Ouahigouya",
+        "Banfora",
+        "Bobo-Dioulasso"
+      ],
+      "r": 3,
+      "x": "Bobo-Dioulasso, surnommée la cité de Sya, est la deuxième ville du pays et sa capitale économique. Elle abrite l'université Nazi Boni et le siège de l'OOAS."
+    },
+    {
+      "q": "La ville de Bobo-Dioulasso est surnommée :",
+      "o": [
+        "la cité du cavalier rouge",
+        "la cité du paysan noir",
+        "la cité de Naaba Kango",
+        "la cité de Sya"
+      ],
+      "r": 3,
+      "x": "Bobo-Dioulasso est surnommée la cité de Sya, du nom de son établissement fondateur. Koudougou est la cité du cavalier rouge et Ouahigouya celle de Naaba Kango."
+    },
+    {
+      "q": "Les Nuits atypiques de Koudougou, festival culturel burkinabè, ont été créées en :",
+      "o": [
+        "1988",
+        "1996",
+        "2003",
+        "2010"
+      ],
+      "r": 1,
+      "x": "Les Nuits atypiques de Koudougou sont créées en 1996 par Koudbi Koala et promeuvent les musiques du monde et la culture africaine. Elles se tiennent dans la troisième ville du pays, chef-lieu du Boulkiemdé."
+    },
+    {
+      "q": "Le Festival panafricain du cinéma et de la télévision de Ouagadougou (FESPACO) a été créé en :",
+      "o": [
+        "1966",
+        "1969",
+        "1972",
+        "1983"
+      ],
+      "r": 1,
+      "x": "Le FESPACO est créé en 1969 à Ouagadougou et se tient tous les deux ans, les années impaires. Sa récompense suprême, l'Étalon d'or de Yennenga, doit son nom à la princesse fondatrice de la lignée mossi."
+    },
+    {
+      "q": "Le Salon international de l'artisanat de Ouagadougou (SIAO) se tient :",
+      "o": [
+        "les années paires",
+        "les années impaires",
+        "chaque année",
+        "tous les cinq ans"
+      ],
+      "r": 0,
+      "x": "Le SIAO se tient les années paires, en alternance avec le FESPACO qui se déroule les années impaires. Son slogan est « la vitrine de l'artisan africain »."
+    },
+    {
+      "q": "La Semaine nationale de la culture (SNC) du Burkina Faso se tient à :",
+      "o": [
+        "Ouagadougou",
+        "Bobo-Dioulasso",
+        "Koudougou",
+        "Gaoua"
+      ],
+      "r": 1,
+      "x": "La Semaine nationale de la culture, créée en 1983, se déroule à Bobo-Dioulasso les années paires. Elle met en compétition les délégations de toutes les régions du pays."
+    },
+    {
+      "q": "Le premier réalisateur burkinabè à remporter l'Étalon d'or de Yennenga est :",
+      "o": [
+        "Idrissa Ouédraogo",
+        "Gaston Kaboré",
+        "Dani Kouyaté",
+        "Sembène Ousmane"
+      ],
+      "r": 0,
+      "x": "Idrissa Ouédraogo remporte l'Étalon d'or en 1991 avec Tilaï, premier réalisateur burkinabè distingué. Gaston Kaboré l'obtiendra en 1997 avec Buud Yam."
+    },
+    {
+      "q": "Le Festival international des masques et des arts (FESTIMA) se tient dans la ville de :",
+      "o": [
+        "Tenkodogo",
+        "Koudougou",
+        "Ouahigouya",
+        "Dédougou"
+      ],
+      "r": 3,
+      "x": "Le FESTIMA se déroule à Dédougou et rassemble des porteurs de masques de toute l'Afrique de l'Ouest. C'est l'un des principaux festivals consacrés aux traditions ancestrales de la sous-région."
+    },
+    {
+      "q": "Le tambour d'aisselle à tension variable utilisé pour imiter la voix humaine est :",
+      "o": [
+        "le djembé",
+        "le tama",
+        "le balafon",
+        "le ngoni"
+      ],
+      "r": 1,
+      "x": "Le tama, ou tambour parlant, permet de faire varier la tension des peaux pour imiter les tons de la parole. Il a longtemps servi à transmettre des messages sur de longues distances."
+    },
+    {
+      "q": "Le chapeau de paille tressée qui figure parmi les produits labellisés du Burkina Faso provient de :",
+      "o": [
+        "Saponé",
+        "Sabou",
+        "Koubri",
+        "Ziniaré"
+      ],
+      "r": 0,
+      "x": "Le chapeau de Saponé est un produit artisanal labellisé, tressé en paille selon une technique transmise de génération en génération. Sabou est, elle, connue pour ses crocodiles sacrés."
+    },
+    {
+      "q": "La localité burkinabè réputée pour ses crocodiles sacrés est :",
+      "o": [
+        "Saponé",
+        "Sabou",
+        "Loumbila",
+        "Bazoulé"
+      ],
+      "r": 1,
+      "x": "Sabou, dans la province du Boulkiemdé, est célèbre pour ses crocodiles sacrés, tout comme Bazoulé près de Ouagadougou. Ces sites associent une pratique cultuelle ancienne et une attraction touristique."
+    },
+    {
+      "q": "Le symposium international de sculpture sur granite du Burkina Faso se tient à :",
+      "o": [
+        "Laongo",
+        "Manéga",
+        "Loumbila",
+        "Koubri"
+      ],
+      "r": 0,
+      "x": "Le symposium de sculpture sur granite se tient à Laongo, à une trentaine de kilomètres de Ouagadougou, depuis 1989. Les œuvres réalisées sont laissées sur place, constituant un musée à ciel ouvert."
+    },
+    {
+      "q": "L'athlète burkinabè qui a offert au pays sa première médaille olympique en 2021 est :",
+      "o": [
+        "Hugues Fabrice Zango",
+        "Cheick Ahmed Al-Hassan Sanou",
+        "Franck Élemba",
+        "Marthe Koala"
+      ],
+      "r": 0,
+      "x": "Hugues Fabrice Zango décroche le bronze du triple saut aux Jeux de Tokyo en 2021, première médaille olympique burkinabè. Il devient champion du monde de la discipline à Budapest en 2023."
+    },
+    {
+      "q": "La discipline dans laquelle s'illustre le Burkinabè Hugues Fabrice Zango est :",
+      "o": [
+        "le saut en hauteur",
+        "le sprint sur 400 mètres",
+        "le lancer du javelot",
+        "le triple saut"
+      ],
+      "r": 3,
+      "x": "Hugues Fabrice Zango est spécialiste du triple saut, discipline dans laquelle il a été champion du monde en 2023. Il est également détenteur du record du monde en salle de la spécialité."
+    },
+    {
+      "q": "L'équipe nationale de football du Burkina Faso est surnommée :",
+      "o": [
+        "les Étalons",
+        "les Éléphants",
+        "les Lions de la Teranga",
+        "les Aigles"
+      ],
+      "r": 0,
+      "x": "Les Étalons tirent leur surnom du cheval de la princesse Yennenga, emblème national. Les Éléphants désignent la Côte d'Ivoire et les Lions de la Teranga le Sénégal."
+    },
+    {
+      "q": "La course cycliste annuelle la plus importante du Burkina Faso est :",
+      "o": [
+        "le Tour du Faso",
+        "la Boucle du Mouhoun",
+        "le Grand Prix Yennenga",
+        "le Challenge du Sahel"
+      ],
+      "r": 0,
+      "x": "Le Tour du Faso est la principale compétition cycliste burkinabè et l'une des plus anciennes courses par étapes d'Afrique de l'Ouest. Elle se dispute traditionnellement à la fin du mois d'octobre."
+    },
+    {
+      "q": "La zone monétaire à laquelle appartient le Burkina Faso est celle de :",
+      "o": [
+        "la CEDEAO élargie",
+        "la CEMAC",
+        "l'UEMOA",
+        "la zone rand"
+      ],
+      "r": 2,
+      "x": "Le Burkina Faso appartient à l'Union économique et monétaire ouest-africaine, qui regroupe huit pays partageant le franc CFA émis par la BCEAO. La CEMAC regroupe, elle, six pays d'Afrique centrale."
+    },
+    {
+      "q": "La principale ressource d'exportation du Burkina Faso est :",
+      "o": [
+        "le coton",
+        "le bétail",
+        "le karité",
+        "l'or"
+      ],
+      "r": 3,
+      "x": "L'or est devenu la première ressource d'exportation du Burkina Faso, devançant le coton depuis le début des années 2010. Le coton demeure toutefois la première culture de rente et concerne des centaines de milliers de producteurs."
+    },
+    {
+      "q": "Le Burkina Faso est traversé par le méridien de Greenwich, comme :",
+      "o": [
+        "le Sénégal",
+        "le Liberia",
+        "le Nigeria",
+        "le Ghana"
+      ],
+      "r": 3,
+      "x": "Le méridien de Greenwich traverse le Ghana, le Burkina Faso, le Togo, le Mali et l'Algérie. Son intersection avec l'équateur se situe en mer, dans le golfe de Guinée."
+    },
+    {
+      "q": "Le climat qui règne dans la partie nord du Burkina Faso est de type :",
+      "o": [
+        "équatorial",
+        "soudanien",
+        "guinéen",
+        "sahélien"
+      ],
+      "r": 3,
+      "x": "Le nord du pays relève du climat sahélien, caractérisé par une pluviométrie inférieure à 600 millimètres et une saison des pluies courte. Le sud-ouest bénéficie, lui, d'un climat soudanien plus humide."
+    },
+    {
+      "q": "Le Burkina Faso se classe parmi les premiers producteurs africains de :",
+      "o": [
+        "cacao",
+        "café",
+        "coton",
+        "caoutchouc"
+      ],
+      "r": 2,
+      "x": "Le Burkina Faso figure parmi les premiers producteurs africains de coton, culture concentrée dans l'ouest et le sud-ouest du pays. Le cacao et le café sont, eux, des productions ivoiriennes et ghanéennes."
+    },
+    {
+      "q": "Le gaz à effet de serre le plus abondamment émis par les activités humaines est :",
+      "o": [
+        "le méthane",
+        "l'ozone",
+        "le protoxyde d'azote",
+        "le dioxyde de carbone"
+      ],
+      "r": 3,
+      "x": "Le dioxyde de carbone représente la part la plus importante des émissions humaines de gaz à effet de serre, principalement par combustion d'énergies fossiles. Le méthane est plus réchauffant à masse égale mais émis en quantités bien moindres."
+    },
+    {
+      "q": "L'accord international sur le climat adopté en 2015 porte le nom de :",
+      "o": [
+        "protocole de Kyoto",
+        "protocole de Montréal",
+        "accord de Paris",
+        "convention de Rio"
+      ],
+      "r": 2,
+      "x": "L'accord de Paris est adopté en décembre 2015 lors de la COP21 et vise à contenir le réchauffement bien en dessous de deux degrés. Le protocole de Kyoto, adopté en 1997, l'avait précédé."
+    },
+    {
+      "q": "Le protocole de Montréal, signé en 1987, vise à protéger :",
+      "o": [
+        "les zones humides",
+        "les forêts tropicales",
+        "la biodiversité marine",
+        "la couche d'ozone"
+      ],
+      "r": 3,
+      "x": "Le protocole de Montréal organise l'élimination des substances qui appauvrissent la couche d'ozone, notamment les chlorofluorocarbures. Il est souvent cité comme l'accord environnemental le plus efficace jamais conclu."
+    },
+    {
+      "q": "La convention internationale relative aux zones humides porte le nom de convention de :",
+      "o": [
+        "Bâle",
+        "Ramsar",
+        "Vienne",
+        "Stockholm"
+      ],
+      "r": 1,
+      "x": "La convention de Ramsar, signée en 1971 en Iran, protège les zones humides d'importance internationale. Le Burkina Faso y a inscrit plusieurs sites, dont le barrage de Bagré et le parc d'Arly."
+    },
+    {
+      "q": "Les objectifs de développement durable adoptés par les Nations unies en 2015 sont au nombre de :",
+      "o": [
+        "8",
+        "12",
+        "17",
+        "21"
+      ],
+      "r": 2,
+      "x": "Les dix-sept objectifs de développement durable couvrent la période 2015-2030 et succèdent aux huit objectifs du Millénaire. Ils forment le cœur de l'Agenda 2030 des Nations unies."
+    },
+    {
+      "q": "Les objectifs du Millénaire pour le développement, adoptés en 2000, étaient au nombre de :",
+      "o": [
+        "8",
+        "12",
+        "17",
+        "21"
+      ],
+      "r": 0,
+      "x": "Les huit objectifs du Millénaire couvraient la période 2000-2015 et portaient notamment sur la pauvreté extrême, l'éducation primaire et la mortalité infantile. Ils ont été remplacés par les dix-sept objectifs de développement durable."
+    },
+    {
+      "q": "La désertification progresse notamment sous l'effet :",
+      "o": [
+        "de la fonte des glaciers",
+        "de la surexploitation des sols et du déboisement",
+        "de l'élévation du niveau des mers",
+        "de l'acidification des océans"
+      ],
+      "r": 1,
+      "x": "La désertification résulte principalement de la surexploitation des sols, du surpâturage et du déboisement, aggravés par la variabilité climatique. La Grande Muraille verte, lancée en 2007, vise à y répondre sur une bande traversant onze pays africains."
+    },
+    {
+      "q": "L'initiative africaine de reboisement lancée en 2007 sur une bande traversant le continent s'appelle :",
+      "o": [
+        "la Grande Muraille verte",
+        "le Programme Sahel vert",
+        "l'Initiative Congo",
+        "le Plan Sahara"
+      ],
+      "r": 0,
+      "x": "La Grande Muraille verte vise à restaurer les terres dégradées sur une bande allant du Sénégal à Djibouti. Le Burkina Faso figure parmi les onze pays fondateurs de l'initiative."
+    },
+    {
+      "q": "L'énergie produite par le rayonnement solaire capté par des panneaux photovoltaïques est dite :",
+      "o": [
+        "fossile",
+        "nucléaire",
+        "renouvelable",
+        "thermique classique"
+      ],
+      "r": 2,
+      "x": "L'énergie solaire photovoltaïque est une énergie renouvelable, au même titre que l'éolien, l'hydraulique et la biomasse. Le Sahel dispose d'un ensoleillement parmi les plus élevés du monde."
+    },
+    {
+      "q": "Le sigle PIB désigne :",
+      "o": [
+        "le patrimoine immobilier brut",
+        "le produit industriel de base",
+        "le produit intérieur brut",
+        "le plan d'investissement budgétaire"
+      ],
+      "r": 2,
+      "x": "Le produit intérieur brut mesure la valeur des biens et services produits sur un territoire au cours d'une année. Rapporté au nombre d'habitants, il donne le PIB par habitant."
+    },
+    {
+      "q": "Une population dont la part des moins de quinze ans est très élevée est dite :",
+      "o": [
+        "vieillissante",
+        "déclinante",
+        "stationnaire",
+        "jeune"
+      ],
+      "r": 3,
+      "x": "Une population jeune se caractérise par une forte proportion de moins de quinze ans, situation de la plupart des pays sahéliens. Elle résulte d'une fécondité élevée conjuguée à une baisse de la mortalité infantile."
+    },
+    {
+      "q": "Le taux de mortalité infantile mesure les décès d'enfants :",
+      "o": [
+        "avant un mois",
+        "avant dix ans",
+        "avant cinq ans",
+        "avant un an"
+      ],
+      "r": 3,
+      "x": "Le taux de mortalité infantile rapporte les décès d'enfants de moins d'un an à mille naissances vivantes. Les décès avant cinq ans relèvent, eux, de la mortalité infanto-juvénile."
+    },
+    {
+      "q": "L'espérance de vie à la naissance correspond :",
+      "o": [
+        "à l'âge moyen des décès d'une année",
+        "au nombre moyen d'années qu'une génération peut espérer vivre",
+        "à l'âge maximal atteint dans une population",
+        "à la durée moyenne de la vie active"
+      ],
+      "r": 1,
+      "x": "L'espérance de vie à la naissance est le nombre moyen d'années qu'une génération peut espérer vivre dans les conditions de mortalité observées. Cet indicateur entre dans le calcul de l'indice de développement humain."
+    },
+    {
+      "q": "L'exode rural désigne :",
+      "o": [
+        "le déplacement saisonnier du bétail",
+        "le retour des citadins à la campagne",
+        "l'émigration vers l'étranger",
+        "le départ des campagnes vers les villes"
+      ],
+      "r": 3,
+      "x": "L'exode rural est le mouvement de population des campagnes vers les villes, moteur principal de l'urbanisation. Le déplacement saisonnier du bétail relève, lui, de la transhumance."
+    },
+    {
+      "q": "Le déplacement saisonnier des troupeaux à la recherche de pâturages porte le nom de :",
+      "o": [
+        "nomadisme intégral",
+        "jachère",
+        "migration pendulaire",
+        "transhumance"
+      ],
+      "r": 3,
+      "x": "La transhumance est le déplacement saisonnier des troupeaux vers les pâturages, pratique courante chez les éleveurs peuls du Sahel. La jachère désigne, elle, le repos temporaire d'une terre cultivée."
+    },
+    {
+      "q": "La pratique consistant à laisser une parcelle au repos pour restaurer sa fertilité est :",
+      "o": [
+        "l'assolement",
+        "la jachère",
+        "le paillage",
+        "l'irrigation"
+      ],
+      "r": 1,
+      "x": "La jachère laisse la terre au repos pour restaurer sa fertilité naturelle, pratique traditionnelle raccourcie par la pression démographique. L'assolement désigne, lui, la rotation des cultures sur une même parcelle."
+    },
+    {
+      "q": "La technique de conservation des eaux et des sols qui consiste à disposer des pierres en courbes de niveau s'appelle :",
+      "o": [
+        "le zaï",
+        "les cordons pierreux",
+        "le paillage",
+        "le billonnage"
+      ],
+      "r": 1,
+      "x": "Les cordons pierreux freinent le ruissellement et retiennent les sédiments sur les versants cultivés. Le zaï est une autre technique sahélienne, consistant à creuser des poquets enrichis en matière organique."
+    },
+    {
+      "q": "La technique agricole traditionnelle burkinabè du zaï consiste à :",
+      "o": [
+        "creuser des poquets enrichis en matière organique",
+        "aligner des pierres selon les courbes de niveau",
+        "couvrir le sol de résidus végétaux",
+        "alterner les cultures d'une année sur l'autre"
+      ],
+      "r": 0,
+      "x": "Le zaï consiste à creuser des cuvettes que l'on remplit de fumier avant les pluies, afin de récupérer des sols dégradés. Cette technique a été popularisée au Yatenga par le paysan Yacouba Sawadogo."
+    },
+    {
+      "q": "L'agriculture pratiquée uniquement grâce aux pluies est dite :",
+      "o": [
+        "irriguée",
+        "intensive",
+        "hydroponique",
+        "pluviale"
+      ],
+      "r": 3,
+      "x": "L'agriculture pluviale dépend entièrement des précipitations, ce qui la rend vulnérable à la variabilité climatique sahélienne. L'agriculture irriguée mobilise, elle, une ressource en eau maîtrisée."
+    },
+    {
+      "q": "Le processus de transformation d'un produit agricole brut en produit fini relève :",
+      "o": [
+        "du secteur primaire",
+        "du secteur secondaire",
+        "du secteur tertiaire",
+        "du secteur informel"
+      ],
+      "r": 1,
+      "x": "La transformation des produits agricoles relève du secteur secondaire, c'est-à-dire de l'industrie. La production du produit brut appartient, elle, au secteur primaire."
+    },
+    {
+      "q": "L'organe des Nations unies chargé du maintien de la paix et de la sécurité internationales est :",
+      "o": [
+        "l'Assemblée générale",
+        "le Conseil de sécurité",
+        "le Secrétariat",
+        "le Conseil économique et social"
+      ],
+      "r": 1,
+      "x": "Le Conseil de sécurité détient la responsabilité principale du maintien de la paix et peut adopter des mesures contraignantes. L'Assemblée générale, où chaque État dispose d'une voix, adopte des résolutions non contraignantes."
+    },
+    {
+      "q": "Le droit de veto au Conseil de sécurité est détenu par :",
+      "o": [
+        "trois membres permanents",
+        "l'ensemble des quinze membres",
+        "dix membres élus",
+        "cinq membres permanents"
+      ],
+      "r": 3,
+      "x": "Les cinq membres permanents — États-Unis, Russie, Chine, Royaume-Uni et France — disposent du droit de veto. Les dix autres membres sont élus pour deux ans sans ce privilège."
+    },
+    {
+      "q": "L'organe judiciaire principal des Nations unies est :",
+      "o": [
+        "la Cour pénale internationale",
+        "le Tribunal administratif",
+        "la Cour européenne des droits de l'homme",
+        "la Cour internationale de justice"
+      ],
+      "r": 3,
+      "x": "La Cour internationale de justice, qui siège à La Haye, règle les différends entre États et rend des avis consultatifs. La Cour pénale internationale, également à La Haye, juge des individus et n'est pas un organe de l'ONU."
+    },
+    {
+      "q": "Le document adopté par l'Assemblée générale des Nations unies le 10 décembre 1948 est :",
+      "o": [
+        "la Charte des Nations unies",
+        "la Déclaration universelle des droits de l'homme",
+        "la Convention de Genève",
+        "le Pacte international relatif aux droits civils"
+      ],
+      "r": 1,
+      "x": "La Déclaration universelle des droits de l'homme est adoptée à Paris le 10 décembre 1948 et compte trente articles. La Charte des Nations unies, elle, avait été signée à San Francisco en juin 1945."
+    },
+    {
+      "q": "La Charte africaine des droits de l'homme et des peuples a été adoptée en 1981 à :",
+      "o": [
+        "Monrovia",
+        "Addis-Abeba",
+        "Nairobi",
+        "Banjul"
+      ],
+      "r": 3,
+      "x": "La Charte africaine des droits de l'homme et des peuples, dite Charte de Banjul, est adoptée en juin 1981 en Gambie. Elle a la particularité de consacrer des droits collectifs des peuples, en plus des droits individuels."
+    },
+    {
+      "q": "La Convention relative aux droits de l'enfant a été adoptée par les Nations unies en :",
+      "o": [
+        "1959",
+        "1979",
+        "1989",
+        "1999"
+      ],
+      "r": 2,
+      "x": "La Convention relative aux droits de l'enfant est adoptée le 20 novembre 1989 et constitue le traité le plus ratifié au monde. Elle définit l'enfant comme toute personne de moins de dix-huit ans."
+    },
+    {
+      "q": "Selon la Convention des Nations unies, est considéré comme enfant toute personne âgée de moins de :",
+      "o": [
+        "quinze ans",
+        "seize ans",
+        "dix-huit ans",
+        "vingt et un ans"
+      ],
+      "r": 2,
+      "x": "La Convention relative aux droits de l'enfant fixe la minorité à dix-huit ans, sauf législation nationale plus protectrice. Ce seuil sert de référence aux politiques de protection de l'enfance."
+    },
+    {
+      "q": "L'institution spécialisée des Nations unies chargée de l'éducation, de la science et de la culture est :",
+      "o": [
+        "l'OIT",
+        "l'UNICEF",
+        "le PNUD",
+        "l'UNESCO"
+      ],
+      "r": 3,
+      "x": "L'UNESCO, dont le siège est à Paris, a pour mandat l'éducation, la science et la culture, et gère la liste du patrimoine mondial. L'UNICEF s'occupe, elle, de l'enfance."
+    },
+    {
+      "q": "L'indice de développement humain (IDH) varie sur une échelle allant de :",
+      "o": [
+        "zéro à un",
+        "zéro à dix",
+        "un à cent",
+        "moins un à plus un"
+      ],
+      "r": 0,
+      "x": "L'IDH est un indice composite compris entre zéro et un, les valeurs les plus élevées traduisant un développement humain plus avancé. Il combine l'espérance de vie, la durée de scolarisation et le revenu national brut par habitant."
+    },
+    {
+      "q": "Le seuil international d'extrême pauvreté est défini par la Banque mondiale en fonction :",
+      "o": [
+        "du revenu médian de chaque pays",
+        "d'un montant quotidien en dollars par personne",
+        "du taux de chômage des jeunes actifs",
+        "du coût du panier alimentaire local"
+      ],
+      "r": 1,
+      "x": "La Banque mondiale définit l'extrême pauvreté par un montant quotidien exprimé en dollars à parité de pouvoir d'achat, révisé périodiquement. Ce seuil permet des comparaisons internationales indépendantes des prix locaux."
+    },
+    {
+      "q": "Le système d'écriture utilisé pour transcrire les langues arabes se lit :",
+      "o": [
+        "de gauche à droite",
+        "de droite à gauche",
+        "de haut en bas",
+        "en boustrophédon"
+      ],
+      "r": 1,
+      "x": "L'alphabet arabe se lit et s'écrit de droite à gauche, comme l'hébreu. Le chinois traditionnel s'écrivait, lui, en colonnes de haut en bas."
+    },
+    {
+      "q": "La langue la plus parlée au monde comme langue maternelle est :",
+      "o": [
+        "l'anglais",
+        "l'espagnol",
+        "le mandarin",
+        "l'hindi"
+      ],
+      "r": 2,
+      "x": "Le mandarin compte le plus grand nombre de locuteurs natifs au monde. L'anglais domine en revanche largement si l'on ajoute les locuteurs qui le parlent comme seconde langue."
+    },
+    {
+      "q": "L'Agence de coopération culturelle et technique, ancêtre de la Francophonie institutionnelle, a été créée en 1970 à :",
+      "o": [
+        "Québec",
+        "Dakar",
+        "Paris",
+        "Niamey"
+      ],
+      "r": 3,
+      "x": "L'Agence de coopération culturelle et technique est créée à Niamey en 1970 et deviendra l'Organisation internationale de la Francophonie. Son siège actuel est établi à Paris."
+    },
+    {
+      "q": "Le sigle OIF désigne :",
+      "o": [
+        "l'Observatoire international des frontières",
+        "l'Office international des forêts",
+        "l'Organisation islamique de la finance",
+        "l'Organisation internationale de la Francophonie"
+      ],
+      "r": 3,
+      "x": "L'Organisation internationale de la Francophonie rassemble les États et gouvernements ayant le français en partage. Elle célèbre chaque 20 mars la Journée internationale de la Francophonie."
+    },
+    {
+      "q": "L'alphabet latin utilisé pour écrire le français compte :",
+      "o": [
+        "vingt-quatre lettres",
+        "vingt-cinq lettres",
+        "vingt-six lettres",
+        "vingt-huit lettres"
+      ],
+      "r": 2,
+      "x": "L'alphabet latin utilisé en français compte vingt-six lettres, dont six voyelles et vingt consonnes. Les signes diacritiques comme les accents ne constituent pas des lettres supplémentaires."
+    },
+    {
+      "q": "Le mot formé à partir des initiales d'un groupe de mots et prononcé comme un mot ordinaire est :",
+      "o": [
+        "un sigle",
+        "un néologisme",
+        "une abréviation",
+        "un acronyme"
+      ],
+      "r": 3,
+      "x": "L'acronyme se prononce comme un mot ordinaire, à l'exemple de l'UNESCO, alors que le sigle s'épelle lettre par lettre. L'abréviation consiste, elle, à raccourcir un mot unique."
+    },
+    {
+      "q": "Un mot de sens contraire à un autre est :",
+      "o": [
+        "un synonyme",
+        "un homonyme",
+        "un antonyme",
+        "un paronyme"
+      ],
+      "r": 2,
+      "x": "L'antonyme exprime le sens contraire, tandis que le synonyme exprime un sens voisin. Le paronyme désigne, lui, un mot de forme proche mais de sens différent."
+    },
+    {
+      "q": "Deux mots qui se prononcent de la même façon mais s'écrivent différemment sont :",
+      "o": [
+        "des synonymes",
+        "des homophones",
+        "des antonymes",
+        "des paronymes"
+      ],
+      "r": 1,
+      "x": "Les homophones se prononcent identiquement mais s'écrivent différemment, comme vert, verre et vers. Les homographes, eux, s'écrivent de la même manière."
+    },
+    {
+      "q": "Le verbe d'un récit rapportant des faits achevés dans le passé se met le plus souvent :",
+      "o": [
+        "au présent de l'indicatif",
+        "au subjonctif imparfait",
+        "au futur antérieur",
+        "au passé simple"
+      ],
+      "r": 3,
+      "x": "Le passé simple est le temps du récit écrit pour les actions achevées et successives. L'imparfait sert, lui, à la description et aux actions de second plan."
+    },
+    {
+      "q": "Dans la phrase « le livre que j'ai lu », le mot « que » est :",
+      "o": [
+        "une conjonction de coordination",
+        "une préposition",
+        "un adverbe",
+        "un pronom relatif"
+      ],
+      "r": 3,
+      "x": "Le pronom relatif « que » introduit la proposition subordonnée relative et remplace le nom antécédent. Les conjonctions de coordination sont mais, ou, et, donc, or, ni, car."
+    },
+    {
+      "q": "La science qui étudie la formation et l'origine des mots est :",
+      "o": [
+        "la sémantique",
+        "la phonétique",
+        "la syntaxe",
+        "l'étymologie"
+      ],
+      "r": 3,
+      "x": "L'étymologie étudie l'origine et l'histoire des mots, tandis que la sémantique porte sur leur sens. La syntaxe s'intéresse, elle, à l'agencement des mots dans la phrase."
+    },
+    {
+      "q": "Le premier appareil ayant permis à l'homme de marcher sur la Lune faisait partie de la mission :",
+      "o": [
+        "Apollo 8",
+        "Apollo 11",
+        "Apollo 13",
+        "Soyouz 1"
+      ],
+      "r": 1,
+      "x": "La mission Apollo 11 permet à Neil Armstrong et Buzz Aldrin de marcher sur la Lune en juillet 1969. Apollo 13, en 1970, connaîtra une avarie qui empêchera l'alunissage."
+    },
+    {
+      "q": "La planète la plus proche du Soleil est :",
+      "o": [
+        "Mercure",
+        "Vénus",
+        "la Terre",
+        "Mars"
+      ],
+      "r": 0,
+      "x": "Mercure est la planète la plus proche du Soleil et la plus petite du système solaire. Vénus, deuxième en distance, est en revanche la plus chaude en raison de son effet de serre."
+    },
+    {
+      "q": "La planète du système solaire dont la température de surface est la plus élevée est :",
+      "o": [
+        "Mercure",
+        "Vénus",
+        "Mars",
+        "Jupiter"
+      ],
+      "r": 1,
+      "x": "Vénus est la planète la plus chaude du système solaire, avec une température de surface dépassant 450 degrés, à cause d'un effet de serre extrême. Mercure, plus proche du Soleil, est pourtant moins chaude car dépourvue d'atmosphère dense."
+    },
+    {
+      "q": "Le satellite naturel de la Terre effectue une révolution complète autour d'elle en environ :",
+      "o": [
+        "sept jours",
+        "quatorze jours",
+        "vingt-sept jours",
+        "soixante jours"
+      ],
+      "r": 2,
+      "x": "La Lune accomplit sa révolution autour de la Terre en environ vingt-sept jours, et le cycle des phases dure un peu plus de vingt-neuf jours. Elle présente toujours la même face à la Terre, du fait de sa rotation synchrone."
+    },
+    {
+      "q": "Une éclipse de Soleil se produit lorsque :",
+      "o": [
+        "la Lune s'interpose entre le Soleil et la Terre",
+        "la Terre s'interpose entre le Soleil et la Lune",
+        "le Soleil s'interpose entre la Terre et la Lune",
+        "la Lune passe dans l'ombre de Vénus"
+      ],
+      "r": 0,
+      "x": "L'éclipse solaire survient lorsque la Lune passe entre le Soleil et la Terre, projetant son ombre sur celle-ci. L'éclipse de Lune se produit, elle, quand la Terre s'interpose entre le Soleil et la Lune."
+    },
+    {
+      "q": "La galaxie qui abrite le système solaire porte le nom de :",
+      "o": [
+        "Andromède",
+        "le Triangle",
+        "le Grand Nuage de Magellan",
+        "la Voie lactée"
+      ],
+      "r": 3,
+      "x": "Le système solaire se situe dans la Voie lactée, galaxie spirale comptant des centaines de milliards d'étoiles. Andromède est la grande galaxie la plus proche de la nôtre."
+    },
+    {
+      "q": "L'étoile la plus proche de la Terre est :",
+      "o": [
+        "Sirius",
+        "Proxima du Centaure",
+        "le Soleil",
+        "l'étoile polaire"
+      ],
+      "r": 2,
+      "x": "Le Soleil est l'étoile la plus proche de la Terre, située à environ 150 millions de kilomètres. Proxima du Centaure est la plus proche après lui, à plus de quatre années-lumière."
+    },
+    {
+      "q": "L'unité utilisée pour mesurer les distances entre les étoiles est :",
+      "o": [
+        "le kilomètre",
+        "le mille marin",
+        "l'année-lumière",
+        "le nœud"
+      ],
+      "r": 2,
+      "x": "L'année-lumière correspond à la distance parcourue par la lumière en un an, soit environ 9 460 milliards de kilomètres. Les astronomes utilisent également le parsec, égal à environ 3,26 années-lumière."
+    },
+    {
+      "q": "Le phénomène par lequel un corps chaud transmet sa chaleur par contact direct est :",
+      "o": [
+        "la conduction",
+        "la convection",
+        "le rayonnement",
+        "la sublimation"
+      ],
+      "r": 0,
+      "x": "La conduction transmet la chaleur par contact direct entre deux corps, sans déplacement de matière. La convection implique, elle, un mouvement de fluide et le rayonnement se propage sans support matériel."
+    },
+    {
+      "q": "Le passage direct de l'état solide à l'état gazeux porte le nom de :",
+      "o": [
+        "fusion",
+        "vaporisation",
+        "sublimation",
+        "condensation"
+      ],
+      "r": 2,
+      "x": "La sublimation fait passer un corps de l'état solide à l'état gazeux sans phase liquide, comme dans le cas de la neige carbonique. La fusion correspond, elle, au passage du solide au liquide."
+    },
+    {
+      "q": "Le courant électrique distribué dans les habitations est généralement :",
+      "o": [
+        "continu",
+        "alternatif",
+        "statique",
+        "pulsé"
+      ],
+      "r": 1,
+      "x": "Le courant distribué dans les habitations est alternatif, car il se transporte sur de longues distances avec moins de pertes. Les piles et batteries fournissent, elles, un courant continu."
+    },
+    {
+      "q": "L'appareil qui transforme l'énergie mécanique en énergie électrique est :",
+      "o": [
+        "le moteur",
+        "le condensateur",
+        "le transformateur",
+        "l'alternateur"
+      ],
+      "r": 3,
+      "x": "L'alternateur convertit l'énergie mécanique en énergie électrique, principe utilisé dans les centrales et les véhicules. Le moteur électrique réalise, lui, la transformation inverse."
+    },
+    {
+      "q": "Le sang chargé de dioxyde de carbone circule dans :",
+      "o": [
+        "les artères de la grande circulation",
+        "l'aorte et ses ramifications",
+        "les capillaires du cerveau uniquement",
+        "les veines de la grande circulation"
+      ],
+      "r": 3,
+      "x": "Le sang chargé de dioxyde de carbone revient au cœur par les veines de la grande circulation. Il est ensuite envoyé aux poumons par l'artère pulmonaire, seule artère transportant du sang pauvre en oxygène."
+    },
+    {
+      "q": "L'appareil qui assure la production des cellules sexuelles est :",
+      "o": [
+        "l'appareil digestif",
+        "l'appareil respiratoire",
+        "l'appareil reproducteur",
+        "l'appareil excréteur"
+      ],
+      "r": 2,
+      "x": "L'appareil reproducteur produit les gamètes, spermatozoïdes chez l'homme et ovules chez la femme. Ces cellules contiennent vingt-trois chromosomes, soit la moitié du patrimoine d'une cellule ordinaire."
+    },
+    {
+      "q": "La vaccination consiste à :",
+      "o": [
+        "administrer un antibiotique préventif",
+        "stimuler les défenses immunitaires contre un agent précis",
+        "transfuser des anticorps d'un donneur",
+        "éliminer un parasite du sang"
+      ],
+      "r": 1,
+      "x": "La vaccination introduit un antigène atténué ou inactivé pour que l'organisme développe une mémoire immunitaire. La transfusion d'anticorps relève, elle, de la sérothérapie."
+    },
+    {
+      "q": "La maladie provoquée par une carence en iode et se manifestant par un gonflement du cou est :",
+      "o": [
+        "le scorbut",
+        "l'anémie",
+        "le kwashiorkor",
+        "le goitre"
+      ],
+      "r": 3,
+      "x": "Le goitre résulte d'une carence en iode entraînant une hypertrophie de la glande thyroïde. L'iodation du sel de cuisine constitue la principale mesure de prévention."
+    },
+    {
+      "q": "La malnutrition protéino-énergétique aiguë de l'enfant, marquée par des œdèmes, porte le nom de :",
+      "o": [
+        "marasme",
+        "béribéri",
+        "rachitisme",
+        "kwashiorkor"
+      ],
+      "r": 3,
+      "x": "Le kwashiorkor se caractérise par des œdèmes liés à une carence protéique sévère, tandis que le marasme se manifeste par une maigreur extrême. Ces deux formes de malnutrition aiguë touchent surtout les jeunes enfants."
+    },
+    {
+      "q": "Le principal mode de transmission du VIH est :",
+      "o": [
+        "la piqûre de moustique infecté",
+        "le contact cutané prolongé",
+        "les rapports non protégés et le sang contaminé",
+        "le partage des repas et de la vaisselle"
+      ],
+      "r": 2,
+      "x": "Le VIH se transmet principalement par voie sexuelle non protégée, par le sang contaminé et de la mère à l'enfant. Aucune transmission n'est possible par les moustiques ou les gestes de la vie quotidienne."
+    },
+    {
+      "q": "Le traitement qui permet de rendre l'eau potable en détruisant les micro-organismes est :",
+      "o": [
+        "la filtration mécanique seule",
+        "la décantation",
+        "la désinfection",
+        "la sédimentation"
+      ],
+      "r": 2,
+      "x": "La désinfection, par chloration ou ébullition, détruit les micro-organismes pathogènes présents dans l'eau. La décantation et la filtration éliminent, elles, les particules en suspension sans garantir la potabilité."
+    },
+    {
+      "q": "La maladie hydrique provoquée par une bactérie et responsable de diarrhées massives est :",
+      "o": [
+        "le choléra",
+        "la rougeole",
+        "la méningite",
+        "la tuberculose"
+      ],
+      "r": 0,
+      "x": "Le choléra est une maladie hydrique bactérienne provoquant des diarrhées profuses et une déshydratation rapide. Sa prévention repose sur l'accès à l'eau potable et l'assainissement."
+    },
+    {
+      "q": "Le sigle OMS désigne :",
+      "o": [
+        "l'Organisation mondiale de la santé",
+        "l'Office mondial de la solidarité",
+        "l'Organisation mondiale des semences",
+        "l'Observatoire mondial sanitaire"
+      ],
+      "r": 0,
+      "x": "L'Organisation mondiale de la santé, créée en 1948, est l'institution spécialisée des Nations unies pour la santé publique. Son siège est à Genève et sa journée mondiale est célébrée le 7 avril."
+    },
+    {
+      "q": "La monnaie unique d'environ dix-neuf pays européens est :",
+      "o": [
+        "la livre sterling",
+        "l'euro",
+        "le franc suisse",
+        "la couronne"
+      ],
+      "r": 1,
+      "x": "L'euro est la monnaie de la zone euro, entrée en circulation fiduciaire le 1er janvier 2002. La livre sterling demeure la monnaie du Royaume-Uni, sorti de l'Union européenne en 2020."
+    },
+    {
+      "q": "Le retrait du Royaume-Uni de l'Union européenne, effectif en 2020, est connu sous le nom de :",
+      "o": [
+        "Brexit",
+        "Grexit",
+        "Frexit",
+        "Nexit"
+      ],
+      "r": 0,
+      "x": "Le Brexit devient effectif le 31 janvier 2020, après le référendum de juin 2016. Le Royaume-Uni est le premier État à quitter l'Union européenne."
+    },
+    {
+      "q": "L'organisation internationale qui régule le commerce mondial est :",
+      "o": [
+        "le FMI",
+        "la Banque mondiale",
+        "l'OMC",
+        "l'OCDE"
+      ],
+      "r": 2,
+      "x": "L'Organisation mondiale du commerce, entrée en fonction en 1995, régule les échanges commerciaux et règle les différends entre ses membres. Le FMI veille, lui, à la stabilité monétaire internationale."
+    },
+    {
+      "q": "Le groupe informel réunissant les principales économies avancées et émergentes est :",
+      "o": [
+        "le G7",
+        "le G20",
+        "l'OPEP",
+        "le Commonwealth"
+      ],
+      "r": 1,
+      "x": "Le G20 rassemble dix-neuf pays et l'Union européenne, auxquels l'Union africaine a été admise en 2023. Le G7 ne réunit, lui, que sept économies avancées."
+    },
+    {
+      "q": "Le groupe des économies émergentes constitué à l'origine par le Brésil, la Russie, l'Inde, la Chine et l'Afrique du Sud est :",
+      "o": [
+        "le G7",
+        "l'ASEAN",
+        "les BRICS",
+        "le Mercosur"
+      ],
+      "r": 2,
+      "x": "Les BRICS réunissent à l'origine le Brésil, la Russie, l'Inde, la Chine et l'Afrique du Sud, cette dernière ayant rejoint le groupe en 2010. L'ASEAN regroupe, elle, des pays d'Asie du Sud-Est."
+    },
+    {
+      "q": "L'organisation qui regroupe les pays exportateurs de pétrole et influence les cours mondiaux est :",
+      "o": [
+        "l'OPEP",
+        "l'AIE",
+        "l'OCDE",
+        "l'OMC"
+      ],
+      "r": 0,
+      "x": "L'OPEP, créée en 1960, coordonne les politiques pétrolières de ses membres et influence les prix par ses quotas de production. L'Agence internationale de l'énergie représente, elle, les pays consommateurs."
+    },
+    {
+      "q": "Une monnaie dont la valeur est fixée par rapport à une autre devise est dite :",
+      "o": [
+        "flottante",
+        "arrimée",
+        "convertible",
+        "scripturale"
+      ],
+      "r": 1,
+      "x": "Une monnaie arrimée voit son taux de change fixé par rapport à une devise de référence, comme le franc CFA vis-à-vis de l'euro. Une monnaie flottante voit, elle, son cours déterminé par le marché."
+    },
+    {
+      "q": "L'inflation érode principalement :",
+      "o": [
+        "le niveau d'alphabétisation",
+        "le taux de natalité",
+        "la production agricole",
+        "le pouvoir d'achat"
+      ],
+      "r": 3,
+      "x": "L'inflation réduit le pouvoir d'achat lorsque les revenus progressent moins vite que les prix. Elle allège en revanche le poids réel des dettes contractées à taux fixe."
+    },
+    {
+      "q": "L'ensemble des personnes en âge de travailler occupant un emploi ou en recherchant un constitue :",
+      "o": [
+        "la population totale",
+        "la population scolarisée",
+        "la population urbaine",
+        "la population active"
+      ],
+      "r": 3,
+      "x": "La population active regroupe les actifs occupés et les chômeurs, et sert de base au calcul du taux de chômage. Les étudiants et retraités relèvent, eux, de la population inactive."
+    },
+    {
+      "q": "Le secteur informel se caractérise principalement par :",
+      "o": [
+        "l'absence d'enregistrement administratif des activités",
+        "la production exclusivement agricole",
+        "l'exportation de matières premières",
+        "l'intervention directe de l'État"
+      ],
+      "r": 0,
+      "x": "Le secteur informel regroupe les activités non enregistrées et échappant à la fiscalité et à la protection sociale. Il occupe une part majoritaire de l'emploi dans de nombreux pays africains."
+    },
+    {
+      "q": "La microfinance s'adresse principalement :",
+      "o": [
+        "aux grandes entreprises exportatrices",
+        "aux populations exclues du système bancaire classique",
+        "aux États en difficulté de trésorerie",
+        "aux marchés financiers internationaux"
+      ],
+      "r": 1,
+      "x": "La microfinance fournit de petits crédits et des services d'épargne aux populations sans accès au crédit bancaire. Muhammad Yunus, fondateur de la Grameen Bank, a reçu le prix Nobel de la paix en 2006 pour cette approche."
+    },
+    {
+      "q": "Le premier ordinateur électronique programmable à usage général, mis en service en 1946, est :",
+      "o": [
+        "l'ENIAC",
+        "l'Apple I",
+        "l'IBM PC",
+        "le Macintosh"
+      ],
+      "r": 0,
+      "x": "L'ENIAC, mis en service aux États-Unis en 1946, est le premier ordinateur électronique programmable à usage général. L'IBM PC, lui, inaugure en 1981 l'ère de la micro-informatique de bureau."
+    },
+    {
+      "q": "Le réseau informatique mondial reliant les ordinateurs entre eux s'appelle :",
+      "o": [
+        "le web",
+        "Internet",
+        "l'intranet",
+        "le cloud"
+      ],
+      "r": 1,
+      "x": "Internet désigne le réseau physique mondial, tandis que le web est l'un des services qu'il héberge, inventé en 1989 par Tim Berners-Lee. L'intranet est, lui, un réseau interne à une organisation."
+    },
+    {
+      "q": "Le web a été inventé en 1989 par :",
+      "o": [
+        "Bill Gates",
+        "Steve Jobs",
+        "Tim Berners-Lee",
+        "Vinton Cerf"
+      ],
+      "r": 2,
+      "x": "Tim Berners-Lee conçoit le World Wide Web au CERN en 1989, avec le langage HTML et le protocole HTTP. Vinton Cerf est, lui, l'un des concepteurs du protocole TCP/IP qui fonde Internet."
+    },
+    {
+      "q": "Le sigle HTML désigne un langage servant à :",
+      "o": [
+        "structurer les pages web",
+        "chiffrer les communications",
+        "gérer les bases de données",
+        "piloter les imprimantes"
+      ],
+      "r": 0,
+      "x": "Le HTML est le langage de balisage qui structure le contenu des pages web. Le chiffrement des communications relève, lui, de protocoles comme le TLS."
+    },
+    {
+      "q": "Un logiciel malveillant qui se reproduit en infectant d'autres fichiers est :",
+      "o": [
+        "un virus informatique",
+        "un pare-feu",
+        "un navigateur",
+        "un système d'exploitation"
+      ],
+      "r": 0,
+      "x": "Le virus informatique se reproduit en infectant d'autres fichiers ou programmes. Le pare-feu est au contraire un dispositif de protection filtrant les connexions réseau."
+    },
+    {
+      "q": "L'unité de mesure de la capacité de stockage informatique la plus grande parmi les suivantes est :",
+      "o": [
+        "le kilooctet",
+        "le mégaoctet",
+        "le gigaoctet",
+        "le téraoctet"
+      ],
+      "r": 3,
+      "x": "Le téraoctet vaut mille gigaoctets, eux-mêmes équivalant à mille mégaoctets. Chaque échelon de cette progression correspond approximativement à un facteur mille."
+    },
+    {
+      "q": "L'intelligence artificielle désigne l'ensemble des techniques permettant à une machine :",
+      "o": [
+        "de fonctionner sans électricité",
+        "de simuler des capacités cognitives humaines",
+        "de se déplacer de façon autonome uniquement",
+        "de stocker durablement des données"
+      ],
+      "r": 1,
+      "x": "L'intelligence artificielle regroupe les techniques permettant à une machine de simuler des fonctions cognitives comme l'apprentissage et la reconnaissance. L'apprentissage automatique en constitue aujourd'hui la principale approche."
+    },
+    {
+      "q": "Le statut général de la fonction publique d'État du Burkina Faso est régi par la loi :",
+      "o": [
+        "n°013-98/AN du 28 avril 1998",
+        "n°019-2005/AN du 18 mai 2005",
+        "n°081-2015/CNT du 24 novembre 2015",
+        "n°028-2008/AN du 13 mai 2008"
+      ],
+      "r": 2,
+      "x": "La loi n°081-2015/CNT du 24 novembre 2015 fixe le statut général de la fonction publique d'État et définit droits, obligations et garanties des fonctionnaires. La loi n°028-2008/AN du 13 mai 2008 portait le code du travail, abrogé depuis par la loi n°013-2026/ALP du 6 mai 2026."
+    },
+    {
+      "q": "Les emplois de la fonction publique burkinabè sont répartis en :",
+      "o": [
+        "quatre catégories",
+        "cinq catégories",
+        "six catégories",
+        "huit catégories"
+      ],
+      "r": 2,
+      "x": "Les emplois sont classés en six catégories désignées, par ordre hiérarchique décroissant, par les lettres P, A, B, C, D et E. Ce classement repose sur le niveau de diplôme exigé au recrutement."
+    },
+    {
+      "q": "La catégorie la plus élevée de la fonction publique burkinabè est désignée par la lettre :",
+      "o": [
+        "A",
+        "B",
+        "E",
+        "P"
+      ],
+      "r": 3,
+      "x": "La catégorie P occupe le sommet de la hiérarchie, suivie des catégories A, B, C, D et E. Chaque catégorie correspond à un niveau de diplôme ou de titre équivalent."
+    },
+    {
+      "q": "L'accès aux emplois de la fonction publique burkinabè est ouvert :",
+      "o": [
+        "par voie exclusive de nomination ministérielle",
+        "aux seuls titulaires d'un diplôme d'État",
+        "sur désignation de l'autorité hiérarchique",
+        "à égalité de droit à tout Burkinabè remplissant les conditions"
+      ],
+      "r": 3,
+      "x": "Le statut général consacre l'égalité d'accès aux emplois publics pour tout Burkinabè remplissant les conditions requises, sans distinction. Ce principe se traduit concrètement par le recrutement sur concours."
+    },
+    {
+      "q": "L'acte par lequel un agent public est définitivement confirmé dans son emploi après son stage est :",
+      "o": [
+        "l'intégration",
+        "la titularisation",
+        "l'avancement",
+        "le reclassement"
+      ],
+      "r": 1,
+      "x": "La titularisation confirme l'agent dans son emploi à l'issue de la période de stage probatoire. L'avancement désigne, lui, la progression dans les échelons et classes."
+    },
+    {
+      "q": "L'acte de carrière consistant à changer de catégorie après l'obtention d'un nouveau diplôme est :",
+      "o": [
+        "l'intégration",
+        "la titularisation",
+        "le reclassement",
+        "le détachement"
+      ],
+      "r": 2,
+      "x": "Le reclassement permet à l'agent de changer de catégorie après l'obtention d'un diplôme supérieur, généralement par la voie du concours professionnel. Le détachement place, lui, l'agent hors de son administration d'origine tout en conservant ses droits à l'avancement."
+    },
+    {
+      "q": "La position du fonctionnaire placé hors de son administration d'origine tout en conservant ses droits à l'avancement est :",
+      "o": [
+        "l'activité",
+        "le détachement",
+        "la disponibilité",
+        "la mise en congé"
+      ],
+      "r": 1,
+      "x": "Le détachement maintient les droits à l'avancement et à la retraite, contrairement à la disponibilité qui les suspend. Ces deux positions sont prévues par le statut général de la fonction publique."
+    },
+    {
+      "q": "La position du fonctionnaire qui cesse temporairement ses fonctions en perdant ses droits à l'avancement est :",
+      "o": [
+        "l'activité",
+        "le détachement",
+        "la disponibilité",
+        "le stage"
+      ],
+      "r": 2,
+      "x": "La disponibilité suspend la rémunération ainsi que les droits à l'avancement et à la retraite. Elle est accordée notamment pour convenances personnelles ou pour suivre un conjoint."
+    },
+    {
+      "q": "Le fonctionnaire placé à la tête d'un service est responsable devant :",
+      "o": [
+        "ses seuls subordonnés",
+        "ses supérieurs hiérarchiques",
+        "le Conseil constitutionnel",
+        "l'Assemblée législative"
+      ],
+      "r": 1,
+      "x": "Le chef de service répond devant ses supérieurs de la réalisation des objectifs et de la gestion des ressources allouées. La responsabilité propre de ses subordonnés ne le dégage d'aucune des siennes."
+    },
+    {
+      "q": "Un acte administratif unilatéral se caractérise par le fait qu'il :",
+      "o": [
+        "résulte d'un accord entre deux parties",
+        "s'impose sans le consentement du destinataire",
+        "nécessite l'approbation du juge",
+        "ne produit aucun effet juridique"
+      ],
+      "r": 1,
+      "x": "L'acte administratif unilatéral s'impose au destinataire sans son consentement, à la différence du contrat administratif. Il constitue le mode d'action privilégié de l'administration."
+    },
+    {
+      "q": "Le recours formé devant l'autorité qui a pris la décision contestée est dit :",
+      "o": [
+        "recours gracieux",
+        "recours hiérarchique",
+        "recours contentieux",
+        "recours en cassation"
+      ],
+      "r": 0,
+      "x": "Le recours gracieux s'adresse à l'auteur même de la décision, alors que le recours hiérarchique s'adresse à son supérieur. Tous deux sont des recours administratifs préalables au recours contentieux."
+    },
+    {
+      "q": "Le recours formé devant le supérieur hiérarchique de l'auteur de la décision est dit :",
+      "o": [
+        "recours gracieux",
+        "recours pour excès de pouvoir",
+        "recours hiérarchique",
+        "recours en révision"
+      ],
+      "r": 2,
+      "x": "Le recours hiérarchique est porté devant le supérieur de l'auteur de l'acte contesté. Le recours pour excès de pouvoir est, lui, un recours juridictionnel visant l'annulation d'un acte illégal."
+    },
+    {
+      "q": "Le recours juridictionnel tendant à l'annulation d'un acte administratif illégal est :",
+      "o": [
+        "le recours de plein contentieux",
+        "le référé provision",
+        "le recours pour excès de pouvoir",
+        "le pourvoi en cassation"
+      ],
+      "r": 2,
+      "x": "Le recours pour excès de pouvoir vise l'annulation d'un acte administratif entaché d'illégalité. Le recours de plein contentieux permet, lui, au juge de réformer la décision et d'accorder une indemnisation."
+    },
+    {
+      "q": "Le principe selon lequel le service public doit fonctionner sans interruption est celui :",
+      "o": [
+        "de continuité",
+        "d'égalité",
+        "de mutabilité",
+        "de gratuité"
+      ],
+      "r": 0,
+      "x": "Le principe de continuité impose un fonctionnement régulier et sans interruption du service public. Avec l'égalité et la mutabilité, il forme les trois lois du service public dégagées par Louis Rolland."
+    },
+    {
+      "q": "Le principe qui permet à l'administration d'adapter le service public à l'évolution des besoins est :",
+      "o": [
+        "la continuité",
+        "l'égalité",
+        "la mutabilité",
+        "la neutralité"
+      ],
+      "r": 2,
+      "x": "La mutabilité, ou principe d'adaptation, autorise l'administration à modifier l'organisation du service selon l'intérêt général. Elle explique que les usagers n'aient pas de droit acquis au maintien d'un service en l'état."
+    },
+    {
+      "q": "Le principe qui interdit de traiter différemment des usagers placés dans une situation identique est :",
+      "o": [
+        "la continuité",
+        "l'égalité",
+        "la mutabilité",
+        "la spécialité"
+      ],
+      "r": 1,
+      "x": "Le principe d'égalité interdit toute discrimination entre usagers placés dans une situation comparable. Il fonde notamment l'égal accès aux emplois publics et aux prestations du service."
+    },
+    {
+      "q": "La décentralisation se définit comme :",
+      "o": [
+        "le transfert de compétences de l'État à des collectivités autonomes",
+        "la délégation de pouvoirs à des agents de l'État en province",
+        "la concentration des décisions au niveau central",
+        "la privatisation des services publics"
+      ],
+      "r": 0,
+      "x": "La décentralisation transfère des compétences à des collectivités dotées de la personnalité juridique et d'organes élus. La déconcentration, elle, ne fait que déplacer les décisions vers des agents qui restent soumis au pouvoir hiérarchique."
+    },
+    {
+      "q": "La déconcentration se distingue de la décentralisation en ce qu'elle :",
+      "o": [
+        "crée des collectivités autonomes",
+        "maintient les agents sous le pouvoir hiérarchique de l'État",
+        "supprime les échelons locaux",
+        "confie les services à des entreprises privées"
+      ],
+      "r": 1,
+      "x": "La déconcentration rapproche la décision du terrain tout en maintenant les agents sous l'autorité hiérarchique de l'État. Le préfet et le haut-commissaire en sont les figures typiques."
+    },
+    {
+      "q": "Le Code général des collectivités territoriales organise principalement :",
+      "o": [
+        "la fiscalité des entreprises privées",
+        "la répartition des compétences entre l'État et les collectivités",
+        "le statut des magistrats de l'ordre judiciaire",
+        "le régime des marchés publics de travaux"
+      ],
+      "r": 1,
+      "x": "Le Code général des collectivités territoriales répartit les compétences entre l'État et les collectivités décentralisées et fixe les règles de leur fonctionnement. Il sert de base aux décrets de transfert de compétences dans la culture, le tourisme, l'artisanat et les sports."
+    },
+    {
+      "q": "Le contrôle exercé par l'État sur les actes des collectivités territoriales porte le nom de :",
+      "o": [
+        "pouvoir hiérarchique",
+        "tutelle administrative",
+        "contrôle juridictionnel",
+        "contrôle budgétaire exclusif"
+      ],
+      "r": 1,
+      "x": "La tutelle administrative est un contrôle de légalité exercé sur les actes des collectivités décentralisées. Le pouvoir hiérarchique s'exerce, lui, sur les agents placés sous l'autorité directe d'un supérieur."
+    },
+    {
+      "q": "Le représentant de l'État au niveau du département au Burkina Faso est :",
+      "o": [
+        "le préfet",
+        "le gouverneur",
+        "le haut-commissaire",
+        "le maire"
+      ],
+      "r": 0,
+      "x": "Le préfet représente l'État au niveau du département, le haut-commissaire au niveau de la province et le gouverneur au niveau de la région. Le maire est, lui, l'élu exécutif de la commune."
+    },
+    {
+      "q": "Le représentant de l'État au niveau de la province au Burkina Faso est :",
+      "o": [
+        "le préfet",
+        "le secrétaire général",
+        "le gouverneur",
+        "le haut-commissaire"
+      ],
+      "r": 3,
+      "x": "Le haut-commissaire représente l'État au niveau de la province, échelon intermédiaire entre le département et la région. Le gouverneur exerce cette fonction au niveau régional."
+    },
+    {
+      "q": "L'organe délibérant de la commune au Burkina Faso est :",
+      "o": [
+        "le conseil municipal",
+        "le conseil régional",
+        "le bureau exécutif",
+        "la commission permanente"
+      ],
+      "r": 0,
+      "x": "Dans le fonctionnement normal d'une commune, le conseil municipal constitue l'organe délibérant et le maire l'organe exécutif. Au niveau régional, ces rôles reviennent au conseil régional et à son président."
+    },
+    {
+      "q": "Le budget de l'État est voté par :",
+      "o": [
+        "le Conseil des ministres",
+        "le ministère des Finances",
+        "la Cour des comptes",
+        "le Parlement"
+      ],
+      "r": 3,
+      "x": "Le budget de l'État est voté par le Parlement sous la forme d'une loi de finances. Son exécution est ensuite contrôlée par la Cour des comptes."
+    },
+    {
+      "q": "La loi qui modifie en cours d'année les prévisions de la loi de finances initiale est :",
+      "o": [
+        "la loi de règlement",
+        "la loi de finances rectificative",
+        "la loi organique budgétaire",
+        "la loi de programmation"
+      ],
+      "r": 1,
+      "x": "La loi de finances rectificative ajuste en cours d'exercice les prévisions de recettes et de dépenses. La loi de règlement constate, elle, a posteriori l'exécution du budget."
+    },
+    {
+      "q": "Le principe budgétaire selon lequel toutes les recettes et dépenses figurent dans un document unique est :",
+      "o": [
+        "l'annualité",
+        "l'universalité",
+        "l'unité",
+        "la spécialité"
+      ],
+      "r": 2,
+      "x": "Le principe d'unité impose la présentation de l'ensemble des recettes et dépenses dans un document unique. L'annualité impose, elle, un vote et une exécution sur une période de douze mois."
+    },
+    {
+      "q": "Le principe budgétaire qui impose le vote du budget pour une période de douze mois est :",
+      "o": [
+        "l'universalité",
+        "l'unité",
+        "l'annualité",
+        "la sincérité"
+      ],
+      "r": 2,
+      "x": "Le principe d'annualité impose l'autorisation budgétaire pour une période de douze mois. Il justifie le recours aux lois de finances rectificatives en cas d'ajustement en cours d'exercice."
+    },
+    {
+      "q": "L'agent chargé du maniement des deniers publics est :",
+      "o": [
+        "l'ordonnateur",
+        "l'inspecteur d'État",
+        "le contrôleur financier",
+        "le comptable public"
+      ],
+      "r": 3,
+      "x": "Le comptable public manie les deniers publics et exécute les encaissements et décaissements, tandis que l'ordonnateur prescrit la dépense. La séparation de ces deux fonctions constitue un principe fondamental de la comptabilité publique."
+    },
+    {
+      "q": "Le principe qui interdit à une même personne d'être à la fois ordonnateur et comptable est :",
+      "o": [
+        "la séparation des ordonnateurs et des comptables",
+        "l'unité de caisse des deniers publics",
+        "la spécialité des crédits budgétaires",
+        "l'équilibre général du budget de l'État"
+      ],
+      "r": 0,
+      "x": "La séparation des ordonnateurs et des comptables vise à prévenir les détournements en divisant les responsabilités. L'ordonnateur engage et liquide la dépense, le comptable seul la paie."
+    },
+    {
+      "q": "Le marché public conclu après mise en concurrence ouverte à tous les candidats est passé par :",
+      "o": [
+        "appel d'offres ouvert",
+        "entente directe",
+        "marché de gré à gré",
+        "régie administrative"
+      ],
+      "r": 0,
+      "x": "L'appel d'offres ouvert permet à tout candidat qualifié de soumissionner et constitue la procédure de droit commun. L'entente directe, ou gré à gré, demeure une procédure dérogatoire strictement encadrée."
+    },
+    {
+      "q": "Le Code du travail en vigueur au Burkina Faso est institué par la loi :",
+      "o": [
+        "n°081-2015/CNT du 24 novembre 2015",
+        "n°013-2026/ALP du 6 mai 2026",
+        "n°028-2008/AN du 13 mai 2008",
+        "n°024-2025/ALT du 30 décembre 2025"
+      ],
+      "r": 1,
+      "x": "La loi n°013-2026/ALP du 6 mai 2026, promulguée par le décret n°2026-0613/PF du 25 mai 2026, porte code du travail et compte 441 articles. Son article 440 abroge expressément la loi n°028-2008/AN du 13 mai 2008."
+    },
+    {
+      "q": "La durée légale hebdomadaire du travail au Burkina Faso est fixée à :",
+      "o": [
+        "35 heures",
+        "40 heures",
+        "44 heures",
+        "48 heures"
+      ],
+      "r": 1,
+      "x": "L'article 154 du code du travail de 2026 fixe la durée légale à quarante heures par semaine dans tous les établissements publics ou privés. Dans les exploitations agricoles, elle est de deux mille quatre cents heures par an."
+    },
+    {
+      "q": "Les heures supplémentaires sont les heures effectuées au-delà de :",
+      "o": [
+        "la durée légale journalière de six heures",
+        "la durée légale hebdomadaire de travail",
+        "la durée mensuelle fixée par l'employeur",
+        "la durée annuelle prévue au contrat"
+      ],
+      "r": 1,
+      "x": "L'article 155 du code du travail de 2026 qualifie d'heures supplémentaires celles effectuées au-delà de la durée légale hebdomadaire, soit quarante heures. Elles donnent lieu à une majoration de salaire fixée par voie réglementaire."
+    },
+    {
+      "q": "Le droit au congé payé s'acquiert au Burkina Faso à raison de :",
+      "o": [
+        "un jour et demi calendaire par mois de service effectif",
+        "deux jours et demi calendaires par mois de service effectif",
+        "trois jours et demi calendaires par mois de service effectif",
+        "quatre jours et demi calendaires par mois de service effectif"
+      ],
+      "r": 1,
+      "x": "L'article 180 du code du travail de 2026 fixe le congé payé à deux jours et demi calendaires par mois de service effectif, sauf dispositions plus favorables. Ce droit est augmenté de deux jours après vingt ans de services, de quatre après vingt-cinq ans et de six après trente ans."
+    },
+    {
+      "q": "Le contrat de travail à durée déterminée ne peut excéder au Burkina Faso :",
+      "o": [
+        "six mois renouvellement compris",
+        "un an renouvellement compris",
+        "deux ans renouvellement compris",
+        "Cinq ans renouvellement compris"
+      ],
+      "r": 2,
+      "x": "Le CDD est limité à deux ans. Le législateur autorise au maximum 2 renouvellements, à condition que la somme du contrat initial et de ses avenants de renouvellement ne dépasse jamais la limite globale des 24 mois (2 ans). Au-delà, la relation est requalifiée en CDI."
+    },
+    {
+      "q": "Les agents publics sont, au regard du Code du travail burkinabè :",
+      "o": [
+        "soumis intégralement au Code du travail",
+        "exclus du champ d'application du Code du travail",
+        "soumis au Code du travail pour les seuls congés",
+        "soumis au Code du travail en cas de litige"
+      ],
+      "r": 1,
+      "x": "L'article 2 du code du travail de 2026 exclut l'agent public et tout travailleur régi par une loi spécifique. Le même article inclut en revanche expressément les apprentis et les stagiaires."
+    },
+    {
+      "q": "La structure chargée de veiller au respect du droit du travail au Burkina Faso est :",
+      "o": [
+        "l'Inspection du travail et de la sécurité sociale",
+        "la Cour des comptes et ses chambres",
+        "le Conseil supérieur de la communication",
+        "l'Autorité supérieure de contrôle d'État"
+      ],
+      "r": 0,
+      "x": "L'Inspection du travail et de la sécurité sociale contrôle l'application de la législation sociale et intervient en cas de litige. Les tribunaux de grande instance statuant en matière sociale jugent, eux, les conflits individuels."
+    },
+    {
+      "q": "Le salaire minimum applicable au secteur non agricole au Burkina Faso est désigné par le sigle :",
+      "o": [
+        "SMAG",
+        "SMIG",
+        "SMIC",
+        "SMAP"
+      ],
+      "r": 1,
+      "x": "Le salaire minimum interprofessionnel garanti, ou SMIG, s'applique au secteur non agricole. Le SMAG désigne, lui, le salaire minimum agricole garanti."
+    },
+    {
+      "q": "L'instance tripartite compétente pour la révision des salaires minimums au Burkina Faso est :",
+      "o": [
+        "le Conseil économique et social",
+        "l'Assemblée législative",
+        "la Chambre de commerce",
+        "le Conseil national du travail"
+      ],
+      "r": 3,
+      "x": "Le Conseil national du travail réunit les représentants du gouvernement, des employeurs et des travailleurs. Ce tripartisme reproduit au niveau national le mode de fonctionnement de l'OIT."
+    },
+    {
+      "q": "L'organisme burkinabè chargé de la sécurité sociale des travailleurs du secteur privé est :",
+      "o": [
+        "la Caisse nationale de sécurité sociale (CNSS)",
+        "la Caisse autonome de retraite des fonctionnaires (CARFO)",
+        "la Caisse des dépôts et d'investissements (CDI)",
+        "le Fonds burkinabè de développement économique et social"
+      ],
+      "r": 0,
+      "x": "La CNSS couvre les travailleurs du secteur privé et verse notamment les prestations de maternité et les pensions. La CARFO assure, elle, la couverture des fonctionnaires."
+    },
+    {
+      "q": "L'affiliation à la Caisse nationale de sécurité sociale (CNSS) est :",
+      "o": [
+        "facultative pour les petites entreprises",
+        "limitée aux entreprises publiques",
+        "réservée aux cadres supérieurs",
+        "obligatoire pour tous les salariés"
+      ],
+      "r": 3,
+      "x": "Tous les salariés relevant du Code du travail doivent être affiliés à la CNSS, quelle que soit la taille de l'entreprise. Les cotisations sont partagées entre employeur et travailleur."
+    },
+    {
+      "q": "L'obligation de mettre en place un service de santé au travail ou d'y adhérer pèse sur :",
+      "o": [
+        "les seules entreprises de plus de vingt salariés",
+        "tout employeur installé au Burkina Faso",
+        "les seules entreprises de plus de cent salariés",
+        "les seules entreprises du secteur industriel"
+      ],
+      "r": 1,
+      "x": "L'article 280 du code du travail de 2026 impose à tout employeur installé au Burkina Faso de mettre en place un service de santé au travail ou d'y adhérer, sans condition d'effectif. Il peut s'affilier à un établissement public, recruter un spécialiste ou recourir à une structure privée agréée."
+    },
+    {
+      "q": "La procédure préalable obligatoire avant jugement d'un conflit individuel de travail est :",
+      "o": [
+        "l'expertise judiciaire",
+        "l'arbitrage international",
+        "la médiation pénale",
+        "la conciliation"
+      ],
+      "r": 3,
+      "x": "Une phase de conciliation est obligatoire avant tout jugement d'un litige individuel de travail. Elle vise à désengorger les juridictions en favorisant un règlement amiable."
+    },
+    {
+      "q": "La discrimination en matière d'emploi est, selon le Code du travail burkinabè :",
+      "o": [
+        "autorisée pour les emplois de direction",
+        "interdite",
+        "tolérée en période d'essai",
+        "laissée à l'appréciation de l'employeur"
+      ],
+      "r": 1,
+      "x": "Le Code du travail interdit toute distinction ou préférence fondée notamment sur la race, le sexe, la religion, l'opinion politique, le handicap ou la grossesse. Il impose l'égalité de chances et de traitement."
+    },
+    {
+      "q": "Le travail forcé est, au regard du Code du travail burkinabè :",
+      "o": [
+        "interdit",
+        "autorisé dans l'agriculture",
+        "autorisé pour les apprentis",
+        "librement imposable par l'employeur"
+      ],
+      "r": 0,
+      "x": "L'article 5 du Code du travail de 2026 prohibe le travail forcé, défini comme tout travail exigé sous la menace d'une peine sans consentement volontaire. Cette interdiction reprend les conventions fondamentales de l'OIT."
+    },
+    {
+      "q": "L'Organisation internationale du travail (OIT) repose sur un fonctionnement :",
+      "o": [
+        "bipartite, entre États et employeurs",
+        "purement intergouvernemental",
+        "tripartite, entre États, employeurs et travailleurs",
+        "confié à des experts indépendants"
+      ],
+      "r": 2,
+      "x": "L'OIT associe dans ses instances les gouvernements, les employeurs et les travailleurs, particularité unique dans le système des Nations unies. Elle a été créée en 1919 par le traité de Versailles."
+    },
+    {
+      "q": "Le siège de l'Organisation internationale du travail (OIT) se trouve à :",
+      "o": [
+        "Genève",
+        "New York",
+        "Paris",
+        "Rome"
+      ],
+      "r": 0,
+      "x": "L'OIT siège à Genève, comme l'OMS et l'OMC. Rome abrite, elle, la FAO et le Programme alimentaire mondial."
+    },
+    {
+      "q": "La période d'essai d'un cadre ou technicien au Burkina Faso est de :",
+      "o": [
+        "huit jours",
+        "un mois renouvelable une fois",
+        "trois mois renouvelables",
+        "six mois non renouvelables"
+      ],
+      "r": 2,
+      "x": "L'article 49 du code du travail de 2026 fixe l'essai à huit jours pour le travailleur payé à l'heure ou à la journée, un mois pour le travailleur autre que cadre et trois mois pour le cadre, l'agent de maîtrise et le technicien."
+    },
+    {
+      "q": "La rupture du contrat de travail à l'initiative de l'employeur porte le nom de :",
+      "o": [
+        "démission",
+        "licenciement",
+        "rupture conventionnelle",
+        "mise à la retraite d'office"
+      ],
+      "r": 1,
+      "x": "Le licenciement est la rupture décidée par l'employeur, qui doit reposer sur un motif légitime. La démission est, à l'inverse, la rupture à l'initiative du travailleur."
+    },
+    {
+      "q": "Le document remis obligatoirement au travailleur à la fin de son contrat est :",
+      "o": [
+        "le certificat de travail",
+        "le bulletin de paie annuel",
+        "l'attestation d'affiliation",
+        "le contrat d'apprentissage"
+      ],
+      "r": 0,
+      "x": "Le certificat de travail est remis au travailleur à l'expiration du contrat et mentionne la date d'entrée, celle de sortie et l'emploi occupé. Il ne doit comporter aucune appréciation défavorable."
+    },
+    {
+      "q": "La figure de style qui attribue des qualités humaines à une chose ou un animal est :",
+      "o": [
+        "la comparaison",
+        "la personnification",
+        "l'hyperbole",
+        "l'ellipse"
+      ],
+      "r": 1,
+      "x": "La personnification prête des traits humains à une réalité non humaine, comme dans « le vent gémissait ». La comparaison établit, elle, un rapprochement à l'aide d'un outil comme « tel » ou « comme »."
+    },
+    {
+      "q": "La figure qui consiste à exagérer volontairement pour frapper l'esprit est :",
+      "o": [
+        "la litote",
+        "l'euphémisme",
+        "l'hyperbole",
+        "la métonymie"
+      ],
+      "r": 2,
+      "x": "L'hyperbole amplifie la réalité, comme dans « mourir de soif ». L'euphémisme atténue au contraire une réalité désagréable."
+    },
+    {
+      "q": "La figure qui atténue une réalité pénible pour en adoucir l'expression est :",
+      "o": [
+        "l'anaphore",
+        "l'hyperbole",
+        "l'euphémisme",
+        "l'allitération"
+      ],
+      "r": 2,
+      "x": "L'euphémisme adoucit une réalité pénible, comme « il nous a quittés » pour dire « il est mort ». La litote, voisine, dit moins pour faire entendre davantage."
+    },
+    {
+      "q": "La répétition d'une même consonne dans une suite de mots s'appelle :",
+      "o": [
+        "l'assonance",
+        "l'allitération",
+        "l'anaphore",
+        "la gradation"
+      ],
+      "r": 1,
+      "x": "L'allitération répète une même consonne, comme dans « pour qui sont ces serpents qui sifflent sur nos têtes ». L'assonance répète, elle, une même voyelle."
+    },
+    {
+      "q": "La figure qui consiste à énumérer des termes d'intensité croissante est :",
+      "o": [
+        "l'antithèse",
+        "l'oxymore",
+        "la gradation",
+        "le chiasme"
+      ],
+      "r": 2,
+      "x": "La gradation ordonne les termes selon une intensité croissante ou décroissante, comme dans « va, cours, vole ». L'antithèse oppose, elle, deux idées contraires dans une même phrase."
+    },
+    {
+      "q": "La figure qui oppose deux idées contraires dans une même phrase est :",
+      "o": [
+        "l'antithèse",
+        "l'oxymore",
+        "la périphrase",
+        "l'anaphore"
+      ],
+      "r": 0,
+      "x": "L'antithèse oppose deux idées dans des propositions distinctes, comme « ici la vie, là la mort ». L'oxymore, plus resserré, réunit deux mots contradictoires dans le même groupe."
+    },
+    {
+      "q": "La figure qui remplace un mot par une expression qui le désigne indirectement est :",
+      "o": [
+        "la métaphore",
+        "la métonymie",
+        "la périphrase",
+        "la synecdoque"
+      ],
+      "r": 2,
+      "x": "La périphrase désigne une réalité par une expression détournée, comme « le roi des animaux » pour le lion. La métaphore établit, elle, une analogie sans outil de comparaison."
+    },
+    {
+      "q": "La figure qui désigne le tout par la partie, comme « une voile à l'horizon », est :",
+      "o": [
+        "la métaphore",
+        "l'hyperbole",
+        "la synecdoque",
+        "l'ellipse"
+      ],
+      "r": 2,
+      "x": "La synecdoque désigne le tout par la partie ou inversement, comme « une voile » pour un navire. Elle est considérée comme un cas particulier de métonymie."
+    },
+    {
+      "q": "La figure qui croise symétriquement deux groupes de mots est :",
+      "o": [
+        "le chiasme",
+        "l'anaphore",
+        "la gradation",
+        "l'oxymore"
+      ],
+      "r": 0,
+      "x": "Le chiasme dispose les termes en miroir selon un schéma AB-BA, comme dans « il faut manger pour vivre et non vivre pour manger ». Le parallélisme suit, lui, un ordre identique."
+    },
+    {
+      "q": "Un vers de dix syllabes en poésie française se nomme :",
+      "o": [
+        "l'octosyllabe",
+        "l'heptasyllabe",
+        "l'alexandrin",
+        "le décasyllabe"
+      ],
+      "r": 3,
+      "x": "Le décasyllabe compte dix syllabes, l'octosyllabe huit et l'alexandrin douze. Ces mètres pairs dominent la versification classique française."
+    },
+    {
+      "q": "Une strophe de quatre vers porte le nom de :",
+      "o": [
+        "tercet",
+        "quintil",
+        "quatrain",
+        "sizain"
+      ],
+      "r": 2,
+      "x": "Le quatrain compte quatre vers et le tercet trois. Le sonnet classique associe deux quatrains suivis de deux tercets."
+    },
+    {
+      "q": "Le poème à forme fixe composé de deux quatrains et de deux tercets est :",
+      "o": [
+        "la ballade",
+        "le sonnet",
+        "l'ode",
+        "le rondeau"
+      ],
+      "r": 1,
+      "x": "Le sonnet est une forme fixe de quatorze vers, répartis en deux quatrains et deux tercets. Il est introduit en France au XVIe siècle par les poètes de la Pléiade."
+    },
+    {
+      "q": "Le mode verbal employé pour exprimer un ordre est :",
+      "o": [
+        "l'indicatif",
+        "l'impératif",
+        "le conditionnel",
+        "le subjonctif"
+      ],
+      "r": 1,
+      "x": "L'impératif exprime l'ordre, le conseil ou la défense et ne comporte que trois personnes. Le subjonctif exprime, lui, le souhait, le doute ou la possibilité."
+    },
+    {
+      "q": "Le mode employé après une expression de doute ou de souhait est :",
+      "o": [
+        "l'indicatif",
+        "l'impératif",
+        "le subjonctif",
+        "le participe"
+      ],
+      "r": 2,
+      "x": "Le subjonctif s'emploie après les verbes exprimant le doute, le souhait ou la volonté, comme dans « je veux qu'il vienne ». L'indicatif est, lui, le mode du réel et du certain."
+    },
+    {
+      "q": "Dans la phrase « il travaille pour réussir », le groupe « pour réussir » exprime :",
+      "o": [
+        "la cause",
+        "le but",
+        "la conséquence",
+        "la condition"
+      ],
+      "r": 1,
+      "x": "Le groupe « pour réussir » exprime le but, introduit par la locution « pour ». La cause serait introduite par « parce que » et la conséquence par « si bien que »."
+    },
+    {
+      "q": "Dans la phrase « il est absent parce qu'il est malade », la subordonnée exprime :",
+      "o": [
+        "la comparaison",
+        "le but",
+        "l'opposition",
+        "la cause"
+      ],
+      "r": 3,
+      "x": "La conjonction « parce que » introduit une proposition subordonnée circonstancielle de cause. La conséquence serait introduite par « si bien que » ou « de sorte que »."
+    },
+    {
+      "q": "Le complément qui subit l'action exprimée par le verbe est :",
+      "o": [
+        "l'attribut du sujet",
+        "le complément circonstanciel",
+        "le complément d'agent",
+        "le complément d'objet direct"
+      ],
+      "r": 3,
+      "x": "Le complément d'objet direct subit l'action et se rattache au verbe sans préposition. Le complément d'agent apparaît, lui, dans les phrases à la voix passive."
+    },
+    {
+      "q": "À la voix passive, celui qui accomplit réellement l'action est exprimé par :",
+      "o": [
+        "le sujet grammatical",
+        "le complément d'objet second",
+        "l'attribut du sujet",
+        "le complément d'agent"
+      ],
+      "r": 3,
+      "x": "Le complément d'agent, introduit par « par » ou « de », désigne l'auteur réel de l'action à la voix passive. Le sujet grammatical subit alors l'action."
+    },
+    {
+      "q": "Le participe passé employé avec l'auxiliaire « être » s'accorde :",
+      "o": [
+        "avec le complément d'objet indirect",
+        "avec le complément d'objet direct placé avant",
+        "avec le sujet du verbe",
+        "avec le complément circonstanciel de lieu"
+      ],
+      "r": 2,
+      "x": "Avec l'auxiliaire « être », le participe passé s'accorde en genre et en nombre avec le sujet. Avec l'auxiliaire « avoir », il s'accorde avec le complément d'objet direct seulement s'il est placé avant le verbe."
+    },
+    {
+      "q": "Les mots « cent » et « vingt » prennent un « s » lorsqu'ils sont :",
+      "o": [
+        "multipliés et non suivis d'un autre nombre",
+        "employés comme adjectifs ordinaux",
+        "précédés d'un article",
+        "placés en début de phrase"
+      ],
+      "r": 0,
+      "x": "« Cent » et « vingt » s'accordent lorsqu'ils sont multipliés et terminent le nombre, comme dans « quatre-vingts » ou « deux cents ». Ils restent invariables s'ils sont suivis d'un autre nombre."
+    },
+    {
+      "q": "Un mot de même forme mais de sens différent selon le contexte est :",
+      "o": [
+        "un synonyme",
+        "un homonyme",
+        "un antonyme",
+        "un néologisme"
+      ],
+      "r": 1,
+      "x": "L'homonyme présente la même forme écrite ou sonore pour des sens différents, comme « la mine » de crayon et « la mine » d'or. Le néologisme désigne, lui, un mot nouvellement créé."
+    },
+    {
+      "q": "Un mot nouvellement créé ou récemment introduit dans la langue est :",
+      "o": [
+        "un archaïsme",
+        "un pléonasme",
+        "un barbarisme",
+        "un néologisme"
+      ],
+      "r": 3,
+      "x": "Le néologisme est un mot nouveau, tandis que l'archaïsme est un mot sorti de l'usage. Le barbarisme désigne, lui, une faute de forme lexicale."
+    },
+    {
+      "q": "La répétition inutile d'une même idée dans une expression est :",
+      "o": [
+        "un euphémisme",
+        "un oxymore",
+        "un pléonasme",
+        "un hiatus"
+      ],
+      "r": 2,
+      "x": "Le pléonasme répète inutilement une idée déjà exprimée, comme « monter en haut ». Il constitue une maladresse, sauf lorsqu'il est employé volontairement pour insister."
+    },
+    {
+      "q": "Le registre de langue employé dans un courrier administratif est :",
+      "o": [
+        "familier",
+        "courant",
+        "soutenu",
+        "argotique"
+      ],
+      "r": 2,
+      "x": "Le courrier administratif requiert un registre soutenu, marqué par un vocabulaire précis et des tournures formelles. Le registre courant convient, lui, aux échanges ordinaires."
+    },
+    {
+      "q": "Le résumé de texte exige de conserver :",
+      "o": [
+        "Les idées principales de l'auteur",
+        "Les exemples et chiffres illustratifs",
+        "Le jugement personnel du candidat",
+        "Les expressions littérales du texte"
+      ],
+      "r": 0,
+      "x": "Le résumé restitue fidèlement les idées clés et la structure du texte initial, sans ajouter de commentaires personnels ni recopier mot à mot les phrases de l'auteur."
+    },
+    {
+      "q": "La population active d'un pays comprend :",
+      "o": [
+        "l'ensemble des habitants",
+        "les seuls salariés déclarés",
+        "les actifs occupés et les chômeurs",
+        "les personnes de plus de soixante ans"
+      ],
+      "r": 2,
+      "x": "La population active regroupe les personnes qui occupent un emploi et celles qui en recherchent un. Les élèves, étudiants et retraités relèvent, eux, de la population inactive."
+    },
+    {
+      "q": "Le taux de natalité rapporte le nombre de naissances :",
+      "o": [
+        "au nombre de femmes en âge de procréer",
+        "à la population totale, pour mille habitants",
+        "au nombre de mariages célébrés",
+        "au nombre de décès enregistrés"
+      ],
+      "r": 1,
+      "x": "Le taux de natalité exprime le nombre de naissances pour mille habitants sur une année. L'indice synthétique de fécondité rapporte, lui, les naissances aux femmes en âge de procréer."
+    },
+    {
+      "q": "L'indice synthétique de fécondité mesure :",
+      "o": [
+        "le nombre moyen d'enfants par femme",
+        "le nombre de naissances pour mille habitants",
+        "l'âge moyen au premier mariage",
+        "l'écart entre naissances et décès"
+      ],
+      "r": 0,
+      "x": "L'indice synthétique de fécondité correspond au nombre moyen d'enfants qu'aurait une femme au cours de sa vie féconde. Le seuil de renouvellement des générations est d'environ 2,1 enfants par femme."
+    },
+    {
+      "q": "L'accroissement naturel d'une population résulte de la différence entre :",
+      "o": [
+        "les naissances et les décès",
+        "les entrées et les sorties migratoires",
+        "les actifs et les inactifs",
+        "les urbains et les ruraux"
+      ],
+      "r": 0,
+      "x": "L'accroissement naturel est le solde des naissances et des décès, distinct du solde migratoire. La somme des deux donne l'accroissement total de la population."
+    },
+    {
+      "q": "Le solde migratoire correspond à la différence entre :",
+      "o": [
+        "les naissances et les décès",
+        "les entrées et les sorties de migrants",
+        "la population urbaine et rurale",
+        "les actifs et les chômeurs"
+      ],
+      "r": 1,
+      "x": "Le solde migratoire est la différence entre les immigrants et les émigrants sur une période donnée. Il s'ajoute à l'accroissement naturel pour former la croissance démographique totale."
+    },
+    {
+      "q": "Une pyramide des âges à base très large traduit :",
+      "o": [
+        "une mortalité infantile nulle",
+        "une population vieillissante",
+        "un solde migratoire négatif",
+        "une population jeune et en forte croissance"
+      ],
+      "r": 3,
+      "x": "Une base large indique une forte proportion de jeunes, caractéristique des pays à fécondité élevée. Une pyramide resserrée à la base signale, elle, un vieillissement démographique."
+    },
+    {
+      "q": "Le recensement général de la population et de l'habitation est désigné par le sigle :",
+      "o": [
+        "EMC",
+        "EDS",
+        "INSD",
+        "RGPH"
+      ],
+      "r": 3,
+      "x": "Le RGPH désigne le recensement général de la population et de l'habitation, opération de dénombrement exhaustif. L'INSD est, lui, l'institut chargé de le conduire au Burkina Faso."
+    },
+    {
+      "q": "L'institution chargée de la production des statistiques officielles au Burkina Faso est :",
+      "o": [
+        "l'Institut national de la statistique et de la démographie (INSD)",
+        "la Caisse nationale de sécurité sociale (CNSS)",
+        "l'Autorité supérieure de contrôle d'État (ASCE-LC)",
+        "le Conseil national du travail (CNT)"
+      ],
+      "r": 0,
+      "x": "L'INSD produit les statistiques officielles et conduit les opérations de recensement au Burkina Faso. Ses données alimentent la planification économique et sociale du pays."
+    },
+    {
+      "q": "L'urbanisation désigne :",
+      "o": [
+        "l'extension des terres cultivées",
+        "la construction de logements sociaux",
+        "la croissance de la population des villes",
+        "la densification du réseau routier"
+      ],
+      "r": 2,
+      "x": "L'urbanisation est l'augmentation de la part de la population vivant en ville. Elle résulte à la fois de l'exode rural et de l'accroissement naturel urbain."
+    },
+    {
+      "q": "Une personne contrainte de quitter son lieu de vie sans franchir de frontière internationale est :",
+      "o": [
+        "un réfugié",
+        "une personne déplacée interne",
+        "un apatride",
+        "un demandeur d'asile"
+      ],
+      "r": 1,
+      "x": "La personne déplacée interne reste sur le territoire de son pays, contrairement au réfugié qui a franchi une frontière. Cette distinction commande des régimes de protection différents."
+    },
+    {
+      "q": "Une personne qu'aucun État ne reconnaît comme son ressortissant est :",
+      "o": [
+        "un réfugié",
+        "un apatride",
+        "un migrant économique",
+        "un expatrié"
+      ],
+      "r": 1,
+      "x": "L'apatride n'est reconnu comme ressortissant par aucun État, ce qui le prive d'accès à de nombreux droits. Des conventions internationales de 1954 et 1961 organisent sa protection."
+    },
+    {
+      "q": "La densité de population se calcule en rapportant le nombre d'habitants :",
+      "o": [
+        "à la superficie du territoire",
+        "au nombre de ménages",
+        "au produit intérieur brut",
+        "au nombre de logements"
+      ],
+      "r": 0,
+      "x": "La densité rapporte la population à la superficie et s'exprime en habitants par kilomètre carré. Elle permet de comparer l'occupation humaine de territoires de tailles différentes."
+    },
+    {
+      "q": "L'espérance de vie à la naissance augmente principalement grâce :",
+      "o": [
+        "à l'accroissement des migrations",
+        "à la hausse de la natalité",
+        "à la baisse de la mortalité, notamment infantile",
+        "à l'allongement de la durée du travail"
+      ],
+      "r": 2,
+      "x": "Les progrès de l'espérance de vie tiennent d'abord au recul de la mortalité, en particulier infantile. La vaccination, l'accès à l'eau potable et l'amélioration nutritionnelle en sont les principaux moteurs."
+    },
+    {
+      "q": "La transition démographique se caractérise par le passage :",
+      "o": [
+        "d'une économie agricole à une économie de services",
+        "d'une population urbaine à une population rurale",
+        "d'une natalité et d'une mortalité élevées à des niveaux bas",
+        "d'un solde migratoire positif à un solde négatif"
+      ],
+      "r": 2,
+      "x": "La transition démographique décrit le passage d'un régime à forte natalité et forte mortalité à un régime où les deux sont faibles. La baisse de la mortalité précédant celle de la natalité, la population croît fortement pendant la phase intermédiaire."
+    },
+    {
+      "q": "Le dividende démographique désigne :",
+      "o": [
+        "l'aide internationale aux pays peuplés",
+        "la redistribution des revenus aux familles nombreuses",
+        "la prime versée à la naissance d'un enfant",
+        "le gain économique lié à une forte proportion d'actifs"
+      ],
+      "r": 3,
+      "x": "Le dividende démographique est le bénéfice économique potentiel d'une population où les actifs sont proportionnellement nombreux. Il suppose que ces actifs trouvent un emploi productif, ce qui exige des investissements en éducation et en santé."
+    },
+    {
+      "q": "La formule « Je pense, donc je suis » figure dans un ouvrage de :",
+      "o": [
+        "Blaise Pascal",
+        "Emmanuel Kant",
+        "Baruch Spinoza",
+        "René Descartes"
+      ],
+      "r": 3,
+      "x": "René Descartes énonce le cogito dans le Discours de la méthode publié en 1637. Cette proposition constitue pour lui la première certitude résistant au doute méthodique."
+    },
+    {
+      "q": "La méthode philosophique consistant à douter de tout pour trouver une certitude est :",
+      "o": [
+        "la dialectique",
+        "le doute méthodique",
+        "l'empirisme",
+        "le scepticisme intégral"
+      ],
+      "r": 1,
+      "x": "Le doute méthodique est un doute provisoire et volontaire, instrument de recherche de la vérité chez Descartes. Le scepticisme intégral érige au contraire le doute en position définitive."
+    },
+    {
+      "q": "Le courant qui fait de l'expérience sensible la source de toute connaissance est :",
+      "o": [
+        "le rationalisme",
+        "le structuralisme",
+        "l'idéalisme",
+        "l'empirisme"
+      ],
+      "r": 3,
+      "x": "L'empirisme, illustré par Locke et Hume, fonde la connaissance sur l'expérience sensible. Le rationalisme, à l'inverse, privilégie la raison comme source de connaissance certaine."
+    },
+    {
+      "q": "Le philosophe qui compare l'esprit humain à une table rase à la naissance est :",
+      "o": [
+        "John Locke",
+        "René Descartes",
+        "Platon",
+        "Emmanuel Kant"
+      ],
+      "r": 0,
+      "x": "John Locke soutient que l'esprit est une table rase à la naissance, toute connaissance venant de l'expérience. Cette thèse s'oppose à celle des idées innées défendue par Descartes."
+    },
+    {
+      "q": "La maïeutique, art d'accoucher les esprits par le questionnement, est attribuée à :",
+      "o": [
+        "Zénon",
+        "Aristote",
+        "Épicure",
+        "Socrate"
+      ],
+      "r": 3,
+      "x": "Socrate pratique la maïeutique, méthode consistant à faire accoucher l'interlocuteur de ses propres idées par le questionnement. Il la présente comme l'héritage du métier de sage-femme exercé par sa mère."
+    },
+    {
+      "q": "La philosophie qui recherche le bonheur dans la modération des désirs est :",
+      "o": [
+        "le stoïcisme",
+        "le nihilisme",
+        "le cynisme",
+        "l'épicurisme"
+      ],
+      "r": 3,
+      "x": "L'épicurisme recherche le bonheur par la modération des désirs et l'absence de troubles. Le stoïcisme, lui, prône l'acceptation de ce qui ne dépend pas de nous."
+    },
+    {
+      "q": "La doctrine qui distingue ce qui dépend de nous de ce qui n'en dépend pas est :",
+      "o": [
+        "le stoïcisme",
+        "l'épicurisme",
+        "l'empirisme",
+        "le positivisme"
+      ],
+      "r": 0,
+      "x": "Le stoïcisme, illustré par Épictète et Marc Aurèle, invite à n'agir que sur ce qui dépend de nous. Cette distinction fonde la sagesse comme acceptation lucide du réel."
+    },
+    {
+      "q": "Le courant philosophique qui affirme que seule la connaissance scientifique est valable est :",
+      "o": [
+        "le scepticisme",
+        "l'existentialisme",
+        "le romantisme",
+        "le positivisme"
+      ],
+      "r": 3,
+      "x": "Le positivisme, formulé par Auguste Comte, considère que seule la connaissance fondée sur les faits observables est valable. Il inspire durablement les sciences sociales naissantes."
+    },
+    {
+      "q": "La dialectique hégélienne est souvent résumée par le mouvement :",
+      "o": [
+        "fait, loi, théorie",
+        "doute, certitude, vérité",
+        "cause, effet, conséquence",
+        "thèse, antithèse, synthèse"
+      ],
+      "r": 3,
+      "x": "La dialectique hégélienne progresse par dépassement des contradictions selon le mouvement thèse, antithèse, synthèse. Marx en reprendra la forme en l'appliquant aux rapports matériels de production."
+    },
+    {
+      "q": "L'ouvrage Les Damnés de la terre, consacré à la décolonisation, a pour auteur :",
+      "o": [
+        "Léopold Sédar Senghor",
+        "Cheikh Anta Diop",
+        "Frantz Fanon",
+        "Aimé Césaire"
+      ],
+      "r": 2,
+      "x": "Frantz Fanon publie Les Damnés de la terre en 1961, analyse de la violence coloniale et de la libération des peuples. Aimé Césaire est, lui, l'auteur du Discours sur le colonialisme paru en 1950."
+    },
+    {
+      "q": "Le livre sacré de l'islam est :",
+      "o": [
+        "la Torah",
+        "le Coran",
+        "l'Évangile",
+        "les Védas"
+      ],
+      "r": 1,
+      "x": "Le Coran est le livre sacré de l'islam, composé de cent quatorze sourates. La Torah est le texte fondateur du judaïsme et les Évangiles ceux du christianisme."
+    },
+    {
+      "q": "Le nombre de sourates que compte le Coran est de :",
+      "o": [
+        "99",
+        "114",
+        "124",
+        "150"
+      ],
+      "r": 1,
+      "x": "Le Coran comprend cent quatorze sourates, de longueurs très inégales. La première, al-Fatiha, est récitée dans chacune des prières quotidiennes."
+    },
+    {
+      "q": "Les piliers de l'islam sont au nombre de :",
+      "o": [
+        "trois",
+        "quatre",
+        "cinq",
+        "sept"
+      ],
+      "r": 2,
+      "x": "Les cinq piliers de l'islam sont la profession de foi, la prière, l'aumône légale, le jeûne du ramadan et le pèlerinage. Ce dernier n'est obligatoire que pour le croyant qui en a les moyens."
+    },
+    {
+      "q": "Le pèlerinage à La Mecque porte le nom de :",
+      "o": [
+        "chahada",
+        "zakat",
+        "sawm",
+        "hajj"
+      ],
+      "r": 3,
+      "x": "Le hajj est le pèlerinage à La Mecque, obligatoire une fois dans la vie pour le musulman qui en a les moyens. La zakat désigne l'aumône légale et le sawm le jeûne du ramadan."
+    },
+    {
+      "q": "Le mois de jeûne dans le calendrier musulman est :",
+      "o": [
+        "mouharram",
+        "rajab",
+        "ramadan",
+        "chaabane"
+      ],
+      "r": 2,
+      "x": "Le ramadan est le neuvième mois du calendrier musulman et le mois du jeûne obligatoire. Mouharram en est, lui, le premier mois."
+    },
+    {
+      "q": "Le calendrier musulman est fondé sur :",
+      "o": [
+        "le cycle solaire",
+        "le cycle des saisons agricoles",
+        "un cycle mixte de treize mois",
+        "le cycle lunaire"
+      ],
+      "r": 3,
+      "x": "Le calendrier musulman est lunaire et compte environ trois cent cinquante-quatre jours, soit onze de moins que le calendrier solaire. Les fêtes religieuses se décalent donc chaque année par rapport aux saisons."
+    },
+    {
+      "q": "L'événement qui marque le point de départ du calendrier musulman est :",
+      "o": [
+        "la naissance du Prophète",
+        "la prise de La Mecque",
+        "l'hégire, migration vers Médine",
+        "la révélation du Coran"
+      ],
+      "r": 2,
+      "x": "L'hégire, migration du Prophète de La Mecque vers Médine en 622, marque l'an premier du calendrier musulman. Les dates de ce calendrier sont suivies de la mention « de l'hégire »."
+    },
+    {
+      "q": "Le livre sacré du christianisme est :",
+      "o": [
+        "le Coran",
+        "l'Avesta",
+        "le Talmud",
+        "la Bible"
+      ],
+      "r": 3,
+      "x": "La Bible chrétienne réunit l'Ancien et le Nouveau Testament. Le Talmud est, lui, un recueil d'interprétations de la tradition juive."
+    },
+    {
+      "q": "La fête chrétienne qui commémore la résurrection du Christ est :",
+      "o": [
+        "Noël",
+        "la Pentecôte",
+        "Pâques",
+        "l'Ascension"
+      ],
+      "r": 2,
+      "x": "Pâques commémore la résurrection du Christ et constitue la principale fête du calendrier chrétien. Noël célèbre, lui, sa naissance."
+    },
+    {
+      "q": "Le chef de l'Église catholique porte le titre de :",
+      "o": [
+        "patriarche",
+        "pape",
+        "primat",
+        "métropolite"
+      ],
+      "r": 1,
+      "x": "Le pape, évêque de Rome, est le chef de l'Église catholique et réside au Vatican. Le patriarche est, lui, une dignité propre aux Églises orientales."
+    },
+    {
+      "q": "Le plus petit État souverain du monde, siège de l'Église catholique, est :",
+      "o": [
+        "Monaco",
+        "Saint-Marin",
+        "le Vatican",
+        "le Liechtenstein"
+      ],
+      "r": 2,
+      "x": "Le Vatican, avec environ quarante-quatre hectares, est le plus petit État souverain du monde. Il constitue le siège de l'Église catholique et la résidence du pape."
+    },
+    {
+      "q": "Les trois grandes religions monothéistes sont :",
+      "o": [
+        "le christianisme, l'hindouisme et l'islam",
+        "l'hindouisme, le bouddhisme et le taoïsme",
+        "le judaïsme, le christianisme et l'islam",
+        "le judaïsme, le bouddhisme et l'animisme"
+      ],
+      "r": 2,
+      "x": "Le judaïsme, le christianisme et l'islam sont les trois religions monothéistes issues de la tradition abrahamique. L'hindouisme est polythéiste et le bouddhisme ne repose pas sur la croyance en un dieu créateur."
+    },
+    {
+      "q": "La religion dont le fondateur est Siddhartha Gautama est :",
+      "o": [
+        "l'hindouisme",
+        "le bouddhisme",
+        "le taoïsme",
+        "le shintoïsme"
+      ],
+      "r": 1,
+      "x": "Le bouddhisme est fondé par Siddhartha Gautama, dit le Bouddha, au nord de l'Inde vers le VIe siècle avant notre ère. L'hindouisme n'a, lui, aucun fondateur identifié."
+    },
+    {
+      "q": "Les religions traditionnelles africaines se caractérisent notamment par :",
+      "o": [
+        "Le culte des ancêtres et de la nature",
+        "L'existence d'un livre sacré unique",
+        "Un clergé hiérarchisé à l'échelle globale",
+        "Le refus absolu de toute pratique rituelle"
+      ],
+      "r": 0,
+      "x": "Les religions traditionnelles africaines reposent sur le culte des ancêtres, les esprits de la nature et la médiation communautaire. Leur transmission est orale et sans texte sacré centralisé."
+    },
+    {
+      "q": "La liberté de religion au Burkina Faso relève :",
+      "o": [
+        "d'un cadre juridique garantissant la laïcité de l'État",
+        "d'une religion officielle inscrite dans la Constitution",
+        "d'une interdiction des cultes non traditionnels",
+        "d'une compétence exclusive des collectivités"
+      ],
+      "r": 0,
+      "x": "Le Burkina Faso est un État laïc garantissant la liberté de conscience et de culte. Cette laïcité s'accompagne d'une tradition reconnue de cohabitation entre musulmans, chrétiens et adeptes des religions traditionnelles."
+    },
+    {
+      "q": "Un ordinateur se compose essentiellement :",
+      "o": [
+        "du processeur et de la souris",
+        "du clavier et de l'écran seulement",
+        "du disque dur et de l'imprimante",
+        "du matériel et du logiciel"
+      ],
+      "r": 3,
+      "x": "L'ordinateur associe le matériel, ou hardware, et le logiciel, ou software. Le matériel désigne les composants physiques et le logiciel les programmes qui les pilotent."
+    },
+    {
+      "q": "Le composant qui exécute les instructions d'un programme est :",
+      "o": [
+        "le disque dur",
+        "l'alimentation",
+        "la carte graphique",
+        "le processeur"
+      ],
+      "r": 3,
+      "x": "Le processeur, ou unité centrale de traitement, exécute les instructions des programmes. Le disque dur assure, lui, le stockage permanent des données."
+    },
+    {
+      "q": "La mémoire qui perd son contenu à l'extinction de l'ordinateur est :",
+      "o": [
+        "la clé USB",
+        "le disque dur",
+        "la mémoire morte",
+        "la mémoire vive"
+      ],
+      "r": 3,
+      "x": "La mémoire vive, ou RAM, est volatile et perd son contenu à l'extinction de la machine. La mémoire morte, ou ROM, conserve au contraire les informations en permanence."
+    },
+    {
+      "q": "Le programme qui gère les ressources de l'ordinateur et permet d'exécuter les applications est :",
+      "o": [
+        "le navigateur",
+        "le traitement de texte",
+        "le système d'exploitation",
+        "l'antivirus"
+      ],
+      "r": 2,
+      "x": "Le système d'exploitation gère les ressources matérielles et sert d'interface entre l'utilisateur et la machine. Windows, Linux et Android en sont des exemples courants."
+    },
+    {
+      "q": "Le logiciel utilisé pour consulter des pages web est :",
+      "o": [
+        "le navigateur",
+        "le tableur",
+        "le compilateur",
+        "le pare-feu"
+      ],
+      "r": 0,
+      "x": "Le navigateur permet d'afficher les pages web et d'y naviguer. Le tableur sert, lui, au traitement de données sous forme de feuilles de calcul."
+    },
+    {
+      "q": "Le logiciel destiné à réaliser des calculs sur des données organisées en lignes et colonnes est :",
+      "o": [
+        "le traitement de texte",
+        "le tableur",
+        "le logiciel de présentation",
+        "la base de données"
+      ],
+      "r": 1,
+      "x": "Le tableur organise les données en lignes et colonnes et permet d'y appliquer des formules de calcul. Le traitement de texte est, lui, destiné à la rédaction de documents."
+    },
+    {
+      "q": "L'adresse qui identifie de façon unique une page sur le web est :",
+      "o": [
+        "le numéro IMEI",
+        "l'adresse électronique",
+        "le code postal numérique",
+        "l'adresse URL"
+      ],
+      "r": 3,
+      "x": "L'adresse URL localise de manière unique une ressource sur le web. L'adresse électronique sert, elle, à l'acheminement des courriels."
+    },
+    {
+      "q": "Le sigle qui désigne le réseau local limité à une organisation est :",
+      "o": [
+        "Internet",
+        "intranet",
+        "extranet",
+        "haut débit"
+      ],
+      "r": 1,
+      "x": "L'intranet est un réseau interne réservé aux membres d'une organisation. L'extranet en étend, lui, l'accès à des partenaires extérieurs identifiés."
+    },
+    {
+      "q": "La pratique consistant à soutirer des données personnelles par de faux messages est :",
+      "o": [
+        "l'indexation",
+        "le formatage",
+        "la compression",
+        "l'hameçonnage"
+      ],
+      "r": 3,
+      "x": "L'hameçonnage, ou phishing, consiste à usurper l'identité d'un organisme pour obtenir mots de passe ou coordonnées bancaires. La vigilance sur l'expéditeur et les liens constitue la première protection."
+    },
+    {
+      "q": "Le dispositif qui filtre les connexions entrantes et sortantes d'un réseau est :",
+      "o": [
+        "le moteur de recherche",
+        "le routeur seul",
+        "le pare-feu",
+        "le serveur d'impression"
+      ],
+      "r": 2,
+      "x": "Le pare-feu filtre le trafic réseau selon des règles de sécurité définies. Il complète l'antivirus, qui détecte, lui, les programmes malveillants présents sur la machine."
+    },
+    {
+      "q": "La sauvegarde régulière des données permet principalement de se prémunir contre :",
+      "o": [
+        "la perte de données",
+        "la lenteur du processeur",
+        "l'usure de l'écran",
+        "la surcharge du réseau"
+      ],
+      "r": 0,
+      "x": "La sauvegarde protège contre la perte de données due à une panne, un vol ou une attaque informatique. La règle courante recommande de conserver plusieurs copies sur des supports distincts."
+    },
+    {
+      "q": "Le stockage de données sur des serveurs distants accessibles par Internet est appelé :",
+      "o": [
+        "informatique en nuage",
+        "réseau local",
+        "mémoire cache",
+        "archivage physique"
+      ],
+      "r": 0,
+      "x": "L'informatique en nuage, ou cloud, héberge données et applications sur des serveurs distants accessibles en ligne. Elle réduit les besoins en matériel local mais suppose une connexion fiable."
+    },
+    {
+      "q": "Le nombre de valeurs différentes que peut coder un octet est de :",
+      "o": [
+        "8",
+        "64",
+        "128",
+        "256"
+      ],
+      "r": 3,
+      "x": "Un octet, composé de huit bits, permet de coder deux cent cinquante-six valeurs différentes. Chaque bit supplémentaire double le nombre de combinaisons possibles."
+    },
+    {
+      "q": "Le système de numération utilisé par les ordinateurs est :",
+      "o": [
+        "le binaire",
+        "le décimal",
+        "le romain",
+        "le sexagésimal"
+      ],
+      "r": 0,
+      "x": "Le système binaire n'utilise que les chiffres 0 et 1, correspondant aux deux états électriques des circuits. Le système hexadécimal sert, lui, à écrire de façon compacte les valeurs binaires."
+    },
+    {
+      "q": "La dématérialisation des procédures administratives désigne :",
+      "o": [
+        "leur remplacement par des démarches en ligne",
+        "la suppression des services publics",
+        "la privatisation de l'administration",
+        "le transfert des compétences aux communes"
+      ],
+      "r": 0,
+      "x": "La dématérialisation remplace les formalités papier par des démarches en ligne, comme les plateformes de casier judiciaire ou de certificat de nationalité. Elle vise à réduire les délais et les déplacements des usagers."
+    },
+    {
+      "q": "Le sigle TIC désigne :",
+      "o": [
+        "les traitements informatiques centralisés",
+        "les techniques d'inspection comptable",
+        "les tarifs intérieurs de consommation",
+        "les technologies de l'information et de la communication"
+      ],
+      "r": 3,
+      "x": "Les technologies de l'information et de la communication regroupent l'informatique, les télécommunications et l'audiovisuel numérique. Leur développement soutient la modernisation de l'administration."
+    },
+    {
+      "q": "L'identifiant unique électronique vise principalement à :",
+      "o": [
+        "recenser les seules entreprises",
+        "remplacer la carte bancaire",
+        "supprimer l'état civil traditionnel",
+        "doter chaque personne d'un numéro d'identification fiable"
+      ],
+      "r": 3,
+      "x": "L'identifiant unique électronique attribue à chaque personne un numéro fiable facilitant l'accès aux services publics. Il s'inscrit au Burkina Faso dans le cadre du projet régional WURI, soutenu par la Banque mondiale."
+    },
+    {
+      "q": "La protection des données personnelles au Burkina Faso relève de :",
+      "o": [
+        "la Commission de l'informatique et des libertés (CIL)",
+        "l'Autorité supérieure de contrôle d'État (ASCE-LC)",
+        "le Conseil supérieur de la communication (CSC)",
+        "l'Institut national de la statistique (INSD)"
+      ],
+      "r": 0,
+      "x": "La Commission de l'informatique et des libertés veille à la protection des données personnelles des citoyens. Le Conseil supérieur de la communication régule, lui, les médias."
+    },
+    {
+      "q": "Le commerce de biens et services réalisé par Internet porte le nom de :",
+      "o": [
+        "commerce électronique",
+        "commerce équitable",
+        "commerce de gros",
+        "troc numérique"
+      ],
+      "r": 0,
+      "x": "Le commerce électronique désigne les transactions réalisées en ligne, en pleine croissance en Afrique de l'Ouest. Il s'appuie notamment sur les solutions de paiement par téléphone mobile."
+    },
+    {
+      "q": "Le service financier permettant d'envoyer de l'argent depuis un téléphone portable est :",
+      "o": [
+        "le chèque certifié",
+        "le virement SWIFT",
+        "le mobile money",
+        "le crédit documentaire"
+      ],
+      "r": 2,
+      "x": "Le mobile money permet des transferts et paiements depuis un téléphone, sans compte bancaire classique. Il a fortement accéléré l'inclusion financière en Afrique subsaharienne."
+    },
+    {
+      "q": "L'apprentissage automatique est une branche :",
+      "o": [
+        "de la linguistique historique",
+        "de la comptabilité publique",
+        "de la mécanique des fluides",
+        "de l'intelligence artificielle"
+      ],
+      "r": 3,
+      "x": "L'apprentissage automatique permet à un système d'améliorer ses performances à partir de données, sans être explicitement programmé pour chaque cas. Il constitue aujourd'hui la principale approche de l'intelligence artificielle."
+    },
+    {
+      "q": "Le sigle GPS désigne un système :",
+      "o": [
+        "de positionnement par satellite",
+        "de gestion des paiements sécurisés",
+        "de protection des serveurs",
+        "de gestion du personnel"
+      ],
+      "r": 0,
+      "x": "Le GPS est un système de positionnement par satellite permettant de déterminer une localisation précise. Il est largement utilisé en cartographie, en agriculture et dans les transports."
+    },
+    {
+      "q": "La fracture numérique désigne :",
+      "o": [
+        "l'inégalité d'accès aux technologies numériques",
+        "la panne généralisée d'un réseau",
+        "la division d'un fichier en plusieurs parties",
+        "la rupture d'un câble sous-marin"
+      ],
+      "r": 0,
+      "x": "La fracture numérique désigne les inégalités d'accès aux équipements, à la connexion et aux compétences numériques. Elle oppose notamment zones urbaines et rurales au Burkina Faso."
+    },
+    {
+      "q": "Un mot de passe robuste se caractérise par :",
+      "o": [
+        "Son partage avec des collègues proches",
+        "Son lien avec la date de naissance",
+        "Sa simplicité absolue de mémorisation",
+        "Sa longueur et sa variété de caractères"
+      ],
+      "r": 3,
+      "x": "Un mot de passe robuste combine longueur suffisante, majuscules, minuscules, chiffres et caractères spéciaux. Il ne doit jamais être partagé ni réutilisé sur plusieurs services."
+    },
+    {
+      "q": "Le fichier joint à un courriel peut présenter un risque lorsqu'il :",
+      "o": [
+        "provient d'un expéditeur inconnu",
+        "dépasse une page",
+        "est au format texte",
+        "contient des images"
+      ],
+      "r": 0,
+      "x": "Une pièce jointe d'origine inconnue peut véhiculer un programme malveillant. La vérification de l'expéditeur et l'analyse antivirus constituent les précautions élémentaires."
+    },
+    {
+      "q": "L'État africain ayant résisté à la colonisation européenne est :",
+      "o": [
+        "le Ghana",
+        "l'Éthiopie",
+        "le Kenya",
+        "l'Angola"
+      ],
+      "r": 1,
+      "x": "L'Éthiopie conserve son indépendance après sa victoire d'Adoua en 1896 contre l'Italie, malgré une occupation temporaire entre 1936 et 1941. Le Liberia est l'autre État africain à n'avoir pas connu de colonisation européenne classique."
+    },
+    {
+      "q": "La bataille d'Adoua, remportée en 1896 par l'Éthiopie, l'opposait :",
+      "o": [
+        "à la France",
+        "à l'Italie",
+        "au Royaume-Uni",
+        "au Portugal"
+      ],
+      "r": 1,
+      "x": "La victoire éthiopienne d'Adoua en 1896 met en échec les ambitions coloniales italiennes. Elle devient un symbole de résistance africaine à la conquête européenne."
+    },
+    {
+      "q": "Lequel de ces pays a été le premier à accéder à l'indépendance ?",
+      "o": [
+        "le Sénégal",
+        "la Guinée",
+        "le Ghana",
+        "le Nigeria"
+      ],
+      "r": 2,
+      "x": "Le Ghana accède à l'indépendance en 1957 sous la conduite de Kwame Nkrumah, ouvrant la voie aux indépendances africaines. La Guinée suivra en 1958 après avoir voté non au référendum proposé par la France."
+    },
+    {
+      "q": "Le pays africain qui a voté non au référendum de 1958 proposé par la France est :",
+      "o": [
+        "le Sénégal",
+        "le Niger",
+        "le Mali",
+        "la Guinée"
+      ],
+      "r": 3,
+      "x": "La Guinée, conduite par Sékou Touré, rejette la Communauté française lors du référendum du 28 septembre 1958 et accède immédiatement à l'indépendance. Les autres territoires, dont la Haute-Volta, votent oui."
+    },
+    {
+      "q": "Le premier président du Ghana indépendant, figure majeure du panafricanisme, est :",
+      "o": [
+        "Kwame Nkrumah",
+        "Sékou Touré",
+        "Jomo Kenyatta",
+        "Julius Nyerere"
+      ],
+      "r": 0,
+      "x": "Kwame Nkrumah dirige le Ghana à partir de 1957 et défend l'idée d'États-Unis d'Afrique lors de la création de l'OUA. Il représente le courant fédéraliste, opposé à la vision d'une Afrique des États."
+    },
+    {
+      "q": "Lors de la création de l'Organisation de l'unité africaine, la thèse fédéraliste était portée par :",
+      "o": [
+        "Haïlé Sélassié",
+        "Léopold Sédar Senghor",
+        "Félix Houphouët-Boigny",
+        "Kwame Nkrumah"
+      ],
+      "r": 3,
+      "x": "Kwame Nkrumah défend la constitution immédiate d'une fédération continentale, tandis que Senghor et Houphouët-Boigny soutiennent une coopération entre États souverains. C'est cette seconde thèse qui l'emporte en 1963."
+    },
+    {
+      "q": "Le régime de ségrégation raciale institutionnalisé en Afrique du Sud portait le nom :",
+      "o": [
+        "d'apartheid",
+        "de ségrégation",
+        "de colonat",
+        "d'indigénat"
+      ],
+      "r": 0,
+      "x": "L'apartheid, institué en 1948, organise la séparation raciale en Afrique du Sud jusqu'au début des années 1990. Le régime de l'indigénat désignait, lui, le statut juridique inférieur imposé aux colonisés dans l'empire français."
+    },
+    {
+      "q": "Le premier président noir d'Afrique du Sud, élu en 1994, est :",
+      "o": [
+        "Nelson Mandela",
+        "Desmond Tutu",
+        "Thabo Mbeki",
+        "Oliver Tambo"
+      ],
+      "r": 0,
+      "x": "Nelson Mandela est élu président en 1994 lors des premières élections multiraciales d'Afrique du Sud. Desmond Tutu, archevêque, présidera la Commission vérité et réconciliation."
+    },
+    {
+      "q": "Le régime juridique qui imposait un statut inférieur aux colonisés dans l'empire français était :",
+      "o": [
+        "le code noir",
+        "l'indigénat",
+        "la traite",
+        "le protectorat"
+      ],
+      "r": 1,
+      "x": "Le régime de l'indigénat soumettait les colonisés à des sanctions administratives et au travail forcé. Il est aboli en 1946, année où sont également supprimés le travail forcé et les prestations obligatoires."
+    },
+    {
+      "q": "Le travail forcé est aboli dans les colonies françaises par la loi de 1946 dite :",
+      "o": [
+        "loi-cadre",
+        "loi Lamine Guèye",
+        "loi Defferre",
+        "loi Houphouët-Boigny"
+      ],
+      "r": 3,
+      "x": "La loi Houphouët-Boigny du 11 avril 1946 abolit le travail forcé dans les territoires d'outre-mer. La loi Lamine Guèye de la même année étend, elle, la citoyenneté française aux ressortissants des colonies."
+    },
+    {
+      "q": "La loi-cadre de 1956 qui accorde l'autonomie interne aux territoires d'outre-mer est dite :",
+      "o": [
+        "loi Lamine Guèye",
+        "loi Houphouët-Boigny",
+        "loi Defferre",
+        "loi Blum-Viollette"
+      ],
+      "r": 2,
+      "x": "La loi-cadre Defferre de 1956 instaure des assemblées territoriales dotées de pouvoirs élargis et le suffrage universel. Elle prépare les indépendances africaines de 1960."
+    },
+    {
+      "q": "La Communauté française à laquelle adhère la Haute-Volta en 1958 est créée par :",
+      "o": [
+        "la Charte des Nations unies",
+        "la loi-cadre Defferre",
+        "le traité de Rome",
+        "la Constitution de la Ve République"
+      ],
+      "r": 3,
+      "x": "La Communauté française est instaurée par la Constitution de 1958, soumise à référendum dans les territoires d'outre-mer. La Haute-Volta y adhère et devient république autonome le 11 décembre 1958."
+    },
+    {
+      "q": "L'organisation fondée en 1961 et regroupant les pays refusant l'alignement sur les deux blocs est :",
+      "o": [
+        "le Commonwealth",
+        "le pacte de Varsovie",
+        "l'Alliance atlantique",
+        "le mouvement des non-alignés"
+      ],
+      "r": 3,
+      "x": "Le mouvement des non-alignés est formellement créé à Belgrade en 1961, dans le prolongement de la conférence de Bandung de 1955. Il rassemble des États refusant l'alignement sur les blocs américain ou soviétique."
+    },
+    {
+      "q": "Le terme « tiers-monde », forgé en 1952, désignait à l'origine :",
+      "o": [
+        "Les pays socialistes d'Europe de l'Est",
+        "Les colonies britanniques d'Afrique et d'Asie",
+        "Les États exportateurs de pétrole du Golfe",
+        "Les pays non alignés sur les deux blocs"
+      ],
+      "r": 3,
+      "x": "Forgé par l'économiste Alfred Sauvy en 1952 par analogie avec le Tiers État, ce terme désignait les pays n'appartenant ni au bloc capitaliste occidental (Premier monde), ni au bloc communiste soviétique (Second monde)."
+    },
+    {
+      "q": "La traite atlantique a principalement déporté des populations africaines vers :",
+      "o": [
+        "l'Europe du Nord",
+        "l'Asie centrale",
+        "les Amériques",
+        "l'Océanie"
+      ],
+      "r": 2,
+      "x": "La traite atlantique déporte pendant près de quatre siècles des millions d'Africains vers les plantations des Amériques. La traite transsaharienne, plus ancienne, se dirigeait vers l'Afrique du Nord et le Moyen-Orient."
+    },
+    {
+      "q": "La conférence de Berlin de 1884 et 1885 a été convoquée par :",
+      "o": [
+        "le chancelier Bismarck",
+        "la reine Victoria",
+        "le roi Léopold II",
+        "le président Sadi Carnot"
+      ],
+      "r": 0,
+      "x": "Le chancelier allemand Otto von Bismarck convoque la conférence qui réunit quatorze puissances. Le roi Léopold II en tire profit en obtenant la reconnaissance de son autorité sur le bassin du Congo."
+    },
+    {
+      "q": "L'Organisation des Nations unies (ONU) a été créée en :",
+      "o": [
+        "1919",
+        "1939",
+        "1945",
+        "1948"
+      ],
+      "r": 2,
+      "x": "L'ONU est créée en 1945, à la fin de la Seconde Guerre mondiale, pour remplacer la Société des Nations. Elle compte cent quatre-vingt-treize (193) États membres en 2026."
+    },
+    {
+      "q": "L'organisation internationale créée en 1919 et remplacée par l'ONU est :",
+      "o": [
+        "la Société des Nations",
+        "la Sainte-Alliance",
+        "le Congrès de Vienne",
+        "le Concert européen"
+      ],
+      "r": 0,
+      "x": "La Société des Nations, créée par le traité de Versailles en 1919, échoue à empêcher la Seconde Guerre mondiale. Elle est remplacée par l'Organisation des Nations unies en 1945."
+    },
+    {
+      "q": "La décolonisation de l'Afrique s'est principalement déroulée :",
+      "o": [
+        "dans les années 1920",
+        "dans les années 1940",
+        "dans les années 1960",
+        "dans les années 1990"
+      ],
+      "r": 2,
+      "x": "La décolonisation africaine culmine en 1960, année où dix-sept États accèdent à l'indépendance. Les colonies portugaises ne seront libérées qu'au milieu des années 1970."
+    },
+    {
+      "q": "Le Sahel désigne une zone de transition située entre :",
+      "o": [
+        "le désert du Kalahari et le Cap",
+        "la forêt équatoriale et l'océan",
+        "les Alpes et la Méditerranée",
+        "le Sahara et la savane soudanienne"
+      ],
+      "r": 3,
+      "x": "Le Sahel est la bande de transition entre le Sahara au nord et les savanes soudaniennes au sud. Son nom vient de l'arabe sahil, qui signifie rivage."
+    },
+    {
+      "q": "La formule chimique de l'eau est :",
+      "o": [
+        "CO2",
+        "O2",
+        "H2O",
+        "NaCl"
+      ],
+      "r": 2,
+      "x": "L'eau a pour formule H2O, soit deux atomes d'hydrogène liés à un atome d'oxygène. NaCl désigne, lui, le chlorure de sodium, ou sel de cuisine."
+    },
+    {
+      "q": "Le composant de l'air indispensable à la respiration est :",
+      "o": [
+        "le diazote",
+        "l'argon",
+        "le dioxygène",
+        "l'hélium"
+      ],
+      "r": 2,
+      "x": "Le dioxygène, qui représente environ 21 % de l'air, est indispensable à la respiration cellulaire. Le diazote, majoritaire avec 78 %, n'intervient pas dans la respiration."
+    },
+    {
+      "q": "La transformation de l'eau liquide en vapeur s'appelle :",
+      "o": [
+        "la condensation",
+        "la vaporisation",
+        "la solidification",
+        "la fusion"
+      ],
+      "r": 1,
+      "x": "La vaporisation fait passer l'eau de l'état liquide à l'état gazeux, par évaporation ou ébullition. La condensation opère la transformation inverse."
+    },
+    {
+      "q": "L'unité de mesure de l'intensité du courant électrique est :",
+      "o": [
+        "le volt",
+        "l'ohm",
+        "l'ampère",
+        "le watt"
+      ],
+      "r": 2,
+      "x": "L'ampère mesure l'intensité du courant, le volt la tension et l'ohm la résistance. Le watt mesure, lui, la puissance électrique."
+    },
+    {
+      "q": "La loi d'Ohm relie la tension, l'intensité et :",
+      "o": [
+        "la résistance",
+        "la puissance",
+        "la fréquence",
+        "la capacité"
+      ],
+      "r": 0,
+      "x": "La loi d'Ohm énonce que la tension est égale au produit de la résistance par l'intensité. Elle constitue la relation fondamentale des circuits électriques."
+    },
+    {
+      "q": "L'énergie produite par un barrage hydroélectrique est qualifiée de :",
+      "o": [
+        "fossile",
+        "renouvelable",
+        "nucléaire",
+        "thermique classique"
+      ],
+      "r": 1,
+      "x": "L'énergie hydroélectrique est renouvelable, produite par la force de l'eau en mouvement. Au Burkina Faso, les barrages de Bagré et de Kompienga y contribuent."
+    },
+    {
+      "q": "La photosynthèse se déroule principalement dans :",
+      "o": [
+        "les racines",
+        "les fruits",
+        "les fleurs",
+        "les feuilles"
+      ],
+      "r": 3,
+      "x": "La photosynthèse se déroule dans les feuilles, où la chlorophylle capte l'énergie lumineuse. Les racines assurent, elles, l'absorption de l'eau et des sels minéraux."
+    },
+    {
+      "q": "Le pigment vert responsable de la photosynthèse est :",
+      "o": [
+        "la kératine",
+        "la mélanine",
+        "l'hémoglobine",
+        "la chlorophylle"
+      ],
+      "r": 3,
+      "x": "La chlorophylle capte l'énergie lumineuse nécessaire à la photosynthèse. L'hémoglobine est, elle, le pigment du sang qui transporte l'oxygène."
+    },
+    {
+      "q": "La protéine du sang qui transporte l'oxygène est :",
+      "o": [
+        "l'insuline",
+        "l'hémoglobine",
+        "l'albumine",
+        "la kératine"
+      ],
+      "r": 1,
+      "x": "L'hémoglobine, contenue dans les globules rouges, fixe et transporte l'oxygène des poumons vers les tissus. Sa diminution provoque l'anémie."
+    },
+    {
+      "q": "La diminution du taux d'hémoglobine dans le sang provoque :",
+      "o": [
+        "l'anémie",
+        "le diabète",
+        "l'hypertension",
+        "l'asthme"
+      ],
+      "r": 0,
+      "x": "L'anémie correspond à une diminution de la concentration d'hémoglobine dans le sang. Elle peut avoir plusieurs causes, notamment une carence en fer, des pertes de sang ou certaines maladies."
+    },
+    {
+      "q": "La carence en fer se prévient principalement par :",
+      "o": [
+        "l'augmentation de la part de sucres rapides",
+        "l'exposition quotidienne au soleil levant",
+        "la réduction de l'apport quotidien en eau",
+        "une alimentation riche en fer et la supplémentation"
+      ],
+      "r": 3,
+      "x": "La prévention de la carence en fer repose sur une alimentation adaptée et, chez les groupes à risque, sur une supplémentation. Cette carence constitue la première cause d'anémie dans le monde."
+    },
+    {
+      "q": "Le diabète se caractérise par un excès dans le sang :",
+      "o": [
+        "de fer",
+        "de cholestérol",
+        "de glucose",
+        "de calcium"
+      ],
+      "r": 2,
+      "x": "Le diabète se caractérise par une hyperglycémie chronique, liée à un défaut de production ou d'action de l'insuline. L'insuline est sécrétée par le pancréas."
+    },
+    {
+      "q": "Le parasite responsable du paludisme appartient au genre :",
+      "o": [
+        "Plasmodium",
+        "Trypanosoma",
+        "Salmonella",
+        "Mycobacterium"
+      ],
+      "r": 0,
+      "x": "Le paludisme est provoqué par un parasite du genre Plasmodium, dont plusieurs espèces infectent l'homme. Trypanosoma est responsable de la maladie du sommeil et Mycobacterium de la tuberculose."
+    },
+    {
+      "q": "La moustiquaire imprégnée d'insecticide constitue un moyen :",
+      "o": [
+        "de conservation des médicaments",
+        "de traitement curatif du paludisme",
+        "de dépistage de la maladie",
+        "de prévention du paludisme"
+      ],
+      "r": 3,
+      "x": "La moustiquaire imprégnée protège contre les piqûres nocturnes de l'anophèle et constitue une mesure de prévention majeure. Le traitement curatif repose, lui, sur les combinaisons thérapeutiques à base d'artémisinine."
+    },
+    {
+      "q": "La tuberculose est une maladie qui atteint principalement :",
+      "o": [
+        "les reins",
+        "le foie",
+        "les poumons",
+        "la peau"
+      ],
+      "r": 2,
+      "x": "La tuberculose atteint principalement les poumons et se transmet par voie aérienne. Le vaccin BCG protège surtout contre ses formes graves chez l'enfant."
+    },
+    {
+      "q": "Le vaccin BCG protège contre :",
+      "o": [
+        "la tuberculose",
+        "la rougeole",
+        "la poliomyélite",
+        "le tétanos"
+      ],
+      "r": 0,
+      "x": "Le BCG protège contre les formes graves de tuberculose, notamment chez le nourrisson. Le vaccin antipoliomyélitique protège, lui, contre la poliomyélite."
+    },
+    {
+      "q": "La maladie infectieuse éradiquée à l'échelle mondiale grâce à la vaccination est :",
+      "o": [
+        "la variole",
+        "le paludisme",
+        "le choléra",
+        "la rougeole"
+      ],
+      "r": 0,
+      "x": "La variole est déclarée éradiquée par l'OMS en 1980, seul cas d'éradication complète d'une maladie humaine. La poliomyélite fait l'objet d'un programme d'éradication toujours en cours."
+    },
+    {
+      "q": "La déshydratation grave chez l'enfant se traite en première intention par :",
+      "o": [
+        "la réhydratation par voie orale ou intraveineuse",
+        "l'administration d'antibiotiques à forte dose",
+        "la mise au jeûne complet pendant la crise",
+        "l'application prolongée de compresses froides"
+      ],
+      "r": 0,
+      "x": "La réhydratation, orale dans les formes modérées et intraveineuse dans les formes graves, constitue le traitement de première intention. Les sels de réhydratation orale ont permis de réduire considérablement la mortalité par diarrhée."
+    },
+    {
+      "q": "L'allaitement maternel exclusif est recommandé par l'OMS jusqu'à l'âge de :",
+      "o": [
+        "trois mois",
+        "six mois",
+        "douze mois",
+        "vingt-quatre mois"
+      ],
+      "r": 1,
+      "x": "L'OMS recommande l'allaitement maternel exclusif pendant les six premiers mois, suivi d'une alimentation complémentaire adaptée. Cette pratique réduit nettement la mortalité infantile."
+    },
+    {
+      "q": "Le sel de cuisine est enrichi en iode afin de prévenir :",
+      "o": [
+        "le scorbut",
+        "l'anémie",
+        "le rachitisme",
+        "le goitre"
+      ],
+      "r": 3,
+      "x": "L'iodation universelle du sel prévient le goitre et les troubles dus à la carence en iode. Cette mesure de santé publique est appliquée dans la plupart des pays sahéliens."
+    },
+    {
+      "q": "L'assainissement désigne l'ensemble des techniques visant :",
+      "o": [
+        "l'évacuation et le traitement des eaux usées et des déchets",
+        "la production d'électricité en zone rurale",
+        "l'irrigation des périmètres agricoles",
+        "la construction de logements sociaux"
+      ],
+      "r": 0,
+      "x": "L'assainissement recouvre la collecte, l'évacuation et le traitement des eaux usées et des excreta. Il conditionne la prévention des maladies hydriques comme le choléra."
+    },
+    {
+      "q": "Le lavage des mains au savon permet de réduire principalement :",
+      "o": [
+        "les accidents domestiques",
+        "les maladies cardiovasculaires",
+        "les maladies génétiques",
+        "les maladies diarrhéiques et respiratoires"
+      ],
+      "r": 3,
+      "x": "Le lavage des mains au savon réduit fortement l'incidence des diarrhées et des infections respiratoires. C'est l'une des interventions de santé publique au meilleur rapport coût-efficacité."
+    },
+    {
+      "q": "La couverture sanitaire universelle vise à garantir :",
+      "o": [
+        "l'accès de tous aux services de santé sans difficulté financière",
+        "la gratuité totale de tous les médicaments",
+        "la construction d'un hôpital par commune",
+        "la formation obligatoire de tous les agents"
+      ],
+      "r": 0,
+      "x": "La couverture sanitaire universelle vise l'accès de chacun aux services de santé nécessaires sans exposition à des dépenses catastrophiques. Elle figure parmi les cibles des objectifs de développement durable."
+    },
+    {
+      "q": "Le moustique vecteur de la dengue et de la fièvre jaune appartient au genre :",
+      "o": [
+        "Anopheles",
+        "Glossina",
+        "Culex",
+        "Aedes"
+      ],
+      "r": 3,
+      "x": "Le genre Aedes transmet la dengue, la fièvre jaune et le chikungunya. Le genre Anopheles transmet le paludisme, la mouche Glossina la trypanosomiase, et le genre Culex la filariose lymphatique."
+    },
+    {
+      "q": "L'onchocercose, ou cécité des rivières, est transmise par :",
+      "o": [
+        "la simulie",
+        "l'anophèle",
+        "la mouche tsé-tsé",
+        "le phlébotome"
+      ],
+      "r": 0,
+      "x": "L'onchocercose est transmise par la simulie, qui se reproduit près des cours d'eau rapides. Sa lutte a permis de rendre cultivables de nombreuses vallées du Burkina Faso."
+    },
+    {
+      "q": "Une épidémie se définit comme :",
+      "o": [
+        "l'augmentation inhabituelle des cas d'une maladie dans une zone",
+        "la présence permanente d'une maladie dans une région",
+        "la propagation d'une maladie à l'échelle mondiale",
+        "la disparition totale d'une maladie"
+      ],
+      "r": 0,
+      "x": "L'épidémie correspond à une augmentation inhabituelle du nombre de cas dans une zone et une période données. L'endémie désigne la présence habituelle et permanente d'une maladie."
+    },
+    {
+      "q": "Une maladie constamment présente dans une région donnée est dite :",
+      "o": [
+        "épidémique",
+        "pandémique",
+        "endémique",
+        "sporadique"
+      ],
+      "r": 2,
+      "x": "L'endémie désigne la présence habituelle d'une maladie dans une population, comme le paludisme au Sahel. La pandémie, elle, touche plusieurs continents simultanément."
+    },
+    {
+      "q": "Une épidémie qui s'étend à plusieurs continents est qualifiée de :",
+      "o": [
+        "endémie",
+        "pandémie",
+        "zoonose",
+        "épizootie"
+      ],
+      "r": 1,
+      "x": "La pandémie désigne une épidémie franchissant les frontières et touchant plusieurs continents. L'épizootie concerne, elle, les populations animales."
+    },
+    {
+      "q": "Une maladie transmise de l'animal à l'homme est une :",
+      "o": [
+        "zoonose",
+        "endémie",
+        "carence",
+        "allergie"
+      ],
+      "r": 0,
+      "x": "La zoonose est une maladie transmissible de l'animal à l'homme, comme la rage ou la grippe aviaire. Sa surveillance relève d'une approche conjointe de la santé humaine et animale."
+    },
+    {
+      "q": "Le résultat d'une division d'un nombre non nul par lui-même est toujours égal à :",
+      "o": [
+        "zéro",
+        "un",
+        "le nombre lui-même",
+        "l'inverse du nombre"
+      ],
+      "r": 1,
+      "x": "Tout nombre non nul divisé par lui-même donne un. La division par zéro, elle, n'est pas définie en mathématiques."
+    },
+    {
+      "q": "Le périmètre d'un cercle de rayon R est donné par la formule :",
+      "o": [
+        "πR²",
+        "2πR",
+        "4πR²",
+        "πR³"
+      ],
+      "r": 1,
+      "x": "Le périmètre d'un cercle vaut deux fois pi multiplié par le rayon. La formule πR² donne, elle, l'aire du disque."
+    },
+    {
+      "q": "L'aire d'un rectangle se calcule en multipliant :",
+      "o": [
+        "la base par la hauteur divisée par deux",
+        "la somme des côtés par deux",
+        "la longueur par la largeur",
+        "le côté par lui-même"
+      ],
+      "r": 2,
+      "x": "L'aire du rectangle est le produit de la longueur par la largeur. La formule base multipliée par hauteur divisée par deux donne, elle, l'aire du triangle."
+    },
+    {
+      "q": "Un pourcentage de 20 % appliqué à 250 donne :",
+      "o": [
+        "25",
+        "50",
+        "75",
+        "100"
+      ],
+      "r": 1,
+      "x": "Vingt pour cent de 250 équivaut à 250 multiplié par 0,20, soit 50. Le calcul de pourcentage revient à diviser par cent puis multiplier par le taux."
+    },
+    {
+      "q": "Une moyenne arithmétique se calcule en divisant la somme des valeurs par :",
+      "o": [
+        "la plus grande valeur",
+        "la plus petite valeur",
+        "le nombre de valeurs",
+        "la différence entre les extrêmes"
+      ],
+      "r": 2,
+      "x": "La moyenne arithmétique est la somme des valeurs divisée par leur nombre. La médiane, elle, sépare la série en deux parties d'effectifs égaux."
+    },
+    {
+      "q": "La valeur qui partage une série statistique ordonnée en deux parties égales est :",
+      "o": [
+        "la moyenne",
+        "la médiane",
+        "le mode",
+        "l'écart-type"
+      ],
+      "r": 1,
+      "x": "La médiane partage la série ordonnée en deux effectifs égaux et résiste mieux que la moyenne aux valeurs extrêmes. Le mode désigne, lui, la valeur la plus fréquente."
+    },
+    {
+      "q": "La valeur la plus fréquente d'une série statistique est :",
+      "o": [
+        "la moyenne",
+        "la médiane",
+        "le mode",
+        "l'étendue"
+      ],
+      "r": 2,
+      "x": "Le mode est la valeur qui apparaît le plus souvent dans une série. L'étendue mesure, elle, l'écart entre la plus grande et la plus petite valeur."
+    },
+    {
+      "q": "L'échelle d'une carte au 1/50 000 signifie qu'un centimètre sur la carte représente :",
+      "o": [
+        "50 mètres",
+        "500 mètres",
+        "5 kilomètres",
+        "50 kilomètres"
+      ],
+      "r": 1,
+      "x": "Au 1/50 000, un centimètre sur la carte correspond à 50 000 centimètres sur le terrain, soit 500 mètres. Plus le dénominateur est grand, plus l'échelle est petite et le territoire représenté vaste."
+    },
+    {
+      "q": "Un hectare correspond à :",
+      "o": [
+        "100 mètres carrés",
+        "1 000 mètres carrés",
+        "10 000 mètres carrés",
+        "100 000 mètres carrés"
+      ],
+      "r": 2,
+      "x": "Un hectare équivaut à dix mille mètres carrés, soit un carré de cent mètres de côté. Cette unité est couramment utilisée pour mesurer les superficies agricoles."
+    },
+    {
+      "q": "Un kilomètre carré correspond à :",
+      "o": [
+        "10 hectares",
+        "100 hectares",
+        "1 000 hectares",
+        "10 000 hectares"
+      ],
+      "r": 1,
+      "x": "Un kilomètre carré équivaut à cent hectares, soit un million de mètres carrés. Le Burkina Faso couvre ainsi environ 274 200 kilomètres carrés."
+    },
+    {
+      "q": "La vitesse moyenne se calcule en divisant la distance parcourue par :",
+      "o": [
+        "le temps mis pour la parcourir",
+        "la vitesse maximale atteinte",
+        "le nombre d'arrêts effectués",
+        "la consommation de carburant"
+      ],
+      "r": 0,
+      "x": "La vitesse moyenne est le quotient de la distance par la durée du trajet. Elle s'exprime généralement en kilomètres par heure ou en mètres par seconde."
+    },
+    {
+      "q": "Qui a été lauréat du Prix Nobel de la paix en 2026 ?",
+      "o": [
+        "Narges Mohammadi",
+        "María Corina Machado",
+        "Navi Pillay",
+        "Francesca Albanese"
+      ],
+      "r": 2,
+      "x": "Le prix Nobel de la paix a été attribué le 9 octobre 2026 à la juriste sud-africaine Navi Pillay pour ses décennies d'engagement en faveur du droit international et de la justice pénale. María Corina Machado (B) est la lauréate de l'édition précédente."
     }
   ],
   "histgeo": [
@@ -18618,6 +25196,4406 @@ const QUESTIONS = {
       ],
       "r": 3,
       "x": "Une lésion de la moelle épinière interrompt la transmission des messages nerveux, provoquant une paralysie sous le niveau atteint. Plus la lésion est haute sur la colonne vertébrale, plus la paralysie est étendue."
+    },
+    {
+      "q": "Le nombre de chromosomes contenus dans une cellule somatique humaine normale est de :",
+      "o": [
+        "23",
+        "44",
+        "46",
+        "48"
+      ],
+      "r": 2,
+      "x": "La cellule somatique humaine contient 46 chromosomes, soit 23 paires dont une paire de chromosomes sexuels. Les 23 correspondent au lot du gamète, cellule haploïde, et non à la cellule somatique."
+    },
+    {
+      "q": "Le paludisme est transmis à l'homme par la piqûre de :",
+      "o": [
+        "la simulie femelle",
+        "la glossine femelle",
+        "le culex femelle",
+        "l'anophèle femelle"
+      ],
+      "r": 3,
+      "x": "Seule l'anophèle femelle, active la nuit, inocule les sporozoïtes de Plasmodium lors de son repas sanguin. La simulie femelle transmet l'onchocercose et la glossine femelle la trypanosomiase africaine."
+    },
+    {
+      "q": "Dans la drépanocytose, l'acide glutamique de la chaîne bêta de l'hémoglobine est remplacé par :",
+      "o": [
+        "la glycine",
+        "la valine",
+        "la lysine",
+        "l'alanine"
+      ],
+      "r": 1,
+      "x": "La substitution touche le sixième acide aminé de la chaîne bêta et donne l'hémoglobine S, responsable de la falciformation des hématies. Le remplacement par la lysine au même emplacement donne l'hémoglobine C, fréquente en Afrique de l'Ouest."
+    },
+    {
+      "q": "Le nombre de molécules de dioxyde de carbone nécessaires à la formation d'une molécule de glucose lors de la photosynthèse est de :",
+      "o": [
+        "3",
+        "6",
+        "12",
+        "18"
+      ],
+      "r": 1,
+      "x": "L'équation bilan est 6 CO2 + 6 H2O donnant C6H12O6 + 6 O2, en présence de lumière et de chlorophylle. Les 12 correspondent au nombre d'atomes d'hydrogène du glucose et non à celui des molécules de CO2."
+    },
+    {
+      "q": "Le Burkina Faso est devenu le premier pays à lancer une campagne nationale avec le vaccin MenAfriVac contre le méningocoque A le :",
+      "o": [
+        "6 décembre 2010",
+        "15 mars 2011",
+        "3 décembre 2012",
+        "6 mars 2017"
+      ],
+      "r": 0,
+      "x": "Plus de 11 millions de personnes âgées de 1 à 29 ans ont été vaccinées lors de cette campagne de masse préventive. Le 6 mars 2017 marque, lui, l'introduction du MenAfriVac dans la vaccination de routine des enfants de 15 mois."
+    },
+    {
+      "q": "Le Programme de lutte contre l'onchocercose en Afrique de l'Ouest (OCP), dont le siège était à Ouagadougou, a été lancé en :",
+      "o": [
+        "1968",
+        "1974",
+        "1982",
+        "1995"
+      ],
+      "r": 1,
+      "x": "Lancé en 1974 par l'OMS dans 7 pays puis étendu à 11, l'OCP (Onchocerciasis Control Programme) luttait contre la simulie Simulium damnosum, vectrice du ver Onchocerca volvulus, avant de clore ses activités fin 2002. L'année 1995 correspond à la création de son successeur, l'APOC (African Programme for Onchocerciasis Control)."
+    },
+    {
+      "q": "Les groupes sanguins du système ABO ont été découverts en 1901 par :",
+      "o": [
+        "Karl Landsteiner",
+        "Louis Pasteur",
+        "Robert Koch",
+        "Alexander Fleming"
+      ],
+      "r": 0,
+      "x": "Karl Landsteiner identifie les groupes A, B et O en 1901 et reçoit le prix Nobel de médecine en 1930. Alexander Fleming est associé à la découverte de la pénicilline en 1928 et Robert Koch à celle du bacille de la tuberculose en 1882."
+    },
+    {
+      "q": "La fixation de l'azote atmosphérique dans les nodosités des racines du niébé est assurée par des bactéries du genre :",
+      "o": [
+        "Nitrosomonas",
+        "Azotobacter",
+        "Clostridium",
+        "Rhizobium"
+      ],
+      "r": 3,
+      "x": "Les Rhizobium vivent en symbiose dans les nodosités des légumineuses et transforment l'azote de l'air en composés azotés assimilables par la plante. Les Nitrosomonas, libres dans le sol, interviennent au contraire dans la nitrification de l'ammoniac."
+    },
+    {
+      "q": "Le kwashiorkor, forme de malnutrition de l'enfant, résulte principalement d'une carence en :",
+      "o": [
+        "le fer",
+        "les lipides",
+        "les protéines",
+        "la vitamine A"
+      ],
+      "r": 2,
+      "x": "Le kwashiorkor traduit un apport insuffisant en protéines malgré un apport énergétique parfois conservé, avec œdèmes et troubles de la peau caractéristiques. Le marasme résulte, lui, d'une carence globale en énergie et en protéines."
+    },
+    {
+      "q": "Les cellules du système immunitaire détruites principalement par le virus de l'immunodéficience humaine (VIH) sont :",
+      "o": [
+        "les hématies",
+        "les lymphocytes B",
+        "les plaquettes",
+        "les lymphocytes T4"
+      ],
+      "r": 3,
+      "x": "Le VIH se fixe sur le récepteur CD4 des lymphocytes T4 et les détruit progressivement, ouvrant la voie aux infections opportunistes. Le stade sida est déclaré lorsque le taux de T4 descend sous 200 par millimètre cube de sang."
+    },
+    {
+      "q": "L'organite cellulaire siège de la respiration cellulaire et de la production d'énergie est :",
+      "o": [
+        "le ribosome",
+        "le lysosome",
+        "l'appareil de Golgi",
+        "la mitochondrie"
+      ],
+      "r": 3,
+      "x": "La mitochondrie oxyde le glucose en présence de dioxygène et fournit à la cellule son énergie sous forme d'ATP. Le ribosome assure, lui, l'assemblage des acides aminés lors de la synthèse des protéines."
+    },
+    {
+      "q": "La structure en double hélice de la molécule d'ADN a été décrite en 1953 par :",
+      "o": [
+        "Watson et Crick",
+        "Mendel et Morgan",
+        "Pasteur et Koch",
+        "Darwin et Lamarck"
+      ],
+      "r": 0,
+      "x": "James Watson et Francis Crick publient en 1953 le modèle en double hélice, à partir des clichés de diffraction de Rosalind Franklin. Gregor Mendel avait, lui, établi dès 1865 les lois de transmission des caractères héréditaires."
+    },
+    {
+      "q": "Dans la molécule d'ADN, l'adénine s'apparie toujours avec :",
+      "o": [
+        "la guanine",
+        "l'uracile",
+        "la cytosine",
+        "la thymine"
+      ],
+      "r": 3,
+      "x": "L'adénine s'apparie à la thymine par deux liaisons hydrogène et la guanine à la cytosine par trois liaisons. L'uracile ne figure pas dans l'ADN : elle remplace la thymine dans l'ARN."
+    },
+    {
+      "q": "Chez l'être humain, le sexe masculin correspond à la formule chromosomique sexuelle :",
+      "o": [
+        "XX",
+        "XY",
+        "YY",
+        "XO"
+      ],
+      "r": 1,
+      "x": "L'homme porte la paire XY et la femme la paire XX, si bien que le sexe de l'enfant dépend du spermatozoïde fécondant. La formule XO correspond au syndrome de Turner et la formule YY n'est pas viable."
+    },
+    {
+      "q": "La phase de la mitose au cours de laquelle les chromatides sœurs migrent vers les pôles de la cellule est :",
+      "o": [
+        "la prophase",
+        "la métaphase",
+        "l'anaphase",
+        "la télophase"
+      ],
+      "r": 2,
+      "x": "L'anaphase est marquée par la séparation des chromatides et leur ascension polaire grâce au fuseau de division. La métaphase correspond, elle, à l'alignement des chromosomes sur la plaque équatoriale."
+    },
+    {
+      "q": "La copie de l'information génétique qui sort du noyau pour gagner les ribosomes est :",
+      "o": [
+        "l'ARN de transfert",
+        "l'ARN ribosomique",
+        "l'ARN messager",
+        "l'ADN polymérase"
+      ],
+      "r": 2,
+      "x": "L'ARN messager est synthétisé dans le noyau par transcription puis traduit en protéine au niveau des ribosomes. L'ARN de transfert se charge seulement d'apporter les acides aminés correspondant à chaque codon."
+    },
+    {
+      "q": "Les lois de la transmission des caractères héréditaires ont été établies à partir de croisements de pois par :",
+      "o": [
+        "Gregor Mendel",
+        "Charles Darwin",
+        "Jean-Baptiste Lamarck",
+        "Thomas Morgan"
+      ],
+      "r": 0,
+      "x": "Gregor Mendel publie en 1865 les résultats de ses croisements de pois, fondant la génétique moderne. Thomas Morgan établira plus tard, avec la drosophile, la théorie chromosomique de l'hérédité."
+    },
+    {
+      "q": "Le nombre d'acides aminés différents entrant dans la constitution des protéines est de :",
+      "o": [
+        "4",
+        "20",
+        "23",
+        "64"
+      ],
+      "r": 1,
+      "x": "Vingt acides aminés différents s'enchaînent pour former l'ensemble des protéines du vivant. Les 64 correspondent au nombre de codons du code génétique et les 4 au nombre de bases azotées de l'ADN."
+    },
+    {
+      "q": "La durée moyenne de la grossesse chez la femme, comptée depuis le premier jour des dernières règles, est de :",
+      "o": [
+        "250 jours",
+        "266 jours",
+        "280 jours",
+        "300 jours"
+      ],
+      "r": 2,
+      "x": "La grossesse dure en moyenne 280 jours, soit 40 semaines d'aménorrhée ou 9 mois. Les 266 jours correspondent à la durée réelle écoulée depuis la fécondation."
+    },
+    {
+      "q": "Chez une femme dont le cycle est régulier de 28 jours, l'ovulation survient le :",
+      "o": [
+        "7e jour",
+        "10e jour",
+        "14e jour",
+        "21e jour"
+      ],
+      "r": 2,
+      "x": "L'ovulation se produit au 14e jour, soit 14 jours avant les règles suivantes. Le 21e jour correspond à la phase lutéale, période de sécrétion maximale de progestérone."
+    },
+    {
+      "q": "Chez la femme, la fécondation de l'ovule par le spermatozoïde a lieu normalement dans :",
+      "o": [
+        "l'ovaire",
+        "l'utérus",
+        "le vagin",
+        "la trompe de Fallope"
+      ],
+      "r": 3,
+      "x": "La fécondation se déroule dans le tiers externe de la trompe de Fallope, quelques heures après l'ovulation. L'utérus n'intervient que six à sept jours plus tard, au moment de la nidation de l'embryon."
+    },
+    {
+      "q": "L'hormone recherchée par les tests urinaires de grossesse est :",
+      "o": [
+        "l'œstradiol",
+        "la progestérone",
+        "la testostérone",
+        "l'hormone HCG"
+      ],
+      "r": 3,
+      "x": "L'hormone chorionique gonadotrope (HCG) est sécrétée par le trophoblaste dès la nidation et devient détectable dans les urines environ deux semaines après la fécondation. La progestérone, présente à chaque cycle, ne permet pas à elle seule d'affirmer une grossesse."
+    },
+    {
+      "q": "Les jumeaux monozygotes, dits vrais jumeaux, sont issus :",
+      "o": [
+        "d'un seul œuf qui se divise en deux",
+        "de deux œufs fécondés simultanément",
+        "de deux ovules et d'un spermatozoïde",
+        "d'un ovule et de deux spermatozoïdes"
+      ],
+      "r": 0,
+      "x": "Les jumeaux monozygotes proviennent d'un œuf unique dont la division précoce donne deux embryons génétiquement identiques et de même sexe. Les faux jumeaux, ou dizygotes, résultent de la fécondation de deux ovules par deux spermatozoïdes différents."
+    },
+    {
+      "q": "L'enzyme contenue dans la salive et qui amorce la digestion de l'amidon est :",
+      "o": [
+        "l'amylase salivaire",
+        "la pepsine",
+        "la trypsine",
+        "la lipase pancréatique"
+      ],
+      "r": 0,
+      "x": "L'amylase salivaire, ou ptyaline, transforme l'amidon en maltose dès la cavité buccale. La pepsine, active en milieu acide, n'intervient qu'au niveau de l'estomac sur les protéines."
+    },
+    {
+      "q": "Le pH du suc gastrique chez l'homme est voisin de :",
+      "o": [
+        "2",
+        "5",
+        "7",
+        "9"
+      ],
+      "r": 0,
+      "x": "Le suc gastrique est fortement acide, avec un pH voisin de 2 dû à l'acide chlorhydrique, condition d'activité de la pepsine. Le pH 7 correspond à la neutralité et le pH 9 au milieu alcalin du suc pancréatique."
+    },
+    {
+      "q": "L'absorption des nutriments dans le sang se fait essentiellement au niveau :",
+      "o": [
+        "de l'estomac",
+        "de l'œsophage",
+        "du gros intestin",
+        "de l'intestin grêle"
+      ],
+      "r": 3,
+      "x": "Les villosités de l'intestin grêle offrent une immense surface d'échange qui assure l'essentiel du passage des nutriments dans le sang. Le gros intestin ne réabsorbe, lui, que l'eau et quelques sels minéraux."
+    },
+    {
+      "q": "La bile, qui émulsionne les graisses, est sécrétée par :",
+      "o": [
+        "le pancréas",
+        "l'estomac",
+        "la vésicule biliaire",
+        "le foie"
+      ],
+      "r": 3,
+      "x": "La bile est produite en continu par le foie avant d'être déversée dans le duodénum lors des repas. La vésicule biliaire ne fait que la stocker et la concentrer entre deux repas."
+    },
+    {
+      "q": "La longueur moyenne de l'intestin grêle chez l'adulte est d'environ :",
+      "o": [
+        "1,5 mètre",
+        "3 mètres",
+        "6 mètres",
+        "12 mètres"
+      ],
+      "r": 2,
+      "x": "L'intestin grêle mesure environ 6 mètres et se divise en duodénum, jéjunum et iléon. Les 1,5 mètre correspondent à la longueur du gros intestin, nettement plus court mais plus large."
+    },
+    {
+      "q": "L'apport énergétique d'un gramme de glucides est d'environ :",
+      "o": [
+        "4 kilocalories",
+        "7 kilocalories",
+        "9 kilocalories",
+        "12 kilocalories"
+      ],
+      "r": 0,
+      "x": "Un gramme de glucides fournit environ 4 kilocalories, tout comme un gramme de protéines. Les 9 kilocalories correspondent au gramme de lipides, nutriment le plus énergétique de la ration."
+    },
+    {
+      "q": "La proportion de dioxygène contenue dans l'air atmosphérique est d'environ :",
+      "o": [
+        "0,04 %",
+        "21 %",
+        "40 %",
+        "78 %"
+      ],
+      "r": 1,
+      "x": "L'air atmosphérique contient environ 21 % de dioxygène, qui tombe à 16 % dans l'air expiré. Les 78 % correspondent au diazote et les 0,04 % au dioxyde de carbone de l'air inspiré."
+    },
+    {
+      "q": "Les échanges gazeux entre l'air et le sang s'effectuent au niveau :",
+      "o": [
+        "des bronches",
+        "de la trachée",
+        "du larynx",
+        "des alvéoles pulmonaires"
+      ],
+      "r": 3,
+      "x": "Les alvéoles pulmonaires, entourées d'un fin réseau de capillaires, permettent le passage du dioxygène vers le sang et du dioxyde de carbone vers l'air. Les bronches et la trachée ne font que conduire l'air jusqu'à ces alvéoles."
+    },
+    {
+      "q": "La fréquence respiratoire d'un adulte au repos est d'environ :",
+      "o": [
+        "6 mouvements par minute",
+        "16 mouvements par minute",
+        "30 mouvements par minute",
+        "45 mouvements par minute"
+      ],
+      "r": 1,
+      "x": "Un adulte au repos effectue de 12 à 20 mouvements respiratoires par minute, soit 16 en moyenne. Les fréquences de 30 à 45 sont celles du nourrisson ou d'un adulte en détresse respiratoire."
+    },
+    {
+      "q": "Le transport du dioxygène dans le sang est assuré par :",
+      "o": [
+        "le plasma",
+        "les plaquettes",
+        "les globules blancs",
+        "l'hémoglobine des hématies"
+      ],
+      "r": 3,
+      "x": "L'hémoglobine des hématies fixe le dioxygène au niveau des poumons et le libère dans les tissus. Les plaquettes interviennent dans la coagulation et les globules blancs dans la défense de l'organisme."
+    },
+    {
+      "q": "Le principal muscle mis en jeu lors de l'inspiration est :",
+      "o": [
+        "le diaphragme",
+        "le myocarde",
+        "les muscles abdominaux",
+        "les intercostaux internes"
+      ],
+      "r": 0,
+      "x": "La contraction du diaphragme abaisse le plancher de la cage thoracique et provoque l'entrée d'air dans les poumons. Les muscles abdominaux et les intercostaux internes interviennent, eux, dans l'expiration forcée."
+    },
+    {
+      "q": "Le cœur humain est un organe creux qui comporte :",
+      "o": [
+        "deux cavités",
+        "trois cavités",
+        "quatre cavités",
+        "six cavités"
+      ],
+      "r": 2,
+      "x": "Le cœur compte quatre cavités : deux oreillettes et deux ventricules séparés par la cloison interventriculaire. Le cœur à trois cavités est celui des amphibiens, non celui des mammifères."
+    },
+    {
+      "q": "La fréquence cardiaque moyenne d'un adulte au repos est d'environ :",
+      "o": [
+        "40 battements par minute",
+        "70 battements par minute",
+        "100 battements par minute",
+        "130 battements par minute"
+      ],
+      "r": 1,
+      "x": "Le cœur d'un adulte au repos bat environ 70 fois par minute, la normale s'étendant de 60 à 100. Les 130 battements correspondent à la fréquence habituelle du nourrisson."
+    },
+    {
+      "q": "Le volume total de sang d'un adulte de 70 kilogrammes est d'environ :",
+      "o": [
+        "2 litres",
+        "5 litres",
+        "8 litres",
+        "12 litres"
+      ],
+      "r": 1,
+      "x": "Le sang représente environ 7 à 8 % du poids du corps, soit près de 5 litres chez un adulte de 70 kilogrammes. Une perte d'environ un tiers de ce volume met en jeu le pronostic vital."
+    },
+    {
+      "q": "La durée de vie moyenne d'une hématie dans le sang est de :",
+      "o": [
+        "12 jours",
+        "60 jours",
+        "120 jours",
+        "240 jours"
+      ],
+      "r": 2,
+      "x": "L'hématie vit environ 120 jours avant d'être détruite dans la rate et le foie. Les plaquettes ont, elles, une durée de vie bien plus courte, de l'ordre de 8 à 10 jours."
+    },
+    {
+      "q": "Dans le système ABO, le groupe sanguin considéré comme donneur universel est le groupe :",
+      "o": [
+        "A",
+        "B",
+        "AB",
+        "O"
+      ],
+      "r": 3,
+      "x": "Le groupe O, et plus précisément O négatif, ne porte aucun antigène A ou B sur ses hématies et peut être transfusé à tous. Le groupe AB est au contraire le receveur universel, car son plasma ne contient aucun anticorps anti-A ni anti-B."
+    },
+    {
+      "q": "La pression artérielle normale d'un adulte est voisine de :",
+      "o": [
+        "8/5",
+        "12/8",
+        "16/10",
+        "20/12"
+      ],
+      "r": 1,
+      "x": "La pression artérielle normale est proche de 12/8, soit 120 millimètres de mercure pour la systolique et 80 pour la diastolique. Une valeur durablement égale ou supérieure à 14/9 définit l'hypertension artérielle."
+    },
+    {
+      "q": "L'unité fonctionnelle du système nerveux est :",
+      "o": [
+        "le neurone",
+        "la névroglie",
+        "la synapse",
+        "le nerf"
+      ],
+      "r": 0,
+      "x": "Le neurone, formé d'un corps cellulaire, de dendrites et d'un axone, conduit et transmet le message nerveux. La synapse n'est que la zone de contact entre deux neurones et le nerf un faisceau de fibres."
+    },
+    {
+      "q": "Chez l'homme, l'hémisphère cérébral gauche commande la motricité :",
+      "o": [
+        "du côté gauche du corps",
+        "du côté droit du corps",
+        "des deux côtés du corps",
+        "du tronc uniquement"
+      ],
+      "r": 1,
+      "x": "Les voies motrices se croisent au niveau du bulbe rachidien, si bien que chaque hémisphère commande la moitié opposée du corps. Une lésion de l'hémisphère gauche provoque donc une paralysie du côté droit."
+    },
+    {
+      "q": "Le centre nerveux qui commande le réflexe rotulien est :",
+      "o": [
+        "le cervelet",
+        "le bulbe rachidien",
+        "le cortex cérébral",
+        "la moelle épinière"
+      ],
+      "r": 3,
+      "x": "Le réflexe rotulien est un réflexe médullaire dont le centre se situe dans la moelle épinière, sans intervention du cerveau. Le cervelet n'assure, lui, que la coordination des mouvements et l'équilibre."
+    },
+    {
+      "q": "La vision des couleurs est assurée par les cellules de la rétine appelées :",
+      "o": [
+        "les cônes",
+        "les bâtonnets",
+        "les cellules ciliées",
+        "les cellules gliales"
+      ],
+      "r": 0,
+      "x": "Les cônes, concentrés dans la fovéa, permettent la vision des couleurs et la vision précise en pleine lumière. Les bâtonnets assurent seulement la vision en faible éclairement, en noir et blanc."
+    },
+    {
+      "q": "L'organe de l'équilibre est situé dans :",
+      "o": [
+        "l'oreille externe",
+        "l'oreille moyenne",
+        "l'oreille interne",
+        "le nerf optique"
+      ],
+      "r": 2,
+      "x": "Les canaux semi-circulaires et le vestibule, logés dans l'oreille interne, renseignent le cerveau sur la position de la tête. L'oreille moyenne ne contient que les osselets chargés de transmettre les vibrations."
+    },
+    {
+      "q": "Le nombre de néphrons contenus dans un rein humain est d'environ :",
+      "o": [
+        "100 000",
+        "500 000",
+        "1 million",
+        "10 millions"
+      ],
+      "r": 2,
+      "x": "Chaque rein compte environ un million de néphrons, unités de filtration du sang et de formation de l'urine. Ce capital est définitif à la naissance et diminue avec l'âge sans se renouveler."
+    },
+    {
+      "q": "Le volume d'urine émis quotidiennement par un adulte est d'environ :",
+      "o": [
+        "0,5 litre",
+        "1,5 litre",
+        "3 litres",
+        "5 litres"
+      ],
+      "r": 1,
+      "x": "Un adulte élimine en moyenne 1,5 litre d'urine par jour, pour environ 180 litres de plasma filtrés par les reins. Une diurèse inférieure à 0,5 litre définit l'oligurie, signe fréquent de déshydratation."
+    },
+    {
+      "q": "Le squelette d'un être humain adulte compte :",
+      "o": [
+        "106 os",
+        "186 os",
+        "206 os",
+        "306 os"
+      ],
+      "r": 2,
+      "x": "Le squelette adulte comprend 206 os, dont 26 pour la seule colonne vertébrale. Le nouveau-né en possède plus de 300, certains fusionnant au cours de la croissance."
+    },
+    {
+      "q": "Chez l'enfant, la carence en vitamine D provoque :",
+      "o": [
+        "le rachitisme",
+        "le scorbut",
+        "le béribéri",
+        "la pellagre"
+      ],
+      "r": 0,
+      "x": "La vitamine D permet la fixation du calcium sur les os ; sa carence entraîne le rachitisme, avec déformation des membres. Le scorbut résulte d'un manque de vitamine C et le béribéri d'un manque de vitamine B1."
+    },
+    {
+      "q": "Le goitre endémique résulte d'une carence alimentaire en :",
+      "o": [
+        "iode",
+        "fer",
+        "fluor",
+        "zinc"
+      ],
+      "r": 0,
+      "x": "L'iode est indispensable à la synthèse des hormones thyroïdiennes ; sa carence provoque une hypertrophie de la thyroïde appelée goitre. La carence en fer entraîne, elle, l'anémie ferriprive."
+    },
+    {
+      "q": "Le parasite responsable du paludisme a été découvert en 1880 en Algérie par :",
+      "o": [
+        "Alphonse Laveran",
+        "Ronald Ross",
+        "Robert Koch",
+        "Louis Pasteur"
+      ],
+      "r": 0,
+      "x": "Alphonse Laveran observe le Plasmodium dans le sang d'un malade en 1880 et reçoit le prix Nobel de médecine en 1907. Ronald Ross établit, lui, en 1897 le rôle du moustique dans la transmission de la maladie."
+    },
+    {
+      "q": "L'espèce de Plasmodium responsable des formes graves et de la quasi-totalité des décès en Afrique est :",
+      "o": [
+        "Plasmodium vivax",
+        "Plasmodium ovale",
+        "Plasmodium malariae",
+        "Plasmodium falciparum"
+      ],
+      "r": 3,
+      "x": "Plasmodium falciparum représente plus de 95 % des infections palustres au Burkina Faso et cause le neuropaludisme. Plasmodium malariae provoque une fièvre quarte beaucoup moins meurtrière."
+    },
+    {
+      "q": "Chez un paludéen, l'accès fébrile de la fièvre tierce revient toutes les :",
+      "o": [
+        "24 heures",
+        "48 heures",
+        "72 heures",
+        "96 heures"
+      ],
+      "r": 1,
+      "x": "La fièvre tierce correspond au cycle érythrocytaire de 48 heures de Plasmodium falciparum, vivax et ovale. Le cycle de 72 heures, propre à Plasmodium malariae, donne la fièvre quarte."
+    },
+    {
+      "q": "Les essais cliniques ayant conduit à l'homologation du vaccin antipaludique R21/Matrix-M au Burkina Faso en juillet 2023 ont été menés à :",
+      "o": [
+        "Banfora",
+        "Dori",
+        "Nanoro",
+        "Gaoua"
+      ],
+      "r": 2,
+      "x": "L'unité de recherche clinique de Nanoro, rattachée à l'IRSS, a conduit les phases II et III avec l'Université d'Oxford. Le Burkina Faso est devenu le troisième pays africain à homologuer ce vaccin, après le Ghana et le Nigeria."
+    },
+    {
+      "q": "La chimioprévention du paludisme saisonnier est administrée au Burkina Faso aux enfants âgés de :",
+      "o": [
+        "0 à 2 mois",
+        "3 à 59 mois",
+        "5 à 10 ans",
+        "10 à 15 ans"
+      ],
+      "r": 1,
+      "x": "Les enfants de 3 à 59 mois reçoivent quatre ou cinq passages mensuels pendant la saison de haute transmission. Cette stratégie ne remplace pas la moustiquaire imprégnée, qui reste la première barrière contre les piqûres."
+    },
+    {
+      "q": "Le sigle MILDA désigne :",
+      "o": [
+        "la molécule insecticide à longue durée d'action",
+        "le médicament injectable de lutte contre le paludisme",
+        "la méthode intégrée de lutte contre les diarrhées aiguës",
+        "la moustiquaire imprégnée d'insecticide de longue durée d'action"
+      ],
+      "r": 3,
+      "x": "La MILDA protège pendant environ trois ans et tue les anophèles qui s'y posent. Les campagnes nationales de distribution gratuite visent une moustiquaire pour deux personnes dans chaque ménage."
+    },
+    {
+      "q": "Les larves d'anophèles, vecteurs du paludisme, se développent essentiellement dans :",
+      "o": [
+        "les eaux salées",
+        "les sols humides",
+        "les feuilles en décomposition",
+        "les eaux stagnantes"
+      ],
+      "r": 3,
+      "x": "Les collections d'eau stagnante peu profondes, flaques et récipients abandonnés, servent de gîtes larvaires aux anophèles. Leur assainissement autour des habitations est le premier geste de lutte antivectorielle."
+    },
+    {
+      "q": "Le Centre Muraz, institution de recherche en santé installée à Bobo-Dioulasso, a été créé en 1939 pour lutter contre :",
+      "o": [
+        "le paludisme",
+        "la lèpre",
+        "la trypanosomiase",
+        "la tuberculose"
+      ],
+      "r": 2,
+      "x": "Le Centre Muraz est né en 1939 de la lutte contre la trypanosomiase humaine africaine, avant d'élargir ses missions aux grandes endémies tropicales. Il constitue aujourd'hui l'un des centres de l'Institut national de santé publique du Burkina Faso."
+    },
+    {
+      "q": "L'agent responsable de la maladie du sommeil, transmise par la mouche tsé-tsé, est :",
+      "o": [
+        "un plasmodium",
+        "un vibrion",
+        "un staphylocoque",
+        "un trypanosome"
+      ],
+      "r": 3,
+      "x": "Le trypanosome est un protozoaire flagellé inoculé par la glossine lors de son repas sanguin. Le vibrion est, lui, la bactérie responsable du choléra."
+    },
+    {
+      "q": "La bilharziose se contracte au contact des eaux douces infestées par :",
+      "o": [
+        "des mollusques",
+        "des crustacés",
+        "des poissons",
+        "des batraciens"
+      ],
+      "r": 0,
+      "x": "Les mollusques d'eau douce libèrent les larves du parasite, qui traversent la peau des baigneurs. Les barrages et périmètres irrigués du Burkina Faso constituent des foyers de transmission privilégiés."
+    },
+    {
+      "q": "La dracunculose, ou maladie du ver de Guinée, se contracte en buvant une eau contenant :",
+      "o": [
+        "des amibes",
+        "des vibrions",
+        "des algues microscopiques",
+        "des cyclops"
+      ],
+      "r": 3,
+      "x": "Les cyclops, minuscules crustacés d'eau stagnante, hébergent les larves du ver de Guinée. Le simple filtrage de l'eau de boisson sur un tissu suffit à interrompre le cycle de la maladie."
+    },
+    {
+      "q": "Le médicament utilisé en traitement de masse contre l'onchocercose depuis 1989 est :",
+      "o": [
+        "la chloroquine",
+        "le praziquantel",
+        "la quinine",
+        "l'ivermectine"
+      ],
+      "r": 3,
+      "x": "L'ivermectine, homologuée en 1987 puis donnée gratuitement par son fabricant, est devenue en 1989 la seconde stratégie de l'OCP après l'épandage de larvicides. Le praziquantel est, lui, le traitement de référence de la bilharziose."
+    },
+    {
+      "q": "Le virus de la fièvre jaune est transmis à l'homme par le moustique :",
+      "o": [
+        "Anopheles gambiae",
+        "Culex quinquefasciatus",
+        "Aedes aegypti",
+        "Mansonia africana"
+      ],
+      "r": 2,
+      "x": "Aedes aegypti transmet la fièvre jaune ainsi que la dengue et le chikungunya. Anopheles gambiae est, lui, le principal vecteur du paludisme en Afrique de l'Ouest."
+    },
+    {
+      "q": "Contrairement à l'anophèle, le moustique Aedes aegypti, vecteur de la dengue, pique surtout :",
+      "o": [
+        "pendant la nuit",
+        "pendant la journée",
+        "à l'aube uniquement",
+        "au crépuscule uniquement"
+      ],
+      "r": 1,
+      "x": "Aedes aegypti a une activité diurne, avec des pics le matin et en fin d'après-midi. La moustiquaire, efficace contre l'anophèle nocturne, protège donc mal de la dengue."
+    },
+    {
+      "q": "Le choléra est provoqué par la bactérie :",
+      "o": [
+        "Salmonella typhi",
+        "Escherichia coli",
+        "Vibrio cholerae",
+        "Shigella dysenteriae"
+      ],
+      "r": 2,
+      "x": "Vibrio cholerae se transmet par l'eau et les aliments souillés et provoque des diarrhées profuses menant à la déshydratation. Salmonella typhi est, elle, responsable de la fièvre typhoïde."
+    },
+    {
+      "q": "Le traitement de première intention de la déshydratation due à une diarrhée chez l'enfant est :",
+      "o": [
+        "les antibiotiques",
+        "la solution de réhydratation orale (SRO)",
+        "les antipaludiques",
+        "les antipyrétiques"
+      ],
+      "r": 1,
+      "x": "La SRO, associée au zinc, compense les pertes d'eau et de sels minéraux et suffit dans la grande majorité des cas. L'antibiotique n'est justifié que dans les diarrhées sanglantes, le choléra suspecté ou confirmé ou les infections parasitaires avérées (amibiase, giardiase)."
+    },
+    {
+      "q": "Le bacille responsable de la tuberculose a été identifié en 1882 par :",
+      "o": [
+        "Louis Pasteur",
+        "Robert Koch",
+        "Albert Calmette",
+        "Alexandre Yersin"
+      ],
+      "r": 1,
+      "x": "Robert Koch découvre en 1882 le bacille de la tuberculose, qui porte son nom, et reçoit le prix Nobel en 1905. Alexandre Yersin identifie, lui, en 1894 le bacille de la peste."
+    },
+    {
+      "q": "Le vaccin BCG, dirigé contre la tuberculose, a été mis au point par Calmette et Guérin en :",
+      "o": [
+        "1885",
+        "1896",
+        "1921",
+        "1945"
+      ],
+      "r": 2,
+      "x": "Le BCG est administré à l'homme pour la première fois en 1921, après treize années de culture du bacille bovin. L'année 1885 correspond, elle, à la première vaccination antirabique de Pasteur."
+    },
+    {
+      "q": "La seule maladie humaine déclarée éradiquée par l'Organisation mondiale de la santé (OMS), en 1980, est :",
+      "o": [
+        "la poliomyélite",
+        "la variole",
+        "la rougeole",
+        "la peste"
+      ],
+      "r": 1,
+      "x": "L'OMS proclame en 1980 l'éradication mondiale de la variole, obtenue par la vaccination de masse. La poliomyélite, en voie d'élimination, circule encore dans quelques foyers et n'est donc pas éradiquée."
+    },
+    {
+      "q": "La Journée mondiale de la santé est célébrée chaque année le :",
+      "o": [
+        "7 avril",
+        "25 avril",
+        "1er mai",
+        "1er décembre"
+      ],
+      "r": 0,
+      "x": "Le 7 avril commémore la création de l'OMS en 1948. Le 25 avril est la Journée mondiale de lutte contre le paludisme et le 1er décembre celle de lutte contre le sida."
+    },
+    {
+      "q": "La vaccination confère au sujet une immunité :",
+      "o": [
+        "active et durable",
+        "passive et immédiate",
+        "active et immédiate",
+        "passive et durable"
+      ],
+      "r": 0,
+      "x": "Le vaccin oblige l'organisme à fabriquer lui-même ses anticorps, d'où une protection durable mais qui met plusieurs jours à s'installer. La sérothérapie apporte au contraire des anticorps tout faits, d'action immédiate mais brève."
+    },
+    {
+      "q": "Les anticorps circulant dans le sang sont produits par :",
+      "o": [
+        "les lymphocytes T",
+        "les macrophages",
+        "les lymphocytes B",
+        "les hématies"
+      ],
+      "r": 2,
+      "x": "Les lymphocytes B se transforment en plasmocytes qui sécrètent des anticorps spécifiques d'un antigène donné. Les lymphocytes T assurent, eux, l'immunité à médiation cellulaire."
+    },
+    {
+      "q": "La phagocytose des microbes dans l'organisme est assurée par :",
+      "o": [
+        "les hématies",
+        "les plaquettes",
+        "les lymphocytes B",
+        "les macrophages"
+      ],
+      "r": 3,
+      "x": "Les macrophages et les granulocytes englobent puis digèrent les microbes, constituant la première ligne de défense non spécifique. Les plaquettes n'interviennent, elles, que dans la coagulation du sang."
+    },
+    {
+      "q": "Les antibiotiques sont sans effet sur :",
+      "o": [
+        "les bactéries",
+        "les champignons",
+        "les virus",
+        "les parasites"
+      ],
+      "r": 2,
+      "x": "Les virus se multiplient dans les cellules de l'hôte et ne possèdent pas les structures que visent les antibiotiques. Une grippe ou un rhume ne relèvent donc pas d'un traitement antibiotique."
+    },
+    {
+      "q": "Le virus de l'immunodéficience humaine (VIH) a été isolé pour la première fois en :",
+      "o": [
+        "1978",
+        "1981",
+        "1983",
+        "1996"
+      ],
+      "r": 2,
+      "x": "L'équipe de l'Institut Pasteur isole le VIH en 1983, découverte couronnée par le prix Nobel de médecine en 2008. L'année 1981 correspond à la description des premiers cas de sida aux États-Unis."
+    },
+    {
+      "q": "En Afrique subsaharienne, la principale voie de transmission du VIH est :",
+      "o": [
+        "la voie sexuelle",
+        "la transfusion sanguine",
+        "la voie materno-fœtale",
+        "le partage de seringues"
+      ],
+      "r": 0,
+      "x": "Les rapports sexuels non protégés représentent l'essentiel des contaminations dans la région. La transmission de la mère à l'enfant recule fortement grâce aux traitements antirétroviraux pendant la grossesse."
+    },
+    {
+      "q": "La cirrhose et le cancer du foie peuvent résulter d'une infection chronique par le virus de :",
+      "o": [
+        "l'hépatite A",
+        "l'hépatite B",
+        "la grippe",
+        "la rougeole"
+      ],
+      "r": 1,
+      "x": "Le virus de l'hépatite B se transmet par le sang, les rapports sexuels et de la mère à l'enfant, et peut évoluer vers une atteinte chronique du foie. L'hépatite A, de transmission alimentaire, guérit le plus souvent sans séquelles."
+    },
+    {
+      "q": "Le premier vaccin contre la rage a été administré à l'homme en 1885 par :",
+      "o": [
+        "Edward Jenner",
+        "Robert Koch",
+        "Emil von Behring",
+        "Louis Pasteur"
+      ],
+      "r": 3,
+      "x": "Louis Pasteur vaccine le jeune Joseph Meister en 1885, après morsure par un chien enragé. Edward Jenner avait, lui, inoculé dès 1796 la vaccine pour protéger de la variole."
+    },
+    {
+      "q": "La poliomyélite atteint principalement :",
+      "o": [
+        "les cellules du foie",
+        "les neurones de la moelle épinière",
+        "les cellules des poumons",
+        "les cellules des reins"
+      ],
+      "r": 1,
+      "x": "Le virus détruit les neurones moteurs de la moelle épinière, ce qui provoque des paralysies souvent définitives. Le vaccin, administré lors des campagnes de masse, reste le moyen de prévention de la poliomyélite."
+    },
+    {
+      "q": "Dans le Programme élargi de vaccination (PEV), le vaccin contre la rougeole est administré à partir de l'âge de :",
+      "o": [
+        "6 semaines",
+        "4 mois",
+        "9 mois",
+        "18 mois"
+      ],
+      "r": 2,
+      "x": "La première dose est donnée à 9 mois, âge auquel les anticorps transmis par la mère ont disparu. Les vaccins administrés à 6 semaines sont ceux du pentavalent, du vaccin antipoliomyélitique oral et d'autres vaccins selon le programme national."
+    },
+    {
+      "q": "Le diagnostic de certitude de la méningite repose sur l'examen :",
+      "o": [
+        "du sang",
+        "des urines",
+        "des selles",
+        "du liquide céphalo-rachidien"
+      ],
+      "r": 3,
+      "x": "La ponction lombaire prélève le liquide céphalo-rachidien, dont l'aspect trouble et l'analyse confirment l'infection et identifient le germe. L'hémoculture n'apporte, elle, qu'un argument indirect."
+    },
+    {
+      "q": "La ceinture africaine de la méningite, qui s'étend du Sénégal à l'Éthiopie, a été décrite en :",
+      "o": [
+        "1948",
+        "1963",
+        "1975",
+        "1996"
+      ],
+      "r": 1,
+      "x": "Le médecin Lapeyssonnie délimite cette bande en 1963 à partir de la répartition des épidémies ; elle couvre 26 pays dont le Burkina Faso. L'année 1996 correspond à l'une des plus meurtrières épidémies qu'ait connues la région."
+    },
+    {
+      "q": "Au Burkina Faso, les épidémies de méningite surviennent principalement :",
+      "o": [
+        "pendant la saison sèche et l'harmattan",
+        "pendant la saison des pluies",
+        "au moment des récoltes",
+        "pendant la crue des rivières"
+      ],
+      "r": 0,
+      "x": "La sécheresse de l'air et les poussières de l'harmattan fragilisent les muqueuses du rhinopharynx et favorisent l'invasion du méningocoque. La saison épidémique s'étend généralement de janvier à avril et s'achève avec les premières pluies."
+    },
+    {
+      "q": "La drépanocytose se transmet selon un mode :",
+      "o": [
+        "autosomique récessif",
+        "autosomique dominant",
+        "lié au chromosome X",
+        "lié au chromosome Y"
+      ],
+      "r": 0,
+      "x": "L'enfant ne développe la maladie que s'il reçoit le gène anormal de ses deux parents, porteurs sains dans la plupart des cas. Le mode récessif explique que deux parents apparemment indemnes puissent avoir un enfant malade."
+    },
+    {
+      "q": "Les sujets porteurs du trait drépanocytaire AS présentent :",
+      "o": [
+        "une résistance relative au paludisme grave",
+        "une sensibilité accrue au paludisme grave",
+        "une résistance relative à la tuberculose",
+        "une sensibilité accrue à la tuberculose"
+      ],
+      "r": 0,
+      "x": "L'hémoglobine S gêne le développement du Plasmodium dans les hématies, ce qui confère aux porteurs AS un avantage en zone impaludée. Cet avantage explique la forte fréquence du gène en Afrique de l'Ouest malgré la gravité de la forme SS."
+    },
+    {
+      "q": "Une incompatibilité fœto-maternelle rhésus peut survenir lorsque :",
+      "o": [
+        "la mère est rhésus positif et l'enfant rhésus négatif",
+        "les deux parents sont rhésus négatif",
+        "la mère est rhésus négatif et l'enfant rhésus positif",
+        "les deux parents sont rhésus positif"
+      ],
+      "r": 2,
+      "x": "La mère rhésus négatif fabrique des anticorps contre les hématies rhésus positif de l'enfant, surtout lors des grossesses suivantes. Une injection de gammaglobulines anti-D après l'accouchement prévient cette immunisation."
+    },
+    {
+      "q": "Le volume de sang prélevé lors d'un don du sang chez l'adulte est d'environ :",
+      "o": [
+        "150 millilitres",
+        "450 millilitres",
+        "900 millilitres",
+        "1,5 litre"
+      ],
+      "r": 1,
+      "x": "Le don porte sur environ 450 millilitres, soit moins d'un dixième du volume sanguin total. Le donneur doit peser au moins 50 kilogrammes et respecter un délai de plusieurs semaines entre deux dons."
+    },
+    {
+      "q": "L'Organisation mondiale de la santé (OMS) recommande un allaitement maternel exclusif jusqu'à l'âge de :",
+      "o": [
+        "2 mois",
+        "4 mois",
+        "6 mois",
+        "12 mois"
+      ],
+      "r": 2,
+      "x": "Jusqu'à 6 mois, le lait maternel seul couvre tous les besoins du nourrisson, eau comprise. L'allaitement se poursuit ensuite avec des aliments de complément jusqu'à 2 ans ou au-delà."
+    },
+    {
+      "q": "La malnutrition aiguë sévère est dépistée chez l'enfant de 6 à 59 mois par un périmètre brachial inférieur à :",
+      "o": [
+        "105 millimètres",
+        "115 millimètres",
+        "125 millimètres",
+        "135 millimètres"
+      ],
+      "r": 1,
+      "x": "Un périmètre brachial inférieur à 115 millimètres signe une malnutrition aiguë sévère imposant une prise en charge immédiate. La zone jaune, entre 115 et 125 millimètres, correspond à la malnutrition aiguë modérée."
+    },
+    {
+      "q": "La carence en vitamine A provoque chez l'enfant :",
+      "o": [
+        "la cécité nocturne",
+        "le goitre",
+        "le rachitisme",
+        "l'anémie"
+      ],
+      "r": 0,
+      "x": "Le manque de vitamine A altère la rétine et la cornée, provoquant d'abord une cécité nocturne puis la xérophtalmie. Les campagnes de supplémentation semestrielle en capsules visent justement à prévenir cette cécité évitable."
+    },
+    {
+      "q": "Chez la femme enceinte, la supplémentation en fer vise à prévenir :",
+      "o": [
+        "le goitre",
+        "le rachitisme",
+        "le scorbut",
+        "l'anémie"
+      ],
+      "r": 3,
+      "x": "Les besoins en fer augmentent pendant la grossesse et une carence peut entraîner une anémie ferriprive. La supplémentation en fer contribue à prévenir ou corriger cette anémie et à réduire les conséquences maternelles et fœtales d'une carence en fer."
+    },
+    {
+      "q": "Les maladies du péril fécal, comme la fièvre typhoïde, se transmettent par :",
+      "o": [
+        "les piqûres d'insectes",
+        "l'eau et les aliments souillés",
+        "l'air expiré",
+        "le contact de la peau"
+      ],
+      "r": 1,
+      "x": "Les germes éliminés dans les selles contaminent l'eau de boisson et les aliments mal lavés. Le lavage des mains au savon et l'usage de latrines coupent l'essentiel de cette chaîne de transmission."
+    },
+    {
+      "q": "L'Organisation mondiale de la santé (OMS) a qualifié la Covid-19 de pandémie le :",
+      "o": [
+        "31 décembre 2019",
+        "30 janvier 2020",
+        "11 mars 2020",
+        "11 mai 2020"
+      ],
+      "r": 2,
+      "x": "Le 11 mars 2020, l'OMS qualifie l'épidémie de pandémie en raison de sa diffusion sur tous les continents. Le 30 janvier 2020 correspond, lui, à la déclaration d'urgence de santé publique de portée internationale."
+    },
+    {
+      "q": "Depuis 2016, le certificat international de vaccination contre la fièvre jaune est valable :",
+      "o": [
+        "5 ans",
+        "10 ans",
+        "20 ans",
+        "toute la vie"
+      ],
+      "r": 3,
+      "x": "Une dose unique confère une protection à vie et le certificat n'a plus besoin d'être renouvelé tous les dix ans. Ce certificat reste exigé à l'entrée de nombreux pays, dont le Burkina Faso."
+    },
+    {
+      "q": "Le diabète de type 2 résulte d'un défaut de sécrétion ou d'action de :",
+      "o": [
+        "l'insuline",
+        "l'adrénaline",
+        "la thyroxine",
+        "le glucagon"
+      ],
+      "r": 0,
+      "x": "L'insuline, sécrétée par le pancréas, fait entrer le glucose dans les cellules et abaisse la glycémie. Le glucagon a l'effet inverse en libérant le glucose stocké dans le foie."
+    },
+    {
+      "q": "Le principal facteur de risque du cancer du poumon est :",
+      "o": [
+        "le tabac",
+        "le bruit",
+        "le sel",
+        "le sucre"
+      ],
+      "r": 0,
+      "x": "La fumée de tabac est responsable de la grande majorité des cancers du poumon, y compris chez le fumeur passif. L'excès de sel est, lui, associé à l'hypertension artérielle et non à ce cancer."
+    },
+    {
+      "q": "La dose de rappel d'un vaccin a pour but :",
+      "o": [
+        "de renforcer la mémoire immunitaire",
+        "de guérir une infection en cours",
+        "de remplacer un traitement antibiotique",
+        "d'atténuer les effets secondaires du vaccin"
+      ],
+      "r": 0,
+      "x": "Le rappel réactive les lymphocytes mémoire et élève durablement le taux d'anticorps protecteurs. Un vaccin est préventif et reste sans effet sur une maladie déjà déclarée."
+    },
+    {
+      "q": "Le test de dépistage courant du VIH recherche dans le sang :",
+      "o": [
+        "le virus lui-même",
+        "les lymphocytes T4",
+        "les globules rouges",
+        "les anticorps anti-VIH"
+      ],
+      "r": 3,
+      "x": "Les tests de dépistage courant (ELISA de 4e génération) recherchent principalement les anticorps produits par l'organisme. Pour plus de précocité, ils y associent la détection de l'antigène p24 (une protéine du virus), réduisant la phase muette à environ 2 à 3 semaines. La numération des lymphocytes T4 sert ensuite au suivi du malade, non au dépistage."
+    },
+    {
+      "q": "Le tétanos, dû à une bactérie présente dans le sol, se contracte par :",
+      "o": [
+        "l'eau de boisson",
+        "l'air inspiré",
+        "les piqûres de moustiques",
+        "une plaie souillée"
+      ],
+      "r": 3,
+      "x": "Le bacille tétanique pénètre par une plaie souillée de terre et libère une toxine qui provoque des contractures généralisées. La vaccination antitétanique de la femme enceinte protège aussi le nouveau-né du tétanos néonatal."
+    },
+    {
+      "q": "Le bacille responsable de la lèpre a été identifié en 1873 par :",
+      "o": [
+        "Gerhard Hansen",
+        "Robert Koch",
+        "Alexandre Yersin",
+        "Charles Nicolle"
+      ],
+      "r": 0,
+      "x": "Gerhard Hansen découvre en 1873 le bacille de la lèpre, maladie qui porte aujourd'hui son nom. La lèpre se traite depuis les années 1980 par une polychimiothérapie gratuite qui la rend non contagieuse en quelques jours."
+    },
+    {
+      "q": "Le pigment qui donne aux feuilles leur couleur verte et capte l'énergie lumineuse est :",
+      "o": [
+        "la carotène",
+        "la xanthophylle",
+        "la chlorophylle",
+        "l'anthocyane"
+      ],
+      "r": 2,
+      "x": "La chlorophylle, contenue dans les chloroplastes, absorbe l'énergie lumineuse indispensable à la photosynthèse. Les carotènes et xanthophylles ne sont que des pigments accessoires, visibles lors du jaunissement des feuilles."
+    },
+    {
+      "q": "Les échanges gazeux entre la feuille et l'air atmosphérique se font par :",
+      "o": [
+        "les nervures",
+        "les stomates",
+        "les racines",
+        "l'écorce"
+      ],
+      "r": 1,
+      "x": "Les stomates, minuscules ouvertures de l'épiderme foliaire, laissent entrer le dioxyde de carbone et sortir le dioxygène et la vapeur d'eau. Leur fermeture pendant les heures chaudes limite les pertes d'eau de la plante."
+    },
+    {
+      "q": "La sève brute, constituée d'eau et de sels minéraux, circule dans :",
+      "o": [
+        "les vaisseaux du bois",
+        "les vaisseaux du liber",
+        "les cellules de l'épiderme",
+        "les poils absorbants"
+      ],
+      "r": 0,
+      "x": "La sève brute circule principalement dans le xylème, des racines vers les parties aériennes. La sève élaborée, riche notamment en sucres produits par la photosynthèse, circule dans le phloème des organes sources vers les organes qui utilisent ou stockent ces substances."
+    },
+    {
+      "q": "Chez la plante verte, la respiration se déroule :",
+      "o": [
+        "uniquement le jour",
+        "uniquement la nuit",
+        "uniquement en saison sèche",
+        "de jour comme de nuit"
+      ],
+      "r": 3,
+      "x": "La plante respire en permanence, alors que la photosynthèse n'a lieu qu'en présence de lumière. La nuit, seule la respiration subsiste : la plante rejette alors du dioxyde de carbone."
+    },
+    {
+      "q": "La perte d'eau sous forme de vapeur par les feuilles d'une plante s'appelle :",
+      "o": [
+        "la respiration",
+        "la condensation",
+        "la fermentation",
+        "la transpiration"
+      ],
+      "r": 3,
+      "x": "La transpiration foliaire crée l'appel qui fait monter la sève brute des racines jusqu'aux feuilles. Elle s'intensifie sous l'effet de la chaleur et du vent sec de l'harmattan."
+    },
+    {
+      "q": "La germination d'une graine exige la réunion de trois conditions :",
+      "o": [
+        "l'eau, la chaleur et le dioxygène",
+        "l'eau, la lumière et l'azote",
+        "la chaleur, la lumière et le sel",
+        "le dioxygène, la lumière et l'engrais"
+      ],
+      "r": 0,
+      "x": "Une graine germe en présence d'eau, d'une température convenable et de dioxygène, la lumière n'étant pas nécessaire. La graine puise alors ses réserves avant de fabriquer elle-même sa matière organique."
+    },
+    {
+      "q": "Le mil, le sorgho et le maïs appartiennent au groupe des :",
+      "o": [
+        "légumineuses",
+        "dicotylédones",
+        "monocotylédones",
+        "gymnospermes"
+      ],
+      "r": 2,
+      "x": "Ces céréales sont des monocotylédones : leur graine possède un seul cotylédon et leurs feuilles présentent des nervures parallèles. Le niébé et l'arachide sont au contraire des dicotylédones à nervures ramifiées."
+    },
+    {
+      "q": "Le transport du pollen des étamines vers le pistil porte le nom de :",
+      "o": [
+        "fécondation",
+        "germination",
+        "dissémination",
+        "pollinisation"
+      ],
+      "r": 3,
+      "x": "La pollinisation précède la fécondation et s'effectue grâce au vent, aux insectes ou à l'eau. La fécondation proprement dite n'intervient qu'après la germination du grain de pollen sur le stigmate."
+    },
+    {
+      "q": "Après la fécondation, le fruit se forme à partir :",
+      "o": [
+        "de l'ovule",
+        "de l'étamine",
+        "du stigmate",
+        "de l'ovaire"
+      ],
+      "r": 3,
+      "x": "L'ovaire se transforme en fruit tandis que chaque ovule fécondé devient une graine. L'étamine, organe mâle, se dessèche et tombe après avoir libéré son pollen."
+    },
+    {
+      "q": "La technique consistant à fixer un rameau d'une variété choisie sur le pied d'une autre plante s'appelle :",
+      "o": [
+        "le bouturage",
+        "le marcottage",
+        "le semis direct",
+        "le greffage"
+      ],
+      "r": 3,
+      "x": "Le greffage permet d'obtenir des manguiers ou des agrumes qui produisent des fruits identiques à ceux du pied mère et entrent plus tôt en production. Le bouturage consiste seulement à faire raciner un fragment de tige."
+    },
+    {
+      "q": "Dans un engrais, l'élément qui favorise surtout le développement des feuilles et des tiges est :",
+      "o": [
+        "le phosphore",
+        "le potassium",
+        "l'azote",
+        "le calcium"
+      ],
+      "r": 2,
+      "x": "L'azote entre dans la composition des protéines et entretient la croissance végétative et la couleur verte du feuillage. Le phosphore agit davantage sur l'enracinement et la floraison, le potassium sur la qualité des fruits et la résistance à la sécheresse."
+    },
+    {
+      "q": "La teneur en azote de l'urée, engrais très utilisé sur les céréales, est de :",
+      "o": [
+        "21 %",
+        "33 %",
+        "46 %",
+        "60 %"
+      ],
+      "r": 2,
+      "x": "L'urée contient 46 % d'azote. Lorsqu'elle reste à la surface du sol, une partie de l'azote peut être perdue par volatilisation sous forme d'ammoniac ; son incorporation dans le sol ou une pluie suffisante limite ces pertes."
+    },
+    {
+      "q": "L'apport de fumier et de compost aux champs a pour principal effet :",
+      "o": [
+        "d'acidifier fortement le sol",
+        "de détruire les vers de terre",
+        "d'imperméabiliser la surface du sol",
+        "d'enrichir le sol en matière organique"
+      ],
+      "r": 3,
+      "x": "La fumure organique améliore la structure du sol, sa capacité de rétention d'eau et sa richesse en éléments nutritifs. Elle complète l'engrais minéral sans le remplacer, car sa libération d'éléments est plus lente."
+    },
+    {
+      "q": "Faire succéder une céréale et une légumineuse sur une même parcelle constitue :",
+      "o": [
+        "une rotation des cultures",
+        "une jachère améliorée",
+        "une culture attelée",
+        "une culture hors sol"
+      ],
+      "r": 0,
+      "x": "La rotation limite l'épuisement du sol et rompt le cycle des parasites, la légumineuse enrichissant la parcelle en azote. La jachère, elle, consiste à laisser la terre au repos sans la cultiver."
+    },
+    {
+      "q": "La mise au repos prolongée d'une terre cultivée pour lui permettre de reconstituer sa fertilité s'appelle :",
+      "o": [
+        "le sarclage",
+        "la jachère",
+        "le buttage",
+        "le labour"
+      ],
+      "r": 1,
+      "x": "La jachère laisse la végétation naturelle reconstituer la matière organique et la structure du sol. La pression démographique a fortement raccourci sa durée au Burkina Faso, d'où le recours aux fumures et aux rotations."
+    },
+    {
+      "q": "Le paysan burkinabè distingué en 2018 par le prix Nobel alternatif pour avoir reboisé des terres arides grâce au zaï est :",
+      "o": [
+        "Bernard Lédéa Ouédraogo",
+        "Joseph Ki-Zerbo",
+        "Yacouba Sawadogo",
+        "Thomas Sankara"
+      ],
+      "r": 2,
+      "x": "Yacouba Sawadogo, originaire du Yatenga, a recréé une forêt de plusieurs dizaines d'hectares sur des terres abandonnées et reçu le Right Livelihood Award en 2018. Bernard Lédéa Ouédraogo et Joseph Ki-Zerbo avaient reçu le même prix, respectivement en 1990 et 1997."
+    },
+    {
+      "q": "La technique du zaï consiste à :",
+      "o": [
+        "creuser des trous garnis de fumure avant les pluies",
+        "planter des arbres en bordure des champs",
+        "brûler les résidus de récolte avant le semis",
+        "semer en ligne à l'aide d'un semoir attelé"
+      ],
+      "r": 0,
+      "x": "Les poquets du zaï concentrent l'eau de pluie et la matière organique au pied de chaque plant, ce qui permet de cultiver des sols encroûtés. Les termites attirées par le fumier percent la croûte et améliorent l'infiltration."
+    },
+    {
+      "q": "Les cordons pierreux installés dans les champs sont disposés :",
+      "o": [
+        "selon la pente du terrain",
+        "suivant les courbes de niveau",
+        "le long des pistes rurales",
+        "autour des habitations"
+      ],
+      "r": 1,
+      "x": "Disposés perpendiculairement à la pente, suivant les courbes de niveau, les cordons pierreux freinent le ruissellement et retiennent les particules de terre. Ils s'associent souvent aux demi-lunes et au zaï dans les aménagements de conservation des eaux et des sols."
+    },
+    {
+      "q": "Le transport des particules fines du sol par l'harmattan relève de :",
+      "o": [
+        "l'érosion hydrique",
+        "l'érosion éolienne",
+        "la salinisation",
+        "l'engorgement"
+      ],
+      "r": 1,
+      "x": "L'érosion éolienne emporte les éléments les plus fins et les plus fertiles des sols nus pendant la saison sèche. Les haies vives et les bandes enherbées constituent la parade la plus accessible aux producteurs."
+    },
+    {
+      "q": "L'initiative de la Grande muraille verte pour le Sahara et le Sahel a été lancée par l'Union africaine en :",
+      "o": [
+        "2002",
+        "2007",
+        "2012",
+        "2020"
+      ],
+      "r": 1,
+      "x": "Lancée en 2007, la Grande muraille verte relie Dakar à Djibouti sur près de 8 000 kilomètres et associe onze pays fondateurs dont le Burkina Faso. Elle vise la restauration de 100 millions d'hectares de terres dégradées à l'horizon 2030."
+    },
+    {
+      "q": "Le Comité permanent inter-États de lutte contre la sécheresse dans le Sahel (CILSS), dont le siège est à Ouagadougou, a été créé en :",
+      "o": [
+        "1963",
+        "1973",
+        "1983",
+        "1993"
+      ],
+      "r": 1,
+      "x": "Le CILSS naît en 1973 à la suite des grandes sécheresses qui frappent le Sahel et installe son secrétariat exécutif à Ouagadougou. Il regroupe aujourd'hui treize États et abrite notamment le centre régional Agrhymet."
+    },
+    {
+      "q": "L'arbre dont les amandes fournissent un beurre largement exporté par le Burkina Faso est :",
+      "o": [
+        "le néré",
+        "le baobab",
+        "le karité",
+        "le kapokier"
+      ],
+      "r": 2,
+      "x": "Le karité, Vitellaria paradoxa, fournit une amande dont on extrait le beurre utilisé en alimentation et en cosmétique. Le néré donne, lui, des graines fermentées qui servent à préparer le soumbala."
+    },
+    {
+      "q": "Le soumbala, condiment traditionnel burkinabè, est obtenu par fermentation des graines :",
+      "o": [
+        "de karité",
+        "de baobab",
+        "de tamarinier",
+        "de néré"
+      ],
+      "r": 3,
+      "x": "Les graines de néré, Parkia biglobosa, fermentées puis moulées, donnent le soumbala, riche en protéines. Sa farine jaune, le zamné de parc, sert également de complément alimentaire pour les enfants."
+    },
+    {
+      "q": "Le fruit du baobab, appelé pain de singe, est particulièrement riche en :",
+      "o": [
+        "vitamine A",
+        "vitamine C",
+        "fer",
+        "iode"
+      ],
+      "r": 1,
+      "x": "La pulpe du pain de singe contient plusieurs fois plus de vitamine C que l'orange, à masse égale. Les feuilles du baobab, séchées et pilées, fournissent par ailleurs la farine de kuka utilisée dans les sauces."
+    },
+    {
+      "q": "Le Faidherbia albida, arbre caractéristique des parcs agraires sahéliens, présente la particularité :",
+      "o": [
+        "de perdre ses feuilles pendant la saison des pluies",
+        "de perdre ses feuilles pendant la saison sèche",
+        "de fleurir une fois tous les dix ans",
+        "de ne produire aucune graine"
+      ],
+      "r": 0,
+      "x": "Ce phénomène de phénologie inversée laisse passer la lumière vers les cultures pendant l'hivernage et restitue au sol une litière fertilisante. Les rendements de mil et de sorgho sont sensiblement plus élevés sous son houppier."
+    },
+    {
+      "q": "Les feuilles de moringa sont recommandées en alimentation infantile pour leur richesse en :",
+      "o": [
+        "protéines et en vitamines",
+        "alcaloïdes et en tanins",
+        "amidon et en cellulose",
+        "huiles essentielles et en latex"
+      ],
+      "r": 0,
+      "x": "Les feuilles séchées de moringa apportent protéines, fer, calcium et vitamines A et C en quantités élevées. Elles sont utilisées en poudre dans les bouillies pour prévenir la malnutrition."
+    },
+    {
+      "q": "Les principales céréales cultivées en zone sahélienne du Burkina Faso sont :",
+      "o": [
+        "le riz et le blé",
+        "le mil et le sorgho",
+        "l'orge et l'avoine",
+        "le maïs et le fonio"
+      ],
+      "r": 1,
+      "x": "Le mil et le sorgho, peu exigeants en eau, dominent les zones recevant moins de 600 millimètres de pluie par an. Le maïs, plus productif mais plus exigeant, occupe surtout les régions du Sud et de l'Ouest."
+    },
+    {
+      "q": "Au Burkina Faso, la riziculture irriguée se pratique principalement :",
+      "o": [
+        "sur les plateaux latéritiques",
+        "dans les dunes du Nord",
+        "dans les bas-fonds et les périmètres aménagés",
+        "sur les versants des collines"
+      ],
+      "r": 2,
+      "x": "Les plaines de Bagré et la vallée du Sourou constituent les principaux périmètres rizicoles irrigués du pays. Les bas-fonds non aménagés accueillent, eux, une riziculture de submersion aux rendements plus faibles."
+    },
+    {
+      "q": "La fibre de coton que l'on file et tisse est formée :",
+      "o": [
+        "des poils de la graine",
+        "des fibres de la tige",
+        "des nervures des feuilles",
+        "des racines séchées"
+      ],
+      "r": 0,
+      "x": "Les fibres textiles du cotonnier sont des poils épidermiques qui se développent sur la graine à l'intérieur de la capsule. L'égrenage sépare ensuite ces fibres des graines, dont on tire l'huile et le tourteau."
+    },
+    {
+      "q": "L'arachide se distingue des autres plantes cultivées par le fait que ses fruits :",
+      "o": [
+        "poussent au sommet de la tige",
+        "se forment sur les racines",
+        "apparaissent avant les fleurs",
+        "mûrissent sous la terre"
+      ],
+      "r": 3,
+      "x": "Après la fécondation, le pédoncule floral s'allonge et enfonce le jeune fruit dans le sol, où il achève sa maturation. Cette particularité impose un sol meuble et un arrachage soigneux à la récolte."
+    },
+    {
+      "q": "Le niébé occupe une place centrale dans l'alimentation burkinabè grâce à sa richesse en :",
+      "o": [
+        "lipides",
+        "protéines",
+        "vitamine C",
+        "iode"
+      ],
+      "r": 1,
+      "x": "Le niébé contient environ un quart de son poids sec en protéines, ce qui en fait un substitut accessible à la viande. Ses fanes constituent en outre un fourrage recherché pendant la saison sèche."
+    },
+    {
+      "q": "L'Institut de l'environnement et de recherches agricoles (INERA) a pour mission principale :",
+      "o": [
+        "la recherche agricole et la production de semences améliorées",
+        "la commercialisation des engrais importés",
+        "le contrôle des prix des céréales sur les marchés",
+        "la distribution du crédit aux coopératives"
+      ],
+      "r": 0,
+      "x": "L'INERA, rattaché au CNRST, met au point des variétés adaptées et des itinéraires techniques pour les producteurs. La commercialisation des intrants relève, elle, d'autres structures publiques et privées."
+    },
+    {
+      "q": "L'intérêt d'une semence améliorée par rapport à une semence traditionnelle tient surtout :",
+      "o": [
+        "à son rendement et à son cycle plus courts",
+        "à son prix de vente toujours plus bas",
+        "à sa conservation illimitée en grenier",
+        "à sa culture sans aucune fumure"
+      ],
+      "r": 0,
+      "x": "Les variétés améliorées offrent un cycle plus court, adapté au raccourcissement de la saison des pluies, et un meilleur rendement. Elles exigent cependant une fumure et un entretien rigoureux pour exprimer ce potentiel."
+    },
+    {
+      "q": "Un sol cultivable est constitué de matière minérale, d'eau, d'air et :",
+      "o": [
+        "de roche mère compacte",
+        "de sable uniquement",
+        "de matière organique",
+        "de sel marin"
+      ],
+      "r": 2,
+      "x": "La matière organique, issue de la décomposition des débris végétaux et animaux, forme l'humus qui retient l'eau et les éléments nutritifs. La roche mère se situe, elle, sous les horizons cultivés et ne participe pas directement à la nutrition des plantes."
+    },
+    {
+      "q": "Un sol acide peut être corrigé par un apport :",
+      "o": [
+        "d'urée",
+        "de sel de cuisine",
+        "de chaux ou de cendres",
+        "de sable fin"
+      ],
+      "r": 2,
+      "x": "La chaux et les cendres relèvent le pH du sol et améliorent la disponibilité du phosphore pour les cultures. L'urée, engrais azoté, tend au contraire à acidifier le sol à la longue."
+    },
+    {
+      "q": "Un sol à dominante sableuse se caractérise par :",
+      "o": [
+        "une forte rétention d'eau",
+        "une faible perméabilité",
+        "une grande richesse en argile",
+        "un drainage rapide de l'eau"
+      ],
+      "r": 3,
+      "x": "Les gros grains du sol sableux laissent l'eau s'infiltrer vite, d'où un dessèchement rapide et une faible réserve utile. Les sols argileux retiennent au contraire l'eau mais se compactent et se fissurent en saison sèche."
+    },
+    {
+      "q": "L'humus résulte :",
+      "o": [
+        "de l'altération directe de la roche mère",
+        "de l'évaporation de l'eau du sol",
+        "du dépôt de sable par le vent",
+        "de la décomposition des débris végétaux et animaux"
+      ],
+      "r": 3,
+      "x": "Les micro-organismes et les vers de terre transforment les débris organiques en humus, matière sombre et colloïdale. Cet humus améliore la structure du sol et retient l'eau comme les éléments nutritifs."
+    },
+    {
+      "q": "La transformation de l'ammoniac du sol en nitrates assimilables par les plantes s'appelle :",
+      "o": [
+        "la fermentation",
+        "la nitrification",
+        "la photosynthèse",
+        "la respiration"
+      ],
+      "r": 1,
+      "x": "Des bactéries du sol oxydent l'ammoniac en nitrites puis en nitrates, forme d'azote absorbée en masse par les racines. La dénitrification effectue le chemin inverse et renvoie l'azote dans l'atmosphère."
+    },
+    {
+      "q": "Dans le cycle de l'azote, les plantes absorbent cet élément essentiellement sous forme :",
+      "o": [
+        "de diazote gazeux",
+        "d'azote liquide",
+        "de nitrates dissous dans l'eau du sol",
+        "de protéines du sol"
+      ],
+      "r": 2,
+      "x": "Les racines prélèvent l'azote sous forme de nitrates et, plus faiblement, d'ammonium dissous. Le diazote de l'air, pourtant très abondant, n'est utilisable que par les bactéries fixatrices des légumineuses."
+    },
+    {
+      "q": "La matière organique fabriquée par la plante verte lors de la photosynthèse est mise en réserve sous forme :",
+      "o": [
+        "de cellulose",
+        "de protéines",
+        "de lipides",
+        "d'amidon"
+      ],
+      "r": 3,
+      "x": "Le glucose produit par les feuilles est stocké sous forme d'amidon dans les graines, les tubercules et les racines. La cellulose sert, elle, à bâtir la paroi des cellules et non à constituer une réserve."
+    },
+    {
+      "q": "Les ruminants digèrent la cellulose de l'herbe grâce :",
+      "o": [
+        "aux micro-organismes de leur panse",
+        "à l'acidité de leur estomac",
+        "à leurs dents très tranchantes",
+        "à la longueur de leur intestin"
+      ],
+      "r": 0,
+      "x": "Les bactéries et protozoaires du rumen dégradent la cellulose que les enzymes de l'animal ne peuvent attaquer. C'est cette symbiose qui permet au zébu de valoriser des fourrages grossiers."
+    },
+    {
+      "q": "L'estomac des ruminants comporte :",
+      "o": [
+        "deux compartiments",
+        "trois compartiments",
+        "quatre compartiments",
+        "six compartiments"
+      ],
+      "r": 2,
+      "x": "Le rumen, le réseau, le feuillet et la caillette forment les quatre compartiments de l'estomac des ruminants. Seule la caillette assure une digestion chimique comparable à celle de l'estomac des autres mammifères."
+    },
+    {
+      "q": "La durée d'incubation d'un œuf de poule est de :",
+      "o": [
+        "15 jours",
+        "21 jours",
+        "28 jours",
+        "35 jours"
+      ],
+      "r": 1,
+      "x": "L'embryon de poule se développe en 21 jours à une température voisine de 37,5 degrés Celsius. Les œufs de canard demandent, eux, 28 jours d'incubation."
+    },
+    {
+      "q": "Le rôle agricole le plus important des abeilles est :",
+      "o": [
+        "la production de cire",
+        "la fabrication de propolis",
+        "la pollinisation des cultures",
+        "la destruction des criquets"
+      ],
+      "r": 2,
+      "x": "En butinant, les abeilles assurent la pollinisation croisée qui augmente sensiblement les rendements de nombreuses cultures. Le miel et la cire ne sont, en valeur agricole globale, qu'un bénéfice secondaire."
+    },
+    {
+      "q": "Le poisson le plus élevé dans les retenues et étangs piscicoles du Burkina Faso est :",
+      "o": [
+        "le thon",
+        "la sardine",
+        "le saumon",
+        "le tilapia"
+      ],
+      "r": 3,
+      "x": "Le tilapia, rustique et à croissance rapide, domine la pisciculture nationale, souvent associé au silure africain. Le thon et la sardine sont des espèces marines, absentes des eaux continentales du pays."
+    },
+    {
+      "q": "Le délai à respecter entre le dernier traitement pesticide et la récolte est appelé :",
+      "o": [
+        "délai de germination",
+        "délai avant récolte",
+        "délai de rotation",
+        "délai de jachère"
+      ],
+      "r": 1,
+      "x": "Ce délai permet au produit de se dégrader afin que les résidus ne dépassent pas les limites admises dans les aliments. Son non-respect sur les cultures maraîchères est une cause fréquente d'intoxications alimentaires."
+    },
+    {
+      "q": "La lutte biologique contre les ravageurs consiste à :",
+      "o": [
+        "utiliser leurs ennemis naturels",
+        "doubler les doses d'insecticides",
+        "brûler les résidus de récolte",
+        "arroser abondamment les parcelles"
+      ],
+      "r": 0,
+      "x": "La lutte biologique introduit ou protège prédateurs et parasites du ravageur, ce qui réduit l'usage des produits chimiques. Elle s'intègre à la lutte intégrée, qui combine variétés résistantes, pratiques culturales et traitements raisonnés."
+    },
+    {
+      "q": "La transformation des déchets végétaux en compost est l'œuvre :",
+      "o": [
+        "du soleil seul",
+        "du vent et de la pluie",
+        "des micro-organismes décomposeurs",
+        "des sels minéraux du sol"
+      ],
+      "r": 2,
+      "x": "Bactéries, champignons et petits invertébrés dégradent les résidus végétaux et produisent une matière stable riche en éléments nutritifs. L'arrosage et le retournement réguliers du tas accélèrent cette décomposition."
+    },
+    {
+      "q": "La coupe abusive du bois de chauffe autour des villes a pour conséquence directe :",
+      "o": [
+        "l'augmentation des pluies",
+        "la dégradation du couvert végétal",
+        "l'enrichissement des sols",
+        "la baisse des températures"
+      ],
+      "r": 1,
+      "x": "Le prélèvement excessif de bois dénude les sols et les expose à l'érosion éolienne et hydrique. La promotion des foyers améliorés et du gaz butane vise précisément à réduire cette pression sur les formations naturelles."
+    },
+    {
+      "q": "Le reboisement communautaire pratiqué chaque hivernage au Burkina Faso vise principalement :",
+      "o": [
+        "à lutter contre la désertification",
+        "à augmenter la production de coton",
+        "à assécher les bas-fonds",
+        "à supprimer les feux de brousse"
+      ],
+      "r": 0,
+      "x": "Les campagnes nationales de plantation reconstituent le couvert végétal et freinent l'avancée des zones dégradées. Leur efficacité dépend surtout de l'entretien des plants après l'hivernage, le taux de survie étant le véritable indicateur de réussite."
+    },
+    {
+      "q": "Le point culminant du Burkina Faso, le Ténakourou, s'élève à :",
+      "o": [
+        "547 mètres",
+        "647 mètres",
+        "749 mètres",
+        "847 mètres"
+      ],
+      "r": 2,
+      "x": "Le Ténakourou, situé dans le massif gréseux du Sud-Ouest près de la frontière malienne, culmine à 749 mètres. L'altitude moyenne du pays n'est que d'environ 400 mètres, ce qui en fait un territoire relativement plat."
+    },
+    {
+      "q": "L'essentiel du territoire burkinabè est constitué :",
+      "o": [
+        "d'une pénéplaine établie sur un socle précambrien",
+        "de hautes montagnes d'origine volcanique",
+        "de dunes de sable mobiles",
+        "de plaines côtières alluviales"
+      ],
+      "r": 0,
+      "x": "Une vaste pénéplaine faiblement ondulée, parsemée de collines résiduelles, repose sur un socle cristallin très ancien. Seul le Sud-Ouest présente un massif gréseux bordé de falaises, comme celles de Banfora."
+    },
+    {
+      "q": "Les deux cours d'eau permanents du Burkina Faso sont :",
+      "o": [
+        "le Nakanbé et le Nazinon",
+        "le Mouhoun et la Comoé",
+        "le Béli et le Gorouol",
+        "la Sirba et la Tapoa"
+      ],
+      "r": 1,
+      "x": "Le Mouhoun et la Comoé coulent toute l'année, alimentés par les pluies plus abondantes du Sud-Ouest. Les affluents du Niger comme le Béli et le Gorouol ne coulent que quatre à six mois par an."
+    },
+    {
+      "q": "Le Nakanbé est l'autre nom de :",
+      "o": [
+        "la Volta Noire",
+        "la Volta Blanche",
+        "la Volta Rouge",
+        "l'Oti"
+      ],
+      "r": 1,
+      "x": "Le Nakanbé correspond à la Volta Blanche, tandis que le Mouhoun est la Volta Noire et le Nazinon la Volta Rouge. Ces trois cours d'eau ont donné au pays son ancien nom de Haute-Volta."
+    },
+    {
+      "q": "Le barrage qui assure l'essentiel de l'alimentation en eau potable de Ouagadougou est celui de :",
+      "o": [
+        "Bagré",
+        "Kompienga",
+        "Ziga",
+        "Samandéni"
+      ],
+      "r": 2,
+      "x": "Le barrage de Ziga, construit sur le Nakanbé, fournit l'essentiel de l'eau potable distribuée à Ouagadougou. Les barrages de Bagré et de Kompienga sont surtout voués à l'hydroélectricité et à l'irrigation."
+    },
+    {
+      "q": "La mare d'Oursi, dans le Nord du Burkina Faso, est un site protégé au titre de la convention :",
+      "o": [
+        "de Bâle",
+        "de Montréal",
+        "de Kyoto",
+        "de Ramsar"
+      ],
+      "r": 3,
+      "x": "La convention de Ramsar, signée en 1971, protège les zones humides d'importance internationale, notamment pour les oiseaux d'eau migrateurs. La convention de Bâle porte, elle, sur les mouvements transfrontières de déchets dangereux."
+    },
+    {
+      "q": "Le parc national du W est partagé entre le Burkina Faso, le Niger et :",
+      "o": [
+        "le Mali",
+        "le Bénin",
+        "le Togo",
+        "le Ghana"
+      ],
+      "r": 1,
+      "x": "Le parc du W, nommé d'après les méandres du fleuve Niger en forme de W, s'étend sur le Burkina Faso, le Niger et le Bénin. Il forme avec les parcs d'Arly et de la Pendjari l'un des plus vastes ensembles d'aires protégées d'Afrique de l'Ouest."
+    },
+    {
+      "q": "Au Burkina Faso, la zone climatique sahélienne reçoit une pluviométrie annuelle inférieure à :",
+      "o": [
+        "300 millimètres",
+        "600 millimètres",
+        "900 millimètres",
+        "1 200 millimètres"
+      ],
+      "r": 1,
+      "x": "La zone sahélienne reçoit moins de 600 millimètres, la zone soudano-sahélienne du centre entre 600 et 900, et la zone soudanienne du sud-ouest plus de 900. Ce gradient explique la répartition des cultures, du mil au nord au maïs et au coton au sud."
+    },
+    {
+      "q": "L'harmattan qui souffle sur le Burkina Faso en saison sèche est un vent :",
+      "o": [
+        "humide venant du sud-ouest",
+        "frais venant de l'océan Atlantique",
+        "chargé de pluie venant de l'est",
+        "chaud et sec venant du nord-est"
+      ],
+      "r": 3,
+      "x": "L'harmattan, alizé continental issu du Sahara, souffle de novembre à mars. Il transporte des poussières qui réduisent la visibilité et favorisent les infections respiratoires."
+    },
+    {
+      "q": "Les pluies d'hivernage au Burkina Faso sont apportées par :",
+      "o": [
+        "l'harmattan",
+        "la mousson",
+        "l'alizé boréal",
+        "le sirocco"
+      ],
+      "r": 1,
+      "x": "La mousson, air humide venu du golfe de Guinée, remonte vers le nord de mai à septembre et déclenche les pluies d'hivernage. Le sirocco est, lui, un vent chaud du Sahara qui souffle vers la Méditerranée."
+    },
+    {
+      "q": "La zone de contact entre l'harmattan et la mousson est appelée :",
+      "o": [
+        "le tropique du Cancer",
+        "la ligne de partage des eaux",
+        "la zone de convergence polaire",
+        "le front intertropical"
+      ],
+      "r": 3,
+      "x": "Le front intertropical (FIT) se déplace vers le nord en saison des pluies et redescend vers le sud en saison sèche. Sa position commande le début et la fin de l'hivernage au Burkina Faso."
+    },
+    {
+      "q": "Le passage de la vapeur d'eau à l'état liquide, à l'origine des nuages, est :",
+      "o": [
+        "l'évaporation",
+        "la condensation",
+        "la sublimation",
+        "la fusion"
+      ],
+      "r": 1,
+      "x": "En s'élevant, la vapeur d'eau se refroidit et se condense en fines gouttelettes qui forment les nuages. L'évaporation effectue le chemin inverse, du liquide vers la vapeur."
+    },
+    {
+      "q": "La nappe d'eau souterraine la plus proche de la surface, exploitée par les puits traditionnels, est :",
+      "o": [
+        "la nappe captive profonde",
+        "la nappe artésienne",
+        "la nappe fossile",
+        "la nappe phréatique"
+      ],
+      "r": 3,
+      "x": "La nappe phréatique se recharge chaque hivernage mais baisse fortement en saison sèche, d'où le tarissement de nombreux puits. Les forages vont chercher des eaux plus profondes et plus stables."
+    },
+    {
+      "q": "Dans le socle cristallin du Burkina Faso, l'eau souterraine est surtout stockée dans :",
+      "o": [
+        "de vastes lacs souterrains",
+        "des couches de sel gemme",
+        "les fractures et les altérites des roches",
+        "les dunes de sable"
+      ],
+      "r": 2,
+      "x": "Les roches du socle, compactes, ne retiennent l'eau que dans leurs fissures et dans leur couche altérée, d'où des débits de forage souvent modestes. L'implantation d'un forage nécessite donc une étude géophysique préalable."
+    },
+    {
+      "q": "La consommation prolongée d'une eau trop riche en fluor provoque :",
+      "o": [
+        "le goitre",
+        "le scorbut",
+        "la bilharziose",
+        "la fluorose"
+      ],
+      "r": 3,
+      "x": "L'excès de fluor dans l'eau de certains forages provoque des taches brunes sur les dents puis, à forte dose, des atteintes osseuses. Une dose modérée de fluor protège au contraire les dents contre les caries."
+    },
+    {
+      "q": "Faire bouillir l'eau de boisson permet principalement :",
+      "o": [
+        "d'éliminer le fluor",
+        "de retirer le sel dissous",
+        "d'ajouter des minéraux",
+        "de détruire les microbes"
+      ],
+      "r": 3,
+      "x": "L'ébullition prolongée tue la plupart des bactéries, virus et parasites responsables des maladies hydriques. Elle ne supprime ni le fluor ni les sels dissous, qu'elle concentre au contraire légèrement."
+    },
+    {
+      "q": "Le granite est une roche :",
+      "o": [
+        "sédimentaire",
+        "métamorphique",
+        "magmatique plutonique",
+        "magmatique volcanique"
+      ],
+      "r": 2,
+      "x": "Le granite se forme par refroidissement lent d'un magma en profondeur, d'où ses cristaux visibles à l'œil nu. Il affleure largement sur le socle burkinabè sous forme de dômes et de chaos de boules."
+    },
+    {
+      "q": "Le grès est une roche sédimentaire formée :",
+      "o": [
+        "de lave refroidie",
+        "de coquilles calcaires",
+        "de grains de sable cimentés",
+        "de cendres volcaniques"
+      ],
+      "r": 2,
+      "x": "Le grès résulte de la consolidation de sables par un ciment naturel au cours des temps géologiques. Il constitue notamment le massif du Sud-Ouest où se trouvent les falaises de Banfora et les pics de Sindou."
+    },
+    {
+      "q": "La couleur rouge de la latérite est due à sa richesse en :",
+      "o": [
+        "calcaire",
+        "sel",
+        "charbon",
+        "oxydes de fer"
+      ],
+      "r": 3,
+      "x": "Sous climat tropical, le lessivage des sols concentre les oxydes de fer et d'aluminium qui colorent et durcissent la latérite. Ce matériau sert à la construction des pistes et, taillé en briques, des bâtiments."
+    },
+    {
+      "q": "Au Burkina Faso, les gisements d'or sont principalement liés aux formations géologiques :",
+      "o": [
+        "du Birimien",
+        "du Quaternaire",
+        "du Crétacé",
+        "du Jurassique"
+      ],
+      "r": 0,
+      "x": "Les ceintures de roches birimiennes, âgées de plus de deux milliards d'années, renferment les gisements aurifères exploités dans le pays. Les terrains du Quaternaire ne sont, eux, que des dépôts récents et superficiels."
+    },
+    {
+      "q": "Le phosphate naturel exploité à Kodjari, dans l'Est du Burkina Faso, est utilisé comme :",
+      "o": [
+        "combustible",
+        "matériau de construction",
+        "médicament",
+        "engrais"
+      ],
+      "r": 3,
+      "x": "Broyé, le phosphate de Kodjari est épandu sur les champs pour corriger les sols pauvres en phosphore. Son action est lente, car le phosphore naturel se libère progressivement dans le sol."
+    },
+    {
+      "q": "Le gisement de Tambao, dans la province de l'Oudalan, renferme principalement :",
+      "o": [
+        "de l'or",
+        "du manganèse",
+        "du zinc",
+        "du phosphate"
+      ],
+      "r": 1,
+      "x": "Tambao abrite l'un des plus importants gisements de manganèse d'Afrique de l'Ouest. Le zinc a été, lui, exploité à la mine de Perkoa, dans le Sanguié."
+    },
+    {
+      "q": "La couche la plus épaisse du globe terrestre est :",
+      "o": [
+        "la croûte",
+        "le manteau",
+        "le noyau externe",
+        "la graine"
+      ],
+      "r": 1,
+      "x": "Le manteau s'étend jusqu'à environ 2 900 kilomètres de profondeur et représente l'essentiel du volume terrestre. La croûte, sur laquelle nous vivons, ne dépasse pas 70 kilomètres d'épaisseur sous les continents."
+    },
+    {
+      "q": "L'âge de la Terre est estimé à environ :",
+      "o": [
+        "460 millions d'années",
+        "1,5 milliard d'années",
+        "4,6 milliards d'années",
+        "13,8 milliards d'années"
+      ],
+      "r": 2,
+      "x": "La Terre s'est formée il y a environ 4,6 milliards d'années, en même temps que le système solaire. Les 13,8 milliards d'années correspondent à l'âge estimé de l'Univers."
+    },
+    {
+      "q": "L'échelle de Richter mesure :",
+      "o": [
+        "la magnitude d'un séisme",
+        "l'intensité des pluies",
+        "la vitesse du vent",
+        "la hauteur des vagues"
+      ],
+      "r": 0,
+      "x": "L'échelle de Richter mesure l'énergie libérée au foyer d'un séisme, chaque degré correspondant à une énergie environ trente fois supérieure. La vitesse du vent se mesure, elle, à l'anémomètre et s'exprime sur l'échelle de Beaufort."
+    },
+    {
+      "q": "La théorie de la dérive des continents a été proposée en 1912 par :",
+      "o": [
+        "Charles Darwin",
+        "Isaac Newton",
+        "Alfred Wegener",
+        "Charles Lyell"
+      ],
+      "r": 2,
+      "x": "Alfred Wegener s'appuie sur l'emboîtement des côtes africaine et sud-américaine et sur la répartition des fossiles. Sa théorie ne sera acceptée qu'avec la tectonique des plaques, dans les années 1960."
+    },
+    {
+      "q": "Les fossiles se trouvent principalement dans les roches :",
+      "o": [
+        "plutoniques",
+        "volcaniques",
+        "métamorphiques",
+        "sédimentaires"
+      ],
+      "r": 3,
+      "x": "Les restes d'êtres vivants sont conservés lorsqu'ils sont rapidement enfouis dans des sédiments qui se transforment en roche. La chaleur des roches magmatiques et métamorphiques détruit au contraire ces traces."
+    },
+    {
+      "q": "Dans une chaîne alimentaire, les producteurs primaires sont :",
+      "o": [
+        "les herbivores",
+        "les carnivores",
+        "les plantes vertes",
+        "les décomposeurs"
+      ],
+      "r": 2,
+      "x": "Les plantes vertes fabriquent leur matière organique à partir de la lumière, de l'eau et du dioxyde de carbone, et nourrissent ainsi tous les autres maillons. Les décomposeurs recyclent, eux, la matière morte en éléments minéraux."
+    },
+    {
+      "q": "Dans la chaîne alimentaire mil, criquet, oiseau insectivore, épervier, le criquet est :",
+      "o": [
+        "un producteur",
+        "un consommateur primaire",
+        "un consommateur secondaire",
+        "un décomposeur"
+      ],
+      "r": 1,
+      "x": "Le criquet se nourrit directement du mil, producteur, ce qui fait de lui un consommateur primaire ou herbivore. L'oiseau insectivore qui le mange est un consommateur secondaire."
+    },
+    {
+      "q": "Un écosystème est formé de l'association :",
+      "o": [
+        "d'un biotope et d'une biocénose",
+        "de plusieurs espèces animales seulement",
+        "d'un sol et d'un climat seulement",
+        "d'une population et de ses prédateurs"
+      ],
+      "r": 0,
+      "x": "Le biotope désigne le milieu physique, sol, eau et climat, et la biocénose l'ensemble des êtres vivants qui l'occupent. Une mare, une savane ou un champ constituent autant d'écosystèmes."
+    },
+    {
+      "q": "La formation végétale dominante au Burkina Faso est :",
+      "o": [
+        "la forêt dense humide",
+        "la savane",
+        "la mangrove",
+        "la prairie d'altitude"
+      ],
+      "r": 1,
+      "x": "Savanes arborées et arbustives couvrent l'essentiel du pays, avec une densité décroissante du sud vers le nord. Au nord, elles cèdent la place à la steppe sahélienne à épineux."
+    },
+    {
+      "q": "Les feux de brousse tardifs, allumés en fin de saison sèche, entraînent :",
+      "o": [
+        "une destruction importante de la végétation et des sols",
+        "un enrichissement durable des sols en humus",
+        "une augmentation des pluies de l'hivernage",
+        "une meilleure recharge des nappes phréatiques"
+      ],
+      "r": 0,
+      "x": "Survenant sur une végétation très sèche, les feux tardifs sont intenses et détruisent jeunes arbres, faune et matière organique du sol. Les feux précoces, allumés en début de saison sèche, sont moins violents et servent d'outil d'aménagement."
+    },
+    {
+      "q": "Le principal gaz à effet de serre d'origine humaine est :",
+      "o": [
+        "le diazote",
+        "le dioxygène",
+        "le dioxyde de carbone",
+        "l'argon"
+      ],
+      "r": 2,
+      "x": "La combustion du charbon, du pétrole, du gaz et du bois libère du dioxyde de carbone, principal gaz à effet de serre d'origine humaine. Le diazote et le dioxygène, majoritaires dans l'air, ne contribuent pas à l'effet de serre."
+    },
+    {
+      "q": "Les rizières inondées et l'élevage des ruminants libèrent un gaz à effet de serre appelé :",
+      "o": [
+        "l'ozone",
+        "l'hélium",
+        "le méthane",
+        "le diazote"
+      ],
+      "r": 2,
+      "x": "Le méthane provient de la fermentation de la matière organique sans oxygène, dans les rizières comme dans la panse des ruminants. Son pouvoir de réchauffement est plusieurs dizaines de fois supérieur à celui du dioxyde de carbone."
+    },
+    {
+      "q": "La couche d'ozone protège la Terre contre :",
+      "o": [
+        "les météorites",
+        "les vents violents",
+        "les pluies acides",
+        "les rayons ultraviolets"
+      ],
+      "r": 3,
+      "x": "La couche d'ozone de la stratosphère filtre la plus grande partie des rayons ultraviolets du Soleil, responsables de cancers de la peau et de cataractes. Les pluies acides résultent, elles, de la pollution atmosphérique par le soufre et l'azote."
+    },
+    {
+      "q": "Le protocole international visant à protéger la couche d'ozone a été signé à Montréal en :",
+      "o": [
+        "1972",
+        "1987",
+        "1997",
+        "2015"
+      ],
+      "r": 1,
+      "x": "Le protocole de Montréal organise l'abandon progressif des chlorofluorocarbones (CFC) qui détruisent l'ozone. L'année 1997 correspond, elle, au protocole de Kyoto sur les gaz à effet de serre."
+    },
+    {
+      "q": "L'accord de Paris sur le climat a été adopté en 2015 lors de la :",
+      "o": [
+        "COP15",
+        "COP21",
+        "COP26",
+        "COP28"
+      ],
+      "r": 1,
+      "x": "La COP21 fixe l'objectif de contenir le réchauffement bien en dessous de 2 degrés Celsius par rapport à l'ère préindustrielle. La COP26 s'est tenue, elle, à Glasgow en 2021."
+    },
+    {
+      "q": "Le Sommet de la Terre, qui a adopté la Convention sur la diversité biologique, s'est tenu à Rio de Janeiro en :",
+      "o": [
+        "1972",
+        "1982",
+        "1992",
+        "2002"
+      ],
+      "r": 2,
+      "x": "Le Sommet de Rio adopte en 1992 les conventions sur la diversité biologique et sur les changements climatiques. L'année 1972 correspond à la première conférence des Nations unies sur l'environnement, à Stockholm."
+    },
+    {
+      "q": "La Journée mondiale de l'environnement est célébrée chaque année le :",
+      "o": [
+        "22 mars",
+        "22 avril",
+        "5 juin",
+        "17 juin"
+      ],
+      "r": 2,
+      "x": "Le 5 juin commémore l'ouverture de la conférence de Stockholm de 1972. Le 22 mars est la Journée mondiale de l'eau et le 17 juin celle de la lutte contre la désertification et la sécheresse."
+    },
+    {
+      "q": "La Convention des Nations unies sur la lutte contre la désertification a été adoptée en :",
+      "o": [
+        "1977",
+        "1987",
+        "1994",
+        "2005"
+      ],
+      "r": 2,
+      "x": "Adoptée à Paris le 17 juin 1994, cette convention concerne en priorité l'Afrique et engage les pays touchés à élaborer des programmes d'action nationaux. La date de son adoption est devenue la Journée mondiale de lutte contre la désertification."
+    },
+    {
+      "q": "Une espèce endémique est une espèce :",
+      "o": [
+        "présente uniquement dans une région donnée",
+        "répandue sur tous les continents",
+        "disparue depuis plusieurs siècles",
+        "introduite récemment par l'homme"
+      ],
+      "r": 0,
+      "x": "Une espèce endémique ne vit naturellement que dans une aire géographique limitée, ce qui la rend vulnérable à la destruction de son habitat. Une espèce introduite par l'homme hors de son aire d'origine est dite exotique."
+    },
+    {
+      "q": "Le ranch de gibier de Nazinga, près de la frontière ghanéenne, est réputé pour sa population :",
+      "o": [
+        "de girafes",
+        "de gorilles",
+        "de rhinocéros",
+        "d'éléphants"
+      ],
+      "r": 3,
+      "x": "Nazinga abrite l'une des plus fortes densités d'éléphants d'Afrique de l'Ouest, aux côtés d'antilopes, de buffles et de singes. Les gorilles vivent, eux, dans les forêts denses d'Afrique centrale."
+    },
+    {
+      "q": "La mare aux hippopotames, réserve de biosphère de l'UNESCO, se situe non loin de :",
+      "o": [
+        "Bobo-Dioulasso",
+        "Dori",
+        "Fada N'Gourma",
+        "Kaya"
+      ],
+      "r": 0,
+      "x": "Située près de Satiri, dans la province du Houet, la mare aux hippopotames est classée réserve de biosphère par l'UNESCO. Elle abrite une population d'hippopotames et une riche avifaune dans une forêt galerie."
+    },
+    {
+      "q": "Le temps de dégradation d'un sachet plastique non biodégradable abandonné dans la nature est estimé à :",
+      "o": [
+        "quelques semaines",
+        "quelques mois",
+        "quelques années",
+        "plusieurs siècles"
+      ],
+      "r": 3,
+      "x": "Un sachet plastique non biodégradable met plusieurs centaines d'années à se fragmenter, sans jamais disparaître complètement. Ingéré par le bétail, il s'accumule dans la panse et peut entraîner la mort de l'animal."
+    },
+    {
+      "q": "Au Sahel, l'une des manifestations du changement climatique est :",
+      "o": [
+        "l'irrégularité croissante des pluies",
+        "l'allongement régulier de la saison des pluies",
+        "la baisse générale des températures",
+        "la stabilité des débits des cours d'eau"
+      ],
+      "r": 0,
+      "x": "Démarrages tardifs, poches de sécheresse et pluies violentes concentrées rendent la saison agricole plus incertaine. Ces aléas justifient le recours aux variétés à cycle court et aux techniques de collecte des eaux de pluie."
+    },
+    {
+      "q": "La centrale de Zagtouli, près de Ouagadougou, produit de l'électricité à partir de l'énergie :",
+      "o": [
+        "solaire",
+        "éolienne",
+        "hydraulique",
+        "nucléaire"
+      ],
+      "r": 0,
+      "x": "La centrale photovoltaïque de Zagtouli convertit directement le rayonnement solaire en électricité. L'ensoleillement abondant du pays fait du solaire la principale énergie renouvelable de nos jours."
+    },
+    {
+      "q": "Le biogaz produit à partir des déjections animales est composé principalement de :",
+      "o": [
+        "méthane",
+        "hydrogène",
+        "propane",
+        "butane"
+      ],
+      "r": 0,
+      "x": "La fermentation des déjections sans oxygène dans un biodigesteur produit un gaz riche en méthane, utilisable pour la cuisine et l'éclairage. Le résidu de fermentation constitue en outre un excellent engrais organique."
+    },
+    {
+      "q": "La prolifération des algues dans une retenue d'eau enrichie en engrais s'appelle :",
+      "o": [
+        "la salinisation",
+        "l'eutrophisation",
+        "la sédimentation",
+        "la désertification"
+      ],
+      "r": 1,
+      "x": "L'excès de nitrates et de phosphates provoque la prolifération d'algues dont la décomposition épuise l'oxygène de l'eau et asphyxie les poissons. La sédimentation désigne, elle, le dépôt progressif de particules au fond de la retenue."
+    },
+    {
+      "q": "L'ensablement des retenues d'eau au Burkina Faso résulte principalement :",
+      "o": [
+        "de l'érosion des sols des bassins versants",
+        "de l'évaporation intense en saison sèche",
+        "des séismes fréquents",
+        "de la remontée des nappes"
+      ],
+      "r": 0,
+      "x": "Les sols nus des bassins versants sont arrachés par le ruissellement et viennent combler les retenues, réduisant leur capacité de stockage. Le reboisement des berges et les aménagements antiérosifs en amont ralentissent ce phénomène."
+    },
+    {
+      "q": "La hauteur des pluies recueillies par un pluviomètre s'exprime en :",
+      "o": [
+        "millimètres",
+        "degrés Celsius",
+        "hectopascals",
+        "kilomètres par heure"
+      ],
+      "r": 0,
+      "x": "Une hauteur de pluie d'un millimètre correspond à un litre d'eau tombé sur un mètre carré. L'hectopascal mesure, lui, la pression atmosphérique relevée au baromètre."
+    },
+    {
+      "q": "Dans une cellule eucaryote, l'information génétique est contenue principalement dans :",
+      "o": [
+        "le noyau",
+        "le cytoplasme",
+        "la membrane plasmique",
+        "la vacuole"
+      ],
+      "r": 0,
+      "x": "L'ADN est logé dans le noyau sous forme de chromatine, qui se condense en chromosomes lors de la division. Seule une faible partie de l'ADN se trouve hors du noyau, dans les mitochondries."
+    },
+    {
+      "q": "La membrane plasmique a pour rôle principal :",
+      "o": [
+        "de fabriquer les protéines de la cellule",
+        "de stocker les réserves d'amidon",
+        "de produire l'énergie cellulaire",
+        "de contrôler les échanges avec le milieu"
+      ],
+      "r": 3,
+      "x": "La membrane plasmique est une barrière à perméabilité sélective qui laisse entrer les nutriments et sortir les déchets. La production d'énergie revient, elle, aux mitochondries."
+    },
+    {
+      "q": "L'organite présent dans la cellule végétale chlorophyllienne et absent de la cellule animale est :",
+      "o": [
+        "le noyau",
+        "la mitochondrie",
+        "le ribosome",
+        "le chloroplaste"
+      ],
+      "r": 3,
+      "x": "Le chloroplaste, siège de la photosynthèse, n'existe que dans les cellules végétales chlorophylliennes, tout comme la paroi de cellulose. Le noyau, les mitochondries et les ribosomes sont communs aux deux types de cellules."
+    },
+    {
+      "q": "La méiose d'une cellule mère diploïde aboutit à la formation de :",
+      "o": [
+        "2 cellules",
+        "4 cellules",
+        "8 cellules",
+        "16 cellules"
+      ],
+      "r": 1,
+      "x": "Les deux divisions successives de la méiose produisent quatre cellules haploïdes, à l'origine des gamètes. La mitose ne donne, elle, que deux cellules filles identiques à la cellule mère."
+    },
+    {
+      "q": "Le caryotype d'une personne atteinte de trisomie 21 compte :",
+      "o": [
+        "45 chromosomes",
+        "46 chromosomes",
+        "47 chromosomes",
+        "48 chromosomes"
+      ],
+      "r": 2,
+      "x": "Le chromosome 21 est présent en trois exemplaires au lieu de deux, anomalie identifiée en 1959 par Jérôme Lejeune. Le risque de cette trisomie augmente avec l'âge de la mère."
+    },
+    {
+      "q": "Un codon du code génétique est formé de :",
+      "o": [
+        "1 nucléotide",
+        "2 nucléotides",
+        "3 nucléotides",
+        "4 nucléotides"
+      ],
+      "r": 2,
+      "x": "Chaque codon est un triplet de nucléotides de l'ARN messager correspondant à un acide aminé ou à un signal d'arrêt. Le codon AUG marque le début de la traduction de la protéine."
+    },
+    {
+      "q": "L'hémophilie est une maladie héréditaire liée :",
+      "o": [
+        "au chromosome X",
+        "au chromosome Y",
+        "au chromosome 21",
+        "aux mitochondries"
+      ],
+      "r": 0,
+      "x": "Le gène défectueux porté par le chromosome X explique que la maladie touche presque uniquement les garçons, les mères étant le plus souvent conductrices. L'hémophile souffre d'un défaut de coagulation provoquant des saignements prolongés."
+    },
+    {
+      "q": "L'échange de segments entre chromosomes homologues au cours de la méiose s'appelle :",
+      "o": [
+        "la mutation",
+        "la réplication",
+        "la transcription",
+        "le crossing-over"
+      ],
+      "r": 3,
+      "x": "Le crossing-over se produit en prophase de la première division de méiose et crée de nouvelles combinaisons d'allèles. Ce brassage explique que deux frères et sœurs ne soient jamais génétiquement identiques, sauf jumeaux vrais."
+    },
+    {
+      "q": "L'ensemble des caractères observables d'un individu constitue :",
+      "o": [
+        "le génotype",
+        "le caryotype",
+        "le phénotype",
+        "le génome"
+      ],
+      "r": 2,
+      "x": "Le phénotype regroupe les caractères visibles ou mesurables, comme la couleur des yeux ou le groupe sanguin. Le génotype désigne, lui, la combinaison d'allèles qui en est à l'origine."
+    },
+    {
+      "q": "Chez un individu de groupe sanguin AB, les allèles A et B s'expriment tous les deux ; on dit qu'ils sont :",
+      "o": [
+        "codominants",
+        "récessifs",
+        "létaux",
+        "mutés"
+      ],
+      "r": 0,
+      "x": "Les deux allèles s'expriment à égalité et les hématies portent à la fois les antigènes A et B. L'allèle O est, lui, récessif et ne s'exprime qu'en double exemplaire."
+    },
+    {
+      "q": "La brebis Dolly, premier mammifère cloné à partir d'une cellule adulte, est née en :",
+      "o": [
+        "1986",
+        "1996",
+        "2003",
+        "2010"
+      ],
+      "r": 1,
+      "x": "Dolly naît le 5 juillet 1996 à l'Institut Roslin, en Écosse, à partir d'une cellule de glande mammaire. Elle démontre qu'une cellule spécialisée conserve la totalité de l'information génétique."
+    },
+    {
+      "q": "L'achèvement du séquençage du génome humain a été annoncé en :",
+      "o": [
+        "1953",
+        "1990",
+        "2003",
+        "2015"
+      ],
+      "r": 2,
+      "x": "Lancé en 1990, le Projet génome humain s'achève en 2003 et révèle environ 20 000 gènes codant des protéines. L'année 1953 correspond à la découverte de la double hélice de l'ADN."
+    },
+    {
+      "q": "Chez l'homme, les spermatozoïdes sont produits dans :",
+      "o": [
+        "les testicules",
+        "la prostate",
+        "les vésicules séminales",
+        "l'épididyme"
+      ],
+      "r": 0,
+      "x": "Les spermatozoïdes se forment dans les tubes séminifères des testicules, à une température légèrement inférieure à celle du corps. L'épididyme assure seulement leur maturation et leur stockage."
+    },
+    {
+      "q": "La principale hormone sexuelle masculine est :",
+      "o": [
+        "la progestérone",
+        "l'œstradiol",
+        "la prolactine",
+        "la testostérone"
+      ],
+      "r": 3,
+      "x": "La testostérone, sécrétée par les testicules, entretient la production des spermatozoïdes et les caractères sexuels secondaires. La prolactine stimule, elle, la production de lait chez la femme."
+    },
+    {
+      "q": "Après l'ovulation, l'ovule reste fécondable pendant environ :",
+      "o": [
+        "24 heures",
+        "5 jours",
+        "14 jours",
+        "28 jours"
+      ],
+      "r": 0,
+      "x": "L'ovule ne survit qu'environ 24 heures dans la trompe, alors que les spermatozoïdes restent fécondants trois à cinq jours. La période féconde s'étend donc sur quelques jours autour de l'ovulation."
+    },
+    {
+      "q": "L'organe qui assure les échanges de nutriments et de gaz entre la mère et le fœtus est :",
+      "o": [
+        "le cordon ombilical",
+        "le liquide amniotique",
+        "l'utérus",
+        "le placenta"
+      ],
+      "r": 3,
+      "x": "Le placenta met en contact les sangs maternel et fœtal sans les mélanger et laisse passer nutriments, dioxygène et anticorps. Le cordon ombilical ne fait que relier le fœtus à ce placenta."
+    },
+    {
+      "q": "Chez la femme, l'arrêt définitif des cycles menstruels, ou ménopause, survient en moyenne vers :",
+      "o": [
+        "35 ans",
+        "40 ans",
+        "50 ans",
+        "60 ans"
+      ],
+      "r": 2,
+      "x": "La ménopause survient vers 50 ans, lorsque les ovaires cessent de libérer des ovules et de sécréter des hormones. Elle s'accompagne d'une baisse des œstrogènes qui fragilise les os."
+    },
+    {
+      "q": "Le moyen contraceptif qui protège aussi contre les infections sexuellement transmissibles est :",
+      "o": [
+        "la pilule",
+        "le stérilet",
+        "l'implant",
+        "le préservatif"
+      ],
+      "r": 3,
+      "x": "Le préservatif forme une barrière qui empêche le contact avec les sécrétions génitales, y compris le VIH. La pilule, le stérilet et l'implant évitent la grossesse sans aucune protection contre les infections."
+    },
+    {
+      "q": "La nidation de l'embryon dans la muqueuse utérine a lieu environ :",
+      "o": [
+        "1 jour après la fécondation",
+        "7 jours après la fécondation",
+        "21 jours après la fécondation",
+        "40 jours après la fécondation"
+      ],
+      "r": 1,
+      "x": "L'embryon descend la trompe pendant près d'une semaine avant de s'implanter dans l'endomètre. C'est à partir de la nidation qu'il sécrète l'hormone détectée par les tests de grossesse."
+    },
+    {
+      "q": "Chez l'adulte, la denture complète compte :",
+      "o": [
+        "20 dents",
+        "28 dents",
+        "32 dents",
+        "36 dents"
+      ],
+      "r": 2,
+      "x": "L'adulte possède 32 dents, dont les quatre dents de sagesse qui apparaissent tardivement. L'enfant n'en a que 20, les dents de lait."
+    },
+    {
+      "q": "La substance la plus dure du corps humain est :",
+      "o": [
+        "l'os compact",
+        "l'émail des dents",
+        "le cartilage",
+        "la dentine"
+      ],
+      "r": 1,
+      "x": "L'émail, très riche en sels de calcium, recouvre la couronne de la dent et la protège de l'usure. Il ne se régénère pas, d'où l'importance de prévenir les caries."
+    },
+    {
+      "q": "La lipase pancréatique agit sur la digestion :",
+      "o": [
+        "des lipides",
+        "de l'amidon",
+        "des protéines",
+        "de la cellulose"
+      ],
+      "r": 0,
+      "x": "La lipase découpe les graisses en acides gras et glycérol dans l'intestin grêle, avec l'aide de la bile. La cellulose n'est digérée par aucune enzyme humaine."
+    },
+    {
+      "q": "Le pancréas est une glande mixte car il produit à la fois :",
+      "o": [
+        "de la bile et du suc gastrique",
+        "de l'urine et de la sueur",
+        "des larmes et du mucus",
+        "du suc digestif et des hormones"
+      ],
+      "r": 3,
+      "x": "Le pancréas déverse son suc digestif dans l'intestin et sécrète dans le sang l'insuline et le glucagon. Cette double fonction, exocrine et endocrine, le distingue des autres glandes digestives."
+    },
+    {
+      "q": "Le foie met en réserve le glucose sous forme de :",
+      "o": [
+        "glycogène",
+        "amidon",
+        "cellulose",
+        "saccharose"
+      ],
+      "r": 0,
+      "x": "Le foie stocke l'excès de glucose sous forme de glycogène et le libère entre les repas pour maintenir la glycémie. L'amidon est, lui, la forme de réserve propre aux végétaux."
+    },
+    {
+      "q": "La vitamine indispensable à la coagulation du sang est la vitamine :",
+      "o": [
+        "A",
+        "C",
+        "D",
+        "K"
+      ],
+      "r": 3,
+      "x": "La vitamine K permet au foie de fabriquer plusieurs facteurs de la coagulation. Elle est administrée systématiquement au nouveau-né pour prévenir les hémorragies."
+    },
+    {
+      "q": "Les fibres alimentaires des légumes et des céréales complètes favorisent :",
+      "o": [
+        "la coagulation du sang",
+        "la croissance des os",
+        "l'acuité visuelle",
+        "le transit intestinal"
+      ],
+      "r": 3,
+      "x": "Non digérées, les fibres retiennent l'eau et augmentent le volume des selles, ce qui prévient la constipation. Elles ralentissent aussi l'absorption des sucres."
+    },
+    {
+      "q": "L'eau représente chez l'adulte environ :",
+      "o": [
+        "20 % de la masse corporelle",
+        "40 % de la masse corporelle",
+        "60 % de la masse corporelle",
+        "90 % de la masse corporelle"
+      ],
+      "r": 2,
+      "x": "L'eau constitue environ 60 % de la masse d'un adulte et davantage chez le nourrisson. Une perte de quelques pourcents suffit à provoquer les premiers signes de déshydratation."
+    },
+    {
+      "q": "Le sang pauvre en dioxygène est conduit du ventricule droit vers les poumons par :",
+      "o": [
+        "l'aorte",
+        "l'artère pulmonaire",
+        "la veine cave",
+        "les veines pulmonaires"
+      ],
+      "r": 1,
+      "x": "L'artère pulmonaire est la seule artère transportant du sang pauvre en dioxygène. Les veines pulmonaires ramènent ensuite au cœur gauche le sang réoxygéné."
+    },
+    {
+      "q": "La plus grosse artère du corps humain, qui part du ventricule gauche, est :",
+      "o": [
+        "l'aorte",
+        "la carotide",
+        "l'artère fémorale",
+        "l'artère pulmonaire"
+      ],
+      "r": 0,
+      "x": "L'aorte distribue le sang riche en dioxygène à l'ensemble de l'organisme par ses nombreuses ramifications. La carotide, l'une de ses branches, irrigue la tête et le cerveau."
+    },
+    {
+      "q": "Les valvules cardiaques ont pour rôle :",
+      "o": [
+        "de produire les battements",
+        "de filtrer le sang",
+        "de fabriquer les hématies",
+        "d'empêcher le reflux du sang"
+      ],
+      "r": 3,
+      "x": "Les valvules s'ouvrent et se ferment à chaque battement pour imposer au sang un sens unique de circulation. Leur fermeture produit les bruits du cœur entendus au stéthoscope."
+    },
+    {
+      "q": "La circulation sanguine a été décrite pour la première fois de façon complète en 1628 par :",
+      "o": [
+        "William Harvey",
+        "André Vésale",
+        "Claude Bernard",
+        "Hippocrate"
+      ],
+      "r": 0,
+      "x": "William Harvey démontre en 1628 que le sang circule en circuit fermé, propulsé par le cœur. Claude Bernard établit, lui, au XIXe siècle la notion de milieu intérieur."
+    },
+    {
+      "q": "Les échanges entre le sang et les cellules des tissus se font au niveau :",
+      "o": [
+        "des artères",
+        "des veines",
+        "des capillaires",
+        "du cœur"
+      ],
+      "r": 2,
+      "x": "La paroi très fine des capillaires laisse passer dioxygène et nutriments vers les cellules et reçoit leurs déchets. Les artères et les veines ne servent qu'au transport du sang."
+    },
+    {
+      "q": "Le plasma représente environ :",
+      "o": [
+        "10 % du volume sanguin",
+        "30 % du volume sanguin",
+        "55 % du volume sanguin",
+        "80 % du volume sanguin"
+      ],
+      "r": 2,
+      "x": "Le plasma, liquide jaunâtre composé surtout d'eau, constitue environ 55 % du volume du sang. Les 45 % restants correspondent aux cellules sanguines, en grande majorité des hématies."
+    },
+    {
+      "q": "Les cordes vocales sont situées dans :",
+      "o": [
+        "la trachée",
+        "le larynx",
+        "le pharynx",
+        "les bronches"
+      ],
+      "r": 1,
+      "x": "Les cordes vocales, tendues dans le larynx, vibrent au passage de l'air expiré et produisent la voix. Le pharynx est un carrefour commun aux voies digestives et respiratoires."
+    },
+    {
+      "q": "La structure qui ferme l'entrée de la trachée lors de la déglutition est :",
+      "o": [
+        "la luette",
+        "l'épiglotte",
+        "le larynx",
+        "le voile du palais"
+      ],
+      "r": 1,
+      "x": "L'épiglotte se rabat sur le larynx pour empêcher les aliments de pénétrer dans les voies respiratoires. Le voile du palais ferme, lui, l'accès aux fosses nasales."
+    },
+    {
+      "q": "L'hormone sécrétée par les glandes surrénales en situation de stress est :",
+      "o": [
+        "l'insuline",
+        "la thyroxine",
+        "la mélatonine",
+        "l'adrénaline"
+      ],
+      "r": 3,
+      "x": "L'adrénaline accélère le cœur, élève la pression artérielle et mobilise le glucose pour préparer l'organisme à l'effort. La mélatonine, sécrétée la nuit, règle le rythme du sommeil."
+    },
+    {
+      "q": "La glande qualifiée de glande maîtresse, parce qu'elle commande d'autres glandes endocrines, est :",
+      "o": [
+        "la thyroïde",
+        "le pancréas",
+        "l'hypophyse",
+        "la surrénale"
+      ],
+      "r": 2,
+      "x": "L'hypophyse, située sous le cerveau, sécrète des hormones qui contrôlent la thyroïde, les surrénales et les glandes sexuelles. Elle produit aussi l'hormone de croissance."
+    },
+    {
+      "q": "Le centre nerveux qui commande la respiration et les battements cardiaques est :",
+      "o": [
+        "le cervelet",
+        "le bulbe rachidien",
+        "le cortex cérébral",
+        "la moelle épinière"
+      ],
+      "r": 1,
+      "x": "Le bulbe rachidien abrite les centres vitaux de la respiration et du rythme cardiaque, ce qui rend ses lésions souvent mortelles. Le cortex cérébral gère, lui, les mouvements volontaires et la pensée."
+    },
+    {
+      "q": "La myopie se corrige par le port de verres :",
+      "o": [
+        "convergents",
+        "divergents",
+        "cylindriques",
+        "teintés"
+      ],
+      "r": 1,
+      "x": "Chez le myope, l'image se forme en avant de la rétine et les verres divergents la reportent sur celle-ci. Les verres convergents corrigent au contraire l'hypermétropie et la presbytie."
+    },
+    {
+      "q": "La lentille de l'œil qui permet l'accommodation est :",
+      "o": [
+        "la cornée",
+        "l'iris",
+        "le cristallin",
+        "la rétine"
+      ],
+      "r": 2,
+      "x": "Le cristallin modifie sa courbure pour former une image nette des objets proches comme lointains. Son opacification avec l'âge constitue la cataracte."
+    },
+    {
+      "q": "La membrane qui vibre sous l'effet des sons à l'entrée de l'oreille moyenne est :",
+      "o": [
+        "le tympan",
+        "la cochlée",
+        "l'étrier",
+        "le pavillon"
+      ],
+      "r": 0,
+      "x": "Le tympan transmet les vibrations sonores à la chaîne des osselets de l'oreille moyenne. La cochlée, dans l'oreille interne, les convertit ensuite en message nerveux."
+    },
+    {
+      "q": "Le plus petit os du corps humain est :",
+      "o": [
+        "l'étrier",
+        "le marteau",
+        "l'enclume",
+        "la phalange"
+      ],
+      "r": 0,
+      "x": "L'étrier, osselet de l'oreille moyenne, mesure environ 3 millimètres. Il transmet les vibrations de l'enclume à la fenêtre ovale de l'oreille interne."
+    },
+    {
+      "q": "Le plus long os du corps humain est :",
+      "o": [
+        "l'humérus",
+        "le tibia",
+        "le fémur",
+        "le péroné"
+      ],
+      "r": 2,
+      "x": "Le fémur, os de la cuisse, représente environ le quart de la taille d'un individu. L'humérus est, lui, l'os du bras."
+    },
+    {
+      "q": "Le tissu qui relie un muscle à un os est :",
+      "o": [
+        "le ligament",
+        "le cartilage",
+        "le périoste",
+        "le tendon"
+      ],
+      "r": 3,
+      "x": "Le tendon transmet à l'os la force de contraction du muscle, comme le tendon d'Achille au talon. Le ligament relie au contraire deux os entre eux au niveau d'une articulation."
+    },
+    {
+      "q": "Les cellules sanguines sont fabriquées dans :",
+      "o": [
+        "la moelle osseuse rouge",
+        "la moelle épinière",
+        "la rate",
+        "le foie"
+      ],
+      "r": 0,
+      "x": "La moelle rouge des os plats et des extrémités des os longs produit hématies, globules blancs et plaquettes. La moelle épinière est un organe nerveux sans lien avec la fabrication du sang."
+    },
+    {
+      "q": "Le muscle cardiaque, ou myocarde, est un muscle :",
+      "o": [
+        "strié à contraction involontaire",
+        "lisse à contraction volontaire",
+        "strié à contraction volontaire",
+        "lisse à contraction involontaire"
+      ],
+      "r": 0,
+      "x": "Le myocarde présente la structure striée des muscles squelettiques mais se contracte sans intervention de la volonté. Les muscles lisses tapissent, eux, les parois des viscères et des vaisseaux."
+    },
+    {
+      "q": "La température normale du corps humain est d'environ :",
+      "o": [
+        "35 °C",
+        "37 °C",
+        "39 °C",
+        "41 °C"
+      ],
+      "r": 1,
+      "x": "La température centrale se maintient autour de 37 °C grâce à un équilibre entre production et perte de chaleur. On parle de fièvre au-delà de 38 °C."
+    },
+    {
+      "q": "Le pigment qui colore la peau et la protège des rayons ultraviolets est :",
+      "o": [
+        "la kératine",
+        "l'hémoglobine",
+        "la chlorophylle",
+        "la mélanine"
+      ],
+      "r": 3,
+      "x": "La mélanine, produite par les mélanocytes de l'épiderme, absorbe les ultraviolets et limite les dégâts sur l'ADN des cellules. La kératine est, elle, une protéine qui rend la peau, les ongles et les cheveux résistants."
+    },
+    {
+      "q": "La substance chimique libérée au niveau d'une synapse pour transmettre le message nerveux est :",
+      "o": [
+        "une hormone",
+        "un neurotransmetteur",
+        "un anticorps",
+        "une enzyme digestive"
+      ],
+      "r": 1,
+      "x": "Le neurotransmetteur, comme l'acétylcholine, traverse la fente synaptique et se fixe sur le neurone suivant. L'hormone circule, elle, dans le sang et agit à distance."
+    },
+    {
+      "q": "La difficulté à voir de près qui apparaît avec l'âge, vers 45 ans, s'appelle :",
+      "o": [
+        "la myopie",
+        "la presbytie",
+        "l'astigmatisme",
+        "le daltonisme"
+      ],
+      "r": 1,
+      "x": "La presbytie résulte de la perte d'élasticité du cristallin, qui accommode de moins en moins bien. Le daltonisme est, lui, une anomalie héréditaire de la vision des couleurs."
+    },
+    {
+      "q": "La syphilis est une infection sexuellement transmissible due à :",
+      "o": [
+        "Neisseria gonorrhoeae",
+        "Treponema pallidum",
+        "Chlamydia trachomatis",
+        "Candida albicans"
+      ],
+      "r": 1,
+      "x": "Treponema pallidum provoque d'abord un chancre indolore, puis des atteintes cutanées, nerveuses et cardiaques en l'absence de traitement. La pénicilline reste le traitement de référence à tous les stades."
+    },
+    {
+      "q": "La gonococcie, ou blennorragie, est due à :",
+      "o": [
+        "un virus",
+        "un champignon",
+        "un parasite",
+        "une bactérie"
+      ],
+      "r": 3,
+      "x": "La bactérie Neisseria gonorrhoeae provoque un écoulement purulent et des brûlures urinaires, surtout chez l'homme. Non traitée, l'infection peut entraîner une stérilité chez les deux sexes."
+    },
+    {
+      "q": "L'hépatite C se transmet principalement par :",
+      "o": [
+        "le sang",
+        "l'eau de boisson",
+        "les aliments souillés",
+        "les piqûres de moustiques"
+      ],
+      "r": 0,
+      "x": "Le virus de l'hépatite C se transmet par contact avec du sang contaminé, notamment par du matériel d'injection ou de soins mal stérilisé. Il n'existe pas de vaccin, mais les antiviraux actuels guérissent la grande majorité des malades."
+    },
+    {
+      "q": "Le trachome, cause de cécité évitable, est dû à la bactérie :",
+      "o": [
+        "Treponema pallidum",
+        "Mycobacterium leprae",
+        "Chlamydia trachomatis",
+        "Streptococcus pneumoniae"
+      ],
+      "r": 2,
+      "x": "Les infections répétées retournent les cils vers l'intérieur de la paupière, qui frottent la cornée jusqu'à la rendre opaque. La lutte associe chirurgie, antibiotiques, nettoyage du visage et amélioration de l'environnement."
+    },
+    {
+      "q": "L'éléphantiasis, gonflement énorme des membres, est la forme évoluée de :",
+      "o": [
+        "la filariose lymphatique",
+        "la lèpre",
+        "l'onchocercose",
+        "la dracunculose"
+      ],
+      "r": 0,
+      "x": "Des vers transmis par des moustiques obstruent les vaisseaux lymphatiques et provoquent des œdèmes chroniques des jambes. Des traitements de masse annuels visent l'élimination de cette maladie en Afrique de l'Ouest."
+    },
+    {
+      "q": "La leishmaniose est transmise à l'homme par la piqûre :",
+      "o": [
+        "de la glossine",
+        "du phlébotome",
+        "de la simulie",
+        "de la tique"
+      ],
+      "r": 1,
+      "x": "Le phlébotome, petit insecte piqueur actif la nuit, inocule le parasite Leishmania. La forme cutanée se traduit par des ulcérations tenaces de la peau exposée."
+    },
+    {
+      "q": "Le virus Ebola a été identifié pour la première fois en :",
+      "o": [
+        "1956",
+        "1966",
+        "1976",
+        "1986"
+      ],
+      "r": 2,
+      "x": "Le virus doit son nom à une rivière de l'actuelle République démocratique du Congo, où survient la première épidémie en 1976. L'épidémie de 2014 à 2016 en Afrique de l'Ouest a fait plus de 11 000 morts."
+    },
+    {
+      "q": "La peste est transmise des rats à l'homme par :",
+      "o": [
+        "les moustiques",
+        "les poux",
+        "les tiques",
+        "les puces"
+      ],
+      "r": 3,
+      "x": "La puce du rat inocule la bactérie Yersinia pestis lors de sa piqûre, provoquant la peste bubonique. La forme pulmonaire se transmet ensuite directement d'homme à homme par la toux."
+    },
+    {
+      "q": "La coqueluche est une maladie infantile caractérisée par :",
+      "o": [
+        "une éruption de boutons",
+        "des quintes de toux",
+        "une paralysie des jambes",
+        "une diarrhée sanglante"
+      ],
+      "r": 1,
+      "x": "La bactérie Bordetella pertussis provoque des quintes de toux suivies d'une reprise inspiratoire bruyante, dangereuse chez le nourrisson. Le vaccin coquelucheux fait partie du vaccin pentavalent du PEV."
+    },
+    {
+      "q": "Le vaccin pentavalent protège contre la diphtérie, le tétanos, la coqueluche, l'hépatite B et :",
+      "o": [
+        "la rougeole et ses complications",
+        "la poliomyélite paralytique",
+        "les infections à Haemophilus b",
+        "la tuberculose pulmonaire"
+      ],
+      "r": 2,
+      "x": "Haemophilus influenzae type b est une bactérie responsable de méningites et de pneumonies graves chez le jeune enfant. Le pentavalent est administré en trois doses, à 6, 10 et 14 semaines."
+    },
+    {
+      "q": "Les oreillons provoquent le gonflement :",
+      "o": [
+        "des glandes parotides",
+        "des ganglions de l'aine",
+        "de la rate",
+        "des amygdales"
+      ],
+      "r": 0,
+      "x": "Le virus des oreillons fait gonfler les parotides, glandes salivaires situées sous les oreilles. Chez l'adolescent, il peut se compliquer d'une inflammation des testicules."
+    },
+    {
+      "q": "La gale est due à :",
+      "o": [
+        "un champignon",
+        "une bactérie",
+        "un virus",
+        "un acarien"
+      ],
+      "r": 3,
+      "x": "L'acarien Sarcoptes scabiei creuse des sillons sous la peau et provoque des démangeaisons surtout nocturnes. Le traitement doit concerner simultanément toutes les personnes vivant sous le même toit."
+    },
+    {
+      "q": "La teigne du cuir chevelu, fréquente chez l'enfant, est due à :",
+      "o": [
+        "un acarien",
+        "un pou",
+        "un virus",
+        "un champignon"
+      ],
+      "r": 3,
+      "x": "Des champignons microscopiques attaquent les cheveux et créent des plaques arrondies sans cheveux. La contamination se fait par contact direct ou par les peignes, bonnets et tondeuses partagés."
+    },
+    {
+      "q": "L'homme se contamine par le ténia en consommant :",
+      "o": [
+        "des légumes crus mal lavés",
+        "de l'eau de puits non traitée",
+        "de la viande mal cuite",
+        "du lait cru non bouilli"
+      ],
+      "r": 2,
+      "x": "Les larves du ténia, logées dans les muscles du bœuf ou du porc, survivent à une cuisson insuffisante et se développent dans l'intestin. L'inspection des viandes et leur cuisson complète préviennent cette parasitose."
+    },
+    {
+      "q": "La dysenterie amibienne est due à :",
+      "o": [
+        "Entamoeba histolytica",
+        "Vibrio cholerae",
+        "Salmonella typhi",
+        "Plasmodium ovale"
+      ],
+      "r": 0,
+      "x": "Cet amibe, ingéré avec de l'eau ou des aliments souillés, provoque des diarrhées glairo-sanglantes. Il peut gagner le foie et y former un abcès."
+    },
+    {
+      "q": "L'ankylostome, ver responsable d'anémie, pénètre dans l'organisme :",
+      "o": [
+        "par la piqûre d'un moustique",
+        "par la peau des pieds nus",
+        "par l'air inspiré",
+        "par la morsure d'un chien"
+      ],
+      "r": 1,
+      "x": "Les larves présentes dans le sol souillé de matières fécales traversent la peau des pieds nus. Le ver se fixe ensuite dans l'intestin et se nourrit de sang, d'où l'anémie."
+    },
+    {
+      "q": "La toxoplasmose, dangereuse pour la femme enceinte non immunisée, peut être transmise par :",
+      "o": [
+        "les moustiques",
+        "les puces",
+        "les poissons",
+        "les chats"
+      ],
+      "r": 3,
+      "x": "Le parasite est éliminé dans les excréments du chat et peut aussi se trouver dans la viande mal cuite. Contractée pendant la grossesse, la toxoplasmose peut provoquer des lésions graves chez le fœtus."
+    },
+    {
+      "q": "L'anatoxine, à la base des vaccins contre le tétanos et la diphtérie, a été mise au point en 1923 par :",
+      "o": [
+        "Gaston Ramon",
+        "Louis Pasteur",
+        "Emil von Behring",
+        "Paul Ehrlich"
+      ],
+      "r": 0,
+      "x": "Gaston Ramon rend la toxine inoffensive par l'action combinée du formol et de la chaleur, tout en conservant son pouvoir vaccinant. Emil von Behring avait, lui, mis au point la sérothérapie antidiphtérique."
+    },
+    {
+      "q": "Le traitement spécifique d'une envenimation grave par morsure de serpent repose sur :",
+      "o": [
+        "le vaccin antirabique",
+        "les antibiotiques",
+        "le sérum antivenimeux",
+        "le garrot serré"
+      ],
+      "r": 2,
+      "x": "Le sérum antivenimeux apporte des anticorps qui neutralisent immédiatement le venin circulant. Le garrot et l'incision de la plaie sont déconseillés car ils aggravent les lésions."
+    },
+    {
+      "q": "La pasteurisation d'un aliment consiste à :",
+      "o": [
+        "le chauffer sous 100 °C puis le refroidir",
+        "le chauffer au-delà de 120 °C sous pression",
+        "le congeler à moins 18 °C durablement",
+        "le sécher longuement au soleil"
+      ],
+      "r": 0,
+      "x": "La pasteurisation détruit la plupart des microbes pathogènes tout en préservant le goût, mais l'aliment doit ensuite être conservé au froid. Le chauffage au-delà de 120 °C sous pression correspond à la stérilisation."
+    },
+    {
+      "q": "La Journée mondiale du lavage des mains est célébrée chaque année le :",
+      "o": [
+        "7 avril",
+        "5 juin",
+        "15 octobre",
+        "1er décembre"
+      ],
+      "r": 2,
+      "x": "Instituée en 2008, cette journée rappelle que le lavage des mains au savon réduit fortement les diarrhées et les infections respiratoires. Le lavage doit durer au moins vingt secondes et concerner toutes les faces des mains."
+    },
+    {
+      "q": "La Journée mondiale de lutte contre la tuberculose est célébrée chaque année le :",
+      "o": [
+        "24 mars",
+        "25 avril",
+        "31 mai",
+        "14 novembre"
+      ],
+      "r": 0,
+      "x": "Le 24 mars rappelle le jour de 1882 où Robert Koch annonce la découverte du bacille. Le 31 mai est la Journée mondiale sans tabac et le 14 novembre celle du diabète."
+    },
+    {
+      "q": "Chez l'adulte, l'obésité est définie par un indice de masse corporelle égal ou supérieur à :",
+      "o": [
+        "18,5",
+        "25",
+        "30",
+        "40"
+      ],
+      "r": 2,
+      "x": "L'indice de masse corporelle se calcule en divisant le poids en kilogrammes par le carré de la taille en mètres. Une valeur comprise entre 25 et 30 correspond au surpoids."
+    },
+    {
+      "q": "Le diabète est diagnostiqué lorsque la glycémie à jeun atteint ou dépasse, à deux reprises :",
+      "o": [
+        "0,70 g/L",
+        "1,00 g/L",
+        "1,26 g/L",
+        "2,50 g/L"
+      ],
+      "r": 2,
+      "x": "La glycémie à jeun normale se situe entre 0,70 et 1,10 gramme par litre de sang. Au-delà de 1,26 gramme par litre, contrôlé deux fois, le diagnostic de diabète est posé."
+    },
+    {
+      "q": "Le cancer du col de l'utérus est principalement causé par :",
+      "o": [
+        "le virus de l'hépatite B",
+        "le papillomavirus humain",
+        "le VIH",
+        "le virus d'Epstein-Barr"
+      ],
+      "r": 1,
+      "x": "Certains types de papillomavirus, transmis par voie sexuelle, provoquent des lésions qui peuvent évoluer vers un cancer. La vaccination des jeunes filles et le dépistage régulier permettent de le prévenir."
+    },
+    {
+      "q": "La consommation excessive et prolongée d'alcool endommage principalement :",
+      "o": [
+        "les reins",
+        "les poumons",
+        "la rate",
+        "le foie"
+      ],
+      "r": 3,
+      "x": "Le foie, qui dégrade l'alcool, se charge de graisse puis se fibrose jusqu'à la cirrhose. L'alcool accroît aussi le risque de cancers de la bouche, de l'œsophage et du foie."
+    },
+    {
+      "q": "La substance du tabac responsable de la dépendance est :",
+      "o": [
+        "la nicotine",
+        "le goudron",
+        "le monoxyde de carbone",
+        "l'arsenic"
+      ],
+      "r": 0,
+      "x": "La nicotine agit sur le cerveau et entretient le besoin de fumer. Les goudrons sont, eux, les principales substances cancérigènes de la fumée."
+    },
+    {
+      "q": "Une victime inconsciente qui respire normalement doit être placée :",
+      "o": [
+        "sur le dos, jambes surélevées",
+        "en position latérale de sécurité",
+        "en position assise",
+        "sur le ventre"
+      ],
+      "r": 1,
+      "x": "La position latérale de sécurité maintient les voies aériennes libres et évite l'étouffement en cas de vomissement. Si la victime ne respire plus, il faut au contraire commencer le massage cardiaque."
+    },
+    {
+      "q": "Le premier geste devant une brûlure thermique légère est de :",
+      "o": [
+        "enduire la brûlure d'huile",
+        "refroidir à l'eau fraîche",
+        "percer les cloques formées",
+        "couvrir de dentifrice"
+      ],
+      "r": 1,
+      "x": "L'eau fraîche, appliquée pendant une quinzaine de minutes, limite l'extension de la brûlure et calme la douleur. L'huile et le dentifrice retiennent la chaleur et favorisent l'infection."
+    },
+    {
+      "q": "Le monoxyde de carbone dégagé par un brasero dans une pièce fermée est dangereux car il :",
+      "o": [
+        "détruit les plaquettes sanguines",
+        "empêche la filtration rénale",
+        "paralyse les muscles digestifs",
+        "bloque le transport du dioxygène"
+      ],
+      "r": 3,
+      "x": "Ce gaz incolore et inodore se fixe sur l'hémoglobine beaucoup plus fortement que le dioxygène et asphyxie les tissus. Braseros et groupes électrogènes ne doivent jamais fonctionner dans un local clos."
+    },
+    {
+      "q": "La prise d'acide folique en début de grossesse prévient :",
+      "o": [
+        "le diabète gestationnel",
+        "l'hypertension artérielle",
+        "les malformations du tube neural",
+        "l'accouchement prématuré"
+      ],
+      "r": 2,
+      "x": "L'acide folique, ou vitamine B9, est indispensable à la fermeture du tube neural de l'embryon au cours du premier mois. Sa carence favorise des malformations graves comme le spina bifida."
+    },
+    {
+      "q": "Le siège de l'Organisation mondiale de la santé (OMS) se trouve à :",
+      "o": [
+        "New York",
+        "Paris",
+        "Addis-Abeba",
+        "Genève"
+      ],
+      "r": 3,
+      "x": "L'OMS, institution spécialisée des Nations unies, a son siège à Genève, en Suisse. Son bureau régional pour l'Afrique est installé à Brazzaville."
+    },
+    {
+      "q": "Le staphylocoque doré, responsable de furoncles et d'infections de plaies, est :",
+      "o": [
+        "un virus",
+        "une bactérie",
+        "un champignon",
+        "un parasite"
+      ],
+      "r": 1,
+      "x": "Le staphylocoque doré vit souvent sur la peau et dans le nez sans provoquer de maladie, mais il infecte les plaies mal soignées. Certaines souches sont devenues résistantes à de nombreux antibiotiques."
+    },
+    {
+      "q": "Une épidémie qui s'étend à plusieurs continents est appelée :",
+      "o": [
+        "une endémie",
+        "une pandémie",
+        "une zoonose",
+        "une enzootie"
+      ],
+      "r": 1,
+      "x": "La pandémie désigne une épidémie de très grande extension géographique, comme la grippe de 1918. L'endémie correspond, elle, à la présence permanente d'une maladie dans une région donnée."
+    },
+    {
+      "q": "La période qui sépare la contamination de l'apparition des premiers symptômes s'appelle :",
+      "o": [
+        "la période d'incubation",
+        "la phase de convalescence",
+        "la période d'invasion",
+        "la phase d'état"
+      ],
+      "r": 0,
+      "x": "Pendant l'incubation, le microbe se multiplie sans signe visible, et la personne peut parfois déjà le transmettre. Sa durée varie de quelques heures pour le choléra à plusieurs années pour la lèpre."
+    },
+    {
+      "q": "Une personne qui héberge un microbe sans être malade mais peut le transmettre est :",
+      "o": [
+        "un vecteur",
+        "un réservoir animal",
+        "un porteur sain",
+        "un hôte intermédiaire"
+      ],
+      "r": 2,
+      "x": "Le porteur sain ne présente aucun symptôme mais contribue à la circulation du germe, comme dans le cas du méningocoque. Le vecteur est, lui, un animal qui transporte le microbe d'un hôte à un autre."
+    },
+    {
+      "q": "Une maladie transmise de l'animal à l'homme est appelée :",
+      "o": [
+        "une zoonose",
+        "une endémie",
+        "une mycose",
+        "une anthroponose"
+      ],
+      "r": 0,
+      "x": "La rage, la maladie à virus Ebola et la fièvre de Lassa sont des zoonoses. Une mycose est, elle, une infection due à un champignon."
+    },
+    {
+      "q": "Lors d'une réaction allergique, la substance libérée qui provoque démangeaisons et gonflements est :",
+      "o": [
+        "l'insuline",
+        "l'histamine",
+        "l'adrénaline",
+        "la mélanine"
+      ],
+      "r": 1,
+      "x": "Les cellules immunitaires libèrent l'histamine au contact de l'allergène, provoquant rougeur, œdème et démangeaisons. Les médicaments antihistaminiques bloquent précisément son action."
+    },
+    {
+      "q": "L'asthme se caractérise par :",
+      "o": [
+        "une infection du foie",
+        "une inflammation des reins",
+        "une atteinte de la moelle osseuse",
+        "un rétrécissement des bronches"
+      ],
+      "r": 3,
+      "x": "Lors d'une crise, les bronches se contractent et s'enflamment, ce qui gêne surtout l'expiration et provoque des sifflements. Poussières, fumées et pollens figurent parmi les déclencheurs fréquents."
+    },
+    {
+      "q": "Pour limiter le rejet d'une greffe, on administre au receveur des médicaments :",
+      "o": [
+        "antibiotiques",
+        "antipaludiques",
+        "immunosuppresseurs",
+        "anticoagulants"
+      ],
+      "r": 2,
+      "x": "Les immunosuppresseurs freinent le système immunitaire qui reconnaît l'organe greffé comme étranger. Ils exposent en contrepartie le malade à un risque accru d'infections."
+    },
+    {
+      "q": "Les lymphocytes qui détruisent directement les cellules infectées par un virus sont :",
+      "o": [
+        "les lymphocytes B",
+        "les lymphocytes T8",
+        "les plaquettes",
+        "les hématies"
+      ],
+      "r": 1,
+      "x": "Les lymphocytes T8, dits cytotoxiques, reconnaissent et tuent les cellules infectées. Les lymphocytes B combattent, eux, les microbes par la production d'anticorps."
+    },
+    {
+      "q": "Une boîte de conserve bombée doit être jetée car elle peut contenir la toxine responsable :",
+      "o": [
+        "du choléra",
+        "de la typhoïde",
+        "du botulisme",
+        "du tétanos"
+      ],
+      "r": 2,
+      "x": "La bactérie du botulisme se développe sans air dans les conserves mal stérilisées et produit des gaz qui déforment la boîte. Sa toxine provoque des paralysies parfois mortelles."
+    },
+    {
+      "q": "L'examen microscopique de référence pour confirmer un paludisme est :",
+      "o": [
+        "l'examen des urines",
+        "la radiographie",
+        "la goutte épaisse",
+        "la ponction lombaire"
+      ],
+      "r": 2,
+      "x": "La goutte épaisse permet de voir le Plasmodium dans le sang et d'estimer la densité parasitaire. Le test de diagnostic rapide, utilisable sans microscope, constitue l'alternative en centre de santé."
+    },
+    {
+      "q": "Le traitement de première intention du paludisme simple repose sur :",
+      "o": [
+        "la chloroquine seule",
+        "les combinaisons avec artémisinine",
+        "la pénicilline injectable",
+        "l'ivermectine orale"
+      ],
+      "r": 1,
+      "x": "Les combinaisons thérapeutiques à base d'artémisinine associent deux molécules pour limiter l'apparition de résistances. La chloroquine a été abandonnée en raison de la résistance généralisée du parasite."
+    },
+    {
+      "q": "La fièvre hémorragique de Lassa est transmise à l'homme principalement par :",
+      "o": [
+        "les moustiques",
+        "les tiques",
+        "les chauves-souris",
+        "les rongeurs"
+      ],
+      "r": 3,
+      "x": "Un rat sauvage élimine le virus dans ses urines et ses excréments, qui contaminent les aliments et les habitations. La maladie, décrite en 1969 au Nigeria, sévit surtout en Afrique de l'Ouest."
+    },
+    {
+      "q": "Chez le nourrisson, un signe de déshydratation sévère est :",
+      "o": [
+        "une fontanelle déprimée",
+        "une fontanelle bombée",
+        "une fièvre isolée",
+        "une toux sèche"
+      ],
+      "r": 0,
+      "x": "La fontanelle, zone molle du crâne, se creuse lorsque l'enfant perd beaucoup d'eau. Une fontanelle bombée évoque au contraire une méningite et impose une consultation urgente."
+    },
+    {
+      "q": "La mesure qui consiste à tenir à l'écart des personnes exposées à une maladie contagieuse, le temps de l'incubation, s'appelle :",
+      "o": [
+        "la vaccination",
+        "la quarantaine",
+        "la désinfection",
+        "la sérothérapie"
+      ],
+      "r": 1,
+      "x": "La quarantaine s'applique à des personnes exposées mais encore sans symptômes. L'isolement concerne, lui, les malades déclarés."
+    },
+    {
+      "q": "Le dépistage du cancer du sein repose sur :",
+      "o": [
+        "l'électrocardiogramme",
+        "la goutte épaisse",
+        "la spirométrie",
+        "la mammographie"
+      ],
+      "r": 3,
+      "x": "La mammographie, radiographie des seins, détecte des tumeurs avant qu'elles ne soient palpables. L'autopalpation régulière complète ce dépistage."
+    },
+    {
+      "q": "Devant une hémorragie externe abondante, le premier geste de secours est de :",
+      "o": [
+        "surélever la tête de la victime",
+        "donner à boire à la victime",
+        "poser immédiatement un garrot",
+        "comprimer directement la plaie"
+      ],
+      "r": 3,
+      "x": "La compression directe de la plaie avec la main ou un linge propre arrête la plupart des saignements. Le garrot n'est utilisé qu'en dernier recours, lorsque la compression est impossible ou inefficace."
+    },
+    {
+      "q": "Au Burkina Faso, la collecte, la préparation et la distribution des produits sanguins relèvent :",
+      "o": [
+        "du Centre national de transfusion sanguine",
+        "de l'Institut national de santé publique",
+        "de la Centrale d'achat des médicaments",
+        "de l'Agence de régulation pharmaceutique"
+      ],
+      "r": 0,
+      "x": "Le Centre national de transfusion sanguine organise les collectes auprès des donneurs volontaires et approvisionne les hôpitaux. Il contrôle chaque poche pour garantir l'absence d'agents infectieux transmissibles."
+    },
+    {
+      "q": "La courbure d'une tige vers la source de lumière s'appelle :",
+      "o": [
+        "le géotropisme",
+        "l'hydrotropisme",
+        "le thigmotropisme",
+        "le phototropisme"
+      ],
+      "r": 3,
+      "x": "Une hormone végétale, l'auxine, s'accumule du côté ombragé de la tige et y accélère l'allongement des cellules, d'où la courbure vers la lumière. Le géotropisme désigne, lui, l'orientation d'un organe sous l'effet de la pesanteur."
+    },
+    {
+      "q": "La racine principale d'une plante s'oriente vers le bas sous l'effet :",
+      "o": [
+        "de la lumière",
+        "du vent",
+        "de l'humidité de l'air",
+        "de la pesanteur"
+      ],
+      "r": 3,
+      "x": "La racine présente un géotropisme positif : elle croît dans le sens de la pesanteur, tandis que la tige croît en sens inverse. Cette orientation se maintient même si la graine est semée à l'envers."
+    },
+    {
+      "q": "L'absorption de l'eau et des sels minéraux par la racine se fait principalement au niveau :",
+      "o": [
+        "des poils absorbants",
+        "de la coiffe",
+        "de l'écorce du collet",
+        "des racines lignifiées"
+      ],
+      "r": 0,
+      "x": "Les poils absorbants, très nombreux près de l'extrémité des racines, multiplient la surface de contact avec l'eau du sol. La coiffe protège seulement la pointe de la racine lors de sa progression."
+    },
+    {
+      "q": "Placée dans une eau très salée, une cellule végétale perd son eau ; ce phénomène s'appelle :",
+      "o": [
+        "la turgescence",
+        "la germination",
+        "la plasmolyse",
+        "la transpiration"
+      ],
+      "r": 2,
+      "x": "L'eau sort de la cellule vers le milieu plus concentré en sel, et le contenu cellulaire se rétracte. C'est pourquoi une eau d'irrigation trop salée fait flétrir les cultures."
+    },
+    {
+      "q": "Le dioxygène rejeté par la plante lors de la photosynthèse provient :",
+      "o": [
+        "du dioxyde de carbone",
+        "des sels minéraux",
+        "du glucose",
+        "de l'eau"
+      ],
+      "r": 3,
+      "x": "La lumière décompose les molécules d'eau dans les chloroplastes et libère leur oxygène, ce qu'ont démontré en 1941 des expériences à l'oxygène marqué. Le carbone du dioxyde de carbone sert, lui, à fabriquer le glucose."
+    },
+    {
+      "q": "Les feuilles paraissent vertes parce que la chlorophylle :",
+      "o": [
+        "réfléchit surtout la lumière verte",
+        "absorbe surtout la lumière verte",
+        "produit elle-même de la lumière",
+        "ne capte aucune lumière"
+      ],
+      "r": 0,
+      "x": "La chlorophylle absorbe principalement les radiations rouges et bleues, utilisées pour la photosynthèse, et renvoie le vert. Une plante éclairée en lumière verte seule se développe donc très mal."
+    },
+    {
+      "q": "Le maïs, le sorgho et la canne à sucre sont des plantes dites C4, particulièrement efficaces :",
+      "o": [
+        "sous climat chaud et ensoleillé",
+        "à l'ombre des forêts denses",
+        "dans les eaux salées",
+        "sous climat froid et humide"
+      ],
+      "r": 0,
+      "x": "Ces plantes concentrent le dioxyde de carbone dans leurs feuilles, ce qui maintient une photosynthèse élevée malgré la chaleur et la fermeture partielle des stomates. Le mil appartient également à ce groupe, d'où son adaptation au Sahel."
+    },
+    {
+      "q": "Une fleur qui porte à la fois des étamines et un pistil est dite :",
+      "o": [
+        "hermaphrodite",
+        "unisexuée",
+        "stérile",
+        "dioïque"
+      ],
+      "r": 0,
+      "x": "La fleur hermaphrodite réunit les organes mâles et femelles, cas de la majorité des plantes à fleurs. Le maïs porte au contraire des fleurs unisexuées, mâles au sommet et femelles sur l'épi."
+    },
+    {
+      "q": "Le rônier, dont certains pieds ne portent que des fleurs mâles et d'autres que des fleurs femelles, est une espèce :",
+      "o": [
+        "monoïque",
+        "dioïque",
+        "hermaphrodite",
+        "stérile"
+      ],
+      "r": 1,
+      "x": "Chez une espèce dioïque, les sexes sont portés par des individus distincts : seuls les pieds femelles du rônier donnent des fruits. Une espèce monoïque porte au contraire les deux types de fleurs sur le même pied, comme le maïs."
+    },
+    {
+      "q": "L'organe mâle de la fleur, qui produit le pollen, est :",
+      "o": [
+        "le pistil",
+        "le sépale",
+        "le pétale",
+        "l'étamine"
+      ],
+      "r": 3,
+      "x": "L'étamine se compose d'un filet surmonté d'une anthère où se forment les grains de pollen. Le pistil constitue, lui, l'organe femelle qui renferme les ovules."
+    },
+    {
+      "q": "La mangue, fruit charnu renfermant un noyau unique, est :",
+      "o": [
+        "une baie",
+        "une drupe",
+        "une gousse",
+        "un akène"
+      ],
+      "r": 1,
+      "x": "La drupe possède une pulpe charnue et un noyau dur qui enferme la graine, comme la mangue ou la datte du rônier. La baie contient au contraire plusieurs graines dispersées dans la pulpe, comme la tomate ou la papaye."
+    },
+    {
+      "q": "Les fruits munis d'ailes, comme ceux des Combretum, sont disséminés principalement par :",
+      "o": [
+        "le vent",
+        "l'eau",
+        "les oiseaux",
+        "les fourmis"
+      ],
+      "r": 0,
+      "x": "Les ailes membraneuses ralentissent la chute du fruit et permettent au vent de l'emporter loin du pied mère. Les fruits charnus et colorés sont, eux, surtout disséminés par les oiseaux et les mammifères."
+    },
+    {
+      "q": "Pour lever la dormance des graines à tégument très dur de certains acacias, on les :",
+      "o": [
+        "scarifie légèrement",
+        "congèle plusieurs jours",
+        "expose à la fumée",
+        "enrobe de sel fin"
+      ],
+      "r": 0,
+      "x": "La scarification ou le trempage dans l'eau chaude entame le tégument et permet à l'eau de pénétrer dans la graine. Sans ce traitement, la levée au semis est lente et très irrégulière."
+    },
+    {
+      "q": "La pomme de terre est une tige souterraine renflée appelée :",
+      "o": [
+        "bulbe",
+        "rhizome",
+        "tubercule",
+        "racine pivotante"
+      ],
+      "r": 2,
+      "x": "Le tubercule de pomme de terre porte des bourgeons, les yeux, qui prouvent sa nature de tige. La patate douce est au contraire une racine tubérisée."
+    },
+    {
+      "q": "L'oignon, très cultivé en saison sèche au Burkina Faso, est un organe de réserve de type :",
+      "o": [
+        "tubercule",
+        "bulbe",
+        "rhizome",
+        "racine tubérisée"
+      ],
+      "r": 1,
+      "x": "Le bulbe est formé de feuilles charnues serrées autour d'une tige très courte appelée plateau. Ces feuilles accumulent les réserves qui permettent à la plante de repartir."
+    },
+    {
+      "q": "Le gingembre se multiplie à partir d'une tige souterraine horizontale appelée :",
+      "o": [
+        "rhizome",
+        "stolon",
+        "bulbe",
+        "tubercule"
+      ],
+      "r": 0,
+      "x": "Le rhizome croît horizontalement sous le sol et émet des racines et des tiges aériennes à partir de ses nœuds. Le stolon est, lui, une tige rampante qui court à la surface du sol."
+    },
+    {
+      "q": "Chez les plantes des zones sèches, la transformation des feuilles en épines permet :",
+      "o": [
+        "de limiter les pertes d'eau",
+        "d'accélérer la photosynthèse",
+        "d'attirer les pollinisateurs",
+        "de stocker l'amidon"
+      ],
+      "r": 0,
+      "x": "En réduisant la surface foliaire, les épines diminuent fortement la transpiration, adaptation fréquente chez les acacias sahéliens. Elles découragent aussi les herbivores de brouter la plante."
+    },
+    {
+      "q": "Le Striga, qui cause d'importantes pertes sur le sorgho, le mil et le maïs, est :",
+      "o": [
+        "un insecte foreur",
+        "un champignon du sol",
+        "un virus",
+        "une plante parasite"
+      ],
+      "r": 3,
+      "x": "Le Striga fixe ses suçoirs sur les racines des céréales et leur prélève eau et nutriments avant même de sortir de terre. La fumure organique, la rotation avec des légumineuses et les variétés tolérantes limitent son développement."
+    },
+    {
+      "q": "La chenille légionnaire d'automne, ravageur apparu en Afrique de l'Ouest en 2016, attaque principalement :",
+      "o": [
+        "le coton",
+        "le niébé",
+        "le maïs",
+        "le sésame"
+      ],
+      "r": 2,
+      "x": "Originaire d'Amérique, cette chenille dévore le cornet et les épis du maïs et peut détruire des champs entiers. Sa détection précoce par observation des jeunes plants conditionne l'efficacité de la lutte."
+    },
+    {
+      "q": "Le criquet pèlerin, redouté pour ses invasions au Sahel, porte le nom scientifique de :",
+      "o": [
+        "Locusta migratoria",
+        "Schistocerca gregaria",
+        "Zonocerus variegatus",
+        "Oedaleus senegalensis"
+      ],
+      "r": 1,
+      "x": "Lorsque les conditions sont favorables, le criquet pèlerin passe de la phase solitaire à la phase grégaire et forme des essaims dévastateurs. Locusta migratoria désigne, lui, le criquet migrateur."
+    },
+    {
+      "q": "La mouche des fruits Bactrocera dorsalis cause d'importants dégâts :",
+      "o": [
+        "sur les mangues",
+        "sur les épis de mil",
+        "sur les capsules de coton",
+        "sur les tubercules d'igname"
+      ],
+      "r": 0,
+      "x": "La femelle pond dans le fruit mûrissant, où les larves provoquent pourriture et chute. Le ramassage des fruits tombés et le piégeage réduisent les pertes à l'exportation."
+    },
+    {
+      "q": "Le triple ensachage hermétique, ou sacs PICS, protège le niébé stocké contre :",
+      "o": [
+        "les rats",
+        "les termites",
+        "les oiseaux",
+        "les bruches"
+      ],
+      "r": 3,
+      "x": "Dans le sac hermétique, les insectes épuisent l'oxygène disponible et meurent sans traitement chimique. Les bruches, petits coléoptères, peuvent sinon détruire la plus grande partie d'un stock en quelques mois."
+    },
+    {
+      "q": "Les aflatoxines, qui contaminent l'arachide et le maïs mal séchés, sont produites par :",
+      "o": [
+        "des bactéries",
+        "des moisissures",
+        "des insectes",
+        "des virus"
+      ],
+      "r": 1,
+      "x": "Des moisissures du genre Aspergillus se développent sur les graines humides et sécrètent ces toxines, fortement associées au cancer du foie. Un séchage rapide et un stockage au sec limitent la contamination."
+    },
+    {
+      "q": "Les mycorhizes sont une association symbiotique entre les racines d'une plante et :",
+      "o": [
+        "des bactéries fixatrices",
+        "des vers de terre",
+        "des champignons du sol",
+        "des insectes du sol"
+      ],
+      "r": 2,
+      "x": "Les filaments du champignon prolongent le système racinaire et améliorent l'absorption de l'eau et du phosphore. En échange, la plante fournit au champignon des sucres issus de la photosynthèse."
+    },
+    {
+      "q": "Un jaunissement général des feuilles les plus âgées d'une céréale traduit souvent une carence en :",
+      "o": [
+        "calcium",
+        "cuivre",
+        "fer",
+        "azote"
+      ],
+      "r": 3,
+      "x": "L'azote, élément mobile, est retiré des vieilles feuilles au profit des jeunes, qui restent vertes plus longtemps. Un apport d'urée ou de fumure organique corrige cette carence."
+    },
+    {
+      "q": "La technique de la microdose d'engrais consiste à :",
+      "o": [
+        "épandre l'engrais à la volée",
+        "placer une petite dose au poquet",
+        "doubler la dose recommandée",
+        "supprimer tout engrais minéral"
+      ],
+      "r": 1,
+      "x": "Une pincée d'engrais déposée dans chaque poquet au semis profite directement au jeune plant, avec un coût réduit pour le producteur. Cette technique améliore sensiblement les rendements du mil et du sorgho en zone sahélienne."
+    },
+    {
+      "q": "L'irrigation goutte-à-goutte a pour principal avantage :",
+      "o": [
+        "d'inonder les parcelles",
+        "de supprimer le désherbage",
+        "d'économiser l'eau",
+        "de refroidir le sol"
+      ],
+      "r": 2,
+      "x": "L'eau est apportée directement au pied des plantes, ce qui réduit fortement les pertes par évaporation et ruissellement. Cette technique convient particulièrement au maraîchage lorsque l'eau est rare."
+    },
+    {
+      "q": "La culture attelée consiste à utiliser pour les travaux des champs :",
+      "o": [
+        "des tracteurs",
+        "la traction animale",
+        "des motoculteurs",
+        "l'énergie solaire"
+      ],
+      "r": 1,
+      "x": "Bœufs et ânes tirent charrues, sarcleurs et charrettes, ce qui augmente les surfaces travaillées par famille. Le fumier des animaux de trait enrichit en outre les parcelles."
+    },
+    {
+      "q": "Le maraîchage de contre-saison se pratique au Burkina Faso :",
+      "o": [
+        "en saison sèche, avec irrigation",
+        "en saison des pluies, sans irrigation",
+        "pendant la récolte du mil",
+        "pendant la floraison du coton"
+      ],
+      "r": 0,
+      "x": "Oignons, tomates et choux sont cultivés après l'hivernage à partir de l'eau des barrages, des puits et des forages. Cette activité fournit des revenus pendant la période où les champs pluviaux sont vides."
+    },
+    {
+      "q": "Le sésame, importante culture d'exportation du Burkina Faso, est cultivé pour :",
+      "o": [
+        "ses tubercules",
+        "ses fibres textiles",
+        "ses graines oléagineuses",
+        "ses feuilles"
+      ],
+      "r": 2,
+      "x": "Les graines de sésame contiennent environ la moitié de leur poids en huile et sont recherchées sur les marchés asiatiques. Leur culture, peu exigeante, s'adapte bien aux sols pauvres."
+    },
+    {
+      "q": "Le soja est une légumineuse appréciée pour ses graines riches en :",
+      "o": [
+        "protéines et en huile",
+        "amidon et en fibres",
+        "sucre et en eau",
+        "vitamine C et en fer"
+      ],
+      "r": 0,
+      "x": "La graine de soja contient environ 40 % de protéines et 20 % d'huile, d'où son usage en alimentation humaine et animale. Comme toute légumineuse, il enrichit le sol en azote."
+    },
+    {
+      "q": "Le fonio est une céréale caractérisée par :",
+      "o": [
+        "de très gros épis charnus",
+        "des grains très fins et un cycle court",
+        "une culture en rizière inondée",
+        "un cycle de deux années"
+      ],
+      "r": 1,
+      "x": "Le fonio produit de minuscules grains et certaines variétés arrivent à maturité en moins de trois mois, ce qui en fait une culture de soudure. Il pousse sur des sols pauvres où d'autres céréales échouent."
+    },
+    {
+      "q": "Au Burkina Faso, la canne à sucre est cultivée à grande échelle autour de :",
+      "o": [
+        "Dori",
+        "Banfora",
+        "Fada N'Gourma",
+        "Kaya"
+      ],
+      "r": 1,
+      "x": "Les plantations irriguées de Bérégadougou, près de Banfora, alimentent la sucrerie nationale SN-SOSUCO. La région bénéficie des eaux de la Comoé et d'une pluviométrie parmi les plus élevées du pays."
+    },
+    {
+      "q": "Dans le fruit de l'anacardier, la partie charnue appelée pomme de cajou est en réalité :",
+      "o": [
+        "le fruit véritable",
+        "la graine germée",
+        "une feuille modifiée",
+        "le pédoncule renflé"
+      ],
+      "r": 3,
+      "x": "La pomme de cajou est un faux fruit issu du renflement du pédoncule, tandis que le vrai fruit est la noix accrochée à sa base. L'amande contenue dans cette noix constitue le produit exporté."
+    },
+    {
+      "q": "La gomme arabique est produite par :",
+      "o": [
+        "l'Acacia senegal",
+        "le karité",
+        "le néré",
+        "le tamarinier"
+      ],
+      "r": 0,
+      "x": "La gomme arabique est un exsudat récolté sur le tronc de l'Acacia senegal, arbre des zones sahéliennes. Elle sert d'épaississant et de stabilisant dans l'industrie alimentaire et pharmaceutique."
+    },
+    {
+      "q": "Les boissons de bissap sont préparées à partir :",
+      "o": [
+        "des feuilles de baobab",
+        "des graines de néré",
+        "des calices d'oseille de Guinée",
+        "des fruits du tamarinier"
+      ],
+      "r": 2,
+      "x": "Les calices rouges de l'Hibiscus sabdariffa, séchés puis infusés, donnent le bissap, riche en pigments antioxydants. Les feuilles de la même plante sont consommées en sauce."
+    },
+    {
+      "q": "Les taurins de race Baoulé et N'Dama sont appréciés pour leur :",
+      "o": [
+        "forte production laitière",
+        "très grande taille",
+        "tolérance à la trypanosomiase",
+        "résistance à la soif"
+      ],
+      "r": 2,
+      "x": "Ces bovins supportent l'infection par les trypanosomes sans développer de maladie grave, ce qui permet l'élevage en zone infestée de glossines. Les zébus, plus grands, y sont au contraire très sensibles."
+    },
+    {
+      "q": "La maladie de Newcastle, principale cause de mortalité des poules en élevage villageois, est due à :",
+      "o": [
+        "une bactérie",
+        "un parasite",
+        "un champignon",
+        "un virus"
+      ],
+      "r": 3,
+      "x": "Ce virus très contagieux peut décimer une basse-cour en quelques jours. La vaccination régulière des volailles, possible par goutte oculaire, reste le seul moyen de prévention efficace."
+    },
+    {
+      "q": "La peste des petits ruminants touche principalement :",
+      "o": [
+        "les poules et les pintades",
+        "les bovins adultes",
+        "les chevaux et les ânes",
+        "les chèvres et les moutons"
+      ],
+      "r": 3,
+      "x": "Ce virus provoque fièvre, diarrhée et lésions buccales, avec une forte mortalité dans les troupeaux non vaccinés. Son éradication mondiale est visée pour 2030."
+    },
+    {
+      "q": "L'embouche est une technique d'élevage qui consiste à :",
+      "o": [
+        "croiser deux races locales",
+        "engraisser des animaux à vendre",
+        "vacciner tout le troupeau",
+        "conduire le troupeau en transhumance"
+      ],
+      "r": 1,
+      "x": "Pendant quelques mois, bovins ou ovins reçoivent une alimentation riche, fanes et tourteau de coton, pour être vendus à bon prix. Les fêtes religieuses constituent les principales périodes de vente des moutons d'embouche."
+    },
+    {
+      "q": "L'insémination artificielle est utilisée en élevage pour :",
+      "o": [
+        "soigner les mammites",
+        "nourrir les jeunes veaux",
+        "améliorer la génétique du troupeau",
+        "agrandir les pâturages"
+      ],
+      "r": 2,
+      "x": "La semence de reproducteurs sélectionnés permet de diffuser rapidement des caractères recherchés, comme une meilleure production laitière. Elle évite en outre l'entretien d'un taureau dans chaque exploitation."
+    },
+    {
+      "q": "Le coton génétiquement modifié, dit coton Bt, produit une toxine dirigée contre :",
+      "o": [
+        "les mauvaises herbes",
+        "les chenilles ravageuses",
+        "les champignons du sol",
+        "les virus"
+      ],
+      "r": 1,
+      "x": "Le gène introduit, issu de la bactérie Bacillus thuringiensis, rend la plante toxique pour les chenilles de la capsule. Cultivé au Burkina Faso à partir de 2008, il a été abandonné au milieu des années 2010 en raison d'une baisse de qualité de la fibre."
+    },
+    {
+      "q": "Les vers de terre améliorent la fertilité du sol car ils :",
+      "o": [
+        "fixent l'azote de l'air",
+        "produisent de la chlorophylle",
+        "consomment les racines",
+        "aèrent et brassent le sol"
+      ],
+      "r": 3,
+      "x": "Leurs galeries facilitent la circulation de l'air et de l'eau, et ils mélangent la matière organique aux couches minérales. Leurs déjections forment des agrégats riches en éléments nutritifs."
+    },
+    {
+      "q": "Les variétés locales de sorgho fleurissent à peu près à la même date quelle que soit la date de semis, car elles sont sensibles :",
+      "o": [
+        "à la longueur du jour",
+        "à la quantité d'engrais",
+        "à la nature du sol",
+        "à la présence d'insectes"
+      ],
+      "r": 0,
+      "x": "Ce photopériodisme fait coïncider la floraison avec la fin de la saison des pluies, ce qui protège les grains des moisissures. Il permet aussi aux semis tardifs de produire malgré un cycle raccourci."
+    },
+    {
+      "q": "Une plante qui accomplit son cycle complet, de la graine à la graine, en une seule saison est dite :",
+      "o": [
+        "vivace",
+        "bisannuelle",
+        "annuelle",
+        "ligneuse"
+      ],
+      "r": 2,
+      "x": "Le mil, le maïs et le niébé sont des plantes annuelles qui meurent après avoir produit leurs graines. L'oignon est au contraire bisannuel : il ne fleurit que la deuxième année."
+    },
+    {
+      "q": "Le jatropha, ou pourghère, est cultivé pour ses graines utilisées dans la production :",
+      "o": [
+        "de farine alimentaire",
+        "de sucre",
+        "de fibres textiles",
+        "de biocarburant"
+      ],
+      "r": 3,
+      "x": "L'huile extraite des graines de jatropha peut remplacer le gazole dans certains moteurs. Ces graines sont toxiques et ne doivent jamais être consommées."
+    },
+    {
+      "q": "La convention qui interdit les polluants organiques persistants comme le DDT a été adoptée à Stockholm en :",
+      "o": [
+        "1972",
+        "1992",
+        "2001",
+        "2015"
+      ],
+      "r": 2,
+      "x": "La convention de Stockholm de 2001 vise l'élimination de pesticides très persistants qui s'accumulent dans les chaînes alimentaires. Le DDT n'y est toléré que pour la lutte contre les moustiques vecteurs, sous contrôle strict."
+    },
+    {
+      "q": "La culture hydroponique consiste à cultiver des plantes :",
+      "o": [
+        "sous le couvert des arbres",
+        "uniquement en saison des pluies",
+        "sur des sols salés",
+        "dans une solution nutritive sans sol"
+      ],
+      "r": 3,
+      "x": "Les racines baignent dans une eau enrichie en sels minéraux, ce qui permet de produire hors sol, y compris en ville. Cette technique consomme peu d'eau mais exige une solution nutritive bien dosée."
+    },
+    {
+      "q": "Le nombre de cernes visibles sur la section d'un tronc d'arbre permet d'estimer :",
+      "o": [
+        "sa hauteur",
+        "son âge",
+        "sa teneur en eau",
+        "sa production de fruits"
+      ],
+      "r": 1,
+      "x": "Chaque saison de croissance ajoute un anneau de bois, plus clair pendant la saison humide et plus sombre pendant la saison sèche. L'étude des cernes renseigne aussi sur les climats passés."
+    },
+    {
+      "q": "L'engrais vert consiste à :",
+      "o": [
+        "pulvériser un engrais liquide",
+        "brûler les résidus de récolte",
+        "enfouir une légumineuse en floraison",
+        "arroser avec de l'eau de compost"
+      ],
+      "r": 2,
+      "x": "La légumineuse enfouie, comme le mucuna, apporte au sol de la matière organique et l'azote qu'elle a fixé. Le brûlis des résidus fait au contraire perdre cette matière organique."
+    },
+    {
+      "q": "Le marbre provient de la transformation, sous l'effet de la chaleur et de la pression :",
+      "o": [
+        "du granite",
+        "du calcaire",
+        "du basalte",
+        "du grès"
+      ],
+      "r": 1,
+      "x": "Le marbre est une roche métamorphique issue de la recristallisation du calcaire en profondeur. Le grès soumis au même processus donne, lui, le quartzite."
+    },
+    {
+      "q": "Le basalte, dont les cristaux sont invisibles à l'œil nu, est une roche :",
+      "o": [
+        "sédimentaire",
+        "métamorphique",
+        "plutonique",
+        "volcanique"
+      ],
+      "r": 3,
+      "x": "Le basalte provient d'une lave refroidie rapidement en surface, ce qui empêche la formation de gros cristaux. C'est la roche la plus répandue du plancher des océans."
+    },
+    {
+      "q": "Le magma qui s'épanche à la surface lors d'une éruption prend le nom de :",
+      "o": [
+        "lave",
+        "cendre",
+        "croûte",
+        "sédiment"
+      ],
+      "r": 0,
+      "x": "La lave sort à des températures voisines de 1 000 à 1 200 °C avant de se solidifier en roche volcanique. Les cendres sont, elles, des fragments fins projetés lors des éruptions explosives."
+    },
+    {
+      "q": "Le point de la surface terrestre situé à la verticale du foyer d'un séisme est :",
+      "o": [
+        "l'hypocentre",
+        "la faille",
+        "l'épicentre",
+        "le cratère"
+      ],
+      "r": 2,
+      "x": "L'épicentre est le lieu où les secousses sont généralement les plus violentes. Le foyer, ou hypocentre, se situe en profondeur, là où la rupture des roches se produit."
+    },
+    {
+      "q": "Au niveau des dorsales océaniques, les plaques lithosphériques :",
+      "o": [
+        "s'écartent l'une de l'autre",
+        "plongent l'une sous l'autre",
+        "coulissent sans déformation",
+        "se soudent définitivement"
+      ],
+      "r": 0,
+      "x": "Le magma qui remonte dans l'axe de la dorsale crée en permanence un nouveau plancher océanique. L'océan Atlantique s'élargit ainsi de quelques centimètres chaque année."
+    },
+    {
+      "q": "Le plongement d'une plaque océanique sous une autre plaque s'appelle :",
+      "o": [
+        "l'expansion",
+        "la sédimentation",
+        "l'érosion",
+        "la subduction"
+      ],
+      "r": 3,
+      "x": "La subduction s'accompagne de fosses océaniques profondes, de séismes et de volcans, comme dans la cordillère des Andes. L'expansion caractérise au contraire les dorsales, où les plaques s'écartent."
+    },
+    {
+      "q": "Le carbone 14 permet de dater des restes organiques âgés au plus d'environ :",
+      "o": [
+        "500 ans",
+        "50 000 ans",
+        "5 millions d'années",
+        "4,6 milliards d'années"
+      ],
+      "r": 1,
+      "x": "Le carbone 14 perd la moitié de sa quantité en 5 730 ans, si bien qu'au-delà de 50 000 ans il n'en reste plus assez pour mesurer. Les roches très anciennes se datent par d'autres éléments radioactifs à décroissance plus lente."
+    },
+    {
+      "q": "La disparition des dinosaures non aviens remonte à environ :",
+      "o": [
+        "6,6 millions d'années",
+        "66 millions d'années",
+        "250 millions d'années",
+        "660 millions d'années"
+      ],
+      "r": 1,
+      "x": "Cette extinction marque la fin du Crétacé et coïncide avec la chute d'une grande météorite dans l'actuel golfe du Mexique. Les 250 millions d'années correspondent, eux, à la plus grande extinction de l'histoire, à la fin du Permien."
+    },
+    {
+      "q": "Sur l'échelle de dureté de Mohs, le minéral classé 10, le plus dur, est :",
+      "o": [
+        "le quartz",
+        "le talc",
+        "le corindon",
+        "le diamant"
+      ],
+      "r": 3,
+      "x": "Le diamant raye tous les autres minéraux et n'est rayé par aucun. Le talc occupe le bas de l'échelle avec la valeur 1, le quartz la valeur 7 et le corindon la valeur 9."
+    },
+    {
+      "q": "Une roche qui produit une effervescence au contact de l'acide chlorhydrique dilué est :",
+      "o": [
+        "le granite",
+        "le basalte",
+        "le calcaire",
+        "le quartzite"
+      ],
+      "r": 2,
+      "x": "Le carbonate de calcium du calcaire réagit avec l'acide et libère du dioxyde de carbone sous forme de bulles. Le granite et le quartzite, formés de silicates, ne réagissent pas."
+    },
+    {
+      "q": "Une couche d'argile dans le sous-sol se comporte vis-à-vis de l'eau comme :",
+      "o": [
+        "une roche perméable",
+        "une roche soluble",
+        "une roche imperméable",
+        "une roche filtrante"
+      ],
+      "r": 2,
+      "x": "Les très fines particules d'argile empêchent l'eau de circuler, si bien qu'une couche argileuse retient la nappe située au-dessus. C'est ce qui explique l'engorgement de nombreux bas-fonds en saison des pluies."
+    },
+    {
+      "q": "Le métal toxique utilisé dans l'orpaillage artisanal pour amalgamer l'or est :",
+      "o": [
+        "le mercure",
+        "le plomb",
+        "le cadmium",
+        "l'arsenic"
+      ],
+      "r": 0,
+      "x": "Le chauffage de l'amalgame libère des vapeurs de mercure qui intoxiquent les orpailleurs et contaminent l'eau et les poissons. La convention de Minamata, adoptée en 2013, vise à réduire cet usage."
+    },
+    {
+      "q": "Le charbon, le pétrole et le gaz naturel sont des énergies :",
+      "o": [
+        "renouvelables et propres",
+        "fossiles non renouvelables",
+        "d'origine nucléaire",
+        "d'origine hydraulique"
+      ],
+      "r": 1,
+      "x": "Ces combustibles se sont formés pendant des millions d'années à partir de matière organique enfouie et s'épuisent à l'échelle humaine. Leur combustion est la principale source de dioxyde de carbone d'origine humaine."
+    },
+    {
+      "q": "La proportion d'eau salée dans l'ensemble de l'eau présente sur Terre est d'environ :",
+      "o": [
+        "50 %",
+        "70 %",
+        "85 %",
+        "97 %"
+      ],
+      "r": 3,
+      "x": "Les océans renferment environ 97 % de l'eau terrestre, et l'eau douce restante est surtout stockée dans les glaces. La part réellement accessible dans les lacs, cours d'eau et nappes est très faible."
+    },
+    {
+      "q": "Selon les recommandations de l'Organisation mondiale de la santé (OMS), le pH d'une eau de boisson doit se situer entre :",
+      "o": [
+        "2 et 4",
+        "4,5 et 6",
+        "6,5 et 8,5",
+        "9 et 11"
+      ],
+      "r": 2,
+      "x": "Une eau trop acide corrode les canalisations et peut se charger en métaux, tandis qu'une eau trop basique a un goût désagréable. La zone comprise entre 6,5 et 8,5 garantit une eau neutre ou légèrement alcaline."
+    },
+    {
+      "q": "La quantité totale d'eau perdue par évaporation du sol et transpiration des plantes s'appelle :",
+      "o": [
+        "le ruissellement",
+        "l'infiltration",
+        "l'évapotranspiration",
+        "la condensation"
+      ],
+      "r": 2,
+      "x": "Au Sahel, l'évapotranspiration potentielle dépasse souvent la pluviométrie annuelle, d'où un déficit hydrique marqué. L'infiltration désigne, elle, la pénétration de l'eau de pluie dans le sol."
+    },
+    {
+      "q": "L'ensemble du territoire dont les eaux de ruissellement convergent vers un même cours d'eau est :",
+      "o": [
+        "un bassin versant",
+        "un bas-fond",
+        "une nappe",
+        "un delta"
+      ],
+      "r": 0,
+      "x": "Le bassin versant est délimité par les lignes de crête qui séparent les eaux entre cours d'eau voisins. Le Burkina Faso se partage entre les bassins de la Volta, de la Comoé et du Niger."
+    },
+    {
+      "q": "Une formation géologique capable de stocker et de laisser circuler l'eau souterraine est :",
+      "o": [
+        "un horizon humifère",
+        "une cuirasse latéritique",
+        "un filon de quartz",
+        "un aquifère"
+      ],
+      "r": 3,
+      "x": "Sables, grès et roches fracturées constituent des aquifères lorsqu'ils sont gorgés d'eau exploitable par puits ou forages. Une roche compacte et non fissurée ne peut jouer ce rôle."
+    },
+    {
+      "q": "Les objectifs de développement durable, adoptés par les Nations unies en 2015, sont au nombre de :",
+      "o": [
+        "8",
+        "12",
+        "17",
+        "21"
+      ],
+      "r": 2,
+      "x": "Les 17 objectifs de développement durable fixent l'horizon 2030 pour l'éradication de la pauvreté et la protection de la planète. Les 8 correspondent aux objectifs du millénaire pour le développement, adoptés en 2000."
+    },
+    {
+      "q": "L'objectif de développement durable n° 6 porte sur :",
+      "o": [
+        "l'accès à l'eau et à l'assainissement",
+        "l'éducation de qualité pour tous",
+        "l'élimination de la faim",
+        "la lutte contre les changements climatiques"
+      ],
+      "r": 0,
+      "x": "L'objectif n° 6 vise un accès universel à l'eau potable et à des installations sanitaires adéquates d'ici 2030. L'élimination de la faim relève de l'objectif n° 2 et le climat de l'objectif n° 13."
+    },
+    {
+      "q": "Le lagunage épure les eaux usées grâce :",
+      "o": [
+        "aux produits chlorés",
+        "au chauffage de l'eau",
+        "aux micro-organismes et au soleil",
+        "à l'ajout de sel"
+      ],
+      "r": 2,
+      "x": "Dans une série de bassins, les bactéries dégradent la matière organique pendant que les algues fournissent l'oxygène et que les ultraviolets détruisent les germes. Cette technique peu coûteuse convient bien au climat ensoleillé du Burkina Faso."
+    },
+    {
+      "q": "Sans l'effet de serre naturel, la température moyenne à la surface de la Terre serait d'environ :",
+      "o": [
+        "moins 18 °C",
+        "0 °C",
+        "plus 15 °C",
+        "plus 30 °C"
+      ],
+      "r": 0,
+      "x": "La vapeur d'eau et le dioxyde de carbone retiennent une partie de la chaleur émise par le sol, portant la moyenne actuelle à environ 15 °C. C'est le renforcement de ce phénomène par les activités humaines qui provoque le réchauffement."
+    },
+    {
+      "q": "Le Groupe d'experts intergouvernemental sur l'évolution du climat (GIEC) a été créé en :",
+      "o": [
+        "1972",
+        "1988",
+        "1997",
+        "2005"
+      ],
+      "r": 1,
+      "x": "Le GIEC est créé en 1988 par l'Organisation météorologique mondiale et le Programme des Nations unies pour l'environnement. Ses rapports évaluent l'état des connaissances scientifiques et lui ont valu le prix Nobel de la paix en 2007."
+    },
+    {
+      "q": "La jacinthe d'eau, qui envahit la surface de certaines retenues, est :",
+      "o": [
+        "une algue microscopique",
+        "un poisson introduit",
+        "un mollusque d'eau douce",
+        "une plante aquatique invasive"
+      ],
+      "r": 3,
+      "x": "Originaire d'Amérique du Sud, la jacinthe d'eau forme des tapis flottants qui gênent la pêche, bouchent les ouvrages et appauvrissent l'eau en oxygène. Sa croissance est favorisée par les eaux enrichies en engrais."
+    },
+    {
+      "q": "La liste rouge mondiale des espèces menacées est établie par :",
+      "o": [
+        "l'UNESCO",
+        "l'UICN",
+        "la FAO",
+        "l'OMS"
+      ],
+      "r": 1,
+      "x": "L'Union internationale pour la conservation de la nature (UICN), fondée en 1948, classe les espèces selon leur risque d'extinction. L'UNESCO gère, elle, la liste du patrimoine mondial."
+    },
+    {
+      "q": "La convention qui réglemente le commerce international des espèces sauvages menacées, signée à Washington en 1973, est :",
+      "o": [
+        "la convention de Ramsar",
+        "la convention de Bâle",
+        "la convention CITES",
+        "la convention de Rotterdam"
+      ],
+      "r": 2,
+      "x": "La CITES contrôle le commerce des animaux et des plantes menacés et de leurs produits, comme l'ivoire. La convention de Rotterdam porte, elle, sur le commerce de produits chimiques dangereux."
+    },
+    {
+      "q": "D'un maillon au suivant d'une chaîne alimentaire, la part de l'énergie transmise est d'environ :",
+      "o": [
+        "1 %",
+        "10 %",
+        "50 %",
+        "90 %"
+      ],
+      "r": 1,
+      "x": "L'essentiel de l'énergie est perdu sous forme de chaleur lors de la respiration et des déplacements. C'est pourquoi une savane nourrit beaucoup d'herbivores mais peu de grands carnivores."
+    },
+    {
+      "q": "Le pique-bœuf débarrasse les bovins de leurs tiques et y trouve sa nourriture ; cette relation est :",
+      "o": [
+        "un parasitisme",
+        "une prédation",
+        "un mutualisme",
+        "une compétition"
+      ],
+      "r": 2,
+      "x": "Dans un mutualisme, les deux espèces tirent un bénéfice de leur association. Dans le parasitisme, au contraire, une seule espèce profite aux dépens de l'autre."
+    },
+    {
+      "q": "La relation entre le lion et le zèbre qu'il chasse est :",
+      "o": [
+        "une prédation",
+        "une symbiose",
+        "un commensalisme",
+        "un parasitisme"
+      ],
+      "r": 0,
+      "x": "Le prédateur tue sa proie pour s'en nourrir, ce qui régule les populations d'herbivores. Le parasite vit au contraire aux dépens de son hôte sans le tuer immédiatement."
+    },
+    {
+      "q": "Deux espèces qui exploitent une même ressource limitée sont en situation de :",
+      "o": [
+        "symbiose",
+        "compétition",
+        "mutualisme",
+        "commensalisme"
+      ],
+      "r": 1,
+      "x": "La compétition pour l'eau, la lumière ou la nourriture désavantage les deux espèces, comme les mauvaises herbes face aux cultures. Le commensalisme profite à une espèce sans nuire à l'autre."
+    },
+    {
+      "q": "La biodiversité s'apprécie à trois niveaux : la diversité génétique, la diversité des espèces et la diversité :",
+      "o": [
+        "des roches",
+        "des climats",
+        "des écosystèmes",
+        "des sols"
+      ],
+      "r": 2,
+      "x": "La biodiversité englobe les variations au sein d'une espèce, le nombre d'espèces et la variété des milieux qu'elles occupent. La perte d'un écosystème, comme une zone humide, entraîne celle de nombreuses espèces associées."
+    },
+    {
+      "q": "Les premières espèces qui colonisent un sol nu ou une jachère récente sont appelées :",
+      "o": [
+        "espèces climaciques",
+        "espèces endémiques",
+        "espèces reliques",
+        "espèces pionnières"
+      ],
+      "r": 3,
+      "x": "Les espèces pionnières, souvent des herbes annuelles, préparent le milieu pour les graminées vivaces puis les ligneux. Cette succession tend vers une végétation stable appelée climax."
+    },
+    {
+      "q": "L'augmentation de la concentration d'un polluant à chaque maillon d'une chaîne alimentaire s'appelle :",
+      "o": [
+        "la bioaccumulation",
+        "la biodégradation",
+        "la bioamplification",
+        "la biotransformation"
+      ],
+      "r": 2,
+      "x": "Les polluants persistants (comme les métaux lourds ou certains pesticides) augmentent à mesure que l'on s'élève dans la chaîne trophique. Les prédateurs supérieurs finissent par absorber la totalité des toxiques accumulés par leurs proies. À ne pas confondre avec la bioaccumulation (A), qui correspond à l'accumulation du polluant au sein d'un seul et même organisme au cours de sa vie."
+    },
+    {
+      "q": "Les lichens sont utilisés comme indicateurs de :",
+      "o": [
+        "la fertilité du sol",
+        "la salinité de l'eau",
+        "l'altitude du relief",
+        "la qualité de l'air"
+      ],
+      "r": 3,
+      "x": "Très sensibles au dioxyde de soufre, les lichens disparaissent des zones à l'air pollué. Leur présence et leur diversité témoignent donc d'un air de bonne qualité."
+    },
+    {
+      "q": "Sur une carte climatique, les lignes reliant les points recevant la même quantité de pluie sont :",
+      "o": [
+        "les isothermes",
+        "les isobares",
+        "les courbes de niveau",
+        "les isohyètes"
+      ],
+      "r": 3,
+      "x": "Les isohyètes permettent de délimiter les zones climatiques du Burkina Faso selon la pluviométrie annuelle. Les isothermes relient les points de même température et les isobares ceux de même pression."
+    },
+    {
+      "q": "Au Burkina Faso, la saison des pluies est la plus longue :",
+      "o": [
+        "dans le Nord sahélien",
+        "dans le Sud-Ouest",
+        "dans le Centre",
+        "dans l'Est"
+      ],
+      "r": 1,
+      "x": "Le Sud-Ouest reçoit des pluies pendant cinq à six mois, contre trois mois environ dans le Nord. Cette différence s'explique par la durée de présence de la mousson au-dessus de chaque zone."
+    },
+    {
+      "q": "Les sols les plus répandus au Burkina Faso sont :",
+      "o": [
+        "les sols volcaniques",
+        "les sols ferrugineux tropicaux",
+        "les sols podzoliques",
+        "les sols salés"
+      ],
+      "r": 1,
+      "x": "Les sols ferrugineux tropicaux, de couleur ocre à rouge, couvrent une grande partie du territoire mais sont pauvres en matière organique. Leur fertilité dépend fortement des apports de fumure."
+    },
+    {
+      "q": "Les vertisols des bas-fonds se reconnaissent à :",
+      "o": [
+        "leurs larges fentes de retrait",
+        "leur texture très sableuse",
+        "leur croûte de sel blanc",
+        "leur cuirasse ferrugineuse"
+      ],
+      "r": 0,
+      "x": "Riches en argiles gonflantes, les vertisols se fendent profondément en saison sèche et deviennent collants une fois humides. Fertiles, ils restent difficiles à travailler avec des outils manuels."
+    },
+    {
+      "q": "Le surpâturage contribue à la désertification car il :",
+      "o": [
+        "enrichit le sol en azote",
+        "augmente les pluies locales",
+        "dénude et tasse le sol",
+        "favorise la repousse des arbres"
+      ],
+      "r": 2,
+      "x": "Le broutage excessif fait disparaître le couvert végétal et le piétinement compacte la surface, ce qui favorise le ruissellement et l'érosion. La charge animale doit donc rester adaptée aux ressources fourragères."
+    },
+    {
+      "q": "La transhumance désigne :",
+      "o": [
+        "l'engraissement intensif du bétail",
+        "le déplacement saisonnier des troupeaux",
+        "la vaccination annuelle du bétail",
+        "le croisement de races bovines"
+      ],
+      "r": 1,
+      "x": "En saison sèche, les éleveurs conduisent leurs troupeaux vers le sud à la recherche d'eau et de pâturages. Ces déplacements nécessitent des couloirs de passage balisés pour éviter les conflits avec les agriculteurs."
+    },
+    {
+      "q": "La régénération naturelle assistée consiste à :",
+      "o": [
+        "planter des arbres exotiques",
+        "brûler les souches mortes",
+        "arroser les jeunes plants",
+        "protéger et tailler les rejets"
+      ],
+      "r": 3,
+      "x": "Le paysan sélectionne dans son champ les rejets de souches et les jeunes arbres spontanés, puis les protège et les élague. Popularisée au Niger par l'agronome Tony Rinaudo, cette pratique reverdit des terres à faible coût."
+    },
+    {
+      "q": "L'eucalyptus, souvent planté pour son bois, est critiqué car il :",
+      "o": [
+        "enrichit fortement le sol",
+        "fixe l'azote de l'air",
+        "consomme beaucoup d'eau du sol",
+        "nourrit abondamment le bétail"
+      ],
+      "r": 2,
+      "x": "Originaire d'Australie, l'eucalyptus pompe d'importantes quantités d'eau et gêne la croissance des plantes sous son couvert. Il est déconseillé près des puits et des champs cultivés."
+    },
+    {
+      "q": "Les feuilles et les graines du neem sont utilisées en agriculture comme :",
+      "o": [
+        "engrais azoté",
+        "fourrage principal",
+        "colorant alimentaire",
+        "insecticide naturel"
+      ],
+      "r": 3,
+      "x": "Le neem contient des substances qui repoussent les insectes et perturbent leur développement. Ses extraits constituent une solution peu coûteuse et moins toxique que les insecticides chimiques en maraîchage."
+    },
+    {
+      "q": "Près de la moitié du dioxygène produit sur Terre provient :",
+      "o": [
+        "des forêts tropicales",
+        "du phytoplancton océanique",
+        "des savanes africaines",
+        "des champs cultivés"
+      ],
+      "r": 1,
+      "x": "Les algues microscopiques des océans réalisent une part considérable de la photosynthèse mondiale.Selon les estimations, 50 à 80 % du dioxygène produit sur Terre provient du phytoplancton océanique. Leur protection dépend notamment de la réduction des pollutions marines."
+    },
+    {
+      "q": "Le protoptère, poisson des mares temporaires, survit à la saison sèche :",
+      "o": [
+        "enfoui dans un cocon de boue",
+        "en migrant vers l'océan",
+        "sous forme d'œufs seulement",
+        "caché sous les pierres"
+      ],
+      "r": 0,
+      "x": "Capable de respirer l'air grâce à des poumons, le protoptère s'enfouit dans la vase et ralentit son métabolisme pendant plusieurs mois. Il reprend son activité dès le retour de l'eau."
+    },
+    {
+      "q": "La bosse du dromadaire constitue une réserve :",
+      "o": [
+        "de graisse",
+        "d'eau",
+        "de sang",
+        "de sel"
+      ],
+      "r": 0,
+      "x": "La graisse de la bosse fournit de l'énergie en période de disette, contrairement à l'idée d'une réserve d'eau. Le dromadaire résiste à la sécheresse grâce à sa capacité à supporter une forte perte d'eau."
+    },
+    {
+      "q": "Les oiseaux migrateurs d'Europe séjournent au Burkina Faso principalement :",
+      "o": [
+        "d'octobre à mars",
+        "de juin à août",
+        "d'avril à mai",
+        "toute l'année"
+      ],
+      "r": 0,
+      "x": "Ces oiseaux fuient l'hiver européen et trouvent dans les zones humides sahéliennes nourriture et abri. Ils repartent au printemps pour se reproduire dans l'hémisphère Nord."
+    },
+    {
+      "q": "Le niveau sonore se mesure couramment en :",
+      "o": [
+        "hertz",
+        "watts",
+        "décibels",
+        "pascals"
+      ],
+      "r": 2,
+      "x": "Au-delà de 85 décibels, une exposition prolongée endommage l'audition, et le seuil de douleur se situe vers 120 décibels. Le hertz mesure, lui, la fréquence d'un son, grave ou aigu."
+    },
+    {
+      "q": "Le paillage, qui consiste à couvrir le sol de résidus végétaux, permet surtout :",
+      "o": [
+        "d'accélérer le ruissellement",
+        "de réduire l'évaporation",
+        "de surchauffer le sol",
+        "de chasser les vers de terre"
+      ],
+      "r": 1,
+      "x": "La couche de paille protège le sol du soleil et de l'impact des gouttes de pluie, ce qui conserve l'humidité et limite l'encroûtement. En se décomposant, elle enrichit aussi le sol en matière organique."
+    },
+    {
+      "q": "Le principal minéral constituant le sable des rivières est :",
+      "o": [
+        "le mica",
+        "le feldspath",
+        "la calcite",
+        "le quartz"
+      ],
+      "r": 3,
+      "x": "Très dur et résistant à l'altération, le quartz subsiste lorsque les autres minéraux des roches sont détruits. Les feldspaths se transforment, eux, en argile sous l'action de l'eau."
     }
   ],
   "svt_licence": [
@@ -25744,6 +36722,3592 @@ const QUESTIONS = {
       ],
       "r": 2,
       "x": "Soient B bonnes et M mauvaises. B+M=40 et 2B-M=62. Additionner : 3B=102 → B=34. Piège : poser 2B-M=62 et B+M=50 (toutes les questions) au lieu de 40 (répondues)."
+    },
+    {
+      "q": "Complétez la suite : 2, 6, 12, 20, 30, ?",
+      "o": [
+        "36",
+        "40",
+        "42",
+        "44"
+      ],
+      "r": 2,
+      "x": "Les écarts croissent régulièrement : +4, +6, +8, +10, puis +12 → 30 + 12 = 42. Piège : conserver l'écart précédent (+10) donne 40, une valeur très proche."
+    },
+    {
+      "q": "Complétez la suite : 1, 1, 2, 3, 5, 8, ?",
+      "o": [
+        "13",
+        "14",
+        "11",
+        "12"
+      ],
+      "r": 0,
+      "x": "Suite de Fibonacci : chaque terme est la somme des deux précédents → 5 + 8 = 13. Piège : ajouter un écart constant de +3 donne 11."
+    },
+    {
+      "q": "Complétez la suite : 5, 10, 20, 40, ?",
+      "o": [
+        "80",
+        "100",
+        "60",
+        "70"
+      ],
+      "r": 0,
+      "x": "Suite géométrique de raison 2 : chaque terme est doublé → 40 × 2 = 80. Piège : lire les écarts (+5, +10, +20) et ajouter 20 donne 60."
+    },
+    {
+      "q": "Complétez la suite : 100, 96, 88, 72, ?",
+      "o": [
+        "40",
+        "44",
+        "48",
+        "56"
+      ],
+      "r": 0,
+      "x": "Les retraits doublent : −4, −8, −16, puis −32 → 72 − 32 = 40. Piège : répéter le retrait précédent (−16) donne 56."
+    },
+    {
+      "q": "Complétez la suite : 3, 7, 15, 31, ?",
+      "o": [
+        "47",
+        "55",
+        "63",
+        "64"
+      ],
+      "r": 2,
+      "x": "Règle ×2 + 1 : 3→7, 7→15, 15→31, puis 31 × 2 + 1 = 63. Piège : doubler le dernier terme sans ajouter 1 donne 62, valeur absente des propositions, ce qui conduit à cocher 64 par approximation."
+    },
+    {
+      "q": "Complétez la suite : 1, 8, 27, 64, ?",
+      "o": [
+        "100",
+        "121",
+        "125",
+        "128"
+      ],
+      "r": 2,
+      "x": "Ce sont les cubes successifs : 1³, 2³, 3³, 4³, puis 5³ = 125. Piège : doubler 64 donne 128 ; confondre avec les carrés donne 100."
+    },
+    {
+      "q": "Complétez la suite : 2, 5, 10, 17, 26, ?",
+      "o": [
+        "35",
+        "36",
+        "37",
+        "38"
+      ],
+      "r": 2,
+      "x": "Les écarts sont les impairs successifs : +3, +5, +7, +9, puis +11 → 26 + 11 = 37. Piège : répéter l'écart +9 donne 35."
+    },
+    {
+      "q": "Complétez la suite : 81, 27, 9, 3, ?",
+      "o": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "r": 1,
+      "x": "Chaque terme est divisé par 3 → 3 ÷ 3 = 1. Piège : lire la fin de la suite comme une soustraction régulière fait poursuivre au-delà de 1 et conduit à cocher 0, alors que la division par 3 ne donne jamais zéro."
+    },
+    {
+      "q": "Complétez la suite : 7, 14, 28, 56, ?",
+      "o": [
+        "120",
+        "84",
+        "102",
+        "112"
+      ],
+      "r": 3,
+      "x": "Chaque terme est doublé → 56 × 2 = 112. Piège : ajouter 28 (dernier écart) donne 84, erreur la plus fréquente."
+    },
+    {
+      "q": "Complétez la suite : 1, 3, 6, 10, 15, ?",
+      "o": [
+        "18",
+        "20",
+        "21",
+        "22"
+      ],
+      "r": 2,
+      "x": "Nombres triangulaires : les écarts sont +2, +3, +4, +5, puis +6 → 15 + 6 = 21. Piège : répéter l'écart +5 donne 20."
+    },
+    {
+      "q": "Complétez la suite : 2, 4, 8, 14, 22, ?",
+      "o": [
+        "32",
+        "34",
+        "36",
+        "30"
+      ],
+      "r": 0,
+      "x": "Les écarts sont les pairs successifs : +2, +4, +6, +8, puis +10 → 22 + 10 = 32. Piège : croire à un doublement (22 × 2 = 44) ou répéter +8 pour obtenir 30."
+    },
+    {
+      "q": "Complétez la suite : 12, 15, 20, 27, ?",
+      "o": [
+        "34",
+        "35",
+        "36",
+        "38"
+      ],
+      "r": 2,
+      "x": "Les écarts sont +3, +5, +7, puis +9 → 27 + 9 = 36. Piège : répéter l'écart +7 donne 34."
+    },
+    {
+      "q": "Complétez la suite : 0, 1, 4, 13, 40, ?",
+      "o": [
+        "108",
+        "118",
+        "121",
+        "124"
+      ],
+      "r": 2,
+      "x": "Règle ×3 + 1 : 0→1, 1→4, 4→13, 13→40, puis 40 × 3 + 1 = 121. Piège : oublier le +1 donne 120 ; tripler l'écart donne 108."
+    },
+    {
+      "q": "Complétez la suite : 9, 16, 25, 36, ?",
+      "o": [
+        "42",
+        "45",
+        "49",
+        "64"
+      ],
+      "r": 2,
+      "x": "Carrés successifs de 3, 4, 5, 6, puis 7² = 49. Piège : sauter un rang et prendre 8² = 64, ou ajouter l'écart +9 pour obtenir 45."
+    },
+    {
+      "q": "Complétez la suite : 64, 32, 16, 8, ?",
+      "o": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "r": 1,
+      "x": "Chaque terme est divisé par 2 → 8 ÷ 2 = 4. Piège : soustraire l'écart précédent (−8) donne 0, ou lire une division par 4 et répondre 2."
+    },
+    {
+      "q": "Complétez : B, D, G, K, ?",
+      "o": [
+        "Q",
+        "N",
+        "O",
+        "P"
+      ],
+      "r": 3,
+      "x": "Rangs 2, 4, 7, 11 → écarts +2, +3, +4, puis +5 → rang 16 = P. Piège : conserver l'écart +4 donne le rang 15, soit O."
+    },
+    {
+      "q": "Complétez : Z, X, V, T, ?",
+      "o": [
+        "S",
+        "R",
+        "Q",
+        "P"
+      ],
+      "r": 1,
+      "x": "Rangs 26, 24, 22, 20 → on recule de 2 à chaque fois → rang 18 = R. Piège : reculer d'une seule lettre donne S."
+    },
+    {
+      "q": "Complétez : A, D, I, P, ?",
+      "o": [
+        "Y",
+        "Z",
+        "W",
+        "X"
+      ],
+      "r": 0,
+      "x": "Rangs 1, 4, 9, 16 : ce sont les carrés parfaits → 5² = 25 → Y. Piège : lire un écart croissant approximatif et s'arrêter à W (rang 23)."
+    },
+    {
+      "q": "Complétez : C, F, I, L, ?",
+      "o": [
+        "O",
+        "P",
+        "M",
+        "N"
+      ],
+      "r": 0,
+      "x": "Progression régulière de +3 dans l'alphabet : rang 12 + 3 = 15 → O. Piège : avancer de +2 donne N, erreur courante en comptant sur les doigts."
+    },
+    {
+      "q": "Complétez : A, B, D, H, ?",
+      "o": [
+        "L",
+        "N",
+        "P",
+        "R"
+      ],
+      "r": 2,
+      "x": "Rangs 1, 2, 4, 8 : chaque rang est doublé → 16 → P. Piège : lire une progression additive croissante (+1, +2, +4, +6) donne N."
+    },
+    {
+      "q": "Livre est à bibliothèque ce que tableau est à :",
+      "o": [
+        "Peintre",
+        "Musée",
+        "Mur",
+        "Cadre"
+      ],
+      "r": 1,
+      "x": "Le rapport est « objet → lieu de conservation et d'exposition collective ». Piège : « cadre » et « mur » sont des supports physiques, non des lieux de conservation."
+    },
+    {
+      "q": "Médecin est à hôpital ce qu'enseignant est à :",
+      "o": [
+        "École",
+        "Cours",
+        "Élève",
+        "Craie"
+      ],
+      "r": 0,
+      "x": "Le rapport est « professionnel → lieu d'exercice ». Piège : « élève » reproduit le couple médecin/patient, qui n'est pas le rapport demandé."
+    },
+    {
+      "q": "Chaud est à froid ce qu'abondance est à :",
+      "o": [
+        "Richesse",
+        "Pénurie",
+        "Faim",
+        "Pauvreté"
+      ],
+      "r": 1,
+      "x": "Le rapport est celui de l'antonymie directe : abondance s'oppose à pénurie. Piège : « pauvreté » est un antonyme de richesse, pas d'abondance de biens."
+    },
+    {
+      "q": "Oiseau est à nid ce qu'abeille est à :",
+      "o": [
+        "Miel",
+        "Fleur",
+        "Ruche",
+        "Essaim"
+      ],
+      "r": 2,
+      "x": "Le rapport est « animal → habitat qu'il construit ». Piège : « essaim » désigne le groupe d'abeilles et « miel » leur production."
+    },
+    {
+      "q": "Pied est à chaussure ce que main est à :",
+      "o": [
+        "Doigt",
+        "Gant",
+        "Bague",
+        "Poignée"
+      ],
+      "r": 1,
+      "x": "Le rapport est « partie du corps → vêtement qui la recouvre entièrement ». Piège : « bague » est un accessoire partiel, non un vêtement couvrant."
+    },
+    {
+      "q": "Farine est à pain ce que raisin est à :",
+      "o": [
+        "Vigne",
+        "Grappe",
+        "Vin",
+        "Sucre"
+      ],
+      "r": 2,
+      "x": "Le rapport est « matière première → produit transformé ». Piège : « vigne » remonte à l'origine au lieu d'aller vers le produit fini."
+    },
+    {
+      "q": "Kilogramme est à masse ce que litre est à :",
+      "o": [
+        "Liquide",
+        "Densité",
+        "Poids",
+        "Volume"
+      ],
+      "r": 3,
+      "x": "Le rapport est « unité → grandeur mesurée ». Piège : associer le litre au liquide confond la nature mesurée et la grandeur physique."
+    },
+    {
+      "q": "Sécheresse est à pluie ce que famine est à :",
+      "o": [
+        "Faim",
+        "Récolte",
+        "Pauvreté",
+        "Nourriture"
+      ],
+      "r": 3,
+      "x": "Le rapport est « fléau → ressource dont le manque le provoque ». Piège : « faim » est la conséquence de la famine, non la ressource manquante."
+    },
+    {
+      "q": "Thermomètre est à température ce que baromètre est à :",
+      "o": [
+        "Pression",
+        "Vent",
+        "Humidité",
+        "Altitude"
+      ],
+      "r": 0,
+      "x": "Le rapport est « instrument → grandeur qu'il mesure » : le baromètre mesure la pression. Piège : l'altimètre mesure l'altitude, l'hygromètre l'humidité."
+    },
+    {
+      "q": "Menuisier est à bois ce que forgeron est à :",
+      "o": [
+        "Feu",
+        "Enclume",
+        "Fer",
+        "Marteau"
+      ],
+      "r": 2,
+      "x": "Le rapport est « artisan → matière travaillée ». Piège : « enclume » et « marteau » sont ses outils, « feu » son moyen de travail."
+    },
+    {
+      "q": "Quel est l'intrus ?",
+      "o": [
+        "Lion",
+        "Tigre",
+        "Panthère",
+        "Hyène"
+      ],
+      "r": 3,
+      "x": "Lion, tigre et panthère sont des félins ; la hyène appartient à une autre famille. Piège : la hyène est un grand carnivore africain, ce qui la fait paraître du même groupe."
+    },
+    {
+      "q": "Quel est l'intrus ?",
+      "o": [
+        "Sahara",
+        "Congo",
+        "Niger",
+        "Nil"
+      ],
+      "r": 0,
+      "x": "Niger, Nil et Congo sont des fleuves africains ; le Sahara est un désert. Piège : les quatre sont des entités géographiques africaines très connues."
+    },
+    {
+      "q": "Quel est l'intrus ?",
+      "o": [
+        "Trapèze",
+        "Carré",
+        "Losange",
+        "Cercle"
+      ],
+      "r": 3,
+      "x": "Carré, losange et trapèze sont des quadrilatères ; le cercle n'a ni côté ni sommet. Piège : chercher un critère de symétrie mène à éliminer le trapèze à tort."
+    },
+    {
+      "q": "Quel est l'intrus ?",
+      "o": [
+        "Cuivre",
+        "Fer",
+        "Plastique",
+        "Aluminium"
+      ],
+      "r": 2,
+      "x": "Cuivre, fer et aluminium sont des métaux ; le plastique est un matériau de synthèse. Piège : les quatre sont des matériaux industriels courants."
+    },
+    {
+      "q": "Quel est l'intrus ?",
+      "o": [
+        "31",
+        "17",
+        "23",
+        "27"
+      ],
+      "r": 3,
+      "x": "17, 23 et 31 sont des nombres premiers ; 27 = 3 × 9 ne l'est pas. Piège : tous les nombres proposés sont impairs, ce qui masque le critère réel."
+    },
+    {
+      "q": "Quel est l'intrus ?",
+      "o": [
+        "48",
+        "64",
+        "81",
+        "36"
+      ],
+      "r": 0,
+      "x": "36, 64 et 81 sont des carrés parfaits (6², 8², 9²) ; 48 n'en est pas un. Piège : 48 est un multiple de nombreux entiers, ce qui le rend faussement « régulier »."
+    },
+    {
+      "q": "Quel est l'intrus ?",
+      "o": [
+        "Jupiter",
+        "Mars",
+        "Vénus",
+        "Lune"
+      ],
+      "r": 3,
+      "x": "Mars, Vénus et Jupiter sont des planètes ; la Lune est un satellite naturel. Piège : la Lune est l'astre le plus visible, donc perçu comme du même rang."
+    },
+    {
+      "q": "Quel est l'intrus ?",
+      "o": [
+        "Préfet",
+        "Haut-commissaire",
+        "Gouverneur",
+        "Député"
+      ],
+      "r": 3,
+      "x": "Les trois premiers sont des autorités administratives nommées ; le député est un élu législatif. Piège : tous exercent une autorité publique, ce qui brouille le critère de nomination."
+    },
+    {
+      "q": "Quel est l'intrus ?",
+      "o": [
+        "Voir",
+        "Entendre",
+        "Marcher",
+        "Sentir"
+      ],
+      "r": 2,
+      "x": "Voir, entendre et sentir renvoient aux cinq sens ; marcher est un déplacement. Piège : marcher est une action corporelle, ce qui le rapproche faussement des perceptions."
+    },
+    {
+      "q": "Quel est l'intrus ?",
+      "o": [
+        "Atlas",
+        "Dictionnaire",
+        "Encyclopédie",
+        "Roman"
+      ],
+      "r": 3,
+      "x": "Dictionnaire, encyclopédie et atlas sont des ouvrages de référence ; le roman est une fiction. Piège : les quatre sont des livres, ce qui pousse à chercher un critère de taille ou de format."
+    },
+    {
+      "q": "Tous les fonctionnaires sont assermentés. Certains assermentés sont juristes. On peut conclure que :",
+      "o": [
+        "Tous les fonctionnaires sont juristes",
+        "Certains fonctionnaires sont juristes",
+        "Aucun fonctionnaire n'est juriste",
+        "Aucune conclusion certaine"
+      ],
+      "r": 3,
+      "x": "Les juristes assermentés peuvent tous être extérieurs à la fonction publique. Piège : « certains fonctionnaires sont juristes » paraît raisonnable mais n'est pas garanti."
+    },
+    {
+      "q": "Aucun paresseux ne réussit. Ali a réussi. On peut conclure que :",
+      "o": [
+        "Ali est paresseux",
+        "Ali n'est pas paresseux",
+        "Ali travaille beaucoup",
+        "On ne peut rien conclure"
+      ],
+      "r": 1,
+      "x": "Par contraposée : si aucun paresseux ne réussit, celui qui réussit n'est pas paresseux. Piège : « travaille beaucoup » ajoute une information que l'énoncé ne fournit pas."
+    },
+    {
+      "q": "Si la pluie tombe, le match est annulé. Le match n'a pas été annulé. On peut conclure que :",
+      "o": [
+        "Le match aura lieu demain",
+        "On ne peut rien conclure",
+        "Il pleut",
+        "Il ne pleut pas"
+      ],
+      "r": 3,
+      "x": "Contraposée de l'implication : pas d'annulation implique pas de pluie. Piège : « on ne peut rien conclure » séduit les candidats prudents, mais la déduction est valide."
+    },
+    {
+      "q": "Tous les A sont B. Aucun B n'est C. On peut conclure que :",
+      "o": [
+        "Certains A sont C",
+        "Aucun A n'est C",
+        "Tous les C sont A",
+        "Aucune conclusion certaine"
+      ],
+      "r": 1,
+      "x": "Les A sont inclus dans B, et B est entièrement disjoint de C, donc aucun A n'est C. Piège : la chaîne de deux quantificateurs pousse à répondre « aucune conclusion »."
+    },
+    {
+      "q": "Awa est plus âgée que Bintou. Cécile est plus jeune que Bintou. Dado est plus âgée qu'Awa. Qui est la plus jeune ?",
+      "o": [
+        "Cécile",
+        "Dado",
+        "Awa",
+        "Bintou"
+      ],
+      "r": 0,
+      "x": "L'ordre décroissant est Dado > Awa > Bintou > Cécile. Piège : s'arrêter à Bintou, citée dans les deux premières comparaisons, donc perçue comme extrême."
+    },
+    {
+      "q": "Combien font 15 % de 240 ?",
+      "o": [
+        "30",
+        "32",
+        "36",
+        "40"
+      ],
+      "r": 2,
+      "x": "10 % de 240 = 24 et 5 % = 12, donc 15 % = 24 + 12 = 36. Piège : calculer 240 ÷ 15 = 16 en inversant l'opération, ou arrondir à 40."
+    },
+    {
+      "q": "Un article coûte 8 000 F. Avec une remise de 25 %, combien paie-t-on ?",
+      "o": [
+        "5 500 F",
+        "6 000 F",
+        "6 400 F",
+        "7 000 F"
+      ],
+      "r": 1,
+      "x": "La remise vaut 8 000 × 0,25 = 2 000 F, donc le prix payé est 8 000 − 2 000 = 6 000 F. Piège : 6 400 F correspond à une remise de 20 %, confusion fréquente entre 20 % et 25 %."
+    },
+    {
+      "q": "Quelle est la moyenne de 12, 18, 21 et 25 ?",
+      "o": [
+        "19",
+        "20",
+        "21",
+        "18"
+      ],
+      "r": 0,
+      "x": "La somme vaut 76 et il y a 4 valeurs, donc 76 ÷ 4 = 19. Piège : diviser par 3 au lieu de 4, ou arrondir la somme à 80 pour obtenir 20."
+    },
+    {
+      "q": "Combien font les 3/5 de 250 ?",
+      "o": [
+        "125",
+        "140",
+        "150",
+        "175"
+      ],
+      "r": 2,
+      "x": "250 ÷ 5 = 50, puis 50 × 3 = 150. Piège : prendre la moitié (125) en confondant 3/5 avec 1/2."
+    },
+    {
+      "q": "Si 7 stylos coûtent 2 100 F, combien coûtent 12 stylos ?",
+      "o": [
+        "3 600 F",
+        "3 800 F",
+        "3 200 F",
+        "3 400 F"
+      ],
+      "r": 0,
+      "x": "Un stylo vaut 2 100 ÷ 7 = 300 F, donc 12 stylos valent 12 × 300 = 3 600 F. Piège : ajouter le prix de 5 stylos estimé au jugé, ce qui donne 3 400 F."
+    },
+    {
+      "q": "Quel est le quart des trois quarts de 80 ?",
+      "o": [
+        "12",
+        "15",
+        "20",
+        "24"
+      ],
+      "r": 1,
+      "x": "Trois quarts de 80 = 60, puis le quart de 60 = 15. Piège : calculer directement le quart de 80 (20) en oubliant la première étape."
+    },
+    {
+      "q": "Un capital de 150 000 F est placé à 4 % pendant 2 ans en intérêts simples. Montant des intérêts ?",
+      "o": [
+        "6 000 F",
+        "9 000 F",
+        "12 000 F",
+        "15 000 F"
+      ],
+      "r": 2,
+      "x": "Intérêts = 150 000 × 0,04 × 2 = 12 000 F. Piège : oublier de multiplier par la durée, ce qui donne 6 000 F."
+    },
+    {
+      "q": "Combien font 2⁵ + 3² ?",
+      "o": [
+        "37",
+        "39",
+        "41",
+        "43"
+      ],
+      "r": 2,
+      "x": "2⁵ = 32 et 3² = 9, donc 32 + 9 = 41. Piège : calculer 2 × 5 = 10 et 3 × 2 = 6 en confondant puissance et multiplication."
+    },
+    {
+      "q": "Un rectangle mesure 15 cm sur 8 cm. Quelle est son aire ?",
+      "o": [
+        "46 cm²",
+        "92 cm²",
+        "120 cm²",
+        "150 cm²"
+      ],
+      "r": 2,
+      "x": "Aire = longueur × largeur = 15 × 8 = 120 cm². Piège : 46 est le périmètre, réponse choisie par confusion entre les deux notions."
+    },
+    {
+      "q": "Sur 600 candidats, 45 % sont admis. Combien sont recalés ?",
+      "o": [
+        "270",
+        "300",
+        "330",
+        "350"
+      ],
+      "r": 2,
+      "x": "Les recalés représentent 55 %, soit 600 × 0,55 = 330. Piège : calculer les admis (270) au lieu des recalés, erreur de lecture la plus fréquente."
+    },
+    {
+      "q": "Quelle est la somme de tous les entiers de 1 à 20 ?",
+      "o": [
+        "190",
+        "200",
+        "210",
+        "220"
+      ],
+      "r": 2,
+      "x": "Formule n(n + 1) ÷ 2 = 20 × 21 ÷ 2 = 210. Piège : appliquer 20 × 20 ÷ 2 = 200 en oubliant le +1."
+    },
+    {
+      "q": "Un père a 45 ans, son fils 15 ans. Dans combien d'années le père aura-t-il le double de l'âge du fils ?",
+      "o": [
+        "15 ans",
+        "18 ans",
+        "10 ans",
+        "12 ans"
+      ],
+      "r": 0,
+      "x": "On résout 45 + x = 2(15 + x), soit 45 + x = 30 + 2x, donc x = 15. Piège : oublier que le fils vieillit aussi et poser 45 + x = 2 × 15 donne x = −15, donc un résultat impossible. Les deux âges doivent progresser en même temps dans l'équation."
+    },
+    {
+      "q": "Quel est le PGCD de 36 et 60 ?",
+      "o": [
+        "12",
+        "18",
+        "6",
+        "9"
+      ],
+      "r": 0,
+      "x": "36 = 2² × 3² et 60 = 2² × 3 × 5, donc le PGCD vaut 2² × 3 = 12. Piège : 6 est bien un diviseur commun mais n'est pas le plus grand."
+    },
+    {
+      "q": "Quel est le PPCM de 8 et 12 ?",
+      "o": [
+        "16",
+        "24",
+        "48",
+        "96"
+      ],
+      "r": 1,
+      "x": "8 = 2³ et 12 = 2² × 3, donc le PPCM vaut 2³ × 3 = 24. Piège : multiplier 8 × 12 = 96 sans diviser par le PGCD (4)."
+    },
+    {
+      "q": "Combien font 0,25 × 0,4 ?",
+      "o": [
+        "1",
+        "10",
+        "0,01",
+        "0,1"
+      ],
+      "r": 3,
+      "x": "25 × 4 = 100 et il y a trois décimales au total, donc le résultat est 0,1. Piège : placer la virgule à deux décimales donne 0,01, l'erreur la plus courante."
+    },
+    {
+      "q": "Une somme est partagée entre deux personnes dans le rapport 3 : 5. La part la plus petite vaut 4 500 F. Quel est le total ?",
+      "o": [
+        "9 000 F",
+        "12 000 F",
+        "13 500 F",
+        "15 000 F"
+      ],
+      "r": 1,
+      "x": "3 parts = 4 500 F donc 1 part = 1 500 F ; le total fait 8 parts = 12 000 F. Piège : doubler la petite part (9 000 F) en supposant un partage en deux moitiés."
+    },
+    {
+      "q": "Un robinet remplit un bassin en 8 h, un second en 12 h. Ensemble, en combien de temps ?",
+      "o": [
+        "4 h 30 min",
+        "4 h 48 min",
+        "5 h 48 min",
+        "10 h"
+      ],
+      "r": 1,
+      "x": "Débit total = 1/8 + 1/12 = 5/24 par heure, donc la durée vaut 24/5 = 4,8 h = 4 h 48 min. Piège : faire la moyenne des deux durées (10 h) au lieu d'additionner les débits."
+    },
+    {
+      "q": "Combien font 20 % de 20 % de 500 ?",
+      "o": [
+        "10",
+        "20",
+        "50",
+        "100"
+      ],
+      "r": 1,
+      "x": "20 % de 500 = 100, puis 20 % de 100 = 20. Piège : additionner les pourcentages (40 % de 500 = 200) au lieu de les appliquer successivement."
+    },
+    {
+      "q": "Le prix d'un produit passe de 2 500 F à 3 000 F. Quel est le pourcentage d'augmentation ?",
+      "o": [
+        "15 %",
+        "16,6 %",
+        "20 %",
+        "25 %"
+      ],
+      "r": 2,
+      "x": "L'augmentation vaut 500 F, rapportée au prix de départ : 500 ÷ 2 500 = 20 %. Piège : diviser par le prix d'arrivée (500 ÷ 3 000 = 16,6 %), erreur de référence classique."
+    },
+    {
+      "q": "Un véhicule consomme 8 litres aux 100 km. Combien pour 350 km ?",
+      "o": [
+        "24 L",
+        "26 L",
+        "28 L",
+        "30 L"
+      ],
+      "r": 2,
+      "x": "8 × 3,5 = 28 litres. Piège : arrondir 350 à 300 km et répondre 24 L, ou à 400 km et répondre 32 L."
+    },
+    {
+      "q": "Quelle est la racine carrée de 1 764 ?",
+      "o": [
+        "38",
+        "42",
+        "44",
+        "46"
+      ],
+      "r": 1,
+      "x": "42 × 42 = 1 764. Piège : 44² = 1 936 et 38² = 1 444 ; l'encadrement rapide écarte ces valeurs."
+    },
+    {
+      "q": "Combien vaut 5 ! (factorielle 5) ?",
+      "o": [
+        "25",
+        "60",
+        "120",
+        "720"
+      ],
+      "r": 2,
+      "x": "5 ! = 5 × 4 × 3 × 2 × 1 = 120. Piège : 720 correspond à 6 !, réponse choisie en ajoutant un facteur de trop."
+    },
+    {
+      "q": "Un commerçant achète un article 9 000 F et veut un bénéfice de 20 % sur le prix d'achat. Prix de vente ?",
+      "o": [
+        "11 000 F",
+        "11 250 F",
+        "10 200 F",
+        "10 800 F"
+      ],
+      "r": 3,
+      "x": "Bénéfice = 9 000 × 0,20 = 1 800 F, donc le prix de vente vaut 10 800 F. Piège : 11 250 F correspond à une marge de 20 % sur le prix de vente, calcul différent."
+    },
+    {
+      "q": "Combien d'entiers entre 1 et 100 sont divisibles par 7 ?",
+      "o": [
+        "15",
+        "12",
+        "13",
+        "14"
+      ],
+      "r": 3,
+      "x": "Il s'agit des multiples de 7 à 98, soit 98 ÷ 7 = 14 nombres. Piège : inclure 105 par excès, ou compter 100 ÷ 7 ≈ 14,3 et arrondir à 15."
+    },
+    {
+      "q": "Une horloge retarde de 3 minutes par heure. Quel est le retard après 8 heures ?",
+      "o": [
+        "18 min",
+        "21 min",
+        "24 min",
+        "27 min"
+      ],
+      "r": 2,
+      "x": "3 × 8 = 24 minutes de retard cumulé. Piège : compter 7 intervalles au lieu de 8 heures écoulées, ce qui donne 21 min."
+    },
+    {
+      "q": "Le tiers d'un nombre, augmenté de 5, donne 12. Quel est ce nombre ?",
+      "o": [
+        "18",
+        "21",
+        "24",
+        "27"
+      ],
+      "r": 1,
+      "x": "x/3 + 5 = 12 donc x/3 = 7 et x = 21. Piège : calculer (12 + 5) × 3 = 51 en ajoutant au lieu de soustraire, ou 12 × 3 − 5 = 31."
+    },
+    {
+      "q": "Quel est le périmètre d'un cercle de rayon 7 cm (π ≈ 22/7) ?",
+      "o": [
+        "22 cm",
+        "44 cm",
+        "88 cm",
+        "154 cm"
+      ],
+      "r": 1,
+      "x": "Périmètre = 2πr = 2 × 22/7 × 7 = 44 cm. Piège : 154 cm² est l'aire du cercle, réponse choisie par confusion entre aire et périmètre."
+    },
+    {
+      "q": "Quelle est l'aire d'un triangle de base 12 cm et de hauteur 9 cm ?",
+      "o": [
+        "54 cm²",
+        "60 cm²",
+        "108 cm²",
+        "45 cm²"
+      ],
+      "r": 0,
+      "x": "Aire = (base × hauteur) ÷ 2 = (12 × 9) ÷ 2 = 54 cm². Piège : oublier de diviser par 2, ce qui donne 108 cm²."
+    },
+    {
+      "q": "Combien de secondes y a-t-il dans 1 heure 15 minutes ?",
+      "o": [
+        "3 600",
+        "4 200",
+        "4 500",
+        "4 800"
+      ],
+      "r": 2,
+      "x": "1 h = 3 600 s et 15 min = 900 s, donc le total vaut 4 500 s. Piège : compter 15 minutes comme 600 secondes en confondant avec 10 minutes."
+    },
+    {
+      "q": "Si 5 machines produisent 500 pièces en 10 h, combien 8 machines produisent-elles en 10 h ?",
+      "o": [
+        "1 000",
+        "640",
+        "700",
+        "800"
+      ],
+      "r": 3,
+      "x": "Une machine produit 100 pièces en 10 h, donc 8 machines en produisent 800. Piège : ajouter 200 pièces « au jugé » pour trois machines supplémentaires donne 700. Il faut d'abord ramener la production à une seule machine avant de multiplier."
+    },
+    {
+      "q": "Un nombre augmenté de son double donne 51. Quel est ce nombre ?",
+      "o": [
+        "15",
+        "17",
+        "19",
+        "21"
+      ],
+      "r": 1,
+      "x": "x + 2x = 3x = 51, donc x = 17. Piège : diviser 51 par 2 et arrondir à 25 ."
+    },
+    {
+      "q": "Combien font 12,5 % de 480 ?",
+      "o": [
+        "48",
+        "54",
+        "60",
+        "64"
+      ],
+      "r": 2,
+      "x": "12,5 % correspond à 1/8, donc 480 ÷ 8 = 60. Piège : calculer 10 % (48) et s'arrêter là, erreur très fréquente sous pression."
+    },
+    {
+      "q": "Deux nombres ont pour somme 60 et sont dans le rapport 2 : 3. Quel est le plus grand ?",
+      "o": [
+        "40",
+        "30",
+        "33",
+        "36"
+      ],
+      "r": 3,
+      "x": "Le total fait 5 parts, donc 1 part = 12 ; le plus grand vaut 3 × 12 = 36. Piège : partager 60 en deux moitiés et ajuster à 33, ou prendre 2/3 de 60 = 40."
+    },
+    {
+      "q": "Calculez : (8 + 4) × 3 − 6 ÷ 2.",
+      "o": [
+        "15",
+        "33",
+        "36",
+        "51"
+      ],
+      "r": 1,
+      "x": "(8 + 4) × 3 = 36 et 6 ÷ 2 = 3, donc 36 − 3 = 33. Piège : effectuer les opérations de gauche à droite sans priorité donne 15."
+    },
+    {
+      "q": "Un pantalon est vendu 13 000 F avec un bénéfice de 30 % sur le prix d'achat. Quel est le prix d'achat ?",
+      "o": [
+        "9 100 F",
+        "9 700 F",
+        "10 000 F",
+        "10 400 F"
+      ],
+      "r": 2,
+      "x": "Prix d'achat = 13 000 ÷ 1,30 = 10 000 F. Piège : retirer 30 % du prix de vente (13 000 × 0,70 = 9 100 F), calcul erroné mais très choisi."
+    },
+    {
+      "q": "Combien de diviseurs positifs possède le nombre 36 ?",
+      "o": [
+        "6",
+        "8",
+        "9",
+        "10"
+      ],
+      "r": 2,
+      "x": "Les diviseurs sont 1, 2, 3, 4, 6, 9, 12, 18 et 36, soit 9 au total. Piège : compter 6 deux fois en listant par paires, ce qui donne 10."
+    },
+    {
+      "q": "Combien font 2/3 + 3/4 ?",
+      "o": [
+        "5/7",
+        "17/12",
+        "6/12",
+        "5/12"
+      ],
+      "r": 1,
+      "x": "Au dénominateur commun 12 : 8/12 + 9/12 = 17/12. Piège : additionner numérateurs et dénominateurs séparément donne 5/7."
+    },
+    {
+      "q": "Un terrain carré a une aire de 625 m². Quel est son périmètre ?",
+      "o": [
+        "100 m",
+        "125 m",
+        "150 m",
+        "75 m"
+      ],
+      "r": 0,
+      "x": "Le côté vaut √625 = 25 m, donc le périmètre fait 4 × 25 = 100 m. Piège : diviser l'aire par 5 pour obtenir 125 m, valeur plausible mais fausse."
+    },
+    {
+      "q": "Une population de 8 000 habitants croît de 5 % par an. Combien après 2 ans ?",
+      "o": [
+        "8 400",
+        "8 800",
+        "8 820",
+        "9 000"
+      ],
+      "r": 2,
+      "x": "8 000 × 1,05 = 8 400 puis 8 400 × 1,05 = 8 820. Piège : appliquer 10 % en une fois (8 800) en additionnant les taux au lieu de les composer."
+    },
+    {
+      "q": "Combien font 3 h 45 min + 2 h 50 min ?",
+      "o": [
+        "6 h 25 min",
+        "6 h 35 min",
+        "5 h 95 min",
+        "6 h 05 min"
+      ],
+      "r": 1,
+      "x": "45 + 50 = 95 min = 1 h 35 min, donc 3 + 2 + 1 = 6 h et 35 min. Piège : écrire 5 h 95 min sans convertir, forme incorrecte pourtant souvent cochée."
+    },
+    {
+      "q": "Combien de fois 0,25 est-il contenu dans 10 ?",
+      "o": [
+        "2,5",
+        "4",
+        "25",
+        "40"
+      ],
+      "r": 3,
+      "x": "10 ÷ 0,25 = 10 × 4 = 40. Piège : multiplier au lieu de diviser donne 2,5, erreur classique avec les décimaux."
+    },
+    {
+      "q": "Une voiture roule pendant 90 minutes à 60 km/h. Quelle distance parcourt-elle ?",
+      "o": [
+        "60 km",
+        "75 km",
+        "90 km",
+        "120 km"
+      ],
+      "r": 2,
+      "x": "90 min = 1,5 h, donc la distance vaut 60 × 1,5 = 90 km. Piège : traiter 90 minutes comme 0,9 heure et répondre 54 km, arrondi à 60 km."
+    },
+    {
+      "q": "Si x = 3, quelle est la valeur de 2x² − 5x + 4 ?",
+      "o": [
+        "7",
+        "9",
+        "13",
+        "5"
+      ],
+      "r": 0,
+      "x": "2 × 9 = 18, moins 15, plus 4 = 7. Piège : calculer (2x)² = 36 au lieu de 2x², ce qui fausse tout le résultat."
+    },
+    {
+      "q": "Quel est le synonyme de « pérenne » ?",
+      "o": [
+        "Durable",
+        "Fragile",
+        "Ancien",
+        "Éphémère"
+      ],
+      "r": 0,
+      "x": "« Pérenne » qualifie ce qui dure indéfiniment dans le temps. Piège : « ancien » évoque le passé, non la continuité future."
+    },
+    {
+      "q": "Quel est le synonyme de « laconique » ?",
+      "o": [
+        "Confus",
+        "Lent",
+        "Bavard",
+        "Concis"
+      ],
+      "r": 3,
+      "x": "« Laconique » qualifie une expression réduite à l'essentiel. Piège : la sonorité proche de « lent » induit une association trompeuse."
+    },
+    {
+      "q": "Quel est l'antonyme de « prodigue » ?",
+      "o": [
+        "Généreux",
+        "Avare",
+        "Riche",
+        "Habile"
+      ],
+      "r": 1,
+      "x": "« Prodigue » signifie qui dépense sans compter ; son contraire est « avare ». Piège : « généreux » est un synonyme de prodigue, non son contraire."
+    },
+    {
+      "q": "Quel est l'antonyme de « licite » ?",
+      "o": [
+        "Moral",
+        "Public",
+        "Permis",
+        "Illégal"
+      ],
+      "r": 3,
+      "x": "« Licite » signifie conforme à la loi ; son contraire est « illégal ». Piège : « permis » est un synonyme, coché par lecture trop rapide de la consigne."
+    },
+    {
+      "q": "Complétez : « Le rocher ___ à la surface de l'eau. »",
+      "o": [
+        "éfleure",
+        "afleure",
+        "effleure",
+        "affleure"
+      ],
+      "r": 3,
+      "x": "« Affleurer » signifie apparaître au niveau d'une surface ; « effleurer » signifie toucher à peine. Piège : les deux verbes existent, seul le sens permet de trancher."
+    },
+    {
+      "q": "Complétez : « Le candidat a été ___ au concours. »",
+      "o": [
+        "admit",
+        "admis",
+        "admi",
+        "admist"
+      ],
+      "r": 1,
+      "x": "Le participe passé du verbe « admettre » s'écrit « admis ». Piège : « admit » est la forme du passé simple, confondue avec le participe."
+    },
+    {
+      "q": "Quel mot est correctement orthographié ?",
+      "o": [
+        "Dillème",
+        "Dilème",
+        "Dilemne",
+        "Dilemme"
+      ],
+      "r": 3,
+      "x": "« Dilemme » s'écrit avec deux m et aucun n. Piège : la prononciation fait entendre un son proche de « indemne », d'où la forme fautive."
+    },
+    {
+      "q": "Quel mot est correctement orthographié ?",
+      "o": [
+        "Langague",
+        "Lengage",
+        "Language",
+        "Langage"
+      ],
+      "r": 3,
+      "x": "« Langage » s'écrit sans u après le g. Piège : l'anglais « language » influence fortement l'écriture."
+    },
+    {
+      "q": "Complétez : « ___ il fasse, il réussira. »",
+      "o": [
+        "Quoi qu'",
+        "Quoique",
+        "Quoi que",
+        "Quoiqu'"
+      ],
+      "r": 0,
+      "x": "En deux mots, « quoi qu'il fasse » signifie « peu importe ce qu'il fait ». Piège : « quoiqu'il » en un mot signifie « bien qu'il », qui ne convient pas ici."
+    },
+    {
+      "q": "Complétez : « Les fleurs qu'elle a ___ sont fanées. »",
+      "o": [
+        "cueilli",
+        "cueillie",
+        "cueillies",
+        "cueillis"
+      ],
+      "r": 2,
+      "x": "Le COD « les fleurs » est placé avant le verbe, donc accord au féminin pluriel. Piège : l'auxiliaire « avoir » fait croire à tort à l'invariabilité du participe."
+    },
+    {
+      "q": "Complétez : « Je ___ ai parlé hier. »",
+      "o": [
+        "leures",
+        "l'eur",
+        "leurs",
+        "leur"
+      ],
+      "r": 3,
+      "x": "Pronom personnel complément, « leur » est invariable devant un verbe. Piège : confondre avec le déterminant possessif « leurs », qui s'accorde."
+    },
+    {
+      "q": "Quel est le pluriel de « bail » ?",
+      "o": [
+        "Bails",
+        "Baux",
+        "Bailles",
+        "Bailx"
+      ],
+      "r": 1,
+      "x": "« Bail » suit le modèle des noms en -ail irréguliers : bail → baux. Piège : appliquer la règle générale du -s donne « bails », forme inexistante."
+    },
+    {
+      "q": "Quel est le pluriel de « travail » au sens d'ouvrage ?",
+      "o": [
+        "Travailles",
+        "Travailx",
+        "Travails",
+        "Travaux"
+      ],
+      "r": 3,
+      "x": "Au sens d'ouvrage ou de chantier, le pluriel régulier est « travaux ». Piège : « travails » n'existe que comme terme technique très rare de maréchalerie."
+    },
+    {
+      "q": "Quel est le féminin de « ambassadeur » ?",
+      "o": [
+        "Ambassadrice",
+        "Ambassadeuse",
+        "Ambassadeurette",
+        "Ambassadeure"
+      ],
+      "r": 0,
+      "x": "Le suffixe -eur donne ici -rice, comme dans acteur/actrice. Piège : la forme en -euse existe pour d'autres noms (vendeur/vendeuse), d'où la confusion."
+    },
+    {
+      "q": "Que signifie « procrastiner » ?",
+      "o": [
+        "Accélérer",
+        "Remettre au lendemain",
+        "Abandonner",
+        "Répéter"
+      ],
+      "r": 1,
+      "x": "Le verbe désigne la tendance à repousser systématiquement une tâche. Piège : « abandonner » est plus radical : procrastiner suppose l'intention de faire plus tard."
+    },
+    {
+      "q": "Que signifie « éponyme » ?",
+      "o": [
+        "Synonyme",
+        "Homonyme",
+        "Anonyme",
+        "Qui donne son nom à"
+      ],
+      "r": 3,
+      "x": "Un héros éponyme est celui dont le nom sert de titre à l'œuvre. Piège : la terminaison en -nyme rapproche faussement le mot d'anonyme et d'homonyme."
+    },
+    {
+      "q": "Quel est l'intrus ?",
+      "o": [
+        "Véloce",
+        "Rapide",
+        "Prompt",
+        "Tardif"
+      ],
+      "r": 3,
+      "x": "Véloce, rapide et prompt expriment la vitesse ; « tardif » exprime le retard. Piège : « prompt » est le moins courant, ce qui le fait paraître isolé."
+    },
+    {
+      "q": "Quel est l'intrus ?",
+      "o": [
+        "Amender",
+        "Corriger",
+        "Rectifier",
+        "Aggraver"
+      ],
+      "r": 3,
+      "x": "Les trois premiers verbes signifient améliorer ou réparer ; « aggraver » fait empirer. Piège : « amender » évoque aussi l'amende financière, d'où une hésitation fréquente."
+    },
+    {
+      "q": "Quel classement suit un ordre croissant d'intensité ?",
+      "o": [
+        "Froid, tiède, chaud, brûlant",
+        "Tiède, froid, chaud, brûlant",
+        "Froid, chaud, tiède, brûlant",
+        "Brûlant, chaud, tiède, froid"
+      ],
+      "r": 0,
+      "x": "L'échelle thermique croissante va du froid au brûlant en passant par tiède puis chaud. Piège : la proposition D est bien ordonnée mais dans le sens décroissant."
+    },
+    {
+      "q": "Quel mot exprime la plus forte intensité ?",
+      "o": [
+        "Furieux",
+        "Mécontent",
+        "Contrarié",
+        "Agacé"
+      ],
+      "r": 0,
+      "x": "L'échelle monte de mécontent à agacé, puis contrarié, et culmine à furieux. Piège : « contrarié » paraît fort à l'oral mais reste modéré dans l'échelle."
+    },
+    {
+      "q": "Optimiste est à espoir ce que pessimiste est à :",
+      "o": [
+        "Tristesse",
+        "Désespoir",
+        "Colère",
+        "Ennui"
+      ],
+      "r": 1,
+      "x": "L'optimiste projette de l'espoir sur l'avenir, le pessimiste y projette du désespoir. Piège : « tristesse » renvoie au présent vécu, non à l'anticipation de l'avenir."
+    },
+    {
+      "q": "Que signifie « pléthore » ?",
+      "o": [
+        "Excès",
+        "Équilibre",
+        "Désordre",
+        "Manque"
+      ],
+      "r": 0,
+      "x": "« Pléthore » désigne une abondance excessive. Piège : la sonorité savante du mot et sa connotation négative font croire à un sens de manque, alors qu'il désigne exactement le contraire, une abondance excessive."
+    },
+    {
+      "q": "Que signifie « exhaustif » ?",
+      "o": [
+        "Résumé",
+        "Partiel",
+        "Épuisant",
+        "Complet"
+      ],
+      "r": 3,
+      "x": "Un traitement exhaustif couvre la totalité d'un sujet sans rien omettre. Piège : la proximité avec « épuiser » fait choisir « épuisant » par association sonore."
+    },
+    {
+      "q": "Que signifie l'expression « battre le fer pendant qu'il est chaud » ?",
+      "o": [
+        "Agir au bon moment",
+        "Travailler dur",
+        "Se mettre en colère",
+        "Se dépêcher inutilement"
+      ],
+      "r": 0,
+      "x": "L'image du forgeron illustre l'idée de saisir l'occasion favorable. Piège : « travailler dur » retient l'image de l'effort au lieu de celle du bon timing."
+    },
+    {
+      "q": "Que désigne « un travail de Romain » ?",
+      "o": [
+        "Un travail énorme",
+        "Un travail mal fait",
+        "Un travail ancien",
+        "Un travail facile"
+      ],
+      "r": 0,
+      "x": "L'expression renvoie aux grands ouvrages romains et désigne une tâche colossale. Piège : la référence antique fait penser à tort à quelque chose d'ancien."
+    },
+    {
+      "q": "Complétez : « Il s'en va ___ bruit. »",
+      "o": [
+        "sens",
+        "sans",
+        "sang",
+        "cent"
+      ],
+      "r": 1,
+      "x": "La préposition d'absence s'écrit « sans ». Piège : les quatre homophones se prononcent de façon presque identique."
+    },
+    {
+      "q": "Quel verbe est correctement conjugué ?",
+      "o": [
+        "Ils croivent",
+        "Ils croient",
+        "Ils croyent",
+        "Ils croiyent"
+      ],
+      "r": 1,
+      "x": "Le verbe « croire » à la 3ᵉ personne du pluriel du présent donne « ils croient ». Piège : « croivent » est une forme orale répandue mais incorrecte à l'écrit."
+    },
+    {
+      "q": "Complétez : « Vous ___ attention. »",
+      "o": [
+        "faites",
+        "faitez",
+        "fais",
+        "faisez"
+      ],
+      "r": 0,
+      "x": "Le verbe « faire » est irrégulier à la 2ᵉ personne du pluriel : « vous faites ». Piège : appliquer la terminaison régulière -ez donne « faisez », forme inexistante."
+    },
+    {
+      "q": "Complétez : « Après avoir ___ le dossier, il a signé. »",
+      "o": [
+        "lu",
+        "lut",
+        "lit",
+        "lue"
+      ],
+      "r": 0,
+      "x": "Le participe passé de « lire » est « lu », invariable ici car le COD suit le verbe. Piège : « lut » est la forme du passé simple, confondue avec le participe."
+    },
+    {
+      "q": "Quel est le synonyme de « véhément » ?",
+      "o": [
+        "Calme",
+        "Violent",
+        "Discret",
+        "Hésitant"
+      ],
+      "r": 1,
+      "x": "Un discours véhément est emporté et d'une grande intensité. Piège : le mot sonne comme « véhicule » et n'évoque pas spontanément la force."
+    },
+    {
+      "q": "Quel est l'antonyme de « docile » ?",
+      "o": [
+        "Obéissant",
+        "Rebelle",
+        "Doux",
+        "Calme"
+      ],
+      "r": 1,
+      "x": "« Docile » qualifie qui se soumet facilement ; son contraire est « rebelle ». Piège : « obéissant » et « doux » sont des synonymes, cochés par inattention à la consigne."
+    },
+    {
+      "q": "Que signifie « un salaire mirobolant » ?",
+      "o": [
+        "Extraordinaire",
+        "Moyen",
+        "Irrégulier",
+        "Faible"
+      ],
+      "r": 0,
+      "x": "« Mirobolant » qualifie ce qui est étonnamment avantageux. Piège : la sonorité familière du mot fait penser à un sens péjoratif."
+    },
+    {
+      "q": "Que désigne exactement une « alternative » ?",
+      "o": [
+        "Un choix entre deux possibilités",
+        "Une solution de rechange unique",
+        "Une obligation",
+        "Une seule option"
+      ],
+      "r": 0,
+      "x": "Au sens strict, une alternative est une situation offrant deux issues possibles. Piège : l'usage courant réduit le mot à « solution de remplacement », sens abusif."
+    },
+    {
+      "q": "Que signifie le préfixe « hypo- » ?",
+      "o": [
+        "Au-dessus",
+        "En dessous",
+        "Contre",
+        "Avec"
+      ],
+      "r": 1,
+      "x": "« Hypo- » marque l'infériorité, comme dans hypotension ou hypoglycémie. Piège : le confondre avec « hyper- », qui exprime au contraire l'excès."
+    },
+    {
+      "q": "Que signifie le suffixe « -cide » ?",
+      "o": [
+        "Qui tue",
+        "Qui produit",
+        "Qui protège",
+        "Qui soigne"
+      ],
+      "r": 0,
+      "x": "Il vient du latin caedere, « tuer » : insecticide, homicide, pesticide. Piège : l'usage agricole des produits en -cide fait croire à une fonction protectrice."
+    },
+    {
+      "q": "Quel est l'intrus par le registre de langue ?",
+      "o": [
+        "Bagnole",
+        "Automobile",
+        "Véhicule",
+        "Voiture"
+      ],
+      "r": 0,
+      "x": "« Bagnole » appartient au registre familier ; les trois autres sont neutres ou soutenus. Piège : chercher un intrus par le sens échoue, les quatre désignant le même objet."
+    },
+    {
+      "q": "Que signifie « somme toute » ?",
+      "o": [
+        "En définitive",
+        "Par hasard",
+        "Au contraire",
+        "En totalité"
+      ],
+      "r": 0,
+      "x": "La locution introduit une conclusion, équivalente à « tout bien considéré ». Piège : la présence du mot « somme » évoque à tort une idée de total arithmétique."
+    },
+    {
+      "q": "Quelle phrase ne contient pas de faute ?",
+      "o": [
+        "Je me rappelle de lui",
+        "Je me souviens de lui",
+        "Je me rappelle à lui",
+        "Je me souviens lui"
+      ],
+      "r": 1,
+      "x": "On se souvient DE quelqu'un mais on se rappelle quelqu'un, sans préposition. Piège : « je me rappelle de » est extrêmement courant à l'oral mais fautif."
+    },
+    {
+      "q": "Combien de syllabes compte le mot « administration » ?",
+      "o": [
+        "5",
+        "6",
+        "7",
+        "4"
+      ],
+      "r": 0,
+      "x": "Le découpage donne ad-mi-nis-tra-tion, soit 5 syllabes. Piège : découper « tion » en deux syllabes donne 6, erreur fréquente."
+    },
+    {
+      "q": "Sur un dé, la somme des faces opposées vaut 7. Si la face visible porte 2, que porte la face opposée ?",
+      "o": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "r": 2,
+      "x": "7 − 2 = 5. Piège : répondre 6 par association avec la face maximale du dé."
+    },
+    {
+      "q": "Un cube 4 × 4 × 4 peint sur toutes ses faces est découpé en 64 petits cubes. Combien n'ont aucune face peinte ?",
+      "o": [
+        "4",
+        "8",
+        "16",
+        "24"
+      ],
+      "r": 1,
+      "x": "Le noyau intérieur mesure (4 − 2)³ = 2³ = 8 petits cubes. Piège : compter 16 en oubliant de retirer une couche sur chacune des trois dimensions."
+    },
+    {
+      "q": "Dans ce même cube 4 × 4 × 4, combien de petits cubes ont exactement 3 faces peintes ?",
+      "o": [
+        "12",
+        "24",
+        "4",
+        "8"
+      ],
+      "r": 3,
+      "x": "Seuls les cubes situés aux coins ont 3 faces peintes, et un cube possède 8 coins. Piège : répondre 12 en confondant avec le nombre d'arêtes."
+    },
+    {
+      "q": "Un cube 5 × 5 × 5 peint est découpé en 125 petits cubes. Combien ont exactement 1 face peinte ?",
+      "o": [
+        "27",
+        "36",
+        "54",
+        "64"
+      ],
+      "r": 2,
+      "x": "Chaque face porte (5 − 2)² = 9 cubes centraux, et il y a 6 faces : 6 × 9 = 54. Piège : oublier de multiplier par 6 et répondre 9, ou confondre avec le noyau 3³ = 27."
+    },
+    {
+      "q": "Combien d'arêtes possède une pyramide à base carrée ?",
+      "o": [
+        "5",
+        "6",
+        "8",
+        "12"
+      ],
+      "r": 2,
+      "x": "4 arêtes de base plus 4 arêtes latérales montant au sommet = 8. Piège : répondre 5 en comptant les faces au lieu des arêtes."
+    },
+    {
+      "q": "Combien de sommets possède une pyramide à base carrée ?",
+      "o": [
+        "5",
+        "6",
+        "8",
+        "4"
+      ],
+      "r": 0,
+      "x": "Les 4 sommets de la base plus le sommet supérieur font 5. Piège : oublier le sommet principal et répondre 4."
+    },
+    {
+      "q": "Combien de faces possède un octaèdre régulier ?",
+      "o": [
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "r": 1,
+      "x": "Le préfixe « octa- » indique 8 faces triangulaires. Piège : répondre 6 en confondant avec le nombre de sommets de ce solide."
+    },
+    {
+      "q": "Combien de diagonales possède un triangle ?",
+      "o": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "r": 0,
+      "x": "Une diagonale relie deux sommets non consécutifs ; dans un triangle, tous le sont. Piège : compter les hauteurs ou les médianes, qui ne sont pas des diagonales."
+    },
+    {
+      "q": "Combien de diagonales possède un octogone ?",
+      "o": [
+        "24",
+        "16",
+        "18",
+        "20"
+      ],
+      "r": 3,
+      "x": "Formule n(n − 3) ÷ 2 = 8 × 5 ÷ 2 = 20. Piège : appliquer n(n − 1) ÷ 2 = 28, qui compte aussi les côtés."
+    },
+    {
+      "q": "Un carré est divisé en 4 cases égales (grille 2 × 2). Combien de rectangles peut-on y compter au total ?",
+      "o": [
+        "4",
+        "6",
+        "9",
+        "12"
+      ],
+      "r": 2,
+      "x": "On choisit 2 lignes parmi 3 et 2 colonnes parmi 3 : 3 × 3 = 9 rectangles. Piège : ne compter que les 4 petites cases en oubliant les regroupements."
+    },
+    {
+      "q": "Combien de carrés au total dans une grille 4 × 4 ?",
+      "o": [
+        "36",
+        "16",
+        "20",
+        "30"
+      ],
+      "r": 3,
+      "x": "16 carrés de côté 1, 9 de côté 2, 4 de côté 3 et 1 de côté 4, soit 30. Piège : ne compter que les 16 cases élémentaires."
+    },
+    {
+      "q": "En traçant les 3 médianes d'un triangle, en combien de petits triangles est-il divisé ?",
+      "o": [
+        "6",
+        "8",
+        "3",
+        "4"
+      ],
+      "r": 0,
+      "x": "Les trois médianes se coupent au centre de gravité et découpent 6 triangles de même aire. Piège : répondre 3 en ne voyant que les découpes issues d'un seul sommet."
+    },
+    {
+      "q": "La lettre M, pivotée de 180°, ressemble à :",
+      "o": [
+        "W",
+        "E",
+        "M",
+        "N"
+      ],
+      "r": 0,
+      "x": "La rotation d'un demi-tour retourne les pointes du M vers le haut, formant un W. Piège : croire que le M est symétrique par rotation, alors qu'il ne l'est que par miroir vertical."
+    },
+    {
+      "q": "Le chiffre 6 pivoté de 180° donne :",
+      "o": [
+        "0",
+        "8",
+        "6",
+        "9"
+      ],
+      "r": 3,
+      "x": "Un demi-tour transforme le 6 en 9. Piège : répondre 6 en pensant à une symétrie miroir plutôt qu'à une rotation."
+    },
+    {
+      "q": "Combien d'axes de symétrie possède un triangle équilatéral ?",
+      "o": [
+        "3",
+        "6",
+        "1",
+        "2"
+      ],
+      "r": 0,
+      "x": "Chaque médiatrice issue d'un sommet constitue un axe, soit 3 au total. Piège : répondre 6 en comptant aussi les rotations, qui ne sont pas des axes."
+    },
+    {
+      "q": "Combien d'axes de symétrie possède un cercle ?",
+      "o": [
+        "1",
+        "2",
+        "4",
+        "Une infinité"
+      ],
+      "r": 3,
+      "x": "Toute droite passant par le centre est un axe de symétrie. Piège : répondre 2 en pensant seulement aux axes horizontal et vertical."
+    },
+    {
+      "q": "Un carré subit une rotation de 90° autour de son centre. On obtient :",
+      "o": [
+        "Un losange",
+        "Le même carré",
+        "Un rectangle",
+        "Un trapèze"
+      ],
+      "r": 1,
+      "x": "Le carré est invariant par rotation de 90°, sa forme reste strictement identique. Piège : croire que la rotation l'incline en losange, ce qui n'est qu'un effet de perception."
+    },
+    {
+      "q": "Quel mot reste identique dans un miroir vertical ?",
+      "o": [
+        "TOT",
+        "BOB",
+        "DAD",
+        "PIP"
+      ],
+      "r": 0,
+      "x": "T et O sont symétriques par rapport à un axe vertical, contrairement à B, D et P. Piège : BOB et DAD semblent symétriques car ils se lisent pareil à l'envers, ce qui est une autre propriété."
+    },
+    {
+      "q": "Le développement d'un cube comporte combien de carrés ?",
+      "o": [
+        "8",
+        "4",
+        "5",
+        "6"
+      ],
+      "r": 3,
+      "x": "Un cube a 6 faces, donc son patron comporte 6 carrés. Piège : répondre 8 en confondant avec le nombre de sommets."
+    },
+    {
+      "q": "Quel est le patron d'un cylindre ?",
+      "o": [
+        "Un rectangle et deux cercles",
+        "Un triangle",
+        "Un cercle et deux rectangles",
+        "Un carré"
+      ],
+      "r": 0,
+      "x": "La surface latérale déroulée donne un rectangle, complété par les deux disques de base. Piège : oublier les deux bases et ne retenir que la surface latérale."
+    },
+    {
+      "q": "Quel est le volume d'un cube d'arête 5 cm ?",
+      "o": [
+        "25 cm³",
+        "75 cm³",
+        "125 cm³",
+        "150 cm³"
+      ],
+      "r": 2,
+      "x": "Volume = 5³ = 125 cm³. Piège : calculer 5² = 25, qui correspond à l'aire d'une seule face."
+    },
+    {
+      "q": "Si l'arête d'un cube est multipliée par 3, son volume est multiplié par :",
+      "o": [
+        "3",
+        "9",
+        "27",
+        "81"
+      ],
+      "r": 2,
+      "x": "Le volume varie comme le cube du rapport : 3³ = 27. Piège : répondre 9 en appliquant le facteur des aires au lieu de celui des volumes."
+    },
+    {
+      "q": "Quelle est l'aire d'un cercle de rayon 10 cm (π ≈ 3,14) ?",
+      "o": [
+        "314 cm²",
+        "628 cm²",
+        "62,8 cm²",
+        "157 cm²"
+      ],
+      "r": 0,
+      "x": "Aire = πr² = 3,14 × 100 = 314 cm². Piège : 62,8 cm est le périmètre, réponse choisie par confusion de formule."
+    },
+    {
+      "q": "Un rectangle mesure 8 cm sur 6 cm. Quelle est la longueur de sa diagonale ?",
+      "o": [
+        "7 cm",
+        "10 cm",
+        "12 cm",
+        "14 cm"
+      ],
+      "r": 1,
+      "x": "Par Pythagore, la diagonale vaut √(64 + 36) = √100 = 10 cm. Piège : additionner les côtés (8 + 6 = 14) au lieu d'appliquer Pythagore."
+    },
+    {
+      "q": "Quelle est la mesure d'un angle intérieur d'un hexagone régulier ?",
+      "o": [
+        "135°",
+        "60°",
+        "108°",
+        "120°"
+      ],
+      "r": 3,
+      "x": "La somme des angles vaut (6 − 2) × 180 = 720°, divisée par 6 cela fait 120°. Piège : 108° est l'angle du pentagone régulier, valeur mémorisée par erreur."
+    },
+    {
+      "q": "Quelle est la somme des angles intérieurs d'un quadrilatère ?",
+      "o": [
+        "180°",
+        "270°",
+        "360°",
+        "540°"
+      ],
+      "r": 2,
+      "x": "Formule (n − 2) × 180 = 2 × 180 = 360°. Piège : répondre 180° par transfert automatique de la règle du triangle."
+    },
+    {
+      "q": "Un carré et un cercle ont le même périmètre. Lequel a la plus grande aire ?",
+      "o": [
+        "Le cercle",
+        "Ils ont la même aire",
+        "Impossible à déterminer",
+        "Le carré"
+      ],
+      "r": 0,
+      "x": "À périmètre égal, le cercle maximise toujours l'aire enfermée. Piège : penser que des périmètres identiques impliquent des aires identiques."
+    },
+    {
+      "q": "Combien de faces possède un prisme hexagonal ?",
+      "o": [
+        "6",
+        "7",
+        "8",
+        "12"
+      ],
+      "r": 2,
+      "x": "Les 2 bases hexagonales et les 6 faces latérales font 8 faces au total. Piège : répondre 6 en ne comptant que les faces latérales."
+    },
+    {
+      "q": "Deux angles sont complémentaires. Si l'un mesure 37°, combien mesure l'autre ?",
+      "o": [
+        "43°",
+        "53°",
+        "143°",
+        "153°"
+      ],
+      "r": 1,
+      "x": "Deux angles complémentaires ont une somme de 90° : 90 − 37 = 53°. Piège : 143° correspond au supplémentaire, calculé avec 180° au lieu de 90°."
+    },
+    {
+      "q": "Deux angles sont supplémentaires. Si l'un mesure 65°, combien mesure l'autre ?",
+      "o": [
+        "25°",
+        "35°",
+        "115°",
+        "125°"
+      ],
+      "r": 2,
+      "x": "Deux angles supplémentaires ont une somme de 180° : 180 − 65 = 115°. Piège : 25° est le complémentaire, obtenu en utilisant 90° par erreur."
+    },
+    {
+      "q": "Un triangle a deux angles de 40° et 60°. Combien mesure le troisième ?",
+      "o": [
+        "90°",
+        "100°",
+        "70°",
+        "80°"
+      ],
+      "r": 3,
+      "x": "180 − (40 + 60) = 80°. Piège : répondre 90° en supposant à tort que le triangle est rectangle."
+    },
+    {
+      "q": "Un losange a des diagonales de 6 cm et 8 cm. Quelle est son aire ?",
+      "o": [
+        "12 cm²",
+        "24 cm²",
+        "28 cm²",
+        "48 cm²"
+      ],
+      "r": 1,
+      "x": "Aire = (D × d) ÷ 2 = (8 × 6) ÷ 2 = 24 cm². Piège : oublier de diviser par 2, ce qui donne 48 cm²."
+    },
+    {
+      "q": "Combien de faces possède un tétraèdre ?",
+      "o": [
+        "5",
+        "6",
+        "3",
+        "4"
+      ],
+      "r": 3,
+      "x": "Le préfixe « tétra- » indique 4 faces triangulaires. Piège : répondre 3 en ne comptant que les faces latérales visibles depuis un sommet."
+    },
+    {
+      "q": "Combien de diagonales d'espace possède un cube (reliant deux sommets opposés) ?",
+      "o": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "r": 1,
+      "x": "Chaque paire de sommets diamétralement opposés donne une diagonale, soit 8 ÷ 2 = 4. Piège : répondre 8 en comptant chaque diagonale deux fois, une fois par extrémité."
+    },
+    {
+      "q": "Complétez la suite : 4, 6, 12, 14, 28, 30, ?",
+      "o": [
+        "32",
+        "45",
+        "58",
+        "60"
+      ],
+      "r": 3,
+      "x": "Deux opérations alternent : +2 puis ×2. On a 4+2=6, 6×2=12, 12+2=14, 14×2=28, 28+2=30. Le rang suivant est donc une multiplication : 30 × 2 = 60. Piège : les petits écarts du début suggèrent une progression douce et poussent à ajouter 2 une dernière fois, d'où 32."
+    },
+    {
+      "q": "Complétez : A, Z, C, X, E, V, G, ?",
+      "o": [
+        "T",
+        "U",
+        "S",
+        "R"
+      ],
+      "r": 0,
+      "x": "Deux suites imbriquées. Positions impaires : A, C, E, G, soit les rangs 1, 3, 5, 7 (+2). Positions paires : Z, X, V, soit les rangs 26, 24, 22 (−2). Le terme cherché est en position paire : 22 − 2 = 20, donc T. Piège : reculer d'une seule lettre depuis V donne U, erreur due à la lecture de la série comme un tout au lieu de la scinder en deux."
+    },
+    {
+      "q": "A affirme : « B ment. » B affirme : « C ment. » C affirme : « A et B mentent. » Un seul dit la vérité. Qui ?",
+      "o": [
+        "B",
+        "C",
+        "Aucun des trois",
+        "A"
+      ],
+      "r": 0,
+      "x": "On teste chaque hypothèse. Si B est sincère, alors C ment, donc son accusation contre A et B est fausse — cohérent. Et A, qui accuse B de mentir, ment lui aussi. Un seul sincère : B. Piège : commencer par A mène à une impasse, ce qui fait croire à tort que l'énoncé est insoluble et pousse à cocher « aucun des trois »."
+    },
+    {
+      "q": "Complétez la suite : 1, 2, 5, 14, 41, ?",
+      "o": [
+        "108",
+        "113",
+        "122",
+        "125"
+      ],
+      "r": 2,
+      "x": "La règle est ×3 − 1 : 1×3−1=2, 2×3−1=5, 5×3−1=14, 14×3−1=41. Le terme suivant vaut donc 41 × 3 − 1 = 122. Piège : tripler sans retrancher le 1 donne 123, valeur absente des propositions, ce qui pousse à corriger au jugé vers 125. Il faut vérifier la règle sur les quatre premiers termes avant de l'appliquer au cinquième."
+    },
+    {
+      "q": "Complétez la suite : 3, 4, 8, 17, 33, ?",
+      "o": [
+        "49",
+        "54",
+        "58",
+        "66"
+      ],
+      "r": 2,
+      "x": "Les écarts successifs sont 1, 4, 9, 16, c'est-à-dire les carrés parfaits. Le prochain écart vaut 5² = 25, donc 33 + 25 = 58. Piège : reconnaître une croissance rapide et doubler le dernier terme donne 66. Il faut observer les écarts, non les termes eux-mêmes."
+    },
+    {
+      "q": "Complétez la suite : 2, 12, 36, 80, ?",
+      "o": [
+        "120",
+        "140",
+        "150",
+        "164"
+      ],
+      "r": 2,
+      "x": "Chaque terme suit la formule n³ + n² : 1+1=2, 8+4=12, 27+9=36, 64+16=80. Pour n = 5 : 125 + 25 = 150. Piège : chercher une règle dans les écarts (10, 24, 44) mène à une impasse, car leur progression n'est pas régulière. Il faut comparer chaque terme au rang qu'il occupe, non au terme précédent."
+    },
+    {
+      "q": "Complétez la suite : 1, 4, 27, 256, ?",
+      "o": [
+        "625",
+        "1 024",
+        "3 125",
+        "4 096"
+      ],
+      "r": 2,
+      "x": "Chaque terme vaut n puissance n : 1¹, 2², 3³, 4⁴. Le suivant est 5⁵ = 3 125. Piège : 625 correspond à 5⁴ et 1 024 à 4⁵ : les deux inversent la base et l'exposant, erreur très fréquente quand les deux nombres sont identiques dans la règle."
+    },
+    {
+      "q": "Complétez la suite : 6, 3, 9, 4,5, 13,5, ?",
+      "o": [
+        "6,75",
+        "20,25",
+        "27",
+        "4,5"
+      ],
+      "r": 0,
+      "x": "Deux opérations alternent : ÷2 puis ×3. On a 6÷2=3, 3×3=9, 9÷2=4,5, 4,5×3=13,5. Le rang suivant est une division : 13,5 ÷ 2 = 6,75. Piège : la présence de décimaux fait perdre le fil de l'alternance et pousse à multiplier par 3, ce qui donne 40,5, ou à revenir à 4,5 par symétrie apparente."
+    },
+    {
+      "q": "Complétez la suite : 2, 3, 6, 18, 108, ?",
+      "o": [
+        "216",
+        "648",
+        "1 296",
+        "1 944"
+      ],
+      "r": 3,
+      "x": "Chaque terme est le produit des deux termes précédents : 2×3=6, 3×6=18, 6×18=108. Le suivant vaut 18 × 108 = 1 944. Piège : doubler ou tripler le dernier terme donne 216 ou 324. La règle multiplicative à deux termes est rare et passe souvent inaperçue."
+    },
+    {
+      "q": "Complétez la suite : 21, 20, 18, 15, 11, ?",
+      "o": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "r": 2,
+      "x": "Les retraits croissent d'une unité à chaque étape : −1, −2, −3, −4, puis −5. Donc 11 − 5 = 6. Piège : répéter le retrait précédent (−4) donne 7, valeur très proche qui passe facilement pour correcte lors d'une lecture rapide."
+    },
+    {
+      "q": "Complétez la suite : 4, 9, 25, 49, 121, ?",
+      "o": [
+        "169",
+        "196",
+        "225",
+        "144"
+      ],
+      "r": 0,
+      "x": "Ce sont les carrés des nombres premiers : 2², 3², 5², 7², 11². Le suivant est 13² = 169. Piège : croire qu'il s'agit des carrés successifs conduit à prendre 12² = 144, réponse la plus cochée. Il faut remarquer que 16 et 36 sont absents de la série."
+    },
+    {
+      "q": "Complétez la suite : 1, 11, 21, 1211, ?",
+      "o": [
+        "1 112",
+        "3 112",
+        "11 121",
+        "111 221"
+      ],
+      "r": 3,
+      "x": "Chaque terme décrit le précédent à voix haute. « Un 1 » donne 11 ; « deux 1 » donne 21 ; « un 2, un 1 » donne 1211 ; « un 1, un 2, deux 1 » donne 111221. Piège : chercher une règle arithmétique est une impasse totale. Ce type de suite se reconnaît à la croissance irrégulière du nombre de chiffres."
+    },
+    {
+      "q": "Complétez la suite : 10, 9, 17, 16, 24, ?",
+      "o": [
+        "25",
+        "32",
+        "22",
+        "23"
+      ],
+      "r": 3,
+      "x": "Deux opérations alternent : −1 puis +8. On a 10−1=9, 9+8=17, 17−1=16, 16+8=24. Le rang suivant est une soustraction : 24 − 1 = 23. Piège : la proximité de 9 et 10, puis de 16 et 17, fait croire à une suite désordonnée et pousse à additionner 8 une fois de trop, d'où 32."
+    },
+    {
+      "q": "Complétez la suite : 3, 5, 9, 17, 33, ?",
+      "o": [
+        "49",
+        "57",
+        "65",
+        "66"
+      ],
+      "r": 2,
+      "x": "La règle est ×2 − 1 : 3×2−1=5, 5×2−1=9, 9×2−1=17, 17×2−1=33. Le terme suivant vaut 33 × 2 − 1 = 65. Piège : doubler sans retrancher donne 66, un seul point d'écart avec la bonne réponse. Les écarts (2, 4, 8, 16) confirment pourtant la règle."
+    },
+    {
+      "q": "Complétez la suite : 0, 3, 8, 15, 24, ?",
+      "o": [
+        "35",
+        "48",
+        "30",
+        "33"
+      ],
+      "r": 0,
+      "x": "Chaque terme vaut n² − 1 : 1−1=0, 4−1=3, 9−1=8, 16−1=15, 25−1=24. Pour n = 6 : 36 − 1 = 35. Piège : les écarts sont les impairs 3, 5, 7, 9, donc le suivant vaut 11 et non 9 : ajouter 9 donne 33, réponse très attractive."
+    },
+    {
+      "q": "Complétez : B, C, E, G, K, ?",
+      "o": [
+        "L",
+        "M",
+        "N",
+        "O"
+      ],
+      "r": 1,
+      "x": "Les rangs sont 2, 3, 5, 7, 11, c'est-à-dire les nombres premiers dans l'ordre. Le rang suivant est 13, soit la lettre M. Piège : les écarts irréguliers (1, 2, 2, 4) font chercher une progression additive et conduisent à L (rang 12) ou N (rang 14)."
+    },
+    {
+      "q": "Complétez : Z, W, S, N, ?",
+      "o": [
+        "G",
+        "H",
+        "I",
+        "J"
+      ],
+      "r": 1,
+      "x": "Les rangs sont 26, 23, 19, 14, avec des retraits croissants de 3, 4, puis 5. Le retrait suivant vaut 6 : 14 − 6 = 8, soit la lettre H. Piège : conserver le retrait de 5 donne le rang 9, c'est-à-dire I. Il faut vérifier que l'écart lui-même progresse, et non seulement qu'il est constant."
+    },
+    {
+      "q": "Complétez : AB, DE, GH, JK, ?",
+      "o": [
+        "LM",
+        "MN",
+        "NO",
+        "OP"
+      ],
+      "r": 1,
+      "x": "Les couples occupent les rangs 1-2, 4-5, 7-8, 10-11 : chaque couple avance de 3 rangs. Le suivant occupe donc les rangs 13-14, soit MN. Piège : avancer de 2 rangs seulement donne LM, l'erreur la plus courante car on oublie la lettre « sautée » entre chaque couple."
+    },
+    {
+      "q": "Complétez : Z, Y, W, T, P, ?",
+      "o": [
+        "J",
+        "K",
+        "L",
+        "M"
+      ],
+      "r": 1,
+      "x": "Les rangs sont 26, 25, 23, 20, 16, avec des retraits croissants de 1, 2, 3, 4. Le retrait suivant vaut 5 : 16 − 5 = 11, soit la lettre K. Piège : la descente semble s'accélérer de façon imprévisible et fait choisir J ou L au jugé. Convertir les lettres en rangs numériques est indispensable ici."
+    },
+    {
+      "q": "Complétez : A, B, D, G, K, ?",
+      "o": [
+        "N",
+        "O",
+        "P",
+        "Q"
+      ],
+      "r": 2,
+      "x": "Les rangs sont 1, 2, 4, 7, 11, avec des écarts croissants de 1, 2, 3, 4. L'écart suivant vaut 5 : 11 + 5 = 16, soit la lettre P. Piège : conserver l'écart de 4 donne le rang 15, soit O, réponse très proche et souvent cochée sous la pression du temps."
+    },
+    {
+      "q": "Dans un village, les chevaliers disent toujours la vérité et les valets mentent toujours. X déclare : « Y et moi sommes de types différents. » Que peut-on conclure ?",
+      "o": [
+        "X est chevalier",
+        "X est valet",
+        "Y est chevalier",
+        "Y est valet"
+      ],
+      "r": 3,
+      "x": "Si X est chevalier, sa phrase est vraie, donc Y est valet. Si X est valet, sa phrase est fausse, donc X et Y sont du même type, et Y est valet également. Piège : on cherche à déterminer le type de X alors que seule la conclusion sur Y est certaine. Les deux hypothèses aboutissent au même résultat pour Y."
+    },
+    {
+      "q": "Une personne déclare : « Je suis un menteur. » Que peut-on en conclure ?",
+      "o": [
+        "Elle dit la vérité",
+        "Elle ment",
+        "La situation est logiquement impossible",
+        "Elle est parfois sincère"
+      ],
+      "r": 2,
+      "x": "Si elle dit vrai, alors elle ment, ce qui contredit l'hypothèse. Si elle ment, alors sa phrase est fausse, donc elle ne ment pas : contradiction également. Piège : il s'agit du paradoxe du menteur, sans solution cohérente. Chercher à trancher entre A et B est précisément l'erreur que l'énoncé teste."
+    },
+    {
+      "q": "Quatre élèves. Un seul a triché. Ali : « Ce n'est pas moi. » Bibata : « C'est Coulibaly. » Coulibaly : « C'est Damiba. » Damiba : « Coulibaly ment. » Un seul dit la vérité. Qui a triché ?",
+      "o": [
+        "Ali",
+        "Bibata",
+        "Coulibaly",
+        "Damiba"
+      ],
+      "r": 0,
+      "x": "Si Ali a triché : sa phrase est fausse, celle de Bibata aussi, celle de Coulibaly aussi, et seul Damiba dit vrai. Une seule vérité, l'hypothèse tient. Les trois autres hypothèses produisent deux ou trois affirmations vraies. Piège : Ali est le seul qui se disculpe, ce qui le fait paraître suspect ou au contraire crédible selon l'intuition — le test de chaque hypothèse est la seule méthode fiable."
+    },
+    {
+      "q": "Cinq coureurs. A finit devant B mais derrière C. D finit devant C. E finit juste après B. Qui termine dernier ?",
+      "o": [
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "r": 3,
+      "x": "On assemble les contraintes : D devant C, C devant A, A devant B, et E immédiatement après B. L'ordre complet est donc D, C, A, B, E. Piège : B est cité comme étant derrière A et paraît donc dernier, mais la mention « juste après B » place explicitement E en queue de classement."
+    },
+    {
+      "q": "Six personnes font la queue. M est 3ᵉ en partant de l'avant. N est 2ᵉ en partant de l'arrière. Combien de personnes se trouvent entre M et N ?",
+      "o": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "r": 1,
+      "x": "M occupe la position 3. N étant 2ᵉ depuis l'arrière d'une file de 6, il occupe la position 5. Entre les positions 3 et 5, il ne reste que la position 4, soit 1 personne. Piège : soustraire 5 − 3 = 2 donne le nombre d'intervalles, non le nombre de personnes intercalées. Il faut retrancher 1 au résultat."
+    },
+    {
+      "q": "Certains médecins sont chercheurs. Tous les chercheurs sont diplômés. Quelle conclusion est certaine ?",
+      "o": [
+        "Tous les médecins sont diplômés",
+        "Certains médecins sont diplômés",
+        "Aucun médecin n'est diplômé",
+        "Aucune conclusion certaine"
+      ],
+      "r": 1,
+      "x": "Il existe au moins un médecin qui est chercheur, et tout chercheur est diplômé. Ce médecin est donc diplômé, ce qui garantit la proposition B. Piège : la prudence pousse à cocher « aucune conclusion certaine », mais le chaînage entre « certains » et « tous » produit bien une conclusion partielle valide."
+    },
+    {
+      "q": "Tous les B sont C. Certains A ne sont pas C. Que peut-on conclure ?",
+      "o": [
+        "Certains A ne sont pas B",
+        "Tous les A sont B",
+        "Aucun A n'est B",
+        "Aucune conclusion certaine"
+      ],
+      "r": 0,
+      "x": "Les A qui ne sont pas C ne peuvent pas être des B, puisque tout B est nécessairement C. Il existe donc au moins un A qui n'est pas B. Piège : « aucun A n'est B » va trop loin : rien n'interdit que d'autres A soient des B. La conclusion doit rester partielle."
+    },
+    {
+      "q": "L'affirmation « Tout fonctionnaire est assermenté » est vraie. Laquelle des propositions suivantes est nécessairement vraie ?",
+      "o": [
+        "Un non-assermenté n'est pas fonctionnaire",
+        "Certains assermentés ne sont pas fonctionnaires",
+        "Aucun assermenté n'est fonctionnaire",
+        "Tout assermenté est fonctionnaire"
+      ],
+      "r": 0,
+      "x": "Seule la contraposée d'une implication est automatiquement vraie : si être fonctionnaire implique être assermenté, alors ne pas être assermenté implique ne pas être fonctionnaire. Piège : la proposition D est la réciproque, qui n’est jamais garantie. La proposition B est plausible dans les faits mais ne découle pas logiquement de l’énoncé."
+    },
+    {
+      "q": "Dans une classe de 40 élèves, 25 étudient l'anglais, 18 l'espagnol et 8 les deux langues. Combien n'étudient aucune de ces deux langues ?",
+      "o": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "r": 1,
+      "x": "Le nombre d'élèves étudiant au moins une langue vaut 25 + 18 − 8 = 35, car les 8 bilingues sont comptés deux fois. Il reste donc 40 − 35 = 5 élèves. Piège : additionner 25 + 18 = 43 sans retrancher l'intersection donne un total supérieur à l'effectif de la classe, incohérence qui devrait alerter immédiatement."
+    },
+    {
+      "q": "Sur 100 candidats, 60 réussissent l'écrit, 45 l'oral et 30 les deux épreuves. Combien échouent aux deux ?",
+      "o": [
+        "25",
+        "30",
+        "15",
+        "20"
+      ],
+      "r": 0,
+      "x": "Les candidats ayant réussi au moins une épreuve sont 60 + 45 − 30 = 75. Les autres, soit 100 − 75 = 25, ont échoué aux deux. Piège : compter 100 − 60 − 45 = −5 révèle l'oubli de l'intersection. La formule d'inclusion- exclusion est incontournable dès que deux ensembles se recoupent."
+    },
+    {
+      "q": "Ichtyologie est à poissons ce qu'ornithologie est à :",
+      "o": [
+        "Insectes",
+        "Oiseaux",
+        "Reptiles",
+        "Plantes"
+      ],
+      "r": 1,
+      "x": "Le rapport est « nom de la science → objet qu'elle étudie ». L'ornithologie étudie les oiseaux, du grec ornis. Piège : l'entomologie étudie les insectes et l'herpétologie les reptiles ; les racines grecques peu familières font hésiter entre ces disciplines."
+    },
+    {
+      "q": "Cardiologue est à cœur ce que néphrologue est à :",
+      "o": [
+        "Foie",
+        "Rein",
+        "Poumon",
+        "Estomac"
+      ],
+      "r": 1,
+      "x": "Le rapport est « spécialiste → organe traité ». Le préfixe néphro- désigne le rein. Piège : le foie relève de l'hépatologie et le poumon de la pneumologie. Les préfixes médicaux d'origine grecque sont la clé de ce type de question."
+    },
+    {
+      "q": "Nadir est à zénith ce que crépuscule est à :",
+      "o": [
+        "Aube",
+        "Midi",
+        "Soir",
+        "Nuit"
+      ],
+      "r": 0,
+      "x": "Le rapport est celui de deux extrémités opposées d'un même cycle. Le nadir s'oppose au zénith comme le crépuscule, fin du jour, s'oppose à l'aube, son commencement. Piège : « nuit » et « soir » sont proches du crépuscule dans le temps mais n'en sont pas l'opposé symétrique."
+    },
+    {
+      "q": "Éphémère est à durable ce que superflu est à :",
+      "o": [
+        "Inutile",
+        "Indispensable",
+        "Abondant",
+        "Rare"
+      ],
+      "r": 1,
+      "x": "Le rapport est l'antonymie stricte. Ce qui est superflu peut être retranché ; son contraire est ce dont on ne peut se passer. Piège : « inutile » est un synonyme de superflu et non son contraire, ce qui en fait le distracteur le plus efficace de la série."
+    },
+    {
+      "q": "Sculpteur est à ciseau ce que chirurgien est à :",
+      "o": [
+        "Patient",
+        "Blouse",
+        "Hôpital",
+        "Scalpel"
+      ],
+      "r": 3,
+      "x": "Le rapport est « professionnel → instrument tranchant qu'il manie pour son travail ». Piège : « hôpital » reproduit le couple lieu d'exercice et « patient » le couple objet du travail ; seul le scalpel correspond à l'outil."
+    },
+    {
+      "q": "Bibliophile est à livres ce que mélomane est à :",
+      "o": [
+        "Peinture",
+        "Musique",
+        "Cinéma",
+        "Théâtre"
+      ],
+      "r": 1,
+      "x": "Le rapport est « amateur passionné → objet de sa passion ». La racine mélo- renvoie au chant et à la musique. Piège : la sonorité de « mélomane » n'évoque rien de musical pour qui ignore la racine grecque, d'où des choix au hasard parmi les arts proposés."
+    },
+    {
+      "q": "Prologue est à épilogue ce que prémices est à :",
+      "o": [
+        "Début",
+        "Aboutissement",
+        "Milieu",
+        "Cause"
+      ],
+      "r": 1,
+      "x": "Le rapport oppose le commencement à la fin. Les prémices désignent les premiers signes ; leur opposé est l'aboutissement final. Piège : « début » est un synonyme de prémices, non son contraire. La consigne exige de respecter le rapport d'opposition établi par le premier couple."
+    },
+    {
+      "q": "Quel est l'intrus ?",
+      "o": [
+        "Hexagone",
+        "Octogone",
+        "Pentagone",
+        "Polygone"
+      ],
+      "r": 3,
+      "x": "Hexagone, octogone et pentagone désignent des figures à nombre de côtés déterminé. « Polygone » est le terme générique qui les englobe toutes. Piège : on cherche instinctivement un intrus par le nombre de côtés, alors que le critère est le rapport entre catégorie générale et cas particuliers."
+    },
+    {
+      "q": "Quel est l'intrus ?",
+      "o": [
+        "Anémomètre",
+        "Sismographe",
+        "Baromètre",
+        "Télescope"
+      ],
+      "r": 3,
+      "x": "Les trois premiers mesurent ou enregistrent une grandeur physique : vitesse du vent, secousses sismiques, pression atmosphérique. Le télescope sert à observer, non à mesurer. Piège : le télescope est un instrument scientifique reconnu, ce qui masque la distinction entre mesure et observation."
+    },
+    {
+      "q": "Quel est l'intrus ?",
+      "o": [
+        "Isocèle",
+        "Scalène",
+        "Équilatéral",
+        "Losange"
+      ],
+      "r": 3,
+      "x": "Isocèle, scalène et équilatéral qualifient des triangles selon leurs côtés. Le losange est un quadrilatère. Piège : le losange possède quatre côtés égaux et évoque donc la régularité du triangle équilatéral, ce qui brouille le critère du nombre de côtés."
+    },
+    {
+      "q": "Quel est l'intrus ?",
+      "o": [
+        "1 001",
+        "1 331",
+        "1 728",
+        "2 197"
+      ],
+      "r": 0,
+      "x": "1 331 = 11³, 1 728 = 12³ et 2 197 = 13³ sont des cubes parfaits. 1 001 n'en est pas un, car il vaut 7 × 11 × 13. Piège : 1 001 est un nombre très régulier d'apparence, ce qui le fait passer pour le plus « mathématique » de la liste alors qu'il est le seul intrus."
+    },
+    {
+      "q": "Quel est l'intrus ?",
+      "o": [
+        "Mercure",
+        "Uranium",
+        "Plomb",
+        "Oxygène"
+      ],
+      "r": 3,
+      "x": "Mercure, uranium et plomb sont des métaux ; l'oxygène est un gaz non métallique. Piège : le mercure est liquide à température ambiante, ce qui le fait souvent désigner comme l'intrus alors qu'il reste un métal."
+    },
+    {
+      "q": "Si le 1ᵉʳ janvier est un mercredi, quel jour tombe le 1ᵉʳ février d'une année non bissextile ?",
+      "o": [
+        "Jeudi",
+        "Vendredi",
+        "Samedi",
+        "Dimanche"
+      ],
+      "r": 2,
+      "x": "Janvier compte 31 jours. Or 31 = 4 × 7 + 3, donc le 1ᵉʳ février est décalé de 3 jours par rapport au 1ᵉʳ janvier. Mercredi + 3 = samedi. Piège : compter 31 jours à la main est long et source d'erreur ; seul le reste de la division par 7 importe pour ce type de calcul calendaire."
+    },
+    {
+      "q": "Un tournoi à élimination directe réunit 64 participants. Combien de matchs faut-il jouer pour désigner le vainqueur ?",
+      "o": [
+        "32",
+        "63",
+        "64",
+        "127"
+      ],
+      "r": 1,
+      "x": "Chaque match élimine exactement un joueur. Pour qu'il ne reste qu'un vainqueur, il faut éliminer 63 participants, donc jouer 63 matchs. Piège : additionner les tours (32 + 16 + 8 + 4 + 2 + 1 = 63) donne le bon résultat mais prend du temps ; répondre 64 par assimilation au nombre de joueurs est l'erreur classique."
+    },
+    {
+      "q": "Six personnes se saluent, chacune serrant la main de toutes les autres une seule fois. Combien de poignées de main au total ?",
+      "o": [
+        "18",
+        "30",
+        "12",
+        "15"
+      ],
+      "r": 3,
+      "x": "Chaque poignée associe deux personnes distinctes : il s'agit du nombre de paires possibles, soit (6 × 5) ÷ 2 = 15. Piège : calculer 6 × 5 = 30 compte chaque poignée deux fois, une fois pour chaque participant. La division par 2 est indispensable."
+    },
+    {
+      "q": "Le nombre 213 écrit en base 5 vaut, en base 10 :",
+      "o": [
+        "38",
+        "48",
+        "58",
+        "68"
+      ],
+      "r": 2,
+      "x": "Chaque chiffre a un poids en puissance de 5, en partant de la droite avec 5⁰. Calcul : 2×5² + 1×5¹ + 3×5⁰ = 50 + 5 + 3 = 58. Piège : multiplier le nombre entier par 5 ou additionner les chiffres. Le poids augmente de droite à gauche, jamais l'inverse."
+    },
+    {
+      "q": "Une urne contient 4 boules rouges et 6 noires. On tire 2 boules sans remise. Quelle est la probabilité d'obtenir deux rouges ?",
+      "o": [
+        "2/15",
+        "4/25",
+        "1/6",
+        "3/20"
+      ],
+      "r": 0,
+      "x": "Sans remise, l'urne change entre les deux tirages. Premier tirage : 4/10. Second tirage, il reste 3 rouges sur 9 boules : 3/9. On multiplie : (4/10) × (3/9) = 12/90 = 2/15. Piège : réutiliser 4/10 deux fois donne 4/25, résultat valable seulement avec remise. La mention « sans remise » est le mot-clé de l'énoncé."
+    },
+    {
+      "q": "Un ouvrier A réalise un travail seul en 10 jours. Avec B, ils le font en 6 jours. En combien de jours B le ferait-il seul ?",
+      "o": [
+        "16 jours",
+        "20 jours",
+        "12 jours",
+        "15 jours"
+      ],
+      "r": 3,
+      "x": "Ce sont les débits qui s'additionnent, pas les durées. A fait 1/10 par jour, les deux ensemble 1/6. Donc B fait 1/6 − 1/10 = 5/30 − 3/30 = 2/30 = 1/15, soit 15 jours. Piège : soustraire les durées (10 − 6 = 4) est absurde à la réflexion, car B serait alors plus rapide que les deux réunis."
+    },
+    {
+      "q": "Un candidat a 12 de moyenne sur 4 matières. Après une 5ᵉ note, sa moyenne passe à 13. Quelle note a-t-il obtenue ?",
+      "o": [
+        "15",
+        "16",
+        "17",
+        "18"
+      ],
+      "r": 2,
+      "x": "On raisonne sur les totaux de points, non sur les moyennes. Total initial : 12 × 4 = 48. Total requis : 13 × 5 = 65. La note manquante vaut 65 − 48 = 17. Piège : raisonner « la moyenne monte de 1 point, donc la note vaut 13 + 5 » conduit à 18. Le réflexe à installer : convertir toute moyenne en total avant de comparer."
+    },
+    {
+      "q": "Combien de nombres de 3 chiffres tous distincts peut-on former avec 1, 2, 3, 4, 5 ?",
+      "o": [
+        "60",
+        "120",
+        "125",
+        "10"
+      ],
+      "r": 0,
+      "x": "L'ordre compte et les chiffres ne se répètent pas : 5 choix pour les centaines, 4 pour les dizaines, 3 pour les unités, soit 5 × 4 × 3 = 60. Piège : 125 correspond à 5³, donc au cas où la répétition serait autorisée. Et 10 correspond aux groupes de 3 chiffres sans tenir compte de l'ordre."
+    },
+    {
+      "q": "Sur une grille de 3 cases sur 3, combien existe-t-il de chemins les plus courts d'un coin au coin opposé, en n'avançant que vers la droite ou vers le haut ?",
+      "o": [
+        "12",
+        "18",
+        "20",
+        "24"
+      ],
+      "r": 2,
+      "x": "Tout chemin le plus court comporte exactement 3 pas à droite et 3 pas vers le haut, soit 6 pas. Il suffit de choisir lesquels des 6 pas iront à droite : C(6,3) = (6×5×4)÷(3×2×1) = 20. Piège : multiplier 3 × 3 = 9, ou énumérer à la main et s'arrêter à 12 après avoir oublié des trajets. L'énumération manuelle est presque toujours incomplète ici."
+    },
+    {
+      "q": "Quel angle forment les aiguilles d'une montre à 7 h 20 ?",
+      "o": [
+        "100°",
+        "110°",
+        "120°",
+        "80°"
+      ],
+      "r": 0,
+      "x": "La grande aiguille avance de 6° par minute, la petite de 30° par heure plus 0,5° par minute. Minutes : 20 × 6 = 120°. Heures : 7 × 30 + 20 × 0,5 = 220°. Écart = 220 − 120 = 100°. Piège : figer la petite aiguille sur le 7 fait perdre les 10° d'avance et conduit à 110°."
+    },
+    {
+      "q": "Le nombre 1101 écrit en base 2 vaut, en base 10 :",
+      "o": [
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "r": 2,
+      "x": "Les poids sont les puissances de 2 en partant de la droite : 1×8 + 1×4 + 0×2 + 1×1. Le total vaut 8 + 4 + 0 + 1 = 13. Piège : lire le nombre de gauche à droite en attribuant le poids 1 au premier chiffre inverse complètement le calcul et donne 11."
+    },
+    {
+      "q": "Comment s'écrit 47 en base 2 ?",
+      "o": [
+        "101111",
+        "110111",
+        "101101",
+        "111011"
+      ],
+      "r": 0,
+      "x": "On divise successivement 47 par 2, puis chaque quotient obtenu par 2 jusqu'à obtenir un quotient nul, en notant les restes à chaque étape. En lisant les restes de bas en haut, on obtient 101111, donc 47 = 101111. Piège : les distracteurs ne diffèrent que d'un chiffre. Le contrôle rapide consiste à recalculer la somme : 110111 vaut 55, pas 47."
+    },
+    {
+      "q": "Quel est le reste de la division de 7¹⁰⁰ par 5 ?",
+      "o": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "r": 0,
+      "x": "7 laisse le reste 2 modulo 5, donc on étudie 2¹⁰⁰. Les restes de 2ⁿ modulo 5 se répètent selon le cycle 2, 4, 3, 1 de période 4. Comme 100 est un multiple de 4, le reste vaut 1. Piège : tenter de calculer la puissance est impossible sans calculatrice. La recherche du cycle des restes est la seule méthode praticable en temps limité."
+    },
+    {
+      "q": "Quel est le chiffre des unités de 3²⁵ ?",
+      "o": [
+        "1",
+        "3",
+        "7",
+        "9"
+      ],
+      "r": 1,
+      "x": "Les unités de 3ⁿ suivent le cycle 3, 9, 7, 1, de période 4. On divise 25 par 4 : il reste 1, donc on prend le premier terme du cycle, soit 3. Piège : prendre le reste 1 et répondre « 1 » confond le rang dans le cycle avec la valeur du cycle. Le reste 1 désigne la première position, occupée par le chiffre 3."
+    },
+    {
+      "q": "Par combien de zéros se termine le nombre 20 ! ?",
+      "o": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "r": 2,
+      "x": "Chaque zéro final provient d'un facteur 10, c'est-à-dire d'une paire 2 × 5. Les facteurs 5 sont les plus rares : ils viennent de 5, 10, 15 et 20, soit 4 au total. Piège : compter les multiples de 10 seulement (10 et 20) donne 2. Il faut recenser les facteurs 5, plus nombreux que les multiples de 10."
+    },
+    {
+      "q": "Quelle est la somme des 50 premiers nombres impairs ?",
+      "o": [
+        "1 250",
+        "2 450",
+        "2 500",
+        "5 050"
+      ],
+      "r": 2,
+      "x": "La somme des n premiers impairs vaut toujours n². Ici n = 50, donc la somme fait 50² = 2 500. Piège : 5 050 correspond à la somme des 100 premiers entiers, résultat très connu qui s'impose à tort. La propriété du carré est spécifique aux impairs."
+    },
+    {
+      "q": "Combien de diviseurs positifs possède le nombre 360 ?",
+      "o": [
+        "18",
+        "20",
+        "24",
+        "30"
+      ],
+      "r": 2,
+      "x": "On décompose : 360 = 2³ × 3² × 5. Le nombre de diviseurs s'obtient en ajoutant 1 à chaque exposant puis en multipliant : (3+1) × (2+1) × (1+1) = 4 × 3 × 2 = 24. Piège : lister les diviseurs à la main fait presque toujours en oublier. La formule sur les exposants est indispensable dès que le nombre dépasse la centaine."
+    },
+    {
+      "q": "Quel est le PPCM de 12, 18 et 30 ?",
+      "o": [
+        "90",
+        "120",
+        "180",
+        "360"
+      ],
+      "r": 2,
+      "x": "On décompose : 12 = 2²×3, 18 = 2×3², 30 = 2×3×5. Le PPCM prend chaque facteur premier à son exposant maximal : 2² × 3² × 5 = 180. Piège : multiplier les trois nombres donne 6 480, très au-delà. Et 90 est un multiple commun de 18 et 30 mais pas de 12."
+    },
+    {
+      "q": "Un nombre divisé par 7 laisse un reste de 3. Quel est le reste de son double divisé par 7 ?",
+      "o": [
+        "0",
+        "3",
+        "5",
+        "6"
+      ],
+      "r": 3,
+      "x": "Si le nombre s'écrit 7k + 3, son double vaut 14k + 6. Le terme 14k est divisible par 7, donc le reste est 6. Piège : conserver le reste initial (3) ou le doubler puis retrancher 7 sans raison donne des valeurs erronées. Ici 6 est inférieur à 7, donc aucune réduction n'est nécessaire."
+    },
+    {
+      "q": "On lance deux dés à six faces. Quelle est la probabilité que la somme fasse 7 ?",
+      "o": [
+        "1/6",
+        "1/4",
+        "1/12",
+        "1/9"
+      ],
+      "r": 0,
+      "x": "Il existe 36 résultats possibles. Les couples donnant 7 sont (1,6), (2,5), (3,4), (4,3), (5,2) et (6,1), soit 6 cas. La probabilité vaut 6/36 = 1/6. Piège : ne compter que 3 couples en oubliant que (2,5) et (5,2) sont distincts divise le résultat par deux et donne 1/12."
+    },
+    {
+      "q": "On lance 3 pièces. Quelle est la probabilité d'obtenir au moins un pile ?",
+      "o": [
+        "1/2",
+        "3/4",
+        "7/8",
+        "1/8"
+      ],
+      "r": 2,
+      "x": "Il est plus rapide de calculer l'événement contraire : n'obtenir aucun pile signifie trois faces, soit 1 cas sur 8. La probabilité cherchée vaut donc 1 − 1/8 = 7/8. Piège : additionner les probabilités d'un pile, deux piles et trois piles est long et sujet aux oublis. Le passage par l'événement contraire est le réflexe à acquérir."
+    },
+    {
+      "q": "De combien de façons peut-on asseoir 5 personnes sur 5 chaises alignées ?",
+      "o": [
+        "25",
+        "60",
+        "120",
+        "720"
+      ],
+      "r": 2,
+      "x": "Il s'agit du nombre de permutations de 5 éléments, soit 5 ! = 5 × 4 × 3 × 2 × 1 = 120. Piège : 720 correspond à 6 !, obtenu en ajoutant un facteur de trop. Et 25 correspond à 5², c'est-à-dire au cas où chaque personne pourrait occuper n'importe quelle chaise librement."
+    },
+    {
+      "q": "Combien de comités de 3 personnes peut-on former parmi 7 candidats ?",
+      "o": [
+        "21",
+        "35",
+        "42",
+        "210"
+      ],
+      "r": 1,
+      "x": "L'ordre ne compte pas dans un comité : c'est une combinaison. C(7,3) = (7×6×5) ÷ (3×2×1) = 210 ÷ 6 = 35. Piège : 210 correspond à 7 × 6 × 5, c'est-à-dire au cas où l'ordre des membres compterait. Il faut diviser par 3 ! pour éliminer les répétitions."
+    },
+    {
+      "q": "Combien de codes à 4 chiffres peut-on former avec les chiffres de 0 à 9, la répétition étant autorisée ?",
+      "o": [
+        "5 040",
+        "6 561",
+        "10 000",
+        "40"
+      ],
+      "r": 2,
+      "x": "Chaque position offre 10 possibilités indépendantes des autres, donc 10 × 10 × 10 × 10 = 10 000 codes, de 0000 à 9999. Piège : 5 040 correspond à 10 × 9 × 8 × 7, c'est-à-dire au cas sans répétition. L'autorisation de répéter change entièrement le calcul."
+    },
+    {
+      "q": "Combien d'anagrammes peut-on former avec les lettres du mot « BARA » ?",
+      "o": [
+        "12",
+        "24",
+        "4",
+        "6"
+      ],
+      "r": 0,
+      "x": "Le mot compte 4 lettres, dont deux A identiques. On divise le nombre de permutations par celui des lettres répétées : 4 ! ÷ 2 ! = 24 ÷ 2 = 12. Piège : répondre 24 revient à traiter les deux A comme distincts, ce qui compte chaque anagramme deux fois."
+    },
+    {
+      "q": "Combien d'anagrammes peut-on former avec les lettres du mot « CONCOURS » ?",
+      "o": [
+        "10 080",
+        "20 160",
+        "40 320",
+        "5 040"
+      ],
+      "r": 0,
+      "x": "Le mot compte 8 lettres, avec deux C et deux O. Le calcul donne 8 ! ÷ (2 ! × 2 !) = 40 320 ÷ 4 = 10 080. Piège : 40 320 correspond à 8 ! sans correction. Il faut repérer toutes les lettres répétées, y compris celles qui ne se suivent pas dans le mot."
+    },
+    {
+      "q": "Un capital placé à intérêts composés de 10 % pendant 2 ans atteint 24 200 F. Quel était le capital initial ?",
+      "o": [
+        "18 000 F",
+        "20 000 F",
+        "20 200 F",
+        "22 000 F"
+      ],
+      "r": 1,
+      "x": "En deux ans, le capital est multiplié par 1,10 × 1,10 = 1,21. Le capital initial vaut donc 24 200 ÷ 1,21 = 20 000 F. Piège : retirer 20 % du montant final (24 200 × 0,80 = 19 360) ne fonctionne pas, car les intérêts composés ne s'additionnent pas linéairement."
+    },
+    {
+      "q": "Un article subit deux hausses successives de 10 %. Quelle est la hausse globale ?",
+      "o": [
+        "20 %",
+        "21 %",
+        "22 %",
+        "25 %"
+      ],
+      "r": 1,
+      "x": "Le coefficient global vaut 1,10 × 1,10 = 1,21, soit une hausse de 21 %. Piège : additionner les deux taux donne 20 % et ignore la seconde hausse appliquée à une base déjà augmentée. L'écart d'un point est la marque de la composition."
+    },
+    {
+      "q": "Un article baisse de 10 %, puis remonte de 10 %. Quelle est la variation nette ?",
+      "o": [
+        "−2 %",
+        "+1 %",
+        "0 %",
+        "−1 %"
+      ],
+      "r": 3,
+      "x": "Le coefficient global vaut 0,90 × 1,10 = 0,99, soit une baisse nette de 1 %. Piège : croire que les deux mouvements s'annulent est l'erreur type. La hausse s'applique à un prix déjà diminué, donc elle rapporte moins que la baisse n'avait coûté."
+    },
+    {
+      "q": "Un véhicule parcourt la première moitié d'un trajet à 40 km/h et la seconde à 60 km/h. Quelle est sa vitesse moyenne sur l'ensemble ?",
+      "o": [
+        "45 km/h",
+        "48 km/h",
+        "50 km/h",
+        "52 km/h"
+      ],
+      "r": 1,
+      "x": "À distances égales, la vitesse moyenne est la moyenne harmonique : (2 × 40 × 60) ÷ (40 + 60) = 4 800 ÷ 100 = 48 km/h. Piège : la moyenne arithmétique (50 km/h) est fausse ici, car le véhicule passe plus de temps sur la portion lente que sur la portion rapide."
+    },
+    {
+      "q": "Un mobile roule 3 h à 50 km/h puis 2 h à 75 km/h. Quelle est sa vitesse moyenne ?",
+      "o": [
+        "62,5 km/h",
+        "65 km/h",
+        "55 km/h",
+        "60 km/h"
+      ],
+      "r": 3,
+      "x": "Distance totale : 3 × 50 + 2 × 75 = 150 + 150 = 300 km, parcourus en 5 h. La vitesse moyenne vaut 300 ÷ 5 = 60 km/h. Piège : la moyenne arithmétique des deux vitesses (62,5 km/h) ne vaut que si les durées sont égales, ce qui n'est pas le cas ici. Il faut toujours repasser par la distance totale."
+    },
+    {
+      "q": "Un train de 200 m roule à 72 km/h. Combien de temps met-il à franchir entièrement un tunnel de 400 m ?",
+      "o": [
+        "20 s",
+        "25 s",
+        "30 s",
+        "35 s"
+      ],
+      "r": 2,
+      "x": "La vitesse vaut 72 ÷ 3,6 = 20 m/s. Le train doit parcourir la longueur du tunnel plus sa propre longueur, soit 600 m. Le temps vaut 600 ÷ 20 = 30 s. Piège : ne compter que les 400 m du tunnel donne 20 s. Tant que la queue du train n'est pas sortie, la traversée n'est pas achevée."
+    },
+    {
+      "q": "Un bassin de 3 000 litres est alimenté par un robinet débitant 25 L/min, mais il fuit à raison de 5 L/min. En combien de temps sera-t-il plein ?",
+      "o": [
+        "150 min",
+        "180 min",
+        "200 min",
+        "120 min"
+      ],
+      "r": 0,
+      "x": "Le débit net vaut 25 − 5 = 20 L/min. Le remplissage prend donc 3 000 ÷ 20 = 150 minutes. Piège : ignorer la fuite donne 3 000 ÷ 25 = 120 min. Toute question mentionnant une perte impose de raisonner sur le débit net, jamais sur le débit d'entrée seul."
+    },
+    {
+      "q": "On mélange 6 litres d'une solution à 30 % avec 4 litres d'une solution à 55 %. Quelle est la concentration du mélange ?",
+      "o": [
+        "42,5 %",
+        "45 %",
+        "35 %",
+        "40 %"
+      ],
+      "r": 3,
+      "x": "Quantité de produit pur : 6 × 0,30 = 1,8 L et 4 × 0,55 = 2,2 L, soit 4 L au total pour 10 L de mélange. La concentration vaut 4 ÷ 10 = 40 %. Piège : faire la moyenne des deux taux (42,5 %) ignore que les volumes sont inégaux. Il faut pondérer par les quantités, toujours en repassant par le produit pur."
+    },
+    {
+      "q": "Un alliage de 250 g contient de l'or et de l'argent dans le rapport 3 : 2. Quelle est la masse d'or ?",
+      "o": [
+        "100 g",
+        "125 g",
+        "150 g",
+        "175 g"
+      ],
+      "r": 2,
+      "x": "Le total représente 3 + 2 = 5 parts, donc une part vaut 250 ÷ 5 = 50 g. L'or en représente 3, soit 3 × 50 = 150 g. Piège : partager en deux moitiés donne 125 g, réponse cochée dès que le rapport est mal lu. La somme des termes du rapport est toujours le point de départ."
+    },
+    {
+      "q": "Un père a aujourd'hui 3 fois l'âge de son fils. Il y a 5 ans, il en avait 4 fois. Quel est l'âge actuel du fils ?",
+      "o": [
+        "18 ans",
+        "20 ans",
+        "12 ans",
+        "15 ans"
+      ],
+      "r": 3,
+      "x": "Soit F l'âge du fils : le père a 3F. Il y a 5 ans : 3F − 5 = 4(F − 5), soit 3F − 5 = 4F − 20. On obtient F = 15. Piège : oublier de retrancher 5 à l'âge du père conduit à 3F = 4(F − 5) et donne F = 20. Les deux personnes vieillissent, donc les deux âges doivent être décalés."
+    },
+    {
+      "q": "Deux nombres ont pour somme 30 et pour produit 221. Quel est le plus grand ?",
+      "o": [
+        "15",
+        "17",
+        "19",
+        "21"
+      ],
+      "r": 1,
+      "x": "Les deux nombres sont solutions de x² − 30x + 221 = 0. Le discriminant vaut 900 − 884 = 16, donc les racines sont (30 + 4)/2 = 17 et (30 − 4)/2 = 13. Piège : chercher par tâtonnement fait perdre du temps. On peut aussi vérifier directement : 17 + 13 = 30 et 17 × 13 = 221."
+    },
+    {
+      "q": "Si x + 1/x = 5, quelle est la valeur de x² + 1/x² ?",
+      "o": [
+        "25",
+        "27",
+        "21",
+        "23"
+      ],
+      "r": 3,
+      "x": "On élève au carré : (x + 1/x)² = x² + 2 + 1/x² = 25. En retranchant le terme 2, on obtient x² + 1/x² = 23. Piège : répondre 25 revient à oublier le double produit issu de l'identité remarquable. Ce terme vaut ici exactement 2, car x × (1/x) = 1."
+    },
+    {
+      "q": "Si a = 2 et b = 3, quelle est la valeur de (a + b)³ − a³ − b³ ?",
+      "o": [
+        "60",
+        "80",
+        "90",
+        "100"
+      ],
+      "r": 2,
+      "x": "On calcule 5³ = 125, puis on retranche 2³ = 8 et 3³ = 27 : 125 − 35 = 90. Piège : croire que (a + b)³ égale a³ + b³ donnerait 0. Le développement contient des termes croisés qui représentent ici la totalité du résultat."
+    },
+    {
+      "q": "Résolvez : 2^(x+1) = 32.",
+      "o": [
+        "3",
+        "4",
+        "5",
+        "16"
+      ],
+      "r": 1,
+      "x": "On écrit 32 sous forme de puissance de 2 : 32 = 2⁵. Les bases étant identiques, on égalise les exposants : x + 1 = 5, donc x = 4. Piège : répondre 5 revient à donner l'exposant sans retrancher le 1. Et 16 correspond à 32 ÷ 2, opération qui n'a pas de sens ici."
+    },
+    {
+      "q": "Si 3x + 2y = 16 et x − y = 2, quelle est la valeur de x ?",
+      "o": [
+        "4",
+        "5",
+        "6",
+        "3"
+      ],
+      "r": 0,
+      "x": "De la seconde équation, x = y + 2. En substituant : 3(y + 2) + 2y = 16, soit 5y + 6 = 16, donc y = 2 et x = 4. Piège : additionner les deux équations sans les aligner correctement mène à des valeurs fausses. La substitution est la méthode la plus sûre sous pression."
+    },
+    {
+      "q": "Une suite arithmétique a pour premier terme 5 et pour raison 3. Quel est son 20ᵉ terme ?",
+      "o": [
+        "59",
+        "62",
+        "65",
+        "68"
+      ],
+      "r": 1,
+      "x": "Le terme de rang n vaut premier terme + (n − 1) × raison, soit 5 + 19 × 3 = 5 + 57 = 62. Piège : multiplier par 20 au lieu de 19 donne 65. Le premier terme ne subit aucune progression, d'où le décalage d'un rang dans la formule."
+    },
+    {
+      "q": "Quelle est la somme des 20 premiers termes de cette même suite (premier terme 5, raison 3) ?",
+      "o": [
+        "620",
+        "650",
+        "670",
+        "700"
+      ],
+      "r": 2,
+      "x": "La somme vaut n × (premier + dernier) ÷ 2. Le 20ᵉ terme étant 62, on obtient 20 × (5 + 62) ÷ 2 = 10 × 67 = 670. Piège : multiplier le nombre de termes par la moyenne des deux valeurs extrêmes est correct, mais oublier de diviser par 2 double le résultat."
+    },
+    {
+      "q": "Une suite géométrique a pour premier terme 2 et pour raison 3. Quel est son 6ᵉ terme ?",
+      "o": [
+        "162",
+        "243",
+        "486",
+        "729"
+      ],
+      "r": 2,
+      "x": "Le terme de rang n vaut 2 × 3^(n−1). Pour n = 6 : 2 × 3⁵ = 2 × 243 = 486. Piège : répondre 243 revient à oublier le premier terme et à ne donner que la puissance. Et 729 correspond à 3⁶, c'est-à-dire à un décalage d'un rang dans l'exposant."
+    },
+    {
+      "q": "Quelle est l'aire d'un triangle de côtés 13, 14 et 15 cm ?",
+      "o": [
+        "84 cm²",
+        "90 cm²",
+        "91 cm²",
+        "78 cm²"
+      ],
+      "r": 0,
+      "x": "On applique la formule de Héron. Le demi-périmètre vaut (13+14+15)/2 = 21, puis l'aire égale la racine de 21 × 8 × 7 × 6 = 7 056, soit 84 cm². Piège : appliquer base × hauteur ÷ 2 avec 14 et 15 donne 105, mais 15 n'est pas la hauteur. Sans angle droit, seule la formule de Héron s'applique."
+    },
+    {
+      "q": "Un cercle est inscrit dans un carré de côté 10 cm. Quelle est l'aire de la zone située entre le carré et le cercle (π ≈ 3,14) ?",
+      "o": [
+        "15 cm²",
+        "21,5 cm²",
+        "25 cm²",
+        "28,5 cm²"
+      ],
+      "r": 1,
+      "x": "L'aire du carré vaut 100 cm². Le cercle inscrit a pour rayon 5 cm, donc son aire vaut 3,14 × 25 = 78,5 cm². La différence est 100 − 78,5 = 21,5 cm². Piège : prendre 10 comme rayon au lieu du diamètre donne une aire de cercle supérieure à celle du carré, incohérence qui doit alerter immédiatement."
+    },
+    {
+      "q": "Quelle est la longueur d'un arc de 60° dans un cercle de rayon 6 cm (π ≈ 3,14) ?",
+      "o": [
+        "12,56 cm",
+        "18,84 cm",
+        "3,14 cm",
+        "6,28 cm"
+      ],
+      "r": 3,
+      "x": "La circonférence complète vaut 2 × 3,14 × 6 = 37,68 cm. Un arc de 60° en représente 60/360, soit un sixième : 37,68 ÷ 6 = 6,28 cm. Piège : diviser par 60 au lieu de prendre la fraction 60/360 donne une valeur six fois trop petite. L'angle se rapporte toujours au tour complet de 360°."
+    },
+    {
+      "q": "Combien de nombres entre 1 et 200 sont divisibles par 3 ou par 5 ?",
+      "o": [
+        "80",
+        "86",
+        "93",
+        "106"
+      ],
+      "r": 2,
+      "x": "Multiples de 3 : 66. Multiples de 5 : 40. Multiples de 15, comptés deux fois : 13. Le total vaut 66 + 40 − 13 = 93. Piège : additionner 66 + 40 = 106 sans retrancher l'intersection est l'erreur la plus fréquente. Le mot « ou » impose systématiquement la formule d'inclusion-exclusion."
+    },
+    {
+      "q": "La moyenne de 5 nombres est 18. On retire un nombre et la moyenne des 4 restants devient 20. Quel nombre a été retiré ?",
+      "o": [
+        "12",
+        "14",
+        "8",
+        "10"
+      ],
+      "r": 3,
+      "x": "Total initial : 18 × 5 = 90. Total restant : 20 × 4 = 80. Le nombre retiré vaut 90 − 80 = 10. Piège : raisonner sur l'écart des moyennes (20 − 18 = 2) sans passer par les totaux conduit à des réponses arbitraires. Retirer une valeur basse fait mécaniquement monter la moyenne."
+    },
+    {
+      "q": "Un commerçant vend un article 6 000 F et enregistre une perte de 25 % sur son prix d'achat. Quel était ce prix d'achat ?",
+      "o": [
+        "7 200 F",
+        "7 500 F",
+        "8 000 F",
+        "8 400 F"
+      ],
+      "r": 2,
+      "x": "Vendre avec 25 % de perte signifie encaisser 75 % du prix d'achat. Donc le prix d'achat vaut 6 000 ÷ 0,75 = 8 000 F. Piège : ajouter 25 % au prix de vente (6 000 × 1,25 = 7 500) est faux, car le pourcentage se rapporte au prix d'achat, non au prix de vente."
+    },
+    {
+      "q": "Sur une carte à l'échelle 1/50 000, que représentent 4 cm ?",
+      "o": [
+        "2 km",
+        "20 km",
+        "500 m",
+        "200 m"
+      ],
+      "r": 0,
+      "x": "1 cm sur la carte représente 50 000 cm dans la réalité, soit 500 m. Donc 4 cm représentent 4 × 500 = 2 000 m, c'est-à-dire 2 km. Piège : oublier la conversion des centimètres en mètres décale le résultat d'un facteur 100 et conduit à 200 m ou 20 km selon le sens de l'erreur."
+    },
+    {
+      "q": "12 ouvriers réalisent un chantier en 15 jours. Combien d'ouvriers faudrait-il pour l'achever en 9 jours ?",
+      "o": [
+        "16",
+        "18",
+        "20",
+        "24"
+      ],
+      "r": 2,
+      "x": "Le travail total représente 12 × 15 = 180 journées-ouvrier. Pour l'accomplir en 9 jours, il faut 180 ÷ 9 = 20 ouvriers. Piège : appliquer une proportionnalité directe (12 × 9 ÷ 15 = 7,2) inverse la relation. Moins de jours exige plus d'ouvriers, jamais moins."
+    },
+    {
+      "q": "Un nombre de deux chiffres a pour somme de ses chiffres 9. En inversant ses chiffres, on obtient un nombre supérieur de 27. Quel est ce nombre ?",
+      "o": [
+        "27",
+        "36",
+        "45",
+        "54"
+      ],
+      "r": 1,
+      "x": "Si les chiffres sont a et b, alors a + b = 9 et (10b + a) − (10a + b) = 27, soit 9(b − a) = 27 donc b − a = 3. La résolution donne a = 3 et b = 6, soit le nombre 36. Piège : 45 vérifie bien la somme des chiffres mais l'inversion ne donne que 9 d'écart. Chaque condition doit être vérifiée séparément avant de valider."
+    },
+    {
+      "q": "Que signifie « obvier à » ?",
+      "o": [
+        "Contourner",
+        "Prévenir",
+        "Aggraver",
+        "Ignorer"
+      ],
+      "r": 1,
+      "x": "« Obvier à une difficulté » signifie prendre les mesures pour l'empêcher de survenir. Le verbe appartient au registre administratif et juridique. Piège : la proximité sonore avec « dévier » ou « obstruer » oriente vers l'idée de contournement, qui n'est pas le sens du terme."
+    },
+    {
+      "q": "Que signifie « atermoyer » ?",
+      "o": [
+        "Refuser catégoriquement",
+        "Accélérer",
+        "Décider fermement",
+        "Temporiser"
+      ],
+      "r": 3,
+      "x": "Atermoyer, c'est user de délais pour différer une décision ou un paiement. Le mot vient de « à terme », d'où l'idée de report. Piège : le préfixe « a- » est souvent lu comme une négation, ce qui fait chercher un sens d'action rapide ou de refus."
+    },
+    {
+      "q": "Que signifie « idoine » ?",
+      "o": [
+        "Approprié, qui convient parfaitement",
+        "Étrange",
+        "Ancien",
+        "Inutile"
+      ],
+      "r": 0,
+      "x": "Un candidat idoine est celui qui correspond exactement au profil recherché. Le terme est fréquent dans les textes administratifs. Piège : la rareté du mot et sa sonorité inhabituelle poussent à lui prêter un sens péjoratif ou vieilli, alors qu'il est parfaitement neutre."
+    },
+    {
+      "q": "Que signifie « velléitaire » ?",
+      "o": [
+        "Violent",
+        "Rapide",
+        "Déterminé",
+        "Indecis"
+      ],
+      "r": 3,
+      "x": "Une velléité est une intention faible, sans passage à l'acte. Le velléitaire projette beaucoup mais n'exécute pas. Piège : la racine « vel- » évoque la volonté, ce qui fait croire à un synonyme de « volontaire », soit exactement le contraire du sens réel."
+    },
+    {
+      "q": "Quel est l'antonyme de « obséquieux » ?",
+      "o": [
+        "Servile",
+        "Hautain",
+        "Poli",
+        "Aimable"
+      ],
+      "r": 1,
+      "x": "Obséquieux qualifie une politesse excessive et servile. Son contraire est l'attitude distante et méprisante de celui qui se croit supérieur. Piège : « servile » est un synonyme, coché par inattention à la consigne, et « poli » décrit une politesse normale, ni excessive ni méprisante."
+    },
+    {
+      "q": "Quel est l'antonyme de « endémique » ?",
+      "o": [
+        "Sporadique",
+        "Permanent",
+        "Fréquent",
+        "Local"
+      ],
+      "r": 0,
+      "x": "Une maladie endémique est présente en permanence dans une région donnée. Son contraire est ce qui survient de façon dispersée et irrégulière. Piège : « local » est un quasi-synonyme et « permanent » désigne un trait constitutif du mot lui-même : ces deux options renforcent le sens au lieu de l'inverser."
+    },
+    {
+      "q": "Quel est l'antonyme de « exacerber » ?",
+      "o": [
+        "Exciter",
+        "Renforcer",
+        "Aggraver",
+        "Apaiser"
+      ],
+      "r": 3,
+      "x": "Exacerber signifie porter à son paroxysme, rendre plus aigu. L'apaisement en est l'opposé exact. Piège : les trois distracteurs sont tous des synonymes du verbe. Ce type de question sanctionne la lecture trop rapide de la consigne « antonyme »."
+    },
+    {
+      "q": "Un discours « sibyllin » est :",
+      "o": [
+        "Clair",
+        "Obscur",
+        "Long",
+        "Drôle"
+      ],
+      "r": 1,
+      "x": "Le terme vient des sibylles, prêtresses antiques dont les oracles étaient énigmatiques. Un propos sibyllin demande un décryptage. Piège : la sonorité savante du mot laisse croire à une qualité positive de précision, alors qu'il désigne au contraire un manque de clarté."
+    },
+    {
+      "q": "Une décision « péremptoire » est :",
+      "o": [
+        "Provisoire",
+        "Sans réplique",
+        "Hésitante",
+        "Injuste"
+      ],
+      "r": 1,
+      "x": "Le terme désigne ce qui tranche définitivement et n'admet aucune contestation. Il est courant dans le vocabulaire juridique. Piège : la proximité avec « périmé » ou « éphémère » oriente vers l'idée de provisoire, alors que le sens est exactement celui du définitif."
+    },
+    {
+      "q": "Un climat « délétère » est :",
+      "o": [
+        "Sain",
+        "néfaste",
+        "Humide",
+        "Neutre"
+      ],
+      "r": 1,
+      "x": "Le terme qualifie ce qui corrompt ou détruit, au sens physique comme au sens moral. On parle d'une ambiance délétère dans un service. Piège : la racine évoque vaguement la légèreté ou la délicatesse, alors que le mot désigne un caractère activement destructeur."
+    },
+    {
+      "q": "« Prolixe » qualifie une personne qui :",
+      "o": [
+        "Ment",
+        "Écoute attentivement",
+        "Parle peu",
+        "Parle ou écrit trop"
+      ],
+      "r": 3,
+      "x": "Un orateur prolixe se perd dans les détails et allonge inutilement son propos. Le mot s'oppose à « concis » et à « laconique ». Piège : le préfixe « pro- » est parfois lu comme une marque de qualité professionnelle, ce qui donne au terme une connotation positive qu'il n'a pas."
+    },
+    {
+      "q": "Un argument « spécieux » est :",
+      "o": [
+        "Original",
+        "Technique",
+        "Solide et vérifié",
+        "Trompeur"
+      ],
+      "r": 3,
+      "x": "Le terme vient du latin species, l'apparence. Un raisonnement spécieux paraît juste mais dissimule un vice logique. Piège : la proximité avec « spécial » ou « spécifique » fait lire le mot comme un compliment, alors qu'il constitue une critique sévère."
+    },
+    {
+      "q": "Complétez : « Le tribunal a rendu un jugement ___ . »",
+      "o": [
+        "exécuteur",
+        "exécutant",
+        "exécutif",
+        "exécutoire"
+      ],
+      "r": 3,
+      "x": "Un jugement exécutoire peut être mis à exécution immédiatement. « Exécutif » qualifie un pouvoir ou un organe, jamais une décision de justice. Piège : les quatre formes existent en français et se ressemblent fortement ; seul l'usage juridique consacré permet de trancher."
+    },
+    {
+      "q": "Complétez : « La victime a subi un préjudice ___ . »",
+      "o": [
+        "pécuniaire",
+        "pécuniel",
+        "pécunieux",
+        "pécunier"
+      ],
+      "r": 0,
+      "x": "« Pécuniaire » est la forme standard et usuelle pour qualifier ce qui concerne l'argent. Il ne varie pas de forme selon le genre du nom qu'il qualifie. « Pécunier » est une forme rare et ne doit pas être retenue ici."
+    },
+    {
+      "q": "Dans l'usage soutenu, que signifie l'adjectif « conséquent » ?",
+      "o": [
+        "Qui est logique, cohérent",
+        "Qui est important, considérable",
+        "Qui est fréquent",
+        "Qui est définitif"
+      ],
+      "r": 0,
+      "x": "« Conséquent » vient de « conséquence » : est conséquent celui dont les actes s'accordent avec ses paroles. Un raisonnement conséquent est un raisonnement cohérent. Piège : l'emploi au sens d'« important » est très répandu à l'oral et dans la presse. Les jurys de concours retiennent le sens strict et sanctionnent ce glissement."
+    },
+    {
+      "q": "Complétez : « Les mesures qu'il a ___ prendre ont tardé. »",
+      "o": [
+        "dû",
+        "dus",
+        "due",
+        "dues"
+      ],
+      "r": 0,
+      "x": "Le participe « dû » suivi d'un infinitif reste invariable, car le COD « les mesures » se rapporte à l'infinitif « prendre », non au verbe « devoir ». Piège : le COD féminin pluriel placé avant le verbe déclenche un réflexe d'accord, mais la présence de l'infinitif bloque cette règle."
+    },
+    {
+      "q": "Quelle phrase est correcte ?",
+      "o": [
+        "Je vous envoie ci-joint copie du dossier",
+        "Je vous envoie ci-jointe copie du dossier",
+        "Je vous envoie ci-joints copie du dossier",
+        "Je vous envoie ci-jointes copie du dossier"
+      ],
+      "r": 0,
+      "x": "Placé devant un nom sans déterminant, « ci-joint » reste invariable, comme un adverbe. Il ne s'accorde que lorsqu'il suit le nom ou qu'un déterminant précède celui-ci. Piège : la proximité immédiate du nom féminin « copie » déclenche un accord spontané, pourtant fautif dans cette construction précise."
+    },
+    {
+      "q": "Complétez : « Bien qu'il ___ compétent, il a échoué. »",
+      "o": [
+        "soit",
+        "était",
+        "sera",
+        "est"
+      ],
+      "r": 0,
+      "x": "La locution « bien que » exprime la concession et commande toujours le subjonctif. La forme correcte est donc « soit ». Piège : l'indicatif s'impose naturellement à l'oreille parce que la compétence du candidat est un fait avéré, mais c'est le mode grammatical qui prime, non la réalité du fait."
+    },
+    {
+      "q": "Complétez : « Après qu'il ___ terminé, il est parti. »",
+      "o": [
+        "aie",
+        "est",
+        "ait",
+        "a"
+      ],
+      "r": 3,
+      "x": "« Après que » introduit un fait accompli et se construit à l'indicatif, contrairement à « avant que » qui appelle le subjonctif. Piège : la symétrie apparente entre les deux locutions pousse à employer le subjonctif dans les deux cas, erreur extrêmement répandue."
+    },
+    {
+      "q": "Complétez : « Si j'avais su, je ___ . »",
+      "o": [
+        "serais venu",
+        "viendrai",
+        "serai venu",
+        "venais"
+      ],
+      "r": 0,
+      "x": "Après « si » suivi du plus-que-parfait, la proposition principale se met au conditionnel passé. La concordance correcte est « si j'avais su, je serais venu ». Piège : la forme « serai venu » diffère d'une seule lettre et relève du futur antérieur, temps incompatible avec l'hypothèse passée."
+    },
+    {
+      "q": "Laquelle de ces expressions est un pléonasme ?",
+      "o": [
+        "Monter en haut",
+        "Descendre l'escalier",
+        "Sortir de la salle",
+        "Avancer prudemment"
+      ],
+      "r": 0,
+      "x": "Le verbe « monter » contient déjà l'idée de direction vers le haut : le complément « en haut » n'ajoute rien et constitue une redondance. Piège : les trois autres expressions sont construites de façon similaire, mais leurs compléments apportent une information réelle : lequel, d'où, comment."
+    },
+    {
+      "q": "L'expression « voire même » est :",
+      "o": [
+        "Correcte en toute circonstance",
+        "Un barbarisme",
+        "Un anglicisme",
+        "Un pléonasme"
+      ],
+      "r": 3,
+      "x": "« Voire » contient déjà l'idée de renchérissement portée par « même ». Le doublon est donc redondant dans l'usage soutenu. Piège : l'expression est si courante à l'oral et dans les médias qu'elle ne choque plus, mais elle reste sanctionnée en épreuve écrite."
+    },
+    {
+      "q": "L'expression « au jour d'aujourd'hui » est :",
+      "o": [
+        "Correcte",
+        "Un pléonasme",
+        "Une tournure soutenue",
+        "Un terme juridique"
+      ],
+      "r": 1,
+      "x": "« Aujourd'hui » contient déjà « au jour de hui », hui signifiant ce jour. Ajouter « au jour de » crée une triple redondance. Piège : la longueur de l'expression lui donne une apparence de solennité, ce qui la fait employer à tort dans les discours officiels."
+    },
+    {
+      "q": "Que signifie le mot « acception » ?",
+      "o": [
+        "Accord donné",
+        "Sens",
+        "Refus",
+        "Exception"
+      ],
+      "r": 1,
+      "x": "On parle des différentes acceptions d'un terme, c'est-à-dire de ses sens attestés. Le mot est fréquent dans les définitions juridiques. Piège : l'homophonie quasi parfaite avec « acceptation » conduit à lui prêter le sens d'accord ou d'agrément, qui appartient à l'autre mot."
+    },
+    {
+      "q": "Que signifie proprement « achalandé » ?",
+      "o": [
+        "Bien situé",
+        "Bien décoré",
+        "Bien approvisionné en marchandises",
+        "Qui a beaucoup de clients"
+      ],
+      "r": 3,
+      "x": "Un chaland est un client. Un magasin achalandé est donc fréquenté, indépendamment de l'état de ses stocks. Piège : l'usage courant a glissé vers le sens d'approvisionnement, au point que ce sens figure aujourd'hui dans certains dictionnaires, mais les concours retiennent le sens strict."
+    },
+    {
+      "q": "Quel est le pluriel de « timbre-poste » ?",
+      "o": [
+        "Timbre-postes",
+        "Timbres-postaux",
+        "Timbres-postes",
+        "Timbres-poste"
+      ],
+      "r": 3,
+      "x": "Le mot signifie « timbre pour la poste ». Seul le premier élément, qui est le nom principal, se met au pluriel ; « poste » reste au singulier comme complément. Piège : la règle générale des noms composés pousse à accorder les deux éléments, mais la construction implicite « de la poste » bloque l'accord du second."
+    },
+    {
+      "q": "Quel est le pluriel de « chef-d'œuvre » ?",
+      "o": [
+        "Chef-d'œuvres",
+        "Chefs-d'œuvre",
+        "Chefs-d'œuvres",
+        "Chef-d'œuvre"
+      ],
+      "r": 1,
+      "x": "Le nom principal est « chef », qui seul prend la marque du pluriel. Le complément « d'œuvre » reste invariable. Piège : la prononciation identique des quatre formes empêche de trancher à l'oreille. Seule l'analyse de la structure du mot composé permet de choisir."
+    },
+    {
+      "q": "Quel mot est féminin ?",
+      "o": [
+        "Un tentacule",
+        "Un astérisque",
+        "Un pétale",
+        "Une oasis"
+      ],
+      "r": 3,
+      "x": "« Oasis » est un nom féminin. Pétale, tentacule et astérisque sont masculins malgré leur terminaison trompeuse. Piège : la finale en -e de pétale et tentacule évoque le féminin, alors que ces mots issus du grec conservent le genre masculin."
+    },
+    {
+      "q": "Quel mot est masculin ?",
+      "o": [
+        "Une échappatoire",
+        "Un intervalle",
+        "Une acné",
+        "Une orbite"
+      ],
+      "r": 1,
+      "x": "« Intervalle » est masculin malgré sa finale en -e. Échappatoire, acné et orbite sont féminins. Piège : l'usage fautif « une intervalle » est répandu à l'oral précisément à cause de cette terminaison, ce qui en fait un point de contrôle classique en concours."
+    },
+    {
+      "q": "Quel est l'intrus ?",
+      "o": [
+        "Éluder",
+        "Esquiver",
+        "Affronter",
+        "Contourner"
+      ],
+      "r": 2,
+      "x": "Éluder, esquiver et contourner expriment l'évitement d'une difficulté. Affronter exprime au contraire le fait de lui faire face. Piège : « éluder » est le moins courant des quatre et attire donc les soupçons, alors qu'il appartient bien au même champ sémantique que les deux suivants."
+    },
+    {
+      "q": "Quel est l'intrus ?",
+      "o": [
+        "Pusillanime",
+        "Craintif",
+        "Timoré",
+        "Intrépide"
+      ],
+      "r": 3,
+      "x": "Pusillanime, craintif et timoré désignent le manque de courage. Intrépide désigne l'audace, sens opposé. Piège : « pusillanime » est rare et paraît isolé par sa sonorité, ce qui détourne du véritable critère, qui est le sens et non la familiarité du mot."
+    },
+    {
+      "q": "Concis est à prolixe ce que lucide est à :",
+      "o": [
+        "Clair",
+        "Confus",
+        "Éveillé",
+        "Sage"
+      ],
+      "r": 1,
+      "x": "Le premier couple oppose la brièveté à l'abondance verbale. Il faut donc trouver l'opposé de la clarté d'esprit, c'est-à-dire la confusion. Piège : « clair » est un synonyme de lucide, non son contraire, et « éveillé » en est une nuance : les deux renforcent le sens au lieu de l'inverser."
+    },
+    {
+      "q": "Que signifie « jeter l'éponge » ?",
+      "o": [
+        "Nettoyer soigneusement",
+        "Renoncer, abandonner",
+        "Provoquer quelqu'un",
+        "Recommencer à zéro"
+      ],
+      "r": 1,
+      "x": "L'expression vient de la boxe, où le soigneur jette l'éponge sur le ring pour signifier l'abandon de son poulain. Piège : le sens littéral évoque le ménage, ce qui égare ceux qui ignorent l'origine sportive de la locution."
+    },
+    {
+      "q": "Que signifie proprement « faire long feu » ?",
+      "o": [
+        "Durer très longtemps",
+        "Échouer, manquer son but",
+        "Brûler intensément",
+        "S'enflammer rapidement"
+      ],
+      "r": 1,
+      "x": "L'expression vient des armes anciennes dont la poudre brûlait trop lentement, empêchant le tir. Faire long feu signifie donc manquer son but. Piège : la formule est très souvent employée au sens inverse, celui de la durée, y compris dans la presse, ce qui ancre profondément le contresens."
+    },
+    {
+      "q": "Quel verbe appartient au registre le plus soutenu pour exprimer « dire » ?",
+      "o": [
+        "Balancer",
+        "Déclarer",
+        "Sortir",
+        "Lâcher"
+      ],
+      "r": 1,
+      "x": "« Déclarer » relève du registre neutre à soutenu et s'emploie dans les textes officiels. Les trois autres appartiennent au registre familier. Piège : la consigne porte sur le registre, non sur le sens : les quatre verbes peuvent signifier « dire » dans un contexte donné."
+    },
+    {
+      "q": "Sur une grille de 2 cases sur 4, combien existe-t-il de chemins les plus courts d'un coin au coin opposé, en n'avançant que vers la droite ou vers le haut ?",
+      "o": [
+        "10",
+        "15",
+        "20",
+        "24"
+      ],
+      "r": 1,
+      "x": "Le trajet comporte 4 pas horizontaux et 2 pas verticaux, soit 6 pas au total. Il suffit de choisir les 2 pas verticaux parmi 6 : C(6,2) = (6 × 5) ÷ 2 = 15. Piège : multiplier 2 × 4 = 8 ou énumérer à la main donne systématiquement moins de chemins que la réalité, car certains trajets échappent au dénombrement manuel."
+    },
+    {
+      "q": "Un cube 6 × 6 × 6 est peint sur toutes ses faces puis découpé en petits cubes unités. Combien ont exactement 2 faces peintes ?",
+      "o": [
+        "48",
+        "60",
+        "96",
+        "36"
+      ],
+      "r": 0,
+      "x": "Les cubes à 2 faces peintes se situent le long des arêtes, hors des coins. Chaque arête en contient 6 − 2 = 4, et le cube possède 12 arêtes : 12 × 4 = 48. Piège : oublier de retrancher les deux coins de chaque arête donne 72. Les cubes d'angle ont trois faces peintes et ne doivent pas être comptés ici."
+    },
+    {
+      "q": "Un cube 5 × 5 × 5 est peint puis découpé en 125 petits cubes. Combien n'ont aucune face peinte ?",
+      "o": [
+        "54",
+        "64",
+        "8",
+        "27"
+      ],
+      "r": 3,
+      "x": "Les cubes non peints forment le noyau intérieur, obtenu en retirant une couche sur chacune des trois dimensions : (5 − 2)³ = 3³ = 27. Piège : retrancher une seule unité par dimension donne 4³ = 64. Il faut ôter une couche de chaque côté, donc deux unités au total par dimension."
+    },
+    {
+      "q": "Une sphère est coupée par un plan. Quelle est la forme de la section obtenue ?",
+      "o": [
+        "Une ellipse",
+        "Un triangle",
+        "Un carré",
+        "Un cercle"
+      ],
+      "r": 3,
+      "x": "Quelle que soit l'inclinaison du plan, la section d'une sphère est toujours un cercle, car la sphère présente la même courbure dans toutes les directions. Piège : par analogie avec le cône, on imagine qu'une coupe oblique donnerait une ellipse, ce qui n'est vrai que pour les solides non sphériques."
+    },
+    {
+      "q": "Un cylindre est coupé par un plan parallèle à sa base. La section obtenue est :",
+      "o": [
+        "Un cercle",
+        "Une ellipse",
+        "Un triangle",
+        "Un rectangle"
+      ],
+      "r": 0,
+      "x": "Une coupe parallèle à la base reproduit exactement la forme de cette base, donc un cercle de même rayon. Piège : le rectangle correspond à une coupe verticale passant par l'axe, et l'ellipse à une coupe oblique : chaque orientation donne une section différente."
+    },
+    {
+      "q": "Un cône est coupé par un plan parallèle à sa base. La section obtenue est :",
+      "o": [
+        "Un triangle",
+        "Un cercle",
+        "Une parabole",
+        "Une ellipse"
+      ],
+      "r": 1,
+      "x": "La coupe parallèle à la base donne un cercle, de rayon plus petit que celui de la base. Piège : le triangle correspond à une coupe verticale par le sommet, et l'ellipse ou la parabole à des coupes obliques : seule la coupe parallèle conserve le cercle."
+    },
+    {
+      "q": "Un cube est coupé par un plan passant par trois sommets adjacents à un même sommet. Quelle est la forme de la section ?",
+      "o": [
+        "Un carré",
+        "Un triangle",
+        "Un rectangle",
+        "Un hexagone"
+      ],
+      "r": 1,
+      "x": "Les trois points choisis sont à égale distance les uns des autres, car ils sont reliés par trois diagonales de faces de même longueur. La section est donc un triangle équilatérale. Piège : on attend instinctivement une section carrée puisque toutes les faces du cube le sont, mais la coupe traverse le solide en biais."
+    },
+    {
+      "q": "Combien de faces possède un dodécaèdre régulier ?",
+      "o": [
+        "10",
+        "12",
+        "20",
+        "30"
+      ],
+      "r": 1,
+      "x": "Le préfixe grec « dodéca- » signifie douze. Ce solide est formé de 12 pentagones réguliers. Piège : 20 correspond à l'icosaèdre et 30 au nombre d'arêtes du dodécaèdre. Il faut associer le préfixe au nombre de faces, non de sommets ou d'arêtes."
+    },
+    {
+      "q": "Combien de faces possède un icosaèdre régulier ?",
+      "o": [
+        "12",
+        "16",
+        "20",
+        "30"
+      ],
+      "r": 2,
+      "x": "Le préfixe « icosa- » signifie vingt. Ce solide est formé de 20 triangles équilatéraux. Piège : 12 correspond au dodécaèdre et au nombre de sommets de l'icosaèdre, ce qui crée une confusion systématique entre les deux solides."
+    },
+    {
+      "q": "Un polyèdre possède 12 sommets et 30 arêtes. Combien de faces possède-t-il ?",
+      "o": [
+        "16",
+        "18",
+        "20",
+        "22"
+      ],
+      "r": 2,
+      "x": "La relation d'Euler donne S − A + F = 2. Ici : 12 − 30 + F = 2, donc F = 20. Piège : mémoriser la formule sous une autre disposition, comme S + A − F = 2, inverse le signe et conduit à un résultat négatif ou aberrant."
+    },
+    {
+      "q": "Combien de diagonales possède un décagone ?",
+      "o": [
+        "35",
+        "45",
+        "25",
+        "30"
+      ],
+      "r": 0,
+      "x": "La formule est n(n − 3) ÷ 2, soit 10 × 7 ÷ 2 = 35. Piège : 45 correspond à n(n − 1) ÷ 2, qui compte aussi les 10 côtés du polygone. La soustraction de 3 élimine le sommet lui-même et ses deux voisins."
+    },
+    {
+      "q": "Quelle est la somme des angles intérieurs d'un décagone ?",
+      "o": [
+        "1 260°",
+        "1 440°",
+        "1 620°",
+        "1 800°"
+      ],
+      "r": 1,
+      "x": "La formule est (n − 2) × 180°, soit 8 × 180 = 1 440°. Piège : oublier de retrancher 2 donne 10 × 180 = 1 800°, et retrancher 3 donne 1 260°. Les deux erreurs figurent parmi les distracteurs."
+    },
+    {
+      "q": "Quelle est la mesure d'un angle intérieur d'un polygone régulier à 12 côtés ?",
+      "o": [
+        "140°",
+        "144°",
+        "150°",
+        "160°"
+      ],
+      "r": 2,
+      "x": "La somme des angles vaut (12 − 2) × 180 = 1 800°. Divisée par 12, cela donne 150°. Piège : 144° est l'angle intérieur du décagone régulier, valeur souvent retenue par confusion entre les deux polygones."
+    },
+    {
+      "q": "Un polygone régulier a des angles intérieurs de 160°. Combien de côtés possède-t-il ?",
+      "o": [
+        "12",
+        "15",
+        "18",
+        "20"
+      ],
+      "r": 2,
+      "x": "L'angle extérieur vaut 180 − 160 = 20°. Or la somme des angles extérieurs fait toujours 360°, donc le nombre de côtés vaut 360 ÷ 20 = 18. Piège : appliquer la formule des angles intérieurs impose de résoudre une équation, alors que le passage par l'angle extérieur donne le résultat en deux opérations."
+    },
+    {
+      "q": "On relie les milieux des trois côtés d'un triangle. Combien de triangles compte-t-on au total dans la figure obtenue ?",
+      "o": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "r": 1,
+      "x": "La construction crée 4 petits triangles égaux, auxquels s'ajoute le grand triangle initial, soit 5 au total. Piège : compter uniquement les 4 petits triangles est l'erreur classique : la consigne demande tous les triangles visibles, y compris la figure d'ensemble."
+    },
+    {
+      "q": "Combien de rectangles peut-on compter dans une grille de 3 cases sur 3 ?",
+      "o": [
+        "18",
+        "24",
+        "36",
+        "45"
+      ],
+      "r": 2,
+      "x": "Un rectangle se définit par le choix de 2 lignes horizontales parmi 4 et de 2 lignes verticales parmi 4 : C(4,2) × C(4,2) = 6 × 6 = 36. Piège : ne compter que les 9 cases élémentaires, ou tenter une énumération manuelle qui oublie systématiquement les rectangles de grande taille."
+    },
+    {
+      "q": "Combien de carrés au total peut-on compter sur un échiquier 8 × 8 ?",
+      "o": [
+        "64",
+        "120",
+        "204",
+        "240"
+      ],
+      "r": 2,
+      "x": "On additionne les carrés de chaque taille : 8² + 7² + 6² + … + 1², c'est-à-dire 64 + 49 + 36 + 25 + 16 + 9 + 4 + 1 = 204. Piège : répondre 64 ne prend en compte que les cases élémentaires et ignore tous les carrés de 2 × 2 jusqu'à 8 × 8."
+    },
+    {
+      "q": "Une fourmi part d'un sommet d'un cube et se déplace uniquement le long des arêtes. Combien d'arêtes doit-elle parcourir au minimum pour atteindre le sommet diamétralement opposé ?",
+      "o": [
+        "3",
+        "4",
+        "6",
+        "2"
+      ],
+      "r": 0,
+      "x": "Le sommet opposé diffère du point de départ selon les trois dimensions de l'espace. Il faut donc au minimum un déplacement par dimension, soit 3 arêtes. Piège : la distance visuelle paraît longue et fait surestimer le trajet. Le raisonnement par coordonnées, en passant de (0,0,0) à (1,1,1), lève toute ambiguïté."
+    },
+    {
+      "q": "Un cube a un volume de 64 cm³. Quelle est son aire totale ?",
+      "o": [
+        "64 cm²",
+        "80 cm²",
+        "96 cm²",
+        "128 cm²"
+      ],
+      "r": 2,
+      "x": "L'arête vaut la racine cubique de 64, soit 4 cm. Chaque face mesure 16 cm² et le cube en compte 6 : 6 × 16 = 96 cm². Piège : répondre 64 cm² revient à confondre l'aire d'une face avec l'aire totale, ou à recopier la valeur du volume sans changer d'unité."
+    },
+    {
+      "q": "Quel est le volume d'une pyramide à base carrée de 6 cm de côté et de 10 cm de hauteur ?",
+      "o": [
+        "90 cm³",
+        "120 cm³",
+        "180 cm³",
+        "360 cm³"
+      ],
+      "r": 1,
+      "x": "Le volume vaut (aire de la base × hauteur) ÷ 3, soit (36 × 10) ÷ 3 = 120 cm³. Piège : oublier la division par 3 donne 360 cm³, qui correspond au volume du prisme de mêmes dimensions. Toute pyramide vaut le tiers du prisme correspondant."
+    },
+    {
+      "q": "Quel est le volume d'un cône de rayon 3 cm et de hauteur 7 cm (π ≈ 3,14) ?",
+      "o": [
+        "65,94 cm³",
+        "197,82 cm³",
+        "32,97 cm³",
+        "21,98 cm³"
+      ],
+      "r": 0,
+      "x": "Le volume vaut (π × r² × h) ÷ 3, soit (3,14 × 9 × 7) ÷ 3 = 197,82 ÷ 3 = 65,94 cm³. Piège : 197,82 cm³ correspond au cylindre de mêmes dimensions : c'est le résultat obtenu si l'on oublie la division par 3."
+    },
+    {
+      "q": "Si le rayon d'une sphère double, son volume est multiplié par :",
+      "o": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "r": 3,
+      "x": "Le volume d'une sphère est proportionnel au cube du rayon. Doubler le rayon multiplie donc le volume par 2³ = 8. Piège : répondre 4 applique le facteur des surfaces, qui varie comme le carré. Longueurs, aires et volumes suivent trois lois d'échelle distinctes."
+    },
+    {
+      "q": "Si le rayon d'un cercle triple, son aire est multipliée par :",
+      "o": [
+        "3",
+        "6",
+        "9",
+        "27"
+      ],
+      "r": 2,
+      "x": "L'aire est proportionnelle au carré du rayon, donc elle est multipliée par 3² = 9. Piège : 27 correspond à 3³, facteur applicable aux volumes et non aux aires. La confusion entre les deux exposants est la principale source d'erreur sur ces questions d'échelle."
+    },
+    {
+      "q": "Un triangle rectangle a deux côtés de l'angle droit mesurant 9 cm et 12 cm. Quelle est la longueur de l'hypoténuse ?",
+      "o": [
+        "13 cm",
+        "14 cm",
+        "15 cm",
+        "21 cm"
+      ],
+      "r": 2,
+      "x": "Par Pythagore : 81 + 144 = 225, dont la racine vaut 15 cm. Il s'agit du triplet 3-4-5 multiplié par 3. Piège : additionner les deux côtés donne 21 cm. Reconnaître les triplets pythagoriciens usuels (3-4-5, 5-12-13, 8-15-17) fait gagner un temps considérable."
+    },
+    {
+      "q": "Un triangle a pour côtés 5, 12 et 13 cm. Ce triangle est :",
+      "o": [
+        "Isocèle",
+        "Obtusangle",
+        "Équilatéral",
+        "Rectangle"
+      ],
+      "r": 3,
+      "x": "On vérifie la réciproque de Pythagore : 25 + 144 = 169, qui vaut bien 13². Le triangle est donc rectangle, l'angle droit étant opposé au côté de 13 cm. Piège : l'absence de mention d'un angle droit dans l'énoncé fait chercher un autre critère, alors que le calcul sur les côtés suffit à trancher."
+    },
+    {
+      "q": "Trois points distincts de l'espace définissent :",
+      "o": [
+        "Toujours un cercle unique",
+        "Jamais un plan",
+        "Toujours un triangle",
+        "Un triangle, sauf s'ils sont alignés"
+      ],
+      "r": 3,
+      "x": "Trois points distincts non alignés déterminent un triangle et un plan unique. S'ils sont alignés, ils ne forment qu'un segment. Piège : la proposition A paraît évidente, mais le cas particulier de l'alignement suffit à la rendre fausse. Les énoncés absolus sont rarement corrects en géométrie."
+    },
+    {
+      "q": "Combien de plans distincts peuvent contenir une droite donnée ?",
+      "o": [
+        "1",
+        "2",
+        "3",
+        "Une infinité"
+      ],
+      "r": 3,
+      "x": "Une droite ne suffit pas à fixer un plan : on peut la faire pivoter autour d'elle-même et obtenir une infinité de plans la contenant. Piège : par analogie avec « deux points définissent une droite », on suppose qu'une droite définit un plan, alors qu'il faut un troisième point hors de la droite."
+    },
+    {
+      "q": "Deux droites de l'espace qui ne sont ni parallèles ni sécantes sont dites :",
+      "o": [
+        "Parallèles",
+        "Perpendiculaires",
+        "Gauches",
+        "Confondues"
+      ],
+      "r": 2,
+      "x": "Deux droites gauches ne sont pas coplanaires : elles ne se coupent jamais sans pour autant garder une direction commune. Piège : dans le plan, deux droites sont nécessairement parallèles ou sécantes ; ce cas n'existe que dans l'espace à trois dimensions."
+    },
+    {
+      "q": "Un rectangle mesure 12 cm sur 5 cm. Quelle est la longueur de sa diagonale ?",
+      "o": [
+        "13 cm",
+        "15 cm",
+        "17 cm",
+        "11 cm"
+      ],
+      "r": 0,
+      "x": "Par Pythagore : 144 + 25 = 169, dont la racine vaut 13 cm. Il s'agit du triplet 5-12-13. Piège : additionner les côtés ou faire leur moyenne donne 17 ou 8,5. La diagonale est toujours supérieure au plus grand côté mais inférieure à la somme des deux."
+    },
+    {
+      "q": "Le patron d'un tétraèdre régulier est formé de :",
+      "o": [
+        "4 triangles",
+        "4 carrés",
+        "6 triangles",
+        "3 triangles"
+      ],
+      "r": 0,
+      "x": "Le tétraèdre régulier compte 4 faces triangulaires équilatérales, donc son patron comporte 4 triangles. Piège : répondre 3 revient à ne compter que les faces latérales en oubliant la base, erreur fréquente pour tous les solides pointus."
+    },
+    {
+      "q": "Combien d'arêtes possède un octaèdre régulier ?",
+      "o": [
+        "16",
+        "8",
+        "10",
+        "12"
+      ],
+      "r": 3,
+      "x": "L'octaèdre a 8 faces et 6 sommets. La relation d'Euler donne 6 − A + 8 = 2, donc A = 12. Piège : le préfixe « octa- » désigne les faces, non les arêtes : répondre 8 par automatisme est l'erreur la plus répandue sur ce type de question."
+    },
+    {
+      "q": "Quelle lettre majuscule reste identique après une rotation de 180° ?",
+      "o": [
+        "F",
+        "N",
+        "P",
+        "R"
+      ],
+      "r": 1,
+      "x": "Le N possède une symétrie centrale : retourné d'un demi-tour, il se superpose exactement à lui-même. Les lettres F, P et R n'ont aucune symétrie. Piège : le N paraît asymétrique parce que sa barre est oblique, mais c'est précisément cette obliquité qui se conserve par rotation centrale."
+    },
+    {
+      "q": "Quel nombre reste identique après une rotation de 180° ?",
+      "o": [
+        "69",
+        "198",
+        "168",
+        "106"
+      ],
+      "r": 0,
+      "x": "Un demi-tour inverse l'ordre de lecture et transforme chaque chiffre : le 6 devient 9 et le 9 devient 6. Le nombre 69 redonne donc bien 69. Piège : 1, 0 et 8 sont eux aussi symétriques, ce qui fait croire que 198, 168 ou 106 conviennent. Mais l'inversion de l'ordre modifie le résultat : 168 devient 891."
+    },
+    {
+      "q": "Combien d'axes de symétrie possède un hexagone régulier ?",
+      "o": [
+        "3",
+        "4",
+        "6",
+        "12"
+      ],
+      "r": 2,
+      "x": "Il possède 3 axes passant par deux sommets opposés et 3 axes passant par les milieux de côtés opposés, soit 6 au total. Piège : ne retenir qu'une des deux familles d'axes donne 3. Pour un polygone régulier à n côtés, le nombre d'axes est toujours égal à n."
+    },
+    {
+      "q": "Combien d'axes de symétrie possède un parallélogramme quelconque ?",
+      "o": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "r": 0,
+      "x": "Un parallélogramme quelconque ne possède qu'un centre de symétrie, pas d'axe. Aucun pliage ne fait coïncider ses deux moitiés. Piège : la régularité apparente de la figure et ses côtés parallèles font supposer deux axes, comme pour le rectangle, qui est un cas particulier possédant effectivement ces axes."
     }
   ],
   "legislation": [
