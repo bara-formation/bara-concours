@@ -1,6 +1,6 @@
 // Bara Concours - Base de questions QCM
-// Mis à jour le 2026-10-09 (soir) - +1 324 QCM : Culture Générale, SVT Cycle B, Psychotechnique
-// Total : 6635 questions réparties sur 37 matières
+// Mis à jour le 2026-10-21 - Maths Cycle B entierement remplacee : 497 questions
+// Total : 6982 questions réparties sur 37 matières
 
 const QUESTIONS = {
   "francais": [
@@ -8380,117 +8380,3463 @@ const QUESTIONS = {
   ],
   "maths_bac": [
     {
-      "q": "Développer (x + 5)(x - 5) donne :",
+      "q": "Les solutions de l'équation 2x² – 7x + 3 = 0 sont :",
       "o": [
-        "x² + 10x + 25",
-        "x² - 25",
-        "x² - 10x + 25",
-        "x² + 25"
-      ],
-      "r": 1,
-      "x": "C'est l'identité remarquable (a+b)(a-b) = a² - b². Ici a = x et b = 5, donc (x+5)(x-5) = x² - 25."
-    },
-    {
-      "q": "Factoriser x² - 7x + 12 :",
-      "o": [
-        "(x - 3)(x - 4)",
-        "(x + 3)(x + 4)",
-        "(x - 2)(x - 6)",
-        "(x - 1)(x - 12)"
+        "1/2 et 3",
+        "–1/2 et –3",
+        "1/3 et 2",
+        "2 et 3"
       ],
       "r": 0,
-      "x": "On cherche deux nombres dont le produit est 12 et la somme est 7 : ce sont 3 et 4. Donc x² - 7x + 12 = (x-3)(x-4). Vérification : (x-3)(x-4) = x² - 4x - 3x + 12 = x² - 7x + 12 ✓."
+      "x": "Le discriminant vaut Δ = b² – 4ac = 49 – 24 = 25, dont la racine carrée est 5. Les solutions sont donc (7 – 5) ÷ 4 = 1/2 et (7 + 5) ÷ 4 = 3. On contrôle avec la somme des racines, qui doit valoir –b/a = 7/2, et leur produit, qui doit valoir c/a = 3/2.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
     },
     {
-      "q": "Les solutions de 2x² - 5x + 2 = 0 sont :",
+      "q": "Le discriminant du trinôme 2x² + 3x – 5 est :",
       "o": [
-        "x = 1/2 et x = 2",
-        "x = -1/2 et x = -2",
-        "x = 1 et x = 2",
-        "x = 1/2 et x = -2"
+        "–31",
+        "9",
+        "31",
+        "49"
       ],
-      "r": 0,
-      "x": "Δ = 25 - 4×2×2 = 25 - 16 = 9. x = (5 ± 3)/4, donc x₁ = 8/4 = 2 et x₂ = 2/4 = 1/2. On vérifie : 2(1/2)² - 5(1/2) + 2 = 1/2 - 5/2 + 2 = 0 ✓."
+      "r": 3,
+      "x": "On applique Δ = b² – 4ac = 9 – 4 × 2 × (–5) = 9 + 40 = 49. Le produit 4ac est négatif puisque c vaut –5, ce qui transforme la soustraction en addition. La réponse –31 commet précisément cette erreur de signe, en calculant 9 – 40.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
     },
     {
-      "q": "Le discriminant de 3x² - 2x + 1 = 0 est :",
+      "q": "Les solutions de l'équation x² – 9x + 20 = 0 sont :",
       "o": [
-        "16",
-        "8",
-        "-8",
-        "-4"
+        "–5 et –4",
+        "2 et 10",
+        "4 et 5",
+        "–2 et 10"
       ],
       "r": 2,
-      "x": "Δ = b² - 4ac = (-2)² - 4×3×1 = 4 - 12 = -8. Puisque Δ < 0, cette équation n'admet aucune solution réelle. Elle a deux solutions complexes conjuguées."
+      "x": "Le discriminant vaut 81 – 80 = 1, d'où x = (9 – 1)/2 = 4 et x = (9 + 1)/2 = 5. On peut aussi chercher directement deux nombres de somme 9 et de produit 20. Le couple 2 et 10 a bien un produit de 20, mais sa somme vaut 12.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
     },
     {
-      "q": "La valeur absolue de |3x - 9| = 6 admet pour solutions :",
+      "q": "Dans l'ensemble des réels, l'équation x² – 4x + 5 = 0 admet :",
       "o": [
-        "x = 1 et x = 5",
-        "x = 5 et x = -1",
-        "x = 1 et x = -5",
-        "x = -1 et x = -5"
+        "aucune solution réelle",
+        "une solution double",
+        "deux solutions positives",
+        "deux solutions de signes contraires"
       ],
       "r": 0,
-      "x": "|3x - 9| = 6 donne deux équations : 3x - 9 = 6 → x = 5, ou 3x - 9 = -6 → 3x = 3 → x = 1. Les deux solutions sont x = 1 et x = 5."
+      "x": "Le discriminant vaut 16 – 20 = –4, négatif : le trinôme ne s'annule jamais et garde le signe de a, ici positif. On le confirme par la forme canonique x² – 4x + 5 = (x – 2)² + 1, toujours supérieure ou égale à 1. Une solution double exigerait un discriminant nul.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
     },
     {
-      "q": "L'ensemble des solutions de 3x + 4 > 10 est :",
+      "q": "Sans résoudre l'équation, la somme des racines de 3x² – 11x + 6 = 0 vaut :",
       "o": [
-        "x > 2",
-        "x < 2",
-        "x > -2",
-        "x ≥ 2"
-      ],
-      "r": 0,
-      "x": "3x + 4 > 10 → 3x > 6 → x > 2. L'ensemble solution est ]2 ; +∞[. Attention à ne pas diviser par un nombre négatif, ce qui inverserait l'inégalité."
-    },
-    {
-      "q": "Résoudre dans ℝ : x² - 4 ≤ 0 :",
-      "o": [
-        "x ∈ [-2 ; 2]",
-        "x ∈ ]-∞ ; -2] ∪ [2 ; +∞[",
-        "x ∈ [-2 ; 0]",
-        "x ∈ [0 ; 2]"
-      ],
-      "r": 0,
-      "x": "x² - 4 ≤ 0 → (x-2)(x+2) ≤ 0. Le produit est négatif ou nul quand les facteurs sont de signes opposés, soit entre les racines -2 et 2. Donc x ∈ [-2 ; 2]."
-    },
-    {
-      "q": "La somme S des racines et le produit P des racines de x² - 6x + 8 = 0 sont :",
-      "o": [
-        "S = -6 et P = 8",
-        "S = 6 et P = 8",
-        "S = 6 et P = -8",
-        "S = -6 et P = -8"
-      ],
-      "r": 1,
-      "x": "Par les relations de Viète : S = -b/a = -(-6)/1 = 6 et P = c/a = 8/1 = 8. On peut vérifier : les racines sont x = 2 et x = 4, donc S = 2+4 = 6 ✓ et P = 2×4 = 8 ✓."
-    },
-    {
-      "q": "Si f(x) = 2x³ - x² + 3x - 5, la valeur f(2) est :",
-      "o": [
-        "13",
-        "15",
-        "17",
+        "–11/3",
+        "2",
+        "11/3",
         "11"
       ],
-      "r": 0,
-      "x": "f(2) = 2(8) - (4) + 3(2) - 5 = 16 - 4 + 6 - 5 = 13. Il faut remplacer x par 2 dans chaque terme et calculer soigneusement."
+      "r": 2,
+      "x": "La somme des racines vaut S = –b/a = 11/3 et leur produit P = c/a = 2, relations valables dès que le discriminant est positif, ici Δ = 121 – 72 = 49. Elles permettent de contrôler une résolution sans tout recalculer. La réponse 2 est le produit, et –11/3 oublie le signe moins de la formule.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
     },
     {
-      "q": "Le développement de (2x - 3)² est :",
+      "q": "Le produit des racines de l'équation 3x² – 12x + 9 = 0 vaut :",
       "o": [
-        "4x² - 9",
-        "4x² - 12x + 9",
-        "4x² + 12x + 9",
-        "2x² - 12x + 9"
+        "3",
+        "4",
+        "9",
+        "12"
+      ],
+      "r": 0,
+      "x": "Le produit des racines vaut P = c/a = 9 ÷ 3 = 3, les racines étant 1 et 3. Leur somme vaut S = –b/a = 4, qui constitue le distracteur le plus fréquent. On vérifie aisément : 1 × 3 = 3 et 1 + 3 = 4.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'équation du second degré admettant pour racines 2 et 5 est :",
+      "o": [
+        "x² + 7x + 10 = 0",
+        "x² – 7x + 10 = 0",
+        "x² – 3x + 10 = 0",
+        "x² – 7x – 10 = 0"
       ],
       "r": 1,
-      "x": "(a-b)² = a² - 2ab + b². Ici a = 2x et b = 3 : (2x-3)² = (2x)² - 2×(2x)×3 + 3² = 4x² - 12x + 9."
+      "x": "Deux nombres de somme S et de produit P sont racines de x² – Sx + P = 0, avec ici S = 7 et P = 10. Le signe devant Sx est toujours opposé à celui de la somme. La proposition A a pour racines –2 et –5, et la proposition D aurait des racines de signes contraires.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
     },
     {
-      "q": "La limite de (2x² - 3x + 1) / (x² + x - 2) quand x → +∞ est :",
+      "q": "La factorisation du trinôme x² – 7x + 12 est :",
+      "o": [
+        "(x + 3)(x + 4)",
+        "(x – 2)(x – 6)",
+        "(x – 3)(x – 4)",
+        "(x – 1)(x – 12)"
+      ],
+      "r": 2,
+      "x": "Les racines du trinôme sont 3 et 4, puisque leur somme vaut 7 et leur produit 12, d'où la factorisation a(x – x₁)(x – x₂) = (x – 3)(x – 4). Le couple 2 et 6 a le bon produit mais une somme de 8. On contrôle en développant : x² – 4x – 3x + 12.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation x² + x – 6 < 0 est :",
+      "o": [
+        "x < –3 ou x > 2",
+        "–3 < x < 2",
+        "–2 < x < 3",
+        "x < –2 ou x > 3"
+      ],
+      "r": 1,
+      "x": "Les racines du trinôme sont –3 et 2 ; comme le coefficient a = 1 est positif, le trinôme est négatif ENTRE ses racines. L'ensemble solution est donc l'intervalle ]–3 ; 2[. La proposition A donne l'ensemble où le trinôme est positif, et la proposition C inverse les signes des racines.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le sommet de la parabole d'équation y = x² – 6x + 5 a pour coordonnées :",
+      "o": [
+        "(–3 ; 32)",
+        "(3 ; –4)",
+        "(3 ; 4)",
+        "(6 ; 5)"
+      ],
+      "r": 1,
+      "x": "L'abscisse du sommet vaut –b/2a = 6/2 = 3, et son ordonnée f(3) = 9 – 18 + 5 = –4. Comme a est positif, la parabole est tournée vers le haut et ce point correspond à un minimum. La proposition C commet une erreur de signe sur l'ordonnée.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La forme canonique du trinôme x² – 4x + 7 est :",
+      "o": [
+        "(x – 2)² + 3",
+        "(x – 2)² + 7",
+        "(x + 2)² + 3",
+        "(x – 4)² – 9"
+      ],
+      "r": 0,
+      "x": "On complète le carré : x² – 4x = (x – 2)² – 4, donc x² – 4x + 7 = (x – 2)² – 4 + 7 = (x – 2)² + 3. La fonction admet ainsi un minimum égal à 3, atteint pour x = 2. La proposition B oublie de retrancher le 4 introduit par le développement du carré.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La valeur maximale de la fonction f(x) = –x² + 6x – 5 est :",
+      "o": [
+        "3",
+        "4",
+        "5",
+        "9"
+      ],
+      "r": 1,
+      "x": "Comme a = –1 est négatif, la parabole est tournée vers le bas et admet un maximum en x = –b/2a = 3. Ce maximum vaut f(3) = –9 + 18 – 5 = 4. La réponse 3 donne l'abscisse du sommet, et non la valeur maximale de la fonction.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Les solutions de l'équation |x – 2| = 5 sont :",
+      "o": [
+        "3 et 7",
+        "–3 et 7",
+        "–7 et 3",
+        "7 seulement"
+      ],
+      "r": 1,
+      "x": "L'égalité |x – 2| = 5 signifie que x – 2 vaut 5 ou –5, d'où x = 7 ou x = –3. Géométriquement, ce sont les deux points situés à une distance 5 du nombre 2 sur la droite réelle. Ne retenir que 7 fait perdre la solution négative.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation |2x – 1| < 3 est :",
+      "o": [
+        "–1 < x < 2",
+        "x < 2",
+        "–2 < x < 1",
+        "x < –1 ou x > 2"
+      ],
+      "r": 0,
+      "x": "L'inégalité |2x – 1| < 3 équivaut à –3 < 2x – 1 < 3, puis –2 < 2x < 4, soit –1 < x < 2. Une valeur absolue inférieure à un nombre positif conduit toujours à un encadrement. La proposition D correspond à l'inégalité contraire |2x – 1| > 3.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'ensemble de définition de la fonction f(x) = √(x – 3) est :",
+      "o": [
+        "]–∞ ; 3]",
+        "]3 ; +∞[",
+        "[3 ; +∞[",
+        "ℝ"
+      ],
+      "r": 2,
+      "x": "Une racine carrée n'est définie que pour une quantité positive ou nulle : x – 3 ≥ 0, soit x ≥ 3. La borne 3 est incluse, puisque √0 = 0 existe. La proposition B exclut à tort cette borne, ce qui ne serait correct que si la racine figurait au dénominateur.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'ensemble de définition de la fonction f(x) = 1/(x² – 4) est :",
+      "o": [
+        "ℝ \\ {2}",
+        "ℝ \\ {–2 ; 2}",
+        "ℝ \\ {4}",
+        "]–2 ; 2["
+      ],
+      "r": 1,
+      "x": "Un quotient n'est défini que si son dénominateur est non nul, or x² – 4 s'annule pour x = 2 et pour x = –2. Il faut donc exclure ces deux valeurs, et non seulement la valeur positive. La proposition D confond le fait d'exclure deux valeurs avec celui de se limiter à l'intervalle qui les sépare.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La fonction f(x) = x⁴ – 3x² + 1 est :",
+      "o": [
+        "paire",
+        "impaire",
+        "ni paire ni impaire",
+        "périodique"
+      ],
+      "r": 0,
+      "x": "On calcule f(–x) = (–x)⁴ – 3(–x)² + 1 = x⁴ – 3x² + 1 = f(x), donc la fonction est paire. Toute fonction polynôme ne comportant que des puissances paires de x est paire. Sa courbe est alors symétrique par rapport à l'axe des ordonnées.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Sur l'intervalle ]0 ; +∞[, la fonction x ↦ 1/x est :",
+      "o": [
+        "croissante",
+        "décroissante",
+        "constante",
+        "croissante puis décroissante"
+      ],
+      "r": 1,
+      "x": "Si 0 < a < b, alors 1/a > 1/b : l'ordre s'inverse, donc la fonction inverse est strictement décroissante sur ]0 ; +∞[. Elle l'est aussi sur ]–∞ ; 0[, mais pas sur ℝ privé de 0 pris d'un seul bloc. Sa dérivée –1/x² est d'ailleurs toujours négative.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le couple solution du système 3x + 2y = 7 et 2x – y = 7 est :",
+      "o": [
+        "(1 ; 2)",
+        "(2 ; –3)",
+        "(3 ; –1)",
+        "(–1 ; 5)"
+      ],
+      "r": 2,
+      "x": "On multiplie la seconde équation par 2 et on l'ajoute à la première : 7x = 21, donc x = 3, puis y = 2x – 7 = –1. Les couples A et D vérifient la première équation mais pas la seconde. Il faut toujours tester une solution dans les deux équations du système.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le triplet (x ; y ; z) solution du système x + y + z = 6, x – y = 1 et y – z = 1 est :",
+      "o": [
+        "(1 ; 2 ; 3)",
+        "(2 ; 2 ; 2)",
+        "(4 ; 3 ; –1)",
+        "(3 ; 2 ; 1)"
+      ],
+      "r": 3,
+      "x": "Les deux dernières équations donnent x = y + 1 et z = y – 1 ; en remplaçant dans la première, 3y = 6, donc y = 2, x = 3 et z = 1. Le triplet (4 ; 3 ; –1) vérifie les deux premières équations, mais pas la troisième. La substitution ramène le système à une seule inconnue.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le développement de (x + 1)³ est :",
+      "o": [
+        "x³ + 1",
+        "x³ + 3x + 1",
+        "x³ + 3x² + 3x + 1",
+        "x³ + x² + x + 1"
+      ],
+      "r": 2,
+      "x": "L'identité (a + b)³ = a³ + 3a²b + 3ab² + b³ donne x³ + 3x² + 3x + 1, coefficients que l'on retrouve sur la ligne 1, 3, 3, 1 du triangle de Pascal. La proposition A oublie les termes intermédiaires, erreur symétrique de celle qui consiste à écrire (a + b)² = a² + b².",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La factorisation de x³ – 8 est :",
+      "o": [
+        "(x – 2)³",
+        "(x – 2)(x² + 2x + 4)",
+        "(x – 2)(x² – 2x + 4)",
+        "(x + 2)(x² – 2x + 4)"
+      ],
+      "r": 1,
+      "x": "On applique l'identité a³ – b³ = (a – b)(a² + ab + b²), avec a = x et b = 2. On vérifie que x = 2 annule bien l'expression, ce qui garantit la présence du facteur (x – 2). La proposition D factorise x³ + 8, et (x – 2)³ se développe en x³ – 6x² + 12x – 8.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le polynôme P(x) = x³ – 6x² + 11x – 6 admet pour racines :",
+      "o": [
+        "1, 2 et 3",
+        "–1, –2 et –3",
+        "1, 3 et 6",
+        "2, 3 et 6"
+      ],
+      "r": 0,
+      "x": "On teste la racine évidente x = 1 : 1 – 6 + 11 – 6 = 0, puis on factorise P(x) = (x – 1)(x² – 5x + 6) = (x – 1)(x – 2)(x – 3). Les racines sont donc 1, 2 et 3, dont la somme vaut bien 6. La proposition B donne les racines de x³ + 6x² + 11x + 6.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Pour x ≠ 3, l'expression (x² – 9)/(x – 3) se simplifie en :",
+      "o": [
+        "x – 3",
+        "x + 3",
+        "x – 9",
+        "x² – 3"
+      ],
+      "r": 1,
+      "x": "On factorise le numérateur, x² – 9 = (x – 3)(x + 3), puis on simplifie par x – 3, ce qui est permis puisque x ≠ 3. Le résultat est x + 3. On ne simplifie jamais terme à terme, ce qui conduirait à l'expression fausse x² – 3.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'écriture sans radical au dénominateur de 1/(√3 – 1) est :",
+      "o": [
+        "√3 + 1",
+        "(√3 – 1)/2",
+        "(√3 + 1)/4",
+        "(√3 + 1)/2"
+      ],
+      "r": 3,
+      "x": "On multiplie le numérateur et le dénominateur par l'expression conjuguée √3 + 1 : le dénominateur devient (√3)² – 1² = 3 – 1 = 2. Le résultat est donc (√3 + 1)/2. La proposition A oublie de diviser par ce dénominateur, et la proposition C le confond avec 4.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le nombre (2³)² × 2⁻⁴ est égal à :",
+      "o": [
+        "1/4",
+        "1/2",
+        "2",
+        "4"
+      ],
+      "r": 3,
+      "x": "On calcule les exposants : (2³)² = 2⁶, puis 2⁶ × 2⁻⁴ = 2⁶⁻⁴ = 2² = 4. Une puissance de puissance multiplie les exposants, tandis qu'un produit de puissances de même base les additionne. La réponse 1/4 correspond à 2⁻², obtenu par une erreur de signe sur l'exposant.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le produit (√5 + √2)(√5 – √2) est égal à :",
+      "o": [
+        "1",
+        "√3",
+        "√7",
+        "3"
+      ],
+      "r": 3,
+      "x": "On reconnaît l'identité (a + b)(a – b) = a² – b², qui donne (√5)² – (√2)² = 5 – 2 = 3. Les termes croisés en √10 s'annulent lors du développement. La réponse √3 applique à tort la racine carrée à la différence des nombres placés sous les radicaux.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'intersection des intervalles [–2 ; 5] et ]1 ; 8] est :",
+      "o": [
+        "[–2 ; 8]",
+        "[1 ; 5]",
+        "]1 ; 5]",
+        "]1 ; 5["
+      ],
+      "r": 2,
+      "x": "L'intersection regroupe les nombres appartenant aux DEUX intervalles : ils doivent être strictement supérieurs à 1 et inférieurs ou égaux à 5. On conserve donc le crochet ouvert en 1 et le crochet fermé en 5. La proposition [–2 ; 8] est la réunion des deux intervalles, et non leur intersection.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Avec f(x) = 2x + 1 et g(x) = x², la valeur de g ∘ f(3) est :",
+      "o": [
+        "19",
+        "37",
+        "43",
+        "49"
+      ],
+      "r": 3,
+      "x": "La composée g ∘ f se lit « g après f » : on calcule d'abord f(3) = 7, puis g(7) = 49. La réponse 19 correspond à f ∘ g(3) = 2 × 9 + 1, c'est-à-dire à l'ordre inverse. L'ordre de composition est essentiel, car en général g ∘ f diffère de f ∘ g.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La fonction réciproque de f(x) = 3x – 6 est :",
+      "o": [
+        "f⁻¹(x) = 3x + 6",
+        "f⁻¹(x) = (x – 6)/3",
+        "f⁻¹(x) = (x + 6)/3",
+        "f⁻¹(x) = 1/(3x – 6)"
+      ],
+      "r": 2,
+      "x": "On résout y = 3x – 6 en isolant x : x = (y + 6)/3, ce qui donne la réciproque f⁻¹(x) = (x + 6)/3. On vérifie que f(f⁻¹(x)) = (x + 6) – 6 = x. La proposition D confond la fonction réciproque avec la fonction inverse 1/f, deux notions bien distinctes.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation (x – 1)/(x + 2) ≥ 0 est :",
+      "o": [
+        "–2 < x ≤ 1",
+        "x ≥ 1",
+        "x ≤ –2 ou x ≥ 1",
+        "x < –2 ou x ≥ 1"
+      ],
+      "r": 3,
+      "x": "Le quotient est positif quand le numérateur et le dénominateur ont le même signe, soit pour x < –2 ou x ≥ 1 d'après un tableau de signes. La valeur –2 est exclue, car elle annule le dénominateur, tandis que 1 est incluse car elle annule le quotient. La proposition C inclut à tort –2.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Si –3 ≤ x ≤ 2, alors x² appartient à l'intervalle :",
+      "o": [
+        "[4 ; 9]",
+        "[–9 ; 4]",
+        "[0 ; 4]",
+        "[0 ; 9]"
+      ],
+      "r": 3,
+      "x": "L'intervalle contient 0, où la fonction carré atteint son minimum, donc x² ≥ 0 ; le maximum est atteint à l'extrémité la plus éloignée de zéro, –3, d'où 9. On ne peut pas simplement élever les bornes au carré, ce qui donnerait à tort [4 ; 9], car la fonction carré n'est pas monotone sur cet intervalle.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une grandeur subit deux hausses successives de 10 % et de 20 %. La hausse globale est de :",
+      "o": [
+        "30 %",
+        "31 %",
+        "32 %",
+        "33 %"
+      ],
+      "r": 2,
+      "x": "On multiplie les coefficients multiplicateurs : 1,10 × 1,20 = 1,32, soit une hausse globale de 32 %. Les taux successifs ne s'additionnent pas, car la seconde hausse s'applique à une valeur déjà augmentée. La réponse 30 % additionne simplement les deux taux.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une population augmente de 21 % en deux ans. Le taux d'évolution annuel moyen est de :",
+      "o": [
+        "10 %",
+        "10,5 %",
+        "11 %",
+        "21 %"
+      ],
+      "r": 0,
+      "x": "Le taux moyen t vérifie (1 + t)² = 1,21, donc 1 + t = √1,21 = 1,1 et t = 10 %. On ne divise pas 21 % par 2, ce qui donnerait 10,5 %, car les évolutions se composent par multiplication. On vérifie : 1,1 × 1,1 = 1,21.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Les solutions réelles de l'équation x⁴ – 5x² + 4 = 0 sont :",
+      "o": [
+        "1 et 4",
+        "–1 et 1",
+        "–2, –1, 1 et 2",
+        "–4, –1, 1 et 4"
+      ],
+      "r": 2,
+      "x": "On pose X = x², ce qui ramène à X² – 5X + 4 = 0, dont les solutions sont X = 1 et X = 4. On revient ensuite à l'inconnue : x² = 1 donne ±1, et x² = 4 donne ±2. La proposition A s'arrête aux valeurs de X, sans revenir à l'inconnue x.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'équation √(x + 6) = x admet pour solution :",
+      "o": [
+        "–2 seulement",
+        "3 seulement",
+        "–2 et 3",
+        "aucune solution"
+      ],
+      "r": 1,
+      "x": "En élevant au carré, on obtient x + 6 = x², soit x² – x – 6 = 0, qui donne x = 3 ou x = –2. Mais une racine carrée est toujours positive : pour x = –2, √4 = 2 ne vaut pas –2. Il faut toujours vérifier les solutions après une élévation au carré, ce qui écarte la proposition C.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'équation x² + 6x + m = 0 admet une solution double pour m égal à :",
+      "o": [
+        "3",
+        "6",
+        "9",
+        "36"
+      ],
+      "r": 2,
+      "x": "Une solution double exige un discriminant nul : Δ = 36 – 4m = 0, donc m = 9. L'équation devient alors x² + 6x + 9 = (x + 3)² = 0, de solution double –3. La réponse 36 oublie de diviser par 4.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation –2x² + 8x – 6 > 0 est :",
+      "o": [
+        "x < 1 ou x > 3",
+        "1 < x < 3",
+        "–3 < x < –1",
+        "x > 3"
+      ],
+      "r": 1,
+      "x": "Les racines du trinôme sont 1 et 3, et comme a = –2 est négatif, le trinôme est positif ENTRE ses racines. L'ensemble solution est donc l'intervalle ]1 ; 3[. La proposition A applique la règle valable pour a > 0 : il faut toujours regarder le signe du coefficient dominant.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La solution de l'équation (2x – 1)/(x + 3) = 1 est :",
+      "o": [
+        "x = 4",
+        "x = 5",
+        "x = 6",
+        "x = 8"
+      ],
+      "r": 0,
+      "x": "Pour x ≠ –3, on multiplie par le dénominateur : 2x – 1 = x + 3, d'où x = 4, valeur autorisée puisqu'elle n'annule pas x + 3. On vérifie : (8 – 1)/(4 + 3) = 7/7 = 1. Il faut toujours écarter les valeurs interdites avant de conclure.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation (x – 2)(3 – x) ≥ 0 est :",
+      "o": [
+        "[2 ; 3]",
+        "]2 ; 3[",
+        "]–∞ ; 2] ∪ [3 ; +∞[",
+        "[–3 ; 2]"
+      ],
+      "r": 0,
+      "x": "Le produit s'annule en 2 et en 3, et un tableau de signes montre qu'il est positif entre ces deux valeurs, car le facteur (3 – x) inverse le sens habituel. Les bornes sont incluses puisque l'inégalité est large. La proposition C correspondrait au produit (x – 2)(x – 3).",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Pour 0 < x < 1, le plus grand des nombres x, x² et √x est :",
+      "o": [
+        "√x",
+        "x",
+        "x²",
+        "ils sont égaux"
+      ],
+      "r": 0,
+      "x": "Pour un nombre compris entre 0 et 1, on a x² < x < √x : élever au carré fait diminuer, tandis qu'extraire la racine fait augmenter. Avec x = 0,25, on obtient respectivement 0,0625, 0,25 et 0,5. L'ordre s'inverse pour x > 1, où x² devient le plus grand.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'équation réduite de la droite passant par A(1 ; 2) et B(3 ; 8) est :",
+      "o": [
+        "y = 3x – 1",
+        "y = 3x + 2",
+        "y = 2x",
+        "y = 6x – 4"
+      ],
+      "r": 0,
+      "x": "Le coefficient directeur vaut (8 – 2)/(3 – 1) = 3, puis l'ordonnée à l'origine s'obtient avec le point A : 2 = 3 × 1 + b, donc b = –1. On contrôle avec B : 3 × 3 – 1 = 8. La proposition D utilise un coefficient de 6, écart des ordonnées non divisé par celui des abscisses.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans un repère orthonormé, le coefficient directeur d'une droite perpendiculaire à la droite y = 2x + 1 est :",
+      "o": [
+        "–2",
+        "–1/2",
+        "1/2",
+        "2"
+      ],
+      "r": 1,
+      "x": "Deux droites sont perpendiculaires lorsque le produit de leurs coefficients directeurs vaut –1 : 2 × m = –1, donc m = –1/2. Le coefficient 2 donnerait une droite parallèle. La réponse –2 change seulement le signe, sans prendre l'inverse du coefficient.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le point d'intersection des droites y = 2x – 1 et y = –x + 5 a pour coordonnées :",
+      "o": [
+        "(1 ; 1)",
+        "(3 ; 2)",
+        "(–2 ; –5)",
+        "(2 ; 3)"
+      ],
+      "r": 3,
+      "x": "On égalise les deux expressions : 2x – 1 = –x + 5, d'où 3x = 6 et x = 2, puis y = 2 × 2 – 1 = 3. On contrôle avec la seconde droite : –2 + 5 = 3. Le couple (3 ; 2) inverse l'abscisse et l'ordonnée du point cherché.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'image de l'intervalle [4 ; 9] par la fonction x ↦ √x est :",
+      "o": [
+        "[2 ; 3]",
+        "[16 ; 81]",
+        "[4 ; 9]",
+        "[√2 ; 3]"
+      ],
+      "r": 0,
+      "x": "La fonction racine carrée est croissante sur [0 ; +∞[, donc elle conserve l'ordre : √4 = 2 et √9 = 3. L'image de l'intervalle est donc [2 ; 3]. La proposition B élève les bornes au carré au lieu d'en extraire la racine.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La solution de l'équation 2ˣ⁺¹ = 32 est :",
+      "o": [
+        "x = 2",
+        "x = 3",
+        "x = 4",
+        "x = 5"
+      ],
+      "r": 2,
+      "x": "On écrit 32 sous forme de puissance de 2, soit 32 = 2⁵, donc x + 1 = 5 et x = 4. Deux puissances d'une même base positive différente de 1 sont égales si et seulement si leurs exposants le sont. La réponse 5 donne la valeur de x + 1, et non celle de x.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Après une baisse de 20 %, la hausse nécessaire pour retrouver la valeur initiale est de :",
+      "o": [
+        "15 %",
+        "20 %",
+        "22,5 %",
+        "25 %"
+      ],
+      "r": 3,
+      "x": "Après la baisse, la valeur est multipliée par 0,8 ; pour revenir au départ, il faut la multiplier par 1/0,8 = 1,25, soit une hausse de 25 %. Une hausse de 20 % ne suffit pas, car elle s'applique à une base plus faible. Sur 100 FCFA, on passe à 80 FCFA, puis de nouveau à 100 FCFA avec +25 %.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une fonction affine f vérifie f(1) = 5 et f(3) = –1. Son coefficient directeur est :",
+      "o": [
+        "–3",
+        "–2",
+        "2",
+        "3"
+      ],
+      "r": 0,
+      "x": "Le coefficient directeur vaut (f(3) – f(1))/(3 – 1) = (–1 – 5)/2 = –3, ce qui indique une fonction décroissante. On retrouve ensuite l'ordonnée à l'origine b = 8 grâce à f(1) = –3 + b = 5. La réponse 3 oublie le signe, alors que les images diminuent quand x augmente.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le nombre de solutions réelles de l'équation x³ = x est :",
+      "o": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "r": 3,
+      "x": "On factorise x³ – x = x(x² – 1) = x(x – 1)(x + 1), qui s'annule pour –1, 0 et 1 : il y a donc trois solutions. Diviser les deux membres par x ferait perdre la solution 0, erreur la plus fréquente sur ce type d'équation. Une équation de degré 3 admet au plus trois solutions réelles.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'ensemble des réels x vérifiant |x| ≤ 4 est :",
+      "o": [
+        "[0 ; 4]",
+        "]–4 ; 4[",
+        "[–4 ; 4]",
+        "]–∞ ; –4] ∪ [4 ; +∞["
+      ],
+      "r": 2,
+      "x": "L'inégalité |x| ≤ 4 signifie que la distance de x à zéro ne dépasse pas 4, donc –4 ≤ x ≤ 4. Les bornes sont incluses, car l'inégalité est large. La proposition D correspond à l'inégalité contraire |x| ≥ 4, et [0 ; 4] oublie les valeurs négatives.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une suite arithmétique a pour premier terme u₀ = 5 et pour raison 3. Le terme u₁₀ vaut :",
+      "o": [
+        "30",
+        "33",
+        "35",
+        "38"
+      ],
+      "r": 2,
+      "x": "Le terme général d'une suite arithmétique s'écrit uₙ = u₀ + n × r, d'où u₁₀ = 5 + 10 × 3 = 35. La réponse 38 correspond à u₁₁, erreur de décalage d'indice très fréquente. Attention : si la suite commence à u₁, la formule devient uₙ = u₁ + (n – 1) × r.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans la suite arithmétique 7 ; 11 ; 15 ; … de premier terme u₁ = 7, le vingtième terme vaut :",
+      "o": [
+        "79",
+        "83",
+        "87",
+        "91"
+      ],
+      "r": 1,
+      "x": "Avec u₁ = 7 et une raison r = 4, le vingtième terme vaut u₂₀ = u₁ + 19 × r = 7 + 76 = 83. Entre le premier et le vingtième terme, on ne compte que 19 sauts de raison. La réponse 87 en compte 20, ce qui donnerait le vingt et unième terme.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La somme des vingt premiers termes de la suite arithmétique 7 ; 11 ; 15 ; … est :",
+      "o": [
+        "830",
+        "870",
+        "900",
+        "1 660"
+      ],
+      "r": 2,
+      "x": "La somme de termes consécutifs d'une suite arithmétique vaut nombre de termes × (premier + dernier) ÷ 2, soit 20 × (7 + 83) ÷ 2 = 900. La réponse 1 660 oublie la division par 2. On retient que cette somme est le nombre de termes multiplié par leur moyenne.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une suite géométrique a pour premier terme u₁ = 2 et pour raison 3. Le terme u₅ vaut :",
+      "o": [
+        "54",
+        "81",
+        "162",
+        "486"
+      ],
+      "r": 2,
+      "x": "Le terme général s'écrit uₙ = u₁ × qⁿ⁻¹, d'où u₅ = 2 × 3⁴ = 2 × 81 = 162. La réponse 486 élève 3 à la puissance 5, en oubliant que la suite démarre à u₁. La réponse 54 est le quatrième terme, obtenu avec un exposant trop faible d'une unité.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une suite géométrique a pour premier terme u₁ = 3 et pour raison 2. La somme de ses huit premiers termes est :",
+      "o": [
+        "381",
+        "765",
+        "768",
+        "1 533"
+      ],
+      "r": 1,
+      "x": "La somme des n premiers termes d'une suite géométrique vaut u₁ × (qⁿ – 1) ÷ (q – 1), soit 3 × (2⁸ – 1) ÷ 1 = 3 × 255 = 765. Le huitième terme à lui seul vaut 3 × 2⁷ = 384. La réponse 381 correspond à la somme des sept premiers termes, car elle oublie le dernier.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans la suite géométrique de premier terme u₁ = 64 et de raison 1/2, le cinquième terme vaut :",
+      "o": [
+        "2",
+        "4",
+        "8",
+        "16"
+      ],
+      "r": 1,
+      "x": "Chaque terme est la moitié du précédent : 64, 32, 16, 8, puis 4 pour le cinquième. Par la formule, u₅ = 64 × (1/2)⁴ = 64 ÷ 16 = 4. Une raison comprise entre 0 et 1 rend la suite décroissante et la fait tendre vers zéro.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La suite définie par uₙ = 3 – 2n est :",
+      "o": [
+        "croissante",
+        "constante",
+        "ni croissante ni décroissante",
+        "décroissante"
+      ],
+      "r": 3,
+      "x": "On calcule uₙ₊₁ – uₙ = (3 – 2(n + 1)) – (3 – 2n) = –2, négatif pour tout n : la suite est strictement décroissante. Il s'agit d'une suite arithmétique de raison –2. Pour toute suite arithmétique, le signe de la raison suffit à déterminer le sens de variation.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La limite de la suite (2/3)ⁿ quand n tend vers +∞ est :",
+      "o": [
+        "0",
+        "2/3",
+        "1",
+        "+∞"
+      ],
+      "r": 0,
+      "x": "Une suite géométrique qⁿ tend vers 0 lorsque –1 < q < 1, ce qui est le cas pour q = 2/3. Ses termes diminuent à chaque étape sans jamais s'annuler. Pour q > 1, la limite serait +∞, et pour q = 1, la suite resterait constante égale à 1.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La somme 1 + 1/2 + 1/4 + 1/8 + …, prolongée indéfiniment, tend vers :",
+      "o": [
+        "1",
+        "3/2",
+        "2",
+        "+∞"
+      ],
+      "r": 2,
+      "x": "Il s'agit d'une suite géométrique de premier terme 1 et de raison 1/2 : la somme des n premiers termes vaut 2 × (1 – (1/2)ⁿ), qui tend vers 2. Bien qu'on additionne une infinité de termes, la somme reste finie, car ceux-ci diminuent très vite. Elle ne tend donc pas vers +∞.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Pour la suite définie par uₙ = 2n² – 1, le terme u₃ vaut :",
+      "o": [
+        "11",
+        "17",
+        "19",
+        "35"
+      ],
+      "r": 1,
+      "x": "Pour une suite définie explicitement, on remplace n par sa valeur : u₃ = 2 × 3² – 1 = 2 × 9 – 1 = 17. La puissance porte sur n seul, et non sur le produit 2n. La réponse 35 calcule (2 × 3)² – 1, erreur classique sur la priorité de la puissance.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La suite définie par u₀ = 1 et uₙ₊₁ = 2uₙ + 3 a pour terme u₃ :",
+      "o": [
+        "17",
+        "25",
+        "29",
+        "61"
+      ],
+      "r": 2,
+      "x": "On calcule les termes de proche en proche : u₁ = 2 × 1 + 3 = 5, u₂ = 2 × 5 + 3 = 13, puis u₃ = 2 × 13 + 3 = 29. Une suite définie par récurrence oblige à passer par tous les termes intermédiaires. La réponse 61 correspond à u₄, soit un rang de trop.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un capital de 100 000 FCFA est placé à intérêts composés au taux annuel de 5 %. Au bout de 3 ans, il vaut :",
+      "o": [
+        "115 000 FCFA",
+        "115 762,5 FCFA",
+        "116 000 FCFA",
+        "157 625 FCFA"
+      ],
+      "r": 1,
+      "x": "À intérêts composés, le capital est multiplié chaque année par 1,05 : il forme une suite géométrique, et C₃ = 100 000 × 1,05³ = 115 762,5 FCFA. La réponse 115 000 FCFA correspond aux intérêts simples, qui ne capitalisent pas les intérêts. L'écart de 762,5 FCFA représente l'intérêt produit par les intérêts.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Si a, 10 et b sont trois termes consécutifs d'une suite arithmétique, alors a + b vaut :",
+      "o": [
+        "20",
+        "25",
+        "30",
+        "100"
+      ],
+      "r": 0,
+      "x": "Dans une suite arithmétique, chaque terme est la moyenne de ses deux voisins : 10 = (a + b)/2, donc a + b = 20. Cette propriété caractérise les suites arithmétiques. Pour une suite géométrique, c'est le produit des voisins qui serait fixé, avec a × b = 100.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le nombre de termes de la somme 5 + 8 + 11 + … + 92 est :",
+      "o": [
+        "28",
+        "29",
+        "30",
+        "31"
+      ],
+      "r": 2,
+      "x": "Le nombre de termes d'une suite arithmétique vaut (dernier – premier) ÷ raison + 1, soit (92 – 5) ÷ 3 + 1 = 29 + 1 = 30. Il ne faut pas oublier d'ajouter 1, car on compte les termes et non les écarts entre eux. La réponse 29 donne seulement le nombre de sauts de raison.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = x³ – 6x² + 5 est :",
+      "o": [
+        "3x² – 6x",
+        "x² – 12x",
+        "3x² – 12x + 5",
+        "3x² – 12x"
+      ],
+      "r": 3,
+      "x": "On dérive terme à terme avec la règle (xⁿ)' = n × xⁿ⁻¹ : la dérivée de x³ est 3x², celle de –6x² est –12x, et celle de la constante 5 est nulle. La réponse 3x² – 12x + 5 conserve à tort la constante, alors que la dérivée d'un nombre est toujours zéro.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = 1/x sur ]0 ; +∞[ est :",
+      "o": [
+        "1/x²",
+        "–1/x",
+        "ln x",
+        "–1/x²"
+      ],
+      "r": 3,
+      "x": "On écrit 1/x = x⁻¹, puis la règle (xⁿ)' = n × xⁿ⁻¹ donne –x⁻², soit –1/x². Cette dérivée est toujours négative, ce qui confirme que la fonction inverse décroît sur chacun de ses intervalles de définition. La proposition ln x est une primitive de 1/x, et non sa dérivée.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = √x sur ]0 ; +∞[ est :",
+      "o": [
+        "√x/2",
+        "2√x",
+        "1/√x",
+        "1/(2√x)"
+      ],
+      "r": 3,
+      "x": "En écrivant √x = x^(1/2), la règle des puissances donne (1/2) × x^(–1/2) = 1/(2√x). Cette dérivée n'existe que pour x > 0, puisqu'elle comporte √x au dénominateur. La proposition 2√x confond la dérivée avec une primitive de 1/√x.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = (2x + 1)(x – 3) est :",
+      "o": [
+        "2",
+        "4x – 7",
+        "2x – 5",
+        "4x – 5"
+      ],
+      "r": 3,
+      "x": "On applique la règle (uv)' = u'v + uv' : 2 × (x – 3) + (2x + 1) × 1 = 2x – 6 + 2x + 1 = 4x – 5. On peut aussi développer d'abord, f(x) = 2x² – 5x – 3, puis dériver. La réponse 2 multiplie à tort les dérivées des deux facteurs entre elles.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = (x + 1)/(x – 1), pour x ≠ 1, est :",
+      "o": [
+        "1",
+        "2/(x – 1)²",
+        "–2/(x – 1)²",
+        "–1/(x – 1)²"
+      ],
+      "r": 2,
+      "x": "La règle (u/v)' = (u'v – uv')/v² donne [1 × (x – 1) – (x + 1) × 1]/(x – 1)² = –2/(x – 1)². L'ordre des termes au numérateur est essentiel : on commence toujours par u'v. La réponse 1 divise à tort la dérivée du numérateur par celle du dénominateur.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = (3x – 1)⁴ est :",
+      "o": [
+        "4(3x – 1)³",
+        "3(3x – 1)⁴",
+        "12x³",
+        "12(3x – 1)³"
+      ],
+      "r": 3,
+      "x": "Pour une puissance d'une fonction, (uⁿ)' = n × u' × uⁿ⁻¹, soit ici 4 × 3 × (3x – 1)³ = 12(3x – 1)³. Le facteur 3 provient de la dérivée de l'expression intérieure 3x – 1. La réponse 4(3x – 1)³ l'oublie, erreur la plus fréquente sur les fonctions composées.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Pour la fonction f(x) = x² + 3x, le nombre dérivé f'(2) vaut :",
+      "o": [
+        "5",
+        "7",
+        "10",
+        "13"
+      ],
+      "r": 1,
+      "x": "La dérivée vaut f'(x) = 2x + 3, d'où f'(2) = 4 + 3 = 7. Ce nombre est le coefficient directeur de la tangente à la courbe au point d'abscisse 2. La réponse 10 est f(2), c'est-à-dire l'image et non le nombre dérivé.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'équation de la tangente à la courbe de f(x) = x² au point d'abscisse 3 est :",
+      "o": [
+        "y = 6x – 9",
+        "y = 6x + 9",
+        "y = 3x",
+        "y = 2x + 3"
+      ],
+      "r": 0,
+      "x": "L'équation de la tangente s'écrit y = f'(a)(x – a) + f(a), avec ici f'(3) = 6 et f(3) = 9 : y = 6(x – 3) + 9 = 6x – 9. On vérifie que la droite passe bien par le point (3 ; 9). La proposition B se trompe de signe en développant.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La fonction f(x) = x³ – 3x admet un maximum local en :",
+      "o": [
+        "x = –1",
+        "x = 0",
+        "x = 1",
+        "x = 3"
+      ],
+      "r": 0,
+      "x": "La dérivée f'(x) = 3x² – 3 s'annule en –1 et en 1 ; elle est positive avant –1 et négative entre –1 et 1. La fonction passe donc de croissante à décroissante en –1, où elle admet un maximum local égal à 2. En x = 1, elle admet au contraire un minimum local.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Sur l'intervalle [0 ; 3], la valeur minimale de la fonction f(x) = x³ – 12x est :",
+      "o": [
+        "–18",
+        "–16",
+        "–9",
+        "0"
+      ],
+      "r": 1,
+      "x": "La dérivée f'(x) = 3x² – 12 s'annule en x = 2 sur l'intervalle, où la fonction passe de décroissante à croissante. On compare f(2) = –16 aux valeurs aux bornes, f(0) = 0 et f(3) = –9 : le minimum vaut donc –16. Sur un intervalle fermé, il faut toujours comparer avec les extrémités.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Si f'(x) < 0 pour tout x d'un intervalle I, alors la fonction f est :",
+      "o": [
+        "croissante sur I",
+        "négative sur I",
+        "décroissante sur I",
+        "constante sur I"
+      ],
+      "r": 2,
+      "x": "Le signe de la dérivée renseigne sur le sens de variation : une dérivée négative signifie que la fonction décroît sur I. Elle ne dit rien du signe de la fonction elle-même, qui peut rester positive tout en décroissant. Confondre « f' négative » et « f négative » est précisément l'erreur visée par la proposition B.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = cos(2x) est :",
+      "o": [
+        "2 sin(2x)",
+        "–sin(2x)",
+        "sin(2x)",
+        "–2 sin(2x)"
+      ],
+      "r": 3,
+      "x": "La dérivée de cos u est –u' × sin u : avec u = 2x et u' = 2, on obtient –2 sin(2x). Le signe moins vient de la dérivée du cosinus, le facteur 2 de celle de l'angle. La proposition –sin(2x) oublie ce facteur, erreur fréquente sur les fonctions composées.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La courbe de f(x) = 2x³ – 3x² admet une tangente horizontale aux points d'abscisses :",
+      "o": [
+        "0 et 1",
+        "0 et 1,5",
+        "–1 et 1",
+        "1 seulement"
+      ],
+      "r": 0,
+      "x": "Une tangente est horizontale là où le nombre dérivé est nul : f'(x) = 6x² – 6x = 6x(x – 1), qui s'annule en 0 et en 1. La proposition 0 et 1,5 donne les points où la fonction elle-même s'annule, puisque f(x) = x²(2x – 3). Il ne faut pas confondre les racines de f et celles de f'.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "En utilisant l'approximation affine de √x au voisinage de 4, la valeur approchée de √4,1 est :",
+      "o": [
+        "2,01",
+        "2,025",
+        "2,05",
+        "2,1"
+      ],
+      "r": 1,
+      "x": "L'approximation affine s'écrit f(a + h) ≈ f(a) + h × f'(a) ; avec f'(4) = 1/(2√4) = 1/4, on obtient 2 + 0,1 × 0,25 = 2,025. La valeur exacte, 2,0248…, confirme la qualité de cette approximation. La réponse 2,05 utilise à tort f'(4) = 1/2.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La limite en +∞ de la fonction f(x) = (3x² + 1)/(x² – 5) est :",
+      "o": [
+        "0",
+        "1",
+        "3",
+        "+∞"
+      ],
+      "r": 2,
+      "x": "À l'infini, une fraction rationnelle se comporte comme le quotient de ses termes de plus haut degré : 3x²/x² = 3. Les termes constants deviennent négligeables. Si le numérateur était de degré supérieur, la limite serait infinie, et s'il était de degré inférieur, elle serait nulle.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La limite en +∞ de la fonction f(x) = (2x + 1)/(x² + 3) est :",
+      "o": [
+        "0",
+        "1/3",
+        "2",
+        "+∞"
+      ],
+      "r": 0,
+      "x": "Le terme dominant du numérateur est 2x, celui du dénominateur x² ; leur quotient 2/x tend vers 0, car le degré du dénominateur l'emporte. La réponse 1/3 calcule à tort la valeur de la fonction en x = 0. La réponse 2 compare seulement les coefficients, sans tenir compte des degrés.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La limite de (x² – 4)/(x – 2) quand x tend vers 2 est :",
+      "o": [
+        "0",
+        "2",
+        "4",
+        "+∞"
+      ],
+      "r": 2,
+      "x": "En x = 2, on obtient la forme indéterminée 0/0 ; on factorise donc le numérateur : (x – 2)(x + 2)/(x – 2) = x + 2 pour x ≠ 2. La limite vaut alors 2 + 2 = 4. Conclure à 0 ou à l'infini sans lever l'indétermination serait une erreur.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La limite de 1/x quand x tend vers 0 par valeurs positives est :",
+      "o": [
+        "–∞",
+        "0",
+        "1",
+        "+∞"
+      ],
+      "r": 3,
+      "x": "Quand x tend vers 0 par valeurs positives, 1/x devient de plus en plus grand : pour x = 0,001, il vaut déjà 1 000. La limite est donc +∞, et la droite x = 0 est asymptote verticale à la courbe. Par valeurs négatives, la limite serait au contraire –∞.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La courbe de la fonction f(x) = (2x – 1)/(x + 3) admet pour asymptote horizontale la droite :",
+      "o": [
+        "y = –1/3",
+        "x = –3",
+        "y = –3",
+        "y = 2"
+      ],
+      "r": 3,
+      "x": "En +∞ comme en –∞, f(x) tend vers le rapport des coefficients dominants, 2x/x = 2 : la droite y = 2 est asymptote horizontale. La droite x = –3, qui annule le dénominateur, est l'asymptote VERTICALE. Il faut bien distinguer ces deux types d'asymptotes.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La courbe de la fonction f(x) = x + 1 + 1/x admet pour asymptote oblique la droite :",
+      "o": [
+        "y = x",
+        "y = x + 1",
+        "y = 1",
+        "x = 0"
+      ],
+      "r": 1,
+      "x": "Quand x tend vers l'infini, le terme 1/x tend vers 0, donc f(x) – (x + 1) tend vers 0 : la droite y = x + 1 est asymptote oblique. La droite x = 0 est l'asymptote verticale de cette fonction. La proposition y = x oublie le terme constant de la partie affine.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La limite en +∞ de √(x + 1) – √x est :",
+      "o": [
+        "0",
+        "1/2",
+        "1",
+        "+∞"
+      ],
+      "r": 0,
+      "x": "On multiplie par l'expression conjuguée : √(x + 1) – √x = 1/(√(x + 1) + √x). Le dénominateur tend vers +∞, donc la limite vaut 0. La forme « ∞ – ∞ » est indéterminée : il faut toujours la lever par un calcul, et non conclure au hasard.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La limite de sin(x)/x quand x tend vers 0, avec x en radians, est :",
+      "o": [
+        "0",
+        "1",
+        "π",
+        "+∞"
+      ],
+      "r": 1,
+      "x": "Cette limite de référence vaut 1 : elle correspond au nombre dérivé de la fonction sinus en 0, puisque sin'(0) = cos 0 = 1. Pour de petites valeurs de x exprimées en radians, sin x est très proche de x. En degrés, ce résultat ne serait plus vrai.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La limite en –∞ de la fonction f(x) = x³ – 2x est :",
+      "o": [
+        "–∞",
+        "–2",
+        "0",
+        "+∞"
+      ],
+      "r": 0,
+      "x": "En l'infini, un polynôme se comporte comme son terme de plus haut degré, ici x³. Quand x tend vers –∞, x³ tend vers –∞, car un nombre négatif élevé au cube reste négatif. La réponse +∞ applique à tort le comportement de x² ou de x⁴.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La fonction définie par f(x) = x² si x ≤ 1 et f(x) = ax + 3 si x > 1 est continue en 1 pour a égal à :",
+      "o": [
+        "–2",
+        "–1",
+        "1",
+        "2"
+      ],
+      "r": 0,
+      "x": "Pour que f soit continue en 1, les deux expressions doivent donner la même valeur en ce point : 1² = a × 1 + 3, soit a = –2. La courbe se raccorde alors sans saut au point (1 ; 1). La réponse 2 commet une erreur de signe en isolant a.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'équation x³ + x – 1 = 0 admet une solution dans l'intervalle :",
+      "o": [
+        "]–2 ; –1[",
+        "]–1 ; 0[",
+        "]0 ; 1[",
+        "]1 ; 2["
+      ],
+      "r": 2,
+      "x": "La fonction est continue, avec f(0) = –1 < 0 et f(1) = 1 > 0 : d'après le théorème des valeurs intermédiaires, elle s'annule entre 0 et 1. Comme f est strictement croissante, puisque f'(x) = 3x² + 1 > 0, cette solution est même unique. Un changement de signe suffit à localiser la racine.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La limite en +∞ de eˣ/x² est :",
+      "o": [
+        "0",
+        "1",
+        "2",
+        "+∞"
+      ],
+      "r": 3,
+      "x": "D'après les croissances comparées, l'exponentielle l'emporte sur toute puissance de x : eˣ/x² tend donc vers +∞. Bien que le numérateur et le dénominateur tendent tous deux vers +∞, l'indétermination se lève en faveur de l'exponentielle. Le quotient inverse x²/eˣ tendrait au contraire vers 0.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La limite en +∞ de (ln x)/x est :",
+      "o": [
+        "0",
+        "1",
+        "e",
+        "+∞"
+      ],
+      "r": 0,
+      "x": "Les croissances comparées montrent que x l'emporte sur ln x en +∞ : le logarithme croît, mais beaucoup plus lentement que x. Le quotient (ln x)/x tend donc vers 0. Pour x = 10⁶, par exemple, ln x ne vaut qu'environ 13,8.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = e^(3x) est :",
+      "o": [
+        "e^(3x)",
+        "3e^(3x)",
+        "3x e^(3x – 1)",
+        "e^(3x)/3"
+      ],
+      "r": 1,
+      "x": "La dérivée de e^u est u' × e^u : avec u = 3x, on obtient 3e^(3x). L'exponentielle ne se dérive pas comme une puissance, ce qui écarte la proposition C. La proposition e^(3x)/3 est une primitive, et non une dérivée.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = ln(x² + 1) est :",
+      "o": [
+        "1/(x² + 1)",
+        "2x ln(x² + 1)",
+        "1/(2x)",
+        "2x/(x² + 1)"
+      ],
+      "r": 3,
+      "x": "La dérivée de ln u est u'/u : avec u = x² + 1 et u' = 2x, on obtient 2x/(x² + 1). La proposition 1/(x² + 1) oublie la dérivée de l'expression intérieure. Cette règle sert constamment dans l'étude des fonctions composées avec un logarithme.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = x ln x sur ]0 ; +∞[ est :",
+      "o": [
+        "1/x",
+        "ln x",
+        "ln x + 1",
+        "x + 1/x"
+      ],
+      "r": 2,
+      "x": "On applique la règle du produit : (x)' × ln x + x × (ln x)' = ln x + x × (1/x) = ln x + 1. La proposition ln x oublie le second terme du produit. Cette dérivée s'annule pour ln x = –1, soit x = 1/e, où la fonction atteint son minimum.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = x eˣ est :",
+      "o": [
+        "eˣ",
+        "x eˣ",
+        "(x – 1)eˣ",
+        "(x + 1)eˣ"
+      ],
+      "r": 3,
+      "x": "La règle du produit donne 1 × eˣ + x × eˣ = (x + 1)eˣ, que l'on factorise par eˣ. Comme eˣ est toujours positif, le signe de la dérivée est celui de x + 1. La fonction décroît donc jusqu'en x = –1, puis croît.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La courbe de la fonction f(x) = x³ – 3x² admet un point d'inflexion en :",
+      "o": [
+        "x = 0",
+        "x = 1",
+        "x = 2",
+        "x = 3"
+      ],
+      "r": 1,
+      "x": "La dérivée seconde vaut f''(x) = 6x – 6, qui s'annule et change de signe en x = 1 : la courbe passe de concave à convexe en ce point d'inflexion. Les valeurs 0 et 2 annulent la dérivée première, f'(x) = 3x² – 6x, et correspondent aux extremums de la fonction.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le nombre de solutions réelles de l'équation x³ – 3x + 1 = 0 est :",
+      "o": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "r": 3,
+      "x": "La fonction f(x) = x³ – 3x + 1 admet un maximum local f(–1) = 3 et un minimum local f(1) = –1, de signes contraires. Ses valeurs changent donc trois fois de signe, comme le confirment f(–2) = –1, f(0) = 1, f(1) = –1 et f(2) = 3. L'équation admet ainsi trois solutions réelles.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le taux de variation de la fonction f(x) = x² entre 1 et 3 est :",
+      "o": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "r": 1,
+      "x": "Le taux de variation entre a et b vaut (f(b) – f(a))/(b – a) = (9 – 1)/(3 – 1) = 4. Il représente la pente de la corde qui joint les deux points de la courbe. La réponse 8 oublie de diviser par l'écart des abscisses.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = (x² + 1)/x, pour x ≠ 0, est :",
+      "o": [
+        "1 – 1/x²",
+        "2x",
+        "1 + 1/x²",
+        "2x – 1"
+      ],
+      "r": 0,
+      "x": "On simplifie d'abord l'expression : f(x) = x + 1/x, dont la dérivée vaut 1 – 1/x². Cette écriture évite de recourir à la formule du quotient. La dérivée s'annule pour x = 1 et x = –1, où la fonction atteint ses extremums locaux 2 et –2.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Parmi les rectangles de périmètre 40 m, celui d'aire maximale a une aire de :",
+      "o": [
+        "80 m²",
+        "96 m²",
+        "100 m²",
+        "400 m²"
+      ],
+      "r": 2,
+      "x": "Avec une largeur x, la longueur vaut 20 – x et l'aire A(x) = 20x – x² ; sa dérivée 20 – 2x s'annule pour x = 10. Le rectangle optimal est donc un carré de 10 m de côté, d'aire 100 m². La réponse 96 m² correspond à un rectangle de 12 m sur 8 m, moins avantageux.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La valeur de ln(e³) est :",
+      "o": [
+        "1/3",
+        "3",
+        "3e",
+        "e³"
+      ],
+      "r": 1,
+      "x": "Le logarithme népérien est la fonction réciproque de l'exponentielle : ln(eˣ) = x pour tout réel x, donc ln(e³) = 3. On peut aussi écrire ln(e³) = 3 ln e = 3 × 1. La proposition e³ confond l'expression avec sa valeur.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'expression ln 8 – ln 2 est égale à :",
+      "o": [
+        "2 ln 2",
+        "ln 6",
+        "ln 16",
+        "4"
+      ],
+      "r": 0,
+      "x": "La différence de deux logarithmes est le logarithme du quotient : ln 8 – ln 2 = ln(8/2) = ln 4, qui s'écrit aussi 2 ln 2. La proposition ln 6 soustrait à tort les nombres eux-mêmes. La réponse 4 oublie que ln 4 n'est pas égal à 4.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La valeur de ln(√e) est :",
+      "o": [
+        "1/2",
+        "e/2",
+        "√e",
+        "2"
+      ],
+      "r": 0,
+      "x": "On écrit √e = e^(1/2), donc ln(√e) = 1/2. Plus généralement, ln(√x) = (1/2) ln x pour tout x > 0. La réponse 2 inverse l'exposant, en confondant la racine carrée avec le carré.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La solution de l'équation ln x = 2 est :",
+      "o": [
+        "ln 2",
+        "2",
+        "2e",
+        "e²"
+      ],
+      "r": 3,
+      "x": "On applique l'exponentielle aux deux membres : x = e², soit environ 7,39. L'équation ln x = a admet toujours une solution unique, x = eᵃ, quel que soit le réel a. La réponse 2e multiplie au lieu d'élever à la puissance, erreur fréquente.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'équation ln x + ln(x – 3) = ln 4 admet pour solution :",
+      "o": [
+        "x = –1 seulement",
+        "x = –1 et x = 4",
+        "x = 4 seulement",
+        "aucune solution"
+      ],
+      "r": 2,
+      "x": "On regroupe les logarithmes en ln[x(x – 3)] = ln 4, d'où x² – 3x – 4 = 0, équation dont les racines sont –1 et 4. Mais le domaine de définition impose x > 3, puisque les deux logarithmes doivent exister simultanément. Seule la valeur 4 est donc retenue, ce qui écarte la proposition B.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La solution de l'équation eˣ = 5 est :",
+      "o": [
+        "ln 5",
+        "5/e",
+        "√5",
+        "e⁵"
+      ],
+      "r": 0,
+      "x": "On applique le logarithme aux deux membres : x = ln 5, soit environ 1,61. L'équation eˣ = a n'admet de solution que si a > 0, puisque l'exponentielle est toujours strictement positive. La proposition e⁵ applique la mauvaise fonction réciproque.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'ensemble de définition de la fonction f(x) = ln(2x – 6) est :",
+      "o": [
+        "[3 ; +∞[",
+        "]–∞ ; 3[",
+        "]0 ; +∞[",
+        "]3 ; +∞["
+      ],
+      "r": 3,
+      "x": "Le logarithme n'est défini que pour une quantité STRICTEMENT positive : 2x – 6 > 0, soit x > 3. La borne 3 est exclue, car ln 0 n'existe pas. La proposition ]0 ; +∞[ est l'ensemble de définition de ln x, et non celui de ln(2x – 6).",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation ln x < 1 est :",
+      "o": [
+        "x < e",
+        "0 < x < e",
+        "x > e",
+        "0 < x < 1"
+      ],
+      "r": 1,
+      "x": "La fonction exponentielle étant croissante, ln x < 1 équivaut à x < e¹ = e, à condition que x soit strictement positif pour que ln x existe. L'ensemble solution est donc ]0 ; e[. La proposition x < e oublie cette condition d'existence du logarithme.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La solution de l'équation 2ˣ = 10 est :",
+      "o": [
+        "5",
+        "ln 5",
+        "ln 10/ln 2",
+        "ln 2/ln 10"
+      ],
+      "r": 2,
+      "x": "On applique le logarithme aux deux membres : x ln 2 = ln 10, d'où x = ln 10/ln 2, soit environ 3,32. La propriété ln(aˣ) = x ln a permet de faire descendre l'exposant. La proposition ln 5, égale à ln 10 – ln 2, confond le quotient des logarithmes avec le logarithme du quotient.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La valeur du logarithme décimal log 1 000 est :",
+      "o": [
+        "2",
+        "3",
+        "10",
+        "100"
+      ],
+      "r": 1,
+      "x": "Le logarithme décimal est la réciproque de x ↦ 10ˣ : comme 1 000 = 10³, on a log 1 000 = 3. Pour une puissance de 10, il donne le nombre de zéros. On l'utilise notamment pour le pH en chimie et pour l'échelle des décibels.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le logarithme népérien ln x est strictement négatif pour :",
+      "o": [
+        "0 < x < 1",
+        "x < 0",
+        "x > 1",
+        "x > e"
+      ],
+      "r": 0,
+      "x": "La fonction ln est croissante et s'annule en 1 : elle est donc négative pour 0 < x < 1 et positive pour x > 1. Pour x < 0, le logarithme n'est même pas défini. Par exemple, ln 0,5 vaut environ –0,69.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Pour x > 0 et y > 0, l'expression ln(x²y) est égale à :",
+      "o": [
+        "2 ln x × ln y",
+        "(ln x)² + ln y",
+        "2 ln x + ln y",
+        "ln 2x + ln y"
+      ],
+      "r": 2,
+      "x": "Le logarithme transforme les produits en sommes et les puissances en coefficients : ln(x²y) = ln(x²) + ln y = 2 ln x + ln y. La proposition (ln x)² confond ln(x²) avec le carré du logarithme. Ces propriétés n'ont de sens que pour des nombres strictement positifs.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La solution de l'équation ln(x + 1) = ln(3x – 5) est :",
+      "o": [
+        "x = 1",
+        "x = 2",
+        "x = 3",
+        "x = 4"
+      ],
+      "r": 2,
+      "x": "Deux logarithmes sont égaux si et seulement si leurs arguments le sont : x + 1 = 3x – 5, d'où x = 3. On vérifie que les deux arguments sont alors strictement positifs, puisqu'ils valent tous deux 4. Cette vérification du domaine est indispensable, car elle peut éliminer une solution algébrique.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La valeur de e^(ln 7) est :",
+      "o": [
+        "7",
+        "ln 7",
+        "e⁷",
+        "1/7"
+      ],
+      "r": 0,
+      "x": "L'exponentielle et le logarithme sont réciproques l'une de l'autre : e^(ln x) = x pour tout x > 0, donc e^(ln 7) = 7. Les deux fonctions s'annulent mutuellement lorsqu'on les compose. Les propositions ln 7 et e⁷ n'appliquent qu'une seule des deux fonctions.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La valeur de e^(2 ln 3) est :",
+      "o": [
+        "6",
+        "9",
+        "3e²",
+        "e⁶"
+      ],
+      "r": 1,
+      "x": "On écrit 2 ln 3 = ln(3²) = ln 9, donc e^(2 ln 3) = e^(ln 9) = 9. On applique d'abord la propriété des puissances, puis la réciprocité entre exponentielle et logarithme. La réponse 6 multiplie 2 par 3 au lieu d'élever 3 au carré.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'expression e^(x + 2)/e^(x – 1) se simplifie en :",
+      "o": [
+        "e",
+        "e^(2x + 1)",
+        "e³",
+        "e^(–3)"
+      ],
+      "r": 2,
+      "x": "Le quotient de deux exponentielles se simplifie en soustrayant les exposants : (x + 2) – (x – 1) = 3, d'où e³. Le résultat ne dépend plus de x. La proposition e^(2x + 1) additionne les exposants, règle réservée au produit de deux exponentielles.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Les solutions de l'équation e^(2x) – 3eˣ + 2 = 0 sont :",
+      "o": [
+        "1 et 2",
+        "0 et ln 2",
+        "0 et 2",
+        "ln 2 seulement"
+      ],
+      "r": 1,
+      "x": "On pose X = eˣ, ce qui donne X² – 3X + 2 = 0, de solutions X = 1 et X = 2. On revient ensuite à l'inconnue : eˣ = 1 donne x = 0, et eˣ = 2 donne x = ln 2. La proposition 1 et 2 s'arrête aux valeurs de X, sans revenir à x.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation e^(x – 1) > 1 est :",
+      "o": [
+        "x > 0",
+        "x > e",
+        "x < 1",
+        "x > 1"
+      ],
+      "r": 3,
+      "x": "Comme 1 = e⁰ et que l'exponentielle est croissante, e^(x – 1) > e⁰ équivaut à x – 1 > 0, soit x > 1. Le sens de l'inégalité est conservé, car la fonction exponentielle est croissante sur ℝ. La proposition x > e confond la valeur 1 avec le nombre e.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La limite en +∞ de la fonction f(x) = 1 – e^(–x) est :",
+      "o": [
+        "–∞",
+        "0",
+        "1",
+        "+∞"
+      ],
+      "r": 2,
+      "x": "Quand x tend vers +∞, e^(–x) = 1/eˣ tend vers 0, donc 1 – e^(–x) tend vers 1. La droite y = 1 est ainsi asymptote horizontale à la courbe en +∞. Ce type de fonction modélise par exemple un remplissage qui se stabilise progressivement.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une population de 1 000 bactéries double toutes les heures. Au bout de 5 heures, elle compte :",
+      "o": [
+        "5 000 bactéries",
+        "10 000 bactéries",
+        "16 000 bactéries",
+        "32 000 bactéries"
+      ],
+      "r": 3,
+      "x": "Doubler chaque heure revient à multiplier cinq fois par 2 : 1 000 × 2⁵ = 1 000 × 32 = 32 000. C'est une croissance exponentielle, bien plus rapide qu'une croissance linéaire. La réponse 10 000 multiplie par 2 × 5 au lieu de 2⁵.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La valeur de e⁰ + ln e est :",
+      "o": [
+        "0",
+        "1",
+        "2",
+        "e"
+      ],
+      "r": 2,
+      "x": "On a e⁰ = 1, comme pour toute puissance d'exposant nul, et ln e = 1 par définition du nombre e. La somme vaut donc 1 + 1 = 2. Ces deux valeurs de référence sont à connaître par cœur pour éviter les erreurs de calcul.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = e^(–x²) est :",
+      "o": [
+        "e^(–x²)",
+        "2x e^(–x²)",
+        "–x² e^(–x² – 1)",
+        "–2x e^(–x²)"
+      ],
+      "r": 3,
+      "x": "La dérivée de e^u est u' × e^u, avec ici u = –x² et u' = –2x, d'où –2x e^(–x²). La proposition 2x e^(–x²) oublie le signe moins de l'exposant. La dérivée est positive pour x < 0 et négative pour x > 0, d'où un maximum en 0.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une primitive de la fonction f(x) = 3x² + 2x est :",
+      "o": [
+        "x³ + x²",
+        "6x + 2",
+        "3x³ + 2x²",
+        "x³ + 2x"
+      ],
+      "r": 0,
+      "x": "Une primitive de xⁿ est xⁿ⁺¹/(n + 1) : celle de 3x² est x³ et celle de 2x est x², d'où F(x) = x³ + x², à une constante près. On vérifie en dérivant : 3x² + 2x. La proposition 6x + 2 est la dérivée, c'est-à-dire l'opération inverse.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une primitive de la fonction f(x) = 1/x sur ]0 ; +∞[ est :",
+      "o": [
+        "–1/x²",
+        "ln x",
+        "eˣ",
+        "x²/2"
+      ],
+      "r": 1,
+      "x": "La fonction ln est, par définition, la primitive de 1/x sur ]0 ; +∞[ qui s'annule en 1. On vérifie que (ln x)' = 1/x. La proposition –1/x² est la dérivée de 1/x, et non l'une de ses primitives.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une primitive de la fonction f(x) = e^(2x) est :",
+      "o": [
+        "e^(2x)",
+        "2e^(2x)",
+        "e^(2x)/2",
+        "e^(2x + 1)/(2x + 1)"
+      ],
+      "r": 2,
+      "x": "Une primitive de e^(ax) est e^(ax)/a, ici e^(2x)/2, car sa dérivée redonne 2 × e^(2x)/2 = e^(2x). La proposition 2e^(2x) est la dérivée de la fonction. On ne traite pas l'exponentielle comme une puissance, ce qui écarte la dernière proposition.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'intégrale de 0 à 2 de la fonction 3x² vaut :",
+      "o": [
+        "4",
+        "6",
+        "8",
+        "12"
+      ],
+      "r": 2,
+      "x": "Une primitive de 3x² est x³, donc l'intégrale vaut F(2) – F(0) = 8 – 0 = 8. On calcule toujours la différence des valeurs de la primitive aux deux bornes. La réponse 12 évalue la fonction 3x² en x = 2 au lieu d'en prendre une primitive.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'intégrale de 1 à e² de la fonction 1/x vaut :",
+      "o": [
+        "1",
+        "2",
+        "e",
+        "e²"
+      ],
+      "r": 1,
+      "x": "Une primitive de 1/x est ln x, donc l'intégrale vaut ln(e²) – ln 1 = 2 – 0 = 2. On utilise ici la propriété ln(eᵃ) = a. La réponse e² confond la borne supérieure de l'intégrale avec sa valeur.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'intégrale de 0 à 1 de la fonction eˣ vaut :",
+      "o": [
+        "1",
+        "e – 1",
+        "e",
+        "e + 1"
+      ],
+      "r": 1,
+      "x": "Une primitive de eˣ est eˣ elle-même, donc l'intégrale vaut e¹ – e⁰ = e – 1, soit environ 1,72. Il ne faut pas oublier de retrancher e⁰ = 1, valeur de la primitive à la borne inférieure. La réponse e oublie précisément cette soustraction.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'aire du domaine compris entre la courbe de y = x², l'axe des abscisses et les droites x = 0 et x = 3 vaut :",
+      "o": [
+        "9",
+        "18",
+        "27",
+        "81"
+      ],
+      "r": 0,
+      "x": "Comme la fonction est positive sur [0 ; 3], l'aire vaut l'intégrale de x² entre 0 et 3, soit [x³/3] = 27/3 = 9 unités d'aire. La réponse 27 oublie de diviser par 3 dans la primitive. Une intégrale ne mesure directement une aire que si la fonction reste positive.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La valeur moyenne de la fonction f(x) = 2x sur l'intervalle [0 ; 4] est :",
+      "o": [
+        "2",
+        "4",
+        "8",
+        "16"
+      ],
+      "r": 1,
+      "x": "La valeur moyenne vaut l'intégrale de f sur [a ; b] divisée par b – a, soit [x²] de 0 à 4 divisé par 4, c'est-à-dire 16/4 = 4. Pour une fonction affine, elle correspond à la valeur au milieu de l'intervalle, f(2) = 4. La réponse 16 oublie de diviser par la longueur de l'intervalle.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Sachant que l'intégrale de 0 à 1 de f(x) vaut 5, l'intégrale de 0 à 1 de 2f(x) + 3 vaut :",
+      "o": [
+        "8",
+        "10",
+        "11",
+        "13"
+      ],
+      "r": 3,
+      "x": "Par linéarité, l'intégrale vaut 2 × 5 + l'intégrale de 3 sur [0 ; 1], soit 10 + 3 × 1 = 13. L'intégrale d'une constante sur un intervalle de longueur 1 vaut cette constante elle-même. La réponse 10 oublie l'intégrale du terme constant.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'intégrale de –1 à 1 de la fonction x³ vaut :",
+      "o": [
+        "–1/2",
+        "0",
+        "1/2",
+        "2"
+      ],
+      "r": 1,
+      "x": "Une primitive de x³ est x⁴/4, d'où 1/4 – 1/4 = 0. Ce résultat s'explique par la parité : la fonction est impaire, et ses contributions de part et d'autre de 0 se compensent exactement. Cela ne signifie pas que l'aire géométrique soit nulle : elle vaut 1/2.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une primitive de la fonction f(x) = sin(2x) est :",
+      "o": [
+        "cos(2x)/2",
+        "–cos(2x)/2",
+        "–2 cos(2x)",
+        "2 cos(2x)"
+      ],
+      "r": 1,
+      "x": "Une primitive de sin(ax) est –cos(ax)/a, ici –cos(2x)/2, car sa dérivée vaut –(–2 sin 2x)/2 = sin(2x). Le signe moins vient de la dérivée du cosinus, et la division par 2 compense le facteur intérieur. La proposition –2 cos(2x) multiplie au lieu de diviser.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une primitive de la fonction f(x) = 2x/(x² + 1) est :",
+      "o": [
+        "ln(x² + 1)",
+        "1/(x² + 1)",
+        "x² ln(x² + 1)",
+        "2 ln(x² + 1)"
+      ],
+      "r": 0,
+      "x": "L'expression a la forme u'/u avec u = x² + 1, dont une primitive est ln u, la quantité x² + 1 étant toujours positive. On vérifie en dérivant : 2x/(x² + 1). La proposition 2 ln(x² + 1) compte deux fois le facteur 2 déjà contenu dans u'.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'intégrale de 0 à 1 de la fonction x eˣ vaut :",
+      "o": [
+        "1",
+        "e – 1",
+        "2",
+        "e"
+      ],
+      "r": 0,
+      "x": "On intègre par parties en dérivant x et en intégrant eˣ : une primitive de x eˣ est x eˣ – eˣ = (x – 1)eˣ. Entre 0 et 1, on obtient 0 – (–1) = 1. On contrôle par dérivation, puisque la dérivée de (x – 1)eˣ vaut bien x eˣ.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une primitive de la fonction f(x) = 1/(x + 1)² sur ]–1 ; +∞[ est :",
+      "o": [
+        "ln((x + 1)²)",
+        "1/(x + 1)",
+        "–2/(x + 1)³",
+        "–1/(x + 1)"
+      ],
+      "r": 3,
+      "x": "L'expression est de la forme u'/u² avec u = x + 1, dont une primitive est –1/u, soit –1/(x + 1). On vérifie que la dérivée de –1/(x + 1) vaut bien 1/(x + 1)². La proposition –2/(x + 1)³ est la dérivée de la fonction, et non une primitive.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le produit des nombres complexes (2 + 3i)(1 – i) est égal à :",
+      "o": [
+        "–1 + i",
+        "5 – i",
+        "5 + i",
+        "2 – 3i"
+      ],
+      "r": 2,
+      "x": "On développe en utilisant i² = –1 : 2 – 2i + 3i – 3i² = 2 + i + 3 = 5 + i. Le terme –3i² devient +3, ce qui explique la partie réelle 5. La proposition –1 + i oublie ce changement de signe et conserve –3.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le module du nombre complexe 3 – 4i est :",
+      "o": [
+        "1",
+        "5",
+        "7",
+        "25"
+      ],
+      "r": 1,
+      "x": "Le module de a + bi vaut √(a² + b²), soit √(9 + 16) = √25 = 5. Il représente la distance entre l'origine et le point d'affixe 3 – 4i. La réponse 25 oublie la racine carrée, et la réponse 7 additionne les parties sans les élever au carré.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le conjugué du nombre complexe 2 – 5i est :",
+      "o": [
+        "–2 + 5i",
+        "–2 – 5i",
+        "5 – 2i",
+        "2 + 5i"
+      ],
+      "r": 3,
+      "x": "Le conjugué de a + bi est a – bi : on change seulement le signe de la partie imaginaire, d'où 2 + 5i. Géométriquement, il correspond au symétrique du point par rapport à l'axe des réels. La proposition –2 + 5i est l'opposé, qui change les deux signes.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le nombre complexe 1/i est égal à :",
+      "o": [
+        "i",
+        "1",
+        "–i",
+        "–1"
+      ],
+      "r": 2,
+      "x": "On multiplie le numérateur et le dénominateur par i : 1/i = i/i² = i/(–1) = –i. On vérifie que i × (–i) = –i² = 1. Diviser par i revient donc à multiplier par –i.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La valeur de i⁷ est :",
+      "o": [
+        "1",
+        "i",
+        "–1",
+        "–i"
+      ],
+      "r": 3,
+      "x": "Les puissances de i se répètent tous les quatre rangs, car i⁴ = 1 : i⁷ = i⁴ × i³ = i³ = –i. Il suffit donc de calculer le reste de la division de l'exposant par 4, ici 3. Retenez le cycle i, –1, –i, 1.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La forme algébrique de (1 + i)² est :",
+      "o": [
+        "2",
+        "1 + i²",
+        "2 + 2i",
+        "2i"
+      ],
+      "r": 3,
+      "x": "On développe : (1 + i)² = 1 + 2i + i² = 1 + 2i – 1 = 2i. Le nombre obtenu est imaginaire pur, puisque sa partie réelle est nulle. La proposition 2 + 2i oublie que i² vaut –1 et non +1.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans l'ensemble des nombres complexes, les solutions de l'équation z² + 4 = 0 sont :",
+      "o": [
+        "2 et –2",
+        "4i et –4i",
+        "2i et –2i",
+        "aucune solution"
+      ],
+      "r": 2,
+      "x": "L'équation s'écrit z² = –4 = (2i)², d'où z = 2i ou z = –2i. Dans ℂ, contrairement à ℝ, tout nombre réel négatif possède deux racines carrées. La proposition « aucune solution » n'est vraie que dans l'ensemble des réels.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un argument du nombre complexe 1 + i est :",
+      "o": [
+        "0",
+        "π/4",
+        "π/2",
+        "π"
+      ],
+      "r": 1,
+      "x": "Le point d'affixe 1 + i a deux coordonnées égales et positives : il se situe sur la bissectrice du premier quadrant, d'où un argument de π/4. En effet, cos θ = sin θ = 1/√2. Le module de ce nombre vaut √2.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans l'ensemble des nombres complexes, les solutions de l'équation z² – 2z + 5 = 0 sont :",
+      "o": [
+        "–1 + 2i et –1 – 2i",
+        "2 + i et 2 – i",
+        "1 + 4i et 1 – 4i",
+        "1 + 2i et 1 – 2i"
+      ],
+      "r": 3,
+      "x": "Le discriminant vaut Δ = 4 – 20 = –16 = (4i)², donc les solutions sont (2 ± 4i)/2 = 1 ± 2i. Elles sont conjuguées l'une de l'autre, comme toujours lorsque les coefficients sont réels et le discriminant négatif. La proposition 1 ± 4i oublie de diviser 4i par 2.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La partie réelle du nombre complexe (3 + i)/(1 – i) est :",
+      "o": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "r": 0,
+      "x": "On multiplie par le conjugué du dénominateur : (3 + i)(1 + i)/((1 – i)(1 + i)) = (3 + 4i – 1)/2 = (2 + 4i)/2 = 1 + 2i. La partie réelle vaut donc 1, et la partie imaginaire 2. La réponse 3 divise seulement les parties réelles entre elles.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Les solutions de l'équation différentielle y' = 3y sont les fonctions :",
+      "o": [
+        "y = 3x + C",
+        "y = e^(x/3)",
+        "y = Cx³",
+        "y = Ce^(3x)"
+      ],
+      "r": 3,
+      "x": "Les solutions de l'équation y' = ay sont les fonctions y = Ce^(ax), où C est une constante réelle ; ici a = 3, d'où y = Ce^(3x). On vérifie que la dérivée de Ce^(3x) vaut 3Ce^(3x), c'est-à-dire 3y. La proposition y = 3x + C a une dérivée constante, qui ne peut valoir 3y.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La solution de l'équation différentielle y' = 2y vérifiant y(0) = 5 est :",
+      "o": [
+        "y = 5e^(2x)",
+        "y = 2e^(5x)",
+        "y = e^(2x) + 5",
+        "y = 5 + 2x"
+      ],
+      "r": 0,
+      "x": "La solution générale est y = Ce^(2x), et la condition y(0) = C × e⁰ = C = 5 fixe la constante, d'où y = 5e^(2x). La proposition e^(2x) + 5 vaut 6 en 0 et ne vérifie pas l'équation. Une condition initiale détermine toujours une solution unique.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Les solutions de l'équation différentielle y' + y = 0 sont les fonctions :",
+      "o": [
+        "y = Ce^(–x)",
+        "y = Ceˣ",
+        "y = –Ceˣ",
+        "y = C – x"
+      ],
+      "r": 0,
+      "x": "L'équation s'écrit y' = –y, de la forme y' = ay avec a = –1 : ses solutions sont y = Ce^(–x). On vérifie que la dérivée de Ce^(–x) vaut –Ce^(–x), soit –y. La proposition Ceˣ est sa propre dérivée et vérifie donc y' = y, une autre équation.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La solution constante de l'équation différentielle y' = 2y – 6 est :",
+      "o": [
+        "y = –6",
+        "y = –3",
+        "y = 2",
+        "y = 3"
+      ],
+      "r": 3,
+      "x": "Une solution constante a une dérivée nulle : 0 = 2y – 6, d'où y = 3. La solution générale s'obtient ensuite en ajoutant Ce^(2x), soit y = Ce^(2x) + 3. La réponse –3 commet une erreur de signe en isolant y.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La valeur exacte de cos(π/3) est :",
+      "o": [
+        "0",
+        "1/2",
+        "√2/2",
+        "√3/2"
+      ],
+      "r": 1,
+      "x": "Sur le cercle trigonométrique, l'angle π/3 correspond à 60°, dont le cosinus vaut 1/2 et le sinus √3/2. Les valeurs remarquables de 0, π/6, π/4, π/3 et π/2 sont à connaître par cœur. La réponse √3/2 confond le cosinus avec le sinus de cet angle.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La valeur exacte de tan(π/4) est :",
+      "o": [
+        "0",
+        "√3/3",
+        "1",
+        "√3"
+      ],
+      "r": 2,
+      "x": "Pour l'angle π/4, le sinus et le cosinus sont égaux, tous deux à √2/2, donc leur quotient vaut 1. La tangente de π/6 vaut √3/3 et celle de π/3 vaut √3. La tangente d'un angle s'obtient toujours comme le quotient du sinus par le cosinus.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un angle de 150° mesure en radians :",
+      "o": [
+        "2π/3",
+        "3π/4",
+        "5π/6",
+        "7π/6"
+      ],
+      "r": 2,
+      "x": "Comme 180° correspondent à π radians, on multiplie la mesure en degrés par π/180 : 150 × π/180 = 5π/6. Ainsi, 150° = 5π/6 radians. La proposition A correspond à 120°, la proposition B à 135° et la proposition D à 210°. Les radians sont notamment utilisés dans les formules usuelles de dérivation des fonctions trigonométriques.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Sachant que cos x = 3/5 et que x appartient à ]0 ; π/2[, la valeur de sin x est :",
+      "o": [
+        "1/5",
+        "2/5",
+        "3/5",
+        "4/5"
+      ],
+      "r": 3,
+      "x": "La relation fondamentale cos²x + sin²x = 1 donne sin²x = 1 – 9/25 = 16/25, donc sin x = 4/5 ou –4/5. Comme x est compris entre 0 et π/2, le sinus est positif : sin x = 4/5. Le signe se déduit toujours du quadrant dans lequel se trouve l'angle.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Sur l'intervalle [0 ; 2π[, les solutions de l'équation cos x = 0 sont :",
+      "o": [
+        "0 et π",
+        "π/2 seulement",
+        "π/4 et 3π/4",
+        "π/2 et 3π/2"
+      ],
+      "r": 3,
+      "x": "Le cosinus correspond à l'abscisse du point associé sur le cercle trigonométrique : il est nul aux deux points situés sur l'axe vertical, d'angles π/2 et 3π/2. Les valeurs 0 et π annulent au contraire le sinus. Sur un tour complet, l'équation admet donc deux solutions.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Sachant que sin x = 1/3, la valeur de cos(2x) est :",
+      "o": [
+        "1/3",
+        "5/9",
+        "2/3",
+        "7/9"
+      ],
+      "r": 3,
+      "x": "La formule de duplication cos 2x = 1 – 2 sin²x donne 1 – 2 × 1/9 = 1 – 2/9 = 7/9. Elle admet aussi les formes 2 cos²x – 1 et cos²x – sin²x. La réponse 2/3 double simplement le sinus, ce qui ne correspond à aucune formule.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La période de la fonction f(x) = sin(2x) est :",
+      "o": [
+        "π/2",
+        "π",
+        "2π",
+        "4π"
+      ],
+      "r": 1,
+      "x": "La fonction sinus a pour période 2π ; en multipliant la variable par 2, on parcourt un cycle deux fois plus vite, d'où une période de 2π/2 = π. Plus généralement, sin(ax) a pour période 2π/a. La réponse 4π multiplie au lieu de diviser.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans un triangle ABC, on a AC = 5, AB = 8 et un angle en A de 60°. La longueur BC vaut :",
+      "o": [
+        "7",
+        "√89",
+        "10",
+        "13"
+      ],
+      "r": 0,
+      "x": "La formule d'Al-Kashi généralise le théorème de Pythagore : BC² = AC² + AB² – 2 × AC × AB × cos A = 25 + 64 – 80 × 0,5 = 49, d'où BC = 7. La réponse √89 oublie le terme correctif, comme si le triangle était rectangle en A. La réponse 13 additionne simplement les deux côtés.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans un repère orthonormé, le produit scalaire des vecteurs u(2 ; 3) et v(4 ; –1) vaut :",
+      "o": [
+        "–5",
+        "5",
+        "11",
+        "14"
+      ],
+      "r": 1,
+      "x": "Le produit scalaire de u(x ; y) et v(x' ; y') vaut xx' + yy' = 2 × 4 + 3 × (–1) = 8 – 3 = 5. Le résultat est un nombre, et non un vecteur. La réponse 11 oublie le signe de la composante –1.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Les vecteurs u(3 ; m) et v(2 ; –6) sont orthogonaux pour m égal à :",
+      "o": [
+        "–3",
+        "–1",
+        "0",
+        "1"
+      ],
+      "r": 3,
+      "x": "Deux vecteurs sont orthogonaux lorsque leur produit scalaire est nul : 3 × 2 + m × (–6) = 6 – 6m = 0, d'où m = 1. On vérifie que 6 – 6 = 0. La réponse –1 commet une erreur de signe sur la composante –6.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La norme du vecteur u(6 ; –8) est :",
+      "o": [
+        "10",
+        "14",
+        "48",
+        "100"
+      ],
+      "r": 0,
+      "x": "La norme d'un vecteur u(x ; y) vaut √(x² + y²) = √(36 + 64) = √100 = 10. Le signe des composantes n'intervient pas, puisqu'elles sont élevées au carré. La réponse 100 oublie la racine carrée, et 14 additionne simplement les valeurs absolues des composantes.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Les vecteurs u(2 ; 3) et v(6 ; k) sont colinéaires pour k égal à :",
+      "o": [
+        "3",
+        "6",
+        "9",
+        "18"
+      ],
+      "r": 2,
+      "x": "Deux vecteurs sont colinéaires lorsque leur déterminant est nul : 2k – 3 × 6 = 0, d'où k = 9. On retrouve que v = 3u, ses deux composantes étant multipliées par 3. La réponse 6 recopie la première composante au lieu de respecter la proportionnalité.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'équation du cercle de centre (2 ; –1) et de rayon 3 est :",
+      "o": [
+        "(x + 2)² + (y – 1)² = 9",
+        "(x – 2)² + (y + 1)² = 3",
+        "(x – 2)² + (y + 1)² = 9",
+        "(x – 2)² + (y – 1)² = 9"
+      ],
+      "r": 2,
+      "x": "Le cercle de centre (a ; b) et de rayon r a pour équation (x – a)² + (y – b)² = r², d'où (x – 2)² + (y + 1)² = 9. L'ordonnée –1 du centre fait apparaître y + 1. La proposition B oublie d'élever le rayon au carré.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le centre du cercle d'équation x² + y² – 4x + 6y – 3 = 0 a pour coordonnées :",
+      "o": [
+        "(2 ; –3)",
+        "(–2 ; 3)",
+        "(4 ; –6)",
+        "(–4 ; 6)"
+      ],
+      "r": 0,
+      "x": "On complète les carrés : (x – 2)² – 4 + (y + 3)² – 9 – 3 = 0, soit (x – 2)² + (y + 3)² = 16. Le centre est donc (2 ; –3) et le rayon vaut 4. La proposition (4 ; –6) reprend les coefficients sans les diviser par –2.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans un repère orthonormé, la distance du point A(1 ; 2) à la droite d'équation 3x + 4y – 1 = 0 vaut :",
+      "o": [
+        "1",
+        "2",
+        "10",
+        "11"
+      ],
+      "r": 1,
+      "x": "La distance de M(x₀ ; y₀) à la droite ax + by + c = 0 vaut |ax₀ + by₀ + c|/√(a² + b²), soit |3 + 8 – 1|/5 = 10/5 = 2. Le dénominateur √(9 + 16) = 5 est la norme du vecteur normal à la droite. La réponse 10 oublie de diviser par cette norme.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'équation cartésienne de la droite de vecteur normal n(2 ; –1) passant par A(1 ; 3) est :",
+      "o": [
+        "2x – y + 1 = 0",
+        "x + 2y – 7 = 0",
+        "2x – y – 1 = 0",
+        "–x + 2y – 5 = 0"
+      ],
+      "r": 0,
+      "x": "Un vecteur normal n(a ; b) conduit à une équation ax + by + c = 0, ici 2x – y + c = 0 ; le point A impose 2 – 3 + c = 0, soit c = 1. Les propositions B et D passent aussi par A, mais avec d'autres vecteurs normaux. La proposition C a le bon vecteur normal mais ne passe pas par A.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Avec A(0 ; 0) et B(4 ; 8), le barycentre des points pondérés (A ; 1) et (B ; 3) a pour coordonnées :",
+      "o": [
+        "(1 ; 2)",
+        "(2 ; 4)",
+        "(3 ; 6)",
+        "(4 ; 8)"
+      ],
+      "r": 2,
+      "x": "Le barycentre G vérifie G = (1 × A + 3 × B)/(1 + 3), soit ((0 + 12)/4 ; (0 + 24)/4) = (3 ; 6). Il se trouve aux trois quarts du segment [AB], plus près du point affecté du plus grand coefficient. Le milieu (2 ; 4) correspondrait à des coefficients égaux.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans un repère orthonormé, l'angle géométrique formé par les vecteurs u(1 ; √3) et v(1 ; 0) mesure :",
+      "o": [
+        "π/6",
+        "π/4",
+        "π/3",
+        "π/2"
+      ],
+      "r": 2,
+      "x": "Le cosinus de l'angle vaut (u · v)/(‖u‖ × ‖v‖) = 1/(2 × 1) = 1/2, puisque ‖u‖ = √(1 + 3) = 2. L'angle dont le cosinus vaut 1/2 est π/3, soit 60°. La réponse π/6 correspondrait à un cosinus de √3/2.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La variance de la série statistique 2 ; 4 ; 6 est :",
+      "o": [
+        "2",
+        "8/3",
+        "4",
+        "8"
+      ],
+      "r": 1,
+      "x": "La moyenne vaut 4, et la variance est la moyenne des carrés des écarts à la moyenne : ((2 – 4)² + 0² + (6 – 4)²)/3 = 8/3. La réponse 8 oublie de diviser par l'effectif. L'écart-type, racine carrée de la variance, vaut environ 1,63.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'écart-type de la série statistique 5 ; 5 ; 5 ; 5 est :",
+      "o": [
+        "0",
+        "1",
+        "5",
+        "25"
+      ],
+      "r": 0,
+      "x": "Toutes les valeurs étant égales à la moyenne 5, les écarts sont tous nuls, donc la variance et l'écart-type valent 0. L'écart-type mesure la dispersion autour de la moyenne : il n'est nul que si la série est constante. La réponse 5 confond l'écart-type avec la moyenne.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'écart-type de la série 2 ; 4 ; 4 ; 4 ; 5 ; 5 ; 7 ; 9 est :",
+      "o": [
+        "2",
+        "4",
+        "5",
+        "16"
+      ],
+      "r": 0,
+      "x": "La moyenne vaut 40/8 = 5, et la somme des carrés des écarts vaut 9 + 1 + 1 + 1 + 0 + 0 + 4 + 16 = 32. La variance vaut donc 32/8 = 4, et l'écart-type √4 = 2. La réponse 4 donne la variance, qu'il faut encore passer à la racine carrée.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Si l'on ajoute 3 à chacune des valeurs d'une série statistique, son écart-type :",
+      "o": [
+        "augmente de 3",
+        "est multiplié par 3",
+        "reste inchangé",
+        "augmente de 9"
+      ],
+      "r": 2,
+      "x": "Ajouter une même constante à toutes les valeurs décale la série sans modifier les écarts à la moyenne, qui augmente elle aussi de 3. L'écart-type reste donc identique. En revanche, multiplier toutes les valeurs par 3 multiplierait l'écart-type par 3 et la variance par 9.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le premier quartile de la série 1 ; 3 ; 5 ; 7 ; 9 ; 11 ; 13 ; 15 est :",
+      "o": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "r": 1,
+      "x": "Avec la convention usuelle, le premier quartile est la plus petite valeur telle qu'au moins 25 % des données lui soient inférieures ou égales : comme la série ordonnée contient 8 valeurs, son rang vaut 8 × 0,25 = 2, d'où Q₁ = 3. De même, Q₃ occupe le rang 6 et vaut 11. L'écart interquartile vaut alors 11 – 3 = 8.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une série regroupée en classes compte 4 valeurs dans [0 ; 10[ et 6 valeurs dans [10 ; 20[. Sa moyenne estimée est :",
+      "o": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "r": 3,
+      "x": "Pour des données regroupées en classes, on utilise le centre de chaque classe : (4 × 5 + 6 × 15)/10 = (20 + 90)/10 = 11. Le résultat n'est qu'une estimation, car on ignore la répartition exacte des valeurs dans chaque classe. La réponse 10 est la moyenne simple des deux centres, qui ne tient pas compte des effectifs.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une série de 10 valeurs a pour moyenne 12. Si l'on ajoute la valeur 23, la nouvelle moyenne devient :",
+      "o": [
+        "12,5",
+        "13",
+        "17,5",
+        "35"
+      ],
+      "r": 1,
+      "x": "La somme initiale vaut 10 × 12 = 120 ; en ajoutant 23, on obtient 143 pour 11 valeurs, soit une moyenne de 13. Ajouter une valeur supérieure à la moyenne la fait toujours monter. La réponse 17,5 est la moyenne simple de 12 et 23, qui oublie le poids des dix premières valeurs.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Pour la série double x : 1 ; 2 ; 3 et y : 2 ; 4 ; 9, le point moyen G a pour coordonnées :",
+      "o": [
+        "(2 ; 5)",
+        "(3 ; 9)",
+        "(2 ; 4)",
+        "(6 ; 15)"
+      ],
+      "r": 0,
+      "x": "Le point moyen a pour coordonnées les moyennes des deux séries : x̄ = 6/3 = 2 et ȳ = 15/3 = 5. Toute droite d'ajustement obtenue par la méthode des moindres carrés passe par ce point. La proposition (6 ; 15) donne les sommes des valeurs, et non leurs moyennes.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Sur 100 candidats à un concours, 60 sont des femmes et 45 sont admis, dont 30 femmes. La probabilité qu'un candidat tiré au hasard parmi les admis soit une femme est :",
+      "o": [
+        "3/10",
+        "1/2",
+        "2/3",
+        "3/4"
+      ],
+      "r": 2,
+      "x": "Il s'agit d'une probabilité conditionnelle : on restreint l'univers aux 45 admis, parmi lesquels 30 sont des femmes, d'où 30/45 = 2/3. La réponse 3/10 est la probabilité qu'un candidat soit à la fois une femme et admis, calculée sur les 100 candidats. Le dénominateur change selon que l'on conditionne ou non.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le nombre de façons de ranger 5 livres différents sur une étagère est :",
+      "o": [
+        "25",
+        "60",
+        "120",
+        "3 125"
+      ],
+      "r": 2,
+      "x": "Le nombre de permutations de 5 objets distincts vaut 5! = 5 × 4 × 3 × 2 × 1 = 120. On dispose de 5 choix pour la première place, 4 pour la deuxième, et ainsi de suite. La réponse 3 125 = 5⁵ autorise à tort qu'un même livre occupe plusieurs places.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le nombre de façons de former une équipe de 3 personnes parmi 6 candidats est :",
+      "o": [
+        "6",
+        "15",
+        "18",
+        "20"
+      ],
+      "r": 3,
+      "x": "On choisit 3 personnes parmi 6 sans tenir compte de l'ordre, ce que compte le coefficient binomial C(6 ; 3) = 6!/(3! × 3!) = 20. La réponse 15 correspond au choix de 2 personnes parmi 6. La réponse 6 vaut 3!, c'est-à-dire le nombre de façons d'ordonner un groupe de trois.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans une association de 10 membres, le nombre de façons d'élire un président, un secrétaire et un trésorier est :",
+      "o": [
+        "30",
+        "120",
+        "720",
+        "1 000"
+      ],
+      "r": 2,
+      "x": "Les trois postes sont distincts, donc l'ordre compte : il s'agit d'un arrangement, A(10 ; 3) = 10 × 9 × 8 = 720. Une même personne ne peut cumuler deux postes, ce qui exclut 10³ = 1 000. La réponse 120 correspond au choix d'un simple groupe de trois, sans répartition des rôles.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le nombre de codes à 4 chiffres, répétitions permises, que l'on peut former avec les chiffres de 0 à 9 est :",
+      "o": [
+        "40",
+        "5 040",
+        "9 000",
+        "10 000"
+      ],
+      "r": 3,
+      "x": "Chaque position du code peut recevoir l'un des 10 chiffres, indépendamment des autres : il y a donc 10 × 10 × 10 × 10 = 10⁴ = 10 000 codes. La réponse 5 040 = 10 × 9 × 8 × 7 ne compte que les codes aux chiffres tous différents. Comme les répétitions sont permises, on multiplie toujours par 10.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "En lançant deux dés équilibrés, la probabilité d'obtenir une somme égale à 7 est :",
+      "o": [
+        "1/12",
+        "1/11",
+        "1/6",
+        "7/36"
+      ],
+      "r": 2,
+      "x": "Sur les 36 issues équiprobables, six donnent une somme de 7 : (1 ; 6), (2 ; 5), (3 ; 4) et leurs inverses, d'où 6/36 = 1/6. La réponse 1/11 suppose à tort que les onze sommes possibles, de 2 à 12, sont équiprobables. La somme 7 est d'ailleurs la plus probable de toutes.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "En lançant deux dés équilibrés, la probabilité d'obtenir au moins un six est :",
+      "o": [
+        "1/36",
+        "1/6",
+        "11/36",
+        "1/3"
+      ],
+      "r": 2,
+      "x": "On passe par l'événement contraire « aucun six », de probabilité (5/6)² = 25/36, d'où 1 – 25/36 = 11/36. Additionner 1/6 + 1/6 = 1/3 compterait deux fois le double six. La méthode de l'événement contraire est la plus sûre dès qu'apparaît l'expression « au moins un ».",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "En lançant trois fois une pièce équilibrée, la probabilité d'obtenir exactement deux fois pile est :",
+      "o": [
+        "1/8",
+        "1/4",
+        "1/3",
+        "3/8"
+      ],
+      "r": 3,
+      "x": "Le nombre de piles suit une loi binomiale de paramètres n = 3 et p = 1/2 : P(X = 2) = C(3 ; 2) × (1/2)² × (1/2) = 3/8. Le coefficient 3 compte les positions possibles des deux piles : PPF, PFP et FPP. La réponse 1/8 oublie ce coefficient et ne retient qu'une seule disposition.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une variable aléatoire X suit une loi binomiale de paramètres n = 20 et p = 0,3. Son espérance vaut :",
+      "o": [
+        "0,3",
+        "3",
+        "4,2",
+        "6"
+      ],
+      "r": 3,
+      "x": "L'espérance d'une loi binomiale vaut E(X) = n × p = 20 × 0,3 = 6 : c'est le nombre moyen de succès attendus. La réponse 4,2 est la variance, n × p × (1 – p), qu'il ne faut pas confondre avec l'espérance. La réponse 0,3 donne seulement la probabilité d'un succès.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Deux événements indépendants A et B vérifient P(A) = 0,4 et P(B) = 0,5. La probabilité P(A ∩ B) vaut :",
+      "o": [
+        "0,1",
+        "0,2",
+        "0,45",
+        "0,9"
+      ],
+      "r": 1,
+      "x": "Deux événements sont indépendants lorsque P(A ∩ B) = P(A) × P(B), soit 0,4 × 0,5 = 0,2. L'addition 0,4 + 0,5 = 0,9 concerne la réunion d'événements incompatibles, situation bien différente. L'indépendance signifie que la réalisation de l'un ne modifie pas la probabilité de l'autre.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Deux événements vérifient P(A) = 0,5, P(B) = 0,3 et P(A ∩ B) = 0,1. La probabilité P(A ∪ B) vaut :",
+      "o": [
+        "0,6",
+        "0,7",
+        "0,8",
+        "0,9"
+      ],
+      "r": 1,
+      "x": "La formule P(A ∪ B) = P(A) + P(B) – P(A ∩ B) donne 0,5 + 0,3 – 0,1 = 0,7. On retranche l'intersection, sinon elle serait comptée deux fois. La réponse 0,8 oublie cette soustraction.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une urne contient 3 boules rouges et 2 boules bleues. On tire successivement deux boules sans remise. La probabilité d'obtenir deux boules rouges est :",
+      "o": [
+        "3/10",
+        "9/25",
+        "2/5",
+        "3/5"
+      ],
+      "r": 0,
+      "x": "Sans remise, la composition de l'urne change : 3/5 pour la première boule rouge, puis 2/4 pour la seconde, d'où 3/5 × 2/4 = 6/20 = 3/10. La réponse 9/25 = (3/5)² correspond à un tirage avec remise. On peut aussi calculer C(3 ; 2)/C(5 ; 2) = 3/10.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans un concours, 40 % des candidats viennent d'un groupe A où le taux de réussite est de 50 %, et 60 % d'un groupe B où il est de 25 %. La probabilité qu'un candidat pris au hasard réussisse est :",
+      "o": [
+        "0,35",
+        "0,375",
+        "0,4",
+        "0,75"
+      ],
+      "r": 0,
+      "x": "La formule des probabilités totales donne 0,4 × 0,5 + 0,6 × 0,25 = 0,20 + 0,15 = 0,35. On pondère chaque taux de réussite par la proportion du groupe concerné. La réponse 0,375 est la moyenne simple des deux taux, qui néglige la taille des groupes.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans une école, 30 % des élèves sont inscrits en filière A, avec un taux de réussite de 60 %, et 70 % en filière B, avec un taux de 20 %. Sachant qu'un élève a réussi, la probabilité qu'il soit en filière A est :",
+      "o": [
+        "3/10",
+        "7/16",
+        "9/16",
+        "3/5"
+      ],
+      "r": 2,
+      "x": "D'après la formule de Bayes, P(A sachant R) = P(A ∩ R)/P(R), avec P(A ∩ R) = 0,3 × 0,6 = 0,18 et P(R) = 0,18 + 0,7 × 0,2 = 0,32, d'où 0,18/0,32 = 9/16. La filière A devient majoritaire parmi les admis alors qu'elle ne regroupe que 30 % des élèves. La réponse 7/16 correspond à la filière B.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le coefficient de x² dans le développement de (1 + x)⁵ est :",
+      "o": [
+        "5",
+        "10",
+        "20",
+        "25"
+      ],
+      "r": 1,
+      "x": "D'après la formule du binôme de Newton, le coefficient de x² dans (1 + x)⁵ vaut C(5 ; 2) = 10. On le lit aussi sur la ligne 1, 5, 10, 10, 5, 1 du triangle de Pascal. La réponse 25 confond ce coefficient avec 5².",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le nombre d'anagrammes du mot BARA est :",
+      "o": [
+        "6",
+        "12",
+        "16",
+        "24"
+      ],
+      "r": 1,
+      "x": "Le mot BARA compte 4 lettres, dont deux A identiques : on divise le nombre de permutations 4! = 24 par 2! = 2, d'où 12 anagrammes. Échanger les deux A ne crée pas un mot nouveau. La réponse 24 ne tient pas compte de cette répétition.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le nombre de diagonales d'un polygone convexe à 10 côtés est :",
+      "o": [
+        "35",
+        "40",
+        "45",
+        "90"
+      ],
+      "r": 0,
+      "x": "On choisit 2 sommets parmi 10, soit C(10 ; 2) = 45 segments, dont on retire les 10 côtés : il reste 35 diagonales. On retrouve la formule n(n – 3)/2 = 10 × 7/2 = 35. La réponse 45 compte aussi les côtés du polygone.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Lors d'une réunion de 15 personnes, chacune serre la main de toutes les autres une seule fois. Le nombre de poignées de main est :",
+      "o": [
+        "105",
+        "120",
+        "210",
+        "225"
+      ],
+      "r": 0,
+      "x": "Chaque poignée de main relie deux personnes, sans ordre : le nombre total vaut C(15 ; 2) = 15 × 14/2 = 105. La réponse 210 compte chaque poignée de main deux fois, une fois pour chaque participant. La réponse 225 = 15² supposerait à tort qu'une personne se serre la main à elle-même.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Trois machines indépendantes tombent chacune en panne avec une probabilité de 0,1. La probabilité qu'au moins une machine tombe en panne est :",
+      "o": [
+        "0,001",
+        "0,1",
+        "0,243",
+        "0,271"
+      ],
+      "r": 3,
+      "x": "On utilise l'événement contraire « aucune panne », de probabilité 0,9³ = 0,729, d'où 1 – 0,729 = 0,271. La réponse 0,243 ne compte que les cas d'une seule panne, et 0,001 le seul cas où les trois machines tombent en panne ensemble. L'expression « au moins une » appelle toujours le passage par le contraire.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une variable aléatoire X suit une loi binomiale de paramètres n = 50 et p = 0,2. Sa variance vaut :",
+      "o": [
+        "8",
+        "10",
+        "40",
+        "50"
+      ],
+      "r": 0,
+      "x": "La variance d'une loi binomiale vaut V(X) = n × p × (1 – p) = 50 × 0,2 × 0,8 = 8, et l'écart-type √8 ≈ 2,83. La réponse 10 est l'espérance n × p, qu'il ne faut pas confondre avec la variance. Le facteur (1 – p) rend toujours la variance inférieure à l'espérance.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un jeu fait gagner 1 000 FCFA avec une probabilité de 0,1 et perdre 200 FCFA sinon. L'espérance du gain par partie est de :",
+      "o": [
+        "–200 FCFA",
+        "–180 FCFA",
+        "–100 FCFA",
+        "–80 FCFA"
+      ],
+      "r": 3,
+      "x": "L'espérance du gain vaut 1 000 × 0,1 + (–200) × 0,9 = 100 – 180 = –80 FCFA. En moyenne, le joueur perd donc 80 FCFA par partie : le jeu lui est défavorable. La réponse –180 FCFA oublie les gains, et –200 FCFA confond le montant d'une perte avec l'espérance.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un capital placé à intérêts composés au taux annuel de 8 % double au bout d'environ :",
+      "o": [
+        "8 ans",
+        "9 ans",
+        "12,5 ans",
+        "25 ans"
+      ],
+      "r": 1,
+      "x": "On cherche n tel que 1,08ⁿ = 2, d'où n = ln 2/ln 1,08 ≈ 9,01 : le capital double en un peu plus de 9 ans. On retrouve la règle empirique dite « des 72 » (le temps de doublement d'un capital est égal à 72 divisé par le taux d'intérêt), puisque 72/8 = 9. La réponse 12,5 ans, égale à 100/8, raisonne à tort en intérêts simples.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans un repère orthonormé, l'aire du triangle de sommets A(0 ; 0), B(4 ; 1) et C(1 ; 3) vaut :",
+      "o": [
+        "5,5",
+        "6",
+        "11",
+        "12"
+      ],
+      "r": 0,
+      "x": "L'aire d'un triangle ABC vaut la moitié de la valeur absolue du déterminant des vecteurs AB et AC : |4 × 3 – 1 × 1|/2 = 11/2 = 5,5. La réponse 11 oublie la division par 2, qui correspond au passage du parallélogramme au triangle. Cette méthode évite de calculer une base et une hauteur.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Sur l'intervalle [0 ; 2π[, les solutions de l'équation sin x = 1/2 sont :",
+      "o": [
+        "π/3 et 2π/3",
+        "π/6 et 7π/6",
+        "π/6 seulement",
+        "π/6 et 5π/6"
+      ],
+      "r": 3,
+      "x": "Sur le cercle trigonométrique, le sinus vaut 1/2 pour deux angles symétriques par rapport à l'axe vertical : π/6 et π – π/6 = 5π/6. La proposition π/3 et 2π/3 correspond à un sinus de √3/2. La proposition π/6 seulement oublie la seconde solution.",
+      "_batchId": "maths_bac/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Les solutions de l'équation 3x² – 12 = 0 sont :",
+      "o": [
+        "2 seulement",
+        "4 seulement",
+        "–4 et 4",
+        "–2 et 2"
+      ],
+      "r": 3,
+      "x": "On isole x² : 3x² = 12, donc x² = 4, d'où x = –2 ou x = 2. Une équation de la forme x² = a avec a > 0 admet toujours deux solutions opposées. Les valeurs –4 et 4 confondent la racine carrée de 4 avec 4.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'équation 4x² – 4x + 1 = 0 admet :",
+      "o": [
+        "la solution double 1/2",
+        "la solution double –1/2",
+        "les deux solutions 1/4 et 1",
+        "aucune solution réelle"
+      ],
+      "r": 0,
+      "x": "Le discriminant vaut 16 – 16 = 0, donc l'équation admet une solution double x = –b/2a = 4/8 = 1/2. On reconnaît d'ailleurs l'identité (2x – 1)² = 0. La proposition –1/2 commet une erreur de signe dans la formule –b/2a.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Pour tout réel x, le trinôme x² – 2x + 3 est :",
+      "o": [
+        "toujours strictement positif",
+        "toujours strictement négatif",
+        "positif entre ses racines",
+        "négatif entre ses racines"
+      ],
+      "r": 0,
+      "x": "Le discriminant vaut 4 – 12 = –8, négatif : le trinôme n'a pas de racine réelle et garde partout le signe de a, ici positif. Il est donc strictement positif pour tout réel x. Les propositions C et D supposent à tort l'existence de racines.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation x² ≥ 9 est :",
+      "o": [
+        "x ≥ 3",
+        "–3 ≤ x ≤ 3",
+        "x ≤ –3 ou x ≥ 3",
+        "x ≥ –3"
+      ],
+      "r": 2,
+      "x": "L'inégalité x² – 9 ≥ 0 s'écrit (x – 3)(x + 3) ≥ 0, produit positif à l'extérieur de ses racines –3 et 3. L'ensemble solution est donc ]–∞ ; –3] ∪ [3 ; +∞[. La proposition x ≥ 3 oublie les nombres négatifs, dont le carré peut aussi dépasser 9.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Deux nombres ont pour somme 10 et pour produit 21. Ces nombres sont :",
+      "o": [
+        "3 et 7",
+        "2 et 8",
+        "4 et 6",
+        "1 et 9"
+      ],
+      "r": 0,
+      "x": "Les deux nombres sont les racines de x² – 10x + 21 = 0, dont le discriminant vaut 100 – 84 = 16 : on obtient (10 ± 4)/2, soit 3 et 7. On vérifie : 3 + 7 = 10 et 3 × 7 = 21. Les couples 2 et 8 ou 4 et 6 ont bien une somme de 10, mais pas le bon produit.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'équation x² – mx + 4 = 0 n'admet aucune solution réelle lorsque :",
+      "o": [
+        "m < 4",
+        "m < –4 ou m > 4",
+        "–2 < m < 2",
+        "–4 < m < 4"
+      ],
+      "r": 3,
+      "x": "Il n'y a pas de racine réelle quand le discriminant est négatif : Δ = m² – 16 < 0, soit m² < 16, c'est-à-dire –4 < m < 4. La proposition B donne au contraire les valeurs pour lesquelles l'équation admet deux solutions distinctes. La proposition –2 < m < 2 oublie le facteur 4 du discriminant.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La factorisation du trinôme 2x² – 5x – 3 est :",
+      "o": [
+        "(2x – 1)(x + 3)",
+        "(2x + 3)(x – 1)",
+        "(x + 1)(2x – 3)",
+        "(2x + 1)(x – 3)"
+      ],
+      "r": 3,
+      "x": "Les racines sont 3 et –1/2, puisque Δ = 25 + 24 = 49, d'où 2x² – 5x – 3 = 2(x – 3)(x + 1/2) = (2x + 1)(x – 3). On contrôle en développant : 2x² – 6x + x – 3. La proposition (2x – 1)(x + 3) inverse les signes des deux racines.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation x(x – 5) > 0 est :",
+      "o": [
+        "0 < x < 5",
+        "x > 5",
+        "x < 0 ou x > 5",
+        "x < –5 ou x > 0"
+      ],
+      "r": 2,
+      "x": "Le produit s'annule en 0 et en 5 ; c'est un trinôme de coefficient dominant positif, donc il est positif à l'extérieur de ses racines. L'ensemble solution est ]–∞ ; 0[ ∪ ]5 ; +∞[. La proposition 0 < x < 5 donne l'ensemble où le produit est négatif.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le reste de la division du polynôme P(x) = x³ + 2x – 5 par (x – 1) est :",
+      "o": [
+        "–2",
+        "0",
+        "1",
+        "2"
+      ],
+      "r": 0,
+      "x": "D'après le théorème du reste, le reste de la division de P(x) par (x – a) vaut P(a) : ici P(1) = 1 + 2 – 5 = –2. Il est inutile d'effectuer la division. La réponse 0 supposerait que 1 est racine du polynôme, et 2 commet une erreur de signe.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le polynôme x³ – ax + 2 est divisible par (x – 2) pour a égal à :",
+      "o": [
+        "3",
+        "4",
+        "5",
+        "10"
+      ],
+      "r": 2,
+      "x": "Le polynôme est divisible par (x – 2) si et seulement si 2 en est racine : 8 – 2a + 2 = 0, d'où a = 5. On vérifie que x³ – 5x + 2 s'annule bien pour x = 2. La réponse 10 oublie de diviser par 2.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La solution réelle de l'équation x³ = –27 est :",
+      "o": [
+        "–9",
+        "3",
+        "–3",
+        "–3 et 3"
+      ],
+      "r": 2,
+      "x": "La fonction cube est strictement croissante sur ℝ, donc l'équation x³ = –27 admet une seule solution : x = –3, puisque (–3)³ = –27. Contrairement au carré, le cube d'un nombre négatif reste négatif. La proposition –3 et 3 applique à tort le raisonnement valable pour x².",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La courbe de la fonction f(x) = (x + 2)/(x – 1) admet pour centre de symétrie le point :",
+      "o": [
+        "(1 ; 1)",
+        "(–2 ; 1)",
+        "(1 ; –2)",
+        "(–1 ; 2)"
+      ],
+      "r": 0,
+      "x": "La courbe admet une asymptote verticale x = 1 et une asymptote horizontale y = 1, rapport des coefficients de x. Son centre de symétrie est le point d'intersection des deux asymptotes, soit (1 ; 1). La proposition (–2 ; 1) prend la racine du numérateur au lieu de celle du dénominateur.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La courbe de y = (x – 3)² + 2 se déduit de celle de y = x² par la translation de vecteur :",
+      "o": [
+        "(–3 ; 2)",
+        "(3 ; –2)",
+        "(3 ; 2)",
+        "(2 ; 3)"
+      ],
+      "r": 2,
+      "x": "Remplacer x par x – 3 décale la courbe de 3 unités vers la droite, et ajouter 2 la monte de 2 unités : la translation a pour vecteur (3 ; 2). Le sommet de la parabole passe ainsi de (0 ; 0) à (3 ; 2). La proposition (–3 ; 2) se trompe de sens pour le déplacement horizontal.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation |x + 1| ≥ 2 est :",
+      "o": [
+        "–3 ≤ x ≤ 1",
+        "x ≥ 1",
+        "x ≤ –1 ou x ≥ 3",
+        "x ≤ –3 ou x ≥ 1"
+      ],
+      "r": 3,
+      "x": "L'inégalité |x + 1| ≥ 2 signifie que x + 1 ≥ 2 ou x + 1 ≤ –2, soit x ≥ 1 ou x ≤ –3. Une valeur absolue supérieure à un nombre conduit toujours à une réunion de deux intervalles. La proposition –3 ≤ x ≤ 1 correspond à l'inégalité contraire.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les solutions de l'équation |2x – 3| = |x + 1| sont :",
+      "o": [
+        "2/3 et 4",
+        "4 seulement",
+        "–2/3 et 4",
+        "2/3 seulement"
+      ],
+      "r": 0,
+      "x": "Deux valeurs absolues sont égales lorsque les quantités sont égales ou opposées : 2x – 3 = x + 1 donne x = 4, et 2x – 3 = –x – 1 donne x = 2/3. Il faut toujours envisager les deux cas. La proposition 4 seulement oublie celui des quantités opposées.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'ensemble des solutions du système d'inéquations 2x – 1 > 3 et x + 2 ≤ 7 est :",
+      "o": [
+        "x > 2",
+        "x ≤ 5",
+        "2 < x ≤ 5",
+        "2 ≤ x < 5"
+      ],
+      "r": 2,
+      "x": "La première inéquation donne x > 2 et la seconde x ≤ 5 : les solutions communes forment l'intervalle ]2 ; 5]. Les crochets suivent le caractère strict ou large de chaque inégalité. La proposition D inverse les crochets aux deux bornes.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre d'entiers relatifs x vérifiant x² < 10 est :",
+      "o": [
+        "3",
+        "4",
+        "6",
+        "7"
+      ],
+      "r": 3,
+      "x": "L'inégalité x² < 10 équivaut à –√10 < x < √10, avec √10 ≈ 3,16 : les entiers solutions sont –3, –2, –1, 0, 1, 2 et 3. Il y en a donc 7. La réponse 3 oublie les entiers négatifs et zéro, et la réponse 6 oublie seulement zéro.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La solution de l'équation x/(x – 2) = 3 est :",
+      "o": [
+        "x = –3",
+        "x = 1",
+        "x = 2",
+        "x = 3"
+      ],
+      "r": 3,
+      "x": "Pour x ≠ 2, on multiplie par x – 2 : x = 3(x – 2), soit x = 3x – 6, d'où x = 3, valeur autorisée puisqu'elle n'annule pas le dénominateur. La réponse 2 est précisément la valeur interdite, qui ne peut jamais être solution. La réponse –3 commet une erreur de signe en développant.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La valeur de 8^(2/3) est :",
+      "o": [
+        "4",
+        "16/3",
+        "12",
+        "64"
+      ],
+      "r": 0,
+      "x": "On écrit 8^(2/3) = (∛8)² = 2² = 4 : le dénominateur de l'exposant indique la racine, son numérateur la puissance. On peut aussi calculer ∛(8²) = ∛64 = 4. La réponse 16/3 multiplie à tort 8 par 2/3, et 64 oublie d'extraire la racine cubique.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La valeur de 16^(–1/2) est :",
+      "o": [
+        "–4",
+        "–1/4",
+        "1/4",
+        "4"
+      ],
+      "r": 2,
+      "x": "Un exposant négatif indique un inverse, et l'exposant 1/2 une racine carrée : 16^(–1/2) = 1/√16 = 1/4. Une puissance d'un nombre positif reste toujours positive. La réponse –4 confond l'exposant négatif avec un résultat négatif.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'expression √18 + √50 – √32 est égale à :",
+      "o": [
+        "2√2",
+        "4√2",
+        "6√2",
+        "√36"
+      ],
+      "r": 1,
+      "x": "On extrait les carrés parfaits : √18 = 3√2, √50 = 5√2 et √32 = 4√2, d'où 3√2 + 5√2 – 4√2 = 4√2. Les racines se combinent comme des termes semblables une fois ramenées au même radical. La proposition √36 additionne et soustrait les nombres sous les radicaux, ce qui est faux.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le développement de (1 + √2)² est :",
+      "o": [
+        "3",
+        "1 + 2√2",
+        "3 + 2√2",
+        "3 + √2"
+      ],
+      "r": 2,
+      "x": "On applique (a + b)² = a² + 2ab + b² : 1 + 2√2 + 2 = 3 + 2√2. Le double produit 2 × 1 × √2 ne s'annule pas. La proposition 3 l'oublie, erreur équivalente à écrire (a + b)² = a² + b².",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'ensemble de définition de la fonction f(x) = √(4 – x²) est :",
+      "o": [
+        "[–2 ; 2]",
+        "]–2 ; 2[",
+        "[0 ; 2]",
+        "]–∞ ; –2] ∪ [2 ; +∞["
+      ],
+      "r": 0,
+      "x": "La racine exige 4 – x² ≥ 0, soit x² ≤ 4, c'est-à-dire –2 ≤ x ≤ 2. Les bornes sont incluses, car √0 = 0 existe. La proposition D correspond à la condition contraire, x² ≥ 4.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La fonction f(x) = x/(x² + 1) est :",
+      "o": [
+        "paire",
+        "ni paire ni impaire",
+        "constante",
+        "impaire"
+      ],
+      "r": 3,
+      "x": "On calcule f(–x) = –x/(x² + 1) = –f(x), donc la fonction est impaire et sa courbe est symétrique par rapport à l'origine. Le dénominateur x² + 1 ne change pas quand on remplace x par –x. Seul le numérateur change de signe, ce qui suffit à conclure.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sur l'intervalle ]0 ; +∞[, la fonction f(x) = –2/x est :",
+      "o": [
+        "croissante",
+        "décroissante",
+        "constante",
+        "décroissante puis croissante"
+      ],
+      "r": 0,
+      "x": "La fonction inverse est décroissante sur ]0 ; +∞[, et la multiplication par –2, nombre négatif, inverse ce sens : f est donc croissante. On le confirme par sa dérivée 2/x², toujours positive. La proposition « décroissante » oublie l'effet du coefficient négatif.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Avec f(x) = √x et g(x) = x – 4, l'ensemble de définition de f ∘ g est :",
+      "o": [
+        "[0 ; +∞[",
+        "]4 ; +∞[",
+        "[–4 ; +∞[",
+        "[4 ; +∞["
+      ],
+      "r": 3,
+      "x": "La composée f ∘ g(x) = √(x – 4) n'est définie que si x – 4 ≥ 0, soit x ≥ 4. Il faut donc vérifier que g(x) appartient au domaine de f. La proposition [0 ; +∞[ est le domaine de f seule, sans tenir compte de la composition.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un indice des prix passe de 100 en 2020 à 135 en 2025. Le taux d'évolution des prix sur la période est de :",
+      "o": [
+        "3,5 %",
+        "13,5 %",
+        "35 %",
+        "135 %"
+      ],
+      "r": 2,
+      "x": "Un indice de base 100 se lit directement comme un pourcentage de la valeur de départ : passer de 100 à 135 représente une hausse de 35 %. La réponse 135 % confond la valeur de l'indice avec le taux d'évolution. Les indices facilitent la comparaison de grandeurs d'unités différentes.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une baisse de 15 % correspond à une multiplication par le coefficient :",
+      "o": [
+        "0,15",
+        "0,85",
+        "1,15",
+        "1,85"
+      ],
+      "r": 1,
+      "x": "Une baisse de 15 % revient à multiplier par 1 – 0,15 = 0,85. Le coefficient 1,15 correspond à une hausse de 15 %, et 0,15 donne seulement la part retranchée. Le coefficient multiplicateur permet d'enchaîner les évolutions successives par une simple multiplication.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Après une hausse de 60 %, la baisse nécessaire pour revenir à la valeur initiale est de :",
+      "o": [
+        "37,5 %",
+        "40 %",
+        "50 %",
+        "60 %"
+      ],
+      "r": 0,
+      "x": "Pour revenir à la valeur initiale, on multiplie par l'inverse du coefficient : 1/1,6 = 0,625, soit une baisse de 37,5 %. Une baisse de 60 % ramènerait bien en dessous de la valeur de départ. Plus la hausse est forte, plus l'écart avec la baisse compensatrice se creuse.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'équation de la droite parallèle à y = –3x + 1 et passant par le point (2 ; 5) est :",
+      "o": [
+        "y = –3x + 11",
+        "y = –3x + 5",
+        "y = 3x – 1",
+        "y = (1/3)x + 13/3"
+      ],
+      "r": 0,
+      "x": "Une droite parallèle a le même coefficient directeur, –3, d'où y = –3x + b ; le point (2 ; 5) impose 5 = –6 + b, soit b = 11. On vérifie : –3 × 2 + 11 = 5. La proposition D est perpendiculaire à la droite donnée, et non parallèle.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un vecteur directeur de la droite d'équation 2x – 3y + 1 = 0 est :",
+      "o": [
+        "(2 ; –3)",
+        "(–3 ; 2)",
+        "(3 ; 2)",
+        "(2 ; 3)"
+      ],
+      "r": 2,
+      "x": "Pour une droite d'équation ax + by + c = 0, un vecteur directeur est (–b ; a), soit ici (3 ; 2). Le vecteur (2 ; –3), formé des coefficients eux-mêmes, est un vecteur normal, perpendiculaire à la droite. On vérifie que (3 ; 2) est bien orthogonal à (2 ; –3).",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le système 2x + 4y = 6 et x + 2y = 5 admet :",
+      "o": [
+        "une solution unique",
+        "aucune solution",
+        "une infinité de solutions",
+        "deux solutions"
+      ],
+      "r": 1,
+      "x": "En multipliant la seconde équation par 2, on obtient 2x + 4y = 10, incompatible avec 2x + 4y = 6 : le système n'a aucune solution. Les deux droites correspondantes sont parallèles et distinctes. Il y aurait une infinité de solutions si les deux équations étaient proportionnelles jusque dans leurs seconds membres.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le système ax + y = 1 et x + y = 2 admet une solution unique si et seulement si :",
+      "o": [
+        "a ≠ 0",
+        "a ≠ 1",
+        "a ≠ 2",
+        "a = 1"
+      ],
+      "r": 1,
+      "x": "Un système de deux équations à deux inconnues admet une solution unique lorsque son déterminant est non nul : a × 1 – 1 × 1 = a – 1 ≠ 0, soit a ≠ 1. Pour a = 1, les deux droites sont parallèles et le système n'a aucune solution. Le déterminant est l'outil le plus rapide pour ce type de question.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un rectangle a une aire de 24 m² et un périmètre de 20 m. Ses dimensions sont :",
+      "o": [
+        "3 m et 8 m",
+        "2 m et 12 m",
+        "5 m et 5 m",
+        "4 m et 6 m"
+      ],
+      "r": 3,
+      "x": "Les dimensions ont pour somme 10 et pour produit 24 : ce sont les racines de x² – 10x + 24 = 0, soit 4 et 6. On vérifie : 4 × 6 = 24 et 2 × (4 + 6) = 20. Les dimensions 3 et 8 donnent bien une aire de 24, mais un périmètre de 22.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "En augmentant de 2 cm le côté d'un carré, on augmente son aire de 32 cm². Le côté initial mesure :",
+      "o": [
+        "6 cm",
+        "7 cm",
+        "8 cm",
+        "14 cm"
+      ],
+      "r": 1,
+      "x": "L'augmentation d'aire vaut (x + 2)² – x² = 4x + 4, que l'on égale à 32 : 4x = 28, donc x = 7 cm. On vérifie : 9² – 7² = 81 – 49 = 32. La réponse 8 oublie le terme constant 4 du développement.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La valeur minimale de la fonction f(x) = |x – 1| + |x – 5| est :",
+      "o": [
+        "0",
+        "4",
+        "5",
+        "6"
+      ],
+      "r": 1,
+      "x": "La quantité |x – 1| + |x – 5| est la somme des distances de x aux points 1 et 5 sur la droite réelle : elle est minimale, égale à 4, pour tout x compris entre 1 et 5. Par exemple, pour x = 3, on obtient 2 + 2 = 4. La réponse 0 supposerait que x puisse se trouver à la fois en 1 et en 5.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La fonction f(x) = 2x² – 8x + 1 est décroissante sur l'intervalle :",
+      "o": [
+        "]–∞ ; –2]",
+        "]–∞ ; 2]",
+        "[2 ; +∞[",
+        "]–∞ ; 4]"
+      ],
+      "r": 1,
+      "x": "Le sommet a pour abscisse –b/2a = 8/4 = 2, et comme a = 2 est positif, la parabole descend jusqu'au sommet puis remonte. La fonction est donc décroissante sur ]–∞ ; 2] et croissante sur [2 ; +∞[. La proposition ]–∞ ; 4] divise par a au lieu de 2a.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Si 1 ≤ x ≤ 4, alors 1/x appartient à l'intervalle :",
+      "o": [
+        "[1 ; 4]",
+        "[1/4 ; 1]",
+        "[–4 ; –1]",
+        "[1/4 ; 4]"
+      ],
+      "r": 1,
+      "x": "La fonction inverse est décroissante sur ]0 ; +∞[ : elle renverse l'ordre, donc 1/4 ≤ 1/x ≤ 1. Les bornes sont échangées par rapport à l'intervalle de départ. La proposition [1 ; 4] oublie d'appliquer la fonction, et la proposition D mélange les deux intervalles.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les solutions de l'équation x³ – 7x + 6 = 0 sont :",
+      "o": [
+        "1, 2 et –3",
+        "–1, –2 et 3",
+        "1, 2 et 3",
+        "1, –2 et 3"
+      ],
+      "r": 0,
+      "x": "On repère la racine évidente 1, puis on factorise : x³ – 7x + 6 = (x – 1)(x² + x – 6) = (x – 1)(x – 2)(x + 3). Les solutions sont donc 1, 2 et –3, dont la somme est bien nulle. La proposition B donne les racines du polynôme x³ – 7x – 6.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Si 2 < x < 3 et 1 < y < 2, alors x – y appartient à l'intervalle :",
+      "o": [
+        "]1 ; 2[",
+        "]0 ; 2[",
+        "]–1 ; 1[",
+        "]0 ; 1["
+      ],
+      "r": 1,
+      "x": "Pour encadrer une différence, on retranche la plus grande valeur de y à la plus petite de x, et inversement : 2 – 2 < x – y < 3 – 1, soit 0 < x – y < 2. On ne soustrait jamais les bornes dans le même ordre. La proposition ]1 ; 2[ commet cette erreur sur la borne inférieure.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Si 2 < x < 3 et 4 < y < 5, alors le produit xy appartient à l'intervalle :",
+      "o": [
+        "]6 ; 8[",
+        "]8 ; 15[",
+        "]2 ; 5[",
+        "]6 ; 15["
+      ],
+      "r": 1,
+      "x": "Pour des nombres positifs, on multiplie les bornes inférieures entre elles et les bornes supérieures entre elles : 2 × 4 < xy < 3 × 5, soit 8 < xy < 15. Cette règle n'est valable que si tous les nombres sont positifs. La proposition ]6 ; 15[ multiplie à tort 2 par 3.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La négation de la phrase « tous les candidats sont admis » est :",
+      "o": [
+        "aucun candidat n'est admis",
+        "au moins un candidat n'est pas admis",
+        "tous les candidats sont recalés",
+        "un seul candidat est admis"
+      ],
+      "r": 1,
+      "x": "La négation de « pour tout » est « il existe au moins un… qui ne… pas » : il suffit d'un seul candidat non admis pour contredire l'affirmation. La proposition « aucun candidat n'est admis » est bien plus forte que la simple négation. Cette règle logique sert dans les raisonnements par contre-exemple.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La contraposée de la proposition « si un entier est divisible par 6, alors il est pair » est :",
+      "o": [
+        "si un entier est pair, alors il est divisible par 6",
+        "si un entier n'est pas divisible par 6, alors il est impair",
+        "si un entier est impair, alors il n'est pas divisible par 6",
+        "un entier pair est toujours divisible par 6"
+      ],
+      "r": 2,
+      "x": "La contraposée de « si P, alors Q » est « si non Q, alors non P » : ici, si un entier est impair, il n'est pas divisible par 6. Elle est toujours vraie en même temps que la proposition initiale. La proposition A est la réciproque, qui est fausse, comme le montre l'entier 4.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Deux ensembles A et B comptent 25 et 18 éléments, dont 7 en commun. La réunion A ∪ B compte :",
+      "o": [
+        "32 éléments",
+        "36 éléments",
+        "43 éléments",
+        "50 éléments"
+      ],
+      "r": 1,
+      "x": "On applique la formule card(A ∪ B) = card A + card B – card(A ∩ B) = 25 + 18 – 7 = 36. Les éléments communs ne doivent être comptés qu'une seule fois. La réponse 43 additionne simplement les deux effectifs, en comptant deux fois les 7 éléments communs.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La solution de l'équation 4ˣ = 8 est :",
+      "o": [
+        "x = 3/4",
+        "x = 3/2",
+        "x = 2",
+        "x = 4"
+      ],
+      "r": 1,
+      "x": "On écrit les deux membres avec la base 2 : 4ˣ = 2^(2x) et 8 = 2³, donc 2x = 3 et x = 3/2. Ramener à une base commune évite de recourir au logarithme. La réponse 2 correspondrait à 4² = 16 et non à 8.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La parabole d'équation y = x² – 4x + 3 coupe l'axe des abscisses aux points d'abscisses :",
+      "o": [
+        "–1 et –3",
+        "0 et 3",
+        "3 seulement",
+        "1 et 3"
+      ],
+      "r": 3,
+      "x": "La parabole coupe l'axe des abscisses là où y = 0 : x² – 4x + 3 = 0 a pour discriminant 16 – 12 = 4, d'où x = 1 et x = 3. La proposition 0 et 3 confond ces abscisses avec l'ordonnée à l'origine, qui vaut 3. Les points d'intersection sont donc (1 ; 0) et (3 ; 0).",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La parabole y = x² et la droite y = 2x + 3 se coupent aux points :",
+      "o": [
+        "(3 ; 9) seulement",
+        "(1 ; 1) et (–3 ; 9)",
+        "(0 ; 0) et (2 ; 4)",
+        "(–1 ; 1) et (3 ; 9)"
+      ],
+      "r": 3,
+      "x": "On égale les ordonnées : x² = 2x + 3, soit x² – 2x – 3 = 0, de solutions –1 et 3, d'où les points (–1 ; 1) et (3 ; 9). On contrôle avec la droite : 2 × (–1) + 3 = 1 et 2 × 3 + 3 = 9. La proposition B inverse les signes des abscisses.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'ensemble de définition de la fonction f(x) = 1/√(x + 2) est :",
+      "o": [
+        "[–2 ; +∞[",
+        "]–∞ ; –2[",
+        "ℝ \\ {–2}",
+        "]–2 ; +∞["
+      ],
+      "r": 3,
+      "x": "La racine doit exister et ne pas s'annuler, puisqu'elle est au dénominateur : x + 2 > 0, soit x > –2. La borne –2 est donc exclue, contrairement au cas de √(x + 2) seule. La proposition ℝ \\ {–2} oublie que les valeurs inférieures à –2 rendent la racine impossible.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les solutions de l'équation (x – 1)² = 2(x – 1) sont :",
+      "o": [
+        "3 seulement",
+        "–1 et 3",
+        "1 et 3",
+        "1 seulement"
+      ],
+      "r": 2,
+      "x": "On factorise par (x – 1) : (x – 1)(x – 1 – 2) = (x – 1)(x – 3) = 0, d'où x = 1 ou x = 3. Simplifier par x – 1 ferait perdre la solution 1, puisque ce facteur peut être nul. C'est la même précaution que pour toute division par une expression contenant l'inconnue.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation 2x² + 3x – 2 ≤ 0 est :",
+      "o": [
+        "]–∞ ; –2] ∪ [1/2 ; +∞[",
+        "[–1/2 ; 2]",
+        "]–2 ; 1/2[",
+        "[–2 ; 1/2]"
+      ],
+      "r": 3,
+      "x": "Les racines du trinôme sont –2 et 1/2, puisque Δ = 9 + 16 = 25 ; comme a = 2 est positif, le trinôme est négatif ou nul entre ses racines. L'ensemble solution est donc [–2 ; 1/2], bornes incluses car l'inégalité est large. La proposition C exclut à tort ces bornes.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La suite définie par u₀ = 1 et uₙ₊₁ = 0,5uₙ + 4 converge vers :",
+      "o": [
+        "4",
+        "8",
+        "16",
+        "+∞"
+      ],
+      "r": 1,
+      "x": "Si la suite converge vers ℓ, cette limite vérifie ℓ = 0,5ℓ + 4, d'où 0,5ℓ = 4 et ℓ = 8. La suite vₙ = uₙ – 8 est d'ailleurs géométrique de raison 0,5, donc elle tend vers 0. La réponse 4 se contente de reprendre la constante additive de la relation.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Pour la suite définie par uₙ₊₁ = 3uₙ – 2, la suite vₙ = uₙ – 1 est géométrique de raison :",
+      "o": [
+        "–2",
+        "1",
+        "2",
+        "3"
+      ],
+      "r": 3,
+      "x": "On calcule vₙ₊₁ = uₙ₊₁ – 1 = 3uₙ – 3 = 3(uₙ – 1) = 3vₙ : la suite (vₙ) est géométrique de raison 3. La constante 1 a été choisie comme point fixe de la relation, solution de ℓ = 3ℓ – 2. La réponse –2 reprend à tort la constante de la relation de récurrence.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La somme 1 + 3 + 9 + … + 3⁶ vaut :",
+      "o": [
+        "729",
+        "1 092",
+        "1 093",
+        "2 187"
+      ],
+      "r": 2,
+      "x": "C'est la somme des sept premiers termes d'une suite géométrique de raison 3 : (3⁷ – 1)/(3 – 1) = (2 187 – 1)/2 = 1 093. Il y a bien sept termes, de 3⁰ à 3⁶. La réponse 729 donne seulement le dernier terme, et 2 187 la puissance 3⁷.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La limite de la suite (3ⁿ – 2ⁿ)/3ⁿ quand n tend vers +∞ est :",
+      "o": [
+        "0",
+        "1/3",
+        "1",
+        "+∞"
+      ],
+      "r": 2,
+      "x": "On divise chaque terme par 3ⁿ : (3ⁿ – 2ⁿ)/3ⁿ = 1 – (2/3)ⁿ, et (2/3)ⁿ tend vers 0, puisque 2/3 est compris entre –1 et 1. La limite vaut donc 1. On factorise toujours par le terme dominant pour lever ce type d'indétermination.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La limite de la suite (2n + 1)/(n + 3) quand n tend vers +∞ est :",
+      "o": [
+        "1/3",
+        "1",
+        "2",
+        "+∞"
+      ],
+      "r": 2,
+      "x": "On factorise par n au numérateur et au dénominateur : (2 + 1/n)/(1 + 3/n), qui tend vers 2/1 = 2. Les termes en 1/n deviennent négligeables. La réponse 1/3 évalue à tort l'expression en n = 0.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une suite croissante et majorée est nécessairement :",
+      "o": [
+        "convergente",
+        "divergente vers +∞",
+        "constante",
+        "périodique"
+      ],
+      "r": 0,
+      "x": "D'après le théorème de la limite monotone, toute suite croissante et majorée converge vers une limite finie, inférieure ou égale à son majorant. Elle ne peut donc pas tendre vers +∞. Ce théorème sert souvent à prouver qu'une suite définie par récurrence admet une limite.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La somme 2 + 4 + 6 + … + 100 vaut :",
+      "o": [
+        "2 500",
+        "2 550",
+        "5 050",
+        "5 100"
+      ],
+      "r": 1,
+      "x": "C'est une suite arithmétique de 50 termes, de 2 à 100 : la somme vaut 50 × (2 + 100)/2 = 2 550. On peut aussi écrire 2 × (1 + 2 + … + 50) = 2 × 1 275. La réponse 5 050 est la somme des cent premiers entiers, impairs compris.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Pour la suite uₙ = 5 × 2ⁿ, le plus petit entier n tel que uₙ > 1 000 est :",
+      "o": [
+        "6",
+        "7",
+        "8",
+        "10"
+      ],
+      "r": 2,
+      "x": "On cherche le plus petit n tel que 5 × 2ⁿ > 1 000, soit 2ⁿ > 200 ; comme 2⁷ = 128 et 2⁸ = 256, il faut n = 8. Le logarithme le confirme : n > ln 200/ln 2 ≈ 7,64. La réponse 7 donne u₇ = 640, qui reste inférieur à 1 000.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Pour démontrer par récurrence qu'une propriété P(n) est vraie pour tout entier n ≥ 1, on vérifie d'abord :",
+      "o": [
+        "P(0)",
+        "P(n + 1)",
+        "P(n) pour tout n",
+        "P(1)"
+      ],
+      "r": 3,
+      "x": "Une démonstration par récurrence commence par l'initialisation, c'est-à-dire la vérification de la propriété au premier rang concerné, ici n = 1. On montre ensuite l'hérédité : si P(n) est vraie, alors P(n + 1) l'est aussi. Commencer par P(0) ne conviendrait que si la propriété était énoncée pour n ≥ 0.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La somme des 40 premiers entiers naturels non nuls vaut :",
+      "o": [
+        "780",
+        "800",
+        "820",
+        "1 640"
+      ],
+      "r": 2,
+      "x": "La somme des n premiers entiers vaut n(n + 1)/2, soit 40 × 41/2 = 820. La réponse 1 640 oublie la division par 2. La réponse 780 correspond à la somme des 39 premiers entiers.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = sin(3x) est :",
+      "o": [
+        "3 cos(3x)",
+        "cos(3x)",
+        "–3 cos(3x)",
+        "3 sin(3x)"
+      ],
+      "r": 0,
+      "x": "La dérivée de sin u est u' × cos u : avec u = 3x et u' = 3, on obtient 3 cos(3x). Contrairement au cosinus, la dérivée du sinus ne fait apparaître aucun signe moins. La proposition cos(3x) oublie le facteur 3 issu de la dérivée de l'angle.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La dérivée de la fonction tangente est :",
+      "o": [
+        "1 + tan²x",
+        "1/sin²x",
+        "–1/cos²x",
+        "tan²x"
+      ],
+      "r": 0,
+      "x": "La dérivée de tan x = sin x/cos x vaut, par la règle du quotient, (cos²x + sin²x)/cos²x = 1/cos²x, qui s'écrit aussi 1 + tan²x. Elle est toujours positive, ce qui montre que la tangente est croissante sur chaque intervalle de définition. La proposition –1/cos²x se trompe de signe.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = √(x² + 1) est :",
+      "o": [
+        "1/(2√(x² + 1))",
+        "2x√(x² + 1)",
+        "2x/√(x² + 1)",
+        "x/√(x² + 1)"
+      ],
+      "r": 3,
+      "x": "La dérivée de √u est u'/(2√u) : avec u = x² + 1 et u' = 2x, on obtient 2x/(2√(x² + 1)) = x/√(x² + 1). Le facteur 2 du numérateur se simplifie avec celui du dénominateur. La proposition 2x/√(x² + 1) oublie cette simplification.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = 1/(x² + 1) est :",
+      "o": [
+        "1/(2x)",
+        "–1/(x² + 1)²",
+        "2x/(x² + 1)²",
+        "–2x/(x² + 1)²"
+      ],
+      "r": 3,
+      "x": "La dérivée de 1/u est –u'/u², ici –2x/(x² + 1)². Le signe moins vient de la dérivée de la fonction inverse, et le facteur 2x de celle de l'expression intérieure. La proposition –1/(x² + 1)² oublie ce facteur 2x.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = eˣ/x, pour x ≠ 0, est :",
+      "o": [
+        "eˣ(x – 1)/x²",
+        "eˣ",
+        "eˣ(x + 1)/x²",
+        "eˣ/x²"
+      ],
+      "r": 0,
+      "x": "La règle du quotient donne (eˣ × x – eˣ × 1)/x² = eˣ(x – 1)/x². Cette dérivée s'annule pour x = 1, où la fonction atteint son minimum e sur ]0 ; +∞[. La proposition C commet une erreur de signe au numérateur.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = ln(3x) sur ]0 ; +∞[ est :",
+      "o": [
+        "1/x",
+        "3/x",
+        "1/(3x)",
+        "3 ln x"
+      ],
+      "r": 0,
+      "x": "La dérivée de ln u est u'/u, soit 3/(3x) = 1/x. On le retrouve en écrivant ln(3x) = ln 3 + ln x, la constante ln 3 ayant une dérivée nulle. La proposition 3/x oublie de diviser par u.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = (ln x)² sur ]0 ; +∞[ est :",
+      "o": [
+        "2 ln x",
+        "2/x",
+        "1/x²",
+        "(2 ln x)/x"
+      ],
+      "r": 3,
+      "x": "Pour le carré d'une fonction, (u²)' = 2u × u' : avec u = ln x et u' = 1/x, on obtient (2 ln x)/x. Il ne faut pas confondre (ln x)² avec ln(x²), dont la dérivée vaut 2/x. La proposition 2 ln x oublie le facteur u'.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'équation de la tangente à la courbe de f(x) = ln x au point d'abscisse 1 est :",
+      "o": [
+        "y = x – 1",
+        "y = x",
+        "y = x + 1",
+        "y = 1 – x"
+      ],
+      "r": 0,
+      "x": "On a f(1) = ln 1 = 0 et f'(1) = 1/1 = 1, donc la tangente s'écrit y = 1 × (x – 1) + 0 = x – 1. La courbe du logarithme reste toujours en dessous de cette tangente. La proposition y = x passe par l'origine, alors que la courbe passe par le point (1 ; 0).",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'équation de la tangente à la courbe de f(x) = eˣ au point d'abscisse 0 est :",
+      "o": [
+        "y = x",
+        "y = eˣ",
+        "y = 1",
+        "y = x + 1"
+      ],
+      "r": 3,
+      "x": "On a f(0) = e⁰ = 1 et f'(0) = e⁰ = 1, donc la tangente s'écrit y = 1 × (x – 0) + 1 = x + 1. La tangente passe par le point (0 ;1) et a pour coefficient directeur 1. La courbe de l'exponentielle reste au-dessus de cette tangente, d'où l'inégalité eˣ ≥ x + 1.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La valeur minimale de la fonction f(x) = x eˣ sur ℝ est :",
+      "o": [
+        "–e",
+        "–1",
+        "–1/e",
+        "0"
+      ],
+      "r": 2,
+      "x": "La dérivée (x + 1)eˣ s'annule en x = –1, où elle passe du négatif au positif : la fonction y atteint son minimum f(–1) = –e⁻¹ = –1/e, soit environ –0,37. La réponse –1 donne l'abscisse du minimum, et non sa valeur. Le signe de la dérivée est celui de x + 1, puisque eˣ est toujours positif.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La valeur maximale de la fonction f(x) = (ln x)/x sur ]0 ; +∞[ est :",
+      "o": [
+        "0",
+        "1/e²",
+        "1/e",
+        "e"
+      ],
+      "r": 2,
+      "x": "La dérivée vaut (1 – ln x)/x², qui s'annule pour ln x = 1, soit x = e, et passe du positif au négatif. Le maximum vaut donc f(e) = (ln e)/e = 1/e, soit environ 0,37. La réponse e donne l'abscisse du maximum, et non sa valeur.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sur ]0 ; +∞[, la fonction f(x) = x – ln x est :",
+      "o": [
+        "croissante sur ]0 ; +∞[",
+        "croissante sur ]0 ; 1] puis décroissante",
+        "décroissante sur ]0 ; +∞[",
+        "décroissante sur ]0 ; 1] puis croissante"
+      ],
+      "r": 3,
+      "x": "La dérivée vaut 1 – 1/x = (x – 1)/x, négative sur ]0 ; 1[ et positive sur ]1 ; +∞[ : la fonction décroît puis croît. Elle atteint donc son minimum en x = 1, où elle vaut 1. On en déduit que x – ln x ≥ 1, c'est-à-dire ln x ≤ x – 1, pour tout x > 0.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La limite de ((2 + h)² – 4)/h quand h tend vers 0 est :",
+      "o": [
+        "0",
+        "2",
+        "4",
+        "+∞"
+      ],
+      "r": 2,
+      "x": "Cette limite définit le nombre dérivé de f(x) = x² en 2 : ((2 + h)² – 4)/h = (4h + h²)/h = 4 + h, qui tend vers 4. On retrouve bien f'(2) = 2 × 2 = 4. La réponse 0 conclut trop vite à partir de la forme indéterminée 0/0.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La dérivée seconde de la fonction f(x) = x⁴ est :",
+      "o": [
+        "12x²",
+        "4x³",
+        "12x³",
+        "24x"
+      ],
+      "r": 0,
+      "x": "On dérive deux fois : f'(x) = 4x³, puis f''(x) = 12x². La dérivée seconde renseigne sur la convexité : ici, elle est ≥ 0, donc la courbe est convexe. La proposition 24x est la dérivée troisième, un cran trop loin.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le produit maximal de deux nombres positifs dont la somme vaut 12 est :",
+      "o": [
+        "24",
+        "32",
+        "36",
+        "144"
+      ],
+      "r": 2,
+      "x": "Avec x et 12 – x, le produit P(x) = 12x – x² a pour dérivée 12 – 2x, nulle pour x = 6 : le produit maximal vaut 6 × 6 = 36. Le maximum est atteint lorsque les deux nombres sont égaux. La réponse 32 correspond au couple 4 et 8, moins avantageux.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le coût de production d'une entreprise, en milliers de FCFA, vaut C(q) = q² – 10q + 40. Ce coût est minimal pour une quantité q égale à :",
+      "o": [
+        "2",
+        "5",
+        "10",
+        "15"
+      ],
+      "r": 1,
+      "x": "La dérivée C'(q) = 2q – 10 s'annule pour q = 5, où elle passe du négatif au positif : le coût est minimal pour 5 unités et vaut alors 25 – 50 + 40 = 15 milliers. La réponse 15 donne la valeur du coût minimal, et non la quantité. La réponse 10 oublie de diviser par 2.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = 2ˣ est :",
+      "o": [
+        "x × 2^(x – 1)",
+        "2ˣ",
+        "2ˣ/ln 2",
+        "2ˣ ln 2"
+      ],
+      "r": 3,
+      "x": "On écrit 2ˣ = e^(x ln 2), dont la dérivée vaut ln 2 × e^(x ln 2) = 2ˣ ln 2. Une exponentielle de base a se dérive en aˣ ln a. La proposition x × 2^(x – 1) applique à tort la règle des puissances, valable seulement quand l'exposant est fixe.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = cos²x est :",
+      "o": [
+        "–2 sin x cos x",
+        "2 cos x",
+        "2 sin x cos x",
+        "–sin²x"
+      ],
+      "r": 0,
+      "x": "Pour un carré, (u²)' = 2u × u' : avec u = cos x et u' = –sin x, on obtient –2 sin x cos x, qui s'écrit aussi –sin(2x). La proposition 2 sin x cos x oublie le signe moins de la dérivée du cosinus. La proposition 2 cos x oublie le facteur u'.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La limite de (eˣ – 1)/x quand x tend vers 0 est :",
+      "o": [
+        "0",
+        "1",
+        "e",
+        "+∞"
+      ],
+      "r": 1,
+      "x": "Cette limite de référence vaut 1 : elle correspond au nombre dérivé de l'exponentielle en 0, soit e⁰ = 1. Elle traduit le fait que eˣ – 1 est proche de x lorsque x est petit. Conclure à 0 à partir de la forme 0/0 serait une erreur.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La limite de ln(1 + x)/x quand x tend vers 0 est :",
+      "o": [
+        "0",
+        "1",
+        "e",
+        "+∞"
+      ],
+      "r": 1,
+      "x": "Cette limite vaut 1, car elle représente le nombre dérivé de ln(1 + x) en 0, soit 1/(1 + 0) = 1. Pour x petit, ln(1 + x) est donc proche de x. Cette approximation sert notamment pour les taux d'intérêt faibles.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La limite en +∞ de la fonction f(x) = x e^(–x) est :",
+      "o": [
+        "–∞",
+        "0",
+        "1",
+        "+∞"
+      ],
+      "r": 1,
+      "x": "On écrit x e^(–x) = x/eˣ : d'après les croissances comparées, l'exponentielle l'emporte sur x, donc le quotient tend vers 0. La forme « +∞ × 0 » est indéterminée et doit être levée. La courbe admet ainsi l'axe des abscisses comme asymptote en +∞.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La limite de x ln x quand x tend vers 0 par valeurs positives est :",
+      "o": [
+        "–∞",
+        "–1",
+        "0",
+        "+∞"
+      ],
+      "r": 2,
+      "x": "Il s'agit d'une limite de croissances comparées : quand x tend vers 0⁺, x tend vers 0 plus vite que ln x ne tend vers –∞, donc le produit tend vers 0. La forme « 0 × (–∞) » est indéterminée. En présence d'une forme indéterminée du type « 0 × (–∞) », le terme polynomial (x) l'emporte toujours sur le terme logarithmique ln x, ce qui impose le résultat de 0.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La limite en +∞ de la fonction f(x) = ln x – x est :",
+      "o": [
+        "–∞",
+        "0",
+        "1",
+        "+∞"
+      ],
+      "r": 0,
+      "x": "On factorise par x : ln x – x = x((ln x)/x – 1), où (ln x)/x tend vers 0, donc la parenthèse tend vers –1 et le produit vers –∞. La forme « ∞ – ∞ » est ainsi levée. La réponse +∞ surestime la croissance du logarithme.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La limite en +∞ de la fonction f(x) = e^(2x) – eˣ est :",
+      "o": [
+        "–∞",
+        "0",
+        "1",
+        "+∞"
+      ],
+      "r": 3,
+      "x": "On factorise par le terme dominant e^(2x) : e^(2x)(1 – e^(–x)), où la parenthèse tend vers 1, donc la limite vaut +∞. La forme « ∞ – ∞ » est levée par cette factorisation. La réponse 0 suppose à tort que les deux termes se compensent.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La courbe de la fonction f(x) = ln(x – 2) admet pour asymptote verticale la droite :",
+      "o": [
+        "x = 2",
+        "x = 0",
+        "y = 2",
+        "x = –2"
+      ],
+      "r": 0,
+      "x": "Quand x tend vers 2 par valeurs supérieures, x – 2 tend vers 0⁺ et ln(x – 2) tend vers –∞ : la droite x = 2 est asymptote verticale. La proposition x = 0 est l'asymptote de ln x, non décalée. La proposition y = 2 désignerait une asymptote horizontale.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La limite de (x² – 9)/(x² – 5x + 6) quand x tend vers 3 est :",
+      "o": [
+        "0",
+        "3/2",
+        "6",
+        "+∞"
+      ],
+      "r": 2,
+      "x": "En x = 3, on obtient 0/0 : on factorise le numérateur et le dénominateur, (x – 3)(x + 3)/((x – 3)(x – 2)) = (x + 3)/(x – 2) pour x ≠ 3. La limite vaut alors 6/1 = 6. La réponse 0 conclut à tort sans lever l'indétermination.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La limite en –∞ de la fonction f(x) = (x³ + 1)/(2x² – 3) est :",
+      "o": [
+        "–∞",
+        "–1/2",
+        "1/2",
+        "+∞"
+      ],
+      "r": 0,
+      "x": "Le quotient des termes dominants vaut x³/(2x²) = x/2, qui tend vers –∞ quand x tend vers –∞. Le degré du numérateur l'emporte, d'où une limite infinie dont le signe suit celui de x. La réponse +∞ oublie que x est négatif.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La courbe de la fonction f(x) = (2x² – x + 3)/(x + 1) admet pour asymptote oblique la droite :",
+      "o": [
+        "y = 2x",
+        "y = 2x – 1",
+        "y = 2x + 3",
+        "y = 2x – 3"
+      ],
+      "r": 3,
+      "x": "La division euclidienne donne 2x² – x + 3 = (x + 1)(2x – 3) + 6, d'où f(x) = 2x – 3 + 6/(x + 1). Le dernier terme tend vers 0 à l'infini, donc la droite y = 2x – 3 est asymptote oblique. La proposition y = 2x ne retient que le quotient des termes dominants, sans le terme constant.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La fonction f(x) = (x² – 1)/(x – 1) se prolonge par continuité en x = 1 en posant f(1) égal à :",
       "o": [
         "0",
         "1",
@@ -8498,175 +11844,1571 @@ const QUESTIONS = {
         "+∞"
       ],
       "r": 2,
-      "x": "Quand x → +∞, on divise numérateur et dénominateur par x² (le terme dominant). On obtient (2 - 3/x + 1/x²) / (1 + 1/x - 2/x²) → 2/1 = 2."
+      "x": "Pour x ≠ 1, f(x) = (x – 1)(x + 1)/(x – 1) = x + 1, qui tend vers 2 quand x tend vers 1. On prolonge donc f par continuité en posant f(1) = 2. La réponse 0 confond la valeur du numérateur en 1 avec la limite de la fonction.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
     },
     {
-      "q": "La limite de (x² - 9) / (x - 3) quand x → 3 est :",
-      "o": [
-        "0",
-        "3",
-        "6",
-        "+∞"
-      ],
-      "r": 2,
-      "x": "On factorise le numérateur : x² - 9 = (x-3)(x+3). On simplifie : (x-3)(x+3)/(x-3) = x+3 pour x ≠ 3. Donc la limite est 3+3 = 6."
-    },
-    {
-      "q": "La limite de x·sin(1/x) quand x → +∞ est :",
+      "q": "Le nombre de solutions réelles de l'équation eˣ = 2 – x est :",
       "o": [
         "0",
         "1",
-        "+∞",
-        "-1"
+        "2",
+        "3"
       ],
       "r": 1,
-      "x": "On pose t = 1/x. Quand x → +∞, t → 0. Donc x·sin(1/x) = sin(t)/t → 1 (limite classique sin(t)/t → 1 quand t → 0)."
+      "x": "La fonction f(x) = eˣ + x – 2 est strictement croissante, puisque f'(x) = eˣ + 1 > 0, et elle passe de f(0) = –1 à f(1) = e – 1 > 0. D'après le théorème des valeurs intermédiaires appliqué à une fonction strictement monotone, l'équation admet une solution unique, située entre 0 et 1. Il ne peut donc pas y en avoir deux.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
     },
     {
-      "q": "La limite de (1 - cos x) / x² quand x → 0 est :",
+      "q": "La solution réelle de l'équation x³ = 10 est comprise entre :",
+      "o": [
+        "1 et 2",
+        "3 et 4",
+        "9 et 10",
+        "2 et 3"
+      ],
+      "r": 3,
+      "x": "On a 2³ = 8 < 10 < 27 = 3³ ; la fonction cube étant continue et strictement croissante, la solution ∛10 ≈ 2,15 se situe entre 2 et 3. Cet encadrement constitue la première étape de la méthode par dichotomie. La proposition 9 et 10 confond l'inconnue avec son cube.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La fonction exponentielle est, sur ℝ :",
+      "o": [
+        "convexe",
+        "concave",
+        "convexe puis concave",
+        "ni convexe ni concave"
+      ],
+      "r": 0,
+      "x": "La dérivée seconde de eˣ est eˣ, strictement positive : la fonction est convexe sur ℝ, et sa courbe se situe au-dessus de toutes ses tangentes. C'est ce qui justifie l'inégalité eˣ ≥ x + 1. Le logarithme est au contraire concave, puisque (ln x)'' = –1/x² < 0.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La courbe de la fonction f(x) = x³ – 6x² + 9x + 1 admet un point d'inflexion d'abscisse :",
+      "o": [
+        "1",
+        "2",
+        "3",
+        "6"
+      ],
+      "r": 1,
+      "x": "La dérivée seconde vaut f''(x) = 6x – 12, qui s'annule et change de signe en x = 2 : la courbe y change de concavité. Les valeurs 1 et 3 annulent la dérivée première, f'(x) = 3x² – 12x + 9, et correspondent aux extremums. Un point d'inflexion se cherche toujours avec f'', non avec f'.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = e^(sin x) est :",
+      "o": [
+        "e^(sin x)",
+        "e^(cos x)",
+        "sin x e^(sin x – 1)",
+        "cos x e^(sin x)"
+      ],
+      "r": 3,
+      "x": "La dérivée de e^u est u' × e^u, avec u = sin x et u' = cos x, d'où cos x × e^(sin x). La proposition e^(cos x) applique à tort la dérivée à l'exposant sans la multiplier. La proposition C traite l'exponentielle comme une puissance.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Pour la fonction f(x) = √(2x + 1), le nombre dérivé f'(4) vaut :",
+      "o": [
+        "1/6",
+        "1/3",
+        "2/3",
+        "3"
+      ],
+      "r": 1,
+      "x": "La dérivée de √u est u'/(2√u) = 2/(2√(2x + 1)) = 1/√(2x + 1), d'où f'(4) = 1/√9 = 1/3. La réponse 1/6 oublie le facteur 2 issu de la dérivée de 2x + 1. La réponse 3 donne f(4), c'est-à-dire l'image et non le nombre dérivé.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un mobile a pour position x(t) = t³ – 2t. Sa vitesse à l'instant t = 2 vaut :",
+      "o": [
+        "4",
+        "8",
+        "10",
+        "12"
+      ],
+      "r": 2,
+      "x": "La vitesse instantanée est la dérivée de la position : v(t) = 3t² – 2, d'où v(2) = 12 – 2 = 10. La réponse 4 donne la position x(2) = 8 – 4, et non la vitesse. La dérivée mesure toujours un taux de variation instantané.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Pour un coût total C(q) = 0,5q² + 20q + 100, le coût marginal pour q = 10 vaut :",
+      "o": [
+        "20",
+        "30",
+        "70",
+        "250"
+      ],
+      "r": 1,
+      "x": "Le coût marginal est assimilé à la dérivée du coût total : C'(q) = q + 20, d'où C'(10) = 30. Il représente le coût approximatif de l'unité supplémentaire produite. La réponse 250 donne le coût total C(10), et non le coût marginal.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La courbe de y = x² admet une tangente parallèle à la droite y = 4x + 1 au point d'abscisse :",
+      "o": [
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "r": 1,
+      "x": "La tangente est parallèle à la droite lorsque son coefficient directeur vaut 4 : f'(x) = 2x = 4, d'où x = 2. Le point de contact est donc (2 ; 4). La réponse 4 confond le coefficient directeur avec l'abscisse cherchée.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = (2x – 1)eˣ est :",
+      "o": [
+        "(2x + 1)eˣ",
+        "2eˣ",
+        "(2x – 1)eˣ",
+        "(2x + 3)eˣ"
+      ],
+      "r": 0,
+      "x": "La règle du produit donne 2 × eˣ + (2x – 1) × eˣ = (2x + 1)eˣ. On factorise par eˣ, toujours positif, pour étudier le signe de la dérivée. La proposition 2eˣ ne dérive que le premier facteur.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La limite de (1 – cos x)/x² quand x tend vers 0 est :",
       "o": [
         "0",
+        "1/2",
         "1",
+        "+∞"
+      ],
+      "r": 1,
+      "x": "On utilise l'identité 1 – cos x = 2 sin²(x/2), d'où (1 – cos x)/x² = (1/2) × (sin(x/2)/(x/2))², qui tend vers 1/2 × 1² = 1/2. La limite de référence sin u/u → 1 est ici appliquée à u = x/2. La réponse 1 oublie le facteur 1/2.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La valeur de ln(1/e²) est :",
+      "o": [
+        "–2",
+        "–1/2",
         "1/2",
         "2"
       ],
-      "r": 2,
-      "x": "En utilisant le développement limité : cos(x) ≈ 1 - x²/2, donc 1 - cos(x) ≈ x²/2. Ainsi (1-cos x)/x² → 1/2. C'est une limite classique à connaître."
+      "r": 0,
+      "x": "On écrit 1/e² = e⁻², donc ln(1/e²) = –2. Le logarithme d'un nombre compris entre 0 et 1 est toujours négatif, ce qui écarte les réponses positives. La réponse –1/2 confond l'exposant avec son inverse.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
     },
     {
-      "q": "La fonction f(x) = 1/(x² - 4) a pour domaine de définition :",
+      "q": "La valeur de l'expression 2 ln 3 – ln 9 + ln 1 est :",
       "o": [
-        "ℝ",
-        "ℝ \\ {2}",
-        "ℝ \\ {-2 ; 2}",
-        "ℝ \\ {-4 ; 4}"
+        "–ln 3",
+        "0",
+        "1",
+        "ln 3"
+      ],
+      "r": 1,
+      "x": "On a 2 ln 3 = ln 9 et ln 1 = 0, d'où ln 9 – ln 9 + 0 = 0. Les propriétés du logarithme permettent de regrouper les termes avant tout calcul numérique. La réponse 1 confond ln 1 avec le nombre 1.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La solution de l'équation ln(2x – 1) = 0 est :",
+      "o": [
+        "x = 0",
+        "x = 1/2",
+        "x = 1",
+        "x = e"
       ],
       "r": 2,
-      "x": "f est définie si x² - 4 ≠ 0, soit x² ≠ 4, soit x ≠ ±2. Le domaine de définition est donc Df = ℝ \\ {-2 ; 2} = ]-∞;-2[ ∪ ]-2;2[ ∪ ]2;+∞[."
+      "x": "Le logarithme ne s'annule qu'en 1 : 2x – 1 = 1, d'où x = 1, valeur qui respecte bien la condition 2x – 1 > 0. La réponse 1/2 annule l'argument du logarithme, ce qui est interdit, puisque ln 0 n'existe pas. On retient que ln a = 0 équivaut à a = 1.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
     },
     {
-      "q": "La dérivée de f(x) = 5x⁴ - 3x² + 7x - 2 est :",
+      "q": "L'ensemble des solutions de l'inéquation ln x ≥ ln(4 – x) est :",
       "o": [
-        "20x³ - 6x + 7",
-        "20x³ - 6x",
-        "20x⁴ - 6x + 7",
-        "5x³ - 6x + 7"
+        "x ≥ 2",
+        "0 < x ≤ 2",
+        "x < 4",
+        "2 ≤ x < 4"
+      ],
+      "r": 3,
+      "x": "Les deux logarithmes existent si 0 < x < 4 ; la croissance de ln transforme ensuite l'inégalité en x ≥ 4 – x, soit x ≥ 2. En combinant les deux conditions, on obtient 2 ≤ x < 4. La proposition x ≥ 2 oublie la condition d'existence de ln(4 – x).",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les solutions de l'équation (ln x)² – 3 ln x + 2 = 0 sont :",
+      "o": [
+        "1 et 2",
+        "0 et ln 2",
+        "e et 2e",
+        "e et e²"
+      ],
+      "r": 3,
+      "x": "On pose X = ln x, ce qui donne X² – 3X + 2 = 0, de solutions X = 1 et X = 2. On revient ensuite à l'inconnue : ln x = 1 donne x = e, et ln x = 2 donne x = e². La proposition 1 et 2 s'arrête aux valeurs de X, sans revenir à x.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation e^(2x) ≤ e^(x + 3) est :",
+      "o": [
+        "x ≤ 3",
+        "x ≥ 3",
+        "x ≤ –3",
+        "x ≤ 1"
       ],
       "r": 0,
-      "x": "On dérive terme par terme : (5x⁴)' = 20x³, (3x²)' = 6x, (7x)' = 7, (2)' = 0. Donc f'(x) = 20x³ - 6x + 7."
+      "x": "L'exponentielle étant strictement croissante, l'inégalité équivaut à 2x ≤ x + 3, soit x ≤ 3. On compare directement les exposants, sans calculer les exponentielles. La proposition x ≥ 3 inverse à tort le sens, alors que la fonction est croissante.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La solution de l'équation eˣ + e^(–x) = 2 est :",
+      "o": [
+        "x = 0",
+        "x = 1",
+        "x = ln 2",
+        "aucune solution"
+      ],
+      "r": 0,
+      "x": "En multipliant par eˣ, on obtient e^(2x) – 2eˣ + 1 = 0, soit (eˣ – 1)² = 0, d'où eˣ = 1 et x = 0. On peut aussi remarquer que eˣ + e^(–x) ≥ 2, avec égalité seulement en 0. La proposition ln 2 donnerait 2 + 1/2 = 2,5.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sachant que ln 2 ≈ 0,693, la valeur approchée de ln 8 est :",
+      "o": [
+        "0,69",
+        "1,38",
+        "1,79",
+        "2,08"
+      ],
+      "r": 3,
+      "x": "On écrit 8 = 2³, donc ln 8 = 3 ln 2 ≈ 3 × 0,693 = 2,08. La réponse 1,38 correspond à ln 4 = 2 ln 2, et 0,69 à ln 2 lui-même. Connaître ln 2 permet de calculer le logarithme de toutes les puissances de 2.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une quantité évolue selon N(t) = N₀e^(–0,1t). Elle est divisée par 2 au bout d'une durée t égale à :",
+      "o": [
+        "5",
+        "ln 2/10",
+        "20",
+        "10 ln 2"
+      ],
+      "r": 3,
+      "x": "On résout e^(–0,1t) = 1/2, soit –0,1t = –ln 2, d'où t = 10 ln 2 ≈ 6,93. Cette durée, appelée demi-vie, ne dépend pas de la quantité initiale N₀. La proposition ln 2/10 inverse le rapport entre ln 2 et le coefficient 0,1.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La valeur du logarithme décimal log(0,01) est :",
+      "o": [
+        "–2",
+        "–1",
+        "0,01",
+        "2"
+      ],
+      "r": 0,
+      "x": "Comme 0,01 = 10⁻², on a log(0,01) = –2. Le logarithme décimal d'un nombre compris entre 0 et 1 est toujours négatif. La réponse 2 oublie le signe de l'exposant, qui traduit une division par 100.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le pH d'une solution vaut –log[H₃O⁺]. Pour une concentration [H₃O⁺] = 10⁻⁴ mol/L, le pH vaut :",
+      "o": [
+        "–4",
+        "0,0001",
+        "4",
+        "10"
+      ],
+      "r": 2,
+      "x": "Le pH vaut –log(10⁻⁴) = –(–4) = 4 : la solution est acide, puisque son pH est inférieur à 7. Le signe moins de la définition rend le pH positif pour les concentrations usuelles. La réponse –4 oublie ce signe, et 0,0001 recopie la concentration elle-même.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sachant que log 2 ≈ 0,301, le nombre de chiffres de l'entier 2¹⁰⁰ en écriture décimale est :",
+      "o": [
+        "30",
+        "31",
+        "100",
+        "101"
+      ],
+      "r": 1,
+      "x": "Le nombre de chiffres d'un entier N vaut la partie entière de log N, augmentée de 1 : log(2¹⁰⁰) = 100 log 2 ≈ 30,1, d'où 30 + 1 = 31 chiffres. Le logarithme décimal mesure l'ordre de grandeur d'un nombre. La réponse 30 oublie d'ajouter 1.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La dérivée de la fonction f(x) = ln((x – 1)/(x + 1)) sur ]1 ; +∞[ est :",
+      "o": [
+        "2/(x² – 1)",
+        "1/(x² – 1)",
+        "(x + 1)/(x – 1)",
+        "–2/(x² – 1)"
+      ],
+      "r": 0,
+      "x": "On écrit ln((x – 1)/(x + 1)) = ln(x – 1) – ln(x + 1), dont la dérivée vaut 1/(x – 1) – 1/(x + 1) = 2/(x² – 1). Décomposer le logarithme d'un quotient simplifie beaucoup le calcul. La proposition –2/(x² – 1) se trompe de signe dans la soustraction.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La limite de la suite (1 + 1/n)ⁿ quand n tend vers +∞ est :",
+      "o": [
+        "1",
+        "2",
+        "e",
+        "+∞"
+      ],
+      "r": 2,
+      "x": "Cette limite de référence vaut e, soit environ 2,718 : on la retrouve en écrivant (1 + 1/n)ⁿ = e^(n ln(1 + 1/n)) et en utilisant ln(1 + u)/u → 1. Elle modélise des intérêts composés de plus en plus fréquents. Conclure à 1, sous prétexte que 1 + 1/n tend vers 1, est une erreur classique.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une primitive de la fonction ln x sur ]0 ; +∞[ est :",
+      "o": [
+        "1/x",
+        "x ln x",
+        "x ln x – x",
+        "(ln x)²/2"
+      ],
+      "r": 2,
+      "x": "On l'obtient par intégration par parties, et on le vérifie en dérivant : (x ln x – x)' = ln x + 1 – 1 = ln x. La proposition x ln x a pour dérivée ln x + 1, ce qui donne un terme de trop. La proposition (ln x)²/2 est une primitive de (ln x)/x, et non de ln x.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une primitive de la fonction f(x) = x e^(x²) est :",
+      "o": [
+        "e^(x²)",
+        "x² e^(x²)/2",
+        "2x e^(x²)",
+        "e^(x²)/2"
+      ],
+      "r": 3,
+      "x": "L'expression a la forme (u'/2) × e^u avec u = x² et u' = 2x, dont une primitive est e^(x²)/2. On vérifie : la dérivée de e^(x²)/2 vaut 2x × e^(x²)/2 = x e^(x²). La proposition e^(x²) oublie le facteur 1/2.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une primitive de la fonction f(x) = (ln x)/x sur ]0 ; +∞[ est :",
+      "o": [
+        "ln(ln x)",
+        "1/x²",
+        "ln x – 1",
+        "(ln x)²/2"
+      ],
+      "r": 3,
+      "x": "L'expression a la forme u' × u avec u = ln x, dont une primitive est u²/2 = (ln x)²/2. On vérifie : la dérivée de (ln x)²/2 vaut ln x × (1/x). La proposition ln(ln x) est une primitive de 1/(x ln x), et non de (ln x)/x.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une primitive de la fonction f(x) = 1/(2x + 1) sur ]–1/2 ; +∞[ est :",
+      "o": [
+        "ln(2x + 1)",
+        "2 ln(2x + 1)",
+        "(1/2) ln(2x + 1)",
+        "–2/(2x + 1)²"
+      ],
+      "r": 2,
+      "x": "Une primitive de 1/(ax + b) est (1/a) ln(ax + b) sur l'intervalle où ax + b > 0, ici (1/2) ln(2x + 1). On vérifie : sa dérivée vaut (1/2) × 2/(2x + 1). La proposition –2/(2x + 1)² est la dérivée de la fonction, et non une primitive.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une primitive de la fonction f(x) = (2x + 1)³ est :",
+      "o": [
+        "(2x + 1)⁴/4",
+        "6(2x + 1)²",
+        "(2x + 1)⁴",
+        "(2x + 1)⁴/8"
+      ],
+      "r": 3,
+      "x": "Une primitive de (ax + b)ⁿ est (ax + b)ⁿ⁺¹/(a(n + 1)), soit (2x + 1)⁴/(2 × 4) = (2x + 1)⁴/8. On vérifie que sa dérivée vaut 4 × 2 × (2x + 1)³/8. La proposition (2x + 1)⁴/4 oublie de diviser par le coefficient 2.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'intégrale de 0 à π de la fonction sin x vaut :",
+      "o": [
+        "0",
+        "1",
+        "2",
+        "π"
+      ],
+      "r": 2,
+      "x": "Une primitive de sin x est –cos x, d'où –cos π + cos 0 = 1 + 1 = 2. L'aire sous une arche de sinusoïde vaut donc exactement 2. La réponse 0 se trompe de signe en évaluant –cos π.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'intégrale de 0 à 1 de la fonction x² + 1 vaut :",
+      "o": [
+        "1",
+        "4/3",
+        "3/2",
+        "2"
+      ],
+      "r": 1,
+      "x": "Une primitive est x³/3 + x, d'où 1/3 + 1 – 0 = 4/3. On intègre chaque terme séparément grâce à la linéarité. La réponse 2 évalue la fonction en 1 au lieu d'en prendre une primitive.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'aire du domaine compris entre la droite y = x et la parabole y = x² sur l'intervalle [0 ; 1] vaut :",
+      "o": [
+        "1/6",
+        "1/3",
+        "1/2",
+        "5/6"
+      ],
+      "r": 0,
+      "x": "Sur [0 ; 1], la droite y = x est au-dessus de la parabole : l'aire vaut l'intégrale de x – x², soit 1/2 – 1/3 = 1/6. On soustrait toujours la fonction du dessous à celle du dessus. La réponse 1/2 calcule seulement l'aire sous la droite.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'intégrale de 1 à 2 de la fonction 1/x² vaut :",
+      "o": [
+        "1/4",
+        "1/2",
+        "ln 2",
+        "3/4"
+      ],
+      "r": 1,
+      "x": "Une primitive de 1/x² est –1/x, d'où (–1/2) – (–1) = 1/2. Il faut faire attention aux deux signes moins lors de la soustraction. La réponse ln 2 confond 1/x² avec 1/x, dont la primitive est le logarithme.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'intégrale de 0 à ln 2 de la fonction eˣ vaut :",
+      "o": [
+        "ln 2",
+        "1",
+        "2",
+        "e"
+      ],
+      "r": 1,
+      "x": "Une primitive de eˣ est eˣ, d'où e^(ln 2) – e⁰ = 2 – 1 = 1. On utilise ici la propriété e^(ln 2) = 2. La réponse 2 oublie de retrancher la valeur de la primitive à la borne inférieure.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'intégrale de 1 à e de la fonction ln x vaut :",
+      "o": [
+        "0",
+        "1",
+        "e – 1",
+        "e"
+      ],
+      "r": 1,
+      "x": "Une primitive de ln x est x ln x – x, d'où (e – e) – (0 – 1) = 1. Cette primitive s'obtient par une intégration par parties. La réponse e – 1 oublie le terme –x de la primitive.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La valeur moyenne de la fonction sin x sur l'intervalle [0 ; π] est :",
+      "o": [
+        "0",
+        "1/π",
+        "2/π",
+        "1"
+      ],
+      "r": 2,
+      "x": "La valeur moyenne vaut l'intégrale divisée par la longueur de l'intervalle : 2/π, soit environ 0,64, puisque l'intégrale de sin x sur [0 ; π] vaut 2. La réponse 1 confond la valeur moyenne avec la valeur maximale de la fonction. La réponse 0 vaudrait sur une période complète [0 ; 2π].",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'intégrale de –2 à 0 de la fonction x vaut :",
+      "o": [
+        "–4",
+        "–2",
+        "2",
+        "4"
+      ],
+      "r": 1,
+      "x": "Une primitive de x est x²/2, d'où 0 – (–2)²/2 = –2. L'intégrale est négative, car la fonction est négative sur tout l'intervalle. L'aire géométrique correspondante vaut, elle, 2, valeur absolue de l'intégrale.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sachant que l'intégrale de f de 0 à 2 vaut 5 et que celle de 2 à 5 vaut 3, l'intégrale de f de 0 à 5 vaut :",
+      "o": [
+        "–2",
+        "2",
+        "8",
+        "15"
+      ],
+      "r": 2,
+      "x": "La relation de Chasles permet d'additionner des intégrales sur des intervalles contigus : 5 + 3 = 8. La réponse 2 soustrait au lieu d'additionner. La réponse 15 multiplie les deux intégrales, opération sans aucun sens ici.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre complexe 2i a pour module et pour un argument :",
+      "o": [
+        "2 et 0",
+        "4 et π/2",
+        "2 et π",
+        "2 et π/2"
+      ],
+      "r": 3,
+      "x": "Le point d'affixe 2i est situé sur l'axe des imaginaires, à distance 2 de l'origine, du côté positif : son module vaut 2 et son argument π/2. La proposition 2 et π correspondrait au nombre –2. La proposition 4 élève à tort le module au carré.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le module du nombre complexe (1 + i)⁴ est :",
+      "o": [
+        "2",
+        "4",
+        "8",
+        "16"
+      ],
+      "r": 1,
+      "x": "Le module d'une puissance est la puissance du module : |1 + i| = √2, donc |(1 + i)⁴| = (√2)⁴ = 4. On évite ainsi de développer la puissance. On peut le confirmer : (1 + i)² = 2i, donc (1 + i)⁴ = (2i)² = –4, de module 4.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La forme exponentielle du nombre complexe –1 est :",
+      "o": [
+        "e^(i × 0)",
+        "e^(iπ/2)",
+        "e^(iπ)",
+        "–e^(iπ)"
+      ],
+      "r": 2,
+      "x": "Le nombre –1 a pour module 1 et pour argument π, d'où –1 = e^(iπ). Cette égalité, appelée identité d'Euler, s'écrit aussi e^(iπ) + 1 = 0. La proposition e^(iπ/2) vaut i, et non –1.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le produit 2e^(iπ/3) × 3e^(iπ/6) est égal à :",
+      "o": [
+        "5e^(iπ/2)",
+        "6e^(iπ/18)",
+        "6i",
+        "6"
+      ],
+      "r": 2,
+      "x": "On multiplie les modules et on additionne les arguments : 2 × 3 = 6 et π/3 + π/6 = π/2, d'où 6e^(iπ/2) = 6i. La proposition 5e^(iπ/2) additionne à tort les modules. La proposition 6e^(iπ/18) multiplie les arguments au lieu de les additionner.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre complexe (e^(iπ/4))⁸ est égal à :",
+      "o": [
+        "–1",
+        "i",
+        "1",
+        "8"
+      ],
+      "r": 2,
+      "x": "D'après la formule de Moivre, (e^(iπ/4))⁸ = e^(8iπ/4) = e^(2iπ) = 1. Élever à la puissance n multiplie l'argument par n. Un argument de 2π correspond à un tour complet, ce qui ramène au nombre 1.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans l'ensemble des nombres complexes, le nombre de solutions de l'équation z³ = 1 est :",
+      "o": [
+        "1",
+        "2",
+        "3",
+        "6"
+      ],
+      "r": 2,
+      "x": "Dans ℂ, l'équation zⁿ = 1 admet exactement n solutions, appelées racines n-ièmes de l'unité : ici 1, e^(2iπ/3) et e^(4iπ/3). Leurs images forment un triangle équilatéral inscrit dans le cercle unité. Dans ℝ, on ne trouverait que la seule solution 1.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La somme des trois racines cubiques de l'unité vaut :",
+      "o": [
+        "–1",
+        "0",
+        "1",
+        "3"
+      ],
+      "r": 1,
+      "x": "Les trois racines 1, j et j² vérifient 1 + j + j² = 0, puisque j et j² sont les racines de z² + z + 1, facteur de z³ – 1 = (z – 1)(z² + z + 1). Géométriquement, elles forment un triangle équilatéral centré à l'origine. Leur somme est donc nulle.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'ensemble des points M d'affixe z tels que |z – 2i| = 3 est :",
+      "o": [
+        "le cercle de centre (0 ; 2) et de rayon 3",
+        "le cercle de centre (2 ; 0) et de rayon 3",
+        "le cercle de centre (0 ; –2) et de rayon 3",
+        "la droite d'équation y = 3"
+      ],
+      "r": 0,
+      "x": "Le module |z – 2i| représente la distance entre le point M et le point d'affixe 2i, de coordonnées (0 ; 2). L'ensemble des points situés à distance 3 de ce point est le cercle de centre (0 ; 2) et de rayon 3. La proposition (2 ; 0) confond la partie imaginaire avec la partie réelle.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'ensemble des points M d'affixe z tels que |z – 1| = |z + 1| est :",
+      "o": [
+        "l'axe des réels",
+        "le cercle unité",
+        "la droite y = x",
+        "l'axe des imaginaires purs"
+      ],
+      "r": 3,
+      "x": "L'égalité exprime que M est à égale distance des points d'affixes 1 et –1 : il se trouve donc sur la médiatrice du segment qui les joint. Cette médiatrice est l'axe des imaginaires purs, d'équation x = 0. L'axe des réels contient les deux points eux-mêmes, et non les points équidistants.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans le plan complexe, multiplier une affixe par i correspond à :",
+      "o": [
+        "une symétrie par rapport à l'axe réel",
+        "une homothétie de rapport 2",
+        "une translation de vecteur (0 ; 1)",
+        "une rotation de centre O et d'angle π/2"
+      ],
+      "r": 3,
+      "x": "Le nombre i a pour module 1 et pour argument π/2 : multiplier une affixe par i conserve la distance à l'origine et ajoute π/2 à l'argument. Il s'agit donc d'une rotation de centre O et d'angle π/2. La symétrie par rapport à l'axe réel correspond au passage au conjugué.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La partie imaginaire du nombre complexe (2 – i)² est :",
+      "o": [
+        "–4",
+        "–1",
+        "3",
+        "4"
+      ],
+      "r": 0,
+      "x": "On développe : (2 – i)² = 4 – 4i + i² = 4 – 4i – 1 = 3 – 4i. La partie imaginaire vaut donc –4, et la partie réelle 3. La partie imaginaire est le coefficient réel de i, sans le i lui-même.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La forme algébrique du nombre complexe e^(iπ/6) est :",
+      "o": [
+        "1/2 + i√3/2",
+        "√2/2 + i√2/2",
+        "√3/2 – i/2",
+        "√3/2 + i/2"
+      ],
+      "r": 3,
+      "x": "D'après la formule d'Euler, e^(iθ) = cos θ + i sin θ, d'où cos(π/6) + i sin(π/6) = √3/2 + i/2. La proposition 1/2 + i√3/2 correspond à l'angle π/3. La proposition C est le conjugué, d'argument –π/6.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La solution générale de l'équation différentielle y' = –2y + 6 est :",
+      "o": [
+        "y = Ce^(–2x) + 3",
+        "y = Ce^(2x) + 3",
+        "y = Ce^(–2x) – 3",
+        "y = Ce^(–2x) + 6"
+      ],
+      "r": 0,
+      "x": "Pour y' = ay + b, la solution générale est y = Ce^(ax) – b/a : ici a = –2 et b = 6, d'où –b/a = 3 et y = Ce^(–2x) + 3. La solution constante 3 vérifie bien 0 = –6 + 6. La proposition + 6 oublie de diviser par –a.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La solution de l'équation différentielle y' = y vérifiant y(1) = e est :",
+      "o": [
+        "y = eˣ",
+        "y = e^(x – 1)",
+        "y = e × eˣ",
+        "y = ex"
+      ],
+      "r": 0,
+      "x": "Les solutions de y' = y sont y = Ceˣ, et la condition y(1) = Ce = e impose C = 1, d'où y = eˣ. La proposition e^(x – 1) vaut 1 en x = 1, et non e. La proposition e × eˣ vaudrait e² en x = 1.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les solutions de l'équation différentielle y'' + 4y = 0 sont les fonctions :",
+      "o": [
+        "y = A cos(2x) + B sin(2x)",
+        "y = A cos(4x) + B sin(4x)",
+        "y = Ae^(2x) + Be^(–2x)",
+        "y = A cos x + B sin x"
+      ],
+      "r": 0,
+      "x": "Les solutions de y'' + ω²y = 0 sont y = A cos(ωx) + B sin(ωx), avec ici ω² = 4, donc ω = 2. La proposition en 4x oublie d'extraire la racine carrée de 4. La proposition exponentielle résout l'équation y'' – 4y = 0, de signe opposé.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une population vérifie P' = 0,02P et P(0) = 1 000. Elle est donnée par :",
+      "o": [
+        "P(t) = 1 000e^(0,02t)",
+        "P(t) = 0,02e^(1 000t)",
+        "P(t) = 1 000 + 0,02t",
+        "P(t) = 1 000e^(–0,02t)"
+      ],
+      "r": 0,
+      "x": "L'équation P' = 0,02P est de la forme y' = ay avec a = 0,02 : ses solutions sont P(t) = Ce^(0,02t), et la condition initiale donne C = 1 000. La proposition C décrit une croissance linéaire, et non exponentielle. La proposition D correspondrait à une décroissance.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La solution de l'équation eˣ × e^(2x) = e⁶ est :",
+      "o": [
+        "x = 1",
+        "x = 2",
+        "x = 3",
+        "x = 6"
+      ],
+      "r": 1,
+      "x": "Le produit de deux exponentielles additionne les exposants : e^(x + 2x) = e^(3x) = e⁶, donc 3x = 6 et x = 2. On compare ensuite directement les exposants, puisque l'exponentielle est strictement croissante. La réponse 3 additionne les nombres sans tenir compte de l'inconnue.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La valeur de ln(e² × √e) est :",
+      "o": [
+        "2",
+        "5/2",
+        "3",
+        "e²"
+      ],
+      "r": 1,
+      "x": "On écrit e² × √e = e² × e^(1/2) = e^(5/2), donc ln(e² × √e) = 5/2. On additionne les exposants avant d'appliquer le logarithme. La réponse 2 oublie la contribution de la racine carrée.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'expression eˣ – 1 est strictement positive pour :",
+      "o": [
+        "x > 1",
+        "x < 0",
+        "tout réel x",
+        "x > 0"
+      ],
+      "r": 3,
+      "x": "L'exponentielle est strictement croissante et vaut 1 en 0, donc eˣ > 1 si et seulement si x > 0. L'expression eˣ – 1 est ainsi négative pour x < 0 et nulle en 0. La proposition « tout réel x » confond eˣ, toujours positif, avec eˣ – 1.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La valeur minimale de la fonction f(x) = eˣ – x sur ℝ est :",
+      "o": [
+        "0",
+        "1",
+        "e – 1",
+        "e"
+      ],
+      "r": 1,
+      "x": "La dérivée eˣ – 1 s'annule en 0, où elle passe du négatif au positif : la fonction atteint son minimum f(0) = 1 – 0 = 1. On en déduit que eˣ ≥ x + 1 pour tout réel x. La réponse 0 donne l'abscisse du minimum, et non sa valeur.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les solutions de l'équation ln(x²) = 2 ln 3 sont :",
+      "o": [
+        "3 seulement",
+        "9 seulement",
+        "–9 et 9",
+        "–3 et 3"
+      ],
+      "r": 3,
+      "x": "L'équation équivaut à x² = 9, avec x ≠ 0, d'où x = 3 ou x = –3. Écrire ln(x²) = 2 ln x ferait perdre la solution négative, car ln x n'existe que pour x > 0. La bonne formule, valable pour tout x ≠ 0, est ln(x²) = 2 ln|x|.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'aire du domaine compris entre la courbe de y = 1/√x, l'axe des abscisses et les droites x = 1 et x = 4 vaut :",
+      "o": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "r": 1,
+      "x": "Une primitive de 1/√x est 2√x, d'où 2√4 – 2√1 = 4 – 2 = 2 unités d'aire. On vérifie que la dérivée de 2√x vaut bien 1/√x. La réponse 4 oublie de retrancher la valeur de la primitive à la borne inférieure.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Pour tout réel x, cos(x + π) est égal à :",
+      "o": [
+        "cos x",
+        "sin x",
+        "–sin x",
+        "–cos x"
+      ],
+      "r": 3,
+      "x": "Ajouter π à un angle revient à prendre le point diamétralement opposé sur le cercle trigonométrique : le cosinus change de signe, d'où cos(x + π) = –cos x. Le sinus change lui aussi de signe : sin(x + π) = –sin x. Les propositions en sinus confondent avec les formules d'ajout de π/2.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Pour tout réel x, sin(π/2 – x) est égal à :",
+      "o": [
+        "sin x",
+        "–sin x",
+        "cos x",
+        "–cos x"
+      ],
+      "r": 2,
+      "x": "Les angles x et π/2 – x sont complémentaires : le sinus de l'un est le cosinus de l'autre, d'où sin(π/2 – x) = cos x. De même, cos(π/2 – x) = sin x. Ces relations se lisent par symétrie sur le cercle trigonométrique, par rapport à la première bissectrice.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "En utilisant la formule de cos(a – b) avec a = π/3 et b = π/4, la valeur exacte de cos(π/12) est :",
+      "o": [
+        "(√6 + √2)/4",
+        "(√6 – √2)/4",
+        "√2/2",
+        "1/2"
+      ],
+      "r": 0,
+      "x": "La formule cos(a – b) = cos a cos b + sin a sin b donne (1/2)(√2/2) + (√3/2)(√2/2) = (√2 + √6)/4. On a ainsi calculé le cosinus de l'angle de 15°. La proposition (√6 – √2)/4 vaut sin(π/12), et s'obtient en se trompant de signe dans la formule.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sachant que sin x = 3/5 et cos x = 4/5, la valeur de sin(2x) est :",
+      "o": [
+        "7/25",
+        "12/25",
+        "3/5",
+        "24/25"
+      ],
+      "r": 3,
+      "x": "La formule de duplication donne sin 2x = 2 sin x cos x = 2 × 3/5 × 4/5 = 24/25. La réponse 12/25 oublie le facteur 2, et 7/25 correspond à cos 2x = cos²x – sin²x. La réponse 3/5 reprend simplement le sinus de x.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sur l'intervalle [0 ; 2π[, les solutions de l'équation cos x = –1/2 sont :",
+      "o": [
+        "π/3 et 2π/3",
+        "π/3 et 5π/3",
+        "4π/3 et 5π/3",
+        "2π/3 et 4π/3"
+      ],
+      "r": 3,
+      "x": "Le cosinus vaut –1/2 pour deux angles symétriques par rapport à l'axe des abscisses : 2π/3 et 4π/3, soit 120° et 240°. La proposition π/3 et 5π/3 correspond à un cosinus de +1/2. Le signe négatif place les solutions dans la moitié gauche du cercle trigonométrique.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les solutions réelles de l'équation sin x = sin(π/5) sont, k désignant un entier relatif :",
+      "o": [
+        "x = π/5 + 2kπ seulement",
+        "x = ±π/5 + 2kπ",
+        "x = π/5 + kπ",
+        "x = π/5 + 2kπ ou x = 4π/5 + 2kπ"
+      ],
+      "r": 3,
+      "x": "Deux angles ont le même sinus s'ils sont égaux ou supplémentaires, à un multiple de 2π près : x = π/5 + 2kπ ou x = π – π/5 + 2kπ = 4π/5 + 2kπ. La forme ±π/5 + 2kπ est la règle valable pour le cosinus. Oublier la seconde famille de solutions est l'erreur la plus fréquente.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La mesure principale de l'angle 17π/6 est :",
+      "o": [
+        "–π/6",
+        "π/6",
+        "5π/6",
+        "7π/6"
+      ],
+      "r": 2,
+      "x": "La mesure principale appartient à l'intervalle ]–π ; π] : on retire un tour complet, 17π/6 – 12π/6 = 5π/6, qui convient. Les angles 17π/6 et 5π/6 repèrent le même point du cercle trigonométrique. La proposition 7π/6 dépasse π et n'est donc pas une mesure principale.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans un triangle de côtés 3, 5 et 7, l'angle opposé au côté de longueur 7 mesure :",
+      "o": [
+        "60°",
+        "90°",
+        "120°",
+        "150°"
+      ],
+      "r": 2,
+      "x": "La formule d'Al-Kashi donne cos C = (a² + b² – c²)/(2ab) = (9 + 25 – 49)/30 = –1/2, d'où un angle de 120°. Le cosinus négatif signale un angle obtus. La réponse 60° correspond à un cosinus de +1/2, obtenu en se trompant de signe.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans un triangle, le côté a = 6 est opposé à un angle A de 30°. Le rayon du cercle circonscrit à ce triangle vaut :",
+      "o": [
+        "3",
+        "6",
+        "12",
+        "6√3"
+      ],
+      "r": 1,
+      "x": "La loi des sinus énonce a/sin A = 2R, où R est le rayon du cercle circonscrit : 6/(1/2) = 12, donc R = 6. La réponse 12 donne le diamètre 2R, et non le rayon. Cette relation relie chaque côté à l'angle qui lui fait face.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'aire d'un triangle dont deux côtés mesurent 4 et 6 et forment un angle de 30° vaut :",
+      "o": [
+        "6",
+        "6√3",
+        "12",
+        "24"
+      ],
+      "r": 0,
+      "x": "L'aire d'un triangle vaut (1/2) × a × b × sin C = (1/2) × 4 × 6 × 1/2 = 6. Cette formule évite de calculer la hauteur. La réponse 12 oublie le sinus, comme si l'angle était droit, et 6√3 utilise à tort le cosinus.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Deux vecteurs u et v de normes 3 et 4 forment un angle de π/3. Leur produit scalaire vaut :",
+      "o": [
+        "6",
+        "6√3",
+        "7",
+        "12"
+      ],
+      "r": 0,
+      "x": "Le produit scalaire vaut u · v = ‖u‖ × ‖v‖ × cos θ = 3 × 4 × 1/2 = 6. La réponse 12 oublie le cosinus de l'angle, et 6√3 utilise le sinus au lieu du cosinus. Le produit scalaire est maximal lorsque les vecteurs sont colinéaires et de même sens.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Deux vecteurs vérifient ‖u‖ = 2, ‖v‖ = 3 et u · v = 1. La valeur de ‖u + v‖² est :",
+      "o": [
+        "5",
+        "13",
+        "14",
+        "15"
+      ],
+      "r": 3,
+      "x": "On développe ‖u + v‖² = ‖u‖² + 2u · v + ‖v‖² = 4 + 2 + 9 = 15. Cette identité est l'analogue vectoriel de (a + b)² = a² + 2ab + b². La réponse 13 oublie le double produit scalaire, et 14 ne le compte qu'une fois.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'équation du cercle de diamètre [AB], avec A(1 ; 2) et B(5 ; 6), est :",
+      "o": [
+        "(x – 3)² + (y – 4)² = 8",
+        "(x – 3)² + (y – 4)² = 32",
+        "(x – 3)² + (y – 4)² = 2√2",
+        "(x – 1)² + (y – 2)² = 32"
+      ],
+      "r": 0,
+      "x": "Le centre est le milieu de [AB], soit (3 ; 4), et le rayon la moitié de AB = √(16 + 16) = 4√2, soit 2√2, d'où r² = 8. La proposition 32 utilise AB² au lieu du carré du rayon. La proposition 2√2 oublie d'élever le rayon au carré.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Par rapport au cercle d'équation x² + y² = 25, la droite d'équation y = 5 est :",
+      "o": [
+        "sécante",
+        "extérieure",
+        "confondue",
+        "tangente"
+      ],
+      "r": 3,
+      "x": "La distance du centre O à la droite y = 5 vaut 5, exactement égale au rayon √25 = 5 : la droite est tangente au cercle, au point (0 ; 5). Si cette distance était inférieure au rayon, la droite serait sécante, et si elle était supérieure, extérieure. On compare toujours la distance du centre au rayon.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La médiatrice du segment [AB], avec A(1 ; 1) et B(3 ; 5), a pour équation :",
+      "o": [
+        "x + 2y – 8 = 0",
+        "2x – y – 1 = 0",
+        "x + 2y – 3 = 0",
+        "2x + y – 7 = 0"
+      ],
+      "r": 0,
+      "x": "La médiatrice passe par le milieu (2 ; 3) de [AB] et admet le vecteur AB(2 ; 4) comme vecteur normal : 2x + 4y + c = 0, avec 4 + 12 + c = 0, soit x + 2y – 8 = 0 après simplification. La proposition 2x – y – 1 = 0 est la droite (AB) elle-même. La proposition D passe par le milieu mais n'est pas perpendiculaire à (AB).",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans l'espace muni d'un repère orthonormé, la norme du vecteur u(1 ; 2 ; 2) est :",
+      "o": [
+        "√5",
+        "3",
+        "5",
+        "9"
+      ],
+      "r": 1,
+      "x": "Dans l'espace, la norme de u(x ; y ; z) vaut √(x² + y² + z²) = √(1 + 4 + 4) = √9 = 3. On ajoute simplement le carré de la troisième coordonnée. La réponse 9 oublie la racine carrée, et 5 additionne les coordonnées.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans l'espace muni d'un repère orthonormé, le produit scalaire des vecteurs u(1 ; –1 ; 2) et v(3 ; 1 ; –1) vaut :",
+      "o": [
+        "–2",
+        "0",
+        "2",
+        "6"
+      ],
+      "r": 1,
+      "x": "Dans l'espace, le produit scalaire vaut xx' + yy' + zz' = 3 – 1 – 2 = 0 : les deux vecteurs sont donc orthogonaux. Un produit scalaire nul est le critère d'orthogonalité, en dimension 2 comme en dimension 3. La réponse 6 oublie les signes des composantes négatives.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une équation du plan passant par l'origine et de vecteur normal n(1 ; 2 ; 3) est :",
+      "o": [
+        "x + 2y + 3z = 0",
+        "x + 2y + 3z = 1",
+        "x – 2y + 3z = 0",
+        "x + y + z = 6"
+      ],
+      "r": 0,
+      "x": "Un plan de vecteur normal n(a ; b ; c) a une équation ax + by + cz + d = 0, soit x + 2y + 3z + d = 0, et le passage par l'origine impose d = 0. La proposition B ne passe pas par O, puisque 0 ≠ 1. La proposition D a pour vecteur normal (1 ; 1 ; 1), différent de celui demandé.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Pour une série statistique double, cov(x ; y) = 6 et V(x) = 4. Le coefficient directeur de la droite d'ajustement de y en x par les moindres carrés vaut :",
+      "o": [
+        "0,67",
+        "1,5",
+        "2",
+        "24"
+      ],
+      "r": 1,
+      "x": "Le coefficient directeur de la droite d'ajustement de y en x vaut a = cov(x ; y)/V(x) = 6/4 = 1,5. La réponse 0,67 inverse le rapport. La droite passe ensuite par le point moyen, ce qui permet d'en déterminer l'ordonnée à l'origine.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une droite d'ajustement d'équation y = 1,5x + b passe par le point moyen G(4 ; 10). La valeur de b est :",
+      "o": [
+        "4",
+        "6",
+        "10",
+        "16"
+      ],
+      "r": 0,
+      "x": "La droite d'ajustement passe toujours par le point moyen G : 10 = 1,5 × 4 + b, d'où b = 10 – 6 = 4. On obtient ainsi l'équation y = 1,5x + 4. La réponse 16 ajoute 6 au lieu de le retrancher.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La droite d'ajustement d'une série est y = 2,5x + 12. La valeur estimée de y pour x = 8 est :",
+      "o": [
+        "20",
+        "30",
+        "32",
+        "34,5"
+      ],
+      "r": 2,
+      "x": "On remplace x par 8 dans l'équation de la droite d'ajustement : y = 2,5 × 8 + 12 = 20 + 12 = 32. Une telle estimation n'est fiable que si l'on reste proche des données observées. La réponse 20 oublie l'ordonnée à l'origine.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un coefficient de corrélation linéaire proche de –1 indique :",
+      "o": [
+        "l'absence de liaison",
+        "une forte liaison linéaire positive",
+        "une liaison faible",
+        "une forte liaison linéaire négative"
+      ],
+      "r": 3,
+      "x": "Un coefficient proche de –1 indique que les points sont presque alignés sur une droite de pente négative : quand x augmente, y diminue. Proche de +1, la liaison serait positive, et proche de 0, la liaison linéaire serait faible. C'est la valeur absolue du coefficient qui mesure l'intensité de la liaison.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une série de 50 valeurs a pour effectifs cumulés croissants 8, 20, 35 et 50 pour les classes [0 ; 5[, [5 ; 10[, [10 ; 15[ et [15 ; 20[. La médiane appartient à la classe :",
+      "o": [
+        "[0 ; 5[",
+        "[5 ; 10[",
+        "[10 ; 15[",
+        "[15 ; 20["
+      ],
+      "r": 2,
+      "x": "La médiane correspond à la 25e valeur sur 50 ; les effectifs cumulés valent 20 à la fin de la deuxième classe et 35 à la fin de la troisième. La 25e valeur se trouve donc dans la classe [10 ; 15[. La classe [5 ; 10[ s'arrête à 20 valeurs, en deçà de la moitié de l'effectif.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Si l'on multiplie par 2 toutes les valeurs d'une série statistique, sa variance est :",
+      "o": [
+        "multipliée par 4",
+        "inchangée",
+        "multipliée par 2",
+        "augmentée de 2"
+      ],
+      "r": 0,
+      "x": "Multiplier toutes les valeurs par 2 multiplie chaque écart à la moyenne par 2, donc chaque carré d'écart par 4 : la variance est multipliée par 4. L'écart-type, racine carrée de la variance, est lui multiplié par 2. La proposition C confond la variance avec l'écart-type.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une série a pour moyenne 10 et la moyenne des carrés de ses valeurs vaut 109. Son écart-type est :",
+      "o": [
+        "3",
+        "9",
+        "99",
+        "109"
+      ],
+      "r": 0,
+      "x": "La formule de König-Huygens donne V = (moyenne des carrés) – (moyenne)² = 109 – 100 = 9, d'où un écart-type de √9 = 3. La réponse 9 donne la variance, qu'il faut encore passer à la racine carrée. La réponse 99 retranche 10 au lieu de 10².",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une variable aléatoire X prend les valeurs 0, 1 et 2 avec les probabilités 0,2 ; 0,5 et 0,3. Son espérance vaut :",
+      "o": [
+        "0,5",
+        "0,8",
+        "1",
+        "1,1"
+      ],
+      "r": 3,
+      "x": "L'espérance est la somme des valeurs pondérées par leurs probabilités : 0 × 0,2 + 1 × 0,5 + 2 × 0,3 = 0,5 + 0,6 = 1,1. La réponse 1 est la moyenne simple des valeurs 0, 1 et 2, qui ignore les probabilités. La réponse 0,5 ne retient que la probabilité de la valeur 1.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une variable aléatoire X prend les valeurs 0, 1 et 2 avec les probabilités 0,2 ; 0,5 et 0,3. Sa variance vaut :",
+      "o": [
+        "0,49",
+        "0,7",
+        "1,21",
+        "1,7"
+      ],
+      "r": 0,
+      "x": "On calcule E(X²) = 0 × 0,2 + 1 × 0,5 + 4 × 0,3 = 1,7, puis V(X) = E(X²) – E(X)² = 1,7 – 1,1² = 1,7 – 1,21 = 0,49. L'écart-type vaut donc √0,49 = 0,7. La réponse 1,7 oublie de retrancher le carré de l'espérance.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une variable aléatoire X prend les valeurs 1, 2 et 3, avec P(X = 1) = 0,25 et P(X = 2) = 0,4. La probabilité P(X = 3) vaut :",
+      "o": [
+        "0,25",
+        "0,35",
+        "0,4",
+        "0,65"
+      ],
+      "r": 1,
+      "x": "La somme des probabilités d'une loi vaut toujours 1 : P(X = 3) = 1 – 0,25 – 0,4 = 0,35. C'est la première vérification à faire pour toute loi de probabilité. La réponse 0,65 additionne les deux probabilités connues sans les retrancher de 1.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une variable X suit une loi binomiale de paramètres n = 4 et p = 0,5. La probabilité P(X = 0) vaut :",
+      "o": [
+        "0",
+        "1/16",
+        "1/8",
+        "1/4"
+      ],
+      "r": 1,
+      "x": "Pour une loi binomiale, P(X = 0) = (1 – p)ⁿ = 0,5⁴ = 1/16 : il faut quatre échecs consécutifs. La réponse 0 suppose à tort qu'il est impossible de n'obtenir aucun succès. La réponse 1/4 ne tient compte que d'une seule épreuve.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une variable X suit une loi binomiale de paramètres n = 5 et p = 0,2. La probabilité P(X ≥ 1) vaut environ :",
+      "o": [
+        "0,2",
+        "0,328",
+        "0,672",
+        "1"
+      ],
+      "r": 2,
+      "x": "On passe par l'événement contraire : P(X ≥ 1) = 1 – P(X = 0) = 1 – 0,8⁵ ≈ 1 – 0,328 = 0,672. La réponse 0,328 est précisément la probabilité de n'obtenir aucun succès. La réponse 1 additionnerait cinq fois 0,2.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un candidat répond au hasard à un QCM de 10 questions comportant chacune 4 propositions dont une seule exacte. Le nombre moyen de bonnes réponses qu'il peut espérer est :",
+      "o": [
+        "2",
+        "2,5",
+        "4",
+        "5"
+      ],
+      "r": 1,
+      "x": "Le nombre de bonnes réponses suit une loi binomiale de paramètres n = 10 et p = 1/4 : son espérance vaut 10 × 1/4 = 2,5. En moyenne, un candidat répondant au hasard obtient donc 2,5 bonnes réponses sur 10. La réponse 5 utiliserait à tort une probabilité de 1/2.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sur un arbre de probabilités, P(A) = 0,6 et la probabilité de B sachant A vaut 0,3. La probabilité P(A ∩ B) vaut :",
+      "o": [
+        "0,18",
+        "0,3",
+        "0,5",
+        "0,9"
+      ],
+      "r": 0,
+      "x": "Sur un arbre, on multiplie les probabilités le long d'une branche : P(A ∩ B) = P(A) × P(B sachant A) = 0,6 × 0,3 = 0,18. La réponse 0,9 additionne au lieu de multiplier. La réponse 0,3 est seulement la probabilité conditionnelle.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Deux événements vérifient P(A) = 0,5, P(B) = 0,4 et P(A ∩ B) = 0,2. Ces événements sont :",
+      "o": [
+        "indépendants",
+        "incompatibles",
+        "contraires",
+        "ni indépendants ni incompatibles"
+      ],
+      "r": 0,
+      "x": "On compare P(A ∩ B) = 0,2 au produit P(A) × P(B) = 0,5 × 0,4 = 0,2 : l'égalité montre que les événements sont indépendants. Ils ne sont pas incompatibles, puisque leur intersection n'est pas vide. Indépendance et incompatibilité sont deux notions bien différentes.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Deux événements incompatibles A et B vérifient P(A) = 0,3 et P(B) = 0,45. La probabilité P(A ∪ B) vaut :",
+      "o": [
+        "0,135",
+        "0,15",
+        "0,75",
+        "1"
+      ],
+      "r": 2,
+      "x": "Deux événements incompatibles ne peuvent se produire simultanément, donc P(A ∩ B) = 0 et P(A ∪ B) = 0,3 + 0,45 = 0,75. La réponse 0,135 multiplie les probabilités, calcul réservé à l'intersection d'événements indépendants. Il faut identifier la nature des événements avant de choisir la formule.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre de mots de 3 lettres distinctes que l'on peut former avec les 26 lettres de l'alphabet est :",
+      "o": [
+        "78",
+        "2 600",
+        "15 600",
+        "17 576"
+      ],
+      "r": 2,
+      "x": "L'ordre des lettres compte et elles sont distinctes : il s'agit d'un arrangement, 26 × 25 × 24 = 15 600. La réponse 17 576 = 26³ autorise les répétitions. La réponse 2 600 correspond au simple choix de 3 lettres, sans tenir compte de leur ordre.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre de façons de tirer simultanément 2 cartes dans un jeu de 32 cartes est :",
+      "o": [
+        "64",
+        "496",
+        "992",
+        "1 024"
+      ],
+      "r": 1,
+      "x": "On choisit 2 cartes parmi 32 sans tenir compte de l'ordre : C(32 ; 2) = 32 × 31/2 = 496. La réponse 992 compte chaque paire deux fois, comme si l'ordre importait. La réponse 1 024 = 32² autoriserait à tirer deux fois la même carte.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une urne contient 4 boules rouges et 6 boules noires. On tire simultanément 2 boules. La probabilité d'obtenir 2 boules rouges est :",
+      "o": [
+        "2/15",
+        "4/25",
+        "1/5",
+        "2/5"
+      ],
+      "r": 0,
+      "x": "On compte les tirages favorables, C(4 ; 2) = 6, parmi les tirages possibles, C(10 ; 2) = 45, d'où 6/45 = 2/15. La réponse 4/25 = (2/5)² correspond à un tirage avec remise. La réponse 2/5 ne tient compte que de la première boule.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La valeur du coefficient binomial C(7 ; 3) est :",
+      "o": [
+        "21",
+        "35",
+        "42",
+        "210"
+      ],
+      "r": 1,
+      "x": "On calcule C(7 ; 3) = (7 × 6 × 5)/(3 × 2 × 1) = 35. La réponse 210 = 7 × 6 × 5 oublie de diviser par 3!, c'est-à-dire qu'elle compte les arrangements. On retrouve aussi 35 sur la huitième ligne du triangle de Pascal.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La valeur du coefficient binomial C(20 ; 18) est :",
+      "o": [
+        "36",
+        "38",
+        "95",
+        "190"
+      ],
+      "r": 3,
+      "x": "On utilise la symétrie C(n ; k) = C(n ; n – k) : C(20 ; 18) = C(20 ; 2) = 20 × 19/2 = 190. Choisir 18 éléments revient à choisir les 2 que l'on écarte. La réponse 95 divise une fois de trop par 2, et 38 additionne simplement 20 et 18.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La somme C(5 ; 0) + C(5 ; 1) + C(5 ; 2) + C(5 ; 3) + C(5 ; 4) + C(5 ; 5) vaut :",
+      "o": [
+        "10",
+        "25",
+        "32",
+        "120"
+      ],
+      "r": 2,
+      "x": "D'après la formule du binôme appliquée à (1 + 1)⁵, la somme de tous les coefficients C(5 ; k) vaut 2⁵ = 32. Elle représente le nombre total de sous-ensembles d'un ensemble à 5 éléments. La réponse 25 = 5² confond avec une autre puissance, et 120 vaut 5!.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Au taux annuel de 10 % à intérêts composés, la valeur actuelle d'une somme de 1 210 000 FCFA disponible dans 2 ans est :",
+      "o": [
+        "900 000 FCFA",
+        "968 000 FCFA",
+        "990 000 FCFA",
+        "1 000 000 FCFA"
+      ],
+      "r": 3,
+      "x": "On actualise en divisant par le coefficient de capitalisation : 1 210 000/1,1² = 1 210 000/1,21 = 1 000 000 FCFA. L'actualisation est l'opération inverse de la capitalisation. La réponse 968 000 FCFA retire 20 % au lieu de diviser par 1,21.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "À intérêts composés, un taux mensuel de 1 % équivaut à un taux annuel d'environ :",
+      "o": [
+        "1,2 %",
+        "12 %",
+        "12,68 %",
+        "13,51 %"
+      ],
+      "r": 2,
+      "x": "Le coefficient annuel vaut 1,01¹² ≈ 1,1268, soit un taux annuel d'environ 12,68 %. Il dépasse 12 %, car chaque mois les intérêts produisent eux-mêmes des intérêts. La réponse 12 % correspondrait à des intérêts simples.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "On verse 100 000 FCFA à la fin de chaque année pendant 3 ans, sur un compte rémunéré à 10 % par an à intérêts composés. Juste après le troisième versement, le compte contient :",
+      "o": [
+        "300 000 FCFA",
+        "330 000 FCFA",
+        "331 000 FCFA",
+        "364 100 FCFA"
+      ],
+      "r": 2,
+      "x": "Les trois versements sont capitalisés respectivement 2 ans, 1 an et 0 an : 100 000 × (1,21 + 1,1 + 1) = 331 000 FCFA. On reconnaît la somme des termes d'une suite géométrique de raison 1,1. La réponse 364 100 FCFA capitalise chaque versement une année de trop.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une commune de 50 000 habitants voit sa population augmenter de 3 % par an. Au bout de 10 ans, elle compte environ :",
+      "o": [
+        "65 512 habitants",
+        "67 196 habitants",
+        "68 512 habitants",
+        "80 196 habitants"
+      ],
+      "r": 1,
+      "x": "La population est multipliée chaque année par 1,03 : au bout de 10 ans, elle vaut 50 000 × 1,03¹⁰ ≈ 50 000 × 1,344 = 67 196 habitants. La réponse 65 000 correspond à une hausse de 1 500 habitants par an, c'est-à-dire à une croissance linéaire. La croissance composée dépasse toujours la croissance linéaire.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un capital est placé à 5 % par an à intérêts composés. Il dépasse pour la première fois 1,5 fois sa valeur initiale au bout de :",
+      "o": [
+        "8 ans",
+        "9 ans",
+        "10 ans",
+        "15 ans"
+      ],
+      "r": 1,
+      "x": "On cherche le plus petit entier n tel que 1,05ⁿ > 1,5, soit n > ln 1,5/ln 1,05 ≈ 8,31, d'où n = 9 ans. Il faut arrondir à l'entier supérieur, car au bout de 8 ans le seuil n'est pas encore franchi. La réponse 10 raisonne en intérêts simples, avec 5 % × 10 = 50 %.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La suite définie par uₙ = (–1)ⁿ est :",
+      "o": [
+        "convergente vers 0",
+        "convergente vers 1",
+        "divergente vers +∞",
+        "divergente mais bornée"
+      ],
+      "r": 3,
+      "x": "Les termes valent alternativement 1 et –1 : la suite ne s'approche d'aucune limite, elle est donc divergente. Elle reste cependant bornée, entre –1 et 1, ce qui montre qu'une suite bornée n'est pas forcément convergente. Elle ne tend pas vers +∞, puisque ses termes ne dépassent jamais 1.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une variable aléatoire X suit la loi uniforme sur l'intervalle [0 ; 10]. La probabilité P(2 ≤ X ≤ 5) vaut :",
+      "o": [
+        "0,2",
+        "0,3",
+        "0,5",
+        "0,7"
+      ],
+      "r": 1,
+      "x": "Pour une loi uniforme sur [0 ; 10], la probabilité d'un intervalle est proportionnelle à sa longueur : P(2 ≤ X ≤ 5) = (5 – 2)/10 = 0,3. La réponse 0,5 utilise la seule borne 5, comme si l'intervalle commençait en 0. La réponse 0,7 correspond à l'événement contraire.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre de façons de répondre à un QCM de 5 questions comportant chacune 4 propositions, une seule réponse étant choisie par question, est :",
+      "o": [
+        "20",
+        "625",
+        "1 024",
+        "3 125"
+      ],
+      "r": 2,
+      "x": "Chaque question offre 4 réponses possibles, indépendamment des autres : il y a donc 4⁵ = 1 024 façons de répondre. La réponse 625 = 5⁴ inverse la base et l'exposant. La réponse 20 additionne les possibilités au lieu de les multiplier.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "On tire au hasard un entier compris entre 1 et 100. La probabilité qu'il soit un carré parfait est :",
+      "o": [
+        "1/100",
+        "1/20",
+        "1/10",
+        "1/5"
+      ],
+      "r": 2,
+      "x": "Les carrés parfaits compris entre 1 et 100 sont les carrés des entiers de 1 à 10, soit 10 nombres, d'où une probabilité de 10/100 = 1/10. Il ne faut oublier ni 1 ni 100. La réponse 1/100 ne compterait qu'un seul cas favorable.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sur l'intervalle [0 ; π], les solutions de l'équation 2cos²x – 1 = 0 sont :",
+      "o": [
+        "π/4 seulement",
+        "π/3 et 2π/3",
+        "π/6 et 5π/6",
+        "π/4 et 3π/4"
+      ],
+      "r": 3,
+      "x": "L'équation s'écrit cos²x = 1/2, soit cos x = √2/2 ou cos x = –√2/2, ce qui donne x = π/4 ou x = 3π/4 sur [0 ; π]. On reconnaît aussi l'équation cos 2x = 0. La proposition π/4 seulement oublie la valeur négative du cosinus.",
+      "_batchId": "maths_bac/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le développement de (x + 5)(x − 5) est :",
+      "o": [
+        "x² − 25",
+        "x² + 25",
+        "x² − 10x + 25",
+        "x² + 10x + 25"
+      ],
+      "r": 0,
+      "x": "On reconnaît l'identité remarquable (a + b)(a − b) = a² − b², avec a = x et b = 5. On obtient donc x² − 5² = x² − 25, les termes en x s'annulant : −5x + 5x = 0. Les réponses x² ± 10x + 25 correspondent aux carrés (x ± 5)², et x² + 25 se trompe sur le signe de b².",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La forme factorisée de x² − 7x + 12 est :",
+      "o": [
+        "(x − 3)(x − 4)",
+        "(x − 1)(x − 12)",
+        "(x − 2)(x − 6)",
+        "(x + 3)(x + 4)"
+      ],
+      "r": 0,
+      "x": "On cherche deux nombres dont la somme vaut 7 et le produit 12 : ce sont 3 et 4, d'où x² − 7x + 12 = (x − 3)(x − 4). On vérifie en développant : x² − 4x − 3x + 12 = x² − 7x + 12. Les couples 1 et 12, ou 2 et 6, ont bien pour produit 12 mais pas pour somme 7, et (x + 3)(x + 4) donnerait +7x.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Les solutions de l'équation 2x² − 5x + 2 = 0 sont :",
+      "o": [
+        "−2 et −1/2",
+        "−2 et 1/2",
+        "1/2 et 2",
+        "1 et 2"
+      ],
+      "r": 2,
+      "x": "Le discriminant vaut Δ = (−5)² − 4 × 2 × 2 = 25 − 16 = 9, d'où √Δ = 3. Les racines sont x = (5 − 3)/4 = 1/2 et x = (5 + 3)/4 = 2, et leur produit vaut bien c/a = 1. Les réponses avec des valeurs négatives se trompent de signe sur −b, et le couple 1 et 2 ne convient pas, puisque 2 × 1² − 5 × 1 + 2 = −1.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le discriminant du trinôme 3x² − 2x + 1 est :",
+      "o": [
+        "−8",
+        "−4",
+        "8",
+        "16"
+      ],
+      "r": 0,
+      "x": "Le discriminant vaut Δ = b² − 4ac, avec a = 3, b = −2 et c = 1 : Δ = (−2)² − 4 × 3 × 1 = 4 − 12 = −8. Comme Δ est strictement négatif, l'équation 3x² − 2x + 1 = 0 n'a aucune solution réelle. La réponse 16 ajoute 4ac au lieu de le retrancher, et 8 prend (−2)² pour −4.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation x² − 4 ≤ 0 est :",
+      "o": [
+        "[−2 ; 2]",
+        "[0 ; 2]",
+        "]−∞ ; 2]",
+        "]−∞ ; −2] ∪ [2 ; +∞["
+      ],
+      "r": 0,
+      "x": "On factorise : x² − 4 = (x − 2)(x + 2), trinôme qui s'annule en −2 et en 2. Un trinôme de coefficient a > 0 est négatif entre ses racines, donc x² − 4 ≤ 0 pour x ∈ [−2 ; 2]. La réponse ]−∞ ; −2] ∪ [2 ; +∞[ donne au contraire l'ensemble où x² − 4 ≥ 0, et ]−∞ ; 2] oublie la racine négative, alors que (−3)² − 4 = 5 > 0.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La somme S et le produit P des racines de l'équation x² − 6x + 8 = 0 sont :",
+      "o": [
+        "S = −6 et P = −8",
+        "S = −6 et P = 8",
+        "S = 6 et P = −8",
+        "S = 6 et P = 8"
+      ],
+      "r": 3,
+      "x": "Pour ax² + bx + c = 0, la somme des racines vaut S = −b/a et leur produit P = c/a, ici S = 6 et P = 8. On le confirme avec les racines elles-mêmes, 2 et 4, puisque 2 + 4 = 6 et 2 × 4 = 8. La réponse S = −6 oublie le signe moins de la formule −b/a, erreur la plus fréquente sur ces relations.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Si f(x) = 2x³ − x² + 3x − 5, alors f(2) vaut :",
+      "o": [
+        "13",
+        "18",
+        "21",
+        "61"
+      ],
+      "r": 0,
+      "x": "On remplace x par 2 dans chaque terme : f(2) = 2 × 8 − 4 + 3 × 2 − 5. On obtient 16 − 4 + 6 − 5 = 13, en calculant les puissances avant les multiplications. La réponse 18 oublie le terme constant −5, 21 compte −x² comme +4, et 61 calcule (2 × 2)³ au lieu de 2 × 2³.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La limite en +∞ de f(x) = (2x² − 3x + 1)/(x² + x − 2) est :",
+      "o": [
+        "0",
+        "1",
+        "2",
+        "+∞"
+      ],
+      "r": 2,
+      "x": "En +∞, une fraction rationnelle a la même limite que le quotient de ses termes de plus haut degré, ici 2x²/x² = 2. On le justifie en divisant numérateur et dénominateur par x² : (2 − 3/x + 1/x²)/(1 + 1/x − 2/x²) tend vers 2/1. La réponse +∞ oublie que les deux degrés sont égaux, et 0 ne conviendrait que si le degré du numérateur était plus petit.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La limite de (x² − 9)/(x² − 3x) quand x tend vers 3 est :",
+      "o": [
+        "0",
+        "1",
+        "2",
+        "6"
+      ],
+      "r": 2,
+      "x": "En x = 3, numérateur et dénominateur s'annulent : c'est une forme indéterminée 0/0, qu'on lève en factorisant par x − 3. On obtient (x − 3)(x + 3)/[x(x − 3)] = (x + 3)/x pour x ≠ 3, qui tend vers 6/3 = 2. La réponse 6 oublie le facteur x du dénominateur, et 0 conclut trop vite à partir du numérateur nul.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La limite de x·sin(1/x) quand x tend vers +∞ est :",
+      "o": [
+        "−1",
+        "0",
+        "1",
+        "+∞"
+      ],
+      "r": 2,
+      "x": "On pose t = 1/x, qui tend vers 0 par valeurs positives quand x tend vers +∞, et l'expression devient sin(t)/t. Or sin(t)/t tend vers 1 quand t tend vers 0, limite de référence liée au nombre dérivé du sinus en 0. La réponse 0 vient de ce que sin(1/x) tend vers 0, mais elle oublie que ce facteur est multiplié par x, qui tend vers +∞.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La dérivée de f(x) = 5x⁴ − 3x² + 7x − 2 est :",
+      "o": [
+        "20x³ − 6x + 7",
+        "5x³ − 6x + 7",
+        "20x³ − 6x",
+        "20x⁴ − 6x + 7"
+      ],
+      "r": 0,
+      "x": "On dérive terme à terme avec (xⁿ)' = n xⁿ⁻¹ : (5x⁴)' = 20x³, (3x²)' = 6x, (7x)' = 7, et la constante −2 a une dérivée nulle. On obtient f'(x) = 20x³ − 6x + 7. La réponse 20x³ − 6x oublie la dérivée de 7x, et 20x⁴ − 6x + 7 oublie de diminuer l'exposant d'une unité.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
       "q": "La dérivée de f(x) = (3x + 1)⁵ est :",
       "o": [
-        "5(3x + 1)⁴",
         "15(3x + 1)⁴",
         "3(3x + 1)⁴",
-        "5(3x + 1)⁵"
+        "5(3x + 1)⁴",
+        "15(3x + 1)⁵"
       ],
-      "r": 1,
-      "x": "Par la règle de la chaîne : si f(x) = [u(x)]ⁿ, alors f'(x) = n·u'(x)·[u(x)]ⁿ⁻¹. Ici u = 3x+1, u' = 3, n = 5. Donc f'(x) = 5×3×(3x+1)⁴ = 15(3x+1)⁴."
+      "r": 0,
+      "x": "On applique la formule (uⁿ)' = n u' uⁿ⁻¹ avec u = 3x + 1, u' = 3 et n = 5. On obtient f'(x) = 5 × 3 × (3x + 1)⁴ = 15(3x + 1)⁴. La réponse 5(3x + 1)⁴ oublie de multiplier par la dérivée de l'expression intérieure, et 15(3x + 1)⁵ oublie de diminuer l'exposant.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La dérivée de f(x) = x²·eˣ est :",
+      "q": "La dérivée de f(x) = x² eˣ est :",
       "o": [
-        "2x·eˣ",
-        "x²·eˣ",
-        "(x² + 2x)eˣ",
-        "(2x - x²)eˣ"
+        "2x eˣ",
+        "x² eˣ",
+        "(x² − 2x)eˣ",
+        "(x² + 2x)eˣ"
       ],
-      "r": 2,
-      "x": "Par la règle du produit (uv)' = u'v + uv' avec u = x², v = eˣ : f'(x) = 2x·eˣ + x²·eˣ = eˣ(2x + x²) = (x² + 2x)eˣ."
+      "r": 3,
+      "x": "On applique la règle du produit (uv)' = u'v + uv' avec u = x² et v = eˣ, dont les dérivées sont 2x et eˣ. On obtient f'(x) = 2x eˣ + x² eˣ = (x² + 2x)eˣ. La réponse 2x eˣ ne dérive que le premier facteur, et x² eˣ ne dérive que le second, en oubliant l'autre terme de la formule.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
       "q": "La dérivée de f(x) = ln(x² + 3) est :",
       "o": [
         "1/(x² + 3)",
-        "2x·ln(x² + 3)",
+        "x/(x² + 3)",
         "2x/(x² + 3)",
-        "x/(x² + 3)"
+        "2x ln(x² + 3)"
       ],
       "r": 2,
-      "x": "Par la dérivée de ln(u), on a [ln(u)]' = u'/u. Ici u = x² + 3, donc u' = 2x. Ainsi f'(x) = 2x/(x² + 3)."
+      "x": "La dérivée de ln u est u'/u, formule valable ici car x² + 3 est toujours strictement positif. Avec u = x² + 3 et u' = 2x, on obtient f'(x) = 2x/(x² + 3). La réponse 1/(x² + 3) oublie de multiplier par u', et 2x ln(x² + 3) confond la dérivée de ln avec un produit.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La dérivée de f(x) = sin(3x) est :",
+      "q": "La dérivée de f(x) = eˣ/(x + 1) est :",
       "o": [
-        "cos(3x)",
-        "-cos(3x)",
-        "3cos(3x)",
-        "-3cos(3x)"
-      ],
-      "r": 2,
-      "x": "Par la règle de la chaîne : [sin(u)]' = u'·cos(u). Ici u = 3x, u' = 3. Donc f'(x) = 3·cos(3x)."
-    },
-    {
-      "q": "La dérivée de f(x) = eˣ / (x + 1) est :",
-      "o": [
-        "eˣ(x + 2) / (x + 1)²",
-        "x·eˣ / (x + 1)²",
-        "eˣ / (x + 1)²",
-        "eˣ(x + 2) / (x + 1)"
+        "eˣ/(x + 1)²",
+        "x eˣ/(x + 1)²",
+        "(x + 2)eˣ/(x + 1)²",
+        "(x + 2)eˣ/(x + 1)"
       ],
       "r": 1,
-      "x": "Par la règle du quotient (u/v)' = (u'v - uv')/v² : u=eˣ, v=x+1, u'=eˣ, v'=1. f'(x) = (eˣ(x+1) - eˣ)/(x+1)² = eˣ(x+1-1)/(x+1)² = xeˣ/(x+1)². La bonne réponse est donc B (xeˣ/(x+1)²)."
+      "x": "On applique (u/v)' = (u'v − uv')/v² avec u = eˣ, v = x + 1, u' = eˣ et v' = 1. On obtient [eˣ(x + 1) − eˣ]/(x + 1)² = eˣ(x + 1 − 1)/(x + 1)² = x eˣ/(x + 1)². La réponse (x + 2)eˣ/(x + 1)² additionne les deux termes du numérateur au lieu de les soustraire.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La fonction f(x) = x³ - 3x est croissante sur :",
+      "q": "La fonction f(x) = x³ − 12x est croissante sur :",
       "o": [
-        "[-1 ; 1]",
-        "]-∞ ; -1] et [1 ; +∞[",
+        "[−2 ; 2]",
         "[0 ; +∞[",
-        "]-∞ ; 0]"
+        "]−∞ ; −2] et [2 ; +∞[",
+        "]−∞ ; 0]"
       ],
-      "r": 1,
-      "x": "f'(x) = 3x² - 3 = 3(x² - 1) = 3(x-1)(x+1). f'(x) ≥ 0 quand x ≤ -1 ou x ≥ 1. Donc f est croissante sur ]-∞ ; -1] et sur [1 ; +∞[."
+      "r": 2,
+      "x": "La dérivée vaut f'(x) = 3x² − 12 = 3(x − 2)(x + 2), trinôme positif à l'extérieur de ses racines −2 et 2. La fonction est donc croissante sur ]−∞ ; −2] et sur [2 ; +∞[, et décroissante sur [−2 ; 2]. La réponse [−2 ; 2] donne l'intervalle où f décroît, en inversant le signe de la dérivée.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "Le maximum local de f(x) = -2x² + 4x + 1 est atteint en :",
+      "q": "Le maximum de la fonction f(x) = −2x² + 4x + 1 est atteint pour :",
       "o": [
-        "x = -1",
+        "x = −1",
         "x = 0",
         "x = 1",
-        "x = 2"
+        "x = 3"
       ],
       "r": 2,
-      "x": "f'(x) = -4x + 4 = 0 → x = 1. f''(x) = -4 < 0, donc c'est un maximum. La valeur maximale est f(1) = -2 + 4 + 1 = 3."
+      "x": "La dérivée f'(x) = −4x + 4 s'annule en x = 1, positive avant et négative après : f admet donc un maximum en x = 1. Ce maximum vaut f(1) = −2 + 4 + 1 = 3, et l'on retrouve x = 1 par la formule −b/(2a) = −4/(−4). La réponse x = 3 confond l'abscisse du maximum avec sa valeur, et x = −1 se trompe de signe dans −b/(2a).",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "Le point d'inflexion de f(x) = x³ - 6x² + 9x + 1 est en x = :",
+      "q": "L'équation de la tangente à la courbe de f(x) = x² + 2x au point d'abscisse 1 est :",
       "o": [
-        "x = 1",
-        "x = 2",
-        "x = 3",
-        "x = 4"
-      ],
-      "r": 1,
-      "x": "f'(x) = 3x² - 12x + 9. f''(x) = 6x - 12. f''(x) = 0 → x = 2. f'' change de signe en x = 2 (passe de - à +), donc il y a bien un point d'inflexion en x = 2."
-    },
-    {
-      "q": "L'équation de la tangente à f(x) = x² + 2x au point d'abscisse x₀ = 1 est :",
-      "o": [
-        "y = 4x - 1",
-        "y = 4x + 1",
-        "y = 2x - 1",
-        "y = 2x + 1"
+        "y = 4x − 1",
+        "y = 2x − 1",
+        "y = 2x + 1",
+        "y = 4x + 1"
       ],
       "r": 0,
-      "x": "f(1) = 1 + 2 = 3. f'(x) = 2x + 2, f'(1) = 4. Équation de la tangente : y - 3 = 4(x - 1), soit y = 4x - 1. Vérif : f(1) = 3 et 4(1)-1 = 3 ✓."
+      "x": "La tangente au point d'abscisse a a pour équation y = f'(a)(x − a) + f(a). Ici f(1) = 3 et f'(x) = 2x + 2, donc f'(1) = 4 et y = 4(x − 1) + 3 = 4x − 1. La réponse y = 4x + 1 ne passe pas par le point (1 ; 3), et les réponses de coefficient 2 calculent mal le nombre dérivé.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La primitive de f(x) = 6x² - 4x + 1 est :",
+      "q": "Une primitive de f(x) = 6x² − 4x + 1 est :",
       "o": [
-        "12x - 4 + C",
-        "2x³ - 2x² + x + C",
-        "6x³ - 4x² + x + C",
-        "2x³ - 4x² + x + C"
+        "F(x) = 12x − 4",
+        "F(x) = 2x³ − 4x² + x",
+        "F(x) = 6x³ − 4x² + x",
+        "F(x) = 2x³ − 2x² + x"
       ],
-      "r": 1,
-      "x": "On intègre terme par terme : ∫6x²dx = 6x³/3 = 2x³, ∫4xdx = 4x²/2 = 2x², ∫1dx = x. Donc F(x) = 2x³ - 2x² + x + C."
+      "r": 3,
+      "x": "Une primitive de xⁿ est xⁿ⁺¹/(n + 1), et l'on traite chaque terme séparément. On obtient 6x³/3 − 4x²/2 + x = 2x³ − 2x² + x, à une constante près. La réponse 12x − 4 est la dérivée de f et non une primitive, et 6x³ − 4x² + x oublie de diviser par les nouveaux exposants.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La valeur de ∫₁³ (2x - 1) dx est :",
+      "q": "La valeur de l'intégrale de 1 à 3 de (2x − 1) dx est :",
       "o": [
         "4",
         "6",
@@ -8674,263 +13416,179 @@ const QUESTIONS = {
         "10"
       ],
       "r": 1,
-      "x": "∫₁³ (2x-1)dx = [x² - x]₁³ = (9-3) - (1-1) = 6 - 0 = 6. La primitive de 2x-1 est x²-x. On évalue aux bornes et on soustrait."
+      "x": "Une primitive de 2x − 1 est x² − x, qu'on évalue aux bornes : (9 − 3) − (1 − 1) = 6. Géométriquement, c'est l'aire d'un trapèze de hauteur 2 et de bases f(1) = 1 et f(3) = 5, soit (1 + 5) × 2 ÷ 2 = 6. La réponse 8 oublie le terme −x en calculant seulement 9 − 1.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La valeur de ∫₀^(π) cos(x) dx est :",
+      "q": "La valeur de l'intégrale de 0 à π de cos x dx est :",
       "o": [
-        "1",
-        "-1",
+        "−1",
         "0",
+        "1",
         "2"
       ],
+      "r": 1,
+      "x": "Une primitive de cos est sin, donc l'intégrale vaut sin(π) − sin(0) = 0 − 0 = 0. Le cosinus est positif sur [0 ; π/2] et négatif sur [π/2 ; π], et les deux parties se compensent exactement. La réponse 2 correspond à l'aire géométrique totale entre la courbe et l'axe, qui compte les deux parties positivement.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La valeur de l'intégrale de 0 à 1 de eˣ dx est :",
+      "o": [
+        "1 − e",
+        "1",
+        "e − 1",
+        "e"
+      ],
       "r": 2,
-      "x": "∫₀^π cos(x)dx = [sin(x)]₀^π = sin(π) - sin(0) = 0 - 0 = 0. La courbe du cosinus est symétrique : l'aire positive de 0 à π/2 est compensée par l'aire négative de π/2 à π."
+      "x": "La fonction exponentielle est sa propre primitive, donc l'intégrale vaut e¹ − e⁰ = e − 1, soit environ 1,72. Il ne faut pas oublier la borne inférieure, car e⁰ vaut 1 et non 0. La réponse e oublie précisément cette borne, et 1 − e inverse l'ordre de la soustraction.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La valeur de ∫₀^1 eˣ dx est :",
+      "q": "Une fonction f est paire si et seulement si, pour tout x de son ensemble de définition :",
       "o": [
-        "e",
-        "e - 1",
-        "1 - e",
-        "1"
+        "f(−x) = f(x)",
+        "f(−x) = −f(x)",
+        "f'(x) = 0",
+        "f(x) > 0"
       ],
-      "r": 1,
-      "x": "∫₀¹ eˣdx = [eˣ]₀¹ = e¹ - e⁰ = e - 1. La primitive de eˣ est eˣ lui-même, c'est la propriété remarquable de la fonction exponentielle."
+      "r": 0,
+      "x": "Une fonction est paire lorsque f(−x) = f(x) pour tout x d'un ensemble de définition symétrique par rapport à 0. Sa courbe est alors symétrique par rapport à l'axe des ordonnées, comme celles de x² ou de cos x. La relation f(−x) = −f(x) caractérise au contraire les fonctions impaires, comme x³ ou sin x.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La fonction f est paire si et seulement si :",
+      "q": "L'ensemble de définition de f(x) = √(6 − 2x) est :",
       "o": [
-        "f(-x) = -f(x) pour tout x",
-        "f(-x) = f(x) pour tout x",
-        "f'(x) = 0 pour tout x",
-        "f(x) > 0 pour tout x"
-      ],
-      "r": 1,
-      "x": "Une fonction paire vérifie f(-x) = f(x) : sa courbe est symétrique par rapport à l'axe des ordonnées. Exemples : f(x) = x², f(x) = cos(x). Une fonction impaire vérifie f(-x) = -f(x) (ex : x³, sin x)."
-    },
-    {
-      "q": "L'ensemble de définition de f(x) = √(2x - 6) est :",
-      "o": [
+        "]−∞ ; 3[",
+        "]−∞ ; 3]",
         "[3 ; +∞[",
-        "]3 ; +∞[",
-        "]-∞ ; 3]",
         "ℝ"
       ],
+      "r": 1,
+      "x": "Une racine carrée n'est définie que pour un nombre positif ou nul, donc il faut 6 − 2x ≥ 0. On obtient −2x ≥ −6, puis x ≤ 3 en divisant par −2, ce qui inverse l'inégalité : Df = ]−∞ ; 3]. La réponse [3 ; +∞[ oublie ce changement de sens, et ]−∞ ; 3[ exclut à tort x = 3, pour lequel √0 = 0 existe.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Une primitive de f(x) = 1/(2x + 1) sur ]−1/2 ; +∞[ est :",
+      "o": [
+        "(1/2) ln(2x + 1)",
+        "ln(2x + 1)",
+        "2 ln(2x + 1)",
+        "ln(2x)"
+      ],
       "r": 0,
-      "x": "Pour que √(2x-6) soit définie, il faut 2x - 6 ≥ 0, soit 2x ≥ 6, soit x ≥ 3. Le domaine est Df = [3 ; +∞[."
+      "x": "On fait apparaître la forme u'/u, dont une primitive est ln u, avec u = 2x + 1 et u' = 2. Comme 1/(2x + 1) = (1/2) × 2/(2x + 1), une primitive est (1/2) ln(2x + 1). La réponse ln(2x + 1) oublie le facteur 1/2, et 2 ln(2x + 1) multiplie par u' au lieu de diviser.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La dérivée de f(x) = cos²(x) est :",
+      "q": "La valeur exacte de sin(π/4) est :",
       "o": [
-        "2cos(x)",
-        "-sin(2x)",
-        "2sin(x)",
-        "sin(2x)"
-      ],
-      "r": 1,
-      "x": "f(x) = [cos(x)]². Par la règle de la chaîne : f'(x) = 2cos(x)×(-sin(x)) = -2sin(x)cos(x) = -sin(2x), en utilisant l'identité sin(2x) = 2sin(x)cos(x)."
-    },
-    {
-      "q": "La primitive de f(x) = 1/(2x + 1) est :",
-      "o": [
-        "ln(2x + 1) + C",
-        "(1/2)ln|2x + 1| + C",
-        "2ln|2x + 1| + C",
-        "ln|2x| + C"
-      ],
-      "r": 1,
-      "x": "On reconnaît la forme u'/u avec u = 2x+1 et u' = 2. Donc ∫1/(2x+1)dx = (1/2)∫2/(2x+1)dx = (1/2)ln|2x+1| + C."
-    },
-    {
-      "q": "La valeur de ∫₁^4 (1/√x) dx est :",
-      "o": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "r": 1,
-      "x": "∫x^(-1/2)dx = x^(1/2)/(1/2) = 2√x. Donc [2√x]₁^4 = 2√4 - 2√1 = 2×2 - 2×1 = 4 - 2 = 2."
-    },
-    {
-      "q": "cos(60°) est égal à :",
-      "o": [
-        "√3/2",
         "1/2",
         "√2/2",
+        "√3/2",
         "1"
       ],
       "r": 1,
-      "x": "Les valeurs à connaître : cos(0°)=1, cos(30°)=√3/2, cos(60°)=1/2, cos(90°)=0. On peut retenir que cos(60°) = sin(30°) = 1/2 car ces angles sont complémentaires (30°+60°=90°)."
+      "x": "L'angle π/4 vaut 45°, et dans un triangle rectangle isocèle d'hypoténuse 1, chaque côté de l'angle droit mesure 1/√2 = √2/2. On a donc sin(π/4) = cos(π/4) = √2/2, soit environ 0,707. La réponse 1/2 correspond à sin(π/6), et √3/2 à sin(π/3).",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "sin(π/4) est égal à :",
+      "q": "La formule d'addition sin(a + b) est égale à :",
       "o": [
-        "1/2",
+        "sin a cos b + cos a sin b",
+        "sin a cos b − cos a sin b",
+        "cos a cos b − sin a sin b",
+        "sin a sin b + cos a cos b"
+      ],
+      "r": 0,
+      "x": "La formule d'addition du sinus est sin(a + b) = sin a cos b + cos a sin b. On la contrôle avec a = π/2 et b = 0 : les deux membres valent 1. La forme avec un signe moins est celle de sin(a − b), et cos a cos b − sin a sin b est la formule de cos(a + b).",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La valeur exacte de sin 75° est :",
+      "o": [
+        "(√6 − √2)/4",
         "√3/2",
-        "√2/2",
-        "1"
-      ],
-      "r": 2,
-      "x": "π/4 = 45°. sin(45°) = cos(45°) = √2/2 ≈ 0,707. Ces valeurs sont égales car dans un triangle rectangle isocèle, les deux angles aigus valent chacun 45°."
-    },
-    {
-      "q": "La formule de sin(a + b) est :",
-      "o": [
-        "sin(a)·sin(b) + cos(a)·cos(b)",
-        "sin(a)·cos(b) - cos(a)·sin(b)",
-        "sin(a)·cos(b) + cos(a)·sin(b)",
-        "cos(a)·cos(b) - sin(a)·sin(b)"
-      ],
-      "r": 2,
-      "x": "sin(a+b) = sin(a)cos(b) + cos(a)sin(b). La formule pour cos(a+b) = cos(a)cos(b) - sin(a)sin(b). Ces formules d'addition sont fondamentales en trigonométrie."
-    },
-    {
-      "q": "La valeur de sin(75°) est :",
-      "o": [
         "(√6 + √2)/4",
-        "(√6 - √2)/4",
-        "√3/2",
         "(√2 + 1)/2"
       ],
-      "r": 0,
-      "x": "sin(75°) = sin(45° + 30°) = sin45·cos30 + cos45·sin30 = (√2/2)(√3/2) + (√2/2)(1/2) = √6/4 + √2/4 = (√6+√2)/4."
+      "r": 2,
+      "x": "On écrit 75° = 45° + 30° et on applique sin(a + b) = sin a cos b + cos a sin b. On obtient (√2/2)(√3/2) + (√2/2)(1/2) = (√6 + √2)/4, soit environ 0,966. La réponse (√6 − √2)/4 vaut sin 15°, et (√2 + 1)/2 dépasse 1, ce qui est impossible pour un sinus.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "cos(2x) est égal à :",
+      "q": "Pour tout réel x, cos(2x) est égal à :",
       "o": [
-        "2sin(x)cos(x)",
-        "sin²(x) - cos²(x)",
-        "cos²(x) - sin²(x)",
-        "2cos²(x) + 1"
+        "cos²x − sin²x",
+        "2 sin x cos x",
+        "sin²x − cos²x",
+        "2cos²x + 1"
+      ],
+      "r": 0,
+      "x": "La formule de duplication du cosinus est cos(2x) = cos²x − sin²x, qu'on écrit aussi 2cos²x − 1 ou 1 − 2sin²x. Pour x = 0, elle donne bien cos 0 = 1. La réponse 2 sin x cos x est la formule de sin(2x), et 2cos²x + 1 se trompe de signe, puisqu'elle donnerait 3 en x = 0.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Dans l'intervalle [0 ; 2π], les solutions de l'équation cos x = 1/2 sont :",
+      "o": [
+        "π/3 seulement",
+        "π/3 et 2π/3",
+        "π/3 et 5π/3",
+        "π/6 et 11π/6"
       ],
       "r": 2,
-      "x": "cos(2x) = cos²(x) - sin²(x). On peut aussi l'écrire 2cos²(x) - 1 ou 1 - 2sin²(x), en utilisant l'identité sin²+cos²=1. La formule sin(2x) = 2sin(x)cos(x) est la réponse A."
+      "x": "On sait que cos(π/3) = 1/2, et comme cos(2π − x) = cos x, la valeur 2π − π/3 = 5π/3 convient aussi. Ce sont les deux seules solutions dans [0 ; 2π], car le cosinus est négatif sur ]π/2 ; 3π/2[. La réponse π/3 et 2π/3 applique à tort la symétrie du sinus, puisque cos(2π/3) = −1/2, et π/6 donne un cosinus égal à √3/2.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La solution de sin(x) = 1/2 dans [0 ; 2π] est :",
+      "q": "Dans un triangle ABC, AB = 5, AC = 7 et l'angle A mesure 60°. La longueur BC est :",
       "o": [
-        "x = π/6 seulement",
-        "x = π/6 et x = 5π/6",
-        "x = π/3 et x = 2π/3",
-        "x = π/4 et x = 3π/4"
-      ],
-      "r": 1,
-      "x": "sin(x) = 1/2 donne x = π/6 (30°) dans le premier quadrant. Dans le second quadrant, sin est aussi positif : x = π - π/6 = 5π/6 (150°). Ce sont les deux seules solutions dans [0;2π]."
-    },
-    {
-      "q": "Dans un triangle ABC, AB = 5, AC = 7 et l'angle A = 60°. La longueur BC est :",
-      "o": [
+        "6",
         "√39",
-        "√59",
-        "6",
-        "4√3"
-      ],
-      "r": 0,
-      "x": "Par la loi des cosinus : BC² = AB² + AC² - 2·AB·AC·cos(A) = 25 + 49 - 2×5×7×(1/2) = 74 - 35 = 39. Donc BC = √39."
-    },
-    {
-      "q": "Dans un triangle, la loi des sinus dit que :",
-      "o": [
-        "a/sin(A) = b/sin(B) = c/sin(C)",
-        "a·sin(A) = b·sin(B) = c·sin(C)",
-        "a² = b² + c² - 2bc·cos(A)",
-        "sin(A)/a = sin(B)/b = sin(C)/c = 1"
-      ],
-      "r": 0,
-      "x": "La loi des sinus : a/sin(A) = b/sin(B) = c/sin(C) = 2R, où R est le rayon du cercle circonscrit. Elle est très utile pour résoudre un triangle quand on connaît un côté et deux angles, ou deux côtés et un angle opposé."
-    },
-    {
-      "q": "L'aire d'un triangle ABC avec AB = 6, AC = 8 et l'angle A = 30° est :",
-      "o": [
-        "12",
-        "24",
-        "48",
-        "6"
-      ],
-      "r": 0,
-      "x": "Aire = (1/2)×AB×AC×sin(A) = (1/2)×6×8×sin(30°) = (1/2)×48×(1/2) = 12. La formule générale est Aire = (1/2)·b·c·sin(A)."
-    },
-    {
-      "q": "La droite passant par A(2, 1) et B(4, 5) a pour pente :",
-      "o": [
-        "1",
-        "2",
-        "3",
-        "4"
+        "4√3",
+        "√109"
       ],
       "r": 1,
-      "x": "Pente m = (yB - yA)/(xB - xA) = (5-1)/(4-2) = 4/2 = 2. L'équation est y - 1 = 2(x-2), soit y = 2x - 3. Vérif : pour x=4, y=8-3=5 ✓."
+      "x": "La formule d'Al-Kashi donne BC² = AB² + AC² − 2 × AB × AC × cos A = 25 + 49 − 70 × 1/2. On obtient BC² = 74 − 35 = 39, donc BC = √39, environ 6,24. La réponse √109 ajoute le terme 2 × AB × AC × cos A au lieu de le retrancher.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "L'équation d'un cercle de centre (−1 ; 2) et de rayon 3 est :",
+      "q": "Dans un triangle de côtés a, b, c opposés aux angles A, B, C, la loi des sinus s'écrit :",
       "o": [
-        "(x+1)² + (y-2)² = 3",
-        "(x-1)² + (y+2)² = 9",
-        "(x+1)² + (y-2)² = 9",
-        "(x+1)² + (y+2)² = 9"
+        "a sin A = b sin B = c sin C",
+        "a² = b² + c² − 2bc cos A",
+        "sin A/a = sin B/b = sin C/c = 1",
+        "a/sin A = b/sin B = c/sin C"
       ],
-      "r": 2,
-      "x": "L'équation d'un cercle de centre (a ; b) et de rayon r est (x-a)² + (y-b)² = r². Ici a = -1, b = 2, r = 3 : (x-(-1))² + (y-2)² = 9, soit (x+1)² + (y-2)² = 9."
+      "r": 3,
+      "x": "Dans un triangle, chaque côté est proportionnel au sinus de l'angle opposé : a/sin A = b/sin B = c/sin C, rapport égal au diamètre 2R du cercle circonscrit. Cette loi sert lorsque l'on connaît un côté et deux angles. La réponse a² = b² + c² − 2bc cos A est la formule d'Al-Kashi, qui relie trois côtés et un angle.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "Le milieu du segment [AB] avec A(−2 ; 4) et B(6 ; -2) est :",
+      "q": "L'équation du cercle de centre (−1 ; 2) et de rayon 3 est :",
       "o": [
-        "(2 ; 1)",
-        "(4 ; 2)",
-        "(2 ; 2)",
-        "(4 ; 1)"
-      ],
-      "r": 0,
-      "x": "Milieu M = ((xA+xB)/2 ; (yA+yB)/2) = ((-2+6)/2 ; (4+(-2))/2) = (4/2 ; 2/2) = (2 ; 1)."
-    },
-    {
-      "q": "La distance entre les points A(1 ; 2) et B(4 ; 6) est :",
-      "o": [
-        "5",
-        "6",
-        "7",
-        "√30"
+        "(x + 1)² + (y − 2)² = 9",
+        "(x + 1)² + (y − 2)² = 3",
+        "(x − 1)² + (y + 2)² = 9",
+        "(x + 1)² + (y + 2)² = 9"
       ],
       "r": 0,
-      "x": "AB = √((xB-xA)² + (yB-yA)²) = √((4-1)² + (6-2)²) = √(9 + 16) = √25 = 5."
+      "x": "Le cercle de centre (a ; b) et de rayon r a pour équation (x − a)² + (y − b)² = r². Avec a = −1, b = 2 et r = 3, on obtient (x + 1)² + (y − 2)² = 9. La réponse terminée par « = 3 » oublie d'élever le rayon au carré, et (x − 1)² + (y + 2)² inverse les signes des coordonnées du centre.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "Deux droites de pentes m₁ et m₂ sont perpendiculaires si :",
+      "q": "La suite arithmétique de premier terme u₁ = 4 et de raison 5 a pour terme général :",
       "o": [
-        "m₁ = m₂",
-        "m₁ + m₂ = 0",
-        "m₁ × m₂ = -1",
-        "m₁ - m₂ = 1"
-      ],
-      "r": 2,
-      "x": "Deux droites (non verticales) sont perpendiculaires si et seulement si m₁ × m₂ = -1. Par exemple, si m₁ = 2, alors m₂ = -1/2. Des droites parallèles ont la même pente : m₁ = m₂."
-    },
-    {
-      "q": "L'aire du triangle de sommets O(0;0), A(4;0) et B(0;3) est :",
-      "o": [
-        "6",
-        "12",
-        "5",
-        "7"
-      ],
-      "r": 0,
-      "x": "Ce triangle rectangle a ses jambes sur les axes. Aire = (1/2) × base × hauteur = (1/2) × 4 × 3 = 6. On peut aussi utiliser la formule Aire = (1/2)|det(OA⃗, OB⃗)| = (1/2)|4×3 - 0×0| = 6."
-    },
-    {
-      "q": "La suite arithmétique de premier terme u₁ = 4 et de raison r = 5 a pour terme général :",
-      "o": [
+        "uₙ = 5n − 1",
         "uₙ = 5n + 4",
-        "uₙ = 5n - 1",
         "uₙ = 4n + 5",
-        "uₙ = 4 + 5n"
+        "uₙ = 5n − 5"
       ],
-      "r": 1,
-      "x": "uₙ = u₁ + (n-1)×r = 4 + (n-1)×5 = 4 + 5n - 5 = 5n - 1. Vérif : u₁ = 5(1)-1 = 4 ✓, u₂ = 5(2)-1 = 9 = 4+5 ✓."
+      "r": 0,
+      "x": "Pour une suite arithmétique de premier terme u₁, on a uₙ = u₁ + (n − 1)r = 4 + 5(n − 1) = 5n − 1. On vérifie que u₁ = 5 − 1 = 4 et u₂ = 10 − 1 = 9 = 4 + 5. La réponse 5n + 4 utilise la formule uₙ = u₀ + nr, valable si le premier terme est u₀, et 4n + 5 intervertit premier terme et raison.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La somme des 20 premiers termes de la suite arithmétique u₁ = 3, r = 2 est :",
+      "q": "La somme des 20 premiers termes de la suite arithmétique de premier terme u₁ = 3 et de raison 2 est :",
       "o": [
         "380",
         "400",
@@ -8938,230 +13596,167 @@ const QUESTIONS = {
         "440"
       ],
       "r": 3,
-      "x": "u₂₀ = u₁ + 19r = 3 + 19×2 = 41. Formule : Sₙ = n×(u₁+uₙ)/2 = 20×(3+41)/2 = 20×22 = 440."
+      "x": "Le vingtième terme vaut u₂₀ = u₁ + 19r = 3 + 38 = 41. La somme de termes consécutifs d'une suite arithmétique est le nombre de termes multiplié par la moyenne du premier et du dernier : S = 20 × (3 + 41)/2 = 440. La réponse 420 prend u₂₀ = 39, en comptant un écart de moins, et 400 est la somme des 20 premiers nombres impairs.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La suite géométrique u₁ = 2, raison q = 3. Le terme u₅ est :",
+      "q": "La somme des 5 premiers termes de la suite géométrique de premier terme u₁ = 1 et de raison 2 est :",
       "o": [
-        "162",
-        "486",
-        "54",
-        "18"
-      ],
-      "r": 0,
-      "x": "uₙ = u₁ × qⁿ⁻¹. u₅ = 2 × 3⁴ = 2 × 81 = 162. On monte de 4 rangs depuis u₁ : u₂=6, u₃=18, u₄=54, u₅=162."
-    },
-    {
-      "q": "La somme des 5 premiers termes de la suite géométrique u₁ = 1, q = 2 est :",
-      "o": [
+        "16",
         "31",
         "32",
-        "16",
         "63"
       ],
-      "r": 0,
-      "x": "Sₙ = u₁(qⁿ - 1)/(q - 1). S₅ = 1×(2⁵ - 1)/(2-1) = (32-1)/1 = 31. On peut vérifier : 1+2+4+8+16 = 31."
+      "r": 1,
+      "x": "Pour une suite géométrique, S = u₁ × (qⁿ − 1)/(q − 1) = 1 × (2⁵ − 1)/(2 − 1) = 31. On le vérifie en additionnant directement 1 + 2 + 4 + 8 + 16 = 31. La réponse 32 oublie de retrancher 1, 16 donne seulement le cinquième terme, et 63 compte six termes au lieu de cinq.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
       "q": "La suite définie par u₀ = 1 et uₙ₊₁ = 3uₙ + 2 est :",
       "o": [
-        "Arithmétique de raison 3",
-        "Géométrique de raison 3",
-        "Ni arithmétique ni géométrique",
-        "Arithmétique de raison 2"
+        "arithmétique de raison 2",
+        "arithmétique de raison 3",
+        "géométrique de raison 3",
+        "ni arithmétique ni géométrique"
       ],
-      "r": 2,
-      "x": "En posant vₙ = uₙ + 1, on a vₙ₊₁ = uₙ₊₁+1 = 3uₙ+3 = 3(uₙ+1) = 3vₙ. Donc (vₙ) est géométrique de raison 3, mais (uₙ) n'est ni arithmétique ni géométrique."
+      "r": 3,
+      "x": "Les premiers termes valent u₀ = 1, u₁ = 5 et u₂ = 17 : les écarts 4 et 12 ne sont pas égaux, et les quotients 5 et 3,4 non plus. La suite n'est donc ni arithmétique ni géométrique, mais vₙ = uₙ + 1 est géométrique de raison 3, car vₙ₊₁ = 3uₙ + 3 = 3vₙ. La réponse « géométrique de raison 3 » confond (uₙ) avec cette suite auxiliaire.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La raison de la suite géométrique : 81, 27, 9, 3, ... est :",
+      "q": "La raison de la suite géométrique 81 ; 27 ; 9 ; 3 ; … est :",
       "o": [
-        "3",
-        "-3",
+        "−3",
+        "−1/3",
         "1/3",
-        "-1/3"
+        "3"
       ],
       "r": 2,
-      "x": "Raison q = u₂/u₁ = 27/81 = 1/3. On divise par 3 à chaque étape. Vérif : 81×(1/3) = 27 ✓, 27×(1/3) = 9 ✓."
+      "x": "La raison d'une suite géométrique est le quotient d'un terme par le précédent : 27/81 = 9/27 = 3/9 = 1/3. Chaque terme est donc le tiers du précédent, ce qui explique que la suite décroisse vers 0. La réponse 3 inverse le quotient, et les valeurs négatives feraient alterner le signe des termes.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La limite d'une suite géométrique de raison q quand n → +∞ tend vers 0 si :",
+      "q": "La suite géométrique (qⁿ) tend vers 0 quand n tend vers +∞ si et seulement si :",
       "o": [
         "q > 1",
         "q = 1",
-        "|q| < 1",
-        "q < 0"
+        "q < 0",
+        "|q| < 1"
       ],
-      "r": 2,
-      "x": "Si |q| < 1, alors qⁿ → 0. Si |q| > 1, la suite diverge. Si q = 1, la suite est constante. Si q = -1, la suite oscille entre deux valeurs et ne converge pas."
-    },
-    {
-      "q": "On lance un dé équilibré à 6 faces. La probabilité d'obtenir un multiple de 3 est :",
-      "o": [
-        "1/6",
-        "1/3",
-        "1/2",
-        "2/3"
-      ],
-      "r": 1,
-      "x": "Les multiples de 3 dans {1,2,3,4,5,6} sont {3, 6}, soit 2 résultats favorables. P = 2/6 = 1/3."
+      "r": 3,
+      "x": "Une suite géométrique (qⁿ) tend vers 0 exactement lorsque −1 < q < 1, c'est-à-dire |q| < 1. Si q > 1, elle tend vers +∞, si q = 1 elle est constante, et si q ≤ −1 elle n'a pas de limite. La condition q < 0 ne suffit pas, comme le montre q = −2, dont les puissances grandissent en alternant de signe.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
       "q": "Une urne contient 5 boules rouges et 3 boules bleues. On tire successivement 2 boules sans remise. La probabilité que les deux soient rouges est :",
       "o": [
-        "25/64",
-        "5/14",
         "5/28",
-        "10/28"
+        "5/14",
+        "25/64",
+        "5/8"
       ],
       "r": 1,
-      "x": "P = (5/8) × (4/7) = 20/56 = 5/14. Au 1er tirage : 5 rouges sur 8. Au 2ème, il reste 4 rouges sur 7 (sans remise, l'urne a perdu une boule rouge)."
+      "x": "Au premier tirage, il y a 5 boules rouges sur 8, puis, sans remise, 4 rouges sur les 7 boules restantes. La probabilité vaut 5/8 × 4/7 = 20/56 = 5/14. La réponse 25/64 suppose un tirage avec remise, (5/8)², et 5/8 ne tient compte que du premier tirage.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "P(A) = 0,3 et P(B) = 0,5. Si A et B sont indépendants, P(A ∪ B) est :",
+      "q": "A et B sont deux événements indépendants tels que P(A) = 0,2 et P(B) = 0,6. La probabilité P(A ∪ B) vaut :",
       "o": [
+        "0,12",
+        "0,68",
         "0,8",
-        "0,65",
-        "0,15",
-        "0,85"
+        "0,88"
       ],
       "r": 1,
-      "x": "Pour des événements indépendants : P(A∩B) = P(A)×P(B) = 0,3×0,5 = 0,15. Puis P(A∪B) = P(A)+P(B)-P(A∩B) = 0,3+0,5-0,15 = 0,65."
+      "x": "Les événements étant indépendants, P(A ∩ B) = P(A) × P(B) = 0,2 × 0,6 = 0,12. On applique ensuite P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0,8 − 0,12 = 0,68. La réponse 0,8 additionne les probabilités comme si les événements étaient incompatibles, et 0,12 donne l'intersection et non la réunion.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "On tire une carte au hasard dans un jeu de 52 cartes. P(as ou cœur) est :",
+      "q": "On tire une carte au hasard dans un jeu de 52 cartes. La probabilité d'obtenir un as ou un cœur est :",
       "o": [
-        "4/13",
+        "1/13",
         "1/4",
-        "16/52",
+        "4/13",
         "17/52"
       ],
-      "r": 0,
-      "x": "Il y a 4 as et 13 cœurs, mais l'as de cœur est compté deux fois. Par inclusion-exclusion : P = (4+13-1)/52 = 16/52 = 4/13."
+      "r": 2,
+      "x": "Il y a 4 as et 13 cœurs, mais l'as de cœur appartient aux deux groupes. Par la formule P(A ∪ B) = P(A) + P(B) − P(A ∩ B), on obtient (4 + 13 − 1)/52 = 16/52 = 4/13. La réponse 17/52 compte deux fois l'as de cœur, et 1/4 ne retient que les cœurs.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La formule de Bayes pour P(A|B) est :",
+      "q": "Si P(B) ≠ 0, la formule de Bayes donne P(A|B) égal à :",
       "o": [
-        "P(A∩B) / P(A)",
-        "P(B|A) × P(A) / P(B)",
+        "P(A ∩ B)/P(A)",
         "P(A) × P(B)",
-        "P(A∩B) × P(B)"
+        "P(A ∩ B) × P(B)",
+        "P(B|A) × P(A)/P(B)"
       ],
-      "r": 1,
-      "x": "La formule de Bayes : P(A|B) = P(B|A)×P(A)/P(B). Elle permet d'inverser la conditionnalité. Elle est très utilisée en diagnostic médical, détection de fraude, et en apprentissage automatique."
+      "r": 3,
+      "x": "Par définition, P(A|B) = P(A ∩ B)/P(B), et l'on remplace P(A ∩ B) par P(B|A) × P(A). On obtient la formule de Bayes, P(A|B) = P(B|A) × P(A)/P(B), qui permet d'inverser un conditionnement. La réponse P(A ∩ B)/P(A) donne P(B|A) et non P(A|B), et P(A) × P(B) n'est l'intersection que pour des événements indépendants.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "Dans une classe, P(garçon) = 0,4 et P(mention | garçon) = 0,3. P(garçon ET mention) est :",
+      "q": "Dans une classe, la probabilité qu'un élève soit un garçon est 0,4 et la probabilité qu'un garçon obtienne une mention est 0,3. La probabilité qu'un élève soit un garçon ayant une mention est :",
       "o": [
-        "0,7",
         "0,1",
         "0,12",
-        "0,3"
+        "0,3",
+        "0,7"
       ],
-      "r": 2,
-      "x": "P(A∩B) = P(A)×P(B|A). Ici P(garçon∩mention) = P(garçon)×P(mention|garçon) = 0,4×0,3 = 0,12. C'est la règle de la probabilité des causes."
+      "r": 1,
+      "x": "La probabilité d'une intersection se calcule par P(G ∩ M) = P(G) × P(M|G). On obtient 0,4 × 0,3 = 0,12 : 12 % des élèves sont des garçons ayant une mention. La réponse 0,3 est la probabilité conditionnelle elle-même, et 0,7 additionne les deux probabilités, ce qui n'a pas de sens ici.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "X suit une loi binomiale B(10 ; 0,3). L'espérance E(X) et la variance V(X) sont :",
+      "q": "Une variable X suit la loi binomiale B(10 ; 0,3). Son espérance E et sa variance V sont :",
       "o": [
-        "E = 3 et V = 2,1",
         "E = 0,3 et V = 0,21",
         "E = 3 et V = 0,3",
+        "E = 3 et V = 2,1",
         "E = 7 et V = 2,1"
       ],
-      "r": 0,
-      "x": "Pour B(n,p) : E(X) = np = 10×0,3 = 3. V(X) = np(1-p) = 10×0,3×0,7 = 2,1. L'écart-type est σ = √2,1 ≈ 1,45."
+      "r": 2,
+      "x": "Pour une loi binomiale B(n ; p), l'espérance vaut np et la variance np(1 − p). On obtient E = 10 × 0,3 = 3 et V = 10 × 0,3 × 0,7 = 2,1. La réponse E = 7 utilise 1 − p au lieu de p, et E = 0,3 oublie de multiplier par le nombre d'épreuves n = 10.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "Le nombre de permutations de 5 éléments distincts est :",
+      "q": "Le nombre de façons de choisir 2 délégués parmi 8 élèves, sans tenir compte de l'ordre, est :",
       "o": [
-        "5",
-        "25",
-        "60",
-        "120"
-      ],
-      "r": 3,
-      "x": "Le nombre de permutations de n éléments est n! = n×(n-1)×...×1. Pour n=5 : 5! = 5×4×3×2×1 = 120. Cela représente le nombre de façons d'ordonner 5 objets distincts."
-    },
-    {
-      "q": "Le nombre de façons de choisir 2 délégués parmi 8 élèves (sans ordre) est :",
-      "o": [
+        "16",
         "28",
         "56",
-        "16",
         "64"
       ],
-      "r": 0,
-      "x": "C(8,2) = 8!/(2!×6!) = (8×7)/(2×1) = 56/2 = 28. On utilise la combinaison (sans ordre) et non l'arrangement (avec ordre). A(8,2) = 8×7 = 56 serait le résultat si l'ordre comptait."
-    },
-    {
-      "q": "Combien y a-t-il d'anagrammes du mot \"MATHS\" (5 lettres toutes différentes) ?",
-      "o": [
-        "5",
-        "25",
-        "60",
-        "120"
-      ],
-      "r": 3,
-      "x": "Un anagramme est une permutation des lettres. Il y a 5 lettres toutes différentes, donc le nombre d'anagrammes est 5! = 120. Si des lettres se répétaient, il faudrait diviser."
-    },
-    {
-      "q": "La moyenne de la série : 4, 7, 9, 11, 14 est :",
-      "o": [
-        "8",
-        "9",
-        "10",
-        "11"
-      ],
       "r": 1,
-      "x": "Moyenne = (4+7+9+11+14)/5 = 45/5 = 9. La valeur centrale (médiane) est aussi 9 ici. Pour calculer une moyenne, on additionne toutes les valeurs et on divise par l'effectif total."
+      "x": "Choisir 2 délégués parmi 8 sans ordre revient à compter les combinaisons C(8 ; 2) = (8 × 7)/(2 × 1) = 28. On divise par 2 car la paire (Ali ; Awa) est la même que la paire (Awa ; Ali). La réponse 56 compte les arrangements, où l'ordre compte, et 64 = 8² autorise à choisir deux fois le même élève.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La variance de la série {2, 4, 6, 8, 10} (de moyenne 6) est :",
+      "q": "La variance de la série 2 ; 4 ; 6 ; 8 ; 10, de moyenne 6, est :",
       "o": [
+        "2√2",
         "4",
-        "6",
         "8",
-        "10"
+        "40"
       ],
       "r": 2,
-      "x": "V = [(2-6)²+(4-6)²+(6-6)²+(8-6)²+(10-6)²]/5 = [16+4+0+4+16]/5 = 40/5 = 8. L'écart-type est σ = √8 = 2√2 ≈ 2,83."
+      "x": "La variance est la moyenne des carrés des écarts à la moyenne : [(−4)² + (−2)² + 0² + 2² + 4²]/5 = 40/5 = 8. Elle s'exprime dans le carré de l'unité des données. La réponse 2√2 est l'écart-type, racine carrée de la variance, et 40 oublie de diviser la somme des carrés par l'effectif 5.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La médiane d'une série de 7 valeurs triées est :",
-      "o": [
-        "La 3ème valeur",
-        "La 4ème valeur",
-        "La moyenne des 3ème et 4ème valeurs",
-        "La 7ème valeur"
-      ],
-      "r": 1,
-      "x": "Pour une série de n valeurs triées, la médiane est la valeur de rang (n+1)/2. Pour n=7 : (7+1)/2 = 4. La médiane est donc la 4ème valeur. Si n est pair, la médiane est la moyenne des valeurs de rang n/2 et n/2+1."
-    },
-    {
-      "q": "Développer (a + b)³ donne :",
+      "q": "Le développement de (a + b)³ est :",
       "o": [
         "a³ + b³",
-        "a³ + 3a²b + 3ab² + b³",
+        "a³ + 3ab + b³",
         "a³ + 2a²b + 2ab² + b³",
-        "a³ + 3ab + b³"
+        "a³ + 3a²b + 3ab² + b³"
       ],
-      "r": 1,
-      "x": "Par le triangle de Pascal (ou formule du binôme de Newton) : (a+b)³ = C(3,0)a³ + C(3,1)a²b + C(3,2)ab² + C(3,3)b³ = a³ + 3a²b + 3ab² + b³."
+      "r": 3,
+      "x": "D'après le triangle de Pascal, les coefficients de la ligne 3 sont 1, 3, 3 et 1 : (a + b)³ = a³ + 3a²b + 3ab² + b³. On le vérifie avec a = b = 1 : (1 + 1)³ = 8 = 1 + 3 + 3 + 1. La réponse a³ + b³ oublie les termes croisés, et les coefficients 2 viennent d'une confusion avec le développement du carré.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "Le nombre C(7, 3) est égal à :",
-      "o": [
-        "21",
-        "35",
-        "42",
-        "105"
-      ],
-      "r": 1,
-      "x": "C(7,3) = 7!/(3!×4!) = (7×6×5)/(3×2×1) = 210/6 = 35. On peut aussi utiliser le triangle de Pascal : ligne 7, position 3 : 35."
-    },
-    {
-      "q": "Le terme en x² du développement de (1 + 2x)⁵ est :",
+      "q": "Dans le développement de (1 + 2x)⁵, le terme en x² est :",
       "o": [
         "2x²",
         "8x²",
@@ -9169,10 +13764,11 @@ const QUESTIONS = {
         "40x²"
       ],
       "r": 3,
-      "x": "Le terme en x² est C(5,2)×(2x)² = 10×4x² = 40x². La formule du terme général est C(n,k)×aⁿ⁻ᵏ×(bx)ᵏ avec ici a=1, b=2, n=5, k=2."
+      "x": "D'après la formule du binôme, le terme en x² est C(5 ; 2) × 1³ × (2x)² = 10 × 4x² = 40x². Il faut élever au carré le coefficient 2 en même temps que x. La réponse 10x² oublie le facteur 2² = 4, et 8x² oublie le coefficient binomial C(5 ; 2) = 10.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "log₂(32) est égal à :",
+      "q": "La valeur de log₂(32) est :",
       "o": [
         "4",
         "5",
@@ -9180,252 +13776,167 @@ const QUESTIONS = {
         "16"
       ],
       "r": 1,
-      "x": "log₂(32) = x signifie 2ˣ = 32 = 2⁵. Donc x = 5. Méthode : on exprime 32 comme puissance de 2 : 32 = 2×2×2×2×2 = 2⁵."
+      "x": "log₂(32) est l'exposant auquel il faut élever 2 pour obtenir 32. Comme 32 = 2⁵, on a log₂(32) = 5. La réponse 16 divise 32 par 2, ce qui confond logarithme et division, et 4 ou 6 viennent d'une erreur dans le décompte des facteurs 2.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "Si log(a) = 2 et log(b) = 3, alors log(a²·b) est :",
+      "q": "Si log a = 2 et log b = 3, alors log(a² × b) vaut :",
       "o": [
         "5",
         "6",
         "7",
-        "8"
+        "12"
       ],
       "r": 2,
-      "x": "log(a²·b) = log(a²) + log(b) = 2log(a) + log(b) = 2×2 + 3 = 7. On utilise les propriétés : log(xy) = log(x)+log(y) et log(xⁿ) = n·log(x)."
+      "x": "Les propriétés du logarithme donnent log(a² × b) = log(a²) + log(b) = 2 log a + log b. On obtient 2 × 2 + 3 = 7. La réponse 5 oublie l'exposant de a, 6 multiplie 2 par 3, et 12 transforme la somme des logarithmes en produit.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
       "q": "La solution de l'équation ln(x + 2) = 3 est :",
       "o": [
-        "x = e³ - 2",
-        "x = e³ + 2",
-        "x = 3e - 2",
-        "x = 3 - 2"
+        "x = 1",
+        "x = 3e − 2",
+        "x = e³ − 2",
+        "x = e³ + 2"
       ],
-      "r": 0,
-      "x": "ln(x+2) = 3 → x+2 = e³ (on exponentie des deux côtés) → x = e³ - 2 ≈ 20,09 - 2 ≈ 18,09. La fonction exponentielle est la réciproque du logarithme."
+      "r": 2,
+      "x": "On applique l'exponentielle aux deux membres, puisque e^(ln u) = u : x + 2 = e³. On en déduit x = e³ − 2, soit environ 18,09, valeur qui vérifie bien x + 2 > 0. La réponse 3e − 2 confond e³ avec 3e, et x = 1 traite ln comme s'il disparaissait, en résolvant x + 2 = 3.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La dérivée de f(x) = ln(sin(x)) est :",
+      "q": "Sur ]0 ; π[, la dérivée de f(x) = ln(sin x) est :",
       "o": [
-        "cos(x)/sin(x)",
-        "1/sin(x)",
-        "cos(x)·ln(sin(x))",
-        "-cos(x)/sin²(x)"
+        "1/sin x",
+        "cos x/sin x",
+        "cos x × ln(sin x)",
+        "−cos x/sin²x"
       ],
-      "r": 0,
-      "x": "f'(x) = [sin(x)]'/sin(x) = cos(x)/sin(x) = cotan(x). On applique la dérivée de ln(u) = u'/u, avec u = sin(x) et u' = cos(x)."
+      "r": 1,
+      "x": "La dérivée de ln u est u'/u, avec ici u = sin x et u' = cos x, sur un intervalle où sin x > 0. On obtient f'(x) = cos x/sin x, quotient qu'on note aussi cotan x. La réponse 1/sin x oublie de multiplier par u', et −cos x/sin²x est la dérivée de 1/sin x.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
       "q": "La dérivée de f(x) = e^(x²) est :",
       "o": [
-        "eˣ²",
-        "2x·e^(x²)",
-        "x²·e^(x²)",
-        "2·e^(x²)"
-      ],
-      "r": 1,
-      "x": "Par la règle de la chaîne : [e^u]' = u'·e^u. Ici u = x², donc u' = 2x. Ainsi f'(x) = 2x·e^(x²)."
-    },
-    {
-      "q": "L'intégrale ∫ x·e^(x²) dx est :",
-      "o": [
-        "e^(x²) + C",
-        "(1/2)e^(x²) + C",
-        "x²·e^(x²) + C",
-        "2x·e^(x²) + C"
-      ],
-      "r": 1,
-      "x": "On pose u = x², donc du = 2x·dx, soit x·dx = du/2. Donc ∫x·e^(x²)dx = (1/2)∫e^u du = (1/2)e^u + C = (1/2)e^(x²) + C."
-    },
-    {
-      "q": "La primitive de f(x) = sin(2x) est :",
-      "o": [
-        "cos(2x) + C",
-        "-cos(2x) + C",
-        "(1/2)cos(2x) + C",
-        "-(1/2)cos(2x) + C"
+        "e^(x²)",
+        "2e^(x²)",
+        "x² e^(x²)",
+        "2x e^(x²)"
       ],
       "r": 3,
-      "x": "∫sin(2x)dx. On pose u = 2x, du = 2dx. ∫sin(2x)dx = (1/2)∫sin(u)du = (1/2)(-cos(u)) + C = -(1/2)cos(2x) + C."
+      "x": "La dérivée de e^u est u' e^u, avec ici u = x² et u' = 2x. On obtient f'(x) = 2x e^(x²). La réponse e^(x²) oublie de multiplier par u', comme si l'exposant était simplement x, et x² e^(x²) multiplie par u au lieu de u'.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "Le volume d'une sphère de rayon 3 cm est :",
+      "q": "Dans un repère orthonormé, le produit scalaire des vecteurs u(3 ; −1) et v(2 ; 5) vaut :",
       "o": [
-        "9π cm³",
-        "12π cm³",
-        "36π cm³",
-        "108π cm³"
-      ],
-      "r": 2,
-      "x": "V = (4/3)πr³ = (4/3)π×3³ = (4/3)×27π = 36π cm³ ≈ 113,1 cm³. Pour la surface d'une sphère : S = 4πr² = 36π cm²."
-    },
-    {
-      "q": "Le volume d'un cône de rayon 4 cm et de hauteur 9 cm est :",
-      "o": [
-        "36π cm³",
-        "48π cm³",
-        "108π cm³",
-        "144π cm³"
-      ],
-      "r": 1,
-      "x": "V = (1/3)πr²h = (1/3)π×16×9 = (1/3)×144π = 48π cm³. Le facteur 1/3 distingue le volume du cône de celui du cylindre (V = πr²h)."
-    },
-    {
-      "q": "L'aire du disque de rayon 7 cm est (π ≈ 3,14) :",
-      "o": [
-        "43,96 cm²",
-        "153,86 cm²",
-        "44 cm²",
-        "314 cm²"
-      ],
-      "r": 1,
-      "x": "Aire = π×r² = 3,14×7² = 3,14×49 = 153,86 cm². Ne pas confondre avec la circonférence (périmètre du cercle) : C = 2πr = 2×3,14×7 ≈ 43,96 cm."
-    },
-    {
-      "q": "Le produit scalaire des vecteurs u⃗(3, -1) et v⃗(2, 5) est :",
-      "o": [
+        "−5",
         "1",
         "6",
-        "-5",
         "11"
       ],
-      "r": 0,
-      "x": "u⃗·v⃗ = 3×2 + (-1)×5 = 6 - 5 = 1. Le produit scalaire est nul si les vecteurs sont orthogonaux. Ici u⃗·v⃗ = 1 ≠ 0, les vecteurs ne sont pas orthogonaux."
+      "r": 1,
+      "x": "Dans un repère orthonormé, le produit scalaire de u(x ; y) et v(x' ; y') vaut xx' + yy'. Ici 3 × 2 + (−1) × 5 = 6 − 5 = 1, valeur non nulle : les vecteurs ne sont pas orthogonaux. La réponse 11 oublie le signe de −1, et 6 ne calcule que le produit des abscisses.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "Deux vecteurs u⃗(a, b) et v⃗(c, d) sont colinéaires si :",
+      "q": "Les vecteurs u(a ; b) et v(c ; d) sont colinéaires si et seulement si :",
       "o": [
         "ac + bd = 0",
-        "ad - bc = 0",
-        "ac - bd = 0",
-        "ad + bc = 0"
-      ],
-      "r": 1,
-      "x": "Deux vecteurs sont colinéaires si leur déterminant est nul : ad - bc = 0. C'est équivalent à dire que l'un est un multiple de l'autre (u⃗ = k·v⃗ pour un réel k)."
-    },
-    {
-      "q": "La distance du point P(3, -1) à la droite d'équation 4x - 3y + 5 = 0 est :",
-      "o": [
-        "2",
-        "4",
-        "20/5",
-        "14/5"
-      ],
-      "r": 1,
-      "x": "d = |4×3 - 3×(-1) + 5| / √(4²+3²) = |12+3+5| / √25 = 20/5 = 4. Formule générale : d(P, droite) = |ax₀+by₀+c|/√(a²+b²)."
-    },
-    {
-      "q": "L'image de z = 3 + 4i dans le plan complexe est le point d'affixe :",
-      "o": [
-        "(4, 3)",
-        "(3, 4)",
-        "(-3, 4)",
-        "(3, -4)"
-      ],
-      "r": 1,
-      "x": "À z = a + bi correspond le point (a, b) dans le plan complexe. Donc z = 3+4i correspond au point (3, 4) où la partie réelle est l'abscisse et la partie imaginaire est l'ordonnée."
-    },
-    {
-      "q": "Le module de z = 5 - 12i est :",
-      "o": [
-        "7",
-        "13",
-        "17",
-        "√7"
-      ],
-      "r": 1,
-      "x": "|z| = √(a² + b²) = √(5² + (-12)²) = √(25 + 144) = √169 = 13. C'est le théorème de Pythagore appliqué au triangle (0, 5, 12) — triplet pythagoricien classique."
-    },
-    {
-      "q": "Le conjugué de z = 2 - 7i est :",
-      "o": [
-        "-2 + 7i",
-        "2 + 7i",
-        "-2 - 7i",
-        "7 - 2i"
-      ],
-      "r": 1,
-      "x": "Le conjugué de z = a + bi est z̄ = a - bi. Ici z = 2 - 7i, donc z̄ = 2 + 7i. On change uniquement le signe de la partie imaginaire. Propriété utile : z × z̄ = |z|²."
-    },
-    {
-      "q": "Le produit (1 + i)(1 - i) est :",
-      "o": [
-        "1 - i²",
-        "2",
-        "0",
-        "1 + i²"
-      ],
-      "r": 1,
-      "x": "(1+i)(1-i) = 1² - i² = 1 - (-1) = 2, car i² = -1 par définition. C'est l'identité (a+b)(a-b) = a²-b² appliquée avec a=1 et b=i."
-    },
-    {
-      "q": "i⁴ est égal à :",
-      "o": [
-        "-1",
-        "i",
-        "-i",
-        "1"
+        "ac − bd = 0",
+        "ad + bc = 0",
+        "ad − bc = 0"
       ],
       "r": 3,
-      "x": "i¹=i, i²=-1, i³=-i, i⁴=1. Les puissances de i sont cycliques de période 4. Donc iⁿ dépend du reste de n divisé par 4 : i⁴ⁿ=1, i⁴ⁿ⁺¹=i, i⁴ⁿ⁺²=-1, i⁴ⁿ⁺³=-i."
+      "x": "Deux vecteurs u(a ; b) et v(c ; d) sont colinéaires lorsque leur déterminant ad − bc est nul, ce qui traduit la proportionnalité de leurs coordonnées. Par exemple, u(2 ; 3) et v(4 ; 6) donnent 2 × 6 − 3 × 4 = 0. La condition ac + bd = 0 caractérise au contraire des vecteurs orthogonaux, par le produit scalaire.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La suite (uₙ) définie par uₙ = 2n + 3 est :",
+      "q": "Dans le plan complexe, le point image du nombre z = 3 + 4i a pour coordonnées :",
       "o": [
-        "Géométrique de raison 2",
-        "Arithmétique de raison 2",
-        "Ni arithmétique ni géométrique",
-        "Arithmétique de raison 3"
+        "(3 ; 4)",
+        "(−3 ; 4)",
+        "(3 ; −4)",
+        "(4 ; 3)"
       ],
-      "r": 1,
-      "x": "uₙ₊₁ - uₙ = [2(n+1)+3] - [2n+3] = 2n+5-2n-3 = 2. La différence est constante et égale à 2, donc c'est une suite arithmétique de raison r = 2."
+      "r": 0,
+      "x": "Au nombre complexe z = a + bi correspond le point de coordonnées (a ; b) : la partie réelle donne l'abscisse et la partie imaginaire l'ordonnée. Pour z = 3 + 4i, le point image est donc (3 ; 4). La réponse (4 ; 3) intervertit les deux parties, et (3 ; −4) est l'image du conjugué 3 − 4i.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La somme 1 + 2 + 3 + ... + 100 est :",
+      "q": "Le module du nombre complexe z = 5 − 12i est :",
+      "o": [
+        "√7",
+        "7",
+        "13",
+        "17"
+      ],
+      "r": 2,
+      "x": "Le module de z = a + bi vaut √(a² + b²), ici √(25 + 144) = √169 = 13. Le signe de la partie imaginaire n'intervient pas, puisqu'on l'élève au carré. La réponse 7 soustrait 5 de 12, 17 additionne 5 et 12 sans les élever au carré, et √7 calcule √(12 − 5).",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le produit (1 + i)(1 − i) est égal à :",
+      "o": [
+        "−2",
+        "0",
+        "2",
+        "2i"
+      ],
+      "r": 2,
+      "x": "On reconnaît (a + b)(a − b) = a² − b² avec a = 1 et b = i : le produit vaut 1 − i². Comme i² = −1 par définition, on obtient 1 − (−1) = 2, un nombre réel. La réponse 0 prend i² pour 1, et 2i oublie que les termes en i s'annulent : −i + i = 0.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le nombre complexe i²⁰²⁶ est égal à :",
+      "o": [
+        "−1",
+        "1",
+        "−i",
+        "i"
+      ],
+      "r": 0,
+      "x": "Les puissances de i se répètent avec une période de 4 : i¹ = i, i² = −1, i³ = −i et i⁴ = 1. Comme 2026 = 4 × 506 + 2, on a i²⁰²⁶ = i² = −1. La réponse 1 suppose à tort que 2026 est un multiple de 4, et i correspondrait à un reste égal à 1.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La suite définie pour tout entier n par uₙ = 2n + 3 est :",
+      "o": [
+        "arithmétique de raison 2",
+        "arithmétique de raison 3",
+        "géométrique de raison 2",
+        "ni arithmétique ni géométrique"
+      ],
+      "r": 0,
+      "x": "On calcule l'écart entre deux termes consécutifs : uₙ₊₁ − uₙ = 2(n + 1) + 3 − (2n + 3) = 2. Cet écart est constant, donc la suite est arithmétique de raison 2 et de premier terme u₀ = 3. La réponse « raison 3 » confond la raison avec le terme constant de la formule.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La somme 1 + 2 + 3 + … + 100 est égale à :",
       "o": [
         "4 950",
         "5 000",
         "5 050",
-        "5 100"
+        "10 100"
       ],
       "r": 2,
-      "x": "C'est la somme des 100 premiers entiers. Formule : Sₙ = n(n+1)/2 = 100×101/2 = 5050. Anecdote : Gauss aurait trouvé cette formule enfant en remarquant que 1+100 = 101, 2+99 = 101, ..., soit 50 paires de 101."
+      "x": "On utilise la formule 1 + 2 + … + n = n(n + 1)/2, d'où 100 × 101/2 = 5 050. On peut la retrouver en associant 1 et 100, 2 et 99, et ainsi de suite : 50 paires de somme 101. La réponse 4 950 s'arrête à 99, et 10 100 oublie de diviser par 2.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "Le terme général d'une suite géométrique de premier terme u₁ = 3 et de raison q = 2 est :",
+      "q": "La suite géométrique de premier terme u₁ = 3 et de raison 2 a pour terme général :",
       "o": [
+        "uₙ = 3 × 2ⁿ⁻¹",
         "uₙ = 2ⁿ",
-        "uₙ = 3×2ⁿ",
-        "uₙ = 3×2ⁿ⁻¹",
+        "uₙ = 3 × 2ⁿ",
         "uₙ = 6ⁿ"
       ],
-      "r": 2,
-      "x": "Pour une suite géométrique : uₙ = u₁×qⁿ⁻¹. Ici u₁ = 3, q = 2 : uₙ = 3×2ⁿ⁻¹. Vérif : u₁ = 3×2⁰ = 3 ✓, u₂ = 3×2¹ = 6 ✓, u₃ = 3×4 = 12 ✓."
+      "r": 0,
+      "x": "Pour une suite géométrique de premier terme u₁, on a uₙ = u₁ × qⁿ⁻¹, donc uₙ = 3 × 2ⁿ⁻¹. On vérifie que u₁ = 3 × 2⁰ = 3 et u₂ = 3 × 2 = 6. La réponse 3 × 2ⁿ donnerait u₁ = 6, car elle ne convient que si le premier terme est noté u₀, et 6ⁿ multiplie à tort 3 par 2 avant d'élever à la puissance.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La dérivée de f(x) = arctan(x) est :",
-      "o": [
-        "-1/(1+x²)",
-        "1/√(1-x²)",
-        "1/(1+x²)",
-        "-1/√(1-x²)"
-      ],
-      "r": 2,
-      "x": "[arctan(x)]' = 1/(1+x²). De même, [arcsin(x)]' = 1/√(1-x²) et [arccos(x)]' = -1/√(1-x²). Ces dérivées sont à connaître par cœur."
-    },
-    {
-      "q": "La dérivée de f(x) = √(x² + 1) est :",
-      "o": [
-        "1/(2√(x²+1))",
-        "x/√(x²+1)",
-        "2x/√(x²+1)",
-        "x²/√(x²+1)"
-      ],
-      "r": 1,
-      "x": "f(x) = (x²+1)^(1/2). Par la règle de la chaîne : f'(x) = (1/2)(x²+1)^(-1/2)×2x = x/√(x²+1)."
-    },
-    {
-      "q": "∫₀² x² dx est égal à :",
+      "q": "La valeur de l'intégrale de 0 à 2 de x² dx est :",
       "o": [
         "4/3",
         "8/3",
@@ -9433,582 +13944,383 @@ const QUESTIONS = {
         "8"
       ],
       "r": 1,
-      "x": "∫₀² x²dx = [x³/3]₀² = 8/3 - 0 = 8/3. La primitive de xⁿ est xⁿ⁺¹/(n+1) pour n ≠ -1. Ici n=2, la primitive est x³/3."
+      "x": "Une primitive de x² est x³/3, donc l'intégrale vaut 2³/3 − 0 = 8/3, soit environ 2,67. La division par 3 vient de la règle : une primitive de xⁿ est xⁿ⁺¹/(n + 1). La réponse 8 oublie cette division, et 4 calcule 2² au lieu d'intégrer.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "L'intégrale ∫₋₁¹ x³ dx est égale à :",
+      "q": "L'intégrale ∫₋₁¹ x³ dx vaut :",
       "o": [
-        "2",
+        "−1/2",
+        "0",
         "1/2",
-        "-1/2",
-        "0"
-      ],
-      "r": 3,
-      "x": "x³ est une fonction impaire (f(-x) = -f(x)). L'intégrale d'une fonction impaire sur un intervalle symétrique [-a;a] est toujours nulle. On peut vérifier : [x⁴/4]₋₁¹ = 1/4 - 1/4 = 0."
-    },
-    {
-      "q": "La primitive F de f(x) = eˣ + sin(x) vérifiant F(0) = 2 est :",
-      "o": [
-        "F(x) = -eˣ - cos(x) + 2",
-        "F(x) = eˣ - cos(x) + 2",
-        "F(x) = eˣ + cos(x) + C",
-        "F(x) = eˣ - cos(x) + C"
+        "2"
       ],
       "r": 1,
-      "x": "∫(eˣ + sin x)dx = eˣ - cos(x) + C. On détermine C avec F(0) = 2 : e⁰ - cos(0) + C = 1 - 1 + C = C = 2. Donc F(x) = eˣ - cos(x) + 2."
+      "x": "La fonction x³ est impaire, car (−x)³ = −x³, et l'intégrale d'une fonction impaire sur un intervalle symétrique [−a ; a] est nulle. Le calcul le confirme : x⁴/4 évalué entre −1 et 1 donne 1/4 − 1/4 = 0. La réponse 1/2 additionne les aires des deux parties au lieu de tenir compte de leurs signes opposés.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La limite de n·(1 + 1/n)ⁿ quand n → +∞ est :",
+      "q": "La primitive F de f(x) = eˣ + sin x vérifiant F(0) = 2 est :",
       "o": [
-        "1",
-        "e",
-        "+∞",
-        "0"
+        "F(x) = −eˣ − cos x + 2",
+        "F(x) = eˣ + cos x",
+        "F(x) = eˣ − cos x + 2",
+        "F(x) = eˣ − cos x + 1"
       ],
       "r": 2,
-      "x": "On sait que (1+1/n)ⁿ → e quand n → +∞. Donc n·(1+1/n)ⁿ → n·e → +∞. Si la question portait sur (1+1/n)ⁿ seul, la limite serait e ≈ 2,718."
+      "x": "Une primitive de eˣ est eˣ et une primitive de sin x est −cos x, donc F(x) = eˣ − cos x + C. La condition F(0) = 2 donne 1 − 1 + C = 2, d'où C = 2. La réponse eˣ + cos x vérifie bien F(0) = 2, mais sa dérivée eˣ − sin x n'est pas f : elle se trompe sur la primitive du sinus.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La limite de (ln x)/x quand x → 0⁺ est :",
+      "q": "La limite de n × (1 + 1/n)ⁿ quand n tend vers +∞ est :",
       "o": [
-        "-∞",
+        "0",
+        "1",
+        "e",
+        "+∞"
+      ],
+      "r": 3,
+      "x": "On sait que (1 + 1/n)ⁿ tend vers le nombre e, environ 2,718, quand n tend vers +∞. L'expression est donc le produit de n, qui tend vers +∞, par un facteur qui tend vers e > 0 : elle tend vers +∞. La réponse e oublie le facteur n devant la parenthèse, et 1 suppose à tort que (1 + 1/n)ⁿ tend vers 1ⁿ = 1.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La limite de (ln x)/x quand x tend vers 0 par valeurs positives est :",
+      "o": [
+        "−∞",
         "0",
         "1",
         "+∞"
       ],
       "r": 0,
-      "x": "Quand x → 0⁺ : ln(x) → -∞ et x → 0⁺. Le numérateur tend vers -∞ et le dénominateur vers 0⁺. Donc ln(x)/x → -∞."
+      "x": "Quand x tend vers 0 par valeurs positives, ln x tend vers −∞ et 1/x tend vers +∞. Le produit ln x × (1/x) tend donc vers −∞ : il n'y a pas de forme indéterminée. La réponse 0 confond avec la limite en +∞, où (ln x)/x tend bien vers 0 par croissances comparées.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "f(x) = x² - 4x + 5. La valeur minimale de f est :",
-      "o": [
-        "0",
-        "1",
-        "4",
-        "5"
-      ],
-      "r": 1,
-      "x": "f(x) = (x-2)² + 1 (forme canonique). Le minimum est 1, atteint en x = 2. On peut aussi calculer le sommet : x = -b/(2a) = 4/2 = 2, puis f(2) = 4-8+5 = 1."
-    },
-    {
-      "q": "La courbe de f(x) = ax² + bx + c est une parabole dont le sommet a pour abscisse :",
-      "o": [
-        "b/(2a)",
-        "-b/(2a)",
-        "-b/a",
-        "c/a"
-      ],
-      "r": 1,
-      "x": "L'abscisse du sommet est xₛ = -b/(2a). C'est aussi le point où f'(x) = 2ax + b = 0, soit x = -b/(2a). L'ordonnée du sommet est f(xₛ) = c - b²/(4a)."
-    },
-    {
-      "q": "Le nombre de solutions réelles de ax² + bx + c = 0 avec Δ = b² - 4ac est :",
-      "o": [
-        "Toujours 2",
-        "2 si Δ>0, 1 si Δ=0, 0 si Δ<0",
-        "2 si Δ≥0, 0 si Δ<0",
-        "1 si Δ>0, 0 sinon"
-      ],
-      "r": 1,
-      "x": "Le discriminant détermine le nombre de racines réelles : si Δ>0 : 2 racines distinctes x=(−b±√Δ)/(2a), si Δ=0 : 1 racine double x=−b/(2a), si Δ<0 : aucune racine réelle (2 complexes conjuguées)."
-    },
-    {
-      "q": "La dérivée de f(x) = tan(x) est :",
-      "o": [
-        "-sin²(x)",
-        "cos²(x)",
-        "1/cos²(x)",
-        "-1/cos²(x)"
-      ],
-      "r": 2,
-      "x": "[tan(x)]' = 1/cos²(x) = 1 + tan²(x). On peut le retrouver en dérivant sin(x)/cos(x) par la règle du quotient : (cos²x + sin²x)/cos²x = 1/cos²x."
-    },
-    {
-      "q": "cos(π/3) + sin(π/6) est égal à :",
-      "o": [
-        "√3",
-        "1",
-        "√3/2",
-        "1/2"
-      ],
-      "r": 1,
-      "x": "cos(π/3) = cos(60°) = 1/2. sin(π/6) = sin(30°) = 1/2. Donc cos(π/3) + sin(π/6) = 1/2 + 1/2 = 1. À noter : cos(π/3) = sin(π/6) car π/3 et π/6 sont des angles complémentaires."
-    },
-    {
-      "q": "sin²(x) exprimé en fonction de cos(2x) est :",
-      "o": [
-        "(1 + cos(2x))/2",
-        "(1 - cos(2x))/2",
-        "cos(2x)/2",
-        "1 - cos(2x)"
-      ],
-      "r": 1,
-      "x": "De l'identité cos(2x) = 1 - 2sin²(x), on tire 2sin²(x) = 1 - cos(2x), donc sin²(x) = (1-cos(2x))/2. Cette formule est très utile pour calculer des intégrales de sin²."
-    },
-    {
-      "q": "tan(π/4) est égal à :",
-      "o": [
-        "0",
-        "1",
-        "√3",
-        "1/√3"
-      ],
-      "r": 1,
-      "x": "tan(π/4) = sin(π/4)/cos(π/4) = (√2/2)/(√2/2) = 1. Les valeurs à connaître : tan(0)=0, tan(π/6)=1/√3, tan(π/4)=1, tan(π/3)=√3."
-    },
-    {
-      "q": "Si P(A/B) = 0,4, P(B) = 0,5, P(A) = 0,3, alors P(B/A) est :",
-      "o": [
-        "0,2",
-        "2/3",
-        "0,4",
-        "0,5"
-      ],
-      "r": 1,
-      "x": "Par Bayes : P(B/A) = P(A/B)×P(B)/P(A) = 0,4×0,5/0,3 = 0,2/0,3 = 2/3 ≈ 0,667."
-    },
-    {
-      "q": "X suit une loi binomiale B(n=4, p=1/2). P(X=2) est :",
-      "o": [
-        "1/4",
-        "3/8",
-        "1/2",
-        "1/16"
-      ],
-      "r": 1,
-      "x": "P(X=2) = C(4,2)×(1/2)²×(1/2)² = 6×(1/4)×(1/4) = 6/16 = 3/8. On peut interpréter cela comme la probabilité d'obtenir exactement 2 faces en lançant 4 pièces."
-    },
-    {
-      "q": "Un sac contient 3 boules rouges, 4 bleues et 5 vertes. On tire 1 boule. P(non rouge) est :",
-      "o": [
-        "3/12",
-        "1/4",
-        "3/4",
-        "9/12"
-      ],
-      "r": 2,
-      "x": "P(non rouge) = 1 - P(rouge) = 1 - 3/12 = 9/12 = 3/4. On peut aussi compter directement : boules non rouges = 4+5 = 9, sur 12 au total. P = 9/12 = 3/4."
-    },
-    {
-      "q": "La dérivée de f(x) = x·ln(x) est :",
-      "o": [
-        "ln(x)",
-        "1 + ln(x)",
-        "1/x",
-        "x/ln(x)"
-      ],
-      "r": 1,
-      "x": "Par la règle du produit : f'(x) = (x)'·ln(x) + x·(ln(x))' = 1·ln(x) + x·(1/x) = ln(x) + 1."
-    },
-    {
-      "q": "La suite (uₙ) est croissante si et seulement si :",
-      "o": [
-        "uₙ > 0 pour tout n",
-        "uₙ₊₁ - uₙ > 0 pour tout n",
-        "uₙ₊₁/uₙ > 0 pour tout n",
-        "uₙ₊₁ < uₙ pour tout n"
-      ],
-      "r": 1,
-      "x": "Une suite est croissante si chaque terme est strictement supérieur au précédent, soit uₙ₊₁ - uₙ > 0. Pour une suite géométrique positive, on peut aussi étudier le signe de uₙ₊₁/uₙ - 1."
-    },
-    {
-      "q": "Le nombre de solutions de |2x + 1| = |x - 3| est :",
+      "q": "La valeur minimale de la fonction f(x) = x² − 4x + 5 est :",
       "o": [
         "0",
         "1",
         "2",
-        "3"
+        "5"
+      ],
+      "r": 1,
+      "x": "La forme canonique s'obtient en complétant le carré : x² − 4x + 5 = (x − 2)² + 1. Un carré étant toujours positif ou nul, f(x) ≥ 1, avec égalité pour x = 2 : le minimum vaut 1. La réponse 2 confond la valeur du minimum avec l'abscisse où il est atteint, et 5 n'est que f(0).",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La parabole d'équation y = ax² + bx + c, avec a ≠ 0, a pour sommet le point d'abscisse :",
+      "o": [
+        "−b/a",
+        "−b/(2a)",
+        "b/(2a)",
+        "c/a"
+      ],
+      "r": 1,
+      "x": "L'abscisse du sommet de la parabole vaut −b/(2a) : c'est la valeur qui annule la dérivée 2ax + b. On la retrouve aussi par la forme canonique a(x + b/(2a))² + constante. La réponse −b/a donne la somme des racines, deux fois plus grande, et c/a en donne le produit.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Avec Δ = b² − 4ac, le nombre de solutions réelles de l'équation ax² + bx + c = 0 (a ≠ 0) est :",
+      "o": [
+        "toujours 2, quel que soit Δ",
+        "1 si Δ > 0, et 0 sinon",
+        "2 si Δ ≥ 0, et 0 si Δ < 0",
+        "2 si Δ > 0, 1 si Δ = 0, sinon 0"
+      ],
+      "r": 3,
+      "x": "Si Δ > 0, l'équation admet deux racines réelles distinctes (−b ± √Δ)/(2a). Si Δ = 0, elle admet une racine double −b/(2a), et si Δ < 0, elle n'a aucune solution réelle. La réponse « 2 si Δ ≥ 0 » oublie que les deux racines se confondent lorsque Δ = 0.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La valeur de cos(π/3) + sin(π/6) est :",
+      "o": [
+        "1/2",
+        "√3/2",
+        "1",
+        "√3"
       ],
       "r": 2,
-      "x": "|2x+1| = |x-3| ⟺ (2x+1)² = (x-3)². On développe : 4x²+4x+1 = x²-6x+9 → 3x²+10x-8 = 0. Δ = 100+96 = 196 > 0. Deux solutions : x = (-10±14)/6, soit x=2/3 et x=-4."
+      "x": "On connaît cos(π/3) = cos 60° = 1/2 et sin(π/6) = sin 30° = 1/2. La somme vaut donc 1/2 + 1/2 = 1, les deux angles étant complémentaires puisque π/3 + π/6 = π/2. La réponse √3 additionne à tort sin(π/3) et cos(π/6), qui valent chacun √3/2.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "L'expression 2log(5) + log(4) est égale à :",
+      "q": "Pour tout réel x, sin²x s'exprime en fonction de cos(2x) par :",
       "o": [
-        "log(10)",
-        "log(100)",
-        "log(14)",
-        "log(50)"
+        "cos(2x)/2",
+        "1 − cos(2x)",
+        "(1 + cos 2x)/2",
+        "(1 − cos 2x)/2"
       ],
-      "r": 1,
-      "x": "2log(5) + log(4) = log(5²) + log(4) = log(25) + log(4) = log(25×4) = log(100) = 2. On utilise : n·log(a) = log(aⁿ) et log(a)+log(b) = log(ab)."
+      "r": 3,
+      "x": "On part de cos(2x) = 1 − 2sin²x, d'où 2sin²x = 1 − cos(2x) et sin²x = (1 − cos 2x)/2. Cette formule de linéarisation sert notamment à calculer des primitives de sin²x. La réponse (1 + cos 2x)/2 correspond à cos²x, et 1 − cos(2x) oublie de diviser par 2.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La solution de l'équation 2ˣ = 16 est :",
+      "q": "Si P(A|B) = 0,4, P(B) = 0,5 et P(A) = 0,3, alors P(B|A) vaut :",
       "o": [
-        "x = 2",
-        "x = 4",
-        "x = 8",
-        "x = 3"
+        "0,2",
+        "0,4",
+        "0,5",
+        "2/3"
       ],
-      "r": 1,
-      "x": "2ˣ = 16 = 2⁴, donc x = 4. En général, pour aˣ = aⁿ, si a > 0 et a ≠ 1, on conclut x = n (la fonction exponentielle est injective)."
+      "r": 3,
+      "x": "La formule de Bayes donne P(B|A) = P(A|B) × P(B)/P(A). On obtient 0,4 × 0,5/0,3 = 0,2/0,3 = 2/3, soit environ 0,67. La réponse 0,2 est P(A ∩ B) = P(A|B) × P(B), à laquelle il manque la division par P(A), et 0,4 reprend P(A|B) sans inverser le conditionnement.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Une variable X suit la loi binomiale B(4 ; 1/2). La probabilité P(X = 2) vaut :",
+      "o": [
+        "1/16",
+        "1/4",
+        "3/8",
+        "1/2"
+      ],
+      "r": 2,
+      "x": "Pour une loi binomiale, P(X = k) = C(n ; k) pᵏ(1 − p)ⁿ⁻ᵏ, d'où P(X = 2) = C(4 ; 2) × (1/2)² × (1/2)² = 6/16 = 3/8. Le coefficient 6 compte les façons de placer 2 succès parmi 4 épreuves. La réponse 1/16 oublie ce coefficient, et 1/2 suppose à tort qu'il y a une chance sur deux d'obtenir exactement 2 succès.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Une suite (uₙ) est strictement croissante si et seulement si, pour tout entier n :",
+      "o": [
+        "uₙ₊₁ − uₙ > 0",
+        "uₙ > 0",
+        "uₙ₊₁/uₙ > 0",
+        "uₙ₊₁ < uₙ"
+      ],
+      "r": 0,
+      "x": "Une suite est strictement croissante lorsque chaque terme dépasse le précédent, c'est-à-dire uₙ₊₁ − uₙ > 0 pour tout n. La condition uₙ > 0 dit seulement que les termes sont positifs, comme pour la suite décroissante 1/n. Le quotient uₙ₊₁/uₙ doit être comparé à 1, et non à 0, et seulement pour une suite à termes positifs.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "L'expression 2 log 5 + log 4 est égale à :",
+      "o": [
+        "log 14",
+        "log 29",
+        "log 40",
+        "log 100"
+      ],
+      "r": 3,
+      "x": "On utilise n log a = log(aⁿ), puis log a + log b = log(ab) : 2 log 5 + log 4 = log 25 + log 4 = log 100. En logarithme décimal, cela vaut 2. La réponse log 29 additionne 25 et 4 au lieu de les multiplier, log 40 prend le coefficient 2 pour un facteur, et log 14 cumule ces deux erreurs.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
       "q": "Si eˣ = 7, alors x est égal à :",
       "o": [
-        "7e",
-        "ln(7)",
-        "log(7)",
-        "7"
+        "log 7",
+        "ln 7",
+        "7",
+        "7e"
       ],
       "r": 1,
-      "x": "eˣ = 7 ⟺ x = ln(7) ≈ 1,946. La fonction ln est la réciproque de la fonction exp. Rappel : ln(eˣ) = x pour tout x ∈ ℝ, et e^(ln a) = a pour a > 0."
+      "x": "La fonction ln est la réciproque de l'exponentielle : eˣ = 7 équivaut à x = ln 7, soit environ 1,95. On le vérifie avec e^(ln 7) = 7. La réponse log 7 utilise le logarithme décimal, réciproque de 10ˣ et non de eˣ, et 7e multiplie au lieu d'appliquer la réciproque.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La courbe représentative de f(x) = eˣ est asymptote à :",
+      "q": "La courbe de la fonction exponentielle x ↦ eˣ admet pour asymptote :",
       "o": [
-        "L'axe des abscisses (y = 0) en -∞ seulement",
-        "L'axe des ordonnées (x = 0) en +∞",
-        "La droite y = 1",
-        "L'axe des abscisses en +∞ et -∞"
+        "l'axe des abscisses en −∞ seulement",
+        "l'axe des abscisses en −∞ et en +∞",
+        "l'axe des ordonnées",
+        "la droite d'équation y = 1"
       ],
       "r": 0,
-      "x": "Quand  x → -∞,  eˣ → 0⁺ . La limite étant finie, la droite d'équation y=0 (l'axe des abscisses) est une asymptote horizontale à la courbe en −∞. En +∞, la fonction tend vers +∞, il n'y a donc pas d'asymptote horizontale de ce côté."
+      "x": "Quand x tend vers −∞, eˣ tend vers 0 : la droite y = 0, c'est-à-dire l'axe des abscisses, est asymptote horizontale à la courbe en −∞. En +∞, eˣ tend vers +∞, donc il n'y a pas d'asymptote horizontale de ce côté. La droite y = 1 ne fait que couper la courbe au point (0 ; 1).",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La valeur de ∫₀^1 (eˣ - 1) dx est :",
+      "q": "La valeur de l'intégrale de 0 à 1 de (eˣ + 2x) dx est :",
       "o": [
-        "e - 2",
-        "e - 1",
+        "e − 1",
         "e",
-        "e + 1"
+        "e + 1",
+        "e + 2"
       ],
-      "r": 0,
-      "x": "∫₀¹ (eˣ-1)dx = [eˣ - x]₀¹ = (e¹-1) - (e⁰-0) = (e-1) - (1-0) = e-1-1 = e-2."
+      "r": 1,
+      "x": "Une primitive de eˣ + 2x est eˣ + x², qu'on évalue entre 0 et 1 : (e + 1) − (1 + 0) = e. Il faut retrancher la valeur en 0 de toute la primitive, y compris e⁰ = 1. La réponse e + 1 oublie ce terme e⁰, et e − 1 oublie la contribution de 2x, dont l'intégrale vaut 1.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
       "q": "La dérivée de f(x) = x/eˣ est :",
       "o": [
-        "(1-x)/eˣ",
-        "(x-1)/eˣ",
+        "(1 − x)/eˣ",
         "1/eˣ",
-        "-x/eˣ"
+        "(x − 1)/eˣ",
+        "−x/eˣ"
       ],
       "r": 0,
-      "x": "Par la règle du quotient : f'(x) = (1·eˣ - x·eˣ)/(eˣ)² = eˣ(1-x)/e²ˣ = (1-x)/eˣ. On peut aussi écrire f(x) = x·e⁻ˣ et utiliser la règle du produit."
+      "x": "On écrit f(x) = x e⁻ˣ et on applique la règle du produit : f'(x) = 1 × e⁻ˣ + x × (−e⁻ˣ) = (1 − x)e⁻ˣ. On obtient le même résultat avec la règle du quotient, (eˣ − x eˣ)/e²ˣ = (1 − x)/eˣ. La réponse (x − 1)/eˣ se trompe de signe dans la soustraction, et 1/eˣ ne dérive que le numérateur.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "L'aire de la région délimitée par f(x) = x² et l'axe des abscisses entre x=0 et x=3 est :",
+      "q": "Sur un cercle de 5 cm de rayon, la longueur de l'arc intercepté par un angle au centre de 2π/3 rad est :",
       "o": [
-        "3",
-        "6",
-        "9",
-        "27"
-      ],
-      "r": 2,
-      "x": "Aire = ∫₀³ x²dx = [x³/3]₀³ = 27/3 - 0 = 9. On intègre la fonction qui est positive sur [0;3], donc l'aire est directement l'intégrale."
-    },
-    {
-      "q": "La longueur d'arc d'un cercle de rayon 5 cm correspondant à un angle de 2π/3 rad est :",
-      "o": [
+        "2π/3 cm",
         "5π/3 cm",
         "10π/3 cm",
-        "2π/3 cm",
         "5π cm"
       ],
-      "r": 1,
-      "x": "Longueur = r×θ (avec θ en radians). L = 5×(2π/3) = 10π/3 cm ≈ 10,47 cm. Rappel : pour un angle en degrés, on convertit : θ(rad) = θ(°)×π/180."
+      "r": 2,
+      "x": "En radians, la longueur d'un arc vaut L = r × θ, d'où L = 5 × 2π/3 = 10π/3 cm, soit environ 10,47 cm. Cette formule simple est l'un des intérêts du radian. La réponse 5π/3 oublie le facteur 2, et 2π/3 confond la longueur de l'arc avec la mesure de l'angle.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "Si ABCD est un carré de côté a, la diagonale mesure :",
+      "q": "Deux événements A et B sont incompatibles lorsque :",
       "o": [
-        "a√2",
-        "2a",
-        "a/√2",
-        "a²"
-      ],
-      "r": 0,
-      "x": "La diagonale d'un carré est l'hypoténuse d'un triangle rectangle isocèle. Par Pythagore : d² = a²+a² = 2a², donc d = a√2. Pour a = 1 : d ≈ 1,414 cm."
-    },
-    {
-      "q": "La formule de l'aire latérale d'un cylindre de rayon r et de hauteur h est :",
-      "o": [
-        "πr²h",
-        "2πrh",
-        "2πr²",
-        "2πr(r+h)"
-      ],
-      "r": 1,
-      "x": "L'aire latérale = périmètre de la base × hauteur = 2πr×h = 2πrh. L'aire totale inclut aussi les deux bases circulaires : Atotale = 2πrh + 2πr². L'option D représente l'aire totale."
-    },
-    {
-      "q": "Le vecteur directeur de la droite d'équation 3x - 2y + 5 = 0 est :",
-      "o": [
-        "(3, -2)",
-        "(2, 3)",
-        "(-2, 3)",
-        "(3, 2)"
-      ],
-      "r": 1,
-      "x": "Pour la droite ax + by + c = 0, un vecteur directeur est (b, -a) ou (-b, a). Ici a=3, b=-2 : vecteur directeur (−2, −3) ou (2, 3). Le vecteur normal est (a, b) = (3, -2)."
-    },
-    {
-      "q": "Deux événements A et B sont incompatibles si :",
-      "o": [
-        "P(A)×P(B) = 0",
-        "P(A∩B) = 0",
+        "P(A) × P(B) = 0",
         "P(A) + P(B) = 1",
-        "P(A) = P(B)"
+        "P(A) = P(B)",
+        "P(A ∩ B) = 0"
       ],
-      "r": 1,
-      "x": "A et B sont incompatibles (ou mutuellement exclusifs) si A∩B = ∅, c'est-à-dire P(A∩B) = 0. Ils ne peuvent pas se produire en même temps. Dans ce cas P(A∪B) = P(A)+P(B)."
+      "r": 3,
+      "x": "Deux événements sont incompatibles lorsqu'ils ne peuvent pas se réaliser en même temps : A ∩ B est vide et P(A ∩ B) = 0. On a alors P(A ∪ B) = P(A) + P(B). La condition P(A) + P(B) = 1 ne suffit pas, car elle peut être vérifiée par des événements qui se recoupent, et P(A) × P(B) = 0 exigerait que l'un des deux soit de probabilité nulle.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La covariance de deux variables X et Y est nulle si :",
+      "q": "La covariance de deux variables aléatoires X et Y est nulle lorsque :",
       "o": [
         "X = Y",
-        "X et Y sont indépendantes",
-        "X et Y sont égales en moyenne",
-        "X + Y = 0"
-      ],
-      "r": 1,
-      "x": "Si X et Y sont indépendantes, alors Cov(X,Y) = E(XY) - E(X)E(Y) = E(X)E(Y) - E(X)E(Y) = 0. Attention : la réciproque est fausse en général."
-    },
-    {
-      "q": "Le nombre dérivé f'(a) représente géométriquement :",
-      "o": [
-        "L'ordonnée du point de la courbe en x=a",
-        "La pente de la tangente à la courbe au point d'abscisse a",
-        "L'aire sous la courbe jusqu'au point a",
-        "La distance du point (a, f(a)) à l'origine"
-      ],
-      "r": 1,
-      "x": "f'(a) est le coefficient directeur (pente) de la tangente à la courbe de f au point d'abscisse a. L'équation de cette tangente est y = f'(a)(x-a) + f(a)."
-    },
-    {
-      "q": "La règle de l'Hôpital s'applique pour lever une indétermination de la forme :",
-      "o": [
-        "0/1 ou ∞/1",
-        "0/0 ou ∞/∞",
-        "0×∞ uniquement",
-        "∞ - ∞ uniquement"
-      ],
-      "r": 1,
-      "x": "La règle de L'Hôpital : si lim f(x)/g(x) est de la forme 0/0 ou ∞/∞, alors lim f(x)/g(x) = lim f'(x)/g'(x), à condition que cette dernière limite existe."
-    },
-    {
-      "q": "La fonction f(x) = |x| est :",
-      "o": [
-        "Dérivable en 0",
-        "Non continue en 0",
-        "Continue mais non dérivable en 0",
-        "Deux fois dérivable en 0"
-      ],
-      "r": 2,
-      "x": "f(x)=|x| est continue en 0 (f(0)=0 et la limite à gauche et à droite sont toutes deux 0). Mais elle n'est pas dérivable en 0 : la limite à gauche est -1 et à droite est +1, donc la dérivée n'existe pas en 0."
-    },
-    {
-      "q": "Si f est continue sur [a, b] et dérivable sur ]a, b[ avec f(a) = f(b), alors le théorème de Rolle garantit l'existence d'un c dans ]a, b[ tel que :",
-      "o": [
-        "f(c) = 0",
-        "f'(c) = 0",
-        "f''(c) = 0",
-        "f(c) = (f(a)+f(b))/2"
-      ],
-      "r": 1,
-      "x": "Le théorème de Rolle affirme qu'il existe au moins un point c dans ]a;b[ où la tangente est horizontale, c'est-à-dire f'(c) = 0. C'est un cas particulier du théorème des accroissements finis."
-    },
-    {
-      "q": "La dérivée de f(x) = xⁿ (n entier naturel non nul) est :",
-      "o": [
-        "nxⁿ",
-        "nxⁿ⁻¹",
-        "xⁿ/n",
-        "(n-1)xⁿ⁻²"
-      ],
-      "r": 1,
-      "x": "C'est la règle fondamentale de dérivation : (xⁿ)' = nxⁿ⁻¹. Exemple : (x⁵)' = 5x⁴. Elle s'applique aussi pour n réel quelconque (y compris fractions et nombres négatifs)."
-    },
-    {
-      "q": "∫ (1/x) dx est égal à :",
-      "o": [
-        "x⁰ + C",
-        "ln|x| + C",
-        "-1/x² + C",
-        "1/x² + C"
-      ],
-      "r": 1,
-      "x": "La primitive de 1/x est ln|x| + C. La valeur absolue est nécessaire car ln est défini uniquement pour les réels strictement positifs. C'est la seule puissance de x dont la primitive \"sort\" du cadre xⁿ⁺¹/(n+1)."
-    },
-    {
-      "q": "Si f est une fonction paire, alors ∫₋ₐᵃ f(x) dx est égal à :",
-      "o": [
-        "0",
-        "∫₀ᵃ f(x) dx",
-        "2∫₀ᵃ f(x) dx",
-        "-∫₀ᵃ f(x) dx"
-      ],
-      "r": 2,
-      "x": "Pour une fonction paire (f(-x) = f(x)), ∫₋ₐᵃ f(x)dx = 2∫₀ᵃ f(x)dx. Pour une fonction impaire, ∫₋ₐᵃ f(x)dx = 0. Ces propriétés simplifient beaucoup certains calculs."
-    },
-    {
-      "q": "La solution générale de l'équation différentielle y' = ky (k constante) est :",
-      "o": [
-        "y = keˣ",
-        "y = Ceᵏˣ",
-        "y = kx + C",
-        "y = Ce^(x/k)"
-      ],
-      "r": 1,
-      "x": "y' = ky est une équation différentielle linéaire du 1er ordre. Sa solution générale est y = Ceᵏˣ, où C est une constante déterminée par une condition initiale. Exemple : y'=3y donne y = Ce^(3x)."
-    },
-    {
-      "q": "Quelle est la valeur de log₁₀(0,01) ?",
-      "o": [
-        "1",
-        "-1",
-        "2",
-        "-2"
+        "X + Y = 0",
+        "X et Y ont la même moyenne",
+        "X et Y sont indépendantes"
       ],
       "r": 3,
-      "x": "log₁₀(0,01) = log₁₀(10⁻²) = -2. En général, log₁₀(10ⁿ) = n. Ici 0,01 = 1/100 = 10⁻², donc le logarithme vaut -2."
+      "x": "Si X et Y sont indépendantes, E(XY) = E(X)E(Y), donc Cov(X ; Y) = E(XY) − E(X)E(Y) = 0. La réciproque est fausse : une covariance nulle n'implique pas l'indépendance. Si X = Y, la covariance est la variance de X, en général non nulle, et si X + Y = 0, elle vaut −V(X).",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La limite de (1 + 1/n)ⁿ quand n → +∞ est :",
+      "q": "Géométriquement, le nombre dérivé f'(a) représente :",
       "o": [
-        "1",
-        "2",
-        "e",
-        "+∞"
-      ],
-      "r": 2,
-      "x": "C'est l'une des définitions du nombre e ≈ 2,71828 : e = lim(1+1/n)ⁿ quand n→+∞. Ce nombre est la base de la fonction exponentielle naturelle et du logarithme naturel."
-    },
-    {
-      "q": "La dérivée d'une fonction constante f(x) = k est :",
-      "o": [
-        "k",
-        "kx",
-        "1",
-        "0"
+        "l'ordonnée du point de la courbe d'abscisse a",
+        "l'aire sous la courbe entre 0 et a",
+        "la distance du point (a ; f(a)) à l'origine",
+        "le coefficient directeur de la tangente au point d'abscisse a"
       ],
       "r": 3,
-      "x": "La dérivée d'une constante est toujours 0 : (k)' = 0. Géométriquement, la courbe d'une constante est une droite horizontale, dont la pente (dérivée) est nulle partout."
+      "x": "Le nombre dérivé f'(a) est le coefficient directeur de la tangente à la courbe au point d'abscisse a. Cette tangente a pour équation y = f'(a)(x − a) + f(a). L'ordonnée du point est f(a) et non f'(a), et l'aire sous la courbe relève du calcul intégral.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "Si f'(x) > 0 sur un intervalle I, alors f est :",
+      "q": "La fonction valeur absolue f(x) = |x| est, en 0 :",
       "o": [
-        "Concave sur I",
-        "Constante sur I",
-        "Décroissante sur I",
-        "Croissante sur I"
-      ],
-      "r": 3,
-      "x": "Un critère fondamental d'étude de fonctions : si f'(x) > 0 sur I, f est strictement croissante sur I. Si f'(x) < 0, f est décroissante. Si f'(x) = 0 partout, f est constante."
-    },
-    {
-      "q": "La valeur de sin²(30°) + cos²(60°) est :",
-      "o": [
-        "1/2",
-        "1",
-        "√3/2",
-        "1/4"
+        "continue mais non dérivable",
+        "dérivable",
+        "discontinue",
+        "deux fois dérivable"
       ],
       "r": 0,
-      "x": "sin(30°) = 1/2, donc sin²(30°) = 1/4. cos(60°) = 1/2, donc cos²(60°) = 1/4. Somme = 1/4 + 1/4 = 1/2. Attention : ceci est différent de sin²(x)+cos²(x) = 1 (qui demande le même angle)."
+      "x": "La fonction valeur absolue est continue en 0, car |x| tend vers 0 = |0| des deux côtés. En revanche, le taux d'accroissement |x|/x vaut −1 à gauche et 1 à droite, donc f n'est pas dérivable en 0. Sa courbe présente en ce point un angle, avec deux demi-tangentes de pentes différentes.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La période de la fonction f(x) = sin(3x) est :",
+      "q": "Pour n entier naturel non nul, la dérivée de f(x) = xⁿ est :",
       "o": [
-        "3π",
-        "2π/3",
-        "π/3",
-        "6π"
+        "n xⁿ",
+        "n xⁿ⁻¹",
+        "xⁿ/n",
+        "(n − 1)xⁿ⁻²"
       ],
       "r": 1,
-      "x": "La période de sin(x) est 2π. La période de sin(ax) est 2π/|a|. Ici a = 3, donc la période est 2π/3. En 2π/3 secondes, la fonction fait exactement un cycle complet."
+      "x": "La règle de dérivation des puissances est (xⁿ)' = n xⁿ⁻¹ : l'exposant descend en facteur puis diminue d'une unité. Par exemple, (x⁵)' = 5x⁴ et (x²)' = 2x. La réponse n xⁿ oublie de diminuer l'exposant, et (n − 1)xⁿ⁻² rappelle à tort la dérivée seconde, qui vaut n(n − 1)xⁿ⁻².",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La solution de l'inéquation ln(x - 1) ≥ 0 est :",
+      "q": "Si f est une fonction paire et continue sur [−a ; a], l'intégrale de −a à a de f(x) dx est égale à :",
       "o": [
+        "0",
+        "−∫₀ᵃ f(x) dx",
+        "∫₀ᵃ f(x) dx",
+        "2∫₀ᵃ f(x) dx"
+      ],
+      "r": 3,
+      "x": "La courbe d'une fonction paire est symétrique par rapport à l'axe des ordonnées, donc l'intégrale sur [−a ; 0] est égale à celle sur [0 ; a]. On obtient ∫₋ₐᵃ f(x) dx = 2∫₀ᵃ f(x) dx. La réponse 0 vaut pour une fonction impaire, dont les deux moitiés se compensent.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La valeur de log₁₀(0,01) est :",
+      "o": [
+        "−2",
+        "−1",
+        "1",
+        "2"
+      ],
+      "r": 0,
+      "x": "On écrit 0,01 = 1/100 = 10⁻², donc log₁₀(0,01) = −2. Le logarithme décimal d'un nombre compris entre 0 et 1 est toujours négatif. La réponse 2 oublie le signe moins de l'exposant, et −1 correspond à 0,1 = 10⁻¹.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Si f'(x) > 0 pour tout x d'un intervalle I, alors f est :",
+      "o": [
+        "constante sur I",
+        "décroissante sur I",
+        "concave sur I",
+        "strictement croissante sur I"
+      ],
+      "r": 3,
+      "x": "Si la dérivée est strictement positive sur un intervalle I, la fonction est strictement croissante sur I. Si f' < 0, elle est décroissante, et si f' = 0 sur tout I, elle est constante. La concavité dépend du signe de la dérivée seconde, et non de celui de f'.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La valeur de sin²30° + cos²60° est :",
+      "o": [
+        "1/4",
+        "1/2",
+        "√3/2",
+        "1"
+      ],
+      "r": 1,
+      "x": "On a sin 30° = 1/2 et cos 60° = 1/2, donc la somme vaut 1/4 + 1/4 = 1/2. La relation sin²x + cos²x = 1 ne s'applique qu'à un même angle, ce qui n'est pas le cas ici. La réponse 1 applique à tort cette relation, et 1/4 oublie l'un des deux termes.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation ln(x − 1) ≥ 0 est :",
+      "o": [
+        "x > 1",
         "x ≥ 1",
         "x ≥ 2",
-        "x > 1",
         "x ≤ 2"
       ],
-      "r": 1,
-      "x": "ln(x-1) ≥ 0 ⟺ x-1 ≥ e⁰ = 1 (car ln est croissante) ⟺ x ≥ 2. On doit aussi vérifier le domaine : x-1 > 0 ⟺ x > 1. La solution est x ≥ 2, soit [2 ; +∞[."
+      "r": 2,
+      "x": "Le logarithme n'est défini que si x − 1 > 0, c'est-à-dire x > 1. Comme ln est croissante et ln 1 = 0, l'inéquation équivaut à x − 1 ≥ 1, soit x ≥ 2. La réponse x > 1 ne donne que l'ensemble de définition, et x ≤ 2 inverse le sens de l'inégalité.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "Le nombre e est approximativement égal à :",
+      "q": "Le nombre e, base du logarithme népérien, vaut environ :",
       "o": [
+        "1,414",
         "2,303",
-        "3,142",
         "2,718",
-        "1,414"
+        "3,142"
       ],
       "r": 2,
-      "x": "e ≈ 2,71828... C'est un nombre irrationnel transcendant, base du logarithme naturel. Pour mémoriser : e ≈ 2,718 (penser à 2,71828...). π ≈ 3,14159 est la réponse B."
+      "x": "Le nombre e vaut environ 2,718, et c'est l'unique réel tel que ln e = 1. La réponse 3,142 correspond à π, et 1,414 à √2. La valeur 2,303 est ln 10, utile pour passer du logarithme décimal au logarithme népérien.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La valeur de cos(0) + sin(π/2) est :",
+      "q": "La valeur de cos 0 + sin(π/2) est :",
       "o": [
         "0",
         "1",
-        "2",
-        "√2"
+        "√2",
+        "2"
       ],
-      "r": 2,
-      "x": "cos(0) = 1 et sin(π/2) = sin(90°) = 1. Donc cos(0) + sin(π/2) = 1 + 1 = 2. Ces valeurs sont à connaître : en 0, cosinus vaut 1 et sinus vaut 0 ; en π/2, c'est l'inverse."
+      "r": 3,
+      "x": "Le cosinus de 0 vaut 1 et le sinus de π/2, soit 90°, vaut aussi 1 : la somme fait 2. Sur le cercle trigonométrique, l'angle 0 correspond au point (1 ; 0) et l'angle π/2 au point (0 ; 1). La réponse 0 inverse les valeurs, en prenant cos 0 = 0 et sin(π/2) = 0.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "Le nombre de diagonales d'un polygone à n sommets est :",
+      "q": "Le calcul d'une primitive de x sin x se fait par :",
       "o": [
-        "n(n-1)/2",
-        "n(n-3)/2",
-        "n(n+1)/2",
-        "n²/2"
+        "une substitution simple",
+        "une décomposition en éléments simples",
+        "aucune méthode, car elle n'a pas de primitive",
+        "une intégration par parties"
       ],
-      "r": 1,
-      "x": "Nombre de diagonales = C(n,2) - n = n(n-1)/2 - n = n(n-3)/2. Pour un hexagone (n=6) : 6×3/2 = 9 diagonales. Pour un pentagone (n=5) : 5×2/2 = 5 diagonales."
+      "r": 3,
+      "x": "Le produit d'un polynôme par un sinus se traite par intégration par parties, avec u = x et v' = sin x. On obtient ∫x sin x dx = −x cos x + ∫cos x dx = −x cos x + sin x + C. Toute fonction continue sur un intervalle admet des primitives, donc l'idée que x sin x n'en aurait pas est fausse.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "La solution de l'équation e^(2x) - 3eˣ + 2 = 0 est :",
-      "o": [
-        "x = 0 seulement",
-        "x = ln(2) seulement",
-        "x = 0 et x = ln(2)",
-        "x = 1 et x = 2"
-      ],
-      "r": 2,
-      "x": "En posant X = eˣ (X > 0), l'équation devient X² - 3X + 2 = 0, soit (X-1)(X-2) = 0. X = 1 → eˣ = 1 → x = 0. X = 2 → eˣ = 2 → x = ln(2). Deux solutions : x = 0 et x = ln(2)."
-    },
-    {
-      "q": "L'intégrale ∫ x·sin(x) dx nécessite une intégration :",
-      "o": [
-        "Par substitution simple",
-        "Par parties",
-        "Par décomposition en éléments simples",
-        "Elle n'a pas de primitive"
-      ],
-      "r": 1,
-      "x": "∫x·sin(x)dx s'intègre par parties avec u=x, dv=sin(x)dx. On obtient : -x·cos(x) + ∫cos(x)dx = -x·cos(x) + sin(x) + C. La formule est ∫u·dv = u·v - ∫v·du."
-    },
-    {
-      "q": "La somme de tous les angles d'un polygone convexe à n côtés est :",
-      "o": [
-        "180° × n",
-        "180° × (n - 1)",
-        "180° × (n - 2)",
-        "360° × n"
-      ],
-      "r": 2,
-      "x": "La somme des angles intérieurs d'un polygone convexe à n côtés est (n-2)×180°. Pour un triangle (n=3) : 180° ✓. Pour un quadrilatère (n=4) : 360° ✓. Pour un hexagone (n=6) : 720°."
-    },
-    {
-      "q": "La dérivée de f(x) = 1/x est :",
-      "o": [
-        "ln(x)",
-        "-1/x²",
-        "1/x²",
-        "-ln(x)"
-      ],
-      "r": 1,
-      "x": "f(x) = x⁻¹. Par la règle des puissances : f'(x) = -1·x⁻² = -1/x². On peut aussi écrire f(x) = x⁻¹ et appliquer (xⁿ)' = nxⁿ⁻¹ avec n = -1."
-    },
-    {
-      "q": "Une population double tous les 10 ans. Si elle est de 1000 aujourd'hui, dans 30 ans elle sera de :",
+      "q": "Une population double tous les 10 ans. Si elle compte 1 000 habitants aujourd'hui, dans 30 ans elle en comptera :",
       "o": [
         "3 000",
         "6 000",
@@ -10016,18 +14328,20 @@ const QUESTIONS = {
         "30 000"
       ],
       "r": 2,
-      "x": "C'est une croissance géométrique de raison 2. Après 10 ans : 2000. Après 20 ans : 4000. Après 30 ans : 8000. Formule : P(t) = 1000 × 2^(t/10). Pour t=30 : 1000 × 2³ = 8000."
+      "x": "La population est multipliée par 2 tous les 10 ans, ce qui donne une suite géométrique de raison 2 : 2 000, puis 4 000, puis 8 000. En 30 ans, elle est multipliée par 2³ = 8, d'où 1 000 × 8 = 8 000 habitants. La réponse 6 000 multiplie par 2 × 3 au lieu de 2³, et 3 000 multiplie simplement par le nombre de périodes.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     },
     {
-      "q": "Si f''(a) < 0, alors en x = a la fonction f admet :",
+      "q": "Si f'(a) = 0 et f''(a) < 0, alors en x = a la fonction f admet :",
       "o": [
-        "Un minimum local",
-        "Un maximum local",
-        "Un point d'inflexion",
-        "Une asymptote"
+        "un minimum local",
+        "un maximum local",
+        "un point d'inflexion",
+        "une asymptote verticale"
       ],
       "r": 1,
-      "x": "Test de la dérivée seconde : si f'(a) = 0 et f''(a) < 0, alors f admet un maximum local en a (la courbe est \"en cloche\"). Si f''(a) > 0, c'est un minimum local. Si f''(a) = 0, le test est non concluant."
+      "x": "La condition f'(a) = 0 indique une tangente horizontale, et f''(a) < 0 signifie que f' est décroissante autour de a. La dérivée passe donc du positif au négatif : f croît puis décroît, et admet un maximum local en a. Avec f''(a) > 0, ce serait un minimum, et un point d'inflexion correspond à un changement de signe de f''.",
+      "_batchId": "maths_bac/2026-10-21/ANCIENS"
     }
   ],
   "maths_licence": [
