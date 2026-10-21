@@ -2709,6 +2709,240 @@ const Admin = {
       </div>
 
       ${this.renderBatchesSection()}
+
+      ${this.renderLotsSourceSection()}
+    `;
+  },
+
+  // ==================================================================
+  // V64.10 : LOTS INTÉGRÉS AU FICHIER SOURCE
+  // ==================================================================
+  //   L'historique ci-dessus ne connaît que les lots encore présents dans
+  //   le navigateur. Dès qu'un lot est intégré dans data/questions.js, il
+  //   en sort et devient invisible.
+  //
+  //   Depuis le 21 octobre 2026, chaque question intégrée conserve son
+  //   identifiant d'origine dans le champ `_batchId`, au format
+  //   matière/date/étiquette. On reconstitue donc l'inventaire des lots
+  //   en parcourant les questions elles-mêmes : aucun registre séparé à
+  //   tenir à jour, et rien à synchroniser.
+  //
+  //   PRINCIPE VOLONTAIRE : marquer un lot pour retrait ne supprime RIEN.
+  //   Ni ici, ni dans l'application. Le marquage sert uniquement à
+  //   préparer la demande à envoyer au développeur, qui seul peut
+  //   modifier le fichier source. C'est ce qui évite de croire un retrait
+  //   effectué alors que les candidats voient toujours les questions.
+
+  /** Inventaire des lots présents dans data/questions.js. */
+  lotsDuFichierSource() {
+    const parLot = {};
+    const base = window.QUESTIONS || {};
+    Object.keys(base).forEach(matiereId => {
+      (base[matiereId] || []).forEach(q => {
+        const id = q && q._batchId;
+        if (!id) return;
+        if (!parLot[id]) {
+          parLot[id] = { id, matiere: matiereId, count: 0, apercu: [] };
+        }
+        parLot[id].count++;
+        if (parLot[id].apercu.length < 3) parLot[id].apercu.push(q.q);
+      });
+    });
+    // Les plus récents d'abord : la date est le deuxième segment de l'identifiant.
+    return Object.values(parLot).sort((a, b) => b.id.localeCompare(a.id));
+  },
+
+  getLotsARetirer() {
+    try {
+      const v = JSON.parse(localStorage.getItem('bara_lots_a_retirer') || '[]');
+      return Array.isArray(v) ? v : [];
+    } catch (e) { return []; }
+  },
+
+  saveLotsARetirer(liste) {
+    try {
+      localStorage.setItem('bara_lots_a_retirer', JSON.stringify(liste));
+    } catch (e) {}
+  },
+
+  marquerLotPourRetrait(id) {
+    const liste = this.getLotsARetirer();
+    if (liste.indexOf(id) === -1) liste.push(id);
+    this.saveLotsARetirer(liste);
+    this.toast('🔵 Lot marqué — exporte la demande pour qu\'elle prenne effet');
+    this.render();
+  },
+
+  annulerMarquageLot(id) {
+    this.saveLotsARetirer(this.getLotsARetirer().filter(x => x !== id));
+    this.toast('↩️ Marquage annulé');
+    this.render();
+  },
+
+  basculerApercuLot(id) {
+    this.state._lotOuvert = (this.state._lotOuvert === id) ? null : id;
+    this.render();
+  },
+
+  /** Produit le fichier à envoyer au développeur. */
+  exporterDemandeRetrait() {
+    const marques = this.getLotsARetirer();
+    if (marques.length === 0) {
+      this.toast('Aucun lot marqué pour retrait', 'danger');
+      return;
+    }
+    const inventaire = this.lotsDuFichierSource();
+    const details = marques.map(id => {
+      const lot = inventaire.find(l => l.id === id);
+      return lot
+        ? { id: lot.id, matiere: lot.matiere, questions: lot.count }
+        : { id, matiere: null, questions: 0, note: 'lot absent du fichier source actuel' };
+    });
+
+    const data = {
+      version: '1.0',
+      type: 'retrait_lots_source',
+      exportedAt: new Date().toISOString(),
+      lots_a_retirer: details,
+      total_questions: details.reduce((n, d) => n + d.questions, 0),
+      instructions: {
+        fr: 'Ces lots sont à retirer de data/questions.js. Rien n\'a été supprimé : '
+          + 'le retrait ne sera effectif qu\'une fois le fichier source régénéré et déployé.'
+      }
+    };
+
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'bara-retrait-lots-' + new Date().toISOString().slice(0, 10) + '.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    this.toast('📤 Demande exportée — envoie le fichier au développeur');
+  },
+
+  renderLotsSourceSection() {
+    const lots = this.lotsDuFichierSource();
+    const marques = this.getLotsARetirer();
+
+    if (lots.length === 0) {
+      return `
+        <div class="table-wrap" style="margin-top:1.5rem">
+          <div class="table-header">
+            <div class="table-title">🗂️ Lots intégrés au fichier source</div>
+          </div>
+          <div class="empty-state">
+            <div class="empty-icon">🗂️</div>
+            <div class="empty-title">Aucun lot identifié pour l'instant</div>
+            <div class="empty-sub">
+              Les questions intégrées avant le 21 octobre 2026 ne portent pas d'identifiant de lot.
+              Les prochaines intégrations apparaîtront ici automatiquement.
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    const totalQ = lots.reduce((n, l) => n + l.count, 0);
+
+    const lignes = lots.map(l => {
+      const estMarque = marques.indexOf(l.id) !== -1;
+      const m = window.MATIERES_CATALOG[l.matiere];
+      const ouvert = this.state._lotOuvert === l.id;
+      const segments = l.id.split('/');
+      const etiquette = segments[segments.length - 1] || l.id;
+      const date = segments.length >= 3 ? segments[1] : '';
+
+      return `
+        <tr style="${estMarque ? 'background:linear-gradient(90deg,#eff6ff,white); border-left:4px solid #1e40af' : ''}">
+          <td>
+            <div style="font-weight:700">${estMarque ? '🔵 ' : ''}${this.escapeHTML(etiquette)}</div>
+            <div style="font-size:0.7rem; color:var(--ink-mute); margin-top:0.15rem; font-family:monospace">
+              ${this.escapeHTML(l.id)}
+            </div>
+          </td>
+          <td style="font-size:0.85rem">${m ? m.icone + ' ' + this.escapeHTML(m.nom) : this.escapeHTML(l.matiere)}</td>
+          <td style="font-size:0.78rem; color:var(--ink-mute)">${this.escapeHTML(date)}</td>
+          <td><span class="badge badge-info">${l.count} question${l.count > 1 ? 's' : ''}</span></td>
+          <td style="text-align:right; white-space:nowrap">
+            <button class="btn-action btn-secondary" onclick="Admin.basculerApercuLot('${l.id}')"
+                    style="font-size:0.75rem; padding:0.4rem 0.6rem">
+              ${ouvert ? '▲ Masquer' : '👁 Aperçu'}
+            </button>
+            ${estMarque ? `
+              <button class="btn-action" onclick="Admin.annulerMarquageLot('${l.id}')"
+                      style="font-size:0.75rem; padding:0.4rem 0.6rem; margin-left:0.3rem; background:white; border:1.5px solid var(--line); color:var(--ink-mute)">
+                ↩️ Annuler
+              </button>
+            ` : `
+              <button class="btn-action" onclick="Admin.marquerLotPourRetrait('${l.id}')"
+                      style="font-size:0.75rem; padding:0.4rem 0.6rem; margin-left:0.3rem; background:linear-gradient(135deg,#dbeafe,white); border:1.5px solid #1e40af; color:#1e40af"
+                      title="Prépare la demande de retrait — ne supprime rien">
+                🔵 Marquer pour retrait
+              </button>
+            `}
+          </td>
+        </tr>
+        ${ouvert ? `
+          <tr><td colspan="5" style="background:#f8fafc; padding:0.8rem 1rem">
+            <div style="font-size:0.72rem; color:var(--ink-mute); font-weight:700; margin-bottom:0.4rem">
+              PREMIÈRES QUESTIONS DU LOT
+            </div>
+            ${l.apercu.map(t => `
+              <div style="font-size:0.82rem; margin-bottom:0.3rem">• ${this.escapeHTML(t)}</div>
+            `).join('')}
+            ${l.count > l.apercu.length ? `
+              <div style="font-size:0.75rem; color:var(--ink-mute); margin-top:0.3rem">
+                + ${l.count - l.apercu.length} autre${l.count - l.apercu.length > 1 ? 's' : ''}
+              </div>
+            ` : ''}
+          </td></tr>
+        ` : ''}
+      `;
+    }).join('');
+
+    return `
+      <div class="table-wrap" style="margin-top:1.5rem">
+        <div class="table-header">
+          <div class="table-title">🗂️ Lots intégrés au fichier source</div>
+          <div style="font-size:0.8rem; color:var(--ink-mute)">
+            ${lots.length} lot${lots.length > 1 ? 's' : ''} · ${totalQ} question${totalQ > 1 ? 's' : ''}
+          </div>
+        </div>
+
+        <div style="padding:0.8rem 1rem; background:#f8fafc; border-bottom:1px solid var(--line-soft); font-size:0.82rem; line-height:1.5; color:var(--ink-soft)">
+          Ces lots sont dans <strong>data/questions.js</strong>, le fichier que voient tes candidats.
+          Marquer un lot pour retrait <strong>ne supprime rien</strong> : ça prépare seulement la demande
+          à envoyer au développeur, qui régénérera le fichier.
+        </div>
+
+        ${marques.length > 0 ? `
+          <div style="padding:0.9rem 1rem; background:linear-gradient(90deg,#dbeafe,#f8fafc); border-bottom:1px solid var(--line-soft); display:flex; align-items:center; gap:1rem; flex-wrap:wrap">
+            <div style="flex:1; min-width:220px; font-size:0.88rem">
+              <strong>🔵 ${marques.length} lot${marques.length > 1 ? 's' : ''} marqué${marques.length > 1 ? 's' : ''} pour retrait.</strong>
+              Rien n'est supprimé tant que le fichier source n'a pas été régénéré et déployé.
+            </div>
+            <button class="btn-action btn-success" onclick="Admin.exporterDemandeRetrait()" style="padding:0.6rem 1rem; white-space:nowrap">
+              📤 Exporter la demande
+            </button>
+          </div>
+        ` : ''}
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Lot</th>
+              <th>Matière</th>
+              <th>Date</th>
+              <th>Taille</th>
+              <th style="text-align:right">Actions</th>
+            </tr>
+          </thead>
+          <tbody>${lignes}</tbody>
+        </table>
+      </div>
     `;
   },
 
@@ -9079,7 +9313,8 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
       ['bara_concours_matieres_overrides', 'Concours modifiés'],
       ['bara_sessions_accompagnement', 'Sessions créées'],
       ['bara_edited_matieres', 'Matières éditées'],
-      ['bara_mass_action_history', 'Actions de masse']
+      ['bara_mass_action_history', 'Actions de masse'],
+      ['bara_lots_a_retirer', 'Lots marqués pour retrait']
     ];
 
     return keys.map(([key, label]) => {
