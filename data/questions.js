@@ -1,6 +1,6 @@
 // Bara Concours - Base de questions QCM
-// Mis à jour le 2026-10-21 - Maths Cycle B entierement remplacee : 497 questions
-// Total : 6982 questions réparties sur 37 matières
+// Mis à jour le 2026-10-21 - Informatique entierement remplacee : 504 questions
+// Total : 7732 questions réparties sur 37 matières
 
 const QUESTIONS = {
   "francais": [
@@ -6046,1811 +6046,7435 @@ const QUESTIONS = {
   ],
   "maths_bepc": [
     {
-      "q": "Un gardien fait 3 rondes de 45 min/nuit. Sur 7 nuits, total ?",
+      "q": "La fraction irréductible égale à 90/150 est :",
       "o": [
-        "15h00",
-        "15h30",
-        "15h45",
-        "16h00"
-      ],
-      "r": 2,
-      "x": "3 × 45 = 135 min/nuit. 7 × 135 = 945 min = 15h45min."
-    },
-    {
-      "q": "Détenu condamné à 8 ans, a purgé 5 ans 9 mois. Reste ?",
-      "o": [
-        "2 ans 3 mois",
-        "3 ans 3 mois",
-        "2 ans 9 mois",
-        "3 ans 9 mois"
+        "3/5",
+        "9/15",
+        "5/3",
+        "6/10"
       ],
       "r": 0,
-      "x": "8 ans = 7 ans 12 mois. 7a12m − 5a9m = 2 ans 3 mois."
+      "x": "On divise le numérateur et le dénominateur par leur PGCD, qui vaut 30 : 90 ÷ 30 = 3 et 150 ÷ 30 = 5. Une fraction est irréductible quand ses deux termes n'ont plus aucun diviseur commun autre que 1. Les fractions 9/15 et 6/10 ont bien la même valeur, mais elles restent simplifiables, donc elles ne répondent pas à la question posée.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
     },
     {
-      "q": "Suite : 3 — 6 — 12 — 24 — ?",
+      "q": "La somme 3/4 + 5/6 est égale à :",
       "o": [
-        "36",
-        "48",
+        "8/24",
+        "15/24",
+        "8/10",
+        "19/12"
+      ],
+      "r": 3,
+      "x": "On ne peut additionner deux fractions qu'après les avoir mises au même dénominateur, ici 12, qui est le PPCM de 4 et 6. On obtient 9/12 + 10/12 = 19/12, fraction supérieure à 1. La réponse 8/10 additionne les numérateurs entre eux et les dénominateurs entre eux, erreur très fréquente qui ne donne jamais le bon résultat.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le produit 2/3 × 9/4 est égal à :",
+      "o": [
+        "8/27",
+        "11/12",
+        "3/2",
+        "27/8"
+      ],
+      "r": 2,
+      "x": "Pour multiplier deux fractions, on multiplie les numérateurs entre eux et les dénominateurs entre eux : 18/12, que l'on simplifie par 6 pour obtenir 3/2. On peut aussi simplifier avant de multiplier, en divisant 9 et 3 par 3. La réponse 8/27 est le résultat de la division 2/3 ÷ 9/4.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le quotient 5/8 ÷ 15/4 est égal à :",
+      "o": [
+        "1/6",
+        "3/8",
+        "75/32",
+        "6"
+      ],
+      "r": 0,
+      "x": "Diviser par une fraction revient à multiplier par son inverse : 5/8 × 4/15 = 20/120 = 1/6. L'inverse d'une fraction s'obtient en échangeant son numérateur et son dénominateur. La réponse 75/32 est le produit des deux fractions, obtenu en oubliant de retourner la seconde.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le nombre décimal 0,125 s'écrit sous forme de fraction irréductible :",
+      "o": [
+        "1/80",
+        "1/8",
+        "5/8",
+        "5/4"
+      ],
+      "r": 1,
+      "x": "On écrit 0,125 = 125/1 000, puis on simplifie par 125 pour obtenir 1/8. Il est utile de mémoriser les équivalences 1/8 = 0,125, 1/4 = 0,25 et 1/2 = 0,5, qui reviennent souvent aux concours. La fraction 5/8 vaut 0,625, soit cinq fois 0,125.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le plus petit commun multiple (PPCM) de 18 et 24 est :",
+      "o": [
+        "6",
         "42",
-        "30"
-      ],
-      "r": 1,
-      "x": "Multiplication par 2 à chaque étape. 24 × 2 = 48. Suite géométrique de raison 2."
-    },
-    {
-      "q": "Maison d'arrêt : 240 détenus, 30% en provisoire. Combien ?",
-      "o": [
-        "60",
         "72",
-        "80",
-        "90"
-      ],
-      "r": 1,
-      "x": "30% de 240 = (30 × 240) ÷ 100 = 72 détenus."
-    },
-    {
-      "q": "Calculer : (15 + 25) × 2 − 10 ÷ 5",
-      "o": [
-        "78",
-        "76",
-        "79",
-        "82"
-      ],
-      "r": 0,
-      "x": "Priorité : (15+25)=40, 10÷5=2, 40×2=80, 80−2=78. Toujours parenthèses puis × ÷ puis + −."
-    },
-    {
-      "q": "Une voiture roule à 80 km/h pendant 2h30. Distance parcourue ?",
-      "o": [
-        "180 km",
-        "200 km",
-        "220 km",
-        "240 km"
-      ],
-      "r": 1,
-      "x": "d = v × t. 80 × 2,5 = 200 km. Convertir 2h30 = 2,5h."
-    },
-    {
-      "q": "Si x + 7 = 15, alors x = ?",
-      "o": [
-        "7",
-        "8",
-        "22",
-        "9"
-      ],
-      "r": 1,
-      "x": "x = 15 − 7 = 8. On isole l'inconnue en faisant l'opération inverse."
-    },
-    {
-      "q": "Aire d'un rectangle de 8m sur 5m ?",
-      "o": [
-        "13 m²",
-        "26 m²",
-        "40 m²",
-        "45 m²"
+        "432"
       ],
       "r": 2,
-      "x": "Aire rectangle = Longueur × largeur = 8 × 5 = 40 m². Périmètre = 2×(L+l) = 26 m (à ne pas confondre)."
+      "x": "On décompose les deux nombres : 18 = 2 × 3² et 24 = 2³ × 3. Le PPCM retient tous les facteurs avec le plus GRAND exposant, soit 2³ × 3² = 72, premier nombre divisible à la fois par 18 et par 24. Le nombre 6 est leur PGCD et 432 leur produit, deux résultats bien différents.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
     },
     {
-      "q": "Prix d'un article : 5000 FCFA. Réduction 15%. Prix payé ?",
+      "q": "Parmi les nombres suivants, le nombre premier est :",
       "o": [
-        "4250 FCFA",
-        "4500 FCFA",
-        "4750 FCFA",
-        "3500 FCFA"
+        "51",
+        "57",
+        "87",
+        "97"
       ],
-      "r": 0,
-      "x": "Réduction = 15% × 5000 = 750. Prix payé = 5000 − 750 = 4250 FCFA. Ou directement : 85% × 5000 = 4250."
+      "r": 3,
+      "x": "Un nombre premier n'admet que deux diviseurs, 1 et lui-même. Pour tester 97, il suffit d'essayer les premiers jusqu'à 10, car 10² dépasse 97 : il n'est divisible ni par 2, ni par 3, ni par 5, ni par 7. Les nombres 51, 57 et 87 ont tous une somme de chiffres multiple de 3, donc ils sont divisibles par 3.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
     },
     {
-      "q": "Quel est le PGCD de 24 et 36 ?",
+      "q": "Le nombre de diviseurs de 36 est :",
       "o": [
         "6",
         "8",
-        "12",
-        "18"
+        "9",
+        "12"
       ],
       "r": 2,
-      "x": "24 = 2³×3, 36 = 2²×3². PGCD = 2² × 3 = 12. Le PGCD prend les exposants minimums des facteurs communs."
+      "x": "On liste les diviseurs par paires : 1 et 36, 2 et 18, 3 et 12, 4 et 9, puis 6 qui se multiplie par lui-même, ce qui donne 9 diviseurs. La décomposition 36 = 2² × 3² permet aussi d'appliquer la formule (2 + 1)(2 + 1) = 9. La réponse 8 oublie le diviseur 6, qui ne se compte qu'une seule fois.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
     },
     {
-      "q": "Convertir : 2,5 heures en minutes ?",
+      "q": "Le nombre 2 358 est divisible par :",
       "o": [
-        "120 min",
-        "150 min",
-        "250 min",
-        "125 min"
+        "4",
+        "5",
+        "9",
+        "25"
+      ],
+      "r": 2,
+      "x": "Un nombre est divisible par 9 lorsque la somme de ses chiffres l'est : 2 + 3 + 5 + 8 = 18, multiple de 9. Il n'est pas divisible par 4, car ce critère porte sur les deux derniers chiffres et 58 n'est pas un multiple de 4. Il ne l'est pas non plus par 5, puisqu'il ne finit ni par 0 ni par 5.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La puissance (–3)⁴ est égale à :",
+      "o": [
+        "–81",
+        "–12",
+        "12",
+        "81"
+      ],
+      "r": 3,
+      "x": "Une puissance paire d'un nombre négatif est toujours positive, car les signes s'annulent deux par deux : (–3) × (–3) × (–3) × (–3) = 81. Attention à la place des parenthèses : l'écriture –3⁴ désigne l'opposé de 3⁴, c'est-à-dire –81, ce qui explique le distracteur A.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le produit 2³ × 2⁵ est égal à :",
+      "o": [
+        "2⁸",
+        "2¹⁵",
+        "4⁸",
+        "4¹⁵"
+      ],
+      "r": 0,
+      "x": "Pour multiplier deux puissances de même base, on ADDITIONNE les exposants : 2³ × 2⁵ = 2⁸, soit 256. On le vérifie en comptant les facteurs : trois 2 suivis de cinq 2 font bien huit 2 au total. La réponse 2¹⁵ multiplie les exposants, règle qui s'applique seulement à une puissance de puissance comme (2³)⁵.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le nombre 10⁻³ s'écrit en notation décimale :",
+      "o": [
+        "–1 000",
+        "0,000 1",
+        "0,001",
+        "0,01"
+      ],
+      "r": 2,
+      "x": "Un exposant négatif indique un passage à l'inverse : 10⁻³ = 1/10³ = 1/1 000 = 0,001. Le chiffre de l'exposant donne directement le nombre de rangs occupés après la virgule. La réponse –1 000 confond exposant négatif et nombre négatif : une puissance de 10 est toujours positive.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'écriture scientifique de 0,000 45 est :",
+      "o": [
+        "4,5 × 10⁻⁵",
+        "4,5 × 10⁻⁴",
+        "45 × 10⁻⁵",
+        "4,5 × 10⁴"
       ],
       "r": 1,
-      "x": "1h = 60 min, donc 2,5 × 60 = 150 min. (2h + 30 min)."
+      "x": "En écriture scientifique, le premier facteur est obligatoirement compris entre 1 et 10. On déplace la virgule de quatre rangs vers la droite pour obtenir 4,5, ce qui impose l'exposant –4. L'écriture 45 × 10⁻⁵ a la bonne valeur mais n'est pas scientifique, car 45 dépasse 10.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
     },
     {
-      "q": "Pourcentage : 45 réussites sur 60 candidats ?",
+      "q": "La forme simplifiée de √50 est :",
       "o": [
-        "65%",
-        "70%",
-        "75%",
-        "80%"
+        "2√5",
+        "5√2",
+        "10√5",
+        "25√2"
+      ],
+      "r": 1,
+      "x": "On cherche dans 50 un carré parfait : 50 = 25 × 2, donc √50 = √25 × √2 = 5√2. Cette forme simplifiée est celle attendue aux concours, car elle permet ensuite d'additionner des racines semblables. La réponse 25√2 oublie d'extraire la racine de 25, qui vaut 5 et non 25.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La somme √12 + √27 est égale à :",
+      "o": [
+        "√39",
+        "4√3",
+        "5√3",
+        "6√3"
       ],
       "r": 2,
-      "x": "(45 ÷ 60) × 100 = 75%. La proportion est 3/4."
+      "x": "On simplifie d'abord chaque racine : √12 = 2√3 et √27 = 3√3. Les deux termes portant le même radical, on additionne les coefficients : 2√3 + 3√3 = 5√3. La réponse √39 additionne les nombres sous le radical, ce qui est toujours faux car √a + √b n'est jamais égal à √(a + b).",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
     },
     {
-      "q": "Suite logique : 1 — 4 — 9 — 16 — ?",
+      "q": "Au marché de Sankaryaré, 5 kg de mil coûtent 1 750 FCFA. Le prix de 12 kg de mil est de :",
       "o": [
-        "20",
-        "23",
+        "3 500 FCFA",
+        "4 200 FCFA",
+        "4 375 FCFA",
+        "8 750 FCFA"
+      ],
+      "r": 1,
+      "x": "On passe par le prix d'un kilogramme, 1 750 ÷ 5 = 350 FCFA, puis on multiplie : 350 × 12 = 4 200 FCFA. Cette méthode, dite du passage à l'unité, évite toute erreur de sens dans une règle de trois. La réponse 3 500 FCFA correspond à 10 kg, soit le double de 5 kg.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Huit ouvriers réalisent un travail en 15 jours. Au même rythme, 12 ouvriers réalisent ce travail en :",
+      "o": [
+        "10 jours",
+        "12 jours",
+        "18 jours",
+        "22,5 jours"
+      ],
+      "r": 0,
+      "x": "Attention au piège : plus il y a d'ouvriers, moins le travail dure, donc la règle de trois ordinaire ne s'applique pas. On calcule le travail total en journées-ouvriers, soit 8 × 15 = 120, puis on le partage entre les 12 ouvriers : 120 ÷ 12 = 10 jours. La réponse 22,5 jours reviendrait à dire qu'ajouter des ouvriers rallonge le chantier.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une somme de 450 000 FCFA est partagée entre trois frères proportionnellement aux nombres 2, 3 et 4. La plus grande part s'élève à :",
+      "o": [
+        "150 000 FCFA",
+        "180 000 FCFA",
+        "200 000 FCFA",
+        "225 000 FCFA"
+      ],
+      "r": 2,
+      "x": "On additionne d'abord les parts, 2 + 3 + 4 = 9, puis on calcule la valeur d'une part : 450 000 ÷ 9 = 50 000 FCFA. La plus grande en compte quatre, soit 4 × 50 000 = 200 000 FCFA. La réponse 150 000 FCFA est la part du deuxième frère, celle qui vaut trois parts.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Les 35 % de 2 400 sont égaux à :",
+      "o": [
+        "480",
+        "686",
+        "700",
+        "840"
+      ],
+      "r": 3,
+      "x": "On applique la formule 2 400 × 35 ÷ 100 = 840. Une vérification mentale rapide : 10 % de 2 400 font 240, donc 30 % font 720, auxquels on ajoute 5 %, soit 120, ce qui donne bien 840. La réponse 480 ne représente que 20 % de 2 400.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un prix passe de 4 000 FCFA à 5 000 FCFA. Le taux d'augmentation est de :",
+      "o": [
+        "20 %",
+        "25 %",
+        "30 %",
+        "125 %"
+      ],
+      "r": 1,
+      "x": "La hausse vaut 1 000 FCFA, que l'on rapporte TOUJOURS au prix de départ : 1 000 ÷ 4 000 = 25 %. La formule à retenir est taux = (valeur finale – valeur initiale) ÷ valeur initiale. La réponse 20 % divise par le prix d'arrivée, erreur la plus courante sur les calculs de variation.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un prix augmente de 10 % puis baisse de 10 %. La variation globale est de :",
+      "o": [
+        "–1 %",
+        "0 %",
+        "+1 %",
+        "+10 %"
+      ],
+      "r": 0,
+      "x": "On multiplie les coefficients successifs : 1,10 × 0,90 = 0,99, soit une baisse de 1 %. Les deux taux ne s'annulent pas, car la baisse s'applique à un prix déjà augmenté, donc plus élevé. Sur 1 000 FCFA, on passe à 1 100 FCFA puis à 990 FCFA : il manque bien 10 FCFA au départ.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le nombre dont les 20 % valent 36 est :",
+      "o": [
+        "7,2",
+        "72",
+        "144",
+        "180"
+      ],
+      "r": 3,
+      "x": "Si 20 % valent 36, le nombre entier s'obtient en divisant par 0,20 : 36 ÷ 0,20 = 180. On peut raisonner plus simplement : 20 % représentent un cinquième, donc le nombre vaut 5 × 36 = 180. La réponse 7,2 est le résultat de 20 % de 36, c'est-à-dire l'opération inverse de celle demandée.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Après une augmentation de 8 %, un salaire atteint 162 000 FCFA. Le salaire initial était de :",
+      "o": [
+        "148 000 FCFA",
+        "149 040 FCFA",
+        "150 000 FCFA",
+        "175 000 FCFA"
+      ],
+      "r": 2,
+      "x": "Le salaire a été multiplié par 1,08, donc on retrouve l'initial en divisant : 162 000 ÷ 1,08 = 150 000 FCFA. On vérifie aussitôt : 150 000 × 0,08 = 12 000 FCFA d'augmentation. La réponse 149 040 FCFA retire 8 % du nouveau salaire, ce qui ne ramène jamais au point de départ.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le plus grand des nombres suivants est :",
+      "o": [
+        "0,58",
+        "3/5",
+        "0,6",
+        "5/8"
+      ],
+      "r": 3,
+      "x": "Pour comparer, on convertit tout en écriture décimale : 5/8 = 0,625, 3/5 = 0,6 et 0,58 reste 0,58. Le plus grand est donc 5/8. Notez que 3/5 et 0,6 désignent le même nombre, ce qui élimine d'emblée l'une de ces deux propositions.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'arrondi au centième de 12,486 7 est :",
+      "o": [
+        "12,48",
+        "12,487",
+        "12,49",
+        "12,5"
+      ],
+      "r": 2,
+      "x": "Le chiffre des centièmes est 8 ; on regarde celui qui le suit, 6, supérieur ou égal à 5, donc on arrondit au-dessus, ce qui donne 12,49. La réponse 12,48 est la troncature, qui coupe le nombre sans regarder le chiffre suivant. Arrondi et troncature sont deux opérations bien distinctes.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le reste de la division euclidienne de 1 000 par 7 est :",
+      "o": [
+        "1",
+        "3",
+        "4",
+        "6"
+      ],
+      "r": 3,
+      "x": "On cherche le plus grand multiple de 7 inférieur à 1 000 : 7 × 142 = 994, d'où un reste de 1 000 – 994 = 6. On contrôle avec la relation 1 000 = 7 × 142 + 6. Retenez que le reste d'une division par 7 est toujours compris entre 0 et 6, sinon le quotient est incomplet.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un cultivateur sème le tiers de son champ en mil, le quart en maïs et le reste en arachide. La fraction du champ semée en arachide est :",
+      "o": [
+        "1/6",
+        "2/7",
+        "5/12",
+        "7/12"
+      ],
+      "r": 2,
+      "x": "Le mil et le maïs occupent 1/3 + 1/4, soit 4/12 + 3/12 = 7/12 du champ. Le reste s'obtient en retranchant cette part au champ entier, qui vaut 12/12 : 12/12 – 7/12 = 5/12. La réponse 7/12 donne la surface déjà semée, et non celle qui reste disponible.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le résultat du calcul 7 – 3 × 2 + 8 ÷ 4 est :",
+      "o": [
+        "3",
+        "4",
+        "10",
+        "11"
+      ],
+      "r": 0,
+      "x": "On applique les priorités opératoires : multiplications et divisions d'abord, soit 3 × 2 = 6 et 8 ÷ 4 = 2, ce qui laisse 7 – 6 + 2 = 3. On termine les additions et soustractions de gauche à droite. La réponse 10 effectue la soustraction avant la multiplication, ce qui est interdit en l'absence de parenthèses.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le résultat de –5 – (–8) est :",
+      "o": [
+        "–13",
+        "–3",
+        "3",
+        "13"
+      ],
+      "r": 2,
+      "x": "Soustraire un nombre négatif revient à l'ajouter, car deux signes moins successifs donnent un plus : –5 + 8 = 3. On peut le visualiser sur une droite graduée, en avançant de 8 unités à partir de –5. La réponse –13 additionne les deux valeurs sans tenir compte du double signe.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une durée de 2,75 heures correspond à :",
+      "o": [
+        "2 h 45 min",
+        "2 h 50 min",
+        "2 h 55 min",
+        "3 h 15 min"
+      ],
+      "r": 0,
+      "x": "La partie décimale se convertit en multipliant par 60 : 0,75 × 60 = 45 min, d'où 2 h 45 min. Les repères utiles sont 0,25 h = 15 min, 0,5 h = 30 min et 0,75 h = 45 min. La réponse 3 h 15 min lit 0,75 comme 75 minutes, erreur classique sur les durées décimales.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un mètre cube équivaut à :",
+      "o": [
+        "10 litres",
+        "100 litres",
+        "1 000 litres",
+        "10 000 litres"
+      ],
+      "r": 2,
+      "x": "Un mètre cube contient 1 000 décimètres cubes, et un décimètre cube correspond exactement à un litre : 1 m³ = 1 000 L. Ce repère sert dans tous les calculs de citerne, de réservoir et d'irrigation. Les 100 litres de la proposition B forment un hectolitre, soit un dixième de mètre cube seulement.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une superficie de 0,45 km² est égale à :",
+      "o": [
+        "4,5 ha",
+        "45 ha",
+        "450 ha",
+        "4 500 ha"
+      ],
+      "r": 1,
+      "x": "Un kilomètre carré vaut 100 hectares, donc 0,45 × 100 = 45 ha. Attention : pour les surfaces, les coefficients de conversion sont des carrés, d'où 100 et non 10 comme pour les longueurs. La réponse 450 ha correspondrait à 4,5 km², soit dix fois cette superficie.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une vitesse de 72 km/h est égale à :",
+      "o": [
+        "7,2 m/s",
+        "20 m/s",
+        "72 m/s",
+        "259,2 m/s"
+      ],
+      "r": 1,
+      "x": "Pour passer des km/h aux m/s, on divise par 3,6 : 72 ÷ 3,6 = 20 m/s. Le détail du calcul le confirme : 72 km font 72 000 m, parcourus en 3 600 secondes. La réponse 259,2 m/s multiplie par 3,6 au lieu de diviser, ce qui donnerait une vitesse impossible pour un véhicule.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La somme de trois nombres entiers consécutifs est 78. Le plus petit de ces nombres est :",
+      "o": [
+        "24",
         "25",
+        "26",
+        "27"
+      ],
+      "r": 1,
+      "x": "On pose les trois nombres n, n + 1 et n + 2 : leur somme 3n + 3 = 78 donne n = 25. Méthode plus rapide pour trois nombres consécutifs : celui du milieu vaut 78 ÷ 3 = 26, donc le plus petit est 25. La réponse 26 est précisément ce nombre du milieu, et non le plus petit demandé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un candidat obtient 12 en français (coefficient 3) et 15 en mathématiques (coefficient 2). Sa moyenne est de :",
+      "o": [
+        "12,6",
+        "13",
+        "13,2",
+        "13,5"
+      ],
+      "r": 2,
+      "x": "Avec des coefficients, chaque note est multipliée par le sien et la somme obtenue est divisée par le total des coefficients : (12 × 3 + 15 × 2) ÷ 5 = 66 ÷ 5 = 13,2. La réponse 13,5 est la moyenne simple, qui ignore les coefficients et avantage à tort la meilleure note.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Deux nombres ont pour produit 540 et pour PGCD 6. Leur PPCM est :",
+      "o": [
+        "54",
+        "90",
+        "180",
+        "3 240"
+      ],
+      "r": 1,
+      "x": "Pour deux nombres, on a toujours produit = PGCD × PPCM, d'où PPCM = 540 ÷ 6 = 90. Cette relation est précieuse au concours dès que l'on connaît deux des trois valeurs. La réponse 3 240 multiplie 540 par 6 au lieu de diviser, ce qui dépasse largement le produit des deux nombres.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une salle de 240 cm sur 180 cm doit être pavée avec des carreaux carrés identiques, sans découpe. Le côté maximal d'un carreau est de :",
+      "o": [
+        "30 cm",
+        "45 cm",
+        "50 cm",
+        "60 cm"
+      ],
+      "r": 3,
+      "x": "Pour un pavage sans découpe, le côté du carreau doit diviser les deux dimensions : on cherche donc le PGCD de 240 et 180, qui vaut 60 cm. La salle reçoit alors 4 × 3 = 12 carreaux. Les côtés de 45 cm et 50 cm ne divisent pas 240, donc ils obligeraient à couper des carreaux.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Deux bus quittent ensemble une gare de Ouagadougou, l'un toutes les 12 minutes, l'autre toutes les 18 minutes. Ils repartent de nouveau ensemble au bout de :",
+      "o": [
+        "6 min",
+        "30 min",
+        "36 min",
+        "216 min"
+      ],
+      "r": 2,
+      "x": "Deux départs simultanés se retrouvent au premier multiple commun des deux intervalles, c'est-à-dire au PPCM de 12 et 18, soit 36 minutes. On le vérifie : le premier part à 12, 24 et 36 min, le second à 18 et 36 min. La réponse 216 min est le produit 12 × 18, multiple commun mais pas le plus petit.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La racine carrée de 0,49 est :",
+      "o": [
+        "0,7",
+        "2,45",
+        "4,9",
+        "7"
+      ],
+      "r": 0,
+      "x": "On cherche le nombre dont le carré vaut 0,49 : 0,7 × 0,7 = 0,49. Notez que la racine carrée d'un nombre strictement compris entre 0 et 1 est elle-même comprise entre 0 et 1, ce qui élimine d'office toutes les propositions supérieures à 1 (B, C et D).",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La somme 2⁰ + 2¹ + 2² est égale à :",
+      "o": [
+        "7",
+        "8",
+        "11",
+        "14"
+      ],
+      "r": 0,
+      "x": "Tout nombre non nul élevé à la puissance 0 vaut 1, donc 2⁰ = 1 et la somme fait 1 + 2 + 4 = 7. C'est une règle à mémoriser absolument, car elle est très souvent testée aux concours. La réponse 8 prend 2⁰ pour 2, ce qui reviendrait à compter deux fois la même puissance.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un terrain acheté 2 400 000 FCFA est revendu avec une perte de 15 %. Le prix de vente est de :",
+      "o": [
+        "360 000 FCFA",
+        "1 800 000 FCFA",
+        "2 000 000 FCFA",
+        "2 040 000 FCFA"
+      ],
+      "r": 3,
+      "x": "La perte vaut 2 400 000 × 15 ÷ 100 = 360 000 FCFA, que l'on retire du prix d'achat pour obtenir 2 040 000 FCFA. On peut aussi multiplier directement par 0,85, car vendre avec 15 % de perte revient à encaisser 85 % du prix d'achat. La réponse 360 000 FCFA donne la perte elle-même, non le prix de vente.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un producteur récolte 3,6 tonnes de maïs sur 1,5 hectare. Son rendement est de :",
+      "o": [
+        "2,4 t/ha",
+        "2,6 t/ha",
+        "4,8 t/ha",
+        "5,4 t/ha"
+      ],
+      "r": 0,
+      "x": "Un rendement est une production rapportée à une surface, donc on divise : 3,6 ÷ 1,5 = 2,4 t/ha. Le contrôle est immédiat, puisque 2,4 × 1,5 redonne bien 3,6 tonnes. La réponse 5,4 t/ha multiplie au lieu de diviser. Notez que la récolte globale (3,6) est logiquement supérieure au rendement à l'hectare (2,4) car la surface totale de l'exploitation dépasse un hectare.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La fraction 3/8 exprimée en pourcentage vaut :",
+      "o": [
+        "3,75 %",
+        "37,5 %",
+        "38 %",
+        "266,7 %"
+      ],
+      "r": 1,
+      "x": "On convertit la fraction en décimal, 3 ÷ 8 = 0,375, puis on multiplie par 100 pour obtenir 37,5 %. Un pourcentage n'est rien d'autre qu'une fraction de dénominateur 100, ici 37,5/100. La réponse 266,7 % correspond à la fraction inverse 8/3, obtenue en divisant dans le mauvais sens.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La somme des 20 premiers entiers naturels non nuls est :",
+      "o": [
+        "190",
+        "200",
+        "205",
+        "210"
+      ],
+      "r": 3,
+      "x": "On regroupe les termes par paires de même total : 1 + 20, 2 + 19, 3 + 18… soit 10 paires valant chacune 21, ce qui donne 210. C'est exactement ce que résume la formule n × (n + 1) ÷ 2 = 20 × 21 ÷ 2. La réponse 190 est la somme des 19 premiers entiers, car elle oublie le dernier terme.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le résultat de 15 % de 60 augmenté de 60 % de 15 est :",
+      "o": [
+        "18",
+        "20",
+        "22,5",
+        "36"
+      ],
+      "r": 0,
+      "x": "Les deux calculs donnent le même résultat, 9, car 15 % de 60 et 60 % de 15 valent tous deux 0,15 × 60. La somme fait donc 18. Retenez cette propriété utile : a % de b est toujours égal à b % de a, ce qui permet souvent de simplifier un calcul mentalement.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un nombre compris entre 2,3 et 2,31 est :",
+      "o": [
+        "2,29",
+        "2,305",
+        "2,315",
+        "2,4"
+      ],
+      "r": 1,
+      "x": "Pour comparer des décimaux, on complète avec des zéros afin d'avoir autant de chiffres partout : 2,300 < 2,305 < 2,310, l'encadrement est donc vérifié. La réponse 2,315 dépasse 2,31 et 2,29 reste inférieur à 2,3. Attention : un nombre n'est pas plus grand parce qu'il comporte plus de chiffres après la virgule.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un réservoir rempli aux 2/5 de sa capacité contient 240 litres. Sa capacité totale est de :",
+      "o": [
+        "96 L",
+        "360 L",
+        "480 L",
+        "600 L"
+      ],
+      "r": 3,
+      "x": "Si les 2/5 valent 240 litres, un cinquième vaut 240 ÷ 2 = 120 litres, donc la capacité totale en vaut cinq, soit 600 litres. On vérifie : les 2/5 de 600 font bien 240. La réponse 96 L correspond aux 2/5 de 240 litres, c'est-à-dire au calcul inverse de celui demandé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un robinet débite 18 litres par minute. Le temps nécessaire pour remplir une barrique de 216 litres est de :",
+      "o": [
+        "12 min",
+        "14 min",
+        "16 min",
+        "18 min"
+      ],
+      "r": 0,
+      "x": "La durée s'obtient en divisant le volume par le débit : 216 ÷ 18 = 12 minutes. Le contrôle est immédiat, puisque 18 × 12 = 216 litres. La réponse 18 min reprend simplement la valeur du débit, confusion fréquente entre la grandeur fournie par l'énoncé et celle que l'on cherche.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'opposé de 3/7 est :",
+      "o": [
+        "–7/3",
+        "–3/7",
+        "3/7",
+        "7/3"
+      ],
+      "r": 1,
+      "x": "L'opposé d'un nombre est celui dont la somme avec lui est nulle : 3/7 + (–3/7) = 0, et il s'obtient simplement en changeant le signe. La réponse 7/3 est l'INVERSE de 3/7, c'est-à-dire le nombre dont le produit avec lui vaut 1. Opposé et inverse sont deux notions à ne jamais confondre.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un élève a obtenu 14, 9, 12 et 11 à ses quatre premiers devoirs. Pour avoir 12 de moyenne sur cinq devoirs, il doit obtenir :",
+      "o": [
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "r": 3,
+      "x": "Pour 12 de moyenne sur cinq devoirs, il faut un total de 5 × 12 = 60 points ; l'élève en a déjà 14 + 9 + 12 + 11 = 46, donc il lui manque 14. Avec 12, le total atteindrait 58 et la moyenne 11,6 seulement. La note à obtenir est toujours la différence entre le total visé et le total déjà acquis.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La solution de l'équation 5x + 3 = 2x – 9 est :",
+      "o": [
+        "x = –4",
+        "x = –2",
+        "x = 2",
+        "x = 4"
+      ],
+      "r": 0,
+      "x": "On rassemble les x d'un côté et les nombres de l'autre, en changeant le signe de chaque terme qui traverse le signe égal : 5x – 2x = –9 – 3, soit 3x = –12 et x = –4. On vérifie en remplaçant : 5 × (–4) + 3 = –17 et 2 × (–4) – 9 = –17. La réponse 4 oublie le signe moins du second membre.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La solution de l'équation 2(x – 3) = x + 4 est :",
+      "o": [
+        "x = 1",
+        "x = 7",
+        "x = 8",
+        "x = 10"
+      ],
+      "r": 3,
+      "x": "On développe d'abord le membre de gauche en multipliant 2 par chacun des deux termes : 2x – 6 = x + 4, d'où x = 10. On contrôle le résultat : 2 × (10 – 3) = 14 et 10 + 4 = 14. La réponse 7 vient de l'oubli de la multiplication de –3 par 2, erreur très fréquente sur les parenthèses.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La solution de l'équation x/3 + x/2 = 10 est :",
+      "o": [
+        "x = 2",
+        "x = 6",
+        "x = 12",
+        "x = 60"
+      ],
+      "r": 2,
+      "x": "On met les deux fractions au même dénominateur, 6 : 2x/6 + 3x/6 = 5x/6 = 10. En multipliant les deux membres par 6, on obtient 5x = 60, puis on divise par 5 pour trouver x = 12. La réponse 60 s'arrête avant cette dernière division, étape que beaucoup de candidats oublient.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Les solutions de l'équation x² = 49 sont :",
+      "o": [
+        "7 seulement",
+        "–7 et 7",
+        "24,5 seulement",
+        "–24,5 et 24,5"
+      ],
+      "r": 1,
+      "x": "Un nombre positif possède toujours DEUX racines carrées opposées, donc x = 7 ou x = –7, puisque (–7) × (–7) donne également 49. Oublier la solution négative est l'erreur la plus fréquente sur ce type d'équation. Retenez : x² = a admet deux solutions si a est positif, une seule si a est nul, aucune s'il est négatif.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation 3x – 5 > 7 est :",
+      "o": [
+        "x < 4",
+        "x > 4",
+        "x < 12",
+        "x > 12"
+      ],
+      "r": 1,
+      "x": "On ajoute 5 aux deux membres, ce qui donne 3x > 12, puis on divise par 3 pour obtenir x > 4. Comme 3 est un nombre positif, le sens de l'inégalité ne change pas. La réponse x > 12 s'arrête avant la division par 3, étape indispensable pour isoler l'inconnue.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation –2x + 6 ≤ 0 est :",
+      "o": [
+        "x ≤ –3",
+        "x ≥ –3",
+        "x ≤ 3",
+        "x ≥ 3"
+      ],
+      "r": 3,
+      "x": "On obtient d'abord –2x ≤ –6, puis on divise par –2 : comme ce nombre est NÉGATIF, le sens de l'inégalité s'inverse et l'on écrit x ≥ 3. C'est la règle la plus importante à connaître sur les inéquations. La réponse x ≤ 3 oublie ce changement de sens, ce qui coûte le point à beaucoup de candidats.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le couple solution du système x + y = 20 et x – y = 6 est :",
+      "o": [
+        "(13 ; 7)",
+        "(7 ; 13)",
+        "(12 ; 8)",
+        "(14 ; 6)"
+      ],
+      "r": 0,
+      "x": "On additionne les deux équations pour éliminer y : 2x = 26, donc x = 13, puis y = 20 – 13 = 7. C'est la méthode par addition, la plus rapide dès qu'une inconnue apparaît avec des signes opposés. Le couple (7 ; 13) vérifie la première équation mais pas la seconde, car 7 – 13 ne fait pas 6.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Au marché de Koudougou, 3 poulets et 2 pintades coûtent 16 500 FCFA, tandis que 2 poulets et 3 pintades coûtent 17 000 FCFA. Le prix d'une pintade est de :",
+      "o": [
+        "3 100 FCFA",
+        "3 300 FCFA",
+        "3 600 FCFA",
+        "3 800 FCFA"
+      ],
+      "r": 2,
+      "x": "En additionnant les deux lignes, on obtient 5 poulets et 5 pintades pour 33 500 FCFA, donc un poulet plus une pintade coûtent 6 700 FCFA. La différence des deux lignes montre que la pintade vaut 500 FCFA de plus que le poulet, ce qui donne 3 600 FCFA et 3 100 FCFA. La réponse 3 100 FCFA est le prix du poulet.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le développement de (x + 5)² est :",
+      "o": [
+        "x² + 25",
+        "x² + 5x + 25",
+        "x² + 10x + 25",
+        "x² + 10x + 10"
+      ],
+      "r": 2,
+      "x": "On applique l'identité remarquable (a + b)² = a² + 2ab + b², avec a = x et b = 5 : x² + 10x + 25. Le terme du milieu, appelé double produit, vaut 2 × x × 5. La réponse x² + 25 oublie précisément ce double produit : le carré d'une somme n'est jamais la somme des carrés.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le développement de (2x – 3)² est :",
+      "o": [
+        "4x² – 9",
+        "4x² – 6x + 9",
+        "4x² – 12x – 9",
+        "4x² – 12x + 9"
+      ],
+      "r": 3,
+      "x": "L'identité (a – b)² = a² – 2ab + b² donne, avec a = 2x et b = 3 : 4x² – 12x + 9. Attention, le dernier terme reste POSITIF puisque (–3) × (–3) = 9. La réponse 4x² – 9 est le développement de (2x – 3)(2x + 3), un produit de somme par différence et non un carré.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le développement de (x – 4)(x + 4) est :",
+      "o": [
+        "x² – 16",
+        "x² + 16",
+        "x² – 8x – 16",
+        "x² – 8"
+      ],
+      "r": 0,
+      "x": "C'est l'identité (a – b)(a + b) = a² – b², qui donne ici x² – 16. En développant terme à terme, les deux produits en x, soit –4x et +4x, s'annulent, ce qui explique l'absence de terme du premier degré. La réponse x² – 8x – 16 conserve à tort ces deux termes au lieu de les simplifier.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La factorisation de x² – 9 est :",
+      "o": [
+        "(x – 3)²",
+        "(x – 3)(x + 3)",
+        "(x + 3)²",
+        "(x – 9)(x + 1)"
+      ],
+      "r": 1,
+      "x": "On reconnaît une différence de deux carrés, a² – b², avec a = x et b = 3 puisque 9 = 3². La factorisation est donc (x – 3)(x + 3). La réponse (x – 3)² se développe en x² – 6x + 9, expression bien différente : un carré parfait comporte toujours un terme du premier degré.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La factorisation de 3x² – 12x est :",
+      "o": [
+        "3(x² – 4)",
+        "3x(x – 4)",
+        "3x(x – 12)",
+        "x(3x – 4)"
+      ],
+      "r": 1,
+      "x": "On repère le facteur commun aux deux termes, ici 3x, présent dans 3x² comme dans 12x. En le sortant, il reste x – 4, car 12x divisé par 3x donne 4. La réponse 3x(x – 12) oublie de diviser 12 par 3 : pour contrôler une factorisation, il suffit toujours de redévelopper.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La factorisation de x² + 6x + 9 est :",
+      "o": [
+        "(x + 3)²",
+        "(x + 9)²",
+        "(x – 3)²",
+        "(x + 6)(x + 3)"
+      ],
+      "r": 0,
+      "x": "On reconnaît la forme a² + 2ab + b² avec a = x et b = 3, puisque 9 = 3² et que 6x correspond bien à 2 × x × 3. La factorisation est donc (x + 3)². La réponse (x – 3)² donnerait un terme central négatif, –6x, ce qui ne correspond pas à l'expression proposée.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La valeur de 2x² – 3x + 1 pour x = –2 est :",
+      "o": [
+        "3",
+        "11",
+        "13",
+        "15"
+      ],
+      "r": 3,
+      "x": "On remplace x par –2 en conservant les parenthèses : 2 × (–2)² – 3 × (–2) + 1. Comme (–2)² = 4 et que –3 × (–2) = +6, le calcul donne 8 + 6 + 1 = 15. La réponse 3 vient d'une erreur de signe sur ce produit : moins multiplié par moins donne toujours plus.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Pour la fonction f(x) = 3x – 2, l'image de 4 est :",
+      "o": [
+        "5",
+        "10",
+        "12",
+        "14"
+      ],
+      "r": 1,
+      "x": "Calculer l'image de 4 consiste à remplacer x par 4 dans l'expression de la fonction : f(4) = 3 × 4 – 2 = 10. Le mot image désigne toujours le résultat obtenu APRÈS calcul. La réponse 14 ajoute 2 au lieu de le retrancher, simple inattention sur le signe.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le coefficient directeur de la droite passant par A(1 ; 3) et B(3 ; 7) est :",
+      "o": [
+        "1/2",
+        "2",
+        "4",
+        "5"
+      ],
+      "r": 1,
+      "x": "Le coefficient directeur est le rapport de la variation des ordonnées à celle des abscisses : (7 – 3) ÷ (3 – 1) = 4 ÷ 2 = 2. Il indique de combien la droite monte quand on avance d'une unité vers la droite. La réponse 1/2 inverse le rapport : on divise l'écart vertical par l'écart horizontal, jamais l'inverse.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La droite d'équation y = –2x + 5 coupe l'axe des abscisses au point :",
+      "o": [
+        "(0 ; 5)",
+        "(–2,5 ; 0)",
+        "(2,5 ; 0)",
+        "(5 ; 0)"
+      ],
+      "r": 2,
+      "x": "Sur l'axe des abscisses, l'ordonnée est nulle : on résout donc –2x + 5 = 0, ce qui donne x = 2,5 et le point (2,5 ; 0). La réponse (0 ; 5) est l'intersection avec l'axe des ORDONNÉES, obtenue en remplaçant x par 0. Il faut bien distinguer les deux axes.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une fonction linéaire f vérifie f(5) = 35. L'image de 8 par f est :",
+      "o": [
+        "38",
+        "48",
+        "54",
+        "56"
+      ],
+      "r": 3,
+      "x": "Une fonction linéaire s'écrit f(x) = ax ; ici a = 35 ÷ 5 = 7, donc f(8) = 7 × 8 = 56. Autrement dit, les images sont proportionnelles aux nombres de départ. La réponse 38 ajoute 3 au lieu de multiplier par le coefficient, ce qui confond fonction linéaire et fonction affine.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La somme des dix premiers nombres impairs 1 + 3 + 5 + … + 19 est :",
+      "o": [
+        "81",
+        "90",
+        "95",
+        "100"
+      ],
+      "r": 3,
+      "x": "On regroupe les termes par paires de même total : 1 + 19, 3 + 17, 5 + 15… soit 5 paires valant 20, ce qui donne 100. La règle générale mérite d'être retenue : la somme des n premiers nombres impairs vaut toujours n². La réponse 81 correspond aux neuf premiers impairs, c'est-à-dire 9².",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un père a 42 ans et son fils 12 ans. L'âge du père sera le double de celui du fils dans :",
+      "o": [
+        "6 ans",
+        "12 ans",
+        "15 ans",
+        "18 ans"
+      ],
+      "r": 3,
+      "x": "On pose l'équation 42 + x = 2 × (12 + x), qui se développe en 42 + x = 24 + 2x, d'où x = 18. Dans 18 ans, le père aura 60 ans et le fils 30 ans, ce qui vérifie bien le double. La réponse 15 ans conduirait à 57 et 27 ans, où le rapport n'est pas exactement de deux.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un nombre augmenté de ses 2/5 donne 56. Ce nombre est :",
+      "o": [
+        "33,6",
+        "40",
+        "48",
+        "78,4"
+      ],
+      "r": 1,
+      "x": "Le nombre augmenté de ses 2/5 représente 5/5 + 2/5 = 7/5 du nombre, donc 7x/5 = 56, soit x = 56 × 5 ÷ 7 = 40. On contrôle : les 2/5 de 40 font 16, et 40 + 16 = 56. La réponse 33,6 retire les 2/5 de 56 au lieu de remonter au nombre de départ.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un champ rectangulaire a un périmètre de 64 m et sa longueur vaut le triple de sa largeur. Sa largeur est de :",
+      "o": [
+        "8 m",
+        "10,7 m",
+        "16 m",
+        "24 m"
+      ],
+      "r": 0,
+      "x": "Le périmètre d'un rectangle vaut 2 × (L + l) ; avec L = 3l, on obtient 2 × 4l = 8l = 64, soit l = 8 m et L = 24 m. On vérifie : 2 × (24 + 8) = 64 m. La réponse 16 m est le côté d'un carré de même périmètre, ce qui ne respecte pas la condition sur la longueur.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Les solutions de l'équation (x – 2)(x + 5) = 0 sont :",
+      "o": [
+        "–2 ou 5",
+        "2 ou –5",
+        "2 ou 5",
+        "–2 ou –5"
+      ],
+      "r": 1,
+      "x": "Un produit est nul si et seulement si l'un de ses facteurs est nul : on résout donc x – 2 = 0 et x + 5 = 0, ce qui donne 2 et –5. Remarquez que chaque solution porte le signe OPPOSÉ au nombre écrit dans sa parenthèse. La réponse –2 ou 5 inverse justement ces deux signes.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La solution de l'équation 0,2x = 1,4 est :",
+      "o": [
+        "x = 7",
+        "x = 12",
+        "x = 28",
+        "x = 70"
+      ],
+      "r": 0,
+      "x": "On divise les deux membres par 0,2 : 1,4 ÷ 0,2 = 7. Pour éviter de manipuler des virgules, on peut multiplier toute l'équation par 10, ce qui donne 2x = 14. La réponse 70 provient d'une erreur de virgule : diviser par 0,2 revient à multiplier par 5, non par 50.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le couple solution du système 2x + y = 11 et x + 2y = 10 est :",
+      "o": [
+        "(3 ; 4)",
+        "(4 ; 3)",
+        "(5 ; 1)",
+        "(3 ; 5)"
+      ],
+      "r": 1,
+      "x": "En additionnant les deux équations, on obtient 3x + 3y = 21, soit x + y = 7 ; leur différence donne x – y = 1. On en déduit x = 4 et y = 3, que l'on contrôle dans les deux équations de départ. Le couple (5 ; 1) satisfait la première équation mais pas la seconde.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le développement de (x + 2)(x – 7) est :",
+      "o": [
+        "x² – 5x – 14",
+        "x² + 5x – 14",
+        "x² – 9x – 14",
+        "x² – 5x + 14"
+      ],
+      "r": 0,
+      "x": "On développe terme à terme : x² – 7x + 2x – 14, puis on regroupe les termes en x, ce qui donne x² – 5x – 14. Le terme constant est négatif car 2 × (–7) = –14. La réponse x² + 5x – 14 se trompe de signe sur le regroupement, puisque –7x l'emporte sur +2x.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'équation 4x – 8 = 4(x – 2) admet :",
+      "o": [
+        "aucune solution",
+        "une seule solution",
+        "deux solutions",
+        "une infinité de solutions"
+      ],
+      "r": 3,
+      "x": "En développant le membre de droite, on obtient 4x – 8 = 4x – 8 : les deux membres sont identiques, donc l'égalité est vraie pour TOUT nombre x. On parle alors d'identité. Si le second membre avait été 4x – 5, aucune valeur n'aurait convenu, car on aboutirait à l'absurdité –8 = –5.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La factorisation de 25x² – 1 est :",
+      "o": [
+        "(5x – 1)²",
+        "(5x – 1)(5x + 1)",
+        "(25x – 1)(x + 1)",
+        "(x – 5)(x + 5)"
+      ],
+      "r": 1,
+      "x": "On reconnaît une différence de carrés, a² – b², avec a = 5x puisque 25x² = (5x)², et b = 1. La factorisation est donc (5x – 1)(5x + 1). La réponse (x – 5)(x + 5) se développe en x² – 25, expression sans rapport avec celle de l'énoncé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La solution de l'équation √x = 5 est :",
+      "o": [
+        "x = 2,5",
+        "x = 10",
+        "x = 25",
+        "x = 125"
+      ],
+      "r": 2,
+      "x": "Pour supprimer une racine carrée, on élève les deux membres au carré : x = 5² = 25. La vérification est immédiate, puisque √25 vaut bien 5. La réponse 2,5 divise par 2 au lieu d'élever au carré, confusion fréquente entre la racine carrée et la division par deux.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La solution de l'équation (x + 1)/4 = (x – 2)/3 est :",
+      "o": [
+        "x = –11",
+        "x = 5",
+        "x = 9",
+        "x = 11"
+      ],
+      "r": 3,
+      "x": "On applique le produit en croix : 3(x + 1) = 4(x – 2), soit 3x + 3 = 4x – 8, d'où x = 11. On contrôle le résultat : (11 + 1) ÷ 4 = 3 et (11 – 2) ÷ 3 = 3. La réponse –11 commet une erreur de signe lors du regroupement des termes.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Pour a = 3 et b = –2, la valeur de (a + b)² est :",
+      "o": [
+        "1",
+        "5",
+        "13",
+        "25"
+      ],
+      "r": 0,
+      "x": "On calcule d'abord la somme entre parenthèses, a + b = 3 + (–2) = 1, puis on l'élève au carré : 1² = 1. L'ordre des opérations est ici décisif. La réponse 13 correspond à a² + b², soit 9 + 4 : le carré d'une somme n'est jamais la somme des carrés, car il manque le double produit.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La fonction affine f telle que f(0) = 4 et f(2) = 10 est :",
+      "o": [
+        "f(x) = 2x + 4",
+        "f(x) = 3x + 4",
+        "f(x) = 4x + 2",
+        "f(x) = 5x + 4"
+      ],
+      "r": 1,
+      "x": "Une fonction affine s'écrit f(x) = ax + b ; ici f(0) donne directement b = 4, et le coefficient a vaut (10 – 4) ÷ 2 = 3, d'où f(x) = 3x + 4. On vérifie : 3 × 2 + 4 = 10. La réponse 5x + 4 divise 10 par 2 sans retrancher d'abord l'ordonnée à l'origine.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le nombre d'entiers x vérifiant –2 < x ≤ 3 est :",
+      "o": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "r": 2,
+      "x": "L'inégalité de gauche est stricte, donc –2 est exclu ; celle de droite ne l'est pas, donc 3 est inclus. Les entiers solutions sont –1, 0, 1, 2 et 3, soit cinq valeurs. La réponse 6 inclut à tort –2 : il faut toujours regarder si le symbole porte un trait sous l'inégalité.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un commerçant possède 25 billets de 1 000 FCFA et de 2 000 FCFA pour un total de 38 000 FCFA. Le nombre de billets de 2 000 FCFA est :",
+      "o": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "r": 3,
+      "x": "On pose x billets de 1 000 et y billets de 2 000 : x + y = 25 et 1 000x + 2 000y = 38 000, soit x + 2y = 38. La différence des deux équations donne y = 13, puis x = 12, et l'on contrôle : 12 000 + 26 000 = 38 000 FCFA. La réponse 12 est le nombre de billets de 1 000 FCFA.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le produit 2x × 3x² est égal à :",
+      "o": [
+        "6x³",
+        "6x²",
+        "5x³",
+        "5x²"
+      ],
+      "r": 0,
+      "x": "On multiplie les coefficients entre eux, 2 × 3 = 6, et l'on additionne les exposants de x, 1 + 2 = 3, ce qui donne 6x³. Les deux opérations sont bien distinctes : produit pour les nombres, somme pour les exposants. La réponse 5x³ additionne les coefficients, ce qui ne vaut que pour une addition de monômes semblables.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation 2x + 1 ≥ 5x – 8 est :",
+      "o": [
+        "x ≥ 3",
+        "x ≤ 3",
+        "x ≥ –3",
+        "x ≤ –3"
+      ],
+      "r": 1,
+      "x": "On regroupe les termes : 2x – 5x ≥ –8 – 1, soit –3x ≥ –9. En divisant par –3, nombre négatif, le sens de l'inégalité s'inverse et l'on obtient x ≤ 3. La réponse x ≥ 3 oublie ce changement de sens, règle à retenir absolument sur les inéquations.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La valeur de x dans la proportion x/12 = 15/20 est :",
+      "o": [
+        "7",
+        "8",
+        "9",
+        "16"
+      ],
+      "r": 2,
+      "x": "Le produit en croix donne 20x = 12 × 15 = 180, d'où x = 9. On peut aussi simplifier 15/20 en 3/4, puis chercher les trois quarts de 12. La réponse 16 effectue le calcul inversé 20 × 12 ÷ 15 : dans une proportion, ce sont toujours les termes croisés qui se multiplient.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La solution de l'équation (x – 3)² = 0 est :",
+      "o": [
+        "x = –3",
+        "x = 0",
+        "x = 1,5",
+        "x = 3"
+      ],
+      "r": 3,
+      "x": "Un carré est nul si et seulement si le nombre élevé au carré est lui-même nul : on résout donc x – 3 = 0, ce qui donne x = 3, appelée solution double. La réponse –3 inverse le signe : la solution porte toujours le signe opposé au nombre écrit dans la parenthèse.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Deux nombres ont pour somme 50 et pour différence 14. Le plus grand des deux est :",
+      "o": [
+        "32",
+        "34",
+        "36",
+        "64"
+      ],
+      "r": 0,
+      "x": "En additionnant les deux relations x + y = 50 et x – y = 14, on élimine y : 2x = 64, donc x = 32 et y = 18. On vérifie aussitôt : 32 + 18 = 50 et 32 – 18 = 14. La réponse 64 oublie la division par 2, dernière étape indispensable de cette méthode.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un taxi facture 500 FCFA de prise en charge et 150 FCFA par kilomètre. Une course de 4 700 FCFA correspond à une distance de :",
+      "o": [
+        "22 km",
+        "25 km",
+        "26 km",
+        "28 km"
+      ],
+      "r": 3,
+      "x": "Le prix comprend une part fixe et une part proportionnelle : 500 + 150x = 4 700, donc 150x = 4 200 et x = 28 km. Il faut penser à retirer la prise en charge AVANT de diviser. En l'oubliant, on calculerait 4 700 ÷ 150, soit plus de 31 km, ce qui surestime la distance.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Les solutions de l'équation x² – 3x = 0 sont :",
+      "o": [
+        "3 seulement",
+        "0 et 3",
+        "–3 et 3",
+        "0 et –3"
+      ],
+      "r": 1,
+      "x": "On factorise par x : x(x – 3) = 0, donc x = 0 ou x = 3. Il ne faut jamais diviser les deux membres par x, car on perdrait la solution 0 : l'inconnue peut précisément valoir zéro. C'est l'un des réflexes les plus utiles sur les équations sans terme constant.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'aire d'un triangle de base 14 cm et de hauteur 9 cm est de :",
+      "o": [
+        "23 cm²",
+        "63 cm²",
+        "126 cm²",
+        "252 cm²"
+      ],
+      "r": 1,
+      "x": "L'aire d'un triangle vaut base × hauteur ÷ 2, soit 14 × 9 ÷ 2 = 63 cm². La division par 2 s'explique par le fait qu'un triangle est la moitié d'un rectangle de mêmes dimensions. La réponse 126 cm² oublie cette division et donne l'aire du rectangle entier.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'aire d'un disque de rayon 7 cm, en prenant π = 3,14, est de :",
+      "o": [
+        "21,98 cm²",
+        "43,96 cm²",
+        "153,86 cm²",
+        "615,44 cm²"
+      ],
+      "r": 2,
+      "x": "L'aire d'un disque vaut π × r², soit 3,14 × 7² = 3,14 × 49 = 153,86 cm². Il faut élever le rayon au carré AVANT de multiplier par π. La réponse 43,96 est le périmètre du cercle, obtenu par 2 × π × r : ne confondez pas le tour de la figure avec sa surface.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le périmètre d'une roue de 60 cm de diamètre, en prenant π = 3,14, est de :",
+      "o": [
+        "188,4 cm",
+        "282,6 cm",
+        "376,8 cm",
+        "2 826 cm"
+      ],
+      "r": 0,
+      "x": "Le périmètre d'un cercle vaut π × diamètre, soit 3,14 × 60 = 188,4 cm. On peut aussi appliquer 2 × π × r avec r = 30 cm, ce qui donne le même résultat. La réponse 376,8 cm calcule 2 × π × 60 : elle prend le diamètre pour le rayon et double la longueur réelle.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'aire d'un trapèze de bases 12 m et 8 m et de hauteur 5 m est de :",
+      "o": [
+        "25 m²",
+        "40 m²",
+        "45 m²",
+        "50 m²"
+      ],
+      "r": 3,
+      "x": "L'aire d'un trapèze vaut (grande base + petite base) × hauteur ÷ 2, soit (12 + 8) × 5 ÷ 2 = 50 m². On additionne donc les deux bases avant de multiplier par la hauteur. La réponse 40 m² n'utilise que la petite base multipliée par la hauteur, en oubliant la moyenne des deux bases.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le volume d'un cube de 4 cm d'arête est de :",
+      "o": [
+        "16 cm³",
+        "48 cm³",
+        "64 cm³",
+        "96 cm³"
+      ],
+      "r": 2,
+      "x": "Le volume d'un cube vaut son arête élevée au cube : 4 × 4 × 4 = 64 cm³. La réponse 96 est l'aire TOTALE des six faces, car chaque face mesure 16 cm² et 6 × 16 = 96 cm². Surface et volume ne s'expriment pas dans la même unité : cm² pour l'une, cm³ pour l'autre.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le volume d'un cylindre de 2 m de rayon et de 5 m de hauteur, en prenant π = 3,14, est de :",
+      "o": [
+        "31,4 m³",
+        "62,8 m³",
+        "125,6 m³",
+        "314 m³"
+      ],
+      "r": 1,
+      "x": "Le volume d'un cylindre vaut π × r² × h, soit 3,14 × 2² × 5 = 62,8 m³, c'est-à-dire 62 800 litres. On calcule d'abord l'aire du disque de base, puis on multiplie par la hauteur. La réponse 31,4 m³ oublie d'élever le rayon au carré, étape sans laquelle le volume est deux fois trop petit.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une citerne en forme de pavé droit mesure 3 m sur 2 m sur 1,5 m. Sa capacité est de :",
+      "o": [
+        "9 000 L",
+        "12 000 L",
+        "13 500 L",
+        "90 000 L"
+      ],
+      "r": 0,
+      "x": "Le volume d'un pavé droit vaut longueur × largeur × hauteur : 3 × 2 × 1,5 = 9 m³. Comme 1 m³ = 1 000 litres, la citerne contient 9 000 litres. La réponse 90 000 L multiplie par 10 000 au lieu de 1 000 : seule la conversion du mètre cube vers le litre intervient ici.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le volume d'une pyramide à base carrée de 6 m de côté et de 10 m de hauteur est de :",
+      "o": [
+        "60 m³",
+        "120 m³",
+        "180 m³",
+        "360 m³"
+      ],
+      "r": 1,
+      "x": "Le volume d'une pyramide vaut aire de la base × hauteur ÷ 3, soit 36 × 10 ÷ 3 = 120 m³. La division par 3 s'applique à toutes les pyramides et à tous les cônes, qui occupent le tiers du prisme ou du cylindre de mêmes dimensions. La réponse 360 m³ oublie cette division.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le volume d'une boule de 3 cm de rayon, en prenant π = 3,14, est de :",
+      "o": [
+        "28,26 cm³",
+        "37,68 cm³",
+        "113,04 cm³",
+        "339,12 cm³"
+      ],
+      "r": 2,
+      "x": "Le volume d'une boule vaut 4/3 × π × r³, soit 4/3 × 3,14 × 27 = 113,04 cm³. Il faut élever le rayon au CUBE et non au carré, puisqu'il s'agit d'un volume. La réponse 339,12 cm³ oublie de diviser par 3, ce qui triple le résultat obtenu.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans un triangle rectangle, l'hypoténuse mesure 13 cm et un côté de l'angle droit 5 cm. L'autre côté mesure :",
+      "o": [
+        "12 cm",
+        "13,9 cm",
+        "15 cm",
+        "18 cm"
+      ],
+      "r": 0,
+      "x": "Le théorème de Pythagore s'écrit hypoténuse² = côté² + côté² ; comme on cherche ici un côté de l'angle droit, il faut SOUSTRAIRE : 169 – 25 = 144, puis √144 = 12 cm. Le triplet 5-12-13 est à mémoriser, comme 3-4-5 et 6-8-10. La réponse 13,9 cm additionne les carrés, erreur commise quand on confond le côté cherché avec l'hypoténuse.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un triangle dont les côtés mesurent 6 cm, 8 cm et 10 cm est :",
+      "o": [
+        "équilatéral",
+        "isocèle",
+        "rectangle",
+        "obtusangle"
+      ],
+      "r": 2,
+      "x": "On applique la réciproque du théorème de Pythagore : 6² + 8² = 36 + 64 = 100, qui est exactement 10². L'égalité étant vérifiée, le triangle est rectangle, l'angle droit se trouvant face au plus grand côté. Il n'est pas isocèle, puisque ses trois côtés ont des longueurs différentes.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La diagonale d'un carré de 5 cm de côté mesure :",
+      "o": [
+        "5√2 cm",
+        "10 cm",
+        "25 cm",
+        "2√5 cm"
+      ],
+      "r": 0,
+      "x": "La diagonale partage le carré en deux triangles rectangles isocèles : Pythagore donne √(25 + 25) = √50 = 5√2 cm, soit environ 7,07 cm. La règle à retenir est que la diagonale d'un carré vaut toujours son côté multiplié par √2. La réponse 10 cm additionne simplement deux côtés.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La diagonale d'un rectangle de 24 cm sur 7 cm mesure :",
+      "o": [
+        "17 cm",
+        "25 cm",
+        "31 cm",
+        "625 cm"
+      ],
+      "r": 1,
+      "x": "La diagonale est l'hypoténuse d'un triangle rectangle de côtés 24 cm et 7 cm : √(576 + 49) = √625 = 25 cm. Le triplet 7-24-25 revient souvent aux concours, au même titre que 3-4-5. La réponse 625 cm oublie d'extraire la racine carrée, dernière étape du calcul.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans un triangle ABC, M est sur [AB] et N sur [AC], avec (MN) parallèle à (BC), AM = 4 cm, AB = 10 cm et BC = 15 cm. La longueur MN est de :",
+      "o": [
+        "6 cm",
+        "7,5 cm",
+        "9 cm",
+        "37,5 cm"
+      ],
+      "r": 0,
+      "x": "Comme (MN) est parallèle à (BC), le théorème de Thalès donne AM/AB = MN/BC, soit 4/10 = MN/15, d'où MN = 15 × 4 ÷ 10 = 6 cm. La réponse 37,5 cm inverse le rapport : le petit triangle étant inclus dans le grand, MN est forcément plus court que BC.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Au même moment, un bâton de 1,5 m projette une ombre de 2 m et un arbre une ombre de 12 m. La hauteur de l'arbre est de :",
+      "o": [
+        "9 m",
+        "12 m",
+        "13,5 m",
+        "16 m"
+      ],
+      "r": 0,
+      "x": "Au même instant, les ombres sont proportionnelles aux hauteurs : h/12 = 1,5/2, donc h = 12 × 1,5 ÷ 2 = 9 m. On peut raisonner autrement : l'ombre valant ici les 4/3 de la hauteur, il suffit de diviser 12 par 4/3. La réponse 16 m inverse le rapport entre le bâton et son ombre.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un triangle possède deux angles de 48° et 67°. Son troisième angle mesure :",
+      "o": [
+        "55°",
+        "65°",
+        "75°",
+        "115°"
+      ],
+      "r": 1,
+      "x": "La somme des trois angles d'un triangle vaut toujours 180° : 48 + 67 = 115, donc le troisième angle mesure 180 – 115 = 65°. Cette propriété est valable pour n'importe quel triangle, quelle que soit sa forme. La réponse 115° donne seulement la somme des deux angles connus.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La somme des angles intérieurs d'un hexagone est de :",
+      "o": [
+        "360°",
+        "540°",
+        "720°",
+        "1 080°"
+      ],
+      "r": 2,
+      "x": "La somme des angles d'un polygone à n côtés vaut (n – 2) × 180°, car on peut le découper en n – 2 triangles : ici 4 × 180 = 720°. La réponse 540° correspond au pentagone, qui n'a que cinq côtés. Retenez la progression : 180° pour le triangle, 360° pour le quadrilatère, 540° puis 720°.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Chaque angle intérieur d'un octogone régulier mesure :",
+      "o": [
+        "108°",
+        "120°",
+        "128,6°",
+        "135°"
+      ],
+      "r": 3,
+      "x": "Dans un polygone régulier, tous les angles sont égaux : on divise donc la somme par le nombre de côtés, soit (8 – 2) × 180 ÷ 8 = 1 080 ÷ 8 = 135°. Les valeurs 108° et 120° correspondent au pentagone et à l'hexagone réguliers, deux résultats également utiles à connaître.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le complément d'un angle de 37° mesure :",
+      "o": [
+        "43°",
+        "53°",
+        "63°",
+        "143°"
+      ],
+      "r": 1,
+      "x": "Deux angles complémentaires ont pour somme 90°, donc le complément de 37° mesure 90 – 37 = 53°. Ne le confondez pas avec le SUPPLÉMENT, dont la somme vaut 180° et qui donnerait ici 143°. Un repère simple : complément comme le coin droit, supplément comme la ligne droite.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un angle inscrit intercepte le même arc qu'un angle au centre de 110°. L'angle inscrit mesure :",
+      "o": [
+        "55°",
+        "70°",
+        "110°",
+        "220°"
+      ],
+      "r": 0,
+      "x": "Un angle inscrit mesure toujours la MOITIÉ de l'angle au centre qui intercepte le même arc : 110 ÷ 2 = 55°. Le sommet de l'angle inscrit se trouve sur le cercle, celui de l'angle au centre en son centre. La réponse 220° double au lieu de diviser, ce qui dépasserait un demi-tour.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans un triangle rectangle, le côté adjacent à un angle aigu mesure 4 cm et l'hypoténuse 5 cm. Le cosinus de cet angle vaut :",
+      "o": [
+        "0,6",
+        "0,75",
+        "0,8",
+        "1,25"
+      ],
+      "r": 2,
+      "x": "Dans un triangle rectangle, le cosinus d'un angle aigu est le rapport du côté adjacent à l'hypoténuse : 4 ÷ 5 = 0,8. Le troisième côté mesurant 3 cm, le sinus du même angle vaut 0,6, ce qui explique le distracteur A. Un cosinus est toujours inférieur à 1, car l'hypoténuse est le plus grand côté.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Sur un plan à l'échelle 1/500, une pièce mesure 6 cm de long. Sa longueur réelle est de :",
+      "o": [
+        "3 m",
+        "12 m",
+        "30 m",
+        "300 m"
+      ],
+      "r": 2,
+      "x": "On multiplie la mesure du plan par le dénominateur de l'échelle : 6 × 500 = 3 000 cm, que l'on convertit en divisant par 100, soit 30 m. Une échelle 1/500 signifie qu'un centimètre sur le plan représente 500 cm en réalité. La réponse 300 m oublie la conversion des centimètres en mètres.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Sur une carte, 5 cm représentent 25 km. L'échelle de cette carte est :",
+      "o": [
+        "1/5 000",
+        "1/50 000",
+        "1/500 000",
+        "1/5 000 000"
+      ],
+      "r": 2,
+      "x": "Il faut d'abord exprimer les deux distances dans la même unité : 25 km = 2 500 000 cm. L'échelle est le rapport 5 ÷ 2 500 000, soit 1/500 000. La réponse 1/50 000 correspondrait à 2,5 km pour 5 cm : une erreur d'un seul zéro change complètement la carte.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une surface de 1 250 cm² est égale à :",
+      "o": [
+        "0,012 5 m²",
+        "0,125 m²",
+        "1,25 m²",
+        "12,5 m²"
+      ],
+      "r": 1,
+      "x": "Un mètre carré contient 10 000 cm², puisque 100 × 100 = 10 000 : on divise donc 1 250 par 10 000, ce qui donne 0,125 m². La réponse 12,5 m² divise seulement par 100, règle valable pour les longueurs et non pour les surfaces. Pour les aires, le coefficient est toujours le carré de celui des longueurs.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'aire d'un losange dont les diagonales mesurent 10 m et 16 m est de :",
+      "o": [
+        "80 m²",
+        "96 m²",
+        "120 m²",
+        "160 m²"
+      ],
+      "r": 0,
+      "x": "L'aire d'un losange vaut le produit de ses diagonales divisé par 2 : 10 × 16 ÷ 2 = 80 m². Cette formule est propre aux figures dont les diagonales sont perpendiculaires, comme le losange et le carré. La réponse 160 m² oublie la division par 2 et donne l'aire du rectangle formé par les diagonales.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le périmètre d'un demi-disque de 10 cm de diamètre, en prenant π = 3,14, est de :",
+      "o": [
+        "15,7 cm",
+        "25,7 cm",
+        "31,4 cm",
+        "41,4 cm"
+      ],
+      "r": 1,
+      "x": "Le périmètre d'un demi-disque comprend l'arc ET le diamètre qui le ferme : l'arc mesure 3,14 × 10 ÷ 2 = 15,7 cm, auxquels on ajoute 10 cm, soit 25,7 cm. La réponse 15,7 cm oublie le segment du diamètre, alors qu'un périmètre fait toujours le tour complet de la figure.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un terrain carré a une superficie de 2 500 m². La longueur de clôture nécessaire pour l'entourer est de :",
+      "o": [
+        "50 m",
+        "100 m",
+        "150 m",
+        "200 m"
+      ],
+      "r": 3,
+      "x": "Le côté du carré vaut √2 500 = 50 m, puisque 50 × 50 = 2 500. Le périmètre, donc la clôture, mesure 4 × 50 = 200 m. La réponse 50 m donne seulement la longueur d'un côté, alors que la question porte sur le tour complet du terrain, qui en compte quatre.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Lorsque le côté d'un carré est doublé, son aire est multipliée par :",
+      "o": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "r": 1,
+      "x": "Si le côté passe de c à 2c, l'aire devient (2c)² = 4c², donc elle est multipliée par 4 et non par 2. On le vérifie sur un cas simple : un carré de 3 cm a une aire de 9 cm², celui de 6 cm une aire de 36 cm². Le facteur 8 concerne le volume d'un cube dont on double l'arête.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'aire latérale d'un cylindre de 3 cm de rayon et de 10 cm de hauteur, en prenant π = 3,14, est de :",
+      "o": [
+        "94,2 cm²",
+        "141,3 cm²",
+        "150,72 cm²",
+        "188,4 cm²"
+      ],
+      "r": 3,
+      "x": "L'aire latérale d'un cylindre vaut 2 × π × r × h, soit 2 × 3,14 × 3 × 10 = 188,4 cm². Elle correspond au rectangle obtenu en déroulant le cylindre : sa longueur est le périmètre du cercle, sa largeur la hauteur. La réponse 94,2 cm² oublie le facteur 2 du périmètre.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le volume d'un cône de 3 cm de rayon et de 4 cm de hauteur, en prenant π = 3,14, est de :",
+      "o": [
+        "37,68 cm³",
+        "50,24 cm³",
+        "113,04 cm³",
+        "150,72 cm³"
+      ],
+      "r": 0,
+      "x": "Le volume d'un cône vaut π × r² × h ÷ 3, soit 3,14 × 9 × 4 ÷ 3 = 37,68 cm³. Comme la pyramide, le cône occupe exactement le tiers du cylindre de mêmes dimensions. La réponse 113,04 cm³ oublie cette division par 3 et correspond donc au cylindre entier.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La génératrice d'un cône de 3 cm de rayon et de 4 cm de hauteur mesure :",
+      "o": [
+        "5 cm",
+        "7 cm",
+        "12 cm",
+        "25 cm"
+      ],
+      "r": 0,
+      "x": "La génératrice est l'hypoténuse du triangle rectangle formé par le rayon et la hauteur : √(3² + 4²) = √25 = 5 cm. On retrouve ici le triplet 3-4-5, à connaître par cœur. La réponse 7 cm additionne simplement le rayon et la hauteur, ce qui est toujours faux pour une hypoténuse.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans un repère orthonormé, la distance entre A(1 ; 2) et B(4 ; 6) est :",
+      "o": [
+        "3",
+        "4",
+        "5",
+        "7"
+      ],
+      "r": 2,
+      "x": "La distance s'obtient par Pythagore appliqué aux écarts de coordonnées : √((4 – 1)² + (6 – 2)²) = √(9 + 16) = 5. On construit en réalité un triangle rectangle de côtés 3 et 4. La réponse 7 additionne les deux écarts sans passer par les carrés, ce qui surestime toujours la distance.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le milieu du segment [AB], avec A(2 ; –4) et B(6 ; 8), a pour coordonnées :",
+      "o": [
+        "(2 ; 6)",
+        "(4 ; 2)",
+        "(4 ; 6)",
+        "(8 ; 4)"
+      ],
+      "r": 1,
+      "x": "Les coordonnées du milieu sont les MOYENNES de celles des deux extrémités : (2 + 6) ÷ 2 = 4 et (–4 + 8) ÷ 2 = 2, d'où le point (4 ; 2). La réponse (8 ; 4) additionne les coordonnées sans diviser par 2, étape qui donne précisément le point situé à mi-distance.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Avec A(3 ; 1) et B(7 ; –2), le vecteur AB a pour coordonnées :",
+      "o": [
+        "(–4 ; 3)",
+        "(4 ; –1)",
+        "(10 ; –1)",
+        "(4 ; –3)"
+      ],
+      "r": 3,
+      "x": "Les coordonnées d'un vecteur s'obtiennent en retranchant celles du point de départ à celles du point d'arrivée : (7 – 3 ; –2 – 1) = (4 ; –3). L'ordre des points est donc déterminant. La réponse (–4 ; 3) correspond au vecteur BA, qui est l'opposé de celui demandé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'aire d'un parallélogramme de base 12 cm et de hauteur 7 cm est de :",
+      "o": [
+        "38 cm²",
+        "42 cm²",
+        "84 cm²",
+        "168 cm²"
+      ],
+      "r": 2,
+      "x": "L'aire d'un parallélogramme vaut base × hauteur, sans aucune division : 12 × 7 = 84 cm². On le comprend en découpant un triangle d'un côté pour le replacer de l'autre, ce qui reconstitue un rectangle. La réponse 42 cm² divise par 2, règle réservée au triangle.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le nombre de diagonales d'un hexagone est :",
+      "o": [
+        "6",
+        "9",
+        "12",
+        "15"
+      ],
+      "r": 1,
+      "x": "On applique la formule n × (n – 3) ÷ 2 : chaque sommet se relie à n – 3 autres sommets, et chaque diagonale étant comptée deux fois, on divise par 2, soit 6 × 3 ÷ 2 = 9. La réponse 15 compte aussi les six côtés, qui ne sont pas des diagonales.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un carré a la même aire qu'un rectangle de 16 m sur 9 m. Le côté du carré mesure :",
+      "o": [
+        "12 m",
+        "12,5 m",
+        "13 m",
+        "25 m"
+      ],
+      "r": 0,
+      "x": "L'aire du rectangle vaut 16 × 9 = 144 m², donc le côté du carré est √144 = 12 m. On cherche bien une racine carrée, puisque l'aire d'un carré est son côté multiplié par lui-même. La réponse 12,5 m est la moyenne de 16 et 9, qui n'a aucune raison de redonner la même aire.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un réservoir cylindrique de 0,5 m de rayon contient 628 litres. En prenant π = 3,14, la hauteur de l'eau est de :",
+      "o": [
+        "0,4 m",
+        "0,8 m",
+        "1,25 m",
+        "8 m"
+      ],
+      "r": 1,
+      "x": "L'aire de la base vaut 3,14 × 0,5² = 0,785 m² et le volume d'eau 628 litres, soit 0,628 m³. La hauteur s'obtient en divisant le volume par l'aire de la base : 0,628 ÷ 0,785 = 0,8 m. La réponse 8 m oublie de convertir les litres en mètres cubes, ce qui multiplie le résultat par dix.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Deux figures semblables ont un rapport de similitude de 3. Le rapport de leurs aires est :",
+      "o": [
+        "3",
+        "6",
+        "9",
         "27"
       ],
       "r": 2,
-      "x": "Ce sont les carrés successifs : 1², 2², 3², 4², 5² = 25."
+      "x": "Quand les longueurs sont multipliées par 3, les aires le sont par 3² = 9, car une aire est le produit de deux longueurs. On le vérifie sur un carré de 2 cm agrandi en 6 cm : son aire passe de 4 à 36 cm². La réponse 27 est le rapport des VOLUMES, qui vaut 3³.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
     },
     {
-      "q": "Volume d'un cube de 4 cm de côté ?",
+      "q": "Un cube de volume 5 cm³ subit un agrandissement de rapport 2. Son nouveau volume est de :",
       "o": [
-        "12 cm³",
-        "16 cm³",
-        "48 cm³",
-        "64 cm³"
+        "10 cm³",
+        "20 cm³",
+        "25 cm³",
+        "40 cm³"
       ],
       "r": 3,
-      "x": "Volume cube = côté³ = 4 × 4 × 4 = 64 cm³."
+      "x": "Pour un agrandissement de rapport 2, les volumes sont multipliés par 2³ = 8, car un volume est le produit de trois longueurs : 5 × 8 = 40 cm³. La réponse 20 cm³ applique le rapport des aires, soit 2² = 4. Retenez la progression : longueurs ×k, aires ×k², volumes ×k³.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
     },
     {
-      "q": "Trois ouvriers font un travail en 12 jours. En combien de jours pour 4 ouvriers ?",
+      "q": "La longueur d'un arc de 90° sur un cercle de 10 cm de rayon, en prenant π = 3,14, est de :",
       "o": [
-        "6 jours",
-        "8 jours",
-        "9 jours",
-        "10 jours"
+        "7,85 cm",
+        "15,7 cm",
+        "31,4 cm",
+        "78,5 cm"
+      ],
+      "r": 1,
+      "x": "Un arc de 90° représente le quart du cercle, puisque 90 ÷ 360 = 1/4 : la circonférence valant 2 × 3,14 × 10 = 62,8 cm, l'arc mesure 15,7 cm. La réponse 78,5 est l'aire du quart de disque, exprimée en cm² : une longueur et une aire ne se confondent jamais.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un quadrilatère possède trois angles de 80°, 95° et 110°. Son quatrième angle mesure :",
+      "o": [
+        "55°",
+        "65°",
+        "70°",
+        "75°"
+      ],
+      "r": 3,
+      "x": "La somme des angles d'un quadrilatère vaut 360°, car on peut le découper en deux triangles de 180° chacun : 80 + 95 + 110 = 285, donc le quatrième angle mesure 75°. Le total de 180° ne concerne que le triangle, et l'appliquer ici donnerait un angle négatif, donc impossible.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'aire totale d'un pavé droit de 5 cm sur 4 cm sur 3 cm est de :",
+      "o": [
+        "47 cm²",
+        "60 cm²",
+        "72 cm²",
+        "94 cm²"
+      ],
+      "r": 3,
+      "x": "L'aire totale vaut 2 × (L × l + L × h + l × h), car les six faces forment trois paires identiques : 2 × (20 + 15 + 12) = 94 cm². La réponse 47 cm² oublie le facteur 2 et ne compte qu'une face sur deux. Le nombre 60 est le volume de ce pavé, exprimé en cm³.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le rayon d'un cercle de 31,4 cm de périmètre, en prenant π = 3,14, est de :",
+      "o": [
+        "2,5 cm",
+        "3,14 cm",
+        "4 cm",
+        "5 cm"
+      ],
+      "r": 3,
+      "x": "Le périmètre valant 2 × π × r, on divise par 2π : 31,4 ÷ 6,28 = 5 cm. Si l'on divise seulement par π, on obtient 10 cm, qui est le DIAMÈTRE du cercle et non son rayon. Une lecture attentive de la question évite cette confusion très fréquente.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le nombre d'axes de symétrie d'un carré est :",
+      "o": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "r": 3,
+      "x": "Le carré possède quatre axes de symétrie : les deux médiatrices de ses côtés et ses deux diagonales. Le rectangle non carré n'en compte que deux, car ses diagonales ne sont pas des axes de symétrie. C'est précisément ce qui distingue ces deux quadrilatères.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une parcelle de 3 ha 25 a correspond à :",
+      "o": [
+        "3 250 m²",
+        "3 525 m²",
+        "30 250 m²",
+        "32 500 m²"
+      ],
+      "r": 3,
+      "x": "Un hectare vaut 10 000 m² et un are 100 m² : 3 ha donnent 30 000 m², 25 a donnent 2 500 m², soit 32 500 m² au total. La réponse 3 250 m² confond l'are et l'hectare. Retenez la hiérarchie : 1 ha = 100 a = 10 000 m².",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un article vaut 50 000 FCFA hors taxe. Avec une taxe sur la valeur ajoutée (TVA) de 18 %, son prix toutes taxes comprises est de :",
+      "o": [
+        "50 900 FCFA",
+        "58 000 FCFA",
+        "59 000 FCFA",
+        "68 000 FCFA"
       ],
       "r": 2,
-      "x": "Plus d'ouvriers = moins de jours (proportion inverse). 3 × 12 = 4 × x → x = 36/4 = 9 jours."
+      "x": "La TVA s'ajoute au prix hors taxe : 50 000 × 18 ÷ 100 = 9 000 FCFA, d'où 59 000 FCFA toutes taxes comprises. On obtient directement le résultat en multipliant par 1,18. La réponse 50 900 FCFA applique un taux de 1,8 % : attention à la place de la virgule dans le taux.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un article coûte 23 600 FCFA toutes taxes comprises, avec une TVA de 18 %. Son prix hors taxe est de :",
+      "o": [
+        "19 352 FCFA",
+        "20 000 FCFA",
+        "21 600 FCFA",
+        "27 848 FCFA"
+      ],
+      "r": 1,
+      "x": "Pour remonter du prix toutes taxes comprises au prix hors taxe, on DIVISE par 1,18 : 23 600 ÷ 1,18 = 20 000 FCFA, la TVA s'élevant donc à 3 600 FCFA. La réponse 19 352 FCFA retire 18 % du prix TTC, ce qui ne ramène jamais au bon montant, car les 18 % se calculent sur le hors taxe.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un capital de 800 000 FCFA placé à intérêt simple au taux annuel de 7,5 % pendant 2 ans rapporte :",
+      "o": [
+        "60 000 FCFA",
+        "112 000 FCFA",
+        "120 000 FCFA",
+        "150 000 FCFA"
+      ],
+      "r": 2,
+      "x": "La formule de l'intérêt simple est I = C × t × n ÷ 100 quand la durée est exprimée en années : 800 000 × 7,5 × 2 ÷ 100 = 120 000 FCFA. On vérifie facilement : une année rapporte 60 000 FCFA, donc deux ans le double. La réponse 60 000 FCFA ne compte qu'une seule année de placement.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un capital de 300 000 FCFA est placé à intérêt simple au taux annuel de 5 % pendant 3 ans. Sa valeur acquise est de :",
+      "o": [
+        "45 000 FCFA",
+        "345 000 FCFA",
+        "347 288 FCFA",
+        "390 000 FCFA"
+      ],
+      "r": 1,
+      "x": "La valeur acquise est le capital AUGMENTÉ de ses intérêts : ceux-ci valent 300 000 × 5 × 3 ÷ 100 = 45 000 FCFA, d'où 345 000 FCFA. La réponse 45 000 FCFA donne seulement les intérêts, sans y ajouter le capital. Le montant 347 288 FCFA correspondrait à un placement à intérêts composés.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un capital de 1 000 000 FCFA est placé à intérêts composés au taux annuel de 10 % pendant 2 ans. Sa valeur acquise est de :",
+      "o": [
+        "1 200 000 FCFA",
+        "1 210 000 FCFA",
+        "1 220 000 FCFA",
+        "1 331 000 FCFA"
+      ],
+      "r": 1,
+      "x": "À intérêts composés, les intérêts d'une année s'ajoutent au capital et produisent eux-mêmes des intérêts : on multiplie donc deux fois par 1,1, soit 1 000 000 × 1,21 = 1 210 000 FCFA. Les intérêts simples n'auraient donné que 1 200 000 FCFA : la différence de 10 000 FCFA est l'intérêt des intérêts.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un capital de 400 000 FCFA placé à intérêt simple au taux annuel de 6 % rapporte 36 000 FCFA au bout de :",
+      "o": [
+        "9 mois",
+        "12 mois",
+        "15 mois",
+        "18 mois"
+      ],
+      "r": 3,
+      "x": "Le capital rapporte 400 000 × 6 ÷ 100 = 24 000 FCFA par an ; pour obtenir 36 000 FCFA, il faut 36 000 ÷ 24 000 = 1,5 an, soit 18 mois. La formule mensuelle 400 000 × 6 × 18 ÷ 1 200 confirme ce résultat. Au bout de 12 mois, les intérêts n'atteindraient que 24 000 FCFA.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un capital de 250 000 FCFA rapporte 20 000 FCFA d'intérêts en un an. Le taux annuel de placement est de :",
+      "o": [
+        "0,8 %",
+        "8 %",
+        "12,5 %",
+        "80 %"
+      ],
+      "r": 1,
+      "x": "Le taux est le rapport des intérêts au capital placé : 20 000 ÷ 250 000 = 0,08, soit 8 %. On le confirme en calculant 250 000 × 8 ÷ 100 = 20 000 FCFA. La réponse 12,5 % inverse le rapport en divisant le capital par les intérêts; elle ne correspond donc pas au taux demandé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un commerçant achète un article à 7 500 FCFA et veut réaliser un bénéfice de 20 % du prix d'achat. Son prix de vente est de :",
+      "o": [
+        "7 520 FCFA",
+        "8 500 FCFA",
+        "9 000 FCFA",
+        "9 375 FCFA"
+      ],
+      "r": 2,
+      "x": "Le bénéfice voulu vaut 7 500 × 20 ÷ 100 = 1 500 FCFA, d'où un prix de vente de 9 000 FCFA, que l'on obtient directement par 7 500 × 1,20. La réponse 9 375 FCFA correspondrait à une marge de 20 % calculée sur le prix de VENTE, ce que l'énoncé ne demande pas.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un article de 20 000 FCFA bénéficie d'une remise de 10 %, puis d'une seconde remise de 5 %. Le prix final est de :",
+      "o": [
+        "17 000 FCFA",
+        "17 100 FCFA",
+        "17 500 FCFA",
+        "18 050 FCFA"
+      ],
+      "r": 1,
+      "x": "Deux remises successives ne s'additionnent pas : on calcule 20 000 × 0,90 = 18 000 FCFA, puis 18 000 × 0,95 = 17 100 FCFA. La seconde remise porte sur un prix déjà réduit, donc elle rapporte moins. La réponse 17 000 FCFA additionne les deux taux en une remise unique de 15 %, ce qui est toujours faux.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un salaire brut de 180 000 FCFA subit une retenue de 5,5 %. Le salaire après retenue est de :",
+      "o": [
+        "9 900 FCFA",
+        "162 000 FCFA",
+        "170 100 FCFA",
+        "174 500 FCFA"
+      ],
+      "r": 2,
+      "x": "La retenue vaut 180 000 × 5,5 ÷ 100 = 9 900 FCFA, d'où un salaire net de 170 100 FCFA. On peut aussi multiplier directement le brut par 0,945. La réponse 174 500 FCFA retranche 5 500 FCFA au lieu de 5,5 % : le taux porte sur le salaire entier, non sur un millier de francs.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La moyenne de la série 8 ; 13 ; 15 ; 9 ; 10 est :",
+      "o": [
+        "10",
+        "11",
+        "12",
+        "15"
+      ],
+      "r": 1,
+      "x": "La moyenne est la somme des valeurs divisée par leur nombre : (8 + 13 + 15 + 9 + 10) ÷ 5 = 55 ÷ 5 = 11. La réponse 10 est la médiane de cette série, c'est-à-dire la valeur du milieu après rangement par ordre croissant. Moyenne et médiane sont deux indicateurs bien distincts.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La médiane de la série 3 ; 7 ; 9 ; 12 ; 15 ; 20 est :",
+      "o": [
+        "9",
+        "9,5",
+        "10,5",
+        "12"
+      ],
+      "r": 2,
+      "x": "La série comptant six valeurs, soit un effectif pair, la médiane est la moyenne des deux valeurs centrales : (9 + 12) ÷ 2 = 10,5. Avec un effectif impair, elle aurait été directement la valeur du milieu. La moyenne de cette série vaut 11, à ne pas confondre avec sa médiane.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le mode de la série 4 ; 7 ; 7 ; 9 ; 4 ; 7 ; 10 est :",
+      "o": [
+        "4",
+        "7",
+        "9",
+        "10"
+      ],
+      "r": 1,
+      "x": "Le mode est la valeur qui apparaît le plus souvent dans la série : 7 revient trois fois, contre deux fois pour 4. Une série peut d'ailleurs posséder plusieurs modes si deux valeurs sont à égalité. Ne confondez pas le mode, qui est une valeur, et l'effectif, qui compte les apparitions.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'étendue de la série 12 ; 5 ; 18 ; 9 ; 21 est :",
+      "o": [
+        "9",
+        "13",
+        "16",
+        "21"
+      ],
+      "r": 2,
+      "x": "L'étendue est l'écart entre la plus grande et la plus petite valeur : 21 – 5 = 16. Elle mesure la dispersion de la série, c'est-à-dire son degré d'étalement. La réponse 21 donne seulement le maximum : une étendue est toujours une différence, jamais une valeur isolée.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une classe de 40 élèves compte 16 filles. Le pourcentage de garçons est de :",
+      "o": [
+        "16 %",
+        "24 %",
+        "40 %",
+        "60 %"
+      ],
+      "r": 3,
+      "x": "La classe compte 40 – 16 = 24 garçons, soit 24 ÷ 40 = 0,60 ou 60 %. On peut aussi calculer la part des filles, 16 ÷ 40 = 40 %, puis la retrancher de 100 %. La réponse 40 % correspond justement à la proportion des filles, et non à celle que demande la question.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans un diagramme circulaire, une catégorie qui représente 25 % de l'effectif occupe un angle de :",
+      "o": [
+        "25°",
+        "45°",
+        "90°",
+        "100°"
+      ],
+      "r": 2,
+      "x": "Un diagramme circulaire répartit 360° entre les catégories : une part de 25 % occupe donc 360 × 25 ÷ 100 = 90°. Le repère est simple à retenir : 25 % correspondent au quart du disque, soit un angle droit. La réponse 25° confond le pourcentage avec une mesure d'angle.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Sur 80 candidats, 12 sont admis. La fréquence des admis est de :",
+      "o": [
+        "12 %",
+        "15 %",
+        "18 %",
+        "20 %"
+      ],
+      "r": 1,
+      "x": "Une fréquence est le rapport de l'effectif d'une catégorie à l'effectif total : 12 ÷ 80 = 0,15, soit 15 %. Elle s'exprime indifféremment en décimal ou en pourcentage. La réponse 12 % reprend le nombre d'admis en le prenant pour un pourcentage, confusion fréquente entre effectif et fréquence.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "En lançant un dé équilibré à six faces, la probabilité d'obtenir un nombre pair est :",
+      "o": [
+        "1/6",
+        "1/3",
+        "1/2",
+        "2/3"
+      ],
+      "r": 2,
+      "x": "Une probabilité est le nombre de cas favorables divisé par le nombre de cas possibles : les faces paires sont 2, 4 et 6, soit 3 cas sur 6, donc 1/2. La réponse 1/6 correspond à l'obtention d'une face précise, par exemple le 4. Toute probabilité est comprise entre 0 et 1.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une urne contient 5 boules rouges, 3 vertes et 2 blanches. La probabilité de tirer une boule verte est :",
+      "o": [
+        "1/5",
+        "3/10",
+        "1/3",
+        "3/7"
+      ],
+      "r": 1,
+      "x": "L'urne contient 5 + 3 + 2 = 10 boules, dont 3 vertes, d'où une probabilité de 3/10. Le dénominateur est toujours le nombre TOTAL de boules, et non celui des autres couleurs. La réponse 3/7 divise par le nombre de boules non vertes, erreur classique sur ce type de tirage.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "En lançant deux pièces équilibrées, la probabilité d'obtenir deux fois pile est :",
+      "o": [
+        "1/4",
+        "1/3",
+        "1/2",
+        "3/4"
+      ],
+      "r": 0,
+      "x": "Avec deux pièces, les issues possibles sont PP, PF, FP et FF, soit quatre cas équiprobables dont un seul donne deux piles : la probabilité vaut 1/4. La réponse 1/3 oublie que PF et FP sont deux issues distinctes, car les deux pièces se distinguent l'une de l'autre.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un événement A a une probabilité de 0,35. La probabilité de son contraire est :",
+      "o": [
+        "0,35",
+        "0,5",
+        "0,65",
+        "1,35"
+      ],
+      "r": 2,
+      "x": "La probabilité de l'événement contraire s'obtient en retranchant à 1 : 1 – 0,35 = 0,65. Les deux probabilités doivent toujours totaliser 1, puisque l'un des deux événements se produit nécessairement. La réponse 1,35 est impossible, car une probabilité ne dépasse jamais 1.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un car parcourt 150 km en 2 h 30 min. Sa vitesse moyenne est de :",
+      "o": [
+        "60 km/h",
+        "62,5 km/h",
+        "65,2 km/h",
+        "75 km/h"
+      ],
+      "r": 0,
+      "x": "La durée de 2 h 30 min s'écrit 2,5 h, et la vitesse moyenne vaut distance ÷ durée = 150 ÷ 2,5 = 60 km/h. Il faut toujours convertir les minutes en fraction d'heure avant de diviser. La réponse 65,2 km/h prend 2 h 30 min pour 2,3 h, erreur très répandue aux concours.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une moto roule à 45 km/h pendant 1 h 20 min. La distance parcourue est de :",
+      "o": [
+        "49 km",
+        "54 km",
+        "58,5 km",
+        "60 km"
+      ],
+      "r": 3,
+      "x": "La durée de 1 h 20 min vaut 1 + 20/60 = 4/3 d'heure, donc la distance est 45 × 4/3 = 60 km. On peut raisonner plus simplement : 45 km en une heure, puis 15 km de plus en 20 minutes. La réponse 54 km lit 1 h 20 min comme 1,2 h, ce qui fausse la durée.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Deux cyclistes partent au même moment de deux villes distantes de 90 km et roulent l'un vers l'autre à 20 km/h et 25 km/h. Ils se rencontrent au bout de :",
+      "o": [
+        "2 h",
+        "2 h 15 min",
+        "3 h",
+        "4 h 30 min"
+      ],
+      "r": 0,
+      "x": "Quand deux mobiles vont l'un vers l'autre, leurs vitesses s'ADDITIONNENT : ils se rapprochent de 20 + 25 = 45 km par heure, donc la rencontre a lieu après 90 ÷ 45 = 2 h. La réponse 4 h 30 min correspond au temps qu'il faudrait au seul premier cycliste pour couvrir tout le trajet.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une pompe remplit un château d'eau de 12 m³ en 40 minutes. Son débit est de :",
+      "o": [
+        "30 L/min",
+        "200 L/min",
+        "280 L/min",
+        "300 L/min"
+      ],
+      "r": 3,
+      "x": "Le volume de 12 m³ vaut 12 000 litres, et le débit s'obtient en divisant par la durée : 12 000 ÷ 40 = 300 L/min. La conversion du mètre cube en litres est l'étape décisive du calcul. La réponse 30 L/min provient d'une erreur sur cette conversion, car 1 m³ vaut 1 000 L et non 100 L.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un robinet remplit un bassin en 6 heures et un second en 3 heures. Ouverts ensemble, ils le remplissent en :",
+      "o": [
+        "2 h",
+        "3 h",
+        "4 h 30 min",
+        "9 h"
+      ],
+      "r": 0,
+      "x": "On raisonne sur la part remplie en une heure : 1/6 pour le premier robinet et 1/3 pour le second, soit 1/6 + 2/6 = 1/2 du bassin par heure. Il faut donc 2 heures pour le remplir entièrement. La réponse 4 h 30 min est la moyenne des deux durées, calcul sans aucun sens pour des débits qui s'ajoutent.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La somme des âges d'une mère et de sa fille est de 50 ans, et la mère a 30 ans de plus que sa fille. L'âge de la fille est de :",
+      "o": [
+        "5 ans",
+        "7 ans",
+        "8 ans",
+        "10 ans"
+      ],
+      "r": 3,
+      "x": "On note f l'âge de la fille : f + (f + 30) = 50, soit 2f = 20 et f = 10 ans, la mère ayant alors 40 ans. On vérifie : 10 + 40 = 50 et 40 – 10 = 30. Calculer 50 – 30 = 20 sans diviser par 2 donnerait un résultat faux, car la différence doit être partagée entre les deux.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une voiture consomme 8 litres de carburant aux 100 km. Pour un trajet de 350 km, elle consomme :",
+      "o": [
+        "28 L",
+        "35 L",
+        "43,75 L",
+        "280 L"
+      ],
+      "r": 0,
+      "x": "La consommation est proportionnelle à la distance : 8 × 350 ÷ 100 = 28 litres. On peut aussi avancer par étapes : 24 litres pour 300 km, puis 4 litres pour les 50 km restants. La réponse 43,75 L divise la distance par la consommation, inversant complètement le rapport.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un commerçant achète 50 sacs de ciment à 5 500 FCFA l'unité et paie 15 000 FCFA de transport. Le prix de revient d'un sac est de :",
+      "o": [
+        "5 500 FCFA",
+        "5 515 FCFA",
+        "5 700 FCFA",
+        "5 800 FCFA"
+      ],
+      "r": 3,
+      "x": "Le prix de revient comprend l'achat ET les frais : 50 × 5 500 = 275 000 FCFA, auxquels s'ajoutent 15 000 FCFA, soit 290 000 FCFA pour 50 sacs et donc 5 800 FCFA l'unité. Le transport ajoute 15 000 ÷ 50 = 300 FCFA par sac. La réponse 5 500 FCFA oublie purement ces frais.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "À un concours, 1 250 candidats sont admis sur 5 000 inscrits. Le taux de réussite est de :",
+      "o": [
+        "25 %",
+        "40 %",
+        "75 %",
+        "400 %"
+      ],
+      "r": 0,
+      "x": "Le taux de réussite est le rapport des admis aux inscrits : 1 250 ÷ 5 000 = 0,25, soit 25 %. On peut simplifier la fraction, qui se réduit à 1/4. La réponse 75 % correspond à la part des candidats NON admis, c'est-à-dire au taux d'échec du concours.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans un jeu de 32 cartes, la probabilité de tirer un as est :",
+      "o": [
+        "1/32",
+        "1/13",
+        "1/10",
+        "1/8"
+      ],
+      "r": 3,
+      "x": "Un jeu de 32 cartes contient 4 as, d'où une probabilité de 4/32 = 1/8. Il faut connaître la composition du jeu : 32 cartes réparties en 4 couleurs de 8 cartes chacune. La réponse 1/13 vaut pour un jeu de 52 cartes, qui contient aussi 4 as mais davantage de cartes au total.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans une classe, 20 élèves ont 11 de moyenne et 30 élèves ont 13 de moyenne. La moyenne de la classe est de :",
+      "o": [
+        "12,2",
+        "12,5",
+        "12,8",
+        "13"
+      ],
+      "r": 0,
+      "x": "Il s'agit d'une moyenne pondérée par les effectifs : (20 × 11 + 30 × 13) ÷ 50 = 610 ÷ 50 = 12,2. Le groupe le plus nombreux tire la moyenne vers sa propre valeur. La réponse 12 est la moyenne simple de 11 et 13, qui ignore que les deux groupes n'ont pas la même taille.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un champ de 12 hectares est partagé entre deux frères, l'un recevant le double de l'autre. La plus grande part est de :",
+      "o": [
+        "4 ha",
+        "6 ha",
+        "7 ha",
+        "8 ha"
+      ],
+      "r": 3,
+      "x": "Si l'un reçoit le double de l'autre, le champ se partage en 1 + 2 = 3 parts égales de 12 ÷ 3 = 4 ha. La plus grande en compte deux, soit 8 ha. La réponse 4 ha donne la plus petite part : il faut toujours identifier à combien de parts correspond la valeur demandée.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La population d'une commune passe de 20 000 à 23 000 habitants. Le taux d'augmentation est de :",
+      "o": [
+        "15 %",
+        "23 %",
+        "30 %",
+        "115 %"
+      ],
+      "r": 0,
+      "x": "La hausse vaut 23 000 – 20 000 = 3 000 habitants, que l'on rapporte à la population de départ : 3 000 ÷ 20 000 = 15 %. La réponse 115 % est le coefficient multiplicateur 1,15 exprimé en pourcentage, c'est-à-dire la population finale rapportée à l'initiale et non son augmentation.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "On mélange 20 litres de lait à 400 FCFA le litre et 30 litres à 500 FCFA le litre. Le prix moyen du litre est de :",
+      "o": [
+        "440 FCFA",
+        "450 FCFA",
+        "455 FCFA",
+        "460 FCFA"
+      ],
+      "r": 3,
+      "x": "On calcule le coût total : 20 × 400 + 30 × 500 = 8 000 + 15 000 = 23 000 FCFA pour 50 litres, soit 460 FCFA le litre. C'est une moyenne pondérée par les quantités. La réponse 450 FCFA est la moyenne simple des deux prix, qui néglige la quantité plus grande de lait à 500 FCFA.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "En lançant un dé équilibré à six faces, la probabilité d'obtenir un multiple de 3 est :",
+      "o": [
+        "1/3",
+        "1/2",
+        "2/3",
+        "5/6"
+      ],
+      "r": 0,
+      "x": "Les multiples de 3 parmi les faces du dé sont 3 et 6, soit 2 cas favorables sur 6, d'où une probabilité de 2/6 = 1/3. Il ne faut pas oublier que 6 est également un multiple de 3. La réponse 1/2 correspondrait aux nombres pairs, qui sont au nombre de trois.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Pour une série de 25 notes rangées par ordre croissant, la médiane est la :",
+      "o": [
+        "11e note",
+        "12e note",
+        "12,5e note",
+        "13e note"
+      ],
+      "r": 3,
+      "x": "Pour un effectif impair, la médiane occupe le rang (n + 1) ÷ 2, soit (25 + 1) ÷ 2 = 13. Il y a ainsi 12 notes avant elle et 12 après, ce qui partage la série en deux moitiés égales. Le rang 12,5 n'existe pas, puisqu'une note porte toujours un numéro entier.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Au marché, 3 kg de tomates coûtent 1 800 FCFA. Avec 5 400 FCFA, on peut acheter :",
+      "o": [
+        "6 kg",
+        "7,5 kg",
+        "8 kg",
+        "9 kg"
+      ],
+      "r": 3,
+      "x": "Le kilogramme coûte 1 800 ÷ 3 = 600 FCFA, donc 5 400 FCFA permettent d'acheter 5 400 ÷ 600 = 9 kg. On peut aussi remarquer que 5 400 est le triple de 1 800, donc on obtient le triple de 3 kg. La réponse 6 kg correspondrait à une dépense de 3 600 FCFA seulement.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La moyenne de cinq nombres est 14. Si l'on retire le nombre 20, la moyenne des quatre restants devient :",
+      "o": [
+        "12,5",
+        "13",
+        "13,5",
+        "14"
+      ],
+      "r": 0,
+      "x": "La somme des cinq nombres vaut 5 × 14 = 70 ; en retirant 20, il reste 50 pour quatre nombres, soit une moyenne de 12,5. Retirer une valeur supérieure à la moyenne fait toujours baisser celle-ci. La réponse 14 suppose à tort que la moyenne ne bouge pas après suppression d'un nombre.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Après une remise de 20 %, un article est vendu 7 200 FCFA. Son prix initial était de :",
+      "o": [
+        "5 760 FCFA",
+        "8 640 FCFA",
+        "9 000 FCFA",
+        "9 200 FCFA"
+      ],
+      "r": 2,
+      "x": "Le prix soldé représente 80 % du prix initial, donc on DIVISE par 0,80 : 7 200 ÷ 0,80 = 9 000 FCFA. On vérifie : 9 000 – 1 800 = 7 200 FCFA. La réponse 8 640 FCFA ajoute 20 % au prix soldé, ce qui ne ramène jamais au prix de départ car la base de calcul est différente.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Après une hausse de 20 %, un prix atteint 14 400 FCFA. Le prix initial était de :",
+      "o": [
+        "11 520 FCFA",
+        "12 000 FCFA",
+        "12 400 FCFA",
+        "17 280 FCFA"
+      ],
+      "r": 1,
+      "x": "Le prix final représente 120 % du prix initial, donc on divise par 1,20 : 14 400 ÷ 1,20 = 12 000 FCFA. Le contrôle est immédiat : 12 000 × 0,20 = 2 400 FCFA de hausse. La réponse 11 520 FCFA retire 20 % du nouveau prix, erreur de méthode sur le retour au prix initial.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Six maçons construisent un mur en 10 jours. Pour le construire en 4 jours, il faut :",
+      "o": [
+        "2,4 maçons",
+        "12 maçons",
+        "15 maçons",
+        "24 maçons"
+      ],
+      "r": 2,
+      "x": "Le travail représente 6 × 10 = 60 journées de maçon ; pour l'achever en 4 jours, il faut 60 ÷ 4 = 15 maçons. Comme dans tout problème de main-d'œuvre, la proportionnalité est INVERSE : plus d'ouvriers, moins de jours. La réponse 2,4 applique une proportionnalité directe, ce qui est absurde ici.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Avec la parité fixe 1 euro = 655,957 FCFA, une somme de 100 euros vaut :",
+      "o": [
+        "655,957 FCFA",
+        "6 559,57 FCFA",
+        "32 797,85 FCFA",
+        "65 595,7 FCFA"
+      ],
+      "r": 3,
+      "x": "La parité du franc CFA avec l'euro est fixe depuis le 1er janvier 1999 : 1 euro = 655,957 FCFA, donc 100 euros valent 65 595,7 FCFA. Il suffit de déplacer la virgule de deux rangs vers la droite. La réponse 32 797,85 FCFA correspond à 50 euros, soit la moitié de la somme.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans une classe, 3 élèves ont 10, 5 élèves ont 12 et 2 élèves ont 15. La moyenne de la classe est de :",
+      "o": [
+        "11",
+        "12",
+        "12,3",
+        "13"
+      ],
+      "r": 1,
+      "x": "On calcule la somme totale des points : 3 × 10 + 5 × 12 + 2 × 15 = 30 + 60 + 30 = 120, que l'on divise par les 10 élèves, soit 12. Il s'agit d'une moyenne pondérée par les effectifs. La réponse 12,3 fait la moyenne des trois notes sans tenir compte du nombre d'élèves concernés.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un train de 200 m de long roulant à 72 km/h traverse un pont de 400 m. La durée de la traversée complète est de :",
+      "o": [
+        "10 s",
+        "20 s",
+        "30 s",
+        "40 s"
+      ],
+      "r": 2,
+      "x": "Pour franchir complètement un pont, le train doit parcourir la longueur du pont PLUS sa propre longueur : 400 + 200 = 600 m. À 72 km/h, soit 20 m/s, cela prend 600 ÷ 20 = 30 secondes. La réponse 20 s oublie la longueur du train, qui doit dégager entièrement l'ouvrage.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un candidat obtient 45 points sur 60 à une épreuve. Ramenée sur 20, sa note est de :",
+      "o": [
+        "12",
+        "13,5",
+        "15",
+        "18"
+      ],
+      "r": 2,
+      "x": "Pour ramener une note sur 20, on applique une règle de trois : 45 × 20 ÷ 60 = 15. Autre lecture : le candidat réussit 45/60 = 75 % de l'épreuve, et 75 % de 20 font 15. La réponse 13,5 applique un coefficient de 0,3 à la note brute, sans rapport avec le barème demandé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le nombre 3 645 est divisible par :",
+      "o": [
+        "4",
+        "6",
+        "9",
+        "25"
+      ],
+      "r": 2,
+      "x": "Un nombre est divisible par 9 lorsque la somme de ses chiffres l'est : 3 + 6 + 4 + 5 = 18, multiple de 9. Ce nombre étant impair, il n'est divisible ni par 4 ni par 6, qui exigent tous deux un nombre pair. Il ne finit pas par 00, 25, 50 ou 75, donc il n'est pas divisible par 25.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La fraction 126/210 simplifiée au maximum vaut :",
+      "o": [
+        "3/5",
+        "2/3",
+        "5/7",
+        "7/10"
+      ],
+      "r": 0,
+      "x": "On divise les deux termes par leur PGCD, qui vaut 42 : 126 ÷ 42 = 3 et 210 ÷ 42 = 5. On peut aussi simplifier par étapes, d'abord par 2, puis par 3, puis par 7. La vérification en décimal confirme le résultat, puisque 126 ÷ 210 = 0,6, soit exactement 3/5.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les trois quarts d'une heure et demie représentent :",
+      "o": [
+        "45 min",
+        "50 min",
+        "1 h",
+        "1 h 07 min 30 s"
+      ],
+      "r": 3,
+      "x": "Une heure et demie vaut 90 minutes ; les trois quarts font 90 × 3 ÷ 4 = 67,5 minutes, soit 1 h 07 min 30 s. Les 0,5 minute restantes se convertissent en 30 secondes. La réponse 45 min correspond aux trois quarts d'une seule heure, en oubliant la demi-heure supplémentaire.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le plus petit des nombres 0,45 ; 4/9 ; 0,449 et 9/20 est :",
+      "o": [
+        "0,45",
+        "4/9",
+        "0,449",
+        "9/20"
+      ],
+      "r": 1,
+      "x": "On convertit tout en décimal : 4/9 ≈ 0,4444, 9/20 = 0,45 et les deux autres valent 0,45 et 0,449. Le plus petit est donc 4/9. Remarquez que 0,45 et 9/20 désignent le même nombre, ce qui réduit d'emblée le choix à comparer.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La partie entière du quotient 47/6 est :",
+      "o": [
+        "6",
+        "7",
+        "7,8",
+        "8"
+      ],
+      "r": 1,
+      "x": "On cherche le plus grand multiple de 6 inférieur à 47 : 6 × 7 = 42, avec un reste de 5, donc la partie entière vaut 7. Le quotient exact est environ 7,83, mais la partie entière est toujours un nombre entier. La réponse 8 dépasse le quotient réel, donc elle ne peut pas convenir.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le quotient 4,2 ÷ 0,07 est égal à :",
+      "o": [
+        "0,06",
+        "0,6",
+        "6",
+        "60"
+      ],
+      "r": 3,
+      "x": "Pour supprimer les virgules, on multiplie les deux nombres par 100 : 420 ÷ 7 = 60. L'opération est légitime car multiplier dividende et diviseur par le même nombre ne change pas le quotient. La réponse 6 oublie un déplacement de virgule : diviser par un nombre plus petit que 1 donne toujours un résultat plus grand.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le produit 0,6 × 0,05 est égal à :",
+      "o": [
+        "0,03",
+        "0,3",
+        "3",
+        "30"
+      ],
+      "r": 0,
+      "x": "On multiplie d'abord sans les virgules, 6 × 5 = 30, puis on place autant de décimales que dans les deux facteurs réunis, soit trois : 0,030, c'est-à-dire 0,03. La réponse 0,3 ne compte que deux décimales. Retenez qu'un produit de deux nombres inférieurs à 1 est toujours plus petit que chacun d'eux.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre de nombres premiers inférieurs à 20 est :",
+      "o": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "r": 2,
+      "x": "Ces nombres sont 2, 3, 5, 7, 11, 13, 17 et 19, soit huit au total. Le nombre 1 n'est pas premier, car un nombre premier doit avoir exactement deux diviseurs et 1 n'en a qu'un seul. Le nombre 2 est en revanche premier, et c'est le seul nombre premier pair.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le PGCD de 48 et 72 est :",
+      "o": [
+        "24",
+        "36",
+        "48",
+        "144"
+      ],
+      "r": 0,
+      "x": "On décompose : 48 = 2⁴ × 3 et 72 = 2³ × 3². Le PGCD retient les facteurs communs affectés du plus PETIT exposant : 2³ × 3 = 24. Le nombre 144 est leur PPCM : un PGCD ne dépasse jamais le plus petit des deux nombres, ce qui permet d'écarter 144 immédiatement.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un nombre divisé par 12 donne un quotient de 8 et un reste de 5. Ce nombre est :",
+      "o": [
+        "96",
+        "99",
+        "101",
+        "104"
+      ],
+      "r": 2,
+      "x": "On applique la relation dividende = diviseur × quotient + reste, soit 12 × 8 + 5 = 101. Le reste doit toujours être inférieur au diviseur, et 5 est bien inférieur à 12. La réponse 96 est le produit 12 × 8 seul, c'est-à-dire qu'elle oublie d'ajouter le reste.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'écriture décimale de 7/8 est :",
+      "o": [
+        "0,78",
+        "0,875",
+        "1,142",
+        "1,25"
+      ],
+      "r": 1,
+      "x": "On effectue la division 7 ÷ 8, qui donne 0,875. Comme le numérateur est plus petit que le dénominateur, le résultat est forcément inférieur à 1, ce qui écarte les propositions C et D. La réponse 1,142 correspond à la fraction inverse 8/7, calculée dans le mauvais sens.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les 15 % de 15 % de 20 000 FCFA valent :",
+      "o": [
+        "45 FCFA",
+        "225 FCFA",
+        "300 FCFA",
+        "450 FCFA"
+      ],
+      "r": 3,
+      "x": "On applique le taux deux fois de suite : 15 % de 20 000 font 3 000 FCFA, dont 15 % donnent 450 FCFA. On peut aussi multiplier 20 000 par 0,15 × 0,15 = 0,0225. La réponse 3 000 FCFA n'appliquerait le taux qu'une seule fois : deux pourcentages successifs se multiplient, ils ne s'additionnent jamais.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le tiers de 3⁶ est égal à :",
+      "o": [
+        "121,5",
+        "216",
+        "234",
+        "243"
+      ],
+      "r": 3,
+      "x": "On calcule 3⁶ = 729, dont le tiers vaut 243. Autre méthode plus rapide : diviser par 3 revient à retirer 1 à l'exposant, donc le résultat est 3⁵ = 243. La réponse 121,5 divise par 6 au lieu de 3, en confondant l'exposant avec un diviseur.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La somme √144 + √25 est égale à :",
+      "o": [
+        "13",
+        "17",
+        "19",
+        "169"
+      ],
+      "r": 1,
+      "x": "On extrait chaque racine séparément : √144 = 12 et √25 = 5, d'où une somme de 17. La réponse 13 est la racine carrée de 169, c'est-à-dire de la somme des deux nombres sous les radicaux. Retenez que √a + √b n'est jamais égal à √(a + b).",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La différence 5³ – 5² est égale à :",
+      "o": [
+        "5",
+        "25",
+        "100",
+        "120"
+      ],
+      "r": 2,
+      "x": "On calcule chaque puissance séparément : 125 – 25 = 100. On peut aussi factoriser par 5² : 5²(5 – 1) = 25 × 4 = 100. La réponse 5 vient de la soustraction des exposants, règle qui ne s'applique qu'à la DIVISION de deux puissances, jamais à leur différence.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une citerne de 3,5 m³ remplie d'eau contient une masse de :",
+      "o": [
+        "3 500 kg",
+        "3 850 kg",
+        "7 000 kg",
+        "35 000 kg"
+      ],
+      "r": 0,
+      "x": "Le volume de 3,5 m³ vaut 3 500 litres , et un litre d'eau pèse un kilogramme à température ambiante, d'où 3 500 kg, soit 3,5 tonnes. Le repère à retenir est : 1 m³ d'eau = 1 000 litres = 1 tonne. La réponse 35 000 kg provient d'une erreur de conversion d'un facteur dix.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La durée 1 h 45 min s'écrit en heures décimales :",
+      "o": [
+        "1,45 h",
+        "1,6 h",
+        "1,75 h",
+        "1,8 h"
+      ],
+      "r": 2,
+      "x": "On convertit les minutes en fraction d'heure : 45 ÷ 60 = 0,75, d'où 1,75 h. Les repères utiles sont 15 min = 0,25 h, 30 min = 0,5 h et 45 min = 0,75 h. La réponse 1,45 h recopie les minutes derrière la virgule, erreur très fréquente car une heure compte 60 minutes et non 100.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une durée de 2 h 30 min correspond à :",
+      "o": [
+        "9 000 s",
+        "15 000 s",
+        "18 000 s",
+        "150 000 s"
+      ],
+      "r": 0,
+      "x": "La durée vaut 150 minutes, que l'on multiplie par 60 pour obtenir 9 000 secondes. On peut aussi décomposer : 2 heures font 7 200 s et 30 minutes 1 800 s. Le nombre 150 est celui des minutes, et le multiplier par 1 000 au lieu de 60 donnerait la réponse D, qui est fausse.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Si 2,5 kg de viande coûtent 3 750 FCFA, le kilogramme revient à :",
+      "o": [
+        "937,5 FCFA",
+        "1 200 FCFA",
+        "1 400 FCFA",
+        "1 500 FCFA"
+      ],
+      "r": 3,
+      "x": "On divise le prix par la masse : 3 750 ÷ 2,5 = 1 500 FCFA. La vérification est immédiate, puisque 1 500 × 2,5 = 3 750 FCFA. La réponse 937,5 FCFA divise par 4 au lieu de 2,5 : un prix unitaire est toujours supérieur au prix total divisé par une masse plus grande.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sur une carte, 2 cm représentent 5 km. Une distance de 7 cm sur la carte correspond à :",
+      "o": [
+        "12,5 km",
+        "17,5 km",
+        "20 km",
+        "35 km"
+      ],
+      "r": 1,
+      "x": "On passe par la valeur d'un centimètre : 5 ÷ 2 = 2,5 km, puis 2,5 × 7 = 17,5 km. On peut aussi écrire la proportion 2/5 = 7/x et faire le produit en croix. La réponse 35 km multiplie 7 par 5 sans diviser par 2, en oubliant que 2 cm valent déjà 5 km.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une somme de 360 000 FCFA est partagée entre deux personnes de façon inversement proportionnelle à 2 et 4. La plus grande part est de :",
+      "o": [
+        "120 000 FCFA",
+        "240 000 FCFA",
+        "270 000 FCFA",
+        "288 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Un partage inversement proportionnel se fait au prorata des inverses, soit 1/2 et 1/4, c'est-à-dire 2 parts contre 1. La somme se divise donc en 3 parts de 120 000 FCFA, et la plus grande en vaut deux, soit 240 000 FCFA. La réponse 120 000 FCFA est la plus petite part.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La moyenne de trois nombres est 18. Si deux d'entre eux valent 12 et 15, le troisième est :",
+      "o": [
+        "18",
+        "21",
+        "24",
+        "27"
+      ],
+      "r": 3,
+      "x": "La somme des trois nombres vaut 3 × 18 = 54 ; comme deux d'entre eux totalisent 27, le troisième vaut 54 – 27 = 27. On remonte donc toujours de la moyenne à la somme avant de soustraire. La réponse 18 supposerait que les trois nombres sont tous égaux à la moyenne.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les 12 % d'un effectif de 750 personnes représentent :",
+      "o": [
+        "90 personnes",
+        "120 personnes",
+        "150 personnes",
+        "900 personnes"
+      ],
+      "r": 0,
+      "x": "On calcule 750 × 12 ÷ 100 = 90 personnes. Contrôle mental : 10 % font 75 et 2 % font 15, ce qui donne bien 90. La réponse 900 résulte d'un déplacement de virgule, alors qu'un pourcentage inférieur à 100 % donne toujours un résultat plus petit que l'effectif de départ.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre de multiples de 7 compris entre 1 et 100 est :",
+      "o": [
+        "7",
+        "13",
+        "14",
+        "15"
+      ],
+      "r": 2,
+      "x": "On divise 100 par 7 et on garde la partie entière : 7 × 14 = 98, donc il y a 14 multiples, de 7 jusqu'à 98. La réponse 15 conduirait à 105, qui dépasse 100 et sort donc de l'intervalle. Le plus grand multiple recherché est toujours celui qui reste inférieur ou égal à la borne.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La somme 0,1 + 0,02 + 0,003 est égale à :",
+      "o": [
+        "0,123",
+        "0,132",
+        "0,6",
+        "1,23"
+      ],
+      "r": 0,
+      "x": "On aligne les virgules avant d'additionner : 0,100 + 0,020 + 0,003 = 0,123. Chaque chiffre occupe ainsi son rang propre, dixièmes, centièmes et millièmes. La réponse 0,6 additionne les chiffres 1, 2 et 3 sans tenir compte de leur position après la virgule.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une tonne correspond à :",
+      "o": [
+        "0,1 quintal",
+        "1 quintal",
+        "10 quintaux",
+        "100 quintaux"
+      ],
+      "r": 2,
+      "x": "Un quintal vaut 100 kg et une tonne 1 000 kg, donc une tonne contient 10 quintaux. Ce repère sert souvent dans les problèmes agricoles et de transport. La réponse 100 quintaux correspondrait à 10 tonnes, soit dix fois la masse indiquée dans l'énoncé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre de sacs de 50 kg nécessaires pour conditionner 3,6 tonnes de maïs est :",
+      "o": [
+        "68",
+        "72",
+        "75",
+        "80"
+      ],
+      "r": 1,
+      "x": "On convertit d'abord la masse en kilogrammes, 3,6 t = 3 600 kg, puis on divise par la contenance : 3 600 ÷ 50 = 72 sacs. La conversion est l'étape décisive, car tonnes et kilogrammes ne se divisent pas entre eux. La réponse 80 correspondrait à des sacs de 45 kg.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le produit 25 × 16 × 4 est égal à :",
+      "o": [
+        "400",
+        "640",
+        "1 000",
+        "1 600"
+      ],
+      "r": 3,
+      "x": "On regroupe astucieusement les facteurs : 25 × 4 = 100, puis 100 × 16 = 1 600. Cette technique de regroupement allège beaucoup le calcul mental, car un produit peut s'effectuer dans n'importe quel ordre. La réponse 400 est le produit 25 × 16, qui oublie le facteur 4.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les 10 % de 10 % d'une somme représentent :",
+      "o": [
+        "0,01 %",
+        "0,1 %",
+        "0,5 %",
+        "1 %"
+      ],
+      "r": 3,
+      "x": "On multiplie les deux coefficients : 0,10 × 0,10 = 0,01, ce qui correspond à 1 %. Sur 10 000 FCFA, on obtient 1 000 FCFA puis 100 FCFA, soit bien 1 % du montant initial. Additionner les deux taux donnerait 20 %, résultat totalement faux car les pourcentages successifs se multiplient.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La moitié de 2¹⁰ est égale à :",
+      "o": [
+        "256",
+        "512",
+        "1 024",
+        "2 048"
+      ],
+      "r": 1,
+      "x": "On a 2¹⁰ = 1 024, dont la moitié vaut 512, c'est-à-dire 2⁹. Diviser une puissance de 2 par 2 revient simplement à retirer 1 à son exposant. La réponse 256 est le quart de 1 024, soit 2⁸ : il est utile de mémoriser les puissances de 2 jusqu'à 1 024.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans la suite 3 ; 6 ; 12 ; 24 ; …, le terme suivant est :",
+      "o": [
+        "30",
+        "36",
+        "48",
+        "60"
+      ],
+      "r": 2,
+      "x": "On cherche la règle de passage d'un terme au suivant : chacun est le double du précédent, donc 24 × 2 = 48. Il faut toujours tester la multiplication quand les écarts eux-mêmes grandissent vite. La réponse 30 supposerait une addition constante de 6, ce qui ne colle pas aux premiers termes.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans la suite 2 ; 5 ; 10 ; 17 ; …, le terme suivant est :",
+      "o": [
+        "26",
+        "27",
+        "28",
+        "34"
+      ],
+      "r": 0,
+      "x": "On calcule les écarts successifs : 3, 5 puis 7, qui augmentent de 2 à chaque fois, donc le suivant est 9 et le terme cherché 17 + 9 = 26. On peut aussi reconnaître la formule n² + 1, avec 1, 4, 9, 16 puis 25. La réponse 34 doublerait 17, ce qui ne respecte pas la régularité des écarts.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un nombre compris entre 1/4 et 1/3 est :",
+      "o": [
+        "1/5",
+        "2/9",
+        "3/10",
+        "2/5"
+      ],
+      "r": 2,
+      "x": "On convertit en décimal pour comparer : 1/4 = 0,25 et 1/3 ≈ 0,333, or 3/10 = 0,3 se situe bien entre les deux. La fraction 2/9 ≈ 0,222 est inférieure à 1/4 et 2/5 = 0,4 dépasse 1/3. Attention : un dénominateur plus grand ne signifie pas une fraction plus grande.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans un lot de 240 pièces, une pièce sur huit est défectueuse. Le nombre de pièces défectueuses est :",
+      "o": [
+        "30",
+        "32",
+        "40",
+        "48"
+      ],
+      "r": 0,
+      "x": "Une pièce sur huit signifie un huitième du lot : 240 ÷ 8 = 30 pièces. La proportion s'exprime donc comme une fraction du total. La réponse 48 correspondrait à une pièce défectueuse sur cinq, soit un taux bien plus élevé que celui annoncé par l'énoncé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le double du tiers de 54 est :",
+      "o": [
+        "9",
+        "18",
+        "27",
+        "36"
+      ],
+      "r": 3,
+      "x": "On procède dans l'ordre indiqué : le tiers de 54 vaut 18, et son double 36. On peut aussi remarquer que prendre le double du tiers revient à multiplier par 2/3, soit 54 × 2 ÷ 3. La réponse 27 est la moitié de 54, ce qui ne correspond à aucune des deux opérations demandées.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La somme de 5 % de 4 000 FCFA et de 4 % de 5 000 FCFA est :",
+      "o": [
+        "380 FCFA",
+        "400 FCFA",
+        "420 FCFA",
+        "450 FCFA"
+      ],
+      "r": 1,
+      "x": "Chacun des deux termes vaut 200 FCFA, d'où un total de 400 FCFA. Les deux calculs donnent le même résultat car a % de b est toujours égal à b % de a, les deux revenant au produit 0,05 × 4 000. Cette propriété permet de gagner du temps en calcul mental.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le quotient 0,45 ÷ 1,5 est égal à :",
+      "o": [
+        "0,03",
+        "0,3",
+        "0,675",
+        "3"
+      ],
+      "r": 1,
+      "x": "On multiplie les deux nombres par 10 pour supprimer une décimale : 4,5 ÷ 15 = 0,3. Comme le dividende est plus petit que le diviseur, le résultat est forcément inférieur à 1, ce qui écarte la réponse 3. La réponse 0,675 est le produit des deux nombres, non leur quotient.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre de fois où 0,25 est contenu dans 10 est :",
+      "o": [
+        "2,5",
+        "4",
+        "25",
+        "40"
+      ],
+      "r": 3,
+      "x": "On effectue la division 10 ÷ 0,25 = 40, car 0,25 représente un quart et un quart entre quatre fois dans chaque unité. La réponse 2,5 multiplie au lieu de diviser. Retenez que diviser par un nombre inférieur à 1 donne toujours un résultat plus grand que le dividende.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La valeur approchée par défaut au dixième de 7,38 est :",
+      "o": [
+        "7,3",
+        "7,4",
+        "7,38",
+        "7,5"
+      ],
+      "r": 0,
+      "x": "Une approximation par défaut retient le dixième immédiatement INFÉRIEUR, sans regarder le chiffre suivant : c'est donc 7,3. La réponse 7,4 est l'approximation par excès, et aussi l'arrondi, puisque 8 dépasse 5. Les mots « par défaut », « par excès » et « arrondi » désignent trois opérations différentes.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre 45 représente, par rapport à 180 :",
+      "o": [
+        "4 %",
+        "20 %",
+        "25 %",
+        "400 %"
+      ],
+      "r": 2,
+      "x": "On divise la partie par le tout : 45 ÷ 180 = 0,25, soit 25 %. On peut aussi remarquer que 45 est le quart de 180, et qu'un quart vaut 25 %. La réponse 400 % correspond au rapport inverse 180/45, c'est-à-dire ce que représente 180 par rapport à 45.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La somme de trois quarts d'heure et de 50 minutes est :",
+      "o": [
+        "1 h 35 min",
+        "1 h 45 min",
+        "1 h 50 min",
+        "2 h 05 min"
+      ],
+      "r": 0,
+      "x": "Trois quarts d'heure valent 45 minutes, et 45 + 50 = 95 minutes, soit 1 h 35 min puisque 95 – 60 = 35. Il faut retirer 60 minutes pour former l'heure, et non 100. La réponse 1 h 45 min correspondrait à 105 minutes, soit 10 minutes de trop.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les 1,5 % de 2 000 000 FCFA valent :",
+      "o": [
+        "3 000 FCFA",
+        "15 000 FCFA",
+        "30 000 FCFA",
+        "300 000 FCFA"
+      ],
+      "r": 2,
+      "x": "On calcule 2 000 000 × 1,5 ÷ 100 = 30 000 FCFA. Contrôle rapide : 1 % font 20 000 FCFA, donc 0,5 % en font 10 000, soit 30 000 au total. La réponse 300 000 FCFA correspond à un taux de 15 % : attention à la virgule dans le taux.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un stock de 480 sacs diminue de 25 %. Il reste :",
+      "o": [
+        "120 sacs",
+        "360 sacs",
+        "384 sacs",
+        "455 sacs"
+      ],
+      "r": 1,
+      "x": "Après une baisse de 25 %, il reste 75 % du stock : 480 × 0,75 = 360 sacs. On peut aussi retirer le quart, soit 120 sacs, du total initial. La réponse 120 donne précisément la baisse et non le stock restant : lisez toujours si la question porte sur la variation ou sur le reste.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La somme 1/2 + 1/3 + 1/6 est égale à :",
+      "o": [
+        "1/11",
+        "1/2",
+        "5/6",
+        "1"
+      ],
+      "r": 3,
+      "x": "On met les trois fractions au dénominateur commun 6 : 3/6 + 2/6 + 1/6 = 6/6 = 1. Une fraction dont le numérateur égale le dénominateur vaut toujours 1. La réponse 1/11 additionne séparément les numérateurs et les dénominateurs, méthode toujours fausse pour une somme de fractions.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le PPCM de 5, 6 et 8 est :",
+      "o": [
+        "30",
+        "40",
+        "60",
+        "120"
+      ],
+      "r": 3,
+      "x": "On rassemble tous les facteurs premiers avec leur plus grand exposant : 2³ pour 8, 3 pour 6 et 5, soit 2³ × 3 × 5 = 120. La réponse 60 n'est pas divisible par 8, donc elle ne peut pas être un multiple commun. Il faut toujours vérifier la divisibilité par chacun des trois nombres.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une année de 365 jours compte un nombre de semaines complètes égal à :",
+      "o": [
+        "50",
+        "52",
+        "53",
+        "60"
+      ],
+      "r": 1,
+      "x": "On divise 365 par 7 : le quotient est 52 et le reste 1, donc l'année compte 52 semaines complètes et un jour. C'est ce jour supplémentaire qui décale le calendrier d'une journée chaque année. Une année bissextile de 366 jours compte également 52 semaines, avec deux jours de reste.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre de voyages nécessaires pour transporter 6 000 briques par charrettes de 250 briques est :",
+      "o": [
+        "18",
+        "20",
+        "24",
+        "30"
+      ],
+      "r": 2,
+      "x": "On divise la quantité totale par la capacité d'une charrette : 6 000 ÷ 250 = 24 voyages. La vérification est immédiate, car 250 × 24 = 6 000. La réponse 30 correspondrait à des charrettes de 200 briques, donc à une capacité plus faible que celle de l'énoncé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La différence 1/2 – 1/5 est égale à :",
+      "o": [
+        "3/10",
+        "1/3",
+        "2/5",
+        "1/2"
+      ],
+      "r": 0,
+      "x": "On met les deux fractions au dénominateur commun 10 : 5/10 – 2/10 = 3/10. Le dénominateur reste inchangé une fois les fractions mises au même dénominateur, seuls les numérateurs se soustraient. La réponse 1/3 soustrait séparément numérateurs et dénominateurs, méthode toujours fausse.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un prix de 10 000 FCFA subit une baisse de 20 %, puis une hausse de 20 %. Le prix final est de :",
+      "o": [
+        "9 000 FCFA",
+        "9 500 FCFA",
+        "9 600 FCFA",
+        "10 000 FCFA"
+      ],
+      "r": 2,
+      "x": "Le prix descend d'abord à 10 000 × 0,80 = 8 000 FCFA, puis remonte à 8 000 × 1,20 = 9 600 FCFA. On ne retrouve pas le prix initial, car la hausse s'applique à une base plus faible que la baisse. Le coefficient global vaut 0,80 × 1,20 = 0,96, soit une perte nette de 4 %.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre de bidons de 5 litres que l'on peut remplir avec un fût de 200 litres est :",
+      "o": [
+        "40",
+        "45",
+        "50",
+        "100"
+      ],
+      "r": 0,
+      "x": "On divise le volume total par la contenance d'un bidon : 200 ÷ 5 = 40 bidons. Le contrôle est simple, puisque 5 × 40 = 200 litres. La réponse 100 correspondrait à des bidons de 2 litres, donc à une contenance deux fois et demie plus petite que celle indiquée.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La solution de l'équation 7x + 4 = 3x + 24 est :",
+      "o": [
+        "x = 2",
+        "x = 3,5",
+        "x = 4",
+        "x = 5"
+      ],
+      "r": 3,
+      "x": "On regroupe les x d'un côté et les nombres de l'autre : 7x – 3x = 24 – 4, soit 4x = 20 et x = 5. On vérifie en remplaçant : 7 × 5 + 4 = 39 et 3 × 5 + 24 = 39. La réponse 4 oublie d'ajouter 4 au second membre lors du changement de signe.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La solution de l'équation 5(x + 2) = 3x + 16 est :",
+      "o": [
+        "x = 2",
+        "x = 3",
+        "x = 5,2",
+        "x = 6"
+      ],
+      "r": 1,
+      "x": "On développe d'abord le membre de gauche : 5x + 10 = 3x + 16, puis on regroupe, ce qui donne 2x = 6 et x = 3. Le contrôle est immédiat : 5 × (3 + 2) = 25 et 3 × 3 + 16 = 25. La réponse 5,2 oublie de multiplier 2 par 5, erreur classique sur la distributivité.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La solution de l'équation x/4 – 3 = 2 est :",
+      "o": [
+        "x = 8",
+        "x = 20",
+        "x = 24",
+        "x = 32"
+      ],
+      "r": 1,
+      "x": "On ajoute 3 aux deux membres pour obtenir x/4 = 5, puis on multiplie par 4, ce qui donne x = 20. Il faut isoler la fraction AVANT de supprimer son dénominateur. La réponse 8 multiplie directement 2 par 4, en oubliant de traiter le terme –3.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le triple d'un nombre diminué de 7 vaut 26. Ce nombre est :",
+      "o": [
+        "6,3",
+        "8",
+        "9,7",
+        "11"
+      ],
+      "r": 3,
+      "x": "On traduit l'énoncé par 3x – 7 = 26, d'où 3x = 33 et x = 11. La vérification confirme : 3 × 11 = 33, moins 7 donne bien 26. La réponse 6,3 résout l'équation 3x + 7 = 26, c'est-à-dire qu'elle ajoute 7 au lieu de le retrancher.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le couple solution du système 3x + 2y = 16 et x – y = 2 est :",
+      "o": [
+        "(4 ; 2)",
+        "(2 ; 4)",
+        "(6 ; 4)",
+        "(8 ; 6)"
+      ],
+      "r": 0,
+      "x": "La seconde équation donne x = y + 2, que l'on remplace dans la première : 3(y + 2) + 2y = 16, soit 5y = 10 et y = 2, puis x = 4. C'est la méthode par substitution, pratique dès qu'une inconnue s'isole facilement. Le couple (6 ; 4) vérifie la seconde équation mais pas la première.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le développement de (3x + 1)(x – 2) est :",
+      "o": [
+        "3x² – 2",
+        "3x² – 6x – 2",
+        "3x² – 5x – 2",
+        "3x² + 5x – 2"
+      ],
+      "r": 2,
+      "x": "On développe terme à terme : 3x × x = 3x², 3x × (–2) = –6x, 1 × x = x et 1 × (–2) = –2, soit 3x² – 5x – 2 après regroupement. La réponse 3x² – 6x – 2 oublie le produit 1 × x. Pour ne rien omettre, multipliez chaque terme de la première parenthèse par chacun de la seconde.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La factorisation de x² – 10x + 25 est :",
+      "o": [
+        "(x – 5)²",
+        "(x + 5)²",
+        "(x – 25)(x + 1)",
+        "(x – 5)(x + 5)"
+      ],
+      "r": 0,
+      "x": "On reconnaît la forme a² – 2ab + b² avec a = x et b = 5, puisque 25 = 5² et que 10x correspond à 2 × x × 5 : la factorisation est donc (x – 5)². Le signe moins du terme central impose un moins dans la parenthèse. La réponse (x – 5)(x + 5) se développe en x² – 25, sans terme en x.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La factorisation complète de 4x² – 20x est :",
+      "o": [
+        "4(x² – 5)",
+        "2x(2x – 10)",
+        "4x(x – 5)",
+        "4x(x – 20)"
+      ],
+      "r": 2,
+      "x": "Le facteur commun aux deux termes est 4x, et il reste x – 5 puisque 20x divisé par 4x donne 5, d'où 4x(x – 5). L'écriture 2x(2x – 10) est exacte mais incomplète, car 2x – 10 se factorise encore par 2. Une factorisation complète ne laisse plus aucun facteur commun dans la parenthèse.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Pour a = 12 et b = 8, la valeur de (a – b)(a + b) est :",
+      "o": [
+        "40",
+        "80",
+        "200",
+        "400"
+      ],
+      "r": 1,
+      "x": "On applique l'identité a² – b² = 144 – 64 = 80, ou plus directement (12 – 8)(12 + 8) = 4 × 20 = 80. Les deux méthodes donnent évidemment le même résultat. La réponse 400 correspond à (a + b)², soit 20², ce qui confond le carré d'une somme avec le produit de la somme par la différence.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation 4 – x < 1 est :",
+      "o": [
+        "x < –3",
+        "x < 3",
+        "x > –3",
+        "x > 3"
+      ],
+      "r": 3,
+      "x": "On retranche 4 aux deux membres pour obtenir –x < –3, puis on multiplie par –1, ce qui INVERSE le sens de l'inégalité et donne x > 3. La réponse x < 3 oublie cette inversion, seule règle propre aux inéquations. On contrôle avec x = 5 : 4 – 5 = –1, bien inférieur à 1.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Pour la fonction f(x) = –2x + 7, l'image de –3 est :",
+      "o": [
+        "1",
+        "5",
+        "11",
+        "13"
+      ],
+      "r": 3,
+      "x": "On remplace x par –3 en conservant les parenthèses : –2 × (–3) + 7 = 6 + 7 = 13. Le produit de deux nombres négatifs est positif, ce qui explique le 6. La réponse 1 commet une erreur de signe en calculant –6 + 7, oubli très fréquent lorsque la valeur de départ est négative.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'antécédent de 0 par la fonction f(x) = 5x – 20 est :",
+      "o": [
+        "–4",
+        "4",
+        "15",
+        "20"
+      ],
+      "r": 1,
+      "x": "Chercher l'antécédent de 0 revient à résoudre f(x) = 0, soit 5x – 20 = 0 et x = 4. L'antécédent est la valeur d'ENTRÉE de la fonction, alors que l'image est la valeur de sortie. La réponse 20 reprend un nombre de l'expression, sans résoudre l'équation.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'équation de la droite passant par le point (0 ; –3) et de coefficient directeur 2 est :",
+      "o": [
+        "y = –3x + 2",
+        "y = 2x + 3",
+        "y = 2x – 3",
+        "y = 3x – 2"
+      ],
+      "r": 2,
+      "x": "Une droite s'écrit y = ax + b, où b est l'ordonnée du point d'abscisse 0 : ici b = –3 et a = 2, d'où y = 2x – 3. La réponse y = 2x + 3 passerait par le point (0 ; 3), situé au-dessus de l'origine. Le signe de l'ordonnée à l'origine se lit directement sur le point donné.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les droites d'équations y = 3x – 1 et y = 3x + 4 sont :",
+      "o": [
+        "parallèles",
+        "sécantes",
+        "perpendiculaires",
+        "confondues"
+      ],
+      "r": 0,
+      "x": "Deux droites sont parallèles lorsqu'elles ont le même coefficient directeur, ici 3, mais des ordonnées à l'origine différentes, –1 et 4 : elles ne se croisent donc jamais. Elles seraient confondues si les deux équations étaient identiques. Elles seraient perpendiculaires si le produit de leurs coefficients valait –1.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les solutions de l'équation 2x² = 18 sont :",
+      "o": [
+        "3 seulement",
+        "9 seulement",
+        "–3 et 3",
+        "–9 et 9"
+      ],
+      "r": 2,
+      "x": "On divise d'abord les deux membres par 2 : x² = 9, qui admet deux solutions opposées, –3 et 3. Il faut impérativement simplifier le coefficient AVANT d'extraire la racine carrée. Les réponses –9 et 9 oublient cette division et résolvent en réalité x² = 81.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La solution de l'équation 3(x – 2) + 2 = x + 10 est :",
+      "o": [
+        "x = 2",
+        "x = 4",
+        "x = 7",
+        "x = 9"
+      ],
+      "r": 2,
+      "x": "On développe : 3x – 6 + 2 = x + 10, soit 3x – 4 = x + 10, d'où 2x = 14 et x = 7. On vérifie : 3(7-2) + 2 = 3 × 5 + 2 = 17 et 7 + 10 = 17. La réponse 9 oublie le terme +2 du premier membre, qu'il faut rassembler avec le –6 avant de regrouper.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le développement de (2x + 5)(2x – 5) est :",
+      "o": [
+        "4x² – 10",
+        "4x² – 25",
+        "4x² + 25",
+        "4x² – 20x + 25"
+      ],
+      "r": 1,
+      "x": "C'est l'identité (a + b)(a – b) = a² – b², avec a = 2x et b = 5, soit 4x² – 25. Les deux termes en x, +10x et –10x, s'annulent lors du développement. La réponse 4x² – 20x + 25 est le développement de (2x – 5)², qui est un carré et non un produit de somme par différence.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre dont 40 % valent 30 est :",
+      "o": [
+        "12",
+        "45",
+        "70",
+        "75"
+      ],
+      "r": 3,
+      "x": "Si 40 % valent 30, on divise par 0,40 pour retrouver le nombre entier : 30 ÷ 0,40 = 75. On peut aussi raisonner par étapes : 10 % valent 7,5, donc 100 % valent 75. La réponse 12 est le résultat de 40 % de 30, c'est-à-dire l'opération inverse de celle demandée.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'expression 5x – 3(x – 4) simplifiée donne :",
+      "o": [
+        "2x – 12",
+        "2x – 4",
+        "8x – 12",
+        "2x + 12"
+      ],
+      "r": 3,
+      "x": "On développe en surveillant les signes : 5x – 3x + 12, car –3 multiplié par –4 donne +12, ce qui laisse 2x + 12. La réponse 2x – 12 oublie ce changement de signe à l'intérieur de la parenthèse. Un signe moins devant une parenthèse modifie tous les signes qu'elle contient.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le produit de deux entiers consécutifs vaut 132. Le plus petit de ces entiers est :",
+      "o": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "r": 2,
+      "x": "On encadre par la racine carrée du produit : 11² = 121 et 12² = 144, donc les candidats sont 11 et 12, et 11 × 12 = 132. Cette méthode d'encadrement évite de tester tous les nombres au hasard. La réponse 12 est le plus grand des deux entiers, non le plus petit.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un nombre augmenté de son tiers donne 48. Ce nombre est :",
+      "o": [
+        "36",
+        "40",
+        "44",
+        "48"
+      ],
+      "r": 0,
+      "x": "Le nombre augmenté de son tiers représente 3/3 + 1/3 = 4/3 du nombre, donc 4x/3 = 48, soit x = 48 × 3 ÷ 4 = 36. On vérifie : le tiers de 36 vaut 12, et 36 + 12 = 48. La réponse 44 retirerait seulement 4 à 48, sans raisonner sur la fraction.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans l'égalité 2x + 3y = 12, l'expression de y en fonction de x est :",
+      "o": [
+        "y = 12 – 2x",
+        "y = 4 – 3x",
+        "y = 4 – (2/3)x",
+        "y = (2/3)x – 4"
+      ],
+      "r": 2,
+      "x": "On isole le terme en y : 3y = 12 – 2x, puis on divise CHAQUE terme du second membre par 3, ce qui donne y = 4 – (2/3)x. La réponse 12 – 2x oublie cette division, étape indispensable pour exprimer y seul. Il faut diviser tout le second membre, et non une partie seulement.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le coefficient directeur d'une droite parallèle à la droite y = –4x + 9 est :",
+      "o": [
+        "–4",
+        "–1/4",
+        "1/4",
+        "4"
+      ],
+      "r": 0,
+      "x": "Deux droites parallèles ont exactement le même coefficient directeur, ici –4, seules leurs ordonnées à l'origine pouvant différer. La réponse 1/4 concernerait une droite perpendiculaire, car le produit des deux coefficients devrait alors valoir –1. Parallèle et perpendiculaire ne doivent jamais être confondus.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La solution de l'équation 5 – 2x = 3x – 10 est :",
+      "o": [
+        "x = 1",
+        "x = 3",
+        "x = 5",
+        "x = 7"
+      ],
+      "r": 1,
+      "x": "On regroupe les x à droite et les nombres à gauche : 5 + 10 = 3x + 2x, soit 15 = 5x et x = 3. On vérifie : 5 – 6 = –1 et 9 – 10 = –1. La réponse 1 oublie de faire passer le terme –2x dans le second membre, où il devient +2x.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La somme de deux nombres est 84 et l'un est le double de l'autre. Le plus grand est :",
+      "o": [
+        "28",
+        "42",
+        "48",
+        "56"
+      ],
+      "r": 3,
+      "x": "En notant x le plus petit, on écrit x + 2x = 84, soit 3x = 84 et x = 28, donc le plus grand vaut 56. Le total se partage ainsi en trois parts, dont deux reviennent au plus grand nombre. La réponse 42 correspondrait à deux nombres égaux, ce qui contredit la condition du double.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Pour la fonction f(x) = 2x + 1, l'antécédent de 9 est :",
+      "o": [
+        "4",
+        "5",
+        "9",
+        "19"
+      ],
+      "r": 0,
+      "x": "On résout f(x) = 9, soit 2x + 1 = 9, d'où 2x = 8 et x = 4. L'antécédent est bien la valeur que l'on introduit DANS la fonction, et non celle qui en ressort. La réponse 19 est l'image de 9 par cette fonction, c'est-à-dire le calcul inverse de celui demandé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'expression (x²)⁵ est égale à :",
+      "o": [
+        "x³",
+        "x⁷",
+        "x¹⁰",
+        "x²⁵"
+      ],
+      "r": 2,
+      "x": "Pour une puissance de puissance, on MULTIPLIE les exposants : 2 × 5 = 10, d'où x¹⁰. On le comprend en écrivant x² cinq fois de suite, ce qui donne bien dix facteurs x. La réponse x⁷ additionne les exposants, règle réservée au produit de deux puissances de même base.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'équation 3x + 5 = 3x – 2 admet :",
+      "o": [
+        "aucune solution",
+        "une seule solution",
+        "deux solutions",
+        "une infinité de solutions"
+      ],
+      "r": 0,
+      "x": "En retranchant 3x aux deux membres, il reste 5 = –2, ce qui est impossible : l'équation n'admet donc aucune solution. L'inconnue disparaît du calcul, si bien qu'aucune valeur de x ne peut convenir. Si les deux membres avaient été identiques, il y aurait eu au contraire une infinité de solutions.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les solutions de l'équation x² – 5x = 0 sont :",
+      "o": [
+        "0 seulement",
+        "5 seulement",
+        "0 et 5",
+        "–5 et 5"
+      ],
+      "r": 2,
+      "x": "On factorise par x : x(x – 5) = 0, donc x = 0 ou x = 5. Il ne faut jamais diviser les deux membres par x, car on perdrait la solution 0, l'inconnue pouvant précisément être nulle. C'est le réflexe à retenir pour toute équation sans terme constant.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un nombre augmenté de 12 est égal à son triple. Ce nombre est :",
+      "o": [
+        "4",
+        "6",
+        "8",
+        "12"
+      ],
+      "r": 1,
+      "x": "On traduit l'énoncé par x + 12 = 3x, d'où 2x = 12 et x = 6. On vérifie : 6 + 12 = 18, qui est bien le triple de 6. La réponse 12 correspondrait à l'équation x + 12 = 2x, c'est-à-dire au double et non au triple du nombre.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Quatre cahiers et trois stylos coûtent 2 700 FCFA, tandis que deux cahiers et cinq stylos coûtent 2 400 FCFA. Le prix d'un cahier est de :",
+      "o": [
+        "250 FCFA",
+        "300 FCFA",
+        "375 FCFA",
+        "450 FCFA"
+      ],
+      "r": 3,
+      "x": "On pose c le prix du cahier et s celui du stylo : 4c + 3s = 2 700 et 2c + 5s = 2 400. En doublant la seconde équation puis en soustrayant, on obtient 7s = 2 100, donc s = 300 et c = 450 FCFA. La réponse 300 FCFA est le prix du stylo, non celui du cahier.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'expression 3(2x – 1) – 2(x – 4) simplifiée donne :",
+      "o": [
+        "4x – 11",
+        "4x – 5",
+        "4x + 1",
+        "4x + 5"
+      ],
+      "r": 3,
+      "x": "On développe avec soin : 6x – 3 – 2x + 8, car –2 multiplié par –4 donne +8, ce qui laisse 4x + 5. La réponse 4x – 11 oublie ce changement de signe. Relire les signes après chaque développement évite la grande majorité des erreurs sur ce type de calcul.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Si x = 2 est solution de l'équation x² + bx – 10 = 0, alors b vaut :",
+      "o": [
+        "2",
+        "3",
+        "5",
+        "7"
+      ],
+      "r": 1,
+      "x": "Si 2 est solution, il vérifie l'équation : 2² + 2b – 10 = 0, soit 4 + 2b – 10 = 0, donc 2b = 6 et b = 3. Remplacer la solution connue dans l'équation est la méthode à retenir pour retrouver un coefficient manquant. La réponse 5 oublie la division finale par 2.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La solution de la proportion x/5 = 12/15 est :",
+      "o": [
+        "x = 4",
+        "x = 6",
+        "x = 9",
+        "x = 36"
+      ],
+      "r": 0,
+      "x": "Le produit en croix donne 15x = 5 × 12 = 60, d'où x = 4. On peut aussi simplifier 12/15 en 4/5 et reconnaître aussitôt que x vaut 4. La réponse 20 inverserait le rapport : dans une proportion, on multiplie toujours les termes croisés deux à deux.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La somme de trois nombres pairs consécutifs est 96. Le plus grand est :",
+      "o": [
+        "30",
+        "32",
+        "34",
+        "36"
+      ],
+      "r": 2,
+      "x": "On note les trois nombres n, n + 2 et n + 4 : leur somme 3n + 6 = 96 donne n = 30, donc les nombres sont 30, 32 et 34, et le plus grand vaut 34. La réponse 32 est celui du milieu, égal à 96 ÷ 3. Attention : des nombres pairs consécutifs progressent de 2 en 2, non de 1 en 1.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'expression (a + b)² – (a – b)² est égale à :",
+      "o": [
+        "4ab",
+        "2ab",
+        "2a² + 2b²",
+        "0"
+      ],
+      "r": 0,
+      "x": "On développe les deux carrés : (a² + 2ab + b²) – (a² – 2ab + b²). Les termes a² et b² s'annulent, et il reste 2ab + 2ab = 4ab. Le résultat n'est pas nul, car les deux doubles produits sont de signes opposés et s'additionnent donc au lieu de disparaître.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation 3(x – 2) ≤ x + 6 est :",
+      "o": [
+        "x ≤ 2",
+        "x ≥ 2",
+        "x ≥ 6",
+        "x ≤ 6"
+      ],
+      "r": 3,
+      "x": "On développe : 3x – 6 ≤ x + 6, puis on regroupe, ce qui donne 2x ≤ 12 et x ≤ 6. Le sens de l'inégalité ne change pas, puisqu'on divise par 2, nombre positif. On vérifie avec x = 6 : 3 × 4 = 12 et 6 + 6 = 12, l'égalité est bien atteinte à la limite.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Si cinq crayons coûtent x FCFA, alors huit crayons coûtent :",
+      "o": [
+        "5x/8",
+        "8x/5",
+        "40x",
+        "x + 3"
+      ],
+      "r": 1,
+      "x": "Le prix d'un crayon vaut x/5, donc huit crayons coûtent 8 × x/5 = 8x/5. Le résultat s'exprime avec la lettre de l'énoncé, sans valeur numérique. La réponse x + 3 ajoute 3 FCFA au lieu du prix de trois crayons, confusion entre une quantité et un montant.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'aire d'un carré de 13 cm de côté est de :",
+      "o": [
+        "52 cm²",
+        "169 cm²",
+        "338 cm²",
+        "676 cm²"
+      ],
+      "r": 1,
+      "x": "L'aire d'un carré vaut son côté multiplié par lui-même : 13 × 13 = 169 cm². La réponse 52 est le périmètre du carré, obtenu par 4 × 13 : ne confondez pas le tour de la figure avec la surface qu'elle occupe. Les unités le rappellent, cm pour le périmètre et cm² pour l'aire.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le périmètre d'un triangle équilatéral de 9 cm de côté est de :",
+      "o": [
+        "18 cm",
+        "20,25 cm",
+        "22,5 cm",
+        "27 cm"
+      ],
+      "r": 3,
+      "x": "Un triangle équilatéral a ses trois côtés égaux, donc son périmètre vaut 3 × 9 = 27 cm. La réponse 18 cm n'additionne que deux côtés. Rappel utile : équilatéral signifie trois côtés égaux, isocèle seulement deux, et scalène aucun côté égal.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La hauteur d'un triangle d'aire 96 cm² et de base 16 cm est de :",
+      "o": [
+        "12 cm",
+        "16 cm",
+        "24 cm",
+        "48 cm"
+      ],
+      "r": 0,
+      "x": "On part de la formule de l'aire, A = base × hauteur ÷ 2, d'où hauteur = 2A ÷ base = 192 ÷ 16 = 12 cm. Il faut doubler l'aire avant de diviser par la base, sans quoi le résultat est deux fois trop petit. La réponse 24 cm correspondrait à une base de 8 cm seulement.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'aire d'un rectangle de 2,5 m sur 1,2 m est de :",
+      "o": [
+        "1,5 m²",
+        "2,4 m²",
+        "3 m²",
+        "7,4 m²"
+      ],
+      "r": 2,
+      "x": "L'aire d'un rectangle vaut longueur × largeur : 2,5 × 1,2 = 3 m². La réponse 7,4 est le périmètre, obtenu par 2 × (2,5 + 1,2), et il s'exprime en mètres et non en mètres carrés. Vérifier l'unité de la réponse permet souvent d'éliminer un distracteur d'un coup d'œil.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le volume d'un pavé droit de 8 dm sur 5 dm sur 2 dm, exprimé en litres, est de :",
+      "o": [
+        "80 L",
+        "100 L",
+        "160 L",
+        "800 L"
+      ],
+      "r": 0,
+      "x": "Le volume vaut 8 × 5 × 2 = 80 dm³, et comme 1 dm³ correspond exactement à 1 litre, la contenance est de 80 litres. Travailler en décimètres cubes est la voie la plus rapide vers les litres. La réponse 800 L provient d'une erreur de conversion d'un facteur dix.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre de faces d'un prisme droit à base triangulaire est :",
+      "o": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "r": 2,
+      "x": "Un prisme droit à base triangulaire possède 2 bases triangulaires et 3 faces latérales rectangulaires, soit 5 faces au total. Il compte par ailleurs 6 sommets et 9 arêtes. Le solide à 6 faces est le pavé droit, dont le cube est un cas particulier.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre d'arêtes d'un cube est :",
+      "o": [
+        "8",
+        "12",
+        "16",
+        "24"
+      ],
+      "r": 1,
+      "x": "Le cube possède 12 arêtes, réparties en trois groupes de 4 selon leur direction, ainsi que 8 sommets et 6 faces. La réponse 8 donne le nombre de sommets et 6 celui des faces. Ces trois nombres sont à mémoriser ensemble, car ils sont souvent proposés comme distracteurs l'un de l'autre.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans un triangle rectangle, la somme des deux angles aigus vaut :",
+      "o": [
+        "45°",
+        "60°",
+        "80°",
+        "90°"
+      ],
+      "r": 3,
+      "x": "La somme des trois angles d'un triangle vaut 180° ; l'angle droit en occupant 90°, il reste 90° pour les deux angles aigus, qui sont donc complémentaires. Chacun mesure 45° uniquement dans le cas particulier d'un triangle rectangle isocèle. La réponse 45° confond donc le cas général et ce cas particulier.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le supplément d'un angle de 118° mesure :",
+      "o": [
+        "28°",
+        "42°",
+        "52°",
+        "62°"
+      ],
+      "r": 3,
+      "x": "Deux angles supplémentaires ont pour somme 180°, donc le supplément de 118° mesure 180 – 118 = 62°. Ne le confondez pas avec le COMPLÉMENT, dont la somme vaut 90° : il serait ici impossible, puisque 118° dépasse déjà 90°. Ce simple contrôle écarte plusieurs distracteurs.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans un parallélogramme, un angle mesure 65°. L'angle consécutif mesure :",
+      "o": [
+        "65°",
+        "115°",
+        "125°",
+        "295°"
+      ],
+      "r": 1,
+      "x": "Dans un parallélogramme, deux angles consécutifs sont supplémentaires : 180 – 65 = 115°. Les angles OPPOSÉS, eux, sont égaux, donc l'angle opposé mesure également 65°. La figure compte ainsi deux angles de 65° et deux de 115°, pour un total de 360°.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le diamètre d'un disque d'aire 78,5 cm², en prenant π = 3,14, est de :",
+      "o": [
+        "2,5 cm",
+        "5 cm",
+        "10 cm",
+        "25 cm"
+      ],
+      "r": 2,
+      "x": "On part de l'aire, π × r² = 78,5, donc r² = 78,5 ÷ 3,14 = 25 et r = 5 cm, ce qui donne un diamètre de 10 cm. La réponse 5 cm est le rayon : lisez bien si la question porte sur le rayon ou sur le diamètre, qui en est le double.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'aire d'un secteur de 60° dans un disque de 6 cm de rayon, en prenant π = 3,14, est de :",
+      "o": [
+        "18,84 cm²",
+        "28,26 cm²",
+        "37,68 cm²",
+        "113,04 cm²"
+      ],
+      "r": 0,
+      "x": "Un secteur de 60° représente le sixième du disque, puisque 60 ÷ 360 = 1/6. L'aire du disque valant 3,14 × 36 = 113,04 cm², le secteur mesure 113,04 ÷ 6 = 18,84 cm². La réponse 113,04 cm² est l'aire du disque entier, sans tenir compte de l'angle du secteur.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une échelle dont le pied est à 2,4 m du mur atteint une hauteur de 3,2 m. Sa longueur est de :",
+      "o": [
+        "2,8 m",
+        "3,6 m",
+        "4 m",
+        "5,6 m"
+      ],
+      "r": 2,
+      "x": "L'échelle, le mur et le sol forment un triangle rectangle : Pythagore donne √(5,76 + 10,24) = √16 = 4 m. On reconnaît le triplet 3-4-5 multiplié par 0,8. La réponse 5,6 m additionne simplement les deux mesures, ce qui est toujours faux pour une hypoténuse.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans un triangle isocèle dont l'angle au sommet mesure 40°, chaque angle à la base mesure :",
+      "o": [
+        "70°",
+        "80°",
+        "100°",
+        "140°"
+      ],
+      "r": 0,
+      "x": "Dans un triangle isocèle, les deux angles à la base sont égaux : il reste 180 – 40 = 140° à partager entre eux, soit 70° chacun. La réponse 140° donne leur somme, sans la diviser par 2. On vérifie aisément : 40 + 70 + 70 = 180°.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'aire totale d'un cylindre de 2 cm de rayon et de 3 cm de hauteur, en prenant π = 3,14, est de :",
+      "o": [
+        "37,68 cm²",
+        "50,24 cm²",
+        "56,52 cm²",
+        "62,8 cm²"
+      ],
+      "r": 3,
+      "x": "L'aire totale comprend la surface latérale ET les deux disques de base : 2 × 3,14 × 2 × 3 = 37,68 cm² pour le côté, plus 2 × 3,14 × 4 = 25,12 cm² pour les bases, soit 62,8 cm². La réponse 37,68 cm² oublie les deux disques, alors qu'un cylindre fermé en possède bien deux.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre de cubes de 2 cm d'arête contenus dans un cube de 6 cm d'arête est :",
+      "o": [
+        "9",
+        "27",
+        "36",
+        "216"
+      ],
+      "r": 1,
+      "x": "On compte d'abord combien de petits cubes tiennent sur chaque arête : 6 ÷ 2 = 3, donc 3 × 3 × 3 = 27 cubes. La réponse 216 est le volume du grand cube en cm³, et non un nombre de cubes. Retenez que ce nombre est toujours le cube du rapport des arêtes.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une piscine de 10 m sur 5 m contient de l'eau sur 1,4 m de hauteur. Le volume d'eau est de :",
+      "o": [
+        "7 000 L",
+        "70 000 L",
+        "140 000 L",
+        "700 000 L"
+      ],
+      "r": 1,
+      "x": "Le volume d'eau vaut 10 × 5 × 1,4 = 70 m³, soit 70 000 litres puisque 1 m³ = 1 000 L. On calcule bien avec la hauteur d'EAU et non avec la profondeur totale du bassin. La réponse 7 000 L correspondrait à 7 m³, dix fois moins que le volume réel.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le périmètre d'un terrain rectangulaire de 45 m sur 30 m est de :",
+      "o": [
+        "75 m",
+        "90 m",
+        "135 m",
+        "150 m"
+      ],
+      "r": 3,
+      "x": "Le périmètre d'un rectangle vaut 2 × (longueur + largeur) : 2 × (45 + 30) = 150 m. La réponse 75 m est le demi-périmètre, c'est-à-dire la somme d'une longueur et d'une largeur seulement. Il faut toujours compter les quatre côtés du terrain.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'aire d'un triangle rectangle dont les côtés de l'angle droit mesurent 6 cm et 8 cm est de :",
+      "o": [
+        "24 cm²",
+        "30 cm²",
+        "48 cm²",
+        "60 cm²"
+      ],
+      "r": 0,
+      "x": "Dans un triangle rectangle, les deux côtés de l'angle droit servent directement de base et de hauteur : 6 × 8 ÷ 2 = 24 cm². La division par 2 est indispensable, car le triangle est la moitié du rectangle correspondant. La réponse 48 cm² donne précisément l'aire de ce rectangle.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre de piquets plantés tous les 3 m le long d'une clôture rectiligne de 45 m, extrémités comprises, est :",
+      "o": [
+        "14",
+        "15",
+        "16",
+        "18"
+      ],
+      "r": 2,
+      "x": "La division 45 ÷ 3 = 15 donne le nombre d'INTERVALLES, pas celui des piquets : sur une ligne droite, il y a toujours un piquet de plus, soit 16. Vérification sur un petit cas : sur 6 m, on plante à 0 m, 3 m et 6 m, donc 3 piquets pour 2 intervalles. Si la clôture était fermée, il n'y aurait que 15 piquets.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'arête d'un cube de 125 cm³ de volume mesure :",
+      "o": [
+        "5 cm",
+        "12,5 cm",
+        "25 cm",
+        "41,7 cm"
+      ],
+      "r": 0,
+      "x": "On cherche le nombre dont le cube vaut 125 : comme 5 × 5 × 5 = 125, l'arête mesure 5 cm. Il est utile de connaître les premiers cubes : 8, 27, 64 et 125. La réponse 41,7 cm divise 125 par 3 au lieu d'extraire la racine cubique, confusion entre division et extraction.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'angle au centre correspondant à un arc représentant le sixième d'un cercle mesure :",
+      "o": [
+        "30°",
+        "45°",
+        "60°",
+        "72°"
+      ],
+      "r": 2,
+      "x": "Un tour complet mesure 360°, donc le sixième du cercle correspond à 360 ÷ 6 = 60°. Les repères utiles sont : la moitié 180°, le tiers 120°, le quart 90° et le sixième 60°. La réponse 72° correspond au cinquième du cercle, soit 360 ÷ 5.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'aire d'un losange de 10 cm de côté et de 6 cm de hauteur est de :",
+      "o": [
+        "30 cm²",
+        "60 cm²",
+        "100 cm²",
+        "120 cm²"
+      ],
+      "r": 1,
+      "x": "Le losange étant un parallélogramme particulier, son aire vaut côté × hauteur = 10 × 6 = 60 cm². On n'utilise la formule des diagonales divisées par 2 que lorsque ce sont elles qui sont fournies. La réponse 30 cm² divise à tort par 2, ce qui mélange les deux formules.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le volume d'une boîte cubique de 20 cm d'arête, exprimé en litres, est de :",
+      "o": [
+        "0,8 L",
+        "2 L",
+        "6 L",
+        "8 L"
+      ],
+      "r": 3,
+      "x": "Le volume vaut 20 × 20 × 20 = 8 000 cm³, soit 8 litres puisque 1 litre = 1 000 cm³. Un cube de 10 cm d'arête contient exactement 1 litre, repère commode à mémoriser. La réponse 0,8 L déplace la virgule d'un rang de trop lors de la conversion.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans un repère orthonormé, la distance entre A(–2 ; 1) et B(2 ; 4) est :",
+      "o": [
+        "3",
+        "4",
+        "4,5",
+        "5"
+      ],
+      "r": 3,
+      "x": "On applique Pythagore aux écarts de coordonnées : l'écart des abscisses vaut 2 – (–2) = 4 et celui des ordonnées 4 – 1 = 3, d'où √(16 + 9) = 5. Attention au signe lors de la soustraction de –2, qui donne bien une addition. La réponse 4 ne tient compte que de l'écart horizontal.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le symétrique du point A(3 ; –5) par rapport à l'origine du repère est :",
+      "o": [
+        "(3 ; 5)",
+        "(–3 ; 5)",
+        "(–3 ; –5)",
+        "(5 ; –3)"
+      ],
+      "r": 1,
+      "x": "La symétrie par rapport à l'origine change le signe des DEUX coordonnées : (3 ; –5) devient (–3 ; 5). La réponse (3 ; 5) est le symétrique par rapport à l'axe des abscisses, qui ne change que l'ordonnée. Par rapport à l'axe des ordonnées, on obtiendrait (–3 ; –5).",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un quadrilatère dont les diagonales sont perpendiculaires et se coupent en leur milieu est :",
+      "o": [
+        "un rectangle",
+        "un trapèze",
+        "un losange",
+        "un parallélogramme"
+      ],
+      "r": 2,
+      "x": "Des diagonales à la fois perpendiculaires et se coupant en leur milieu caractérisent le losange, dont le carré est un cas particulier. Dans un rectangle, les diagonales se coupent bien en leur milieu et sont égales, mais elles ne sont pas perpendiculaires. Ces propriétés permettent de reconnaître chaque quadrilatère.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un polygone dont la somme des angles intérieurs vaut 1 080° possède :",
+      "o": [
+        "8 côtés",
+        "9 côtés",
+        "10 côtés",
+        "12 côtés"
+      ],
+      "r": 0,
+      "x": "On résout (n – 2) × 180 = 1 080, soit n – 2 = 6 et n = 8 côtés : il s'agit d'un octogone. Un polygone à 10 côtés aurait une somme d'angles de 1 440°, et un hexagone 720°. La même formule permet donc de passer du nombre de côtés à la somme des angles, et inversement.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Lorsque le rayon d'un disque est multiplié par 3, son aire est multipliée par :",
+      "o": [
+        "3",
+        "6",
+        "9",
+        "27"
+      ],
+      "r": 2,
+      "x": "Quand le rayon est multiplié par 3, l'aire l'est par 3² = 9, car elle dépend du carré du rayon. On le vérifie : un disque de 1 cm de rayon a une aire de 3,14 cm², celui de 3 cm une aire de 28,26 cm². La réponse 27 est le rapport des volumes d'une boule, qui vaut 3³.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le périmètre d'un demi-disque de 7 cm de rayon, en prenant π = 22/7, est de :",
+      "o": [
+        "36 cm",
+        "44 cm",
+        "50 cm",
+        "58 cm"
+      ],
+      "r": 0,
+      "x": "L'arc du demi-cercle mesure π × r = 22/7 × 7 = 22 cm, et l'on y ajoute le diamètre de 14 cm qui ferme la figure, soit 36 cm. La valeur 22/7 est une approximation de π commode lorsque le rayon est un multiple de 7. La réponse 44 cm est la circonférence du cercle entier.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Deux angles opposés par le sommet mesurent respectivement 47° et :",
+      "o": [
+        "43°",
+        "47°",
+        "133°",
+        "313°"
+      ],
+      "r": 1,
+      "x": "Deux angles opposés par le sommet sont toujours égaux : le second mesure donc également 47°. Ils sont formés par deux droites sécantes et se font face de part et d'autre du point d'intersection. La réponse 133° est celle de l'angle ADJACENT, supplémentaire du premier puisque 47 + 133 = 180.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sur une carte à l'échelle 1/25 000, un centimètre représente :",
+      "o": [
+        "25 m",
+        "250 m",
+        "2 500 m",
+        "25 km"
+      ],
+      "r": 1,
+      "x": "Un centimètre sur la carte représente 25 000 cm en réalité, soit 250 m après division par 100. La conversion des centimètres en mètres est l'étape qui fait le plus trébucher. La réponse 2 500 m correspondrait à l'échelle 1/250 000, dix fois plus réduite que celle de l'énoncé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le volume d'un prisme droit dont la base a une aire de 12 cm² et dont la hauteur mesure 9 cm est de :",
+      "o": [
+        "36 cm³",
+        "54 cm³",
+        "96 cm³",
+        "108 cm³"
+      ],
+      "r": 3,
+      "x": "Le volume d'un prisme droit vaut aire de la base × hauteur, sans aucune division : 12 × 9 = 108 cm³. La réponse 36 cm³ divise par 3, règle réservée aux pyramides et aux cônes. Prisme et cylindre se calculent de la même façon, la base multipliée par la hauteur.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans un triangle rectangle de côtés 5 cm, 12 cm et 13 cm, le sinus de l'angle opposé au côté de 5 cm vaut :",
+      "o": [
+        "5/13",
+        "5/12",
+        "12/13",
+        "13/5"
+      ],
+      "r": 0,
+      "x": "Le sinus d'un angle est le rapport du côté OPPOSÉ à l'hypoténuse, soit 5/13. Le rapport 12/13 est le cosinus du même angle, c'est-à-dire le côté adjacent sur l'hypoténuse, et 5/12 sa tangente. Retenez : sinus pour opposé, cosinus pour adjacent, tangente pour opposé sur adjacent.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un angle correspondant à un demi-tour mesure :",
+      "o": [
+        "45°",
+        "90°",
+        "180°",
+        "360°"
+      ],
+      "r": 2,
+      "x": "Un tour complet mesure 360°, donc un demi-tour en vaut la moitié, soit 180°, ce qui correspond à un angle plat. Un quart de tour mesure 90°, c'est-à-dire l'angle droit. Ces repères servent constamment en géométrie comme dans les problèmes de rotation.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le côté d'un carré de 36 cm de périmètre mesure :",
+      "o": [
+        "9 cm",
+        "12 cm",
+        "18 cm",
+        "81 cm"
+      ],
+      "r": 0,
+      "x": "Le périmètre d'un carré vaut 4 fois son côté, donc celui-ci mesure 36 ÷ 4 = 9 cm. La réponse 81 serait l'AIRE de ce carré, exprimée en cm². Une longueur et une aire ne s'expriment jamais dans la même unité, ce qui aide à repérer l'erreur immédiatement.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le volume d'une pyramide de base rectangulaire 6 m sur 4 m et de 9 m de hauteur est de :",
+      "o": [
+        "24 m³",
+        "48 m³",
+        "72 m³",
+        "216 m³"
+      ],
+      "r": 2,
+      "x": "L'aire de la base rectangulaire vaut 6 × 4 = 24 m², et le volume de la pyramide 24 × 9 ÷ 3 = 72 m³. La division par 3 s'applique à toutes les pyramides, quelle que soit la forme de leur base. La réponse 216 m³ oublie cette division et donne le volume du prisme correspondant.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les trois médianes d'un triangle se coupent :",
+      "o": [
+        "à l'orthocentre",
+        "au centre de gravité",
+        "au centre du cercle circonscrit",
+        "au centre du cercle inscrit"
+      ],
+      "r": 1,
+      "x": "Les médianes joignent chaque sommet au milieu du côté opposé et se coupent au centre de gravité, situé aux deux tiers de chaque médiane depuis le sommet. Les trois HAUTEURS se coupent, elles, à l'orthocentre. Les médiatrices donnent le centre du cercle circonscrit et les bissectrices celui du cercle inscrit.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La médiatrice d'un segment est :",
+      "o": [
+        "la droite parallèle au segment",
+        "la droite passant par ses extrémités",
+        "la bissectrice de l'angle formé",
+        "la perpendiculaire passant par son milieu"
+      ],
+      "r": 3,
+      "x": "La médiatrice d'un segment est la droite perpendiculaire qui passe par son milieu, et tout point situé dessus se trouve à égale distance des deux extrémités. Cette propriété sert à construire des points équidistants. La bissectrice, elle, partage un angle en deux parties égales.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le côté d'un terrain carré d'un hectare mesure :",
+      "o": [
+        "25 m",
+        "50 m",
+        "75 m",
+        "100 m"
+      ],
+      "r": 3,
+      "x": "Un hectare vaut 10 000 m², donc le côté du carré mesure √10 000 = 100 m. Un hectare est précisément un carré de 100 m de côté, repère très utile dans les problèmes agricoles. La réponse 50 m correspondrait à 2 500 m², soit un quart d'hectare seulement.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une citerne cylindrique de 1 m de diamètre et de 2 m de hauteur contient, en prenant π = 3,14 :",
+      "o": [
+        "785 L",
+        "1 570 L",
+        "3 140 L",
+        "6 280 L"
+      ],
+      "r": 1,
+      "x": "Le rayon vaut la moitié du diamètre, soit 0,5 m : le volume est donc 3,14 × 0,25 × 2 = 1,57 m³, c'est-à-dire 1 570 litres. La réponse 6 280 L prend le diamètre pour le rayon, erreur qui multiplie le résultat par quatre. Vérifiez toujours si l'énoncé donne le rayon ou le diamètre.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans un triangle, le plus grand côté est opposé :",
+      "o": [
+        "au plus petit angle",
+        "à l'angle droit",
+        "au plus grand angle",
+        "à l'angle aigu"
+      ],
+      "r": 2,
+      "x": "Dans tout triangle, l'ordre des côtés suit celui des angles opposés : le plus grand côté fait donc face au plus grand angle. Cette propriété vaut pour n'importe quel triangle, rectangle ou non. La réponse B n'est juste que dans un triangle rectangle, où l'angle droit se trouve être le plus grand.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La longueur d'un arc de 36° sur un cercle de 10 cm de rayon, en prenant π = 3,14, est de :",
+      "o": [
+        "6,28 cm",
+        "10 cm",
+        "12,56 cm",
+        "62,8 cm"
+      ],
+      "r": 0,
+      "x": "Un arc de 36° représente le dixième du cercle, puisque 36 ÷ 360 = 1/10 : la circonférence valant 62,8 cm, l'arc mesure 6,28 cm. On calcule donc toujours la fraction du tour que représente l'angle. La réponse 62,8 cm est la circonférence entière, sans tenir compte de l'angle.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un terrain est formé d'un carré de 20 m de côté surmonté d'un demi-disque de 10 m de rayon. Son aire totale, avec π = 3,14, est de :",
+      "o": [
+        "457 m²",
+        "514 m²",
+        "557 m²",
+        "714 m²"
+      ],
+      "r": 2,
+      "x": "Le carré mesure 20 × 20 = 400 m² et le demi-disque 3,14 × 100 ÷ 2 = 157 m², soit 557 m² au total. Il faut bien diviser l'aire du disque par 2, puisque la figure n'en comporte que la moitié. La réponse 714 m² compte le disque entier au lieu du demi-disque.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre de sommets d'une pyramide à base carrée est :",
+      "o": [
+        "5",
+        "6",
+        "8",
+        "12"
+      ],
+      "r": 0,
+      "x": "Une pyramide à base carrée possède 4 sommets de base plus le sommet principal, soit 5 au total. Elle compte par ailleurs 8 arêtes et 5 faces, dont 4 triangles et 1 carré. Dénombrer séparément faces, arêtes et sommets évite de les confondre dans les questions de ce type.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Deux triangles sont semblables dans un rapport de 1,5. Si le plus petit a une aire de 20 cm², celle du plus grand est de :",
+      "o": [
+        "30 cm²",
+        "35 cm²",
+        "40 cm²",
+        "45 cm²"
+      ],
+      "r": 3,
+      "x": "Les aires varient comme le CARRÉ du rapport de similitude : 1,5² = 2,25, donc 20 × 2,25 = 45 cm². La réponse 30 cm² applique le rapport des longueurs, soit 1,5, ce qui sous-estime l'agrandissement. Retenez la règle : longueurs ×k, aires ×k², volumes ×k³.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le diamètre d'un cercle de 25,12 cm de circonférence, en prenant π = 3,14, est de :",
+      "o": [
+        "4 cm",
+        "8 cm",
+        "12,56 cm",
+        "16 cm"
+      ],
+      "r": 1,
+      "x": "La circonférence valant π × diamètre, on divise : 25,12 ÷ 3,14 = 8 cm. La réponse 4 cm est le rayon, obtenu en divisant encore par 2. Il faut lire attentivement si la question porte sur le rayon ou sur le diamètre, les deux étant souvent proposés ensemble comme pièges.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les angles d'un triangle sont proportionnels à 1, 2 et 3. Le plus grand mesure :",
+      "o": [
+        "60°",
+        "90°",
+        "100°",
+        "120°"
+      ],
+      "r": 1,
+      "x": "Les angles étant proportionnels à 1, 2 et 3, on partage 180° en 1 + 2 + 3 = 6 parts de 30°, ce qui donne 30°, 60° et 90° : le triangle est donc rectangle. Le plus grand angle mesure 90°. La réponse 120° dépasserait ce que permet la somme totale de 180°.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La distance parcourue par une roue de 50 cm de diamètre en 100 tours, avec π = 3,14, est de :",
+      "o": [
+        "15,7 m",
+        "50 m",
+        "78,5 m",
+        "157 m"
+      ],
+      "r": 3,
+      "x": "La circonférence de la roue vaut 3,14 × 50 = 157 cm, donc 100 tours couvrent 15 700 cm, soit 157 m. Chaque tour de roue fait avancer d'exactement une circonférence. La réponse 78,5 m utilise le rayon à la place du diamètre, ce qui divise la distance réelle par deux.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une facture de 85 000 FCFA est réglée avec une remise de 4 %. Le montant payé est de :",
+      "o": [
+        "81 600 FCFA",
+        "82 000 FCFA",
+        "84 660 FCFA",
+        "88 400 FCFA"
+      ],
+      "r": 0,
+      "x": "La remise vaut 85 000 × 4 ÷ 100 = 3 400 FCFA, d'où 81 600 FCFA à payer. On peut aussi multiplier directement par 0,96, puisque régler après 4 % de remise revient à payer 96 % de la facture. La réponse 88 400 FCFA ajoute la remise au lieu de la retrancher.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un article acheté 12 000 FCFA est revendu 15 600 FCFA. Le taux de bénéfice sur le prix d'achat est de :",
+      "o": [
+        "23 %",
+        "26 %",
+        "30 %",
+        "36 %"
+      ],
+      "r": 2,
+      "x": "Le bénéfice vaut 15 600 – 12 000 = 3 600 FCFA, que l'on rapporte au PRIX D'ACHAT : 3 600 ÷ 12 000 = 30 %. Le taux de bénéfice se calcule toujours sur la somme engagée. La réponse 23 % rapporte ce bénéfice au prix de vente, ce qui donne le taux de marge et non celui de bénéfice.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un travailleur journalier gagne 4 500 FCFA par jour et travaille 26 jours dans le mois. Son revenu mensuel est de :",
+      "o": [
+        "117 000 FCFA",
+        "121 500 FCFA",
+        "126 000 FCFA",
+        "135 000 FCFA"
+      ],
+      "r": 0,
+      "x": "On multiplie le gain journalier par le nombre de jours travaillés : 4 500 × 26 = 117 000 FCFA. Le calcul se décompose aisément : 4 500 × 25 = 112 500, auxquels on ajoute 4 500. La réponse 135 000 FCFA correspondrait à 30 jours travaillés, soit un mois entier sans repos.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une avance de 30 % est versée sur une commande de 750 000 FCFA. Cette avance s'élève à :",
+      "o": [
+        "75 000 FCFA",
+        "150 000 FCFA",
+        "225 000 FCFA",
+        "525 000 FCFA"
+      ],
+      "r": 2,
+      "x": "L'avance vaut 750 000 × 30 ÷ 100 = 225 000 FCFA. Contrôle mental : 10 % font 75 000 FCFA, donc 30 % en font le triple. La réponse 525 000 FCFA est le solde restant à payer, c'est-à-dire les 70 % complémentaires de la commande.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un capital placé à 8 % l'an rapporte 48 000 FCFA d'intérêts en un an. Ce capital est de :",
+      "o": [
+        "384 000 FCFA",
+        "600 000 FCFA",
+        "640 000 FCFA",
+        "960 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Le capital s'obtient en divisant les intérêts par le taux : 48 000 ÷ 0,08 = 600 000 FCFA. On vérifie : 600 000 × 8 ÷ 100 = 48 000 FCFA. La réponse 384 000 FCFA multiplie au lieu de diviser, alors qu'un capital est toujours bien supérieur aux intérêts d'une seule année.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un prêt de 1 200 000 FCFA sans intérêt est remboursé en 24 mensualités égales. Chaque mensualité est de :",
+      "o": [
+        "24 000 FCFA",
+        "40 000 FCFA",
+        "48 000 FCFA",
+        "50 000 FCFA"
+      ],
+      "r": 3,
+      "x": "Un prêt sans intérêt se rembourse en divisant simplement le capital par le nombre de mensualités : 1 200 000 ÷ 24 = 50 000 FCFA. Le contrôle est immédiat, car 50 000 × 24 = 1 200 000. La réponse 40 000 FCFA correspondrait à 30 mensualités, donc à une durée plus longue.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une commerçante applique une marge de 15 % sur un article acheté 24 000 FCFA. Son bénéfice est de :",
+      "o": [
+        "1 600 FCFA",
+        "2 400 FCFA",
+        "3 000 FCFA",
+        "3 600 FCFA"
+      ],
+      "r": 3,
+      "x": "Le bénéfice vaut 24 000 × 15 ÷ 100 = 3 600 FCFA, le prix de vente s'élevant alors à 27 600 FCFA. Contrôle mental : 10 % font 2 400 FCFA et 5 % en font la moitié, soit 1 200. La réponse 2 400 FCFA correspond à une marge de 10 % seulement.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un matériel de 900 000 FCFA est amorti de façon linéaire sur 5 ans. L'annuité d'amortissement est de :",
+      "o": [
+        "150 000 FCFA",
+        "180 000 FCFA",
+        "225 000 FCFA",
+        "450 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Un amortissement linéaire répartit la valeur du bien en parts égales sur la durée d'usage : 900 000 ÷ 5 = 180 000 FCFA par an. Au terme des cinq années, la valeur comptable du matériel est donc nulle. La réponse 225 000 FCFA correspondrait à une durée de 4 ans.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un client achète 40 sacs à 12 500 FCFA l'unité et obtient 5 % de remise. Il paie :",
+      "o": [
+        "450 000 FCFA",
+        "462 500 FCFA",
+        "475 000 FCFA",
+        "525 000 FCFA"
+      ],
+      "r": 2,
+      "x": "Le montant brut vaut 40 × 12 500 = 500 000 FCFA, la remise 25 000 FCFA, d'où 475 000 FCFA à payer. On peut aussi multiplier directement le brut par 0,95. La réponse 525 000 FCFA ajoute la remise au lieu de la déduire, erreur de sens à éviter absolument.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une caisse de 3 500 000 FCFA diminue de 1 400 000 FCFA. La baisse est de :",
+      "o": [
+        "40 %",
+        "42 %",
+        "50 %",
+        "60 %"
+      ],
+      "r": 0,
+      "x": "On rapporte la baisse au montant initial : 1 400 000 ÷ 3 500 000 = 0,40, soit 40 %. La fraction se simplifie en 2/5, ce qui confirme le résultat. La réponse 60 % correspond à la part restant en caisse, c'est-à-dire au complément de la baisse.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La médiane de la série 5 ; 8 ; 8 ; 10 ; 12 ; 15 ; 20 est :",
+      "o": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "r": 2,
+      "x": "La série compte 7 valeurs, soit un effectif impair : la médiane est donc la quatrième, c'est-à-dire 10, avec trois valeurs avant elle et trois après. La réponse 8 est le mode de cette série, puisque 8 y apparaît deux fois. Médiane et mode répondent à deux questions différentes.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La moyenne de la série 20 ; 25 ; 30 ; 45 est :",
+      "o": [
+        "30",
+        "32,5",
+        "35",
+        "120"
+      ],
+      "r": 0,
+      "x": "On additionne les quatre valeurs, 20 + 25 + 30 + 45 = 120, puis on divise par 4, ce qui donne 30. La réponse 120 est la somme et non la moyenne. Retenez qu'une moyenne se situe toujours entre la plus petite et la plus grande valeur de la série.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'écart entre la plus grande et la plus petite valeur d'une série statistique se nomme :",
+      "o": [
+        "la médiane",
+        "le mode",
+        "la moyenne",
+        "l'étendue"
+      ],
+      "r": 3,
+      "x": "Cet écart porte le nom d'étendue, et il mesure la dispersion de la série, c'est-à-dire son étalement. Le mode désigne la valeur la plus fréquente, la médiane celle du milieu et la moyenne le résultat d'un partage équitable. Ces quatre indicateurs ne doivent jamais être confondus.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sur 800 personnes interrogées, 240 déclarent préférer le riz. Cela représente :",
+      "o": [
+        "24 %",
+        "30 %",
+        "33 %",
+        "36 %"
+      ],
+      "r": 1,
+      "x": "On divise l'effectif concerné par l'effectif total : 240 ÷ 800 = 0,30, soit 30 %. La fraction se simplifie en 3/10, ce qui confirme le calcul. La réponse 24 % reprend le chiffre 240 lu en centaines, confusion fréquente entre un effectif et un pourcentage.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans un diagramme circulaire, un secteur de 120° représente une part de :",
+      "o": [
+        "25 %",
+        "33,3 %",
+        "40 %",
+        "120 %"
+      ],
+      "r": 1,
+      "x": "On rapporte l'angle au tour complet : 120 ÷ 360 = 0,333, soit 33,3 %, c'est-à-dire le tiers du disque. Un secteur de 90° représenterait, lui, 25 %. Le passage entre angle et pourcentage se fait toujours en divisant ou en multipliant par 360.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La moyenne de douze nombres est 15. Leur somme est :",
+      "o": [
+        "27",
+        "60",
+        "150",
+        "180"
+      ],
+      "r": 3,
+      "x": "On remonte de la moyenne à la somme en multipliant par l'effectif : 12 × 15 = 180. C'est l'opération inverse du calcul de la moyenne, qui divise la somme par l'effectif. La réponse 27 additionne l'effectif et la moyenne, deux grandeurs qui ne s'additionnent jamais.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre total de points obtenus par 25 élèves ayant 11,6 de moyenne est :",
+      "o": [
+        "290",
+        "300",
+        "310",
+        "325"
+      ],
+      "r": 0,
+      "x": "Le total des points vaut effectif × moyenne = 25 × 11,6 = 290. On peut décomposer le calcul : 25 × 11 = 275, auxquels on ajoute 25 × 0,6 = 15. La réponse 325 correspondrait à une moyenne de 13, donc à un total plus élevé que celui de l'énoncé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "En lançant un dé équilibré à six faces, la probabilité d'obtenir au moins 5 est :",
+      "o": [
+        "1/6",
+        "1/4",
+        "1/3",
+        "1/2"
+      ],
+      "r": 2,
+      "x": "L'expression « au moins 5 » désigne les faces 5 et 6, soit 2 cas favorables sur 6, d'où une probabilité de 2/6 = 1/3. « Au moins » inclut toujours la valeur citée. La réponse 1/6 correspondrait au seul 6, c'est-à-dire à « plus de 5 ».",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une urne contient 12 boules dont 4 rouges. La probabilité de tirer une boule rouge est :",
+      "o": [
+        "1/3",
+        "1/2",
+        "2/3",
+        "3/4"
+      ],
+      "r": 0,
+      "x": "On divise le nombre de boules rouges par le nombre total : 4/12 = 1/3. La probabilité de ne PAS tirer de rouge vaut alors 8/12 = 2/3, les deux totalisant bien 1. Simplifier la fraction aide à retrouver la bonne proposition parmi des écritures différentes.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans un sac de 20 tickets numérotés de 1 à 20, la probabilité de tirer un multiple de 5 est :",
+      "o": [
+        "1/10",
+        "1/5",
+        "1/4",
+        "1/2"
+      ],
+      "r": 1,
+      "x": "Les multiples de 5 jusqu'à 20 sont 5, 10, 15 et 20, soit 4 cas favorables sur 20, d'où 4/20 = 1/5. Il ne faut pas oublier 20, qui est bien un multiple de 5. La réponse 1/4 correspondrait à 5 tickets favorables, donc à un autre critère.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un piéton marche à 5 km/h pendant 2 h 24 min. Il parcourt :",
+      "o": [
+        "10 km",
+        "12 km",
+        "12,4 km",
+        "14 km"
+      ],
+      "r": 1,
+      "x": "La durée de 2 h 24 min s'écrit 2 + 24/60 = 2,4 h, et la distance vaut 5 × 2,4 = 12 km. La conversion des minutes en fraction d'heure est l'étape décisive du calcul. La réponse 12,4 km recopie le chiffre de la durée, confusion entre durée décimale et distance.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un véhicule parcourt 90 km en 1 h 15 min. Sa vitesse moyenne est de :",
+      "o": [
+        "60 km/h",
+        "67,5 km/h",
+        "72 km/h",
+        "75 km/h"
+      ],
+      "r": 2,
+      "x": "La durée de 1 h 15 min s'écrit 1,25 h, et la vitesse vaut 90 ÷ 1,25 = 72 km/h. On contrôle facilement : en 1,25 h à 72 km/h, on parcourt bien 90 km. La réponse 60 km/h correspondrait à un trajet effectué en 1 h 30 min.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un car quitte une ville à 6 h et parcourt 240 km à 60 km/h. Il arrive à :",
+      "o": [
+        "10 h",
+        "10 h 30",
+        "11 h",
+        "12 h"
+      ],
+      "r": 0,
+      "x": "La durée du trajet vaut 240 ÷ 60 = 4 heures, donc l'arrivée se fait à 6 h + 4 h = 10 h. Il faut toujours calculer la durée avant de l'ajouter à l'heure de départ. Une vitesse de 48 km/h aurait donné 5 heures de trajet et une arrivée à 11 h.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un train roule 3 heures à 80 km/h puis 2 heures à 100 km/h. Sa vitesse moyenne est de :",
+      "o": [
+        "84 km/h",
+        "86 km/h",
+        "88 km/h",
+        "90 km/h"
+      ],
+      "r": 2,
+      "x": "On calcule la distance totale, 3 × 80 + 2 × 100 = 440 km, et la durée totale, 5 heures, d'où 440 ÷ 5 = 88 km/h. Une vitesse moyenne est toujours la distance totale divisée par la durée totale. La réponse 90 km/h est la moyenne des deux vitesses, qui ignore les durées inégales.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un ouvrier réalise un travail en 12 heures et un second en 6 heures. Ensemble, ils le réalisent en :",
+      "o": [
+        "4 h",
+        "6 h",
+        "9 h",
+        "18 h"
+      ],
+      "r": 0,
+      "x": "En une heure, le premier ouvrier fait 1/12 du travail et le second 1/6, soit 1/12 + 2/12 = 1/4 du total. Il leur faut donc 4 heures à eux deux. La réponse 9 h est la moyenne des deux durées, calcul sans aucun sens pour des travaux menés en parallèle.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un réservoir de 4 500 litres se vide à raison de 25 litres par minute. Il est vide au bout de :",
+      "o": [
+        "1 h 30",
+        "2 h",
+        "2 h 30",
+        "3 h"
+      ],
+      "r": 3,
+      "x": "On divise le volume par le débit : 4 500 ÷ 25 = 180 minutes, soit 3 heures. La conversion des minutes en heures est la dernière étape, qu'il ne faut pas oublier. La réponse 1 h 30 correspondrait à un débit de 50 litres par minute, donc deux fois plus rapide.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un producteur récolte 2,8 tonnes de sorgho sur 0,7 hectare. Son rendement est de :",
+      "o": [
+        "2 t/ha",
+        "4 t/ha",
+        "5,6 t/ha",
+        "7 t/ha"
+      ],
+      "r": 1,
+      "x": "Un rendement est une production rapportée à une surface, donc on divise : 2,8 ÷ 0,7 = 4 t/ha. Le contrôle est simple, car 4 × 0,7 = 2,8 tonnes. La réponse 5,6 t/ha multiplie au lieu de diviser, erreur de sens classique sur ce type de calcul agricole.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une exploitation utilise 25 kg de semences par hectare. Pour 12 hectares, il faut :",
+      "o": [
+        "250 kg",
+        "300 kg",
+        "325 kg",
+        "375 kg"
+      ],
+      "r": 1,
+      "x": "On multiplie la dose par la surface : 25 × 12 = 300 kg de semences, la quantité étant proportionnelle au nombre d'hectares. La réponse 375 kg correspondrait à 15 hectares, soit trois hectares de plus que ceux indiqués par l'énoncé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un poulailler consomme 45 kg d'aliment par jour. Un stock de 1,35 tonne dure :",
+      "o": [
+        "20 jours",
+        "25 jours",
+        "28 jours",
+        "30 jours"
+      ],
+      "r": 3,
+      "x": "On convertit d'abord la masse, 1,35 t = 1 350 kg, puis on divise par la consommation journalière : 1 350 ÷ 45 = 30 jours. La conversion en kilogrammes est indispensable avant toute division. La réponse 25 jours correspondrait à un stock de 1 125 kg seulement.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Après séchage, 500 kg de tomates perdent 20 % de leur masse. Il reste :",
+      "o": [
+        "400 kg",
+        "420 kg",
+        "480 kg",
+        "600 kg"
+      ],
+      "r": 0,
+      "x": "La perte vaut 500 × 20 ÷ 100 = 100 kg, donc il reste 400 kg ; on peut aussi multiplier directement par 0,80. La réponse 600 kg ajoute la perte au lieu de la retrancher, alors qu'un séchage fait toujours diminuer la masse d'un produit.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un producteur vend 1,2 tonne de maïs à 250 FCFA le kilogramme. Il encaisse :",
+      "o": [
+        "240 000 FCFA",
+        "280 000 FCFA",
+        "300 000 FCFA",
+        "360 000 FCFA"
+      ],
+      "r": 2,
+      "x": "On convertit la masse en kilogrammes, 1,2 t = 1 200 kg, puis on multiplie par le prix unitaire : 1 200 × 250 = 300 000 FCFA. La conversion précède toujours la multiplication. La réponse 240 000 FCFA correspondrait à 960 kg, soit une récolte plus faible.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une parcelle de 1 200 m² reçoit une irrigation de 5 mm d'eau. Le volume utilisé est de :",
+      "o": [
+        "6 000 L",
+        "12 000 L",
+        "24 000 L",
+        "60 000 L"
+      ],
+      "r": 0,
+      "x": "Une hauteur de 5 mm vaut 0,005 m, donc le volume est 1 200 × 0,005 = 6 m³, soit 6 000 litres. Le repère à retenir : un millimètre d'eau correspond à un litre par mètre carré. La réponse 60 000 L correspondrait à 50 mm d'eau, soit dix fois plus d'irrigation.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un commerçant emprunte 500 000 FCFA à 12 % l'an et rembourse au bout de 6 mois. Les intérêts s'élèvent à :",
+      "o": [
+        "15 000 FCFA",
+        "25 000 FCFA",
+        "30 000 FCFA",
+        "60 000 FCFA"
+      ],
+      "r": 2,
+      "x": "Les intérêts valent 500 000 × 12 ÷ 100 × 0,5 = 30 000 FCFA, la durée de 6 mois correspondant à une demi-année. On peut aussi appliquer la formule mensuelle 500 000 × 12 × 6 ÷ 1 200. La réponse 60 000 FCFA correspond à une année entière d'emprunt.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une cotisation de 3 % est retenue sur un salaire de 250 000 FCFA. Elle s'élève à :",
+      "o": [
+        "5 000 FCFA",
+        "7 500 FCFA",
+        "8 250 FCFA",
+        "12 500 FCFA"
+      ],
+      "r": 1,
+      "x": "La cotisation vaut 250 000 × 3 ÷ 100 = 7 500 FCFA. Contrôle mental : 1 % font 2 500 FCFA, donc 3 % en font le triple. La réponse 12 500 FCFA correspondrait à un taux de 5 %, soit près du double de celui annoncé par l'énoncé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le transport de 15 tonnes de marchandises facturé à 12 500 FCFA la tonne revient à :",
+      "o": [
+        "150 000 FCFA",
+        "165 000 FCFA",
+        "175 000 FCFA",
+        "187 500 FCFA"
+      ],
+      "r": 3,
+      "x": "On multiplie le tonnage par le tarif : 15 × 12 500 = 187 500 FCFA. Le calcul se décompose : 10 tonnes font 125 000 FCFA et 5 tonnes 62 500 FCFA. La réponse 150 000 FCFA correspondrait à 12 tonnes seulement, soit trois tonnes de moins.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un ebook vendu 2 000 FCFA trouve 45 acheteurs. Le chiffre d'affaires est de :",
+      "o": [
+        "45 000 FCFA",
+        "60 000 FCFA",
+        "75 000 FCFA",
+        "90 000 FCFA"
+      ],
+      "r": 3,
+      "x": "Le chiffre d'affaires est le produit du prix unitaire par le nombre de ventes : 2 000 × 45 = 90 000 FCFA. La réponse 45 000 FCFA correspondrait à un prix de 1 000 FCFA par exemplaire. Un chiffre d'affaires ne déduit aucune charge, il mesure seulement le montant des ventes.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une remise de 1 500 FCFA accordée sur un prix de 12 000 FCFA représente :",
+      "o": [
+        "10 %",
+        "12,5 %",
+        "15 %",
+        "18 %"
+      ],
+      "r": 1,
+      "x": "On rapporte la remise au prix initial : 1 500 ÷ 12 000 = 0,125, soit 12,5 %. La fraction se simplifie en 1/8, dont l'équivalent décimal 0,125 est à mémoriser. La réponse 10 % correspondrait à une remise de 1 200 FCFA, donc inférieure à celle accordée.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une somme de 180 000 FCFA est partagée entre quatre personnes ; trois reçoivent 40 000 FCFA chacune. La quatrième reçoit :",
+      "o": [
+        "40 000 FCFA",
+        "45 000 FCFA",
+        "60 000 FCFA",
+        "120 000 FCFA"
+      ],
+      "r": 2,
+      "x": "Les trois premières reçoivent 3 × 40 000 = 120 000 FCFA, donc il reste 180 000 – 120 000 = 60 000 FCFA pour la quatrième. On soustrait toujours la part déjà distribuée du total disponible. La réponse 45 000 FCFA correspondrait à un partage égal entre les quatre personnes.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un salarié perçoit 96 000 FCFA pour 160 heures de travail. Son taux horaire est de :",
+      "o": [
+        "600 FCFA",
+        "620 FCFA",
+        "640 FCFA",
+        "750 FCFA"
+      ],
+      "r": 0,
+      "x": "Le taux horaire s'obtient en divisant le salaire par le nombre d'heures : 96 000 ÷ 160 = 600 FCFA. On vérifie : 600 × 160 = 96 000 FCFA. La réponse 750 FCFA correspondrait à 128 heures de travail, soit une durée plus courte pour le même salaire.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un boutiquier achète 24 cartons à 18 500 FCFA l'unité. Sa dépense totale est de :",
+      "o": [
+        "388 500 FCFA",
+        "420 000 FCFA",
+        "444 000 FCFA",
+        "462 500 FCFA"
+      ],
+      "r": 2,
+      "x": "On multiplie le nombre de cartons par leur prix unitaire : 24 × 18 500 = 444 000 FCFA. Le calcul se décompose : 20 cartons font 370 000 FCFA et 4 cartons 74 000 FCFA. La réponse 462 500 FCFA correspondrait à 25 cartons, soit un carton de plus.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le prix du sac de ciment passe de 5 200 FCFA à un prix supérieur de 25 %. Le nouveau prix est de :",
+      "o": [
+        "6 500 FCFA",
+        "6 700 FCFA",
+        "6 900 FCFA",
+        "7 200 FCFA"
+      ],
+      "r": 0,
+      "x": "Une hausse de 25 % revient à multiplier par 1,25 : 5 200 × 1,25 = 6 500 FCFA, soit 1 300 FCFA d'augmentation. On peut aussi ajouter le quart du prix, puisque 25 % correspondent exactement à un quart. Une hausse de 20 % aurait donné 6 240 FCFA.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un ménage consomme 240 kWh au tarif de 115 FCFA le kWh. Sa facture s'élève à :",
+      "o": [
+        "21 600 FCFA",
+        "24 000 FCFA",
+        "26 400 FCFA",
+        "27 600 FCFA"
+      ],
+      "r": 3,
+      "x": "On multiplie la consommation par le tarif unitaire : 240 × 115 = 27 600 FCFA. Le calcul se décompose : 240 × 100 = 24 000, auxquels on ajoute 240 × 15 = 3 600. La réponse 24 000 FCFA correspondrait à un tarif de 100 FCFA le kilowattheure.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une moto consomme 2,5 litres aux 100 km. Pour un trajet de 340 km, elle consomme :",
+      "o": [
+        "7,5 L",
+        "8,5 L",
+        "9 L",
+        "13,6 L"
+      ],
+      "r": 1,
+      "x": "On rapporte la distance à la base de 100 km : 340 ÷ 100 = 3,4, puis 2,5 × 3,4 = 8,5 litres. La consommation est proportionnelle à la distance parcourue. La réponse 13,6 L divise la distance par la consommation, ce qui inverse complètement le rapport.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un maçon facture 3 500 FCFA le mètre carré pour un chantier de 45 m². Sa facture s'élève à :",
+      "o": [
+        "145 000 FCFA",
+        "157 500 FCFA",
+        "162 000 FCFA",
+        "175 000 FCFA"
+      ],
+      "r": 1,
+      "x": "On multiplie la surface par le prix au mètre carré : 45 × 3 500 = 157 500 FCFA. Le calcul se décompose : 40 m² font 140 000 FCFA et 5 m² 17 500 FCFA. La réponse 175 000 FCFA correspondrait à 50 m², soit 5 m² de plus que le chantier réel.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un élève économise 1 500 FCFA par semaine pendant 26 semaines. Il dispose de :",
+      "o": [
+        "27 000 FCFA",
+        "33 000 FCFA",
+        "36 000 FCFA",
+        "39 000 FCFA"
+      ],
+      "r": 3,
+      "x": "On multiplie l'économie hebdomadaire par le nombre de semaines : 1 500 × 26 = 39 000 FCFA. Le calcul se vérifie : 1 500 × 25 = 37 500, auxquels on ajoute 1 500. La réponse 36 000 FCFA ne compte que 24 semaines, soit deux semaines de moins.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un champ de 5 hectares produit 3,5 tonnes par hectare, vendues à 200 FCFA le kilogramme. La recette est de :",
+      "o": [
+        "3 500 000 FCFA",
+        "3 750 000 FCFA",
+        "4 000 000 FCFA",
+        "4 500 000 FCFA"
+      ],
+      "r": 0,
+      "x": "La production totale vaut 5 × 3,5 = 17,5 tonnes, soit 17 500 kg, vendus 17 500 × 200 = 3 500 000 FCFA. Il faut enchaîner rendement, surface, conversion puis prix, dans cet ordre. La réponse 4 000 000 FCFA supposerait 20 tonnes récoltées, donc un rendement plus élevé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Pour réussir un test de 80 questions, il faut obtenir 60 % de bonnes réponses, soit :",
+      "o": [
+        "40 réponses",
+        "44 réponses",
+        "48 réponses",
+        "52 réponses"
+      ],
+      "r": 2,
+      "x": "On calcule 80 × 60 ÷ 100 = 48 bonnes réponses. Autre lecture : 60 % correspondent aux trois cinquièmes, et les trois cinquièmes de 80 font bien 48. La réponse 40 correspondrait à un seuil de 50 %, c'est-à-dire à la moitié des questions seulement.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre romain XLIX s'écrit en chiffres :",
+      "o": [
+        "49",
+        "59",
+        "61",
+        "69"
+      ],
+      "r": 0,
+      "x": "En numération romaine, XL vaut 40 car X placé AVANT L se retranche, et IX vaut 9 pour la même raison, d'où 40 + 9 = 49. La règle générale est qu'un symbole plus petit placé avant un plus grand se soustrait, et placé après il s'ajoute. La réponse 61 s'écrirait LXI, c'est-à-dire 50 + 11.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Dans le nombre 84 275, le chiffre des dizaines de mille est :",
+      "o": [
+        "2",
+        "4",
+        "7",
+        "8"
+      ],
+      "r": 3,
+      "x": "En partant de la droite, 5 occupe le rang des unités, 7 celui des dizaines, 2 celui des centaines, 4 celui des milliers et 8 celui des dizaines de mille. Le chiffre cherché est donc 8. La réponse 2 donne le chiffre des centaines : les rangs se comptent toujours de droite à gauche.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le nombre de centaines entières contenues dans 4 580 est :",
+      "o": [
+        "4",
+        "45",
+        "458",
+        "4 580"
+      ],
+      "r": 1,
+      "x": "On divise par 100 et on garde la partie entière : 4 580 ÷ 100 = 45,8, donc 45 centaines entières. La réponse 4 est le chiffre des milliers et 458 le nombre de dizaines entières. Attention à la différence entre « chiffre des centaines » et « nombre de centaines ».",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le nombre 2 739 est divisible par :",
+      "o": [
+        "4",
+        "5",
+        "9",
+        "11"
+      ],
+      "r": 3,
+      "x": "Pour tester la divisibilité par 11, on alterne les signes des chiffres : 2 – 7 + 3 – 9 = –11, qui est un multiple de 11, et l'on vérifie que 2 739 = 11 × 249. Il n'est pas divisible par 9, car la somme de ses chiffres vaut 21. Étant impair, il ne l'est pas non plus par 4.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Parmi les nombres suivants, celui qui est divisible par 25 est :",
+      "o": [
+        "1 115",
+        "1 240",
+        "1 275",
+        "1 320"
+      ],
+      "r": 2,
+      "x": "Un nombre est divisible par 25 lorsque ses deux derniers chiffres forment 00, 25, 50 ou 75 : c'est le cas de 1 275, qui vaut 25 × 51. Les nombres 1 240 et 1 320 sont divisibles par 5 mais pas par 25. Ce critère porte sur les deux derniers chiffres, et non sur la somme des chiffres.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Parmi les nombres suivants, celui qui est divisible par 6 est :",
+      "o": [
+        "2 134",
+        "3 141",
+        "4 128",
+        "5 122"
+      ],
+      "r": 2,
+      "x": "Un nombre est divisible par 6 s'il l'est à la fois par 2 et par 3 : 4 128 est pair et la somme de ses chiffres vaut 15, multiple de 3. Le nombre 3 141 passe le test de 3 mais il est impair. Les nombres 2 134 et 5 122 sont pairs, mais leurs sommes de chiffres ne sont pas multiples de 3.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Parmi les nombres suivants, le carré parfait est :",
+      "o": [
+        "150",
+        "196",
+        "210",
+        "240"
+      ],
+      "r": 1,
+      "x": "Un carré parfait est le carré d'un nombre entier : 196 = 14 × 14. Il est utile de mémoriser les carrés jusqu'à 20, notamment 169 pour 13, 196 pour 14 et 225 pour 15. Les trois autres nombres se situent entre deux carrés consécutifs, donc aucun n'est un carré parfait.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le cube de 7 est égal à :",
+      "o": [
+        "21",
+        "49",
+        "243",
+        "343"
+      ],
+      "r": 3,
+      "x": "Le cube de 7 vaut 7 × 7 × 7 = 343. La réponse 49 est son carré et 21 son triple, deux opérations bien différentes. Les premiers cubes à connaître par cœur sont 8, 27, 64, 125, 216 et 343.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le produit 2⁵ × 5⁵ est égal à :",
+      "o": [
+        "1 000",
+        "10 000",
+        "100 000",
+        "1 000 000"
+      ],
+      "r": 2,
+      "x": "Deux puissances de même exposant se regroupent sous une seule base : 2⁵ × 5⁵ = (2 × 5)⁵ = 10⁵ = 100 000. On peut aussi calculer 32 × 3 125, mais le détour est bien plus long. L'exposant d'une puissance de 10 donne directement son nombre de zéros.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le quotient 3⁴ ÷ 3² est égal à :",
+      "o": [
+        "3",
+        "9",
+        "27",
+        "81"
+      ],
+      "r": 1,
+      "x": "Pour diviser deux puissances de même base, on SOUSTRAIT les exposants : 3⁴⁻² = 3² = 9. Le contrôle est immédiat, puisque 81 ÷ 9 = 9. La réponse 27 correspondrait à 3³, obtenu en retirant seulement 1 à l'exposant au lieu de 2.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le nombre √30 est compris entre :",
+      "o": [
+        "5 et 6",
+        "6 et 7",
+        "7 et 8",
+        "8 et 9"
+      ],
+      "r": 0,
+      "x": "On encadre 30 entre deux carrés parfaits consécutifs : 25 < 30 < 36, soit 5² < 30 < 6², donc √30 se situe entre 5 et 6. Sa valeur approchée est 5,48. Cette méthode d'encadrement par les carrés parfaits permet d'estimer n'importe quelle racine sans calculatrice.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "La racine carrée de 2,25 est :",
+      "o": [
+        "1,125",
+        "1,5",
+        "4,5",
+        "15"
+      ],
+      "r": 1,
+      "x": "On cherche le nombre dont le carré vaut 2,25 : 1,5 × 1,5 = 2,25. La réponse 15 est la racine de 225, nombre cent fois plus grand, et 1,125 est la moitié de 2,25. Retenez que la racine carrée d'un nombre supérieur à 1 est toujours plus petite que ce nombre.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Entre les fractions 5/7 et 7/9, la plus grande est :",
+      "o": [
+        "5/7",
+        "7/9",
+        "elles sont égales",
+        "on ne peut pas les comparer"
+      ],
+      "r": 1,
+      "x": "On met les deux fractions au dénominateur commun 63 : 5/7 = 45/63 et 7/9 = 49/63, donc 7/9 est la plus grande. La conversion en décimal le confirme, 0,714 contre 0,778. Deux fractions sont toujours comparables, il suffit de les ramener au même dénominateur.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le résultat de 2/3 + 1/4 – 1/2 est :",
+      "o": [
+        "1/5",
+        "1/4",
+        "5/12",
+        "3/4"
+      ],
+      "r": 2,
+      "x": "On met les trois fractions au dénominateur commun 12 : 8/12 + 3/12 – 6/12 = 5/12. On traite l'ensemble du calcul d'un seul coup, sans regrouper les fractions deux par deux. Le résultat, environ 0,42, est cohérent avec l'estimation 0,67 + 0,25 – 0,5.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Les 2/3 des 3/5 de 300 valent :",
+      "o": [
+        "120",
+        "150",
+        "180",
+        "200"
+      ],
+      "r": 0,
+      "x": "On calcule dans l'ordre : les 3/5 de 300 font 180, puis les 2/3 de 180 font 120. On peut aussi multiplier d'abord les deux fractions, 2/3 × 3/5 = 2/5, puis prendre les 2/5 de 300. La réponse 180 s'arrête à la première étape du calcul.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "L'inverse de 0,25 est :",
+      "o": [
+        "–0,25",
+        "0,5",
+        "4",
+        "25"
+      ],
+      "r": 2,
+      "x": "L'inverse d'un nombre est celui dont le produit avec lui vaut 1 : comme 0,25 = 1/4, son inverse est 4, et l'on vérifie que 0,25 × 4 = 1. La réponse –0,25 est son OPPOSÉ, c'est-à-dire le nombre dont la somme avec lui est nulle. Inverse et opposé ne doivent jamais être confondus.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "L'inverse de la fraction 5/8 est :",
+      "o": [
+        "8/5",
+        "–5/8",
+        "5/8",
+        "40"
+      ],
+      "r": 0,
+      "x": "L'inverse d'une fraction s'obtient en échangeant son numérateur et son dénominateur : 8/5, et l'on vérifie que 5/8 × 8/5 = 1. La réponse –5/8 est l'opposé de la fraction, non son inverse. Tout nombre non nul possède un inverse, mais zéro n'en a pas.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le résultat du calcul 12 – (5 – 3) × 2 est :",
+      "o": [
+        "8",
+        "12",
+        "14",
+        "18"
+      ],
+      "r": 0,
+      "x": "On commence par la parenthèse, 5 – 3 = 2, puis la multiplication, 2 × 2 = 4, et enfin la soustraction : 12 – 4 = 8. L'ordre est toujours le même : parenthèses, puis multiplications et divisions, puis additions et soustractions. La réponse 14 calcule de gauche à droite sans respecter ces priorités.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le résultat de (–4) × (–3) ÷ 2 est :",
+      "o": [
+        "–6",
+        "–2",
+        "2",
+        "6"
+      ],
+      "r": 3,
+      "x": "Le produit de deux nombres négatifs est positif : (–4) × (–3) = 12, puis 12 ÷ 2 = 6. La règle des signes veut que deux signes identiques donnent un plus, et deux signes différents un moins. La réponse –6 conserve à tort un signe négatif après la multiplication.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "La somme de tous les diviseurs de 12 est :",
+      "o": [
+        "16",
+        "22",
+        "28",
+        "32"
+      ],
+      "r": 2,
+      "x": "Les diviseurs de 12 sont 1, 2, 3, 4, 6 et 12, dont la somme vaut 28. Il faut penser à inclure 1 et le nombre lui-même, les deux plus souvent oubliés. La réponse 16 omet précisément le diviseur 12, ce qui fausse le total.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "La décomposition en facteurs premiers de 360 est :",
+      "o": [
+        "2² × 3² × 5",
+        "2³ × 3 × 5²",
+        "2⁴ × 3 × 5",
+        "2³ × 3² × 5"
+      ],
+      "r": 3,
+      "x": "On divise successivement par les nombres premiers : 360 = 2 × 180 = 4 × 90 = 8 × 45, et 45 = 9 × 5, d'où 2³ × 3² × 5. Le contrôle est simple : 8 × 9 × 5 = 360. Les trois autres propositions donnent respectivement 180, 600 et 240.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le nombre de diviseurs de 100 est :",
+      "o": [
+        "6",
+        "8",
+        "9",
+        "10"
+      ],
+      "r": 2,
+      "x": "On liste les diviseurs par paires : 1 et 100, 2 et 50, 4 et 25, 5 et 20, puis 10 qui se multiplie par lui-même, soit 9 diviseurs. La décomposition 100 = 2² × 5² donne aussi (2 + 1)(2 + 1) = 9. Un carré parfait possède toujours un nombre IMPAIR de diviseurs.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le PGCD de 15 et 28 est :",
+      "o": [
+        "1",
+        "3",
+        "7",
+        "15"
+      ],
+      "r": 0,
+      "x": "Les diviseurs de 15 sont 1, 3, 5 et 15, ceux de 28 sont 1, 2, 4, 7, 14 et 28 : le seul diviseur commun est 1. On dit alors que les deux nombres sont premiers entre eux, bien qu'aucun des deux ne soit lui-même premier. Leur PPCM vaut dans ce cas leur produit, soit 420.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "L'arrondi à la dizaine de 2 846 est :",
+      "o": [
+        "2 800",
+        "2 840",
+        "2 850",
+        "2 900"
+      ],
+      "r": 2,
+      "x": "Le chiffre des dizaines est 4 ; on observe celui des unités, 6, supérieur ou égal à 5, donc on arrondit à la dizaine supérieure : 2 850. La réponse 2 840 est la troncature à la dizaine, qui coupe sans regarder le chiffre suivant. La réponse 2 800 serait l'arrondi à la centaine.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "L'arrondi au millier de 46 400 est :",
+      "o": [
+        "46 000",
+        "46 400",
+        "47 000",
+        "50 000"
+      ],
+      "r": 0,
+      "x": "Le chiffre des centaines vaut 4, donc inférieur à 5 : on arrondit au millier inférieur, soit 46 000. Si le nombre avait été 46 500, on aurait arrondi à 47 000. La réponse 50 000 serait l'arrondi à la dizaine de milliers, c'est-à-dire un rang trop loin.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le plus grand des nombres –7 ; –3 ; –10 et –5 est :",
+      "o": [
+        "–10",
+        "–7",
+        "–5",
+        "–3"
+      ],
+      "r": 3,
+      "x": "Sur une droite graduée, plus un nombre négatif est proche de zéro, plus il est grand : –3 est donc le plus grand des quatre. La réponse –10 est au contraire le plus petit, car il est le plus éloigné de zéro. Pour les nombres négatifs, l'ordre s'inverse par rapport à leur valeur absolue.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Dans la suite 1 ; 1 ; 2 ; 3 ; 5 ; 8 ; …, le terme suivant est :",
+      "o": [
+        "11",
+        "13",
+        "16",
+        "21"
+      ],
+      "r": 1,
+      "x": "Chaque terme est la somme des deux précédents : 5 + 8 = 13. On vérifie la règle en amont, puisque 1 + 1 = 2, 1 + 2 = 3 et 2 + 3 = 5. La réponse 16 doublerait 8, ce qui ne correspond pas à la progression observée dans les premiers termes.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Dans la suite 100 ; 50 ; 25 ; …, le terme suivant est :",
+      "o": [
+        "12,5",
+        "15",
+        "20",
+        "22,5"
+      ],
+      "r": 0,
+      "x": "Chaque terme est la moitié du précédent : 25 ÷ 2 = 12,5. Une suite numérique peut parfaitement comporter des termes décimaux. La réponse 20 supposerait une soustraction constante, ce que démentent les écarts observés, qui valent 50 puis 25.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Dans la suite 3 ; 7 ; 15 ; 31 ; …, le terme suivant est :",
+      "o": [
+        "47",
+        "55",
+        "62",
+        "63"
+      ],
+      "r": 3,
+      "x": "On passe d'un terme au suivant en multipliant par 2 puis en ajoutant 1 : 31 × 2 + 1 = 63. La règle se vérifie en amont, car 3 × 2 + 1 = 7 et 7 × 2 + 1 = 15. On peut aussi observer que les écarts doublent à chaque fois : 4, 8, 16 puis 32.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le nombre 10⁶ se lit :",
+      "o": [
+        "cent mille",
+        "un million",
+        "dix millions",
+        "un milliard"
+      ],
+      "r": 1,
+      "x": "L'exposant donne le nombre de zéros : 10⁶ s'écrit 1 000 000, c'est-à-dire un million. La réponse cent mille correspond à 10⁵ et un milliard à 10⁹. Ces repères sont indispensables pour lire sans erreur les budgets et les statistiques exprimés en grands nombres.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "La taxe sur la valeur ajoutée (TVA) au taux de 18 % sur un montant hors taxe de 125 000 FCFA s'élève à :",
+      "o": [
+        "12 500 FCFA",
+        "18 000 FCFA",
+        "22 500 FCFA",
+        "25 000 FCFA"
+      ],
+      "r": 2,
+      "x": "On calcule 125 000 × 18 ÷ 100 = 22 500 FCFA, le prix toutes taxes comprises s'élevant alors à 147 500 FCFA. Contrôle mental : 10 % font 12 500 FCFA et 8 % en font 10 000, soit 22 500 au total. La réponse 12 500 FCFA correspond à un taux de 10 % seulement.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un acompte de 40 % est versé sur une commande de 325 000 FCFA. Le solde restant à payer est de :",
+      "o": [
+        "130 000 FCFA",
+        "195 000 FCFA",
+        "227 500 FCFA",
+        "260 000 FCFA"
+      ],
+      "r": 1,
+      "x": "L'acompte vaut 325 000 × 0,40 = 130 000 FCFA, donc le solde représente les 60 % restants, soit 195 000 FCFA. On peut aussi multiplier directement par 0,60. La réponse 130 000 FCFA est l'acompte lui-même : lisez bien si la question porte sur la part versée ou sur le reste.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Dans une commune de 45 000 habitants, 18 % sont scolarisés au primaire. Cela représente :",
+      "o": [
+        "6 300 personnes",
+        "7 200 personnes",
+        "7 650 personnes",
+        "8 100 personnes"
+      ],
+      "r": 3,
+      "x": "On calcule 45 000 × 18 ÷ 100 = 8 100 personnes. Décomposition utile : 10 % font 4 500, 5 % font 2 250 et 3 % font 1 350, dont le total donne bien 8 100. La réponse 7 200 correspondrait à un taux de 16 %, inférieur à celui de l'énoncé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un prix augmente de 50 % puis baisse de 50 %. La variation globale est de :",
+      "o": [
+        "–25 %",
+        "0 %",
+        "+25 %",
+        "+50 %"
+      ],
+      "r": 0,
+      "x": "On multiplie les coefficients : 1,50 × 0,50 = 0,75, soit une baisse globale de 25 %. Les deux taux ne s'annulent pas, car la baisse porte sur un prix déjà augmenté, donc plus élevé. Sur 1 000 FCFA, on passe à 1 500 FCFA puis à 750 FCFA, soit un quart de moins qu'au départ.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un article subit une baisse de 10 % suivie d'une baisse de 20 %. La baisse globale est de :",
+      "o": [
+        "26 %",
+        "28 %",
+        "30 %",
+        "32 %"
+      ],
+      "r": 1,
+      "x": "On multiplie les coefficients : 0,90 × 0,80 = 0,72, donc il reste 72 % du prix et la baisse globale vaut 28 %. Deux remises ne s'additionnent jamais, car la seconde s'applique à un prix déjà réduit. La réponse 30 % correspond à cette addition fautive des deux taux.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un budget consacre 25 % au logement et 40 % à l'alimentation. La part restante représente :",
+      "o": [
+        "15 %",
+        "25 %",
+        "35 %",
+        "45 %"
+      ],
+      "r": 2,
+      "x": "Les deux postes connus totalisent 25 + 40 = 65 %, donc le reste vaut 100 – 65 = 35 %. Dans toute répartition, la somme des parts atteint nécessairement 100 %. La réponse 15 % correspondrait à un total de 85 % pour les deux premiers postes, ce que l'énoncé ne dit pas.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Une somme de 180 000 FCFA est partagée entre trois enfants de 10, 12 et 14 ans, proportionnellement à leur âge. L'aîné reçoit :",
+      "o": [
+        "50 000 FCFA",
+        "55 000 FCFA",
+        "60 000 FCFA",
+        "70 000 FCFA"
+      ],
+      "r": 3,
+      "x": "On additionne les âges, 10 + 12 + 14 = 36, puis on calcule la valeur d'une part : 180 000 ÷ 36 = 5 000 FCFA par année d'âge. L'aîné reçoit 14 × 5 000 = 70 000 FCFA. La réponse 60 000 FCFA est la part de l'enfant de 12 ans, celle du milieu.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Trois ouvriers ayant travaillé 4, 5 et 6 jours se partagent 300 000 FCFA au prorata des jours. Celui qui a travaillé 5 jours reçoit :",
+      "o": [
+        "80 000 FCFA",
+        "100 000 FCFA",
+        "120 000 FCFA",
+        "150 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Le total des jours vaut 4 + 5 + 6 = 15, donc une journée est payée 300 000 ÷ 15 = 20 000 FCFA. L'ouvrier concerné touche 5 × 20 000 = 100 000 FCFA. La réponse 120 000 FCFA est la part de celui qui a travaillé 6 jours.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "On mélange 15 litres d'huile à 1 200 FCFA le litre et 25 litres à 1 400 FCFA le litre. Le prix moyen du litre est de :",
+      "o": [
+        "1 250 FCFA",
+        "1 300 FCFA",
+        "1 325 FCFA",
+        "1 350 FCFA"
+      ],
+      "r": 2,
+      "x": "Le coût total vaut 15 × 1 200 + 25 × 1 400 = 18 000 + 35 000 = 53 000 FCFA pour 40 litres, soit 1 325 FCFA le litre. C'est une moyenne pondérée par les volumes. La réponse 1 300 FCFA est la moyenne simple des deux prix, qui ignore les quantités inégales.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "On mélange 30 kg de riz à 500 FCFA le kilogramme et 20 kg à 650 FCFA. Le prix moyen du kilogramme est de :",
+      "o": [
+        "560 FCFA",
+        "575 FCFA",
+        "580 FCFA",
+        "600 FCFA"
+      ],
+      "r": 0,
+      "x": "Le coût total vaut 30 × 500 + 20 × 650 = 15 000 + 13 000 = 28 000 FCFA pour 50 kg, soit 560 FCFA le kilogramme. La réponse 575 FCFA est la moyenne simple des deux prix. Le prix moyen penche toujours vers celui de la quantité la plus importante, ici les 30 kg les moins chers.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Cinq ouvriers achèvent un chantier en 8 jours. Au même rythme, dix ouvriers l'achèveraient en :",
+      "o": [
+        "4 jours",
+        "6 jours",
+        "10 jours",
+        "16 jours"
+      ],
+      "r": 0,
+      "x": "Le travail représente 5 × 8 = 40 journées-ouvriers, que l'on partage entre 10 ouvriers : 40 ÷ 10 = 4 jours. En doublant l'effectif, on divise la durée par deux, car la proportionnalité est INVERSE. La réponse 16 jours applique une proportionnalité directe, ce qui serait absurde.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Si 7 kg de sucre coûtent 2 450 FCFA, alors 11 kg coûtent :",
+      "o": [
+        "3 500 FCFA",
+        "3 850 FCFA",
+        "4 200 FCFA",
+        "4 550 FCFA"
+      ],
+      "r": 1,
+      "x": "On passe par le prix d'un kilogramme : 2 450 ÷ 7 = 350 FCFA, puis 350 × 11 = 3 850 FCFA. Cette méthode du passage à l'unité évite toute erreur de sens. La réponse 3 500 FCFA correspondrait à 10 kg, soit un kilogramme de moins que ce que demande l'énoncé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Une longueur de 0,45 m est égale à :",
+      "o": [
+        "4,5 mm",
+        "45 mm",
+        "450 mm",
+        "4 500 mm"
+      ],
+      "r": 2,
+      "x": "Un mètre contient 1 000 millimètres, donc 0,45 × 1 000 = 450 mm. La réponse 45 mm correspondrait à 0,045 m, soit dix fois moins. Le passage du mètre au millimètre déplace la virgule de trois rangs vers la droite.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Une distance de 2,75 km est égale à :",
+      "o": [
+        "275 m",
+        "1 750 m",
+        "2 075 m",
+        "2 750 m"
+      ],
+      "r": 3,
+      "x": "Un kilomètre vaut 1 000 mètres, donc 2,75 × 1 000 = 2 750 m. La réponse 275 m correspondrait à 0,275 km, soit dix fois moins. Il faut lire la partie décimale comme une fraction de kilomètre : 0,75 km représente 750 m, et non 75 m.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Une masse de 3 200 g correspond à :",
+      "o": [
+        "0,32 kg",
+        "3,2 kg",
+        "32 kg",
+        "320 kg"
+      ],
+      "r": 1,
+      "x": "Un kilogramme vaut 1 000 grammes, donc on divise : 3 200 ÷ 1 000 = 3,2 kg. La réponse 32 kg divise seulement par 100, ce qui est l'erreur la plus fréquente. Un repère concret : un sac de riz de 25 kg contient 25 000 g.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Une masse de 500 mg correspond à :",
+      "o": [
+        "0,5 g",
+        "5 g",
+        "50 g",
+        "500 g"
+      ],
+      "r": 0,
+      "x": "Un gramme contient 1 000 milligrammes, donc 500 ÷ 1 000 = 0,5 g, soit un demi-gramme. La réponse 5 g divise par 100 au lieu de 1 000. Le milligramme sert surtout en pharmacie, où les doses se comptent en centaines de milligrammes.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un volume de 250 cL est égal à :",
+      "o": [
+        "0,25 L",
+        "2,5 L",
+        "25 L",
+        "250 L"
+      ],
+      "r": 1,
+      "x": "Un litre contient 100 centilitres, donc 250 ÷ 100 = 2,5 L. La réponse 0,25 L divise par 1 000, règle qui vaut pour les millilitres et non pour les centilitres. Repère pratique : une bouteille de 75 cL contient 0,75 litre.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un fût de 3,5 hL contient :",
+      "o": [
+        "35 L",
+        "175 L",
+        "350 L",
+        "3 500 L"
+      ],
+      "r": 2,
+      "x": "Un hectolitre vaut 100 litres, donc 3,5 × 100 = 350 litres. Le préfixe « hecto » signifie toujours cent, comme dans hectare ou hectogramme. La réponse 3 500 L correspondrait à 35 hL, soit dix fois la contenance annoncée.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "La durée écoulée entre 8 h 40 et 14 h 15 est de :",
+      "o": [
+        "5 h 35",
+        "5 h 45",
+        "6 h 25",
+        "6 h 35"
+      ],
+      "r": 0,
+      "x": "On passe d'abord à 14 h 00, soit 5 h 20, puis on ajoute 15 min : 5 h 35. On peut aussi convertir en minutes, 855 – 520 = 335 min, soit 5 h 35. La réponse 6 h 25 vient d'une soustraction chiffre par chiffre, qui oublie qu'une heure compte 60 minutes et non 100.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Du 12 mars au 5 avril de la même année, il s'écoule :",
+      "o": [
+        "21 jours",
+        "22 jours",
+        "23 jours",
+        "24 jours"
+      ],
+      "r": 3,
+      "x": "Du 12 au 31 mars, il reste 19 jours, auxquels on ajoute les 5 jours d'avril, soit 24 jours. Il faut connaître la durée du mois concerné, mars comptant 31 jours. La réponse 23 jours oublie un jour dans le décompte du mois de mars.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un film commence à 20 h 45 et dure 1 h 50. Il se termine à :",
+      "o": [
+        "22 h 25",
+        "22 h 35",
+        "22 h 45",
+        "22 h 55"
+      ],
+      "r": 1,
+      "x": "On ajoute d'abord l'heure entière, ce qui donne 21 h 45, puis les 50 minutes : 45 + 50 = 95 min, soit 1 h 35, d'où 22 h 35. La réponse 22 h 95 n'existe pas, car on retire 60 minutes pour former une heure. La réponse 22 h 25 additionne les minutes comme s'il y en avait 100 par heure.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Une vitesse de 15 m/s est égale à :",
+      "o": [
+        "36 km/h",
+        "45 km/h",
+        "54 km/h",
+        "60 km/h"
+      ],
+      "r": 2,
+      "x": "Pour passer des m/s aux km/h, on MULTIPLIE par 3,6 : 15 × 3,6 = 54 km/h. Le détail du calcul le confirme, puisque 15 m par seconde font 54 000 m en une heure. La réponse 45 km/h multiplie par 3 au lieu de 3,6, en oubliant la conversion complète.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un véhicule roule à 60 km/h pendant 1 h 40 min. Il parcourt :",
+      "o": [
+        "80 km",
+        "90 km",
+        "100 km",
+        "120 km"
+      ],
+      "r": 2,
+      "x": "La durée de 1 h 40 min vaut 1 + 40/60 = 5/3 d'heure, donc la distance est 60 × 5/3 = 100 km. On peut aussi décomposer : 60 km en une heure, puis 40 km en 40 minutes. La réponse 90 km lirait 1 h 40 min comme 1,5 h, ce qui raccourcit la durée.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Sur une carte à l'échelle 1/100 000, une distance de 3,5 cm représente :",
+      "o": [
+        "350 m",
+        "3,5 km",
+        "35 km",
+        "350 km"
+      ],
+      "r": 1,
+      "x": "On multiplie par le dénominateur : 3,5 × 100 000 = 350 000 cm, soit 3,5 km après division par 100 000. Avec cette échelle, un centimètre représente exactement un kilomètre, ce qui simplifie la lecture. La réponse 35 km décale la virgule d'un rang.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Sur un plan à l'échelle 1/50, une pièce mesurant 4 m en réalité est représentée par :",
+      "o": [
+        "2 cm",
+        "4 cm",
+        "5 cm",
+        "8 cm"
+      ],
+      "r": 3,
+      "x": "On convertit d'abord la longueur réelle, 4 m = 400 cm, puis on divise par 50 : 400 ÷ 50 = 8 cm. Ici l'on part du réel vers le plan, donc on divise au lieu de multiplier. La réponse 2 cm diviserait par 200, échelle bien plus réduite que celle de l'énoncé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "L'effectif d'une école passe de 250 à 275 élèves. L'augmentation est de :",
+      "o": [
+        "10 %",
+        "11 %",
+        "12,5 %",
+        "25 %"
+      ],
+      "r": 0,
+      "x": "La hausse vaut 275 – 250 = 25 élèves, que l'on rapporte à l'effectif de départ : 25 ÷ 250 = 0,10, soit 10 %. La réponse 25 % confond le nombre d'élèves supplémentaires avec un pourcentage. Un taux de variation se calcule toujours par rapport à la valeur initiale.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Dans une classe de 60 élèves, les 2/5 sont des filles. Le nombre de filles est :",
+      "o": [
+        "12",
+        "18",
+        "20",
+        "24"
+      ],
+      "r": 3,
+      "x": "On calcule les 2/5 de 60 : un cinquième vaut 12, donc deux cinquièmes font 24 filles, et il y a 36 garçons. On peut aussi écrire 60 × 2 ÷ 5 = 24. La réponse 12 ne donne qu'un cinquième de l'effectif, c'est-à-dire la moitié de ce qui est demandé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un héritage de 600 000 FCFA est partagé ainsi : 1/3 à l'aîné, 1/4 au cadet, le reste au benjamin. Le benjamin reçoit :",
+      "o": [
+        "150 000 FCFA",
+        "175 000 FCFA",
+        "200 000 FCFA",
+        "250 000 FCFA"
+      ],
+      "r": 3,
+      "x": "L'aîné et le cadet reçoivent 1/3 + 1/4 = 4/12 + 3/12 = 7/12 de l'héritage, donc il reste 5/12 au benjamin, soit 600 000 × 5 ÷ 12 = 250 000 FCFA. La réponse 200 000 FCFA est la part de l'aîné, qui correspond au tiers de la somme.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un ouvrier payé 500 FCFA l'heure effectue 8 heures supplémentaires majorées de 15 %. Ces heures lui rapportent :",
+      "o": [
+        "4 600 FCFA",
+        "5 000 FCFA",
+        "5 750 FCFA",
+        "6 000 FCFA"
+      ],
+      "r": 0,
+      "x": "L'heure majorée vaut 500 × 1,15 = 575 FCFA, donc 8 heures rapportent 575 × 8 = 4 600 FCFA. La majoration porte sur le taux horaire, non sur le nombre d'heures. La réponse 4 000 FCFA oublierait la majoration et ne compterait que le tarif normal.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un article affiché 40 000 FCFA est payé 38 000 FCFA. La remise accordée est de :",
+      "o": [
+        "2 %",
+        "4 %",
+        "4,5 %",
+        "5 %"
+      ],
+      "r": 3,
+      "x": "La remise vaut 40 000 – 38 000 = 2 000 FCFA, que l'on rapporte au prix affiché : 2 000 ÷ 40 000 = 0,05, soit 5 %. La réponse 2 % confond le montant de la remise, exprimé en milliers, avec son taux. Un taux de remise se calcule toujours sur le prix de départ.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "L'aire d'un carré de 2,5 m de côté est de :",
+      "o": [
+        "5 m²",
+        "6,25 m²",
+        "10 m²",
+        "12,5 m²"
+      ],
+      "r": 1,
+      "x": "L'aire d'un carré vaut son côté multiplié par lui-même : 2,5 × 2,5 = 6,25 m². La réponse 10 m² est le périmètre du carré, exprimé en mètres. Attention au calcul décimal : 2,5 au carré donne 6,25 et non 5, qui serait le double du côté.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le périmètre d'un triangle de côtés 7 cm, 9 cm et 12 cm est de :",
+      "o": [
+        "19 cm",
+        "21 cm",
+        "28 cm",
+        "36 cm"
+      ],
+      "r": 2,
+      "x": "Le périmètre d'un polygone est la somme de tous ses côtés : 7 + 9 + 12 = 28 cm. Aucune formule particulière n'est nécessaire, contrairement au calcul d'aire. La réponse 36 cm correspondrait à trois côtés de 12 cm, c'est-à-dire à un triangle équilatéral.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le nombre de faces d'une pyramide à base carrée est :",
+      "o": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "r": 1,
+      "x": "Une pyramide à base carrée possède 4 faces latérales triangulaires plus la base carrée, soit 5 faces au total. Elle compte par ailleurs 5 sommets et 8 arêtes. La réponse 4 oublie la base, qui est pourtant bien une face du solide.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le nombre de sommets d'un pavé droit est :",
+      "o": [
+        "4",
+        "6",
+        "8",
+        "12"
+      ],
+      "r": 2,
+      "x": "Un pavé droit possède 8 sommets, qui correspondent aux quatre coins de la face du dessus et aux quatre de celle du dessous. Il compte aussi 6 faces et 12 arêtes. La réponse 6 donne le nombre de faces et 12 celui des arêtes, trois nombres à ne pas confondre.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "La somme des angles intérieurs d'un pentagone est de :",
+      "o": [
+        "360°",
+        "450°",
+        "540°",
+        "720°"
+      ],
+      "r": 2,
+      "x": "La formule (n – 2) × 180° donne, pour cinq côtés, 3 × 180 = 540°, car un pentagone se découpe en trois triangles. La réponse 360° correspond au quadrilatère et 720° à l'hexagone. Chaque côté supplémentaire ajoute exactement 180° à la somme.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Chaque angle intérieur d'un hexagone régulier mesure :",
+      "o": [
+        "120°",
+        "135°",
+        "144°",
+        "150°"
+      ],
+      "r": 0,
+      "x": "La somme des angles de l'hexagone vaut (6 – 2) × 180 = 720°, que l'on divise par 6 puisque tous les angles sont égaux : 120°. La réponse 135° correspond à l'octogone régulier et 144° au décagone. Plus le polygone régulier a de côtés, plus ses angles sont grands.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "La bissectrice d'un angle est :",
+      "o": [
+        "la droite perpendiculaire à l'un de ses côtés",
+        "la droite joignant les extrémités de ses côtés",
+        "la médiatrice de son sommet",
+        "la demi-droite qui le partage en deux angles égaux"
+      ],
+      "r": 3,
+      "x": "La bissectrice part du sommet et partage l'angle en deux angles de même mesure ; tout point situé dessus est à égale distance des deux côtés. Les trois bissectrices d'un triangle se coupent au centre du cercle inscrit. La médiatrice, elle, concerne un segment et non un angle.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Dans un triangle isocèle dont chaque angle à la base mesure 50°, l'angle au sommet mesure :",
+      "o": [
+        "80°",
+        "90°",
+        "100°",
+        "130°"
+      ],
+      "r": 0,
+      "x": "Les deux angles à la base totalisent 2 × 50 = 100°, donc l'angle au sommet vaut 180 – 100 = 80°. On vérifie : 50 + 50 + 80 = 180°. La réponse 100° donne la somme des deux angles à la base, et non l'angle cherché.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Dans un triangle rectangle dont les côtés de l'angle droit mesurent 15 cm et 20 cm, l'hypoténuse mesure :",
+      "o": [
+        "18 cm",
+        "22 cm",
+        "25 cm",
+        "35 cm"
+      ],
+      "r": 2,
+      "x": "Le théorème de Pythagore donne √(225 + 400) = √625 = 25 cm. Ce triangle est le triplet 3-4-5 multiplié par 5, repère qui permet de répondre sans calcul. La réponse 35 cm additionne les deux côtés, ce qui dépasse toujours la vraie longueur de l'hypoténuse.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Dans un triangle rectangle, l'hypoténuse mesure 10 cm et l'un des côtés de l'angle droit 6 cm. L'autre côté mesure :",
+      "o": [
+        "8 cm",
+        "11,6 cm",
+        "12 cm",
+        "16 cm"
+      ],
+      "r": 0,
+      "x": "Comme on cherche un côté de l'angle droit, on soustrait : 100 – 36 = 64, puis √64 = 8 cm. On reconnaît le triplet 6-8-10, qui est le triplet 3-4-5 doublé. La réponse 11,6 cm additionne les carrés, erreur commise quand on traite le côté cherché comme une hypoténuse.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Dans un triangle ABC, M est sur [AB] et N sur [AC], avec (MN) parallèle à (BC), AM = 3 cm, AB = 9 cm et AC = 12 cm. La longueur AN est de :",
+      "o": [
+        "3,5 cm",
+        "4 cm",
+        "6 cm",
+        "9 cm"
+      ],
+      "r": 1,
+      "x": "Le théorème de Thalès donne AM/AB = AN/AC, soit 3/9 = 1/3, donc AN = 12 ÷ 3 = 4 cm. La question porte ici sur le second côté du triangle, et non sur le segment MN. La réponse 9 cm reprend une longueur de l'énoncé, alors que AN vaut forcément le tiers de AC.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Au même moment, un poteau de 2 m projette une ombre de 1,6 m et un immeuble une ombre de 20 m. La hauteur de l'immeuble est de :",
+      "o": [
+        "16 m",
+        "18 m",
+        "22 m",
+        "25 m"
+      ],
+      "r": 3,
+      "x": "Les hauteurs sont proportionnelles aux ombres : h/20 = 2/1,6, donc h = 20 × 2 ÷ 1,6 = 25 m. Comme l'ombre du poteau est plus courte que sa hauteur, l'immeuble est plus haut que son ombre. La réponse 16 m inverse le rapport entre la hauteur et l'ombre.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "L'aire d'un disque de 20 cm de diamètre, en prenant π = 3,14, est de :",
+      "o": [
+        "62,8 cm²",
+        "157 cm²",
+        "314 cm²",
+        "1 256 cm²"
+      ],
+      "r": 2,
+      "x": "Le rayon vaut la moitié du diamètre, soit 10 cm, et l'aire π × r² = 3,14 × 100 = 314 cm². La réponse 1 256 cm² prend le diamètre pour le rayon, ce qui multiplie l'aire par quatre. La réponse 62,8 est la circonférence de ce cercle en centimètres, non son aire.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "La circonférence d'un cercle de 15 cm de rayon, en prenant π = 3,14, est de :",
+      "o": [
+        "47,1 cm",
+        "94,2 cm",
+        "188,4 cm",
+        "706,5 cm"
+      ],
+      "r": 1,
+      "x": "La circonférence vaut 2 × π × r = 2 × 3,14 × 15 = 94,2 cm. La réponse 47,1 cm oublie le facteur 2 et ne calcule que π × r. La réponse 706,5 est l'aire du disque, exprimée en cm² : une longueur et une aire n'ont jamais la même unité.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "L'aire de la couronne comprise entre deux cercles concentriques de rayons 10 cm et 6 cm, avec π = 3,14, est de :",
+      "o": [
+        "200,96 cm²",
+        "251,2 cm²",
+        "314 cm²",
+        "401,92 cm²"
+      ],
+      "r": 0,
+      "x": "On soustrait l'aire du petit disque de celle du grand : 3,14 × (100 – 36) = 3,14 × 64 = 200,96 cm². On peut factoriser par π pour éviter deux multiplications. La réponse 314 cm² est l'aire du grand disque seul, sans retirer le disque intérieur.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le volume d'un cube de 0,5 m d'arête, exprimé en litres, est de :",
+      "o": [
+        "12,5 L",
+        "25 L",
+        "50 L",
+        "125 L"
+      ],
+      "r": 3,
+      "x": "Le volume vaut 0,5 × 0,5 × 0,5 = 0,125 m³, soit 125 litres puisque 1 m³ = 1 000 L. On peut aussi travailler en décimètres : une arête de 5 dm donne 125 dm³, donc 125 litres. La réponse 50 L confond le volume avec un calcul de surface.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un réservoir cylindrique de 0,3 m de rayon et de 1 m de hauteur contient, avec π = 3,14 :",
+      "o": [
+        "94,2 L",
+        "141,3 L",
+        "282,6 L",
+        "942 L"
+      ],
+      "r": 2,
+      "x": "Le volume vaut π × r² × h = 3,14 × 0,09 × 1 = 0,2826 m³, soit 282,6 litres. Il faut élever le rayon au carré avant de multiplier par la hauteur. La réponse 942 L oublie d'élever 0,3 au carré et utilise directement le rayon.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le nombre de carreaux de 30 cm sur 30 cm nécessaires pour couvrir 18 m² est :",
+      "o": [
+        "180",
+        "200",
+        "240",
+        "600"
+      ],
+      "r": 1,
+      "x": "Un carreau mesure 0,30 × 0,30 = 0,09 m², donc il en faut 18 ÷ 0,09 = 200. On peut aussi raisonner en centimètres : 180 000 cm² divisés par 900 cm². La réponse 600 divise la surface par 0,03, en confondant l'aire du carreau avec son côté.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un mur de 4 m sur 2,5 m doit être peint avec une peinture couvrant 10 m² par litre. Il faut :",
+      "o": [
+        "1 L",
+        "1,5 L",
+        "2 L",
+        "10 L"
+      ],
+      "r": 0,
+      "x": "La surface du mur vaut 4 × 2,5 = 10 m², et un litre couvre exactement 10 m², donc un litre suffit pour une couche. La réponse 2 L correspondrait à deux couches, ce que l'énoncé ne demande pas. En pratique, les peintres ajoutent une marge, mais le calcul théorique reste celui-ci.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un terrain rectangulaire de 150 m de périmètre est clôturé, en laissant un portail de 3 m. La longueur de clôture posée est de :",
+      "o": [
+        "75 m",
+        "144 m",
+        "145,5 m",
+        "147 m"
+      ],
+      "r": 3,
+      "x": "On retire l'ouverture du périmètre total : 150 – 3 = 147 m de clôture. Le portail occupe une partie du tour, il ne s'y ajoute donc pas. La réponse 144 m retirerait 6 m, soit deux fois la largeur du portail, ce que rien ne justifie ici.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le volume d'une fosse de 2 m sur 1,5 m et de 1,2 m de profondeur est de :",
+      "o": [
+        "3 m³",
+        "3,6 m³",
+        "4,5 m³",
+        "6 m³"
+      ],
+      "r": 1,
+      "x": "Le volume d'un pavé droit vaut longueur × largeur × hauteur : 2 × 1,5 × 1,2 = 3,6 m³, soit 3 600 litres. On multiplie d'abord 2 × 1,5 = 3, puis 3 × 1,2. La réponse 3 m³ s'arrête à l'aire du fond multipliée par 1 m, en oubliant les 20 cm supplémentaires.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "La hauteur d'un trapèze d'aire 60 cm² dont les bases mesurent 10 cm et 5 cm est de :",
+      "o": [
+        "4 cm",
+        "5 cm",
+        "6 cm",
+        "8 cm"
+      ],
+      "r": 3,
+      "x": "L'aire vaut (10 + 5) × h ÷ 2 = 7,5h, donc h = 60 ÷ 7,5 = 8 cm. On calcule d'abord la demi-somme des bases, qui joue le rôle de base moyenne. La réponse 4 cm correspondrait à une aire de 30 cm², soit la moitié de celle indiquée.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le côté d'un carré d'aire 0,64 m² mesure :",
+      "o": [
+        "0,8 m",
+        "1,6 m",
+        "3,2 m",
+        "8 m"
+      ],
+      "r": 0,
+      "x": "On cherche le nombre dont le carré vaut 0,64 : 0,8 × 0,8 = 0,64, donc le côté mesure 0,8 m, soit 80 cm. La réponse 8 m est la racine de 64, nombre cent fois plus grand. Pour un nombre inférieur à 1, la racine carrée est plus grande que le nombre lui-même.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Sur un plan à l'échelle 1/2 000, un terrain mesure 6 cm sur 4 cm. Sa superficie réelle est de :",
+      "o": [
+        "2 400 m²",
+        "4 800 m²",
+        "9 600 m²",
+        "48 000 m²"
+      ],
+      "r": 2,
+      "x": "On convertit chaque dimension : 6 × 2 000 = 12 000 cm soit 120 m, et 4 × 2 000 = 8 000 cm soit 80 m, d'où une aire de 120 × 80 = 9 600 m². Il faut convertir les deux longueurs AVANT de multiplier. La réponse 4 800 m² ne convertit qu'une seule dimension.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Deux angles sont complémentaires et l'un est le double de l'autre. Le plus petit mesure :",
+      "o": [
+        "30°",
+        "45°",
+        "60°",
+        "90°"
+      ],
+      "r": 0,
+      "x": "On pose x pour le plus petit : x + 2x = 90, donc 3x = 90 et x = 30°, l'autre valant 60°. On vérifie : 30 + 60 = 90°, les deux angles sont bien complémentaires. La réponse 45° correspondrait à deux angles égaux, ce qui contredit la condition du double.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Deux droites parallèles coupées par une sécante forment des angles alternes-internes qui sont :",
+      "o": [
+        "complémentaires",
+        "égaux",
+        "supplémentaires",
+        "opposés par le sommet"
+      ],
+      "r": 1,
+      "x": "Lorsque les deux droites sont parallèles, les angles alternes-internes sont égaux, propriété utilisée pour démontrer un parallélisme. Les angles correspondants sont également égaux dans cette configuration. Les angles qui sont supplémentaires sont, eux, les angles intérieurs situés du même côté de la sécante.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Dans un triangle rectangle isocèle, chaque angle aigu mesure :",
+      "o": [
+        "45°",
+        "60°",
+        "90°",
+        "135°"
+      ],
+      "r": 0,
+      "x": "L'angle droit occupe 90°, et les 90° restants se partagent à parts égales entre les deux angles aigus, puisque le triangle est isocèle : 45° chacun. Ce triangle correspond à la moitié d'un carré coupé par sa diagonale. La réponse 60° concernerait un triangle équilatéral, qui n'a aucun angle droit.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le rayon du cercle circonscrit à un triangle rectangle dont l'hypoténuse mesure 10 cm est de :",
+      "o": [
+        "2,5 cm",
+        "4 cm",
+        "5 cm",
+        "10 cm"
+      ],
+      "r": 2,
+      "x": "Dans un triangle rectangle, l'hypoténuse est un diamètre du cercle circonscrit, dont le centre est son milieu : le rayon vaut donc 10 ÷ 2 = 5 cm. La réponse 10 cm donne le diamètre et non le rayon. Cette propriété permet aussi de reconnaître un angle droit inscrit dans un demi-cercle.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "L'aire d'un trapèze de bases 9 cm et 5 cm et de hauteur 4 cm est de :",
+      "o": [
+        "18 cm²",
+        "20 cm²",
+        "24 cm²",
+        "28 cm²"
+      ],
+      "r": 3,
+      "x": "L'aire vaut (9 + 5) × 4 ÷ 2 = 14 × 2 = 28 cm². On additionne les deux bases, on multiplie par la hauteur, puis on divise par 2. La réponse 20 cm² n'utilise que la petite base multipliée par la hauteur, en ignorant la grande base.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le volume d'un cône de 6 cm de rayon et de 10 cm de hauteur, avec π = 3,14, est de :",
+      "o": [
+        "125,6 cm³",
+        "188,4 cm³",
+        "251,2 cm³",
+        "376,8 cm³"
+      ],
+      "r": 3,
+      "x": "Le volume vaut π × r² × h ÷ 3 = 3,14 × 36 × 10 ÷ 3 = 376,8 cm³. La division par 3 s'applique à tous les cônes et à toutes les pyramides. La réponse 125,6 cm³ oublie d'élever le rayon au carré et utilise directement la valeur 6.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un capital de 600 000 FCFA placé à intérêt simple au taux annuel de 9 % pendant 90 jours rapporte, sur la base d'une année de 360 jours :",
+      "o": [
+        "10 800 FCFA",
+        "13 500 FCFA",
+        "16 200 FCFA",
+        "54 000 FCFA"
+      ],
+      "r": 1,
+      "x": "La formule devient I = C × t × j ÷ 36 000 quand la durée est en JOURS : 600 000 × 9 × 90 ÷ 36 000 = 13 500 FCFA. Autre lecture : l'année entière rapporterait 54 000 FCFA, et 90 jours en représentent le quart. La réponse 54 000 FCFA correspond précisément à une année complète.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un capital de 200 000 FCFA placé à intérêt simple au taux annuel de 10 % rapporte 15 000 FCFA au bout de :",
+      "o": [
+        "6 mois",
+        "8 mois",
+        "9 mois",
+        "12 mois"
+      ],
+      "r": 2,
+      "x": "Le capital rapporte 200 000 × 10 ÷ 100 = 20 000 FCFA par an ; il faut donc 15 000 ÷ 20 000 = 0,75 an, soit 9 mois. On convertit la fraction d'année en multipliant par 12. La réponse 12 mois donnerait 20 000 FCFA d'intérêts, montant supérieur à celui de l'énoncé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Une facture de 250 000 FCFA réglée au comptant bénéficie d'un escompte de 2 %. Le montant versé est de :",
+      "o": [
+        "240 000 FCFA",
+        "245 000 FCFA",
+        "248 000 FCFA",
+        "255 000 FCFA"
+      ],
+      "r": 1,
+      "x": "L'escompte vaut 250 000 × 2 ÷ 100 = 5 000 FCFA, d'où 245 000 FCFA à verser. L'escompte est la réduction accordée pour un paiement immédiat, et il se calcule comme une remise ordinaire. La réponse 248 000 FCFA retrancherait 2 000 FCFA, soit un taux de 0,8 % seulement.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Une boutique réalise 850 000 FCFA de chiffre d'affaires pour 620 000 FCFA de charges. Son bénéfice net est de :",
+      "o": [
+        "180 000 FCFA",
+        "200 000 FCFA",
+        "230 000 FCFA",
+        "270 000 FCFA"
+      ],
+      "r": 2,
+      "x": "Le bénéfice net est la différence entre les recettes et les charges : 850 000 – 620 000 = 230 000 FCFA. Le chiffre d'affaires mesure les ventes, tandis que le bénéfice tient compte des dépenses engagées. Confondre les deux notions est l'erreur la plus courante en gestion commerciale.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un article dont le prix de revient est de 8 400 FCFA est vendu avec une majoration de 25 %. Son prix de vente est de :",
+      "o": [
+        "10 500 FCFA",
+        "10 920 FCFA",
+        "11 200 FCFA",
+        "12 600 FCFA"
+      ],
+      "r": 0,
+      "x": "La marge vaut 8 400 × 25 ÷ 100 = 2 100 FCFA, d'où un prix de vente de 10 500 FCFA, que l'on obtient directement par 8 400 × 1,25. Comme 25 % représentent un quart, il suffit d'ajouter le quart du prix de revient. La réponse 12 600 FCFA correspondrait à une marge de 50 %.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un article acheté 15 000 FCFA est revendu 12 750 FCFA. Le taux de perte est de :",
+      "o": [
+        "15 %",
+        "17,6 %",
+        "18 %",
+        "22,5 %"
+      ],
+      "r": 0,
+      "x": "La perte vaut 15 000 – 12 750 = 2 250 FCFA, que l'on rapporte au prix d'achat : 2 250 ÷ 15 000 = 0,15, soit 15 %. Comme pour le bénéfice, le taux se calcule toujours sur le prix d'achat. La réponse 17,6 % divise la perte par le prix de vente, ce qui n'est pas la règle.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un magasin dispose de 120 sacs de ciment et en vend les 3/4. Il lui reste :",
+      "o": [
+        "24 sacs",
+        "30 sacs",
+        "40 sacs",
+        "90 sacs"
+      ],
+      "r": 1,
+      "x": "Vendre les 3/4 revient à garder 1/4 du stock : 120 ÷ 4 = 30 sacs. On peut aussi calculer les 90 sacs vendus puis les retrancher du total. La réponse 90 sacs est précisément la quantité vendue, non celle qui reste en magasin.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un salarié perçoit 145 000 FCFA auxquels s'ajoute une prime de 12 %. Son revenu total est de :",
+      "o": [
+        "157 400 FCFA",
+        "160 000 FCFA",
+        "162 400 FCFA",
+        "164 000 FCFA"
+      ],
+      "r": 2,
+      "x": "La prime vaut 145 000 × 12 ÷ 100 = 17 400 FCFA, d'où un revenu de 162 400 FCFA, ou directement 145 000 × 1,12. Décomposition utile : 10 % font 14 500 FCFA et 2 % en font 2 900. La réponse 157 400 FCFA n'ajoute que 12 400 FCFA, ce qui correspond à un taux inférieur.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Dans une série statistique, les effectifs des quatre catégories sont 5, 8, 12 et 7. L'effectif total est de :",
+      "o": [
+        "27",
+        "30",
+        "32",
+        "35"
+      ],
+      "r": 2,
+      "x": "L'effectif total est la somme de tous les effectifs : 5 + 8 + 12 + 7 = 32. Ce total sert de dénominateur pour calculer ensuite toutes les fréquences de la série. La réponse 30 oublie deux unités dans l'addition, qu'il est prudent de refaire dans l'autre sens pour se contrôler.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Sur 40 élèves d'une classe, 10 ont une note inférieure à 10. Ils représentent :",
+      "o": [
+        "20 %",
+        "25 %",
+        "30 %",
+        "40 %"
+      ],
+      "r": 1,
+      "x": "On divise l'effectif concerné par l'effectif total : 10 ÷ 40 = 0,25, soit 25 %. La fraction se simplifie en 1/4, dont l'équivalent en pourcentage est à connaître. La réponse 40 % reprend l'effectif total en le prenant pour un pourcentage, confusion fréquente.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "La moyenne de six nombres dont la somme est 102 est de :",
+      "o": [
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "r": 3,
+      "x": "La moyenne est la somme divisée par l'effectif : 102 ÷ 6 = 17. Pour vérifier, on multiplie en sens inverse, puisque 17 × 6 = 102. La réponse 16 donnerait une somme de 96, inférieure de six unités à celle de l'énoncé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Pour une série statistique de 8 valeurs rangées par ordre croissant, la médiane est :",
+      "o": [
+        "la 4e valeur",
+        "la 5e valeur",
+        "la 4,5e valeur",
+        "la moyenne des 4e et 5e valeurs"
+      ],
+      "r": 3,
+      "x": "Lorsque l'effectif est PAIR, aucune valeur n'occupe le milieu exact : la médiane est alors la moyenne des deux valeurs centrales, ici la quatrième et la cinquième. Avec un effectif impair, elle serait directement la valeur du milieu. La « 4,5e valeur » n'existe pas dans une série.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Dans un diagramme circulaire, un secteur de 45° représente une part de :",
+      "o": [
+        "10 %",
+        "12,5 %",
+        "15 %",
+        "25 %"
+      ],
+      "r": 1,
+      "x": "On rapporte l'angle au tour complet : 45 ÷ 360 = 0,125, soit 12,5 %, c'est-à-dire le huitième du disque. Le repère est simple : 45° correspond à la moitié d'un angle droit, donc à la moitié de 25 %. La réponse 25 % correspondrait à un secteur de 90°.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Une roue de loterie comporte 8 secteurs identiques dont 3 sont gagnants. La probabilité de gagner est :",
+      "o": [
+        "1/8",
+        "1/4",
+        "3/8",
+        "5/8"
+      ],
+      "r": 2,
+      "x": "La probabilité est le nombre de cas favorables divisé par le nombre de cas possibles : 3/8. La probabilité de perdre vaut alors 5/8, les deux totalisant bien 1. La réponse 5/8 est précisément celle de l'événement contraire, c'est-à-dire de la perte.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un sac contient 15 billes dont 6 bleues. La probabilité de tirer une bille bleue est :",
+      "o": [
+        "1/5",
+        "2/5",
+        "1/2",
+        "3/5"
+      ],
+      "r": 1,
+      "x": "On divise le nombre de billes bleues par le nombre total : 6/15, que l'on simplifie par 3 pour obtenir 2/5. Simplifier la fraction est indispensable pour retrouver la bonne proposition. La réponse 3/5 correspond à la probabilité de tirer une bille qui n'est PAS bleue.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Dans un jeu de 52 cartes, la probabilité de tirer une carte de cœur est :",
+      "o": [
+        "1/13",
+        "1/4",
+        "1/3",
+        "1/2"
+      ],
+      "r": 1,
+      "x": "Le jeu compte 13 cartes de cœur sur 52, d'où 13/52 = 1/4. Les quatre couleurs se partagent le jeu à parts égales, ce qui donne directement un quart. La réponse 1/13 est la probabilité de tirer une valeur précise, par exemple un roi, toutes couleurs confondues.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "En lançant un dé équilibré à six faces, la probabilité d'obtenir un nombre premier est :",
+      "o": [
+        "1/6",
+        "1/3",
+        "1/2",
+        "2/3"
+      ],
+      "r": 2,
+      "x": "Les nombres premiers parmi les faces du dé sont 2, 3 et 5, soit 3 cas sur 6, d'où une probabilité de 1/2. Attention : 1 n'est pas premier, car il n'a qu'un seul diviseur. Oublier cette règle conduit à compter quatre cas favorables et à répondre 2/3.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "En lançant un dé équilibré à six faces, la probabilité d'obtenir un diviseur de 6 est :",
+      "o": [
+        "1/3",
+        "1/2",
+        "2/3",
+        "5/6"
+      ],
+      "r": 2,
+      "x": "Les diviseurs de 6 sont 1, 2, 3 et 6, soit 4 cas favorables sur 6, d'où 4/6 = 2/3. Il faut penser à inclure 1 et 6 lui-même, les deux diviseurs les plus souvent oubliés. La réponse 1/2 ne compterait que trois faces, en omettant l'un de ces deux diviseurs.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Deux voitures roulent dans le même sens à 80 km/h et 60 km/h, séparées de 40 km. La première rattrape la seconde au bout de :",
+      "o": [
+        "1 h",
+        "1 h 30",
+        "1 h 45",
+        "2 h"
+      ],
+      "r": 3,
+      "x": "Quand deux mobiles vont dans le MÊME sens, leurs vitesses se soustraient : l'écart se réduit de 80 – 60 = 20 km par heure, donc 40 ÷ 20 = 2 h. Si elles allaient l'une vers l'autre, les vitesses s'additionneraient et la rencontre serait bien plus rapide. Distinguer ces deux cas est essentiel.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "La durée d'un trajet de 420 km parcouru à 70 km/h est de :",
+      "o": [
+        "4 h",
+        "5 h",
+        "5 h 30",
+        "6 h"
+      ],
+      "r": 3,
+      "x": "La durée vaut distance ÷ vitesse = 420 ÷ 70 = 6 heures. On contrôle en multipliant : 70 × 6 = 420 km. La réponse 5 h correspondrait à une distance de 350 km, soit 70 km de moins que celle indiquée par l'énoncé.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un coureur parcourt 400 m en 50 secondes. Sa vitesse est de :",
+      "o": [
+        "8 m/s",
+        "10 m/s",
+        "12,5 m/s",
+        "20 m/s"
+      ],
+      "r": 0,
+      "x": "La vitesse vaut distance ÷ durée = 400 ÷ 50 = 8 m/s, ce qui correspond à 28,8 km/h en multipliant par 3,6. La réponse 12,5 m/s inverse le rapport en divisant 50 par 400 puis en lisant mal le résultat. Une vitesse est toujours une distance divisée par un temps.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Trois ouvriers achèvent une tâche en 8 heures. Pour l'achever en 6 heures, il faut :",
+      "o": [
+        "4 ouvriers",
+        "5 ouvriers",
+        "6 ouvriers",
+        "8 ouvriers"
+      ],
+      "r": 0,
+      "x": "La tâche représente 3 × 8 = 24 heures-ouvriers, que l'on divise par la durée voulue : 24 ÷ 6 = 4 ouvriers. La proportionnalité est INVERSE, donc réduire la durée exige davantage de main-d'œuvre. La réponse 6 ouvriers doublerait l'effectif, ce qui ramènerait la tâche à 4 heures.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Deux robinets débitant chacun 12,5 litres par minute remplissent un bassin de 1 500 litres en :",
+      "o": [
+        "40 min",
+        "48 min",
+        "50 min",
+        "60 min"
+      ],
+      "r": 3,
+      "x": "Les deux robinets réunis débitent 2 × 12,5 = 25 litres par minute, donc 1 500 ÷ 25 = 60 minutes, soit une heure. Les débits s'additionnent quand les robinets fonctionnent ensemble. La réponse 120 min correspondrait à un seul robinet en service.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Une photocopieuse tire 45 pages par minute. Pour 1 350 pages, il lui faut :",
+      "o": [
+        "30 min",
+        "35 min",
+        "40 min",
+        "45 min"
+      ],
+      "r": 0,
+      "x": "On divise le nombre de pages par la cadence : 1 350 ÷ 45 = 30 minutes. Le contrôle est immédiat, puisque 45 × 30 = 1 350 pages. La réponse 45 min reprend la valeur de la cadence, confusion fréquente entre la grandeur donnée et celle que l'on cherche.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Le plein d'un réservoir de 45 litres au prix de 850 FCFA le litre coûte :",
+      "o": [
+        "38 250 FCFA",
+        "40 500 FCFA",
+        "42 500 FCFA",
+        "45 000 FCFA"
+      ],
+      "r": 0,
+      "x": "On multiplie le volume par le prix unitaire : 45 × 850 = 38 250 FCFA. Décomposition utile : 45 × 800 = 36 000, auxquels on ajoute 45 × 50 = 2 250. La réponse 42 500 FCFA correspondrait à 50 litres, soit 5 litres de plus que la contenance du réservoir.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un ménage consomme 28 m³ d'eau au tarif de 200 FCFA le mètre cube. Sa facture s'élève à :",
+      "o": [
+        "4 800 FCFA",
+        "5 200 FCFA",
+        "5 400 FCFA",
+        "5 600 FCFA"
+      ],
+      "r": 3,
+      "x": "On multiplie le volume par le tarif : 28 × 200 = 5 600 FCFA. Le calcul se simplifie en doublant 28 puis en ajoutant deux zéros. La réponse 4 800 FCFA correspondrait à 24 m³, soit quatre mètres cubes de moins que la consommation réelle.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un forfait téléphonique de 2 500 FCFA donne droit à 500 minutes d'appel. La minute revient à :",
+      "o": [
+        "2 FCFA",
+        "2,5 FCFA",
+        "4 FCFA",
+        "5 FCFA"
+      ],
+      "r": 3,
+      "x": "On divise le prix du forfait par le nombre de minutes : 2 500 ÷ 500 = 5 FCFA la minute. La réponse 2,5 FCFA viendrait d'une division par 1 000 au lieu de 500. Ce type de calcul permet de comparer deux forfaits dont le prix et le volume diffèrent.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un bus de 56 places circule avec un taux d'occupation de 75 %. Il transporte :",
+      "o": [
+        "42 passagers",
+        "44 passagers",
+        "45 passagers",
+        "48 passagers"
+      ],
+      "r": 0,
+      "x": "On calcule 56 × 75 ÷ 100 = 42 passagers. Comme 75 % représentent les trois quarts, il suffit de prendre 56 ÷ 4 = 14, puis 14 × 3 = 42. La réponse 48 passagers correspondrait à un taux d'occupation d'environ 86 %.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Des frais de scolarité de 180 000 FCFA sont payables en quatre tranches égales, dont deux ont déjà été versées. Le reste à payer est de :",
+      "o": [
+        "45 000 FCFA",
+        "90 000 FCFA",
+        "120 000 FCFA",
+        "135 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Chaque tranche vaut 180 000 ÷ 4 = 45 000 FCFA ; deux tranches versées représentent 90 000 FCFA, donc il reste autant à payer. Deux tranches sur quatre correspondent exactement à la moitié du total. La réponse 135 000 FCFA supposerait qu'une seule tranche a été versée.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
+    },
+    {
+      "q": "Un producteur récolte 2,4 tonnes de maïs, conserve le tiers pour sa famille et vend le reste à 300 FCFA le kilogramme. Il encaisse :",
+      "o": [
+        "240 000 FCFA",
+        "320 000 FCFA",
+        "400 000 FCFA",
+        "480 000 FCFA"
+      ],
+      "r": 3,
+      "x": "La récolte vaut 2 400 kg, dont le tiers conservé représente 800 kg, donc 1 600 kg sont vendus à 300 FCFA, soit 480 000 FCFA. Il faut retirer la part autoconsommée AVANT de multiplier par le prix. La réponse 240 000 FCFA correspond aux 800 kg conservés, et non à la quantité vendue.",
+      "_batchId": "maths_bepc/2026-10-21/SERIE3"
     },
     {
       "q": "Le PGCD de 24 et 36 est :",
       "o": [
-        "4",
+        "6",
         "8",
         "12",
-        "18"
+        "72"
       ],
       "r": 2,
-      "x": "24 = 2³ × 3 et 36 = 2² × 3². Le PGCD = 2² × 3 = 12."
+      "x": "On décompose : 24 = 2³ × 3 et 36 = 2² × 3², puis on garde les facteurs communs avec leur plus petit exposant, soit 2² × 3 = 12. On vérifie que 24 ÷ 12 = 2 et 36 ÷ 12 = 3 n'ont plus de diviseur commun, donc on ne peut pas trouver plus grand. La réponse 72 est le PPCM, et 6 n'est qu'un diviseur commun parmi d'autres.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Calculer : 15 × 4 − 12 ÷ 3",
+      "q": "Le résultat du calcul 15 × 4 − 12 ÷ 3 est :",
       "o": [
-        "56",
-        "52",
+        "16",
         "48",
-        "60"
+        "52",
+        "56"
       ],
-      "r": 0,
-      "x": "Priorité des opérations : 15 × 4 = 60 et 12 ÷ 3 = 4. Résultat = 60 − 4 = 56."
+      "r": 3,
+      "x": "La multiplication et la division sont prioritaires sur la soustraction : on calcule d'abord 15 × 4 = 60 et 12 ÷ 3 = 4. On effectue ensuite la soustraction, 60 − 4 = 56. La réponse 16 vient d'un calcul mené de gauche à droite, (60 − 12) ÷ 3, et 48 oublie la division par 3.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Un vendeur gagne 15 % de commission sur ses ventes. S'il a vendu pour 80 000 FCFA, quel est son gain ?",
+      "q": "Un vendeur perçoit une commission de 15 % sur ses ventes. Pour 80 000 FCFA de ventes, sa commission s'élève à :",
       "o": [
         "8 000 FCFA",
-        "10 000 FCFA",
-        "14 000 FCFA",
-        "12 000 FCFA"
-      ],
-      "r": 3,
-      "x": "Commission = 80 000 × 15/100 = 12 000 FCFA."
-    },
-    {
-      "q": "Résoudre : 3x − 7 = 11",
-      "o": [
-        "x = 4",
-        "x = 6",
-        "x = 8",
-        "x = 5"
+        "12 000 FCFA",
+        "15 000 FCFA",
+        "92 000 FCFA"
       ],
       "r": 1,
-      "x": "3x − 7 = 11 → 3x = 18 → x = 6."
+      "x": "On calcule 80 000 × 15 ÷ 100 = 12 000 FCFA. Pour le contrôler de tête, 10 % font 8 000 FCFA et 5 % en font la moitié, soit 4 000 FCFA, d'où 12 000 au total. La réponse 92 000 FCFA ajoute la commission au montant des ventes, alors que la question porte sur la seule commission.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "L'aire d'un rectangle de longueur 12 cm et de largeur 7 cm est :",
+      "q": "La solution de l'équation 3x − 7 = 11 est :",
       "o": [
-        "84 cm²",
-        "38 cm²",
-        "96 cm²",
-        "19 cm²"
+        "x = 4/3",
+        "x = 6",
+        "x = 12",
+        "x = 18"
       ],
-      "r": 0,
-      "x": "Aire = longueur × largeur = 12 × 7 = 84 cm²."
+      "r": 1,
+      "x": "On ajoute 7 aux deux membres pour isoler le terme en x : 3x = 11 + 7 = 18. On divise ensuite par 3, ce qui donne x = 6, et l'on vérifie que 3 × 6 − 7 = 11. La réponse 4/3 soustrait 7 au lieu de l'ajouter, et 18 oublie la division finale par 3.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Un triangle rectangle a une hypoténuse de 13 cm et un côté de 5 cm. Quel est l'autre côté ?",
+      "q": "L'aire d'un rectangle de 12 cm de longueur et de 7 cm de largeur est de :",
       "o": [
-        "8 cm",
-        "10 cm",
-        "12 cm",
-        "11 cm"
+        "19 cm²",
+        "38 cm²",
+        "84 cm²",
+        "168 cm²"
       ],
       "r": 2,
-      "x": "c² = 13² − 5² = 169 − 25 = 144. Donc c = √144 = 12 cm."
+      "x": "L'aire d'un rectangle est le produit de sa longueur par sa largeur : 12 × 7 = 84 cm². L'unité est le centimètre carré, car on multiplie deux longueurs exprimées en centimètres. La réponse 38 cm² correspond au périmètre, 2 × (12 + 7), et 19 cm² à la simple somme des deux dimensions.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Si 5 cahiers coûtent 1 250 FCFA, combien coûtent 8 cahiers ?",
+      "q": "Si 5 cahiers coûtent 1 250 FCFA, 8 cahiers identiques coûtent :",
       "o": [
         "1 600 FCFA",
-        "1 750 FCFA",
-        "1 900 FCFA",
-        "2 000 FCFA"
+        "2 000 FCFA",
+        "2 250 FCFA",
+        "2 500 FCFA"
       ],
-      "r": 3,
-      "x": "Prix d'un cahier = 1 250 ÷ 5 = 250 FCFA. Donc 8 cahiers = 8 × 250 = 2 000 FCFA."
+      "r": 1,
+      "x": "On cherche d'abord le prix d'un cahier : 1 250 ÷ 5 = 250 FCFA. Le prix étant proportionnel au nombre de cahiers, 8 cahiers coûtent 8 × 250 = 2 000 FCFA. La réponse 2 500 FCFA correspond à 10 cahiers, le double de 5, et 1 600 FCFA compte 200 FCFA par cahier.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Calculer : 2^6",
+      "q": "La valeur de 2⁶ est :",
       "o": [
-        "32",
-        "64",
         "12",
-        "48"
-      ],
-      "r": 1,
-      "x": "2^6 = 2 × 2 × 2 × 2 × 2 × 2 = 64. Ne pas confondre avec 6 × 2 = 12."
-    },
-    {
-      "q": "Calculer : √225",
-      "o": [
-        "15",
-        "14",
-        "16",
-        "12"
-      ],
-      "r": 0,
-      "x": "15 × 15 = 225. Donc √225 = 15."
-    },
-    {
-      "q": "Un train roule à 120 km/h. En 2 h 30 min, quelle distance parcourt-il ?",
-      "o": [
-        "240 km",
-        "260 km",
-        "280 km",
-        "300 km"
-      ],
-      "r": 3,
-      "x": "2 h 30 min = 2,5 h. Distance = 120 × 2,5 = 300 km."
-    },
-    {
-      "q": "La médiane d'une série statistique est :",
-      "o": [
-        "la valeur la plus fréquente",
-        "la somme divisée par l'effectif",
-        "la valeur centrale qui partage la série en deux moitiés égales",
-        "la différence entre la valeur max et la valeur min"
-      ],
-      "r": 2,
-      "x": "La médiane est la valeur centrale d'une série ordonnée. Le mode est la valeur la plus fréquente ; la moyenne est la somme divisée par l'effectif."
-    },
-    {
-      "q": "On lance un dé équilibré. Quelle est la probabilité d'obtenir un nombre pair ?",
-      "o": [
-        "1/3",
-        "1/2",
-        "2/3",
-        "1/6"
-      ],
-      "r": 1,
-      "x": "Les nombres pairs sur un dé sont 2, 4, 6 → 3 cas sur 6. P = 3/6 = 1/2."
-    },
-    {
-      "q": "Résoudre : 2x + 3 > 11",
-      "o": [
-        "x > 4",
-        "x > 3",
-        "x > 5",
-        "x > 6"
-      ],
-      "r": 0,
-      "x": "2x + 3 > 11 → 2x > 8 → x > 4."
-    },
-    {
-      "q": "Le volume d'un cube de côté 4 cm est :",
-      "o": [
-        "16 cm³",
-        "48 cm³",
-        "96 cm³",
-        "64 cm³"
-      ],
-      "r": 3,
-      "x": "Volume = côté³ = 4³ = 4 × 4 × 4 = 64 cm³."
-    },
-    {
-      "q": "Résoudre le système : x + 2y = 8 et 2x − y = 6",
-      "o": [
-        "x = 3 ; y = 2",
-        "x = 2 ; y = 3",
-        "x = 4 ; y = 2",
-        "x = 5 ; y = 1"
-      ],
-      "r": 2,
-      "x": "2x − y = 6 ⟹ y = 2x − 6. En remplaçant dans x + 2y = 8 : x + 2(2x − 6) = 8 ⟹ 5x = 20 ⟹ x = 4 puis y = 2."
-    },
-    {
-      "q": "Si f(x) = 2x + 3, quelle est la valeur de f(4) ?",
-      "o": [
-        "10",
-        "11",
-        "9",
-        "14"
-      ],
-      "r": 1,
-      "x": "f(4) = 2 × 4 + 3 = 8 + 3 = 11."
-    },
-    {
-      "q": "Quelle est la raison de la suite arithmétique : 3 ; 7 ; 11 ; 15 ; ... ?",
-      "o": [
-        "3",
-        "5",
-        "6",
-        "4"
-      ],
-      "r": 3,
-      "x": "La raison = 7 − 3 = 11 − 7 = 4."
-    },
-    {
-      "q": "Convertir 3,2 km en mètres.",
-      "o": [
-        "3 200 m",
-        "320 m",
-        "32 m",
-        "32 000 m"
-      ],
-      "r": 0,
-      "x": "1 km = 1 000 m. Donc 3,2 km = 3 200 m."
-    },
-    {
-      "q": "Quel capital placé à 5 % par an pendant 3 ans produit un intérêt de 15 000 FCFA ?",
-      "o": [
-        "50 000 FCFA",
-        "75 000 FCFA",
-        "100 000 FCFA",
-        "90 000 FCFA"
-      ],
-      "r": 2,
-      "x": "C = I / (t × n) = 15 000 / (0,05 × 3) = 100 000 FCFA."
-    },
-    {
-      "q": "Si tous les A sont B, et X est un A, alors :",
-      "o": [
-        "X n'est pas un B",
-        "X est un B",
-        "X est peut-être un B",
-        "Rien ne peut être conclu"
-      ],
-      "r": 1,
-      "x": "Syllogisme classique : tous les A sont B, X est A → X est B. C'est une conclusion nécessaire."
-    },
-    {
-      "q": "Quel est le PPCM de 12 et 18 ?",
-      "o": [
-        "6",
-        "48",
-        "72",
-        "36"
-      ],
-      "r": 3,
-      "x": "12 = 2² × 3 et 18 = 2 × 3². PPCM = 2² × 3² = 36."
-    },
-    {
-      "q": "Calculer : (−3)² + (−2)³",
-      "o": [
-        "1",
-        "17",
-        "−2",
-        "−17"
-      ],
-      "r": 0,
-      "x": "(−3)² = 9 et (−2)³ = −8. Donc 9 + (−8) = 1."
-    },
-    {
-      "q": "Un cercle a un rayon de 7 cm. Calculer sa circonférence (π ≈ 3,14).",
-      "o": [
-        "21,98 cm",
-        "42 cm",
-        "43,96 cm",
-        "44 cm"
-      ],
-      "r": 2,
-      "x": "Circonférence = 2 × π × r = 2 × 3,14 × 7 = 43,96 cm."
-    },
-    {
-      "q": "Calculer : (3/4 − 1/3) × 12",
-      "o": [
-        "4",
-        "5",
-        "6",
-        "3"
-      ],
-      "r": 1,
-      "x": "3/4 − 1/3 = 9/12 − 4/12 = 5/12. Puis 5/12 × 12 = 5."
-    },
-    {
-      "q": "Un article a augmenté de 25 % puis a diminué de 20 %. Quel est le résultat net par rapport au prix initial ?",
-      "o": [
-        "Hausse de 5 %",
-        "Baisse de 5 %",
-        "Hausse de 10 %",
-        "Aucune variation"
-      ],
-      "r": 3,
-      "x": "Soit P le prix. Après +25 % : 1,25P. Après −20 % : 1,25P × 0,80 = P. Le prix revient à sa valeur initiale."
-    },
-    {
-      "q": "Résoudre : x² − 5x + 6 = 0",
-      "o": [
-        "x = 2 ou x = 3",
-        "x = 1 ou x = 6",
-        "x = 2 ou x = 4",
-        "x = 1 ou x = 5"
-      ],
-      "r": 0,
-      "x": "Deux nombres de produit 6 et de somme 5 : ce sont 2 et 3. Solutions : x = 2 ou x = 3."
-    },
-    {
-      "q": "Sur une carte à l'échelle 1/50 000, une distance mesure 4 cm. Quelle est la distance réelle ?",
-      "o": [
-        "200 m",
-        "1 km",
-        "2 km",
-        "1,5 km"
-      ],
-      "r": 2,
-      "x": "Distance réelle = 4 × 50 000 = 200 000 cm = 2 000 m = 2 km."
-    },
-    {
-      "q": "Les notes d'un élève sont : 10, 14, 8, 16, 12. Quelle est l'étendue de cette série ?",
-      "o": [
-        "6",
-        "8",
-        "10",
-        "12"
-      ],
-      "r": 1,
-      "x": "Étendue = valeur maximale − valeur minimale = 16 − 8 = 8."
-    },
-    {
-      "q": "Un sac contient 4 boules rouges, 3 bleues et 5 vertes. Quelle est la probabilité de tirer une boule bleue ?",
-      "o": [
-        "1/3",
-        "5/12",
-        "3/5",
-        "1/4"
-      ],
-      "r": 3,
-      "x": "Total = 4 + 3 + 5 = 12 boules. P(bleue) = 3/12 = 1/4."
-    },
-    {
-      "q": "Deux voitures partent en sens inverse de villes distantes de 300 km, l'une à 60 km/h et l'autre à 90 km/h. Au bout de combien de temps se croisent-elles ?",
-      "o": [
-        "2 h",
-        "1 h 30 min",
-        "2 h 30 min",
-        "3 h"
-      ],
-      "r": 0,
-      "x": "Vitesse de rapprochement = 60 + 90 = 150 km/h. Temps = 300 / 150 = 2 heures."
-    },
-    {
-      "q": "Un capital de 500 000 FCFA est placé à 6 % par an. Quel est l'intérêt après 2 ans ?",
-      "o": [
-        "30 000 FCFA",
-        "45 000 FCFA",
-        "60 000 FCFA",
-        "50 000 FCFA"
-      ],
-      "r": 2,
-      "x": "I = C × t × n = 500 000 × 0,06 × 2 = 60 000 FCFA."
-    },
-    {
-      "q": "Quel est le terme suivant de la suite : 2 ; 4 ; 8 ; 16 ; ... ?",
-      "o": [
-        "24",
         "32",
-        "30",
+        "36",
         "64"
       ],
-      "r": 1,
-      "x": "Suite géométrique de raison 2. Terme suivant = 16 × 2 = 32."
-    },
-    {
-      "q": "Un nombre est divisible par 9 si :",
-      "o": [
-        "il est pair",
-        "il est divisible par 3 et par 6",
-        "son dernier chiffre est 0 ou 5",
-        "la somme de ses chiffres est divisible par 9"
-      ],
       "r": 3,
-      "x": "Critère de divisibilité par 9 : la somme des chiffres doit être divisible par 9. Exemple : 81 → 8 + 1 = 9 ✓."
+      "x": "2⁶ est le produit de six facteurs égaux à 2 : 2 × 2 × 2 × 2 × 2 × 2 = 64. On peut aussi doubler six fois de suite à partir de 1 : 2, 4, 8, 16, 32, 64. La réponse 12 confond puissance et multiplication (6 × 2), 36 calcule 6², et 32 s'arrête à 2⁵.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Calculer : 0,5² + 0,3² − 0,1²",
+      "q": "La valeur de √225 est :",
       "o": [
-        "0,33",
-        "0,26",
-        "0,32",
-        "0,35"
+        "15",
+        "22,5",
+        "25",
+        "112,5"
       ],
       "r": 0,
-      "x": "0,5² = 0,25 ; 0,3² = 0,09 ; 0,1² = 0,01. Résultat = 0,25 + 0,09 − 0,01 = 0,33."
+      "x": "La racine carrée de 225 est le nombre positif dont le carré vaut 225 : comme 15 × 15 = 225, on a √225 = 15. On peut le retrouver en décomposant 225 = 9 × 25 = 3² × 5², d'où √225 = 3 × 5. La réponse 112,5 divise 225 par 2, ce qui confond racine carrée et moitié, et 22,5 divise par 10.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "L'aire d'un triangle de base 10 cm et de hauteur 7 cm est :",
+      "q": "Un train roule à 120 km/h. En 2 h 30 min, il parcourt :",
       "o": [
-        "70 cm²",
-        "17 cm²",
-        "35 cm²",
-        "25 cm²"
+        "240 km",
+        "276 km",
+        "300 km",
+        "360 km"
       ],
       "r": 2,
-      "x": "Aire = (base × hauteur) / 2 = (10 × 7) / 2 = 35 cm²."
+      "x": "Il faut d'abord convertir la durée en heures décimales : 30 min valent une demi-heure, donc 2 h 30 min = 2,5 h. La distance vaut vitesse × temps, soit 120 × 2,5 = 300 km. La réponse 276 km lit 2 h 30 comme 2,3 h, 240 km oublie les 30 minutes et 360 km compte 3 heures.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Dans le triangle ABC, D ∈ [AB] et E ∈ [AC] avec DE // BC. On a AD = 4 cm, AB = 10 cm et AE = 3 cm. Calculer AC.",
+      "q": "Dans une série statistique, la médiane est :",
       "o": [
-        "6 cm",
-        "7,5 cm",
-        "8 cm",
-        "5 cm"
+        "la valeur la plus fréquente de la série",
+        "la somme des valeurs divisée par l'effectif total",
+        "la valeur qui partage la série ordonnée en deux groupes de même effectif",
+        "l'écart entre la plus grande et la plus petite valeur"
+      ],
+      "r": 2,
+      "x": "La médiane est la valeur centrale d'une série rangée dans l'ordre croissant : il y a autant de valeurs avant elle qu'après elle. Les autres propositions définissent d'autres paramètres : le mode est la valeur la plus fréquente, la moyenne est la somme divisée par l'effectif. L'écart entre les valeurs extrêmes est l'étendue, qui mesure la dispersion et non la position.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation 2x + 3 > 13 est :",
+      "o": [
+        "x < 5",
+        "x > 5",
+        "x > 8",
+        "x > 10"
       ],
       "r": 1,
-      "x": "Par le théorème de Thalès : AD/AB = AE/AC → 4/10 = 3/AC → AC = (3 × 10) / 4 = 7,5 cm."
+      "x": "On soustrait 3 aux deux membres, ce qui donne 2x > 10, puis on divise par 2. Comme 2 est positif, le sens de l'inégalité ne change pas : x > 5. La réponse x < 5 inverse le sens sans raison, alors qu'on ne l'inverse qu'en multipliant ou en divisant par un nombre négatif, et x > 10 oublie la division par 2.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Calculer : (2/3) ÷ (4/9)",
+      "q": "La solution du système x + 2y = 8 et 2x − y = 6 est :",
       "o": [
-        "8/27",
-        "2/3",
-        "4/3",
-        "3/2"
-      ],
-      "r": 3,
-      "x": "Diviser par 4/9 revient à multiplier par 9/4 : (2/3) × (9/4) = 18/12 = 3/2."
-    },
-    {
-      "q": "Un commerçant achète un article 8 000 FCFA et le vend 10 400 FCFA. Quel est son taux de bénéfice par rapport au prix d'achat ?",
-      "o": [
-        "30 %",
-        "20 %",
-        "25 %",
-        "40 %"
-      ],
-      "r": 0,
-      "x": "Bénéfice = 10 400 − 8 000 = 2 400 FCFA. Taux = (2 400 / 8 000) × 100 = 30 %."
-    },
-    {
-      "q": "Résoudre : 5(x − 2) = 2(x + 7)",
-      "o": [
-        "x = 4",
-        "x = 6",
-        "x = 8",
-        "x = 10"
+        "x = 2 ; y = 3",
+        "x = 3 ; y = 0",
+        "x = 4 ; y = 2",
+        "x = 6 ; y = 1"
       ],
       "r": 2,
-      "x": "5x − 10 = 2x + 14 → 3x = 24 → x = 8."
+      "x": "La seconde équation donne y = 2x − 6, qu'on remplace dans la première : x + 2(2x − 6) = 8, soit 5x − 12 = 8, d'où x = 4 puis y = 2. On vérifie : 4 + 2 × 2 = 8 et 2 × 4 − 2 = 6. Les autres couples ne vérifient qu'une seule des deux équations, ce qui ne suffit pas pour un système.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Convertir 2 heures 15 minutes en minutes.",
+      "q": "Si f(x) = 2x + 3, la valeur de f(4) est :",
       "o": [
-        "120 min",
-        "215 min",
-        "125 min",
-        "135 min"
-      ],
-      "r": 3,
-      "x": "2 h = 120 min. Donc 2 h 15 min = 120 + 15 = 135 minutes."
-    },
-    {
-      "q": "Simplifier : √72",
-      "o": [
-        "6√2",
-        "8√2",
-        "4√3",
-        "9√2"
-      ],
-      "r": 0,
-      "x": "√72 = √(36 × 2) = 6√2."
-    },
-    {
-      "q": "L'aire d'un disque de rayon 5 cm est (π ≈ 3,14) :",
-      "o": [
-        "31,4 cm²",
-        "62,8 cm²",
-        "78,5 cm²",
-        "15,7 cm²"
-      ],
-      "r": 2,
-      "x": "Aire = π × r² = 3,14 × 25 = 78,5 cm²."
-    },
-    {
-      "q": "Si n est un entier pair, lequel de ces nombres est forcément impair ?",
-      "o": [
-        "n + 2",
-        "n + 1",
-        "2n",
-        "n²"
-      ],
-      "r": 1,
-      "x": "Si n est pair, n + 1 est impair. n + 2, 2n et n² sont tous pairs."
-    },
-    {
-      "q": "Quel est le reste de la division de 247 par 12 ?",
-      "o": [
-        "10",
         "8",
         "11",
-        "7"
-      ],
-      "r": 3,
-      "x": "12 × 20 = 240. Reste = 247 − 240 = 7."
-    },
-    {
-      "q": "Calculer : 45 % de 240",
-      "o": [
-        "108",
-        "90",
-        "100",
-        "120"
-      ],
-      "r": 0,
-      "x": "45 % de 240 = 240 × 45/100 = 108."
-    },
-    {
-      "q": "En 3 jours, 4 ouvriers réalisent un travail. En combien de jours 6 ouvriers feront-ils le même travail ?",
-      "o": [
-        "4 jours",
-        "3 jours",
-        "2 jours",
-        "1 jour"
-      ],
-      "r": 2,
-      "x": "Proportionnalité inverse : 4 × 3 = 6 × x → x = 12/6 = 2 jours."
-    },
-    {
-      "q": "Un carré et un rectangle ont le même périmètre de 40 cm. Le rectangle mesure 12 cm de long. Quelle est son aire ?",
-      "o": [
-        "100 cm²",
-        "96 cm²",
-        "88 cm²",
-        "80 cm²"
+        "14",
+        "20"
       ],
       "r": 1,
-      "x": "Demi-périmètre = 20 cm. Largeur = 20 − 12 = 8 cm. Aire = 12 × 8 = 96 cm²."
+      "x": "On remplace x par 4 dans l'expression : f(4) = 2 × 4 + 3. La multiplication passe avant l'addition, donc f(4) = 8 + 3 = 11. La réponse 14 calcule 2 × (4 + 3), la réponse 20 calcule (2 + 3) × 4, et 8 oublie le terme constant 3.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel est le résultat de : 7/8 − 3/4 + 1/2 ?",
+      "q": "La raison de la suite arithmétique 3 ; 7 ; 11 ; 15 ; … est :",
       "o": [
-        "3/8",
-        "1/2",
-        "1/4",
-        "5/8"
-      ],
-      "r": 3,
-      "x": "LCD = 8 : 7/8 − 6/8 + 4/8 = (7 − 6 + 4)/8 = 5/8."
-    },
-    {
-      "q": "Dans une classe de 40 élèves, 24 sont des filles. Quelle est la probabilité de choisir un garçon au hasard ?",
-      "o": [
-        "2/5",
-        "3/5",
-        "1/2",
-        "1/4"
-      ],
-      "r": 0,
-      "x": "Garçons = 40 − 24 = 16. P(garçon) = 16/40 = 2/5."
-    },
-    {
-      "q": "Résoudre : 3x − 5 ≤ 7 + x",
-      "o": [
-        "x ≤ 2",
-        "x ≤ 4",
-        "x ≤ 6",
-        "x ≤ 5"
-      ],
-      "r": 2,
-      "x": "2x ≤ 12 → x ≤ 6. Ensemble solution : ]−∞ ; 6]."
-    },
-    {
-      "q": "Un automobiliste parcourt 45 km en 30 minutes. Quelle est sa vitesse en km/h ?",
-      "o": [
-        "75 km/h",
-        "90 km/h",
-        "80 km/h",
-        "60 km/h"
+        "3",
+        "4",
+        "7",
+        "19"
       ],
       "r": 1,
-      "x": "30 min = 0,5 h. Vitesse = 45 ÷ 0,5 = 90 km/h."
+      "x": "Dans une suite arithmétique, on passe d'un terme au suivant en ajoutant toujours le même nombre, appelé raison. Ici 7 − 3 = 4, 11 − 7 = 4 et 15 − 11 = 4 : la raison vaut 4. La réponse 19 est le terme suivant de la suite, et 3 est son premier terme, pas sa raison.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Les salaires (en milliers FCFA) de 6 employés sont : 80, 90, 100, 80, 80, 90. Quel est le mode de cette série ?",
+      "q": "Une distance de 3,2 km correspond à :",
       "o": [
-        "100",
-        "90",
-        "85",
-        "80"
+        "32 m",
+        "320 m",
+        "3 200 m",
+        "32 000 m"
+      ],
+      "r": 2,
+      "x": "Un kilomètre vaut 1 000 mètres, donc on multiplie par 1 000 : 3,2 × 1 000 = 3 200 m. Concrètement, on décale la virgule de trois rangs vers la droite en complétant par des zéros. La réponse 320 m ne multiplie que par 100, comme si l'on passait des hectomètres aux mètres, et 32 000 m multiplie par 10 000.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le capital qui, placé à 5 % par an pendant 3 ans, produit 15 000 FCFA d'intérêts simples est de :",
+      "o": [
+        "50 000 FCFA",
+        "100 000 FCFA",
+        "150 000 FCFA",
+        "300 000 FCFA"
+      ],
+      "r": 1,
+      "x": "En intérêt simple, I = C × t × n, donc le capital vaut C = I ÷ (t × n). Ici C = 15 000 ÷ (0,05 × 3) = 15 000 ÷ 0,15 = 100 000 FCFA, et l'on vérifie que 5 % de 100 000 donnent bien 5 000 FCFA par an. La réponse 300 000 FCFA oublie de tenir compte des 3 années de placement.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Si tous les A sont des B et que X est un A, alors :",
+      "o": [
+        "X n'est pas un B",
+        "X est peut-être un B",
+        "on ne peut rien conclure",
+        "X est un B"
       ],
       "r": 3,
-      "x": "Le mode est la valeur la plus fréquente. 80 apparaît 3 fois."
+      "x": "Tous les A étant inclus dans les B, tout élément de A appartient aussi à B. Puisque X est un A, il est donc nécessairement un B : la conclusion est certaine, pas seulement possible. Les propositions « peut-être » et « on ne peut rien conclure » ignorent la force du mot « tous », qui ne laisse aucune exception.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Si f(x) = x² − 3x + 2, calculer f(0) + f(2).",
+      "q": "Le PPCM de 12 et 18 est :",
+      "o": [
+        "6",
+        "30",
+        "36",
+        "216"
+      ],
+      "r": 2,
+      "x": "On décompose : 12 = 2² × 3 et 18 = 2 × 3², puis on prend chaque facteur premier avec son plus grand exposant : PPCM = 2² × 3² = 36. On vérifie que 36 = 12 × 3 = 18 × 2. La réponse 6 est le PGCD, et 216 le produit 12 × 18, qui est un multiple commun mais pas le plus petit.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le résultat de (−3)² + (−2)³ est :",
+      "o": [
+        "−17",
+        "−1",
+        "1",
+        "17"
+      ],
+      "r": 2,
+      "x": "Un carré est toujours positif, donc (−3)² = 9, tandis qu'un cube conserve le signe du nombre : (−2)³ = −8. On obtient 9 + (−8) = 9 − 8 = 1. La réponse 17 rend le cube positif, et −17 rend le carré négatif, deux erreurs de signe fréquentes.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La circonférence d'un cercle de 7 cm de rayon est de (π ≈ 3,14) :",
+      "o": [
+        "43,96 cm",
+        "87,92 cm",
+        "153,86 cm",
+        "307,72 cm"
+      ],
+      "r": 0,
+      "x": "La circonférence, ou périmètre du cercle, se calcule par 2 × π × r, soit 2 × 3,14 × 7 = 43,96 cm. On peut aussi écrire π × diamètre, avec un diamètre de 14 cm, ce qui donne le même résultat. La réponse 153,86 correspond à π × r², c'est-à-dire à l'aire du disque, et 87,92 utilise le diamètre à la place du rayon.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le résultat de (3/4 − 1/3) × 12 est :",
+      "o": [
+        "5",
+        "9",
+        "13",
+        "24"
+      ],
+      "r": 0,
+      "x": "On met les fractions au même dénominateur : 3/4 = 9/12 et 1/3 = 4/12. La parenthèse vaut donc 5/12, puis (5/12) × 12 = 5. La réponse 13 additionne à tort 9 et 4, tandis que les autres réponses résultent d'erreurs de calcul ou de simplification.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le prix d'un article augmente de 25 %, puis baisse de 20 %. Par rapport au prix initial, le prix final présente :",
+      "o": [
+        "une baisse de 5 %",
+        "aucune variation",
+        "une hausse de 5 %",
+        "une hausse de 45 %"
+      ],
+      "r": 1,
+      "x": "Les pourcentages successifs se multiplient et ne s'additionnent pas : une hausse de 25 % multiplie le prix par 1,25 et une baisse de 20 % le multiplie par 0,80. On obtient 1,25 × 0,80 = 1, donc le prix final est égal au prix initial. La réponse « hausse de 5 % » fait l'erreur d'additionner +25 % et −20 %.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Sur une carte à l'échelle 1/50 000, une distance mesure 4 cm. La distance réelle est de :",
+      "o": [
+        "200 m",
+        "1,25 km",
+        "2 km",
+        "20 km"
+      ],
+      "r": 2,
+      "x": "Sur une carte au 1/50 000, 1 cm représente 50 000 cm dans la réalité. La distance réelle vaut donc 4 × 50 000 = 200 000 cm, soit 2 000 m ou 2 km. Les réponses 200 m et 20 km viennent d'erreurs de conversion des centimètres en mètres ou en kilomètres.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "L'étendue de la série de notes 10 ; 14 ; 8 ; 16 ; 12 est :",
       "o": [
         "2",
         "4",
-        "0",
-        "3"
-      ],
-      "r": 0,
-      "x": "f(0) = 2 ; f(2) = 4 − 6 + 2 = 0. Donc f(0) + f(2) = 2."
-    },
-    {
-      "q": "Un cylindre a un rayon de 3 cm et une hauteur de 10 cm. Calculer son volume (π ≈ 3,14).",
-      "o": [
-        "84,78 cm³",
-        "94,2 cm³",
-        "282,6 cm³",
-        "150 cm³"
-      ],
-      "r": 2,
-      "x": "V = π × r² × h = 3,14 × 9 × 10 = 282,6 cm³."
-    },
-    {
-      "q": "Un graphique en barres indique : lundi = 30, mardi = 45, mercredi = 25, jeudi = 50. Quel est le total sur 4 jours ?",
-      "o": [
-        "130",
-        "150",
-        "155",
-        "140"
-      ],
-      "r": 1,
-      "x": "Total = 30 + 45 + 25 + 50 = 150."
-    },
-    {
-      "q": "Simplifier : (3²)³",
-      "o": [
-        "3^5",
-        "6^3",
-        "3^9",
-        "3^6"
+        "6",
+        "8"
       ],
       "r": 3,
-      "x": "(a^m)^n = a^(m×n). Donc (3²)³ = 3^(2×3) = 3^6. NB: 3^6 = 3⁶"
+      "x": "L'étendue est la différence entre la plus grande et la plus petite note : 16 − 8 = 8. Il faut chercher ces deux valeurs dans toute la série, qui n'est pas rangée dans l'ordre. La réponse 6 soustrait la première note, 10, à la plus grande, et 4 lui soustrait la dernière note, 12.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Calculer : √75 + √12",
+      "q": "Un sac contient 4 boules rouges, 3 bleues et 5 vertes. La probabilité de tirer une boule bleue est :",
       "o": [
-        "7√3",
-        "8√3",
-        "9√3",
-        "√87"
+        "1/4",
+        "1/3",
+        "5/12",
+        "3/4"
       ],
       "r": 0,
-      "x": "√75 = 5√3 et √12 = 2√3. Somme = 7√3."
+      "x": "Le sac contient 4 + 3 + 5 = 12 boules, toutes ayant la même chance d'être tirées. Il y a 3 boules bleues, donc la probabilité vaut 3/12, qu'on simplifie en 1/4. La réponse 3/4 est la probabilité de ne pas tirer une bleue, 1/3 celle de tirer une rouge et 5/12 celle de tirer une verte.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "On lance deux dés équilibrés. Quelle est la probabilité d'obtenir un total de 7 ?",
+      "q": "Deux villes sont distantes de 300 km. Deux voitures partent en même temps de chacune d'elles, l'une vers l'autre, à 60 km/h et à 90 km/h. Elles se croisent au bout de :",
       "o": [
-        "7/36",
-        "5/36",
-        "1/6",
-        "1/12"
+        "2 h",
+        "3 h 20 min",
+        "5 h",
+        "10 h"
       ],
-      "r": 2,
-      "x": "Paires : (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) → 6 cas sur 36. P = 1/6."
+      "r": 0,
+      "x": "Les deux voitures roulent l'une vers l'autre, donc la distance qui les sépare diminue de 60 + 90 = 150 km chaque heure. Elles se croisent après 300 ÷ 150 = 2 h. La réponse 10 h utilise la différence des vitesses, 90 − 60 = 30 km/h, qui ne convient que lorsque les véhicules roulent dans le même sens.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel est le chiffre des unités de 7^20 ?",
+      "q": "Un capital de 500 000 FCFA est placé à 6 % par an. L'intérêt simple obtenu au bout de 2 ans est de :",
       "o": [
-        "7",
-        "1",
-        "9",
-        "3"
+        "30 000 FCFA",
+        "60 000 FCFA",
+        "530 000 FCFA",
+        "560 000 FCFA"
       ],
       "r": 1,
-      "x": "Les chiffres des unités des puissances de 7 suivent un cycle de période 4 : 7¹ → 7 ; 7² → 9 ; 7³ → 3 ; 7⁴ → 1. Comme 20 ÷ 4 donne un reste nul, on prend le dernier nombre du cycle, soit 1. Donc le chiffre des unités de 7^20 est 1."
+      "x": "L'intérêt simple se calcule par I = C × t × n, soit 500 000 × 6/100 × 2. Chaque année rapporte 30 000 FCFA, donc deux années rapportent 60 000 FCFA. La réponse 30 000 FCFA ne compte qu'une année, et 560 000 FCFA donne le capital acquis, alors que la question porte sur les seuls intérêts.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Calculer : (√2 + √8)²",
+      "q": "Le terme qui suit 2 ; 4 ; 8 ; 16 dans cette suite est :",
+      "o": [
+        "18",
+        "20",
+        "24",
+        "32"
+      ],
+      "r": 3,
+      "x": "Chaque terme s'obtient en multipliant le précédent par 2 : 2 × 2 = 4, 4 × 2 = 8, 8 × 2 = 16. Le terme suivant est donc 16 × 2 = 32. La réponse 18 ajoute 2 comme si l'écart était constant, et 24 ajoute 8, le dernier écart, au lieu de le doubler.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Un nombre entier est divisible par 9 lorsque :",
+      "o": [
+        "il est à la fois divisible par 3 et impair",
+        "son dernier chiffre est un 9",
+        "ses chiffres ont une somme multiple de 9",
+        "son chiffre des unités est 0 ou 9"
+      ],
+      "r": 2,
+      "x": "Un nombre est divisible par 9 lorsque la somme de ses chiffres est elle-même divisible par 9 : par exemple, 738 donne 7 + 3 + 8 = 18, donc 738 = 9 × 82. Être divisible par 3, même pour un nombre impair, ne suffit pas, comme le montre 15, divisible par 3 mais pas par 9. Le dernier chiffre ne sert qu'aux critères de divisibilité par 2, 5 ou 10.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le résultat de 0,5² + 0,3² − 0,1² est :",
+      "o": [
+        "0,33",
+        "0,49",
+        "0,7",
+        "3,3"
+      ],
+      "r": 0,
+      "x": "On élève chaque nombre au carré avant d'additionner : 0,5² = 0,25, 0,3² = 0,09 et 0,1² = 0,01. On obtient 0,25 + 0,09 − 0,01 = 0,33. La réponse 0,7 oublie les carrés, et 0,49 élève au carré le résultat de 0,5 + 0,3 − 0,1, ce qui n'est pas la même opération.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "L'aire d'un triangle de 10 cm de base et de 7 cm de hauteur est de :",
+      "o": [
+        "8,5 cm²",
+        "17 cm²",
+        "35 cm²",
+        "70 cm²"
+      ],
+      "r": 2,
+      "x": "L'aire d'un triangle est égale à la moitié du produit de la base par la hauteur correspondante : (10 × 7) ÷ 2 = 35 cm². La division par 2 vient de ce qu'un triangle occupe la moitié d'un rectangle de mêmes dimensions. La réponse 70 cm² oublie cette division, et 17 cm² additionne la base et la hauteur au lieu de les multiplier.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Dans le triangle ABC, D est sur [AB] et E sur [AC], avec (DE) parallèle à (BC). Si AD = 4 cm, AB = 10 cm et AE = 3 cm, alors AC mesure :",
+      "o": [
+        "7,5 cm",
+        "9 cm",
+        "10 cm",
+        "13,3 cm"
+      ],
+      "r": 0,
+      "x": "Puisque (DE) est parallèle à (BC), le théorème de Thalès donne AD/AB = AE/AC, soit 4/10 = 3/AC. Par produit en croix, AC = 3 × 10 ÷ 4 = 7,5 cm. La réponse 9 cm ajoute l'écart AB − AD à AE, ce qui revient à raisonner par différence alors que Thalès repose sur des rapports égaux, et 13,3 cm renverse le rapport.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le résultat de (2/3) ÷ (4/9) est :",
+      "o": [
+        "8/27",
+        "2/3",
+        "1",
+        "3/2"
+      ],
+      "r": 3,
+      "x": "Diviser par une fraction revient à multiplier par son inverse : 2/3 ÷ 4/9 = 2/3 × 9/4. On obtient 18/12, qu'on simplifie par 6 en 3/2. La réponse 8/27 multiplie les deux fractions sans inverser la seconde, et 2/3 est l'inverse du bon résultat, obtenu en renversant la mauvaise fraction.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Un commerçant achète un article 8 000 FCFA et le revend 10 400 FCFA. Son taux de bénéfice par rapport au prix d'achat est de :",
+      "o": [
+        "2,4 %",
+        "23 %",
+        "24 %",
+        "30 %"
+      ],
+      "r": 3,
+      "x": "Le bénéfice vaut 10 400 − 8 000 = 2 400 FCFA, et on le compare au prix d'achat : 2 400 ÷ 8 000 = 0,30, soit 30 %. Le taux de bénéfice se calcule toujours par rapport à la base indiquée dans l'énoncé. La réponse 23 % rapporte le bénéfice au prix de vente, 2 400 ÷ 10 400, et 24 % ou 2,4 % confondent le montant du bénéfice avec un pourcentage.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La solution de l'équation 5(x − 2) = 2(x + 7) est :",
+      "o": [
+        "x = 3",
+        "x = 8",
+        "x = 12",
+        "x = 24"
+      ],
+      "r": 1,
+      "x": "On développe les deux membres : 5x − 10 = 2x + 14. On regroupe les x d'un côté et les nombres de l'autre, 3x = 24, d'où x = 8, et l'on vérifie que 5 × 6 = 2 × 15 = 30. La réponse 3 oublie de distribuer les facteurs aux nombres à l'intérieur des parenthèses, et 24 s'arrête avant la division par 3.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Une durée de 2 h 15 min correspond à :",
+      "o": [
+        "135 min",
+        "150 min",
+        "200 min",
+        "215 min"
+      ],
+      "r": 0,
+      "x": "Une heure compte 60 minutes, donc 2 h font 2 × 60 = 120 min. On ajoute les 15 minutes restantes : 120 + 15 = 135 min. La réponse 215 min écrit les heures et les minutes côte à côte comme si une heure valait 100 minutes, et 150 min confond 2 h 15 avec 2,5 h.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "L'écriture simplifiée de √72 est :",
+      "o": [
+        "6√2",
+        "8√3",
+        "12√2",
+        "36√2"
+      ],
+      "r": 0,
+      "x": "On cherche le plus grand carré parfait qui divise 72 : c'est 36, car 72 = 36 × 2. On en déduit √72 = √36 × √2 = 6√2, que l'on peut contrôler par (6√2)² = 36 × 2 = 72. La réponse 36√2 oublie de prendre la racine carrée de 36, et 12√2 double à tort le coefficient.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "L'aire d'un disque de 5 cm de rayon est de (π ≈ 3,14) :",
+      "o": [
+        "15,7 cm²",
+        "31,4 cm²",
+        "78,5 cm²",
+        "314 cm²"
+      ],
+      "r": 2,
+      "x": "L'aire d'un disque se calcule par π × r², soit 3,14 × 5² = 3,14 × 25 = 78,5 cm². Il faut bien élever le rayon au carré avant de multiplier par π. La réponse 31,4 cm² correspond au périmètre, 2 × π × r, et 314 cm² élève au carré le diamètre 10 au lieu du rayon.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Si n est un entier pair, le nombre forcément impair est :",
+      "o": [
+        "2n",
+        "n²",
+        "n + 2",
+        "n + 1"
+      ],
+      "r": 3,
+      "x": "Ajouter 1 à un nombre pair donne toujours un nombre impair : si n = 2k, alors n + 1 = 2k + 1. Les autres expressions restent paires, car 2n est un multiple de 2, n² = 4k² l'est aussi et n + 2 = 2(k + 1). On peut contrôler avec n = 4, qui donne 8, 16, 6 et 5.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le reste de la division euclidienne de 247 par 12 est :",
+      "o": [
+        "7",
+        "12",
+        "19",
+        "20"
+      ],
+      "r": 0,
+      "x": "On cherche le plus grand multiple de 12 inférieur ou égal à 247 : c'est 12 × 20 = 240. Le reste vaut 247 − 240 = 7, bien inférieur au diviseur 12, comme il se doit. La réponse 20 donne le quotient et non le reste, et 19 serait le reste obtenu avec le quotient 19, ce qui est impossible puisqu'il dépasse 12.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "45 % de 240 valent :",
+      "o": [
+        "96",
+        "108",
+        "132",
+        "195"
+      ],
+      "r": 1,
+      "x": "Prendre 45 % d'une quantité, c'est la multiplier par 45/100 : 240 × 45 ÷ 100 = 108. Pour contrôler de tête, 50 % de 240 font 120 et 5 % font 12, d'où 120 − 12 = 108. La réponse 132 donne les 55 % restants, et 195 soustrait simplement 45 de 240.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "4 ouvriers réalisent un travail en 3 jours. Travaillant au même rythme, 6 ouvriers feront le même travail en :",
+      "o": [
+        "2 jours",
+        "3 jours",
+        "4 jours",
+        "4,5 jours"
+      ],
+      "r": 0,
+      "x": "Plus il y a d'ouvriers, moins il faut de jours : c'est une proportionnalité inverse. Le travail total représente 4 × 3 = 12 journées de travail, que 6 ouvriers accomplissent en 12 ÷ 6 = 2 jours. La réponse 4,5 jours applique à tort une proportionnalité directe, 3 × 6 ÷ 4.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Un carré et un rectangle ont le même périmètre, 40 cm. Le rectangle mesure 12 cm de long. Son aire est de :",
+      "o": [
+        "64 cm²",
+        "80 cm²",
+        "96 cm²",
+        "100 cm²"
+      ],
+      "r": 2,
+      "x": "Le demi-périmètre du rectangle vaut 40 ÷ 2 = 20 cm, donc sa largeur mesure 20 − 12 = 8 cm. Son aire est alors 12 × 8 = 96 cm². La réponse 100 cm² est l'aire du carré de même périmètre, dont le côté mesure 10 cm, et 64 cm² élève la largeur au carré.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le résultat de 7/8 − 3/4 + 1/2 est :",
+      "o": [
+        "−3/8",
+        "1/8",
+        "1/2",
+        "5/8"
+      ],
+      "r": 3,
+      "x": "On réduit au dénominateur commun 8 : 3/4 = 6/8 et 1/2 = 4/8. On effectue ensuite les opérations de gauche à droite : 7/8 − 6/8 + 4/8 = 5/8. La réponse −3/8 soustrait à tort la somme 3/4 + 1/2, et 1/8 oublie d'ajouter la dernière fraction.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Une classe compte 40 élèves, dont 24 filles. La probabilité de choisir un garçon au hasard est :",
+      "o": [
+        "2/5",
+        "1/2",
+        "3/5",
+        "2/3"
+      ],
+      "r": 0,
+      "x": "La classe compte 40 − 24 = 16 garçons, et chaque élève a la même chance d'être choisi. La probabilité vaut 16/40, qu'on simplifie par 8 en 2/5. La réponse 3/5 est la probabilité de choisir une fille, et 2/3 compare les garçons aux filles (16/24) au lieu de les rapporter à l'effectif total.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation 3x − 5 ≤ 9 + x est :",
+      "o": [
+        "x ≤ 2",
+        "x ≤ 3,5",
+        "x ≥ 7",
+        "x ≤ 7"
+      ],
+      "r": 3,
+      "x": "On regroupe les x dans le membre de gauche et les nombres dans celui de droite : 3x − x ≤ 9 + 5, soit 2x ≤ 14. En divisant par 2, nombre positif, on garde le sens de l'inégalité : x ≤ 7. La réponse x ≥ 7 inverse le sens sans raison, x ≤ 2 se trompe de signe en déplaçant le −5, et x ≤ 3,5 ajoute x au lieu de le soustraire.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Un automobiliste parcourt 45 km en 30 minutes. Sa vitesse moyenne est de :",
+      "o": [
+        "1,5 km/h",
+        "22,5 km/h",
+        "45 km/h",
+        "90 km/h"
+      ],
+      "r": 3,
+      "x": "30 minutes font une demi-heure, soit 0,5 h. La vitesse vaut distance ÷ durée = 45 ÷ 0,5 = 90 km/h : en une heure entière, l'automobiliste parcourrait deux fois 45 km. La réponse 22,5 km/h multiplie par 0,5 au lieu de diviser, et 1,5 divise 45 par 30 sans convertir les minutes en heures.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Les salaires de 6 employés, en milliers de FCFA, sont : 80 ; 90 ; 100 ; 80 ; 80 ; 90. Le mode de cette série est :",
+      "o": [
+        "80",
+        "85",
+        "90",
+        "100"
+      ],
+      "r": 0,
+      "x": "Le mode est la valeur qui revient le plus souvent dans la série. Le salaire de 80 000 FCFA apparaît trois fois, contre deux fois pour 90 000 et une fois pour 100 000 : le mode est donc 80. La réponse 85 est la médiane de la série rangée, et 100 en est seulement la valeur maximale.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Si f(x) = x² − 3x + 2, la valeur de f(0) + f(2) est :",
+      "o": [
+        "0",
+        "2",
+        "4",
+        "14"
+      ],
+      "r": 1,
+      "x": "On calcule chaque image séparément : f(0) = 0 − 0 + 2 = 2 et f(2) = 2² − 3 × 2 + 2 = 4 − 6 + 2 = 0. La somme vaut donc 2 + 0 = 2. La réponse 0 oublie le terme constant dans f(0), et 14 ajoute 3 × 2 au lieu de le soustraire dans f(2).",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le volume d'un cylindre de 3 cm de rayon et de 10 cm de hauteur est de (π ≈ 3,14) :",
+      "o": [
+        "28,26 cm³",
+        "94,2 cm³",
+        "188,4 cm³",
+        "282,6 cm³"
+      ],
+      "r": 3,
+      "x": "Le volume d'un cylindre est l'aire de sa base multipliée par sa hauteur : V = π × r² × h. On obtient 3,14 × 9 × 10 = 282,6 cm³, l'aire de la base valant 28,26 cm². La réponse 94,2 cm³ oublie d'élever le rayon au carré, et 188,4 cm³ correspond à l'aire latérale, 2 × π × r × h.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "L'expression (3²)³ est égale à :",
+      "o": [
+        "3⁵",
+        "3⁶",
+        "3⁸",
+        "3⁹"
+      ],
+      "r": 1,
+      "x": "Pour élever une puissance à une puissance, on multiplie les exposants : (3²)³ = 3²ˣ³ = 3⁶. On le vérifie en calculant 9³ = 729, qui est bien égal à 3⁶. La réponse 3⁵ additionne les exposants, règle réservée au produit de deux puissances de même base, et 3⁹ calcule 3 à la puissance 3², ce qui est une autre expression.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le résultat de √75 + √12 est :",
+      "o": [
+        "√87",
+        "5√3",
+        "7√3",
+        "10√3"
+      ],
+      "r": 2,
+      "x": "On simplifie chaque racine : √75 = √(25 × 3) = 5√3 et √12 = √(4 × 3) = 2√3. On additionne ensuite comme des termes semblables : 5√3 + 2√3 = 7√3. La réponse √87 additionne les nombres sous le radical, ce qui est faux car √a + √b n'est pas égal à √(a + b), et 10√3 multiplie les coefficients au lieu de les additionner.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le chiffre des unités de 7²⁰ est :",
+      "o": [
+        "1",
+        "3",
+        "7",
+        "9"
+      ],
+      "r": 0,
+      "x": "Les chiffres des unités des puissances de 7 se répètent par cycle de quatre : 7, 9, 3, puis 1 pour 7⁴ = 2 401. Comme 20 est un multiple de 4, la puissance 7²⁰ se termine comme 7⁴, c'est-à-dire par 1. La réponse 7 reprend simplement le chiffre de départ, sans tenir compte du cycle.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le résultat de (√2 + √8)² est :",
       "o": [
         "10",
+        "14",
         "16",
-        "20",
         "18"
       ],
       "r": 3,
-      "x": "√8 = 2√2, donc (√2 + 2√2)² = (3√2)² = 9 × 2 = 18."
+      "x": "On simplifie d'abord √8 = √(4 × 2) = 2√2, si bien que √2 + √8 = 3√2. On obtient alors (3√2)² = 9 × 2 = 18. La réponse 10 oublie le double produit en écrivant (a + b)² = a² + b², et 14 compte ce double produit pour 4 au lieu de 2 × √2 × √8 = 8.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quelle fraction est égale à 0,75 ?",
+      "q": "La fraction égale à 0,75 est :",
       "o": [
         "3/4",
+        "4/3",
         "7/5",
-        "3/5",
-        "4/3"
+        "15/2"
       ],
       "r": 0,
-      "x": "0,75 = 75/100. En divisant par 25 : 3/4."
+      "x": "0,75 se lit soixante-quinze centièmes, soit 75/100. En divisant numérateur et dénominateur par 25, on obtient la fraction irréductible 3/4. La réponse 15/2 vient de 75/10, qui vaut 7,5 et non 0,75, et 4/3 est l'inverse de la bonne fraction.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Après une hausse de 10 %, un produit coûte 2 200 FCFA. Quel était son prix initial ?",
+      "q": "Après une hausse de 10 %, un produit coûte 2 200 FCFA. Son prix initial était de :",
       "o": [
-        "1 900 FCFA",
-        "2 100 FCFA",
+        "1 800 FCFA",
+        "1 980 FCFA",
         "2 000 FCFA",
-        "1 980 FCFA"
+        "2 420 FCFA"
       ],
       "r": 2,
-      "x": "P × 1,10 = 2 200 → P = 2 200 / 1,10 = 2 000 FCFA."
+      "x": "Une hausse de 10 % multiplie le prix initial par 1,10, donc on retrouve celui-ci en divisant : 2 200 ÷ 1,10 = 2 000 FCFA. On vérifie : 2 000 + 10 % de 2 000 = 2 000 + 200 = 2 200 FCFA. La réponse 1 980 FCFA retire 10 % de 2 200, alors que le pourcentage portait sur l'ancien prix, et 2 420 FCFA applique une seconde hausse.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Résoudre : (x + 3)/2 = 5",
+      "q": "La solution de l'équation (x + 3)/2 = 5 est :",
       "o": [
-        "x = 4",
+        "x = 2",
         "x = 7",
         "x = 10",
         "x = 13"
       ],
       "r": 1,
-      "x": "(x + 3)/2 = 5 → x + 3 = 10 → x = 7."
+      "x": "On multiplie d'abord les deux membres par 2 pour éliminer le dénominateur : x + 3 = 10. On soustrait ensuite 3 : x = 7, et l'on vérifie que (7 + 3) ÷ 2 = 5. La réponse 13 ajoute 3 au lieu de le soustraire, et 2 soustrait 3 avant d'avoir multiplié par 2.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Le périmètre d'un rectangle de longueur 15 cm et de largeur 8 cm est :",
+      "q": "Le périmètre d'un rectangle de 15 cm de longueur et de 8 cm de largeur est de :",
       "o": [
-        "46 cm",
-        "120 cm",
         "23 cm",
-        "40 cm"
+        "31 cm",
+        "38 cm",
+        "46 cm"
       ],
-      "r": 0,
-      "x": "P = 2 × (L + l) = 2 × (15 + 8) = 46 cm."
+      "r": 3,
+      "x": "Le périmètre d'un rectangle est la longueur totale de son contour : P = 2 × (L + l). Ici P = 2 × (15 + 8) = 2 × 23 = 46 cm. La réponse 23 cm ne compte qu'une longueur et une largeur, et 38 cm oublie une des deux largeurs.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Dans un triangle rectangle de côtés 3 cm et 4 cm (angle droit), quelle est la mesure de l'hypoténuse ?",
+      "q": "Un triangle est rectangle et les côtés de son angle droit mesurent 3 cm et 4 cm. Son hypoténuse mesure :",
       "o": [
+        "5 cm",
         "6 cm",
         "7 cm",
-        "4,5 cm",
-        "5 cm"
+        "25 cm"
       ],
-      "r": 3,
-      "x": "h² = 3² + 4² = 9 + 16 = 25 → h = 5 cm (triplet classique : 3, 4, 5)."
+      "r": 0,
+      "x": "D'après le théorème de Pythagore, le carré de l'hypoténuse est égal à la somme des carrés des deux autres côtés : 3² + 4² = 9 + 16 = 25. L'hypoténuse mesure donc √25 = 5 cm. La réponse 7 cm additionne simplement les deux côtés, et 25 cm oublie de prendre la racine carrée.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Dans le triangle ABC, DE // BC avec AB = 15 cm, AD = 6 cm et DE = 4 cm. Calculer BC.",
+      "q": "Dans le triangle ABC, D est sur [AB] et E sur [AC], avec (DE) parallèle à (BC). Si AB = 18 cm, AD = 6 cm et DE = 5 cm, alors BC mesure :",
       "o": [
-        "8 cm",
-        "9 cm",
-        "10 cm",
-        "11 cm"
+        "1,7 cm",
+        "12 cm",
+        "15 cm",
+        "17 cm"
       ],
       "r": 2,
-      "x": "Par Thalès : AD/AB = DE/BC → 6/15 = 4/BC → BC = (4 × 15) / 6 = 10 cm."
+      "x": "Comme (DE) est parallèle à (BC), le théorème de Thalès donne AD/AB = DE/BC, soit 6/18 = 5/BC. Par produit en croix, BC = 5 × 18 ÷ 6 = 15 cm, trois fois DE puisque AB vaut trois fois AD. La réponse 17 cm ajoute à DE la longueur DB = 12 cm, et 1,7 cm renverse le rapport de Thalès.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Temps de trajet de 7 élèves (min) : 15, 20, 25, 20, 30, 15, 20. Quelle est la médiane ?",
+      "q": "Les temps de trajet de 7 élèves, en minutes, sont : 15 ; 20 ; 25 ; 20 ; 30 ; 15 ; 20. La médiane de cette série est :",
       "o": [
-        "15",
-        "20",
-        "25",
-        "21"
+        "15 min",
+        "20 min",
+        "22,5 min",
+        "25 min"
       ],
       "r": 1,
-      "x": "Série ordonnée : 15 ; 15 ; 20 ; 20 ; 20 ; 25 ; 30. Médiane = 4e valeur = 20 min."
+      "x": "On range d'abord les 7 durées dans l'ordre croissant : 15 ; 15 ; 20 ; 20 ; 20 ; 25 ; 30. Avec 7 valeurs, la médiane est la 4ᵉ, qui laisse trois valeurs de chaque côté : elle vaut 20 min. La réponse 22,5 min est la moyenne des valeurs extrêmes 15 et 30, qui ne tient pas compte de la répartition des autres valeurs.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "On tire une carte dans un jeu de 52 cartes. Quelle est la probabilité d'obtenir un as ?",
+      "q": "On tire une carte au hasard dans un jeu de 52 cartes. La probabilité d'obtenir un as est :",
       "o": [
         "1/13",
-        "1/52",
-        "2/13",
-        "1/4"
+        "1/4",
+        "4/13",
+        "12/13"
       ],
       "r": 0,
-      "x": "Il y a 4 as sur 52 cartes. P = 4/52 = 1/13."
+      "x": "Un jeu de 52 cartes contient 4 as, un dans chaque couleur, et toutes les cartes ont la même chance d'être tirées. La probabilité vaut 4/52, qu'on simplifie par 4 en 1/13. La réponse 1/4 confond les as avec l'une des quatre couleurs, et 12/13 est la probabilité de ne pas tirer d'as.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Le volume d'une sphère de rayon 3 cm est (π ≈ 3,14) :",
+      "q": "Un capital placé à 4 % par an pendant 5 ans produit 30 000 FCFA d'intérêts simples. Ce capital est de :",
       "o": [
-        "37,68 cm³",
-        "56,52 cm³",
-        "150,72 cm³",
-        "113,04 cm³"
-      ],
-      "r": 3,
-      "x": "V = (4/3) × π × r³ = (4/3) × 3,14 × 27 = 113,04 cm³."
-    },
-    {
-      "q": "Convertir 72 km/h en m/s.",
-      "o": [
-        "36 m/s",
-        "25 m/s",
-        "20 m/s",
-        "7,2 m/s"
-      ],
-      "r": 2,
-      "x": "1 km/h = 1/3,6 m/s. Donc 72 km/h = 72 / 3,6 = 20 m/s."
-    },
-    {
-      "q": "Un capital placé à 4 % par an pendant 5 ans produit 20 000 FCFA d'intérêts. Quel est ce capital ?",
-      "o": [
-        "80 000 FCFA",
-        "100 000 FCFA",
         "120 000 FCFA",
-        "50 000 FCFA"
+        "150 000 FCFA",
+        "600 000 FCFA",
+        "750 000 FCFA"
       ],
       "r": 1,
-      "x": "C = I / (t × n) = 20 000 / (0,04 × 5) = 100 000 FCFA."
+      "x": "On part de I = C × t × n, d'où C = I ÷ (t × n) = 30 000 ÷ (0,04 × 5). En cinq ans, le placement rapporte 4 % × 5 = 20 % du capital, donc C = 30 000 ÷ 0,20 = 150 000 FCFA. La réponse 750 000 FCFA oublie la durée de 5 ans, et 600 000 FCFA multiplie l'intérêt par 20 au lieu de le diviser par 0,20.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel nombre complète la suite : 1, 4, 9, 16, ?, 36 ?",
+      "q": "Le nombre qui complète la suite 1 ; 4 ; 9 ; 16 ; … ; 36 est :",
       "o": [
+        "23",
         "25",
-        "20",
-        "24",
+        "26",
         "30"
       ],
-      "r": 0,
-      "x": "Suite des carrés parfaits : 1² ; 2² ; 3² ; 4² ; 5² = 25 ; 6²."
+      "r": 1,
+      "x": "Les nombres de la suite sont les carrés des entiers successifs : 1², 2², 3², 4², puis 5² = 25 et 6² = 36. On peut aussi remarquer que les écarts 3, 5, 7, 9, 11 sont les nombres impairs successifs. La réponse 23 ajoute 7 au lieu de 9, en reprenant un écart déjà utilisé, et 26 coupe simplement en deux l'intervalle entre 16 et 36.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Combien de multiples de 7 y a-t-il entre 1 et 100 ?",
+      "q": "Le résultat de 4³ × 2⁻² est :",
       "o": [
-        "13",
+        "−256",
+        "8",
         "16",
-        "15",
-        "14"
-      ],
-      "r": 3,
-      "x": "Les multiples de 7 entre 1 et 100 sont : 7, 14, …, 98. Il y en a 98 ÷ 7 = 14."
-    },
-    {
-      "q": "Calculer : 4^3 × 2^(−2)",
-      "o": [
-        "32",
-        "24",
-        "16",
-        "8"
+        "32"
       ],
       "r": 2,
-      "x": "4³ = 64 et 2^(−2) = 1/4. Donc 64 × 1/4 = 16."
+      "x": "On calcule chaque facteur : 4³ = 64 et 2⁻² = 1/2² = 1/4. Le produit vaut donc 64 × 1/4 = 16. La réponse −256 interprète l'exposant négatif comme un nombre négatif, 2⁻² = −4, et 32 confond 2⁻² avec 1/2.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel est le double de 356 ?",
+      "q": "L'aire d'un losange dont les diagonales mesurent 8 cm et 6 cm est de :",
       "o": [
-        "716",
-        "712",
-        "706",
-        "612"
-      ],
-      "r": 1,
-      "x": "Double = 2 × 356 = 712."
-    },
-    {
-      "q": "Un robinet remplit 1/3 d'un réservoir par heure. En combien de temps le réservoir sera-t-il plein ?",
-      "o": [
-        "3 heures",
-        "2 heures",
-        "4 heures",
-        "6 heures"
-      ],
-      "r": 0,
-      "x": "Si 1/3 est rempli en 1 heure, le réservoir entier sera rempli en 3 heures."
-    },
-    {
-      "q": "Un losange a des diagonales de 8 cm et 6 cm. Quelle est son aire ?",
-      "o": [
-        "48 cm²",
-        "28 cm²",
+        "7 cm²",
         "14 cm²",
+        "20 cm²",
         "24 cm²"
       ],
       "r": 3,
-      "x": "Aire = (d1 × d2) / 2 = (8 × 6) / 2 = 24 cm²."
+      "x": "L'aire d'un losange est égale au demi-produit de ses diagonales : (8 × 6) ÷ 2 = 24 cm². Cela s'explique car le losange occupe exactement la moitié du rectangle construit sur ses diagonales. La réponse 20 correspond au périmètre du losange, dont le côté mesure 5 cm, et 14 additionne les deux diagonales.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Résoudre : |2x − 4| = 6",
+      "q": "Les solutions de l'équation |2x − 4| = 6 sont :",
       "o": [
         "x = 5 seulement",
         "x = −1 seulement",
-        "x = 5 ou x = −1",
-        "x = 1 ou x = 5"
+        "x = 1 ou x = 5",
+        "x = −1 ou x = 5"
       ],
-      "r": 2,
-      "x": "|A| = 6 signifie : A = 6 ou A = −6. Donc : 2x − 4 = 6 ⟹ x = 5 ou 2x − 4 = −6 ⟹ x = −1."
+      "r": 3,
+      "x": "Une valeur absolue égale à 6 signifie que l'expression vaut 6 ou −6. On résout donc 2x − 4 = 6, d'où x = 5, et 2x − 4 = −6, d'où x = −1. La réponse « x = 5 seulement » oublie le cas négatif, et x = 1 vient d'une erreur de signe dans la seconde équation.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Un piéton marche à 5 km/h. Un cycliste part 30 min après lui à 15 km/h. Au bout de combien de temps le cycliste le rejoint-il ?",
+      "q": "Un piéton marche à 5 km/h. Un cycliste part du même point 30 min après lui, dans le même sens, à 15 km/h. Le cycliste le rejoint au bout de :",
       "o": [
-        "20 min",
         "15 min",
+        "20 min",
         "30 min",
         "45 min"
       ],
-      "r": 1,
-      "x": "Avance du piéton = 5 × 0,5 = 2,5 km. Vitesse relative = 10 km/h. Temps = 2,5 / 10 = 0,25 h = 15 min."
+      "r": 0,
+      "x": "En 30 minutes, le piéton prend une avance de 5 × 0,5 = 2,5 km. Le cycliste réduit cet écart de 15 − 5 = 10 km par heure, donc il le comble en 2,5 ÷ 10 = 0,25 h, soit 15 min. La réponse 30 min reprend simplement le retard au départ, sans tenir compte de la différence des vitesses.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Une série a 5 valeurs de moyenne 12. On ajoute la valeur 18. Quelle est la nouvelle moyenne ?",
+      "q": "Une série de 5 valeurs a pour moyenne 12. On lui ajoute la valeur 18. La nouvelle moyenne est :",
       "o": [
-        "13",
-        "14",
+        "12",
         "12,5",
+        "13",
         "15"
       ],
-      "r": 0,
-      "x": "Somme initiale = 12 × 5 = 60. Après ajout : 60 + 18 = 78. Nouvelle moyenne = 78 / 6 = 13."
-    },
-    {
-      "q": "(un peu avancé!) Une urne contient 3 boules rouges et 7 noires. On tire 2 boules sans remise. Quelle est la probabilité que les 2 soient rouges ?",
-      "o": [
-        "9/100",
-        "3/10",
-        "1/15",
-        "1/10"
-      ],
       "r": 2,
-      "x": "P(1re rouge) = 3/10. P(2e rouge sachant 1re rouge) = 2/9. P = 6/90 = 1/15."
+      "x": "La somme des 5 valeurs vaut 5 × 12 = 60 ; en ajoutant 18, elle passe à 78 pour 6 valeurs. La nouvelle moyenne est donc 78 ÷ 6 = 13. La réponse 15 fait la moyenne de 12 et 18 comme si ces deux nombres pesaient autant, alors que 12 représente cinq valeurs.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "L'ensemble des solutions de −2x > 8 est :",
+      "q": "L'ensemble des solutions de l'inéquation −2x > 8 est :",
       "o": [
+        "x > −4",
         "x > 4",
         "x < −4",
-        "x < 4",
-        "x > −4"
-      ],
-      "r": 1,
-      "x": "En divisant par −2 (nombre négatif), l'inégalité s'inverse : x < −4."
-    },
-    {
-      "q": "Combien de grammes y a-t-il dans 2,5 kg ?",
-      "o": [
-        "2 500 g",
-        "250 g",
-        "25 000 g",
-        "25 g"
-      ],
-      "r": 0,
-      "x": "1 kg = 1 000 g. Donc 2,5 kg = 2 500 g."
-    },
-    {
-      "q": "Calculer : √(48/3)",
-      "o": [
-        "2√3",
-        "4√3",
-        "8",
-        "4"
-      ],
-      "r": 3,
-      "x": "48/3 = 16. Donc √(48/3) = √16 = 4."
-    },
-    {
-      "q": "En combien d'années un capital placé à 10 % par an (intérêt simple) doublera-t-il ?",
-      "o": [
-        "5 ans",
-        "8 ans",
-        "10 ans",
-        "12 ans"
+        "x < 4"
       ],
       "r": 2,
-      "x": "Pour doubler, l'intérêt doit égaler le capital : C × 0,10 × n = C → n = 10 ans."
+      "x": "On divise les deux membres par −2 pour isoler x. Diviser par un nombre négatif inverse le sens de l'inégalité : on obtient x < −4, et l'on vérifie avec x = −5 que −2 × (−5) = 10 > 8. La réponse x > −4 oublie ce changement de sens, et les réponses avec 4 se trompent aussi de signe.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Sur un graphique, les effectifs de 4 classes d'âge sont 12, 18, 25 et 15. Quelle classe a le plus grand effectif ?",
+      "q": "Une masse de 2,5 kg correspond à :",
       "o": [
-        "1re classe (12)",
-        "3e classe (25)",
-        "4e classe (15)",
-        "2e classe (18)"
+        "250 g",
+        "2 500 g",
+        "25 000 g",
+        "250 000 g"
       ],
       "r": 1,
-      "x": "Le plus grand effectif est 25, il correspond à la 3e classe."
+      "x": "Un kilogramme vaut 1 000 grammes, donc on multiplie par 1 000 : 2,5 × 1 000 = 2 500 g. On décale la virgule de trois rangs vers la droite en complétant par des zéros. La réponse 250 g ne multiplie que par 100, et 25 000 g multiplie par 10 000.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Pour tout entier n ≥ 1, lequel de ces énoncés est toujours vrai ?",
+      "q": "La valeur de √(48/3) est :",
       "o": [
-        "n(n + 1) est toujours pair",
-        "n² est toujours impair",
-        "2n est toujours impair",
-        "n² > 2n pour tout n ≥ 1"
+        "4",
+        "4√3",
+        "8",
+        "16"
       ],
       "r": 0,
-      "x": "n et n + 1 sont des entiers consécutifs, donc l'un est pair. Leur produit est toujours pair."
+      "x": "On simplifie d'abord la fraction sous la racine : 48 ÷ 3 = 16. On obtient √16 = 4, puisque 4² = 16. La réponse 4√3 ne calcule que √48, sans diviser par 3, la réponse 16 oublie la racine carrée, et 8 divise 16 par 2 au lieu d'en prendre la racine.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Une recette pour 6 personnes nécessite 450 g de farine. Quelle quantité faut-il pour 10 personnes ?",
+      "q": "Un capital placé à intérêt simple au taux de 10 % par an double en :",
       "o": [
+        "2 ans",
+        "5 ans",
+        "10 ans",
+        "20 ans"
+      ],
+      "r": 2,
+      "x": "Pour qu'un capital double, il faut que les intérêts cumulés soient égaux au capital lui-même. Chaque année rapporte 10 % du capital, donc il faut 100 % ÷ 10 % = 10 ans en intérêt simple. La réponse 5 ans correspondrait à un taux de 20 %, et 20 ans à un taux de 5 %.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Pour tout entier n ≥ 1, l'affirmation toujours vraie est :",
+      "o": [
+        "n² est toujours impair",
+        "2n est toujours impair",
+        "n² > 2n pour tout n ≥ 1",
+        "n(n + 1) est toujours pair"
+      ],
+      "r": 3,
+      "x": "Les entiers n et n + 1 sont consécutifs, donc l'un des deux est forcément pair, et un produit contenant un facteur pair est pair. Les autres affirmations admettent des contre-exemples : n² vaut 4 pour n = 2, 2n est toujours pair, et n² > 2n est faux pour n = 1 et n = 2. Un seul contre-exemple suffit pour rejeter une affirmation présentée comme toujours vraie.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Une recette pour 6 personnes nécessite 450 g de farine. Pour 10 personnes, il faut :",
+      "o": [
+        "270 g",
+        "454 g",
         "600 g",
-        "700 g",
-        "800 g",
         "750 g"
       ],
       "r": 3,
-      "x": "450 / 6 = 75 g par personne. Pour 10 : 75 × 10 = 750 g."
+      "x": "On ramène d'abord à une personne : 450 ÷ 6 = 75 g de farine par personne. Pour 10 personnes, il faut donc 75 × 10 = 750 g. La réponse 270 g inverse le rapport en calculant 450 × 6 ÷ 10, et 454 g ajoute les 4 personnes supplémentaires comme s'il s'agissait de grammes.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quelle est la pente de la droite passant par A(1, 3) et B(4, 9) ?",
+      "q": "Le coefficient directeur de la droite passant par A(1 ; 2) et B(4 ; 11) est :",
       "o": [
-        "1",
+        "1/3",
         "3",
-        "2",
-        "4"
-      ],
-      "r": 2,
-      "x": "Pente = (y_B − y_A) / (x_B − x_A) = (9 − 3) / (4 − 1) = 6/3 = 2."
-    },
-    {
-      "q": "Calculer : 18² − 12²",
-      "o": [
-        "162",
-        "180",
-        "144",
-        "156"
+        "9",
+        "13"
       ],
       "r": 1,
-      "x": "18² − 12² = 324 − 144 = 180. Ou : (18 − 12)(18 + 12) = 6 × 30 = 180 (identité remarquable)."
+      "x": "Le coefficient directeur d'une droite passant par deux points est le rapport de la variation des ordonnées sur celle des abscisses. Ici (11 − 2) ÷ (4 − 1) = 9 ÷ 3 = 3. La réponse 1/3 renverse ce rapport, 9 oublie de diviser par l'écart des abscisses, et 13 additionne les deux ordonnées.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Le rayon d'un cercle est augmenté de 50 %. De quel pourcentage son aire augmente-t-elle ?",
+      "q": "Le résultat de 18² − 12² est :",
       "o": [
-        "125 %",
-        "50 %",
-        "100 %",
-        "75 %"
+        "36",
+        "144",
+        "180",
+        "468"
       ],
-      "r": 0,
-      "x": "L’aire d’un cercle est donnée par A = πr². Si le rayon augmente de 50 %, le nouveau rayon devient 1,5r. La nouvelle aire est donc : A' = π(1,5r)² = 2,25πr². L’augmentation est alors : (2,25 − 1) × 100 = 125 %. Donc l’aire augmente de 125 %."
+      "r": 2,
+      "x": "On peut calculer directement : 18² − 12² = 324 − 144 = 180. Plus rapidement, l'identité a² − b² = (a − b)(a + b) donne (18 − 12) × (18 + 12) = 6 × 30 = 180. La réponse 36 calcule (18 − 12)², qui n'est pas égal à 18² − 12², et 468 additionne les deux carrés.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Calculer : (1/2 + 1/3) × (1/4 − 1/6)",
+      "q": "Le rayon d'un cercle augmente de 50 %. L'aire du disque augmente alors de :",
       "o": [
-        "7/72",
-        "1/12",
-        "1/9",
-        "5/72"
+        "50 %",
+        "75 %",
+        "100 %",
+        "125 %"
       ],
       "r": 3,
-      "x": "(1/2 + 1/3) = 5/6 et (1/4 − 1/6) = 1/12. Produit = 5/6 × 1/12 = 5/72."
+      "x": "L'aire d'un disque est proportionnelle au carré du rayon : si le rayon est multiplié par 1,5, l'aire est multipliée par 1,5² = 2,25. L'aire passe donc de πr² à 2,25πr², ce qui représente une hausse de 125 %. La réponse 50 % suppose à tort que l'aire varie comme le rayon, et 100 % double simplement ce pourcentage.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Un cube a un volume de 125 cm³. Quelle est la longueur de son arête ?",
+      "q": "Le résultat de (1/2 + 1/3) × (1/4 − 1/6) est :",
       "o": [
-        "12,5 cm",
-        "25 cm",
-        "5 cm",
-        "15 cm"
-      ],
-      "r": 2,
-      "x": "Arête = ∛125 = 5 cm car 5³ = 125."
-    },
-    {
-      "q": "Une urne contient 3 boules rouges, 2 bleues et 7 vertes. Quelle est la probabilité de NE PAS obtenir une boule verte ?",
-      "o": [
-        "7/12",
-        "5/12",
-        "1/4",
-        "1/3"
-      ],
-      "r": 1,
-      "x": "Boules non vertes = 3 + 2 = 5. Total = 12. P(non verte) = 5/12."
-    },
-    {
-      "q": "L'âge d'un père est le triple de celui de son fils. Dans 10 ans, la somme de leurs âges sera 80 ans. Quel est l'âge actuel du fils ?",
-      "o": [
-        "15 ans",
-        "10 ans",
-        "12 ans",
-        "13 ans"
+        "5/72",
+        "1/12",
+        "2/5",
+        "5/6"
       ],
       "r": 0,
-      "x": "Fils = x, père = 3x. Dans 10 ans : (x + 10) + (3x + 10) = 80 → 4x = 60 → x = 15 ans."
+      "x": "On calcule chaque parenthèse au dénominateur commun : 1/2 + 1/3 = 3/6 + 2/6 = 5/6 et 1/4 − 1/6 = 3/12 − 2/12 = 1/12. Le produit vaut 5/6 × 1/12 = 5/72. Les réponses 5/6 et 1/12 ne donnent que l'une des deux parenthèses, et 2/5 additionne à tort numérateurs et dénominateurs dans la première.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Parmi les nombres suivants, lequel est premier ?",
+      "q": "Une urne contient 3 boules rouges, 2 bleues et 7 vertes. La probabilité de ne pas tirer une boule verte est :",
+      "o": [
+        "1/4",
+        "5/12",
+        "7/12",
+        "5/7"
+      ],
+      "r": 1,
+      "x": "Les boules qui ne sont pas vertes sont les rouges et les bleues, soit 3 + 2 = 5 boules sur un total de 3 + 2 + 7 = 12. La probabilité vaut donc 5/12, ce qui correspond aussi à 1 − 7/12. La réponse 7/12 est la probabilité de tirer une verte, et 5/7 compare les boules non vertes aux vertes au lieu de les rapporter au total.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Un père a le triple de l'âge de son fils. Dans 10 ans, la somme de leurs âges sera de 80 ans. L'âge actuel du fils est de :",
+      "o": [
+        "15 ans",
+        "17,5 ans",
+        "20 ans",
+        "45 ans"
+      ],
+      "r": 0,
+      "x": "On note x l'âge actuel du fils, donc 3x celui du père. Dans 10 ans, chacun aura vieilli de 10 ans : (x + 10) + (3x + 10) = 80, soit 4x + 20 = 80, d'où x = 15 ans. La réponse 17,5 n'ajoute 10 ans qu'une seule fois, 20 ne les ajoute pas du tout, et 45 est l'âge du père.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Parmi les nombres suivants, le seul nombre premier est :",
       "o": [
         "27",
         "35",
-        "49",
-        "37"
-      ],
-      "r": 3,
-      "x": "27 = 3³, 35 = 5 × 7, 49 = 7². Seul 37 n'est divisible que par 1 et lui-même."
-    },
-    {
-      "q": "Calculer : 2/5 + 3/10 − 1/2",
-      "o": [
-        "3/10",
-        "1/10",
-        "1/5",
-        "2/5"
+        "37",
+        "49"
       ],
       "r": 2,
-      "x": "LCD = 10 : 4/10 + 3/10 − 5/10 = 2/10 = 1/5."
+      "x": "Un nombre premier n'admet que deux diviseurs, 1 et lui-même : 27 = 3 × 9, 35 = 5 × 7 et 49 = 7 × 7 ne le sont donc pas. En revanche, 37 n'est divisible ni par 2, ni par 3, ni par 5, et comme 7² = 49 dépasse 37, inutile d'essayer plus loin. Le piège classique est 49, impair et non divisible par 3, mais égal à 7².",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Un capital de 250 000 FCFA est placé à 8 % par an pendant 18 mois. Quel est l'intérêt produit ?",
+      "q": "Le résultat de 2/5 + 3/10 − 1/2 est :",
+      "o": [
+        "1/5",
+        "4/13",
+        "7/10",
+        "6/5"
+      ],
+      "r": 0,
+      "x": "On réduit au dénominateur commun 10 : 2/5 = 4/10 et 1/2 = 5/10. On obtient 4/10 + 3/10 − 5/10 = 2/10, qu'on simplifie en 1/5. La réponse 7/10 oublie de soustraire 1/2, 6/5 l'ajoute au lieu de le soustraire, et 4/13 additionne et soustrait séparément numérateurs et dénominateurs.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Un capital de 250 000 FCFA est placé à 8 % par an pendant 18 mois. L'intérêt simple produit est de :",
       "o": [
         "20 000 FCFA",
         "30 000 FCFA",
-        "25 000 FCFA",
-        "40 000 FCFA"
+        "36 000 FCFA",
+        "360 000 FCFA"
       ],
       "r": 1,
-      "x": "18 mois = 1,5 an. I = 250 000 × 0,08 × 1,5 = 30 000 FCFA."
+      "x": "La durée doit être exprimée en années : 18 mois = 1,5 an. L'intérêt vaut alors 250 000 × 0,08 × 1,5 = 30 000 FCFA, soit 20 000 FCFA par an pendant un an et demi. La réponse 36 000 FCFA lit 18 mois comme 1,8 an, et 360 000 FCFA multiplie par 18 comme si la durée était en années.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel est le PGCD de 30 et 45 ?",
+      "q": "Le PGCD de 30 et 45 est :",
       "o": [
+        "3",
         "5",
         "15",
-        "9",
-        "10"
+        "90"
       ],
-      "r": 1,
-      "x": "30 = 2 × 3 × 5 et 45 = 3² × 5. Le PGCD = 3 × 5 = 15."
+      "r": 2,
+      "x": "On décompose : 30 = 2 × 3 × 5 et 45 = 3² × 5. Les facteurs communs sont 3 et 5, pris avec leur plus petit exposant, donc PGCD = 3 × 5 = 15. La réponse 90 est le PPCM des deux nombres, tandis que 3 et 5 sont des diviseurs communs mais pas les plus grands.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Calculer : 7 × (12 − 5) + 3²",
+      "q": "Le résultat de 7 × (12 − 5) + 3² est :",
       "o": [
-        "52",
+        "49",
         "55",
-        "50",
-        "58"
+        "58",
+        "88"
       ],
-      "r": 3,
-      "x": "12 − 5 = 7, puis 7 × 7 = 49, puis 3² = 9. Total = 49 + 9 = 58."
+      "r": 2,
+      "x": "On commence par la parenthèse, 12 − 5 = 7, et par la puissance, 3² = 9. On effectue ensuite la multiplication, 7 × 7 = 49, puis l'addition : 49 + 9 = 58. La réponse 88 oublie la parenthèse en calculant 7 × 12 − 5 + 9, 55 confond 3² avec 3 × 2, et 49 oublie d'ajouter 3².",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Calculer : 5/6 − 2/9",
+      "q": "Le résultat de 5/6 − 2/9 est :",
       "o": [
-        "11/18",
         "7/18",
-        "3/6",
-        "5/18"
+        "1/2",
+        "11/18",
+        "19/18"
       ],
-      "r": 0,
-      "x": "LCD = 18. 5/6 = 15/18 et 2/9 = 4/18. Résultat = 11/18."
+      "r": 2,
+      "x": "On cherche le plus petit dénominateur commun à 6 et 9, qui est 18 : 5/6 = 15/18 et 2/9 = 4/18. On soustrait les numérateurs : 15/18 − 4/18 = 11/18, fraction déjà irréductible. La réponse 19/18 additionne les fractions au lieu de les soustraire, et 1/2, soit 3/6, soustrait les numérateurs sans s'occuper des dénominateurs.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Un article de 6 000 FCFA est soldé à 30 %. Quel est le prix de vente ?",
+      "q": "Un article de 6 000 FCFA est soldé avec une remise de 30 %. Son prix soldé est de :",
       "o": [
         "1 800 FCFA",
-        "5 000 FCFA",
         "4 200 FCFA",
-        "3 600 FCFA"
-      ],
-      "r": 2,
-      "x": "Remise = 6 000 × 30/100 = 1 800 FCFA. Prix = 6 000 − 1 800 = 4 200 FCFA."
-    },
-    {
-      "q": "Résoudre : 4x + 5 = 25",
-      "o": [
-        "x = 4",
-        "x = 6",
-        "x = 8",
-        "x = 5"
-      ],
-      "r": 3,
-      "x": "4x + 5 = 25 → 4x = 20 → x = 5."
-    },
-    {
-      "q": "L'aire d'un trapèze de bases 8 cm et 12 cm et de hauteur 5 cm est :",
-      "o": [
-        "50 cm²",
-        "60 cm²",
-        "40 cm²",
-        "48 cm²"
-      ],
-      "r": 0,
-      "x": "Aire = [(b1 + b2) / 2] × h = [(8 + 12) / 2] × 5 = 10 × 5 = 50 cm²."
-    },
-    {
-      "q": "Un triangle rectangle a des côtés de 5 cm et 12 cm (côtés de l'angle droit). Quelle est l'hypoténuse ?",
-      "o": [
-        "14 cm",
-        "13 cm",
-        "15 cm",
-        "10 cm"
+        "5 700 FCFA",
+        "7 800 FCFA"
       ],
       "r": 1,
-      "x": "h² = 5² + 12² = 25 + 144 = 169. Donc h = √169 = 13 cm."
+      "x": "La remise vaut 30 % de 6 000, soit 6 000 × 30 ÷ 100 = 1 800 FCFA. Le prix soldé est donc 6 000 − 1 800 = 4 200 FCFA, ce qu'on retrouve directement par 6 000 × 0,70. La réponse 1 800 FCFA donne le montant de la remise et non le prix à payer, et 7 800 FCFA ajoute la remise au lieu de la retirer.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Si 3 litres d'essence coûtent 2 100 FCFA, combien coûtent 7 litres ?",
+      "q": "La solution de l'équation 4x + 5 = 25 est :",
       "o": [
-        "3 500 FCFA",
-        "4 200 FCFA",
-        "4 900 FCFA",
-        "5 600 FCFA"
+        "x = 5",
+        "x = 7,5",
+        "x = 20",
+        "x = 30"
       ],
-      "r": 2,
-      "x": "Prix par litre = 2 100 ÷ 3 = 700 FCFA. Pour 7 L : 700 × 7 = 4 900 FCFA."
+      "r": 0,
+      "x": "On soustrait 5 aux deux membres pour isoler le terme en x : 4x = 20. On divise ensuite par 4 : x = 5, et l'on vérifie que 4 × 5 + 5 = 25. La réponse 7,5 ajoute 5 au lieu de le soustraire, ce qui donne 4x = 30, et 20 oublie la division par 4.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Calculer : 5^3",
+      "q": "Les côtés de l'angle droit d'un triangle rectangle mesurent 8 cm et 15 cm. La longueur de l'hypoténuse est de :",
+      "o": [
+        "7 cm",
+        "17 cm",
+        "23 cm",
+        "289 cm"
+      ],
+      "r": 1,
+      "x": "Selon le théorème de Pythagore, le carré de l'hypoténuse vaut la somme des carrés des côtés de l'angle droit : 8² + 15² = 64 + 225 = 289. L'hypoténuse mesure donc √289 = 17 cm. La réponse 23 cm additionne directement les deux côtés, 7 cm les soustrait, et 289 cm oublie de prendre la racine carrée.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Si 3 litres d'essence coûtent 2 100 FCFA, 7 litres coûtent :",
+      "o": [
+        "2 800 FCFA",
+        "4 900 FCFA",
+        "6 300 FCFA",
+        "14 700 FCFA"
+      ],
+      "r": 1,
+      "x": "On calcule d'abord le prix d'un litre : 2 100 ÷ 3 = 700 FCFA. Le prix étant proportionnel à la quantité, 7 litres coûtent 7 × 700 = 4 900 FCFA. La réponse 14 700 FCFA multiplie le prix des 3 litres par 7, et 2 800 FCFA ajoute le prix d'un seul litre.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La valeur de 5³ est :",
       "o": [
         "15",
         "25",
-        "100",
-        "125"
+        "125",
+        "243"
       ],
-      "r": 3,
-      "x": "5³ = 5 × 5 × 5 = 125."
+      "r": 2,
+      "x": "5³ est le produit de trois facteurs égaux à 5 : 5 × 5 × 5 = 25 × 5 = 125. L'exposant indique le nombre de facteurs, pas le nombre par lequel on multiplie. La réponse 15 calcule 5 × 3, 25 s'arrête à 5², et 243 inverse la base et l'exposant en calculant 3⁵.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Calculer : √(144 + 25)",
+      "q": "La valeur de √(144 + 25) est :",
       "o": [
         "13",
         "17",
-        "15",
-        "11"
+        "84,5",
+        "169"
       ],
       "r": 0,
-      "x": "144 + 25 = 169. Donc √169 = 13. Attention : √144 + √25 ≠ √(144 + 25)."
+      "x": "On calcule d'abord la somme sous la racine, 144 + 25 = 169, puis sa racine carrée : √169 = 13, car 13² = 169. La racine d'une somme n'est pas la somme des racines. La réponse 17 calcule √144 + √25 = 12 + 5, erreur très fréquente, et 169 oublie de prendre la racine.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Une voiture parcourt 420 km en 3 h 30 min. Quelle est sa vitesse moyenne ?",
+      "q": "Une voiture parcourt 420 km en 3 h 30 min. Sa vitesse moyenne est de :",
       "o": [
-        "110 km/h",
         "120 km/h",
-        "130 km/h",
-        "140 km/h"
+        "127,3 km/h",
+        "140 km/h",
+        "210 km/h"
       ],
-      "r": 1,
-      "x": "3 h 30 min = 3,5 h. Vitesse = 420 ÷ 3,5 = 120 km/h."
+      "r": 0,
+      "x": "On convertit d'abord la durée : 3 h 30 min = 3,5 h, car 30 minutes valent une demi-heure. La vitesse moyenne vaut 420 ÷ 3,5 = 120 km/h. La réponse 127,3 km/h lit 3 h 30 comme 3,3 h, et 140 km/h ne divise que par 3 heures en oubliant la demi-heure.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Dans une classe de 30 élèves, la moyenne est 12. Quelle est la somme totale des notes ?",
+      "q": "Dans une classe de 30 élèves, la moyenne d'un devoir est de 12. La somme de toutes les notes est :",
       "o": [
-        "240",
-        "300",
-        "360",
-        "420"
+        "0,4",
+        "2,5",
+        "42",
+        "360"
       ],
-      "r": 2,
-      "x": "Somme = moyenne × effectif = 12 × 30 = 360."
+      "r": 3,
+      "x": "La moyenne est la somme des notes divisée par l'effectif, donc la somme est égale à la moyenne multipliée par l'effectif. Ici, la somme des notes vaut 12 × 30 = 360. Les réponses 0,4 et 2,5 divisent les deux nombres l'un par l'autre, et 42 les additionne, ce qui n'a pas de sens ici.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Une urne contient 5 boules numérotées de 1 à 5. Quelle est la probabilité de tirer un nombre impair ?",
+      "q": "Une urne contient 5 boules numérotées de 1 à 5. La probabilité de tirer un numéro impair est :",
       "o": [
-        "2/5",
         "1/5",
-        "4/5",
+        "2/5",
+        "1/2",
         "3/5"
       ],
       "r": 3,
-      "x": "Nombres impairs : 1, 3, 5 → 3 cas sur 5. P = 3/5."
+      "x": "Les nombres impairs de 1 à 5 sont 1, 3 et 5, soit 3 cas favorables sur 5 cas possibles. Toutes les boules ayant la même chance d'être tirées, la probabilité vaut 3/5. La réponse 2/5 est celle d'un numéro pair, et 1/2 suppose à tort qu'il y a autant de numéros pairs que de numéros impairs.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Résoudre : 5x − 3 ≥ 2x + 9",
+      "q": "L'ensemble des solutions de l'inéquation 5x − 3 ≥ 2x + 9 est :",
       "o": [
+        "x ≥ 2",
         "x ≥ 4",
-        "x ≥ 3",
-        "x ≥ 6",
-        "x ≥ 2"
-      ],
-      "r": 0,
-      "x": "5x − 2x ≥ 9 + 3 → 3x ≥ 12 → x ≥ 4."
-    },
-    {
-      "q": "Un parallélépipède rectangle mesure 5 cm × 4 cm × 3 cm. Quel est son volume ?",
-      "o": [
-        "24 cm³",
-        "60 cm³",
-        "40 cm³",
-        "48 cm³"
+        "x ≥ 12",
+        "x ≤ 4"
       ],
       "r": 1,
-      "x": "Volume = longueur × largeur × hauteur = 5 × 4 × 3 = 60 cm³."
+      "x": "On regroupe les termes en x à gauche et les nombres à droite : 5x − 2x ≥ 9 + 3, soit 3x ≥ 12. On divise par 3, nombre positif, sans changer le sens : x ≥ 4. La réponse x ≥ 2 se trompe de signe en déplaçant le −3, x ≥ 12 oublie la division par 3, et x ≤ 4 inverse le sens sans raison.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Résoudre le système : 3x + 2y = 12 et x + y = 5",
+      "q": "Le volume d'un pavé droit de dimensions 5 cm, 4 cm et 3 cm est de :",
       "o": [
+        "12 cm³",
+        "47 cm³",
+        "60 cm³",
+        "94 cm³"
+      ],
+      "r": 2,
+      "x": "Le volume d'un pavé droit est le produit de ses trois dimensions : 5 × 4 × 3 = 60 cm³. On peut le voir comme une base de 5 × 4 = 20 cm² empilée sur 3 cm de hauteur. La réponse 94 correspond à l'aire totale des six faces, en cm², 47 à sa moitié, et 12 additionne les trois dimensions.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La solution du système 3x + 2y = 12 et x + y = 5 est :",
+      "o": [
+        "x = 2 ; y = 3",
         "x = 3 ; y = 2",
         "x = 4 ; y = 0",
-        "x = 1 ; y = 4",
-        "x = 2 ; y = 3"
-      ],
-      "r": 3,
-      "x": "De la 2e équation : x = 5 − y. Substitution : 3(5 − y) + 2y = 12 → 15 − y = 12 → y = 3, x = 2."
-    },
-    {
-      "q": "Si g(x) = 3x − 1, pour quelle valeur de x a-t-on g(x) = 8 ?",
-      "o": [
-        "x = 2",
-        "x = 4",
-        "x = 3",
-        "x = 5"
-      ],
-      "r": 2,
-      "x": "3x − 1 = 8 → 3x = 9 → x = 3."
-    },
-    {
-      "q": "Les 4 premiers termes d'une suite sont : 5, 9, 13, 17. Quel est le 7e terme ?",
-      "o": [
-        "29",
-        "25",
-        "33",
-        "21"
+        "x = 5 ; y = 0"
       ],
       "r": 0,
-      "x": "Raison = 4. u_7 = 5 + (7 − 1) × 4 = 5 + 24 = 29."
+      "x": "La seconde équation donne x = 5 − y, que l'on remplace dans la première : 3(5 − y) + 2y = 12, soit 15 − y = 12, donc y = 3 puis x = 2. On vérifie : 3 × 2 + 2 × 3 = 12 et 2 + 3 = 5. Les couples (3 ; 2) et (5 ; 0) ne vérifient que la seconde équation, et (4 ; 0) seulement la première.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Convertir 5 400 secondes en heures.",
+      "q": "Si g(x) = 3x − 1, la valeur de x telle que g(x) = 8 est :",
       "o": [
-        "0,5 h",
-        "1,5 h",
-        "2 h",
-        "3 h"
+        "x = 7/3",
+        "x = 3",
+        "x = 9",
+        "x = 23"
       ],
       "r": 1,
-      "x": "1 h = 3 600 s. Donc 5 400 s = 5 400 / 3 600 = 1,5 h."
+      "x": "On cherche l'antécédent de 8, c'est-à-dire la valeur de x telle que 3x − 1 = 8. On ajoute 1, 3x = 9, puis on divise par 3 : x = 3, et l'on vérifie que g(3) = 9 − 1 = 8. La réponse 23 calcule l'image de 8, g(8) = 24 − 1, au lieu de son antécédent, 9 oublie la division par 3, et 7/3 soustrait 1 au lieu de l'ajouter.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Un capital de 400 000 FCFA est placé à 7,5 % par an. Quel est l'intérêt obtenu après 2 ans ?",
+      "q": "Les quatre premiers termes d'une suite sont 5 ; 9 ; 13 ; 17. En continuant de la même façon, le 7ᵉ terme est :",
       "o": [
-        "28 000 FCFA",
-        "56 000 FCFA",
+        "21",
+        "25",
+        "28",
+        "29"
+      ],
+      "r": 3,
+      "x": "On passe d'un terme au suivant en ajoutant 4 : les termes suivants sont donc 21 (5ᵉ), 25 (6ᵉ) puis 29 (7ᵉ). On le retrouve en partant du premier terme et en ajoutant six fois 4 : 5 + 6 × 4 = 29. La réponse 25 est le 6ᵉ terme, 21 le 5ᵉ, et 28 calcule simplement 7 × 4.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Une durée de 5 400 secondes correspond à :",
+      "o": [
+        "0,54 h",
+        "1,5 h",
+        "54 h",
+        "90 h"
+      ],
+      "r": 1,
+      "x": "Une heure contient 60 × 60 = 3 600 secondes, donc on divise par 3 600 : 5 400 ÷ 3 600 = 1,5 h, soit 1 h 30 min. On peut aussi passer par les minutes : 5 400 s = 90 min = 1,5 h. La réponse 90 h confond les minutes et les heures, et 54 h divise seulement par 100.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "On place 400 000 FCFA au taux annuel de 7,5 % pendant 2 ans. Les intérêts simples perçus s'élèvent à :",
+      "o": [
         "60 000 FCFA",
-        "30 000 FCFA"
-      ],
-      "r": 2,
-      "x": "I = 400 000 × 0,075 × 2 = 60 000 FCFA."
-    },
-    {
-      "q": "Quel est le terme manquant dans la suite : 2, 6, 18, 54, ?, 486 ?",
-      "o": [
-        "108",
-        "144",
-        "162",
-        "200"
-      ],
-      "r": 2,
-      "x": "Suite géométrique de raison 3 : 54 × 3 = 162."
-    },
-    {
-      "q": "Quel est le PPCM de 4, 6 et 8 ?",
-      "o": [
-        "24",
-        "12",
-        "48",
-        "96"
+        "75 000 FCFA",
+        "460 000 FCFA",
+        "600 000 FCFA"
       ],
       "r": 0,
-      "x": "PPCM(4, 6, 8) = 2³ × 3 = 24."
+      "x": "L'intérêt simple vaut I = C × t × n, avec t = 7,5 % = 0,075 : I = 400 000 × 0,075 × 2 = 60 000 FCFA. Chaque année rapporte 30 000 FCFA, donc deux années rapportent le double. La réponse 460 000 FCFA donne le capital acquis et non les intérêts, et 600 000 FCFA prend 7,5 % pour 0,75.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Calculer : (−5)² − (−3)²",
+      "q": "Le terme manquant de la suite 2 ; 6 ; 18 ; 54 ; … ; 486 est :",
       "o": [
+        "72",
+        "90",
+        "108",
+        "162"
+      ],
+      "r": 3,
+      "x": "Chaque terme s'obtient en multipliant le précédent par 3 : 2 × 3 = 6, 6 × 3 = 18, 18 × 3 = 54. Le terme manquant vaut donc 54 × 3 = 162, et l'on vérifie que 162 × 3 = 486. La réponse 108 double 54 au lieu de le tripler, et 90 ajoute de nouveau l'écart 36, comme si les écarts étaient constants.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le PPCM de 4, 6 et 8 est :",
+      "o": [
+        "24",
+        "48",
+        "96",
+        "192"
+      ],
+      "r": 0,
+      "x": "On décompose : 4 = 2², 6 = 2 × 3 et 8 = 2³, puis on retient chaque facteur premier avec son plus grand exposant : PPCM = 2³ × 3 = 24. On vérifie que 24 est bien divisible par 4, par 6 et par 8. La réponse 48 multiplie 6 par 8 sans chercher plus petit, et 192 est le produit des trois nombres.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le résultat de (−5)² − (−3)² est :",
+      "o": [
+        "−16",
         "4",
         "16",
-        "34",
-        "−4"
-      ],
-      "r": 1,
-      "x": "(−5)² = 25 et (−3)² = 9. Résultat = 25 − 9 = 16."
-    },
-    {
-      "q": "Un rectangle a un périmètre de 56 cm et une largeur de 10 cm. Quelle est son aire ?",
-      "o": [
-        "120 cm²",
-        "160 cm²",
-        "200 cm²",
-        "180 cm²"
-      ],
-      "r": 3,
-      "x": "Longueur = P/2 − largeur = 28 − 10 = 18 cm. Aire = 18 × 10 = 180 cm²."
-    },
-    {
-      "q": "Simplifier : (3/4) × (8/9) ÷ (2/3)",
-      "o": [
-        "1/2",
-        "2/3",
-        "1",
-        "4/3"
+        "34"
       ],
       "r": 2,
-      "x": "(3/4) × (8/9) = 24/36 = 2/3. Puis (2/3) ÷ (2/3) = 1."
+      "x": "Le carré d'un nombre négatif est positif : (−5)² = 25 et (−3)² = 9. On obtient 25 − 9 = 16. La réponse 34 additionne les deux carrés au lieu de les soustraire, −16 donne à tort un résultat négatif à (−5)², comme si l'on calculait −5², et 4 calcule (−5 + 3)².",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Un article vaut 15 000 FCFA. On lui applique une hausse de 12 %. Quel est le nouveau prix ?",
+      "q": "Un rectangle a un périmètre de 56 cm et une largeur de 10 cm. Son aire est de :",
+      "o": [
+        "180 cm²",
+        "360 cm²",
+        "460 cm²",
+        "560 cm²"
+      ],
+      "r": 0,
+      "x": "Le demi-périmètre vaut 56 ÷ 2 = 28 cm, donc la longueur mesure 28 − 10 = 18 cm, et l'aire vaut 18 × 10 = 180 cm². La réponse 460 cm² prend 56 − 10 = 46 cm comme longueur en oubliant de diviser le périmètre par 2, et 360 cm² retranche les deux largeurs sans diviser par 2. La réponse 560 cm² multiplie directement le périmètre par la largeur.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le résultat de (3/4) × (8/9) ÷ (2/3) est :",
+      "o": [
+        "4/9",
+        "2/3",
+        "3/4",
+        "1"
+      ],
+      "r": 3,
+      "x": "On effectue les opérations de gauche à droite : 3/4 × 8/9 = 24/36 = 2/3. Diviser ensuite par 2/3, c'est multiplier par 3/2 : 2/3 × 3/2 = 1. La réponse 4/9 multiplie par 2/3 au lieu de diviser, et 2/3 s'arrête après la première multiplication.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Un article vaut 15 000 FCFA. Après une hausse de 12 %, son nouveau prix est de :",
       "o": [
         "16 800 FCFA",
-        "17 000 FCFA",
-        "15 800 FCFA",
-        "16 500 FCFA"
+        "17 500 FCFA",
+        "18 000 FCFA",
+        "33 000 FCFA"
       ],
       "r": 0,
-      "x": "Hausse = 15 000 × 12/100 = 1 800 FCFA. Nouveau prix = 15 000 + 1 800 = 16 800 FCFA."
+      "x": "La hausse vaut 12 % de 15 000, soit 15 000 × 12 ÷ 100 = 1 800 FCFA. Le nouveau prix est 15 000 + 1 800 = 16 800 FCFA, ce que l'on obtient aussi par 15 000 × 1,12. La réponse 18 000 FCFA multiplie par 1,2 au lieu de 1,12, ce qui correspondrait à une hausse de 20 %.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Résoudre : x² − 7x + 12 = 0",
+      "q": "Pour 8 personnes, on prépare 2 kg de riz. Pour 20 personnes, il faut :",
       "o": [
-        "x = 3 ou x = 5",
-        "x = 2 ou x = 6",
-        "x = 1 ou x = 12",
-        "x = 3 ou x = 4"
-      ],
-      "r": 3,
-      "x": "Deux nombres de produit 12 et de somme 7 : ce sont 3 et 4. Solutions : x = 3 ou x = 4."
-    },
-    {
-      "q": "Pour 8 personnes, on prépare 2 kg de riz. Combien faut-il de kg pour 20 personnes ?",
-      "o": [
-        "4 kg",
+        "0,8 kg",
         "5 kg",
-        "6 kg",
-        "8 kg"
+        "14 kg",
+        "40 kg"
       ],
       "r": 1,
-      "x": "Quantité par personne = 2/8 = 0,25 kg. Pour 20 : 0,25 × 20 = 5 kg."
+      "x": "On calcule la quantité par personne : 2 ÷ 8 = 0,25 kg. Pour 20 personnes, il faut 20 × 0,25 = 5 kg de riz. La réponse 14 kg ajoute les 12 personnes supplémentaires comme si c'étaient des kilogrammes, 0,8 kg inverse le rapport en calculant 2 × 8 ÷ 20, et 40 kg compte 2 kg par personne.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Les notes de 5 élèves sont : 5, 8, 11, 15, 21. Quelle est la médiane ?",
+      "q": "Les notes de 5 élèves sont : 5 ; 8 ; 11 ; 15 ; 21. La médiane de cette série est :",
       "o": [
-        "12",
-        "8",
         "11",
-        "15"
-      ],
-      "r": 2,
-      "x": "Série déjà ordonnée. La médiane est la valeur centrale (3e terme) = 11."
-    },
-    {
-      "q": "On lance un dé équilibré. Quelle est la probabilité d'obtenir un nombre supérieur à 4 ?",
-      "o": [
-        "1/3",
-        "1/2",
-        "2/3",
-        "1/6"
+        "12",
+        "13",
+        "16"
       ],
       "r": 0,
-      "x": "Nombres supérieurs à 4 : 5 et 6 → 2 cas sur 6. P = 2/6 = 1/3."
+      "x": "La série est déjà rangée dans l'ordre croissant et compte 5 valeurs : la médiane est la 3ᵉ, qui en laisse deux de chaque côté. Elle vaut donc 11. La réponse 12 est la moyenne de la série, 60 ÷ 5, 13 est le milieu des valeurs extrêmes, et 16 est l'étendue, 21 − 5, qui mesure la dispersion et non la position.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Un train de 200 m de long traverse un pont de 800 m à 72 km/h. Combien de temps met-il pour traverser entièrement le pont ?",
+      "q": "Un capital de 300 000 FCFA produit 18 000 FCFA d'intérêts en un an. Le taux annuel de placement est de :",
       "o": [
-        "40 s",
-        "45 s",
-        "55 s",
-        "50 s"
-      ],
-      "r": 3,
-      "x": "72 km/h = 20 m/s. Distance totale = 200 + 800 = 1 000 m. Temps = 1 000 ÷ 20 = 50 s."
-    },
-    {
-      "q": "À quel taux annuel un capital de 300 000 FCFA produit-il 18 000 FCFA d'intérêts en 1 an ?",
-      "o": [
-        "5 %",
+        "1,8 %",
         "6 %",
-        "8 %",
-        "10 %"
+        "16,7 %",
+        "18 %"
       ],
       "r": 1,
-      "x": "t = I / (C × n) = 18 000 / (300 000 × 1) = 0,06 = 6 %."
+      "x": "Le taux est le rapport des intérêts annuels au capital : 18 000 ÷ 300 000 = 0,06. En pourcentage, cela fait 0,06 × 100 = 6 %, et l'on vérifie que 6 % de 300 000 donnent bien 18 000 FCFA. La réponse 16,7 % renverse le rapport en calculant 300 000 ÷ 18 000, et 18 % reprend simplement le nombre de milliers d'intérêts.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Un carré a un périmètre de 32 cm. Quelle est son aire ?",
+      "q": "Un carré a un périmètre de 32 cm. Son aire est de :",
       "o": [
         "8 cm²",
+        "16 cm²",
         "32 cm²",
-        "64 cm²",
-        "16 cm²"
+        "64 cm²"
       ],
-      "r": 2,
-      "x": "Côté = 32 / 4 = 8 cm. Aire = 8² = 64 cm²."
+      "r": 3,
+      "x": "Le côté du carré vaut le quart de son périmètre : 32 ÷ 4 = 8 cm. Son aire est alors 8² = 64 cm². La réponse 8 donne seulement la longueur du côté, 16 cm² multiplie le côté par 2 au lieu de l'élever au carré, et 32 reprend la valeur du périmètre.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel est le PGCD de 84 et 120 ?",
+      "q": "Le PGCD de 84 et 120 est :",
       "o": [
-        "12",
+        "2",
+        "4",
         "6",
-        "24",
-        "4"
+        "12"
       ],
-      "r": 0,
-      "x": "84 = 2² × 3 × 7 et 120 = 2³ × 3 × 5. PGCD = 2² × 3 = 12."
+      "r": 3,
+      "x": "On décompose : 84 = 2² × 3 × 7 et 120 = 2³ × 3 × 5. Les facteurs communs sont 2² et 3, d'où PGCD = 4 × 3 = 12, et l'on vérifie que 84 = 12 × 7 et 120 = 12 × 10, avec 7 et 10 sans diviseur commun. Les réponses 2, 4 et 6 sont des diviseurs communs, mais pas les plus grands.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Calculer : 7/8 de 640",
+      "q": "Les 7/8 de 640 valent :",
       "o": [
-        "420",
+        "80",
+        "91,4",
         "480",
-        "500",
         "560"
       ],
       "r": 3,
-      "x": "7/8 de 640 = 640 ÷ 8 × 7 = 80 × 7 = 560."
+      "x": "Prendre les 7/8 d'une quantité, c'est la partager en 8 parts égales et en garder 7. Une part vaut 640 ÷ 8 = 80, donc 7 parts valent 7 × 80 = 560. La réponse 80 ne donne qu'un huitième, 480 n'en garde que 6, et 91,4 divise 640 par 7 au lieu de 8.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Résoudre : x/4 + x/3 = 7",
+      "q": "La solution de l'équation x/4 + x/3 = 14 est :",
       "o": [
-        "x = 10",
-        "x = 12",
-        "x = 14",
-        "x = 16"
+        "x = 2",
+        "x = 24",
+        "x = 98",
+        "x = 168"
       ],
       "r": 1,
-      "x": "LCD = 12. (3x + 4x)/12 = 7 → 7x = 84 → x = 12."
+      "x": "On réduit au dénominateur commun 12 : x/4 = 3x/12 et x/3 = 4x/12, donc 7x/12 = 14. On multiplie par 12, 7x = 168, puis on divise par 7 : x = 24, et l'on vérifie que 24/4 + 24/3 = 6 + 8 = 14. La réponse 98 additionne à tort les dénominateurs en écrivant x/7 = 14, et 168 oublie la dernière division par 7.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "L'aire d'un cercle est 314 cm² (π ≈ 3,14). Quel est son rayon ?",
+      "q": "L'aire d'un disque est de 314 cm² (π ≈ 3,14). Son rayon mesure :",
       "o": [
-        "5 cm",
-        "15 cm",
         "10 cm",
-        "20 cm"
+        "50 cm",
+        "100 cm",
+        "157 cm"
       ],
-      "r": 2,
-      "x": "πr² = 314 → r² = 314/3,14 = 100 → r = 10 cm."
+      "r": 0,
+      "x": "L'aire d'un disque vaut π × r², donc r² = 314 ÷ 3,14 = 100. Le rayon est le nombre positif dont le carré vaut 100, soit r = 10 cm. La réponse 100 cm s'arrête à r² sans prendre la racine carrée, 50 cm divise par 2π comme si 314 était un périmètre, et 157 divise simplement 314 par 2.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Dans le triangle ABC, D ∈ [AB] et E ∈ [AC] avec DE // BC. On a AD = 3 cm, DB = 7 cm et AC = 20 cm. Calculer AE.",
+      "q": "Dans le triangle ABC, D est sur [AB] et E sur [AC], avec (DE) parallèle à (BC). Si AD = 3 cm, DB = 7 cm et AC = 20 cm, alors AE mesure :",
       "o": [
         "6 cm",
-        "8 cm",
-        "10 cm",
-        "12 cm"
+        "8,6 cm",
+        "13,3 cm",
+        "14 cm"
       ],
       "r": 0,
-      "x": "AB = 3 + 7 = 10 cm. Par Thalès : AD/AB = AE/AC → 3/10 = AE/20 → AE = 6 cm."
+      "x": "On calcule d'abord AB = AD + DB = 3 + 7 = 10 cm. Comme (DE) est parallèle à (BC), Thalès donne AD/AB = AE/AC, soit 3/10 = AE/20, d'où AE = 20 × 3 ÷ 10 = 6 cm. La réponse 8,6 cm utilise à tort DB au lieu de AB dans le rapport, et 14 cm est la longueur EC.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Résoudre : 2(3x − 1) = 4(x + 2)",
+      "q": "La solution de l'équation 2(3x − 1) = 4(x + 2) est :",
       "o": [
-        "x = 3",
-        "x = 4",
-        "x = 6",
-        "x = 5"
-      ],
-      "r": 3,
-      "x": "6x − 2 = 4x + 8 → 2x = 10 → x = 5."
-    },
-    {
-      "q": "Exprimer 2,5 heures en minutes.",
-      "o": [
-        "120 min",
-        "145 min",
-        "150 min",
-        "125 min"
+        "x = 1,5",
+        "x = 2",
+        "x = 5",
+        "x = 10"
       ],
       "r": 2,
-      "x": "1 h = 60 min. Donc 2,5 h = 2,5 × 60 = 150 min."
+      "x": "On développe les deux membres : 6x − 2 = 4x + 8. On regroupe : 6x − 4x = 8 + 2, soit 2x = 10, d'où x = 5, et l'on vérifie que 2 × 14 = 4 × 7 = 28. La réponse 1,5 oublie de multiplier les nombres à l'intérieur des parenthèses, et 10 s'arrête avant la division par 2.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Calculer : √50 − √18",
+      "q": "Une durée de 2,5 h correspond à :",
+      "o": [
+        "125 min",
+        "150 min",
+        "170 min",
+        "250 min"
+      ],
+      "r": 1,
+      "x": "Une heure vaut 60 minutes, donc 2,5 h = 2,5 × 60 = 150 min. En effet, 0,5 h est une demi-heure, soit 30 minutes, et 2 h 30 min = 120 + 30 = 150 min. La réponse 170 min lit 2,5 h comme 2 h 50 min, et 250 min multiplie par 100 au lieu de 60.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le résultat de √50 − √18 est :",
       "o": [
         "2√2",
-        "3√2",
-        "4√2",
-        "√32"
+        "√32",
+        "8√2",
+        "15√2"
       ],
       "r": 0,
-      "x": "√50 = 5√2 et √18 = 3√2. Différence = 5√2 − 3√2 = 2√2."
+      "x": "On simplifie chaque racine : √50 = √(25 × 2) = 5√2 et √18 = √(9 × 2) = 3√2. On soustrait les coefficients des termes semblables : 5√2 − 3√2 = 2√2. La réponse √32 soustrait les nombres sous le radical, alors que √a − √b n'est pas égal à √(a − b), et 8√2 additionne au lieu de soustraire.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Un cône a un rayon de 6 cm et une hauteur de 8 cm. Calculer son volume (π ≈ 3,14).",
+      "q": "Le volume d'un cône de 6 cm de rayon et de 8 cm de hauteur est de (π ≈ 3,14) :",
       "o": [
+        "50,24 cm³",
         "150,72 cm³",
-        "200 cm³",
-        "250 cm³",
-        "301,44 cm³"
+        "301,44 cm³",
+        "904,32 cm³"
       ],
-      "r": 3,
-      "x": "V = (1/3) × π × r² × h = (1/3) × 3,14 × 36 × 8 = 3,14 × 96 = 301,44 cm³."
+      "r": 2,
+      "x": "Le volume d'un cône est le tiers de celui du cylindre de même base et de même hauteur : V = (1/3) × π × r² × h. On obtient (1/3) × 3,14 × 36 × 8 = 3,14 × 96 = 301,44 cm³. La réponse 904,32 cm³ oublie le facteur 1/3, ce qui donne le volume du cylindre, et 50,24 cm³ oublie d'élever le rayon au carré.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Si a > b et b > c, alors :",
+      "q": "Si a > b et b > c, on peut affirmer que :",
       "o": [
+        "a < c",
         "a = c",
         "a > c",
-        "a < c",
-        "On ne peut rien conclure"
+        "on ne peut rien conclure"
       ],
-      "r": 1,
-      "x": "La relation supérieur à est transitive : si a > b et b > c, alors a > c."
+      "r": 2,
+      "x": "La relation « est supérieur à » est transitive : si a dépasse b et que b dépasse c, alors a dépasse c. Par exemple, avec a = 5, b = 3 et c = 1, on a bien 5 > 1. La réponse « on ne peut rien conclure » ignore cette propriété, qui permet d'enchaîner des inégalités de même sens.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Parmi les nombres suivants, lequel est premier ?",
+      "q": "Le nombre premier parmi les propositions suivantes est :",
       "o": [
         "51",
-        "57",
         "53",
+        "57",
         "63"
       ],
-      "r": 2,
-      "x": "51 = 3 × 17, 57 = 3 × 19, 63 = 9 × 7. Seul 53 n'est divisible que par 1 et lui-même."
+      "r": 1,
+      "x": "53 n'est divisible ni par 2, ni par 3, ni par 5, ni par 7, et comme 8² = 64 dépasse 53, il est premier. Les autres nombres se décomposent : 51 = 3 × 17, 57 = 3 × 19 et 63 = 7 × 9, ce que révèle la somme de leurs chiffres, multiple de 3. Les nombres 51 et 57 sont des pièges classiques, car ils semblent premiers au premier regard.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Calculer : 3 × 10^4 + 2 × 10^3 + 7 × 10",
+      "q": "Le résultat de 3 × 10⁴ + 2 × 10³ + 7 × 10 est :",
       "o": [
-        "32 070",
+        "3 207",
         "3 270",
-        "32 700",
-        "3 207"
-      ],
-      "r": 0,
-      "x": "30 000 + 2 000 + 70 = 32 070."
-    },
-    {
-      "q": "Un prisme droit à base triangulaire a une base de 6 cm, une hauteur de triangle de 4 cm et une longueur de 10 cm. Quel est son volume ?",
-      "o": [
-        "60 cm³",
-        "100 cm³",
-        "90 cm³",
-        "120 cm³"
+        "30 270",
+        "32 070"
       ],
       "r": 3,
-      "x": "Aire de la base = (6 × 4)/2 = 12 cm². Volume = 12 × 10 = 120 cm³."
+      "x": "On calcule chaque terme : 3 × 10⁴ = 30 000, 2 × 10³ = 2 000 et 7 × 10 = 70. Leur somme vaut 30 000 + 2 000 + 70 = 32 070, avec un zéro au rang des centaines et au rang des unités. La réponse 3 207 oublie les zéros des puissances de 10, et 30 270 confond 10³ avec 10².",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Calculer : 1 / (1/3 + 1/6)",
+      "q": "Un prisme droit a pour base un triangle de 6 cm de base et de 4 cm de hauteur. Sa longueur est de 10 cm. Son volume est de :",
       "o": [
-        "3",
-        "2",
-        "4",
-        "1"
-      ],
-      "r": 1,
-      "x": "1/3 + 1/6 = 3/6 = 1/2. Donc 1/(1/2) = 2."
-    },
-    {
-      "q": "Un prix passe de 8 000 à 10 000 FCFA. Quel est le taux d'augmentation ?",
-      "o": [
-        "20 %",
-        "22 %",
-        "25 %",
-        "30 %"
+        "20 cm³",
+        "60 cm³",
+        "120 cm³",
+        "240 cm³"
       ],
       "r": 2,
-      "x": "Hausse = 2 000 FCFA. Taux = (2 000 / 8 000) × 100 = 25 %."
+      "x": "Le volume d'un prisme droit est l'aire de sa base multipliée par sa longueur. La base triangulaire a pour aire (6 × 4) ÷ 2 = 12 cm², d'où V = 12 × 10 = 120 cm³. La réponse 240 cm³ oublie de diviser par 2 l'aire du triangle, et 20 additionne les trois dimensions.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "On tire au hasard un entier entre 1 et 20 inclus. Quelle est la probabilité d'obtenir un multiple de 4 ?",
+      "q": "Le résultat de 1 ÷ (1/3 + 1/6) est :",
       "o": [
-        "1/4",
+        "2",
+        "3",
+        "9",
+        "18"
+      ],
+      "r": 0,
+      "x": "On calcule d'abord le dénominateur au dénominateur commun 6 : 1/3 + 1/6 = 2/6 + 1/6 = 3/6 = 1/2. On prend ensuite l'inverse : 1 ÷ 1/2 = 2. La réponse 9 additionne les inverses en calculant 3 + 6, ce qui est faux car l'inverse d'une somme n'est pas la somme des inverses, et 3 oublie la fraction 1/6.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Un prix passe de 8 000 FCFA à 9 800 FCFA. Le taux d'augmentation est de :",
+      "o": [
+        "1,8 %",
+        "18 %",
+        "18,4 %",
+        "22,5 %"
+      ],
+      "r": 3,
+      "x": "L'augmentation vaut 9 800 − 8 000 = 1 800 FCFA, et on la rapporte au prix de départ : 1 800 ÷ 8 000 = 0,225, soit 22,5 %. On vérifie que 8 000 + 22,5 % de 8 000 = 8 000 + 1 800 = 9 800 FCFA. La réponse 18,4 % rapporte la hausse au nouveau prix au lieu de l'ancien, et 18 % ou 1,8 % confondent les 1 800 FCFA avec un pourcentage.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "On tire au hasard un entier compris entre 1 et 20 inclus. La probabilité d'obtenir un multiple de 4 est :",
+      "o": [
         "1/5",
+        "1/4",
         "3/10",
         "1/2"
       ],
-      "r": 0,
-      "x": "Multiples de 4 entre 1 et 20 : 4, 8, 12, 16, 20 → 5 cas sur 20. P = 5/20 = 1/4."
+      "r": 1,
+      "x": "Les multiples de 4 compris entre 1 et 20 sont 4, 8, 12, 16 et 20, soit 5 cas favorables sur 20 cas possibles. La probabilité vaut donc 5/20, qu'on simplifie en 1/4. La réponse 1/5 compte à tort 4 multiples en oubliant 20, et 1/2 confond les multiples de 4 avec les nombres pairs.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Une voiture et un bus partent du même point en même temps dans le même sens. La voiture roule à 100 km/h et le bus à 60 km/h. Après 2 heures, quelle est la distance qui les sépare ?",
+      "q": "Une voiture et un bus partent en même temps du même point, dans le même sens, à 100 km/h et à 60 km/h. Au bout de 2 heures, la distance qui les sépare est de :",
       "o": [
+        "20 km",
         "40 km",
         "60 km",
-        "100 km",
         "80 km"
       ],
       "r": 3,
-      "x": "Écart de vitesse = 40 km/h. Après 2 h : 40 × 2 = 80 km."
+      "x": "Les deux véhicules partent ensemble dans le même sens, donc l'écart augmente chaque heure de la différence des vitesses : 100 − 60 = 40 km. Après 2 heures, il atteint 40 × 2 = 80 km. La réponse 40 km ne compte qu'une heure, et additionner les vitesses ne conviendrait que si les véhicules partaient en sens opposés.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quelle est la durée nécessaire pour qu'un capital de 100 000 FCFA produise 15 000 FCFA d'intérêts au taux de 5 % par an ?",
+      "q": "Un capital de 100 000 FCFA est placé à 5 % par an. Pour produire 15 000 FCFA d'intérêts simples, il faut :",
       "o": [
-        "2 ans",
         "3 ans",
-        "4 ans",
-        "5 ans"
+        "5 ans",
+        "15 ans",
+        "30 ans"
       ],
-      "r": 1,
-      "x": "n = I / (C × t) = 15 000 / (100 000 × 0,05) = 3 ans."
+      "r": 0,
+      "x": "En intérêt simple, chaque année rapporte 5 % de 100 000, soit 5 000 FCFA. Pour obtenir 15 000 FCFA d'intérêts, il faut donc 15 000 ÷ 5 000 = 3 ans. La réponse 30 ans divise par 500 au lieu de 5 000, en se trompant d'un zéro dans l'intérêt annuel, et 15 reprend le nombre de milliers d'intérêts.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Lequel de ces nombres est à la fois multiple de 3 et de 4 ?",
+      "q": "Le nombre qui est à la fois multiple de 3 et de 4 est :",
       "o": [
         "18",
         "20",
@@ -7858,395 +13482,371 @@ const QUESTIONS = {
         "28"
       ],
       "r": 2,
-      "x": "24 = 6 × 4 et 24 = 8 × 3. C'est un multiple de 3 et de 4 (PPCM(3,4) = 12 ; 24 = 2 × 12)."
+      "x": "Un nombre multiple de 3 et de 4 est un multiple de leur PPCM, 12, puisque 3 et 4 n'ont aucun diviseur commun autre que 1. Parmi les propositions, seul 24 = 2 × 12 convient. 18 est multiple de 3 mais pas de 4, tandis que 20 et 28 sont multiples de 4 mais pas de 3.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel est le plus grand entier n tel que n² < 50 ?",
+      "q": "Le plus grand entier n tel que n² < 50 est :",
       "o": [
         "7",
-        "6",
         "8",
-        "5"
+        "25",
+        "49"
       ],
       "r": 0,
-      "x": "7² = 49 < 50 et 8² = 64 > 50. Donc le plus grand entier est n = 7."
+      "x": "On teste les carrés autour de 50 : 7² = 49 est inférieur à 50, mais 8² = 64 le dépasse. Le plus grand entier dont le carré reste sous 50 est donc 7. La réponse 8 donne le premier entier dont le carré dépasse 50, 25 divise 50 par 2 au lieu d'en chercher la racine, et 49 est le carré n² lui-même.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Calculer : (4/5)² + (3/5)²",
+      "q": "Le résultat de (4/5)² + (3/5)² est :",
       "o": [
         "7/25",
-        "1/5",
-        "7/5",
+        "1/2",
+        "7/10",
         "1"
       ],
       "r": 3,
-      "x": "(4/5)² + (3/5)² = 16/25 + 9/25 = 25/25 = 1."
+      "x": "On élève au carré chaque fraction en élevant numérateur et dénominateur : (4/5)² = 16/25 et (3/5)² = 9/25. On additionne ensuite : 16/25 + 9/25 = 25/25 = 1. La réponse 7/25 oublie d'élever les numérateurs au carré, et 7/10 multiplie numérateurs et dénominateurs par 2 au lieu de les élever au carré.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Un triangle isocèle a une base de 8 cm et deux côtés égaux de 10 cm. Quel est son périmètre ?",
+      "q": "Un triangle isocèle a une base de 8 cm et deux côtés égaux de 10 cm. Son périmètre est de :",
       "o": [
         "18 cm",
-        "28 cm",
         "26 cm",
+        "28 cm",
         "30 cm"
       ],
-      "r": 1,
-      "x": "Périmètre = base + 2 côtés = 8 + 10 + 10 = 28 cm."
-    },
-    {
-      "q": "Un poteau de 3 m de hauteur projette une ombre de 2 m. Au même instant, un arbre projette une ombre de 10 m. Quelle est la hauteur de l'arbre ?",
-      "o": [
-        "12 m",
-        "18 m",
-        "15 m",
-        "20 m"
-      ],
       "r": 2,
-      "x": "Par proportionnalité : 3/2 = h/10 → h = 30/2 = 15 m."
+      "x": "Le périmètre est la somme des longueurs des trois côtés. Un triangle isocèle ayant deux côtés égaux de 10 cm, on obtient 8 + 10 + 10 = 28 cm. La réponse 18 cm n'additionne que deux côtés, 26 cm compte deux fois la base au lieu de compter deux fois le côté égal, et 30 cm compte trois côtés de 10 cm.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Un élève a les notes 10, 14 et 16 avec les coefficients 2, 3 et 1. Quelle est sa moyenne pondérée ?",
+      "q": "Un poteau de 3 m de haut projette une ombre de 2 m. Au même instant, un arbre projette une ombre de 10 m. La hauteur de l'arbre est de :",
       "o": [
-        "13",
-        "12",
-        "14",
-        "11"
-      ],
-      "r": 0,
-      "x": "Somme pondérée = 10×2 + 14×3 + 16×1 = 20 + 42 + 16 = 78. Coef total = 6. Moyenne = 78/6 = 13."
-    },
-    {
-      "q": "On lance une pièce équilibrée 3 fois. Quelle est la probabilité d'obtenir 3 fois pile ?",
-      "o": [
-        "1/2",
-        "1/4",
-        "3/8",
-        "1/8"
+        "6,7 m",
+        "11 m",
+        "13 m",
+        "15 m"
       ],
       "r": 3,
-      "x": "P = (1/2)³ = 1/8."
+      "x": "Au même instant, les rayons du soleil ont la même inclinaison, donc la hauteur et l'ombre sont proportionnelles. Le poteau mesure 1,5 fois son ombre (3 ÷ 2), donc l'arbre mesure 1,5 × 10 = 15 m. La réponse 11 m ajoute à 3 m l'écart des ombres, 10 − 2 = 8 m, et 6,7 m renverse le rapport en calculant 2 × 10 ÷ 3.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Résoudre : −3x + 6 ≤ 0",
+      "q": "Un élève obtient 10, 14 et 16, avec les coefficients respectifs 2, 3 et 1. Sa moyenne pondérée est de :",
       "o": [
-        "x ≤ 2",
-        "x ≥ 2",
-        "x ≥ −2",
-        "x ≤ −2"
+        "13",
+        "13,3",
+        "26",
+        "78"
       ],
-      "r": 1,
-      "x": "−3x ≤ −6 → x ≥ 2 (division par −3, l'inégalité s'inverse)."
+      "r": 0,
+      "x": "On multiplie chaque note par son coefficient et on additionne : 10 × 2 + 14 × 3 + 16 × 1 = 20 + 42 + 16 = 78. On divise ensuite par la somme des coefficients, 2 + 3 + 1 = 6 : la moyenne vaut 78 ÷ 6 = 13. La réponse 13,3 calcule une moyenne simple sans coefficients, (10 + 14 + 16) ÷ 3, et 26 divise 78 par le nombre de notes au lieu de la somme des coefficients.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Un avion vole à 900 km/h. Un train roule à 180 km/h. Combien de fois l'avion est-il plus rapide que le train ?",
+      "q": "On lance 3 fois de suite une pièce équilibrée. La probabilité d'obtenir 3 fois pile est :",
       "o": [
-        "4",
-        "4,5",
-        "5",
-        "6"
+        "1/8",
+        "1/6",
+        "1/3",
+        "1/2"
       ],
-      "r": 2,
-      "x": "900 / 180 = 5. L'avion est 5 fois plus rapide."
+      "r": 0,
+      "x": "Chaque lancer donne pile avec une probabilité de 1/2, et les trois lancers sont indépendants. On multiplie donc les probabilités : 1/2 × 1/2 × 1/2 = 1/8, ce qui correspond à 1 issue favorable sur les 8 issues possibles. La réponse 1/6 additionne les dénominateurs au lieu de les multiplier, et 1/2 oublie qu'il faut obtenir pile aux trois lancers.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Un capital de 600 000 FCFA est placé pendant 6 mois à 8 % par an. Quel est le capital acquis (capital + intérêts) ?",
+      "q": "Un avion vole à 900 km/h et un train roule à 180 km/h. La vitesse de l'avion représente combien de fois celle du train ?",
+      "o": [
+        "0,2 fois",
+        "4 fois",
+        "4,5 fois",
+        "5 fois"
+      ],
+      "r": 3,
+      "x": "On compare les deux vitesses par un quotient : 900 ÷ 180 = 5. L'avion parcourt donc 5 fois plus de distance que le train dans le même temps. La réponse 0,2 renverse le quotient en divisant 180 par 900, et calculer la différence 900 − 180 = 720 km/h ne dirait pas « combien de fois » plus vite.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Un capital de 600 000 FCFA est placé à 8 % par an pendant 6 mois. Le capital acquis, intérêts compris, est de :",
       "o": [
         "624 000 FCFA",
         "648 000 FCFA",
-        "636 000 FCFA",
-        "660 000 FCFA"
+        "888 000 FCFA",
+        "1 080 000 FCFA"
       ],
       "r": 0,
-      "x": "6 mois = 0,5 an. I = 600 000 × 0,08 × 0,5 = 24 000 FCFA. Capital acquis = 624 000 FCFA."
+      "x": "La durée doit être exprimée en années : 6 mois = 0,5 an. Les intérêts valent 600 000 × 0,08 × 0,5 = 24 000 FCFA, et le capital acquis est 600 000 + 24 000 = 624 000 FCFA. La réponse 648 000 FCFA compte une année entière, et 888 000 FCFA multiplie par 6 comme si la durée était en années.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Si 5 machines produisent 100 pièces en 2 heures, combien 8 machines en produisent-elles en 3 heures ?",
+      "q": "5 machines produisent 100 pièces en 2 heures. Au même rythme, 8 machines produisent en 3 heures :",
       "o": [
-        "160",
-        "200",
-        "210",
-        "240"
+        "120 pièces",
+        "150 pièces",
+        "160 pièces",
+        "240 pièces"
       ],
       "r": 3,
-      "x": "Cadence = 100/(5 × 2) = 10 pièces/machine/heure. Pour 8 machines en 3 h : 8 × 3 × 10 = 240."
+      "x": "On calcule d'abord la cadence d'une machine : 100 ÷ (5 × 2) = 10 pièces par heure. Huit machines travaillant 3 heures produisent donc 8 × 3 × 10 = 240 pièces. La réponse 160 ne tient compte que du nombre de machines, en gardant 2 heures, et 150 ne tient compte que de la durée, en gardant 5 machines.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel est le nombre de diviseurs de 36 ?",
+      "q": "25 % de 800 valent :",
       "o": [
-        "7",
-        "9",
-        "8",
-        "6"
+        "32",
+        "200",
+        "250",
+        "775"
       ],
       "r": 1,
-      "x": "36 = 2² × 3². Nombre de diviseurs = (2+1)(2+1) = 9. Ce sont : 1, 2, 3, 4, 6, 9, 12, 18, 36."
+      "x": "25 % représentent un quart, puisque 25/100 = 1/4. Le quart de 800 vaut 800 ÷ 4 = 200. La réponse 32 divise 800 par 25 au lieu de prendre 25 centièmes, et 775 soustrait simplement 25 de 800.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Calculer : 25 % de 800",
+      "q": "Un rectangle mesure 24 cm de longueur et sa diagonale mesure 26 cm. Sa largeur est de :",
       "o": [
-        "150",
-        "175",
-        "200",
-        "250"
-      ],
-      "r": 2,
-      "x": "25 % = 1/4. Donc 1/4 × 800 = 200."
-    },
-    {
-      "q": "Un rectangle a une longueur de 20 cm et une diagonale de 25 cm. Quelle est sa largeur ?",
-      "o": [
-        "15 cm",
+        "2 cm",
         "10 cm",
-        "12 cm",
-        "18 cm"
+        "35,4 cm",
+        "100 cm"
       ],
-      "r": 0,
-      "x": "La diagonale est l'hypoténuse. l² = 25² − 20² = 625 − 400 = 225. Donc l = 15 cm."
+      "r": 1,
+      "x": "La diagonale partage le rectangle en deux triangles rectangles dont elle est l'hypoténuse. Par Pythagore, largeur² = 26² − 24² = 676 − 576 = 100, donc la largeur mesure 10 cm. La réponse 2 cm soustrait directement les longueurs, 35,4 cm environ additionne les carrés au lieu de les soustraire, et 100 cm oublie de prendre la racine carrée.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Calculer : 3(1/2) − 2(1/3) [nombres mixtes]",
+      "q": "La différence 3 ½ – 2 ⅓ est égale à :",
       "o": [
+        "1/6",
         "5/6",
-        "1 et 1/2",
-        "1 et 2/3",
-        "1 et 1/6"
+        "1",
+        "1 1/6"
       ],
       "r": 3,
-      "x": "3½ = 7/2 et 2⅓ = 7/3. Différence = 21/6 − 14/6 = 7/6 = 1 et 1/6."
+      "x": "On convertit les nombres mixtes en fractions, 3 ½ = 7/2 et 2 ⅓ = 7/3, puis on les met au dénominateur commun 6 : 21/6 – 14/6 = 7/6, soit 1 et 1/6. On peut aussi soustraire séparément les entiers, 3 – 2 = 1, et les fractions, 1/2 – 1/3 = 1/6. La réponse 1 oublie la partie fractionnaire, et 1/6 la partie entière.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "On tire une carte parmi 10 numérotées de 1 à 10. Quelle est la probabilité d'obtenir un multiple de 3 ?",
+      "q": "On tire une carte parmi 10 cartes numérotées de 1 à 10. La probabilité d'obtenir un multiple de 3 est :",
       "o": [
-        "2/10",
         "3/10",
-        "4/10",
+        "1/3",
+        "2/5",
         "1/2"
       ],
-      "r": 1,
-      "x": "Multiples de 3 entre 1 et 10 : 3, 6, 9 → 3 cas. P = 3/10."
+      "r": 0,
+      "x": "Les multiples de 3 compris entre 1 et 10 sont 3, 6 et 9, soit 3 cas favorables sur 10 cartes. La probabilité vaut donc 3/10. La réponse 1/3 vient de l'idée qu'un nombre sur trois est multiple de 3, ce qui n'est pas exact ici puisque 10 n'est pas un multiple de 3.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Une sphère a un volume de 288π cm³. Quel est son rayon ?",
+      "q": "Une boule a un volume de 288π cm³. Son rayon mesure :",
       "o": [
-        "4 cm",
-        "5 cm",
         "6 cm",
-        "8 cm"
-      ],
-      "r": 2,
-      "x": "(4/3)πr³ = 288π → r³ = 288 × 3/4 = 216 → r = ∛216 = 6 cm."
-    },
-    {
-      "q": "Dans la suite géométrique : 6, 18, 54, 162, … quelle est la raison ?",
-      "o": [
-        "3",
-        "6",
-        "9",
-        "12"
+        "8 cm",
+        "72 cm",
+        "216 cm"
       ],
       "r": 0,
-      "x": "Raison = 18/6 = 54/18 = 3."
+      "x": "Le volume d'une boule vaut (4/3) × π × r³, donc (4/3) × r³ = 288, soit r³ = 288 × 3 ÷ 4 = 216. Le rayon est le nombre dont le cube vaut 216 : r = 6 cm, car 6 × 6 × 6 = 216. La réponse 216 s'arrête à r³ sans extraire la racine cubique, et 72 divise 288 par 4 en oubliant de multiplier par 3.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Convertir 3,5 m² en cm².",
+      "q": "Dans la suite 6 ; 18 ; 54 ; 162 ; …, chaque terme s'obtient en multipliant le précédent par un même nombre. Ce nombre est :",
+      "o": [
+        "1/3",
+        "3",
+        "6",
+        "12"
+      ],
+      "r": 1,
+      "x": "On divise chaque terme par le précédent : 18 ÷ 6 = 3, 54 ÷ 18 = 3 et 162 ÷ 54 = 3, donc le multiplicateur vaut 3. On peut le vérifier en calculant le terme suivant, 162 × 3 = 486. La réponse 12 calcule l'écart 18 − 6, qui ne convient pas puisque les écarts successifs ne sont pas constants, et 1/3 renverse le quotient.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Une surface de 3,5 m² correspond à :",
       "o": [
         "350 cm²",
         "3 500 cm²",
-        "350 000 cm²",
-        "35 000 cm²"
+        "35 000 cm²",
+        "350 000 cm²"
       ],
-      "r": 3,
-      "x": "1 m² = 10 000 cm². Donc 3,5 m² = 3,5 × 10 000 = 35 000 cm²."
+      "r": 2,
+      "x": "Un mètre vaut 100 cm, donc un mètre carré vaut 100 × 100 = 10 000 cm². On multiplie donc par 10 000 : 3,5 × 10 000 = 35 000 cm². La réponse 350 cm² multiplie seulement par 100, comme pour une longueur, et oublie que les unités d'aire varient de 100 en 100.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
       "q": "La droite d'équation y = 3x − 2 passe par le point :",
       "o": [
-        "(0, 3)",
-        "(1, 1)",
-        "(2, 8)",
-        "(3, 11)"
+        "(0 ; 2)",
+        "(1 ; 5)",
+        "(2 ; 8)",
+        "(3 ; 7)"
       ],
-      "r": 1,
-      "x": "Pour x = 1 : y = 3(1) − 2 = 1. Le point (1, 1) est bien sur la droite."
+      "r": 3,
+      "x": "Un point appartient à la droite lorsque ses coordonnées vérifient l'équation y = 3x − 2. Pour x = 3, on obtient y = 3 × 3 − 2 = 7 : le point (3 ; 7) est bien sur la droite. Les autres points remplacent −2 par +2, une erreur de signe sur l'ordonnée à l'origine : par exemple, pour x = 2, on trouve 4 et non 8.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Calculer : 10^3 × 10^(−1)",
+      "q": "Le résultat de 10³ × 10⁻¹ est :",
       "o": [
-        "10^4",
-        "1 000",
+        "−1 000",
         "100",
-        "10"
+        "1 000",
+        "10 000"
       ],
-      "r": 2,
-      "x": "10^3 × 10^(−1) = 10^(3−1) = 10^2 = 100."
+      "r": 1,
+      "x": "Pour multiplier deux puissances de 10, on additionne leurs exposants : 10³ × 10⁻¹ = 10³⁻¹ = 10² = 100. On peut aussi écrire 10⁻¹ = 0,1, et 1 000 × 0,1 = 100. La réponse 10 000 ajoute 1 à l'exposant au lieu de le retrancher, et −1 000 interprète l'exposant négatif comme un signe moins.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Résoudre dans ℝ : x² = 49",
+      "q": "Un marchand vend un article à perte de 15 %, au prix de 8 500 FCFA. Son prix d'achat était de :",
       "o": [
-        "x = 7 ou x = −7",
-        "x = 7 seulement",
-        "x = −7 seulement",
-        "Pas de solution"
-      ],
-      "r": 0,
-      "x": "x² = 49 → x = √49 = 7 ou x = −√49 = −7."
-    },
-    {
-      "q": "Un marchand vend un article à perte de 15 %. Si le prix de vente est 8 500 FCFA, quel était le prix d'achat ?",
-      "o": [
-        "9 000 FCFA",
+        "7 225 FCFA",
         "9 775 FCFA",
-        "9 500 FCFA",
-        "10 000 FCFA"
-      ],
-      "r": 3,
-      "x": "PA × (1 − 0,15) = 8 500 → PA = 8 500 / 0,85 = 10 000 FCFA."
-    },
-    {
-      "q": "La somme des 10 premiers entiers naturels (de 1 à 10) est :",
-      "o": [
-        "45",
-        "55",
-        "50",
-        "60"
-      ],
-      "r": 1,
-      "x": "S = n(n + 1)/2 = 10 × 11/2 = 55."
-    },
-    {
-      "q": "Calculer : (1,5)² + (2)² + (0,5)²",
-      "o": [
-        "5",
-        "5,5",
-        "6,5",
-        "7"
+        "10 000 FCFA",
+        "12 750 FCFA"
       ],
       "r": 2,
-      "x": "1,5² = 2,25 ; 2² = 4 ; 0,5² = 0,25. Somme = 2,25 + 4 + 0,25 = 6,5."
+      "x": "Une perte de 15 % signifie que le prix de vente représente 85 % du prix d'achat : PA × 0,85 = 8 500. On en déduit PA = 8 500 ÷ 0,85 = 10 000 FCFA, et l'on vérifie que 10 000 − 1 500 = 8 500. La réponse 9 775 FCFA ajoute 15 % au prix de vente, alors que le pourcentage porte sur le prix d'achat, et 7 225 FCFA retire encore 15 %.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Un losange a un côté de 10 cm et une diagonale de 16 cm. Calculer l'autre diagonale.",
-      "o": [
-        "12 cm",
-        "8 cm",
-        "14 cm",
-        "6 cm"
-      ],
-      "r": 0,
-      "x": "Demi-diagonale 1 = 8 cm. Demi-diagonale 2 = √(10² − 8²) = √36 = 6 cm. Diagonale = 12 cm."
-    },
-    {
-      "q": "Quelle fraction est comprise entre 1/3 et 1/2 ?",
-      "o": [
-        "1/4",
-        "1/6",
-        "2/3",
-        "2/5"
-      ],
-      "r": 3,
-      "x": "1/3 ≈ 0,33 et 1/2 = 0,5. La fraction 2/5 = 0,4 est bien entre les deux. 1/4 = 0,25 < 1/3."
-    },
-    {
-      "q": "Lors des soldes, un pantalon passe de 25 000 à 19 000 FCFA. Quel est le pourcentage de réduction ?",
-      "o": [
-        "20 %",
-        "24 %",
-        "25 %",
-        "30 %"
-      ],
-      "r": 1,
-      "x": "Réduction = 6 000 FCFA. Taux = (6 000 / 25 000) × 100 = 24 %."
-    },
-    {
-      "q": "Un tableau donne : note 5 pour 4 élèves, note 10 pour 4 élèves, note 15 pour 4 élèves, note 20 pour 3 élèves. Calculer la moyenne.",
+      "q": "La somme des entiers de 1 à 10 est :",
       "o": [
         "10",
-        "11",
-        "12",
-        "13"
+        "45",
+        "50",
+        "55"
       ],
-      "r": 2,
-      "x": "Somme = 4(5) + 4(10) + 4(15) + 3(20) = 20 + 40 + 60 + 60 = 180. Effectif = 15. Moyenne = 180/15 = 12."
+      "r": 3,
+      "x": "On peut regrouper les termes deux à deux : 1 + 10 = 11, 2 + 9 = 11, et ainsi de suite, ce qui donne 5 paires de 11. La somme vaut donc 5 × 11 = 55. La réponse 45 oublie le dernier terme, 10, et 50 se trompe en comptant 5 paires de 10.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Deux dés sont lancés. Quelle est la probabilité que les 2 faces affichées soient identiques ?",
+      "q": "Le résultat de 1,5² + 2² + 0,5² est :",
+      "o": [
+        "4",
+        "6,5",
+        "7,5",
+        "16"
+      ],
+      "r": 1,
+      "x": "On calcule chaque carré : 1,5² = 2,25, 2² = 4 et 0,5² = 0,25. Leur somme vaut 2,25 + 4 + 0,25 = 6,5. La réponse 16 élève au carré la somme 1,5 + 2 + 0,5 = 4, ce qui n'est pas la même chose que la somme des carrés, et 4 oublie d'élever au carré.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Un losange a un côté de 10 cm et une diagonale de 16 cm. Son autre diagonale mesure :",
+      "o": [
+        "4 cm",
+        "6 cm",
+        "8 cm",
+        "12 cm"
+      ],
+      "r": 3,
+      "x": "Les diagonales d'un losange se coupent en leur milieu à angle droit, ce qui forme quatre triangles rectangles dont l'hypoténuse est un côté. Avec une demi-diagonale de 8 cm, l'autre vaut √(10² − 8²) = √36 = 6 cm, donc la diagonale mesure 12 cm. La réponse 6 cm oublie de doubler la demi-diagonale, et 8 cm reprend la moitié de la diagonale connue.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La fraction comprise entre 1/3 et 1/2 est :",
       "o": [
         "1/6",
-        "1/12",
-        "5/36",
-        "1/36"
-      ],
-      "r": 0,
-      "x": "Paires identiques : (1,1),(2,2),(3,3),(4,4),(5,5),(6,6) → 6 cas sur 36. P = 6/36 = 1/6."
-    },
-    {
-      "q": "Résoudre : x/2 − 1 ≥ (x − 5)/3",
-      "o": [
-        "x ≥ 0",
-        "x ≥ −2",
-        "x ≥ −6",
-        "x ≥ −4"
-      ],
-      "r": 3,
-      "x": "LCD = 6 : 3x − 6 ≥ 2x − 10 → x ≥ −4."
-    },
-    {
-      "q": "Un coureur parcourt 100 m en 10 secondes. Quelle est sa vitesse en km/h ?",
-      "o": [
-        "30 km/h",
-        "36 km/h",
-        "40 km/h",
-        "45 km/h"
-      ],
-      "r": 1,
-      "x": "Vitesse = 100/10 = 10 m/s. Conversion : 10 × 3,6 = 36 km/h."
-    },
-    {
-      "q": "Un commerçant emprunte 500 000 FCFA à 9 % par an. Après 8 mois, combien doit-il rembourser ?",
-      "o": [
-        "520 000 FCFA",
-        "540 000 FCFA",
-        "530 000 FCFA",
-        "545 000 FCFA"
+        "1/4",
+        "2/5",
+        "2/3"
       ],
       "r": 2,
-      "x": "8 mois = 2/3 d'an. I = 500 000 × 0,09 × 2/3 = 30 000 FCFA. Remboursement = 530 000 FCFA."
+      "x": "On compare les fractions en écriture décimale : 1/3 ≈ 0,33 et 1/2 = 0,5. La fraction 2/5 = 0,4 est la seule comprise entre ces deux valeurs. 1/4 = 0,25 et 1/6 ≈ 0,17 sont trop petites, tandis que 2/3 ≈ 0,67 est trop grande.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Si p est vrai et q est faux, quelle est la valeur de vérité de (p ET q) ?",
+      "q": "Lors des soldes, un pantalon passe de 25 000 FCFA à 19 000 FCFA. Le pourcentage de réduction est de :",
       "o": [
-        "Faux",
-        "Vrai",
-        "Indéterminée",
-        "Vraie si p > q"
-      ],
-      "r": 0,
-      "x": "Pour que p ET q soit vrai, il faut que p et q soient tous deux vrais. Or q est faux → (p ET q) est faux."
-    },
-    {
-      "q": "Quel est le reste de la division de 3^10 par 8 ?",
-      "o": [
-        "3",
-        "5",
-        "7",
-        "1"
-      ],
-      "r": 3,
-      "x": "3² = 9 ≡ 1 (mod 8). Donc 3^10 = (3²)^5 ≡ 1^5 = 1 (mod 8). Reste = 1."
-    },
-    {
-      "q": "Calculer : 999 × 1 001",
-      "o": [
-        "998 001",
-        "999 999",
-        "1 000 001",
-        "998 999"
+        "6 %",
+        "24 %",
+        "31,6 %",
+        "76 %"
       ],
       "r": 1,
-      "x": "999 × 1001 = (1000 − 1)(1000 + 1) = 1 000 000 − 1 = 999 999."
+      "x": "La réduction vaut 25 000 − 19 000 = 6 000 FCFA, que l'on rapporte au prix initial : 6 000 ÷ 25 000 = 0,24, soit 24 %. On vérifie que 24 % de 25 000 font bien 6 000 FCFA. La réponse 31,6 % rapporte la réduction au prix soldé, 76 % est la part du prix qui reste à payer, et 6 % confond les 6 000 FCFA avec un pourcentage.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "La diagonale d'un carré est de 10 cm. Quelle est l'aire de ce carré ?",
+      "q": "Dans une classe, 4 élèves ont 5, 4 élèves ont 10, 4 élèves ont 15 et 3 élèves ont 20. La moyenne de la classe est de :",
+      "o": [
+        "12",
+        "12,5",
+        "15",
+        "45"
+      ],
+      "r": 0,
+      "x": "On multiplie chaque note par son effectif : 4 × 5 + 4 × 10 + 4 × 15 + 3 × 20 = 20 + 40 + 60 + 60 = 180. L'effectif total est 4 + 4 + 4 + 3 = 15 élèves, d'où une moyenne de 180 ÷ 15 = 12. La réponse 12,5 fait la moyenne des quatre notes sans tenir compte des effectifs, et 15 divise par 12 en oubliant les 3 élèves ayant eu 20.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "L'ensemble des solutions de l'inéquation x/2 − 1 ≥ (x − 5)/3 est :",
+      "o": [
+        "x ≥ −9",
+        "x ≥ −4",
+        "x ≥ 1",
+        "x ≥ 4"
+      ],
+      "r": 1,
+      "x": "On multiplie les deux membres par 6, dénominateur commun et nombre positif, sans changer le sens : 3x − 6 ≥ 2(x − 5), soit 3x − 6 ≥ 2x − 10. On regroupe les termes : x ≥ −10 + 6, donc x ≥ −4. La réponse x ≥ 1 oublie de multiplier le −5 par 2, et x ≥ 4 commet une erreur de signe en déplaçant le −6.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Un coureur parcourt 100 m en 10 secondes. Sa vitesse est de :",
+      "o": [
+        "2,8 km/h",
+        "10 km/h",
+        "36 km/h",
+        "360 km/h"
+      ],
+      "r": 2,
+      "x": "La vitesse vaut d'abord 100 ÷ 10 = 10 m/s. Pour passer des m/s aux km/h, on multiplie par 3,6, car une heure compte 3 600 s et un kilomètre 1 000 m : 10 × 3,6 = 36 km/h. La réponse 10 km/h oublie la conversion, 2,8 km/h divise par 3,6 au lieu de multiplier, et 360 km/h multiplie par 36.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Un commerçant emprunte 500 000 FCFA à 9 % par an, en intérêts simples. Au bout de 8 mois, il doit rembourser :",
+      "o": [
+        "530 000 FCFA",
+        "536 000 FCFA",
+        "545 000 FCFA",
+        "860 000 FCFA"
+      ],
+      "r": 0,
+      "x": "8 mois représentent 8/12 = 2/3 d'année. Les intérêts valent 500 000 × 0,09 × 2/3 = 30 000 FCFA, et le commerçant rembourse 500 000 + 30 000 = 530 000 FCFA. La réponse 545 000 FCFA compte une année entière, 536 000 FCFA lit 8 mois comme 0,8 an, et 860 000 FCFA compte 8 années.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Si la proposition p est vraie et la proposition q est fausse, la proposition « p ET q » est :",
+      "o": [
+        "vraie",
+        "indéterminée",
+        "vraie, car p est vraie",
+        "fausse"
+      ],
+      "r": 3,
+      "x": "La conjonction « p ET q » n'est vraie que lorsque les deux propositions sont vraies en même temps. Ici q est fausse, ce qui suffit à rendre la conjonction fausse, quelle que soit la valeur de p. Il ne faut pas la confondre avec la disjonction « p OU q », qui serait vraie puisque p l'est.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le résultat de 999 × 1 001 est :",
+      "o": [
+        "998 001",
+        "998 999",
+        "999 999",
+        "1 000 001"
+      ],
+      "r": 2,
+      "x": "On reconnaît la forme (a − b)(a + b) avec a = 1 000 et b = 1 : le produit vaut a² − b² = 1 000 000 − 1 = 999 999. Cette identité remarquable évite une longue multiplication posée. La réponse 1 000 001 ajoute 1 au lieu de le soustraire, et 998 001 calcule 999², ce qui est un autre produit.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "L'aire d'un carré dont la diagonale mesure 10 cm est de :",
       "o": [
         "25 cm²",
         "40 cm²",
@@ -8254,128 +13854,212 @@ const QUESTIONS = {
         "100 cm²"
       ],
       "r": 2,
-      "x": "Diagonale = côté × √2 → c√2 = 10 → c = 10/√2 → A(aire) = c² = (10/√2)² = (5√2)² = ou 100/2 → c² = 50 cm². L'aire du carré est donc 50 cm²."
+      "x": "La diagonale partage le carré en deux triangles rectangles isocèles, donc côté² + côté² = 10², soit 2 × côté² = 100 et côté² = 50 cm² : l'aire s'obtient sans calculer le côté. On peut aussi appliquer la formule du losange, diagonale × diagonale ÷ 2 = 100 ÷ 2. La réponse 100 cm² oublie cette division par 2, et 25 cm² élève au carré la moitié de la diagonale.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quelle valeur de x satisfait : 2/(x − 1) = 3/(x + 2) ?",
+      "q": "La solution de l'équation 2/(x − 1) = 3/(x + 2) est :",
       "o": [
-        "7",
-        "5",
-        "4",
-        "8"
-      ],
-      "r": 0,
-      "x": "2(x + 2) = 3(x − 1) → 2x + 4 = 3x − 3 → x = 7."
-    },
-    {
-      "q": "Série : 4, 7, 3, 9, 2, 8, 5. Quelle est l'étendue de cette série ?",
-      "o": [
-        "Étendue = 6",
-        "Étendue = 8",
-        "Étendue = 6",
-        "Étendue = 7"
+        "x = −8",
+        "x = 1",
+        "x = 5",
+        "x = 7"
       ],
       "r": 3,
-      "x": "Valeur maximale = 9, valeur minimale = 2. Étendue = 9 − 2 = 7."
+      "x": "On applique le produit en croix, valable car x est différent de 1 et de −2 : 2(x + 2) = 3(x − 1). On développe, 2x + 4 = 3x − 3, d'où x = 7, et l'on vérifie que 2/6 = 3/9 = 1/3. La réponse −8 croise mal les termes en écrivant 2(x − 1) = 3(x + 2), et 5 oublie de multiplier le −1 par 3.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Dans un groupe de 100 personnes, 40 aiment le football et 30 aiment le basket. Si 10 aiment les deux, combien n'aiment aucun des deux sports ?",
+      "q": "L'étendue de la série 4 ; 7 ; 3 ; 9 ; 2 ; 8 ; 5 est :",
       "o": [
-        "30",
-        "40",
-        "50",
-        "60"
-      ],
-      "r": 1,
-      "x": "Football ou basket = 40 + 30 − 10 = 60 personnes. N'aiment aucun = 100 − 60 = 40."
-    },
-    {
-      "q": "Un piéton part de A vers B à 6 km/h. Deux heures plus tard, une voiture part dans le même sens à 30 km/h. À quelle distance de A la voiture rejoint-elle le piéton ?",
-      "o": [
-        "10 km",
-        "12 km",
-        "15 km",
-        "18 km"
+        "5",
+        "6",
+        "7",
+        "9"
       ],
       "r": 2,
-      "x": "Avance = 6 × 2 = 12 km. Vitesse relative = 24 km/h. Temps = 12/24 = 0,5 h. Distance = 30 × 0,5 = 15 km."
+      "x": "L'étendue est l'écart entre la plus grande et la plus petite valeur de la série : 9 – 2 = 7. Il faut repérer ces deux valeurs extrêmes avec soin, car la série n'est pas rangée dans l'ordre. La réponse 5 est la médiane, valeur du milieu une fois la série ordonnée, et 9 n'est que le maximum.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel taux annuel permet d'obtenir 36 000 FCFA d'intérêts sur 200 000 FCFA placés pendant 3 ans ?",
-      "o": [
-        "6 %",
-        "5 %",
-        "8 %",
-        "4 %"
-      ],
-      "r": 0,
-      "x": "t = I / (C × n) = 36 000 / (200 000 × 3) = 36 000 / 600 000 = 0,06 = 6 %."
-    },
-    {
-      "q": "On range 5 livres différents dans une bibliothèque. De combien de façons peut-on les ranger ?",
+      "q": "Dans un groupe de 100 personnes, 40 aiment le football, 30 aiment le basket et 10 aiment les deux. Le nombre de personnes qui n'aiment aucun des deux sports est :",
       "o": [
         "20",
-        "60",
-        "100",
-        "120"
-      ],
-      "r": 3,
-      "x": "C'est une permutation de 5 éléments : 5! = 5 × 4 × 3 × 2 × 1 = 120."
-    },
-    {
-      "q": "Quel est le carré parfait le plus proche de 200 ?",
-      "o": [
-        "169",
-        "196",
-        "225",
-        "289"
-      ],
-      "r": 1,
-      "x": "14² = 196 et 15² = 225. |200 − 196| = 4 < |200 − 225| = 25. Donc 196 est le plus proche."
-    },
-    {
-      "q": "Calculer : 1 − 1/2 + 1/4 − 1/8 + 1/16",
-      "o": [
-        "5/8",
-        "3/4",
-        "11/16",
-        "7/8"
+        "30",
+        "40",
+        "60"
       ],
       "r": 2,
-      "x": "LCD = 16 : 16 − 8 + 4 − 2 + 1 = 11. Résultat = 11/16."
+      "x": "Les 10 personnes qui aiment les deux sports sont comptées deux fois dans 40 + 30 : le nombre de personnes aimant au moins un sport est 40 + 30 − 10 = 60. Il reste donc 100 − 60 = 40 personnes qui n'aiment aucun des deux. La réponse 30 oublie de retirer le double compte, 100 − 70, et 60 donne le nombre de ceux qui aiment au moins un sport.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Un secteur circulaire a un angle de 60° et un rayon de 6 cm. Quelle est son aire (π ≈ 3,14) ?",
+      "q": "Un piéton part de A à 6 km/h. Deux heures plus tard, une voiture part de A dans le même sens à 30 km/h. Elle rattrape le piéton à une distance de A de :",
       "o": [
-        "18,84 cm²",
-        "37,68 cm²",
-        "6,28 cm²",
-        "12,56 cm²"
-      ],
-      "r": 0,
-      "x": "Aire = (60/360) × π × r² = (1/6) × 3,14 × 36 = 18,84 cm²."
-    },
-    {
-      "q": "On tire 2 cartes simultanément parmi 4 cartes numérotées 1, 2, 3, 4. Combien y a-t-il de tirages possibles ?",
-      "o": [
-        "4",
-        "8",
-        "10",
-        "6"
+        "7,5 km",
+        "10 km",
+        "12 km",
+        "15 km"
       ],
       "r": 3,
-      "x": "Combinaisons = C(4,2) = (4 × 3) / (2 × 1) = 6 tirages différents."
+      "x": "En 2 heures, le piéton prend une avance de 6 × 2 = 12 km. La voiture réduit cet écart de 30 − 6 = 24 km par heure, donc elle le rattrape en 12 ÷ 24 = 0,5 h, après avoir parcouru 30 × 0,5 = 15 km depuis A. La réponse 12 km ne donne que l'avance du piéton au départ de la voiture, et non le point de rencontre.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quelle est la négation de l'énoncé \"Tous les élèves ont réussi\" ?",
+      "q": "Le taux annuel qui permet d'obtenir 36 000 FCFA d'intérêts simples sur 200 000 FCFA placés pendant 3 ans est de :",
       "o": [
-        "Aucun élève n'a réussi",
-        "Au moins un élève n'a pas réussi",
-        "La plupart des élèves ont réussi",
-        "Tous les élèves ont échoué"
+        "6 %",
+        "12 %",
+        "18 %",
+        "36 %"
+      ],
+      "r": 0,
+      "x": "On isole le taux dans I = C × t × n : t = 36 000 ÷ (200 000 × 3) = 36 000 ÷ 600 000 = 0,06, soit 6 %. On vérifie que 6 % de 200 000 font 12 000 FCFA par an, donc 36 000 FCFA en 3 ans. La réponse 18 % oublie la durée de 3 ans, et 36 % confond le montant des intérêts en milliers avec un taux.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le carré parfait le plus proche de 200 est :",
+      "o": [
+        "144",
+        "169",
+        "196",
+        "225"
+      ],
+      "r": 2,
+      "x": "On encadre 200 entre deux carrés parfaits consécutifs : 14² = 196 et 15² = 225. L'écart vaut 200 − 196 = 4 d'un côté et 225 − 200 = 25 de l'autre, donc 196 est le plus proche. La réponse 225 est le carré parfait immédiatement supérieur, mais il est plus éloigné, et 169 = 13² l'est encore davantage.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le résultat de 1 − 1/2 + 1/4 − 1/8 + 1/16 est :",
+      "o": [
+        "1/2",
+        "5/8",
+        "21/32",
+        "11/16"
+      ],
+      "r": 3,
+      "x": "On réduit tout au dénominateur commun 16 : 16/16 − 8/16 + 4/16 − 2/16 + 1/16. On calcule les numérateurs en respectant les signes : 16 − 8 + 4 − 2 + 1 = 11, d'où 11/16. La réponse 5/8, soit 10/16, oublie le dernier terme +1/16, et 1/2 s'arrête après les deux premiers termes.",
+      "_batchId": "maths_bepc/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Un commerçant de Ouagadougou achète un sac de riz à 18 000 FCFA et le revend à 21 600 FCFA. Son bénéfice en pourcentage du prix d'achat est de :",
+      "o": [
+        "16,7 %",
+        "18 %",
+        "20 %",
+        "36 %"
+      ],
+      "r": 2,
+      "x": "Le bénéfice est la différence entre le prix de vente et le prix d'achat : 21 600 – 18 000 = 3 600 FCFA. Pour obtenir le taux, on divise toujours le bénéfice par le PRIX D'ACHAT, car c'est la somme engagée : 3 600 ÷ 18 000 = 20 %. La réponse 16,7 % vient de la division par le prix de vente, erreur la plus fréquente sur ce type de question.",
+      "_batchId": "maths_bepc/2026-10-21/LOT10"
+    },
+    {
+      "q": "Sur une carte à l'échelle 1/200 000, la distance entre Ouagadougou et une autre ville mesure 49 cm. La distance réelle est de :",
+      "o": [
+        "9,8 km",
+        "98 km",
+        "196 km",
+        "980 km"
       ],
       "r": 1,
-      "x": "La négation de \"tous les P sont Q\" est \"il existe au moins un P qui n'est pas Q\"."
+      "x": "On multiplie la mesure de la carte par le dénominateur de l'échelle : 49 × 200 000 = 9 800 000 cm. Il reste à convertir en kilomètres: 9 800 000 cm = 98 000 m = 98 km. Les réponses 9,8 km et 980 km proviennent d'une erreur de virgule lors de cette conversion.",
+      "_batchId": "maths_bepc/2026-10-21/LOT10"
+    },
+    {
+      "q": "La solution de l'équation 3x – 7 = 2x + 5 est :",
+      "o": [
+        "x = –12",
+        "x = –2",
+        "x = 2",
+        "x = 12"
+      ],
+      "r": 3,
+      "x": "On rassemble les x d'un côté et les nombres de l'autre, en changeant le signe de chaque terme qui traverse le signe égal : 3x – 2x = 5 + 7, d'où x = 12. On vérifie en remplaçant : 3 × 12 – 7 = 29 et 2 × 12 + 5 = 29. La réponse –2 oublie le changement de signe du terme –7.",
+      "_batchId": "maths_bepc/2026-10-21/LOT10"
+    },
+    {
+      "q": "Un capital de 500 000 FCFA placé à intérêt simple au taux annuel de 6 % pendant 9 mois rapporte :",
+      "o": [
+        "22 500 FCFA",
+        "27 000 FCFA",
+        "30 000 FCFA",
+        "270 000 FCFA"
+      ],
+      "r": 0,
+      "x": "La formule est I = (C × t × n) ÷ 1 200 quand la durée est en MOIS, soit (500 000 × 6 × 9) ÷ 1 200 = 22 500 FCFA. On peut vérifier autrement : une année entière rapporterait 30 000 FCFA, donc 9 mois, soit les trois quarts de l'année, rapportent 22 500 FCFA. La réponse 30 000 FCFA oublie de réduire la durée.",
+      "_batchId": "maths_bepc/2026-10-21/LOT10"
+    },
+    {
+      "q": "Un champ rectangulaire de 120 m de long sur 75 m de large a une superficie de :",
+      "o": [
+        "0,9 ha",
+        "9 ha",
+        "90 ha",
+        "900 ha"
+      ],
+      "r": 0,
+      "x": "L'aire du rectangle vaut 120 × 75 = 9 000 m². Pour passer aux hectares, on divise par 10 000, car 1 ha = 10 000 m², ce qui donne 0,9 ha. La réponse 9 ha correspondrait à 90 000 m² : retenez qu'un hectare est un carré de 100 m de côté.",
+      "_batchId": "maths_bepc/2026-10-21/LOT10"
+    },
+    {
+      "q": "Le plus grand commun diviseur (PGCD) de 84 et 126 est :",
+      "o": [
+        "6",
+        "14",
+        "21",
+        "42"
+      ],
+      "r": 3,
+      "x": "On décompose les deux nombres en facteurs premiers : 84 = 2² × 3 × 7 et 126 = 2 × 3² × 7. Le PGCD se forme avec les facteurs communs affectés du plus PETIT exposant : 2 × 3 × 7 = 42. Ne le confondez pas avec le PPCM, qui prend le plus grand exposant et vaut ici 252.",
+      "_batchId": "maths_bepc/2026-10-21/LOT10"
+    },
+    {
+      "q": "Dans un triangle rectangle dont les côtés de l'angle droit mesurent 9 cm et 12 cm, l'hypoténuse mesure :",
+      "o": [
+        "10,5 cm",
+        "15 cm",
+        "18 cm",
+        "21 cm"
+      ],
+      "r": 1,
+      "x": "Le théorème de Pythagore donne hypoténuse² = 9² + 12² = 81 + 144 = 225, d'où √225 = 15 cm. Ce triangle est le triplet 3-4-5 multiplié par 3, repère utile pour aller vite. La réponse 21 cm additionne les deux côtés, ce qui est toujours faux car l'hypoténuse est plus courte que leur somme.",
+      "_batchId": "maths_bepc/2026-10-21/LOT10"
+    },
+    {
+      "q": "Un article affiché à 12 500 FCFA bénéficie d'une remise de 12 %. Le prix payé est de :",
+      "o": [
+        "11 000 FCFA",
+        "11 250 FCFA",
+        "11 500 FCFA",
+        "12 380 FCFA"
+      ],
+      "r": 0,
+      "x": "La remise vaut 12 500 × 12 ÷ 100 = 1 500 FCFA, d'où un prix payé de 11 000 FCFA. On peut aussi multiplier directement par 0,88, car payer après 12 % de remise revient à régler 88 % du prix affiché. La réponse 12 380 FCFA retranche 120 FCFA au lieu de 12 %.",
+      "_batchId": "maths_bepc/2026-10-21/LOT10"
+    },
+    {
+      "q": "La moyenne arithmétique des notes 9 ; 14 ; 11 ; 16 et 10 est :",
+      "o": [
+        "11",
+        "12",
+        "13",
+        "15"
+      ],
+      "r": 1,
+      "x": "La moyenne s'obtient en divisant la somme des notes par leur nombre : (9 + 14 + 11 + 16 + 10) ÷ 5 = 60 ÷ 5 = 12. La réponse 11 est la médiane, c'est-à-dire la note du milieu après rangement par ordre croissant. Moyenne et médiane sont deux indicateurs bien distincts.",
+      "_batchId": "maths_bepc/2026-10-21/LOT10"
+    },
+    {
+      "q": "Un car quitte Ouagadougou à 7 h 30 et parcourt 360 km jusqu'à Bobo-Dioulasso à la vitesse moyenne de 80 km/h. Il arrive à :",
+      "o": [
+        "11 h 30",
+        "11 h 50",
+        "12 h 00",
+        "12 h 20"
+      ],
+      "r": 2,
+      "x": "La durée du trajet vaut distance ÷ vitesse = 360 ÷ 80 = 4,5 h, soit 4 h 30 min puisque 0,5 h = 30 min. En ajoutant à 7 h 30, on obtient une arrivée à 12 h 00. La réponse 12 h 20 lit 4,5 h comme 4 h 50 min : une durée décimale se convertit en multipliant la partie décimale par 60.",
+      "_batchId": "maths_bepc/2026-10-21/LOT10"
     }
   ],
   "maths_bac": [
@@ -57641,1525 +63325,5155 @@ const QUESTIONS = {
   ],
   "informatique": [
     {
-      "q": "CPU signifie :",
+      "q": "Dans Microsoft Word (version française), le raccourci clavier Ctrl+G permet de :",
       "o": [
-        "Central Page Unit",
-        "Central Processing Unit",
-        "Computer Program User",
-        "Control Process Utility"
-      ],
-      "r": 1,
-      "x": "CPU (Central Processing Unit) = Unité Centrale de Traitement. C'est le « cerveau » de l'ordinateur qui exécute les instructions."
-    },
-    {
-      "q": "Quel logiciel est un traitement de texte ?",
-      "o": [
-        "Excel",
-        "Word",
-        "PowerPoint",
-        "Photoshop"
-      ],
-      "r": 1,
-      "x": "Microsoft Word est le traitement de texte le plus connu. Excel = tableur, PowerPoint = présentation, Photoshop = retouche image."
-    },
-    {
-      "q": "Un fichier .pdf est :",
-      "o": [
-        "Un programme",
-        "Un document portable lisible partout",
-        "Un virus",
-        "Un jeu"
-      ],
-      "r": 1,
-      "x": "Le PDF (Portable Document Format) est un format universel pour partager des documents tout en préservant leur mise en page."
-    },
-    {
-      "q": "Le « cloud » désigne :",
-      "o": [
-        "Un nuage météo",
-        "Le stockage en ligne",
-        "Un type d'imprimante",
-        "Un câble"
-      ],
-      "r": 1,
-      "x": "Le cloud (« nuage ») est le stockage et l'accès aux données via Internet (Google Drive, Dropbox, OneDrive…)."
-    },
-    {
-      "q": "Un mot de passe sûr doit :",
-      "o": [
-        "Être court",
-        "Être long et complexe",
-        "Être votre prénom",
-        "Être 1234"
-      ],
-      "r": 1,
-      "x": "Un bon mot de passe : 12+ caractères, mélange de majuscules/minuscules/chiffres/symboles, unique pour chaque service, jamais partagé."
-    },
-    {
-      "q": "Un virus informatique est :",
-      "o": [
-        "Une maladie",
-        "Un programme malveillant",
-        "Un logiciel utile",
-        "Un câble"
-      ],
-      "r": 1,
-      "x": "Un virus est un programme malveillant qui se propage et endommage les systèmes. Antivirus, mises à jour et prudence sur les fichiers reçus = protection."
-    },
-    {
-      "q": "USB signifie :",
-      "o": [
-        "Universal Serial Bus",
-        "Ultra Speed Boost",
-        "User System Boot",
-        "Unique Software Block"
+        "mettre le texte en gras",
+        "aller à une page précise",
+        "grouper des objets sélectionnés",
+        "agrandir la taille de la police"
       ],
       "r": 0,
-      "x": "USB (Universal Serial Bus) est une norme de connectique standardisée pour brancher périphériques (clé, souris, imprimante…)."
+      "x": "Dans Word en français, Ctrl+G met la sélection en gras. Ctrl+I la met en italique et Ctrl+U la souligne. Dans la version anglaise de Word, le gras correspond à Ctrl+B (bold), ce qui explique certaines confusions ; en version française, retenez G pour gras, I pour italique et U pour souligné.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "Le « phishing » consiste à :",
+      "q": "Dans les logiciels de bureautique, le raccourci Ctrl+Z permet de :",
       "o": [
-        "Pêcher en mer",
-        "Voler des données par tromperie",
-        "Programmer en C",
-        "Imprimer"
+        "rétablir la dernière action",
+        "annuler la dernière action",
+        "fermer le document actif",
+        "zoomer sur la page"
       ],
       "r": 1,
-      "x": "Le phishing (hameçonnage) est une fraude : faux email/site qui imite une institution pour voler vos identifiants. Vigilance permanente !"
+      "x": "Ctrl+Z annule la dernière action effectuée. Ctrl+Y rétablit l'action qui vient d'être annulée. On peut appuyer plusieurs fois de suite sur Ctrl+Z pour remonter l'historique des modifications, ce qui permet de récupérer un texte effacé par erreur tant que le document n'a pas été fermé.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "Un mégaoctet (Mo) est environ :",
+      "q": "Depuis la version 2007, le nombre maximal de lignes d’une feuille de calcul Microsoft Excel est :",
       "o": [
-        "1000 octets",
-        "1 million d'octets",
-        "1 milliard d'octets",
-        "100 octets"
-      ],
-      "r": 1,
-      "x": "1 Mo ≈ 1 000 000 octets (10⁶). Hiérarchie : octet → Ko → Mo → Go → To. Un fichier MP3 ≈ 3-5 Mo, une photo ≈ 2-5 Mo."
-    },
-    {
-      "q": "Le navigateur web sert à :",
-      "o": [
-        "Naviguer en bateau",
-        "Consulter des sites Internet",
-        "Téléphoner",
-        "Imprimer"
-      ],
-      "r": 1,
-      "x": "Un navigateur web (Chrome, Firefox, Edge, Safari) permet de consulter les sites Internet. Il interprète le code HTML/CSS/JS."
-    },
-    {
-      "q": "Qui est considéré comme le père de l'informatique théorique pour ses travaux sur les machines à calculer universelles ?",
-      "o": [
-        "Bill Gates",
-        "John von Neumann",
-        "Alan Turing",
-        "Steve Jobs"
+        "65 536 lignes",
+        "524 288 lignes",
+        "1 048 576 lignes",
+        "2 097 152 lignes"
       ],
       "r": 2,
-      "x": "Alan Turing a formalisé le concept de machine universelle capable d'exécuter n'importe quel algorithme. John von Neumann a quant à lui posé les bases de l'architecture des ordinateurs modernes."
+      "x": "Depuis Excel 2007, une feuille compte 1 048 576 lignes et 16 384 colonnes. La limite de 65 536 lignes était celle d'Excel 2003 et des versions antérieures. Ce nombre n'est pas choisi au hasard : 1 048 576 est égal à 2 puissance 20, tandis que l'ancienne limite de 65 536 valait 2 puissance 16, si bien que la capacité a été multipliée par 1 048 576 ÷ 65 536 = 16.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "En quelle décennie est apparu le premier microprocesseur commercial, l'Intel 4004 ?",
+      "q": "Depuis la version 2007, le nombre maximal de colonnes d’une feuille de calcul Microsoft Excel est :",
       "o": [
-        "Les années 1950",
-        "Les années 1970",
-        "Les années 1960",
-        "Les années 1980"
-      ],
-      "r": 1,
-      "x": "L'Intel 4004, premier microprocesseur commercial, a été lancé en novembre 1971, soit dans les années 1970. Il comportait 2 300 transistors et fonctionnait à 740 kHz."
-    },
-    {
-      "q": "Quel est le nom du premier ordinateur entièrement électronique à usage général, mis en service en 1945 aux États-Unis ?",
-      "o": [
-        "IBM 360",
-        "Altair 8800",
-        "ENIAC",
-        "Apple I"
-      ],
-      "r": 2,
-      "x": "L'ENIAC (Electronic Numerical Integrator and Computer) a été mis en service en 1945 à l'Université de Pennsylvanie. L'IBM 360 date de 1964 et l'Apple I de 1976."
-    },
-    {
-      "q": "Selon la loi de Moore formulée en 1965, quel paramètre double environ tous les deux ans ?",
-      "o": [
-        "La capacité des disques durs",
-        "La vitesse des connexions Internet",
-        "La taille des écrans d'ordinateurs",
-        "Le nombre de transistors sur un processeur"
+        "256 colonnes",
+        "1 024 colonnes",
+        "8 192 colonnes",
+        "16 384 colonnes"
       ],
       "r": 3,
-      "x": "La loi de Moore prédit que le nombre de transistors sur un processeur double environ tous les deux ans, entraînant une augmentation continue de la puissance de calcul. Cette loi a guidé l'industrie informatique pendant plusieurs décennies."
+      "x": "Une feuille Excel compte 16 384 colonnes, la dernière étant la colonne XFD. Les 256 colonnes (dernière colonne IV) correspondent à Excel 2003. Là encore, il s'agit d'une puissance de 2 : 16 384 vaut 2 puissance 14 et 256 vaut 2 puissance 8, de sorte que le nombre de colonnes a été multiplié par 16 384 ÷ 256 = 64 entre Excel 2003 et Excel 2007.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "Quelle unité sert à mesurer la fréquence d'horloge d'un processeur ?",
+      "q": "Dans Excel, une formule de calcul commence par le signe :",
       "o": [
-        "Le hertz",
-        "L'octet",
-        "Le pixel",
-        "Le watt"
+        "=",
+        "#",
+        "$",
+        "@"
       ],
       "r": 0,
-      "x": "La fréquence d'horloge d'un processeur se mesure en hertz (Hz) et ses multiples (MHz, GHz). L'octet mesure la capacité de stockage, le pixel est l'unité d'image et le watt mesure la puissance électrique consommée."
+      "x": "Toute formule Excel débute par le signe égal, sinon la saisie est traitée comme du texte. Le signe $ sert à figer une ligne ou une colonne dans une référence. On peut aussi commencer une formule par + ou -, Excel ajoutant alors automatiquement le signe égal, mais la bonne pratique enseignée et attendue aux concours reste de toujours débuter par =.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "Quel composant assure le stockage permanent des données lorsque l'ordinateur est éteint ?",
+      "q": "Dans Excel, si A1 = 5, A2 = 10, A3 = 15 et A4 = 20, la formule =SOMME(A1:A4) renvoie :",
       "o": [
-        "La mémoire cache",
-        "Le disque dur",
-        "La mémoire vive",
-        "Le processeur central"
+        "35",
+        "50",
+        "65",
+        "70"
       ],
       "r": 1,
-      "x": "Le disque dur assure le stockage permanent des données même hors tension. La mémoire vive (RAM) et la mémoire cache sont des mémoires volatiles qui perdent leur contenu à l'extinction de l'ordinateur."
+      "x": "La somme 5 + 10 + 15 + 20 donne 50. Le résultat 35 s'obtient en oubliant la cellule A3, erreur fréquente lors d'un calcul manuel. Pour vérifier, on additionne par paires : 5 + 20 = 25 et 10 + 15 = 25, soit 25 + 25 = 50 ; les propositions 65 et 70 dépassent la somme réelle de la plage et ne peuvent donc pas convenir.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "Que signifie l'acronyme RAM dans le domaine informatique ?",
+      "q": "Dans Excel, si A1 = 4, A2 = 8, A3 = 12 et A4 = 16, la formule =MOYENNE(A1:A4) renvoie :",
       "o": [
-        "Read Action Module",
-        "Rapid Application Memory",
+        "6",
+        "8",
+        "10",
+        "40"
+      ],
+      "r": 2,
+      "x": "La moyenne vaut (4 + 8 + 12 + 16) / 4 = 40 / 4 = 10. Le nombre 40 est la somme des cellules, que renverrait la fonction SOMME. Méthode rapide : les valeurs étant régulièrement espacées de 4 en 4, la moyenne est égale à celle des deux valeurs extrêmes, soit (4 + 16) ÷ 2 = 10, ce qui confirme le résultat sans additionner toutes les cellules.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Excel, la référence qui reste entièrement fixe lors de la recopie d'une formule s'écrit :",
+      "o": [
+        "A1",
+        "A$1",
+        "$A1",
+        "$A$1"
+      ],
+      "r": 3,
+      "x": "$A$1 est une référence absolue qui fige à la fois la colonne et la ligne. A$1 et $A1 sont des références mixtes qui ne figent qu'un seul élément. Exemple concret : si la cellule A1 contient le taux de TVA de 18 % et que l'on calcule les prix TTC de toute une colonne, il faut écrire $A$1 pour que chaque ligne utilise bien ce même taux.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Excel, en cours de saisie d'une formule, la touche F4 permet de :",
+      "o": [
+        "basculer entre références relatives et absolues",
+        "vérifier l'orthographe de la feuille active",
+        "insérer une nouvelle feuille de calcul",
+        "ouvrir la boîte de dialogue d'impression"
+      ],
+      "r": 0,
+      "x": "F4 ajoute ou retire les signes $ d'une référence et fait défiler les combinaisons relatives, absolues et mixtes. La vérification orthographique se lance, elle, avec F7. En appuyant successivement sur F4, la référence A1 devient $A$1, puis A$1, puis $A1, avant de revenir à A1, ce qui évite de taper les signes $ à la main.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Excel, la valeur d'erreur #DIV/0! signale :",
+      "o": [
+        "une référence de cellule supprimée",
+        "une division par zéro",
+        "un nom de fonction inconnu",
+        "une colonne trop étroite"
+      ],
+      "r": 1,
+      "x": "Cette erreur apparaît lorsqu'une formule divise par zéro ou par une cellule vide. Une référence supprimée produit l'erreur REF et une colonne trop étroite affiche des dièses. Pour éviter cet affichage, on peut utiliser la fonction SIERREUR, par exemple =SIERREUR(A1/B1;0), qui renvoie 0 lorsque la cellule B1 est vide ou égale à zéro.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Excel (version française), la valeur d'erreur #NOM? apparaît lorsque :",
+      "o": [
+        "le résultat dépasse la largeur de la cellule",
+        "une cellule vide est utilisée dans un calcul",
+        "un nom de fonction est mal orthographié",
+        "deux plages de cellules ne se croisent pas"
+      ],
+      "r": 2,
+      "x": "Cette erreur indique qu'Excel ne reconnaît pas un nom utilisé dans la formule, souvent une fonction mal écrite. L'absence d'intersection entre deux plages produit l'erreur NUL. Par exemple, taper =SOME(A1:A5) au lieu de =SOMME(A1:A5) provoque cette erreur, de même qu'un texte placé dans une formule sans guillemets, comme =SI(A1>10;Admis;Ajourné).",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Depuis la version 2007, l'extension par défaut d'un document Microsoft Word est :",
+      "o": [
+        ".doc",
+        ".odt",
+        ".rtf",
+        ".docx"
+      ],
+      "r": 3,
+      "x": "Word enregistre par défaut au format .docx depuis la version 2007, basé sur la norme Office Open XML. Le .doc est l'ancien format binaire et le .odt celui de LibreOffice Writer. Le « x » final indique que le fichier est en réalité une archive compressée de fichiers XML, ce qui rend les documents plus légers et plus faciles à réparer en cas de corruption que l'ancien format .doc.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Depuis la version 2007, l'extension par défaut d'un classeur Microsoft Excel est :",
+      "o": [
+        ".xlsx",
+        ".pptx",
+        ".accdb",
+        ".csv"
+      ],
+      "r": 0,
+      "x": "Le classeur Excel s'enregistre par défaut en .xlsx depuis 2007, l'ancien format étant .xls. Le .csv est un format texte qui ne conserve ni les formules ni la mise en forme. Les versions d'Excel antérieures à 2007 ne peuvent ouvrir un fichier .xlsx qu'avec un module de compatibilité, c'est pourquoi on enregistre parfois au format .xls pour un destinataire équipé d'un logiciel ancien.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Depuis la version 2007, l'extension par défaut d'une présentation Microsoft PowerPoint est :",
+      "o": [
+        ".docx",
+        ".pptx",
+        ".xlsx",
+        ".accdb"
+      ],
+      "r": 1,
+      "x": "PowerPoint enregistre par défaut ses présentations en .pptx depuis 2007. L'extension .accdb correspond aux bases de données Microsoft Access. Pour qu'une présentation s'ouvre directement en mode diaporama, sans afficher l'interface d'édition, on peut l'enregistrer au format .ppsx, très pratique pour une soutenance devant un jury.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans PowerPoint, la touche F5 lance le diaporama :",
+      "o": [
+        "à partir de la diapositive active",
+        "uniquement en mode présentateur",
+        "à partir de la première diapositive",
+        "en boucle sans intervention"
+      ],
+      "r": 2,
+      "x": "F5 démarre le diaporama depuis la première diapositive. La combinaison Maj+F5 le démarre depuis la diapositive active. Pendant la projection, on peut aussi aller directement à une diapositive en tapant son numéro puis en appuyant sur Entrée, par exemple 5 puis Entrée pour afficher la cinquième diapositive.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Word, la combinaison Ctrl+Entrée insère :",
+      "o": [
+        "un saut de ligne manuel",
+        "une nouvelle section",
+        "un tableau vide",
+        "un saut de page"
+      ],
+      "r": 3,
+      "x": "Ctrl+Entrée force le passage à la page suivante en insérant un saut de page. Maj+Entrée insère seulement un saut de ligne à l'intérieur du paragraphe. Ce saut de page est préférable à plusieurs appuis sur Entrée, car le texte qui suit reste toujours en haut de la nouvelle page, même si l'on modifie ensuite le contenu des pages précédentes.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Word, la fonction qui permet d'envoyer une même lettre personnalisée à plusieurs destinataires s'appelle :",
+      "o": [
+        "le publipostage",
+        "le suivi des modifications",
+        "la mise en forme conditionnelle",
+        "le mode plan"
+      ],
+      "r": 0,
+      "x": "Le publipostage fusionne un document principal avec une source de données, souvent un fichier Excel. La mise en forme conditionnelle est une fonction d'Excel et non de Word. Concrètement, on prépare une lettre type avec des champs comme « Nom » ou « Région », puis Word crée autant de lettres qu'il y a de lignes dans le fichier source, par exemple 500 convocations de candidats.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Word, la grande majuscule placée au début d'un paragraphe et descendant sur plusieurs lignes s'appelle :",
+      "o": [
+        "une puce",
+        "une lettrine",
+        "une vignette",
+        "un filigrane"
+      ],
+      "r": 1,
+      "x": "La lettrine est une majuscule agrandie qui occupe la hauteur de plusieurs lignes en début de paragraphe. Le filigrane est un texte ou une image pâle placé en arrière-plan de la page. On l'insère par l'onglet Insertion, et l'on peut choisir le nombre de lignes qu'elle occupe, trois par défaut, ainsi que sa position, dans le texte ou dans la marge.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Word, la touche F7 lance :",
+      "o": [
+        "l'enregistrement sous un autre nom",
+        "l'aperçu avant impression",
+        "la vérification orthographique et grammaticale",
+        "l'insertion d'un lien hypertexte"
+      ],
+      "r": 2,
+      "x": "F7 ouvre le volet de vérification de l'orthographe et de la grammaire. L'enregistrement sous un autre nom s'obtient avec F12. Le soulignement rouge signale une faute d'orthographe probable et le soulignement bleu une faute de grammaire ou de style, mais cette vérification automatique ne remplace jamais une relecture attentive.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans les logiciels Microsoft Office, la touche F12 ouvre la boîte de dialogue :",
+      "o": [
+        "Imprimer",
+        "Ouvrir",
+        "Rechercher",
+        "Enregistrer sous"
+      ],
+      "r": 3,
+      "x": "F12 ouvre directement la fenêtre Enregistrer sous. La boîte de dialogue Imprimer s'ouvre avec Ctrl+P. Lors du premier enregistrement d'un nouveau document, Ctrl+S ouvre aussi la fenêtre Enregistrer sous, mais pour les enregistrements suivants il se contente de sauvegarder sans poser de question.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Sous Windows, la combinaison touche Windows + D permet de :",
+      "o": [
+        "afficher le bureau",
+        "dupliquer la fenêtre active",
+        "déconnecter la session",
+        "supprimer le fichier sélectionné"
+      ],
+      "r": 0,
+      "x": "Windows + D réduit toutes les fenêtres et affiche le bureau, un second appui les restaure. Windows + L verrouille la session de l'utilisateur. La combinaison Windows + M réduit aussi toutes les fenêtres, mais un second appui ne les restaure pas, contrairement à Windows + D qui fonctionne comme un interrupteur entre le bureau et les fenêtres.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Sous Windows, la combinaison touche Windows + L permet de :",
+      "o": [
+        "lancer l'Explorateur de fichiers",
+        "verrouiller la session",
+        "ouvrir les Paramètres",
+        "afficher le bureau"
+      ],
+      "r": 1,
+      "x": "Windows + L verrouille immédiatement la session sans fermer les programmes ouverts. Windows + E ouvre l'Explorateur et Windows + I les Paramètres. Ce réflexe est essentiel dans un bureau partagé ou un cybercafé, car il empêche un tiers d'accéder à vos fichiers et à vos comptes pendant une courte absence, sans perdre le travail en cours.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Sous Windows, la combinaison Alt+F4 permet de :",
+      "o": [
+        "basculer entre les fenêtres",
+        "renommer un fichier",
+        "fermer la fenêtre active",
+        "actualiser l'affichage"
+      ],
+      "r": 2,
+      "x": "Alt+F4 ferme la fenêtre ou le programme actif, et propose l'arrêt de l'ordinateur depuis le bureau. Le basculement entre fenêtres se fait avec Alt+Tab. Avant de fermer un document non enregistré, le logiciel propose généralement d'enregistrer les modifications, ce qui évite de perdre son travail lors d'une fermeture accidentelle.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Sous Windows, la combinaison Alt+Tab permet de :",
+      "o": [
+        "fermer l'application active",
+        "ouvrir le menu Démarrer",
+        "réduire toutes les fenêtres",
+        "basculer entre les fenêtres ouvertes"
+      ],
+      "r": 3,
+      "x": "Alt+Tab fait défiler les fenêtres ouvertes pour passer de l'une à l'autre. Le menu Démarrer s'ouvre avec la seule touche Windows. En maintenant Alt enfoncée et en appuyant plusieurs fois sur Tab, on parcourt toutes les fenêtres ouvertes, tandis que Windows + Tab affiche une vue d'ensemble des fenêtres et des bureaux virtuels.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans l'Explorateur de fichiers de Windows, la touche F2 permet de :",
+      "o": [
+        "renommer l'élément sélectionné",
+        "supprimer définitivement l'élément",
+        "afficher les propriétés de l'élément",
+        "créer un nouveau dossier"
+      ],
+      "r": 0,
+      "x": "F2 active la modification du nom du fichier ou du dossier sélectionné. Un nouveau dossier se crée avec Ctrl+Maj+N. Cette touche fonctionne aussi dans Excel, où elle permet de modifier directement le contenu de la cellule active, sans avoir à cliquer dans la barre de formule.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Sous Windows, la combinaison Maj+Suppr appliquée à un fichier :",
+      "o": [
+        "le déplace vers la Corbeille",
+        "le supprime sans passer par la Corbeille",
+        "le copie sur le bureau",
+        "le compresse au format ZIP"
+      ],
+      "r": 1,
+      "x": "Maj+Suppr supprime définitivement le fichier, sans possibilité de le restaurer depuis la Corbeille. La touche Suppr seule envoie le fichier dans la Corbeille. Un fichier supprimé ainsi ne peut plus être récupéré par les moyens ordinaires, et seuls des logiciels spécialisés de récupération de données peuvent parfois le retrouver, d'où l'intérêt d'utiliser ce raccourci avec prudence.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans la plupart des logiciels sous Windows, le raccourci Ctrl+A permet de :",
+      "o": [
+        "aligner le texte à gauche",
+        "ajouter une diapositive",
+        "sélectionner tout le contenu",
+        "afficher l'aide en ligne"
+      ],
+      "r": 2,
+      "x": "Ctrl+A sélectionne l'intégralité du contenu du document ou du dossier ouvert. L'aide s'affiche généralement avec la touche F1. Dans Word, sélectionner tout le document permet par exemple de changer en une seule fois la police ou la taille de l'ensemble du texte, avant de désélectionner d'un simple clic.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans les logiciels de bureautique, le raccourci Ctrl+X permet de :",
+      "o": [
+        "copier la sélection",
+        "coller la sélection",
+        "supprimer définitivement la sélection",
+        "couper la sélection"
+      ],
+      "r": 3,
+      "x": "Ctrl+X retire la sélection et la place dans le presse-papiers pour la coller ailleurs. Ctrl+C copie sans retirer et Ctrl+V colle. Le contenu coupé n'est pas perdu tant qu'on ne copie rien d'autre, puisqu'il reste dans le presse-papiers et peut être collé plusieurs fois de suite avec Ctrl+V.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans les logiciels Microsoft Office, le raccourci Ctrl+Y permet de :",
+      "o": [
+        "rétablir la dernière action annulée",
+        "insérer un symbole spécial",
+        "changer la casse du texte",
+        "ouvrir un nouveau document"
+      ],
+      "r": 0,
+      "x": "Ctrl+Y rétablit ce que Ctrl+Z vient d'annuler, ou répète la dernière action. Un nouveau document s'ouvre avec Ctrl+N. Dans Excel, Ctrl+Y ou la touche F4 utilisée hors saisie de formule répètent la dernière action, comme l'application d'une couleur de fond, ce qui fait gagner beaucoup de temps.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Excel, la fonction qui compte les cellules répondant à un critère donné est :",
+      "o": [
+        "NB",
+        "NB.SI",
+        "SOMME.SI",
+        "NBVAL"
+      ],
+      "r": 1,
+      "x": "NB.SI compte les cellules d'une plage qui satisfont un critère, par exemple =NB.SI(B2:B50;\"Admis\"). NB compte les cellules numériques et SOMME.SI additionne selon un critère. Dans l'exemple, la formule compte les candidats « Admis » des lignes 2 à 50, soit 49 cellules examinées, et la fonction NB.SI.ENS permet de combiner plusieurs critères, comme le statut et la région.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La fonction Excel qui recherche une valeur dans la première colonne d'un tableau et renvoie une valeur de la même ligne est :",
+      "o": [
+        "INDEX",
+        "EQUIV",
+        "RECHERCHEV",
+        "RECHERCHEH"
+      ],
+      "r": 2,
+      "x": "RECHERCHEV effectue une recherche verticale dans la première colonne d'un tableau. RECHERCHEH réalise la même opération à l'horizontale, dans la première ligne. Sa syntaxe est =RECHERCHEV(valeur;tableau;numéro de colonne;FAUX), le dernier argument FAUX imposant une correspondance exacte, et les versions récentes d'Excel proposent aussi RECHERCHEX, plus souple.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Excel, si A1 contient 9,5, la formule =SI(A1>=10;\"Admis\";\"Ajourné\") renvoie :",
+      "o": [
+        "9,5",
+        "Admis",
+        "#VALEUR!",
+        "Ajourné"
+      ],
+      "r": 3,
+      "x": "La condition 9,5 >= 10 est fausse, la fonction renvoie donc la troisième valeur, « Ajourné ». Le texte « Admis » ne s'afficherait qu'à partir d'une note de 10. La fonction SI comporte trois arguments séparés par des points-virgules : la condition à tester, la valeur si vrai et la valeur si faux, et tout texte doit être placé entre guillemets.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Excel, la formule =MAX(3;12;7;9) renvoie :",
+      "o": [
+        "7",
+        "9",
+        "12",
+        "31"
+      ],
+      "r": 2,
+      "x": "MAX renvoie la plus grande valeur de la liste, soit 12. Le nombre 31 est la somme des quatre valeurs, que renverrait SOMME. Pour vérifier, on compare : 12 est supérieur à 3, à 7 et à 9 ; les propositions 7 et 9 sont des valeurs de la liste qui ne sont pas les plus grandes, et 31 vaut 3 + 12 + 7 + 9.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Excel, la formule =ARRONDI(15,678;1) renvoie :",
+      "o": [
+        "15,6",
+        "15,7",
+        "15,68",
+        "16"
+      ],
+      "r": 1,
+      "x": "Le second argument 1 arrondit à une décimale : 15,678 devient 15,7. Avec 2 décimales on obtiendrait 15,68 et avec 0 décimale 16. Méthode : pour arrondir à une décimale, on regarde le chiffre des centièmes ; ici 7 est supérieur ou égal à 5, donc le chiffre des dixièmes 6 passe à 7, ce qui donne 15,7.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans un tableur, l'intersection d'une ligne et d'une colonne s'appelle :",
+      "o": [
+        "une plage",
+        "un classeur",
+        "une feuille",
+        "une cellule"
+      ],
+      "r": 3,
+      "x": "La cellule est repérée par sa colonne et sa ligne, par exemple B3. Une plage est un ensemble de cellules, comme A1:A10. La référence se lit toujours colonne d'abord puis ligne, et l'adresse de la cellule active s'affiche dans la zone Nom, située à gauche de la barre de formule.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Depuis Excel 2013, un nouveau classeur vierge contient par défaut :",
+      "o": [
+        "1 feuille",
+        "3 feuilles",
+        "5 feuilles",
+        "10 feuilles"
+      ],
+      "r": 0,
+      "x": "Depuis Excel 2013, un nouveau classeur s'ouvre avec une seule feuille. Excel 2007 et 2010 en proposaient trois par défaut. On ajoute une nouvelle feuille avec le bouton + situé à côté des onglets ou avec Maj+F11, et l'on peut modifier le nombre de feuilles par défaut dans les options d'Excel.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Microsoft Word, le niveau de zoom maximal de l'affichage est de :",
+      "o": [
+        "200 %",
+        "400 %",
+        "500 %",
+        "1 000 %"
+      ],
+      "r": 2,
+      "x": "Word permet un zoom allant de 10 % à 500 %. Le maximum de 400 % est celui d'Excel. Le zoom ne modifie que l'affichage à l'écran et jamais la taille réelle des caractères à l'impression, et l'on peut zoomer rapidement en tournant la molette de la souris tout en maintenant Ctrl.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Microsoft Word, la taille maximale de police que l'on peut saisir est de :",
+      "o": [
+        "72 points",
+        "144 points",
+        "409 points",
+        "1 638 points"
+      ],
+      "r": 3,
+      "x": "La liste déroulante s'arrête à 72 points, mais la saisie manuelle accepte jusqu'à 1 638 points. La limite de 409 points est celle d'Excel. Calcul : un point vaut 1/72 de pouce, donc 1 638 points = 1 638 ÷ 72 = 22,75 pouces, soit 22,75 x 2,54 ≈ 57,8 cm de haut, bien plus que la hauteur d'une page A4.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le format de document PDF, présenté en 1993, a été créé par la société :",
+      "o": [
+        "Adobe",
+        "Microsoft",
+        "Apple",
+        "IBM"
+      ],
+      "r": 0,
+      "x": "Adobe a lancé le format PDF en 1993 pour échanger des documents à l'identique sur tous les ordinateurs. Il est devenu une norme internationale ISO 32000 en 2008. Le sigle PDF signifie Portable Document Format, et son intérêt est de conserver exactement la mise en page, les polices et les images, quel que soit l'appareil utilisé pour l'ouvrir.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Excel, l'opérateur & sert à :",
+      "o": [
+        "additionner deux nombres",
+        "concaténer du texte",
+        "comparer deux valeurs",
+        "multiplier deux cellules"
+      ],
+      "r": 1,
+      "x": "L'opérateur & assemble des textes : =\"Ouaga\"&\"dougou\" donne « Ouagadougou ». L'addition utilise + et la multiplication *. La fonction CONCATENER, ou CONCAT dans les versions récentes, produit le même résultat, et la formule =A1&\" \"&B1 insère un espace pour joindre un prénom et un nom.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Excel, la formule =10/4 renvoie :",
+      "o": [
+        "0,4",
+        "2",
+        "2,5",
+        "40"
+      ],
+      "r": 2,
+      "x": "Le signe / est l'opérateur de division : 10 divisé par 4 donne 2,5. Le résultat 0,4 correspondrait à l'opération inverse 4/10. Pour vérifier une division, on multiplie le résultat par le diviseur : 2,5 x 4 = 10 ; la proposition 2 correspond au quotient entier, que renverrait la fonction QUOTIENT(10;4).",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Excel, la formule =2+3*4 renvoie :",
+      "o": [
+        "14",
+        "20",
+        "24",
+        "36"
+      ],
+      "r": 0,
+      "x": "La multiplication est prioritaire : 3*4 = 12, puis 2 + 12 = 14. Le résultat 20 ne s'obtient qu'avec des parenthèses, =(2+3)*4. Excel applique la priorité des opérations : d'abord les parenthèses, puis les puissances, ensuite la multiplication et la division, et enfin l'addition et la soustraction, comme en mathématiques.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Excel, la formule =2^3 renvoie :",
+      "o": [
+        "5",
+        "6",
+        "8",
+        "9"
+      ],
+      "r": 2,
+      "x": "L'opérateur ^ calcule une puissance : 2 x 2 x 2 = 8. Le résultat 9 correspondrait à 3^2. La proposition 6 correspond à l'erreur fréquente qui multiplie 2 par 3 au lieu d'élever 2 à la puissance 3, et la fonction PUISSANCE(2;3) donne exactement le même résultat que 2^3.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans les logiciels de bureautique, le raccourci Ctrl+P permet de :",
+      "o": [
+        "coller la sélection",
+        "afficher la page suivante",
+        "partager le document",
+        "imprimer le document"
+      ],
+      "r": 3,
+      "x": "Ctrl+P ouvre la fenêtre d'impression du document actif. Le collage s'effectue avec Ctrl+V. La fenêtre d'impression permet de choisir le nombre de copies, les pages à imprimer, par exemple 1-3 pour les trois premières, et l'orientation, tout en affichant un aperçu du document.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Word, la fonction qui enregistre et affiche les corrections apportées par chaque relecteur s'appelle :",
+      "o": [
+        "le suivi des modifications",
+        "le publipostage",
+        "la table des matières",
+        "la protection du document"
+      ],
+      "r": 0,
+      "x": "Le suivi des modifications, situé dans l'onglet Révision, colore les ajouts et suppressions de chaque relecteur. Le publipostage sert à produire des lettres personnalisées en série. Chaque modification peut ensuite être acceptée ou refusée une par une, ce qui laisse à l'auteur le contrôle du texte final, notamment pour la relecture d'un rapport ou d'un mémoire.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Pour représenter la répartition en pourcentage d'un budget, le graphique Excel le plus adapté est :",
+      "o": [
+        "l'histogramme",
+        "le graphique en secteurs",
+        "la courbe",
+        "le nuage de points"
+      ],
+      "r": 1,
+      "x": "Le graphique en secteurs, ou camembert, montre la part de chaque poste dans un total de 100 %. La courbe convient plutôt à l'évolution d'une valeur dans le temps. Ce graphique ne convient qu'à une seule série de données dont les parts forment un tout, et il devient illisible au-delà de six ou sept catégories, cas où l'histogramme est plus adapté.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Sous Windows, la combinaison Ctrl+Alt+Suppr permet notamment d'accéder :",
+      "o": [
+        "au Panneau de configuration",
+        "à l'invite de commandes",
+        "au Gestionnaire des tâches",
+        "au navigateur Microsoft Edge"
+      ],
+      "r": 2,
+      "x": "Ctrl+Alt+Suppr ouvre un écran donnant accès au Gestionnaire des tâches, au verrouillage et à la déconnexion. Ctrl+Maj+Échap ouvre directement le Gestionnaire des tâches. Le Gestionnaire des tâches permet notamment de fermer de force un programme qui ne répond plus et de voir l'utilisation du processeur et de la mémoire par chaque application.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans PowerPoint, la combinaison Maj+F5 lance le diaporama :",
+      "o": [
+        "depuis la première diapositive",
+        "en mode plan",
+        "sans les animations",
+        "depuis la diapositive active"
+      ],
+      "r": 3,
+      "x": "Maj+F5 démarre la projection à partir de la diapositive sélectionnée. La touche F5 seule repart de la première diapositive. Pendant le diaporama, la flèche gauche permet de revenir à la diapositive précédente, tandis que la flèche droite, Entrée ou la barre d'espace font avancer la présentation.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Word, le raccourci Ctrl+E permet de :",
+      "o": [
+        "centrer le paragraphe",
+        "envoyer le document par e-mail",
+        "effacer la mise en forme",
+        "exporter le document en PDF"
+      ],
+      "r": 0,
+      "x": "Ctrl+E centre le paragraphe entre les marges. Ctrl+J le justifie, c'est-à-dire l'aligne à la fois à gauche et à droite. Le centrage convient aux titres et aux pages de garde, tandis que l'alignement justifié est préféré pour le corps d'un rapport administratif, car il donne des bords réguliers des deux côtés.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans Excel, une cellule contenant « Janvier » recopiée vers le bas avec la poignée de recopie donne dans la cellule suivante :",
+      "o": [
+        "Janvier",
+        "Février",
+        "Décembre",
+        "Janvier1"
+      ],
+      "r": 1,
+      "x": "Excel reconnaît les listes de mois et incrémente automatiquement : Janvier, Février, Mars. Il en va de même pour les jours de la semaine. Pour une série de nombres, il faut saisir les deux premières valeurs, par exemple 1 et 2, puis les sélectionner avant de tirer la poignée, sinon Excel se contente de recopier la même valeur.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "En informatique, un octet est composé de :",
+      "o": [
+        "4 bits",
+        "8 bits",
+        "16 bits",
+        "32 bits"
+      ],
+      "r": 1,
+      "x": "Un octet regroupe 8 bits et permet de coder 256 valeurs différentes. Un groupe de 4 bits s'appelle un quartet. Calcul : chaque bit valant 0 ou 1, 8 bits offrent 2 x 2 x 2 x 2 x 2 x 2 x 2 x 2 = 2 puissance 8 = 256 combinaisons, de 00000000 à 11111111, soit les valeurs décimales de 0 à 255.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "En convention binaire, 1 Kio correspond à combien d'octets ?",
+      "o": [
+        "512 octets",
+        "1 000 octets",
+        "1 024 octets",
+        "2 048 octets"
+      ],
+      "r": 2,
+      "x": "En informatique binaire, 1 Kio (kibioctet) vaut 2 puissance 10, soit 1 024 octets. Le kilooctet, noté ko selon le SI, utilise le préfixe kilo et vaut exactement 1 000 octets. Certains systèmes comme Windows écrivent souvent « Ko » à la place de « Kio » par abus de langage, alors qu’ils utilisent en réalité la valeur binaire de 1 024 octets.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans la convention binaire, une capacité de 2 Gio correspond à :",
+      "o": [
+        "512 Mio",
+        "1 024 Mio",
+        "2 000 Mio",
+        "2 048 Mio"
+      ],
+      "r": 3,
+      "x": "Un gibioctet (Gio) vaut toujours 1 024 mébioctets (Mio), donc 2 Gio font 2 × 1 024 = 2 048 Mio. La valeur de 2 000 Mio résulte du calcul décimal du Système international. Pour convertir des gibioctets en mébioctets, on multiplie par 1 024 ; inversement, pour passer des mébioctets aux gibioctets, on divise par 1 024, ainsi 512 Mio = 512 ÷ 1 024 = 0,5 Gio.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Parmi ces unités de mesure de capacité, la plus grande est :",
+      "o": [
+        "le pétaoctet",
+        "le téraoctet",
+        "le gigaoctet",
+        "le mégaoctet"
+      ],
+      "r": 0,
+      "x": "L'ordre croissant est méga (Mo), giga (Go), téra (To) puis pétaoctet (Po), qui est ici la plus grande unité. Chaque niveau vaut 1 000 fois le précédent selon les normes du Système international : 1 Po = 1 000 To. L'unité supérieure suivante est l'exaoctet (Eo) qui vaut 1000 pétaoctet (Po). NB: le système binaire utilise un multiplicateur de 1024: 1 Gio = 1024 Mio.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le nombre binaire 1010 correspond en décimal à :",
+      "o": [
+        "8",
+        "10",
+        "12",
+        "14"
+      ],
+      "r": 1,
+      "x": "1010 = 1x8 + 0x4 + 1x2 + 0x1 = 10. Le nombre 12 s'écrirait 1100 et le nombre 14 s'écrirait 1110. Méthode : on attribue aux chiffres, de droite à gauche, les poids 1, 2, 4 et 8, puis on additionne seulement les poids placés sous un 1, soit 8 + 2 = 10 ; la proposition 8 oublie le bit de poids 2.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le nombre décimal 25 s'écrit en binaire :",
+      "o": [
+        "10111",
+        "11000",
+        "11001",
+        "11010"
+      ],
+      "r": 2,
+      "x": "25 = 16 + 8 + 1, ce qui donne 11001. Les propositions 10111, 11000 et 11010 valent respectivement 23, 24 et 26. Méthode des divisions successives : 25 ÷ 2 = 12 reste 1, 12 ÷ 2 = 6 reste 0, 6 ÷ 2 = 3 reste 0, 3 ÷ 2 = 1 reste 1, 1 ÷ 2 = 0 reste 1, puis on lit les restes de bas en haut : 11001.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le nombre hexadécimal 1F correspond en décimal à :",
+      "o": [
+        "15",
+        "16",
+        "31",
+        "32"
+      ],
+      "r": 2,
+      "x": "1F = 1x16 + 15 = 31, la lettre F valant 15 en base 16. Le nombre 16 s'écrit 10 en hexadécimal et le nombre 32 s'écrit 20. Méthode : on multiplie le chiffre de gauche par 16 et on ajoute celui de droite, sachant que A = 10, B = 11, C = 12, D = 13, E = 14 et F = 15 ; ainsi 1F = 1 x 16 + 15 = 31.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le code ASCII standard représente chaque caractère sur :",
+      "o": [
+        "7 bits",
+        "8 bits",
+        "16 bits",
+        "32 bits"
+      ],
+      "r": 0,
+      "x": "L'ASCII standard utilise 7 bits, ce qui permet de coder 128 caractères. Les versions dites étendues passent à 8 bits, soit 256 caractères. Calcul : 7 bits donnent 2 puissance 7 = 128 codes, numérotés de 0 à 127 ; par exemple, la lettre A majuscule porte le code 65 et la lettre a minuscule le code 97, soit un écart de 32.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le système de codage conçu pour représenter les caractères de toutes les écritures du monde est :",
+      "o": [
+        "l'ASCII",
+        "l'EBCDIC",
+        "l'Unicode",
+        "le Morse"
+      ],
+      "r": 2,
+      "x": "L'Unicode, publié à partir de 1991, attribue un numéro unique à chaque caractère de toutes les écritures. L'ASCII se limite aux caractères latins non accentués. Son format d'encodage UTF-8, le plus utilisé sur le Web, permet de représenter les lettres accentuées du français comme les caractères particuliers des langues nationales telles que le mooré ou le fulfuldé.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La mémoire vive (RAM) d'un ordinateur se caractérise par :",
+      "o": [
+        "la conservation des données sans courant",
+        "un accès en lecture seule",
+        "une capacité supérieure au disque dur",
+        "la perte de son contenu à l'extinction"
+      ],
+      "r": 3,
+      "x": "La RAM est une mémoire volatile qui s'efface dès que l'ordinateur est éteint. La mémoire morte (ROM), elle, conserve son contenu sans alimentation. C'est pourquoi il faut enregistrer régulièrement : un document ouvert dans Word se trouve en mémoire vive, et une coupure de courant fait perdre toutes les modifications non enregistrées sur le disque.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le sigle ROM désigne :",
+      "o": [
+        "Read Only Memory",
+        "Random Output Memory",
+        "Rapid Operating Module",
+        "Remote Online Memory"
+      ],
+      "r": 0,
+      "x": "ROM signifie Read Only Memory, mémoire morte accessible en lecture seule. Elle contient notamment le micrologiciel de démarrage de l'ordinateur. Sur les ordinateurs modernes, ce micrologiciel est stocké dans une mémoire flash réinscriptible, ce qui permet de mettre à jour le BIOS ou l'UEFI, alors que les premières ROM ne pouvaient jamais être modifiées.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le sigle RAM désigne :",
+      "o": [
+        "Read Access Module",
         "Random Access Memory",
-        "Real Allocation Module"
-      ],
-      "r": 2,
-      "x": "RAM signifie Random Access Memory (mémoire à accès aléatoire). C'est la mémoire de travail de l'ordinateur, volatile, qui stocke temporairement les données des programmes en cours d'exécution."
-    },
-    {
-      "q": "Quelle interface de connexion est aujourd'hui la plus répandue pour connecter des périphériques externes à un ordinateur ?",
-      "o": [
-        "Le port VGA",
-        "Le port parallèle",
-        "Le port série",
-        "Le port USB"
-      ],
-      "r": 3,
-      "x": "Le port USB (Universal Serial Bus) est l'interface standard pour connecter les périphériques (clés USB, souris, claviers, disques externes). Le port VGA est réservé à l'affichage, le port parallèle et le port série sont devenus obsolètes."
-    },
-    {
-      "q": "Quelle technologie de stockage interne est plus rapide et plus résistante aux chocs qu'un disque dur magnétique classique ?",
-      "o": [
-        "Le disque SSD",
-        "La clé USB",
-        "Le DVD-ROM",
-        "Le disque optique"
-      ],
-      "r": 0,
-      "x": "Le disque SSD (Solid State Drive) utilise de la mémoire flash sans pièce mobile, ce qui le rend plus rapide, silencieux et résistant aux chocs que le disque dur magnétique. Les autres options ne constituent pas un stockage interne principal."
-    },
-    {
-      "q": "Quelle est la capacité d'un gigaoctet exprimée en mégaoctets ?",
-      "o": [
-        "512 Mo",
-        "1 024 Mo",
-        "256 Mo",
-        "2 048 Mo"
+        "Rapid Active Memory",
+        "Remote Access Machine"
       ],
       "r": 1,
-      "x": "Un gigaoctet (Go) est égal à 1 024 mégaoctets (Mo), car les unités informatiques sont basées sur des puissances de 2. Ainsi 1 Go = 2^10 Mo = 1 024 Mo."
+      "x": "RAM signifie Random Access Memory, mémoire à accès aléatoire. C'est la mémoire de travail où sont chargés les programmes en cours d'exécution. Plus la quantité de RAM est grande, plus l'ordinateur peut ouvrir d'applications simultanément sans ralentir, et une capacité de 8 Go est couramment recommandée pour un usage bureautique avec plusieurs onglets ouverts.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "Qu'est-ce qu'un logiciel libre ?",
+      "q": "Dans le processeur, les calculs arithmétiques et logiques sont effectués par :",
       "o": [
-        "Un logiciel gratuit disponible sur Internet",
-        "Un logiciel fourni avec tout ordinateur neuf",
-        "Un logiciel dont le code source est accessible, modifiable et redistribuable",
-        "Un logiciel appartenant au domaine public"
+        "l'unité de commande",
+        "la mémoire cache",
+        "l'unité arithmétique et logique",
+        "le bus de données"
       ],
       "r": 2,
-      "x": "Un logiciel libre garantit quatre libertés : utiliser, étudier, modifier et redistribuer le programme. La gratuité n'est pas une condition obligatoire du logiciel libre, contrairement à l'accès au code source."
+      "x": "L'unité arithmétique et logique (UAL) réalise les additions, comparaisons et opérations logiques. L'unité de commande, elle, décode les instructions et coordonne leur exécution. Avec les registres, l'UAL et l'unité de commande forment le processeur, ou unité centrale de traitement (CPU), qui exécute chaque instruction selon le cycle : rechercher, décoder, puis exécuter.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "Parmi les suites bureautiques suivantes, laquelle est entièrement libre et gratuite ?",
+      "q": "La fréquence d'horloge d'un processeur s'exprime en :",
       "o": [
-        "Microsoft Office",
-        "Google Workspace",
-        "Adobe Creative Suite",
-        "LibreOffice"
+        "mégaoctets",
+        "watts",
+        "pixels",
+        "gigahertz"
       ],
       "r": 3,
-      "x": "LibreOffice est une suite bureautique libre, gratuite et open source comprenant traitement de texte, tableur et logiciel de présentation. Microsoft Office et Adobe sont propriétaires et payants, Google Workspace est en ligne avec une version gratuite limitée."
+      "x": "La fréquence se mesure en hertz, aujourd'hui en gigahertz : 3 GHz correspond à 3 milliards de cycles par seconde. Le mégaoctet mesure une capacité de stockage. Calcul : 1 GHz = 1 000 MHz = 1 milliard de hertz, donc un processeur à 3,2 GHz effectue 3 200 000 000 cycles par seconde, mais sa puissance réelle dépend aussi du nombre de cœurs.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "Qu'est-ce qu'un pilote informatique (driver) ?",
+      "q": "La mémoire très rapide placée près du processeur pour conserver les données les plus utilisées s'appelle :",
       "o": [
-        "Un logiciel permettant au système d'exploitation de piloter un périphérique",
-        "Un programme antivirus intégré au système",
-        "Un outil de compression et d'archivage de fichiers",
-        "Un utilitaire de sauvegarde automatique des données"
+        "la mémoire cache",
+        "la mémoire morte",
+        "la mémoire de masse",
+        "la mémoire virtuelle"
       ],
       "r": 0,
-      "x": "Un pilote est un logiciel intermédiaire permettant au système d'exploitation de communiquer avec un périphérique matériel (imprimante, carte graphique, clavier). Sans pilote, le système ne peut pas reconnaître ni utiliser le périphérique."
+      "x": "La mémoire cache, organisée en niveaux L1, L2 et L3, évite au processeur d'attendre la RAM. La mémoire de masse désigne les supports de stockage durable comme les disques. Le niveau L1 est le plus rapide mais le plus petit, quelques dizaines de kilooctets par cœur, tandis que le L3, partagé entre les cœurs, est plus lent mais peut atteindre plusieurs dizaines de mégaoctets.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "Quelle est la différence fondamentale entre un logiciel propriétaire et un logiciel open source ?",
+      "q": "Contrairement au disque dur classique (HDD), le disque SSD :",
       "o": [
-        "Le logiciel propriétaire est toujours payant tandis que l'open source est toujours gratuit",
-        "Le logiciel propriétaire interdit l'accès et la modification de son code source",
-        "Le logiciel open source nécessite une connexion Internet permanente",
-        "Le logiciel propriétaire offre systématiquement de meilleures performances"
+        "utilise des plateaux magnétiques",
+        "ne comporte aucune pièce mécanique mobile",
+        "perd ses données à l'extinction",
+        "se connecte uniquement par câble réseau"
       ],
       "r": 1,
-      "x": "La différence fondamentale réside dans l'accès au code source : le logiciel propriétaire le garde secret et interdit sa modification, tandis que l'open source le rend librement accessible. La gratuité n'est pas le critère déterminant."
+      "x": "Le SSD stocke les données sur des puces de mémoire flash, sans plateau ni tête de lecture. Il est plus rapide et plus résistant aux chocs que le disque dur à plateaux magnétiques. Remplacer un disque dur par un SSD est souvent la meilleure façon d'accélérer un vieil ordinateur, car le démarrage du système et l'ouverture des logiciels deviennent nettement plus rapides.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "Quel type de logiciel est principalement utilisé pour gérer, organiser et analyser des données tabulaires ?",
+      "q": "Parmi ces périphériques, celui qui est uniquement un périphérique d'entrée est :",
       "o": [
-        "Un traitement de texte",
-        "Un logiciel de présentation",
-        "Un tableur",
-        "Un navigateur web"
+        "l'imprimante",
+        "le haut-parleur",
+        "le scanner",
+        "le vidéoprojecteur"
       ],
       "r": 2,
-      "x": "Le tableur organise les données en lignes et colonnes et permet d'effectuer des calculs, créer des graphiques et analyser des données. Microsoft Excel et LibreOffice Calc sont les tableurs les plus utilisés dans les administrations."
+      "x": "Le scanner fait entrer une image dans l'ordinateur, c'est un périphérique d'entrée. L'imprimante, le haut-parleur et le vidéoprojecteur sont des périphériques de sortie. Pour classer un périphérique, on se demande dans quel sens circule l'information : de l'utilisateur vers l'ordinateur pour l'entrée, comme la webcam, et de l'ordinateur vers l'utilisateur pour la sortie.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "Quel est le rôle fondamental d'un système d'exploitation ?",
+      "q": "Parmi ces périphériques, celui qui est à la fois d'entrée et de sortie est :",
       "o": [
-        "Naviguer sur Internet et afficher des pages web",
-        "Créer et éditer des documents bureautiques",
-        "Protéger l'ordinateur contre les virus et malwares",
-        "Gérer les ressources matérielles et coordonner les logiciels"
+        "la souris",
+        "le clavier",
+        "le microphone",
+        "l'écran tactile"
       ],
       "r": 3,
-      "x": "Le système d'exploitation gère les ressources matérielles (processeur, mémoire, périphériques) et fournit une interface entre l'utilisateur, les logiciels et le matériel. Il permet l'exécution des applications installées."
+      "x": "L'écran tactile affiche des informations et reçoit les commandes du doigt. La souris, le clavier et le microphone sont des périphériques d'entrée seulement. D'autres périphériques sont mixtes, comme l'imprimante multifonction, qui imprime en sortie et numérise en entrée, ou le casque-micro, qui diffuse le son et capte la voix.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "Parmi les systèmes d'exploitation suivants, lequel est distribué sous licence open source ?",
+      "q": "Le circuit imprimé principal sur lequel sont connectés le processeur et la mémoire s'appelle :",
+      "o": [
+        "la carte mère",
+        "la carte graphique",
+        "la carte réseau",
+        "la carte son"
+      ],
+      "r": 0,
+      "x": "La carte mère relie tous les composants de l'ordinateur grâce à ses bus et connecteurs. La carte graphique, la carte réseau et la carte son viennent s'y brancher. Elle porte notamment le support du processeur, les emplacements de mémoire vive, les connecteurs SATA pour les disques et les ports PCI Express pour les cartes d'extension.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le programme stocké sur la carte mère qui démarre l'ordinateur et teste le matériel s'appelle :",
+      "o": [
+        "le noyau",
+        "le BIOS",
+        "le pilote",
+        "le compilateur"
+      ],
+      "r": 1,
+      "x": "Le BIOS effectue les tests de démarrage puis lance le système d'exploitation. Il est progressivement remplacé par l'UEFI sur les ordinateurs récents. Le sigle BIOS signifie Basic Input Output System, et l'on y accède généralement en appuyant sur une touche comme Suppr, F2 ou F10 dès l'allumage, selon le fabricant.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le logiciel qui permet au système d'exploitation de communiquer avec un périphérique s'appelle :",
+      "o": [
+        "un utilitaire",
+        "un tableur",
+        "un pilote",
+        "un plugiciel"
+      ],
+      "r": 2,
+      "x": "Le pilote, ou driver, traduit les commandes du système d'exploitation pour un matériel précis, comme une imprimante. Sans pilote adapté, le périphérique n'est pas reconnu. Windows installe automatiquement de nombreux pilotes, mais il est recommandé de les télécharger sur le site officiel du fabricant pour éviter les logiciels piégés proposés par des sites douteux.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Parmi les logiciels suivants, celui qui est un système d'exploitation est :",
+      "o": [
+        "Microsoft Word",
+        "Google Chrome",
+        "Adobe Reader",
+        "Ubuntu"
+      ],
+      "r": 3,
+      "x": "Ubuntu est une distribution du système d'exploitation Linux. Google Chrome est un navigateur et Adobe Reader un lecteur de fichiers PDF. Le système d'exploitation gère le matériel, la mémoire et les fichiers, et lance les applications ; Windows, macOS, Linux, Android et iOS en sont les principaux exemples, Word n'étant qu'un logiciel d'application.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le système d'exploitation mobile Android repose sur le noyau :",
       "o": [
         "Linux",
-        "Windows 11",
-        "macOS Ventura",
+        "Windows NT",
+        "BSD",
         "MS-DOS"
       ],
       "r": 0,
-      "x": "Linux est un noyau open source distribué sous licence GNU GPL, dont le code source est librement accessible et modifiable. Windows et macOS sont des systèmes propriétaires à code fermé. MS-DOS était également un système propriétaire de Microsoft."
+      "x": "Android, développé par Google, utilise un noyau Linux. Windows NT est le noyau des versions modernes de Windows. Android est aujourd'hui le système d'exploitation mobile le plus répandu dans le monde et en Afrique, grâce aux nombreux smartphones abordables proposés par différents fabricants.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "Dans un système Linux, quel répertoire contient les fichiers de configuration du système ?",
+      "q": "La première version du système Microsoft Windows, Windows 1.0, est sortie en :",
       "o": [
-        "/home",
-        "/etc",
-        "/bin",
-        "/usr"
+        "1981",
+        "1985",
+        "1990",
+        "1995"
       ],
       "r": 1,
-      "x": "Le répertoire /etc contient les fichiers de configuration du système Linux. /home héberge les dossiers des utilisateurs, /bin contient les exécutables essentiels, et /usr regroupe les logiciels installés par l'administrateur."
+      "x": "Windows 1.0 est commercialisé en novembre 1985 comme interface graphique de MS-DOS. L'année 1995 correspond à la sortie de Windows 95. Les grandes versions suivantes sont Windows 95, Windows XP en 2001, Windows 7 en 2009, Windows 10 en 2015 et Windows 11 en 2021, soit 36 ans entre la première et la dernière.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "Quelle commande Linux permet d'afficher le contenu d'un répertoire ?",
+      "q": "Parmi ces logiciels, celui qui est une suite bureautique libre et gratuite est :",
       "o": [
-        "pwd",
-        "cd",
-        "ls",
-        "rm"
+        "Microsoft Office",
+        "Microsoft 365",
+        "LibreOffice",
+        "Corel WordPerfect"
       ],
       "r": 2,
-      "x": "La commande ls (list) affiche le contenu d'un répertoire sous Linux. pwd affiche le répertoire courant, cd permet de changer de répertoire, et rm supprime des fichiers ou des dossiers."
+      "x": "LibreOffice est une suite libre comprenant notamment Writer, Calc et Impress. Microsoft Office et WordPerfect sont des logiciels propriétaires payants. LibreOffice ouvre et enregistre les fichiers .docx et .xlsx, mais son format natif est l'OpenDocument, avec les extensions .odt pour les textes et .ods pour les classeurs.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "Qu'est-ce que le noyau (kernel) dans un système d'exploitation ?",
+      "q": "La définition d'écran dite 4K UHD correspond à :",
       "o": [
-        "L'interface graphique permettant à l'utilisateur d'interagir avec le système",
-        "Le gestionnaire de fichiers du système d'exploitation",
-        "Le programme antivirus intégré au système",
-        "La partie centrale gérant les ressources matérielles et logicielles"
+        "1 280 x 720 pixels",
+        "1 920 x 1 080 pixels",
+        "2 560 x 1 440 pixels",
+        "3 840 x 2 160 pixels"
       ],
       "r": 3,
-      "x": "Le noyau est le composant central du système d'exploitation qui gère directement les ressources matérielles (mémoire, processeur, périphériques). L'interface graphique est une couche distincte, superposée au noyau."
+      "x": "La 4K UHD compte 3 840 x 2 160 pixels, soit quatre fois plus que le Full HD. Le Full HD correspond à 1 920 x 1 080 pixels. Calcul : 3 840 x 2 160 = 8 294 400 pixels, contre 1 920 x 1 080 = 2 073 600 pixels en Full HD, et le rapport 8 294 400 ÷ 2 073 600 = 4 confirme l'expression « quatre fois plus ».",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "Quelle combinaison de touches ouvre l'écran de sécurité donnant accès au gestionnaire des tâches sous Windows ?",
+      "q": "Le plus petit élément d'une image numérique affichée à l'écran s'appelle :",
       "o": [
-        "Ctrl + Alt + Suppr",
-        "Ctrl + Z",
-        "Alt + F4",
-        "Windows + D"
+        "le pixel",
+        "le bit",
+        "le vecteur",
+        "le point d'encre"
       ],
       "r": 0,
-      "x": "Ctrl + Alt + Suppr ouvre l'écran de sécurité Windows permettant d'accéder au gestionnaire des tâches, de verrouiller la session ou de déconnecter l'utilisateur. Ctrl + Z annule une action, Alt + F4 ferme une fenêtre, Windows + D affiche le bureau."
+      "x": "Le pixel, contraction de picture element, est le point élémentaire d'une image matricielle. Le bit est la plus petite unité d'information en informatique. Calcul : une image de 1 920 x 1 080 pixels compte 2 073 600 pixels ; codée sur 3 octets par pixel sans compression, elle occupe 2 073 600 x 3 = 6 220 800 octets, soit environ 6 Mo.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "Que signifie l'acronyme LAN dans le domaine des réseaux informatiques ?",
+      "q": "La première version de la norme de connexion USB a été publiée en :",
       "o": [
-        "Large Area Network",
-        "Local Area Network",
-        "Linked Application Node",
-        "Long Access Network"
+        "1986",
+        "1996",
+        "2000",
+        "2008"
       ],
       "r": 1,
-      "x": "LAN signifie Local Area Network (réseau local). Il connecte des appareils dans un espace limité comme un bureau ou un bâtiment. Le WAN couvre de grandes distances, le MAN couvre une ville, et le PAN couvre la zone personnelle d'un utilisateur."
+      "x": "La norme USB 1.0 a été publiée en janvier 1996 pour unifier le branchement des périphériques. Le connecteur réversible USB-C est apparu en 2014. Calcul : les débits sont passés de 12 Mbit/s pour l'USB 1.1 à 480 Mbit/s pour l'USB 2.0, puis 5 Gbit/s pour l'USB 3.0, soit 5 000 ÷ 12 ≈ 416 fois le débit initial.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "Quel protocole attribue automatiquement une adresse IP à un appareil lors de sa connexion à un réseau ?",
+      "q": "Un DVD simple couche a une capacité d'environ :",
       "o": [
-        "DNS",
-        "FTP",
-        "DHCP",
-        "SMTP"
+        "1,44 Mo",
+        "700 Mo",
+        "4,7 Go",
+        "25 Go"
       ],
       "r": 2,
-      "x": "Le protocole DHCP (Dynamic Host Configuration Protocol) attribue automatiquement les adresses IP aux appareils d'un réseau. DNS traduit les noms de domaine, FTP permet le transfert de fichiers, et SMTP gère l'envoi des courriels."
+      "x": "Le DVD simple couche contient environ 4,7 Go. Le CD contient 700 Mo, le disque Blu-ray simple couche 25 Go et la disquette 1,44 Mo. Calcul : un DVD de 4,7 Go contient environ 4 700 ÷ 700 ≈ 6,7 fois plus de données qu'un CD de 700 Mo, en utilisant la convention décimale des fabricants.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "Combien de bits compose une adresse IPv4 standard ?",
+      "q": "Un disque Blu-ray simple couche a une capacité d'environ :",
+      "o": [
+        "700 Mo",
+        "4,7 Go",
+        "8,5 Go",
+        "25 Go"
+      ],
+      "r": 3,
+      "x": "Le Blu-ray simple couche stocke environ 25 Go grâce à un laser bleu-violet. Le DVD double couche contient 8,5 Go et le DVD simple couche 4,7 Go. Calcul : le Blu-ray double couche atteint environ 50 Go, et un Blu-ray simple couche contient environ 25 ÷ 4,7 ≈ 5,3 fois plus de données qu'un DVD simple couche.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le programme qui traduit en une seule fois tout un code source en langage machine s'appelle :",
+      "o": [
+        "un interpréteur",
+        "un éditeur",
+        "un débogueur",
+        "un compilateur"
+      ],
+      "r": 3,
+      "x": "Le compilateur produit un fichier exécutable à partir de l'ensemble du code source. L'interpréteur, lui, traduit et exécute le programme ligne par ligne. Le langage C est un langage compilé, tandis que Python est généralement interprété ; un programme compilé s'exécute souvent plus vite, mais il doit être recompilé pour chaque type de système.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le langage de programmation Python, publié en 1991, a été créé par :",
+      "o": [
+        "Guido van Rossum",
+        "Dennis Ritchie",
+        "James Gosling",
+        "Bjarne Stroustrup"
+      ],
+      "r": 0,
+      "x": "Le Néerlandais Guido van Rossum a publié Python en 1991. Dennis Ritchie a créé le langage C, James Gosling Java et Bjarne Stroustrup le C++. Le nom Python ne vient pas du serpent mais de la troupe comique britannique des Monty Python, et ce langage est aujourd'hui très utilisé en analyse de données et en intelligence artificielle.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le langage de programmation C a été créé en 1972 aux laboratoires Bell par :",
+      "o": [
+        "Bill Gates",
+        "Dennis Ritchie",
+        "Linus Torvalds",
+        "Tim Berners-Lee"
+      ],
+      "r": 1,
+      "x": "Dennis Ritchie a conçu le langage C en 1972 pour développer le système Unix. Tim Berners-Lee est l'inventeur du World Wide Web. Le langage C a inspiré de nombreux langages plus récents, comme C++, Java ou PHP, et il reste très utilisé pour écrire des systèmes d'exploitation et des programmes d'appareils électroniques.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une suite finie et ordonnée d'instructions permettant de résoudre un problème s'appelle :",
+      "o": [
+        "un logiciel",
+        "un octet",
+        "un algorithme",
+        "un protocole"
+      ],
+      "r": 2,
+      "x": "Le mot algorithme vient du nom du mathématicien perse al-Khwârizmî, au IXe siècle. Un protocole est un ensemble de règles de communication entre machines. Une recette de cuisine est un bon exemple d'algorithme, avec des ingrédients en entrée, des étapes dans un ordre précis et un plat en sortie ; un programme est la traduction d'un algorithme dans un langage informatique.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Parmi ces formats d'image, celui qui utilise une compression avec perte de qualité est :",
+      "o": [
+        "PNG",
+        "BMP",
+        "GIF",
+        "JPEG"
+      ],
+      "r": 3,
+      "x": "Le JPEG réduit fortement la taille des photos en supprimant des détails peu visibles. Le PNG et le GIF compressent sans perte et le BMP ne compresse généralement pas. Chaque nouvel enregistrement d'un JPEG retouché fait perdre un peu plus de qualité, c'est pourquoi on préfère le PNG pour les logos, les captures d'écran et les images contenant du texte.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le format de fichier MP3 est principalement utilisé pour :",
+      "o": [
+        "les fichiers audio",
+        "les images fixes",
+        "les documents texte",
+        "les feuilles de calcul"
+      ],
+      "r": 0,
+      "x": "Le MP3 compresse le son en réduisant fortement la taille des fichiers musicaux. Les vidéos utilisent plutôt des formats comme le MP4. Calcul : une minute de musique en MP3 à 128 kbit/s occupe 128 000 x 60 ÷ 8 = 960 000 octets, soit près de 1 Mo, contre environ 10 Mo pour le même son non compressé.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Sous Windows, l'extension .exe désigne :",
+      "o": [
+        "un fichier compressé",
+        "un fichier exécutable",
+        "un fichier image",
+        "un document texte"
+      ],
+      "r": 1,
+      "x": "Un fichier .exe contient un programme que Windows peut lancer directement. Les fichiers compressés portent par exemple l'extension .zip ou .rar. Il ne faut jamais ouvrir un fichier .exe reçu par courriel ou par WhatsApp d'un expéditeur inconnu, car c'est l'un des moyens les plus courants de diffusion des virus et des chevaux de Troie.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le format de fichier .zip est utilisé pour :",
+      "o": [
+        "chiffrer un disque dur",
+        "graver un DVD",
+        "compresser des fichiers",
+        "lire une vidéo"
+      ],
+      "r": 2,
+      "x": "Le format ZIP regroupe et compresse un ou plusieurs fichiers dans une archive. Il facilite l'envoi de nombreux fichiers par courrier électronique. Calcul : si un dossier de 50 Mo devient une archive de 20 Mo, l'archive représente 20 ÷ 50 = 40 % de la taille initiale, soit un gain de 60 %, mais les photos JPEG se compressent peu.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'opération qui prépare un support de stockage en effaçant son contenu et en créant un système de fichiers s'appelle :",
+      "o": [
+        "la défragmentation",
+        "la sauvegarde",
+        "la compression",
+        "le formatage"
+      ],
+      "r": 3,
+      "x": "Le formatage efface le support et installe un système de fichiers comme NTFS ou FAT32. La défragmentation réorganise les fichiers d'un disque dur sans les effacer. Le formatage rapide efface seulement la table d'indexation des fichiers, ce qui permet parfois de récupérer les données, alors que le formatage complet vérifie aussi le support et prend beaucoup plus de temps.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le système de fichiers utilisé par défaut pour le disque système de Windows est :",
+      "o": [
+        "NTFS",
+        "ext4",
+        "APFS",
+        "HFS+"
+      ],
+      "r": 0,
+      "x": "Windows installe son disque système en NTFS. Le format ext4 est courant sous Linux et APFS est le format actuel des Mac. NTFS gère les fichiers de plus de 4 Go, les permissions d'accès et le chiffrement, contrairement au FAT32, encore utilisé sur certaines clés USB pour sa compatibilité avec de nombreux appareils.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'architecture qui place les programmes et les données dans une même mémoire a été décrite en 1945 par :",
+      "o": [
+        "Alan Turing",
+        "John von Neumann",
+        "Charles Babbage",
+        "Claude Shannon"
+      ],
+      "r": 1,
+      "x": "John von Neumann a décrit en 1945 cette architecture encore utilisée par la plupart des ordinateurs. Claude Shannon est le fondateur de la théorie de l'information. Cette architecture comprend quatre éléments, l'unité arithmétique et logique, l'unité de commande, la mémoire et les dispositifs d'entrée-sortie, reliés entre eux par des bus.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le mot « bit » est la contraction de l'expression anglaise :",
+      "o": [
+        "basic information transfer",
+        "byte item",
+        "binary digit",
+        "binary integer"
+      ],
+      "r": 2,
+      "x": "Bit vient de binary digit, chiffre binaire pouvant valoir 0 ou 1. Le terme a été popularisé par Claude Shannon en 1948. Le débit d'une connexion s'exprime en bits par seconde, alors que la taille d'un fichier s'exprime en octets, d'où la nécessité de diviser par 8 pour comparer les deux.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le processeur spécialisé dans le calcul de l'affichage et des images s'appelle :",
+      "o": [
+        "le CPU",
+        "l'UPS",
+        "la RAM",
+        "le GPU"
+      ],
+      "r": 3,
+      "x": "Le GPU (Graphics Processing Unit) calcule les images affichées et sert aussi à l'intelligence artificielle. Le CPU est le processeur central qui exécute les programmes. Les ordinateurs d'entrée de gamme utilisent souvent un circuit graphique intégré au processeur, tandis que les ordinateurs destinés aux jeux ou au montage vidéo disposent d'une carte graphique dédiée avec sa propre mémoire.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La disposition de clavier la plus utilisée au Burkina Faso, comme en France, s'appelle :",
+      "o": [
+        "AZERTY",
+        "QWERTY",
+        "QWERTZ",
+        "DVORAK"
+      ],
+      "r": 0,
+      "x": "Le clavier AZERTY tire son nom des six premières lettres de sa rangée supérieure. Le QWERTY domine dans les pays anglophones et le QWERTZ en Allemagne. Sur un clavier AZERTY, les chiffres de la rangée supérieure s'obtiennent en maintenant la touche Maj, et les caractères comme @ ou # s'obtiennent avec la touche Alt Gr.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Microsoft Access est un logiciel de type :",
+      "o": [
+        "tableur de calcul",
+        "gestionnaire de base de données",
+        "traitement de texte",
+        "logiciel de présentation"
+      ],
+      "r": 1,
+      "x": "Access est un système de gestion de base de données (SGBD) qui organise les données en tables reliées. Excel est un tableur et Word un traitement de texte. Une base Access peut contenir des tables pour stocker les données, des requêtes pour les interroger, des formulaires pour la saisie et des états pour imprimer des résultats mis en forme.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le stockage de fichiers sur des serveurs distants accessibles par Internet s'appelle :",
+      "o": [
+        "le stockage local",
+        "la mémoire cache",
+        "l'informatique en nuage",
+        "la défragmentation"
+      ],
+      "r": 2,
+      "x": "L'informatique en nuage, ou cloud computing, héberge les données sur des serveurs distants, comme Google Drive. Le stockage local se fait sur le disque de l'appareil. Le cloud permet de retrouver ses fichiers depuis n'importe quel appareil connecté et de les protéger d'une panne d'ordinateur, mais il nécessite Internet et pose la question de la confidentialité des données.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La technique qui utilise une partie du disque comme extension de la mémoire vive s'appelle :",
+      "o": [
+        "la mémoire cache",
+        "la mémoire morte",
+        "la mémoire flash",
+        "la mémoire virtuelle"
+      ],
+      "r": 3,
+      "x": "La mémoire virtuelle permet de lancer plus de programmes que la RAM ne le permettrait seule, au prix d'une lenteur accrue. La mémoire flash équipe les clés USB et les SSD. Sous Windows, cet espace s'appelle le fichier d'échange, et un ordinateur qui l'utilise beaucoup devient très lent, signe qu'il manque de mémoire vive physique.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un processeur dit quadricœur comporte :",
+      "o": [
+        "2 cœurs",
+        "4 cœurs",
+        "8 cœurs",
+        "16 cœurs"
+      ],
+      "r": 1,
+      "x": "Un processeur quadricœur réunit 4 unités de calcul capables de travailler en parallèle. Un processeur à 2 cœurs est dit bicœur et un processeur à 8 cœurs octocœur. Doubler le nombre de cœurs ne double pas automatiquement la vitesse, car beaucoup de logiciels de bureautique n'exploitent qu'un seul cœur à la fois, alors que le montage vidéo les utilise tous.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le système de numération hexadécimal est un système en base :",
+      "o": [
+        "2",
+        "8",
+        "10",
+        "16"
+      ],
+      "r": 3,
+      "x": "L'hexadécimal utilise 16 symboles : les chiffres 0 à 9 et les lettres A à F. La base 2 est le binaire et la base 8 l'octal. Un chiffre hexadécimal correspond exactement à 4 bits, si bien qu'un octet s'écrit avec 2 chiffres, de 00 à FF, d'où l'usage de l'hexadécimal pour les adresses MAC ou les couleurs du Web.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La copie de données sur un autre support pour pouvoir les restaurer en cas de perte s'appelle :",
+      "o": [
+        "la sauvegarde",
+        "la compression",
+        "la synchronisation",
+        "l'indexation"
+      ],
+      "r": 0,
+      "x": "La sauvegarde protège contre les pannes, les vols et les virus. La règle dite 3-2-1 recommande 3 copies, sur 2 supports différents, dont 1 hors site. Il faut aussi tester régulièrement la restauration de ses sauvegardes, car une copie illisible ne sert à rien, et une clé USB gardée à côté de l'ordinateur ne protège ni du vol ni d'un incendie.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un réseau informatique limité à un bâtiment ou à un campus est appelé :",
+      "o": [
+        "WAN",
+        "MAN",
+        "LAN",
+        "PAN"
+      ],
+      "r": 2,
+      "x": "Le LAN (Local Area Network) est un réseau local couvrant une salle, un bâtiment ou un campus. Le MAN couvre une ville et le PAN quelques mètres autour d'une personne. Le réseau d'un cybercafé ou d'une salle informatique d'université est un LAN, tandis que le réseau reliant les bâtiments administratifs d'une même ville peut constituer un MAN.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Internet est l'exemple type de réseau :",
+      "o": [
+        "PAN",
+        "LAN",
+        "MAN",
+        "WAN"
+      ],
+      "r": 3,
+      "x": "Le WAN (Wide Area Network) relie des réseaux à l'échelle d'un pays ou du monde, et Internet en est le plus vaste. Le LAN reste limité à un site. Les réseaux des opérateurs qui relient les villes du Burkina Faso entre elles, comme Ouagadougou et Bobo-Dioulasso, sont aussi des réseaux étendus, appuyés notamment sur la fibre optique.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une adresse IPv4 est codée sur :",
+      "o": [
+        "32 bits",
+        "48 bits",
+        "64 bits",
+        "128 bits"
+      ],
+      "r": 0,
+      "x": "L'adresse IPv4 compte 32 bits, répartis en quatre octets séparés par des points. Le codage sur 128 bits est celui de l'IPv6. Calcul : 32 bits permettent 2 puissance 32 = 4 294 967 296 adresses, soit environ 4,3 milliards, un nombre insuffisant face aux milliards d'appareils connectés, d'où le passage à l'IPv6.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une adresse IPv6 est codée sur :",
+      "o": [
+        "64 bits",
+        "128 bits",
+        "256 bits",
+        "512 bits"
+      ],
+      "r": 1,
+      "x": "L'IPv6 utilise 128 bits pour pallier la pénurie d'adresses IPv4. Elle s'écrit en huit groupes de chiffres hexadécimaux séparés par deux-points. Calcul : 128 bits donnent 2 puissance 128 adresses, soit environ 3,4 x 10 puissance 38, c'est-à-dire 2 puissance 96 fois plus que l'IPv4, une réserve pratiquement inépuisable.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une adresse physique MAC d'une carte réseau est codée sur :",
       "o": [
         "16 bits",
-        "64 bits",
-        "8 bits",
-        "32 bits"
-      ],
-      "r": 3,
-      "x": "Une adresse IPv4 est composée de 32 bits, représentée en quatre groupes de 8 bits séparés par des points (ex. : 192.168.1.1). L'IPv6 utilise 128 bits pour pallier l'épuisement des adresses disponibles."
-    },
-    {
-      "q": "Quel protocole réseau traduit les noms de domaine en adresses IP ?",
-      "o": [
-        "DNS",
-        "SMTP",
-        "FTP",
-        "DHCP"
-      ],
-      "r": 0,
-      "x": "Le DNS (Domain Name System) fait office d'annuaire d'Internet en traduisant les noms de domaine lisibles par l'humain en adresses IP numériques. Sans le DNS, les utilisateurs devraient mémoriser les adresses IP de chaque site."
-    },
-    {
-      "q": "Qu'est-ce qu'un pare-feu (firewall) dans un réseau informatique ?",
-      "o": [
-        "Un protocole de chiffrement des données en transit sur le réseau",
-        "Un dispositif filtrant le trafic réseau selon des règles de sécurité",
-        "Un routeur dédié exclusivement aux connexions sans fil",
-        "Un logiciel antivirus installé sur le serveur principal"
-      ],
-      "r": 1,
-      "x": "Le pare-feu analyse et filtre les paquets de données entrants et sortants selon des règles prédéfinies. Il protège le réseau contre les accès non autorisés. Il diffère de l'antivirus qui cible les fichiers malveillants."
-    },
-    {
-      "q": "Quel type de réseau couvre une très grande zone géographique comme un pays ou un continent ?",
-      "o": [
-        "LAN",
-        "PAN",
-        "WAN",
-        "MAN"
+        "32 bits",
+        "48 bits",
+        "64 bits"
       ],
       "r": 2,
-      "x": "Le WAN (Wide Area Network) couvre de très larges zones géographiques. Internet est le plus grand WAN existant. Le LAN est local, le MAN couvre une ville, et le PAN couvre la zone personnelle immédiate d'un utilisateur."
+      "x": "L'adresse MAC compte 48 bits, notés en six paires hexadécimales comme 00:1A:2B:3C:4D:5E. Elle est gravée par le fabricant, contrairement à l'adresse IP attribuée par le réseau. Calcul : 48 bits divisés en groupes de 8 donnent 6 octets, chacun noté par 2 chiffres hexadécimaux, soit 12 chiffres au total ; les 3 premiers octets identifient le fabricant de la carte.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
     },
     {
-      "q": "Quelle technologie sans fil est la plus utilisée pour connecter des appareils à Internet dans les bureaux et domiciles ?",
+      "q": "Dans une adresse IPv4, chacun des quatre nombres est compris entre :",
+      "o": [
+        "0 et 99",
+        "0 et 128",
+        "1 et 256",
+        "0 et 255"
+      ],
+      "r": 3,
+      "x": "Chaque nombre correspond à un octet de 8 bits, donc à une valeur de 0 à 255. Une adresse contenant 256 ou plus est invalide. Calcul : le plus grand nombre codable sur 8 bits est 11111111, soit 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 255, ce qui explique cette limite pour chacun des quatre nombres.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Parmi ces adresses, celle qui est une adresse IPv4 valide est :",
+      "o": [
+        "192.168.1.10",
+        "192.168.1.256",
+        "300.10.2.1",
+        "192.168.1"
+      ],
+      "r": 0,
+      "x": "192.168.1.10 comporte quatre nombres compris entre 0 et 255. Les adresses contenant 256 ou 300 dépassent la valeur maximale et 192.168.1 ne compte que trois nombres. Pour vérifier une adresse IPv4, on contrôle deux points : elle doit comporter exactement quatre nombres séparés par trois points, et chacun doit être compris entre 0 et 255.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'adresse IPv4 127.0.0.1 désigne :",
+      "o": [
+        "la passerelle par défaut",
+        "la machine locale elle-même",
+        "le serveur DNS de Google",
+        "l'adresse de diffusion générale"
+      ],
+      "r": 1,
+      "x": "127.0.0.1, appelée localhost ou boucle locale, permet à un ordinateur de communiquer avec lui-même. Le serveur DNS public de Google a pour adresse 8.8.8.8. Les développeurs utilisent cette adresse pour tester un site web sur leur propre ordinateur, et en réalité toute la plage allant de 127.0.0.0 à 127.255.255.255 est réservée à la boucle locale.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La plage d'adresses allant de 192.168.0.0 à 192.168.255.255 est réservée :",
+      "o": [
+        "aux serveurs DNS racines",
+        "à la diffusion multicast",
+        "aux réseaux privés locaux",
+        "aux adresses de type IPv6"
+      ],
+      "r": 2,
+      "x": "Cette plage est réservée aux réseaux privés, comme ceux des box et routeurs domestiques. Ces adresses ne sont pas acheminées directement sur Internet. Les autres plages privées vont de 10.0.0.0 à 10.255.255.255 et de 172.16.0.0 à 172.31.255.255, et le routeur effectue une traduction d'adresses, appelée NAT, pour donner accès à Internet.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le protocole HTTP utilise par défaut le port :",
+      "o": [
+        "21",
+        "25",
+        "53",
+        "80"
+      ],
+      "r": 3,
+      "x": "HTTP fonctionne par défaut sur le port 80. Le port 21 sert au FTP, le port 25 au SMTP et le port 53 au DNS. Calcul : les ports sont codés sur 16 bits, d'où 2 puissance 16 = 65 536 numéros, de 0 à 65 535, et les ports de 0 à 1 023 sont réservés aux services standards comme le Web ou la messagerie.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le protocole HTTPS utilise par défaut le port :",
+      "o": [
+        "443",
+        "587",
+        "993",
+        "8080"
+      ],
+      "r": 0,
+      "x": "HTTPS, version chiffrée de HTTP, utilise le port 443. Le port 8080 est souvent employé comme port alternatif pour les serveurs web de test. Le S de HTTPS signifie Secure : les données sont chiffrées grâce au protocole TLS, ce qui empêche une personne connectée au même Wi-Fi public de lire un mot de passe saisi sur le site.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le système DNS sert à :",
+      "o": [
+        "chiffrer les courriers électroniques",
+        "convertir un nom de domaine en adresse IP",
+        "attribuer les adresses MAC",
+        "bloquer les logiciels malveillants"
+      ],
+      "r": 1,
+      "x": "Le DNS traduit un nom lisible comme lefaso.net en adresse IP compréhensible par les machines. Il fonctionne par défaut sur le port 53. Sans le DNS, il faudrait retenir l'adresse IP de chaque site, et la commande nslookup permet d'afficher l'adresse IP correspondant à un nom de domaine donné.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le protocole qui attribue automatiquement une adresse IP aux appareils d'un réseau est :",
+      "o": [
+        "FTP",
+        "SMTP",
+        "DHCP",
+        "HTTP"
+      ],
+      "r": 2,
+      "x": "Le serveur DHCP distribue automatiquement adresse IP, masque et passerelle aux appareils qui se connectent. Le FTP sert au transfert de fichiers. Sans DHCP, il faudrait configurer manuellement l'adresse de chaque appareil, avec un risque de conflit si deux machines reçoivent la même ; à la maison, c'est généralement la box qui joue ce rôle.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le protocole utilisé pour l'envoi des courriers électroniques est :",
+      "o": [
+        "POP3",
+        "IMAP",
+        "FTP",
+        "SMTP"
+      ],
+      "r": 3,
+      "x": "SMTP achemine les messages de l'expéditeur vers le serveur du destinataire. POP3 et IMAP servent au contraire à la réception des messages. SMTP utilise traditionnellement le port 25, mais l'envoi depuis un logiciel de messagerie se fait aujourd'hui souvent par le port 587 avec authentification, pour limiter les spams.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le protocole FTP est utilisé pour :",
+      "o": [
+        "le transfert de fichiers",
+        "la navigation web sécurisée",
+        "la résolution des noms de domaine",
+        "la téléphonie sur Internet"
+      ],
+      "r": 0,
+      "x": "FTP (File Transfer Protocol) transfère des fichiers entre un client et un serveur, par défaut sur le port 21. La navigation sécurisée utilise HTTPS. FTP transmet les identifiants sans chiffrement, c'est pourquoi on lui préfère des versions sécurisées comme SFTP ou FTPS, notamment pour envoyer les fichiers d'un site web vers son hébergeur.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le modèle de référence OSI décompose la communication réseau en :",
+      "o": [
+        "3 couches",
+        "4 couches",
+        "5 couches",
+        "7 couches"
+      ],
+      "r": 3,
+      "x": "Le modèle OSI compte 7 couches, de la couche physique à la couche application. Le modèle TCP/IP, plus simple, en compte 4. De bas en haut, ces couches sont physique, liaison de données, réseau, transport, session, présentation et application, le modèle ayant été publié par l'Organisation internationale de normalisation en 1984.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le modèle TCP/IP, dans sa présentation classique, comporte :",
+      "o": [
+        "3 couches",
+        "4 couches",
+        "5 couches",
+        "7 couches"
+      ],
+      "r": 1,
+      "x": "TCP/IP comprend 4 couches : accès réseau, Internet, transport et application. Les 7 couches correspondent au modèle OSI. TCP assure une transmission fiable en vérifiant que tous les paquets arrivent dans l'ordre, tandis que IP se charge de l'adressage et de l'acheminement des paquets jusqu'à leur destination.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans le modèle OSI, le routage des paquets entre réseaux relève de la couche :",
+      "o": [
+        "physique",
+        "liaison de données",
+        "réseau",
+        "transport"
+      ],
+      "r": 2,
+      "x": "La couche réseau, troisième du modèle OSI, gère l'adressage IP et le choix du chemin des paquets. La couche transport assure la fiabilité de bout en bout, notamment avec TCP. Les couches 1 et 2 concernent le support et les adresses MAC, la couche 3 les adresses IP et les routeurs, et la couche 4 les ports et les protocoles TCP et UDP.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'équipement qui relie des réseaux différents et choisit le chemin des paquets est :",
+      "o": [
+        "le répéteur",
+        "le concentrateur",
+        "le commutateur",
+        "le routeur"
+      ],
+      "r": 3,
+      "x": "Le routeur oriente les paquets d'un réseau à un autre, par exemple du réseau local vers Internet. Le commutateur relie les appareils à l'intérieur d'un même réseau local. La box fournie par un opérateur réunit généralement plusieurs fonctions : modem, routeur, point d'accès Wi-Fi et petit commutateur pour brancher quelques appareils par câble.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le commutateur (switch) se distingue du concentrateur (hub) parce qu'il :",
+      "o": [
+        "envoie les données uniquement au port destinataire",
+        "diffuse les données vers tous les ports",
+        "relie le réseau local à Internet",
+        "attribue les adresses IP automatiquement"
+      ],
+      "r": 0,
+      "x": "Le switch identifie l'adresse MAC du destinataire et ne transmet les données qu'à lui. Le hub, moins efficace, diffuse chaque trame vers tous ses ports. Le commutateur apprend quelle adresse MAC se trouve derrière chacun de ses ports, ce qui réduit les collisions et améliore les performances du réseau par rapport au concentrateur, aujourd'hui presque abandonné.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le mot « modem » est la contraction de :",
+      "o": [
+        "moteur-démarreur",
+        "modulateur-démodulateur",
+        "module-mémoire",
+        "mode-émetteur"
+      ],
+      "r": 1,
+      "x": "Le modem module le signal numérique pour la ligne de transmission et le démodule à l'arrivée. Il assure ainsi le lien entre l'ordinateur et le réseau de l'opérateur. Calcul : les anciens modems téléphoniques plafonnaient à 56 kbit/s, alors qu'une connexion par fibre peut atteindre 1 Gbit/s, soit 1 000 000 ÷ 56 ≈ 17 857 fois plus rapide.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La topologie réseau dans laquelle tous les postes sont reliés à un équipement central est la topologie :",
+      "o": [
+        "en bus",
+        "en anneau",
+        "en étoile",
+        "maillée"
+      ],
+      "r": 2,
+      "x": "Dans la topologie en étoile, chaque poste est relié à un switch ou un hub central. En topologie en bus, tous les postes partagent un même câble. Son principal avantage est qu'une panne de câble n'affecte qu'un seul poste, mais si l'équipement central tombe en panne, c'est tout le réseau qui est paralysé.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Les réseaux sans fil Wi-Fi reposent sur la famille de normes :",
+      "o": [
+        "IEEE 802.3",
+        "IEEE 802.5",
+        "IEEE 802.11",
+        "IEEE 802.15"
+      ],
+      "r": 2,
+      "x": "Le Wi-Fi correspond aux normes IEEE 802.11 (a, b, g, n, ac, ax). La norme 802.3 encadre l'Ethernet filaire. Le Wi-Fi utilise surtout les bandes de 2,4 GHz, de plus longue portée, et de 5 GHz, plus rapide mais moins efficace à travers les murs ; le Wi-Fi 6 correspond à la norme 802.11ax.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le connecteur utilisé sur les câbles réseau Ethernet à paires torsadées est le :",
+      "o": [
+        "RJ45",
+        "RJ11",
+        "HDMI",
+        "VGA"
+      ],
+      "r": 0,
+      "x": "Le connecteur RJ45 à 8 contacts équipe les câbles Ethernet. Le RJ11, plus petit, sert aux lignes téléphoniques. Un câble Ethernet de catégorie 6 permet couramment un débit de 1 Gbit/s, et la longueur maximale recommandée d'un câble à paires torsadées est de 100 mètres entre deux équipements.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La fibre optique transmet les données sous forme de :",
+      "o": [
+        "impulsions électriques",
+        "signaux lumineux",
+        "ondes sonores",
+        "champs magnétiques"
+      ],
+      "r": 1,
+      "x": "La fibre optique guide la lumière dans un fil de verre ou de plastique, ce qui permet de très hauts débits sur de longues distances. Le câble en cuivre transporte, lui, des impulsions électriques. La fibre est insensible aux perturbations électromagnétiques et transporte les données sur des dizaines de kilomètres sans amplification, ce qui en fait le support privilégié des liaisons entre villes et pays.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "À un débit constant de 8 Mbit/s, le téléchargement d'un fichier de 10 Mo dure environ :",
+      "o": [
+        "1,25 seconde",
+        "8 secondes",
+        "10 secondes",
+        "80 secondes"
+      ],
+      "r": 2,
+      "x": "8 Mbit/s équivalent à 1 Mo/s puisqu'un octet vaut 8 bits, donc 10 Mo se téléchargent en 10 secondes. Le résultat de 80 secondes confond les mégabits et les mégaoctets. Calcul détaillé : 10 Mo = 10 x 8 = 80 Mbit, puis durée = 80 Mbit ÷ 8 Mbit/s = 10 secondes ; la proposition 1,25 seconde résulte de l'erreur inverse, qui divise 10 par 8.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans l'adresse https://www.exemple.bf, la partie « .bf » correspond :",
+      "o": [
+        "au protocole de communication",
+        "au domaine de premier niveau national",
+        "au nom du serveur web",
+        "au chemin d'accès du fichier"
+      ],
+      "r": 1,
+      "x": "« .bf » est le domaine national de premier niveau attribué au Burkina Faso. La partie « https » désigne le protocole et « www » le serveur web. Les domaines comme .com, .org ou .net sont génériques, tandis que .bf, .ci ou .sn sont nationaux, et « exemple » représente ici le nom choisi par le propriétaire du site.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Parmi ces logiciels, celui qui est un navigateur web est :",
+      "o": [
+        "Mozilla Firefox",
+        "Microsoft Excel",
+        "VLC media player",
+        "WinRAR"
+      ],
+      "r": 0,
+      "x": "Firefox, comme Chrome ou Edge, permet de consulter les pages web. VLC est un lecteur multimédia et WinRAR un logiciel de compression. Il ne faut pas confondre le navigateur, qui affiche les pages, et le moteur de recherche, comme Google ou Bing, qui est un site web permettant de trouver des pages à partir de mots-clés.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le langage HTML est :",
+      "o": [
+        "un langage de programmation compilé",
+        "un protocole de transfert de fichiers",
+        "un langage de balisage des pages web",
+        "un système de gestion de bases de données"
+      ],
+      "r": 2,
+      "x": "HTML (HyperText Markup Language) décrit la structure d'une page web à l'aide de balises. Il est complété par CSS pour la présentation et JavaScript pour l'interactivité. Une page HTML contient une partie <head> pour les informations générales et une partie <body> pour le contenu visible, comme les titres <h1> et les paragraphes <p>.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le langage CSS sert principalement à :",
+      "o": [
+        "gérer une base de données",
+        "programmer un serveur",
+        "créer des liens hypertextes",
+        "définir la mise en forme des pages web"
+      ],
+      "r": 3,
+      "x": "CSS définit couleurs, polices, marges et mise en page des pages web. Les liens hypertextes sont créés en HTML avec la balise a. Le sigle CSS signifie Cascading Style Sheets, ou feuilles de style en cascade, et un seul fichier CSS peut définir l'apparence de toutes les pages d'un site, ce qui facilite les modifications.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans une adresse électronique, le symbole @ sépare :",
+      "o": [
+        "le nom d'utilisateur et le nom de domaine",
+        "le protocole et le nom du serveur",
+        "le prénom et le nom de famille",
+        "l'expéditeur et le destinataire"
+      ],
+      "r": 0,
+      "x": "Dans issa@exemple.bf, « issa » est l'utilisateur et « exemple.bf » le domaine de la messagerie. Ce symbole a été introduit en 1971 par l'ingénieur Ray Tomlinson. Une adresse électronique ne contient ni espace ni accent, et le symbole @, appelé arobase, s'obtient sur un clavier AZERTY avec la combinaison Alt Gr + à.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Dans un courrier électronique, le champ « Cci » permet :",
+      "o": [
+        "d'envoyer une copie visible par tous",
+        "d'envoyer une copie cachée aux autres destinataires",
+        "de chiffrer le contenu du message",
+        "de programmer l'envoi du message"
+      ],
+      "r": 1,
+      "x": "Les adresses placées en Cci (copie carbone invisible) ne sont pas vues par les autres destinataires. Les adresses en Cc sont, elles, visibles par tous. Ce champ est recommandé pour envoyer un même message à de nombreux candidats, car il protège la confidentialité de leurs adresses et évite que chacun réponde à tous.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'escroquerie qui consiste à imiter un organisme de confiance pour soutirer des identifiants s'appelle :",
+      "o": [
+        "le spam",
+        "le déni de service",
+        "l'hameçonnage",
+        "le cheval de Troie"
+      ],
+      "r": 2,
+      "x": "L'hameçonnage, ou phishing, utilise de faux messages ou de faux sites imitant une banque ou un opérateur. Le spam désigne les messages publicitaires non sollicités envoyés en masse. Les signes d'alerte sont une adresse d'expéditeur suspecte, des fautes d'orthographe, un ton urgent et un lien vers un site imitant le vrai, sachant qu'aucun organisme sérieux ne demande un mot de passe par message.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le logiciel malveillant qui chiffre les fichiers d'une victime et exige un paiement s'appelle :",
+      "o": [
+        "un ver",
+        "un logiciel espion",
+        "un logiciel publicitaire",
+        "un rançongiciel"
+      ],
+      "r": 3,
+      "x": "Le rançongiciel, ou ransomware, bloque les données jusqu'au paiement d'une rançon. WannaCry a ainsi touché plus de 200 000 ordinateurs dans environ 150 pays en mai 2017. La meilleure protection reste une sauvegarde régulière conservée hors de l'ordinateur, car payer la rançon ne garantit pas la récupération des fichiers et encourage les criminels.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le programme malveillant capable de se propager seul de machine en machine par le réseau est :",
+      "o": [
+        "un ver",
+        "un cookie",
+        "un cheval de Troie",
+        "un pilote"
+      ],
+      "r": 0,
+      "x": "Le ver se reproduit et se diffuse automatiquement via les réseaux, sans intervention de l'utilisateur. Le cheval de Troie a besoin d'être installé par la victime, trompée par son apparence. Les vers exploitent souvent une faille de sécurité non corrigée, ce qui montre l'importance d'installer rapidement les mises à jour du système d'exploitation.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le logiciel malveillant qui se présente comme un programme légitime pour s'installer s'appelle :",
+      "o": [
+        "un ver",
+        "un cheval de Troie",
+        "un pare-feu",
+        "un spam"
+      ],
+      "r": 1,
+      "x": "Le cheval de Troie se cache dans un logiciel apparemment utile pour ouvrir un accès à l'attaquant. Le pare-feu est au contraire un outil de protection. Son nom vient du récit de la guerre de Troie, où les Grecs se cachèrent dans un grand cheval de bois offert aux Troyens pour pénétrer dans la ville, image d'un piège dissimulé dans un cadeau.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le dispositif qui filtre les connexions entrantes et sortantes d'un réseau est :",
+      "o": [
+        "l'antivirus",
+        "le serveur DNS",
+        "le pare-feu",
+        "le modem"
+      ],
+      "r": 2,
+      "x": "Le pare-feu, ou firewall, autorise ou bloque les communications selon des règles définies. L'antivirus, lui, détecte et supprime les fichiers malveillants. Windows intègre un pare-feu activé par défaut et la box Internet en possède également un, pare-feu et antivirus étant complémentaires et ne se remplaçant pas l'un l'autre.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Parmi ces mots de passe, le plus robuste est :",
+      "o": [
+        "12345678",
+        "burkina2026",
+        "Ouaga1960",
+        "T7#qL!9vZ2@m"
+      ],
+      "r": 3,
+      "x": "Un mot de passe robuste est long et mélange majuscules, minuscules, chiffres et symboles, sans mot du dictionnaire. Les noms de villes suivis d'une date se devinent facilement. Calcul : avec 94 caractères possibles par position, 12 caractères offrent 94 puissance 12 ≈ 4,8 x 10 puissance 23 combinaisons, contre seulement 10 puissance 8 = 100 millions pour 8 chiffres.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'authentification à deux facteurs consiste à :",
+      "o": [
+        "combiner deux preuves de nature différente",
+        "saisir deux fois le même mot de passe",
+        "utiliser deux comptes sur un même site",
+        "changer de mot de passe tous les deux jours"
+      ],
+      "r": 0,
+      "x": "Elle associe par exemple un mot de passe (ce que l'on sait) et un code reçu par SMS (ce que l'on possède). Même si le mot de passe est volé, l'accès reste bloqué sans le second facteur. Le troisième type de facteur est ce que l'on est, comme l'empreinte digitale ou la reconnaissance faciale, et il est fortement recommandé d'activer cette protection sur sa messagerie et ses réseaux sociaux.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le cadenas affiché devant l'adresse d'un site web indique :",
+      "o": [
+        "que le site est officiel",
+        "que la connexion est chiffrée",
+        "que le site est sans virus",
+        "que le site est gratuit"
+      ],
+      "r": 1,
+      "x": "Le cadenas signale une connexion HTTPS chiffrée entre le navigateur et le serveur. Il ne garantit pas que le site soit honnête : un site d'hameçonnage peut aussi l'afficher. Avant de saisir des informations sensibles, il faut donc aussi vérifier l'orthographe exacte de l'adresse du site, car les escrocs utilisent des noms très proches de ceux des sites officiels.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un cookie, en navigation web, est :",
+      "o": [
+        "un programme malveillant caché",
+        "un logiciel de navigation sécurisée",
+        "un petit fichier déposé par un site",
+        "une extension de messagerie"
+      ],
+      "r": 2,
+      "x": "Le cookie est un petit fichier texte que le site enregistre sur le terminal pour mémoriser des préférences ou une session. Il n'est pas en lui-même un programme malveillant. Les cookies tiers, déposés par des régies publicitaires, suivent la navigation pour afficher des publicités ciblées, c'est pourquoi de nombreux sites demandent le consentement de l'internaute.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La quatrième génération de téléphonie mobile (4G) repose principalement sur la norme :",
+      "o": [
+        "GSM",
+        "UMTS",
+        "EDGE",
+        "LTE"
+      ],
+      "r": 3,
+      "x": "La 4G s'appuie sur la norme LTE (Long Term Evolution) et offre le haut débit mobile. Le GSM correspond à la 2G et l'UMTS à la 3G. Le débit théorique de la 4G peut atteindre plusieurs centaines de mégabits par seconde, contre quelques mégabits pour la 3G, ce qui permet la visioconférence et la vidéo en haute définition sur mobile.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La norme GSM correspond à la génération de téléphonie mobile :",
+      "o": [
+        "2G",
+        "3G",
+        "4G",
+        "5G"
+      ],
+      "r": 0,
+      "x": "Le GSM est la norme de la 2G, la première génération numérique, qui a introduit les SMS. La 3G s'appuie sur l'UMTS et la 4G sur le LTE. Le sigle GSM signifie Global System for Mobile Communications, et cette norme assure encore les appels et les SMS dans les zones mal couvertes par la 3G et la 4G.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La technologie sans fil de courte portée utilisée pour relier un casque à un téléphone est :",
+      "o": [
+        "le Wi-Fi",
+        "le Bluetooth",
+        "la 4G",
+        "le GPS"
+      ],
+      "r": 1,
+      "x": "Le Bluetooth relie des appareils proches, sur une dizaine de mètres environ, avec une faible consommation. Le GPS sert uniquement à la localisation par satellites. Le nom Bluetooth vient d'un roi danois du Xe siècle, Harald à la dent bleue, qui avait unifié plusieurs tribus, symbole d'une technologie qui unifie la communication entre appareils.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Un réseau privé d'entreprise utilisant les technologies d'Internet et réservé aux employés s'appelle :",
+      "o": [
+        "un extranet",
+        "l'Internet",
+        "un intranet",
+        "le darknet"
+      ],
+      "r": 2,
+      "x": "L'intranet est accessible aux seuls membres de l'organisation. L'extranet ouvre une partie de ce réseau à des partenaires extérieurs autorisés. Un intranet peut héberger l'annuaire du personnel, les notes de service ou les formulaires administratifs, et n'est généralement accessible que depuis les locaux ou par une connexion sécurisée.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Une entreprise qui commercialise l'accès à Internet auprès des abonnés est appelée :",
+      "o": [
+        "un hébergeur web",
+        "un registraire de domaines",
+        "un éditeur de logiciels",
+        "un fournisseur d'accès à Internet"
+      ],
+      "r": 3,
+      "x": "Le fournisseur d'accès à Internet (FAI) relie ses abonnés au réseau mondial. L'hébergeur, lui, stocke les sites web sur ses serveurs. Au Burkina Faso, les opérateurs de téléphonie mobile jouent aussi le rôle de fournisseurs d'accès, à travers les forfaits de données mobiles et les offres de connexion à domicile.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La commande ping permet de :",
+      "o": [
+        "tester la connectivité avec un autre hôte",
+        "afficher le contenu d'un dossier",
+        "télécharger un fichier depuis un serveur",
+        "changer l'adresse IP de l'ordinateur"
+      ],
+      "r": 0,
+      "x": "Ping envoie des messages ICMP à une machine et mesure le temps de réponse. L'absence de réponse signale un problème de connexion ou un filtrage. On l'utilise dans l'invite de commandes en tapant par exemple ping 8.8.8.8 ; un temps de réponse de quelques dizaines de millisecondes indique une bonne connexion.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'organisme qui coordonne à l'échelle mondiale les noms de domaine et les adresses IP, créé en 1998, est :",
+      "o": [
+        "l'UIT",
+        "l'ICANN",
+        "le W3C",
+        "l'IETF"
+      ],
+      "r": 1,
+      "x": "L'ICANN, fondée en 1998 en Californie, coordonne le système des noms de domaine et l'attribution des adresses IP. L'UIT est l'agence des Nations unies pour les télécommunications. Le sigle ICANN signifie Internet Corporation for Assigned Names and Numbers, et l'organisme délègue la gestion de chaque domaine national, comme .bf, à une autorité du pays concerné.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'organisme qui élabore les standards du Web comme HTML et CSS, fondé en 1994 par Tim Berners-Lee, est :",
+      "o": [
+        "l'ICANN",
+        "l'ISO",
+        "le W3C",
+        "l'IEEE"
+      ],
+      "r": 2,
+      "x": "Le W3C (World Wide Web Consortium) publie les recommandations techniques du Web depuis 1994. L'IEEE élabore notamment les normes Ethernet et Wi-Fi. Le W3C veille à ce que les pages web s'affichent correctement dans tous les navigateurs et restent accessibles aux personnes handicapées, garantissant un Web ouvert et compatible.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le modèle de cloud dans lequel l'utilisateur utilise un logiciel en ligne sans l'installer, comme Gmail, est :",
+      "o": [
+        "l'IaaS",
+        "le PaaS",
+        "le DaaS",
+        "le SaaS"
+      ],
+      "r": 3,
+      "x": "Le SaaS (Software as a Service) fournit une application prête à l'emploi via le navigateur. L'IaaS fournit seulement l'infrastructure : serveurs, stockage et réseau. Le PaaS fournit une plateforme pour développer et héberger ses propres applications sans gérer les serveurs, ces trois modèles se distinguant par la part de gestion technique laissée à l'utilisateur.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le décret rattachant l'Agence nationale de sécurité des systèmes d'information (ANSSI) au Premier ministère a été adopté en Conseil des ministres le :",
+      "o": [
+        "11 novembre 2013",
+        "7 février 2014",
+        "28 mai 2015",
+        "9 juillet 2024"
+      ],
+      "r": 2,
+      "x": "Le Conseil des ministres du 28 mai 2015 a rattaché l'ANSSI au Premier ministère pour renforcer son autorité et sa neutralité. L'agence avait été créée par le décret n°2013-1053 du 11 novembre 2013. Ce rattachement à la Primature permet à l'ANSSI d'adresser ses recommandations de sécurité à l'ensemble des ministères, plutôt qu'à un seul département ministériel.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le projet de loi portant sécurité des systèmes d'information au Burkina Faso a été adopté en Conseil des ministres le :",
+      "o": [
+        "28 mai 2015",
+        "30 mars 2021",
+        "9 juillet 2023",
+        "22 novembre 2023"
+      ],
+      "r": 3,
+      "x": "Le gouvernement a adopté ce projet de loi en Conseil des ministres le 22 novembre 2023. Le texte a ensuite été voté à l'unanimité par l'Assemblée législative de Transition le 9 juillet 2024. Cette loi fixe un cadre de protection des systèmes d'information de l'administration et des opérateurs, et impose notamment la conservation des métadonnées de connexion et de trafic pendant trois ans.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La première loi burkinabè portant protection des données à caractère personnel, la loi n°010-2004/AN, date du :",
+      "o": [
+        "20 avril 2004",
+        "18 mai 2007",
+        "27 novembre 2008",
+        "10 novembre 2009"
+      ],
+      "r": 0,
+      "x": "La loi n°010-2004/AN du 20 avril 2004 a créé la Commission de l'informatique et des libertés (CIL). Le 18 mai 2007 correspond au décret organisant le fonctionnement de cette commission. Cette loi de 2004 a fait du Burkina Faso l'un des premiers pays d'Afrique de l'Ouest dotés d'un cadre de protection des données personnelles, six ans avant l'Acte additionnel de la CEDEAO de 2010.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La Commission de l'informatique et des libertés (CIL) du Burkina Faso, créée en 2004, est devenue fonctionnelle en :",
+      "o": [
+        "avril 2004",
+        "décembre 2007",
+        "novembre 2008",
+        "mars 2021"
+      ],
+      "r": 1,
+      "x": "La CIL est fonctionnelle depuis décembre 2007, faisant du Burkina Faso le premier pays francophone d'Afrique subsaharienne doté d'une autorité de protection des données opérationnelle. Avril 2004 correspond seulement à sa création par la loi. Calcul : entre la loi d'avril 2004 et le démarrage effectif en décembre 2007, plus de trois ans et demi se sont écoulés, délai nécessaire au décret d'organisation du 18 mai 2007 et à la nomination des membres.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La loi n°001-2021/AN portant protection des personnes à l'égard du traitement des données à caractère personnel a été adoptée le :",
+      "o": [
+        "10 novembre 2009",
+        "31 mai 2018",
+        "30 mars 2021",
+        "9 juillet 2024"
+      ],
+      "r": 2,
+      "x": "Cette loi, adoptée le 30 mars 2021, a abrogé et remplacé la loi n°010-2004/AN. Le 31 mai 2018 est la date de la loi n°025-2018/AN portant Code pénal. La nouvelle loi élargit les définitions, consacre de nouveaux droits au profit des personnes concernées et relève les amendes, avec des obligations de déclaration, par exemple pour les caméras de surveillance.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La loi n°061-2008/AN portant réglementation générale des réseaux et services de communications électroniques au Burkina Faso date du :",
+      "o": [
+        "20 avril 2004",
+        "29 décembre 2006",
+        "18 mai 2007",
+        "27 novembre 2008"
+      ],
+      "r": 3,
+      "x": "La loi n°061-2008/AN du 27 novembre 2008 encadre le secteur des communications électroniques et a institué l'ARCEP. Elle a été modifiée notamment par la loi n°009-2019/AN. Ses articles servent de base aux mises en demeure prononcées par l'ARCEP, par exemple en 2019 contre plusieurs opérateurs de téléphonie pour insuffisance de qualité de service.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Au Burkina Faso, le sigle ARCEP désigne l'Autorité de régulation :",
+      "o": [
+        "des communications électroniques et des postes",
+        "des contenus et de l'édition publique",
+        "des centres d'échanges et de paiement",
+        "de la cybersécurité et des échanges privés"
+      ],
+      "r": 0,
+      "x": "L'Autorité de régulation des communications électroniques et des postes a été créée en novembre 2008. Elle régule notamment les opérateurs de téléphonie, les activités postales et la diffusion de la TNT. Son organe délibérant est le Conseil de régulation, qui prend les décisions de l'autorité, notamment les mises en demeure et les sanctions contre les opérateurs ne respectant pas leurs cahiers des charges.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Au Burkina Faso, la réglementation de la gestion du nom de domaine national « .bf » relève de :",
+      "o": [
+        "l'ANSSI",
+        "l'ARCEP",
+        "l'ANPTIC",
+        "la CIL"
+      ],
+      "r": 1,
+      "x": "L'ARCEP a parmi ses compétences la réglementation de la gestion des noms de domaine, notamment le « .bf ». L'ANSSI est chargée de la sécurité des systèmes d'information et la CIL de la protection des données. L'ARCEP exerce aussi d'autres missions liées au numérique, comme l'accréditation et le contrôle des prestataires de services de confiance, qui délivrent par exemple les certificats de signature électronique.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La loi n°045-2009/AN du 10 novembre 2009 réglemente au Burkina Faso :",
+      "o": [
+        "les réseaux de communications électroniques",
+        "la protection des données personnelles",
+        "les services et les transactions électroniques",
+        "la sécurité des systèmes d'information"
+      ],
+      "r": 2,
+      "x": "La loi n°045-2009/AN encadre le commerce électronique, la signature électronique et les procédures administratives dématérialisées. Les réseaux de communications électroniques relèvent, eux, de la loi n°061-2008/AN. Elle reconnaît notamment à l'écrit électronique une valeur juridique comparable à celle de l'écrit papier, à condition de pouvoir identifier son auteur et de garantir son intégrité.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La privatisation de l'Office national des télécommunications (ONATEL) a été conclue le :",
+      "o": [
+        "31 décembre 2003",
+        "12 juin 2004",
+        "31 décembre 2005",
+        "29 décembre 2006"
+      ],
+      "r": 3,
+      "x": "L'ONATEL a été privatisée le 29 décembre 2006 au profit de Maroc Telecom. Le 31 décembre 2005 marque la fin de son monopole sur la téléphonie fixe. Calcul : la fin du monopole sur la téléphonie fixe, le 31 décembre 2005, a précédé d'un an presque jour pour jour la privatisation du 29 décembre 2006, qui a ouvert le capital à un partenaire étranger.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Lors de la privatisation de l'ONATEL en décembre 2006, Maroc Telecom a acquis une part du capital de :",
+      "o": [
+        "51 %",
+        "61 %",
+        "75 %",
+        "100 %"
+      ],
+      "r": 0,
+      "x": "Maroc Telecom a acquis 51 % de l'ensemble ONATEL-Telmob pour environ 220 millions d'euros. Sa participation a été portée à 61 % en avril 2018. Calcul : la participation de Maroc Telecom est passée de 51 % à 61 % en avril 2018, soit 10 points de plus, acquis sur la BRVM au cours de 8 000 FCFA par action.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Maroc Telecom a porté sa participation dans le capital de l'ONATEL à 61 % le :",
+      "o": [
+        "29 avril 2009",
+        "17 avril 2018",
+        "1er janvier 2021",
+        "8 juin 2023"
+      ],
+      "r": 1,
+      "x": "Le 17 avril 2018, Maroc Telecom a acquis 10 % supplémentaires sur la BRVM, pour environ 41 millions d'euros. Le 29 avril 2009 correspond à l'introduction de l'ONATEL en bourse. Calcul : 41 millions d'euros pour 10 % valorisent l'entreprise à environ 410 millions d'euros, contre une valorisation implicite d'environ 220 ÷ 0,51 ≈ 431 millions d'euros en 2006.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'ONATEL a lancé sa nouvelle marque commerciale Moov Africa Burkina le :",
+      "o": [
+        "29 décembre 2006",
+        "17 avril 2018",
+        "1er janvier 2021",
+        "8 juin 2023"
+      ],
+      "r": 2,
+      "x": "Depuis le 1er janvier 2021, toutes les activités de l'ONATEL sont commercialisées sous la marque Moov Africa Burkina. Le 29 décembre 2006 est la date de sa privatisation. Cette marque a été adoptée par l'ensemble des filiales africaines de Maroc Telecom, mais la dénomination juridique de la société burkinabè reste ONATEL SA, toujours cotée à la BRVM.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'ONATEL a été introduite à la Bourse régionale des valeurs mobilières (BRVM) d'Abidjan le :",
+      "o": [
+        "29 décembre 2006",
+        "10 novembre 2007",
+        "7 janvier 2008",
+        "29 avril 2009"
+      ],
+      "r": 3,
+      "x": "L'introduction en bourse du 29 avril 2009 a permis à l'État burkinabè de céder 20 % du capital au public. La privatisation au profit de Maroc Telecom datait du 29 décembre 2006. La Bourse régionale des valeurs mobilières est commune aux huit États de l'UEMOA, dont le Burkina Faso, et son siège se trouve à Abidjan, en Côte d'Ivoire.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'opérateur Orange Burkina Faso est né en 2016 du rachat de l'opérateur :",
+      "o": [
+        "Airtel",
+        "Telecel Faso",
+        "Telmob",
+        "Moov"
+      ],
+      "r": 0,
+      "x": "Orange a racheté Airtel Burkina en juin 2016, opérateur successivement appelé Celtel puis Zain. Telmob était la filiale mobile de l'ONATEL. Celtel avait été racheté par le groupe Zain en 2005 puis cédé à Bharti Airtel en 2010, et c'est Airtel qui avait introduit la 3G au Burkina Faso en 2013.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Internet a été inauguré à Ouagadougou en décembre 1996 à l'occasion :",
+      "o": [
+        "du FESPACO de 1995",
+        "du sommet France-Afrique",
+        "du SIAO de 1996",
+        "de la CAN de 1998"
+      ],
+      "r": 1,
+      "x": "Internet a été inauguré en décembre 1996 lors du sommet France-Afrique tenu à Ouagadougou, en même temps que le premier réseau de téléphonie mobile de l'ONATEL. Le FESPACO et le SIAO sont des événements culturels et économiques, sans lien avec ce lancement. Il s'agissait du 19e sommet France-Afrique, et la bande passante internationale disponible restait très faible au départ, puisqu'elle n'atteignait que 128 kbit/s en 1998.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Au Burkina Faso, Internet a été ouvert au grand public en :",
+      "o": [
+        "décembre 1995",
+        "juin 1996",
+        "mars 1997",
+        "janvier 1999"
+      ],
+      "r": 2,
+      "x": "Après son inauguration officielle en décembre 1996, Internet a été ouvert au grand public en mars 1997, à la suite d'un atelier national sur les NTIC. L'opérateur historique ONATEL en assurait l'accès. Calcul : trois mois seulement séparent l'inauguration de décembre 1996 et l'ouverture au public de mars 1997, période durant laquelle seuls quelques services officiels, comme le FESPACO, étaient connectés.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La télévision numérique terrestre (TNT) a été officiellement lancée au Burkina Faso le :",
+      "o": [
+        "17 juin 2015",
+        "28 décembre 2016",
+        "30 juin 2017",
+        "28 décembre 2017"
+      ],
+      "r": 3,
+      "x": "La TNT a été lancée à Ouagadougou le 28 décembre 2017. Le 17 juin 2015 était la date butoir fixée par l'UIT, que le pays n'avait pas pu respecter faute de financement. Calcul : le lancement est intervenu environ deux ans et demi après la date butoir de juin 2015, et les décodeurs nécessaires à la réception ont été plafonnés à 10 000 FCFA.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Au Burkina Faso, le signal de télévision analogique a été définitivement coupé le :",
+      "o": [
+        "1er novembre 2019",
+        "31 décembre 2019",
+        "30 juin 2020",
+        "1er janvier 2021"
+      ],
+      "r": 0,
+      "x": "Le signal analogique a été coupé le 1er novembre 2019, près de deux ans après le lancement de la TNT. Le pays a ainsi achevé sa transition vers la télévision numérique. Calcul : entre le lancement du 28 décembre 2017 et la coupure du 1er novembre 2019, il s'est écoulé environ 22 mois, alors que l'extinction était initialement annoncée six mois après le lancement.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le coût total de la migration du Burkina Faso vers la TNT a été estimé à :",
+      "o": [
+        "25 milliards de FCFA",
+        "45 milliards de FCFA",
+        "60 milliards de FCFA",
+        "80 milliards de FCFA"
+      ],
+      "r": 1,
+      "x": "La migration vers la TNT a mobilisé environ 45 milliards de FCFA. Le prix maximal du décodeur a été fixé à 10 000 FCFA. Ce passage libère des fréquences, appelées dividende numérique, qui peuvent être réutilisées pour d'autres services comme l'Internet mobile à haut débit.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'Université virtuelle du Burkina Faso (UV-BF) a été créée en :",
+      "o": [
+        "2014",
+        "2017",
+        "2019",
+        "2022"
+      ],
+      "r": 2,
+      "x": "L'UV-BF a été créée en 2019, son érection en établissement public scientifique, culturel et technique ayant été adoptée en Conseil des ministres le 10 juillet 2019. Son centre de données dédié à l'éducation a été lancé en 2022. Elle vise à désengorger les universités classiques et à résorber le chevauchement des années académiques grâce à la formation à distance, avec des programmes en sciences du numérique, fondamentales et transversales.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le premier Espace numérique ouvert (ENO) de l'Université virtuelle du Burkina Faso a été inauguré à Ouagadougou le :",
+      "o": [
+        "10 juillet 2019",
+        "28 mai 2020",
+        "20 septembre 2022",
+        "18 août 2023"
+      ],
+      "r": 3,
+      "x": "L'ENO de Karpala a été inauguré le 18 août 2023 par le Premier ministre. Le 20 septembre 2022 correspond au lancement du centre de données de l'UV-BF. Cet espace, situé à Karpala, devait accueillir 10 000 étudiants supplémentaires avec l'ouverture des filières de droit, de lettres modernes et de sciences économiques et de gestion.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'Agence nationale de promotion des technologies de l'information et de la communication (ANPTIC) a été créée en :",
+      "o": [
+        "2014",
+        "2016",
+        "2019",
+        "2021"
+      ],
+      "r": 0,
+      "x": "L'ANPTIC, créée en 2014, est l'autorité nationale chargée de réaliser les grands programmes TIC, dont le réseau informatique de l'administration. L'ANSSI avait, elle, été créée en 2013. Elle gère notamment le Réseau informatique national de l'administration (RESINA), qui relie les bâtiments administratifs, et héberge des centres de données publics, dont celui de l'Université virtuelle.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'Acte additionnel de la Communauté économique des États de l'Afrique de l'Ouest (CEDEAO) relatif à la protection des données à caractère personnel a été adopté le :",
+      "o": [
+        "19 janvier 2007",
+        "16 février 2010",
+        "19 août 2011",
+        "27 juin 2014"
+      ],
+      "r": 1,
+      "x": "L'Acte additionnel A/SA.1/01/10 a été adopté à Abuja le 16 février 2010, le même jour que l'Acte additionnel sur les transactions électroniques. Le 19 août 2011 est la date de la directive sur la cybercriminalité. Cet acte invite chaque État membre à se doter d'une loi et d'une autorité indépendante de protection des données, une obligation que le Burkina Faso remplissait déjà avec la CIL.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La directive de la Communauté économique des États de l'Afrique de l'Ouest (CEDEAO) portant lutte contre la cybercriminalité a été adoptée le :",
+      "o": [
+        "19 janvier 2007",
+        "16 février 2010",
+        "19 août 2011",
+        "27 juin 2014"
+      ],
+      "r": 2,
+      "x": "La directive C/DIR/1/08/11 du 19 août 2011 adapte le droit pénal des États membres à la cybercriminalité. Le 27 juin 2014 correspond à l'adoption de la Convention de Malabo par l'Union africaine. Calcul : cette directive intervient 18 mois après les actes additionnels de février 2010 et près de trois ans avant la Convention de Malabo de l'Union africaine, adoptée en juin 2014.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La Convention de l'Union africaine (UA) sur la cybersécurité et la protection des données à caractère personnel, dite Convention de Malabo, a été adoptée le :",
+      "o": [
+        "16 février 2010",
+        "19 août 2011",
+        "31 octobre 2013",
+        "27 juin 2014"
+      ],
+      "r": 3,
+      "x": "La Convention de Malabo a été adoptée le 27 juin 2014 lors du sommet de l'UA en Guinée équatoriale. Le 16 février 2010 correspond à l'Acte additionnel de la CEDEAO sur les données personnelles. Elle regroupe dans un même texte trois domaines, les transactions électroniques, la protection des données personnelles et la lutte contre la cybercriminalité, d'où son importance pour l'harmonisation des lois africaines.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La Convention de Malabo de l'Union africaine (UA) sur la cybersécurité est entrée en vigueur le :",
+      "o": [
+        "8 juin 2023",
+        "27 juin 2024",
+        "1er janvier 2025",
+        "27 juin 2025"
+      ],
+      "r": 0,
+      "x": "La convention est entrée en vigueur le 8 juin 2023, trente jours après le dépôt de la quinzième ratification par la Mauritanie le 9 mai 2023. Elle avait été adoptée près de neuf ans plus tôt, en 2014. Calcul : entre l'adoption du 27 juin 2014 et l'entrée en vigueur du 8 juin 2023, il s'est écoulé 8 ans, 11 mois et 12 jours, un délai long dû à la lenteur des ratifications.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'entrée en vigueur de la Convention de Malabo exigeait un nombre de ratifications égal à :",
+      "o": [
+        "10",
+        "15",
+        "27",
+        "55"
+      ],
+      "r": 1,
+      "x": "Quinze ratifications étaient nécessaires, seuil atteint avec celle de la Mauritanie en mai 2023. Le nombre 55 correspond aux États membres de l'Union africaine. Calcul : 15 ratifications sur 55 États membres représentent 15 ÷ 55 ≈ 27 % des pays de l'Union africaine, ce qui montre qu'une minorité d'États suffisait pour rendre la convention applicable.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le Manifeste Smart Africa, signé par le Burkina Faso en octobre 2013, a été adopté lors du sommet Transform Africa tenu à :",
+      "o": [
+        "Addis-Abeba",
+        "Malabo",
+        "Kigali",
+        "Abuja"
+      ],
+      "r": 2,
+      "x": "Le sommet Transform Africa s'est tenu à Kigali, au Rwanda, du 28 au 31 octobre 2013. Le Manifeste a ensuite été endossé par tous les chefs d'État de l'UA à Addis-Abeba en janvier 2014. Le Rwanda a fait du numérique un axe majeur de son développement, et Kigali accueille le siège de l'alliance Smart Africa ainsi que plusieurs éditions suivantes du sommet Transform Africa.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le Manifeste Smart Africa a été adopté en octobre 2013 par un nombre de chefs d'État égal à :",
+      "o": [
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      "r": 3,
+      "x": "Sept chefs d'État l'ont adopté : Rwanda, Kenya, Ouganda, Soudan du Sud, Mali, Gabon et Burkina Faso. L'alliance Smart Africa regroupe aujourd'hui plus de 30 pays africains. Calcul : partie de 7 pays signataires en 2013, l'alliance a plus que quadruplé pour dépasser 30 pays membres, représentant plus de 800 millions d'habitants.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La Pascaline, machine à calculer mécanique de Blaise Pascal, a été inventée en :",
+      "o": [
+        "1642",
+        "1694",
+        "1801",
+        "1834"
+      ],
+      "r": 0,
+      "x": "Blaise Pascal a conçu la Pascaline en 1642 pour aider son père, collecteur d'impôts. L'année 1834 correspond au projet de machine analytique de Charles Babbage. Calcul : Pascal, né en 1623, avait 1642 - 1623 = 19 ans lorsqu'il a conçu cette machine, qui effectuait des additions et des soustractions à l'aide de roues dentées.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La personne considérée comme la première programmeuse de l'histoire, pour ses notes de 1843 sur la machine analytique, est :",
+      "o": [
+        "Grace Hopper",
+        "Ada Lovelace",
+        "Marie Curie",
+        "Hedy Lamarr"
+      ],
+      "r": 1,
+      "x": "Ada Lovelace a rédigé en 1843 le premier algorithme destiné à la machine analytique de Charles Babbage. Grace Hopper a, plus tard, conçu l'un des premiers compilateurs. Fille du poète Lord Byron, Ada Lovelace avait compris que la machine pourrait traiter autre chose que des nombres, comme la musique, et le langage de programmation Ada porte son nom.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'ENIAC, l'un des premiers ordinateurs électroniques, a été présenté au public en :",
+      "o": [
+        "1946",
+        "1949",
+        "1951",
+        "1953"
+      ],
+      "r": 0,
+      "x": "L'ENIAC a été dévoilé en février 1946 à l'université de Pennsylvanie, aux États-Unis. Il pesait environ 30 tonnes et utilisait près de 18 000 tubes à vide. Calcul : avec environ 18 000 tubes pour 30 tonnes, chaque tonne correspondait à 18 000 ÷ 30 = 600 tubes, et la machine occupait une salle de plus de 160 mètres carrés.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le transistor, composant de base de l'électronique moderne, a été inventé aux laboratoires Bell en :",
+      "o": [
+        "1937",
+        "1947",
+        "1958",
+        "1971"
+      ],
+      "r": 1,
+      "x": "Le transistor a été mis au point en décembre 1947 par Bardeen, Brattain et Shockley. L'année 1958 correspond à l'invention du circuit intégré par Jack Kilby. Les trois inventeurs ont reçu le prix Nobel de physique en 1956, et le transistor a remplacé les tubes à vide, beaucoup plus gros, plus fragiles et plus gourmands en énergie.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le premier microprocesseur commercialisé, l'Intel 4004, est sorti en :",
+      "o": [
+        "1958",
+        "1965",
+        "1969",
+        "1971"
+      ],
+      "r": 3,
+      "x": "Intel a commercialisé le 4004 en 1971, réunissant toute l'unité centrale sur une seule puce. L'année 1965 correspond à la formulation de la loi de Moore. Le 4004 comptait environ 2 300 transistors, alors que les processeurs actuels en contiennent plusieurs dizaines de milliards, ce qui illustre concrètement la loi de Moore.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "ARPANET, réseau précurseur d'Internet, a été mis en service aux États-Unis en :",
+      "o": [
+        "1969",
+        "1973",
+        "1983",
+        "1991"
+      ],
+      "r": 0,
+      "x": "ARPANET a relié ses premiers ordinateurs en 1969, sous l'égide du ministère américain de la Défense. Il a adopté le protocole TCP/IP en 1983. Calcul : entre la mise en service d'ARPANET en 1969 et l'arrivée d'Internet au Burkina Faso en 1996, il s'est écoulé 1996 - 1969 = 27 ans, et 14 ans séparent son lancement de l'adoption de TCP/IP.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le réseau ARPANET a basculé définitivement vers le protocole TCP/IP le :",
+      "o": [
+        "1er janvier 1975",
+        "1er janvier 1983",
+        "1er janvier 1990",
+        "30 avril 1993"
+      ],
+      "r": 1,
+      "x": "Le 1er janvier 1983, ARPANET a adopté TCP/IP, date souvent retenue comme la naissance d'Internet. Le 30 avril 1993, le CERN a placé le Web dans le domaine public. Les protocoles TCP et IP avaient été conçus par Vinton Cerf et Robert Kahn, souvent appelés les « pères d'Internet », qui en avaient publié la description en 1974.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le noyau du système d'exploitation Linux a été créé en 1991 par :",
+      "o": [
+        "Richard Stallman",
+        "Steve Jobs",
+        "Linus Torvalds",
+        "Bill Gates"
+      ],
+      "r": 2,
+      "x": "L'étudiant finlandais Linus Torvalds a publié le noyau Linux en 1991. Richard Stallman avait lancé en 1983 le projet GNU de logiciels libres. Linux est un logiciel libre et gratuit qui fait fonctionner la grande majorité des serveurs web du monde, ainsi que tous les smartphones Android, qui reposent sur son noyau.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La société Microsoft a été fondée par Bill Gates et Paul Allen en :",
+      "o": [
+        "1968",
+        "1970",
+        "1972",
+        "1975"
+      ],
+      "r": 3,
+      "x": "Microsoft a été fondée en avril 1975 à Albuquerque, aux États-Unis. Apple a été créée un an plus tard, en 1976. Calcul : Microsoft est née 1985 - 1975 = 10 ans avant Windows 1.0, et son premier grand succès fut le système MS-DOS, fourni avec l'ordinateur IBM PC lancé en 1981.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La société Apple a été fondée en 1976 par Steve Jobs, Steve Wozniak et :",
+      "o": [
+        "Ronald Wayne",
+        "Paul Allen",
+        "Larry Page",
+        "Gordon Moore"
+      ],
+      "r": 0,
+      "x": "Ronald Wayne a cofondé Apple en avril 1976 avant de revendre rapidement ses parts. Paul Allen est le cofondateur de Microsoft et Larry Page celui de Google. Ronald Wayne a revendu ses 10 % de parts pour seulement 800 dollars quelques jours après la création de la société, une part qui vaudrait aujourd'hui des centaines de milliards de dollars.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le moteur de recherche Google a été fondé en 1998 par Larry Page et :",
+      "o": [
+        "Mark Zuckerberg",
+        "Sergey Brin",
+        "Jeff Bezos",
+        "Elon Musk"
+      ],
+      "r": 1,
+      "x": "Larry Page et Sergey Brin ont fondé Google en septembre 1998 en Californie. Mark Zuckerberg est le fondateur de Facebook et Jeff Bezos celui d'Amazon. Le nom Google vient du mot « googol », qui désigne le nombre 10 puissance 100, c'est-à-dire 1 suivi de cent zéros, pour évoquer l'immense quantité d'informations à organiser.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le réseau social Facebook a été lancé par Mark Zuckerberg en :",
+      "o": [
+        "2002",
+        "2004",
+        "2005",
+        "2006"
+      ],
+      "r": 1,
+      "x": "Facebook a été lancé le 4 février 2004, d'abord pour les étudiants de l'université Harvard. L'année 2006 correspond au lancement de Twitter. Calcul : Facebook est né 2004 - 1998 = 6 ans après Google et 2 ans avant Twitter, et sa société mère s'appelle Meta depuis 2021.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'encyclopédie collaborative en ligne Wikipédia a été lancée le :",
+      "o": [
+        "15 janvier 1998",
+        "15 janvier 1999",
+        "15 janvier 2000",
+        "15 janvier 2001"
+      ],
+      "r": 3,
+      "x": "Wikipédia a été lancée le 15 janvier 2001 par Jimmy Wales et Larry Sanger. Elle est rédigée bénévolement par ses utilisateurs dans plusieurs centaines de langues. Le nom combine le mot hawaïen « wiki », qui signifie rapide, et la fin du mot encyclopédie, et la version francophone a été créée quelques mois plus tard, en mai 2001.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La plateforme de partage de vidéos YouTube a été créée en :",
+      "o": [
+        "2005",
+        "2006",
+        "2008",
+        "2010"
+      ],
+      "r": 0,
+      "x": "YouTube a été créée en 2005 par trois anciens employés de PayPal. Elle a été rachetée par Google dès 2006. Calcul : Google a racheté YouTube environ 1,65 milliard de dollars en 2006, un an seulement après sa création, et la toute première vidéo, « Me at the zoo », date d'avril 2005.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le premier iPhone d'Apple a été présenté en :",
+      "o": [
+        "2004",
+        "2007",
+        "2008",
+        "2010"
+      ],
+      "r": 1,
+      "x": "Steve Jobs a présenté le premier iPhone le 9 janvier 2007. Le premier smartphone fonctionnant sous Android est sorti en 2008. Le premier iPhone a été commercialisé aux États-Unis en juin 2007, et il a popularisé l'écran tactile multipoint qui remplaçait le clavier physique des téléphones de l'époque.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "L'ingénieur Ray Tomlinson a envoyé le premier courrier électronique utilisant le symbole @ en :",
+      "o": [
+        "1965",
+        "1969",
+        "1971",
+        "1983"
+      ],
+      "r": 2,
+      "x": "Ray Tomlinson a introduit le symbole @ dans les adresses électroniques en 1971, sur le réseau ARPANET. L'année 1969 correspond à la mise en service d'ARPANET. Calcul : ce premier courriel intervient 1971 - 1969 = 2 ans après la mise en service d'ARPANET, et Tomlinson a choisi ce symbole parce qu'il n'apparaissait dans aucun nom de personne.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le mot « informatique », contraction d'information et automatique, a été créé par Philippe Dreyfus en :",
+      "o": [
+        "1946",
+        "1955",
+        "1958",
+        "1962"
+      ],
+      "r": 3,
+      "x": "Philippe Dreyfus a forgé le terme informatique en 1962. L'Académie française l'a officiellement adopté en 1967. Calcul : le mot est créé 1962 - 1946 = 16 ans après la présentation de l'ENIAC, et l'anglais emploie plutôt les termes « computer science » ou « information technology ».",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le modèle théorique de calcul appelé « machine de Turing » a été décrit par Alan Turing en :",
+      "o": [
+        "1936",
+        "1945",
+        "1950",
+        "1954"
+      ],
+      "r": 0,
+      "x": "Alan Turing a décrit sa machine abstraite dans un article de 1936, base théorique de l'informatique. L'année 1950 correspond à son article proposant le test de Turing. Alan Turing a aussi contribué de façon décisive au déchiffrement de la machine allemande Enigma pendant la Seconde Guerre mondiale, et le prix Turing est considéré comme le « Nobel de l'informatique ».",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La loi de Moore, formulée en 1965 par Gordon Moore, prévoit le doublement régulier :",
+      "o": [
+        "de la vitesse d'Internet",
+        "du nombre de transistors sur une puce",
+        "du prix des ordinateurs",
+        "du nombre d'internautes"
+      ],
+      "r": 1,
+      "x": "Gordon Moore, futur cofondateur d'Intel, a prédit le doublement régulier du nombre de transistors par puce. Il a révisé ce rythme en 1975 à un doublement tous les deux ans. Calcul : un doublement tous les deux ans pendant 20 ans représente 10 doublements, soit 2 puissance 10 = 1 024, donc environ mille fois plus de transistors sur une puce.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "Le Centre européen pour la recherche nucléaire (CERN) a placé la technologie du World Wide Web dans le domaine public le :",
+      "o": [
+        "12 mars 1989",
+        "6 août 1991",
+        "30 avril 1993",
+        "4 septembre 1998"
+      ],
+      "r": 2,
+      "x": "Le 30 avril 1993, le CERN a rendu le Web libre d'utilisation pour tous, ce qui a favorisé son expansion mondiale. Le 12 mars 1989 correspond à la proposition initiale de Tim Berners-Lee. Calcul : 1993 - 1989 = 4 ans séparent la proposition de la mise dans le domaine public, et le premier site web de l'histoire, info.cern.ch, est toujours consultable aujourd'hui.",
+      "_batchId": "informatique/2026-10-21/SERIE1"
+    },
+    {
+      "q": "La fonction Excel qui compte les cellules non vides d'une plage est :",
+      "o": [
+        "NBVAL",
+        "NB",
+        "NB.VIDE",
+        "NB.SI"
+      ],
+      "r": 0,
+      "x": "NBVAL compte toutes les cellules non vides, qu'elles contiennent du texte ou des nombres. NB ne compte que les cellules contenant des nombres. Exemple : si une colonne contient les noms de 120 candidats inscrits en A2:A121, la formule =NBVAL(A2:A121) renvoie 120, ce qui donne instantanément le nombre de lignes remplies d'une liste.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La fonction Excel qui compte les cellules vides d'une plage est :",
+      "o": [
+        "NBVAL",
+        "NB.VIDE",
+        "NB",
+        "ESTVIDE"
+      ],
+      "r": 1,
+      "x": "NB.VIDE renvoie le nombre de cellules vides d'une plage. ESTVIDE teste une seule cellule et renvoie VRAI ou FAUX. Exemple : si 7 candidats sur 100 n'ont pas encore de note saisie dans la plage C2:C101, la formule =NB.VIDE(C2:C101) renvoie 7, ce qui aide à repérer les oublis de saisie.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, si A1:A5 contient 5, 12, 8, 20 et 15, la formule =SOMME.SI(A1:A5;\">10\") renvoie :",
+      "o": [
+        "28",
+        "35",
+        "47",
+        "60"
+      ],
+      "r": 2,
+      "x": "Seules les valeurs supérieures à 10 sont additionnées : 12 + 20 + 15 = 47. Le total 60 correspond à la somme de toutes les cellules. Détail : on teste chaque valeur, 5 non, 12 oui, 8 non, 20 oui, 15 oui ; la proposition 35 oublie la valeur 12, et 28 additionne à tort 8 et 20 en omettant 12 et 15.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, si A1:A5 contient 3, « Ouaga », 7, une cellule vide et 9, la formule =NB(A1:A5) renvoie :",
+      "o": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "r": 3,
+      "x": "NB ne compte que les cellules numériques, soit 3, 7 et 9. NBVAL, qui compte aussi le texte, renverrait 4. Détail : la cellule vide et le texte « Ouaga » sont ignorés, il reste donc trois cellules numériques ; la proposition 2 oublie une valeur et 0 laisserait croire que NB ne compte rien en présence de texte.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la formule =MIN(8;3;15;6) renvoie :",
+      "o": [
+        "3",
+        "6",
+        "8",
+        "15"
+      ],
+      "r": 0,
+      "x": "MIN renvoie la plus petite valeur de la liste, soit 3. La valeur 15 serait renvoyée par la fonction MAX. Exemple : dans une liste de notes, =MIN(B2:B50) donne la plus faible et =MAX(B2:B50) la meilleure, et la différence entre les deux, appelée étendue, mesure l'écart entre les candidats.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la formule =ENT(7,8) renvoie :",
+      "o": [
+        "6",
+        "7",
+        "7,8",
+        "8"
+      ],
+      "r": 1,
+      "x": "ENT renvoie la partie entière d'un nombre positif, soit 7. La formule =ARRONDI(7,8;0) donnerait, elle, 8. Attention aux nombres négatifs : ENT arrondit toujours vers l'entier inférieur, donc ENT(-7,8) renvoie -8, tandis que la fonction TRONQUE supprime simplement les décimales et renverrait -7.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la formule =MOD(17;5) renvoie :",
+      "o": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "r": 2,
+      "x": "MOD renvoie le reste de la division entière : 17 = 3 x 5 + 2. Le quotient entier, 3, ne correspond pas au résultat de MOD. Méthode : on cherche le plus grand multiple de 5 inférieur ou égal à 17, soit 15, puis on calcule 17 - 15 = 2 ; MOD sert par exemple à tester si un nombre est pair avec =MOD(A1;2)=0.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la formule =ABS(-12) renvoie :",
+      "o": [
+        "-12",
+        "0",
+        "1,2",
+        "12"
+      ],
+      "r": 3,
+      "x": "ABS renvoie la valeur absolue d'un nombre, c'est-à-dire sa valeur sans le signe. Ainsi ABS(-12) et ABS(12) donnent tous deux 12. Exemple d'usage : pour calculer l'écart entre une note obtenue et la moyenne sans tenir compte du sens, on écrit =ABS(B2-C2), qui donne toujours un résultat positif.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la formule =NBCAR(\"Burkina\") renvoie :",
+      "o": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "r": 0,
+      "x": "NBCAR compte les caractères d'un texte : B-u-r-k-i-n-a en compte 7. Les espaces éventuels seraient également comptés. Exemple : =NBCAR(\"Burkina Faso\") renvoie 12, car l'espace compte comme un caractère, soit 7 lettres pour Burkina, 1 espace et 4 lettres pour Faso.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la formule =GAUCHE(\"Ouagadougou\";4) renvoie :",
+      "o": [
+        "Ouaga",
+        "Ouag",
+        "ougo",
+        "dougou"
+      ],
+      "r": 1,
+      "x": "GAUCHE extrait le nombre de caractères demandé en partant de la gauche, soit « Ouag ». La formule =DROITE(\"Ouagadougou\";6) renverrait « dougou ». Méthode : on compte depuis la gauche, O-u-a-g, et l'on s'arrête au quatrième caractère ; la proposition « Ouaga » en contient 5 et correspondrait à =GAUCHE(\"Ouagadougou\";5).",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la formule =DROITE(\"Koudougou\";4) renvoie :",
+      "o": [
+        "Koud",
+        "doug",
+        "ugou",
+        "dougou"
+      ],
+      "r": 2,
+      "x": "DROITE extrait les 4 derniers caractères du texte, soit « ugou ». La formule =GAUCHE(\"Koudougou\";4) renverrait « Koud ». Méthode : on prend les quatre derniers caractères du mot, ce qui donne « ugou » ; la proposition « doug » est située au milieu du mot et s'extrairait avec =STXT(\"Koudougou\";4;4).",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la formule =MAJUSCULE(\"bobo\") renvoie :",
+      "o": [
+        "bobo",
+        "Bobo",
+        "bOBO",
+        "BOBO"
+      ],
+      "r": 3,
+      "x": "MAJUSCULE convertit tout le texte en capitales. La fonction NOMPROPRE ne met en majuscule que la première lettre et donnerait « Bobo ». La fonction inverse, MINUSCULE, convertit tout en minuscules, et ces fonctions servent à harmoniser une liste de noms saisis de façon irrégulière avant un tri ou un publipostage.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la formule =ET(5>3;2>4) renvoie :",
+      "o": [
+        "FAUX",
+        "VRAI",
+        "0",
+        "#N/A"
+      ],
+      "r": 0,
+      "x": "ET renvoie VRAI seulement si toutes les conditions sont vraies, or 2>4 est faux. La fonction OU, qui exige une seule condition vraie, renverrait VRAI. Détail : 5>3 est VRAI et 2>4 est FAUX, or VRAI ET FAUX donne FAUX ; on combine souvent ET dans un SI pour exiger plusieurs conditions, comme une moyenne d'au moins 10 et aucune note éliminatoire.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la formule =OU(5<3;2<4) renvoie :",
+      "o": [
+        "FAUX",
+        "VRAI",
+        "1",
+        "#N/A"
+      ],
+      "r": 1,
+      "x": "OU renvoie VRAI dès qu'au moins une condition est vraie, ici 2<4. La fonction ET renverrait FAUX puisque 5<3 est faux. Détail : 5<3 est FAUX et 2<4 est VRAI, or FAUX OU VRAI donne VRAI ; la fonction OU sert par exemple à accepter un candidat titulaire soit d'une licence, soit d'un diplôme équivalent.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la fonction =AUJOURDHUI() renvoie :",
+      "o": [
+        "l'heure actuelle seule",
+        "la date et l'heure actuelles",
+        "la date du jour",
+        "le jour de la semaine"
+      ],
+      "r": 2,
+      "x": "AUJOURDHUI() affiche la date du jour, mise à jour à chaque ouverture du classeur. La fonction MAINTENANT() renvoie à la fois la date et l'heure. Exemple de calcul : =AUJOURDHUI()-B2, où B2 contient une date de dépôt, donne le nombre de jours écoulés, car Excel enregistre les dates sous forme de nombres de jours.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la fonction =MAINTENANT() renvoie :",
+      "o": [
+        "la date seule",
+        "l'heure seule",
+        "l'année en cours",
+        "la date et l'heure actuelles"
+      ],
+      "r": 3,
+      "x": "MAINTENANT() renvoie la date et l'heure de l'instant du calcul. AUJOURDHUI() ne renvoie que la date. Exemple : pour obtenir l'âge en années à partir d'une date de naissance en B2, on utilise =DATEDIF(B2;AUJOURDHUI();\"Y\"), utile pour vérifier une limite d'âge aux concours.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'outil Excel qui synthétise une longue liste en regroupant et totalisant les données par catégorie est :",
+      "o": [
+        "le tableau croisé dynamique",
+        "la validation des données",
+        "le gestionnaire de noms",
+        "la valeur cible"
+      ],
+      "r": 0,
+      "x": "Le tableau croisé dynamique résume par exemple des milliers de lignes de ventes par région et par mois en quelques clics. La valeur cible, elle, recherche la donnée d'entrée nécessaire pour atteindre un résultat. Il ne modifie pas les données sources, se réorganise par simple glisser-déposer des champs en lignes, colonnes et valeurs, et s'actualise lorsque les données changent.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La fonctionnalité Excel qui limite la saisie dans une cellule, par exemple à une liste déroulante, est :",
+      "o": [
+        "la mise en forme conditionnelle",
+        "la validation des données",
+        "le filtre automatique",
+        "la protection de la feuille"
+      ],
+      "r": 1,
+      "x": "La validation des données n'autorise que certaines valeurs, comme une liste de régions ou des nombres compris entre 0 et 20. La mise en forme conditionnelle change seulement l'apparence des cellules. Elle peut aussi afficher un message d'erreur personnalisé, par exemple « La note doit être comprise entre 0 et 20 », lorsqu'un utilisateur tente de saisir une valeur non autorisée.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Pour garder la ligne d'en-tête visible lors du défilement d'une longue liste, on utilise dans Excel la commande :",
+      "o": [
+        "Masquer la ligne",
+        "Grouper les lignes",
+        "Figer les volets",
+        "Protéger la feuille"
+      ],
+      "r": 2,
+      "x": "Figer les volets maintient visibles les lignes ou colonnes choisies pendant le défilement. Masquer une ligne la rend au contraire invisible. Cette commande se trouve dans l'onglet Affichage, et l'option Figer la ligne supérieure suffit pour garder visibles les titres de colonnes d'un tableau de plusieurs centaines de lignes.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La fonctionnalité Excel qui colore automatiquement en rouge les notes inférieures à 10 est :",
+      "o": [
+        "la validation des données",
+        "le filtre automatique",
+        "le tri personnalisé",
+        "la mise en forme conditionnelle"
+      ],
+      "r": 3,
+      "x": "La mise en forme conditionnelle applique une couleur ou un style selon la valeur de la cellule. Le filtre automatique masque les lignes qui ne répondent pas à un critère. La règle s'adapte automatiquement : si une note passe de 8 à 12 après correction, la couleur rouge disparaît sans intervention, contrairement à une couleur appliquée à la main.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Pour n'afficher que les candidats d'une région donnée dans une liste Excel, on utilise :",
+      "o": [
+        "le filtre automatique",
+        "la fusion de cellules",
+        "le volet Navigation",
+        "la valeur cible"
+      ],
+      "r": 0,
+      "x": "Le filtre automatique masque temporairement les lignes qui ne correspondent pas au critère choisi. Les données masquées réapparaissent dès que le filtre est retiré. On l'active par l'onglet Données ou avec le raccourci Ctrl+Maj+L, et une flèche apparaît alors dans chaque cellule d'en-tête pour choisir les valeurs à afficher.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans un tableur, trier une colonne de texte de A à Z correspond à un tri :",
+      "o": [
+        "décroissant",
+        "croissant",
+        "personnalisé",
+        "aléatoire"
+      ],
+      "r": 1,
+      "x": "Le tri de A à Z, comme du plus petit au plus grand, est un tri croissant. Le tri de Z à A est décroissant. Pour les dates, le tri croissant va de la plus ancienne à la plus récente, et il faut sélectionner tout le tableau avant de trier pour ne pas mélanger les informations d'une même ligne.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la référence à la cellule B2 de la feuille nommée Notes s'écrit :",
+      "o": [
+        "Notes:B2",
+        "Notes/B2",
+        "Notes!B2",
+        "Notes$B2"
+      ],
+      "r": 2,
+      "x": "Le point d'exclamation sépare le nom de la feuille de la référence de la cellule. Les deux-points servent, eux, à définir une plage comme A1:B5. Si le nom de la feuille contient un espace, il faut l'entourer d'apostrophes, comme ='Notes finales'!B2, et l'on peut viser un autre classeur en indiquant son nom entre crochets.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la plage A1:B3 contient un nombre de cellules égal à :",
+      "o": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "r": 3,
+      "x": "La plage couvre 2 colonnes (A et B) sur 3 lignes, soit 2 x 3 = 6 cellules. Le nombre 3 ne correspond qu'au nombre de lignes. Méthode générale : nombre de cellules = colonnes x lignes ; ici les colonnes vont de A à B (2) et les lignes de 1 à 3 (3), d'où 2 x 3 = 6, la proposition 4 correspondant à la plage A1:B2.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la plage C2:E6 contient un nombre de cellules égal à :",
+      "o": [
+        "15",
+        "18",
+        "20",
+        "24"
+      ],
+      "r": 0,
+      "x": "La plage compte 3 colonnes (C, D, E) et 5 lignes (2 à 6), soit 3 x 5 = 15 cellules. Le résultat 20 provient d'une erreur sur le nombre de colonnes. Détail : pour les lignes, on calcule 6 - 2 + 1 = 5, et les colonnes C, D, E en donnent 3 ; l'erreur classique consiste à faire 6 - 2 = 4 lignes, ce qui donnerait 3 x 4 = 12 cellules.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la formule =A1*2 placée en B1 et recopiée vers le bas devient en B2 :",
+      "o": [
+        "=A1*2",
+        "=A2*2",
+        "=B1*2",
+        "=B2*2"
+      ],
+      "r": 1,
+      "x": "La référence relative A1 se décale d'une ligne lors de la recopie et devient A2. Seule une référence absolue $A$1 resterait inchangée. Si la formule était recopiée vers la droite au lieu du bas, la référence A1 deviendrait B1, car une référence relative se décale toujours dans le sens de la recopie.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la formule =$A$1*B1 placée en C1 et recopiée vers le bas devient en C2 :",
+      "o": [
+        "=$A$1*B1",
+        "=$A$2*B2",
+        "=$A$1*B2",
+        "=$A$2*B1"
+      ],
+      "r": 2,
+      "x": "La référence absolue $A$1 reste fixe tandis que la référence relative B1 devient B2. Cette technique sert par exemple à appliquer un même taux à toute une colonne. Exemple : si A1 contient un taux de 18 % et B1, B2, B3 des prix, la colonne C calcule la TVA de chaque prix en utilisant toujours le même taux, sans retaper la formule.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la combinaison Ctrl+; (point-virgule) insère dans la cellule active :",
+      "o": [
+        "l'heure actuelle",
+        "une nouvelle formule",
+        "un commentaire",
+        "la date du jour"
+      ],
+      "r": 3,
+      "x": "Ctrl+; inscrit la date du jour sous forme de valeur fixe, qui ne changera plus. La fonction AUJOURDHUI(), elle, se met à jour à chaque ouverture. On l'utilise par exemple pour dater une ligne dans un registre de courrier, car la date ainsi saisie ne changera pas lors des ouvertures suivantes du fichier.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la combinaison Alt+= insère :",
+      "o": [
+        "une somme automatique",
+        "une nouvelle feuille",
+        "un graphique",
+        "un filtre automatique"
+      ],
+      "r": 0,
+      "x": "Alt+= insère la fonction SOMME et propose automatiquement la plage à additionner. C'est l'équivalent du bouton Somme automatique du ruban. Si Excel propose une plage incorrecte, il suffit de sélectionner la bonne plage à la souris avant de valider avec Entrée, ce qui corrige la formule proposée.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la touche F11 permet de :",
+      "o": [
+        "imprimer la feuille active",
+        "créer un graphique sur une nouvelle feuille",
+        "renommer la feuille active",
+        "masquer la colonne sélectionnée"
+      ],
+      "r": 1,
+      "x": "F11 crée instantanément un graphique à partir des données sélectionnées, sur une feuille de graphique distincte. Alt+F1 crée le graphique dans la feuille active. Le graphique créé est par défaut un histogramme, que l'on peut ensuite transformer en courbe ou en secteurs avec la commande Modifier le type de graphique.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, le raccourci Ctrl+1 permet de :",
+      "o": [
+        "insérer une ligne",
+        "masquer une ligne",
+        "ouvrir la boîte Format de cellule",
+        "revenir à la cellule A1"
+      ],
+      "r": 2,
+      "x": "Ctrl+1 ouvre la boîte de dialogue Format de cellule : nombre, alignement, police, bordures. Le retour en A1 s'obtient avec Ctrl+Origine. On y choisit par exemple les formats Monétaire, Pourcentage ou Date, qui modifient seulement l'affichage sans changer la valeur réelle utilisée dans les calculs.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, la combinaison Ctrl+Origine place le curseur :",
+      "o": [
+        "en fin de ligne",
+        "dans la dernière cellule utilisée",
+        "sur la feuille suivante",
+        "dans la cellule A1"
+      ],
+      "r": 3,
+      "x": "Ctrl+Origine ramène directement à la cellule A1. Ctrl+Fin conduit à la dernière cellule utilisée de la feuille. Les combinaisons Ctrl + flèches permettent aussi d'atteindre la dernière cellule remplie d'une ligne ou d'une colonne, très utile dans un tableau de plusieurs milliers de lignes.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Word, la table des matières automatique est générée à partir :",
+      "o": [
+        "des styles de titre",
+        "des notes de bas de page",
+        "des commentaires",
+        "des sauts de section"
+      ],
+      "r": 0,
+      "x": "Word repère les paragraphes mis en forme avec les styles Titre 1, Titre 2 et suivants pour construire la table des matières. Elle se met à jour en un clic après modification du document. Elle s'insère par l'onglet Références, et chaque entrée devient un lien cliquable vers la partie concernée, ce qui est très apprécié dans un rapport ou un mémoire.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Word, le texte placé en bas de page et appelé par un numéro dans le corps du texte est :",
+      "o": [
+        "un en-tête",
+        "une note de bas de page",
+        "un commentaire",
+        "une légende"
+      ],
+      "r": 1,
+      "x": "La note de bas de page apporte une précision ou une source, signalée par un numéro d'appel. L'en-tête est la zone répétée en haut de chaque page. Elle s'insère par la commande Insérer une note de bas de page de l'onglet Références, et Word renumérote automatiquement les notes lorsqu'on en ajoute ou en supprime une.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Word, l'espace vertical entre les lignes d'un même paragraphe s'appelle :",
+      "o": [
+        "le retrait",
+        "la marge",
+        "l'interligne",
+        "la tabulation"
+      ],
+      "r": 2,
+      "x": "L'interligne se règle en simple, 1,5 ou double par exemple. La marge est l'espace blanc entre le texte et le bord de la feuille. Calcul : un interligne double occupe deux fois la hauteur d'un interligne simple, si bien qu'un texte d'une page en interligne simple s'étend sur environ deux pages en interligne double.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Word, le décalage de la première ligne d'un paragraphe vers la droite s'appelle :",
+      "o": [
+        "la marge",
+        "l'interligne",
+        "la puce",
+        "le retrait de première ligne"
+      ],
+      "r": 3,
+      "x": "Le retrait de première ligne, ou alinéa, décale le début du paragraphe vers l'intérieur. La marge concerne, elle, l'ensemble de la page. Il se règle avec le petit triangle supérieur de la règle ou dans la boîte Paragraphe, et il est préférable aux espaces multiples, qui produisent des alignements irréguliers.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Pour placer une page en mode Paysage au milieu d'un document Word en mode Portrait, il faut insérer :",
+      "o": [
+        "des sauts de section",
+        "des sauts de ligne",
+        "des sauts de colonne",
+        "des tabulations"
+      ],
+      "r": 0,
+      "x": "Les sauts de section permettent d'appliquer une orientation, des marges ou un en-tête différents à une partie du document. Un saut de ligne ne fait que passer à la ligne suivante. Les sauts de section servent aussi à numéroter différemment l'introduction et le corps d'un mémoire, ou à passer d'une à deux colonnes sur une même page.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Word, l'outil représenté par un pinceau qui copie la mise en forme d'un texte vers un autre est :",
+      "o": [
+        "Effacer la mise en forme",
+        "Reproduire la mise en forme",
+        "Surligner le texte",
+        "Appliquer un style rapide"
+      ],
+      "r": 1,
+      "x": "Reproduire la mise en forme copie police, taille et couleur d'une sélection pour les appliquer ailleurs. Un double-clic sur le pinceau permet de l'appliquer plusieurs fois de suite. Le raccourci Ctrl+Maj+C copie la mise en forme et Ctrl+Maj+V l'applique, ce qui produit le même effet que le pinceau sans utiliser la souris.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Word, le raccourci Ctrl+K permet de :",
+      "o": [
+        "insérer un tableau",
+        "supprimer un mot",
+        "insérer un lien hypertexte",
+        "imprimer le document"
+      ],
+      "r": 2,
+      "x": "Ctrl+K ouvre la boîte de dialogue d'insertion d'un lien hypertexte vers une page web ou un fichier. L'impression se lance avec Ctrl+P. Pour suivre un lien dans un document Word, il faut généralement maintenir Ctrl enfoncée en cliquant dessus, et un clic droit sur le lien permet de le modifier ou de le supprimer.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Word, le raccourci Ctrl+H ouvre la fonction :",
+      "o": [
+        "Masquer le texte",
+        "Mettre en gras",
+        "Aller en haut de page",
+        "Rechercher et remplacer"
+      ],
+      "r": 3,
+      "x": "Ctrl+H ouvre la boîte Rechercher et remplacer, utile pour corriger un mot dans tout le document. Le gras s'obtient avec Ctrl+G dans la version française. Le bouton Remplacer tout corrige toutes les occurrences en une fois : remplacer « Haute-Volta » par « Burkina Faso » dans un long document se fait ainsi en quelques secondes.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Word, le raccourci Ctrl+N permet de :",
+      "o": [
+        "créer un nouveau document",
+        "numéroter les pages",
+        "insérer une note",
+        "changer la police"
+      ],
+      "r": 0,
+      "x": "Ctrl+N ouvre un nouveau document vierge. L'ouverture d'un document existant s'obtient avec Ctrl+O. Dans les navigateurs web, Ctrl+N ouvre une nouvelle fenêtre et Ctrl+T un nouvel onglet, ce qui montre que de nombreux raccourcis sont communs à plusieurs logiciels.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Word, la combinaison Maj+F3 permet de :",
+      "o": [
+        "insérer la date du jour",
+        "changer la casse du texte",
+        "ouvrir la galerie des styles",
+        "lancer l'aperçu avant impression"
+      ],
+      "r": 1,
+      "x": "Maj+F3 fait alterner le texte sélectionné entre minuscules, majuscules et majuscule initiale. C'est utile pour corriger un texte saisi par erreur en majuscules. Elle agit sur le mot où se trouve le curseur ou sur toute une sélection, et chaque nouvel appui passe au format suivant jusqu'à revenir à l'état initial.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Word, la taille des caractères s'exprime en :",
+      "o": [
+        "pixels",
+        "centimètres",
+        "points",
+        "pouces"
+      ],
+      "r": 2,
+      "x": "La taille de police se mesure en points typographiques, un point valant 1/72 de pouce. Une police de 12 points correspond à un corps de 12 points, soit 12 ÷ 72 = 1/6 de pouce, c'est-à-dire 2,54 ÷ 6 ≈ 0,42 cm. Cette valeur désigne la hauteur nominale du corps, et non la hauteur visible des caractères. Elle correspond à la taille courante d'un texte de courrier administratif.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le pouce, unité utilisée pour mesurer les écrans et certaines marges, vaut :",
+      "o": [
+        "1,27 cm",
+        "2 cm",
+        "2,4 cm",
+        "2,54 cm"
+      ],
+      "r": 3,
+      "x": "Un pouce mesure exactement 2,54 cm. Un écran de 15,6 pouces a donc une diagonale d'environ 39,6 cm. Calcul : 15,6 x 2,54 = 39,624 cm, arrondi à 39,6 cm ; inversement, pour convertir des centimètres en pouces, on divise par 2,54, ainsi 61 cm ÷ 2,54 ≈ 24 pouces.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le format de papier A4, utilisé pour la plupart des documents administratifs, mesure :",
+      "o": [
+        "21 x 29,7 cm",
+        "21,6 x 27,9 cm",
+        "29,7 x 42 cm",
+        "42 x 59,4 cm"
+      ],
+      "r": 0,
+      "x": "Le format A4 mesure 21 x 29,7 cm, et le A3 en est le double (29,7 x 42 cm). Le format 21,6 x 27,9 cm correspond au format Lettre nord-américain. Calcul : une feuille A4 mesure 21 x 29,7 = 623,7 cm², soit 1/16 de mètre carré, car le format A0 mesure 1 m² et chaque format suivant est la moitié du précédent.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans PowerPoint, l'effet visuel appliqué au passage d'une diapositive à la suivante s'appelle :",
+      "o": [
+        "une animation",
+        "une transition",
+        "un masque",
+        "un thème"
+      ],
+      "r": 1,
+      "x": "La transition s'applique au changement de diapositive. L'animation, elle, concerne l'apparition ou le déplacement d'un objet à l'intérieur d'une diapositive. Il est recommandé d'utiliser des transitions sobres et identiques pour toute la présentation, car des effets trop nombreux distraient le jury et donnent une impression peu professionnelle.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans PowerPoint, l'élément qui définit la mise en forme commune à toutes les diapositives est :",
+      "o": [
+        "le mode Trieuse",
+        "la zone de notes",
+        "le masque des diapositives",
+        "la transition"
+      ],
+      "r": 2,
+      "x": "Le masque des diapositives fixe le logo, les polices et les couleurs appliqués à l'ensemble de la présentation. Le mode Trieuse sert à réorganiser l'ordre des diapositives. On y accède par l'onglet Affichage, et toute modification du masque, comme l'ajout du logo d'une institution, s'applique aussitôt à toutes les diapositives qui en dépendent.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Pendant un diaporama PowerPoint, la touche Échap permet de :",
+      "o": [
+        "passer à la diapositive suivante",
+        "revenir à la première diapositive",
+        "mettre la vidéo en pause",
+        "quitter le diaporama"
+      ],
+      "r": 3,
+      "x": "Échap interrompt la projection et revient au mode d'édition. La flèche droite ou la barre d'espace font passer à la diapositive suivante. Pendant la projection, la touche Origine ramène à la première diapositive et la touche Fin conduit directement à la dernière, ce qui facilite les réponses aux questions du jury.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans PowerPoint, le raccourci Ctrl+M permet de :",
+      "o": [
+        "insérer une nouvelle diapositive",
+        "masquer la diapositive",
+        "modifier le thème",
+        "lancer le mode plan"
+      ],
+      "r": 0,
+      "x": "Ctrl+M ajoute une nouvelle diapositive juste après la diapositive active. Le diaporama se lance avec la touche F5. On choisit ensuite sa disposition, comme Titre et contenu ou Deux contenus, avec la commande Disposition de l'onglet Accueil, pour organiser le texte et les images.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans Excel, un classeur contenant des macros doit être enregistré avec l'extension :",
+      "o": [
+        ".xlsx",
+        ".xlsm",
+        ".xltx",
+        ".csv"
+      ],
+      "r": 1,
+      "x": "L'extension .xlsm conserve les macros VBA, que le format .xlsx supprime. L'extension .xltx désigne un modèle de classeur. Une macro est une suite d'actions enregistrée pour être répétée automatiquement, et il faut se méfier des fichiers .xlsm reçus d'inconnus, car les macros peuvent contenir du code malveillant.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le système de numération octal utilise les chiffres :",
+      "o": [
+        "0 et 1",
+        "0 à 5",
+        "0 à 7",
+        "0 à 9"
+      ],
+      "r": 2,
+      "x": "L'octal est la base 8 : il utilise les chiffres de 0 à 7. La base 2, ou binaire, n'utilise que 0 et 1. Méthode : en octal, le nombre 17 vaut 1 x 8 + 7 = 15 en décimal, et chaque chiffre octal correspond exactement à 3 bits, si bien que 7 s'écrit 111 en binaire.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "En binaire, l'addition 101 + 011 donne :",
+      "o": [
+        "0101",
+        "0110",
+        "0111",
+        "1000"
+      ],
+      "r": 3,
+      "x": "101 vaut 5 et 011 vaut 3, leur somme 8 s'écrit 1000 en binaire. Le résultat 0111, qui vaut 7, oublie la dernière retenue. Détail colonne par colonne, de droite à gauche : 1 + 1 = 10, on pose 0 et on retient 1 ; 0 + 1 + 1 = 10, on pose 0 et on retient 1 ; 1 + 0 + 1 = 10, on pose 0 et on retient 1, d'où 1000.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le plus grand nombre entier positif que l'on peut coder sur un octet est :",
+      "o": [
+        "255",
+        "256",
+        "511",
+        "1 023"
+      ],
+      "r": 0,
+      "x": "Un octet de 8 bits code 256 valeurs, de 0 à 255. Le nombre 256 correspond au nombre de valeurs possibles, et non à la plus grande d'entre elles. Calcul : 11111111 = 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 255, ou plus vite 2 puissance 8 - 1 = 256 - 1 = 255 ; sur 16 bits, le maximum serait 65 535.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre de valeurs différentes que l'on peut coder sur 4 bits est :",
+      "o": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "r": 1,
+      "x": "Avec 4 bits, on obtient 2 puissance 4 = 16 combinaisons, de 0000 à 1111. Avec 3 bits, on n'en obtiendrait que 8. Calcul : chaque bit supplémentaire double le nombre de combinaisons, donc 1 bit donne 2, 2 bits 4, 3 bits 8 et 4 bits 16, autant que de chiffres dans le système hexadécimal.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre décimal 100 s'écrit en binaire :",
+      "o": [
+        "1100010",
+        "1100011",
+        "1100100",
+        "1100101"
+      ],
+      "r": 2,
+      "x": "100 = 64 + 32 + 4, ce qui donne 1100100. Les propositions 1100010, 1100011 et 1100101 valent respectivement 98, 99 et 101. Méthode des soustractions : 100 - 64 = 36, 36 - 32 = 4, 4 - 4 = 0 ; on place un 1 sous les poids 64, 32 et 4, et un 0 sous 16, 8, 2 et 1, ce qui donne 1100100.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre hexadécimal FF correspond en décimal à :",
+      "o": [
+        "15",
+        "16",
+        "240",
+        "255"
+      ],
+      "r": 3,
+      "x": "FF = 15 x 16 + 15 = 255, soit la valeur maximale d'un octet. Le nombre 15 correspond à la seule lettre F. Détail : le F de gauche vaut 15 x 16 = 240 et le F de droite 15 x 1 = 15, d'où 240 + 15 = 255 ; la proposition 240 oublie le chiffre des unités.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le nombre binaire 1111 correspond en décimal à :",
+      "o": [
+        "15",
+        "16",
+        "31",
+        "111"
+      ],
+      "r": 0,
+      "x": "1111 = 8 + 4 + 2 + 1 = 15. Le nombre 16 s'écrirait 10000 en binaire. Calcul rapide : un nombre binaire formé de n chiffres 1 vaut 2 puissance n - 1, donc 1111 = 16 - 1 = 15 ; la proposition 31 correspondrait à 11111, qui compte cinq chiffres 1.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "En logique booléenne, l'opération 1 OU 0 donne :",
+      "o": [
+        "0",
+        "1",
+        "2",
+        "10"
+      ],
+      "r": 1,
+      "x": "L'opération OU vaut 1 dès qu'au moins une entrée vaut 1. L'opération 1 ET 0 donnerait, elle, 0. Table de vérité du OU : 0 OU 0 = 0, 0 OU 1 = 1, 1 OU 0 = 1 et 1 OU 1 = 1, le résultat ne valant 0 que lorsque les deux entrées valent 0.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "En logique booléenne, la négation NON appliquée à 1 donne :",
+      "o": [
+        "1",
+        "10",
+        "0",
+        "-1"
+      ],
+      "r": 2,
+      "x": "NON inverse la valeur logique : NON 1 = 0 et NON 0 = 1. Le résultat -1 n'existe pas en logique binaire. Le NON est la seule de ces opérations qui ne prend qu'une entrée, et appliquer deux fois de suite la négation redonne la valeur de départ : NON (NON 1) = 1.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "En logique booléenne, l'opération OU exclusif (XOR) appliquée à 1 et 1 donne :",
+      "o": [
+        "1",
+        "2",
+        "11",
+        "0"
+      ],
+      "r": 3,
+      "x": "Le OU exclusif vaut 1 uniquement lorsque les deux entrées sont différentes, donc 1 XOR 1 = 0. Le OU inclusif aurait donné 1. Table de vérité du XOR : 0 XOR 0 = 0, 0 XOR 1 = 1, 1 XOR 0 = 1 et 1 XOR 1 = 0 ; cette opération sert en chiffrement et pour additionner deux bits sans retenue.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le connecteur qui transmet à la fois l'image et le son en numérique vers un téléviseur est :",
+      "o": [
+        "le HDMI",
+        "le VGA",
+        "le RJ45",
+        "le PS/2"
+      ],
+      "r": 0,
+      "x": "Le HDMI transporte la vidéo et l'audio numériques dans un même câble. Le VGA ne transmet qu'une image analogique, sans le son. Le sigle HDMI signifie High-Definition Multimedia Interface, et ce câble relie couramment un ordinateur portable à un vidéoprojecteur lors d'une présentation, si les deux appareils disposent du port.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'appareil qui protège un ordinateur contre les coupures de courant en fournissant une autonomie temporaire est :",
+      "o": [
+        "le transformateur",
+        "l'onduleur",
+        "le parafoudre",
+        "la multiprise"
+      ],
+      "r": 1,
+      "x": "L'onduleur contient une batterie qui laisse le temps d'enregistrer son travail et d'éteindre proprement l'ordinateur. Le parafoudre protège seulement contre les surtensions. Son autonomie, généralement de quelques minutes, dépend de la capacité de sa batterie et de la puissance des appareils branchés, ce qui en fait un équipement précieux lors des coupures d'électricité.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'imprimante laser utilise comme consommable :",
+      "o": [
+        "des cartouches d'encre liquide",
+        "un ruban encreur",
+        "du toner en poudre",
+        "du papier thermique"
+      ],
+      "r": 2,
+      "x": "L'imprimante laser fixe sur le papier une poudre appelée toner. L'imprimante à jet d'encre utilise des cartouches d'encre liquide. Calcul : si une cartouche de toner coûte 40 000 FCFA et imprime 2 000 pages, le coût est de 40 000 ÷ 2 000 = 20 FCFA par page, souvent moins qu'avec une imprimante à jet d'encre.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La résolution d'une imprimante ou d'un scanner s'exprime en :",
+      "o": [
+        "hertz",
+        "octets",
+        "bits par seconde",
+        "points par pouce"
+      ],
+      "r": 3,
+      "x": "La résolution se mesure en points par pouce (ppp, ou dpi en anglais), par exemple 600 ppp. Le hertz mesure une fréquence. Calcul : une page de 8,5 pouces de large numérisée à 300 ppp donne 8,5 x 300 = 2 550 pixels de largeur ; 300 ppp suffisent pour un texte et 600 ppp conviennent aux détails fins.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une clé USB stocke les données dans :",
+      "o": [
+        "une mémoire flash",
+        "un disque magnétique",
+        "une bande magnétique",
+        "une mémoire vive"
+      ],
+      "r": 0,
+      "x": "La clé USB utilise une mémoire flash qui conserve les données sans alimentation. La mémoire vive, elle, s'efface à la coupure du courant. La mémoire flash supporte un nombre limité de cycles d'écriture et une clé peut être perdue ou abîmée, c'est pourquoi elle ne doit pas être le seul support de sauvegarde des documents importants.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La touche Verr Num du clavier permet d'activer :",
+      "o": [
+        "les majuscules",
+        "le pavé numérique",
+        "le défilement",
+        "les touches de fonction"
+      ],
+      "r": 1,
+      "x": "Verr Num active les chiffres du pavé numérique situé à droite du clavier. Les majuscules continues s'obtiennent avec Verr Maj. Lorsque Verr Num est désactivé, les touches du pavé numérique servent de flèches et de touches comme Origine ou Fin, ce qui explique qu'on ne parvienne parfois pas à taper des chiffres.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La touche Verr Maj du clavier permet de :",
+      "o": [
+        "verrouiller la session",
+        "activer le pavé numérique",
+        "écrire en majuscules de façon continue",
+        "insérer une tabulation"
+      ],
+      "r": 2,
+      "x": "Verr Maj bloque la saisie en majuscules jusqu'à un nouvel appui. La touche Maj, maintenue enfoncée, ne donne une majuscule que temporairement. Il faut vérifier que Verr Maj est désactivé avant de saisir un mot de passe, car les mots de passe distinguent majuscules et minuscules et une saisie en capitales sera refusée.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sous Windows, la touche Impr écran permet de :",
+      "o": [
+        "imprimer le document ouvert",
+        "ouvrir les paramètres de l'imprimante",
+        "afficher l'aperçu avant impression",
+        "capturer l'image de l'écran"
+      ],
+      "r": 3,
+      "x": "Impr écran copie l'image de l'écran dans le presse-papiers pour la coller dans un document. Associée à la touche Windows, elle enregistre directement la capture dans un fichier. Sous Windows 10 et 11, la combinaison Windows + Maj + S ouvre l'outil Capture d'écran, qui permet de ne sélectionner qu'une partie de l'écran.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sous Windows, la combinaison touche Windows + R ouvre :",
+      "o": [
+        "la boîte de dialogue Exécuter",
+        "l'éditeur du Registre",
+        "la Corbeille",
+        "les paramètres réseau"
+      ],
+      "r": 0,
+      "x": "Windows + R ouvre la fenêtre Exécuter, qui lance un programme en tapant son nom, comme « calc » ou « notepad ». L'éditeur du Registre s'ouvre en y tapant « regedit ». On peut par exemple taper « cmd » pour ouvrir l'invite de commandes ou « control » pour ouvrir le Panneau de configuration, ce qui fait gagner du temps aux utilisateurs avancés.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sous Windows, la combinaison touche Windows + V affiche :",
+      "o": [
+        "le collage sans mise en forme",
+        "l'historique du presse-papiers",
+        "le réglage du volume",
+        "le lecteur vidéo"
+      ],
+      "r": 1,
+      "x": "Windows + V affiche l'historique des éléments copiés, permettant de coller une copie plus ancienne. Le simple collage s'effectue avec Ctrl+V. Cet historique doit être activé lors de la première utilisation, et il permet d'épingler des éléments souvent utilisés, comme une adresse ou une formule de politesse.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sous Windows, la combinaison touche Windows + Impr écran permet de :",
+      "o": [
+        "imprimer directement l'écran",
+        "ouvrir le logiciel Paint",
+        "enregistrer une capture dans le dossier Images",
+        "partager l'écran en visioconférence"
+      ],
+      "r": 2,
+      "x": "Windows + Impr écran enregistre automatiquement la capture dans le sous-dossier Captures d'écran du dossier Images. La touche Impr écran seule ne fait que copier l'image dans le presse-papiers. Les captures sont nommées et numérotées automatiquement dans l'ordre, ce qui permet d'en réaliser plusieurs de suite, par exemple pour illustrer les étapes d'une procédure.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sous Windows, dans le chemin C:\\Users\\Issa\\Documents, la lettre C désigne :",
+      "o": [
+        "le dossier personnel",
+        "le nom de l'utilisateur",
+        "le dossier Documents",
+        "le lecteur de disque"
+      ],
+      "r": 3,
+      "x": "La lettre C suivie de deux-points désigne le lecteur, en général le disque où est installé Windows. « Issa » est ici le nom du dossier de l'utilisateur. Les lettres A et B étaient historiquement réservées aux lecteurs de disquettes, d'où la lettre C pour le disque principal, une clé USB recevant ensuite la première lettre libre, comme E ou F.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le Bloc-notes de Windows enregistre par défaut ses fichiers avec l'extension :",
+      "o": [
+        ".txt",
+        ".rtf",
+        ".docx",
+        ".odt"
+      ],
+      "r": 0,
+      "x": "Le Bloc-notes produit des fichiers en texte brut .txt, sans mise en forme. Le format .rtf, lui, conserve une mise en forme simple. Le texte brut ne contient que des caractères, sans gras, couleurs ni images, ce qui en fait un format très léger, lisible par tous les logiciels et utilisé pour les notes rapides.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans une arborescence de fichiers, le dossier de plus haut niveau s'appelle :",
+      "o": [
+        "le sous-dossier",
+        "la racine",
+        "la branche",
+        "le raccourci"
+      ],
+      "r": 1,
+      "x": "La racine est le point de départ de l'arborescence, comme C:\\ sous Windows ou / sous Linux. Tous les autres dossiers en sont des sous-dossiers. Le chemin d'un fichier décrit le trajet depuis la racine jusqu'au fichier, chaque dossier étant séparé par une barre oblique inverse sous Windows et par une barre oblique sous Linux.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sous Windows, une icône qui pointe vers un fichier sans en être une copie s'appelle :",
+      "o": [
+        "une archive",
+        "un pilote",
+        "un raccourci",
+        "un exécutable"
+      ],
+      "r": 2,
+      "x": "Le raccourci, marqué d'une petite flèche, ouvre le fichier d'origine sans le dupliquer. Supprimer un raccourci n'efface pas le fichier vers lequel il pointe. Pour créer un raccourci sur le bureau, on fait un clic droit sur le fichier puis Envoyer vers, Bureau (créer un raccourci), ce qui facilite l'accès aux documents souvent utilisés.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le système de fichiers FAT32 limite la taille d'un fichier unique à environ :",
+      "o": [
+        "2 Mo",
+        "512 Mo",
+        "2 Go",
+        "4 Go"
+      ],
+      "r": 3,
+      "x": "FAT32 n'accepte pas de fichier de plus de 4 Go, ce qui empêche par exemple de copier un long film sur une clé ainsi formatée. Les systèmes NTFS et exFAT n'ont pas cette limite. Calcul : la limite exacte est de 2 puissance 32 - 1 = 4 294 967 295 octets, soit 4 Go moins 1 octet, car la taille de chaque fichier est enregistrée sur 32 bits.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un logiciel dont le code source est librement consultable et modifiable est dit :",
+      "o": [
+        "open source",
+        "propriétaire",
+        "partagiciel",
+        "en version d'essai"
+      ],
+      "r": 0,
+      "x": "Le code d'un logiciel open source, comme Linux ou LibreOffice, est accessible à tous. Un logiciel propriétaire garde son code secret. Open source ne signifie pas forcément gratuit, même si c'est souvent le cas, et ce modèle permet à des milliers de développeurs du monde entier d'améliorer le même logiciel.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un logiciel que l'on peut essayer gratuitement pendant une période limitée avant de l'acheter est :",
+      "o": [
+        "un logiciel libre",
+        "un partagiciel",
+        "un pilote",
+        "un micrologiciel"
+      ],
+      "r": 1,
+      "x": "Le partagiciel (shareware) se teste gratuitement avant achat de la licence. Le logiciel libre, lui, peut être utilisé, modifié et redistribué sans limite de durée. Il ne faut pas confondre partagiciel et gratuiciel (freeware), logiciel entièrement gratuit mais dont le code n'est pas forcément ouvert, comme de nombreux lecteurs PDF.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le système d'exploitation des smartphones iPhone d'Apple est :",
+      "o": [
+        "Android",
+        "HarmonyOS",
+        "iOS",
+        "Windows Phone"
+      ],
+      "r": 2,
+      "x": "Les iPhone fonctionnent sous iOS, développé par Apple. Android, développé par Google, équipe la plupart des autres smartphones. Les applications pour iOS se téléchargent sur l'App Store, et celles pour Android principalement sur le Google Play Store, ce qui oblige les développeurs à publier deux versions.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le système d'exploitation des ordinateurs Mac d'Apple est :",
+      "o": [
+        "Ubuntu",
+        "iOS",
+        "Chrome OS",
+        "macOS"
+      ],
+      "r": 3,
+      "x": "Les ordinateurs Mac fonctionnent sous macOS. iOS est réservé aux iPhone, et Chrome OS équipe les Chromebook de Google. macOS, comme iOS, repose sur une architecture dérivée d'Unix, et les Mac récents utilisent des processeurs conçus par Apple, appelés puces Apple Silicon.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Parmi ces noms, celui qui désigne une distribution Linux est :",
+      "o": [
+        "Debian",
+        "Excel",
+        "Safari",
+        "Edge"
+      ],
+      "r": 0,
+      "x": "Debian est l'une des plus anciennes distributions Linux, dont dérive notamment Ubuntu. Safari et Edge sont des navigateurs web. Une distribution associe le noyau Linux à des logiciels et une interface graphique, les plus connues étant Ubuntu, Fedora et Linux Mint, souvent installées sur des ordinateurs anciens.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le correctif publié par un éditeur pour réparer une faille ou un défaut d'un logiciel s'appelle :",
+      "o": [
+        "un plugin",
+        "un patch",
+        "un pilote",
+        "un cookie"
+      ],
+      "r": 1,
+      "x": "Le patch corrige une erreur ou une faille de sécurité sans réinstaller le logiciel. Installer rapidement les mises à jour de sécurité réduit le risque d'attaque. Les éditeurs publient régulièrement des correctifs de sécurité, Microsoft le faisant chaque deuxième mardi du mois, une journée surnommée Patch Tuesday.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le logiciel VirtualBox permet de faire fonctionner un système d'exploitation dans un autre en créant :",
+      "o": [
+        "une partition",
+        "un serveur web",
+        "une machine virtuelle",
+        "une mémoire cache"
+      ],
+      "r": 2,
+      "x": "La machine virtuelle simule un ordinateur complet à l'intérieur du système hôte. Elle permet par exemple de tester Linux sans quitter Windows. La machine virtuelle partage les ressources réelles de l'ordinateur, si bien qu'il faut prévoir assez de mémoire vive : un ordinateur de 8 Go peut par exemple lui attribuer 4 Go.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La division logique d'un disque dur en plusieurs parties indépendantes s'appelle :",
+      "o": [
+        "le formatage",
+        "la fragmentation",
+        "la sauvegarde",
+        "le partitionnement"
+      ],
+      "r": 3,
+      "x": "Le partitionnement crée plusieurs lecteurs, comme C: et D:, sur un même disque physique. Le formatage prépare ensuite chaque partition à recevoir des fichiers. Créer une partition séparée pour les données permet de réinstaller Windows sans effacer ses documents personnels, à condition que ceux-ci soient bien enregistrés sur l'autre partition.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les barrettes de mémoire vive des ordinateurs actuels sont de type :",
+      "o": [
+        "DDR",
+        "SSD",
+        "HDMI",
+        "SATA"
+      ],
+      "r": 0,
+      "x": "La mémoire vive actuelle est de type DDR (DDR4, DDR5). SATA est une interface de connexion des disques et HDMI une connectique vidéo. Le sigle DDR signifie Double Data Rate, car cette mémoire transfère des données deux fois par cycle d'horloge, et les générations DDR4 et DDR5 ne sont pas compatibles entre elles.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'interface qui connecte habituellement un disque dur interne classique à la carte mère est :",
+      "o": [
+        "HDMI",
+        "SATA",
+        "VGA",
+        "RJ45"
+      ],
+      "r": 1,
+      "x": "L'interface SATA relie les disques durs et SSD de 2,5 ou 3,5 pouces à la carte mère. Le RJ45 sert aux câbles réseau. Les SSD récents utilisent plutôt le format M.2 avec le protocole NVMe : environ 600 Mo/s pour un SSD SATA contre plusieurs milliers de Mo/s en NVMe, soit plusieurs fois plus vite.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les deux principaux fabricants de processeurs x86 pour ordinateurs personnels sont Intel et :",
+      "o": [
+        "Nvidia",
+        "Qualcomm",
+        "AMD",
+        "Dell"
+      ],
+      "r": 2,
+      "x": "Intel et AMD dominent le marché des processeurs x86, comme les gammes Core et Ryzen. Dell est un assembleur d'ordinateurs et non un fabricant de processeurs. Les smartphones utilisent en revanche surtout des processeurs à architecture ARM, moins gourmands en énergie, conçus par des sociétés comme Qualcomm, MediaTek ou Apple.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le composant chargé d'évacuer la chaleur produite par le processeur est :",
+      "o": [
+        "le bloc d'alimentation",
+        "le chipset",
+        "la pile CMOS",
+        "le ventirad"
+      ],
+      "r": 3,
+      "x": "Le ventirad associe un radiateur et un ventilateur pour refroidir le processeur. Une surchauffe peut provoquer des ralentissements ou des arrêts brutaux. Une pâte thermique entre le processeur et le radiateur améliore le transfert de chaleur, et il faut dépoussiérer régulièrement l'ordinateur, surtout dans les régions chaudes et poussiéreuses comme le Sahel.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sur la carte mère, la petite pile bouton sert principalement à conserver :",
+      "o": [
+        "l'heure et les réglages du BIOS",
+        "les fichiers de l'utilisateur",
+        "le système d'exploitation",
+        "les mots de passe Wi-Fi"
+      ],
+      "r": 0,
+      "x": "La pile CMOS alimente l'horloge et la mémoire des réglages du BIOS lorsque l'ordinateur est débranché. Une pile usée provoque souvent une date erronée au démarrage. Cette pile, généralement de type CR2032, dure plusieurs années, et son remplacement est simple et peu coûteux, même s'il réinitialise parfois les réglages du BIOS.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La puissance d'un bloc d'alimentation d'ordinateur s'exprime en :",
+      "o": [
+        "ampères-heures",
+        "watts",
+        "hertz",
+        "octets"
+      ],
+      "r": 1,
+      "x": "Un bloc d'alimentation est caractérisé par sa puissance en watts, par exemple 500 W. L'ampère-heure mesure plutôt la capacité d'une batterie. Calcul : si un processeur consomme 65 W, une carte graphique 150 W et les autres composants 100 W, le total atteint 315 W, et l'on choisit une alimentation avec une marge, par exemple 450 W.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La vitesse de rotation des plateaux d'un disque dur classique s'exprime en :",
+      "o": [
+        "gigahertz",
+        "mégaoctets",
+        "tours par minute",
+        "bits par seconde"
+      ],
+      "r": 2,
+      "x": "La vitesse des plateaux se mesure en tours par minute, comme 5 400 ou 7 200 tr/min. Plus elle est élevée, plus l'accès aux données est rapide. Calcul : un disque à 7 200 tr/min fait 7 200 ÷ 60 = 120 tours par seconde, soit un tour toutes les 1 000 ÷ 120 ≈ 8,3 millisecondes, contre 90 tours par seconde à 5 400 tr/min.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une vitesse de rotation courante pour un disque dur d'ordinateur de bureau est de :",
+      "o": [
+        "60 tr/min",
+        "720 tr/min",
+        "3 600 tr/min",
+        "7 200 tr/min"
+      ],
+      "r": 3,
+      "x": "Les disques durs de bureau tournent couramment à 7 200 tr/min, les modèles d'ordinateurs portables souvent à 5 400 tr/min. Les SSD n'ont pas de vitesse de rotation car ils n'ont pas de plateaux. Calcul : 7 200 - 5 400 = 1 800 tr/min de plus qu'un disque de portable, soit 1 800 ÷ 5 400 ≈ 33 % de vitesse de rotation supplémentaire.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La taille d'un écran annoncée en pouces, par exemple 24 pouces, correspond à la mesure de :",
+      "o": [
+        "sa diagonale",
+        "sa largeur",
+        "sa hauteur",
+        "son épaisseur"
+      ],
+      "r": 0,
+      "x": "La taille d'un écran se mesure en diagonale, d'un coin à l'autre de la dalle. Un écran de 24 pouces mesure donc environ 61 cm en diagonale. Calcul : pour un écran 16/9 de 24 pouces, soit 61 cm, la largeur vaut environ 53 cm et la hauteur 30 cm, et le théorème de Pythagore le vérifie : 53² + 30² = 3 709 ≈ 61² = 3 721.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le taux de rafraîchissement d'un écran s'exprime en :",
+      "o": [
+        "pixels",
+        "hertz",
+        "pouces",
+        "watts"
+      ],
+      "r": 1,
+      "x": "Le taux de rafraîchissement indique combien de fois par seconde l'image est redessinée, par exemple 60 Hz. Le pixel mesure la définition de l'écran. Calcul : à 60 Hz, l'image est redessinée toutes les 1 ÷ 60 ≈ 16,7 millisecondes, et à 120 Hz toutes les 8,3 millisecondes environ, d'où un mouvement plus fluide.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les écrans composent toutes les couleurs à partir des trois couleurs primaires :",
+      "o": [
+        "cyan, magenta et jaune",
+        "noir, blanc et gris",
+        "rouge, vert et bleu",
+        "rouge, jaune et bleu"
+      ],
+      "r": 2,
+      "x": "Les écrans utilisent la synthèse additive RVB : rouge, vert et bleu. Le cyan, le magenta et le jaune sont les couleurs de l'impression. Calcul : chaque couleur étant codée de 0 à 255, on obtient 256 x 256 x 256 = 16 777 216 couleurs possibles, le blanc correspondant à (255, 255, 255) et le noir à (0, 0, 0).",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les imprimantes couleur utilisent le modèle de couleurs :",
+      "o": [
+        "RVB",
+        "TSL",
+        "HTML",
+        "CMJN"
+      ],
+      "r": 3,
+      "x": "Le modèle CMJN associe cyan, magenta, jaune et noir pour l'impression. Le modèle RVB est réservé aux écrans. On parle de synthèse soustractive, car les encres absorbent une partie de la lumière, et le noir est ajouté parce que le mélange des trois encres donne un brun foncé et consomme beaucoup d'encre.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Parmi ces logiciels, celui qui est un antivirus est :",
+      "o": [
+        "Avast",
+        "Photoshop",
+        "Audacity",
+        "Firefox"
+      ],
+      "r": 0,
+      "x": "Avast est un logiciel de protection contre les programmes malveillants. Photoshop sert à la retouche d'images et Audacity au montage audio. Windows intègre aussi un antivirus gratuit, Microsoft Defender, et quel que soit le logiciel choisi, il doit être mis à jour régulièrement pour reconnaître les nouvelles menaces.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le logiciel Adobe Photoshop sert principalement à :",
+      "o": [
+        "gérer une base de données",
+        "retoucher des images",
+        "programmer un site web",
+        "établir un budget"
+      ],
+      "r": 1,
+      "x": "Photoshop est la référence de la retouche et du montage photographique. La gestion de bases de données relève de logiciels comme Access ou MySQL. Son format natif est le .psd, qui conserve les calques, et il existe des alternatives gratuites comme GIMP, ou des outils en ligne comme Canva pour les visuels simples.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le logiciel libre Audacity est utilisé pour :",
+      "o": [
+        "retoucher des photos",
+        "gérer des courriels",
+        "éditer des fichiers audio",
+        "créer des tableaux"
+      ],
+      "r": 2,
+      "x": "Audacity permet d'enregistrer, couper et nettoyer des fichiers sonores. Les photos se retouchent avec des logiciels comme GIMP ou Photoshop. Il permet par exemple de réduire le bruit de fond d'un cours enregistré, puis de l'exporter en MP3 pour le partager par WhatsApp ou sur une plateforme de formation.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le logiciel 7-Zip est utilisé pour :",
+      "o": [
+        "lire des vidéos",
+        "écrire du code",
+        "naviguer sur le Web",
+        "compresser et décompresser des fichiers"
+      ],
+      "r": 3,
+      "x": "7-Zip est un logiciel libre de compression qui gère notamment les formats 7z et ZIP. Il produit des archives souvent plus légères que le format ZIP classique. Calcul : si 30 fichiers PDF de 2 Mo, soit 30 x 2 = 60 Mo, deviennent une archive de 45 Mo, le gain est de 15 Mo, soit 15 ÷ 60 = 25 % de place économisée.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "En langage SQL, la commande qui permet d'extraire des données d'une table est :",
+      "o": [
+        "SELECT",
+        "INSERT",
+        "UPDATE",
+        "DELETE"
+      ],
+      "r": 0,
+      "x": "SELECT interroge la base et renvoie les enregistrements demandés. UPDATE modifie des données existantes et DELETE les supprime. Exemple : SELECT nom, prenom FROM candidats WHERE ville = 'Koudougou' affiche le nom et le prénom des candidats de Koudougou, la clause WHERE servant à filtrer les lignes.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "En langage SQL, la commande qui ajoute un nouvel enregistrement dans une table est :",
+      "o": [
+        "SELECT",
+        "INSERT",
+        "DROP",
+        "ALTER"
+      ],
+      "r": 1,
+      "x": "INSERT INTO ajoute une ou plusieurs lignes dans une table. DROP supprime une table entière et ALTER modifie sa structure. Exemple : INSERT INTO candidats (nom, ville) VALUES ('Ouédraogo', 'Kaya') ajoute un candidat, et la commande UPDATE permettrait ensuite de corriger sa ville sans recréer la ligne.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans une base de données, le champ qui identifie de manière unique chaque enregistrement est :",
+      "o": [
+        "la clé étrangère",
+        "l'index secondaire",
+        "la clé primaire",
+        "la requête"
+      ],
+      "r": 2,
+      "x": "La clé primaire, comme un numéro matricule, ne peut jamais être en double ni vide. La clé étrangère sert à relier deux tables entre elles. Le numéro matricule d'un agent public ou le numéro d'inscription d'un candidat sont de bons exemples, contrairement au nom de famille, car plusieurs personnes peuvent s'appeler Ouédraogo ou Sawadogo.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans une base de données, le champ qui fait référence à la clé primaire d'une autre table est :",
+      "o": [
+        "la clé primaire",
+        "le formulaire",
+        "l'état",
+        "la clé étrangère"
+      ],
+      "r": 3,
+      "x": "La clé étrangère établit la relation entre deux tables, par exemple entre une table Candidats et une table Concours. Le formulaire est une interface de saisie. Exemple : dans une table Inscriptions, le champ code_concours renvoie à la clé primaire de la table Concours, ce qui évite de répéter dans chaque inscription toutes les informations du concours.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le sigle SQL signifie :",
+      "o": [
+        "Structured Query Language",
+        "Simple Question Logic",
+        "System Quality List",
+        "Standard Query Link"
+      ],
+      "r": 0,
+      "x": "SQL, langage de requête structuré, est le langage standard d'interrogation des bases de données relationnelles. Il est utilisé par MySQL, PostgreSQL ou Oracle. Ce langage a été mis au point chez IBM dans les années 1970 et il est devenu une norme internationale, si bien que ses commandes de base sont les mêmes d'un logiciel à l'autre.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans une table de base de données, une ligne correspond à :",
+      "o": [
+        "un champ",
+        "un enregistrement",
+        "une requête",
+        "un état"
+      ],
+      "r": 1,
+      "x": "Chaque ligne d'une table est un enregistrement, par exemple les informations d'un candidat. Chaque colonne correspond à un champ, comme le nom ou la date de naissance. Calcul : une table de 1 500 candidats décrits par 8 champs contient 1 500 enregistrements et 1 500 x 8 = 12 000 valeurs, comme un tableau Excel de 1 500 lignes sur 8 colonnes.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans une table de base de données, une colonne correspond à :",
+      "o": [
+        "un enregistrement",
+        "une base",
+        "un champ",
+        "une relation"
+      ],
+      "r": 2,
+      "x": "Le champ définit un type d'information commun à tous les enregistrements, comme « Téléphone ». L'enregistrement regroupe toutes les informations d'une même ligne. Chaque champ possède un type de données, comme texte, nombre, date ou booléen, ce qui permet par exemple d'empêcher la saisie de lettres dans un champ prévu pour l'âge.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Parmi ces logiciels, celui qui est un système de gestion de base de données est :",
+      "o": [
+        "PowerPoint",
+        "Chrome",
+        "Paint",
+        "MySQL"
+      ],
+      "r": 3,
+      "x": "MySQL est un SGBD très utilisé pour les sites web. PowerPoint est un logiciel de présentation et Paint un logiciel de dessin. MySQL est très utilisé avec PHP pour les sites dynamiques comme WordPress, et d'autres SGBD répandus sont PostgreSQL, Oracle, Microsoft SQL Server ou SQLite.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "En programmation, un espace mémoire nommé qui stocke une valeur modifiable s'appelle :",
+      "o": [
+        "une variable",
+        "une constante",
+        "une boucle",
+        "une fonction"
+      ],
+      "r": 0,
+      "x": "La variable porte un nom et sa valeur peut changer pendant l'exécution du programme. Une constante garde au contraire la même valeur du début à la fin. Exemple en Python : note = 12 crée une variable contenant 12, puis note = note + 3 lui donne la valeur 15, ce qui montre que la valeur change en cours d'exécution.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "En programmation, la structure qui répète un bloc d'instructions tant qu'une condition est vraie est :",
+      "o": [
+        "une condition",
+        "une boucle",
+        "une variable",
+        "un tableau"
+      ],
+      "r": 1,
+      "x": "La boucle, comme « tant que » (while) ou « pour » (for), répète des instructions. La condition « si… alors » n'exécute un bloc qu'une seule fois. Exemple : for i in range(1, 6): print(i) affiche les nombres de 1 à 5, car la borne 6 est exclue, soit 6 - 1 = 5 répétitions de l'instruction.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "En langage Python, l'instruction qui affiche un texte à l'écran est :",
+      "o": [
+        "echo",
+        "write",
+        "print",
+        "display"
+      ],
+      "r": 2,
+      "x": "En Python, print(\"Bonjour\") affiche le texte entre parenthèses. L'instruction echo joue ce rôle dans d'autres langages comme PHP. Python distingue les majuscules : Print avec un P majuscule provoque une erreur, et l'instruction input() permet à l'inverse de lire une donnée saisie au clavier.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "En langage Python, l'expression 2 ** 4 vaut :",
+      "o": [
+        "6",
+        "8",
+        "12",
+        "16"
+      ],
+      "r": 3,
+      "x": "L'opérateur ** calcule une puissance : 2 x 2 x 2 x 2 = 16. Le résultat 8 correspondrait à la multiplication 2 * 4. Attention à ne pas confondre avec l'opérateur ^, qui en Python ne calcule pas une puissance mais un OU exclusif bit à bit, si bien que 2 ^ 4 donne 6 et non 16.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans un algorigramme, le symbole en forme de losange représente :",
+      "o": [
+        "une décision ou un test",
+        "le début du programme",
+        "une opération de calcul",
+        "une entrée de données"
+      ],
+      "r": 0,
+      "x": "Le losange pose une question dont la réponse oriente vers deux chemins, oui ou non. Le rectangle représente une opération de traitement. Les autres symboles courants sont l'ovale pour le début et la fin, et le parallélogramme pour les entrées et sorties, comme la lecture d'une note ou l'affichage d'un résultat.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le langage principalement utilisé pour rendre les pages web interactives dans le navigateur est :",
+      "o": [
+        "COBOL",
+        "JavaScript",
+        "Fortran",
+        "SQL"
+      ],
+      "r": 1,
+      "x": "JavaScript s'exécute dans le navigateur pour animer les pages et réagir aux clics. COBOL et Fortran sont d'anciens langages de gestion et de calcul scientifique. Malgré la ressemblance des noms, JavaScript n'a pas de lien direct avec Java, et il est aussi utilisé côté serveur grâce à des environnements comme Node.js.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le langage PHP est principalement utilisé pour :",
+      "o": [
+        "les jeux vidéo en 3D",
+        "les macros dans Excel",
+        "les sites web côté serveur",
+        "les systèmes embarqués"
+      ],
+      "r": 2,
+      "x": "PHP génère des pages web sur le serveur, notamment pour WordPress. Les macros Excel sont écrites en VBA. Le code PHP s'exécute sur le serveur, qui envoie ensuite au navigateur une page HTML ordinaire, si bien que le visiteur ne voit jamais le code PHP lui-même.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Une erreur dans un programme informatique qui provoque un fonctionnement anormal s'appelle couramment :",
+      "o": [
+        "un patch",
+        "un pixel",
+        "un script",
+        "un bug"
+      ],
+      "r": 3,
+      "x": "Le bug est un défaut de programmation qui produit un résultat inattendu. Le patch est au contraire le correctif qui le répare. La recherche et la correction des bugs s'appellent le débogage, et les développeurs utilisent des débogueurs qui permettent d'exécuter le programme pas à pas.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le texte d'un programme écrit par un développeur dans un langage de programmation s'appelle :",
+      "o": [
+        "le code source",
+        "le code binaire",
+        "le code machine",
+        "le code-barres"
+      ],
+      "r": 0,
+      "x": "Le code source est lisible par un humain avant d'être compilé ou interprété. Le code machine est la traduction binaire directement exécutable par le processeur. Le code source est enregistré dans des fichiers texte portant l'extension du langage, comme .py pour Python, .c pour le langage C ou .html pour une page web.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'agent conversationnel ChatGPT a été rendu public en novembre 2022 par la société :",
+      "o": [
+        "Google",
+        "OpenAI",
+        "Meta",
+        "Microsoft"
+      ],
+      "r": 1,
+      "x": "OpenAI a ouvert ChatGPT au public le 30 novembre 2022. Microsoft est un investisseur important d'OpenAI mais n'a pas développé ChatGPT. Les initiales GPT signifient Generative Pre-trained Transformer, et d'autres assistants conversationnels sont apparus depuis, comme Gemini de Google ou Claude d'Anthropic.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La branche de l'intelligence artificielle dans laquelle la machine apprend à partir de données s'appelle :",
+      "o": [
+        "la robotique",
+        "la domotique",
+        "l'apprentissage automatique",
+        "la bureautique"
+      ],
+      "r": 2,
+      "x": "L'apprentissage automatique (machine learning) permet à un programme d'améliorer ses résultats à partir d'exemples. La domotique désigne l'automatisation de la maison. Exemple : un filtre anti-spam apprend à reconnaître les courriels indésirables à partir de milliers d'exemples déjà classés, sans qu'un programmeur écrive une règle pour chaque cas.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un programme informatique qui simule une conversation écrite avec un utilisateur s'appelle :",
+      "o": [
+        "un tableur",
+        "un pilote",
+        "un compilateur",
+        "un chatbot"
+      ],
+      "r": 3,
+      "x": "Le chatbot, ou agent conversationnel, répond automatiquement aux questions posées. Le compilateur traduit un code source en programme exécutable. De nombreuses entreprises et administrations utilisent des chatbots pour répondre automatiquement aux questions fréquentes, par exemple sur les dates d'inscription, 24 heures sur 24.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le sigle URL désigne :",
+      "o": [
+        "l'adresse d'une ressource sur le Web",
+        "un protocole de messagerie",
+        "un langage de programmation",
+        "un type de câble réseau"
+      ],
+      "r": 0,
+      "x": "L'URL (Uniform Resource Locator) est l'adresse unique d'une page ou d'un fichier, comme https://www.exemple.bf. Le protocole de messagerie d'envoi est SMTP. Une URL se compose du protocole (https), du nom de domaine (www.exemple.bf) et du chemin vers la ressource (/concours/resultats.html), séparés par des barres obliques.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans le moteur de recherche Google, placer plusieurs mots entre guillemets permet de :",
+      "o": [
+        "exclure ces mots des résultats",
+        "rechercher l'expression exacte",
+        "traduire la page trouvée",
+        "chercher uniquement des images"
+      ],
+      "r": 1,
+      "x": "Les guillemets imposent la recherche de l'expression exacte, dans le même ordre. Le signe moins placé devant un mot l'exclut au contraire des résultats. Exemple : la recherche \"concours de la fonction publique\" renvoie les pages contenant exactement cette suite de mots, ce qui écarte un grand nombre de résultats sans rapport.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans un moteur de recherche, placer le signe moins (-) juste devant un mot permet de :",
+      "o": [
+        "rechercher ce mot seul",
+        "rechercher l'expression exacte",
+        "exclure ce mot des résultats",
+        "rechercher ses synonymes"
+      ],
+      "r": 2,
+      "x": "La requête « concours -police » renvoie les pages sur les concours en écartant celles qui parlent de police. Les guillemets servent à chercher une expression exacte. On peut combiner les opérateurs, par exemple \"concours direct\" -police, et l'opérateur site: limite la recherche à un site, comme site:lefaso.net pour ne consulter que ce journal.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un fichier envoyé en même temps qu'un courrier électronique s'appelle :",
+      "o": [
+        "une signature",
+        "un objet",
+        "un brouillon",
+        "une pièce jointe"
+      ],
+      "r": 3,
+      "x": "La pièce jointe, signalée par un trombone, accompagne le message, comme un CV en PDF. L'objet est le titre résumant le contenu du message. La taille des pièces jointes est limitée, à 25 Mo dans Gmail par exemple, et au-delà il faut partager le fichier par un lien vers un service de stockage en ligne comme Google Drive.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Dans une messagerie électronique, la fonction « Transférer » permet de :",
+      "o": [
+        "envoyer un message reçu à un autre destinataire",
+        "répondre uniquement à l'expéditeur",
+        "répondre à tous les destinataires",
+        "déplacer le message dans un dossier"
+      ],
+      "r": 0,
+      "x": "Transférer envoie le message reçu, avec ses pièces jointes, à une nouvelle personne. Répondre à tous adresse la réponse à l'expéditeur et à tous les destinataires. L'objet d'un message transféré est généralement précédé de « TR : » ou « Fwd: », alors qu'une réponse est précédée de « RE : », ce qui permet de reconnaître la nature du message.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le courrier électronique publicitaire non sollicité envoyé en masse s'appelle :",
+      "o": [
+        "le phishing",
+        "le spam",
+        "le cookie",
+        "le cache"
+      ],
+      "r": 1,
+      "x": "Le spam encombre les boîtes de réception et est souvent filtré dans un dossier Courrier indésirable. Le phishing vise, lui, à voler des identifiants. Calcul : si 85 % des 2 000 messages reçus en un mois sont des spams, cela représente 2 000 x 0,85 = 1 700 messages indésirables, d'où l'utilité des filtres automatiques.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le protocole de réception qui conserve les messages sur le serveur et les synchronise sur plusieurs appareils est :",
+      "o": [
+        "SMTP",
+        "POP3",
+        "IMAP",
+        "FTP"
+      ],
+      "r": 2,
+      "x": "IMAP synchronise la messagerie sur plusieurs appareils en laissant les messages sur le serveur (utilise les ports 143/993). À l'inverse, POP3 télécharge les courriels sur un seul équipement (utilise les ports 110/995). Le protocole SMTP, quant à lui, est dédié à l'envoi.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un site web dont le contenu peut être modifié collaborativement par ses visiteurs s'appelle :",
+      "o": [
+        "un blog",
+        "un forum",
+        "un portail",
+        "un wiki"
+      ],
+      "r": 3,
+      "x": "Le wiki permet à plusieurs personnes de rédiger et corriger les mêmes pages, comme Wikipédia. Le blog est tenu par un auteur qui publie ses propres articles. Le premier wiki, WikiWikiWeb, a été créé en 1995 par Ward Cunningham, et chaque page conserve l'historique de ses modifications, ce qui permet d'annuler un ajout erroné.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un site web où un auteur publie régulièrement des articles datés, du plus récent au plus ancien, s'appelle :",
+      "o": [
+        "un blog",
+        "un wiki",
+        "un intranet",
+        "un annuaire"
+      ],
+      "r": 0,
+      "x": "Le blog présente des articles classés par date, souvent ouverts aux commentaires des lecteurs. Le wiki est, lui, rédigé collectivement. Le mot blog est la contraction de « web log », journal de bord sur le Web, et des plateformes comme WordPress ou Blogger permettent d'en créer un sans connaissances techniques.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sur les réseaux sociaux, le mot-clé précédé du symbole # s'appelle :",
+      "o": [
+        "une mention",
+        "un hashtag",
+        "un lien",
+        "un émoji"
+      ],
+      "r": 1,
+      "x": "Le hashtag, comme #BurkinaFaso, regroupe les publications portant sur un même sujet. Le symbole @ suivi d'un nom sert à mentionner une personne. Un hashtag ne contient ni espace ni ponctuation, les mots s'écrivant attachés, comme #ConcoursDirects, pour former un lien cliquable qui regroupe les publications.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le commerce de biens et de services réalisé par l'intermédiaire d'Internet s'appelle :",
+      "o": [
+        "la e-administration",
+        "le télétravail",
+        "le commerce électronique",
+        "la visioconférence"
+      ],
+      "r": 2,
+      "x": "Le commerce électronique, ou e-commerce, permet d'acheter et de payer en ligne. La e-administration concerne les démarches administratives en ligne. On distingue le B2C, entre une entreprise et des consommateurs, du B2B, entre entreprises, et le paiement peut se faire par carte bancaire ou par mobile money.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Parmi ces logiciels, celui qui sert principalement à la visioconférence est :",
+      "o": [
+        "Excel",
+        "WinRAR",
+        "Bloc-notes",
+        "Zoom"
+      ],
+      "r": 3,
+      "x": "Zoom permet d'organiser des réunions en vidéo à distance, comme Google Meet ou Microsoft Teams. WinRAR est un logiciel de compression. Une visioconférence de qualité exige une connexion stable, et couper sa caméra réduit fortement la consommation de données mobiles, ce qui est utile avec un forfait limité.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le fait d'exercer son activité professionnelle à distance grâce aux outils numériques s'appelle :",
+      "o": [
+        "le télétravail",
+        "l'intérim",
+        "le travail posté",
+        "le temps partiel"
+      ],
+      "r": 0,
+      "x": "Le télétravail s'appuie sur Internet, la messagerie et la visioconférence pour travailler hors des locaux. Le temps partiel concerne la durée du travail et non son lieu. Il exige un ordinateur, une connexion fiable et des outils de travail collaboratif, ainsi que des règles de sécurité, comme l'usage d'un VPN pour accéder aux données de l'organisation.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le remplacement des documents papier par des fichiers et procédures numériques s'appelle :",
+      "o": [
+        "la numérotation",
+        "la dématérialisation",
+        "la compression",
+        "la duplication"
+      ],
+      "r": 1,
+      "x": "La dématérialisation permet par exemple de déposer un dossier de concours en ligne plutôt qu'au guichet. La compression réduit seulement la taille des fichiers. Elle réduit les déplacements, les délais et la consommation de papier, mais suppose que les usagers aient accès à Internet et que leurs données personnelles soient protégées.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le procédé qui garantit l'identité du signataire et l'intégrité d'un document numérique est :",
+      "o": [
+        "le filigrane",
+        "le tampon scanné",
+        "la signature électronique",
+        "le mot de passe"
+      ],
+      "r": 2,
+      "x": "La signature électronique peut se reposer sur un certificat qui atteste l'identité du signataire et détecte toute modification. Elle peut se reposer sur un couple de clés : une clé privée, gardée secrète par le signataire, et une clé publique, qui permet à chacun de vérifier la signature. Un tampon scanné peut être copié facilement et n'offre pas cette garantie.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le service qui permet d'envoyer de l'argent et de payer avec un simple téléphone mobile s'appelle :",
+      "o": [
+        "le e-learning",
+        "le cloud",
+        "le streaming",
+        "le mobile money"
+      ],
+      "r": 3,
+      "x": "Le mobile money, comme Orange Money ou Moov Money, est très répandu au Burkina Faso. Le e-learning désigne la formation en ligne. Calcul : si un opérateur prélève des frais de 1 % sur un retrait de 50 000 FCFA, le client paie 50 000 x 0,01 = 500 FCFA, d'où l'intérêt de comparer les grilles tarifaires.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La formation dispensée à distance par l'intermédiaire d'Internet s'appelle :",
+      "o": [
+        "le e-learning",
+        "le e-commerce",
+        "le e-mail",
+        "le e-banking"
+      ],
+      "r": 0,
+      "x": "Le e-learning permet de suivre des cours, vidéos et exercices en ligne à son rythme. Le e-banking désigne la gestion de son compte bancaire en ligne. Il permet de se former à son rythme et en tout lieu, et des plateformes comme Moodle proposent cours, quiz et suivi des progrès, ce qui convient bien à la préparation des concours.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La lecture d'une vidéo ou d'une musique en ligne sans téléchargement complet préalable s'appelle :",
+      "o": [
+        "le téléversement",
+        "le streaming",
+        "le formatage",
+        "le partage de connexion"
+      ],
+      "r": 1,
+      "x": "Le streaming lit le contenu au fur et à mesure de sa réception, comme sur YouTube. Le téléversement consiste au contraire à envoyer un fichier vers un serveur. Calcul : une vidéo en définition standard consomme environ 1 Go par heure, donc 30 minutes par jour pendant 30 jours représentent environ 0,5 x 30 = 15 Go de données mobiles.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'action d'envoyer un fichier depuis son ordinateur vers un serveur distant s'appelle :",
+      "o": [
+        "télécharger",
+        "installer",
+        "téléverser",
+        "synchroniser"
+      ],
+      "r": 2,
+      "x": "Téléverser (upload) envoie un fichier vers Internet, par exemple une photo vers Facebook. Télécharger (download) fait le chemin inverse, du serveur vers l'appareil. Calcul : avec un débit montant de 2 Mbit/s, téléverser une vidéo de 50 Mo prend 50 x 8 ÷ 2 = 200 secondes, soit 3 minutes et 20 secondes, le débit montant étant souvent le plus faible.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La fonction qui permet de partager la connexion Internet d'un smartphone avec un ordinateur est :",
+      "o": [
+        "le mode avion",
+        "le streaming",
+        "la géolocalisation",
+        "le point d'accès mobile"
+      ],
+      "r": 3,
+      "x": "Le point d'accès mobile transforme le smartphone en borne Wi-Fi pour d'autres appareils. Le mode avion coupe au contraire toutes les communications sans fil. Cette fonction vide rapidement la batterie et le forfait du téléphone, et il faut la protéger par un mot de passe solide pour éviter que des inconnus ne s'y connectent.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Sur un smartphone, le mode avion désactive :",
+      "o": [
+        "les communications sans fil",
+        "l'affichage de l'écran",
+        "la charge de la batterie",
+        "les applications installées"
+      ],
+      "r": 0,
+      "x": "Le mode avion coupe le réseau mobile, et par défaut le Wi-Fi et le Bluetooth. Les applications restent utilisables hors connexion. On peut ensuite réactiver uniquement le Wi-Fi ou le Bluetooth tout en restant en mode avion, et ce mode permet aussi d'économiser la batterie dans les zones sans réseau.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le code-barres en forme de carré, lisible par l'appareil photo d'un smartphone, s'appelle :",
+      "o": [
+        "le code EAN",
+        "le QR code",
+        "le code ASCII",
+        "le code PIN"
+      ],
+      "r": 1,
+      "x": "Le QR code peut contenir une adresse web, un texte ou un numéro de paiement. Le code EAN est le code-barres à traits verticaux des produits de commerce. Le sigle QR signifie Quick Response, réponse rapide, et ce code a été inventé en 1994 au Japon par la société Denso Wave pour suivre les pièces automobiles.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le code de 4 chiffres qui protège la carte SIM d'un téléphone mobile est le code :",
+      "o": [
+        "PUK",
+        "IMEI",
+        "PIN",
+        "APN"
+      ],
+      "r": 2,
+      "x": "Le code PIN est demandé au démarrage du téléphone. Après trois erreurs, la carte se bloque et seul le code PUK de 8 chiffres permet de la débloquer. Calcul : un code PIN de 4 chiffres offre 10 x 10 x 10 x 10 = 10 000 combinaisons, mais le blocage après trois erreurs empêche un voleur de toutes les essayer.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le numéro unique d'identification d'un téléphone mobile, affiché en composant *#06#, est :",
+      "o": [
+        "le code PIN",
+        "le code PUK",
+        "le numéro de la carte SIM",
+        "le numéro IMEI"
+      ],
+      "r": 3,
+      "x": "L'IMEI identifie l'appareil lui-même et permet de le bloquer en cas de vol. Le code PIN protège, lui, la carte SIM. En cas de vol, il est recommandé de communiquer ce numéro à son opérateur et aux forces de sécurité, d'où l'intérêt de le noter dès l'achat du téléphone.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le numéro IMEI d'un téléphone mobile comporte :",
+      "o": [
+        "15 chiffres",
+        "16 chiffres",
+        "18 chiffres",
+        "20 chiffres"
+      ],
+      "r": 0,
+      "x": "L'IMEI est composé de 15 chiffres, dont le dernier sert de chiffre de contrôle. Il est inscrit sur l'emballage et sous la batterie de nombreux appareils. Les téléphones à double carte SIM possèdent deux numéros IMEI, un par emplacement, et les huit premiers chiffres identifient le modèle de l'appareil.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'attaque qui rend un site inaccessible en le saturant de requêtes envoyées par de nombreuses machines s'appelle :",
+      "o": [
+        "l'hameçonnage",
+        "le déni de service distribué",
+        "le cheval de Troie",
+        "l'ingénierie sociale"
+      ],
+      "r": 1,
+      "x": "Le déni de service distribué (DDoS) submerge un serveur de connexions simultanées jusqu'à le rendre indisponible. L'hameçonnage cherche, lui, à voler des identifiants. Les machines utilisées sont souvent des ordinateurs ou objets connectés infectés à l'insu de leurs propriétaires, regroupés dans un réseau appelé botnet que l'attaquant contrôle à distance.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La manipulation psychologique d'une personne pour lui faire révéler des informations confidentielles s'appelle :",
+      "o": [
+        "le chiffrement",
+        "le piratage matériel",
+        "l'ingénierie sociale",
+        "le spam"
+      ],
+      "r": 2,
+      "x": "L'ingénierie sociale exploite la confiance ou la peur, par exemple un faux appel d'un service client demandant un code. Elle ne nécessite aucune compétence technique avancée. Exemple courant : un faux agent d'un opérateur appelle pour annoncer un gain et demande le code secret de mobile money, alors qu'aucun service légitime ne demande jamais ce code.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le logiciel malveillant qui collecte secrètement les informations et activités de l'utilisateur est :",
+      "o": [
+        "un ver",
+        "un pare-feu",
+        "un rançongiciel",
+        "un logiciel espion"
+      ],
+      "r": 3,
+      "x": "Le logiciel espion (spyware) enregistre par exemple les frappes au clavier ou les sites visités. Le rançongiciel chiffre les fichiers pour réclamer une rançon. Il s'installe souvent avec des applications téléchargées hors des magasins officiels, d'où le conseil de n'utiliser que le Play Store ou l'App Store et de vérifier les autorisations demandées.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La technique qui rend un message illisible pour toute personne ne possédant pas la clé s'appelle :",
+      "o": [
+        "le chiffrement",
+        "la compression",
+        "l'indexation",
+        "le formatage"
+      ],
+      "r": 0,
+      "x": "Le chiffrement protège la confidentialité des données, par exemple dans les messageries sécurisées. La compression réduit la taille sans protéger le contenu. On distingue le chiffrement symétrique, qui utilise la même clé pour chiffrer et déchiffrer, et le chiffrement asymétrique, qui utilise une clé publique et une clé privée.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Un réseau privé virtuel (VPN) permet principalement de :",
+      "o": [
+        "accélérer le processeur",
+        "créer une connexion chiffrée à travers Internet",
+        "augmenter la capacité du disque dur",
+        "supprimer les virus de l'ordinateur"
+      ],
+      "r": 1,
+      "x": "Le VPN crée un tunnel chiffré entre l'appareil et un serveur distant, utile sur un Wi-Fi public. Il ne remplace pas un antivirus. Le VPN masque aussi l'adresse IP réelle de l'utilisateur derrière celle du serveur, et les entreprises l'utilisent pour permettre aux télétravailleurs d'accéder au réseau interne.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La première licence 4G du Burkina Faso, attribuée à Orange Burkina, a été acquise pour un montant de :",
+      "o": [
+        "10 milliards de FCFA",
+        "25 milliards de FCFA",
+        "40 milliards de FCFA",
+        "45 milliards de FCFA"
+      ],
+      "r": 2,
+      "x": "Orange Burkina a obtenu la première licence 4G du pays pour 40 milliards de FCFA. Le montant de 45 milliards correspond au coût de la migration vers la TNT. Calcul : 40 milliards de FCFA répartis sur 15 ans représentent 40 000 000 000 ÷ 15 ≈ 2,67 milliards de FCFA par an, un investissement que l'opérateur doit rentabiliser par ses abonnements.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La première licence 4G attribuée à Orange Burkina l'a été pour une durée de :",
+      "o": [
+        "5 ans",
+        "10 ans",
+        "12 ans",
+        "15 ans"
+      ],
+      "r": 3,
+      "x": "Cette licence 4G, payée 40 milliards de FCFA, couvre une durée de 15 ans. Elle a permis le lancement de l'Internet mobile à haut débit dans le pays. Calcul : comparée aux 45 milliards de FCFA de la migration vers la TNT, cette licence de 40 milliards en représente 40 ÷ 45 ≈ 89 %, un ordre de grandeur comparable.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La plateforme de visa électronique eVisa Burkina a été officiellement lancée le :",
+      "o": [
+        "17 août 2023",
+        "1er janvier 2024",
+        "30 mars 2024",
+        "1er octobre 2024"
+      ],
+      "r": 0,
+      "x": "La plateforme eVisa a été lancée à Ouagadougou le 17 août 2023. Elle permet de demander son visa et de le payer en ligne par carte bancaire. Elle a été lancée la veille de l'inauguration de l'Espace numérique ouvert de l'UV-BF, le 18 août 2023, deux étapes de la transformation numérique réalisées la même semaine.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'adresse officielle de la plateforme de visa électronique du Burkina Faso est :",
+      "o": [
+        "www.evisa.gov.bf",
+        "www.visaburkina.bf",
+        "www.burkinavisa.com",
+        "www.visa-faso.org"
+      ],
+      "r": 1,
+      "x": "Les demandes de visa électronique se déposent sur www.visaburkina.bf. Avant toute démarche en ligne, il faut vérifier que l'adresse se termine par le domaine national .bf, attribué au Burkina Faso, et que la connexion est sécurisée par HTTPS.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Lors de son lancement en août 2023, le visa électronique de transit de 5 jours pour le Burkina Faso coûtait :",
+      "o": [
+        "10 000 FCFA",
+        "15 000 FCFA",
+        "22 000 FCFA",
+        "55 000 FCFA"
+      ],
+      "r": 2,
+      "x": "Le visa de transit de 5 jours était fixé à 22 000 FCFA. Le montant de 55 000 FCFA correspondait aux visas de conférence, d'études ou de visite. Calcul : le visa d'affaires à 77 000 FCFA coûtait 77 000 ÷ 22 000 = 3,5 fois le prix du visa de transit, et le visa long séjour d'un an valait 187 000 FCFA au lancement.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Telmob, la filiale de téléphonie mobile de l'ONATEL, a été créée en :",
+      "o": [
+        "1996",
+        "1998",
+        "2000",
+        "2002"
+      ],
+      "r": 3,
+      "x": "L'État a créé Telmob en octobre 2002, filiale à 100 % de l'ONATEL chargée de l'activité mobile. Elle a obtenu sa licence GSM en avril 2004. Calcul : d'octobre 2002 à avril 2004, il s'est écoulé 18 mois avant l'obtention de la licence GSM, et Telmob détenait environ 40 % du marché mobile au moment de la privatisation de 2006.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Telmob, filiale mobile de l'ONATEL, a obtenu sa licence d'exploitation d'un réseau GSM en :",
+      "o": [
+        "avril 2004",
+        "décembre 2005",
+        "décembre 2006",
+        "avril 2009"
+      ],
+      "r": 0,
+      "x": "Telmob a reçu sa licence GSM en avril 2004, deux ans après sa création. Décembre 2006 correspond à la privatisation de l'ONATEL. À la privatisation de décembre 2006, l'ensemble ONATEL-Telmob comptait plus de 400 000 clients mobiles, soit 39 % de part de marché, et plus de 100 000 clients du fixe.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'ONATEL a perdu son monopole sur la téléphonie fixe nationale le :",
+      "o": [
+        "31 décembre 2003",
+        "31 décembre 2005",
+        "29 décembre 2006",
+        "29 avril 2009"
+      ],
+      "r": 1,
+      "x": "Le monopole de l'ONATEL sur la téléphonie fixe a pris fin le 31 décembre 2005, même s'il reste le seul opérateur fixe du pays. Le 29 avril 2009 marque son entrée à la BRVM. Ce monopole couvrait la téléphonie fixe nationale, le télex et le télégraphe, mais en pratique l'ONATEL est resté le seul opérateur de téléphonie fixe du pays.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Pour acquérir 51 % de l'ensemble ONATEL-Telmob en décembre 2006, Maroc Telecom a payé environ :",
+      "o": [
+        "41 millions d'euros",
+        "120 millions d'euros",
+        "220 millions d'euros",
+        "400 millions d'euros"
+      ],
+      "r": 2,
+      "x": "Maroc Telecom a versé environ 220 millions d'euros pour 51 % du capital. Les 41 millions d'euros correspondent aux 10 % supplémentaires achetés en avril 2018. Calcul : 1 euro valant 655,957 FCFA, 220 000 000 x 655,957 ≈ 144,3 milliards de FCFA, soit plus de trois fois le coût de la migration vers la TNT.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Lors de l'introduction de l'ONATEL à la BRVM en avril 2009, l'État burkinabè a cédé au public une part du capital de :",
+      "o": [
+        "5 %",
+        "10 %",
+        "15 %",
+        "20 %"
+      ],
+      "r": 3,
+      "x": "L'introduction en bourse a permis à l'État de céder 20 % du capital au public. Les 10 % correspondent à la part revendue à Maroc Telecom en 2018. Une introduction en bourse permet à des particuliers et à des institutions d'acheter des actions de l'entreprise, et l'ONATEL figure depuis parmi les sociétés burkinabè cotées à la BRVM.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "En 1998, la bande passante internationale d'accès à Internet de l'opérateur historique burkinabè était de :",
+      "o": [
+        "128 kbit/s",
+        "2 Mbit/s",
+        "22 Mbit/s",
+        "197 Mbit/s"
+      ],
+      "r": 0,
+      "x": "La connexion internationale ne dépassait pas 128 kilobits par seconde en 1998. Elle atteignait 197 Mbit/s en sens montant en décembre 2006. Calcul : passer de 128 kbit/s à 197 Mbit/s, soit 197 000 kbit/s, revient à multiplier la bande passante par 197 000 ÷ 128 ≈ 1 539 en huit ans.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "En décembre 2006, la bande passante internationale descendante offerte par l'opérateur historique burkinabè atteignait :",
+      "o": [
+        "22 Mbit/s",
+        "215 Mbit/s",
+        "512 Mbit/s",
+        "1 Gbit/s"
+      ],
+      "r": 1,
+      "x": "La bande passante descendante était de 215 Mbit/s fin 2006, contre 197 Mbit/s en sens montant. Elle n'était que de 128 kbit/s en 1998. Calcul : la bande passante descendante dépassait la montante de 215 - 197 = 18 Mbit/s, car les internautes téléchargent généralement plus de données qu'ils n'en envoient.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le réseau de diffusion de la télévision numérique terrestre (TNT) au Burkina Faso repose sur un nombre d'émetteurs égal à :",
+      "o": [
+        "13",
+        "28",
+        "35",
+        "45"
+      ],
+      "r": 2,
+      "x": "Le réseau compte 35 émetteurs, dont 28 étaient opérationnels au lancement de décembre 2017. Ils permettent de couvrir plus de 98 % du territoire. Calcul : au lancement, 28 émetteurs sur 35 étaient opérationnels, soit 28 ÷ 35 = 80 % du réseau, et la couverture atteignait alors environ 70 % du territoire.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La date butoir fixée par l'Union internationale des télécommunications (UIT) pour l'extinction du signal analogique en Afrique était le :",
+      "o": [
+        "17 juin 2012",
+        "1er janvier 2014",
+        "31 décembre 2014",
+        "17 juin 2015"
+      ],
+      "r": 3,
+      "x": "L'UIT avait fixé au 17 juin 2015 la fin de la télévision analogique, à la suite de l'accord de Genève de 2006. Faute de financement, le Burkina Faso n'a lancé la TNT qu'en décembre 2017. Calcul : l'accord de Genève de 2006 laissait près de 9 ans pour préparer la transition, mais de nombreux pays africains, dont le Burkina Faso, ont dépassé l'échéance faute de financement.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'Université virtuelle du Burkina Faso (UV-BF) est devenue membre de l'Agence universitaire de la Francophonie (AUF) le :",
+      "o": [
+        "28 mai 2020",
+        "20 septembre 2022",
+        "18 août 2023",
+        "1er janvier 2024"
+      ],
+      "r": 0,
+      "x": "L'UV-BF a rejoint l'AUF le 28 mai 2020, un an après sa création. Le 18 août 2023 correspond à l'inauguration de son premier Espace numérique ouvert. L'AUF regroupe des universités francophones du monde entier, et d'autres universités virtuelles africaines en sont membres, comme celle du Sénégal depuis 2018 et celle de Côte d'Ivoire depuis 2019.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le coût global estimé du projet de l'Université virtuelle du Burkina Faso, avec ses Espaces numériques ouverts dans les régions, est de :",
+      "o": [
+        "45 milliards de FCFA",
+        "80 milliards de FCFA",
+        "120 milliards de FCFA",
+        "200 milliards de FCFA"
+      ],
+      "r": 1,
+      "x": "Le projet prévoit, en plus du premier ENO, 15 autres espaces dans les chefs-lieux de région pour environ 80 milliards de FCFA. Les 45 milliards correspondent au coût de la migration vers la TNT. Calcul : l'architecture prévoit 16 espaces au total, le premier et 15 autres, dont 3 à Ouagadougou et 2 à Bobo-Dioulasso, soit un ordre de grandeur de 80 ÷ 16 = 5 milliards de FCFA par espace.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La loi n°045-2009/AN portant réglementation des services et des transactions électroniques a été promulguée le :",
+      "o": [
+        "10 novembre 2009",
+        "27 novembre 2009",
+        "4 décembre 2009",
+        "7 janvier 2010"
+      ],
+      "r": 2,
+      "x": "Adoptée le 10 novembre 2009, la loi a été promulguée par décret le 4 décembre 2009. Elle a ensuite été publiée au Journal officiel le 7 janvier 2010. Calcul : 24 jours séparent l'adoption du 10 novembre de la promulgation du 4 décembre 2009, puis 34 jours séparent la promulgation de la publication au Journal officiel du 7 janvier 2010.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'Acte additionnel de la Communauté économique des États de l'Afrique de l'Ouest (CEDEAO) portant transactions électroniques a été adopté le :",
+      "o": [
+        "19 janvier 2007",
+        "15 juin 2008",
+        "19 août 2009",
+        "16 février 2010"
+      ],
+      "r": 3,
+      "x": "L'Acte additionnel A/SA.2/01/10 a été adopté à Abuja le 16 février 2010, le même jour que celui sur les données personnelles. Il fixe notamment les conditions d'admission de la signature électronique. Calcul : ces deux actes ont été adoptés trois ans après les actes additionnels sur les télécommunications de janvier 2007, et celui sur les transactions électroniques porte le numéro A/SA.2/01/10.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Les actes additionnels de la Communauté économique des États de l'Afrique de l'Ouest (CEDEAO) harmonisant le secteur des télécommunications ont été adoptés le :",
+      "o": [
+        "19 janvier 2007",
+        "16 février 2010",
+        "19 août 2011",
+        "27 juin 2014"
+      ],
+      "r": 0,
+      "x": "Le 19 janvier 2007, la CEDEAO a adopté six actes additionnels sur l'interconnexion, la numérotation, le spectre de fréquences et le service universel. Le 16 février 2010 concerne les transactions électroniques et les données personnelles. Ces textes portent les références A/SA.1/01/07 à A/SA.6/01/07, le nombre final « 07 » indiquant l'année 2007, de même que « 10 » renvoie à 2010 pour les actes sur le numérique.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'Acte additionnel de la CEDEAO sur la protection des données à caractère personnel a été adopté lors de la session ordinaire de la Conférence des chefs d'État numéro :",
+      "o": [
+        "35",
+        "37",
+        "40",
+        "42"
+      ],
+      "r": 1,
+      "x": "L'acte a été adopté lors de la 37e session de la Conférence des chefs d'État et de gouvernement, à Abuja en février 2010. Il invite chaque État à se doter d'une loi et d'une autorité de protection des données. Le même jour, la CEDEAO a adopté l'acte additionnel sur les transactions électroniques, ces deux textes formant avec la directive de 2011 sur la cybercriminalité le cadre numérique ouest-africain.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le quinzième État dont la ratification a permis l'entrée en vigueur de la Convention de Malabo de l'Union africaine (UA) est :",
+      "o": [
+        "le Sénégal",
+        "le Rwanda",
+        "la Mauritanie",
+        "le Ghana"
+      ],
+      "r": 2,
+      "x": "La Mauritanie a déposé la quinzième ratification le 9 mai 2023, déclenchant l'entrée en vigueur le 8 juin 2023. Quinze ratifications étaient exigées par l'article 36 de la convention. Calcul : 30 jours après le dépôt du 9 mai 2023, on arrive au 8 juin 2023, puisque mai compte 31 jours : 22 jours restants en mai plus 8 jours en juin font bien 30.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le Manifeste Smart Africa a été endossé par l'ensemble des chefs d'État de l'Union africaine (UA) en :",
+      "o": [
+        "mai 2013",
+        "octobre 2013",
+        "novembre 2013",
+        "janvier 2014"
+      ],
+      "r": 3,
+      "x": "Le Manifeste a été endossé à Addis-Abeba les 30 et 31 janvier 2014, lors du sommet de l'UA. Octobre 2013 correspond à son adoption par sept chefs d'État à Kigali. Calcul : trois mois seulement séparent l'adoption à Kigali, fin octobre 2013, de l'endossement par l'ensemble des chefs d'État de l'UA, fin janvier 2014.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le siège de l'alliance Smart Africa, dont le Burkina Faso est membre fondateur, se trouve à :",
+      "o": [
+        "Kigali",
+        "Addis-Abeba",
+        "Nairobi",
+        "Dakar"
+      ],
+      "r": 0,
+      "x": "L'alliance Smart Africa a son siège à Kigali, au Rwanda, où le Manifeste a été adopté en octobre 2013. Addis-Abeba abrite, elle, le siège de l'Union africaine. Le Rwanda s'est imposé comme l'un des moteurs africains du numérique, et l'alliance réunit gouvernements, organisations internationales et entreprises privées autour de projets d'accès au haut débit.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La Convention de Malabo a été adoptée lors de la session ordinaire du sommet de l'Union africaine (UA) numéro :",
+      "o": [
+        "20",
+        "23",
+        "25",
+        "30"
+      ],
+      "r": 1,
+      "x": "La Convention de Malabo a été adoptée lors de la 23e session ordinaire du sommet de l'UA, les 26 et 27 juin 2014. Elle porte le nom de la capitale de la Guinée équatoriale où s'est tenu ce sommet. Calcul : la 23e session de juin 2014 a suivi d'environ cinq mois la 22e session de janvier 2014, qui avait endossé le Manifeste Smart Africa, l'UA tenant alors deux sommets par an.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le Manifeste Smart Africa a été endossé par l'Union africaine (UA) lors de la session ordinaire de sa Conférence numéro :",
+      "o": [
+        "18",
+        "20",
+        "22",
+        "23"
+      ],
+      "r": 2,
+      "x": "L'endossement a eu lieu lors de la 22e session ordinaire de l'Assemblée de l'UA, en janvier 2014 à Addis-Abeba. La 23e session est celle qui a adopté la Convention de Malabo en juin 2014. Les sessions de début d'année de la Conférence de l'UA se tiennent généralement à Addis-Abeba, siège de la Commission de l'Union africaine, d'où l'endossement du Manifeste dans cette ville.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le métier à tisser programmable par cartes perforées de Joseph-Marie Jacquard date de :",
+      "o": [
+        "1642",
+        "1694",
+        "1745",
+        "1801"
+      ],
+      "r": 3,
+      "x": "Jacquard a présenté son métier à cartes perforées en 1801, ancêtre de la programmation. L'année 1642 correspond à la Pascaline de Blaise Pascal. Calcul : 1801 - 1642 = 159 ans séparent la Pascaline du métier Jacquard, et les cartes perforées ont ensuite été reprises par Charles Babbage puis par Herman Hollerith.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Herman Hollerith a utilisé des cartes perforées pour traiter le recensement américain de :",
+      "o": [
+        "1890",
+        "1900",
+        "1910",
+        "1920"
+      ],
+      "r": 0,
+      "x": "La machine de Hollerith a réduit à quelques années le traitement du recensement de 1890. Sa société est à l'origine de l'entreprise IBM. Le recensement précédent, celui de 1880, avait demandé environ huit ans de traitement manuel, alors que la machine de Hollerith a permis d'obtenir les premiers résultats en quelques mois.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'entreprise issue de la société de Herman Hollerith a pris le nom d'IBM en :",
+      "o": [
+        "1911",
+        "1924",
+        "1946",
+        "1952"
+      ],
+      "r": 1,
+      "x": "La société CTR, fondée en 1911, a été rebaptisée International Business Machines (IBM) en 1924. L'année 1946 correspond à la présentation de l'ENIAC. Calcul : 1924 - 1890 = 34 ans séparent le recensement du changement de nom, et IBM a lancé son ordinateur personnel IBM PC en 1981, soit 1981 - 1924 = 57 ans plus tard.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le Z3 de Konrad Zuse, considéré comme le premier calculateur programmable en fonctionnement, a été achevé en :",
+      "o": [
+        "1936",
+        "1938",
+        "1941",
+        "1946"
+      ],
+      "r": 2,
+      "x": "L'ingénieur allemand Konrad Zuse a terminé le Z3, machine électromécanique programmable, en 1941. L'année 1936 correspond à la description de la machine de Turing. Calcul : le Z3 a été achevé 1946 - 1941 = 5 ans avant la présentation de l'ENIAC, mais il était électromécanique, à base de relais, alors que l'ENIAC était entièrement électronique.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Claude Shannon a publié l'article fondateur de la théorie de l'information en :",
+      "o": [
+        "1936",
+        "1940",
+        "1945",
+        "1948"
+      ],
+      "r": 3,
+      "x": "Shannon a publié en 1948 « Une théorie mathématique de la communication », qui popularise le terme bit. L'année 1945 correspond à l'architecture de von Neumann. Calcul : cet article paraît 3 ans après l'architecture de von Neumann de 1945 et un an après l'invention du transistor en 1947, deux autres jalons majeurs de l'informatique.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'équipe de Grace Hopper a consigné le premier « bug » informatique, un insecte coincé dans un ordinateur, en :",
+      "o": [
+        "1947",
+        "1952",
+        "1959",
+        "1965"
+      ],
+      "r": 0,
+      "x": "En 1947, un papillon de nuit retrouvé dans le calculateur Mark II a été collé dans le journal de bord comme premier « bug ». Grace Hopper a ensuite contribué à la création du langage COBOL en 1959. Calcul : 1959 - 1947 = 12 ans séparent cet épisode de la création de COBOL, et le mot « bug », qui signifie insecte en anglais, désignait déjà auparavant les défauts techniques.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le langage de programmation scientifique FORTRAN, développé chez IBM par John Backus, est apparu en :",
+      "o": [
+        "1954",
+        "1957",
+        "1964",
+        "1972"
+      ],
+      "r": 1,
+      "x": "FORTRAN, premier langage de haut niveau largement diffusé, est sorti en 1957. L'année 1972 correspond à la création du langage C. Le nom FORTRAN vient de Formula Translation, traduction de formules, et ce langage reste utilisé pour les calculs scientifiques comme la météorologie, plus de 60 ans après sa création.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le langage de programmation COBOL, destiné à la gestion, a été créé en :",
+      "o": [
+        "1949",
+        "1954",
+        "1959",
+        "1969"
+      ],
+      "r": 2,
+      "x": "COBOL est né en 1959 pour les applications de gestion des entreprises et administrations. Il reste utilisé dans certains systèmes bancaires. Le nom COBOL signifie Common Business Oriented Language, et sa syntaxe proche de l'anglais devait permettre aux gestionnaires de lire les programmes plus facilement.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'expression « intelligence artificielle » a été adoptée lors de la conférence de Dartmouth, tenue en :",
+      "o": [
+        "1943",
+        "1948",
+        "1950",
+        "1956"
+      ],
+      "r": 3,
+      "x": "La conférence de Dartmouth de 1956, organisée notamment par John McCarthy, a consacré le terme intelligence artificielle. L'année 1950 correspond à l'article d'Alan Turing sur le test qui porte son nom. Calcul : la conférence a lieu 1956 - 1950 = 6 ans après l'article de Turing et 1997 - 1956 = 41 ans avant la victoire de Deep Blue sur Kasparov.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le système d'exploitation Unix a été créé aux laboratoires Bell par Ken Thompson et Dennis Ritchie en :",
+      "o": [
+        "1969",
+        "1972",
+        "1977",
+        "1981"
+      ],
+      "r": 0,
+      "x": "Unix est né en 1969 aux laboratoires Bell et a inspiré Linux et macOS. Le langage C, créé en 1972, a servi à le réécrire. Calcul : Unix est né la même année qu'ARPANET, en 1969, et 1991 - 1969 = 22 ans avant le noyau Linux, qui s'inspire de son fonctionnement.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La technologie de réseau local Ethernet a été inventée par Robert Metcalfe chez Xerox en :",
+      "o": [
+        "1969",
+        "1973",
+        "1980",
+        "1985"
+      ],
+      "r": 1,
+      "x": "Robert Metcalfe a mis au point Ethernet en 1973 au centre de recherche Xerox PARC. La norme IEEE 802.3 qui en découle encadre toujours les réseaux filaires. Calcul : Ethernet a été inventé 1973 - 1969 = 4 ans après ARPANET, et ses débits sont passés d'environ 3 Mbit/s pour le prototype à 10 Gbit/s et plus aujourd'hui.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'ordinateur personnel IBM PC, qui a imposé le standard des PC, a été lancé en :",
+      "o": [
+        "1975",
+        "1977",
+        "1981",
+        "1984"
+      ],
+      "r": 2,
+      "x": "L'IBM PC est sorti en 1981 avec le système MS-DOS de Microsoft. L'année 1984 correspond au lancement du Macintosh d'Apple. Le terme PC, pour Personal Computer, désigne depuis tous les ordinateurs compatibles avec ce modèle, qui fonctionnent aujourd'hui principalement sous Windows.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le premier ordinateur Macintosh d'Apple, doté d'une interface graphique et d'une souris, a été lancé en :",
+      "o": [
+        "1976",
+        "1979",
+        "1981",
+        "1984"
+      ],
+      "r": 3,
+      "x": "Le Macintosh est sorti en janvier 1984 et a popularisé l'interface graphique avec souris. L'année 1976 correspond à la fondation d'Apple. Calcul : le Macintosh est sorti 1984 - 1981 = 3 ans après l'IBM PC et 1984 - 1976 = 8 ans après la fondation d'Apple, et il a précédé d'un an la première version de Windows.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le premier SMS de l'histoire a été envoyé le :",
+      "o": [
+        "3 décembre 1992",
+        "15 mars 1994",
+        "1er janvier 1996",
+        "9 janvier 1999"
+      ],
+      "r": 0,
+      "x": "Le premier SMS, « Merry Christmas », a été envoyé au Royaume-Uni le 3 décembre 1992. Il a été transmis d'un ordinateur vers un téléphone mobile. Calcul : un SMS est limité à 160 caractères avec l’encodage GSM-7, car il dispose de 140 octets et chaque caractère est codé sur 7 bits : 140 x 8 ÷ 7 = 160.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le premier appel sur un réseau GSM a été passé en Finlande en :",
+      "o": [
+        "1987",
+        "1991",
+        "1995",
+        "1999"
+      ],
+      "r": 1,
+      "x": "Le premier appel GSM a eu lieu en Finlande le 1er juillet 1991. Le GSM est devenu la norme de la 2G dans le monde entier. Calcul : environ un an et demi sépare le premier appel GSM de juillet 1991 du premier SMS de décembre 1992, deux étapes fondatrices de la téléphonie mobile numérique.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Mosaic, navigateur graphique qui a popularisé le Web auprès du grand public, est sorti en :",
+      "o": [
+        "1989",
+        "1991",
+        "1993",
+        "1995"
+      ],
+      "r": 2,
+      "x": "Mosaic, développé au centre NCSA aux États-Unis, est sorti en 1993 et affichait images et texte sur la même page. Internet Explorer de Microsoft est apparu en 1995. Calcul : Mosaic sort l'année même où le CERN place le Web dans le domaine public, soit 1993 - 1989 = 4 ans après la proposition de Tim Berners-Lee.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La société de commerce en ligne Amazon a été fondée par Jeff Bezos en :",
+      "o": [
+        "1989",
+        "1991",
+        "1992",
+        "1994"
+      ],
+      "r": 3,
+      "x": "Jeff Bezos a fondé Amazon en 1994, d'abord comme librairie en ligne. Google a été créé quatre ans plus tard, en 1998. Calcul : Amazon a été fondée 1998 - 1994 = 4 ans avant Google et 2004 - 1994 = 10 ans avant Facebook, et elle est aussi devenue un leader mondial du cloud.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le langage de programmation Java, créé par Sun Microsystems, a été rendu public en :",
+      "o": [
+        "1995",
+        "1998",
+        "2001",
+        "2004"
+      ],
+      "r": 0,
+      "x": "Java a été publié en 1995 avec le principe « écrire une fois, exécuter partout ». JavaScript, malgré son nom, est un langage différent apparu la même année. Un programme Java est compilé en un code intermédiaire exécuté par une machine virtuelle Java, ce qui lui permet de fonctionner sur Windows, Linux ou macOS sans modification.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'ordinateur Deep Blue d'IBM a battu le champion du monde d'échecs Garry Kasparov en :",
+      "o": [
+        "1989",
+        "1997",
+        "2005",
+        "2011"
+      ],
+      "r": 1,
+      "x": "Deep Blue a remporté le match contre Kasparov en mai 1997. En 2016, le programme AlphaGo a battu un champion de jeu de go. Calcul : 2016 - 1997 = 19 ans séparent la victoire de Deep Blue de celle d'AlphaGo, le jeu de go étant beaucoup plus complexe que les échecs en nombre de positions possibles.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le programme AlphaGo a battu le champion de jeu de go Lee Sedol en :",
+      "o": [
+        "2006",
+        "2011",
+        "2016",
+        "2020"
+      ],
+      "r": 2,
+      "x": "AlphaGo, développé par DeepMind, a battu Lee Sedol en mars 2016. Les échecs avaient été conquis par Deep Blue dès 1997. AlphaGo a remporté la série 4 victoires à 1, et contrairement à Deep Blue, il s'appuyait sur l'apprentissage automatique à partir de parties jouées, et non sur des règles programmées à la main.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le réseau social Twitter, aujourd'hui appelé X, a été lancé en :",
+      "o": [
+        "2000",
+        "2002",
+        "2004",
+        "2006"
+      ],
+      "r": 3,
+      "x": "Twitter a été lancé en 2006 avec des messages courts de 140 caractères. Il a été rebaptisé X en 2023 après son rachat par Elon Musk. Calcul : la limite des messages est passée de 140 à 280 caractères en 2017, soit le double, et Elon Musk a racheté la plateforme en 2022 pour environ 44 milliards de dollars.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "L'application de messagerie WhatsApp, très utilisée au Burkina Faso, a été lancée en :",
+      "o": [
+        "2009",
+        "2011",
+        "2013",
+        "2015"
+      ],
+      "r": 0,
+      "x": "WhatsApp a été créée en 2009 par Jan Koum et Brian Acton. Elle a été rachetée par Facebook en 2014. Calcul : WhatsApp a été rachetée 2014 - 2009 = 5 ans après sa création, et la messagerie compte aujourd'hui plus de 2 milliards d'utilisateurs dans le monde.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "En 2014, Facebook a racheté l'application WhatsApp pour environ :",
+      "o": [
+        "1 milliard de dollars",
+        "19 milliards de dollars",
+        "44 milliards de dollars",
+        "100 milliards de dollars"
+      ],
+      "r": 1,
+      "x": "Le rachat de WhatsApp a coûté environ 19 milliards de dollars à Facebook. Le montant de 44 milliards correspond au rachat de Twitter par Elon Musk en 2022. Calcul : rapporté aux quelque 450 millions d'utilisateurs de WhatsApp à l'époque, le prix représentait environ 19 000 000 000 ÷ 450 000 000 ≈ 42 dollars par utilisateur.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "La cryptomonnaie Bitcoin a été lancée en 2009 par une personne ou un groupe connu sous le pseudonyme :",
+      "o": [
+        "Vitalik Buterin",
+        "Hal Finney",
+        "Satoshi Nakamoto",
+        "Nick Szabo"
+      ],
+      "r": 2,
+      "x": "Satoshi Nakamoto a publié le principe du Bitcoin en 2008 puis lancé le réseau en 2009, sans que son identité soit connue. Vitalik Buterin est le fondateur d'Ethereum. Le nombre total de bitcoins est limité à 21 millions par le protocole, et la récompense des mineurs est divisée par deux environ tous les quatre ans, opération appelée halving.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le premier smartphone commercialisé sous le système Android, sorti en 2008, est le :",
+      "o": [
+        "Nokia 3310",
+        "Samsung Galaxy S",
+        "iPhone 3G",
+        "HTC Dream"
+      ],
+      "r": 3,
+      "x": "Le HTC Dream, aussi appelé T-Mobile G1, est sorti en 2008 comme premier téléphone Android. Le Samsung Galaxy S est apparu en 2010. Calcul : le HTC Dream est sorti 2008 - 2007 = 1 an après le premier iPhone et 2010 - 2008 = 2 ans avant le Samsung Galaxy S, et Android est aujourd'hui le système mobile le plus répandu.",
+      "_batchId": "informatique/2026-10-21/SERIE2"
+    },
+    {
+      "q": "Le mathématicien considéré comme le père de l'informatique théorique, pour son article de 1936 sur une machine de calcul universelle, est :",
+      "o": [
+        "John von Neumann",
+        "Charles Babbage",
+        "Alan Turing",
+        "Claude Shannon"
+      ],
+      "r": 2,
+      "x": "Alan Turing a décrit en 1936 une machine abstraite capable d'exécuter n'importe quel algorithme, base théorique de l'informatique. John von Neumann a défini en 1945 l'architecture des ordinateurs modernes, et Claude Shannon a fondé la théorie de l'information en 1948. Le prix Turing, souvent surnommé le « Nobel de l'informatique », porte son nom.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le premier disque dur commercialisé, l'IBM 350 RAMAC, lancé en 1956, avait une capacité d'environ :",
+      "o": [
+        "5 Mo",
+        "50 Mo",
+        "500 Mo",
+        "5 Go"
+      ],
+      "r": 0,
+      "x": "Le RAMAC d'IBM stockait environ 5 Mo sur 50 plateaux de 61 cm de diamètre et pesait près d'une tonne. Aujourd'hui, une simple clé USB de 64 Go contient environ 64 000 ÷ 5 = 12 800 fois plus de données. Contrairement à la mémoire vive, le disque dur conserve les données lorsque l'ordinateur est éteint.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La norme de connexion USB, publiée en 1996, est l'interface la plus utilisée pour brancher :",
+      "o": [
+        "les écrans à tube cathodique",
+        "les périphériques externes",
+        "les barrettes de mémoire vive",
+        "les processeurs sur la carte mère"
+      ],
+      "r": 1,
+      "x": "Le sigle USB signifie Universal Serial Bus : clés, souris, claviers, imprimantes et disques externes s'y branchent. Il a remplacé les anciens ports série et parallèle, aujourd'hui obsolètes. Les barrettes de mémoire vive et le processeur se fixent, eux, directement sur des emplacements dédiés de la carte mère.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La définition Full HD d'un écran correspond à :",
+      "o": [
+        "1 280 x 720 pixels",
+        "1 366 x 768 pixels",
+        "1 600 x 900 pixels",
+        "1 920 x 1 080 pixels"
+      ],
+      "r": 3,
+      "x": "Le Full HD affiche 1 920 x 1 080 = 2 073 600 pixels, soit environ 2,1 millions de points. La définition 1 280 x 720 correspond à la HD simple, soit 921 600 pixels, environ 2,25 fois moins. La définition ne doit pas être confondue avec la taille de l'écran, mesurée en pouces sur sa diagonale.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le World Wide Web a été inventé en 1989, au Centre européen pour la recherche nucléaire (CERN), par :",
+      "o": [
+        "Vinton Cerf",
+        "Tim Berners-Lee",
+        "Robert Kahn",
+        "Ray Tomlinson"
+      ],
+      "r": 1,
+      "x": "Le Britannique Tim Berners-Lee a proposé en 1989 un système de documents hypertextes reliés entre eux, consultables par Internet. Vinton Cerf et Robert Kahn ont conçu le protocole TCP/IP en 1974, et Ray Tomlinson a envoyé le premier courriel avec @ en 1971. Le Web n'est donc qu'un service parmi d'autres fonctionnant sur Internet.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Internet, qui comptait plus de 5 milliards d'utilisateurs en 2024, se définit comme :",
+      "o": [
+        "un réseau mondial de réseaux",
+        "un logiciel de navigation web",
+        "un câble sous-marin intercontinental",
+        "un moteur de recherche universel"
+      ],
+      "r": 0,
+      "x": "Internet interconnecte des millions de réseaux grâce aux protocoles TCP/IP et supporte le Web, la messagerie, le streaming ou le cloud. Le navigateur n'est qu'un logiciel qui permet de consulter le Web, et les câbles sous-marins ne sont qu'une partie de son infrastructure. Selon l'UIT, environ 5,5 milliards de personnes l'utilisaient en 2024.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le Minitel, service télématique français précurseur des services en ligne, a été lancé commercialement en :",
+      "o": [
+        "1972",
+        "1977",
+        "1982",
+        "1990"
+      ],
+      "r": 2,
+      "x": "Le Minitel a été généralisé à partir de 1982 en France et permettait de consulter l'annuaire ou de réserver un billet via le réseau téléphonique. Il a été définitivement arrêté le 30 juin 2012, soit 2012 - 1982 = 30 ans de service. Il a précédé de sept ans l'invention du Web, proposée en 1989.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le premier tableur pour micro-ordinateur, VisiCalc, est apparu en :",
+      "o": [
+        "1969",
+        "1979",
+        "1985",
+        "1993"
+      ],
+      "r": 1,
+      "x": "VisiCalc, sorti en 1979 sur l'Apple II, a été le premier tableur grand public, logiciel qui organise les données en lignes et colonnes pour calculer. Microsoft Excel est apparu en 1985 sur Macintosh, et LibreOffice Calc en est aujourd'hui une alternative libre. Le tableur reste l'outil d'analyse de données le plus utilisé dans les administrations.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le rôle fondamental d'un système d'exploitation est de :",
+      "o": [
+        "créer des documents bureautiques",
+        "naviguer sur Internet",
+        "gérer le matériel et les logiciels",
+        "protéger contre les virus"
+      ],
+      "r": 2,
+      "x": "Le système d'exploitation gère le processeur, la mémoire, les fichiers et les périphériques, et sert d'intermédiaire entre l'utilisateur, les applications et le matériel. La création de documents relève d'un logiciel d'application comme Word. Windows, macOS, Linux, Android et iOS sont les systèmes d'exploitation les plus répandus.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Parmi ces systèmes d'exploitation, celui qui est distribué sous licence libre GNU GPL est :",
+      "o": [
+        "Windows 11",
+        "macOS",
+        "iOS",
+        "Linux"
+      ],
+      "r": 3,
+      "x": "Le noyau Linux, publié en 1991 par Linus Torvalds, est distribué sous licence GNU GPL et son code source est librement accessible. Windows, macOS et iOS sont des systèmes propriétaires dont le code reste fermé. Linux équipe la grande majorité des serveurs web et sert de base au système Android.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La partie centrale d'un système d'exploitation, qui gère directement la mémoire et le processeur, s'appelle :",
+      "o": [
+        "le noyau",
+        "le bureau",
+        "le pilote",
+        "le shell"
+      ],
+      "r": 0,
+      "x": "Le noyau, ou kernel, contrôle directement le matériel et répartit les ressources entre les programmes. Le shell est l'interpréteur de commandes qui permet à l'utilisateur de dialoguer avec le système, et le bureau est l'interface graphique. Linux, créé en 1991, est à proprement parler un noyau autour duquel se bâtissent les distributions.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La capacité d'un système d'exploitation à exécuter plusieurs programmes en même temps s'appelle :",
+      "o": [
+        "le multicœur",
+        "le multitâche",
+        "le multiposte",
+        "le multiplexage"
+      ],
+      "r": 1,
+      "x": "Le multitâche répartit le temps du processeur entre plusieurs programmes, en basculant entre eux des centaines de fois par seconde, ce qui donne l'illusion de la simultanéité. Le multicœur est une caractéristique matérielle du processeur, qui permet un vrai parallélisme. On peut ainsi écouter de la musique tout en rédigeant un document Word.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "L'antivirus intégré gratuitement à Windows 10 et Windows 11 s'appelle :",
+      "o": [
+        "Norton Security",
+        "McAfee Total",
+        "Microsoft Defender",
+        "Kaspersky Free"
+      ],
+      "r": 2,
+      "x": "Microsoft Defender, d'abord appelé Windows Defender, assure une protection en temps réel sans installation supplémentaire. Norton, McAfee et Kaspersky sont des solutions d'éditeurs tiers, souvent payantes. Quel que soit l'antivirus, ses définitions de virus doivent être mises à jour régulièrement pour reconnaître les nouvelles menaces.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Sous Linux, les fichiers de configuration du système sont rangés dans le répertoire :",
+      "o": [
+        "/home",
+        "/bin",
+        "/tmp",
+        "/etc"
+      ],
+      "r": 3,
+      "x": "Le répertoire /etc contient les fichiers de configuration du système, comme la liste des utilisateurs. Le répertoire /home héberge les dossiers personnels, /bin les commandes essentielles et /tmp les fichiers temporaires. Tous partent de la racine, notée simplement /, point de départ de l'arborescence Linux.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Sous Linux, la commande qui affiche le contenu d'un répertoire est :",
+      "o": [
+        "rm",
+        "cd",
+        "pwd",
+        "ls"
+      ],
+      "r": 3,
+      "x": "La commande ls, pour list, affiche les fichiers et dossiers du répertoire courant, et ls -l en donne le détail. La commande cd change de répertoire, pwd affiche le répertoire où l'on se trouve et rm supprime des fichiers. Ces commandes de base sont héritées du système Unix créé en 1969.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Sous Linux, la commande chmod 755 attribue au propriétaire d'un fichier les droits :",
+      "o": [
+        "lecture seule",
+        "lecture et écriture",
+        "lecture, écriture et exécution",
+        "exécution seule"
+      ],
+      "r": 2,
+      "x": "Chaque droit a une valeur : lecture r = 4, écriture w = 2 et exécution x = 1, donc 7 = 4 + 2 + 1 donne rwx au propriétaire. Les deux chiffres 5 = 4 + 1 donnent lecture et exécution au groupe et aux autres utilisateurs. La commande chmod 644 donnerait lecture et écriture au propriétaire, et lecture seule aux autres.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Sous Linux, la commande qui recherche un mot dans le contenu d'un fichier texte est :",
+      "o": [
+        "find",
+        "cat",
+        "tail",
+        "grep"
+      ],
+      "r": 3,
+      "x": "La commande grep \"erreur\" journal.log affiche toutes les lignes du fichier contenant le mot « erreur ». La commande find recherche des fichiers par leur nom, cat affiche tout le contenu et tail n'en affiche que les dernières lignes. L'outil grep a été écrit par Ken Thompson pour Unix au début des années 1970.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Sous Linux, la commande sudo permet de :",
+      "o": [
+        "supprimer un compte utilisateur",
+        "changer de répertoire courant",
+        "afficher l'espace disque libre",
+        "exécuter une commande en administrateur"
+      ],
+      "r": 3,
+      "x": "La commande sudo, pour superuser do, exécute une seule commande avec les droits du superutilisateur root, après saisie du mot de passe. Elle évite de travailler en permanence sous le compte root, ce qui limite les risques d'erreur grave. L'espace disque libre s'affiche, lui, avec la commande df -h.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Sous Linux, la commande mv ancien.txt nouveau.txt permet de :",
+      "o": [
+        "copier le fichier",
+        "compresser le fichier",
+        "supprimer le fichier",
+        "renommer le fichier"
+      ],
+      "r": 3,
+      "x": "La commande mv, pour move, déplace un fichier ou le renomme lorsque la destination est un nouveau nom dans le même dossier. La commande cp copie un fichier en gardant l'original, et rm le supprime. Ainsi, mv rapport.txt /home/issa/ déplace le fichier dans le dossier personnel de l'utilisateur issa.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La défragmentation, utile sur un disque dur magnétique, consiste à :",
+      "o": [
+        "effacer les fichiers temporaires",
+        "formater toutes les partitions",
+        "regrouper les morceaux de fichiers",
+        "chiffrer les données sensibles"
+      ],
+      "r": 2,
+      "x": "Avec le temps, un fichier peut être éclaté en plusieurs morceaux dispersés, et la défragmentation les regroupe pour accélérer la lecture par la tête du disque. Elle est inutile et même déconseillée sur un SSD, qui n'a pas de pièce mobile. Windows planifie automatiquement cette optimisation, par défaut chaque semaine.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Les normes IEEE 802.11, publiées à partir de 1997, sont connues du grand public sous le nom de :",
       "o": [
         "Bluetooth",
+        "Ethernet",
         "NFC",
-        "Infrarouge",
         "Wi-Fi"
       ],
       "r": 3,
-      "x": "Le Wi-Fi est la technologie sans fil standard pour l'accès à Internet dans les environnements domestiques et professionnels. Bluetooth est limité en portée et débit, NFC en distance, et l'infrarouge est devenu obsolète."
+      "x": "Le Wi-Fi est la technologie sans fil standard d'accès à Internet dans les bureaux et les domiciles, sur une portée de quelques dizaines de mètres. Ethernet correspond à la norme filaire IEEE 802.3, et Bluetooth relie des appareils proches avec un faible débit. L'association Wi-Fi Alliance, qui certifie les équipements, a été créée en 1999.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel protocole permet le transfert sécurisé de fichiers entre un client et un serveur sur un réseau ?",
+      "q": "Le protocole qui transfère des fichiers de manière chiffrée grâce au protocole SSH est :",
       "o": [
         "SFTP",
         "HTTP",
         "POP3",
-        "IMAP"
+        "SNMP"
       ],
       "r": 0,
-      "x": "SFTP (Secure File Transfer Protocol) transfère des fichiers en les chiffrant via SSH. HTTP est un protocole de navigation web, POP3 et IMAP servent à la réception des courriels électroniques."
+      "x": "Le SFTP, pour SSH File Transfer Protocol, chiffre les identifiants et les données, contrairement au FTP classique qui les transmet en clair. Il utilise par défaut le port 22 de SSH, alors que le FTP utilise le port 21. HTTP sert à la navigation web et POP3 à la réception des courriels.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Que signifie l'acronyme URL dans le domaine d'Internet ?",
+      "q": "Le World Wide Web se définit comme :",
       "o": [
-        "Universal Reference Link",
-        "Uniform Resource Locator",
-        "Unified Remote Location",
-        "Universal Resource Loader"
+        "un réseau de câbles internationaux",
+        "un système de pages hypertextes",
+        "un protocole d'envoi de courriels",
+        "un annuaire des adresses IP"
       ],
       "r": 1,
-      "x": "URL signifie Uniform Resource Locator. C'est l'adresse permettant de localiser une ressource sur Internet. Elle comprend le protocole, le nom de domaine et le chemin de la ressource (ex. : https://www.exemple.com/page)."
+      "x": "Le Web est un ensemble de pages reliées par des liens hypertextes et consultées avec un navigateur grâce au protocole HTTP. Il fonctionne sur Internet, qui en est l'infrastructure, mais ne se confond pas avec lui. L'annuaire qui traduit les noms de domaine en adresses IP est le système DNS.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel protocole est utilisé pour l'envoi des courriers électroniques ?",
+      "q": "La quantité maximale de données qu'une connexion peut transmettre par seconde s'appelle :",
       "o": [
-        "POP3",
-        "IMAP",
-        "SMTP",
-        "FTP"
-      ],
-      "r": 2,
-      "x": "SMTP (Simple Mail Transfer Protocol) est le protocole standard pour l'envoi de courriels entre serveurs de messagerie. POP3 et IMAP servent à la réception des courriels, et FTP est destiné au transfert de fichiers."
-    },
-    {
-      "q": "Qu'est-ce qu'un navigateur web ?",
-      "o": [
-        "Un logiciel permettant de créer et publier des sites Internet",
-        "Un programme utilisé pour envoyer et recevoir des courriels",
-        "Un outil de gestion des réseaux locaux d'entreprise",
-        "Un logiciel permettant d'accéder et de consulter des pages web"
-      ],
-      "r": 3,
-      "x": "Un navigateur web (Firefox, Chrome, Edge) interprète et affiche les pages HTML récupérées sur les serveurs via HTTP ou HTTPS. Il ne crée pas de sites, ne gère pas les courriels et ne pilote pas les réseaux locaux."
-    },
-    {
-      "q": "Que désigne l'expression World Wide Web ?",
-      "o": [
-        "Un système mondial de documents hypertextes interconnectés accessibles via Internet",
-        "Un réseau privé réservé aux institutions gouvernementales mondiales",
-        "Un protocole de communication entre serveurs et navigateurs web",
-        "Un ensemble de câbles sous-marins reliant les continents entre eux"
-      ],
-      "r": 0,
-      "x": "Le World Wide Web est un système d'information mondial basé sur des documents hypertextes reliés par des liens, accessibles via Internet. Il a été inventé par Tim Berners-Lee en 1989. Internet est l'infrastructure réseau sur laquelle le Web repose."
-    },
-    {
-      "q": "Qu'est-ce qu'un cookie dans le contexte de la navigation sur Internet ?",
-      "o": [
-        "Un virus téléchargé lors de la visite d'un site non sécurisé",
-        "Un fichier stocké par le navigateur contenant des informations sur l'utilisateur",
-        "Un protocole de sécurisation des échanges en ligne",
-        "Un logiciel publicitaire s'installant à l'insu de l'utilisateur"
+        "la latence",
+        "la bande passante",
+        "la gigue",
+        "la portée"
       ],
       "r": 1,
-      "x": "Un cookie est un petit fichier texte enregistré par le navigateur sur l'ordinateur de l'utilisateur pour mémoriser ses préférences, sa session ou son comportement de navigation. Les cookies ne sont pas des virus mais posent des questions de vie privée."
+      "x": "La bande passante s'exprime en bits par seconde : une connexion de 20 Mbit/s transmet au maximum 20 ÷ 8 = 2,5 Mo par seconde. La latence mesure, elle, le délai de transmission d'un paquet, en millisecondes. Une connexion peut donc avoir une grande bande passante et une latence élevée, comme une liaison par satellite.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel protocole sécurise les échanges entre un navigateur et un serveur web grâce au chiffrement TLS ?",
+      "q": "Le sigle TCP/IP signifie :",
       "o": [
-        "HTTP",
-        "FTP",
-        "HTTPS",
-        "SMTP"
-      ],
-      "r": 2,
-      "x": "HTTPS (HyperText Transfer Protocol Secure) est la version sécurisée de HTTP. Il utilise TLS pour chiffrer les données échangées, garantissant confidentialité et intégrité. Un cadenas dans la barre d'adresse indique une connexion HTTPS."
-    },
-    {
-      "q": "Qu'est-ce qu'un moteur de recherche ?",
-      "o": [
-        "Un logiciel permettant de créer et gérer un site web",
-        "Un protocole permettant d'accélérer la connexion Internet",
-        "Un programme analysant et filtrant le contenu des courriels entrants",
-        "Un outil indexant les pages web et permettant d'y rechercher des informations"
-      ],
-      "r": 3,
-      "x": "Un moteur de recherche (Google, Bing, Yahoo) parcourt et indexe les pages web à l'aide de robots, puis permet de trouver des informations par mots-clés. Il ne crée pas de sites ni ne gère les connexions Internet."
-    },
-    {
-      "q": "Qu'est-ce qu'un virus informatique ?",
-      "o": [
-        "Un programme malveillant capable de se reproduire et d'infecter d'autres fichiers",
-        "Un logiciel qui ralentit volontairement la connexion Internet",
-        "Un outil de surveillance du trafic sur le réseau",
-        "Un programme de compression de données corrompues"
-      ],
-      "r": 0,
-      "x": "Un virus informatique est un code malveillant qui se réplique en s'attachant à d'autres fichiers. Il peut endommager le système ou voler des données. Il se distingue du ver, qui se propage seul sans avoir besoin d'un fichier hôte."
-    },
-    {
-      "q": "Que signifie l'acronyme VPN dans le domaine de la cybersécurité ?",
-      "o": [
-        "Verified Private Node",
-        "Virtual Private Network",
-        "Virtual Protocol Navigator",
-        "Very Protected Navigation"
-      ],
-      "r": 1,
-      "x": "VPN signifie Virtual Private Network (réseau privé virtuel). Il crée un tunnel chiffré entre l'appareil de l'utilisateur et un serveur distant, masquant l'adresse IP et sécurisant les communications, notamment sur les réseaux Wi-Fi publics."
-    },
-    {
-      "q": "Qu'est-ce que le chiffrement des données ?",
-      "o": [
-        "La compression des fichiers pour réduire l'espace de stockage occupé",
-        "La suppression définitive et irréversible des données sensibles",
-        "La conversion des données en un format illisible sans clé de déchiffrement",
-        "La duplication des données sur un serveur de sauvegarde distant"
-      ],
-      "r": 2,
-      "x": "Le chiffrement transforme des données lisibles en données codées grâce à un algorithme et une clé. Seul le détenteur de la clé peut les déchiffrer. C'est le fondement de la sécurité des communications numériques."
-    },
-    {
-      "q": "Quel type de logiciel malveillant se déguise en programme légitime pour tromper l'utilisateur ?",
-      "o": [
-        "Un ver informatique",
-        "Un logiciel espion",
-        "Un logiciel publicitaire",
-        "Un cheval de Troie"
-      ],
-      "r": 3,
-      "x": "Un cheval de Troie se présente comme un programme utile pour inciter l'utilisateur à l'installer. Il peut ouvrir une porte dérobée, voler des données ou installer d'autres malwares. Il ne se réplique pas, contrairement au virus."
-    },
-    {
-      "q": "Qu'est-ce que l'authentification à deux facteurs ?",
-      "o": [
-        "Une méthode de sécurité exigeant deux formes d'identification distinctes pour accéder à un compte",
-        "Un système antivirus utilisant deux moteurs de détection simultanément",
-        "Un protocole réseau requérant deux connexions successives pour chaque session",
-        "Un système de sauvegarde utilisant deux disques durs en parallèle"
-      ],
-      "r": 0,
-      "x": "L'authentification à deux facteurs (2FA) combine deux éléments distincts : quelque chose que l'utilisateur connaît (mot de passe) et quelque chose qu'il possède (code SMS, application). Elle renforce significativement la sécurité des comptes."
-    },
-    {
-      "q": "Qu'est-ce que le hameçonnage (phishing) ?",
-      "o": [
-        "Une attaque saturant un serveur pour le rendre inaccessible aux utilisateurs",
-        "Une tentative de vol d'informations via de faux messages ou sites frauduleux",
-        "Un logiciel qui surveille et enregistre les activités d'un utilisateur",
-        "Une intrusion dans un système via une faille du code source du logiciel"
-      ],
-      "r": 1,
-      "x": "Le hameçonnage consiste à usurper l'identité d'un organisme de confiance par courriel ou faux site web pour soutirer des identifiants, mots de passe ou numéros bancaires à la victime."
-    },
-    {
-      "q": "Quelle pratique consiste à tester légalement la sécurité d'un système informatique avec l'autorisation de son propriétaire ?",
-      "o": [
-        "L'espionnage industriel numérique",
-        "La surveillance passive du trafic réseau",
-        "Le test d'intrusion (pentest)",
-        "L'analyse forensique après un incident de sécurité"
-      ],
-      "r": 2,
-      "x": "Le test d'intrusion est une démarche autorisée visant à simuler des attaques pour identifier les vulnérabilités d'un système. Il est réalisé par des experts en sécurité mandatés par l'organisation propriétaire du système testé."
-    },
-    {
-      "q": "Que désigne le terme RGPD dans le domaine de la protection des données ?",
-      "o": [
-        "Un protocole réseau de sécurisation des échanges numériques en Europe",
-        "Un standard de chiffrement adopté par les entreprises de l'Union Européenne",
-        "Un antivirus développé et certifié par les autorités de l'Union Européenne",
-        "Un règlement européen encadrant la collecte et le traitement des données personnelles"
-      ],
-      "r": 3,
-      "x": "Le RGPD (Règlement Général sur la Protection des Données), entré en vigueur en 2018, encadre la collecte, le traitement et la conservation des données personnelles en Europe. Il accorde des droits renforcés aux citoyens sur leurs données."
-    },
-    {
-      "q": "Que signifie l'acronyme SGBD dans le domaine informatique ?",
-      "o": [
-        "Système de Gestion de Base de Données",
-        "Serveur de Gestion de Bases Distribuées",
-        "Structure Globale de Bases de Données",
-        "Service de Gestion des Bases de Données"
-      ],
-      "r": 0,
-      "x": "SGBD signifie Système de Gestion de Base de Données. C'est un logiciel permettant de créer, gérer et interroger des bases de données. MySQL, Oracle, PostgreSQL et SQL Server sont des exemples courants de SGBD."
-    },
-    {
-      "q": "Dans une base de données relationnelle, quel élément identifie de manière unique chaque enregistrement d'une table ?",
-      "o": [
-        "L'index secondaire",
-        "La clé primaire",
-        "La clé étrangère",
-        "L'attribut calculé"
-      ],
-      "r": 1,
-      "x": "La clé primaire est un champ dont la valeur est unique pour chaque enregistrement d'une table. Elle garantit l'unicité et l'intégrité des données. La clé étrangère relie une table à une autre, l'index secondaire accélère les recherches."
-    },
-    {
-      "q": "Quelle commande SQL est utilisée pour extraire des données d'une table ?",
-      "o": [
-        "INSERT",
-        "DELETE",
-        "SELECT",
-        "UPDATE"
-      ],
-      "r": 2,
-      "x": "La commande SELECT permet d'interroger une base de données et d'extraire les données répondant à des critères définis. INSERT ajoute des enregistrements, UPDATE modifie des données existantes, et DELETE supprime des enregistrements."
-    },
-    {
-      "q": "Qu'est-ce qu'une clé étrangère dans une base de données relationnelle ?",
-      "o": [
-        "Une clé de chiffrement protégeant les données sensibles d'une table",
-        "Un identifiant unique attribué automatiquement à chaque enregistrement",
-        "Un champ dont la valeur est calculée à partir d'autres colonnes de la table",
-        "Un champ faisant référence à la clé primaire d'une autre table"
-      ],
-      "r": 3,
-      "x": "Une clé étrangère est un champ d'une table qui référence la clé primaire d'une autre table, permettant d'établir des liens entre les tables. Elle garantit l'intégrité référentielle et modélise les relations entre entités."
-    },
-    {
-      "q": "Qu'est-ce qu'une base de données NoSQL ?",
-      "o": [
-        "Un système de gestion de données non strictement relationnelles adapté aux volumes massifs",
-        "Une base de données fonctionnant uniquement hors connexion réseau",
-        "Une base de données conçue exclusivement pour les grandes entreprises multinationales",
-        "Une base de données développée par Microsoft sans recours au langage SQL"
-      ],
-      "r": 0,
-      "x": "Les bases de données NoSQL stockent les données sans schéma fixe (documents, clés-valeurs, graphes). Elles sont adaptées au Big Data et aux applications nécessitant une grande scalabilité. MongoDB et Cassandra en sont des exemples."
-    },
-    {
-      "q": "Dans Microsoft Word, quel raccourci clavier annule la dernière action effectuée ?",
-      "o": [
-        "Ctrl + Y",
-        "Ctrl + Z",
-        "Ctrl + X",
-        "Ctrl + V"
-      ],
-      "r": 1,
-      "x": "Ctrl + Z annule la dernière action dans Word et la plupart des applications Windows. Ctrl + Y rétablit une action annulée, Ctrl + X coupe une sélection et Ctrl + V colle le contenu du presse-papiers."
-    },
-    {
-      "q": "Dans Microsoft Excel, quelle formule calcule la somme de toutes les valeurs de la plage A1 à A10 ?",
-      "o": [
-        "=MOYENNE(A1:A10)",
-        "=MAX(A1:A10)",
-        "=SOMME(A1:A10)",
-        "=NB(A1:A10)"
-      ],
-      "r": 2,
-      "x": "La fonction SOMME additionne toutes les valeurs d'une plage de cellules. MOYENNE calcule la moyenne arithmétique, MAX retourne la valeur la plus élevée, et NB compte le nombre de cellules contenant des valeurs numériques."
-    },
-    {
-      "q": "Dans Microsoft Excel, que réalise la fonction NB.SI ?",
-      "o": [
-        "Elle additionne les cellules d'une plage répondant à un critère",
-        "Elle calcule la moyenne des cellules non vides d'une plage",
-        "Elle recherche une valeur dans la première colonne d'un tableau",
-        "Elle compte les cellules d'une plage répondant à un critère spécifique"
-      ],
-      "r": 3,
-      "x": "NB.SI compte le nombre de cellules d'une plage satisfaisant un critère donné. SOMME.SI additionne selon un critère, MOYENNE.SI calcule une moyenne conditionnelle, et RECHERCHEV effectue une recherche verticale dans un tableau."
-    },
-    {
-      "q": "Dans Microsoft PowerPoint, quel mode d'affichage permet de visualiser toutes les diapositives sous forme de miniatures pour les réorganiser ?",
-      "o": [
-        "Le mode Trieuse de diapositives",
-        "Le mode Présentateur",
-        "Le mode Lecture",
-        "Le mode Plan"
-      ],
-      "r": 0,
-      "x": "Le mode Trieuse de diapositives affiche toutes les diapositives en miniatures, permettant leur réorganisation par glisser-déposer. Le mode Présentateur s'utilise lors de la projection, le mode Lecture affiche en plein écran, et le mode Plan montre le texte hiérarchisé."
-    },
-    {
-      "q": "Dans Microsoft Word, quel outil permet de générer automatiquement des courriers personnalisés à partir d'une liste de contacts ?",
-      "o": [
-        "Le suivi des modifications",
-        "Le publipostage",
-        "La table des matières",
-        "Le correcteur orthographique"
-      ],
-      "r": 1,
-      "x": "Le publipostage fusionne un document modèle avec une source de données (liste Excel ou Access) pour générer automatiquement des courriers ou étiquettes personnalisés pour chaque destinataire de la liste."
-    },
-    {
-      "q": "Dans Microsoft Excel, que désigne une référence absolue comme $A$1 dans une formule ?",
-      "o": [
-        "Une cellule dont la valeur est verrouillée et ne peut pas être modifiée",
-        "Une cellule appartenant à une plage nommée définie par l'utilisateur",
-        "Une cellule dont l'adresse ne change pas lors de la copie de la formule",
-        "Une cellule liée à une feuille de calcul externe au classeur"
-      ],
-      "r": 2,
-      "x": "Une référence absolue ($A$1) fixe les coordonnées d'une cellule. Lors de la copie d'une formule, l'adresse ne change pas. Une référence relative (A1) s'adapte automatiquement à la nouvelle position lors de la copie."
-    },
-    {
-      "q": "Dans Microsoft PowerPoint, que permet la fonctionnalité Transition ?",
-      "o": [
-        "Modifier la mise en page de toutes les diapositives simultanément",
-        "Insérer des animations sur les objets d'une diapositive",
-        "Appliquer un thème visuel cohérent à l'ensemble de la présentation",
-        "Définir un effet visuel lors du passage d'une diapositive à la suivante"
-      ],
-      "r": 3,
-      "x": "Les transitions sont des effets visuels appliqués au changement de diapositive. Elles diffèrent des animations, qui s'appliquent aux objets à l'intérieur d'une diapositive. On peut régler la durée et le déclencheur de chaque transition."
-    },
-    {
-      "q": "Dans Microsoft Word, quel outil génère automatiquement la liste des titres du document avec leurs numéros de page ?",
-      "o": [
-        "La table des matières automatique",
-        "Le renvoi automatique",
-        "Le signet de navigation",
-        "Le pied de page dynamique"
-      ],
-      "r": 0,
-      "x": "La table des matières automatique collecte tous les titres formatés avec les styles Titre 1, Titre 2, etc., et génère une liste paginée mise à jour en un clic. Elle facilite la navigation dans les documents administratifs longs."
-    },
-    {
-      "q": "Dans Microsoft Excel, quelle fonction recherche une valeur dans la première colonne d'un tableau et retourne une valeur correspondante dans la même ligne ?",
-      "o": [
-        "=INDEX()",
-        "=RECHERCHEV()",
-        "=EQUIV()",
-        "=SIERREUR()"
-      ],
-      "r": 1,
-      "x": "RECHERCHEV (recherche verticale) cherche une valeur dans la première colonne d'un tableau et retourne la valeur d'une colonne spécifiée dans la même ligne. INDEX et EQUIV sont souvent combinés pour des recherches plus flexibles."
-    },
-    {
-      "q": "Quel est le format de fichier natif des classeurs Microsoft Excel depuis la version 2007 ?",
-      "o": [
-        ".xls",
-        ".ods",
-        ".xlsx",
-        ".csv"
-      ],
-      "r": 2,
-      "x": "Depuis Office 2007, le format natif d'Excel est .xlsx, basé sur le standard XML. L'ancien format .xls date d'avant 2007, .ods est le format de LibreOffice Calc, et .csv est un format texte universel sans mise en forme."
-    },
-    {
-      "q": "Qu'est-ce que le machine learning (apprentissage automatique) ?",
-      "o": [
-        "Un programme fonctionnant sans système d'exploitation",
-        "Un langage de programmation dédié aux interfaces graphiques",
-        "Un protocole permettant à des machines de communiquer sur un réseau",
-        "Une technique permettant aux systèmes d'apprendre à partir de données"
-      ],
-      "r": 3,
-      "x": "Le machine learning est une branche de l'IA où les algorithmes apprennent à partir de données d'entraînement pour effectuer des prédictions ou prendre des décisions, sans être explicitement programmés pour chaque tâche."
-    },
-    {
-      "q": "Qu'est-ce que l'intelligence artificielle générative ?",
-      "o": [
-        "Un type d'IA capable de créer des contenus originaux tels que textes, images et sons",
-        "Un algorithme spécialisé dans la détection de virus et de logiciels malveillants",
-        "Un système d'IA fonctionnant uniquement à partir de règles prédéfinies par des experts",
-        "Un programme d'optimisation des ressources matérielles d'un ordinateur"
-      ],
-      "r": 0,
-      "x": "L'IA générative produit des contenus inédits (textes, images, musique, code) à partir de grandes quantités de données d'entraînement. Des outils comme ChatGPT ou Midjourney illustrent cette technologie, distincte de l'IA basée sur des règles fixes."
-    },
-    {
-      "q": "Quel terme désigne la capacité d'un programme à comprendre, analyser et générer du langage humain ?",
-      "o": [
-        "La vision par ordinateur",
-        "Le traitement automatique du langage naturel",
-        "L'apprentissage par renforcement",
-        "La reconnaissance de formes géométriques"
-      ],
-      "r": 1,
-      "x": "Le traitement automatique du langage naturel (TALN ou NLP) permet aux machines de comprendre et générer le langage humain. Il est à la base des assistants vocaux, des chatbots et des traducteurs automatiques."
-    },
-    {
-      "q": "Dans le domaine de l'intelligence artificielle, que signifie l'acronyme GPU ?",
-      "o": [
-        "General Processing Unit",
-        "Graphical Program Utility",
-        "Graphics Processing Unit",
-        "Global Parallel Updater"
-      ],
-      "r": 2,
-      "x": "GPU signifie Graphics Processing Unit (unité de traitement graphique). Conçu pour le rendu d'images, il est massivement utilisé en IA car il peut effectuer des milliers de calculs en parallèle, accélérant l'entraînement des modèles d'apprentissage profond."
-    },
-    {
-      "q": "Qu'est-ce qu'un réseau de neurones artificiels ?",
-      "o": [
-        "Un câblage spécifique interconnectant les serveurs d'un centre de données",
-        "Un système de routage inspiré du cerveau humain",
-        "Un protocole de communication standardisé entre différents systèmes d'IA",
-        "Un modèle constitué de couches de neurones formels interconnectés"
-      ],
-      "r": 3,
-      "x": "Un réseau de neurones est composé de couches de neurones formels reliés par des poids ajustables. Inspiré du cerveau biologique, il apprend à reconnaître des schémas dans les données à travers un processus d'entraînement. C'est la base du deep learning."
-    },
-    {
-      "q": "Parmi les modèles de service cloud suivants, lequel permet d'utiliser des logiciels directement via Internet sans installation locale ?",
-      "o": [
-        "SaaS (Software as a Service)",
-        "IaaS (Infrastructure as a Service)",
-        "PaaS (Platform as a Service)",
-        "DaaS (Desktop as a Service)"
-      ],
-      "r": 0,
-      "x": "Le SaaS fournit des applications accessibles via un navigateur web sans installation ni maintenance locales. IaaS loue des ressources matérielles virtualisées, PaaS offre un environnement de développement, et DaaS propose un bureau virtuel à distance."
-    },
-    {
-      "q": "Dans le cloud computing, que désigne le modèle IaaS ?",
-      "o": [
-        "Un modèle offrant des applications logicielles accessibles directement en ligne",
-        "Un modèle fournissant des ressources matérielles virtualisées comme serveurs et stockage",
-        "Un modèle proposant un environnement de développement et de déploiement en ligne",
-        "Un modèle offrant un bureau virtuel complet accessible depuis n'importe quel appareil"
-      ],
-      "r": 1,
-      "x": "IaaS (Infrastructure as a Service) met à disposition des ressources informatiques virtualisées via Internet. L'entreprise gère le système d'exploitation et les applications, tandis que le fournisseur gère l'infrastructure physique sous-jacente."
-    },
-    {
-      "q": "Quel avantage économique du cloud computing permet aux entreprises de payer uniquement les ressources effectivement consommées ?",
-      "o": [
-        "La redondance automatique des données hébergées",
-        "L'accès permanent aux dernières versions des logiciels",
-        "La facturation à l'usage",
-        "La sécurité intégrée des données stockées en ligne"
-      ],
-      "r": 2,
-      "x": "La facturation à l'usage (pay-as-you-go) permet à l'entreprise de payer uniquement les ressources consommées, sans immobilisation de capital. Ce modèle adapte les dépenses informatiques aux besoins réels de l'organisation."
-    },
-    {
-      "q": "Qu'est-ce qu'un cloud privé ?",
-      "o": [
-        "Un service cloud réservé exclusivement aux particuliers et aux associations",
-        "Un service cloud géré uniquement par des fournisseurs basés hors du pays",
-        "Un service cloud accessible librement sans identifiant ni authentification",
-        "Une infrastructure cloud dédiée à une seule organisation et non partagée"
-      ],
-      "r": 3,
-      "x": "Un cloud privé est une infrastructure réservée à une seule organisation, gérée en interne ou par un prestataire. Il offre plus de contrôle et de sécurité qu'un cloud public, mais implique des coûts d'investissement plus élevés."
-    },
-    {
-      "q": "Quelle expression désigne un environnement cloud combinant des ressources publiques et privées ?",
-      "o": [
-        "Le cloud hybride",
-        "Le cloud communautaire",
-        "Le cloud souverain",
-        "Le cloud distribué"
-      ],
-      "r": 0,
-      "x": "Le cloud hybride combine des infrastructures cloud publiques et privées. L'organisation peut placer les données sensibles en cloud privé et les charges moins critiques en cloud public, optimisant flexibilité et coûts."
-    },
-    {
-      "q": "Qu'est-ce qu'un algorithme en informatique ?",
-      "o": [
-        "Un langage de programmation de bas niveau proche du matériel",
-        "Une suite finie et ordonnée d'instructions permettant de résoudre un problème",
-        "Un programme exécutable sur tous les systèmes d'exploitation existants",
-        "Un composant matériel accélérant les calculs mathématiques complexes"
-      ],
-      "r": 1,
-      "x": "Un algorithme est une séquence finie d'étapes bien définies permettant de résoudre un problème ou accomplir une tâche. Il est indépendant de tout langage de programmation et peut être exprimé en pseudocode ou en organigramme."
-    },
-    {
-      "q": "En programmation, que désigne une boucle ?",
-      "o": [
-        "Une instruction conditionnelle permettant de choisir entre plusieurs blocs de code",
-        "Un sous-programme réutilisable appelé depuis le programme principal",
-        "Une structure permettant de répéter un bloc d'instructions plusieurs fois",
-        "Une variable permettant de stocker plusieurs valeurs de types différents"
-      ],
-      "r": 2,
-      "x": "Une boucle (for, while, do-while) est une structure de contrôle qui répète un bloc d'instructions tant qu'une condition est vraie ou un nombre de fois déterminé. Elle évite la répétition manuelle du code."
-    },
-    {
-      "q": "Qu'est-ce qu'un langage de programmation interprété ?",
-      "o": [
-        "Un langage dont le code est entièrement traduit en code machine avant exécution",
-        "Un langage utilisé exclusivement pour le développement d'applications web",
-        "Un langage réservé au développement de systèmes d'exploitation sous Linux",
-        "Un langage dont le code source est exécuté ligne par ligne sans compilation préalable"
-      ],
-      "r": 3,
-      "x": "Un langage interprété (Python, JavaScript, PHP) est exécuté directement par un interpréteur ligne par ligne. Un langage compilé (C, C++) est d'abord traduit entièrement en code machine par un compilateur avant toute exécution."
-    },
-    {
-      "q": "Que signifie l'acronyme HTML utilisé pour créer des pages web ?",
-      "o": [
-        "HyperText Markup Language",
-        "High Transfer Markup Language",
-        "HyperText Machine Language",
-        "High Text Modeling Language"
-      ],
-      "r": 0,
-      "x": "HTML (HyperText Markup Language) est le langage de balisage standard pour structurer et afficher le contenu des pages web. Il utilise des balises comme <h1>, <p> ou <a> pour définir titres, paragraphes et liens hypertextes."
-    },
-    {
-      "q": "Quelle structure de données suit le principe LIFO (dernier entré, premier sorti) ?",
-      "o": [
-        "La file d'attente",
-        "La pile",
-        "La liste chaînée",
-        "Le tableau associatif"
-      ],
-      "r": 1,
-      "x": "La pile (stack) fonctionne selon le principe LIFO : le dernier élément ajouté est le premier retiré, comme une pile d'assiettes. La file d'attente (queue) suit le principe FIFO (premier entré, premier sorti)."
-    },
-    {
-      "q": "En programmation orientée objet, que représente une classe ?",
-      "o": [
-        "Un fichier contenant les variables globales et les constantes du programme",
-        "Un module indépendant gérant les entrées et sorties du programme",
-        "Un modèle définissant les attributs et les comportements d'un objet",
-        "Une structure de données de type tableau à plusieurs dimensions"
-      ],
-      "r": 2,
-      "x": "En programmation orientée objet, une classe est un modèle définissant les attributs (propriétés) et les méthodes (comportements) d'un type d'objet. Les objets sont des instances créées à partir de ce modèle."
-    },
-    {
-      "q": "Qu'est-ce qu'une variable en programmation ?",
-      "o": [
-        "Une instruction permettant d'interrompre l'exécution d'un programme",
-        "Un bloc de code exécuté automatiquement au démarrage du programme",
-        "Une fonction mathématique intégrée dans le langage de programmation",
-        "Un espace mémoire nommé permettant de stocker une valeur modifiable"
-      ],
-      "r": 3,
-      "x": "Une variable est un emplacement mémoire identifié par un nom, qui contient une valeur susceptible de changer pendant l'exécution du programme. Elle possède un nom, un type de données (entier, texte, etc.) et une valeur."
-    },
-    {
-      "q": "Parmi les langages suivants, lequel est principalement utilisé pour le développement web côté serveur ?",
-      "o": [
-        "PHP",
-        "HTML",
-        "CSS",
-        "XML"
-      ],
-      "r": 0,
-      "x": "PHP est un langage de script côté serveur largement utilisé pour créer des sites web dynamiques. HTML structure les pages, CSS les met en forme, et XML est un format d'échange de données. HTML et CSS s'exécutent côté client, pas sur le serveur."
-    },
-    {
-      "q": "Que signifie l'acronyme BI dans le domaine des systèmes d'information ?",
-      "o": [
-        "Binary Integration",
-        "Business Intelligence",
-        "Big Infrastructure",
-        "Base Informatique"
-      ],
-      "r": 1,
-      "x": "BI signifie Business Intelligence (informatique décisionnelle). C'est un ensemble de technologies et d'outils permettant d'analyser les données de l'entreprise pour faciliter la prise de décision stratégique. Les tableaux de bord et rapports analytiques en font partie."
-    },
-    {
-      "q": "Qu'est-ce qu'un entrepôt de données (data warehouse) ?",
-      "o": [
-        "Un serveur dédié au stockage de fichiers multimédias en réseau local",
-        "Un disque dur externe utilisé pour les sauvegardes automatiques quotidiennes",
-        "Un système centralisé regroupant des données historiques",
-        "Un logiciel de gestion électronique des documents administratifs"
-      ],
-      "r": 2,
-      "x": "Un entrepôt de données centralise des données historiques provenant de diverses sources (bases de données, ERP, CRM) dans un format optimisé pour l'analyse et le reporting. Il est au cœur des dispositifs d'informatique décisionnelle."
-    },
-    {
-      "q": "Dans l'informatique décisionnelle, que désigne le terme Big Data ?",
-      "o": [
-        "Un logiciel d'analyse de données massives développé par Microsoft",
-        "Un réseau de serveurs dédié au stockage des données des grandes entreprises",
-        "Un protocole de transfert de très gros fichiers entre serveurs distants",
-        "Des ensembles de données caractérisés par leur volume, variété et vitesse de traitement"
-      ],
-      "r": 3,
-      "x": "Le Big Data désigne des données tellement massives, variées et produites si rapidement qu'elles dépassent les capacités des outils traditionnels. On parle des 3V : Volume, Variété et Vélocité. Des technologies comme Hadoop et Spark permettent de les traiter."
-    },
-    {
-      "q": "Que désigne un système d'information (SI) en entreprise ?",
-      "o": [
-        "Un ensemble organisé de ressources permettant de collecter, traiter et diffuser l'information",
-        "Un logiciel de gestion comptable et financière installé sur le réseau de l'entreprise",
-        "Un protocole réseau sécurisant les échanges de données entre les services",
-        "Un département informatique chargé de la maintenance du parc matériel"
-      ],
-      "r": 0,
-      "x": "Un système d'information regroupe les ressources humaines, techniques et organisationnelles pour collecter, stocker, traiter et diffuser l'information nécessaire au fonctionnement de l'organisation et à la prise de décision."
-    },
-    {
-      "q": "Que signifie l'acronyme ERP dans le domaine des systèmes d'information ?",
-      "o": [
-        "Electronic Resource Provider",
-        "Enterprise Resource Planning",
-        "Extended Resource Protocol",
-        "Efficient Routing Platform"
-      ],
-      "r": 1,
-      "x": "ERP (Enterprise Resource Planning), ou Progiciel de Gestion Intégré (PGI), centralise la gestion des ressources d'une entreprise (comptabilité, stocks, RH, achats) dans un système unique et intégré. SAP et Oracle ERP en sont des exemples."
-    },
-    {
-      "q": "Qu'est-ce qu'un système CRM ?",
-      "o": [
-        "Un logiciel de gestion des ressources humaines et de la paie",
-        "Un protocole réseau de communication sécurisée entre entreprises partenaires",
-        "Un système de gestion de la relation client",
-        "Un outil de planification et de suivi des projets informatiques"
-      ],
-      "r": 2,
-      "x": "CRM (Customer Relationship Management) centralise les informations sur les clients, gère les contacts, suit les ventes et analyse les comportements d'achat. Il améliore la satisfaction client et la performance commerciale de l'organisation."
-    },
-    {
-      "q": "Qu'est-ce que l'interopérabilité entre systèmes d'information ?",
-      "o": [
-        "La capacité d'un système à fonctionner de manière autonome sans connexion Internet",
-        "La sécurisation des échanges de données sensibles entre deux serveurs distants",
-        "La possibilité d'accéder à un système d'information depuis tout appareil mobile",
-        "La capacité de différents systèmes à échanger et exploiter mutuellement leurs données"
-      ],
-      "r": 3,
-      "x": "L'interopérabilité est la capacité de systèmes hétérogènes à communiquer et travailler ensemble. Elle est essentielle dans l'administration publique où différents ministères doivent partager des données de manière cohérente et fluide."
-    },
-    {
-      "q": "Qu'est-ce qu'une mise à jour logicielle ?",
-      "o": [
-        "Une correction ou amélioration apportée à un logiciel déjà installé",
-        "La réinstallation complète du système d'exploitation sur un ordinateur",
-        "Une procédure de récupération de données après une panne matérielle",
-        "Un contrôle automatique des performances du matériel informatique"
-      ],
-      "r": 0,
-      "x": "Une mise à jour logicielle apporte des corrections de bogues, des améliorations de performances ou des correctifs de sécurité à un logiciel existant. Les mises à jour régulières sont essentielles pour protéger un système contre les vulnérabilités connues."
-    },
-    {
-      "q": "Qu'est-ce que la défragmentation d'un disque dur magnétique ?",
-      "o": [
-        "La suppression définitive des fichiers temporaires et inutiles du système",
-        "La réorganisation des données fragmentées pour améliorer les performances de lecture",
-        "Le formatage complet du disque dur afin d'effacer toutes les données stockées",
-        "La création d'une image de sauvegarde intégrale du disque dur"
-      ],
-      "r": 1,
-      "x": "Au fil du temps, les fichiers d'un disque dur se fragmentent. La défragmentation réorganise ces fragments pour que chaque fichier soit stocké de manière contiguë, améliorant la vitesse de lecture. Cette opération est inutile et déconseillée sur les disques SSD."
-    },
-    {
-      "q": "Quelle est la règle de sauvegarde 3-2-1 en informatique ?",
-      "o": [
-        "Sauvegarder toutes les données tous les trois jours sur deux supports dont un hors ligne",
-        "Effectuer deux sauvegardes complètes et une sauvegarde incrémentielle chaque semaine",
-        "Conserver trois copies des données sur deux supports différents dont une copie hors site",
-        "Réaliser trois sauvegardes journalières sur un support externe unique et dédié"
-      ],
-      "r": 2,
-      "x": "La règle 3-2-1 préconise 3 copies des données, sur 2 types de supports différents, dont 1 copie hors site (autre bâtiment ou cloud). Elle protège contre les pannes matérielles, les sinistres et les cyberattaques de type ransomware."
-    },
-    {
-      "q": "Que désigne la dématérialisation dans le contexte de l'administration publique ?",
-      "o": [
-        "Le remplacement des agents publics par des systèmes informatiques automatisés",
-        "La suppression de l'ensemble des archives physiques de l'administration",
-        "La réduction du nombre de postes informatiques dans les services de l'État",
-        "Le passage des procédures administratives du support papier au format numérique"
-      ],
-      "r": 3,
-      "x": "La dématérialisation consiste à remplacer documents et procédures papier par leurs équivalents numériques. Elle améliore la rapidité, réduit les coûts, facilite le partage d'information et s'inscrit dans la modernisation des services publics."
-    },
-    {
-      "q": "Que signifie l'acronyme TIC dans le contexte de la transformation numérique ?",
-      "o": [
-        "Technologies de l'Information et de la Communication",
-        "Traitement Informatique Centralisé",
-        "Transfert d'Informations et de Contenus",
-        "Technologie Intégrée de Communication"
-      ],
-      "r": 0,
-      "x": "TIC signifie Technologies de l'Information et de la Communication. Ce terme regroupe l'ensemble des outils numériques (ordinateurs, Internet, téléphonie, logiciels) permettant de collecter, traiter, stocker et transmettre des informations."
-    },
-    {
-      "q": "Que désigne l'expression « e-administration » ?",
-      "o": [
-        "La suppression des administrations publiques traditionnelles",
-        "L'utilisation des TIC pour fournir des services administratifs en ligne",
-        "La gestion exclusive des administrations par des entreprises privées",
-        "L'automatisation complète des décisions administratives"
-      ],
-      "r": 1,
-      "x": "L'e-administration consiste à utiliser les technologies de l'information et de la communication pour faciliter les démarches administratives et améliorer les relations entre l'administration et les usagers."
-    },
-    {
-      "q": "Que désigne le concept d'e-gouvernement (gouvernement électronique) ?",
-      "o": [
-        "L'équipement exclusif des bureaux administratifs en matériel informatique moderne",
-        "La surveillance électronique des fonctionnaires par leur administration de tutelle",
-        "L'utilisation des TIC pour offrir des services publics en ligne aux citoyens",
-        "Le remplacement des agents de l'État par des systèmes automatisés intelligents"
-      ],
-      "r": 2,
-      "x": "L'e-gouvernement désigne l'utilisation des technologies numériques pour moderniser les services publics, faciliter les démarches administratives en ligne et améliorer les échanges entre l'administration, les citoyens et les entreprises."
-    },
-    {
-      "q": "Qu'est-ce que la signature électronique dans les échanges administratifs ?",
-      "o": [
-        "Une image numérisée de la signature manuscrite d'un fonctionnaire apposée sur un document",
-        "Un mot de passe complexe utilisé pour valider et authentifier un document officiel",
-        "Un filigrane numérique apposé automatiquement sur les documents officiels scannés",
-        "Un procédé cryptographique permettant d'authentifier l'auteur et l'intégrité d'un document"
-      ],
-      "r": 3,
-      "x": "La signature électronique utilise la cryptographie pour garantir l'identité du signataire et l'intégrité du document. Elle a la même valeur juridique que la signature manuscrite dans les contextes réglementaires qui la reconnaissent."
-    },
-    {
-      "q": "Que désigne la gouvernance numérique dans le contexte public ?",
-      "o": [
-        "L'ensemble des règles, politiques et pratiques encadrant l'usage des technologies numériques",
-        "La gestion technique quotidienne des infrastructures réseau d'un pays",
-        "Le contrôle et la restriction de l'accès à Internet par les autorités de l'État",
-        "La formation obligatoire des agents publics aux outils informatiques bureautiques"
-      ],
-      "r": 0,
-      "x": "La gouvernance numérique englobe les cadres réglementaires, les politiques publiques et les pratiques guidant le développement et l'usage responsable des technologies numériques dans la société et l'administration."
-    },
-    {
-      "q": "Qu'est-ce que l'inclusion numérique ?",
-      "o": [
-        "L'équipement prioritaire des grandes villes en infrastructures à très haut débit",
-        "L'effort visant à permettre à tous les citoyens d'accéder aux technologies numériques",
-        "La numérisation intégrale des archives historiques et patrimoniales nationales",
-        "La restriction de l'accès aux services numériques aux seuls usages professionnels"
-      ],
-      "r": 1,
-      "x": "L'inclusion numérique vise à réduire les inégalités d'accès aux outils et services numériques en assurant connectivité, formation et accompagnement de toutes les populations, notamment les plus vulnérables ou éloignées des grandes villes."
-    },
-    {
-      "q": "Que désigne la fracture numérique ?",
-      "o": [
-        "Une panne généralisée affectant les réseaux informatiques d'un pays entier",
-        "Un virus informatique ciblant spécifiquement les institutions et services publics",
-        "L'inégalité d'accès et d'usage des technologies numériques entre différentes populations",
-        "La rupture de câbles sous-marins affectant la connectivité internationale d'un pays"
-      ],
-      "r": 2,
-      "x": "La fracture numérique désigne les inégalités d'accès, d'utilisation et de maîtrise des technologies numériques entre groupes sociaux, générations, zones géographiques ou pays. Elle constitue un défi majeur pour le développement inclusif en Afrique."
-    },
-    {
-      "q": "Que désigne le terme souveraineté numérique pour un État ?",
-      "o": [
-        "La capacité d'un pays à interdire totalement l'accès aux services numériques étrangers",
-        "L'obligation légale d'utiliser uniquement des logiciels développés sur le territoire national",
-        "Le droit exclusif de l'État de contrôler toutes les communications numériques des citoyens",
-        "La capacité d'un État à maîtriser ses données, ses infrastructures et ses technologies numériques"
-      ],
-      "r": 3,
-      "x": "La souveraineté numérique est la capacité d'un État à contrôler ses données stratégiques et ses infrastructures numériques critiques sans dépendance excessive vis-à-vis de puissances étrangères. Elle est un enjeu stratégique majeur pour les pays africains."
-    },
-    {
-      "q": "Qu'est-ce que l'open data (données ouvertes) ?",
-      "o": [
-        "La mise à disposition libre, gratuite et réutilisable de données publiques pour tous",
-        "Un logiciel permettant de partager des fichiers entre utilisateurs sur un réseau local",
-        "Un protocole sécurisé de protection des données gouvernementales sensibles",
-        "Une base de données accessible uniquement aux chercheurs accrédités par l'État"
-      ],
-      "r": 0,
-      "x": "L'open data consiste à rendre des données publiques accessibles librement et gratuitement dans des formats réutilisables. Les gouvernements publient ainsi des données statistiques, géographiques ou budgétaires pour favoriser la transparence et l'innovation."
-    },
-    {
-      "q": "Que désigne le terme internaute ?",
-      "o": [
-        "Un technicien spécialisé dans la maintenance et l'administration des réseaux Internet",
-        "Une personne qui navigue et utilise les services proposés sur Internet",
-        "Un développeur créant des applications et services destinés au Web",
-        "Un administrateur gérant les serveurs d'un fournisseur d'accès à Internet"
-      ],
-      "r": 1,
-      "x": "L'internaute est toute personne utilisant Internet pour naviguer, consulter ses courriels, utiliser des réseaux sociaux ou accéder à des services en ligne. Le terme est d'usage courant depuis les années 1990 dans les pays francophones."
-    },
-    {
-      "q": "Qu'est-ce que la netiquette ?",
-      "o": [
-        "Un protocole technique de sécurisation des échanges et communications sur Internet",
-        "Un logiciel de filtrage du contenu web installé dans les écoles et administrations",
-        "Un ensemble de règles de bonne conduite et de politesse à respecter sur Internet",
-        "Une charte juridique encadrant les droits et devoirs des utilisateurs d'Internet"
-      ],
-      "r": 2,
-      "x": "La netiquette regroupe les règles de savoir-vivre sur Internet : respecter les interlocuteurs, éviter les majuscules abusives (perçues comme crier), citer ses sources, ne pas partager de contenus illicites. Elle s'applique aux courriels, forums, réseaux sociaux et messageries."
-    },
-    {
-      "q": "Dans le contexte numérique, qu'est-ce qu'un identifiant numérique ?",
-      "o": [
-        "Un numéro de série unique attribué à chaque appareil par son fabricant",
-        "Un protocole de connexion sécurisée entre deux appareils distants",
-        "Un code de chiffrement utilisé pour protéger les fichiers personnels d'un utilisateur",
-        "Un ensemble de données permettant d'identifier une personne ou une entité en ligne"
-      ],
-      "r": 3,
-      "x": "L'identifiant numérique regroupe les données permettant d'identifier et d'authentifier une personne dans un environnement numérique : nom d'utilisateur, adresse courriel, numéro d'identification ou empreinte biométrique numérique."
-    },
-    {
-      "q": "Quel composant relie et interconnecte tous les éléments matériels d'un ordinateur ?",
-      "o": [
-        "La carte mère",
-        "Le disque dur",
-        "Le processeur central",
-        "L'alimentation électrique"
-      ],
-      "r": 0,
-      "x": "La carte mère est le circuit principal de l'ordinateur sur lequel sont connectés le processeur, la mémoire, les disques et les périphériques. Elle assure la communication entre tous les composants via des bus de données internes."
-    },
-    {
-      "q": "Quelle technologie de transmission utilise des impulsions lumineuses pour transporter les données à très haute vitesse ?",
-      "o": [
-        "Le câble coaxial",
-        "La fibre optique",
-        "Le câble à paires torsadées",
-        "La connexion satellite"
-      ],
-      "r": 1,
-      "x": "La fibre optique transmet des données sous forme d'impulsions lumineuses dans un filament de verre ou de plastique. Elle offre des débits très élevés et est insensible aux perturbations électromagnétiques, contrairement aux câbles en cuivre."
-    },
-    {
-      "q": "Quelle technologie sans fil à courte portée permet de connecter des appareils comme des écouteurs ou des claviers sans câble ?",
-      "o": [
-        "Le Wi-Fi",
-        "Le NFC",
-        "Le Bluetooth",
-        "La connexion 4G"
-      ],
-      "r": 2,
-      "x": "Bluetooth est une technologie de communication sans fil à courte portée, généralement de l'ordre de quelques mètres à plusieurs dizaines de mètres selon la classe de l'appareil. Il connecte des périphériques personnels tels que claviers, souris et casques."
-    },
-    {
-      "q": "Que désigne la résolution d'un écran ?",
-      "o": [
-        "La luminosité maximale mesurée en candelas par mètre carré",
-        "Le taux de rafraîchissement exprimé en images par seconde",
-        "La profondeur des couleurs exprimée en bits par pixel affiché",
-        "Le nombre de pixels affichés en largeur et en hauteur"
-      ],
-      "r": 3,
-      "x": "La résolution exprime le nombre de pixels affichés, par exemple 1920 x 1080 pour le Full HD. Plus elle est élevée, plus l'image est nette. Elle ne doit pas être confondue avec la taille physique de l'écran mesurée en pouces."
-    },
-    {
-      "q": "Qui est considérée comme la première programmeuse de l'histoire pour ses travaux sur la machine analytique de Charles Babbage ?",
-      "o": [
-        "Ada Lovelace",
-        "Grace Hopper",
-        "Margaret Hamilton",
-        "Katherine Johnson"
-      ],
-      "r": 0,
-      "x": "Ada Lovelace a rédigé au XIXe siècle le premier algorithme destiné à être exécuté par une machine. Grace Hopper a inventé le compilateur, Margaret Hamilton a dirigé la programmation du logiciel d'Apollo 11, et Katherine Johnson était mathématicienne à la NASA."
-    },
-    {
-      "q": "Quel réseau précurseur d'Internet, créé par le département de la défense américain, a été mis en service en 1969 ?",
-      "o": [
-        "Minitel",
-        "ARPANET",
-        "CompuServe",
-        "BITNET"
-      ],
-      "r": 1,
-      "x": "ARPANET (Advanced Research Projects Agency Network) est le réseau précurseur d'Internet développé par le département américain de la défense. Il a expérimenté la communication par paquets entre ordinateurs distants dès octobre 1969."
-    },
-    {
-      "q": "Qui a inventé le World Wide Web en proposant un système de documents hypertextes interconnectés en 1989 ?",
-      "o": [
-        "Steve Jobs",
-        "Bill Gates",
-        "Tim Berners-Lee",
-        "Vint Cerf"
-      ],
-      "r": 2,
-      "x": "Tim Berners-Lee, chercheur au CERN en Suisse, a inventé le Web en 1989 en proposant des documents hypertextes accessibles via Internet. Vint Cerf est co-créateur du protocole TCP/IP, fondement technique d'Internet."
-    },
-    {
-      "q": "Quel appareil lancé en 2007 a révolutionné la téléphonie mobile grâce à son interface entièrement tactile et son écosystème d'applications ?",
-      "o": [
-        "Le Nokia N95",
-        "Le Blackberry Bold",
-        "Le Samsung Galaxy S",
-        "L'iPhone d'Apple"
-      ],
-      "r": 3,
-      "x": "L'iPhone, lancé par Steve Jobs en juin 2007, a redéfini le concept de smartphone avec son interface tactile et sa boutique d'applications. Il a transformé les usages mobiles dans le monde entier et relancé Apple comme leader de l'industrie technologique."
-    },
-    {
-      "q": "Qu'est-ce qu'Internet ?",
-      "o": [
-        "Un réseau mondial interconnecté permettant l'échange de données entre des milliards d'appareils",
-        "Un logiciel de navigation permettant de consulter des pages web depuis un ordinateur",
-        "Un protocole de communication sécurisée entre les administrations publiques mondiales",
-        "Un câble sous-marin reliant les continents pour les échanges téléphoniques internationaux"
-      ],
-      "r": 0,
-      "x": "Internet est un réseau mondial de réseaux interconnectés fonctionnant via les protocoles TCP/IP. Il supporte le Web, la messagerie, le cloud, le streaming et bien d'autres services. Le Web n'est qu'un des nombreux services accessibles via Internet."
-    },
-    {
-      "q": "Quel système de communication précurseur du Web, lancé en France dans les années 1980, permettait d'accéder à des services en ligne via le réseau téléphonique ?",
-      "o": [
-        "CompuServe",
-        "Minitel",
-        "ARPANET",
-        "BBS"
-      ],
-      "r": 1,
-      "x": "Le Minitel, lancé en France en 1982, permettait aux abonnés d'accéder à des services d'information, de réservation et d'annuaire via le réseau téléphonique. Il est considéré comme un précurseur majeur des services en ligne avant l'avènement du Web."
-    },
-    {
-      "q": "Quel système de fichiers est utilisé par défaut sur les partitions Windows depuis Windows NT ?",
-      "o": [
-        "FAT32",
-        "exFAT",
-        "NTFS",
-        "ext4"
-      ],
-      "r": 2,
-      "x": "NTFS (New Technology File System) est le système de fichiers standard de Windows depuis Windows NT. Il gère les grandes partitions, les permissions d'accès, la compression et le chiffrement. ext4 est utilisé sous Linux, FAT32 et exFAT sur les supports amovibles."
-    },
-    {
-      "q": "Que désigne la mémoire virtuelle dans un système d'exploitation ?",
-      "o": [
-        "Une mémoire cache ultra-rapide intégrée directement au processeur",
-        "Une zone de mémoire réservée exclusivement aux pilotes matériels du système",
-        "Une mémoire supplémentaire fournie par une carte d'extension sur la carte mère",
-        "Une extension de la mémoire vive utilisant une partie du disque dur comme mémoire temporaire"
-      ],
-      "r": 3,
-      "x": "La mémoire virtuelle utilise une portion du disque (fichier d'échange ou swap) pour simuler de la mémoire vive supplémentaire. Elle permet d'exécuter des programmes nécessitant plus de RAM que celle physiquement disponible, au prix de performances réduites."
-    },
-    {
-      "q": "Qu'est-ce que le multitâche dans un système d'exploitation ?",
-      "o": [
-        "La capacité d'exécuter plusieurs programmes de manière simultanée ou alternée",
-        "La capacité d'un processeur à traiter plusieurs jeux de données par cycle d'horloge",
-        "La fonctionnalité permettant à plusieurs utilisateurs de partager le même compte",
-        "La possibilité de connecter plusieurs écrans à un seul ordinateur simultanément"
-      ],
-      "r": 0,
-      "x": "Le multitâche permet à un système d'exploitation d'exécuter plusieurs programmes en apparence simultanément, en répartissant le temps processeur entre eux. Sur un processeur unique, le changement rapide de contexte crée l'illusion de simultanéité."
-    },
-    {
-      "q": "Dans Windows, quel outil permet de visualiser les processus actifs, la consommation des ressources et de forcer la fermeture d'un programme bloqué ?",
-      "o": [
-        "Le panneau de configuration",
-        "Le gestionnaire des tâches",
-        "L'éditeur de registre",
-        "La console de gestion Microsoft"
-      ],
-      "r": 1,
-      "x": "Le gestionnaire des tâches (accessible via Ctrl + Shift + Échap) affiche les processus actifs, la consommation CPU et mémoire, et permet de terminer un processus bloqué. Il est un outil de diagnostic essentiel dans l'environnement Windows."
-    },
-    {
-      "q": "Quel logiciel de sécurité est intégré nativement dans Windows 10 et Windows 11 pour protéger contre les virus et logiciels malveillants ?",
-      "o": [
-        "McAfee Antivirus",
-        "Norton Security",
-        "Microsoft Defender",
-        "Avast Free Antivirus"
-      ],
-      "r": 2,
-      "x": "Microsoft Defender (anciennement Windows Defender) est l'antivirus et antimalware intégré gratuitement dans Windows 10 et 11. Il assure une protection en temps réel sans installation supplémentaire. McAfee, Norton et Avast sont des solutions tierces payantes ou freemium."
-    },
-    {
-      "q": "Dans un système Linux, que permet la commande chmod ?",
-      "o": [
-        "Changer le propriétaire d'un fichier ou d'un répertoire",
-        "Afficher l'utilisation de l'espace disque par répertoire",
-        "Copier un fichier vers un autre emplacement du système",
-        "Modifier les permissions d'accès à un fichier ou à un répertoire"
-      ],
-      "r": 3,
-      "x": "chmod (change mode) modifie les permissions d'accès à un fichier ou répertoire sous Linux. Les permissions concernent trois catégories (propriétaire, groupe, autres) et trois actions (lecture r, écriture w, exécution x)."
-    },
-    {
-      "q": "Quelle commande Linux permet de rechercher une chaîne de caractères dans un fichier ou un flux de texte ?",
-      "o": [
-        "grep",
-        "find",
-        "cat",
-        "tail"
-      ],
-      "r": 0,
-      "x": "grep recherche des motifs textuels dans des fichiers ou des sorties de commandes. Par exemple, grep \"erreur\" journal.log affiche toutes les lignes contenant le mot \"erreur\". find localise des fichiers, cat affiche leur contenu, tail en affiche la fin."
-    },
-    {
-      "q": "Que signifie la commande sudo dans un terminal Linux ?",
-      "o": [
-        "Afficher l'identité de l'utilisateur connecté et ses groupes d'appartenance",
-        "Exécuter une commande avec les privilèges d'administrateur",
-        "Passer définitivement au compte superutilisateur du système",
-        "Changer de session utilisateur sans fermer la session en cours"
-      ],
-      "r": 1,
-      "x": "sudo (superuser do) permet à un utilisateur autorisé d'exécuter une commande avec les droits du superutilisateur (root), sans se connecter directement en tant que root. C'est une pratique de sécurité essentielle dans l'administration des systèmes Linux."
-    },
-    {
-      "q": "Quelle commande Linux permet de déplacer ou renommer un fichier ?",
-      "o": [
-        "cp",
-        "rm",
-        "mv",
-        "ln"
-      ],
-      "r": 2,
-      "x": "mv (move) déplace un fichier vers un autre emplacement ou le renomme. mv fichier.txt /home/user/ déplace le fichier, et mv ancien.txt nouveau.txt le renomme. cp copie un fichier, rm le supprime, et ln crée des liens symboliques ou physiques."
-    },
-    {
-      "q": "Combien de couches comporte le modèle OSI de référence pour les réseaux informatiques ?",
-      "o": [
-        "Quatre couches",
-        "Cinq couches",
-        "Six couches",
-        "Sept couches"
-      ],
-      "r": 3,
-      "x": "Le modèle OSI comporte sept couches : physique, liaison de données, réseau, transport, session, présentation et application. Chaque couche gère une fonction spécifique et communique avec les couches adjacentes. Il sert de référence pour concevoir les protocoles réseau."
-    },
-    {
-      "q": "Qu'est-ce qu'une adresse MAC dans un réseau informatique ?",
-      "o": [
-        "Un identifiant physique unique attribué à chaque carte réseau par son fabricant",
-        "Un protocole gérant l'accès aux ressources partagées sur un réseau local",
-        "Une adresse logique attribuée dynamiquement par le serveur DHCP du réseau",
-        "Un système de chiffrement des communications entre deux appareils en réseau"
-      ],
-      "r": 0,
-      "x": "L'adresse MAC (Media Access Control) est un identifiant physique de 48 bits gravé dans la carte réseau par le fabricant. Elle identifie de façon unique chaque interface réseau et opère au niveau 2 du modèle OSI, la couche liaison de données."
-    },
-    {
-      "q": "Que désigne la bande passante d'une connexion réseau ?",
-      "o": [
-        "La distance maximale de transmission d'un signal sans amplification sur un réseau",
-        "La quantité maximale de données pouvant être transmises par unité de temps",
-        "Le nombre maximal d'appareils connectables simultanément sur un réseau donné",
-        "La fréquence radio utilisée par un réseau Wi-Fi pour transmettre les données"
-      ],
-      "r": 1,
-      "x": "La bande passante est la capacité maximale de transmission d'un réseau, exprimée en bits par seconde et ses multiples. Une bande passante élevée permet de transférer davantage de données simultanément, réduisant les délais de téléchargement."
-    },
-    {
-      "q": "Que signifie l'acronyme TCP/IP dans le domaine des réseaux ?",
-      "o": [
-        "Text Communication Protocol / Internet Protocol",
-        "Transfer Control Protocol / Integrated Protocol",
         "Transmission Control Protocol / Internet Protocol",
-        "Terminal Connection Protocol / Interface Protocol"
-      ],
-      "r": 2,
-      "x": "TCP/IP (Transmission Control Protocol / Internet Protocol) est la suite de protocoles fondamentale d'Internet. TCP assure la transmission fiable des données en les découpant en paquets numérotés, tandis qu'IP gère leur adressage et leur acheminement vers la destination."
-    },
-    {
-      "q": "Que désigne la latence dans un réseau informatique ?",
-      "o": [
-        "La quantité maximale de données transmissibles par seconde sur une connexion",
-        "La stabilité et la régularité du débit d'une connexion réseau dans le temps",
-        "La capacité d'un réseau à supporter simultanément un grand nombre d'utilisateurs",
-        "Le délai de transmission d'un paquet de données entre son émetteur et son destinataire"
-      ],
-      "r": 3,
-      "x": "La latence mesure le temps mis par un paquet de données pour aller d'un point à un autre, exprimée en millisecondes. Une faible latence est indispensable pour les applications temps réel comme la visioconférence, les jeux en ligne et la VoIP."
-    },
-    {
-      "q": "Dans quel type de réseau les données sont-elles découpées en paquets indépendants pouvant emprunter des chemins différents pour atteindre leur destination ?",
-      "o": [
-        "Le réseau à commutation de paquets",
-        "Le réseau à commutation de circuits",
-        "Le réseau à diffusion générale",
-        "Le réseau à anneau à jeton"
+        "Transfer Control Protocol / Integrated Protocol",
+        "Terminal Connection Protocol / Interface Protocol",
+        "Text Communication Protocol / Internet Packet"
       ],
       "r": 0,
-      "x": "Dans la commutation de paquets, les données sont divisées en paquets indépendants acheminés par le chemin optimal disponible. Internet utilise ce modèle. La commutation de circuits, utilisée par l'ancien réseau téléphonique, établit un canal dédié pour toute la durée de la communication."
+      "x": "Cette suite de protocoles, conçue en 1974 par Vinton Cerf et Robert Kahn, est le fondement d'Internet. TCP découpe les données en paquets numérotés et vérifie leur bonne arrivée, tandis qu'IP se charge de l'adressage et de l'acheminement. ARPANET l'a adoptée le 1er janvier 1983, date souvent retenue comme la naissance d'Internet.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Dans le développement web, à quoi sert le langage CSS ?",
+      "q": "Le délai mis par un paquet de données pour aller de l'émetteur au destinataire s'appelle :",
       "o": [
-        "À structurer et organiser le contenu des pages web avec des balises sémantiques",
-        "À définir la présentation visuelle et la mise en forme des pages web",
-        "À rendre les pages web interactives grâce à des scripts côté client",
-        "À gérer les bases de données et les formulaires côté serveur"
-      ],
-      "r": 1,
-      "x": "CSS (Cascading Style Sheets) contrôle l'apparence visuelle des pages web : couleurs, typographies, mises en page et espacements. Il est associé à HTML qui structure le contenu et à JavaScript qui gère l'interactivité côté navigateur."
-    },
-    {
-      "q": "Quel langage de programmation est principalement utilisé pour rendre les pages web interactives côté navigateur ?",
-      "o": [
-        "PHP",
-        "Python",
-        "JavaScript",
-        "SQL"
-      ],
-      "r": 2,
-      "x": "JavaScript est le langage de script exécuté directement dans le navigateur. Il anime les pages, valide des formulaires, crée des menus dynamiques et interagit avec l'utilisateur sans recharger la page. PHP et Python s'exécutent côté serveur et non dans le navigateur."
-    },
-    {
-      "q": "Qu'est-ce qu'un podcast ?",
-      "o": [
-        "Un logiciel permettant de diffuser des émissions de radio en direct sur Internet",
-        "Un format vidéo compressé destiné au partage sur les plateformes de streaming",
-        "Un système de messagerie instantanée audio entre utilisateurs distants",
-        "Un fichier ou série de fichiers audio disponible en téléchargement ou en écoute en ligne"
+        "le débit",
+        "la bande passante",
+        "le routage",
+        "la latence"
       ],
       "r": 3,
-      "x": "Un podcast est une émission audio (ou vidéo) disponible sur Internet, accessible à la demande. L'utilisateur peut le télécharger ou l'écouter en streaming. Il s'y abonne via des plateformes (Spotify, Apple Podcasts) pour recevoir automatiquement les nouveaux épisodes."
+      "x": "La latence se mesure en millisecondes, par exemple avec la commande ping : un aller-retour de 600 ms par satellite géostationnaire contre environ 20 ms par fibre optique. Une faible latence est indispensable à la visioconférence et aux appels sur Internet. Le débit, lui, mesure la quantité de données transmises par seconde.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quelle version du langage HTML a introduit des balises natives pour l'audio, la vidéo et la géolocalisation sans extensions tierces ?",
+      "q": "Le mode de transmission utilisé par Internet, qui découpe les données en paquets indépendants, s'appelle :",
+      "o": [
+        "la commutation de circuits",
+        "la commutation de paquets",
+        "la commutation de messages",
+        "la commutation de canaux"
+      ],
+      "r": 1,
+      "x": "Chaque paquet peut emprunter un chemin différent avant d'être réassemblé à l'arrivée, ce qui rend le réseau résistant aux pannes. Le principe a été théorisé dans les années 1960 par Paul Baran et Donald Davies, qui a inventé le mot « paquet ». La commutation de circuits, utilisée par l'ancien téléphone fixe, réserve une ligne pendant toute la communication.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Un outil comme Google, fondé en 1998, qui indexe les pages web pour les retrouver par mots-clés, est :",
+      "o": [
+        "un navigateur web",
+        "un serveur de messagerie",
+        "un moteur de recherche",
+        "un fournisseur d'accès"
+      ],
+      "r": 2,
+      "x": "Le moteur de recherche parcourt le Web avec des robots, indexe les pages puis les classe selon leur pertinence. Le navigateur, comme Chrome ou Firefox, est seulement le logiciel qui affiche les pages trouvées. Bing, lancé par Microsoft en 2009, et Yahoo sont d'autres moteurs de recherche.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Une émission audio diffusée sur Internet et écoutable à la demande s'appelle :",
+      "o": [
+        "un webinaire",
+        "un tutoriel",
+        "un forum",
+        "un podcast"
+      ],
+      "r": 3,
+      "x": "Le mot podcast, apparu en 2004, combine « iPod » et « broadcast », qui signifie diffusion en anglais. On peut s'y abonner pour recevoir automatiquement les nouveaux épisodes, ou les télécharger pour les écouter hors connexion. Le webinaire est, lui, une conférence en ligne suivie en direct par des participants.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La version du langage HTML qui a introduit les balises natives audio et video, recommandée par le W3C en 2014, est :",
       "o": [
         "HTML5",
         "HTML4",
@@ -59167,788 +68481,896 @@ const QUESTIONS = {
         "HTML3"
       ],
       "r": 0,
-      "x": "HTML5, standardisé en 2014 par le W3C, a introduit les balises audio, video et canvas, ainsi que des API pour la géolocalisation et le stockage local. Il a rendu obsolète la dépendance à Flash pour les contenus multimédias sur le Web."
+      "x": "HTML5, devenu recommandation officielle du W3C le 28 octobre 2014, permet de lire sons et vidéos sans extension comme Flash. Il a aussi ajouté la balise canvas pour le dessin et des fonctions de stockage local. HTML4 datait de 1997, soit 2014 - 1997 = 17 ans d'écart entre les deux versions.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Que désigne le streaming dans le contexte des contenus numériques ?",
+      "q": "La conception d'un site web qui s'adapte automatiquement à la taille de l'écran s'appelle :",
       "o": [
-        "Le téléchargement complet d'un fichier avant de pouvoir le lire ou le visionner",
-        "La lecture de contenus audio ou vidéo en temps réel sans téléchargement préalable",
-        "La compression de fichiers multimédias pour réduire leur taille de stockage",
-        "La synchronisation automatique de fichiers entre plusieurs appareils connectés"
+        "le référencement",
+        "le responsive design",
+        "l'hébergement mutualisé",
+        "le cloud computing"
       ],
       "r": 1,
-      "x": "Le streaming permet de lire des contenus audio ou vidéo au fur et à mesure de leur réception, sans attendre le téléchargement complet du fichier. Netflix, YouTube et Spotify fonctionnent par streaming et nécessitent une connexion réseau stable et suffisante."
+      "x": "Le terme responsive web design a été popularisé en 2010 par Ethan Marcotte : le site se réorganise selon qu'il est affiché sur ordinateur, tablette ou smartphone. Il repose notamment sur les media queries du langage CSS. Le référencement vise, lui, à améliorer la position d'un site dans les résultats des moteurs de recherche.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Qu'est-ce qu'une attaque par déni de service distribué ?",
+      "q": "Une application web progressive (PWA), concept proposé en 2015, se distingue d'une application native parce qu'elle :",
       "o": [
-        "Une attaque ciblant les bases de données via des requêtes malveillantes injectées",
-        "Une technique de vol de session en interceptant les communications réseau",
-        "Une attaque saturant un serveur de requêtes massives pour le rendre inaccessible",
-        "Une intrusion dans un système via des identifiants volés par hameçonnage ciblé"
-      ],
-      "r": 2,
-      "x": "Une attaque DDoS (Distributed Denial of Service) inonde un serveur de millions de requêtes simultanées émises depuis de nombreuses machines compromises (botnet) jusqu'à le saturer et le rendre indisponible pour les utilisateurs légitimes."
-    },
-    {
-      "q": "Que désigne l'ingénierie sociale en cybersécurité ?",
-      "o": [
-        "Le développement de logiciels automatisant les tests de vulnérabilité d'un système",
-        "La conception de réseaux informatiques sécurisés pour les entreprises et administrations",
-        "La protection des infrastructures critiques contre les cyberattaques de grande envergure",
-        "La manipulation psychologique d'individus pour les amener à divulguer des informations confidentielles"
-      ],
-      "r": 3,
-      "x": "L'ingénierie sociale exploite la psychologie humaine plutôt que les failles techniques. Elle pousse les victimes à révéler des mots de passe, cliquer sur des liens malveillants ou accorder des accès non autorisés. Le hameçonnage en est la forme la plus répandue."
-    },
-    {
-      "q": "Que désigne l'authentification biométrique ?",
-      "o": [
-        "L'identification d'une personne à partir de ses caractéristiques physiques ou comportementales",
-        "L'authentification par un code secret à usage unique envoyé par SMS sur le téléphone",
-        "La vérification de l'identité par un jeton matériel physique tel qu'une clé USB",
-        "L'accès sécurisé par reconnaissance du réseau Wi-Fi habituel de l'utilisateur"
+        "fonctionne via le navigateur",
+        "exige un magasin d'applications",
+        "fonctionne sur un seul système",
+        "nécessite un compilateur dédié"
       ],
       "r": 0,
-      "x": "L'authentification biométrique utilise des caractéristiques physiques (empreinte digitale, reconnaissance faciale, iris) ou comportementales (voix, frappe au clavier) pour identifier une personne. Elle est utilisée sur les smartphones et aux postes frontaliers."
+      "x": "La PWA est un site web qui peut s'installer sur l'écran d'accueil et fonctionner en partie hors connexion, sur Android comme sur iPhone. Une application native est développée pour un système précis et s'installe depuis le Play Store ou l'App Store. Ce modèle réduit les coûts, puisqu'un seul développement sert tous les appareils.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Qu'est-ce qu'un keylogger ?",
+      "q": "La technologie NFC, utilisée pour le paiement sans contact, fonctionne sur une distance d'environ :",
       "o": [
-        "Un programme bloquant les connexions non autorisées sur un réseau d'entreprise",
-        "Un logiciel enregistrant discrètement toutes les frappes effectuées au clavier",
-        "Un outil analysant le trafic réseau à la recherche de comportements anormaux",
-        "Un logiciel de compression chiffrant les fichiers pour les rendre illisibles"
-      ],
-      "r": 1,
-      "x": "Un keylogger (enregistreur de frappe) capture silencieusement tout ce que l'utilisateur tape, y compris les mots de passe et les données bancaires. Il peut être un logiciel malveillant installé à l'insu de l'utilisateur ou, légalement, un outil de surveillance parentale."
-    },
-    {
-      "q": "Que désigne une vulnérabilité informatique ?",
-      "o": [
-        "Une panne matérielle affectant les performances d'un serveur en production",
-        "Un contenu numérique inapproprié accessible sur des sites web non sécurisés",
-        "Une faille dans un logiciel ou un système pouvant être exploitée par un attaquant",
-        "Une interruption de service réseau causée par une surcharge de trafic légitime"
-      ],
-      "r": 2,
-      "x": "Une vulnérabilité est une faiblesse dans un logiciel, un système ou une configuration qui peut être exploitée par un attaquant. Appliquer régulièrement des correctifs de sécurité (patches) est la pratique fondamentale pour réduire l'exposition aux vulnérabilités connues."
-    },
-    {
-      "q": "Quel objectif vise la normalisation d'une base de données relationnelle ?",
-      "o": [
-        "Accélérer les requêtes en dupliquant les données dans plusieurs tables spécialisées",
-        "Chiffrer les données sensibles pour garantir leur confidentialité et leur sécurité",
-        "Réduire la taille physique de la base de données occupée sur le disque de stockage",
-        "Éliminer les redondances et les anomalies pour garantir la cohérence des données"
-      ],
-      "r": 3,
-      "x": "La normalisation organise les tables pour éliminer les redondances et les incohérences. Elle se décline en formes normales (1NF, 2NF, 3NF). Elle garantit l'intégrité des données au détriment parfois des performances de lecture dans les requêtes complexes."
-    },
-    {
-      "q": "En bases de données, que garantissent les propriétés ACID d'une transaction ?",
-      "o": [
-        "Atomicité, Cohérence, Isolation et Durabilité des opérations sur les données",
-        "Accès, Contrôle, Intégrité et Disponibilité des données stockées en base",
-        "Authenticité, Confidentialité, Intégrité et Distribution des informations stockées",
-        "Archivage, Compression, Indexation et Déduplication des enregistrements en base"
+        "4 centimètres",
+        "1 mètre",
+        "10 mètres",
+        "100 mètres"
       ],
       "r": 0,
-      "x": "ACID garantit : Atomicité (tout ou rien), Cohérence (état valide avant et après), Isolation (transactions indépendantes), Durabilité (résistance aux pannes). Ces propriétés sont fondamentales dans les SGBD relationnels pour garantir l'intégrité des données."
+      "x": "La NFC, pour Near Field Communication, n'agit qu'à quelques centimètres, généralement moins de 10 cm, ce qui limite les risques d'interception. Le Bluetooth porte, lui, à une dizaine de mètres et le Wi-Fi à quelques dizaines de mètres. Elle sert au paiement sans contact, aux badges d'accès et au partage rapide entre téléphones.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Qu'est-ce qu'une procédure stockée dans une base de données ?",
+      "q": "Le premier virus de l'histoire ciblant les ordinateurs PC compatibles IBM, appelé Brain, est apparu en :",
       "o": [
-        "Une méthode de sauvegarde automatique des données à intervalles réguliers",
-        "Un programme SQL précompilé stocké dans la base et exécutable sur demande",
-        "Un fichier journal enregistrant toutes les modifications apportées à une table",
-        "Un index optimisé permettant d'accélérer les recherches dans une grande table"
-      ],
-      "r": 1,
-      "x": "Une procédure stockée est un ensemble d'instructions SQL précompilées, stockées et exécutées directement sur le serveur de base de données. Elle améliore les performances, sécurise les accès aux données et centralise la logique métier de l'application."
-    },
-    {
-      "q": "Qu'est-ce qu'une vue dans une base de données relationnelle ?",
-      "o": [
-        "Un rapport statistique généré automatiquement à partir des données d'une table",
-        "Un index optimisé pour accélérer les requêtes sur des colonnes fréquemment interrogées",
-        "Une table virtuelle basée sur le résultat d'une requête SQL enregistrée dans la base",
-        "Une copie physique d'une table conservée sur un serveur de sauvegarde distant"
+        "1971",
+        "1983",
+        "1986",
+        "1999"
       ],
       "r": 2,
-      "x": "Une vue est une table virtuelle construite à partir d'une requête SELECT enregistrée. Elle n'occupe généralement pas d'espace physique mais présente les données comme une vraie table. Elle simplifie les requêtes complexes et permet de restreindre l'accès à certaines colonnes sensibles."
+      "x": "Brain a été créé en 1986 au Pakistan et se propageait par disquette, en infectant le secteur de démarrage. Un virus se reproduit en s'attachant à d'autres fichiers, alors qu'un ver se propage seul par le réseau. Le terme « virus informatique » avait été popularisé en 1983 par le chercheur américain Fred Cohen.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel est le rôle d'un index dans une base de données ?",
+      "q": "La simulation d'attaques, réalisée avec l'autorisation du propriétaire pour trouver les failles d'un système, s'appelle :",
       "o": [
-        "Protéger les données sensibles contre les accès non autorisés des utilisateurs",
-        "Maintenir automatiquement l'ordre alphabétique des enregistrements d'une table",
-        "Relier logiquement deux tables par leurs clés primaires et étrangères respectives",
-        "Accélérer les recherches en permettant un accès rapide aux enregistrements ciblés"
+        "l'hameçonnage",
+        "l'analyse forensique",
+        "le déni de service",
+        "le test d'intrusion"
       ],
       "r": 3,
-      "x": "Un index est une structure de données permettant d'accéder rapidement aux enregistrements sans parcourir toutes les lignes d'une table. Comme l'index d'un livre, il accélère les requêtes SELECT mais peut légèrement ralentir les insertions et mises à jour."
+      "x": "Le test d'intrusion, ou pentest, est mené par des experts mandatés qui rédigent ensuite un rapport des failles à corriger. L'analyse forensique intervient, elle, après un incident, pour en reconstituer le déroulement. Sans autorisation écrite du propriétaire, la même démarche constitue une infraction pénale.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Dans Microsoft Excel, quelle fonction retourne une valeur selon qu'une condition est vraie ou fausse ?",
+      "q": "Le Règlement général sur la protection des données (RGPD) de l'Union européenne est applicable depuis le :",
       "o": [
-        "La fonction SI",
-        "La fonction ESTNA",
-        "La fonction CHOISIR",
-        "La fonction OU"
+        "27 avril 2016",
+        "25 mai 2018",
+        "30 mars 2021",
+        "8 juin 2023"
+      ],
+      "r": 1,
+      "x": "Adopté le 27 avril 2016, le RGPD s'applique depuis le 25 mai 2018 et prévoit des amendes pouvant atteindre 20 millions d'euros ou 4 % du chiffre d'affaires mondial. Le 30 mars 2021 est la date de la loi burkinabè n°001-2021/AN sur les données personnelles. Le 8 juin 2023 correspond à l'entrée en vigueur de la Convention de Malabo.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "L'identification d'une personne par son empreinte digitale ou la reconnaissance de son visage s'appelle :",
+      "o": [
+        "l'authentification biométrique",
+        "l'authentification par jeton",
+        "l'authentification par SMS",
+        "l'authentification unique"
       ],
       "r": 0,
-      "x": "La fonction SI évalue une condition et retourne une valeur si elle est vraie, une autre si elle est fausse. Syntaxe : =SI(condition ; valeur_si_vrai ; valeur_si_faux). Elle est l'une des fonctions les plus utilisées dans les tableurs pour les calculs conditionnels."
+      "x": "La biométrie repose sur ce que l'on est : empreinte, visage, iris ou voix. Le code reçu par SMS repose sur ce que l'on possède, et le mot de passe sur ce que l'on sait. Les cartes nationales d'identité et les passeports modernes intègrent des données biométriques pour lutter contre la fraude documentaire.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Dans Microsoft Excel, quelle fonctionnalité applique automatiquement une mise en forme aux cellules répondant à un critère donné ?",
+      "q": "Un logiciel qui enregistre discrètement toutes les touches tapées au clavier s'appelle :",
       "o": [
-        "La validation des données",
-        "La mise en forme conditionnelle",
-        "Le filtre automatique",
-        "Le tri personnalisé"
+        "un pare-feu",
+        "un keylogger",
+        "un rançongiciel",
+        "un cookie"
       ],
       "r": 1,
-      "x": "La mise en forme conditionnelle colorise ou formate automatiquement les cellules selon des règles définies (valeur au-dessus d'un seuil, doublons, valeurs négatives). Elle facilite la lecture visuelle et l'analyse rapide des données dans les tableaux."
+      "x": "Le keylogger, ou enregistreur de frappe, capture les mots de passe et les codes bancaires saisis par la victime pour les transmettre au pirate. Il s'installe souvent via une pièce jointe ou un logiciel piraté. Le rançongiciel chiffre les fichiers pour réclamer une rançon, tandis que le pare-feu filtre les connexions réseau.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Dans Microsoft Excel, quel outil permet de résumer et de croiser des données en les regroupant selon plusieurs dimensions ?",
+      "q": "Une faiblesse dans un logiciel qu'un pirate peut exploiter pour attaquer un système s'appelle :",
       "o": [
-        "La validation des données",
-        "Le gestionnaire de noms",
-        "Le tableau croisé dynamique",
-        "La mise en forme conditionnelle"
+        "une sauvegarde",
+        "une mise à jour",
+        "une vulnérabilité",
+        "une redondance"
       ],
       "r": 2,
-      "x": "Le tableau croisé dynamique synthétise de grandes quantités de données en les regroupant par catégories et en calculant automatiquement des totaux, des moyennes ou des comptages. C'est un outil d'analyse très puissant et courant dans les environnements administratifs."
+      "x": "Une vulnérabilité découverte reçoit souvent un identifiant international CVE, et l'éditeur publie ensuite un correctif. Installer rapidement les mises à jour de sécurité est donc la meilleure protection contre les attaques connues. Une faille exploitée avant toute correction est appelée « zero day », car l'éditeur a eu zéro jour pour réagir.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Dans Microsoft Excel, quelle fonctionnalité permet de garder des lignes ou des colonnes visibles lors du défilement d'un grand tableau ?",
+      "q": "Un logiciel qui stocke tous les mots de passe de l'utilisateur, protégés par un seul mot de passe maître, s'appelle :",
       "o": [
-        "La protection de la feuille de calcul",
-        "La mise en page et les zones d'impression",
-        "Le filtre automatique sur les colonnes",
-        "Le blocage des volets"
-      ],
-      "r": 3,
-      "x": "Le blocage des volets (Figer les volets) maintient en place des lignes ou colonnes sélectionnées lors du défilement vertical ou horizontal. Cette fonctionnalité est très utile pour conserver les en-têtes visibles en permanence dans de grands tableaux de données."
-    },
-    {
-      "q": "Dans Microsoft Excel, quel type de graphique est le plus adapté pour représenter l'évolution d'une valeur au fil du temps ?",
-      "o": [
-        "Le graphique en courbes",
-        "Le graphique en secteurs",
-        "Le graphique en anneau",
-        "Le graphique en radar"
+        "un gestionnaire de mots de passe",
+        "un générateur de certificats",
+        "un gestionnaire de tâches",
+        "un gestionnaire de fichiers"
       ],
       "r": 0,
-      "x": "Le graphique en courbes visualise l'évolution d'une ou plusieurs valeurs dans le temps (ventes mensuelles, températures, effectifs). Le graphique en secteurs représente la répartition proportionnelle d'un tout, et le radar compare plusieurs variables catégorielles."
+      "x": "Le gestionnaire de mots de passe crée et retient des mots de passe longs et différents pour chaque compte, ce qui évite de réutiliser le même partout. KeePass, gratuit et libre depuis 2003, et Bitwarden en sont des exemples. L'utilisateur n'a plus qu'un seul mot de passe maître, très robuste, à mémoriser.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Dans Microsoft Word, à quoi sert l'application de styles comme Titre 1, Titre 2 ou Normal à un texte ?",
+      "q": "La méthode d'authentification considérée comme la plus résistante à l'hameçonnage est :",
       "o": [
-        "Modifier la couleur d'arrière-plan des paragraphes sélectionnés dans le document",
-        "Appliquer une mise en forme cohérente et faciliter la table des matières et la navigation",
-        "Insérer automatiquement des numéros de page dans les en-têtes du document",
-        "Traduire automatiquement les titres dans la langue configurée du document"
-      ],
-      "r": 1,
-      "x": "Les styles définissent une mise en forme cohérente pour chaque type de contenu. Ils permettent aussi de générer automatiquement la table des matières et d'utiliser le volet de navigation pour se déplacer rapidement dans les documents longs."
-    },
-    {
-      "q": "Dans Microsoft Word, qu'est-ce qu'un en-tête et un pied de page ?",
-      "o": [
-        "La première et la dernière ligne du corps du texte de chaque page du document",
-        "Les marges supérieure et inférieure définissant les bordures d'impression du document",
-        "Des zones de texte répétées en haut et en bas de chaque page du document imprimé",
-        "Les titres de niveaux 1 et 2 apparaissant dans la table des matières du document"
+        "la question secrète",
+        "le code reçu par SMS",
+        "la clé de sécurité physique",
+        "la date de naissance"
       ],
       "r": 2,
-      "x": "L'en-tête est une zone répétée en haut de chaque page, le pied de page en bas. Ils contiennent généralement le titre du document, le nom de l'organisation, les numéros de page ou la date. Ils s'affichent uniformément sur toutes les pages concernées."
+      "x": "La clé de sécurité physique, conforme aux normes FIDO2 publiées en 2018, vérifie cryptographiquement l'adresse du vrai site et refuse de s'authentifier sur un faux. Le code par SMS reste vulnérable à l'échange frauduleux de carte SIM. La question secrète repose souvent sur des informations faciles à trouver sur les réseaux sociaux.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Dans Microsoft Word, quelle fonctionnalité enregistre les modifications d'un document en les affichant visiblement pour permettre leur validation ?",
+      "q": "Le procédé basé sur un certificat numérique qui garantit l'origine et l'intégrité d'un document émis par une organisation s'appelle :",
       "o": [
-        "Le mode lecture protégé",
-        "La protection par mot de passe",
-        "La comparaison de documents",
-        "Le suivi des modifications"
+        "le filigrane visible",
+        "le tampon scanné",
+        "le code-barres imprimé",
+        "le cachet électronique"
       ],
       "r": 3,
-      "x": "Le suivi des modifications enregistre chaque ajout, suppression ou changement de format en l'attribuant à son auteur avec une couleur distinctive. L'auteur principal peut ensuite accepter ou rejeter chaque modification individuellement ou globalement."
+      "x": "Le cachet électronique est l'équivalent, pour une personne morale comme une administration, de la signature électronique d'une personne physique. Il repose sur un certificat délivré par un prestataire de confiance et révèle toute modification du document. Un tampon scanné peut être copié et collé facilement, sans aucune garantie.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Dans Microsoft Word, comment insérer un commentaire dans un document sans modifier le texte principal ?",
+      "q": "Le document qui fixe les règles, responsabilités et mesures de protection des systèmes d'information d'une organisation s'appelle :",
       "o": [
-        "Via le menu Révision puis Nouveau commentaire ou le raccourci Ctrl + Alt + M",
-        "En sélectionnant le texte et en activant le mode suivi des modifications",
-        "En insérant une note de bas de page liée au texte concerné du document",
-        "Via le menu Insertion puis Zone de texte flottante en marge du document"
+        "le plan comptable",
+        "la politique de sécurité",
+        "le cahier des charges",
+        "le schéma directeur"
+      ],
+      "r": 1,
+      "x": "La politique de sécurité des systèmes d'information (PSSI) précise par exemple la gestion des mots de passe, des sauvegardes et des accès. Au Burkina Faso, l'Agence nationale de sécurité des systèmes d'information (ANSSI), créée en 2013, accompagne les administrations dans ce domaine. Le schéma directeur planifie, lui, l'évolution générale de l'informatique.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le sigle SGBD désigne :",
+      "o": [
+        "un système de gestion de base de données",
+        "un serveur de gestion des bases distribuées",
+        "une structure globale de bases de données",
+        "un service de gestion des bureaux départementaux"
       ],
       "r": 0,
-      "x": "Les commentaires permettent d'annoter un document sans modifier le texte. Ils apparaissent dans la marge et sont attribués à leur auteur. Ils sont utilisés pour les révisions collaboratives et les remarques destinées aux co-auteurs d'un document partagé."
+      "x": "Un SGBD permet de créer, interroger et sécuriser des bases de données. MySQL, PostgreSQL, Oracle et Microsoft Access en sont des exemples courants. Le modèle relationnel, sur lequel reposent la plupart d'entre eux, a été proposé en 1970 par Edgar Frank Codd, chercheur chez IBM.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Dans Microsoft Word, à quoi sert un saut de section ?",
+      "q": "MongoDB, lancée en 2009, est un exemple de base de données de type :",
       "o": [
-        "Forcer le début d'un nouveau paragraphe à la ligne suivante du document",
-        "Diviser un document en sections indépendantes avec des mises en page différentes",
-        "Insérer un numéro de page automatique au début de chaque partie du document",
-        "Créer un saut de colonne dans un texte organisé en colonnes parallèles"
-      ],
-      "r": 1,
-      "x": "Un saut de section divise le document en parties indépendantes pouvant avoir chacune sa propre mise en page : orientation, marges, en-têtes, pieds de page ou numérotation différents. Il est indispensable pour les rapports et documents administratifs complexes."
-    },
-    {
-      "q": "Dans Microsoft PowerPoint, que permet le masque des diapositives ?",
-      "o": [
-        "Protéger la présentation par un mot de passe contre toute modification non autorisée",
-        "Afficher les notes de l'orateur invisibles au public pendant la projection en salle",
-        "Définir une mise en page et une charte graphique appliquées à toutes les diapositives",
-        "Enregistrer la durée d'affichage de chaque diapositive pour une diffusion automatique"
-      ],
-      "r": 2,
-      "x": "Le masque des diapositives est un modèle maître définissant disposition, polices, couleurs et logos appliqués à toute la présentation. Toute modification du masque se répercute automatiquement sur l'ensemble des diapositives concernées."
-    },
-    {
-      "q": "Dans Microsoft PowerPoint, quelle est la différence entre une animation et une transition ?",
-      "o": [
-        "L'animation concerne le thème visuel, la transition modifie l'ordre des diapositives",
-        "L'animation s'applique à une diapositive entière, la transition à un objet spécifique",
-        "L'animation affecte la vitesse de défilement, la transition affecte la couleur de fond",
-        "L'animation s'applique aux objets d'une diapositive, la transition au passage entre diapositives"
+        "relationnel",
+        "hiérarchique",
+        "tableur",
+        "NoSQL"
       ],
       "r": 3,
-      "x": "Les animations s'appliquent aux objets (textes, images, formes) à l'intérieur d'une diapositive pour les faire apparaître ou se déplacer. Les transitions s'appliquent au changement d'une diapositive à la suivante lors de la projection devant un public."
+      "x": "Les bases NoSQL stockent les données sans schéma fixe, sous forme de documents, de paires clé-valeur ou de graphes. Elles conviennent aux très gros volumes et aux applications web à forte croissance. Les bases relationnelles, comme MySQL, organisent au contraire les données en tables liées par des clés.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Dans Microsoft PowerPoint, comment exporter une présentation au format PDF ?",
+      "q": "Dans une base de données relationnelle, la normalisation sert principalement à :",
       "o": [
-        "Via Fichier puis Exporter ou Enregistrer sous en choisissant le format PDF",
-        "En utilisant le raccourci Ctrl + P pour imprimer directement vers un fichier PDF",
-        "Via le menu Révision puis Publier en sélectionnant le format de sortie PDF",
-        "En partageant la présentation vers OneDrive puis en la convertissant en ligne"
+        "accélérer le réseau",
+        "chiffrer les données",
+        "supprimer les redondances",
+        "compresser les fichiers"
+      ],
+      "r": 2,
+      "x": "La normalisation répartit les données en tables pour qu'une information ne soit stockée qu'une seule fois, ce qui évite les incohérences. Elle se décline en formes normales, les trois premières ayant été définies par Edgar Frank Codd entre 1970 et 1971. Le chiffrement, lui, protège la confidentialité sans réduire les doublons.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "En base de données, le sigle ACID désigne les propriétés d'une transaction :",
+      "o": [
+        "atomicité, cohérence, isolation, durabilité",
+        "accès, contrôle, intégrité, disponibilité",
+        "archivage, compression, indexation, duplication",
+        "authenticité, confidentialité, intégrité, distribution"
       ],
       "r": 0,
-      "x": "L'export PDF dans PowerPoint s'effectue via Fichier puis Exporter (ou Enregistrer sous) en sélectionnant le format PDF. Ce format préserve la mise en forme, les polices et la disposition, rendant la présentation lisible sur tout appareil sans PowerPoint."
+      "x": "L'atomicité signifie « tout ou rien » : un virement débite un compte et crédite l'autre, ou n'est pas réalisé du tout. La durabilité garantit que l'opération validée résiste à une panne. Ce sigle a été proposé en 1983 par les chercheurs Theo Härder et Andreas Reuter.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Qu'est-ce que l'apprentissage profond ?",
+      "q": "Un ensemble d'instructions SQL enregistré dans la base de données et exécutable sur demande s'appelle :",
       "o": [
-        "Une technique d'IA basée sur des règles et des arbres de décision prédéfinis par des experts",
-        "Une branche du machine learning utilisant des réseaux de neurones à plusieurs couches",
-        "Un algorithme de recherche optimale dans de grands espaces de données non structurées",
-        "Un système d'IA capable d'expliquer ses décisions de manière transparente"
-      ],
-      "r": 1,
-      "x": "L'apprentissage profond (deep learning) utilise des réseaux de neurones artificiels à de nombreuses couches cachées pour apprendre automatiquement des représentations complexes. Il est à la base de la reconnaissance vocale, de la vision par ordinateur et des grands modèles de langage."
-    },
-    {
-      "q": "Qu'est-ce qu'un chatbot ?",
-      "o": [
-        "Un logiciel de surveillance des conversations sur les réseaux sociaux d'une organisation",
-        "Un système de messagerie instantanée sécurisé pour les communications professionnelles",
-        "Un programme simulant une conversation humaine pour répondre automatiquement aux questions",
-        "Un outil de traduction automatique intégré aux plateformes de communication en ligne"
-      ],
-      "r": 2,
-      "x": "Un chatbot est un programme capable de simuler une conversation via texte ou voix. Les chatbots modernes s'appuient sur l'IA et le traitement du langage naturel pour répondre aux questions, orienter les utilisateurs et automatiser le service client."
-    },
-    {
-      "q": "Que désigne la vision par ordinateur en intelligence artificielle ?",
-      "o": [
-        "La technologie permettant à un ordinateur de contrôler un écran à distance",
-        "Un protocole permettant à des capteurs de transmettre des images en temps réel",
-        "Un algorithme générant automatiquement des images à partir de descriptions textuelles",
-        "La capacité des systèmes informatiques à interpréter et à analyser des images et des vidéos"
+        "une vue",
+        "un index",
+        "un déclencheur",
+        "une procédure stockée"
       ],
       "r": 3,
-      "x": "La vision par ordinateur est une branche de l'IA permettant aux machines d'analyser et de comprendre des images et vidéos. Elle est utilisée dans la reconnaissance faciale, la conduite autonome, le contrôle qualité industriel et le diagnostic médical par imagerie."
+      "x": "La procédure stockée s'exécute directement sur le serveur, ce qui accélère les traitements répétitifs et limite les accès directs aux tables. Le déclencheur, ou trigger, s'exécute automatiquement lors d'un événement, comme une insertion. La vue est une requête enregistrée qui se consulte comme une table.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel type de système d'IA analyse les préférences passées d'un utilisateur pour lui suggérer des contenus susceptibles de l'intéresser ?",
+      "q": "En base de données, une table virtuelle construite à partir d'une requête SELECT enregistrée s'appelle :",
       "o": [
-        "Le système de recommandation",
-        "Le réseau de neurones convolutif",
-        "L'algorithme de classification supervisée",
-        "Le modèle de régression linéaire"
+        "une clé",
+        "une vue",
+        "un état",
+        "un index"
+      ],
+      "r": 1,
+      "x": "La vue ne stocke généralement pas de données propres : elle affiche le résultat de sa requête à chaque consultation. Elle simplifie les requêtes complexes et permet de masquer des colonnes sensibles, comme les salaires. Elle se crée avec la commande CREATE VIEW du langage SQL.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Dans une base de données, l'index sert principalement à :",
+      "o": [
+        "chiffrer les données",
+        "relier deux tables",
+        "accélérer les recherches",
+        "sauvegarder la base"
+      ],
+      "r": 2,
+      "x": "Comme l'index d'un livre, il permet de trouver une ligne sans parcourir toute la table : une recherche sur un million de lignes peut ainsi passer d'un million de lectures à une vingtaine. En contrepartie, chaque insertion ou modification devient un peu plus lente. La liaison entre deux tables relève de la clé étrangère.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Dans PowerPoint, le mode d'affichage qui présente toutes les diapositives en miniatures pour les réorganiser est :",
+      "o": [
+        "le mode Lecture",
+        "le mode Plan",
+        "le mode Trieuse",
+        "le mode Présentateur"
+      ],
+      "r": 2,
+      "x": "Le mode Trieuse de diapositives permet de déplacer les diapositives par glisser-déposer et d'en masquer certaines. Le mode Présentateur affiche à l'orateur ses notes et la diapositive suivante pendant la projection. Le mode Plan montre uniquement le texte des diapositives sous forme hiérarchisée.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Dans Excel, le graphique le plus adapté pour représenter l'évolution des effectifs d'un concours de 2015 à 2025 est :",
+      "o": [
+        "le graphique en courbes",
+        "le graphique en secteurs",
+        "le graphique en anneau",
+        "le graphique en radar"
       ],
       "r": 0,
-      "x": "Les systèmes de recommandation analysent le comportement et les préférences des utilisateurs pour suggérer des produits, films, musiques ou articles pertinents. Netflix, Amazon et Spotify en font un usage intensif pour personnaliser l'expérience de chaque utilisateur."
+      "x": "La courbe relie les valeurs successives et met en évidence les hausses et les baisses dans le temps, ici sur 2025 - 2015 + 1 = 11 années. Le graphique en secteurs montre la répartition d'un total en un moment donné. Le radar compare plusieurs critères à la fois, par exemple les notes d'un candidat dans différentes matières.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Que désigne le modèle de cloud appelé informatique sans serveur ?",
+      "q": "Dans Word, les zones répétées automatiquement en haut et en bas de chaque page s'appellent :",
       "o": [
-        "Un modèle où l'entreprise gère entièrement ses propres serveurs physiques sur site",
-        "Un modèle où le fournisseur cloud gère l'infrastructure et facture à l'exécution du code",
-        "Un modèle où les données sont stockées localement sans recours à un serveur distant",
-        "Un modèle de déploiement utilisant exclusivement des ordinateurs personnels en réseau"
+        "les marges et les retraits",
+        "l'en-tête et le pied de page",
+        "le titre et la légende",
+        "la lettrine et la note"
       ],
       "r": 1,
-      "x": "L'informatique sans serveur (serverless) permet aux développeurs de déployer du code sans gérer de serveurs. Le fournisseur cloud gère automatiquement l'infrastructure et facture uniquement le temps d'exécution réel du code, offrant une grande scalabilité."
+      "x": "L'en-tête contient souvent le nom de l'institution et le pied de page la numérotation des pages ou la date. Ils s'insèrent par l'onglet Insertion et s'ouvrent par un double-clic en haut ou en bas de la page. Les marges sont les espaces blancs qui séparent le texte du bord de la feuille.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Qu'est-ce qu'un conteneur dans le domaine du développement logiciel et du cloud ?",
+      "q": "Dans Word, le raccourci clavier qui insère un nouveau commentaire est :",
       "o": [
-        "Un disque dur virtuel hébergé dans le cloud pour le stockage de données partagées",
-        "Un environnement de développement intégré permettant de coder sur tout système",
-        "Un environnement d'exécution léger et isolé regroupant une application et ses dépendances",
-        "Un protocole de communication sécurisé entre les instances d'un serveur cloud distribué"
-      ],
-      "r": 2,
-      "x": "Un conteneur (Docker) empaquette une application et toutes ses dépendances dans un environnement léger, portable et isolé. Il garantit que l'application fonctionne de manière identique quel que soit l'environnement d'exécution (développement, test, production)."
-    },
-    {
-      "q": "Que désigne l'Internet des objets ?",
-      "o": [
-        "Un réseau social connectant des fabricants de matériel informatique à l'échelle mondiale",
-        "Un protocole réseau dédié aux échanges de données entre les grands centres de données",
-        "Une technologie de communication sans fil à très longue portée pour appareils mobiles",
-        "L'ensemble des objets physiques connectés à Internet capables d'échanger des données"
-      ],
-      "r": 3,
-      "x": "L'Internet des objets (IoT) regroupe les objets physiques connectés (capteurs, appareils, véhicules, équipements) capables de collecter et d'échanger des données via Internet. Il est à la base des villes intelligentes, de l'agriculture de précision et de l'industrie 4.0."
-    },
-    {
-      "q": "Que désigne le concept de ville intelligente ?",
-      "o": [
-        "Une ville utilisant les technologies numériques pour optimiser ses services et améliorer la vie",
-        "Une ville entièrement gérée par des systèmes d'intelligence artificielle sans intervention humaine",
-        "Une ville dont tous les bâtiments sont équipés de panneaux solaires connectés en réseau",
-        "Une ville où tous les citoyens disposent obligatoirement d'un équipement numérique personnel"
+        "Ctrl+Alt+M",
+        "Ctrl+Maj+C",
+        "Ctrl+K",
+        "Ctrl+E"
       ],
       "r": 0,
-      "x": "La ville intelligente (smart city) utilise les TIC, les capteurs et l'analyse de données pour optimiser la gestion des transports, de l'énergie, de l'eau et des services publics. L'objectif est d'améliorer la qualité de vie des habitants et l'efficacité des services urbains."
+      "x": "Ctrl+Alt+M ajoute un commentaire dans la marge, sans modifier le texte, attribué au nom de son auteur. La même commande se trouve dans l'onglet Révision, bouton Nouveau commentaire. Ctrl+K insère un lien hypertexte et Ctrl+E centre le paragraphe.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Qu'est-ce que la technologie blockchain ?",
+      "q": "Pour convertir une présentation PowerPoint au format PDF, on utilise le menu :",
       "o": [
-        "Un protocole de chiffrement des communications sur les réseaux Wi-Fi publics",
-        "Un registre distribué dans lequel les transactions sont enregistrées par blocs chaînés",
-        "Un système de stockage de données en nuage réparti sur plusieurs serveurs distants",
-        "Un algorithme de compression permettant de réduire la taille des fichiers volumineux"
-      ],
-      "r": 1,
-      "x": "La blockchain est un registre décentralisé où les transactions sont regroupées en blocs liés cryptographiquement les uns aux autres. Sa décentralisation et son immuabilité la rendent presque infalsifiable. Elle est à la base des cryptomonnaies et de nombreuses applications de confiance numérique."
-    },
-    {
-      "q": "Qu'est-ce qu'une cryptomonnaie ?",
-      "o": [
-        "Un protocole sécurisé d'envoi de fonds entre banques centrales via le réseau SWIFT",
-        "Une monnaie numérique émise et garantie par un gouvernement ou une banque centrale",
-        "Une monnaie numérique décentralisée basée sur la cryptographie et la technologie blockchain",
-        "Un système de paiement électronique sécurisé réservé exclusivement aux grandes entreprises"
+        "Révision",
+        "Insertion",
+        "Fichier",
+        "Création"
       ],
       "r": 2,
-      "x": "Une cryptomonnaie est une monnaie numérique décentralisée utilisant la cryptographie pour sécuriser les transactions et contrôler l'émission de nouvelles unités. Le Bitcoin, créé en 2009, est la première et la plus connue des cryptomonnaies au monde."
+      "x": "On choisit Fichier, puis Exporter ou Enregistrer sous, et l'on sélectionne le format PDF. Le PDF conserve la mise en page et s'ouvre sur tout appareil, même sans PowerPoint, ce qui en fait le format idéal pour envoyer un support de présentation. L'onglet Révision sert, lui, aux commentaires et à la vérification orthographique.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quelle technologie de code-barres bidimensionnel peut stocker des données et se lire rapidement avec l'appareil photo d'un smartphone ?",
+      "q": "Le type d'intelligence artificielle qui crée des contenus originaux comme des textes ou des images est l'IA :",
       "o": [
-        "Le code EAN à treize chiffres",
-        "Le code Data Matrix industriel",
-        "La puce RFID à radiofréquence",
-        "Le code QR à deux dimensions"
+        "symbolique",
+        "générative",
+        "prédictive",
+        "embarquée"
+      ],
+      "r": 1,
+      "x": "L'IA générative produit textes, images, musique ou code à partir de vastes données d'entraînement, comme ChatGPT, lancé en novembre 2022. L'IA symbolique applique des règles écrites par des experts. Les contenus générés peuvent contenir des erreurs, d'où la nécessité de toujours vérifier les faits avant de les utiliser.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La branche de l'intelligence artificielle qui permet aux machines de comprendre et de produire le langage humain s'appelle :",
+      "o": [
+        "la vision par ordinateur",
+        "la robotique",
+        "le traitement du langage naturel",
+        "la reconnaissance de formes"
+      ],
+      "r": 2,
+      "x": "Le traitement automatique du langage naturel (TALN) est à la base des traducteurs automatiques, des assistants vocaux et des agents conversationnels. La vision par ordinateur s'occupe, elle, des images et des vidéos. Le test de Turing, proposé en 1950, évaluait déjà la capacité d'une machine à converser comme un humain.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Un modèle d'intelligence artificielle composé de couches de neurones formels reliés entre eux s'appelle :",
+      "o": [
+        "un arbre de décision",
+        "une base de règles",
+        "un algorithme de tri",
+        "un réseau de neurones"
       ],
       "r": 3,
-      "x": "Le code QR (Quick Response) est un code-barres 2D pouvant encoder des URL, textes, contacts ou informations de paiement. Lisible rapidement par un smartphone, il est largement utilisé pour le marketing, les paiements mobiles et les menus de restaurants."
+      "x": "Le premier réseau de neurones artificiels, le perceptron, a été conçu en 1958 par Frank Rosenblatt, en s'inspirant du cerveau. Chaque connexion possède un poids ajusté pendant l'entraînement pour réduire les erreurs du modèle. L'arbre de décision classe, lui, les données par une suite de questions simples.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel système d'exploitation mobile développé par Google, basé sur le noyau Linux, équipe la majorité des smartphones dans le monde ?",
+      "q": "L'apprentissage profond (deep learning), dont les pionniers ont reçu le prix Turing 2018, repose sur :",
       "o": [
-        "Android",
-        "iOS",
-        "HarmonyOS",
-        "Windows Mobile"
+        "des règles écrites par des experts",
+        "des réseaux de neurones multicouches",
+        "des tableaux croisés dynamiques",
+        "des bases de données relationnelles"
+      ],
+      "r": 1,
+      "x": "L'apprentissage profond empile de nombreuses couches de neurones pour reconnaître des formes complexes dans les images, les sons ou les textes. Geoffrey Hinton, Yann LeCun et Yoshua Bengio ont été récompensés par le prix Turing 2018 pour ces travaux. Il est à la base de la reconnaissance vocale et des grands modèles de langage.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La branche de l'intelligence artificielle qui analyse les images et les vidéos s'appelle :",
+      "o": [
+        "le traitement du langage",
+        "la synthèse vocale",
+        "l'apprentissage par renforcement",
+        "la vision par ordinateur"
+      ],
+      "r": 3,
+      "x": "La vision par ordinateur sert à la reconnaissance faciale, à la lecture automatique des plaques d'immatriculation ou à la détection de maladies des cultures à partir de photos. La synthèse vocale transforme, elle, un texte en parole. Ces systèmes apprennent à partir de milliers d'images déjà étiquetées.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Un système qui suggère des films ou des produits d'après les choix passés de l'utilisateur s'appelle :",
+      "o": [
+        "un système de recommandation",
+        "un moteur de rendu",
+        "un système de fichiers",
+        "un gestionnaire de versions"
       ],
       "r": 0,
-      "x": "Android est le système d'exploitation mobile open source de Google, basé sur Linux. Il équipe la majorité des smartphones dans le monde. iOS d'Apple équipe uniquement les iPhones, HarmonyOS est de Huawei, et Windows Mobile a été abandonné par Microsoft."
+      "x": "Netflix, YouTube ou Amazon analysent l'historique de chaque utilisateur pour proposer des contenus susceptibles de lui plaire. En 2006, Netflix avait offert un prix d'un million de dollars à qui améliorerait de 10 % son système de recommandation. Ces systèmes posent aussi la question de l'enfermement de l'utilisateur dans ses habitudes.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel système d'exploitation mobile est exclusivement réservé aux appareils fabriqués par Apple ?",
+      "q": "Dans le cloud, le modèle qui loue des serveurs, du stockage et du réseau virtualisés s'appelle :",
       "o": [
-        "Android",
-        "iOS",
-        "Windows Phone",
-        "Symbian"
-      ],
-      "r": 1,
-      "x": "iOS est le système d'exploitation propriétaire d'Apple, disponible uniquement sur iPhone tandis qu'iPadOS est utilisé sur les iPad. Il est fermé et non portable. Android est de Google, Windows Phone de Microsoft et Symbian était le système de Nokia avant l'ère des smartphones modernes."
-    },
-    {
-      "q": "Que désigne le terme responsive design en développement web ?",
-      "o": [
-        "Un site web dont le contenu se charge instantanément quelle que soit la connexion",
-        "Un site web doté d'animations s'adaptant aux préférences de chaque utilisateur",
-        "Une conception web permettant à un site de s'adapter à la taille de l'écran",
-        "Un site capable de fonctionner entièrement sans connexion Internet disponible"
+        "SaaS",
+        "PaaS",
+        "IaaS",
+        "DaaS"
       ],
       "r": 2,
-      "x": "Le responsive design est une approche permettant à un site de s'adapter automatiquement à tout type d'écran (ordinateur, tablette, smartphone). Il utilise des grilles flexibles, des images adaptatives et des règles CSS media queries pour garantir une expérience optimale."
+      "x": "L'IaaS, pour Infrastructure as a Service, fournit les machines virtuelles, et le client installe lui-même le système et les applications. Le SaaS fournit une application prête à l'emploi et le PaaS une plateforme de développement. Ces modèles ont été définis officiellement en 2011 par l'institut américain de normalisation NIST.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quelle est la différence fondamentale entre une application native et une application web progressive ?",
+      "q": "Le mode de facturation du cloud qui fait payer uniquement les ressources réellement consommées s'appelle :",
       "o": [
-        "L'application native fonctionne sur tous les systèmes, la web progressive sur Android uniquement",
-        "L'application native est gratuite, la web progressive est toujours distribuée avec abonnement",
-        "L'application native est développée en HTML, la web progressive nécessite un compilateur dédié",
-        "L'application native est développée pour un système spécifique, la web progressive fonctionne sur navigateur"
+        "le forfait annuel",
+        "la licence perpétuelle",
+        "la facturation à l'usage",
+        "l'abonnement illimité"
+      ],
+      "r": 2,
+      "x": "La facturation à l'usage, ou pay-as-you-go, évite d'acheter des serveurs coûteux : si un serveur coûte 50 FCFA l'heure et sert 200 heures dans le mois, la facture est de 50 x 200 = 10 000 FCFA. Les dépenses suivent ainsi les besoins réels. La licence perpétuelle se paie, elle, une seule fois à l'achat.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Une infrastructure cloud réservée à une seule organisation, sans partage avec d'autres clients, s'appelle :",
+      "o": [
+        "un cloud public",
+        "un cloud privé",
+        "un cloud hybride",
+        "un cloud communautaire"
+      ],
+      "r": 1,
+      "x": "Le cloud privé offre davantage de contrôle sur les données sensibles, mais coûte plus cher à mettre en place et à maintenir. Le cloud public, comme ceux d'Amazon ou de Microsoft, partage ses serveurs entre de nombreux clients. Le cloud communautaire est partagé par plusieurs organisations aux besoins communs, comme des administrations.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Un environnement cloud qui combine des ressources privées et des ressources publiques s'appelle :",
+      "o": [
+        "le cloud souverain",
+        "le cloud distribué",
+        "le cloud communautaire",
+        "le cloud hybride"
       ],
       "r": 3,
-      "x": "Une application native est développée spécifiquement pour iOS ou Android et s'installe depuis un magasin d'applications. Une application web progressive (PWA) fonctionne via le navigateur, peut s'installer sur l'écran d'accueil et opérer partiellement hors connexion."
+      "x": "Le cloud hybride permet de garder les données sensibles en cloud privé tout en utilisant le cloud public pour les besoins ponctuels, comme un pic d'inscriptions en ligne. Il combine ainsi sécurité et souplesse. Le cloud souverain désigne, lui, un hébergement soumis aux lois et au contrôle d'un seul État.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Que permet la technologie NFC dans les appareils mobiles ?",
+      "q": "Le modèle d'informatique sans serveur (serverless), popularisé en 2014 par AWS Lambda, facture le client selon :",
       "o": [
-        "Des échanges de données sans contact à très courte portée pour le paiement ou le partage",
-        "La connexion automatique à un réseau Wi-Fi sans saisie de mot de passe",
-        "Le partage de connexion Internet mobile entre plusieurs appareils simultanément",
-        "La synchronisation automatique des contacts entre plusieurs appareils de marques différentes"
+        "le nombre de serveurs achetés",
+        "le temps d'exécution du code",
+        "le nombre d'utilisateurs inscrits",
+        "la taille de l'équipe technique"
+      ],
+      "r": 1,
+      "x": "Le développeur dépose son code et le fournisseur gère entièrement les serveurs, qui ne s'activent qu'à la demande. La facture est calculée à la milliseconde d'exécution, si bien qu'une fonction inutilisée ne coûte rien. Malgré son nom, ce modèle repose bien sur des serveurs, simplement invisibles pour le client.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Docker, lancé en 2013, permet d'emballer une application et ses dépendances dans :",
+      "o": [
+        "une machine physique",
+        "un disque externe",
+        "un conteneur",
+        "une partition"
+      ],
+      "r": 2,
+      "x": "Le conteneur est un environnement léger et isolé qui garantit que l'application fonctionne de la même manière sur l'ordinateur du développeur et sur le serveur. Plus léger qu'une machine virtuelle, il démarre en quelques secondes. La partition est seulement une division logique d'un disque dur.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le service de stockage en ligne Google Drive, qui synchronise les fichiers entre appareils, a été lancé en :",
+      "o": [
+        "2004",
+        "2008",
+        "2010",
+        "2012"
+      ],
+      "r": 3,
+      "x": "Google Drive a été lancé le 24 avril 2012 avec 5 Go gratuits, aujourd'hui portés à 15 Go partagés avec Gmail et Google Photos. Microsoft OneDrive et Dropbox proposent des services similaires. L'année 2004 correspond au lancement de la messagerie Gmail.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Un langage dont le code est exécuté ligne par ligne par un interpréteur, sans compilation préalable, comme Python, est dit :",
+      "o": [
+        "compilé",
+        "interprété",
+        "assembleur",
+        "machine"
+      ],
+      "r": 1,
+      "x": "Un langage interprété s'exécute directement, ce qui facilite les tests, mais il est souvent plus lent qu'un langage compilé. Le langage C est compilé : il est entièrement traduit en code machine avant l'exécution. JavaScript et PHP sont d'autres exemples de langages interprétés.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La structure de données qui fonctionne selon le principe LIFO, « dernier entré, premier sorti », s'appelle :",
+      "o": [
+        "la pile",
+        "la file",
+        "l'arbre",
+        "le graphe"
       ],
       "r": 0,
-      "x": "NFC (Near Field Communication) permet des échanges de données entre appareils à très courte portée (quelques centimètres). Elle est utilisée pour le paiement sans contact, les cartes d'accès, le partage de liens et la lecture d'étiquettes NFC intelligentes."
+      "x": "La pile fonctionne comme une pile d'assiettes : si l'on empile 1, 2, 3, le premier élément retiré est 3. La file suit au contraire le principe FIFO, « premier entré, premier sorti », comme une file d'attente au guichet. La fonction Annuler des logiciels utilise une pile pour retrouver les dernières actions.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel format de fichier image utilise une compression avec perte, largement adopté pour les photographies sur le Web ?",
+      "q": "En programmation orientée objet, le modèle qui définit les attributs et les méthodes d'un objet s'appelle :",
       "o": [
-        "PNG",
-        "JPEG",
-        "BMP",
-        "TIFF"
-      ],
-      "r": 1,
-      "x": "JPEG utilise une compression avec perte qui réduit significativement la taille du fichier en supprimant des détails peu perceptibles. Il est idéal pour les photographies. PNG utilise une compression sans perte, BMP est non compressé, et TIFF est utilisé pour l'impression professionnelle."
-    },
-    {
-      "q": "Que signifie l'acronyme PDF et quelle est sa principale utilité ?",
-      "o": [
-        "Protected Data Format, un format sécurisé d'échange de données entre applications",
-        "Printable Document File, un format conçu exclusivement pour l'impression professionnelle",
-        "Portable Document Format, un format préservant la mise en forme d'un document sur tout appareil",
-        "Public Distribution Format, un format libre de droits pour la diffusion de documents officiels"
-      ],
-      "r": 2,
-      "x": "PDF (Portable Document Format) a été créé par Adobe pour présenter des documents avec une mise en forme identique sur tout appareil, système et imprimante. Standardisé ISO, il est très utilisé pour les documents officiels, contrats et formulaires administratifs."
-    },
-    {
-      "q": "Quel format de fichier audio utilise une compression avec perte en éliminant les fréquences peu perceptibles par l'oreille humaine ?",
-      "o": [
-        "WAV",
-        "FLAC",
-        "AIFF",
-        "MP3"
+        "une boucle",
+        "une variable",
+        "une constante",
+        "une classe"
       ],
       "r": 3,
-      "x": "MP3 (MPEG Audio Layer 3) compresse les fichiers audio en supprimant les sons peu perceptibles, réduisant la taille jusqu'à 90 % par rapport au WAV. WAV et AIFF sont non compressés et de qualité maximale. FLAC utilise une compression sans perte, conservant toute la qualité sonore."
+      "x": "La classe Candidat peut par exemple définir les attributs nom et moyenne et une méthode calculer_moyenne, et chaque candidat réel en est une instance. Le premier langage orienté objet, Simula, a été créé en Norvège en 1967. Java, Python et C++ utilisent aussi ce principe.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel format de conteneur vidéo est le plus répandu sur Internet et compatible avec la majorité des lecteurs et navigateurs modernes ?",
+      "q": "La licence libre GNU GPL, créée en 1989 par Richard Stallman, impose que tout logiciel dérivé soit :",
       "o": [
-        "MP4",
-        "AVI",
-        "MKV",
-        "WMV"
+        "vendu au même prix",
+        "publié sous la même licence",
+        "réservé à un usage privé",
+        "déposé auprès d'un État"
+      ],
+      "r": 1,
+      "x": "C'est le principe du copyleft : le code modifié doit rester libre et accessible à tous. Les licences MIT, BSD et Apache sont plus permissives et autorisent l'intégration dans un logiciel propriétaire. Le noyau Linux, publié en 1991, est distribué sous licence GPL.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le sigle BI, en système d'information, désigne :",
+      "o": [
+        "la bureautique intégrée",
+        "la base informatique",
+        "l'informatique décisionnelle",
+        "le bus d'interconnexion"
+      ],
+      "r": 2,
+      "x": "La Business Intelligence regroupe les outils qui transforment les données en tableaux de bord et rapports pour aider à la décision. Le terme a été popularisé en 1989 par Howard Dresner, du cabinet Gartner. Elle s'appuie souvent sur un entrepôt de données qui rassemble les informations de plusieurs services.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Un système qui centralise les données historiques de plusieurs sources pour les analyser s'appelle :",
+      "o": [
+        "un entrepôt de données",
+        "un serveur de fichiers",
+        "un disque de sauvegarde",
+        "un logiciel de messagerie"
       ],
       "r": 0,
-      "x": "MP4 est le format vidéo le plus universellement supporté sur le Web et les appareils mobiles. Il utilise généralement la compression H.264 pour la vidéo et AAC pour l'audio. AVI et WMV sont des formats anciens de Microsoft, MKV est open source mais moins universel."
+      "x": "L'entrepôt de données, ou data warehouse, rassemble par exemple des années de données de ventes, de personnel et de budget dans un format adapté aux analyses. L'Américain Bill Inmon est considéré comme son père. Il se distingue de la base de production, conçue pour les opérations quotidiennes.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Qu'est-ce qu'un format de compression sans perte ?",
+      "q": "Le Big Data se caractérise traditionnellement par les « 3V », qui désignent :",
       "o": [
-        "Un format réduisant la taille d'un fichier en supprimant définitivement les données redondantes",
-        "Un format réduisant la taille d'un fichier tout en permettant de le restaurer à l'identique",
-        "Un format de chiffrement empêchant la lecture sans clé de déchiffrement appropriée",
-        "Un format optimisant la vitesse de chargement des fichiers sur les connexions lentes"
-      ],
-      "r": 1,
-      "x": "La compression sans perte réduit la taille d'un fichier en encodant plus efficacement ses données, sans en supprimer. La décompression restaure le fichier exactement à l'identique de l'original. PNG, FLAC, ZIP et RAR utilisent la compression sans perte."
-    },
-    {
-      "q": "Parmi les descriptions suivantes, laquelle définit le mieux les réseaux sociaux numériques ?",
-      "o": [
-        "Des sites web proposant des actualités et des informations générales à leurs abonnés",
-        "Des plateformes de commerce en ligne permettant d'acheter et de vendre des produits",
-        "Des plateformes permettant aux utilisateurs de créer, partager et interagir autour de contenus",
-        "Des applications de messagerie permettant uniquement des échanges privés entre utilisateurs"
-      ],
-      "r": 2,
-      "x": "Les réseaux sociaux permettent de créer des profils, publier des contenus, interagir avec d'autres utilisateurs et partager des informations. Facebook, X (Twitter), Instagram, LinkedIn et TikTok en sont des exemples majeurs à l'audience mondiale."
-    },
-    {
-      "q": "Quelle bonne pratique est recommandée lors de l'envoi d'un courriel professionnel ?",
-      "o": [
-        "Utiliser systématiquement la mise en copie cachée pour tous les destinataires internes",
-        "Rédiger l'objet du message après avoir entièrement rédigé le corps du courriel",
-        "Mettre en majuscule les mots importants pour en faciliter la lecture et la compréhension",
-        "Indiquer un objet clair et précis résumant le contenu du message dans la ligne d'objet"
+        "virtualisation, validité, vitesse",
+        "valeur, vérité, visibilité",
+        "version, vecteur, volume",
+        "volume, variété, vélocité"
       ],
       "r": 3,
-      "x": "Un objet clair et précis permet au destinataire d'identifier immédiatement le sujet et la priorité du message. Les majuscules intégrales sont à éviter car elles équivalent à \"crier\" dans la communication numérique. La copie cachée est réservée à des usages spécifiques et justifiés."
+      "x": "Ces trois caractéristiques ont été décrites en 2001 par l'analyste Doug Laney : des données très volumineuses, de formes variées et produites très vite. On y ajoute parfois la véracité et la valeur. Des outils comme Hadoop et Spark ont été conçus pour traiter de tels volumes.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quelle pratique renforce le plus efficacement la sécurité d'un mot de passe ?",
+      "q": "L'ensemble organisé de ressources qui permet de collecter, stocker, traiter et diffuser l'information d'une organisation s'appelle :",
       "o": [
-        "Utiliser une phrase de passe longue combinant lettres, chiffres et caractères spéciaux",
-        "Utiliser le même mot de passe robuste sur tous les comptes importants pour le mémoriser",
-        "Changer son mot de passe chaque semaine en incrémentant uniquement le chiffre final",
-        "Utiliser uniquement des informations personnelles facilement mémorisables comme une date"
+        "un système d'information",
+        "un système d'exploitation",
+        "un réseau local",
+        "un centre de données"
       ],
       "r": 0,
-      "x": "Un mot de passe fort est long, aléatoire et combine différents types de caractères. Une phrase de passe mémorisable (ex. : Mon$Chat_Boit3Cafés!) est à la fois longue et robuste. Réutiliser un même mot de passe est dangereux car une seule fuite compromet tous les comptes."
+      "x": "Le système d'information comprend à la fois les personnes, les procédures, les logiciels et le matériel. Il ne se limite donc pas au service informatique ni au parc d'ordinateurs. Le système d'exploitation, comme Windows, n'est qu'un logiciel qui gère un seul ordinateur.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Que permet un gestionnaire de mots de passe ?",
+      "q": "Le sigle ERP, progiciel qui intègre comptabilité, ressources humaines et stocks dans un même système, signifie :",
       "o": [
-        "Récupérer automatiquement les mots de passe oubliés via le courriel de récupération",
-        "Stocker et gérer de manière sécurisée des mots de passe complexes et uniques",
-        "Tester la robustesse des mots de passe en tentant de les deviner par force brute",
-        "Synchroniser les mots de passe entre tous les appareils d'une même marque"
+        "Electronic Resource Provider",
+        "Enterprise Resource Planning",
+        "Extended Routing Platform",
+        "Efficient Request Processing"
       ],
       "r": 1,
-      "x": "Un gestionnaire de mots de passe génère, stocke et remplit automatiquement des mots de passe uniques et complexes pour chaque compte. L'utilisateur ne retient qu'un seul mot de passe maître sécurisé. Bitwarden, 1Password et KeePass en sont des exemples populaires."
+      "x": "L'ERP, appelé en français progiciel de gestion intégré (PGI), partage une seule base de données entre tous les services. Le terme a été popularisé par le cabinet Gartner en 1990, et l'éditeur allemand SAP, fondé en 1972, est le leader du secteur. Il évite les saisies multiples d'une même information.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel micrologiciel stocké sur la carte mère est le premier programme exécuté lors du démarrage d'un ordinateur ?",
+      "q": "Le logiciel de gestion de la relation client, qui centralise les contacts et l'historique des ventes, s'appelle :",
       "o": [
-        "Le chargeur de démarrage du système d'exploitation",
-        "Le noyau du système d'exploitation chargé en mémoire",
-        "Le BIOS ou son successeur UEFI",
-        "Le gestionnaire de périphériques du système"
+        "un ERP",
+        "un SGBD",
+        "un CRM",
+        "un CMS"
       ],
       "r": 2,
-      "x": "Le BIOS (Basic Input/Output System) ou son successeur UEFI (Unified Extensible Firmware Interface) est gravé sur la carte mère. Il initialise le matériel, effectue l'autodiagnostic POST et charge le chargeur de démarrage qui lance ensuite le système d'exploitation."
+      "x": "Le CRM, pour Customer Relationship Management, permet de suivre chaque client, ses achats et ses demandes, afin d'améliorer le service et les ventes. Le CMS, comme WordPress, sert à gérer le contenu d'un site web. Une petite entreprise peut commencer avec un CRM gratuit, comme HubSpot.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quelle méthode de sauvegarde copie uniquement les fichiers modifiés depuis la dernière sauvegarde complète ou incrémentielle ?",
+      "q": "La capacité de systèmes informatiques différents à échanger et à exploiter mutuellement leurs données s'appelle :",
       "o": [
-        "La sauvegarde complète",
-        "La sauvegarde miroir",
-        "La sauvegarde différentielle",
-        "La sauvegarde incrémentielle"
+        "la portabilité",
+        "la redondance",
+        "la scalabilité",
+        "l'interopérabilité"
       ],
       "r": 3,
-      "x": "La sauvegarde incrémentielle copie uniquement les fichiers modifiés depuis la dernière sauvegarde (qu'elle soit complète ou incrémentielle). Elle est rapide et économe en espace. La sauvegarde différentielle, elle, copie tout ce qui a changé depuis la dernière sauvegarde complète uniquement."
+      "x": "L'interopérabilité permet par exemple à un fichier de l'état civil d'alimenter automatiquement le fichier électoral sans nouvelle saisie. Elle repose sur des formats et des normes communs. La scalabilité désigne, elle, la capacité d'un système à supporter une forte hausse du nombre d'utilisateurs.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel organisme de l'Union africaine coordonne les politiques de développement numérique à l'échelle du continent africain ?",
+      "q": "L'expression « Internet des objets », qui désigne les objets connectés échangeant des données, a été proposée en 1999 par :",
       "o": [
-        "La Commission de l'Union africaine",
-        "La Banque africaine de développement",
-        "L'Union économique et monétaire ouest-africaine",
-        "La Communauté économique des États de l'Afrique de l'Ouest"
+        "Kevin Ashton",
+        "Tim Berners-Lee",
+        "Steve Jobs",
+        "Linus Torvalds"
       ],
       "r": 0,
-      "x": "La Commission de l'Union africaine coordonne les politiques numériques continentales, notamment à travers l'Agenda 2063 et la Stratégie de transformation numérique de l'Afrique. Elle définit le cadre des TIC et de l'économie numérique pour les États membres."
+      "x": "Le Britannique Kevin Ashton a proposé l'expression en 1999 en travaillant sur les étiquettes RFID. Les capteurs connectés servent aujourd'hui à mesurer l'humidité des sols, à suivre des troupeaux ou à relever des compteurs à distance. Tim Berners-Lee est l'inventeur du Web, et Linus Torvalds le créateur de Linux.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Que désigne le terme monnaie mobile dans le contexte africain ?",
+      "q": "Une ville intelligente (smart city) se caractérise par :",
       "o": [
-        "Un système de paiement en ligne nécessitant obligatoirement une connexion Internet haut débit",
-        "Un service permettant d'envoyer, de recevoir et de stocker de l'argent via un téléphone mobile",
-        "Une application bancaire réservée aux clients disposant d'un compte dans une banque conventionnelle",
-        "Un système de paiement par carte de crédit sans contact intégré aux téléphones récents"
-      ],
-      "r": 1,
-      "x": "La monnaie mobile (Mobile Money) permet d'effectuer des transactions financières via un simple téléphone, sans compte bancaire traditionnel. Orange Money et Moov Money sont très répandus en Afrique de l'Ouest, notamment au Burkina Faso, pour les paiements du quotidien."
-    },
-    {
-      "q": "Que désigne la littératie numérique ?",
-      "o": [
-        "La capacité à taper rapidement au clavier et à utiliser des logiciels de traitement de texte",
-        "La maîtrise des langages de programmation et du développement de logiciels et applications informatiques",
-        "L'ensemble des compétences permettant d'utiliser, d'évaluer et de créer des contenus numériques",
-        "La connaissance des lois et réglementations encadrant l'usage d'Internet dans un pays"
+        "l'absence d'agents municipaux",
+        "l'interdiction des véhicules à moteur",
+        "l'usage du numérique pour ses services",
+        "l'obligation d'un smartphone par habitant"
       ],
       "r": 2,
-      "x": "La littératie numérique regroupe les compétences pour naviguer, utiliser et évaluer de manière critique les outils numériques, et créer des contenus. Elle inclut la sécurité en ligne, la compréhension des algorithmes et la capacité à identifier les fausses informations."
+      "x": "La ville intelligente utilise capteurs, données et réseaux pour gérer les transports, l'éclairage, l'eau et les déchets plus efficacement. Les décisions restent prises par des humains, la technologie n'étant qu'un outil d'aide. L'éclairage public qui ne s'allume qu'au passage des piétons en est un exemple.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Que désigne le terme infox dans le contexte de la communication numérique ?",
+      "q": "La blockchain, décrite en 2008 avec le Bitcoin, est :",
       "o": [
-        "Un logiciel générant automatiquement des actualités fictives à des fins commerciales",
-        "Un protocole réseau diffusant des informations erronées sur les serveurs de messagerie",
-        "Un type d'attaque informatique ciblant les médias en ligne pour perturber leur activité",
-        "La diffusion intentionnelle de fausses informations via les canaux numériques"
-      ],
-      "r": 3,
-      "x": "L'infox (ou fake news) est la diffusion délibérée de fausses informations via Internet et les réseaux sociaux dans le but de tromper, manipuler ou influencer l'opinion publique. La vérification des sources et le recours à des sites de fact-checking sont des pratiques essentielles pour la combattre."
-    },
-    {
-      "q": "Quelle licence open source impose que tout logiciel dérivé soit distribué sous la même licence que l'original ?",
-      "o": [
-        "La licence GNU GPL",
-        "La licence MIT",
-        "La licence BSD",
-        "La licence Apache 2.0"
+        "un registre distribué de blocs chaînés",
+        "un protocole de messagerie chiffrée",
+        "un logiciel de compression de fichiers",
+        "un réseau Wi-Fi sécurisé"
       ],
       "r": 0,
-      "x": "La licence GNU GPL (General Public License) est une licence copyleft : tout logiciel dérivé doit être distribué sous la même licence GPL, garantissant que le code reste libre. Les licences MIT, BSD et Apache sont plus permissives et n'imposent pas cette réciprocité."
+      "x": "Chaque bloc contient des transactions et l'empreinte du bloc précédent, si bien que modifier un ancien bloc obligerait à recalculer toute la chaîne. Ce registre est copié chez de nombreux participants, sans autorité centrale. Au-delà des cryptomonnaies, il peut servir à la traçabilité de produits agricoles ou de documents.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Parmi les méthodes d'authentification suivantes, laquelle est considérée comme la plus robuste pour protéger un compte en ligne ?",
+      "q": "Le Bitcoin, première cryptomonnaie, lancé en 2009, se caractérise par :",
       "o": [
-        "Un mot de passe long composé de plus de vingt caractères aléatoires",
-        "Une clé de sécurité physique combinée à un mot de passe",
-        "Une question secrète basée sur des informations personnelles de l'utilisateur",
-        "Un code à quatre chiffres envoyé par SMS sur le numéro enregistré du compte"
+        "son émission par une banque centrale",
+        "son fonctionnement décentralisé",
+        "sa garantie par un État",
+        "son usage réservé aux banques"
       ],
       "r": 1,
-      "x": "La clé de sécurité physique (FIDO2/WebAuthn) est l'authentification à deux facteurs la plus robuste. Elle résiste au hameçonnage car elle vérifie cryptographiquement le site légitime. Les codes SMS sont vulnérables aux attaques de substitution de carte SIM (SIM swapping)."
+      "x": "Le Bitcoin n'est émis par aucune banque centrale : ses transactions sont validées par un réseau d'ordinateurs selon les règles de la blockchain. Sa valeur est très volatile, car elle dépend uniquement de l'offre et de la demande. Une monnaie numérique de banque centrale serait, au contraire, émise et garantie par une institution comme la BCEAO.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quelle technologie est utilisée par les administrations pour garantir l'authenticité des documents officiels transmis électroniquement ?",
+      "q": "Le format vidéo MP4, normalisé en 2003, est surtout apprécié pour :",
       "o": [
-        "Un filigrane numérique visible apposé automatiquement sur chaque document partagé",
-        "Un code-barres bidimensionnel imprimé sur le document et vérifié par application mobile",
-        "Un cachet électronique basé sur des certificats numériques délivrés par une autorité de confiance",
-        "Une copie horodatée automatiquement enregistrée par le serveur de messagerie institutionnel"
+        "son absence de compression",
+        "son usage réservé à Windows",
+        "sa compatibilité universelle",
+        "sa limite de 4 Go par fichier"
       ],
       "r": 2,
-      "x": "Le cachet électronique serveur, basé sur des certificats numériques PKI, garantit l'authenticité et l'intégrité des documents officiels en ligne. Il permet au destinataire de vérifier que le document émane bien de l'organisation émettrice et qu'il n'a pas été modifié."
+      "x": "Le MP4 se lit sur presque tous les smartphones, navigateurs et lecteurs, d'où son usage massif sur le Web et WhatsApp. Il associe généralement la compression vidéo H.264 et l'audio AAC. Les formats AVI, créé par Microsoft en 1992, et WMV sont plus anciens et moins universels.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Dans l'administration publique, à quoi sert un système de gestion intégré des ressources ?",
+      "q": "Une compression sans perte, comme celle du format ZIP créé en 1989, permet de :",
       "o": [
-        "À surveiller en temps réel les connexions Internet des agents sur le réseau institutionnel",
-        "À gérer les archives physiques et numériques des différents ministères et services publics",
-        "À former les agents publics aux outils bureautiques via des modules en ligne adaptés",
-        "À centraliser la gestion des ressources humaines, financières et matérielles de l'État"
+        "réduire la qualité des images",
+        "supprimer les fichiers en double",
+        "chiffrer les données",
+        "retrouver le fichier identique"
       ],
       "r": 3,
-      "x": "Un ERP ou système de gestion intégré dans l'administration centralise la gestion des ressources humaines (paie, carrières), financières (budget, comptabilité) et matérielles. Il améliore l'efficacité, la transparence et la qualité du service public rendu aux citoyens."
+      "x": "La compression sans perte réduit la taille d'un fichier en codant plus efficacement ses données, sans en supprimer aucune, et la décompression restitue l'original à l'octet près. Les formats ZIP, PNG et FLAC en sont des exemples. Le JPEG et le MP3 utilisent au contraire une compression avec perte.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Qu'est-ce qu'un intranet dans une organisation ?",
+      "q": "Les réseaux sociaux numériques, comme Facebook lancé en 2004, sont des plateformes qui permettent surtout de :",
       "o": [
-        "Un réseau informatique privé interne utilisant les technologies web, accessible uniquement aux membres de l'organisation",
-        "Un réseau d'entreprises partenaires partageant des ressources via une connexion Internet sécurisée",
-        "Un réseau sans fil couvrant l'ensemble des bâtiments d'une administration publique",
-        "Un service de messagerie interne fonctionnant exclusivement par SMS entre agents d'un ministère"
+        "partager et interagir",
+        "héberger des serveurs",
+        "programmer des logiciels",
+        "gérer des bases de données"
       ],
       "r": 0,
-      "x": "L'intranet est un réseau privé interne utilisant les technologies web et Internet, mais accessible uniquement aux membres de l'organisation. Il sert à partager des informations, documents et applications en interne, à l'opposé d'Internet qui est accessible à tous."
+      "x": "Les réseaux sociaux permettent de créer un profil, de publier des contenus et d'échanger avec d'autres utilisateurs. Facebook, X, Instagram, LinkedIn et TikTok en sont les exemples les plus connus. Ils sont devenus des outils majeurs de communication pour les institutions, mais aussi des vecteurs de fausses informations.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Qu'est-ce qu'un extranet ?",
+      "q": "Dans un courriel professionnel, la bonne pratique recommandée est de :",
       "o": [
-        "Une version améliorée et sécurisée d'un réseau Wi-Fi public dans un espace de travail",
-        "Une extension sécurisée de l'intranet permettant à des partenaires externes d'accéder à certaines ressources",
-        "Un réseau privatif reliant exclusivement les différents ministères d'un même gouvernement",
-        "Un protocole de communication sécurisée entre deux succursales d'une même organisation"
+        "écrire tout en majuscules",
+        "indiquer un objet précis",
+        "laisser l'objet vide",
+        "mettre tous les destinataires en Cci"
       ],
       "r": 1,
-      "x": "L'extranet est une extension de l'intranet accessible à des partenaires extérieurs autorisés (fournisseurs, clients, autres administrations) via Internet. Il leur donne accès à une partie limitée des ressources internes et facilite la collaboration inter-organisationnelle sécurisée."
+      "x": "Un objet précis, comme « Dossier de candidature – concours 2026 », permet au destinataire de comprendre et de classer le message sans l'ouvrir. Les majuscules continues sont perçues comme des cris dans la communication écrite. Le champ Cci se réserve aux envois groupés où l'on veut masquer les adresses.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Parmi les services suivants, lequel désigne un service de stockage en nuage permettant de synchroniser et partager des fichiers entre appareils ?",
+      "q": "La règle de sauvegarde « 3-2-1 » recommande de conserver :",
       "o": [
-        "Google Maps",
-        "Microsoft Teams",
-        "Google Drive",
-        "Adobe Premiere"
-      ],
-      "r": 2,
-      "x": "Google Drive est un service de stockage en nuage permettant de stocker, synchroniser et partager des fichiers entre différents appareils. Microsoft OneDrive et Dropbox proposent des fonctionnalités similaires. Teams est un outil collaboratif et Maps un service de cartographie."
-    },
-    {
-      "q": "Parmi les défis suivants, lequel représente un obstacle majeur à la transformation numérique dans les pays en développement ?",
-      "o": [
-        "L'excès de compétences numériques dans la population active locale",
-        "La surproduction de contenus numériques dans les langues nationales",
-        "L'omniprésence des infrastructures numériques dans les zones rurales reculées",
-        "Le manque d'infrastructures numériques, d'énergie fiable et de compétences locales"
-      ],
-      "r": 3,
-      "x": "La transformation numérique en Afrique est freinée par l'insuffisance des infrastructures (réseau, électricité), le coût élevé des équipements et de la connectivité, et le déficit de compétences numériques locales, particulièrement prononcé dans les zones rurales éloignées."
-    },
-    {
-      "q": "Que désigne le télétravail dans le contexte de la transformation numérique du travail ?",
-      "o": [
-        "Une organisation permettant à un agent d'exercer ses fonctions à distance grâce aux TIC",
-        "Une réunion professionnelle organisée en visioconférence entre collègues d'une même ville",
-        "Un système de surveillance des performances des agents publics via des outils numériques",
-        "Un programme de formation en ligne obligatoire pour les agents de l'administration publique"
+        "3 copies, 2 supports, 1 hors site",
+        "3 disques, 2 clés, 1 serveur",
+        "3 jours, 2 semaines, 1 mois",
+        "3 fichiers, 2 dossiers, 1 archive"
       ],
       "r": 0,
-      "x": "Le télétravail permet à un employé d'exercer ses fonctions depuis son domicile ou tout autre lieu distant du bureau, grâce aux outils numériques (messagerie, visioconférence, VPN). Il a connu un essor considérable depuis la pandémie de Covid-19 à partir de 2020."
+      "x": "Il faut 3 copies des données, dont l'original, sur 2 types de supports différents, comme un disque et le cloud, et 1 copie dans un autre lieu. Ainsi, un incendie, un vol ou un rançongiciel ne détruit jamais toutes les copies à la fois. Une clé USB rangée à côté de l'ordinateur ne suffit donc pas.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Que désigne le terme e-learning dans le domaine de la formation professionnelle ?",
+      "q": "La sauvegarde qui copie uniquement les fichiers modifiés depuis la dernière sauvegarde, quelle qu'elle soit, s'appelle :",
       "o": [
-        "Un programme de certification professionnelle en informatique délivré par des universités en ligne",
-        "L'apprentissage à distance utilisant des outils numériques, Internet et des plateformes dédiées",
-        "Un logiciel de gestion des formations en présentiel dans les établissements professionnels",
-        "Un système de notation automatisée des examens par des algorithmes d'intelligence artificielle"
-      ],
-      "r": 1,
-      "x": "Le e-learning désigne toute forme de formation utilisant des supports numériques et Internet : cours en vidéo, quiz interactifs, forums, classes virtuelles. Il offre une flexibilité d'accès aux savoirs sans contrainte géographique ni horaire, adaptée aux apprenants en activité professionnelle."
-    },
-    {
-      "q": "Dans le cadre de la modernisation administrative, que désigne la notion de guichet unique numérique ?",
-      "o": [
-        "Un bureau physique centralisant tous les services administratifs dans une seule salle",
-        "Un service postal permettant d'envoyer des documents officiels par voie électronique",
-        "Un portail en ligne centralisant plusieurs démarches administratives accessibles depuis un seul point",
-        "Un dispositif biométrique d'identification des citoyens dans les structures administratives"
-      ],
-      "r": 2,
-      "x": "Le guichet unique numérique est un portail web centralisant de nombreuses démarches administratives permettant aux citoyens et entreprises de les accomplir en ligne depuis un seul point d'accès. Il réduit les déplacements, les délais de traitement et les coûts administratifs."
-    },
-    {
-      "q": "Dans le cadre de la cybersécurité institutionnelle, que désigne une politique de sécurité des systèmes d'information ?",
-      "o": [
-        "Un catalogue des équipements informatiques agréés pour les services de l'État",
-        "Un ensemble de règles techniques définissant les configurations des postes de travail",
-        "Un contrat de prestation liant l'État à un fournisseur de services de sécurité informatique",
-        "Un document définissant les règles, responsabilités et mesures pour protéger les systèmes d'information"
+        "la sauvegarde complète",
+        "la sauvegarde miroir",
+        "la sauvegarde différentielle",
+        "la sauvegarde incrémentielle"
       ],
       "r": 3,
-      "x": "Une politique de sécurité des systèmes d'information (PSSI) formalise les règles, responsabilités, procédures et mesures techniques pour protéger les systèmes et données d'une organisation. Elle est le fondement de toute démarche de cybersécurité institutionnelle sérieuse."
+      "x": "Exemple : une sauvegarde complète le lundi, puis des incrémentielles chaque jour, qui ne copient que les changements de la veille. La différentielle copie, elle, tout ce qui a changé depuis la dernière sauvegarde complète, et grossit donc chaque jour. Pour restaurer, l'incrémentielle exige la complète et toutes les incrémentielles suivantes.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Que désigne l'identité numérique d'un citoyen dans le contexte des services publics en ligne ?",
+      "q": "L'extranet d'une organisation se définit comme :",
       "o": [
-        "L'ensemble des attributs numériques permettant d'identifier et d'authentifier un citoyen en ligne",
-        "La liste de ses comptes sur les réseaux sociaux et les plateformes numériques commerciales",
-        "Son adresse courriel institutionnelle attribuée par l'administration à laquelle il est rattaché",
-        "Son numéro national couplé à son numéro de téléphone mobile personnel déclaré"
+        "un réseau Wi-Fi public",
+        "un intranet ouvert aux partenaires",
+        "un réseau réservé aux employés",
+        "un service de messagerie par SMS"
+      ],
+      "r": 1,
+      "x": "L'extranet donne à des partenaires extérieurs autorisés, comme des fournisseurs ou d'autres administrations, un accès sécurisé à une partie des ressources internes. L'intranet est, lui, réservé aux seuls membres de l'organisation. L'accès se fait généralement par Internet avec un identifiant et un mot de passe.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le sigle TIC désigne :",
+      "o": [
+        "les techniques informatiques de calcul",
+        "le traitement informatique centralisé",
+        "les technologies de l'information et de la communication",
+        "le transfert d'informations et de contenus"
+      ],
+      "r": 2,
+      "x": "Les TIC regroupent les ordinateurs, Internet, la téléphonie et les logiciels qui servent à produire, stocker et transmettre l'information. Au Burkina Faso, l'Agence nationale de promotion des TIC (ANPTIC), créée en 2014, met en œuvre les grands programmes numériques de l'État. On parle aussi de NTIC pour « nouvelles » technologies.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "L'e-administration désigne :",
+      "o": [
+        "l'usage des TIC pour les services publics",
+        "la suppression des administrations",
+        "la privatisation des services publics",
+        "l'automatisation de toutes les décisions"
       ],
       "r": 0,
-      "x": "L'identité numérique citoyenne regroupe les attributs (nom, numéro national, données biométriques) et les moyens d'authentification (certificat, code) permettant à un citoyen de s'identifier de manière sécurisée sur les portails des services publics dématérialisés."
+      "x": "L'e-administration permet d'accomplir des démarches en ligne, comme la demande de visa électronique sur visaburkina.bf lancée en 2023. Elle réduit les déplacements et les délais, mais ne remplace ni les agents ni les décisions humaines. Elle repose sur la dématérialisation des procédures et la signature électronique.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Quel programme de l'Union africaine vise à accélérer la transformation numérique du continent à l'horizon 2030 ?",
+      "q": "L'ensemble des règles, politiques et pratiques qui encadrent l'usage du numérique dans un pays s'appelle :",
       "o": [
-        "L'Initiative Connectivité Africaine pour le développement",
-        "La Stratégie de Transformation Numérique de l'Afrique",
-        "Le Plan Numérique Continental de l'Union africaine",
-        "L'Agenda Africain pour la Gouvernance Numérique"
+        "la fracture numérique",
+        "la gouvernance numérique",
+        "la littératie numérique",
+        "l'inclusion numérique"
       ],
       "r": 1,
-      "x": "La Stratégie de Transformation Numérique de l'Afrique 2020-2030, adoptée par l'Union africaine, guide les États membres dans leur développement numérique. Elle couvre les infrastructures, les compétences, l'innovation, la cybersécurité et l'économie numérique."
+      "x": "La gouvernance numérique comprend les lois, les stratégies nationales et les institutions de régulation, comme l'ARCEP et la CIL au Burkina Faso. Elle définit qui décide et selon quelles règles. La littératie numérique désigne, elle, les compétences individuelles des utilisateurs.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     },
     {
-      "q": "Que désigne la protection des données personnelles dans le contexte numérique ?",
+      "q": "Les actions qui visent à permettre à tous les citoyens d'accéder au numérique et de l'utiliser s'appellent :",
       "o": [
-        "Le cryptage obligatoire de toutes les communications entre citoyens et administrations publiques",
-        "La suppression automatique des données collectées par les applications après une période définie",
-        "L'ensemble des droits et obligations encadrant la collecte et l'utilisation des données personnelles",
-        "La conservation des données citoyennes exclusivement sur des serveurs situés sur le territoire national"
-      ],
-      "r": 2,
-      "x": "La protection des données personnelles encadre la manière dont les organisations collectent, traitent, conservent et partagent les données des individus. Au Burkina Faso, la Commission de l'Informatique et des Libertés (CIL) veille à cette protection, en s'inspirant des standards internationaux."
-    },
-    {
-      "q": "Au Burkina Faso, quelle institution est chargée de veiller à la protection des données personnelles et au respect des libertés individuelles dans l'usage de l'informatique ?",
-      "o": [
-        "Le ministère de la Justice et des Droits humains",
-        "Le ministère de la Transition digitale et des Postes",
-        "L'Autorité de Régulation des Communications Électroniques et des Postes",
-        "La Commission de l'Informatique et des Libertés"
+        "la souveraineté numérique",
+        "la gouvernance numérique",
+        "la dématérialisation",
+        "l'inclusion numérique"
       ],
       "r": 3,
-      "x": "La CIL (Commission de l'Informatique et des Libertés) est l'autorité administrative indépendante du Burkina Faso chargée de veiller à ce que l'informatique ne porte pas atteinte aux libertés individuelles et à la vie privée. Elle contrôle les fichiers contenant des données personnelles."
+      "x": "L'inclusion numérique passe par la connectivité, des équipements abordables et la formation, notamment des populations rurales, des personnes âgées et des personnes handicapées. Elle combat la fracture numérique. Proposer des services en ligne dans les langues nationales y contribue aussi.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "L'inégalité d'accès et d'usage des technologies numériques entre populations s'appelle :",
+      "o": [
+        "l'inclusion numérique",
+        "la souveraineté numérique",
+        "la fracture numérique",
+        "la transition numérique"
+      ],
+      "r": 2,
+      "x": "La fracture numérique oppose par exemple les villes bien couvertes aux zones rurales mal connectées, ou les jeunes aux personnes âgées. Elle porte sur l'accès matériel mais aussi sur les compétences. L'inclusion numérique désigne les actions menées pour la réduire.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La capacité d'un État à maîtriser ses données, ses infrastructures et ses technologies numériques s'appelle :",
+      "o": [
+        "la souveraineté numérique",
+        "la neutralité du Net",
+        "l'interopérabilité",
+        "la portabilité"
+      ],
+      "r": 0,
+      "x": "La souveraineté numérique suppose par exemple d'héberger les données sensibles de l'administration dans des centres de données nationaux, comme ceux de l'ANPTIC. Elle limite la dépendance envers des entreprises ou des États étrangers. La neutralité du Net désigne, elle, l'égalité de traitement de tous les flux sur Internet.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La plateforme burkinabè de données ouvertes Burkina Open Data Initiative (BODI) a été présentée officiellement en :",
+      "o": [
+        "juin 2010",
+        "juin 2014",
+        "juin 2018",
+        "juin 2021"
+      ],
+      "r": 1,
+      "x": "La plateforme a été présentée lors du forum national des données ouvertes, les 5 et 6 juin 2014 à Ouagadougou, faisant du Burkina Faso un pionnier en Afrique francophone. Les données ouvertes sont des données publiques mises à disposition librement et gratuitement. Le 30 mars 2021 correspond, lui, à la loi sur les données personnelles.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Une personne qui utilise Internet pour naviguer, communiquer ou accéder à des services en ligne s'appelle :",
+      "o": [
+        "un webmestre",
+        "un hébergeur",
+        "un développeur",
+        "un internaute"
+      ],
+      "r": 3,
+      "x": "L'internaute est tout utilisateur d'Internet, le terme étant d'usage courant dans les pays francophones depuis les années 1990. Le webmestre administre un site web et l'hébergeur le stocke sur ses serveurs. Selon l'UIT, environ 5,5 milliards de personnes utilisaient Internet en 2024.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "L'ensemble des règles de politesse à respecter dans les échanges sur Internet, formalisé en 1995, s'appelle :",
+      "o": [
+        "la netiquette",
+        "la charte graphique",
+        "le code source",
+        "le règlement intérieur"
+      ],
+      "r": 0,
+      "x": "La netiquette a été formalisée en 1995 dans le document RFC 1855 : respecter ses interlocuteurs, éviter les majuscules continues, citer ses sources. Elle s'applique aux courriels, aux forums et aux réseaux sociaux. La charte graphique fixe, elle, les couleurs et les logos d'une organisation.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La capacité à utiliser, évaluer et produire des contenus numériques de manière critique s'appelle :",
+      "o": [
+        "la fracture numérique",
+        "la souveraineté numérique",
+        "la littératie numérique",
+        "la gouvernance numérique"
+      ],
+      "r": 2,
+      "x": "La littératie numérique comprend la sécurité en ligne, la protection de ses données et la capacité à repérer les fausses informations. Elle dépasse la simple maîtrise du clavier ou de la bureautique. Elle est un levier essentiel de l'inclusion numérique des populations.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le terme « infox », recommandé en 2018 pour remplacer l'anglais « fake news », désigne :",
+      "o": [
+        "une publicité ciblée",
+        "une information vérifiée",
+        "un virus informatique",
+        "une fausse information diffusée"
+      ],
+      "r": 3,
+      "x": "Le mot infox, contraction d'« information » et d'« intoxication », a été publié au Journal officiel français le 4 octobre 2018. Il désigne une information mensongère diffusée délibérément pour tromper ou manipuler. Vérifier la source, la date et d'autres médias fiables avant de partager reste le meilleur réflexe.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Un portail en ligne qui regroupe plusieurs démarches administratives en un seul point d'accès s'appelle :",
+      "o": [
+        "un guichet unique numérique",
+        "un serveur de messagerie",
+        "un réseau social",
+        "un moteur de recherche"
+      ],
+      "r": 0,
+      "x": "Le guichet unique numérique évite à l'usager de se rendre dans plusieurs services pour un même dossier, ce qui réduit les délais et les coûts. Il repose sur l'interopérabilité entre les systèmes des administrations. Il s'appuie souvent sur une identité numérique permettant d'authentifier l'usager.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "Le projet d'identification unique pour l'intégration et l'inclusion en Afrique de l'Ouest (WURI), auquel participe le Burkina Faso, vise à fournir aux citoyens :",
+      "o": [
+        "un compte bancaire gratuit",
+        "une adresse électronique officielle",
+        "une identité numérique fiable",
+        "un téléphone mobile subventionné"
+      ],
+      "r": 2,
+      "x": "L'identité numérique regroupe les attributs et moyens d'authentification qui permettent à un citoyen de prouver qui il est en ligne. Le projet WURI, financé par la Banque mondiale, couvre six pays : Burkina Faso, Côte d'Ivoire, Bénin, Niger, Togo et Guinée. Il facilite l'accès aux services publics et sociaux.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
+    },
+    {
+      "q": "La Stratégie de transformation numérique pour l'Afrique, adoptée par l'Union africaine (UA) en février 2020, couvre la période :",
+      "o": [
+        "2015-2025",
+        "2020-2030",
+        "2020-2063",
+        "2025-2035"
+      ],
+      "r": 1,
+      "x": "Adoptée en février 2020, cette stratégie couvre 2020 - 2030, soit dix ans, et vise notamment un marché unique numérique africain. Elle s'inscrit dans l'Agenda 2063 de l'Union africaine, d'où le distracteur 2063. Elle complète la Convention de Malabo sur la cybersécurité, adoptée en 2014.",
+      "_batchId": "informatique/2026-10-21/ANCIENS"
     }
   ],
   "agriculture": [
