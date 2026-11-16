@@ -1,5 +1,7 @@
 // =========================================================================
-// Bara Concours - Module Firebase V54 (Google + Email/Mot de passe)
+// Bara Concours - Module Firebase V64.17 (Google + Email/Mot de passe)
+// (en-tête resté à « V54 » jusqu'en V64.16 alors que le fichier avait évolué :
+//  si une copie de ce fichier affiche encore V54, c'est une ANCIENNE copie)
 // =========================================================================
 // Authentification : Google sign-in (popup) + Email/Mot de passe
 // Stockage : Firestore (profils utilisateurs + codes Premium plus tard)
@@ -407,7 +409,17 @@ const FirebaseAuth = {
     try {
       const cred = await this._fbFns.signInWithEmailAndPassword(this.auth, email, password);
       const user = cred.user;
-      const profile = await this._loadUserProfile(user.uid);
+      // V64.17 : _ensureUserDoc au lieu de _loadUserProfile.
+      //   _loadUserProfile ne faisait que lire le profil : une connexion par
+      //   email/mot de passe n'enregistrait donc ni l'appareil ni lastLoginAt.
+      //   Or c'est précisément par email/mot de passe qu'on partage un compte
+      //   (un compte Google se prête beaucoup moins). Le suivi des appareils
+      //   manquait le cas qu'il est censé repérer.
+      //   Coût : une écriture par connexion explicite. Les sessions restent
+      //   ouvertes des semaines, ces connexions sont rares.
+      //   Effet secondaire utile : si un compte Auth n'a pas de document
+      //   Firestore (cas connu avant V63.50), il est créé au lieu d'être ignoré.
+      const profile = await this._ensureUserDoc(user, 'email');
 
       return {
         success: true,
