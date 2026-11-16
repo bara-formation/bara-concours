@@ -919,8 +919,6 @@ const Admin = {
       // Sauvegarder dans le cache local
       localStorage.setItem('bara_real_users_cache', JSON.stringify(result.users));
       this.state._usersRefreshing = false;
-      // V64.18 : ouvrir ou fermer la vente Premium selon le plafond de places
-      this._synchroniserPlacesPremium();
       // V63.19 : Re-render seulement si on n'est PAS en train d'écrire dans la recherche
       // (sinon l'input perd le focus à chaque lettre tapée)
       const activeEl = document.activeElement;
@@ -1589,8 +1587,6 @@ const Admin = {
     if (tab === 'expiring') filtered = filtered.filter(u => u.isPremium && window.PremiumService.daysRemaining(u) <= 7);
     // V64.16 : comptes ouverts depuis plusieurs appareils — partage probable
     if (tab === 'shared') filtered = filtered.filter(u => this.nbAppareils(u) >= this.SEUIL_PARTAGE);
-    // V64.18 : suivi personnalisé — comptes au niveau Premium
-    if (tab === 'suivi') filtered = filtered.filter(u => this.aDroitSuivi(u));
     // V63.65 : Inscrits sans aucune activité, ou inactifs depuis plus de 30 jours
     if (tab === 'inactive') {
       filtered = filtered.filter(u => {
@@ -1630,9 +1626,6 @@ const Admin = {
     //   un compte gratuit partagé ne coûte que des lectures Firestore.
     const partages = normalized.filter(u => this.nbAppareils(u) >= this.SEUIL_PARTAGE).length;
     const partagesPayants = normalized.filter(u => u.isPremium && this.nbAppareils(u) >= this.SEUIL_PARTAGE).length;
-    // V64.18 : suivi personnalisé
-    const aSuivre = normalized.filter(u => this.aDroitSuivi(u));
-    const suivisEnRetard = aSuivre.filter(u => this.etatSuivi(u).code !== 'ok').length;
 
     // V59 : État de chargement
     const isFirebaseReady = window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady;
@@ -1696,13 +1689,6 @@ const Admin = {
             📱 Partagés <span class="tab-count" style="background:#fee2e2; color:#991b1b">${partages}</span>
           </button>
         ` : ''}
-        ${aSuivre.length > 0 ? `
-          <button class="tab ${tab === 'suivi' ? 'active' : ''}" onclick="Admin.setTab('suivi')"
-                  style="${tab === 'suivi' ? '' : 'border-color:#7c3aed; color:#5b21b6'}"
-                  title="Abonnés Premium : un bilan et des conseils chaque mois">
-            🧭 Suivi Premium <span class="tab-count" style="background:${suivisEnRetard > 0 ? '#fee2e2' : '#ede9fe'}; color:${suivisEnRetard > 0 ? '#991b1b' : '#5b21b6'}">${suivisEnRetard > 0 ? suivisEnRetard + ' à faire' : aSuivre.length}</span>
-          </button>
-        ` : ''}
       </div>
       </div>
       <!-- V64.07 : fin du bloc d'en-tête figé -->
@@ -1733,7 +1719,7 @@ const Admin = {
           </div>
         </div>
 
-        ${tab === 'suivi' && !showEmptyState ? this.renderSuiviListe(filtered) : showEmptyState ? `
+        ${showEmptyState ? `
           <div class="empty-state">
             <div class="empty-icon">${isAdminEmail ? '👥' : '🔒'}</div>
             <div class="empty-title">${isAdminEmail ? 'Aucun utilisateur encore' : 'Connecte-toi pour voir les utilisateurs'}</div>
@@ -1798,9 +1784,6 @@ const Admin = {
       //   un objet champ par champ, donc sans cette ligne la table serait lue
       //   depuis Firestore puis jetée avant d'atteindre l'affichage.
       devices: u.devices || {},
-      // V64.18 : formule posée par l'admin, et suivi personnalisé Premium
-      premiumAdminAt: u.premiumAdminAt || null,
-      dernierBilanAt: u.dernierBilanAt || null,
       totalDuration: u.totalDuration || 0,
       lastActivityAt: typeof u.lastActivityAt === 'object' && u.lastActivityAt?.seconds
         ? u.lastActivityAt.seconds * 1000
@@ -1886,14 +1869,34 @@ const Admin = {
    *   simplement le code le plus lointain sous-estimait ces abonnements.
    */
   _rejouerCodes(codes) {
-    // V64.18 : calcul confié à PremiumService.rejouerCodes, partagé avec
-    //   l'application (formules de saison, montées de formule). Deux copies
-    //   du même calcul finissent toujours par diverger.
-    const PS = window.PremiumService;
-    if (!PS || typeof PS.rejouerCodes !== 'function') return null;
-    const r = PS.rejouerCodes(codes);
-    if (!r) return null;
-    return { expiration: r.expiration, dernierPlan: r.premiumPlan, premiereActivation: new Date(r.premiumActivatedAt).getTime() };
+    const P = window.PremiumService && window.PremiumService.PLANS;
+    if (!P) return null;
+    const tries = codes.slice().sort((a, b) => (a.usedAt || 0) - (b.usedAt || 0));
+
+    let expiration = 0;
+    let dernierPlan = null;
+    let premiereActivation = null;
+
+    for (const c of tries) {
+      const plan = P[c.planId];
+      if (!plan) continue;
+      const utiliseLe = c.usedAt || 0;
+      if (!utiliseLe) continue;
+      if (premiereActivation === null) premiereActivation = utiliseLe;
+
+      if (plan.expiresAt) {
+        expiration = Math.max(expiration, plan.expiresAt);
+      } else if (plan.duration) {
+        const depart = expiration > utiliseLe ? expiration : utiliseLe;
+        expiration = depart + plan.duration * 24 * 60 * 60 * 1000;
+      } else {
+        continue;
+      }
+      dernierPlan = c.planId;
+    }
+
+    if (!expiration) return null;
+    return { expiration, dernierPlan, premiereActivation };
   },
 
   /**
@@ -1921,26 +1924,13 @@ const Admin = {
       if (!lot || lot.length === 0) return;
       const r = this._rejouerCodes(lot);
       if (!r) return;
+      u.premiumPlan = r.dernierPlan;
+      u.premiumActivatedAt = r.premiereActivation ? new Date(r.premiereActivation).toISOString() : null;
+      u.premiumExpiresAt = new Date(r.expiration).toISOString();
       u.premiumCodesCount = lot.length;
-      const depuisCodes = {
-        isPremium: true,
-        premiumPlan: r.dernierPlan,
-        premiumActivatedAt: r.premiereActivation ? new Date(r.premiereActivation).toISOString() : null,
-        premiumExpiresAt: new Date(r.expiration).toISOString()
-      };
-      // V64.18 : on ne remplace plus aveuglément le statut du profil par celui
-      //   des codes. Si l'admin a passé le compte en Complet et que les codes ne
-      //   donnent qu'Essentiel, c'est Complet qui doit s'afficher — c'est aussi
-      //   ce que verra le candidat dans l'application.
-      const PS = window.PremiumService;
-      const duProfil = { isPremium: u.isPremium, premiumPlan: u.premiumPlan, premiumActivatedAt: u.premiumActivatedAt, premiumExpiresAt: u.premiumExpiresAt };
-      const retenu = (PS && typeof PS.fusionnerStatut === 'function') ? PS.fusionnerStatut(duProfil, depuisCodes) : depuisCodes;
-      u.premiumPlan = retenu.premiumPlan;
-      u.premiumActivatedAt = retenu.premiumActivatedAt;
-      u.premiumExpiresAt = retenu.premiumExpiresAt;
-      u.isPremium = PS ? PS.isUserPremium(retenu) : (r.expiration > maintenant);
+      u.isPremium = r.expiration > maintenant;
       u.premiumExpire = !u.isPremium;
-      u.premiumSource = retenu === depuisCodes ? 'code' : 'admin';
+      u.premiumSource = 'code';
     });
     return users;
   },
@@ -2089,12 +2079,12 @@ const Admin = {
         <td>${concours ? `<span class="badge badge-info">${concours.sigle}</span>` : '<span style="color:var(--ink-mute)">-</span>'}</td>
         <td>
           ${isPrem ? `
-            <span class="badge badge-gold" title="${this.escapeHTML(planName || '')}${u.premiumSource === 'admin' ? ' · posée par l\'admin' : ''}">⭐ ${window.PremiumService.getTierName(u)}${(window.PremiumService.PLANS[u.premiumPlan] || {}).legacy ? ' (ancien)' : ''}</span>
+            <span class="badge badge-gold">⭐ Premium ${planName}</span>
             <div style="font-size:0.7rem; font-weight:700; margin-top:0.2rem; color:${days <= 7 ? '#ea580c' : 'var(--ink-mute)'}">
               ${days <= 7 ? '⚠️ ' : ''}${days}j restants
             </div>
           ` : u.premiumExpire ? `
-            <span class="badge" style="background:#fee2e2; color:#991b1b; border:1px solid #fecaca">Formule expirée</span>
+            <span class="badge" style="background:#fee2e2; color:#991b1b; border:1px solid #fecaca">Premium expiré</span>
             <div style="font-size:0.7rem; color:var(--ink-mute); margin-top:0.2rem">
               ${u.premiumPlan ? (window.PremiumService.PLANS[u.premiumPlan]?.name || u.premiumPlan) : ''} · à relancer
             </div>
@@ -2119,10 +2109,12 @@ const Admin = {
           <button class="btn-action btn-secondary" onclick="Admin.masquerUtilisateur('${u.id}', ${u.adminHidden ? 'false' : 'true'})"
                   title="${u.adminHidden ? 'Remettre ce profil dans la liste' : 'Retirer ce profil de la liste et des statistiques (compte de test, doublon)'}"
                   style="margin-right:0.3rem">${u.adminHidden ? '👁 Réafficher' : '🙈'}</button>
-          <!-- V64.18 : un seul bouton, qui agit sur le VRAI compte. Les anciens
-               « Activer Premium », « Prolonger » et « Révoquer » ne modifiaient
-               que les données de démonstration du navigateur. -->
-          <button class="btn-action ${isPrem ? 'btn-secondary' : 'btn-success'}" onclick="Admin.openFormuleModal('${u.id}')">⭐ ${isPrem ? 'Formule' : 'Donner une formule'}</button>
+          ${!isPrem ? `
+            <button class="btn-action btn-success" onclick="Admin.openActivateModal('${u.id}')">⭐ Activer Premium</button>
+          ` : `
+            <button class="btn-action btn-secondary" onclick="Admin.extendPremium('${u.id}')">🔄 Prolonger</button>
+            <button class="btn-action btn-danger" onclick="Admin.revokePremium('${u.id}')" style="margin-left:0.3rem">✗ Révoquer</button>
+          `}
         </td>
       </tr>
     `;
@@ -9082,9 +9074,6 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
         </div>
       </div>
 
-      <!-- V64.18 : RÉGLAGES DE SAISON -->
-      ${this.renderSaisonCard()}
-
       <!-- GÉNÉRATION DE CODES -->
       <div class="card" style="margin-bottom:1.2rem; background:linear-gradient(135deg, #fffbeb, white); border-left:4px solid var(--gold-bf)">
         <h3 style="font-family:'Instrument Serif',serif; font-size:1.3rem; color:var(--green-bf-dark); margin-bottom:0.8rem">⚡ Générer de nouveaux codes</h3>
@@ -9103,21 +9092,17 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
             if (plans.length === 0) {
               return '<div style="color:var(--admin-text-soft)">⚠️ Plans indisponibles — data/premium.js non chargé</div>';
             }
-            // V64.18 : ordre et statut selon la grille 2027.
-            //   1. formules en vente  2. Sprint  3. montées de formule
-            //   4. anciennes formules (retirées)
-            //   Les montées et le Sprint portent `hidden` pour l'écran des
-            //   candidats, mais ne sont pas « retirés » : on les génère.
-            const rangGen = p => p.legacy ? 3 : (p.upgrade ? 2 : (p.sprint ? 1 : 0));
-            plans.sort((a, b) => (rangGen(a) - rangGen(b)) || ((a.price || 0) - (b.price || 0)));
+            // Plans actifs d'abord, plans retirés ensuite
+            plans.sort((a, b) => {
+              if (!!a.hidden !== !!b.hidden) return a.hidden ? 1 : -1;
+              return (a.price || 0) - (b.price || 0);
+            });
             return plans.map(p => {
               const prix = (p.price || 0).toLocaleString('fr-FR') + ' FCFA';
-              const duree = p.finSaison
-                ? (p.upgrade ? 'même date de fin' : 'jusqu\'à la fin de saison')
-                : (p.expiresAt
-                  ? 'butoir ' + new Date(p.expiresAt).toLocaleDateString('fr-FR')
-                  : (p.duration ? p.duration + ' jours' : ''));
-              const retire = !!p.legacy || (!!p.hidden && !p.upgrade && !p.sprint);
+              const duree = p.expiresAt
+                ? 'butoir ' + new Date(p.expiresAt).toLocaleDateString('fr-FR')
+                : (p.duration ? p.duration + ' jours' : '');
+              const retire = !!p.hidden;
               const vedette = p.popular === true && !retire;
 
               const cadre = retire
@@ -9132,7 +9117,7 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
                 <div style="${cadre}; border-radius:10px; padding:0.9rem; position:relative">
                   ${vedette ? '<div style="position:absolute; top:-8px; right:8px; background:#7c3aed; color:white; padding:0.1rem 0.5rem; border-radius:4px; font-size:0.65rem; font-weight:800; letter-spacing:0.05em">LE PLUS RENTABLE 🔥</div>' : ''}
                   <div style="font-weight:700; color:var(--admin-text${retire ? '-soft' : ''})">
-                    ${p.icon || '🎫'} ${this.escapeHTML(p.name || p.id)}${retire ? ' (retiré)' : ''}${p.sprint ? (window.PremiumService.getSaison().sprintVisible ? ' (affiché)' : ' (masqué côté candidats)') : ''}
+                    ${p.icon || '🎫'} ${this.escapeHTML(p.name || p.id)}${retire ? ' (retiré)' : ''}
                   </div>
                   <div style="font-size:0.75rem; color:var(--admin-text-soft); margin-bottom:0.5rem">
                     ${prix}${duree ? ' · ' + duree : ''}
@@ -9613,7 +9598,6 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
   renderModal() {
     const m = this.state.modalOpen;
     if (m === 'activate') return this.renderActivateModal();
-    if (m === 'formule') return this.renderFormuleModal();   // V64.18
     if (m === 'candidate') return this.renderCandidateModal();
     if (m === 'add-user') return this.renderAddUserModal();
     if (m === 'add-question') return this.renderAddQuestionModal();
@@ -9870,366 +9854,6 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
         .catch(secours);
     } else {
       secours();
-    }
-  },
-
-  // ==================================================================
-  // V64.18 : SUIVI PERSONNALISÉ PREMIUM (cahier des charges, section 6)
-  // ==================================================================
-  //   Un bilan + des conseils par mois, envoyés à la main. La liste montre
-  //   la date du dernier bilan et l'échéance du suivant, pour qu'aucun abonné
-  //   Premium ne soit oublié.
-  //   Échéance : 30 jours après le dernier bilan ; pour un abonné qui n'en a
-  //   jamais reçu, 7 jours après le début de sa formule (le temps qu'il ait
-  //   assez travaillé pour qu'un bilan dise quelque chose).
-  SUIVI_INTERVALLE_J: 30,
-  SUIVI_PREMIER_J: 7,
-
-  aDroitSuivi(u) {
-    const PS = window.PremiumService;
-    return !!(PS && !u.adminHidden && PS.hasRight(u, 'suiviPerso'));
-  },
-
-  etatSuivi(u) {
-    const J = 86400000;
-    const maintenant = Date.now();
-    const dernier = u.dernierBilanAt || 0;
-    const debut = u.premiumActivatedAt ? new Date(u.premiumActivatedAt).getTime() : maintenant;
-    const echeance = dernier ? dernier + this.SUIVI_INTERVALLE_J * J : debut + this.SUIVI_PREMIER_J * J;
-    const jours = Math.ceil((echeance - maintenant) / J);
-    if (jours < 0) return { code: 'retard', jours, echeance, libelle: 'En retard de ' + (-jours) + ' j' };
-    if (jours <= 3) return { code: 'bientot', jours, echeance, libelle: jours === 0 ? 'Aujourd\'hui' : 'Dans ' + jours + ' j' };
-    return { code: 'ok', jours, echeance, libelle: 'Dans ' + jours + ' j' };
-  },
-
-  renderSuiviListe(liste) {
-    if (!liste || liste.length === 0) {
-      return `<div class="empty-state"><div class="empty-icon">🧭</div><div class="empty-title">Aucun abonné Premium à suivre</div></div>`;
-    }
-    const tries = liste.slice().sort((a, b) => this.etatSuivi(a).echeance - this.etatSuivi(b).echeance);
-    const couleurs = { retard: ['#fee2e2', '#991b1b'], bientot: ['#fef3c7', '#92400e'], ok: ['#dcfce7', '#166534'] };
-    return `
-      <div style="padding:0.8rem 1rem; font-size:0.82rem; color:var(--admin-text-soft); border-bottom:1px solid var(--admin-border)">
-        Ouvre la fiche pour générer le bilan, envoie-le par WhatsApp avec tes conseils, puis clique « Bilan envoyé ».
-      </div>
-      <div style="display:flex; flex-direction:column">
-        ${tries.map(u => {
-          const e = this.etatSuivi(u);
-          const [fond, encre] = couleurs[e.code];
-          const nom = this.escapeHTML(u.name || u.email || 'Sans nom');
-          return `
-            <div style="display:flex; gap:0.8rem; align-items:center; padding:0.8rem 1rem; border-bottom:1px solid var(--admin-border); flex-wrap:wrap">
-              <div style="flex:1; min-width:180px">
-                <div style="font-weight:700">${nom}</div>
-                <div style="font-size:0.75rem; color:var(--admin-text-soft)">
-                  Dernier bilan : ${u.dernierBilanAt ? new Date(u.dernierBilanAt).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long' }) : 'jamais'}
-                  · ${u.totalQuestions || 0} questions faites
-                </div>
-              </div>
-              <span style="background:${fond}; color:${encre}; font-weight:800; font-size:0.78rem; padding:0.2rem 0.6rem; border-radius:999px">${e.libelle}</span>
-              <button class="btn-action btn-secondary" onclick="Admin.openCandidateModal('${u.id}')">📊 Fiche et bilan</button>
-              <button class="btn-action btn-success" onclick="Admin.marquerBilanEnvoye('${u.id}')">✓ Bilan envoyé</button>
-            </div>
-          `;
-        }).join('')}
-      </div>
-    `;
-  },
-
-  async marquerBilanEnvoye(userId) {
-    const quand = Date.now();
-    let avant = null;
-    const majCache = (valeur) => {
-      try {
-        const cache = JSON.parse(localStorage.getItem('bara_real_users_cache') || '[]');
-        cache.forEach(x => {
-          if ((x.uid || x.id) === userId) { if (avant === null) avant = x.dernierBilanAt || 0; x.dernierBilanAt = valeur; }
-        });
-        localStorage.setItem('bara_real_users_cache', JSON.stringify(cache));
-      } catch (e) {}
-    };
-    majCache(quand);
-    this.render();
-    try {
-      if (!window.FirebaseAuth || typeof window.FirebaseAuth.adminSetDernierBilan !== 'function') {
-        throw new Error('firebase.js pas à jour (V64.18 requise)');
-      }
-      await window.FirebaseAuth.adminSetDernierBilan(userId, quand);
-      this.toast('✓ Bilan noté — prochain dans ' + this.SUIVI_INTERVALLE_J + ' jours', 'success');
-    } catch (e) {
-      majCache(avant || null);
-      this.render();
-      this.toast('Échec : ' + (e.message || e), 'danger');
-    }
-  },
-
-  // ==================================================================
-  // V64.18 : RÉGLAGES DE SAISON (date de fin, Sprint, places Premium)
-  // ==================================================================
-  //   Stockés dans app_texts/config_saison. L'application les lit avec les
-  //   textes éditables qu'elle charge déjà : les modifier ici prend effet
-  //   chez les candidats sans mise à jour de l'application.
-  //   Garde-fous contre les boucles de lecture (leçon de la V63.99) : la
-  //   lecture n'a lieu qu'une fois par session, le drapeau étant posé AVANT
-  //   l'appel ; l'écriture automatique des places Premium n'a lieu que si la
-  //   valeur change, et une seule fois par valeur.
-  _configSaisonChargee: false,
-  _placesPremiumEcrit: null,
-
-  _poserConfigSaison(valeur) {
-    window.TextsFirestore = window.TextsFirestore || {};
-    if (!window.TextsFirestore._textsCache) window.TextsFirestore._textsCache = {};
-    if (valeur) window.TextsFirestore._textsCache.config_saison = valeur;
-    else delete window.TextsFirestore._textsCache.config_saison;
-  },
-
-  async chargerConfigSaison() {
-    if (this._configSaisonChargee) return;
-    if (!window.FirebaseAuth || typeof window.FirebaseAuth.lireConfigSaison !== 'function') return;
-    this._configSaisonChargee = true;
-    try {
-      const v = await window.FirebaseAuth.lireConfigSaison();
-      this._poserConfigSaison(v);
-      this._synchroniserPlacesPremium();
-      if (this.state.currentPage === 'codes') this.render();
-    } catch (e) {
-      console.warn('[V64.18] Réglages de saison illisibles, valeurs par défaut :', e.code || e.message);
-    }
-  },
-
-  async enregistrerConfigSaison(maj) {
-    const PS = window.PremiumService;
-    const s = PS.getSaison();
-    const valeur = Object.assign({
-      fin: s.fin, finConfirmee: s.finConfirmee, sprintVisible: s.sprintVisible,
-      placesPremium: s.placesPremium, premiumComplet: s.premiumComplet
-    }, maj);
-    try {
-      await window.FirebaseAuth.ecrireConfigSaison(valeur);
-      this._poserConfigSaison(valeur);
-      return true;
-    } catch (e) {
-      this.toast('Échec de l\'enregistrement : ' + (e.message || e), 'danger');
-      return false;
-    }
-  },
-
-  /** Formulaire « Saison 2027 » de la page Codes. */
-  async enregistrerSaisonDepuisFormulaire() {
-    const v = id => document.getElementById(id);
-    const date = v('saisonFin') && v('saisonFin').value;
-    const places = v('saisonPlaces') ? parseInt(v('saisonPlaces').value, 10) : NaN;
-    if (!date) { this.toast('Choisis une date de fin', 'danger'); return; }
-    if (!Number.isFinite(places) || places < 0) { this.toast('Nombre de places invalide', 'danger'); return; }
-    const fin = new Date(date + 'T23:59:59Z');
-    const PS = window.PremiumService;
-    const avant = new Date(PS.getSaison().fin);
-    if (fin < avant && !confirm('Tu avances la date de fin au ' + fin.toLocaleDateString('fr-FR') + '.\n\nTOUS les abonnés Essentiel, Complet, Premium et Sprint perdront leur accès à cette date. Confirmer ?')) return;
-    const ok = await this.enregistrerConfigSaison({
-      fin: fin.toISOString(),
-      finConfirmee: !!(v('saisonConfirmee') && v('saisonConfirmee').checked),
-      sprintVisible: !!(v('saisonSprint') && v('saisonSprint').checked),
-      placesPremium: places
-    });
-    if (ok) {
-      this.toast('✓ Réglages de saison enregistrés — en ligne chez les candidats', 'success', 3000);
-      this._placesPremiumEcrit = null;
-      this._synchroniserPlacesPremium();
-      this.render();
-    }
-  },
-
-  /**
-   * Ferme la vente Premium quand le plafond est atteint, la rouvre sinon.
-   * N'écrit que si la valeur change, et une seule fois par valeur et par
-   * session : un échec d'écriture ne relance jamais en boucle.
-   */
-  async _synchroniserPlacesPremium() {
-    try {
-      if (!this._configSaisonChargee) return;      // pas avant d'avoir lu les réglages
-      const PS = window.PremiumService;
-      if (!PS || !window.FirebaseAuth || typeof window.FirebaseAuth.ecrireConfigSaison !== 'function') return;
-      const s = PS.getSaison();
-      const complet = this._compterPremium() >= s.placesPremium;
-      if (complet === s.premiumComplet) return;
-      if (this._placesPremiumEcrit === complet) return;
-      this._placesPremiumEcrit = complet;
-      await this.enregistrerConfigSaison({ premiumComplet: complet });
-      this.toast(complet ? '👑 Plafond Premium atteint : vente Premium fermée' : '👑 Places Premium disponibles : vente rouverte', complet ? 'danger' : 'success', 4000);
-    } catch (e) {
-      console.warn('[V64.18] Synchronisation des places Premium :', e);
-    }
-  },
-
-  /** Carte « Saison 2027 » affichée en tête de la page Codes. */
-  renderSaisonCard() {
-    const PS = window.PremiumService;
-    if (!PS || typeof PS.getSaison !== 'function') return '';
-    const s = PS.getSaison();
-    const finISO = new Date(s.fin).toISOString().slice(0, 10);
-    const nb = this._compterPremium();
-    const ratio = s.placesPremium > 0 ? Math.min(100, Math.round(nb / s.placesPremium * 100)) : 100;
-    return `
-      <div class="card" style="margin-bottom:1.2rem; border-left:4px solid var(--green-bf)">
-        <h3 style="font-family:'Instrument Serif',serif; font-size:1.3rem; color:var(--green-bf-dark); margin-bottom:0.3rem">⚙️ Saison ${s.annee}</h3>
-        <div style="font-size:0.8rem; color:var(--admin-text-soft); margin-bottom:0.9rem">
-          ${this._configSaisonChargee ? 'Réglages en ligne : un changement s\'applique chez les candidats sans mise à jour de l\'application.' : '⏳ Lecture des réglages… (valeurs par défaut affichées)'}
-        </div>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:0.9rem; align-items:end">
-          <div class="form-group" style="margin:0">
-            <label class="form-label">Fin des formules (fin des compositions)</label>
-            <input type="date" class="form-input" id="saisonFin" value="${finISO}">
-            <label style="display:flex; gap:0.4rem; align-items:center; font-size:0.8rem; margin-top:0.4rem">
-              <input type="checkbox" id="saisonConfirmee" ${s.finConfirmee ? 'checked' : ''}> Date officielle : l'afficher aux candidats
-            </label>
-          </div>
-          <div class="form-group" style="margin:0">
-            <label class="form-label">Places Premium</label>
-            <input type="number" min="0" class="form-input" id="saisonPlaces" value="${s.placesPremium}">
-            <div style="margin-top:0.4rem; font-size:0.8rem">
-              <strong>${nb}</strong> / ${s.placesPremium} occupées
-              ${s.premiumComplet ? ' · <strong style="color:#b91c1c">vente fermée</strong>' : ''}
-              <div style="height:6px; background:#e5e7eb; border-radius:999px; margin-top:0.3rem; overflow:hidden">
-                <div style="height:100%; width:${ratio}%; background:${ratio >= 100 ? '#dc2626' : ratio >= 80 ? '#f59e0b' : 'var(--green-bf)'}"></div>
-              </div>
-            </div>
-          </div>
-          <div class="form-group" style="margin:0">
-            <label class="form-label">Formule Sprint (${this.formatPrice(PS.PLANS.sprint.price)} FCFA)</label>
-            <label style="display:flex; gap:0.4rem; align-items:center; font-size:0.85rem">
-              <input type="checkbox" id="saisonSprint" ${s.sprintVisible ? 'checked' : ''}> Afficher le Sprint aux candidats
-            </label>
-          </div>
-        </div>
-        <div style="margin-top:0.9rem; display:flex; gap:0.6rem; align-items:center; flex-wrap:wrap">
-          <button class="btn-action btn-success" onclick="Admin.enregistrerSaisonDepuisFormulaire()">💾 Enregistrer</button>
-          ${!s.finConfirmee ? '<span style="font-size:0.78rem; color:#92400e">Date provisoire : les candidats lisent « jusqu\'aux compositions ' + s.annee + ' ».</span>' : ''}
-        </div>
-      </div>
-    `;
-  },
-
-  // ==================================================================
-  // V64.18 : CHANGER LA FORMULE D'UN COMPTE (cahier des charges, section 3)
-  // ==================================================================
-  //   En un clic, sur le VRAI compte Firestore. La date de fin ne change pas :
-  //   toutes les formules de saison courent jusqu'à la fin de saison.
-  //   Une formule inférieure reste possible (correction d'une erreur), mais
-  //   demande une confirmation explicite.
-  openFormuleModal(userId) {
-    const u = this._getCandidat(userId);
-    if (!u) { this.toast('Compte introuvable dans la liste chargée', 'danger'); return; }
-    const PS = window.PremiumService;
-    const actuel = PS.isUserPremium(u) ? u.premiumPlan : null;
-    const choix = (actuel && PS.PLANS[actuel] && !PS.PLANS[actuel].legacy && !PS.PLANS[actuel].upgrade) ? actuel : 'complet';
-    this.state.modalOpen = 'formule';
-    this.state.modalData = { userId, plan: choix };
-    this.render();
-  },
-
-  renderFormuleModal() {
-    const PS = window.PremiumService;
-    const data = this.state.modalData || {};
-    const u = this._getCandidat(data.userId);
-    if (!u) return '';
-    const paye = PS.isUserPremium(u);
-    const tierActuel = PS.getTier(u);
-    const saison = PS.getSaison();
-    const finTxt = new Date(saison.fin).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
-    const formules = Object.values(PS.PLANS).filter(p => p.finSaison && !p.upgrade);
-    const nbPremium = this._compterPremium();
-    const nom = this.escapeHTML(u.name || u.email || 'ce compte');
-
-    return `
-      <div class="modal-overlay" onclick="Admin.closeModal()">
-        <div class="modal" onclick="event.stopPropagation()">
-          <div class="modal-title">⭐ Formule de ${nom}</div>
-          <div class="modal-desc">
-            Formule actuelle : <strong>${paye ? PS.TIERS[tierActuel].nom : 'Gratuit'}</strong>
-            ${paye && PS.PLANS[u.premiumPlan] ? ' (' + this.escapeHTML(PS.PLANS[u.premiumPlan].name) + ')' : ''}<br>
-            Date de fin : <strong>${finTxt}</strong> — fin de saison, la même pour toutes les formules${saison.finConfirmee ? '' : ' (provisoire)'}.
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Nouvelle formule</label>
-            <select class="form-select" id="modalFormule">
-              ${formules.map(p => {
-                const plus = PS.rang(p.tier) > PS.rang(tierActuel) || !paye;
-                const etat = !paye ? '' : (p.id === u.premiumPlan ? ' — formule actuelle' : (plus ? ' — montée' : ' — ⚠️ formule inférieure'));
-                return `<option value="${p.id}" ${data.plan === p.id ? 'selected' : ''}>${p.icon} ${p.name} (${PS.TIERS[p.tier].nom}) — ${this.formatPrice(p.price)} FCFA${etat}</option>`;
-              }).join('')}
-            </select>
-            <div class="form-help">
-              Places Premium : ${nbPremium} / ${saison.placesPremium}${nbPremium >= saison.placesPremium ? ' — <strong style="color:#b91c1c">plafond atteint</strong>' : ''}.
-              Aucun paiement n'est enregistré ici : encaisse d'abord, puis change la formule.
-            </div>
-          </div>
-
-          <div class="modal-actions">
-            <button class="btn-action btn-secondary" onclick="Admin.closeModal()">Annuler</button>
-            <button class="btn-action btn-success" onclick="Admin.confirmFormule()">✓ Appliquer</button>
-          </div>
-        </div>
-      </div>
-    `;
-  },
-
-  async confirmFormule() {
-    const PS = window.PremiumService;
-    const sel = document.getElementById('modalFormule');
-    const planId = sel ? sel.value : null;
-    const userId = this.state.modalData && this.state.modalData.userId;
-    const u = this._getCandidat(userId);
-    if (!u || !planId || !PS.PLANS[planId]) return;
-
-    const plan = PS.PLANS[planId];
-    const paye = PS.isUserPremium(u);
-    if (paye && PS.rang(plan.tier) < PS.rang(PS.getTier(u))) {
-      if (!confirm('Passer ce compte à une formule INFÉRIEURE (' + PS.TIERS[plan.tier].nom + ') ?\n\nLe cahier des charges n\'en prévoit pas : à réserver à la correction d\'une erreur.\n\nAttention : si le candidat a activé un code de niveau supérieur, l\'application gardera ce niveau.')) return;
-    }
-    if (plan.tier === 'premium' && this._compterPremium() >= PS.getSaison().placesPremium && PS.getTier(u) !== 'premium') {
-      if (!confirm('Le plafond de places Premium est atteint. Ajouter quand même ce compte ?')) return;
-    }
-
-    const statut = PS.activatePremium(u, planId);
-    if (paye && u.premiumActivatedAt) statut.premiumActivatedAt = u.premiumActivatedAt;
-
-    const majCache = (champs) => {
-      try {
-        const cache = JSON.parse(localStorage.getItem('bara_real_users_cache') || '[]');
-        cache.forEach(x => { if ((x.uid || x.id) === userId) Object.assign(x, champs); });
-        localStorage.setItem('bara_real_users_cache', JSON.stringify(cache));
-      } catch (e) {}
-    };
-    const avant = { isPremium: u.isPremium, premiumPlan: u.premiumPlan, premiumExpiresAt: u.premiumExpiresAt, premiumActivatedAt: u.premiumActivatedAt, premiumAdminAt: u.premiumAdminAt || null };
-
-    this.closeModal();
-    majCache(Object.assign({}, statut, { premiumAdminAt: Date.now() }));
-    this.render();
-
-    try {
-      if (!window.FirebaseAuth || typeof window.FirebaseAuth.adminSetFormule !== 'function') {
-        throw new Error('firebase.js pas à jour (V64.18 requise)');
-      }
-      await window.FirebaseAuth.adminSetFormule(userId, statut);
-      this.toast('✓ ' + (u.name || 'Compte') + ' : formule ' + PS.TIERS[plan.tier].nom, 'success');
-      this._synchroniserPlacesPremium();
-    } catch (e) {
-      majCache(avant);
-      this.render();
-      this.toast('Échec : ' + (e.message || e), 'danger');
-    }
-  },
-
-  /** V64.18 : nombre de comptes au niveau Premium (anciens abonnés compris). */
-  _compterPremium() {
-    try {
-      const data = this.loadData();
-      const PS = window.PremiumService;
-      return this.enrichPremiumFromCodes(data.users.map(u => this.normalizeUser(u)))
-        .filter(u => !u.adminHidden && PS.getTier(u) === 'premium').length;
-    } catch (e) {
-      return 0;
     }
   },
 
@@ -10602,10 +10226,8 @@ X: Le cervelet est la structure cérébrale dédiée à la coordination motrice.
           // Re-render pour mettre à jour l'UI (le badge "Firebase non chargé" disparaît)
           this.render();
           // Écouter les changements d'auth pour re-render la page Codes Premium
-          window.FirebaseAuth.onAuthChange((user) => {
+          window.FirebaseAuth.onAuthChange(() => {
             if (this.state.currentPage === 'codes') this.render();
-            // V64.18 : réglages de saison, lus une seule fois par session
-            if (user) this.chargerConfigSaison();
           });
         } else {
           console.warn('[Admin] Firebase non disponible');
