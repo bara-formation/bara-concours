@@ -4079,35 +4079,82 @@ const App = {
     if (this._stickyBackOnScroll) this._stickyBackOnScroll();
   },
 
+  // V64.18 : fenêtre « limite atteinte », adaptée au niveau.
+  //   Visiteur : la suite passe par un compte gratuit (5 QCM sans compte).
+  //   Gratuit, Essentiel, Complet : la formule au-dessus, avec son quota.
+  //   Premium (plafond technique) : message neutre, aucune vente.
+  //   L'ancienne version promettait « Questions illimitées » et « À partir de
+  //   2 000 FCFA le mois » : deux arguments faux avec la grille 2027.
   renderFreemiumDialog() {
-    const remaining = 24 - new Date().getHours(); // Heures avant minuit (approx.)
+    const FM = this.FreemiumManager;
+    const PS = window.PremiumService;
+    const u = this.state.user;
+    const niveau = FM.niveau(u);
+    const limite = FM.getLimitAffichee(u);
+    const ferme = `<button class="bio-prompt-decline" onclick="App.closeFreemiumDialog()">Plus tard (compteur remis à zéro à minuit)</button>`;
+
+    if (niveau === 'visiteur') {
+      const bonus = (PS && PS.TIERS.gratuit.quotaBonus) || 30;
+      return `
+        <div class="bio-prompt-overlay" onclick="App.closeFreemiumDialog()">
+          <div class="bio-prompt-modal" onclick="event.stopPropagation()">
+            <div class="bio-prompt-icon">🎓</div>
+            <div class="bio-prompt-title">Tu as fait tes ${limite} questions d'essai</div>
+            <div class="bio-prompt-desc">
+              Pour continuer, crée ton <strong>compte gratuit</strong> : c'est rapide, et tu gardes ta progression.<br><br>
+              Cadeau de bienvenue : <strong>${bonus} questions</strong> pendant tes premières 24 heures.
+            </div>
+            <button class="bio-prompt-accept" onclick="App.closeFreemiumDialog(); App.navigate(window.FirebaseAuth && window.FirebaseAuth.USE_FIREBASE_AUTH ? 'auth-welcome' : 'auth-phone')">
+              ✨ Créer mon compte gratuit
+            </button>
+            ${ferme}
+          </div>
+        </div>
+      `;
+    }
+
+    // Formule suivante (la moins chère au-dessus du niveau actuel)
+    const ordre = ['gratuit', 'essentiel', 'complet', 'premium'];
+    const suivant = PS ? PS.plansEnVente()
+      .filter(p => PS.rang(p.tier) > PS.rang(niveau) && !p.sprint)
+      .filter(p => !(p.placesLimitees && PS.premiumEpuise()))
+      .sort((a, b) => PS.rang(a.tier) - PS.rang(b.tier))[0] : null;
+
+    if (!suivant || FM.estIllimite(u)) {
+      return `
+        <div class="bio-prompt-overlay" onclick="App.closeFreemiumDialog()">
+          <div class="bio-prompt-modal" onclick="event.stopPropagation()">
+            <div class="bio-prompt-icon">🌙</div>
+            <div class="bio-prompt-title">Belle journée de travail !</div>
+            <div class="bio-prompt-desc">
+              Tu as répondu à un très grand nombre de questions aujourd'hui. Fais une pause : ton compteur repart à zéro à minuit.
+            </div>
+            <button class="bio-prompt-accept" onclick="App.closeFreemiumDialog()">D'accord</button>
+          </div>
+        </div>
+      `;
+    }
+
+    const montee = PS.isUserPremium(u) ? PS.monteesDisponibles(u).find(m => m.tier === suivant.tier) : null;
+    const prix = montee ? '+' + PS.formatPrice(montee.price) : PS.formatPrice(suivant.price);
+    const quotaSuivant = PS.TIERS[suivant.tier].quotaAffiche || (PS.TIERS[suivant.tier].quota + ' questions par jour');
+
     return `
       <div class="bio-prompt-overlay" onclick="App.closeFreemiumDialog()">
         <div class="bio-prompt-modal" onclick="event.stopPropagation()">
           <div class="bio-prompt-icon">🎯</div>
           <div class="bio-prompt-title">Tu as révisé fort aujourd'hui !</div>
           <div class="bio-prompt-desc">
-            Tu as atteint la <strong>limite gratuite</strong> de <strong>${this.FreemiumManager.getLimit(this.state.user)} questions/jour</strong>.<br><br>
-            Pour continuer à t'entraîner sans limite et accéder à toutes les fonctionnalités, passe <strong>Premium</strong>.
+            Tu as atteint les <strong>${limite} questions</strong> de ta formule ${PS.TIERS[niveau].nom} pour aujourd'hui.<br><br>
+            Avec <strong>${suivant.name}</strong> : ${quotaSuivant}${quotaSuivant.indexOf('par jour') < 0 ? ' par jour' : ''}, jusqu'aux compositions.
           </div>
-
-          <div class="bio-prompt-benefits">
-            <div class="bio-prompt-benefit">⚡ Questions illimitées</div>
-            <div class="bio-prompt-benefit">⏱️ Mode examen chronométré</div>
-            <div class="bio-prompt-benefit">📚 Annales corrigées</div>
-            <div class="bio-prompt-benefit">🏆 Classement national (bientôt)</div>
-          </div>
-
           <div style="background:#dcfce7; padding:0.7rem 1rem; border-radius:10px; margin-bottom:1rem; text-align:center; font-size:0.85rem; color:#15803d">
-            💰 <strong>À partir de 2 000 FCFA le mois</strong>
+            💰 <strong>${suivant.name} : ${prix}</strong>${montee ? ' (tu ne paies que la différence)' : ''}
           </div>
-
           <button class="bio-prompt-accept" onclick="App.goToPremium()">
-            ⭐ Passer Premium maintenant
+            ⭐ Voir les formules
           </button>
-          <button class="bio-prompt-decline" onclick="App.closeFreemiumDialog()">
-            Plus tard (limite remise à 0 demain)
-          </button>
+          ${ferme}
         </div>
       </div>
     `;
@@ -4138,7 +4185,7 @@ const App = {
           </div>
 
           <button class="bio-prompt-accept" onclick="App.goToPremiumFromActu()">
-            ⭐ Voir les plans Premium
+            ⭐ Voir les formules
           </button>
           <button class="bio-prompt-decline" onclick="App.closeActualiteLimitDialog()">
             Plus tard (reviens demain)
@@ -4353,75 +4400,88 @@ const App = {
 
   // === HOME ===
   // === SESSION 2026 — BANNIÈRE CONCOURS OUVERTS ===
+  // V64.18 : barre de quota pour tous les niveaux qui ont un plafond
+  //   affiché (visiteur, Gratuit, Essentiel, Complet). Masquée en Premium,
+  //   dont le plafond technique ne s'annonce pas. La barre « Actualité » a
+  //   disparu avec le sous-quota correspondant.
   renderFreemiumStatusBar() {
-    const isPremium = window.PremiumService && window.PremiumService.isUserPremium(this.state.user);
-    if (isPremium) return ''; // Pas de barre pour les Premium
+    const FM = this.FreemiumManager;
+    const u = this.state.user;
+    if (FM.estIllimite(u)) return '';
 
-    const used = this.FreemiumManager.getCountToday();
-    const limit = this.FreemiumManager.getLimit(this.state.user);
-    const remaining = limit - used;
-    const percentage = Math.min(100, (used / limit) * 100);
-
-    // V63.11 : Compteur actualité spécifique
-    const actuUsed = this.FreemiumManager.getActuCountToday();
-    const actuLimit = this.FreemiumManager.getActuLimit(this.state.user);
-    const actuRemaining = actuLimit - actuUsed;
-    const actuPercentage = Math.min(100, (actuUsed / actuLimit) * 100);
-    // N'afficher la barre actualité QUE si l'utilisateur en a déjà consommé au moins 1
-    const showActuBar = actuUsed > 0;
+    const niveau = FM.niveau(u);
+    const used = FM.getCountToday();
+    const limit = FM.getLimit(u);
+    const remaining = Math.max(0, limit - used);
+    const percentage = Math.min(100, (used / Math.max(1, limit)) * 100);
+    const PS = window.PremiumService;
+    const nomNiveau = niveau === 'visiteur' ? 'd\'essai' : (PS ? PS.TIERS[niveau].nom : '');
+    const bonus = niveau === 'gratuit' && FM.bonusActif(u);
 
     let color = 'var(--green-bf)';
-    let icon = '✨';
-    let message = `<strong>${remaining}</strong> questions gratuites restantes aujourd'hui`;
+    let icon = bonus ? '🎁' : '✨';
+    let message = `<strong>${remaining}</strong> question${remaining > 1 ? 's' : ''} restante${remaining > 1 ? 's' : ''} aujourd'hui`
+      + (bonus ? ' <span style="color:var(--ink-mute)">· bonus de bienvenue</span>' : '');
+    let cible = 'premium';
 
     if (remaining === 0) {
       color = 'var(--red-bf)';
       icon = '🔒';
-      message = `Limite atteinte • Reviens demain ou passe <strong>Premium</strong>`;
+      message = niveau === 'visiteur'
+        ? `Questions d'essai terminées • <strong>Crée ton compte gratuit</strong>`
+        : `Limite atteinte • Reviens demain ou découvre les <strong>formules</strong>`;
     } else if (remaining <= 5) {
       color = 'var(--gold-bf-dark)';
       icon = '⚠️';
-      message = `Plus que <strong>${remaining}</strong> questions • Pense au Premium`;
+      message = `Plus que <strong>${remaining}</strong> question${remaining > 1 ? 's' : ''} aujourd'hui`;
     }
-
-    // V63.11 : Couleur barre actualité
-    let actuColor = '#2563eb';
-    let actuIcon = '📰';
-    let actuMsg = `<strong>${actuRemaining}</strong> question${actuRemaining > 1 ? 's' : ''} d'actualité restante${actuRemaining > 1 ? 's' : ''}`;
-    if (actuRemaining === 0) {
-      actuColor = 'var(--red-bf)';
-      actuIcon = '🔒';
-      actuMsg = `Quota actualité atteint • <strong>Premium</strong> pour continuer`;
-    } else if (actuRemaining <= 2) {
-      actuColor = 'var(--gold-bf-dark)';
-      actuIcon = '⚠️';
-      actuMsg = `Plus que <strong>${actuRemaining}</strong> actualité${actuRemaining > 1 ? 's' : ''} aujourd'hui`;
+    if (niveau === 'visiteur') {
+      cible = (window.FirebaseAuth && window.FirebaseAuth.USE_FIREBASE_AUTH) ? 'auth-welcome' : 'auth-phone';
     }
 
     return `
-      <div class="freemium-bar" onclick="App.navigate('premium')" style="background:white; border:1px solid var(--line); border-radius:var(--radius); padding:0.8rem 1rem; margin-bottom:1rem; cursor:pointer; box-shadow:var(--shadow-sm)">
+      <div class="freemium-bar" onclick="App.navigate('${cible}')" style="background:white; border:1px solid var(--line); border-radius:var(--radius); padding:0.8rem 1rem; margin-bottom:1rem; cursor:pointer; box-shadow:var(--shadow-sm)">
         <div style="display:flex; align-items:center; gap:0.7rem; margin-bottom:0.5rem">
           <div style="font-size:1.3rem">${icon}</div>
           <div style="flex:1; font-size:0.85rem; color:var(--ink)">${message}</div>
-          <div style="font-size:0.75rem; color:var(--ink-mute); font-weight:700">${used}/${limit}</div>
+          <div style="font-size:0.75rem; color:var(--ink-mute); font-weight:700" title="Formule ${nomNiveau}">${used}/${limit}</div>
         </div>
         <div style="background:var(--cream-dark); border-radius:999px; height:6px; overflow:hidden">
           <div style="height:100%; width:${percentage}%; background:${color}; transition:width 0.3s"></div>
         </div>
-        ${showActuBar ? `
-          <!-- V63.11 : Barre actualité (visible dès que >0 consommées) -->
-          <div style="height:1px; background:var(--line); margin:0.7rem 0 0.6rem"></div>
-          <div style="display:flex; align-items:center; gap:0.7rem; margin-bottom:0.5rem">
-            <div style="font-size:1.1rem">${actuIcon}</div>
-            <div style="flex:1; font-size:0.82rem; color:var(--ink)">${actuMsg}</div>
-            <div style="font-size:0.72rem; color:#1e40af; font-weight:700">${actuUsed}/${actuLimit}</div>
-          </div>
-          <div style="background:var(--cream-dark); border-radius:999px; height:5px; overflow:hidden">
-            <div style="height:100%; width:${actuPercentage}%; background:${actuColor}; transition:width 0.3s"></div>
-          </div>
-        ` : ''}
       </div>
     `;
+  },
+
+  // ==================================================================
+  // V64.18 : DROITS D'ACCÈS À L'ACCOMPAGNEMENT FINAL
+  // ==================================================================
+  //   Grille 2027 : les archives (sessions et annales 2025, 2026) s'ouvrent
+  //   dès Essentiel ; l'Accompagnement Final de la saison en cours, dès
+  //   Complet. L'année vient de `annee` (annales) ou du début de `date`
+  //   (sessions, « 2026-08-01 »). Sans année lisible : traité comme la saison
+  //   en cours, le cas le plus restrictif.
+  anneeAccompagnement(item) {
+    const a = item && (item.annee || String(item.date || '').slice(0, 4));
+    return parseInt(a, 10) || 0;
+  },
+
+  droitAccompagnement(item) {
+    const PS = window.PremiumService;
+    const saison = (PS && PS.getSaison().annee) || 2027;
+    const an = this.anneeAccompagnement(item);
+    return (an && an < saison) ? 'archivesAF' : 'af2027';
+  },
+
+  accesAccompagnement(item) {
+    const PS = window.PremiumService;
+    return !!(PS && PS.hasRight(this.state.user, this.droitAccompagnement(item)));
+  },
+
+  /** « 🔒 Complet » : le cadenas nomme la formule qui ouvre le contenu. */
+  libelleVerrou(droit) {
+    const PS = window.PremiumService;
+    return '🔒 ' + (PS ? PS.tierPour(droit).nom : 'Premium');
   },
 
   /**
@@ -4447,7 +4507,12 @@ const App = {
     const heuresDepuis = dateDerniere ? (Date.now() - dateDerniere) / 3600000 : Infinity;
     const joursDepuis = heuresDepuis / 24;
 
-    const isPremium = window.PremiumService && window.PremiumService.isUserPremium(this.state.user);
+    // V64.18 : l'accès dépend de l'année de la session (archives 2025-2026 :
+    //   Essentiel ; saison en cours : Complet), et non plus d'un Premium unique.
+    const PS = window.PremiumService;
+    const accesDerniere = derniere ? this.accesAccompagnement(derniere) : false;
+    const accesArchives = !!(PS && PS.hasRight(this.state.user, 'archivesAF'));
+    const verrouDerniere = derniere ? this.libelleVerrou(this.droitAccompagnement(derniere)) : '🔒';
 
     // Nouvelles corrections non encore consultées
     let nbNouvelles = 0;
@@ -4484,14 +4549,14 @@ const App = {
             </div>
             <div class="annales-card-stats">
               <span class="annales-stat" style="background:#fee2e2; color:#991b1b">🎯 ${nbQDerniere} questions corrigées</span>
-              ${!isPremium ? '<span class="annales-stat">🔒 Premium</span>' : ''}
+              ${!accesDerniere ? '<span class="annales-stat">' + verrouDerniere + '</span>' : ''}
             </div>
             <div class="annales-card-benefits">
               <div class="benefit-line">✅ Les questions réellement tombées, recensées le jour même</div>
               <div class="benefit-line">✅ Corrigées et expliquées par Bara Formation</div>
               <div class="benefit-line">✅ Connais ton score avant les résultats officiels</div>
             </div>
-            ${!isPremium ? `
+            ${!accesDerniere ? `
               <button onclick="event.stopPropagation(); App.navigate('premium')"
                       style="margin-top:0.7rem; background:var(--green-bf-dark); color:white; border:none; padding:0.6rem 1.2rem; border-radius:999px; font-weight:700; font-size:0.85rem; cursor:pointer; width:100%">
                 Débloquer les corrections →
@@ -4517,7 +4582,7 @@ const App = {
             <div class="annales-card-stats">
               <span class="annales-stat">${nbSessions} sessions</span>
               <span class="annales-stat">🎯 ${nbQuestions} questions</span>
-              ${!isPremium ? '<span class="annales-stat">⭐ Premium</span>' : ''}
+              ${!accesArchives ? '<span class="annales-stat">' + this.libelleVerrou('archivesAF') + '</span>' : ''}
             </div>
             <div class="annales-card-benefits">
               <div class="benefit-line">✅ Les questions réellement tombées aux concours</div>
@@ -5121,7 +5186,10 @@ const App = {
     // V63.67 : L'utilisateur consulte les corrections → on efface la pastille "nouveau"
     try { localStorage.removeItem('bara_new_corrections_count'); } catch(e) {}
     const u = this.state.user;
-    const isPremium = window.PremiumService && window.PremiumService.isUserPremium(u);
+    // V64.18 : accès par année. Le grand bandeau de vente s'affiche à qui n'a
+    //   accès à rien (Gratuit) ; un abonné Essentiel voit les archives et un
+    //   cadenas « Complet » sur les sessions de la saison en cours.
+    const accesArchives = !!(window.PremiumService && window.PremiumService.hasRight(u, 'archivesAF'));
     // V63.29 : Charger les sessions Firestore au premier affichage + sync temps réel
     // V63.31 : Toujours recharger pour capter les suppressions (cache peut être obsolète)
     if (window.SessionsFirestore && window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady) {
@@ -5152,7 +5220,7 @@ const App = {
 
         <div class="content mt-overlap">
 
-          ${!isPremium ? `
+          ${!accesArchives ? `
             <!-- V63.94 : on annonce la valeur avant la restriction.
                  L'ancien écran ouvrait sur « Accès Premium requis » — un refus
                  lu avant même de savoir ce qui est refusé — et décrivait le
@@ -5240,7 +5308,7 @@ const App = {
               const yearSessions = byYear[year];
               const nbSessions = yearSessions.length;
               const totalQ = yearSessions.reduce((s, sess) => s + (sess.questions || []).length, 0);
-              const isCurrentYear = year === '2026';
+              const isCurrentYear = year === String((window.PremiumService && window.PremiumService.getSaison().annee) || 2027);  // V64.18 : était '2026' en dur
 
               return `
                 <div style="margin-top:${sortedYears.indexOf(year) === 0 ? '0.6rem' : '2rem'}; margin-bottom:1rem">
@@ -5256,7 +5324,7 @@ const App = {
                   </div>
                 </div>
                   <div class="sessions-list">
-                    ${yearSessions.map((s, idx) => this.renderSessionCard(s, idx, isPremium)).join('')}
+                    ${yearSessions.map((s, idx) => this.renderSessionCard(s, idx, this.accesAccompagnement(s))).join('')}
                   </div>
                 </div>
               `;
@@ -5277,6 +5345,9 @@ const App = {
   },
 
   // Carte d'une session
+  // V64.18 : `isPremium` signifie désormais « ce compte a accès à CETTE
+  //   session » (calculé par l'appelant selon l'année), et non plus « compte
+  //   Premium ». Nom conservé pour ne pas toucher au corps de la fonction.
   renderSessionCard(session, index, isPremium) {
     const progress = window.SessionsHelper ? window.SessionsHelper.getProgress(session.id) : null;
     const isCompleted = progress && progress.completedAt;
@@ -5358,10 +5429,14 @@ const App = {
 
   // Ouvrir une session
   openSession(sessionId) {
-    const u = this.state.user;
-    const isPremium = window.PremiumService && window.PremiumService.isUserPremium(u);
-    if (!isPremium) {
-      this.navigate('premium');
+    // V64.18 : droit selon l'année de la session (archives : Essentiel ;
+    //   saison en cours : Complet). Session introuvable : traitée comme la
+    //   saison en cours, le cas le plus restrictif.
+    const session = (this.getMergedAccompagnementSessions() || []).find(x => x && x.id === sessionId) || null;
+    const droit = this.droitAccompagnement(session);
+    if (!(window.PremiumService && window.PremiumService.hasRight(this.state.user, droit))) {
+      this.toast(this.libelleVerrou(droit) + ' — formule requise pour cette session');
+      setTimeout(() => this.navigate('premium'), 700);
       return;
     }
     this.state.currentSessionId = sessionId;
@@ -6812,11 +6887,12 @@ const App = {
   },
 
   openAnnale(sujetId) {
-    const u = this.state.user;
-    const isPremium = window.PremiumService && window.PremiumService.isUserPremium(u);
-
-    if (!isPremium) {
-      this.toast('🔒 Accompagnement Final réservé aux membres Premium');
+    // V64.18 : même règle que les sessions — archives dès Essentiel, saison
+    //   en cours dès Complet. (Écran actuellement non relié : aucune carte
+    //   n'appelle renderSujetCard. Mis en cohérence pour le jour où il le sera.)
+    const droit = this.droitAccompagnement({ annee: this.state.currentSessionAnnee });
+    if (!(window.PremiumService && window.PremiumService.hasRight(this.state.user, droit))) {
+      this.toast(this.libelleVerrou(droit) + ' — formule requise pour ce sujet');
       setTimeout(() => this.navigate('premium'), 800);
       return;
     }
@@ -6912,8 +6988,8 @@ const App = {
           ${!(window.PremiumService && window.PremiumService.isUserPremium(this.state.user)) ? `
             <div class="premium-banner" onclick="App.navigate('premium')">
               <div class="premium-icon">⭐</div>
-              <div class="premium-title">Passez Premium</div>
-              <div class="premium-desc">Accès à tous les QCM avancés, examens chronométrés illimités, sessions Premium</div>
+              <div class="premium-title">Choisis ta formule</div>
+              <div class="premium-desc">Essentiel, Complet ou Premium : plus de questions chaque jour, le mode examen et l'Accompagnement Final, jusqu'aux compositions</div>
               <button class="premium-cta">Découvrir →</button>
             </div>
           ` : ''}
@@ -7817,7 +7893,13 @@ const App = {
   async _recoverPremiumIfMissing() {
     try {
       const u = this.state.user;
-      if (window.PremiumService && window.PremiumService.isUserPremium(u)) return;
+      // V64.18 : on ne s'arrête plus quand le compte a déjà une formule.
+      //   Cas manqué jusqu'ici : l'admin passe un compte en Complet (écrit
+      //   dans le profil), puis le candidat active un code de montée vers
+      //   Premium. Le profil disait « Complet », la restauration était sautée,
+      //   et le candidat retombait en Complet à chaque démarrage alors qu'il
+      //   avait payé Premium. On compare désormais les deux statuts et on
+      //   garde le meilleur (PremiumService.fusionnerStatut).
       if (!window.ActivationCodes || !window.ActivationCodes.recoverPremiumFromCodes) return;
 
       const uid = u && u.uid;
@@ -7825,6 +7907,13 @@ const App = {
 
       const restaure = await window.ActivationCodes.recoverPremiumFromCodes(uid);
       if (!restaure) return;
+
+      const PS = window.PremiumService;
+      const actuel = {
+        isPremium: u.isPremium, premiumPlan: u.premiumPlan,
+        premiumExpiresAt: u.premiumExpiresAt, premiumActivatedAt: u.premiumActivatedAt
+      };
+      if (PS && PS.fusionnerStatut(actuel, restaure) === actuel && PS.isUserPremium(actuel)) return;
 
       this.state.user = { ...this.state.user, ...restaure };
       this.save();
@@ -8558,7 +8647,11 @@ const App = {
     const nbQ = (QUESTIONS[matId] || []).length;
     if (!m) { this.navigate('home'); return ''; }
 
-    const isPremium = window.PremiumService && window.PremiumService.isUserPremium(this.state.user);
+    // V64.18 : `isPremium` = droit au mode examen (dès Essentiel), plus le
+    //   statut Premium d'avant. Nom gardé : il sert à une dizaine d'endroits
+    //   de l'écran.
+    const isPremium = !!(window.PremiumService && window.PremiumService.hasRight(this.state.user, 'modeExamen'));
+    const formuleExamen = window.PremiumService ? window.PremiumService.tierPour('modeExamen').nom : 'Premium';
     const historiqueTrain = this.SujetsManager.getHistorique(matId, 'train');
     const historiqueExam = this.SujetsManager.getHistorique(matId, 'exam');
     const prochainTrain = this.SujetsManager.getProchainNumero(matId, 'train');
@@ -8625,7 +8718,7 @@ const App = {
           <div class="section-title" style="display:flex; align-items:center; gap:0.5rem; margin-top:1.5rem">
             <span>⏱️</span>
             <span>Mode examen chronométré</span>
-            ${!isPremium ? '<span style="background:var(--gold-bf); color:var(--green-bf-dark); font-size:0.65rem; font-weight:800; padding:0.15rem 0.55rem; border-radius:999px; margin-left:auto">⭐ PREMIUM</span>' : '<span style="background:var(--cream-dark); color:var(--ink-mute); font-size:0.7rem; font-weight:700; padding:0.15rem 0.55rem; border-radius:999px; margin-left:auto">50 questions / 60 min</span>'}
+            ${!isPremium ? '<span style="background:var(--gold-bf); color:var(--green-bf-dark); font-size:0.65rem; font-weight:800; padding:0.15rem 0.55rem; border-radius:999px; margin-left:auto">⭐ ' + formuleExamen.toUpperCase() + '</span>' : '<span style="background:var(--cream-dark); color:var(--ink-mute); font-size:0.7rem; font-weight:700; padding:0.15rem 0.55rem; border-radius:999px; margin-left:auto">50 questions / 60 min</span>'}
           </div>
           <div style="font-size:0.82rem; color:var(--ink-soft); margin-bottom:0.7rem; line-height:1.5">Conditions réelles d'examen. 50 questions en 1 heure. Sauvegarde automatique pour reprendre plus tard.</div>
 
@@ -8633,7 +8726,7 @@ const App = {
             <div class="sujet-btn-new-icon">${!isPremium ? '🔒' : '⏱️'}</div>
             <div class="sujet-btn-new-content">
               <div class="sujet-btn-new-title">${!isPremium ? 'Débloquer le mode examen' : 'Sujet examen ' + prochainExam}</div>
-              <div class="sujet-btn-new-desc">${!isPremium ? 'Réservé aux membres Premium' : 'Nouveau sujet de 50 questions • 1h'}</div>
+              <div class="sujet-btn-new-desc">${!isPremium ? 'Dès la formule ' + formuleExamen : 'Nouveau sujet de 50 questions • 1h'}</div>
             </div>
             <div class="sujet-btn-new-arrow">›</div>
           </button>
@@ -8746,10 +8839,11 @@ const App = {
 
   // === QCM ===
   startQCM(mode, refaireSujet = null) {
-    const isPremium = window.PremiumService && window.PremiumService.isUserPremium(this.state.user);
+    // V64.18 : droit « modeExamen » (dès Essentiel)
+    const isPremium = !!(window.PremiumService && window.PremiumService.hasRight(this.state.user, 'modeExamen'));
 
     if (mode === 'exam' && !isPremium) {
-      this.toast('🔒 Le mode examen est réservé aux membres Premium');
+      this.toast('🔒 Mode examen : dès la formule ' + window.PremiumService.tierPour('modeExamen').nom);
       setTimeout(() => this.navigate('premium'), 800);
       return;
     }
@@ -8970,19 +9064,15 @@ const App = {
     // En mode entraînement : verrouillé après réponse
     if (!isExam && this.state.qcm.answers[cur] !== null) return;
 
-    // === FREEMIUM : Vérifier la limite quotidienne ===
-    const isPremium = window.PremiumService && window.PremiumService.isUserPremium(this.state.user);
-    if (!isPremium && this.state.qcm.answers[cur] === null) {
-      // V63.11 : Vérifier la limite spécifique à la matière (général + actualité)
+    // === QUOTA JOURNALIER ===
+    // V64.18 : contrôlé pour TOUS les niveaux. Chaque formule a désormais son
+    //   plafond (30, 75…), et Premium un plafond technique non annoncé.
+    if (this.state.qcm.answers[cur] === null) {
       const currentMatiere = this.state.qcm.matiereId || this.state.currentMatiere;
       const check = this.FreemiumManager.canAnswerMatiere(this.state.user, currentMatiere);
       if (!check.allowed) {
-        // Limite atteinte → bloquer et proposer Premium
-        if (check.reason === 'actualite_limit') {
-          this.showActualiteLimitDialog();
-        } else {
-          this.showFreemiumLimitDialog();
-        }
+        // Visiteur : création de compte ; inscrit : formule supérieure
+        this.showFreemiumLimitDialog();
         return;
       }
     }
@@ -9314,7 +9404,7 @@ const App = {
                 </div>
                 <div style="display:flex; flex-direction:column; gap:0.35rem; font-size:0.85rem; opacity:0.95; margin-bottom:0.9rem">
                   <div>⏱️ Le mode examen, dans les conditions du concours</div>
-                  <div>⚡ Des questions sans limite quotidienne</div>
+                  <div>⚡ De 30 à 75 questions par jour, sans limite en Premium</div>
                   <div>📚 Les sujets réellement tombés, corrigés</div>
                 </div>
                 <span style="display:inline-block; background:var(--gold-bf); color:var(--green-bf-dark); padding:0.55rem 1.2rem; border-radius:999px; font-weight:700; font-size:0.85rem">
@@ -9577,7 +9667,7 @@ const App = {
             <div class="profile-card connected">
               <div class="profile-avatar">${(u.name || 'A').charAt(0).toUpperCase()}</div>
               <div class="profile-name">${u.name || 'Apprenant'}</div>
-              <div class="profile-status">${(window.PremiumService && window.PremiumService.isUserPremium(u)) ? `⭐ Premium · ${window.PremiumService.daysRemaining(u)}j restant${window.PremiumService.daysRemaining(u) > 1 ? 's' : ''}` : '👤 Compte Gratuit'}</div>
+              <div class="profile-status">${(window.PremiumService && window.PremiumService.isUserPremium(u)) ? `⭐ Formule ${window.PremiumService.getTierName(u)} · ${window.PremiumService.daysRemaining(u)}j restant${window.PremiumService.daysRemaining(u) > 1 ? 's' : ''}` : '👤 Compte Gratuit'}</div>
               ${u.phoneNumber ? `<div class="profile-phone">${(window.FirebaseAuth && window.FirebaseAuth.formatPhone) ? window.FirebaseAuth.formatPhone(u.phoneNumber) : (u.phoneNumber || "")}</div>` : ''}
               ${(() => {
                 // V63.70 : e-mail du compte, visible et copiable.
@@ -9747,14 +9837,30 @@ const App = {
   },
 
   // === PREMIUM ===
+  // V64.18 : écran « Mon abonnement » pour un compte qui a une formule.
+  //   Il présente la formule, ses avantages, et les montées de formule
+  //   possibles au prix de la différence (cahier des charges, section 3).
+  //   Le bouton « Prolonger mon abonnement » disparaît : une formule de saison
+  //   court jusqu'aux compositions, il n'y a rien à prolonger.
   renderPremium() {
     const u = this.state.user;
-    const isPremium = window.PremiumService && window.PremiumService.isUserPremium(u);
+    const PS = window.PremiumService;
+    const isPremium = PS && PS.isUserPremium(u);
 
     if (isPremium) {
-      const days = window.PremiumService.daysRemaining(u);
-      const expiry = window.PremiumService.formatExpiry(u);
-      const planName = u.premiumPlan ? window.PremiumService.PLANS[u.premiumPlan]?.name : 'Premium';
+      const days = PS.daysRemaining(u);
+      const expiry = PS.formatExpiry(u);
+      const plan = PS.PLANS[u.premiumPlan] || null;
+      const tier = PS.getTier(u);
+      const nomFormule = PS.TIERS[tier].nom;
+      const ancien = plan && plan.legacy;
+      const av = PS.avantages(tier, false);
+      const montees = PS.monteesDisponibles(u);
+      const verte = '#15803d';
+      // « Jusqu'aux compositions 2027 » / « Jusqu'au 20 août 2027 »
+      const echeance = (plan && plan.finSaison)
+        ? PS.libelleFinSaison().replace(/^j/, 'J')
+        : (expiry ? 'Jusqu\'au ' + expiry : 'Abonnement en cours');
 
       return `
         <div class="page">
@@ -9768,31 +9874,59 @@ const App = {
 
           <div class="content mt-overlap">
             <div class="premium-active-badge">
-              <div style="font-size:3rem; margin-bottom:0.3rem">⭐</div>
-              <div class="premium-active-title">Premium ${planName} actif</div>
-              <div class="premium-active-expires">${days > 0 ? `${days} jour${days > 1 ? 's' : ''} restant${days > 1 ? 's' : ''}` : 'Expire bientôt'} • Jusqu'au ${expiry}</div>
+              <div style="font-size:3rem; margin-bottom:0.3rem">${plan && plan.icon && !ancien ? plan.icon : '⭐'}</div>
+              <div class="premium-active-title">Formule ${nomFormule} active</div>
+              <div class="premium-active-expires">${echeance} • ${days > 0 ? `${days} jour${days > 1 ? 's' : ''} restant${days > 1 ? 's' : ''}` : 'Expire bientôt'}</div>
+              ${ancien ? `<div style="font-size:0.75rem; opacity:0.85; margin-top:0.3rem">Ancien abonnement « ${this.escapeHTML(plan.name)} » : tous les avantages Premium jusqu'à son échéance</div>` : ''}
             </div>
 
             <div style="background:white; border-radius:var(--radius-lg); padding:1.2rem; margin-bottom:1rem; border:1px solid var(--line-soft)">
-              <h3 style="font-family:'Instrument Serif',serif; font-size:1.2rem; color:var(--green-bf); margin-bottom:0.7rem">Tes avantages Premium</h3>
-              <div style="display:flex; flex-direction:column; gap:0.6rem">
-                ${[
-                  ['⏱️','Mode examen chronométré illimité'],
-                  ['📚','Tous les QCM avancés débloqués'],
-                  ['💬','Forum communautaire actif'],
-                  ['📊','Statistiques avancées'],
-                  ['🔔','Notifications personnalisées']
-                ].map(([e,t]) => `
-                  <div style="display:flex; gap:0.7rem; align-items:center; font-size:0.88rem">
-                    <span style="font-size:1.2rem">${e}</span>
-                    <span style="color:var(--success); font-weight:700">✓</span>
+              <h3 style="font-family:'Instrument Serif',serif; font-size:1.2rem; color:var(--green-bf); margin-bottom:0.7rem">Ta formule comprend</h3>
+              <div style="display:flex; flex-direction:column; gap:0.55rem">
+                ${av.lignes.map(t => `
+                  <div style="display:flex; gap:0.6rem; align-items:flex-start; font-size:0.88rem; line-height:1.4">
+                    <span style="color:var(--success); font-weight:800">✓</span>
                     <span>${t}</span>
                   </div>
                 `).join('')}
               </div>
             </div>
 
-            <button class="btn-secondary" onclick="App.navigate('premium-renew')" style="width:100%">🔄 Prolonger mon abonnement</button>
+            ${montees.length > 0 ? `
+              <div style="background:white; border-radius:var(--radius-lg); padding:1.2rem; margin-bottom:1rem; border:2px solid ${verte}">
+                <h3 style="font-family:'Instrument Serif',serif; font-size:1.2rem; color:var(--green-bf); margin-bottom:0.3rem">Passer à la formule supérieure</h3>
+                <div style="font-size:0.8rem; color:var(--ink-soft); margin-bottom:0.9rem; line-height:1.5">
+                  Tu ne paies que la différence. Ta date de fin ne change pas.
+                </div>
+                <div style="display:flex; flex-direction:column; gap:0.7rem">
+                  ${montees.map(m => {
+                    const ajout = PS.avantages(m.tier, true);
+                    return `
+                      <div style="border:1px solid var(--line); border-radius:12px; padding:0.9rem">
+                        <div style="font-weight:800; font-size:0.95rem; margin-bottom:0.35rem">${PS.TIERS[m.tier].nom}</div>
+                        <div style="font-size:0.8rem; color:var(--ink-soft); margin-bottom:0.7rem; line-height:1.5">
+                          ${ajout.lignes.filter(l => av.lignes.indexOf(l) < 0).map(l => '+ ' + l).join('<br>')}
+                        </div>
+                        <button class="btn-primary" onclick="App.choisirMontee('${m.id}')" style="width:100%">
+                          Passer à ${PS.TIERS[m.tier].nom} pour +${PS.formatPrice(m.price)}
+                        </button>
+                      </div>
+                    `;
+                  }).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            ${!ancien && tier !== 'premium' ? `
+              <!-- V64.18 : saisie du code reçu après le paiement d'une montée -->
+              <div style="background:linear-gradient(135deg, #fef3c7, #fde68a); border:2px solid #f59e0b; border-radius:var(--radius-lg); padding:1rem; margin-bottom:1.2rem">
+                <div style="font-weight:800; font-size:0.92rem; color:#78350f; margin-bottom:0.6rem">🎫 J'ai reçu un code de montée de formule</div>
+                <div style="display:flex; gap:0.5rem">
+                  <input type="text" id="activation-code-input" placeholder="BARA-UPCP-A3F7K9" maxlength="20" style="flex:1; padding:0.7rem 0.9rem; border:1.5px solid #f59e0b; border-radius:8px; font-size:0.95rem; font-family:monospace; text-transform:uppercase; min-width:0">
+                  <button onclick="App.activateWithCode()" style="background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.7rem 1.1rem; border-radius:8px; font-weight:800; font-size:0.88rem; cursor:pointer; white-space:nowrap">Activer</button>
+                </div>
+              </div>
+            ` : ''}
           </div>
         </div>
       `;
@@ -9801,39 +9935,43 @@ const App = {
     return this.renderPremiumPlans();
   },
 
+  // V64.18 : une montée de formule passe par le même écran de paiement
+  //   qu'un achat ; le plan sélectionné porte le prix de la différence.
+  choisirMontee(planId) {
+    this.state.premiumSelection = { plan: planId };
+    this.navigate('premium-payment');
+  },
+
   renderPremiumPlans() {
     // V63.76 : la session 2026 est terminée — le plan proposé par défaut est
     //   désormais l'annuel, qui couvre la préparation jusqu'aux concours 2027.
     // V63.97 : le plan vedette est désormais SESSION 2027. Laisser 'yearly'
     //   aurait présélectionné un plan masqué : aucune carte cochée à l'écran.
-    const selectedPlan = this.state.premiumSelection?.plan || 'session2027';
-    // V63.53 : Filtrer les plans cachés (hidden) ET les plans réservés admin (adminOnly)
-    //   → Le plan Hebdomadaire (weekly) est marqué adminOnly : seul l'admin le voit,
-    //     pour éviter les abus (étudiants s'abonnant à 1000 F au lieu de 2500 F session).
-    // V63.54 : Protection défensive — si isCurrentUserAdmin n'existe pas
-    //   (ex: data/premium.js pas encore uploadé), on traite comme non-admin
-    //   au lieu de crasher tout l'écran Premium.
-    const isAdmin = (typeof window.PremiumService?.isCurrentUserAdmin === 'function')
-      ? window.PremiumService.isCurrentUserAdmin()
-      : false;
-    const plans = Object.values(window.PremiumService.PLANS).filter(p => {
-      if (p.hidden) return false;
-      if (p.adminOnly && !isAdmin) return false;
-      return true;
-    });
+    // V64.18 : grille 2027. Les formules en vente viennent de
+    //   PremiumService.plansEnVente() : Essentiel, Complet, Premium, et Sprint
+    //   seulement si l'admin l'a activé. Complet est présélectionné (badge
+    //   « RECOMMANDÉ »). Une formule Premium aux places épuisées reste visible
+    //   mais ne peut pas être choisie.
+    const PS = window.PremiumService;
+    const plans = PS.plansEnVente();
+    const vedette = (plans.find(p => p.popular) || plans[0] || {}).id;
+    let selectedPlan = this.state.premiumSelection?.plan;
+    if (!plans.some(p => p.id === selectedPlan)) selectedPlan = vedette;
+    if (PS.PLANS[selectedPlan] && PS.PLANS[selectedPlan].placesLimitees && PS.premiumEpuise()) selectedPlan = vedette;
+    const quotaGratuit = PS.TIERS.gratuit.quota;
 
     return `
       <div class="page">
         <header class="header">
           <div class="header-bar">
             <button class="header-back" onclick="App.navigate('home')">←</button>
-            <div class="header-title-row">Bara Concours Premium</div>
+            <div class="header-title-row">Les formules Bara Concours</div>
             <div class="header-spacer"></div>
           </div>
           <div style="text-align:center; margin-top:0.5rem">
             <div style="font-size:3.5rem; margin-bottom:0.3rem">⭐</div>
-            <div class="header-h1" style="font-size:1.8rem">Passez <span>Premium</span></div>
-            <div class="header-sub">Accélère ta réussite</div>
+            <div class="header-h1" style="font-size:1.8rem">Choisis ta <span>formule</span></div>
+            <div class="header-sub">Un seul paiement, jusqu'aux compositions ${PS.getSaison().annee}</div>
           </div>
         </header>
 
@@ -9857,74 +9995,50 @@ const App = {
               </div>
             ` : ''}
             <div style="display:flex; gap:0.5rem">
-              <input type="text" id="activation-code-input" placeholder="BARA-S2027-A3F7K9" maxlength="20" style="flex:1; padding:0.7rem 0.9rem; border:1.5px solid #f59e0b; border-radius:8px; font-size:0.95rem; font-weight:700; font-family:monospace; letter-spacing:0.05em; text-transform:uppercase; background:white" oninput="this.value = this.value.toUpperCase()">
+              <input type="text" id="activation-code-input" placeholder="BARA-COMP-A3F7K9" maxlength="20" style="flex:1; padding:0.7rem 0.9rem; border:1.5px solid #f59e0b; border-radius:8px; font-size:0.95rem; font-weight:700; font-family:monospace; letter-spacing:0.05em; text-transform:uppercase; background:white" oninput="this.value = this.value.toUpperCase()">
               <button onclick="App.activateWithCode()" style="background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.7rem 1.1rem; border-radius:8px; font-weight:800; font-size:0.88rem; cursor:pointer; white-space:nowrap">Activer</button>
             </div>
           </div>
 
           <div style="text-align:center; margin:1rem 0; font-size:0.82rem; color:var(--ink-mute); position:relative">
-            <span style="background:var(--cream); padding:0 0.7rem; position:relative; z-index:1">OU acheter Premium ci-dessous</span>
+            <span style="background:var(--cream); padding:0 0.7rem; position:relative; z-index:1">OU choisis ta formule ci-dessous</span>
             <div style="border-top:1px solid var(--line); position:absolute; top:50%; left:0; right:0; z-index:0"></div>
           </div>
 
-          <div style="background:white; border-radius:var(--radius-lg); padding:1.2rem; margin-bottom:1.2rem; border:1px solid var(--line-soft)">
-            <h3 style="font-family:'Instrument Serif',serif; font-size:1.2rem; color:var(--green-bf); margin-bottom:0.7rem; text-align:center">Avantages Premium</h3>
-            <div style="display:flex; flex-direction:column; gap:0.5rem; font-size:0.85rem">
-              ${(() => {
-                // V63.94 : les chiffres sont désormais lus dans les données.
-                //   La liste annonçait « 9 sessions (451 questions) », le total
-                //   de l'archive 2025, alors que l'Accompagnement Final en
-                //   compte trois fois plus — l'argument le plus fort était
-                //   sous-vendu sur l'écran où le candidat décide de payer.
-                //   Deux entrées étaient également fausses : l'examen
-                //   hebdomadaire et le classement sont accessibles à tous.
-                const sess = this.getMergedAccompagnementSessions();
-                const nbSess = sess.length;
-                const nbQ = sess.reduce((s, x) => s + ((x.questions && x.questions.length) || 0), 0);
-                return [
-                  '🎓 Accompagnement Final : ' + (nbQ > 0 ? nbQ.toLocaleString('fr-FR') + ' questions réellement tombées' : 'les questions réellement tombées') + (nbSess > 0 ? ', ' + nbSess + ' sessions' : ''),
-                  '⚡ Questions sans limite quotidienne — plusieurs milliers de QCM',
-                  '⏱️ Mode examen chronométré, dans les conditions du concours',
-                  '📖 Correction détaillée de l\'examen du dimanche',
-                  '🏆 Classement national complet et historique de tes examens',
-                  '📊 Analyse de ton niveau matière par matière',
-                  '🔔 Notifications personnalisées'
-                ];
-              })().map(t => `
-                <div style="display:flex; gap:0.5rem; align-items:flex-start">
-                  <span style="color:var(--success); font-weight:800">✓</span>
-                  <span>${t}</span>
-                </div>
-              `).join('')}
-            </div>
+          <div style="font-size:0.8rem; color:var(--ink-soft); text-align:center; margin-bottom:0.9rem">
+            Compte gratuit : ${quotaGratuit} questions par jour et la correction détaillée de chaque question.
           </div>
 
-          <div class="section-title">Choisis ton plan</div>
-          <div class="plans-grid">
+          <div class="plans-grid" style="display:flex; flex-direction:column; gap:0.9rem">
             ${plans.map(p => {
-              // V60 : Calcul affichage différent selon plan classique vs date fixe
-              const isSpecial = p.special;
-              let detailHtml;
-              if (isSpecial) {
-                // Plan SESSION 2026 : afficher jours restants jusqu'à la date butoir
-                const daysLeft = Math.max(0, Math.floor((p.expiresAt - Date.now()) / (24 * 60 * 60 * 1000)));
-                detailHtml = `<div class="plan-detail">📅 Accès jusqu'au 15 août 2026 (${daysLeft} jours restants)</div>`;
-              } else {
-                detailHtml = `<div class="plan-detail">${window.PremiumService.formatPrice(p.pricePerDay)} par jour ${p.savings ? '· Sans engagement' : ''}</div>`;
-              }
+              const epuise = p.placesLimitees && PS.premiumEpuise();
+              const choisi = selectedPlan === p.id && !epuise;
+              const av = PS.avantages(p.tier, !p.sprint);
+              const titreListe = p.sprint
+                ? 'Mêmes avantages que Complet :'
+                : (av.base ? 'Tout ' + av.base + ', plus :' : 'Comprend :');
+              const lignes = p.sprint ? PS.avantages('complet', false).lignes : av.lignes;
               return `
-                <div class="plan-card ${p.popular ? 'popular' : ''} ${selectedPlan === p.id ? 'selected' : ''}" onclick="App.selectPlan('${p.id}')">
-                  ${p.tag ? `<div class="plan-tag" style="background:${p.tagBg}; color:${p.tagColor}">${p.tag}</div>` : ''}
-                  <div class="plan-radio">${selectedPlan === p.id ? '✓' : ''}</div>
+                <div class="plan-card ${p.popular ? 'popular' : ''} ${choisi ? 'selected' : ''}"
+                     onclick="${epuise ? '' : `App.selectPlan('${p.id}')`}"
+                     style="${epuise ? 'opacity:0.55; cursor:not-allowed;' : ''} text-align:left">
+                  ${epuise
+                    ? `<div class="plan-tag" style="background:#e5e7eb; color:#374151">Places épuisées</div>`
+                    : (p.tag ? `<div class="plan-tag" style="background:${p.tagBg}; color:${p.tagColor}">${p.tag}</div>` : '')}
+                  <div class="plan-radio">${choisi ? '✓' : ''}</div>
                   <div class="plan-head">
                     <div class="plan-name">${p.icon} ${p.name}</div>
                   </div>
                   <div class="plan-price-row">
-                    <div class="plan-price">${window.PremiumService.formatPrice(p.price).replace(' FCFA','')}</div>
-                    <div class="plan-price-unit">FCFA ${isSpecial ? '(prix unique)' : '/ ' + p.durationLabel}</div>
+                    <div class="plan-price">${PS.formatPrice(p.price).replace(' FCFA','')}</div>
+                    <div class="plan-price-unit">FCFA · paiement unique</div>
                   </div>
-                  ${detailHtml}
-                  ${p.savings ? `<div class="plan-savings">💰 Tu économises ${window.PremiumService.formatPrice(p.savings)}</div>` : ''}
+                  <div class="plan-detail">📅 Accès ${PS.libelleFinSaison()}</div>
+                  <div style="margin-top:0.6rem; font-size:0.8rem; color:var(--ink-soft); line-height:1.5">
+                    <div style="font-weight:700; color:var(--ink); margin-bottom:0.25rem">${titreListe}</div>
+                    ${lignes.map(l => `<div style="display:flex; gap:0.4rem"><span style="color:var(--success); font-weight:800">✓</span><span>${l}</span></div>`).join('')}
+                    ${p.placesLimitees && !epuise ? `<div style="margin-top:0.35rem; color:#854d0e; font-weight:700">Places limitées</div>` : ''}
+                  </div>
                 </div>
               `;
             }).join('')}
@@ -9936,7 +10050,7 @@ const App = {
 
           <div style="text-align:center; font-size:0.78rem; color:var(--ink-mute); padding:1rem 0.5rem">
             🔒 Paiement sécurisé via Mobile Money<br>
-            Sans engagement • Annulable à tout moment
+            Paiement unique • Aucun renouvellement automatique
           </div>
 
           <!-- V63.94 : réassurance. Le candidat hésite moins quand il sait
@@ -9982,8 +10096,25 @@ const App = {
       setTimeout(() => this.navigate(window.FirebaseAuth && window.FirebaseAuth.USE_FIREBASE_AUTH ? 'auth-welcome' : 'auth-phone'), 800);
       return;
     }
+    // V64.18 : formule par défaut = Complet (la vedette de la grille 2027).
+    //   Une sélection restée d'une ancienne version (ex. « session2027 », plan
+    //   retiré) est écartée : on ne doit jamais envoyer au paiement une
+    //   formule qui n'est plus vendue.
+    const selAvant = this.state.premiumSelection?.plan;
+    const planAvant = selAvant && window.PremiumService.PLANS[selAvant];
+    const vendable = planAvant && (planAvant.upgrade || window.PremiumService.plansEnVente().some(p => p.id === selAvant));
+    if (!vendable) this.state.premiumSelection = null;
     if (!this.state.premiumSelection?.plan) {
-      this.state.premiumSelection = { plan: 'session2027' };
+      const enVente = window.PremiumService.plansEnVente();
+      this.state.premiumSelection = { plan: (enVente.find(p => p.popular) || enVente[0] || { id: 'complet' }).id };
+    }
+    // Places Premium épuisées entre-temps : on ne laisse pas payer
+    const choisi = window.PremiumService.PLANS[this.state.premiumSelection.plan];
+    if (choisi && choisi.placesLimitees && window.PremiumService.premiumEpuise()) {
+      this.toast('Les places Premium sont épuisées pour cette saison. Choisis une autre formule.', 'danger');
+      this.state.premiumSelection = null;
+      this.render();
+      return;
     }
     this.navigate('premium-payment');
   },
@@ -10398,6 +10529,21 @@ const App = {
     // V58 : Indiquer qu'on vérifie (latence réseau possible)
     this.toast('⏳ Vérification du code...');
 
+    // V64.18 : vérifier que le code APPORTE quelque chose AVANT de le
+    //   consommer. Sans ce contrôle, un abonné Complet qui saisit un code
+    //   Essentiel, ou un code de montée saisi depuis la mauvaise formule,
+    //   aurait « brûlé » le code sans rien obtenir.
+    const apercu = await window.ActivationCodes.validateCode(code);
+    if (!apercu.valid) {
+      this.toast('❌ ' + (apercu.reason || 'Code invalide'), 'danger');
+      return;
+    }
+    const compatible = window.PremiumService.peutActiver(this.state.user, apercu.code && apercu.code.planId);
+    if (!compatible.ok) {
+      this.toast('⚠️ ' + compatible.raison, 'danger');
+      return;
+    }
+
     // Valider et utiliser le code (async maintenant)
     const userInfo = {
       uid: this.state.user.uid,
@@ -10449,11 +10595,13 @@ const App = {
       this.toast('⚠️ Premium activé hors ligne. Connecte-toi à internet pour le sauvegarder.', 'danger');
     }
 
-    const planName = window.PremiumService.PLANS[planId]?.name || 'Premium';
-    this.toast('🎉 ' + planName + ' activé avec succès !');
+    // V64.18 : on nomme la formule obtenue (une montée « Essentiel → Complet »
+    //   annonce « Complet »)
+    const nomFormule = window.PremiumService.getTierName(this.state.user);
+    this.toast('🎉 Formule ' + nomFormule + ' activée avec succès !');
     setTimeout(() => {
       this.navigate('home');
-      setTimeout(() => this.toast('⭐ Bienvenue dans Premium !'), 800);
+      setTimeout(() => this.toast('⭐ Bienvenue dans la formule ' + nomFormule + ' !'), 800);
     }, 1500);
   },
 
@@ -10785,32 +10933,42 @@ const App = {
             </div>
           </div>
 
-          <!-- GRATUIT vs PREMIUM -->
-          <div style="background:white; border-radius:14px; padding:1.2rem; margin-bottom:1.2rem; border:1px solid var(--line)">
-            <h3 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:0 0 0.8rem; font-size:1.2rem">💎 Gratuit vs Premium</h3>
-            <table style="width:100%; border-collapse:collapse; font-size:0.85rem">
-              <thead>
-                <tr style="border-bottom:2px solid var(--line)">
-                  <th style="text-align:left; padding:0.5rem 0; font-weight:700">Fonction</th>
-                  <th style="text-align:center; padding:0.5rem 0; width:60px">Gratuit</th>
-                  <th style="text-align:center; padding:0.5rem 0; width:60px; color:var(--gold-bf-dark)">Premium ⭐</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td style="padding:0.5rem 0">Participation</td><td style="text-align:center">✅</td><td style="text-align:center">✅</td></tr>
-                <tr><td style="padding:0.5rem 0">Score immédiat</td><td style="text-align:center">✅</td><td style="text-align:center">✅</td></tr>
-                <tr><td style="padding:0.5rem 0">Correction détaillée</td><td style="text-align:center">❌</td><td style="text-align:center">✅</td></tr>
-                <tr><td style="padding:0.5rem 0">Classement national</td><td style="text-align:center">Top 10</td><td style="text-align:center">Complet</td></tr>
-                <tr><td style="padding:0.5rem 0">Historique des examens</td><td style="text-align:center">❌</td><td style="text-align:center">✅</td></tr>
-                <tr><td style="padding:0.5rem 0">Analyse par matière</td><td style="text-align:center">❌</td><td style="text-align:center">✅</td></tr>
-              </tbody>
-            </table>
-            ${!window.PremiumService.isUserPremium(this.state.user) ? `
-              <button onclick="App.navigate('premium')" style="width:100%; background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.8rem; border-radius:10px; font-weight:800; cursor:pointer; margin-top:0.9rem">
-                ⭐ Passer Premium
-              </button>
-            ` : ''}
-          </div>
+          <!-- V64.18 : CE QUE CHAQUE FORMULE OUVRE (remplace « Gratuit vs Premium ») -->
+          ${(() => {
+            const PS = window.PremiumService;
+            const lignes = [
+              ['Participation et score immédiat', 'gratuit'],
+              ['Correction détaillée', PS.DROITS.correctionHebdo],
+              ['Classement national', PS.DROITS.classement],
+              ['Analyse par matière', PS.DROITS.statsAvancees],
+              ['Historique de tes examens', PS.DROITS.statsAvancees]
+            ];
+            const monRang = PS.rang(PS.getTier(this.state.user));
+            return `
+              <div style="background:white; border-radius:14px; padding:1.2rem; margin-bottom:1.2rem; border:1px solid var(--line)">
+                <h3 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:0 0 0.8rem; font-size:1.2rem">💎 Ce que chaque formule ouvre</h3>
+                <table style="width:100%; border-collapse:collapse; font-size:0.85rem">
+                  <thead>
+                    <tr style="border-bottom:2px solid var(--line)">
+                      <th style="text-align:left; padding:0.5rem 0; font-weight:700">Fonction</th>
+                      <th style="text-align:right; padding:0.5rem 0; font-weight:700">Dès la formule</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${lignes.map(([nom, t]) => {
+                      const ok = monRang >= PS.rang(t);
+                      return `<tr><td style="padding:0.5rem 0">${ok ? '✅' : '🔒'} ${nom}</td><td style="text-align:right; font-weight:700; color:${ok ? 'var(--success)' : 'var(--gold-bf-dark)'}">${PS.TIERS[t].nom}</td></tr>`;
+                    }).join('')}
+                  </tbody>
+                </table>
+                ${monRang < PS.rang(PS.DROITS.statsAvancees) ? `
+                  <button onclick="App.navigate('premium')" style="width:100%; background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.8rem; border-radius:10px; font-weight:800; cursor:pointer; margin-top:0.9rem">
+                    ⭐ Voir les formules
+                  </button>
+                ` : ''}
+              </div>
+            `;
+          })()}
 
           ${allResults.length > 0 ? `
             <!-- V63 : LIEN HISTORIQUE -->
@@ -11123,7 +11281,14 @@ const App = {
       return '<div>Pas de résultat</div>';
     }
 
-    const isPremium = window.PremiumService.isUserPremium(this.state.user);
+    // V64.18 : trois droits distincts au lieu d'un Premium unique
+    //   - analyse par matière   : statistiques avancées (dès Complet)
+    //   - correction détaillée  : dès Essentiel
+    //   - classement national   : dès Essentiel
+    const PS = window.PremiumService;
+    const isPremium = PS.hasRight(this.state.user, 'statsAvancees');
+    const aCorrection = PS.hasRight(this.state.user, 'correctionHebdo');
+    const aClassement = PS.hasRight(this.state.user, 'classement');
     const isExcellent = lastResult.percent >= 75;
     const isGood = lastResult.percent >= 50 && lastResult.percent < 75;
     const scoreColor = isExcellent ? '#16a34a' : (isGood ? '#d97706' : '#dc2626');
@@ -11177,12 +11342,12 @@ const App = {
           ` : `
             <div style="background:linear-gradient(135deg, #fef3c7, white); border:2px solid var(--gold-bf); border-radius:14px; padding:1.2rem; margin-bottom:1.2rem; text-align:center">
               <div style="font-size:2rem">🔒</div>
-              <h3 style="font-family:'Instrument Serif',serif; color:#854d0e; margin:0.5rem 0">Analyse détaillée réservée Premium</h3>
+              <h3 style="font-family:'Instrument Serif',serif; color:#854d0e; margin:0.5rem 0">Analyse par matière : formule ${PS.tierPour('statsAvancees').nom}</h3>
               <p style="color:#78350f; margin:0 0 1rem; font-size:0.88rem; line-height:1.5">
-                Découvre tes points forts et faibles par matière, ta position dans le classement national, et la correction détaillée de chaque question.
+                Découvre tes points forts et faibles matière par matière, et suis ton évolution d'un dimanche à l'autre.
               </p>
               <button onclick="App.navigate('premium')" style="background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.8rem 1.5rem; border-radius:10px; font-weight:800; cursor:pointer">
-                ⭐ Voir les offres Premium
+                ⭐ Voir les formules
               </button>
             </div>
           `}
@@ -11210,10 +11375,10 @@ const App = {
             return `
               <div style="display:flex; flex-direction:column; gap:0.6rem; margin-bottom:1rem">
                 <button onclick="App.navigate('weekly-exam-ranking')" style="background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.95rem; border-radius:12px; font-weight:800; cursor:pointer; font-size:0.95rem; display:flex; align-items:center; justify-content:center; gap:0.4rem; box-shadow:0 4px 12px rgba(217,119,6,0.2)">
-                  🏆 Voir le classement national
+                  ${aClassement ? '🏆 Voir le classement national' : '🔒 Classement national (formule ' + PS.tierPour('classement').nom + ')'}
                 </button>
                 <button onclick="App.navigate('weekly-exam-correction')" style="background:white; color:var(--green-bf-dark); border:2px solid var(--green-bf); padding:0.9rem; border-radius:12px; font-weight:800; cursor:pointer; font-size:0.95rem; display:flex; align-items:center; justify-content:center; gap:0.4rem">
-                  ${isPremium ? '✏️ Correction détaillée' : '🔒 Correction (Premium)'}
+                  ${aCorrection ? '✏️ Correction détaillée' : '🔒 Correction (formule ' + PS.tierPour('correctionHebdo').nom + ')'}
                 </button>
               </div>
             `;
@@ -11278,7 +11443,32 @@ const App = {
       `;
     }
 
-    const isPremium = window.PremiumService.isUserPremium(this.state.user);
+    // V64.18 : le classement national est un droit (dès Essentiel). Le compte
+    //   Gratuit voyait jusqu'ici le Top 10 ; la grille 2027 le réserve aux
+    //   formules payantes. Les formules payantes voient le classement complet.
+    const isPremium = window.PremiumService.hasRight(this.state.user, 'classement');
+    if (!isPremium) {
+      const nomF = window.PremiumService.tierPour('classement').nom;
+      return `
+        <div class="page" style="padding-bottom:5rem">
+          <header class="header">
+            <div class="header-bar">
+              <button class="header-back" onclick="App.navigate('weekly-exam-result')">←</button>
+              <div class="header-title-row">🏆 Classement</div>
+              <div class="header-spacer"></div>
+            </div>
+          </header>
+          <div class="content" style="text-align:center; padding:2rem 1.2rem">
+            <div style="font-size:3rem">🔒</div>
+            <h2 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:0.8rem 0">Classement national : formule ${nomF}</h2>
+            <p style="color:var(--ink-soft); line-height:1.6; margin-bottom:1.2rem">
+              Situe-toi parmi tous les candidats qui ont passé l'examen de dimanche, et vois ta progression semaine après semaine.
+            </p>
+            <button onclick="App.navigate('premium')" class="btn-primary" style="width:100%">⭐ Voir les formules</button>
+          </div>
+        </div>
+      `;
+    }
     const cache = this.state.weeklyRankingCache || {};
     const cachedData = cache[examId];
 
@@ -11597,7 +11787,10 @@ const App = {
     }
 
     // V62 : Vérifier Premium
-    const isPremium = window.PremiumService.isUserPremium(this.state.user);
+    // V64.18 : droit « correctionHebdo » (dès Essentiel). Le compte Gratuit
+    //   passe l'examen et voit son score, mais pas la correction : c'est
+    //   l'argument d'inscription décidé le 15 novembre 2026.
+    const isPremium = window.PremiumService.hasRight(this.state.user, 'correctionHebdo');
     if (!isPremium) {
       return `
         <div class="page" style="padding-bottom:5rem">
@@ -11610,16 +11803,16 @@ const App = {
           </header>
           <div style="padding:2rem 1.2rem; text-align:center">
             <div style="font-size:3.5rem">🔒</div>
-            <h2 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:0.8rem 0">Correction détaillée réservée Premium</h2>
+            <h2 style="font-family:'Instrument Serif',serif; color:var(--green-bf-dark); margin:0.8rem 0">Correction détaillée : formule ${window.PremiumService.tierPour('correctionHebdo').nom}</h2>
             <p style="color:var(--ink-soft); font-size:0.95rem; line-height:1.6; max-width:380px; margin:0 auto">
-              Avec Premium, tu as accès à :<br>
+              Avec la formule ${window.PremiumService.tierPour('correctionHebdo').nom}, tu as accès à :<br>
               ✅ La correction de chaque question avec explication<br>
               ✅ Pourquoi tu as eu faux (raisonnement)<br>
               ✅ Les points clés à retenir<br>
               ✅ L'analyse de tes lacunes par matière
             </p>
             <button onclick="App.navigate('premium')" style="margin-top:1.5rem; background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.95rem 1.8rem; border-radius:12px; font-weight:800; cursor:pointer; font-size:1rem; box-shadow:0 4px 14px rgba(217,119,6,0.25)">
-              ⭐ Voir les plans Premium
+              ⭐ Voir les formules
             </button>
           </div>
         </div>
@@ -11763,9 +11956,10 @@ const App = {
     if (!window.WeeklyExam) return '<div>Module non chargé</div>';
 
     const allResults = window.WeeklyExam.getAllResults();
-    const isPremium = window.PremiumService.isUserPremium(this.state.user);
+    // V64.18 : historique et évolution = statistiques avancées (dès Complet)
+    const isPremium = window.PremiumService.hasRight(this.state.user, 'statsAvancees');
 
-    // Premium uniquement pour l'historique complet
+    // Réservé aux formules qui ont les statistiques avancées
     if (!isPremium && allResults.length > 0) {
       return `
         <div class="page" style="padding-bottom:5rem">
@@ -11781,16 +11975,16 @@ const App = {
             <!-- Aperçu Premium -->
             <div style="background:linear-gradient(135deg, #fef3c7, white); border:2px solid var(--gold-bf); border-radius:14px; padding:1.5rem; text-align:center">
               <div style="font-size:3rem">🔒</div>
-              <h2 style="font-family:'Instrument Serif',serif; color:#854d0e; margin:0.6rem 0; font-size:1.3rem">Historique réservé Premium</h2>
+              <h2 style="font-family:'Instrument Serif',serif; color:#854d0e; margin:0.6rem 0; font-size:1.3rem">Historique : formule ${window.PremiumService.tierPour('statsAvancees').nom}</h2>
               <p style="color:#78350f; margin:0 0 1rem; font-size:0.9rem; line-height:1.55">
-                Avec Premium, tu accèdes à :<br>
+                Avec la formule ${window.PremiumService.tierPour('statsAvancees').nom}, tu accèdes à :<br>
                 ✅ Tous tes examens passés<br>
                 ✅ Évolution de tes scores semaine par semaine<br>
                 ✅ Tes matières fortes et faibles<br>
                 ✅ Comparaison avec les autres candidats
               </p>
               <button onclick="App.navigate('premium')" style="background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.85rem 1.5rem; border-radius:10px; font-weight:800; cursor:pointer; font-size:0.95rem">
-                ⭐ Voir les plans Premium
+                ⭐ Voir les formules
               </button>
             </div>
 
@@ -13297,147 +13491,213 @@ const App = {
   // GESTIONNAIRE FREEMIUM (limite gratuite quotidienne)
   // ===========================================
   FreemiumManager: {
-    // === V63.48 : Distinction anonyme / inscrit gratuit / Premium ===
-    LIMITE_QUOTIDIENNE_ANONYME: 10,       // Anonyme : 10 QCM/jour au total
-    LIMITE_QUOTIDIENNE_INSCRIT: 30,       // Inscrit gratuit : 30 QCM/jour
-    LIMITE_ACTUALITE_ANONYME: 5,          // Anonyme : 5 actualité/jour
-    LIMITE_ACTUALITE_INSCRIT: 10,         // Inscrit gratuit : 10 actualité/jour
-    // Rétrocompatibilité (anciennes constantes conservées, ne pas retirer sans audit)
-    LIMITE_QUOTIDIENNE_GRATUITE: 10,
-    LIMITE_ACTUALITE_GRATUIT: 5,
-    // Matières considérées comme "actualité" (la limite s'applique à ces matières)
+    // ==================================================================
+    // V64.18 : QUOTA JOURNALIER PAR NIVEAU (grille 2027)
+    // ==================================================================
+    //   Visiteur sans compte : 5   — puis création de compte obligatoire
+    //   Gratuit              : 10  — 30 pendant les 24 h qui suivent l'inscription
+    //   Essentiel            : 30
+    //   Complet              : 75
+    //   Premium              : « Illimité » affiché, plafond technique de 300
+    // Les chiffres vivent dans PremiumService.TIERS (data/premium.js) ; les
+    // valeurs ci-dessous ne servent que de repli si ce fichier manque.
+    //
+    // Ce qui compte comme un QCM fait : la PREMIÈRE réponse donnée à une
+    // question (inchangé). L'examen du dimanche a son propre circuit de
+    // réponses et n'est pas compté.
+    //
+    // Le sous-quota « Actualité » (5 visiteur / 10 inscrit) est désactivé :
+    // avec 5 et 10 QCM au total, il ne pouvait plus rien limiter, et la grille
+    // 2027 ne prévoit qu'un quota par formule.
+    // ==================================================================
+    REPLI_VISITEUR: 5,
+    REPLI_GRATUIT: 10,
     MATIERES_ACTUALITE: ['actualite', 'actualite_bf'],
 
-    // Clé localStorage pour le compteur
     STORAGE_KEY: 'bara_freemium_counter',
-    STORAGE_KEY_ACTU: 'bara_freemium_counter_actu',  // V63.11
+    STORAGE_KEY_ACTU: 'bara_freemium_counter_actu',  // V63.11 (conservé, inerte)
+    BONUS_KEY: 'bara_bonus_inscription',              // V64.18 : début des 24 h de bonus
+    ECART_KEY: 'bara_ecart_horloge',                  // V64.18 : dernier écart serveur connu
 
-    // === V63.48 : Détecter si l'utilisateur est inscrit (compte Firebase existant) ===
+    // === V64.18 : le candidat a-t-il un VRAI compte ? ===
+    //   La version précédente répondait oui pour tout le monde : `user` est
+    //   toujours un objet (même « Apprenant » non connecté), et chaque
+    //   visiteur reçoit de toute façon un compte Firebase anonyme au
+    //   démarrage. Résultat : le quota « anonyme » ne s'appliquait jamais, les
+    //   visiteurs avaient 30 QCM comme les inscrits.
     isRegistered(user) {
-      const u = user || (window.FirebaseAuth && window.FirebaseAuth.user);
-      return !!u;
+      const fb = window.FirebaseAuth && window.FirebaseAuth.user;
+      if (fb) return !fb.isAnonymous;
+      // Firebase pas encore prêt : on se fie à l'état local de connexion
+      const u = user || {};
+      return !!(u.isLoggedIn && (u.email || (u.uid && !String(u.uid).startsWith('demo_'))));
     },
 
-    // === V63.48 : Limite quotidienne totale applicable pour cet utilisateur ===
+    // === V64.18 : HORLOGE SERVEUR ===
+    //   Le jour se calculait sur l'horloge du téléphone : changer la date de
+    //   l'appareil remettait le quota à zéro. On lit désormais l'heure dans
+    //   l'en-tête « Date » que renvoie le serveur de l'application, au moyen
+    //   d'une requête HEAD — que le service worker laisse passer sans cache, et
+    //   qui ne coûte aucune lecture Firestore.
+    //   Ensuite, l'heure avance avec performance.now(), horloge monotone que
+    //   le changement de date du téléphone ne touche pas.
+    //   Hors ligne au démarrage : dernier écart connu avec le serveur, à
+    //   défaut l'horloge du téléphone. Le compteur reprend la vraie date à la
+    //   reconnexion.
+    _horloge: { serveurMs: null, perfMs: null },
+
+    async synchroniserHorloge() {
+      try {
+        const t0 = performance.now();
+        const rep = await fetch('./manifest.json?h=' + Date.now(), { method: 'HEAD', cache: 'no-store' });
+        const entete = rep.headers.get('Date');
+        if (!entete) return false;
+        const ms = new Date(entete).getTime();
+        if (isNaN(ms)) return false;
+        const t1 = performance.now();
+        this._horloge = { serveurMs: ms + (t1 - t0) / 2, perfMs: t1 };
+        try { localStorage.setItem(this.ECART_KEY, String(Math.round(this._horloge.serveurMs - Date.now()))); } catch (e) {}
+        return true;
+      } catch (e) {
+        return false;   // hors ligne : on garde le repli
+      }
+    },
+
+    maintenant() {
+      if (this._horloge.serveurMs) {
+        return this._horloge.serveurMs + (performance.now() - this._horloge.perfMs);
+      }
+      let ecart = 0;
+      try { ecart = parseInt(localStorage.getItem(this.ECART_KEY) || '0', 10) || 0; } catch (e) {}
+      return Date.now() + ecart;
+    },
+
+    // Jour courant AAAA-MM-JJ en temps universel = heure du Burkina (UTC+0) :
+    // la remise à zéro tombe à minuit, heure de Ouagadougou.
+    jourCle() {
+      return new Date(this.maintenant()).toISOString().split('T')[0];
+    },
+
+    // === V64.18 : bonus des 24 premières heures ===
+    //   Posé la première fois que le compteur voit un compte inscrit sur cet
+    //   appareil. Un compte inscrit avant cette version reçoit donc une
+    //   dernière journée à 30 QCM, qui adoucit le passage de 30 à 10.
+    debutBonus(user) {
+      if (!this.isRegistered(user)) return null;
+      try {
+        let t = parseInt(localStorage.getItem(this.BONUS_KEY) || '', 10);
+        if (isNaN(t)) {
+          t = Math.round(this.maintenant());
+          localStorage.setItem(this.BONUS_KEY, String(t));
+        }
+        return t;
+      } catch (e) {
+        return null;
+      }
+    },
+
+    bonusActif(user) {
+      const t = this.debutBonus(user);
+      return t !== null && (this.maintenant() - t) < 24 * 60 * 60 * 1000;
+    },
+
+    // === V64.18 : niveau qui fixe le quota ===
+    niveau(user) {
+      const PS = window.PremiumService;
+      if (PS && PS.isUserPremium(user)) return PS.getTier(user);
+      return this.isRegistered(user) ? 'gratuit' : 'visiteur';
+    },
+
     getLimit(user) {
-      return this.isRegistered(user) ? this.LIMITE_QUOTIDIENNE_INSCRIT : this.LIMITE_QUOTIDIENNE_ANONYME;
+      const PS = window.PremiumService;
+      const n = this.niveau(user);
+      const t = PS && PS.TIERS && PS.TIERS[n];
+      if (!t) return this.isRegistered(user) ? this.REPLI_GRATUIT : this.REPLI_VISITEUR;
+      if (t.quotaBonus && this.bonusActif(user)) return t.quotaBonus;
+      return t.quota;
     },
 
-    // === V63.48 : Limite actualité applicable pour cet utilisateur ===
+    /** Ce que voit le candidat : « 30 », ou « Illimité » pour Premium. */
+    getLimitAffichee(user) {
+      const PS = window.PremiumService;
+      const t = PS && PS.TIERS && PS.TIERS[this.niveau(user)];
+      return (t && t.quotaAffiche) || String(this.getLimit(user));
+    },
+
+    estIllimite(user) {
+      const PS = window.PremiumService;
+      const t = PS && PS.TIERS && PS.TIERS[this.niveau(user)];
+      return !!(t && t.quotaAffiche);
+    },
+
+    // V63.48 → V64.18 : sous-quota Actualité désactivé (voir en tête)
     getActuLimit(user) {
-      return this.isRegistered(user) ? this.LIMITE_ACTUALITE_INSCRIT : this.LIMITE_ACTUALITE_ANONYME;
+      return this.getLimit(user);
     },
 
-    // Récupérer l'état actuel
-    getState() {
+    _lireCompteur(cle) {
+      const today = this.jourCle();
       try {
-        const data = JSON.parse(localStorage.getItem(this.STORAGE_KEY) || '{}');
-        const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
-        // Si on est un nouveau jour, on reset
-        if (data.date !== today) {
-          return { date: today, count: 0 };
+        const data = JSON.parse(localStorage.getItem(cle) || '{}');
+        if (data.date === today) return data;
+        // V64.18 : compteur daté d'un jour FUTUR par rapport à l'heure serveur
+        //   (date du téléphone avancée hors ligne) : on garde le décompte au
+        //   lieu d'offrir un compteur neuf.
+        if (data.date && data.date > today && Number.isFinite(data.count)) {
+          return { date: today, count: data.count };
         }
-        return data;
+        return { date: today, count: 0 };
       } catch (e) {
-        return { date: new Date().toISOString().split('T')[0], count: 0 };
+        return { date: today, count: 0 };
       }
     },
 
-    // V63.11 : État spécifique actualité
-    getActuState() {
-      try {
-        const data = JSON.parse(localStorage.getItem(this.STORAGE_KEY_ACTU) || '{}');
-        const today = new Date().toISOString().split('T')[0];
-        if (data.date !== today) {
-          return { date: today, count: 0 };
-        }
-        return data;
-      } catch (e) {
-        return { date: new Date().toISOString().split('T')[0], count: 0 };
-      }
-    },
+    getState() { return this._lireCompteur(this.STORAGE_KEY); },
+    getActuState() { return this._lireCompteur(this.STORAGE_KEY_ACTU); },
 
-    // Combien de questions répondues aujourd'hui
-    getCountToday() {
-      return this.getState().count;
-    },
+    getCountToday() { return this.getState().count; },
+    getActuCountToday() { return this.getActuState().count; },
 
-    // V63.11 : Combien de questions actualité répondues aujourd'hui
-    getActuCountToday() {
-      return this.getActuState().count;
-    },
-
-    // Combien il en reste aujourd'hui (V63.48 : selon anonyme / inscrit)
     getRemaining(user) {
       return Math.max(0, this.getLimit(user) - this.getCountToday());
     },
 
-    // V63.11 : Combien de questions actualité restantes aujourd'hui (V63.48 : selon anonyme / inscrit)
     getActuRemaining(user) {
-      return Math.max(0, this.getActuLimit(user) - this.getActuCountToday());
+      return this.getRemaining(user);
     },
 
-    // V63.11 : Une matière est-elle considérée comme "actualité" ?
     isActualiteMatiere(matiere) {
       if (!matiere) return false;
       return this.MATIERES_ACTUALITE.includes(matiere);
     },
 
-    // L'utilisateur a-t-il atteint la limite ? (V63.48 : selon anonyme / inscrit)
+    // V64.18 : TOUS les niveaux ont un plafond, Premium compris (plafond
+    //   technique). Avant, un Premium sortait ici sans jamais être compté.
     hasReachedLimit(user) {
-      // Premium = pas de limite
-      if (window.PremiumService && window.PremiumService.isUserPremium(user)) {
-        return false;
-      }
       return this.getCountToday() >= this.getLimit(user);
     },
 
-    // V63.11 : L'utilisateur a-t-il atteint la limite actualité ? (V63.48 : selon anonyme / inscrit)
     hasReachedActuLimit(user) {
-      if (window.PremiumService && window.PremiumService.isUserPremium(user)) {
-        return false;
-      }
-      return this.getActuCountToday() >= this.getActuLimit(user);
+      return false;
     },
 
-    // V63.11 : Vérifier la limite pour une matière spécifique (générale OU actualité)
     canAnswerMatiere(user, matiere) {
-      if (window.PremiumService && window.PremiumService.isUserPremium(user)) {
-        return { allowed: true };
-      }
-      if (this.isActualiteMatiere(matiere) && this.hasReachedActuLimit(user)) {
-        return {
-          allowed: false,
-          reason: 'actualite_limit',
-          message: `Tu as atteint la limite de ${this.getActuLimit(user)} questions Actualité par jour. Reviens demain ou passe Premium pour un accès illimité.`
-        };
-      }
       if (this.hasReachedLimit(user)) {
         return {
           allowed: false,
-          reason: 'general_limit',
-          message: `Tu as atteint la limite de ${this.getLimit(user)} questions par jour.`
+          reason: this.niveau(user) === 'visiteur' ? 'visiteur_limit' : 'general_limit',
+          message: `Tu as atteint la limite de ${this.getLimitAffichee(user)} questions par jour.`
         };
       }
       return { allowed: true };
     },
 
-    // Incrémenter le compteur (1 question répondue)
+    // V64.18 : on compte pour tous les niveaux — c'est ce qui fait tenir le
+    //   plafond technique de Premium.
     incrementCount(user, matiere) {
-      // Premium = on ne compte pas
-      if (window.PremiumService && window.PremiumService.isUserPremium(user)) {
-        return;
-      }
       const state = this.getState();
       state.count++;
-      localStorage.setItem(this.STORAGE_KEY, JSON.stringify(state));
-
-      // V63.11 : Incrémenter aussi le compteur actualité si la matière en est
-      if (matiere && this.isActualiteMatiere(matiere)) {
-        const actuState = this.getActuState();
-        actuState.count++;
-        localStorage.setItem(this.STORAGE_KEY_ACTU, JSON.stringify(actuState));
-      }
+      try { localStorage.setItem(this.STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
     },
 
     // Réinitialiser (debug/admin)
@@ -13526,6 +13786,12 @@ const App = {
 
     this.load();
     this.render();
+
+    // V64.18 : heure du serveur pour le quota journalier (voir FreemiumManager).
+    //   Non bloquant : tant que la réponse n'est pas arrivée, le dernier écart
+    //   connu sert de repli. Resynchronisé au retour en ligne.
+    this.FreemiumManager.synchroniserHorloge();
+    window.addEventListener('online', () => this.FreemiumManager.synchroniserHorloge());
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
