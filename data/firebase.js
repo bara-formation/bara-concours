@@ -713,6 +713,74 @@ const FirebaseAuth = {
     return true;
   },
 
+  /**
+   * V64.18 : l'admin change la formule d'un compte.
+   *
+   *   Les boutons « Activer Premium », « Prolonger » et « Révoquer » de la
+   *   liste des utilisateurs n'agissaient que sur les données de démonstration
+   *   stockées dans le navigateur : sur un vrai compte, ils ne faisaient rien,
+   *   sans message d'erreur. Cette fonction écrit dans le vrai profil.
+   *
+   *   `premiumAdminAt` trace l'intervention. Les règles Firestore autorisent
+   *   l'admin à écrire les champs de formule que le candidat, lui, ne peut pas
+   *   toucher.
+   *   updateDoc et non setDoc : aucun document fantôme pour un identifiant
+   *   qui n'existerait pas.
+   *
+   * @param {string} uid
+   * @param {Object} statut - { isPremium, premiumPlan, premiumExpiresAt, premiumActivatedAt }
+   */
+  async adminSetFormule(uid, statut) {
+    if (!this.isFirebaseReady || !this.db) throw new Error('Firebase non initialisé');
+    if (!uid) throw new Error('Identifiant utilisateur manquant');
+    const ref = this._fbFns.doc(this.db, 'users', uid);
+    await this._fbFns.updateDoc(ref, {
+      isPremium: !!statut.isPremium,
+      premiumPlan: statut.premiumPlan || null,
+      premiumExpiresAt: statut.premiumExpiresAt || null,
+      premiumActivatedAt: statut.premiumActivatedAt || null,
+      premiumAdminAt: Date.now()
+    });
+    return true;
+  },
+
+  /**
+   * V64.18 : suivi personnalisé Premium — l'admin note qu'il a envoyé le
+   *   bilan du mois à ce candidat. Sert à la liste « Suivi » de l'admin, pour
+   *   qu'aucun abonné Premium ne soit oublié.
+   */
+  async adminSetDernierBilan(uid, quand) {
+    if (!this.isFirebaseReady || !this.db) throw new Error('Firebase non initialisé');
+    if (!uid) throw new Error('Identifiant utilisateur manquant');
+    const ref = this._fbFns.doc(this.db, 'users', uid);
+    await this._fbFns.updateDoc(ref, { dernierBilanAt: quand || Date.now() });
+    return true;
+  },
+
+  /**
+   * V64.18 : réglages de saison (date de fin, Sprint, places Premium).
+   *   Stockés dans app_texts/config_saison, que l'application lit déjà avec
+   *   les textes éditables : aucune lecture de plus côté candidats.
+   *   Écriture réservée à l'admin par les règles de app_texts.
+   */
+  async lireConfigSaison() {
+    if (!this.isFirebaseReady || !this.db) return null;
+    const ref = this._fbFns.doc(this.db, 'app_texts', 'config_saison');
+    const snap = await this._fbFns.getDoc(ref);
+    return snap.exists() ? (snap.data().value || null) : null;
+  },
+
+  async ecrireConfigSaison(valeur) {
+    if (!this.isFirebaseReady || !this.db) throw new Error('Firebase non initialisé');
+    const ref = this._fbFns.doc(this.db, 'app_texts', 'config_saison');
+    await this._fbFns.setDoc(ref, {
+      value: valeur,
+      updatedAt: this._fbFns.serverTimestamp(),
+      updatedBy: (this.user && (this.user.email || this.user.uid)) || 'admin'
+    });
+    return true;
+  },
+
   // ====================================================================
   // V56.1 : STUBS DE COMPATIBILITÉ ASCENDANTE
   // ====================================================================

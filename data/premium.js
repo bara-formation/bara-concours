@@ -3,7 +3,149 @@
 
 const PremiumService = {
   // === PLANS DISPONIBLES ===
+  //
+  // V64.18 : GRILLE 2027 — quatre formules, un niveau par formule.
+  //   Chaque plan porte désormais un `tier` (niveau) : c'est lui, et non plus
+  //   un simple oui/non « Premium », qui décide des droits du compte.
+  //   Le niveau se déduit de `premiumPlan`, champ que les règles Firestore
+  //   interdisent déjà au candidat de modifier : aucune règle à changer pour
+  //   empêcher quelqu'un de se donner lui-même une formule supérieure.
+  //
+  //   `finSaison: true` : l'accès court jusqu'à la date de fin de saison
+  //   (PremiumService.SAISON.fin), la même pour tous, quelle que soit la date
+  //   d'achat. Modifier cette date déplace d'un coup tous ces abonnements.
   PLANS: {
+    essentiel: {
+      id: 'essentiel',
+      name: 'Essentiel',
+      price: 5000,
+      tier: 'essentiel',
+      finSaison: true,
+      duration: null,
+      durationLabel: 'jusqu\'aux compositions 2027',
+      pricePerDay: null,
+      icon: '📘',
+      tagColor: '#1e40af',
+      tagBg: '#dbeafe',
+      popular: false,
+      hidden: false
+    },
+    complet: {
+      id: 'complet',
+      name: 'Complet',
+      price: 10000,
+      tier: 'complet',
+      finSaison: true,
+      duration: null,
+      durationLabel: 'jusqu\'aux compositions 2027',
+      pricePerDay: null,
+      icon: '🎯',
+      tag: 'RECOMMANDÉ',
+      tagColor: '#ffffff',
+      tagBg: '#15803d',
+      popular: true,          // badge « RECOMMANDÉ » + présélection
+      hidden: false
+    },
+    premium: {
+      id: 'premium',
+      name: 'Premium',
+      price: 15000,
+      tier: 'premium',
+      finSaison: true,
+      duration: null,
+      durationLabel: 'jusqu\'aux compositions 2027',
+      pricePerDay: null,
+      icon: '👑',
+      tagColor: '#854d0e',
+      tagBg: '#fef3c7',
+      popular: false,
+      placesLimitees: true,   // V64.18 : nombre de places plafonné (SAISON.placesPremium)
+      hidden: false
+    },
+    // V64.18 : formule de fin de saison, codée mais MASQUÉE.
+    //   Elle n'apparaît sur l'écran des tarifs que si SAISON.sprintVisible
+    //   vaut true — réglage modifiable depuis l'admin, sans mise à jour de
+    //   l'application. Mêmes droits que Complet, prix réduit, pour les
+    //   candidats qui arrivent dans les dernières semaines.
+    sprint: {
+      id: 'sprint',
+      name: 'Sprint',
+      price: 6000,
+      tier: 'complet',
+      finSaison: true,
+      sprint: true,
+      duration: null,
+      durationLabel: 'jusqu\'aux compositions 2027',
+      pricePerDay: null,
+      icon: '⚡',
+      tag: 'Dernière ligne droite',
+      tagColor: '#7c2d12',
+      tagBg: '#fed7aa',
+      popular: false,
+      hidden: true            // l'affichage est piloté par SAISON.sprintVisible
+    },
+
+    // V64.18 : MONTÉES DE FORMULE.
+    //   Le candidat paie uniquement la différence, la date de fin ne change
+    //   pas. Ce sont des plans à part entière pour deux raisons :
+    //     - le code d'activation est la source de vérité du statut payant
+    //       (les règles Firestore empêchent le candidat d'écrire son statut),
+    //       une montée doit donc exister sous forme de code ;
+    //     - les statistiques de codes comptent 5 000 F pour une montée, et
+    //       non le prix plein de la formule visée.
+    //   `depuis` : plans à partir desquels la montée est autorisée. Un code de
+    //   montée saisi depuis un autre plan est refusé AVANT d'être consommé.
+    //   Le Sprint n'y figure pas : c'est une offre de fin de saison, sa montée
+    //   vers Premium coûterait moins cher que Premium acheté directement.
+    up_ess_comp: {
+      id: 'up_ess_comp',
+      name: 'Montée Essentiel → Complet',
+      price: 5000,
+      tier: 'complet',
+      finSaison: true,
+      upgrade: true,
+      depuis: ['essentiel'],
+      duration: null,
+      durationLabel: 'même date de fin',
+      icon: '⬆️',
+      hidden: true
+    },
+    up_comp_prem: {
+      id: 'up_comp_prem',
+      name: 'Montée Complet → Premium',
+      price: 5000,
+      tier: 'premium',
+      finSaison: true,
+      upgrade: true,
+      depuis: ['complet', 'up_ess_comp'],
+      placesLimitees: true,
+      duration: null,
+      durationLabel: 'même date de fin',
+      icon: '⬆️',
+      hidden: true
+    },
+    up_ess_prem: {
+      id: 'up_ess_prem',
+      name: 'Montée Essentiel → Premium',
+      price: 10000,
+      tier: 'premium',
+      finSaison: true,
+      upgrade: true,
+      depuis: ['essentiel'],
+      placesLimitees: true,
+      duration: null,
+      durationLabel: 'même date de fin',
+      icon: '⬆️',
+      hidden: true
+    },
+
+    // ------------------------------------------------------------------
+    // ANCIENNES FORMULES — retirées de la vente, toujours reconnues.
+    // V64.18 : `tier: 'premium'` — elles donnaient accès à tout ; les abonnés
+    //   « conservent leur accès jusqu'à leur date d'expiration actuelle »
+    //   (cahier des charges, section 4), donc tous les droits, avec LEUR date
+    //   d'expiration à eux et non la date de fin de saison.
+    // ------------------------------------------------------------------
     // V64.16 : Hebdomadaire et Mensuel retires de la vente.
     //   La grille 2027 ne comporte que des formules annuelles, qui courent
     //   toutes jusqu'a la fin des compositions. Tant que ces deux plans
@@ -15,6 +157,8 @@ const PremiumService = {
     //   s'affiche dans l'admin, la date d'expiration reste calculee).
     weekly: {
       id: 'weekly',
+      tier: 'premium',
+      legacy: true,
       name: 'Hebdomadaire',
       price: 1000,
       duration: 7,
@@ -29,6 +173,8 @@ const PremiumService = {
     },
     monthly: {
       id: 'monthly',
+      tier: 'premium',
+      legacy: true,
       name: 'Mensuel',
       price: 2000,
       duration: 30,
@@ -45,6 +191,8 @@ const PremiumService = {
     // Remplace l'ancien yearly (retiré pour la saison concours 2026)
     session2026: {
       id: 'session2026',
+      tier: 'premium',
+      legacy: true,
       name: 'SESSION 2026 + ACC. FINAL',
       price: 2500,
       duration: null,  // V60 : pas une durée mais une date fixe
@@ -76,8 +224,14 @@ const PremiumService = {
     //   n'est pas publié. On applique donc une durée d'un an. Dès que les
     //   dates seront connues, remplacer `duration` par `expiresAt` — le
     //   moteur d'activation gère déjà les deux cas.
+    // V64.18 : retiré de la vente — c'est « l'ancien forfait annuel unique
+    //   (15 000 F) » que la grille 2027 supprime (cahier des charges, section 4).
+    //   Les candidats qui l'ont acheté passent au niveau Premium, sur leur
+    //   propre date d'expiration.
     session2027: {
       id: 'session2027',
+      tier: 'premium',
+      legacy: true,
       name: 'SESSION 2027 + ACC. FINAL',
       price: 15000,
       duration: 365,
@@ -87,9 +241,9 @@ const PremiumService = {
       tag: 'Le plus complet 🔥',
       tagColor: '#7c2d12',
       tagBg: '#fed7aa',
-      popular: true,
+      popular: false,
       savings: 9000,
-      hidden: false
+      hidden: true
     },
 
     // V60 : yearly conservé pour compatibilité descendante (anciens codes BARA-ANNEE-XXXX)
@@ -97,6 +251,8 @@ const PremiumService = {
     //   en cours et les codes déjà distribués restent valides.
     yearly: {
       id: 'yearly',
+      tier: 'premium',
+      legacy: true,
       name: 'Annuel',
       price: 10000,
       duration: 365,
@@ -172,22 +328,344 @@ const PremiumService = {
 
   // === API PUBLIQUES ===
 
+  // ==================================================================
+  // V64.18 : SAISON 2027 — réglages communs à toutes les formules
+  // ==================================================================
+  //
+  // Valeurs PAR DÉFAUT. Elles sont remplacées par le document
+  // `app_texts/config_saison` que l'admin modifie depuis le tableau de bord
+  // (rubrique « Saison 2027 ») : changer la date de fin, afficher le Sprint ou
+  // ajuster les places Premium ne demande donc aucune mise à jour de l'app.
+  // Ce document est lu avec les textes éditables, déjà chargés au démarrage :
+  // aucune lecture Firestore supplémentaire.
+  //
+  // DATE DE FIN PROVISOIRE, VOLONTAIREMENT TARDIVE.
+  //   Une date trop tôt couperait l'accès de candidats qui ont payé ; une date
+  //   trop tard leur offre quelques semaines de plus. Tant que `finConfirmee`
+  //   vaut false, l'application n'affiche jamais cette date aux candidats :
+  //   elle écrit « jusqu'aux compositions 2027 ».
+  SAISON: {
+    annee: 2027,
+    fin: '2027-10-31T23:59:59Z',
+    finConfirmee: false,
+    sprintVisible: false,
+    placesPremium: 100,
+    premiumComplet: false   // posé par l'admin quand le plafond est atteint
+  },
+  CONFIG_KEY: 'config_saison',
+
+  /** Les réglages de saison en vigueur : défauts + surcharge distante. */
+  getSaison() {
+    const s = Object.assign({}, this.SAISON);
+    try {
+      let distant = window.TextsFirestore && window.TextsFirestore._textsCache
+        ? window.TextsFirestore._textsCache[this.CONFIG_KEY] : null;
+      if (typeof distant === 'string') distant = JSON.parse(distant);
+      if (distant && typeof distant === 'object') {
+        if (distant.fin && !isNaN(new Date(distant.fin).getTime())) s.fin = distant.fin;
+        if (typeof distant.finConfirmee === 'boolean') s.finConfirmee = distant.finConfirmee;
+        if (typeof distant.sprintVisible === 'boolean') s.sprintVisible = distant.sprintVisible;
+        if (Number.isFinite(distant.placesPremium) && distant.placesPremium >= 0) s.placesPremium = distant.placesPremium;
+        if (typeof distant.premiumComplet === 'boolean') s.premiumComplet = distant.premiumComplet;
+      }
+    } catch (e) { /* réglage illisible : on garde les défauts */ }
+    return s;
+  },
+
+  finSaisonMs() {
+    return new Date(this.getSaison().fin).getTime();
+  },
+
+  /** « jusqu'aux compositions 2027 » tant que la date n'est pas confirmée. */
+  libelleFinSaison() {
+    const s = this.getSaison();
+    if (!s.finConfirmee) return 'jusqu\'aux compositions ' + s.annee;
+    return 'jusqu\'au ' + new Date(s.fin).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+  },
+
+  // ==================================================================
+  // V64.18 : NIVEAUX ET DROITS
+  // ==================================================================
+  //
+  // quota       : QCM par jour (première réponse à une question)
+  // quotaBonus  : quota des 24 premières heures après la création du compte
+  // quotaAffiche: ce que voit le candidat, quand il diffère du vrai plafond.
+  //   Premium affiche « Illimité » mais garde un plafond technique de 300 :
+  //   personne ne l'atteint honnêtement, et il protège le quota Firestore
+  //   partagé contre un compte prêté à tout un groupe, ou un bug.
+  TIERS: {
+    visiteur:  { rang: -1, nom: 'Visiteur',  quota: 5 },
+    gratuit:   { rang: 0,  nom: 'Gratuit',   quota: 10, quotaBonus: 30 },
+    essentiel: { rang: 1,  nom: 'Essentiel', quota: 30 },
+    complet:   { rang: 2,  nom: 'Complet',   quota: 75 },
+    premium:   { rang: 3,  nom: 'Premium',   quota: 300, quotaAffiche: 'Illimité' }
+  },
+
+  // Droit → niveau minimum. Une seule table : modifier une ligne ici change
+  // le droit partout dans l'application.
+  //   Les trois premières lignes ne figurent pas dans la grille du cahier des
+  //   charges ; elles reprennent ce que le Premium binaire donnait jusqu'ici,
+  //   au niveau payant le plus bas.
+  DROITS: {
+    modeExamen:      'essentiel',  // sujets chronométrés par matière
+    correctionHebdo: 'essentiel',  // correction détaillée de l'examen du dimanche
+    classement:      'essentiel',  // classement national de l'examen du dimanche
+    archivesAF:      'essentiel',  // Accompagnement Final 2025 et 2026 (sessions + annales)
+    statsAvancees:   'complet',    // historique et évolution des examens du dimanche
+    af2027:          'complet',    // Accompagnement Final 2027
+    suiviPerso:      'premium'     // bilan mensuel personnalisé
+  },
+
+  // Libellés présentés aux candidats, dans l'ordre d'affichage.
+  LIBELLES_DROITS: {
+    modeExamen:      'Mode examen chronométré, dans les conditions du concours',
+    correctionHebdo: 'Correction détaillée de l\'examen du dimanche',
+    classement:      'Classement national de l\'examen du dimanche',
+    archivesAF:      'Accompagnement Final 2025 et 2026 : les questions tombées',
+    statsAvancees:   'Statistiques avancées et historique de tes examens',
+    af2027:          'Accompagnement Final 2027, en direct pendant les épreuves',
+    suiviPerso:      'Suivi personnalisé : un bilan et des conseils chaque mois'
+  },
+
+  /** Ligne de quota présentée aux candidats. */
+  libelleQuota(tier) {
+    const t = this.TIERS[tier];
+    if (!t) return '';
+    return t.quotaAffiche === 'Illimité' ? 'Questions illimitées' : t.quota + ' questions par jour';
+  },
+
+  /**
+   * Avantages d'un niveau.
+   * @param {string} tier
+   * @param {boolean} seulementNouveaux - true : seulement ce qui s'ajoute au
+   *   niveau payant inférieur (pour « Tout Essentiel, plus : … »)
+   * @returns {{base: string|null, lignes: string[]}}
+   */
+  avantages(tier, seulementNouveaux) {
+    const r = this.rang(tier);
+    const inferieur = Object.keys(this.TIERS).find(k => this.TIERS[k].rang === r - 1 && r - 1 >= 1);
+    const delta = seulementNouveaux && inferieur;
+    const lignes = [this.libelleQuota(tier)];
+    Object.keys(this.LIBELLES_DROITS).forEach(d => {
+      const min = this.rang(this.DROITS[d]);
+      if (min > r) return;
+      if (delta && min <= r - 1) return;
+      lignes.push(this.LIBELLES_DROITS[d]);
+    });
+    return { base: delta ? this.TIERS[inferieur].nom : null, lignes };
+  },
+
+  rang(tier) {
+    return (this.TIERS[tier] || this.TIERS.gratuit).rang;
+  },
+
+  /**
+   * Date d'expiration EFFECTIVE d'un statut payant (en ms), ou 0.
+   *   Formules de saison : la date de fin de saison en vigueur, quelle que
+   *   soit la date enregistrée — c'est ce qui permet de déplacer tous les
+   *   abonnements d'un coup si le calendrier des compositions change.
+   *   Anciennes formules : leur propre date d'expiration.
+   */
+  expirationEffective(user) {
+    if (!user || !user.isPremium) return 0;
+    const plan = this.PLANS[user.premiumPlan];
+    if (plan && plan.finSaison) return this.finSaisonMs();
+    if (!user.premiumExpiresAt) return 0;
+    const t = new Date(user.premiumExpiresAt).getTime();
+    return isNaN(t) ? 0 : t;
+  },
+
+  /** Le compte a-t-il une formule payante en cours ? (toutes formules) */
   isUserPremium(user) {
-    if (!user || !user.isPremium) return false;
-    if (!user.premiumExpiresAt) return false;
-    return new Date(user.premiumExpiresAt).getTime() > Date.now();
+    return this.expirationEffective(user) > Date.now();
+  },
+
+  /**
+   * Le niveau du compte : 'gratuit', 'essentiel', 'complet' ou 'premium'.
+   *   (Le niveau 'visiteur' — pas de compte — est décidé par le compteur de
+   *   quota, qui sait si le candidat s'est inscrit.)
+   *   Plan inconnu mais statut payant valide : niveau Premium. Prudence
+   *   volontaire — on ne retire pas un accès payé à cause d'un plan que
+   *   cette version du fichier ne connaîtrait pas.
+   */
+  getTier(user) {
+    if (!this.isUserPremium(user)) return 'gratuit';
+    const plan = this.PLANS[user.premiumPlan];
+    return (plan && plan.tier) || 'premium';
+  },
+
+  getTierName(user) {
+    return this.TIERS[this.getTier(user)].nom;
+  },
+
+  /** Le compte a-t-il ce droit ? (voir la table DROITS) */
+  hasRight(user, droit) {
+    const minimum = this.DROITS[droit];
+    if (!minimum) return false;
+    return this.rang(this.getTier(user)) >= this.rang(minimum);
+  },
+
+  /** Le niveau minimum qui ouvre un droit, avec son nom (pour les cadenas). */
+  tierPour(droit) {
+    const t = this.DROITS[droit] || 'premium';
+    return { id: t, nom: this.TIERS[t].nom };
   },
 
   daysRemaining(user) {
-    if (!this.isUserPremium(user)) return 0;
-    const ms = new Date(user.premiumExpiresAt).getTime() - Date.now();
-    return Math.ceil(ms / (1000 * 60 * 60 * 24));
+    const fin = this.expirationEffective(user);
+    if (fin <= Date.now()) return 0;
+    return Math.ceil((fin - Date.now()) / (1000 * 60 * 60 * 24));
   },
 
   formatExpiry(user) {
-    if (!user.premiumExpiresAt) return '';
+    // V64.18 : formules de saison — la date n'est montrée que si l'admin l'a
+    //   confirmée ; sinon « la fin des compositions 2027 ».
+    const plan = user && this.PLANS[user.premiumPlan];
+    if (plan && plan.finSaison) {
+      const s = this.getSaison();
+      if (!s.finConfirmee) return 'la fin des compositions ' + s.annee;
+      return new Date(s.fin).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+    }
+    if (!user || !user.premiumExpiresAt) return '';
     const d = new Date(user.premiumExpiresAt);
     return d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+  },
+
+  /** Les formules proposées à l'achat, dans l'ordre d'affichage. */
+  plansEnVente() {
+    const saison = this.getSaison();
+    return Object.values(this.PLANS).filter(p => {
+      if (p.upgrade || p.legacy || p.adminOnly) return false;
+      if (p.sprint) return saison.sprintVisible === true;
+      return !p.hidden;
+    });
+  },
+
+  /** Les places Premium sont-elles épuisées ? (réglé par l'admin) */
+  premiumEpuise() {
+    return this.getSaison().premiumComplet === true;
+  },
+
+  /**
+   * Les montées de formule accessibles à ce compte, de la moins chère à la
+   * plus chère. Vide si le compte n'a pas de formule de saison en cours.
+   */
+  monteesDisponibles(user) {
+    if (!this.isUserPremium(user)) return [];
+    const actuel = user.premiumPlan;
+    return Object.values(this.PLANS)
+      .filter(p => p.upgrade && (p.depuis || []).includes(actuel))
+      .filter(p => !(p.placesLimitees && this.premiumEpuise()))
+      .sort((a, b) => a.price - b.price);
+  },
+
+  /**
+   * Ce plan peut-il être activé sur ce compte ? À appeler AVANT de consommer
+   * un code : un code refusé ici reste utilisable.
+   * @returns {{ok: boolean, raison?: string}}
+   */
+  peutActiver(user, planId) {
+    const plan = this.PLANS[planId];
+    if (!plan) return { ok: false, raison: 'Ce code correspond à une formule inconnue. Mets l\'application à jour, puis réessaie.' };
+
+    const tierActuel = this.getTier(user);
+    if (plan.upgrade) {
+      if (!this.isUserPremium(user) || !(plan.depuis || []).includes(user.premiumPlan)) {
+        const depuis = (plan.depuis || []).map(id => (this.PLANS[id] || {}).name || id).join(' ou ');
+        return { ok: false, raison: 'Ce code est une montée de formule depuis ' + depuis + '. Ta formule actuelle est ' + this.TIERS[tierActuel].nom + '. Ton code n\'a pas été utilisé.' };
+      }
+      return { ok: true };
+    }
+    // Pas de passage à une formule inférieure ou égale (cahier des charges,
+    // section 3) : le code serait consommé pour rien.
+    if (this.isUserPremium(user) && this.rang(plan.tier || 'premium') <= this.rang(tierActuel)) {
+      return { ok: false, raison: 'Tu as déjà la formule ' + this.TIERS[tierActuel].nom + ', ce code ne t\'apporterait rien. Il n\'a pas été utilisé : garde-le ou contacte Bara Formation.' };
+    }
+    return { ok: true };
+  },
+
+  /**
+   * Le meilleur de deux statuts payants : formule valide d'abord, puis niveau
+   * le plus élevé, puis expiration la plus tardive.
+   *   Sert à combiner le statut écrit par l'admin et celui reconstitué depuis
+   *   les codes, sans que l'un efface l'autre.
+   */
+  fusionnerStatut(a, b) {
+    const valide = x => this.expirationEffective(x) > Date.now();
+    if (!a || !a.isPremium) return b || a;
+    if (!b || !b.isPremium) return a;
+    if (valide(a) !== valide(b)) return valide(a) ? a : b;
+    const ra = this.rang(this.getTierBrut(a)), rb = this.rang(this.getTierBrut(b));
+    if (ra !== rb) return ra > rb ? a : b;
+    return this.expirationEffective(a) >= this.expirationEffective(b) ? a : b;
+  },
+
+  /** Le niveau d'un statut, qu'il soit expiré ou non (pour comparer). */
+  getTierBrut(user) {
+    const plan = user && this.PLANS[user.premiumPlan];
+    return (plan && plan.tier) || 'premium';
+  },
+
+  /**
+   * Reconstitue un statut payant à partir des codes utilisés par un compte.
+   * Partagé par l'application et le tableau de bord admin.
+   *
+   *   Anciennes formules à durée : elles se cumulent, comme avant (un mois
+   *   activé avec dix jours restants donne quarante jours), à partir de la
+   *   date RÉELLE d'utilisation de chaque code.
+   *   Formules de saison : elles courent jusqu'à la fin de saison ; on garde
+   *   la plus élevée (une montée de formule élève le niveau).
+   *   Au final : parmi ces deux candidats, celui qui est valide et de plus
+   *   haut niveau.
+   *
+   * @returns {Object|null} { isPremium, premiumPlan, premiumExpiresAt,
+   *   premiumActivatedAt, expiration } ou null si aucun code exploitable
+   */
+  rejouerCodes(codes) {
+    const tries = (codes || []).slice().sort((a, b) => (a.usedAt || 0) - (b.usedAt || 0));
+    let chaineExp = 0, chainePlan = null;
+    let saisonPlan = null;
+    let premiere = null;
+
+    for (const c of tries) {
+      const plan = this.PLANS[c.planId];
+      const utiliseLe = c.usedAt || 0;
+      if (!plan || !utiliseLe) continue;
+      if (premiere === null) premiere = utiliseLe;
+
+      if (plan.finSaison) {
+        if (!saisonPlan || this.rang(plan.tier) >= this.rang(this.PLANS[saisonPlan].tier)) saisonPlan = plan.id;
+      } else if (plan.expiresAt) {
+        chaineExp = Math.max(chaineExp, plan.expiresAt);
+        chainePlan = plan.id;
+      } else if (plan.duration) {
+        const depart = chaineExp > utiliseLe ? chaineExp : utiliseLe;
+        chaineExp = depart + plan.duration * 24 * 60 * 60 * 1000;
+        chainePlan = plan.id;
+      }
+    }
+
+    const candidats = [];
+    if (chainePlan) candidats.push({ plan: chainePlan, exp: chaineExp });
+    if (saisonPlan) candidats.push({ plan: saisonPlan, exp: this.finSaisonMs() });
+    if (candidats.length === 0) return null;
+
+    const maintenant = Date.now();
+    candidats.sort((x, y) => {
+      const vx = x.exp > maintenant, vy = y.exp > maintenant;
+      if (vx !== vy) return vx ? -1 : 1;
+      const rx = this.rang(this.PLANS[x.plan].tier || 'premium'), ry = this.rang(this.PLANS[y.plan].tier || 'premium');
+      if (rx !== ry) return ry - rx;
+      return y.exp - x.exp;
+    });
+    const g = candidats[0];
+    return {
+      isPremium: true,
+      premiumPlan: g.plan,
+      premiumExpiresAt: new Date(g.exp).toISOString(),
+      premiumActivatedAt: new Date(premiere || maintenant).toISOString(),
+      expiration: g.exp
+    };
   },
 
   formatPrice(amount) {
@@ -207,16 +685,18 @@ const PremiumService = {
     const planObj = this.PLANS[plan];
     const opObj = this.OPERATORS[operator];
 
+    // V64.18 : « formule » au lieu de « Premium », qui désigne désormais une
+    //   formule précise. Pour une montée, le nom du plan dit d'où à où.
     const text = `Bonjour Bara Formation,
-J'ai effectué un paiement Premium :
+J'ai effectué un paiement :
 
 📋 Référence : ${reference}
-📦 Plan : ${planObj.name} (${this.formatPrice(planObj.price)})
+📦 Formule : ${planObj.name} (${this.formatPrice(planObj.price)})
 💳 Opérateur : ${opObj.name}
 📱 Mon numéro : ${userPhone || '(à renseigner)'}
 👤 Mon nom : ${userName || '(à renseigner)'}
 
-Merci de bien vouloir activer mon abonnement Premium. 🙏`;
+Merci de bien vouloir m'envoyer mon code d'activation. 🙏`;
 
     return encodeURIComponent(text);
   },
@@ -337,6 +817,18 @@ Merci de bien vouloir activer mon abonnement Premium. 🙏`;
     const now = Date.now();
     let newExpiry;
 
+    // V64.18 : formules de saison (et montées) : la fin de saison, sans cumul.
+    //   L'expiration enregistrée n'est qu'indicative — c'est la date de fin de
+    //   saison en vigueur qui fait foi (voir expirationEffective).
+    if (plan.finSaison) {
+      return {
+        isPremium: true,
+        premiumPlan: planId,
+        premiumExpiresAt: new Date(this.finSaisonMs()).toISOString(),
+        premiumActivatedAt: (plan.upgrade && user && user.premiumActivatedAt) ? user.premiumActivatedAt : new Date().toISOString()
+      };
+    }
+
     // V60 : Si le plan a une date fixe (ex: session2026 → 15 août 2026), on l'utilise directement
     if (plan.expiresAt) {
       // Date fixe : ne pas cumuler, on fixe la date butoir absolue
@@ -381,7 +873,24 @@ const ActivationCodes = {
     monthly: 'MOIS',
     yearly: 'ANNEE',
     session2026: 'SESSION',   // V60 : BARA-SESSION-XXXX
-    session2027: 'S2027'      // V63.97 : BARA-S2027-XXXX
+    session2027: 'S2027',     // V63.97 : BARA-S2027-XXXX
+    // V64.18 : grille 2027
+    essentiel: 'ESS',         // BARA-ESS-XXXXXX
+    complet: 'COMP',          // BARA-COMP-XXXXXX
+    premium: 'PREM',          // BARA-PREM-XXXXXX
+    sprint: 'SPRINT',         // BARA-SPRINT-XXXXXX
+    up_ess_comp: 'UPEC',      // montée Essentiel → Complet
+    up_comp_prem: 'UPCP',     // montée Complet → Premium
+    up_ess_prem: 'UPEP'       // montée Essentiel → Premium
+  },
+
+  // V64.18 : le format accepté est construit à partir des préfixes ci-dessus.
+  //   Il était écrit en dur dans validateCode : chaque nouveau plan obligeait
+  //   à penser à le modifier, sinon ses codes étaient refusés comme
+  //   « Format invalide » alors qu'ils existaient bel et bien.
+  formatCodeValide(code) {
+    const prefixes = Object.values(this.PLAN_PREFIXES).join('|');
+    return new RegExp('^BARA-(' + prefixes + ')-[A-Z0-9]{4,8}$').test(code);
   },
 
   // ====================================================================
@@ -537,8 +1046,8 @@ const ActivationCodes = {
 
     // V64.00 : accepte les anciens codes (4 caractères), les nouveaux (6) et
     //   le préfixe S2027 introduit avec le plan Session 2027.
-    if (!/^BARA-(SEM|MOIS|ANNEE|SESSION|S2027)-[A-Z0-9]{4,8}$/.test(code)) {
-      return { valid: false, reason: 'Format invalide. Exemple : BARA-S2027-A3F7K9' };
+    if (!this.formatCodeValide(code)) {
+      return { valid: false, reason: 'Format invalide. Exemple : BARA-COMP-A3F7K9' };
     }
 
     // V63.62 : Détecter l'état réseau pour donner un message d'erreur exact
@@ -620,45 +1129,19 @@ const ActivationCodes = {
 
       const codes = [];
       snap.forEach(d => codes.push(d.data()));
-      codes.sort((a, b) => (a.usedAt || 0) - (b.usedAt || 0));
 
-      // V63.79 : on rejoue chaque code A PARTIR DE SA DATE REELLE d'utilisation.
-      //   La version precedente repartait de "maintenant", ce qui aurait
-      //   redonne un abonnement complet a quelqu'un dont le code datait de
-      //   plusieurs mois — donc du Premium offert par erreur.
-      let expiration = 0;      // en millisecondes
-      let dernierPlan = null;
-      let premiereActivation = null;
-
-      for (const c of codes) {
-        const plan = window.PremiumService.PLANS[c.planId];
-        if (!plan) continue;
-        const utiliseLe = c.usedAt || 0;
-        if (!utiliseLe) continue;
-        if (premiereActivation === null) premiereActivation = utiliseLe;
-
-        if (plan.expiresAt) {
-          // Plan a date butoir fixe (ex. session2026)
-          expiration = Math.max(expiration, plan.expiresAt);
-        } else if (plan.duration) {
-          // Plan a duree : cumule si l'abonnement courait encore, sinon repart
-          // de la date d'utilisation du code.
-          const depart = expiration > utiliseLe ? expiration : utiliseLe;
-          expiration = depart + plan.duration * 24 * 60 * 60 * 1000;
-        } else {
-          continue;
-        }
-        dernierPlan = c.planId;
-      }
-
-      if (!expiration) return null;
-      if (expiration <= Date.now()) return null;   // deja perime : rien a restaurer
-
+      // V64.18 : rejeu confié au moteur partagé avec l'admin
+      //   (PremiumService.rejouerCodes), qui connaît les formules de saison et
+      //   les montées de formule. Les deux copies du calcul — ici et dans
+      //   admin.html — pouvaient sinon diverger à la prochaine évolution.
+      const r = window.PremiumService.rejouerCodes(codes);
+      if (!r) return null;
+      if (r.expiration <= Date.now()) return null;   // deja perime : rien a restaurer
       return {
         isPremium: true,
-        premiumPlan: dernierPlan,
-        premiumExpiresAt: new Date(expiration).toISOString(),
-        premiumActivatedAt: new Date(premiereActivation || Date.now()).toISOString()
+        premiumPlan: r.premiumPlan,
+        premiumExpiresAt: r.premiumExpiresAt,
+        premiumActivatedAt: r.premiumActivatedAt
       };
     } catch (e) {
       console.error('[V63.79] Recuperation Premium impossible :', e);
@@ -743,8 +1226,10 @@ const ActivationCodes = {
     const used = all.filter(c => c.used);
     const unused = all.filter(c => !c.used);
 
-    const byPlan = { weekly: 0, monthly: 0, yearly: 0, session2026: 0, session2027: 0 };
-    const usedByPlan = { weekly: 0, monthly: 0, yearly: 0, session2026: 0, session2027: 0 };
+    // V64.18 : un compteur par plan connu, au lieu d'une liste écrite en dur
+    //   qui ignorait silencieusement les codes des nouvelles formules.
+    const byPlan = {}, usedByPlan = {};
+    Object.keys(window.PremiumService.PLANS).forEach(id => { byPlan[id] = 0; usedByPlan[id] = 0; });
     all.forEach(c => {
       if (byPlan[c.planId] !== undefined) byPlan[c.planId]++;
       if (c.used && usedByPlan[c.planId] !== undefined) usedByPlan[c.planId]++;
@@ -764,8 +1249,10 @@ const ActivationCodes = {
     const all = this.getAllCodesLocal();
     const used = all.filter(c => c.used);
     const unused = all.filter(c => !c.used);
-    const byPlan = { weekly: 0, monthly: 0, yearly: 0, session2026: 0, session2027: 0 };
-    const usedByPlan = { weekly: 0, monthly: 0, yearly: 0, session2026: 0, session2027: 0 };
+    // V64.18 : un compteur par plan connu, au lieu d'une liste écrite en dur
+    //   qui ignorait silencieusement les codes des nouvelles formules.
+    const byPlan = {}, usedByPlan = {};
+    Object.keys(window.PremiumService.PLANS).forEach(id => { byPlan[id] = 0; usedByPlan[id] = 0; });
     all.forEach(c => {
       if (byPlan[c.planId] !== undefined) byPlan[c.planId]++;
       if (c.used && usedByPlan[c.planId] !== undefined) usedByPlan[c.planId]++;
