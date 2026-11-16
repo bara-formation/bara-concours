@@ -1,5 +1,5 @@
 // Bara Concours - Base de questions QCM
-// Mis à jour le 2026-10-21 - Informatique entierement remplacee : 504 questions
+// Mis à jour le 2026-11-16 - Lettres de bonne reponse reequilibrees (577 questions, ordre des propositions seulement)
 // Total : 7732 questions réparties sur 37 matières
 
 const QUESTIONS = {
@@ -282,12 +282,12 @@ const QUESTIONS = {
     {
       "q": "Le mot \"péremptoire\" signifie :",
       "o": [
-        "Hésitant et nuancé",
         "Qui ne souffre pas de réplique, catégorique",
+        "Hésitant et nuancé",
         "Poli et bienveillant",
         "Long et répétitif"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Péremptoire\" qualifie un argument ou un ton qui s'impose sans appel, contre lequel on ne peut répliquer. Piège : confondre avec \"préemptoire\" (qui n'existe pas) ou \"péremption\" (expiration de délais en droit)."
     },
     {
@@ -304,23 +304,23 @@ const QUESTIONS = {
     {
       "q": "\"Ni le directeur ni le secrétaire général n'_______ signé la circulaire.\" Choisissez la forme correcte.",
       "o": [
-        "a",
         "ont",
+        "a",
         "avait",
         "aurait"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Avec \"ni...ni\" reliant deux sujets singuliers, le verbe se met généralement au pluriel car les deux sujets sont additionnés. Piège : accorder avec un seul des sujets au singulier."
     },
     {
       "q": "\"_______ il dise, sa décision est déjà prise.\" Choisissez la bonne orthographe.",
       "o": [
-        "Quoique",
         "Quoi que",
+        "Quoique",
         "Quelque que",
         "Quoi qu'"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Quoi que\" (deux mots) = quelle que soit la chose que… \"Quoique\" (un mot) = bien que (valeur concessive). Ici, le sens est \"quelle que soit la chose qu'il dise\" → \"Quoi que\". Piège : écrire \"quoique\" qui changerait le sens de la phrase."
     },
     {
@@ -359,12 +359,12 @@ const QUESTIONS = {
     {
       "q": "\"_______ soit son rang, chaque candidat doit respecter le règlement.\" Choisissez la bonne orthographe.",
       "o": [
-        "Quelque",
         "Quel que",
+        "Quelque",
         "Quelques",
         "Quelles que"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Quel que\" (deux mots) est suivi du verbe \"être\" au subjonctif et s'accorde avec le sujet du verbe. \"Son rang\" est masculin singulier → \"Quel que\". Piège : écrire \"quelque soit\" — faute très fréquente dans les copies de concours, absolument inacceptable."
     },
     {
@@ -414,12 +414,12 @@ const QUESTIONS = {
     {
       "q": "\"Il a été sanctionné _______ il avait enfreint le règlement.\" Choisissez la bonne orthographe.",
       "o": [
-        "par ce que",
-        "par ce qu'",
         "parce qu'",
+        "par ce qu'",
+        "par ce que",
         "pour ce que"
       ],
-      "r": 2,
+      "r": 0,
       "x": "\"Parce que\" (conjonction causale, un bloc) introduit une cause. \"Par ce que\" (préposition + démonstratif + relatif) signifie \"par la chose que\" — sens différent. Ici, on introduit une cause → \"parce qu'\". Piège : écrire \"par ce qu'\" en deux mots, ce qui change le sens."
     },
     {
@@ -458,12 +458,12 @@ const QUESTIONS = {
     {
       "q": "Quel est le synonyme du mot \"altruiste\" ?",
       "o": [
-        "Égoïste",
+        "Généreux",
         "Ambitieux",
         "Indifférent",
-        "Généreux"
+        "Égoïste"
       ],
-      "r": 3,
+      "r": 0,
       "x": "\"Altruiste\" désigne une personne qui se préoccupe du bien des autres avant le sien. \"Généreux\" en est le synonyme le plus courant. \"Égoïste\" est l'antonyme exact. Piège : confondre avec \"bienveillant\" — \"altruiste\" implique un sacrifice de soi absent dans \"bienveillant\"."
     },
     {
@@ -502,12 +502,12 @@ const QUESTIONS = {
     {
       "q": "Une \"prérogative\" est :",
       "o": [
-        "Une obligation imposée par la loi",
         "Un privilège attaché à une fonction ou à un rang",
+        "Une obligation imposée par la loi",
         "Une sanction disciplinaire",
         "Une proposition de réforme"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Prérogative\" désigne un avantage, un droit ou un privilège exclusif lié à une fonction ou un titre. Exemple : \"La signature des décrets est une prérogative du Président.\" Piège : confondre avec \"obligation\" (qui est son contraire)."
     },
     {
@@ -524,12 +524,12 @@ const QUESTIONS = {
     {
       "q": "Quel est l'antonyme de \"clément\" ?",
       "o": [
-        "Doux",
-        "Indulgent",
         "Rigoureux",
+        "Indulgent",
+        "Doux",
         "Bienveillant"
       ],
-      "r": 2,
+      "r": 0,
       "x": "\"Clément\" qualifie quelqu'un d'indulgent, qui pardonne facilement. Son antonyme est \"rigoureux\" (sévère, intransigeant). \"Doux\" et \"indulgent\" sont des synonymes. Piège : proposer \"cruel\" qui est trop fort — \"rigoureux\" est la nuance exacte attendue."
     },
     {
@@ -568,12 +568,12 @@ const QUESTIONS = {
     {
       "q": "Laquelle de ces formules de politesse est correcte dans une lettre administrative ?",
       "o": [
-        "\"En espérant une suite favorable, je vous salue.\"",
         "\"Dans l'attente d'une suite favorable, je vous prie d'agréer, Monsieur, l'expression de mes salutations distinguées.\"",
+        "\"En espérant une suite favorable, je vous salue.\"",
         "\"Comptant sur votre compréhension, recevez mes cordiales salutations.\"",
         "\"En vous remerciant d'avance, je reste à votre disposition et vous salue.\""
       ],
-      "r": 1,
+      "r": 0,
       "x": "La formule de politesse administrative exige \"je vous prie d'agréer\" + titre exact + \"l'expression de mes salutations\". A), C) et D) contiennent des tournures familières ou des impératifs (\"recevez\") inacceptables dans la correspondance officielle. Piège : employer des formules commerciales dans un contexte administratif officiel."
     },
     {
@@ -689,12 +689,12 @@ const QUESTIONS = {
     {
       "q": "\"Pléthorique\" qualifie :",
       "o": [
-        "Ce qui est insuffisant et limité",
         "Ce qui est excessivement abondant, en surnombre",
+        "Ce qui est insuffisant et limité",
         "Ce qui est parfaitement équilibré",
         "Ce qui est rare et précieux"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Pléthorique\" (du grec \"plethore\" = surabondance) désigne ce qui est présent en quantité excessive. Exemple : \"Un effectif pléthorique d'agents administratifs.\" Piège : confondre avec \"prolifique\" (qui produit beaucoup) — \"pléthorique\" a une connotation davantage péjorative."
     },
     {
@@ -755,12 +755,12 @@ const QUESTIONS = {
     {
       "q": "\"Je n'ai pas obtenu _______ j'avais besoin pour mon dossier.\" Choisissez la bonne combinaison.",
       "o": [
-        "ce que",
         "ce dont",
+        "ce que",
         "dont",
         "que"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Avoir besoin DE quelque chose\" → relatif \"dont\". Précédé de l'antécédent \"ce\" : \"ce dont\". \"Ce dont j'avais besoin\" = la chose dont j'avais besoin. Piège : employer \"ce que\" qui s'utilise quand le verbe est transitif direct (sans \"de\")."
     },
     {
@@ -788,12 +788,12 @@ const QUESTIONS = {
     {
       "q": "La \"quintessence\" d'un texte, c'est :",
       "o": [
-        "Son introduction",
-        "Sa partie la plus dense et la plus difficile",
         "Ce qu'il y a de meilleur, l'essentiel le plus pur",
+        "Sa partie la plus dense et la plus difficile",
+        "Son introduction",
         "Sa conclusion"
       ],
-      "r": 2,
+      "r": 0,
       "x": "\"Quintessence\" (alchimie médiévale : cinquième essence, la plus pure) désigne ce qu'il y a de plus essentiel et raffiné. Exemple : \"Ce discours est la quintessence de la pensée administrative.\" Piège : le confondre avec \"résumé\" ou \"conclusion\" — la quintessence est l'essence même, pas un simple résumé."
     },
     {
@@ -832,12 +832,12 @@ const QUESTIONS = {
     {
       "q": "\"Depuis qu'il _______ ce poste, le service s'est amélioré.\" Choisissez la forme correcte.",
       "o": [
-        "occupait",
         "occupe",
+        "occupait",
         "a occupé",
         "occupera"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Avec \"depuis que\", si l'action est encore en cours au moment où l'on parle, on emploie le présent de l'indicatif. \"Depuis qu'il occupe ce poste\" = il l'occupe encore maintenant. Piège : employer le passé composé \"a occupé\" qui indiquerait que l'occupation est terminée."
     },
     {
@@ -865,12 +865,12 @@ const QUESTIONS = {
     {
       "q": "\"Contingent\" employé comme adjectif signifie :",
       "o": [
-        "Indispensable et permanent",
         "Soumis au hasard, incertain, non nécessaire",
+        "Indispensable et permanent",
         "Très important et décisif",
         "Relatif à l'armée"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Contingent\" (adjectif) désigne ce qui dépend des circonstances et non de la nécessité. \"Les événements contingents\" s'opposent aux vérités nécessaires. Piège : confondre avec \"contingent\" (nom) = quota de soldats — sens différent selon la classe grammaticale."
     },
     {
@@ -909,12 +909,12 @@ const QUESTIONS = {
     {
       "q": "\"Abstrus\" qualifie un texte ou un discours :",
       "o": [
-        "Court et lisible",
-        "D'une grande clarté pédagogique",
         "Difficile à comprendre, obscur",
+        "D'une grande clarté pédagogique",
+        "Court et lisible",
         "Provocateur et polémique"
       ],
-      "r": 2,
+      "r": 0,
       "x": "\"Abstrus\" (du latin \"abstrusus\" = caché) qualifie ce qui est difficile à comprendre, hermétique. Piège : confondre avec \"abstrait\" (qui ne se rapporte pas au concret) — \"abstrus\" insiste sur la difficulté de compréhension, pas seulement l'absence de concret."
     },
     {
@@ -1041,12 +1041,12 @@ const QUESTIONS = {
     {
       "q": "Choisissez la formulation la plus correcte dans un document officiel :",
       "o": [
-        "Suite à votre demande du 15 avril, nous vous informons...",
-        "Suivant votre demande du 15 avril, nous vous informons...",
         "À la suite de votre demande du 15 avril, nous vous informons...",
+        "Suivant votre demande du 15 avril, nous vous informons...",
+        "Suite à votre demande du 15 avril, nous vous informons...",
         "Rapport à votre demande du 15 avril, nous vous informons..."
       ],
-      "r": 2,
+      "r": 0,
       "x": "\"À la suite de\" est la locution prépositionnelle consacrée dans la correspondance officielle. \"Suite à\" est critiqué dans la langue soutenue. \"Rapport à\" est familier et inacceptable dans un document officiel. Piège : employer \"suite à\" (répandu mais déconseillé dans les textes officiels de niveau élevé)."
     },
     {
@@ -1118,12 +1118,12 @@ const QUESTIONS = {
     {
       "q": "\"Inférer\" une conclusion signifie :",
       "o": [
-        "La formuler de façon hésitante",
         "La déduire logiquement à partir de prémisses ou d'indices",
+        "La formuler de façon hésitante",
         "La contester avec vigueur",
         "La résumer en peu de mots"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Inférer\" (du latin \"inferre\" = porter vers) = tirer une conclusion, déduire quelque chose d'observations. Proche de \"déduire\" et \"induire\". Piège : confondre avec \"interférer\" (se produire en perturbant) — faux ami phonique courant."
     },
     {
@@ -1217,12 +1217,12 @@ const QUESTIONS = {
     {
       "q": "\"Nous avons simplifié la procédure pour que les candidats _______ déposer leurs dossiers facilement.\" Choisissez la forme correcte.",
       "o": [
-        "peuvent",
-        "pourront",
         "puissent",
+        "pourront",
+        "peuvent",
         "pourraient"
       ],
-      "r": 2,
+      "r": 0,
       "x": "\"Pour que\" est une conjonction de but qui exige le subjonctif. \"Puissent\" est le subjonctif présent de \"pouvoir\" (3e personne du pluriel). \"Peuvent\" (indicatif), \"pourront\" (futur) et \"pourraient\" (conditionnel) sont incorrects après \"pour que\". Piège : employer l'indicatif présent \"peuvent\" par analogie avec d'autres conjonctions."
     },
     {
@@ -1272,12 +1272,12 @@ const QUESTIONS = {
     {
       "q": "La distinction entre \"catégorique\" et \"dogmatique\" :",
       "o": [
-        "Ce sont des synonymes parfaits",
         "\"Catégorique\" = affirmatif et sans réserve ; \"dogmatique\" = qui impose ses opinions comme des vérités absolues",
+        "Ce sont des synonymes parfaits",
         "\"Dogmatique\" est plus modéré que \"catégorique\"",
         "\"Catégorique\" s'emploie uniquement en logique formelle"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Catégorique\" qualifie ce qui est affirmé de façon nette, sans ambiguïté (\"un refus catégorique\"). \"Dogmatique\" implique une attitude qui impose ses vues comme des vérités indiscutables, sans accepter la contradiction (connotation péjorative). Piège : les employer indifféremment en perdant la nuance."
     },
     {
@@ -1327,12 +1327,12 @@ const QUESTIONS = {
     {
       "q": "\"Elles se sont _______ compte de leurs erreurs.\" Choisissez la forme correcte.",
       "o": [
-        "rendues",
         "rendu",
+        "rendues",
         "rendus",
         "rendue"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Se rendre compte\" est une locution figée dans laquelle \"compte\" est COD du verbe \"rendre\". Le pronom \"se\" est COI (se rendre = rendre à soi). Le COD \"compte\" étant placé après le verbe, il n'y a pas d'accord. \"Se sont rendu compte\" → \"rendu\" invariable. Piège : accorder avec le sujet féminin pluriel \"elles\" → \"rendues\" — faute très fréquente."
     },
     {
@@ -1514,12 +1514,12 @@ const QUESTIONS = {
     {
       "q": "\"Elles se sont _______ des droits qui ne leur appartenaient pas.\" Choisissez la forme correcte du PP \"arroger\".",
       "o": [
-        "arrogées",
+        "arrogé",
         "arrogés",
         "arrogée",
-        "arrogé"
+        "arrogées"
       ],
-      "r": 3,
+      "r": 0,
       "x": "\"S'arroger\" = s'attribuer indûment. Le COD \"des droits\" est placé APRÈS le verbe → pas d'accord avec le sujet. \"Arrogé\" est invariable. Piège : accorder avec le sujet féminin pluriel \"elles\" et écrire \"arrogées\" — faute classique de PP pronominal."
     },
     {
@@ -1932,12 +1932,12 @@ const QUESTIONS = {
     {
       "q": "\"C'est elle qui a fait _______ les résultats par ses agents.\" Quelle règle s'applique au participe passé \"fait\" suivi d'un infinitif ?",
       "o": [
-        "Il s'accorde avec le COD placé avant lui",
-        "Il s'accorde avec le sujet",
         "Il est toujours invariable",
+        "Il s'accorde avec le sujet",
+        "Il s'accorde avec le COD placé avant lui",
         "Il s'accorde selon le sens de la phrase"
       ],
-      "r": 2,
+      "r": 0,
       "x": "La règle est absolue et sans exception : \"faire + infinitif\" → le PP \"fait\" est TOUJOURS invariable. \"Elle a fait communiquer les résultats\" → \"fait\" invariable. Cette règle s'applique même lorsque le COD est placé avant : \"les résultats qu'elle a fait communiquer\" → \"fait\" reste invariable. Piège : croire que la position du COD avant le verbe crée une exception — aucune exception n'existe ici."
     },
     {
@@ -2042,12 +2042,12 @@ const QUESTIONS = {
     {
       "q": "\"Elles se sont _______ en chemin.\" Choisissez le PP correct de \"nuire\".",
       "o": [
-        "nuis",
         "nuit",
+        "nuis",
         "nuites",
         "nuies"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Se nuire\" : le verbe \"nuire à\" est construit avec un COI (\"nuire à soi-même\"). Le pronom \"se\" est COI, non COD → le PP ne s'accorde pas avec le sujet. \"Nuit\" est invariable. Règle : PP des verbes pronominaux à COI (se nuire, se mentir, se plaire, se succéder, se parler, se téléphoner) = toujours invariable. Piège : accorder avec le sujet féminin pluriel \"elles\"."
     },
     {
@@ -2097,12 +2097,12 @@ const QUESTIONS = {
     {
       "q": "\"_______ que soit le résultat, nous analyserons les erreurs.\" Choisissez la bonne forme.",
       "o": [
-        "Quelque",
+        "Quel",
         "Quelles",
         "Quelques",
-        "Quel"
+        "Quelque"
       ],
-      "r": 3,
+      "r": 0,
       "x": "\"Quel que soit\" + nom + verbe \"être\" au subjonctif. \"Le résultat\" est masculin singulier → \"Quel que soit le résultat\". \"Quel\" s'accorde avec le sujet du verbe \"être\". Piège : employer \"quelque\" (adverbe invariable) à la place du pronom \"quel\" variable."
     },
     {
@@ -2306,12 +2306,12 @@ const QUESTIONS = {
     {
       "q": "\"Avec le soutien de sa hiérarchie, le chef de service _______ pris cette décision.\" Choisissez la forme correcte.",
       "o": [
-        "ont",
         "a",
+        "ont",
         "avaient",
         "seraient"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Avec\" ne crée pas de vrai sujet supplémentaire (contrairement à \"et\"). Quand le sujet est \"le chef de service\" et que \"avec sa hiérarchie\" est un complément circonstanciel entre virgules ou en début, le verbe reste au singulier. Piège : accorder au pluriel en croyant que \"avec\" équivaut à \"et\"."
     },
     {
@@ -2350,12 +2350,12 @@ const QUESTIONS = {
     {
       "q": "\"Le peu d'informations _______ suffire à la prise de décision.\" Choisissez la forme correcte.",
       "o": [
-        "devront",
-        "doivent",
         "devrait",
+        "doivent",
+        "devront",
         "devraient"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Quand \"le peu de\" insiste sur la petite quantité (sens restrictif négatif), le verbe s'accorde au singulier avec \"le peu\". \"Le peu d'informations devrait suffire\" → singulier. Si on insistait sur les informations elles-mêmes : \"devraient\" serait toléré. En concours, l'accord au singulier est préféré pour marquer l'idée d'insuffisance. Piège : toujours accorder avec le nom pluriel suivant."
     },
     {
@@ -2570,12 +2570,12 @@ const QUESTIONS = {
     {
       "q": "\"L'_______ de ce concept en droit administratif burkinabè est large.\" Choisissez le bon terme pour désigner les sens du concept.",
       "o": [
-        "exception",
         "acception",
+        "exception",
         "acceptation",
         "acception ou exception selon le contexte"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Acception\" désigne chacun des sens différents d'un mot ou d'un concept. \"Dans toute l'acception du terme\" = dans tous les sens du terme. \"Exception\" = ce qui n'entre pas dans la règle. \"Acceptation\" = le fait d'accepter. Piège : confondre \"acception\" et \"acceptation\" — les deux viennent du latin \"accipere\" mais ont des sens totalement différents."
     },
     {
@@ -2823,12 +2823,12 @@ const QUESTIONS = {
     {
       "q": "Le verbe \"amender\" en droit désigne :",
       "o": [
-        "Condamner à une amende",
-        "Abroger un texte juridique",
         "Modifier partiellement un texte de loi ou un document officiel",
+        "Abroger un texte juridique",
+        "Condamner à une amende",
         "Promulguer un nouveau texte"
       ],
-      "r": 2,
+      "r": 0,
       "x": "\"Amender\" = introduire des modifications partielles dans un texte de loi, un traité ou un document officiel. Un \"amendement\" est la modification proposée. À distinguer de : \"abroger\" (supprimer totalement) et \"promulguer\" (rendre exécutoire). Piège : confondre avec le substantif \"amende\" (sanction pécuniaire) — même racine mais sens différent."
     },
     {
@@ -2900,12 +2900,12 @@ const QUESTIONS = {
     {
       "q": "\"De _______ affaires, les plus urgentes ont été traitées.\" Choisissez la bonne forme.",
       "o": [
-        "nombreux",
-        "nombreuse",
         "nombreuses",
+        "nombreuse",
+        "nombreux",
         "nombreux ou nombreuses selon le registre"
       ],
-      "r": 2,
+      "r": 0,
       "x": "\"Affaires\" est féminin pluriel → \"De nombreuses affaires\". L'adjectif \"nombreux\" s'accorde en genre et en nombre avec le nom. Piège : employer \"nombreux\" (masculin pluriel) par défaut sans vérifier le genre du nom."
     },
     {
@@ -2933,12 +2933,12 @@ const QUESTIONS = {
     {
       "q": "\"Elle a été _______ de remplir ses obligations contractuelles.\" Choisissez le bon terme signifiant \"mise en demeure légalement\".",
       "o": [
-        "obligée",
         "astreinte",
+        "obligée",
         "forclose",
         "astreinte ou obligée selon le degré de contrainte"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Être astreint à\" = être contraint légalement ou réglementairement à accomplir quelque chose. Terme administratif et juridique précis. \"Obligé\" est plus général et courant. \"Forclose\" = privée de son droit (hors délai) — sens différent. Piège : employer \"obligée\" qui est correct mais moins précis dans le style administratif formal."
     },
     {
@@ -3054,12 +3054,12 @@ const QUESTIONS = {
     {
       "q": "\"Des mesures _______ ont été prises pour y remédier.\" Choisissez la forme correcte de \"topique\" dans le sens \"appropriée\".",
       "o": [
-        "topiques",
+        "adéquates",
         "topique",
         "topical",
-        "adéquates"
+        "topiques"
       ],
-      "r": 3,
+      "r": 0,
       "x": "\"Topique\" comme adjectif signifie \"approprié, qui convient exactement au sujet\" — usage littéraire et philosophique. En langue administrative, \"adéquates\" ou \"appropriées\" sont les termes courants attendus. \"Topique\" au sens d'\"approprié\" est rare et peut prêter à confusion. La bonne réponse dans un texte administratif courant est D. Piège : employer \"topique\" sans savoir qu'il est quasi-exclusivement réservé à un usage très littéraire."
     },
     {
@@ -3076,12 +3076,12 @@ const QUESTIONS = {
     {
       "q": "Le mot \"impécunieux\" qualifie :",
       "o": [
-        "Un personnage ingrat",
         "Quelqu'un qui manque d'argent, qui est sans ressources",
+        "Un personnage ingrat",
         "Quelqu'un d'impulsif",
         "Quelqu'un de peu scrupuleux"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Impécunieux\" (du latin \"pecunia\" = argent) = qui manque d'argent. Synonyme soutenu de \"pauvre\" ou \"sans ressources\". Exemple : \"Un fonctionnaire impécunieux n'est pas à l'abri de la tentation de la corruption.\" Piège : confondre avec \"impertinent\" ou \"impudique\" — ressemblances phoniques superficielles."
     },
     {
@@ -3252,12 +3252,12 @@ const QUESTIONS = {
     {
       "q": "\"La _______ de cet accord entre les deux parties a été confirmée.\" Choisissez le terme désignant la mise en vigueur officielle d'un accord.",
       "o": [
-        "validation",
         "ratification",
+        "validation",
         "notification",
         "promulgation"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La \"ratification\" désigne la confirmation officielle d'un accord ou d'un traité par l'autorité compétente (parlement ou chef de l'État), le rendant définitif et contraignant. \"Promulgation\" s'applique aux lois nationales. \"Validation\" est plus général. Piège : confondre ratification et promulgation — la ratification s'applique aux accords et traités internationaux."
     },
     {
@@ -3428,12 +3428,12 @@ const QUESTIONS = {
     {
       "q": "\"La _______ de cette décision a été vivement critiquée.\" Choisissez le terme administratif signifiant \"manque de cohérence avec les textes en vigueur\".",
       "o": [
-        "irrégularité",
-        "incongruité",
         "illégalité",
+        "incongruité",
+        "irrégularité",
         "illégitimité"
       ],
-      "r": 2,
+      "r": 0,
       "x": "En droit administratif, l'\"illégalité\" d'un acte = sa non-conformité à la loi, aux textes de droit. \"Illégitimité\" = manque de légitimité morale ou politique (différent). \"Irrégularité\" = défaut de forme ou de procédure. \"Incongruité\" = inadéquation générale. Piège : confondre \"illégalité\" (contraire à la loi) et \"illégitimité\" (contraire à la légitimité morale)."
     },
     {
@@ -3450,23 +3450,23 @@ const QUESTIONS = {
     {
       "q": "La distinction entre \"en effet\" et \"effectivement\" :",
       "o": [
-        "Ce sont des synonymes parfaits interchangeables",
         "\"En effet\" introduit une explication ou une justification ; \"effectivement\" confirme ce qui vient d'être dit",
+        "Ce sont des synonymes parfaits interchangeables",
         "\"Effectivement\" est plus courant que \"en effet\" dans la langue administrative",
         "\"En effet\" est critiqué dans la langue soutenue"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"En effet\" = introduce une explication, une preuve, une justification (\"Il est absent, en effet il était malade\"). \"Effectivement\" = confirme une assertion (\"— Il est absent ? — Effectivement.\"). Les deux sont fréquents mais servent à des fonctions discursives différentes. Piège : les employer indifféremment sans respecter leur fonction dans le discours."
     },
     {
       "q": "\"Se faire élire\" : le PP \"fait\" dans \"elle s'est fait élire\" est :",
       "o": [
-        "Accordé avec le sujet féminin \"elle\"",
         "Toujours invariable car suivi d'un infinitif",
+        "Accordé avec le sujet féminin \"elle\"",
         "Accordé avec le COD antéposé",
         "Accordé selon le sens de la phrase"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Faire + infinitif\" : le PP \"fait\" est TOUJOURS invariable, sans exception, quelle que soit la construction. \"Elle s'est fait élire\" → \"fait\" invariable. Cette règle absolue s'applique même dans les constructions pronominales. Piège : accorder \"fait\" avec le sujet féminin \"elle\" et écrire \"faite\" — faute caractérisée et absolue."
     },
     {
@@ -3483,12 +3483,12 @@ const QUESTIONS = {
     {
       "q": "\"_______ qu'il soit, ce résultat est insuffisant.\" Choisissez la bonne combinaison pour le sens \"même s'il est bon\".",
       "o": [
-        "Si bon",
+        "Aussi bon soit-il / si bon soit-il",
         "Bon",
         "Quelque bon",
-        "Aussi bon soit-il / si bon soit-il"
+        "Si bon"
       ],
-      "r": 3,
+      "r": 0,
       "x": "L'inversion \"si bon soit-il\" = si bon qu'il soit (concession). \"Aussi bon soit-il\" est l'équivalent plus courant. Ces constructions avec inversion du verbe sont caractéristiques de la langue soutenue de concours. \"Si bon\" seul sans \"soit-il\" est incomplet. \"Quelque bon\" n'existe pas (incorrection). Piège : employer \"Bien que bon\" (correct mais sans inversion caractéristique de la langue soutenue)."
     },
     {
@@ -3527,12 +3527,12 @@ const QUESTIONS = {
     {
       "q": "Choisissez la phrase qui emploie correctement \"en application de\" vs \"en vertu de\" :",
       "o": [
-        "En application de son courage, il a reçu une médaille.",
         "En vertu de l'article 5 du règlement, cette demande est rejetée.",
+        "En application de son courage, il a reçu une médaille.",
         "En vertu de la pluie, la réunion a été annulée.",
         "En application des circonstances, nous avons décidé de reporter."
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"En vertu de\" s'emploie avec des textes, des principes, des droits (fondement normatif). \"En application de\" s'emploie avec des textes juridiques pour désigner leur mise en œuvre. \"En vertu de l'article 5\" = fondé sur cet article. A) et C) utilisent incorrectement ces locutions avec des éléments factuels non normatifs. Piège : employer \"en vertu de\" avec tout ce qui justifie une décision, même non normatif."
     },
     {
@@ -3571,12 +3571,12 @@ const QUESTIONS = {
     {
       "q": "La \"forclusion\" en droit désigne :",
       "o": [
-        "La décision finale d'un tribunal",
-        "La sanction disciplinaire d'un fonctionnaire",
         "La perte d'un droit par non-exercice dans les délais prescrits",
+        "La sanction disciplinaire d'un fonctionnaire",
+        "La décision finale d'un tribunal",
         "La suspension provisoire d'une procédure"
       ],
-      "r": 2,
+      "r": 0,
       "x": "La \"forclusion\" (du latin \"foris clausus\" = fermé dehors) désigne la déchéance d'un droit parce qu'il n'a pas été exercé dans le délai prévu par la loi. Exemple : \"La forclusion du délai de recours prive le requérant de toute action.\" Piège : confondre avec \"clôture\" (fin d'une session) ou \"prescription\" (extinction d'un droit avec le temps — proche mais distinct)."
     },
     {
@@ -3626,12 +3626,12 @@ const QUESTIONS = {
     {
       "q": "La nuance entre \"désuet\" et \"obsolète\" :",
       "o": [
-        "Ce sont des synonymes parfaits",
         "\"Désuet\" = qui n'est plus en usage ; \"obsolète\" = qui est dépassé techniquement ou conceptuellement",
+        "Ce sont des synonymes parfaits",
         "\"Obsolète\" est plus soutenu que \"désuet\"",
         "\"Désuet\" s'applique uniquement aux mots de la langue"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Désuet\" = qui n'est plus en usage, tombé en désuétude (coutume désuète, mot désuet). Connotation de vieillissement naturel. \"Obsolète\" = dépassé par les évolutions techniques ou conceptuelles, rendu inutilisable. Connotation de remplacement fonctionnel. Piège : les employer indifféremment — la nuance technique vs culturelle est attendue dans les épreuves de vocabulaire."
     },
     {
@@ -3769,12 +3769,12 @@ const QUESTIONS = {
     {
       "q": "\"Le nombre d'agents _______ considérablement depuis dix ans.\" Choisissez la bonne forme.",
       "o": [
-        "ont augmenté",
         "a augmenté",
+        "ont augmenté",
         "ont augmentés",
         "a augmentés"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Le nombre de + nom pluriel\" : le verbe s'accorde avec \"le nombre\" (singulier) et non avec \"agents\" (pluriel). \"Le nombre a augmenté.\" À distinguer de \"un grand nombre de\" où l'accord peut se faire avec le complément pluriel. Piège : accorder au pluriel avec \"agents\" par proximité — faute d'attraction classique."
     },
     {
@@ -4242,23 +4242,23 @@ const QUESTIONS = {
     {
       "q": "Le gérondif \"en travaillant\" indique que l'action est :",
       "o": [
-        "Antérieure à celle du verbe principal",
-        "Postérieure à celle du verbe principal",
         "Simultanée à celle du verbe principal",
+        "Postérieure à celle du verbe principal",
+        "Antérieure à celle du verbe principal",
         "Hypothétique par rapport au verbe principal"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Le gérondif exprime la simultanéité avec l'action du verbe principal. Il peut aussi exprimer la cause, le moyen ou la condition selon le contexte. Il est toujours invariable et a le même sujet que le verbe principal."
     },
     {
       "q": "\"Quitte à déplaire, il a dit la vérité.\" \"Quitte à\" exprime :",
       "o": [
-        "La cause directe d'une action",
-        "La condition nécessaire à une action",
         "L'acceptation d'un risque",
+        "La condition nécessaire à une action",
+        "La cause directe d'une action",
         "L'opposition entre deux actions"
       ],
-      "r": 2,
+      "r": 0,
       "x": "\"Quitte à + infinitif\" = au risque de, même si cela implique tel inconvénient. Construction idiomatique de la langue courante et soutenue."
     },
     {
@@ -4286,12 +4286,12 @@ const QUESTIONS = {
     {
       "q": "\"Ce sont eux qui ont rédigé ce rapport.\" \"Ce sont\" est utilisé car :",
       "o": [
-        "\"Ce\" est toujours suivi de \"sont\" avant un pronom",
         "Le sujet réel \"eux\" est à la troisième personne du pluriel",
+        "\"Ce\" est toujours suivi de \"sont\" avant un pronom",
         "\"Eux\" est toujours précédé de \"ce sont\"",
         "La mise en relief le commande systématiquement"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Règle : \"c'est\" + singulier ou \"c'est\" + pronom singulier ; \"ce sont\" + pluriel nominal ou \"ce sont\" + pronom pluriel de la 3e personne. \"Eux\" est pluriel → \"ce sont eux\"."
     },
     {
@@ -4319,12 +4319,12 @@ const QUESTIONS = {
     {
       "q": "\"Il parte ou qu'il reste, peu importe.\" Pour compléter correctement, la locution corrélative est :",
       "o": [
-        "Soit que... ou que",
-        "Que... que",
         "Soit que... soit que",
+        "Que... que",
+        "Soit que... ou que",
         "Bien que... bien que"
       ],
-      "r": 2,
+      "r": 0,
       "x": "\"Soit que... soit que + subjonctif\" exprime l'alternative concessive. \"Soit qu'il parte, soit qu'il reste...\" Les deux propositions doivent être au subjonctif."
     },
     {
@@ -4407,12 +4407,12 @@ const QUESTIONS = {
     {
       "q": "Un discours \"laudatif\" est un discours :",
       "o": [
-        "Qui accuse et condamne sévèrement",
-        "Difficile à comprendre sans culture particulière",
         "Qui célèbre et fait l'éloge de quelqu'un",
+        "Difficile à comprendre sans culture particulière",
+        "Qui accuse et condamne sévèrement",
         "Qui exprime la colère de l'orateur"
       ],
-      "r": 2,
+      "r": 0,
       "x": "\"Laudatif\" (du latin \"laudare\" = louer). Proche de \"panégyrique\" mais plus courant. Antonyme : \"dépréciatif\", \"péjoratif\", \"critique\"."
     },
     {
@@ -4495,12 +4495,12 @@ const QUESTIONS = {
     {
       "q": "\"Édulcoré\" qualifie un discours ou un texte :",
       "o": [
-        "Très technique et réservé aux spécialistes",
         "Adouci, atténué, expurgé de ses éléments choquants",
+        "Très technique et réservé aux spécialistes",
         "Particulièrement direct et sans nuance",
         "Enrichi de nombreux exemples concrets"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Édulcoré\" (de \"édulcorer\" = adoucir avec du sucre). Qualifie un propos dont on a supprimé les aspects trop forts ou choquants. Connotation parfois péjorative de dénaturation de la vérité."
     },
     {
@@ -4539,23 +4539,23 @@ const QUESTIONS = {
     {
       "q": "\"Galimatias\" désigne :",
       "o": [
-        "Un discours très clair et bien structuré",
-        "Un registre linguistique propre à un groupe social",
         "Un discours confus et incompréhensible",
+        "Un registre linguistique propre à un groupe social",
+        "Un discours très clair et bien structuré",
         "Une liste de termes techniques spécialisés"
       ],
-      "r": 2,
+      "r": 0,
       "x": "\"Galimatias\" = charabia, propos embrouillés et sans suite logique. Proche de \"charabia\" et de \"jargon\" mais \"galimatias\" insiste sur l'absence de sens, non sur la spécialisation."
     },
     {
       "q": "\"Chimérique\" qualifie ce qui est :",
       "o": [
-        "Fondé sur des données scientifiques rigoureuses",
-        "Réalisable à court terme selon les conditions actuelles",
         "Irréel, utopique ou purement imaginaire",
+        "Réalisable à court terme selon les conditions actuelles",
+        "Fondé sur des données scientifiques rigoureuses",
         "Relatif aux récits mythologiques de l'Antiquité"
       ],
-      "r": 2,
+      "r": 0,
       "x": "\"Chimérique\" vient de la Chimère, monstre mythologique. Qualifie un projet irréalisable ou une idée sans fondement dans la réalité. Proche d'\"utopique\" mais avec une connotation d'illusion plus marquée."
     },
     {
@@ -4605,12 +4605,12 @@ const QUESTIONS = {
     {
       "q": "\"Sagace\" qualifie quelqu'un qui :",
       "o": [
-        "Agit spontanément et sans analyse préalable",
+        "Discerne avec perspicacité et pénétration d'esprit",
         "Refuse de partager ses connaissances avec autrui",
         "Parle avec beaucoup de prudence et de réserve",
-        "Discerne avec perspicacité et pénétration d'esprit"
+        "Agit spontanément et sans analyse préalable"
       ],
-      "r": 3,
+      "r": 0,
       "x": "\"Sagace\" (du latin \"sagax\" = qui a du flair). Proche de \"perspicace\" et \"clairvoyant\". \"La sagacité\" désigne la finesse d'esprit qui permet de saisir ce qui échappe aux autres."
     },
     {
@@ -4693,12 +4693,12 @@ const QUESTIONS = {
     {
       "q": "L'\"épopée\" est :",
       "o": [
-        "Un court poème lyrique sur l'amour courtois",
         "Un long récit glorifiant des actions héroïques ou fondatrices",
+        "Un court poème lyrique sur l'amour courtois",
         "Un court récit en prose à portée morale",
         "Un dialogue versifié entre deux personnages"
       ],
-      "r": 1,
+      "r": 0,
       "x": "L'épopée (Iliade, Odyssée, Énéide, Chanson de Roland) célèbre les hauts faits d'un héros. Elle mêle le merveilleux au réel et participe à la construction d'une identité collective."
     },
     {
@@ -4792,12 +4792,12 @@ const QUESTIONS = {
     {
       "q": "\"Délibéré\" comme adjectif signifie :",
       "o": [
-        "Résultant d'une longue délibération collective",
-        "Soumis à l'examen d'une commission compétente",
         "Intentionnel, voulu et accompli en connaissance de cause",
+        "Soumis à l'examen d'une commission compétente",
+        "Résultant d'une longue délibération collective",
         "Issu d'une décision prise à l'unanimité"
       ],
-      "r": 2,
+      "r": 0,
       "x": "\"De manière délibérée\" = intentionnellement, volontairement. \"De propos délibéré\" est la locution adverbiale consacrée en droit. Piège : confondre avec \"délibération\" (processus collectif)."
     },
     {
@@ -4814,12 +4814,12 @@ const QUESTIONS = {
     {
       "q": "\"Œcuménique\" qualifie ce qui :",
       "o": [
-        "Concerne exclusivement les questions économiques",
-        "Appartient au patrimoine de l'Église catholique",
         "Vise à rassembler des communautés dans un esprit universel",
+        "Appartient au patrimoine de l'Église catholique",
+        "Concerne exclusivement les questions économiques",
         "Traite des questions environnementales mondiales"
       ],
-      "r": 2,
+      "r": 0,
       "x": "\"Œcuménique\" (du grec \"oikoumene\" = la terre habitée). Désigne ce qui cherche à réunir, à dépasser les divisions. Utilisé en théologie (dialogue interreligieux) et en politique (rassemblement des peuples)."
     },
     {
@@ -4869,12 +4869,12 @@ const QUESTIONS = {
     {
       "q": "\"Vénérable\" qualifie ce qui :",
       "o": [
-        "Mérite d'être redouté et craint",
         "Mérite admiration et respect du fait de son âge ou de sa valeur",
+        "Mérite d'être redouté et craint",
         "Doit être rendu public et mis en valeur",
         "Appartient à une autorité religieuse reconnue"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Vénérable\" (du latin \"venerabilis\" = qui mérite d'être vénéré). Qualifie une personne âgée ou une institution ancienne digne de respect. À ne pas confondre avec \"respectable\" (neutre) ou \"admirable\" (pour des qualités)."
     },
     {
@@ -4968,12 +4968,12 @@ const QUESTIONS = {
     {
       "q": "Le schéma de rimes AABB est dit :",
       "o": [
-        "Embrassé",
-        "Croisé",
         "Plat ou suivi",
+        "Croisé",
+        "Embrassé",
         "Alterné"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Rimes plates ou suivies : les rimes se suivent par paires. ABAB = croisées. ABBA = embrassées. Les rimes plates créent un effet de regularité, parfois monotone."
     },
     {
@@ -4990,12 +4990,12 @@ const QUESTIONS = {
     {
       "q": "Un \"hémistiche\" est :",
       "o": [
-        "Un poème de deux strophes symétriques",
         "La moitié d'un vers, notamment d'un alexandrin",
+        "Un poème de deux strophes symétriques",
         "Un type de strophe à six vers",
         "Un vers comportant une seule rime riche"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Hémistiche = moitié de vers (grec \"hemi\" = demi). Dans l'alexandrin classique, la césure sépare deux hémistiches de 6 syllabes chacun. L'hémistiche est lui-même un groupe rythmique autonome."
     },
     {
@@ -5023,12 +5023,12 @@ const QUESTIONS = {
     {
       "q": "L'élégie se distingue de l'ode en ce que :",
       "o": [
-        "L'élégie est toujours en vers libres ; l'ode en vers réguliers",
-        "L'ode est toujours plus longue que l'élégie",
         "L'élégie exprime la plainte mélancolique ; l'ode célèbre et exalte",
+        "L'ode est toujours plus longue que l'élégie",
+        "L'élégie est toujours en vers libres ; l'ode en vers réguliers",
         "L'ode s'adresse à des personnes ; l'élégie à des abstractions"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Élégie = plainte, mélancolie, deuil. Ode = hymne de célébration. Horace, Ronsard, Hugo ont écrit des odes. Lamartine, Musset ont écrit des élégies romantiques."
     },
     {
@@ -5067,12 +5067,12 @@ const QUESTIONS = {
     {
       "q": "La \"prosopopée\" consiste à :",
       "o": [
-        "Répéter le même mot en tête de vers successifs",
         "Faire parler un absent, un mort ou une abstraction personnifiée",
+        "Répéter le même mot en tête de vers successifs",
         "Interrompre un discours pour revenir à un sujet antérieur",
         "Employer un terme dans un sens opposé à son sens habituel"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La prosopopée donne la parole à une entité absente ou inanimée. Exemple : Rousseau faisant parler la nature. Proche de la personnification, mais la prosopopée implique que la chose absente prend effectivement la parole."
     },
     {
@@ -5155,12 +5155,12 @@ const QUESTIONS = {
     {
       "q": "\"Soit qu'il parte, _______ qu'il reste, peu importe.\" Choisissez la bonne conjonction corrélative.",
       "o": [
-        "bien que",
         "soit que",
+        "bien que",
         "encore que",
         "pour peu que"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Soit que... soit que + subjonctif\" = structure corrélative alternative exprimant l'indifférence face à deux éventualités. Les deux propositions sont au subjonctif. Équivalent de \"qu'il parte ou qu'il reste\"."
     },
     {
@@ -5177,12 +5177,12 @@ const QUESTIONS = {
     {
       "q": "\"Travaillant sans relâche, elle réussit.\" Le participe présent \"travaillant\" exprime ici :",
       "o": [
-        "L'opposition à l'action principale",
-        "La condition nécessaire de l'action principale",
         "La cause de l'action principale",
+        "La condition nécessaire de l'action principale",
+        "L'opposition à l'action principale",
         "La conséquence de l'action principale"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Participe présent à valeur causale : \"parce qu'elle travaillait sans relâche, elle réussit.\" La valeur causale ou temporelle du participe présent dépend du contexte logique de la phrase."
     },
     {
@@ -5342,12 +5342,12 @@ const QUESTIONS = {
     {
       "q": "\"Spécieux\" est proche de :",
       "o": [
-        "Particulier et spécifique",
-        "Réservé à des spécialistes",
         "D'une apparence de vérité mais vide de fond",
+        "Réservé à des spécialistes",
+        "Particulier et spécifique",
         "Très précis dans ses formulations"
       ],
-      "r": 2,
+      "r": 0,
       "x": "\"Spécieux\" : qui a l'air fondé mais ne l'est pas. Ne pas confondre avec \"spécial\" ou \"spécifique\". Exemple : \"Un argument spécieux qui convainc en apparence seulement.\""
     },
     {
@@ -5397,12 +5397,12 @@ const QUESTIONS = {
     {
       "q": "\"Panégyrique\" est l'antonyme de :",
       "o": [
-        "Plaidoyer",
         "Diatribe ou réquisitoire",
+        "Plaidoyer",
         "Mémoire",
         "Discours solennel"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Panégyrique = éloge total. Diatribe = attaque violente. Réquisitoire = accusation sévère. Ces termes sont structurellement opposés dans les épreuves de synonymes et d'antonymes."
     },
     {
@@ -5452,12 +5452,12 @@ const QUESTIONS = {
     {
       "q": "La \"palinodie\" dans le discours politique désigne :",
       "o": [
-        "Un long discours répétant plusieurs fois le même argument",
         "La rétractation publique d'une position antérieure",
+        "Un long discours répétant plusieurs fois le même argument",
         "Un plaidoyer en faveur d'une cause difficile à défendre",
         "Un discours célébrant les actions d'un parti politique"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Chanter sa palinodie\" = se rétracter publiquement, dire le contraire de ce qu'on avait affirmé. Connotation de manque de constance ou de retournement opportuniste."
     },
     {
@@ -5518,23 +5518,23 @@ const QUESTIONS = {
     {
       "q": "Une \"tirade\" au théâtre est :",
       "o": [
-        "Un bref échange de répliques courtes entre deux personnages",
-        "Une indication scénique adressée aux acteurs",
         "Un long discours prononcé par un seul personnage",
+        "Une indication scénique adressée aux acteurs",
+        "Un bref échange de répliques courtes entre deux personnages",
         "Un aparté adressé au public seul"
       ],
-      "r": 2,
+      "r": 0,
       "x": "La tirade est un long monologue d'un personnage au cours d'un dialogue. Elle développe une idée, un sentiment ou une argumentation. À distinguer de la stichomythie (échange de vers courts) et de l'aparté."
     },
     {
       "q": "Le mouvement \"Parnasse\" du XIXe siècle se caractérise par :",
       "o": [
-        "L'expression débridée des émotions personnelles",
         "La recherche d'un art pur et l'impassibilité formelle",
+        "L'expression débridée des émotions personnelles",
         "L'engagement politique direct dans la littérature",
         "La représentation réaliste et documentée du monde ouvrier"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le Parnasse (Leconte de Lisle, Heredia) réagit contre le lyrisme romantique en prônant l'\"art pour l'art\" : perfection formelle, impassibilité, impersonnalité. \"Sculpte, lime, cisèle\" (Gautier)."
     },
     {
@@ -5617,23 +5617,23 @@ const QUESTIONS = {
     {
       "q": "L'\"hypotypose\" est une figure qui consiste à :",
       "o": [
-        "Répéter un terme au début de plusieurs propositions",
         "Décrire une scène de façon si vive qu'elle semble présente",
+        "Répéter un terme au début de plusieurs propositions",
         "Employer un terme dans son sens contraire",
         "Atténuer une réalité par une formule indirecte"
       ],
-      "r": 1,
+      "r": 0,
       "x": "L'hypotypose = description vivante et animée qui fait voir les choses comme si elles se passaient sous les yeux. Figure du registre épique et du discours judiciaire. Proche de l'enargeia rhétorique."
     },
     {
       "q": "L'\"ironie socratique\" (maïeutique) se distingue de l'ironie rhétorique en ce qu'elle :",
       "o": [
-        "Attaque violemment une position adverse",
-        "Dit clairement le contraire de ce que l'on pense",
         "Feint l'ignorance pour amener l'interlocuteur à découvrir lui-même la vérité",
+        "Dit clairement le contraire de ce que l'on pense",
+        "Attaque violemment une position adverse",
         "Emploie des figures d'atténuation pour critiquer"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Socrate feignait de ne rien savoir (\"je sais que je ne sais rien\") pour amener l'autre à construire lui-même sa réponse. La maïeutique = \"art d'accoucher les esprits\". L'ironie rhétorique dit le contraire de sa pensée."
     },
     {
@@ -5661,12 +5661,12 @@ const QUESTIONS = {
     {
       "q": "\"Elle _______ ce poème depuis des années.\" PP de \"réciter\" en contexte.",
       "o": [
-        "a récitées",
         "a récité",
+        "a récitées",
         "a récités",
         "a réciter"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Ce poème\" = COD masculin singulier postposé → PP invariable \"récité\". Le PP avec \"avoir\" est invariable quand le COD est postposé. Règle fondamentale constamment vérifiée en concours."
     },
     {
@@ -5749,12 +5749,12 @@ const QUESTIONS = {
     {
       "q": "\"Elle _______ à cette tâche sans rechigner.\" PP de \"se consacrer\".",
       "o": [
-        "s'est consacrés",
         "s'est consacrée",
+        "s'est consacrés",
         "s'est consacré",
         "s'est consacrées"
       ],
-      "r": 1,
+      "r": 0,
       "x": "On dit \"consacrer quelqu'un à quelque chose\". Le pronom \"se\" est donc COD et placé avant le verbe. Le participe passé s'accorde en genre et en nombre avec ce COD qui renvoie au sujet \"Elle\" (féminin singulier), d'où la forme \"consacrée\". À distinguer de \"se conformer à\", qui a \"à\" → COI → PP invariable."
     },
     {
@@ -5903,12 +5903,12 @@ const QUESTIONS = {
     {
       "q": "La \"catharsis\" et le \"deus ex machina\" : le second désigne :",
       "o": [
-        "Le dénouement tragique et inévitable d'une pièce",
         "Un personnage divin introduit pour résoudre artificiellement l'intrigue",
+        "Le dénouement tragique et inévitable d'une pièce",
         "L'unité d'action dans la tragédie classique",
         "La purification des passions par la pitié et la terreur"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Deus ex machina\" (le dieu descendant sur scène par une machine) = résolution artificielle d'une situation inextricable par un élément extérieur imprévu. Critiqué par Aristote car contraire à la vraisemblance."
     },
     {
@@ -5925,12 +5925,12 @@ const QUESTIONS = {
     {
       "q": "\"Nul ne peut ignorer la loi\" emploie \"nul\" comme :",
       "o": [
-        "Adjectif qualificatif attribut du sujet",
         "Pronom indéfini sujet à valeur négative",
+        "Adjectif qualificatif attribut du sujet",
         "Adverbe de négation renforcée",
         "Déterminant indéfini sujet"
       ],
-      "r": 1,
+      "r": 0,
       "x": "\"Nul\" = pronom indéfini négatif (= personne). Construit avec \"ne\" : \"Nul ne peut...\" Peut aussi être adjectif (\"nul résultat\") ou attribut (\"ce résultat est nul\"). Ici pronom sujet à valeur négative totale."
     },
     {
@@ -20033,11 +20033,11 @@ const QUESTIONS = {
       "q": "Calculer lim(x→0) sin(3x) / (5x).",
       "o": [
         "0",
-        "3/5",
+        "+∞",
         "1",
-        "+∞"
+        "3/5"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Par équivalent classique, sin(u) ~ u quand u→0, donc sin(3x)/(5x) = (3/5)×sin(3x)/(3x) → (3/5)×1 = 3/5. Rappel : lim(u→0) sin(u)/u = 1. Piège fréquent : répondre 1 en oubliant les coefficients 3 et 5, ou confondre avec lim sin(x)/x."
     },
     {
@@ -20045,10 +20045,10 @@ const QUESTIONS = {
       "o": [
         "f est dérivable en x = 2 et f'(2) = 0",
         "f est dérivable en x = 2 et f'(2) = 1",
-        "f est continue en x = 2 mais non dérivable en x = 2",
-        "f n'est pas continue en x = 2"
+        "f n'est pas continue en x = 2",
+        "f est continue en x = 2 mais non dérivable en x = 2"
       ],
-      "r": 2,
+      "r": 3,
       "x": "f est continue en tout point de ℝ car |·| est continue. En x=2 : dérivée à droite = lim(h→0+) h/h = 1, dérivée à gauche = lim(h→0-) (−h)/h = −1. Comme elles diffèrent, f n'est pas dérivable en 2. Piège : croire qu'une fonction en valeur absolue est toujours dérivable ou confondre continuité et dérivabilité."
     },
     {
@@ -20056,10 +20056,10 @@ const QUESTIONS = {
       "o": [
         "1",
         "2",
-        "e²",
-        "+∞"
+        "+∞",
+        "e²"
       ],
-      "r": 2,
+      "r": 3,
       "x": "On pose L = lim(x→+∞)(1+2/x)^x. Alors ln L = lim x·ln(1+2/x). Or ln(1+2/x) ~ 2/x quand x→+∞, donc ln L = lim x·(2/x) = 2, et L = e². Rappel : lim(1+a/x)^x = e^a. Piège : croire que (1+2/x)→1 implique L=1 (forme indéterminée 1^∞)."
     },
     {
@@ -20067,10 +20067,10 @@ const QUESTIONS = {
       "o": [
         "e − 1",
         "e + 1",
-        "1",
-        "2 − e"
+        "2 − e",
+        "1"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Intégration par parties : u = x, v' = eˣ → u' = 1, v = eˣ. Donc ∫₀¹ xeˣdx = [xeˣ]₀¹ − ∫₀¹ eˣdx = e − [eˣ]₀¹ = e − (e−1) = 1. Piège : oublier d'évaluer [xeˣ]₀¹ correctement ou ne pas appliquer l'IPP et répondre directement e−1."
     },
     {
@@ -20177,11 +20177,11 @@ const QUESTIONS = {
       "o": [
         "0",
         "2",
-        "4",
-        "f ne peut pas être prolongée par continuité en x=2"
+        "f ne peut pas être prolongée par continuité en x=2",
+        "4"
       ],
-      "r": 2,
-      "x": "Pour x≠2 : (x²−4)/(x−2) = (x−2)(x+2)/(x−2) = x+2 → 4 quand x→2. Pour la continuité : f(2)=k=4. Rappel : continuité en a ⟺ lim(x→a) f(x) = f(a). Piège : substituer x=2 dans l'expression non simplifiée (forme 0/0) et conclure que la limite n'existe pas (réponse D)."
+      "r": 3,
+      "x": "Pour x≠2 : (x²−4)/(x−2) = (x−2)(x+2)/(x−2) = x+2 → 4 quand x→2. Pour la continuité : f(2)=k=4. Rappel : continuité en a ⟺ lim(x→a) f(x) = f(a). Piège : substituer x=2 dans l'expression non simplifiée (forme 0/0) et conclure que la limite n'existe pas (réponse C)."
     },
     {
       "q": "La dérivée de f(x) = ln(sin(x)) sur ]0, π[ est :",
@@ -20252,12 +20252,12 @@ const QUESTIONS = {
     {
       "q": "Parmi les ensembles suivants, lequel est un sous-espace vectoriel de ℝ³ ?",
       "o": [
-        "F = {(x,y,z) ∈ ℝ³ | x+y+z = 1}",
         "G = {(x,y,z) ∈ ℝ³ | x+y+z = 0}",
+        "F = {(x,y,z) ∈ ℝ³ | x+y+z = 1}",
         "H = {(x,y,z) ∈ ℝ³ | xyz = 0}",
         "K = {(x,y,z) ∈ ℝ³ | x²+y² = z}"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Un SEV doit contenir 0 et être stable par combinaisons linéaires. G contient (0,0,0), et si u,v∈G alors u+v et λu vérifient aussi la somme = 0. F ne contient pas 0 (0+0+0≠1). H n'est pas stable par addition : (1,0,0)+(0,1,0)=(1,1,0), xyz=0 mais le point est dans H alors que... en fait H n'est pas stable. K n'est pas stable non plus. Piège : croire que toute équation linéaire définit un SEV (oublier la condition d'homogénéité pour F)."
     },
     {
@@ -20406,13 +20406,13 @@ const QUESTIONS = {
     {
       "q": "La loi de Poisson de paramètre λ=2 donne P(X=0) = ?",
       "o": [
-        "0",
         "e⁻²",
+        "0",
         "2e⁻²",
         "1−e⁻²"
       ],
-      "r": 1,
-      "x": "Pour X~Poisson(λ) : P(X=k) = e⁻λ·λᵏ/k!. Donc P(X=0) = e⁻²·2⁰/0! = e⁻² ≈ 0,135. Rappel : 0!=1 et λ⁰=1 par convention. Piège : croire que P(X=0)=0 car X=0 semble impossible (réponse A), ou confondre avec P(X=1)=2e⁻² (réponse C)."
+      "r": 0,
+      "x": "Pour X~Poisson(λ) : P(X=k) = e⁻λ·λᵏ/k!. Donc P(X=0) = e⁻²·2⁰/0! = e⁻² ≈ 0,135. Rappel : 0!=1 et λ⁰=1 par convention. Piège : croire que P(X=0)=0 car X=0 semble impossible (réponse B), ou confondre avec P(X=1)=2e⁻² (réponse C)."
     },
     {
       "q": "Si X suit une loi binomiale B(n,p), l'espérance E(X) et la variance Var(X) sont :",
@@ -20452,10 +20452,10 @@ const QUESTIONS = {
       "o": [
         "0",
         "1",
-        "2",
-        "+∞"
+        "+∞",
+        "2"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Si la suite converge vers L, alors L = L/2 + 1 → L/2 = 1 → L = 2. La suite est croissante (u₁=1>0=u₀) et majorée par 2 (par récurrence), donc convergente par le théorème de la limite monotone. Piège : résoudre L=L+1 par erreur algébrique et trouver L=1 (réponse B), ou croire que la suite diverge."
     },
     {
@@ -20496,21 +20496,21 @@ const QUESTIONS = {
       "o": [
         "Diverge",
         "Peut converger ou diverger (critère insuffisant)",
-        "Converge absolument",
-        "Converge, mais pas nécessairement absolument"
+        "Converge, mais pas nécessairement absolument",
+        "Converge absolument"
       ],
-      "r": 2,
-      "x": "C'est la règle de d'Alembert (règle du rapport). Si L<1 → convergence absolue. Si L>1 → divergence. Si L=1 → critère inconclusif. Rappel : convergence absolue ⟹ convergence (mais pas l'inverse). Piège : ne pas distinguer convergence simple et absolue (réponse D) ou confondre L<1 avec L=1 (inconclusif, réponse B)."
+      "r": 3,
+      "x": "C'est la règle de d'Alembert (règle du rapport). Si L<1 → convergence absolue. Si L>1 → divergence. Si L=1 → critère inconclusif. Rappel : convergence absolue ⟹ convergence (mais pas l'inverse). Piège : ne pas distinguer convergence simple et absolue (réponse C) ou confondre L<1 avec L=1 (inconclusif, réponse B)."
     },
     {
       "q": "La suite u_n = (−1)ⁿ est :",
       "o": [
         "Convergente vers 0",
         "Convergente vers 1",
-        "Divergente par oscillation",
-        "Divergente vers +∞"
+        "Divergente vers +∞",
+        "Divergente par oscillation"
       ],
-      "r": 2,
+      "r": 3,
       "x": "u_n alterne entre +1 (n pair) et −1 (n impair). Elle admet deux valeurs d'adhérence distinctes (1 et −1), donc elle n'a pas de limite et diverge. Rappel : une suite converge ssi elle admet une unique valeur d'adhérence. Piège : confondre bornée et convergente (la suite est bornée mais diverge — bornée est nécessaire mais pas suffisante)."
     },
     {
@@ -20528,23 +20528,23 @@ const QUESTIONS = {
       "q": "Quelle est la solution particulière de y'' + y = 0 vérifiant y(0) = 1 et y'(0) = 0 ?",
       "o": [
         "y = sin(x)",
-        "y = cos(x)",
+        "y = e⁻ˣ",
         "y = eˣ",
-        "y = e⁻ˣ"
+        "y = cos(x)"
       ],
-      "r": 1,
-      "x": "Équation caractéristique r²+1=0, de racines r=±i. Solution générale : y=A·cos(x)+B·sin(x). Conditions initiales : y(0)=A=1 et y'(0)=B=0. Donc y=cos(x). Rappel : racines complexes r=α±βi → y=eᵅˣ(A·cos(βx)+B·sin(βx)) ; ici α=0, β=1. Piège : confondre avec y'+y=0 (racine réelle r=−1, solution e⁻ˣ, réponse D)."
+      "r": 3,
+      "x": "Équation caractéristique r²+1=0, de racines r=±i. Solution générale : y=A·cos(x)+B·sin(x). Conditions initiales : y(0)=A=1 et y'(0)=B=0. Donc y=cos(x). Rappel : racines complexes r=α±βi → y=eᵅˣ(A·cos(βx)+B·sin(βx)) ; ici α=0, β=1. Piège : confondre avec y'+y=0 (racine réelle r=−1, solution e⁻ˣ, réponse B)."
     },
     {
       "q": "La solution générale de y' = y² est :",
       "o": [
-        "y = Ceˣ",
-        "y = Ce^(x²)",
         "y = −1/(x+C)",
+        "y = Ce^(x²)",
+        "y = Ceˣ",
         "y = x + C"
       ],
-      "r": 2,
-      "x": "Équation à variables séparables : dy/y² = dx → −1/y = x+C₀ → y = −1/(x+C). Vérification : y' = 1/(x+C)² = y² ✓. Rappel : méthode de séparation des variables — isoler les termes en y d'un côté, en x de l'autre. Piège : confondre y'=y² (non-linéaire) avec y'=y (solution Ceˣ, réponse A) ou oublier le signe moins dans l'intégrale de y⁻²."
+      "r": 0,
+      "x": "Équation à variables séparables : dy/y² = dx → −1/y = x+C₀ → y = −1/(x+C). Vérification : y' = 1/(x+C)² = y² ✓. Rappel : méthode de séparation des variables — isoler les termes en y d'un côté, en x de l'autre. Piège : confondre y'=y² (non-linéaire) avec y'=y (solution Ceˣ, réponse C) ou oublier le signe moins dans l'intégrale de y⁻²."
     },
     {
       "q": "L'équation différentielle y'' − 4y' + 4y = 0 a pour solution générale :",
@@ -20572,12 +20572,12 @@ const QUESTIONS = {
       "q": "Une population P(t) croît selon P'=0,1P avec P(0)=1000. Quelle est la valeur de P(10) ?",
       "o": [
         "1100",
-        "1000e",
+        "2000",
         "1000e^(0,1)",
-        "2000"
+        "1000e"
       ],
-      "r": 1,
-      "x": "L'EDO P'=0,1P est une croissance exponentielle. Solution : P(t)=P(0)·e^(0,1t)=1000·e^(0,1t). En t=10 : P(10)=1000·e^(0,1×10)=1000·e^1=1000e≈2718. Rappel : P'=kP → P(t)=P₀eᵏᵗ. Piège : calculer P(10)=1000×(1+0,1×10)=2000 (croissance linéaire, réponse D) ou oublier de multiplier par t=10 et répondre 1000e^(0,1) (réponse C)."
+      "r": 3,
+      "x": "L'EDO P'=0,1P est une croissance exponentielle. Solution : P(t)=P(0)·e^(0,1t)=1000·e^(0,1t). En t=10 : P(10)=1000·e^(0,1×10)=1000·e^1=1000e≈2718. Rappel : P'=kP → P(t)=P₀eᵏᵗ. Piège : calculer P(10)=1000×(1+0,1×10)=2000 (croissance linéaire, réponse B) ou oublier de multiplier par t=10 et répondre 1000e^(0,1) (réponse C)."
     },
     {
       "q": "Calculer lim(x→0) (eˣ − 1 − x) / x².",
@@ -20605,22 +20605,22 @@ const QUESTIONS = {
       "q": "Calculer ∫ 1/(1+x²) dx.",
       "o": [
         "ln(1+x²) + C",
-        "arctan(x) + C",
+        "arcsin(x) + C",
         "1/(2x(1+x²)) + C",
-        "arcsin(x) + C"
+        "arctan(x) + C"
       ],
-      "r": 1,
-      "x": "C'est une intégrale de référence : ∫ dx/(1+x²) = arctan(x) + C. Rappel : à reconnaître immédiatement dans les concours. Piège : confondre avec ∫ dx/x² = −1/x (réponse C) ou avec ∫ dx/√(1−x²) = arcsin(x) (réponse D), ou penser à la dérivée logarithmique et écrire ln(1+x²)/2 (réponse A qui correspond à ∫ x/(1+x²)dx)."
+      "r": 3,
+      "x": "C'est une intégrale de référence : ∫ dx/(1+x²) = arctan(x) + C. Rappel : à reconnaître immédiatement dans les concours. Piège : confondre avec ∫ dx/x² = −1/x (réponse C) ou avec ∫ dx/√(1−x²) = arcsin(x) (réponse B), ou penser à la dérivée logarithmique et écrire ln(1+x²)/2 (réponse A qui correspond à ∫ x/(1+x²)dx)."
     },
     {
       "q": "Calculer ∫₀^π sin²(x) dx.",
       "o": [
         "0",
         "π/4",
-        "π/2",
-        "π"
+        "π",
+        "π/2"
       ],
-      "r": 2,
+      "r": 3,
       "x": "sin²(x) = (1−cos(2x))/2. Donc ∫₀^π sin²(x)dx = ∫₀^π (1−cos(2x))/2 dx = [x/2 − sin(2x)/4]₀^π = π/2 − 0 = π/2. Rappel : linéarisation sin²(x)=(1−cos(2x))/2, cos²(x)=(1+cos(2x))/2. Piège : croire que ∫₀^π sin²(x)dx = [−sin(x)cos(x)/2]₀^π = 0 (réponse A, erreur de primitive)."
     },
     {
@@ -20638,22 +20638,22 @@ const QUESTIONS = {
       "q": "Quelle est la primitive de f(x) = 1/x sur ]0,+∞[ ?",
       "o": [
         "−1/x²+ C",
-        "ln(x) + C",
+        "1/(x ln x) + C",
         "|ln(x)| + C",
-        "1/(x ln x) + C"
+        "ln(x) + C"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Sur ]0,+∞[, [ln(x)]' = 1/x. Donc la primitive est ln(x)+C. Sur ]−∞,0[, ce serait ln(−x)+C. Sur ℝ*, on écrit ln|x|+C. Rappel : ne pas confondre ∫(1/x)dx = ln|x|+C et ∫xⁿdx = xⁿ⁺¹/(n+1)+C (pour n≠−1). Piège : appliquer la règle de puissance à n=−1 et écrire x⁰/0 (impossible) ou répondre −1/x² (réponse A, dérivée de −1/x)."
     },
     {
       "q": "Calculer ∫ cos²(x) dx.",
       "o": [
         "sin²(x)/2 + C",
-        "x/2 + sin(2x)/4 + C",
+        "−sin(x)cos(x) + C",
         "x/2 − sin(2x)/4 + C",
-        "−sin(x)cos(x) + C"
+        "x/2 + sin(2x)/4 + C"
       ],
-      "r": 1,
+      "r": 3,
       "x": "cos²(x) = (1+cos(2x))/2. Donc ∫cos²(x)dx = ∫(1+cos(2x))/2 dx = x/2 + sin(2x)/4 + C. Rappel : linéarisation cos²(x)=(1+cos(2x))/2 (avec un signe + contrairement à sin²). Piège : confondre avec sin²(x)=(1−cos(2x))/2 et écrire un signe − (réponse C)."
     },
     {
@@ -20683,10 +20683,10 @@ const QUESTIONS = {
       "o": [
         "Oui, elle est déjà diagonale",
         "Oui, car ses valeurs propres sont distinctes",
-        "Non, car son espace propre associé à λ=3 est de dimension 1 alors que la multiplicité algébrique est 2",
-        "Non, car det(A) = 0"
+        "Non, car det(A) = 0",
+        "Non, car son espace propre associé à λ=3 est de dimension 1 alors que la multiplicité algébrique est 2"
       ],
-      "r": 2,
+      "r": 3,
       "x": "χ_A(λ)=(3−λ)²→ VP λ=3 de multiplicité algébrique 2. ker(A−3I)=ker[[0,1],[0,0]]=vect{(1,0)}, dimension 1≠2. Donc A n'est pas diagonalisable — c'est une matrice de Jordan. Rappel : diagonalisable ⟺ pour chaque VP, mult. géométrique = mult. algébrique. Piège : croire qu'une seule VP implique la diagonalisabilité (réponse B) ou confondre avec la matrice 3I qui est diagonale (réponse A)."
     },
     {
@@ -20737,23 +20737,23 @@ const QUESTIONS = {
       "q": "Soit f : ℝ → ℝ une fonction impaire. Alors ∫₋ₐᵃ f(x) dx vaut :",
       "o": [
         "2∫₀ᵃ f(x) dx",
-        "0",
+        "Cela dépend de a",
         "∫₀ᵃ f(x) dx",
-        "Cela dépend de a"
+        "0"
       ],
-      "r": 1,
+      "r": 3,
       "x": "f impaire ⟺ f(−x)=−f(x). On écrit ∫₋ₐᵃ f(x)dx = ∫₋ₐ⁰ f(x)dx + ∫₀ᵃ f(x)dx. Substitution u=−x dans le 1er terme : ∫₀ᵃ f(−u)(−du) = −∫₀ᵃ(−f(u))du = −∫₀ᵃf(u)du. Donc la somme vaut 0. Rappel : f paire → ∫₋ₐᵃ=2∫₀ᵃ ; f impaire → ∫₋ₐᵃ=0. Piège : appliquer la propriété des fonctions paires (réponse A) à une fonction impaire."
     },
     {
       "q": "Calculer ∫₀¹ 1/(1+x²) dx.",
       "o": [
-        "π/2",
-        "π/6",
         "π/4",
+        "π/6",
+        "π/2",
         "ln(2)/2"
       ],
-      "r": 2,
-      "x": "∫₀¹ 1/(1+x²)dx = [arctan(x)]₀¹ = arctan(1) − arctan(0) = π/4 − 0 = π/4. Rappel : arctan(0)=0, arctan(1)=π/4, arctan(+∞)=π/2. Piège : confondre arctan(1) avec arctan(∞)=π/2 (réponse A) ou avec π/6=arctan(1/√3) (réponse B)."
+      "r": 0,
+      "x": "∫₀¹ 1/(1+x²)dx = [arctan(x)]₀¹ = arctan(1) − arctan(0) = π/4 − 0 = π/4. Rappel : arctan(0)=0, arctan(1)=π/4, arctan(+∞)=π/2. Piège : confondre arctan(1) avec arctan(∞)=π/2 (réponse C) ou avec π/6=arctan(1/√3) (réponse B)."
     },
     {
       "q": "Une variable aléatoire X suit une loi N(μ,σ²). La probabilité P(μ−σ < X < μ+σ) est approximativement :",
@@ -20793,21 +20793,21 @@ const QUESTIONS = {
       "o": [
         "Var(X) + Var(Y) + 2Cov(X,Y)",
         "Var(X) × Var(Y)",
-        "Var(X) + Var(Y)",
-        "Var(X) − Var(Y)"
+        "Var(X) − Var(Y)",
+        "Var(X) + Var(Y)"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Formule générale : Var(X+Y) = Var(X)+Var(Y)+2Cov(X,Y). Si X et Y indépendants, Cov(X,Y)=0, donc Var(X+Y)=Var(X)+Var(Y). Rappel : l'indépendance est suffisante (mais pas nécessaire) pour avoir Cov=0. Piège : oublier la condition d'indépendance et écrire A (réponse A valide en général mais le terme 2Cov est 0 ici), ou multiplier les variances (réponse B, erreur classique)."
     },
     {
       "q": "La covariance Cov(X,Y) est liée au coefficient de corrélation ρ par :",
       "o": [
         "ρ = Cov(X,Y) / (Var(X)·Var(Y))",
-        "ρ = Cov(X,Y) / (σ_X · σ_Y)",
+        "ρ = Var(X)·Var(Y) / Cov(X,Y)",
         "ρ = Cov(X,Y)²",
-        "ρ = Var(X)·Var(Y) / Cov(X,Y)"
+        "ρ = Cov(X,Y) / (σ_X · σ_Y)"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le coefficient de corrélation de Pearson est ρ = Cov(X,Y)/(σ_X·σ_Y) où σ_X=√Var(X). Il vérifie −1 ≤ ρ ≤ 1. Rappel : ρ=±1 ↔ relation linéaire parfaite ; ρ=0 ↔ non corrélés (mais pas nécessairement indépendants). Piège : diviser par les variances au lieu des écarts-types (réponse A, erreur de dimension fréquente)."
     },
     {
@@ -20824,46 +20824,46 @@ const QUESTIONS = {
     {
       "q": "Pour une loi normale N(μ,σ²), la relation entre espérance, médiane et mode est :",
       "o": [
-        "Espérance > Médiane > Mode",
         "Espérance = Médiane = Mode = μ",
+        "Espérance > Médiane > Mode",
         "Espérance < Médiane < Mode",
         "Médiane = μ, mais Mode ≠ μ"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La loi normale est symétrique autour de μ. Par symétrie, les trois mesures de tendance centrale coïncident : E(X)=médiane=mode=μ. Rappel : c'est une propriété exclusive des lois symétriques unimodales. Piège : croire que les trois mesures sont toujours différentes (erreur conceptuelle fréquente par confusion avec des lois asymétriques)."
     },
     {
       "q": "L'intervalle de confiance à 95% pour μ avec σ connu et n grand est :",
       "o": [
-        "[X̄−1,65σ/√n ; X̄+1,65σ/√n]",
         "[X̄−1,96σ/√n ; X̄+1,96σ/√n]",
+        "[X̄−1,65σ/√n ; X̄+1,65σ/√n]",
         "[X̄−2,58σ/√n ; X̄+2,58σ/√n]",
         "[X̄−σ/√n ; X̄+σ/√n]"
       ],
-      "r": 1,
-      "x": "Pour un niveau de confiance de 95%, le quantile z_{α/2}=z_{0,025}=1,96. IC 95% : [X̄±1,96σ/√n]. Rappel : z_{0,05}=1,645 (90%), z_{0,025}=1,96 (95%), z_{0,005}=2,576 (99%). Piège : utiliser 1,645 (IC à 90%, réponse A) ou 2,576 (IC à 99%, réponse C) à la place de 1,96."
+      "r": 0,
+      "x": "Pour un niveau de confiance de 95%, le quantile z_{α/2}=z_{0,025}=1,96. IC 95% : [X̄±1,96σ/√n]. Rappel : z_{0,05}=1,645 (90%), z_{0,025}=1,96 (95%), z_{0,005}=2,576 (99%). Piège : utiliser 1,645 (IC à 90%, réponse B) ou 2,576 (IC à 99%, réponse C) à la place de 1,96."
     },
     {
       "q": "Le test du χ² (chi-deux) d'adéquation sert à :",
       "o": [
-        "Comparer les variances de deux populations",
         "Tester si une variable suit une loi théorique donnée",
+        "Comparer les variances de deux populations",
         "Tester l'égalité de deux moyennes",
         "Calculer le coefficient de corrélation"
       ],
-      "r": 1,
-      "x": "Le test du χ² d'adéquation (goodness of fit) permet de tester H₀ : l'échantillon provient d'une loi théorique spécifiée (normale, Poisson, uniforme…). La statistique χ²=Σ(Oᵢ−Eᵢ)²/Eᵢ. Rappel : test χ² d'indépendance (tableau de contingence) ≠ test χ² d'adéquation (une variable). Piège : confondre avec le test de Fisher (comparaison de variances, réponse A) ou le test de Student (comparaison de moyennes, réponse C)."
+      "r": 0,
+      "x": "Le test du χ² d'adéquation (goodness of fit) permet de tester H₀ : l'échantillon provient d'une loi théorique spécifiée (normale, Poisson, uniforme…). La statistique χ²=Σ(Oᵢ−Eᵢ)²/Eᵢ. Rappel : test χ² d'indépendance (tableau de contingence) ≠ test χ² d'adéquation (une variable). Piège : confondre avec le test de Fisher (comparaison de variances, réponse B) ou le test de Student (comparaison de moyennes, réponse C)."
     },
     {
       "q": "L'espace vectoriel des polynômes de degré ≤ 2 à coefficients réels, noté ℝ₂[X], a pour dimension :",
       "o": [
-        "2",
         "3",
+        "2",
         "4",
         "+∞"
       ],
-      "r": 1,
-      "x": "Une base de ℝ₂[X] est {1, X, X²} — trois polynômes linéairement indépendants qui engendrent tout l'espace. Donc dim(ℝ₂[X])=3. Rappel : ℝₙ[X] (polynômes de degré ≤ n) a pour dimension n+1. Piège : confondre \"degré ≤ 2\" avec \"exactement 2 termes\" et répondre 2 (réponse A), ou croire que l'espace des polynômes est de dimension infinie (réponse D, vrai pour tous les degrés)."
+      "r": 0,
+      "x": "Une base de ℝ₂[X] est {1, X, X²} — trois polynômes linéairement indépendants qui engendrent tout l'espace. Donc dim(ℝ₂[X])=3. Rappel : ℝₙ[X] (polynômes de degré ≤ n) a pour dimension n+1. Piège : confondre \"degré ≤ 2\" avec \"exactement 2 termes\" et répondre 2 (réponse B), ou croire que l'espace des polynômes est de dimension infinie (réponse D, vrai pour tous les degrés)."
     },
     {
       "q": "Soit P(X) = X⁴ − 1. Combien de racines réelles possède ce polynôme ?",
@@ -20923,13 +20923,13 @@ const QUESTIONS = {
     {
       "q": "Résoudre l'inéquation |x − 3| < 2.",
       "o": [
-        "x ∈ ]−∞, 1[ ∪ ]5, +∞[",
         "x ∈ ]1, 5[",
+        "x ∈ ]−∞, 1[ ∪ ]5, +∞[",
         "x ∈ [1, 5]",
         "x ∈ ]−∞, 5["
       ],
-      "r": 1,
-      "x": "|x−3|<2 ⟺ −2<x−3<2 ⟺ 1<x<5 ⟺ x∈]1,5[. Rappel : |u|<a ⟺ −a<u<a pour a>0 ; |u|>a ⟺ u<−a ou u>a. Piège : inverser et résoudre |x−3|>2 (réponse A, complémentaire), ou inclure les bornes (réponse C, qui correspondrait à ≤)."
+      "r": 0,
+      "x": "|x−3|<2 ⟺ −2<x−3<2 ⟺ 1<x<5 ⟺ x∈]1,5[. Rappel : |u|<a ⟺ −a<u<a pour a>0 ; |u|>a ⟺ u<−a ou u>a. Piège : inverser et résoudre |x−3|>2 (réponse B, complémentaire), ou inclure les bornes (réponse C, qui correspondrait à ≤)."
     },
     {
       "q": "La somme des n premiers entiers naturels 1+2+3+...+n est égale à :",
@@ -20989,23 +20989,23 @@ const QUESTIONS = {
     {
       "q": "Résoudre l'EDO y' + (1/x)y = x sur ]0,+∞[.",
       "o": [
-        "y = x²/2 + C/x",
         "y = x²/3 + C/x",
+        "y = x²/2 + C/x",
         "y = x + C/x",
         "y = Cx²"
       ],
-      "r": 1,
-      "x": "Équation linéaire du 1er ordre. Facteur intégrant : μ=e^(∫1/x dx)=eˡⁿˣ=x. Multiplier : (xy)'=x². Intégrer : xy=x³/3+C → y=x²/3+C/x. Vérification : y'=2x/3−C/x² et y'+y/x=2x/3−C/x²+x/3+C/x²=x ✓. Piège : oublier de diviser par x à la fin ou intégrer x·y'+(1/x)y=x² incorrectement et trouver x²/2 (réponse A, erreur sur la primitive de x²)."
+      "r": 0,
+      "x": "Équation linéaire du 1er ordre. Facteur intégrant : μ=e^(∫1/x dx)=eˡⁿˣ=x. Multiplier : (xy)'=x². Intégrer : xy=x³/3+C → y=x²/3+C/x. Vérification : y'=2x/3−C/x² et y'+y/x=2x/3−C/x²+x/3+C/x²=x ✓. Piège : oublier de diviser par x à la fin ou intégrer x·y'+(1/x)y=x² incorrectement et trouver x²/2 (réponse B, erreur sur la primitive de x²)."
     },
     {
       "q": "Quelle est la solution de y'' + 4y = cos(2x) ?",
       "o": [
-        "y = A·cos(2x) + B·sin(2x)",
         "y = A·cos(2x) + B·sin(2x) + (x/4)sin(2x)",
+        "y = A·cos(2x) + B·sin(2x)",
         "y = A·cos(2x) + B·sin(2x) + cos(2x)/4",
         "y = Ae^(2x) + Be^(−2x)"
       ],
-      "r": 1,
+      "r": 0,
       "x": "L'équation homogène y''+4y=0 a pour solution A·cos(2x)+B·sin(2x). Le second membre cos(2x) correspond à la fréquence propre (ω=2) → résonance. La solution particulière est de la forme x(C·cos(2x)+D·sin(2x)). Calcul donne C=0, D=1/4. Solution générale : A·cos(2x)+B·sin(2x)+(x/4)sin(2x). Piège : essayer une solution particulière cos(2x)/4 sans tenir compte de la résonance (réponse C, qui s'annule après substitution)."
     },
     {
@@ -21022,23 +21022,23 @@ const QUESTIONS = {
     {
       "q": "Calculer le rang de la matrice M = [[1,2,1],[2,4,3],[3,6,4]].",
       "o": [
-        "1",
         "2",
+        "1",
         "3",
         "0"
       ],
-      "r": 1,
-      "x": "L₂−2L₁→(0,0,1) et L₃−3L₁→(0,0,1) → L₃−L₂→(0,0,0). Après échelonnage : [[1,2,1],[0,0,1],[0,0,0]]. Deux lignes non nulles → rang = 2. Remarque : col 1 et col 3 sont libres ; col 2 est liée à col 1 (col2=2·col1). Piège : voir 3 lignes et conclure rang=3 (réponse C), ou voir que les colonnes 1 et 2 sont proportionnelles et conclure rang=1 (réponse A, en oubliant la colonne 3)."
+      "r": 0,
+      "x": "L₂−2L₁→(0,0,1) et L₃−3L₁→(0,0,1) → L₃−L₂→(0,0,0). Après échelonnage : [[1,2,1],[0,0,1],[0,0,0]]. Deux lignes non nulles → rang = 2. Remarque : col 1 et col 3 sont libres ; col 2 est liée à col 1 (col2=2·col1). Piège : voir 3 lignes et conclure rang=3 (réponse C), ou voir que les colonnes 1 et 2 sont proportionnelles et conclure rang=1 (réponse B, en oubliant la colonne 3)."
     },
     {
       "q": "Soit f : E→F une application linéaire. Le théorème du rang affirme que :",
       "o": [
         "dim(ker f) = dim(Im f)",
-        "dim(E) = dim(ker f) + dim(Im f)",
+        "dim(Im f) = dim(F)",
         "dim(F) = dim(ker f) + dim(Im f)",
-        "dim(Im f) = dim(F)"
+        "dim(E) = dim(ker f) + dim(Im f)"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Théorème du rang (ou théorème noyau-image) : dim(E) = dim(ker f) + dim(Im f) = nullité + rang. Rappel : ce théorème est fondamental pour déterminer l'injectivité (ker={0} ⟺ dim(ker)=0) et la surjectivité (Im=F ⟺ dim(Im)=dim(F)). Piège : écrire dim(F) au lieu de dim(E) (réponse C — vrai seulement si f est surjective)."
     },
     {
@@ -21056,11 +21056,11 @@ const QUESTIONS = {
       "q": "Les vecteurs u=(1,2) et v=(−2,1) dans ℝ² sont :",
       "o": [
         "Colinéaires",
-        "Orthogonaux",
+        "Opposés",
         "Égaux",
-        "Opposés"
+        "Orthogonaux"
       ],
-      "r": 1,
+      "r": 3,
       "x": "u·v = 1×(−2) + 2×1 = −2+2 = 0 → u et v sont orthogonaux. Vérification : u=(1,2) est dirigé selon une pente de 2 ; v=(−2,1) selon une pente de −1/2 = −1/(2) ; produit des pentes = −1 ✓. Piège : croire que u et v sont colinéaires car v semble \"lié\" à u (réponse A — ils sont perpendiculaires, non parallèles)."
     },
     {
@@ -21099,23 +21099,23 @@ const QUESTIONS = {
     {
       "q": "La convergence en moyenne quadratique de Xₙ vers X signifie :",
       "o": [
-        "Xₙ(ω)→X(ω) pour presque tout ω",
         "E[(Xₙ−X)²] → 0",
+        "Xₙ(ω)→X(ω) pour presque tout ω",
         "P(|Xₙ−X|>ε) → 0 pour tout ε>0",
         "Xₙ et X ont la même loi pour n grand"
       ],
-      "r": 1,
-      "x": "Convergence en moyenne quadratique (ou L²) : E[(Xₙ−X)²]→0. Hiérarchie des convergences : L² ⟹ convergence en probabilité (réponse C) ; convergence p.s. (réponse A) ⟹ convergence en probabilité, mais pas de lien direct entre L² et p.s. Rappel : la convergence en loi (réponse D) est la plus faible. Piège : confondre les modes de convergence, fréquente en probabilités avancées."
+      "r": 0,
+      "x": "Convergence en moyenne quadratique (ou L²) : E[(Xₙ−X)²]→0. Hiérarchie des convergences : L² ⟹ convergence en probabilité (réponse C) ; convergence p.s. (réponse B) ⟹ convergence en probabilité, mais pas de lien direct entre L² et p.s. Rappel : la convergence en loi (réponse D) est la plus faible. Piège : confondre les modes de convergence, fréquente en probabilités avancées."
     },
     {
       "q": "La loi des grands nombres (version faible) affirme que :",
       "o": [
         "(1/n)ΣXᵢ converge presque sûrement vers μ",
-        "(1/n)ΣXᵢ converge en probabilité vers μ",
+        "ΣXᵢ converge vers nμ",
         "(1/n)ΣXᵢ converge en loi vers N(0,1)",
-        "ΣXᵢ converge vers nμ"
+        "(1/n)ΣXᵢ converge en probabilité vers μ"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La loi faible des grands nombres (Khintchine) : si X₁,...,Xₙ i.i.d. avec E(Xᵢ)=μ, alors X̄ₙ →(P) μ (convergence en probabilité). La loi forte dit convergence p.s. (réponse A). Le TCL (réponse C) est un résultat différent. Rappel : faible = convergence en probabilité ; forte = convergence presque sûre (plus fort). Piège : confondre loi faible et forte, ou avec le TCL (réponse C, qui dit √n(X̄ₙ−μ)/σ →loi N(0,1))."
     }
   ],
@@ -21389,10 +21389,10 @@ const QUESTIONS = {
       "o": [
         "Koudougou",
         "Banfora",
-        "Bobo-Dioulasso",
-        "Kaya"
+        "Kaya",
+        "Bobo-Dioulasso"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Bobo-Dioulasso est la deuxième ville du Burkina Faso avec plus de 900 000 habitants selon le RGPH de 2019. Considérée comme la capitale économique et culturelle du pays, elle abrite les principales industries agroalimentaires, textiles et les infrastructures de transport du pays."
     },
     {
@@ -21443,11 +21443,11 @@ const QUESTIONS = {
       "q": "Quelle est la principale activité économique de la majorité de la population rurale du Burkina Faso ?",
       "o": [
         "L'élevage extensif de bovins et caprins",
-        "L'agriculture vivrière et de rente",
+        "L'exploitation minière artisanale de l'or",
         "La pêche artisanale sur les fleuves et barrages",
-        "L'exploitation minière artisanale de l'or"
+        "L'agriculture vivrière et de rente"
       ],
-      "r": 1,
+      "r": 3,
       "x": "L'agriculture vivrière et de rente occupe plus de 80% de la population active burkinabè. Les principales cultures vivrières sont le sorgho, le mil et le maïs. L'or et le coton sont les principales activités génératrices de devises d'exportation."
     },
     {
@@ -21741,10 +21741,10 @@ const QUESTIONS = {
       "o": [
         "La diminution du taux de chômage sur une courte période",
         "L'augmentation des réserves en or d'un pays",
-        "La hausse généralisée et durable du niveau des prix",
-        "La baisse de la valeur des exportations d'un pays"
+        "La baisse de la valeur des exportations d'un pays",
+        "La hausse généralisée et durable du niveau des prix"
       ],
-      "r": 2,
+      "r": 3,
       "x": "L'inflation désigne la hausse généralisée et persistante des prix des biens et services dans une économie, entrainant une baisse du pouvoir d'achat de la monnaie. Elle est mesurée par l'indice des prix à la consommation (IPC). La déflation est son phénomène inverse."
     },
     {
@@ -21817,11 +21817,11 @@ const QUESTIONS = {
       "q": "Quel romancier nigérian est l'auteur de \"Things Fall Apart\" (1958) ?",
       "o": [
         "Wole Soyinka",
-        "Chinua Achebe",
+        "Chimamanda Ngozi Adichie",
         "Ben Okri",
-        "Chimamanda Ngozi Adichie"
+        "Chinua Achebe"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Chinua Achebé (1930-2013) est l'auteur de \"Things Fall Apart\", traduit en plus de 50 langues et vendu a plus de 20 millions d'exemplaires. Ce roman décrit l'impact de la colonisation sur une communauté igbo au Nigeria. Wolé Soyinka est le premier Africain à recevoir le Prix Nobel de littérature (1986)."
     },
     {
@@ -21905,11 +21905,11 @@ const QUESTIONS = {
       "q": "Quel est le symbole chimique du fer dans le tableau périodique des éléments ?",
       "o": [
         "Fr",
-        "Fe",
+        "Fl",
         "Fé",
-        "Fl"
+        "Fe"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le symbole chimique du fer est Fe, tiré du latin \"ferrum\". Le fer (numéro atomique 26) est le métal le plus abondant sur Terre et le composant principal de l'acier. Fr est le francium, Fl le flerovium, et ces symboles n'ont aucun rapport avec le fer."
     },
     {
@@ -22124,12 +22124,12 @@ const QUESTIONS = {
     {
       "q": "Dans laquelle de ces phrases le participe passé est-il CORRECTEMENT accordé ?",
       "o": [
-        "Les rapports que le directeur a rédigé sont prêts.",
-        "La secrétaire s'est souvenu de la réunion.",
         "Les élèves que j'ai interrogés ont bien répondu.",
+        "La secrétaire s'est souvenu de la réunion.",
+        "Les rapports que le directeur a rédigé sont prêts.",
         "Les fenêtres que j'ai ouverte pour aérer la salle."
       ],
-      "r": 2,
+      "r": 0,
       "x": "Dans « Les élèves que j'ai interrogés », le COD « que » (représentant « les élèves », masculin pluriel) est placé avant le verbe, donc le participe s'accorde → « interrogés ». En A, il faudrait « rédigés » ; en B, « souvenue » (verbe pronominal essentiel) ; en D, « ouvertes »."
     },
     {
@@ -22499,22 +22499,22 @@ const QUESTIONS = {
       "q": "En quelle année l'Algérie a-t-elle officiellement obtenu son indépendance ?",
       "o": [
         "1958",
-        "1962",
+        "1965",
         "1960",
-        "1965"
+        "1962"
       ],
-      "r": 1,
+      "r": 3,
       "x": "L'Algérie a accédé à l'indépendance le 5 juillet 1962, après une guerre d'indépendance débutée le 1er novembre 1954 (Toussaint Rouge). Les Accords d'Évian du 18 mars 1962 ont mis fin au conflit. Cette indépendance a été l'une des plus longues et des plus âpres luttes de décolonisation en Afrique."
     },
     {
       "q": "Quel est le nom donné à la révolution populaire qui a renversé le régime de Mouammar Kadhafi en Libye en 2011 ?",
       "o": [
-        "La Révolution du Jasmin",
-        "La Révolution de Velours",
         "La Révolution du 17 février",
+        "La Révolution de Velours",
+        "La Révolution du Jasmin",
         "La Révolution de la Dignité"
       ],
-      "r": 2,
+      "r": 0,
       "x": "La Révolution du 17 février 2011 a mis fin au régime de Mouammar Kadhafi après 42 ans au pouvoir, avec l'appui d'une intervention militaire de l'OTAN. Kadhafi fut capturé et tué le 20 octobre 2011. La « Révolution du Jasmin » désigne la révolution tunisienne de 2011 qui a lancé le Printemps arabe."
     },
     {
@@ -23125,12 +23125,12 @@ const QUESTIONS = {
     {
       "q": "Quel est le nom du processus biologique par lequel les végétaux convertissent la lumière solaire en énergie chimique (glucose), en absorbant le CO₂ et en libérant de l'O₂ ?",
       "o": [
-        "La respiration cellulaire aérobie",
-        "La transpiration végétale",
         "La photosynthèse",
+        "La transpiration végétale",
+        "La respiration cellulaire aérobie",
         "La décomposition organique bactérienne"
       ],
-      "r": 2,
+      "r": 0,
       "x": "La photosynthèse est réalisée dans les chloroplastes grâce à la chlorophylle. Elle transforme l'énergie lumineuse, le CO₂ et l'eau en glucose et en oxygène. C'est le processus inverse de la respiration. Sans photosynthèse, pas de production d'oxygène ni de nourriture pour les chaînes alimentaires terrestres."
     },
     {
@@ -23466,12 +23466,12 @@ const QUESTIONS = {
     {
       "q": "Quel document fondateur du droit international humanitaire a été adopté à l'initiative d'Henri Dunant, fondateur de la Croix-Rouge ?",
       "o": [
-        "La Convention de La Haye sur les lois de la guerre",
-        "Le Protocole de Genève sur les gaz asphyxiants de 1925",
         "La Convention de Genève de 1864",
+        "Le Protocole de Genève sur les gaz asphyxiants de 1925",
+        "La Convention de La Haye sur les lois de la guerre",
         "La Déclaration de Saint-Pétersbourg de 1868"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Henri Dunant (1828-1910), témoin de la bataille de Solferino (1859), a fondé la Croix-Rouge et initié la Convention de Genève de 1864, premier traité international de protection des blessés de guerre et du personnel médical. Dunant a reçu le premier prix Nobel de la Paix en 1901."
     },
     {
@@ -23775,11 +23775,11 @@ const QUESTIONS = {
       "q": "Dans la suite logique suivante : 2, 4, 8, 16, 32, … quel est le terme qui suit 32 ?",
       "o": [
         "56",
-        "64",
+        "72",
         "48",
-        "72"
+        "64"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Cette suite géométrique de raison 2 double chaque terme : 2 × 2 = 4 ; 4 × 2 = 8 ; 8 × 2 = 16 ; 16 × 2 = 32 ; 32 × 2 = 64. Ce type de suite est dit « géométrique » de raison r = 2. Les suites logiques (arithmétiques, géométriques ou mixtes) sont fréquentes dans les tests psychotechniques des concours."
     },
     {
@@ -23884,12 +23884,12 @@ const QUESTIONS = {
     {
       "q": "Quelle organisation internationale regroupe les principaux pays producteurs et exportateurs de pétrole brut et coordonne leur politique de production pour influencer les prix mondiaux ?",
       "o": [
-        "L'Agence Internationale de l'Énergie (AIE) — organisation des pays consommateurs",
-        "Le Forum des pays exportateurs de gaz (FPEG)",
         "L'OPEP (Organisation des Pays Exportateurs de Pétrole)",
+        "Le Forum des pays exportateurs de gaz (FPEG)",
+        "L'Agence Internationale de l'Énergie (AIE) — organisation des pays consommateurs",
         "La Banque Mondiale pour l'Énergie et le Développement"
       ],
-      "r": 2,
+      "r": 0,
       "x": "L'OPEP (Organisation des Pays Exportateurs de Pétrole), fondée en 1960 à Bagdad et dont le siège est à Vienne (Autriche), coordonne la politique pétrolière de ses membres (Saudi Aramco, Venezuela, Nigeria, Iran, Irak, etc.). Elle fixe des quotas de production pour réguler l'offre et les prix du pétrole brut sur les marchés mondiaux."
     },
     {
@@ -24291,12 +24291,12 @@ const QUESTIONS = {
     {
       "q": "Quel est le premier satellite panafricain lancé en orbite et à quelle date ?",
       "o": [
-        "NigeriaSat-1, lancé le 21 décembre 2003",
         "RASCOM-QAF1, lancé le 21 décembre 2007",
+        "NigeriaSat-1, lancé le 21 décembre 2003",
         "EgyptSat-1, lancé le 15 juin 2007",
         "AlSat-1, lancé le 15 juin 2002"
       ],
-      "r": 1,
+      "r": 0,
       "x": "RASCOM-QAF1 (Regional African Satellite Communications Organization) a été le premier satellite africain lancé en orbite le 21 décembre 2007. Il visait à réduire le coût des télécommunications en Afrique subsaharienne."
     },
     {
@@ -24324,12 +24324,12 @@ const QUESTIONS = {
     {
       "q": "Comment appelle-t-on la science qui étudie les vaisseaux sanguins ?",
       "o": [
-        "Cardiologie",
-        "Hématologie",
         "Angiologie",
+        "Hématologie",
+        "Cardiologie",
         "Phlébologie"
       ],
-      "r": 2,
+      "r": 0,
       "x": "L'angiologie est la spécialité médicale qui étudie et traite les maladies des vaisseaux sanguins (artères, veines, capillaires) et lymphatiques. Elle englobe la phlébologie (veines) et l'artériologie (artères)."
     },
     {
@@ -24423,12 +24423,12 @@ const QUESTIONS = {
     {
       "q": "Quelles sont les cellules sentinelles du système immunitaire inné ?",
       "o": [
-        "Les lymphocytes T et B",
         "Les cellules dendritiques, les macrophages et les mastocytes",
+        "Les lymphocytes T et B",
         "Les plaquettes et les érythrocytes",
         "Les fibroblastes et les ostéoblastes"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Les cellules sentinelles de l'immunité innée sont les cellules dendritiques (présentatrices d'antigènes), les macrophages (phagocytose) et les mastocytes (réponse inflammatoire). Elles constituent la première ligne de défense avant l'activation de l'immunité adaptative."
     },
     {
@@ -24456,12 +24456,12 @@ const QUESTIONS = {
     {
       "q": "Quelle est la plus grande mer fermée (endoréique) du monde ?",
       "o": [
-        "La mer Morte",
-        "La mer d'Aral",
         "La mer Caspienne",
+        "La mer d'Aral",
+        "La mer Morte",
         "Le lac Baikal"
       ],
-      "r": 2,
+      "r": 0,
       "x": "La mer Caspienne est techniquement le plus grand lac du monde (371 000 km²) et la plus grande mer intérieure fermée. Bordée par la Russie, le Kazakhstan, le Turkménistan, l'Iran et l'Azerbaïdjan, elle est riche en hydrocarbures et en esturgeon (caviar)."
     },
     {
@@ -24589,11 +24589,11 @@ const QUESTIONS = {
       "q": "Quelle est la dernière œuvre complète publiée par Ahmadou Kourouma ?",
       "o": [
         "\"Quand on refuse, on dit non\"",
-        "\"Allah n'est pas obligé\"",
+        "\"Monnè, outrages et défis\"",
         "\"En attendant le vote des bêtes sauvages\"",
-        "\"Monnè, outrages et défis\""
+        "\"Allah n'est pas obligé\""
       ],
-      "r": 1,
+      "r": 3,
       "x": "La dernière œuvre complète publiée par Kourouma est \"Allah n'est pas obligé\" (2000, Prix Renaudot). \"Quand on refuse on dit non\" (2004) est un roman inachevé publié à titre posthume. Kourouma est décédé en décembre 2003."
     },
     {
@@ -24610,12 +24610,12 @@ const QUESTIONS = {
     {
       "q": "Qui est l'auteur de l'ouvrage \"Éduquer ou périr\" ?",
       "o": [
-        "Thomas Sankara",
-        "Norbert Zongo",
         "Joseph Ki-Zerbo",
+        "Norbert Zongo",
+        "Thomas Sankara",
         "Valère Somé"
       ],
-      "r": 2,
+      "r": 0,
       "x": "\"Éduquer ou périr\" est un ouvrage de l'historien burkinabè Joseph Ki-Zerbo (1922-2006), qui plaide pour une éducation africaine ancrée dans les réalités et valeurs du continent. Ki-Zerbo est aussi l'auteur de \"Histoire de l'Afrique noire\", référence fondamentale de l'historiographie africaine."
     },
     {
@@ -24821,10 +24821,10 @@ const QUESTIONS = {
       "o": [
         "Le baromètre",
         "L'héliomètre",
-        "L'héliographe",
-        "L'actinomètre"
+        "L'actinomètre",
+        "L'héliographe"
       ],
-      "r": 2,
+      "r": 3,
       "x": "L'héliographe est l'instrument météorologique qui mesure la durée d'ensoleillement quotidien. Le modèle classique (Campbell-Stokes) utilise une sphère de verre qui concentre les rayons solaires sur une bande de papier graduée qui se brûle proportionnellement à l'intensité du soleil."
     },
     {
@@ -24985,11 +24985,11 @@ const QUESTIONS = {
       "q": "Où et quand a été instituée l'architecture du nouveau Système Monétaire International (SMI) ?",
       "o": [
         "À Washington en décembre 1945",
-        "À Bretton Woods en juillet 1944",
+        "À New York en janvier 1945",
         "À Genève en mai 1946",
-        "À New York en janvier 1945"
+        "À Bretton Woods en juillet 1944"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le nouveau Système Monétaire International (SMI) a été institué lors de la Conférence de Bretton Woods (New Hampshire, USA) en juillet 1944. Cette conférence a créé le FMI et la Banque mondiale, établi l'étalon or-dollar, et posé les bases de l'ordre économique international d'après-guerre."
     },
     {
@@ -25105,12 +25105,12 @@ const QUESTIONS = {
     {
       "q": "Quel est le premier pays africain à avoir remporté la Coupe d'Afrique des Nations, et en quelle année ?",
       "o": [
-        "Nigeria en 1963",
         "Égypte en 1957",
+        "Nigeria en 1963",
         "Ghana en 1963",
         "Éthiopie en 1962"
       ],
-      "r": 1,
+      "r": 0,
       "x": "L'Égypte a remporté la toute première Coupe d'Afrique des Nations (CAN) organisée en 1957 au Soudan. Seuls 3 pays y ont participé : l'Égypte (vainqueur), l'Éthiopie et le Soudan. L'Égypte est le pays le plus titré de la compétition avec 7 trophées."
     },
     {
@@ -25118,10 +25118,10 @@ const QUESTIONS = {
       "o": [
         "Colibri d'Elena",
         "Chauve-souris bourdon de Kitti",
-        "Paedophryne amauensis",
-        "Musaraigne étrusque"
+        "Musaraigne étrusque",
+        "Paedophryne amauensis"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Paedophryne amauensis est une minuscule grenouille découverte en Papouasie-Nouvelle-Guinée. Avec une longueur moyenne d'environ 7,7 mm, elle est considérée comme le plus petit vertébré connu au monde."
     },
     {
@@ -25215,12 +25215,12 @@ const QUESTIONS = {
     {
       "q": "Qui est le père du grégarisme africain ?",
       "o": [
-        "Norbert Zongo",
-        "Thomas Sankara",
         "Laurent Bado",
+        "Thomas Sankara",
+        "Norbert Zongo",
         "Joseph Ki-Zerbo"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Laurent Bado est un intellectuel et homme politique burkinabè reconnu comme le théoricien du grégarisme africain, une doctrine qui valorise la solidarité communautaire et les valeurs collectives africaines comme alternative au libéralisme individualiste occidental."
     },
     {
@@ -25271,11 +25271,11 @@ const QUESTIONS = {
       "q": "Quelle journée est célébrée le 20 mars dans le monde francophone ?",
       "o": [
         "Journée mondiale de l'eau",
-        "Journée mondiale de la Francophonie",
+        "Journée nationale de pardon au Burkina Faso",
         "Journée mondiale de la météorologie",
-        "Journée nationale de pardon au Burkina Faso"
+        "Journée mondiale de la Francophonie"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le 20 mars est la Journée mondiale de la Francophonie, célébrée dans les 88 États et gouvernements membres de l'Organisation Internationale de la Francophonie (OIF). Elle promeut la langue française et la diversité culturelle francophone."
     },
     {
@@ -25369,12 +25369,12 @@ const QUESTIONS = {
     {
       "q": "Quelle journée internationale est célébrée le 1er mai ?",
       "o": [
-        "Journée mondiale de l'environnement",
-        "Journée internationale de la liberté de la presse",
         "Journée internationale du travail",
+        "Journée internationale de la liberté de la presse",
+        "Journée mondiale de l'environnement",
         "Journée mondiale de la santé"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Le 1er mai est la Journée internationale du travail (Fête du Travail). Elle commémore les émeutes ouvrières de Chicago de 1886 et célèbre les droits des travailleurs dans le monde entier."
     },
     {
@@ -25490,23 +25490,23 @@ const QUESTIONS = {
     {
       "q": "Quelle journée mondiale est célébrée le 26 juin ?",
       "o": [
-        "Journée mondiale de lutte contre la tuberculose",
-        "Journée mondiale de population",
         "Journée mondiale de lutte contre la drogue",
+        "Journée mondiale de population",
+        "Journée mondiale de lutte contre la tuberculose",
         "Journée mondiale de lutte contre l'hépatite"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Le 26 juin est la Journée mondiale de lutte contre la drogue et le trafic illicite, proclamée par l'ONU en 1987. Elle vise à sensibiliser le public aux dangers liés à l'abus des drogues et à renforcer la coopération internationale contre ce fléau."
     },
     {
       "q": "Quelle journée mondiale est célébrée le 11 juillet ?",
       "o": [
         "Journée mondiale de lutte contre la drogue",
-        "Journée mondiale de population",
+        "Journée internationale de la jeunesse",
         "Journée mondiale de lutte contre l'hépatite",
-        "Journée internationale de la jeunesse"
+        "Journée mondiale de population"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le 11 juillet est la Journée mondiale de la population, proclamée par l'ONU en 1990. Elle attire l'attention sur l'urgence et l'importance des questions démographiques, notamment dans le contexte africain où la croissance démographique est rapide."
     },
     {
@@ -25523,12 +25523,12 @@ const QUESTIONS = {
     {
       "q": "Quelle journée internationale est célébrée le 12 août ?",
       "o": [
-        "Journée mondiale de lutte contre l'hépatite",
         "Journée internationale de la jeunesse",
+        "Journée mondiale de lutte contre l'hépatite",
         "Journée internationale de l'alphabétisation",
         "Journée mondiale de la Paix"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le 12 août est la Journée internationale de la jeunesse, proclamée par l'ONU en 1999. Elle met en lumière les défis et les opportunités auxquels font face les jeunes du monde entier et encourage leur participation active dans la société."
     },
     {
@@ -25601,22 +25601,22 @@ const QUESTIONS = {
       "q": "Quelle journée mondiale est célébrée le 16 octobre ?",
       "o": [
         "Journée mondiale de la Poste",
-        "Journée mondiale de l'alimentation",
+        "Journée africaine des droits de l'homme",
         "Journée mondiale du refus de la misère",
-        "Journée africaine des droits de l'homme"
+        "Journée mondiale de l'alimentation"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le 16 octobre est la Journée mondiale de l'alimentation, célébrée depuis 1979 pour commémorer la fondation de la FAO en 1945. Elle attire l'attention sur la faim dans le monde et promeut la souveraineté alimentaire, priorité de la Transition burkinabè."
     },
     {
       "q": "Quelle journée mondiale est célébrée le 17 octobre ?",
       "o": [
-        "Journée mondiale de l'alimentation",
-        "Journée africaine des droits de l'homme",
         "Journée mondiale du refus de la misère",
+        "Journée africaine des droits de l'homme",
+        "Journée mondiale de l'alimentation",
         "Journée mondiale de Nations-Unies"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Le 17 octobre est la Journée mondiale du refus de la misère, créée en 1987 par Joseph Wresinski, fondateur d'ATD Quart Monde. Elle invite à reconnaître la dignité des personnes vivant dans l'extrême pauvreté et à lutter contre l'exclusion sociale."
     },
     {
@@ -25765,12 +25765,12 @@ const QUESTIONS = {
     {
       "q": "Qui a inventé le courant alternatif (AC) et en quelle année ?",
       "o": [
-        "Thomas Edison, 1879",
-        "James Clerk Maxwell, 1865",
         "Nikola Tesla, 1882",
+        "James Clerk Maxwell, 1865",
+        "Thomas Edison, 1879",
         "Alexander Graham Bell, 1876"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Nikola Tesla a développé le système de courant alternatif (AC) en 1882. Ce brillant ingénieur et inventeur serbo-américain a révolutionné la distribution de l'électricité, rendant possible son transport sur de longues distances."
     },
     {
@@ -26029,12 +26029,12 @@ const QUESTIONS = {
     {
       "q": "Qui a remporté le Prix Nobel de Médecine 2025 ?",
       "o": [
-        "Svante Pääbo",
-        "David Julius et Ardem Patapoutian",
         "Shimon Sakaguchi (Japon), Mary E. Brunkow et Fred Ramsdell (USA)",
+        "David Julius et Ardem Patapoutian",
+        "Svante Pääbo",
         "Katalin Karikó et Drew Weissman"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Le Prix Nobel de Médecine 2025 a été attribué à Shimon Sakaguchi (Japon), Mary E. Brunkow (USA) et Fred Ramsdell (USA) pour leurs recherches en immunologie, notamment sur les lymphocytes T régulateurs."
     },
     {
@@ -26062,12 +26062,12 @@ const QUESTIONS = {
     {
       "q": "Qui a remporté le Prix Nobel de Chimie 2025 ?",
       "o": [
-        "David Baker, Demis Hassabis et John Jumper",
-        "Carolyn Bertozzi, Morten Meldal et Karl Barry Sharpless",
         "Susumu Kitagawa (Japon), Omar M. Yaghi (Jordanie/USA) et Richard Robson (Royaume-Uni)",
+        "Carolyn Bertozzi, Morten Meldal et Karl Barry Sharpless",
+        "David Baker, Demis Hassabis et John Jumper",
         "Moungi Bawendi, Louis Brus et Alexei Ekimov"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Le Prix Nobel de Chimie 2025 a été attribué à Susumu Kitagawa (Japon), Omar M. Yaghi (Jordanie/USA) et Richard Robson (Royaume-Uni) pour leurs travaux sur les matériaux poreux (MOF : Metal-Organic Frameworks)."
     },
     {
@@ -26075,10 +26075,10 @@ const QUESTIONS = {
       "o": [
         "Ben Bernanke, Douglas Diamond et Philip Dybvig",
         "Claudia Goldin",
-        "Philippe Aghion (France), Joel Mokyr (USA/Israël) et Peter Howitt (Canada)",
-        "Daron Acemoglu, Simon Johnson et James Robinson"
+        "Daron Acemoglu, Simon Johnson et James Robinson",
+        "Philippe Aghion (France), Joel Mokyr (USA/Israël) et Peter Howitt (Canada)"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Le Prix Nobel d'Économie 2025 a été attribué à Philippe Aghion (France), Joel Mokyr (USA/Israël) et Peter Howitt (Canada) pour leurs travaux sur la croissance économique, l'innovation et le progrès technologique."
     },
     {
@@ -26183,12 +26183,12 @@ const QUESTIONS = {
     {
       "q": "Quelle science étudie la genèse et la propagation des ondes sismiques ?",
       "o": [
-        "Volcanologie",
         "Sismologie",
+        "Volcanologie",
         "Géophysique",
         "Lithologie"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La sismologie (du grec seismos = tremblement de terre) étudie les tremblements de terre, les tsunamis et la structure interne de la Terre à travers les ondes sismiques. L'instrument de mesure est le sismographe, et l'échelle de Richter mesure la magnitude."
     },
     {
@@ -26394,10 +26394,10 @@ const QUESTIONS = {
       "o": [
         "La musique",
         "Les arts de la scène",
-        "La littérature",
-        "Le cinéma"
+        "Le cinéma",
+        "La littérature"
       ],
-      "r": 2,
+      "r": 3,
       "x": "La littérature est le 5e art. Elle regroupe tous les écrits à valeur artistique : romans, poésie, théâtre, essais. L'écrivain burkinabè Titinga Frédéric Pacéré est le premier avocat du Burkina et figure littéraire majeure, décédé le 8 novembre 2024 à 81 ans."
     },
     {
@@ -26733,12 +26733,12 @@ const QUESTIONS = {
     {
       "q": "La crise des missiles qui a opposé les États-Unis et l'URSS s'est déroulée en :",
       "o": [
-        "juin 1948, à Berlin",
         "octobre 1962, à Cuba",
+        "juin 1948, à Berlin",
         "août 1968, à Prague",
         "décembre 1979, en Afghanistan"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La crise des missiles de Cuba, en octobre 1962, marque le point culminant de la guerre froide et le risque le plus sérieux de conflit nucléaire. Elle se dénoue par le retrait des missiles soviétiques contre l'engagement américain de ne pas envahir l'île."
     },
     {
@@ -27152,11 +27152,11 @@ const QUESTIONS = {
       "q": "Le pays d'Amérique du Sud dépourvu de façade maritime, avec la Bolivie, est :",
       "o": [
         "l'Équateur",
-        "le Paraguay",
+        "le Venezuela",
         "l'Uruguay",
-        "le Venezuela"
+        "le Paraguay"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le Paraguay et la Bolivie sont les deux seuls pays enclavés d'Amérique du Sud. La Bolivie a perdu son accès à l'océan Pacifique lors de la guerre du Pacifique contre le Chili, entre 1879 et 1884."
     },
     {
@@ -27285,10 +27285,10 @@ const QUESTIONS = {
       "o": [
         "Galilée",
         "Johannes Kepler",
-        "Isaac Newton",
-        "Albert Einstein"
+        "Albert Einstein",
+        "Isaac Newton"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Isaac Newton formule la loi de la gravitation universelle dans ses Principia de 1687. Einstein la reformulera en 1915 dans le cadre de la relativité générale."
     },
     {
@@ -27404,12 +27404,12 @@ const QUESTIONS = {
     {
       "q": "Un nombre divisible par 9 se reconnaît au fait que :",
       "o": [
-        "son dernier chiffre est 9",
         "la somme de ses chiffres est divisible par 9",
+        "son dernier chiffre est 9",
         "il se termine par deux zéros",
         "il est aussi divisible par 4"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Un entier est divisible par 9 si et seulement si la somme de ses chiffres l'est également. Le même raisonnement s'applique à la divisibilité par 3."
     },
     {
@@ -27591,12 +27591,12 @@ const QUESTIONS = {
     {
       "q": "L'échange gazeux entre l'air et le sang s'effectue au niveau :",
       "o": [
-        "de la trachée",
-        "des bronches",
         "des alvéoles pulmonaires",
+        "des bronches",
+        "de la trachée",
         "du diaphragme"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Les alvéoles pulmonaires, au nombre de plusieurs centaines de millions, assurent le passage de l'oxygène vers le sang et du gaz carbonique vers l'air expiré. Le diaphragme est, lui, le principal muscle de la respiration."
     },
     {
@@ -27910,12 +27910,12 @@ const QUESTIONS = {
     {
       "q": "L'auteur des pièces Le Misanthrope, L'Avare et Le Malade imaginaire est :",
       "o": [
-        "Jean Racine",
-        "Pierre Corneille",
         "Molière",
+        "Pierre Corneille",
+        "Jean Racine",
         "Alfred de Musset"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Molière, de son vrai nom Jean-Baptiste Poquelin, domine la comédie classique française au XVIIe siècle. Racine et Corneille sont, eux, les grands auteurs de la tragédie de la même période."
     },
     {
@@ -28088,10 +28088,10 @@ const QUESTIONS = {
       "o": [
         "la Banque africaine de développement",
         "la Banque des États de l'Afrique centrale",
-        "la Banque centrale des États de l'Afrique de l'Ouest",
-        "la Banque ouest-africaine de développement"
+        "la Banque ouest-africaine de développement",
+        "la Banque centrale des États de l'Afrique de l'Ouest"
       ],
-      "r": 2,
+      "r": 3,
       "x": "La BCEAO émet le franc CFA pour les huit pays de l'UEMOA et son siège est à Dakar. La BEAC joue le même rôle pour les six pays de la CEMAC, avec siège à Yaoundé."
     },
     {
@@ -28317,12 +28317,12 @@ const QUESTIONS = {
     {
       "q": "La Joconde, conservée au musée du Louvre, a été peinte par :",
       "o": [
-        "Michel-Ange",
-        "Raphaël",
         "Léonard de Vinci",
+        "Raphaël",
+        "Michel-Ange",
         "Sandro Botticelli"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Léonard de Vinci peint La Joconde au début du XVIe siècle, tableau conservé au Louvre depuis la Révolution française. Michel-Ange est, lui, l'auteur des fresques de la chapelle Sixtine."
     },
     {
@@ -28439,11 +28439,11 @@ const QUESTIONS = {
       "q": "Le sport dans lequel le Burkinabè Hugues Fabrice Zango s'est illustré au niveau mondial est :",
       "o": [
         "le saut en hauteur",
-        "le triple saut",
+        "le sprint sur 400 mètres",
         "le lancer du javelot",
-        "le sprint sur 400 mètres"
+        "le triple saut"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Hugues Fabrice Zango est spécialiste du triple saut et a offert au Burkina Faso sa première médaille olympique à Tokyo en 2021. Il est devenu champion du monde de la discipline à Budapest en 2023."
     },
     {
@@ -28812,12 +28812,12 @@ const QUESTIONS = {
     {
       "q": "Le siège de la Commission de l'UEMOA est établi à :",
       "o": [
-        "Dakar",
-        "Abidjan",
         "Ouagadougou",
+        "Abidjan",
+        "Dakar",
         "Bamako"
       ],
-      "r": 2,
+      "r": 0,
       "x": "La Commission de l'UEMOA siège à Ouagadougou depuis la création de l'Union le 10 janvier 1994 à Dakar. Le Burkina Faso accueille ainsi l'organe exécutif de l'intégration économique ouest-africaine."
     },
     {
@@ -28922,12 +28922,12 @@ const QUESTIONS = {
     {
       "q": "L'organe suprême de contrôle administratif et de lutte contre la corruption au Burkina Faso est :",
       "o": [
-        "la Cour des comptes",
-        "l'Inspection générale d'État",
         "l'ASCE-LC",
+        "l'Inspection générale d'État",
+        "la Cour des comptes",
         "le RENLAC"
       ],
-      "r": 2,
+      "r": 0,
       "x": "L'Autorité supérieure de contrôle d'État et de lutte contre la corruption est l'organe suprême de contrôle administratif prévu par la Constitution. Le RENLAC est, lui, un réseau de la société civile et non une institution de l'État."
     },
     {
@@ -29109,12 +29109,12 @@ const QUESTIONS = {
     {
       "q": "Entre 1932 et 1947, le territoire de la Haute-Volta a été réparti entre :",
       "o": [
-        "la Côte d'Ivoire, le Sénégal et le Niger",
         "la Côte d'Ivoire, le Soudan français et le Niger",
+        "la Côte d'Ivoire, le Sénégal et le Niger",
         "le Dahomey, le Niger et la Côte d'Ivoire",
         "le Soudan français, la Guinée et le Niger"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le territoire voltaïque est réparti entre la Côte d'Ivoire, le Soudan français et le Niger, la part la plus importante revenant à la Côte d'Ivoire. Cette situation fait de la Haute-Volta un réservoir de main-d'œuvre pour les plantations ivoiriennes."
     },
     {
@@ -29131,12 +29131,12 @@ const QUESTIONS = {
     {
       "q": "La République de Haute-Volta, autonome au sein de la Communauté française, est proclamée le :",
       "o": [
-        "4 septembre 1947",
-        "28 septembre 1958",
         "11 décembre 1958",
+        "28 septembre 1958",
+        "4 septembre 1947",
         "5 août 1960"
       ],
-      "r": 2,
+      "r": 0,
       "x": "La République de Haute-Volta est proclamée le 11 décembre 1958, date devenue fête nationale de la proclamation de la République. L'indépendance totale interviendra le 5 août 1960."
     },
     {
@@ -29241,12 +29241,12 @@ const QUESTIONS = {
     {
       "q": "L'ancêtre fondateur des royaumes mossi, fils de la princesse Yennenga, est :",
       "o": [
-        "Naaba Oubri",
         "Ouédraogo",
+        "Naaba Oubri",
         "Naaba Kango",
         "Rialé"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Ouédraogo, fils de la princesse Yennenga et du chasseur Rialé, est considéré comme l'ancêtre fondateur des royaumes mossi. Son nom signifie étalon mâle en mooré."
     },
     {
@@ -29518,10 +29518,10 @@ const QUESTIONS = {
       "o": [
         "quatre pays",
         "cinq pays",
-        "six pays",
-        "sept pays"
+        "sept pays",
+        "six pays"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Le Burkina Faso a six voisins : le Mali, le Niger, le Bénin, le Togo, le Ghana et la Côte d'Ivoire. Cet enclavement explique l'importance stratégique des corridors routiers vers les ports du golfe de Guinée."
     },
     {
@@ -29736,12 +29736,12 @@ const QUESTIONS = {
     {
       "q": "La Semaine nationale de la culture (SNC) du Burkina Faso se tient à :",
       "o": [
-        "Ouagadougou",
         "Bobo-Dioulasso",
+        "Ouagadougou",
         "Koudougou",
         "Gaoua"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La Semaine nationale de la culture, créée en 1983, se déroule à Bobo-Dioulasso les années paires. Elle met en compétition les délégations de toutes les régions du pays."
     },
     {
@@ -30002,10 +30002,10 @@ const QUESTIONS = {
       "o": [
         "fossile",
         "nucléaire",
-        "renouvelable",
-        "thermique classique"
+        "thermique classique",
+        "renouvelable"
       ],
-      "r": 2,
+      "r": 3,
       "x": "L'énergie solaire photovoltaïque est une énergie renouvelable, au même titre que l'éolien, l'hydraulique et la biomasse. Le Sahel dispose d'un ensoleillement parmi les plus élevés du monde."
     },
     {
@@ -30242,12 +30242,12 @@ const QUESTIONS = {
     {
       "q": "Le système d'écriture utilisé pour transcrire les langues arabes se lit :",
       "o": [
-        "de gauche à droite",
         "de droite à gauche",
+        "de gauche à droite",
         "de haut en bas",
         "en boustrophédon"
       ],
-      "r": 1,
+      "r": 0,
       "x": "L'alphabet arabe se lit et s'écrit de droite à gauche, comme l'hébreu. Le chinois traditionnel s'écrivait, lui, en colonnes de haut en bas."
     },
     {
@@ -30396,12 +30396,12 @@ const QUESTIONS = {
     {
       "q": "Le satellite naturel de la Terre effectue une révolution complète autour d'elle en environ :",
       "o": [
-        "sept jours",
-        "quatorze jours",
         "vingt-sept jours",
+        "quatorze jours",
+        "sept jours",
         "soixante jours"
       ],
-      "r": 2,
+      "r": 0,
       "x": "La Lune accomplit sa révolution autour de la Terre en environ vingt-sept jours, et le cycle des phases dure un peu plus de vingt-neuf jours. Elle présente toujours la même face à la Terre, du fait de sa rotation synchrone."
     },
     {
@@ -30737,12 +30737,12 @@ const QUESTIONS = {
     {
       "q": "Le web a été inventé en 1989 par :",
       "o": [
-        "Bill Gates",
-        "Steve Jobs",
         "Tim Berners-Lee",
+        "Steve Jobs",
+        "Bill Gates",
         "Vinton Cerf"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Tim Berners-Lee conçoit le World Wide Web au CERN en 1989, avec le langage HTML et le protocole HTTP. Vinton Cerf est, lui, l'un des concepteurs du protocole TCP/IP qui fonde Internet."
     },
     {
@@ -30881,11 +30881,11 @@ const QUESTIONS = {
       "q": "Le fonctionnaire placé à la tête d'un service est responsable devant :",
       "o": [
         "ses seuls subordonnés",
-        "ses supérieurs hiérarchiques",
+        "l'Assemblée législative",
         "le Conseil constitutionnel",
-        "l'Assemblée législative"
+        "ses supérieurs hiérarchiques"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le chef de service répond devant ses supérieurs de la réalisation des objectifs et de la gestion des ressources allouées. La responsabilité propre de ses subordonnés ne le dégage d'aucune des siennes."
     },
     {
@@ -30924,12 +30924,12 @@ const QUESTIONS = {
     {
       "q": "Le recours juridictionnel tendant à l'annulation d'un acte administratif illégal est :",
       "o": [
-        "le recours de plein contentieux",
-        "le référé provision",
         "le recours pour excès de pouvoir",
+        "le référé provision",
+        "le recours de plein contentieux",
         "le pourvoi en cassation"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Le recours pour excès de pouvoir vise l'annulation d'un acte administratif entaché d'illégalité. Le recours de plein contentieux permet, lui, au juge de réformer la décision et d'accorder une indemnisation."
     },
     {
@@ -31243,12 +31243,12 @@ const QUESTIONS = {
     {
       "q": "L'obligation de mettre en place un service de santé au travail ou d'y adhérer pèse sur :",
       "o": [
-        "les seules entreprises de plus de vingt salariés",
         "tout employeur installé au Burkina Faso",
+        "les seules entreprises de plus de vingt salariés",
         "les seules entreprises de plus de cent salariés",
         "les seules entreprises du secteur industriel"
       ],
-      "r": 1,
+      "r": 0,
       "x": "L'article 280 du code du travail de 2026 impose à tout employeur installé au Burkina Faso de mettre en place un service de santé au travail ou d'y adhérer, sans condition d'effectif. Il peut s'affilier à un établissement public, recruter un spécialiste ou recourir à une structure privée agréée."
     },
     {
@@ -31410,10 +31410,10 @@ const QUESTIONS = {
       "o": [
         "la métaphore",
         "la métonymie",
-        "la périphrase",
-        "la synecdoque"
+        "la synecdoque",
+        "la périphrase"
       ],
-      "r": 2,
+      "r": 3,
       "x": "La périphrase désigne une réalité par une expression détournée, comme « le roi des animaux » pour le lion. La métaphore établit, elle, une analogie sans outil de comparaison."
     },
     {
@@ -31452,12 +31452,12 @@ const QUESTIONS = {
     {
       "q": "Une strophe de quatre vers porte le nom de :",
       "o": [
-        "tercet",
-        "quintil",
         "quatrain",
+        "quintil",
+        "tercet",
         "sizain"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Le quatrain compte quatre vers et le tercet trois. Le sonnet classique associe deux quatrains suivis de deux tercets."
     },
     {
@@ -31628,12 +31628,12 @@ const QUESTIONS = {
     {
       "q": "Le taux de natalité rapporte le nombre de naissances :",
       "o": [
-        "au nombre de femmes en âge de procréer",
         "à la population totale, pour mille habitants",
+        "au nombre de femmes en âge de procréer",
         "au nombre de mariages célébrés",
         "au nombre de décès enregistrés"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le taux de natalité exprime le nombre de naissances pour mille habitants sur une année. L'indice synthétique de fécondité rapporte, lui, les naissances aux femmes en âge de procréer."
     },
     {
@@ -31980,12 +31980,12 @@ const QUESTIONS = {
     {
       "q": "La fête chrétienne qui commémore la résurrection du Christ est :",
       "o": [
-        "Noël",
-        "la Pentecôte",
         "Pâques",
+        "la Pentecôte",
+        "Noël",
         "l'Ascension"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Pâques commémore la résurrection du Christ et constitue la principale fête du calendrier chrétien. Noël célèbre, lui, sa naissance."
     },
     {
@@ -32332,23 +32332,23 @@ const QUESTIONS = {
     {
       "q": "L'État africain ayant résisté à la colonisation européenne est :",
       "o": [
-        "le Ghana",
         "l'Éthiopie",
+        "le Ghana",
         "le Kenya",
         "l'Angola"
       ],
-      "r": 1,
+      "r": 0,
       "x": "L'Éthiopie conserve son indépendance après sa victoire d'Adoua en 1896 contre l'Italie, malgré une occupation temporaire entre 1936 et 1941. Le Liberia est l'autre État africain à n'avoir pas connu de colonisation européenne classique."
     },
     {
       "q": "La bataille d'Adoua, remportée en 1896 par l'Éthiopie, l'opposait :",
       "o": [
         "à la France",
-        "à l'Italie",
+        "au Portugal",
         "au Royaume-Uni",
-        "au Portugal"
+        "à l'Italie"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La victoire éthiopienne d'Adoua en 1896 met en échec les ambitions coloniales italiennes. Elle devient un symbole de résistance africaine à la conquête européenne."
     },
     {
@@ -32840,10 +32840,10 @@ const QUESTIONS = {
       "o": [
         "épidémique",
         "pandémique",
-        "endémique",
-        "sporadique"
+        "sporadique",
+        "endémique"
       ],
-      "r": 2,
+      "r": 3,
       "x": "L'endémie désigne la présence habituelle d'une maladie dans une population, comme le paludisme au Sahel. La pandémie, elle, touche plusieurs continents simultanément."
     },
     {
@@ -32893,12 +32893,12 @@ const QUESTIONS = {
     {
       "q": "L'aire d'un rectangle se calcule en multipliant :",
       "o": [
-        "la base par la hauteur divisée par deux",
-        "la somme des côtés par deux",
         "la longueur par la largeur",
+        "la somme des côtés par deux",
+        "la base par la hauteur divisée par deux",
         "le côté par lui-même"
       ],
-      "r": 2,
+      "r": 0,
       "x": "L'aire du rectangle est le produit de la longueur par la largeur. La formule base multipliée par hauteur divisée par deux donne, elle, l'aire du triangle."
     },
     {
@@ -33027,12 +33027,12 @@ const QUESTIONS = {
     {
       "q": "L'Empire des Mossi avait pour capitale :",
       "o": [
-        "Bobo-Dioulasso",
         "Ouagadougou",
+        "Bobo-Dioulasso",
         "Tenkodogo",
         "Koudougou"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Ouagadougou (« Wogodogo ») est la capitale historique de l'Empire mossi du Mogho Naba, fondé au XIIIe siècle."
     },
     {
@@ -33072,11 +33072,11 @@ const QUESTIONS = {
       "q": "Première ville du BF à recevoir le chemin de fer ?",
       "o": [
         "Ouagadougou",
-        "Bobo-Dioulasso",
+        "Koudougou",
         "Banfora",
-        "Koudougou"
+        "Bobo-Dioulasso"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Bobo-Dioulasso a reçu le chemin de fer Abidjan-Niger (RAN) en 1934, bien avant Ouagadougou (1954)."
     },
     {
@@ -33094,11 +33094,11 @@ const QUESTIONS = {
       "q": "Le climat dominant du Burkina Faso est :",
       "o": [
         "Équatorial",
-        "Tropical",
+        "Polaire",
         "Méditerranéen",
-        "Polaire"
+        "Tropical"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le climat est tropical, avec deux saisons : sèche (octobre-mai) et pluvieuse (juin-septembre). Variantes : sahélienne au nord, soudanienne au sud."
     },
     {
@@ -33140,11 +33140,11 @@ const QUESTIONS = {
       "q": "La photosynthèse a lieu dans :",
       "o": [
         "Les racines",
-        "Les feuilles",
+        "Les fruits",
         "Les tiges",
-        "Les fruits"
+        "Les feuilles"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La photosynthèse a lieu principalement dans les feuilles, où la chlorophylle capte la lumière pour transformer CO2 + eau en glucose + O2."
     },
     {
@@ -33195,22 +33195,22 @@ const QUESTIONS = {
       "q": "Qu'est-ce qu'un végétarien ?",
       "o": [
         "Personne qui ne mange que des légumes",
-        "Personne qui ne mange pas de viande",
+        "Personne qui jeûne",
         "Personne qui ne mange que des fruits",
-        "Personne qui jeûne"
+        "Personne qui ne mange pas de viande"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Un végétarien ne consomme pas de chair animale (viande, poisson). Il peut manger œufs, lait. Le végan exclut tout produit animal."
     },
     {
       "q": "Le VIH/SIDA se transmet par :",
       "o": [
-        "Poignée de main",
         "Rapports sexuels non protégés, sang contaminé",
+        "Poignée de main",
         "Salive (baiser social)",
         "Air"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Modes de transmission VIH : rapports sexuels non protégés, sang contaminé (seringues, transfusions), mère-enfant. PAS par contact social."
     },
     {
@@ -42353,12 +42353,12 @@ const QUESTIONS = {
     {
       "q": "Symbole chimique de l'eau ?",
       "o": [
-        "O2",
-        "CO2",
         "H2O",
+        "CO2",
+        "O2",
         "HO2"
       ],
-      "r": 2,
+      "r": 0,
       "x": "H2O = 2 atomes d'hydrogène (H) + 1 atome d'oxygène (O). C'est la molécule essentielle à la vie."
     },
     {
@@ -42375,12 +42375,12 @@ const QUESTIONS = {
     {
       "q": "Force qui attire les objets vers la Terre ?",
       "o": [
-        "Magnétisme",
         "Gravité",
+        "Magnétisme",
         "Friction",
         "Pression"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La gravité (ou pesanteur) est la force qui attire tout objet vers le centre de la Terre. g ≈ 9,81 m/s²."
     },
     {
@@ -42420,11 +42420,11 @@ const QUESTIONS = {
       "q": "Symbole chimique de l'or ?",
       "o": [
         "Or",
-        "Au",
+        "Gd",
         "Ag",
-        "Gd"
+        "Au"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Au (du latin « aurum »). L'argent = Ag (argentum). Fer = Fe, cuivre = Cu."
     },
     {
@@ -42432,10 +42432,10 @@ const QUESTIONS = {
       "o": [
         "Mètres",
         "Kilogrammes",
-        "Newtons",
-        "Joules"
+        "Joules",
+        "Newtons"
       ],
-      "r": 2,
+      "r": 3,
       "x": "L'unité de la force est le Newton (N). 1 N = force qui donne une accélération de 1 m/s² à une masse de 1 kg."
     },
     {
@@ -42465,13 +42465,13 @@ const QUESTIONS = {
     {
       "q": "Un objet de masse 2 kg est lancé verticalement vers le haut avec une vitesse initiale de 10 m/s. Quelle est la hauteur maximale atteinte ? (g = 10 m/s²)",
       "o": [
-        "10 m",
         "5 m",
+        "10 m",
         "20 m",
         "2,5 m"
       ],
-      "r": 1,
-      "x": "Méthode : v²=v₀²-2gh → h=v₀²/(2g)=100/20=5 m. Formule : v²=v₀²-2gh. Piège : oublier le facteur 2 au dénominateur donne 10 m (choix A)."
+      "r": 0,
+      "x": "Méthode : v²=v₀²-2gh → h=v₀²/(2g)=100/20=5 m. Formule : v²=v₀²-2gh. Piège : oublier le facteur 2 au dénominateur donne 10 m (choix B)."
     },
     {
       "q": "Une résistance de 100 Ω est soumise à une tension de 220 V. Quelle est la puissance dissipée ?",
@@ -42488,11 +42488,11 @@ const QUESTIONS = {
       "q": "Un rayon lumineux passe de l'eau (n=1,33) dans l'air (n=1) avec un angle d'incidence de 30°. Quel est l'angle de réfraction ?",
       "o": [
         "22,1°",
-        "41,7°",
+        "48,6°",
         "30°",
-        "48,6°"
+        "41,7°"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Méthode : Snell-Descartes n₁sinθ₁=n₂sinθ₂ → sinθ₂=1,33×sin30°=0,665 → θ₂=41,7°. Piège : inverser n₁ et n₂ donne 22,1° (choix A)."
     },
     {
@@ -42510,11 +42510,11 @@ const QUESTIONS = {
       "q": "La réaction de combustion complète du méthane CH₄ produit :",
       "o": [
         "CO + H₂O",
-        "CO₂ + H₂O",
         "CO₂ + H₂",
+        "CO₂ + H₂O",
         "C + H₂O"
       ],
-      "r": 1,
+      "r": 2,
       "x": "Méthode : CH₄ + 2O₂ → CO₂ + 2H₂O (combustion complète avec excès d'O₂). Piège : combustion incomplète (manque O₂) donne CO (choix A)."
     },
     {
@@ -42543,11 +42543,11 @@ const QUESTIONS = {
       "q": "Quelle est la formule semi-développée de l'éthanol ?",
       "o": [
         "CH₃-CO-CH₃",
-        "CH₃-CH₂-OH",
+        "CH₃-O-CH₃",
         "CH₃-CHO",
-        "CH₃-O-CH₃"
+        "CH₃-CH₂-OH"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Méthode : éthanol = alcool en C2, groupe fonctionnel -OH. CH₃-CHO est l'éthanal, CH₃-CO-CH₃ est l'acétone, CH₃-O-CH₃ est le méthoxyméthane."
     },
     {
@@ -42575,23 +42575,23 @@ const QUESTIONS = {
     {
       "q": "La vitesse du son dans l'air à 20°C est environ 340 m/s. Quelle est la longueur d'onde d'un son de fréquence 170 Hz ?",
       "o": [
-        "0,5 m",
-        "2 m",
+        "57 800 m",
         "5 m",
-        "57 800 m"
+        "2 m",
+        "0,5 m"
       ],
-      "r": 1,
-      "x": "Méthode : λ=v/f=340/170=2 m. Formule : λ=v/f. Piège : inverser la formule (f/v) donne 0,5 m (choix A)."
+      "r": 2,
+      "x": "Méthode : λ=v/f=340/170=2 m. Formule : λ=v/f. Piège : inverser la formule (f/v) donne 0,5 m (choix D)."
     },
     {
       "q": "Quelle est la charge électrique d'un électron ?",
       "o": [
         "+1,6×10⁻¹⁹ C",
-        "-1,6×10⁻¹⁹ C",
+        "+9,1×10⁻³¹ C",
         "-9,1×10⁻³¹ C",
-        "+9,1×10⁻³¹ C"
+        "-1,6×10⁻¹⁹ C"
       ],
-      "r": 1,
+      "r": 3,
       "x": "L'électron porte une charge négative e=-1,6×10⁻¹⁹ C. 9,1×10⁻³¹ kg est la masse de l'électron, non sa charge. Piège : confondre masse et charge de l'électron."
     },
     {
@@ -42620,22 +42620,22 @@ const QUESTIONS = {
       "q": "Quelle est la masse molaire du dioxyde de carbone CO₂ ? (M_C=12, M_O=16 g/mol)",
       "o": [
         "28 g/mol",
-        "44 g/mol",
+        "40 g/mol",
         "32 g/mol",
-        "40 g/mol"
+        "44 g/mol"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Méthode : M(CO₂)=M_C+2×M_O=12+2×16=12+32=44 g/mol. Piège : oublier le coefficient 2 devant O donne 28 g/mol (choix A)."
     },
     {
       "q": "Un mobile parcourt 120 km en 1h30min. Quelle est sa vitesse moyenne en km/h ?",
       "o": [
         "60 km/h",
-        "80 km/h",
+        "75 km/h",
         "90 km/h",
-        "75 km/h"
+        "80 km/h"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Méthode : v=d/t=120/1,5=80 km/h. Convertir 1h30min = 1,5 h. Piège : utiliser t=1,3 h (lecture décimale incorrecte) donne environ 92 km/h."
     },
     {
@@ -42686,11 +42686,11 @@ const QUESTIONS = {
       "q": "Un pendule simple de longueur L=1 m oscille sur Terre (g=9,8 m/s²). Quelle est sa période approximative ?",
       "o": [
         "1 s",
-        "2 s",
+        "3,14 s",
         "0,5 s",
-        "3,14 s"
+        "2 s"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Méthode : T=2π√(L/g)=2π√(1/9,8)=2π×0,319≈2 s. Formule : T=2π√(L/g). Piège : oublier la racine carrée conduit à T=2π/9,8≈0,64 s."
     },
     {
@@ -42719,11 +42719,11 @@ const QUESTIONS = {
       "q": "Un corps de masse m=2 kg tombe librement depuis une hauteur h=20 m. Quelle est sa vitesse au moment de toucher le sol ? (g=10 m/s²)",
       "o": [
         "10 m/s",
-        "20 m/s",
+        "200 m/s",
         "14 m/s",
-        "200 m/s"
+        "20 m/s"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Méthode : v²=2gh=2×10×20=400 → v=20 m/s. Formule : v=√(2gh). Piège : oublier la racine carrée donne 400 m/s ; utiliser v=gh (sans 2) donne 14 m/s."
     },
     {
@@ -42741,22 +42741,22 @@ const QUESTIONS = {
       "q": "Quelle est la quantité de matière de 88 g de CO₂ ? (M=44 g/mol)",
       "o": [
         "1 mol",
-        "2 mol",
+        "0,5 mol",
         "4 mol",
-        "0,5 mol"
+        "2 mol"
       ],
-      "r": 1,
-      "x": "Méthode : n=m/M=88/44=2 mol. Formule : n=m/M. Piège : inverser la formule (M/m) donne 0,5 mol (choix D)."
+      "r": 3,
+      "x": "Méthode : n=m/M=88/44=2 mol. Formule : n=m/M. Piège : inverser la formule (M/m) donne 0,5 mol (choix B)."
     },
     {
       "q": "La loi de Mariotte (gaz parfait à température constante) s'énonce :",
       "o": [
-        "P/V = constante",
         "P×V = constante",
+        "P/V = constante",
         "P×T = constante",
         "V/T = constante"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Loi de Mariotte (isotherme) : PV=constante → P₁V₁=P₂V₂. V/T=constante est la loi de Charles (isobare). P×T=constante n'est pas une loi classique des gaz."
     },
     {
@@ -42806,12 +42806,12 @@ const QUESTIONS = {
     {
       "q": "Quelle est l'hybridation du carbone dans l'éthylène CH₂=CH₂ ?",
       "o": [
-        "sp³",
         "sp²",
+        "sp³",
         "sp",
         "s"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Dans l'éthylène, chaque C forme une double liaison (1σ+1π) → 3 liaisons σ → hybridation sp². sp³ = 4 liaisons simples (alcanes) ; sp = triple liaison (alcynes)."
     },
     {
@@ -42850,23 +42850,23 @@ const QUESTIONS = {
     {
       "q": "Quelle est la vitesse de la lumière dans le vide ?",
       "o": [
-        "3×10⁸ km/s",
-        "3×10⁸ m/s",
+        "3×10⁶ m/s",
         "3×10⁵ km/s",
-        "3×10⁶ m/s"
+        "3×10⁸ m/s",
+        "3×10⁸ km/s"
       ],
-      "r": 1,
-      "x": "c=3×10⁸ m/s dans le vide. Attention : 3×10⁵ km/s = 3×10⁸ m/s (même valeur, unité différente) mais l'unité SI est m/s. Le choix B est le plus rigoureux."
+      "r": 2,
+      "x": "c=3×10⁸ m/s dans le vide. Attention : 3×10⁵ km/s = 3×10⁸ m/s (même valeur, unité différente) mais l'unité SI est m/s. Le choix C est le plus rigoureux."
     },
     {
       "q": "Quelle est la formule moléculaire du butane ?",
       "o": [
         "C₃H₈",
-        "C₄H₁₀",
+        "C₅H₁₂",
         "C₄H₈",
-        "C₅H₁₂"
+        "C₄H₁₀"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Alcanes : CₙH₂ₙ₊₂. Pour n=4 : C₄H₁₀. C₃H₈=propane, C₄H₈=butène (alcène), C₅H₁₂=pentane. Méthode : mémoriser la formule générale des alcanes."
     },
     {
@@ -42905,12 +42905,12 @@ const QUESTIONS = {
     {
       "q": "Dans un circuit RC en charge, la constante de temps τ représente :",
       "o": [
-        "Le temps pour que le condensateur soit chargé à 100%",
         "Le temps pour que la tension atteigne 63% de la tension finale",
+        "Le temps pour que le condensateur soit chargé à 100%",
         "La moitié du temps de charge complet",
         "Le temps pour que le courant s'annule"
       ],
-      "r": 1,
+      "r": 0,
       "x": "τ=RC est la constante de temps. À t=τ, U_C=U₀(1-e⁻¹)≈0,63U₀ (63% de la charge finale). La charge complète est théoriquement infinie (5τ en pratique)."
     },
     {
@@ -42939,22 +42939,22 @@ const QUESTIONS = {
       "q": "Quelle est l'énergie cinétique d'un objet de 2 kg se déplaçant à 10 m/s ?",
       "o": [
         "20 J",
-        "100 J",
+        "10 J",
         "200 J",
-        "10 J"
+        "100 J"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Méthode : Ec=½mv²=½×2×100=100 J. Formule : Ec=½mv². Piège : oublier le ½ donne 200 J (choix C) ; utiliser mv sans carré donne 20 J (choix A)."
     },
     {
       "q": "La formule de la loi de Coulomb est :",
       "o": [
         "F=Gm₁m₂/r²",
-        "F=kq₁q₂/r²",
         "F=kq₁q₂/r",
+        "F=kq₁q₂/r²",
         "F=q₁q₂/(kr²)"
       ],
-      "r": 1,
+      "r": 2,
       "x": "Loi de Coulomb : F=kq₁q₂/r² avec k=9×10⁹ N·m²/C². La loi de gravitation est F=Gm₁m₂/r² (même forme mais pour les masses). Piège : confondre les deux lois en force."
     },
     {
@@ -42972,11 +42972,11 @@ const QUESTIONS = {
       "q": "Un objet est en chute libre. Après 3 secondes, quelle est sa vitesse ? (g=10 m/s²)",
       "o": [
         "10 m/s",
-        "30 m/s",
+        "45 m/s",
         "15 m/s",
-        "45 m/s"
+        "30 m/s"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Méthode : v=g×t=10×3=30 m/s (vitesse initiale nulle). Formule : v=v₀+gt. Piège : diviser g par t donne 3,3 m/s ; utiliser v=½gt donne 15 m/s (erreur liée à la formule de la distance)."
     },
     {
@@ -42993,12 +42993,12 @@ const QUESTIONS = {
     {
       "q": "Quelle est la pression exercée par une colonne d'eau de 10 m de hauteur ? (ρ_eau=1000 kg/m³, g=10 m/s²)",
       "o": [
-        "1000 Pa",
         "100 000 Pa",
+        "1000 Pa",
         "10 Pa",
         "100 Pa"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Méthode : P=ρgh=1000×10×10=100 000 Pa = 1 bar. Formule : P=ρgh. Piège : oublier g (utiliser P=ρh) donne 10 000 Pa."
     },
     {
@@ -43038,11 +43038,11 @@ const QUESTIONS = {
       "q": "La réaction de combustion complète du propane C₃H₈ est :",
       "o": [
         "C₃H₈ + 4O₂ → 3CO₂ + 4H₂O",
-        "C₃H₈ + 5O₂ → 3CO₂ + 4H₂O",
+        "C₃H₈ + 5O₂ → 3CO + 4H₂O",
         "C₃H₈ + 3O₂ → 3CO₂ + 4H₂O",
-        "C₃H₈ + 5O₂ → 3CO + 4H₂O"
+        "C₃H₈ + 5O₂ → 3CO₂ + 4H₂O"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Méthode : C₃H₈ + 5O₂ → 3CO₂ + 4H₂O. Vérification : C : 3=3 ✓ ; H : 8=8 ✓ ; O : 10=6+4=10 ✓. Piège : mal équilibrer O₂ est l'erreur la plus fréquente."
     },
     {
@@ -43104,33 +43104,33 @@ const QUESTIONS = {
       "q": "Un son de fréquence 1000 Hz a une période de :",
       "o": [
         "1000 s",
-        "0,001 s",
+        "100 s",
         "0,01 s",
-        "100 s"
+        "0,001 s"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Méthode : T=1/f=1/1000=10⁻³ s=1 ms. Formule : T=1/f. Piège : confondre T=f donne 1000 s ; utiliser T=f² ou f/1000 conduit aux autres erreurs."
     },
     {
       "q": "L'indice de réfraction d'un milieu est défini par :",
       "o": [
         "n = v/c",
-        "n = c/v",
+        "n = f×v",
         "n = λ/λ₀",
-        "n = f×v"
+        "n = c/v"
       ],
-      "r": 1,
+      "r": 3,
       "x": "n=c/v où c=vitesse de la lumière dans le vide, v=vitesse dans le milieu. n≥1 toujours (sauf milieux spéciaux). Pour l'eau : n≈1,33 → v=c/1,33≈2,26×10⁸ m/s."
     },
     {
       "q": "Dans une réaction d'oxydoréduction, l'oxydant :",
       "o": [
         "Perd des électrons",
-        "Gagne des électrons",
+        "Perd des protons",
         "Gagne des protons",
-        "Perd des protons"
+        "Gagne des électrons"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Mémo : LÉON dit GER → L'oxydant accepte les électrons (Gain Électrons = Réduction). Le réducteur cède des électrons (Perte Électrons = Oxydation). LÉON = LEo (perd) GERn (gagne)."
     },
     {
@@ -43148,11 +43148,11 @@ const QUESTIONS = {
       "q": "Quelle est la formule de la loi de Faraday pour l'induction électromagnétique ?",
       "o": [
         "e = B × l × v",
-        "e = -dΦ/dt",
         "e = L × dI/dt",
+        "e = -dΦ/dt",
         "F = BIl"
       ],
-      "r": 1,
+      "r": 2,
       "x": "Loi de Faraday : e=-dΦ/dt (la FEM induite est opposée à la variation de flux). e=Blv est la FEM d'un conducteur se déplaçant dans B. e=L×dI/dt est la FEM d'auto-induction. F=BIl est la force de Laplace."
     },
     {
@@ -43181,22 +43181,22 @@ const QUESTIONS = {
       "q": "Quel est le type de liaison dans le sel de cuisine NaCl ?",
       "o": [
         "Liaison covalente",
-        "Liaison ionique",
+        "Liaison hydrogène",
         "Liaison métallique",
-        "Liaison hydrogène"
+        "Liaison ionique"
       ],
-      "r": 1,
+      "r": 3,
       "x": "NaCl est formé par transfert d'électron de Na vers Cl → liaison ionique (Na⁺ et Cl⁻). La liaison covalente = partage d'électrons (ex : H₂O). La liaison métallique est dans les métaux purs."
     },
     {
       "q": "La puissance mécanique est définie par :",
       "o": [
         "P = F/v",
-        "P = F × v",
+        "P = F × d",
         "P = m × v",
-        "P = F × d"
+        "P = F × v"
       ],
-      "r": 1,
+      "r": 3,
       "x": "P=F×v (force × vitesse) ou P=W/t (travail/temps). F×d=W est le travail, non la puissance. Unités : P en Watts, F en Newtons, v en m/s. Mémo : puissance = travail par unité de temps."
     },
     {
@@ -43225,11 +43225,11 @@ const QUESTIONS = {
       "q": "Le phénomène de résonance magnétique nucléaire (RMN) exploite :",
       "o": [
         "La diffraction des rayons X",
-        "L'absorption de rayonnements par les noyaux dans un champ magnétique",
+        "La réfraction de la lumière visible",
         "L'émission de photons par les électrons excités",
-        "La réfraction de la lumière visible"
+        "L'absorption de rayonnements par les noyaux dans un champ magnétique"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La RMN (¹H-NMR) détecte l'absorption de radiofréquences par les noyaux H dans un champ magnétique. Elle permet d'identifier les groupes fonctionnels et la structure des molécules organiques."
     },
     {
@@ -43258,11 +43258,11 @@ const QUESTIONS = {
       "q": "Quel est le nombre d'oxydation du soufre dans SO₄²⁻ ?",
       "o": [
         "+4",
-        "+6",
+        "+2",
         "-2",
-        "+2"
+        "+6"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Dans SO₄²⁻ : soit x le n.o. de S. x+4×(-2)=-2 → x-8=-2 → x=+6. Méthode : O a toujours n.o.=-2 (sauf peroxydes). Piège : oublier la charge globale de l'ion (-2) donne x=+8."
     },
     {
@@ -43302,11 +43302,11 @@ const QUESTIONS = {
       "q": "Un électron dans l'état fondamental de l'atome d'hydrogène a une énergie de -13,6 eV. L'énergie d'ionisation est :",
       "o": [
         "-13,6 eV",
-        "13,6 eV",
+        "0 eV",
         "27,2 eV",
-        "0 eV"
+        "13,6 eV"
       ],
-      "r": 1,
+      "r": 3,
       "x": "L'ionisation = amener l'électron à E=0 (état libre) → Eionisation = 0 - (-13,6) = +13,6 eV. L'énergie d'ionisation est toujours positive (énergie fournie). Piège : oublier le signe."
     },
     {
@@ -43356,12 +43356,12 @@ const QUESTIONS = {
     {
       "q": "Quel est l'agent oxydant dans la réaction : Fe + CuSO₄ → FeSO₄ + Cu ?",
       "o": [
-        "Fe",
         "Cu²⁺",
+        "Fe",
         "SO₄²⁻",
         "Fe²⁺"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Cu²⁺ gagne 2 électrons (Cu²⁺ + 2e⁻ → Cu) → c'est l'oxydant (réduit). Fe cède 2 électrons (Fe → Fe²⁺ + 2e⁻) → c'est le réducteur (oxydé). Mémo : l'oxydant est réduit = LÉON."
     },
     {
@@ -43378,12 +43378,12 @@ const QUESTIONS = {
     {
       "q": "Quelle est la formule moléculaire de l'acide acétique (vinaigre) ?",
       "o": [
-        "CH₂O",
         "C₂H₄O₂",
+        "CH₂O",
         "C₂H₆O",
         "CH₄O"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Acide acétique = CH₃COOH = C₂H₄O₂. C₂H₆O = éthanol. CH₂O = formaldéhyde. CH₄O = méthanol. Piège : confondre acide acétique (C₂H₄O₂) et éthanol (C₂H₆O) qui ont le même nombre de C."
     },
     {
@@ -43423,11 +43423,11 @@ const QUESTIONS = {
       "q": "La réaction de polymérisation du styrène C₆H₅-CH=CH₂ donne :",
       "o": [
         "Un alcane",
-        "Le polystyrène",
+        "Un acide carboxylique",
         "Un ester",
-        "Un acide carboxylique"
+        "Le polystyrène"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La polymérisation par addition de styrène (monomère avec double liaison) donne le polystyrène : n(C₆H₅-CH=CH₂) → (-CH(C₆H₅)-CH₂-)n. C'est un polymère thermoplastique largement utilisé."
     },
     {
@@ -43500,11 +43500,11 @@ const QUESTIONS = {
       "q": "L'équation de l'état gazeux parfait est :",
       "o": [
         "PV = nT",
-        "PV = nRT",
+        "PV² = nRT",
         "P = nRT/V²",
-        "PV² = nRT"
+        "PV = nRT"
       ],
-      "r": 1,
+      "r": 3,
       "x": "PV=nRT : P=pression (Pa), V=volume (m³), n=quantité de matière (mol), R=8,314 J/(mol·K), T=température (K). Valable pour les gaz à basse pression et haute température."
     },
     {
@@ -43533,11 +43533,11 @@ const QUESTIONS = {
       "q": "Un condensateur de 10 µF se charge à travers une résistance de 100 kΩ. La constante de temps est :",
       "o": [
         "10 ms",
-        "1 s",
+        "10 s",
         "0,1 s",
-        "10 s"
+        "1 s"
       ],
-      "r": 1,
+      "r": 3,
       "x": "τ=RC=100×10³×10×10⁻⁶=100×10³×10⁻⁵=1 s. Formule : τ=RC. Piège : erreur de conversion d'unités (µF→F, kΩ→Ω) est la source d'erreur la plus fréquente."
     },
     {
@@ -43587,12 +43587,12 @@ const QUESTIONS = {
     {
       "q": "Un alternateur produit une tension sinusoïdale de valeur maximale U_max=311 V. Quelle est la valeur efficace ?",
       "o": [
-        "311 V",
         "220 V",
+        "311 V",
         "440 V",
         "156 V"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Méthode : U_eff=U_max/√2=311/1,414≈220 V. Formule : U_eff=U_max/√2. La valeur efficace 220 V est celle utilisée dans les foyers burkinabè. Piège : diviser par 2 donne 155,5 V (choix D)."
     },
     {
@@ -43610,22 +43610,22 @@ const QUESTIONS = {
       "q": "La loi de Stefan-Boltzmann (rayonnement d'un corps noir) est :",
       "o": [
         "P = σT²",
-        "P = σT⁴",
+        "P = σ×T",
         "P = σ/T⁴",
-        "P = σ×T"
+        "P = σT⁴"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Loi de Stefan-Boltzmann : P=σT⁴ par unité de surface, avec σ=5,67×10⁻⁸ W/(m²·K⁴). Très importante en climatologie et pour l'étude du rayonnement solaire en zone sahélienne."
     },
     {
       "q": "Quelle est la formule de la chaleur latente de vaporisation ?",
       "o": [
         "Q = mCΔT",
-        "Q = mLv",
+        "Q = nRT",
         "Q = Lv/m",
-        "Q = nRT"
+        "Q = mLv"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Chaleur latente : Q=mLv (pas de changement de température pendant la transition). Q=mCΔT est la chaleur sensible (avec changement de température). Lv(eau)=2 257 kJ/kg."
     },
     {
@@ -43687,11 +43687,11 @@ const QUESTIONS = {
       "q": "La règle de l'octet stipule que :",
       "o": [
         "Chaque atome forme 8 liaisons covalentes",
-        "Les atomes cherchent à avoir 8 électrons dans leur couche de valence",
+        "Les 8 premiers éléments sont les plus stables",
         "Chaque molécule contient 8 atomes",
-        "Les 8 premiers éléments sont les plus stables"
+        "Les atomes cherchent à avoir 8 électrons dans leur couche de valence"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La règle de l'octet : les atomes des 2e et 3e périodes (sauf H, He) tendent à acquérir 8 électrons en couche externe (configuration des gaz nobles). Exception : BF₃ (6 e⁻), PCl₅ (10 e⁻)."
     },
     {
@@ -43764,44 +43764,44 @@ const QUESTIONS = {
       "q": "Quel est le produit de l'oxydation du glucose C₆H₁₂O₆ lors de la respiration cellulaire ?",
       "o": [
         "C₆H₁₂O₆ → CO + H₂O",
-        "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O",
+        "C₆H₁₂O₆ + H₂O → 6CO₂ + 12H₂",
         "C₆H₁₂O₆ → C₂H₅OH + CO₂",
-        "C₆H₁₂O₆ + H₂O → 6CO₂ + 12H₂"
+        "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Respiration cellulaire complète : C₆H₁₂O₆+6O₂→6CO₂+6H₂O+énergie. Vérification : C:6=6 ✓, H:12=12 ✓, O:6+6=12+6 ✓. Choix C est la fermentation alcoolique (sans O₂)."
     },
     {
       "q": "Le coefficient de dilatation thermique linéaire α d'un solide est utilisé dans la formule :",
       "o": [
         "ΔL = L₀ × α × ΔT²",
-        "ΔL = L₀ × α × ΔT",
+        "ΔL = L₀ / (α × ΔT)",
         "ΔL = α × ΔT / L₀",
-        "ΔL = L₀ / (α × ΔT)"
+        "ΔL = L₀ × α × ΔT"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Dilatation linéaire : ΔL=L₀αΔT → L=L₀(1+αΔT). Application : rails de chemin de fer, ponts, câbles électriques. En Afrique sahélienne, les amplitudes thermiques importantes rendent ce calcul crucial."
     },
     {
       "q": "Quelle est la résistance interne d'une pile idéale ?",
       "o": [
         "Très grande (→ ∞)",
-        "Très petite (→ 0)",
+        "Variable selon le courant",
         "Égale à la résistance externe",
-        "Variable selon le courant"
+        "Très petite (→ 0)"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Une pile idéale a une résistance interne r=0 → la tension aux bornes U=E-r×I=E (constante). Une pile réelle a r>0 → U<E en charge. En pratique, r de quelques dizaines de mΩ pour les bonnes piles."
     },
     {
       "q": "Quelle est la densité de courant dans un fil de section 2 mm² traversé par 4 A ?",
       "o": [
-        "2 A/m²",
         "2×10⁶ A/m²",
+        "2 A/m²",
         "8×10⁶ A/m²",
         "0,5 A/mm²"
       ],
-      "r": 1,
+      "r": 0,
       "x": "j=I/S=4/(2×10⁻⁶)=2×10⁶ A/m². Conversion : 2 mm²=2×10⁻⁶ m². Piège : oublier la conversion mm²→m² donne j=2 A/m². Choix D : 4/2=2 A/mm² (unité non SI mais numériquement différent)."
     },
     {
@@ -43852,11 +43852,11 @@ const QUESTIONS = {
       "q": "La loi de Hess stipule que :",
       "o": [
         "L'enthalpie d'une réaction dépend du chemin suivi",
-        "L'enthalpie d'une réaction est indépendante du chemin suivi",
+        "L'équilibre chimique favorise toujours les réactifs",
         "La vitesse de réaction est proportionnelle à la température",
-        "L'équilibre chimique favorise toujours les réactifs"
+        "L'enthalpie d'une réaction est indépendante du chemin suivi"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Loi de Hess : ΔH d'une réaction est identique qu'on la réalise en une étape ou en plusieurs étapes. C'est une conséquence du fait que H est une fonction d'état. Très utile pour calculer des enthalpies inaccessibles expérimentalement."
     },
     {
@@ -43951,55 +43951,55 @@ const QUESTIONS = {
       "q": "Quel est le principe de fonctionnement d'un sonar ?",
       "o": [
         "Émission et réception de lumière ultraviolette",
-        "Émission et réception d'ultrasons pour mesurer des distances",
+        "Diffraction de rayons X dans l'eau",
         "Utilisation du champ magnétique terrestre",
-        "Diffraction de rayons X dans l'eau"
+        "Émission et réception d'ultrasons pour mesurer des distances"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Sonar = Sound Navigation And Ranging. Émet des ultrasons (f>20 000 Hz), mesure le temps d'écho → distance=v×t/2 (v≈1500 m/s dans l'eau). Utilisation : bathymétrie, localisation de poissons, sous-marins."
     },
     {
       "q": "Quelle est la masse molaire de l'éthanol C₂H₅OH ? (H=1, C=12, O=16 g/mol)",
       "o": [
-        "28 g/mol",
         "46 g/mol",
+        "28 g/mol",
         "44 g/mol",
         "32 g/mol"
       ],
-      "r": 1,
+      "r": 0,
       "x": "M(C₂H₅OH)=2×12+6×1+16=24+6+16=46 g/mol. Attention : C₂H₅OH contient 2C, 6H (5+1 du OH), 1O. Piège : oublier le H du groupe -OH donne 45 ; confondre avec C₂H₄ (éthylène, M=28 g/mol)."
     },
     {
       "q": "Un filament de lampe incandescente à 2500 K rayonne principalement dans :",
       "o": [
         "L'ultraviolet",
-        "Le visible et l'infrarouge",
+        "Les micro-ondes",
         "Les rayons X",
-        "Les micro-ondes"
+        "Le visible et l'infrarouge"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Loi de Wien : λ_max=b/T=2,9×10⁻³/2500=1160 nm (infrarouge proche). Le filament rayonne aussi dans le visible mais surtout IR → rendement lumineux faible (~5%). Les LED et néons sont plus efficaces."
     },
     {
       "q": "Quelle est la concentration en ions OH⁻ dans une solution de pH=11 à 25°C ?",
       "o": [
-        "10⁻¹¹ mol/L",
-        "10⁻³ mol/L",
+        "11 mol/L",
         "10³ mol/L",
-        "11 mol/L"
+        "10⁻³ mol/L",
+        "10⁻¹¹ mol/L"
       ],
-      "r": 1,
+      "r": 2,
       "x": "À 25°C : pH+pOH=14 → pOH=14-11=3 → [OH⁻]=10⁻³ mol/L. Formule : [OH⁻]=10⁻(14-pH). Piège : utiliser [OH⁻]=10⁻pH=10⁻¹¹ (confondre avec [H₃O⁺])."
     },
     {
       "q": "Le phénomène de fluorescence se produit quand :",
       "o": [
         "Un atome absorbe un photon et réémet un photon de plus haute énergie",
-        "Un atome absorbe un photon UV et réémet de la lumière visible de plus basse énergie",
+        "La lumière est diffractée par un réseau",
         "Un corps chaud émet un rayonnement continu",
-        "La lumière est diffractée par un réseau"
+        "Un atome absorbe un photon UV et réémet de la lumière visible de plus basse énergie"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Fluorescence : absorption UV → émission lumière visible (λ plus grande, E plus faible). Phosphorescence : même processus mais avec délai. Application : néons, marqueurs fluorescents, tenues haute visibilité (gilets jaunes)."
     },
     {
@@ -44094,11 +44094,11 @@ const QUESTIONS = {
       "q": "Quelle est la relation entre l'énergie d'un photon et sa fréquence ?",
       "o": [
         "E = h/f",
-        "E = hf",
+        "E = f/h",
         "E = hc",
-        "E = f/h"
+        "E = hf"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Formule de Planck : E=hf=hc/λ. h=6,63×10⁻³⁴ J·s. Plus la fréquence est élevée, plus le photon est énergétique (UV plus énergétiques que l'IR). Application : effet photoélectrique."
     },
     {
@@ -44127,12 +44127,12 @@ const QUESTIONS = {
       "q": "Dans la notation IUPAC, comment nomme-t-on CH₃-CH₂-CH₂-OH ?",
       "o": [
         "Éthanol",
-        "Propan-1-ol",
+        "1-propanol (non IUPAC)",
         "Propan-2-ol",
-        "1-propanol (non IUPAC)"
+        "Propan-1-ol"
       ],
-      "r": 1,
-      "x": "Chaîne de 3 carbones (propan-) avec -OH sur le C1 (→ propan-1-ol). Propan-2-ol = CH₃-CHOH-CH₃ (alcool secondaire). La nomenclature IUPAC précise la position de la fonction. Choix D est une écriture ancienne non officielle."
+      "r": 3,
+      "x": "Chaîne de 3 carbones (propan-) avec -OH sur le C1 (→ propan-1-ol). Propan-2-ol = CH₃-CHOH-CH₃ (alcool secondaire). La nomenclature IUPAC précise la position de la fonction. Choix B est une écriture ancienne non officielle."
     },
     {
       "q": "Quelle est la résistance équivalente de 4 résistances de 20 Ω chacune, montées en série ?",
@@ -44171,11 +44171,11 @@ const QUESTIONS = {
       "q": "Qu'est-ce que la spectroscopie infrarouge (IR) permet de détecter en chimie organique ?",
       "o": [
         "La masse molaire de la molécule",
-        "Les groupes fonctionnels par absorption de rayonnement IR",
+        "Le nombre d'insaturations de la molécule",
         "La configuration spatiale des atomes",
-        "Le nombre d'insaturations de la molécule"
+        "Les groupes fonctionnels par absorption de rayonnement IR"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La spectroscopie IR détecte les vibrations des liaisons chimiques à des fréquences caractéristiques (ex : O-H vers 3300 cm⁻¹, C=O vers 1700 cm⁻¹). Très utilisée pour identifier les fonctions chimiques (alcool, acide, amine...)."
     },
     {
@@ -44193,11 +44193,11 @@ const QUESTIONS = {
       "q": "La thermochimie étudie :",
       "o": [
         "La vitesse des réactions chimiques",
-        "Les échanges de chaleur lors des réactions chimiques",
+        "Les équilibres acido-basiques",
         "La structure électronique des molécules",
-        "Les équilibres acido-basiques"
+        "Les échanges de chaleur lors des réactions chimiques"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La thermochimie étudie les chaleurs de réaction (ΔH) : enthalpie de formation, combustion, neutralisation. La cinétique chimique étudie les vitesses. La thermodynamique inclut la thermochimie mais est plus générale."
     },
     {
@@ -44226,22 +44226,22 @@ const QUESTIONS = {
       "q": "Quelle est la formule développée de l'acide propanoïque ?",
       "o": [
         "CH₃-CH₂-CHO",
-        "CH₃-CH₂-COOH",
+        "HOOC-CH₂-COOH",
         "CH₃-CO-CH₃",
-        "HOOC-CH₂-COOH"
+        "CH₃-CH₂-COOH"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Acide propanoïque : chaîne de 3 carbones avec groupe acide -COOH → CH₃-CH₂-COOH. CH₃-CH₂-CHO = propanal (aldéhyde), CH₃-CO-CH₃ = propanone (cétone), HOOC-CH₂-COOH = acide malonique."
     },
     {
       "q": "Quelle est la valeur du travail effectué par une force perpendiculaire au déplacement ?",
       "o": [
         "W = F × d",
-        "W = F × d × cos(90°) = 0",
+        "W = -F × d",
         "W = F × d × sin(90°) = Fd",
-        "W = -F × d"
+        "W = F × d × cos(90°) = 0"
       ],
-      "r": 1,
+      "r": 3,
       "x": "W=F·d·cosθ. Si F ⊥ d → θ=90° → cos90°=0 → W=0. Exemple : la réaction normale d'un plan horizontal ne travaille pas (perpendiculaire au déplacement horizontal). La force de Lorentz sur une charge ne travaille pas."
     },
     {
@@ -44259,22 +44259,22 @@ const QUESTIONS = {
       "q": "La vitesse du son est plus grande dans :",
       "o": [
         "L'air",
-        "L'eau",
+        "Un gaz rare",
         "Le vide",
-        "Un gaz rare"
+        "L'eau"
       ],
-      "r": 1,
+      "r": 3,
       "x": "v_son : vide=0 (pas de propagation), air≈340 m/s, eau≈1480 m/s, acier≈5100 m/s. Plus le milieu est dense et rigide, plus le son se propage vite. Dans le vide, le son ne se propage pas (pas de matière)."
     },
     {
       "q": "Quel est le pH d'une solution tampon acide acétique/acétate de sodium (pKa=4,75) quand [AcOH]=[AcO⁻] ?",
       "o": [
         "pH = 7",
-        "pH = 4,75",
+        "pH = 2,375",
         "pH = 9,5",
-        "pH = 2,375"
+        "pH = 4,75"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Équation d'Henderson-Hasselbalch : pH=pKa+log([A⁻]/[AH]). Si [AcO⁻]=[AcOH], log(1)=0 → pH=pKa=4,75. C'est la définition même du pKa : pH à demi-neutralisation."
     },
     {
@@ -44302,12 +44302,12 @@ const QUESTIONS = {
     {
       "q": "Un moteur électrique de puissance nominale 1,5 kW tourne pendant 2 heures. Quelle est l'énergie consommée en MJ ?",
       "o": [
-        "3 MJ",
         "10,8 MJ",
+        "3 MJ",
         "0,3 MJ",
         "108 MJ"
       ],
-      "r": 1,
+      "r": 0,
       "x": "E=P×t=1500 W×7200 s=10 800 000 J=10,8 MJ. Ou : E=1,5 kW×2h=3 kWh=3×3,6 MJ=10,8 MJ (1 kWh=3,6 MJ). Piège : utiliser t=2 h sans conversion en secondes donne 3000 (sans unité cohérente)."
     },
     {
@@ -44546,12 +44546,12 @@ const QUESTIONS = {
     {
       "q": "Trouvez l'intrus : POMME — BANANE — TOMATE — MANGUE",
       "o": [
-        "POMME",
-        "BANANE",
         "TOMATE",
+        "BANANE",
+        "POMME",
         "MANGUE"
       ],
-      "r": 2,
+      "r": 0,
       "x": "La tomate est un légume (botaniquement un fruit, mais classée comme légume). Les autres sont des fruits sucrés."
     },
     {
@@ -44568,12 +44568,12 @@ const QUESTIONS = {
     {
       "q": "Qui n'est pas à sa place ? Carré — Triangle — Cube — Cercle",
       "o": [
-        "Carré",
-        "Triangle",
         "Cube",
+        "Triangle",
+        "Carré",
         "Cercle"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Le cube est une figure 3D (volume). Les autres sont des figures 2D (planes)."
     },
     {
@@ -44689,12 +44689,12 @@ const QUESTIONS = {
     {
       "q": "Choisissez l'analogie correcte : Médecin est à Hôpital ce que Juge est à :",
       "o": [
-        "Police",
-        "Prison",
         "Tribunal",
+        "Prison",
+        "Police",
         "Loi"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Le médecin exerce à l'hôpital ; le juge exerce au tribunal. Relation = personne / lieu d'exercice. Piège : \"Prison\" est attractif car liée à la justice — mais c'est le lieu d'exécution, non d'exercice."
     },
     {
@@ -44757,10 +44757,10 @@ const QUESTIONS = {
       "o": [
         "Courageux",
         "Brave",
-        "Lâche",
-        "Valeureux"
+        "Valeureux",
+        "Lâche"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Courageux, brave et valeureux sont synonymes. Lâche est leur antonyme. Piège : \"valeureux\" peut sembler différent stylistiquement — mais le sens est identique aux autres."
     },
     {
@@ -44823,10 +44823,10 @@ const QUESTIONS = {
       "o": [
         "Croître",
         "Multiplier",
-        "Réduire",
-        "Amplifier"
+        "Amplifier",
+        "Réduire"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Réduire est l'antonyme d'augmenter. Croître, multiplier et amplifier sont tous synonymes d'augmenter. Piège : \"multiplier\" peut sembler neutre mais implique bien une augmentation."
     },
     {
@@ -44889,10 +44889,10 @@ const QUESTIONS = {
       "o": [
         "Lundi",
         "Mardi",
-        "Jeudi",
-        "Vendredi"
+        "Vendredi",
+        "Jeudi"
       ],
-      "r": 2,
+      "r": 3,
       "x": "100 ÷ 7 = 14 semaines et 2 jours de reste. Mardi + 2 jours = Jeudi. Piège : calculer 100 ÷ 7 = 14,28 et arrondir incorrectement."
     },
     {
@@ -44900,10 +44900,10 @@ const QUESTIONS = {
       "o": [
         "Rapide",
         "Curieux",
-        "Clairvoyant",
-        "Sérieux"
+        "Sérieux",
+        "Clairvoyant"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Perspicace signifie capable de discerner ce qui échappe aux autres. Clairvoyant est le synonyme le plus précis. Piège : \"Curieux\" est proche sémantiquement mais désigne un trait de caractère, non une capacité d'analyse."
     },
     {
@@ -44944,10 +44944,10 @@ const QUESTIONS = {
       "o": [
         "Connaissance",
         "Reconnaissance",
-        "Conaissance",
-        "Naissance"
+        "Naissance",
+        "Conaissance"
       ],
-      "r": 2,
+      "r": 3,
       "x": "\"Conaissance\" est incorrect — il faut \"Connaissance\" avec double N. Piège : la ressemblance visuelle avec \"naissance\" (correct) masque le doublement manquant du N."
     },
     {
@@ -44964,12 +44964,12 @@ const QUESTIONS = {
     {
       "q": "Quelle figure est la transformation suivante : un carré pivoté de 45° ?",
       "o": [
-        "Un rectangle",
         "Un losange",
+        "Un rectangle",
         "Un trapèze",
         "Un pentagone"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Un carré pivoté de 45° apparaît comme un losange (4 côtés égaux, angles non droits visuellement). Piège : on pourrait penser \"rectangle\" par association carré/rectangle."
     },
     {
@@ -45010,10 +45010,10 @@ const QUESTIONS = {
       "o": [
         "Ciel",
         "Montagne",
-        "Bas",
-        "Grand"
+        "Grand",
+        "Bas"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Chaud/Froid et Haut/Bas sont des paires d'antonymes. Relation = contraire. Piège : \"Grand\" est attractif comme synonyme de Haut — mais la relation demandée est l'opposition."
     },
     {
@@ -45118,12 +45118,12 @@ const QUESTIONS = {
     {
       "q": "Lequel de ces mots est l'antonyme de \"bénévole\" ?",
       "o": [
-        "Volontaire",
-        "Gratuit",
         "Rémunéré",
+        "Gratuit",
+        "Volontaire",
         "Altruiste"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Bénévole = qui travaille gratuitement, sans rémunération. L'antonyme est \"rémunéré\". Piège : \"Altruiste\" semble opposé à l'idée d'intérêt — mais c'est un trait de caractère, non le contraire économique."
     },
     {
@@ -45152,12 +45152,12 @@ const QUESTIONS = {
       "q": "Quel jour était le 1er janvier si le 31 janvier est un lundi ?",
       "o": [
         "Vendredi",
-        "Samedi",
+        "Lundi",
         "Dimanche",
-        "Lundi"
+        "Samedi"
       ],
-      "r": 1,
-      "x": "31 janvier est lundi. 31 - 1 = 30 jours d'écart. 30/7 = 4 semaines et reste 2. On recule de 2 jours à partir de Lundi : Dimanche (1), Samedi (2). La réponse B (Samedi).  Piège : compter 31 jours au lieu de 30 pour remonter au 1er."
+      "r": 3,
+      "x": "31 janvier est lundi. 31 - 1 = 30 jours d'écart. 30/7 = 4 semaines et reste 2. On recule de 2 jours à partir de Lundi : Dimanche (1), Samedi (2). La réponse D (Samedi).  Piège : compter 31 jours au lieu de 30 pour remonter au 1er."
     },
     {
       "q": "Parmi les formes suivantes, laquelle a le plus de côtés ?",
@@ -45206,12 +45206,12 @@ const QUESTIONS = {
     {
       "q": "Quel mot complète l'analogie ? Chaton est à Chat ce que Poulain est à :",
       "o": [
-        "Bœuf",
-        "Âne",
         "Cheval",
+        "Âne",
+        "Bœuf",
         "Mouton"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Chaton est le petit du chat ; poulain est le petit du cheval. Relation = jeune animal / animal adulte. Piège : \"Âne\" est attractif car le poulain peut évoquer les équidés en général."
     },
     {
@@ -45274,10 +45274,10 @@ const QUESTIONS = {
       "o": [
         "Soir",
         "Soleil",
-        "Nuit",
-        "Lumière"
+        "Lumière",
+        "Nuit"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Blanc/Noir et Jour/Nuit sont des paires d'opposés absolus. Piège : \"Soir\" est attractif (transition du jour) mais n'est pas l'opposé strict."
     },
     {
@@ -45307,10 +45307,10 @@ const QUESTIONS = {
       "o": [
         "Addition",
         "Soustraction",
-        "Équation",
-        "Multiplication"
+        "Multiplication",
+        "Équation"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Addition, soustraction et multiplication sont des opérations arithmétiques de base. Équation est un outil algébrique, pas une opération. Piège : \"équation\" contient une opération — mais elle n'est pas une opération elle-même."
     },
     {
@@ -45404,12 +45404,12 @@ const QUESTIONS = {
     {
       "q": "Quel mot complète l'analogie ? Aveugle est à Vue ce que Sourd est à :",
       "o": [
-        "Parole",
-        "Son",
         "Ouïe",
+        "Son",
+        "Parole",
         "Oreille"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Aveugle = privé de vue (sens). Sourd = privé d'ouïe (sens). Relation = handicap / sens affecté. Piège : \"Oreille\" est l'organe (non le sens) — distinguer organe et sens."
     },
     {
@@ -45426,12 +45426,12 @@ const QUESTIONS = {
     {
       "q": "Complète : P, O, N, M, __",
       "o": [
-        "J",
-        "K",
         "L",
+        "K",
+        "J",
         "M"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Suite en reculant d'une lettre dans l'alphabet : P→O→N→M→L. Piège : répondre K (reculer de 2) — confusion de pas."
     },
     {
@@ -45481,12 +45481,12 @@ const QUESTIONS = {
     {
       "q": "Quel adjectif est le contraire de \"superficiel\" ?",
       "o": [
-        "Rapide",
         "Profond",
+        "Rapide",
         "Large",
         "Élevé"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Superficiel = qui reste en surface. Profond est l'antonyme exact. Piège : \"Large\" évoque l'étendue, non la profondeur — glissement de sens."
     },
     {
@@ -45604,10 +45604,10 @@ const QUESTIONS = {
       "o": [
         "Clair",
         "Brillant",
-        "Opaque",
-        "Terne"
+        "Terne",
+        "Opaque"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Transparent laisse passer la lumière. Opaque ne la laisse pas passer — antonyme exact. Piège : \"Terne\" évoque le manque d'éclat — mais un objet terne peut rester transparent."
     },
     {
@@ -45690,12 +45690,12 @@ const QUESTIONS = {
     {
       "q": "Quel est le contraire de \"prolixe\" ?",
       "o": [
-        "Bavard",
-        "Long",
         "Concis",
+        "Long",
+        "Bavard",
         "Éloquent"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Prolixe = qui parle ou écrit trop longuement. Concis est l'antonyme (bref, précis). Piège : \"Bavard\" semble synonyme de prolixe — mais \"bavard\" est informel et ne porte pas l'idée d'excès."
     },
     {
@@ -45811,12 +45811,12 @@ const QUESTIONS = {
     {
       "q": "Si tous les ingénieurs sont diplômés, et que Koné est ingénieur, alors :",
       "o": [
-        "Koné est peut-être diplômé",
-        "Koné n'est pas forcément diplômé",
         "Koné est diplômé",
+        "Koné n'est pas forcément diplômé",
+        "Koné est peut-être diplômé",
         "On ne peut pas savoir"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Syllogisme direct : tous les ingénieurs sont diplômés + Koné est ingénieur → Koné est diplômé. Piège : D est attractif pour ceux qui doutent de la logique universelle."
     },
     {
@@ -45846,10 +45846,10 @@ const QUESTIONS = {
       "o": [
         "Vite",
         "Lentement",
-        "Beauté",
-        "Vraiment"
+        "Vraiment",
+        "Beauté"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Vite, lentement et vraiment sont des adverbes (modifient un verbe). Beauté est un nom commun. Piège : \"Vite\" peut sembler un adjectif informel — mais c'est bien un adverbe."
     },
     {
@@ -45965,23 +45965,23 @@ const QUESTIONS = {
     {
       "q": "Si P est au Nord de Q, et R est à l'Est de Q, dans quelle direction R est-il par rapport à P ?",
       "o": [
-        "Nord-Est",
         "Sud-Est",
+        "Nord-Est",
         "Nord-Ouest",
         "Sud-Ouest"
       ],
-      "r": 1,
+      "r": 0,
       "x": "P est au Nord de Q → Q est au Sud de P. R est à l'Est de Q. Depuis P : Q est au Sud, R est à l'Est de Q → R est au Sud-Est de P. Piège : inverser la relation P/Q donne Nord-Est."
     },
     {
       "q": "Quel adjectif est le synonyme de \"pérenne\" ?",
       "o": [
-        "Temporaire",
-        "Fragile",
         "Durable",
+        "Fragile",
+        "Temporaire",
         "Récent"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Pérenne = qui dure longtemps, de façon permanente. Durable est le synonyme le plus précis. Piège : \"Récent\" peut sembler lié à la durée dans le temps — mais évoque la nouveauté, non la permanence."
     },
     {
@@ -46011,10 +46011,10 @@ const QUESTIONS = {
       "o": [
         "Afrique",
         "Europe",
-        "Atlantique",
-        "Asie"
+        "Asie",
+        "Atlantique"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Afrique, Europe et Asie sont des continents. L'Atlantique est un océan. Piège : tous évoquent la géographie mondiale — distinguer continent et océan."
     },
     {
@@ -46066,10 +46066,10 @@ const QUESTIONS = {
       "o": [
         "Tissu",
         "Métal",
-        "Chaussure",
-        "Chapeau"
+        "Chapeau",
+        "Chaussure"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Le boulanger fabrique du pain ; le cordonnier fabrique/répare des chaussures. Relation = artisan / produit. Piège : \"Chapeau\" peut sembler lié à l'habillement comme les chaussures — mais c'est le chapelier qui fait les chapeaux."
     },
     {
@@ -46176,10 +46176,10 @@ const QUESTIONS = {
       "o": [
         "30",
         "72",
-        "36",
-        "76"
+        "76",
+        "36"
       ],
-      "r": 2,
+      "r": 3,
       "x": "représente les carrés de 1, 2, 3, 4, 5,.. donc 6 x 6= 36"
     },
     {
@@ -46295,12 +46295,12 @@ const QUESTIONS = {
     {
       "q": "Complète la suite : A1, B2, C3, D4, __",
       "o": [
-        "D5",
-        "E4",
         "E5",
+        "E4",
+        "D5",
         "F5"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Lettre avance de 1 (A→B→C→D→E) et chiffre avance de 1 (1→2→3→4→5). Prochain terme : E5. Piège : répéter D (D5) ou avancer le chiffre mais pas la lettre."
     },
     {
@@ -46372,12 +46372,12 @@ const QUESTIONS = {
     {
       "q": "Quel adjectif signifie \"qui ne peut être évité\" ?",
       "o": [
-        "Éphémère",
         "Inévitable",
+        "Éphémère",
         "Aléatoire",
         "Éventuel"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Inévitable = qu'on ne peut éviter. Piège : \"Éventuel\" peut sembler lié à la possibilité — mais désigne ce qui peut ou non arriver, non ce qu'on ne peut éviter."
     },
     {
@@ -46416,12 +46416,12 @@ const QUESTIONS = {
     {
       "q": "Quel est l'intrus ?",
       "o": [
-        "Piano",
-        "Violon",
         "Trompette",
+        "Violon",
+        "Piano",
         "Guitare"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Piano, violon et guitare sont des instruments à cordes. La trompette est un instrument à vent (cuivre). Piège : penser \"piano\" comme intrus (percuteur, non pincé) — mais le critère principal est cordes vs. vents."
     },
     {
@@ -46449,12 +46449,12 @@ const QUESTIONS = {
     {
       "q": "Quel est le contraire de \"concave\" ?",
       "o": [
-        "Creux",
         "Bombé",
+        "Creux",
         "Plat",
         "Courbe"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Concave = creusé vers l'intérieur. Convexe (bombé) est l'antonyme. Piège : \"Creux\" est synonyme de concave — erreur de sens."
     },
     {
@@ -46471,12 +46471,12 @@ const QUESTIONS = {
     {
       "q": "Complète la suite de lettres : C, F, I, L, __",
       "o": [
-        "M",
-        "N",
         "O",
+        "N",
+        "M",
         "P"
       ],
-      "r": 2,
+      "r": 0,
       "x": "On avance de 3 rangs : C(3)→F(6)→I(9)→L(12)→O(15). Piège : avancer de 2 rangs donne N — confusion de pas."
     },
     {
@@ -46583,10 +46583,10 @@ const QUESTIONS = {
       "o": [
         "Marbre",
         "Ciseau",
-        "Statue",
-        "Galerie"
+        "Galerie",
+        "Statue"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Le peintre produit un tableau ; le sculpteur produit une statue. Relation = artiste / œuvre produite. Piège : \"Marbre\" est le matériau (non le produit) ; \"Ciseau\" est l'outil."
     },
     {
@@ -46605,10 +46605,10 @@ const QUESTIONS = {
       "o": [
         "Lire",
         "Courir",
-        "Mangue",
-        "Sauter"
+        "Sauter",
+        "Mangue"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Lire, courir et sauter sont des verbes (actions). Mangue est un nom commun (fruit). Piège : \"Courir\" peut sembler plus physique que \"lire\" — mais tous deux sont des verbes."
     },
     {
@@ -46648,11 +46648,11 @@ const QUESTIONS = {
       "q": "Quel mot est le contraire de \"réticent\" ?",
       "o": [
         "Hésitant",
-        "Enthousiaste",
+        "Silencieux",
         "Prudent",
-        "Silencieux"
+        "Enthousiaste"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Réticent = qui résiste, qui hésite à accepter. Enthousiaste (ardent, favorable) est l'antonyme. Piège : \"Hésitant\" est proche sémantiquement — mais c'est un quasi-synonyme, non un antonyme."
     },
     {
@@ -46669,12 +46669,12 @@ const QUESTIONS = {
     {
       "q": "Complète la suite : Z, A, Y, B, X, C, __",
       "o": [
-        "D",
         "W",
+        "D",
         "W, D",
         "V"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Alternance : Z(26)↓, A(1)↑, Y(25)↓, B(2)↑, X(24)↓, C(3)↑... La prochaine lettre décroissante est W(23). Piège : penser que le prochain terme est D (ascendant) — mais il faut d'abord W (descendant)."
     },
     {
@@ -46977,12 +46977,12 @@ const QUESTIONS = {
     {
       "q": "Oiseau est à nid ce qu'abeille est à :",
       "o": [
-        "Miel",
-        "Fleur",
         "Ruche",
+        "Fleur",
+        "Miel",
         "Essaim"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Le rapport est « animal → habitat qu'il construit ». Piège : « essaim » désigne le groupe d'abeilles et « miel » leur production."
     },
     {
@@ -47001,10 +47001,10 @@ const QUESTIONS = {
       "o": [
         "Vigne",
         "Grappe",
-        "Vin",
-        "Sucre"
+        "Sucre",
+        "Vin"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Le rapport est « matière première → produit transformé ». Piège : « vigne » remonte à l'origine au lieu d'aller vers le produit fini."
     },
     {
@@ -47043,12 +47043,12 @@ const QUESTIONS = {
     {
       "q": "Menuisier est à bois ce que forgeron est à :",
       "o": [
-        "Feu",
-        "Enclume",
         "Fer",
+        "Enclume",
+        "Feu",
         "Marteau"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Le rapport est « artisan → matière travaillée ». Piège : « enclume » et « marteau » sont ses outils, « feu » son moyen de travail."
     },
     {
@@ -47087,12 +47087,12 @@ const QUESTIONS = {
     {
       "q": "Quel est l'intrus ?",
       "o": [
-        "Cuivre",
-        "Fer",
         "Plastique",
+        "Fer",
+        "Cuivre",
         "Aluminium"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Cuivre, fer et aluminium sont des métaux ; le plastique est un matériau de synthèse. Piège : les quatre sont des matériaux industriels courants."
     },
     {
@@ -47144,10 +47144,10 @@ const QUESTIONS = {
       "o": [
         "Voir",
         "Entendre",
-        "Marcher",
-        "Sentir"
+        "Sentir",
+        "Marcher"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Voir, entendre et sentir renvoient aux cinq sens ; marcher est un déplacement. Piège : marcher est une action corporelle, ce qui le rapproche faussement des perceptions."
     },
     {
@@ -47715,11 +47715,11 @@ const QUESTIONS = {
       "q": "Quel est l'antonyme de « prodigue » ?",
       "o": [
         "Généreux",
-        "Avare",
+        "Habile",
         "Riche",
-        "Habile"
+        "Avare"
       ],
-      "r": 1,
+      "r": 3,
       "x": "« Prodigue » signifie qui dépense sans compter ; son contraire est « avare ». Piège : « généreux » est un synonyme de prodigue, non son contraire."
     },
     {
@@ -47791,12 +47791,12 @@ const QUESTIONS = {
     {
       "q": "Complétez : « Les fleurs qu'elle a ___ sont fanées. »",
       "o": [
-        "cueilli",
-        "cueillie",
         "cueillies",
+        "cueillie",
+        "cueilli",
         "cueillis"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Le COD « les fleurs » est placé avant le verbe, donc accord au féminin pluriel. Piège : l'auxiliaire « avoir » fait croire à tort à l'invariabilité du participe."
     },
     {
@@ -48055,12 +48055,12 @@ const QUESTIONS = {
     {
       "q": "Que signifie le préfixe « hypo- » ?",
       "o": [
-        "Au-dessus",
         "En dessous",
+        "Au-dessus",
         "Contre",
         "Avec"
       ],
-      "r": 1,
+      "r": 0,
       "x": "« Hypo- » marque l'infériorité, comme dans hypotension ou hypoglycémie. Piège : le confondre avec « hyper- », qui exprime au contraire l'excès."
     },
     {
@@ -48099,12 +48099,12 @@ const QUESTIONS = {
     {
       "q": "Quelle phrase ne contient pas de faute ?",
       "o": [
-        "Je me rappelle de lui",
         "Je me souviens de lui",
+        "Je me rappelle de lui",
         "Je me rappelle à lui",
         "Je me souviens lui"
       ],
-      "r": 1,
+      "r": 0,
       "x": "On se souvient DE quelqu'un mais on se rappelle quelqu'un, sans préposition. Piège : « je me rappelle de » est extrêmement courant à l'oral mais fautif."
     },
     {
@@ -48859,11 +48859,11 @@ const QUESTIONS = {
       "q": "Éphémère est à durable ce que superflu est à :",
       "o": [
         "Inutile",
-        "Indispensable",
+        "Rare",
         "Abondant",
-        "Rare"
+        "Indispensable"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le rapport est l'antonymie stricte. Ce qui est superflu peut être retranché ; son contraire est ce dont on ne peut se passer. Piège : « inutile » est un synonyme de superflu et non son contraire, ce qui en fait le distracteur le plus efficace de la série."
     },
     {
@@ -48959,10 +48959,10 @@ const QUESTIONS = {
       "o": [
         "Jeudi",
         "Vendredi",
-        "Samedi",
-        "Dimanche"
+        "Dimanche",
+        "Samedi"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Janvier compte 31 jours. Or 31 = 4 × 7 + 3, donc le 1ᵉʳ février est décalé de 3 jours par rapport au 1ᵉʳ janvier. Mercredi + 3 = samedi. Piège : compter 31 jours à la main est long et source d'erreur ; seul le reste de la division par 7 importe pour ce type de calcul calendaire."
     },
     {
@@ -49177,12 +49177,12 @@ const QUESTIONS = {
     {
       "q": "On lance 3 pièces. Quelle est la probabilité d'obtenir au moins un pile ?",
       "o": [
-        "1/2",
-        "3/4",
         "7/8",
+        "3/4",
+        "1/2",
         "1/8"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Il est plus rapide de calculer l'événement contraire : n'obtenir aucun pile signifie trois faces, soit 1 cas sur 8. La probabilité cherchée vaut donc 1 − 1/8 = 7/8. Piège : additionner les probabilités d'un pile, deux piles et trois piles est long et sujet aux oublis. Le passage par l'événement contraire est le réflexe à acquérir."
     },
     {
@@ -49210,12 +49210,12 @@ const QUESTIONS = {
     {
       "q": "Combien de codes à 4 chiffres peut-on former avec les chiffres de 0 à 9, la répétition étant autorisée ?",
       "o": [
-        "5 040",
-        "6 561",
         "10 000",
+        "6 561",
+        "5 040",
         "40"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Chaque position offre 10 possibilités indépendantes des autres, donc 10 × 10 × 10 × 10 = 10 000 codes, de 0000 à 9999. Piège : 5 040 correspond à 10 × 9 × 8 × 7, c'est-à-dire au cas sans répétition. L'autorisation de répéter change entièrement le calcul."
     },
     {
@@ -49826,12 +49826,12 @@ const QUESTIONS = {
     {
       "q": "Quel est le pluriel de « chef-d'œuvre » ?",
       "o": [
-        "Chef-d'œuvres",
         "Chefs-d'œuvre",
+        "Chef-d'œuvres",
         "Chefs-d'œuvres",
         "Chef-d'œuvre"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le nom principal est « chef », qui seul prend la marque du pluriel. Le complément « d'œuvre » reste invariable. Piège : la prononciation identique des quatre formes empêche de trancher à l'oreille. Seule l'analyse de la structure du mot composé permet de choisir."
     },
     {
@@ -49861,10 +49861,10 @@ const QUESTIONS = {
       "o": [
         "Éluder",
         "Esquiver",
-        "Affronter",
-        "Contourner"
+        "Contourner",
+        "Affronter"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Éluder, esquiver et contourner expriment l'évitement d'une difficulté. Affronter exprime au contraire le fait de lui faire face. Piège : « éluder » est le moins courant des quatre et attire donc les soupçons, alors qu'il appartient bien au même champ sémantique que les deux suivants."
     },
     {
@@ -49992,11 +49992,11 @@ const QUESTIONS = {
       "q": "Un cube est coupé par un plan passant par trois sommets adjacents à un même sommet. Quelle est la forme de la section ?",
       "o": [
         "Un carré",
-        "Un triangle",
+        "Un hexagone",
         "Un rectangle",
-        "Un hexagone"
+        "Un triangle"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Les trois points choisis sont à égale distance les uns des autres, car ils sont reliés par trois diagonales de faces de même longueur. La section est donc un triangle équilatérale. Piège : on attend instinctivement une section carrée puisque toutes les faces du cube le sont, mais la coupe traverse le solide en biais."
     },
     {
@@ -50224,10 +50224,10 @@ const QUESTIONS = {
       "o": [
         "Parallèles",
         "Perpendiculaires",
-        "Gauches",
-        "Confondues"
+        "Confondues",
+        "Gauches"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Deux droites gauches ne sont pas coplanaires : elles ne se coupent jamais sans pour autant garder une direction commune. Piège : dans le plan, deux droites sont nécessairement parallèles ou sécantes ; ce cas n'existe que dans l'espace à trois dimensions."
     },
     {
@@ -50510,12 +50510,12 @@ const QUESTIONS = {
     {
       "q": "Le délai de droit commun pour introduire un recours pour excès de pouvoir devant le Tribunal administratif du Burkina Faso est de :",
       "o": [
-        "30 jours à compter de la notification de la décision",
         "60 jours à compter de la publication ou notification de l'acte",
+        "30 jours à compter de la notification de la décision",
         "90 jours à compter de la connaissance de l'acte",
         "3 mois à compter de la date de la décision implicite de rejet"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le délai de recours contentieux est de 60 jours à compter de la publication ou notification de l'acte attaqué. Un recours gracieux ou hiérarchique préalable interrompt ce délai. Passé ce délai, la requête est irrecevable pour tardiveté. À ne pas confondre avec les délais spéciaux (contentieux électoral, fiscal)."
     },
     {
@@ -50895,12 +50895,12 @@ const QUESTIONS = {
     {
       "q": "Dans la fonction publique burkinabè, la suspension de fonctions est :",
       "o": [
-        "Une sanction disciplinaire du deuxième groupe prononcée par le conseil de discipline",
+        "Une mesure conservatoire provisoire dans l'attente de la procédure disciplinaire",
         "Une mesure permanente d'exclusion en cas de faute lourde caractérisée",
         "Une mise à la retraite anticipée prononcée par le ministre de tutelle",
-        "Une mesure conservatoire provisoire dans l'attente de la procédure disciplinaire"
+        "Une sanction disciplinaire du deuxième groupe prononcée par le conseil de discipline"
       ],
-      "r": 3,
+      "r": 0,
       "x": "La suspension de fonctions est une mesure conservatoire (non une sanction) qui permet d'écarter temporairement le fonctionnaire en attendant que le conseil de discipline statue sur la faute grave. Le traitement peut être maintenu ou réduit. Elle ne préjuge pas de la sanction définitive qui sera prononcée à l'issue de la procédure."
     },
     {
@@ -51225,12 +51225,12 @@ const QUESTIONS = {
     {
       "q": "Le Tribunal Administratif du Burkina Faso est compétent pour connaître :",
       "o": [
-        "Des litiges entre particuliers en matière civile et commerciale",
         "Des litiges entre les administrés et l'administration",
+        "Des litiges entre particuliers en matière civile et commerciale",
         "Des poursuites pénales contre les agents publics en exercice de leurs fonctions",
         "Des conflits d'attribution entre le pouvoir législatif et le pouvoir exécutif"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le Tribunal Administratif est la juridiction de premier degré du contentieux administratif. Il connaît des recours pour excès de pouvoir, du plein contentieux (indemnités), des contrats administratifs et des élections locales. Les litiges civils et commerciaux relèvent des juridictions judiciaires ordinaires."
     },
     {
@@ -51524,23 +51524,23 @@ const QUESTIONS = {
     {
       "q": "Mission principale d'un Garde de Sécurité Pénitentiaire ?",
       "o": [
-        "Prononcer les peines",
         "Sécurité et surveillance des établissements",
+        "Prononcer les peines",
         "Instruire les dossiers",
         "Décider des libérations"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le GSP assure la garde, la surveillance et la sécurité. Il ne prononce ni peine, ni jugement (rôle du juge)."
     },
     {
       "q": "Qu'est-ce que la « détention provisoire » ?",
       "o": [
-        "Peine définitive",
         "Incarcération avant jugement",
+        "Peine définitive",
         "Peine alternative",
         "Libération conditionnelle"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La détention provisoire est une privation de liberté avant jugement, ordonnée par un juge d'instruction. Présomption d'innocence."
     },
     {
@@ -51613,22 +51613,22 @@ const QUESTIONS = {
       "q": "Qu'est-ce que la libération conditionnelle ?",
       "o": [
         "Évasion",
-        "Libération anticipée sous conditions",
+        "Acquittement",
         "Grâce présidentielle",
-        "Acquittement"
+        "Libération anticipée sous conditions"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La libération conditionnelle permet de finir sa peine en liberté sous conditions (bonne conduite, indemnisation des victimes…)."
     },
     {
       "q": "Le secret professionnel s'impose-t-il au GSP ?",
       "o": [
         "Non",
-        "Oui",
+        "Seulement après autorisation",
         "Seulement pour les affaires importantes",
-        "Seulement après autorisation"
+        "Oui"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le secret professionnel est OBLIGATOIRE pour tout agent public. Sa violation est un délit puni par le Code pénal."
     },
     {
@@ -51645,12 +51645,12 @@ const QUESTIONS = {
     {
       "q": "Quel droit fondamental est conservé par le détenu ?",
       "o": [
-        "Droit de vote",
         "Droit à la dignité humaine",
+        "Droit de vote",
         "Liberté de circulation",
         "Droit de port d'arme"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Même incarcéré, le détenu conserve sa dignité humaine. C'est un principe fondamental du droit pénitentiaire moderne."
     }
   ],
@@ -51658,12 +51658,12 @@ const QUESTIONS = {
     {
       "q": "Mission principale de la Police Nationale ?",
       "o": [
-        "Défense des frontières",
         "Maintien de l'ordre public",
+        "Défense des frontières",
         "Justice",
         "Collecte d'impôts"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La Police Nationale assure la sécurité publique, le maintien de l'ordre, la prévention et la répression des infractions."
     },
     {
@@ -51702,12 +51702,12 @@ const QUESTIONS = {
     {
       "q": "Garde à vue maximale au BF (sauf prolongation) ?",
       "o": [
-        "24 heures",
         "48 heures",
+        "24 heures",
         "72 heures",
         "6 jours"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La garde à vue est de 48h, prolongeable une fois sur autorisation du Procureur. Au-delà, mandat de dépôt nécessaire."
     },
     {
@@ -51724,12 +51724,12 @@ const QUESTIONS = {
     {
       "q": "Numéro d'urgence Police au Burkina Faso ?",
       "o": [
-        "15",
-        "17",
+        "19",
         "18",
-        "19"
+        "17",
+        "15"
       ],
-      "r": 1,
+      "r": 2,
       "x": "17 = Police, 18 = Sapeurs-Pompiers. Le numéro 15 est utilisé en France pour le SAMU."
     },
     {
@@ -51747,11 +51747,11 @@ const QUESTIONS = {
       "q": "Que doit faire un policier face à un crime flagrant ?",
       "o": [
         "Attendre le supérieur",
-        "Intervenir immédiatement",
+        "Quitter les lieux",
         "Demander l'avis du juge",
-        "Quitter les lieux"
+        "Intervenir immédiatement"
       ],
-      "r": 1,
+      "r": 3,
       "x": "En cas de flagrant délit, le policier intervient IMMÉDIATEMENT pour faire cesser l'infraction et appréhender l'auteur."
     },
     {
@@ -51804,11 +51804,11 @@ const QUESTIONS = {
       "q": "Que signifie « rompre les rangs » ?",
       "o": [
         "Se mettre au garde-à-vous",
-        "Quitter la formation",
+        "Saluer",
         "Passer en revue",
-        "Saluer"
+        "Quitter la formation"
       ],
-      "r": 1,
+      "r": 3,
       "x": "« Rompez les rangs » est un commandement militaire signifiant que les soldats peuvent quitter la formation."
     },
     {
@@ -51847,12 +51847,12 @@ const QUESTIONS = {
     {
       "q": "Le couvre-feu est :",
       "o": [
-        "Un repas militaire",
         "Une interdiction de sortir la nuit",
+        "Un repas militaire",
         "Une cérémonie",
         "Un exercice"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le couvre-feu est une mesure restrictive interdisant les déplacements pendant certaines heures (souvent nocturnes), généralement décrétée en cas de crise."
     },
     {
@@ -51870,11 +51870,11 @@ const QUESTIONS = {
       "q": "Quel est le symbole national qui flotte sur tous les bâtiments officiels ?",
       "o": [
         "L'écusson",
-        "Le drapeau national",
         "La marianne",
+        "Le drapeau national",
         "La croix"
       ],
-      "r": 1,
+      "r": 2,
       "x": "Le drapeau national (rouge-vert avec étoile dorée) flotte sur tous les bâtiments publics au Burkina Faso."
     }
   ],
@@ -51882,12 +51882,12 @@ const QUESTIONS = {
     {
       "q": "L'impôt est :",
       "o": [
-        "Volontaire",
         "Obligatoire",
+        "Volontaire",
         "Facultatif",
         "Symbolique"
       ],
-      "r": 1,
+      "r": 0,
       "x": "L'impôt est un prélèvement OBLIGATOIRE sans contrepartie directe, perçu par l'État pour financer les services publics."
     },
     {
@@ -51904,89 +51904,89 @@ const QUESTIONS = {
     {
       "q": "L'IUTS désigne :",
       "o": [
-        "Impôt Unique sur le Transit Sahélien",
         "Impôt Unique sur les Traitements et Salaires",
+        "Impôt Unique sur le Transit Sahélien",
         "Indice Universel des Taxes Spéciales",
         "Impôt Universel des Travailleurs Sénior"
       ],
-      "r": 1,
+      "r": 0,
       "x": "L'IUTS (Impôt Unique sur les Traitements et Salaires) frappe les revenus du travail au BF. C'est l'équivalent de l'IRPP sur les salaires."
     },
     {
       "q": "L'IS est :",
       "o": [
-        "Impôt Spécial",
         "Impôt sur les Sociétés",
+        "Impôt Spécial",
         "Indice Statistique",
         "Impôt sur le Solde"
       ],
-      "r": 1,
+      "r": 0,
       "x": "L'IS (Impôt sur les Sociétés) frappe les bénéfices des entreprises. Au BF, le taux normal est de 27,5%."
     },
     {
       "q": "L'évasion fiscale consiste à :",
       "o": [
         "Payer ses impôts",
-        "Échapper à l'impôt par des moyens légaux ou illégaux",
+        "Demander des subventions",
         "Recevoir des remboursements",
-        "Demander des subventions"
+        "Échapper à l'impôt par des moyens légaux ou illégaux"
       ],
-      "r": 1,
+      "r": 3,
       "x": "L'évasion fiscale est l'ensemble des pratiques visant à réduire ou éviter l'impôt. La fraude fiscale est une infraction pénale."
     },
     {
       "q": "L'impôt « foncier » concerne :",
       "o": [
-        "Les véhicules",
         "Les biens immobiliers",
+        "Les véhicules",
         "Les salaires",
         "Les dividendes"
       ],
-      "r": 1,
+      "r": 0,
       "x": "L'impôt foncier (taxe foncière) est dû par les propriétaires de biens immobiliers (terrains, constructions)."
     },
     {
       "q": "Au BF, qui collecte l'impôt ?",
       "o": [
         "Les communes seules",
-        "La Direction Générale des Impôts (DGI)",
+        "Les banques",
         "Les douanes",
-        "Les banques"
+        "La Direction Générale des Impôts (DGI)"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La DGI (Direction Générale des Impôts) est rattachée au Ministère de l'Économie et des Finances. Les douanes ont leurs propres taxes."
     },
     {
       "q": "Une exonération fiscale, c'est :",
       "o": [
         "Une amende",
-        "Une dispense d'impôt",
+        "Un remboursement",
         "Une augmentation d'impôt",
-        "Un remboursement"
+        "Une dispense d'impôt"
       ],
-      "r": 1,
+      "r": 3,
       "x": "L'exonération est une dispense totale ou partielle de payer un impôt, généralement prévue par la loi (zone franche, secteur prioritaire…)."
     },
     {
       "q": "Pour s'identifier fiscalement au BF, on a un :",
       "o": [
         "NIP",
-        "IFU",
+        "Visa",
         "CNIB",
-        "Visa"
+        "IFU"
       ],
-      "r": 1,
+      "r": 3,
       "x": "L'IFU (Identifiant Financier Unique) est le numéro fiscal des contribuables au Burkina Faso. Obligatoire pour toute opération fiscale."
     },
     {
       "q": "L'amende pour défaut de déclaration fiscale au BF est :",
       "o": [
         "Symbolique",
-        "Fixe et forfaitaire ou proportionnelle",
+        "Versée au contribuable",
         "Inexistante",
-        "Versée au contribuable"
+        "Fixe et forfaitaire ou proportionnelle"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Les sanctions fiscales sont prévues par le Code général des impôts. Elles peuvent être forfaitaires (montant fixe) ou proportionnelles à l'impôt éludé."
     },
     {
@@ -52025,12 +52025,12 @@ const QUESTIONS = {
     {
       "q": "L'assiette de l'impôt désigne :",
       "o": [
-        "Le taux appliqué pour calculer le montant de l'impôt",
         "La base imposable sur laquelle est appliqué le taux d'imposition",
+        "Le taux appliqué pour calculer le montant de l'impôt",
         "La date limite légale de paiement de l'impôt",
         "L'autorité administrative chargée de recouvrer l'impôt"
       ],
-      "r": 1,
+      "r": 0,
       "x": "L'assiette (ou base imposable) est la grandeur économique ou juridique sur laquelle on applique le taux pour obtenir l'impôt. Exemples : le chiffre d'affaires HT pour la TVA, le bénéfice net pour l'IS, le salaire brut pour l'ITS. La détermination de l'assiette précède toujours la liquidation de l'impôt."
     },
     {
@@ -52092,22 +52092,22 @@ const QUESTIONS = {
       "q": "La retenue à la source est un mécanisme fiscal par lequel :",
       "o": [
         "Le contribuable paie spontanément son impôt directement à l'administration",
-        "Un tiers débiteur (employeur, client payeur) prélève l'impôt avant de reverser le net au bénéficiaire",
+        "Le contribuable peut étaler son paiement en plusieurs mensualités sur accord de l'administration",
         "L'État procède à la saisie conservatoire des biens d'un contribuable défaillant",
-        "Le contribuable peut étaler son paiement en plusieurs mensualités sur accord de l'administration"
+        "Un tiers débiteur (employeur, client payeur) prélève l'impôt avant de reverser le net au bénéficiaire"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La retenue à la source transfère l'obligation de collecte à un tiers (employeur pour l'ITS, maître d'ouvrage pour les marchés). Ce tiers retient l'impôt avant tout versement au bénéficiaire et le reverse à l'État. C'est un mécanisme efficace qui réduit drastiquement les risques d'évasion et simplifie la collecte."
     },
     {
       "q": "En fiscalité burkinabè, un abattement fiscal consiste en :",
       "o": [
         "Une pénalité financière appliquée sur le montant de l'impôt calculé",
-        "Une déduction opérée sur la base imposable avant le calcul de l'impôt",
+        "Une majoration de taux sanctionnant un retard de paiement",
         "Un crédit d'impôt remboursable directement par l'administration fiscale",
-        "Une majoration de taux sanctionnant un retard de paiement"
+        "Une déduction opérée sur la base imposable avant le calcul de l'impôt"
       ],
-      "r": 1,
+      "r": 3,
       "x": "L'abattement réduit l'assiette imposable. Exemple : l'abattement forfaitaire de 25% sur salaires bruts avant calcul de l'ITS. À distinguer du crédit d'impôt (déduit du montant de l'impôt calculé, après application du taux) et de l'exonération (dispense totale d'imposition). Ces trois mécanismes réducteurs sont souvent confondus en concours."
     },
     {
@@ -52124,12 +52124,12 @@ const QUESTIONS = {
     {
       "q": "La Direction Générale des Impôts (DGI) du Burkina Faso est chargée principalement de :",
       "o": [
-        "Exclusivement du contrôle fiscal et du contentieux judiciaire",
         "L'assiette, la liquidation, le recouvrement des impôts et taxes, ainsi que le contrôle fiscal",
+        "Exclusivement du contrôle fiscal et du contentieux judiciaire",
         "Du recouvrement des recettes douanières pour le compte du Trésor public",
         "De la gestion des marchés publics et de l'audit des entreprises d'État"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La DGI assure l'assiette (identification et évaluation de la matière imposable), la liquidation (calcul du montant de l'impôt), le recouvrement (collecte de l'impôt) et le contrôle fiscal (vérifications de comptabilité, ESFP). Les recettes douanières relèvent de la Direction Générale des Douanes (DGD), structure distincte."
     },
     {
@@ -52147,11 +52147,11 @@ const QUESTIONS = {
       "q": "Le principe de capacité contributive en droit fiscal signifie que :",
       "o": [
         "L'administration dispose de la capacité juridique de lever des impôts sur tout contribuable",
-        "Chaque contribuable doit participer à l'impôt selon ses facultés économiques",
+        "La capacité de l'État à financer ses dépenses publiques grâce aux recettes fiscales",
         "Un contribuable peut volontairement augmenter son impôt s'il estime en avoir la capacité",
-        "La capacité de l'État à financer ses dépenses publiques grâce aux recettes fiscales"
+        "Chaque contribuable doit participer à l'impôt selon ses facultés économiques"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La capacité contributive fonde le principe d'équité fiscale : chacun contribue selon ses moyens. C'est ce principe qui justifie la progressivité de l'IRPP, les seuils de non-imposition, les abattements pour charges familiales et les exonérations pour les ménages à faibles revenus. Il est implicitement reconnu dans l'architecture du CGI burkinabè."
     },
     {
@@ -52168,12 +52168,12 @@ const QUESTIONS = {
     {
       "q": "Le taux normal de l'Impôt sur les Sociétés (IS) applicable aux sociétés de droit commun au Burkina Faso est de :",
       "o": [
-        "20%",
-        "25%",
+        "30%",
         "27,5%",
-        "30%"
+        "25%",
+        "20%"
       ],
-      "r": 1,
+      "r": 2,
       "x": "Le taux de l'IS est fixé à 25% du bénéfice net imposable pour les sociétés de droit commun, conformément au CGI burkinabè. Un taux réduit de 17,5% peut s'appliquer aux entreprises agréées au Code des Investissements. Ce taux de 25% est aligné sur les recommandations UEMOA d'harmonisation fiscale."
     },
     {
@@ -52213,11 +52213,11 @@ const QUESTIONS = {
       "q": "Les acomptes provisionnels de l'IS au Burkina Faso sont versés en deux tranches, au plus tard :",
       "o": [
         "Le 31 janvier et le 31 mars de l'année d'imposition",
-        "Le 31 mars et le 30 juin de l'année d'imposition",
+        "Le 31 mars et le 30 septembre de l'année d'imposition",
         "Le 30 juin et le 30 septembre de l'année d'imposition",
-        "Le 31 mars et le 30 septembre de l'année d'imposition"
+        "Le 31 mars et le 30 juin de l'année d'imposition"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Les deux acomptes provisionnels d'IS sont versés au plus tard le 31 mars (1er acompte) et le 30 juin (2e acompte) de l'année d'imposition. Chaque acompte est égal à 50% de l'IS de l'exercice précédent. Le solde de liquidation est versé lors du dépôt de la déclaration de résultat (30 avril de l'année N+1)."
     },
     {
@@ -52235,44 +52235,44 @@ const QUESTIONS = {
       "q": "Parmi les charges suivantes, laquelle est fiscalement DÉDUCTIBLE du résultat imposable à l'IS au Burkina Faso ?",
       "o": [
         "Les amendes et pénalités fiscales infligées à l'entreprise",
-        "Les frais de représentation professionnelle justifiés et proportionnés",
+        "Les dons à des associations non accompagnés de reçus justificatifs",
         "L'IS lui-même dû par la société au titre de l'exercice",
-        "Les dons à des associations non accompagnés de reçus justificatifs"
+        "Les frais de représentation professionnelle justifiés et proportionnés"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Les frais de représentation (repas d'affaires, cadeaux clients raisonnables) engagés dans l'intérêt de l'exploitation sont déductibles sous réserve de justification. En revanche, l'IS, les amendes et pénalités fiscales (à caractère répressif) et les libéralités non documentées doivent être réintégrés au résultat fiscal."
     },
     {
       "q": "Les amendes et pénalités infligées à une société par l'administration fiscale sont-elles déductibles de son résultat imposable à l'IS ?",
       "o": [
         "Oui, car elles constituent des charges réelles et effectives de l'exercice",
-        "Non, elles doivent être réintégrées dans le résultat fiscal imposable",
+        "Oui, uniquement si leur montant est inférieur à 500 000 FCFA par exercice",
         "Oui, mais uniquement les pénalités de retard contractuelles avec des clients",
-        "Oui, uniquement si leur montant est inférieur à 500 000 FCFA par exercice"
+        "Non, elles doivent être réintégrées dans le résultat fiscal imposable"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Les amendes et pénalités fiscales sont non déductibles et doivent être réintégrées au résultat fiscal. Cette règle préserve le caractère dissuasif de la sanction : si l'amende était déductible, l'État prendrait partiellement en charge la sanction qu'il inflige. Les pénalités de retard purement contractuelles (intérêts moratoires civils) sont, elles, déductibles."
     },
     {
       "q": "L'amortissement linéaire d'une immobilisation au Burkina Faso est calculé selon la formule :",
       "o": [
-        "Valeur résiduelle × taux d'amortissement annuel",
         "Prix de revient (coût d'acquisition) ÷ durée d'utilisation en années",
+        "Valeur résiduelle × taux d'amortissement annuel",
         "Valeur de remplacement actualisée × coefficient d'inflation annuel",
         "Prix de marché du bien à la date de clôture de l'exercice × taux"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Amortissement linéaire annuel = Valeur d'acquisition / Durée de vie utile. Exemple : matériel acquis à 2 400 000 FCFA, durée 4 ans → amortissement annuel = 600 000 FCFA (taux 25%). Le CGI burkinabè fixe les durées et taux par catégorie de biens. L'amortissement commence à la mise en service du bien."
     },
     {
       "q": "En matière d'IS, une plus-value de cession d'une immobilisation réalisée par une société burkinabè dans le cadre de son activité est :",
       "o": [
-        "Totalement exonérée d'IS à titre permanent",
         "Incluse dans le résultat fiscal de l'exercice de cession et soumise à l'IS au taux normal de 25%",
+        "Totalement exonérée d'IS à titre permanent",
         "Soumise à un taux spécifique et libératoire de 15% distinct du taux de l'IS",
         "Imposable uniquement si le bien cédé a été détenu moins d'un an"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Les plus-values de cession réalisées dans le cadre de l'activité normale entrent dans la base imposable soumise à l'IS au taux de 25%. Un régime de sursis d'imposition peut s'appliquer en cas de réinvestissement du produit de cession dans des immobilisations de même nature dans un délai déterminé. Hors réinvestissement, l'imposition est totale et immédiate."
     },
     {
@@ -52356,11 +52356,11 @@ const QUESTIONS = {
       "q": "[PIÈGE] Une Société en Nom Collectif (SNC) peut-elle opter volontairement pour l'IS au Burkina Faso ?",
       "o": [
         "Non, les SNC sont obligatoirement et irrévocablement transparentes (IRPP des associés)",
-        "Oui, elle peut exercer une option irrévocable pour l'IS dans les conditions prévues par le CGI",
+        "Non, les SNC ne sont pas reconnues comme des personnes morales en droit burkinabè",
         "Oui, mais uniquement si son chiffre d'affaires annuel excède 500 000 000 FCFA",
-        "Non, les SNC ne sont pas reconnues comme des personnes morales en droit burkinabè"
+        "Oui, elle peut exercer une option irrévocable pour l'IS dans les conditions prévues par le CGI"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Les SNC peuvent opter pour l'IS au Burkina Faso. Cette option, une fois exercée, est en principe irrévocable. Sans option, les bénéfices sont imposés entre les mains des associés à l'IRPP en proportion de leurs droits. La distinction entre société de personnes (transparente) et société de capitaux (opaque) est un classique des concours fiscaux."
     },
     {
@@ -52378,11 +52378,11 @@ const QUESTIONS = {
       "q": "L'Impôt sur les Revenus des Personnes Physiques (IRPP) au Burkina Faso frappe :",
       "o": [
         "Exclusivement les revenus salariaux des personnes physiques résidentes",
-        "L'ensemble des catégories de revenus nets des personnes physiques : salaires, revenus fonciers, BIC, BNC, revenus agricoles et revenus de capitaux mobiliers",
+        "Indifféremment les revenus des personnes physiques et des sociétés de capitaux",
         "Uniquement les revenus commerciaux et industriels supérieurs à 50 000 000 FCFA",
-        "Indifféremment les revenus des personnes physiques et des sociétés de capitaux"
+        "L'ensemble des catégories de revenus nets des personnes physiques : salaires, revenus fonciers, BIC, BNC, revenus agricoles et revenus de capitaux mobiliers"
       ],
-      "r": 1,
+      "r": 3,
       "x": "L'IRPP est un impôt synthétique (par catégories) frappant tous les revenus nets des personnes physiques résidentes. Les non-résidents sont imposables sur leurs seuls revenus de source burkinabè. Chaque catégorie (salaires via l'ITS, BIC, BNC, revenus fonciers, RCM) a ses propres règles de détermination de la base nette."
     },
     {
@@ -52400,11 +52400,11 @@ const QUESTIONS = {
       "q": "L'Impôt sur les Traitements et Salaires (ITS) au Burkina Faso est collecté par :",
       "o": [
         "Le salarié lui-même, lors du dépôt de sa déclaration annuelle de revenus",
-        "L'employeur, par voie de retenue à la source avant versement du salaire net",
+        "La Caisse Nationale de Sécurité Sociale (CNSS) en même temps que les cotisations sociales",
         "La Direction Générale des Impôts par prélèvement bancaire automatique mensuel",
-        "La Caisse Nationale de Sécurité Sociale (CNSS) en même temps que les cotisations sociales"
+        "L'employeur, par voie de retenue à la source avant versement du salaire net"
       ],
-      "r": 1,
+      "r": 3,
       "x": "L'ITS est opéré par voie de retenue à la source : l'employeur calcule l'impôt, le retient sur le salaire brut et reverse le salaire net au salarié. L'employeur est le redevable légal de l'ITS vis-à-vis de l'administration, même si la charge économique pèse sur le salarié. La CNSS collecte les cotisations sociales, distinctes de l'ITS."
     },
     {
@@ -52422,11 +52422,11 @@ const QUESTIONS = {
       "q": "Pour le calcul de l'ITS, les avantages en nature (logement, véhicule, domesticité) accordés par l'employeur sont :",
       "o": [
         "Totalement exclus de la base imposable car ils ne constituent pas des revenus monétaires",
-        "Inclus dans la base imposable pour leur valeur réelle ou forfaitaire définie par le CGI",
+        "Déduits du salaire brut pour diminuer la base de calcul de l'ITS",
         "Imposables uniquement s'ils dépassent 500 000 FCFA par mois de valeur cumulée",
-        "Déduits du salaire brut pour diminuer la base de calcul de l'ITS"
+        "Inclus dans la base imposable pour leur valeur réelle ou forfaitaire définie par le CGI"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Les avantages en nature constituent un complément de rémunération imposable. Le CGI fixe des évaluations forfaitaires par type d'avantage (ex. : % du salaire de base pour le logement). Leur non-déclaration constitue une fraude à l'ITS susceptible de redressement. L'employeur doit les inclure dans la base de calcul des retenues sociales et fiscales."
     },
     {
@@ -52443,23 +52443,23 @@ const QUESTIONS = {
     {
       "q": "Les revenus tirés de la location d'immeubles par une personne physique au Burkina Faso relèvent de la catégorie fiscale :",
       "o": [
-        "Bénéfices Industriels et Commerciaux (BIC), soumis à l'IS",
         "Revenus fonciers, imposables à l'IRPP avec déduction des charges réelles",
+        "Bénéfices Industriels et Commerciaux (BIC), soumis à l'IS",
         "Taxe sur la Valeur Ajoutée (TVA) au taux normal de 18%",
         "Contribution du Secteur Informel (CSI) forfaitaire"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Les loyers d'immeubles perçus par des personnes physiques constituent des revenus fonciers imposables à l'IRPP. La base nette = loyers bruts - charges déductibles (réparations, primes d'assurance, amortissements pour les constructions). Une retenue à la source de 25% est prélevée par le locataire assujetti versant des loyers."
     },
     {
       "q": "Les revenus de capitaux mobiliers (dividendes, intérêts d'obligations) perçus par des personnes physiques résidentes au Burkina Faso sont :",
       "o": [
-        "Soumis à l'IS au taux normal de 25% au titre des revenus de l'entreprise émettrice",
         "Soumis à l'IRPP via une retenue à la source libératoire opérée par la société distributrice",
+        "Soumis à l'IS au taux normal de 25% au titre des revenus de l'entreprise émettrice",
         "Exonérés d'impôt pour encourager l'épargne et l'investissement des ménages",
         "Soumis à la TVA au taux de 18% en tant que services financiers"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Les revenus de capitaux mobiliers (dividendes à 6,25%, intérêts selon nature) font l'objet d'une retenue à la source libératoire pour les personnes physiques. Cette retenue, prélevée par la société distributrice, dispense le bénéficiaire de les déclarer à nouveau dans sa déclaration annuelle IRPP. Ce caractère libératoire est fondamental."
     },
     {
@@ -52476,12 +52476,12 @@ const QUESTIONS = {
     {
       "q": "[PIÈGE] Un salarié dont l'ITS a été retenu par son unique employeur doit-il encore déclarer ce salaire dans sa déclaration annuelle à l'IRPP ?",
       "o": [
-        "Oui, systématiquement, car l'ITS n'est qu'un simple acompte sur l'IRPP annuel",
         "Non, pour le salarié n'ayant qu'un seul employeur, l'ITS est libératoire de l'IRPP",
+        "Oui, systématiquement, car l'ITS n'est qu'un simple acompte sur l'IRPP annuel",
         "Oui, uniquement si son salaire annuel brut dépasse 5 000 000 FCFA",
         "Non, les salariés du secteur formel sont totalement exemptés de l'IRPP au Burkina Faso"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Pour le salarié mono-employeur, l'ITS retenu à la source est libératoire : il n'a pas à intégrer son salaire dans une déclaration globale à l'IRPP. En revanche, un salarié ayant des revenus complémentaires (loyers, activité libérale accessoire, etc.) doit déclarer l'ensemble à l'IRPP et régulariser la différence. Ce piège est récurrent en concours."
     },
     {
@@ -52509,12 +52509,12 @@ const QUESTIONS = {
     {
       "q": "La Contribution du Secteur Informel (CSI) au Burkina Faso est :",
       "o": [
-        "Un impôt additionnel à l'IRPP et à la TVA pour les micro-entreprises",
         "Un impôt libératoire qui se substitue à l'IRPP-BIC et à la TVA pour les petits contribuables en dessous des seuils",
+        "Un impôt additionnel à l'IRPP et à la TVA pour les micro-entreprises",
         "Un impôt exclusivement local, perçu par les communes au profit de leur budget",
         "Un impôt inexistant au Burkina Faso, relevant uniquement du droit fiscal malien"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La CSI est un régime simplifié et libératoire applicable aux contribuables en dessous des seuils d'assujettissement au régime réel et à la TVA. Elle remplace l'IRPP-BIC et dispense de la TVA. C'est un mécanisme d'intégration fiscale des très petites entreprises du secteur informel, permettant une contribution minimale à l'effort fiscal national."
     },
     {
@@ -52554,11 +52554,11 @@ const QUESTIONS = {
       "q": "Le fait générateur de la TVA pour une vente de biens meubles corporels au Burkina Faso est :",
       "o": [
         "La date d'émission de la facture de vente",
-        "La livraison du bien à l'acheteur",
+        "La date de passation de la commande ferme par l'acheteur",
         "La date d'encaissement du prix par le vendeur",
-        "La date de passation de la commande ferme par l'acheteur"
+        "La livraison du bien à l'acheteur"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Pour les ventes de biens meubles, le fait générateur de la TVA est la livraison du bien (transfert matériel et juridique). Pour les prestations de services, c'est l'encaissement. Pour les travaux immobiliers, la réception des travaux et les acomptes. La distinction fait générateur / exigibilité est fondamentale : le premier crée la créance, le second autorise l'État à exiger le paiement."
     },
     {
@@ -52598,11 +52598,11 @@ const QUESTIONS = {
       "q": "Parmi les opérations suivantes, laquelle est EXONÉRÉE de TVA au Burkina Faso ?",
       "o": [
         "La vente de ciment et matériaux de construction",
-        "La fourniture de médicaments à usage humain",
+        "La vente de boissons gazeuses et rafraîchissements",
         "La prestation de services d'expertise comptable",
-        "La vente de boissons gazeuses et rafraîchissements"
+        "La fourniture de médicaments à usage humain"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Les médicaments à usage humain sont expressément exonérés de TVA pour faciliter l'accès aux soins de santé. Les matériaux de construction, les services comptables et les boissons gazeuses sont taxés au taux normal de 18%. La connaissance de la liste des exonérations est un point fort des concours fiscaux."
     },
     {
@@ -52619,12 +52619,12 @@ const QUESTIONS = {
     {
       "q": "La TVA sur les importations au Burkina Faso est perçue :",
       "o": [
-        "Par la Direction Générale des Impôts, sur déclaration trimestrielle de l'importateur",
         "Par la Direction Générale des Douanes, au moment du dédouanement, sur la valeur CIF + droits de douane",
+        "Par la Direction Générale des Impôts, sur déclaration trimestrielle de l'importateur",
         "Par l'importateur lui-même lors de sa revente du produit sur le marché intérieur",
         "Uniquement sur les importations de biens de luxe dépassant une valeur seuil"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La TVA à l'importation est collectée par la DGD (Direction Générale des Douanes) au moment du dédouanement. Base = valeur CIF + droits de douane. L'importateur assujetti à la TVA peut ensuite déduire cette TVA sur ses déclarations mensuelles. L'imposition à l'import vise à neutraliser l'avantage compétitif des produits étrangers non taxés."
     },
     {
@@ -52641,23 +52641,23 @@ const QUESTIONS = {
     {
       "q": "[PIÈGE] La TVA grevant l'acquisition d'un véhicule de tourisme (voiture de fonction) par une entreprise assujettie est-elle déductible ?",
       "o": [
-        "Oui, car le véhicule est utilisé dans le cadre de l'activité professionnelle déclarée",
         "Non, la TVA sur véhicules de tourisme est toujours exclue du droit à déduction",
+        "Oui, car le véhicule est utilisé dans le cadre de l'activité professionnelle déclarée",
         "Oui, à concurrence de 50% si le véhicule est utilisé à mi-temps pour le travail",
         "Oui, uniquement si le véhicule est affecté exclusivement aux visites de clients"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Au Burkina Faso, la TVA grevant les véhicules conçus pour le transport de personnes (voitures de tourisme) est expressément et totalement exclue du droit à déduction, même à usage professionnel. Seuls les véhicules utilitaires (camions, engins) et ceux affectés au transport public de personnes ouvrent droit à déduction. Cette exclusion est un piège récurrent en concours."
     },
     {
       "q": "Qu'appelle-t-on \"crédit de TVA\" dans la déclaration mensuelle d'un assujetti ?",
       "o": [
         "Un prêt à taux préférentiel accordé par la DGI aux jeunes entreprises",
-        "L'excédent de TVA déductible sur la TVA collectée, imputable ou remboursable sous conditions",
+        "Un avantage fiscal accordé pour une durée limitée aux nouvelles entreprises créatrices d'emplois",
         "Le montant total de TVA facturée par l'assujetti à ses clients sur la période",
-        "Un avantage fiscal accordé pour une durée limitée aux nouvelles entreprises créatrices d'emplois"
+        "L'excédent de TVA déductible sur la TVA collectée, imputable ou remboursable sous conditions"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Un crédit de TVA apparaît quand la TVA déductible (sur achats) dépasse la TVA collectée (sur ventes) sur la période. Ce crédit peut être reporté sur les déclarations suivantes. Le remboursement du crédit est possible sous conditions strictes (exportateurs, investissements, crédits structurels) et soumis à des formalités précises auprès de la DGI."
     },
     {
@@ -52685,12 +52685,12 @@ const QUESTIONS = {
     {
       "q": "La livraison à soi-même (LAS) est soumise à la TVA au Burkina Faso. Elle concerne notamment :",
       "o": [
-        "La vente de biens entre sociétés d'un même groupe fiscal",
         "La construction d'une immobilisation par une entreprise pour ses propres besoins",
+        "La vente de biens entre sociétés d'un même groupe fiscal",
         "L'importation de marchandises destinées à la revente en l'état",
         "La location d'un immeuble par un assujetti à un autre assujetti"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La livraison à soi-même consiste pour une entreprise à produire un bien ou un service pour ses propres besoins (ex. : une société de BTP qui construit son propre siège). Elle est soumise à la TVA pour maintenir l'équité entre les entreprises qui font construire (et paient TVA) et celles qui construisent elles-mêmes. La base est le prix de revient."
     },
     {
@@ -52718,45 +52718,45 @@ const QUESTIONS = {
     {
       "q": "La TVA sur les travaux immobiliers au Burkina Faso est exigible :",
       "o": [
-        "Uniquement à la réception définitive et totale des travaux, signature du PV de réception",
         "À chaque encaissement d'acompte et au solde lors de la réception définitive des travaux",
+        "Uniquement à la réception définitive et totale des travaux, signature du PV de réception",
         "À la signature du marché ou contrat de travaux, dès le début des relations contractuelles",
         "En une seule fois lors de la facturation finale, quel que soit l'avancement des travaux"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Pour les travaux immobiliers, la TVA est exigible au fur et à mesure des encaissements d'acomptes (proportionnellement au montant encaissé) et pour le solde lors de la réception définitive. Ce régime particulier tient compte de l'exécution échelonnée des chantiers dans le BTP et garantit que la TVA suit les flux financiers réels."
     },
     {
       "q": "Une entreprise réalise exclusivement des opérations exonérées de TVA. Elle acquiert du matériel pour ses besoins professionnels. La TVA payée sur cet achat est-elle déductible ?",
       "o": [
-        "Oui, car l'achat est effectué dans un but professionnel lié à l'entreprise",
         "Non, seuls les assujettis réalisant des opérations taxables peuvent déduire la TVA sur leurs achats",
+        "Oui, car l'achat est effectué dans un but professionnel lié à l'entreprise",
         "Oui, mais uniquement à hauteur de 50% du montant de TVA payé",
         "Oui, sous réserve d'une autorisation préalable de la Direction Générale des Impôts"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le droit à déduction est strictement lié à l'utilisation des achats pour des opérations imposables à la TVA. Une entreprise ne réalisant que des opérations exonérées (ex. : établissement bancaire sur ses opérations de crédit) ne peut déduire aucune TVA sur ses achats. C'est l'un des effets pervers des exonérations de TVA dites \"en amont\"."
     },
     {
       "q": "L'option volontaire pour la TVA d'une entreprise dont le CA est inférieur au seuil d'assujettissement est :",
       "o": [
         "Impossible, l'assujettissement à la TVA est strictement lié au dépassement du seuil",
-        "Possible, sous conditions et formalités, avec effets irrévocables pendant une période déterminée",
+        "Possible uniquement avec l'accord préalable du Ministre des Finances",
         "Possible uniquement pour les entreprises exportatrices quelle que soit leur taille",
-        "Possible uniquement avec l'accord préalable du Ministre des Finances"
+        "Possible, sous conditions et formalités, avec effets irrévocables pendant une période déterminée"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le CGI burkinabè prévoit la possibilité d'une option volontaire pour la TVA pour les entreprises en dessous du seuil. Cette option est intéressante si l'entreprise réalise des achats importants taxés (TVA déductible supérieure à TVA collectée). L'option se fait sur demande et est irrévocable pendant une durée déterminée par le CGI."
     },
     {
       "q": "[PIÈGE] Une entreprise burkinabè vend des biens à une entreprise en Côte d'Ivoire dans le cadre d'un contrat commercial. Cette vente est-elle soumise à la TVA burkinabè ?",
       "o": [
         "Oui, à 18%, car l'entreprise vendeuse est établie au Burkina Faso",
-        "Non, c'est une exportation soumise au taux zéro, la TVA est perçue à la destination en Côte d'Ivoire",
+        "Non, les échanges intra-UEMOA sont totalement exonérés de tout impôt indirect",
         "Oui, à 9%, taux réduit applicable aux échanges intra-UEMOA",
-        "Non, les échanges intra-UEMOA sont totalement exonérés de tout impôt indirect"
+        "Non, c'est une exportation soumise au taux zéro, la TVA est perçue à la destination en Côte d'Ivoire"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Selon le principe de destination, les exportations sont taxées au taux zéro au Burkina Faso ; la TVA sera perçue dans le pays de destination (Côte d'Ivoire) lors de l'importation. Cette règle garantit la compétitivité des exportateurs et évite une double imposition. Les échanges intra-UEMOA ne sont pas exonérés de TVA de destination."
     },
     {
@@ -52774,22 +52774,22 @@ const QUESTIONS = {
       "q": "Qu'est-ce que la régularisation de la TVA déduite sur immobilisations en cas de variation d'affectation ?",
       "o": [
         "Une procédure de remboursement intégral de la TVA initiale par l'État",
-        "Une obligation de reverser une fraction de la TVA initialement déduite si l'affectation du bien change pendant la période de régularisation",
+        "Une procédure applicable uniquement aux assujettis partiels ayant un prorata inférieur à 50%",
         "Une majoration de TVA applicable lors de la revente d'une immobilisation",
-        "Une procédure applicable uniquement aux assujettis partiels ayant un prorata inférieur à 50%"
+        "Une obligation de reverser une fraction de la TVA initialement déduite si l'affectation du bien change pendant la période de régularisation"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Lorsqu'une immobilisation change d'affectation pendant sa période de régularisation (5 ans pour les biens meubles, 20 ans pour les immeubles), une fraction de la TVA initialement déduite doit être reversée. Cette régularisation annuelle = (TVA initialement déduite × 1/5 ou 1/20) × variation du prorata. Elle vise à ajuster la déduction à l'utilisation réelle du bien."
     },
     {
       "q": "[CAS PRATIQUE] Une société acquiert un ordinateur à 1 180 000 FCFA TTC (TVA 18%). Elle est assujettie à la TVA. Quel montant de TVA peut-elle déduire et quel est le prix de revient comptable de l'ordinateur ?",
       "o": [
         "TVA déductible = 212 400 FCFA ; prix de revient = 967 600 FCFA",
-        "TVA déductible = 180 000 FCFA ; prix de revient = 1 000 000 FCFA",
+        "TVA déductible = 180 000 FCFA ; prix de revient = 1 180 000 FCFA",
         "TVA déductible = 212 400 FCFA ; prix de revient = 1 180 000 FCFA",
-        "TVA déductible = 180 000 FCFA ; prix de revient = 1 180 000 FCFA"
+        "TVA déductible = 180 000 FCFA ; prix de revient = 1 000 000 FCFA"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Prix HT = 1 180 000 / 1,18 = 1 000 000 FCFA. TVA = 1 000 000 × 18% = 180 000 FCFA. L'assujetti comptabilise l'immobilisation à son prix HT (1 000 000 FCFA) et déduit la TVA de 180 000 FCFA sur sa déclaration. C'est la neutralité de la TVA pour l'assujetti. La confusion fréquente est de calculer 18% × 1 180 000 FCFA (prix TTC)."
     },
     {
@@ -52840,11 +52840,11 @@ const QUESTIONS = {
       "q": "En matière de droits d'enregistrement, un droit FIXE s'oppose à un droit PROPORTIONNEL en ce que :",
       "o": [
         "Le droit fixe est calculé en fonction de la valeur de l'opération ; le proportionnel est un montant forfaitaire",
-        "Le droit fixe est un montant forfaitaire indépendant de la valeur ; le proportionnel est calculé sur la valeur de l'opération",
+        "Le droit fixe est perçu par les communes ; le proportionnel est perçu par l'État central",
         "Le droit fixe ne s'applique qu'aux personnes physiques ; le proportionnel aux personnes morales",
-        "Le droit fixe est perçu par les communes ; le proportionnel est perçu par l'État central"
+        "Le droit fixe est un montant forfaitaire indépendant de la valeur ; le proportionnel est calculé sur la valeur de l'opération"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le droit fixe est un montant forfaitaire identique quel que soit le montant de l'opération (ex. : actes de société à la constitution). Le droit proportionnel est calculé en appliquant un taux à la valeur de l'opération (ex. : 10% sur la vente d'immeubles). La distinction fixe / proportionnel détermine la charge fiscale réelle de l'acte."
     },
     {
@@ -52872,12 +52872,12 @@ const QUESTIONS = {
     {
       "q": "Les mutations à titre gratuit (donations entre vifs et successions) au Burkina Faso sont soumises aux droits d'enregistrement selon :",
       "o": [
-        "Un taux fixe de 5% quel que soit le lien de parenté et la valeur des biens",
         "Des taux variables selon le degré de parenté entre donateur et bénéficiaire",
+        "Un taux fixe de 5% quel que soit le lien de parenté et la valeur des biens",
         "Une exonération totale pour les mutations en ligne directe (parents-enfants)",
         "Un taux unique de 15% sur la valeur nette des biens transmis"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Les droits de mutation à titre gratuit (droits de succession et de donation) sont calculés selon un barème progressif tenant compte du lien de parenté. Les transmissions en ligne directe (parents-enfants) bénéficient de taux réduits. Les transmissions entre personnes non apparentées sont soumises aux taux les plus élevés. Des abattements s'appliquent sur la part nette revenant à chaque héritier."
     },
     {
@@ -52894,45 +52894,45 @@ const QUESTIONS = {
     {
       "q": "[PIÈGE] Un acte sous seing privé constatant la vente d'un véhicule automobile entre particuliers doit-il obligatoirement être enregistré au Burkina Faso ?",
       "o": [
-        "Non, l'enregistrement des actes sous seing privé est toujours facultatif",
         "Oui, certains actes sous seing privé sont obligatoirement soumis à la formalité d'enregistrement selon leur nature",
+        "Non, l'enregistrement des actes sous seing privé est toujours facultatif",
         "Oui, mais uniquement si la valeur du véhicule dépasse 5 000 000 FCFA",
         "Non, car les véhicules sont soumis à la taxe sur les véhicules à moteur, pas aux droits d'enregistrement"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le CGI burkinabè liste les actes sous seing privé obligatoirement soumis à enregistrement, en raison de leur nature juridique (mutations de propriété, cessions de fonds de commerce, etc.). Même hors notaire, certains actes civils et commerciaux doivent être enregistrés. L'absence d'enregistrement prive l'acte de la force probante nécessaire en cas de litige."
     },
     {
       "q": "Les droits de timbre au Burkina Faso s'appliquent principalement à :",
       "o": [
         "L'ensemble des transactions commerciales dépassant 1 000 000 FCFA",
-        "Les actes et documents présentés en justice et certains documents administratifs, commerciaux ou bancaires",
+        "Les effets de commerce (lettres de change, billets à ordre) en remplacement de la TVA",
         "Exclusivement aux actes notariés et documents officiels de l'État",
-        "Les effets de commerce (lettres de change, billets à ordre) en remplacement de la TVA"
+        "Les actes et documents présentés en justice et certains documents administratifs, commerciaux ou bancaires"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Les droits de timbre frappent certains actes de la vie juridique, administrative et commerciale : requêtes, jugements, quittances, effets de commerce, récépissés, etc. Ils peuvent être fixes ou proportionnels. Le timbre est distinct du droit d'enregistrement : le timbre frappe le document lui-même, l'enregistrement frappe l'acte juridique qu'il constate."
     },
     {
       "q": "En cas de dissimulation de prix dans un acte de vente d'immeuble (prix de vente déclaré inférieur au prix réel), l'administration fiscale peut :",
       "o": [
         "Annuler la vente et restituer le bien au vendeur initial",
-        "Appliquer les droits d'enregistrement sur la valeur vénale réelle et percevoir des pénalités",
+        "Saisir le notaire et engager des poursuites contre lui exclusivement",
         "Interdire définitivement à l'acheteur d'acquérir des immeubles au Burkina Faso",
-        "Saisir le notaire et engager des poursuites contre lui exclusivement"
+        "Appliquer les droits d'enregistrement sur la valeur vénale réelle et percevoir des pénalités"
       ],
-      "r": 1,
+      "r": 3,
       "x": "En cas de dissimulation du prix réel (pratique dite de \"dessous de table\"), l'administration peut rectifier la base imposable en retenant la valeur vénale réelle de l'immeuble. Des pénalités pour insuffisance de déclaration sont appliquées (majoration de 100% ou plus selon les textes). Cette pratique constitue une fraude fiscale."
     },
     {
       "q": "Les droits d'enregistrement sur les cessions de fonds de commerce au Burkina Faso sont calculés sur :",
       "o": [
-        "Le seul montant des éléments incorporels cédés (clientèle, enseigne)",
         "La valeur totale du fonds de commerce incluant éléments corporels et incorporels",
+        "Le seul montant des éléments incorporels cédés (clientèle, enseigne)",
         "La valeur des seuls éléments corporels (matériel, mobilier, stocks)",
         "Le bénéfice réalisé par le cédant sur la vente du fonds de commerce"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La cession de fonds de commerce est soumise aux droits d'enregistrement sur la valeur totale du fonds (clientèle, enseigne, droit au bail, matériel, stocks, etc.) selon un barème progressif par tranches. Le sous-évaluation de la clientèle (élément souvent prépondérant) est un abus fréquemment redressé par l'administration."
     },
     {
@@ -52983,11 +52983,11 @@ const QUESTIONS = {
       "q": "Les actes de prêt et d'emprunt entre particuliers sont-ils soumis aux droits d'enregistrement au Burkina Faso ?",
       "o": [
         "Non, les prêts entre particuliers sont des actes totalement hors champ fiscal",
-        "Oui, s'ils font l'objet d'un acte écrit, ils sont soumis à un droit proportionnel sur le capital prêté",
+        "Non, seuls les prêts bancaires professionnels sont soumis aux droits d'enregistrement",
         "Oui, uniquement si le prêt est supérieur à 10 000 000 FCFA et consenti par une institution bancaire",
-        "Non, seuls les prêts bancaires professionnels sont soumis aux droits d'enregistrement"
+        "Oui, s'ils font l'objet d'un acte écrit, ils sont soumis à un droit proportionnel sur le capital prêté"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Les actes constatant des prêts d'argent (reconnaissance de dette, contrat de prêt) sont soumis à un droit proportionnel sur le capital emprunté lorsqu'ils sont rédigés sous forme d'acte. Ce droit rémunère la formalité et garantit la date certaine de l'acte. Les prêts verbaux sans écrit échappent à l'enregistrement mais posent des difficultés probatoires."
     },
     {
@@ -53027,11 +53027,11 @@ const QUESTIONS = {
       "q": "La vérification de comptabilité au Burkina Faso est un contrôle fiscal qui consiste à :",
       "o": [
         "Examiner uniquement les déclarations fiscales déposées sans accès aux livres comptables",
-        "Confronter les déclarations fiscales du contribuable avec les écritures de sa comptabilité au siège de l'entreprise",
+        "Analyser les patrimoines personnels des dirigeants d'entreprise depuis le bureau de la DGI",
         "Contrôler la régularité des états financiers publiés par les sociétés cotées en bourse",
-        "Analyser les patrimoines personnels des dirigeants d'entreprise depuis le bureau de la DGI"
+        "Confronter les déclarations fiscales du contribuable avec les écritures de sa comptabilité au siège de l'entreprise"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La vérification de comptabilité est un contrôle approfondi effectué dans les locaux de l'entreprise, où l'agent vérificateur confronte les déclarations avec la comptabilité (journaux, grands livres, pièces justificatives). Elle se distingue du contrôle sur pièces (effectué au bureau à partir des documents déposés) et de l'Examen de Situation Fiscale Personnelle (ESFP)."
     },
     {
@@ -53082,44 +53082,44 @@ const QUESTIONS = {
       "q": "La procédure de redressement contradictoire au Burkina Faso implique que :",
       "o": [
         "L'administration peut émettre directement un avis de mise en recouvrement sans informer le contribuable",
-        "Le contribuable est informé des redressements envisagés et dispose d'un délai pour présenter ses observations",
+        "Le contribuable et l'administration négocient librement le montant des impôts à payer",
         "Le juge fiscal est obligatoirement consulté avant tout redressement supérieur à 10 000 000 FCFA",
-        "Le contribuable et l'administration négocient librement le montant des impôts à payer"
+        "Le contribuable est informé des redressements envisagés et dispose d'un délai pour présenter ses observations"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La procédure contradictoire garantit les droits de la défense : l'administration notifie au contribuable une proposition de rectification motivée, et lui accorde un délai de réponse (généralement 30 jours) pour formuler ses observations. L'administration doit alors répondre aux arguments soulevés avant toute mise en recouvrement. Cette procédure est obligatoire sauf cas de taxation d'office."
     },
     {
       "q": "La taxation d'office au Burkina Faso est applicable notamment lorsque :",
       "o": [
-        "Le contribuable a déposé sa déclaration avec 5 jours de retard",
         "Le contribuable n'a pas déposé ses déclarations malgré deux mises en demeure restées sans suite",
+        "Le contribuable a déposé sa déclaration avec 5 jours de retard",
         "Le contribuable a contesté les redressements notifiés par l'administration",
         "Le contribuable a refusé de recevoir les agents vérificateurs en dehors des heures de travail"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La taxation d'office intervient quand le contribuable est défaillant : absence de déclaration après mises en demeure, opposition à contrôle, défaut de réponse aux demandes d'information. Dans ce cas, l'administration évalue unilatéralement les bases imposables. La charge de la preuve est renversée : c'est le contribuable qui doit prouver l'exagération des impositions."
     },
     {
       "q": "[PIÈGE] En cas de redressement fiscal, la charge de la preuve incombe en principe à :",
       "o": [
-        "Toujours au contribuable, qui doit prouver que ses déclarations sont exactes",
         "L'administration, lorsqu'elle s'écarte des déclarations du contribuable dans une procédure contradictoire",
+        "Toujours au contribuable, qui doit prouver que ses déclarations sont exactes",
         "Au juge fiscal qui statue souverainement sans charge de preuve imposée aux parties",
         "Toujours à l'administration, quel que soit le mode de procédure utilisé"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Dans une procédure de redressement contradictoire, c'est l'administration qui supporte la charge de la preuve de l'insuffisance des déclarations. Le contribuable n'a pas à prouver l'exactitude de ses déclarations. En revanche, en cas de taxation d'office, la charge de la preuve se renverse : c'est le contribuable qui doit démontrer l'exagération des bases retenues."
     },
     {
       "q": "La notification de redressement (proposition de rectification) doit être :",
       "o": [
         "Verbale, lors de la réunion de clôture de la vérification",
-        "Écrite, motivée et adressée au contribuable par lettre recommandée avec accusé de réception",
+        "Approuvée par le tribunal administratif avant d'être envoyée au contribuable",
         "Publiée au Journal Officiel du Burkina Faso avant d'être adressée au contribuable",
-        "Approuvée par le tribunal administratif avant d'être envoyée au contribuable"
+        "Écrite, motivée et adressée au contribuable par lettre recommandée avec accusé de réception"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La notification de redressement doit être adressée par écrit, motivée (exposant les raisons de droit et de fait justifiant les rectifications) et notifiée par lettre recommandée avec accusé de réception. Cette formalité substantielle conditionne la validité de la procédure. Une notification orale ou non motivée est nulle de plein droit."
     },
     {
@@ -53136,12 +53136,12 @@ const QUESTIONS = {
     {
       "q": "La pénalité de base applicable en cas de défaut ou retard de déclaration fiscale au Burkina Faso est de :",
       "o": [
-        "5% du montant des droits dus par mois ou fraction de mois de retard",
-        "10% du montant des droits dus par mois ou fraction de mois de retard",
+        "50% du montant des droits dus, en cas de première infraction",
         "25% du montant des droits dus, forfaitairement",
-        "50% du montant des droits dus, en cas de première infraction"
+        "10% du montant des droits dus par mois ou fraction de mois de retard",
+        "5% du montant des droits dus par mois ou fraction de mois de retard"
       ],
-      "r": 1,
+      "r": 2,
       "x": "La majoration de 10% par mois de retard (ou fraction de mois) s'applique en cas de dépôt tardif de déclaration. Ces pénalités s'accumulent jusqu'à un plafond défini par le CGI. Des majorations spécifiques et plus lourdes s'appliquent en cas de mauvaise foi (40%) ou de manœuvres frauduleuses (80%). La connaissance de ces taux est testée systématiquement en concours."
     },
     {
@@ -53159,22 +53159,22 @@ const QUESTIONS = {
       "q": "L'Examen de Situation Fiscale Personnelle (ESFP) au Burkina Faso est un contrôle qui porte sur :",
       "o": [
         "La comptabilité et les livres d'une entreprise commerciale",
-        "La cohérence entre les revenus déclarés par une personne physique et son patrimoine ou son train de vie",
+        "L'audit des comptes publics des collectivités territoriales burkinabè",
         "La vérification de la régularité des déclarations douanières d'un importateur",
-        "L'audit des comptes publics des collectivités territoriales burkinabè"
+        "La cohérence entre les revenus déclarés par une personne physique et son patrimoine ou son train de vie"
       ],
-      "r": 1,
+      "r": 3,
       "x": "L'ESFP est un contrôle de cohérence portant sur la situation patrimoniale et le train de vie d'une personne physique. L'administration compare les revenus déclarés à l'IRPP avec les dépenses apparentes (achats immobiliers, voyages, véhicules de luxe) et les variations de patrimoine. Tout enrichissement inexpliqué peut fonder un redressement à l'IRPP."
     },
     {
       "q": "Le droit de communication au Burkina Faso permet à l'administration fiscale de :",
       "o": [
-        "Communiquer publiquement les résultats des contrôles fiscaux pour dissuader la fraude",
         "Exiger de tiers (banques, notaires, entreprises) la communication de documents utiles à l'établissement de l'impôt",
+        "Communiquer publiquement les résultats des contrôles fiscaux pour dissuader la fraude",
         "Accéder librement aux données personnelles des contribuables stockées par les opérateurs téléphoniques",
         "Notifier directement les redressements aux actionnaires d'une société vérifiée"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le droit de communication permet à la DGI d'obtenir de tiers (établissements bancaires, notaires, administrations, greffes, etc.) des informations et documents utiles à l'établissement et au contrôle de l'impôt, sans que le secret professionnel puisse être opposé à l'administration fiscale. C'est un outil puissant de lutte contre la fraude et l'évasion fiscales."
     },
     {
@@ -53191,45 +53191,45 @@ const QUESTIONS = {
     {
       "q": "Le délai pour introduire une réclamation contentieuse contre un avis de mise en recouvrement (AMR) au Burkina Faso est en principe de :",
       "o": [
-        "3 mois à compter de la mise en recouvrement",
         "6 mois à compter de la mise en recouvrement",
+        "3 mois à compter de la mise en recouvrement",
         "1 an à compter de la mise en recouvrement",
         "2 ans à compter de la mise en recouvrement"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le contribuable dispose en principe d'un délai de 6 mois à compter de la mise en recouvrement (ou de la notification des bases) pour introduire une réclamation contentieuse. Ce délai est de rigueur : passé ce délai, la réclamation est irrecevable. Des délais spéciaux peuvent s'appliquer selon la nature de l'impôt ou la procédure utilisée."
     },
     {
       "q": "Pour obtenir un sursis de paiement pendant la procédure contentieuse au Burkina Faso, le contribuable doit :",
       "o": [
-        "Apporter la preuve que les impositions sont manifestement erronées",
         "Constituer des garanties et payer une fraction des droits contestés (généralement 20%)",
+        "Apporter la preuve que les impositions sont manifestement erronées",
         "Obtenir une décision favorable du Conseil d'État ou du Tribunal administratif",
         "Déposer une plainte pénale contre les agents vérificateurs auteurs des redressements"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le sursis de paiement pendant la procédure contentieuse est accordé sous conditions : constitution de garanties (caution, hypothèque, nantissement) et versement d'une fraction des droits contestés (généralement 20%). Ce mécanisme évite que le contribuable soit ruiné avant que sa contestation soit tranchée, tout en assurant à l'État un recouvrement partiel des droits."
     },
     {
       "q": "La procédure d'opposition à tiers détenteur (OTD) en matière de recouvrement fiscal au Burkina Faso permet à la DGI de :",
       "o": [
-        "Saisir directement les biens immobiliers du contribuable défaillant sans jugement préalable",
         "Exiger d'un tiers détenteur de fonds appartenant au contribuable (banque, employeur) de verser ces fonds à l'administration",
+        "Saisir directement les biens immobiliers du contribuable défaillant sans jugement préalable",
         "Interdire au contribuable défaillant de quitter le territoire burkinabè",
         "Bloquer les comptes bancaires du contribuable par voie de saisie conservatoire judiciaire"
       ],
-      "r": 1,
+      "r": 0,
       "x": "L'OTD est un outil puissant de recouvrement forcé : la DGI notifie directement à un tiers détenteur de fonds du contribuable (banque, employeur, débiteur du contribuable) l'obligation de verser ces fonds à la recette des impôts, à concurrence de la dette fiscale. Le tiers ne peut pas ignorer cette injonction sans engager sa propre responsabilité."
     },
     {
       "q": "L'avis de mise en recouvrement (AMR) au Burkina Faso est :",
       "o": [
-        "Le document par lequel l'administration notifie les redressements envisagés avant discussion",
         "Le titre exécutoire permettant à l'administration de procéder au recouvrement forcé de l'impôt",
+        "Le document par lequel l'administration notifie les redressements envisagés avant discussion",
         "Le récépissé délivré au contribuable après paiement intégral de sa dette fiscale",
         "La convocation adressée au contribuable pour un entretien avec l'inspecteur des impôts"
       ],
-      "r": 1,
+      "r": 0,
       "x": "L'AMR est le titre qui rend la créance fiscale exécutoire et permet à l'administration de recourir aux procédures de recouvrement forcé (commandement de payer, saisies, OTD, contrainte). Il est émis après la phase contradictoire de rectification et à l'issue de la liquidation définitive des droits. La contestation de l'AMR se fait par voie de réclamation contentieuse."
     },
     {
@@ -53257,12 +53257,12 @@ const QUESTIONS = {
     {
       "q": "La fiscalité locale au Burkina Faso désigne principalement les impôts et taxes :",
       "o": [
-        "Perçus par l'État central et reversés intégralement aux communes bénéficiaires",
         "Créés, gérés et recouvrés exclusivement par les collectivités territoriales (communes, régions) dans leur ressort",
+        "Perçus par l'État central et reversés intégralement aux communes bénéficiaires",
         "S'appliquant aux seules activités économiques menées dans les zones rurales",
         "Relevant exclusivement des services fiscaux déconcentrés des régions administratives"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La fiscalité locale regroupe les impôts et taxes dont l'assiette, la liquidation et le recouvrement relèvent des collectivités territoriales (communes et régions) ou qui leur sont affectés. Elle contribue à l'autonomie financière des collectivités dans le cadre de la décentralisation burkinabè. Elle comprend notamment la taxe de résidence, la contribution des patentes et la contribution foncière."
     },
     {
@@ -53335,11 +53335,11 @@ const QUESTIONS = {
       "q": "La Contribution Foncière des Propriétés Non Bâties (CFPNB) est assise au Burkina Faso sur :",
       "o": [
         "La valeur vénale des terrains non construits, quel que soit leur emplacement",
-        "La valeur locative des terrains nus situés dans des zones urbaines ou périurbaines déterminées",
+        "La superficie totale des terrains, calculée en hectares, pour les propriétés rurales uniquement",
         "Le seul revenu agricole généré par l'exploitation des terres rurales",
-        "La superficie totale des terrains, calculée en hectares, pour les propriétés rurales uniquement"
+        "La valeur locative des terrains nus situés dans des zones urbaines ou périurbaines déterminées"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La CFPNB frappe les terrains non construits en zones urbaines et périurbaines. Elle incite à la mise en valeur des terrains nus en zone urbaine pour lutter contre la spéculation foncière. Sa base est la valeur locative cadastrale du terrain nu. Les terres agricoles en zone rurale relèvent de régimes distincts (contribution agricole)."
     },
     {
@@ -53357,33 +53357,33 @@ const QUESTIONS = {
       "q": "La Taxe de Développement Communal (TDC) au Burkina Faso est :",
       "o": [
         "Un prélèvement parafiscal versé aux entreprises publiques locales pour leur développement",
-        "Un impôt local perçu auprès des opérateurs économiques formels au profit des communes",
+        "Un impôt national entièrement reversé aux collectivités rurales défavorisées",
         "Une taxe prélevée sur les salaires des fonctionnaires de l'État pour financer la décentralisation",
-        "Un impôt national entièrement reversé aux collectivités rurales défavorisées"
+        "Un impôt local perçu auprès des opérateurs économiques formels au profit des communes"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La TDC est perçue auprès des opérateurs économiques (commerçants, industriels, prestataires de services) formellement établis dans le ressort communal. Elle alimente directement le budget des communes et contribue à leur autonomie financière. Son taux et ses modalités de recouvrement sont définis par la réglementation nationale."
     },
     {
       "q": "Le recouvrement de la fiscalité locale au Burkina Faso est en grande partie assuré par :",
       "o": [
-        "Les perceptions de l'État central au même titre que les impôts nationaux",
         "Les régies financières communales et les receveurs municipaux",
+        "Les perceptions de l'État central au même titre que les impôts nationaux",
         "La Direction Générale de la Décentralisation et du Développement Local",
         "Les organisations de la société civile agréées par le Ministère des Finances"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le recouvrement de la fiscalité locale est assuré par les receveurs municipaux et les régies de recettes des communes. Ces agents ont la compétence et la responsabilité de collecter les impôts et taxes locaux pour le compte des collectivités territoriales. Des agents communaux peuvent aussi être déployés pour le recouvrement de masse (taxe de résidence)."
     },
     {
       "q": "La Taxe Patronale et d'Apprentissage (TPA) au Burkina Faso est assise sur :",
       "o": [
-        "Le bénéfice net des sociétés employant plus de 10 salariés permanents",
         "La masse salariale brute versée par l'employeur à l'ensemble de son personnel",
+        "Le bénéfice net des sociétés employant plus de 10 salariés permanents",
         "Le nombre de salariés en contrat à durée déterminée dans l'entreprise",
         "Le montant total des cotisations sociales patronales versées à la CNSS"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La TPA est calculée sur la masse salariale brute totale versée par l'employeur (salaires, primes, avantages en nature valorisés). Son taux est de 5% de cette masse salariale. Elle est due par tout employeur du secteur privé ou public occupant des salariés. Son produit vise à financer la formation professionnelle. La TPA est distincte des cotisations CNSS."
     },
     {
@@ -53411,12 +53411,12 @@ const QUESTIONS = {
     {
       "q": "La fiscalité foncière locale au Burkina Faso comprend notamment :",
       "o": [
-        "Uniquement la TVA immobilière sur les transactions foncières",
         "La Contribution Foncière des Propriétés Bâties (CFPB) et la Contribution Foncière des Propriétés Non Bâties (CFPNB)",
+        "Uniquement la TVA immobilière sur les transactions foncières",
         "Uniquement les droits d'enregistrement sur les mutations d'immeubles",
         "La taxe d'habitation due par les seuls locataires d'immeubles d'habitation"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La fiscalité foncière locale est constituée principalement de la CFPB (sur immeubles bâtis) et de la CFPNB (sur terrains nus). Ces deux contributions sont des impôts locaux périodiques dus par les propriétaires. Elles se distinguent des droits d'enregistrement (impôts de mutation sur les transactions) et de la TVA immobilière. Elles alimentent les budgets locaux."
     },
     {
@@ -53467,11 +53467,11 @@ const QUESTIONS = {
       "q": "La déclaration d'existence au Burkina Faso doit être souscrite par toute nouvelle entreprise dans le délai de :",
       "o": [
         "8 jours ouvrables à compter de la date de démarrage effectif des activités",
-        "30 jours à compter de la date de création ou de l'immatriculation au RCCM",
+        "3 mois à compter de l'obtention de l'autorisation d'exercer délivrée par la mairie",
         "60 jours à compter de la première opération commerciale génératrice de revenu",
-        "3 mois à compter de l'obtention de l'autorisation d'exercer délivrée par la mairie"
+        "30 jours à compter de la date de création ou de l'immatriculation au RCCM"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Toute nouvelle entreprise (personne physique ou morale) doit souscrire une déclaration d'existence auprès de la DGI dans les 30 jours suivant sa création (immatriculation au RCCM, démarrage d'activité ou délivrance d'autorisation administrative). Cette déclaration entraîne l'attribution de l'IFU. Le non-respect expose à des pénalités et à la taxation d'office."
     },
     {
@@ -53488,12 +53488,12 @@ const QUESTIONS = {
     {
       "q": "[PIÈGE] La prescription d'une dette fiscale au Burkina Faso signifie-t-elle que le contribuable n'est plus redevable de l'impôt prescrit ?",
       "o": [
-        "Oui, la prescription fiscale éteint définitivement l'obligation de payer l'impôt",
         "Non, la prescription fiscale n'éteint que l'action en recouvrement de l'État ; la dette subsiste mais ne peut plus être poursuivie",
+        "Oui, la prescription fiscale éteint définitivement l'obligation de payer l'impôt",
         "Oui, et le contribuable peut même réclamer le remboursement des impôts payés pendant la période prescrite",
         "Non, la prescription est impossible en droit fiscal burkinabè car l'impôt est imprescriptible"
       ],
-      "r": 1,
+      "r": 0,
       "x": "En droit fiscal burkinabè, la prescription éteint l'action en recouvrement de l'administration mais ne supprime pas la dette fiscale elle-même. Techniquement, la dette subsiste comme obligation naturelle. En pratique, la prescription prive l'administration de tout moyen de contrainte pour recouvrer la créance. La distinction entre prescription de l'action et extinction de la dette est une subtilité juridique souvent testée en concours."
     },
     {
@@ -53511,22 +53511,22 @@ const QUESTIONS = {
       "q": "La retenue à la source sur les marchés de l'État et des collectivités au Burkina Faso est :",
       "o": [
         "Inexistante, car l'État est exonéré de tout prélèvement fiscal sur ses paiements",
-        "Un mécanisme par lequel l'État retient une fraction de l'impôt au moment du paiement des entreprises attributaires",
+        "Un mécanisme de garantie bancaire sans lien avec la fiscalité, géré par le MINEFID",
         "Une taxe spéciale perçue uniquement sur les marchés de travaux publics dépassant 50 000 000 FCFA",
-        "Un mécanisme de garantie bancaire sans lien avec la fiscalité, géré par le MINEFID"
+        "Un mécanisme par lequel l'État retient une fraction de l'impôt au moment du paiement des entreprises attributaires"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Sur les marchés publics, l'État et les collectivités locales opèrent une retenue à la source (acompte sur IS ou IRPP) au moment du règlement des sommes dues aux entreprises titulaires de marchés. Ce mécanisme garantit la collecte d'une partie de l'impôt dû par les entreprises (notamment les PME qui peuvent avoir des difficultés à payer l'IS en fin d'exercice)."
     },
     {
       "q": "La liasse fiscale déposée par une société soumise à l'IS au Burkina Faso comprend obligatoirement :",
       "o": [
         "Uniquement la déclaration de résultat (formulaire de détermination du bénéfice imposable)",
-        "Le bilan, le compte de résultat, le tableau de détermination du résultat fiscal et les états annexes",
+        "La déclaration de résultat, les relevés bancaires des 12 mois de l'exercice et les contrats avec les clients",
         "Uniquement les états financiers annuels (bilan + compte de résultat) certifiés par un commissaire aux comptes",
-        "La déclaration de résultat, les relevés bancaires des 12 mois de l'exercice et les contrats avec les clients"
+        "Le bilan, le compte de résultat, le tableau de détermination du résultat fiscal et les états annexes"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La liasse fiscale est un dossier complet comprenant : le bilan, le compte de résultat, le tableau de détermination du résultat fiscal (passage du résultat comptable au résultat fiscal avec réintégrations et déductions), le tableau des immobilisations et amortissements, et divers états annexes exigés par le CGI. Ce dossier doit être déposé au plus tard le 30 avril de l'année N+1."
     },
     {
@@ -53555,22 +53555,22 @@ const QUESTIONS = {
       "q": "La déclaration des salaires (DADS - Déclaration Annuelle des Données Sociales) permet à l'administration de :",
       "o": [
         "Calculer directement l'ITS dû par chaque salarié sur la base des informations transmises par l'employeur",
-        "Recouper les salaires déclarés par les employeurs avec les revenus déclarés par les salariés à l'IRPP",
+        "Vérifier la conformité des contrats de travail avec les conventions collectives en vigueur",
         "Fixer les cotisations sociales à la CNSS pour l'exercice suivant",
-        "Vérifier la conformité des contrats de travail avec les conventions collectives en vigueur"
+        "Recouper les salaires déclarés par les employeurs avec les revenus déclarés par les salariés à l'IRPP"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La DADS transmise par les employeurs permet à la DGI de vérifier la cohérence entre les salaires déclarés et payés (ITS reversé par l'employeur) et les revenus déclarés par les salariés. C'est un outil de recoupement entre données employeurs et données salariés, permettant de détecter les omissions ou insuffisances de déclaration des deux côtés."
     },
     {
       "q": "En matière de recouvrement fiscal au Burkina Faso, le commandement de payer est :",
       "o": [
         "La première relance amiable adressée par courrier simple au contribuable défaillant",
-        "Un acte préalable aux saisies, notifié par huissier au contribuable défaillant, l'invitant à payer sous huitaine",
+        "Un accord négocié entre l'administration et le contribuable pour échelonner sa dette fiscale",
         "La décision par laquelle le tribunal ordonne le paiement forcé d'une dette fiscale",
-        "Un accord négocié entre l'administration et le contribuable pour échelonner sa dette fiscale"
+        "Un acte préalable aux saisies, notifié par huissier au contribuable défaillant, l'invitant à payer sous huitaine"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le commandement de payer est la première mesure d'exécution forcée en matière de recouvrement fiscal. Il est notifié par huissier de justice au contribuable qui n'a pas répondu aux relances amiables. Il lui accorde un délai (souvent 8 jours) pour payer avant l'engagement de saisies. C'est une formalité obligatoire préalable à toute saisie mobilière ou immobilière."
     },
     {
@@ -53588,11 +53588,11 @@ const QUESTIONS = {
       "q": "[PIÈGE] Un contribuable burkinabè qui paye spontanément son impôt en retard, sans relance de l'administration, est-il redevable des pénalités de retard ?",
       "o": [
         "Non, les pénalités ne sont applicables que si l'administration les a formellement notifiées",
-        "Oui, les pénalités de retard sont dues de plein droit dès que le délai légal est dépassé, sans notification préalable",
+        "Oui, mais seulement si le retard dépasse 3 mois après la date légale d'échéance",
         "Non, un paiement spontané, même tardif, bénéficie toujours d'une exonération de pénalités",
-        "Oui, mais seulement si le retard dépasse 3 mois après la date légale d'échéance"
+        "Oui, les pénalités de retard sont dues de plein droit dès que le délai légal est dépassé, sans notification préalable"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Les pénalités de retard courent automatiquement à partir du lendemain de l'échéance légale de paiement, sans qu'une notification préalable de l'administration soit nécessaire. Un paiement spontané tardif doit donc s'accompagner du versement des pénalités correspondantes. L'oubli des pénalités lors d'un paiement tardif constitue une dette fiscale résiduelle."
     },
     {
@@ -53675,23 +53675,23 @@ const QUESTIONS = {
     {
       "q": "[PIÈGE ENAREF] Une entreprise assujettie à la TVA achète des biens en janvier, reçoit la facture en janvier, mais ne paie son fournisseur qu'en mars. À quelle date peut-elle déduire la TVA ?",
       "o": [
-        "En mars, lors du paiement effectif, car la déduction est liée à l'encaissement chez le fournisseur",
         "En janvier, dès réception de la facture régulière, car la déduction suit la livraison pour les biens",
+        "En mars, lors du paiement effectif, car la déduction est liée à l'encaissement chez le fournisseur",
         "En février, lors du dépôt de la déclaration de TVA de janvier",
         "En décembre de la même année, lors de la clôture de l'exercice comptable"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Pour les achats de biens, le droit à déduction de la TVA naît à la date de livraison et de réception de la facture régulière, indépendamment de la date de paiement. La déduction s'opère donc en janvier (mois de réception de la facture), sur la déclaration déposée avant le 20 février. La confusion avec la règle des services (encaissement) est un piège classique des concours ENAREF."
     },
     {
       "q": "[PIÈGE AVANCÉ] La TVA collectée par une entreprise au cours d'un mois excède sa TVA déductible de 3 000 000 FCFA. Ce crédit de TVA peut-il être remboursé automatiquement par la DGI le mois suivant ?",
       "o": [
-        "Oui, le remboursement est automatique et intervient dans les 30 jours suivant la déclaration",
         "Non, un crédit ordinaire de TVA est d'abord reportable sur les déclarations suivantes ; le remboursement n'est accordé que sous conditions strictes",
+        "Oui, le remboursement est automatique et intervient dans les 30 jours suivant la déclaration",
         "Non, un crédit de TVA ne peut jamais être remboursé au Burkina Faso",
         "Oui, mais uniquement si l'entreprise a plus de 5 ans d'ancienneté et un historique fiscal irréprochable"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Un crédit de TVA constaté sur une déclaration mensuelle est en règle générale reporté sur les déclarations des mois suivants et imputable sur la TVA collectée future. Le remboursement en numéraire n'est pas automatique : il est accordé dans des situations spécifiques (exportateurs structurellement en crédit, investissements importants, cessation d'activité) sous réserve de présentation d'une demande formelle et de contrôle préalable."
     },
     {
@@ -53708,23 +53708,23 @@ const QUESTIONS = {
     {
       "q": "[PIÈGE ENAREF] Les intérêts versés par une société à ses associés personnes physiques sur les comptes courants d'associés sont déductibles à l'IS au Burkina Faso :",
       "o": [
-        "Intégralement, dès lors qu'ils sont justifiés par un contrat de prêt entre les parties",
         "Dans la limite du taux d'intérêt déductible fixé par le CGI et du capital libéré",
+        "Intégralement, dès lors qu'ils sont justifiés par un contrat de prêt entre les parties",
         "Jamais, car les versements aux associés ne sont jamais déductibles sous quelque forme que ce soit",
         "Uniquement si le capital social de la société est intégralement libéré et si le taux n'excède pas 12%"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Les intérêts sur comptes courants d'associés sont déductibles mais dans des limites strictes fixées par le CGI : le taux ne doit pas excéder le taux fixé par arrêté du Ministre des Finances (généralement aligné sur les taux du marché), et les avances ne doivent pas dépasser le capital social libéré. Au-delà de ces plafonds, les intérêts excédentaires doivent être réintégrés."
     },
     {
       "q": "[PIÈGE AVANCÉ] Une entreprise burkinabè décide d'offrir à ses clients des cadeaux d'affaires (agendas, stylos) lors des fêtes de fin d'année pour un montant total de 800 000 FCFA. Quel est le traitement fiscal de cette dépense ?",
       "o": [
         "Totalement déductible, car les cadeaux d'affaires constituent des frais de représentation courants",
-        "Déductible dans la limite d'un plafond fixé par le CGI (en % du CA ou montant absolu)",
+        "Déductible uniquement si chaque cadeau est d'une valeur inférieure à 5 000 FCFA",
         "Totalement non déductible, car tout cadeau est assimilé à une libéralité prohibée fiscalement",
-        "Déductible uniquement si chaque cadeau est d'une valeur inférieure à 5 000 FCFA"
+        "Déductible dans la limite d'un plafond fixé par le CGI (en % du CA ou montant absolu)"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Les cadeaux d'affaires sont des charges déductibles à l'IS dans la limite des plafonds fixés par le CGI burkinabè. Au-delà du plafond, la fraction excédentaire est réintégrée. La TVA sur les cadeaux est également non déductible au-delà de certains seuils. Les objets publicitaires portant le nom de l'entreprise sont traités différemment des cadeaux \"purs\"."
     },
     {
@@ -53766,11 +53766,11 @@ const QUESTIONS = {
       "q": "Le compte de résultat indique :",
       "o": [
         "Le patrimoine",
-        "La rentabilité (produits − charges)",
+        "Les contrats",
         "La trésorerie",
-        "Les contrats"
+        "La rentabilité (produits − charges)"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le compte de résultat = Produits − Charges = Bénéfice ou Perte. Il mesure la performance économique sur une période."
     },
     {
@@ -53788,11 +53788,11 @@ const QUESTIONS = {
       "q": "Le « débit » est inscrit :",
       "o": [
         "À droite",
-        "À gauche",
+        "En bas",
         "En haut",
-        "En bas"
+        "À gauche"
       ],
-      "r": 1,
+      "r": 3,
       "x": "En comptabilité, le débit s'inscrit à GAUCHE et le crédit à DROITE. Toute écriture comptable comporte un débit et un crédit (partie double)."
     },
     {
@@ -53810,55 +53810,55 @@ const QUESTIONS = {
       "q": "Une facture est :",
       "o": [
         "Un document fiscal",
-        "Un document commercial attestant une vente",
+        "Un courrier officiel",
         "Un contrat de travail",
-        "Un courrier officiel"
+        "Un document commercial attestant une vente"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La facture est un document commercial qui prouve la vente de biens/services. Elle indique : émetteur, client, montant HT, TVA, TTC."
     },
     {
       "q": "Les capitaux propres comprennent :",
       "o": [
         "Les dettes",
-        "Le capital + réserves + résultat",
+        "Les créances clients",
         "Les stocks",
-        "Les créances clients"
+        "Le capital + réserves + résultat"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Capitaux propres = Capital social + Réserves + Résultat net. Ils représentent ce que les actionnaires ont mis ou laissé dans l'entreprise."
     },
     {
       "q": "TVA collectée − TVA déductible = :",
       "o": [
         "Marge brute",
-        "TVA à payer",
+        "Chiffre d'affaires",
         "Bénéfice",
-        "Chiffre d'affaires"
+        "TVA à payer"
       ],
-      "r": 1,
+      "r": 3,
       "x": "TVA à payer = TVA facturée aux clients (collectée) − TVA payée aux fournisseurs (déductible). Reversée à l'État."
     },
     {
       "q": "Le journal comptable enregistre :",
       "o": [
-        "Les actualités",
         "Les opérations chronologiquement",
+        "Les actualités",
         "Les contrats seulement",
         "Les paies"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le journal est un livre comptable obligatoire qui enregistre toutes les opérations dans l'ordre chronologique de leur survenance."
     },
     {
       "q": "Une « créance » est :",
       "o": [
-        "Une dette",
         "Une somme due par un tiers",
+        "Une dette",
         "Un bien matériel",
         "Un salaire"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Une créance est une somme qu'un tiers (client, débiteur) doit à l'entreprise. À l'inverse, une dette est ce qu'on doit."
     },
     {
@@ -53876,11 +53876,11 @@ const QUESTIONS = {
       "q": "Selon le principe de prudence, comment doit-on traiter une perte probable mais non encore réalisée ?",
       "o": [
         "Ne pas l'enregistrer car elle n'est pas certaine",
-        "L'enregistrer immédiatement sous forme de provision",
+        "La mentionner uniquement dans l'annexe",
         "Attendre la réalisation effective pour l'enregistrer",
-        "La mentionner uniquement dans l'annexe"
+        "L'enregistrer immédiatement sous forme de provision"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le principe de prudence impose de comptabiliser toute perte probable dès qu'elle est connue, même si elle n'est pas encore réalisée, par le biais d'une provision. En revanche, un gain probable ne doit pas être comptabilisé avant sa réalisation effective."
     },
     {
@@ -53898,22 +53898,22 @@ const QUESTIONS = {
       "q": "Quel principe comptable est mis en œuvre lorsqu'une entreprise enregistre ses biens à leur coût d'acquisition plutôt qu'à leur valeur de marché ?",
       "o": [
         "Principe de prudence",
-        "Principe du coût historique",
         "Principe de continuité de l'exploitation",
+        "Principe du coût historique",
         "Principe d'importance significative"
       ],
-      "r": 1,
+      "r": 2,
       "x": "Le principe du coût historique (ou coût d'acquisition) stipule que les actifs sont enregistrés à leur valeur d'entrée dans le patrimoine. Ce principe garantit l'objectivité et la vérifiabilité des enregistrements comptables."
     },
     {
       "q": "Selon le principe de continuité de l'exploitation, on suppose que :",
       "o": [
-        "L'entreprise réalisera toujours des bénéfices",
         "L'entreprise continuera ses activités dans un avenir prévisible",
+        "L'entreprise réalisera toujours des bénéfices",
         "Les prix resteront stables dans le temps",
         "Les dettes seront toujours remboursées à échéance"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Ce principe postule que l'entreprise n'a ni l'intention ni la nécessité de se liquider dans un avenir prévisible. Il justifie la valeur des actifs au coût historique et non à la valeur de liquidation."
     },
     {
@@ -54008,22 +54008,22 @@ const QUESTIONS = {
       "q": "Les états financiers annuels selon le SYSCOHADA révisé comprennent obligatoirement :",
       "o": [
         "Le bilan, le compte de résultat et le grand livre",
-        "Le bilan, le compte de résultat, le tableau des flux de trésorerie, le tableau des variations des capitaux propres et les notes annexes",
+        "Le bilan, le compte de résultat et la balance des comptes",
         "Seulement le bilan et le compte de résultat",
-        "Le bilan, le compte de résultat et la balance des comptes"
+        "Le bilan, le compte de résultat, le tableau des flux de trésorerie, le tableau des variations des capitaux propres et les notes annexes"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le SYSCOHADA révisé impose cinq états financiers : (1) le Bilan, (2) le Compte de résultat, (3) le Tableau des flux de trésorerie, (4) le Tableau des variations des capitaux propres, et (5) les Notes annexes. Le grand livre et la balance sont des documents internes, non publiables."
     },
     {
       "q": "Le concept de \"juste valeur\" introduit par le SYSCOHADA révisé s'oppose principalement au principe de :",
       "o": [
         "Prudence",
-        "Coût historique",
+        "Continuité de l'exploitation",
         "Spécialisation des exercices",
-        "Continuité de l'exploitation"
+        "Coût historique"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La juste valeur est le prix auquel un actif pourrait être échangé entre parties bien informées. Elle s'oppose au coût historique qui retient le prix d'acquisition initial. Le SYSCOHADA révisé autorise la juste valeur pour certains instruments financiers et immeubles de placement."
     },
     {
@@ -54041,11 +54041,11 @@ const QUESTIONS = {
       "q": "Selon le principe de non-compensation, une entreprise :",
       "o": [
         "Peut compenser une dette fournisseur avec une créance client",
-        "Ne peut pas compenser des postes d'actif avec des postes de passif",
+        "Peut ne pas enregistrer les opérations dont les effets se neutralisent",
         "Peut soustraire les charges des produits avant de les enregistrer",
-        "Peut ne pas enregistrer les opérations dont les effets se neutralisent"
+        "Ne peut pas compenser des postes d'actif avec des postes de passif"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le principe de non-compensation interdit de compenser un élément d'actif avec un élément de passif ou une charge avec un produit. Chaque élément doit être présenté de façon distincte. Cela évite de masquer des informations importantes pour les lecteurs des états financiers."
     },
     {
@@ -54084,12 +54084,12 @@ const QUESTIONS = {
     {
       "q": "Selon le SYSCOHADA révisé, l'exercice comptable a une durée de :",
       "o": [
-        "6 mois obligatoirement",
-        "12 mois, sauf exception justifiée",
+        "24 mois pour les grandes entreprises",
         "18 mois maximum pour les nouvelles entreprises",
-        "24 mois pour les grandes entreprises"
+        "12 mois, sauf exception justifiée",
+        "6 mois obligatoirement"
       ],
-      "r": 1,
+      "r": 2,
       "x": "L'exercice comptable a normalement une durée de 12 mois. Toutefois, lors de la création d'une entreprise ou d'un changement de date de clôture, la durée peut être différente de 12 mois, sous réserve de justification."
     },
     {
@@ -54151,11 +54151,11 @@ const QUESTIONS = {
       "q": "Le compte 21 dans le SYSCOHADA correspond à :",
       "o": [
         "Stocks de marchandises",
-        "Immobilisations incorporelles",
+        "Immobilisations financières",
         "Immobilisations corporelles",
-        "Immobilisations financières"
+        "Immobilisations incorporelles"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le compte 21 \"Immobilisations incorporelles\" comprend les brevets, licences, fonds de commerce, logiciels, etc. Le compte 22 concerne les terrains, le 23 les bâtiments et le 24-25 les matériels et équipements."
     },
     {
@@ -54173,11 +54173,11 @@ const QUESTIONS = {
       "q": "Le compte 52 dans le SYSCOHADA désigne :",
       "o": [
         "Les titres de placement",
-        "Les banques et établissements financiers",
+        "Les effets à recevoir",
         "Les créances sur l'État",
-        "Les effets à recevoir"
+        "Les banques et établissements financiers"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La classe 5 regroupe les \"Comptes de trésorerie\". Le compte 52 \"Banques\" enregistre les opérations bancaires. Le compte 51 concerne les titres de placement, le 53 les établissements financiers et assimilés, le 57 la caisse."
     },
     {
@@ -54195,11 +54195,11 @@ const QUESTIONS = {
       "q": "Le compte 70 dans le SYSCOHADA regroupe :",
       "o": [
         "Les achats et variations de stocks",
-        "Les ventes et produits annexes",
+        "Les amortissements et provisions",
         "Les charges de personnel",
-        "Les amortissements et provisions"
+        "Les ventes et produits annexes"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La classe 7 \"Comptes de produits\" comprend : ventes de marchandises (701), ventes de produits fabriqués (702), travaux et services vendus (703), produits accessoires (704), subventions d'exploitation (71), reprises de provisions (79), etc."
     },
     {
@@ -54316,11 +54316,11 @@ const QUESTIONS = {
       "q": "Dans le SYSCOHADA, les \"produits financiers\" figurent dans la classe :",
       "o": [
         "6",
-        "7",
+        "5",
         "8",
-        "5"
+        "7"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Les produits financiers sont en classe 7 : compte 77 \"Revenus financiers et assimilés\" (intérêts reçus, dividendes, gains de change, etc.). Les charges financières sont en classe 6 : compte 67 \"Frais financiers et charges assimilées\"."
     },
     {
@@ -54337,23 +54337,23 @@ const QUESTIONS = {
     {
       "q": "Quel compte est utilisé pour enregistrer la \"plus-value de cession d'actif\" dans le SYSCOHADA ?",
       "o": [
-        "654",
         "754",
+        "654",
         "477",
         "673"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le compte 754 \"Produits sur cessions d'immobilisations\" (ou 82 \"Produits des cessions d'immobilisations\" selon le système) enregistre le prix de cession de l'actif vendu. La valeur nette comptable est enregistrée en charges (compte 654 ou 81), et la différence constitue la plus ou moins-value."
     },
     {
       "q": "Dans le plan comptable OHADA, la classe 6 regroupe :",
       "o": [
         "Les comptes de produits d'exploitation",
-        "Les comptes de charges",
+        "Les comptes de stocks",
         "Les comptes de tiers",
-        "Les comptes de stocks"
+        "Les comptes de charges"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La classe 6 \"Comptes de charges\" comprend : achats (60), transports (61), services extérieurs (62), autres services extérieurs (63), impôts et taxes (64), charges de personnel (66), charges financières (67), dotations (68), etc."
     },
     {
@@ -54371,11 +54371,11 @@ const QUESTIONS = {
       "q": "Le compte 13 dans le SYSCOHADA enregistre :",
       "o": [
         "Le capital social",
-        "Le résultat net de l'exercice",
+        "Les subventions d'investissement",
         "Les réserves légales",
-        "Les subventions d'investissement"
+        "Le résultat net de l'exercice"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le compte 13 \"Résultat net de l'exercice\" accueille le bénéfice (solde créditeur) ou la perte (solde débiteur) dégagé par l'activité de l'entreprise. En début d'exercice suivant, il est soldé pour être affecté (réserves, dividendes, report à nouveau)."
     },
     {
@@ -54404,11 +54404,11 @@ const QUESTIONS = {
       "q": "Le compte 6611 \"Appointements et salaires\" est un compte de :",
       "o": [
         "Classe 4 — compte de tiers",
-        "Classe 6 — compte de charges",
         "Classe 7 — compte de produits",
+        "Classe 6 — compte de charges",
         "Classe 5 — compte de trésorerie"
       ],
-      "r": 1,
+      "r": 2,
       "x": "Le compte 6611 \"Appointements et salaires\" appartient à la classe 6 (charges). Il enregistre les rémunérations brutes du personnel (traitement de base). C'est une charge de l'exercice qui affecte le résultat."
     },
     {
@@ -54459,11 +54459,11 @@ const QUESTIONS = {
       "q": "L'entreprise verse les salaires du mois pour un montant net de 1 200 000 FCFA. Comment enregistrer ce paiement ?",
       "o": [
         "Débit 661 / Crédit 521",
-        "Débit 421 / Crédit 521",
+        "Débit 661 / Crédit 421",
         "Débit 521 / Crédit 421",
-        "Débit 661 / Crédit 421"
+        "Débit 421 / Crédit 521"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le versement des salaires est enregistré : Débit 421 \"Personnel, rémunérations dues\" (extinction de la dette) / Crédit 521 \"Banque\" (décaissement). L'écriture D/ 661 / C/ 421 a été faite lors du calcul des bulletins de paie en début de mois."
     },
     {
@@ -54492,11 +54492,11 @@ const QUESTIONS = {
       "q": "L'entreprise encaisse des intérêts bancaires de 25 000 FCFA portés au crédit de son compte bancaire. Comment enregistrer cette opération ?",
       "o": [
         "Débit 672 / Crédit 521",
-        "Débit 521 / Crédit 772",
+        "Débit 772 / Crédit 521",
         "Débit 521 / Crédit 671",
-        "Débit 772 / Crédit 521"
+        "Débit 521 / Crédit 772"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Les intérêts créditeurs (produits financiers) reçus de la banque : Débit 521 \"Banque\" (encaissement) / Crédit 772 \"Revenus des comptes bancaires et assimilés\" (produit financier). Règle : les produits sont enregistrés au crédit des comptes de classe 7."
     },
     {
@@ -54525,22 +54525,22 @@ const QUESTIONS = {
       "q": "L'entreprise constate une perte sur créance irrécouvrable pour un client qui ne peut pas payer sa dette de 120 000 FCFA (HT 101 695 FCFA + TVA 18 305 FCFA). Quelle est l'écriture ?",
       "o": [
         "Débit 654 (120 000) / Crédit 411 (120 000)",
-        "Débit 654 (101 695) + Débit 4452 (18 305) / Crédit 411 (120 000)",
         "Débit 654 (120 000) / Crédit 411 (101 695) + Crédit 4452 (18 305)",
+        "Débit 654 (101 695) + Débit 4452 (18 305) / Crédit 411 (120 000)",
         "Débit 411 / Crédit 654"
       ],
-      "r": 1,
+      "r": 2,
       "x": "La perte sur créance irrécouvrable annule la créance TTC et récupère la TVA collectée (puisque la vente ne sera finalement pas encaissée) : Débit 654 \"Pertes sur créances irrécouvrables\" (HT) + Débit 4452 \"TVA facturée\" (TVA à régulariser) / Crédit 411 \"Clients\" (TTC)."
     },
     {
       "q": "Une dotation aux amortissements de 400 000 FCFA est constatée en fin d'exercice. Quelle est l'écriture ?",
       "o": [
         "Débit 28 / Crédit 681",
-        "Débit 681 / Crédit 28",
+        "Débit 21 / Crédit 68",
         "Débit 68 / Crédit 21",
-        "Débit 21 / Crédit 68"
+        "Débit 681 / Crédit 28"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La dotation aux amortissements : Débit 681 \"Dotations aux amortissements\" (charge) / Crédit 28 \"Amortissements des immobilisations\" (compte correcteur d'actif). Les comptes 28 viennent en déduction de la valeur brute au bilan pour donner la valeur nette comptable."
     },
     {
@@ -54579,12 +54579,12 @@ const QUESTIONS = {
     {
       "q": "L'entreprise ZAKA reçoit une subvention d'exploitation de 500 000 FCFA de l'État, versée sur son compte bancaire. Comment enregistrer ?",
       "o": [
-        "Débit 521 / Crédit 141",
         "Débit 521 / Crédit 71",
+        "Débit 521 / Crédit 141",
         "Débit 71 / Crédit 521",
         "Débit 521 / Crédit 101"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La subvention d'exploitation reçue : Débit 521 \"Banque\" / Crédit 71 \"Subventions d'exploitation reçues\" (produit d'exploitation). À distinguer de la subvention d'investissement (compte 141), qui est une ressource stable inscrite au passif du bilan."
     },
     {
@@ -54602,11 +54602,11 @@ const QUESTIONS = {
       "q": "Comment enregistre-t-on la constitution d'une provision pour dépréciation d'une créance douteuse de 200 000 FCFA ?",
       "o": [
         "Débit 411 / Crédit 491",
-        "Débit 6911 / Crédit 491",
+        "Débit 791 / Crédit 491",
         "Débit 491 / Crédit 6911",
-        "Débit 791 / Crédit 491"
+        "Débit 6911 / Crédit 491"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La dotation pour dépréciation de créance : Débit 6911 \"Dotations aux provisions pour dépréciation des actifs circulants\" / Crédit 491 \"Provisions pour dépréciation des comptes clients\". L'année suivante, si la créance est recouvrée, la provision est reprise : Débit 491 / Crédit 7911."
     },
     {
@@ -54690,22 +54690,22 @@ const QUESTIONS = {
       "q": "Un véhicule est acquis le 1er avril N pour 4 800 000 FCFA. Taux d'amortissement linéaire : 25%. Quelle est la dotation de la première année (exercice calendaire du 1/01 au 31/12) ?",
       "o": [
         "1 200 000 FCFA",
-        "900 000 FCFA",
+        "1 800 000 FCFA",
         "600 000 FCFA",
-        "1 800 000 FCFA"
+        "900 000 FCFA"
       ],
-      "r": 1,
+      "r": 3,
       "x": "En amortissement linéaire proratisé, la dotation de la 1ère année tient compte de la date d'acquisition. Durée = du 1er avril au 31 décembre = 9 mois = 9/12 de l'année. Dotation = 4 800 000 × 25% × 9/12 = 1 200 000 × 9/12 = 900 000 FCFA."
     },
     {
       "q": "L'amortissement dégressif se distingue de l'amortissement linéaire par le fait que :",
       "o": [
         "Le montant de la dotation augmente chaque année",
-        "Le taux d'amortissement est appliqué à la valeur nette comptable résiduelle",
+        "Il ne s'applique qu'aux biens incorporels",
         "Le bien n'est jamais totalement amorti",
-        "Il ne s'applique qu'aux biens incorporels"
+        "Le taux d'amortissement est appliqué à la valeur nette comptable résiduelle"
       ],
-      "r": 1,
+      "r": 3,
       "x": "En amortissement dégressif, le taux est appliqué chaque année à la VNC (valeur nette comptable) restante, ce qui génère des dotations décroissantes. Les premières années voient des dotations élevées, avantageuses fiscalement. Le basculement vers le linéaire est effectué quand le linéaire devient plus avantageux."
     },
     {
@@ -54745,33 +54745,33 @@ const QUESTIONS = {
       "q": "La dépréciation d'une immobilisation se distingue de l'amortissement car :",
       "o": [
         "Elle est définitive et irréversible",
-        "Elle est réversible et liée à une perte de valeur non planifiée",
+        "Elle remplace l'amortissement pour les biens non amortissables",
         "Elle s'applique uniquement aux biens incorporels",
-        "Elle remplace l'amortissement pour les biens non amortissables"
+        "Elle est réversible et liée à une perte de valeur non planifiée"
       ],
-      "r": 1,
+      "r": 3,
       "x": "L'amortissement est une dépréciation irréversible et planifiée (usure normale). La dépréciation (ou provision pour dépréciation) est liée à une perte de valeur accidentelle ou conjoncturelle, réversible (si la valeur remonte, on reprend la provision). Elle concerne aussi bien les immobilisations amortissables que non amortissables."
     },
     {
       "q": "Un terrain acquis pour 5 000 000 FCFA voit sa valeur de marché tomber à 3 500 000 FCFA au 31/12. Comment traiter cette situation ?",
       "o": [
-        "Amortir le terrain sur 20 ans",
         "Constater une provision pour dépréciation de 1 500 000 FCFA",
+        "Amortir le terrain sur 20 ans",
         "Réévaluer le terrain à 3 500 000 FCFA dans le bilan",
         "Ne rien faire, les terrains ne se déprécient jamais"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Les terrains ne s'amortissent pas (durée d'utilisation illimitée). Mais si leur valeur de marché est inférieure à leur valeur comptable, on constate une provision pour dépréciation : Débit 6812 \"Dotations aux dépréciations des immobilisations\" / Crédit 291 \"Provisions pour dépréciation des terrains\" (1 500 000 FCFA)."
     },
     {
       "q": "Une provision pour risques et charges est constituée pour faire face à :",
       "o": [
         "Une charge certaine déjà facturée mais non payée",
-        "Une charge probable dont le montant ou l'échéance est incertain",
+        "Un amortissement non encore calculé",
         "Une perte sur stock déjà constatée",
-        "Un amortissement non encore calculé"
+        "Une charge probable dont le montant ou l'échéance est incertain"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Les provisions pour risques et charges couvrent des obligations probables envers des tiers dont le montant ou l'échéance est incertain (litiges, garanties données, restructuration). Exemple : provision pour litige prud'homal. Si la charge est certaine et déterminée, c'est une charge à payer, pas une provision."
     },
     {
@@ -54800,33 +54800,33 @@ const QUESTIONS = {
       "q": "Quelle est la différence entre une \"provision réglementée\" et une \"provision pour risques et charges\" ?",
       "o": [
         "La provision réglementée est une charge décaissable, l'autre non",
-        "La provision réglementée est un mécanisme fiscal optionnel, classée dans les capitaux propres",
         "La provision réglementée concerne uniquement les stocks",
+        "La provision réglementée est un mécanisme fiscal optionnel, classée dans les capitaux propres",
         "La provision pour risques est obligatoire, l'autre est facultative"
       ],
-      "r": 1,
+      "r": 2,
       "x": "Les provisions réglementées (compte 15) sont des provisions à caractère purement fiscal (amortissements dérogatoires, provisions pour hausse des prix, etc.). Elles figurent dans les capitaux propres du bilan. Les provisions pour risques et charges (compte 19) représentent des obligations probables envers des tiers."
     },
     {
       "q": "L'entreprise détient des titres de placement achetés à 2 000 000 FCFA. Au 31/12, leur valeur de marché est de 1 700 000 FCFA. Que doit-elle faire ?",
       "o": [
         "Rien, les titres de placement ne se déprécient pas",
-        "Constater une provision pour dépréciation de 300 000 FCFA",
+        "Vendre immédiatement les titres pour constater la perte",
         "Reclasser les titres en immobilisations financières",
-        "Vendre immédiatement les titres pour constater la perte"
+        "Constater une provision pour dépréciation de 300 000 FCFA"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Les titres de placement (classe 5) doivent être évalués à la valeur du marché à la clôture. Si la valeur de marché < valeur d'acquisition, on constate une provision : Débit 6781 / Crédit 591 \"Provisions pour dépréciation des titres de placement\" pour 300 000 FCFA."
     },
     {
       "q": "Qu'entend-on par \"durée d'amortissement\" d'un bien ?",
       "o": [
         "La durée légale fixée par la loi fiscale",
-        "La durée d'utilisation prévue par l'entreprise, selon la nature du bien et l'usage",
         "La durée de vie physique maximale du bien",
+        "La durée d'utilisation prévue par l'entreprise, selon la nature du bien et l'usage",
         "La durée du contrat de financement (crédit-bail ou emprunt)"
       ],
-      "r": 1,
+      "r": 2,
       "x": "La durée d'amortissement est la durée d'utilisation probable du bien, estimée par l'entreprise. Elle peut différer de la durée fiscale. Le SYSCOHADA recommande d'utiliser la durée économique réelle. Des durées types : bâtiments 20 ans, matériel 5-10 ans, véhicules 4-5 ans, logiciels 3 ans."
     },
     {
@@ -54866,33 +54866,33 @@ const QUESTIONS = {
       "q": "Une provision pour dépréciation de stock est constituée pour 500 000 FCFA. L'exercice suivant, les marchandises se vendent normalement. Quelle écriture enregistre la reprise de provision ?",
       "o": [
         "Débit 6594 / Crédit 39",
-        "Débit 39 / Crédit 7594",
+        "Débit 7594 / Crédit 39",
         "Débit 39 / Crédit 6594",
-        "Débit 7594 / Crédit 39"
+        "Débit 39 / Crédit 7594"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La reprise de provision pour dépréciation de stock : Débit 39 \"Provisions pour dépréciation des stocks\" / Crédit 7594 \"Reprises de provisions pour dépréciation des actifs circulants\" (produit). Cette écriture inverse la provision initiale et améliore le résultat de l'exercice."
     },
     {
       "q": "Comment appelle-t-on la différence entre la dotation aux amortissements comptable et la dotation fiscale admise ?",
       "o": [
-        "Provision réglementée",
         "Amortissement dérogatoire",
+        "Provision réglementée",
         "Surplus d'amortissement",
         "Dépréciation exceptionnelle"
       ],
-      "r": 1,
+      "r": 0,
       "x": "L'amortissement dérogatoire (compte 151) est la différence entre l'amortissement fiscal (souvent plus rapide, comme le dégressif fiscal) et l'amortissement comptable (linéaire économique). La fraction excédentaire est une provision réglementée, classée en capitaux propres."
     },
     {
       "q": "Lors de la cession d'une immobilisation, quelle est la première écriture à enregistrer ?",
       "o": [
         "Enregistrer le prix de vente",
-        "Annuler la valeur brute et les amortissements cumulés du bien cédé",
+        "Enregistrer la TVA sur la cession",
         "Calculer la plus ou moins-value",
-        "Enregistrer la TVA sur la cession"
+        "Annuler la valeur brute et les amortissements cumulés du bien cédé"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La méthodologie de cession d'immobilisation comporte plusieurs étapes : (1) Calculer la dotation complémentaire jusqu'à la date de cession, (2) Annuler la valeur brute (Crédit compte d'immobilisation) et les amortissements cumulés (Débit compte 28), (3) Enregistrer le prix de cession, (4) Calculer la plus ou moins-value."
     },
     {
@@ -54921,11 +54921,11 @@ const QUESTIONS = {
       "q": "La TVA due à l'État est calculée selon la formule :",
       "o": [
         "TVA collectée + TVA déductible",
-        "TVA collectée − TVA déductible",
+        "(TVA collectée × TVA déductible) / 100",
         "TVA déductible − TVA collectée",
-        "(TVA collectée × TVA déductible) / 100"
+        "TVA collectée − TVA déductible"
       ],
-      "r": 1,
+      "r": 3,
       "x": "TVA nette due = TVA collectée (sur ventes) − TVA déductible (sur achats). Si le résultat est positif, l'entreprise verse la différence à l'État. Si négatif (crédit de TVA), elle peut le reporter sur le mois suivant ou en demander le remboursement sous conditions."
     },
     {
@@ -54954,33 +54954,33 @@ const QUESTIONS = {
       "q": "L'entreprise ZABA achète des marchandises HT pour 1 500 000 FCFA (TVA 18%) et les revend TTC pour 2 360 000 FCFA. Calculez la TVA nette due à l'État.",
       "o": [
         "270 000 FCFA",
-        "90 000 FCFA",
+        "30 000 FCFA",
         "360 000 FCFA",
-        "30 000 FCFA"
+        "90 000 FCFA"
       ],
-      "r": 1,
+      "r": 3,
       "x": "TVA collectée = 2 360 000 / 1,18 × 18% = 2 000 000 × 18% = 360 000 FCFA. TVA déductible = 1 500 000 × 18% = 270 000 FCFA. TVA nette due = 360 000 − 270 000 = 90 000 FCFA. L'entreprise reverse 90 000 FCFA à l'État."
     },
     {
       "q": "Qu'est-ce qu'un \"crédit de TVA\" ?",
       "o": [
         "Un emprunt auprès de l'administration fiscale",
-        "La situation où la TVA déductible est supérieure à la TVA collectée",
+        "Un taux préférentiel accordé aux petites entreprises",
         "Une réduction accordée par l'État sur la TVA due",
-        "Un taux préférentiel accordé aux petites entreprises"
+        "La situation où la TVA déductible est supérieure à la TVA collectée"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le crédit de TVA survient quand la TVA déductible (sur achats) dépasse la TVA collectée (sur ventes). C'est fréquent pour les exportateurs ou les entreprises ayant fait de gros investissements. Ce crédit peut être reporté sur la période suivante ou remboursé sous conditions par l'administration fiscale."
     },
     {
       "q": "La TVA sur les services rendus par un prestataire étranger sans établissement stable au Burkina Faso est soumise à :",
       "o": [
         "La retenue à la source",
-        "L'autoliquidation par le client assujetti",
+        "La TVA du pays du prestataire",
         "L'exonération totale de TVA",
-        "La TVA du pays du prestataire"
+        "L'autoliquidation par le client assujetti"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le mécanisme d'autoliquidation (ou reverse charge) impose au client assujetti burkinabè de déclarer et payer la TVA due sur les services importés, en lieu et place du prestataire étranger non établi. Il peut simultanément déduire cette TVA si les conditions de déductibilité sont remplies."
     },
     {
@@ -55031,22 +55031,22 @@ const QUESTIONS = {
       "q": "Le fait générateur de la TVA sur les ventes de biens est :",
       "o": [
         "La date de commande",
-        "La date de livraison du bien",
+        "La date de signature du contrat",
         "La date d'encaissement du prix",
-        "La date de signature du contrat"
+        "La date de livraison du bien"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Pour les ventes de biens, le fait générateur de la TVA est la livraison (transfert de propriété). La TVA est alors exigible à cette date, même si le paiement est différé. Pour les prestations de services, le fait générateur est la date d'exécution de la prestation."
     },
     {
       "q": "L'entreprise achète des marchandises à crédit pour 590 000 FCFA TTC (TVA 18%). Quel est le montant HT à enregistrer dans le compte 601 ?",
       "o": [
         "590 000 FCFA",
-        "500 000 FCFA",
+        "106 200 FCFA",
         "695 000 FCFA",
-        "106 200 FCFA"
+        "500 000 FCFA"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Montant HT = 590 000 / 1,18 = 500 000 FCFA. TVA = 590 000 − 500 000 = 90 000 FCFA. Écriture : Débit 601 (500 000) + Débit 4456 (90 000) / Crédit 401 (590 000). Dans le SYSCOHADA, les achats sont enregistrés HT dans les comptes de charges."
     },
     {
@@ -55075,11 +55075,11 @@ const QUESTIONS = {
       "q": "L'entreprise reçoit une facture TTC de 826 000 FCFA. La TVA est au taux de 18%. Quel est le montant de la TVA déductible ?",
       "o": [
         "148 680 FCFA",
-        "126 000 FCFA",
+        "144 000 FCFA",
         "130 000 FCFA",
-        "144 000 FCFA"
+        "126 000 FCFA"
       ],
-      "r": 1,
+      "r": 3,
       "x": "TVA = TTC − HT = 826 000 − (826 000 / 1,18) = 826 000 − 700 000 = 126 000 FCFA. Vérification : 700 000 × 18% = 126 000 FCFA. Le montant HT = 826 000 / 1,18 = 700 000 FCFA."
     },
     {
@@ -55108,33 +55108,33 @@ const QUESTIONS = {
       "q": "En cas de non-paiement d'une créance client dont la TVA a déjà été collectée, l'entreprise peut-elle récupérer la TVA versée à l'État ?",
       "o": [
         "Non, la TVA versée est définitivement perdue",
-        "Oui, sous conditions (créance irrécouvrable avérée, client insolvable)",
+        "Oui, uniquement pour les créances supérieures à 1 000 000 FCFA",
         "Oui, automatiquement après 3 mois de non-paiement",
-        "Oui, uniquement pour les créances supérieures à 1 000 000 FCFA"
+        "Oui, sous conditions (créance irrécouvrable avérée, client insolvable)"
       ],
-      "r": 1,
+      "r": 3,
       "x": "L'entreprise peut récupérer la TVA sur les créances irrécouvrables sous conditions : l'insolvabilité du débiteur doit être établie (jugement de liquidation, etc.) et l'entreprise doit adresser une facture rectificative au client ou produire des justificatifs. La récupération se fait par imputation sur la prochaine déclaration TVA."
     },
     {
       "q": "L'entreprise verse 500 000 FCFA à titre d'acompte sur impôt sur les bénéfices. Comment enregistrer cette opération ?",
       "o": [
         "Débit 691 / Crédit 521",
-        "Débit 4422 / Crédit 521",
+        "Débit 447 / Crédit 521",
         "Débit 521 / Crédit 4422",
-        "Débit 447 / Crédit 521"
+        "Débit 4422 / Crédit 521"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Les acomptes sur impôts sont des créances sur l'État. On débite le compte 4422 \"Acomptes provisionnels sur impôts et taxes\" (créance sur l'État) / Crédit 521 \"Banque\". En fin d'exercice, lors de la liquidation de l'impôt définitif, les acomptes sont imputés sur le solde d'impôt restant dû."
     },
     {
       "q": "Au bilan SYSCOHADA, l'actif est classé selon :",
       "o": [
-        "L'ordre décroissant de liquidité",
         "L'ordre croissant de liquidité (du moins liquide au plus liquide)",
+        "L'ordre décroissant de liquidité",
         "L'ordre alphabétique des comptes",
         "L'ordre d'acquisition des biens"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Dans le SYSCOHADA, l'actif est classé de bas en haut en termes de liquidité : les immobilisations (actif immobilisé, le moins liquide) apparaissent en haut, suivies de l'actif circulant (stocks, créances), puis de la trésorerie (la plus liquide). C'est l'ordre croissant de liquidité."
     },
     {
@@ -55184,12 +55184,12 @@ const QUESTIONS = {
     {
       "q": "Dans le compte de résultat SYSCOHADA, la \"valeur ajoutée\" est calculée comme suit :",
       "o": [
-        "Chiffre d'affaires − Charges de personnel",
         "Production de l'exercice − Consommations en provenance des tiers",
+        "Chiffre d'affaires − Charges de personnel",
         "Résultat d'exploitation + Dotations aux amortissements",
         "Chiffre d'affaires − Coût des marchandises vendues"
       ],
-      "r": 1,
+      "r": 0,
       "x": "VA = Production de l'exercice (CA + variation de stocks produits + production immobilisée) − Consommations en provenance des tiers (achats + variation de stocks de matières + autres charges externes). La VA mesure la richesse créée par l'entreprise."
     },
     {
@@ -55217,23 +55217,23 @@ const QUESTIONS = {
     {
       "q": "Comment se calcule la capacité d'autofinancement (CAF) à partir du résultat net ?",
       "o": [
-        "CAF = Résultat net + Dotations − Reprises + Plus-values − Moins-values",
         "CAF = Résultat net + Dotations aux amortissements et provisions − Reprises",
+        "CAF = Résultat net + Dotations − Reprises + Plus-values − Moins-values",
         "CAF = EBE − Impôts sur les bénéfices",
         "CAF = Résultat net / Chiffre d'affaires × 100"
       ],
-      "r": 1,
+      "r": 0,
       "x": "CAF = Résultat net + Charges calculées (amortissements, provisions) − Produits calculés (reprises) ± Moins-values/Plus-values sur cessions. La CAF mesure la capacité de l'entreprise à générer des ressources internes pour financer ses investissements, rembourser ses dettes et distribuer des dividendes."
     },
     {
       "q": "Le ratio de solvabilité générale est calculé ainsi :",
       "o": [
         "Capitaux propres / Total Actif",
-        "Total Actif / Total Dettes",
+        "Actif circulant / Passif circulant",
         "Résultat net / Capital social",
-        "Actif circulant / Passif circulant"
+        "Total Actif / Total Dettes"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Solvabilité = Total Actif / Total Dettes. Un ratio > 1 indique que l'entreprise peut rembourser ses dettes en liquidant ses actifs. Plus il est élevé, plus l'entreprise est solvable. Un ratio < 1 signifie un passif supérieur à l'actif (situation négative des capitaux propres — difficile)."
     },
     {
@@ -55262,11 +55262,11 @@ const QUESTIONS = {
       "q": "Le résultat financier est défini comme :",
       "o": [
         "Les charges financières uniquement",
-        "Produits financiers − Charges financières",
+        "Résultat net avant impôts − Résultat d'exploitation",
         "Résultat d'exploitation + Résultat exceptionnel",
-        "Résultat net avant impôts − Résultat d'exploitation"
+        "Produits financiers − Charges financières"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Résultat financier = Produits financiers (compte 77 : intérêts reçus, dividendes, gains de change) − Charges financières (compte 67 : intérêts payés, pertes de change, agios). Il mesure l'impact des opérations financières sur le résultat global."
     },
     {
@@ -55306,11 +55306,11 @@ const QUESTIONS = {
       "q": "Quel poste du bilan représente les actifs non remboursables au sens des ressources permanentes ?",
       "o": [
         "Les dettes financières à long terme",
-        "Les capitaux propres",
         "Les provisions pour risques",
+        "Les capitaux propres",
         "Les concours bancaires courants"
       ],
-      "r": 1,
+      "r": 2,
       "x": "Les capitaux propres (capital + réserves + résultat) représentent des ressources permanentes non remboursables à l'extérieur (sauf en cas de liquidation ou réduction de capital). Contrairement aux dettes, ils appartiennent aux actionnaires et constituent le \"filet de sécurité\" de l'entreprise."
     },
     {
@@ -55339,11 +55339,11 @@ const QUESTIONS = {
       "q": "L'entreprise a un chiffre d'affaires de 15 000 000 FCFA, des charges totales de 12 000 000 FCFA et un impôt sur les bénéfices de 900 000 FCFA (taux 30%). Quel est le résultat net ?",
       "o": [
         "3 000 000 FCFA",
-        "2 100 000 FCFA",
+        "12 900 000 FCFA",
         "900 000 FCFA",
-        "12 900 000 FCFA"
+        "2 100 000 FCFA"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Résultat avant impôts = 15 000 000 − 12 000 000 = 3 000 000 FCFA. Impôt = 3 000 000 × 30% = 900 000 FCFA. Résultat net = 3 000 000 − 900 000 = 2 100 000 FCFA. Le résultat net est le bénéfice après impôt, disponible pour l'affectation (dividendes, réserves)."
     },
     {
@@ -55361,11 +55361,11 @@ const QUESTIONS = {
       "q": "Lors des travaux de fin d'exercice, l'abonnement téléphonique mensuel de 50 000 FCFA de décembre n'a pas encore été facturé. Comment régulariser ?",
       "o": [
         "Ne rien faire, attendre la facture de janvier",
-        "Débit 626 (50 000) / Crédit 408 \"Fournisseurs, factures non parvenues\" (50 000)",
+        "Constituer une provision de 50 000 FCFA",
         "Débit 408 / Crédit 626",
-        "Constituer une provision de 50 000 FCFA"
+        "Débit 626 (50 000) / Crédit 408 \"Fournisseurs, factures non parvenues\" (50 000)"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La facture de téléphone de décembre non reçue est une \"charge à payer\". Régularisation au 31/12 : Débit 626 \"Télécommunications\" / Crédit 408 \"Fournisseurs — Factures non parvenues\". En début d'exercice N+1, cette écriture est contre-passée, et la vraie facture est enregistrée normalement."
     },
     {
@@ -55405,44 +55405,44 @@ const QUESTIONS = {
       "q": "Un loyer de 360 000 FCFA est payé le 1er octobre N pour l'année octobre N – septembre N+1. Quel est le montant à régulariser en charge constatée d'avance au 31/12/N ?",
       "o": [
         "360 000 FCFA",
-        "270 000 FCFA",
+        "120 000 FCFA",
         "90 000 FCFA",
-        "120 000 FCFA"
+        "270 000 FCFA"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La période future (janvier–septembre N+1) représente 9 mois sur 12. Charge constatée d'avance = 360 000 × 9/12 = 270 000 FCFA. Cette somme correspond aux 9 mois qui concernent N+1 et doit être exclue des charges de N. Écriture : Débit 486 / Crédit 613 (ou 622) pour 270 000 FCFA."
     },
     {
       "q": "Lors de l'inventaire de fin d'exercice, on constate que des marchandises ont une valeur nette de réalisation (VNR) inférieure à leur coût d'entrée. Que faut-il faire ?",
       "o": [
         "Rien, les stocks sont toujours évalués au coût d'entrée",
-        "Réévaluer les stocks à la VNR et constater une provision pour dépréciation",
         "Vendre immédiatement ces marchandises",
+        "Réévaluer les stocks à la VNR et constater une provision pour dépréciation",
         "Mettre les marchandises au rebut"
       ],
-      "r": 1,
+      "r": 2,
       "x": "Conformément au principe de prudence, les stocks sont évalués au plus faible du coût d'entrée et de la valeur nette de réalisation (VNR). Si VNR < coût, on constate une provision pour dépréciation : Débit 6594 / Crédit 39. Cela anticipe la perte probable."
     },
     {
       "q": "Qu'est-ce que la \"balance après inventaire\" ?",
       "o": [
         "La balance des comptes avant les travaux d'inventaire",
-        "La balance des comptes après régularisations d'inventaire, servant de base aux états financiers",
+        "Le document récapitulatif des amortissements de l'exercice",
         "Le tableau des stocks après inventaire physique",
-        "Le document récapitulatif des amortissements de l'exercice"
+        "La balance des comptes après régularisations d'inventaire, servant de base aux états financiers"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La balance après inventaire (ou balance de clôture) est établie après toutes les régularisations (amortissements, provisions, charges/produits à régulariser). Elle reflète fidèlement la situation de l'entreprise à la date de clôture et sert de base directe à l'établissement du bilan et du compte de résultat."
     },
     {
       "q": "Un produit financier de 80 000 FCFA acquis mais non encore encaissé au 31/12 doit être :",
       "o": [
-        "Ignoré jusqu'à son encaissement en N+1",
         "Enregistré en \"produit à recevoir\" pour 80 000 FCFA",
+        "Ignoré jusqu'à son encaissement en N+1",
         "Provisionné en charge pour risque de non-encaissement",
         "Comptabilisé en N+1 lors de l'encaissement"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Conformément au principe de spécialisation, les produits acquis au cours de l'exercice doivent être rattachés à cet exercice, même si non encaissés. Régularisation : Débit 477 \"Produits à recevoir\" / Crédit 772 \"Revenus des comptes bancaires\" (80 000 FCFA)."
     },
     {
@@ -55460,22 +55460,22 @@ const QUESTIONS = {
       "q": "Les \"charges hors activités ordinaires\" (HAO) dans le compte de résultat SYSCOHADA comprennent :",
       "o": [
         "Les charges de personnel et les loyers",
-        "Les événements exceptionnels non liés à l'activité courante (catastrophe, opération de restructuration)",
+        "Les charges financières bancaires",
         "Les dotations aux amortissements",
-        "Les charges financières bancaires"
+        "Les événements exceptionnels non liés à l'activité courante (catastrophe, opération de restructuration)"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Les charges HAO (Hors Activités Ordinaires) regroupent les opérations exceptionnelles, non récurrentes, qui ne relèvent pas de l'activité ordinaire de l'entreprise : incendie, inondation, restructuration exceptionnelle, amende exceptionnelle. Elles sont présentées séparément pour ne pas altérer l'analyse de la performance ordinaire."
     },
     {
       "q": "L'entreprise décide de constituer une provision pour dépréciation de 150 000 FCFA sur un stock de produits finis. L'écriture correcte au 31/12 est :",
       "o": [
         "Débit 397 / Crédit 6594",
-        "Débit 6594 / Crédit 397",
         "Débit 6594 / Crédit 7594",
+        "Débit 6594 / Crédit 397",
         "Débit 397 / Crédit 7594"
       ],
-      "r": 1,
+      "r": 2,
       "x": "Provision pour dépréciation de stocks de produits finis : Débit 6594 \"Dotations aux provisions pour dépréciation des stocks\" / Crédit 397 \"Provisions pour dépréciation des produits finis\" (ou 391 selon le type de stock). Le compte 7594 serait utilisé pour une reprise (sens inverse)."
     },
     {
@@ -55492,12 +55492,12 @@ const QUESTIONS = {
     {
       "q": "Lors de la clôture d'exercice, les comptes de la classe 6 (charges) sont soldés par :",
       "o": [
-        "Un débit au compte 13 \"Résultat net\"",
         "Un crédit pour vider leur solde débiteur",
+        "Un débit au compte 13 \"Résultat net\"",
         "Un virement au compte de report à nouveau",
         "Un transfert direct au bilan"
       ],
-      "r": 1,
+      "r": 0,
       "x": "À la clôture, les comptes de charges (soldes débiteurs) sont soldés par un crédit, et leur total est viré au débit du compte 13 \"Résultat net de l'exercice\". Symétriquement, les comptes de produits (soldes créditeurs) sont soldés par un débit et virés au crédit du compte 13."
     },
     {
@@ -55547,12 +55547,12 @@ const QUESTIONS = {
     {
       "q": "Une entreprise a des charges fixes de 2 000 000 FCFA et un taux de marge sur coûts variables de 40%. Quel est son seuil de rentabilité ?",
       "o": [
-        "800 000 FCFA",
         "5 000 000 FCFA",
+        "800 000 FCFA",
         "2 800 000 FCFA",
         "3 000 000 FCFA"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Seuil de rentabilité = Charges fixes / Taux de MCV = 2 000 000 / 0,40 = 5 000 000 FCFA. L'entreprise doit réaliser au minimum 5 000 000 FCFA de CA pour ne pas être déficitaire. Au-delà, chaque franc de CA supplémentaire génère 0,40 FCFA de bénéfice."
     },
     {
@@ -55581,11 +55581,11 @@ const QUESTIONS = {
       "q": "Qu'est-ce qu'un \"centre d'analyse\" (ou section homogène) en comptabilité analytique ?",
       "o": [
         "Un département qui analyse les états financiers",
-        "Une division fictive de l'entreprise qui regroupe des charges indirectes homogènes pour les répartir sur les produits",
+        "Un logiciel de comptabilité analytique",
         "Un groupe de clients segmenté pour l'analyse commerciale",
-        "Un logiciel de comptabilité analytique"
+        "Une division fictive de l'entreprise qui regroupe des charges indirectes homogènes pour les répartir sur les produits"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Un centre d'analyse est une subdivision comptable de l'entreprise où sont regroupées des charges indirectes de même nature (ex : centre \"Approvisionnement\", centre \"Production\", centre \"Distribution\"). Les coûts de chaque centre sont répartis sur les produits via des unités d'œuvre (heure-machine, heure de travail, kg produit, etc.)."
     },
     {
@@ -55614,22 +55614,22 @@ const QUESTIONS = {
       "q": "L'entreprise SOGEBA vend 500 unités à 20 000 FCFA l'unité. Les charges variables unitaires sont de 12 000 FCFA et les charges fixes totales sont de 2 400 000 FCFA. Quel est le résultat ?",
       "o": [
         "2 400 000 FCFA",
-        "1 600 000 FCFA",
         "4 000 000 FCFA",
+        "1 600 000 FCFA",
         "0 FCFA"
       ],
-      "r": 1,
+      "r": 2,
       "x": "CA = 500 × 20 000 = 10 000 000 FCFA. Charges variables = 500 × 12 000 = 6 000 000 FCFA. MCV = 10 000 000 − 6 000 000 = 4 000 000 FCFA. Résultat = MCV − CF = 4 000 000 − 2 400 000 = 1 600 000 FCFA. Vérification SR = 2 400 000 / 0,40 = 6 000 000 FCFA (CA > SR → bénéfice)."
     },
     {
       "q": "Quel est le principal avantage de la comptabilité analytique pour le gestionnaire d'une entreprise burkinabè ?",
       "o": [
-        "Elle remplace la comptabilité générale obligatoire",
         "Elle permet de prendre des décisions éclairées sur les prix, les coûts et la rentabilité par produit ou activité",
+        "Elle remplace la comptabilité générale obligatoire",
         "Elle simplifie la déclaration fiscale annuelle",
         "Elle évite de devoir tenir une balance comptable"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La comptabilité analytique est un outil d'aide à la décision : elle permet de connaître le coût réel de chaque produit ou service, d'identifier les activités rentables et déficitaires, de fixer des prix de vente cohérents et d'optimiser les ressources. Pour les entreprises concourant aux marchés publics au Burkina Faso, elle est essentielle pour établir des prix compétitifs et rentables."
     },
     {
@@ -55668,23 +55668,23 @@ const QUESTIONS = {
     {
       "q": "Lors d'une augmentation de capital en numéraire, les actionnaires versent 5 000 000 FCFA dont 2 000 000 FCFA de prime d'émission. Quelle est l'écriture correcte ?",
       "o": [
-        "Débit 521 (5 000 000) / Crédit 101 (5 000 000)",
         "Débit 521 (5 000 000) / Crédit 101 (3 000 000) + Crédit 105 (2 000 000)",
+        "Débit 521 (5 000 000) / Crédit 101 (5 000 000)",
         "Débit 521 (5 000 000) / Crédit 101 (3 000 000) + Crédit 11 (2 000 000)",
         "Débit 521 (5 000 000) / Crédit 101 (2 000 000) + Crédit 105 (3 000 000)"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Lors d'une augmentation de capital avec prime : la valeur nominale des nouvelles actions va au compte 101 \"Capital social\" et la prime d'émission va au compte 105 \"Prime liée au capital\". Ici : 101 reçoit la valeur nominale (5 000 000 − 2 000 000 = 3 000 000) et 105 reçoit la prime (2 000 000)."
     },
     {
       "q": "L'entreprise accorde à son client une remise de 5%, un rabais de 2% et un escompte de 1%. Le prix catalogue est de 1 000 000 FCFA. Quel est le net financier à payer ?",
       "o": [
-        "929 076 FCFA",
         "921 140 FCFA",
+        "929 076 FCFA",
         "930 000 FCFA",
         "920 000 FCFA"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Net commercial : 1 000 000 × (1 − 5%) = 950 000. Après rabais : 950 000 × (1 − 2%) = 931 000. Net financier : 931 000 × (1 − 1%) = 921 140 FCFA. PIÈGE : les réductions se calculent en cascade (successivement), pas additionnées (5+2+1 = 8% ≠ bonne réponse)."
     },
     {
@@ -55712,12 +55712,12 @@ const QUESTIONS = {
     {
       "q": "Un bien est acquis en crédit-bail (leasing) pour une durée de 5 ans avec une option d'achat. Comment est-il enregistré pendant la période de location selon le SYSCOHADA révisé ?",
       "o": [
-        "Immédiatement en immobilisation au bilan",
         "Les loyers sont enregistrés en charges (compte 623) ; le bien figure hors bilan avec mention en annexe",
+        "Immédiatement en immobilisation au bilan",
         "La moitié du bien est immobilisée, l'autre en charge",
         "Uniquement en hors bilan, sans mention en charges"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Selon le SYSCOHADA, pendant la période de crédit-bail, les redevances sont des charges (compte 623 \"Redevances de crédit-bail\"). Le bien n'est PAS inscrit au bilan du preneur (contrairement aux IFRS qui imposent la capitalisation). À la levée de l'option d'achat, le bien est immobilisé à son prix résiduel."
     },
     {
@@ -55801,11 +55801,11 @@ const QUESTIONS = {
       "q": "L'entreprise souscrit un billet de trésorerie (effet) de 800 000 FCFA à 60 jours. Le taux d'escompte bancaire est de 12%. Calculez les agios (intérêts) à payer à la banque.",
       "o": [
         "96 000 FCFA",
-        "16 000 FCFA",
+        "8 000 FCFA",
         "48 000 FCFA",
-        "8 000 FCFA"
+        "16 000 FCFA"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Agios = Valeur nominale × Taux × Durée / 360 = 800 000 × 12% × 60/360 = 800 000 × 0,12 × 1/6 = 16 000 FCFA. La banque versera la valeur actuelle = 800 000 − 16 000 = 784 000 FCFA. Les agios sont une charge financière (compte 6711)."
     },
     {
@@ -55823,11 +55823,11 @@ const QUESTIONS = {
       "q": "Lequel des éléments suivants constitue un actif incorporel dans le bilan SYSCOHADA ?",
       "o": [
         "Une machine de production",
-        "Un brevet d'invention",
+        "Une créance client",
         "Un stock de produits finis",
-        "Une créance client"
+        "Un brevet d'invention"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Les immobilisations incorporelles (compte 21) comprennent les brevets, licences, marques, fonds commercial, logiciels et frais de développement. Ce sont des actifs sans substance physique mais ayant une valeur économique. Les machines sont des immobilisations corporelles (compte 24)."
     },
     {
@@ -55856,22 +55856,22 @@ const QUESTIONS = {
       "q": "L'entreprise KADI reçoit une avance d'un client de 500 000 FCFA avant livraison de la commande. Comment enregistrer cette avance reçue ?",
       "o": [
         "Débit 411 / Crédit 521",
-        "Débit 521 / Crédit 4191",
+        "Débit 4191 / Crédit 521",
         "Débit 521 / Crédit 701",
-        "Débit 4191 / Crédit 521"
+        "Débit 521 / Crédit 4191"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Une avance reçue d'un client est une dette envers ce client (obligation de livrer ou de rembourser). Écriture : Débit 521 \"Banque\" / Crédit 4191 \"Clients, avances et acomptes reçus\". Lors de la livraison effective et de la facturation, on solde le compte 4191 par le débit et on enregistre la vente normalement."
     },
     {
       "q": "Une entreprise possède un stock de 100 unités valorisées à 10 000 FCFA l'unité selon le CMUP (coût moyen unitaire pondéré). Elle achète ensuite 50 unités supplémentaires à 12 000 FCFA l'unité. Quel est le nouveau CMUP ?",
       "o": [
-        "11 000 FCFA",
         "10 667 FCFA",
+        "11 000 FCFA",
         "12 000 FCFA",
         "11 500 FCFA"
       ],
-      "r": 1,
+      "r": 0,
       "x": "CMUP = (Valeur stock initial + Valeur des achats) / (Quantité initiale + Quantité achetée). CMUP = (100 × 10 000 + 50 × 12 000) / (100 + 50) = (1 000 000 + 600 000) / 150 = 1 600 000 / 150 = 10 666,67 FCFA ≈ 10 667 FCFA."
     },
     {
@@ -55910,45 +55910,45 @@ const QUESTIONS = {
     {
       "q": "L'entreprise SANA constate que sa caisse présente un solde créditeur de 50 000 FCFA. Quelle explication est la plus probable ?",
       "o": [
-        "L'entreprise a trop encaissé",
         "Il y a une erreur d'enregistrement comptable (excès de décaissements saisis ou encaissements omis)",
+        "L'entreprise a trop encaissé",
         "La caisse est excédentaire par rapport aux prévisions",
         "Le solde créditeur est normal en fin d'exercice"
       ],
-      "r": 1,
+      "r": 0,
       "x": "PIÈGE CLASSIQUE. Un solde créditeur de caisse est théoriquement impossible (on ne peut pas décaisser plus qu'on n'a en caisse). Ce solde révèle obligatoirement une erreur comptable : un décaissement enregistré en double, un encaissement omis, ou une imputation erronée. Il faut immédiatement investiguer et rectifier."
     },
     {
       "q": "L'entreprise prend en location un local commercial pour 5 ans à 600 000 FCFA/an, payable trimestriellement d'avance. Quel est le loyer trimestriel ?",
       "o": [
         "120 000 FCFA",
-        "150 000 FCFA",
+        "50 000 FCFA",
         "200 000 FCFA",
-        "50 000 FCFA"
+        "150 000 FCFA"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Loyer annuel = 600 000 FCFA. Trimestriel = 600 000 / 4 = 150 000 FCFA. La mention \"payable d'avance\" signifie que le loyer du trimestre est réglé en début de trimestre. Des régularisations (charges constatées d'avance) seront nécessaires en fin d'exercice si un trimestre chevauche deux exercices."
     },
     {
       "q": "Qu'est-ce qu'une \"facture d'avoir\" (note de crédit) en comptabilité ?",
       "o": [
-        "Une facture d'achat avec un taux de TVA réduit",
         "Un document émis par le fournisseur pour annuler partiellement ou totalement une facture initiale",
+        "Une facture d'achat avec un taux de TVA réduit",
         "Une facture payée à l'avance",
         "Une facture relative à des prestations futures"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La facture d'avoir (ou note de crédit) est émise par le fournisseur pour réduire la dette du client : en cas de retour de marchandises, de remise a posteriori, ou d'erreur de facturation. Elle entraîne une réduction de la créance fournisseur et de la charge d'achat chez le client."
     },
     {
       "q": "L'entreprise effectue une vente de 1 180 000 FCFA TTC (TVA 18%) et encaisse simultanément par banque. Quels comptes sont mouvementés ?",
       "o": [
         "Débit 521 (1 180 000) / Crédit 701 (1 180 000)",
-        "Débit 521 (1 180 000) / Crédit 701 (1 000 000) + Crédit 4452 (180 000)",
+        "Débit 521 (1 000 000) + Débit 4452 (180 000) / Crédit 701 (1 180 000)",
         "Débit 411 (1 180 000) / Crédit 701 (1 000 000) + Crédit 4452 (180 000)",
-        "Débit 521 (1 000 000) + Débit 4452 (180 000) / Crédit 701 (1 180 000)"
+        "Débit 521 (1 180 000) / Crédit 701 (1 000 000) + Crédit 4452 (180 000)"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Vente encaissée comptant : Débit 521 \"Banque\" (1 180 000 TTC) / Crédit 701 \"Ventes de marchandises\" (1 000 000 HT) + Crédit 4452 \"TVA facturée\" (180 000). Le chiffre d'affaires est toujours enregistré hors taxes. La TVA collectée est une dette envers l'État."
     },
     {
@@ -55976,23 +55976,23 @@ const QUESTIONS = {
     {
       "q": "Le taux d'imposition sur les bénéfices des sociétés au Burkina Faso est de :",
       "o": [
-        "25%",
-        "27,5%",
+        "35%",
         "30%",
-        "35%"
+        "27,5%",
+        "25%"
       ],
-      "r": 1,
+      "r": 2,
       "x": "Au Burkina Faso, le taux de l'Impôt sur les Sociétés (IS) est de 27,5% sur les bénéfices nets imposables. Des acomptes provisionnels sont versés trimestriellement, et le solde est liquidé lors du dépôt de la liasse fiscale annuelle."
     },
     {
       "q": "Lors de l'établissement du bilan, si l'entreprise a des pertes cumulées supérieures à la moitié du capital social, quelle procédure doit-elle déclencher selon le droit OHADA ?",
       "o": [
         "Dissolution immédiate et obligatoire",
-        "Consultation de l'assemblée générale extraordinaire pour décider de la continuation ou de la dissolution",
+        "Nomination d'un administrateur judiciaire",
         "Augmentation obligatoire du capital dans les 30 jours",
-        "Nomination d'un administrateur judiciaire"
+        "Consultation de l'assemblée générale extraordinaire pour décider de la continuation ou de la dissolution"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Selon l'Acte uniforme OHADA sur les sociétés commerciales, si les pertes ramènent les capitaux propres en dessous de la moitié du capital social, les dirigeants doivent convoquer une AGE dans les délais légaux pour décider : soit de la dissolution anticipée, soit de la continuation avec reconstitution des capitaux propres dans un délai maximum de 2 exercices."
     },
     {
@@ -56043,11 +56043,11 @@ const QUESTIONS = {
       "q": "Quelle est la définition d'un \"actif\" selon le SYSCOHADA révisé ?",
       "o": [
         "Tout bien appartenant à l'entreprise, inscrit au bilan",
-        "Une ressource contrôlée par l'entité, résultant d'événements passés, dont des avantages économiques futurs sont attendus",
+        "Un bien physique figurant dans les stocks de l'entreprise",
         "Tout bien immobilisé acquis au cours de l'exercice",
-        "Un bien physique figurant dans les stocks de l'entreprise"
+        "Une ressource contrôlée par l'entité, résultant d'événements passés, dont des avantages économiques futurs sont attendus"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Selon le cadre conceptuel du SYSCOHADA révisé (inspiré des IFRS), un actif est une ressource : (1) contrôlée par l'entité (pas nécessairement propriétaire légal), (2) résultant d'un événement passé, (3) dont des avantages économiques futurs (flux de trésorerie) sont attendus. Cette définition moderne est plus large que la simple notion de propriété."
     },
     {
@@ -56705,11 +56705,11 @@ const QUESTIONS = {
       "q": "Une situation-problème en pédagogie est une situation qui :",
       "o": [
         "Recense les erreurs fréquentes des élèves à corriger collectivement en classe",
-        "Présente un obstacle cognitif réel à surmonter par mobilisation de ressources",
+        "Évalue uniquement des connaissances factuelles mémorisées par les élèves",
         "Reproduit fidèlement un exercice connu du manuel scolaire",
-        "Évalue uniquement des connaissances factuelles mémorisées par les élèves"
+        "Présente un obstacle cognitif réel à surmonter par mobilisation de ressources"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La situation-problème (Meirieu, Astolfi) crée un déséquilibre cognitif : l'élève ne peut résoudre avec ses seules procédures habituelles. Elle exige une restructuration du savoir. À distinguer d'un simple exercice d'application."
     },
     {
@@ -56749,11 +56749,11 @@ const QUESTIONS = {
       "q": "La remédiation pédagogique intervient :",
       "o": [
         "Avant tout apprentissage pour anticiper les difficultés des élèves",
-        "Après l'évaluation formative pour aider les élèves en difficulté",
+        "À la demande des parents, en dehors du temps scolaire officiel",
         "Uniquement lors de l'évaluation sommative de fin d'année scolaire",
-        "À la demande des parents, en dehors du temps scolaire officiel"
+        "Après l'évaluation formative pour aider les élèves en difficulté"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La remédiation répond aux difficultés identifiées par l'évaluation formative. Elle s'inscrit dans une boucle : enseigner → évaluer → réguler → remédier. Elle peut prendre la forme d'exercices ciblés ou d'un travail en groupe réduit."
     },
     {
@@ -57255,11 +57255,11 @@ const QUESTIONS = {
       "q": "La dévolution (Brousseau) désigne :",
       "o": [
         "La transmission directe du savoir de l'enseignant vers l'élève en cours de leçon",
-        "Le transfert à l'élève de la responsabilité de résoudre un problème sans aide immédiate",
+        "La suppression progressive du contrôle de l'enseignant sur les activités de la classe",
         "La délégation de l'enseignant à un assistant pédagogique pour la gestion de la classe",
-        "La suppression progressive du contrôle de l'enseignant sur les activités de la classe"
+        "Le transfert à l'élève de la responsabilité de résoudre un problème sans aide immédiate"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La dévolution fait accepter à l'élève la responsabilité d'une situation d'apprentissage sans lui fournir la réponse. Si elle échoue, l'élève attend la solution de l'enseignant au lieu de construire son propre savoir."
     },
     {
@@ -58523,12 +58523,12 @@ const QUESTIONS = {
     {
       "q": "Hormone produite par les ovaires ?",
       "o": [
-        "Insuline",
         "Œstrogène",
+        "Insuline",
         "Adrénaline",
         "Thyroxine"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Les ovaires produisent les œstrogènes et la progestérone (hormones sexuelles féminines). L'insuline = pancréas, adrénaline = surrénales."
     },
     {
@@ -58558,10 +58558,10 @@ const QUESTIONS = {
       "o": [
         "Cœur",
         "Cerveau",
-        "Foie",
-        "Estomac"
+        "Estomac",
+        "Foie"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Le foie est l'organe interne le plus volumineux (~1,5 kg). La PEAU est l'organe le plus large en surface (mais elle est externe)."
     },
     {
@@ -58963,12 +58963,12 @@ const QUESTIONS = {
     {
       "q": "Quelle structure anatomique bascule pour occlure le larynx et prévenir les fausses routes lors de la déglutition ?",
       "o": [
-        "La glotte",
-        "Le pharynx",
         "L'épiglotte",
+        "Le pharynx",
+        "La glotte",
         "Les cordes vocales"
       ],
-      "r": 2,
+      "r": 0,
       "x": "L'épiglotte est un cartilage en forme de couvercle qui protège le larynx lors de la déglutition. La glotte est l'orifice délimité par les cordes vocales. Piège : la glotte ne se \"ferme\" pas, c'est l'épiglotte qui bascule sur l'orifice laryngé."
     },
     {
@@ -59216,12 +59216,12 @@ const QUESTIONS = {
     {
       "q": "Quel processus cellulaire permet d'ingérer de grosses particules (bactéries, débris) par extension membranaire ?",
       "o": [
-        "La pinocytose",
         "La phagocytose",
+        "La pinocytose",
         "L'exocytose",
         "La diffusion facilitée"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La phagocytose = ingestion de grosses particules (>1 μm) par pseudopodes membranaires formant un phagolysosome. Réalisée par les macrophages et les neutrophiles. La pinocytose ingère des liquides/petites molécules. L'exocytose exporte des substances hors de la cellule."
     },
     {
@@ -59315,12 +59315,12 @@ const QUESTIONS = {
     {
       "q": "Quels os constituent les os coxaux (os iliaques) du bassin ?",
       "o": [
-        "Le sacrum, le coccyx et l'ilium",
-        "Le fémur, le péroné et le tibia",
         "L'ilium, l'ischium et le pubis",
+        "Le fémur, le péroné et le tibia",
+        "Le sacrum, le coccyx et l'ilium",
         "Le talus et le calcanéum"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Chaque os coxal (iliaque) résulte de la fusion vers 16-18 ans de l'ilium (haut), de l'ischium (bas et arrière) et du pubis (bas et avant). Les 2 os coxaux + sacrum + coccyx forment le bassin osseux. La fusion est complète à maturité osseuse."
     },
     {
@@ -62004,11 +62004,11 @@ const QUESTIONS = {
       "q": "Mission principale des douanes ?",
       "o": [
         "Maintien de l'ordre",
-        "Contrôle des frontières et perception des droits",
+        "Soin médical",
         "Justice",
-        "Soin médical"
+        "Contrôle des frontières et perception des droits"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Les douanes contrôlent le franchissement des frontières (personnes, marchandises) et perçoivent les droits et taxes à l'importation/exportation."
     },
     {
@@ -62037,22 +62037,22 @@ const QUESTIONS = {
       "q": "Document obligatoire pour passer une frontière ?",
       "o": [
         "Acte de naissance",
-        "Passeport ou laissez-passer",
         "Carte d'électeur",
+        "Passeport ou laissez-passer",
         "Permis de conduire"
       ],
-      "r": 1,
+      "r": 2,
       "x": "Le passeport est obligatoire pour les voyages internationaux. Pour la CEDEAO, une CNI ou laissez-passer peut suffire entre États membres."
     },
     {
       "q": "Que signifie « TVA » ?",
       "o": [
-        "Taxe Volontaire Annuelle",
         "Taxe sur la Valeur Ajoutée",
+        "Taxe Volontaire Annuelle",
         "Taux de Vente Annuel",
         "Tarif Variable Aérien"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La TVA (Taxe sur la Valeur Ajoutée) est un impôt indirect prélevé sur la consommation. Au BF, le taux normal est de 18%."
     },
     {
@@ -62081,11 +62081,11 @@ const QUESTIONS = {
       "q": "Saisie d'une marchandise prohibée → que devient-elle ?",
       "o": [
         "Restituée au propriétaire",
-        "Détruite ou confisquée par l'État",
         "Vendue aux enchères",
+        "Détruite ou confisquée par l'État",
         "Donnée aux ONG"
       ],
-      "r": 1,
+      "r": 2,
       "x": "Les marchandises prohibées (drogues, armes illégales) sont saisies et détruites. Les marchandises non prohibées peuvent être vendues aux enchères après amende."
     },
     {
@@ -62138,11 +62138,11 @@ const QUESTIONS = {
       "q": "Une note de service est :",
       "o": [
         "Une notation",
-        "Une communication interne",
         "Un examen",
+        "Une communication interne",
         "Une publicité"
       ],
-      "r": 1,
+      "r": 2,
       "x": "La note de service est un document interne qui transmet une information ou une consigne à des subordonnés. Concise, claire, datée et signée."
     },
     {
@@ -62182,11 +62182,11 @@ const QUESTIONS = {
       "q": "Le style administratif doit être :",
       "o": [
         "Familier",
-        "Formel et impersonnel",
+        "Poétique",
         "Argotique",
-        "Poétique"
+        "Formel et impersonnel"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le style administratif est neutre, formel, précis, sans familiarité. On évite « je », « tu » au profit de « j'ai l'honneur », « il vous est demandé »."
     },
     {
@@ -62324,12 +62324,12 @@ const QUESTIONS = {
     {
       "q": "Lequel de ces actes administratifs ne peut pas faire l'objet d'un recours hiérarchique de la part des administrés ?",
       "o": [
-        "Une décision de refus d'avancement",
         "Une circulaire interprétative",
+        "Une décision de refus d'avancement",
         "Un arrêté ministériel de nomination",
         "Une note de service à caractère contraignant"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La circulaire interprétative n'est pas un acte décisoire ; elle se borne à expliquer un texte existant sans créer de droits ni d'obligations nouvelles. Elle n'est donc pas susceptible de recours. Les autres actes (décision, arrêté, note contraignante) sont attaquables car ils font grief."
     },
     {
@@ -62347,11 +62347,11 @@ const QUESTIONS = {
       "q": "Dans la présentation d'une lettre administrative, où figure l'expéditeur ?",
       "o": [
         "En haut à droite, sous la date",
-        "En haut à gauche, avec le timbre et l'adresse du service",
         "Au centre, au-dessus de l'objet",
+        "En haut à gauche, avec le timbre et l'adresse du service",
         "En bas à gauche, sous la signature"
       ],
-      "r": 1,
+      "r": 2,
       "x": "L'en-tête de l'expéditeur (nom du ministère, du service, adresse) figure en haut à gauche de la lettre administrative. Le lieu, la date et le destinataire figurent en haut à droite. Cette répartition gauche/droite est une règle de présentation non négociable dans l'administration burkinabè."
     },
     {
@@ -62390,12 +62390,12 @@ const QUESTIONS = {
     {
       "q": "Dans une lettre administrative, comment s'appelle la phrase courte qui indique le sujet de la lettre ?",
       "o": [
-        "Le titre",
         "L'objet",
+        "Le titre",
         "La référence",
         "Le préambule"
       ],
-      "r": 1,
+      "r": 0,
       "x": "L'objet est la mention obligatoire qui indique en quelques mots le sujet traité dans la lettre. Il figure après les références, avant la formule d'appel. Il est rédigé sans verbe conjugué (ex : \"Demande de congé annuel\"). Ne pas le confondre avec la référence, qui est le numéro d'identification."
     },
     {
@@ -62567,11 +62567,11 @@ const QUESTIONS = {
       "q": "La circulaire dite \"impérative\" ou \"réglementaire\" se distingue de la circulaire interprétative par le fait qu'elle :",
       "o": [
         "Est réservée aux communications urgentes entre ministères",
-        "Crée des obligations nouvelles et peut faire l'objet d'un recours devant le juge administratif",
         "Ne peut être émise que par le Chef de l'État",
+        "Crée des obligations nouvelles et peut faire l'objet d'un recours devant le juge administratif",
         "Concerne uniquement les agents de catégorie A"
       ],
-      "r": 1,
+      "r": 2,
       "x": "La circulaire réglementaire va au-delà de la simple interprétation : elle crée des obligations nouvelles et peut donc être attaquée devant le juge administratif. La circulaire interprétative se borne à expliquer un texte existant sans créer de règles nouvelles et ne peut pas faire l'objet d'un recours."
     },
     {
@@ -62831,11 +62831,11 @@ const QUESTIONS = {
       "q": "Dans la rédaction d'un rapport, que désigne le terme \"chapeau\" ?",
       "o": [
         "Le titre principal du rapport en caractères gras",
-        "Le court paragraphe introductif résumant l'objet et le contexte du document",
+        "La signature et le grade du rédacteur",
         "La liste des recommandations en fin de rapport",
-        "La signature et le grade du rédacteur"
+        "Le court paragraphe introductif résumant l'objet et le contexte du document"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le \"chapeau\" est le paragraphe d'introduction court qui résume l'essentiel : qui rédige le rapport, pour qui, dans quel cadre et avec quel objectif. Il permet au lecteur de saisir immédiatement le but du document sans avoir à lire l'ensemble. C'est un élément essentiel de la lisibilité administrative."
     },
     {
@@ -62918,12 +62918,12 @@ const QUESTIONS = {
     {
       "q": "Dans la correspondance administrative, que signifie la mention \"confidentiel\" ?",
       "o": [
-        "Que le document est crypté et ne peut être lu que par le destinataire",
         "Que le document ne doit être communiqué qu'aux seules personnes expressément habilitées",
+        "Que le document est crypté et ne peut être lu que par le destinataire",
         "Que le document doit être détruit après lecture",
         "Que le document ne peut pas faire l'objet d'un classement dans les archives"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La mention \"confidentiel\" signifie que le document ne doit pas circuler en dehors du cercle des personnes directement concernées et habilitées. Elle n'implique pas la destruction du document (qui peut être archivé sous conditions). Elle traduit une obligation de discrétion professionnelle pour le destinataire."
     },
     {
@@ -63006,12 +63006,12 @@ const QUESTIONS = {
     {
       "q": "Au Burkina Faso, quelle est la dénomination officielle du chef de l'exécutif d'une commune rurale ?",
       "o": [
-        "Le Président du conseil municipal",
         "Le Maire",
+        "Le Président du conseil municipal",
         "Le Délégué spécial",
         "Le Chef de collectivité"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le Maire est le chef de l'exécutif de toute commune au Burkina Faso, qu'elle soit rurale ou urbaine. Il est élu par les conseillers municipaux. Le Délégué spécial est nommé exceptionnellement (dissolution du conseil, etc.) pour assurer l'intérim. Le Maire est l'ordonnateur du budget communal."
     },
     {
@@ -78227,22 +78227,22 @@ const QUESTIONS = {
       "q": "L'Approche Par Compétences (APC) se distingue de la pédagogie par objectifs car elle :",
       "o": [
         "Privilégie la mémorisation des connaissances factuelles",
-        "Vise la mobilisation intégrée des ressources pour résoudre des situations complexes",
+        "Ne s'applique qu'aux filières techniques et professionnelles",
         "Supprime tout contenu disciplinaire au profit des savoir-faire",
-        "Ne s'applique qu'aux filières techniques et professionnelles"
+        "Vise la mobilisation intégrée des ressources pour résoudre des situations complexes"
       ],
-      "r": 1,
+      "r": 3,
       "x": "L'APC vise à développer des compétences, c'est-à-dire la capacité à mobiliser un ensemble de ressources (savoirs, savoir-faire, attitudes) pour résoudre des situations-problèmes. Elle va au-delà des objectifs comportementaux isolés de la PPO."
     },
     {
       "q": "Dans la méthode socratique, le maître procède principalement par :",
       "o": [
-        "Exposé magistral suivi de questions de contrôle de compréhension",
         "Questionnement progressif pour faire émerger le savoir de l'élève",
+        "Exposé magistral suivi de questions de contrôle de compréhension",
         "Travaux pratiques en groupe",
         "Correction systématique des erreurs des apprenants"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La maïeutique socratique (du grec \"accouchement\") consiste pour le maître à poser des questions guidées permettant à l'apprenant de construire lui-même la connaissance. Elle est à l'origine des pédagogies actives modernes."
     },
     {
@@ -78259,12 +78259,12 @@ const QUESTIONS = {
     {
       "q": "La méthode Freinet se caractérise principalement par :",
       "o": [
-        "La priorité au cours magistral et à la discipline stricte",
         "L'apprentissage par la vie, le tâtonnement expérimental",
+        "La priorité au cours magistral et à la discipline stricte",
         "La centration sur la mémorisation et la récitation",
         "L'enseignement programmé via des machines à enseigner"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Célestin Freinet a développé une pédagogie active fondée sur le tâtonnement expérimental, les textes libres, l'imprimerie scolaire et la coopération. Il s'inscrit dans le courant de l'Éducation nouvelle aux côtés de Montessori et Decroly."
     },
     {
@@ -78292,23 +78292,23 @@ const QUESTIONS = {
     {
       "q": "Laquelle des affirmations suivantes correspond à la pédagogie par objectifs (PPO) ?",
       "o": [
-        "Elle vise le développement global de l'enfant sans objectifs précis",
         "Elle définit des comportements observables et mesurables attendus",
+        "Elle vise le développement global de l'enfant sans objectifs précis",
         "Elle privilégie les apprentissages informels et non planifiés",
         "Elle supprime l'évaluation sommative au profit de l'évaluation diagnostique uniquement"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La PPO, popularisée par Ralph Tyler et Robert Mager, définit des objectifs opérationnels (comportement attendu, conditions, critère de réussite) afin de rendre l'enseignement planifiable et l'évaluation objective. Elle est le fondement de la planification pédagogique au Burkina Faso."
     },
     {
       "q": "La pédagogie active se distingue de la pédagogie traditionnelle par :",
       "o": [
         "L'accent mis sur la passivité de l'élève face au maître transmetteur de connaissance",
-        "Le rôle central de l'élève dans la construction de ses propres apprentissages",
+        "L'absence de tout projet pédagogique défini à l'avance",
         "L'usage exclusif des manuels scolaires officiels imposés",
-        "L'absence de tout projet pédagogique défini à l'avance"
+        "Le rôle central de l'élève dans la construction de ses propres apprentissages"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La pédagogie active (Dewey, Montessori, Freinet) place l'élève en situation d'acteur de ses apprentissages par l'expérimentation, le questionnement et la résolution de problèmes. Le maître devient facilitateur et guide, et non unique détenteur du savoir."
     },
     {
@@ -78326,11 +78326,11 @@ const QUESTIONS = {
       "q": "Dans la pédagogie par projets, la motivation des apprenants est principalement entretenue par :",
       "o": [
         "Les sanctions disciplinaires en cas de non-remise du travail demandé",
-        "Le caractère concret, significatif et finalisé des tâches à accomplir",
+        "L'évaluation sommative en fin de projet uniquement",
         "La compétition entre les groupes de travail",
-        "L'évaluation sommative en fin de projet uniquement"
+        "Le caractère concret, significatif et finalisé des tâches à accomplir"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La pédagogie par projets (Dewey, Kilpatrick) génère une motivation intrinsèque car les élèves travaillent sur des productions concrètes et signifiantes. La finalité réelle du projet (exposé, création, réalisation) donne du sens aux apprentissages et soutient l'engagement."
     },
     {
@@ -78359,11 +78359,11 @@ const QUESTIONS = {
       "q": "La pédagogie coopérative repose sur le principe que :",
       "o": [
         "Chaque élève doit travailler de façon totalement autonome et indépendante",
-        "L'interaction entre pairs favorise la construction collective du savoir",
+        "L'enseignant est le seul responsable de la réussite des apprentissages",
         "La compétition individuelle améliore systématiquement les performances scolaires",
-        "L'enseignant est le seul responsable de la réussite des apprentissages"
+        "L'interaction entre pairs favorise la construction collective du savoir"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La pédagogie coopérative (Johnson & Johnson, Slavin) s'appuie sur l'interdépendance positive : les élèves réussissent ensemble en partageant ressources et responsabilités. Elle développe aussi les compétences sociales (communication, solidarité, gestion des conflits)."
     },
     {
@@ -78381,11 +78381,11 @@ const QUESTIONS = {
       "q": "Selon Piaget, l'enfant qui croit que le soleil le suit quand il marche fait preuve de :",
       "o": [
         "Conservation de l'objet",
-        "Égocentrisme",
         "Réversibilité logique",
+        "Égocentrisme",
         "Abstraction formelle"
       ],
-      "r": 1,
+      "r": 2,
       "x": "L'égocentrisme piagétien au stade préopératoire (2-7 ans) désigne l'incapacité de l'enfant à se décentrer de son propre point de vue. Il perçoit le monde comme centré sur lui-même, sans en avoir conscience."
     },
     {
@@ -78402,13 +78402,13 @@ const QUESTIONS = {
     {
       "q": "Skinner a développé le conditionnement opérant. Lequel des exemples suivants l'illustre le mieux ?",
       "o": [
-        "Un chien salive à l'audition d'une cloche associée à la nourriture",
         "Un élève travaille davantage après avoir reçu une bonne note",
+        "Un chien salive à l'audition d'une cloche associée à la nourriture",
         "Un enfant évite instinctivement une zone sombre après une mauvaise expérience",
         "Un élève imite spontanément le comportement de son enseignant admiré"
       ],
-      "r": 1,
-      "x": "Le conditionnement opérant (Skinner) stipule que le comportement est renforcé s'il est suivi d'une conséquence positive. La bonne note est un renforçateur positif qui augmente la probabilité de répétition du comportement (travailler davantage). L'option A illustre le conditionnement classique (Pavlov)."
+      "r": 0,
+      "x": "Le conditionnement opérant (Skinner) stipule que le comportement est renforcé s'il est suivi d'une conséquence positive. La bonne note est un renforçateur positif qui augmente la probabilité de répétition du comportement (travailler davantage). L'option B illustre le conditionnement classique (Pavlov)."
     },
     {
       "q": "Quelle théorie explique l'apprentissage par observation et imitation d'un modèle ?",
@@ -78568,11 +78568,11 @@ const QUESTIONS = {
       "q": "La docimologie est définie comme :",
       "o": [
         "La science de l'enseignement par la pratique et l'expérimentation directe",
-        "L'étude scientifique des examens, de la notation et de leurs biais",
+        "L'ensemble des règles officielles de rédaction des manuels scolaires",
         "La méthode de classement et de sélection des élèves par niveau scolaire",
-        "L'ensemble des règles officielles de rédaction des manuels scolaires"
+        "L'étude scientifique des examens, de la notation et de leurs biais"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La docimologie (du grec dokimé, épreuve) est la science qui étudie les systèmes d'examens et les pratiques de notation. Elle a mis en évidence la subjectivité des correcteurs, les effets de halo et de contraste, et l'instabilité des notes entre correcteurs différents."
     },
     {
@@ -78611,12 +78611,12 @@ const QUESTIONS = {
     {
       "q": "La notion de \"milieu didactique\" chez Guy Brousseau désigne :",
       "o": [
-        "L'environnement physique et matériel de la salle de classe",
         "Le système composé de l'élève, du savoir et des situations mises en place par l'enseignant",
+        "L'environnement physique et matériel de la salle de classe",
         "Le quartier ou le village dans lequel se trouve l'établissement scolaire",
         "L'ensemble des ressources documentaires à disposition de l'enseignant pour préparer ses cours"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le milieu didactique (Brousseau) est le système antagoniste avec lequel l'élève interagit pour construire ses connaissances. Il inclut les situations, les outils et les rétroactions permettant à l'élève d'agir et d'apprendre sans intervention directe du maître."
     },
     {
@@ -78634,11 +78634,11 @@ const QUESTIONS = {
       "q": "L'évaluation sommative se distingue de l'évaluation formative principalement par :",
       "o": [
         "Son caractère continu et régulier tout au long du processus d'apprentissage",
-        "Son objectif de certification, de sanction et de bilan en fin de séquence ou d'année",
         "Son usage exclusif dans les établissements normaux de l'enseignement supérieur",
+        "Son objectif de certification, de sanction et de bilan en fin de séquence ou d'année",
         "L'absence totale de note ou d'appréciation chiffrée dans ses résultats"
       ],
-      "r": 1,
+      "r": 2,
       "x": "L'évaluation sommative (Scriven) intervient en fin de séquence pour certifier les acquis, décider du passage en classe supérieure ou orienter l'élève. Elle est certificative et sanctionnante, contrairement à la formative qui régule les apprentissages en cours."
     },
     {
@@ -78711,11 +78711,11 @@ const QUESTIONS = {
       "q": "Dans le système éducatif burkinabè, quel diplôme sanctionne la fin du premier cycle du secondaire ?",
       "o": [
         "Le Baccalauréat général ou technique",
-        "Le Brevet d'Études du Premier Cycle (BEPC)",
+        "Le Certificat d'Aptitude Professionnelle (CAP)",
         "Le Certificat d'Études Primaires (CEP)",
-        "Le Certificat d'Aptitude Professionnelle (CAP)"
+        "Le Brevet d'Études du Premier Cycle (BEPC)"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le BEPC (Brevet d'Études du Premier Cycle) sanctionne la fin de la classe de 3e au collège. Il s'obtient après un examen national et conditionne l'accès au second cycle du secondaire (lycée). Le CEP sanctionne, lui, la fin de l'enseignement primaire."
     },
     {
@@ -78777,33 +78777,33 @@ const QUESTIONS = {
       "q": "Dans le système éducatif burkinabè, l'ENEP forme :",
       "o": [
         "Les ingénieurs des travaux publics et de l'hydraulique",
-        "Les instituteurs et enseignants du primaire public",
         "Les personnels paramédicaux (infirmiers, sages-femmes, techniciens de santé)",
+        "Les instituteurs et enseignants du primaire public",
         "Les agents des douanes, des impôts et du trésor public"
       ],
-      "r": 1,
+      "r": 2,
       "x": "L'École Nationale des Enseignants du Primaire (ENEP) forme les instituteurs qui enseigneront dans les écoles primaires du Burkina Faso. Il en existe plusieurs sur le territoire (Ouagadougou, Bobo-Dioulasso, Loumbila, Koudougou), réparties pour couvrir les besoins nationaux."
     },
     {
       "q": "Le conseil des maîtres dans une école primaire a principalement pour rôle de :",
       "o": [
         "Juger et statuer sur les cas de faute disciplinaire grave des élèves",
-        "Délibérer sur les résultats des élèves et harmoniser les pratiques pédagogiques entre collègues",
         "Fixer le montant des droits d'inscription des élèves pour l'année scolaire",
+        "Délibérer sur les résultats des élèves et harmoniser les pratiques pédagogiques entre collègues",
         "Recruter et sélectionner les nouveaux enseignants affectés à l'établissement"
       ],
-      "r": 1,
+      "r": 2,
       "x": "Le conseil des maîtres regroupe tous les enseignants d'une école sous la présidence du directeur. Il délibère sur les résultats et le passage des élèves, harmonise les pratiques pédagogiques et examine toutes les questions relatives à la vie scolaire de l'établissement."
     },
     {
       "q": "Qu'est-ce que le curriculum dans son sens le plus large en sciences de l'éducation ?",
       "o": [
         "Le résumé ou la table des matières d'un manuel scolaire officiel",
-        "L'ensemble des expériences d'apprentissage organisées par l'institution scolaire",
+        "L'emploi du temps hebdomadaire officiel d'un élève ou d'une classe",
         "La liste nominative des enseignants d'un établissement pour une année donnée",
-        "L'emploi du temps hebdomadaire officiel d'un élève ou d'une classe"
+        "L'ensemble des expériences d'apprentissage organisées par l'institution scolaire"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le curriculum (au sens large) désigne l'ensemble des objectifs, contenus, méthodes et modalités d'évaluation planifiés par l'institution. Il inclut le curriculum formel (officiel), le curriculum caché (implicite et non déclaré) et le curriculum réel (effectivement pratiqué en classe)."
     },
     {
@@ -78820,23 +78820,23 @@ const QUESTIONS = {
     {
       "q": "Dans quel niveau d'études se préparent généralement les candidats aux concours directs de la fonction publique burkinabè en catégorie B ?",
       "o": [
-        "Niveau primaire sanctionné par le CEP",
         "Second cycle du secondaire (Baccalauréat)",
+        "Niveau primaire sanctionné par le CEP",
         "Niveau supérieur (Licence ou Master universitaire)",
         "Premier cycle du secondaire uniquement (BEPC)"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Les concours directs de catégorie B de la fonction publique burkinabè s'adressent aux candidats titulaires du Baccalauréat ou d'un diplôme équivalent. Les concours de catégorie C s'adressent généralement aux titulaires du BEPC, et la catégorie A aux diplômés du supérieur."
     },
     {
       "q": "Quel organisme est principalement chargé de l'organisation des concours directs de recrutement dans la fonction publique burkinabè ?",
       "o": [
-        "Le ministère de l'Éducation nationale et de l'Alphabétisation",
         "La Direction Générale de la Fonction Publique (DGFP)",
+        "Le ministère de l'Éducation nationale et de l'Alphabétisation",
         "L'Université Joseph Ki-Zerbo de Ouagadougou",
         "Le Haut Commissariat de chaque province concernée"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La Direction Générale de la Fonction Publique (DGFP) est l'organe central de gestion des ressources humaines de l'État burkinabè. Elle organise les concours directs de recrutement dans les différents corps et cadres de la fonction publique nationale."
     },
     {
@@ -79008,11 +79008,11 @@ const QUESTIONS = {
       "q": "La grille d'observation est un outil d'évaluation particulièrement adapté pour évaluer :",
       "o": [
         "Les performances des élèves dans des examens écrits standardisés et normés",
-        "Des comportements, attitudes ou compétences pratiques non mesurables par des tests écrits classiques",
+        "Les résultats chiffrés des évaluations sommatives de fin d'année scolaire pour chaque établissement du pays",
         "Uniquement les élèves présentant des troubles diagnostiqués du comportement",
-        "Les résultats chiffrés des évaluations sommatives de fin d'année scolaire pour chaque établissement du pays"
+        "Des comportements, attitudes ou compétences pratiques non mesurables par des tests écrits classiques"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La grille d'observation permet de consigner systématiquement des comportements observables (participation orale, compétences manuelles, comportement en groupe) que les tests écrits ne peuvent capturer. Elle est essentielle pour évaluer les compétences pratiques et sociales dans le cadre de l'APC."
     },
     {
@@ -79040,12 +79040,12 @@ const QUESTIONS = {
     {
       "q": "L'effet \"Pygmalion\" en évaluation scolaire (Rosenthal & Jacobson, 1968) démontre que :",
       "o": [
-        "Les élèves doués progressent toujours malgré les attentes négatives de leurs enseignants",
         "Les attentes de l'enseignant influencent réellement les performances des élèves",
+        "Les élèves doués progressent toujours malgré les attentes négatives de leurs enseignants",
         "Les notes attribuées par un seul correcteur sont toujours plus objectives qu'une correction collective",
         "Les élèves issus de milieux favorisés réussissent mieux quelles que soient les attentes du maître"
       ],
-      "r": 1,
+      "r": 0,
       "x": "L'effet Pygmalion est une prophétie auto-réalisatrice : si l'enseignant croit qu'un élève est doué, il lui accorde davantage d'attention et de feedback positif, ce qui améliore effectivement ses performances. Cet effet illustre le pouvoir des représentations du maître sur les apprentissages réels."
     },
     {
@@ -79129,22 +79129,22 @@ const QUESTIONS = {
       "q": "Un enseignant qui permet à un élève dyspraxique de rendre ses devoirs à l'oral plutôt qu'à l'écrit pratique :",
       "o": [
         "Une discrimination positive injuste et contestable envers les autres élèves de la classe",
-        "Un aménagement raisonnable conforme aux principes de l'éducation inclusive",
         "Une fraude académique potentiellement sanctionnable par le règlement intérieur",
+        "Un aménagement raisonnable conforme aux principes de l'éducation inclusive",
         "Une simplification abusive des exigences académiques portant préjudice à l'élève"
       ],
-      "r": 1,
+      "r": 2,
       "x": "L'aménagement raisonnable consiste à modifier les modalités d'évaluation (pas le niveau d'exigence) pour permettre à un élève handicapé de démontrer ses compétences réelles. Autoriser une réponse orale pour un élève dyspraxique (trouble de la coordination motrice affectant l'écriture) est un aménagement légitime."
     },
     {
       "q": "Dans sa conception contemporaine et large, l'inclusion scolaire englobe également la lutte contre les exclusions liées :",
       "o": [
         "Uniquement au handicap physique officiellement reconnu et médicalement certifié",
-        "Au genre, à l'origine ethnique, à la religion, à la situation socioéconomique et au handicap",
+        "Exclusivement aux pratiques linguistiques discriminatoires dans la classe",
         "Seulement aux inégalités économiques entre établissements publics et privés ou entre des établissements urbains et ruraux",
-        "Exclusivement aux pratiques linguistiques discriminatoires dans la classe"
+        "Au genre, à l'origine ethnique, à la religion, à la situation socioéconomique et au handicap"
       ],
-      "r": 1,
+      "r": 3,
       "x": "L'éducation inclusive, dans sa conception contemporaine, va au-delà du handicap : elle vise à éliminer toutes les formes d'exclusion scolaire (genre, ethnie, pauvreté, langue, situation géographique...). C'est une démarche de justice sociale globale appliquée au système éducatif."
     },
     {
@@ -80463,12 +80463,12 @@ const QUESTIONS = {
     {
       "q": "Qui est le Directeur Général de la RTB (Radiodiffusion Télévision du Burkina) ?",
       "o": [
-        "Issouf Saré",
-        "Geoffroy Vaha",
         "Atéridar Galip Some",
+        "Geoffroy Vaha",
+        "Issouf Saré",
         "Ismaël Ouédraogo"
       ],
-      "r": 2,
+      "r": 0,
       "x": "La RTB (Radiodiffusion Télévision du Burkina) est la plus ancienne télévision nationale, créée le 5 août 1963. Son slogan est \"La chaîne au cœur des grands évènements\" et son DG actuel est Atéridar Galip Some."
     },
     {
@@ -80485,12 +80485,12 @@ const QUESTIONS = {
     {
       "q": "En quelle année BF1 a-t-elle été créée et qui en est le DG ?",
       "o": [
-        "5 août 2008, DG : Geoffroy Vaha",
-        "3 mai 2015, DG : Issoufou Saré",
         "18 août 2010, DG : Issoufou Saré",
+        "3 mai 2015, DG : Issoufou Saré",
+        "5 août 2008, DG : Geoffroy Vaha",
         "23 mai 2016, DG : Adam's Kaled Ouédraogo"
       ],
-      "r": 2,
+      "r": 0,
       "x": "BF1 a été créée le 18 août 2010. Son slogan est \"Au cœur de nos défis\" et son DG est Issoufou Saré. C'est l'une des chaînes privées les plus regardées du Burkina Faso."
     },
     {
@@ -80498,10 +80498,10 @@ const QUESTIONS = {
       "o": [
         "Issouf Saré, \"Au cœur de nos défis\"",
         "Edmond Coulibaly, \"La télévision du royaume des cieux\"",
-        "Geoffroy Vaha, \"La télé interactive\"",
-        "Ismaël Ouédraogo, \"Notre chaîne, notre identité\""
+        "Ismaël Ouédraogo, \"Notre chaîne, notre identité\"",
+        "Geoffroy Vaha, \"La télé interactive\""
       ],
-      "r": 2,
+      "r": 3,
       "x": "3TV a été créée le 23 mai 2016. Son slogan est \"La télé interactive\" et son DG est Geoffroy Vaha. Elle est connue pour ses émissions interactives et ses débats citoyens."
     },
     {
@@ -80541,11 +80541,11 @@ const QUESTIONS = {
       "q": "Quel est le rôle du Ouidi Naaba dans la cour du Mogho Naaba ?",
       "o": [
         "Ministre de l'infanterie",
-        "Ministre de la cavalerie",
+        "Ministre des tombes royales",
         "Porte-parole de l'Empereur",
-        "Ministre des tombes royales"
+        "Ministre de la cavalerie"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La cour du Mogho Naaba (roi des Mossi) est organisée avec 5 ministres traditionnels. Le Ouidi Naaba est le Ministre de la cavalerie, l'un des dignitaires les plus influents."
     },
     {
@@ -80562,12 +80562,12 @@ const QUESTIONS = {
     {
       "q": "Quel est le rôle du Baloum Naaba dans la cour du Mogho Naaba ?",
       "o": [
-        "Ministre des tombes royales",
-        "Ministre de la cavalerie",
         "Ministre de l'intendance",
+        "Ministre de la cavalerie",
+        "Ministre des tombes royales",
         "Ministre de la jeunesse"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Le Baloum Naaba cumule deux fonctions : Ministre de l'intendance et porte-parole officiel du Mogho Naaba. Il gère les affaires intérieures du palais et transmet la parole royale."
     },
     {
@@ -80619,10 +80619,10 @@ const QUESTIONS = {
       "o": [
         "Pr Aminata Zerbo/Sabane",
         "Pr Passowendé Pélagie Kabre",
-        "Pr Windkouni Haoua Eugénie Maiga",
-        "Pr Fatoumata Bako"
+        "Pr Fatoumata Bako",
+        "Pr Windkouni Haoua Eugénie Maiga"
       ],
-      "r": 2,
+      "r": 3,
       "x": "L'Université Norbert Zongo (ancien nom : Université de Koudougou) a été créée le 31 août 2005 et rebaptisée le 21 juillet 2017. Son slogan est \"Exceller par le Savoir pour mieux servir\" et sa présidente est le Pr Windkouni Haoua Eugénie Maiga (nommée le 2 avril 2025)."
     },
     {
@@ -80661,23 +80661,23 @@ const QUESTIONS = {
     {
       "q": "Quel est le nouveau nom attribué à l'Université de Fada N'Gourma lors de sa rebaptisation du 16 décembre 2024 ?",
       "o": [
-        "Université Daniel Ouézzin Coulibaly (UDOC)",
-        "Université Lédéa Bernard Ouédraogo (ULBO)",
         "Université Yembila Abdoulaye Toguyeni (UYAT)",
+        "Université Lédéa Bernard Ouédraogo (ULBO)",
+        "Université Daniel Ouézzin Coulibaly (UDOC)",
         "Université Norbert Zongo (UNZ)"
       ],
-      "r": 2,
+      "r": 0,
       "x": "L'Université de Fada N'Gourma a été rebaptisée Université Yembila Abdoulaye Toguyeni (UYAT) le 16 décembre 2024 en hommage à cette personnalité de l'Est du Burkina Faso. son président actuel est le Pr David Yemboini Kader Toguyeni."
     },
     {
       "q": "Qui est le président de l'Université Virtuelle du Burkina Faso ?",
       "o": [
-        "Pr Adjima Thombiano",
         "Oumarou Zallé",
+        "Pr Adjima Thombiano",
         "Pr Pam Zahonogo",
         "Pr Antoine Bere"
       ],
-      "r": 1,
+      "r": 0,
       "x": "L'Université Virtuelle du Burkina Faso a été officiellement créée en 2019. Son président est Oumarou Zallé (en fonction depuis le 2 mai 2025). Elle offre des formations entièrement en ligne."
     },
     {
@@ -80705,23 +80705,23 @@ const QUESTIONS = {
     {
       "q": "Qui est le Ministre d'Etat chargé de l'Administration territoriale et de la Mobilité ?",
       "o": [
-        "Mahamadou Sana",
-        "Mathias Traoré",
         "Emile Zerbo",
+        "Mathias Traoré",
+        "Mahamadou Sana",
         "Karamoko Jean Marie Traoré"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Monsieur Emile Zerbo est le 3e Ministre d'État du gouvernement du 08 décembre 2024. Il est chargé de l'Administration territoriale et de la Mobilité, supervisant l'organisation administrative du territoire national."
     },
     {
       "q": "Qui est le Ministre de l'Economie et des Finances ?",
       "o": [
-        "Fatoumata Bako/Traoré",
-        "Yacouba Zabré Gouba",
         "Aboubakar Nacanabo",
+        "Yacouba Zabré Gouba",
+        "Fatoumata Bako/Traoré",
         "Serge Gnaniodem Poda"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Monsieur Aboubakar Nacanabo est le Ministre de l'Économie et des Finances du gouvernement du 08 décembre 2024. Il est chargé de la politique fiscale, du budget et de la gestion des finances publiques."
     },
     {
@@ -80760,12 +80760,12 @@ const QUESTIONS = {
     {
       "q": "Qui est le Ministre de la Communication, de la Culture, des Arts et du Tourisme, porte-parole du gouvernement ?",
       "o": [
-        "Moumouni Zoungrana",
         "Pingdwendé Gilbert Ouédraogo",
+        "Moumouni Zoungrana",
         "Jacques Sosthène Dingara",
         "Adjima Thombiano"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Monsieur Pingdwendé Gilbert Ouédraogo est le Ministre de la Communication, de la Culture, des Arts et du Tourisme et porte-parole officiel du gouvernement. Il coordonne la politique de communication de l'État burkinabè."
     },
     {
@@ -80817,10 +80817,10 @@ const QUESTIONS = {
       "o": [
         "Mathias Traoré",
         "Mikaïlou Sidibé",
-        "Serge Gnaniodem Poda",
-        "Amadou Dicko"
+        "Amadou Dicko",
+        "Serge Gnaniodem Poda"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Monsieur Serge Gnaniodem Poda est le Ministre de l'Industrie, du Commerce et de l'Artisanat. Il supervise le développement industriel, les échanges commerciaux et la valorisation de l'artisanat burkinabè (dont les 5 produits labellisés)."
     },
     {
@@ -80861,21 +80861,21 @@ const QUESTIONS = {
       "o": [
         "Adjima Thombiano",
         "Jacques Sosthène Dingara",
-        "Moumouni Zoungrana",
-        "Mikaïlou Sidibé"
+        "Mikaïlou Sidibé",
+        "Moumouni Zoungrana"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Monsieur Moumouni Zoungrana est le Ministre de l'Enseignement secondaire, de la Formation professionnelle et technique. Il supervise les lycées, collèges et centres de formation professionnelle sur l'ensemble du territoire."
     },
     {
       "q": "Qui est le Ministre de l'Enseignement supérieur, de la Recherche et de l'Innovation ?",
       "o": [
-        "Moumouni Zoungrana",
         "Adjima Thiombiano",
+        "Moumouni Zoungrana",
         "Robert Kargougou",
         "Serge Gnaniodem Poda"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Monsieur Adjima Thiombiano est le Ministre de l'Enseignement supérieur, de la Recherche et de l'Innovation. Il supervise les 7 universités publiques et les institutions de recherche scientifique du Burkina Faso."
     },
     {
@@ -80883,21 +80883,21 @@ const QUESTIONS = {
       "o": [
         "Aminata Zerbo/Sabane",
         "Passowendé Pélagie Kabre",
-        "Annick Lydie Djouma Pikbougoum/Zingue Ouatara",
-        "Bebgnasgnan Stella Eldine Kabre"
+        "Bebgnasgnan Stella Eldine Kabre",
+        "Annick Lydie Djouma Pikbougoum/Zingue Ouatara"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Madame Annick Lydie Djouma Pikbougoum/Zingue Ouatara est la Ministre des Sports, de la Jeunesse et de l'Emploi. Elle supervise les politiques sportives (Tour du Faso, Iron Biby) et les programmes d'insertion professionnelle des jeunes."
     },
     {
       "q": "Qui est le Ministre délégué auprès du Ministre d'Etat chargé de l'Agriculture et de l'Eau ?",
       "o": [
         "Serge Gnaniodem Poda",
-        "Amadou Dicko",
+        "Mikaïlou Sidibé",
         "Mathias Traoré",
-        "Mikaïlou Sidibé"
+        "Amadou Dicko"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Monsieur Amadou Dicko est le Ministre délégué auprès du Ministre d'État chargé de l'Agriculture, de l'Eau, des Ressources animales et halieutiques. Il appuie le Commandant Ismaël Sombie dans la gestion de ce portefeuille stratégique."
     },
     {
@@ -80947,12 +80947,12 @@ const QUESTIONS = {
     {
       "q": "Quelle est la nouvelle appellation de la région des Cascades ?",
       "o": [
-        "Guiriko",
-        "Djoro",
         "Tannounyan",
+        "Djoro",
+        "Guiriko",
         "Nando"
       ],
-      "r": 2,
+      "r": 0,
       "x": "La région des Cascades a été renommée région du Tannounyan. Elle comprend 2 provinces : Comoé (chef-lieu : Banfora) et Léraba (chef-lieu : Sindou)."
     },
     {
@@ -80982,10 +80982,10 @@ const QUESTIONS = {
       "o": [
         "Kuilse",
         "Nazinon",
-        "Nando",
-        "Oubri"
+        "Oubri",
+        "Nando"
       ],
-      "r": 2,
+      "r": 3,
       "x": "La région du Centre-Ouest a été renommée région du Nando. Elle comprend 4 provinces : Boulkiemdé (Koudougou), Sanguié (Réo), Sissili (Léo) et Ziro (Sapouy)."
     },
     {
@@ -81069,22 +81069,22 @@ const QUESTIONS = {
       "q": "Quel est le surnom de la ville de Banfora ?",
       "o": [
         "La cité de Sya",
-        "La cité du paysan noir",
+        "La cité de Naaba Kango",
         "La cité de Numadu",
-        "La cité de Naaba Kango"
+        "La cité du paysan noir"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Banfora est surnommée \"La cité du paysan noir\". Chef-lieu de la province de la Comoé (région du Tannounyan), elle est connue pour ses cascades de Karfiguéla, son lac Tengrela et son industrie sucrière (SOCUCO)."
     },
     {
       "q": "Quel est le surnom de la ville de Batié ?",
       "o": [
-        "La cité du cavalier rouge",
-        "La cité de Bafoudji",
         "La cité de Damar",
+        "La cité de Bafoudji",
+        "La cité du cavalier rouge",
         "La cité de Massaco"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Batié est surnommée \"La cité de Damar\". Chef-lieu de la province du Noumbiel dans la région du Djoro (ancienne région du Sud-Ouest)."
     },
     {
@@ -81114,10 +81114,10 @@ const QUESTIONS = {
       "o": [
         "La cité de Bafoudji",
         "La cité de surba",
-        "La cité de Yendabri",
-        "La cité de Massaco"
+        "La cité de Massaco",
+        "La cité de Yendabri"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Fada N'Gourma est surnommée \"La cité de Yendabri\". Chef-lieu de la province du Gourma (région du Goulmou), elle abrite l'Université Yembila Abdoulaye Toguyeni (UYAT)."
     },
     {
@@ -81189,12 +81189,12 @@ const QUESTIONS = {
     {
       "q": "Quel est le surnom de la ville de Loropéni ?",
       "o": [
-        "La cité de Surba",
-        "La cité de Bafoudji",
         "La cité de massaco",
+        "La cité de Bafoudji",
+        "La cité de Surba",
         "La cité de Damar"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Loropéni est surnommée \"La cité de massaco\". Loropéni est une commune rurale de la province du Poni dans la région du Djôrô. Elle est connue pour ses ruines nommée \"les Ruines de Loropéni\", site archéologique inscrit au patrimoine mondial de l'UNESCO en 2009."
     },
     {
@@ -81245,11 +81245,11 @@ const QUESTIONS = {
       "q": "Quel est le surnom de la ville de Ouahigouya ?",
       "o": [
         "La cité des cuirs et peaux",
-        "La cité de Naaba Kango",
+        "La cité du haricot vert",
         "La cité de Phacochère",
-        "La cité du haricot vert"
+        "La cité de Naaba Kango"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Ouahigouya est surnommée \"La cité de Naaba Kango\". Quatrième ville du Burkina Faso, chef-lieu de la province du Yatenga (région du Yaadga), elle abrite l'Université Lédéa Bernard Ouédraogo (ULBO)."
     },
     {
@@ -81278,11 +81278,11 @@ const QUESTIONS = {
       "q": "Quel est le surnom de la ville de Tenkodogo ?",
       "o": [
         "La cité de Phacochère",
-        "La cité de Rialé",
+        "La cité de Murba",
         "La cité de Massaco",
-        "La cité de Murba"
+        "La cité de Rialé"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Tenkodogo est surnommée \"La cité de Rialé\". Chef-lieu de la province du Boulgou (région du Nakambe), elle est l'un des plus anciens royaumes Mossi historiques du Burkina Faso."
     },
     {
@@ -81311,11 +81311,11 @@ const QUESTIONS = {
       "q": "Qui dirige l'Agence burkinabè de la cinématographie et de l'audiovisuel (ABCA), structure qui organise désormais le FESPACO ?",
       "o": [
         "Éric Bassolé",
-        "Moussa Alex Sawadogo",
+        "Noufo Enok Kindo",
         "Christiane Sanou/Coulibaly",
-        "Noufo Enok Kindo"
+        "Moussa Alex Sawadogo"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Créée en novembre 2024, l'ABCA a absorbé la Délégation générale du FESPACO. Elle est dirigée par Moussa Alex Sawadogo, ancien délégué général du FESPACO. Le FESPACO, créé en 1969, se tient aux années impaires ; sa 30e édition est prévue en 2027."
     },
     {
@@ -81334,10 +81334,10 @@ const QUESTIONS = {
       "o": [
         "Éric Bassolé, 1983",
         "Moussa Alex Sawadogo, 1983",
-        "Christiane Sanou/Coulibaly, 1983",
-        "Noufo Enok Kindo, 1984"
+        "Noufo Enok Kindo, 1984",
+        "Christiane Sanou/Coulibaly, 1983"
       ],
-      "r": 2,
+      "r": 3,
       "x": "La SNC (Semaine Nationale de la Culture) a été créée en 1983. Sa DG est Christiane Sanou/Coulibaly. Elle se tient à Bobo-Dioulasso aux années paires. La 22e édition de 2026 a pour thème \"Culture, jeunesse et transmission des valeurs sociales\"."
     },
     {
@@ -81378,10 +81378,10 @@ const QUESTIONS = {
       "o": [
         "Souleymane Ouédraogo, 9 octobre 1984",
         "Braima Barro, 22 juin 1984",
-        "Patrice Forogo, 9 octobre 1985",
-        "Flandin Idrissa Sourabié, 22 juin 1985"
+        "Flandin Idrissa Sourabié, 22 juin 1985",
+        "Patrice Forogo, 9 octobre 1985"
       ],
-      "r": 2,
+      "r": 3,
       "x": "La SONABHY (Société Nationale Burkinabè des Hydrocarbures) a été créée le 9 octobre 1985. Son DG est Patrice Forogo (nommé le 25/06/2026). Elle assure l'importation, le stockage et la distribution des produits pétroliers (carburant, gaz) au Burkina Faso."
     },
     {
@@ -81532,10 +81532,10 @@ const QUESTIONS = {
       "o": [
         "Allemagne",
         "Suisse",
-        "Autriche",
-        "Liechtenstein"
+        "Liechtenstein",
+        "Autriche"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Kurt Waldheim (Autriche) était le 4e SG de l'ONU (1er janvier 1972 – 31 décembre 1981). Il est devenu ensuite président de l'Autriche (1986-1992). Son passé pendant la Seconde Guerre mondiale a été controversé."
     },
     {
@@ -81554,10 +81554,10 @@ const QUESTIONS = {
       "o": [
         "Maroc",
         "Tunisie",
-        "Égypte",
-        "Algérie"
+        "Algérie",
+        "Égypte"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Boutros Boutros-Ghali (Égypte) était le 6e SG de l'ONU (1er janvier 1992 – 31 décembre 1996). Premier Africain et premier Arabe à ce poste, il a géré la crise en ex-Yougoslavie et le génocide rwandais. Son 2e mandat a été bloqué par les États-Unis."
     },
     {
@@ -81629,12 +81629,12 @@ const QUESTIONS = {
     {
       "q": "Quand et où s'est tenu le Sommet du G20 en novembre 2025 ?",
       "o": [
-        "Du 15 au 16 novembre 2025 à Rio de Janeiro",
         "Du 22 au 23 novembre 2025 à Johannesburg",
+        "Du 15 au 16 novembre 2025 à Rio de Janeiro",
         "Du 18 au 19 novembre 2025 à New Delhi",
         "Du 25 au 26 novembre 2025 au Caire"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le Sommet du G20 s'est tenu les 22 et 23 novembre 2025 à Johannesburg, en Afrique du Sud. C'était la première fois que l'Afrique du Sud accueillait le G20, marquant la présidence africaine de ce forum économique mondial."
     },
     {
@@ -81686,21 +81686,21 @@ const QUESTIONS = {
       "o": [
         "Colonel Assimi Goïta",
         "Général Abdourahamane Tiani",
-        "Capitaine Ibrahim Traoré",
-        "Général Daouda Traoré"
+        "Général Daouda Traoré",
+        "Capitaine Ibrahim Traoré"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Le Capitaine Ibrahim Traoré, Président de la Transition du Burkina Faso, a été désigné président en exercice de la Confédération de l'Alliance des États du Sahel (AES) pour la période 2025-2026. Cette présidence tournante symbolise la solidarité entre les trois pays membres."
     },
     {
       "q": "Quelle est la devise officielle de l'Alliance des États du Sahel (AES) ?",
       "o": [
         "\"Liberté, Égalité, Solidarité\"",
-        "\"Un espace, un peuple, un destin\"",
+        "\"La Patrie avant tout\"",
         "\"Unité, Progrès, Justice\"",
-        "\"La Patrie avant tout\""
+        "\"Un espace, un peuple, un destin\""
       ],
-      "r": 1,
+      "r": 3,
       "x": "La devise de l'Alliance des États du Sahel est « Un espace, un peuple, un destin ». Elle reflète la vision d'intégration politique, économique et culturelle des trois pays fondateurs : le Burkina Faso, le Mali et le Niger."
     },
     {
@@ -81717,12 +81717,12 @@ const QUESTIONS = {
     {
       "q": "À quelle date le retrait du Burkina Faso, du Mali et du Niger de la CEDEAO est-il devenu effectif ?",
       "o": [
-        "28 janvier 2024",
         "29 janvier 2025",
+        "28 janvier 2024",
         "6 juillet 2024",
         "15 décembre 2024"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Annoncé le 28 janvier 2024, le retrait des trois pays de l'AES est devenu effectif le 29 janvier 2025, à l'expiration du délai d'un an prévu par l'article 91 du Traité révisé de la CEDEAO. Le 6 juillet 2024 correspond à la création de la Confédération AES."
     },
     {
@@ -81750,34 +81750,34 @@ const QUESTIONS = {
     {
       "q": "Quelle est la date de lancement officiel du drapeau de l'AES ?",
       "o": [
-        "16 septembre 2023",
-        "6 juillet 2024",
         "22 février 2025",
+        "6 juillet 2024",
+        "16 septembre 2023",
         "30 décembre 2024"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Le drapeau de l'AES a été officiellement lancé le 22 février 2025. Le logo du drapeau a été dévoilé le 30 décembre 2024. Il est composé d'un cercle orange, d'un baobab, de silhouettes de personnages et de 3 étoiles représentant les trois pays membres."
     },
     {
       "q": "Quels sont les pays membres de l'AES ?",
       "o": [
-        "Burkina Faso, Mauritanie et Niger",
-        "Burkina Faso, Sénégal et Mali",
         "Burkina Faso, Mali et Niger",
+        "Burkina Faso, Sénégal et Mali",
+        "Burkina Faso, Mauritanie et Niger",
         "Mali, Tchad et Niger"
       ],
-      "r": 2,
+      "r": 0,
       "x": "La Confédération des États du Sahel (AES) regroupe le Burkina Faso, le Mali et le Niger. Ces trois pays ont annoncé leur retrait de la CEDEAO le 28 janvier 2024, retrait devenu effectif le 29 janvier 2025."
     },
     {
       "q": "À quelle date les passeports de l'AES ont-ils été mis en circulation ?",
       "o": [
-        "16 septembre 2023",
-        "4 août 2024",
         "29 janvier 2025",
+        "4 août 2024",
+        "16 septembre 2023",
         "22 février 2025"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Les passeports communs de l'Alliance des États du Sahel ont été officiellement mis en circulation le 29 janvier 2025. Ce document symbolise l'intégration des trois pays et vise à faciliter la libre circulation des ressortissants du Burkina Faso, du Mali et du Niger."
     },
     {
@@ -81794,12 +81794,12 @@ const QUESTIONS = {
     {
       "q": "Quelle est la date à laquelle le Burkina Faso s'est retiré de l'Organisation Internationale de la Francophonie (OIF) ?",
       "o": [
-        "29 octobre 2024",
-        "21 novembre 2024",
         "28 février 2025",
+        "21 novembre 2024",
+        "29 octobre 2024",
         "18 mars 2025"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Le Burkina Faso a officiellement quitté l'OIF (Organisation Internationale de la Francophonie) le 28 février 2025. Le Mali a suivi le 18 mars 2025. Ces retraits marquent une rupture avec certaines organisations multilatérales perçues comme liées à l'influence occidentale."
     },
     {
@@ -81838,12 +81838,12 @@ const QUESTIONS = {
     {
       "q": "À quelle date l'ALT a-t-elle adopté la révision constitutionnelle portant sur les articles 101, 143 et 144 ?",
       "o": [
-        "25 mai 2024",
-        "29 octobre 2024",
         "20 janvier 2026",
+        "29 octobre 2024",
+        "25 mai 2024",
         "27 novembre 2026"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Le 20 janvier 2026, l'ALT a adopté la révision des articles 101, 143 et 144 de la Constitution. Elle crée un organe unique de régulation des communications et de protection des données (fusion CSC/CIL) et remplace l'ASCE-LC par une nouvelle structure de contrôle. Le 27 mars 2026 est la date d'adoption de la Charte de la Révolution."
     },
     {
@@ -81860,12 +81860,12 @@ const QUESTIONS = {
     {
       "q": "Qui est le directeur général actuel de Faso Rail au Burkina Faso, nommé le 3 avril 2025 ?",
       "o": [
-        "Ismaël Sombie",
-        "Boureima Ouattara",
         "Edward Kabore",
+        "Boureima Ouattara",
+        "Ismaël Sombie",
         "Ibrahim Saba"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Edward Kabore a été nommé directeur général de Faso Rail le 3 avril 2025. Faso Rail est la société nationale burkinabè chargée de la gestion et du développement du réseau ferroviaire national, qui s'étend sur environ 617 km."
     },
     {
@@ -81926,12 +81926,12 @@ const QUESTIONS = {
     {
       "q": "Qui est le président de l'ordre des notaires du Burkina Faso ?",
       "o": [
-        "Blaise B. Bazie",
         "Yacouba Dembelé",
+        "Blaise B. Bazie",
         "Adama Ouédraogo",
         "Idrissa Nassa"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Yacouba Dembelé préside l'ordre des notaires du Burkina Faso. Les notaires sont des officiers ministériels qui ont pour mission de rédiger et d'authentifier les actes juridiques, notamment les contrats de vente immobilière, les testaments et les actes de société."
     },
     {
@@ -81948,12 +81948,12 @@ const QUESTIONS = {
     {
       "q": "Qu'est-ce que la BPBF et quand ses activités ont-elles été lancées ?",
       "o": [
-        "Banque Publique du Burkina Faso, lancée le 7 octobre 2024",
         "Banque Postale du Burkina Faso, lancée le 7 octobre 2024",
+        "Banque Publique du Burkina Faso, lancée le 7 octobre 2024",
         "Banque Populaire du Burkina Faso, lancée le 7 novembre 2024",
         "Banque Panafricaine du Burkina Faso, lancée le 1er octobre 2024"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La BPBF (Banque Postale du Burkina Faso) a officiellement lancé ses activités le 7 octobre 2024. Née de la transformation de la SONAPOSTE, elle vise à offrir des services bancaires et postaux accessibles à l'ensemble de la population burkinabè, notamment dans les zones rurales."
     },
     {
@@ -81961,10 +81961,10 @@ const QUESTIONS = {
       "o": [
         "Serge August Bayala",
         "Karim Traoré",
-        "Tidiane Barry",
-        "Didier Sanon"
+        "Didier Sanon",
+        "Tidiane Barry"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Tidiane Barry est le directeur général de la mine Iam Gold Essakane, la plus grande mine d'or industrielle du Burkina Faso. Située dans la région du Sahel (province de l'Oudalan), elle est l'une des plus importantes mines d'or d'Afrique de l'Ouest."
     },
     {
@@ -81983,10 +81983,10 @@ const QUESTIONS = {
       "o": [
         "16 septembre 2023",
         "6 juillet 2024",
-        "6 novembre 2024",
-        "22 février 2025"
+        "22 février 2025",
+        "6 novembre 2024"
       ],
-      "r": 2,
+      "r": 3,
       "x": "La Commission nationale de confédération des États du Sahel (CN-CES) a été créée le 6 novembre 2024. Cette commission nationale est chargée de coordonner au niveau du Burkina Faso les activités liées à la mise en œuvre de la Confédération de l'AES."
     },
     {
@@ -82014,12 +82014,12 @@ const QUESTIONS = {
     {
       "q": "Quel est le nom actuel de l'organe législatif du Burkina Faso ?",
       "o": [
-        "Assemblée Nationale",
         "Assemblée Législative du Peuple",
+        "Assemblée Nationale",
         "Parlement de la Transition",
         "Assemblée Législative de la Transition"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La Charte de la Révolution, adoptée à l'unanimité le 27 mars 2026, a transformé l'Assemblée Législative de Transition (ALT) en Assemblée Législative du Peuple (ALP). Les lois portent désormais le suffixe /ALP, par exemple la loi n°013-2026/ALP portant code du travail."
     },
     {
@@ -82036,12 +82036,12 @@ const QUESTIONS = {
     {
       "q": "Qui est l'actuel procureur du Faso au Burkina Faso ?",
       "o": [
-        "Edasso Rodrigue Bayala",
-        "Adama Ouédraogo",
         "Blaise B. Bazie",
+        "Adama Ouédraogo",
+        "Edasso Rodrigue Bayala",
         "Sagado Nacanabo"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Blaise B. Bazie occupe la fonction de procureur du Faso au Burkina Faso. Le procureur du Faso est le chef du ministère public et représente la société dans les affaires pénales devant les juridictions nationales."
     },
     {
@@ -82091,12 +82091,12 @@ const QUESTIONS = {
     {
       "q": "Quel est le plus haut sommet de l'AES et où se situe-t-il ?",
       "o": [
-        "Mont Tenakourou au Burkina Faso",
-        "Mont Hombori Tondo au Mali",
         "Mont Indoukat-n-Taglès au Niger",
+        "Mont Hombori Tondo au Mali",
+        "Mont Tenakourou au Burkina Faso",
         "Mont Bagzan au Niger"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Le Mont Indoukat-n-Taglès, situé au Niger dans le massif de l'Aïr, culmine à 2 022 mètres d'altitude. C'est le plus haut sommet de l'espace AES. Le Niger possède une géographie variée avec des massifs montagneux dans sa partie nord."
     },
     {
@@ -82168,12 +82168,12 @@ const QUESTIONS = {
     {
       "q": "Qui est la première femme pilote militaire au Burkina Faso ?",
       "o": [
-        "Lieutenant Aminata Zerbo",
-        "Capitaine Pélagie Kabre",
         "Sous-lieutenant Maryse Traoré",
+        "Capitaine Pélagie Kabre",
+        "Lieutenant Aminata Zerbo",
         "Sergent Rachida Ouédraogo"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Le Sous-lieutenant Maryse Traoré est la première femme pilote militaire du Burkina Faso. Elle représente une fierté nationale et illustre la place croissante des femmes dans les Forces Armées Nationales du Burkina Faso (FANB)."
     },
     {
@@ -82223,12 +82223,12 @@ const QUESTIONS = {
     {
       "q": "Quel film a représenté le Burkina Faso pour l'Étalon d'or de Yennenga au FESPACO 2025 et qui en est le réalisateur ?",
       "o": [
-        "\"Sira\" de Apolline Traoré",
         "\"Katanga, la danse des scorpions\" de Dani Kouyaté",
+        "\"Sira\" de Apolline Traoré",
         "\"Tasuma\" de S. Pierre Yameogo",
         "\"Buud Yam\" de Gaston Kaboré"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Le film \"Katanga, la danse des scorpions\" du réalisateur burkinabè Dani Kouyaté a remporté l'Étalon d'or de Yennenga au FESPACO 2025. Dani Kouyaté est le 3e Burkinabè à remporter ce prix suprême, après Idrissa Ouédraogo (1991) et Gaston Kaboré (1997)."
     },
     {
@@ -82269,21 +82269,21 @@ const QUESTIONS = {
       "o": [
         "29 octobre 2024",
         "21 novembre 2024",
-        "28 octobre 2025",
-        "4 décembre 2025"
+        "4 décembre 2025",
+        "28 octobre 2025"
       ],
-      "r": 2,
+      "r": 3,
       "x": "La Commission Électorale Nationale Indépendante (CENI) du Burkina Faso a été officiellement dissoute le 28 octobre 2025. Cette dissolution s'inscrit dans le contexte de la période de Transition, où les élections ont été suspendues jusqu'au retour à l'ordre constitutionnel."
     },
     {
       "q": "Quelles sont les dates de la première et de la deuxième phase des Journées nationales d'engagement patriotique et de participation citoyenne (JEPPC) ?",
       "o": [
-        "Phase 1 : 1er au 15 mars ; Phase 2 : 1er au 15 octobre",
         "Phase 1 : 26 mars au 9 avril ; Phase 2 : 2 au 16 octobre",
+        "Phase 1 : 1er au 15 mars ; Phase 2 : 1er au 15 octobre",
         "Phase 1 : 15 au 30 avril ; Phase 2 : 15 au 31 octobre",
         "Phase 1 : 5 au 20 mars ; Phase 2 : 5 au 20 octobre"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Les Journées nationales d'engagement patriotique et de participation citoyenne (JEPPC) se déroulent en deux phases : la première phase du 26 mars au 9 avril, et la deuxième phase du 2 au 16 octobre. Ces journées visent à renforcer la mobilisation citoyenne pour l'effort de guerre et le développement national."
     },
     {
@@ -82302,10 +82302,10 @@ const QUESTIONS = {
       "o": [
         "Le lion",
         "L'hippopotame",
-        "L'éléphant",
-        "Le buffle"
+        "Le buffle",
+        "L'éléphant"
       ],
-      "r": 2,
+      "r": 3,
       "x": "L'éléphant d'Afrique est le mammifère emblématique de la Réserve de Nazinga, située dans la région du Centre-Sud au Burkina Faso (province du Nahouri). Cette réserve animalière abrite l'une des plus importantes populations d'éléphants en Afrique de l'Ouest."
     },
     {
@@ -82368,10 +82368,10 @@ const QUESTIONS = {
       "o": [
         "Henri Louveau",
         "Gérard Kango Ouédraogo",
-        "Max Berhet (juillet 1958 – décembre 1958)",
-        "Roland Pré"
+        "Roland Pré",
+        "Max Berhet (juillet 1958 – décembre 1958)"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Max Berhet fut le dernier gouverneur de la Haute-Volta, en poste de juillet à décembre 1958. Après le referendum du 28 septembre 1958 et la proclamation de la République le 11 décembre 1958, la Haute-Volta accédait à l'autonomie, puis à l'indépendance le 5 août 1960."
     },
     {
@@ -82412,43 +82412,43 @@ const QUESTIONS = {
       "o": [
         "Iron Biby",
         "Zan Bady",
-        "Kevin Mossé",
-        "Paul Daumond"
+        "Paul Daumond",
+        "Kevin Mossé"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Kevin Mossé a été sacré champion de lutte traditionnelle burkinabè en 2025. La lutte traditionnelle (la lutte \"Burkina\") est l'un des sports les plus populaires au Burkina Faso et fait partie des compétitions des Jeux Olympiques Africains."
     },
     {
       "q": "Combien de pays africains bordent la mer Méditerranée et quels sont-ils ?",
       "o": [
         "4 pays : Maroc, Algérie, Tunisie et Égypte",
-        "5 pays : Maroc, Algérie, Tunisie, Libye et Égypte",
+        "3 pays : Maroc, Algérie et Tunisie",
         "6 pays : Maroc, Algérie, Tunisie, Libye, Égypte et Mauritanie",
-        "3 pays : Maroc, Algérie et Tunisie"
+        "5 pays : Maroc, Algérie, Tunisie, Libye et Égypte"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Cinq pays africains bordent la mer Méditerranée : le Maroc, l'Algérie, la Tunisie, la Libye et l'Égypte. Ces pays forment l'Afrique du Nord ou Maghreb élargi. La Méditerranée constitue une voie maritime stratégique reliant l'Afrique, l'Europe et le Moyen-Orient."
     },
     {
       "q": "Qui est le premier Premier ministre de la Haute-Volta après l'indépendance ?",
       "o": [
-        "Maurice Yaméogo",
-        "Sangoulé Lamizana",
         "Gérard Kango Ouédraogo",
+        "Sangoulé Lamizana",
+        "Maurice Yaméogo",
         "Albert Ouédraogo"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Gérard Kango Ouédraogo est devenu le premier Premier ministre de la Haute-Volta indépendante le 13 février 1971, sous la présidence de Sangoulé Lamizana. Maurice Yaméogo avait été président du Conseil de gouvernement (1958) puis premier Président de la République (1960), mais pas Premier ministre."
     },
     {
       "q": "Dans quelle ville est implantée la Base aérienne 511 du Burkina Faso ?",
       "o": [
-        "Kaya",
-        "Fada N'Gourma",
         "Ouagadougou",
+        "Fada N'Gourma",
+        "Kaya",
         "Dori"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Le Burkina Faso possède quatre bases aériennes militaires : la Base aérienne 210 à Bobo-Dioulasso, la Base aérienne 511 à Ouagadougou, la Base aérienne 134 à Kaya et la Base aérienne 111 à Fada N'Gourma."
     },
     {
@@ -82465,12 +82465,12 @@ const QUESTIONS = {
     {
       "q": "Quels sont les organes officiels du pouvoir au Burkina Faso selon la Charte de la Révolution de 2026 ?",
       "o": [
-        "Président, gouvernement, assemblée nationale et Sénat",
         "Président du Faso, Assemblée Législative du Peuple et Gouvernement du Peuple",
+        "Président, gouvernement, assemblée nationale et Sénat",
         "Président, Premier ministre, Conseil des ministres et Cour constitutionnelle",
         "Président, Conseil militaire, gouvernement et Cour suprême"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La Charte de la Révolution, adoptée le 27 mars 2026 (datée du 1er avril 2026 dans les visas officiels), a remplacé la Charte de la Transition. L'ALT est devenue l'Assemblée Législative du Peuple (ALP) et le gouvernement de Transition le Gouvernement du Peuple."
     },
     {
@@ -82499,22 +82499,22 @@ const QUESTIONS = {
       "q": "Quel Burkinabè est surnommé \"l'Homme au 3000 baobabs\" et où réside-t-il ?",
       "o": [
         "Iron Biby, réside à Ouagadougou",
-        "El Hadj Salifou Ouédraogo, réside à Solenzo",
+        "Laurent Bado, réside à Koudougou",
         "Silvère Salga, réside à Bobo-Dioulasso",
-        "Laurent Bado, réside à Koudougou"
+        "El Hadj Salifou Ouédraogo, réside à Solenzo"
       ],
-      "r": 1,
+      "r": 3,
       "x": "El Hadj Salifou Ouédraogo est surnommé \"l'Homme au 3000 baobabs\". Il réside à Solenzo dans la province des Banwa, dans la région de la Boucle du Mouhoun. Sa démarche de plantation massive de baobabs illustre l'engagement citoyen pour la préservation de l'environnement et la lutte contre la désertification."
     },
     {
       "q": "À quelle date le Sommet des BRICS 2025 a-t-il eu lieu et de quelle édition s'agissait-il ?",
       "o": [
         "6 au 7 juin 2025 à Brasilia, 16e sommet",
-        "6 au 7 juillet 2025 à Rio de Janeiro, 17e sommet",
+        "5 au 6 septembre 2025 à Pékin, 18e sommet",
         "22 au 23 novembre 2025 à Johannesburg, 17e sommet",
-        "5 au 6 septembre 2025 à Pékin, 18e sommet"
+        "6 au 7 juillet 2025 à Rio de Janeiro, 17e sommet"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Le Sommet des BRICS 2025 (17e sommet) s'est tenu du 6 au 7 juillet 2025 à Rio de Janeiro, au Brésil. C'était le premier sommet depuis l'élargissement du groupe (incluant l'Indonésie qui a rejoint en janvier 2025)."
     },
     {
@@ -82751,12 +82751,12 @@ const QUESTIONS = {
     {
       "q": "Au Burkina Faso, le concours annuel des « Prix Galian » est organisé par :",
       "o": [
-        "Le Conseil Supérieur de la Communication (CSC)",
         "Le Ministère chargé de la Communication et de la Culture",
+        "Le Conseil Supérieur de la Communication (CSC)",
         "L'Association des Journalistes du Burkina (AJB)",
         "Le Ministère chargé de la Transition Numérique et des Postes"
       ],
-      "r": 1,
+      "r": 0,
       "x": "Créés en 1997, les Prix Galian sont la plus haute distinction nationale décernée aux professionnels des médias (presse écrite, radio, télévision, presse en ligne). Ils sont placés sous la tutelle et l'organisation directe du Ministère de la Communication, de la Culture, des Arts et du Tourisme, qui décerne chaque année le trophée du « Super Galian »."
     },
     {
@@ -82828,12 +82828,12 @@ const QUESTIONS = {
     {
       "q": "Quelle est la dotation accordée à la lauréate du Super Galian 2026 ?",
       "o": [
-        "Un trophée et un chèque de 1 million de FCFA",
         "Un trophée, un chèque de 3 millions de FCFA et une villa",
+        "Un trophée et un chèque de 1 million de FCFA",
         "Un trophée, un chèque de 5 millions de FCFA et une voiture",
         "Un trophée, une médaille d'or et un chèque de 2 millions de FCFA"
       ],
-      "r": 1,
+      "r": 0,
       "x": "La Super Galian 2026 Aïcha Diombélé/Kabré a reçu : un trophée, une enveloppe financière de 3 millions de FCFA et une villa offerte par le parrain de la 29e édition, en reconnaissance de son talent, de son professionnalisme et de son engagement au service de l'information."
     },
     {
@@ -82883,12 +82883,12 @@ const QUESTIONS = {
     {
       "q": "Qui a reçu le prix spécial de l'ONASER (Office national de la sécurité routière) lors des Galian 2026 ?",
       "o": [
-        "Françoise Tougry (QueenMafa)",
-        "Farida Thiombiano (Lefaso.net)",
         "Nadège Sawadogo (Éditions Sidwaya)",
+        "Farida Thiombiano (Lefaso.net)",
+        "Françoise Tougry (QueenMafa)",
         "Assétou Maïga (QueenMafa)"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Nadège Sawadogo, journaliste aux Éditions Sidwaya, a reçu le prix spécial de l'ONASER (Office national de la sécurité routière) lors des Galian 2026. Ce prix spécial récompense les productions journalistiques qui ont traité de la sécurité routière au Burkina Faso."
     },
     {
@@ -82907,10 +82907,10 @@ const QUESTIONS = {
       "o": [
         "Le ministère de la Culture, assuré par Me Apollinaire Kyelem de Tambèla",
         "Le ministère de l'Éducation, assuré par Jacques Sosthène Dingara",
-        "Le ministère de la Communication, de la Culture, des Arts et du Tourisme, assuré par Pingdwendé Gilbert Ouédraogo",
-        "Le ministère de l'Enseignement supérieur, assuré par Adjima Thombiano"
+        "Le ministère de l'Enseignement supérieur, assuré par Adjima Thombiano",
+        "Le ministère de la Communication, de la Culture, des Arts et du Tourisme, assuré par Pingdwendé Gilbert Ouédraogo"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Les Prix Galian sont organisés chaque année par le ministère en charge de la Communication. En 2026, c'est Pingdwendé Gilbert Ouédraogo, Ministre de la Communication, de la Culture, des Arts et du Tourisme et porte-parole du gouvernement, qui a présidé la 29e édition."
     },
     {
@@ -82983,11 +82983,11 @@ const QUESTIONS = {
       "q": "Quel objectif le Gouvernement s'est-il fixé en matière de réservistes militaires d'ici fin 2026 ?",
       "o": [
         "50 000 réservistes",
-        "100 000 réservistes",
+        "200 000 réservistes",
         "75 000 réservistes",
-        "200 000 réservistes"
+        "100 000 réservistes"
       ],
-      "r": 1,
+      "r": 3,
       "x": "Suite à l'adoption de la loi précisant le statut de la réserve militaire par l'Assemblée législative, le ministre de la Guerre a fixé l'objectif de compter 100 000 réservistes avant la fin 2026. Cette loi vise à élargir la base de défense nationale au-delà des effectifs réguliers des FANB."
     },
     {
@@ -83169,12 +83169,12 @@ const QUESTIONS = {
     {
       "q": "Quelles distinctions Tanya a-t-elle remportées à la 13e édition des Faso Music Awards 2026 ?",
       "o": [
-        "Meilleure artiste féminine et meilleure chanson",
-        "Meilleure artiste révélation et meilleur concert",
         "Album de l'année (avec \"Gondal\") et Artiste de l'année",
+        "Meilleure artiste révélation et meilleur concert",
+        "Meilleure artiste féminine et meilleure chanson",
         "Prix de la chanson patriotique et Prix du public"
       ],
-      "r": 2,
+      "r": 0,
       "x": "Tanya a remporté deux trophées à la 13e édition des Faso Music Awards : l'Album de l'année avec \"Gondal\" et le titre d'Artiste de l'année. Après son Kundé d'or 2026, cette double consécration récompense ses performances artistiques en 2026."
     },
     {
@@ -83214,11 +83214,11 @@ const QUESTIONS = {
       "q": "Dans quelle ville s'est tenue la cérémonie officielle de la 8ᵉ Journée nationale de l'Arbre (JNA) le 20 juin 2026 ?",
       "o": [
         "À Bobo-Dioulasso",
-        "À Ouagadougou",
+        "À Kaya",
         "À Koudougou",
-        "À Kaya"
+        "À Ouagadougou"
       ],
-      "r": 1,
+      "r": 3,
       "x": "La 8e édition de la Journée nationale de l'arbre s'est déroulée à Ouagadougou le samedi 20 juin 2026 sous la présidence du chef de l'État, le capitaine Ibrahim Traoré. Cette journée a marqué le lancement de la campagne de reforestation sur l'ensemble du territoire national."
     },
     {
@@ -83312,12 +83312,12 @@ const QUESTIONS = {
     {
       "q": "Quelle loi encadre le fonctionnement des associations au Burkina Faso ?",
       "o": [
-        "Loi n°009-2025/ALT du 17 juillet 2025",
-        "Loi n°013-2025/ALT du 17 juillet 2025",
         "Loi n°011-2025/ALT du 17 juillet 2025",
+        "Loi n°013-2025/ALT du 17 juillet 2025",
+        "Loi n°009-2025/ALT du 17 juillet 2025",
         "Loi n°015-2025/ALT du 17 juillet 2025"
       ],
-      "r": 2,
+      "r": 0,
       "x": "La loi n°011-2025/ALT du 17 juillet 2025 portant liberté d'association au Burkina Faso encadre la création, le fonctionnement et la dissolution des associations. C'est sur la base de cette loi que 118 associations ont été dissoutes le 15 avril 2026 pour non-conformité aux nouvelles exigences légales, par décision du Ministre d'État Emile Zerbo."
     },
     {
@@ -83402,10 +83402,10 @@ const QUESTIONS = {
       "o": [
         "294 507 tonnes, en baisse de 5%",
         "250 000 tonnes, en baisse de 10%",
-        "314 293 tonnes, en hausse de 7%",
-        "380 000 tonnes, en hausse de 15%"
+        "380 000 tonnes, en hausse de 15%",
+        "314 293 tonnes, en hausse de 7%"
       ],
-      "r": 2,
+      "r": 3,
       "x": "La campagne cotonnière 2025-2026 a produit 314 293 tonnes de coton graine (conventionnel et biologique), contre 294 507 tonnes lors de la campagne précédente, soit une hausse de 7%. Ce bilan a été présenté en Conseil des ministres le 25 juin 2026 par le Ministre Serge Gnaniodem Poda."
     },
     {
@@ -83479,10 +83479,10 @@ const QUESTIONS = {
       "o": [
         "Obtenir une caution bancaire auprès du Trésor public",
         "Présenter un casier judiciaire vierge à la représentation diplomatique burkinabè",
-        "Obtenir une autorisation préalable du ministère de l'Enseignement supérieur",
-        "Justifier d'une bourse d'études officielle burkinabè ou étrangère"
+        "Justifier d'une bourse d'études officielle burkinabè ou étrangère",
+        "Obtenir une autorisation préalable du ministère de l'Enseignement supérieur"
       ],
-      "r": 2,
+      "r": 3,
       "x": "Les Burkinabè souhaitant poursuivre des études supérieures à l'étranger doivent désormais obtenir une autorisation préalable du ministère de l'Enseignement supérieur, de la Recherche et de l'Innovation (dirigé par Adjima Thombiano). Cette mesure vise à mieux encadrer les flux estudiantins vers l'étranger et à maintenir les compétences au service du développement national."
     },
     {

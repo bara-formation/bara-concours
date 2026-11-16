@@ -411,7 +411,11 @@ const PremiumService = {
     correctionHebdo: 'essentiel',  // correction détaillée de l'examen du dimanche
     classement:      'essentiel',  // classement national de l'examen du dimanche
     archivesAF:      'essentiel',  // Accompagnement Final 2025 et 2026 (sessions + annales)
-    statsAvancees:   'complet',    // historique et évolution des examens du dimanche
+    // V64.19 : dès Essentiel (décision du 16 novembre 2026). La grille du
+    //   cahier des charges les plaçait en Complet ; Complet se distingue
+    //   désormais d'Essentiel par le quota (75 au lieu de 30) et par
+    //   l'Accompagnement Final 2027.
+    statsAvancees:   'essentiel',  // analyse par matière + historique des examens du dimanche
     af2027:          'complet',    // Accompagnement Final 2027
     suiviPerso:      'premium'     // bilan mensuel personnalisé
   },
@@ -422,7 +426,7 @@ const PremiumService = {
     correctionHebdo: 'Correction détaillée de l\'examen du dimanche',
     classement:      'Classement national de l\'examen du dimanche',
     archivesAF:      'Accompagnement Final 2025 et 2026 : les questions tombées',
-    statsAvancees:   'Statistiques avancées et historique de tes examens',
+    statsAvancees:   'Analyse par matière et historique de tes examens du dimanche',
     af2027:          'Accompagnement Final 2027, en direct pendant les épreuves',
     suiviPerso:      'Suivi personnalisé : un bilan et des conseils chaque mois'
   },

@@ -1,5 +1,5 @@
 // =========================================================================
-// Bara Concours - Module Firebase V64.17 (Google + Email/Mot de passe)
+// Bara Concours - Module Firebase V64.19 (Google + Email/Mot de passe)
 // (en-tête resté à « V54 » jusqu'en V64.16 alors que le fichier avait évolué :
 //  si une copie de ce fichier affiche encore V54, c'est une ANCIENNE copie)
 // =========================================================================
@@ -108,26 +108,15 @@ const FirebaseAuth = {
           this.user = user;
           // Charger le profil étendu depuis Firestore
           await this._loadUserProfile(user.uid);
-          // V63.59 : Auto-réparation des Premium historiques désynchronisés
-          //   → si le localStorage dit "Premium valide" mais Firestore dit "Gratuit",
-          //     on répare pour que le tableau de bord admin voie le vrai statut.
-          try {
-            const localState = JSON.parse(localStorage.getItem('bara_concours_state') || '{}');
-            const localUser = localState.user;
-            if (localUser && localUser.isPremium && localUser.premiumExpiresAt) {
-              const stillValid = new Date(localUser.premiumExpiresAt).getTime() > Date.now();
-              const firestoreIsPremium = this.userProfile && this.userProfile.isPremium;
-              if (stillValid && !firestoreIsPremium) {
-                console.log('[V63.59] 🔧 Réparation Premium (local → Firestore)');
-                await this.updateProfile({
-                  isPremium: true,
-                  premiumPlan: localUser.premiumPlan || null,
-                  premiumExpiresAt: localUser.premiumExpiresAt,
-                  premiumActivatedAt: localUser.premiumActivatedAt || new Date().toISOString()
-                });
-              }
-            }
-          } catch(e) { /* non bloquant */ }
+          // V64.19 : l'« auto-réparation Premium » (V63.50 puis V63.59) est
+          //   retirée. Elle recopiait le statut payant du téléphone vers le
+          //   profil Firestore, mais les règles Firestore interdisent au
+          //   candidat d'écrire isPremium, premiumPlan et premiumExpiresAt :
+          //   l'écriture était refusée à chaque démarrage, pour chaque abonné
+          //   activé par code, sans jamais rien réparer.
+          //   Le besoin est couvert autrement : l'application reconstitue le
+          //   statut depuis les codes (App._recoverPremiumIfMissing), et le
+          //   tableau de bord admin fait de même (enrichPremiumFromCodes).
 
           // V63.65 : Récupération unique de l'historique déjà accumulé en local.
           //   Les compteurs d'activité démarrent à zéro, or beaucoup d'étudiants
