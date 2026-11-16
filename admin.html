@@ -807,6 +807,12 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 <div id="app"></div>
 
 <!-- Charger les données de l'app principale -->
+<!-- V64.16 : user-fields.js n'etait pas charge par l'admin, alors qu'il
+     definit la couche d'acces unifiee aux champs utilisateur. C'est la cause
+     de fond des bugs « la donnee existe mais ne s'affiche pas » : l'admin
+     lisait u.name / u.city en direct, sans passer par les variantes.
+     A charger en premier : firebase.js s'en sert pour le suivi d'appareils. -->
+<script src="data/user-fields.js"></script>
 <script src="data/concours.js"></script>
 <script src="data/questions.js"></script>
 <script src="data/premium.js"></script>
@@ -1579,6 +1585,8 @@ const Admin = {
     if (tab === 'free') filtered = filtered.filter(u => !u.isPremium);
     // V63.64 : Premium qui expirent dans 7 jours ou moins — à relancer
     if (tab === 'expiring') filtered = filtered.filter(u => u.isPremium && window.PremiumService.daysRemaining(u) <= 7);
+    // V64.16 : comptes ouverts depuis plusieurs appareils — partage probable
+    if (tab === 'shared') filtered = filtered.filter(u => this.nbAppareils(u) >= this.SEUIL_PARTAGE);
     // V63.65 : Inscrits sans aucune activité, ou inactifs depuis plus de 30 jours
     if (tab === 'inactive') {
       filtered = filtered.filter(u => {
@@ -1613,6 +1621,11 @@ const Admin = {
     const expiring = normalized.filter(u => u.isPremium && window.PremiumService.daysRemaining(u) <= 7).length;
     // V63.65 : Compteur des inactifs (jamais actifs ou > 30 jours)
     const inactive = normalized.filter(u => !u.lastActivityAt || (Date.now() - u.lastActivityAt) > 30 * 86400000).length;
+    // V64.16 : comptes ouverts depuis plusieurs appareils. On compte à part
+    //   ceux qui paient : un abonnement partagé est un manque à gagner direct,
+    //   un compte gratuit partagé ne coûte que des lectures Firestore.
+    const partages = normalized.filter(u => this.nbAppareils(u) >= this.SEUIL_PARTAGE).length;
+    const partagesPayants = normalized.filter(u => u.isPremium && this.nbAppareils(u) >= this.SEUIL_PARTAGE).length;
 
     // V59 : État de chargement
     const isFirebaseReady = window.FirebaseAuth && window.FirebaseAuth.isFirebaseReady;
@@ -1669,6 +1682,13 @@ const Admin = {
             😴 Inactifs <span class="tab-count" style="background:#e2e8f0; color:#475569">${inactive}</span>
           </button>
         ` : ''}
+        ${partages > 0 ? `
+          <button class="tab ${tab === 'shared' ? 'active' : ''}" onclick="Admin.setTab('shared')"
+                  style="${tab === 'shared' ? '' : 'border-color:#dc2626; color:#991b1b'}"
+                  title="Comptes ouverts depuis ${this.SEUIL_PARTAGE} appareils ou plus${partagesPayants > 0 ? ', dont ' + partagesPayants + ' qui paient' : ''}. Indice de partage, pas preuve : une réinstallation compte pour un appareil de plus.">
+            📱 Partagés <span class="tab-count" style="background:#fee2e2; color:#991b1b">${partages}</span>
+          </button>
+        ` : ''}
       </div>
       </div>
       <!-- V64.07 : fin du bloc d'en-tête figé -->
@@ -1719,6 +1739,7 @@ const Admin = {
                 <th>Concours visé</th>
                 <th>Statut</th>
                 <th>QCM</th>
+                <th title="Nombre d'installations distinctes depuis lesquelles le compte a été ouvert">📱</th>
                 <th>Dernière activité</th>
                 <th>Inscrit</th>
                 <th>Actions</th>
@@ -1758,6 +1779,11 @@ const Admin = {
       matiereStats: u.matiereStats || {},
       // V64.07 : profil masqué par l'admin (comptes de test, doublons)
       adminHidden: !!u.adminHidden,
+      // V64.16 : appareils du compte — { <id> : { p, f, l } }
+      //   Même piège que matiereStats ci-dessus : normalizeUser reconstruit
+      //   un objet champ par champ, donc sans cette ligne la table serait lue
+      //   depuis Firestore puis jetée avant d'atteindre l'affichage.
+      devices: u.devices || {},
       totalDuration: u.totalDuration || 0,
       lastActivityAt: typeof u.lastActivityAt === 'object' && u.lastActivityAt?.seconds
         ? u.lastActivityAt.seconds * 1000
@@ -2075,6 +2101,7 @@ const Admin = {
             </div>
           ` : ''}
         </td>
+        <td style="text-align:center">${this.renderAppareilsCell(u)}</td>
         <td style="font-size:0.75rem">${this.renderActivityCell(u)}</td>
         <td style="font-size:0.78rem; color:var(--ink-mute)">${this.formatRelativeTime(u.joinedAt)}</td>
         <td>
@@ -2093,15 +2120,100 @@ const Admin = {
     `;
   },
 
+  // V64.16 : le plan preselectionne etait 'monthly', desormais retire de la
+  //   vente. Un clic rapide sur « Activer Premium » accordait donc un Mensuel
+  //   de 30 jours au lieu de la formule de la saison. On preselectionne le
+  //   plan vedette ; la liste deroulante continue d'afficher tous les plans,
+  //   retires compris, pour les regularisations exceptionnelles.
+  PLAN_PAR_DEFAUT: 'session2027',
+
+  // V64.16 : à partir de combien d'appareils un compte est signalé.
+  //   Deux appareils n'ont rien d'anormal : un second téléphone, une
+  //   réinstallation, un passage par le navigateur puis par l'application.
+  //   À trois, cela mérite un œil ; à cinq, le partage est probable.
+  SEUIL_PARTAGE: 3,
+  SEUIL_PARTAGE_FORT: 5,
+
+  /**
+   * V64.16 : nombre d'appareils distincts d'un compte.
+   *   Passe par UserFields, avec un repli défensif : si user-fields.js n'est
+   *   pas encore téléversé, le tableau de bord doit afficher un chiffre plutôt
+   *   que de planter (même protection que la V63.54 sur l'écran Premium).
+   */
+  nbAppareils(u) {
+    if (window.UserFields && typeof window.UserFields.countDevices === 'function') {
+      return window.UserFields.countDevices(u);
+    }
+    return Object.keys((u && u.devices) || {}).length;
+  },
+
+  /** V64.16 : les appareils d'un compte, connexion la plus récente d'abord. */
+  listeAppareils(u) {
+    if (window.UserFields && typeof window.UserFields.listDevices === 'function') {
+      return window.UserFields.listDevices(u);
+    }
+    const table = (u && u.devices) || {};
+    return Object.keys(table).map(id => ({
+      id: id,
+      plateforme: (table[id] && table[id].p) || 'Appareil inconnu',
+      premierVu: (table[id] && table[id].f) || 0,
+      dernierVu: (table[id] && (table[id].l || table[id].f)) || 0
+    })).sort((a, b) => b.dernierVu - a.dernierVu);
+  },
+
+  /**
+   * V64.16 : la cellule « Appareils » de la liste des utilisateurs.
+   *
+   * Ce que le chiffre vaut : le compte a été ouvert depuis AU MOINS n
+   * installations distinctes. Deux candidats sur un même téléphone comptent
+   * pour un ; un candidat qui réinstalle compte pour deux. C'est un indice de
+   * partage, pas une preuve — d'où le libellé de l'infobulle.
+   */
+  renderAppareilsCell(u) {
+    const n = this.nbAppareils(u);
+
+    if (n === 0) {
+      return `<span style="color:#d4d4d4" title="Aucune connexion enregistrée depuis la mise en place du suivi (V64.16). Le compte se remplira à sa prochaine connexion.">—</span>`;
+    }
+
+    const fort = n >= this.SEUIL_PARTAGE_FORT;
+    const alerte = n >= this.SEUIL_PARTAGE;
+    const couleur = fort ? '#991b1b' : alerte ? '#c2410c' : 'var(--ink)';
+    const fond = fort ? '#fee2e2' : alerte ? '#fed7aa' : 'transparent';
+
+    const detail = this.listeAppareils(u).map(d => {
+      const quand = d.dernierVu ? this.formatRelativeTime(d.dernierVu) : 'date inconnue';
+      return '• ' + d.plateforme + ' — ' + quand;
+    }).join('\n');
+
+    const entete = n === 1
+      ? 'Un seul appareil.'
+      : 'Compte ouvert depuis au moins ' + n + ' installations distinctes.'
+        + (alerte ? ' Partage probable' + (u.isPremium ? ' d\'un abonnement payant.' : '.') : '');
+
+    const titre = (entete + '\n\n' + detail
+      + '\n\nIndice, pas preuve : deux candidats sur un même téléphone comptent pour 1 ;'
+      + '\nun candidat qui réinstalle ou change de navigateur compte pour 2.')
+      .replace(/"/g, '&quot;');
+
+    return `
+      <span title="${titre}"
+            style="display:inline-block; min-width:1.8rem; text-align:center; font-weight:800;
+                   font-size:0.95rem; color:${couleur}; background:${fond};
+                   padding:0.1rem 0.4rem; border-radius:6px; cursor:help">
+        ${n}${alerte ? ' ⚠️' : ''}
+      </span>`;
+  },
+
   openActivateModal(userId) {
     this.state.modalOpen = 'activate';
-    this.state.modalData = { userId, plan: 'monthly' };
+    this.state.modalData = { userId, plan: this.PLAN_PAR_DEFAUT };
     this.render();
   },
 
   openAddUserModal() {
     this.state.modalOpen = 'add-user';
-    this.state.modalData = { plan: 'monthly', name: '', phone: '' };
+    this.state.modalData = { plan: this.PLAN_PAR_DEFAUT, name: '', phone: '' };
     this.render();
   },
 
