@@ -44,7 +44,16 @@ const UserFields = {
     targetConcours: ['targetConcours'],
     educationLevel: ['educationLevel', 'niveauScolaire'],
     email:          ['email'],
-    uid:            ['uid']
+    uid:            ['uid'],
+    // V64.16 : appareils depuis lesquels le compte a été ouvert.
+    //   Champ neuf, donc une seule variante : aucun historique à réconcilier.
+    //   Forme : { <identifiantAppareil> : { p, f, l } }
+    //     p = plateforme lisible (« Android · Chrome »)
+    //     f = première connexion depuis cet appareil (millisecondes)
+    //     l = dernière connexion depuis cet appareil (millisecondes)
+    //   « Connexion » et non « ouverture » : l'entrée est écrite quand le
+    //   compte est ouvert sur cet appareil, pas à chaque lancement de l'app.
+    devices:        ['devices']
   },
 
   // Valeurs considérées comme "vides" (placeholders par défaut de l'app)
@@ -130,6 +139,53 @@ const UserFields = {
   getTargetConcours(user, defaut = '') { return this.get(user, 'targetConcours', defaut); },
   getEducationLevel(user, defaut = '') { return this.get(user, 'educationLevel', defaut); },
   getEmail(user, defaut = '')          { return this.get(user, 'email', defaut); },
+
+  // ==================================================================
+  // V64.16 : APPAREILS DU COMPTE
+  // ==================================================================
+  //
+  // À quoi ça sert : rendre visible le partage de compte. Un abonnement
+  // utilisé depuis six appareils différents sert probablement six candidats
+  // pour un seul paiement.
+  //
+  // CE QUE LE CHIFFRE VAUT, ET CE QU'IL NE VAUT PAS
+  //   L'identifiant est posé dans le navigateur de l'appareil. Donc :
+  //     - deux candidats qui se partagent un seul téléphone comptent pour 1 ;
+  //     - un candidat qui vide les données du site, réinstalle l'application
+  //       ou ouvre le compte dans un autre navigateur compte pour 2.
+  //   À lire comme « ce compte a été ouvert depuis AU MOINS n installations
+  //   distinctes », c'est-à-dire un indice, jamais une preuve.
+  // ==================================================================
+
+  /** La table brute des appareils : { <id> : { p, f, l } }. */
+  getDevices(user) {
+    const d = this.get(user, 'devices', null);
+    return (d && typeof d === 'object') ? d : {};
+  },
+
+  /** Combien d'appareils distincts connus pour ce compte. */
+  countDevices(user) {
+    return Object.keys(this.getDevices(user)).length;
+  },
+
+  /**
+   * Les appareils en liste, de la connexion la plus récente à la plus ancienne.
+   * @returns {Array} [{ id, plateforme, premierVu, dernierVu }]
+   */
+  listDevices(user) {
+    const table = this.getDevices(user);
+    return Object.keys(table).map(id => {
+      const e = table[id] || {};
+      return {
+        id: id,
+        plateforme: e.p || 'Appareil inconnu',
+        premierVu: e.f || 0,
+        dernierVu: e.l || e.f || 0
+      };
+    }).sort((a, b) => b.dernierVu - a.dernierVu);
+  },
+
+  setDevices(user, table) { return this.set(user, 'devices', table); },
 
   // ==================================================================
   // RACCOURCIS D'ÉCRITURE
@@ -237,7 +293,140 @@ const UserFields = {
   }
 };
 
+/**
+ * BARA CONCOURS — Identité de l'appareil courant (V64.16)
+ * ========================================================
+ *
+ * Un identifiant stable par installation, posé dans le navigateur, pour
+ * compter les appareils d'un compte dans le tableau de bord admin.
+ *
+ * Volontairement anonyme : ni numéro de série, ni identifiant publicitaire,
+ * ni chaîne userAgent complète. Un tirage aléatoire et un libellé court du
+ * type « Android · Chrome ». Rien qui permette de retrouver un appareil
+ * ailleurs que dans ce compte.
+ */
+const UserDevice = {
+
+  STORAGE_KEY: 'bara_device_id',
+
+  // a-z et 0-9 seulement : l'identifiant sert de nom de champ Firestore,
+  // où le point, la barre oblique, les crochets, l'étoile et l'accent grave
+  // sont interdits, et où un nom ne peut pas commencer par deux soulignés.
+  ALPHABET: 'abcdefghijklmnopqrstuvwxyz0123456789',
+  LONGUEUR: 12,
+
+  // Au-delà, on ne garde que les plus récemment vus. Un compte très partagé
+  // accumulerait sinon des dizaines d'entrées dans son document Firestore.
+  MAX_APPAREILS: 12,
+
+  _tirer() {
+    let s = '';
+    for (let i = 0; i < this.LONGUEUR; i++) {
+      s += this.ALPHABET.charAt(Math.floor(Math.random() * this.ALPHABET.length));
+    }
+    return s;
+  },
+
+  /**
+   * L'identifiant de cet appareil, créé au premier appel puis réutilisé.
+   * Renvoie une chaîne vide si le navigateur refuse le stockage local
+   * (navigation privée verrouillée) : l'appelant n'enregistre alors rien,
+   * plutôt que de créer un appareil neuf à chaque ouverture.
+   */
+  getId() {
+    try {
+      let id = localStorage.getItem(this.STORAGE_KEY);
+      if (id && /^[a-z0-9]{6,32}$/.test(id)) return id;
+      id = this._tirer();
+      localStorage.setItem(this.STORAGE_KEY, id);
+      return id;
+    } catch (e) {
+      return '';
+    }
+  },
+
+  /** Libellé court et lisible : « Android · Chrome », « iPhone · Safari ». */
+  label() {
+    let ua = '';
+    try { ua = navigator.userAgent || ''; } catch (e) { return 'Appareil inconnu'; }
+
+    let systeme = 'Autre';
+    if (/Android/i.test(ua)) systeme = 'Android';
+    else if (/iPhone/i.test(ua)) systeme = 'iPhone';
+    else if (/iPad/i.test(ua)) systeme = 'iPad';
+    else if (/Windows/i.test(ua)) systeme = 'Windows';
+    else if (/Mac OS X/i.test(ua)) systeme = 'Mac';
+    else if (/Linux/i.test(ua)) systeme = 'Linux';
+
+    // L'ordre compte : Edge et Opera annoncent aussi « Chrome », et Chrome
+    // annonce aussi « Safari ». On teste donc du plus spécifique au plus large.
+    let navig = 'Navigateur';
+    if (/EdgA?\//i.test(ua)) navig = 'Edge';
+    else if (/OPR\/|Opera/i.test(ua)) navig = 'Opera';
+    else if (/SamsungBrowser/i.test(ua)) navig = 'Samsung';
+    else if (/Firefox\//i.test(ua)) navig = 'Firefox';
+    else if (/Chrome\//i.test(ua)) navig = 'Chrome';
+    else if (/Safari\//i.test(ua)) navig = 'Safari';
+
+    // L'application installée (PWA ou APK) s'ouvre hors onglet : utile à
+    // distinguer d'un simple passage par le navigateur.
+    let installee = false;
+    try {
+      installee = (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches)
+                  || window.navigator.standalone === true;
+    } catch (e) {}
+
+    return systeme + ' · ' + navig + (installee ? ' · app installée' : '');
+  },
+
+  /**
+   * La table des appareils mise à jour pour cet appareil-ci.
+   *
+   * @param {Object} tableActuelle - la table lue sur le document utilisateur
+   * @returns {Object|null} { table, estNouveau, elague, id }, ou null si le
+   *   navigateur refuse le stockage local et qu'il n'y a donc rien à écrire
+   */
+  majTable(tableActuelle) {
+    const id = this.getId();
+    if (!id) return null;
+
+    const table = {};
+    Object.keys(tableActuelle || {}).forEach(k => {
+      const e = (tableActuelle || {})[k];
+      if (e && typeof e === 'object') table[k] = { p: e.p || '', f: e.f || 0, l: e.l || e.f || 0 };
+    });
+
+    const maintenant = Date.now();
+    const estNouveau = !table[id];
+
+    if (estNouveau) {
+      table[id] = { p: this.label(), f: maintenant, l: maintenant };
+    } else {
+      table[id].l = maintenant;
+      // Le libellé peut changer sans que l'appareil change : mise à jour du
+      // navigateur, passage du navigateur à l'application installée.
+      table[id].p = this.label();
+    }
+
+    // Élagage : on garde les plus récemment vus, en conservant toujours
+    // l'appareil courant.
+    let elague = false;
+    const ids = Object.keys(table);
+    if (ids.length > this.MAX_APPAREILS) {
+      ids.sort((a, b) => (table[b].l || 0) - (table[a].l || 0));
+      const aGarder = new Set(ids.slice(0, this.MAX_APPAREILS));
+      aGarder.add(id);
+      Object.keys(table).forEach(k => {
+        if (!aGarder.has(k)) { delete table[k]; elague = true; }
+      });
+    }
+
+    return { table: table, estNouveau: estNouveau, elague: elague, id: id };
+  }
+};
+
 // Export global
 if (typeof window !== 'undefined') {
   window.UserFields = UserFields;
+  window.UserDevice = UserDevice;
 }

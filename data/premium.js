@@ -4,6 +4,15 @@
 const PremiumService = {
   // === PLANS DISPONIBLES ===
   PLANS: {
+    // V64.16 : Hebdomadaire et Mensuel retires de la vente.
+    //   La grille 2027 ne comporte que des formules annuelles, qui courent
+    //   toutes jusqu'a la fin des compositions. Tant que ces deux plans
+    //   restaient affiches, un candidat pouvait encore en acheter un, et son
+    //   compte repassait en Gratuit avant l'echeance : exactement le cas que
+    //   la nouvelle grille supprime.
+    //   Conserves dans PLANS, et non effaces : un compte ou un code encore
+    //   actif sur ces plans doit continuer a etre reconnu (le nom du plan
+    //   s'affiche dans l'admin, la date d'expiration reste calculee).
     weekly: {
       id: 'weekly',
       name: 'Hebdomadaire',
@@ -15,7 +24,8 @@ const PremiumService = {
       tag: 'Pour tester',
       tagColor: '#2563eb',
       tagBg: '#dbeafe',
-      popular: false
+      popular: false,
+      hidden: true
     },
     monthly: {
       id: 'monthly',
@@ -28,7 +38,8 @@ const PremiumService = {
       tag: 'Pour 1 mois',
       tagColor: '#854d0e',
       tagBg: '#fef9c3',
-      popular: false
+      popular: false,
+      hidden: true
     },
     // V60 : Plan SESSION 2026 — accès jusqu'au 15 août 2026 (date fixe)
     // Remplace l'ancien yearly (retiré pour la saison concours 2026)

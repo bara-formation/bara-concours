@@ -478,17 +478,72 @@ const FirebaseAuth = {
   // GESTION DU PROFIL FIRESTORE
   // ====================================================================
 
+  /**
+   * V64.16 : les champs d'appareil à fusionner dans l'écriture de connexion.
+   *
+   * Coût : aucun. On se greffe sur l'écriture `lastLoginAt` qui a déjà lieu
+   *   à chaque connexion, et on réutilise le document déjà lu. Ni lecture ni
+   *   écriture supplémentaire — le quota Firestore ne bouge pas.
+   *
+   * Cas courant : un chemin pointé (`devices.<id>`), qui ne touche qu'à
+   *   l'entrée de cet appareil. Deux appareils connectés en même temps ne
+   *   s'écrasent donc pas l'un l'autre.
+   * Cas de l'élagage : la table a dépassé le plafond, on la réécrit entière
+   *   puisque des entrées disparaissent.
+   */
+  _champsAppareil(donneesExistantes) {
+    try {
+      if (!window.UserDevice) return {};
+      const table = (donneesExistantes && donneesExistantes.devices) || {};
+      const res = window.UserDevice.majTable(table);
+      if (!res) return {};
+      if (res.elague) return { devices: res.table };
+      return { ['devices.' + res.id]: res.table[res.id] };
+    } catch (e) {
+      // Le suivi d'appareils ne doit jamais empêcher une connexion.
+      console.warn('[Firebase] Suivi d\'appareil ignoré :', e);
+      return {};
+    }
+  },
+
+  /** V64.16 : la table d'appareils d'un compte qui vient d'être créé. */
+  _premierAppareil() {
+    try {
+      if (!window.UserDevice) return {};
+      const res = window.UserDevice.majTable({});
+      return res ? res.table : {};
+    } catch (e) {
+      console.warn('[Firebase] Suivi d\'appareil ignoré :', e);
+      return {};
+    }
+  },
+
   // Créer le document utilisateur s'il n'existe pas, ou récupérer l'existant
   async _ensureUserDoc(user, authProvider, additionalInfo) {
     const userRef = this._fbFns.doc(this.db, 'users', user.uid);
     const snap = await this._fbFns.getDoc(userRef);
 
     if (snap.exists()) {
-      // Profil existant : mettre à jour lastLoginAt
-      await this._fbFns.updateDoc(userRef, {
-        lastLoginAt: this._fbFns.serverTimestamp()
-      });
-      this.userProfile = { ...snap.data(), _isNewUser: false };
+      const donnees = snap.data();
+      // Profil existant : mettre à jour lastLoginAt (+ l'appareil courant)
+      const champsAppareil = this._champsAppareil(donnees);
+      try {
+        await this._fbFns.updateDoc(userRef, {
+          lastLoginAt: this._fbFns.serverTimestamp(),
+          ...champsAppareil
+        });
+      } catch (e) {
+        // V64.16 : garde-fou. Si les règles Firestore n'autorisent pas encore
+        //   le champ `devices`, l'écriture entière serait refusée et la
+        //   connexion échouerait. On réessaie alors sans le suivi d'appareil :
+        //   mieux vaut perdre l'indice de partage que la connexion.
+        if (Object.keys(champsAppareil).length === 0) throw e;
+        console.warn('[Firebase] Écriture avec suivi d\'appareil refusée, nouvel essai sans :', e);
+        await this._fbFns.updateDoc(userRef, {
+          lastLoginAt: this._fbFns.serverTimestamp()
+        });
+      }
+      this.userProfile = { ...donnees, _isNewUser: false };
       return this.userProfile;
     }
 
@@ -517,6 +572,10 @@ const FirebaseAuth = {
       premiumPlan: null,
       premiumExpiresAt: null,
       premiumActivatedAt: null,
+      // V64.16 : premier appareil du compte. Forme imbriquée, et non un
+      //   chemin pointé : setDoc ne lit pas « devices.abc » comme un chemin,
+      //   il créerait un champ dont le nom contient un point.
+      devices: this._premierAppareil(),
       createdAt: this._fbFns.serverTimestamp(),
       lastLoginAt: this._fbFns.serverTimestamp()
     };
