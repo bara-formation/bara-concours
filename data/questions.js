@@ -1,6 +1,6 @@
 // Bara Concours - Base de questions QCM
-// Mis à jour le 2026-11-16 - Lettres de bonne reponse reequilibrees (577 questions, ordre des propositions seulement)
-// Total : 7732 questions réparties sur 37 matières
+// Mis à jour le 2026-11-19 - Nouvelles matieres Histoire (600) et Geographie (600) ; matiere Histoire-Geographie (histgeo, 10 questions) retiree
+// Total : 8922 questions réparties sur 38 matières
 
 const QUESTIONS = {
   "francais": [
@@ -32999,118 +32999,6 @@ const QUESTIONS = {
       ],
       "r": 2,
       "x": "Le prix Nobel de la paix a été attribué le 9 octobre 2026 à la juriste sud-africaine Navi Pillay pour ses décennies d'engagement en faveur du droit international et de la justice pénale. María Corina Machado (B) est la lauréate de l'édition précédente."
-    }
-  ],
-  "histgeo": [
-    {
-      "q": "Le Burkina Faso a été rebaptisé en :",
-      "o": [
-        "1980",
-        "1983",
-        "1984",
-        "1987"
-      ],
-      "r": 2,
-      "x": "Le 4 août 1984, Thomas Sankara renomme la Haute-Volta en « Burkina Faso » : « Pays des hommes intègres » (mooré + dioula)."
-    },
-    {
-      "q": "Thomas Sankara est mort le :",
-      "o": [
-        "15 août 1987",
-        "15 octobre 1987",
-        "4 août 1983",
-        "4 août 1984"
-      ],
-      "r": 1,
-      "x": "Thomas Sankara, président révolutionnaire du BF, est assassiné le 15 octobre 1987 lors du coup d'État de Blaise Compaoré."
-    },
-    {
-      "q": "L'Empire des Mossi avait pour capitale :",
-      "o": [
-        "Ouagadougou",
-        "Bobo-Dioulasso",
-        "Tenkodogo",
-        "Koudougou"
-      ],
-      "r": 0,
-      "x": "Ouagadougou (« Wogodogo ») est la capitale historique de l'Empire mossi du Mogho Naba, fondé au XIIIe siècle."
-    },
-    {
-      "q": "Continent le plus peuplé du monde ?",
-      "o": [
-        "Afrique",
-        "Europe",
-        "Asie",
-        "Amérique"
-      ],
-      "r": 2,
-      "x": "L'Asie est le continent le plus peuplé (~4,7 milliards d'habitants), notamment grâce à la Chine et l'Inde."
-    },
-    {
-      "q": "Le tropique qui traverse le nord du BF est :",
-      "o": [
-        "Tropique du Cancer",
-        "Tropique du Capricorne",
-        "Équateur",
-        "Cercle polaire"
-      ],
-      "r": 0,
-      "x": "Le Tropique du Cancer (23°27' N) ne traverse pas le BF mais passe au nord (Sahara). Le BF est entre l'équateur et ce tropique."
-    },
-    {
-      "q": "Pays voisins du Burkina Faso au sud ?",
-      "o": [
-        "Mali, Niger",
-        "Côte d'Ivoire, Ghana, Togo, Bénin",
-        "Sénégal, Guinée",
-        "Tchad, Nigeria"
-      ],
-      "r": 1,
-      "x": "Frontières sud du BF : Côte d'Ivoire, Ghana, Togo, Bénin. Au nord : Mali. À l'est : Niger."
-    },
-    {
-      "q": "Première ville du BF à recevoir le chemin de fer ?",
-      "o": [
-        "Ouagadougou",
-        "Koudougou",
-        "Banfora",
-        "Bobo-Dioulasso"
-      ],
-      "r": 3,
-      "x": "Bobo-Dioulasso a reçu le chemin de fer Abidjan-Niger (RAN) en 1934, bien avant Ouagadougou (1954)."
-    },
-    {
-      "q": "Quel océan borde l'Afrique de l'Ouest ?",
-      "o": [
-        "Pacifique",
-        "Indien",
-        "Atlantique",
-        "Arctique"
-      ],
-      "r": 2,
-      "x": "L'océan Atlantique borde l'Afrique de l'Ouest. L'océan Indien borde l'Afrique de l'Est."
-    },
-    {
-      "q": "Le climat dominant du Burkina Faso est :",
-      "o": [
-        "Équatorial",
-        "Polaire",
-        "Méditerranéen",
-        "Tropical"
-      ],
-      "r": 3,
-      "x": "Le climat est tropical, avec deux saisons : sèche (octobre-mai) et pluvieuse (juin-septembre). Variantes : sahélienne au nord, soudanienne au sud."
-    },
-    {
-      "q": "L'esclavage en Afrique a été aboli (officiellement par la France) en :",
-      "o": [
-        "1789",
-        "1848",
-        "1885",
-        "1960"
-      ],
-      "r": 1,
-      "x": "Décret du 27 avril 1848 (Victor Schœlcher) abolissant l'esclavage dans les colonies françaises. Sur le terrain, des pratiques ont perduré bien plus tard."
     }
   ],
   "svt_bepc": [
@@ -86797,6 +86685,14410 @@ const QUESTIONS = {
       ],
       "r": 2,
       "x": "L'IBI (Index of Biotic Integrity) évalue la santé écologique d'un milieu aquatique par comparaison de la communauté piscicole actuelle (diversité, structure trophique, état de santé des individus) à une communauté de référence non perturbée. Un IBI faible révèle une dégradation anthropique significative du plan d'eau."
+    }
+  ],
+  "geographie": [
+    {
+      "q": "La superficie du Burkina Faso est de :",
+      "o": [
+        "114 763 km²",
+        "238 533 km²",
+        "245 857 km²",
+        "274 200 km²"
+      ],
+      "r": 3,
+      "x": "Le Burkina Faso, pays enclavé d'Afrique de l'Ouest, couvre 274 200 km². Les 245 857 km² correspondent à la Guinée, les 238 533 km² au Ghana et les 114 763 km² au Bénin. Il est donc un peu plus vaste que la Guinée et plus de deux fois plus grand que le Bénin.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Ténakourou, point culminant du Burkina Faso, s'élève à :",
+      "o": [
+        "200 m",
+        "400 m",
+        "749 m",
+        "1 752 m"
+      ],
+      "r": 2,
+      "x": "Le Ténakourou culmine à 749 m et domine un pays au relief globalement plat. Le dénivelé entre les points extrêmes du territoire ne dépasse pas 600 m. Ce sommet modeste montre que le Burkina Faso ne possède pas de véritables montagnes.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Burkina Faso partage ses frontières terrestres avec :",
+      "o": [
+        "cinq pays",
+        "six pays",
+        "sept pays",
+        "huit pays"
+      ],
+      "r": 1,
+      "x": "Ses six voisins sont le Mali, le Niger, le Bénin, le Togo, le Ghana et la Côte d'Ivoire. Sans accès à la mer, le Burkina Faso est un pays enclavé. Quatre d'entre eux (Bénin, Togo, Ghana et Côte d'Ivoire) disposent d'une façade maritime sur le golfe de Guinée.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le pays avec lequel le Burkina Faso partage sa plus longue frontière est :",
+      "o": [
+        "le Mali",
+        "le Niger",
+        "le Ghana",
+        "la Côte d'Ivoire"
+      ],
+      "r": 0,
+      "x": "La frontière avec le Mali dépasse 1 000 km selon toutes les sources, loin devant celle partagée avec le Niger (environ 620 km). La plus courte est celle du Togo. Cette longueur s'explique par la position du Mali, qui borde le pays à la fois au nord et à l'ouest.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le point le plus bas du Burkina Faso, situé dans la vallée du Mouhoun, se trouve à environ :",
+      "o": [
+        "100 m",
+        "200 m",
+        "300 m",
+        "400 m"
+      ],
+      "r": 1,
+      "x": "Le point le plus bas du pays se situe à environ 200 m d'altitude, sur le Mouhoun. Les 400 m correspondent à peu près à l'altitude moyenne du territoire. Ce faible écart d'altitude confirme la platitude générale du relief.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le territoire du Burkina Faso s'étend principalement entre les latitudes :",
+      "o": [
+        "3° et 9° Nord",
+        "6° et 12° Nord",
+        "9° et 15° Nord",
+        "12° et 18° Nord"
+      ],
+      "r": 2,
+      "x": "Le pays s'étend principalement entre 9° et 15° de latitude Nord, une petite partie dépassant 15°. Il est donc entièrement situé au sud du tropique du Cancer (23° 26′ N). Cette position en zone intertropicale explique les températures élevées toute l'année.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "En dehors du Burkina Faso, le méridien de Greenwich traverse en Afrique de l'Ouest :",
+      "o": [
+        "le Niger",
+        "le Bénin",
+        "la Côte d'Ivoire",
+        "le Ghana"
+      ],
+      "r": 3,
+      "x": "Le méridien de Greenwich traverse notamment l'Algérie, le Mali, le Burkina Faso, le Togo et le Ghana. Le Niger et le Bénin sont entièrement situés à l'est de ce méridien. Au Ghana, ce méridien passe notamment par la ville portuaire de Tema.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Burkina Faso vit toute l'année à l'heure :",
+      "o": [
+        "GMT – 1",
+        "GMT",
+        "GMT + 1",
+        "GMT + 2"
+      ],
+      "r": 1,
+      "x": "Le Burkina Faso vit à l'heure de Greenwich (UTC + 0) toute l'année, sans heure d'été. GMT + 1 correspond par exemple à l'heure d'hiver de Paris. Ce choix est cohérent avec la position du pays, traversé par le méridien de Greenwich.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Burkina Faso est situé à l'intérieur de la boucle du fleuve :",
+      "o": [
+        "Volta",
+        "Sénégal",
+        "Gambie",
+        "Niger"
+      ],
+      "r": 3,
+      "x": "Le pays occupe l'intérieur de la grande boucle que décrit le Niger en Afrique de l'Ouest. Une partie du territoire, au nord et à l'est, appartient d'ailleurs au bassin de ce fleuve. Le fleuve lui-même ne traverse pas le territoire burkinabè : il coule au Mali puis au Niger.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Pour la gestion de l'eau, le Burkina Faso est découpé en bassins hydrographiques nationaux au nombre de :",
+      "o": [
+        "deux",
+        "trois",
+        "quatre",
+        "cinq"
+      ],
+      "r": 2,
+      "x": "Ces bassins nationaux servent de cadre à la gestion intégrée des ressources en eau. Deux d'entre eux relèvent du grand bassin international de la Volta. Ce découpage permet de gérer l'eau selon son écoulement naturel plutôt que selon les limites administratives.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le plus vaste des bassins hydrographiques nationaux du Burkina Faso, avec environ 91 000 km², est celui :",
+      "o": [
+        "du Mouhoun",
+        "du Nakambé",
+        "du Niger",
+        "de la Comoé"
+      ],
+      "r": 0,
+      "x": "Le bassin du Mouhoun couvre environ 91 000 km². Il devance de peu les bassins du Niger et du Nakambé. Il occupe ainsi environ un tiers du territoire national.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le plus petit des bassins hydrographiques nationaux, celui de la Comoé, couvre environ :",
+      "o": [
+        "9 800 km²",
+        "17 600 km²",
+        "29 500 km²",
+        "46 200 km²"
+      ],
+      "r": 1,
+      "x": "Le bassin de la Comoé couvre environ 17 600 km², soit à peine plus de 6 % du territoire. Il est situé dans le sud-ouest du pays. La Comoé poursuit ensuite son cours en Côte d'Ivoire jusqu'au golfe de Guinée.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Mouhoun portait autrefois le nom de :",
+      "o": [
+        "Volta Noire",
+        "Volta Rouge",
+        "Volta Blanche",
+        "Comoé"
+      ],
+      "r": 0,
+      "x": "Le Mouhoun est l'ancienne Volta Noire. Le Nakambé correspond à l'ancienne Volta Blanche et le Nazinon à l'ancienne Volta Rouge. Le nom de Haute-Volta, ancien nom du pays, vient justement de ces trois Volta.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Au Ghana, le Nazinon se jette dans :",
+      "o": [
+        "le Nakambé",
+        "le Mouhoun",
+        "la Comoé",
+        "l'Oti"
+      ],
+      "r": 0,
+      "x": "Le Nazinon rejoint le Nakambé au Ghana, en amont du lac Volta. La Comoé coule, elle, vers la Côte d'Ivoire. Comme le Nakambé, le Nazinon coule globalement du nord vers le sud.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Les deux principaux cours d'eau permanents du Burkina Faso sont :",
+      "o": [
+        "le Mouhoun et la Comoé",
+        "le Nakambé et le Nazinon",
+        "la Sirba et la Tapoa",
+        "le Béli et le Gorouol"
+      ],
+      "r": 0,
+      "x": "Le Mouhoun et la Comoé sont les principaux cours d'eau du pays à couler toute l'année. Les autres sont temporaires et ne coulent qu'une partie de l'année, pendant et après la saison des pluies. Le débit du Mouhoun et de la Comoé baisse toutefois fortement pendant la saison sèche.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Béli, le Gorouol et le Goudébo sont des affluents :",
+      "o": [
+        "du Niger",
+        "du Nakambé",
+        "du Mouhoun",
+        "de la Comoé"
+      ],
+      "r": 0,
+      "x": "Ces cours d'eau du nord-est appartiennent au bassin du Niger. Ils ne coulent que 4 à 6 mois par an. Leur écoulement temporaire s'explique par la faiblesse des pluies dans le nord du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La retenue du barrage de Kompienga a une capacité d'environ :",
+      "o": [
+        "700 millions de m³",
+        "1,05 milliard de m³",
+        "1,7 milliard de m³",
+        "2 milliards de m³"
+      ],
+      "r": 3,
+      "x": "Avec environ 2 milliards de m³, la retenue de Kompienga est la plus importante du pays. Celle de Bagré atteint environ 1,7 milliard de m³. Mis en service à la fin des années 1980, le barrage de Kompienga alimente une centrale hydroélectrique.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le barrage de Bagré, deuxième retenue du pays, est construit sur :",
+      "o": [
+        "le Nakambé",
+        "le Mouhoun",
+        "le Nazinon",
+        "le Sourou"
+      ],
+      "r": 0,
+      "x": "Bagré est situé sur le Nakambé, dans le centre-est du pays. Il alimente une centrale hydroélectrique et le pôle de croissance de Bagrépôle. Mis en eau dans les années 1990, l'ouvrage sert aussi à irriguer plusieurs milliers d'hectares de rizières.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le barrage de Samendéni, troisième plus grand du pays, a été inauguré en :",
+      "o": [
+        "2009",
+        "2014",
+        "2019",
+        "2023"
+      ],
+      "r": 2,
+      "x": "Le barrage de Samendéni, d'environ 1,05 milliard de m³, a été inauguré le 30 novembre 2019. Il se situe dans l'ouest du pays, non loin de Bobo-Dioulasso. Construit sur le Mouhoun, il sert à l'irrigation, à la production d'électricité et à l'approvisionnement en eau.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le barrage de Ziga, qui alimente Ouagadougou en eau potable, a une capacité d'environ :",
+      "o": [
+        "50 millions de m³",
+        "200 millions de m³",
+        "500 millions de m³",
+        "900 millions de m³"
+      ],
+      "r": 1,
+      "x": "La retenue de Ziga contient environ 200 millions de m³ à son niveau normal. Elle est exploitée par l'Office national de l'eau et de l'assainissement (ONEA). Le barrage est construit sur le Nakambé, à environ 50 km au nord-est de Ouagadougou.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le lac Bam, présenté comme le plus grand lac naturel du pays, se trouve près de :",
+      "o": [
+        "Kongoussi",
+        "Kaya",
+        "Ouahigouya",
+        "Djibo"
+      ],
+      "r": 0,
+      "x": "Le lac Bam borde la ville de Kongoussi. Il est inscrit sur la liste Ramsar des zones humides d'importance internationale depuis le 7 octobre 2009. Ses rives sont surtout connues pour la culture maraîchère, notamment le haricot vert.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le lac de Tingrela, réputé pour ses hippopotames, se trouve près de :",
+      "o": [
+        "Banfora",
+        "Gaoua",
+        "Dédougou",
+        "Tenkodogo"
+      ],
+      "r": 0,
+      "x": "Le lac de Tingrela se situe à quelques kilomètres de Banfora, dans le sud-ouest. Ses hippopotames en font un site touristique prisé. Il fait partie d'un circuit touristique qui comprend aussi les cascades de Karfiguéla et les dômes de Fabédougou.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La Mare aux hippopotames, inscrite sur la liste Ramsar en 1990, se trouve au nord de :",
+      "o": [
+        "Bobo-Dioulasso",
+        "Dédougou",
+        "Banfora",
+        "Orodara"
+      ],
+      "r": 0,
+      "x": "La Mare aux hippopotames se situe à environ 60 km au nord de Bobo-Dioulasso, dans la plaine inondable du Mouhoun. C'est aussi une réserve de biosphère de l'UNESCO. La mare est alimentée par les crues du Mouhoun pendant la saison des pluies.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Au Burkina Faso, la zone sahélienne reçoit en moyenne par an :",
+      "o": [
+        "moins de 600 mm",
+        "600 à 900 mm",
+        "900 à 1 200 mm",
+        "plus de 1 200 mm"
+      ],
+      "r": 0,
+      "x": "La zone sahélienne, au nord, reçoit moins de 600 mm de pluie par an. Les températures peuvent y varier de 5 °C à 47 °C. Cette faible pluviométrie limite l'agriculture et favorise l'élevage.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La zone soudano-sahélienne, au centre du pays, reçoit en moyenne par an :",
+      "o": [
+        "300 à 600 mm",
+        "600 à 900 mm",
+        "900 à 1 200 mm",
+        "1 200 à 1 500 mm"
+      ],
+      "r": 1,
+      "x": "Cette zone de transition reçoit entre 600 et 900 mm de pluie par an. Elle s'étend approximativement entre 11° 3′ et 13° 5′ de latitude Nord. Elle englobe notamment le plateau central, la partie la plus densément peuplée du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La zone la plus arrosée du Burkina Faso, avec plus de 900 mm de pluie par an, est située :",
+      "o": [
+        "au nord",
+        "à l'est",
+        "au centre",
+        "au sud-ouest"
+      ],
+      "r": 3,
+      "x": "La zone soudanienne du sud-ouest est la plus humide, avec des forêts autour de Bobo-Dioulasso et de Banfora. Le nord, sahélien, est la partie la plus sèche du pays. Cette abondance de pluies permet des cultures exigeantes en eau, comme le coton, le maïs ou les arbres fruitiers.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Pendant la saison sèche, le vent chaud et sec venu du Sahara qui souffle sur le Burkina Faso est :",
+      "o": [
+        "l'harmattan",
+        "la mousson",
+        "le sirocco",
+        "l'alizé austral"
+      ],
+      "r": 0,
+      "x": "L'harmattan, vent sec et chargé de poussière, souffle du Sahara pendant la saison sèche. La mousson, humide, apporte au contraire les pluies d'été. Ce vent réduit la visibilité et favorise les infections respiratoires ainsi que les épidémies de méningite.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La pluviométrie moyenne annuelle de Ouagadougou est d'environ :",
+      "o": [
+        "450 mm",
+        "750 mm",
+        "1 000 mm",
+        "1 300 mm"
+      ],
+      "r": 1,
+      "x": "Ouagadougou reçoit en moyenne environ 744 mm de pluie par an. Bobo-Dioulasso, plus au sud-ouest, dépasse 1 000 mm. Ce total peut toutefois varier fortement d'une année à l'autre.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La saison des pluies au Burkina Faso dure en moyenne environ :",
+      "o": [
+        "un mois",
+        "deux mois",
+        "trois mois",
+        "quatre mois"
+      ],
+      "r": 3,
+      "x": "La saison des pluies dure environ quatre mois, de mai-juin à septembre. Elle est plus courte au nord et plus longue au sud-ouest. Le reste de l'année correspond à une longue saison sèche.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "En 2020, les forêts couvraient environ :",
+      "o": [
+        "8 % du territoire burkinabè",
+        "15 % du territoire burkinabè",
+        "23 % du territoire burkinabè",
+        "41 % du territoire burkinabè"
+      ],
+      "r": 2,
+      "x": "Les forêts couvraient environ 23 % du territoire en 2020. Environ 16 % de ces forêts sont situées dans des aires protégées. Il s'agit surtout de savanes boisées et de forêts claires, et non de forêts denses.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Entre 1990 et 2020, la superficie forestière du Burkina Faso a diminué d'environ :",
+      "o": [
+        "0,3 million d'hectares",
+        "0,6 million d'hectares",
+        "1,0 million d'hectares",
+        "1,5 million d'hectares"
+      ],
+      "r": 3,
+      "x": "La forêt est passée d'environ 7,7 millions d'hectares en 1990 à 6,2 millions en 2020. La quasi-totalité est constituée de forêts naturellement régénérées. Cette baisse s'explique surtout par l'extension des cultures, la coupe du bois de chauffe et les feux de brousse.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Les ruines de Loropéni ont été inscrites au patrimoine mondial de l'UNESCO en :",
+      "o": [
+        "2009",
+        "2012",
+        "2017",
+        "2019"
+      ],
+      "r": 0,
+      "x": "Les ruines de Loropéni, vestiges de murs en pierre du sud-ouest, ont été le premier bien burkinabè inscrit. Le pays a ensuite fait inscrire trois autres biens. Ces ruines, liées au commerce ancien de l'or, se trouvent non loin de Gaoua.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le complexe W-Arly-Pendjari a été inscrit au patrimoine mondial de l'UNESCO en :",
+      "o": [
+        "1997",
+        "2009",
+        "2017",
+        "2024"
+      ],
+      "r": 2,
+      "x": "Ce bien naturel, situé dans l'est du pays, est le seul bien burkinabè partagé avec des pays voisins. Il étend un site du parc national du W inscrit auparavant. Il abrite notamment des éléphants, des lions et des buffles.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La cour royale de Tiébélé a été inscrite au patrimoine mondial lors de la session tenue à New Delhi en :",
+      "o": [
+        "2019",
+        "2022",
+        "2023",
+        "2024"
+      ],
+      "r": 3,
+      "x": "L'inscription a eu lieu lors de la 46e session du Comité du patrimoine mondial, en juillet 2024. La cour royale se trouve dans la province du Nahouri. Ses cases ornées de motifs peints par les femmes kasséna en font un site unique.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Les sites de métallurgie ancienne du fer du Burkina Faso ont été inscrits au patrimoine mondial en :",
+      "o": [
+        "2015",
+        "2019",
+        "2021",
+        "2023"
+      ],
+      "r": 1,
+      "x": "Ces sites, situés notamment dans le nord et le centre-nord, témoignent d'une production très ancienne de fer. Ils comprennent notamment des fourneaux de réduction du minerai. Ils comptent parmi les plus anciens témoignages de la métallurgie du fer en Afrique de l'Ouest.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le parc national Kaboré Tambi, ancien parc national de Pô, a été créé en :",
+      "o": [
+        "1956",
+        "1976",
+        "1991",
+        "2005"
+      ],
+      "r": 1,
+      "x": "Le parc, d'environ 1 555 km², longe le Nazinon près de Pô. Il porte le nom d'un garde forestier tué par des braconniers en 1991. Il abrite notamment des éléphants et plusieurs espèces d'antilopes.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Depuis le découpage de juillet 2025, les pics de Sindou se trouvent dans la région dénommée :",
+      "o": [
+        "Tannounyan",
+        "Guiriko",
+        "Djôrô",
+        "Bankui"
+      ],
+      "r": 0,
+      "x": "Les pics de Sindou se trouvent dans l'ancienne région des Cascades, renommée Tannounyan en 2025. Ces aiguilles de grès comptent parmi les principaux sites touristiques du pays. Leurs formes ont été façonnées par l'érosion due au vent et à la pluie.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Sourou, dont le nom a été donné à une région en 2025, est :",
+      "o": [
+        "un défluent du Mouhoun",
+        "un affluent du Niger",
+        "un lac de cratère",
+        "un affluent de la Comoé"
+      ],
+      "r": 0,
+      "x": "Le Sourou est un défluent du Mouhoun dont la vallée offre de vastes plaines fertiles. Son nom a été repris pour l'une des quatre régions créées en 2025. Sa vallée, aménagée pour l'irrigation, est l'une des principales zones agricoles du nord-ouest du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Mouhoun et le Nakambé appartiennent au bassin international :",
+      "o": [
+        "de la Volta",
+        "du Niger",
+        "du Sénégal",
+        "de la Comoé"
+      ],
+      "r": 0,
+      "x": "Le Mouhoun et le Nakambé se jettent au Ghana dans le lac Volta, retenu par le barrage d'Akosombo. Le bassin du Niger draine, lui, le nord et l'est du pays. Ce bassin draine la majeure partie du territoire burkinabè, notamment le centre et l'ouest.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La végétation dominante dans le nord sahélien du Burkina Faso est :",
+      "o": [
+        "la savane boisée",
+        "la forêt galerie",
+        "la savane arborée",
+        "la steppe"
+      ],
+      "r": 3,
+      "x": "Le nord sahélien est couvert de steppes à épineux qui reverdissent pendant la saison des pluies. Les savanes arborées et boisées, ainsi que les forêts galeries, se rencontrent plus au sud. Cette végétation basse est adaptée à la faiblesse des pluies.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Burkina Faso mesure du nord au sud environ :",
+      "o": [
+        "425 km",
+        "625 km",
+        "850 km",
+        "1 050 km"
+      ],
+      "r": 1,
+      "x": "Le pays mesure environ 625 km du nord au sud et 850 km d'est en ouest. Ouagadougou se trouve à environ 1 200 km du port d'Abidjan. Le territoire est donc plus large d'est en ouest que long du nord au sud.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Burkina Faso est séparé de l'océan Atlantique par une distance minimale d'environ :",
+      "o": [
+        "150 km",
+        "300 km",
+        "500 km",
+        "800 km"
+      ],
+      "r": 2,
+      "x": "Le littoral atlantique le plus proche se trouve à environ 500 km de la frontière sud. Le commerce maritime du pays passe par les ports d'Abidjan, de Téma et de Lomé. Cet éloignement de la mer renchérit le coût des importations et des exportations.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La plus grande partie du relief burkinabè est constituée :",
+      "o": [
+        "d'une pénéplaine",
+        "de hautes montagnes",
+        "de plateaux volcaniques",
+        "de dunes vives"
+      ],
+      "r": 0,
+      "x": "L'essentiel du territoire est une pénéplaine aux ondulations douces, parsemée de collines isolées. L'altitude moyenne du pays avoisine 400 m. Une pénéplaine est une surface presque plane, issue d'une très longue érosion.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Ténakourou appartient au massif gréseux situé :",
+      "o": [
+        "au nord du pays",
+        "à l'est du pays",
+        "au sud-ouest du pays",
+        "au centre du pays"
+      ],
+      "r": 2,
+      "x": "Ce massif gréseux est le seul ensemble de relief notable d'un pays globalement plat. Le nord est surtout occupé par des plaines et des dunes sahéliennes. Le grès est une roche sédimentaire résistante qui forme des plateaux et des falaises.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Les falaises gréseuses du sud-ouest, comme celle de Banfora, atteignent une hauteur d'environ :",
+      "o": [
+        "50 m",
+        "150 m",
+        "400 m",
+        "750 m"
+      ],
+      "r": 1,
+      "x": "Ces falaises atteignent jusqu'à 150 m de hauteur. Ce chiffre reste modeste : le dénivelé total du pays ne dépasse pas 600 m. Elles marquent le rebord du plateau gréseux et donnent naissance à des cascades.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La mare d'Oursi, grande zone humide du Sahel burkinabè, se trouve dans la province :",
+      "o": [
+        "de l'Oudalan",
+        "du Séno",
+        "du Yagha",
+        "du Loroum"
+      ],
+      "r": 0,
+      "x": "La mare d'Oursi se situe dans l'Oudalan, à l'extrême nord du pays. Elle accueille de nombreux oiseaux d'eau pendant la saison sèche. Elle est inscrite sur la liste Ramsar des zones humides d'importance internationale depuis 1990.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le lac Dem se trouve à proximité de :",
+      "o": [
+        "Kaya",
+        "Ziniaré",
+        "Koupéla",
+        "Boulsa"
+      ],
+      "r": 0,
+      "x": "Le lac Dem se trouve à proximité de Kaya, dans le centre-nord du pays. C'est l'un des rares lacs naturels du pays, avec le lac Bam et le lac de Tingrela. Ce lac sert à l'irrigation et à la pêche pour les populations riveraines.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La Sirba, cours d'eau de l'est burkinabè, appartient au bassin :",
+      "o": [
+        "du Niger",
+        "de la Volta",
+        "de la Comoé",
+        "du Sénégal"
+      ],
+      "r": 0,
+      "x": "La Sirba naît dans le Ganzourgou et coule vers le Niger. Comme la Tapoa, elle draine l'est du pays. Elle franchit ensuite la frontière pour rejoindre le fleuve Niger sur le territoire nigérien.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le complexe W-Arly-Pendjari est partagé par le Burkina Faso, le Bénin et :",
+      "o": [
+        "le Togo",
+        "le Mali",
+        "le Ghana",
+        "le Niger"
+      ],
+      "r": 3,
+      "x": "Le complexe W-Arly-Pendjari s'étend sur le Burkina Faso, le Bénin et le Niger. Il forme l'un des plus vastes ensembles d'aires protégées d'Afrique de l'Ouest. Il regroupe notamment les parcs nationaux du W, d'Arly et de la Pendjari.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La mousson qui apporte les pluies au Burkina Faso provient :",
+      "o": [
+        "du Sahara",
+        "de la mer Méditerranée",
+        "du golfe de Guinée",
+        "de l'océan Indien"
+      ],
+      "r": 2,
+      "x": "La mousson, masse d'air humide venue du golfe de Guinée, remonte vers le nord pendant l'été. Les pluies diminuent donc du sud vers le nord du pays. Son arrivée marque le début de la saison des pluies, en général vers mai ou juin.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le découpage administratif attribuant des noms en langues nationales aux régions a été adopté en Conseil des ministres le :",
+      "o": [
+        "2 juillet 2025",
+        "3 juillet 2025",
+        "5 août 2025",
+        "30 décembre 2025"
+      ],
+      "r": 0,
+      "x": "Le Conseil des ministres du 2 juillet 2025 a adopté deux décrets réorganisant le territoire et attribuant des noms endogènes. Le 3 juillet 2025, le ministre d'État Émile Zerbo a présenté la réforme à la presse. Ces noms remplacent les anciennes appellations fondées sur les points cardinaux, comme Centre-Nord ou Sud-Ouest.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le découpage de juillet 2025 a porté le nombre de régions du Burkina Faso à :",
+      "o": [
+        "13",
+        "15",
+        "17",
+        "19"
+      ],
+      "r": 2,
+      "x": "Le pays comptait auparavant 13 régions. Selon le gouvernement, la réforme répond d'abord à un critère de défense stratégique du territoire. Cette hausse correspond à la création de quatre nouvelles régions.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Depuis le découpage de juillet 2025, le nombre de provinces du Burkina Faso est de :",
+      "o": [
+        "46",
+        "47",
+        "49",
+        "51"
+      ],
+      "r": 1,
+      "x": "Deux nouvelles provinces ont été créées, faisant passer le total de 45 à 47. La réforme a aussi renommé plusieurs provinces existantes. Chaque province est administrée par un haut-commissaire, représentant de l'État.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Parmi ces régions, laquelle a été créée par le découpage de juillet 2025 :",
+      "o": [
+        "la Tapoa",
+        "le Goulmou",
+        "le Liptako",
+        "le Nakambé"
+      ],
+      "r": 0,
+      "x": "La Tapoa, chef-lieu Diapaga, fait partie des quatre régions créées en 2025 avec le Soum, la Sirba et le Sourou. Le Liptako, le Goulmou et le Nakambé sont d'anciennes régions renommées. Ces quatre régions sont issues du redécoupage des anciennes régions de l'Est, du Sahel et de la Boucle du Mouhoun.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le chef-lieu de la région du Soum est :",
+      "o": [
+        "Djibo",
+        "Dori",
+        "Arbinda",
+        "Gorom-Gorom"
+      ],
+      "r": 0,
+      "x": "Djibo, ancien chef-lieu provincial, devient chef-lieu de la nouvelle région du Soum. Arbinda est, lui, chef-lieu de la nouvelle province de Karo-Peli. Djibo est située dans le nord du pays, non loin de la frontière malienne.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La province de Dyamongou, créée en 2025, a pour chef-lieu :",
+      "o": [
+        "Diapaga",
+        "Fada N'Gourma",
+        "Bogandé",
+        "Kantchari"
+      ],
+      "r": 3,
+      "x": "Dyamongou est l'une des deux provinces créées en 2025, avec Karo-Peli. Kantchari se trouve dans l'est du pays, sur la route de Niamey. Cette ville est proche de la frontière avec le Niger.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La région dont le chef-lieu est Bobo-Dioulasso s'appelle depuis 2025 :",
+      "o": [
+        "Guiriko",
+        "Bankui",
+        "Nando",
+        "Tannounyan"
+      ],
+      "r": 0,
+      "x": "La région de Bobo-Dioulasso, ex-Hauts-Bassins, porte désormais le nom de Guiriko. Tannounyan désigne la région dont le chef-lieu est Banfora. Bobo-Dioulasso reste le principal pôle économique de l'ouest du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Guiriko, royaume du XVIIIe siècle dont le nom a été donné à une région, avait pour capitale :",
+      "o": [
+        "Sya",
+        "Kong",
+        "Ségou",
+        "Tiébélé"
+      ],
+      "r": 0,
+      "x": "Sya est l'ancien nom du cœur historique de Bobo-Dioulasso. Kong et Ségou furent les capitales d'autres royaumes ouest-africains. Le Guiriko, royaume dioula fondé au début du XVIIIe siècle, dominait la région de l'actuelle Bobo-Dioulasso.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le nom de la région du Yaadga, dont le chef-lieu est Ouahigouya, fait référence :",
+      "o": [
+        "au fondateur du Yatenga",
+        "à une rivière sacrée",
+        "à une mare du Sahel",
+        "à une falaise de grès"
+      ],
+      "r": 0,
+      "x": "Yaadga est le fondateur du royaume mossi du Yatenga, dont Ouahigouya est la capitale historique. La région correspond à l'ancienne région du Nord. Ouahigouya est la principale ville du nord-ouest du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Kuilsé, nom de la région dont le chef-lieu est Kaya, signifie en mooré :",
+      "o": [
+        "colline",
+        "forêt",
+        "grenier",
+        "cours d'eau"
+      ],
+      "r": 3,
+      "x": "Kuilsé signifie « cours d'eau » en mooré, en référence aux rivières et lacs de la région. La région correspond à l'ancien Centre-Nord. Kaya se trouve à une centaine de kilomètres au nord-est de Ouagadougou.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La région du Nando a pour chef-lieu :",
+      "o": [
+        "Koudougou",
+        "Réo",
+        "Dédougou",
+        "Manga"
+      ],
+      "r": 0,
+      "x": "Nando est l'ancien nom de la ville de Koudougou en langue gourounsi. La région correspond à l'ancien Centre-Ouest. Koudougou se trouve à une centaine de kilomètres à l'ouest de Ouagadougou.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La région du Djôrô a pour chef-lieu :",
+      "o": [
+        "Gaoua",
+        "Dano",
+        "Diébougou",
+        "Batié"
+      ],
+      "r": 0,
+      "x": "Le nom Djôrô renvoie à une pratique d'initiation de la région. Gaoua était déjà le chef-lieu de l'ancienne région du Sud-Ouest. Gaoua est la principale ville du pays lobi, dans le sud-ouest.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Dédougou est le chef-lieu de la région :",
+      "o": [
+        "du Bankui",
+        "du Sourou",
+        "du Nando",
+        "du Guiriko"
+      ],
+      "r": 0,
+      "x": "Le nom Bankui associe les mots « forêt » et « village » en langue locale. Dédougou est connue pour son festival international des masques. Dédougou se trouve à un peu plus de 200 km à l'ouest de Ouagadougou.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La région qui porte le nom de l'ancienne Volta Rouge a pour chef-lieu :",
+      "o": [
+        "Pô",
+        "Tenkodogo",
+        "Koupéla",
+        "Manga"
+      ],
+      "r": 3,
+      "x": "Il s'agit de la région du Nazinon, ex-Centre-Sud, dont le chef-lieu est Manga. Pô est le chef-lieu de la province du Nahouri. Le Nazinon traverse cette région avant de rejoindre le Ghana.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La région du Goulmou a pour chef-lieu :",
+      "o": [
+        "Fada N'Gourma",
+        "Bogandé",
+        "Diapaga",
+        "Pama"
+      ],
+      "r": 0,
+      "x": "Goulmou désigne le groupe ethnolinguistique et culturel attaché au royaume de Fada N'Gourma. Fada N'Gourma est la principale ville de l'est du pays. Les Gulmanceba (Gourmantché) constituent le principal peuple de cette région.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Tannounyan, nom de la région dont le chef-lieu est Banfora, évoque :",
+      "o": [
+        "un cours d'eau",
+        "un ancien roi",
+        "une forêt sacrée",
+        "des collines et des falaises"
+      ],
+      "r": 3,
+      "x": "En turka et en gouin, Tannounyan renvoie aux collines ou falaises qui marquent le relief de la région. Celle-ci correspond à l'ancienne région des Cascades. Banfora est notamment connue pour les cascades de Karfiguéla, situées à une dizaine de kilomètres de la ville.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Depuis 2025, la province du Sanmatenga s'appelle :",
+      "o": [
+        "Sandbondtenga",
+        "Bassitenga",
+        "Djelgodji",
+        "Kossin"
+      ],
+      "r": 0,
+      "x": "Le Sanmatenga, province de Kaya, est devenu le Sandbondtenga. L'Oubritenga a, quant à lui, été renommé Bassitenga. Comme les régions, plusieurs provinces ont ainsi reçu des noms tirés des langues nationales.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Depuis 2025, l'ancienne province du Soum porte le nom de :",
+      "o": [
+        "Karo-Peli",
+        "Liptako",
+        "Dyamongou",
+        "Djelgodji"
+      ],
+      "r": 3,
+      "x": "La province du Soum a pris le nom de Djelgodji, le nom Soum étant désormais porté par une région. La Kossi est, de son côté, devenue la Kossin. Le nom Djelgodji renvoie à un ancien émirat peul du nord du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Selon le recensement général de la population et de l'habitation (RGPH) de 2019, la population du Burkina Faso s'élève à :",
+      "o": [
+        "10 312 609 habitants",
+        "14 017 262 habitants",
+        "20 505 155 habitants",
+        "23 041 000 habitants"
+      ],
+      "r": 2,
+      "x": "Le RGPH de 2019 a dénombré 20 505 155 habitants. Les 14 017 262 correspondent au recensement de 2006 et les 10 312 609 à celui de 1996. La population a donc presque doublé entre 1996 et 2019.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Au RGPH 2019, les femmes représentent :",
+      "o": [
+        "47,5 % de la population",
+        "48,3 % de la population",
+        "50,4 % de la population",
+        "51,7 % de la population"
+      ],
+      "r": 3,
+      "x": "Selon les résultats définitifs du 5e Recensement général de la population et de l'habitation (RGPH 2019) publiés par l'INSD, les femmes représentent 51,7 % de la population totale (soit 10 604 308 femmes sur 20 505 155 habitants). Les hommes représentent les 48,3 % restants, soit un rapport de masculinité de 93,4 hommes pour 100 femmes.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Entre 2006 et 2019, le taux d'accroissement annuel moyen de la population burkinabè est de :",
+      "o": [
+        "2,38 %",
+        "2,94 %",
+        "3,12 %",
+        "3,45 %"
+      ],
+      "r": 1,
+      "x": "La population a progressé de 2,94 % par an en moyenne entre 2006 et 2019. Le rythme était de 3,12 % entre 1996 et 2006. À ce rythme, la population double environ tous les 24 ans.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Au RGPH 2019, le taux d'urbanisation du Burkina Faso est de :",
+      "o": [
+        "17,4 %",
+        "21,3 %",
+        "26,1 %",
+        "30,8 %"
+      ],
+      "r": 2,
+      "x": "Environ 5,36 millions de personnes vivent en milieu urbain, soit 26,1 % de la population. Près de trois habitants sur quatre (73,9 %) résident donc en milieu rural. Ce taux progresse d'un recensement à l'autre avec la croissance rapide des villes.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Au RGPH 2019, la commune de Ouagadougou compte :",
+      "o": [
+        "1 175 000 habitants",
+        "1 475 223 habitants",
+        "1 915 102 habitants",
+        "2 415 266 habitants"
+      ],
+      "r": 3,
+      "x": "Ouagadougou compte 2 415 266 habitants, soit 45,1 % de la population urbaine du pays. Elle est de loin la première ville du Burkina Faso. Elle est aussi la capitale politique et administrative du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Au RGPH 2019, la commune de Bobo-Dioulasso, deuxième ville du pays, compte :",
+      "o": [
+        "538 500 habitants",
+        "752 400 habitants",
+        "984 603 habitants",
+        "1 475 223 habitants"
+      ],
+      "r": 2,
+      "x": "Selon le 5e RGPH (2019), la commune de Bobo-Dioulasso (7 arrondissements et 36 villages rattachés) compte 984 603 habitants (dont 504 215 femmes et 480 388 hommes, soit 904 920 habitants en milieu strictement urbain). Elle demeure la deuxième agglomération du Burkina Faso derrière Ouagadougou (2 415 266 habitants).",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le nombre de ménages recensés au RGPH 2019 est de :",
+      "o": [
+        "2 360 126",
+        "2 970 800",
+        "3 908 847",
+        "5 360 112"
+      ],
+      "r": 2,
+      "x": "Le RGPH 2019 a recensé 3 908 847 ménages. Les 5 360 112 correspondent au nombre de citadins. Cela donne en moyenne un peu plus de 5 personnes par ménage.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le RGPH réalisé en 2019 est, dans l'histoire du pays, le recensement général de la population numéro :",
+      "o": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "r": 2,
+      "x": "C'est le cinquième RGPH, après ceux de 1975, 1985, 1996 et 2006. La population a été multipliée par près de quatre entre 1975 et 2019. Le recensement est en principe réalisé tous les dix ans.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le dénombrement du RGPH 2019 s'est déroulé principalement en :",
+      "o": [
+        "mars et avril 2019",
+        "juin et juillet 2019",
+        "novembre et décembre 2019",
+        "février et mars 2020"
+      ],
+      "r": 2,
+      "x": "Le dénombrement a eu lieu en novembre et décembre 2019, avec une prolongation en janvier 2020 dans les grandes villes. Les résultats définitifs ont été publiés en 2022. L'opération a été conduite par l'Institut national de la statistique et de la démographie (INSD).",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "L'or est devenu le premier produit d'exportation du Burkina Faso, devant le coton, en :",
+      "o": [
+        "2009",
+        "2012",
+        "2015",
+        "2018"
+      ],
+      "r": 0,
+      "x": "Selon les données du ministère de l'Économie et des Finances et du FMI, l'or a détrôné le coton comme premier produit d'exportation du Burkina Faso en 2009. Cette année-là, les exportations aurifères ont rapporté environ 180 milliards FCFA contre 120 milliards FCFA pour l'« or blanc », marquant l'entrée du pays dans l'ère du boom minier",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La mine d'or d'Essakane est située dans la province :",
+      "o": [
+        "du Séno",
+        "du Loroum",
+        "du Yagha",
+        "de l'Oudalan"
+      ],
+      "r": 3,
+      "x": "La mine d'Essakane se trouve au bord du Gorouol, à environ 330 km au nord-est de Ouagadougou. Son exploitation a débuté en 2009-2010. C'est l'une des plus grandes mines d'or industrielles du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le principal gisement de manganèse du Burkina Faso est celui de :",
+      "o": [
+        "Kodjari",
+        "Perkoa",
+        "Essakane",
+        "Tambao"
+      ],
+      "r": 3,
+      "x": "Le gisement de Tambao, dans l'Oudalan près des frontières malienne et nigérienne, est connu depuis les années 1950. Ses réserves sont estimées à environ 100 millions de tonnes. Son exploitation a longtemps été freinée par l'absence de voie ferrée pour évacuer le minerai.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La mine de Perkoa, dans la province du Sanguié, a été exploitée pour :",
+      "o": [
+        "l'or",
+        "le manganèse",
+        "le phosphate",
+        "le zinc"
+      ],
+      "r": 3,
+      "x": "La mine de Perkoa produisait du concentré de zinc avant de cesser ses activités en 2022. Son permis d'exploitation a été retiré le 8 novembre 2023 en vue d'une reprise par un nouvel opérateur. Le zinc sert surtout à protéger l'acier contre la rouille, par galvanisation.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le gisement de phosphate de Kodjari se trouve dans la région :",
+      "o": [
+        "de la Tapoa",
+        "de la Sirba",
+        "du Goulmou",
+        "du Liptako"
+      ],
+      "r": 0,
+      "x": "Le gisement de Kodjari se situe dans l'est du pays, dans la région de la Tapoa créée en 2025. Il est exploité par la Société d'exploitation des phosphates du Burkina (SEPB) pour la production d'engrais. Le phosphate est une roche riche en phosphore, élément indispensable à la croissance des plantes.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Burkina Faso détient des réserves de phosphate estimées à près de :",
+      "o": [
+        "20 millions de tonnes",
+        "50 millions de tonnes",
+        "100 millions de tonnes",
+        "200 millions de tonnes"
+      ],
+      "r": 3,
+      "x": "Avec près de 200 millions de tonnes, le pays détiendrait les plus importantes réserves estimées de phosphate d'Afrique de l'Ouest. Le seul gisement de Kodjari en renferme plus de 100 millions (seul site exploité), Arly a 50 millions et Aloub-Djouana, 50 millions. Ces réserves restent peu exploitées, alors que le pays importe une grande partie de ses engrais.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Depuis février 2023, la Société d'exploitation des phosphates du Burkina (SEPB) produit des mélanges d'engrais NPK dans son unité de :",
+      "o": [
+        "Kaya",
+        "Fada N'Gourma",
+        "Pouytenga",
+        "Koupéla"
+      ],
+      "r": 3,
+      "x": "L'unité de Koupéla transforme le phosphate en mélanges d'engrais NPK. Le phosphate utilisé provient du gisement de Kodjari. Cette production locale vise à réduire la dépendance du pays aux engrais importés.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La centrale solaire de Zagtouli avait, lors de son inauguration le 29 novembre 2017, une puissance de :",
+      "o": [
+        "15 MWc",
+        "33,7 MWc",
+        "50 MWc",
+        "100 MWc"
+      ],
+      "r": 1,
+      "x": "La centrale de Zagtouli affiche 33,7 MWc grâce à 129 600 panneaux. Elle a coûté environ 47,5 millions d'euros. Elle était alors présentée comme la plus grande centrale solaire d'Afrique de l'Ouest.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La Haute-Volta a pris le nom de Burkina Faso le :",
+      "o": [
+        "5 août 1960",
+        "4 août 1983",
+        "4 août 1984",
+        "2 juin 1991"
+      ],
+      "r": 2,
+      "x": "Le changement de nom a été décidé sous la présidence du capitaine Thomas Sankara le 4 août 1984. Le 4 août 1983 correspond à l'avènement de la Révolution démocratique et populaire. Burkina Faso signifie « pays des hommes intègres », en associant le mooré et le dioula.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le chemin de fer venant d'Abidjan a atteint Ouagadougou en :",
+      "o": [
+        "1934",
+        "1947",
+        "1954",
+        "1985"
+      ],
+      "r": 2,
+      "x": "La pose des rails jusqu'à Ouagadougou s'achève en octobre 1954. La ligne a ensuite été prolongée vers Kaya et est exploitée par la société Sitarail. La capitale devenait ainsi accessible par le rail depuis le port d'Abidjan.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le chemin de fer Abidjan-Niger a atteint Bobo-Dioulasso en :",
+      "o": [
+        "1924",
+        "1934",
+        "1944",
+        "1954"
+      ],
+      "r": 1,
+      "x": "Le rail atteint Bobo-Dioulasso en 1934. La voie, à écartement métrique, relie le pays au port d'Abidjan. L'arrivée du rail a renforcé le rôle commercial de Bobo-Dioulasso dans l'ouest du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le nom de la région du Soum provient :",
+      "o": [
+        "d'une mare",
+        "d'un ancien royaume",
+        "d'un fondateur mossi",
+        "d'une montagne"
+      ],
+      "r": 0,
+      "x": "Le Soum tire son nom d'une mare située à la lisière des dunes du Séno-Mango, dans le nord du pays. Ce nom était déjà celui d'une province avant 2025. Le nord du pays compte de nombreuses mares temporaires, essentielles pour abreuver le bétail.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le terme peul « Liptako », donné à une région en 2025, signifie en substance :",
+      "o": [
+        "le cours d'eau",
+        "la maison du père",
+        "les collines",
+        "qu'on ne peut pas terrasser"
+      ],
+      "r": 3,
+      "x": "Liptako est un terme peul signifiant en substance « qu'on ne peut pas terrasser ». « Maison du père » est le sens du mot dioula « Faso ». Ce nom désignait déjà un ancien émirat peul du nord-est du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le nom Kadiogo, conservé pour la région de Ouagadougou, désigne :",
+      "o": [
+        "un ancien royaume",
+        "un fondateur mossi",
+        "une colline sacrée",
+        "une rivière proche du palais"
+      ],
+      "r": 3,
+      "x": "Issu du mooré « Kaadyoogo » (littéralement « qui chasse les impuretés ou le malheur »), ce nom désignait originellement une rivière coulant près du palais du Moogho Naaba à Ouagadougou, où était prélevée l'eau réservée à l'usage personnel et rituel du souverain. Depuis la réforme territoriale de juillet 2025 (17 régions), il nomme l'ancienne région du Centre.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Oubri, nom donné à la région dont le chef-lieu est Ziniaré, désigne :",
+      "o": [
+        "une rivière",
+        "une mare",
+        "une falaise",
+        "le fondateur de Wogdgo"
+      ],
+      "r": 3,
+      "x": "Adopté en juillet 2025 pour rebaptiser l'ancienne région du Plateau-Central (chef-lieu Ziniaré), le nom Oubri rend hommage à Naaba Oubri, petit-fils de Ouédraogo et fondateur du royaume mossi de Wogdgo (Ouagadougou). Cette région regroupe les provinces du Bassitenga, du Ganzourgou et du Kourwéogo.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La région du Sourou, créée en 2025, a pour chef-lieu :",
+      "o": [
+        "Nouna",
+        "Toma",
+        "Dédougou",
+        "Tougan"
+      ],
+      "r": 3,
+      "x": "Tougan, ancien chef-lieu provincial, devient chef-lieu de la nouvelle région du Sourou. Nouna est le chef-lieu de la province de la Kossin, ex-Kossi. Tougan est située dans le nord-ouest du pays, près de la vallée du Sourou.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La région de la Sirba, créée en 2025, a pour chef-lieu :",
+      "o": [
+        "Bogandé",
+        "Manni",
+        "Piéla",
+        "Gayéri"
+      ],
+      "r": 0,
+      "x": "Bogandé, ancien chef-lieu de la province de la Gnagna, devient chef-lieu de la Sirba. Le nom de la région est celui d'un cours d'eau né dans le Ganzourgou. Bogandé se trouve dans l'est du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La région dont le chef-lieu est Tenkodogo porte depuis 2025 le nom :",
+      "o": [
+        "du Nazinon",
+        "du Nando",
+        "du Nakambé",
+        "de l'Oubri"
+      ],
+      "r": 2,
+      "x": "Le nom de la région reprend celui de l'un des principaux cours d'eau du pays. Tenkodogo se situe dans le centre-est du territoire. Tenkodogo est considérée comme le berceau historique des royaumes mossi.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "L'ancienne région de la Boucle du Mouhoun a été scindée en 2025 entre :",
+      "o": [
+        "le Guiriko et le Bankui",
+        "le Bankui et le Nando",
+        "le Nando et le Sourou",
+        "le Bankui et le Sourou"
+      ],
+      "r": 3,
+      "x": "Cette scission fait partie des redécoupages opérés au nom de la défense stratégique du territoire. L'Est et le Sahel ont également été redécoupés. Elle réduit la taille d'une région autrefois très étendue.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Les anciennes régions de la Boucle du Mouhoun, de l'Est et du Sahel, redécoupées en 2025, couvraient ensemble :",
+      "o": [
+        "23 % du territoire",
+        "33 % du territoire",
+        "43 % du territoire",
+        "53 % du territoire"
+      ],
+      "r": 2,
+      "x": "Ces trois anciennes régions couvraient à elles seules 43 % du territoire national. Leur redécoupage a donné naissance aux quatre nouvelles régions. Ce redécoupage visait à mieux contrôler de vastes espaces exposés à l'insécurité.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le découpage de juillet 2025 prévoit une période transitoire de mise en œuvre de :",
+      "o": [
+        "trois mois",
+        "six mois",
+        "un an",
+        "deux ans"
+      ],
+      "r": 1,
+      "x": "Les textes prévoient une période transitoire de six mois pour la mise en place de la nouvelle organisation. Elle permet l'installation progressive des nouvelles circonscriptions. Ce délai doit permettre d'assurer la continuité du service public pendant le changement.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le premier découpage du territoire de la Haute-Volta après l'indépendance date de :",
+      "o": [
+        "janvier 1963",
+        "novembre 1966",
+        "mars 1974",
+        "juin 1991"
+      ],
+      "r": 0,
+      "x": "Adoptée sous la Ire République, la loi n° 3-63/AN du 29 janvier 1963 constitue le tout premier découpage territorial de la Haute-Volta indépendante, organisant le pays en 4 départements (Centre, Est, Hauts-Bassins, Volta-Noire) et 40 cercles. Ce maillage sera ensuite remanié en 1970 (8 départements) puis en mars 1974 (10 départements).",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La région du Liptako a pour chef-lieu :",
+      "o": [
+        "Gorom-Gorom",
+        "Sebba",
+        "Djibo",
+        "Dori"
+      ],
+      "r": 3,
+      "x": "Dori devient chef-lieu de la région du Liptako. C'est la principale ville du nord-est sahélien. Gorom-Gorom est le chef-lieu de la province de l'Oudalan.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Kilimandjaro, point culminant de l'Afrique, s'élève à :",
+      "o": [
+        "5 199 m",
+        "5 895 m",
+        "6 190 m",
+        "6 961 m"
+      ],
+      "r": 1,
+      "x": "Le Kilimandjaro, en Tanzanie, culmine à 5 895 m au pic Uhuru. Le mont Kenya (5 199 m) est le deuxième sommet d'Afrique, et 6 190 m est l'altitude du Denali en Amérique du Nord. Le Kilimandjaro, volcan endormi, porte des glaciers malgré sa proximité avec l'équateur.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La superficie du continent africain est d'environ :",
+      "o": [
+        "10 millions de km²",
+        "24 millions de km²",
+        "30 millions de km²",
+        "44 millions de km²"
+      ],
+      "r": 2,
+      "x": "L'Afrique couvre environ 30 millions de km², soit près de 20 % des terres émergées. L'Asie s'étend sur environ 44 millions de km², l'Amérique du Nord sur 24 millions et l'Europe sur 10 millions. L'Afrique s'étend de part et d'autre de l'équateur, dans les hémisphères Nord et Sud.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le fleuve Niger a une longueur d'environ :",
+      "o": [
+        "1 750 km",
+        "2 700 km",
+        "4 200 km",
+        "6 650 km"
+      ],
+      "r": 2,
+      "x": "Long d'environ 4 200 km, le Niger draine un bassin de plus de 2 millions de km². C'est le principal fleuve d'Afrique de l'Ouest. Son cours sert à la pêche, à l'irrigation, à la navigation et à la production d'électricité.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le fleuve Niger prend sa source en :",
+      "o": [
+        "Guinée",
+        "Mali",
+        "Côte d'Ivoire",
+        "Sierra Leone"
+      ],
+      "r": 0,
+      "x": "Le Niger naît dans les hautes terres du sud-est de la Guinée, près de la frontière sierra-léonaise. Il décrit ensuite une vaste boucle vers le nord-est. Il naît à moins de 300 km de l'Atlantique, mais s'éloigne d'abord de l'océan.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le fleuve Niger se jette dans :",
+      "o": [
+        "l'océan Indien",
+        "la mer Méditerranée",
+        "le lac Tchad",
+        "le golfe de Guinée"
+      ],
+      "r": 3,
+      "x": "Le Niger rejoint l'Atlantique au fond du golfe de Guinée par un vaste delta au Nigeria. Il ne communique pas avec le lac Tchad, dont le bassin est fermé. Le Nigeria tire d'ailleurs son nom de ce fleuve.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le delta intérieur du Niger se trouve :",
+      "o": [
+        "au Mali",
+        "au Niger",
+        "au Nigeria",
+        "au Bénin"
+      ],
+      "r": 0,
+      "x": "Le delta intérieur du Niger s'étend au Mali, entre Ségou et Tombouctou. La faible pente y crée un réseau de bras, de marais et de lacs. Cette zone inondable est très favorable à la pêche, à la riziculture et à l'élevage.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La Bénoué, principal affluent du Niger, le rejoint à :",
+      "o": [
+        "Niamey",
+        "Mopti",
+        "Ségou",
+        "Lokoja"
+      ],
+      "r": 3,
+      "x": "La Bénoué rejoint le Niger à Lokoja, au centre du Nigeria. Elle prend sa source au Cameroun. La Bénoué est navigable une partie de l'année jusqu'à Garoua, au Cameroun.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "À Mopti, au Mali, le Niger reçoit :",
+      "o": [
+        "le Bani",
+        "la Bénoué",
+        "le Sankarani",
+        "la Sirba"
+      ],
+      "r": 0,
+      "x": "Le Bani rejoint le Niger à Mopti. Le barrage malien de Sélingué est, lui, construit sur le Sankarani. Mopti est surnommée la « Venise du Mali » en raison de sa position au bord de l'eau.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le barrage de Kainji, construit sur le fleuve Niger, se trouve :",
+      "o": [
+        "au Mali",
+        "au Niger",
+        "au Nigeria",
+        "en Guinée"
+      ],
+      "r": 2,
+      "x": "Le barrage de Kainji est un ouvrage hydroélectrique nigérian. Les barrages de Markala et de Sélingué se trouvent, eux, au Mali. Le barrage de Kainji a créé un vaste lac de retenue, le lac Kainji.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "L'Autorité du bassin du Niger (ABN) a été créée en novembre 1980 à :",
+      "o": [
+        "Faranah",
+        "Niamey",
+        "Bamako",
+        "Lokoja"
+      ],
+      "r": 0,
+      "x": "L'ABN a été instituée en novembre 1980 à Faranah, en Guinée. Le Burkina Faso en est membre, une partie de son territoire relevant du bassin du Niger. Elle a succédé à la Commission du fleuve Niger, créée en 1964.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "L'Autorité du bassin du Niger (ABN) regroupe :",
+      "o": [
+        "six États",
+        "sept États",
+        "huit États",
+        "neuf États"
+      ],
+      "r": 3,
+      "x": "L'ABN rassemble le Bénin, le Burkina Faso, le Cameroun, la Côte d'Ivoire, la Guinée, le Mali, le Niger, le Nigeria et le Tchad. Tous partagent une partie du bassin du fleuve. Son siège est fixé à Niamey, au Niger.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le lac Volta, au Ghana, couvre environ :",
+      "o": [
+        "1 350 km²",
+        "4 200 km²",
+        "8 502 km²",
+        "25 000 km²"
+      ],
+      "r": 2,
+      "x": "Avec 8 502 km², le lac Volta est le plus grand lac artificiel du monde par la superficie. Il n'est en revanche que troisième par le volume. Il occupe environ 3,6 % de la superficie du Ghana.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le barrage d'Akosombo, qui a créé le lac Volta, a été achevé en :",
+      "o": [
+        "1956",
+        "1965",
+        "1972",
+        "1985"
+      ],
+      "r": 1,
+      "x": "Le barrage d'Akosombo, sur la Volta, a été construit de 1961 à 1965. Sa centrale hydroélectrique dépasse aujourd'hui 1 000 MW. Ce barrage a été construit sous la présidence de Kwame Nkrumah.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "L'Organisation pour la mise en valeur du fleuve Sénégal (OMVS) a été fondée en :",
+      "o": [
+        "1964",
+        "1972",
+        "1980",
+        "2006"
+      ],
+      "r": 1,
+      "x": "L'OMVS a été créée en 1972 par le Mali, la Mauritanie et le Sénégal pour la gestion et la mise en valeur du fleuve Sénégal. L'année 1980 correspond à la création de l'Autorité du bassin du Niger. Le siège de l'OMVS se trouve à Dakar, au Sénégal.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le siège de l'Autorité du bassin de la Volta (ABV) est fixé à :",
+      "o": [
+        "Accra",
+        "Lomé",
+        "Ouagadougou",
+        "Bamako"
+      ],
+      "r": 2,
+      "x": "Le siège de l'ABV est à Ouagadougou, en vertu d'un accord signé avec le Burkina Faso le 23 février 2010. La capitale burkinabè accueille aussi les sièges du CILSS et de l'ALG. Ce choix s'explique par la place centrale du Burkina Faso dans ce bassin.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "L'Autorité du bassin de la Volta (ABV) compte :",
+      "o": [
+        "trois États membres",
+        "quatre États membres",
+        "cinq États membres",
+        "six États membres"
+      ],
+      "r": 3,
+      "x": "L'ABV regroupe le Bénin, le Burkina Faso, la Côte d'Ivoire, le Ghana, le Mali et le Togo. Tous partagent le bassin du fleuve Volta. Le Burkina Faso et le Ghana occupent à eux deux plus de 80 % de ce bassin. NB: ABV est créée pour la coopération pour le développement durable du bassin de la Volta.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "L'Autorité de développement intégré de la région du Liptako-Gourma (ALG) a été créée le :",
+      "o": [
+        "22 mai 1964",
+        "3 décembre 1970",
+        "12 septembre 1973",
+        "16 septembre 2023"
+      ],
+      "r": 1,
+      "x": "L'ALG, créée le 3 décembre 1970, regroupe le Burkina Faso, le Mali et le Niger. Le 22 mai 1964 correspond à la création de la Commission du bassin du lac Tchad. L'ALG vise le développement concerté des zones frontalières des trois pays.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La zone couverte par l'Autorité de développement intégré de la région du Liptako-Gourma (ALG) s'étend sur environ :",
+      "o": [
+        "120 000 km²",
+        "370 000 km²",
+        "650 000 km²",
+        "1 000 000 km²"
+      ],
+      "r": 1,
+      "x": "La zone de l'ALG couvre environ 370 000 km² aux confins du Burkina Faso, du Mali et du Niger. Elle couvre surtout des zones sahéliennes et soudano-sahéliennes. Cette zone dépasse la superficie du Burkina Faso tout entier.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Comité permanent inter-États de lutte contre la sécheresse dans le Sahel (CILSS) a été créé en :",
+      "o": [
+        "1964",
+        "1970",
+        "1973",
+        "1980"
+      ],
+      "r": 2,
+      "x": "Le CILSS a été créé en 1973, au lendemain de grandes sécheresses sahéliennes. L'année 1980 correspond à la création de l'Autorité du bassin du Niger. Il a pour mission la sécurité alimentaire et la lutte contre les effets de la sécheresse.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Depuis les années 1960, la superficie du lac Tchad a diminué :",
+      "o": [
+        "d'environ 25 %",
+        "d'environ 50 %",
+        "d'environ 75 %",
+        "de plus de 90 %"
+      ],
+      "r": 3,
+      "x": "Passant d'environ 25 000 km² en 1963 à moins de 2 500 km² aujourd'hui, le lac Tchad a perdu plus de 90 % de sa superficie en soixante ans sous l'effet du changement climatique, des sécheresses sahéliennes et de la surexploitation de ses eaux pour l'irrigation. En rappel, le lac Tchad est partagé entre quatre pays: Tchad, Cameroun, Niger, Nigeria.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le lac Tchad est partagé entre :",
+      "o": [
+        "trois pays",
+        "quatre pays",
+        "cinq pays",
+        "six pays"
+      ],
+      "r": 1,
+      "x": "Le lac Tchad est partagé entre le Tchad, le Cameroun, le Niger et le Nigeria. Ces quatre États ont fondé la Commission du bassin du lac Tchad (CBLT). La superficie du lac varie fortement entre la saison des pluies et la saison sèche.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La Guinée a rejoint l'Organisation pour la mise en valeur du fleuve Sénégal (OMVS) en :",
+      "o": [
+        "1987",
+        "1999",
+        "2006",
+        "2014"
+      ],
+      "r": 2,
+      "x": "La Guinée, où naissent les branches mères du fleuve, a intégré l'organisation en 2006. Elle en était jusque-là le seul pays riverain non membre. Les États membres sont désormais la Guinée, le Mali, la Mauritanie et le Sénégal.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le fleuve Sénégal se jette dans l'océan Atlantique près de :",
+      "o": [
+        "Dakar",
+        "Banjul",
+        "Nouakchott",
+        "Saint-Louis"
+      ],
+      "r": 3,
+      "x": "Le fleuve Sénégal rejoint l'Atlantique près de Saint-Louis, au Sénégal. Banjul se trouve, elle, à l'embouchure du fleuve Gambie. Saint-Louis fut la capitale de l'Afrique-Occidentale française (AOF) jusqu'en 1902.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le fleuve Sénégal naît de la confluence du Bafing et du Bakoye à :",
+      "o": [
+        "Kayes",
+        "Manantali",
+        "Labé",
+        "Bafoulabé"
+      ],
+      "r": 3,
+      "x": "Le Bafing et le Bakoye, venus de Guinée, se rejoignent à Bafoulabé, au Mali. Le barrage de Manantali est construit sur le Bafing. Le fleuve sert ensuite de frontière entre le Sénégal et la Mauritanie.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le massif du Fouta-Djalon, surnommé le « château d'eau de l'Afrique de l'Ouest », se trouve :",
+      "o": [
+        "en Guinée",
+        "au Mali",
+        "en Sierra Leone",
+        "au Sénégal"
+      ],
+      "r": 0,
+      "x": "Le Fouta-Djalon, en Guinée, donne naissance à de nombreux cours d'eau ouest-africains. Le Sénégal, par le Bafing, et la Gambie y prennent leur source. Ses hauts plateaux reçoivent des pluies abondantes qui alimentent de nombreuses rivières.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le mont Nimba, point culminant de la Guinée, s'élève à :",
+      "o": [
+        "1 340 m",
+        "1 752 m",
+        "1 945 m",
+        "4 040 m"
+      ],
+      "r": 1,
+      "x": "Le mont Nimba culmine à 1 752 m aux confins de la Guinée, de la Côte d'Ivoire et du Liberia. Les 1 945 m correspondent environ au mont Bintumani, en Sierra Leone. Le massif du Nimba est aussi riche en minerai de fer de haute qualité.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La réserve naturelle intégrale du mont Nimba, partagée par la Guinée et la Côte d'Ivoire, a été inscrite au patrimoine mondial en :",
+      "o": [
+        "1981",
+        "1997",
+        "2009",
+        "2017"
+      ],
+      "r": 0,
+      "x": "La réserve a été inscrite en 1981 pour la richesse de sa faune et de sa flore. On y observe notamment des chimpanzés qui utilisent des pierres comme outils. Ses forêts et ses prairies d'altitude abritent de nombreuses espèces endémiques.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le mont Cameroun, volcan actif, culmine à :",
+      "o": [
+        "3 415 m",
+        "4 040 m",
+        "4 167 m",
+        "5 199 m"
+      ],
+      "r": 1,
+      "x": "Le mont Cameroun, dont la dernière grande éruption confirmée date de 2000, culmine à 4 040 m. Les 3 415 m correspondent à l'Emi Koussi, au Tchad. C'est le point culminant du Cameroun, non loin de la côte du golfe de Guinée.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Toubkal, point culminant de la chaîne de l'Atlas, se trouve :",
+      "o": [
+        "en Algérie",
+        "en Tunisie",
+        "au Maroc",
+        "en Libye"
+      ],
+      "r": 2,
+      "x": "Le Toubkal s'élève à 4 167 m dans le sud-ouest du Maroc. Il se trouve au cœur du parc national du Toubkal. C'est aussi le point culminant de l'Afrique du Nord.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le lac Assal, point le plus bas du continent africain, se trouve :",
+      "o": [
+        "à Djibouti",
+        "en Égypte",
+        "en Éthiopie",
+        "en Érythrée"
+      ],
+      "r": 0,
+      "x": "Le lac Assal, à Djibouti, se trouve à environ 155 m sous le niveau de la mer. Il est situé dans la dépression de l'Afar, près du golfe de Tadjourah. Ce lac compte aussi parmi les étendues d'eau les plus salées du monde.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "L'Algérie, plus vaste pays d'Afrique, couvre :",
+      "o": [
+        "1 241 238 km²",
+        "1 267 000 km²",
+        "2 344 858 km²",
+        "2 381 741 km²"
+      ],
+      "r": 3,
+      "x": "L'Algérie couvre 2 381 741 km². La République démocratique du Congo suit avec environ 2,34 millions de km². Plus de 80 % du territoire algérien est occupé par le Sahara.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le plus vaste pays d'Afrique de l'Ouest est :",
+      "o": [
+        "le Mali",
+        "le Niger",
+        "la Mauritanie",
+        "le Nigeria"
+      ],
+      "r": 1,
+      "x": "Le Niger couvre environ 1 267 000 km², devant le Mali (1 241 238 km²). La Mauritanie et le Nigeria viennent ensuite. Le territoire nigérien est en grande partie désertique.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La Gambie, plus petit pays d'Afrique continentale, a une superficie d'environ :",
+      "o": [
+        "452 km²",
+        "11 295 km²",
+        "28 051 km²",
+        "56 785 km²"
+      ],
+      "r": 1,
+      "x": "La Gambie couvre environ 11 295 km² le long du fleuve du même nom. Elle est entourée par le Sénégal, sauf sur sa façade atlantique. Sa largeur ne dépasse nulle part 50 km.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le plus petit État d'Afrique par la superficie est :",
+      "o": [
+        "les Seychelles",
+        "la Gambie",
+        "Sao Tomé-et-Principe",
+        "Maurice"
+      ],
+      "r": 0,
+      "x": "Les Seychelles, archipel de l'océan Indien, couvrent environ 452 km². La Gambie est, elle, le plus petit pays du continent proprement dit. L'archipel compte environ 115 îles.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le plus jeune État d'Afrique, le Soudan du Sud, est indépendant depuis le :",
+      "o": [
+        "24 mai 1993",
+        "9 juillet 2011",
+        "9 juillet 2015",
+        "9 juillet 2019"
+      ],
+      "r": 1,
+      "x": "Le Soudan du Sud a proclamé son indépendance le 9 juillet 2011, en se séparant du Soudan. Le 24 mai 1993 correspond à l'indépendance de l'Érythrée. Cette indépendance fait suite à un référendum d'autodétermination organisé en janvier 2011.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "L'Afrique compte :",
+      "o": [
+        "50 États souverains",
+        "52 États souverains",
+        "54 États souverains",
+        "56 États souverains"
+      ],
+      "r": 2,
+      "x": "L'Afrique compte 54 États souverains, tous membres de l'Organisation des Nations unies. Le Sahara occidental, au statut disputé, n'est pas compté parmi eux. Le Soudan du Sud est le dernier État à avoir rejoint cette liste.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Abuja a officiellement remplacé Lagos comme capitale fédérale du Nigeria en :",
+      "o": [
+        "1976",
+        "1983",
+        "1991",
+        "1999"
+      ],
+      "r": 2,
+      "x": "Abuja est devenue la capitale fédérale le 12 décembre 1991. La décision de créer cette ville nouvelle avait été prise en 1976. Ce transfert visait une capitale plus centrale et plus neutre entre les grandes régions du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Yamoussoukro est la capitale politique de la Côte d'Ivoire depuis :",
+      "o": [
+        "1960",
+        "1983",
+        "1991",
+        "2011"
+      ],
+      "r": 1,
+      "x": "Yamoussoukro est la capitale politique de la Côte d'Ivoire depuis 1983. Abidjan demeure la capitale économique du pays. Yamoussoukro est la ville natale de Félix Houphouët-Boigny, premier président du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Nil, plus long fleuve d'Afrique, mesure environ :",
+      "o": [
+        "4 200 km",
+        "4 700 km",
+        "5 500 km",
+        "6 650 km"
+      ],
+      "r": 3,
+      "x": "Le Nil mesure environ 6 650 km et son bassin s'étend sur 11 pays. Il se jette dans la Méditerranée par un vaste delta en Égypte. Il traverse notamment le Soudan et l'Égypte avant d'atteindre la mer.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Nil Blanc et le Nil Bleu se rejoignent à :",
+      "o": [
+        "Le Caire",
+        "Juba",
+        "Assouan",
+        "Khartoum"
+      ],
+      "r": 3,
+      "x": "Le Nil Blanc et le Nil Bleu confluent à Khartoum, capitale du Soudan. Juba est la capitale du Soudan du Sud. À partir de ce point, le fleuve prend simplement le nom de Nil.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Nil Bleu prend sa source dans le lac :",
+      "o": [
+        "Victoria",
+        "Albert",
+        "Turkana",
+        "Tana"
+      ],
+      "r": 3,
+      "x": "Le Nil Bleu naît du lac Tana, sur les hauts plateaux d'Éthiopie. Le Nil Blanc est, lui, rattaché à la région du lac Victoria. Le Nil Bleu apporte la plus grande partie des eaux du Nil en période de crue.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le plus grand lac d'Afrique par la superficie est le lac :",
+      "o": [
+        "Tanganyika",
+        "Malawi",
+        "Victoria",
+        "Tchad"
+      ],
+      "r": 2,
+      "x": "Le lac Victoria, partagé par le Kenya, l'Ouganda et la Tanzanie, est le plus vaste lac d'Afrique. Le lac Tanganyika est, lui, le plus long lac d'eau douce du monde. Le lac Victoria couvre près de 69 000 km².",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le lac Tanganyika atteint une profondeur maximale d'environ :",
+      "o": [
+        "706 m",
+        "1 025 m",
+        "1 471 m",
+        "1 642 m"
+      ],
+      "r": 2,
+      "x": "Le lac Tanganyika atteint environ 1 471 m de profondeur. Le lac Malawi, autre lac du Rift africain, descend à 706 m. Le lac Tanganyika est partagé entre la Tanzanie, la RD Congo, le Burundi et la Zambie.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Sahara, plus grand désert chaud du monde, couvre environ :",
+      "o": [
+        "3 millions de km²",
+        "5 millions de km²",
+        "9 millions de km²",
+        "14 millions de km²"
+      ],
+      "r": 2,
+      "x": "Le Sahara couvre plus de 9 millions de km² répartis sur 11 pays. Son point culminant est l'Emi Koussi (3 415 m), dans le Tibesti tchadien. Ce désert s'étend de l'océan Atlantique jusqu'à la mer Rouge.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Madagascar, quatrième plus grande île du monde, couvre environ :",
+      "o": [
+        "245 000 km²",
+        "587 000 km²",
+        "785 000 km²",
+        "1 240 000 km²"
+      ],
+      "r": 1,
+      "x": "Madagascar couvre environ 587 000 km² dans l'océan Indien. Elle est séparée du continent africain par le canal du Mozambique. C'est la plus grande île de l'océan Indien.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le canal de Suez, qui relie la Méditerranée à la mer Rouge, a été inauguré en :",
+      "o": [
+        "1856",
+        "1869",
+        "1914",
+        "1956"
+      ],
+      "r": 1,
+      "x": "Le canal de Suez, long d'environ 193 km, a été inauguré le 17 novembre 1869. Il a été nationalisé par Gamal Abdel Nasser le 26 juillet 1956. Il évite aux navires reliant l'Europe à l'Asie de contourner tout le continent africain.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le pays le plus peuplé d'Afrique est :",
+      "o": [
+        "l'Éthiopie",
+        "l'Égypte",
+        "la RD Congo",
+        "le Nigeria"
+      ],
+      "r": 3,
+      "x": "Le Nigeria est de loin le pays le plus peuplé d'Afrique. L'Éthiopie occupe le deuxième rang. La population du Nigeria dépasse 200 millions d'habitants.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La capitale officielle du Bénin est :",
+      "o": [
+        "Cotonou",
+        "Parakou",
+        "Abomey",
+        "Porto-Novo"
+      ],
+      "r": 3,
+      "x": "Porto-Novo est la capitale officielle du Bénin. Cotonou abrite toutefois le siège du gouvernement et la plupart des institutions. Porto-Novo est située près de la frontière avec le Nigeria.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "En Afrique de l'Ouest, les pays sans littoral sont au nombre de :",
+      "o": [
+        "deux",
+        "trois",
+        "quatre",
+        "cinq"
+      ],
+      "r": 1,
+      "x": "Le Mali, le Burkina Faso et le Niger sont les seuls pays d'Afrique de l'Ouest sans accès à la mer. Ils forment aujourd'hui la Confédération des États du Sahel (AES). Leur commerce extérieur dépend donc des ports des pays côtiers voisins.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le deuxième plus long fleuve d'Afrique est :",
+      "o": [
+        "le Niger",
+        "le Zambèze",
+        "l'Orange",
+        "le Congo"
+      ],
+      "r": 3,
+      "x": "Le Congo est le deuxième plus long fleuve d'Afrique, derrière le Nil. Le Niger occupe le troisième rang. Le bassin du Congo, très arrosé, est le plus vaste d'Afrique.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Depuis l'annonce conjointe de la Chine et du Népal du 8 décembre 2020, l'altitude officielle de l'Everest est de :",
+      "o": [
+        "8 611 m",
+        "8 848 m",
+        "8 848,86 m",
+        "8 850 m"
+      ],
+      "r": 2,
+      "x": "La nouvelle mesure, 8 848,86 m, dépasse de 86 cm l'ancienne valeur officielle de 8 848 m. Les 8 611 m correspondent au K2, deuxième sommet du monde. L'Everest se trouve dans l'Himalaya, à la frontière entre la Chine et le Népal.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Selon l'Organisation des Nations unies (ONU), la population mondiale a franchi le cap des 8 milliards le :",
+      "o": [
+        "31 octobre 2011",
+        "15 novembre 2022",
+        "1er janvier 2023",
+        "11 juillet 2024"
+      ],
+      "r": 1,
+      "x": "L'ONU a fixé symboliquement au 15 novembre 2022 le passage à 8 milliards d'habitants. Le cap des 7 milliards avait été retenu pour le 31 octobre 2011. Il a donc fallu environ onze ans pour passer de 7 à 8 milliards d'habitants.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "L'Inde est devenue le pays le plus peuplé du monde, devant la Chine, en :",
+      "o": [
+        "2019",
+        "2021",
+        "2023",
+        "2025"
+      ],
+      "r": 2,
+      "x": "En 2023, l'Inde a dépassé la Chine et est devenue le pays le plus peuplé de la planète. La Chine occupait ce rang depuis des décennies. Ce dépassement s'explique notamment par une fécondité plus élevée en Inde qu'en Chine.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le méridien de Greenwich a été choisi comme méridien d'origine lors de la conférence internationale de Washington en :",
+      "o": [
+        "1792",
+        "1884",
+        "1914",
+        "1945"
+      ],
+      "r": 1,
+      "x": "La conférence internationale du méridien, réunie à Washington en 1884, a retenu Greenwich comme méridien zéro. Elle a aussi posé les bases du système des fuseaux horaires. La France n'a adopté le méridien de Greenwich qu'en 1911.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La Terre est divisée en fuseaux horaires théoriques au nombre de :",
+      "o": [
+        "12",
+        "24",
+        "36",
+        "48"
+      ],
+      "r": 1,
+      "x": "La Terre effectuant un tour complet sur elle-même en environ 24 heures, on définit 24 fuseaux théoriques. Les fuseaux réels suivent souvent les frontières des États. Certains grands pays, comme la Russie, s'étendent ainsi sur plusieurs fuseaux.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Aux équinoxes, à midi, le Soleil est au zénith au-dessus :",
+      "o": [
+        "du tropique du Cancer",
+        "de l'équateur",
+        "du tropique du Capricorne",
+        "du cercle polaire arctique"
+      ],
+      "r": 1,
+      "x": "Aux équinoxes de mars et de septembre, le Soleil est au zénith à midi sur l'équateur. Au solstice de juin, il l'est au-dessus du tropique du Cancer. Aux équinoxes, la durée du jour est à peu près égale à celle de la nuit partout sur Terre.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Lorsqu'il est 12 h (heure solaire) sur le méridien de Greenwich (0°), l'heure solaire théorique d'un lieu situé à 45° Est est :",
+      "o": [
+        "9 h",
+        "13 h",
+        "15 h",
+        "17 h"
+      ],
+      "r": 2,
+      "x": "45° ÷ 15° = 3 fuseaux vers l'est, soit 3 heures d'avance. Il est donc 12 h + 3 h = 15 h dans ce lieu. Plus on va vers l'est, plus l'heure solaire est avancée, car le Soleil s'y lève plus tôt.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Lorsqu'il est 10 h à Ouagadougou (GMT), l'heure légale à Paris en hiver (GMT + 1) est :",
+      "o": [
+        "9 h",
+        "10 h",
+        "11 h",
+        "12 h"
+      ],
+      "r": 2,
+      "x": "En hiver, Paris a une heure d'avance sur Ouagadougou : 10 h + 1 h = 11 h. En été, avec l'heure d'été (GMT + 2), il y serait 12 h. Le calcul consiste simplement à ajouter le décalage horaire à l'heure de Ouagadougou.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Sur une carte au 1/50 000, une distance de 4 cm représente sur le terrain :",
+      "o": [
+        "200 m",
+        "2 km",
+        "20 km",
+        "200 km"
+      ],
+      "r": 1,
+      "x": "4 cm × 50 000 = 200 000 cm, soit 2 km. Sur cette carte, 1 cm représente donc 500 m. Pour convertir, on multiplie la distance sur la carte par le dénominateur de l'échelle.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Sur une carte au 1/200 000, une distance réelle de 30 km mesure :",
+      "o": [
+        "1,5 cm",
+        "6 cm",
+        "15 cm",
+        "60 cm"
+      ],
+      "r": 2,
+      "x": "30 km = 3 000 000 cm, et 3 000 000 ÷ 200 000 = 15 cm. Sur cette carte, 1 cm représente 2 km. On divise ici la distance réelle, convertie dans la même unité, par le dénominateur de l'échelle.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "L'échelle d'une carte sur laquelle 1 cm représente 5 km est :",
+      "o": [
+        "1/5 000",
+        "1/50 000",
+        "1/500 000",
+        "1/5 000 000"
+      ],
+      "r": 2,
+      "x": "5 km = 500 000 cm, donc l'échelle est de 1/500 000. Une distance de 10 cm sur cette carte représente ainsi 50 km. Il faut toujours exprimer les deux distances dans la même unité avant d'écrire l'échelle.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Une carte au 1/25 000 est à plus grande échelle qu'une carte au :",
+      "o": [
+        "1/1 000",
+        "1/5 000",
+        "1/10 000",
+        "1/100 000"
+      ],
+      "r": 3,
+      "x": "Une échelle est d'autant plus grande que son dénominateur est petit. Le 1/25 000 est donc à plus grande échelle que le 1/100 000, mais à plus petite échelle que le 1/10 000. Une carte à grande échelle représente une petite zone avec beaucoup de détails.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Sur une carte au 1/100 000, un champ rectangulaire mesure 2 cm sur 3 cm. Sa superficie réelle est de :",
+      "o": [
+        "0,6 km²",
+        "6 km²",
+        "60 km²",
+        "600 km²"
+      ],
+      "r": 1,
+      "x": "Au 1/100 000, 1 cm représente 1 km : le champ mesure donc 2 km sur 3 km. Sa superficie réelle est de 2 × 3 = 6 km². Il ne faut pas multiplier directement la surface mesurée sur la carte (6 cm²) par le dénominateur de l'échelle.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Lorsqu'il est 8 h (heure solaire) sur le méridien de Greenwich (0°), l'heure solaire théorique d'un lieu situé à 75° Ouest est :",
+      "o": [
+        "1 h",
+        "3 h",
+        "5 h",
+        "13 h"
+      ],
+      "r": 1,
+      "x": "75° correspondent à 5 fuseaux, soit 5 heures de retard vers l'ouest. Il est donc 8 h – 5 h = 3 h dans ce lieu. Vers l'ouest, on retranche une heure tous les 15° de longitude.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Un avion quitte Ouagadougou (GMT) à 22 h pour un vol de 7 heures vers une ville située à GMT + 3. Il arrive à l'heure locale de :",
+      "o": [
+        "5 h",
+        "7 h",
+        "8 h",
+        "10 h"
+      ],
+      "r": 2,
+      "x": "L'avion arrive à 5 h GMT (22 h + 7 h), soit 5 h + 3 h = 8 h à l'heure locale. Les 5 h correspondent à l'heure GMT d'arrivée. On calcule toujours l'heure d'arrivée dans le fuseau de départ avant d'appliquer le décalage.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le rayon moyen de la Terre est d'environ :",
+      "o": [
+        "3 200 km",
+        "6 371 km",
+        "12 742 km",
+        "40 075 km"
+      ],
+      "r": 1,
+      "x": "Le rayon moyen de la Terre est d'environ 6 371 km. Son diamètre moyen est donc d'environ 12 742 km. La Terre n'est pas une sphère parfaite : elle est légèrement aplatie aux pôles.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La circonférence de la Terre à l'équateur mesure environ :",
+      "o": [
+        "12 742 km",
+        "20 004 km",
+        "30 000 km",
+        "40 075 km"
+      ],
+      "r": 3,
+      "x": "À l'équateur, la circonférence terrestre atteint environ 40 075 km ; le long d'un méridien, elle est un peu plus faible (40 008 km). Les 20 004 km correspondent à un demi-méridien, d'un pôle à l'autre. La valeur de 40 000 km pour un méridien vient de la définition historique du mètre, à la fin du XVIIIe siècle.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La superficie totale de la Terre est d'environ :",
+      "o": [
+        "150 millions de km²",
+        "361 millions de km²",
+        "510 millions de km²",
+        "1 083 millions de km²"
+      ],
+      "r": 2,
+      "x": "La surface totale de la Terre est d'environ 510 millions de km². Les 150 millions de km² correspondent aux seules terres émergées. Cette surface se calcule à partir du rayon terrestre, avec la formule 4 × π × R².",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Les océans couvrent environ :",
+      "o": [
+        "29 % de la surface terrestre",
+        "50 % de la surface terrestre",
+        "71 % de la surface terrestre",
+        "85 % de la surface terrestre"
+      ],
+      "r": 2,
+      "x": "Les océans couvrent environ 71 % de la surface du globe. Les terres émergées n'en occupent qu'environ 29 %. C'est pourquoi la Terre est surnommée la « planète bleue ».",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le plus grand océan du monde est l'océan :",
+      "o": [
+        "Pacifique",
+        "Atlantique",
+        "Indien",
+        "Arctique"
+      ],
+      "r": 0,
+      "x": "Le Pacifique couvre environ 168,7 millions de km² selon l'Organisation hydrographique internationale, soit près de la moitié de l'océan mondial. L'Arctique est le plus petit des océans. Le Pacifique s'étend entre l'Asie, l'Océanie et les Amériques.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Selon le découpage aujourd'hui le plus couramment admis, le nombre d'océans est de :",
+      "o": [
+        "trois",
+        "quatre",
+        "cinq",
+        "sept"
+      ],
+      "r": 2,
+      "x": "On distingue généralement cinq océans : Arctique, Atlantique, Austral, Indien et Pacifique. L'océan Austral entoure l'Antarctique. Ce découpage reste conventionnel, car tous les océans communiquent entre eux.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La distance moyenne entre la Terre et le Soleil, appelée unité astronomique, est d'environ :",
+      "o": [
+        "384 400 km",
+        "1,5 million de km",
+        "149,6 millions de km",
+        "778 millions de km"
+      ],
+      "r": 2,
+      "x": "La distance moyenne Terre-Soleil, environ 149,6 millions de km, définit l'unité astronomique. Les 384 400 km correspondent à la distance moyenne entre la Terre et la Lune. La lumière du Soleil met environ 8 minutes et 20 secondes pour parvenir jusqu'à la Terre.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La Terre effectue une rotation complète sur elle-même par rapport aux étoiles en environ :",
+      "o": [
+        "12 h",
+        "23 h 56 min",
+        "24 h 30 min",
+        "27 jours"
+      ],
+      "r": 1,
+      "x": "La rotation de la Terre par rapport aux étoiles (jour sidéral) dure environ 23 h 56 min. Cette rotation explique l'alternance du jour et de la nuit. Le jour solaire de 24 heures est un peu plus long, car la Terre avance en même temps sur son orbite.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La Terre fait le tour du Soleil (révolution sidérale) en environ :",
+      "o": [
+        "24 heures",
+        "27,3 jours",
+        "365,26 jours",
+        "366,5 jours"
+      ],
+      "r": 2,
+      "x": "La révolution sidérale de la Terre dure environ 365,26 jours. Le calendrier, calé sur l'année des saisons (environ 365,24 jours), ajoute un jour tous les quatre ans. L'écart d'environ 20 minutes entre ces deux années s'explique par un lent mouvement de l'axe terrestre, appelé précession.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "L'axe de rotation de la Terre est incliné d'environ :",
+      "o": [
+        "11,5°",
+        "23,44°",
+        "30°",
+        "45°"
+      ],
+      "r": 1,
+      "x": "L'axe terrestre est incliné d'environ 23,44°, ce qui explique les saisons. Cette valeur fixe aussi la latitude des tropiques. Sans cette inclinaison, il n'y aurait pratiquement pas de saisons.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le cercle polaire arctique est situé à environ :",
+      "o": [
+        "23° 26′ de latitude Nord",
+        "45° de latitude Nord",
+        "66° 33′ de latitude Nord",
+        "90° de latitude Nord"
+      ],
+      "r": 2,
+      "x": "Le cercle polaire arctique se situe vers 66° 33′ de latitude Nord. Au-delà, le Soleil ne se couche pas au moins un jour par an, au solstice d'été. À l'inverse, au solstice d'hiver, le Soleil ne s'y lève pas au moins un jour par an.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le solstice de juin, jour le plus long dans l'hémisphère Nord, a lieu autour du :",
+      "o": [
+        "21 mars",
+        "21 juin",
+        "23 septembre",
+        "21 décembre"
+      ],
+      "r": 1,
+      "x": "Le solstice de juin, vers le 21 juin, marque le jour le plus long de l'année dans l'hémisphère Nord. Les dates de mars et de septembre correspondent aux équinoxes. Au solstice de décembre, c'est au contraire le jour le plus court de l'année dans l'hémisphère Nord.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La fosse des Mariannes, la plus profonde des océans, atteint environ :",
+      "o": [
+        "4 000 m",
+        "8 849 m",
+        "10 935 m",
+        "15 000 m"
+      ],
+      "r": 2,
+      "x": "Le Challenger Deep, dans la fosse des Mariannes, se situe à environ 10 935 m sous le niveau de la mer. Cette profondeur dépasse la hauteur de l'Everest au-dessus des mers. Elle se situe dans l'ouest de l'océan Pacifique, près de l'île de Guam.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Les rives de la mer Morte, point émergé le plus bas du globe, se situent à environ :",
+      "o": [
+        "430 m sous le niveau de la mer",
+        "155 m sous le niveau de la mer",
+        "86 m sous le niveau de la mer",
+        "28 m sous le niveau de la mer"
+      ],
+      "r": 0,
+      "x": "Les rives de la mer Morte se trouvent à environ 430 m sous le niveau de la mer. Les 155 m correspondent au lac Assal, point le plus bas d'Afrique. La très forte salinité de la mer Morte permet aux baigneurs de flotter facilement.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le plus grand lac du monde par la superficie est :",
+      "o": [
+        "la mer Caspienne",
+        "le lac Supérieur",
+        "le lac Victoria",
+        "le lac Baïkal"
+      ],
+      "r": 0,
+      "x": "Avec environ 371 000 km², la mer Caspienne est le plus vaste lac du monde. Elle est bordée par cinq pays, dont la Russie et l'Iran. Elle est appelée « mer » en raison de son eau salée et de sa grande taille.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le lac le plus profond du monde est le lac :",
+      "o": [
+        "Tanganyika",
+        "Malawi",
+        "Victoria",
+        "Baïkal"
+      ],
+      "r": 3,
+      "x": "Le lac Baïkal, en Sibérie orientale, atteint environ 1 642 m de profondeur. Il devance le lac Tanganyika, deuxième au classement. Il renferme aussi environ 20 % de l'eau douce liquide présente à la surface du globe.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La Russie, plus vaste pays du monde, s'étend sur environ :",
+      "o": [
+        "7,7 millions de km²",
+        "9,98 millions de km²",
+        "17,1 millions de km²",
+        "30,2 millions de km²"
+      ],
+      "r": 2,
+      "x": "La Russie s'étend sur 17 098 242 km². Le Canada, deuxième, dépasse à peine 9,98 millions de km². Elle s'étend sur deux continents, l'Europe et l'Asie.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le plus petit État du monde est :",
+      "o": [
+        "le Vatican",
+        "Monaco",
+        "Saint-Marin",
+        "Nauru"
+      ],
+      "r": 0,
+      "x": "Le Vatican, enclavé dans Rome, couvre moins d'un demi-kilomètre carré. Monaco est le deuxième plus petit État du monde. Le Vatican est le siège de l'Église catholique et la résidence du pape.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La plus grande île du monde est :",
+      "o": [
+        "la Nouvelle-Guinée",
+        "Bornéo",
+        "le Groenland",
+        "Madagascar"
+      ],
+      "r": 2,
+      "x": "Le Groenland, avec environ 2 166 000 km², est la plus grande île du monde. L'Australie est considérée comme un continent et non comme une île. Il est recouvert d'une épaisse calotte glaciaire sur environ 80 % de sa surface.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le plus petit continent par la superficie est :",
+      "o": [
+        "l'Europe",
+        "l'Amérique du Sud",
+        "l'Antarctique",
+        "l'Océanie"
+      ],
+      "r": 3,
+      "x": "Avec une superficie d'environ 8,5 à 9 millions de km² (incluant l'Australie, la Nouvelle-Zélande, la Papouasie-Nouvelle-Guinée et les îles du Pacifique), l'Océanie est le plus petit continent du monde. Elle se situe juste derrière l'Europe (environ 10,2 millions de km²), l'Antarctique (14 millions de km²) et loin derrière l'Afrique (30,3 millions de km²).",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le continent le plus peuplé du monde est :",
+      "o": [
+        "l'Afrique",
+        "l'Europe",
+        "l'Amérique",
+        "l'Asie"
+      ],
+      "r": 3,
+      "x": "L'Asie concentre plus de la moitié de la population mondiale, notamment avec l'Inde et la Chine. L'Afrique est le deuxième continent le plus peuplé. L'Asie compte plus de 4,7 milliards d'habitants.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "L'Antarctique couvre environ :",
+      "o": [
+        "9 millions de km²",
+        "14 millions de km²",
+        "24 millions de km²",
+        "44 millions de km²"
+      ],
+      "r": 1,
+      "x": "L'Antarctique, presque entièrement recouvert de glace, s'étend sur environ 14 millions de km². Les 24 millions correspondent à l'Amérique du Nord. Il renferme environ 90 % de la glace présente sur Terre.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "L'Accord de Paris sur le climat a été adopté lors de la COP21 le :",
+      "o": [
+        "11 décembre 1997",
+        "12 décembre 2015",
+        "4 novembre 2016",
+        "13 novembre 2021"
+      ],
+      "r": 1,
+      "x": "L'accord a été adopté le 12 décembre 2015 et il est entré en vigueur le 4 novembre 2016. Le 11 décembre 1997 correspond à l'adoption du protocole de Kyoto. Cet accord engage la quasi-totalité des pays à réduire leurs émissions de gaz à effet de serre.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "L'Accord de Paris vise à contenir le réchauffement climatique nettement en dessous de :",
+      "o": [
+        "1 °C",
+        "2 °C",
+        "3 °C",
+        "4 °C"
+      ],
+      "r": 1,
+      "x": "L'accord vise à contenir le réchauffement nettement en dessous de 2 °C par rapport à l'ère préindustrielle. Il invite à poursuivre les efforts pour le limiter à 1,5 °C. Chaque pays présente pour cela ses propres engagements, appelés contributions déterminées au niveau national.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La Convention des Nations unies sur la lutte contre la désertification a été adoptée à Paris le :",
+      "o": [
+        "17 juin 1994",
+        "14 octobre 1994",
+        "26 décembre 1996",
+        "12 décembre 2015"
+      ],
+      "r": 0,
+      "x": "La convention, adoptée le 17 juin 1994, est entrée en vigueur le 26 décembre 1996. Elle a été ouverte à la signature à Paris les 14 et 15 octobre 1994. Le 17 juin est depuis célébré comme la Journée mondiale de lutte contre la désertification.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le Sommet de la Terre de Rio de Janeiro s'est tenu en :",
+      "o": [
+        "1972",
+        "1992",
+        "2002",
+        "2012"
+      ],
+      "r": 1,
+      "x": "Le Sommet de la Terre s'est tenu à Rio de Janeiro en 1992. La conférence de Stockholm sur l'environnement humain datait de 1972. Ce sommet a notamment adopté l'Agenda 21 et ouvert à la signature la convention sur le climat.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le climat marqué par des pluies abondantes toute l'année et des températures élevées et constantes est le climat :",
+      "o": [
+        "tropical sec",
+        "désertique",
+        "méditerranéen",
+        "équatorial"
+      ],
+      "r": 3,
+      "x": "Le climat équatorial, chaud et humide toute l'année, règne notamment dans le bassin du Congo. Le climat tropical sec, comme au Burkina Faso, alterne saison sèche et saison des pluies. Le climat équatorial favorise la forêt dense, toujours verte.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le climat méditerranéen se caractérise par :",
+      "o": [
+        "des étés chauds et secs",
+        "des pluies toute l'année",
+        "des hivers très froids et secs",
+        "une saison des pluies en été"
+      ],
+      "r": 0,
+      "x": "Le climat méditerranéen associe des étés chauds et secs à des hivers doux et pluvieux. En Afrique, on le rencontre au Maghreb et à l'extrême sud du continent. Ce climat convient à des cultures comme l'olivier et la vigne.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Lorsque c'est l'été dans l'hémisphère Nord, l'hémisphère Sud connaît :",
+      "o": [
+        "l'été",
+        "le printemps",
+        "l'automne",
+        "l'hiver"
+      ],
+      "r": 3,
+      "x": "Les saisons sont inversées entre les deux hémisphères en raison de l'inclinaison de l'axe terrestre. Ainsi, Noël tombe en plein été austral, en Australie par exemple. Les saisons dépendent de l'inclinaison des rayons du Soleil, et non de la distance entre la Terre et le Soleil.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La longitude d'un lieu se mesure par rapport :",
+      "o": [
+        "à l'équateur",
+        "au pôle Nord",
+        "au tropique du Cancer",
+        "au méridien de Greenwich"
+      ],
+      "r": 3,
+      "x": "La longitude mesure l'écart angulaire, à l'est ou à l'ouest, par rapport au méridien de Greenwich. Ce méridien de référence est noté 0°. Associée à la latitude, elle permet de localiser précisément n'importe quel point du globe.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La latitude d'un lieu varie :",
+      "o": [
+        "de 0° à 60°",
+        "de 0° à 90°",
+        "de 0° à 180°",
+        "de 0° à 360°"
+      ],
+      "r": 1,
+      "x": "La latitude se mesure de 0° à l'équateur jusqu'à 90° aux pôles, au nord ou au sud. La longitude, elle, va de 0° à 180° vers l'est ou vers l'ouest. Plus on s'éloigne de l'équateur, plus la latitude augmente.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "La ligne internationale de changement de date suit approximativement le méridien :",
+      "o": [
+        "0°",
+        "90° Est",
+        "180°",
+        "90° Ouest"
+      ],
+      "r": 2,
+      "x": "La ligne de changement de date suit approximativement le méridien 180°, avec des détours pour éviter de couper des terres habitées. La franchir vers l'ouest fait avancer le calendrier d'un jour. Ce méridien est situé à l'opposé du méridien de Greenwich, principalement dans l'océan Pacifique.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Deux lieux distants de 60° de longitude ont un décalage horaire théorique de :",
+      "o": [
+        "2 h",
+        "4 h",
+        "6 h",
+        "8 h"
+      ],
+      "r": 1,
+      "x": "60° ÷ 15° = 4 fuseaux, soit 4 heures de décalage théorique. Le lieu situé le plus à l'est est en avance sur l'autre. La règle est simple : une heure de décalage correspond à 15° de longitude.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le fleuve au plus fort débit du monde est :",
+      "o": [
+        "le Nil",
+        "le Mississippi",
+        "l'Amazone",
+        "le Congo"
+      ],
+      "r": 2,
+      "x": "L'Amazone, en Amérique du Sud, a de loin le plus fort débit du monde. Le Congo occupe le deuxième rang. Ce débit énorme s'explique par les pluies abondantes qui arrosent la forêt amazonienne.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le parallèle situé vers 23° 26′ de latitude Sud est :",
+      "o": [
+        "le tropique du Cancer",
+        "le tropique du Capricorne",
+        "le cercle polaire antarctique",
+        "l'équateur"
+      ],
+      "r": 1,
+      "x": "Le tropique du Capricorne se situe vers 23° 26′ S ; le tropique du Cancer est son symétrique au nord. L'équateur correspond, lui, à la latitude 0°. Ce parallèle marque la limite sud de la zone intertropicale.",
+      "_batchId": "geographie/2026-11-19/SERIE1"
+    },
+    {
+      "q": "Le périmètre irrigué de la vallée du Kou couvre une superficie aménagée d'environ :",
+      "o": [
+        "560 ha",
+        "1 260 ha",
+        "3 400 ha",
+        "12 600 ha"
+      ],
+      "r": 1,
+      "x": "Le périmètre de la vallée du Kou compte 1 260 ha aménagés, alimentés par le Kou au niveau de Diaradougou. C'est l'un des plus anciens grands périmètres irrigués du pays. Une superficie de 1 260 ha équivaut à 12,6 km².",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La Socoma, société cotonnière active dans l'est du pays, tire son nom de la « Société cotonnière :",
+      "o": [
+        "du Ganzourgou",
+        "du Gourma",
+        "de la Gnagna",
+        "de la Comoé"
+      ],
+      "r": 1,
+      "x": "La Socoma est la Société cotonnière du Gourma. Elle intervient dans la zone cotonnière de l'est du pays. Le Gourma est le pays traditionnel des Gourmantché.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Sur le périmètre de la vallée du Kou, la principale culture est :",
+      "o": [
+        "le riz irrigué",
+        "le coton",
+        "le sorgho",
+        "la canne à sucre"
+      ],
+      "r": 0,
+      "x": "La vallée du Kou est d'abord un périmètre rizicole, où le maïs est aussi cultivé. Il est alimenté par la rivière Kou. L'irrigation y permet souvent deux récoltes de riz par an.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le périmètre irrigué de la vallée du Kou se trouve dans la commune de :",
+      "o": [
+        "Bama",
+        "Dandé",
+        "Satiri",
+        "Karangasso-Vigué"
+      ],
+      "r": 0,
+      "x": "Le périmètre se situe dans la commune de Bama, au nord-ouest de Bobo-Dioulasso. C'est l'un des plus anciens périmètres rizicoles de l'ouest du pays. Bama se trouve à une trentaine de kilomètres de Bobo-Dioulasso.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La Société burkinabè des fibres textiles (SOFITEX) a été créée en :",
+      "o": [
+        "1965",
+        "1979",
+        "1998",
+        "2004"
+      ],
+      "r": 1,
+      "x": "La société a été créée le 20 juin 1979 sous le nom de Société voltaïque des fibres textiles. Elle a pris le nom de Société burkinabè des fibres textiles (SOFITEX) en 1984, après le changement de nom de la Haute-Volta en Burkina Faso. Elle demeure un acteur majeur de la filière cotonnière nationale.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Les sociétés cotonnières Socoma et Faso Coton ont été mises en place en :",
+      "o": [
+        "1979",
+        "1998",
+        "2004",
+        "2016"
+      ],
+      "r": 2,
+      "x": "La Socoma et Faso Coton ont été créées en 2004. La filière a alors été organisée autour de trois zones de production cotonnière. La SOFITEX a gardé l'ouest, la Socoma a reçu l'est et Faso Coton le centre.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "L'Union nationale des producteurs de coton du Burkina (UNPCB) a été créée en :",
+      "o": [
+        "1979",
+        "1991",
+        "1998",
+        "2008"
+      ],
+      "r": 2,
+      "x": "L'UNPCB, créée en 1998, regroupe les producteurs de coton. Elle représente les producteurs dans la gestion de la filière cotonnière. Elle est actionnaire de la SOFITEX aux côtés de l'État.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le coton génétiquement modifié (coton Bt) a été mis à la disposition des producteurs burkinabè en :",
+      "o": [
+        "2003",
+        "2008",
+        "2013",
+        "2018"
+      ],
+      "r": 1,
+      "x": "Le coton Bt a été introduit dans la production commerciale au Burkina Faso en 2008, après plusieurs campagnes d'expérimentation. Il a été développé en partenariat avec la firme américaine Monsanto afin de mieux protéger les cultures contre certaines chenilles ravageuses.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "L'abandon progressif du coton Bt par la filière burkinabè a été annoncé en :",
+      "o": [
+        "2008",
+        "2012",
+        "2016",
+        "2020"
+      ],
+      "r": 2,
+      "x": "L'abandon a été annoncé en 2016, le coton Bt ne représentant plus qu'environ 10 % de la production de la campagne 2016-2017. Le retrait complet était prévu dès la campagne suivante. Cette décision a marqué le retour aux variétés de coton conventionnel.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le coton Bt a été abandonné au Burkina Faso principalement en raison :",
+      "o": [
+        "d'une fibre de moindre qualité",
+        "de rendements trop faibles",
+        "d'une interdiction régionale",
+        "d'une forte pénurie d'eau"
+      ],
+      "r": 0,
+      "x": "Les sociétés cotonnières jugeaient la fibre Bt de qualité inférieure, donc moins bien payée sur le marché mondial. Les pertes de recettes se chiffraient en dizaines de millions de dollars. La fibre Bt était notamment plus courte, ce qui réduisait sa valeur commerciale.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le coton Bt a été développé au Burkina Faso en partenariat avec la firme :",
+      "o": [
+        "Syngenta",
+        "Cargill",
+        "BASF",
+        "Monsanto"
+      ],
+      "r": 3,
+      "x": "Le programme a été conduit avec la firme américaine Monsanto. La SOFITEX contrôlait alors plus de 80 % de la production et des semences. Monsanto a depuis été rachetée par le groupe allemand Bayer.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "L'unique industrie sucrière du Burkina Faso, la SN-SOSUCO, est implantée près de :",
+      "o": [
+        "Banfora",
+        "Bobo-Dioulasso",
+        "Koudougou",
+        "Dédougou"
+      ],
+      "r": 0,
+      "x": "Le complexe sucrier se situe entre Bérégadougou et Banfora, dans le sud-ouest du pays. L'État lui a concédé 10 000 ha de terres. Elle produit du sucre à partir de la canne cultivée sur place.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le complexe sucrier de la Comoé trouve son origine dans une société créée en :",
+      "o": [
+        "1959",
+        "1965",
+        "1979",
+        "1991"
+      ],
+      "r": 1,
+      "x": "Le projet sucrier de la Comoé trouve son origine dans la Société d'études sucrières de Haute-Volta, créée en 1965. La SOSUCO, qui a pris la suite de cette structure en 1985, est devenue l'acteur central de la production industrielle de sucre au Burkina Faso.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le ranch de gibier de Nazinga se situe non loin de la frontière avec :",
+      "o": [
+        "le Togo",
+        "le Ghana",
+        "le Mali",
+        "le Niger"
+      ],
+      "r": 1,
+      "x": "Le ranch se trouve dans le sud du pays, près de la frontière ghanéenne. Il est connu pour sa population d'éléphants. On y observe aussi des buffles, des hippotragues et plus de 300 espèces d'oiseaux.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le zaï, technique traditionnelle de récupération des terres, consiste à :",
+      "o": [
+        "creuser des poquets avec de la fumure",
+        "bâtir des terrasses en béton",
+        "brûler les champs avant le semis",
+        "irriguer les parcelles par aspersion"
+      ],
+      "r": 0,
+      "x": "Le zaï consiste à creuser de petits trous où l'on concentre fumure et eau avant le semis. Il permet de remettre en culture des sols encroûtés et dégradés. Cette technique est surtout répandue dans le nord et le centre du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Les cordons pierreux servent principalement à :",
+      "o": [
+        "clôturer les parcelles contre le bétail",
+        "marquer les limites des communes",
+        "stocker les récoltes de céréales",
+        "freiner le ruissellement des eaux"
+      ],
+      "r": 3,
+      "x": "Disposés en courbes de niveau, les cordons pierreux ralentissent l'eau de ruissellement et retiennent la terre fine. L'eau s'infiltre ainsi davantage dans le sol. Ils sont construits avec des blocs de pierre alignés sur quelques dizaines de centimètres de hauteur.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le Burkinabè Yacouba Sawadogo, surnommé « l'homme qui arrêta le désert », a reçu le prix Right Livelihood en :",
+      "o": [
+        "2010",
+        "2014",
+        "2018",
+        "2022"
+      ],
+      "r": 2,
+      "x": "Yacouba Sawadogo a reçu le prix Right Livelihood, souvent appelé « prix Nobel alternatif », en 2018. Il est décédé le 3 décembre 2023. Ce prix récompense des personnes qui apportent des solutions concrètes aux grands problèmes de la planète.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Yacouba Sawadogo a restauré des terres dégradées dans son village de Gourga, situé dans la province :",
+      "o": [
+        "du Yatenga",
+        "du Bam",
+        "du Séno",
+        "du Passoré"
+      ],
+      "r": 0,
+      "x": "Gourga se trouve dans le Yatenga, près de Ouahigouya. Il y a amélioré le zaï en enrichissant les trous de fumure et de déchets organiques. Grâce à ces techniques, il a fait renaître une forêt de plusieurs dizaines d'hectares.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Yacouba Sawadogo a été désigné « Champion de la Terre » par le Programme des Nations unies pour l'environnement en :",
+      "o": [
+        "2012",
+        "2016",
+        "2020",
+        "2024"
+      ],
+      "r": 2,
+      "x": "Ce prix du Programme des Nations unies pour l'environnement lui a été décerné en 2020. Un documentaire de 2010, « L'homme qui arrêta le désert », a fait connaître son travail. Ce titre est la plus haute distinction environnementale décernée par l'Organisation des Nations unies (ONU).",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "L'initiative de la Grande Muraille verte a été adoptée par l'Union africaine en :",
+      "o": [
+        "1994",
+        "2002",
+        "2007",
+        "2015"
+      ],
+      "r": 2,
+      "x": "L'Union africaine a endossé l'initiative de la Grande Muraille verte pour le Sahara et le Sahel en 2007. Le projet avait été approuvé dès 2005 par la Communauté des États sahélo-sahariens. Le Burkina Faso fait partie des onze pays fondateurs de l'initiative.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Dans son tracé initial, la Grande Muraille verte devait s'étendre sur une longueur d'environ :",
+      "o": [
+        "2 500 km",
+        "4 600 km",
+        "7 775 km",
+        "11 000 km"
+      ],
+      "r": 2,
+      "x": "Le projet initial prévoyait une bande de 7 775 km à travers le Sahel, de l'Atlantique à la mer Rouge. Le Burkina Faso fait partie des pays concernés. Elle devait relier Dakar, à l'ouest, à Djibouti, à l'est.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Dans son tracé initial, la Grande Muraille verte devait avoir une largeur de :",
+      "o": [
+        "5 km",
+        "15 km",
+        "50 km",
+        "100 km"
+      ],
+      "r": 1,
+      "x": "La bande de végétation devait mesurer 15 km de large. L'initiative a depuis évolué vers une mosaïque de projets de restauration des terres. Cette bande devait servir de barrière verte contre l'avancée du désert.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "D'ici 2030, la Grande Muraille verte vise la restauration de :",
+      "o": [
+        "10 millions d'hectares",
+        "50 millions d'hectares",
+        "100 millions d'hectares",
+        "250 millions d'hectares"
+      ],
+      "r": 2,
+      "x": "L'objectif est de restaurer 100 millions d'hectares de terres dégradées d'ici 2030. Il s'agit de lutter contre la désertification et d'améliorer la sécurité alimentaire. Elle vise aussi à créer 10 millions d'emplois dans les zones rurales.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le nom scientifique du karité est :",
+      "o": [
+        "Vitellaria paradoxa",
+        "Parkia biglobosa",
+        "Acacia senegal",
+        "Tamarindus indica"
+      ],
+      "r": 0,
+      "x": "Le karité, Vitellaria paradoxa, est un arbre emblématique des savanes burkinabè. Ses amandes donnent le beurre de karité. Le beurre de karité sert en cuisine et en cosmétique, et sa transformation est souvent assurée par les femmes.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le soumbala, condiment traditionnel, est obtenu à partir des graines :",
+      "o": [
+        "du karité",
+        "du tamarinier",
+        "du baobab",
+        "du néré"
+      ],
+      "r": 3,
+      "x": "Le soumbala est préparé à partir des graines fermentées du néré. Le néré a pour nom scientifique Parkia biglobosa. Le néré est un arbre des savanes dont les gousses contiennent aussi une pulpe jaune comestible.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Adansonia digitata est le nom scientifique :",
+      "o": [
+        "du baobab",
+        "du rônier",
+        "du caïlcédrat",
+        "du kapokier"
+      ],
+      "r": 0,
+      "x": "Adansonia digitata désigne le baobab, arbre aux feuilles et aux fruits très utilisés dans l'alimentation. Le caïlcédrat a, lui, pour nom scientifique Khaya senegalensis. Le baobab se reconnaît à son tronc très large, capable de stocker de grandes quantités d'eau.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La gomme arabique est principalement produite par :",
+      "o": [
+        "Acacia senegal",
+        "Balanites aegyptiaca",
+        "Faidherbia albida",
+        "Ziziphus mauritiana"
+      ],
+      "r": 0,
+      "x": "La gomme arabique est l'exsudat de l'Acacia senegal, arbre des zones sahéliennes. Elle est utilisée dans l'industrie alimentaire et pharmaceutique. Le Soudan en est le premier producteur mondial.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le ranch de gibier de Nazinga, dans le sud du pays, a été créé en :",
+      "o": [
+        "1959",
+        "1969",
+        "1979",
+        "1989"
+      ],
+      "r": 2,
+      "x": "Le ranch de gibier de Nazinga a été créé en 1979. Il est consacré à la gestion durable de la faune sauvage. Il couvre environ 940 km².",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le ranch de gibier de Nazinga a été créé à l'initiative :",
+      "o": [
+        "de deux frères canadiens",
+        "d'une ONG française",
+        "de l'armée burkinabè",
+        "de l'Union européenne"
+      ],
+      "r": 0,
+      "x": "Le ranch est né de l'initiative des frères canadiens Robert et Clark Lungren. Des espèces locales y ont été protégées et réintroduites. Le projet visait à montrer que la faune sauvage pouvait être gérée comme une ressource durable.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le projet Bagrépôle a été financé principalement par :",
+      "o": [
+        "la Banque africaine de développement",
+        "l'Union européenne",
+        "la Banque ouest-africaine de développement",
+        "la Banque mondiale"
+      ],
+      "r": 3,
+      "x": "Le financement de l'Association internationale de développement (IDA), filiale de la Banque mondiale, atteignait 57,15 milliards de FCFA sur un coût total de 66,85 milliards. Le projet vise à développer l'agriculture irriguée autour du barrage de Bagré. Un pôle de croissance est une zone où l'on concentre les investissements pour stimuler l'économie locale.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le coton Bt a été génétiquement modifié pour résister :",
+      "o": [
+        "à la sécheresse",
+        "aux herbicides",
+        "aux chenilles ravageuses",
+        "à la salinité"
+      ],
+      "r": 2,
+      "x": "Le coton Bt produit une toxine issue de la bactérie Bacillus thuringiensis, qui tue certaines chenilles ravageuses. Il permet de réduire les traitements insecticides. Le sigle Bt vient du nom de cette bactérie.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Parmi ces cultures, laquelle est une culture de rente au Burkina Faso :",
+      "o": [
+        "le sorgho",
+        "le mil",
+        "le fonio",
+        "le coton"
+      ],
+      "r": 3,
+      "x": "Le coton est principalement cultivé pour la vente et l'exportation, ce qui en fait une culture de rente. Le coton fournit des revenus monétaires à de nombreux ménages ruraux. L'arachide et le sésame sont d'autres exemples de cultures de rente au Burkina Faso.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le sorgho, le mil et le maïs sont, au Burkina Faso, avant tout des cultures :",
+      "o": [
+        "industrielles",
+        "fourragères",
+        "d'exportation",
+        "vivrières"
+      ],
+      "r": 3,
+      "x": "Ces céréales constituent la base de l'alimentation des ménages, ce qui en fait des cultures vivrières. Elles occupent l'essentiel des superficies cultivées. Une partie de leur production est toutefois vendue sur les marchés locaux.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le déplacement saisonnier des troupeaux à la recherche de pâturages et d'eau s'appelle :",
+      "o": [
+        "la transhumance",
+        "la stabulation",
+        "l'embouche",
+        "la sédentarisation"
+      ],
+      "r": 0,
+      "x": "La transhumance est le déplacement saisonnier des troupeaux entre zones de pâturage. L'embouche consiste, elle, à engraisser des animaux en vue de leur vente. La transhumance peut provoquer des conflits entre éleveurs et agriculteurs lorsque les troupeaux traversent les champs.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Selon la convention des Nations unies de 1994, la désertification désigne :",
+      "o": [
+        "l'avancée naturelle des dunes",
+        "la salinisation des littoraux",
+        "la disparition des forêts humides",
+        "la dégradation des terres sèches"
+      ],
+      "r": 3,
+      "x": "La désertification est la dégradation des terres dans les zones arides, semi-arides et subhumides sèches. Elle résulte de facteurs climatiques et des activités humaines. Elle ne se réduit donc pas à l'avancée des dunes de sable.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La demi-lune, pratiquée dans le nord du Burkina Faso, est une technique :",
+      "o": [
+        "de récupération des sols",
+        "de conservation des céréales",
+        "de pêche en eau douce",
+        "de transformation du karité"
+      ],
+      "r": 0,
+      "x": "La demi-lune est une cuvette en arc de cercle qui retient l'eau de pluie et la matière organique. Comme le zaï, elle permet de remettre en culture des terres encroûtées. Elle est particulièrement adaptée aux sols durs et nus des zones sahéliennes.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le paillage consiste à :",
+      "o": [
+        "brûler les résidus de récolte au champ",
+        "arroser abondamment le sol chaque jour",
+        "labourer le sol en profondeur",
+        "couvrir le sol de résidus végétaux"
+      ],
+      "r": 3,
+      "x": "Le paillage consiste à couvrir le sol de résidus végétaux pour limiter l'évaporation et l'érosion. Il enrichit aussi progressivement le sol en matière organique. Les résidus utilisés sont souvent des tiges de céréales laissées après la récolte.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La jachère consiste à :",
+      "o": [
+        "cultiver deux fois par an",
+        "irriguer en saison sèche",
+        "semer plusieurs variétés ensemble",
+        "laisser une terre au repos"
+      ],
+      "r": 3,
+      "x": "La jachère consiste à laisser une parcelle au repos pendant une ou plusieurs saisons pour qu'elle reconstitue sa fertilité. Elle recule lorsque la pression foncière augmente. Pendant la période de repos, la végétation naturelle repousse et le sol se régénère.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La rotation des cultures consiste à :",
+      "o": [
+        "alterner les cultures sur une même parcelle",
+        "cultiver une seule plante chaque année",
+        "déplacer les champs de village en village",
+        "semer en lignes au lieu de semer à la volée"
+      ],
+      "r": 0,
+      "x": "La rotation consiste à faire se succéder des cultures différentes sur une même parcelle, par exemple céréales et légumineuses. Elle limite l'épuisement du sol et les maladies. Les légumineuses comme l'arachide ou le niébé enrichissent le sol en azote.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Au RGPH 2019, la troisième ville la plus peuplée du Burkina Faso est :",
+      "o": [
+        "Ouahigouya",
+        "Banfora",
+        "Kaya",
+        "Koudougou"
+      ],
+      "r": 3,
+      "x": "Koudougou se classe troisième, derrière Ouagadougou et Bobo-Dioulasso. Elle est desservie par la ligne ferroviaire Abidjan–Ouagadougou. La ville est aussi connue pour son passé de centre textile, avec l'ancienne usine Faso Fani.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Au RGPH 2019, la commune de Koudougou compte environ :",
+      "o": [
+        "98 400 habitants",
+        "160 239 habitants",
+        "245 000 habitants",
+        "410 000 habitants"
+      ],
+      "r": 1,
+      "x": "Koudougou compte 160 239 habitants au recensement de 2019. La ville est un important centre universitaire et commercial. La ville est aussi connue pour son festival culturel, les Nuits atypiques de Koudougou (NAK).",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Koudougou est le chef-lieu de la province :",
+      "o": [
+        "du Sanguié",
+        "de la Sissili",
+        "du Ziro",
+        "du Boulkiemdé"
+      ],
+      "r": 3,
+      "x": "Koudougou est le chef-lieu de la province du Boulkiemdé. Réo est, lui, le chef-lieu de la province voisine du Sanguié. Cette province est située dans le centre-ouest du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "L'université publique de Koudougou porte aujourd'hui le nom de :",
+      "o": [
+        "Joseph Ki-Zerbo",
+        "Nazi Boni",
+        "Norbert Zongo",
+        "Thomas Sankara"
+      ],
+      "r": 2,
+      "x": "L'université de Koudougou a été rebaptisée Université Norbert Zongo. Les universités Joseph Ki-Zerbo et Nazi Boni se trouvent respectivement à Ouagadougou et à Bobo-Dioulasso. Norbert Zongo, journaliste d'investigation burkinabè, est né à Koudougou.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La commune de Ouagadougou est subdivisée en :",
+      "o": [
+        "5 arrondissements",
+        "7 arrondissements",
+        "12 arrondissements",
+        "30 arrondissements"
+      ],
+      "r": 2,
+      "x": "La commune de Ouagadougou compte 12 arrondissements, eux-mêmes divisés en secteurs. Les résultats des municipales de 2016 y ont été proclamés arrondissement par arrondissement. Ce découpage facilite la gestion de proximité dans une ville très étendue.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La route nationale n°1 (RN1) relie Ouagadougou à :",
+      "o": [
+        "Fada N'Gourma",
+        "Ouahigouya",
+        "Tenkodogo",
+        "Bobo-Dioulasso"
+      ],
+      "r": 3,
+      "x": "Longue d'environ 360 km, la route nationale n°1 (RN1) est l'axe routier majeur qui relie la capitale Ouagadougou à Bobo-Dioulasso (via Sabou, Boromo et Houndé). Les autres villes proposées sont desservies depuis Ouagadougou par la RN2 pour Ouahigouya, la RN4 pour Fada N'Gourma et l'embranchement RN4/RN16 pour Tenkodogo.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La RN5 relie Ouagadougou à la frontière ghanéenne en passant par :",
+      "o": [
+        "Léo",
+        "Tenkodogo",
+        "Gaoua",
+        "Pô"
+      ],
+      "r": 3,
+      "x": "La RN5 descend de Ouagadougou vers le sud jusqu'à Pô, puis jusqu'à la frontière. Elle constitue un axe majeur vers les ports ghanéens. Elle se prolonge au Ghana vers Bolgatanga, Tamale et Kumasi.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La RN4 relie Ouagadougou à la frontière nigérienne en passant par :",
+      "o": [
+        "Koudougou",
+        "Dédougou",
+        "Ouahigouya",
+        "Fada N'Gourma"
+      ],
+      "r": 3,
+      "x": "La RN4 passe par Koupéla et Fada N'Gourma avant de rejoindre Kantchari, vers le Niger. Le tronçon Fada N'Gourma–Kantchari mesure environ 152 km. Elle constitue le principal axe routier vers Niamey.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La RN7 relie Bobo-Dioulasso à la frontière ivoirienne en passant par :",
+      "o": [
+        "Orodara",
+        "Diébougou",
+        "Houndé",
+        "Banfora"
+      ],
+      "r": 3,
+      "x": "La RN7 descend de Bobo-Dioulasso vers Banfora puis Niangoloko, près de la frontière ivoirienne. Le tronçon Banfora–Niangoloko mesure environ 46 km. Cette route se prolonge en Côte d'Ivoire en direction d'Abidjan.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La RN8 relie Bobo-Dioulasso à la frontière malienne en passant par :",
+      "o": [
+        "Orodara",
+        "Dédougou",
+        "Solenzo",
+        "Houndé"
+      ],
+      "r": 0,
+      "x": "La RN8 relie Bobo-Dioulasso à Orodara, chef-lieu du Kénédougou, puis à la frontière. Elle dessert l'une des principales zones fruitières du pays. Elle se prolonge au Mali en direction de Sikasso.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La ville frontalière de Cinkansé, au bout de la route venant de Koupéla, est située à la frontière avec :",
+      "o": [
+        "le Ghana",
+        "le Niger",
+        "le Bénin",
+        "le Togo"
+      ],
+      "r": 3,
+      "x": "Cinkansé est le principal point de passage entre le Burkina Faso et le Togo. La route qui y mène est essentielle pour l'accès au port de Lomé. La localité togolaise voisine porte le nom de Cinkassé.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le poste frontière de Dakola ouvre sur :",
+      "o": [
+        "le Ghana",
+        "le Togo",
+        "la Côte d'Ivoire",
+        "le Bénin"
+      ],
+      "r": 0,
+      "x": "Dakola est le principal poste frontière entre le Burkina Faso et le Ghana dans le centre-sud. Il marque la fin de la RN5 côté burkinabè. En face, côté ghanéen, se trouve la ville de Paga.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le poste frontière de Seytenga, au nord-est de Dori, ouvre sur :",
+      "o": [
+        "le Mali",
+        "le Bénin",
+        "le Togo",
+        "le Niger"
+      ],
+      "r": 3,
+      "x": "Seytenga est situé à environ 51 km de Dori, à la frontière nigérienne. La localité relève de la province du Séno. La route se prolonge au Niger vers Téra puis Niamey.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le poste frontière de Koloko, dans le Kénédougou, ouvre sur :",
+      "o": [
+        "la Côte d'Ivoire",
+        "le Niger",
+        "le Ghana",
+        "le Mali"
+      ],
+      "r": 3,
+      "x": "Koloko est le point de passage vers le Mali dans l'ouest du pays. La route qui y mène traverse le Kénédougou. Ce corridor est important pour les échanges commerciaux avec le sud du Mali.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le premier symposium international de sculpture sur granit de Laongo s'est tenu en :",
+      "o": [
+        "1979",
+        "1984",
+        "1989",
+        "1996"
+      ],
+      "r": 2,
+      "x": "Le premier symposium s'est ouvert le 13 janvier 1989 et a réuni 18 sculpteurs venus de 13 pays. Le site est situé à environ 35 km de Ouagadougou. Les éditions suivantes ont enrichi ce musée à ciel ouvert.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le site de sculpture sur granit de Laongo se trouve dans la province :",
+      "o": [
+        "du Bassitenga",
+        "du Kadiogo",
+        "du Bazèga",
+        "du Kourwéogo"
+      ],
+      "r": 0,
+      "x": "Laongo se trouve dans la province du Bassitenga, dont le chef-lieu est Ziniaré. Cette province portait auparavant le nom d'Oubritenga, renommée en Bassitenga en 2025. Le site est célèbre pour ses sculptures réalisées directement sur les blocs de granite.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le symposium de sculpture sur granit de Laongo a été initié par le sculpteur burkinabè :",
+      "o": [
+        "Ousmane Sow",
+        "Christophe Sawadogo",
+        "Romuald Hazoumè",
+        "Siriki Ky"
+      ],
+      "r": 3,
+      "x": "Siriki Ky est à l'origine du symposium de Laongo. Ousmane Sow est un sculpteur sénégalais et Romuald Hazoumè un plasticien béninois. Siriki Ky est connu pour ses sculptures en bronze et en pierre.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le nouvel aéroport de Donsin est situé, par rapport à Ouagadougou, à environ :",
+      "o": [
+        "10 km",
+        "20 km",
+        "35 km",
+        "60 km"
+      ],
+      "r": 2,
+      "x": "Le site de Donsin se trouve à environ 35 km au nord de Ouagadougou. Il doit remplacer l'aéroport actuel, enclavé dans le tissu urbain. Son éloignement du centre-ville limite les nuisances sonores et les risques pour les habitants.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Parmi ces villes, laquelle est une commune urbaine sans être chef-lieu de province :",
+      "o": [
+        "Koupéla",
+        "Kombissiri",
+        "Boussé",
+        "Pouytenga"
+      ],
+      "r": 3,
+      "x": "Pouytenga, grand centre commercial du Kouritenga, est une commune urbaine dont la province a pour chef-lieu Koupéla. Bittou, Garango et Niangoloko sont dans le même cas. Une commune urbaine n'est donc pas forcément un chef-lieu de province.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Depuis 2025, la région du Liptako regroupe les provinces de l'Oudalan, du Séno et :",
+      "o": [
+        "de la Gnagna",
+        "de la Kompienga",
+        "de la Komondjari",
+        "du Yagha"
+      ],
+      "r": 3,
+      "x": "Le Liptako regroupe l'Oudalan, le Séno et le Yagha. Il correspond à la partie orientale de l'ancienne région du Sahel. Le Yagha a pour chef-lieu Sebba.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Depuis 2025, la région de la Sirba regroupe les provinces de la Gnagna et :",
+      "o": [
+        "de la Komondjari",
+        "de la Kompienga",
+        "du Kouritenga",
+        "du Ganzourgou"
+      ],
+      "r": 0,
+      "x": "La Sirba (chef-lieu Bogandé) regroupe la Gnagna et la Komondjari (chef-lieu Gayéri). La région est issue du redécoupage de l'ancienne région de l'Est. Ces deux provinces sont situées dans le nord de l'ancienne région de l'Est.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Depuis 2025, la province de la Kompienga relève de la région :",
+      "o": [
+        "de la Sirba",
+        "de la Tapoa",
+        "du Nakambé",
+        "du Goulmou"
+      ],
+      "r": 3,
+      "x": "Le Goulmou regroupe le Gourma et la Kompienga. La Kompienga a pour chef-lieu Pama. La Kompienga abrite le barrage du même nom, l'un des plus grands du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Depuis 2025, la région du Sourou regroupe les provinces du Sourou, de la Kossin et :",
+      "o": [
+        "du Mouhoun",
+        "des Banwa",
+        "des Balé",
+        "du Nayala"
+      ],
+      "r": 3,
+      "x": "Le Sourou (chef-lieu Tougan) regroupe le Sourou, la Kossin (ex-Kossi) et le Nayala (chef-lieu Toma). La région est issue de la scission de l'ancienne Boucle du Mouhoun. Ces trois provinces se trouvent dans le nord-ouest du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le chef-lieu de la province de la Sissili est :",
+      "o": [
+        "Léo",
+        "Sapouy",
+        "Pô",
+        "Kombissiri"
+      ],
+      "r": 0,
+      "x": "Léo est le chef-lieu de la Sissili, province frontalière du Ghana. Pô est celui de la province du Nahouri. Léo se trouve à environ 165 km au sud-ouest de Ouagadougou.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le chef-lieu de la province du Passoré est :",
+      "o": [
+        "Gourcy",
+        "Titao",
+        "Kongoussi",
+        "Yako"
+      ],
+      "r": 3,
+      "x": "Yako est le chef-lieu du Passoré, dans le nord du plateau central. Kongoussi est celui de la province du Bam. Yako se trouve sur la route reliant Ouagadougou à Ouahigouya.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le chef-lieu de la province du Tuy est :",
+      "o": [
+        "Boromo",
+        "Toma",
+        "Solenzo",
+        "Houndé"
+      ],
+      "r": 3,
+      "x": "Houndé, sur l'axe Ouagadougou–Bobo-Dioulasso, est le chef-lieu du Tuy. Toma est celui du Nayala. Houndé est aussi connue pour sa mine d'or industrielle.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le chef-lieu de la province de la Léraba est :",
+      "o": [
+        "Sindou",
+        "Banfora",
+        "Orodara",
+        "Niangoloko"
+      ],
+      "r": 0,
+      "x": "Sindou, célèbre pour ses pics de grès, est le chef-lieu de la Léraba. Banfora est celui de la Comoé. La Léraba est frontalière du Mali et de la Côte d'Ivoire.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le chef-lieu de la province de l'Ioba est :",
+      "o": [
+        "Diébougou",
+        "Batié",
+        "Gaoua",
+        "Dano"
+      ],
+      "r": 3,
+      "x": "Dano est le chef-lieu de l'Ioba, dans le sud-ouest du pays. Gaoua est celui du Poni. L'Ioba est peuplée notamment de Dagara.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le chef-lieu de la province du Ganzourgou est :",
+      "o": [
+        "Boulsa",
+        "Koupéla",
+        "Ziniaré",
+        "Zorgho"
+      ],
+      "r": 3,
+      "x": "Zorgho est le chef-lieu du Ganzourgou, à l'est de Ouagadougou. Koupéla est celui du Kouritenga. Zorgho se trouve à une centaine de kilomètres à l'est de Ouagadougou.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le chef-lieu de la province du Koulpélogo est :",
+      "o": [
+        "Ouargaye",
+        "Sangha",
+        "Soudougui",
+        "Zabré"
+      ],
+      "r": 0,
+      "x": "Ouargaye est le chef-lieu du Koulpélogo, province frontalière du Togo et du Ghana. Sangha et Soudougui sont des communes de cette province, Zabré relève du Boulgou. Le Koulpélogo se trouve dans le sud-est du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le chef-lieu de la province du Bazèga est :",
+      "o": [
+        "Saponé",
+        "Toécé",
+        "Kayao",
+        "Kombissiri"
+      ],
+      "r": 3,
+      "x": "Kombissiri est le chef-lieu du Bazèga, au sud de Ouagadougou. Saponé, Toécé et Kayao sont des communes de cette province. Kombissiri se trouve à une quarantaine de kilomètres de Ouagadougou.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le chef-lieu de la province des Banwa est :",
+      "o": [
+        "Kouka",
+        "Sanaba",
+        "Tansila",
+        "Solenzo"
+      ],
+      "r": 3,
+      "x": "Solenzo est le chef-lieu des Banwa. Kouka, Sanaba et Tansila sont des communes de cette province. La province se situe dans l'ouest du pays, près de la frontière malienne.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le chef-lieu de la province du Kourwéogo est :",
+      "o": [
+        "Boussé",
+        "Laye",
+        "Sourgoubila",
+        "Niou"
+      ],
+      "r": 0,
+      "x": "Boussé est le chef-lieu du Kourwéogo, au nord-ouest de Ouagadougou. Laye, Sourgoubila et Niou sont des communes de cette province. Boussé se trouve à une cinquantaine de kilomètres de Ouagadougou.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le chef-lieu de la province du Zondoma est :",
+      "o": [
+        "Gourcy",
+        "Titao",
+        "Séguénéga",
+        "Thiou"
+      ],
+      "r": 0,
+      "x": "Gourcy est le chef-lieu du Zondoma, dans le nord du pays. Ouahigouya est celui du Yatenga. Le Zondoma est une petite province du nord, voisine du Yatenga.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le chef-lieu de la province du Namentenga est :",
+      "o": [
+        "Pissila",
+        "Tougouri",
+        "Yalgo",
+        "Boulsa"
+      ],
+      "r": 3,
+      "x": "Boulsa est le chef-lieu du Namentenga. Tougouri et Yalgo sont des communes de cette province, Pissila relève de la province voisine. Le Namentenga se trouve dans le centre-nord du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le chef-lieu de la province des Balé est :",
+      "o": [
+        "Houndé",
+        "Dédougou",
+        "Safané",
+        "Boromo"
+      ],
+      "r": 3,
+      "x": "Située dans la région de Bankui (ex-Boucle du Mouhoun), la province des Balé a pour chef-lieu la ville de Boromo, un carrefour majeur sur la RN1 entre Ouagadougou et Bobo-Dioulasso, célèbre pour son parc national des Deux Balé. Les autres choix renvoient à Houndé (chef-lieu du Tuy) et Dédougou (chef-lieu du Mouhoun).",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le chef-lieu de la province du Noumbiel est :",
+      "o": [
+        "Batié",
+        "Gaoua",
+        "Dano",
+        "Diébougou"
+      ],
+      "r": 0,
+      "x": "Batié est le chef-lieu du Noumbiel, à la frontière ivoiro-ghanéenne. Gaoua est celui du Poni. Batié est l'un des chefs-lieux de province les plus méridionaux du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le chef-lieu de la province du Ziro est :",
+      "o": [
+        "Bougnounou",
+        "Cassou",
+        "Gao",
+        "Sapouy"
+      ],
+      "r": 3,
+      "x": "Sapouy est le chef-lieu du Ziro, au sud-ouest de Ouagadougou. Bougnounou, Cassou et Gao sont des communes de cette province. Le Ziro est une province du centre-ouest du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le chef-lieu de la province du Loroum est :",
+      "o": [
+        "Titao",
+        "Ouindigui",
+        "Sollé",
+        "Banh"
+      ],
+      "r": 0,
+      "x": "Titao est le chef-lieu du Loroum, province frontalière du Mali. Ouindigui, Sollé et Banh sont des communes de cette province. Titao se trouve dans le nord du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le chef-lieu de la province de la Bougouriba est :",
+      "o": [
+        "Dissin",
+        "Dolo",
+        "Kampti",
+        "Diébougou"
+      ],
+      "r": 3,
+      "x": "Diébougou est le chef-lieu de la Bougouriba, dans le sud-ouest du pays. Dissin relève de l'Ioba et Kampti du Poni. Diébougou se situe sur la Bougouriba, cours d'eau qui a donné son nom à la province.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Les villes anciennes de Djenné, au Mali, ont été inscrites au patrimoine mondial de l'UNESCO en :",
+      "o": [
+        "1979",
+        "1988",
+        "2004",
+        "2012"
+      ],
+      "r": 1,
+      "x": "Djenné a été inscrite en 1988, la même année que Tombouctou. Sa grande mosquée en terre est un chef-d'œuvre de l'architecture soudanaise. La ville est bâtie sur une butte que les crues du Bani transforment en île.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La falaise de Bandiagara, au Mali, a été inscrite au patrimoine mondial en :",
+      "o": [
+        "1980",
+        "1989",
+        "1998",
+        "2004"
+      ],
+      "r": 1,
+      "x": "La falaise de Bandiagara a été inscrite en 1989 comme bien mixte, culturel et naturel. Elle domine la plaine du Séno, au centre du Mali. Cette falaise de grès s'étend sur environ 150 km.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La falaise de Bandiagara, au Mali, abrite les villages du peuple :",
+      "o": [
+        "bozo",
+        "songhaï",
+        "touareg",
+        "dogon"
+      ],
+      "r": 3,
+      "x": "La falaise de Bandiagara est le cœur du pays dogon, avec ses villages accrochés à la paroi. Depuis 2023, elle relève de la région malienne de Bandiagara, détachée de celle de Mopti. Les Dogon sont connus pour leurs masques et leur architecture traditionnelle.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le tombeau des Askia, inscrit au patrimoine mondial en 2004, se trouve à :",
+      "o": [
+        "Tombouctou",
+        "Djenné",
+        "Ségou",
+        "Gao"
+      ],
+      "r": 3,
+      "x": "Le tombeau des Askia se trouve à Gao, ancienne capitale de l'Empire songhaï. Cette pyramide de terre date de la fin du XVe siècle. Il a été édifié par l'Askia Mohammed, empereur songhaï.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "L'Office du Niger, grand aménagement hydroagricole du Mali, a été créé en :",
+      "o": [
+        "1904",
+        "1932",
+        "1960",
+        "1988"
+      ],
+      "r": 1,
+      "x": "L'Office du Niger a été créé le 5 janvier 1932, à l'époque coloniale. Il est aujourd'hui l'un des plus grands périmètres irrigués d'Afrique de l'Ouest. Il a été conçu à l'origine pour produire du coton et du riz.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Les terres irriguées de l'Office du Niger couvrent près de :",
+      "o": [
+        "10 000 ha",
+        "50 000 ha",
+        "100 000 ha",
+        "500 000 ha"
+      ],
+      "r": 2,
+      "x": "Situé au Mali (dans la région de Ségou) et alimenté par le barrage de Markala sur le fleuve Niger, l'Office du Niger constitue le plus grand périmètre irrigué d'Afrique de l'Ouest avec près de 100 000 à 130 000 hectares aménagés. Créé en 1932 pour produire du coton, il assure aujourd'hui une part majeure de la production rizicole malienne.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le barrage qui alimente les périmètres de l'Office du Niger est celui de :",
+      "o": [
+        "Akosombo",
+        "Kossou",
+        "Kandadji",
+        "Markala"
+      ],
+      "r": 3,
+      "x": "Le barrage de Markala, en aval de Ségou, dérive les eaux du Niger vers les canaux d'irrigation. Akosombo et Kossou se trouvent respectivement au Ghana et en Côte d'Ivoire. Le principe consiste à relever le niveau du fleuve pour que l'eau s'écoule par gravité dans les canaux.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Les réserves naturelles de l'Aïr et du Ténéré, au Niger, ont été inscrites au patrimoine mondial en :",
+      "o": [
+        "1981",
+        "1991",
+        "2001",
+        "2013"
+      ],
+      "r": 1,
+      "x": "Ces réserves ont été inscrites en 1991 pour leurs paysages désertiques et leur faune. Elles associent les montagnes de l'Aïr et le désert du Ténéré, dans le nord du pays. Ce site naturel compte parmi les plus vastes aires protégées d'Afrique.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le centre historique d'Agadez, au Niger, a été inscrit au patrimoine mondial en :",
+      "o": [
+        "1991",
+        "2004",
+        "2013",
+        "2019"
+      ],
+      "r": 2,
+      "x": "Le centre historique d'Agadez a été inscrit en 2013. Son minaret en terre est l'un des plus hauts édifices en briques crues du monde. Agadez est souvent présentée comme la porte du désert.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Les réserves de l'Aïr et du Ténéré figurent sur la liste du patrimoine mondial en péril depuis :",
+      "o": [
+        "1992",
+        "2000",
+        "2012",
+        "2023"
+      ],
+      "r": 0,
+      "x": "Les réserves de l'Aïr et du Ténéré sont inscrites sur la liste du patrimoine en péril depuis 1992. L'insécurité et le braconnage ont fortement réduit la faune. Cette liste signale les sites menacés qui nécessitent une protection urgente.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "L'exploitation de l'uranium à Arlit, au Niger, a commencé en :",
+      "o": [
+        "1958",
+        "1971",
+        "1985",
+        "2009"
+      ],
+      "r": 1,
+      "x": "La production a débuté en 1971 avec la Société des mines de l'Aïr (SOMAÏR), créée en 1968. Le Niger figure parmi les principaux producteurs africains d'uranium. L'uranium sert principalement de combustible aux centrales nucléaires.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La ville minière d'Arlit est située dans la région nigérienne :",
+      "o": [
+        "de Tillabéri",
+        "de Zinder",
+        "de Maradi",
+        "d'Agadez"
+      ],
+      "r": 3,
+      "x": "Arlit se trouve dans le nord du Niger, dans la région d'Agadez. Elle forme avec la cité voisine d'Akokan un important pôle minier. Agadez est la plus vaste région du Niger.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le premier producteur mondial de cacao est :",
+      "o": [
+        "l'Indonésie",
+        "le Nigeria",
+        "l'Équateur",
+        "la Côte d'Ivoire"
+      ],
+      "r": 3,
+      "x": "La Côte d'Ivoire assure à elle seule plus du tiers de la production mondiale de cacao. L'Indonésie et le Ghana figurent parmi les autres grands producteurs. Le cacao est cultivé surtout dans les zones forestières du sud du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le canal de Vridi, qui relie le port d'Abidjan à l'océan Atlantique, a été construit en :",
+      "o": [
+        "1935",
+        "1950",
+        "1960",
+        "1975"
+      ],
+      "r": 1,
+      "x": "Le canal de Vridi, construit en 1950, a ouvert la lagune Ébrié sur l'océan. Il a permis le développement du port autonome d'Abidjan. Avant ce canal, le cordon littoral empêchait les grands navires d'accéder à la lagune.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le barrage de Kossou, qui a créé le plus grand lac de Côte d'Ivoire, est construit sur :",
+      "o": [
+        "le Bandama",
+        "la Comoé",
+        "le Sassandra",
+        "le Cavally"
+      ],
+      "r": 0,
+      "x": "Le barrage de Kossou retient les eaux du Bandama au centre du pays. Il alimente une centrale hydroélectrique. Le Bandama est le plus long fleuve entièrement ivoirien.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le barrage de Kossou, en Côte d'Ivoire, a été mis en service en :",
+      "o": [
+        "1962",
+        "1972",
+        "1985",
+        "1998"
+      ],
+      "r": 1,
+      "x": "Le barrage de Kossou a été inauguré en 1972, sa centrale entrant en production en 1972-1973. Son lac est le plus vaste du pays. Sa construction a entraîné le déplacement de dizaines de milliers de personnes.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le parc national de Taï, en Côte d'Ivoire, a été inscrit au patrimoine mondial en :",
+      "o": [
+        "1972",
+        "1982",
+        "1992",
+        "2012"
+      ],
+      "r": 1,
+      "x": "Le parc national de Taï a été inscrit en 1982. Il se situe dans le sud-ouest du pays, près de la frontière libérienne. À son inscription, le site couvrait environ 3 300 km² de forêt.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le parc national de Taï protège principalement :",
+      "o": [
+        "une savane sèche",
+        "une mangrove",
+        "une forêt dense humide",
+        "une zone désertique"
+      ],
+      "r": 2,
+      "x": "Taï protège l'un des derniers grands massifs de forêt dense humide d'Afrique de l'Ouest. On y trouve notamment des chimpanzés et des hippopotames pygmées. Ce type de forêt se développe sous un climat chaud et humide toute l'année.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le Cap-Vert est un État :",
+      "o": [
+        "enclavé",
+        "insulaire",
+        "sahélien continental",
+        "côtier continental"
+      ],
+      "r": 1,
+      "x": "Le Cap-Vert est un archipel de l'océan Atlantique situé au large du Sénégal. Sa capitale est Praia. Il est composé de dix îles d'origine volcanique.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La ville historique de Grand-Bassam, en Côte d'Ivoire, a été inscrite au patrimoine mondial en :",
+      "o": [
+        "1982",
+        "2001",
+        "2012",
+        "2021"
+      ],
+      "r": 2,
+      "x": "Grand-Bassam, première capitale coloniale du pays, a été inscrite en 2012. Elle conserve de nombreux bâtiments de l'époque coloniale. La capitale a été transférée à Bingerville en 1900, après des épidémies de fièvre jaune.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Les mosquées de style soudanais du nord de la Côte d'Ivoire ont été inscrites au patrimoine mondial en :",
+      "o": [
+        "2012",
+        "2015",
+        "2018",
+        "2021"
+      ],
+      "r": 3,
+      "x": "Ces mosquées en terre ont été inscrites en 2021 comme bien en série. Elles se répartissent sur plusieurs sites du nord du pays. Ces édifices sont construits en banco, avec des pièces de bois qui dépassent des murs.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Les forts et châteaux de la côte du Ghana ont été inscrits au patrimoine mondial en :",
+      "o": [
+        "1979",
+        "1985",
+        "1994",
+        "2004"
+      ],
+      "r": 0,
+      "x": "Ces forts et châteaux, témoins du commerce colonial et de la traite négrière, ont été inscrits en 1979. Ils s'étendent sur plusieurs régions côtières du Ghana. Ces forts servaient d'entrepôts et de lieux de détention des captifs avant leur embarquement.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Avant son indépendance en 1957, le Ghana s'appelait :",
+      "o": [
+        "Côte-des-Esclaves",
+        "Côte-de-l'Or",
+        "Dahomey",
+        "Soudan français"
+      ],
+      "r": 1,
+      "x": "Le Ghana, ancienne colonie britannique de la Côte-de-l'Or (Gold Coast), est devenu indépendant en 1957. Il a pris le nom d'un ancien empire ouest-africain. Ce nom colonial rappelait la richesse du territoire en or.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le Koutammakou, pays des Batammariba, a été inscrit au patrimoine mondial de l'UNESCO côté togolais en :",
+      "o": [
+        "1985",
+        "2004",
+        "2012",
+        "2017"
+      ],
+      "r": 1,
+      "x": "Célèbre pour ses maisons-tours fortifiées en terre appelées « takienta » (ou tata somba), le paysage culturel du Koutammakou a été inscrit au patrimoine mondial de l'UNESCO en 2004 pour sa partie togolaise (50 000 ha au nord-est du Togo). En septembre 2023, ce classement a été étendu à sa partie béninoise (dans l'Atacora) pour former un vaste bien transfrontalier.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le Koutammakou se trouve dans la région togolaise :",
+      "o": [
+        "de la Kara",
+        "des Plateaux",
+        "Maritime",
+        "des Savanes"
+      ],
+      "r": 0,
+      "x": "Le Koutammakou se situe dans la région de la Kara, au nord-est du Togo. Il se prolonge au Bénin, dans l'Atacora. Kara est la principale ville du nord du Togo.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Jusqu'en 1975, le Bénin portait le nom de :",
+      "o": [
+        "Côte-de-l'Or",
+        "Haute-Volta",
+        "Soudan français",
+        "Dahomey"
+      ],
+      "r": 3,
+      "x": "Le pays a abandonné le nom de Dahomey en 1975 pour devenir le Bénin. Ce nom évoquait l'ancien royaume dont la capitale était Abomey. Le nouveau nom a été emprunté à un ancien royaume situé dans l'actuel Nigeria.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le principal pays de l'arrière-pays desservi par le port de Lomé est :",
+      "o": [
+        "le Mali",
+        "le Niger",
+        "le Burkina Faso",
+        "la Centrafrique"
+      ],
+      "r": 2,
+      "x": "Le Burkina Faso est le principal pays de l'hinterland du port de Lomé, avec Ouagadougou, Bobo-Dioulasso et l'est du pays. Le port dessert aussi le Mali et le Niger. Ce port en eau profonde est l'un des plus actifs d'Afrique de l'Ouest pour les conteneurs.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Les palais royaux d'Abomey, au Bénin, ont été inscrits au patrimoine mondial en :",
+      "o": [
+        "1979",
+        "1985",
+        "1996",
+        "2017"
+      ],
+      "r": 1,
+      "x": "Les palais royaux d'Abomey, anciens sièges des rois du Dahomey, ont été inscrits en 1985. Ils se trouvent dans le département du Zou. Ils regroupent les palais construits par une douzaine de rois successifs, du XVIIe à la fin du XIXe siècle.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La cité lacustre de Ganvié, au Bénin, est bâtie sur :",
+      "o": [
+        "le lac Nokoué",
+        "le lac Ahémé",
+        "le lac Togo",
+        "le lac Volta"
+      ],
+      "r": 0,
+      "x": "Ganvié, construite sur pilotis au milieu du lac Nokoué, compte environ 30 000 habitants. Elle est souvent surnommée la « Venise de l'Afrique ». Ses habitants vivent surtout de la pêche et se déplacent en pirogue.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le nom de la cité lacustre de Ganvié signifie :",
+      "o": [
+        "la ville sur l'eau",
+        "le refuge du roi",
+        "nous avons survécu",
+        "le grand marché"
+      ],
+      "r": 2,
+      "x": "En langue tofin, « Ganvié » signifie littéralement « nous avons survécu » (ou « la communauté de ceux qui sont sauvés »). Édifiée sur pilotis au milieu du lac Nokoué au Bénin et surnommée la « Venise de l'Afrique », cette cité fut fondée par le peuple Tofinu pour fuir les razzias esclavagistes des rois du Danxomè, auxquels la tradition interdisait d'attaquer sur l'eau.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "L'île de Gorée, au Sénégal, a été inscrite au patrimoine mondial en :",
+      "o": [
+        "1978",
+        "1981",
+        "2000",
+        "2012"
+      ],
+      "r": 0,
+      "x": "Gorée fait partie des tout premiers sites inscrits sur la liste du patrimoine mondial. L'île, au large de Dakar, est un lieu de mémoire de la traite négrière. La Maison des esclaves, avec sa « porte du voyage sans retour », en est le monument le plus connu.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "L'île de Saint-Louis, au Sénégal, a été inscrite au patrimoine mondial en :",
+      "o": [
+        "1978",
+        "1989",
+        "2000",
+        "2011"
+      ],
+      "r": 2,
+      "x": "L'île de Saint-Louis, ancienne capitale coloniale, a été inscrite en 2000. Elle se trouve dans le nord du pays. Elle est reliée au continent par le pont Faidherbe, construit à la fin du XIXe siècle.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le parc national des oiseaux du Djoudj se trouve dans la région sénégalaise de :",
+      "o": [
+        "Saint-Louis",
+        "Kédougou",
+        "Fatick",
+        "Ziguinchor"
+      ],
+      "r": 0,
+      "x": "Le Djoudj se situe dans la région de Saint-Louis, dans le delta du fleuve Sénégal. C'est une étape majeure pour les oiseaux migrateurs. Il accueille chaque année plus d'un million d'oiseaux venus notamment d'Europe.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Avant l'indépendance, le Mali était une colonie appelée :",
+      "o": [
+        "Haute-Volta",
+        "Soudan français",
+        "Dahomey",
+        "Côte-de-l'Or"
+      ],
+      "r": 1,
+      "x": "À l'époque coloniale, le Mali s'appelait Soudan français. La Haute-Volta correspond, elle, à l'actuel Burkina Faso. Le pays a pris le nom de Mali à son indépendance, en référence à l'ancien empire du Mali.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Les cercles mégalithiques de Sénégambie sont partagés entre le Sénégal et :",
+      "o": [
+        "le Mali",
+        "la Guinée",
+        "la Gambie",
+        "la Mauritanie"
+      ],
+      "r": 2,
+      "x": "Ces cercles de pierres dressées, inscrits en 2006, sont partagés entre le Sénégal et la Gambie. Ils s'étendent le long du fleuve Gambie. Ils comptent plus de mille monuments de pierre, élevés sur plusieurs siècles.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le Sahel désigne la bande de transition située entre :",
+      "o": [
+        "la forêt et la mangrove",
+        "la savane et la forêt dense",
+        "le Sahara et les savanes",
+        "la côte et les plateaux"
+      ],
+      "r": 2,
+      "x": "Le Sahel, dont le nom signifie « rivage » en arabe, borde le sud du Sahara. Il reçoit des pluies faibles et irrégulières, concentrées sur une courte saison. Le nord du Burkina Faso appartient à cette zone.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le pays Bassari, inscrit au patrimoine mondial en 2012, se trouve dans la région sénégalaise de :",
+      "o": [
+        "Kédougou",
+        "Fatick",
+        "Louga",
+        "Matam"
+      ],
+      "r": 0,
+      "x": "Le pays Bassari se situe dans la région de Kédougou, au sud-est du Sénégal. Le bien associe les paysages culturels bassari, peul et bedik. Les villages bedik, faits de cases serrées aux toits de chaume, sont perchés sur les hauteurs.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le point le plus occidental de l'Afrique continentale est :",
+      "o": [
+        "la pointe des Almadies",
+        "la pointe du cap Blanc",
+        "la pointe du cap Bon",
+        "le cap des Aiguilles"
+      ],
+      "r": 0,
+      "x": "La pointe des Almadies se trouve à Dakar, à l'extrémité de la presqu'île du Cap-Vert. Le cap Bon se trouve, lui, en Tunisie. La pointe des Almadies se situe vers 17° 31′ de longitude Ouest.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le point le plus méridional de l'Afrique est :",
+      "o": [
+        "le cap des Aiguilles",
+        "le cap de Bonne-Espérance",
+        "le cap Vert",
+        "le cap Guardafui"
+      ],
+      "r": 0,
+      "x": "Le cap des Aiguilles, en Afrique du Sud, est le point le plus méridional du continent. Le cap de Bonne-Espérance, souvent cité à tort, se trouve plus à l'ouest. C'est au cap des Aiguilles que se rejoignent, par convention, l'océan Atlantique et l'océan Indien.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le chemin de fer mauritanien exploité par la SNIM mesure environ :",
+      "o": [
+        "350 km",
+        "704 km",
+        "1 100 km",
+        "1 500 km"
+      ],
+      "r": 1,
+      "x": "Exploité par la Société nationale industrielle et minière (SNIM), ce chemin de fer minéralier relie les mines de fer de Zouerate au port de Nouadhibou sur une longueur d'environ 704 km à travers le désert du Sahara. Inaugurée en 1963, cette ligne est célèbre pour faire circuler les trains les plus longs du monde, dépassant parfois 2,5 km de longueur.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le terminus portuaire du chemin de fer minéralier mauritanien est :",
+      "o": [
+        "Nouakchott",
+        "Akjoujt",
+        "Nouadhibou",
+        "Tidjikja"
+      ],
+      "r": 2,
+      "x": "Le train aboutit au port de Nouadhibou, sur l'Atlantique. Il traverse notamment les localités de Fderik et de Choum. Nouadhibou est la deuxième ville du pays et un grand port de pêche.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le chemin de fer de la SNIM, en Mauritanie, transporte principalement :",
+      "o": [
+        "du minerai de fer",
+        "de la bauxite",
+        "des phosphates",
+        "de l'uranium"
+      ],
+      "r": 0,
+      "x": "Inaugurée en 1963 et exploitée par la Société nationale industrielle et minière (SNIM), cette voie ferrée de 704 km achemine principalement le minerai de fer des mines de Zouerate vers le port atlantique de Nouadhibou. Les autres ressources proposées renvoient respectivement à la Guinée (bauxite), au Maroc ou au Togo (phosphates) et au Niger (uranium).",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La principale ville minière de la Mauritanie est :",
+      "o": [
+        "Zouérat",
+        "Akjoujt",
+        "Kiffa",
+        "Nouakchott"
+      ],
+      "r": 0,
+      "x": "Zouérat est le grand centre d'extraction du minerai de fer, dans le nord du pays. Le minerai est acheminé par voie ferrée jusqu'à la côte. La ville est née de l'exploitation des gisements de fer de la Kédia d'Idjil.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Bamako, capitale du Mali, est traversée par :",
+      "o": [
+        "le Sénégal",
+        "le Niger",
+        "le Bani",
+        "la Volta"
+      ],
+      "r": 1,
+      "x": "Bamako s'est développée sur les deux rives du Niger. Plusieurs ponts y relient les deux parties de la ville. Le pont des Martyrs et le pont du Roi-Fahd figurent parmi les ouvrages qui franchissent le fleuve.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La construction de Nouakchott, future capitale de la Mauritanie, a commencé en :",
+      "o": [
+        "1946",
+        "1958",
+        "1975",
+        "1991"
+      ],
+      "r": 1,
+      "x": "Les travaux ont débuté en mars 1958, et l'essentiel était achevé à l'indépendance du 28 novembre 1960. La ville est située sur la côte atlantique. Jusque-là, la colonie était administrée depuis Saint-Louis, au Sénégal.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La Guinée détient les premières réserves mondiales de :",
+      "o": [
+        "bauxite",
+        "cuivre",
+        "manganèse",
+        "uranium"
+      ],
+      "r": 0,
+      "x": "La Guinée détient environ 7,4 milliards de tonnes de bauxite, soit plus du quart des réserves mondiales. La bauxite est le minerai dont on tire l'aluminium. Les principales mines se trouvent dans la région de Boké.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La principale région pétrolière du Nigeria est :",
+      "o": [
+        "le plateau de Jos",
+        "le delta du Niger",
+        "le bassin du lac Tchad",
+        "la vallée de la Bénoué"
+      ],
+      "r": 1,
+      "x": "L'essentiel de la production pétrolière nigériane provient du delta du Niger, au sud du pays. Le plateau de Jos est surtout connu pour ses anciens gisements d'étain. Cette richesse pétrolière s'accompagne d'importants problèmes de pollution.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le secrétariat de la Zone de libre-échange continentale africaine (ZLECAf) est installé à :",
+      "o": [
+        "Addis-Abeba",
+        "Accra",
+        "Kigali",
+        "Abuja"
+      ],
+      "r": 1,
+      "x": "Le secrétariat de la ZLECAf a son siège à Accra, au Ghana. Addis-Abeba accueille, elle, le siège de la Commission de l'Union africaine. La ZLECAf vise à créer un marché unique des biens et des services à l'échelle du continent.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "L'accord portant création de la Zone de libre-échange continentale africaine (ZLECAf) a été signé en mars 2018 à :",
+      "o": [
+        "Kigali",
+        "Accra",
+        "Niamey",
+        "Addis-Abeba"
+      ],
+      "r": 0,
+      "x": "L'accord a été signé le 21 mars 2018 à Kigali, au Rwanda, par 44 États membres de l'Union africaine. La quasi-totalité des États africains l'ont signé depuis. Elle est l'un des projets phares de l'Agenda 2063 de l'Union africaine.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "L'accord portant création de la Zone de libre-échange continentale africaine (ZLECAf) est entré en vigueur le :",
+      "o": [
+        "21 mars 2018",
+        "30 mai 2019",
+        "7 juillet 2019",
+        "1er janvier 2021"
+      ],
+      "r": 1,
+      "x": "L'accord est entré en vigueur le 30 mai 2019, trente jours après le dépôt du 22e instrument de ratification. Les échanges dans le cadre de la zone devaient débuter le 1er janvier 2021. Une ratification est l'acte par lequel un État confirme officiellement son engagement.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le mont Blanc, point culminant des Alpes, s'élève à environ :",
+      "o": [
+        "4 167 m",
+        "4 478 m",
+        "4 800 m",
+        "5 642 m"
+      ],
+      "r": 2,
+      "x": "Les mesures récentes situent le sommet entre 4 805 et 4 807 m, une valeur qui varie avec l'épaisseur de neige et de glace. Les 4 478 m correspondent au Cervin. Le mont Blanc se trouve à la frontière entre la France et l'Italie.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le plus haut sommet d'Europe est :",
+      "o": [
+        "le mont Blanc",
+        "l'Elbrouz",
+        "le Cervin",
+        "l'Olympe"
+      ],
+      "r": 1,
+      "x": "L'Elbrouz, volcan endormi du Caucase russe, culmine à environ 5 642 m. Il dépasse nettement le mont Blanc, point culminant des Alpes. Il fait partie des « sept sommets », les points culminants de chaque continent.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "L'Aconcagua, point culminant de l'Amérique du Sud, se trouve :",
+      "o": [
+        "au Chili",
+        "au Pérou",
+        "en Argentine",
+        "en Bolivie"
+      ],
+      "r": 2,
+      "x": "L'Aconcagua, dans la cordillère des Andes, se trouve en Argentine, près de la frontière chilienne. Il culmine à près de 7 000 m. C'est aussi le plus haut sommet du monde en dehors de l'Asie.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La plus longue chaîne de montagnes continentale du monde est :",
+      "o": [
+        "l'Himalaya",
+        "les Rocheuses",
+        "les Alpes",
+        "les Andes"
+      ],
+      "r": 3,
+      "x": "La cordillère des Andes longe tout l'ouest de l'Amérique du Sud sur environ 7 000 km. L'Himalaya est plus élevé, mais beaucoup moins long. Elle traverse sept pays, du Venezuela au Chili.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le lac Titicaca, plus haut lac navigable du monde, est situé à une altitude d'environ :",
+      "o": [
+        "1 512 m",
+        "2 607 m",
+        "3 812 m",
+        "4 907 m"
+      ],
+      "r": 2,
+      "x": "Situé dans la cordillère des Andes sur l'Altiplano, à cheval entre le Pérou et la Bolivie, le lac Titicaca culmine à environ 3 812 m d'altitude. D'une superficie voisine de 8 300 km², il est mondialement reconnu comme le plus haut lac navigable pour des navires de fort tonnage et abrite les célèbres îles flottantes des Uros.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le Salto Angel, plus haute chute d'eau du monde, mesure environ :",
+      "o": [
+        "179 m",
+        "479 m",
+        "979 m",
+        "1 479 m"
+      ],
+      "r": 2,
+      "x": "Le Salto Angel, au Venezuela, tombe d'environ 979 m. Il se situe dans une région de forêt tropicale difficile d'accès. Son nom vient de l'aviateur américain Jimmie Angel, qui l'a survolé dans les années 1930.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Les chutes Victoria sont formées par le fleuve :",
+      "o": [
+        "Limpopo",
+        "Orange",
+        "Congo",
+        "Zambèze"
+      ],
+      "r": 3,
+      "x": "Les chutes Victoria, ou Mosi-oa-Tunya, sont formées par le Zambèze. Elles marquent la frontière entre la Zambie et le Zimbabwe. Leur nom local signifie « la fumée qui gronde ».",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le barrage des Trois-Gorges, en Chine, est construit sur :",
+      "o": [
+        "le Huang He",
+        "le Yangzi",
+        "le Mékong",
+        "le Gange"
+      ],
+      "r": 1,
+      "x": "Le barrage des Trois-Gorges retient les eaux du Yangzi, dans la province du Hubei. Le Huang He est le fleuve Jaune, plus au nord. Le Yangzi est le plus long fleuve d'Asie.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La puissance installée du barrage des Trois-Gorges, en Chine, est d'environ :",
+      "o": [
+        "2 250 MW",
+        "11 000 MW",
+        "22 500 MW",
+        "45 000 MW"
+      ],
+      "r": 2,
+      "x": "Avec environ 22 500 MW répartis sur 32 turbines, c'est la plus grande centrale hydroélectrique du monde. Sa dernière turbine, de 700 MW, a été mise en service en 2012. Le barrage sert aussi à réguler les crues du fleuve.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La Volga, plus long fleuve d'Europe, se jette dans :",
+      "o": [
+        "la mer Noire",
+        "la mer Baltique",
+        "la mer Caspienne",
+        "la mer Blanche"
+      ],
+      "r": 2,
+      "x": "Longue d'environ 3 500 km, la Volga se jette dans la mer Caspienne. Elle traverse entièrement la Russie. Elle arrose notamment Volgograd et Astrakhan.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le Danube, qui traverse une dizaine de pays, se jette dans :",
+      "o": [
+        "la mer du Nord",
+        "la Méditerranée",
+        "la mer Baltique",
+        "la mer Noire"
+      ],
+      "r": 3,
+      "x": "Long d'environ 2 850 km (deuxième fleuve d'Europe après la Volga), le Danube prend sa source dans la Forêt-Noire en Allemagne et se jette dans la mer Noire par un vaste delta situé entre la Roumanie et l'Ukraine. Il traverse ou longe dix pays européens et arrose quatre capitales (Vienne, Bratislava, Budapest et Belgrade).",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le Danube prend sa source dans la Forêt-Noire, en :",
+      "o": [
+        "Autriche",
+        "Suisse",
+        "Allemagne",
+        "Hongrie"
+      ],
+      "r": 2,
+      "x": "Le Danube naît dans la Forêt-Noire, au sud-ouest de l'Allemagne. Il coule ensuite vers l'est à travers l'Europe centrale. Ses deux ruisseaux de source, la Brigach et la Breg, se rejoignent à Donaueschingen.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le Mékong traverse :",
+      "o": [
+        "quatre pays",
+        "cinq pays",
+        "six pays",
+        "huit pays"
+      ],
+      "r": 2,
+      "x": "Le Mékong traverse six pays, de la Chine au Vietnam, où il forme un vaste delta. Sa longueur est estimée entre 4 350 et 4 900 km selon les sources. Il traverse notamment le Laos, la Thaïlande et le Cambodge.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le Gange, fleuve sacré de l'Inde, se jette dans :",
+      "o": [
+        "la mer d'Arabie",
+        "le golfe du Bengale",
+        "la mer de Chine",
+        "le golfe Persique"
+      ],
+      "r": 1,
+      "x": "Le Gange descend de l'Himalaya et se jette dans le golfe du Bengale. Varanasi, sur ses rives, est l'une des villes saintes de l'hindouisme. Il forme avec le Brahmapoutre le plus grand delta du monde.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "À Manaus, au Brésil, l'Amazone se forme par la rencontre du Rio Negro et :",
+      "o": [
+        "du Solimões",
+        "du Madeira",
+        "du Paraná",
+        "de l'Orénoque"
+      ],
+      "r": 0,
+      "x": "À Manaus, le Rio Negro rejoint le Solimões pour former l'Amazone proprement dite. L'Orénoque est, lui, le grand fleuve du Venezuela. Les eaux sombres du Rio Negro et les eaux boueuses du Solimões coulent côte à côte sur plusieurs kilomètres sans se mélanger.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le fleuve Saint-Laurent arrose les villes de Montréal et de :",
+      "o": [
+        "Toronto",
+        "Ottawa",
+        "Québec",
+        "Boston"
+      ],
+      "r": 2,
+      "x": "Le Saint-Laurent relie les Grands Lacs à l'Atlantique en passant par Montréal et Québec. Ottawa se trouve sur la rivière des Outaouais. Son estuaire compte parmi les plus vastes du monde.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Sur le Mississippi, la grande ville portuaire proche de l'embouchure est :",
+      "o": [
+        "Philadelphie",
+        "San Francisco",
+        "La Nouvelle-Orléans",
+        "Washington"
+      ],
+      "r": 2,
+      "x": "La Nouvelle-Orléans, en Louisiane, se trouve sur le Mississippi, non loin de son embouchure. Le fleuve traverse les États-Unis du nord au sud. Son embouchure forme un vaste delta en forme de patte d'oiseau.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le haut barrage d'Assouan, sur le Nil, a été inauguré en :",
+      "o": [
+        "1952",
+        "1971",
+        "1985",
+        "2002"
+      ],
+      "r": 1,
+      "x": "Le haut barrage d'Assouan, inauguré en 1971, régule les crues du Nil en Égypte. Il a créé le lac Nasser. Il a permis d'étendre l'irrigation et de produire de l'électricité.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le canal de Panama a été inauguré le :",
+      "o": [
+        "17 novembre 1869",
+        "15 août 1914",
+        "26 juillet 1956",
+        "31 décembre 1999"
+      ],
+      "r": 1,
+      "x": "Le canal de Panama, long d'environ 82 km, a été inauguré le 15 août 1914. Il relie l'océan Atlantique, par la mer des Caraïbes, à l'océan Pacifique. Il évite aux navires le long détour par l'extrémité sud de l'Amérique.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le Panama a pris le contrôle total du canal de Panama le :",
+      "o": [
+        "15 août 1914",
+        "26 juillet 1956",
+        "31 décembre 1999",
+        "26 juin 2016"
+      ],
+      "r": 2,
+      "x": "Le contrôle du canal a été entièrement transféré au Panama le 31 décembre 1999 à midi. Le 26 juin 2016 correspond à la mise en service des nouvelles écluses élargies. Ce transfert découlait des traités Torrijos-Carter, signés en 1977.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le canal de Panama emprunte un vaste lac artificiel nommé :",
+      "o": [
+        "le lac Gatún",
+        "le lac Nicaragua",
+        "le lac Maracaibo",
+        "le lac Titicaca"
+      ],
+      "r": 0,
+      "x": "Le lac Gatún, lac artificiel d'eau douce, se trouve à environ 26 m au-dessus du niveau de la mer. Les navires y accèdent grâce à un système d'écluses. Les écluses permettent aux navires de monter jusqu'au lac, puis de redescendre vers l'autre océan.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le détroit de Gibraltar sépare l'Espagne :",
+      "o": [
+        "de l'Algérie",
+        "du Maroc",
+        "de la Tunisie",
+        "du Portugal"
+      ],
+      "r": 1,
+      "x": "Le détroit de Gibraltar sépare l'Espagne du Maroc et relie la Méditerranée à l'Atlantique. Il marque la séparation entre l'Europe et l'Afrique. Sa largeur minimale est d'environ 14 km.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le détroit de Béring sépare :",
+      "o": [
+        "la Russie de l'Alaska",
+        "le Japon de la Corée",
+        "le Groenland du Canada",
+        "l'Islande de la Norvège"
+      ],
+      "r": 0,
+      "x": "Le détroit de Béring sépare l'extrême est de la Russie de l'Alaska, aux États-Unis. Il relie l'océan Pacifique à l'océan Arctique. Sa largeur est d'environ 82 km.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le détroit du Bosphore traverse la ville de :",
+      "o": [
+        "Athènes",
+        "Ankara",
+        "Istanbul",
+        "Le Caire"
+      ],
+      "r": 2,
+      "x": "Le Bosphore traverse Istanbul et relie la mer Noire à la mer de Marmara. Il sépare la partie européenne de la Turquie de sa partie asiatique. Il est franchi par trois ponts, un tunnel ferroviaire et un tunnel routier.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le détroit de Malacca sépare la péninsule malaise de l'île de :",
+      "o": [
+        "Java",
+        "Sumatra",
+        "Bornéo",
+        "Sri Lanka"
+      ],
+      "r": 1,
+      "x": "Le détroit de Malacca sépare la péninsule malaise de l'île indonésienne de Sumatra. C'est l'une des routes maritimes les plus fréquentées du monde. Il relie l'océan Indien à la mer de Chine méridionale.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Brasília est devenue la capitale du Brésil le :",
+      "o": [
+        "7 septembre 1922",
+        "2 septembre 1945",
+        "21 avril 1960",
+        "5 octobre 1988"
+      ],
+      "r": 2,
+      "x": "Brasília a été inaugurée le 21 avril 1960, à l'initiative du président Juscelino Kubitschek. Elle a remplacé Rio de Janeiro comme capitale. Elle a été construite au centre du pays pour favoriser le développement de l'intérieur.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Les principaux bâtiments de Brasília ont été conçus par l'architecte :",
+      "o": [
+        "Le Corbusier",
+        "Antoni Gaudí",
+        "Zaha Hadid",
+        "Oscar Niemeyer"
+      ],
+      "r": 3,
+      "x": "Oscar Niemeyer a dessiné les principaux édifices de Brasília, dont la cathédrale. Le plan de la ville est l'œuvre de l'urbaniste Lúcio Costa. Vu du ciel, le plan de la ville rappelle la forme d'un avion ou d'un oiseau.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Depuis septembre 2022, la capitale du Kazakhstan porte de nouveau le nom :",
+      "o": [
+        "d'Almaty",
+        "d'Astana",
+        "de Noursoultan",
+        "de Bichkek"
+      ],
+      "r": 1,
+      "x": "La capitale avait été rebaptisée Noursoultan en 2019 avant de reprendre le nom d'Astana en 2022. Almaty, ancienne capitale, reste la plus grande ville du pays. Astana signifie simplement « capitale » en kazakh.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le plus vaste pays sans littoral du monde est :",
+      "o": [
+        "le Kazakhstan",
+        "la Mongolie",
+        "le Tchad",
+        "le Niger"
+      ],
+      "r": 0,
+      "x": "Le Kazakhstan, avec environ 2,7 millions de km², est le plus vaste pays enclavé du monde. Il borde la mer Caspienne, mais celle-ci ne communique pas avec l'océan mondial. Sa frontière avec la Russie, longue de plus de 7 000 km, est l'une des plus longues du monde.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le plus grand État archipel du monde est :",
+      "o": [
+        "les Philippines",
+        "le Japon",
+        "les Maldives",
+        "l'Indonésie"
+      ],
+      "r": 3,
+      "x": "L'Indonésie compte plusieurs milliers d'îles réparties entre l'océan Indien et l'océan Pacifique. Java, Sumatra et Bornéo (en partie) en font partie. Il compte plus de 17 000 îles.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La capitale de l'Australie est :",
+      "o": [
+        "Sydney",
+        "Melbourne",
+        "Canberra",
+        "Perth"
+      ],
+      "r": 2,
+      "x": "Canberra, ville créée pour être la capitale, est le siège du gouvernement fédéral australien. Sydney en est la plus grande ville. Canberra a été choisie comme compromis entre Sydney et Melbourne.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La capitale du Canada est :",
+      "o": [
+        "Toronto",
+        "Ottawa",
+        "Montréal",
+        "Vancouver"
+      ],
+      "r": 1,
+      "x": "Ottawa, en Ontario, est la capitale fédérale du Canada. Toronto en est la plus grande ville. Ottawa a été choisie en 1857, notamment pour sa position à la limite des régions anglophone et francophone.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La Russie s'étend sur un nombre de fuseaux horaires égal à :",
+      "o": [
+        "9",
+        "11",
+        "13",
+        "17"
+      ],
+      "r": 1,
+      "x": "La Russie compte onze fuseaux horaires, de UTC + 2 à UTC + 12. C'est le pays qui en compte le plus sur un territoire d'un seul tenant. Lorsqu'il est midi à Kaliningrad, il est déjà 22 h au Kamtchatka.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Malgré son étendue, la Chine vit tout entière à l'heure de Pékin, soit :",
+      "o": [
+        "UTC + 5",
+        "UTC + 7",
+        "UTC + 8",
+        "UTC + 9"
+      ],
+      "r": 2,
+      "x": "Toute la Chine utilise l'heure de Pékin, en avance de 8 heures sur le temps universel. Son territoire couvre pourtant plusieurs fuseaux théoriques. Dans l'ouest du pays, le Soleil se lève donc très tard par rapport à l'heure officielle.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le Royaume-Uni a officiellement quitté l'Union européenne le :",
+      "o": [
+        "23 juin 2016",
+        "29 mars 2019",
+        "31 janvier 2020",
+        "31 décembre 2020"
+      ],
+      "r": 2,
+      "x": "Le Brexit est devenu effectif le 31 janvier 2020, après le référendum du 23 juin 2016. La période de transition s'est achevée le 31 décembre 2020. Le Royaume-Uni est le premier État à avoir quitté l'Union européenne.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Depuis le départ du Royaume-Uni, l'Union européenne compte :",
+      "o": [
+        "25 États membres",
+        "27 États membres",
+        "28 États membres",
+        "30 États membres"
+      ],
+      "r": 1,
+      "x": "L'Union européenne compte 27 États membres. Elle en comptait 28 avant le Brexit. La Croatie, entrée en 2013, avait porté le nombre de membres à 28.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "L'Association des nations de l'Asie du Sud-Est (ASEAN) a été créée à Bangkok en :",
+      "o": [
+        "1957",
+        "1967",
+        "1977",
+        "1991"
+      ],
+      "r": 1,
+      "x": "L'ASEAN a été fondée le 8 août 1967 à Bangkok. Elle compte onze membres depuis l'adhésion du Timor-Leste en octobre 2025. Son siège se trouve à Jakarta, en Indonésie.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le Marché commun du Sud (Mercosur) a été créé en 1991 par le traité signé à :",
+      "o": [
+        "Montevideo",
+        "Buenos Aires",
+        "Brasília",
+        "Asunción"
+      ],
+      "r": 3,
+      "x": "Le traité d'Asunción, signé le 26 mars 1991, a créé le Mercosur. Il réunissait à l'origine l'Argentine, le Brésil, le Paraguay et l'Uruguay. Le traité porte le nom de la capitale du Paraguay.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "L'Organisation des pays exportateurs de pétrole (OPEP) a été fondée e n 1960 à :",
+      "o": [
+        "Bagdad",
+        "Vienne",
+        "Riyad",
+        "Téhéran"
+      ],
+      "r": 0,
+      "x": "L'OPEP a été fondée à Bagdad en septembre 1960. Son siège est aujourd'hui à Vienne, en Autriche. Elle a été créée par l'Arabie saoudite, l'Irak, l'Iran, le Koweït et le Venezuela.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "L'Organisation des Nations unies (ONU) compte :",
+      "o": [
+        "185 États membres",
+        "191 États membres",
+        "193 États membres",
+        "197 États membres"
+      ],
+      "r": 2,
+      "x": "L'ONU compte 193 États membres. Le dernier admis est le Soudan du Sud. Chaque État membre y dispose d'une voix à l'Assemblée générale.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le désert le plus aride du monde, hors régions polaires, est :",
+      "o": [
+        "le désert de Gobi",
+        "le désert d'Atacama",
+        "le désert du Kalahari",
+        "le désert du Namib"
+      ],
+      "r": 1,
+      "x": "Le désert d'Atacama, dans le nord du Chili, est le plus aride du monde en dehors des pôles. Certaines de ses stations n'enregistrent presque jamais de pluie. Il se situe entre l'océan Pacifique et la cordillère des Andes.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le désert de Gobi s'étend sur la Chine et :",
+      "o": [
+        "le Kazakhstan",
+        "l'Inde",
+        "la Mongolie",
+        "l'Iran"
+      ],
+      "r": 2,
+      "x": "Le désert de Gobi couvre le sud de la Mongolie et le nord de la Chine. C'est un désert froid d'altitude. Il est connu pour ses importants gisements de fossiles de dinosaures.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le désert du Kalahari couvre principalement :",
+      "o": [
+        "le Botswana",
+        "la Tanzanie",
+        "le Mozambique",
+        "l'Éthiopie"
+      ],
+      "r": 0,
+      "x": "Le Kalahari occupe la plus grande partie du Botswana et déborde sur les pays voisins. Le delta de l'Okavango se trouve à sa bordure nord. Ce désert est en partie couvert de savanes sèches, ce qui le distingue d'un désert de sable pur.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le désert du Namib longe l'océan :",
+      "o": [
+        "Indien",
+        "Atlantique",
+        "Pacifique",
+        "Arctique"
+      ],
+      "r": 1,
+      "x": "Le Namib s'étire le long de la côte atlantique de la Namibie, à laquelle il a donné son nom. Ses dunes comptent parmi les plus hautes du monde. Il est considéré comme l'un des plus anciens déserts du monde.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La « ceinture de feu », zone de forte activité volcanique et sismique, entoure l'océan :",
+      "o": [
+        "Atlantique",
+        "Indien",
+        "Arctique",
+        "Pacifique"
+      ],
+      "r": 3,
+      "x": "La ceinture de feu du Pacifique concentre la majorité des volcans actifs et des grands séismes du globe. Elle longe notamment le Japon, l'Indonésie et la côte ouest des Amériques. Cette activité s'explique par les nombreuses limites de plaques tectoniques qui bordent cet océan.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le pays situé sur la dorsale médio-atlantique et connu pour ses nombreux volcans est :",
+      "o": [
+        "l'Irlande",
+        "l'Islande",
+        "Madagascar",
+        "Cuba"
+      ],
+      "r": 1,
+      "x": "L'Islande est située sur la dorsale médio-atlantique, à la limite entre deux plaques. D'où ses volcans, ses geysers et ses sources chaudes. Une dorsale est une limite où deux plaques s'écartent l'une de l'autre.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La Grande Barrière de corail longe la côte :",
+      "o": [
+        "de l'Australie",
+        "de l'Indonésie",
+        "des Philippines",
+        "de Madagascar"
+      ],
+      "r": 0,
+      "x": "La Grande Barrière de corail s'étend le long de la côte nord-est de l'Australie. C'est le plus vaste ensemble de récifs coralliens du monde. Elle est inscrite au patrimoine mondial de l'UNESCO depuis 1981.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Les chutes du Niagara relient le lac Érié au lac :",
+      "o": [
+        "Huron",
+        "Ontario",
+        "Michigan",
+        "Supérieur"
+      ],
+      "r": 1,
+      "x": "La rivière Niagara et ses chutes relient le lac Érié au lac Ontario. Elles marquent la frontière entre le Canada et les États-Unis. La partie canadienne est appelée chutes du Fer-à-Cheval.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La plus grande partie de la forêt amazonienne se trouve :",
+      "o": [
+        "au Pérou",
+        "en Colombie",
+        "au Venezuela",
+        "au Brésil"
+      ],
+      "r": 3,
+      "x": "Le Brésil abrite la plus grande partie de la forêt amazonienne. Celle-ci s'étend aussi sur plusieurs pays voisins, dont le Pérou et la Colombie. Cette forêt est souvent surnommée le « poumon de la planète ».",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "En Asie du Sud, la mousson d'été apporte surtout :",
+      "o": [
+        "des pluies abondantes",
+        "un froid intense",
+        "des vents de sable",
+        "une sécheresse durable"
+      ],
+      "r": 0,
+      "x": "La mousson d'été pousse vers le continent des masses d'air humide venues de l'océan Indien, qui provoquent de fortes pluies. L'agriculture de l'Inde en dépend largement. En hiver, le vent s'inverse et souffle du continent vers l'océan, apportant un temps sec.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le phénomène El Niño correspond à un réchauffement anormal des eaux de surface :",
+      "o": [
+        "de l'Atlantique Nord",
+        "de l'océan Indien",
+        "du Pacifique équatorial",
+        "de la Méditerranée"
+      ],
+      "r": 2,
+      "x": "El Niño désigne un réchauffement anormal des eaux de surface du Pacifique équatorial. Il perturbe les pluies et les températures sur une grande partie du globe. Son nom signifie « l'enfant » en espagnol, car le phénomène apparaît souvent vers Noël.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Un pays de 50 000 km² compte 2 millions d'habitants. Sa densité de population est de :",
+      "o": [
+        "4 hab/km²",
+        "25 hab/km²",
+        "40 hab/km²",
+        "400 hab/km²"
+      ],
+      "r": 2,
+      "x": "La densité s'obtient en divisant la population par la superficie : 2 000 000 ÷ 50 000 = 40 hab/km². Les 400 hab/km² proviennent d'une erreur d'un facteur 10. Plus la densité est élevée, plus le territoire est peuplé par rapport à sa surface.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le taux de natalité s'exprime généralement :",
+      "o": [
+        "pour cent habitants",
+        "pour mille habitants",
+        "en nombre absolu",
+        "par kilomètre carré"
+      ],
+      "r": 1,
+      "x": "Le taux de natalité rapporte le nombre de naissances d'une année à la population totale, pour mille habitants. Il s'écrit donc en ‰. Un taux de 30 ‰ signifie 30 naissances pour 1 000 habitants en un an.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Un pays a un taux de natalité de 38 ‰ et un taux de mortalité de 8 ‰. Son taux d'accroissement naturel est de :",
+      "o": [
+        "0,3 %",
+        "3 %",
+        "4,6 %",
+        "30 %"
+      ],
+      "r": 1,
+      "x": "Le taux d'accroissement naturel est la différence entre natalité et mortalité : 38 ‰ – 8 ‰ = 30 ‰, soit 3 %. Les 30 % viennent d'une confusion entre pour mille et pour cent. Un tel taux traduit une croissance démographique rapide.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le taux de mortalité infantile se calcule pour mille :",
+      "o": [
+        "habitants",
+        "femmes en âge de procréer",
+        "naissances vivantes",
+        "enfants de moins de 15 ans"
+      ],
+      "r": 2,
+      "x": "Le taux de mortalité infantile rapporte les décès d'enfants de moins d'un an à 1 000 naissances vivantes. Il est un indicateur clé du niveau sanitaire d'un pays. Plus ce taux est faible, meilleure est en général la situation sanitaire des nourrissons.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Sur une carte au 1/250 000, une distance de 8 cm représente sur le terrain :",
+      "o": [
+        "2 km",
+        "20 km",
+        "200 km",
+        "2 000 km"
+      ],
+      "r": 1,
+      "x": "8 cm × 250 000 = 2 000 000 cm, soit 20 km. Sur cette carte, 1 cm représente 2,5 km. On multiplie la distance sur la carte par le dénominateur, puis on convertit en kilomètres.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Sur une carte, une distance réelle de 36 km mesure 12 cm. L'échelle de cette carte est :",
+      "o": [
+        "1/36 000",
+        "1/300 000",
+        "1/360 000",
+        "1/3 000 000"
+      ],
+      "r": 1,
+      "x": "36 km = 3 600 000 cm, et 3 600 000 ÷ 12 = 300 000. L'échelle est donc de 1/300 000, soit 3 km par centimètre. Pour trouver l'échelle, on divise la distance réelle par la distance sur la carte, exprimées dans la même unité.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Lorsqu'il est 15 h à Ouagadougou (GMT), l'heure légale à Tokyo (GMT + 9) est :",
+      "o": [
+        "6 h le même jour",
+        "9 h le même jour",
+        "18 h le même jour",
+        "0 h le lendemain"
+      ],
+      "r": 3,
+      "x": "15 h + 9 h = 24 h, soit minuit (0 h) à Tokyo, déjà le lendemain. Les 6 h correspondent à une soustraction erronée du décalage. Quand le résultat atteint ou dépasse 24 h, on retranche 24 h et on passe au jour suivant.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Lorsqu'il est 14 h à Ouagadougou (GMT), l'heure légale à New York en hiver (GMT – 5) est :",
+      "o": [
+        "7 h",
+        "9 h",
+        "19 h",
+        "21 h"
+      ],
+      "r": 1,
+      "x": "New York a 5 heures de retard sur Ouagadougou en hiver : 14 h – 5 h = 9 h. Les 19 h résultent d'une addition erronée du décalage. Pour un lieu situé à l'ouest, on retranche le décalage horaire.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Un lieu situé à 12° de latitude Nord et 1° de longitude Ouest se trouve :",
+      "o": [
+        "dans l'hémisphère Nord, à l'ouest de Greenwich",
+        "dans l'hémisphère Nord, à l'est de Greenwich",
+        "dans l'hémisphère Sud, à l'ouest de Greenwich",
+        "dans l'hémisphère Sud, à l'est de Greenwich"
+      ],
+      "r": 0,
+      "x": "Une latitude Nord place le lieu au nord de l'équateur et une longitude Ouest à l'ouest du méridien de Greenwich. Ce sont des coordonnées proches de celles du Burkina Faso. Ouagadougou, par exemple, se situe vers 12° 22′ N et 1° 31′ O.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Deux villes situées sur le même méridien et séparées de 3° de latitude sont distantes d'environ :",
+      "o": [
+        "111 km",
+        "222 km",
+        "333 km",
+        "444 km"
+      ],
+      "r": 2,
+      "x": "Un degré de latitude correspond à environ 111 km (40 008 km ÷ 360). Trois degrés représentent donc environ 333 km. Cette règle ne vaut que pour la latitude, car l'écart entre deux méridiens se réduit vers les pôles.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La plus grande île du Japon est :",
+      "o": [
+        "Hokkaido",
+        "Kyushu",
+        "Honshu",
+        "Shikoku"
+      ],
+      "r": 2,
+      "x": "Honshu est la plus grande et la plus peuplée des îles japonaises, avec Tokyo, Osaka et Kyoto. Hokkaido, plus au nord, est la deuxième. Le Japon compte quatre grandes îles : Honshu, Hokkaido, Kyushu et Shikoku.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le traité sur l'Antarctique, qui réserve ce continent à des activités pacifiques, a été signé en :",
+      "o": [
+        "1945",
+        "1959",
+        "1972",
+        "1991"
+      ],
+      "r": 1,
+      "x": "Signé à Washington le 1er décembre 1959 par douze États (et entré en vigueur en 1961), le traité sur l'Antarctique gèle les revendications territoriales, interdit toute activité militaire ou essai nucléaire et garantit la liberté de la recherche scientifique. Il a été complété en 1991 par le protocole de Madrid qui prohibe l'exploitation minière.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La chaîne de l'Oural marque traditionnellement la limite entre :",
+      "o": [
+        "l'Europe et l'Asie",
+        "l'Afrique et l'Asie",
+        "l'Europe et l'Afrique",
+        "l'Asie et l'Amérique"
+      ],
+      "r": 0,
+      "x": "L'Oural, chaîne de montagnes de Russie, sert de limite conventionnelle entre l'Europe et l'Asie. Elle s'étire sur environ 2 500 km du nord au sud. L'Oural est une chaîne ancienne, aux sommets peu élevés.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La péninsule Ibérique est séparée du reste de l'Europe par la chaîne :",
+      "o": [
+        "des Alpes",
+        "des Carpates",
+        "des Pyrénées",
+        "des Apennins"
+      ],
+      "r": 2,
+      "x": "Les Pyrénées forment une barrière naturelle entre la péninsule Ibérique et la France. La péninsule regroupe principalement l'Espagne et le Portugal. Le petit État d'Andorre est situé au cœur de cette chaîne.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le Brésil, plus vaste pays d'Amérique du Sud, couvre environ :",
+      "o": [
+        "2,8 millions de km²",
+        "5,5 millions de km²",
+        "8,5 millions de km²",
+        "12,3 millions de km²"
+      ],
+      "r": 2,
+      "x": "Le Brésil s'étend sur environ 8,5 millions de km², soit près de la moitié de l'Amérique du Sud. Il est le cinquième pays du monde par la superficie. Il partage une frontière avec tous les pays d'Amérique du Sud, sauf le Chili et l'Équateur.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "L'Australie couvre environ :",
+      "o": [
+        "2,4 millions de km²",
+        "5,1 millions de km²",
+        "7,7 millions de km²",
+        "11,2 millions de km²"
+      ],
+      "r": 2,
+      "x": "L'Australie s'étend sur environ 7,7 millions de km². Elle est le sixième pays du monde par la superficie. Elle forme à elle seule l'essentiel du continent océanien.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La mer d'Aral, en grande partie asséchée, est partagée entre le Kazakhstan et :",
+      "o": [
+        "l'Ouzbékistan",
+        "le Turkménistan",
+        "l'Iran",
+        "la Russie"
+      ],
+      "r": 0,
+      "x": "La mer d'Aral est partagée entre le Kazakhstan et l'Ouzbékistan. Elle s'est asséchée après le détournement de ses fleuves, l'Amou-Daria et le Syr-Daria, pour irriguer le coton. Son assèchement est considéré comme l'une des pires catastrophes écologiques du XXe siècle.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le Groenland est un territoire autonome rattaché :",
+      "o": [
+        "au Canada",
+        "à la Norvège",
+        "aux États-Unis",
+        "au Danemark"
+      ],
+      "r": 3,
+      "x": "Le Groenland est un territoire autonome du royaume de Danemark. Il dispose de ses propres institutions et d'un large gouvernement autonome. Sa capitale est Nuuk.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "Le cap Horn, extrémité sud de l'Amérique, appartient :",
+      "o": [
+        "à l'Argentine",
+        "au Chili",
+        "à l'Uruguay",
+        "au Pérou"
+      ],
+      "r": 1,
+      "x": "Le cap Horn se trouve sur une île de l'archipel de la Terre de Feu appartenant au Chili. Il marque la rencontre entre l'Atlantique et le Pacifique. Ce cap était redouté des marins en raison de ses tempêtes fréquentes.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "La mer Rouge sépare l'Afrique de :",
+      "o": [
+        "la péninsule Arabique",
+        "l'Anatolie",
+        "la Mésopotamie",
+        "l'Asie centrale"
+      ],
+      "r": 0,
+      "x": "La mer Rouge sépare le nord-est de l'Afrique de la péninsule Arabique. Elle communique avec la Méditerranée par le canal de Suez. Elle compte parmi les mers les plus chaudes et les plus salées du globe.",
+      "_batchId": "geographie/2026-11-19/SERIE2"
+    },
+    {
+      "q": "L'ensemble du territoire dont les eaux s'écoulent vers un même cours d'eau s'appelle :",
+      "o": [
+        "une plaine alluviale",
+        "un bassin versant",
+        "un lit majeur",
+        "une zone humide"
+      ],
+      "r": 1,
+      "x": "Le bassin versant regroupe toutes les terres dont les eaux de pluie rejoignent un même cours d'eau. Chaque grand fleuve possède son propre bassin versant. Au Burkina Faso, les bassins versants servent de cadre à la gestion de l'eau.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Un cours d'eau qui se jette dans un autre cours d'eau est :",
+      "o": [
+        "un affluent",
+        "un défluent",
+        "un estuaire",
+        "un méandre"
+      ],
+      "r": 0,
+      "x": "Un affluent se jette dans un cours d'eau plus important, comme la Bénoué dans le Niger. Un défluent est, au contraire, un bras qui se détache d'un cours d'eau. Un affluent peut lui-même recevoir d'autres affluents, appelés sous-affluents.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le lieu où deux cours d'eau se rejoignent s'appelle :",
+      "o": [
+        "une source",
+        "un delta",
+        "une confluence",
+        "un thalweg"
+      ],
+      "r": 2,
+      "x": "La confluence est le point de rencontre de deux cours d'eau. Le thalweg est, lui, la ligne qui joint les points les plus bas d'une vallée. Le mot vient du latin confluere, qui signifie « couler ensemble ».",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Une embouchure évasée, envahie par la marée et sans accumulation de sédiments, s'appelle :",
+      "o": [
+        "un delta",
+        "un estuaire",
+        "un méandre",
+        "une lagune"
+      ],
+      "r": 1,
+      "x": "L'estuaire est une embouchure largement ouverte sur la mer, où les marées pénètrent. Le delta se forme au contraire par accumulation de sédiments. Le Saint-Laurent, au Canada, se termine par exemple par un vaste estuaire.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Une embouchure formée par l'accumulation de sédiments et divisée en plusieurs bras s'appelle :",
+      "o": [
+        "un estuaire",
+        "une ria",
+        "un delta",
+        "un fjord"
+      ],
+      "r": 2,
+      "x": "Le delta se forme lorsque le fleuve dépose ses alluvions plus vite que la mer ne les emporte. Ses eaux se divisent alors en plusieurs bras. Le delta du Nil, en Égypte, en est un exemple célèbre.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La période des plus basses eaux d'un cours d'eau s'appelle :",
+      "o": [
+        "l'étiage",
+        "la décrue",
+        "l'embâcle",
+        "la crue"
+      ],
+      "r": 0,
+      "x": "L'étiage correspond au niveau le plus bas d'un cours d'eau, en saison sèche au Burkina Faso. La crue désigne, à l'inverse, une montée importante des eaux. Au Burkina Faso, beaucoup de cours d'eau sont même à sec en période d'étiage.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le régime d'un cours d'eau désigne :",
+      "o": [
+        "les variations saisonnières de son débit",
+        "le nombre total de ses affluents",
+        "la largeur moyenne de son embouchure",
+        "la longueur totale de son lit principal"
+      ],
+      "r": 0,
+      "x": "Le régime décrit la façon dont le débit d'un cours d'eau varie au cours de l'année. Il dépend surtout du climat de son bassin versant. Au Burkina Faso, les cours d'eau ont un régime tropical, avec des hautes eaux pendant la saison des pluies.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le débit d'un cours d'eau s'exprime généralement en :",
+      "o": [
+        "mètres carrés par jour",
+        "kilomètres par heure",
+        "mètres cubes par seconde",
+        "millimètres par an"
+      ],
+      "r": 2,
+      "x": "Le débit est le volume d'eau qui passe en un point en une seconde, exprimé en m³/s. Les millimètres servent, eux, à mesurer les précipitations. Un débit de 1 m³/s correspond à 1 000 litres d'eau par seconde.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Un cours d'eau qui traverse une région sèche grâce à des eaux venues d'une région plus humide est dit :",
+      "o": [
+        "allogène",
+        "intermittent",
+        "souterrain",
+        "endoréique"
+      ],
+      "r": 0,
+      "x": "Un cours d'eau allogène tire ses eaux d'une région humide et traverse des régions sèches sans tarir. Le Niger, alimenté par les pluies de Guinée, en est un exemple au Mali et au Niger. Le Nil, qui traverse le désert égyptien, est un autre exemple de cours d'eau allogène.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Un bassin hydrographique dont les eaux n'atteignent jamais la mer est dit :",
+      "o": [
+        "exoréique",
+        "endoréique",
+        "aréique",
+        "karstique"
+      ],
+      "r": 1,
+      "x": "Un bassin endoréique se termine dans une cuvette fermée, comme celui du lac Tchad. Un bassin exoréique déverse au contraire ses eaux dans la mer. Le mot vient du grec endon, « dedans », et rhein, « couler ».",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La nappe d'eau souterraine la plus proche de la surface, alimentant les puits, s'appelle :",
+      "o": [
+        "la nappe karstique",
+        "la nappe fossile",
+        "la nappe phréatique",
+        "la nappe alluviale profonde"
+      ],
+      "r": 2,
+      "x": "La nappe phréatique est la première nappe d'eau souterraine rencontrée en creusant. Elle alimente les puits traditionnels. Son niveau baisse en saison sèche, ce qui peut assécher certains puits.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Sur une carte, une ligne qui relie les points recevant la même quantité de pluie s'appelle :",
+      "o": [
+        "une isotherme",
+        "une isohyète",
+        "une isobare",
+        "une courbe de niveau"
+      ],
+      "r": 1,
+      "x": "L'isohyète relie les points d'égale pluviométrie, ce qui permet de représenter la répartition des pluies. L'isobare relie, elle, les points d'égale pression atmosphérique. Le mot vient du grec huetos, qui signifie « pluie ».",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Sur une carte, une ligne qui relie les points ayant la même température s'appelle :",
+      "o": [
+        "une isohyète",
+        "une isobare",
+        "une isotherme",
+        "une isohypse"
+      ],
+      "r": 2,
+      "x": "L'isotherme relie les points de même température moyenne. Elle permet de représenter la répartition des températures. Le préfixe iso signifie « égal » en grec.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La différence entre la température la plus élevée et la plus basse sur une période donnée s'appelle :",
+      "o": [
+        "l'amplitude thermique",
+        "la température moyenne",
+        "le gradient thermique",
+        "le point de rosée"
+      ],
+      "r": 0,
+      "x": "L'amplitude thermique est la différence entre la température maximale et la température minimale observées pendant une période donnée. Elle peut être importante dans les régions désertiques et sahéliennes, notamment pendant la saison sèche, lorsque les nuits peuvent être nettement plus fraîches que les journées.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "L'instrument qui mesure la quantité de pluie tombée s'appelle :",
+      "o": [
+        "l'anémomètre",
+        "le baromètre",
+        "le pluviomètre",
+        "l'hygromètre"
+      ],
+      "r": 2,
+      "x": "Le pluviomètre recueille les précipitations, mesurées en millimètres. Le thermomètre mesure, lui, la température. Une hauteur de 1 mm de pluie correspond à 1 litre d'eau par mètre carré.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "L'instrument qui mesure la vitesse du vent s'appelle :",
+      "o": [
+        "la girouette",
+        "l'anémomètre",
+        "le thermomètre",
+        "le pluviomètre"
+      ],
+      "r": 1,
+      "x": "L'anémomètre mesure la vitesse du vent. La girouette en indique seulement la direction. La vitesse du vent s'exprime en kilomètres par heure, en mètres par seconde ou en nœuds.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "L'instrument qui mesure la pression atmosphérique s'appelle :",
+      "o": [
+        "l'héliographe",
+        "l'hygromètre",
+        "le baromètre",
+        "l'anémomètre"
+      ],
+      "r": 2,
+      "x": "Le baromètre mesure la pression atmosphérique, généralement exprimée en hectopascals (hPa). Une baisse de pression peut annoncer une dégradation du temps, notamment lorsqu'elle accompagne l'approche d'une dépression. La pression moyenne au niveau de la mer est d'environ 1 013 hPa.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "L'instrument qui mesure l'humidité de l'air s'appelle :",
+      "o": [
+        "le pluviomètre",
+        "le baromètre",
+        "l'hygromètre",
+        "la girouette"
+      ],
+      "r": 2,
+      "x": "L'hygromètre mesure l'humidité relative de l'air, exprimée en pourcentage. Elle est très faible au Burkina Faso pendant la saison sèche. Elle augmente au contraire fortement pendant la saison des pluies.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Une zone de hautes pressions atmosphériques s'appelle :",
+      "o": [
+        "une dépression",
+        "un anticyclone",
+        "un cyclone",
+        "un front"
+      ],
+      "r": 1,
+      "x": "L'anticyclone est une zone de hautes pressions, généralement associée à un temps sec et stable. La dépression correspond aux basses pressions. Dans un anticyclone, l'air descend puis s'écarte vers les zones de basses pressions.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "En Afrique de l'Ouest, le déplacement saisonnier de la zone de rencontre entre l'air sec saharien et l'air humide océanique règle le rythme des pluies. Cette zone s'appelle :",
+      "o": [
+        "le front polaire",
+        "l'anticyclone des Açores",
+        "le front intertropical",
+        "la ligne de grains"
+      ],
+      "r": 2,
+      "x": "Le front intertropical (FIT) sépare l'air sec venu du Sahara de l'air humide venu de l'océan. Sa remontée vers le nord en été apporte la saison des pluies au Burkina Faso. Les régions situées au sud du FIT reçoivent les pluies, tandis que celles du nord restent sèches.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Les vents réguliers qui soufflent des hautes pressions tropicales vers l'équateur s'appellent :",
+      "o": [
+        "les alizés",
+        "les vents d'ouest",
+        "les moussons",
+        "les vents polaires"
+      ],
+      "r": 0,
+      "x": "Les alizés soufflent toute l'année des anticyclones tropicaux vers l'équateur. Dans l'hémisphère Nord, ils viennent du nord-est. Dans l'hémisphère Sud, ils viennent au contraire du sud-est.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "En Afrique de l'Ouest, la saison des pluies est souvent appelée :",
+      "o": [
+        "la soudure",
+        "l'hivernage",
+        "la saison froide",
+        "la contre-saison"
+      ],
+      "r": 1,
+      "x": "L'hivernage désigne la saison des pluies, qui correspond pourtant à l'été astronomique. C'est la période des grands travaux agricoles. Ce mot ne doit donc pas être confondu avec l'hiver des régions tempérées.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La période où les réserves de céréales de l'année précédente sont épuisées avant les nouvelles récoltes s'appelle :",
+      "o": [
+        "l'hivernage",
+        "l'étiage",
+        "la soudure",
+        "la contre-saison"
+      ],
+      "r": 2,
+      "x": "La soudure correspond aux mois qui précèdent les récoltes, quand les greniers se vident. Elle est souvent la période la plus difficile pour les ménages ruraux. Les prix des céréales sur les marchés sont souvent les plus élevés pendant cette période.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Une vaste étendue relativement plane située en altitude et entaillée par des vallées s'appelle :",
+      "o": [
+        "une plaine",
+        "un plateau",
+        "une dépression",
+        "un piémont"
+      ],
+      "r": 1,
+      "x": "Le plateau est une surface relativement plane située en hauteur, entaillée par des vallées. La plaine est, elle, une étendue plane de basse altitude. Le plateau Mandingue, au Mali, est un exemple de plateau.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Un relief isolé et abrupt qui domine une plaine, fréquent dans les régions granitiques du Burkina Faso, s'appelle :",
+      "o": [
+        "un inselberg",
+        "un volcan",
+        "une dune",
+        "un glacis"
+      ],
+      "r": 0,
+      "x": "L'inselberg, mot allemand signifiant « montagne-île », est une colline isolée qui domine une plaine. Les reliefs granitiques du centre du Burkina en offrent de nombreux exemples. Ces reliefs résistent mieux à l'érosion que les roches qui les entourent.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Une colline isolée, reste d'un ancien plateau détruit par l'érosion, s'appelle :",
+      "o": [
+        "un inselberg",
+        "une butte témoin",
+        "une dune",
+        "un cône volcanique"
+      ],
+      "r": 1,
+      "x": "La butte témoin est le vestige d'un ancien plateau, isolé par l'érosion. Elle conserve souvent une couche dure à son sommet, comme une cuirasse latéritique. On l'appelle « témoin » parce qu'elle atteste l'ancienne étendue du plateau.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La différence d'altitude entre deux points s'appelle :",
+      "o": [
+        "le dénivelé",
+        "l'équidistance",
+        "l'altitude moyenne",
+        "la pente"
+      ],
+      "r": 0,
+      "x": "Le dénivelé est l'écart d'altitude entre deux points. La pente rapporte ce dénivelé à la distance horizontale parcourue. Il se calcule en soustrayant l'altitude du point le plus bas de celle du point le plus haut.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La cuirasse latéritique, fréquente au Burkina Faso, est un horizon durci du sol riche en :",
+      "o": [
+        "carbonates de calcium",
+        "oxydes de fer et d'aluminium",
+        "sels de sodium",
+        "matière organique végétale"
+      ],
+      "r": 1,
+      "x": "La cuirasse latéritique résulte de l'accumulation et du durcissement d'oxydes de fer et d'aluminium. Elle donne souvent aux sols leur couleur rouge et les rend difficiles à cultiver. Découpée en blocs, elle sert souvent de matériau de construction.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "L'usure du relief et le transport de matériaux par le vent s'appellent :",
+      "o": [
+        "l'érosion hydrique",
+        "l'érosion marine",
+        "l'érosion éolienne",
+        "l'érosion glaciaire"
+      ],
+      "r": 2,
+      "x": "L'érosion éolienne est l'œuvre du vent, très active dans les régions sèches comme le Sahel. L'érosion hydrique est, elle, causée par l'eau de ruissellement. L'érosion éolienne façonne notamment les dunes de sable.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "L'écoulement de l'eau de pluie à la surface du sol s'appelle :",
+      "o": [
+        "l'infiltration",
+        "l'évaporation",
+        "le ruissellement",
+        "la condensation"
+      ],
+      "r": 2,
+      "x": "Le ruissellement se produit lorsque l'eau de pluie ne peut pas s'infiltrer assez vite dans le sol. Il est une cause majeure d'érosion des terres cultivées. Il est plus fort sur les sols nus, tassés ou en pente.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La pénétration de l'eau de pluie dans le sol s'appelle :",
+      "o": [
+        "le ruissellement",
+        "la sublimation",
+        "la transpiration",
+        "l'infiltration"
+      ],
+      "r": 3,
+      "x": "L'infiltration est le processus par lequel l'eau pénètre depuis la surface à l'intérieur du sol. Une partie de cette eau peut ensuite s'écouler en profondeur et contribuer à la recharge des nappes souterraines. La couverture végétale et la structure du sol peuvent favoriser l'infiltration.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La perte d'eau d'un sol vers l'atmosphère, à la fois par le sol et par les plantes, s'appelle :",
+      "o": [
+        "la percolation",
+        "la condensation",
+        "le ruissellement",
+        "l'évapotranspiration"
+      ],
+      "r": 3,
+      "x": "L'évapotranspiration additionne l'eau évaporée par le sol et celle rejetée par les végétaux. Elle est très élevée sous les fortes chaleurs du Sahel. Elle sert à évaluer les besoins en eau des cultures.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Une formation végétale composée d'herbes hautes parsemées d'arbres et d'arbustes s'appelle :",
+      "o": [
+        "la forêt dense",
+        "la toundra",
+        "la mangrove",
+        "la savane"
+      ],
+      "r": 3,
+      "x": "La savane associe un tapis d'herbes hautes à des arbres et arbustes dispersés. C'est la formation végétale dominante dans la plus grande partie du Burkina Faso. Elle est adaptée aux climats tropicaux qui alternent saison sèche et saison des pluies.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Une forêt qui longe un cours d'eau dans une région de savane s'appelle :",
+      "o": [
+        "une forêt claire",
+        "une forêt galerie",
+        "une forêt dense sèche",
+        "une forêt classée"
+      ],
+      "r": 1,
+      "x": "La forêt galerie borde les cours d'eau, où l'humidité permet la croissance d'arbres plus hauts. Une forêt classée est, elle, une forêt protégée par l'État. La forêt galerie reste verte même pendant la saison sèche grâce à la proximité de l'eau.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La formation végétale littorale qui pousse dans les zones de balancement des marées s'appelle :",
+      "o": [
+        "la forêt galerie",
+        "la steppe",
+        "la savane",
+        "la mangrove"
+      ],
+      "r": 3,
+      "x": "La mangrove pousse sur les côtes tropicales, là où la mer recouvre et découvre le sol au rythme des marées. On en trouve par exemple au Sénégal et en Guinée. Ses arbres, les palétuviers, possèdent des racines aériennes adaptées à l'eau salée.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La science qui étudie les sols s'appelle :",
+      "o": [
+        "la climatologie",
+        "la géologie",
+        "l'hydrologie",
+        "la pédologie"
+      ],
+      "r": 3,
+      "x": "La pédologie étudie la formation, la composition et l'évolution des sols. La géologie étudie, elle, les roches et la structure de la Terre. La pédologie est très utile en agriculture pour connaître la fertilité des terres.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La science qui étudie les formes du relief et leur évolution s'appelle :",
+      "o": [
+        "la géomorphologie",
+        "la pédologie",
+        "la météorologie",
+        "la biogéographie"
+      ],
+      "r": 0,
+      "x": "La géomorphologie décrit et explique les formes du relief. La biogéographie étudie la répartition des êtres vivants à la surface de la Terre. La géomorphologie étudie notamment le rôle de l'érosion dans le façonnement des paysages.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La science qui étudie les eaux continentales, leur circulation et leur répartition s'appelle :",
+      "o": [
+        "l'océanographie",
+        "la sismologie",
+        "la glaciologie",
+        "l'hydrologie"
+      ],
+      "r": 3,
+      "x": "L'hydrologie étudie les eaux des continents : cours d'eau, lacs et nappes souterraines. L'océanographie s'intéresse, elle, aux mers et aux océans. L'hydrologie est indispensable pour construire des barrages et gérer les ressources en eau.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La science qui étudie le temps qu'il fait et les phénomènes atmosphériques à court terme s'appelle :",
+      "o": [
+        "la climatologie",
+        "l'astronomie",
+        "la cartographie",
+        "la météorologie"
+      ],
+      "r": 3,
+      "x": "La météorologie étudie et prévoit le temps à court terme. La climatologie s'intéresse aux moyennes et aux tendances sur plusieurs décennies. Les prévisions météorologiques sont essentielles pour l'agriculture et le transport aérien.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La rive droite d'un cours d'eau se repère en regardant :",
+      "o": [
+        "vers l'amont",
+        "vers l'est",
+        "vers le nord",
+        "vers l'aval"
+      ],
+      "r": 3,
+      "x": "Par convention, on détermine la rive droite et la rive gauche en regardant vers l'aval, dans le sens du courant. L'aval désigne la direction de l'embouchure. La rive gauche se trouve alors du côté de la main gauche de l'observateur.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La partie d'un cours d'eau située du côté de la source s'appelle :",
+      "o": [
+        "l'aval",
+        "le delta",
+        "l'embouchure",
+        "l'amont"
+      ],
+      "r": 3,
+      "x": "L'amont désigne la partie d'un cours d'eau située vers sa source. L'aval est la direction opposée, vers l'embouchure. Une ville située en amont d'une autre est donc plus proche de la source.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La boucle décrite par un cours d'eau sur une plaine s'appelle :",
+      "o": [
+        "un méandre",
+        "un rapide",
+        "une cascade",
+        "un delta"
+      ],
+      "r": 0,
+      "x": "Le méandre est une sinuosité du cours d'eau qui se forme surtout sur les terrains plats. L'eau érode la rive concave et dépose des alluvions sur la rive convexe. Lorsqu'une boucle est recoupée, elle peut former un bras mort.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La ligne qui sépare deux bassins versants voisins s'appelle :",
+      "o": [
+        "la ligne de partage des eaux",
+        "le thalweg de la vallée",
+        "la courbe de niveau maîtresse",
+        "la ligne de rivage marine"
+      ],
+      "r": 0,
+      "x": "La ligne de partage des eaux suit les points hauts qui séparent deux bassins versants. Les pluies tombées de part et d'autre rejoignent des cours d'eau différents. Elle suit généralement les lignes de crête, qui relient les points les plus hauts du relief.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le passage direct de l'eau de l'état de vapeur à l'état liquide, à l'origine des nuages et de la rosée, s'appelle :",
+      "o": [
+        "l'évaporation",
+        "la sublimation",
+        "la fusion",
+        "la condensation"
+      ],
+      "r": 3,
+      "x": "La condensation transforme la vapeur d'eau en fines gouttelettes, qui forment nuages, brouillard et rosée. L'évaporation est le phénomène inverse. La condensation se produit lorsque l'air humide se refroidit.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le cycle de l'eau est principalement mis en mouvement par :",
+      "o": [
+        "l'énergie solaire",
+        "la rotation de la Lune",
+        "la chaleur des volcans",
+        "le champ magnétique terrestre"
+      ],
+      "r": 0,
+      "x": "L'énergie solaire est le principal moteur du cycle de l'eau. Elle provoque l'évaporation de l'eau des océans, des lacs et des sols, ainsi que la transpiration des végétaux. La gravité favorise ensuite les précipitations, le ruissellement et l'écoulement de l'eau vers les cours d'eau et les océans.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le lit qu'un cours d'eau occupe en période de crue s'appelle :",
+      "o": [
+        "le lit mineur",
+        "le chenal",
+        "le thalweg",
+        "le lit majeur"
+      ],
+      "r": 3,
+      "x": "Le lit majeur est la zone inondée lors des crues. Le lit mineur correspond au chenal occupé par les eaux en temps normal. Construire dans le lit majeur expose donc aux inondations.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "L'altitude d'un lieu se mesure par rapport :",
+      "o": [
+        "au niveau moyen de la mer",
+        "au point le plus bas du pays",
+        "au centre de la Terre",
+        "au sommet le plus proche"
+      ],
+      "r": 0,
+      "x": "L'altitude est la hauteur d'un lieu au-dessus du niveau moyen de la mer. Ouagadougou se trouve ainsi à environ 300 m d'altitude. Un point situé sous le niveau de la mer a donc une altitude négative.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le nuage d'orage à grand développement vertical, souvent porteur de fortes pluies, s'appelle :",
+      "o": [
+        "le cirrus",
+        "le stratus",
+        "le cumulonimbus",
+        "l'altocumulus"
+      ],
+      "r": 2,
+      "x": "Le cumulonimbus est un nuage très épais qui peut s'élever sur plus de 10 km de hauteur. Il apporte orages, averses violentes et parfois de la grêle. Son sommet s'étale souvent en forme d'enclume.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "En Afrique de l'Ouest, une ligne de grains désigne :",
+      "o": [
+        "une rangée de greniers dans un village",
+        "une ligne d'orages et de rafales violentes",
+        "une limite entre deux zones de cultures",
+        "une longue file de dunes de sable"
+      ],
+      "r": 1,
+      "x": "La ligne de grains est une bande d'orages qui se déplace d'est en ouest, précédée de rafales violentes. Elle apporte une grande partie des pluies de la saison humide au Sahel. Son arrivée soulève souvent un épais mur de poussière.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le granite, roche très répandue dans le sous-sol burkinabè, est une roche :",
+      "o": [
+        "sédimentaire",
+        "évaporitique",
+        "organique",
+        "magmatique"
+      ],
+      "r": 3,
+      "x": "Le granite est une roche magmatique formée par le refroidissement lent du magma en profondeur. Les roches sédimentaires, comme le grès, résultent au contraire de l'accumulation de dépôts. Le mot magmatique vient de magma, la roche en fusion.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le départ massif des habitants des campagnes vers les villes s'appelle :",
+      "o": [
+        "l'émigration",
+        "l'exode rural",
+        "la transhumance",
+        "la périurbanisation"
+      ],
+      "r": 1,
+      "x": "L'exode rural désigne le déplacement durable de ruraux vers les villes, comme Ouagadougou ou Bobo-Dioulasso. Il alimente la croissance urbaine des pays en développement. Il est souvent motivé par la recherche d'un emploi et de meilleurs services.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le fait de quitter son pays pour aller s'installer dans un autre pays s'appelle :",
+      "o": [
+        "l'immigration",
+        "l'émigration",
+        "l'exode rural",
+        "la sédentarisation"
+      ],
+      "r": 1,
+      "x": "L'émigration est le départ d'une personne de son pays d'origine. Pour le pays d'accueil, ce même mouvement est une immigration. De nombreux Burkinabè ont ainsi émigré vers la Côte d'Ivoire.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La différence entre le nombre d'immigrants et le nombre d'émigrants d'un pays s'appelle :",
+      "o": [
+        "le solde naturel",
+        "le solde migratoire",
+        "le taux d'accroissement",
+        "la balance commerciale"
+      ],
+      "r": 1,
+      "x": "Le solde migratoire est positif quand les entrées dépassent les sorties. Le solde naturel est, lui, la différence entre naissances et décès. Il complète le solde naturel pour expliquer l'évolution de la population.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La différence entre le nombre de naissances et le nombre de décès sur une période s'appelle :",
+      "o": [
+        "le taux de fécondité",
+        "le solde migratoire",
+        "le solde naturel",
+        "l'espérance de vie"
+      ],
+      "r": 2,
+      "x": "Le solde naturel est positif lorsque les naissances l'emportent sur les décès, comme au Burkina Faso. Ajouté au solde migratoire, il donne la variation totale de la population. Au Burkina Faso, il est élevé en raison d'une forte natalité.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Une pyramide des âges à base très large et à sommet étroit indique une population :",
+      "o": [
+        "vieillissante",
+        "jeune",
+        "en déclin",
+        "stable"
+      ],
+      "r": 1,
+      "x": "Une base large traduit une forte natalité et une forte proportion de jeunes, comme au Burkina Faso. Une pyramide à base étroite indique au contraire une population vieillissante. La pyramide d'une population jeune a ainsi une forme de triangle.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "L'indice synthétique de fécondité exprime :",
+      "o": [
+        "le nombre de naissances pour 1 000 habitants",
+        "la part des moins de 15 ans",
+        "le nombre moyen d'enfants par femme",
+        "le nombre de femmes pour 100 hommes"
+      ],
+      "r": 2,
+      "x": "L'indice synthétique de fécondité indique le nombre moyen d'enfants qu'aurait une femme au cours de sa vie. Il reste élevé dans les pays sahéliens. Un indice de 2,1 enfants par femme assure en principe le renouvellement des générations.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "L'espérance de vie à la naissance désigne :",
+      "o": [
+        "l'âge moyen de l'ensemble de la population",
+        "le nombre moyen d'années qu'un nouveau-né peut espérer vivre",
+        "l'âge maximal atteint dans le pays",
+        "l'âge légal de départ à la retraite"
+      ],
+      "r": 1,
+      "x": "L'espérance de vie à la naissance est le nombre moyen d'années que vivrait un nouveau-né si les conditions de mortalité restaient inchangées. Elle reflète le niveau sanitaire d'un pays. Elle augmente lorsque la mortalité, notamment infantile, diminue.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La transition démographique désigne le passage :",
+      "o": [
+        "d'une économie agricole à une économie industrielle",
+        "d'une population rurale à une population urbaine",
+        "d'une natalité et d'une mortalité fortes à faibles",
+        "d'une population jeune à une population en déclin"
+      ],
+      "r": 2,
+      "x": "La transition démographique voit d'abord baisser la mortalité, puis la natalité. Pendant la phase intermédiaire, la population croît très rapidement. La plupart des pays d'Afrique subsaharienne se trouvent encore dans cette phase de forte croissance.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "L'indice de développement humain (IDH) est calculé et publié par :",
+      "o": [
+        "la Conférence des Nations unies sur le commerce et le développement",
+        "le Programme des Nations unies pour le développement",
+        "le Fonds monétaire international",
+        "l'Organisation de coopération et de développement économiques"
+      ],
+      "r": 1,
+      "x": "L'IDH est publié chaque année par le PNUD dans son Rapport sur le développement humain, créé en 1990. Le classement des pays est mis à jour chaque année. Le PNUD est un organe de l'ONU consacré au développement.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "L'indice de développement humain (IDH) combine des indicateurs de santé, de niveau de vie et :",
+      "o": [
+        "de sécurité",
+        "de démocratie",
+        "d'éducation",
+        "d'environnement"
+      ],
+      "r": 2,
+      "x": "L'IDH associe l'espérance de vie, la durée de scolarisation et le revenu national brut par habitant. Il varie entre 0 et 1. Plus il est proche de 1, plus le développement humain est élevé.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La part de la population totale qui vit dans les villes s'appelle :",
+      "o": [
+        "le taux d'urbanisation",
+        "la densité urbaine",
+        "le taux d'activité",
+        "l'exode rural"
+      ],
+      "r": 0,
+      "x": "Le taux d'urbanisation rapporte la population urbaine à la population totale. Il augmente avec l'exode rural et la croissance naturelle des villes. Il s'exprime en pourcentage.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Un pays compte 12 millions d'habitants, dont 3 millions vivent en ville. Son taux d'urbanisation est de :",
+      "o": [
+        "4 %",
+        "15 %",
+        "25 %",
+        "36 %"
+      ],
+      "r": 2,
+      "x": "Le taux d'urbanisation vaut 3 ÷ 12 = 0,25, soit 25 %. Il se calcule en divisant la population urbaine par la population totale. Les 3 millions de citadins représentent donc un habitant sur quatre.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Une ville compte 500 000 habitants et enregistre 20 000 naissances en un an. Son taux de natalité est de :",
+      "o": [
+        "4 ‰",
+        "25 ‰",
+        "40 ‰",
+        "400 ‰"
+      ],
+      "r": 2,
+      "x": "Le taux de natalité vaut (20 000 ÷ 500 000) × 1 000 = 40 ‰. Il rapporte les naissances de l'année à la population totale. Un taux de 40 ‰ est considéré comme très élevé.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Un pays a accueilli 50 000 immigrants et vu partir 80 000 émigrants en un an. Son solde migratoire est de :",
+      "o": [
+        "+ 30 000",
+        "– 30 000",
+        "+ 130 000",
+        "– 130 000"
+      ],
+      "r": 1,
+      "x": "Le solde migratoire vaut 50 000 – 80 000 = – 30 000. Il est négatif car les départs dépassent les arrivées. Ce pays perd donc 30 000 habitants du fait des migrations.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "L'agriculture, l'élevage et la pêche relèvent du secteur :",
+      "o": [
+        "primaire",
+        "secondaire",
+        "tertiaire",
+        "quaternaire"
+      ],
+      "r": 0,
+      "x": "Le secteur primaire regroupe les activités qui exploitent directement les ressources naturelles. Il fait vivre la majorité de la population burkinabè. Le terme « primaire » indique que ces activités fournissent des produits bruts.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Les activités de transformation des matières premières, comme l'industrie textile, relèvent du secteur :",
+      "o": [
+        "primaire",
+        "informel",
+        "tertiaire",
+        "secondaire"
+      ],
+      "r": 3,
+      "x": "Le secteur secondaire regroupe l'industrie et la transformation des matières premières. L'égrenage du coton ou la fabrication de sucre en sont des exemples. Il fabrique des biens matériels à partir des produits du secteur primaire.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le commerce, les transports, la santé et l'enseignement relèvent du secteur :",
+      "o": [
+        "primaire",
+        "secondaire",
+        "tertiaire",
+        "agricole"
+      ],
+      "r": 2,
+      "x": "Le secteur tertiaire regroupe les activités de services. Il domine l'économie urbaine. Il emploie une part croissante de la population active dans le monde.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le produit intérieur brut (PIB) mesure :",
+      "o": [
+        "la richesse produite dans un pays en un an",
+        "le montant total des exportations d'un pays",
+        "la dette publique accumulée par un État",
+        "le revenu moyen d'un seul habitant"
+      ],
+      "r": 0,
+      "x": "Le PIB mesure la valeur des biens et services produits sur le territoire d'un pays au cours d'une année. Divisé par la population, il donne le PIB par habitant. Il sert à comparer la taille des économies, mais pas la répartition des richesses.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La différence entre la valeur des exportations et celle des importations de marchandises s'appelle :",
+      "o": [
+        "la balance commerciale",
+        "la balance des paiements",
+        "le solde budgétaire",
+        "le produit intérieur brut"
+      ],
+      "r": 0,
+      "x": "La balance commerciale est excédentaire quand les exportations dépassent les importations. Elle est déficitaire dans le cas contraire. Le Burkina Faso exporte surtout de l'or et du coton.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le siège de la Banque ouest-africaine de développement (BOAD) se trouve à :",
+      "o": [
+        "Dakar",
+        "Abidjan",
+        "Lomé",
+        "Ouagadougou"
+      ],
+      "r": 2,
+      "x": "La BOAD, banque de développement des pays de l'UEMOA, a son siège à Lomé, au Togo. Elle finance des projets d'infrastructures et de développement dans la sous-région. La BCEAO compte parmi ses principaux actionnaires.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "L'Union économique et monétaire ouest-africaine (UEMOA) a été créée en janvier 1994 à :",
+      "o": [
+        "Ouagadougou",
+        "Bamako",
+        "Abidjan",
+        "Dakar"
+      ],
+      "r": 3,
+      "x": "L'UEMOA a été créée à Dakar le 10 janvier 1994. Elle a été créée le même mois que la dévaluation du franc CFA. Le Burkina Faso en est l'un des membres fondateurs.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "L'UEMOA a pris la suite de l'Union monétaire ouest-africaine (UMOA), créée en :",
+      "o": [
+        "1945",
+        "1962",
+        "1973",
+        "1994"
+      ],
+      "r": 1,
+      "x": "L'Union monétaire ouest-africaine a été créée en 1962 autour d'une monnaie commune, le franc CFA. L'UEMOA lui a ajouté en 1994 une dimension économique. Le traité de l'UMOA a été signé le 12 mai 1962.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le seul pays lusophone membre de l'Union économique et monétaire ouest-africaine (UEMOA) est :",
+      "o": [
+        "le Cap-Vert",
+        "le Sénégal",
+        "la Guinée",
+        "la Guinée-Bissau"
+      ],
+      "r": 3,
+      "x": "La Guinée-Bissau, ancienne colonie portugaise, a adhéré à l'UEMOA le 2 mai 1997. Le Cap-Vert, également lusophone, n'en est pas membre. Elle est aussi le dernier pays à avoir rejoint l'union.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "En janvier 1994, le franc CFA a été dévalué de :",
+      "o": [
+        "10 %",
+        "25 %",
+        "50 %",
+        "75 %"
+      ],
+      "r": 2,
+      "x": "La parité du franc CFA est passée de 0,02 à 0,01 franc français, soit une dévaluation de 50 %. Elle visait à restaurer la compétitivité des économies de la zone. Concrètement, il fallait désormais 100 francs CFA pour un franc français, au lieu de 50.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le franc CFA a été créé en :",
+      "o": [
+        "1919",
+        "1945",
+        "1960",
+        "1994"
+      ],
+      "r": 1,
+      "x": "Le franc CFA a été créé en décembre 1945, au lendemain de la Seconde Guerre mondiale. Il circule aujourd'hui en Afrique de l'Ouest et en Afrique centrale. Le sigle signifiait à l'origine « Colonies françaises d'Afrique ».",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le siège de la Banque centrale des États de l'Afrique de l'Ouest (BCEAO) se trouve à :",
+      "o": [
+        "Ouagadougou",
+        "Abidjan",
+        "Lomé",
+        "Dakar"
+      ],
+      "r": 3,
+      "x": "La BCEAO a son siège à Dakar depuis 1978, après son transfert depuis Paris. Elle émet le franc CFA pour les États de l'UEMOA. La BCEAO dispose d'une agence nationale dans chaque État membre.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Les zones d'habitat spontané situées en périphérie de Ouagadougou, sans lotissement officiel, sont appelées :",
+      "o": [
+        "les zones loties",
+        "les quartiers résidentiels",
+        "les cités jardins",
+        "les non-lotis"
+      ],
+      "r": 3,
+      "x": "Les non-lotis sont des quartiers d'habitat spontané construits sans plan de lotissement ni titre foncier. Leur restructuration représente un défi majeur pour les villes burkinabè. Ces quartiers manquent souvent d'eau courante, d'électricité et de voies aménagées.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Un vaste ensemble urbain formé de plusieurs grandes métropoles reliées entre elles s'appelle :",
+      "o": [
+        "une conurbation",
+        "une mégalopole",
+        "une banlieue",
+        "une agglomération rurale"
+      ],
+      "r": 1,
+      "x": "La mégalopole est une chaîne de grandes villes reliées par des réseaux denses. La conurbation désigne la fusion de villes voisines en une seule agglomération. La mégalopole japonaise, qui s'étend de Tokyo à Osaka, illustre ce type d'ensemble.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La croissance des villes qui s'étendent sur les campagnes voisines s'appelle :",
+      "o": [
+        "l'exode rural",
+        "la ruralisation",
+        "la désertification",
+        "la périurbanisation"
+      ],
+      "r": 3,
+      "x": "La périurbanisation est l'extension des villes sur les espaces ruraux qui les entourent. Elle s'accompagne d'une hausse des déplacements quotidiens vers le centre. Elle est favorisée par le prix plus faible des terrains à la périphérie.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "L'axe de transport reliant un pays enclavé à un port, comme Ouagadougou–Abidjan ou Ouagadougou–Lomé, s'appelle :",
+      "o": [
+        "un corridor",
+        "un hinterland",
+        "un détroit",
+        "un isthme"
+      ],
+      "r": 0,
+      "x": "Un corridor est un axe routier ou ferroviaire qui relie un pays enclavé à un port maritime. Le Burkina Faso utilise plusieurs corridors vers les ports du golfe de Guinée. Les corridors réduisent les coûts et les délais de transport des marchandises.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Sur une carte topographique, une ligne qui relie les points de même altitude s'appelle :",
+      "o": [
+        "une isohyète",
+        "une courbe de niveau",
+        "une isotherme",
+        "un méridien"
+      ],
+      "r": 1,
+      "x": "La courbe de niveau, ou isohypse, relie les points de même altitude. Elle permet de représenter le relief sur une carte plane. Le mot isohypse vient du grec hupsos, qui signifie « hauteur ».",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Sur une carte topographique, des courbes de niveau très rapprochées indiquent :",
+      "o": [
+        "une pente forte",
+        "une pente faible",
+        "une zone plane",
+        "un cours d'eau"
+      ],
+      "r": 0,
+      "x": "Plus les courbes de niveau sont rapprochées, plus le terrain monte vite sur une courte distance. Des courbes très espacées traduisent au contraire un terrain plat. On peut ainsi lire le relief sans voir le terrain.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Sur une carte topographique, l'écart d'altitude constant entre deux courbes de niveau successives s'appelle :",
+      "o": [
+        "l'échelle",
+        "la pente",
+        "le dénivelé total",
+        "l'équidistance"
+      ],
+      "r": 3,
+      "x": "L'équidistance est la différence d'altitude fixe entre deux courbes de niveau voisines, par exemple 10 m. Elle est indiquée dans la marge de la carte. Plus l'équidistance est faible, plus le relief est représenté avec précision.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le cadre d'une carte qui explique la signification des signes et des couleurs utilisés s'appelle :",
+      "o": [
+        "l'échelle",
+        "le titre",
+        "l'orientation",
+        "la légende"
+      ],
+      "r": 3,
+      "x": "La légende explique les symboles, couleurs et figurés utilisés sur la carte. Sans légende, une carte ne peut pas être lue correctement. Elle figure généralement dans un coin ou dans la marge de la carte.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Sur la plupart des cartes, le nord est placé :",
+      "o": [
+        "en haut",
+        "en bas",
+        "à gauche",
+        "à droite"
+      ],
+      "r": 0,
+      "x": "Par convention, le nord se trouve en haut de la carte, indiqué par une flèche ou une rose des vents. L'est est alors à droite et l'ouest à gauche. Cette convention facilite la lecture et la comparaison des cartes.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La direction opposée au nord-est est :",
+      "o": [
+        "le nord-ouest",
+        "le sud-est",
+        "le sud-ouest",
+        "le sud"
+      ],
+      "r": 2,
+      "x": "Sur la rose des vents, le sud-ouest est diamétralement opposé au nord-est. De même, le nord-ouest est opposé au sud-est. Ces deux directions forment un angle de 180°.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le Soleil se lève du côté de :",
+      "o": [
+        "l'est",
+        "l'ouest",
+        "le nord",
+        "le sud"
+      ],
+      "r": 0,
+      "x": "En raison de la rotation de la Terre d'ouest en est, le Soleil semble se lever à l'est et se coucher à l'ouest. Ce repère permet de s'orienter sans boussole. Il ne se lève exactement à l'est qu'aux équinoxes.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La représentation de la Terre entière sur une surface plane s'appelle :",
+      "o": [
+        "un globe",
+        "un planisphère",
+        "un plan de ville",
+        "une carte topographique"
+      ],
+      "r": 1,
+      "x": "Le planisphère représente l'ensemble du globe sur une surface plane. Cette représentation impose toujours des déformations. Seul le globe terrestre représente la Terre sans déformation.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La projection de Mercator, très utilisée sur les planisphères, a pour défaut principal :",
+      "o": [
+        "d'agrandir les régions proches des pôles",
+        "d'agrandir les régions équatoriales",
+        "de supprimer les océans",
+        "d'inverser le nord et le sud"
+      ],
+      "r": 0,
+      "x": "La projection de Mercator conserve les angles mais agrandit fortement les hautes latitudes. Le Groenland y paraît ainsi presque aussi grand que l'Afrique, pourtant bien plus vaste. À l'équateur, en revanche, les distances sont représentées sans déformation.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "L'échelle d'une carte représentée par un segment gradué s'appelle :",
+      "o": [
+        "l'échelle numérique",
+        "la légende",
+        "l'équidistance",
+        "l'échelle graphique"
+      ],
+      "r": 3,
+      "x": "L'échelle graphique est un segment gradué qui indique les distances réelles. L'échelle numérique s'écrit sous forme de fraction, comme 1/50 000. Contrairement à l'échelle numérique, l'échelle graphique reste juste lorsque la carte est agrandie ou réduite.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "L'observation de la surface terrestre à distance, à l'aide de satellites ou d'avions, s'appelle :",
+      "o": [
+        "la télédétection",
+        "la topographie",
+        "la triangulation",
+        "la géodésie"
+      ],
+      "r": 0,
+      "x": "La télédétection exploite les images prises par satellites ou par avions. Elle sert notamment à suivre la végétation, les cultures et les inondations. Les images satellites permettent par exemple de repérer les feux de brousse.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Un outil informatique qui permet de stocker, d'analyser et de représenter des données localisées s'appelle :",
+      "o": [
+        "un SIG",
+        "un GPS",
+        "un tableur",
+        "un logiciel de dessin"
+      ],
+      "r": 0,
+      "x": "Le système d'information géographique (SIG) associe des données à leur localisation pour produire des cartes et des analyses. Le GPS sert, lui, à se positionner grâce aux satellites. Le SIG est utilisé par exemple pour planifier les villes ou suivre les cultures.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le système de positionnement par satellites GPS a été développé par :",
+      "o": [
+        "l'Union européenne",
+        "la Russie",
+        "la Chine",
+        "les États-Unis"
+      ],
+      "r": 3,
+      "x": "Le GPS est un système américain de positionnement par satellites. L'Union européenne a développé son propre système, appelé Galileo. La Russie dispose, elle, du système GLONASS et la Chine du système BeiDou.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Une route s'élève de 100 m sur une distance horizontale de 2 km. Sa pente moyenne est de :",
+      "o": [
+        "0,5 %",
+        "2 %",
+        "5 %",
+        "20 %"
+      ],
+      "r": 2,
+      "x": "La pente vaut 100 m ÷ 2 000 m = 0,05, soit 5 %. Elle se calcule en divisant le dénivelé par la distance horizontale. Une pente de 5 % signifie que l'on monte de 5 m tous les 100 m.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Sur une carte au 1/20 000, la distance réelle de 3 km est représentée par :",
+      "o": [
+        "0,15 cm",
+        "1,5 cm",
+        "15 cm",
+        "150 cm"
+      ],
+      "r": 2,
+      "x": "3 km = 300 000 cm, et 300 000 ÷ 20 000 = 15 cm. Sur cette carte, 1 cm représente 200 m. On divise la distance réelle, convertie en centimètres, par le dénominateur de l'échelle.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La population active d'un pays regroupe :",
+      "o": [
+        "l'ensemble des habitants sans exception",
+        "les personnes âgées de plus de 60 ans",
+        "les seuls fonctionnaires de l'État",
+        "les personnes qui ont un emploi ou en cherchent un"
+      ],
+      "r": 3,
+      "x": "La population active comprend les actifs occupés et les chômeurs qui cherchent un emploi. Les élèves et les retraités n'en font pas partie. Le taux de chômage rapporte le nombre de chômeurs à la population active.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le déplacement temporaire de travailleurs pendant la saison sèche, avant leur retour pour les cultures, s'appelle :",
+      "o": [
+        "l'exode rural",
+        "le nomadisme",
+        "la sédentarisation",
+        "la migration saisonnière"
+      ],
+      "r": 3,
+      "x": "La migration saisonnière consiste à partir travailler ailleurs pendant la saison sèche, puis à revenir pour l'hivernage. L'exode rural correspond, lui, à un départ durable vers la ville. Elle permet aux ménages ruraux de diversifier leurs revenus.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le taux d'alphabétisation désigne :",
+      "o": [
+        "la part de la population scolarisée",
+        "la durée moyenne des études",
+        "le nombre d'écoles pour 1 000 habitants",
+        "la part des adultes sachant lire et écrire"
+      ],
+      "r": 3,
+      "x": "Le taux d'alphabétisation mesure la proportion de personnes, généralement de 15 ans et plus, capables de lire et d'écrire. Il se distingue du taux de scolarisation, qui concerne les enfants inscrits à l'école. Au Burkina Faso, ce taux reste relativement faible, surtout chez les femmes.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le vieillissement démographique se traduit par :",
+      "o": [
+        "une hausse de la part des personnes âgées",
+        "une hausse de la natalité",
+        "une baisse de l'espérance de vie",
+        "une hausse de la part des moins de 15 ans"
+      ],
+      "r": 0,
+      "x": "Le vieillissement démographique correspond à l'augmentation de la part des personnes âgées dans la population. Il résulte de la baisse de la natalité et de l'allongement de la vie. Il touche surtout les pays développés, comme le Japon ou les pays européens.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Une grande ville qui concentre des fonctions de commandement politique, économique et culturel s'appelle :",
+      "o": [
+        "un bourg",
+        "une métropole",
+        "un village",
+        "une ville nouvelle"
+      ],
+      "r": 1,
+      "x": "La métropole est une grande ville qui exerce une influence sur un vaste territoire grâce à ses fonctions de commandement. Ouagadougou est la principale métropole du Burkina Faso. Elle se distingue d'une simple grande ville par son rayonnement national ou international.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Sur l'autre rive du fleuve Congo, Kinshasa fait face à la capitale :",
+      "o": [
+        "Bangui",
+        "Luanda",
+        "Libreville",
+        "Brazzaville"
+      ],
+      "r": 3,
+      "x": "Kinshasa, capitale de la République démocratique du Congo, et Brazzaville, capitale de la République du Congo, se font face sur les deux rives du fleuve Congo. Elles comptent parmi les capitales nationales les plus proches du monde. Bangui est la capitale de la République centrafricaine.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "En Afrique du Sud, la ville qui accueille le Parlement et sert de capitale législative est :",
+      "o": [
+        "Pretoria",
+        "Le Cap",
+        "Johannesbourg",
+        "Durban"
+      ],
+      "r": 1,
+      "x": "Le Cap accueille le Parlement sud-africain. La ville est située non loin du cap de Bonne-Espérance. L'Afrique du Sud compte ainsi trois capitales, chacune abritant un pouvoir différent.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "En Afrique du Sud, la ville qui sert de capitale judiciaire est :",
+      "o": [
+        "Gqeberha",
+        "Pretoria",
+        "Johannesbourg",
+        "Bloemfontein"
+      ],
+      "r": 3,
+      "x": "Bloemfontein, dans la province de l'État-Libre, accueille la Cour suprême d'appel. La ville est située au centre du pays. Pretoria est, elle, la capitale administrative et le siège du gouvernement.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le pays entièrement enclavé à l'intérieur du territoire sud-africain est :",
+      "o": [
+        "l'Eswatini",
+        "le Lesotho",
+        "le Botswana",
+        "le Zimbabwe"
+      ],
+      "r": 1,
+      "x": "Le Lesotho est entièrement entouré par l'Afrique du Sud. L'Eswatini, lui, partage aussi une frontière avec le Mozambique. Le Lesotho est surnommé le « royaume dans le ciel » en raison de son altitude élevée.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le Swaziland a officiellement changé de nom pour devenir l'Eswatini en :",
+      "o": [
+        "2008",
+        "2013",
+        "2018",
+        "2021"
+      ],
+      "r": 2,
+      "x": "Le roi Mswati III a annoncé en avril 2018 que le pays s'appellerait désormais Eswatini. Ce nom signifie « terre des Swazis ». Le pays est l'une des dernières monarchies absolues du monde.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Depuis janvier 2019, la capitale politique du Burundi est :",
+      "o": [
+        "Bujumbura",
+        "Ngozi",
+        "Kigali",
+        "Gitega"
+      ],
+      "r": 3,
+      "x": "Le Parlement burundais a voté le 16 janvier 2019 le transfert de la capitale politique à Gitega. Bujumbura reste la capitale économique du pays. Gitega se trouve au centre du pays.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La capitale officielle de la Tanzanie est :",
+      "o": [
+        "Dar es Salaam",
+        "Arusha",
+        "Zanzibar",
+        "Dodoma"
+      ],
+      "r": 3,
+      "x": "Dodoma, au centre du pays, est la capitale officielle de la Tanzanie, où le président s'est officiellement installé en 2019. Dar es Salaam reste le principal port et la capitale économique. Ce transfert avait été décidé dès 1973.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Depuis l'indépendance de l'Érythrée, l'Éthiopie est un pays :",
+      "o": [
+        "bordé par la mer Rouge",
+        "bordé par l'océan Indien",
+        "bordé par le golfe d'Aden",
+        "sans littoral"
+      ],
+      "r": 3,
+      "x": "En perdant la côte érythréenne de la mer Rouge, l'Éthiopie est devenue un pays sans accès à la mer. Elle utilise surtout le port de Djibouti pour son commerce. L'Éthiopie est aujourd'hui le pays sans littoral le plus peuplé du monde.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le lac Turkana, grand lac du Rift, se trouve principalement au :",
+      "o": [
+        "Ouganda",
+        "Kenya",
+        "Soudan du Sud",
+        "Somalie"
+      ],
+      "r": 1,
+      "x": "Le lac Turkana s'étend dans le nord du Kenya, son extrémité nord atteignant l'Éthiopie. Il est entouré de régions semi-désertiques. C'est le plus grand lac permanent situé en milieu désertique.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le Grand barrage de la Renaissance éthiopien (GERD) a été inauguré le :",
+      "o": [
+        "9 septembre 2023",
+        "9 septembre 2025",
+        "1er janvier 2024",
+        "1er janvier 2026"
+      ],
+      "r": 1,
+      "x": "Le barrage a été inauguré le 9 septembre 2025, après environ quatorze ans de travaux. L'Égypte, qui dépend du Nil, a protesté auprès de l'ONU. Construit sur le Nil Bleu, c'est le plus grand barrage hydroélectrique d'Afrique.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le lac Malawi est partagé entre le Malawi, le Mozambique et :",
+      "o": [
+        "la Zambie",
+        "le Kenya",
+        "l'Ouganda",
+        "la Tanzanie"
+      ],
+      "r": 3,
+      "x": "Le lac Malawi, appelé aussi lac Nyassa, est partagé entre le Malawi, le Mozambique et la Tanzanie. C'est l'un des grands lacs de la vallée du Rift. Il est réputé pour ses très nombreuses espèces de poissons, notamment les cichlidés.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le gaz dissous dans le lac Kivu et exploité pour produire de l'électricité est :",
+      "o": [
+        "l'hydrogène",
+        "le méthane",
+        "le butane",
+        "l'hélium"
+      ],
+      "r": 1,
+      "x": "Le méthane dissous dans les eaux profondes du lac Kivu alimente une centrale électrique installée sur ses rives. Le gaz carbonique, également présent, est réinjecté dans le lac. Si ce gaz était libéré brutalement, il pourrait représenter un danger pour les riverains.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le lac Kivu est partagé entre la RD Congo et :",
+      "o": [
+        "l'Ouganda",
+        "le Burundi",
+        "la Tanzanie",
+        "le Rwanda"
+      ],
+      "r": 3,
+      "x": "Le lac Kivu sépare l'est de la RD Congo et l'ouest du Rwanda. Il fait partie des lacs du Rift occidental. Ses rives sont densément peuplées des deux côtés de la frontière.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le volcan Nyiragongo, qui menace régulièrement la ville de Goma, se trouve :",
+      "o": [
+        "au Rwanda",
+        "en RD Congo",
+        "en Ouganda",
+        "au Kenya"
+      ],
+      "r": 1,
+      "x": "Le Nyiragongo se trouve dans l'est de la RD Congo, à une dizaine de kilomètres de Goma. Sa grande éruption de mai 2021 a menacé la ville de Goma. Ce volcan fait partie de la chaîne des Virunga.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le volcan Nyiragongo est célèbre pour :",
+      "o": [
+        "ses gisements de diamants",
+        "ses glaciers sommitaux",
+        "ses geysers d'eau chaude",
+        "son lac de lave permanent"
+      ],
+      "r": 3,
+      "x": "Le cratère du Nyiragongo abrite l'un des plus grands lacs de lave permanents du monde. Ses coulées très fluides peuvent descendre rapidement vers les zones habitées. Cette fluidité exceptionnelle s'explique par sa très faible teneur en silice.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le delta de l'Okavango, au Botswana, a la particularité d'être un delta :",
+      "o": [
+        "marin, ouvert sur l'océan Indien",
+        "intérieur, sans débouché sur la mer",
+        "glaciaire, formé par la fonte des neiges",
+        "artificiel, créé par un barrage"
+      ],
+      "r": 1,
+      "x": "L'Okavango se perd dans les sables du Kalahari, où il forme un vaste delta intérieur. Ce site a été inscrit au patrimoine mondial en 2014. L'eau qui l'alimente vient des hauts plateaux de l'Angola.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le premier producteur mondial de cobalt est :",
+      "o": [
+        "l'Afrique du Sud",
+        "la Zambie",
+        "le Zimbabwe",
+        "la RD Congo"
+      ],
+      "r": 3,
+      "x": "La RD Congo fournit plus de 70 % de la production mondiale de cobalt et détient environ la moitié des réserves. Ce métal est indispensable aux batteries des téléphones et des véhicules électriques. Une part importante de cette production est encore assurée par des mineurs artisanaux.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le cobalt et le cuivre d'Afrique centrale proviennent surtout de la région du :",
+      "o": [
+        "Kivu",
+        "Katanga",
+        "Kasaï",
+        "Kongo-Central"
+      ],
+      "r": 1,
+      "x": "Le cobalt et le cuivre proviennent surtout de l'ancien Katanga (Haut-Katanga et Lualaba), dans le sud-est de la RD Congo. Le Kasaï est plutôt connu pour ses diamants. Lubumbashi, l'une des principales villes du pays, est le grand centre minier du Katanga.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La « ceinture du cuivre » (Copperbelt), grande région minière, s'étend sur la RD Congo et :",
+      "o": [
+        "la Zambie",
+        "le Malawi",
+        "le Kenya",
+        "l'Angola"
+      ],
+      "r": 0,
+      "x": "La Copperbelt s'étend du Katanga congolais au nord de la Zambie. Le cuivre est la principale ressource d'exportation de la Zambie. Cette richesse fait de la Zambie l'un des principaux producteurs de cuivre d'Afrique.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le Botswana tire une grande partie de ses recettes d'exportation :",
+      "o": [
+        "du pétrole",
+        "du cacao",
+        "du cuivre",
+        "du diamant"
+      ],
+      "r": 3,
+      "x": "Le diamant est la principale richesse d'exportation du Botswana. Son exploitation a fortement contribué au développement du pays depuis l'indépendance. La mine de Jwaneng est considérée comme la plus riche du monde en valeur.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La région du Witwatersrand, autour de Johannesbourg, est célèbre pour ses gisements :",
+      "o": [
+        "d'or",
+        "de pétrole",
+        "de bauxite",
+        "de phosphate"
+      ],
+      "r": 0,
+      "x": "La découverte de l'or du Witwatersrand à la fin du XIXe siècle a donné naissance à Johannesbourg. Ces gisements comptent parmi les plus riches de l'histoire. L'Afrique du Sud a longtemps été le premier producteur mondial d'or.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le Cabinda, territoire pétrolier séparé du reste du pays par une bande de terre congolaise, appartient :",
+      "o": [
+        "au Gabon",
+        "à l'Angola",
+        "à la RD Congo",
+        "au Congo-Brazzaville"
+      ],
+      "r": 1,
+      "x": "Le Cabinda est une enclave angolaise située au nord de l'embouchure du fleuve Congo. Une grande partie du pétrole angolais en provient. Il est bordé au nord par la République du Congo.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "L'île de Bioko, dans le golfe de Guinée, appartient à :",
+      "o": [
+        "le Cameroun",
+        "le Gabon",
+        "Sao Tomé-et-Principe",
+        "la Guinée équatoriale"
+      ],
+      "r": 3,
+      "x": "Bioko abrite Malabo, la principale ville de la Guinée équatoriale. Le reste du territoire du pays se trouve sur le continent, entre le Cameroun et le Gabon. C'est une île d'origine volcanique.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La capitale de Madagascar est :",
+      "o": [
+        "Toamasina",
+        "Mahajanga",
+        "Antananarivo",
+        "Toliara"
+      ],
+      "r": 2,
+      "x": "Antananarivo, sur les hautes terres du centre de l'île, est la capitale de Madagascar. Toamasina en est le principal port. Le nom d'Antananarivo signifie « la ville des mille ».",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La capitale de l'île Maurice est :",
+      "o": [
+        "Port-Louis",
+        "Victoria",
+        "Moroni",
+        "Saint-Denis"
+      ],
+      "r": 0,
+      "x": "Port-Louis est la capitale et le principal port de Maurice. Victoria est celle des Seychelles et Moroni celle des Comores. Port-Louis a été fondée par les Français au XVIIIe siècle.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le détroit de Bab-el-Mandeb relie la mer Rouge :",
+      "o": [
+        "à la Méditerranée",
+        "au golfe Persique",
+        "au golfe d'Aden",
+        "au golfe d'Oman"
+      ],
+      "r": 2,
+      "x": "Le détroit de Bab-el-Mandeb, entre Djibouti et le Yémen, relie la mer Rouge au golfe d'Aden. C'est un passage maritime stratégique sur la route du canal de Suez. Son nom signifie « la porte des lamentations » en arabe.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le massif du Rwenzori, surnommé les « montagnes de la Lune », se situe à la frontière entre l'Ouganda et :",
+      "o": [
+        "le Kenya",
+        "la Tanzanie",
+        "la RD Congo",
+        "le Rwanda"
+      ],
+      "r": 2,
+      "x": "Le Rwenzori s'élève à la frontière entre l'Ouganda et la RD Congo. Son point culminant, le pic Margherita du mont Stanley, atteint environ 5 109 m. Ses sommets portent des glaciers malgré leur proximité avec l'équateur.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La chaîne du Drakensberg, la plus haute d'Afrique australe, se trouve en Afrique du Sud et au :",
+      "o": [
+        "Botswana",
+        "Malawi",
+        "Lesotho",
+        "Mozambique"
+      ],
+      "r": 2,
+      "x": "Le Drakensberg s'étend dans l'est de l'Afrique du Sud et au Lesotho. Ses sommets dépassent 3 400 m. Son nom signifie « montagne du dragon » en afrikaans.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le fleuve Orange se jette dans :",
+      "o": [
+        "l'océan Indien",
+        "le lac Victoria",
+        "l'océan Atlantique",
+        "le canal du Mozambique"
+      ],
+      "r": 2,
+      "x": "Le fleuve Orange traverse l'Afrique du Sud d'est en ouest et se jette dans l'Atlantique. Il marque une partie de la frontière avec la Namibie. C'est le plus long fleuve d'Afrique du Sud.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le Limpopo se jette dans :",
+      "o": [
+        "l'océan Atlantique",
+        "le lac Malawi",
+        "l'océan Indien",
+        "le fleuve Zambèze"
+      ],
+      "r": 2,
+      "x": "Le Limpopo marque la frontière entre l'Afrique du Sud et le Botswana, puis le Zimbabwe, avant de traverser le Mozambique. Il se jette dans l'océan Indien. Il longe le nord du parc national Kruger.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le barrage de Cahora Bassa, l'un des plus grands d'Afrique, est construit sur le Zambèze au :",
+      "o": [
+        "Mozambique",
+        "Malawi",
+        "Zimbabwe",
+        "Botswana"
+      ],
+      "r": 0,
+      "x": "Le barrage de Cahora Bassa se trouve au Mozambique, sur le cours inférieur du Zambèze. Son électricité est en partie exportée vers l'Afrique du Sud. Il a été achevé en 1974, à la fin de la période coloniale portugaise.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La capitale de l'Angola est :",
+      "o": [
+        "Huambo",
+        "Lobito",
+        "Luanda",
+        "Benguela"
+      ],
+      "r": 2,
+      "x": "Luanda, sur la côte atlantique, est la capitale et le principal port de l'Angola. La ville s'est fortement développée grâce aux revenus du pétrole. Elle a été fondée par les Portugais au XVIe siècle.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Les barrages d'Inga, sur le fleuve Congo, se trouvent :",
+      "o": [
+        "en République du Congo",
+        "en Angola",
+        "en RD Congo",
+        "au Gabon"
+      ],
+      "r": 2,
+      "x": "Les barrages d'Inga se situent dans l'ouest de la RD Congo, sur les rapides du bas Congo. Le site offre l'un des plus grands potentiels hydroélectriques du monde. Le projet Grand Inga, encore à l'étude, vise à exploiter une part beaucoup plus importante de ce potentiel.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le fleuve Congo a la particularité de traverser l'équateur :",
+      "o": [
+        "une seule fois",
+        "deux fois",
+        "trois fois",
+        "jamais"
+      ],
+      "r": 1,
+      "x": "Le Congo décrit une grande courbe qui lui fait franchir deux fois l'équateur. Son bassin reçoit ainsi des pluies dans les deux hémisphères, ce qui régularise son débit. Il est aussi considéré comme le fleuve le plus profond du monde, avec plus de 200 m par endroits.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le Rwanda est surnommé le pays :",
+      "o": [
+        "des mille collines",
+        "des grands lacs salés",
+        "du soleil levant",
+        "des hommes intègres"
+      ],
+      "r": 0,
+      "x": "Le Rwanda doit son surnom de « pays des mille collines » à son relief très vallonné. Le « pays des hommes intègres » est le Burkina Faso. Le relief du Rwanda tient à sa position sur les hautes terres de la région des Grands Lacs.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le Nil Blanc sort du lac Victoria près de la ville ougandaise de :",
+      "o": [
+        "Kampala",
+        "Entebbe",
+        "Jinja",
+        "Gulu"
+      ],
+      "r": 2,
+      "x": "À Jinja, en Ouganda, le Nil commence son parcours vers le nord en quittant le lac Victoria. La ville est ainsi connue comme l'un des sites emblématiques de la source du Nil. La capitale du pays est Kampala.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "N'Djamena, capitale du Tchad, s'appelait autrefois :",
+      "o": [
+        "Fort-Lamy",
+        "Fort-Archambault",
+        "Léopoldville",
+        "Port-Gentil"
+      ],
+      "r": 0,
+      "x": "La capitale tchadienne portait le nom de Fort-Lamy, en souvenir d'un officier français. Léopoldville est l'ancien nom de Kinshasa. La ville a pris le nom de N'Djamena en 1973.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "N'Djamena est située au confluent du Chari et :",
+      "o": [
+        "du Logone",
+        "de la Bénoué",
+        "du Niger",
+        "de l'Oubangui"
+      ],
+      "r": 0,
+      "x": "N'Djamena se trouve au confluent du Chari et du Logone, face à la ville camerounaise de Kousséri. Les deux cours d'eau alimentent ensuite le lac Tchad. Cette position en fait un carrefour entre le Tchad et le Cameroun.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La capitale du Maroc est :",
+      "o": [
+        "Casablanca",
+        "Marrakech",
+        "Fès",
+        "Rabat"
+      ],
+      "r": 3,
+      "x": "Rabat est la capitale politique et administrative du Maroc. Casablanca en est la plus grande ville et le principal port. Rabat est située sur la côte atlantique, à l'embouchure du Bouregreg.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Parmi ces pays, celui qui est traversé par l'équateur est :",
+      "o": [
+        "la Tanzanie",
+        "l'Éthiopie",
+        "le Kenya",
+        "le Cameroun"
+      ],
+      "r": 2,
+      "x": "L'équateur traverse notamment le Gabon, le Congo, la RD Congo, l'Ouganda, le Kenya et la Somalie. Le Cameroun et l'Éthiopie sont entièrement au nord de l'équateur. Le Kenya est donc partagé entre l'hémisphère Nord et l'hémisphère Sud.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le tropique du Capricorne traverse, en Afrique :",
+      "o": [
+        "Madagascar",
+        "le Kenya",
+        "le Nigeria",
+        "l'Égypte"
+      ],
+      "r": 0,
+      "x": "Le tropique du Capricorne traverse le sud de Madagascar, ainsi que la Namibie, le Botswana, l'Afrique du Sud et le Mozambique. Le tropique du Cancer passe, lui, par l'Égypte. Au sud du tropique du Capricorne commence la zone tempérée de l'hémisphère Sud.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La Corne de l'Afrique désigne la région qui comprend notamment la Somalie, Djibouti et :",
+      "o": [
+        "l'Éthiopie",
+        "le Yémen",
+        "le Mozambique",
+        "Madagascar"
+      ],
+      "r": 0,
+      "x": "La Corne de l'Afrique est la péninsule de l'est du continent, qui s'avance dans l'océan Indien. Elle comprend la Somalie, Djibouti, l'Éthiopie et l'Érythrée. Son nom vient de sa forme en pointe, qui rappelle une corne.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La vallée du Grand Rift, en Afrique de l'Est, est :",
+      "o": [
+        "un ancien lit du Nil asséché",
+        "une fosse d'effondrement tectonique",
+        "un canal creusé par l'homme",
+        "une vallée creusée par les glaciers"
+      ],
+      "r": 1,
+      "x": "Le Grand Rift est une fracture de l'écorce terrestre où le sol s'est effondré entre des failles. Il est jalonné de volcans et de lacs profonds. L'écartement des plaques pourrait, dans des millions d'années, séparer l'Afrique de l'Est du reste du continent.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Les lémuriens sont des animaux endémiques de :",
+      "o": [
+        "Madagascar",
+        "l'Afrique du Sud",
+        "l'Éthiopie",
+        "le Maroc"
+      ],
+      "r": 0,
+      "x": "Les lémuriens sont des primates naturellement endémiques de Madagascar. Certaines populations vivent également dans les îles de l'archipel des Comores, notamment à Mayotte, où elles auraient été introduites par l'homme. L'isolement géographique de Madagascar explique la grande diversité de ses espèces endémiques.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La capitale de la Namibie est :",
+      "o": [
+        "Windhoek",
+        "Walvis Bay",
+        "Gaborone",
+        "Lusaka"
+      ],
+      "r": 0,
+      "x": "Windhoek, sur les hauts plateaux du centre, est la capitale de la Namibie. Gaborone est celle du Botswana et Lusaka celle de la Zambie. À Windhoek, les Allemands ont établi en 1890 leur quartier général, l'Alte Feste.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Avant de devenir la République démocratique du Congo en 1997, le pays s'appelait :",
+      "o": [
+        "Congo belge",
+        "Moyen-Congo",
+        "Zaïre",
+        "Oubangui-Chari"
+      ],
+      "r": 2,
+      "x": "Le pays a porté le nom de Zaïre de 1971 à 1997. L'Oubangui-Chari est l'ancien nom de la Centrafrique. C'est le président Mobutu Sese Seko qui avait donné au pays le nom de Zaïre.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Harare, capitale du Zimbabwe, s'appelait autrefois :",
+      "o": [
+        "Salisbury",
+        "Élisabethville",
+        "Lourenço Marques",
+        "Stanleyville"
+      ],
+      "r": 0,
+      "x": "Harare a pris son nom actuel en 1982, après l'indépendance du Zimbabwe. Lourenço Marques est l'ancien nom de Maputo, au Mozambique. Le nom de Salisbury rendait hommage au Premier ministre britannique Lord Salisbury.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le grand port égyptien situé à l'ouest du delta du Nil, fondé dans l'Antiquité, est :",
+      "o": [
+        "Port-Saïd",
+        "Suez",
+        "Alexandrie",
+        "Assouan"
+      ],
+      "r": 2,
+      "x": "Alexandrie, fondée en 331 avant notre ère par Alexandre le Grand, est le principal port de l'Égypte. Port-Saïd se trouve à l'entrée nord du canal de Suez. Le phare d'Alexandrie, l'une des Sept Merveilles du monde antique, a aujourd'hui disparu.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La capitale du Kenya est :",
+      "o": [
+        "Mombasa",
+        "Nairobi",
+        "Kisumu",
+        "Nakuru"
+      ],
+      "r": 1,
+      "x": "Nairobi, sur les hauts plateaux, est la capitale et la plus grande ville du Kenya. Mombasa, sur l'océan Indien, en est le principal port. Le nom de Nairobi vient d'une expression massaï signifiant « eau fraîche ».",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Avant son indépendance en 1980, le Zimbabwe s'appelait :",
+      "o": [
+        "la Rhodésie",
+        "le Nyassaland",
+        "le Bechuanaland",
+        "le Tanganyika"
+      ],
+      "r": 0,
+      "x": "Le Zimbabwe portait le nom de Rhodésie, puis de Rhodésie du Sud dans les appellations historiques antérieures. En 1979, le pays a brièvement porté le nom de Zimbabwe-Rhodésie. Le nom de Rhodésie venait de Cecil Rhodes, homme d'affaires et homme politique britannique. Le Nyassaland est l'ancien nom du Malawi et le Bechuanaland celui du Botswana.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La couche de l'atmosphère la plus proche du sol, où se produisent la plupart des phénomènes météorologiques, est :",
+      "o": [
+        "la stratosphère",
+        "la thermosphère",
+        "la mésosphère",
+        "la troposphère"
+      ],
+      "r": 3,
+      "x": "La troposphère s'étend du sol jusqu'à une dizaine de kilomètres d'altitude et contient l'essentiel de la vapeur d'eau. Nuages, pluies et orages s'y forment. La température y baisse avec l'altitude, d'environ 6,5 °C par kilomètre.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La couche d'ozone, qui filtre une grande partie des rayons ultraviolets du Soleil, se situe dans :",
+      "o": [
+        "la troposphère",
+        "l'exosphère",
+        "la mésosphère",
+        "la stratosphère"
+      ],
+      "r": 3,
+      "x": "La couche d'ozone se trouve dans la stratosphère, au-dessus de la troposphère. Elle protège les êtres vivants d'une grande partie des rayons ultraviolets. La stratosphère s'étend environ de 12 à 50 km d'altitude.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le protocole visant à protéger la couche d'ozone a été signé en 1987 à :",
+      "o": [
+        "Vienne",
+        "Stockholm",
+        "Genève",
+        "Montréal"
+      ],
+      "r": 3,
+      "x": "Le protocole de Montréal, signé le 16 septembre 1987, organise l'abandon progressif des substances qui détruisent la couche d'ozone. Il est entré en vigueur le 1er janvier 1989. Il est souvent cité comme l'accord environnemental international le plus réussi.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le principal gaz à effet de serre émis par les activités humaines est :",
+      "o": [
+        "le méthane",
+        "l'ozone",
+        "le dioxyde de carbone",
+        "le protoxyde d'azote"
+      ],
+      "r": 2,
+      "x": "Le dioxyde de carbone, libéré surtout par la combustion du charbon, du pétrole et du gaz, est le principal gaz à effet de serre d'origine humaine. Le méthane et le protoxyde d'azote contribuent aussi au réchauffement, mais sont émis en moindre quantité. Sa concentration dans l'atmosphère a fortement augmenté depuis la révolution industrielle.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le gaz le plus abondant dans l'air que nous respirons est :",
+      "o": [
+        "l'oxygène",
+        "l'hydrogène",
+        "le dioxyde de carbone",
+        "l'azote"
+      ],
+      "r": 3,
+      "x": "L'azote représente environ 78 % de l'air sec, contre environ 21 % pour l'oxygène. Le dioxyde de carbone n'en constitue qu'une infime part. L'argon et d'autres gaz complètent la composition de l'air.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le courant marin froid qui longe les côtes de la Mauritanie et du Sénégal est le courant :",
+      "o": [
+        "du Gulf Stream",
+        "du Kuroshio",
+        "de Benguela",
+        "des Canaries"
+      ],
+      "r": 3,
+      "x": "Le courant froid des Canaries longe les côtes du nord-ouest de l'Afrique et favorise des eaux très poissonneuses. Le courant de Benguela joue un rôle comparable le long de la Namibie. Le courant des Canaries explique en partie l'importance de la pêche en Mauritanie et au Sénégal.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le courant marin chaud qui adoucit le climat de l'Europe de l'Ouest est :",
+      "o": [
+        "le Gulf Stream",
+        "le courant des Canaries",
+        "le courant de Humboldt",
+        "le courant du Labrador"
+      ],
+      "r": 0,
+      "x": "Prenant sa source dans le golfe du Mexique et se prolongeant par la dérive nord-atlantique, le Gulf Stream est un puissant courant océanique chaud qui réchauffe l'atmosphère de l'Europe occidentale et adoucit ses hivers. Les trois autres propositions (Canaries, Humboldt et Labrador) désignent des courants marins froids.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le savant allemand qui a proposé au début du XXe siècle la théorie de la dérive des continents est :",
+      "o": [
+        "Charles Darwin",
+        "Albert Einstein",
+        "Isaac Newton",
+        "Alfred Wegener"
+      ],
+      "r": 3,
+      "x": "Selon Alfred Wegener, les continents se déplacent lentement à la surface du globe. Sa théorie a été confirmée plus tard par la tectonique des plaques. Il s'appuyait notamment sur la ressemblance entre les côtes de l'Afrique et de l'Amérique du Sud.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le supercontinent unique qui aurait réuni toutes les terres émergées il y a environ 250 millions d'années s'appelle :",
+      "o": [
+        "le Gondwana",
+        "la Rodinia",
+        "la Laurasie",
+        "la Pangée"
+      ],
+      "r": 3,
+      "x": "La Pangée a réuni l'ensemble des terres émergées avant de se fragmenter. Elle s'est d'abord divisée en Laurasie au nord et Gondwana au sud. Son nom signifie « toutes les terres » en grec.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La magnitude d'un séisme est le plus souvent exprimée sur l'échelle de :",
+      "o": [
+        "Beaufort",
+        "Mercalli",
+        "Celsius",
+        "Richter"
+      ],
+      "r": 3,
+      "x": "L'échelle de Richter (aujourd'hui prolongée et affinée par l'échelle de magnitude de moment Mw) mesure la magnitude d'un séisme, c'est-à-dire l'énergie libérée au foyer. Elle se distingue de l'échelle de Mercalli (qui évalue l'intensité des dégâts en surface) et de l'échelle de Beaufort (qui mesure la vitesse du vent).",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le point de la surface terrestre situé à la verticale du foyer d'un séisme s'appelle :",
+      "o": [
+        "l'hypocentre",
+        "la faille",
+        "le cratère",
+        "l'épicentre"
+      ],
+      "r": 3,
+      "x": "L'épicentre est le point de la surface situé juste au-dessus du foyer, ou hypocentre. C'est généralement là que les secousses sont les plus fortes. Le foyer, lui, se situe en profondeur, à l'endroit où la roche se rompt.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Une série de vagues géantes provoquée par un séisme ou une éruption sous-marine s'appelle :",
+      "o": [
+        "une marée",
+        "un tsunami",
+        "un cyclone",
+        "une houle"
+      ],
+      "r": 1,
+      "x": "Le tsunami est une onde marine déclenchée par un brusque mouvement du fond océanique. Il peut dévaster les côtes à des milliers de kilomètres de son origine. Ce mot japonais signifie « vague de port ».",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La catastrophe naturelle à l'origine de l'accident nucléaire de Fukushima, au Japon, a eu lieu le :",
+      "o": [
+        "26 décembre 2004",
+        "12 janvier 2010",
+        "11 mars 2011",
+        "6 février 2023"
+      ],
+      "r": 2,
+      "x": "Le 11 mars 2011, un séisme d'une magnitude proche de 9 a frappé le nord-est du Japon, suivi d'un tsunami géant. Le 26 décembre 2004 correspond au tsunami de l'océan Indien. Le tsunami du 11 mars 2011 a endommagé la centrale de Fukushima Daiichi, provoquant des rejets radioactifs.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La roche en fusion qui sort d'un volcan lors d'une éruption s'appelle :",
+      "o": [
+        "la lave",
+        "la cendre",
+        "la ponce",
+        "les lapilli"
+      ],
+      "r": 0,
+      "x": "La lave est le magma qui s'écoule à la surface lors d'une éruption. Cendres, ponces et lapilli sont, eux, des fragments projetés dans l'air. Les volcans à lave fluide sont dits effusifs, ceux qui projettent des cendres sont dits explosifs.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La température la plus basse jamais mesurée sur Terre, environ –89,2 °C, a été relevée en 1983 :",
+      "o": [
+        "en Sibérie",
+        "au Groenland",
+        "en Antarctique",
+        "en Alaska"
+      ],
+      "r": 2,
+      "x": "Ce record a été enregistré le 21 juillet 1983 à la station russe de Vostok, en Antarctique. L'Antarctique est le continent le plus froid du globe. Des satellites ont depuis relevé des températures de surface encore plus basses, mais le record mesuré sous abri reste celui de 1983.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le mont Fuji, point culminant du Japon, culmine à environ :",
+      "o": [
+        "2 776 m",
+        "3 776 m",
+        "4 776 m",
+        "5 776 m"
+      ],
+      "r": 1,
+      "x": "Le mont Fuji, volcan emblématique du Japon, culmine à 3 776 m. Il a été inscrit au patrimoine mondial en 2013 et sa dernière éruption remonte à 1707. Il se trouve à une centaine de kilomètres au sud-ouest de Tokyo.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La plus grande île de la mer Méditerranée est :",
+      "o": [
+        "la Sardaigne",
+        "la Corse",
+        "la Sicile",
+        "Chypre"
+      ],
+      "r": 2,
+      "x": "La Sicile, rattachée à l'Italie, est la plus grande île de la Méditerranée. La Sardaigne arrive au deuxième rang. La Sicile est séparée de la péninsule italienne par le détroit de Messine.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La plus grande île des Caraïbes est :",
+      "o": [
+        "la Jamaïque",
+        "Haïti",
+        "Porto Rico",
+        "Cuba"
+      ],
+      "r": 3,
+      "x": "Cuba est la plus grande île des Antilles et de la mer des Caraïbes. L'île d'Hispaniola est partagée entre Haïti et la République dominicaine. La capitale de Cuba est La Havane.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La ville de La Paz, siège du gouvernement de la Bolivie, est célèbre pour être :",
+      "o": [
+        "la capitale la plus haute du monde",
+        "la capitale la plus peuplée d'Amérique du Sud",
+        "la plus ancienne capitale d'Amérique",
+        "la capitale la plus froide du monde"
+      ],
+      "r": 0,
+      "x": "Perchée à plus de 3 600 m d'altitude, La Paz est la capitale gouvernementale la plus haute du monde. Sucre est la capitale constitutionnelle de la Bolivie. À La Paz, le manque d'oxygène provoque souvent le mal des montagnes chez les visiteurs.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le Rhin se jette dans :",
+      "o": [
+        "la mer Méditerranée",
+        "la mer Noire",
+        "la mer du Nord",
+        "la mer Baltique"
+      ],
+      "r": 2,
+      "x": "Le Rhin prend sa source dans les Alpes suisses et se jette dans la mer du Nord aux Pays-Bas. Rotterdam, à son embouchure, est le premier port d'Europe. Il arrose notamment Bâle, Strasbourg et Cologne.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La Mésopotamie, berceau de grandes civilisations, est la région située entre :",
+      "o": [
+        "le Nil et le Jourdain",
+        "l'Indus et le Gange",
+        "le Tigre et l'Euphrate",
+        "le Danube et le Rhin"
+      ],
+      "r": 2,
+      "x": "La Mésopotamie, « pays entre les fleuves », correspond pour l'essentiel à l'Irak actuel. Le Tigre et l'Euphrate s'y rejoignent avant de se jeter dans le golfe Persique. Les Sumériens y ont inventé l'une des premières écritures, le cunéiforme.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le fleuve Jaune (Huang He) doit son nom :",
+      "o": [
+        "aux lœss qu'il transporte",
+        "aux algues de ses eaux",
+        "aux sables du désert de Gobi",
+        "à la couleur impériale"
+      ],
+      "r": 0,
+      "x": "Le fleuve Jaune charrie d'énormes quantités de lœss, un limon jaunâtre arraché aux plateaux du nord de la Chine. Ses crues ont longtemps été très meurtrières. C'est le deuxième plus long fleuve de Chine.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Les Pays-Bas ont gagné de nombreuses terres sur la mer grâce aux :",
+      "o": [
+        "fjords",
+        "terrasses",
+        "deltas fossiles",
+        "polders"
+      ],
+      "r": 3,
+      "x": "Les polders sont des terres gagnées sur la mer ou sur des marais, protégées par des digues et asséchées par pompage. Une grande partie des Pays-Bas se trouve sous le niveau de la mer. Le mot polder vient du néerlandais.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Les côtes de la Norvège sont découpées par de profondes vallées glaciaires envahies par la mer, appelées :",
+      "o": [
+        "fjords",
+        "rias",
+        "polders",
+        "lagunes"
+      ],
+      "r": 0,
+      "x": "Les fjords sont d'anciennes vallées glaciaires envahies par la mer après la fonte des glaciers. Les rias sont, elles, des vallées fluviales submergées. Le Sognefjord est le plus long et le plus profond fjord de Norvège.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La Finlande est surnommée le pays des :",
+      "o": [
+        "mille lacs",
+        "mille glaciers",
+        "mille îles volcaniques",
+        "mille fjords"
+      ],
+      "r": 0,
+      "x": "La Finlande compte près de 190 000 lacs, d'où son surnom de « pays des mille lacs ». Ils sont hérités de l'action des anciens glaciers. Les lacs et les forêts couvrent ensemble l'essentiel du territoire.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La vaste plaine herbeuse d'Argentine, consacrée à l'élevage et aux céréales, s'appelle :",
+      "o": [
+        "la Pampa",
+        "le Sertão",
+        "les Llanos",
+        "la Prairie"
+      ],
+      "r": 0,
+      "x": "La Pampa est une immense plaine fertile d'Argentine, vouée à l'élevage bovin et à la culture des céréales. Les Llanos sont des plaines herbeuses du Venezuela et de la Colombie. Les gauchos, gardiens de troupeaux à cheval, sont le symbole de la Pampa.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La Silicon Valley, haut lieu des industries de l'informatique, se trouve :",
+      "o": [
+        "au Texas",
+        "en Floride",
+        "en Californie",
+        "à New York"
+      ],
+      "r": 2,
+      "x": "La Silicon Valley s'étend au sud de la baie de San Francisco, en Californie. Elle concentre de grandes entreprises du numérique. Son nom vient du silicium, matériau des puces électroniques.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le vaste ensemble urbain du nord-est des États-Unis est souvent appelé :",
+      "o": [
+        "Bos-Wash",
+        "Chi-Pitts",
+        "San-San",
+        "Tokaido"
+      ],
+      "r": 0,
+      "x": "Bos-Wash désigne la chaîne urbaine qui relie Boston, New York, Philadelphie, Baltimore et Washington. C'est l'une des plus grandes concentrations urbaines du monde. Cet ensemble s'étend sur environ 700 km le long de la côte atlantique.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Les États-Unis sont une fédération composée de :",
+      "o": [
+        "13 États",
+        "48 États",
+        "50 États",
+        "52 États"
+      ],
+      "r": 2,
+      "x": "Les États-Unis comptent 50 États, dont l'Alaska et Hawaï, ainsi que le district fédéral de Columbia. Treize colonies avaient fondé le pays en 1776. Hawaï, devenu le 50e État en 1959, est le dernier à avoir rejoint l'Union.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le Canada est organisé en dix provinces et :",
+      "o": [
+        "deux territoires",
+        "trois territoires",
+        "cinq territoires",
+        "sept territoires"
+      ],
+      "r": 1,
+      "x": "Le Canada compte dix provinces et trois territoires, situés dans le Grand Nord. L'Ontario et le Québec sont les provinces les plus peuplées. Le Nunavut, créé en 1999, est le plus récent des territoires.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La capitale de la Nouvelle-Zélande est :",
+      "o": [
+        "Auckland",
+        "Sydney",
+        "Christchurch",
+        "Wellington"
+      ],
+      "r": 3,
+      "x": "Wellington, au sud de l'île du Nord, est la capitale de la Nouvelle-Zélande. Auckland en est la plus grande ville. C'est la capitale d'État la plus australe du monde.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Hong Kong a été rétrocédé par le Royaume-Uni à la Chine le :",
+      "o": [
+        "1er juillet 1997",
+        "20 décembre 1999",
+        "1er octobre 1949",
+        "11 décembre 2001"
+      ],
+      "r": 0,
+      "x": "Hong Kong est revenu à la Chine le 1er juillet 1997, selon le principe « un pays, deux systèmes ». Macao, colonie portugaise, a été rétrocédé le 20 décembre 1999. Hong Kong est devenu une région administrative spéciale de la Chine.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La Grande Muraille de Chine a été inscrite au patrimoine mondial de l'UNESCO en :",
+      "o": [
+        "1978",
+        "1987",
+        "1997",
+        "2007"
+      ],
+      "r": 1,
+      "x": "La Grande Muraille a été inscrite au patrimoine mondial en 1987. Elle a été construite et reconstruite sur plusieurs siècles pour protéger la Chine des invasions venues du nord. Sa longueur totale, avec toutes ses ramifications, dépasse 20 000 km.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La chaîne de l'Himalaya s'est formée par la collision entre la plaque indienne et la plaque :",
+      "o": [
+        "eurasienne",
+        "africaine",
+        "pacifique",
+        "antarctique"
+      ],
+      "r": 0,
+      "x": "La remontée de la plaque indienne vers le nord et sa collision avec la plaque eurasienne ont soulevé l'Himalaya. Cette collision se poursuit encore aujourd'hui. La plaque indienne avance encore de quelques centimètres par an.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La capitale économique et plus grande ville portuaire de l'Inde est :",
+      "o": [
+        "New Delhi",
+        "Calcutta",
+        "Mumbai",
+        "Bangalore"
+      ],
+      "r": 2,
+      "x": "Mumbai, anciennement Bombay, est le principal centre financier et portuaire de l'Inde. New Delhi en est la capitale politique. Mumbai est aussi le centre du cinéma en langue hindi, surnommé Bollywood.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le pays dont le territoire correspond en grande partie au delta commun du Gange et du Brahmapoutre est :",
+      "o": [
+        "le Pakistan",
+        "le Sri Lanka",
+        "le Népal",
+        "le Bangladesh"
+      ],
+      "r": 3,
+      "x": "Le Bangladesh occupe une grande partie du delta du Gange et du Brahmapoutre. Ses terres basses sont très exposées aux inondations et aux cyclones. C'est l'un des pays les plus densément peuplés du monde.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "L'Indus, grand fleuve d'Asie du Sud, traverse principalement :",
+      "o": [
+        "l'Inde",
+        "le Pakistan",
+        "l'Iran",
+        "le Bangladesh"
+      ],
+      "r": 1,
+      "x": "L'Indus traverse principalement le Pakistan avant de se jeter dans la mer d'Arabie. La civilisation de l'Indus s'est développée sur ses rives dans l'Antiquité. Il prend sa source sur le plateau du Tibet.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le Rub al-Khali, plus grand désert de sable continu du monde, se trouve :",
+      "o": [
+        "dans le nord de l'Afrique",
+        "dans la péninsule Arabique",
+        "au cœur de l'Asie centrale",
+        "dans l'ouest de l'Australie"
+      ],
+      "r": 1,
+      "x": "Le Rub al-Khali, ou « quart vide », couvre le sud de la péninsule Arabique. Il s'étend surtout sur l'Arabie saoudite. Son nom évoque l'immensité presque inhabitée de ce désert.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La région industrielle allemande, longtemps fondée sur le charbon et la sidérurgie, s'appelle :",
+      "o": [
+        "la Bavière",
+        "la Ruhr",
+        "la Saxe",
+        "la Rhénanie du Sud"
+      ],
+      "r": 1,
+      "x": "La Ruhr, à l'ouest de l'Allemagne, a été le cœur industriel du pays grâce à son charbon. Elle s'est depuis reconvertie vers les services et les technologies. Son nom vient d'un affluent du Rhin qui la traverse.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La ville américaine longtemps surnommée la capitale mondiale de l'automobile est :",
+      "o": [
+        "Chicago",
+        "Detroit",
+        "Houston",
+        "Atlanta"
+      ],
+      "r": 1,
+      "x": "Detroit, dans le Michigan, a accueilli les grands constructeurs automobiles américains. Elle a ensuite connu un fort déclin industriel. Le nom du label musical Motown, contraction de « Motor Town », fait référence à cette spécialisation.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "La ville de Venise est construite sur :",
+      "o": [
+        "une lagune",
+        "un fjord",
+        "un delta glaciaire",
+        "un lac de cratère"
+      ],
+      "r": 0,
+      "x": "Venise s'est développée sur des îlots d'une lagune de la mer Adriatique. Elle est menacée par les hautes eaux et la montée du niveau de la mer. La ville compte plus d'une centaine d'îlots reliés par environ 400 ponts.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le pôle Nord se situe :",
+      "o": [
+        "sur un continent couvert de glace",
+        "sur un océan couvert de banquise",
+        "au sommet d'une haute montagne",
+        "sur une grande île volcanique"
+      ],
+      "r": 1,
+      "x": "Le pôle Nord se trouve au milieu de l'océan Arctique, recouvert d'une banquise flottante. Le pôle Sud se situe, lui, sur le continent antarctique. Il n'existe donc pas de terre ferme sous la glace du pôle Nord.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le lac Maracaibo, grande région pétrolière, se trouve :",
+      "o": [
+        "au Venezuela",
+        "au Mexique",
+        "au Brésil",
+        "en Colombie"
+      ],
+      "r": 0,
+      "x": "Le lac Maracaibo, au nord-ouest du Venezuela, est l'une des plus anciennes régions pétrolières d'Amérique du Sud. Il communique avec la mer des Caraïbes. C'est l'un des plus grands lacs d'Amérique du Sud.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Les Appalaches sont une chaîne de montagnes ancienne située :",
+      "o": [
+        "dans l'ouest de l'Amérique du Nord",
+        "dans l'est de l'Amérique du Nord",
+        "en Amérique du Sud",
+        "en Europe du Nord"
+      ],
+      "r": 1,
+      "x": "Les Appalaches longent l'est des États-Unis et du Canada. Les Rocheuses, plus hautes et plus jeunes, se trouvent dans l'ouest. L'érosion très ancienne des Appalaches explique leurs sommets arrondis et peu élevés.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "L'échelle utilisée pour estimer la force du vent à partir de ses effets observables est l'échelle de :",
+      "o": [
+        "Mohs",
+        "Beaufort",
+        "Mercalli",
+        "Kelvin"
+      ],
+      "r": 1,
+      "x": "L'échelle de Beaufort classe la force du vent de 0 (calme) à 12 (ouragan). Elle a d'abord été conçue pour les marins. Elle a été créée au début du XIXe siècle par l'amiral britannique Francis Beaufort.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Les violentes tempêtes tropicales appelées ouragans dans l'Atlantique sont appelées dans l'ouest du Pacifique :",
+      "o": [
+        "tornades",
+        "typhons",
+        "moussons",
+        "blizzards"
+      ],
+      "r": 1,
+      "x": "Le même phénomène est appelé ouragan dans l'Atlantique, typhon dans l'ouest du Pacifique et cyclone dans l'océan Indien. La tornade est un phénomène beaucoup plus petit. Tous ces noms désignent des cyclones tropicaux, qui se forment au-dessus des mers chaudes.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le mouvement périodique de montée et de baisse du niveau de la mer est principalement causé par :",
+      "o": [
+        "la force des vents d'ouest",
+        "l'attraction de la Lune et du Soleil",
+        "la dérive lente des continents",
+        "la fonte saisonnière des glaces"
+      ],
+      "r": 1,
+      "x": "Les marées résultent surtout de l'attraction exercée par la Lune et, dans une moindre mesure, par le Soleil. La mer monte et descend environ deux fois par jour. La Lune agit plus fortement car elle est beaucoup plus proche de la Terre.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le grand ensemble de petites îles du Pacifique dont le nom signifie « nombreuses îles » est :",
+      "o": [
+        "la Mélanésie",
+        "la Micronésie",
+        "la Polynésie",
+        "l'Indonésie"
+      ],
+      "r": 2,
+      "x": "La Polynésie, « nombreuses îles », couvre un immense triangle du Pacifique, de Hawaï à la Nouvelle-Zélande. La Micronésie signifie « petites îles ». Le mot vient du grec polus, « nombreux », et nêsos, « île ».",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le pays de l'Asie du Sud-Est qui compte le plus d'habitants est :",
+      "o": [
+        "le Vietnam",
+        "les Philippines",
+        "l'Indonésie",
+        "la Thaïlande"
+      ],
+      "r": 2,
+      "x": "L'Indonésie, avec plus de 280 millions d'habitants, est de loin le pays le plus peuplé d'Asie du Sud-Est. Elle figure parmi les quatre pays les plus peuplés du monde (derrière l'Inde, la Chine et les États-Unis). Java (qui abrite plus de 150 millions d'habitants, soit plus de la moitié de la population indonésienne) est l'île la plus peuplée du monde.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    },
+    {
+      "q": "Le pays le plus méridional d'Amérique centrale, qui la relie à l'Amérique du Sud, est :",
+      "o": [
+        "le Costa Rica",
+        "le Nicaragua",
+        "le Panama",
+        "le Honduras"
+      ],
+      "r": 2,
+      "x": "Le Panama, traversé par le célèbre canal, fait la jonction entre l'Amérique centrale et la Colombie. Il est bordé à la fois par la mer des Caraïbes et par l'océan Pacifique. Ce pays faisait partie de la Colombie jusqu'en 1903.",
+      "_batchId": "geographie/2026-11-19/SERIE3"
+    }
+  ],
+  "histoire": [
+    {
+      "q": "Selon la tradition orale, la princesse Yennenga était la fille du roi :",
+      "o": [
+        "Nedega",
+        "Rialé",
+        "Oubri",
+        "Zoungrana"
+      ],
+      "r": 0,
+      "x": "Selon la tradition, Yennenga est la fille de Nedega, roi régnant à Gambaga, dans le nord de l'actuel Ghana. Rialé est le chasseur d'éléphants qu'elle rencontra après sa fuite à cheval. Oubri et Zoungrana sont des descendants de leur fils Ouédraogo.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le nom « Ouédraogo », donné au fils de Yennenga, signifie en mooré :",
+      "o": [
+        "le guerrier",
+        "le cavalier",
+        "l'étalon",
+        "le chasseur"
+      ],
+      "r": 2,
+      "x": "Ouédraogo signifie « étalon » ou « cheval mâle », en hommage au cheval qui conduisit Yennenga jusqu'à Rialé. Ouédraogo est considéré comme le fondateur des dynasties des chefs moose. Son nom est aujourd'hui l'un des patronymes les plus répandus au Burkina Faso.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Selon la tradition, la ville bâtie par Ouédraogo et considérée comme le berceau des royaumes moose est :",
+      "o": [
+        "Ouahigouya",
+        "Fada N'Gourma",
+        "Tenkodogo",
+        "Ouagadougou"
+      ],
+      "r": 2,
+      "x": "La tradition attribue à Ouédraogo la fondation de Tenkodogo, considéré comme le premier royaume moaga. Ouagadougou est le royaume fondé par son petit-fils Oubri. Fada N'Gourma est rattaché à Diaba Lompo, fondateur du Gulmu.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Selon la tradition, le royaume gourmantché du Gulmu, centré sur Fada N'Gourma, fut fondé par :",
+      "o": [
+        "Diaba Lompo",
+        "Naba Oubri",
+        "Famaghan Ouattara",
+        "Naba Kango"
+      ],
+      "r": 0,
+      "x": "Diaba Lompo, fils aîné de Ouédraogo selon la tradition, est considéré comme le fondateur du Gulmu. Naba Kango est le grand souverain du Yatenga au XVIIIe siècle. Famaghan Ouattara est le fondateur du Gwiriko, autour de Bobo-Dioulasso.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Selon la tradition, le fondateur du royaume de Ouagadougou est :",
+      "o": [
+        "Naba Zombré",
+        "Naba Kougri",
+        "Naba Oubri",
+        "Naba Zoungrana"
+      ],
+      "r": 2,
+      "x": "La tradition fait de Naba Oubri, petit-fils de Ouédraogo, le fondateur du royaume de Ouagadougou. Naba Zoungrana, son père, régna sur Tenkodogo. Naba Kougri est le 36e Mogho Naba, intronisé en 1957.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le titre « Mogho Naba », porté par le roi de Ouagadougou, signifie :",
+      "o": [
+        "roi du monde",
+        "père du peuple",
+        "maître des armes",
+        "chef de la terre"
+      ],
+      "r": 0,
+      "x": "Le titre associe les mots naba (chef) et mogho (monde) et se traduit par « roi du monde » ou « chef du monde ». Le Mogho Naba réside à Ouagadougou. Il n'a pas d'autorité sur les autres royaumes moose comme Tenkodogo, Fada N'Gourma, Boussouma ou le Yatenga.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La cérémonie du « faux départ » du Mogho Naba se tient à Ouagadougou chaque :",
+      "o": [
+        "dimanche",
+        "mercredi",
+        "lundi",
+        "vendredi"
+      ],
+      "r": 3,
+      "x": "La cérémonie dite du faux départ du roi a lieu chaque vendredi au palais du Mogho Naba. Elle met en scène l'organisation complexe du pouvoir au sein de la cour. Le Mogho Naba incarne l'unité du royaume, mais une grande part du pouvoir est exercée par les ministres de sa cour.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Naba Kango, l'un des plus grands souverains du Yatenga, fonda la ville de Ouahigouya en :",
+      "o": [
+        "1754",
+        "1780",
+        "1787",
+        "1798"
+      ],
+      "r": 1,
+      "x": "Naba Kango fonda Ouahigouya en 1780 pour en faire la nouvelle capitale du Yatenga. En 1757, il avait reconquis son trône avec des troupes bambara équipées de fusils à silex. Il mourut en 1787 et son tombeau se trouve à Ouahigouya.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Naba Kango reconquit le trône du Yatenga grâce à des troupes armées de fusils venues de :",
+      "o": [
+        "Tombouctou",
+        "Ségou",
+        "Kong",
+        "Gambaga"
+      ],
+      "r": 1,
+      "x": "Exilé à Ségou, Naba Kango revint en 1757 avec des troupes bambara armées de fusils à silex. Ce sont les premières armes à feu signalées au Yatenga, et cet avantage lui permit de reprendre le pouvoir. Kong était, lui, le centre de la puissance dioula des Ouattara.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le royaume de Gwiriko fut fondé vers 1714 par :",
+      "o": [
+        "Sékou Ouattara",
+        "Famaghan Ouattara",
+        "Pintiéba Ouattara",
+        "Tiéba Traoré"
+      ],
+      "r": 1,
+      "x": "Famaghan Ouattara fonda le Gwiriko vers 1714, sur le modèle du royaume de Kong dont il était issu. Sékou Ouattara était le souverain de Kong. Tiéba Traoré régnait sur le Kénédougou, dont la capitale était Sikasso.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La princesse Guimbi Ouattara, célèbre pour sa diplomatie face à Samory Touré, est une figure historique de la ville de :",
+      "o": [
+        "Ouagadougou",
+        "Ouahigouya",
+        "Fada N'Gourma",
+        "Bobo-Dioulasso"
+      ],
+      "r": 3,
+      "x": "Guimbi Ouattara (vers 1836-1919) est une figure majeure de l'histoire de Bobo-Dioulasso. Selon la tradition, elle épargna la ville d'une attaque de Samory Touré par la négociation et les présents. Un mausolée, une maternité et un lycée professionnel y portent son nom.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Tiéfo Amoro, figure de la résistance dans l'ouest du Burkina Faso, régnait sur la localité de :",
+      "o": [
+        "Bobo-Dioulasso",
+        "Noumoudara",
+        "Orodara",
+        "Bama"
+      ],
+      "r": 1,
+      "x": "Tiéfo Amoro régnait sur Noumoudara, centre du peuple tiéfo situé à une trentaine de kilomètres de Bobo-Dioulasso. Le nom Noumoudara signifie « village des forgerons » en dioula. Bama et Péni furent le théâtre de batailles qu'il livra contre ses adversaires.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le chef tiéfo Amoro trouva la mort lors de la bataille qui l'opposa à Samory Touré en :",
+      "o": [
+        "1888",
+        "1893",
+        "1895",
+        "1897"
+      ],
+      "r": 3,
+      "x": "Tiéfo Amoro mourut en 1897 lors de la bataille de Noumoudara, qui opposa son armée aux troupes de Samory Touré. En janvier 1893, il avait conduit à Bama la victoire des troupes de la région de Bobo-Dioulasso contre le Kénédougou. Selon la tradition, trahi, il préféra se donner la mort plutôt que de se rendre.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "L'émirat peul du Liptako fut fondé vers 1810 par :",
+      "o": [
+        "Brahima Seydou",
+        "Saalu Hamma Seydou",
+        "Bokari Sori",
+        "Seeku Saalu"
+      ],
+      "r": 0,
+      "x": "Brahima Seydou fonda l'émirat du Liptako vers 1809-1810, dans le sillage de la guerre sainte d'Ousmane dan Fodio. Son successeur, Saalu Hamma Seydou, transféra la capitale à Dori. Bokari Sori régnait lorsque les Français occupèrent Dori en 1897.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La capitale de l'émirat du Liptako, transférée sous le deuxième émir, est la ville de :",
+      "o": [
+        "Sebba",
+        "Aribinda",
+        "Dori",
+        "Djibo"
+      ],
+      "r": 2,
+      "x": "Le deuxième émir, Saalu Hamma Seydou, transféra la capitale du Liptako à Dori. Sebba était la capitale du Yagha, un autre émirat peul. Aujourd'hui encore, l'émir du Liptako réside à Dori.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Les troupes françaises occupèrent la capitale de l'émirat du Liptako le :",
+      "o": [
+        "23 mai 1891",
+        "4 octobre 1895",
+        "30 avril 1897",
+        "29 septembre 1898"
+      ],
+      "r": 2,
+      "x": "Les Français occupèrent la capitale du Liptako le 30 avril 1897, sous le règne de l'émir Bokari Sori, sans le destituer. Le 23 mai 1891, l'explorateur Monteil y avait passé un traité. L'émirat fut officiellement dissous en 1963 par le président Maurice Yaméogo.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le premier Européen connu à avoir visité Ouagadougou, en 1886, est l'Allemand :",
+      "o": [
+        "Adolf Krause",
+        "Heinrich Barth",
+        "Oskar Lenz",
+        "Gustav Nachtigal"
+      ],
+      "r": 0,
+      "x": "Gottlob Adolf Krause atteignit Ouagadougou le 24 septembre 1886, devenant le premier Européen connu à visiter la ville. Le Français Louis-Gustave Binger y fut reçu deux ans plus tard, en 1888. Heinrich Barth et Gustav Nachtigal sont d'autres explorateurs allemands de l'Afrique au XIXe siècle.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "L'explorateur français reçu à Ouagadougou par le Mogho Naba en 1888 est :",
+      "o": [
+        "Parfait-Louis Monteil",
+        "Paul Voulet",
+        "Louis-Gustave Binger",
+        "François Crozat"
+      ],
+      "r": 2,
+      "x": "Le capitaine Louis-Gustave Binger fut reçu à Ouagadougou en 1888, au cours de son voyage du Niger au golfe de Guinée. Il en tira l'ouvrage « Du Niger au golfe de Guinée par le pays de Kong et le Mossi ». Monteil, Crozat et Voulet ne passèrent dans la région qu'à partir de 1890.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "En 1891, le Mogho Naba Wobgo refusa de recevoir à Ouagadougou l'explorateur français :",
+      "o": [
+        "Parfait-Louis Monteil",
+        "Louis-Gustave Binger",
+        "Georges Destenave",
+        "Henri Gouraud"
+      ],
+      "r": 0,
+      "x": "Parfait-Louis Monteil, venu en 1891 proposer un protectorat français, fut éconduit par le Mogho Naba Wobgo. Sa mission devait reconnaître la ligne Say-Barroua fixée par la déclaration franco-britannique du 5 août 1890. Il passa en revanche des traités à Bobo-Dioulasso et au Liptako.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le médecin explorateur qui rencontra le Mogho Naba à Ouagadougou en septembre 1890 est :",
+      "o": [
+        "Charles Ménard",
+        "Julien Chanoine",
+        "François Crozat",
+        "Paul Voulet"
+      ],
+      "r": 2,
+      "x": "Le docteur François Crozat atteignit Ouagadougou en 1890, au terme d'un périple parti de Sikasso. Il laissa un portrait peu flatteur du Mogho Naba Wobgo, qu'il décrivit comme timide et retiré dans son palais. Charles Ménard conduisit une autre mission dans la région en 1891-1892.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le Mogho Naba Wobgo était également connu sous le nom de :",
+      "o": [
+        "Naba Sanum",
+        "Naba Piiga",
+        "Kouka Koutou",
+        "Boukary Koutou"
+      ],
+      "r": 3,
+      "x": "Avant son intronisation, Wobgo portait le nom de Boukary Koutou. Il régna sur Ouagadougou à partir de 1890 environ et jusqu'à la conquête française. Kouka Koutou, son frère, fut installé par les Français sous le nom de Naba Sighiri.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "En 1894, le Mogho Naba Wobgo signa un traité d'amitié avec George Ekem Ferguson, représentant :",
+      "o": [
+        "des Britanniques",
+        "des Allemands",
+        "des Portugais",
+        "des Français"
+      ],
+      "r": 0,
+      "x": "George Ekem Ferguson, un Fanti de la Gold Coast, agissait pour le compte des Britanniques. Les Français s'empressèrent de récuser ce traité. Cette rivalité franco-britannique précipita la conquête militaire du royaume de Ouagadougou.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La colonne française qui s'empara de Ouagadougou était commandée par :",
+      "o": [
+        "Gouraud et Gaden",
+        "Destenave et Voulet",
+        "Monteil et Binger",
+        "Voulet et Chanoine"
+      ],
+      "r": 3,
+      "x": "La colonne dirigée par Paul Voulet et Julien Chanoine prit Ouagadougou et incendia la ville. Le Mogho Naba Wobgo parvint à s'enfuir. Les deux officiers conduisirent ensuite vers le lac Tchad la mission Voulet-Chanoine, tristement célèbre pour ses massacres.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La prise de Ouagadougou par les troupes françaises eut lieu en :",
+      "o": [
+        "1890",
+        "1892",
+        "1894",
+        "1896"
+      ],
+      "r": 3,
+      "x": "Ouagadougou tomba en septembre 1896 aux mains de la colonne Voulet-Chanoine, et la ville fut incendiée. Cette conquête marqua la fin de l'indépendance du royaume de Ouagadougou. Le traité de protectorat fut signé le 20 janvier 1897 avec le nouveau Mogho Naba.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le traité de protectorat entre la France et le royaume de Ouagadougou fut signé le :",
+      "o": [
+        "18 mai 1895",
+        "19 septembre 1896",
+        "20 janvier 1897",
+        "30 avril 1897"
+      ],
+      "r": 2,
+      "x": "Le traité de paix et de protectorat fut signé le 20 janvier 1897 entre Voulet et Kouka Koutou, devenu Mogho Naba sous le nom de Sighiri. Le 18 mai 1895, Destenave avait signé un traité similaire avec le Yatenga. Le 30 avril 1897, les Français occupèrent Dori, capitale du Liptako.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le Mogho Naba installé par les Français après la fuite de Wobgo est :",
+      "o": [
+        "Naba Sighiri",
+        "Naba Kougri",
+        "Naba Saga II",
+        "Naba Kom II"
+      ],
+      "r": 0,
+      "x": "Kouka Koutou, frère de Wobgo, régna sous le nom de Naba Sighiri de 1897 à sa mort en février 1905. Son fils Naba Kom II lui succéda le 27 février 1905. Naba Saga II régna de 1942 à 1957, puis Naba Kougri de 1957 à 1982.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Après la conquête de son royaume, le Mogho Naba Wobgo trouva refuge en :",
+      "o": [
+        "Soudan français",
+        "Côte d'Ivoire",
+        "Gold Coast",
+        "Togo"
+      ],
+      "r": 2,
+      "x": "Après la prise de Ouagadougou, Wobgo se réfugia en Gold Coast britannique, l'actuel Ghana. Il sollicita en vain l'aide des Britanniques pour reprendre son trône. Il mourut en 1904 sans avoir retrouvé son royaume.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le 18 mai 1895, le capitaine Destenave signa un traité de protectorat avec le royaume du :",
+      "o": [
+        "Liptako",
+        "Boussouma",
+        "Yatenga",
+        "Gulmu"
+      ],
+      "r": 2,
+      "x": "Le traité signé à Ouahigouya le 18 mai 1895 plaça le Yatenga sous protectorat français. Destenave signa la même année un traité avec le Liptako. Le royaume de Ouagadougou ne fut soumis qu'après la conquête militaire de 1896.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le chef de guerre zarma contraint par la colonne française de signer un traité de protectorat à Sati est :",
+      "o": [
+        "Pintiéba Ouattara",
+        "Alpha Hamaria",
+        "Babemba Traoré",
+        "Sarankéni Mory"
+      ],
+      "r": 1,
+      "x": "Le chef de guerre zarma Alpha Hamaria signa à Sati, en septembre 1896, un traité de protectorat imposé par la colonne Voulet-Chanoine. Ce traité ouvrit la voie à la soumission du Gourounsi. Babemba Traoré régnait sur le Kénédougou et Sarankéni Mory était un fils de Samory Touré.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La déclaration franco-britannique du 5 août 1890 fixa une ligne de partage des zones d'influence appelée ligne :",
+      "o": [
+        "Dakar-Niger",
+        "Ségou-Tombouctou",
+        "Kong-Bondoukou",
+        "Say-Barroua"
+      ],
+      "r": 3,
+      "x": "La déclaration du 5 août 1890 fixa la ligne Say-Barroua, entre le fleuve Niger et le lac Tchad, pour délimiter les zones d'influence française et britannique. La mission Monteil fut chargée de la reconnaître. Ce partage annonçait la course entre puissances européennes pour le contrôle des pays voltaïques.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le gouvernement général de l'Afrique occidentale française (AOF) fut créé par un décret du :",
+      "o": [
+        "5 août 1890",
+        "20 mars 1891",
+        "18 mai 1895",
+        "16 juin 1895"
+      ],
+      "r": 3,
+      "x": "Le décret du 16 juin 1895 créa le gouvernement général de l'AOF, réunissant d'abord le Sénégal, le Soudan français, la Guinée et la Côte d'Ivoire. Il fut réorganisé par les décrets du 17 octobre 1899 et du 18 octobre 1904. Le 18 mai 1895 correspond au traité de protectorat du Yatenga.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "En 1897, les troupes de Samory Touré dans la région de Bouna étaient commandées par son fils :",
+      "o": [
+        "Sarankéni Mory",
+        "Karamoko Ouattara",
+        "Kémé Bréma",
+        "Babemba Traoré"
+      ],
+      "r": 0,
+      "x": "Sarankéni Mory, fils de Samory, commandait les troupes samoriennes dans la région de Bouna. Le 20 août 1897, la colonne du capitaine Braulot fut anéantie près de Bouna, ce qui relança la guerre entre Samory et les Français. Babemba Traoré régnait alors sur le Kénédougou.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Samory Touré fut capturé par les Français le 29 septembre 1898 à :",
+      "o": [
+        "Dabakala",
+        "Séguéla",
+        "Sikasso",
+        "Guélémou"
+      ],
+      "r": 3,
+      "x": "Samory Touré fut surpris et capturé sans combat à Guélémou, dans l'actuelle Côte d'Ivoire. Il fut déporté au Gabon, où il mourut à Ndjolé le 2 juin 1900. Ses troupes avaient auparavant ravagé une partie de l'ouest de l'actuel Burkina Faso.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "L'officier français qui captura Samory Touré en 1898 est le capitaine :",
+      "o": [
+        "Henri Gouraud",
+        "Paul Voulet",
+        "Paul Caudrelier",
+        "Georges Destenave"
+      ],
+      "r": 0,
+      "x": "Le capitaine Henri Gouraud surprit Samory dans son camp au petit matin et le captura sans déclencher de combat général. Il relata l'événement dans ses souvenirs intitulés « Au Soudan ». Paul Caudrelier commandait alors la colonne de la Volta, active à Bobo-Dioulasso et à Bouna.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "En 1897, le commandant français qui installa Pintiéba Ouattara à la tête du Gwiriko est :",
+      "o": [
+        "Julien Chanoine",
+        "Henri Gouraud",
+        "Paul Caudrelier",
+        "Paul Voulet"
+      ],
+      "r": 2,
+      "x": "Le commandant Paul Caudrelier, à la tête de la colonne de la Volta, installa Pintiéba Ouattara au Gwiriko en 1897. Cette occupation mit fin à l'existence autonome du royaume fondé vers 1714. Le Gwiriko avait pour ville principale Bobo-Dioulasso.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La première mission catholique de l'actuel Burkina Faso fut fondée en 1900 à :",
+      "o": [
+        "Ouagadougou",
+        "Koupéla",
+        "Fada N'Gourma",
+        "Bobo-Dioulasso"
+      ],
+      "r": 1,
+      "x": "Les missionnaires arrivèrent à Koupéla le 22 janvier 1900 et y fondèrent la première mission catholique du pays. La mission de Ouagadougou fut ouverte l'année suivante. Koupéla est aujourd'hui le siège d'un archidiocèse.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Les missionnaires qui implantèrent l'Église catholique en Haute-Volta appartenaient à la Société des :",
+      "o": [
+        "Frères de Ploërmel",
+        "Missions africaines de Lyon",
+        "Missionnaires d'Afrique",
+        "Pères du Saint-Esprit"
+      ],
+      "r": 2,
+      "x": "L'évangélisation fut l'œuvre de la Société des Missionnaires d'Afrique, plus connue sous le nom de Pères Blancs. Cette société fut fondée en 1868 par le cardinal Charles Lavigerie. Les Pères Blancs dirigèrent l'Église de Haute-Volta jusqu'à la prise en main par le clergé local, à partir de 1956.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La mission catholique de Ouagadougou fut définitivement implantée en :",
+      "o": [
+        "1896",
+        "1899",
+        "1901",
+        "1905"
+      ],
+      "r": 2,
+      "x": "Les Pères Blancs s'installèrent durablement à Ouagadougou le 25 juin 1901, après une première tentative en 1900. Mgr Hacquard, vicaire apostolique du Sahara-Soudan, y était entré pour la première fois le 20 mars 1899. Les missionnaires y ouvrirent rapidement des écoles et un dispensaire.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le Mogho Naba dont le règne s'étendit de 1905 à 1942 est :",
+      "o": [
+        "Naba Wobgo",
+        "Naba Saga II",
+        "Naba Sighiri",
+        "Naba Kom II"
+      ],
+      "r": 3,
+      "x": "Naba Kom II régna de février 1905 à sa mort en 1942, soit pendant la plus grande partie de la période coloniale. Il s'opposa au démembrement de la Haute-Volta. Son fils Naba Saga II lui succéda en 1942.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "En 1900, les pays voltaïques détachés du Soudan français furent organisés en :",
+      "o": [
+        "deux territoires militaires",
+        "une colonie autonome",
+        "trois cercles civils",
+        "un protectorat unique"
+      ],
+      "r": 0,
+      "x": "En 1900, les pays voltaïques furent organisés en premier et deuxième territoires militaires. Ils furent intégrés en 1904 à la colonie du Haut-Sénégal-Niger. Ce n'est qu'en 1919 qu'ils formèrent une colonie distincte.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le décret du 18 octobre 1904 rattacha la majeure partie de l'actuel Burkina Faso à la colonie du :",
+      "o": [
+        "Haut-Sénégal-Niger",
+        "Soudan français",
+        "Sénégambie-Niger",
+        "Haute-Côte d'Ivoire"
+      ],
+      "r": 0,
+      "x": "Le décret du 18 octobre 1904 réorganisa l'AOF et créa la colonie du Haut-Sénégal-Niger, dont le chef-lieu était Bamako. Le cercle de Fada N'Gourma, alors rattaché au Dahomey, n'y fut intégré qu'en 1907. Cette vaste colonie fut divisée en 1919 pour créer la Haute-Volta.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le traité de protectorat imposé à Sati par la colonne française concernait le pays :",
+      "o": [
+        "dagara",
+        "gourmantché",
+        "lobi",
+        "gourounsi"
+      ],
+      "r": 3,
+      "x": "Le 19 septembre 1896, la colonne Voulet-Chanoine imposa à Sati un traité de protectorat sur le Gourounsi. La colonne poursuivit ensuite ses opérations dans les pays voltaïques. Le pays lobi ne fut conquis qu'en 1897-1898.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le royaume moaga dont la résistance à la conquête française est commémorée à travers la bataille de Kiidiga est :",
+      "o": [
+        "Gulmu",
+        "Yatenga",
+        "Tenkodogo",
+        "Boussouma"
+      ],
+      "r": 3,
+      "x": "Sous l'autorité du Dima Naaba Koom, le royaume de Boussouma refusa de se soumettre, et un premier choc eut lieu le 18 octobre 1896. Le Dima de Boussouma s'était allié au Mogho Naba Wobgo. Les batailles d'octobre 1896, dont celle de Kiidiga, sont commémorées comme symboles de la résistance.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Selon la tradition, Ouédraogo reçut de son grand-père, à l'âge de quinze ans, quatre chevaux et :",
+      "o": [
+        "20 bœufs",
+        "50 vaches",
+        "100 moutons",
+        "200 chèvres"
+      ],
+      "r": 1,
+      "x": "Selon la tradition, Ouédraogo rendit visite à son grand-père à quinze ans et reçut quatre chevaux et cinquante vaches. Des cavaliers se joignirent à lui pour conquérir son propre territoire. Il épousa Pouiriketa, qui lui donna trois fils.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "L'explorateur français reçu à Ouagadougou en 1888 devint gouverneur de la Côte d'Ivoire en :",
+      "o": [
+        "1887",
+        "1889",
+        "1891",
+        "1893"
+      ],
+      "r": 3,
+      "x": "Louis-Gustave Binger fut gouverneur de la Côte d'Ivoire de 1893 à 1895. Il avait traversé le pays mossi et Kong entre 1887 et 1889. La ville de Bingerville, en Côte d'Ivoire, porte son nom.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le souverain du royaume gourmantché du Gulmu porte le titre de :",
+      "o": [
+        "Dima",
+        "Mogho Naba",
+        "Yatenga Naba",
+        "Nunbado"
+      ],
+      "r": 3,
+      "x": "Le souverain du Gulmu, dont la capitale est Fada N'Gourma, porte le titre de Nunbado. Le titre de Dima désigne le roi de Boussouma. Le Mogho Naba règne sur Ouagadougou.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Selon la tradition, la ville de Bobo-Dioulasso a pour origine le village de :",
+      "o": [
+        "Bama",
+        "Noumoudara",
+        "Kong",
+        "Sia"
+      ],
+      "r": 3,
+      "x": "Selon la tradition, Bobo-Dioulasso est né du village de Sia, fondé au XVe siècle et peuplé notamment de Bobo et de Dioula. La ville devint un important centre de commerce, notamment pour l'exportation de chevaux vers le sud. Elle devint ensuite le chef-lieu d'un cercle de l'administration coloniale.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le nom de règne « Wobgo », porté par le Mogho Naba de l'époque de la conquête, signifie :",
+      "o": [
+        "panthère",
+        "éléphant",
+        "lion",
+        "buffle"
+      ],
+      "r": 1,
+      "x": "Le nom « Wobgo », adopté par le souverain lors de son intronisation, signifie « éléphant ». Ce nom de règne exprimait la force et la puissance du roi. Wobgo est resté comme l'une des grandes figures de la résistance à la conquête française.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La mission française qui signa en janvier 1898 des traités dans le pays lobi était dirigée par :",
+      "o": [
+        "Dutheil",
+        "Monteil",
+        "Decoeur",
+        "Destenave"
+      ],
+      "r": 0,
+      "x": "La mission Dutheil de La Rochère signa en janvier 1898 des traités avec plusieurs localités du pays lobi, dont Kambara. Decoeur avait mené une mission au Gourma en janvier 1895. Le capitaine Destenave avait signé la même année le traité de protectorat du Yatenga.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Selon la tradition, le fils de Ouédraogo, qui succéda à son père, est :",
+      "o": [
+        "Rawa",
+        "Oubri",
+        "Diaba Lompo",
+        "Zoungrana"
+      ],
+      "r": 3,
+      "x": "Selon la tradition, Zoungrana, fils de Ouédraogo, régna sur Tenkodogo après la mort de son père. Diaba Lompo fonda Fada N'Gourma et Rawa régna sur la région du Zondoma. Oubri, fils de Zoungrana, fonda le royaume de Ouagadougou.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Selon la tradition, le père de la princesse Yennenga régnait sur le royaume des :",
+      "o": [
+        "Ashanti",
+        "Songhaï",
+        "Haoussa",
+        "Dagomba"
+      ],
+      "r": 3,
+      "x": "Selon la tradition, Nedega régnait sur le royaume dagomba, établi dans le nord de l'actuel Ghana. Il fit de sa fille Yennenga une cavalière et une guerrière accomplie. Le fils de Yennenga, Ouédraogo, est à l'origine des dynasties moose.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Gambaga, ville d'origine de la princesse Yennenga selon la tradition, se trouve dans l'actuel :",
+      "o": [
+        "Mali",
+        "Ghana",
+        "Togo",
+        "Niger"
+      ],
+      "r": 1,
+      "x": "Gambaga est située dans le nord de l'actuel Ghana, où elle existe toujours. C'est de là que Yennenga s'enfuit à cheval selon la tradition. Ouédraogo y revint plus tard rendre visite à son grand-père.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Selon la tradition, Rialé, le compagnon de la princesse Yennenga, était :",
+      "o": [
+        "un forgeron de Gambaga",
+        "un griot du royaume",
+        "un prince dagomba",
+        "un chasseur d'éléphants"
+      ],
+      "r": 3,
+      "x": "Selon la tradition, Yennenga rencontra Rialé, un chasseur d'éléphants solitaire, après avoir fui le royaume de son père. De leur union naquit Ouédraogo, fondateur des dynasties moose. Leur histoire est l'un des grands récits fondateurs du Burkina Faso.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le titre de « Dima » désigne le souverain du royaume moaga de :",
+      "o": [
+        "Tenkodogo",
+        "Boussouma",
+        "Yatenga",
+        "Gulmu"
+      ],
+      "r": 1,
+      "x": "Le Dima est le roi de Boussouma, royaume moaga situé au nord-est de Ouagadougou. En 1896, le Dima Naaba Koom refusa de se soumettre à la colonne française. Le souverain du Gulmu porte, lui, le titre de Nunbado.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Parmi les ministres de la cour du Mogho Naba figure le :",
+      "o": [
+        "Larlé Naba",
+        "Yatenga Naba",
+        "Nunbado",
+        "Dima"
+      ],
+      "r": 0,
+      "x": "Le Larlé Naba est l'un des grands dignitaires de la cour du Mogho Naba, aux côtés notamment du Baloum Naba et du Ouidi Naba. Le Dima est le roi de Boussouma et le Nunbado celui du Gulmu. Le Yatenga Naba règne à Ouahigouya.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "L'émirat peul du Liptako relevait de l'ensemble politique dirigé depuis :",
+      "o": [
+        "Kong",
+        "Sokoto",
+        "Ségou",
+        "Macina"
+      ],
+      "r": 1,
+      "x": "Né dans le sillage de la guerre sainte d'Ousmane dan Fodio, le Liptako était un émirat du califat de Sokoto. Il n'était pas pleinement indépendant, mais la distance laissait une large autonomie à son émir. Le Macina et Ségou étaient d'autres puissances de la boucle du Niger.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La ville de Sebba était la capitale de l'émirat peul du :",
+      "o": [
+        "Yagha",
+        "Djelgodji",
+        "Liptako",
+        "Macina"
+      ],
+      "r": 0,
+      "x": "Sebba était la capitale du Yagha, émirat peul situé dans l'est de l'actuel Burkina Faso. L'émirat voisin du Liptako avait pour capitale Dori. Le Yagha signa un traité avec la mission Monteil le 16 juin 1891.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La capitale du royaume du Kénédougou était :",
+      "o": [
+        "Ségou",
+        "Sikasso",
+        "Kong",
+        "Bougouni"
+      ],
+      "r": 1,
+      "x": "Le Kénédougou, dirigé successivement par Tiéba puis par Babemba Traoré, avait pour capitale Sikasso. Ses troupes menèrent de nombreuses incursions dans l'actuelle région des Cascades entre 1888 et 1891. Kong était le centre de la puissance des Ouattara.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le dernier roi du Kénédougou, qui résista aux Français jusqu'en 1898, est :",
+      "o": [
+        "Ahmadou Tall",
+        "Babemba Traoré",
+        "Samory Touré",
+        "Tiéba Traoré"
+      ],
+      "r": 1,
+      "x": "Babemba Traoré succéda à son frère Tiéba à la tête du Kénédougou et résista aux Français jusqu'à la prise de Sikasso en 1898. Samory Touré dirigeait, lui, l'empire du Wassoulou. Ahmadou Tall était le souverain de l'empire toucouleur de Ségou.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "En janvier 1893, la bataille de Bama vit la victoire des troupes de la région de Bobo-Dioulasso sur le royaume du :",
+      "o": [
+        "Kénédougou",
+        "Gwiriko",
+        "Yatenga",
+        "Wassoulou"
+      ],
+      "r": 0,
+      "x": "En janvier 1893, à Bama, les troupes fédérées de la région de Bobo-Dioulasso battirent le Kénédougou de Tiéba Traoré. Le chef tiéfo Amoro fut l'un des artisans de cette victoire. Le Gwiriko était le royaume des Ouattara de Bobo-Dioulasso.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le royaume dioula de Kong, d'où étaient issus les Ouattara de Bobo-Dioulasso, se situait dans le nord de ce qui est aujourd'hui :",
+      "o": [
+        "Côte d'Ivoire",
+        "Guinée",
+        "Burkina Faso",
+        "Ghana"
+      ],
+      "r": 0,
+      "x": "Le royaume de Kong, fondé vers 1710, se situait dans le nord de l'actuelle Côte d'Ivoire. C'est de Kong que vint Famaghan Ouattara, fondateur du Gwiriko vers 1714. La mission Binger imposa le protectorat français à Kong le 10 janvier 1889.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le récit de voyage de Binger s'intitule « Du Niger au golfe de Guinée par le pays de Kong et le :",
+      "o": [
+        "Liptako »",
+        "Gourma »",
+        "Mossi »",
+        "Lobi »"
+      ],
+      "r": 2,
+      "x": "L'ouvrage « Du Niger au golfe de Guinée par le pays de Kong et le Mossi » relate l'expédition de Binger entre 1887 et 1889. Binger avait été reçu à Ouagadougou en 1888 au cours de ce voyage. Il y décrit notamment le futur Mogho Naba Wobgo, alors appelé Boukary Koutou.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le Mogho Naba Wobgo mourut en exil en :",
+      "o": [
+        "1897",
+        "1900",
+        "1904",
+        "1910"
+      ],
+      "r": 2,
+      "x": "Wobgo mourut en 1904 en Gold Coast, sans avoir retrouvé son trône. Il avait fui Ouagadougou lors de la conquête française de 1896. Les Français l'avaient remplacé par son frère Kouka Koutou, devenu Naba Sighiri.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Vers 1904, la population de Ouagadougou était estimée à environ :",
+      "o": [
+        "4 000 habitants",
+        "15 000 habitants",
+        "40 000 habitants",
+        "100 000 habitants"
+      ],
+      "r": 0,
+      "x": "Vers 1904, Ouagadougou ne comptait qu'environ 4 000 habitants, la ville ayant été incendiée lors de la conquête de 1896. Devenue chef-lieu de la colonie en 1919, elle fut largement reconstruite. Le lieutenant-gouverneur Hesling y lança un vaste programme de construction.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Avant d'être intégré au Haut-Sénégal-Niger, le cercle de Fada N'Gourma avait relevé de la colonie du :",
+      "o": [
+        "Soudan français",
+        "Togo",
+        "Niger",
+        "Dahomey"
+      ],
+      "r": 3,
+      "x": "Le cercle de Fada N'Gourma appartint successivement au Dahomey, au Haut-Sénégal-Niger, à la Haute-Volta et au Niger, avant de revenir à la Haute-Volta. Ces changements illustrent l'instabilité des découpages coloniaux. Ils furent à l'origine de litiges frontaliers après les indépendances.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le premier évêque missionnaire entré à Ouagadougou, le 20 mars 1899, est :",
+      "o": [
+        "Mgr Joanny Thévenoud",
+        "Mgr Paul Zoungrana",
+        "Mgr Dieudonné Yougbaré",
+        "Mgr Prosper Hacquard"
+      ],
+      "r": 3,
+      "x": "Mgr Prosper Augustin Hacquard, vicaire apostolique du Sahara-Soudan, entra à Ouagadougou le 20 mars 1899, où il fut bien accueilli par le Mogho Naba Sighiri. Les premières missions furent ouvertes à Koupéla en 1900, puis à Ouagadougou en 1901. Mgr Thévenoud fut vicaire apostolique de Ouagadougou de 1921 à 1949.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le décret de 1919 conférait à la colonie de Haute-Volta l'autonomie administrative et :",
+      "o": [
+        "financière",
+        "monétaire",
+        "diplomatique",
+        "militaire"
+      ],
+      "r": 0,
+      "x": "Le décret de création accordait à la Haute-Volta l'autonomie administrative et financière, comme aux autres colonies de l'AOF. Son budget local était arrêté et exécuté sous l'autorité du lieutenant-gouverneur. La défense et la monnaie relevaient du gouvernement général et de la métropole.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "L'insurrection anticoloniale de 1915-1916 dans l'ouest de l'actuel Burkina Faso éclata dans le village de :",
+      "o": [
+        "Boho",
+        "Bona",
+        "Safané",
+        "Dédougou"
+      ],
+      "r": 1,
+      "x": "La révolte débuta à Bona, en pays marka, où les représentants d'une douzaine de villages décidèrent de prendre les armes contre l'occupant. Boho, près de Bobo-Dioulasso, devint en 1916 un pôle majeur de la résistance. Le mouvement s'étendit rapidement aux environs de Dédougou.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La guerre anticoloniale du Bani-Volta débuta le :",
+      "o": [
+        "9 octobre 1915",
+        "17 novembre 1915",
+        "4 mai 1916",
+        "12 août 1917"
+      ],
+      "r": 1,
+      "x": "Le soulèvement débuta le 17 novembre 1915, quelques semaines après la décision du 9 octobre 1915 imposant un recrutement militaire massif en AOF. Le 4 mai 1916, une colonne partit de Bobo-Dioulasso pour attaquer le village fortifié de Boho. La résistance se prolongea par endroits jusqu'en 1917.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La cause immédiate de la révolte de 1915-1916 dans la boucle de la Volta Noire fut :",
+      "o": [
+        "la construction du rail",
+        "l'impôt sur le sel",
+        "la culture du coton",
+        "le recrutement militaire"
+      ],
+      "r": 3,
+      "x": "La révolte fut déclenchée par le recrutement de soldats imposé en AOF à partir d'octobre 1915, en pleine Première Guerre mondiale. S'y ajoutaient le travail forcé et les abus des chefs de canton. Pour 1916, l'objectif de recrutement fixé pour l'AOF était de 50 000 hommes.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Au plus fort de la révolte du Bani-Volta, en 1916, les insurgés mobilisèrent environ :",
+      "o": [
+        "1 000 à 2 000 combattants",
+        "5 000 à 8 000 combattants",
+        "20 000 à 30 000 combattants",
+        "50 000 à 60 000 combattants"
+      ],
+      "r": 2,
+      "x": "Selon les estimations les plus courantes, la coalition insurgée réunit 20 000 à 30 000 combattants au plus fort de la révolte. Au moins 30 000 Africains, civils compris, périrent du fait du conflit. Il s'agit de l'une des plus importantes résistances armées à la colonisation en Afrique.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La révolte de 1915-1916 est souvent désignée par le nom d'un peuple qui y prit une part importante, les :",
+      "o": [
+        "Peuls",
+        "Gourmantché",
+        "Bwaba",
+        "Mossi"
+      ],
+      "r": 2,
+      "x": "Le soulèvement est souvent appelé « révolte bwa », car les Bwaba y prirent une part importante. Il mobilisa aussi des Marka, des Lela, des Nuni et des Bobo. Les historiens Mahir Saul et Patrick Royer ont proposé l'appellation de guerre du Bani-Volta.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La colonne partie de Bobo-Dioulasso en mai 1916 pour attaquer le village fortifié de Boho était commandée par :",
+      "o": [
+        "Henri Maubert",
+        "Robert Arnaud",
+        "Édouard Hesling",
+        "Paul Caudrelier"
+      ],
+      "r": 0,
+      "x": "L'administrateur Henri Maubert conduisit une colonne de 759 hommes contre Boho, situé à 42 km de Bobo-Dioulasso. Les combats y firent de très nombreuses victimes parmi les défenseurs. La répression se poursuivit jusqu'à la fin de 1916, suivie d'une vaste campagne de désarmement.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La révolte de 1915-1916 est considérée comme l'une des raisons principales de la création de :",
+      "o": [
+        "la colonie du Haut-Sénégal-Niger",
+        "la colonie du Niger",
+        "la colonie de Haute-Volta",
+        "l'Afrique occidentale française"
+      ],
+      "r": 2,
+      "x": "Pour mieux contrôler une région secouée par la révolte, la France détacha sept cercles du Haut-Sénégal-Niger pour former la colonie de Haute-Volta. Le décret de création fut signé le 1er mars 1919. Le Niger, d'abord territoire militaire séparé du Haut-Sénégal-Niger, devint pour sa part une colonie en 1922.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La colonie de Haute-Volta fut créée par le décret du :",
+      "o": [
+        "18 octobre 1904",
+        "17 novembre 1915",
+        "1er mars 1919",
+        "5 septembre 1932"
+      ],
+      "r": 2,
+      "x": "Le décret du 1er mars 1919 divisa le Haut-Sénégal-Niger et créa la colonie de Haute-Volta, avec Ouagadougou pour chef-lieu. Le décret du 18 octobre 1904 avait créé le Haut-Sénégal-Niger. Le décret du 5 septembre 1932 supprima la colonie.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Lors de sa création, la colonie de Haute-Volta comptait :",
+      "o": [
+        "5 cercles",
+        "7 cercles",
+        "9 cercles",
+        "11 cercles"
+      ],
+      "r": 1,
+      "x": "Le décret de création réunit sept cercles : Gaoua, Bobo-Dioulasso, Dédougou, Ouagadougou, Dori, Say et Fada N'Gourma. Ces cercles faisaient jusque-là partie du Haut-Sénégal-Niger. Le cercle de Say fut rattaché au Niger en 1927.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Parmi les cercles suivants, celui qui ne figurait pas dans la colonie de Haute-Volta à sa création est :",
+      "o": [
+        "Kaya",
+        "Dori",
+        "Say",
+        "Gaoua"
+      ],
+      "r": 0,
+      "x": "À sa création, la colonie réunissait les cercles de Gaoua, Bobo-Dioulasso, Dédougou, Ouagadougou, Dori, Say et Fada N'Gourma. Le cercle de Kaya n'en faisait pas partie. Il apparaît en revanche parmi les cercles rattachés à la Côte d'Ivoire lors du démembrement.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le chef-lieu fixé par le décret de création de la colonie de Haute-Volta était :",
+      "o": [
+        "Koudougou",
+        "Ouagadougou",
+        "Bobo-Dioulasso",
+        "Dédougou"
+      ],
+      "r": 1,
+      "x": "Le décret de création fixa le chef-lieu à Ouagadougou, au cœur du pays mossi. Le ministre des Colonies justifiait ce choix par la nécessité d'un contrôle régulier de cette région éloignée de Bamako. Le lieutenant-gouverneur y lança un vaste programme de construction.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le décret créant la colonie de Haute-Volta fut présenté au président de la République par le ministre des Colonies :",
+      "o": [
+        "Henry Simon",
+        "Albert Sarraut",
+        "René Pleven",
+        "Gaston Defferre"
+      ],
+      "r": 0,
+      "x": "Le rapport accompagnant le décret du 1er mars 1919 est signé par Henry Simon, ministre des Colonies. Albert Sarraut occupa ce ministère de 1920 à 1924. Gaston Defferre fut, en 1956, le ministre de la France d'outre-mer de la loi-cadre.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le premier lieutenant-gouverneur de la colonie de Haute-Volta est :",
+      "o": [
+        "Robert Arnaud",
+        "Édouard Hesling",
+        "Albéric Fournier",
+        "Edmond Louveau"
+      ],
+      "r": 1,
+      "x": "Édouard Hesling dirigea la colonie de 1919 à 1927 et lança un vaste programme de construction à Ouagadougou. Robert Arnaud assura l'intérim en 1927-1928, avant Albéric Fournier (1928-1932). Edmond Louveau fut résident supérieur de la Haute-Côte d'Ivoire à partir de 1938.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le premier lieutenant-gouverneur de la Haute-Volta imposa aux populations la culture intensive :",
+      "o": [
+        "du coton",
+        "du cacao",
+        "du café",
+        "de l'hévéa"
+      ],
+      "r": 0,
+      "x": "Sous Hesling, des champs collectifs de coton furent imposés aux populations. En 1931, le kilo de coton n'était payé que 0,50 F à Koudougou et 0,35 F à Yako. Ces cultures obligatoires réduisaient l'espace consacré aux cultures vivrières et favorisaient la disette.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le premier lieutenant-gouverneur de la Haute-Volta quitta ses fonctions en :",
+      "o": [
+        "1922",
+        "1927",
+        "1930",
+        "1932"
+      ],
+      "r": 1,
+      "x": "Hesling quitta la colonie le 7 août 1927, après huit années de mandat. Robert Arnaud assura l'intérim jusqu'en janvier 1928. Après son départ, la production de coton connut une baisse.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le cercle de Say, qui faisait partie de la Haute-Volta à sa création, fut rattaché au Niger en :",
+      "o": [
+        "1919",
+        "1922",
+        "1924",
+        "1927"
+      ],
+      "r": 3,
+      "x": "En 1927, la région de Say fut détachée de la Haute-Volta et rattachée à la colonie du Niger. Say était l'un des sept cercles de la colonie à sa création. Ce transfert illustre l'instabilité des frontières coloniales, source de litiges après les indépendances.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le lieutenant-gouverneur titulaire de la Haute-Volta de 1928 jusqu'à la suppression de la colonie est :",
+      "o": [
+        "Robert Arnaud",
+        "Edmond Louveau",
+        "Édouard Hesling",
+        "Albéric Fournier"
+      ],
+      "r": 3,
+      "x": "Albéric Fournier dirigea la colonie à partir du 13 janvier 1928 et jusqu'à sa suppression en 1932. Il succéda à l'intérim de Robert Arnaud. Edmond Louveau administra plus tard la Haute-Côte d'Ivoire comme résident supérieur.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Selon le décret de 1919, la colonie de Haute-Volta était administrée par un gouverneur portant le titre de :",
+      "o": [
+        "gouverneur général",
+        "résident supérieur",
+        "lieutenant-gouverneur",
+        "haut-commissaire"
+      ],
+      "r": 2,
+      "x": "Le décret confia la colonie à un gouverneur des colonies portant le titre de lieutenant-gouverneur. Il était assisté d'un secrétaire général et d'un conseil d'administration. Le titre de gouverneur général était réservé au chef de la fédération de l'AOF.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Au début des années 1930, la Haute-Volta comptait environ :",
+      "o": [
+        "500 000 habitants",
+        "1 million d'habitants",
+        "3 millions d'habitants",
+        "8 millions d'habitants"
+      ],
+      "r": 2,
+      "x": "La Haute-Volta coloniale comptait environ trois millions d'habitants, un chiffre exceptionnel à l'échelle de l'AOF. Cette importante population en faisait un réservoir de main-d'œuvre pour les colonies côtières. Les recrutements pour l'impôt, l'armée et les travaux poussaient de nombreux habitants à émigrer.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Mgr Joanny Thévenoud fut nommé vicaire apostolique de Ouagadougou en :",
+      "o": [
+        "1901",
+        "1921",
+        "1936",
+        "1949"
+      ],
+      "r": 1,
+      "x": "Mgr Joanny Thévenoud fut vicaire apostolique de Ouagadougou du 8 juillet 1921 jusqu'en 1949. Il fit construire la cathédrale de l'Immaculée-Conception entre 1934 et 1936. La mission catholique de Ouagadougou avait été fondée en 1901.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La cathédrale de l'Immaculée-Conception de Ouagadougou fut construite entre :",
+      "o": [
+        "1901 et 1905",
+        "1919 et 1921",
+        "1934 et 1936",
+        "1947 et 1950"
+      ],
+      "r": 2,
+      "x": "La cathédrale fut bâtie entre 1934 et 1936 à l'initiative de Mgr Joanny Thévenoud. Elle est édifiée en briques de terre crue et dotée de deux hautes tours. Elle est aujourd'hui le siège de l'archidiocèse de Ouagadougou.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La cathédrale de l'Immaculée-Conception de Ouagadougou est construite principalement en :",
+      "o": [
+        "briques de terre crue",
+        "pierres de taille",
+        "bois de karité",
+        "béton armé et acier"
+      ],
+      "r": 0,
+      "x": "La cathédrale de Ouagadougou est entièrement bâtie en briques de terre crue, selon un plan basilical à trois nefs. Elle associe le style des basiliques européennes aux techniques de construction sahéliennes. Sa couleur ocre et ses deux tours marquent le paysage du centre-ville.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le chemin de fer Abidjan-Niger atteignit Bobo-Dioulasso en :",
+      "o": [
+        "1924",
+        "1929",
+        "1934",
+        "1954"
+      ],
+      "r": 2,
+      "x": "La voie ferrée partie d'Abidjan atteignit Katiola en 1924, Ferkessédougou en 1929 puis Bobo-Dioulasso en 1934. Bobo-Dioulasso resta le terminus de la ligne pendant une vingtaine d'années. Le rail n'arriva à Ouagadougou qu'en 1954.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La gare ferroviaire de Bobo-Dioulasso est un exemple du style architectural :",
+      "o": [
+        "haussmannien",
+        "baroque italien",
+        "néo-soudanais",
+        "gothique flamboyant"
+      ],
+      "r": 2,
+      "x": "La gare de Bobo-Dioulasso illustre le style néo-soudanais, inspiré de l'architecture de terre sahélienne. Le musée de la ville relève du même style colonial. La gare est située sur la ligne Abidjan-Niger, unique voie ferrée du pays.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La colonie de Haute-Volta fut supprimée par un décret du :",
+      "o": [
+        "1er mars 1919",
+        "7 août 1927",
+        "5 septembre 1932",
+        "4 septembre 1947"
+      ],
+      "r": 2,
+      "x": "Le décret du 5 septembre 1932 supprima la colonie de Haute-Volta pour des raisons d'économie. Son territoire fut partagé entre la Côte d'Ivoire, le Soudan français et le Niger. La Haute-Volta ne fut reconstituée que par la loi du 4 septembre 1947.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La suppression de la colonie de Haute-Volta fut principalement justifiée par :",
+      "o": [
+        "une révolte armée",
+        "un conflit frontalier",
+        "des raisons d'économie",
+        "une épidémie"
+      ],
+      "r": 2,
+      "x": "La France supprima la colonie pour réduire les dépenses, dans un contexte de crise économique mondiale. Le territoire présentait, aux yeux de l'administration, peu d'intérêt économique, sauf comme réservoir de main-d'œuvre. Ce démembrement fut vivement contesté par les Voltaïques, menés par le Mogho Naba.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Lors du démembrement de la Haute-Volta, la colonie qui reçut la plus grande partie du territoire est :",
+      "o": [
+        "la Côte d'Ivoire",
+        "le Niger",
+        "le Soudan français",
+        "le Dahomey"
+      ],
+      "r": 0,
+      "x": "La Côte d'Ivoire reçut environ 56 % du territoire, dont les cercles de Ouagadougou et de Bobo-Dioulasso. Le Soudan français et le Niger se partagèrent le reste. Le Dahomey ne reçut aucune partie de l'ancienne colonie.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Lors du démembrement de la Haute-Volta, les cercles de Dori et de Fada N'Gourma furent rattachés :",
+      "o": [
+        "à la Côte d'Ivoire",
+        "au Soudan français",
+        "au Dahomey",
+        "au Niger"
+      ],
+      "r": 3,
+      "x": "Les cercles de Dori et de Fada N'Gourma furent rattachés à la colonie du Niger. Le cercle de Ouahigouya et une partie de celui de Dédougou passèrent au Soudan français. La majeure partie du territoire, avec Ouagadougou et Bobo-Dioulasso, revint à la Côte d'Ivoire.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Lors du démembrement de la Haute-Volta, le cercle de Ouahigouya fut rattaché :",
+      "o": [
+        "à la Côte d'Ivoire",
+        "au Soudan français",
+        "à la Haute-Côte d'Ivoire",
+        "au Niger"
+      ],
+      "r": 1,
+      "x": "Le cercle de Ouahigouya fut rattaché au Soudan français, l'actuel Mali. Une partie du cercle de Dédougou y fut également intégrée. Les cercles de Ouagadougou, Bobo-Dioulasso, Gaoua, Kaya, Koudougou et Tenkodogo passèrent sous l'administration de la Côte d'Ivoire.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Créée en 1919, la première colonie de Haute-Volta exista pendant environ :",
+      "o": [
+        "8 ans",
+        "13 ans",
+        "20 ans",
+        "28 ans"
+      ],
+      "r": 1,
+      "x": "Créée le 1er mars 1919 et supprimée en 1932, la première colonie de Haute-Volta n'exista qu'environ treize ans. Son démembrement prit effet à la fin de l'année 1932. Elle fut reconstituée quinze ans plus tard, en 1947.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La région administrative de la Haute-Côte d'Ivoire, qui regroupait une partie de l'ancienne Haute-Volta, fut créée par un décret de :",
+      "o": [
+        "1932",
+        "1937",
+        "1942",
+        "1947"
+      ],
+      "r": 1,
+      "x": "Un décret de 1937 créa au sein de la Côte d'Ivoire la région administrative de la Haute-Côte d'Ivoire, effective au 1er janvier 1938. Elle regroupait les cercles de Ouagadougou, Bobo-Dioulasso, Gaoua, Kaya, Koudougou et Tenkodogo. Elle disparut avec la reconstitution de la Haute-Volta en 1947.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La Haute-Côte d'Ivoire était administrée depuis Ouagadougou par un fonctionnaire portant le titre de :",
+      "o": [
+        "haut-commissaire",
+        "résident supérieur",
+        "commandant de cercle",
+        "lieutenant-gouverneur"
+      ],
+      "r": 1,
+      "x": "La Haute-Côte d'Ivoire fut placée sous l'autorité d'un résident supérieur installé à Ouagadougou, Edmond Louveau. Elle restait une région de la colonie de Côte d'Ivoire, dirigée par un gouverneur depuis Abidjan. Le titre de lieutenant-gouverneur était celui des chefs de colonie.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le premier résident supérieur de la Haute-Côte d'Ivoire, installé à Ouagadougou en 1938, est :",
+      "o": [
+        "Albéric Fournier",
+        "Albert Mouragues",
+        "Edmond Louveau",
+        "Yvon Bourges"
+      ],
+      "r": 2,
+      "x": "Edmond Louveau prit ses fonctions de résident supérieur à Ouagadougou le 1er janvier 1938. Albéric Fournier avait été le dernier lieutenant-gouverneur de la première Haute-Volta. Yvon Bourges fut gouverneur de la Haute-Volta de 1956 à 1958.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Les deux communes mixtes de la Haute-Côte d'Ivoire étaient :",
+      "o": [
+        "Bobo-Dioulasso et Gaoua",
+        "Ouagadougou et Bobo-Dioulasso",
+        "Ouagadougou et Koudougou",
+        "Kaya et Tenkodogo"
+      ],
+      "r": 1,
+      "x": "Ouagadougou et Bobo-Dioulasso étaient les deux communes mixtes de la Haute-Côte d'Ivoire. Chacune était dirigée par un administrateur faisant office de maire, assisté d'un conseil nommé. Le reste du territoire était organisé en cercles.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Parmi les cercles suivants, celui qui faisait partie de la Haute-Côte d'Ivoire est :",
+      "o": [
+        "Tenkodogo",
+        "Dori",
+        "Fada N'Gourma",
+        "Ouahigouya"
+      ],
+      "r": 0,
+      "x": "La Haute-Côte d'Ivoire regroupait les cercles de Ouagadougou, Bobo-Dioulasso, Gaoua, Kaya, Koudougou et Tenkodogo. Dori et Fada N'Gourma relevaient du Niger. Ouahigouya dépendait du Soudan français.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "En 1932, Dim Delobsom Ouédraogo publia à Paris l'ouvrage :",
+      "o": [
+        "Crépuscule des temps anciens",
+        "Kocoumbo, l'étudiant noir",
+        "Du Niger au golfe de Guinée",
+        "L'Empire du Mogho-Naba"
+      ],
+      "r": 3,
+      "x": "« L'Empire du Mogho-Naba », publié en 1932, est la première ethnographie de l'AOF écrite par un autochtone. Dim Delobsom publia ensuite, en 1934, « Maximes, pensées et devinettes mossi ». « Crépuscule des temps anciens » est un roman de Nazi Boni, et « Du Niger au golfe de Guinée » le récit de Binger.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "En 1940, Dim Delobsom Ouédraogo fut intronisé chef de :",
+      "o": [
+        "Kaya",
+        "Sao",
+        "Boussouma",
+        "Yako"
+      ],
+      "r": 1,
+      "x": "Dim Delobsom Ouédraogo, l'un des premiers fonctionnaires autochtones de l'administration coloniale, devint naba de Sao en avril 1940. Il bénéficia notamment de l'appui du Mogho Naba et du résident supérieur Edmond Louveau. Il est considéré comme un pionnier de l'ethnologie voltaïque.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le Mogho Naba qui engagea dès 1938 des démarches pour la reconstitution de la Haute-Volta est :",
+      "o": [
+        "Naba Saga II",
+        "Naba Kom II",
+        "Naba Kougri",
+        "Naba Sighiri"
+      ],
+      "r": 1,
+      "x": "Naba Kom II s'opposa au démembrement de 1932 et lança en 1938 des initiatives pour la restauration de la colonie. Après sa mort en 1942, son fils Naba Saga II reprit le combat. Cette lutte aboutit à la reconstitution de la Haute-Volta en 1947.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Durant la période coloniale, de nombreux Voltaïques furent envoyés comme main-d'œuvre vers les plantations et chantiers de :",
+      "o": [
+        "Côte d'Ivoire",
+        "Guinée française",
+        "Mauritanie",
+        "Dahomey"
+      ],
+      "r": 0,
+      "x": "La Haute-Volta servit de réservoir de main-d'œuvre pour les plantations et les chantiers de Côte d'Ivoire. Des villages de colonisation voltaïques furent même créés en Basse-Côte d'Ivoire. De nombreux travailleurs migraient aussi vers la Gold Coast britannique.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Les territoires de l'AOF, dont l'ancienne Haute-Volta, restèrent sous l'autorité du régime de Vichy jusqu'en :",
+      "o": [
+        "juin 1940",
+        "novembre 1942",
+        "août 1944",
+        "mai 1945"
+      ],
+      "r": 1,
+      "x": "De juin 1940 à novembre 1942, l'administration de l'AOF resta fidèle au régime de Vichy. Elle se rallia ensuite à la France combattante après le débarquement allié en Afrique du Nord. C'est durant cette période, en 1942, que Naba Saga II succéda à Naba Kom II.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La conférence de Brazzaville, consacrée à l'avenir des colonies françaises d'Afrique, se tint en :",
+      "o": [
+        "1940",
+        "1942",
+        "1944",
+        "1946"
+      ],
+      "r": 2,
+      "x": "La conférence de Brazzaville se tint du 30 janvier au 8 février 1944. Elle écarta toute idée d'autonomie ou d'indépendance des colonies, tout en proposant des réformes. Elle ouvrit la voie à la représentation des colonies dans les assemblées françaises.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La conférence de Brazzaville sur l'avenir des colonies françaises fut inaugurée par :",
+      "o": [
+        "René Pleven",
+        "Félix Houphouët-Boigny",
+        "Charles de Gaulle",
+        "Gaston Defferre"
+      ],
+      "r": 2,
+      "x": "Le général de Gaulle inaugura la conférence, qui réunit les gouverneurs de l'AOF, de l'AEF et de Madagascar. Félix Éboué était alors gouverneur général de l'AEF. Gaston Defferre est l'auteur de la loi-cadre de 1956.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La loi supprimant le travail forcé dans les territoires d'outre-mer fut promulguée le :",
+      "o": [
+        "8 février 1944",
+        "11 avril 1946",
+        "7 mai 1946",
+        "21 octobre 1946"
+      ],
+      "r": 1,
+      "x": "La loi n° 46-645 du 11 avril 1946 interdit le travail forcé dans les territoires d'outre-mer. Elle avait été votée sans débat par l'Assemblée constituante le 5 avril 1946. Le 7 mai 1946 est la date de la loi Lamine Guèye sur la citoyenneté.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La loi supprimant le travail forcé dans les territoires d'outre-mer porte le nom du député :",
+      "o": [
+        "Ouezzin Coulibaly",
+        "Lamine Guèye",
+        "Léopold Sédar Senghor",
+        "Félix Houphouët-Boigny"
+      ],
+      "r": 3,
+      "x": "Félix Houphouët-Boigny, député de la Côte d'Ivoire, fut l'initiateur et le rapporteur de la loi du 11 avril 1946. Cette loi eut un retentissement considérable en Afrique noire. Lamine Guèye a donné son nom à la loi du 7 mai 1946 sur la citoyenneté.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La loi Lamine Guèye du 7 mai 1946 accorda aux ressortissants de l'AOF :",
+      "o": [
+        "l'indépendance politique",
+        "la suppression de l'impôt",
+        "l'autonomie interne",
+        "la citoyenneté française"
+      ],
+      "r": 3,
+      "x": "La loi du 7 mai 1946 fit de tous les ressortissants de l'AOF des citoyens français. L'autonomie interne ne vint qu'avec la loi-cadre de 1956. L'indépendance fut acquise en 1960.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le Rassemblement démocratique africain (RDA) fut créé en octobre 1946 lors d'un congrès tenu à :",
+      "o": [
+        "Conakry",
+        "Dakar",
+        "Abidjan",
+        "Bamako"
+      ],
+      "r": 3,
+      "x": "Le congrès constitutif du RDA se tint à Bamako du 18 au 21 octobre 1946. Le parti devint dans presque tous les territoires la principale force politique. En Haute-Volta, il eut pour figure de proue Ouezzin Coulibaly.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le premier président du RDA fut :",
+      "o": [
+        "Modibo Keïta",
+        "Gabriel d'Arboussier",
+        "Ouezzin Coulibaly",
+        "Félix Houphouët-Boigny"
+      ],
+      "r": 3,
+      "x": "Félix Houphouët-Boigny présida le RDA de sa fondation en 1946 jusqu'à sa mort en 1993. Gabriel d'Arboussier fut l'un des fondateurs du mouvement. Ouezzin Coulibaly en fut l'un des principaux dirigeants en Haute-Volta et en Côte d'Ivoire.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "En 1946, les rois des royaumes moose, qui traditionnellement s'évitent, se réunirent pour examiner :",
+      "o": [
+        "le recrutement des tirailleurs voltaïques",
+        "la création d'un parti politique mossi",
+        "le prolongement du chemin de fer",
+        "la reconstitution de la Haute-Volta"
+      ],
+      "r": 3,
+      "x": "Les rois de Ouagadougou, Tenkodogo, Fada N'Gourma, Boussouma et Ouahigouya évitent traditionnellement de se rencontrer. Ils se réunirent pourtant en 1946 pour se concerter sur la reconstitution de la Haute-Volta. Cette rencontre exceptionnelle montre l'importance de l'enjeu pour la chefferie.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "L'Union pour la défense des intérêts de la Haute-Volta (UDIHV) fut créée à l'instigation de :",
+      "o": [
+        "Naba Kom II",
+        "Naba Saga II",
+        "Maurice Yaméogo",
+        "Ouezzin Coulibaly"
+      ],
+      "r": 1,
+      "x": "L'UDIHV, premier parti politique de la Haute-Volta, fut créée à l'instigation du Mogho Naba Saga II. Son programme se limitait à la revendication de la reconstitution du territoire. Elle réunissait de jeunes Voltaïques formés dans les écoles catholiques et des chefs traditionnels.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "En décembre 1946, Maurice Yaméogo fut élu conseiller général pour Koudougou au sein de l'assemblée territoriale de :",
+      "o": [
+        "le Soudan français",
+        "le Niger",
+        "la Haute-Volta",
+        "la Côte d'Ivoire"
+      ],
+      "r": 3,
+      "x": "Le 15 décembre 1946, Maurice Yaméogo fut élu conseiller général de Koudougou à l'assemblée territoriale de la Côte d'Ivoire. La Haute-Volta n'existait plus depuis 1932, et Koudougou relevait alors de la Côte d'Ivoire. Il fut élu en 1948 grand conseiller de l'AOF.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Philippe Zinda Kaboré fut élu député à l'Assemblée nationale française au titre de :",
+      "o": [
+        "la Haute-Volta",
+        "le Soudan français",
+        "la Côte d'Ivoire",
+        "le Niger"
+      ],
+      "r": 2,
+      "x": "En 1946, la Haute-Volta n'existait plus et la majeure partie de son territoire relevait de la Côte d'Ivoire. Philippe Zinda Kaboré fut élu avec Félix Houphouët-Boigny et Ouezzin Coulibaly parmi les trois députés de la Côte d'Ivoire. Il avait pour mission d'obtenir la reconstitution de la Haute-Volta.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Philippe Zinda Kaboré fut élu député à l'Assemblée nationale française le :",
+      "o": [
+        "18 octobre 1946",
+        "10 novembre 1946",
+        "15 décembre 1946",
+        "4 septembre 1947"
+      ],
+      "r": 1,
+      "x": "Philippe Zinda Kaboré fut élu lors des élections législatives du 10 novembre 1946. Le 18 octobre 1946 marque l'ouverture du congrès constitutif du RDA à Bamako. La loi de reconstitution de la Haute-Volta fut votée le 4 septembre 1947.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Philippe Zinda Kaboré, formé à l'École William Ponty de Dakar, était de profession :",
+      "o": [
+        "instituteur",
+        "commis",
+        "pharmacien",
+        "juriste"
+      ],
+      "r": 2,
+      "x": "Après l'École William Ponty, Philippe Zinda Kaboré se forma en pharmacie à l'École de médecine de Dakar. Il avait auparavant étudié à Bingerville, en Côte d'Ivoire. Il fut l'un des premiers grands leaders nationalistes de la Haute-Volta.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Philippe Zinda Kaboré mourut prématurément à Abidjan en :",
+      "o": [
+        "1945",
+        "1946",
+        "1947",
+        "1948"
+      ],
+      "r": 2,
+      "x": "Philippe Zinda Kaboré mourut à Abidjan en mai 1947, à l'âge de 26 ans, alors qu'il s'apprêtait à rejoindre Paris. L'opinion publique parla très tôt d'empoisonnement, tandis que les médecins conclurent à une crise cardiaque. Il ne vit donc pas la reconstitution de la Haute-Volta, votée en septembre 1947.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Philippe Zinda Kaboré était originaire de :",
+      "o": [
+        "Kaya",
+        "Ouahigouya",
+        "Tenkodogo",
+        "Koudougou"
+      ],
+      "r": 3,
+      "x": "Philippe Zinda Kaboré naquit le 18 novembre 1920 à Koudougou, fils d'un chef de village moaga. Koudougou est aussi la ville natale de Maurice Yaméogo et d'Henri Guissou. Elle fut l'un des foyers majeurs de la vie politique voltaïque.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le lycée Philippe Zinda Kaboré, l'un des plus prestigieux établissements du pays, se trouve à :",
+      "o": [
+        "Ouagadougou",
+        "Koudougou",
+        "Bobo-Dioulasso",
+        "Ouahigouya"
+      ],
+      "r": 0,
+      "x": "Le lycée Philippe Zinda Kaboré de Ouagadougou honore la mémoire du député mort en 1947. Il est l'un des établissements secondaires les plus réputés du Burkina Faso. Kaboré était pourtant natif de Koudougou.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "À l'Assemblée nationale française, Philippe Zinda Kaboré siégea avec le groupe :",
+      "o": [
+        "communiste",
+        "gaulliste",
+        "socialiste",
+        "démocrate-chrétien"
+      ],
+      "r": 0,
+      "x": "Élu député de Côte d'Ivoire (qui englobait alors la Haute-Volta) en novembre 1946 aux côtés de Félix Houphouët-Boigny et Ouezzin Coulibaly, Philippe Zinda Kaboré (membre du RDA) s'apparenta au groupe communiste via l'Union républicaine et résistante. Brillamment anticolonialiste, il fut l'un des plus jeunes parlementaires du Palais-Bourbon avant son décès prématuré en mai 1947.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Daniel Ouezzin Coulibaly fut élu député en 1946 sur la liste du :",
+      "o": [
+        "MPA",
+        "PRA",
+        "RDA",
+        "PSEMA"
+      ],
+      "r": 2,
+      "x": "Ouezzin Coulibaly fut élu en 1946 sur la liste du Rassemblement démocratique africain, avec Houphouët-Boigny et Kaboré. Le PRA et le MPA furent créés plus tard. Le PSEMA ne vit le jour qu'en 1955.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La loi rétablissant le territoire de la Haute-Volta fut adoptée le :",
+      "o": [
+        "11 avril 1946",
+        "21 octobre 1946",
+        "4 septembre 1947",
+        "31 mars 1948"
+      ],
+      "r": 2,
+      "x": "La loi n° 47-1707 du 4 septembre 1947 rétablit le territoire de la Haute-Volta. Le 11 avril 1946 est la date de la loi supprimant le travail forcé. La loi du 31 mars 1948 institua le conseil général de la Haute-Volta.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La loi rétablissant le territoire de la Haute-Volta porte le numéro :",
+      "o": [
+        "46-645",
+        "47-1707",
+        "48-570",
+        "52-130"
+      ],
+      "r": 1,
+      "x": "La loi n° 47-1707 du 4 septembre 1947 est celle de la reconstitution de la Haute-Volta. La loi n° 46-645 supprima le travail forcé et la loi n° 48-570 créa le conseil général. La loi n° 52-130 transforma ce conseil en assemblée territoriale.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La loi de reconstitution rétablit la Haute-Volta dans ses limites de :",
+      "o": [
+        "1919",
+        "1927",
+        "1932",
+        "1937"
+      ],
+      "r": 2,
+      "x": "La Haute-Volta fut reconstituée dans ses frontières de 1932, c'est-à-dire telles qu'elles existaient à la veille du démembrement. Elle ne retrouva donc pas le cercle de Say, rattaché au Niger dès 1927. Ces limites sont, pour l'essentiel, celles de l'actuel Burkina Faso.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le chef-lieu de la Haute-Volta reconstituée fut fixé à :",
+      "o": [
+        "Koudougou",
+        "Bobo-Dioulasso",
+        "Ouahigouya",
+        "Ouagadougou"
+      ],
+      "r": 3,
+      "x": "La Haute-Volta reconstituée eut de nouveau Ouagadougou pour chef-lieu. Bobo-Dioulasso, terminus du chemin de fer, profita néanmoins de la réorganisation pour attirer les activités commerciales. Les deux villes restèrent les principaux pôles du territoire.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le conseil général de la Haute-Volta fut institué par la loi du :",
+      "o": [
+        "4 septembre 1947",
+        "31 mars 1948",
+        "27 juin 1948",
+        "6 février 1952"
+      ],
+      "r": 1,
+      "x": "La loi n° 48-570 du 31 mars 1948 institua le conseil général de la Haute-Volta, élu au suffrage restreint. Le 27 juin 1948 eut lieu l'élection partielle des députés du territoire. Le conseil général fut transformé en assemblée territoriale en 1952.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le conseil général de la Haute-Volta fut transformé en assemblée territoriale en :",
+      "o": [
+        "1948",
+        "1952",
+        "1956",
+        "1957"
+      ],
+      "r": 1,
+      "x": "La loi n° 52-130, publiée au Journal officiel du 7 février 1952, transforma le conseil général en assemblée territoriale. Le suffrage universel et le collège unique ne vinrent qu'avec la loi-cadre de 1956. Les premières élections sous ce nouveau régime eurent lieu en mars 1957.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Après la reconstitution de la Haute-Volta, le Grand Conseil de l'AOF comptait :",
+      "o": [
+        "25 membres",
+        "30 membres",
+        "40 membres",
+        "50 membres"
+      ],
+      "r": 2,
+      "x": "Le Grand Conseil de l'AOF comptait quarante membres, soit cinq élus par assemblée de territoire. La reconstitution de la Haute-Volta porta à huit le nombre de territoires représentés. Le Grand Conseil siégeait à Dakar auprès du gouverneur général.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Après la reconstitution de la Haute-Volta, l'AOF comptait :",
+      "o": [
+        "six territoires",
+        "sept territoires",
+        "huit territoires",
+        "neuf territoires"
+      ],
+      "r": 2,
+      "x": "L'AOF regroupait alors huit territoires : Mauritanie, Sénégal, Guinée, Côte d'Ivoire, Dahomey, Haute-Volta, Soudan et Niger. Le Togo, sous tutelle, était administré à part. La loi-cadre de 1956 dota chacun de ces huit territoires d'un conseil de gouvernement.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "De 1946 à 1958, la France et ses territoires d'outre-mer formaient :",
+      "o": [
+        "l'Union française",
+        "l'Empire colonial",
+        "le Commonwealth",
+        "la Communauté"
+      ],
+      "r": 0,
+      "x": "La Constitution de 1946 regroupa la France et ses territoires d'outre-mer dans l'Union française. La Haute-Volta reconstituée évolua dans ce cadre à partir de 1947. La Communauté, instituée par la Constitution du 4 octobre 1958, lui succéda.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Lors de l'élection partielle de juin 1948, les trois sièges de député de la Haute-Volta furent remportés par :",
+      "o": [
+        "le Mouvement populaire africain",
+        "le Parti démocratique voltaïque",
+        "l'Union indépendante",
+        "l'Union voltaïque"
+      ],
+      "r": 3,
+      "x": "L'Union voltaïque remporta les trois sièges avec plus de 82 % des voix, au profit d'Henri Guissou, de Mamadou Ouédraogo et de Nazi Boni. Ce parti, héritier de l'UDIHV, était soutenu par la chefferie et l'administration. La liste concurrente de l'Union indépendante n'obtint qu'environ 18 % des voix.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Aux élections législatives de 1951, la Haute-Volta élut à l'Assemblée nationale française :",
+      "o": [
+        "deux députés",
+        "trois députés",
+        "quatre députés",
+        "six députés"
+      ],
+      "r": 2,
+      "x": "En 1951, la Haute-Volta élut quatre députés : Joseph Conombo, Henri Guissou, Mamadou Ouédraogo et Nazi Boni. Les trois premiers furent élus sur la liste de l'Union voltaïque. Nazi Boni fut élu sur sa propre liste.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le député voltaïque Nazi Boni, élu à l'Assemblée nationale française de 1948 à 1959, était issu du peuple :",
+      "o": [
+        "peul",
+        "mossi",
+        "lobi",
+        "bwa"
+      ],
+      "r": 3,
+      "x": "Nazi Boni, né à Bwan, était issu du peuple bwa ; il siégea à l'Assemblée nationale française de 1948 à 1959. Son roman « Crépuscule des temps anciens » évoque l'histoire des Bwaba. En 1956, il fut élu sous l'étiquette du Mouvement populaire africain (MPA).",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le 28 juillet 1948, Maurice Yaméogo fut élu :",
+      "o": [
+        "maire de Koudougou",
+        "grand conseiller de l'AOF",
+        "député à Paris",
+        "sénateur de la Haute-Volta"
+      ],
+      "r": 1,
+      "x": "Maurice Yaméogo fut élu grand conseiller de l'AOF pour la Haute-Volta le 28 juillet 1948, à 26 ans à peine. Il siégea ainsi au Grand Conseil à Dakar. Ce mandat marqua une étape importante de son ascension politique.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "En 1948, le Grand Conseil de l'AOF, où siégeait Maurice Yaméogo, était présidé par :",
+      "o": [
+        "Léopold Sédar Senghor",
+        "Gabriel d'Arboussier",
+        "Félix Houphouët-Boigny",
+        "Lamine Guèye"
+      ],
+      "r": 3,
+      "x": "Le Sénégalais Lamine Guèye présidait alors le Grand Conseil de l'AOF à Dakar. Il avait donné son nom à la loi du 7 mai 1946 accordant la citoyenneté française aux ressortissants des colonies. Gabriel d'Arboussier présida plus tard ce même Grand Conseil.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Avant sa carrière politique, Maurice Yaméogo fut une figure du syndicat :",
+      "o": [
+        "FO",
+        "UGTAN",
+        "CGT",
+        "CFTC"
+      ],
+      "r": 3,
+      "x": "Maurice Yaméogo fut une figure dominante de la Confédération française des travailleurs chrétiens (CFTC) en Haute-Volta, dont il devint vice-président. Ce syndicalisme chrétien était lié à sa formation dans les établissements catholiques. La CGT était, elle, proche des communistes.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le PSEMA, créé en 1955, fut fondé par Joseph Conombo et :",
+      "o": [
+        "Henri Guissou",
+        "Maurice Yaméogo",
+        "Ouezzin Coulibaly",
+        "Nazi Boni"
+      ],
+      "r": 0,
+      "x": "Joseph Conombo et Henri Guissou fondèrent le PSEMA en 1955, après l'éclatement de l'Union voltaïque. Nazi Boni anima de son côté le MPA. Maurice Yaméogo et Ouezzin Coulibaly se retrouvèrent au sein du RDA.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Joseph Conombo, élu député de la Haute-Volta en 1951, était de profession :",
+      "o": [
+        "médecin",
+        "pharmacien",
+        "instituteur",
+        "avocat"
+      ],
+      "r": 0,
+      "x": "Le docteur Joseph Issoufou Conombo était médecin ; il conduisit la liste de l'Union voltaïque en 1951. Il fonda le PSEMA avec Henri Guissou en 1955. Il fut plus tard Premier ministre de la Haute-Volta, de 1978 à 1980.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Parmi les députés de la Haute-Volta élus en 1956 figurait :",
+      "o": [
+        "Begnon Koné",
+        "Gérard Kango Ouédraogo",
+        "Maurice Yaméogo",
+        "Philippe Zinda Kaboré"
+      ],
+      "r": 1,
+      "x": "En 1956, la Haute-Volta élut Gérard Kango Ouédraogo, Nazi Boni, Joseph Conombo et Henri Guissou. Philippe Zinda Kaboré était mort en 1947. Begnon Koné siégea, lui, au Sénat français de 1958 à 1959.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le Mouvement démocratique voltaïque (MDV) comptait parmi ses animateurs le Français :",
+      "o": [
+        "Michel Dorange",
+        "Max Berthet",
+        "Yvon Bourges",
+        "Paul Masson"
+      ],
+      "r": 0,
+      "x": "Le MDV fut animé par Gérard Kango Ouédraogo et Michel Dorange, un capitaine et homme politique français installé en Haute-Volta. Ouezzin Coulibaly s'allia à ce mouvement pour accéder au pouvoir en 1957. Yvon Bourges, Max Berthet et Paul Masson furent des représentants de l'administration française.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le Parti démocratique unifié (PDU) naquit de la fusion du RDA et du :",
+      "o": [
+        "MPA",
+        "PRA",
+        "MDV",
+        "PSEMA"
+      ],
+      "r": 3,
+      "x": "Un compromis trouvé avec le Mogho Naba Saga II permit la fusion du RDA et du PSEMA de Joseph Conombo au sein du PDU. Cette union visait à dépasser la division du pays en deux blocs politiques. Elle permit au RDA de s'implanter en pays moaga.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Les premiers syndicats apparurent en Haute-Volta en 1946 dans la ville de :",
+      "o": [
+        "Bobo-Dioulasso",
+        "Ouahigouya",
+        "Ouagadougou",
+        "Koudougou"
+      ],
+      "r": 0,
+      "x": "Les syndicats apparurent en Haute-Volta en 1946, d'abord à Bobo-Dioulasso. Ils s'implantèrent à Ouagadougou en 1948. Ils animèrent, avec les partis et les associations, la vie politique du territoire reconstitué.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Entre 1953 et 1956, Ouezzin Coulibaly siégea au Parlement français en tant que :",
+      "o": [
+        "député",
+        "sénateur",
+        "ministre",
+        "questeur"
+      ],
+      "r": 1,
+      "x": "Ouezzin Coulibaly fut député de 1946 à 1951, sénateur de 1953 à 1956, puis de nouveau député de 1956 à 1958. Il fut aussi conseiller général et conseiller territorial. Il devint en 1957 le chef du premier gouvernement de la Haute-Volta.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le premier évêque africain de Haute-Volta, consacré le 29 février 1956, est :",
+      "o": [
+        "Mgr Joanny Thévenoud",
+        "Mgr Prosper Hacquard",
+        "Mgr Paul Zoungrana",
+        "Mgr Dieudonné Yougbaré"
+      ],
+      "r": 3,
+      "x": "Mgr Dieudonné Yougbaré fut consacré évêque de Koupéla le 29 février 1956. Cette consécration marqua la prise en main de l'Église par le clergé local. Mgr Paul Zoungrana devint en 1960 le premier archevêque africain de Ouagadougou.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le premier archevêque africain de Ouagadougou, nommé en 1960, est :",
+      "o": [
+        "Mgr Joanny Thévenoud",
+        "Mgr Paul Zoungrana",
+        "Mgr Dieudonné Yougbaré",
+        "Mgr Anthyme Bayala"
+      ],
+      "r": 1,
+      "x": "Mgr Paul Zoungrana devint archevêque de Ouagadougou en 1960, succédant aux évêques missionnaires. Il fut créé cardinal par le pape Paul VI en 1965. Mgr Dieudonné Yougbaré était, depuis 1956, évêque de Koupéla.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le chemin de fer Abidjan-Niger atteignit Ouagadougou en :",
+      "o": [
+        "1948",
+        "1950",
+        "1952",
+        "1954"
+      ],
+      "r": 3,
+      "x": "Après une longue interruption à Bobo-Dioulasso, la voie ferrée atteignit Ouagadougou en octobre 1954. Ce prolongement, appelé chemin de fer du Mossi, fut obtenu notamment grâce à la mobilisation des Voltaïques. Il désenclava la capitale du territoire.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La loi-cadre sur l'évolution des territoires d'outre-mer fut adoptée le :",
+      "o": [
+        "7 mai 1946",
+        "23 juin 1956",
+        "31 mars 1957",
+        "28 septembre 1958"
+      ],
+      "r": 1,
+      "x": "La loi-cadre fut votée le 23 juin 1956 par l'Assemblée nationale française. Le 31 mars 1957 eurent lieu les premières élections territoriales organisées en application de cette loi. Le référendum sur la Communauté se tint le 28 septembre 1958.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La loi-cadre sur l'évolution des territoires d'outre-mer porte le nom du ministre :",
+      "o": [
+        "Pierre Mendès France",
+        "Michel Debré",
+        "René Pleven",
+        "Gaston Defferre"
+      ],
+      "r": 3,
+      "x": "Gaston Defferre, ministre de la France d'outre-mer, prépara cette loi dans le gouvernement de Guy Mollet. Elle fut adoptée à une large majorité. Michel Debré fut plus tard le Premier ministre qui signa les accords d'indépendance de 1960.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La loi-cadre sur l'évolution des territoires d'outre-mer institua dans les territoires de l'AOF :",
+      "o": [
+        "la Communauté française",
+        "le suffrage universel",
+        "l'indépendance immédiate",
+        "la citoyenneté française"
+      ],
+      "r": 1,
+      "x": "La loi-cadre institua le suffrage universel et le collège unique, et dota chaque territoire d'un conseil de gouvernement. La citoyenneté française avait été accordée par la loi Lamine Guèye de 1946. La Communauté ne fut créée qu'en 1958.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Les premières élections territoriales au suffrage universel organisées en Haute-Volta en application de la loi-cadre eurent lieu le :",
+      "o": [
+        "17 juin 1951",
+        "31 mars 1957",
+        "17 mai 1957",
+        "28 septembre 1958"
+      ],
+      "r": 1,
+      "x": "Les élections du 31 mars 1957 furent remportées de justesse par le PDU, alliance de la section RDA et du PSEMA. Le 17 juin 1951 avaient eu lieu des élections législatives. Le premier conseil de gouvernement fut formé le 17 mai 1957.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le premier conseil de gouvernement de la Haute-Volta fut formé le :",
+      "o": [
+        "23 juin 1956",
+        "31 mars 1957",
+        "29 avril 1957",
+        "17 mai 1957"
+      ],
+      "r": 3,
+      "x": "Le 17 mai 1957, l'assemblée territoriale porta Ouezzin Coulibaly à la tête du premier gouvernement de la Haute-Volta. Les élections territoriales avaient eu lieu le 31 mars 1957. La loi-cadre qui créait ces conseils datait du 23 juin 1956.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Lors de la formation du premier conseil de gouvernement de la Haute-Volta, Ouezzin Coulibaly en était :",
+      "o": [
+        "le secrétaire général",
+        "le haut-commissaire",
+        "le gouverneur",
+        "le vice-président"
+      ],
+      "r": 3,
+      "x": "Selon la loi-cadre, le conseil de gouvernement était présidé par le gouverneur, et son vice-président était choisi parmi les élus africains. Ouezzin Coulibaly en fut le vice-président, le gouverneur Yvon Bourges en étant le président. Il dirigea ainsi, de fait, le premier gouvernement voltaïque.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le gouverneur de la Haute-Volta qui présidait le premier conseil de gouvernement était :",
+      "o": [
+        "Albert Mouragues",
+        "Max Berthet",
+        "Yvon Bourges",
+        "Paul Masson"
+      ],
+      "r": 2,
+      "x": "Yvon Bourges fut gouverneur de la Haute-Volta de novembre 1956 à juillet 1958 et présida à ce titre le premier conseil de gouvernement. Max Berthet assura ensuite l'intérim, avant de devenir haut-commissaire. Paul Masson fut le dernier haut-commissaire jusqu'à l'indépendance.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "En 1958, dans le gouvernement de Ouezzin Coulibaly, Maurice Yaméogo détenait le portefeuille de :",
+      "o": [
+        "l'Intérieur",
+        "les Finances",
+        "la Justice",
+        "la Santé"
+      ],
+      "r": 0,
+      "x": "Ministre de l'Agriculture en mai 1957, Maurice Yaméogo reçut l'Intérieur début 1958 et devint le numéro deux du gouvernement. Cette position lui permit d'assurer l'intérim à la mort de Ouezzin Coulibaly en septembre 1958. Il prit ensuite la tête du gouvernement.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Naba Kougri devint Mogho Naba en :",
+      "o": [
+        "1942",
+        "1947",
+        "1957",
+        "1960"
+      ],
+      "r": 2,
+      "x": "Après la mort de Naba Saga II le 12 novembre 1957, son fils Moussa Congo lui succéda le 28 novembre sous le nom de Naba Kougri. Il régna jusqu'à sa mort le 8 décembre 1982. Son fils Naba Baongo II lui succéda.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Daniel Ouezzin Coulibaly, chef du premier gouvernement de la Haute-Volta, mourut à Paris le :",
+      "o": [
+        "17 mai 1957",
+        "17 décembre 1957",
+        "7 septembre 1958",
+        "11 décembre 1958"
+      ],
+      "r": 2,
+      "x": "Ouezzin Coulibaly mourut à Paris le 7 septembre 1958, à 49 ans, moins de deux ans après avoir pris la tête du gouvernement. Il avait formé le premier conseil de gouvernement le 17 mai 1957. Sa disparition ouvrit la voie à Maurice Yaméogo.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "En octobre 1958, Célestine Ouezzin Coulibaly fut nommée ministre :",
+      "o": [
+        "des Affaires sociales",
+        "de la Justice",
+        "de la Santé publique",
+        "de l'Éducation nationale"
+      ],
+      "r": 0,
+      "x": "Le 24 octobre 1958, Célestine Ouezzin Coulibaly devint ministre des Affaires sociales, de l'Habitat et du Travail. Elle fut probablement la première femme ministre d'un gouvernement d'Afrique de l'Ouest francophone. Elle était la veuve de Daniel Ouezzin Coulibaly.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "En 1948, Célestine Ouezzin Coulibaly devint secrétaire générale de la section féminine du :",
+      "o": [
+        "MPA",
+        "RDA",
+        "PRA",
+        "PSEMA"
+      ],
+      "r": 1,
+      "x": "Célestine Ouezzin Coulibaly contribua à créer la section féminine du RDA en Côte d'Ivoire et en Haute-Volta, dont elle devint secrétaire générale en 1948. Elle conduisit notamment des marches de femmes militantes. Elle fut l'une des pionnières de l'engagement politique des femmes voltaïques.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le 17 octobre 1958, le Mogho Naba Kougri tenta d'instaurer en Haute-Volta :",
+      "o": [
+        "un régime de parti unique",
+        "une république fédérale",
+        "un gouvernement militaire provisoire",
+        "une monarchie constitutionnelle"
+      ],
+      "r": 3,
+      "x": "Le 17 octobre 1958, jour où l'assemblée territoriale devait désigner le successeur de Ouezzin Coulibaly, Naba Kougri tenta d'imposer une monarchie constitutionnelle. Il rassembla environ 3 000 partisans. La tentative échoua et Maurice Yaméogo s'imposa à la tête du gouvernement.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Lors du référendum du 28 septembre 1958, les électeurs de la Haute-Volta approuvèrent la Communauté avec environ :",
+      "o": [
+        "75 % de oui",
+        "85 % de oui",
+        "92 % de oui",
+        "99 % de oui"
+      ],
+      "r": 3,
+      "x": "Le oui l'emporta en Haute-Volta avec plus de 99 % des suffrages exprimés. La Haute-Volta choisit ainsi le statut d'État membre de la Communauté. Ce vote ouvrit la voie à la proclamation de la République.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Lors du référendum du 28 septembre 1958, le seul territoire de l'AOF à voter non fut :",
+      "o": [
+        "la Guinée",
+        "le Dahomey",
+        "le Niger",
+        "le Sénégal"
+      ],
+      "r": 0,
+      "x": "La Guinée fut le seul territoire de l'AOF à rejeter la Constitution et la Communauté proposées par le général de Gaulle. Elle proclama son indépendance dès le 2 octobre 1958. Tous les autres territoires, dont la Haute-Volta, votèrent oui.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "À la suite du référendum de 1958, la Haute-Volta devint :",
+      "o": [
+        "un État indépendant",
+        "un territoire sous tutelle",
+        "un département français d'outre-mer",
+        "un État membre de la Communauté"
+      ],
+      "r": 3,
+      "x": "Après le oui au référendum, la Haute-Volta adopta le statut d'État membre de la Communauté. Elle ne devint pleinement indépendante qu'en 1960. Seule la Guinée accéda immédiatement à l'indépendance.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La République de Haute-Volta fut proclamée, au sein de la Communauté, le :",
+      "o": [
+        "17 mai 1957",
+        "11 décembre 1958",
+        "30 décembre 1958",
+        "15 mars 1959"
+      ],
+      "r": 1,
+      "x": "La République de Haute-Volta fut proclamée le 11 décembre 1958, comme État membre de la Communauté. Cette date est aujourd'hui celle de la fête nationale du Burkina Faso. La première Constitution fut adoptée par référendum le 15 mars 1959.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le premier haut-commissaire de la France auprès de la République de Haute-Volta, de décembre 1958 à février 1959, fut :",
+      "o": [
+        "Paul Masson",
+        "Max Berthet",
+        "Yvon Bourges",
+        "Gaston Defferre"
+      ],
+      "r": 1,
+      "x": "Max Berthet, qui assurait l'intérim du gouverneur depuis juillet 1958, devint haut-commissaire le 11 décembre 1958. Paul Masson lui succéda en février 1959 jusqu'à l'indépendance. Yvon Bourges avait été gouverneur de 1956 à 1958.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le congrès préparatoire de la Fédération du Mali, auquel participa la Haute-Volta, se tint en :",
+      "o": [
+        "mars 1957",
+        "septembre 1958",
+        "décembre 1958",
+        "mai 1959"
+      ],
+      "r": 2,
+      "x": "Fin décembre 1958, les représentants du Sénégal, du Soudan, du Dahomey et de la Haute-Volta se réunirent à Bamako pour préparer la Fédération du Mali. La Haute-Volta et le Dahomey se retirèrent ensuite du projet, sous la pression de la France et de la Côte d'Ivoire. La fédération ne réunit finalement que le Sénégal et le Soudan.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La Constitution de la Fédération du Mali fut adoptée à Dakar par les délégués des quatre États le :",
+      "o": [
+        "29 décembre 1958",
+        "17 janvier 1959",
+        "15 mars 1959",
+        "29 mai 1959"
+      ],
+      "r": 1,
+      "x": "Le 17 janvier 1959, les 44 délégués du Sénégal, du Soudan, de la Haute-Volta et du Dahomey adoptèrent à l'unanimité la Constitution de la Fédération du Mali. La Haute-Volta et le Dahomey renoncèrent ensuite à la ratifier. Le 29 mai 1959 vit au contraire naître le Conseil de l'Entente.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Renonçant au projet fédéral, Maurice Yaméogo fit finalement adhérer la Haute-Volta à la Communauté :",
+      "o": [
+        "individuellement",
+        "avec la Côte d'Ivoire",
+        "au sein du Conseil de l'Entente",
+        "avec le Dahomey et le Niger"
+      ],
+      "r": 0,
+      "x": "Dans son projet de Constitution soumis aux députés fin février 1959, Maurice Yaméogo prévoyait que la Haute-Volta adhère individuellement à la Communauté. Il jugeait l'économie voltaïque trop liée à celle de la Côte d'Ivoire pour se tourner vers Dakar. Le Soudan et le Sénégal formèrent seuls la Fédération du Mali.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La première Constitution de la République de Haute-Volta fut adoptée par référendum le :",
+      "o": [
+        "11 décembre 1958",
+        "17 janvier 1959",
+        "15 mars 1959",
+        "29 mai 1959"
+      ],
+      "r": 2,
+      "x": "La première Constitution fut adoptée par référendum le 15 mars 1959 et promulguée le 19 mars. Une révision du 9 décembre 1959 permit à Maurice Yaméogo de prendre le titre de président de la République. Une nouvelle Constitution fut adoptée après l'indépendance, en novembre 1960.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Aux élections législatives du 19 avril 1959, le RDA obtint, sur 75 sièges :",
+      "o": [
+        "moins de la moitié",
+        "un peu plus de la moitié",
+        "plus des quatre cinquièmes",
+        "la totalité"
+      ],
+      "r": 2,
+      "x": "Selon les sources, le RDA obtint entre 62 et 65 des 75 sièges, puis davantage à la suite de ralliements. Le PRA, très minoritaire, disparut peu après. Maurice Yaméogo en sortit renforcé à la tête du gouvernement.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le président de l'Assemblée élue en avril 1959 fut :",
+      "o": [
+        "Begnon Koné",
+        "Henri Guissou",
+        "Nazi Boni",
+        "Joseph Conombo"
+      ],
+      "r": 0,
+      "x": "Le sénateur Begnon Koné fut élu président de l'Assemblée après la victoire du RDA. Il avait siégé au Sénat français de 1958 à 1959. Joseph Conombo et Henri Guissou avaient été députés à Paris sous la IVe République.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le Conseil de l'Entente fut créé le :",
+      "o": [
+        "17 janvier 1959",
+        "15 mars 1959",
+        "29 mai 1959",
+        "11 juillet 1960"
+      ],
+      "r": 2,
+      "x": "Le Conseil de l'Entente fut créé le 29 mai 1959 par les chefs de gouvernement de la Côte d'Ivoire, de la Haute-Volta, du Dahomey et du Niger. Il visait à coordonner les politiques économiques et sociales de ses membres. Le Togo le rejoignit en 1966.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le Conseil de l'Entente fut créé par la Côte d'Ivoire, la Haute-Volta, le Niger et :",
+      "o": [
+        "le Dahomey",
+        "le Soudan",
+        "la Guinée",
+        "le Togo"
+      ],
+      "r": 0,
+      "x": "Le Dahomey, l'actuel Bénin, fut l'un des quatre membres fondateurs du Conseil de l'Entente. Le Togo n'y adhéra qu'en 1966. Le Soudan s'était engagé dans la Fédération du Mali avec le Sénégal.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le Conseil de l'Entente fut créé à l'initiative de :",
+      "o": [
+        "Maurice Yaméogo",
+        "Félix Houphouët-Boigny",
+        "Léopold Sédar Senghor",
+        "Hamani Diori"
+      ],
+      "r": 1,
+      "x": "Félix Houphouët-Boigny, dirigeant de la Côte d'Ivoire, impulsa la création du Conseil de l'Entente pour faire contrepoids à la Fédération du Mali. Maurice Yaméogo et Hamani Diori représentaient la Haute-Volta et le Niger, tandis que Léopold Sédar Senghor dirigeait le Sénégal, engagé dans la Fédération du Mali. Le Togo rejoignit l'organisation en 1966.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Une révision de la Constitution de 1959 permit à Maurice Yaméogo de prendre le titre de :",
+      "o": [
+        "président de l'Assemblée",
+        "haut-commissaire de la France",
+        "Premier ministre",
+        "président de la République"
+      ],
+      "r": 3,
+      "x": "La révision du 9 décembre 1959 permit à Maurice Yaméogo de devenir président de la République. Il dirigeait auparavant le gouvernement comme président du Conseil. Il conduisit ensuite la Haute-Volta à l'indépendance.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le drapeau noir, blanc et rouge de la Haute-Volta fut officiellement adopté le :",
+      "o": [
+        "11 décembre 1958",
+        "15 mars 1959",
+        "9 décembre 1959",
+        "5 août 1960"
+      ],
+      "r": 2,
+      "x": "Le drapeau à trois bandes horizontales noire, blanche et rouge fut adopté le 9 décembre 1959. Il resta en usage jusqu'au 4 août 1984. Il fut alors remplacé par le drapeau rouge et vert frappé d'une étoile jaune.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Les trois couleurs du drapeau de la Haute-Volta faisaient référence :",
+      "o": [
+        "aux trois Volta",
+        "aux trois royaumes",
+        "aux trois régions",
+        "aux trois partis"
+      ],
+      "r": 0,
+      "x": "Les couleurs noire, blanche et rouge du drapeau évoquaient les trois principales rivières du pays : la Volta Noire, la Volta Blanche et la Volta Rouge. Le nom même de Haute-Volta renvoyait au cours supérieur de ce fleuve. Le président Yaméogo y voyait l'image de toute la Haute-Volta.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La devise de la République de Haute-Volta était :",
+      "o": [
+        "Unité, Travail, Justice",
+        "Union, Discipline, Travail",
+        "Travail, Liberté, Patrie",
+        "Unité, Progrès, Justice"
+      ],
+      "r": 0,
+      "x": "La République de Haute-Volta avait pour devise « Unité, Travail, Justice ». Le Burkina Faso adopta plus tard la devise « Unité, Progrès, Justice ». « Union, Discipline, Travail » est la devise de la Côte d'Ivoire.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "L'hymne national de la Haute-Volta, remplacé en 1984 par le Ditanyè, est connu sous le titre :",
+      "o": [
+        "« Fière Volta »",
+        "« L'Abidjanaise »",
+        "« La Nigérienne »",
+        "« L'Aube nouvelle »"
+      ],
+      "r": 0,
+      "x": "L'hymne de la Haute-Volta, appelé « Hymne national voltaïque », s'ouvrait sur les mots « Fière Volta de mes aïeux ». Il fut remplacé par le Ditanyè en août 1984. « L'Abidjanaise » et « L'Aube nouvelle » sont les hymnes de la Côte d'Ivoire et du Bénin, et « La Nigérienne » fut celui du Niger.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le dernier haut-commissaire de la France en Haute-Volta avant l'indépendance fut :",
+      "o": [
+        "Max Berthet",
+        "Paul Masson",
+        "Albert Mouragues",
+        "Yvon Bourges"
+      ],
+      "r": 1,
+      "x": "Paul Masson fut haut-commissaire de février 1959 à l'indépendance du 5 août 1960. Il avait succédé à Max Berthet. Yvon Bourges avait été le dernier gouverneur titulaire, avant l'intérim de Max Berthet.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Les accords transférant à la Haute-Volta les compétences de la Communauté furent signés à Paris le :",
+      "o": [
+        "11 juillet 1960",
+        "5 août 1960",
+        "20 septembre 1960",
+        "27 novembre 1960"
+      ],
+      "r": 0,
+      "x": "L'accord de transfert des compétences fut signé à Paris le 11 juillet 1960 par les gouvernements français et voltaïque. Il permit l'accession de la Haute-Volta à la souveraineté internationale « en plein accord et amitié » avec la France. L'indépendance fut proclamée le 5 août 1960.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Pour la France, les accords de transfert de compétences à la Haute-Volta furent signés par le Premier ministre :",
+      "o": [
+        "Gaston Defferre",
+        "Georges Pompidou",
+        "Guy Mollet",
+        "Michel Debré"
+      ],
+      "r": 3,
+      "x": "Michel Debré, Premier ministre du général de Gaulle, signa l'accord pour la France et Maurice Yaméogo pour la Haute-Volta. Georges Pompidou ne devint Premier ministre qu'en 1962. Guy Mollet dirigeait le gouvernement en 1956, lors de l'adoption de la loi-cadre.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "L'indépendance de la Haute-Volta fut proclamée le :",
+      "o": [
+        "1er août 1960",
+        "3 août 1960",
+        "5 août 1960",
+        "7 août 1960"
+      ],
+      "r": 2,
+      "x": "L'indépendance de la Haute-Volta fut proclamée le 5 août 1960. Le Dahomey l'avait proclamée le 1er août et le Niger le 3 août. La Côte d'Ivoire suivit le 7 août 1960.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "L'indépendance de la Haute-Volta fut proclamée à la radio par :",
+      "o": [
+        "Maurice Yaméogo",
+        "Gérard Kango Ouédraogo",
+        "Begnon Koné",
+        "Joseph Conombo"
+      ],
+      "r": 0,
+      "x": "Maurice Yaméogo proclama l'indépendance dans un discours radiodiffusé. Il rendit hommage à tous les artisans de l'indépendance nationale. Il devint le premier président de la Haute-Volta indépendante.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "L'indépendance de la Haute-Volta fut proclamée à :",
+      "o": [
+        "zéro heure",
+        "six heures",
+        "midi",
+        "dix-huit heures"
+      ],
+      "r": 0,
+      "x": "Maurice Yaméogo proclama l'indépendance « à zéro heure », au premier instant du jour de l'indépendance. Il invoqua le droit naturel de l'homme à la liberté, à l'égalité et à la fraternité. Il conclut par « Vive la Haute-Volta indépendante ».",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Dans sa proclamation de l'indépendance, le chef du gouvernement voltaïque invoqua le droit naturel de l'homme à la liberté, à l'égalité et à :",
+      "o": [
+        "la dignité",
+        "la justice",
+        "la fraternité",
+        "la solidarité"
+      ],
+      "r": 2,
+      "x": "La proclamation reprenait les trois termes de la devise française : liberté, égalité, fraternité. Maurice Yaméogo y salua aussi la « fraternité des peuples de la terre ». Il exprima sa reconnaissance à tous les artisans de l'indépendance.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Parmi les membres du Conseil de l'Entente, le premier à proclamer son indépendance en août 1960 fut :",
+      "o": [
+        "le Dahomey",
+        "la Côte d'Ivoire",
+        "la Haute-Volta",
+        "le Niger"
+      ],
+      "r": 0,
+      "x": "Le Dahomey proclama son indépendance le 1er août 1960, suivi du Niger le 3 août. La Haute-Volta suivit le 5 août et la Côte d'Ivoire le 7 août. Les quatre membres de l'Entente devinrent ainsi indépendants en une semaine.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La Haute-Volta fut admise à l'Organisation des Nations unies (ONU) le :",
+      "o": [
+        "5 août 1960",
+        "20 septembre 1960",
+        "27 novembre 1960",
+        "8 décembre 1960"
+      ],
+      "r": 1,
+      "x": "La Haute-Volta fut admise à l'ONU le 20 septembre 1960, quelques semaines après son indépendance. Le 27 novembre 1960, une nouvelle Constitution fut approuvée par référendum. Le 8 décembre 1960, Maurice Yaméogo fut élu président de la République par l'Assemblée nationale.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La Constitution de la Haute-Volta indépendante fut approuvée par référendum le :",
+      "o": [
+        "15 mars 1959",
+        "20 septembre 1960",
+        "27 novembre 1960",
+        "8 décembre 1960"
+      ],
+      "r": 2,
+      "x": "Adoptée par l'Assemblée nationale le 6 novembre 1960, la Constitution fut approuvée par référendum le 27 novembre 1960. Elle fondait la Ire République de Haute-Volta. La Constitution du 15 mars 1959 avait été adoptée avant l'indépendance.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La première Constitution de la Haute-Volta indépendante prévoyait l'élection du président de la République pour un mandat de :",
+      "o": [
+        "4 ans",
+        "5 ans",
+        "6 ans",
+        "7 ans"
+      ],
+      "r": 1,
+      "x": "La Constitution de 1960 prévoyait l'élection au suffrage universel d'un président et d'une Assemblée nationale pour cinq ans. Maurice Yaméogo fut réélu sans opposant le 3 octobre 1965. Il fut renversé par le soulèvement du 3 janvier 1966.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Maurice Yaméogo fut élu président de la République par l'Assemblée nationale le :",
+      "o": [
+        "5 août 1960",
+        "20 septembre 1960",
+        "27 novembre 1960",
+        "8 décembre 1960"
+      ],
+      "r": 3,
+      "x": "Le 8 décembre 1960, l'Assemblée nationale élut Maurice Yaméogo à l'unanimité président de la République. Il fut le premier président de la Haute-Volta indépendante. La Constitution qui organisait ce pouvoir avait été approuvée le 27 novembre 1960.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le parti de Maurice Yaméogo, devenu parti unique après l'indépendance, était :",
+      "o": [
+        "l'UDV-RDA",
+        "le PRA",
+        "le MPA",
+        "le PSEMA"
+      ],
+      "r": 0,
+      "x": "L'Union démocratique voltaïque (UDV), section voltaïque du RDA, devint après l'indépendance le seul parti autorisé. Maurice Yaméogo élimina toute opposition parlementaire. Le PRA, devenu très minoritaire en 1959, disparut peu après.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le nom « Haute-Volta » fait référence :",
+      "o": [
+        "au cours supérieur de la Volta",
+        "au nom d'un ancien royaume",
+        "aux hauts plateaux mossi",
+        "à l'altitude du pays"
+      ],
+      "r": 0,
+      "x": "Le nom « Haute-Volta » indique que le pays couvre le cours supérieur du fleuve Volta et de ses affluents. Ce nom fut porté de 1919 à 1984. Il fut remplacé par Burkina Faso le 4 août 1984.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La rivière autrefois appelée Volta Noire porte aujourd'hui le nom de :",
+      "o": [
+        "Nakambé",
+        "Comoé",
+        "Nazinon",
+        "Mouhoun"
+      ],
+      "r": 3,
+      "x": "La Volta Noire porte aujourd'hui le nom de Mouhoun. La Volta Blanche est devenue le Nakambé et la Volta Rouge le Nazinon. La Comoé est un autre cours d'eau qui coule vers la Côte d'Ivoire.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La rivière autrefois appelée Volta Blanche porte aujourd'hui le nom de :",
+      "o": [
+        "Nakambé",
+        "Mouhoun",
+        "Nazinon",
+        "Sourou"
+      ],
+      "r": 0,
+      "x": "La Volta Blanche porte aujourd'hui le nom de Nakambé. Le barrage de Bagré est construit sur son cours. Le Sourou est, lui, un affluent du Mouhoun.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "La rivière autrefois appelée Volta Rouge porte aujourd'hui le nom de :",
+      "o": [
+        "Nakambé",
+        "Mouhoun",
+        "Nazinon",
+        "Comoé"
+      ],
+      "r": 2,
+      "x": "La Volta Rouge porte aujourd'hui le nom de Nazinon. Avec le Mouhoun et le Nakambé, elle forme les trois branches de la Volta qui ont inspiré l'ancien nom du pays. Ces trois rivières se rejoignent au Ghana.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Les compétences transférées à la Haute-Volta en 1960 étaient celles que prévoyait l'article 78 de la Constitution française du :",
+      "o": [
+        "27 octobre 1946",
+        "4 octobre 1958",
+        "28 septembre 1958",
+        "11 décembre 1958"
+      ],
+      "r": 1,
+      "x": "L'accord de 1960 transféra à la Haute-Volta toutes les compétences de la Communauté prévues par l'article 78 de la Constitution française du 4 octobre 1958. Cette Constitution, approuvée par le référendum du 28 septembre 1958, fonde la Ve République. Celle du 27 octobre 1946 avait fondé la IVe République et l'Union française.",
+      "_batchId": "histoire/2026-11-19/THEME1"
+    },
+    {
+      "q": "Le président Maurice Yaméogo signa avec la France un accord d'assistance militaire le :",
+      "o": [
+        "24 avril 1961",
+        "12 mars 1962",
+        "18 juillet 1963",
+        "9 décembre 1964"
+      ],
+      "r": 0,
+      "x": "L'accord d'assistance militaire avec la France fut signé le 24 avril 1961, moins d'un an après l'indépendance du 5 août 1960. Il s'inscrivait dans les accords de coopération signés alors par la plupart des anciennes colonies françaises.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La Haute-Volta fut membre fondateur de l'Organisation de l'unité africaine (OUA), créée à :",
+      "o": [
+        "Monrovia",
+        "Addis-Abeba",
+        "Accra",
+        "Brazzaville"
+      ],
+      "r": 1,
+      "x": "L'OUA fut fondée le 25 mai 1963 à Addis-Abeba, en Éthiopie, par 32 États africains indépendants, dont la Haute-Volta. Accra était la capitale du Ghana de Kwame Nkrumah, grand promoteur de l'unité africaine. L'OUA a été remplacée par l'Union africaine en 2002.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "L'Organisation de l'unité africaine (OUA), dont la Haute-Volta fut membre fondateur, vit le jour en :",
+      "o": [
+        "1958",
+        "1960",
+        "1961",
+        "1963"
+      ],
+      "r": 3,
+      "x": "L'OUA fut créée le 25 mai 1963, trois ans après l'indépendance de la plupart des pays d'Afrique francophone. La Haute-Volta de Maurice Yaméogo figurait parmi ses 32 membres fondateurs. Le 25 mai est depuis célébré comme la Journée de l'Afrique.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le 11 janvier 1965, le président Yaméogo supprima par décret :",
+      "o": [
+        "les subventions aux chefs coutumiers",
+        "les bourses des étudiants du supérieur",
+        "l'impôt de capitation",
+        "les indemnités des élus locaux"
+      ],
+      "r": 0,
+      "x": "Le 11 janvier 1965, Maurice Yaméogo mit fin aux subventions versées par l'État aux chefs coutumiers. Cette mesure s'inscrivait dans sa volonté de réduire le poids de la chefferie traditionnelle. Elle aggrava les tensions entre le régime et une partie de la société voltaïque.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Lors de l'élection présidentielle du 3 octobre 1965, Maurice Yaméogo fut réélu avec :",
+      "o": [
+        "75,4 % des voix",
+        "89,3 % des voix",
+        "95,2 % des voix",
+        "99,97 % des voix"
+      ],
+      "r": 3,
+      "x": "Seul candidat, Maurice Yaméogo fut réélu le 3 octobre 1965 avec 99,97 % des suffrages. Le 7 novembre suivant, la liste unique qu'il avait imposée remporta 99,89 % des voix aux législatives. Moins de trois mois plus tard, il était contraint de quitter le pouvoir.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "À l'élection présidentielle d'octobre 1965, Maurice Yaméogo affronta :",
+      "o": [
+        "Joseph Ouédraogo",
+        "Joseph Ki-Zerbo",
+        "aucun adversaire",
+        "Nazi Boni"
+      ],
+      "r": 2,
+      "x": "Maurice Yaméogo fut le seul candidat à l'élection présidentielle du 3 octobre 1965. Le régime de parti unique de l'UDV-RDA empêchait toute candidature d'opposition. Nazi Boni, son principal opposant, vivait alors en exil.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Aux élections législatives du 7 novembre 1965, l'UDV-RDA remporta :",
+      "o": [
+        "50 sièges",
+        "57 sièges",
+        "65 sièges",
+        "75 sièges"
+      ],
+      "r": 3,
+      "x": "Lors des législatives du 7 novembre 1965, l'UDV-RDA, parti unique, remporta la totalité des 75 sièges de l'Assemblée nationale. La liste unique obtint 99,89 % des voix. L'Assemblée élue en 1970 ne comptera plus que 57 sièges.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "En octobre 1965, le remariage du président Yaméogo fit scandale ; sa nouvelle épouse était une ancienne :",
+      "o": [
+        "Miss Dahomey",
+        "Miss Côte d'Ivoire",
+        "Miss Haute-Volta",
+        "Miss Sénégal"
+      ],
+      "r": 1,
+      "x": "Le 17 octobre 1965, Maurice Yaméogo épousa une ancienne Miss Côte d'Ivoire, après avoir divorcé de son épouse Félicité Zagré. Ce mariage, célébré en grande pompe, choqua une population soumise à l'austérité. Il contribua à la chute de popularité du président.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "À la fin de 1965, le projet de double nationalité porté par le président Yaméogo concernait la Haute-Volta et :",
+      "o": [
+        "le Dahomey",
+        "le Ghana",
+        "le Togo",
+        "la Côte d'Ivoire"
+      ],
+      "r": 3,
+      "x": "Yaméogo envisagea une double nationalité entre la Haute-Volta et la Côte d'Ivoire de Félix Houphouët-Boigny. Beaucoup de Voltaïques y virent un retour à la domination ivoirienne connue entre 1932 et 1947. Le projet fut abandonné après le 3 janvier 1966.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le plan d'austérité adopté à la fin de 1965 prévoyait une réduction des salaires des fonctionnaires de :",
+      "o": [
+        "5 %",
+        "10 %",
+        "15 %",
+        "20 %"
+      ],
+      "r": 3,
+      "x": "Le plan d'austérité de fin 1965 réduisait de 20 % les salaires des fonctionnaires. Il fut préparé après la nomination de Raphaël Medah aux Finances le 8 décembre 1965. Cette mesure provoqua la colère des syndicats et la grève générale du 3 janvier 1966.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le budget d'austérité qui déclencha la colère des syndicats fut annoncé par le gouvernement de Yaméogo le :",
+      "o": [
+        "30 décembre 1965",
+        "1er janvier 1966",
+        "3 janvier 1966",
+        "5 janvier 1966"
+      ],
+      "r": 0,
+      "x": "Le budget d'austérité fut annoncé le 30 décembre 1965, avec de fortes baisses de salaires et des hausses d'impôts. Le 1er janvier 1966, Yaméogo proclama l'état d'urgence. Le 3 janvier, la grève générale et les manifestations conduisirent à sa chute.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le ministre des Finances nommé le 8 décembre 1965, chargé du plan d'austérité, est :",
+      "o": [
+        "Tiémoko Marc Garango",
+        "Joseph Conombo",
+        "Raphaël Medah",
+        "Begnon Koné"
+      ],
+      "r": 2,
+      "x": "Raphaël Medah fut nommé aux Finances le 8 décembre 1965 et prépara le plan de réduction des salaires. Tiémoko Marc Garango, intendant militaire, dirigea plus tard les Finances sous le régime de Lamizana. Begnon Koné présidait l'Assemblée élue en 1959.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le 1er janvier 1966, face à la contestation, le président Yaméogo proclama :",
+      "o": [
+        "la suspension de la Constitution",
+        "un remaniement du gouvernement",
+        "la dissolution de l'UDV",
+        "l'état d'urgence"
+      ],
+      "r": 3,
+      "x": "Le 1er janvier 1966, Maurice Yaméogo proclama l'état d'urgence et, le lendemain, déploya des troupes devant les bâtiments publics. Les soldats refusèrent cependant de tirer sur les manifestants. La suspension de la Constitution fut décidée plus tard par le régime militaire.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le soulèvement du 3 janvier 1966 à Ouagadougou fut principalement mené par :",
+      "o": [
+        "les paysans",
+        "les commerçants",
+        "les chefs coutumiers",
+        "les syndicats"
+      ],
+      "r": 3,
+      "x": "Le 3 janvier 1966, une grève générale lancée par les syndicats paralysa Ouagadougou et entraîna la chute de Maurice Yaméogo. Le syndicaliste chrétien Joseph Ouédraogo fut l'une des figures du mouvement. Cet événement est souvent présenté comme le premier soulèvement populaire de l'histoire du pays.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "L'officier à qui revint le pouvoir après la démission de Maurice Yaméogo en janvier 1966 est :",
+      "o": [
+        "Tiémoko Marc Garango",
+        "Saye Zerbo",
+        "Jean-Baptiste Ouédraogo",
+        "Sangoulé Lamizana"
+      ],
+      "r": 3,
+      "x": "Le lieutenant-colonel Sangoulé Lamizana, chef d'état-major, prit le pouvoir à la demande des manifestants. Il resta à la tête de l'État jusqu'au 25 novembre 1980. Saye Zerbo le renversa à cette date.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "En janvier 1966, l'officier qui prit le pouvoir occupait la fonction de :",
+      "o": [
+        "président de l'Assemblée",
+        "commandant du camp de Pô",
+        "ministre de la Défense",
+        "chef d'état-major de l'armée"
+      ],
+      "r": 3,
+      "x": "Lamizana était chef d'état-major de l'armée voltaïque lorsqu'il prit le pouvoir le 3 janvier 1966. L'armée apparut alors comme un arbitre entre le régime et les syndicats. Cette intervention ouvrit une longue période de présence militaire au sommet de l'État.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Lorsqu'il prit le pouvoir en janvier 1966, le nouveau chef de l'État avait le grade de :",
+      "o": [
+        "général de brigade",
+        "commandant",
+        "lieutenant-colonel",
+        "capitaine"
+      ],
+      "r": 2,
+      "x": "Le lieutenant-colonel Aboubakar Sangoulé Lamizana devint chef de l'État en janvier 1966. Il fut ensuite élevé au grade de général pendant ses années de pouvoir. Il promulgua la Constitution de 1977 avec le titre de général de corps d'armée.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Sangoulé Lamizana était né en :",
+      "o": [
+        "1916",
+        "1921",
+        "1932",
+        "1942"
+      ],
+      "r": 0,
+      "x": "Sangoulé Lamizana naquit le 31 janvier 1916 et mourut le 26 mai 2005 à Ouagadougou. Maurice Yaméogo était né en 1921 et Saye Zerbo en 1932. Lamizana était ainsi l'aîné des trois premiers chefs de l'État voltaïques.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Après la chute de Yaméogo, le nouveau régime militaire suspendit la Constitution et prononça la dissolution de l'Assemblée nationale le :",
+      "o": [
+        "5 janvier 1966",
+        "7 janvier 1966",
+        "21 septembre 1966",
+        "28 avril 1967"
+      ],
+      "r": 0,
+      "x": "Le 5 janvier 1966, Lamizana suspendit la Constitution et prononça la dissolution de l'Assemblée nationale. Il prit officiellement la présidence le 7 janvier 1966. Le 21 septembre 1966, les activités des partis politiques furent suspendues.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Les activités des partis politiques, suspendues par le régime militaire, furent de nouveau autorisées en :",
+      "o": [
+        "1966",
+        "1967",
+        "1968",
+        "1969"
+      ],
+      "r": 3,
+      "x": "Le régime militaire autorisa la reprise des activités des partis politiques en novembre 1969. Elles avaient été suspendues le 21 septembre 1966. Cette ouverture prépara le référendum constitutionnel de juin 1970.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "L'ancien président Maurice Yaméogo fut traduit devant un tribunal spécial en :",
+      "o": [
+        "1967",
+        "1969",
+        "1970",
+        "1974"
+      ],
+      "r": 0,
+      "x": "Maurice Yaméogo comparut devant un tribunal spécial à partir du 28 avril 1967. Le verdict ne fut rendu que le 8 mai 1969. Il fut libéré le 5 août 1970.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le 8 mai 1969, l'ancien président Maurice Yaméogo fut condamné à :",
+      "o": [
+        "2 ans de prison",
+        "5 ans de travaux forcés",
+        "10 ans de travaux forcés",
+        "20 ans de travaux forcés"
+      ],
+      "r": 1,
+      "x": "Le 8 mai 1969, Maurice Yaméogo fut condamné à cinq ans de travaux forcés, au bannissement à vie et à la perte de ses droits civiques. Le procès se tint à huis clos. Il fut libéré le 5 août 1970 à la faveur d'une mesure de grâce.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Maurice Yaméogo fut libéré, à la suite d'une grâce présidentielle, le :",
+      "o": [
+        "8 mai 1969",
+        "14 juin 1970",
+        "21 juin 1970",
+        "5 août 1970"
+      ],
+      "r": 3,
+      "x": "Maurice Yaméogo fut libéré le 5 août 1970, jour du dixième anniversaire de l'indépendance, grâce à une mesure de Lamizana. Le 14 juin 1970, la Constitution de la IIe République avait été adoptée. Le 20 décembre 1970 eurent lieu les élections législatives.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Après sa condamnation en 1969, Maurice Yaméogo fut réhabilité dans ses droits civiques par :",
+      "o": [
+        "Saye Zerbo",
+        "Thomas Sankara",
+        "Sangoulé Lamizana",
+        "Blaise Compaoré"
+      ],
+      "r": 3,
+      "x": "Condamné en 1969 pour détournement et privé de ses droits civiques malgré sa libération en 1970 sous Sangoulé Lamizana, Maurice Yaméogo fut officiellement réhabilité par le président Blaise Compaoré en mai 1991. Cette décision lui restitua pleinement ses droits civiques ainsi que ses biens confisqués, deux ans avant sa mort en septembre 1993.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le premier président de la Haute-Volta, Maurice Yaméogo, mourut en :",
+      "o": [
+        "1983",
+        "1987",
+        "1991",
+        "1993"
+      ],
+      "r": 3,
+      "x": "Maurice Yaméogo mourut le 15 septembre 1993, après avoir été soigné à Paris. Il avait été réhabilité en mai 1991. Sangoulé Lamizana, son successeur, mourut en 2005.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La Ire République de Haute-Volta prit fin en :",
+      "o": [
+        "1966",
+        "1970",
+        "1974",
+        "1980"
+      ],
+      "r": 0,
+      "x": "La Ire République, née avec l'indépendance de 1960, prit fin avec la chute de Maurice Yaméogo le 3 janvier 1966. La IIe République fut instaurée par la Constitution de juin 1970. Elle prit fin à son tour en février 1974.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Avant l'adoption de la Constitution de 1991, le Burkina avait connu :",
+      "o": [
+        "2 Républiques",
+        "3 Républiques",
+        "4 Républiques",
+        "5 Républiques"
+      ],
+      "r": 1,
+      "x": "Avant 1991, le pays avait connu trois Républiques : la Ire (1960-1966), la IIe (1970-1974) et la IIIe (1978-1980). Entre ces périodes, le pouvoir fut exercé par des régimes militaires. La Constitution du 2 juin 1991 a fondé la IVe République.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le référendum constitutionnel qui fonda la IIe République fut organisé par le régime appelé :",
+      "o": [
+        "Gouvernement du renouveau national",
+        "Conseil de salut du peuple",
+        "Conseil national de la révolution",
+        "Gouvernement militaire provisoire"
+      ],
+      "r": 3,
+      "x": "Le référendum du 14 juin 1970 fut préparé par le Gouvernement militaire provisoire (GMP), mis en place après le 3 janvier 1966. Le Gouvernement du renouveau national (GRN) ne fut formé qu'après la crise de février 1974. Le CSP et le CNR datent de 1982 et 1983.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La Constitution de la IIe République fut approuvée par référendum le :",
+      "o": [
+        "27 novembre 1960",
+        "14 juin 1970",
+        "27 novembre 1977",
+        "2 juin 1991"
+      ],
+      "r": 1,
+      "x": "La Constitution de la IIe République fut adoptée par référendum le 14 juin 1970 et entra en vigueur le 21 juin. Elle rétablit le multipartisme tout en associant l'armée au pouvoir. Les référendums de 1977 et 1991 fondèrent les IIIe et IVe Républiques.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La Constitution de 1970 prévoyait la participation de l'armée au pouvoir pendant une période transitoire de :",
+      "o": [
+        "4 ans",
+        "5 ans",
+        "6 ans",
+        "7 ans"
+      ],
+      "r": 0,
+      "x": "La Constitution de 1970 prévoyait une transition de quatre ans pendant laquelle l'armée restait associée au pouvoir. Sangoulé Lamizana resta chef de l'État pendant cette période. Avant la fin de cette période, la crise de février 1974 mit fin à l'expérience.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Aux élections législatives du 20 décembre 1970, l'UDV-RDA obtint :",
+      "o": [
+        "25 sièges",
+        "31 sièges",
+        "37 sièges",
+        "45 sièges"
+      ],
+      "r": 2,
+      "x": "L'UDV-RDA remporta 37 sièges avec environ 68 % des voix et conserva la majorité absolue. Le PRA obtint 12 sièges et le MLN de Joseph Ki-Zerbo 6 sièges. Gérard Kango Ouédraogo forma ensuite le gouvernement.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "L'Assemblée nationale élue en décembre 1970 comptait :",
+      "o": [
+        "50 sièges",
+        "57 sièges",
+        "65 sièges",
+        "75 sièges"
+      ],
+      "r": 1,
+      "x": "L'Assemblée nationale élue le 20 décembre 1970 comptait 57 sièges, la majorité absolue étant fixée à 29. Celle de 1965 en comptait 75. Le même nombre de 57 sièges fut repris aux législatives d'avril 1978.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Aux législatives de décembre 1970, le parti arrivé en deuxième position derrière l'UDV-RDA est :",
+      "o": [
+        "le PRA",
+        "le MLN",
+        "l'UPV",
+        "l'UNDD"
+      ],
+      "r": 0,
+      "x": "Le Parti du regroupement africain (PRA) obtint 12 sièges, devant le MLN de Joseph Ki-Zerbo qui en eut 6. L'UNDD fut créée en novembre 1977 et ne participa donc pas à ce scrutin. La participation fut d'environ 48 % des inscrits.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le Mouvement de libération nationale (MLN), qui obtint 6 sièges en 1970, était dirigé par :",
+      "o": [
+        "Gérard Kango Ouédraogo",
+        "Joseph Conombo",
+        "Joseph Ki-Zerbo",
+        "Nazi Boni"
+      ],
+      "r": 2,
+      "x": "Le MLN était le parti de Joseph Ki-Zerbo, d'orientation socialiste. Ki-Zerbo fut candidat à l'élection présidentielle de 1978, où il obtint environ 16 % des voix. Gérard Kango Ouédraogo dirigeait l'UDV-RDA.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Candidat à l'élection présidentielle de 1978, Joseph Ki-Zerbo représentait :",
+      "o": [
+        "l'UNDD",
+        "l'UPV",
+        "le PRA",
+        "l'UDV-RDA"
+      ],
+      "r": 1,
+      "x": "En 1978, Joseph Ki-Zerbo fut le candidat de l'Union progressiste voltaïque (UPV), héritière de son MLN, et obtint environ 16 % des voix. L'UNDD présenta Macaire Ouédraogo. L'UDV-RDA soutenait Sangoulé Lamizana.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le Premier ministre nommé en 1971 dans le cadre de la IIe République est :",
+      "o": [
+        "Joseph Ouédraogo",
+        "Gérard Kango Ouédraogo",
+        "Joseph Issoufou Conombo",
+        "Macaire Ouédraogo"
+      ],
+      "r": 1,
+      "x": "Gérard Kango Ouédraogo, chef de l'UDV-RDA, devint Premier ministre en février 1971. Il fut démis le 8 février 1974, lorsque Lamizana mit fin à la IIe République. Joseph Conombo fut Premier ministre de 1978 à 1980.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le Premier ministre de la IIe République exerça ses fonctions de 1971 à :",
+      "o": [
+        "1972",
+        "1974",
+        "1976",
+        "1978"
+      ],
+      "r": 1,
+      "x": "Gérard Kango Ouédraogo resta Premier ministre jusqu'au 8 février 1974. À cette date, Lamizana prononça la dissolution de l'Assemblée et suspendit la Constitution. Il assuma lui-même les fonctions de Premier ministre jusqu'en juillet 1978.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le syndicaliste Joseph Ouédraogo était issu du courant syndical :",
+      "o": [
+        "islamique",
+        "chrétien",
+        "socialiste",
+        "communiste"
+      ],
+      "r": 1,
+      "x": "Joseph Ouédraogo (1919-1988) était un militant syndical catholique, devenu secrétaire général d'un syndicat chrétien dès 1954. Il fut l'un des meneurs de la grève de janvier 1966. Il fut candidat à l'élection présidentielle de 1978, où il obtint environ 17 % des voix.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le Festival panafricain du cinéma et de la télévision de Ouagadougou (FESPACO) tint sa première édition en :",
+      "o": [
+        "1960",
+        "1963",
+        "1966",
+        "1969"
+      ],
+      "r": 3,
+      "x": "La première édition du festival eut lieu en 1969 à Ouagadougou. Il fut institutionnalisé par un décret du 7 janvier 1972, année où il prit le nom court de FESPACO. Il se tient tous les deux ans.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le FESPACO fut institutionnalisé par un décret du gouvernement voltaïque en :",
+      "o": [
+        "1972",
+        "1976",
+        "1983",
+        "1987"
+      ],
+      "r": 0,
+      "x": "Le décret du 7 janvier 1972 fit du FESPACO une institution reconnue par l'État. La même année fut créé l'Étalon de Yennenga, son grand prix. La première édition du festival remontait à 1969.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le grand prix du FESPACO porte le nom de :",
+      "o": [
+        "Tanit d'or",
+        "Bayard d'or",
+        "Prix Oumarou Ganda",
+        "Étalon de Yennenga"
+      ],
+      "r": 3,
+      "x": "L'Étalon de Yennenga, créé en 1972, récompense le meilleur film africain du festival. Il honore la princesse Yennenga, mère de Ouédraogo selon la tradition. Le Tanit d'or est le prix des Journées cinématographiques de Carthage, en Tunisie.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le premier lauréat du grand prix du FESPACO, en 1972, fut le film « Le Wazzou polygame », réalisé par un cinéaste du :",
+      "o": [
+        "Niger",
+        "Cameroun",
+        "Mali",
+        "Sénégal"
+      ],
+      "r": 0,
+      "x": "« Le Wazzou polygame » du Nigérien Oumarou Ganda remporta le premier grand prix du FESPACO en 1972. Le festival avait vu le jour à Ouagadougou en 1969. Il est devenu le plus grand festival de cinéma du continent.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le FESPACO se tient selon une périodicité de :",
+      "o": [
+        "1 an",
+        "2 ans",
+        "3 ans",
+        "4 ans"
+      ],
+      "r": 1,
+      "x": "Le FESPACO est organisé tous les deux ans à Ouagadougou. Il alterne avec d'autres grands rendez-vous culturels du pays. Il a été créé en 1969 et institutionnalisé en 1972.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le Comité permanent inter-États de lutte contre la sécheresse dans le Sahel (CILSS) fut créé en :",
+      "o": [
+        "1968",
+        "1970",
+        "1973",
+        "1975"
+      ],
+      "r": 2,
+      "x": "Le CILSS fut créé le 12 septembre 1973, en réponse aux grandes sécheresses qui frappaient le Sahel. La Haute-Volta en fut l'un des États fondateurs. Son secrétariat exécutif est installé à Ouagadougou.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le siège du secrétariat exécutif du Comité permanent inter-États de lutte contre la sécheresse dans le Sahel (CILSS) se trouve à :",
+      "o": [
+        "Bobo-Dioulasso",
+        "Ouagadougou",
+        "Niamey",
+        "Nouakchott"
+      ],
+      "r": 1,
+      "x": "Le secrétariat exécutif du CILSS est installé à Ouagadougou. Créé en 1973, le CILSS coordonne la lutte contre la sécheresse et pour la sécurité alimentaire. Niamey abrite le Centre régional AGRHYMET, institution spécialisée du CILSS.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "En octobre 1973, le chef de l'État Sangoulé Lamizana fut reçu à la Maison-Blanche par le président américain :",
+      "o": [
+        "Richard Nixon",
+        "Lyndon Johnson",
+        "Gerald Ford",
+        "Jimmy Carter"
+      ],
+      "r": 0,
+      "x": "Le 15 octobre 1973, Lamizana rencontra Richard Nixon dans le Bureau ovale pour évoquer l'aide face à la sécheresse au Sahel. Gerald Ford succéda à Nixon en août 1974. Cette sécheresse conduisit aussi à la création du CILSS en septembre 1973.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "L'Autorité du Liptako-Gourma (ALG) fut créée le :",
+      "o": [
+        "3 décembre 1970",
+        "17 avril 1973",
+        "12 septembre 1973",
+        "28 mai 1975"
+      ],
+      "r": 0,
+      "x": "L'ALG fut créée le 3 décembre 1970 pour développer la région commune aux trois pays. Le 12 septembre 1973 est la date de création du CILSS. Le 28 mai 1975 fut créée la CEDEAO.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le siège de l'Autorité du Liptako-Gourma (ALG) se trouve à :",
+      "o": [
+        "Gao",
+        "Niamey",
+        "Ouagadougou",
+        "Tillabéri"
+      ],
+      "r": 2,
+      "x": "L'ALG a son siège à Ouagadougou. Elle couvre une zone d'environ 370 000 km² répartie entre trois pays. Dori, ancienne capitale de l'émirat du Liptako, se trouve dans cette zone.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "L'Autorité du Liptako-Gourma (ALG) regroupe le Burkina Faso, le Niger et :",
+      "o": [
+        "le Mali",
+        "le Ghana",
+        "le Bénin",
+        "le Togo"
+      ],
+      "r": 0,
+      "x": "L'ALG réunit le Burkina Faso, le Mali et le Niger, les trois pays qui forment aujourd'hui l'AES. Elle vise la mise en valeur des ressources minières, énergétiques et agricoles de la région. Son nom évoque le Liptako peul et le Gourma.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La Communauté économique des États de l'Afrique de l'Ouest (CEDEAO), dont la Haute-Volta fut membre fondateur, fut créée en mai 1975 à :",
+      "o": [
+        "Accra",
+        "Abuja",
+        "Dakar",
+        "Lagos"
+      ],
+      "r": 3,
+      "x": "La CEDEAO fut créée le 28 mai 1975 par le traité de Lagos, au Nigeria, avec la Haute-Volta parmi ses membres fondateurs. Abuja n'en devint le siège qu'ensuite. Le Burkina Faso s'en est retiré, avec le Mali et le Niger, en janvier 2025.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "L'université de Ouagadougou, première université du pays, fut créée en :",
+      "o": [
+        "1960",
+        "1965",
+        "1969",
+        "1974"
+      ],
+      "r": 3,
+      "x": "L'université de Ouagadougou fut fondée en 1974, sous le régime de Sangoulé Lamizana. Elle fut la première université publique du pays. Elle porte aujourd'hui le nom de l'historien Joseph Ki-Zerbo.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "L'ancienne université de Ouagadougou porte aujourd'hui le nom de :",
+      "o": [
+        "Nazi Boni",
+        "Thomas Sankara",
+        "Joseph Ki-Zerbo",
+        "Norbert Zongo"
+      ],
+      "r": 2,
+      "x": "L'ancienne université de Ouagadougou porte le nom de l'historien Joseph Ki-Zerbo. L'université Nazi Boni se trouve à Bobo-Dioulasso et l'université Norbert Zongo à Koudougou. Une autre université publique de la capitale porte le nom de Thomas Sankara.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le premier conflit armé entre la Haute-Volta et le Mali au sujet de la bande d'Agacher éclata en :",
+      "o": [
+        "1974",
+        "1980",
+        "1983",
+        "1985"
+      ],
+      "r": 0,
+      "x": "Un premier affrontement armé opposa la Haute-Volta et le Mali en 1974 à propos de la bande d'Agacher. Le jeune officier Thomas Sankara s'y distingua. Un second conflit, plus grave, éclata en décembre 1985.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La bande d'Agacher, objet de deux conflits armés, est située à la frontière entre le Burkina Faso et :",
+      "o": [
+        "la Côte d'Ivoire",
+        "le Mali",
+        "le Ghana",
+        "le Niger"
+      ],
+      "r": 1,
+      "x": "La bande d'Agacher se trouve à la frontière nord entre le Burkina Faso et le Mali. Elle fut à l'origine des conflits de 1974 et de 1985. Le différend fut tranché par la Cour internationale de justice le 22 décembre 1986.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La IIe République de Haute-Volta prit fin le :",
+      "o": [
+        "3 janvier 1966",
+        "8 février 1974",
+        "27 novembre 1977",
+        "25 novembre 1980"
+      ],
+      "r": 1,
+      "x": "Le 8 février 1974, Lamizana démit le gouvernement, prononça la dissolution de l'Assemblée et suspendit la Constitution, mettant fin à la IIe République. Le 3 janvier 1966 avait marqué la fin de la Ire République. Le 25 novembre 1980 vit la chute de la IIIe République.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le Premier ministre écarté lors de la crise de février 1974 était :",
+      "o": [
+        "Gérard Kango Ouédraogo",
+        "Joseph Conombo",
+        "Tiémoko Marc Garango",
+        "Joseph Ouédraogo"
+      ],
+      "r": 0,
+      "x": "Gérard Kango Ouédraogo, Premier ministre depuis 1971, fut écarté lors de la crise de février 1974. Lamizana dissout alors l'Assemblée et forma le Gouvernement du renouveau national. Joseph Conombo ne devint Premier ministre qu'en juillet 1978.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Sangoulé Lamizana cumula les fonctions de chef de l'État et de Premier ministre de 1974 à :",
+      "o": [
+        "1975",
+        "1976",
+        "1977",
+        "1978"
+      ],
+      "r": 3,
+      "x": "Lamizana fut Premier ministre de février 1974 au 7 juillet 1978. Il céda alors cette fonction à Joseph Conombo, après les élections de 1978. Il resta chef de l'État jusqu'au 25 novembre 1980.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Au moment de la crise de février 1974, le chef du gouvernement était en rivalité au sein de l'UDV avec :",
+      "o": [
+        "Macaire Ouédraogo",
+        "Joseph Ouédraogo",
+        "Joseph Ki-Zerbo",
+        "Nazi Boni"
+      ],
+      "r": 1,
+      "x": "La rivalité entre Gérard Kango Ouédraogo et Joseph Ouédraogo divisait l'UDV et paralysait les institutions. Lamizana en prit prétexte pour suspendre la Constitution le 8 février 1974. Joseph Ki-Zerbo dirigeait, lui, le MLN, un parti d'opposition.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le gouvernement formé par Lamizana après la crise de février 1974 était appelé :",
+      "o": [
+        "Comité militaire de redressement",
+        "Gouvernement militaire provisoire",
+        "Conseil de salut du peuple",
+        "Gouvernement du renouveau national"
+      ],
+      "r": 3,
+      "x": "Après le 8 février 1974, Lamizana dirigea le Gouvernement du renouveau national (GRN). Le Gouvernement militaire provisoire avait été mis en place après le 3 janvier 1966. Le Conseil de salut du peuple ne vit le jour qu'en 1982.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Saye Zerbo fut ministre des Affaires étrangères de 1974 à 1976 dans le gouvernement de :",
+      "o": [
+        "Sangoulé Lamizana",
+        "Gérard Kango Ouédraogo",
+        "Joseph Conombo",
+        "Maurice Yaméogo"
+      ],
+      "r": 0,
+      "x": "Saye Zerbo fut ministre des Affaires étrangères du 11 février 1974 au 9 février 1976, sous Lamizana. Il commanda ensuite le régiment de Ouagadougou et dirigea le renseignement militaire. Il renversa Lamizana le 25 novembre 1980.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le Mouvement national pour le renouveau (MNR), annoncé par le régime de Lamizana en novembre 1975, visait à instaurer :",
+      "o": [
+        "un régime fédéral",
+        "un parti unique",
+        "une monarchie constitutionnelle",
+        "le multipartisme intégral"
+      ],
+      "r": 1,
+      "x": "Annoncé le 29 novembre 1975, le MNR devait être le cadre unique de toute activité politique, sociale et culturelle. Les syndicats y virent l'instauration d'un parti unique. Ils y répondirent par une grève générale en décembre 1975.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La grève générale contre le projet de parti unique de Lamizana débuta le :",
+      "o": [
+        "8 février 1974",
+        "29 novembre 1975",
+        "30 novembre 1975",
+        "17 décembre 1975"
+      ],
+      "r": 3,
+      "x": "La grève générale se tint les 17 et 18 décembre 1975, à l'appel des centrales syndicales. Le projet de mouvement unique avait été annoncé le 29 novembre 1975. Le 29 janvier 1976, le gouvernement annonça sa propre dissolution.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La grève générale de décembre 1975 fut lancée par un front regroupant :",
+      "o": [
+        "2 centrales syndicales",
+        "3 centrales syndicales",
+        "4 centrales syndicales",
+        "5 centrales syndicales"
+      ],
+      "r": 2,
+      "x": "Quatre centrales syndicales, la CNTV, la CSV, l'OVSL et l'USTV, lancèrent la grève de décembre 1975. Elles reçurent le soutien des élèves, des étudiants et de syndicats autonomes. Leur réunion préparatoire se tint le 30 novembre 1975 à la Bourse du travail de Ouagadougou.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Parmi les centrales syndicales qui lancèrent la grève générale de décembre 1975 figurait :",
+      "o": [
+        "la CFTC",
+        "la CGT",
+        "l'USTV",
+        "l'UGTAN"
+      ],
+      "r": 2,
+      "x": "L'USTV était l'une des quatre centrales voltaïques de la grève, avec la CNTV, la CSV et l'OVSL. L'UGTAN était une centrale fédérale ouest-africaine fondée en 1957. La CGT et la CFTC sont des confédérations françaises actives à l'époque coloniale.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "À la suite de la grève de décembre 1975, le gouvernement en place annonça sa dissolution le :",
+      "o": [
+        "29 janvier 1976",
+        "9 février 1976",
+        "1er octobre 1977",
+        "27 novembre 1977"
+      ],
+      "r": 0,
+      "x": "Le gouvernement annonça sa dissolution le 29 janvier 1976, à la suite de la grève générale. Lamizana forma un nouveau cabinet le 9 février 1976. Cette victoire syndicale ouvrit la voie au retour à une vie constitutionnelle.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "L'interdiction des activités des partis politiques fut levée par le régime de Lamizana le :",
+      "o": [
+        "29 janvier 1976",
+        "1er octobre 1977",
+        "27 novembre 1977",
+        "30 avril 1978"
+      ],
+      "r": 1,
+      "x": "Le 1er octobre 1977, le régime leva l'interdiction des activités politiques des partis. Le 27 novembre 1977 fut adoptée par référendum la Constitution de la IIIe République. Les élections législatives eurent lieu le 30 avril 1978.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La Constitution de la IIIe République fut adoptée par référendum le :",
+      "o": [
+        "14 juin 1970",
+        "27 novembre 1977",
+        "14 mai 1978",
+        "25 novembre 1980"
+      ],
+      "r": 1,
+      "x": "La Constitution de la IIIe République fut approuvée par référendum le 27 novembre 1977. Elle rétablit une vie démocratique après la période d'exception ouverte en 1974. Le 14 mai 1978 eut lieu le premier tour de l'élection présidentielle.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Lors du référendum qui fonda la IIIe République, le oui obtint :",
+      "o": [
+        "75,30 % des voix",
+        "85,20 % des voix",
+        "92,40 % des voix",
+        "98,70 % des voix"
+      ],
+      "r": 3,
+      "x": "Le projet de Constitution fut adopté avec 98,70 % des suffrages exprimés. La participation atteignit 71,45 % des inscrits. Sept partis politiques s'étaient reconstitués pour participer à la campagne.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le taux de participation au référendum constitutionnel de la IIIe République fut de :",
+      "o": [
+        "35,17 %",
+        "48,29 %",
+        "71,45 %",
+        "99,18 %"
+      ],
+      "r": 2,
+      "x": "La participation au référendum de 1977 atteignit 71,45 % des inscrits. Elle n'avait été que de 48,29 % aux législatives de 1970. Au premier tour de la présidentielle de 1978, elle tomba à 35,17 %.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La Constitution de 1977 limitait le nombre de partis politiques autorisés à :",
+      "o": [
+        "2 partis",
+        "3 partis",
+        "4 partis",
+        "5 partis"
+      ],
+      "r": 1,
+      "x": "La Constitution de 1977 réservait l'existence légale aux trois partis ayant obtenu le plus de suffrages aux législatives. Cette règle obligeait chaque formation à concourir pour ne pas disparaître. Elle prévoyait par ailleurs un régime de type présidentiel.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La Constitution de la IIIe République instaurait un régime de type :",
+      "o": [
+        "parlementaire",
+        "fédéral",
+        "présidentiel",
+        "d'assemblée"
+      ],
+      "r": 0,
+      "x": "Adoptée en novembre 1977, cette Constitution instaurait un régime semi-présidentiel (ou parlementaire rationalisé) avec un chef de l'État élu au suffrage universel et un Premier ministre responsable devant l'Assemblée. Elle limitait le multipartisme à trois partis et permit l'élection de Sangoulé Lamizana en mai 1978.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La Constitution de la IIIe République fut promulguée par Sangoulé Lamizana le :",
+      "o": [
+        "13 décembre 1977",
+        "30 avril 1978",
+        "14 mai 1978",
+        "28 mai 1978"
+      ],
+      "r": 0,
+      "x": "Lamizana promulgua la Constitution le 13 décembre 1977, après la proclamation des résultats par la Cour suprême. Le référendum avait eu lieu le 27 novembre 1977. Le 28 mai 1978 se tint le second tour de l'élection présidentielle.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "L'Union nationale pour la défense de la démocratie (UNDD) fut créée en :",
+      "o": [
+        "1970",
+        "1974",
+        "1977",
+        "1980"
+      ],
+      "r": 2,
+      "x": "L'UNDD fut créée en novembre 1977, peu avant le retour à la vie constitutionnelle. Elle présenta Macaire Ouédraogo à l'élection présidentielle de 1978. Hermann Yaméogo en était le secrétaire général.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Hermann Yaméogo, secrétaire général de l'UNDD en 1978, était né en :",
+      "o": [
+        "1938",
+        "1943",
+        "1948",
+        "1953"
+      ],
+      "r": 2,
+      "x": "Hermann Yaméogo, fils du premier président Maurice Yaméogo, est né le 27 août 1948 à Koudougou. Il n'avait donc qu'une trentaine d'années en 1978. Il devint ensuite l'une des figures de l'opposition sous la IVe République.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "En 1978, Hermann Yaméogo ne put se présenter à l'élection présidentielle car la Constitution exigeait un âge minimal de :",
+      "o": [
+        "25 ans",
+        "30 ans",
+        "35 ans",
+        "40 ans"
+      ],
+      "r": 3,
+      "x": "La Constitution de 1977 fixait à 40 ans l'âge minimal pour être candidat, alors qu'Hermann Yaméogo, né en 1948, n'avait qu'une trentaine d'années. L'UNDD investit donc le banquier Macaire Ouédraogo. Celui-ci parvint jusqu'au second tour.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Les élections législatives de la IIIe République eurent lieu le :",
+      "o": [
+        "30 avril 1978",
+        "14 mai 1978",
+        "28 mai 1978",
+        "7 juillet 1978"
+      ],
+      "r": 0,
+      "x": "Les législatives se tinrent le 30 avril 1978, avant l'élection présidentielle. L'UDV-RDA obtint 28 des 57 sièges et l'UNDD 13 sièges. Le premier tour de la présidentielle eut lieu le 14 mai 1978.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Aux élections législatives d'avril 1978, le parti arrivé en tête est :",
+      "o": [
+        "l'UDV-RDA",
+        "le Front de refus",
+        "l'UNDD",
+        "l'Union progressiste voltaïque"
+      ],
+      "r": 0,
+      "x": "L'UDV-RDA arriva en tête avec 28 sièges, sans obtenir la majorité absolue des 57 sièges. L'UNDD, créée quelques mois plus tôt, obtint 13 sièges. Le PRA ne survécut pas à la nouvelle règle limitant le nombre de partis.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Aux élections législatives d'avril 1978, l'UDV-RDA obtint :",
+      "o": [
+        "13 sièges",
+        "20 sièges",
+        "24 sièges",
+        "28 sièges"
+      ],
+      "r": 3,
+      "x": "L'UDV-RDA remporta 28 des 57 sièges en 1978, contre 37 en 1970. Ce résultat la privait de la majorité absolue, fixée à 29 sièges. L'UNDD obtint pour sa part 13 sièges.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Aux élections législatives d'avril 1978, l'UNDD obtint :",
+      "o": [
+        "6 sièges",
+        "9 sièges",
+        "13 sièges",
+        "28 sièges"
+      ],
+      "r": 2,
+      "x": "Pour sa première participation, l'UNDD obtint 13 sièges sur 57. L'UDV-RDA en remporta 28. En 1970, le MLN n'avait obtenu que 6 sièges.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le premier tour de l'élection présidentielle de 1978 se tint le :",
+      "o": [
+        "27 novembre 1977",
+        "13 décembre 1977",
+        "30 avril 1978",
+        "14 mai 1978"
+      ],
+      "r": 3,
+      "x": "Le premier tour eut lieu le 14 mai 1978 et le second le 28 mai. Les législatives s'étaient tenues le 30 avril 1978. Le 7 juillet 1978, Joseph Conombo forma le gouvernement.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Au premier tour de l'élection présidentielle de 1978, le nombre de candidats était de :",
+      "o": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "r": 2,
+      "x": "Quatre candidats s'affrontèrent : Sangoulé Lamizana, Macaire Ouédraogo, Joseph Ouédraogo et Joseph Ki-Zerbo. Aucun n'obtint la majorité absolue au premier tour. Lamizana et Macaire Ouédraogo se qualifièrent pour le second tour.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Au premier tour de l'élection présidentielle de 1978, Sangoulé Lamizana obtint environ :",
+      "o": [
+        "42 % des voix",
+        "51 % des voix",
+        "56 % des voix",
+        "65 % des voix"
+      ],
+      "r": 0,
+      "x": "Lamizana obtint environ 42 % des voix au premier tour et fut contraint à un second tour. Macaire Ouédraogo arriva deuxième avec environ 25 %. Joseph Ouédraogo et Joseph Ki-Zerbo obtinrent chacun environ 16 à 17 %.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Au premier tour de l'élection présidentielle de 1978, le candidat arrivé en deuxième position obtint environ :",
+      "o": [
+        "25 % des voix",
+        "33 % des voix",
+        "42 % des voix",
+        "56 % des voix"
+      ],
+      "r": 0,
+      "x": "Macaire Ouédraogo recueillit environ 25 % des voix au premier tour, derrière Lamizana. Il devança Joseph Ouédraogo et Joseph Ki-Zerbo, qui obtinrent chacun environ 16 à 17 %. Il se qualifia ainsi pour le second tour.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Au second tour de l'élection présidentielle de 1978, Sangoulé Lamizana l'emporta avec environ :",
+      "o": [
+        "44 % des voix",
+        "51 % des voix",
+        "56 % des voix",
+        "62 % des voix"
+      ],
+      "r": 2,
+      "x": "Le 28 mai 1978, Lamizana fut réélu avec environ 56 % des voix contre 44 % pour Macaire Ouédraogo. La participation fut d'environ 44 % des inscrits. Ce scrutin disputé est souvent cité comme l'un des plus ouverts de l'Afrique de l'Ouest de l'époque.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Au second tour de l'élection présidentielle de mai 1978, Sangoulé Lamizana affronta :",
+      "o": [
+        "Joseph Ouédraogo",
+        "Joseph Ki-Zerbo",
+        "Macaire Ouédraogo",
+        "Gérard Kango Ouédraogo"
+      ],
+      "r": 2,
+      "x": "Macaire Ouédraogo, candidat de l'UNDD, affronta Lamizana au second tour du 28 mai 1978. Il obtint environ 44 % des voix. Joseph Ki-Zerbo et Joseph Ouédraogo avaient été éliminés au premier tour.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le candidat de l'UNDD à l'élection présidentielle de 1978 était de profession :",
+      "o": [
+        "historien",
+        "banquier",
+        "syndicaliste",
+        "médecin"
+      ],
+      "r": 1,
+      "x": "Macaire Ouédraogo était un banquier, nommé en 1970 à la tête de la Banque nationale de développement de la Haute-Volta. Il démissionna de ce poste pour entrer en politique. Joseph Ki-Zerbo était historien et Joseph Ouédraogo syndicaliste.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Après le coup d'État de novembre 1980, le nouveau chef de l'État cumula cette fonction avec celle de :",
+      "o": [
+        "ministre des Finances",
+        "président de l'Assemblée",
+        "chef du gouvernement",
+        "ministre de la Santé"
+      ],
+      "r": 2,
+      "x": "Saye Zerbo prit à la fois la tête de l'État et celle du gouvernement, qu'il forma le 7 décembre 1980. L'Assemblée nationale avait été dissoute dès le 26 novembre 1980. Lamizana avait lui aussi cumulé ces deux fonctions de 1974 à 1978.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La participation au premier tour de l'élection présidentielle de 1978 fut d'environ :",
+      "o": [
+        "35 %",
+        "48 %",
+        "62 %",
+        "71 %"
+      ],
+      "r": 0,
+      "x": "Seuls 35 % environ des inscrits votèrent au premier tour, le 14 mai 1978. La participation remonta à environ 44 % au second tour. Elle avait atteint 71,45 % au référendum de 1977.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le Premier ministre de la IIIe République est :",
+      "o": [
+        "Joseph Ouédraogo",
+        "Gérard Kango Ouédraogo",
+        "Joseph Conombo",
+        "Macaire Ouédraogo"
+      ],
+      "r": 2,
+      "x": "Le docteur Joseph Issoufou Conombo forma le gouvernement le 7 juillet 1978. Il était membre de l'UDV-RDA. Il resta en fonctions jusqu'au coup d'État du 25 novembre 1980.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le Premier ministre nommé en juillet 1978 resta en fonctions jusqu'en :",
+      "o": [
+        "1979",
+        "1980",
+        "1982",
+        "1983"
+      ],
+      "r": 1,
+      "x": "Joseph Conombo fut Premier ministre du 7 juillet 1978 jusqu'au coup d'État du 25 novembre 1980. Saye Zerbo cumula ensuite les fonctions de chef de l'État et de chef du gouvernement. Thomas Sankara fut nommé Premier ministre en janvier 1983.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Installée après les élections de 1978, la IIIe République dura environ :",
+      "o": [
+        "2 ans",
+        "3 ans",
+        "4 ans",
+        "6 ans"
+      ],
+      "r": 0,
+      "x": "La IIIe République, installée en 1978, fut renversée le 25 novembre 1980, soit après environ deux ans. La IIe République avait duré de 1970 à 1974. La Ire République avait duré de 1960 à 1966.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le mouvement de grève qui précéda le coup d'État de novembre 1980 fut lancé par les :",
+      "o": [
+        "commerçants",
+        "enseignants",
+        "cultivateurs",
+        "transporteurs"
+      ],
+      "r": 1,
+      "x": "Les enseignants entrèrent en grève le 1er octobre 1980, et le mouvement devint une grève générale début novembre. Le pouvoir de Lamizana en sortit très affaibli. Saye Zerbo le renversa le 25 novembre 1980.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La grève qui affaiblit le régime de Lamizana à la fin de 1980 débuta le :",
+      "o": [
+        "1er septembre 1980",
+        "1er octobre 1980",
+        "15 octobre 1980",
+        "3 novembre 1980"
+      ],
+      "r": 1,
+      "x": "La grève des enseignants commença le 1er octobre 1980 avant de s'étendre en grève générale. Elle affaiblit durablement le régime de Lamizana. Le 25 novembre 1980, Saye Zerbo prit le pouvoir.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La IIIe République fut renversée par un coup d'État le :",
+      "o": [
+        "7 novembre 1980",
+        "25 novembre 1980",
+        "28 novembre 1980",
+        "7 décembre 1980"
+      ],
+      "r": 1,
+      "x": "Le 25 novembre 1980, le colonel Saye Zerbo renversa Sangoulé Lamizana et mit fin à la IIIe République. Il forma son gouvernement le 7 décembre 1980. Le 7 novembre 1982, Zerbo fut à son tour renversé.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "L'officier qui renversa Sangoulé Lamizana en novembre 1980 est :",
+      "o": [
+        "Blaise Compaoré",
+        "Saye Zerbo",
+        "Thomas Sankara",
+        "Jean-Baptiste Ouédraogo"
+      ],
+      "r": 1,
+      "x": "Le colonel Saye Zerbo prit le pouvoir le 25 novembre 1980 avec le soutien des syndicats et d'une partie de la société civile. Il fut renversé deux ans plus tard par Jean-Baptiste Ouédraogo. Thomas Sankara et Blaise Compaoré arrivèrent au pouvoir en 1983 et en 1987.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Lors du coup d'État de novembre 1980, son auteur avait le grade de :",
+      "o": [
+        "capitaine",
+        "général",
+        "commandant",
+        "colonel"
+      ],
+      "r": 3,
+      "x": "Le colonel Saye Zerbo dirigeait alors le régiment de Ouagadougou et le renseignement militaire. Il avait été formé à Saint-Cyr. Les capitaines Sankara et Compaoré appartenaient à une génération d'officiers plus jeunes.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le coup d'État qui renversa Lamizana se déroula :",
+      "o": [
+        "sans effusion de sang",
+        "avec une vingtaine de morts",
+        "après une élection annulée",
+        "après la démission du président"
+      ],
+      "r": 0,
+      "x": "Le renversement de Lamizana se fit sans effusion de sang, dans un climat de grève générale. Il reçut le soutien des syndicats et de groupes civils. Le coup d'État de novembre 1982 fit au contraire une vingtaine de morts.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Sangoulé Lamizana resta à la tête de l'État pendant environ :",
+      "o": [
+        "8 ans",
+        "11 ans",
+        "15 ans",
+        "18 ans"
+      ],
+      "r": 2,
+      "x": "Lamizana dirigea l'État du 3 janvier 1966 au 25 novembre 1980, soit près de quinze ans. Il traversa trois régimes : le pouvoir militaire, la IIe et la IIIe Républiques. Il reste l'un des chefs d'État restés le plus longtemps au pouvoir dans l'histoire du pays.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Sangoulé Lamizana mourut à Ouagadougou en :",
+      "o": [
+        "1988",
+        "1993",
+        "1998",
+        "2005"
+      ],
+      "r": 3,
+      "x": "Sangoulé Lamizana mourut le 26 mai 2005 à Ouagadougou, à 89 ans. Maurice Yaméogo était mort en 1993 et Saye Zerbo mourut en 2013. Le syndicaliste Joseph Ouédraogo était décédé en 1988.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "De 1966 à 1967, Sangoulé Lamizana cumula la fonction de chef de l'État avec celle de ministre :",
+      "o": [
+        "de la Santé publique",
+        "des Affaires étrangères",
+        "de l'Éducation nationale",
+        "des Finances"
+      ],
+      "r": 1,
+      "x": "Au début de son régime, Lamizana dirigea aussi la diplomatie voltaïque, de 1966 à 1967. Il cumula plus tard, de 1974 à 1978, la fonction de Premier ministre. Saye Zerbo dirigea les Affaires étrangères de 1974 à 1976.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le sigle CMRPN, désignant la junte arrivée au pouvoir en novembre 1980, signifie :",
+      "o": [
+        "Conseil militaire de renouveau pour la paix nationale",
+        "Conseil militaire de restauration pour la patrie nouvelle",
+        "Comité militaire de reconstruction pour le peuple et la nation",
+        "Comité militaire de redressement pour le progrès national"
+      ],
+      "r": 3,
+      "x": "Le Comité militaire de redressement pour le progrès national (CMRPN) fut mis en place par Saye Zerbo après le 25 novembre 1980. Il suspendit la Constitution de 1977, interdit les partis et prononça la dissolution de l'Assemblée. Il resta au pouvoir jusqu'au 7 novembre 1982.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le CMRPN, organe dirigeant mis en place en novembre 1980, comptait :",
+      "o": [
+        "21 membres",
+        "25 membres",
+        "31 membres",
+        "41 membres"
+      ],
+      "r": 2,
+      "x": "Le CMRPN réunissait 31 officiers de différentes générations. Il comptait parmi eux de jeunes officiers radicaux, dont Thomas Sankara. Ces tensions internes contribuèrent à sa chute en 1982.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le chef de l'État de 1980 à 1982 était originaire de :",
+      "o": [
+        "Gaoua",
+        "Dédougou",
+        "Kaya",
+        "Tougan"
+      ],
+      "r": 3,
+      "x": "Saye Zerbo naquit le 27 août 1932 à Tougan. Jean-Baptiste Ouédraogo, qui le renversa en 1982, était natif de Kaya. Thomas Sankara était, lui, né à Yako.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Avant de rejoindre l'armée voltaïque, Saye Zerbo fut formé à l'école militaire française de :",
+      "o": [
+        "Fréjus",
+        "Kadiogo",
+        "Antsirabe",
+        "Saint-Cyr"
+      ],
+      "r": 3,
+      "x": "Saye Zerbo s'engagea dans l'armée française en 1950 et fut formé à Saint-Cyr. Il servit comme parachutiste avant de rejoindre l'armée voltaïque en 1961. L'académie d'Antsirabe, à Madagascar, forma la génération de Sankara.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Saye Zerbo avait combattu comme parachutiste de l'armée française en Indochine et :",
+      "o": [
+        "au Cameroun",
+        "en Algérie",
+        "à Madagascar",
+        "en Corée"
+      ],
+      "r": 1,
+      "x": "Saye Zerbo participa à la guerre d'Indochine puis à la guerre d'Algérie au sein de l'armée française. Il intégra l'armée de la Haute-Volta en 1961. Il fut ensuite ministre des Affaires étrangères de 1974 à 1976.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Parmi les mesures prises par le régime du CMRPN figure la suspension :",
+      "o": [
+        "du droit de grève",
+        "du franc CFA",
+        "de l'impôt sur le revenu",
+        "de la chefferie coutumière"
+      ],
+      "r": 0,
+      "x": "Le CMRPN gela les salaires et suspendit le droit de grève, ce qui le mit en conflit avec les syndicats. Ceux-ci avaient pourtant soutenu le coup d'État de 1980. Cette opposition syndicale contribua à la chute de Saye Zerbo.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Thomas Sankara entra au gouvernement du CMRPN au poste de :",
+      "o": [
+        "ministre de l'Intérieur",
+        "secrétaire d'État à l'Information",
+        "ministre de la Défense",
+        "secrétaire d'État à la Jeunesse"
+      ],
+      "r": 1,
+      "x": "Thomas Sankara fut nommé secrétaire d'État à l'Information en septembre 1981. Il démissionna avec éclat en avril 1982. Il devint Premier ministre en janvier 1983, sous le CSP.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Thomas Sankara entra au gouvernement du CMRPN en :",
+      "o": [
+        "septembre 1981",
+        "avril 1982",
+        "novembre 1982",
+        "janvier 1983"
+      ],
+      "r": 0,
+      "x": "Sankara entra au gouvernement de Saye Zerbo en septembre 1981. Il le quitta en avril 1982 en dénonçant le régime. Le CMRPN fut renversé en novembre 1982.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Thomas Sankara démissionna de son poste au gouvernement du CMRPN le :",
+      "o": [
+        "septembre 1981",
+        "12 avril 1982",
+        "7 novembre 1982",
+        "10 janvier 1983"
+      ],
+      "r": 1,
+      "x": "Le 12 avril 1982, Sankara démissionna publiquement pour protester contre la dérive antisyndicale du régime. Il avait été nommé en septembre 1981. Le 10 janvier 1983, il devint Premier ministre.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "En démissionnant du gouvernement du CMRPN, Thomas Sankara lança la formule :",
+      "o": [
+        "« Produisons ce que nous consommons ! »",
+        "« Osons inventer l'avenir ! »",
+        "« La patrie ou la mort, nous vaincrons ! »",
+        "« Malheur à ceux qui bâillonnent le peuple ! »"
+      ],
+      "r": 3,
+      "x": "Sankara dénonça la confiscation des libertés par le CMRPN en déclarant : « Malheur à ceux qui bâillonnent le peuple ! » La devise « La patrie ou la mort, nous vaincrons » fut adoptée en août 1984. Les deux autres formules appartiennent aussi au vocabulaire de la Révolution.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le sigle ROC, désignant le groupe clandestin de jeunes officiers fondé notamment par Thomas Sankara, signifie :",
+      "o": [
+        "Regroupement des officiers communistes",
+        "Rassemblement des officiers combattants",
+        "Ralliement des officiers de la capitale",
+        "Réseau des officiers du changement"
+      ],
+      "r": 0,
+      "x": "Le Regroupement des officiers communistes (ROC) fut fondé par de jeunes officiers sous le régime de Saye Zerbo. Il réunissait notamment Thomas Sankara, Blaise Compaoré, Henri Zongo et Jean-Baptiste Boukary Lingani. Ces quatre officiers furent les chefs historiques de la Révolution.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Parmi les fondateurs du ROC, aux côtés de Thomas Sankara et Blaise Compaoré, figurait :",
+      "o": [
+        "Jean-Baptiste Ouédraogo",
+        "Henri Zongo",
+        "Sangoulé Lamizana",
+        "Saye Zerbo"
+      ],
+      "r": 1,
+      "x": "Le capitaine Henri Zongo fut l'un des quatre fondateurs du ROC et l'un des chefs historiques de la Révolution. Saye Zerbo et Sangoulé Lamizana appartenaient à la génération des officiers supérieurs. Jean-Baptiste Ouédraogo fut président du CSP.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le régime du CMRPN fut renversé le :",
+      "o": [
+        "25 novembre 1980",
+        "12 avril 1982",
+        "7 novembre 1982",
+        "4 août 1983"
+      ],
+      "r": 2,
+      "x": "Le 7 novembre 1982, un nouveau coup d'État renversa Saye Zerbo et le CMRPN. Il fit une vingtaine de morts. Le pouvoir passa au Conseil de salut du peuple (CSP).",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le sigle CSP, désignant l'organe qui renversa le CMRPN, signifie :",
+      "o": [
+        "Conseil supérieur de la patrie",
+        "Comité de soutien populaire",
+        "Conseil de salut du peuple",
+        "Comité de sauvegarde de la paix"
+      ],
+      "r": 2,
+      "x": "Le Conseil de salut du peuple (CSP) prit le pouvoir le 7 novembre 1982 en renversant le CMRPN. Il réunissait des officiers modérés et des officiers radicaux. Ses divisions internes aboutirent au 4 août 1983.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le président du CSP, chef de l'État après la chute du CMRPN, est :",
+      "o": [
+        "Jean-Baptiste Boukary Lingani",
+        "Thomas Sankara",
+        "Jean-Baptiste Ouédraogo",
+        "Blaise Compaoré"
+      ],
+      "r": 2,
+      "x": "Le médecin-commandant Jean-Baptiste Ouédraogo fut désigné président par le CSP, comme compromis entre les factions. Thomas Sankara fut nommé Premier ministre en janvier 1983. Ouédraogo fut renversé le 4 août 1983.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le président du CSP était de profession :",
+      "o": [
+        "ingénieur",
+        "médecin",
+        "juriste",
+        "instituteur"
+      ],
+      "r": 1,
+      "x": "Jean-Baptiste Ouédraogo est un médecin militaire, formé notamment à Abidjan et à Bordeaux. Il fut médecin-chef du camp militaire de Gounghin à Ouagadougou. Après le pouvoir, il fonda en 1992 une clinique à Ouagadougou.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Lorsqu'il devint chef de l'État, le président du CSP avait le grade de :",
+      "o": [
+        "lieutenant",
+        "commandant",
+        "colonel",
+        "capitaine"
+      ],
+      "r": 1,
+      "x": "Jean-Baptiste Ouédraogo était médecin-commandant depuis 1979. Les officiers radicaux du CSP, comme Sankara et Compaoré, étaient capitaines. Saye Zerbo, qu'il renversa, était colonel.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le président du CSP est né à :",
+      "o": [
+        "Kaya",
+        "Tougan",
+        "Pô",
+        "Yako"
+      ],
+      "r": 0,
+      "x": "Jean-Baptiste Ouédraogo naquit le 30 juin 1942 à Kaya. Thomas Sankara était né à Yako et Saye Zerbo à Tougan. Pô abritait le centre d'entraînement des commandos.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le président du CSP exerça la fonction de chef de l'État à partir du :",
+      "o": [
+        "8 novembre 1982",
+        "10 janvier 1983",
+        "17 mai 1983",
+        "4 août 1983"
+      ],
+      "r": 0,
+      "x": "Jean-Baptiste Ouédraogo devint président le 8 novembre 1982, au lendemain du coup d'État. Le 10 janvier 1983, Sankara fut nommé Premier ministre. Ouédraogo fut renversé le 4 août 1983.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Thomas Sankara fut nommé Premier ministre le :",
+      "o": [
+        "25 novembre 1980",
+        "12 avril 1982",
+        "7 novembre 1982",
+        "10 janvier 1983"
+      ],
+      "r": 3,
+      "x": "Le CSP nomma Thomas Sankara Premier ministre le 10 janvier 1983. Ce choix créa un contrepoids face au président Jean-Baptiste Ouédraogo. Leurs désaccords conduisirent à la crise de mai 1983.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "En mai 1983, le Premier ministre Thomas Sankara fut :",
+      "o": [
+        "nommé ambassadeur",
+        "envoyé en formation",
+        "arrêté et limogé",
+        "élu président du CSP"
+      ],
+      "r": 2,
+      "x": "En mai 1983, Sankara fut démis de ses fonctions et arrêté sur ordre du président Jean-Baptiste Ouédraogo. Cette arrestation provoqua des manifestations et la mobilisation de ses partisans. Elle déboucha sur le 4 août 1983.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Peu avant son arrestation, Sankara prononça un discours remarqué lors d'un meeting tenu le 14 mai 1983 à :",
+      "o": [
+        "Ouahigouya",
+        "Koudougou",
+        "Fada N'Gourma",
+        "Bobo-Dioulasso"
+      ],
+      "r": 3,
+      "x": "Le 14 mai 1983, le CSP tint un meeting à Bobo-Dioulasso, où le discours de Sankara éclipsa celui du président. Quelques jours plus tard, Sankara fut arrêté et le CSP épuré. Ces événements précipitèrent la prise du pouvoir du 4 août 1983.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "L'ancien président du CSP retrouva la liberté, grâce à une mesure de clémence, en :",
+      "o": [
+        "1984",
+        "1985",
+        "1987",
+        "1991"
+      ],
+      "r": 1,
+      "x": "L'ancien président du CSP bénéficia d'une mesure de clémence en août 1985. Saye Zerbo fut libéré le même mois. Jean-Baptiste Ouédraogo reprit ensuite son métier de médecin à Ouagadougou.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La colonne militaire qui marcha sur Ouagadougou le 4 août 1983 était conduite par :",
+      "o": [
+        "Jean-Baptiste Boukary Lingani",
+        "Henri Zongo",
+        "Pierre Ouédraogo",
+        "Blaise Compaoré"
+      ],
+      "r": 3,
+      "x": "Le capitaine Blaise Compaoré conduisit la colonne de commandos qui s'empara du pouvoir le 4 août 1983. Il agit pour libérer Sankara et renverser le CSP. Il prit lui-même le pouvoir le 15 octobre 1987.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le 4 août 1983, la colonne militaire qui marcha sur Ouagadougou comptait environ :",
+      "o": [
+        "250 hommes",
+        "1 000 hommes",
+        "2 500 hommes",
+        "5 000 hommes"
+      ],
+      "r": 0,
+      "x": "Blaise Compaoré marcha sur Ouagadougou avec environ 250 hommes, rejoints sur place par d'autres militaires et des civils. L'opération fit treize morts selon certaines sources. Elle porta Thomas Sankara à la tête de l'État.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Thomas Sankara devint chef de l'État le 4 août 1983 à l'âge de :",
+      "o": [
+        "29 ans",
+        "33 ans",
+        "37 ans",
+        "41 ans"
+      ],
+      "r": 1,
+      "x": "Né le 21 décembre 1949, Thomas Sankara avait 33 ans lorsqu'il prit le pouvoir. Il fut l'un des plus jeunes chefs d'État d'Afrique. Il fut assassiné quatre ans plus tard, à 37 ans.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le soir du 4 août 1983, Thomas Sankara annonça la prise du pouvoir par :",
+      "o": [
+        "la télévision",
+        "la radio",
+        "un meeting public",
+        "un communiqué de presse"
+      ],
+      "r": 1,
+      "x": "Sankara lut la proclamation du 4 août 1983 à la radio nationale. Il y annonçait la création du Conseil national de la révolution. Il appelait aussi la population à s'organiser en comités.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La proclamation du 4 août 1983 prononça la dissolution :",
+      "o": [
+        "des partis politiques",
+        "de l'armée nationale",
+        "de la chefferie coutumière",
+        "des syndicats"
+      ],
+      "r": 0,
+      "x": "La proclamation du 4 août 1983 prononça la dissolution des partis politiques. Elle affirma aussi le respect des engagements internationaux du pays. Elle appela à la création de comités populaires dans tout le pays.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Au lendemain du 4 août 1983, l'un des premiers dirigeants étrangers à soutenir publiquement le nouveau pouvoir voltaïque fut :",
+      "o": [
+        "Gnassingbé Eyadéma",
+        "Moussa Traoré",
+        "Mouammar Kadhafi",
+        "Félix Houphouët-Boigny"
+      ],
+      "r": 2,
+      "x": "Dès le 6 août 1983, le dirigeant libyen Mouammar Kadhafi exprima son soutien à Thomas Sankara. Les relations avec la Côte d'Ivoire d'Houphouët-Boigny furent au contraire plus tendues. En octobre 1987, le Togolais Gnassingbé Eyadéma fut parmi les premiers à soutenir Blaise Compaoré.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La révolution proclamée le 4 août 1983 fut désignée sous le nom de :",
+      "o": [
+        "Révolution populaire de libération",
+        "Révolution démocratique et populaire",
+        "Révolution patriotique du peuple",
+        "Révolution nationale et socialiste"
+      ],
+      "r": 1,
+      "x": "Le régime issu du 4 août 1983 se réclamait de la Révolution démocratique et populaire (RDP). Il était dirigé par le Conseil national de la révolution. Sa ligne politique fut exposée dans le Discours d'orientation politique du 2 octobre 1983.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le premier gouvernement révolutionnaire du Conseil national de la révolution (CNR) fut formé le :",
+      "o": [
+        "4 août 1983",
+        "5 août 1983",
+        "24 août 1983",
+        "2 octobre 1983"
+      ],
+      "r": 2,
+      "x": "Le premier gouvernement de la Révolution fut formé le 24 août 1983. Le CNR avait pris le contrôle du pays le 5 août. Le Discours d'orientation politique fut prononcé le 2 octobre 1983.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le premier gouvernement révolutionnaire, formé en août 1983, comptait :",
+      "o": [
+        "15 ministres",
+        "20 ministres",
+        "25 ministres",
+        "30 ministres"
+      ],
+      "r": 1,
+      "x": "Le gouvernement du 24 août 1983 comptait 20 ministres. Il réunissait 15 civils et 5 militaires. Sankara en était le chef en tant que président du CNR.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Parmi les ministres du premier gouvernement révolutionnaire d'août 1983, le nombre de civils était de :",
+      "o": [
+        "5",
+        "10",
+        "15",
+        "20"
+      ],
+      "r": 2,
+      "x": "Le gouvernement d'août 1983 comptait 15 civils et 5 militaires. Cette composition montrait l'alliance entre militaires et organisations civiles de gauche. Le CNR restait cependant dominé par les officiers.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "L'ordonnance du 15 septembre 1983 réorganisa le territoire national en :",
+      "o": [
+        "25 provinces",
+        "30 provinces",
+        "45 provinces",
+        "47 provinces"
+      ],
+      "r": 0,
+      "x": "L'ordonnance du 15 septembre 1983 divisa le pays en 25 provinces. Le découpage en provinces fut ensuite plusieurs fois modifié. Depuis 2025, le pays compte 17 régions et 47 provinces.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "En 1983, chacune des provinces créées par le CNR fut placée sous l'autorité d'un :",
+      "o": [
+        "commandant de cercle",
+        "haut-commissaire",
+        "gouverneur",
+        "préfet de région"
+      ],
+      "r": 1,
+      "x": "Chaque province fut dirigée par un haut-commissaire. Le titre de commandant de cercle datait de l'administration coloniale. Le titre de gouverneur fut plus tard donné aux chefs des régions.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le Discours d'orientation politique (DOP), texte fondateur de la Révolution, fut prononcé le :",
+      "o": [
+        "4 août 1983",
+        "24 août 1983",
+        "14 septembre 1983",
+        "2 octobre 1983"
+      ],
+      "r": 3,
+      "x": "Sankara prononça le Discours d'orientation politique le 2 octobre 1983. Ce texte fixait la ligne politique de la Révolution et désignait ses ennemis. Le 19 octobre 1983 furent créés les tribunaux populaires de la révolution.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Les Tribunaux populaires de la révolution (TPR) furent créés par une ordonnance du :",
+      "o": [
+        "14 septembre 1983",
+        "2 octobre 1983",
+        "19 octobre 1983",
+        "3 janvier 1984"
+      ],
+      "r": 2,
+      "x": "L'ordonnance n° 83-018/CNR/PRES du 19 octobre 1983 créa les TPR. Leurs premières audiences s'ouvrirent le 3 janvier 1984. Ils jugèrent notamment d'anciens dirigeants accusés de détournements.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Les premières audiences des tribunaux populaires créés par le CNR s'ouvrirent le :",
+      "o": [
+        "19 octobre 1983",
+        "3 janvier 1984",
+        "4 août 1984",
+        "1er janvier 1985"
+      ],
+      "r": 1,
+      "x": "Les premières sessions des TPR s'ouvrirent le 3 janvier 1984. Ces tribunaux avaient été créés le 19 octobre 1983. Le 4 août 1984, le pays changea de nom.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Les tribunaux populaires de la Révolution avaient pour mission principale de juger :",
+      "o": [
+        "les crimes commis en temps de guerre",
+        "les litiges fonciers",
+        "les détournements de fonds publics",
+        "les délits commis par des mineurs"
+      ],
+      "r": 2,
+      "x": "Les TPR jugeaient surtout les détournements de deniers publics et les faits de mauvaise gestion. En 1986, l'une de leurs sessions condamna d'anciens responsables pour le détournement d'environ 6,5 milliards de FCFA. Leurs audiences se tenaient en public.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "En 1986, une session des tribunaux populaires condamna trois anciens dirigeants de :",
+      "o": [
+        "l'OUA",
+        "la CEAO",
+        "la BCEAO",
+        "la CEDEAO"
+      ],
+      "r": 1,
+      "x": "Trois anciens responsables furent condamnés à 15 ans de prison pour avoir détourné des fonds de la Communauté économique de l'Afrique de l'Ouest (CEAO). Cette affaire fut l'une des plus retentissantes jugées par les TPR. La CEAO fut remplacée en 1994 par l'UEMOA.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Jugé en mai 1984, Saye Zerbo fut condamné à :",
+      "o": [
+        "5 ans de prison",
+        "10 ans de prison",
+        "15 ans de prison",
+        "20 ans de prison"
+      ],
+      "r": 2,
+      "x": "En mai 1984, Saye Zerbo fut condamné à 15 ans de prison, tandis que Lamizana était également jugé. Zerbo fut libéré en août 1985. Sa condamnation fut annulée le 18 février 1997.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La condamnation prononcée contre Saye Zerbo en 1984 fut annulée en :",
+      "o": [
+        "1985",
+        "1987",
+        "1991",
+        "1997"
+      ],
+      "r": 3,
+      "x": "La condamnation de Saye Zerbo fut annulée le 18 février 1997. Il avait été libéré dès août 1985. Il mourut le 19 septembre 2013 à Ouagadougou.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le sigle CDR, désignant les structures de masse créées après le 4 août 1983, signifie :",
+      "o": [
+        "Cellules de discipline révolutionnaire",
+        "Conseils de développement rural",
+        "Comités de défense de la révolution",
+        "Comités de direction régionale"
+      ],
+      "r": 2,
+      "x": "Les Comités de défense de la révolution (CDR) furent créés dans les quartiers, les villages et les lieux de travail. Sankara avait appelé à leur formation dès la proclamation du 4 août 1983. Ils associaient la population à la gestion locale et à la défense du régime.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Les Pionniers de la révolution, organisation créée en 1983, s'adressaient :",
+      "o": [
+        "aux militaires",
+        "aux enfants",
+        "aux paysans",
+        "aux femmes"
+      ],
+      "r": 1,
+      "x": "Les Pionniers de la révolution étaient une organisation de jeunesse ouverte aux enfants, sur le modèle des mouvements de pionniers. Leurs membres portaient un foulard rouge et un béret jaune. L'organisation disparut après 1987.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "En juin 1984, à la suite d'un complot contre le pouvoir révolutionnaire, le nombre de personnes exécutées fut de :",
+      "o": [
+        "3",
+        "5",
+        "7",
+        "12"
+      ],
+      "r": 2,
+      "x": "Un complot fut déjoué fin mai 1984, et sept personnes furent exécutées le 11 juin 1984. Cet épisode marqua un durcissement du régime. Il fut l'un des premiers épisodes sanglants de la Révolution.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Après le 4 août 1983, l'ancien président du CSP fut :",
+      "o": [
+        "maintenu au gouvernement",
+        "nommé ambassadeur à Paris",
+        "exilé en Côte d'Ivoire",
+        "détenu dans un camp militaire"
+      ],
+      "r": 3,
+      "x": "Jean-Baptiste Ouédraogo fut emprisonné au camp militaire de Pô après le 4 août 1983. Il fut libéré par une mesure de clémence en août 1985. Il reprit ensuite son métier de médecin.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Thomas Sankara commanda à partir de 1976 le Centre national d'entraînement commando (CNEC) situé à :",
+      "o": [
+        "Pô",
+        "Bobo-Dioulasso",
+        "Dédougou",
+        "Kaya"
+      ],
+      "r": 0,
+      "x": "En 1976, Sankara devint commandant du CNEC de Pô, dans le Nahouri. Ce centre fournit en 1983 une partie des troupes qui portèrent la Révolution au pouvoir. En 1983, le centre était commandé par Blaise Compaoré.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Thomas Sankara reçut sa formation d'officier à l'académie militaire d'Antsirabe, située :",
+      "o": [
+        "au Cameroun",
+        "à Madagascar",
+        "en Côte d'Ivoire",
+        "au Sénégal"
+      ],
+      "r": 1,
+      "x": "Après son baccalauréat, Sankara fut formé à l'académie militaire d'Antsirabe, à Madagascar, de 1970 à 1973. Il revint en Haute-Volta comme sous-lieutenant en 1973. Il se distingua dès 1974 dans le conflit avec le Mali.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Thomas Sankara est né à :",
+      "o": [
+        "Pô",
+        "Tougan",
+        "Gaoua",
+        "Yako"
+      ],
+      "r": 3,
+      "x": "Thomas Sankara naquit le 21 décembre 1949 à Yako, dans l'actuelle province du Passoré. Il fit ses études secondaires à Bobo-Dioulasso puis au Prytanée militaire du Kadiogo. Saye Zerbo était natif de Tougan.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Thomas Sankara est né en :",
+      "o": [
+        "1949",
+        "1951",
+        "1955",
+        "1960"
+      ],
+      "r": 0,
+      "x": "Sankara naquit le 21 décembre 1949. Blaise Compaoré, son compagnon d'armes, est né en 1951. Jean-Baptiste Ouédraogo était né en 1942.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "L'ordonnance qui changea le nom de la Haute-Volta en Burkina Faso fut signée le :",
+      "o": [
+        "4 août 1983",
+        "2 août 1984",
+        "4 août 1984",
+        "2 octobre 1984"
+      ],
+      "r": 1,
+      "x": "L'ordonnance fut signée le 2 août 1984 par le capitaine Thomas Sankara. Elle prit effet le 4 août 1984, jour du premier anniversaire de la Révolution. Elle fixait aussi le nouveau drapeau, l'hymne et la devise.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "L'ordonnance de 1984 changeant le nom du pays prit effet le 4 août 1984 à :",
+      "o": [
+        "0 heure",
+        "6 heures",
+        "12 heures",
+        "18 heures"
+      ],
+      "r": 0,
+      "x": "L'ordonnance précisait qu'elle prenait effet le 4 août 1984 à 0 heure. Elle avait été signée deux jours plus tôt, le 2 août. L'indépendance avait elle aussi été proclamée à zéro heure, le 5 août 1960.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le changement de nom du pays, en août 1984, coïncida avec le premier anniversaire :",
+      "o": [
+        "de la Révolution",
+        "du Discours d'orientation politique",
+        "de la nomination de Sankara comme Premier ministre",
+        "de l'arrestation de Sankara"
+      ],
+      "r": 0,
+      "x": "Le nouveau nom entra en vigueur le 4 août 1984, un an jour pour jour après la prise du pouvoir du 4 août 1983. Le Discours d'orientation politique datait du 2 octobre 1983. Ce choix visait à marquer la rupture avec l'héritage colonial.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le nom « Burkina Faso » est généralement traduit par :",
+      "o": [
+        "la patrie des hommes intègres",
+        "le pays de la liberté",
+        "la terre des ancêtres libres",
+        "la maison de l'unité"
+      ],
+      "r": 0,
+      "x": "« Burkina Faso » signifie la patrie des hommes intègres. Le mot « Burkina » renvoie à l'intégrité et à la dignité, et « Faso » à la patrie. Le nom associe deux langues nationales, le mooré et le dioula.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Dans le nom « Burkina Faso », le mot « Faso » signifie :",
+      "o": [
+        "patrie",
+        "peuple",
+        "intègre",
+        "liberté"
+      ],
+      "r": 0,
+      "x": "Le mot dioula « Faso » signifie patrie, littéralement la maison du père. Le mot mooré « Burkina » signifie intègre. L'ordonnance de 1984 précisait que le Faso est la patrie du peuple du Burkina.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Selon l'ordonnance d'août 1984, les habitants du pays s'appellent les :",
+      "o": [
+        "Voltaïques",
+        "Burkinais",
+        "Burkinabè",
+        "Fasolais"
+      ],
+      "r": 2,
+      "x": "L'ordonnance d'août 1984 disposait que les habitants du Burkina s'appellent les Burkinabè. Ce gentilé est invariable en genre et en nombre. Le terme « Voltaïques » désignait les habitants de l'ancienne Haute-Volta.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "L'ordonnance d'août 1984 définissait le Burkina Faso comme un État :",
+      "o": [
+        "démocratique et populaire",
+        "social et coutumier",
+        "fédéral et laïc",
+        "socialiste et unitaire"
+      ],
+      "r": 0,
+      "x": "L'ordonnance définissait le Burkina Faso comme un État démocratique et populaire, de forme républicaine, un et indivisible. Cette formule reprenait le nom de la Révolution démocratique et populaire. L'ordonnance fixait aussi le nom des habitants et les symboles de l'État.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le drapeau adopté en août 1984 se compose de deux bandes horizontales de couleurs :",
+      "o": [
+        "verte et jaune",
+        "blanche et rouge",
+        "rouge et verte",
+        "noire et rouge"
+      ],
+      "r": 2,
+      "x": "Le drapeau du Burkina Faso comporte une bande rouge en haut et une bande verte en bas, de dimensions égales. Une étoile jaune à cinq branches figure en son centre. Il a remplacé le drapeau noir, blanc et rouge de la Haute-Volta.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "L'étoile placée au centre du drapeau du Burkina Faso compte :",
+      "o": [
+        "4 branches",
+        "5 branches",
+        "6 branches",
+        "7 branches"
+      ],
+      "r": 1,
+      "x": "Le centre du drapeau porte une étoile dorée à cinq branches, placée à la limite des deux bandes. Le drapeau a été adopté avec l'ordonnance d'août 1984. Il est toujours en usage aujourd'hui.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "L'étoile qui figure au centre du drapeau du Burkina Faso est de couleur :",
+      "o": [
+        "jaune",
+        "blanche",
+        "bleue",
+        "noire"
+      ],
+      "r": 0,
+      "x": "L'étoile est jaune, ou dorée selon le texte de l'ordonnance de 1984. Elle se détache sur les bandes rouge et verte. Elle est souvent présentée comme le symbole de la lumière qui guide la Révolution.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "L'hymne national Ditanyè est aussi appelé :",
+      "o": [
+        "l'Hymne des combattants",
+        "la Fière Volta",
+        "le Chant du Faso",
+        "l'Hymne de la victoire"
+      ],
+      "r": 3,
+      "x": "Le Ditanyè est également connu sous le nom d'Hymne de la victoire. Il fut adopté par l'ordonnance du 2 août 1984. Il remplaça l'Hymne national voltaïque, qui commençait par les mots « Fière Volta de mes aïeux ».",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Les paroles de l'hymne national Ditanyè sont attribuées à :",
+      "o": [
+        "Blaise Compaoré",
+        "Nazi Boni",
+        "Joseph Ki-Zerbo",
+        "Thomas Sankara"
+      ],
+      "r": 3,
+      "x": "Les paroles du Ditanyè sont attribuées à Thomas Sankara, alors président du CNR. L'hymne entra en vigueur en même temps que le nouveau nom du pays, le 4 août 1984. Nazi Boni et Joseph Ki-Zerbo sont des figures politiques et intellectuelles d'une génération antérieure.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La devise adoptée par l'ordonnance d'août 1984 était :",
+      "o": [
+        "« Unité, Travail, Justice »",
+        "« La Patrie ou la mort, nous vaincrons »",
+        "« Liberté, Démocratie, Justice »",
+        "« Unité, Progrès, Justice »"
+      ],
+      "r": 1,
+      "x": "L'ordonnance de 1984 donna au pays la devise « La Patrie ou la mort, nous vaincrons ». « Unité, Travail, Justice » était la devise de la Haute-Volta. « Unité, Progrès, Justice » fut plus tard adoptée comme devise.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La devise adoptée en août 1984 a été rétablie comme devise nationale en :",
+      "o": [
+        "1987",
+        "1991",
+        "2014",
+        "2024"
+      ],
+      "r": 3,
+      "x": "La devise « La Patrie ou la mort, nous vaincrons » a été rétablie comme devise nationale le 29 octobre 2024. Elle remplaçait « Unité, Progrès, Justice ». Elle renoue ainsi avec l'un des symboles de la Révolution de 1983.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "À partir d'août 1984, le chef de l'État porta le titre de :",
+      "o": [
+        "Guide de la Révolution",
+        "Président de la Haute-Volta",
+        "Président du Faso",
+        "Premier ministre"
+      ],
+      "r": 2,
+      "x": "Avec le changement de nom du pays, le chef de l'État prit le titre de Président du Faso. Thomas Sankara fut le premier à le porter. Ce titre est toujours employé aujourd'hui.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Thomas Sankara prononça son discours à l'Assemblée générale des Nations unies le :",
+      "o": [
+        "4 octobre 1984",
+        "25 décembre 1985",
+        "29 juillet 1987",
+        "15 octobre 1987"
+      ],
+      "r": 0,
+      "x": "Le 4 octobre 1984, Sankara prit la parole à la tribune de l'Assemblée générale des Nations unies, à New York. Il y défendit les peuples dominés et dénonça notamment l'invasion de la Grenade. Le 29 juillet 1987, il prononça son discours sur la dette à Addis-Abeba.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le discours de Thomas Sankara devant l'Assemblée générale des Nations unies fut prononcé à :",
+      "o": [
+        "New York",
+        "Genève",
+        "Addis-Abeba",
+        "Paris"
+      ],
+      "r": 0,
+      "x": "L'Assemblée générale des Nations unies siège à New York, où Sankara s'exprima le 4 octobre 1984. Genève abrite d'autres institutions onusiennes. C'est à Addis-Abeba qu'il prononça en 1987 son discours sur la dette.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le célèbre discours de Thomas Sankara sur la dette fut prononcé le :",
+      "o": [
+        "4 octobre 1984",
+        "17 janvier 1986",
+        "29 juillet 1987",
+        "15 octobre 1987"
+      ],
+      "r": 2,
+      "x": "Sankara prononça son discours sur la dette le 29 juillet 1987, moins de trois mois avant sa mort. Le 4 octobre 1984, il s'était exprimé aux Nations unies. Le 17 janvier 1986 eut lieu le sommet de réconciliation de Yamoussoukro.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le discours de Thomas Sankara sur la dette fut prononcé lors d'un sommet tenu à :",
+      "o": [
+        "Ouagadougou",
+        "Nairobi",
+        "Accra",
+        "Addis-Abeba"
+      ],
+      "r": 3,
+      "x": "Le discours sur la dette fut prononcé à Addis-Abeba, siège de l'Organisation de l'unité africaine. Sankara y proposa un front uni des pays africains contre la dette. Ce discours reste l'un des plus cités de l'histoire africaine.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le discours de Sankara sur la dette fut prononcé devant les dirigeants de :",
+      "o": [
+        "l'ONU",
+        "la CEAO",
+        "l'OUA",
+        "la CEDEAO"
+      ],
+      "r": 2,
+      "x": "Sankara s'adressa aux chefs d'État de l'Organisation de l'unité africaine (OUA), réunis à Addis-Abeba. Il plaida pour un refus collectif du remboursement de la dette. L'OUA a été remplacée en 2002 par l'Union africaine.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Dans son discours sur la dette, Thomas Sankara appela les pays africains à :",
+      "o": [
+        "refuser de rembourser la dette",
+        "créer une monnaie unique",
+        "quitter l'OUA collectivement",
+        "emprunter davantage au FMI"
+      ],
+      "r": 0,
+      "x": "Sankara déclara que la dette ne pouvait pas être remboursée et appela à un front uni contre son paiement. Il affirma que si les pays africains ne payaient pas, leurs bailleurs de fonds n'en mourraient pas. Il souhaitait que ce front prenne le nom de « front d'Addis-Abeba ».",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La campagne de vaccination dite « commando » menée sous la Révolution visait la rougeole, la méningite et :",
+      "o": [
+        "la fièvre jaune",
+        "la lèpre",
+        "la tuberculose",
+        "le paludisme"
+      ],
+      "r": 0,
+      "x": "La campagne de vaccination protégea des millions d'enfants contre la rougeole, la méningite et la fièvre jaune. Elle mobilisa largement les structures populaires de la Révolution. Elle fut saluée comme l'une des réussites sanitaires du régime.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Selon les estimations, la campagne de reboisement lancée en octobre 1984 permit de planter en une quinzaine de mois plus de :",
+      "o": [
+        "1 million d'arbres",
+        "5 millions d'arbres",
+        "10 millions d'arbres",
+        "50 millions d'arbres"
+      ],
+      "r": 2,
+      "x": "Plus de dix millions d'arbres auraient été plantés en une quinzaine de mois à partir d'octobre 1984. Cette campagne visait à freiner la désertification au Sahel. Sankara faisait de la protection de l'environnement l'un des piliers de la Révolution.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La « bataille du rail », lancée sous la Révolution, visait à prolonger la voie ferrée de Ouagadougou vers :",
+      "o": [
+        "Fada N'Gourma",
+        "Kaya",
+        "Ouahigouya",
+        "Bobo-Dioulasso"
+      ],
+      "r": 1,
+      "x": "La bataille du rail visait à prolonger la ligne Abidjan-Ouagadougou en direction de Kaya, puis du Sahel. Bobo-Dioulasso était déjà desservi depuis 1934. Le projet devait à terme désenclaver le nord du pays.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "À terme, la « bataille du rail » devait permettre d'atteindre les gisements de manganèse de :",
+      "o": [
+        "Essakane",
+        "Poura",
+        "Kalsaka",
+        "Tambao"
+      ],
+      "r": 3,
+      "x": "Le prolongement de la voie ferrée vers le nord devait permettre l'exploitation du manganèse de Tambao. Poura, Kalsaka et Essakane sont des sites aurifères. Tambao reste l'un des plus importants gisements de manganèse d'Afrique de l'Ouest.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Sous la Révolution d'août 1983, la « bataille du rail » se distinguait par :",
+      "o": [
+        "une mobilisation populaire sans aide extérieure",
+        "un financement intégral de la Banque mondiale",
+        "le recours exclusif à des entreprises étrangères",
+        "un prêt d'urgence du Fonds monétaire international"
+      ],
+      "r": 0,
+      "x": "Lancée en 1985 pour prolonger le chemin de fer de Ouagadougou vers Kaya et Tambao, la bataille du rail reposait sur l'investissement humain des populations sans financement extérieur. Elle illustrait la volonté du CNR de compter sur ses propres forces, résumée par la devise « Consommons ce que nous produisons »",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le Faso Dan Fani, promu sous la Révolution, est :",
+      "o": [
+        "une campagne de reboisement",
+        "un tribunal populaire",
+        "un programme de vaccination",
+        "un pagne en coton tissé localement"
+      ],
+      "r": 3,
+      "x": "Le Faso Dan Fani est un pagne en coton tissé de manière artisanale au Burkina Faso. La Révolution en encouragea le port, notamment par les fonctionnaires, pour valoriser la production nationale. Il reste aujourd'hui un symbole de l'identité burkinabè.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Sous la Révolution, la voiture officielle des ministres devint la :",
+      "o": [
+        "Toyota Land Cruiser",
+        "Mercedes-Benz",
+        "Renault 5",
+        "Peugeot 504"
+      ],
+      "r": 2,
+      "x": "Sankara vendit le parc de Mercedes du gouvernement et fit de la Renault 5 la voiture officielle des ministres. Cette mesure illustrait la lutte contre le train de vie de l'État. Il réduisit également son propre salaire de chef de l'État.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le sigle PPD, désignant un programme de développement de la Révolution, signifie :",
+      "o": [
+        "Programme panafricain de développement",
+        "Plan pour la paix et le développement",
+        "Programme populaire de développement",
+        "Projet de production durable"
+      ],
+      "r": 2,
+      "x": "Le Programme populaire de développement (PPD) fut l'un des grands programmes économiques du CNR. Il reposait largement sur la mobilisation des populations et des structures populaires. Il traduisait la volonté de développement autocentré du régime.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Au niveau national, les CDR étaient dirigés par un secrétaire général, le capitaine :",
+      "o": [
+        "Blaise Compaoré",
+        "Henri Zongo",
+        "Pierre Ouédraogo",
+        "Jean-Baptiste Lingani"
+      ],
+      "r": 2,
+      "x": "Le capitaine Pierre Ouédraogo fut secrétaire général national des CDR. Henri Zongo, Blaise Compaoré et Jean-Baptiste Boukary Lingani étaient les autres chefs historiques de la Révolution. Les CDR encadraient la population dans les quartiers, les villages et les services.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La seconde guerre entre le Burkina Faso et le Mali à propos de la bande d'Agacher éclata le :",
+      "o": [
+        "25 décembre 1985",
+        "30 décembre 1985",
+        "17 janvier 1986",
+        "22 décembre 1986"
+      ],
+      "r": 0,
+      "x": "L'offensive malienne débuta à l'aube du 25 décembre 1985. Les combats prirent fin le 30 décembre avec un cessez-le-feu. La Cour internationale de justice trancha le différend le 22 décembre 1986.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "En raison de sa date, le conflit de décembre 1985 entre le Burkina Faso et le Mali est souvent appelé :",
+      "o": [
+        "la guerre de la Saint-Sylvestre",
+        "la guerre des Six Jours",
+        "la guerre du Sourou",
+        "la guerre de Noël"
+      ],
+      "r": 3,
+      "x": "Le conflit éclata le 25 décembre 1985, d'où son surnom de guerre de Noël. Il dura jusqu'au 30 décembre 1985. Il fit plusieurs dizaines de morts dans les deux camps.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le cessez-le-feu mettant fin à la guerre de décembre 1985 entre le Burkina Faso et le Mali entra en vigueur le :",
+      "o": [
+        "25 décembre 1985",
+        "28 décembre 1985",
+        "30 décembre 1985",
+        "2 janvier 1986"
+      ],
+      "r": 2,
+      "x": "Le cessez-le-feu fut conclu le matin du 30 décembre 1985, après cinq jours de combats. Le 17 janvier 1986, Sankara et Moussa Traoré se réconcilièrent à Yamoussoukro. L'arrêt de la CIJ fut rendu le 22 décembre 1986.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le cessez-le-feu de décembre 1985 entre le Burkina Faso et le Mali fut obtenu sous l'égide de :",
+      "o": [
+        "l'OTAN",
+        "l'ANAD",
+        "la CEAO",
+        "l'ONU"
+      ],
+      "r": 1,
+      "x": "Le cessez-le-feu fut négocié dans le cadre de l'Accord de non-agression et d'assistance en matière de défense (ANAD). Une force d'observateurs ouest-africains fut ensuite envoyée à la frontière. La Libye et le Nigeria avaient aussi proposé leur médiation.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le sigle ANAD, signé en Afrique de l'Ouest en 1977, signifie :",
+      "o": [
+        "Alliance nationale africaine pour la défense",
+        "Accord de non-agression et d'assistance en matière de défense",
+        "Association des nations africaines démocratiques",
+        "Autorité africaine de non-agression et de dialogue"
+      ],
+      "r": 1,
+      "x": "L'Accord de non-agression et d'assistance en matière de défense (ANAD) réunissait des États d'Afrique de l'Ouest. Il obtint le cessez-le-feu du 30 décembre 1985. Son sommet de Yamoussoukro scella la réconciliation entre les deux pays en janvier 1986.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Lors de la guerre de décembre 1985, le chef de l'État malien était :",
+      "o": [
+        "Amadou Toumani Touré",
+        "Alpha Oumar Konaré",
+        "Moussa Traoré",
+        "Modibo Keïta"
+      ],
+      "r": 2,
+      "x": "Le général Moussa Traoré dirigeait le Mali lors du conflit de décembre 1985. Modibo Keïta avait été le premier président du Mali indépendant. Alpha Oumar Konaré et Amadou Toumani Touré lui succédèrent après 1991.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Thomas Sankara et le chef de l'État malien se réconcilièrent lors d'un sommet tenu en janvier 1986 à :",
+      "o": [
+        "Bamako",
+        "Niamey",
+        "Yamoussoukro",
+        "Ouagadougou"
+      ],
+      "r": 2,
+      "x": "Le 17 janvier 1986, lors du sommet de l'ANAD à Yamoussoukro, les deux dirigeants convinrent de mettre fin aux hostilités. Le cessez-le-feu avait été conclu le 30 décembre 1985. Le différend frontalier fut ensuite tranché par la CIJ.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La Cour internationale de justice (CIJ) rendit son arrêt sur le différend frontalier entre le Burkina Faso et le Mali le :",
+      "o": [
+        "25 décembre 1985",
+        "17 janvier 1986",
+        "22 décembre 1986",
+        "15 octobre 1987"
+      ],
+      "r": 2,
+      "x": "La CIJ rendit son arrêt le 22 décembre 1986, un an presque jour pour jour après le début de la guerre. Les deux pays déclarèrent accepter la décision. Le différend avait été soumis à une chambre de la Cour.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le différend frontalier entre le Burkina Faso et le Mali fut tranché par une chambre de la CIJ composée de :",
+      "o": [
+        "3 juges",
+        "5 juges",
+        "7 juges",
+        "15 juges"
+      ],
+      "r": 1,
+      "x": "L'affaire fut jugée par une chambre de cinq juges, et non par la Cour plénière de quinze juges. La chambre rendit son arrêt le 22 décembre 1986. Elle partagea le territoire disputé entre les deux pays.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Selon l'arrêt de 1986, le Burkina Faso obtint la partie orientale de la zone disputée, centrée sur la rivière :",
+      "o": [
+        "Sirba",
+        "Sourou",
+        "Nakambé",
+        "Béli"
+      ],
+      "r": 3,
+      "x": "La partie orientale, centrée sur la rivière Béli, revint au Burkina Faso, et la partie occidentale, plus peuplée, au Mali. Le Sourou coule dans l'ouest du pays, vers la frontière malienne. Le Nakambé est l'ancienne Volta Blanche.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Après l'arrêt de la CIJ de décembre 1986, le Burkina Faso et le Mali :",
+      "o": [
+        "reprirent les combats",
+        "rompirent leurs relations",
+        "acceptèrent la décision",
+        "saisirent l'ONU"
+      ],
+      "r": 2,
+      "x": "Les deux pays se déclarèrent satisfaits de l'arrêt et l'appliquèrent. La décision mit fin à un différend hérité des découpages coloniaux. Elle est souvent citée comme un exemple de règlement pacifique d'un conflit frontalier en Afrique.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Thomas Sankara fut assassiné le :",
+      "o": [
+        "29 juillet 1987",
+        "4 août 1987",
+        "15 octobre 1987",
+        "19 septembre 1989"
+      ],
+      "r": 2,
+      "x": "Thomas Sankara fut assassiné le 15 octobre 1987 à Ouagadougou, lors d'un coup d'État. Le 29 juillet 1987, il avait prononcé son discours sur la dette. Le 19 septembre 1989, Jean-Baptiste Boukary Lingani et Henri Zongo furent exécutés.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Thomas Sankara fut assassiné à Ouagadougou dans l'enceinte du :",
+      "o": [
+        "Prytanée militaire",
+        "palais présidentiel",
+        "camp Guillaume",
+        "Conseil de l'Entente"
+      ],
+      "r": 3,
+      "x": "Sankara fut tué le 15 octobre 1987 vers 16 heures au Conseil de l'Entente, siège du Conseil national de la révolution. Des gardes et des collaborateurs furent abattus avec lui. Ce site abrite aujourd'hui un mausolée en son honneur.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le jour de son assassinat, Thomas Sankara fut tué avec :",
+      "o": [
+        "3 compagnons",
+        "6 compagnons",
+        "9 compagnons",
+        "12 compagnons"
+      ],
+      "r": 3,
+      "x": "Thomas Sankara fut tué avec douze de ses compagnons, soit treize victimes. Le coup d'État fit au total plusieurs dizaines de morts. Les treize victimes reposent aujourd'hui au mausolée du Conseil de l'Entente.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Thomas Sankara mourut à l'âge de :",
+      "o": [
+        "31 ans",
+        "33 ans",
+        "35 ans",
+        "37 ans"
+      ],
+      "r": 3,
+      "x": "Né le 21 décembre 1949, Sankara avait 37 ans lorsqu'il fut assassiné le 15 octobre 1987. Il avait pris le pouvoir à 33 ans. Il dirigea le pays pendant un peu plus de quatre ans.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le pouvoir pris lors du coup d'État qui coûta la vie à Sankara revint à :",
+      "o": [
+        "Pierre Ouédraogo",
+        "Jean-Baptiste Boukary Lingani",
+        "Blaise Compaoré",
+        "Henri Zongo"
+      ],
+      "r": 2,
+      "x": "Le capitaine Blaise Compaoré prit le pouvoir le 15 octobre 1987. Il resta au pouvoir jusqu'à l'insurrection populaire d'octobre 2014. Henri Zongo et Jean-Baptiste Boukary Lingani furent exécutés en 1989.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Le régime instauré après la mort de Sankara prit le nom de :",
+      "o": [
+        "Comité militaire de redressement",
+        "Conseil de salut du peuple",
+        "Front populaire",
+        "Mouvement patriotique"
+      ],
+      "r": 2,
+      "x": "Le régime de Blaise Compaoré prit le nom de Front populaire et se présenta comme une « rectification » de la Révolution. Le Conseil de salut du peuple avait gouverné de 1982 à 1983. Le Front populaire organisa en 1991 le retour à une vie constitutionnelle.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La Révolution ouverte le 4 août 1983 prit fin en :",
+      "o": [
+        "1985",
+        "1987",
+        "1989",
+        "1991"
+      ],
+      "r": 1,
+      "x": "La Révolution prit fin avec l'assassinat de Thomas Sankara le 15 octobre 1987. Elle avait duré un peu plus de quatre ans. Le Front populaire lui succéda jusqu'à l'adoption de la Constitution de 1991.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "Thomas Sankara dirigea le pays pendant environ :",
+      "o": [
+        "4 ans",
+        "6 ans",
+        "8 ans",
+        "10 ans"
+      ],
+      "r": 0,
+      "x": "Sankara fut au pouvoir du 4 août 1983 au 15 octobre 1987, soit un peu plus de quatre ans. Lamizana avait dirigé le pays pendant près de quinze ans. Blaise Compaoré resta au pouvoir vingt-sept ans.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "L'ouvrage « Histoire de l'Afrique noire » de Joseph Ki-Zerbo fut publié en :",
+      "o": [
+        "1962",
+        "1972",
+        "1978",
+        "1983"
+      ],
+      "r": 1,
+      "x": "L'« Histoire de l'Afrique noire » de Joseph Ki-Zerbo parut en 1972 et devint une référence de l'historiographie africaine. Ki-Zerbo dirigeait alors le MLN, parti d'opposition. Il fut candidat à l'élection présidentielle de 1978.",
+      "_batchId": "histoire/2026-11-19/THEME2"
+    },
+    {
+      "q": "La politique menée par Blaise Compaoré après octobre 1987 pour corriger, selon lui, l'orientation de la Révolution fut appelée :",
+      "o": [
+        "le Renouveau",
+        "la Refondation",
+        "la Restauration",
+        "la Rectification"
+      ],
+      "r": 3,
+      "x": "Blaise Compaoré présenta son action comme une « Rectification » de la Révolution, revenant sur de nombreuses mesures de Sankara. Le « Renouveau » désigne plutôt le régime de Lamizana après 1974. La « Refondation » est un terme employé sous la Transition ouverte en 2022.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Blaise Compaoré est né en 1951 à :",
+      "o": [
+        "Koudougou",
+        "Kaya",
+        "Ziniaré",
+        "Yako"
+      ],
+      "r": 2,
+      "x": "Blaise Compaoré naquit le 3 février 1951 à Ziniaré, aujourd'hui chef-lieu de la région de l'Oubri. Koudougou est la ville natale de Maurice Yaméogo. Thomas Sankara était né à Yako.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le parti fondé en avril 1989 pour soutenir le pouvoir de Blaise Compaoré est :",
+      "o": [
+        "l'UNIR/PS",
+        "le MPP",
+        "l'ODP-MT",
+        "le CDP"
+      ],
+      "r": 2,
+      "x": "L'Organisation pour la démocratie populaire-Mouvement du travail (ODP-MT) fut fondée le 15 avril 1989. Elle fusionna en 1996 avec d'autres formations pour donner le CDP. Le MPP fut fondé en 2014 par des dissidents du CDP.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "En septembre 1989, deux chefs historiques de la Révolution furent exécutés : Henri Zongo et :",
+      "o": [
+        "Tiémoko Marc Garango",
+        "Jean-Baptiste Ouédraogo",
+        "Pierre Ouédraogo des CDR",
+        "Jean-Baptiste Boukary Lingani"
+      ],
+      "r": 3,
+      "x": "Jean-Baptiste Boukary Lingani et Henri Zongo furent accusés de complot, jugés sommairement et exécutés le 19 septembre 1989. Avec Sankara et Compaoré, ils formaient les quatre chefs historiques de la Révolution. Compaoré resta seul de ces quatre officiers.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Les deux chefs historiques de la Révolution accusés de complot contre Compaoré furent exécutés en :",
+      "o": [
+        "1986",
+        "1987",
+        "1988",
+        "1989"
+      ],
+      "r": 3,
+      "x": "Les deux officiers furent exécutés le 19 septembre 1989, accusés d'avoir comploté contre Blaise Compaoré. Thomas Sankara avait été tué le 15 octobre 1987. La Constitution de la IVe République fut adoptée en 1991.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La Constitution de la IVe République fut adoptée par référendum avec environ :",
+      "o": [
+        "78 % des voix",
+        "83 % des voix",
+        "88 % des voix",
+        "93 % des voix"
+      ],
+      "r": 3,
+      "x": "La Constitution fut approuvée le 2 juin 1991 avec environ 93 % des suffrages exprimés. Elle fut promulguée le 11 juin 1991. Elle instaurait le multipartisme et un président élu au suffrage universel.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La Constitution de la IVe République fut promulguée le :",
+      "o": [
+        "11 juin 1991",
+        "1er décembre 1991",
+        "16 juin 1992",
+        "27 janvier 1997"
+      ],
+      "r": 0,
+      "x": "Adoptée par référendum le 2 juin 1991, la Constitution fut promulguée le 11 juin 1991. Le 1er décembre 1991, Blaise Compaoré fut élu président. Le 16 juin 1992, Youssouf Ouédraogo devint Premier ministre.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Lors de la première élection présidentielle de la IVe République, le 1er décembre 1991, Blaise Compaoré :",
+      "o": [
+        "fut élu au second tour",
+        "affronta Joseph Ki-Zerbo",
+        "fut le seul candidat",
+        "affronta Hermann Yaméogo"
+      ],
+      "r": 2,
+      "x": "L'opposition boycotta le scrutin du 1er décembre 1991, et Blaise Compaoré fut le seul candidat. Seuls environ 25 % des électeurs inscrits votèrent. Il fut ensuite réélu en 1998, 2005 et 2010.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le 9 décembre 1991, quelques jours après l'élection présidentielle, fut assassiné à Ouagadougou l'opposant :",
+      "o": [
+        "Norbert Zongo",
+        "Bénéwendé Stanislas Sankara",
+        "Clément Oumarou Ouédraogo",
+        "Hermann Yaméogo"
+      ],
+      "r": 2,
+      "x": "Clément Oumarou Ouédraogo, secrétaire général du Parti du travail du Burkina (PTB), fut assassiné le 9 décembre 1991. Ce meurtre intervint dans un climat de forte tension après le boycott de la présidentielle. Le journaliste Norbert Zongo fut assassiné en 1998.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le premier Premier ministre de la IVe République, nommé en juin 1992, est :",
+      "o": [
+        "Kadré Désiré Ouédraogo",
+        "Paramanga Ernest Yonli",
+        "Roch Marc Christian Kaboré",
+        "Youssouf Ouédraogo"
+      ],
+      "r": 3,
+      "x": "Youssouf Ouédraogo fut Premier ministre du 16 juin 1992 au 22 mars 1994. Roch Marc Christian Kaboré lui succéda de 1994 à 1996. Kadré Désiré Ouédraogo puis Paramanga Ernest Yonli occupèrent ensuite ce poste.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Roch Marc Christian Kaboré fut Premier ministre de :",
+      "o": [
+        "1992 à 1994",
+        "1994 à 1996",
+        "1996 à 2000",
+        "2000 à 2002"
+      ],
+      "r": 1,
+      "x": "Roch Marc Christian Kaboré fut Premier ministre de mars 1994 à février 1996. Il présida ensuite l'Assemblée nationale de 2002 à 2012. Il fut élu président du Faso en 2015.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "De 1996 à 2000, la fonction de Premier ministre fut exercée par :",
+      "o": [
+        "Luc-Adolphe Tiao",
+        "Tertius Zongo",
+        "Youssouf Ouédraogo",
+        "Kadré Désiré Ouédraogo"
+      ],
+      "r": 3,
+      "x": "Kadré Désiré Ouédraogo fut Premier ministre du 6 février 1996 au 7 novembre 2000. Paramanga Ernest Yonli lui succéda de 2000 à 2007. Tertius Zongo dirigea le gouvernement de 2007 à 2011.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le Premier ministre qui resta le plus longtemps en fonctions sous Blaise Compaoré est :",
+      "o": [
+        "Kadré Désiré Ouédraogo",
+        "Tertius Zongo",
+        "Paramanga Ernest Yonli",
+        "Luc-Adolphe Tiao"
+      ],
+      "r": 2,
+      "x": "Paramanga Ernest Yonli fut Premier ministre de novembre 2000 à juin 2007, soit plus de six ans. Tertius Zongo lui succéda en juin 2007. Luc-Adolphe Tiao dirigea ensuite le gouvernement jusqu'à la chute de Compaoré en 2014.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le Congrès pour la démocratie et le progrès (CDP), parti de Blaise Compaoré, fut créé en :",
+      "o": [
+        "1990",
+        "1993",
+        "1994",
+        "1996"
+      ],
+      "r": 3,
+      "x": "Le CDP naquit en 1996 de la fusion de l'ODP-MT avec une douzaine d'autres partis. Il resta le parti dominant jusqu'à la chute de Compaoré en 2014. L'ODP-MT avait été créée en 1989.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Sous la Constitution de 1991, la chambre des députés élue de 1992 à 2002 portait le nom de :",
+      "o": [
+        "Conseil national de la transition",
+        "Assemblée législative du peuple",
+        "Assemblée des députés du peuple",
+        "Assemblée nationale"
+      ],
+      "r": 2,
+      "x": "De 1992 à 2002, le Parlement s'appelait Assemblée des députés du peuple (ADP), d'où le suffixe /ADP des lois de cette période. Il prit ensuite le nom d'Assemblée nationale. L'Assemblée législative du peuple est le nom adopté en 2026.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La révision constitutionnelle de janvier 1997 eut notamment pour effet de :",
+      "o": [
+        "rétablir le poste de Premier ministre",
+        "créer les treize régions administratives",
+        "supprimer la limitation des mandats présidentiels",
+        "instaurer un Parlement à deux chambres"
+      ],
+      "r": 2,
+      "x": "La loi du 27 janvier 1997 révisa l'article 37 et supprima la limitation du nombre de mandats présidentiels. L'opposition dénonça une violation du principe d'alternance. La même révision changea la devise nationale.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "En janvier 1997, la devise « La Patrie ou la mort, nous vaincrons » fut remplacée par :",
+      "o": [
+        "« Union, Discipline, Travail »",
+        "« Unité, Travail, Justice »",
+        "« Unité, Progrès, Justice »",
+        "« Paix, Travail, Liberté »"
+      ],
+      "r": 2,
+      "x": "La révision du 27 janvier 1997 adopta la devise « Unité, Progrès, Justice ». Elle resta en vigueur jusqu'au 29 octobre 2024, date du retour à la devise révolutionnaire. « Unité, Travail, Justice » était la devise de la Haute-Volta.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "L'élection présidentielle qui vit la réélection de Blaise Compaoré pour la première fois au suffrage universel pluraliste se tint le :",
+      "o": [
+        "1er décembre 1991",
+        "15 novembre 1998",
+        "13 novembre 2005",
+        "21 novembre 2010"
+      ],
+      "r": 1,
+      "x": "Le 15 novembre 1998, Blaise Compaoré fut réélu président, une partie de l'opposition ayant boycotté le scrutin. Il avait été élu sans adversaire en 1991. Moins d'un mois plus tard, le journaliste Norbert Zongo fut assassiné.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le journaliste Norbert Zongo fut assassiné le :",
+      "o": [
+        "13 décembre 1998",
+        "11 avril 2000",
+        "13 novembre 2005",
+        "14 avril 2011"
+      ],
+      "r": 0,
+      "x": "Norbert Zongo fut tué le 13 décembre 1998, et son corps fut retrouvé avec ceux de trois compagnons dans un véhicule incendié. Son assassinat provoqua une grave crise nationale. Le 11 avril 2000, une révision constitutionnelle limita de nouveau les mandats présidentiels.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Norbert Zongo et ses compagnons furent assassinés près de la localité de :",
+      "o": [
+        "Koudougou",
+        "Réo",
+        "Sapouy",
+        "Manga"
+      ],
+      "r": 2,
+      "x": "Les corps furent découverts dans un véhicule incendié près de Sapouy, dans la province du Ziro. Environ 20 000 personnes assistèrent aux funérailles de Norbert Zongo. Son assassinat fit naître un vaste mouvement de contestation.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Norbert Zongo dirigeait l'hebdomadaire :",
+      "o": [
+        "L'Observateur",
+        "L'Indépendant",
+        "Le Reporter",
+        "Sidwaya"
+      ],
+      "r": 1,
+      "x": "Norbert Zongo fonda l'hebdomadaire L'Indépendant en juin 1993. Il signait aussi sous le pseudonyme d'Henri Sebgo. Sidwaya est le quotidien public, tandis que L'Observateur et Le Pays sont des quotidiens privés.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Au moment de sa mort, Norbert Zongo enquêtait sur la mort de David Ouédraogo, chauffeur de :",
+      "o": [
+        "Gilbert Diendéré",
+        "François Compaoré",
+        "Roch Kaboré",
+        "Blaise Compaoré"
+      ],
+      "r": 1,
+      "x": "David Ouédraogo, chauffeur de François Compaoré, frère du président, mourut en détention le 18 janvier 1998, après avoir été accusé de vol. Norbert Zongo publiait chaque semaine les résultats de son enquête. Il reçut des menaces de mort avant d'être assassiné.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "En 2017, l'université de Koudougou fut rebaptisée en hommage à :",
+      "o": [
+        "Nazi Boni",
+        "Norbert Zongo",
+        "Thomas Sankara",
+        "Joseph Ki-Zerbo"
+      ],
+      "r": 1,
+      "x": "L'université de Koudougou porte depuis 2017 le nom de Norbert Zongo, natif de cette région. L'université de Ouagadougou honore Joseph Ki-Zerbo et celle de Bobo-Dioulasso Nazi Boni. Une université de Ouagadougou porte aussi le nom de Thomas Sankara.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le pseudonyme sous lequel écrivait Norbert Zongo est :",
+      "o": [
+        "Ansomwin Hien",
+        "Henri Sebgo",
+        "Nazi Boni",
+        "Titinga Pacéré"
+      ],
+      "r": 1,
+      "x": "Norbert Zongo signait certains de ses écrits du nom d'Henri Sebgo. Il était aussi l'auteur de romans. Nazi Boni et Titinga Frédéric Pacéré sont d'autres auteurs burkinabè connus.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La révision constitutionnelle du 11 avril 2000 fixa le mandat présidentiel à :",
+      "o": [
+        "5 ans renouvelable une fois",
+        "7 ans renouvelable une fois",
+        "5 ans non renouvelable",
+        "7 ans non renouvelable"
+      ],
+      "r": 0,
+      "x": "La loi du 11 avril 2000 ramena le mandat de sept à cinq ans, renouvelable une seule fois. Le Conseil constitutionnel estima que cette règle n'empêchait pas Compaoré de se présenter en 2005. La tentative de modifier à nouveau cet article déclencha l'insurrection de 2014.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Avant la révision constitutionnelle de 2000, la durée du mandat présidentiel était de :",
+      "o": [
+        "4 ans",
+        "5 ans",
+        "6 ans",
+        "7 ans"
+      ],
+      "r": 3,
+      "x": "La Constitution de 1991 prévoyait un septennat, ramené à un quinquennat en 2000. Blaise Compaoré fut élu pour sept ans en 1991 et en 1998. Il fut réélu pour cinq ans en 2005 et en 2010.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le traité instituant l'Union économique et monétaire ouest-africaine (UEMOA) fut signé en janvier 1994 à :",
+      "o": [
+        "Dakar",
+        "Bamako",
+        "Abidjan",
+        "Ouagadougou"
+      ],
+      "r": 0,
+      "x": "Le traité de l'UEMOA fut signé à Dakar le 10 janvier 1994. Il succéda notamment à la CEAO, dissoute la même année. La Commission de l'UEMOA a son siège à Ouagadougou.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La Commission de l'Union économique et monétaire ouest-africaine (UEMOA) a son siège à :",
+      "o": [
+        "Niamey",
+        "Ouagadougou",
+        "Bamako",
+        "Abidjan"
+      ],
+      "r": 1,
+      "x": "La Commission de l'UEMOA est installée à Ouagadougou. La Banque centrale des États de l'Afrique de l'Ouest (BCEAO) a son siège à Dakar. La Banque ouest-africaine de développement (BOAD) est à Lomé.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "En janvier 1994, le franc CFA fut dévalué par rapport au franc français de :",
+      "o": [
+        "50 %",
+        "60 %",
+        "66 %",
+        "75 %"
+      ],
+      "r": 0,
+      "x": "En janvier 1994, la parité du franc CFA fut divisée par deux : 1 franc français valut désormais 100 FCFA au lieu de 50. Cette dévaluation de 50 % frappa durement le pouvoir d'achat. L'UEMOA fut créée le même mois.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le Burkina Faso accueillit pour la première fois la Coupe d'Afrique des nations (CAN) de football en :",
+      "o": [
+        "1992",
+        "1996",
+        "1998",
+        "2002"
+      ],
+      "r": 2,
+      "x": "Le Burkina Faso organisa la CAN en 1998, où les Étalons atteignirent les demi-finales et finirent quatrièmes. Ce fut la première grande compétition continentale accueillie par le pays. L'Égypte remporta le tournoi.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Lors de la CAN 1998 organisée à domicile, les Étalons du Burkina Faso terminèrent :",
+      "o": [
+        "quatrièmes",
+        "éliminés en poule",
+        "finalistes",
+        "troisièmes"
+      ],
+      "r": 0,
+      "x": "Les Étalons se hissèrent en demi-finales avant de terminer quatrièmes de la CAN 1998. Ce parcours fut alors le meilleur de l'histoire du football burkinabè. Il fut dépassé en 2013 par une place de finaliste.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le Salon international de l'artisanat de Ouagadougou (SIAO) tint sa première édition officielle en :",
+      "o": [
+        "1984",
+        "1988",
+        "1990",
+        "1994"
+      ],
+      "r": 1,
+      "x": "La première édition du SIAO se tint du 20 au 27 février 1988, après le salon précurseur « Artisanat 84 » de novembre 1984. Le SIAO est devenu une biennale de référence pour l'artisanat africain. Sa 18e édition s'est ouverte le 30 octobre 2026.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le Salon international de l'artisanat de Ouagadougou (SIAO) se tient selon une périodicité de :",
+      "o": [
+        "1 an",
+        "2 ans",
+        "3 ans",
+        "4 ans"
+      ],
+      "r": 1,
+      "x": "Le SIAO est une biennale organisée à Ouagadougou. Il alterne avec le FESPACO, qui se tient lui aussi tous les deux ans. L'édition de 2026 avait le Ghana pour invité d'honneur.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Lors de sa 18e édition, ouverte le 30 octobre 2026, le SIAO avait pour pays invité d'honneur :",
+      "o": [
+        "le Niger",
+        "le Mali",
+        "le Ghana",
+        "le Sénégal"
+      ],
+      "r": 2,
+      "x": "La 18e édition du SIAO, ouverte le 30 octobre 2026 par le capitaine Ibrahim Traoré, s'est tenue jusqu'au 8 novembre. Le Ghana en était l'invité d'honneur. L'édition précédente avait accueilli un « Village de l'AES ».",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le premier site du Burkina Faso inscrit sur la Liste du patrimoine mondial de l'UNESCO, en 2009, est :",
+      "o": [
+        "la cour royale de Tiébélé",
+        "les ruines de Loropéni",
+        "les sites de métallurgie du fer",
+        "le parc national d'Arly"
+      ],
+      "r": 1,
+      "x": "Les ruines de Loropéni, dans le sud-ouest du pays, furent inscrites en 2009. Le parc national d'Arly fut intégré au complexe W-Arly-Pendjari en 2017. Les sites de métallurgie ancienne du fer furent inscrits en 2019.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La localité de Loropéni, en pays lobi, se trouve dans la région de :",
+      "o": [
+        "Goulmou",
+        "Djôrô",
+        "Liptako",
+        "Kuilsé"
+      ],
+      "r": 1,
+      "x": "Loropéni se trouve dans le sud-ouest du pays, en pays lobi, dans la région du Djôrô dont le chef-lieu est Gaoua. Le Liptako a pour chef-lieu Dori et le Goulmou Fada N'Gourma. Le Kuilsé a pour chef-lieu Kaya.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Les sites de métallurgie ancienne du fer du Burkina Faso furent inscrits au patrimoine mondial de l'UNESCO en :",
+      "o": [
+        "2009",
+        "2013",
+        "2017",
+        "2019"
+      ],
+      "r": 3,
+      "x": "Les sites de métallurgie ancienne du fer furent inscrits en 2019, après les ruines de Loropéni en 2009. En 2017, le parc d'Arly fut intégré au complexe transfrontalier W-Arly-Pendjari. Le pays compte ainsi trois biens inscrits.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le découpage du territoire en 45 provinces fut adopté en :",
+      "o": [
+        "1990",
+        "1992",
+        "1994",
+        "1996"
+      ],
+      "r": 3,
+      "x": "Le pays fut divisé en 45 provinces en 1996, contre 30 depuis le découpage de 1984. Les 13 régions furent créées en 2001. Depuis 2025, le pays compte 47 provinces et 17 régions.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Les 13 régions administratives furent créées en :",
+      "o": [
+        "2001",
+        "2006",
+        "2009",
+        "2012"
+      ],
+      "r": 0,
+      "x": "Les 13 régions furent instituées en 2001 dans le cadre de la décentralisation. Elles venaient coiffer les 45 provinces créées en 1996. Elles furent portées à 17 en juillet 2025.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "L'Union africaine (UA), dont le Burkina Faso est membre, succéda à l'Organisation de l'unité africaine en :",
+      "o": [
+        "1999",
+        "2000",
+        "2001",
+        "2002"
+      ],
+      "r": 3,
+      "x": "L'Union africaine fut lancée en juillet 2002 à Durban, en Afrique du Sud, remplaçant l'OUA créée en 1963. La Haute-Volta avait été membre fondateur de l'OUA. Le Burkina Faso, suspendu après le coup d'État de 2022, n'en est pas sorti.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Tertius Zongo exerça la fonction de Premier ministre de 2007 à :",
+      "o": [
+        "2009",
+        "2011",
+        "2012",
+        "2014"
+      ],
+      "r": 1,
+      "x": "Tertius Zongo fut Premier ministre du 4 juin 2007 au 18 avril 2011. Il fut remplacé par Luc-Adolphe Tiao au lendemain des mutineries d'avril 2011. Tiao resta en fonctions jusqu'à la chute de Compaoré en octobre 2014.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le Burkina Faso siégea comme membre non permanent au Conseil de sécurité de l'ONU, que présida alors Michel Kafando, pendant la période :",
+      "o": [
+        "1998-1999",
+        "2004-2005",
+        "2008-2009",
+        "2016-2017"
+      ],
+      "r": 2,
+      "x": "Le Burkina Faso fut membre non permanent du Conseil de sécurité en 2008-2009. Son représentant permanent, Michel Kafando, présida le Conseil à deux reprises durant ce mandat. Kafando devint en 2014 président de la Transition.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "L'accord politique de Ouagadougou, signé en mars 2007 sous la médiation de Blaise Compaoré, visait à résoudre la crise :",
+      "o": [
+        "guinéenne",
+        "malienne",
+        "ivoirienne",
+        "togolaise"
+      ],
+      "r": 2,
+      "x": "L'accord de Ouagadougou du 4 mars 2007 fut signé entre Laurent Gbagbo et Guillaume Soro pour mettre fin à la crise ivoirienne. Guillaume Soro devint ensuite Premier ministre de Côte d'Ivoire. Compaoré fut aussi médiateur dans la crise malienne de 2012.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Au cours de sa carrière, Blaise Compaoré exerça le pouvoir pendant environ :",
+      "o": [
+        "20 ans",
+        "23 ans",
+        "25 ans",
+        "27 ans"
+      ],
+      "r": 3,
+      "x": "Blaise Compaoré dirigea le pays du 15 octobre 1987 au 31 octobre 2014, soit 27 ans. C'est le plus long règne de l'histoire du pays. Lamizana avait gouverné près de quinze ans.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "De 2012 à 2016, la Commission de la Communauté économique des États de l'Afrique de l'Ouest (CEDEAO) fut présidée par le Burkinabè :",
+      "o": [
+        "Paramanga Ernest Yonli",
+        "Tertius Zongo",
+        "Luc-Adolphe Tiao",
+        "Kadré Désiré Ouédraogo"
+      ],
+      "r": 3,
+      "x": "L'ancien Premier ministre Kadré Désiré Ouédraogo présida la Commission de la CEDEAO de 2012 à 2016. Paramanga Ernest Yonli, Tertius Zongo et Luc-Adolphe Tiao furent eux aussi Premiers ministres sous Compaoré. Le Burkina Faso a quitté la CEDEAO en janvier 2025.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le parti sankariste dirigé par Bénéwendé Stanislas Sankara est :",
+      "o": [
+        "l'UNIR/PS",
+        "le CDP",
+        "l'UPC",
+        "l'ADF-RDA"
+      ],
+      "r": 0,
+      "x": "L'Union pour la renaissance/Parti sankariste (UNIR/PS) se réclamait de l'héritage de Thomas Sankara. Bénéwendé Stanislas Sankara, avocat, en fut le dirigeant et fut candidat à plusieurs présidentielles. Tous les partis ont été dissous en janvier 2026.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "L'Union pour le progrès et le changement (UPC), principal parti d'opposition de 2015 à 2020, fut fondée par :",
+      "o": [
+        "Eddie Komboïgo",
+        "Zéphirin Diabré",
+        "Ablassé Ouédraogo",
+        "Hermann Yaméogo"
+      ],
+      "r": 1,
+      "x": "Zéphirin Diabré fonda l'UPC en 2010 et fut chef de file de l'opposition après 2015. Il arriva deuxième à la présidentielle de 2015. Eddie Komboïgo dirigeait le CDP.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "En 2005, Blaise Compaoré fut réélu au premier tour avec environ :",
+      "o": [
+        "80 % des voix",
+        "85 % des voix",
+        "90 % des voix",
+        "95 % des voix"
+      ],
+      "r": 0,
+      "x": "Blaise Compaoré fut réélu en 2005 avec environ 80 % des voix, soit 80,35 %. C'était sa première élection pour un quinquennat. Il fut réélu une dernière fois en 2010.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La naturalisation ivoirienne de Blaise Compaoré fut rendue publique en :",
+      "o": [
+        "2014",
+        "2015",
+        "2016",
+        "2019"
+      ],
+      "r": 2,
+      "x": "Le décret de naturalisation de Blaise Compaoré, daté de novembre 2014, ne fut publié et révélé qu'en 2016. Il vit depuis lors en exil en Côte d'Ivoire. Il fut condamné par contumace en 2022 dans le procès de l'assassinat de Thomas Sankara.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La mutinerie d'avril 2011, qui ébranla le régime de Blaise Compaoré, fut menée par :",
+      "o": [
+        "des enseignants",
+        "des étudiants",
+        "des militaires",
+        "des commerçants"
+      ],
+      "r": 2,
+      "x": "En avril 2011, des militaires se mutinèrent pour réclamer le paiement d'indemnités, et Compaoré quitta brièvement la capitale pour Ziniaré. Cette crise s'ajoutait à une contestation étudiante et sociale. Luc-Adolphe Tiao fut alors nommé Premier ministre.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le Mouvement du peuple pour le progrès (MPP) fut fondé par d'anciens dirigeants du :",
+      "o": [
+        "ADF-RDA",
+        "CDP",
+        "UPC",
+        "UNIR/PS"
+      ],
+      "r": 1,
+      "x": "Le MPP fut créé le 25 janvier 2014 par des dissidents du CDP, le parti de Blaise Compaoré. Ils s'opposaient au projet de révision constitutionnelle. Le MPP remporta les élections de 2015.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Parmi les fondateurs du MPP, aux côtés de Roch Marc Christian Kaboré et de Simon Compaoré, figurait :",
+      "o": [
+        "Luc-Adolphe Tiao",
+        "Zéphirin Diabré",
+        "Eddie Komboïgo",
+        "Salif Diallo"
+      ],
+      "r": 3,
+      "x": "Salif Diallo, ancien ministre et figure du CDP, fut l'un des fondateurs du MPP avec Roch Kaboré et Simon Compaoré. Il présida ensuite l'Assemblée nationale. Zéphirin Diabré dirigeait l'UPC et Eddie Komboïgo le CDP.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le MPP fut fondé en :",
+      "o": [
+        "2014",
+        "2015",
+        "2016",
+        "2017"
+      ],
+      "r": 0,
+      "x": "Le MPP fut créé le 25 janvier 2014, quelques mois avant l'insurrection populaire. Son candidat, Roch Kaboré, fut élu président en novembre 2015. L'UPC de Zéphirin Diabré avait été fondée en 2010.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Avant son élection à la présidence, Roch Marc Christian Kaboré présida l'Assemblée nationale de 2002 à :",
+      "o": [
+        "2012",
+        "2013",
+        "2014",
+        "2015"
+      ],
+      "r": 0,
+      "x": "Roch Kaboré présida l'Assemblée nationale du 6 juin 2002 au 28 décembre 2012. Il avait été Premier ministre de 1994 à 1996. Il quitta le CDP en janvier 2014.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le projet de révision constitutionnelle qui déclencha l'insurrection d'octobre 2014 visait à modifier l'article :",
+      "o": [
+        "27",
+        "37",
+        "47",
+        "57"
+      ],
+      "r": 1,
+      "x": "L'article 37 limitait à deux le nombre de mandats présidentiels. Sa modification devait permettre à Blaise Compaoré de se représenter en 2015. Le vote prévu à l'Assemblée nationale fut empêché par les manifestants.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Les manifestants envahirent l'Assemblée nationale, qui devait voter la révision constitutionnelle, le :",
+      "o": [
+        "30 octobre 2014",
+        "31 octobre 2014",
+        "1er novembre 2014",
+        "16 novembre 2014"
+      ],
+      "r": 0,
+      "x": "Le 30 octobre 2014, les manifestants envahirent et incendièrent l'Assemblée nationale. Le lendemain, 31 octobre, Blaise Compaoré annonça son départ. Le 16 novembre fut signée la Charte de la transition.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le mouvement citoyen Balai citoyen, qui joua un grand rôle dans la mobilisation contre la révision constitutionnelle de 2014, fut fondé en :",
+      "o": [
+        "2011",
+        "2012",
+        "2013",
+        "2014"
+      ],
+      "r": 2,
+      "x": "Le Balai citoyen fut fondé en 2013, un an avant l'insurrection populaire. Il mobilisa fortement la jeunesse urbaine contre le maintien de Compaoré au pouvoir. Il est resté un acteur de la vie civique après 2014.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Blaise Compaoré annonça son départ du pouvoir le :",
+      "o": [
+        "28 octobre 2014",
+        "30 octobre 2014",
+        "31 octobre 2014",
+        "1er novembre 2014"
+      ],
+      "r": 2,
+      "x": "Blaise Compaoré annonça le 31 octobre 2014 qu'il quittait le pouvoir, après moins de 48 heures d'insurrection. Il gouvernait depuis le 15 octobre 1987. Le 1er novembre, le lieutenant-colonel Isaac Zida se proclama chef de l'État.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "L'insurrection populaire d'octobre 2014 fit environ :",
+      "o": [
+        "6 morts",
+        "12 morts",
+        "18 morts",
+        "24 morts"
+      ],
+      "r": 3,
+      "x": "L'insurrection fit environ 24 morts en moins de 48 heures. Le 31 octobre est devenu une date de commémoration nationale. La tentative de coup d'État de septembre 2015 fit, elle, 14 morts.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Après sa chute, Blaise Compaoré s'installa durablement en :",
+      "o": [
+        "Côte d'Ivoire",
+        "Ghana",
+        "Sénégal",
+        "Maroc"
+      ],
+      "r": 0,
+      "x": "Blaise Compaoré s'exila en Côte d'Ivoire avec l'appui du président Alassane Ouattara. Il séjourna quelques semaines au Maroc fin 2014, avant de regagner la Côte d'Ivoire début 2015. Il y vit depuis lors.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Après le départ de Blaise Compaoré, le chef d'état-major général des armées qui annonça assumer les responsabilités de chef de l'État est :",
+      "o": [
+        "Paul-Henri Damiba",
+        "Isaac Zida",
+        "Honoré Traoré",
+        "Gilbert Diendéré"
+      ],
+      "r": 2,
+      "x": "Le général Honoré Traoré se déclara chef de l'État le 31 octobre 2014, mais il fut aussitôt contesté. Un groupe de jeunes officiers conduit par Isaac Zida s'imposa dès le lendemain. Gilbert Diendéré était le chef d'état-major particulier de Compaoré.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le Premier ministre de la Transition de 2014-2015 appartenait au corps d'élite appelé :",
+      "o": [
+        "Brigade d'intervention rapide",
+        "Régiment de sécurité présidentielle",
+        "Groupement des forces spéciales",
+        "Centre national d'entraînement commando"
+      ],
+      "r": 1,
+      "x": "Le lieutenant-colonel Isaac Zida était issu du Régiment de sécurité présidentielle (RSP), la garde de Blaise Compaoré. Il demanda pourtant dès décembre 2014 la dissolution de ce régiment. Le RSP tenta un coup d'État en septembre 2015.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La Charte de la transition, servant de constitution intérimaire après la chute de Compaoré, fut signée le :",
+      "o": [
+        "16 novembre 2014",
+        "17 novembre 2014",
+        "18 novembre 2014",
+        "19 novembre 2014"
+      ],
+      "r": 0,
+      "x": "La Charte de la transition fut signée le 16 novembre 2014 par les militaires et les civils. Michel Kafando fut désigné président le 17 novembre et investi le 18 novembre. Elle fut le cadre juridique de la Transition jusqu'aux élections de 2015.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Michel Kafando prêta serment comme président de la Transition le :",
+      "o": [
+        "16 novembre 2014",
+        "17 novembre 2014",
+        "18 novembre 2014",
+        "19 novembre 2014"
+      ],
+      "r": 2,
+      "x": "Désigné le 17 novembre 2014, Michel Kafando prêta serment le 18 novembre. Il nomma ensuite Isaac Zida Premier ministre. Il resta en fonctions jusqu'au 29 décembre 2015.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Avant d'être désigné président de la Transition, Michel Kafando était surtout connu comme :",
+      "o": [
+        "diplomate",
+        "général",
+        "syndicaliste",
+        "magistrat"
+      ],
+      "r": 0,
+      "x": "Michel Kafando fit une longue carrière de diplomate et représenta le pays auprès de l'ONU de 1998 à 2011. Il avait été ministre des Affaires étrangères en 1982-1983. Son profil civil devait garantir la neutralité de la Transition.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Michel Kafando avait été ministre des Affaires étrangères de la Haute-Volta en :",
+      "o": [
+        "1974-1976",
+        "1978-1980",
+        "1980-1982",
+        "1982-1983"
+      ],
+      "r": 3,
+      "x": "Michel Kafando dirigea la diplomatie voltaïque en 1982-1983, à l'époque du CSP. Saye Zerbo avait occupé ce poste de 1974 à 1976. Kafando devint président de la Transition en novembre 2014.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Michel Kafando, président de la Transition de 2014-2015, est né en :",
+      "o": [
+        "1936",
+        "1942",
+        "1949",
+        "1957"
+      ],
+      "r": 1,
+      "x": "Michel Kafando est né le 18 août 1942 à Ouagadougou. Roch Kaboré, qui lui succéda, est né en 1957. Thomas Sankara était né en 1949.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Pendant la Transition de 2014-2015, le poste de Premier ministre fut confié au lieutenant-colonel :",
+      "o": [
+        "Gilbert Diendéré",
+        "Honoré Traoré",
+        "Isaac Zida",
+        "Paul-Henri Damiba"
+      ],
+      "r": 2,
+      "x": "Isaac Zida, qui s'était proclamé chef de l'État le 1er novembre 2014, devint Premier ministre de la Transition en novembre 2014. Il fut aussi un temps ministre de la Défense. Il resta en fonctions jusqu'à l'arrivée du gouvernement de Paul Kaba Thiéba en 2016.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le Conseil national de la transition (CNT), organe législatif de 2014-2015, fut présidé par :",
+      "o": [
+        "Ousmane Bougouma",
+        "Chériff Sy",
+        "Salif Diallo",
+        "Zéphirin Diabré"
+      ],
+      "r": 1,
+      "x": "Le journaliste Chériff Moumina Sy présida le Conseil national de la transition. Salif Diallo présida l'Assemblée nationale élue en 2015. Ousmane Bougouma préside depuis 2022 l'ALT, devenue Assemblée législative du peuple (ALP) en 2026.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Après les législatives de 2015, la présidence de l'Assemblée nationale revint à :",
+      "o": [
+        "Zéphirin Diabré",
+        "Salif Diallo",
+        "Chériff Sy",
+        "Simon Compaoré"
+      ],
+      "r": 1,
+      "x": "Salif Diallo, cofondateur du MPP, fut élu président de l'Assemblée nationale en décembre 2015. Chériff Sy avait présidé le Conseil national de la transition. Zéphirin Diabré devint chef de file de l'opposition.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "En juillet 2015, le Conseil national de la transition vota la mise en accusation de Blaise Compaoré pour :",
+      "o": [
+        "crimes de guerre",
+        "fraude électorale",
+        "détournement de fonds",
+        "haute trahison"
+      ],
+      "r": 3,
+      "x": "Le 16 juillet 2015, les membres du CNT votèrent la mise en accusation de Blaise Compaoré pour haute trahison. Cette procédure visait son projet de révision constitutionnelle. Compaoré, exilé en Côte d'Ivoire, ne fut pas jugé pour ces faits.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le code électoral adopté en avril 2015, très contesté, excluait des élections :",
+      "o": [
+        "les candidats de moins de 40 ans",
+        "les militaires en activité de service",
+        "les partisans de la révision constitutionnelle",
+        "les Burkinabè établis à l'étranger"
+      ],
+      "r": 2,
+      "x": "Le code électoral d'avril 2015 rendait inéligibles les personnalités ayant soutenu le projet de modification de la Constitution. Il visait surtout les proches de l'ancien régime. Cette exclusion fut l'une des causes du putsch de septembre 2015.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le mouvement citoyen Balai citoyen, très actif lors de l'insurrection de 2014, fut cofondé par les artistes Smockey et :",
+      "o": [
+        "Bil Aka Kora",
+        "Floby",
+        "Alif Naaba",
+        "Sams'K Le Jah"
+      ],
+      "r": 3,
+      "x": "Le Balai citoyen fut fondé en 2013 par le rappeur Smockey et le reggaeman Sams'K Le Jah. Il mobilisa fortement la jeunesse contre la révision de l'article 37. Floby, Alif Naaba et Bil Aka Kora sont d'autres artistes burkinabè.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La tentative de coup d'État contre la Transition débuta le :",
+      "o": [
+        "16 septembre 2015",
+        "23 septembre 2015",
+        "25 septembre 2015",
+        "29 novembre 2015"
+      ],
+      "r": 0,
+      "x": "Le 16 septembre 2015, des soldats firent irruption en plein Conseil des ministres et prirent en otage le président Kafando et le Premier ministre Zida. Kafando fut rétabli le 23 septembre. Les élections eurent lieu le 29 novembre 2015.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le coup d'État de septembre 2015 fut perpétré par des soldats du :",
+      "o": [
+        "GSIG",
+        "BIR",
+        "CNEC",
+        "RSP"
+      ],
+      "r": 3,
+      "x": "Le putsch fut l'œuvre du Régiment de sécurité présidentielle (RSP), ancienne garde de Blaise Compaoré. Le régiment fut dissous le 25 septembre 2015. Son chef, Gilbert Diendéré, prit la tête de la junte.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La junte issue du putsch de septembre 2015 prit le nom de :",
+      "o": [
+        "Conseil national pour la démocratie",
+        "Mouvement patriotique pour la sauvegarde",
+        "Comité national de salut public",
+        "Conseil national de la révolution"
+      ],
+      "r": 0,
+      "x": "Le 17 septembre 2015, les putschistes annoncèrent la création du Conseil national pour la démocratie (CND). Ils promettaient des élections « inclusives ». La junte ne dura qu'une semaine.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le chef de la junte du putsch manqué de septembre 2015 est :",
+      "o": [
+        "Isaac Zida",
+        "Gilbert Diendéré",
+        "Hyacinthe Kafando",
+        "Honoré Traoré"
+      ],
+      "r": 1,
+      "x": "Le général Gilbert Diendéré prit la tête du CND le 17 septembre 2015. Il se rendit et fut placé en détention le 1er octobre 2015. Il fut aussi condamné en 2022 dans le procès de l'assassinat de Thomas Sankara.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Sous Blaise Compaoré, Gilbert Diendéré occupait la fonction de :",
+      "o": [
+        "chef d'état-major de l'armée de terre",
+        "directeur de la police",
+        "chef d'état-major particulier",
+        "ministre de la Défense"
+      ],
+      "r": 2,
+      "x": "Gilbert Diendéré fut longtemps le chef d'état-major particulier de Blaise Compaoré. Michel Kafando le démit de ce poste le 27 novembre 2014. Il était considéré comme l'homme fort du RSP.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Après l'échec du putsch, Michel Kafando fut rétabli dans ses fonctions le :",
+      "o": [
+        "16 septembre 2015",
+        "17 septembre 2015",
+        "23 septembre 2015",
+        "25 septembre 2015"
+      ],
+      "r": 2,
+      "x": "Michel Kafando reprit ses fonctions le 23 septembre 2015, après un accord entre l'armée et le RSP. Le RSP fut dissous deux jours plus tard. La Transition put ainsi conduire le pays aux élections.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le RSP fut dissous par décret le :",
+      "o": [
+        "17 septembre 2015",
+        "22 septembre 2015",
+        "23 septembre 2015",
+        "25 septembre 2015"
+      ],
+      "r": 3,
+      "x": "Le RSP fut dissous par décret le 25 septembre 2015, deux jours après le retour de Michel Kafando. L'armée prit son camp le 29 septembre. Gilbert Diendéré fut arrêté le 1er octobre 2015.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le putsch manqué de septembre 2015 fit environ :",
+      "o": [
+        "14 morts",
+        "24 morts",
+        "40 morts",
+        "56 morts"
+      ],
+      "r": 0,
+      "x": "La tentative de coup d'État fit 14 morts et environ 270 blessés, selon le bilan définitif. L'insurrection d'octobre 2014 avait fait environ 24 morts. Les victimes de ces deux événements sont honorées chaque 31 octobre.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Initialement prévues le 11 octobre 2015, les élections présidentielle et législatives eurent finalement lieu le :",
+      "o": [
+        "1er novembre 2015",
+        "8 novembre 2015",
+        "22 novembre 2015",
+        "29 novembre 2015"
+      ],
+      "r": 3,
+      "x": "Reportées après le putsch de septembre, les élections se tinrent le 29 novembre 2015. Elles furent remportées par Roch Marc Christian Kaboré et le MPP. Kaboré fut investi le 29 décembre 2015.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "À l'élection présidentielle de 2015, Roch Kaboré fut élu avec :",
+      "o": [
+        "53,49 % des voix",
+        "57,74 % des voix",
+        "60,12 % des voix",
+        "65,30 % des voix"
+      ],
+      "r": 0,
+      "x": "Roch Kaboré fut élu dès le premier tour avec 53,49 % des voix. Zéphirin Diabré arriva deuxième avec 29,65 %. En 2020, Kaboré fut réélu avec 57,74 %.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "À l'élection présidentielle de 2015, Zéphirin Diabré, arrivé deuxième, obtint environ :",
+      "o": [
+        "18 %",
+        "24 %",
+        "30 %",
+        "35 %"
+      ],
+      "r": 2,
+      "x": "Zéphirin Diabré, candidat de l'UPC, obtint 29,65 % des voix. Roch Kaboré l'emporta au premier tour avec 53,49 %. Diabré devint ensuite chef de file de l'opposition.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le nombre de candidats à l'élection présidentielle de 2015 était de :",
+      "o": [
+        "8",
+        "10",
+        "12",
+        "14"
+      ],
+      "r": 3,
+      "x": "Quatorze candidats se présentèrent à l'élection présidentielle du 29 novembre 2015. La participation fut d'environ 60 %. Roch Kaboré l'emporta dès le premier tour.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "À l'élection présidentielle de 2015, Roch Kaboré fut élu :",
+      "o": [
+        "par l'Assemblée nationale",
+        "à la majorité relative",
+        "au second tour",
+        "dès le premier tour"
+      ],
+      "r": 3,
+      "x": "Avec 53,49 % des suffrages, Roch Kaboré obtint la majorité absolue dès le premier tour. Il devint le premier président civil élu depuis des décennies. Il fut réélu de la même façon en 2020.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Aux législatives de 2015, le MPP obtint :",
+      "o": [
+        "45 sièges",
+        "55 sièges",
+        "70 sièges",
+        "85 sièges"
+      ],
+      "r": 1,
+      "x": "Le MPP remporta 55 des 127 sièges, sans majorité absolue, et dut s'allier à d'autres partis. L'UPC de Zéphirin Diabré arriva deuxième. Le CDP de l'ancien régime conserva une représentation.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "L'Assemblée nationale élue en 2015 comptait :",
+      "o": [
+        "127 sièges",
+        "155 sièges",
+        "175 sièges",
+        "200 sièges"
+      ],
+      "r": 0,
+      "x": "L'Assemblée nationale élue le 29 novembre 2015 comptait 127 députés. Le MPP en obtint 55. Le même nombre de sièges fut repris en 2020.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Roch Marc Christian Kaboré fut investi président du Faso le :",
+      "o": [
+        "29 novembre 2015",
+        "1er décembre 2015",
+        "29 décembre 2015",
+        "13 janvier 2016"
+      ],
+      "r": 2,
+      "x": "Roch Kaboré prêta serment le 29 décembre 2015, succédant à Michel Kafando. Il avait été élu le 29 novembre. Son premier gouvernement, dirigé par Paul Kaba Thiéba, fut formé en janvier 2016.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Roch Marc Christian Kaboré est né en :",
+      "o": [
+        "1951",
+        "1957",
+        "1962",
+        "1966"
+      ],
+      "r": 1,
+      "x": "Roch Marc Christian Kaboré est né le 25 avril 1957 à Ouagadougou. Blaise Compaoré était né en 1951. Il fut renversé en janvier 2022.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Avant sa carrière politique, Roch Kaboré exerça principalement dans le secteur :",
+      "o": [
+        "militaire",
+        "judiciaire",
+        "médical",
+        "bancaire"
+      ],
+      "r": 3,
+      "x": "Roch Kaboré dirigea la Banque internationale du Burkina de 1984 à 1989. Il fut ensuite ministre des Transports, puis ministre d'État chargé des Finances. Il devint Premier ministre en 1994.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le premier Premier ministre nommé par Roch Kaboré, en janvier 2016, est :",
+      "o": [
+        "Lassina Zerbo",
+        "Paul Kaba Thiéba",
+        "Christophe Dabiré",
+        "Luc-Adolphe Tiao"
+      ],
+      "r": 1,
+      "x": "Paul Kaba Thiéba fut Premier ministre du 6 janvier 2016 au 18 janvier 2019. Christophe Joseph Marie Dabiré lui succéda jusqu'en décembre 2021. Lassina Zerbo fut le dernier Premier ministre de Kaboré.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le premier Premier ministre de Roch Kaboré resta en fonctions jusqu'en :",
+      "o": [
+        "2019",
+        "2020",
+        "2021",
+        "2022"
+      ],
+      "r": 0,
+      "x": "Paul Kaba Thiéba démissionna le 18 janvier 2019. Christophe Dabiré fut nommé le 21 janvier pour le remplacer. Ce dernier resta en fonctions jusqu'au 8 décembre 2021.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "De janvier 2019 à décembre 2021, la fonction de Premier ministre fut exercée par :",
+      "o": [
+        "Christophe Dabiré",
+        "Albert Ouédraogo",
+        "Lassina Zerbo",
+        "Paul Kaba Thiéba"
+      ],
+      "r": 0,
+      "x": "Christophe Joseph Marie Dabiré fut Premier ministre du 21 janvier 2019 au 8 décembre 2021. Lassina Zerbo lui succéda jusqu'au coup d'État du 24 janvier 2022. Albert Ouédraogo fut le Premier ministre de la transition de Damiba.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le dernier Premier ministre de Roch Kaboré, nommé en décembre 2021, est :",
+      "o": [
+        "Apollinaire Kyélem de Tambèla",
+        "Paul Kaba Thiéba",
+        "Lassina Zerbo",
+        "Christophe Dabiré"
+      ],
+      "r": 2,
+      "x": "Lassina Zerbo fut nommé le 10 décembre 2021 et resta en fonctions jusqu'au coup d'État du 24 janvier 2022. Il avait auparavant dirigé une organisation internationale à Vienne. Apollinaire Kyélem de Tambèla fut Premier ministre sous Ibrahim Traoré.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Les Étalons du Burkina Faso atteignirent pour la première fois la finale de la Coupe d'Afrique des nations (CAN) en :",
+      "o": [
+        "1998",
+        "2002",
+        "2013",
+        "2017"
+      ],
+      "r": 2,
+      "x": "En 2013, en Afrique du Sud, les Étalons atteignirent la finale de la CAN pour la première fois. Ils avaient terminé quatrièmes en 1998 à domicile. Ils finirent troisièmes en 2017.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "En finale de la CAN 2013, les Étalons du Burkina Faso s'inclinèrent face au :",
+      "o": [
+        "Sénégal",
+        "Ghana",
+        "Nigeria",
+        "Cameroun"
+      ],
+      "r": 2,
+      "x": "Le 10 février 2013 à Johannesburg, le Nigeria battit le Burkina Faso 1 à 0 en finale. Cette place de finaliste reste le meilleur résultat de l'histoire des Étalons. Le Burkina Faso termina troisième de la CAN 2017.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Lors de la CAN 2017 au Gabon, les Étalons du Burkina Faso terminèrent :",
+      "o": [
+        "troisièmes",
+        "finalistes",
+        "quatrièmes",
+        "éliminés en quart"
+      ],
+      "r": 0,
+      "x": "Les Étalons prirent la troisième place de la CAN 2017 en battant le Ghana. Ils avaient été finalistes en 2013. Le Cameroun remporta cette édition.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La Transition ouverte en novembre 2014 et achevée avec l'investiture de Roch Kaboré dura environ :",
+      "o": [
+        "6 mois",
+        "13 mois",
+        "18 mois",
+        "24 mois"
+      ],
+      "r": 1,
+      "x": "De l'investiture de Michel Kafando le 18 novembre 2014 à celle de Roch Kaboré le 29 décembre 2015, la Transition dura environ treize mois. Elle fut interrompue une semaine par le putsch de septembre 2015. Elle aboutit aux élections du 29 novembre 2015.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le jeune officier qui écarta le chef d'état-major général se proclama chef de l'État le :",
+      "o": [
+        "31 octobre 2014",
+        "1er novembre 2014",
+        "16 novembre 2014",
+        "18 novembre 2014"
+      ],
+      "r": 1,
+      "x": "Le 1er novembre 2014, Isaac Zida se proclama chef de l'État avec le soutien de la hiérarchie militaire. Le général Honoré Traoré s'était déclaré la veille. Michel Kafando, investi le 18 novembre, reçut le pouvoir des mains de Zida le 21 novembre.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La première grande attaque terroriste ayant frappé Ouagadougou eut lieu le :",
+      "o": [
+        "15 janvier 2016",
+        "13 août 2017",
+        "2 mars 2018",
+        "5 juin 2021"
+      ],
+      "r": 0,
+      "x": "Le 15 janvier 2016, des assaillants attaquèrent le café Cappuccino et l'hôtel Splendid à Ouagadougou. Le 2 mars 2018, l'état-major des armées et l'ambassade de France furent visés. Le 5 juin 2021, l'attaque de Solhan fit un nombre très élevé de victimes.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La première grande attaque terroriste de Ouagadougou visa notamment l'hôtel Splendid et :",
+      "o": [
+        "la cathédrale",
+        "le café Cappuccino",
+        "l'ambassade de France",
+        "l'état-major des armées"
+      ],
+      "r": 1,
+      "x": "Les assaillants s'en prirent au café-restaurant Cappuccino et à l'hôtel Splendid, sur l'avenue Kwame-Nkrumah. L'état-major et l'ambassade de France furent visés lors d'une autre attaque, en mars 2018. Le bilan fut d'au moins 30 morts.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Les attaques terroristes du 15 janvier 2016 à Ouagadougou firent :",
+      "o": [
+        "15 morts",
+        "20 morts",
+        "25 morts",
+        "30 morts"
+      ],
+      "r": 3,
+      "x": "L'assaut du 15 janvier 2016 sur l'avenue Kwame Nkrumah (visant le café Cappuccino, l'hôtel Splendid et l'hôtel Yibi) fit au moins 30 morts de 18 nationalités différentes et 56 blessés, hors assaillants abattus. L'attentat fut revendiqué par les groupes jihadistes AQMI et Al-Mourabitoune.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "L'attaque de l'hôtel Splendid fut revendiquée par Al-Mourabitoune et :",
+      "o": [
+        "Boko Haram",
+        "Ansar Dine",
+        "l'État islamique",
+        "AQMI"
+      ],
+      "r": 3,
+      "x": "L'attaque fut revendiquée par Al-Qaïda au Maghreb islamique (AQMI) et le groupe Al-Mourabitoune. Elle marqua l'extension du terrorisme sahélien à la capitale burkinabè. Boko Haram opère surtout autour du lac Tchad.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le 2 mars 2018, une attaque terroriste à Ouagadougou visa l'ambassade de France et :",
+      "o": [
+        "l'aéroport international",
+        "la présidence du Faso",
+        "l'état-major des armées",
+        "l'hôtel Splendid"
+      ],
+      "r": 2,
+      "x": "Le 2 mars 2018, des assaillants attaquèrent simultanément l'état-major général des armées et l'ambassade de France. L'hôtel Splendid avait été visé en janvier 2016. Ces attaques montraient la menace pesant sur la capitale.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "L'attaque de Solhan, l'une des plus meurtrières de l'histoire du pays, eut lieu en :",
+      "o": [
+        "2017",
+        "2018",
+        "2020",
+        "2021"
+      ],
+      "r": 3,
+      "x": "L'attaque de Solhan, dans le nord-est du pays, eut lieu dans la nuit du 4 au 5 juin 2021. Elle fit de très nombreuses victimes civiles. Elle accentua la contestation contre le pouvoir de Roch Kaboré.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Les VDP, supplétifs civils engagés aux côtés de l'armée, furent institués par une loi de :",
+      "o": [
+        "2016",
+        "2018",
+        "2020",
+        "2022"
+      ],
+      "r": 2,
+      "x": "La loi instituant les VDP fut adoptée en janvier 2020, sous la présidence de Roch Kaboré. Les VDP furent ensuite massivement recrutés à partir de 2022. Une médaille d'honneur des VDP récompense les plus méritants.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "L'élection présidentielle qui vit la réélection de Roch Kaboré se tint le :",
+      "o": [
+        "22 novembre 2020",
+        "29 novembre 2020",
+        "28 décembre 2020",
+        "24 janvier 2022"
+      ],
+      "r": 0,
+      "x": "Roch Kaboré fut réélu dès le premier tour lors du scrutin du 22 novembre 2020. Le Conseil constitutionnel confirma sa victoire en décembre 2020. Il fut renversé le 24 janvier 2022.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Lors de l'élection présidentielle de 2020, Roch Kaboré fut réélu avec :",
+      "o": [
+        "45,20 % des voix",
+        "50,18 % des voix",
+        "53,49 % des voix",
+        "57,74 % des voix"
+      ],
+      "r": 3,
+      "x": "Selon les résultats définitifs, Roch Kaboré obtint 57,74 % des voix en 2020. Il avait été élu en 2015 avec 53,49 %. Il fut réélu au premier tour dans les deux cas.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "À l'élection présidentielle de 2020, le candidat arrivé en deuxième position derrière Roch Kaboré est :",
+      "o": [
+        "Tahirou Barry",
+        "Eddie Komboïgo",
+        "Zéphirin Diabré",
+        "Ablassé Ouédraogo"
+      ],
+      "r": 1,
+      "x": "Eddie Komboïgo, président du CDP, arriva deuxième et félicita Roch Kaboré pour sa réélection. Zéphirin Diabré, deuxième en 2015, fut devancé. Le CDP était l'ancien parti de Blaise Compaoré.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Roch Kaboré fut renversé par un coup d'État militaire le :",
+      "o": [
+        "24 janvier 2022",
+        "1er mars 2022",
+        "30 septembre 2022",
+        "21 octobre 2022"
+      ],
+      "r": 0,
+      "x": "Le 24 janvier 2022, des militaires annoncèrent avoir renversé Roch Kaboré. Le 1er mars 2022, ils adoptèrent une Charte de la transition. Le 30 septembre 2022, un second coup d'État eut lieu.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le sigle MPSR, désignant la junte arrivée au pouvoir en janvier 2022, signifie :",
+      "o": [
+        "Mouvement patriotique pour la souveraineté et la refondation",
+        "Mouvement patriotique pour la sauvegarde et la restauration",
+        "Mouvement populaire pour le salut de la République",
+        "Mouvement pour la paix, la sécurité et le renouveau"
+      ],
+      "r": 1,
+      "x": "Le Mouvement patriotique pour la sauvegarde et la restauration (MPSR) fut créé le 24 janvier 2022. Il fut d'abord dirigé par Paul-Henri Sandaogo Damiba. Ibrahim Traoré en a pris la tête le 30 septembre 2022.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Lors du coup d'État de janvier 2022, Paul-Henri Sandaogo Damiba avait le grade de :",
+      "o": [
+        "lieutenant-colonel",
+        "capitaine",
+        "colonel-major",
+        "général de brigade"
+      ],
+      "r": 0,
+      "x": "Le lieutenant-colonel Paul-Henri Sandaogo Damiba prit la tête du MPSR en janvier 2022. Ibrahim Traoré, qui le renversa en septembre, était capitaine. Damiba est né en 1981.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Lors du coup d'État contre Roch Kaboré, la déclaration annonçant la prise du pouvoir fut lue à la télévision par le capitaine :",
+      "o": [
+        "Farouk Azaria Sorgho",
+        "Ibrahim Traoré",
+        "Isaac Zida",
+        "Sidsoré Kader Ouédraogo"
+      ],
+      "r": 3,
+      "x": "Le capitaine Sidsoré Kader Ouédraogo lut la déclaration du MPSR le 24 janvier 2022. La junte fit aussi diffuser une lettre manuscrite de démission de Roch Kaboré. Farouk Azaria Sorgho est devenu plus tard le porte-parole du MPSR.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Paul-Henri Sandaogo Damiba est né en :",
+      "o": [
+        "1972",
+        "1975",
+        "1978",
+        "1981"
+      ],
+      "r": 3,
+      "x": "Paul-Henri Sandaogo Damiba est né en 1981. Ibrahim Traoré, son successeur, est né en 1988. Damiba avait 41 ans lors de sa prise de pouvoir.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La Charte de la Transition de 2022 fut signée à l'issue des Assises nationales sur la refondation le :",
+      "o": [
+        "24 janvier 2022",
+        "16 février 2022",
+        "1er mars 2022",
+        "30 septembre 2022"
+      ],
+      "r": 2,
+      "x": "La Charte de la Transition fut signée dans la nuit du 28 février au 1er mars 2022, à l'issue des Assises nationales sur la refondation. Damiba avait prêté serment le 16 février, avant son investiture officielle le 2 mars 2022.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La Charte de la transition de mars 2022 fixait la durée de la Transition à :",
+      "o": [
+        "36 mois",
+        "48 mois",
+        "60 mois",
+        "72 mois"
+      ],
+      "r": 0,
+      "x": "La Charte de mars 2022 prévoyait une transition de 36 mois, suivie d'élections. Cette durée fut contestée par la CEDEAO. Les assises de mai 2024 portèrent ensuite la Transition à 60 mois à partir du 2 juillet 2024.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le Premier ministre nommé par Paul-Henri Damiba en 2022 est :",
+      "o": [
+        "Apollinaire Kyélem de Tambèla",
+        "Christophe Dabiré",
+        "Albert Ouédraogo",
+        "Lassina Zerbo"
+      ],
+      "r": 2,
+      "x": "Albert Ouédraogo fut le Premier ministre de la transition dirigée par Damiba. Lassina Zerbo avait été le dernier Premier ministre de Kaboré. Apollinaire Kyélem de Tambèla fut nommé par Ibrahim Traoré.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Après le coup d'État de janvier 2022, le Burkina Faso fut suspendu des instances de la CEDEAO et de :",
+      "o": [
+        "l'Organisation des Nations unies",
+        "l'Organisation mondiale du commerce",
+        "l'Union monétaire ouest-africaine",
+        "l'Union africaine"
+      ],
+      "r": 3,
+      "x": "La CEDEAO suspendit le Burkina Faso le 28 janvier 2022, puis l'Union africaine fit de même. Le pays resta membre de l'ONU et de l'UEMOA. Il a quitté définitivement la CEDEAO en janvier 2025.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Paul-Henri Sandaogo Damiba fut renversé le :",
+      "o": [
+        "24 janvier 2022",
+        "1er mars 2022",
+        "30 septembre 2022",
+        "21 octobre 2022"
+      ],
+      "r": 2,
+      "x": "Le 30 septembre 2022, le capitaine Ibrahim Traoré renversa Damiba, huit mois après sa prise de pouvoir. Traoré prêta serment le 21 octobre 2022. Le 1er mars 2022 avait été adoptée la première Charte de la transition.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Après sa chute, Paul-Henri Sandaogo Damiba annonça sa démission le :",
+      "o": [
+        "30 septembre 2022",
+        "2 octobre 2022",
+        "6 octobre 2022",
+        "14 octobre 2022"
+      ],
+      "r": 1,
+      "x": "Damiba accepta de démissionner le 2 octobre 2022, après une médiation de chefs religieux et coutumiers. Un acte fondamental publié le 5 octobre fit d'Ibrahim Traoré le chef de l'État. Les assises nationales du 14 octobre confirmèrent ce choix.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Après sa démission en octobre 2022, Paul-Henri Sandaogo Damiba se réfugia au :",
+      "o": [
+        "Bénin",
+        "Togo",
+        "Ghana",
+        "Mali"
+      ],
+      "r": 1,
+      "x": "Damiba quitta le pays pour Lomé, au Togo, après sa démission du 2 octobre 2022. Le Togo joua un rôle de facilitateur dans la crise. Ibrahim Traoré prit la direction du MPSR.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Lors du coup d'État de septembre 2022, Ibrahim Traoré avait le grade de :",
+      "o": [
+        "capitaine",
+        "commandant",
+        "lieutenant",
+        "lieutenant-colonel"
+      ],
+      "r": 0,
+      "x": "Ibrahim Traoré était capitaine depuis 2020 lorsqu'il prit le pouvoir. Il avait été promu lieutenant en 2014. Son prédécesseur Damiba était lieutenant-colonel.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Ibrahim Traoré est né en :",
+      "o": [
+        "1979",
+        "1982",
+        "1985",
+        "1988"
+      ],
+      "r": 3,
+      "x": "Ibrahim Traoré est né le 14 mars 1988. Il avait 34 ans lorsqu'il prit le pouvoir. Il devint alors le plus jeune chef d'État en exercice au monde.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Ibrahim Traoré est né dans la province du :",
+      "o": [
+        "Houet",
+        "Mouhoun",
+        "Yatenga",
+        "Kadiogo"
+      ],
+      "r": 1,
+      "x": "Ibrahim Traoré est né à Kéra, dans la commune de Bondokuy, province du Mouhoun. Le Houet a pour chef-lieu Bobo-Dioulasso et le Yatenga Ouahigouya. Le Kadiogo est la province de Ouagadougou.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Avant d'entrer dans l'armée, Ibrahim Traoré fit des études universitaires de :",
+      "o": [
+        "économie",
+        "géologie",
+        "médecine",
+        "droit"
+      ],
+      "r": 1,
+      "x": "Ibrahim Traoré étudia la géologie à l'université de Ouagadougou avant d'intégrer l'armée. Les autres filières proposées ne correspondent pas à son parcours. Il fut formé à l'Académie militaire Georges-Namoano.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Ibrahim Traoré est né à :",
+      "o": [
+        "Bondokuy",
+        "Dédougou",
+        "Koudougou",
+        "Bobo-Dioulasso"
+      ],
+      "r": 0,
+      "x": "Ibrahim Traoré est né à Bondokuy, localité de l'ouest du pays. Il fit ses études secondaires au lycée Ouezzin-Coulibaly de Bobo-Dioulasso. Dédougou et Koudougou ne sont pas liés à sa naissance.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Ibrahim Traoré fut promu au grade de capitaine en :",
+      "o": [
+        "2020",
+        "2021",
+        "2022",
+        "2023"
+      ],
+      "r": 0,
+      "x": "Ibrahim Traoré devint capitaine en 2020, six ans après sa promotion au grade de lieutenant. Il avait combattu dans le nord du pays contre les groupes armés. Il prit le pouvoir deux ans plus tard.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Ibrahim Traoré fut formé dans l'académie militaire burkinabè qui porte le nom de :",
+      "o": [
+        "Tiéfo Amoro",
+        "Georges Namoano",
+        "Sangoulé Lamizana",
+        "Thomas Sankara"
+      ],
+      "r": 1,
+      "x": "Ibrahim Traoré est diplômé de l'Académie militaire Georges-Namoano, à Pô. L'Institut d'enseignement militaire supérieur porte, lui, le nom de Tiéfo Amoro. L'académie de Pô forme les officiers de l'armée burkinabè.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Avant 2022, Ibrahim Traoré servit au sein de la mission de maintien de la paix de l'ONU au :",
+      "o": [
+        "Centrafrique",
+        "Mali",
+        "Congo",
+        "Soudan"
+      ],
+      "r": 1,
+      "x": "Ibrahim Traoré servit au sein de la MINUSMA, la mission de l'ONU au Mali. Il combattit ensuite les groupes armés dans le nord du Burkina Faso. La MINUSMA a quitté le Mali en 2023.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "À sa prise de pouvoir en 2022, Ibrahim Traoré était âgé de :",
+      "o": [
+        "30 ans",
+        "34 ans",
+        "38 ans",
+        "42 ans"
+      ],
+      "r": 1,
+      "x": "Né en mars 1988, Ibrahim Traoré avait 34 ans en septembre 2022. Il était alors le plus jeune chef d'État en exercice au monde. Thomas Sankara avait pris le pouvoir à 33 ans.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Les assises nationales qui désignèrent Ibrahim Traoré président de la Transition se tinrent le :",
+      "o": [
+        "30 septembre 2022",
+        "6 octobre 2022",
+        "14 octobre 2022",
+        "21 octobre 2022"
+      ],
+      "r": 2,
+      "x": "Les assises nationales du 14 octobre 2022 adoptèrent une nouvelle Charte et désignèrent Ibrahim Traoré président. Il était chef de l'État depuis l'acte fondamental du 5 octobre. Il prêta serment le 21 octobre 2022.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Ibrahim Traoré prêta serment comme président de la Transition le :",
+      "o": [
+        "6 octobre 2022",
+        "14 octobre 2022",
+        "18 octobre 2022",
+        "21 octobre 2022"
+      ],
+      "r": 3,
+      "x": "Ibrahim Traoré prêta serment le 21 octobre 2022. Le même jour, Apollinaire Kyélem de Tambèla fut nommé Premier ministre. Les assises nationales l'avaient désigné le 14 octobre.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le premier Premier ministre nommé par Ibrahim Traoré est :",
+      "o": [
+        "Rimtalba Jean Emmanuel Ouédraogo",
+        "Albert Ouédraogo",
+        "Apollinaire Kyélem de Tambèla",
+        "Lassina Zerbo"
+      ],
+      "r": 2,
+      "x": "Me Apollinaire Joachim Kyélem de Tambèla fut nommé Premier ministre le 21 octobre 2022. Il resta en fonctions jusqu'au 6 décembre 2024. Rimtalba Jean Emmanuel Ouédraogo lui succéda.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le Premier ministre nommé en octobre 2022 par Ibrahim Traoré était de profession :",
+      "o": [
+        "médecin",
+        "avocat",
+        "militaire",
+        "banquier"
+      ],
+      "r": 1,
+      "x": "Apollinaire Kyélem de Tambèla est avocat, d'où le titre de « Maître » qui accompagne son nom. Il était aussi connu comme analyste politique et essayiste. Son successeur, Rimtalba Jean Emmanuel Ouédraogo, est journaliste.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La Charte de la transition d'octobre 2022 prévoyait la fin de la Transition en :",
+      "o": [
+        "décembre 2023",
+        "juillet 2024",
+        "juillet 2025",
+        "juillet 2029"
+      ],
+      "r": 1,
+      "x": "La Charte de 2022 fixait la fin de la Transition au 1er juillet 2024. En mai 2024, les assises nationales prolongèrent la Transition de 60 mois à partir du 2 juillet 2024. La nouvelle échéance fut ainsi fixée à juillet 2029.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le sigle ALT, désignant l'organe législatif de la Transition, signifie :",
+      "o": [
+        "Assemblée locale territoriale",
+        "Autorité législative transitoire",
+        "Assemblée libre de la transition",
+        "Assemblée législative de transition"
+      ],
+      "r": 3,
+      "x": "L'Assemblée législative de transition (ALT), créée en mars 2022, fut recomposée et réinstallée en novembre 2022. Elle tenait lieu de Parlement depuis la dissolution de l'Assemblée nationale en janvier 2022. Elle est devenue l'Assemblée législative du peuple (ALP) en 2026.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "L'ALT installée fin 2022 comptait :",
+      "o": [
+        "51 membres",
+        "71 membres",
+        "91 membres",
+        "127 membres"
+      ],
+      "r": 1,
+      "x": "L'ALT comptait 71 membres, désignés par différentes composantes de la nation. L'Assemblée nationale élue en 2020 comptait 127 députés. La devise nationale fut rétablie en 2024 par 71 voix sur 71 votants.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Ousmane Bougouma fut élu président de l'ALT le :",
+      "o": [
+        "21 octobre 2022",
+        "11 novembre 2022",
+        "2 décembre 2022",
+        "2 juillet 2024"
+      ],
+      "r": 1,
+      "x": "Ousmane Bougouma fut élu à la tête de l'ALT le 11 novembre 2022. Il a conservé cette fonction lorsque l'ALT est devenue l'Assemblée législative du peuple en 2026. Ibrahim Traoré avait prêté serment le 21 octobre 2022.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Les forces spéciales françaises de l'opération Sabre quittèrent le Burkina Faso en :",
+      "o": [
+        "2020",
+        "2021",
+        "2022",
+        "2023"
+      ],
+      "r": 3,
+      "x": "À la demande des autorités de la Transition, les militaires français de l'opération Sabre quittèrent le pays en février 2023. Cette décision traduisait la rupture avec l'ancienne puissance coloniale. Le Burkina Faso renforça ensuite ses partenariats avec la Russie.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le procès de l'assassinat de Thomas Sankara et de ses compagnons s'ouvrit le :",
+      "o": [
+        "11 octobre 2021",
+        "24 janvier 2022",
+        "6 avril 2022",
+        "30 septembre 2022"
+      ],
+      "r": 0,
+      "x": "Le procès s'ouvrit le 11 octobre 2021 devant le tribunal militaire de Ouagadougou. Le verdict fut rendu le 6 avril 2022. Entre-temps, le coup d'État du 24 janvier 2022 renversa Roch Kaboré.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le verdict du procès de l'assassinat de Thomas Sankara fut rendu le :",
+      "o": [
+        "11 octobre 2021",
+        "24 janvier 2022",
+        "6 avril 2022",
+        "30 septembre 2022"
+      ],
+      "r": 2,
+      "x": "Le 6 avril 2022, le tribunal militaire condamna Blaise Compaoré, Hyacinthe Kafando et Gilbert Diendéré à la prison à perpétuité. Le procès avait duré près de six mois. Il fut qualifié de « jour historique » par les avocats des familles.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le procès de l'assassinat de Thomas Sankara se déroula devant :",
+      "o": [
+        "le tribunal militaire de Ouagadougou",
+        "la Haute Cour de justice",
+        "la Cour pénale internationale",
+        "la Cour de justice de la CEDEAO"
+      ],
+      "r": 0,
+      "x": "Le procès se tint devant le tribunal militaire de Ouagadougou, dans la salle des banquets de Ouaga 2000. La Haute Cour de justice a depuis été supprimée par la révision constitutionnelle. La CPI n'était pas compétente pour des faits de 1987.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Lors du procès de l'assassinat de Thomas Sankara, Blaise Compaoré fut condamné à :",
+      "o": [
+        "30 ans de prison",
+        "la prison à perpétuité",
+        "10 ans de prison",
+        "20 ans de prison"
+      ],
+      "r": 1,
+      "x": "Blaise Compaoré fut condamné par contumace à la prison à perpétuité le 6 avril 2022. Il vit en exil en Côte d'Ivoire. Hyacinthe Kafando et Gilbert Diendéré reçurent la même peine.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Outre Blaise Compaoré et Gilbert Diendéré, l'accusé condamné à la perpétuité lors du procès Sankara est :",
+      "o": [
+        "Isaac Zida",
+        "Jean-Pierre Palm",
+        "François Compaoré",
+        "Hyacinthe Kafando"
+      ],
+      "r": 3,
+      "x": "Hyacinthe Kafando, ancien membre de la garde rapprochée de Compaoré, était accusé d'avoir dirigé le commando du 15 octobre 1987. Il fut condamné par contumace. Jean-Pierre Palm, autre accusé, fut condamné à une peine plus légère.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "L'exhumation des restes présumés de Thomas Sankara débuta le 25 mai 2015, date qui correspond à :",
+      "o": [
+        "la Journée de l'Afrique",
+        "la fête de l'indépendance",
+        "l'anniversaire de la Révolution",
+        "la fête du travail"
+      ],
+      "r": 0,
+      "x": "L'exhumation débuta le 25 mai 2015, Journée de l'Afrique, anniversaire de la création de l'OUA en 1963. Elle intervenait sous la Transition de Michel Kafando. Les restes furent réinhumés le 23 février 2023 au Conseil de l'Entente, où un mausolée fut inauguré en 2025.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Les Forces armées nationales du Burkina Faso célèbrent leur anniversaire chaque :",
+      "o": [
+        "1er novembre",
+        "5 août",
+        "11 décembre",
+        "4 août"
+      ],
+      "r": 0,
+      "x": "Les forces armées nationales furent créées le 3 août 1960, et leur 66e anniversaire a été célébré le 1er novembre 2026. Le 5 août rappelle l'indépendance et le 11 décembre la proclamation de la République. Le 4 août commémore la Révolution de 1983.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Les Forces armées nationales du Burkina Faso furent créées en :",
+      "o": [
+        "1960",
+        "1961",
+        "1966",
+        "1970"
+      ],
+      "r": 0,
+      "x": "Instituée juridiquement le 3 août 1960 (juste avant l'indépendance du 5 août), l'armée nationale vit le jour sur le terrain à partir du 1er novembre 1960 avec le transfert des militaires voltaïques de l'armée française. Le 1er novembre 2026 a ainsi marqué son 66e anniversaire.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le procès de l'assassinat de Thomas Sankara se tint à Ouagadougou dans :",
+      "o": [
+        "la salle des banquets de Ouaga 2000",
+        "le palais de justice de Ouagadougou",
+        "le Conseil de l'Entente",
+        "la Maison du peuple"
+      ],
+      "r": 0,
+      "x": "Les audiences se tinrent dans la salle des banquets de Ouaga 2000, aménagée pour accueillir le public. Le Conseil de l'Entente, lieu de l'assassinat, abrite aujourd'hui le mausolée. Le verdict fut rendu le 6 avril 2022.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le sigle VDP, désignant les supplétifs civils engagés aux côtés de l'armée, signifie :",
+      "o": [
+        "Volontaires pour la défense de la patrie",
+        "Vigiles de défense populaire",
+        "Veilleurs pour la défense du peuple",
+        "Volontaires de la paix"
+      ],
+      "r": 0,
+      "x": "Les Volontaires pour la défense de la patrie (VDP) furent institués par une loi de janvier 2020. Ils combattent aux côtés des forces de défense et de sécurité. Leur recrutement fut fortement élargi à partir de 2022.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "L'Alliance des États du Sahel (AES) fut créée par le Burkina Faso, le Mali et le Niger le :",
+      "o": [
+        "16 septembre 2023",
+        "28 janvier 2024",
+        "6 juillet 2024",
+        "29 janvier 2025"
+      ],
+      "r": 0,
+      "x": "L'AES fut créée le 16 septembre 2023 par la signature d'une charte de défense mutuelle. Le retrait de la CEDEAO fut annoncé le 28 janvier 2024. La Confédération des États du Sahel fut instituée le 6 juillet 2024.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La charte fondatrice de l'Alliance des États du Sahel (AES) fut signée en septembre 2023 à :",
+      "o": [
+        "Ouagadougou",
+        "Dori",
+        "Bamako",
+        "Niamey"
+      ],
+      "r": 2,
+      "x": "La charte fondatrice de l'AES fut signée à Bamako, le Mali en étant le dépositaire. Le traité de la Confédération fut signé à Niamey en juillet 2024. Dori est le chef-lieu de la région du Liptako.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le texte fondateur de l'Alliance des États du Sahel (AES), signé en 2023, porte le nom de :",
+      "o": [
+        "Charte du Liptako-Gourma",
+        "Pacte de défense du Sahel",
+        "Charte de Bamako-Niamey",
+        "Traité de Niamey"
+      ],
+      "r": 0,
+      "x": "L'AES repose sur la Charte du Liptako-Gourma, du nom de la zone frontalière commune aux trois pays. Le traité de Niamey de juillet 2024 institua la Confédération. L'ALG, créée en 1970, couvre la même région.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La charte fondatrice de l'Alliance des États du Sahel (AES), signée en 2023, compte :",
+      "o": [
+        "12 articles",
+        "17 articles",
+        "25 articles",
+        "36 articles"
+      ],
+      "r": 1,
+      "x": "La charte comporte un préambule et 17 articles. Son article 6 prévoit une assistance mutuelle en cas d'agression. Sa ratification fut autorisée par une loi de l'ALT en 2024.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Selon l'article 6 de la charte fondatrice de l'AES, toute atteinte à la souveraineté de l'un des États membres est considérée comme :",
+      "o": [
+        "un différend à soumettre à l'ONU",
+        "une agression contre les autres parties",
+        "une affaire intérieure de l'État visé",
+        "un motif de retrait de l'Alliance"
+      ],
+      "r": 1,
+      "x": "L'article 6 pose le principe d'une défense collective : une agression contre l'un est une agression contre tous. Il engage les États à se prêter assistance, y compris militaire. Ce principe fonde l'architecture de défense de l'AES.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le Burkina Faso, le Mali et le Niger annoncèrent conjointement leur retrait de la Communauté économique des États de l'Afrique de l'Ouest (CEDEAO) le :",
+      "o": [
+        "16 septembre 2023",
+        "28 janvier 2024",
+        "6 juillet 2024",
+        "29 janvier 2025"
+      ],
+      "r": 1,
+      "x": "Le retrait fut annoncé le 28 janvier 2024 dans un communiqué conjoint des trois pays. Il ne devint effectif qu'un an plus tard, le 29 janvier 2025. Les trois pays avaient créé l'AES le 16 septembre 2023.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le retrait du Burkina Faso, du Mali et du Niger de la CEDEAO devint effectif le :",
+      "o": [
+        "28 janvier 2024",
+        "6 juillet 2024",
+        "15 décembre 2024",
+        "29 janvier 2025"
+      ],
+      "r": 3,
+      "x": "Le retrait devint effectif le 29 janvier 2025, à l'issue du délai d'un an prévu par le traité révisé de la CEDEAO. Le 15 décembre 2024, la CEDEAO avait pris acte du départ et ouvert une période de transition. Le retrait avait été annoncé le 28 janvier 2024.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le délai d'un an entre l'annonce et l'effectivité du retrait de la CEDEAO découle de l'article du traité révisé numéroté :",
+      "o": [
+        "91",
+        "103",
+        "112",
+        "120"
+      ],
+      "r": 0,
+      "x": "L'article 91 du traité révisé de la CEDEAO impose un préavis d'un an à tout État qui souhaite se retirer. C'est pourquoi le retrait annoncé en janvier 2024 ne prit effet qu'en janvier 2025. Durant cette période, la CEDEAO tenta de convaincre les trois pays de revenir.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le traité instituant la Confédération des États du Sahel fut signé lors du premier sommet des chefs d'État de l'AES, à :",
+      "o": [
+        "Dori",
+        "Bamako",
+        "Ouagadougou",
+        "Niamey"
+      ],
+      "r": 3,
+      "x": "Le traité fut signé à Niamey lors du premier sommet des chefs d'État de l'AES. La charte fondatrice de l'Alliance avait été signée à Bamako en 2023. La deuxième session du Collège des chefs d'État se tint à Bamako en décembre 2025.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La Confédération des États du Sahel fut instituée le :",
+      "o": [
+        "16 septembre 2023",
+        "28 janvier 2024",
+        "6 juillet 2024",
+        "29 janvier 2025"
+      ],
+      "r": 2,
+      "x": "Le traité instituant la Confédération fut adopté le 6 juillet 2024 à Niamey. Il élargit la coopération de la défense à la diplomatie et au développement. Le retrait de la CEDEAO devint effectif le 29 janvier 2025.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le premier président de la Confédération des États du Sahel, désigné en juillet 2024, est :",
+      "o": [
+        "Abdoulaye Maïga",
+        "Ibrahim Traoré",
+        "Assimi Goïta",
+        "Abdourahamane Tiani"
+      ],
+      "r": 2,
+      "x": "Le général Assimi Goïta, chef de l'État malien, fut le premier président de la Confédération. Le capitaine Ibrahim Traoré lui succéda en décembre 2025 pour un an. Abdourahamane Tiani dirige le Niger.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Ibrahim Traoré prit la présidence de la Confédération des États du Sahel en :",
+      "o": [
+        "juillet 2024",
+        "janvier 2025",
+        "décembre 2025",
+        "avril 2026"
+      ],
+      "r": 2,
+      "x": "Ibrahim Traoré fut désigné président de la Confédération pour un an lors du sommet de Bamako de décembre 2025. Il succéda au Malien Assimi Goïta. Il annonça le renforcement des opérations de la force unifiée de l'AES.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le sommet au cours duquel Ibrahim Traoré prit la tête de la Confédération AES se tint à :",
+      "o": [
+        "Ouagadougou",
+        "Tillabéri",
+        "Bamako",
+        "Niamey"
+      ],
+      "r": 2,
+      "x": "La deuxième session ordinaire du Collège des chefs d'État de l'AES se tint à Bamako en décembre 2025. Le premier sommet avait eu lieu à Niamey en juillet 2024. Le sommet adopta plusieurs protocoles additionnels.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le drapeau de la Confédération des États du Sahel fut dévoilé le :",
+      "o": [
+        "22 février 2025",
+        "2 juillet 2025",
+        "28 octobre 2025",
+        "29 janvier 2026"
+      ],
+      "r": 0,
+      "x": "Le drapeau de la Confédération fut dévoilé le 22 février 2025. Le logo de l'AES avait été présenté le 30 décembre 2024 à Bamako. Le 29 janvier 2025, le retrait de la CEDEAO devint effectif.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le jour où le retrait de la CEDEAO devint effectif, les pays de l'AES mirent en circulation :",
+      "o": [
+        "un passeport biométrique commun",
+        "une monnaie commune",
+        "une carte d'électeur commune",
+        "une banque centrale commune"
+      ],
+      "r": 0,
+      "x": "Le passeport biométrique commun de l'AES fut lancé le 29 janvier 2025. Les passeports portant le logo de la CEDEAO restent valables. Le drapeau de la Confédération fut dévoilé quelques semaines plus tard.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La Confédération des États du Sahel représente une population d'environ :",
+      "o": [
+        "45 millions d'habitants",
+        "77 millions d'habitants",
+        "110 millions d'habitants",
+        "150 millions d'habitants"
+      ],
+      "r": 1,
+      "x": "Selon les données 2025 de la Banque mondiale, les populations du Burkina Faso, du Mali et du Niger totalisent environ 77,2 millions d'habitants. Cette estimation doit être datée, car la population évolue chaque année.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Thomas Sankara fut élevé au rang de « héros de la nation » par décret du Conseil des ministres en :",
+      "o": [
+        "2018",
+        "2020",
+        "2022",
+        "2023"
+      ],
+      "r": 3,
+      "x": "En octobre 2023, le gouvernement de la Transition adopta un décret reconnaissant Thomas Sankara comme héros de la nation. Ce statut avait été créé en juin 2022. Une cérémonie d'hommage national fut organisée le 15 octobre 2023.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le mausolée Thomas-Sankara fut inauguré le :",
+      "o": [
+        "15 octobre 2023",
+        "17 mai 2025",
+        "2 juillet 2025",
+        "15 octobre 2025"
+      ],
+      "r": 1,
+      "x": "Le mausolée fut inauguré le samedi 17 mai 2025 sur l'ancien site du Conseil de l'Entente à Ouagadougou. Le Premier ministre y représentait le capitaine Ibrahim Traoré. Le 15 octobre 2023 avait eu lieu l'hommage national au héros de la nation.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le mausolée inauguré en 2025 au Conseil de l'Entente abrite les restes de Thomas Sankara et de ses compagnons, soit au total :",
+      "o": [
+        "13 martyrs",
+        "15 martyrs",
+        "18 martyrs",
+        "20 martyrs"
+      ],
+      "r": 0,
+      "x": "Le mausolée accueille Thomas Sankara et ses douze compagnons, soit treize martyrs. Ils avaient été tués ensemble le 15 octobre 1987. Le site est géré en lien avec le Comité international du Mémorial Thomas Sankara.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Parmi les personnalités étrangères présentes à l'inauguration du mausolée Thomas-Sankara en 2025 figurait le Premier ministre sénégalais :",
+      "o": [
+        "Aminata Touré",
+        "Amadou Ba",
+        "Macky Sall",
+        "Ousmane Sonko"
+      ],
+      "r": 3,
+      "x": "Ousmane Sonko, Premier ministre du Sénégal, assista à l'inauguration aux côtés du Premier ministre tchadien. Il revendique l'héritage de Thomas Sankara. Amadou Ba et Aminata Touré furent Premiers ministres sous Macky Sall.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Selon le projet de révision constitutionnelle adopté en Conseil des ministres le 6 décembre 2023, le Conseil économique et social est remplacé par :",
+      "o": [
+        "le Conseil supérieur de la magistrature",
+        "le Conseil des sages",
+        "le Conseil national des communautés",
+        "le Conseil national de sécurité"
+      ],
+      "r": 2,
+      "x": "Le Conseil économique et social cède sa place au Conseil national des communautés (CNC). La même réforme supprime la Haute Cour de justice. L'Agence nationale de renseignement devient, elle, le Conseil national de sécurité.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Depuis la révision constitutionnelle de 2023, les compétences de la Haute Cour de justice sont exercées par :",
+      "o": [
+        "la chambre criminelle de la Cour d'appel de Ouagadougou",
+        "la chambre administrative de la Cour de cassation",
+        "le tribunal militaire de Ouagadougou",
+        "le Conseil constitutionnel en formation plénière"
+      ],
+      "r": 0,
+      "x": "La Haute Cour de justice a été supprimée, et ses compétences confiées à la chambre criminelle de la Cour d'appel de Ouagadougou, avec des juges parlementaires. Le Conseil constitutionnel a vu ses pouvoirs élargis. Le tribunal militaire avait jugé l'affaire Sankara en 2022.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Depuis la révision constitutionnelle de 2023, le français a le statut de :",
+      "o": [
+        "langue de travail",
+        "langue nationale",
+        "langue officielle unique",
+        "langue d'enseignement exclusive"
+      ],
+      "r": 0,
+      "x": "Depuis la révision constitutionnelle du 30 décembre 2023, les langues nationales officialisées par la loi sont les langues officielles du Burkina Faso. Le français et l'anglais sont, quant à eux, des langues de travail. Le français n'est donc plus désigné comme l'unique langue officielle.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La révision constitutionnelle de 2023 a constitutionnalisé l'Agence nationale de renseignement, transformée en :",
+      "o": [
+        "Conseil national des communautés",
+        "Conseil national de sécurité",
+        "Direction de la sûreté de l'État",
+        "Haut Conseil de défense"
+      ],
+      "r": 1,
+      "x": "L'Agence nationale de renseignement (ANR) est devenue le Conseil national de sécurité, consacré par la Constitution. Le Conseil national des communautés remplace le Médiateur du Faso et le CES. La réforme a aussi ouvert le Conseil supérieur de la magistrature à des non-magistrats.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "En mai 2024, les assises nationales prolongèrent la Transition d'une durée de :",
+      "o": [
+        "24 mois",
+        "36 mois",
+        "48 mois",
+        "60 mois"
+      ],
+      "r": 3,
+      "x": "Les assises de mai 2024 prolongèrent la Transition de 60 mois, à compter du 2 juillet 2024. Elles autorisèrent aussi Ibrahim Traoré à se présenter aux futures élections. La plupart des partis politiques avaient boycotté ces consultations.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La prolongation de la Transition décidée en mai 2024 courait à compter du :",
+      "o": [
+        "1er mars 2022",
+        "21 octobre 2022",
+        "2 juillet 2024",
+        "6 juillet 2024"
+      ],
+      "r": 2,
+      "x": "La prolongation de 60 mois prit effet le 2 juillet 2024, au terme de la Transition prévue par la Charte de 2022. Elle porta l'échéance à juillet 2029. Le 6 juillet 2024 fut créée la Confédération des États du Sahel.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La loi rétablissant la devise « La Patrie ou la mort, nous vaincrons », le 29 octobre 2024, fut adoptée par :",
+      "o": [
+        "51 voix",
+        "63 voix",
+        "70 voix",
+        "71 voix"
+      ],
+      "r": 3,
+      "x": "La loi fut adoptée à l'unanimité par 71 voix sur 71 votants, au scrutin secret. Elle modifiait l'article 34 de la Constitution. Elle remplaçait la devise « Unité, Progrès, Justice » adoptée en 1997.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La révision constitutionnelle d'octobre 2024 permet désormais d'approuver l'entrée du pays dans une confédération d'États africains par voie :",
+      "o": [
+        "diplomatique",
+        "référendaire uniquement",
+        "réglementaire",
+        "législative"
+      ],
+      "r": 3,
+      "x": "L'article 147 révisé permet d'approuver un accord d'entrée dans une confédération ou une union d'États africains par voie législative, et non plus seulement par référendum. Cette réforme accompagne la création de la Confédération AES. Elle fut adoptée le même jour que la nouvelle devise.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le Premier ministre nommé le 7 décembre 2024 est :",
+      "o": [
+        "Rimtalba Jean Emmanuel Ouédraogo",
+        "Bassolma Bazié",
+        "Christophe Dabiré",
+        "Apollinaire Kyélem de Tambèla"
+      ],
+      "r": 0,
+      "x": "Rimtalba Jean Emmanuel Ouédraogo fut nommé par décret le 7 décembre 2024, au lendemain de la dissolution du gouvernement Kyélem. Il a été maintenu lors du remaniement du 12 janvier 2026. Albert Ouédraogo avait été Premier ministre sous Damiba.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le Premier ministre nommé le 7 décembre 2024 était auparavant de profession :",
+      "o": [
+        "avocat",
+        "médecin",
+        "officier",
+        "journaliste"
+      ],
+      "r": 3,
+      "x": "Rimtalba Jean Emmanuel Ouédraogo est journaliste et ancien présentateur à la RTB, la télévision publique. Son prédécesseur Apollinaire Kyélem de Tambèla est avocat. Il dirige le gouvernement depuis décembre 2024.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Avant sa nomination en décembre 2024, le nouveau Premier ministre occupait au gouvernement le poste de :",
+      "o": [
+        "ministre de la Justice",
+        "ministre des Finances",
+        "ministre de la Communication",
+        "ministre de la Défense"
+      ],
+      "r": 2,
+      "x": "Il était ministre d'État, ministre de la Communication, de la Culture, des Arts et du Tourisme, et porte-parole du gouvernement. Il fut nommé Premier ministre le 7 décembre 2024. Il a représenté le pays au forum Russie-Afrique de Moscou en octobre 2026.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Depuis la réorganisation adoptée en juillet 2025, le Burkina Faso compte :",
+      "o": [
+        "11 régions",
+        "13 régions",
+        "15 régions",
+        "17 régions"
+      ],
+      "r": 3,
+      "x": "Le Conseil des ministres du 2 juillet 2025 porta le nombre de régions de 13 à 17. Les régions reçurent des noms endogènes, tirés des langues nationales. Le nombre de provinces passa de 45 à 47.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Depuis la réorganisation adoptée en juillet 2025, le nombre de provinces est de :",
+      "o": [
+        "47",
+        "49",
+        "51",
+        "53"
+      ],
+      "r": 0,
+      "x": "Le découpage de juillet 2025 porte le nombre de provinces à 47, avec la création de Dyamongou et de Karo-Peli. Le pays comptait auparavant 45 provinces. Il compte désormais 17 régions.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Dans le découpage de juillet 2025, la région du Soum, nouvellement créée, a pour chef-lieu :",
+      "o": [
+        "Arbinda",
+        "Gorom-Gorom",
+        "Dori",
+        "Djibo"
+      ],
+      "r": 3,
+      "x": "La région du Soum, détachée de l'ancienne région du Sahel, a pour chef-lieu Djibo. Dori est le chef-lieu de la région du Liptako. Arbinda est le chef-lieu de la nouvelle province de Karo-Peli.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Dans le découpage de juillet 2025, Bobo-Dioulasso est le chef-lieu de la région appelée :",
+      "o": [
+        "Djôrô",
+        "Tannounyan",
+        "Guiriko",
+        "Bankui"
+      ],
+      "r": 2,
+      "x": "La région du Guiriko, dont le nom rappelle l'ancien royaume du Gwiriko, a pour chef-lieu Bobo-Dioulasso. Le Tannounyan a pour chef-lieu Banfora et le Bankui Dédougou. Le Djôrô a pour chef-lieu Gaoua.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Dans le découpage de juillet 2025, Ouahigouya est le chef-lieu de la région appelée :",
+      "o": [
+        "Kuilsé",
+        "Nando",
+        "Oubri",
+        "Yaadga"
+      ],
+      "r": 3,
+      "x": "La région du Yaadga a pour chef-lieu Ouahigouya, ancienne capitale du royaume du Yatenga. Le Kuilsé a pour chef-lieu Kaya et le Nando Koudougou. L'Oubri a pour chef-lieu Ziniaré.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Dans le découpage de juillet 2025, Fada N'Gourma est le chef-lieu de la région appelée :",
+      "o": [
+        "Tapoa",
+        "Goulmou",
+        "Nakambé",
+        "Sirba"
+      ],
+      "r": 1,
+      "x": "La région du Goulmou, nom qui rappelle l'ancien royaume gourmantché du Gulmu, a pour chef-lieu Fada N'Gourma. La Sirba a pour chef-lieu Bogandé et la Tapoa Diapaga. Le Nakambé a pour chef-lieu Tenkodogo.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Dans le découpage de juillet 2025, Banfora est le chef-lieu de la région appelée :",
+      "o": [
+        "Nazinon",
+        "Tannounyan",
+        "Djôrô",
+        "Guiriko"
+      ],
+      "r": 1,
+      "x": "Banfora est le chef-lieu de la région du Tannounyan, l'ancienne région des Cascades. Le Guiriko a pour chef-lieu Bobo-Dioulasso. Le Djôrô a pour chef-lieu Gaoua.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La province de Dyamongou, créée en juillet 2025, a pour chef-lieu :",
+      "o": [
+        "Bogandé",
+        "Diapaga",
+        "Kantchari",
+        "Arbinda"
+      ],
+      "r": 2,
+      "x": "La province de Dyamongou, rattachée à la région de la Tapoa, a pour chef-lieu Kantchari. Diapaga est le chef-lieu de la région de la Tapoa. Arbinda est le chef-lieu de l'autre nouvelle province, Karo-Peli.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La province de Karo-Peli, créée en juillet 2025 dans la région du Soum, a pour chef-lieu :",
+      "o": [
+        "Kantchari",
+        "Djibo",
+        "Arbinda",
+        "Gorom-Gorom"
+      ],
+      "r": 2,
+      "x": "La province de Karo-Peli a pour chef-lieu Arbinda. Djibo est le chef-lieu de la région du Soum. Kantchari est le chef-lieu de la province de Dyamongou.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La Commission électorale nationale indépendante (CENI) fut dissoute par une loi de l'ALT adoptée en :",
+      "o": [
+        "juillet 2024",
+        "octobre 2025",
+        "janvier 2026",
+        "mars 2026"
+      ],
+      "r": 1,
+      "x": "L'ALT adopta à l'unanimité, le 28 octobre 2025, la loi portant dissolution de la CENI. Le gouvernement invoquait la rationalisation des institutions et la réduction des charges. La CENI était chargée d'organiser les élections.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le remaniement du 12 janvier 2026 ramena le nombre de ministres à :",
+      "o": [
+        "22",
+        "24",
+        "26",
+        "28"
+      ],
+      "r": 0,
+      "x": "Le décret du 12 janvier 2026 réduisit le gouvernement de 24 à 22 ministres (ministres délégués compris, Premier ministre non compris), avec plusieurs fusions de ministères. Le Premier ministre Rimtalba Jean Emmanuel Ouédraogo fut maintenu. Ce remaniement intervint quelques jours après une tentative de coup d'État déjouée.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Depuis le remaniement de janvier 2026, le ministère chargé de la Défense s'appelle :",
+      "o": [
+        "Ministère de la Sécurité et de la Défense",
+        "Ministère de la Défense et des Anciens combattants",
+        "Ministère des Forces armées révolutionnaires",
+        "Ministère de la Guerre et de la Défense patriotique"
+      ],
+      "r": 3,
+      "x": "L'ancien ministère de la Défense et des Anciens combattants devint le Ministère de la Guerre et de la Défense patriotique. Il est dirigé par le général de division Célestin Simporé. Cette appellation traduit la priorité accordée à la défense du territoire.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Depuis le remaniement de janvier 2026, l'ancien ministère de la Fonction publique s'appelle :",
+      "o": [
+        "Ministère de la Famille et de la Solidarité",
+        "Ministère de la Construction de la Patrie",
+        "Ministère des Serviteurs du Peuple",
+        "Ministère du Travail et de l'Emploi"
+      ],
+      "r": 2,
+      "x": "Le ministère de la Fonction publique, du Travail et de la Protection sociale est devenu le Ministère des Serviteurs du Peuple. Le Ministère de la Construction de la Patrie regroupe les infrastructures et l'habitat. Celui de la Famille et de la Solidarité remplace l'ancien ministère de l'Action humanitaire.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le décret portant dissolution des partis et formations politiques fut adopté en Conseil des ministres le :",
+      "o": [
+        "12 janvier 2026",
+        "29 janvier 2026",
+        "27 mars 2026",
+        "6 mai 2026"
+      ],
+      "r": 1,
+      "x": "Le Conseil des ministres du 29 janvier 2026 adopta le décret dissolvant tous les partis et formations politiques. Le gouvernement invoqua les dérives d'un système partisan qui divisait les citoyens. Le 27 mars 2026, la Charte de la Révolution fut adoptée.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Selon le décret de dissolution des partis politiques, le patrimoine des partis dissous est dévolu :",
+      "o": [
+        "à leurs militants",
+        "aux organisations de la société civile",
+        "aux collectivités territoriales",
+        "à l'État"
+      ],
+      "r": 3,
+      "x": "Le décret prévoit que le patrimoine des partis dissous revient à l'État. Un projet de loi abroge aussi les textes sur le financement des partis et le statut du chef de file de l'opposition. La mesure s'inscrit, selon le gouvernement, dans la refondation de l'État.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La Charte de la Révolution, qui remplace la Charte de la transition, fut adoptée par l'ALT le :",
+      "o": [
+        "29 janvier 2026",
+        "27 mars 2026",
+        "6 mai 2026",
+        "2 juillet 2026"
+      ],
+      "r": 1,
+      "x": "La Charte de la Révolution fut adoptée à l'unanimité des 70 votants le 27 mars 2026. Les textes officiels la visent sous la date du 1er avril 2026. Elle remplace la Charte de la transition, qui n'est plus en vigueur.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Avec la Charte de la Révolution de 2026, l'ALT est devenue :",
+      "o": [
+        "le Parlement de la Confédération",
+        "le Conseil national de la révolution",
+        "l'Assemblée législative du peuple",
+        "l'Assemblée nationale révolutionnaire"
+      ],
+      "r": 2,
+      "x": "L'ALT est devenue l'Assemblée législative du peuple (ALP), et les lois portent désormais le suffixe /ALP. Le gouvernement de transition a pris le nom de Gouvernement du peuple. Ousmane Bougouma en est le président.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "La Charte de la Révolution de 2026 consacre la RPP, sigle qui signifie :",
+      "o": [
+        "Révolution patriotique du peuple",
+        "Renouveau populaire patriotique",
+        "Révolution progressiste populaire",
+        "Rassemblement pour la patrie et le progrès"
+      ],
+      "r": 2,
+      "x": "La Charte intègre la Révolution progressiste populaire (RPP), fondée sur la défense de la patrie et l'engagement patriotique populaire. Elle affirme une rupture avec les modèles politiques jugés impérialistes et néocoloniaux. Elle renomme aussi le gouvernement et l'assemblée.",
+      "_batchId": "histoire/2026-11-19/THEME3"
+    },
+    {
+      "q": "Le nouveau Code du travail, adopté le 6 mai 2026 par la loi n° 013-2026/ALP, compte :",
+      "o": [
+        "261 articles",
+        "341 articles",
+        "401 articles",
+        "441 articles"
+      ],
+      "r": 3,
+      "x": "Le Code du travail de 2026 compte 441 articles répartis en 10 titres. Son article 440 abroge la loi n° 028-2008/AN du 13 mai 2008. Il a été promulgué par décret du 25 mai 2026.",
+      "_batchId": "histoire/2026-11-19/THEME3"
     }
   ]
 };

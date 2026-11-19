@@ -15,7 +15,13 @@ const MATIERES_CATALOG = {
   maths_licence: { nom: 'Maths — Cycle A', icone: '∫', couleur: '#0e7d3a', desc: 'Analyse, algèbre linéaire, statistiques avancées (niveau Licence ou Cycle A)' },
   cg: { nom: 'Culture Générale', icone: '🌍', couleur: '#1e40af', desc: 'Actualités BF, histoire, géographie, institutions' },
   actualite: { nom: 'Actualités et Institutions', icone: '📰', couleur: '#dc2626', desc: 'Actualité Burkina, AES, événements récents, institutions de la Transition' },
-  histgeo: { nom: 'Histoire-Géographie', icone: '🗺️', couleur: '#dc2626', desc: 'Histoire BF, géographie mondiale' },
+  // V64.20 : Géographie — Burkina (relief, climat, découpage de 2025), Afrique, monde.
+  //   Matière commune à TOUS les concours (voir MATIERES_COMMUNES en bas de fichier).
+  // V64.20 : Histoire du Burkina, de 1896 à nos jours — matière commune à tous les concours.
+  histoire: { nom: 'Histoire', icone: '⏳', couleur: '#9a3412', desc: 'Histoire du Burkina : colonisation, indépendance, régimes successifs, de 1896 à nos jours' },
+  geographie: { nom: 'Géographie', icone: '🌐', couleur: '#0d9488', desc: 'Burkina, Afrique, monde : relief, climat, population, découpage administratif' },
+  // V64.20 : « Histoire-Géographie » (histgeo, 10 questions, rattachée à aucun concours) retirée :
+  //   remplacée par les matières Histoire et Géographie.
   svt: { nom: 'SVT (générique)', icone: '🌱', couleur: '#16a34a', desc: 'SVT — utilisé en cas de niveau non précisé' },
   svt_bepc: { nom: 'SVT — Cycle C', icone: '🌱', couleur: '#16a34a', desc: 'Reproduction, alimentation, écosystèmes (niveau BEPC ou Cycle C)' },
   svt_bac: { nom: 'SVT — Cycle B', icone: '🧬', couleur: '#15803d', desc: 'Génétique, immunologie, géologie (niveau BAC ou Cycle B)' },
@@ -403,6 +409,26 @@ const DEFAULT_CONCOURS_OVERRIDES = {
 window.DEFAULT_CONCOURS_OVERRIDES = DEFAULT_CONCOURS_OVERRIDES;
 
 // Exports pour admin.html
+// === V64.20 : MATIÈRES COMMUNES À TOUS LES CONCOURS ===
+// Ajoutées ici, une seule fois, au chargement du fichier : l'application ET le
+// tableau de bord admin voient donc la même liste. Pour en ajouter une, il
+// suffit de l'inscrire dans ce tableau.
+//   - actualite  : injectée jusqu'ici par index.html seulement (V63.4), donc
+//                  invisible dans l'éditeur de concours de l'admin
+//   - histoire   : V64.20
+//   - geographie : V64.20
+// L'ordre du tableau est l'ordre d'affichage, après les matières propres au concours.
+// Dans l'admin, une matière commune peut toujours être masquée ou grisée
+// concours par concours.
+const MATIERES_COMMUNES = ['actualite', 'histoire', 'geographie'];
+CONCOURS.forEach(c => {
+  if (!Array.isArray(c.matieres)) c.matieres = [];
+  MATIERES_COMMUNES.forEach(m => {
+    if (!c.matieres.includes(m)) c.matieres.push(m);
+  });
+});
+window.MATIERES_COMMUNES = MATIERES_COMMUNES;
+
 window.CONCOURS = CONCOURS;
 window.MATIERES_CATALOG = MATIERES_CATALOG;
 window.CATEGORIES_CONCOURS = CATEGORIES_CONCOURS;
