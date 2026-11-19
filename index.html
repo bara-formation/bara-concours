@@ -13709,14 +13709,17 @@ const App = {
   // === Charger les modifications du tableau d'admin ===
   loadAdminCustomizations() {
     try {
-      // V63.4 : Injecter "actualite" comme matière de tous les concours
-      // (commune à tous les concours, gérée par Bara Formation)
+      // V63.4 → V64.20 : matières communes à tous les concours.
+      //   La liste vit désormais dans data/concours.js (MATIERES_COMMUNES), qui
+      //   les ajoute déjà au chargement. Ce bloc reste comme filet de sécurité
+      //   si un ancien concours.js est encore en cache.
+      const communes = window.MATIERES_COMMUNES || ['actualite'];
       if (window.CONCOURS && Array.isArray(window.CONCOURS)) {
         window.CONCOURS.forEach(c => {
           if (!c.matieres) c.matieres = [];
-          if (!c.matieres.includes('actualite')) {
-            c.matieres.push('actualite');
-          }
+          communes.forEach(m => {
+            if (!c.matieres.includes(m)) c.matieres.push(m);
+          });
         });
       }
 
