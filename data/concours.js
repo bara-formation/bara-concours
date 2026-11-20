@@ -8,7 +8,7 @@ const MATIERES_CATALOG = {
   accompagnement_final: { nom: 'Accompagnement Final 2025', icone: '🎓', couleur: '#d97706', desc: 'Sessions Premium toutes matières mélangées' },
 
   // === Matières générales ===
-  francais: { nom: 'Français', icone: '📝', couleur: '#0F5132', desc: 'Grammaire, conjugaison, rédaction, dissertation' },
+  francais: { nom: 'Français', icone: '📝', couleur: '#0F5132', desc: 'Grammaire, conjugaison, orthographe, vocabulaire, littérature burkinabè, africaine et française' },
   maths: { nom: 'Mathématiques (générique)', icone: '🔢', couleur: '#16a34a', desc: 'Mathématiques de base — utilisé en cas de niveau non précisé' },
   maths_bepc: { nom: 'Maths — Cycle C', icone: '🔢', couleur: '#16a34a', desc: 'Calcul, fractions, pourcentages, géométrie élémentaire (niveau BEPC ou Cycle C)' },
   maths_bac: { nom: 'Maths — Cycle B', icone: '📐', couleur: '#15803d', desc: 'Algèbre, fonctions, statistiques, probabilités (niveau BAC ou Cycle B)' },

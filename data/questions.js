@@ -1,187 +1,23 @@
 // Bara Concours - Base de questions QCM
-// Mis à jour le 2026-11-19 - Nouvelles matieres Histoire (600) et Geographie (600) ; matiere Histoire-Geographie (histgeo, 10 questions) retiree
-// Total : 8922 questions réparties sur 38 matières
+// Mis à jour le 2026-11-19 - Matiere Francais entierement remplacee (872 questions, 7 lots) ; Histoire (600) et Geographie (600) ajoutees ; histgeo retiree
+// Total : 9245 questions réparties sur 38 matières
 
 const QUESTIONS = {
   "francais": [
     {
-      "q": "Quelle est la forme correcte au futur simple ?",
-      "o": [
-        "Il envoiera",
-        "Il envoyera",
-        "Il enverra",
-        "Il envoira"
-      ],
-      "r": 2,
-      "x": "Le verbe « envoyer » est irrégulier au futur. La base est « enverr- » : j'enverrai, il enverra. « Renvoyer » suit la même règle."
-    },
-    {
-      "q": "Choisissez la phrase correctement orthographiée :",
-      "o": [
-        "Les gardien ont travaillé",
-        "Les gardiennes ont travailler",
-        "Les gardiennes ont travaillé",
-        "Les gardiens ont travaillées"
-      ],
-      "r": 2,
-      "x": "Avec l'auxiliaire « avoir », le participe passé s'accorde avec le COD seulement si placé avant le verbe. Pas de COD avant → pas d'accord."
-    },
-    {
-      "q": "Quel est le synonyme de « austère » ?",
-      "o": [
-        "Joyeux",
-        "Sévère",
-        "Généreux",
-        "Timide"
-      ],
-      "r": 1,
-      "x": "« Austère » signifie rigide, sévère dans la conduite ou l'apparence."
-    },
-    {
-      "q": "Identifiez la subordonnée relative : « Le gardien qui surveillait a entendu du bruit. »",
-      "o": [
-        "Le gardien",
-        "a entendu du bruit",
-        "qui surveillait",
-        "du bruit"
-      ],
-      "r": 2,
-      "x": "La subordonnée relative commence par un pronom relatif (qui, que, dont…) et complète un nom antécédent."
-    },
-    {
-      "q": "Quel est l'antonyme de « éphémère » ?",
-      "o": [
-        "Bref",
-        "Durable",
-        "Fragile",
-        "Rapide"
-      ],
-      "r": 1,
-      "x": "« Éphémère » = qui dure peu de temps. Son contraire est « durable » ou « pérenne »."
-    },
-    {
-      "q": "Conjuguez « finir » à la 1ère personne du pluriel du subjonctif présent :",
-      "o": [
-        "Que nous finissons",
-        "Que nous finissions",
-        "Que nous finirions",
-        "Que nous finirons"
-      ],
-      "r": 1,
-      "x": "Subjonctif présent : que je finisse, que tu finisses, qu'il finisse, que NOUS FINISSIONS, que vous finissiez, qu'ils finissent."
-    },
-    {
-      "q": "Quelle phrase contient un complément circonstanciel de manière ?",
-      "o": [
-        "Il viendra demain",
-        "Il marche lentement",
-        "Il habite à Bobo",
-        "Il pleure de joie"
-      ],
-      "r": 1,
-      "x": "« Lentement » (adverbe en -ment) répond à la question « comment ? » → CC de manière. À Bobo = lieu, demain = temps, de joie = cause."
-    },
-    {
-      "q": "Quelle est la nature du mot « rapidement » ?",
-      "o": [
-        "Adjectif",
-        "Nom",
-        "Adverbe",
-        "Verbe"
-      ],
-      "r": 2,
-      "x": "Les mots terminés en « -ment » formés sur un adjectif sont des adverbes. Rapide → rapidement."
-    },
-    {
-      "q": "Choisissez la bonne ponctuation : « Il dit ___ Je viendrai demain ___ »",
-      "o": [
-        ": « ... »",
-        ", « ... »",
-        ". « ... »",
-        "; « ... »"
-      ],
-      "r": 0,
-      "x": "Pour introduire une parole, on utilise deux-points puis guillemets : Il dit : « Je viendrai demain »."
-    },
-    {
-      "q": "Identifiez le sujet : « Dans la cellule dorment trois détenus. »",
-      "o": [
-        "Dans la cellule",
-        "dorment",
-        "trois détenus",
-        "la cellule"
-      ],
-      "r": 2,
-      "x": "Le sujet répond à « qui est-ce qui ? ». Qui dort ? « Trois détenus » → c'est le sujet inversé."
-    },
-    {
-      "q": "Quel est le pluriel correct de « bijou » ?",
-      "o": [
-        "Bijous",
-        "Bijoux",
-        "Bijoux ou bijous",
-        "Bij'oux"
-      ],
-      "r": 1,
-      "x": "Les 7 mots en -ou prennent un -x au pluriel : bijou, caillou, chou, genou, hibou, joujou, pou → bijoux, cailloux..."
-    },
-    {
-      "q": "Quel est le mode du verbe dans : « Si j'étais gardien, je serais juste » ?",
-      "o": [
-        "Indicatif",
-        "Subjonctif",
-        "Conditionnel",
-        "Impératif"
-      ],
-      "r": 2,
-      "x": "« Je SERAIS » est au conditionnel présent. La structure « Si + imparfait, conditionnel » exprime une hypothèse."
-    },
-    {
-      "q": "Trouvez l'erreur : « Les enfants que j'ai vu jouer sont partis. »",
-      "o": [
-        "Aucune erreur",
-        "« vu » → « vus »",
-        "« jouer » → « jouant »",
-        "« partis » → « parties »"
-      ],
-      "r": 1,
-      "x": "Le COD « que » (= les enfants) est placé AVANT « ai vu » et fait l'action de « jouer » → accord : « vus »."
-    },
-    {
-      "q": "Quelle figure de style dans : « Le temps file comme une flèche » ?",
-      "o": [
-        "Métaphore",
-        "Comparaison",
-        "Personnification",
-        "Hyperbole"
-      ],
-      "r": 1,
-      "x": "Une comparaison utilise un outil de comparaison (comme, tel, pareil à…). Sans cet outil, ce serait une métaphore."
-    },
-    {
-      "q": "Quel est le radical de « impossibilité » ?",
-      "o": [
-        "Im-",
-        "Possible",
-        "-ité",
-        "Impossible"
-      ],
-      "r": 1,
-      "x": "Le radical est la base du mot avant les préfixes/suffixes. Im-(préfixe) + possible (radical) + -ité (suffixe)."
-    },
-    {
-      "q": "Choisissez la forme correctement accordée du participe passé : \"Les instructions que le directeur a _______ aux agents sont claires.\"",
+      "q": "Dans « Les instructions que le directeur a _______ aux agents », la forme correcte est :",
       "o": [
         "donné",
-        "donnée",
         "données",
+        "donnée",
         "donnés"
       ],
-      "r": 2,
-      "x": "Le participe passé avec \"avoir\" s'accorde avec le COD placé avant le verbe. \"Que\" reprend \"les instructions\" (féminin pluriel) → \"données\". Piège : accorder avec le sujet \"le directeur\" (masculin singulier) et écrire \"donné\"."
+      "r": 1,
+      "x": "Avec « avoir », le participe s'accorde avec le COD placé avant : « que » reprend « les instructions », féminin pluriel. « Donné » serait un accord fautif avec le sujet « le directeur ». La règle ne s'applique pas si le COD est placé après : le directeur a donné les instructions.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Choisissez la bonne orthographe : \"_______ sait que les candidats _______ travaillé dur pour réussir.\"",
+      "q": "Dans « _______ sait que les candidats _______ travaillé dur », la bonne combinaison est :",
       "o": [
         "On / ont",
         "Ont / on",
@@ -189,10 +25,11 @@ const QUESTIONS = {
         "Ont / ont"
       ],
       "r": 0,
-      "x": "\"On\" est un pronom indéfini sujet (remplaçable par \"l'on\"). \"Ont\" est la forme conjuguée du verbe \"avoir\" à la 3e personne du pluriel (remplaçable par \"avaient\"). Piège : les deux se prononcent identiquement ; la substitution par \"l'on\" ou \"avaient\" permet de trancher."
+      "x": "« On » est un pronom sujet remplaçable par « l'on », « ont » est le verbe avoir remplaçable par « avaient ». Les deux sont homophones, d'où le piège. Le second test confirme : « on » se remplace par « il », ce qui est impossible pour « ont ».",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Ces candidates sont _______ surprises par les résultats.\" Choisissez la forme correcte de \"tout\".",
+      "q": "Dans « Ces candidates sont _______ surprises par les résultats », la forme correcte est :",
       "o": [
         "tout",
         "tous",
@@ -200,318 +37,335 @@ const QUESTIONS = {
         "toute"
       ],
       "r": 2,
-      "x": "\"Tout\" adverbe devant un adjectif féminin commençant par une consonne s'accorde : \"surprises\" commence par \"s\" (consonne), \"candidates\" est féminin pluriel → \"toutes\". Piège : croire que \"tout\" adverbe est toujours invariable — il ne l'est que devant un adjectif féminin commençant par une voyelle ou un \"h\" muet."
+      "x": "« Tout » adverbe s'accorde devant un adjectif féminin commençant par une consonne : « toutes surprises ». Devant une voyelle, il resterait invariable : « tout émues ». Le h aspiré compte comme une consonne : elles sont toutes honteuses.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Si tu _______ plus attentif, tu réussirais tes concours.\" Choisissez la forme verbale correcte.",
+      "q": "Dans « Si tu _______ plus attentif, tu réussirais », la forme correcte est :",
       "o": [
         "serais",
         "sois",
-        "étais",
-        "es"
-      ],
-      "r": 2,
-      "x": "Phrase conditionnelle de type 2 : si + imparfait de l'indicatif dans la subordonnée → conditionnel présent dans la principale. Piège majeur : employer le conditionnel après \"si\" (\"si tu serais\") est une faute grave absolument interdite en français standard."
-    },
-    {
-      "q": "\"_______ les candidates inscrites ont passé le test.\" Choisissez le déterminant correct.",
-      "o": [
-        "Tout",
-        "Tous",
-        "Toute",
-        "Toutes"
+        "es",
+        "étais"
       ],
       "r": 3,
-      "x": "\"Tout\" déterminant s'accorde en genre et en nombre avec le nom. \"Les candidates\" est féminin pluriel → \"Toutes\". Piège : utiliser \"Tous\" (masculin pluriel) ou oublier d'accorder avec le nom féminin."
+      "x": "Après « si » de condition, on emploie l'imparfait quand la principale est au conditionnel présent. « Si tu serais » est une faute grave en français écrit. Attention : le « si » interrogatif, lui, accepte le conditionnel : je me demande s'il viendrait.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Choisissez la bonne orthographe : \"_______ documents que le candidat _______ procuré sont incomplets.\"",
+      "q": "Dans « _______ les candidates inscrites ont passé le test », le déterminant correct est :",
       "o": [
-        "Ses / c'est",
-        "Ces / s'est",
-        "C'est / s'est",
-        "S'est / ces"
+        "Tout",
+        "Toutes",
+        "Tous",
+        "Toute"
       ],
       "r": 1,
-      "x": "\"Ces\" est un déterminant démonstratif pluriel (remplaçable par \"les\"). \"S'est\" est le pronom réfléchi \"se\" + auxiliaire \"être\" (verbe pronominal \"se procurer\"). Piège : confondre \"ces\" avec \"ses\" (possessif) ou \"s'est\" avec \"c'est\" (présentatif)."
+      "x": "« Tout » déterminant s'accorde avec le nom : « les candidates » est féminin pluriel. « Tous » ne convient qu'à un nom masculin pluriel. Employé comme pronom, « tous » se prononce avec un s sonore : ils sont tous venus.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Quel est le synonyme du mot \"perspicace\" ?",
+      "q": "Dans « _______ documents que le candidat _______ procurés sont incomplets », la bonne combinaison est :",
       "o": [
+        "Ces / s'est",
+        "Ses / c'est",
+        "C'est / s'est",
+        "Ses / sait"
+      ],
+      "r": 0,
+      "x": "« Ces » est un démonstratif remplaçable par « les », « s'est » est l'auxiliaire du verbe pronominal « se procurer ». « C'est » est un présentatif, impossible devant un nom. « Ses » possessif se remplace par « les siens » ; ici, la relative qui suit appelle le démonstratif « ces ».",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Le mot « perspicace » a pour synonyme :",
+      "o": [
+        "Clairvoyant",
         "Distrait",
         "Méfiant",
-        "Clairvoyant",
         "Imprudent"
       ],
-      "r": 2,
-      "x": "\"Perspicace\" désigne quelqu'un qui comprend rapidement et avec finesse. \"Clairvoyant\" en est le synonyme le plus fidèle. \"Méfiant\" porte une connotation négative absente dans \"perspicace\". Piège : le confondre avec \"suspicieux\"."
+      "r": 0,
+      "x": "Est perspicace celui qui comprend vite et avec finesse, donc clairvoyant. « Méfiant » ajoute une idée de défiance absente de « perspicace ». Le nom correspondant est « perspicacité ».",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Quel est le pluriel correct de \"timbre-poste\" ?",
+      "q": "Le pluriel correct de « timbre-poste » est :",
       "o": [
+        "timbres-poste",
         "timbres-postes",
         "timbre-postes",
-        "timbres-poste",
         "timbre-poste"
       ],
-      "r": 2,
-      "x": "Dans \"timbre-poste\", \"poste\" est un complément du nom sans article, donc invariable. Seul \"timbre\" (nom principal) prend le pluriel. Piège : accorder les deux éléments (\"timbres-postes\") par analogie avec les noms composés de deux noms équivalents."
+      "r": 0,
+      "x": "« Poste » est complément du nom (timbre pour la poste) et reste invariable ; seul « timbre » prend la marque du pluriel. « Timbres-postes » accorde à tort le complément. On raisonne de même avec « des années-lumière » (années de la lumière).",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Les agents ont remis _______ rapport à _______ supérieurs.\" Choisissez les bons accords.",
+      "q": "Dans « Les agents ont remis _______ rapport à _______ supérieurs », la bonne combinaison est :",
       "o": [
         "leurs / leurs",
-        "leur / leurs",
         "leurs / leur",
+        "leur / leurs",
         "leur / leur"
       ],
-      "r": 1,
-      "x": "\"Leur rapport\" : \"rapport\" est singulier (un seul rapport collectif) → \"leur\". \"Leurs supérieurs\" : \"supérieurs\" est pluriel → \"leurs\". Piège : mettre systématiquement \"leurs\" sans vérifier le nombre du nom qui suit."
+      "r": 2,
+      "x": "« Leur » précède ici un nom singulier (rapport) et « leurs » un nom pluriel (supérieurs). Mettre « leurs » partout revient à ignorer le nombre du nom qui suit. Attention : le nombre dépend du sens ; ici, chaque agent remet un seul rapport à plusieurs supérieurs.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Elle portait des chaussures _______ et une cravate bleue.\" Choisissez la bonne forme.",
+      "q": "Dans « Elle portait des chaussures _______ », la forme correcte est :",
       "o": [
         "marrons",
         "marron",
-        "marons",
-        "marronnes"
+        "marronnes",
+        "marronne"
       ],
       "r": 1,
-      "x": "Les adjectifs de couleur issus de noms communs (marron, orange, crème, kaki…) sont invariables en genre et en nombre. \"Marron\" reste invariable quelle que soit la situation. Piège : accorder \"marron\" par analogie avec les adjectifs de couleur ordinaires."
+      "x": "Les adjectifs de couleur issus d'un nom (marron, orange, kaki, crème) sont invariables. « Marrons » applique à tort la règle des adjectifs de couleur ordinaires. Font exception « rose », « mauve », « pourpre », « fauve » et « écarlate », qui s'accordent : des robes roses.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Le mot \"péremptoire\" signifie :",
+      "q": "L'adjectif « péremptoire » signifie :",
       "o": [
-        "Qui ne souffre pas de réplique, catégorique",
-        "Hésitant et nuancé",
-        "Poli et bienveillant",
-        "Long et répétitif"
+        "Hésitant",
+        "Catégorique",
+        "Bienveillant",
+        "Répétitif"
       ],
-      "r": 0,
-      "x": "\"Péremptoire\" qualifie un argument ou un ton qui s'impose sans appel, contre lequel on ne peut répliquer. Piège : confondre avec \"préemptoire\" (qui n'existe pas) ou \"péremption\" (expiration de délais en droit)."
+      "r": 1,
+      "x": "Un ton péremptoire s'impose sans laisser place à la contestation. « Hésitant » en est presque le contraire. Le mot est fréquent dans la langue juridique : un argument péremptoire est décisif.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Lorsque les résultats furent publiés, les candidats _______ déjà leur recours.\" Choisissez la forme correcte.",
+      "q": "Dans « Lorsque les résultats furent publiés, les candidats _______ déjà leur recours », la forme correcte est :",
       "o": [
-        "déposaient",
-        "ont déposé",
+        "déposèrent",
         "avaient déposé",
+        "ont déposé",
         "déposeraient"
       ],
-      "r": 2,
-      "x": "Le plus-que-parfait exprime une action accomplie avant une autre action passée. Les recours ont été déposés avant la publication → plus-que-parfait \"avaient déposé\". Piège : employer le passé composé \"ont déposé\" qui ne marque pas l'antériorité."
+      "r": 1,
+      "x": "Le plus-que-parfait marque une action accomplie avant une autre action passée. Le passé composé « ont déposé » n'exprime pas cette antériorité. Le passé simple « déposèrent » situerait l'action après la publication, et non avant.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Ni le directeur ni le secrétaire général n'_______ signé la circulaire.\" Choisissez la forme correcte.",
+      "q": "Dans « _______ vous disiez, sa décision est déjà prise », la forme correcte est :",
       "o": [
-        "ont",
-        "a",
-        "avait",
-        "aurait"
-      ],
-      "r": 0,
-      "x": "Avec \"ni...ni\" reliant deux sujets singuliers, le verbe se met généralement au pluriel car les deux sujets sont additionnés. Piège : accorder avec un seul des sujets au singulier."
-    },
-    {
-      "q": "\"_______ il dise, sa décision est déjà prise.\" Choisissez la bonne orthographe.",
-      "o": [
-        "Quoi que",
         "Quoique",
-        "Quelque que",
-        "Quoi qu'"
+        "Quoi que",
+        "Quelque",
+        "Quel que"
       ],
-      "r": 0,
-      "x": "\"Quoi que\" (deux mots) = quelle que soit la chose que… \"Quoique\" (un mot) = bien que (valeur concessive). Ici, le sens est \"quelle que soit la chose qu'il dise\" → \"Quoi que\". Piège : écrire \"quoique\" qui changerait le sens de la phrase."
+      "r": 1,
+      "x": "« Quoi que » en deux mots signifie « quelle que soit la chose que ». « Quoique » en un mot signifie « bien que » et ne convient pas ici. Pour vérifier, on remplace par « bien que » : si le sens ne tient plus, on écrit « quoi que » en deux mots.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Quel est l'antonyme du mot \"véhément\" ?",
+      "q": "Le mot « véhément » a pour antonyme :",
       "o": [
         "Ardent",
         "Virulent",
-        "Posé",
-        "Passionné"
+        "Passionné",
+        "Posé"
       ],
-      "r": 2,
-      "x": "\"Véhément\" signifie emporté, violent dans son expression. Son antonyme est \"posé\" (calme, mesuré, réfléchi). \"Ardent\" et \"virulent\" sont des synonymes. Piège : confondre avec \"indifférent\" — l'indifférence n'est pas l'opposé de la véhémence."
+      "r": 3,
+      "x": "Véhément signifie emporté, violent dans l'expression ; son contraire est posé, calme. « Ardent » et « virulent » en sont des synonymes. Le nom correspondant est « véhémence » : protester avec véhémence.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Les candidats qui travaillent _______ obtiennent de meilleurs résultats.\" Choisissez la forme correcte.",
+      "q": "Dans « Les candidats qui travaillent _______ réussissent mieux », la forme correcte est :",
       "o": [
         "d'avantage",
         "d'avantages",
-        "davantage",
-        "des avantages"
+        "des avantages",
+        "davantage"
       ],
-      "r": 2,
-      "x": "\"Davantage\" (adverbe, un seul mot) signifie \"plus\". \"D'avantage\" n'existe pas en français. Ici, on cherche un adverbe modifiant \"travaillent\" → \"davantage\". Piège : écrire \"d'avantage\" par analogie avec \"d'abord\", \"d'ailleurs\"."
+      "r": 3,
+      "x": "« Davantage » est un adverbe en un mot qui signifie « plus ». « D'avantage » n'existe pas comme adverbe. « D'avantages » n'existe qu'avec le nom au pluriel : il a plus d'avantages que moi.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Ces deux ministres se sont _______ sur cette question.\" Choisissez la forme correcte.",
+      "q": "Dans « Ces deux ministres se sont _______ sur cette question », la forme correcte est :",
       "o": [
         "expliqué",
-        "expliquée",
         "expliqués",
+        "expliquée",
         "expliquées"
       ],
-      "r": 2,
-      "x": "\"S'expliquer\" à sens réciproque : le pronom \"se\" est COD, le PP s'accorde avec le sujet. \"Les deux ministres\" (masculin pluriel ou mixte) → \"expliqués\". Piège : laisser invariable en pensant que le pronom réfléchi bloque l'accord."
+      "r": 1,
+      "x": "Dans « s'expliquer », le pronom « se » est COD et le participe s'accorde avec le sujet masculin pluriel. Le laisser invariable est une erreur fréquente. Il ne faut pas confondre avec « ils se sont parlé », où « se » est complément indirect et où le participe reste invariable.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"_______ soit son rang, chaque candidat doit respecter le règlement.\" Choisissez la bonne orthographe.",
+      "q": "Dans « _______ soit son rang, chaque candidat respecte le règlement », la forme correcte est :",
       "o": [
-        "Quel que",
         "Quelque",
-        "Quelques",
-        "Quelles que"
+        "Quel que",
+        "Quelle que",
+        "Quels que"
       ],
-      "r": 0,
-      "x": "\"Quel que\" (deux mots) est suivi du verbe \"être\" au subjonctif et s'accorde avec le sujet du verbe. \"Son rang\" est masculin singulier → \"Quel que\". Piège : écrire \"quelque soit\" — faute très fréquente dans les copies de concours, absolument inacceptable."
+      "r": 1,
+      "x": "« Quel que » suivi de « être » au subjonctif s'accorde avec le sujet « son rang », masculin singulier. « Quelque soit » en un mot est une faute très fréquente. Au pluriel, on écrit « quels que soient » : quels que soient vos efforts.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Tout le monde _______ satisfait des résultats obtenus.\" Choisissez la forme correcte.",
+      "q": "Dans « Tout le monde _______ satisfait des résultats », la forme correcte est :",
       "o": [
-        "sont",
         "était",
+        "étaient",
         "ont été",
         "avaient été"
       ],
-      "r": 1,
-      "x": "\"Tout le monde\" est un pronom indéfini à valeur singulière qui exige un verbe au singulier : \"était satisfait\". Piège : accorder au pluriel par influence du sens collectif et écrire \"sont satisfaits\" — faute fréquente dans les copies."
+      "r": 0,
+      "x": "« Tout le monde » est singulier et commande un verbe au singulier. Le pluriel « étaient » vient d'une confusion avec le sens collectif. En revanche, après un nom collectif suivi d'un complément pluriel, l'accord au pluriel est possible : une foule de candidats attendaient.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Un rapport \"lacunaire\" est un rapport :",
+      "q": "Un rapport « lacunaire » est un rapport :",
       "o": [
-        "Très long et détaillé",
-        "Présenté en retard",
-        "Incomplet, comportant des manques",
-        "Rédigé en termes techniques"
+        "Trop long",
+        "En retard",
+        "Incomplet",
+        "Trop technique"
       ],
       "r": 2,
-      "x": "\"Lacunaire\" vient de \"lacune\" (trou, manque) et qualifie ce qui est incomplet, ce qui présente des vides. Exemple : \"Un dossier lacunaire ne peut être instruit.\" Piège : confondre avec \"lacustre\" (relatif aux lacs) — ressemblance phonique trompeuse."
+      "x": "« Lacunaire » vient de « lacune » et désigne ce qui présente des manques. Il ne faut pas le confondre avec « lacustre », relatif aux lacs. On parle de même d'un témoignage lacunaire pour un récit incomplet.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"C'est une réforme _______ les effets seront durables.\" Choisissez le bon pronom relatif.",
+      "q": "Dans « C'est une réforme _______ les effets seront durables », le pronom relatif correct est :",
       "o": [
+        "dont",
         "que",
         "qui",
-        "dont",
         "laquelle"
       ],
-      "r": 2,
-      "x": "\"Dont\" remplace un complément introduit par \"de\" : \"les effets DE cette réforme seront durables\". \"Qui\" est pronom sujet, \"que\" est COD. Piège : employer \"laquelle\" qui nécessite une préposition explicite (\"de laquelle\") pour être correct."
+      "r": 0,
+      "x": "« Dont » remplace un complément introduit par « de » : les effets de cette réforme. « Laquelle » exigerait une préposition et serait incorrect seul. Attention : on ne reprend pas « dont » par un possessif ; on écrit « dont les effets », jamais « dont ses effets ».",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Quel est le synonyme le plus précis du mot \"circonspect\" ?",
+      "q": "Le mot « circonspect » a pour synonyme :",
       "o": [
+        "Prudent",
         "Téméraire",
         "Impulsif",
-        "Méfiant",
-        "Prudent"
-      ],
-      "r": 3,
-      "x": "\"Circonspect\" qualifie une personne qui agit avec prudence, qui examine toutes les conséquences avant d'agir. \"Méfiant\" ajoute une connotation de défiance envers autrui absente dans \"circonspect\". Piège : confondre avec \"indécis\" — \"circonspect\" implique réflexion, non indécision."
-    },
-    {
-      "q": "\"Il a été sanctionné _______ il avait enfreint le règlement.\" Choisissez la bonne orthographe.",
-      "o": [
-        "parce qu'",
-        "par ce qu'",
-        "par ce que",
-        "pour ce que"
+        "Indécis"
       ],
       "r": 0,
-      "x": "\"Parce que\" (conjonction causale, un bloc) introduit une cause. \"Par ce que\" (préposition + démonstratif + relatif) signifie \"par la chose que\" — sens différent. Ici, on introduit une cause → \"parce qu'\". Piège : écrire \"par ce qu'\" en deux mots, ce qui change le sens."
+      "x": "Est circonspect celui qui pèse les conséquences avant d'agir, donc prudent. « Indécis » est un piège : la circonspection suppose la réflexion, non l'hésitation. Le nom correspondant est « circonspection » : agir avec circonspection.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"_______ des solutions proposées n'a convaincu la commission.\" Choisissez la bonne forme.",
+      "q": "Dans « Il a été sanctionné _______ il avait enfreint le règlement », la forme correcte est :",
+      "o": [
+        "par ce qu'",
+        "parce qu'",
+        "pour ce qu'",
+        "pour qu'"
+      ],
+      "r": 1,
+      "x": "« Parce que » en bloc introduit une cause. « Par ce que » signifie « par la chose que » et change le sens de la phrase. Pour vérifier, on remplace « parce que » par « car » : le sens est conservé.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Dans « _______ des solutions proposées n'a convaincu la commission », la forme correcte est :",
       "o": [
         "Aucun",
         "Aucune",
-        "Aucuns",
+        "Aucunes",
         "Nul"
       ],
       "r": 1,
-      "x": "\"Aucun\" s'accorde en genre avec le nom. \"Solutions\" est féminin → \"Aucune des solutions\". Le verbe reste au singulier avec \"aucune de\". Piège : mettre \"aucun\" au masculin par défaut sans vérifier le genre du nom."
+      "x": "« Aucun » s'accorde en genre avec le nom : « solutions » est féminin. Le verbe reste au singulier après « aucune des ». « Aucun » ne prend la marque du pluriel que devant un nom sans singulier : aucuns frais.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Le mot \"insidieux\" qualifie ce qui est :",
+      "q": "L'adjectif « insidieux » qualifie ce qui est :",
       "o": [
         "Bruyant et visible",
-        "Dangereux de façon cachée et trompeuse",
         "Lent et inefficace",
-        "Complexe et incompréhensible"
+        "Complexe et obscur",
+        "Dangereux et caché"
       ],
-      "r": 1,
-      "x": "\"Insidieux\" (du latin \"insidiae\" = embuscade) désigne ce qui trompe par une apparence anodine tout en cachant un danger. Exemple : \"Une maladie insidieuse qui progresse sans symptômes.\" Piège : confondre avec \"perfide\" (qui trahit) — \"insidieux\" insiste sur la dissimulation."
+      "r": 3,
+      "x": "Est insidieux ce qui cache un danger sous une apparence anodine, comme une maladie sans symptômes. « Complexe » ne rend pas l'idée de piège dissimulé. On parle ainsi d'une question insidieuse, posée pour piéger celui qui répond.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Dès qu'il _______ son rapport, le directeur prendra une décision.\" Choisissez la forme correcte.",
+      "q": "Dans « Dès qu'il _______ son rapport, le directeur prendra une décision », la forme correcte est :",
       "o": [
         "finit",
-        "finira",
-        "aura fini",
-        "aurait fini"
+        "finisse",
+        "aurait fini",
+        "aura fini"
       ],
-      "r": 2,
-      "x": "Après \"dès que\" en contexte de futur, on emploie le futur antérieur pour exprimer une action future accomplie avant une autre. \"Aura fini\" (futur antérieur) précède \"prendra\" (futur simple). Piège fréquent : employer le futur simple \"finira\" — faute très courante dans les copies de concours."
+      "r": 3,
+      "x": "Le futur antérieur exprime une action future achevée avant une autre action future (« prendra »). Le subjonctif « finisse » est exclu : « dès que » se construit avec l'indicatif. Le présent « finit » conviendrait si la principale était au présent : dès qu'il finit, il part.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Quel est le synonyme du mot \"altruiste\" ?",
+      "q": "Le mot « altruiste » a pour synonyme :",
       "o": [
         "Généreux",
+        "Égoïste",
         "Ambitieux",
-        "Indifférent",
-        "Égoïste"
+        "Indifférent"
       ],
       "r": 0,
-      "x": "\"Altruiste\" désigne une personne qui se préoccupe du bien des autres avant le sien. \"Généreux\" en est le synonyme le plus courant. \"Égoïste\" est l'antonyme exact. Piège : confondre avec \"bienveillant\" — \"altruiste\" implique un sacrifice de soi absent dans \"bienveillant\"."
+      "x": "L'altruiste se soucie du bien d'autrui avant le sien. « Égoïste » en est l'antonyme exact. Le nom correspondant est « altruisme », formé sur le latin « alter » (autre).",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Laquelle de ces phrases emploie correctement le verbe \"prévenir\" ?",
+      "q": "La phrase qui emploie correctement le verbe « prévenir » est :",
       "o": [
-        "Je vous préviens contre ce risque.",
-        "Il faut prévenir à ce danger.",
-        "La direction a prévenu les agents de la réunion.",
-        "Nous devons prévenir sur les conséquences."
-      ],
-      "r": 2,
-      "x": "\"Prévenir quelqu'un DE quelque chose\" (informer à l'avance) est la construction correcte. \"Prévenir contre\", \"prévenir sur\" et \"prévenir à\" n'existent pas. Piège : employer \"prévenir contre\" par analogie avec \"mettre en garde contre\"."
-    },
-    {
-      "q": "Le verbe \"atermoyer\" signifie :",
-      "o": [
-        "Agir avec précipitation",
-        "Remettre continuellement à plus tard, temporiser",
-        "Refuser catégoriquement",
-        "Agir avec discrétion"
+        "Il faut prévenir à ce grave danger.",
+        "On a prévenu les agents de la réunion.",
+        "Nous devons prévenir sur ce risque.",
+        "Il a prévenu à ses collègues hier."
       ],
       "r": 1,
-      "x": "\"Atermoyer\" désigne l'action de remettre une décision, de gagner du temps, de différer indéfiniment. Exemple : \"Le gouvernement ne peut plus atermoyer sur cette réforme.\" Piège : le confondre avec \"temporiser\" (quasi-synonyme) sans saisir la nuance d'indécision chronique."
+      "x": "On dit « prévenir quelqu'un de quelque chose » ou « prévenir un danger », sans préposition. Les constructions « prévenir à » et « prévenir sur » n'existent pas. « Prévenir » a deux sens : avertir (prévenir quelqu'un) et empêcher (prévenir un accident).",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Les _______ agents qui avaient refusé ont finalement accepté.\" Choisissez la bonne forme.",
+      "q": "Le verbe « atermoyer » signifie :",
       "o": [
-        "même",
-        "mêmes",
-        "méme",
-        "mêmes-là"
+        "Agir avec trop de hâte",
+        "Remettre à plus tard",
+        "Refuser net",
+        "Agir en secret"
       ],
       "r": 1,
-      "x": "\"Même\" adjectif (signifiant \"identique\", \"en personne\") s'accorde en nombre avec le nom. \"Les agents\" est pluriel → \"mêmes agents\". Piège : laisser invariable en confondant avec \"même\" adverbe (= \"aussi\") qui lui est invariable."
+      "x": "Atermoyer, c'est différer sans cesse une décision pour gagner du temps. Il s'oppose à « agir avec hâte ». Le nom correspondant est « atermoiement », souvent au pluriel : assez d'atermoiements.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Une \"prérogative\" est :",
+      "q": "Dans « Les _______ agents ont _______ refusé de signer », la bonne combinaison est :",
       "o": [
-        "Un privilège attaché à une fonction ou à un rang",
+        "même / même",
+        "mêmes / même",
+        "mêmes / mêmes",
+        "même / mêmes"
+      ],
+      "r": 1,
+      "x": "« Même » adjectif, au sens d'« identique », s'accorde avec le nom : « les mêmes agents ». Adverbe, au sens de « jusqu'à », il reste invariable : « ils ont même refusé ». Placé après un pronom personnel, « même » s'accorde et prend un trait d'union : eux-mêmes.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Une « prérogative » est :",
+      "o": [
+        "Un privilège lié à une fonction",
         "Une obligation imposée par la loi",
-        "Une sanction disciplinaire",
+        "Une sanction disciplinaire légère",
         "Une proposition de réforme"
       ],
       "r": 0,
-      "x": "\"Prérogative\" désigne un avantage, un droit ou un privilège exclusif lié à une fonction ou un titre. Exemple : \"La signature des décrets est une prérogative du Président.\" Piège : confondre avec \"obligation\" (qui est son contraire)."
+      "x": "La prérogative est un droit exclusif attaché à une fonction, comme la signature des décrets pour le chef de l'État. Elle est presque le contraire d'une obligation. Le mot s'emploie souvent au pluriel : les prérogatives du président.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Il a travaillé pendant deux heures et _______.\" Choisissez la bonne forme.",
+      "q": "Dans « Il a travaillé pendant deux heures et _______ », la forme correcte est :",
       "o": [
         "demi",
         "demie",
@@ -519,43 +373,47 @@ const QUESTIONS = {
         "demies"
       ],
       "r": 1,
-      "x": "\"Demi\" placé après le nom et relié par \"et\" s'accorde en genre avec ce nom. \"Heure\" est féminin → \"demie\". En revanche, avant le nom avec un trait d'union, \"demi\" est invariable (\"une demi-heure\"). Piège : laisser invariable en oubliant la règle de position."
+      "x": "Placé après le nom et relié par « et », « demi » s'accorde en genre : « heure » est féminin. Placé avant avec un trait d'union, il est invariable : « une demi-heure ». « Demi » reste aussi invariable dans « à demi » : une porte à demi ouverte.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Quel est l'antonyme de \"clément\" ?",
+      "q": "Le mot « clément » a pour antonyme :",
       "o": [
-        "Rigoureux",
-        "Indulgent",
         "Doux",
+        "Sévère",
+        "Indulgent",
         "Bienveillant"
       ],
-      "r": 0,
-      "x": "\"Clément\" qualifie quelqu'un d'indulgent, qui pardonne facilement. Son antonyme est \"rigoureux\" (sévère, intransigeant). \"Doux\" et \"indulgent\" sont des synonymes. Piège : proposer \"cruel\" qui est trop fort — \"rigoureux\" est la nuance exacte attendue."
-    },
-    {
-      "q": "Laquelle de ces phrases est correctement construite à la voix passive ?",
-      "o": [
-        "Le rapport a été rédigé par le secrétaire.",
-        "Le rapport a été rédigé de le secrétaire.",
-        "Le rapport était rédigé par le secrétaire a.",
-        "Le rapport a rédigé par le secrétaire été."
-      ],
-      "r": 0,
-      "x": "La voix passive se construit avec : sujet + auxiliaire \"être\" conjugué + participe passé accordé avec le sujet + \"par\" + agent. Piège : utiliser \"de\" à la place de \"par\" — possible avec certains verbes de sentiment, mais pas ici."
-    },
-    {
-      "q": "Des événements \"concomitants\" sont des événements :",
-      "o": [
-        "Qui se succèdent rapidement",
-        "Qui se produisent en même temps",
-        "Qui se contredisent",
-        "Liés par une relation de cause à effet"
-      ],
       "r": 1,
-      "x": "\"Concomitant\" (du latin \"concomitari\" = accompagner) signifie simultané. Exemple : \"Des crises économique et politique concomitantes.\" Piège : confondre avec \"consécutif\" (qui vient après) ou \"corrélatif\" (dépendance réciproque)."
+      "x": "Clément qualifie celui qui pardonne facilement ; son contraire est sévère. « Doux » et « indulgent » en sont des synonymes. « Clément » se dit aussi d'un climat doux : un hiver clément.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Veuillez trouver _______ les pièces demandées.\" Choisissez la bonne forme.",
+      "q": "La phrase correctement construite à la voix passive est :",
+      "o": [
+        "Le rapport a été rédigée par le secrétaire.",
+        "Le rapport a rédigé par le secrétaire.",
+        "Le rapport s'est rédigé par le secrétaire.",
+        "Le rapport a été rédigé par le secrétaire."
+      ],
+      "r": 3,
+      "x": "La voix passive se forme avec « être » conjugué, le participe passé et un complément d'agent introduit par « par ». « Le rapport a rédigé » emploie l'auxiliaire avoir et n'est pas passif. À la voix passive, le participe s'accorde avec le sujet : la lettre a été rédigée.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Des événements « concomitants » sont des événements :",
+      "o": [
+        "Simultanés",
+        "Successifs",
+        "Contradictoires",
+        "Répétitifs"
+      ],
+      "r": 0,
+      "x": "Concomitant signifie qui se produit en même temps. « Successifs » désigne au contraire ce qui vient l'un après l'autre. Le nom « concomitance » désigne la coïncidence de deux faits dans le temps.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Dans « Veuillez trouver _______ copie de mon diplôme », la forme correcte est :",
       "o": [
         "ci-jointe",
         "ci-joints",
@@ -563,406 +421,467 @@ const QUESTIONS = {
         "ci-joint"
       ],
       "r": 3,
-      "x": "\"Ci-joint\" placé avant le nom ou en début de phrase est invariable (rôle d'adverbe). Placé après le nom, il s'accorde (\"les pièces ci-jointes\"). Piège : l'accorder avec \"les pièces\" (féminin pluriel) sans tenir compte de sa position dans la phrase."
+      "x": "« Ci-joint » est invariable en tête de phrase ou devant un nom sans déterminant, comme « copie » ici. Placé après le nom, il s'accorde : « la copie ci-jointe ». Devant un nom précédé d'un déterminant, l'accord est facultatif : vous trouverez ci-joint ou ci-jointe la copie.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Laquelle de ces formules de politesse est correcte dans une lettre administrative ?",
+      "q": "Dans « Il _______ est allé _______ hier _______ aujourd'hui », la bonne combinaison est :",
       "o": [
-        "\"Dans l'attente d'une suite favorable, je vous prie d'agréer, Monsieur, l'expression de mes salutations distinguées.\"",
-        "\"En espérant une suite favorable, je vous salue.\"",
-        "\"Comptant sur votre compréhension, recevez mes cordiales salutations.\"",
-        "\"En vous remerciant d'avance, je reste à votre disposition et vous salue.\""
-      ],
-      "r": 0,
-      "x": "La formule de politesse administrative exige \"je vous prie d'agréer\" + titre exact + \"l'expression de mes salutations\". A), C) et D) contiennent des tournures familières ou des impératifs (\"recevez\") inacceptables dans la correspondance officielle. Piège : employer des formules commerciales dans un contexte administratif officiel."
-    },
-    {
-      "q": "\"Il _______ est allé _______ hier _______ aujourd'hui.\" Choisissez la bonne combinaison.",
-      "o": [
-        "n'y / ni / ni",
         "ni / n'y / ni",
         "ni / ni / n'y",
+        "n'y / ni / ni",
         "n'y / n'y / ni"
       ],
-      "r": 0,
-      "x": "\"N'y\" = \"ne\" + \"y\" (pronom de lieu). \"Ni\" = conjonction de coordination négative (relie deux éléments). La phrase = \"Il n'y est allé ni hier ni aujourd'hui.\" Piège : confondre les deux homophones à l'oral."
+      "r": 2,
+      "x": "« N'y » associe la négation « ne » et le pronom de lieu « y » ; « ni » coordonne deux éléments niés. La phrase signifie : il n'est allé là-bas ni hier ni aujourd'hui. Avec « ni… ni », la négation « pas » disparaît : on n'écrit jamais « il n'y est pas allé ni hier ».",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Quel est le synonyme du mot \"récalcitrant\" ?",
+      "q": "Le mot « récalcitrant » a pour synonyme :",
       "o": [
         "Obéissant",
-        "Rétif",
         "Enthousiaste",
-        "Indolent"
+        "Indolent",
+        "Rétif"
       ],
-      "r": 1,
-      "x": "\"Récalcitrant\" qualifie une personne qui résiste, refuse de se soumettre. \"Rétif\" en est le synonyme le plus précis. \"Obéissant\" est l'antonyme. Piège : confondre avec \"indolent\" (nonchalant, sans énergie) — nuance différente."
+      "r": 3,
+      "x": "Récalcitrant et rétif désignent celui qui résiste et refuse d'obéir. « Indolent » signifie nonchalant, sans idée de résistance. On dit d'un cheval rétif qu'il refuse d'avancer.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Tu _______ partir plus tôt pour éviter cet embouteillage.\" Choisissez la forme qui exprime un reproche.",
+      "q": "Pour exprimer un reproche dans « Tu _______ partir plus tôt hier soir », la forme correcte est :",
       "o": [
         "devrais",
+        "aurait dû",
         "aurais dû",
-        "dois",
         "avais dû"
       ],
-      "r": 1,
-      "x": "Le conditionnel passé exprime un reproche ou un regret portant sur une action passée. \"Aurais dû\" = reproche sur le passé. \"Devrais\" (conditionnel présent) exprime un conseil pour l'avenir. Piège : employer le plus-que-parfait \"avais dû\" qui est indicatif et n'exprime pas le reproche."
+      "r": 2,
+      "x": "Le conditionnel passé exprime le reproche ou le regret sur une action passée. Le conditionnel présent « devrais » formule un conseil pour l'avenir. La forme « aurait dû » correspond à la 3e personne : il aurait dû.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Un rôle \"prépondérant\" est un rôle :",
+      "q": "Un rôle « prépondérant » est un rôle :",
       "o": [
-        "Secondaire et discret",
-        "Dominant, qui l'emporte sur les autres",
-        "Contesté et remis en question",
-        "Récent et innovant"
+        "Secondaire",
+        "Contesté",
+        "Dominant",
+        "Récent"
       ],
-      "r": 1,
-      "x": "\"Prépondérant\" qualifie ce qui a plus de poids et d'influence que le reste. Exemple : \"Le Président joue un rôle prépondérant dans la prise de décision.\" Piège : confondre avec \"prédominant\" (quasi-synonyme mais plus général) sans saisir l'idée de supériorité de poids."
+      "r": 2,
+      "x": "Prépondérant qualifie ce qui l'emporte en poids et en influence sur le reste. « Secondaire » en est le contraire. On parle de voix prépondérante pour la voix du président qui départage en cas d'égalité.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"_______ est l'objectif fixé : améliorer le taux de réussite aux concours.\" Choisissez la bonne forme.",
+      "q": "Dans « _______ est l'objectif fixé : améliorer le taux de réussite », la forme correcte est :",
       "o": [
+        "Tel",
         "Tels",
         "Telle",
-        "Tel",
         "Telles"
       ],
-      "r": 2,
-      "x": "\"Tel\" en tête de phrase avec valeur de présentatif s'accorde avec le nom attribut qui suit (\"l'objectif\", masculin singulier) → \"Tel est l'objectif\". Règle : \"tel\" s'accorde avec le nom après le verbe \"être\", non avec le sujet. Piège : accorder avec le sujet placé après \"est\"."
+      "r": 0,
+      "x": "En tête de phrase, « tel » s'accorde avec le sujet inversé, ici « l'objectif », masculin singulier. On écrirait « Telle est la règle » avec un nom féminin. On écrit de même « Tels sont nos objectifs » avec un sujet masculin pluriel.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Le verbe \"circonvenir\" quelqu'un signifie :",
+      "q": "« Circonvenir » quelqu'un signifie :",
       "o": [
-        "L'informer de façon complète",
+        "L'informer complètement",
         "L'entourer physiquement",
-        "Le tromper habilement pour obtenir quelque chose",
-        "Le critiquer en public"
+        "Le critiquer en public",
+        "Le manœuvrer par la ruse"
       ],
-      "r": 2,
-      "x": "\"Circonvenir quelqu'un\" = user de ruses ou de flatteries pour le manœuvrer avec habileté. Exemple : \"Il a cherché à circonvenir le jury.\" Piège : décomposer le mot (\"circum-venir\" = venir autour) et en déduire un sens physique — le sens figuré prévaut."
+      "r": 3,
+      "x": "Circonvenir, c'est agir sur quelqu'un par ruse ou flatterie pour obtenir quelque chose. Le sens physique « entourer » est un piège tiré de l'étymologie. Ne pas le confondre avec « circonscrire », qui signifie limiter : circonscrire un incendie.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"C'est le dossier à l'étude _______ nous avons consacré plusieurs séances.\" Choisissez le bon pronom.",
+      "q": "Dans « C'est le dossier ______ nous avons consacré plusieurs séances d'étude.», le relatif correct est :",
       "o": [
-        "dont",
         "duquel",
+        "dont",
         "auquel",
         "de qui"
       ],
-      "r": 1,
-      "x": "Quand le pronom relatif dépend d'un GN prépositionnel (\"à l'étude DE ce dossier\"), on emploie \"duquel\" après préposition pour éviter d'employer \"dont\" après une préposition — ce qui est incorrect. Piège : employer \"dont\" systématiquement — règle avancée souvent méconnue."
+      "r": 2,
+      "x": "On dit « consacrer plusieurs séances à un dossier ». L'antécédent « dossier » étant masculin singulier et introduit par la préposition « à », la contraction obligatoire de « à + lequel » donne le pronom relatif auquel.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Péjoratif\" qualifie :",
+      "q": "Un terme « péjoratif » est un terme qui :",
       "o": [
-        "Un terme qui valorise positivement",
-        "Un terme qui dévalorise, qui exprime un sens négatif",
-        "Un terme neutre sans connotation",
-        "Un terme technique réservé aux spécialistes"
+        "Valorise",
+        "Reste neutre",
+        "Dévalorise",
+        "Est technique"
       ],
-      "r": 1,
-      "x": "\"Péjoratif\" (du latin \"pejor\" = pire) désigne ce qui exprime une idée négative, un jugement défavorable. Antonyme : \"mélioratif\" (qui valorise). Piège : confondre avec \"négatif\" au sens grammatical de la négation — le sens porte sur la connotation sémantique."
+      "r": 2,
+      "x": "Péjoratif vient du latin « pejor », pire, et désigne un sens défavorable. Son contraire, qui valorise, est « mélioratif ». Le suffixe « -ard » donne souvent une valeur péjorative : chauffard, braillard.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Choisissez la phrase correcte :",
+      "q": "Dans « Soit le directeur, soit le secrétaire _______ présent », la forme correcte est :",
       "o": [
-        "Il faudra agir de façon à ce que tout soit prêt à temps.",
-        "Il faudra agir de façon que tout soit prêt à temps.",
-        "Il faudra agir de manière à ce que tout soit prêt à temps.",
-        "Les réponses B et C sont correctes."
+        "seront",
+        "sont",
+        "seraient",
+        "sera"
       ],
       "r": 3,
-      "x": "\"De façon que + subjonctif\" et \"de manière à ce que + subjonctif\" sont les constructions correctes. \"De façon que\" (sans \"à ce\") est la forme canonique dans les écrits soutenus. Les deux sont admises en concours. Piège : croire que \"de façon à ce que\" est toujours fautif."
+      "x": "« Soit… soit » marque une alternative : un seul des deux sera présent, d'où le singulier. Le pluriel convient à « et… et », qui additionne les sujets. La même règle vaut pour « ou » exclusif : le directeur ou son adjoint signera.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Soit le directeur, soit le secrétaire _______ présent à la réunion.\" Choisissez la forme correcte.",
+      "q": "L'adjectif « pléthorique » qualifie ce qui est :",
+      "o": [
+        "En nombre insuffisant",
+        "Équilibré",
+        "Rare",
+        "En surnombre"
+      ],
+      "r": 3,
+      "x": "Pléthorique désigne une quantité excessive, comme un effectif pléthorique. « Insuffisant » en est le contraire. Le nom correspondant est « pléthore » : une pléthore de candidats.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Dans « La rigueur et la méthode _______ indispensables au fonctionnaire », la forme correcte est :",
       "o": [
         "sont",
-        "seront",
-        "sera",
-        "seraient"
-      ],
-      "r": 2,
-      "x": "Avec \"soit...soit\" (disjonction : l'un ou l'autre), le verbe s'accorde au singulier car un seul des deux sujets est désigné à la fois. Piège : accorder au pluriel par analogie avec \"et...et\" ou \"ni...ni\"."
-    },
-    {
-      "q": "\"Pléthorique\" qualifie :",
-      "o": [
-        "Ce qui est excessivement abondant, en surnombre",
-        "Ce qui est insuffisant et limité",
-        "Ce qui est parfaitement équilibré",
-        "Ce qui est rare et précieux"
+        "est",
+        "était",
+        "soit"
       ],
       "r": 0,
-      "x": "\"Pléthorique\" (du grec \"plethore\" = surabondance) désigne ce qui est présent en quantité excessive. Exemple : \"Un effectif pléthorique d'agents administratifs.\" Piège : confondre avec \"prolifique\" (qui produit beaucoup) — \"pléthorique\" a une connotation davantage péjorative."
+      "x": "Deux sujets coordonnés par « et » commandent un verbe au pluriel. Accorder avec « la méthode », le sujet le plus proche, est une erreur d'attraction fréquente. Avec « ainsi que » ou « comme », le verbe s'accorde en revanche avec le premier sujet : la rigueur, ainsi que la méthode, est indispensable.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"La rigueur et la méthode _______ des qualités indispensables au fonctionnaire.\" Choisissez la forme correcte.",
+      "q": "Un homme « infatué » de lui-même est un homme :",
       "o": [
-        "est",
-        "sera",
-        "a",
-        "sont"
+        "Imbu de sa personne",
+        "Humble et discret",
+        "Soucieux d'autrui",
+        "Timide en société"
+      ],
+      "r": 0,
+      "x": "Infatué qualifie celui qui a de lui-même une opinion exagérément haute. Il ne faut pas le confondre avec « infatigable » ou « infaillible ». Le nom correspondant est « infatuation ».",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Dans un écrit soutenu, la tournure à préférer à « Au niveau de la formation » est :",
+      "o": [
+        "Du côté de la formation",
+        "Concernant la formation",
+        "Niveau formation",
+        "Au plan formation"
+      ],
+      "r": 1,
+      "x": "« Au niveau de » employé au sens de « concernant » est jugé vague ; « concernant », « quant à » ou « en matière de » sont plus précis. « Niveau formation » relève du registre oral. « Au niveau de » reste correct au sens propre : l'eau monte au niveau du pont.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Une « période charnière » est une période :",
+      "o": [
+        "Difficile et douloureuse",
+        "Longue et progressive",
+        "Marquée par des conflits",
+        "De transition décisive"
       ],
       "r": 3,
-      "x": "Quand le verbe a plusieurs sujets coordonnés par \"et\", il se met au pluriel. \"La rigueur\" et \"la méthode\" = deux sujets → \"sont\". Piège : accorder avec le sujet le plus proche (\"la méthode\", singulier) — erreur d'attraction très fréquente dans les copies de concours."
+      "x": "Au sens figuré, la charnière relie deux états, comme l'articulation d'une porte : la période charnière marque un tournant. Rien dans le mot n'implique la difficulté ou le conflit. Employé comme adjectif, le mot s'accorde : des années charnières.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "La nuance entre \"réticent\" et \"hésitant\" :",
+      "q": "Le mot « austère » a pour antonyme :",
       "o": [
-        "Les deux mots sont identiques et interchangeables",
-        "\"Réticent\" exprime une réserve ou une répugnance ; \"hésitant\" exprime une incertitude dans le choix",
-        "\"Hésitant\" est plus fort que \"réticent\"",
-        "\"Réticent\" s'emploie uniquement à l'écrit"
+        "Fastueux",
+        "Sobre",
+        "Rigide",
+        "Sévère"
       ],
-      "r": 1,
-      "x": "\"Réticent\" implique une résistance, une mauvaise volonté à faire quelque chose. \"Hésitant\" exprime simplement l'incertitude entre plusieurs options, sans idée de résistance. Piège : employer \"réticent\" pour \"hésitant\" dans un texte où la nuance de résistance ne convient pas."
+      "r": 0,
+      "x": "Austère désigne ce qui est dépouillé de tout ornement ; son contraire est fastueux. « Sobre » en est un synonyme. Le nom « faste » désigne un déploiement de luxe : les fastes d'une cérémonie.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Un homme \"infatué\" de lui-même est un homme :",
+      "q": "Dans « Des problèmes, il en a _______ partout », la forme correcte est :",
       "o": [
-        "Humble et discret",
-        "Excessivement imbu de sa propre personne",
-        "Soucieux de l'opinion d'autrui",
-        "Mal à l'aise en société"
+        "eu",
+        "eus",
+        "eue",
+        "eues"
       ],
-      "r": 1,
-      "x": "\"Infatué\" qualifie quelqu'un qui a une très haute opinion de lui-même de façon exagérée. L'expression courante est \"infatué de soi-même\". Piège : confondre avec \"infatigable\" (toujours actif) ou \"infaillible\" (qui ne se trompe pas)."
+      "r": 0,
+      "x": "Le participe passé employé avec l'auxiliaire « avoir » reste toujours invariable lorsqu'il a pour complément d'objet direct le pronom neutre « en » (il a eu quoi ? « en », mis pour des problèmes). Même si le nom représenté (« problèmes ») est placé avant le verbe, la présence de « en » bloque l'accord.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Laquelle de ces phrases évite la faute courante avec \"au niveau de\" ?",
+      "q": "Des propos « sibyllins » sont des propos :",
       "o": [
-        "Au niveau de la formation, des efforts restent à faire.",
-        "Il y a des problèmes au niveau de la salle.",
-        "Concernant la formation, des efforts restent à faire.",
-        "Au niveau des résultats, tout va bien."
-      ],
-      "r": 2,
-      "x": "L'expression \"au niveau de\" est vague et critiquée quand elle remplace des prépositions précises (\"concernant\", \"quant à\", \"pour\"). La phrase C utilise \"concernant\", précis et correct. Piège : employer \"au niveau de\" pour tout, ce qui signale un registre familier et appauvrit le style."
-    },
-    {
-      "q": "Le mot \"sibyllin\" qualifie des propos :",
-      "o": [
+        "Obscurs et énigmatiques",
         "Clairs et précis",
-        "Obscurs, énigmatiques, difficiles à interpréter",
         "Violents et injurieux",
         "Longs et détaillés"
       ],
-      "r": 1,
-      "x": "\"Sibyllin\" vient des \"sibylles\" (prophétesses antiques dont les oracles étaient obscurs). Exemple : \"Il répondit par des formules sibyllines.\" Piège : confondre avec \"subtil\" (fin, délicat) ou \"alambiqué\" (trop compliqué par excès de recherche)."
+      "r": 0,
+      "x": "Sibyllin vient des sibylles, prophétesses antiques aux oracles obscurs. Il ne faut pas le confondre avec « subtil », qui signifie fin. On parle aussi d'un oracle sibyllin pour une réponse volontairement obscure.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Je n'ai pas obtenu _______ j'avais besoin pour mon dossier.\" Choisissez la bonne combinaison.",
+      "q": "Dans « Je n'ai pas obtenu _______ j'avais besoin », la forme correcte est :",
       "o": [
-        "ce dont",
         "ce que",
         "dont",
-        "que"
-      ],
-      "r": 0,
-      "x": "\"Avoir besoin DE quelque chose\" → relatif \"dont\". Précédé de l'antécédent \"ce\" : \"ce dont\". \"Ce dont j'avais besoin\" = la chose dont j'avais besoin. Piège : employer \"ce que\" qui s'utilise quand le verbe est transitif direct (sans \"de\")."
-    },
-    {
-      "q": "Le verbe \"plébisciter\" quelque chose signifie :",
-      "o": [
-        "Le critiquer violemment",
-        "Le soumettre à un vote",
-        "Le remettre en question officiellement",
-        "L'approuver ou le choisir massivement"
+        "de ce que",
+        "ce dont"
       ],
       "r": 3,
-      "x": "\"Plébisciter\" = approuver ou choisir avec une très large majorité, souvent avec enthousiasme. Exemple : \"Cette réforme a été plébiscitée par la population.\" Piège : confondre avec \"plébiscite\" (vote) et croire que \"plébisciter\" signifie seulement \"soumettre à un vote\"."
+      "x": "On dit « avoir besoin de quelque chose », d'où le relatif « dont », précédé de l'antécédent « ce ». « Ce que » ne convient qu'aux verbes construits sans « de ». On écrit de même « ce dont je me souviens » et « ce dont il parle ».",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Ces étudiantes sont _______ émues par ce résultat.\" Choisissez la bonne forme de \"tout\".",
+      "q": "Le verbe « plébisciter » signifie :",
       "o": [
-        "toutes",
-        "tout",
+        "Critiquer violemment",
+        "Retarder un vote",
+        "Remettre en cause",
+        "Approuver massivement"
+      ],
+      "r": 3,
+      "x": "Plébisciter, c'est approuver ou choisir à une très large majorité. Il est l'inverse de « critiquer violemment ». Le nom « plébiscite » désigne un vote par lequel le peuple approuve une proposition du pouvoir.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Dans « Cette étudiante est _______ émue », la forme correcte est :",
+      "o": [
         "toute",
+        "tout",
+        "toutes",
         "tous"
       ],
       "r": 1,
-      "x": "\"Tout\" adverbe devant un adjectif féminin commençant par une VOYELLE reste invariable (règle d'euphonie). \"Émues\" commence par \"é\" (voyelle) → \"tout émues\". Règle : tout + adj. féminin + consonne = \"toutes\" ; tout + adj. féminin + voyelle = \"tout\". Piège : toujours accorder \"tout\" avec l'adjectif féminin."
+      "x": "L'adverbe « tout » (au sens de tout à fait) reste invariable devant un adjectif féminin commençant par une voyelle ou un h muet (« tout émue »). Par euphonie, il s'accorde devant une consonne ou un h aspiré : « toute surprise », « toute honteuse ».",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "La \"quintessence\" d'un texte, c'est :",
+      "q": "La « quintessence » d'un texte désigne :",
       "o": [
-        "Ce qu'il y a de meilleur, l'essentiel le plus pur",
-        "Sa partie la plus dense et la plus difficile",
-        "Son introduction",
-        "Sa conclusion"
+        "Son introduction générale",
+        "Sa partie la plus difficile",
+        "Son essentiel le plus pur",
+        "Sa conclusion finale"
       ],
-      "r": 0,
-      "x": "\"Quintessence\" (alchimie médiévale : cinquième essence, la plus pure) désigne ce qu'il y a de plus essentiel et raffiné. Exemple : \"Ce discours est la quintessence de la pensée administrative.\" Piège : le confondre avec \"résumé\" ou \"conclusion\" — la quintessence est l'essence même, pas un simple résumé."
+      "r": 2,
+      "x": "Héritée de l'alchimie, la quintessence désigne ce qu'il y a de plus essentiel et raffiné. Ce n'est ni un résumé ni une conclusion. On dit aussi « la quintessence de l'art » pour ce qu'il a de plus parfait.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Je pense qu'il _______ raison sur ce point.\" Choisissez la forme correcte.",
+      "q": "Dans « Je pense qu'il _______ raison », la forme correcte est :",
       "o": [
         "ait",
         "eût",
-        "avait",
-        "a"
-      ],
-      "r": 3,
-      "x": "Après \"penser que\" à la forme affirmative, on emploie l'indicatif. Le subjonctif s'impose seulement après la forme négative ou interrogative (\"Je ne pense pas qu'il ait raison\"). Piège : employer systématiquement le subjonctif après \"penser que\" quelle que soit la forme de la phrase."
-    },
-    {
-      "q": "\"Corroborer\" une information signifie :",
-      "o": [
-        "La remettre en question",
-        "La diffuser largement",
-        "La confirmer, la renforcer par des preuves",
-        "La résumer brièvement"
+        "a",
+        "aie"
       ],
       "r": 2,
-      "x": "\"Corroborer\" (du latin \"corroborare\" = fortifier) = confirmer, appuyer une affirmation par des éléments supplémentaires. Exemple : \"Ce témoignage corrobore la version des faits.\" Piège : confondre avec \"collaborer\" (travailler ensemble) — ressemblance phonique trompeuse."
+      "x": "Après « penser que » à la forme affirmative, on emploie l'indicatif. Après « je ne pense pas que », le subjonctif est l'usage courant : « Je ne pense pas qu'il ait raison ». À la forme interrogative, les deux modes sont possibles : pensez-vous qu'il a raison, ou qu'il ait raison.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Immuable\" signifie :",
+      "q": "« Corroborer » une information signifie :",
       "o": [
-        "Qui change fréquemment",
-        "Impossible à mesurer",
-        "Inconnu de tous",
-        "Qui ne change pas, stable et permanent"
+        "La contester",
+        "La diffuser",
+        "La confirmer",
+        "La résumer"
       ],
-      "r": 3,
-      "x": "\"Immuable\" (préfixe \"im-\" privatif + \"mutable\" = susceptible de changer) désigne ce qui demeure stable, permanent. Exemple : \"Les principes constitutionnels immuables d'un État.\" Piège : confondre avec \"immense\" (très grand) ou \"immobile\"."
+      "r": 2,
+      "x": "Corroborer signifie confirmer une affirmation par de nouveaux éléments. Ne pas le confondre avec « collaborer », proche par le son. Le nom correspondant est « corroboration ».",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Depuis qu'il _______ ce poste, le service s'est amélioré.\" Choisissez la forme correcte.",
+      "q": "L'adjectif « immuable » qualifie ce qui :",
       "o": [
-        "occupe",
+        "Ne change pas",
+        "Change souvent",
+        "Est immense",
+        "Est inconnu"
+      ],
+      "r": 0,
+      "x": "Immuable associe le préfixe privatif « im- » à l'idée de changement : il désigne ce qui reste stable. « Immense » est une confusion phonétique fréquente. Le nom correspondant est « immutabilité » : l'immutabilité des principes.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Dans « Depuis qu'il _______ ce poste, le service s'est amélioré », la forme correcte est :",
+      "o": [
         "occupait",
+        "occupe",
         "a occupé",
         "occupera"
       ],
-      "r": 0,
-      "x": "Avec \"depuis que\", si l'action est encore en cours au moment où l'on parle, on emploie le présent de l'indicatif. \"Depuis qu'il occupe ce poste\" = il l'occupe encore maintenant. Piège : employer le passé composé \"a occupé\" qui indiquerait que l'occupation est terminée."
+      "r": 1,
+      "x": "Avec « depuis que », une action encore en cours au moment où l'on parle se met au présent. Le passé composé « a occupé » laisserait entendre que la fonction a pris fin. Pour une action ponctuelle achevée, le passé composé convient : depuis qu'il a pris ce poste, le service s'est amélioré.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Réfractaire à quelque chose\" signifie :",
+      "q": "Être « réfractaire » à une réforme, c'est y être :",
       "o": [
-        "Favorable et ouvert",
-        "Sensible et réceptif",
-        "Hostile et résistant",
-        "Indifférent et passif"
+        "Favorable",
+        "Hostile",
+        "Réceptif",
+        "Indifférent"
       ],
-      "r": 2,
-      "x": "\"Réfractaire\" qualifie ce ou celui qui résiste, qui s'oppose à quelque chose. Exemple : \"Réfractaire à toute réforme\" = qui refuse ou résiste activement à toute réforme. Piège : confondre avec \"indifférent\" (passivité sans résistance) — \"réfractaire\" implique une résistance active."
+      "r": 1,
+      "x": "Être réfractaire, c'est s'opposer activement à quelque chose. L'indifférence, passive, n'implique pas cette résistance. On parle aussi d'un matériau réfractaire, qui résiste à de très hautes températures.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Ces femmes ont l'air _______ (elles sont effectivement épuisées).\" Choisissez la bonne forme.",
+      "q": "Employé comme adjectif, « contingent » signifie :",
       "o": [
-        "épuisés",
-        "épuisé",
-        "épuisée",
-        "épuisées"
-      ],
-      "r": 3,
-      "x": "\"Avoir l'air\" + sens de \"sembler\" : le PP s'accorde avec le sujet. Si \"l'air\" désigne l'expression du visage, accord avec \"l'air\" (masculin singulier). Ici, la précision \"elles sont effectivement épuisées\" confirme le sens de \"sembler\" → accord avec \"ces femmes\" (féminin pluriel) → \"épuisées\". Piège : accorder avec \"l'air\" (masculin singulier) → \"épuisé\"."
-    },
-    {
-      "q": "\"Contingent\" employé comme adjectif signifie :",
-      "o": [
-        "Soumis au hasard, incertain, non nécessaire",
-        "Indispensable et permanent",
-        "Très important et décisif",
+        "Indispensable",
+        "Non nécessaire",
+        "Décisif",
         "Relatif à l'armée"
       ],
-      "r": 0,
-      "x": "\"Contingent\" (adjectif) désigne ce qui dépend des circonstances et non de la nécessité. \"Les événements contingents\" s'opposent aux vérités nécessaires. Piège : confondre avec \"contingent\" (nom) = quota de soldats — sens différent selon la classe grammaticale."
+      "r": 1,
+      "x": "Est contingent ce qui peut arriver ou non selon les circonstances, par opposition au nécessaire. Le nom « contingent », quota de soldats, a un autre sens. Le nom « contingence » désigne ce qui peut arriver ou non : les contingences matérielles.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Choisissez la phrase correcte :",
+      "q": "Dans « _______ ce problème, nous devons agir », la locution correcte est :",
       "o": [
-        "En face à ce problème, nous devons agir.",
-        "Face de ce problème, nous devons agir.",
-        "Face à ce problème, nous devons agir.",
-        "Face avec ce problème, nous devons agir."
+        "En face à",
+        "Face de",
+        "Face avec",
+        "Face à"
+      ],
+      "r": 3,
+      "x": "« Face à » signifie « confronté à ». « En face à » mélange fautivement « face à » et « en face de », qui a un sens spatial. « En face de » garde un sens spatial : la mairie est en face de l'école.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "L'adjectif « intempestif » signifie :",
+      "o": [
+        "Excessif",
+        "Malveillant",
+        "Inopportun",
+        "Intemporel"
       ],
       "r": 2,
-      "x": "\"Face à\" est la locution prépositionnelle correcte signifiant \"devant\", \"confronté à\". \"En face de\" signifie \"du côté opposé à\" (sens spatial). \"En face à\" et \"face avec\" n'existent pas. Piège : employer \"en face à\" par mélange des deux locutions."
+      "x": "Est intempestif ce qui se fait au mauvais moment, comme une interruption intempestive. « Intemporel » désigne ce qui échappe au temps. On parle d'une remarque intempestive pour un propos déplacé, qui tombe mal.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Intempestif\" qualifie ce qui est :",
+      "q": "Dans « Il n'a contacté que trois candidats », la tournure « ne… que » exprime :",
       "o": [
-        "Excessivement long",
-        "Fait hors du temps opportun, mal à propos",
-        "Intentionnellement nuisible",
-        "Particulièrement intense"
-      ],
-      "r": 1,
-      "x": "\"Intempestif\" (latin \"intempestivus\" = qui ne tient pas compte du temps favorable) désigne ce qui est fait au mauvais moment, inopportun. Exemple : \"Une interruption intempestive de la réunion.\" Piège : confondre avec \"intemporel\" (qui ne dépend pas du temps) — homophones partiels."
-    },
-    {
-      "q": "La construction \"ne…que\" dans la phrase \"Il n'a contacté que trois candidats\" exprime :",
-      "o": [
-        "Qu'il n'a pas contacté trois candidats",
-        "Une restriction : seulement trois candidats contactés",
+        "Une négation totale",
+        "Une restriction",
         "Une hypothèse",
-        "Qu'il a contacté plus de trois candidats"
+        "Une comparaison"
       ],
       "r": 1,
-      "x": "\"Ne…que\" est une locution restrictive signifiant \"seulement\". C'est une tournure affirmative dans son sens, même si elle utilise \"ne\". Piège : interpréter \"ne…que\" comme une négation totale et croire qu'il n'a contacté personne."
+      "x": "« Ne… que » signifie « seulement » : trois candidats ont bien été contactés. Y voir une négation totale est un contresens. On ne la double pas d'une autre restriction : « il n'a seulement que trois candidats » est un pléonasme.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Abstrus\" qualifie un texte ou un discours :",
+      "q": "Un discours « abstrus » est un discours :",
       "o": [
-        "Difficile à comprendre, obscur",
-        "D'une grande clarté pédagogique",
         "Court et lisible",
-        "Provocateur et polémique"
+        "Clair et pédagogique",
+        "Provocateur et polémique",
+        "Obscur et hermétique"
       ],
-      "r": 0,
-      "x": "\"Abstrus\" (du latin \"abstrusus\" = caché) qualifie ce qui est difficile à comprendre, hermétique. Piège : confondre avec \"abstrait\" (qui ne se rapporte pas au concret) — \"abstrus\" insiste sur la difficulté de compréhension, pas seulement l'absence de concret."
+      "r": 3,
+      "x": "Abstrus qualifie un propos difficile à comprendre. Il ne se confond pas avec « abstrait », qui s'oppose simplement au concret. Le mot est rare et s'emploie surtout à l'écrit soutenu.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Les agents ont rendu compte à _______ supérieur. Le directeur _______ a ensuite donné ses instructions.\" Choisissez les bonnes formes.",
+      "q": "Dans « Les agents ont rendu compte à _______ supérieur ; celui-ci _______ a donné ses instructions », la bonne combinaison est :",
       "o": [
-        "leur / leur",
         "leurs / leur",
         "leur / leurs",
-        "leurs / leurs"
+        "leurs / leurs",
+        "leur / leur"
       ],
-      "r": 0,
-      "x": "Premier \"leur\" : \"supérieur\" est singulier (un seul supérieur commun) → \"leur supérieur\". Deuxième \"leur\" : pronom COI invariable (remplace \"aux agents\"). Piège : mettre \"leurs\" au premier cas en pensant aux agents pluriels, ou confondre pronom et adjectif possessif."
+      "r": 3,
+      "x": "Le premier « leur » est un possessif devant un nom singulier ; le second est un pronom complément, toujours invariable. « Leurs » pronom n'existe pas. Le possessif devient « leurs » devant un nom pluriel : ils ont rendu compte à leurs supérieurs.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Délétère\" qualifie ce qui est :",
+      "q": "En droit public, « l'arbitraire » désigne :",
       "o": [
-        "Agréable et bienfaisant",
-        "Nuisible à la santé ou à l'équilibre moral",
-        "Difficile à obtenir",
-        "Relatif à la politique"
+        "Un pouvoir fondé sur la loi",
+        "Un conflit réglé par un tiers",
+        "Un pouvoir issu des urnes",
+        "Un pouvoir exercé sans règles"
       ],
-      "r": 1,
-      "x": "\"Délétère\" (du grec \"deleterios\" = destructeur) désigne ce qui est nocif, nuisible à la santé physique ou à l'équilibre moral. Exemple : \"Un climat social délétère.\" Piège : confondre avec \"désastreux\" — \"délétère\" insiste sur la nocivité progressive et insidieuse."
+      "r": 3,
+      "x": "L'arbitraire est le pouvoir exercé selon le bon vouloir de celui qui décide, sans règle ni justification. Le règlement d'un conflit par un tiers relève de l'« arbitrage ». L'adjectif « arbitraire » qualifie une décision prise sans justification : une arrestation arbitraire.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Il a refusé d'obéir sous prétexte qu'il _______ malade.\" Choisissez le mode correct.",
+      "q": "L'adjectif « délétère » qualifie ce qui est :",
       "o": [
-        "soit",
+        "Bienfaisant",
+        "Rare",
+        "Passager",
+        "Nuisible"
+      ],
+      "r": 3,
+      "x": "Délétère qualifie ce qui nuit à la santé ou à l'équilibre moral, comme un climat social délétère. « Bienfaisant » en est le contraire. Au sens propre, un gaz délétère est un gaz toxique.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Dans « Il a refusé d'obéir sous prétexte qu'il _______ malade », la forme correcte est :",
+      "o": [
         "était",
-        "serait",
+        "soit",
+        "fût",
         "ait été"
       ],
-      "r": 1,
-      "x": "Après \"sous prétexte que\", on emploie l'indicatif car on rapporte un prétexte présenté comme réel (vrai ou faux). \"Il était malade\" → indicatif imparfait. Piège : employer le subjonctif par analogie avec d'autres conjonctions de subordination — \"sous prétexte que\" est indicatif."
+      "r": 0,
+      "x": "« Sous prétexte que » se construit avec l'indicatif, car le motif est présenté comme un fait. Le subjonctif « soit » est une fausse analogie avec « bien que ». La locution présente souvent un motif jugé faux par celui qui parle, mais l'indicatif reste de règle.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Un \"corollaire\" est :",
+      "q": "« Exacerber » une tension signifie :",
+      "o": [
+        "L'atténuer peu à peu",
+        "L'expliquer clairement",
+        "La résoudre enfin",
+        "L'aggraver à l'extrême"
+      ],
+      "r": 3,
+      "x": "Exacerber, c'est porter une tension ou un mal à son degré le plus vif. « Exaspérer » s'applique plutôt à une personne qu'on irrite. L'adjectif correspondant est « exacerbé » : une sensibilité exacerbée.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "La locution correctement orthographiée est :",
+      "o": [
+        "Au fur et mesure que",
+        "Au fur à mesure que",
+        "Au fur et à mesure que",
+        "Au fur et à la mesure que"
+      ],
+      "r": 2,
+      "x": "La locution complète comporte « et à » : « au fur et à mesure que » devant un verbe, « au fur et à mesure de » devant un nom. L'oubli du « à » est une faute courante. La locution s'emploie aussi seule en fin de phrase : on corrige les erreurs au fur et à mesure.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Un « corollaire » est :",
       "o": [
         "Une contradiction",
         "Un document officiel",
-        "Une proposition qui découle naturellement d'une autre",
-        "Une partie d'un discours"
+        "Une partie d'un discours",
+        "Une conséquence directe"
       ],
-      "r": 2,
-      "x": "\"Corollaire\" (mathématiques puis usage courant) désigne une conséquence ou une proposition qui découle nécessairement d'une autre plus importante. Exemple : \"La transparence est le corollaire de la bonne gouvernance.\" Piège : confondre avec \"corrélation\" (relation réciproque) ou \"codicille\" (ajout à un testament)."
+      "r": 3,
+      "x": "Le corollaire découle nécessairement d'une autre proposition : la transparence est le corollaire de la bonne gouvernance. Ne pas le confondre avec « corrélation ». En mathématiques, un corollaire est une conséquence immédiate d'un théorème.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Les candidates que j'ai voulu _______ n'ont pas pu venir.\" Choisissez la forme correcte.",
+      "q": "Dans « Les candidates que j'ai voulu _______ ne sont pas venues », la forme correcte est :",
       "o": [
         "rencontrer",
         "rencontrées",
@@ -970,120 +889,119 @@ const QUESTIONS = {
         "rencontré"
       ],
       "r": 0,
-      "x": "Avec \"vouloir + infinitif\", le PP \"voulu\" est invariable car il est suivi d'un infinitif — l'action de vouloir porte sur l'infinitif. L'infinitif \"rencontrer\" reste également invariable. Piège : accorder \"voulu\" avec le COD antéposé \"que\" (les candidates) et écrire \"voulu rencontrées\" — double erreur."
+      "x": "Après le verbe « voulu », le verbe qui suit se met toujours à l'infinitif (« rencontrer ») et non au participe passé. Le participe « voulu » reste, quant à lui, invariable, car le COD « que » se rapporte à l'infinitif (j'ai voulu rencontrer qui ? les candidates) et non au verbe « vouloir ».",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Inaliénable\" signifie :",
+      "q": "Un droit « inaliénable » est un droit :",
       "o": [
-        "Qu'on peut vendre ou céder facilement",
-        "Qui ne peut pas être cédé ou retiré",
-        "Qui est contestable",
-        "Qui est réservé à l'État"
+        "Qui se vend facilement",
+        "Qui ne peut être cédé",
+        "Qui reste contestable",
+        "Réservé à l'État seul"
       ],
       "r": 1,
-      "x": "\"Inaliénable\" (préfixe \"in-\" privatif + \"aliénable\" = susceptible d'être cédé) désigne ce qui ne peut être ni vendu, ni cédé, ni retiré. Exemple : \"Les droits fondamentaux sont inaliénables.\" Piège : confondre avec \"intangible\" (qu'on ne peut modifier) ou \"imprescriptible\" (qui ne s'éteint pas par le temps)."
+      "x": "Est inaliénable ce qui ne peut être ni vendu, ni cédé, ni retiré, comme les droits fondamentaux. « Imprescriptible » désigne ce qui ne s'éteint pas avec le temps. On dit aussi « aliéner un bien » pour le céder ou le vendre.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Le fait qu'il _______ absent ce jour-là pose problème.\" Choisissez la forme correcte.",
+      "q": "Dans « Pas une des solutions proposées ne _______ satisfaisante », la forme correcte est :",
       "o": [
-        "soit",
         "est",
-        "était",
-        "Les réponses A et B sont acceptées selon le contexte"
+        "sont",
+        "soient",
+        "seront"
       ],
-      "r": 3,
-      "x": "Après \"le fait que\", l'indicatif et le subjonctif sont tous deux admis selon le sens. L'indicatif présente le fait comme certain et réel. Le subjonctif marque une nuance d'incertitude ou de supposition. En concours, le subjonctif est le plus souvent attendu. Piège : ne connaître qu'une seule règle et l'appliquer rigidement."
+      "r": 0,
+      "x": "Après « pas une », le verbe se met au singulier, car l'expression signifie « aucune ». Le pluriel « sont » est une attraction par « des solutions ». Employé seul, « pas un » commande aussi le singulier : pas un n'est venu.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"_______ des solutions proposées n'est satisfaisante.\" Choisissez la bonne forme.",
+      "q": "Une personne « pondérée » est une personne :",
       "o": [
-        "Pas un",
-        "Pas une",
-        "Pas uns",
-        "Pas unes"
-      ],
-      "r": 1,
-      "x": "\"Solutions\" est féminin → \"Pas une des solutions\". Le verbe reste au singulier avec \"pas une\". La négation \"ne\" doit accompagner le verbe dans la langue soutenue : \"Pas une des solutions n'est satisfaisante.\" Piège : mettre \"pas un\" au masculin par défaut sans vérifier le genre du nom."
-    },
-    {
-      "q": "Quel est le synonyme de \"pondéré\" dans un contexte de personnalité ?",
-      "o": [
-        "Lourd",
+        "Lourde",
         "Sévère",
-        "Hésitant",
-        "Équilibré, mesuré dans ses jugements"
+        "Mesurée",
+        "Hésitante"
       ],
-      "r": 3,
-      "x": "\"Pondéré\" (du latin \"ponderare\" = peser) qualifie une personne qui agit avec mesure et équilibre, qui ne se laisse pas emporter. Piège : le rapprocher du sens physique de \"pondéré\" (qui a du poids) — usage figuré dominant en français courant."
+      "r": 2,
+      "x": "Une personne pondérée juge avec mesure, sans se laisser emporter. Le sens physique « qui a du poids » n'est pas celui attendu ici. Le verbe « pondérer » signifie équilibrer, atténuer : pondérer ses propos.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"_______ fonctionnaire _______ consacre entièrement à _______ travail.\" Choisissez la bonne combinaison.",
+      "q": "Dans « _______ fonctionnaire _______ consacre à _______ travail », la bonne combinaison est :",
       "o": [
-        "Ce / se / ce",
         "Se / ce / se",
         "Ce / ce / se",
-        "Se / se / ce"
-      ],
-      "r": 0,
-      "x": "\"Ce fonctionnaire\" : \"ce\" est déterminant démonstratif. \"Se consacre\" : \"se\" est pronom réfléchi. \"Ce travail\" : \"ce\" est déterminant démonstratif. Règle : \"ce\" remplaçable par \"cet/cette/ces\" ou \"cela\" ; \"se\" = pronom réfléchi devant un verbe. Piège : confondre les deux formes à l'écrit."
-    },
-    {
-      "q": "L'\"apanage\" de quelqu'un désigne :",
-      "o": [
-        "Son point faible",
-        "Ce qui lui appartient en propre, son privilège exclusif",
-        "Sa méthode de travail",
-        "Son lieu de résidence officiel"
-      ],
-      "r": 1,
-      "x": "\"Apanage\" (à l'origine : portion de domaine royal accordée à un prince) désigne par extension ce qui appartient en propre à quelqu'un, son privilège exclusif. Exemple : \"L'éloquence n'est pas l'apanage des seuls orateurs.\" Piège : confondre avec \"avantage\" (plus général)."
-    },
-    {
-      "q": "Choisissez la formulation la plus correcte dans un document officiel :",
-      "o": [
-        "À la suite de votre demande du 15 avril, nous vous informons...",
-        "Suivant votre demande du 15 avril, nous vous informons...",
-        "Suite à votre demande du 15 avril, nous vous informons...",
-        "Rapport à votre demande du 15 avril, nous vous informons..."
-      ],
-      "r": 0,
-      "x": "\"À la suite de\" est la locution prépositionnelle consacrée dans la correspondance officielle. \"Suite à\" est critiqué dans la langue soutenue. \"Rapport à\" est familier et inacceptable dans un document officiel. Piège : employer \"suite à\" (répandu mais déconseillé dans les textes officiels de niveau élevé)."
-    },
-    {
-      "q": "\"Procrastiner\" signifie :",
-      "o": [
-        "Travailler avec méthode",
-        "Remettre sans cesse au lendemain ce qu'on devrait faire",
-        "Planifier soigneusement son travail",
-        "Refuser catégoriquement une tâche"
-      ],
-      "r": 1,
-      "x": "\"Procrastiner\" (du latin \"procrastinare\" = remettre au lendemain) = différer indéfiniment les tâches. Exemple : \"Un étudiant qui procrastine rate ses révisions.\" Piège : confondre avec \"atermoyer\" (quasi-synonyme mais plus souvent employé pour les décisions officielles)."
-    },
-    {
-      "q": "\"Complétez avec la forme correcte : 'Quelle que soit la raison _______ , vous devez respecter le délai.'\"",
-      "o": [
-        "invoqué",
-        "invoqués",
-        "invoquer",
-        "invoquée"
+        "Se / se / ce",
+        "Ce / se / ce"
       ],
       "r": 3,
-      "x": "\"La raison\" est féminin singulier → l'adjectif ou participe passé qui s'y rapporte s'accorde en féminin singulier : \"invoquée\". La structure est \"quelle que soit + nom féminin singulier\" → épithète ou attribut au féminin singulier. Piège : laisser le participe invariable."
+      "x": "« Ce » est un démonstratif placé devant un nom ; « se » est un pronom réfléchi placé devant un verbe. Le test : « ce » se remplace par « cet » ou « ces ». « Ce » peut aussi être pronom devant « être » ou un relatif : ce sont, ce qui.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Atone\" dans le contexte du discours signifie :",
+      "q": "L'« apanage » de quelqu'un désigne :",
       "o": [
-        "D'une grande intensité",
-        "Sans accent, sans vigueur, terne",
-        "Très technique",
-        "Particulièrement agréable"
+        "Son point faible",
+        "Son privilège exclusif",
+        "Sa méthode de travail",
+        "Son lieu de résidence"
       ],
       "r": 1,
-      "x": "\"Atone\" (préfixe \"a-\" privatif + grec \"tonos\" = accent) qualifie ce qui manque de tonicité, de vivacité. En phonétique, une syllabe atone est une syllabe non accentuée. En usage courant : \"un regard atone\" = vide, sans expression. Piège : confondre avec \"autonome\" — ressemblance phonique partielle."
+      "x": "L'apanage, à l'origine terre accordée à un prince, désigne ce qui appartient en propre à quelqu'un. On dit : « l'éloquence n'est pas l'apanage des orateurs ». On évite « apanage exclusif », car l'idée d'exclusivité est déjà contenue dans le mot.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Je signerai ce contrat à moins qu'il _______ des clauses abusives.\" Choisissez la forme correcte.",
+      "q": "Dans un courrier officiel, la formule la plus correcte est :",
+      "o": [
+        "Suite à votre demande",
+        "Rapport à votre demande",
+        "À la suite de votre demande",
+        "Suivant à votre demande"
+      ],
+      "r": 2,
+      "x": "« À la suite de » est la locution recommandée dans la correspondance administrative. « Suite à » est critiqué et « rapport à » relève du registre familier. « Suite à » est très répandu et admis par certains dictionnaires, mais il reste à éviter dans un écrit soigné.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "« Procrastiner » signifie :",
+      "o": [
+        "Travailler avec méthode",
+        "Planifier son travail",
+        "Refuser une tâche",
+        "Tout remettre au lendemain"
+      ],
+      "r": 3,
+      "x": "Procrastiner, du latin « crastinus » (de demain), c'est différer sans cesse ce qu'on doit faire. Il s'oppose à « planifier son travail ». Le nom correspondant est « procrastination ».",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Dans « Quelle que soit la raison _______, respectez le délai », la forme correcte est :",
+      "o": [
+        "invoquée",
+        "invoqué",
+        "invoqués",
+        "invoquer"
+      ],
+      "r": 0,
+      "x": "Le participe se rapporte à « la raison », féminin singulier. L'infinitif « invoquer » ne peut pas qualifier un nom. « Quelle que » s'accorde ici avec « la raison », sujet de « soit ».",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Un regard « atone » est un regard :",
+      "o": [
+        "Vif et perçant",
+        "Terne et sans vie",
+        "Dur et menaçant",
+        "Doux et bienveillant"
+      ],
+      "r": 1,
+      "x": "Atone signifie privé de tonus : un regard atone est vide d'expression. En phonétique, une syllabe atone est une syllabe non accentuée. Ne pas le confondre avec « aphone », qui qualifie une personne privée de voix.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Dans « Je signerai à moins qu'il _______ des clauses abusives », la forme correcte est :",
       "o": [
         "contient",
         "contenait",
@@ -1091,1440 +1009,1187 @@ const QUESTIONS = {
         "contienne"
       ],
       "r": 3,
-      "x": "\"À moins que\" exige obligatoirement le subjonctif. \"Contienne\" est le subjonctif présent de \"contenir\". Souvent renforcée de \"ne\" explétif non négatif : \"à moins qu'il ne contienne\". Piège : employer le futur \"contiendra\" ou le présent \"contient\" — fautes fréquentes dans les copies."
+      "x": "« À moins que » exige le subjonctif, souvent accompagné d'un « ne » explétif : « à moins qu'il ne contienne ». Le futur « contiendra » est une faute fréquente. Ce « ne » explétif n'a aucune valeur négative et peut être omis sans changer le sens.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Faire un amalgame\" signifie :",
+      "q": "« Faire un amalgame » signifie :",
       "o": [
-        "Distinguer soigneusement des notions proches",
-        "Mélanger abusivement des éléments distincts",
-        "Résoudre un problème complexe",
-        "Atteindre un consensus"
+        "Distinguer avec soin",
+        "Mélanger abusivement",
+        "Résoudre un problème",
+        "Trouver un consensus"
       ],
       "r": 1,
-      "x": "\"Faire un amalgame\" = mélanger ou confondre abusivement des choses ou des personnes qui devraient être distinguées. Exemple : \"Faire l'amalgame entre immigration et insécurité est intellectuellement malhonnête.\" Piège : oublier la connotation péjorative de la notion de mélange abusif."
+      "x": "Faire l'amalgame, c'est confondre abusivement des éléments qui devraient être distingués. L'expression est péjorative, contrairement à « distinguer avec soin ». En chimie, l'amalgame désigne un alliage de mercure et d'un autre métal.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Choisissez la phrase correcte avec \"être en mesure de\" :",
+      "q": "Dans « Nous sommes _______ de répondre à votre demande », la forme correcte est :",
       "o": [
-        "Nous sommes en mesures de répondre à votre demande.",
-        "Nous sommes aux mesures de répondre à votre demande.",
-        "Nous sommes dans la mesure de répondre à votre demande.",
-        "Nous sommes en mesure de répondre à votre demande."
+        "en mesures",
+        "en mesure",
+        "aux mesures",
+        "dans la mesure"
       ],
-      "r": 3,
-      "x": "\"Être en mesure de + infinitif\" est invariable : \"en mesure\" est toujours au singulier. \"Dans la mesure où\" est une locution différente (proportionnelle). Piège : mettre \"mesures\" au pluriel ou employer \"dans la mesure de\"."
+      "r": 1,
+      "x": "« Être en mesure de » signifie avoir les moyens de faire, et « mesure » y reste au singulier. « Dans la mesure où » est une autre locution, de sens proportionnel. On écrit de même « sur mesure » et « outre mesure », sans s.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Inférer\" une conclusion signifie :",
+      "q": "« Inférer » une conclusion signifie :",
       "o": [
-        "La déduire logiquement à partir de prémisses ou d'indices",
-        "La formuler de façon hésitante",
-        "La contester avec vigueur",
-        "La résumer en peu de mots"
+        "La déduire",
+        "L'imposer",
+        "La contester",
+        "La résumer"
       ],
       "r": 0,
-      "x": "\"Inférer\" (du latin \"inferre\" = porter vers) = tirer une conclusion, déduire quelque chose d'observations. Proche de \"déduire\" et \"induire\". Piège : confondre avec \"interférer\" (se produire en perturbant) — faux ami phonique courant."
+      "x": "Inférer, c'est tirer une conclusion d'indices ou de prémisses. Ne pas le confondre avec « interférer », qui signifie perturber. Le nom correspondant est « inférence ».",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"_______ amélioration n'a été constatée depuis cette réforme.\" Choisissez la bonne forme.",
+      "q": "Dans « _______ amélioration n'a été constatée », la forme correcte est :",
       "o": [
         "Nul",
-        "Nulles",
         "Nuls",
-        "Nulle"
+        "Nulle",
+        "Nulles"
       ],
-      "r": 3,
-      "x": "\"Nul\" adjectif indéfini s'accorde en genre et en nombre avec le nom. \"Amélioration\" est féminin singulier → \"Nulle amélioration\". Piège : laisser invariable par analogie avec \"aucun\" — \"nul\" comme \"aucun\" s'accorde."
+      "r": 2,
+      "x": "« Nul » adjectif indéfini s'accorde avec le nom : « amélioration » est féminin singulier. Comme « aucun », il s'emploie très rarement au pluriel. Placé après le nom, « nul » signifie « sans valeur » et s'accorde : des résultats nuls.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Endémique\" qualifie :",
+      "q": "Un phénomène « endémique » est un phénomène :",
       "o": [
-        "Une maladie ou un phénomène temporaire et passager",
-        "Une épidémie mondiale",
-        "Un problème récent apparu brusquement",
-        "Ce qui est propre à une région déterminée et s'y développe de façon permanente"
+        "Durable dans une région",
+        "Temporaire et passager",
+        "Répandu dans le monde",
+        "Apparu brusquement"
       ],
-      "r": 3,
-      "x": "\"Endémique\" (du grec \"endemos\" = dans le peuple) désigne ce qui est propre à une région et y persiste de manière continue. Exemple : \"La corruption endémique freine le développement.\" Piège : confondre avec \"épidémique\" (propagation rapide) ou \"pandémique\" (propagation mondiale)."
+      "r": 0,
+      "x": "Est endémique ce qui persiste de manière continue dans une région, comme une corruption endémique. L'extension mondiale relève du « pandémique ». En médecine, une maladie endémique sévit en permanence dans une région, comme le paludisme en Afrique de l'Ouest.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Choisissez la phrase qui emploie correctement \"pallier\" :",
+      "q": "Un « plaidoyer » est :",
       "o": [
-        "Il faut pallier à ce manque de ressources.",
-        "Il faut pallier contre ce manque de ressources.",
-        "Il faut pallier pour ce manque de ressources.",
-        "Il faut pallier ce manque de ressources."
-      ],
-      "r": 3,
-      "x": "\"Pallier\" est un verbe transitif direct qui se construit SANS préposition : \"pallier quelque chose\". L'erreur \"pallier à\" est une contamination par \"remédier à\". Règle mnémotechnique : \"pallier\" = \"compenser\" → \"compenser quelque chose\" (sans à). Piège : \"pallier à\" est la faute la plus répandue dans les copies de concours."
-    },
-    {
-      "q": "Un \"plaidoyer\" est :",
-      "o": [
-        "Un discours de condamnation sévère",
+        "Un discours d'accusation",
+        "Un discours de défense",
         "Un document comptable",
-        "Une liste de candidats",
-        "Un discours qui défend une cause ou une personne avec ardeur"
+        "Une liste de candidats"
       ],
-      "r": 3,
-      "x": "\"Plaidoyer\" (de \"plaider\") désigne un discours de défense d'une cause, d'une idée ou d'une personne. Exemple : \"Un plaidoyer pour la réforme de la justice.\" Piège : confondre avec \"réquisitoire\" (discours de condamnation — sens opposé) — les deux termes sont antonymiques."
+      "r": 1,
+      "x": "Le plaidoyer défend une cause ou une personne avec ardeur. Son contraire est le réquisitoire, discours d'accusation. Ne pas le confondre avec la « plaidoirie », exposé oral de l'avocat à l'audience.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Ces mesures ont semblé _______ l'opposition.\" Choisissez la forme correcte.",
+      "q": "Dans « Ces mesures ont semblé _______ l'opposition », la forme correcte est :",
       "o": [
+        "satisfaire",
         "satisfaites",
         "satisfait",
-        "satisfaisant",
-        "satisfaire"
+        "satisfaisant"
       ],
-      "r": 3,
-      "x": "\"Sembler + infinitif\" → le PP \"semblé\" est toujours invariable car il est suivi d'un infinitif attribut. L'infinitif \"satisfaire\" reste lui aussi invariable. Structure : \"ont semblé satisfaire\" → \"semblé\" invariable + infinitif. Piège : accorder \"semblé\" avec le sujet \"ces mesures\" (féminin pluriel) et écrire \"semblées\" — faute grave et fréquente."
+      "r": 0,
+      "x": "« Sembler » est suivi de l'infinitif, et son participe « semblé » reste toujours invariable. « Satisfaites » confond l'infinitif et le participe. Il en va de même pour « dû » suivi d'un infinitif : les efforts qu'il a dû faire.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Bien qu'il _______ tous les documents requis, sa candidature a été rejetée.\" Choisissez la forme correcte.",
+      "q": "Une institution qualifiée de « coquille vide » est une structure :",
       "o": [
-        "fourni",
+        "Récemment créée",
+        "Sans aucun personnel",
+        "Sans contenu ni moyens",
+        "Contestée en justice"
+      ],
+      "r": 2,
+      "x": "L'image désigne une structure qui existe formellement mais sans substance ni moyens réels. Elle n'implique pas forcément l'absence de personnel. On parle dans un sens voisin d'une « structure fantôme ».",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "La « mise en œuvre » d'une politique désigne :",
+      "o": [
+        "Sa conception théorique",
+        "Sa discussion publique",
+        "Son application concrète",
+        "Sa reformulation écrite"
+      ],
+      "r": 2,
+      "x": "Mettre en œuvre, c'est faire passer un principe dans les faits. Elle s'oppose à la simple conception théorique. Le verbe « œuvrer » signifie travailler à une cause : œuvrer pour la paix.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Dans « Bien qu'il _______ tous les documents, sa candidature a été rejetée », la forme correcte est :",
+      "o": [
         "avait fourni",
+        "ait fourni",
         "aura fourni",
-        "ait fourni"
+        "a fourni"
       ],
-      "r": 3,
-      "x": "Après \"bien que\" (conjonction de concession), on emploie le subjonctif. L'action de fournir est antérieure au rejet → subjonctif passé \"ait fourni\". Le plus-que-parfait \"avait fourni\" est incorrect car \"bien que\" exige le subjonctif, non l'indicatif. Piège : employer le plus-que-parfait qui marque l'antériorité mais pas le mode requis."
+      "r": 1,
+      "x": "« Bien que » exige le subjonctif ; l'action étant antérieure au rejet, on emploie le subjonctif passé. Le plus-que-parfait « avait fourni » marque l'antériorité mais pas le mode requis. Le piège est d'employer l'indicatif parce que le fait est réel : avec « bien que », le subjonctif s'impose même pour un fait certain.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Un \"euphémisme\" est :",
+      "q": "Un « euphémisme » est :",
       "o": [
-        "Une exagération volontaire pour produire un effet",
-        "Une comparaison entre deux éléments",
-        "Une répétition de mots pour insister",
-        "Une expression atténuée pour désigner une réalité déplaisante"
+        "Une expression atténuée",
+        "Une exagération voulue",
+        "Une comparaison imagée",
+        "Une répétition insistante"
       ],
-      "r": 3,
-      "x": "L'euphémisme remplace une expression trop directe ou choquante par une formulation plus douce. Exemple : \"il nous a quittés\" pour \"il est mort\". Piège : confondre avec \"hyperbole\" (exagération) ou \"litote\" (dire moins pour suggérer plus — proche mais différent)."
+      "r": 0,
+      "x": "L'euphémisme adoucit une réalité déplaisante : « il nous a quittés » pour « il est mort ». L'exagération voulue correspond à l'hyperbole. L'euphémisme est fréquent dans la langue administrative : « demandeur d'emploi » pour « chômeur ».",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Ils se sont _______ à cette tâche ingrate.\" Choisissez la forme correcte du PP \"astreindre\".",
+      "q": "Dans « Ils se sont _______ à cette tâche ingrate », la forme correcte est :",
       "o": [
-        "astreint",
         "astreints",
+        "astreint",
         "astreintes",
         "astreinte"
       ],
       "r": 0,
-      "x": "\"S'astreindre à\" : le verbe \"astreindre à\" est transitif indirect (COI). Le pronom \"se\" est COI, non COD → le PP ne s'accorde pas avec le sujet. \"Ils se sont astreint\" → PP invariable. Piège : accorder avec le sujet \"ils\" (masculin pluriel) et écrire \"astreints\" — faute fréquente car la règle est méconnue."
+      "x": "On dit « astreindre quelqu'un à » : le pronom « se » est COD et le participe s'accorde avec le sujet masculin pluriel. La forme invariable « astreint » est une erreur fréquente. Le nom correspondant est « astreinte », qui désigne en droit une pénalité par jour de retard.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Nous avons simplifié la procédure pour que les candidats _______ déposer leurs dossiers facilement.\" Choisissez la forme correcte.",
+      "q": "Dans « Nous avons simplifié la procédure pour que les candidats _______ déposer facilement », la forme correcte est :",
       "o": [
-        "puissent",
-        "pourront",
         "peuvent",
+        "pourront",
+        "puissent",
         "pourraient"
       ],
-      "r": 0,
-      "x": "\"Pour que\" est une conjonction de but qui exige le subjonctif. \"Puissent\" est le subjonctif présent de \"pouvoir\" (3e personne du pluriel). \"Peuvent\" (indicatif), \"pourront\" (futur) et \"pourraient\" (conditionnel) sont incorrects après \"pour que\". Piège : employer l'indicatif présent \"peuvent\" par analogie avec d'autres conjonctions."
+      "r": 2,
+      "x": "« Pour que » exprime le but et exige le subjonctif : « puissent ». L'indicatif « peuvent » est une faute fréquente. Le même subjonctif s'emploie après « afin que » et « de sorte que » exprimant le but.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Un \"sophisme\" est :",
+      "q": "Un « sophisme » est :",
       "o": [
-        "Un argument parfaitement logique",
-        "Une démonstration mathématique",
-        "Un proverbe populaire",
-        "Un raisonnement qui semble valide mais qui est en réalité faux ou trompeur"
+        "Un raisonnement rigoureux",
+        "Un raisonnement trompeur",
+        "Une démonstration chiffrée",
+        "Un proverbe populaire"
+      ],
+      "r": 1,
+      "x": "Le sophisme a l'apparence de la logique mais cache un vice, souvent pour convaincre malhonnêtement. Ne pas le confondre avec le « syllogisme », raisonnement déductif en trois propositions, qui peut être valide ou non. Le sophisme se distingue du paralogisme, erreur de raisonnement commise de bonne foi.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "La construction concessive correcte est :",
+      "o": [
+        "Quoiqu'il est fatigué",
+        "Bien qu'il est fatigué",
+        "Malgré qu'il est fatigué",
+        "Bien qu'il soit fatigué"
       ],
       "r": 3,
-      "x": "Le sophisme a l'apparence de la logique mais contient un vice caché, souvent utilisé pour convaincre malhonnêtement. À distinguer du \"paralogisme\" (erreur involontaire). Piège : confondre avec \"syllogisme\" (raisonnement déductif correct) — ressemblance phonique trompeuse."
+      "x": "« Bien que » et « quoique » se construisent avec le subjonctif : « quoiqu'il est fatigué » est fautif. « Malgré que » est à éviter dans une copie : on écrit « malgré sa fatigue ». « Malgré que » n'est admis que dans la tournure littéraire « malgré que j'en aie » (malgré moi).",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Choisissez la phrase correcte :",
-      "o": [
-        "Malgré qu'il soit fatigué, il continue à travailler.",
-        "Malgré sa fatigue mais il continue à travailler.",
-        "Bien que fatigué mais il continue à travailler.",
-        "Bien qu'il soit fatigué, il continue à travailler."
-      ],
-      "r": 3,
-      "x": "\"Bien que + subjonctif\" est la construction concessive correcte. \"Malgré que + subjonctif\" est critiqué et fautif dans la langue soutenue (admis seulement dans \"malgré qu'il en ait\", expression figée). On dit \"malgré sa fatigue\" (+ nom) OU \"bien qu'il soit fatigué\" (+ subjonctif). Piège : \"malgré que\" est répandu à l'oral mais inacceptable en concours."
-    },
-    {
-      "q": "\"Ostensible\" signifie :",
+      "q": "L'adjectif « ostensible » qualifie ce qui est :",
       "o": [
         "Discret et voilé",
-        "Difficile à comprendre",
-        "Relatif à la possession d'un bien",
-        "Manifestement visible, qui est montré à dessein"
-      ],
-      "r": 3,
-      "x": "\"Ostensible\" (du latin \"ostendere\" = montrer) qualifie ce qui est volontairement apparent, montré avec intention pour être remarqué. Exemple : \"Un mépris ostensible.\" Piège : confondre avec \"ostentatoire\" (qui cherche à impressionner par un étalage de richesse) — \"ostensible\" est plus neutre."
-    },
-    {
-      "q": "\"Il faut _______ les insuffisances du système de recrutement.\" Choisissez la phrase correcte.",
-      "o": [
-        "palier",
-        "pallier à",
-        "pallier",
-        "palier à"
+        "Difficile à saisir",
+        "Montré à dessein",
+        "Relatif aux biens"
       ],
       "r": 2,
-      "x": "\"Pallier\" (verbe, deux \"l\") est transitif direct — sans \"à\". \"Palier\" (nom) désigne un niveau dans un escalier. \"Pallier les insuffisances\" est la construction correcte. Piège : orthographier \"pallier\" avec un seul \"l\" ou ajouter \"à\" — deux erreurs distinctes très fréquentes en concours."
+      "x": "Ostensible, du latin « ostendere » (montrer), qualifie ce qu'on laisse voir volontairement. « Ostentatoire » ajoute l'idée d'étalage pour impressionner. Un mépris ostensible est ainsi un mépris affiché volontairement.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "La distinction entre \"catégorique\" et \"dogmatique\" :",
+      "q": "Dans « Il ne reste _______ de temps : à peine quelques minutes », l'adverbe correct est :",
       "o": [
-        "\"Catégorique\" = affirmatif et sans réserve ; \"dogmatique\" = qui impose ses opinions comme des vérités absolues",
-        "Ce sont des synonymes parfaits",
-        "\"Dogmatique\" est plus modéré que \"catégorique\"",
-        "\"Catégorique\" s'emploie uniquement en logique formelle"
+        "plus",
+        "jamais",
+        "guère",
+        "point"
+      ],
+      "r": 2,
+      "x": "« Ne… guère » signifie « pas beaucoup », ce qui correspond à « à peine quelques minutes ». « Ne… plus » indiquerait qu'il ne reste aucun temps. « Ne… guère » appartient au registre soutenu et convient bien dans une copie.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Dans « Cette décision est une bombe », le mot « bombe » est employé :",
+      "o": [
+        "Au sens figuré",
+        "Au sens propre",
+        "Au sens technique",
+        "Au sens juridique"
       ],
       "r": 0,
-      "x": "\"Catégorique\" qualifie ce qui est affirmé de façon nette, sans ambiguïté (\"un refus catégorique\"). \"Dogmatique\" implique une attitude qui impose ses vues comme des vérités indiscutables, sans accepter la contradiction (connotation péjorative). Piège : les employer indifféremment en perdant la nuance."
+      "x": "Le mot « bombe » est employé au sens figuré pour désigner une décision qui provoque un choc, une surprise ou de fortes réactions. Le sens est transféré de l'engin explosif vers les conséquences inattendues et spectaculaires de la décision.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Non seulement il a travaillé dur, _______ il a réussi brillamment.\" Choisissez la bonne combinaison.",
+      "q": "La phrase correcte est :",
       "o": [
-        "mais aussi",
+        "Il faut pallier aux insuffisances.",
+        "Il faut pallier les insuffisances.",
+        "Il faut palier les insuffisances.",
+        "Il faut palier aux insuffisances."
+      ],
+      "r": 1,
+      "x": "« Pallier » s'écrit avec deux « l » et se construit sans préposition : on pallie un manque. « Pallier à » est une contamination de « remédier à ». L'Académie française rappelle que « pallier » est transitif direct, même si « pallier à » est très répandu.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Dans « Non seulement il a travaillé dur, _______ il a réussi brillamment », la forme correcte est :",
+      "o": [
+        "et encore",
+        "donc aussi",
         "mais encore",
-        "et",
-        "A et B sont corrects"
+        "ou bien"
       ],
-      "r": 3,
-      "x": "La corrélation \"non seulement...mais encore\" et \"non seulement...mais aussi\" sont toutes deux correctes et équivalentes. Elles introduisent un deuxième élément qui s'ajoute et surpasse le premier. Piège : croire que seule l'une des deux formes est correcte et rejeter l'autre."
+      "r": 2,
+      "x": "« Non seulement » appelle « mais encore » ou « mais aussi » pour introduire un élément qui renchérit. « Et encore » ou « donc aussi » brisent la corrélation. On peut aussi écrire « non seulement…, mais aussi » ou « non seulement…, mais même ».",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Un \"réquisitoire\" est :",
+      "q": "Un « réquisitoire » est :",
       "o": [
+        "Un discours d'accusation",
         "Un discours d'éloge",
-        "Un document d'appel à candidatures",
-        "Un texte de présentation officielle",
-        "Un exposé qui condamne ou critique sévèrement"
+        "Un appel à candidatures",
+        "Un texte de présentation"
       ],
-      "r": 3,
-      "x": "\"Réquisitoire\" (terme judiciaire) désigne les conclusions d'un procureur. Par extension, tout discours qui critique sévèrement. Exemple : \"Son discours était un véritable réquisitoire contre la corruption.\" Piège : confondre avec \"plaidoirie\" (discours de défense — sens opposé) ou \"réquisition\"."
+      "r": 0,
+      "x": "Le réquisitoire désigne les réquisitions du ministère public et, par extension, toute critique sévère. Il s'oppose à la plaidoirie, discours de défense. Le verbe correspondant est « requérir » : le procureur requiert une peine.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"_______ agents ont refusé de signer le procès-verbal.\" Choisissez le bon déterminant.",
+      "q": "Dans « _______ agents ont refusé de signer le procès-verbal », la forme correcte est :",
       "o": [
+        "Certains",
         "Certain",
         "Certaine",
-        "Certains",
         "Certaines"
       ],
-      "r": 2,
-      "x": "\"Certain\" adjectif indéfini (= quelques) s'accorde avec le nom. \"Agents\" est masculin pluriel → \"Certains agents\". Piège : laisser invariable au masculin singulier par analogie avec \"c'est certain\" (attribut invariable)."
+      "r": 0,
+      "x": "« Certain » déterminant indéfini s'accorde avec le nom : « agents » est masculin pluriel. « Certaines » ne conviendrait qu'à un nom féminin. Placé après le nom, « certain » est adjectif et signifie « sûr » : des progrès certains.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Subreptice\" qualifie ce qui est :",
+      "q": "L'adjectif « subreptice » qualifie ce qui est :",
       "o": [
         "Excessivement rapide",
-        "Officiel et approuvé",
-        "Particulièrement bruyant",
-        "Fait en cachette, de façon dissimulée"
-      ],
-      "r": 3,
-      "x": "\"Subreptice\" (du latin \"subrepere\" = se glisser sous) désigne ce qui est fait à la dérobée, furtivement, de manière clandestine. Exemple : \"Une modification subreptice du texte de loi.\" Piège : confondre avec \"soudain\" (qui arrive brusquement) — \"subreptice\" insiste sur le caractère caché, pas sur la vitesse."
-    },
-    {
-      "q": "\"Elles se sont _______ compte de leurs erreurs.\" Choisissez la forme correcte.",
-      "o": [
-        "rendu",
-        "rendues",
-        "rendus",
-        "rendue"
-      ],
-      "r": 0,
-      "x": "\"Se rendre compte\" est une locution figée dans laquelle \"compte\" est COD du verbe \"rendre\". Le pronom \"se\" est COI (se rendre = rendre à soi). Le COD \"compte\" étant placé après le verbe, il n'y a pas d'accord. \"Se sont rendu compte\" → \"rendu\" invariable. Piège : accorder avec le sujet féminin pluriel \"elles\" → \"rendues\" — faute très fréquente."
-    },
-    {
-      "q": "\"Quand bien même tu _______ travailler davantage, cela ne changerait pas le résultat.\" Choisissez la forme correcte.",
-      "o": [
-        "travailles",
-        "travaillas",
-        "travaillerais",
-        "aurais travaillé"
+        "Officiellement approuvé",
+        "Fait en cachette",
+        "Particulièrement bruyant"
       ],
       "r": 2,
-      "x": "\"Quand bien même\" est une locution concessive qui se construit avec le conditionnel présent ou passé. \"Quand bien même tu travaillerais davantage\" = même si tu travaillais plus. Piège : employer le subjonctif ou l'indicatif après \"quand bien même\" — seul le conditionnel est correct avec cette locution."
+      "x": "Subreptice, du latin « subrepere » (se glisser sous), qualifie ce qui se fait furtivement. Il insiste sur la dissimulation, non sur la rapidité. L'adverbe correspondant est « subrepticement » : il est sorti subrepticement.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"_______ solution serait préférable.\" Choisissez la forme correcte de \"tout autre\".",
+      "q": "Dans « Elles se sont _______ compte de leurs erreurs », la forme correcte est :",
       "o": [
-        "Toute autre",
+        "rendues",
+        "rendus",
+        "rendue",
+        "rendu"
+      ],
+      "r": 3,
+      "x": "Dans « se rendre compte », le COD est « compte », placé après le verbe : le participe reste invariable. « Rendues » est une faute très répandue. On écrit de même « elles se sont donné du mal », où le COD « du mal » est placé après.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Dans « Quand bien même tu _______ davantage, le résultat ne changerait pas », la forme correcte est :",
+      "o": [
+        "travailles",
+        "travaillais",
+        "travaillerais",
+        "travailleras"
+      ],
+      "r": 2,
+      "x": "« Quand bien même » se construit avec le conditionnel : il signifie « même si tu travaillais ». L'imparfait « travaillais » ne s'emploie qu'après « même si ». La principale est elle aussi au conditionnel : le résultat ne changerait pas.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Au sens de « n'importe quelle autre », dans « _______ solution serait préférable », la forme correcte est :",
+      "o": [
+        "Tout autre",
         "Toutes autres",
         "Tous autres",
-        "Tout autre"
+        "Toute autre"
       ],
       "r": 3,
-      "x": "\"Tout autre\" = \"n'importe quel autre\" → \"tout\" est adverbe et reste invariable. \"Toute autre solution\" signifie \"même une autre solution\" (sens légèrement différent). Dans le sens \"n'importe quelle autre\" → \"Tout autre solution\" (tout invariable). Piège : toujours accorder \"tout\" avec le nom féminin qui suit."
+      "x": "Au sens de « n'importe quel autre », « tout » est déterminant et s'accorde : « toute autre solution ». Il reste invariable quand il signifie « complètement » : « une tout autre solution ». Pour vérifier, on remplace par « complètement » : si le sens est conservé, « tout » est adverbe et reste invariable.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "La nuance entre \"concis\" et \"succinct\" :",
+      "q": "Dans « Il parle à ses agents _______ étaient incapables de comprendre », la forme correcte est :",
       "o": [
-        "Ils sont parfaitement synonymes sans nuance",
-        "\"Succinct\" est plus précis que \"concis\"",
-        "\"Concis\" s'emploie uniquement à l'oral",
-        "\"Concis\" insiste sur la précision et la densité ; \"succinct\" sur la brièveté parfois au détriment du contenu"
+        "comme qu'ils",
+        "comme si qu'ils",
+        "comme ils",
+        "comme s'ils"
       ],
       "r": 3,
-      "x": "\"Concis\" (qui dit beaucoup en peu de mots, densité + précision) est positif. \"Succinct\" (bref) peut avoir une légère connotation d'insuffisance. Exemple : \"Un rapport concis est apprécié ; un rapport trop succinct peut sembler bâclé.\" Piège : les employer indifféremment, perdant la nuance en style administratif."
+      "x": "« Comme si » suivi de l'imparfait exprime une comparaison avec une situation imaginaire. « Comme qu'ils » et « comme si qu'ils » sont des constructions fautives. « Comme si » peut aussi être suivi du plus-que-parfait : comme s'il n'avait rien entendu.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Il parle à ses agents _______ ils étaient incapables de comprendre.\" Choisissez la bonne construction.",
-      "o": [
-        "comme que",
-        "comme si que",
-        "comme",
-        "comme si"
-      ],
-      "r": 3,
-      "x": "\"Comme si + imparfait\" exprime une comparaison hypothétique avec quelque chose de contraire à la réalité. \"Il parle comme si ils étaient incapables\" = comparaison fictive. Seul \"comme si\" est correct devant un verbe conjugué à l'imparfait pour ce sens. Piège : employer simplement \"comme\" devant une proposition conjuguée."
-    },
-    {
-      "q": "La \"mansuétude\" désigne :",
+      "q": "La « mansuétude » désigne :",
       "o": [
         "La sévérité excessive",
-        "L'obstination dans ses opinions",
-        "La prudence dans les décisions",
-        "L'indulgence bienveillante, la douceur dans le traitement d'autrui"
+        "L'obstination têtue",
+        "La prudence extrême",
+        "L'indulgence bienveillante"
       ],
       "r": 3,
-      "x": "\"Mansuétude\" (du latin \"mansuetudo\" = douceur) désigne une disposition à traiter les autres avec indulgence et bienveillance. Exemple : \"Le juge a fait preuve de mansuétude à l'égard du prévenu.\" Piège : confondre avec \"magnanimité\" (proche mais implique une grandeur d'âme plus héroïque)."
+      "x": "La mansuétude est une disposition à traiter autrui avec douceur et indulgence. Elle est le contraire de la sévérité. Le mot appartient au registre soutenu : faire preuve de mansuétude.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Choisissez la phrase qui distingue correctement \"en raison de\" et \"à cause de\" :",
-      "o": [
-        "Les deux locutions sont parfaitement interchangeables",
-        "\"À cause de\" est plus précis que \"en raison de\"",
-        "\"En raison de\" introduit uniquement des conséquences",
-        "\"En raison de\" est neutre et soutenu ; \"à cause de\" peut avoir une connotation négative dans la langue administrative"
-      ],
-      "r": 3,
-      "x": "\"En raison de\" est neutre et préféré dans les documents officiels. \"À cause de\" est correct mais peut marquer une gêne ou un problème. Dans un texte officiel : \"En raison de travaux\" (neutre) vs \"À cause des travaux\" (désagrément marqué). Piège : les croire toujours interchangeables — la nuance de registre est réelle en concours."
-    },
-    {
-      "q": "Une \"dichotomie\" est :",
+      "q": "Une « dichotomie » est :",
       "o": [
         "Un accord entre deux parties",
         "Une répétition cyclique",
-        "Une unification de plusieurs éléments",
-        "Une division en deux parties opposées ou contrastées"
+        "Une division en deux opposés",
+        "Une fusion d'éléments"
       ],
-      "r": 3,
-      "x": "\"Dichotomie\" (du grec \"dicho\" = en deux + \"tomia\" = coupure) désigne la division d'un ensemble en deux parties opposées. Exemple : \"La dichotomie entre théorie et pratique dans la formation des fonctionnaires.\" Piège : confondre avec \"dualité\" (coexistence de deux éléments) — la dichotomie insiste sur l'opposition et la séparation nette."
+      "r": 2,
+      "x": "Dichotomie, du grec « coupure en deux », désigne la séparation nette entre deux termes opposés, comme théorie et pratique. Elle s'oppose à la fusion. On parle ainsi de la dichotomie entre ville et campagne pour une opposition tranchée.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"_______ important que chaque agent respecte les procédures.\" Choisissez la bonne structure.",
+      "q": "En langue soutenue, dans « _______ important que chaque agent respecte les procédures », la tournure correcte est :",
       "o": [
         "C'est",
-        "Ce n'est pas",
         "Ce qui est",
+        "Cela est",
         "Il est"
       ],
       "r": 3,
-      "x": "Avant un adjectif suivi d'une complétive, on emploie \"il est\" (impersonnel neutre). \"C'est\" s'emploie devant un nom ou en langue familière. \"Il est important que + subjonctif\" est la structure correcte dans la langue soutenue. Piège : employer \"c'est\" dans tous les contextes — déconseillé dans les écrits de concours."
+      "x": "Devant un adjectif suivi d'une complétive, la langue soutenue emploie l'impersonnel « il est ». « C'est important que » relève du registre familier. On dit de même « il est nécessaire que » ou « il est essentiel que », suivis du subjonctif.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Comminatoire\" qualifie ce qui est :",
+      "q": "Un problème « récurrent » est un problème :",
       "o": [
-        "Encourageant et motivant",
-        "Amical et conciliant",
-        "Technique et spécialisé",
-        "Qui menace, qui contient une menace implicite"
+        "Qui n'arrive qu'une fois",
+        "Qui vient d'arriver",
+        "Qui revient souvent",
+        "Qu'on ne peut résoudre"
+      ],
+      "r": 2,
+      "x": "Récurrent, du latin « recurrere » (revenir), qualifie ce qui se reproduit régulièrement. Ne pas le confondre avec « récent ». Le nom correspondant est « récurrence ».",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Dans « Il a quitté la salle sans que personne _______ rien », la forme correcte est :",
+      "o": [
+        "remarquait",
+        "avait remarqué",
+        "remarquera",
+        "remarque"
       ],
       "r": 3,
-      "x": "\"Comminatoire\" (du latin \"comminari\" = menacer) qualifie un discours, un ton ou une mesure qui implique une menace. Exemple : \"Un ton comminatoire.\" Proche de \"menaçant\" mais plus soutenu. Piège : confondre avec \"commémoratoire\" (relatif à une commémoration) — ressemblance phonique trompeuse."
+      "x": "« Sans que » exige le subjonctif : « remarque ». L'imparfait de l'indicatif « remarquait » est sanctionné en concours. Après « sans que », « personne » et « rien » s'emploient sans « ne », car l'idée négative est déjà exprimée.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"De _______ candidatures ont été reçues avant la date limite.\" Choisissez la bonne forme.",
+      "q": "Un ton « comminatoire » est un ton :",
       "o": [
-        "nombreux",
-        "nombreuse",
-        "nombre",
-        "nombreuses"
+        "Encourageant",
+        "Conciliant",
+        "Menaçant",
+        "Technique"
       ],
-      "r": 3,
-      "x": "\"Candidatures\" est féminin pluriel → l'adjectif s'accorde en féminin pluriel : \"De nombreuses candidatures\". \"Nombreux\" est le masculin pluriel. Piège : employer \"nombreux\" par défaut sans vérifier le genre du nom — erreur fréquente sous la pression du temps."
+      "r": 2,
+      "x": "Comminatoire, du latin « comminari » (menacer), qualifie un ton ou une mesure qui contient une menace. « Conciliant » en est presque le contraire. En droit, une clause comminatoire prévoit une sanction pour obtenir l'exécution d'une obligation.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Partez avant qu'il _______ trop tard.\" Choisissez la forme correcte.",
+      "q": "Dans « _______ candidatures ont été reçues », la forme correcte est :",
+      "o": [
+        "De nombreuses",
+        "Des nombreuses",
+        "De nombreux",
+        "Des nombreux"
+      ],
+      "r": 0,
+      "x": "En règle générale, devant un adjectif qualificatif placé avant un nom pluriel, « des » devient « de » : de nombreuses candidatures, de grands projets, de nouveaux agents. Certaines expressions lexicalisées conservent cependant « des », notamment « des jeunes gens » et « des petits pois ».",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Dans « Partez avant qu'il _______ trop tard », la forme correcte est :",
       "o": [
         "est",
-        "soit",
-        "ne soit",
-        "B et C sont corrects"
+        "sera",
+        "était",
+        "soit"
       ],
       "r": 3,
-      "x": "\"Avant que\" exige le subjonctif. \"Soit\" (subjonctif présent) est correct. Le \"ne\" explétif (non négatif) est facultatif mais recommandé dans la langue soutenue : \"avant qu'il ne soit\" est admis. Les deux formes sont acceptées. Piège : rejeter la forme avec \"ne\" explétif en la considérant comme une négation, alors que ce \"ne\" ne nie rien."
+      "x": "« Avant que » exige le subjonctif ; la langue soutenue admet aussi un « ne » explétif : « avant qu'il ne soit trop tard ». L'indicatif « est » est fautif. « Après que », au contraire, se construit avec l'indicatif : après qu'il est parti.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Redondant\" qualifie :",
+      "q": "Un terme « redondant » est un terme :",
       "o": [
-        "Ce qui est essentiel et non répétable",
-        "Ce qui est difficile à comprendre",
-        "Ce qui est particulièrement précis",
-        "Ce qui est superflu par répétition, dit deux fois inutilement"
+        "Essentiel et unique",
+        "Difficile à saisir",
+        "Précis et rigoureux",
+        "Répété inutilement"
       ],
       "r": 3,
-      "x": "\"Redondant\" désigne ce qui est répété inutilement, en surplus du nécessaire. Proche de \"pléonastique\" mais plus large. Piège : confondre avec \"itératif\" (répétition normale et fonctionnelle) — \"redondant\" implique l'inutilité de la répétition."
+      "x": "Est redondant ce qui est dit deux fois sans nécessité. « Itératif » désigne une répétition normale, sans idée d'inutilité. Le nom correspondant est « redondance ».",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Choisissez la phrase correcte :",
+      "q": "La phrase correcte est :",
       "o": [
-        "Malgré de les difficultés, le projet avance.",
-        "En dépit à des difficultés, le projet avance.",
-        "Malgré à les difficultés, le projet avance.",
+        "En dépit les difficultés, le projet avance.",
+        "En dépit aux difficultés, le projet avance.",
+        "Malgré aux difficultés, le projet avance.",
         "En dépit des difficultés, le projet avance."
       ],
       "r": 3,
-      "x": "\"En dépit de + GN\" et \"malgré + GN\" (sans préposition supplémentaire) sont les deux locutions concessives correctes. \"Malgré les difficultés\" (pas \"malgré de les\"). Piège : ajouter une préposition après \"malgré\" ou employer \"en dépit à\" — fautes de construction fréquentes."
+      "x": "On dit « en dépit de » ou « malgré » suivi directement du nom. « En dépit les » oublie la préposition « de » et « en dépit à » la remplace à tort. « En dépit de » appartient au registre soutenu, « malgré » au registre courant.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Le \"prosélytisme\" désigne :",
+      "q": "Le « prosélytisme » désigne :",
       "o": [
-        "La tendance à garder ses convictions pour soi",
-        "Le refus de tout engagement",
-        "L'étude des religions comparées",
-        "Le zèle à convertir les autres à ses opinions ou sa foi"
+        "Le refus de s'engager",
+        "L'étude des religions",
+        "Le zèle à convertir autrui",
+        "La discrétion religieuse"
       ],
-      "r": 3,
-      "x": "\"Prosélytisme\" (du grec \"proselutos\" = nouveau converti) désigne l'ardeur à répandre ses convictions pour recruter de nouveaux adeptes. Exemple : \"Faire du prosélytisme en milieu scolaire est interdit.\" Piège : confondre avec \"prosélyte\" (le converti lui-même) ou \"syncrétisme\" (fusion de plusieurs croyances)."
+      "r": 2,
+      "x": "Le prosélytisme est l'ardeur à rallier de nouveaux adeptes à sa foi ou à ses idées. Le « syncrétisme », lui, désigne la fusion de plusieurs croyances. Le prosélyte est la personne nouvellement convertie et pleine de zèle.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"On a tous été _______ par cette décision.\" Choisissez la forme correcte.",
+      "q": "Pour un groupe mixte, dans « On a tous été _______ par cette décision », la forme correcte est :",
       "o": [
         "surprise",
         "surprises",
-        "surprit",
-        "surpris"
+        "surpris",
+        "surprit"
       ],
-      "r": 3,
-      "x": "Quand \"on\" désigne un groupe mixte ou indéterminé, le PP s'accorde au masculin pluriel dans la langue standard. \"Surpris\" (masculin pluriel) est la forme de référence. Si \"on\" désigne un groupe explicitement féminin, \"surprises\" est acceptable. Sans précision de genre, le masculin pluriel est la norme des concours. Piège : laisser invariable ou employer \"surprit\" (passé simple, incorrect ici)."
+      "r": 2,
+      "x": "Quand « on » désigne un groupe mixte, le participe se met au masculin pluriel : « surpris ». « Surprit » est un passé simple, sans rapport avec cette construction. Si « on » désigne une seule femme, le participe se met au féminin singulier : on est surprise.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Un \"paradigme\" est :",
+      "q": "Un « paradigme » est :",
       "o": [
-        "Un exemple singulier et exceptionnel",
-        "Une contradiction interne à un système",
-        "Un argument circulaire",
-        "Un modèle de référence, un cadre conceptuel dominant dans un domaine"
+        "Un exemple exceptionnel",
+        "Une contradiction interne",
+        "Un modèle de référence",
+        "Un argument circulaire"
       ],
-      "r": 3,
-      "x": "\"Paradigme\" (du grec \"paradeigma\" = modèle) désigne un ensemble de représentations et de méthodes qui constituent un modèle dominant dans une discipline. Exemple : \"Le paradigme de la bonne gouvernance dans l'administration africaine.\" Piège : confondre avec \"paradoxe\" (contradiction apparente) — ressemblance phonique trompeuse."
+      "r": 2,
+      "x": "Le paradigme est un cadre de pensée dominant dans une discipline, susceptible d'être remplacé. Ne pas le confondre avec le « paradoxe », contradiction apparente. En grammaire, le paradigme est l'ensemble des formes d'un mot, comme la conjugaison d'un verbe.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Elles se sont _______ des droits qui ne leur appartenaient pas.\" Choisissez la forme correcte du PP \"arroger\".",
+      "q": "Dans « Elles se sont _______ des droits qui ne leur appartenaient pas », la forme correcte est :",
       "o": [
+        "arrogées",
         "arrogé",
         "arrogés",
-        "arrogée",
-        "arrogées"
+        "arrogée"
       ],
-      "r": 0,
-      "x": "\"S'arroger\" = s'attribuer indûment. Le COD \"des droits\" est placé APRÈS le verbe → pas d'accord avec le sujet. \"Arrogé\" est invariable. Piège : accorder avec le sujet féminin pluriel \"elles\" et écrire \"arrogées\" — faute classique de PP pronominal."
+      "r": 1,
+      "x": "Dans « s'arroger », le COD est « des droits », placé après le verbe : le participe reste invariable. On écrirait en revanche « les droits qu'elles se sont arrogés ». Le pronom « se » n'est pas COD ici, car « s'arroger » signifie « attribuer à soi ».",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Un \"aphorisme\" est :",
+      "q": "Un « aphorisme » est :",
       "o": [
-        "Un long développement argumentatif",
-        "Une figure de style qui exagère",
-        "Une question rhétorique",
-        "Une formule brève et frappante exprimant une vérité générale"
+        "Un long développement",
+        "Une figure d'exagération",
+        "Une maxime brève",
+        "Une question rhétorique"
       ],
-      "r": 3,
-      "x": "\"Aphorisme\" (du grec \"aphorismos\" = définition brève) désigne une pensée, une maxime brève qui résume une vérité générale de façon mémorable. Exemple : \"Gouverner, c'est prévoir.\" Piège : confondre avec \"apologie\" (discours de défense) ou \"euphémisme\" — ressemblances phoniques superficielles."
+      "r": 2,
+      "x": "L'aphorisme résume une vérité générale en une formule frappante : « Gouverner, c'est prévoir ». Il est l'inverse d'un long développement. Les « Maximes » de La Rochefoucauld sont un recueil célèbre de formules de ce type.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Je crains qu'il _______ trop tard pour agir.\" Choisissez la forme correcte.",
+      "q": "En langue soutenue, dans « Je crains qu'il _______ trop tard », la forme correcte est :",
       "o": [
         "n'est",
-        "soit",
+        "ne sera",
         "ne soit",
-        "B et C sont corrects"
+        "n'était"
       ],
-      "r": 3,
-      "x": "Après \"craindre que\", le \"ne\" explétif (non négatif) est facultatif dans la subordonnée au subjonctif. \"Je crains qu'il soit trop tard\" et \"Je crains qu'il ne soit trop tard\" sont tous deux corrects. Le \"ne\" explétif est caractéristique de la langue soutenue attendue en concours. Piège : croire que le \"ne\" explétif rend la phrase négative."
+      "r": 2,
+      "x": "« Craindre que » appelle le subjonctif, souvent précédé d'un « ne » explétif qui n'a aucune valeur négative. « N'est » emploie à tort l'indicatif. Après « je ne crains pas que », le « ne » explétif disparaît : je ne crains pas qu'il soit trop tard.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Complaisant\" au sens péjoratif désigne :",
+      "q": "Au sens péjoratif, un inspecteur « complaisant » est un inspecteur :",
       "o": [
-        "Quelqu'un d'agréable et de serviable",
-        "Quelqu'un de joyeux",
-        "Quelqu'un de très travailleur",
-        "Quelqu'un qui approuve tout par faiblesse ou intérêt, sans esprit critique"
+        "Qui ferme les yeux",
+        "Agréable et serviable",
+        "Joyeux et souriant",
+        "Très travailleur"
       ],
-      "r": 3,
-      "x": "\"Complaisant\" a deux acceptions : positive (obligeant, serviable) et péjorative (qui cède par faiblesse ou flatterie, dépourvu d'esprit critique). Exemple péjoratif : \"Un inspecteur complaisant qui ferme les yeux sur les irrégularités.\" Piège : ne connaître que le sens positif et manquer la nuance péjorative."
+      "r": 0,
+      "x": "Au sens péjoratif, le complaisant cède par faiblesse ou par intérêt et renonce à tout esprit critique. « Agréable et serviable » correspond au sens positif, non à celui demandé. Le nom « complaisance » a les deux sens : un certificat de complaisance est délivré sans contrôle réel.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Je me souviens _______ il m'a parlé.\" Choisissez la bonne combinaison.",
+      "q": "Dans « Je me souviens _______ il m'a parlé », la forme correcte est :",
       "o": [
         "de ce que",
-        "de ce de quoi",
         "ce dont",
-        "de ce dont"
-      ],
-      "r": 3,
-      "x": "\"Se souvenir de\" + \"parler de quelque chose\" → \"ce dont\" combine l'antécédent indéfini \"ce\" et le relatif \"dont\" (remplaçant \"de quelque chose\"). \"Je me souviens de ce dont il m'a parlé.\" Piège : employer \"ce que\" après un verbe construit avec \"de\" — confusion entre COD et COI."
-    },
-    {
-      "q": "Un \"caveat\" (terme latin employé en français courant) désigne :",
-      "o": [
-        "Une approbation sans réserve",
-        "Un document officiel",
-        "Un accord verbal",
-        "Une mise en garde, une réserve formulée expressément"
-      ],
-      "r": 3,
-      "x": "\"Caveat\" (= qu'il prenne garde) est employé dans la langue juridique et intellectuelle pour désigner une mise en garde avant ou pendant un exposé. Exemple : \"Avec ce caveat important : les chiffres datent de 2023.\" Piège : le méconnaître totalement ou le confondre avec un type de contrat."
-    },
-    {
-      "q": "\"Bien qu'il _______ compétent, il n'a pas été retenu.\" Choisissez la forme correcte.",
-      "o": [
-        "était",
-        "serait",
-        "soit",
-        "Les réponses A et C sont acceptées selon le niveau de langue"
+        "de ce dont",
+        "dont"
       ],
       "r": 2,
-      "x": "\"Bien que\" exige le subjonctif (\"soit\") dans la langue standard et soutenue. L'indicatif (\"était\") après \"bien que\" est répandu à l'oral mais constitue une faute en langue écrite de concours. Le conditionnel après \"bien que\" est toujours fautif. En concours BAC+, seul le subjonctif est accepté. Piège : employer l'indicatif par habitude orale."
+      "x": "« Se souvenir de » impose « de ce », et « parler de » impose le relatif « dont ». « De ce que » oublie la préposition exigée par « parler ». On écrit de même « ce dont il s'agit ».",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "La \"dissidence\" désigne :",
+      "q": "Un « préalable » est :",
       "o": [
-        "L'accord total avec une autorité",
-        "La violence politique",
-        "Un système politique autoritaire",
-        "Le refus d'adhérer à une doctrine ou à une autorité établie, l'opposition"
-      ],
-      "r": 3,
-      "x": "\"Dissidence\" (du latin \"dissidere\" = être en désaccord) désigne la rupture avec une organisation, un parti ou une doctrine officielle. Exemple : \"Les voix de la dissidence dans ce régime.\" Piège : confondre avec \"résistance\" (qui peut impliquer une action active et violente) — la dissidence est d'abord une position idéologique."
-    },
-    {
-      "q": "Dans une note de service, laquelle de ces formulations est la plus appropriée ?",
-      "o": [
-        "\"Je vous dis de vous conformer à ces nouvelles dispositions dès maintenant.\"",
-        "\"Je vous conseille de respecter ces nouvelles règles si possible.\"",
-        "\"Merci de faire attention à ces nouvelles mesures.\"",
-        "\"Veuillez prendre bonne note des présentes dispositions et vous y conformer dans les meilleurs délais.\""
-      ],
-      "r": 3,
-      "x": "La note de service emploie un ton directif mais formel. A) est trop brusque. B) et C) emploient des formules de conseil ou de demande qui affaiblissent l'autorité de la note. D) emploie \"veuillez\" + \"prendre bonne note\" + \"dans les meilleurs délais\" — formules administratives standard. Piège : employer des formules trop directes ou trop hésitantes."
-    },
-    {
-      "q": "\"Ils se sont consultés les uns les autres.\" Cet accord est-il correct ?",
-      "o": [
-        "Non, il faut \"consulté\" car les verbes réciproques sont invariables",
-        "Non, \"les uns les autres\" bloque l'accord",
-        "Oui, car \"se\" est COD et \"ils\" est masculin pluriel",
-        "L'accord dépend du nombre de personnes concernées"
+        "Une conclusion provisoire à revoir",
+        "Un document annexe",
+        "Une condition à remplir d'abord",
+        "Une sanction différée"
       ],
       "r": 2,
-      "x": "\"Se consulter\" est un verbe pronominal réciproque. Le pronom \"se\" est COD (ils consultent les autres = ils se consultent) → le PP s'accorde avec ce COD identique au sujet. \"Ils se sont consultés\" → masculin pluriel. \"Les uns les autres\" précise la réciprocité sans modifier l'accord de base. Piège : croire que les verbes réciproques sont toujours invariables."
+      "x": "Le préalable est ce qui doit être fait ou obtenu avant autre chose : le dépôt du dossier est un préalable à l'inscription. La locution « au préalable » signifie « d'abord ». L'adverbe correspondant est « préalablement ».",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "La \"tautologie\" est :",
+      "q": "La « dissidence » désigne :",
       "o": [
-        "Une contradiction dans les termes",
-        "Une figure de style qui unit deux contraires",
-        "Une erreur de logique grossière",
-        "La répétition d'une même idée en termes différents, sans apporter d'information nouvelle"
+        "L'accord avec le pouvoir",
+        "La violence politique armée",
+        "Un régime autoritaire",
+        "Le refus d'une autorité établie"
       ],
       "r": 3,
-      "x": "La tautologie consiste à répéter la même idée en d'autres termes (\"un célibataire non marié\"). Peut être intentionnelle (rhétorique) ou involontaire (faute de style). À distinguer du \"pléonasme\" (redondance de mots). Piège : confondre avec \"oxymore\" (alliance de contraires : \"obscure clarté\")."
+      "x": "La dissidence est la rupture avec une doctrine ou une autorité officielle. C'est d'abord une position idéologique, non une action violente. Le dissident est la personne qui rompt avec le pouvoir ou la doctrine en place.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Elles se sont vu _______ leurs dossiers par la commission.\" Choisissez la forme correcte.",
+      "q": "Dans « Ils se sont _______ avant de décider », la forme correcte est :",
       "o": [
+        "consulté",
+        "consultées",
+        "consultée",
+        "consultés"
+      ],
+      "r": 3,
+      "x": "Dans « se consulter », réciproque, le pronom « se » est COD (ils consultent l'un l'autre) : le participe s'accorde. Il resterait invariable si « se » était complément indirect, comme dans « ils se sont parlé ». Il en va de même pour « se rencontrer » : ils se sont rencontrés.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Une « tautologie » est :",
+      "o": [
+        "Une contradiction interne",
+        "L'union de deux contraires",
+        "Une répétition sans apport",
+        "Une erreur de logique"
+      ],
+      "r": 2,
+      "x": "La tautologie répète la même idée en d'autres termes sans rien apprendre : « un célibataire non marié ». L'union de deux contraires est l'oxymore. La tautologie se distingue du pléonasme, qui répète inutilement une idée dans une même expression.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Dans « Elles se sont vu _______ leurs dossiers », la forme correcte est :",
+      "o": [
+        "rejeter",
         "rejetées",
         "rejetés",
-        "rejeté",
-        "rejeter"
+        "rejeté"
       ],
-      "r": 3,
-      "x": "Dans \"se voir + infinitif\", le PP \"vu\" est invariable car l'infinitif exprime l'action réelle et \"vu\" fonctionne comme semi-auxiliaire. L'infinitif \"rejeter\" reste à l'infinitif. Structure : se voir + infinitif → \"vu\" invariable + infinitif. Piège : accorder \"vu\" avec le sujet féminin pluriel et écrire \"vues rejetées\" — double erreur grave."
+      "r": 0,
+      "x": "Dans « se voir + infinitif », l'infinitif exprime l'action subie et « vu » reste invariable ici. « Rejetées » confond l'infinitif et le participe. Le participe s'accorderait si le sujet faisait l'action de l'infinitif : elles se sont vues partir.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "L'\"euphonie\" en linguistique désigne :",
+      "q": "L'« euphonie » désigne :",
       "o": [
-        "Le sens d'un mot dans son contexte",
-        "La répétition de consonnes semblables",
-        "L'étude des accents régionaux",
-        "L'harmonie des sons dans une langue ou une phrase"
+        "Le sens en contexte",
+        "La répétition des consonnes",
+        "L'étude des accents",
+        "L'harmonie des sons"
       ],
       "r": 3,
-      "x": "\"Euphonie\" (du grec \"eu\" = bien + \"phoné\" = son) désigne la combinaison de sons agréables à entendre. C'est pour des raisons euphoniques qu'on dit \"va-t-il\" (le \"t\" évite le hiatus) ou \"tout émues\" (invariable pour éviter \"toutes\" + voyelle). Piège : confondre avec \"euphémisme\" (atténuation du sens) — homophones partiels."
+      "x": "L'euphonie explique le « t » de « va-t-il », qui évite la rencontre de deux voyelles. La répétition de consonnes s'appelle l'allitération. Le contraire est la cacophonie, rencontre de sons désagréables.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Emploi du subjonctif imparfait littéraire : \"Bien qu'il _______ compétent, il ne fut pas retenu au concours.\"",
+      "q": "En style soutenu, dans « Bien qu'il _______ compétent, il ne fut pas retenu », la forme correcte est :",
       "o": [
         "était",
-        "soit",
-        "serait",
-        "fût"
+        "fût",
+        "fut",
+        "serait"
       ],
-      "r": 3,
-      "x": "Dans la langue littéraire soutenue, quand le verbe principal est au passé simple, la subordonnée au subjonctif emploie l'imparfait du subjonctif. \"Fut retenu\" (passé simple) → \"fût\" (subjonctif imparfait) dans la subordonnée. En langue courante, \"soit\" (subjonctif présent) est acceptable mais insuffisant en concours de niveau élevé. Piège : se contenter du subjonctif présent \"soit\"."
+      "r": 1,
+      "x": "Quand la principale est au passé simple, la langue soutenue emploie le subjonctif imparfait « fût », avec accent circonflexe. « Fut » sans accent est le passé simple de l'indicatif. Dans la langue courante, le subjonctif présent « soit » est admis même après un passé.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "L'\"hégémonie\" d'un État ou d'un groupe désigne :",
+      "q": "L'« hégémonie » d'un État désigne :",
       "o": [
+        "Sa domination sur les autres",
         "Sa faiblesse économique",
-        "Son alliance avec d'autres puissances",
-        "Son isolement politique",
-        "Sa domination prépondérante sur les autres"
+        "Son alliance militaire",
+        "Son isolement politique"
       ],
-      "r": 3,
-      "x": "\"Hégémonie\" (du grec \"hegemon\" = chef) désigne la domination politique, économique ou culturelle d'un État ou d'un groupe sur les autres. Exemple : \"L'hégémonie linguistique du français dans l'administration burkinabè.\" Piège : confondre avec \"souveraineté\" (pouvoir suprême d'un État sur lui-même — sens différent)."
+      "r": 0,
+      "x": "Hégémonie, du grec « hegemon » (chef), désigne la suprématie d'un État ou d'un groupe sur les autres. Elle diffère de la souveraineté, pouvoir d'un État sur lui-même. L'adjectif correspondant est « hégémonique ».",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"C'est elle qui a fait _______ les dossiers par ses agents.\" Choisissez la forme correcte.",
+      "q": "Dans « Les dossiers qu'elle a _______ vérifier sont prêts », la forme correcte est :",
       "o": [
-        "vérifiées",
-        "vérifiés",
-        "vérifiée",
-        "vérifier"
+        "faits",
+        "fait",
+        "faite",
+        "faites"
       ],
-      "r": 3,
-      "x": "Le PP \"fait\" suivi d'un infinitif est TOUJOURS invariable — règle absolue sans exception. \"Elle a fait vérifier les dossiers\" → \"fait\" invariable, quelle que soit la nature ou la position du COD. Piège fréquent et grave : accorder \"fait\" avec le COD (les dossiers qu'elle a fait vérifier → \"fait\" reste invariable)."
+      "r": 1,
+      "x": "Le participe « fait » suivi d'un infinitif est toujours invariable, même quand le COD est placé avant. Écrire « faits » est une faute grave. Les rectifications de 1990 rendent aussi « laissé » invariable devant un infinitif.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Alambiqué\" qualifie :",
+      "q": "Un raisonnement « alambiqué » est un raisonnement :",
       "o": [
-        "Un raisonnement simple et direct",
-        "Un argument solide et bien construit",
-        "Un texte ancien et difficile à lire",
-        "Un raisonnement trop compliqué et contourné, obscurci par des subtilités excessives"
+        "Simple et direct",
+        "Trop compliqué",
+        "Solide et construit",
+        "Ancien et illisible"
       ],
-      "r": 3,
-      "x": "\"Alambiqué\" (de \"alambic\", appareil de distillation) qualifie ce qui est excessivement compliqué, tortueux, comme un raisonnement \"distillé\" à l'excès. Exemple : \"Un style alambiqué nuit à la clarté administrative.\" Piège : confondre avec \"abstrus\" (obscur par profondeur) — \"alambiqué\" insiste sur la complication artificielle."
+      "r": 1,
+      "x": "Comme l'alambic qui distille, un raisonnement alambiqué est contourné par excès de subtilité. « Abstrus » désigne plutôt l'obscurité due à la profondeur. Le mot est péjoratif : il critique une pensée inutilement complexe.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Inepte\" qualifie :",
+      "q": "Une remarque « inepte » est une remarque :",
       "o": [
-        "Ce qui est particulièrement habile",
-        "Ce qui est incomplet",
-        "Ce qui est ancien et dépassé",
-        "Ce qui est absurde, sot, dépourvu de sens"
+        "Absurde",
+        "Habile",
+        "Incomplète",
+        "Dépassée"
       ],
-      "r": 3,
-      "x": "\"Inepte\" (du latin \"ineptus\" = déplacé, absurde) désigne ce qui est sot, stupide, dépourvu de bon sens. Exemple : \"Une remarque inepte.\" Le substantif \"ineptie\" désigne une sottise. Piège : confondre avec \"inapte\" (incapable physiquement ou légalement) — sens différent malgré la ressemblance."
+      "r": 0,
+      "x": "Inepte qualifie ce qui est sot, dépourvu de sens ; le nom correspondant est « ineptie ». Ne pas le confondre avec « inapte », incapable. Le mot vient du latin « ineptus », qui signifie « qui ne convient pas ».",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Conservez ces documents _______ : ne les modifiez pas.\" Choisissez la bonne forme de \"tel quel\".",
+      "q": "Dans « Conservez ces documents _______ », la forme correcte est :",
       "o": [
         "tel quel",
         "telle quelle",
-        "tels que",
-        "tels quels"
+        "tels quels",
+        "tels quel"
       ],
-      "r": 3,
-      "x": "\"Tel quel\" (= dans l'état où ils sont) s'accorde en genre et en nombre avec le nom. \"Ces documents\" = masculin pluriel → \"tels quels\". Règle : les deux éléments (tel + quel) s'accordent. Piège : laisser invariable en croyant que c'est une locution figée — les deux éléments s'accordent tous deux."
+      "r": 2,
+      "x": "« Tel quel » s'accorde entièrement avec le nom : « ces documents » donne « tels quels ». « Tels quel » n'accorde qu'un seul des deux éléments. On confond souvent « tel quel » avec « tel que », qui introduit une comparaison ou un exemple.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Dans un raisonnement, les \"prémisses\" désignent :",
+      "q": "Dans un raisonnement, les « prémisses » désignent :",
       "o": [
         "Les conclusions finales",
-        "Les exemples illustratifs",
-        "Les hypothèses alternatives",
-        "Les propositions initiales à partir desquelles on tire une conclusion"
-      ],
-      "r": 3,
-      "x": "En logique, les \"prémisses\" (du latin \"praemissa\" = posé avant) sont les propositions de départ d'un raisonnement déductif à partir desquelles on tire une conclusion. Piège : confondre avec \"prémices\" (premiers fruits, premières manifestations) — homophones qui s'écrivent différemment."
-    },
-    {
-      "q": "\"Il a accepté le poste, _______ peu qualifié pour ce travail.\" Choisissez la bonne construction.",
-      "o": [
-        "quoique étant",
-        "bien qu'étant",
-        "quoique",
-        "quoiqu'étant"
-      ],
-      "r": 3,
-      "x": "\"Quoique + participe présent\" (sans sujet exprimé) est une construction elliptique correcte. \"Quoiqu'étant\" (= bien qu'il soit) est obligatoirement contracté devant une voyelle. \"Quoique\" (sans apostrophe) avant \"é\" de \"étant\" serait incorrect. \"Bien qu'étant\" est également correct. Piège : omettre l'apostrophe et écrire \"quoique étant\" sans contraction."
-    },
-    {
-      "q": "Un terme \"équivoque\" est un terme :",
-      "o": [
-        "Clair et sans ambiguïté",
-        "Utilisé uniquement à l'oral",
-        "Appartenant à un registre spécialisé",
-        "Qui peut avoir plusieurs sens, prêtant à confusion"
-      ],
-      "r": 3,
-      "x": "\"Équivoque\" (du latin \"aequivocus\" = qui a des sens égaux) désigne ce qui est ambigu, susceptible de plusieurs interprétations. Exemple : \"Une réponse équivoque qui ne satisfait personne.\" Piège : confondre avec \"allusif\" ou \"évocateur\" — \"équivoque\" insiste sur l'ambiguïté troublante."
-    },
-    {
-      "q": "\"Quelle que _______ votre décision, elle sera respectée.\" Choisissez la bonne forme.",
-      "o": [
-        "quel que soit",
-        "quelque soit",
-        "quelle que soit",
-        "quels que soit"
+        "Les exemples cités",
+        "Les propositions de départ",
+        "Les hypothèses rivales"
       ],
       "r": 2,
-      "x": "\"Quel que soit\" s'accorde avec le sujet du verbe \"être\". \"Votre décision\" est féminin singulier → \"Quelle que soit votre décision\". Les deux éléments \"quel\" et \"que\" encadrent le verbe \"être\" au subjonctif et s'accordent. Piège : ne pas accorder \"quel\" avec le nom féminin et écrire \"quel que soit\" — faute caractérisée très fréquente."
+      "x": "Les prémisses sont les propositions dont on tire une conclusion. Ne pas les confondre avec les « prémices », premières manifestations d'un phénomène. Le mot s'écrit avec deux s et un accent grave sur le e.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Quelle chaleur il a _______ endurer cette année !\" Choisissez la forme correcte.",
+      "q": "Une réponse « équivoque » est une réponse :",
       "o": [
-        "fallue",
-        "fallus",
-        "fallues",
-        "fallu"
+        "Claire",
+        "Orale",
+        "Spécialisée",
+        "Ambiguë"
       ],
       "r": 3,
-      "x": "Les participes passés des verbes impersonnels (falloir, pleuvoir, neiger…) sont TOUJOURS invariables. \"Il a fallu\" → \"fallu\" invariable quelle que soit la situation. Piège : accorder \"fallu\" avec \"chaleur\" (féminin singulier) et écrire \"fallue\" — les verbes impersonnels n'ont pas de véritable COD."
+      "x": "Est équivoque ce qui admet plusieurs interprétations. Une réponse équivoque ne permet pas de trancher, contrairement à une réponse claire. L'expression « sans équivoque » signifie « clairement ».",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Un \"dogme\" est :",
+      "q": "Dans « _______ votre décision, elle sera respectée », la forme correcte est :",
       "o": [
-        "Une opinion librement discutable",
-        "Un texte littéraire ancien",
-        "Une hypothèse scientifique",
-        "Un principe tenu pour incontestable et imposé comme vérité absolue"
+        "Quel que soit",
+        "Quelle que soit",
+        "Quelque soit",
+        "Quels que soient"
       ],
-      "r": 3,
-      "x": "\"Dogme\" (du grec \"dogma\" = opinion, décision) désigne une vérité posée comme absolue, imposée par une autorité. Par extension, toute position présentée comme une vérité intangible. Piège : confondre avec \"doctrine\" (ensemble de principes cohérents mais discutables) ou \"axiome\" (proposition admise comme évidente sans être imposée)."
+      "r": 1,
+      "x": "« Quel » s'accorde avec le sujet « votre décision », féminin singulier. « Quelque soit » en un mot est une faute caractérisée. Devant un adjectif, on écrit « quelque » en un mot, invariable : quelque difficile qu'elle soit.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Si les agents _______ formés correctement, ils _______ moins d'erreurs.\" Choisissez la combinaison correcte.",
+      "q": "Un « anachronisme » est :",
       "o": [
-        "étaient / commettraient",
-        "auraient été / auraient commis",
-        "avaient été / auraient commis",
-        "avaient été / commettraient"
+        "Un fait historique répété",
+        "Une erreur de datation",
+        "Une révolution politique",
+        "Un récit chronologique"
       ],
-      "r": 2,
-      "x": "Phrase hypothétique irréelle dans le passé : si + plus-que-parfait → conditionnel passé dans la principale. \"Si les agents avaient été formés\" (plus-que-parfait) → \"ils auraient commis moins d'erreurs\" (conditionnel passé). Piège absolu : employer le conditionnel dans la subordonnée avec \"si\" (\"si auraient été\") — faute grave absolue et rédhibitoire."
+      "r": 1,
+      "x": "L'anachronisme attribue à une époque ce qui n'y existait pas, comme un téléphone chez Napoléon. Le récit qui suit l'ordre des événements est dit chronologique. Il vient du grec « ana » (en arrière) et « khronos » (temps).",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Un problème \"latent\" est un problème :",
+      "q": "Dans « _______ pour montrer l'exemple, le chef doit respecter les règles », la forme correcte est :",
       "o": [
-        "Qui a été résolu",
-        "Qui est gravissime et urgent",
-        "Qui est bien connu de tous",
-        "Qui existe mais ne se manifeste pas encore ouvertement"
-      ],
-      "r": 3,
-      "x": "\"Latent\" (du latin \"latere\" = se cacher) désigne ce qui existe à l'état caché, potentiel, sans encore se manifester. Exemple : \"Une crise sociale latente.\" S'oppose à \"manifeste\" (évident, visible). Piège : confondre avec \"sous-jacent\" (qui est en-dessous de la surface) — \"latent\" insiste davantage sur le caractère caché et potentiel."
-    },
-    {
-      "q": "\"À _______ chemin, ils ont fait une pause.\" Choisissez la bonne locution.",
-      "o": [
-        "demi-",
-        "semi-",
-        "mi-",
-        "A et C sont corrects"
-      ],
-      "r": 2,
-      "x": "\"À mi-chemin\" est la locution correcte et figée (invariable). \"Demi\" s'emploie différemment : \"une demi-journée\" (avant le nom, invariable) ; \"une heure et demie\" (après le nom, accord en genre). \"Semi-\" est un préfixe savant (semi-officiel) — jamais \"à semi-chemin\". Piège : confondre \"mi-\" et \"demi-\" dans les locutions figées."
-    },
-    {
-      "q": "Le principe de \"subsidiarité\" en administration signifie :",
-      "o": [
-        "L'État doit tout centraliser",
-        "Les collectivités locales n'ont aucun pouvoir",
-        "Les administrés peuvent gouverner directement",
-        "Les décisions doivent être prises au niveau le plus bas et le plus proche du terrain possible"
-      ],
-      "r": 3,
-      "x": "La subsidiarité (du latin \"subsidiarius\" = de réserve) : les décisions doivent être prises au niveau le plus adapté et le plus proche des citoyens, ne remontant à un niveau supérieur que si le niveau inférieur est insuffisant. Fondamental en droit européen et en décentralisation. Piège : le confondre avec \"décentralisation\" (plus large) ou lire comme simple délégation hiérarchique."
-    },
-    {
-      "q": "\"C'est _______ il a besoin pour progresser.\" Choisissez la bonne combinaison.",
-      "o": [
-        "ce que",
-        "de ce de quoi",
-        "dont",
-        "ce dont"
-      ],
-      "r": 3,
-      "x": "\"Avoir besoin de\" → relatif \"dont\". Précédé de l'antécédent \"ce\" : \"ce dont\". \"C'est ce dont il a besoin\" est la structure correcte dans la langue soutenue. \"Ce que\" s'emploie quand le verbe est transitif direct (sans \"de\"). Piège : employer \"ce que\" après \"avoir besoin\" — confusion entre COD et COI."
-    },
-    {
-      "q": "Une \"circonlocution\" est :",
-      "o": [
-        "Une expression très courte et directe",
-        "Un emprunt à une langue étrangère",
-        "Une répétition intentionnelle",
-        "Un détour de langage pour désigner quelque chose indirectement"
-      ],
-      "r": 3,
-      "x": "La circonlocution = employer plusieurs mots là où un seul suffirait, contourner une expression directe. Exemple : \"L'astre de la nuit\" pour \"la lune.\" Proche de la \"périphrase\" (synonyme). Piège : confondre avec \"euphémisme\" (qui atténue un sens déplaisant) — la circonlocution peut être neutre."
-    },
-    {
-      "q": "Un \"axiome\" est :",
-      "o": [
-        "Une hypothèse à vérifier expérimentalement",
-        "Une contradiction logique",
-        "Une conclusion tirée d'un raisonnement",
-        "Une proposition admise sans démonstration, tenue pour évidente"
-      ],
-      "r": 3,
-      "x": "\"Axiome\" (du grec \"axios\" = digne d'être admis) désigne une proposition acceptée sans preuve car considérée comme évidente, servant de point de départ à un raisonnement. Exemple : \"En administration, la légalité de l'action publique est un axiome fondamental.\" Piège : confondre avec \"postulat\" (proche, mais discutable) ou \"théorème\" (qui doit être démontré)."
-    },
-    {
-      "q": "La \"résilience\" dans le contexte des organisations désigne :",
-      "o": [
-        "La résistance passive à tout changement",
-        "La tendance à éviter les crises",
-        "La performance économique d'une institution",
-        "La capacité à absorber des chocs et à se reconstruire"
-      ],
-      "r": 3,
-      "x": "\"Résilience\" (du latin \"resilire\" = rebondir) désigne la capacité à surmonter des épreuves et à se reconstruire. Terme de psychologie étendu au management et à la politique. Piège : confondre avec \"résistance\" (qui évoque la non-cession, sans idée de reconstruction) ou \"flexibilité\"."
-    },
-    {
-      "q": "Une \"velléité\" désigne :",
-      "o": [
-        "Une volonté ferme et déterminée",
-        "Une obligation légale",
-        "Un engagement formel",
-        "Une intention faible, un désir sans suite ni détermination"
-      ],
-      "r": 3,
-      "x": "\"Velléité\" désigne un vouloir vague, une intention sans force ni suite. Exemple : \"Il n'a que des velléités de réforme.\" Le pluriel \"velléités\" accentue le caractère répété et inachevé. Piège : confondre avec \"volonté\" (intention ferme) — \"velléité\" insiste spécifiquement sur la faiblesse de la résolution."
-    },
-    {
-      "q": "La \"contingence\" d'un événement désigne :",
-      "o": [
-        "Son caractère inévitable et nécessaire",
-        "Son importance décisive",
-        "Sa répétition fréquente",
-        "Son caractère possible mais non nécessaire, soumis aux circonstances"
-      ],
-      "r": 3,
-      "x": "La \"contingence\" (du latin \"contingere\" = arriver par hasard) désigne ce qui peut se produire ou ne pas se produire, soumis aux circonstances. S'oppose à \"nécessité\" (ce qui ne peut pas ne pas être). Exemple : \"Les contingences de la politique africaine.\" Piège : confondre avec \"fréquence\" (à quelle fréquence survient l'événement) — notion différente."
-    },
-    {
-      "q": "\"Vénal\" qualifie :",
-      "o": [
-        "Une personne désintéressée",
-        "Ce qui est relatif à la vénération",
-        "Un crime particulièrement grave",
-        "Une personne ou une chose qui se laisse corrompre pour de l'argent"
-      ],
-      "r": 3,
-      "x": "\"Vénal\" (du latin \"venalis\" = qui est à vendre) qualifie ce ou celui qui peut être acheté ou corrompu. Exemple : \"Un juge vénal.\" Piège : confondre avec \"véniel\" (péché léger, pardonnable) — ressemblance phonique trompeuse — ou avec \"vénérable\" (digne de respect)."
-    },
-    {
-      "q": "\"Itératif\" qualifie une action :",
-      "o": [
-        "Impossible à réaliser",
-        "Accomplie une seule fois",
-        "Qui se produit en alternance avec une autre",
-        "Qui se répète, qui est répétitif"
-      ],
-      "r": 3,
-      "x": "\"Itératif\" (du latin \"iterare\" = répéter) qualifie ce qui est effectué plusieurs fois. En grammaire, l'aspect itératif désigne une action habituellement répétée. Exemple : \"L'imparfait peut exprimer une valeur itérative.\" Piège : confondre avec \"alternatif\" (qui alterne) ou \"périodique\" (qui revient à intervalles réguliers)."
-    },
-    {
-      "q": "La nuance entre \"à même de\" et \"en mesure de\" :",
-      "o": [
-        "Les deux locutions sont parfaitement synonymes et interchangeables",
-        "\"En mesure de\" est plus soutenu que \"à même de\"",
-        "\"À même de\" s'emploie uniquement avec des personnes",
-        "\"À même de\" signifie \"capable de\" (aptitude) ; \"en mesure de\" signifie \"en position de\" (conditions réunies)"
-      ],
-      "r": 3,
-      "x": "\"Être à même de\" = avoir la capacité, l'aptitude naturelle de faire quelque chose. \"Être en mesure de\" = avoir les conditions et les moyens nécessaires réunis. Exemple : \"Il est à même de réussir\" (talent) vs \"Il est en mesure de répondre maintenant\" (conditions réunies). Piège : les employer indifféremment en perdant cette nuance attendue en concours de niveau avancé."
-    },
-    {
-      "q": "\"C'est elle qui a fait _______ les résultats par ses agents.\" Quelle règle s'applique au participe passé \"fait\" suivi d'un infinitif ?",
-      "o": [
-        "Il est toujours invariable",
-        "Il s'accorde avec le sujet",
-        "Il s'accorde avec le COD placé avant lui",
-        "Il s'accorde selon le sens de la phrase"
+        "Ne serait-ce que",
+        "Ne soit-ce que",
+        "Ne serait-il que",
+        "Ne fusse que"
       ],
       "r": 0,
-      "x": "La règle est absolue et sans exception : \"faire + infinitif\" → le PP \"fait\" est TOUJOURS invariable. \"Elle a fait communiquer les résultats\" → \"fait\" invariable. Cette règle s'applique même lorsque le COD est placé avant : \"les résultats qu'elle a fait communiquer\" → \"fait\" reste invariable. Piège : croire que la position du COD avant le verbe crée une exception — aucune exception n'existe ici."
+      "x": "« Ne serait-ce que », ou « ne fût-ce que » en style littéraire, signifie « même seulement ». « Ne fusse que » est une déformation fautive. La locution introduit un minimum : il faut venir, ne serait-ce que pour saluer.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "Un \"apanage\" est :",
+      "q": "Un « néologisme » est :",
       "o": [
-        "Un point faible",
-        "Une méthode de travail",
-        "Un lieu de résidence officielle",
-        "Ce qui appartient en propre à quelqu'un, son privilège exclusif"
+        "Un mot nouveau",
+        "Un mot ancien",
+        "Un mot étranger",
+        "Un mot technique"
       ],
-      "r": 3,
-      "x": "\"Apanage\" (portion de domaine royal accordée à un prince) désigne par extension ce qui appartient en propre à quelqu'un. Exemple : \"L'éloquence n'est pas l'apanage des seuls orateurs politiques.\" Piège : confondre avec \"avantage\" (plus général) ou \"héritage\" (ce qu'on reçoit à la mort de quelqu'un)."
+      "r": 0,
+      "x": "Le néologisme est un mot nouvellement créé ou un sens nouveau donné à un mot, comme « courriel ». Un emprunt vient d'une autre langue, ce qui n'est pas obligatoire pour un néologisme. Le néologisme peut aussi être un nouveau sens : « souris » pour l'appareil informatique.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Bien qu'il _______ très tôt, il n'a pas pu assister à la réunion.\" Choisissez la forme correcte.",
+      "q": "Dans « Quelle chaleur il a _______ endurer ! », la forme correcte est :",
       "o": [
-        "est parti",
-        "partait",
-        "serait parti",
-        "soit parti"
+        "fallu",
+        "fallue",
+        "fallus",
+        "fallues"
       ],
-      "r": 3,
-      "x": "\"Bien que\" exige le subjonctif. L'action de partir est antérieure au fait de ne pas assister → subjonctif passé \"soit parti\". L'indicatif passé composé \"est parti\" est incorrect après \"bien que\". Piège : employer l'indicatif par habitude orale ou le passé composé sans respecter le mode requis."
+      "r": 0,
+      "x": "Le participe des verbes impersonnels (falloir, pleuvoir, neiger) est toujours invariable. Accorder avec « chaleur » est donc fautif. Il en va de même pour « fait » dans les tournures impersonnelles : les chaleurs qu'il a fait.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"_______ efforts que vous fassiez, ils seront reconnus.\" Choisissez la bonne forme.",
+      "q": "Un « dogme » est :",
       "o": [
-        "Quelque",
-        "Quel que",
-        "Quelles que",
-        "Quels que"
+        "Une opinion discutable",
+        "Une vérité imposée",
+        "Un texte ancien",
+        "Une hypothèse scientifique"
       ],
-      "r": 3,
-      "x": "\"Quels que\" s'accorde avec le sujet du verbe \"être\" ou avec le COD quand il est complément. \"Efforts\" est masculin pluriel → \"Quels que soient les efforts.\" La structure complète est : \"Quels que soient les efforts que vous fassiez.\" Piège : confondre avec \"quelque\" (déterminant) qui ne s'emploie pas dans cette construction avec un verbe subjonctif encadré."
+      "r": 1,
+      "x": "Le dogme est un principe posé comme incontestable par une autorité. Il s'oppose à l'opinion librement discutée. L'adjectif « dogmatique » qualifie une personne qui refuse toute discussion.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "L'accord de \"grand\" dans les noms composés féminins figés : \"La _______ rue du marché.\"",
+      "q": "Dans « Si les agents _______ formés, ils _______ moins d'erreurs », la bonne combinaison est :",
       "o": [
-        "grande",
-        "gran",
-        "grand'",
-        "grand"
+        "avaient été / auraient commis",
+        "auraient été / auraient commis",
+        "étaient / commettront",
+        "avaient été / commettront"
       ],
-      "r": 3,
-      "x": "Dans certains noms composés anciens formés avec \"grand\" au féminin, \"grand\" reste sans accord (héritage de l'ancienne langue : \"grand-mère\", \"grand-route\", \"grand-rue\"). \"Grand-rue\" est la forme consacrée dans les dictionnaires. Les rectifications de 1990 admettent \"grande\" mais la forme traditionnelle reste dominante. Piège : toujours accorder \"grand\" au féminin dans ces composés figés."
+      "r": 0,
+      "x": "L'irréel du passé associe le plus-que-parfait après « si » et le conditionnel passé dans la principale. Le conditionnel après « si », comme « auraient été », est une faute rédhibitoire. Pour un fait présent, on emploie l'imparfait et le conditionnel présent : si les agents étaient formés, ils commettraient moins d'erreurs.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "La distinction entre \"paradigme\" et \"dogme\" :",
+      "q": "Un problème « latent » est un problème :",
       "o": [
-        "Les deux mots sont parfaitement synonymes",
-        "\"Paradigme\" est un exemple concret ; \"dogme\" est une idée abstraite",
-        "\"Paradigme\" désigne un modèle de référence ouvert à l'évolution ; \"dogme\" une vérité imposée comme intangible",
-        "\"Dogme\" est plus scientifique que \"paradigme\""
+        "Déjà résolu",
+        "Caché mais présent",
+        "Grave et urgent",
+        "Connu de tous"
+      ],
+      "r": 1,
+      "x": "Est latent ce qui existe sans encore se manifester, comme une crise latente. Il s'oppose à « manifeste ». En médecine, une infection latente ne présente pas encore de symptômes.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Dans « À _______ chemin, ils ont fait une pause », la forme correcte est :",
+      "o": [
+        "mi-",
+        "demi-",
+        "semi-",
+        "demie-"
+      ],
+      "r": 0,
+      "x": "« À mi-chemin » est une locution figée. « Demi- » s'emploie dans « une demi-journée » et « semi- » est un préfixe savant (« semi-officiel »). « Mi- » s'emploie aussi dans les dates : à la mi-janvier.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Le principe de « subsidiarité » veut que les décisions soient prises :",
+      "o": [
+        "Toujours par l'État central",
+        "Par les seuls élus nationaux",
+        "Au plus près du terrain",
+        "Par référendum citoyen"
       ],
       "r": 2,
-      "x": "\"Paradigme\" désigne un cadre conceptuel dominant dans un domaine, susceptible d'évoluer (un paradigme peut être remplacé par un autre). \"Dogme\" désigne une vérité posée comme absolue et imposée, qui ne souffre pas la remise en question. La nuance est fondamentale : l'un est dynamique, l'autre est figé. Piège : les confondre car tous deux désignent des cadres de pensée — mais leurs statuts épistémologiques sont opposés."
+      "x": "La subsidiarité confie la décision au niveau le plus proche des citoyens, le niveau supérieur n'intervenant que si le premier est insuffisant. C'est l'inverse d'une centralisation systématique. Ce principe guide notamment la décentralisation, qui confie des compétences aux collectivités territoriales.",
+      "_batchId": "francais/2026-11-19/LOT1"
     },
     {
-      "q": "\"Après qu'il _______ son exposé, les agents ont posé leurs questions.\" Choisissez la forme correcte.",
+      "q": "Une « circonlocution » est :",
       "o": [
-        "ait terminé",
+        "Une formule directe",
+        "Un emprunt étranger",
+        "Une répétition voulue",
+        "Un détour de langage"
+      ],
+      "r": 3,
+      "x": "La circonlocution exprime en plusieurs mots ce qu'un seul suffirait à dire : « l'astre de la nuit » pour « la lune ». Elle est proche de la périphrase. On l'emploie souvent par politesse ou pour atténuer une réalité.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Un « axiome » est :",
+      "o": [
+        "Une hypothèse à vérifier",
+        "Une contradiction logique",
+        "Une vérité admise sans preuve",
+        "Une conclusion démontrée"
+      ],
+      "r": 2,
+      "x": "Un axiome est une proposition admise sans démonstration comme point de départ d'un raisonnement ou d'un système mathématique. Il se distingue du théorème, qui est une proposition démontrée à partir d'axiomes et de résultats antérieurs.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "La « résilience » d'une organisation désigne :",
+      "o": [
+        "Son refus de tout changement",
+        "Sa capacité à se reconstruire",
+        "Son évitement des crises",
+        "Sa performance économique"
+      ],
+      "r": 1,
+      "x": "La résilience, du latin « resilire » (rebondir), est l'aptitude à absorber un choc puis à se relever. La simple résistance n'inclut pas cette idée de reconstruction. En psychologie, la résilience désigne la capacité à surmonter un traumatisme.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Une « velléité » est :",
+      "o": [
+        "Une volonté ferme",
+        "Une intention sans suite",
+        "Une obligation légale",
+        "Un engagement formel"
+      ],
+      "r": 1,
+      "x": "La velléité est un vouloir faible qui ne passe pas à l'acte. Elle s'oppose à la volonté ferme. L'adjectif « velléitaire » qualifie celui qui ne passe jamais à l'acte.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Un rapport « exhaustif » est un rapport :",
+      "o": [
+        "Superficiel",
+        "Épuisant",
+        "Complet",
+        "Rapide"
+      ],
+      "r": 2,
+      "x": "Est exhaustif ce qui traite un sujet sans rien omettre. Le sens « épuisant » est un faux ami tiré de l'anglais « exhausting ». Le nom correspondant est « exhaustivité ».",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "L'orthographe correcte de cette locution est :",
+      "o": [
+        "dores et déjà",
+        "d'ores-et-déjà",
+        "dors et déjà",
+        "d'ores et déjà"
+      ],
+      "r": 3,
+      "x": "La locution s'écrit avec une apostrophe et sans trait d'union ; elle signifie « dès maintenant ». « Dors » est une confusion avec le verbe dormir. « Ores » est un ancien mot signifiant « maintenant », qu'on retrouve dans « désormais ».",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Dans « _______ efforts que vous fassiez, ils seront reconnus », la forme correcte est :",
+      "o": [
+        "Quelques",
+        "Quelque",
+        "Quels que",
+        "Quel que"
+      ],
+      "r": 0,
+      "x": "Devant un nom suivi de « que » et du subjonctif, « quelque » est déterminant et s'accorde avec le nom : « quelques efforts ». « Quels que » ne s'emploie que devant « être » : « quels que soient vos efforts ». Devant un adjectif, « quelque » est adverbe et reste invariable : quelque habiles qu'ils soient.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Un juge « vénal » est un juge :",
+      "o": [
+        "Désintéressé",
+        "Corruptible",
+        "Vénérable",
+        "Pardonnable"
+      ],
+      "r": 1,
+      "x": "Vénal, du latin « venalis » (à vendre), qualifie celui qui se laisse acheter. « Pardonnable » correspond à « véniel », proche par le son. Le nom correspondant est « vénalité ».",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Une action « itérative » est une action :",
+      "o": [
+        "Irréalisable",
+        "Unique",
+        "Répétée",
+        "Alternée"
+      ],
+      "r": 2,
+      "x": "Itératif qualifie une action qui se répète ; l'imparfait a souvent une valeur itérative. « Alterné » désigne ce qui alterne avec autre chose. Le verbe « itérer » signifie répéter.",
+      "_batchId": "francais/2026-11-19/LOT1"
+    },
+    {
+      "q": "Dans « Après qu'il _______ son exposé, les agents posent leurs questions », la forme correcte est :",
+      "o": [
         "a terminé",
+        "ait terminé",
         "aurait terminé",
         "eût terminé"
       ],
-      "r": 1,
-      "x": "\"Après que\" exige l'indicatif, contrairement à \"avant que\" qui exige le subjonctif. Action réelle et accomplie → passé composé de l'indicatif \"a terminé\". Piège majeur et très répandu : employer le subjonctif après \"après que\" par confusion avec \"avant que\" — faute considérée comme grave en concours de niveau élevé."
+      "r": 0,
+      "x": "« Après que » introduit un fait accompli et réel : il se construit avec l'indicatif. Le subjonctif « ait terminé » vient d'une confusion avec « avant que », qui, lui, exige le subjonctif. Le subjonctif après « après que » est très répandu, mais il reste considéré comme fautif dans une copie.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"Attendu _______ la gravité des faits, une sanction disciplinaire est prononcée.\" Choisissez la forme correcte.",
+      "q": "Le nom en -al dont le pluriel se forme en -als est :",
       "o": [
-        "la",
-        "les",
-        "que",
-        "à"
+        "journal",
+        "hôpital",
+        "festival",
+        "cheval"
       ],
       "r": 2,
-      "x": "\"Attendu que\" (locution conjonctive juridique) est invariable et toujours suivi d'une proposition. \"Attendu la gravité\" (préposition + nom) est l'autre construction possible avec \"attendu\" invariable. Ici, la phrase contient un verbe → \"attendu que\" est la forme correcte. Piège : accorder \"attendu\" avec \"la gravité\" en féminin."
+      "x": "« Festival » fait « festivals », comme « bal », « carnaval », « chacal », « récital » et « régal ». La plupart des autres noms en -al font -aux : journaux, hôpitaux, chevaux. « Idéal » admet les deux pluriels : des idéals ou des idéaux.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"La _______ reine a légué cette bibliothèque à l'État.\" Choisissez la bonne forme de \"feu\".",
+      "q": "Dans « Les personnes _______ sont priées de se manifester », la forme correcte est :",
       "o": [
-        "feu",
+        "concernés",
+        "concernée",
+        "concernées",
+        "concerné"
+      ],
+      "r": 2,
+      "x": "L'adjectif s'accorde avec « personnes », nom féminin pluriel. « Concernés » est fautif, même si le groupe désigné comprend des hommes. Le masculin ne l'emporte que lorsque des noms de genres différents sont coordonnés : des hommes et des femmes concernés.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « _______ la gravité des faits, une sanction est prononcée », la forme correcte est :",
+      "o": [
+        "Attendue",
+        "Attendus",
+        "Attendues",
+        "Attendu"
+      ],
+      "r": 3,
+      "x": "Placé devant le nom, « attendu » joue le rôle d'une préposition (= étant donné) et reste invariable. Il en va de même pour « vu », « excepté » et « y compris » placés en tête. Placés après le nom, ces mots redeviennent des participes et s'accordent : toutes les pièces exceptées.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « La _______ reine a légué cette bibliothèque à l'État », la forme correcte est :",
+      "o": [
         "feue",
-        "feux",
-        "feu la"
-      ],
-      "r": 1,
-      "x": "\"Feu\" (= défunt) s'accorde quand il est placé entre l'article et le nom : \"la feue reine\" (accord en féminin). Il reste invariable s'il précède l'article : \"feu la reine\". Ici, \"feu\" est entre \"La\" et \"reine\" → accord : \"feue\". Piège : laisser \"feu\" invariable dans tous les emplois."
-    },
-    {
-      "q": "\"Les meilleures candidates _______ ont été retenues.\" Choisissez la forme correcte de \"possible\".",
-      "o": [
-        "possibles",
-        "possible",
-        "possiblement",
-        "possibles ou possible selon le sens"
-      ],
-      "r": 1,
-      "x": "\"Possible\" après un superlatif (le/les meilleur(e)s, le/les plus, le moins) reste invariable : il équivaut à \"qu'il est possible de\". \"Les meilleures candidates possible\" = les meilleures qu'il soit possible de trouver. Piège : accorder \"possible\" avec \"candidates\" (féminin pluriel) et écrire \"possibles\" — faute fréquente."
-    },
-    {
-      "q": "\"Elles se sont _______ en chemin.\" Choisissez le PP correct de \"nuire\".",
-      "o": [
-        "nuit",
-        "nuis",
-        "nuites",
-        "nuies"
+        "feu",
+        "feus",
+        "feues"
       ],
       "r": 0,
-      "x": "\"Se nuire\" : le verbe \"nuire à\" est construit avec un COI (\"nuire à soi-même\"). Le pronom \"se\" est COI, non COD → le PP ne s'accorde pas avec le sujet. \"Nuit\" est invariable. Règle : PP des verbes pronominaux à COI (se nuire, se mentir, se plaire, se succéder, se parler, se téléphoner) = toujours invariable. Piège : accorder avec le sujet féminin pluriel \"elles\"."
+      "x": "« Feu » (= défunt) s'accorde lorsqu'il est placé entre le déterminant et le nom : « la feue reine ». Placé avant le déterminant, il reste invariable : « feu la reine ». Le mot appartient à la langue soutenue ou juridique : feu mon père, la feue duchesse.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "Le mot \"acrimonie\" désigne :",
+      "q": "Dans « Le jury a retenu le plus de candidates _______ », la forme correcte est :",
       "o": [
-        "Une grande bienveillance",
-        "Une passion artistique",
-        "L'amertume , l'aigreur",
-        "Un signe d'accord enthousiaste"
+        "possible",
+        "possibles",
+        "que possible",
+        "que possibles"
       ],
-      "r": 2,
-      "x": "\"Acrimonie\" (du latin \"acrimonia\" = aigreur) désigne une disposition d'esprit acerbe, marquée par l'amertume et une tendance à l'agressivité verbale. Exemple : \"Il a répondu avec acrimonie à toute proposition de compromis.\" Piège : confondre avec \"acrimanie\" (inexistant) ou \"animosité\" (hostilité — très proche mais \"acrimonie\" insiste davantage sur l'aigreur du ton)."
+      "r": 0,
+      "x": "Après « le plus de » ou « le moins de », « possible » reste invariable, car il signifie « qu'il est possible de retenir ». Sans superlatif, il s'accorde : « toutes les solutions possibles ». On écrit de même « le moins d'erreurs possible ».",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"Elle s'est _______ de cette décision difficile.\" Choisissez le PP correct de \"se féliciter\".",
+      "q": "Dans « Elles se sont _______ par leurs querelles incessantes », la forme correcte est :",
       "o": [
-        "félicitée",
+        "nui",
+        "nuies",
+        "nuis",
+        "nuites"
+      ],
+      "r": 0,
+      "x": "On dit « nuire à quelqu'un » : le pronom « se » est COI et le participe reste invariable. Le participe de « nuire » est « nui », sans t, comme « lui » pour « luire ». Il en va de même pour « se plaire », « se sourire » et « se mentir » : elles se sont menti.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Elle s'est _______ de cette décision difficile », la forme correcte est :",
+      "o": [
         "félicité",
         "félicités",
-        "félicitée ou félicité selon le contexte"
-      ],
-      "r": 0,
-      "x": "\"Se féliciter de\" : le verbe \"féliciter quelqu'un de\" est transitif direct (COD = quelqu'un). Le pronom \"se\" remplace le COD → PP s'accorde avec \"se\" (= elle) : féminin singulier → \"félicitée\". Piège : croire que tous les pronominaux en \"-de\" ont un COI et laisser le PP invariable."
-    },
-    {
-      "q": "\"Grâce à _______ efforts de l'équipe, le projet a abouti.\" Choisissez la bonne forme.",
-      "o": [
-        "les",
-        "des",
-        "ses",
-        "leurs"
-      ],
-      "r": 3,
-      "x": "\"Leurs efforts\" : \"leur\" est adjectif possessif qui renvoie au pluriel (l'équipe = plusieurs personnes). \"Efforts\" est pluriel → \"leurs\". \"Grâce à\" (connotation positive) est bien employé ici. Piège : écrire \"leur efforts\" (oubli du pluriel) ou confondre \"leur\" pronom COI invariable avec \"leurs\" adjectif possessif."
-    },
-    {
-      "q": "Un texte \"circonstancié\" est un texte :",
-      "o": [
-        "Vague et approximatif",
-        "Illégal ou non autorisé",
-        "Détaillé, qui expose toutes les circonstances avec précision",
-        "Rédigé dans des circonstances particulières"
+        "félicitée",
+        "félicitées"
       ],
       "r": 2,
-      "x": "\"Circonstancié\" (de \"circonstance\") qualifie un rapport, un compte rendu ou un exposé qui entre dans tous les détails pertinents. Exemple : \"Un rapport circonstancié sur les irrégularités constatées.\" Piège : comprendre uniquement \"lié à des circonstances\" au lieu de \"détaillé et précis\"."
+      "x": "On dit « féliciter quelqu'un » : le pronom « se » est COD et le participe s'accorde avec le sujet féminin singulier. La préposition « de » introduit seulement le motif. On écrit de même « elles se sont félicitées de leur réussite ».",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"_______ que soit le résultat, nous analyserons les erreurs.\" Choisissez la bonne forme.",
-      "o": [
-        "Quel",
-        "Quelles",
-        "Quelques",
-        "Quelque"
-      ],
-      "r": 0,
-      "x": "\"Quel que soit\" + nom + verbe \"être\" au subjonctif. \"Le résultat\" est masculin singulier → \"Quel que soit le résultat\". \"Quel\" s'accorde avec le sujet du verbe \"être\". Piège : employer \"quelque\" (adverbe invariable) à la place du pronom \"quel\" variable."
-    },
-    {
-      "q": "\"_______ les retards accumulés, le projet a néanmoins été livré à temps.\" Choisissez la locution correcte.",
-      "o": [
-        "Nonobstant",
-        "En effet",
-        "Grâce à",
-        "En vertu de"
-      ],
-      "r": 0,
-      "x": "\"Nonobstant\" (du latin \"non obstante\" = sans que cela fasse obstacle) signifie \"malgré\", \"en dépit de\". Locution concessive formelle et juridique. \"Nonobstant les retards\" = malgré les retards. Piège : confondre avec \"notamment\" (= en particulier) — ressemblance phonique partielle et trompeuse."
-    },
-    {
-      "q": "Quel est le synonyme précis de \"judicieux\" ?",
-      "o": [
-        "Rigide",
-        "Brutal",
-        "Avisé, qui fait preuve de bon jugement",
-        "Réticent"
-      ],
-      "r": 2,
-      "x": "\"Judicieux\" (du latin \"judicium\" = jugement) qualifie ce qui est approprié, sage, bien réfléchi. Exemple : \"Une décision judicieuse.\" Proche de \"pertinent\" mais \"judicieux\" insiste sur la qualité du jugement. Piège : confondre avec \"judiciaire\" (relatif à la justice) — même racine, sens différent."
-    },
-    {
-      "q": "\"Plusieurs _______ ont signé la pétition.\" Choisissez la bonne forme.",
-      "o": [
-        "fonctionnaires",
-        "fonctionnaire",
-        "de fonctionnaires",
-        "aux fonctionnaires"
-      ],
-      "r": 0,
-      "x": "\"Plusieurs\" déterminant pluriel se construit directement avec le nom (sans \"de\") : \"Plusieurs fonctionnaires\". À ne pas confondre avec \"la plupart de + nom\". Piège : ajouter \"de\" (\"plusieurs de fonctionnaires\") par analogie avec d'autres déterminants de quantité comme \"beaucoup de\"."
-    },
-    {
-      "q": "\"Ainsi que le directeur, les agents _______ invités à la réunion.\" Choisissez la bonne forme verbale.",
+      "q": "Dans « Ainsi que le directeur, les agents _______ invités à la réunion », la forme correcte est :",
       "o": [
         "a été",
-        "ont été",
         "est",
-        "avait été"
-      ],
-      "r": 1,
-      "x": "Quand \"ainsi que\" a valeur de \"et\" (sans virgules, sans mise en relief), le verbe s'accorde avec l'ensemble des sujets au pluriel. Ici, \"les agents\" est le sujet principal dont dépend \"ainsi que le directeur\" → pluriel \"ont été\". Piège : accorder avec \"le directeur\" seul en croyant que la formule \"ainsi que\" isole le second sujet."
-    },
-    {
-      "q": "\"La _______ de se voir confier une tâche importante l'a motivée.\" Choisissez le bon mot.",
-      "o": [
-        "perspective",
-        "perspective ou opportunité selon le sens",
-        "opportunité",
-        "chance ou opportunité"
-      ],
-      "r": 0,
-      "x": "\"Opportunité\" est un mot français qui signifie \"caractère de ce qui est opportun\" (le bon moment) et NON \"occasion favorable\" (calque de l'anglais \"opportunity\"). Le bon mot français pour \"occasion favorable\" est \"possibilité\", \"chance\", \"perspective\". \"La perspective de...\" est ici la forme correcte. Piège : calquer l'anglais \"opportunity\" et employer \"opportunité\" au sens de \"bonne occasion\"."
-    },
-    {
-      "q": "\"Pour _______ invraisemblable que cela puisse paraître, c'est la vérité.\" Choisissez la bonne forme.",
-      "o": [
-        "quelques",
-        "aussi",
-        "quelque",
-        "si"
-      ],
-      "r": 2,
-      "x": "\"Quelque + adjectif + que + subjonctif\" : \"quelque\" est adverbe invariable signifiant \"aussi, si\". \"Quelque invraisemblable que cela puisse paraître\" = quelle que soit son degré d'invraisemblance. Piège : employer \"aussi invraisemblable que\" (construction également possible) ou accorder \"quelque\" avec le nom suivant."
-    },
-    {
-      "q": "\"Les _______ de ce fonctionnaire sont modestes.\" Choisissez le bon terme pour désigner son salaire.",
-      "o": [
-        "honoraires",
-        "émoluments",
-        "bénéfices",
-        "commissions"
-      ],
-      "r": 1,
-      "x": "\"Émoluments\" désigne la rémunération d'un fonctionnaire ou d'un officier ministériel. \"Honoraires\" = rémunération des professions libérales (médecin, avocat). \"Traitement\" = terme également employé pour le fonctionnaire. Piège : confondre les termes selon le statut : fonctionnaire → émoluments/traitement ; profession libérale → honoraires."
-    },
-    {
-      "q": "\"Il est arrivé _______ que les résultats soient contestés.\" Choisissez le bon adverbe.",
-      "o": [
-        "rarement",
-        "souvent",
-        "parfois",
-        "A, B et C sont possibles selon le sens"
+        "avait été",
+        "ont été"
       ],
       "r": 3,
-      "x": "La question porte sur la structure et non sur le sens. \"Il est arrivé + que + subjonctif\" est la construction correcte avec n'importe quel adverbe de fréquence. Les trois adverbes sont grammaticalement corrects — la réponse dépend uniquement du sens voulu. Méthode : distinguer les questions de forme et de sens."
+      "x": "Le sujet de la phrase est « les agents » ; « ainsi que le directeur », placé en tête et détaché, n'est qu'un complément. Le verbe s'accorde donc au pluriel avec « les agents ». Sans virgules, l'usage admet le pluriel quand « ainsi que » a le sens de « et » : le directeur ainsi que les agents sont invités.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"_______ peu d'agents ont répondu à la convocation.\" Choisissez la forme verbale correcte pour un tel sujet.",
+      "q": "Dans « Plus d'un agent _______ cette erreur », la forme correcte est :",
       "o": [
-        "Le peu d'agents ont répondu (verbe au pluriel)",
-        "Le peu d'agents a répondu (verbe au singulier)",
-        "Selon le contexte, les deux sont possibles",
-        "Le peu d'agents avait répondu (verbe à l'imparfait)"
-      ],
-      "r": 2,
-      "x": "\"Le peu de + nom pluriel\" : si \"le peu\" insiste sur l'insuffisance (sens négatif), accord au singulier. Si \"le peu\" désigne les quelques personnes concernées, accord au pluriel. Règle nuancée : les deux sont tolérés mais le singulier (insistance sur la petite quantité) est plus souvent attendu dans la langue soutenue. Piège : appliquer une règle unique et rigide."
-    },
-    {
-      "q": "\"Plus d'un agent _______ corrigé cette erreur.\" Choisissez la bonne forme.",
-      "o": [
-        "ont",
-        "a",
-        "avait",
-        "auront"
+        "ont corrigé",
+        "a corrigé",
+        "ont corrigés",
+        "a corrigée"
       ],
       "r": 1,
-      "x": "\"Plus d'un\" suivi d'un nom singulier entraîne l'accord du verbe au singulier, même si le sens implique une pluralité. \"Plus d'un agent a corrigé\" → singulier. Piège : accorder au pluriel en suivant le sens (\"plusieurs agents\") au lieu de la règle grammaticale."
+      "x": "« Plus d'un » suivi d'un nom singulier commande le singulier, malgré l'idée de pluralité. On dit de même « plus d'un candidat a échoué ». Le pluriel est toutefois admis quand l'idée de réciprocité est exprimée : plus d'un agent se sont félicités mutuellement.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"Ils se sont _______ tout au long de leur mandat.\" Choisissez le PP correct de \"se succéder\".",
+      "q": "Dans « Les présidents se sont _______ à la tête de l'institution », la forme correcte est :",
       "o": [
         "succédés",
-        "succédée",
+        "succédées",
         "succédé",
-        "succédés"
+        "succédée"
       ],
       "r": 2,
-      "x": "\"Se succéder\" : le verbe \"succéder\" est transitif indirect (\"succéder à quelqu'un\"). Le pronom \"se\" est COI → PP invariable. \"Ils se sont succédé\" = chacun a succédé à l'autre. Piège absolu : écrire \"succédés\" — faute très fréquente et pénalisée, le PP des pronominaux à COI ne s'accorde jamais avec le sujet."
+      "x": "On dit « succéder à quelqu'un » : le pronom « se » est COI et le participe reste invariable. « Se sont succédés » est une faute très fréquente dans les copies. Il en va de même pour « se parler », « se nuire » et « se ressembler ».",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "Un agent \"diligent\" est un agent :",
-      "o": [
-        "Distrait et désorganisé",
-        "Sévère et intransigeant",
-        "Zélé, actif et prompt dans l'accomplissement de ses tâches",
-        "Muet et discret"
-      ],
-      "r": 2,
-      "x": "\"Diligent\" (du latin \"diligens\" = qui prend soin) qualifie quelqu'un d'actif, de soigneux et d'empressé dans son travail. \"La diligence\" peut aussi désigner la rapidité. Piège : confondre avec \"intelligent\" — ressemblance phonique. \"Diligent\" porte sur l'ardeur et le soin, non sur les capacités intellectuelles."
-    },
-    {
-      "q": "\"_______ de ces mesures ne produit d'effets immédiats.\" Choisissez la bonne forme.",
-      "o": [
-        "Aucunes",
-        "Aucun",
-        "Aucune",
-        "Nul"
-      ],
-      "r": 2,
-      "x": "\"Mesures\" est féminin pluriel → \"Aucune de ces mesures\". Le verbe reste au singulier avec \"aucune de\". \"Nul\" est également possible mais \"aucune\" est le choix le plus naturel ici. Piège : employer \"aucun\" au masculin sans vérifier le genre du nom."
-    },
-    {
-      "q": "\"En vertu de\" est une locution qui signifie :",
-      "o": [
-        "En contradiction avec",
-        "Malgré",
-        "En application de, en raison de (un principe, un texte)",
-        "En l'absence de"
-      ],
-      "r": 2,
-      "x": "\"En vertu de\" s'emploie pour invoquer un texte de loi, un principe, un accord qui fonde une décision. Exemple : \"En vertu de l'article 15 du décret, cette autorisation est accordée.\" Locution juridique et administrative fondamentale. Piège : confondre avec \"en raison de\" (cause factuelle) — \"en vertu de\" introduit un fondement juridique ou principiel."
-    },
-    {
-      "q": "\"Elle a laissé _______ sa collaboratrice en toute confiance.\" Choisissez le PP correct de \"laisser\".",
-      "o": [
-        "laissée travailler",
-        "laissé travailler",
-        "laissée travaillé",
-        "laissé travaillée"
-      ],
-      "r": 1,
-      "x": "Depuis les rectifications orthographiques de 1990, \"laisser + infinitif\" se comporte comme \"faire + infinitif\" : le PP \"laissé\" est invariable devant un infinitif. \"Elle a laissé travailler sa collaboratrice\" → \"laissé\" invariable. Piège : accorder \"laissé\" avec le COD antéposé \"sa collaboratrice\" — ancienne règle que les rectifications ont supprimée."
-    },
-    {
-      "q": "\"Pérenne\" qualifie ce qui est :",
-      "o": [
-        "Récent et novateur",
-        "Fragile et temporaire",
-        "Durable, qui dure de façon prolongée voire permanente",
-        "Relatif à la période ancienne"
-      ],
-      "r": 2,
-      "x": "\"Pérenne\" (du latin \"perennis\" = qui dure toute l'année) qualifie ce qui est stable sur le long terme. À distinguer de \"permanent\" (sans aucune interruption) et de \"durable\" (résiste dans le temps sans être forcément illimité). Piège : confondre avec \"pérenniser\" (rendre durable) — confusion entre l'adjectif et le verbe."
-    },
-    {
-      "q": "\"Chacune des candidates _______ convoquée individuellement.\" Choisissez la bonne forme.",
+      "q": "Dans « Chacune des candidates _______ convoquée individuellement », la forme correcte est :",
       "o": [
         "ont été",
-        "a été",
-        "sera",
-        "seraient"
+        "seront",
+        "seraient",
+        "a été"
+      ],
+      "r": 3,
+      "x": "« Chacun » et « chacune » sont toujours singuliers et commandent un verbe au singulier. Le pluriel « ont été » vient d'une attraction par « des candidates ». Placé après un sujet pluriel, « chacun » laisse le verbe au pluriel : les candidates ont chacune été convoquées.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Avec l'appui de sa hiérarchie, le chef de service _______ cette décision », la forme correcte est :",
+      "o": [
+        "ont pris",
+        "a pris",
+        "ont prise",
+        "a prise"
       ],
       "r": 1,
-      "x": "\"Chacun(e)\" est toujours singulier et entraîne un accord au singulier. \"Chacune des candidates a été convoquée.\" Piège : accorder au pluriel parce que \"des candidates\" est pluriel — c'est \"chacune\" (singulier) qui gouverne l'accord."
+      "x": "« Avec l'appui de sa hiérarchie » est un complément, non un second sujet : le verbe s'accorde avec « le chef de service ». « Avec », « ainsi que » ou « comme » ne coordonnent pas deux sujets, contrairement à « et ». Avec « et », le pluriel s'impose : le chef de service et sa hiérarchie ont pris cette décision.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "La \"conjoncture\" désigne :",
+      "q": "Au discours indirect, « Je viendrai demain » devient « Il m'a dit qu'il _______ le lendemain » :",
       "o": [
-        "Un élément grammatical de liaison",
-        "Une règle administrative fixe",
-        "La situation économique et sociale à un moment donné",
-        "Un accord entre plusieurs parties"
-      ],
-      "r": 2,
-      "x": "\"Conjoncture\" désigne l'ensemble des éléments qui caractérisent la situation économique, politique ou sociale à un moment précis. Exemple : \"La conjoncture économique difficile en Afrique subsaharienne.\" Piège : confondre avec \"structure\" (organisation durable) — la conjoncture est par nature temporaire et changeante."
-    },
-    {
-      "q": "\"Avec le soutien de sa hiérarchie, le chef de service _______ pris cette décision.\" Choisissez la forme correcte.",
-      "o": [
-        "a",
-        "ont",
-        "avaient",
-        "seraient"
-      ],
-      "r": 0,
-      "x": "\"Avec\" ne crée pas de vrai sujet supplémentaire (contrairement à \"et\"). Quand le sujet est \"le chef de service\" et que \"avec sa hiérarchie\" est un complément circonstanciel entre virgules ou en début, le verbe reste au singulier. Piège : accorder au pluriel en croyant que \"avec\" équivaut à \"et\"."
-    },
-    {
-      "q": "\"Il m'a dit qu'il _______ le lendemain.\" Choisissez la forme correcte (discours indirect au passé).",
-      "o": [
+        "viendrait",
         "viendra",
         "vient",
-        "viendrait",
         "est venu"
       ],
-      "r": 2,
-      "x": "Discours indirect : verbe principal au passé (\"a dit\") → le futur simple devient conditionnel présent (futur dans le passé). \"Il viendrait le lendemain\" = transposition correcte. Règle de concordance des temps au discours indirect : présent → imparfait ; futur → conditionnel présent ; passé composé → plus-que-parfait. Piège : laisser le futur \"viendra\" sans appliquer la concordance."
-    },
-    {
-      "q": "\"L'ostracisme\" est :",
-      "o": [
-        "Un discours public d'éloge",
-        "Un système de vote démocratique ancien",
-        "L'exclusion ou la mise à l'écart d'une personne d'un groupe",
-        "Un engagement communautaire"
-      ],
-      "r": 2,
-      "x": "\"Ostracisme\" (du grec \"ostrakon\" = coquille d'huître, utilisée pour voter l'exil) désigne l'exclusion d'un individu d'un groupe, souvent de façon informelle. Exemple : \"Il a été victime d'ostracisme de la part de ses collègues.\" Piège : se rappeler uniquement du sens historique (vote d'exil) et manquer l'usage courant d'exclusion sociale."
-    },
-    {
-      "q": "\"Promulguer\" une loi signifie :",
-      "o": [
-        "La proposer pour débat",
-        "La rejeter définitivement",
-        "La modifier partiellement",
-        "La rendre exécutoire en l'authentifiant officiellement"
-      ],
-      "r": 3,
-      "x": "\"Promulguer\" désigne l'acte par lequel le chef de l'État rend une loi exécutoire après son vote par le parlement. À distinguer de : \"adopter\" (le parlement vote), \"abroger\" (supprimer), \"amender\" (modifier), \"ajourner\" (reporter). Piège : confondre avec \"annoncer\" ou \"proposer\" — la promulgation est l'acte juridique final."
-    },
-    {
-      "q": "\"Le peu d'informations _______ suffire à la prise de décision.\" Choisissez la forme correcte.",
-      "o": [
-        "devrait",
-        "doivent",
-        "devront",
-        "devraient"
-      ],
       "r": 0,
-      "x": "Quand \"le peu de\" insiste sur la petite quantité (sens restrictif négatif), le verbe s'accorde au singulier avec \"le peu\". \"Le peu d'informations devrait suffire\" → singulier. Si on insistait sur les informations elles-mêmes : \"devraient\" serait toléré. En concours, l'accord au singulier est préféré pour marquer l'idée d'insuffisance. Piège : toujours accorder avec le nom pluriel suivant."
+      "x": "Quand le verbe introducteur est au passé, le futur devient conditionnel présent (futur dans le passé). Garder « viendra » ne respecte pas la concordance des temps. Si le fait reste à venir au moment où l'on parle, le futur peut être conservé : il m'a dit qu'il viendra demain.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"Être _______ de faire quelque chose\" = avoir la compétence légale d'accomplir un acte. Quel est le bon terme administratif ?",
+      "q": "Au discours indirect, « Es-tu au courant ? » devient « Il m'a demandé si _______ au courant » :",
       "o": [
-        "habilité",
-        "habitué",
-        "habileté",
-        "habilement"
-      ],
-      "r": 0,
-      "x": "\"Être habilité à\" signifie avoir reçu l'autorisation légale ou réglementaire d'accomplir un acte. \"L'habilitation\" désigne ce pouvoir accordé officiellement. Piège : confondre avec \"habileté\" (nom = dextérité, talent) ou \"habitué\" (accoutumé) — confusion de registre et de sens courant."
-    },
-    {
-      "q": "\"_______ être le meilleur, il a négligé l'essentiel.\" Choisissez la bonne locution concessive.",
-      "o": [
-        "Pour autant que",
-        "À force de",
-        "À vouloir",
-        "À condition de"
-      ],
-      "r": 2,
-      "x": "\"À vouloir + infinitif\" exprime la cause-conséquence avec une nuance d'excès. Ici : \"parce qu'il a voulu trop être le meilleur, il a négligé l'essentiel.\" C'est une construction participiale implicite. Piège : confondre avec \"à force de\" (= grâce à la répétition) ou \"à condition de\" (= sous réserve de)."
-    },
-    {
-      "q": "\"Il m'a demandé si _______ au courant de la décision.\" Choisissez la forme correcte (discours indirect au passé).",
-      "o": [
-        "j'étais",
         "je suis",
-        "j'aurais été",
-        "je serais"
-      ],
-      "r": 0,
-      "x": "Discours indirect au passé : le présent de l'indicatif devient imparfait. \"Es-tu au courant ?\" → \"Il m'a demandé si j'étais au courant.\" Règle : présent → imparfait au discours indirect si le verbe introducteur est au passé. Piège : laisser le présent \"je suis\" sans appliquer la concordance des temps."
-    },
-    {
-      "q": "La \"laïcité\" désigne :",
-      "o": [
-        "La pratique régulière d'une religion",
-        "Le refus de toute croyance religieuse",
-        "Le principe de séparation des institutions publiques et des organisations religieuses",
-        "La tolérance entre les différentes religions"
+        "je serais",
+        "j'étais",
+        "j'aurais été"
       ],
       "r": 2,
-      "x": "La laïcité est un principe d'organisation politique et institutionnelle qui sépare les institutions publiques de toute tutelle ou influence des organisations religieuses, garantissant la neutralité de l'État. Elle n'est pas l'athéisme ni l'hostilité à la religion. Piège : assimiler \"laïcité\" à \"absence de religion\" — la laïcité garantit la liberté de conscience et de culte dans la sphère privée."
+      "x": "Après un verbe introducteur au passé, le présent devient imparfait. Le présent « je suis » ne respecte pas la concordance des temps. Le présent peut être conservé pour une vérité générale : il m'a dit que la Terre est ronde.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"Cette erreur est _______ bénigne pour inquiéter.\" Choisissez le bon adverbe.",
-      "o": [
-        "si",
-        "trop",
-        "très",
-        "assez"
-      ],
-      "r": 1,
-      "x": "\"Trop + adjectif + pour + infinitif\" exprime une intensité excessive qui empêche une action. \"Trop bénigne pour inquiéter\" = suffisamment bénigne pour qu'on n'ait pas lieu de s'inquiéter. Piège : employer \"trop bénigne pour inquiéter\" semble paradoxal (bénigne = inoffensive), mais la structure est correcte — \"trop bénigne\" = \"d'une bénignité telle qu'elle n'inquiète pas\"."
-    },
-    {
-      "q": "Un rapport \"succinct\" :",
-      "o": [
-        "Contient des informations confidentielles",
-        "Présente tous les aspects d'une question sans exception",
-        "Est rédigé dans un style élaboré et soigné",
-        "Est bref, sans développements superflus"
-      ],
-      "r": 3,
-      "x": "\"Succinct\" (du latin \"succinctus\" = retroussé, ramassé) qualifie ce qui est court, bref, sans développement inutile. Peut parfois suggérer une brièveté insuffisante (légère connotation négative possible). Piège : confondre avec \"concis\" — \"succinct\" insiste sur la brièveté, \"concis\" sur la densité de l'information (déjà traité dans la série 1, rappel ici dans un contexte différent)."
-    },
-    {
-      "q": "\"Le directeur a ordonné que les dossiers _______ transmis dans les 48 heures.\" Choisissez la forme correcte.",
-      "o": [
-        "seront",
-        "ont été",
-        "soient",
-        "seraient"
-      ],
-      "r": 2,
-      "x": "Après \"ordonner que\" (verbe de volonté), on emploie le subjonctif. \"Soient transmis\" = subjonctif passé à la voix passive. Le futur \"seront\" et le conditionnel \"seraient\" sont toujours incorrects après des verbes de volonté. Piège : employer le futur \"seront\" qui semblerait logique après un ordre."
-    },
-    {
-      "q": "\"Inepte\" se distingue de \"inapte\" en ce que :",
-      "o": [
-        "Ils sont synonymes parfaits",
-        "\"Inapte\" est plus péjoratif qu'\"inepte\"",
-        "\"Inepte\" s'emploie uniquement pour des idées ; \"inapte\" uniquement pour des personnes",
-        "\"Inepte\" signifie absurde et sot ; \"inapte\" signifie incapable physiquement ou légalement"
-      ],
-      "r": 3,
-      "x": "\"Inepte\" = absurde, stupide (une remarque inepte). \"Inapte\" = qui ne peut pas accomplir quelque chose (inapte au service militaire). L'erreur est fréquente car les deux ont le préfixe \"in-\" négatif. Piège : les employer indifféremment et perdre une nuance essentielle en langue de concours."
-    },
-    {
-      "q": "\"Pour _______ raisons budgétaires, le projet a été suspendu.\" Choisissez le bon terme.",
-      "o": [
-        "de",
-        "des",
-        "certaines",
-        "des raisons"
-      ],
-      "r": 0,
-      "x": "\"Pour des raisons + adjectif\" : dans la structure \"pour raisons + adjectif\", le déterminant est souvent omis dans le style administratif. \"Pour raisons budgétaires\" est une formule elliptique consacrée dans la correspondance officielle. Cependant, \"pour des raisons budgétaires\" est également correct. La forme elliptique \"pour raisons de...\" est typique du style administratif soutenu. Piège : rejeter la forme sans article en croyant que c'est une faute."
-    },
-    {
-      "q": "\"Il m'a affirmé qu'il _______ fini la veille.\" Choisissez la bonne forme au discours indirect passé.",
+      "q": "Au discours indirect, « J'ai fini hier » devient « Il m'a affirmé qu'il _______ la veille » :",
       "o": [
         "a fini",
-        "aurait fini",
         "avait fini",
+        "aurait fini",
         "finira"
       ],
-      "r": 2,
-      "x": "Discours indirect au passé : le passé composé devient plus-que-parfait. \"J'ai fini hier\" → \"Il m'a affirmé qu'il avait fini la veille.\" Tableau de concordance : présent → imparfait ; passé composé → plus-que-parfait ; futur → conditionnel présent. Piège : laisser le passé composé \"a fini\" sans appliquer la concordance."
+      "r": 1,
+      "x": "Après un verbe introducteur au passé, le passé composé devient plus-que-parfait. « Hier » devient d'ailleurs « la veille » pour la même raison. De même, « demain » devient « le lendemain » et « aujourd'hui » devient « ce jour-là ».",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"À toutes fins _______ , veuillez conserver une copie de ce document.\" Choisissez la bonne orthographe.",
+      "q": "Dans « Cette erreur est _______ bénigne pour inquiéter », l'adverbe correct est :",
       "o": [
-        "utiles",
-        "utile",
-        "utiles ou utile selon le contexte",
-        "utile ou utiles, les deux sont acceptés"
+        "trop",
+        "très",
+        "assez",
+        "si"
       ],
       "r": 0,
-      "x": "\"À toutes fins utiles\" est une locution figée administrative invariablement écrite au pluriel : \"fins utiles\". Elle signifie \"pour que cela serve à quoi que ce soit d'utile\". La forme invariable au pluriel est seule correcte. Piège : écrire \"à toute fin utile\" (singulier) — forme non consacrée dans la correspondance officielle."
+      "x": "« Trop… pour + infinitif » exprime une intensité qui empêche la conséquence : l'erreur est si bénigne qu'elle n'inquiète pas. « Assez… pour » exprimerait au contraire qu'elle suffit à inquiéter. On dit de même « trop… pour que » suivi du subjonctif : trop bénigne pour qu'on s'inquiète.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"Il est _______ que vous ayez réussi ce concours.\" Choisissez le bon terme selon le sens \"très heureux\".",
+      "q": "Dans « Le directeur a ordonné que les dossiers _______ transmis sous 48 heures », la forme correcte est :",
       "o": [
-        "bienheureux",
-        "heureux",
-        "enchanté",
-        "ravi"
+        "seront",
+        "sont",
+        "seraient",
+        "soient"
       ],
       "r": 3,
-      "x": "\"Ravi\" est l'adjectif exprimant une grande joie dans la langue soutenue courante. \"Enchanté\" s'emploie dans les formules de présentation. \"Bienheureux\" a une connotation religieuse ou littéraire. \"Ravi\" est la nuance précise attendue pour \"très heureux d'une bonne nouvelle\". Piège : choisir \"bienheureux\" en croyant que le préfixe \"bien-\" accentue \"heureux\" — usage restrictif."
+      "x": "Après un verbe de volonté (ordonner, exiger, vouloir, demander que), on emploie le subjonctif. Le futur « seront » est une faute fréquente parce que l'ordre porte sur l'avenir. Avec « décider que » ou « arrêter que », en revanche, on emploie l'indicatif : le directeur a décidé que les dossiers seront transmis.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"_______ difficile que soit la tâche, elle doit être accomplie.\" Choisissez la bonne forme.",
+      "q": "La locution correctement orthographiée est :",
       "o": [
-        "Aussi",
-        "Quelque",
-        "Si",
-        "A, B et C sont corrects selon la construction"
+        "À toute fins utiles",
+        "À toutes fin utile",
+        "À toutes fins utiles",
+        "À toutes faims utiles"
       ],
-      "r": 3,
-      "x": "Trois constructions concessive sont possibles avec le subjonctif : \"aussi difficile que soit\", \"quelque difficile que soit\" (rare), \"si difficile que soit\". Elles signifient toutes \"quelle que soit la difficulté de la tâche\". En concours, \"aussi difficile que soit\" et \"si difficile que soit\" sont les plus attendues. Piège : croire qu'une seule est correcte."
+      "r": 2,
+      "x": "La locution figée s'écrit au pluriel : « à toutes fins utiles », c'est-à-dire pour servir le cas échéant. « Faims » est une confusion avec le nom « faim ». On écrit de même au pluriel « en toutes lettres » et « de toutes parts ».",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"Elle s'est _______ que tout irait bien.\" Choisissez le PP correct de \"s'imaginer\".",
+      "q": "Dans « Elle s'est _______ que tout irait bien », la forme correcte est :",
       "o": [
-        "imaginé",
         "imaginée",
         "imaginés",
-        "imaginée ou imaginé selon le sens"
-      ],
-      "r": 1,
-      "x": "\"S'imaginer que\" : le pronom \"se\" est COD du verbe \"imaginer\" (s'imaginer = imaginer à soi-même quelque chose). Le COD précède le verbe → PP s'accorde avec \"se\" (= elle, féminin singulier) → \"imaginée\". Règle : à distinguer de \"se rendre compte\" où \"se\" est COI. Piège : laisser invariable en croyant que \"que tout irait bien\" est le COD."
-    },
-    {
-      "q": "La \"candeur\" se distingue de la \"naïveté\" en ce que :",
-      "o": [
-        "Ce sont des synonymes parfaits",
-        "\"Naïveté\" est positif ; \"candeur\" est péjoratif",
-        "\"Candeur\" est toujours péjoratif",
-        "\"Candeur\" désigne une pureté sincère et non feinte ; \"naïveté\" implique souvent un manque de discernement"
+        "imaginées",
+        "imaginé"
       ],
       "r": 3,
-      "x": "\"Candeur\" (du latin \"candor\" = blancheur, pureté) désigne une sincérité désarmante, une pureté d'âme sans arrière-pensée — connotation souvent positive. \"Naïveté\" peut avoir une connotation négative (crédulité, manque de jugement). Piège : les employer indifféremment — la nuance est attendue dans les épreuves de vocabulaire."
+      "x": "Dans « s'imaginer que », le COD est la proposition « que tout irait bien », placée après le verbe, et « se » est COI. Le participe reste donc invariable. Sans complément, « s'imaginer » s'accorde : elle s'est imaginée seule au monde.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"Ces décisions se sont _______ sans heurts.\" Choisissez le PP correct de \"se prendre\".",
+      "q": "Dans « Ces décisions se sont _______ sans heurts », la forme correcte est :",
       "o": [
         "pris",
         "prises",
@@ -2532,1242 +2197,299 @@ const QUESTIONS = {
         "prit"
       ],
       "r": 1,
-      "x": "\"Se prendre\" : le pronom \"se\" est COD (sujet + prendre + soi-même → prendre les décisions). \"Ces décisions\" (féminin pluriel) = sujet → PP s'accorde avec \"se\" (COD = ces décisions, féminin pluriel) → \"prises\". Règle : vérifier si le pronom \"se\" est COD ou COI avant d'accorder. Piège : laisser invariable \"pris\" par analogie avec les verbes à COI."
+      "x": "Le verbe pronominal a ici un sens passif (les décisions ont été prises) : le participe s'accorde avec le sujet féminin pluriel. « Prit » est un passé simple. On écrit de même « ces livres se sont bien vendus ».",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"De peur qu'il _______ trop tard, il a accéléré.\" Choisissez la forme correcte.",
+      "q": "En langue soutenue, dans « De peur qu'il _______ trop tard, il a accéléré », la forme correcte est :",
       "o": [
-        "est",
-        "soit",
-        "serait",
+        "n'est",
+        "ne sera",
+        "ne serait",
         "ne soit"
       ],
       "r": 3,
-      "x": "\"De peur que\" exige le subjonctif, généralement accompagné du \"ne\" explétif non négatif : \"de peur qu'il ne soit trop tard\". La forme sans \"ne\" (\"de peur qu'il soit\") est grammaticalement correcte mais le \"ne\" explétif est recommandé dans la langue soutenue. Piège : omettre le \"ne\" explétif, ce qui peut coûter des points dans une épreuve de style."
+      "x": "« De peur que » exige le subjonctif, généralement précédé d'un « ne » explétif qui n'a pas de valeur négative. « N'est » emploie à tort l'indicatif. « De crainte que » se construit de la même façon : de crainte qu'il ne soit trop tard.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"_______ qu'il pleuve, la réunion est maintenue.\" Choisissez la locution concessive correcte.",
-      "o": [
-        "Pourvu",
-        "Encore que",
-        "Quand bien même",
-        "Bien que"
-      ],
-      "r": 3,
-      "x": "\"Bien que + subjonctif\" est la locution concessive qui introduit une opposition (\"même si\"). \"Pourvu que\" exprime un souhait conditionnel, \"encore que\" nuance ou atténue. \"Quand bien même + conditionnel\" exprime une hypothèse concessive. Seul \"bien que\" s'emploie ici avec le subjonctif pour marquer la concession malgré la pluie. Piège : employer \"pourvu que\" en sens concessif alors qu'il exprime un souhait."
-    },
-    {
-      "q": "\"Il a travaillé _______ pour que ses collaborateurs méritent leur avancement.\" Choisissez la bonne locution.",
-      "o": [
-        "suffisamment",
-        "assez dur",
-        "dur",
-        "A et B sont corrects"
-      ],
-      "r": 3,
-      "x": "\"Assez\" et \"suffisamment\" sont synonymes adverbiaux signifiant \"en quantité ou intensité suffisante\". \"Travailler assez dur pour que\" et \"travailler suffisamment pour que\" sont tous deux corrects. \"Dur\" seul (adverbe) est possible mais moins soutenu. Piège : rejeter l'une des deux formules en croyant que seule l'autre est correcte."
-    },
-    {
-      "q": "\"L'_______ de ce concept en droit administratif burkinabè est large.\" Choisissez le bon terme pour désigner les sens du concept.",
-      "o": [
-        "acception",
-        "exception",
-        "acceptation",
-        "acception ou exception selon le contexte"
-      ],
-      "r": 0,
-      "x": "\"Acception\" désigne chacun des sens différents d'un mot ou d'un concept. \"Dans toute l'acception du terme\" = dans tous les sens du terme. \"Exception\" = ce qui n'entre pas dans la règle. \"Acceptation\" = le fait d'accepter. Piège : confondre \"acception\" et \"acceptation\" — les deux viennent du latin \"accipere\" mais ont des sens totalement différents."
-    },
-    {
-      "q": "Un texte \"prescriptif\" :",
-      "o": [
-        "Décrit une réalité sans la juger",
-        "Interdit certaines pratiques",
-        "Impose ou recommande des comportements, des règles à suivre",
-        "Commente et analyse des textes antérieurs"
-      ],
-      "r": 2,
-      "x": "Un texte prescriptif dit ce qu'il faut faire, ce qu'on doit ou ne doit pas faire (règlement, loi, mode d'emploi). Opposé à \"descriptif\" (qui décrit ce qui est). Exemple : \"Le règlement intérieur est un texte prescriptif.\" Piège : confondre avec \"prohibitif\" (qui interdit, connotation de coût excessif ou d'interdiction stricte)."
-    },
-    {
-      "q": "\"Encore qu'il _______ plusieurs lacunes, ce rapport reste utile.\" Choisissez la forme correcte.",
-      "o": [
-        "présentait",
-        "présente",
-        "présentera",
-        "présenterait"
-      ],
-      "r": 1,
-      "x": "\"Encore que\" est une locution concessive qui exige le subjonctif présent (ou passé). \"Présente\" est le subjonctif présent de \"présenter\". Encore que = bien que, quoique. Piège : employer l'indicatif imparfait \"présentait\" car \"encore que\" peut sembler factuel — mais il reste une locution de concession exigeant le subjonctif."
-    },
-    {
-      "q": "L'\"animosité\" se distingue de l'\"acrimonie\" en ce que :",
-      "o": [
-        "Ce sont des synonymes exacts interchangeables",
-        "\"Acrimonie\" implique une hostilité ouverte ; \"animosité\" est plus discrète",
-        "\"Animosité\" est une disposition hostile envers quelqu'un ; \"acrimonie\" qualifie l'amertume du ton ou des propos",
-        "\"Animosité\" s'emploie uniquement dans les textes officiels"
-      ],
-      "r": 2,
-      "x": "\"Animosité\" désigne une hostilité, une malveillance envers une personne. \"Acrimonie\" qualifie davantage l'âpreté, l'amertume du ton dans les paroles ou les écrits. Exemple : \"Il lui parle avec acrimonie mais sans animosité personnelle.\" Piège : les assimiler totalement et perdre une nuance lexicale rare attendue en concours avancé."
-    },
-    {
-      "q": "\"La numérisation _______ les procédures n'exclut pas le risque d'erreurs.\" Choisissez la bonne forme de \"tout\".",
-      "o": [
-        "tout de",
-        "toute de",
-        "toute",
-        "tout"
-      ],
-      "r": 2,
-      "x": "\"Toute\" est ici adjectif (déterminant indéfini) devant le nom féminin singulier \"numérisation\". \"Toute la numérisation\" ou \"toute numérisation\" s'accorde en féminin. À ne pas confondre avec \"tout\" adverbe (devant adjectif). Piège : laisser \"tout\" invariable dans tous les contextes."
-    },
-    {
-      "q": "\"Abroger\" une loi signifie :",
-      "o": [
-        "La modifier partiellement",
-        "La renforcer par des décrets d'application",
-        "La soumettre à une nouvelle lecture parlementaire",
-        "La supprimer totalement et définitivement"
-      ],
-      "r": 3,
-      "x": "\"Abroger\" = supprimer entièrement un texte de loi ou un règlement. À distinguer de : \"amender\" (modifier partiellement), \"promulguer\" (rendre exécutoire), \"ajourner\" (reporter), \"suspendre\" (interrompre temporairement). Piège : confondre avec \"modifier\" ou \"amender\" — l'abrogation est une suppression totale et non une révision."
-    },
-    {
-      "q": "\"Les agents qui se sont _______ le travail équitablement ont été félicités.\" Choisissez le PP correct de \"se partager\".",
-      "o": [
-        "partagé",
-        "partagés",
-        "partagée",
-        "partagées"
-      ],
-      "r": 0,
-      "x": "\"Se partager quelque chose\" : \"le travail\" est le COD, placé APRÈS le verbe → pas d'accord avec le COD postposé. Le pronom \"se\" est ici COI (partager entre eux). PP invariable : \"partagé\". Piège : accorder avec \"les agents\" (masculin pluriel) et écrire \"partagés\" — l'accord ne se fait que si le COD est antéposé."
-    },
-    {
-      "q": "La \"prégnance\" d'une idée désigne :",
-      "o": [
-        "Sa fragilité et sa fugacité",
-        "Sa complexité et son caractère obscur",
-        "Sa force d'impression sur l'esprit, son impact durable",
-        "Son ancienneté dans la pensée philosophique"
-      ],
-      "r": 2,
-      "x": "\"Prégnant\" / \"prégnance\" : ce qui s'impose fortement à l'esprit, qui marque durablement. Exemple : \"La prégnance de cette image symbolique dans l'imaginaire collectif burkinabè.\" Terme littéraire et intellectuel rare en français courant. Piège : le relier à \"enceinte\" (grossesse, même racine latine \"praegnans\") — sens différent."
-    },
-    {
-      "q": "\"Elle nous a _______ de partager cette information.\" Choisissez la forme correcte.",
-      "o": [
-        "demandé",
-        "demandée",
-        "demandés",
-        "demandées"
-      ],
-      "r": 0,
-      "x": "\"Demander à quelqu'un de faire quelque chose\" : le COD de \"demander\" est \"nous\" (COI en réalité, car on demande à nous). \"Demander à\" → le PP \"demandé\" est invariable car \"nous\" est COI. Piège : accorder \"demandé\" avec \"nous\" (pluriel) en le traitant comme un COD."
-    },
-    {
-      "q": "Un terme \"univoque\" est un terme :",
-      "o": [
-        "Qui a plusieurs sens selon le contexte",
-        "Qui n'a qu'un seul sens possible, sans ambiguïté",
-        "Qui appartient à une seule langue",
-        "Qui est utilisé par une seule catégorie de spécialistes"
-      ],
-      "r": 1,
-      "x": "\"Univoque\" (préfixe \"uni-\" = un seul + \"vox\" = voix, sens) qualifie ce qui n'a qu'une seule signification possible. Antonyme de \"équivoque\" (plusieurs sens). Exemple : \"Un signal univoque ne prête pas à interprétation.\" Piège : confondre avec \"unique\" (seul de son espèce) — \"univoque\" porte sur le sens, pas sur la singularité."
-    },
-    {
-      "q": "\"Nous avons _______ les documents nécessaires.\" Choisissez le PP correct de \"se procurer\".",
-      "o": [
-        "procuré",
-        "procurés",
-        "procurée",
-        "procurées"
-      ],
-      "r": 0,
-      "x": "\"Se procurer quelque chose\" : \"les documents\" est COD placé APRÈS le verbe → pas d'accord. \"Nous nous sommes procuré les documents.\" Si le COD était antéposé : \"les documents que nous nous sommes procurés\" → accord. Piège : accorder systématiquement le PP pronominal avec le sujet."
-    },
-    {
-      "q": "\"_______ belle qu'elle soit, cette proposition reste irréaliste.\" Choisissez la forme correcte.",
-      "o": [
-        "Si",
-        "Quelque",
-        "Aussi",
-        "A et C sont corrects"
-      ],
-      "r": 3,
-      "x": "\"Si belle qu'elle soit\" et \"aussi belle qu'elle soit\" sont deux formules concessives équivalentes signifiant \"quelle que soit sa beauté\". Toutes deux s'emploient avec le subjonctif. \"Quelque belle\" est un emploi littéraire possible mais rare. Piège : ne connaître qu'une des deux formules standard."
-    },
-    {
-      "q": "\"L'_______ de ce chercheur est reconnue dans tout le pays.\" Choisissez le bon terme.",
-      "o": [
-        "omniprésence",
-        "ubiquité",
-        "omniscience",
-        "ubiquité ou omniprésence sont acceptés"
-      ],
-      "r": 3,
-      "x": "\"Ubiquité\" (du latin \"ubique\" = partout) = faculté d'être présent en plusieurs endroits à la fois. \"Omniprésence\" = le fait d'être présent partout. Les deux sont proches mais \"ubiquité\" est plus littéraire et insiste sur le caractère extraordinaire du phénomène. En concours, les deux sont acceptés dans ce contexte. Piège : choisir \"omniscience\" (= savoir tout) qui porte sur la connaissance, non la présence."
-    },
-    {
-      "q": "\"Les résultats que vous avez _______ obtenir sont excellents.\" Choisissez la forme correcte.",
-      "o": [
-        "réussi à",
-        "réussis à",
-        "réussie à",
-        "réussis"
-      ],
-      "r": 0,
-      "x": "\"Réussir à + infinitif\" : le PP \"réussi\" est invariable car suivi d'un infinitif implicite. \"Les résultats que vous avez réussi à obtenir\" → \"réussi\" invariable. L'antécédent \"les résultats\" ne détermine pas l'accord quand le PP est suivi d'un infinitif complétant le sens. Piège : accorder \"réussi\" avec \"les résultats\" (masculin pluriel) et écrire \"réussis\"."
-    },
-    {
-      "q": "Un \"plaidoyer\" se distingue d'un \"réquisitoire\" en ce que :",
-      "o": [
-        "Le plaidoyer s'emploie uniquement à l'oral ; le réquisitoire uniquement à l'écrit",
-        "Le plaidoyer défend ; le réquisitoire accuse et condamne",
-        "Les deux sont des synonymes dans la langue courante",
-        "Le plaidoyer est plus formel que le réquisitoire"
-      ],
-      "r": 1,
-      "x": "\"Plaidoyer\" = discours en défense d'une cause ou d'une personne. \"Réquisitoire\" = discours de condamnation ou de mise en accusation. Termes antonymes d'origine judiciaire à usage courant. Exemple : \"Son discours était un plaidoyer pour la réforme et un réquisitoire contre l'immobilisme.\" Piège : les confondre dans leur emploi figuré courant."
-    },
-    {
-      "q": "\"Le fonctionnaire _______ à ses obligations réglementaires.\" Choisissez le verbe correct signifiant \"se conformer rigoureusement\".",
-      "o": [
-        "se plie",
-        "s'asservit",
-        "s'astreint",
-        "s'oblige"
-      ],
-      "r": 2,
-      "x": "\"S'astreindre à\" = s'imposer une obligation avec rigueur, se contraindre. \"Il s'astreint à respecter les délais\" = il se contraint rigoureusement à les respecter. Piège : confondre avec \"se soumettre à\" (connotation de résignation) ou \"s'obliger à\" (moins soutenu)."
-    },
-    {
-      "q": "\"Loin que les résultats _______ satisfaisants, ils révèlent des lacunes.\" Choisissez la forme correcte.",
-      "o": [
-        "soient",
-        "sont",
-        "seraient",
-        "aient été"
-      ],
-      "r": 0,
-      "x": "\"Loin que\" est une locution concessive qui exige le subjonctif. \"Soient\" est le subjonctif présent de \"être\". \"Loin que les résultats soient satisfaisants\" = loin d'être satisfaisants. Piège : employer l'indicatif \"sont\" qui semblerait logique (\"les résultats ne sont pas satisfaisants\") — mais après \"loin que\", c'est le subjonctif qui s'impose."
-    },
-    {
-      "q": "La \"flagrance\" d'une infraction désigne :",
-      "o": [
-        "Son caractère peu grave et facilement pardonnable",
-        "Sa complexité technique",
-        "Son ancienneté dans le temps",
-        "Son évidence manifeste, le fait qu'elle est commise sous les yeux de tous"
-      ],
-      "r": 3,
-      "x": "\"Flagrant\" (du latin \"flagrare\" = brûler) = ce qui est tellement évident qu'on ne peut pas le nier. \"En flagrant délit\" = pris sur le fait. Proche de \"patent\" et \"manifeste\". Piège : confondre avec \"flagrant\" au sens de \"grave\" — \"flagrant\" ne qualifie pas la gravité mais l'évidence."
-    },
-    {
-      "q": "\"La commission a décidé _______ les candidats non-conformes.\" Choisissez la locution correcte.",
-      "o": [
-        "de l'exclusion à",
-        "d'exclure de",
-        "d'écarter",
-        "B et C sont équivalents"
-      ],
-      "r": 3,
-      "x": "\"Écarter\" et \"exclure de\" sont deux verbes corrects et équivalents dans ce contexte. \"Exclure de la liste\" = ne pas retenir. \"Écarter\" = mettre de côté. Les deux sont acceptables dans la langue administrative. Piège : croire qu'une seule formulation est correcte et rejeter l'autre."
-    },
-    {
-      "q": "\"_______ les instructions du directeur, le service a procédé à la vérification.\" Choisissez la locution administrative correcte.",
-      "o": [
-        "Conformément à",
-        "Selon de",
-        "En suite de",
-        "Suite de"
-      ],
-      "r": 0,
-      "x": "\"Conformément à\" = en accord avec, en application de. Locution prépositionnelle formelle et correcte dans le style administratif. \"Selon\" est également possible mais \"conformément à\" est la forme privilégiée dans les documents officiels. \"En suite de\" et \"suite de\" n'existent pas. Piège : employer \"suite à\" (déjà signalé comme déconseillé) à la place de \"conformément à\"."
-    },
-    {
-      "q": "\"Elle s'est _______ dans ses fonctions avec beaucoup de professionnalisme.\" Choisissez le PP correct de \"s'acquitter\".",
-      "o": [
-        "acquittés",
-        "acquittée",
-        "acquitté",
-        "acquittées"
-      ],
-      "r": 2,
-      "x": "\"S'acquitter de\" : \"acquitter\" + de → COI. Le pronom \"se\" est COI → PP invariable. \"Elle s'est acquitté de ses fonctions\" → \"acquitté\" invariable. Piège : accorder avec le sujet féminin singulier \"elle\" et écrire \"acquittée\" — erreur de PP pronominal à COI."
-    },
-    {
-      "q": "La \"lucidité\" se distingue de la \"perspicacité\" en ce que :",
-      "o": [
-        "Ce sont des synonymes parfaits",
-        "\"Lucidité\" = voir clairement sa propre situation ou la réalité ; \"perspicacité\" = déceler ce qui est caché chez autrui",
-        "\"Perspicacité\" s'emploie uniquement à l'écrit",
-        "\"Lucidité\" est plus rare que \"perspicacité\" en français courant"
-      ],
-      "r": 1,
-      "x": "\"Lucidité\" (du latin \"lucidus\" = clair) = capacité à voir la réalité telle qu'elle est, sans illusion, souvent sur soi-même. \"Perspicacité\" = finesse pour deviner ce que les autres cachent. Exemple : \"Il a eu la lucidité de reconnaître ses erreurs et la perspicacité de déceler celles des autres.\" Piège : les employer indifféremment — nuance subtile attendue en concours."
-    },
-    {
-      "q": "\"_______ soit le mérite de chacun, la décision finale appartient au jury.\" Choisissez la forme correcte.",
-      "o": [
-        "Quel que",
-        "Quelque",
-        "Quelles que",
-        "Quelqu'"
-      ],
-      "r": 0,
-      "x": "\"Quel que soit + nom singulier masculin\" : \"le mérite\" est masculin singulier → \"Quel que soit le mérite\". \"Quel\" s'accorde avec le sujet de \"être\". Piège : écrire \"quelque soit\" (faute d'accord + deux mots vs un seul) ou \"quelle que soit\" (accord féminin incorrect ici)."
-    },
-    {
-      "q": "Le verbe \"amender\" en droit désigne :",
-      "o": [
-        "Modifier partiellement un texte de loi ou un document officiel",
-        "Abroger un texte juridique",
-        "Condamner à une amende",
-        "Promulguer un nouveau texte"
-      ],
-      "r": 0,
-      "x": "\"Amender\" = introduire des modifications partielles dans un texte de loi, un traité ou un document officiel. Un \"amendement\" est la modification proposée. À distinguer de : \"abroger\" (supprimer totalement) et \"promulguer\" (rendre exécutoire). Piège : confondre avec le substantif \"amende\" (sanction pécuniaire) — même racine mais sens différent."
-    },
-    {
-      "q": "\"Ils se sont _______ la parole pendant toute la réunion.\" Choisissez le PP correct de \"se couper\".",
-      "o": [
-        "coupé",
-        "coupés",
-        "coupée",
-        "coupées"
-      ],
-      "r": 0,
-      "x": "\"Se couper la parole\" : \"la parole\" est le COD, placé APRÈS \"se couper\". Pas d'accord avec le COD postposé. Le pronom \"se\" est COI (couper la parole à soi-même mutuellement). PP invariable : \"coupé\". Piège : accorder avec le sujet \"ils\" (masculin pluriel) et écrire \"coupés\" — confusion COD/COI."
-    },
-    {
-      "q": "\"En l'espèce\" est une locution juridique qui signifie :",
-      "o": [
-        "En théorie",
-        "Dans un cas hypothétique",
-        "De façon générale",
-        "Dans le cas particulier dont il est question"
-      ],
-      "r": 3,
-      "x": "\"En l'espèce\" (du latin \"species\" = cas particulier) désigne le cas concret qui est examiné, par opposition aux principes généraux. Exemple : \"En l'espèce, l'agent n'a pas respecté le délai réglementaire.\" Locution fondamentale en rédaction juridique et administrative. Piège : la méconnaître totalement ou la confondre avec \"en l'occurrence\" (quasi-synonyme)."
-    },
-    {
-      "q": "\"Susmentionné\" et \"précité\" sont des termes administratifs signifiant :",
-      "o": [
-        "Ce qui sera mentionné plus loin",
-        "Ce qui a été mentionné ci-dessus, précédemment dans le document",
-        "Ce qui est reconnu officiellement",
-        "Ce qui est contesté"
-      ],
-      "r": 1,
-      "x": "\"Susmentionné\" (= mentionné ci-dessus) et \"précité\" (= cité précédemment) renvoient à un élément déjà évoqué dans le texte. Équivalents de \"ledit\" ou \"dudit\". Exemple : \"Le décret susmentionné prend effet dès sa signature.\" Piège : confondre avec \"susdit\" (= ci-dessus dit) — quasi-synonymes mais \"précité\" renvoie spécifiquement à une citation antérieure."
-    },
-    {
-      "q": "\"Elle _______ ses cours avec assiduité depuis le début de l'année.\" Choisissez la forme correcte.",
-      "o": [
-        "a suivi",
-        "suit",
-        "a suivis",
-        "suivit"
-      ],
-      "r": 1,
-      "x": "\"Depuis + présent\" : l'action qui a commencé dans le passé et se poursuit jusqu'au moment de l'énonciation s'exprime avec le présent de l'indicatif en français. \"Elle suit ses cours depuis le début de l'année\" = elle les suit encore maintenant. Piège : employer le passé composé \"a suivi\" qui indiquerait une action terminée, incompatible avec \"depuis\" + action en cours."
-    },
-    {
-      "q": "\"À _______ parler, cette proposition n'est pas réaliste.\" Choisissez la bonne locution adverbiale.",
-      "o": [
-        "proprement",
-        "vrai dire",
-        "vrai",
-        "franchement"
-      ],
-      "r": 0,
-      "x": "\"À proprement parler\" = si on emploie les mots dans leur sens exact et précis. Locution figée invariable fréquente dans la langue soutenue. \"À vrai dire\" est une locution différente (= en vérité, en fait). Les deux existent mais leur sens diffère légèrement. \"À franchement parler\" n'est pas une locution consacrée. Piège : confondre les deux locutions ou inventer \"à franchement parler\"."
-    },
-    {
-      "q": "\"La _______ des conclusions est indispensable dans tout rapport administratif.\" Choisissez le terme désignant la qualité de ce qui est bien fondé.",
-      "o": [
-        "pertinence",
-        "présence",
-        "précision",
-        "prévenance"
-      ],
-      "r": 0,
-      "x": "La \"pertinence\" désigne le caractère de ce qui est bien fondé, adapté exactement au sujet traité. Exemple : \"La pertinence des arguments développés dans ce rapport est reconnue.\" Piège : choisir \"précision\" qui porte sur l'exactitude des détails, non sur le rapport à la question traitée."
-    },
-    {
-      "q": "\"De _______ affaires, les plus urgentes ont été traitées.\" Choisissez la bonne forme.",
-      "o": [
-        "nombreuses",
-        "nombreuse",
-        "nombreux",
-        "nombreux ou nombreuses selon le registre"
-      ],
-      "r": 0,
-      "x": "\"Affaires\" est féminin pluriel → \"De nombreuses affaires\". L'adjectif \"nombreux\" s'accorde en genre et en nombre avec le nom. Piège : employer \"nombreux\" (masculin pluriel) par défaut sans vérifier le genre du nom."
-    },
-    {
-      "q": "\"_______ difficile que soit la tâche, le fonctionnaire doit l'assumer.\" Choisissez la construction concessive la plus soutenue.",
-      "o": [
-        "Si",
-        "Aussi",
-        "Quelque",
-        "Toutes sont correctes et équivalentes"
-      ],
-      "r": 3,
-      "x": "Les trois constructions (\"si... que\", \"aussi... que\", \"quelque... que\") sont des locutions concessives grammaticalement correctes, toutes suivies du subjonctif. \"Quelque... que\" est la plus littéraire et soutenue ; \"aussi... que\" et \"si... que\" sont plus courantes. En concours de niveau avancé, les trois sont acceptées. Piège : rejeter \"quelque\" sans reconnaître son emploi comme adverbe invariable dans cette construction."
-    },
-    {
-      "q": "\"Le bureau _______ des affaires traitées hier a été retrouvé.\" Choisissez la bonne forme.",
-      "o": [
-        "responsable",
-        "responsables",
-        "responsable de",
-        "en charge"
-      ],
-      "r": 2,
-      "x": "\"Le bureau responsable de\" est la construction correcte : \"responsable de + nom\" est une locution adjective invariable dans le sens de \"chargé de, qui a la responsabilité de\". \"Responsable\" s'accorde avec \"le bureau\" (masculin singulier) → \"responsable\" (pas de pluriel ici). Piège : ajouter une préposition incorrecte ou ne pas accorder avec le nom."
-    },
-    {
-      "q": "\"Elle a été _______ de remplir ses obligations contractuelles.\" Choisissez le bon terme signifiant \"mise en demeure légalement\".",
-      "o": [
-        "astreinte",
-        "obligée",
-        "forclose",
-        "astreinte ou obligée selon le degré de contrainte"
-      ],
-      "r": 0,
-      "x": "\"Être astreint à\" = être contraint légalement ou réglementairement à accomplir quelque chose. Terme administratif et juridique précis. \"Obligé\" est plus général et courant. \"Forclose\" = privée de son droit (hors délai) — sens différent. Piège : employer \"obligée\" qui est correct mais moins précis dans le style administratif formal."
-    },
-    {
-      "q": "\"Il a demandé _______ il pouvait obtenir ce document.\" Choisissez la bonne forme.",
-      "o": [
-        "comment",
-        "que",
-        "si",
-        "où"
-      ],
-      "r": 0,
-      "x": "\"Comment\" introduit une interrogative indirecte portant sur la manière. \"Il a demandé comment il pouvait obtenir ce document\" = la question portait sur le moyen, la procédure. \"Si\" introduirait une question fermée (oui/non). Piège : employer \"si\" qui changerait totalement le sens de la question posée."
-    },
-    {
-      "q": "\"Les agents se sont _______ de la situation délicate.\" Choisissez le PP correct de \"se sortir\".",
-      "o": [
-        "sortis",
-        "sortie",
-        "sorti",
-        "sortis ou sorti selon le nombre"
-      ],
-      "r": 0,
-      "x": "\"Se sortir de\" : \"sortir de\" est ici transitif indirect ? Non — \"se sortir de\" fonctionne comme un verbe pronominal où \"se\" est COD (\"sortir soi-même de\"). Accord avec le sujet \"les agents\" (masculin pluriel) → \"sortis\". Règle : \"se sortir de\" = \"sortir soi-même de quelque chose\" → accord avec le sujet. Piège : laisser invariable en croyant que \"de\" marque un COI."
-    },
-    {
-      "q": "Le participe présent \"chantant\" se distingue de l'adjectif verbal \"chantant\" en ce que :",
-      "o": [
-        "Le participe présent est invariable ; l'adjectif verbal s'accorde",
-        "L'adjectif verbal est invariable ; le participe présent s'accorde",
-        "Les deux sont invariables",
-        "Les deux s'accordent en genre et en nombre"
-      ],
-      "r": 0,
-      "x": "Le participe présent est toujours invariable et exprime une action. L'adjectif verbal exprime une qualité et s'accorde comme un adjectif ordinaire. Test : peut-on remplacer par \"qui + verbe\" ? Si oui, participe présent. Exemple : \"Une voix chantante\" (adjectif, accord) vs \"en chantant\" (participe, invariable). Piège : accorder le participe présent ou laisser invariable l'adjectif verbal."
-    },
-    {
-      "q": "\"Les conclusions _______ de ce rapport feront l'objet d'un communiqué.\" Choisissez la bonne forme du participe adjectival.",
-      "o": [
-        "résultant",
-        "résultantes",
-        "résultants",
-        "résultante"
-      ],
-      "r": 1,
-      "x": "\"Résultant\" peut être participe présent (invariable) ou adjectif verbal. \"Les conclusions résultantes\" = adjectif verbal (qualité permanente des conclusions) → accord féminin pluriel \"résultantes\". Si c'était une action en cours : \"les conclusions résultant de l'enquête\" (participe, invariable). Piège : laisser invariable en confondant avec le participe présent."
-    },
-    {
-      "q": "\"Douter que quelqu'un _______ honnête est légitime.\" Choisissez la forme correcte.",
-      "o": [
-        "est",
-        "soit",
-        "serait",
-        "a été"
-      ],
-      "r": 1,
-      "x": "\"Douter que\" (forme affirmative) exige le subjonctif car le doute suspend l'affirmation du fait. \"Douter que quelqu'un soit honnête\" → subjonctif présent. En revanche, \"ne pas douter que\" + indicatif : la certitude est affirmée. Piège : employer l'indicatif \"est\" après \"douter que\" affirmatif — faute caractérisée."
-    },
-    {
-      "q": "\"Espérer que quelqu'un _______ est naturel.\" Choisissez la bonne forme selon que \"espérer\" est affirmatif.",
-      "o": [
-        "viendra",
-        "vienne",
-        "soit venu",
-        "viendrait"
-      ],
-      "r": 0,
-      "x": "\"Espérer que\" à la forme AFFIRMATIVE prend l'indicatif (futur simple ici pour exprimer une attente future). Contrairement à \"craindre que\" et \"douter que\", \"espérer que\" affirmatif est suivi de l'indicatif. À la forme négative ou interrogative : subjonctif. Piège : employer le subjonctif \"vienne\" après \"espérer que\" affirmatif — faute très fréquente par généralisation du subjonctif."
-    },
-    {
-      "q": "\"Il s'est _______ de l'issue de ce procès.\" Choisissez le PP correct de \"se réjouir\".",
-      "o": [
-        "réjoui",
-        "réjouie",
-        "réjouies",
-        "réjouis"
-      ],
-      "r": 0,
-      "x": "\"Se réjouir de\" : \"réjouir à / de\" est un verbe transitif indirect. Le pronom \"se\" est COI (réjouir à soi-même) → PP invariable. \"Il s'est réjoui\" → \"réjoui\" invariable, quel que soit le genre ou le nombre du sujet. Piège : accorder avec le sujet ou avec le complément prépositionnel."
-    },
-    {
-      "q": "La différence entre une \"circulaire\" et une \"note de service\" :",
-      "o": [
-        "Ce sont des termes synonymes parfaitement interchangeables",
-        "La note de service est destinée à l'extérieur ; la circulaire à l'intérieur",
-        "La circulaire peut s'adresser à plusieurs services ou niveaux ; la note de service est souvent interne à un service",
-        "La circulaire est signée par le ministre ; la note de service par tout chef de service"
-      ],
-      "r": 2,
-      "x": "La circulaire émane généralement d'un ministère ou d'une autorité supérieure et s'adresse à plusieurs services ou niveaux hiérarchiques pour interpréter des textes ou donner des instructions. La note de service est un document interne de gestion quotidienne au sein d'un service."
-    },
-    {
-      "q": "\"_______ que vous travailliez, un effort supplémentaire sera nécessaire.\" Choisissez la locution correcte.",
-      "o": [
-        "Encore que",
-        "Si peu",
-        "Quoi que",
-        "C et A sont corrects"
-      ],
-      "r": 2,
-      "x": "\"Quoi que + subjonctif\" = quelle que soit la chose que (concession). \"Quoi que vous travailliez\" = quelle que soit la quantité de travail que vous fournissez. \"Encore que\" = bien que (nuance d'atténuation). \"Si peu que\" = quelque petite quantité que. \"Quoi que\" est la locution la plus précise ici. Piège : confondre \"quoi que\" (deux mots) avec \"quoique\" (un mot = bien que)."
-    },
-    {
-      "q": "\"L'agent a été _______ à titre conservatoire.\" Choisissez la bonne forme de \"suspendre\".",
-      "o": [
-        "suspendu",
-        "suspendue",
-        "suspendus",
-        "suspendue ou suspendu selon le genre de l'agent"
-      ],
-      "r": 0,
-      "x": "À la voix passive, le PP s'accorde avec le sujet. \"L'agent\" est masculin singulier → \"a été suspendu\" (masculin singulier). Si c'était \"l'agente\" (féminin), ce serait \"suspendue\". Ici, \"agent\" est le terme administratif neutre généralement employé au masculin → \"suspendu\". Piège : féminiser sans vérifier le genre du sujet dans le contexte."
-    },
-    {
-      "q": "\"Des mesures _______ ont été prises pour y remédier.\" Choisissez la forme correcte de \"topique\" dans le sens \"appropriée\".",
-      "o": [
-        "adéquates",
-        "topique",
-        "topical",
-        "topiques"
-      ],
-      "r": 0,
-      "x": "\"Topique\" comme adjectif signifie \"approprié, qui convient exactement au sujet\" — usage littéraire et philosophique. En langue administrative, \"adéquates\" ou \"appropriées\" sont les termes courants attendus. \"Topique\" au sens d'\"approprié\" est rare et peut prêter à confusion. La bonne réponse dans un texte administratif courant est D. Piège : employer \"topique\" sans savoir qu'il est quasi-exclusivement réservé à un usage très littéraire."
-    },
-    {
-      "q": "\"Il s'est _______ le genou pendant l'entraînement.\" Choisissez le PP correct de \"se blesser\".",
-      "o": [
-        "blessé",
-        "blessée",
-        "blessés",
-        "blessé ou blessée selon le genre du sujet"
-      ],
-      "r": 0,
-      "x": "\"Se blesser\" : \"blesser quelqu'un\" est transitif direct. \"Se\" = COD (il se blesse lui-même). PP s'accorde avec le COD \"se\" = il (masculin singulier) → \"blessé\". Si le sujet était féminin (\"elle\"), accord en \"blessée\". Ici \"il\" → \"blessé\". Piège : laisser invariable ou ne pas tenir compte du genre du sujet."
-    },
-    {
-      "q": "Le mot \"impécunieux\" qualifie :",
-      "o": [
-        "Quelqu'un qui manque d'argent, qui est sans ressources",
-        "Un personnage ingrat",
-        "Quelqu'un d'impulsif",
-        "Quelqu'un de peu scrupuleux"
-      ],
-      "r": 0,
-      "x": "\"Impécunieux\" (du latin \"pecunia\" = argent) = qui manque d'argent. Synonyme soutenu de \"pauvre\" ou \"sans ressources\". Exemple : \"Un fonctionnaire impécunieux n'est pas à l'abri de la tentation de la corruption.\" Piège : confondre avec \"impertinent\" ou \"impudique\" — ressemblances phoniques superficielles."
-    },
-    {
-      "q": "\"Que vous _______ ou non, cette règle s'applique à tous.\" Choisissez la bonne forme de \"vouloir\".",
-      "o": [
-        "vouliez",
-        "voudrez",
-        "voulez",
-        "vouldrez"
-      ],
-      "r": 0,
-      "x": "\"Que + subjonctif\" : la locution concessive \"que vous vouliez ou non\" = qu'il vous plaise ou non. \"Vouliez\" est le subjonctif présent de \"vouloir\" (2e personne du pluriel). Le futur \"voudrez\" serait incorrect car la concession exige le subjonctif. Piège : employer l'indicatif présent \"voulez\" ou le futur \"voudrez\" après \"que\" concessif."
-    },
-    {
-      "q": "Un arrêté \"à titre conservatoire\" est une mesure prise :",
-      "o": [
-        "Pour récompenser un agent exemplaire",
-        "Pour préserver l'ordre public en attendant une décision définitive",
-        "Pour archiver les décisions passées",
-        "Pour améliorer la conservation des documents administratifs"
-      ],
-      "r": 1,
-      "x": "\"À titre conservatoire\" = en vue de préserver une situation ou d'empêcher un préjudice irréparable dans l'attente d'une décision définitive. Exemple : \"Suspension à titre conservatoire dans l'attente des résultats de l'enquête disciplinaire.\" Locution juridique et administrative fondamentale. Piège : interpréter \"conservatoire\" dans son sens de conservation physique des documents."
-    },
-    {
-      "q": "\"L'_______ de ses propos a choqué l'assemblée.\" Choisissez le bon terme signifiant \"caractère inapproprié, inconvenant\".",
-      "o": [
-        "impertinence",
-        "incongruité",
-        "inconvenance",
-        "B et C sont acceptés"
-      ],
-      "r": 3,
-      "x": "\"Incongruité\" = caractère de ce qui est incongru, qui n'est pas à sa place (remarque incongrue). \"Inconvenance\" = manquement aux convenances sociales ou morales. Dans ce contexte, les deux sont proches et acceptables. \"Impertinence\" porte davantage sur l'insolence. Piège : choisir \"impertinence\" qui a une connotation plus personnelle (insolence envers quelqu'un) que \"incongruité\" (inadéquation au contexte)."
-    },
-    {
-      "q": "\"En ce qui _______ les dossiers urgents, ils ont été transmis.\" Choisissez la bonne forme.",
-      "o": [
-        "concerne",
-        "concernent",
-        "est concerné",
-        "concerne ou concernent selon le nombre"
-      ],
-      "r": 0,
-      "x": "\"En ce qui concerne\" est une locution figée invariable dont le verbe reste à la troisième personne du singulier. \"Concerne\" ne s'accorde pas avec \"les dossiers\" mais avec l'antécédent indéfini \"ce\" (singulier). Piège : accorder \"concerne\" avec \"les dossiers urgents\" (pluriel) et écrire \"concernent\"."
-    },
-    {
-      "q": "\"Il _______ fallu davantage de temps pour analyser ce rapport.\" Choisissez la bonne forme.",
-      "o": [
-        "aurait",
-        "a",
-        "avait",
-        "eût"
-      ],
-      "r": 0,
-      "x": "\"Il aurait fallu\" = conditionnel passé de \"falloir\" (impersonnel). Exprime une nécessité non satisfaite dans le passé ou un reproche. \"Il a fallu\" (passé composé) signifie que cela a effectivement eu lieu. \"Aurait fallu\" ici = on aurait eu besoin de plus de temps (mais ce n'était pas le cas). Piège : choisir \"a fallu\" qui dirait que le temps a effectivement été accordé."
-    },
-    {
-      "q": "\"_______ sa nervosité, il a répondu calmement.\" Choisissez la locution concessative correcte.",
-      "o": [
-        "Bien que",
-        "Nonobstant",
-        "Malgré",
-        "B et C sont corrects"
-      ],
-      "r": 3,
-      "x": "\"Nonobstant\" et \"Malgré\" sont tous deux des prépositions signifiant \"en dépit de\" et se construisent avec un nom (pas avec \"que + subjonctif\"). \"Nonobstant sa nervosité\" et \"Malgré sa nervosité\" sont équivalents. \"Bien que\" nécessite un verbe conjugué (\"bien qu'il fût nerveux\"). Piège : croire que \"nonobstant\" est plus formel et donc seul correct — les deux sont acceptés."
-    },
-    {
-      "q": "\"Elle _______ ses propres intérêts pour aider ses collègues.\" Choisissez le verbe correct signifiant \"a mis de côté\".",
-      "o": [
-        "a subordonné",
-        "a soumis",
-        "a sacrifié",
-        "A et C sont acceptés"
-      ],
-      "r": 3,
-      "x": "\"Subordonner ses intérêts\" = les placer en position secondaire au profit d'autre chose. \"Sacrifier ses intérêts\" = les abandonner complètement. Les deux sont corrects mais de nuance différente. Dans le contexte donné, les deux sont acceptables. Piège : croire que seul \"sacrifier\" est correct et rejeter \"subordonner\" qui est le terme plus administratif."
-    },
-    {
-      "q": "\"La _______ de cet agent à son poste a été exemplaire.\" Choisissez le terme désignant le fait de rester fidèlement à son poste.",
-      "o": [
-        "assiduité",
-        "assurance",
-        "abnégation",
-        "alacrite"
-      ],
-      "r": 0,
-      "x": "\"Assiduité\" = présence régulière et constante, application au travail. Terme administratif courant dans les évaluations. \"Abnégation\" = sacrifice de soi. \"Alacrite\" = vivacité joyeuse. Piège : choisir \"abnégation\" qui implique un sacrifice de soi héroïque — l'assiduité est simplement la régularité de présence et de travail."
-    },
-    {
-      "q": "\"Le chef de service a demandé que le rapport _______ remis avant vendredi.\" Choisissez la forme correcte.",
-      "o": [
-        "sera",
-        "est",
-        "serait",
-        "soit"
-      ],
-      "r": 3,
-      "x": "\"Demander que + subjonctif\" (verbe de volonté). \"Soit remis\" = subjonctif présent passif. Le futur \"sera\" et l'indicatif présent \"est\" sont incorrects après \"demander que\". \"Serait\" (conditionnel) est également incorrect. Piège : employer le futur \"sera\" qui semblerait naturel dans une instruction concernant l'avenir."
-    },
-    {
-      "q": "\"Votre décision est _______ justifiée.\" Choisissez la bonne forme de \"pleinement\".",
-      "o": [
-        "pleinement",
-        "plein",
-        "pleine",
-        "pleins"
-      ],
-      "r": 0,
-      "x": "\"Pleinement\" est un adverbe (invariable) modifiant l'adjectif \"justifiée\". Les adverbes en \"-ment\" sont toujours invariables. Piège : accorder \"plein\" comme un adjectif avec \"décision\" (féminin singulier) — confusion entre adjectif et adverbe."
-    },
-    {
-      "q": "\"La _______ de la loi de finances a été publiée au Journal officiel.\" Choisissez le terme désignant l'acte par lequel une loi est rendue exécutoire.",
-      "o": [
-        "promulgation",
-        "abrogation",
-        "amendement",
-        "adoption"
-      ],
-      "r": 0,
-      "x": "La \"promulgation\" est l'acte par lequel le chef de l'État authentifie et rend exécutoire une loi votée par le parlement, en la publiant au Journal officiel. À distinguer de : \"adoption\" (vote du parlement), \"abrogation\" (suppression), \"amendement\" (modification partielle). Piège : confondre \"promulgation\" avec \"adoption\" — l'adoption précède la promulgation."
-    },
-    {
-      "q": "\"Sans _______ de cause, une sanction ne peut être prononcée.\" Choisissez le terme administratif signifiant \"justification préalable\".",
-      "o": [
-        "notification",
-        "motif",
-        "intention",
-        "délibération"
-      ],
-      "r": 1,
-      "x": "\"Sans motif\" = sans raison, sans justification. \"La motivation des actes administratifs\" = l'obligation de justifier les décisions. \"Motif\" est le terme juridique et administratif exact. Piège : choisir \"délibération\" (processus de discussion collective) ou \"notification\" (information formelle) — deux actes administratifs distincts du motif."
-    },
-    {
-      "q": "\"Il s'est _______ à accomplir des tâches que personne ne voulait.\" Choisissez le PP correct de \"se résoudre\".",
-      "o": [
-        "résous",
-        "résolu",
-        "résolue",
-        "résolus"
-      ],
-      "r": 1,
-      "x": "\"Se résoudre à\" : \"résoudre\" est transitif direct mais \"se résoudre à + infinitif\" → le pronom \"se\" est COD réfléchi, et l'accord se fait avec \"se\" (= il, masculin singulier) → \"résolu\". Piège : écrire \"résous\" (forme du présent ou de l'impératif : \"je résous\") au lieu de \"résolu\" (PP)."
-    },
-    {
-      "q": "\"_______ aux demandes excessives est parfois nécessaire pour protéger l'intérêt général.\" Choisissez le verbe correct signifiant \"refuser d'obéir à\".",
-      "o": [
-        "S'opposer",
-        "Se soustraire",
-        "Résister",
-        "S'affranchir"
-      ],
-      "r": 2,
-      "x": "\"Résister aux demandes\" = refuser de céder. \"S'opposer à\" est également correct mais implique une confrontation plus active. \"Se soustraire à\" = éviter, esquiver. \"S'affranchir de\" = se libérer d'une contrainte. \"Résister\" est le terme le plus neutre et le plus adapté au contexte administratif. Piège : employer \"se soustraire à\" qui implique une fuite ou une esquive plutôt qu'une résistance ouverte."
-    },
-    {
-      "q": "\"La décision _______ contestable a néanmoins été maintenue.\" Choisissez la bonne forme de l'adjectif.",
-      "o": [
-        "peu",
-        "peu ou peu selon le contexte",
-        "peu ou guère",
-        "guère"
-      ],
-      "r": 0,
-      "x": "\"Peu contestable\" = peu susceptible d'être contestée. \"Peu\" est adverbe de quantité, invariable, qui modifie l'adjectif \"contestable\". \"Guère\" est possible dans une construction négative (\"n'est guère contestable\") mais pas dans une structure positive sans \"ne\". Piège : employer \"guère\" hors de sa construction négative habituelle avec \"ne\"."
-    },
-    {
-      "q": "\"La _______ de cet accord entre les deux parties a été confirmée.\" Choisissez le terme désignant la mise en vigueur officielle d'un accord.",
-      "o": [
-        "ratification",
-        "validation",
-        "notification",
-        "promulgation"
-      ],
-      "r": 0,
-      "x": "La \"ratification\" désigne la confirmation officielle d'un accord ou d'un traité par l'autorité compétente (parlement ou chef de l'État), le rendant définitif et contraignant. \"Promulgation\" s'applique aux lois nationales. \"Validation\" est plus général. Piège : confondre ratification et promulgation — la ratification s'applique aux accords et traités internationaux."
-    },
-    {
-      "q": "\"Il _______ sans cesse de la situation difficile de ses administrés.\" Choisissez le verbe correct signifiant \"parlait avec emphase et de façon répétée\".",
-      "o": [
-        "Se plaignait",
-        "Répétait",
-        "Discourait",
-        "S'épanchait"
-      ],
-      "r": 3,
-      "x": "\"S'épancher\" = parler longuement de ses sentiments ou de ses préoccupations, laisser déborder ses pensées. Connotation d'abondance émotionnelle. Plus nuancé que \"se plaindre\" (réclamation) ou \"discourir\" (parler longuement mais de façon plus formelle). Piège : choisir \"se plaignait\" qui implique une plainte mais sans la connotation de déversement abondant propre à \"s'épancher\"."
-    },
-    {
-      "q": "La nuance entre \"flagrant\" et \"patent\" :",
-      "o": [
-        "Ce sont des synonymes parfaits interchangeables",
-        "\"Flagrant\" insiste sur le fait d'être pris sur le fait ; \"patent\" insiste sur l'évidence indiscutable",
-        "\"Patent\" est plus grave que \"flagrant\"",
-        "\"Flagrant\" s'emploie uniquement en contexte judiciaire"
-      ],
-      "r": 1,
-      "x": "\"Flagrant\" = évident au point d'être saisi sur le vif, manifeste en train de se produire. \"Patent\" = d'une évidence incontestable, qui saute aux yeux. \"Flagrant délit\" : usage judiciaire consacré. \"Patent\" s'emploie pour des vérités ou des faits indiscutables. Piège : les confondre totalement — la nuance est subtile mais existe dans la langue soutenue de concours."
-    },
-    {
-      "q": "\"_______ qu'ils aient réussi sans aide extérieure est remarquable.\" Choisissez la bonne forme.",
-      "o": [
-        "Le fait",
-        "Ce que",
-        "Que",
-        "Lequel"
-      ],
-      "r": 0,
-      "x": "\"Le fait que + subjonctif ou indicatif\" est la structure nominalisée correcte pour transformer une proposition en sujet. \"Le fait qu'ils aient réussi sans aide extérieure est remarquable.\" → sujet nominal. \"Que\" seul ne peut pas être sujet. Piège : employer \"Ce que\" qui s'emploie en complément d'objet, non en sujet grammatical."
-    },
-    {
-      "q": "\"_______ difficultés qu'il ait rencontrées, il n'a jamais baissé les bras.\" Choisissez la bonne forme.",
-      "o": [
-        "Quelque",
-        "Quelles que soient les",
-        "Quelles que soient",
-        "Quelques"
-      ],
-      "r": 1,
-      "x": "\"Quelles que soient les difficultés\" est la structure concessive complète : \"quel\" s'accorde avec \"difficultés\" (féminin pluriel) + \"que\" + subjonctif de \"être\" + article. La phrase reprend ensuite avec \"qu'il ait rencontrées\" (relative). La structure correcte est \"Quelles que soient les difficultés qu'il ait rencontrées\". Piège : écrire \"Quelque\" (adverbe invariable, sens différent) ou omettre l'article \"les\"."
-    },
-    {
-      "q": "\"_______ ambitieux _______ le projet soit, il mérite d'être tenté.\" Choisissez la bonne combinaison.",
-      "o": [
-        "Si / que",
-        "Aussi / que",
-        "Quelque / que",
-        "A et B sont corrects"
-      ],
-      "r": 3,
-      "x": "\"Si ambitieux que le projet soit\" et \"Aussi ambitieux que le projet soit\" sont deux formules concessives équivalentes + subjonctif. \"Quelque ambitieux que\" s'emploie avec un adjectif seul (sans article), forme plus littéraire : \"Quelque ambitieux que soit le projet.\" Les formes A) et B) sont les plus courantes en concours. Piège : choisir une seule forme en rejetant l'autre."
-    },
-    {
-      "q": "L'\"abnégation\" désigne :",
-      "o": [
-        "La fermeté dans ses opinions",
-        "La négation obstinée d'une vérité",
-        "Un refus catégorique d'obéir",
-        "Le sacrifice de ses intérêts personnels au profit d'autrui ou d'une cause"
-      ],
-      "r": 3,
-      "x": "\"Abnégation\" (du latin \"abnegare\" = renoncer) désigne le renoncement à ses propres intérêts, à son confort personnel au service d'une cause ou d'autrui. Exemple : \"Il a servi l'État avec abnégation pendant 30 ans.\" Piège : confondre avec \"obstination\" ou \"négation\" — ressemblances phoniques trompeuses."
-    },
-    {
-      "q": "\"La commission _______ de cinq membres rendra son avis dans quinze jours.\" Choisissez la bonne construction.",
-      "o": [
-        "composée",
-        "composés",
-        "composant",
-        "qui compose"
-      ],
-      "r": 0,
-      "x": "\"La commission composée de cinq membres\" : \"composée\" est un participe passé adjectival accordé avec \"la commission\" (féminin singulier). \"Composant\" (participe présent) serait correct seulement pour désigner une action en cours (\"la commission composant le jury\"). Ici, la composition est un état stable → PP adjectival accordé. Piège : employer \"composants\" (masculin pluriel) ou \"composant\" (participe présent sans accord)."
-    },
-    {
-      "q": "\"_______ de la bonne gestion, les résultats ont été probants.\" Choisissez la locution signifiant \"grâce à, du fait de\".",
-      "o": [
-        "En raison",
-        "Grâce à",
-        "Du fait de",
-        "B et C sont corrects"
-      ],
-      "r": 3,
-      "x": "\"Grâce à\" introduit une cause positive (résultats positifs grâce à quelque chose de positif). \"Du fait de\" est neutre causalement. Ici, \"bonne gestion\" → cause positive → \"grâce à\" est préféré. \"Du fait de\" est acceptable. \"En raison de\" (sans \"la\") est incomplet grammaticalement. Piège : employer \"grâce à\" pour une cause négative (\"grâce à son incompétence\") — faute de registre sémantique : \"à cause de\" convient pour les causes négatives."
-    },
-    {
-      "q": "\"Cet événement s'est produit _______ la décision du conseil.\" Choisissez la locution signifiant \"après et à la suite directe de\".",
-      "o": [
-        "suite à",
-        "à la suite de",
-        "consécutivement à",
-        "B et C sont correctes dans la langue soutenue"
-      ],
-      "r": 3,
-      "x": "\"À la suite de\" et \"consécutivement à\" expriment la succession et la conséquence temporelle dans la langue soutenue. \"Suite à\" est déconseillé dans le style administratif soutenu (déjà traité dans la série 1 sous un autre angle). Ici, l'accent est mis sur les synonymes acceptables. Piège : croire que \"consécutivement à\" est trop rare pour les concours — c'est précisément une formule appréciée dans les écrits de niveau."
-    },
-    {
-      "q": "Le mot \"probant\" qualifie :",
-      "o": [
-        "Ce qui est probable mais incertain",
-        "Ce qui est prouvé, qui fait preuve de manière convaincante",
-        "Ce qui est approuvé par l'autorité compétente",
-        "Ce qui est relatif à la probité"
-      ],
-      "r": 1,
-      "x": "\"Probant\" (du latin \"probare\" = prouver) = qui constitue une preuve convaincante, qui démontre sans ambiguïté. Exemple : \"Des résultats probants.\" Piège : le rapprocher de \"probable\" (incertain) ou de \"probe\" (intègre) — trois mots de la même famille mais aux sens très différents."
-    },
-    {
-      "q": "\"Il _______ à ses collègues d'avoir menti.\" Choisissez le PP correct de \"se reprocher\".",
-      "o": [
-        "reproché",
-        "reprochés",
-        "reprochée",
-        "reproché ou reprochée selon le genre du sujet"
-      ],
-      "r": 0,
-      "x": "\"Se reprocher quelque chose à quelqu'un\" : \"reprocher à\" est transitif indirect → le pronom \"se\" est COI → PP invariable. \"Il s'est reproché\" = \"reproché\" invariable, quel que soit le genre ou le nombre du sujet. Piège : accorder avec le sujet ou avec \"ses collègues\"."
-    },
-    {
-      "q": "\"C'est une mesure à _______ de ses droits.\" Choisissez le terme administratif désignant le refus d'accorder quelque chose.",
-      "o": [
-        "priver",
-        "dépouiller",
-        "déchoir",
-        "priver ou déchoir selon le contexte juridique"
-      ],
-      "r": 3,
-      "x": "\"Priver de ses droits\" = retirer ses droits de façon générale. \"Déchoir de ses droits\" = terme juridique désignant la perte de droits (déchéance) souvent par décision de justice ou par loi. \"Dépouiller de\" = retirer par force ou injustice (connotation péjorative). Les deux termes D) sont corrects selon le contexte. Piège : confondre \"déchoir\" (perte légale) avec \"déchéance\" (état résultant de cette perte)."
-    },
-    {
-      "q": "\"La décision a été _______ après une longue délibération.\" Choisissez la formule passive correcte.",
-      "o": [
-        "arrêtée",
-        "arrêtée ou prise selon le type de décision",
-        "prise",
-        "formulée"
-      ],
-      "r": 1,
-      "x": "\"La décision a été arrêtée\" = formule juridique et administrative très précise (un arrêté est une décision administrative). \"Prise\" est le terme général. \"Arrêtée\" s'emploie préférentiellement pour les décisions formelles à caractère réglementaire. Les deux sont grammaticalement corrects. Piège : employer uniquement \"prise\" sans connaître la valeur technique de \"arrêtée\" en droit administratif."
-    },
-    {
-      "q": "\"_______ signe que la réforme avance : le premier décret d'application a été publié.\" Choisissez la bonne forme.",
-      "o": [
-        "Bon",
-        "Beau",
-        "Bon ou beau selon le registre",
-        "Positif"
-      ],
-      "r": 0,
-      "x": "\"Bon signe\" est l'expression figée consacrée en français pour désigner un indice favorable. \"Beau signe\" est possible dans un registre très familier mais n'est pas la formule attendue. \"Signe positif\" est également correct dans un style analytique. En concours, \"bon signe\" est la formulation idiomatique correcte. Piège : employer \"beau signe\" par analogie avec \"belle occasion\" — \"beau\" ne colocalise pas avec \"signe\" dans la langue standard."
-    },
-    {
-      "q": "\"Il _______ que ses agents fussent présents dès l'aube.\" Choisissez la forme littéraire correcte.",
-      "o": [
-        "exigeait",
-        "exigea",
-        "voulut",
-        "avait voulu"
-      ],
-      "r": 1,
-      "x": "Le subjonctif imparfait \"fussent\" est déclenché par le passé simple \"exigea\" dans la langue littéraire soutenue. Règle de concordance des temps au style littéraire : verbe principal au passé simple → subordonnée au subjonctif imparfait (ou plus-que-parfait). \"Exigeait\" (imparfait) déclencherait aussi le subjonctif imparfait dans la langue soutenue. Piège : ne pas identifier le subjonctif imparfait \"fussent\" et croire à une faute dans la question."
-    },
-    {
-      "q": "\"La _______ de cette décision a été vivement critiquée.\" Choisissez le terme administratif signifiant \"manque de cohérence avec les textes en vigueur\".",
-      "o": [
-        "illégalité",
-        "incongruité",
-        "irrégularité",
-        "illégitimité"
-      ],
-      "r": 0,
-      "x": "En droit administratif, l'\"illégalité\" d'un acte = sa non-conformité à la loi, aux textes de droit. \"Illégitimité\" = manque de légitimité morale ou politique (différent). \"Irrégularité\" = défaut de forme ou de procédure. \"Incongruité\" = inadéquation générale. Piège : confondre \"illégalité\" (contraire à la loi) et \"illégitimité\" (contraire à la légitimité morale)."
-    },
-    {
-      "q": "\"Ils n'ont _______ été informés de cette décision.\" Choisissez l'adverbe négatif qui signifie \"en aucune façon\".",
-      "o": [
-        "pas",
-        "guère",
-        "nullement",
-        "aucunement"
-      ],
-      "r": 3,
-      "x": "\"Aucunement\" = en aucune façon, absolument pas — l'adverbe négatif le plus fort. \"Nullement\" est quasi-synonyme mais légèrement moins absolu. \"Guère\" = peu. \"Pas\" est courant mais moins soutenu. Pour exprimer l'absence totale dans un style soutenu, \"aucunement\" ou \"nullement\" sont les formes attendues. Piège : employer \"pas\" qui est correct mais marque un niveau de langue courant, insuffisant pour un concours de haut niveau."
-    },
-    {
-      "q": "La distinction entre \"en effet\" et \"effectivement\" :",
-      "o": [
-        "\"En effet\" introduit une explication ou une justification ; \"effectivement\" confirme ce qui vient d'être dit",
-        "Ce sont des synonymes parfaits interchangeables",
-        "\"Effectivement\" est plus courant que \"en effet\" dans la langue administrative",
-        "\"En effet\" est critiqué dans la langue soutenue"
-      ],
-      "r": 0,
-      "x": "\"En effet\" = introduce une explication, une preuve, une justification (\"Il est absent, en effet il était malade\"). \"Effectivement\" = confirme une assertion (\"— Il est absent ? — Effectivement.\"). Les deux sont fréquents mais servent à des fonctions discursives différentes. Piège : les employer indifféremment sans respecter leur fonction dans le discours."
-    },
-    {
-      "q": "\"Se faire élire\" : le PP \"fait\" dans \"elle s'est fait élire\" est :",
-      "o": [
-        "Toujours invariable car suivi d'un infinitif",
-        "Accordé avec le sujet féminin \"elle\"",
-        "Accordé avec le COD antéposé",
-        "Accordé selon le sens de la phrase"
-      ],
-      "r": 0,
-      "x": "\"Faire + infinitif\" : le PP \"fait\" est TOUJOURS invariable, sans exception, quelle que soit la construction. \"Elle s'est fait élire\" → \"fait\" invariable. Cette règle absolue s'applique même dans les constructions pronominales. Piège : accorder \"fait\" avec le sujet féminin \"elle\" et écrire \"faite\" — faute caractérisée et absolue."
-    },
-    {
-      "q": "\"Il appert que cette décision _______ contestée.\" Choisissez la forme correcte.",
+      "q": "Dans « Pourvu qu'il _______ présent, la réunion aura lieu », la forme correcte est :",
       "o": [
         "est",
         "soit",
         "sera",
         "serait"
       ],
-      "r": 0,
-      "x": "\"Il appert que\" (= il ressort clairement que, il est évident que) est une locution impersonnelle juridique et administrative qui prend l'indicatif car elle exprime un fait constaté et certain. \"Il appert que la décision est contestée\" → indicatif. Piège : employer le subjonctif par analogie avec d'autres locutions impersonnelles — \"il appert que\" exprime la certitude et exige l'indicatif."
+      "r": 1,
+      "x": "« Pourvu que » (à condition que) exige le subjonctif. Le futur « sera » est une faute fréquente sous l'influence du sens conditionnel. « Pourvu que » peut aussi exprimer un souhait : pourvu qu'il vienne !",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"_______ qu'il soit, ce résultat est insuffisant.\" Choisissez la bonne combinaison pour le sens \"même s'il est bon\".",
+      "q": "Dans « Encore qu'il _______ des lacunes, ce rapport reste utile », la forme correcte est :",
       "o": [
-        "Aussi bon soit-il / si bon soit-il",
-        "Bon",
-        "Quelque bon",
-        "Si bon"
+        "contient",
+        "contiendra",
+        "contenait",
+        "contienne"
+      ],
+      "r": 3,
+      "x": "« Encore que » signifie « bien que » et se construit avec le subjonctif. L'indicatif « contient » est une faute, même si le fait est réel. La locution appartient au registre soutenu ; « bien que » est plus courant.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Elle nous a _______ de partager cette information », la forme correcte est :",
+      "o": [
+        "demandés",
+        "demandé",
+        "demandée",
+        "demandées"
+      ],
+      "r": 1,
+      "x": "On dit « demander à quelqu'un de faire » : « nous » est COI et le participe reste invariable. Seul un COD placé avant le verbe entraîne l'accord avec « avoir ». Avec « prier », le complément est un COD : elle nous a priés de partager l'information.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Les résultats que vous avez _______ à obtenir », la forme correcte est :",
+      "o": [
+        "réussis",
+        "réussi",
+        "réussie",
+        "réussies"
+      ],
+      "r": 1,
+      "x": "« Que » est COD de l'infinitif « obtenir », non de « réussi » : le participe reste invariable. On obtient les résultats ; on ne les réussit pas. On écrit de même « les efforts qu'il a fallu faire », sans accord.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Loin que les résultats _______ satisfaisants, ils révèlent des lacunes », la forme correcte est :",
+      "o": [
+        "soient",
+        "sont",
+        "seront",
+        "seraient"
       ],
       "r": 0,
-      "x": "L'inversion \"si bon soit-il\" = si bon qu'il soit (concession). \"Aussi bon soit-il\" est l'équivalent plus courant. Ces constructions avec inversion du verbe sont caractéristiques de la langue soutenue de concours. \"Si bon\" seul sans \"soit-il\" est incomplet. \"Quelque bon\" n'existe pas (incorrection). Piège : employer \"Bien que bon\" (correct mais sans inversion caractéristique de la langue soutenue)."
+      "x": "« Loin que » exige le subjonctif. L'indicatif « sont » paraît logique mais n'est pas admis après cette locution. La locution, proche de « bien loin que », s'emploie surtout à l'écrit soutenu.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "La \"prégnance\" se distingue de l'\"incidence\" en ce que :",
+      "q": "Dans « Elle s'est _______ de sa mission avec professionnalisme », la forme correcte est :",
       "o": [
-        "La prégnance désigne l'impact durable sur l'esprit ; l'incidence désigne l'effet sur une situation",
-        "Ce sont des synonymes dans le discours analytique",
-        "\"Incidence\" est plus littéraire que \"prégnance\"",
-        "\"Prégnance\" s'emploie uniquement en psychologie"
+        "acquitté",
+        "acquittée",
+        "acquittés",
+        "acquittées"
       ],
-      "r": 0,
-      "x": "\"Prégnance\" = force d'impression sur l'esprit, impact mental et symbolique. \"Incidence\" = effet concret sur une situation, répercussion pratique. Exemple : \"La prégnance de ce symbole sur les esprits est forte. Son incidence sur les décisions politiques est mesurable.\" Piège : les confondre car les deux parlent d'\"impact\" — mais la prégnance est mentale/symbolique, l'incidence est factuelle."
+      "r": 1,
+      "x": "Dans « s'acquitter de », le pronom « se » fait corps avec le verbe et le participe s'accorde avec le sujet féminin singulier. On dit de même « elle s'est absentée », « elle s'est souvenue ». « S'acquitter d'une dette » signifie la payer, alors qu'« acquitter un accusé » signifie le déclarer non coupable.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"_______ ses promesses, il a déçu ses électeurs.\" Choisissez la locution signifiant \"ne ayant pas tenu\".",
+      "q": "Dans « Ils se sont _______ la parole pendant toute la réunion », la forme correcte est :",
       "o": [
-        "Faute de",
-        "En manquant",
-        "Manquant à",
-        "En dépit de"
+        "coupés",
+        "coupée",
+        "coupé",
+        "coupées"
       ],
       "r": 2,
-      "x": "\"Manquant à ses promesses\" = participiale présent exprimant la cause. \"Faute de + nom\" = par manque de (faute de promesses = sans promesses). \"Manquant ses promesses\" est elliptique mais acceptable. Piège : employer \"En dépit de\" (concessif) qui changerait le sens en \"malgré ses promesses\"."
+      "x": "Le COD est « la parole », placé après le verbe, et « se » est COI (ils ont coupé la parole l'un à l'autre). Le participe reste donc invariable. Sans complément, on écrirait « ils se sont coupés », au sens de se blesser.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"Omnipotent\" qualifie :",
+      "q": "Dans « Ces agents se sont _______ de leur mission », la forme correcte est :",
       "o": [
-        "Ce qui est présent partout",
-        "Ce qui sait tout",
-        "Ce qui se produit souvent",
-        "Ce qui détient un pouvoir absolu et illimité"
+        "dégagé",
+        "dégagée",
+        "dégagées",
+        "dégagés"
       ],
       "r": 3,
-      "x": "\"Omnipotent\" (du latin \"omni\" = tout + \"potens\" = puissant) = qui a un pouvoir absolu, tout-puissant. À distinguer de \"omniscient\" (qui sait tout) et \"omniprésent\" / \"ubiquiste\" (qui est partout). Piège : confondre les trois préfixes \"omni-\" selon le second élément : -potent (puissance), -scient (savoir), -présent (présence)."
+      "x": "On dit « dégager quelqu'un de » : le pronom « se » est COD et le participe s'accorde avec le sujet masculin pluriel. La préposition « de » n'en fait pas un COI. On écrit de même « elles se sont dégagées de toute responsabilité ».",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "Choisissez la phrase qui emploie correctement \"en application de\" vs \"en vertu de\" :",
+      "q": "Dans « des voix _______ », la forme correcte de l'adjectif verbal est :",
       "o": [
-        "En vertu de l'article 5 du règlement, cette demande est rejetée.",
-        "En application de son courage, il a reçu une médaille.",
-        "En vertu de la pluie, la réunion a été annulée.",
-        "En application des circonstances, nous avons décidé de reporter."
-      ],
-      "r": 0,
-      "x": "\"En vertu de\" s'emploie avec des textes, des principes, des droits (fondement normatif). \"En application de\" s'emploie avec des textes juridiques pour désigner leur mise en œuvre. \"En vertu de l'article 5\" = fondé sur cet article. A) et C) utilisent incorrectement ces locutions avec des éléments factuels non normatifs. Piège : employer \"en vertu de\" avec tout ce qui justifie une décision, même non normatif."
-    },
-    {
-      "q": "\"Il s'est _______ à l'évidence.\" Choisissez le PP correct de \"se rendre\".",
-      "o": [
-        "rendu",
-        "rendue",
-        "rendus",
-        "rendues"
-      ],
-      "r": 0,
-      "x": "\"Se rendre à l'évidence\" : \"rendre à\" est transitif indirect. Le pronom \"se\" est COI (rendre à soi-même). PP invariable : \"rendu\". Règle : \"se rendre à\" (= céder, accepter) vs \"se rendre\" (= aller quelque part) — dans les deux cas, \"se\" peut être COD ou COI selon la construction. Ici, \"rendre à l'évidence\" = COI → invariable. Piège : accorder avec le sujet masculin (singulier → \"rendu\" serait aussi l'accord masculin, mais il est invariable ici indépendamment du genre)."
-    },
-    {
-      "q": "\"La _______ de la commission a abouti à une recommandation claire.\" Choisissez le terme désignant l'examen approfondi d'une question.",
-      "o": [
-        "délibération",
-        "notification",
-        "promulgation",
-        "instruction"
-      ],
-      "r": 0,
-      "x": "La \"délibération\" désigne le processus de réflexion collective et de discussion au sein d'un organe délibérant (commission, conseil) avant de prendre une décision. À distinguer de \"instruction\" (examen préalable d'un dossier par une administration) et \"notification\" (acte d'informer officiellement). Piège : confondre délibération et instruction — \"l'instruction d'un dossier\" précède souvent la \"délibération\"."
-    },
-    {
-      "q": "\"Le directeur, _______ que ses agents puissent être fatigués, a maintenu la réunion.\" Choisissez la locution concessive correcte.",
-      "o": [
-        "sachant bien",
-        "conscient",
-        "bien conscient du fait",
-        "tout conscient du fait"
+        "chantant",
+        "chantants",
+        "chantante",
+        "chantantes"
       ],
       "r": 3,
-      "x": "\"Tout conscient du fait que + subjonctif\" est une construction concessive exprimant la concession avec \"tout\" adverbe. \"Tout conscient\" = bien conscient malgré cela. \"Conscient\" seul ou \"sachant bien\" ne marquent pas la concession. Piège : omettre \"tout\" qui donne sa valeur concessive à la construction."
+      "x": "Employé comme adjectif (une qualité), « chantant » s'accorde avec le nom : « des voix chantantes ». Le participe présent, qui exprime une action, reste invariable : « en chantant ». Certains adjectifs verbaux changent d'orthographe : fatiguant devient fatigant, négligeant devient négligent.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "La \"forclusion\" en droit désigne :",
+      "q": "Dans « Les conclusions _______ de ce rapport seront publiées », la forme correcte est :",
       "o": [
-        "La perte d'un droit par non-exercice dans les délais prescrits",
-        "La sanction disciplinaire d'un fonctionnaire",
-        "La décision finale d'un tribunal",
-        "La suspension provisoire d'une procédure"
+        "résultant",
+        "résultantes",
+        "résultants",
+        "résultante"
       ],
       "r": 0,
-      "x": "La \"forclusion\" (du latin \"foris clausus\" = fermé dehors) désigne la déchéance d'un droit parce qu'il n'a pas été exercé dans le délai prévu par la loi. Exemple : \"La forclusion du délai de recours prive le requérant de toute action.\" Piège : confondre avec \"clôture\" (fin d'une session) ou \"prescription\" (extinction d'un droit avec le temps — proche mais distinct)."
+      "x": "Suivi d'un complément (« de ce rapport »), le mot est un participe présent qui exprime une action : il reste invariable. L'adjectif verbal « résultantes » s'emploierait sans complément. Il en va de même pour « différant » (participe présent) et « différent » (adjectif).",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"_______ fait la commission, les candidats le sauront prochainement.\" Choisissez la bonne construction.",
+      "q": "Dans « Je doute qu'il _______ honnête », la forme correcte est :",
       "o": [
-        "Ce que",
-        "Ce qu'a",
-        "Ce qui",
-        "Ce qu'a fait"
+        "est",
+        "sera",
+        "serait",
+        "soit"
       ],
       "r": 3,
-      "x": "\"Ce qu'a fait la commission\" : \"ce que\" = antécédent + pronom relatif COD. \"A fait\" est le verbe conjugué avec sujet \"la commission\". La structure correcte est : \"Ce qu'a fait la commission\" (avec inversion sujet-verbe après le relatif). Piège : employer \"ce que\" sans le verbe conjugué ou écrire \"ce qu'a\" sans complément."
+      "x": "« Douter que » à la forme affirmative exige le subjonctif, car le fait reste incertain. À la forme négative, « je ne doute pas qu'il est honnête » admet l'indicatif. Après « se douter que » (soupçonner), on emploie au contraire l'indicatif : je me doutais qu'il viendrait.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"Cet agent a été _______ de ses fonctions à la suite d'une faute grave.\" Choisissez le terme administratif correct pour \"révoqué\".",
+      "q": "Dans « J'espère qu'il _______ à l'heure », la forme correcte est :",
       "o": [
-        "démis",
-        "congédié",
-        "licencié",
-        "suspendu"
+        "vienne",
+        "vînt",
+        "viendra",
+        "soit venu"
+      ],
+      "r": 2,
+      "x": "« Espérer que » à la forme affirmative se construit avec l'indicatif, souvent au futur. Le subjonctif « vienne » ne s'emploie qu'à la forme négative ou interrogative. Le présent ou le passé de l'indicatif sont aussi possibles : j'espère qu'il est arrivé.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Elle s'est _______ de l'issue du procès », la forme correcte est :",
+      "o": [
+        "réjoui",
+        "réjouis",
+        "réjouies",
+        "réjouie"
+      ],
+      "r": 3,
+      "x": "On dit « réjouir quelqu'un » : le pronom « se » est COD et le participe s'accorde avec le sujet féminin singulier. La préposition « de » introduit seulement la cause. On écrit de même « elles se sont réjouies de la nouvelle ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « N'eût été son intervention, la situation aurait empiré », « eût été » est :",
+      "o": [
+        "Un indicatif plus-que-parfait",
+        "Un conditionnel présent",
+        "Un subjonctif plus-que-parfait",
+        "Un subjonctif présent"
+      ],
+      "r": 2,
+      "x": "« Eût été » est le subjonctif plus-que-parfait de « être », employé avec valeur de conditionnel passé dans la langue littéraire. La tournure signifie « s'il n'y avait pas eu son intervention ». Dans la langue courante, on dirait simplement « sans son intervention ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Que vous le _______ ou non, cette règle s'applique à tous », la forme correcte est :",
+      "o": [
+        "voulez",
+        "vouliez",
+        "voudrez",
+        "voudriez"
+      ],
+      "r": 1,
+      "x": "La tournure concessive « que… ou non » exige le subjonctif : « que vous le vouliez ou non ». L'indicatif « voulez » et le futur « voudrez » sont fautifs. On dit de même « qu'il pleuve ou qu'il vente, nous partirons ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « En ce qui _______ les dossiers urgents, ils ont été transmis », la forme correcte est :",
+      "o": [
+        "concerne",
+        "concernent",
+        "concernait",
+        "concernés"
       ],
       "r": 0,
-      "x": "\"Être démis de ses fonctions\" = être destitué, révoqué de son poste, notamment pour une autorité ou un responsable. C'est la formule administrative correcte pour la révocation d'un responsable. \"Licencié\" s'emploie dans le droit du travail privé. \"Suspendu\" est provisoire. Piège : employer \"licencié\" (droit du travail privé) pour désigner la révocation d'un fonctionnaire — terme juridique inadapté au statut de la fonction publique."
+      "x": "« En ce qui concerne » est une locution figée dont le verbe s'accorde avec « ce », toujours singulier. Le pluriel « concernent » est une attraction par « les dossiers ». On peut aussi écrire « concernant les dossiers urgents », plus léger.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"Elle a su _______ aux attentes de sa hiérarchie.\" Choisissez le verbe correct.",
+      "q": "Dans « Il s'est _______ à accomplir les tâches ingrates », la forme correcte est :",
       "o": [
-        "répondre",
-        "combler",
-        "satisfaire",
-        "A et C sont corrects"
+        "résous",
+        "résolu",
+        "résolus",
+        "résolue"
+      ],
+      "r": 1,
+      "x": "Le participe passé de « résoudre » est « résolu », accordé ici avec le sujet masculin singulier. « Résous » est une forme du présent : « je résous ». « Se résoudre à » signifie se décider à : il s'est résolu à partir.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « La commission _______ de cinq membres rendra son avis », la forme correcte est :",
+      "o": [
+        "composé",
+        "composant",
+        "composés",
+        "composée"
       ],
       "r": 3,
-      "x": "\"Répondre aux attentes\" (construction avec \"à\") et \"satisfaire aux attentes\" (construction avec \"à\") sont toutes deux correctes en français soutenu. \"Combler\" peut également s'employer mais sans \"à\" (\"combler les attentes\"). Piège : croire que \"satisfaire aux attentes\" est fautif car \"satisfaire\" peut aussi se construire sans \"à\" (avec COD direct). Les deux constructions sont acceptées."
+      "x": "Le participe passé employé comme adjectif s'accorde avec « la commission », féminin singulier. Le participe présent « composant » exprimerait une action : « les membres composant la commission ». On peut aussi écrire « la commission comprenant cinq membres ».",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"Il s'est _______ à ne jamais mentir, quoi qu'il lui en coûte.\" Choisissez le PP correct de \"s'engager\".",
+      "q": "Dans « Pour peu qu'il _______ des efforts, il réussira », la forme correcte est :",
       "o": [
+        "fasse",
+        "fait",
+        "fera",
+        "ferait"
+      ],
+      "r": 0,
+      "x": "« Pour peu que » (il suffit que) exige le subjonctif. Le futur « fera » est fautif malgré la référence à l'avenir. La même règle vaut pour « à condition que » et « pour autant que ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Ces candidatures _______ donneront lieu à un entretien », la forme correcte est :",
+      "o": [
+        "pré-sélectionnées",
+        "présélectionnées",
+        "pré sélectionnées",
+        "préselectionnées"
+      ],
+      "r": 1,
+      "x": "Le préfixe « pré- » se soude au mot sans trait d'union : présélection, préavis, préétabli. Le « é » de « sélectionner » se conserve après le préfixe. Les rectifications de 1990 soudent de même les composés avec « contre » et « extra » : contrepied, extraterrestre.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Il appert que cette décision _______ contestée », la forme correcte est :",
+      "o": [
+        "est",
+        "soit",
+        "fût",
+        "serait"
+      ],
+      "r": 0,
+      "x": "« Il appert que » (il ressort que, il est établi que) présente un fait constaté : il se construit avec l'indicatif. Le subjonctif « soit » ne convient pas à une certitude. « Appert » est une forme du verbe « apparoir », qui ne s'emploie plus que dans la langue juridique.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Elles se sont _______ à ne jamais mentir », la forme correcte est :",
+      "o": [
+        "engagées",
         "engagé",
-        "engagée",
         "engagés",
-        "engagée ou engagé selon le genre du sujet"
+        "engagée"
       ],
       "r": 0,
-      "x": "\"S'engager à\" : \"engager\" + à → le verbe se construit avec à + infinitif. \"Se\" est COD de \"engager\" (s'engager = engager soi-même). Accord avec \"se\" = il (masculin singulier) → \"engagé\". Si le sujet était féminin (elle), accord en \"engagée\". Ici \"il\" → \"engagé\". Piège : ignorer le genre du sujet."
+      "x": "On dit « engager quelqu'un à » : le pronom « se » est COD et le participe s'accorde avec le sujet féminin pluriel. La construction avec « à » n'en fait pas un COI. On écrit de même « ils se sont engagés à respecter le règlement ».",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "La nuance entre \"désuet\" et \"obsolète\" :",
+      "q": "Dans « Elle s'est _______ à cette procédure », la forme correcte est :",
       "o": [
-        "\"Désuet\" = qui n'est plus en usage ; \"obsolète\" = qui est dépassé techniquement ou conceptuellement",
-        "Ce sont des synonymes parfaits",
-        "\"Obsolète\" est plus soutenu que \"désuet\"",
-        "\"Désuet\" s'applique uniquement aux mots de la langue"
-      ],
-      "r": 0,
-      "x": "\"Désuet\" = qui n'est plus en usage, tombé en désuétude (coutume désuète, mot désuet). Connotation de vieillissement naturel. \"Obsolète\" = dépassé par les évolutions techniques ou conceptuelles, rendu inutilisable. Connotation de remplacement fonctionnel. Piège : les employer indifféremment — la nuance technique vs culturelle est attendue dans les épreuves de vocabulaire."
-    },
-    {
-      "q": "\"L'administration a agi _______ des textes en vigueur.\" Choisissez la locution signifiant \"conformément à, selon\".",
-      "o": [
-        "en vertu",
-        "en vertu de",
-        "aux termes de",
-        "B et C sont corrects"
-      ],
-      "r": 3,
-      "x": "\"En vertu de\" et \"aux termes de\" sont deux locutions prépositionnelles signifiant \"conformément à, selon les dispositions de\". Toutes deux s'emploient avec des textes juridiques. \"Aux termes de l'article...\" est la formulation la plus précise. \"En vertu de\" est plus large. Les deux sont acceptées en concours. Piège : ne connaître qu'une des deux formules et rejeter l'autre."
-    },
-    {
-      "q": "\"Se voir attribuer un poste\" : le PP \"vu\" dans \"Elle s'est vu attribuer un poste\" est :",
-      "o": [
-        "Accordé avec le sujet féminin \"elle\"",
-        "Accordé avec le COD \"un poste\"",
-        "Invariable, quelle que soit la situation",
-        "Accordé selon le sens de la phrase"
-      ],
-      "r": 2,
-      "x": "Dans \"se voir + infinitif\", le PP \"vu\" est TOUJOURS invariable — règle absolue identique à \"faire + infinitif\" et \"laisser + infinitif\" (depuis 1990). \"Elle s'est vu attribuer un poste\" → \"vu\" invariable. C'est une des règles les plus piégées des concours de français. Piège : accorder \"vu\" avec le sujet féminin \"elle\" et écrire \"vue\" — faute absolue."
-    },
-    {
-      "q": "La \"réciprocité\" dans un accord international désigne :",
-      "o": [
-        "Le fait que chaque partie peut imposer ses conditions unilatéralement",
-        "L'équivalence des droits et obligations entre les parties signataires",
-        "La durée de validité de l'accord",
-        "L'arbitrage en cas de désaccord"
+        "plié",
+        "pliée",
+        "pliés",
+        "pliées"
       ],
       "r": 1,
-      "x": "La \"réciprocité\" en droit international = principe selon lequel les droits accordés par un État à un autre sont accordés en retour dans des conditions équivalentes. Fondement des traités bilatéraux. Exemple : \"L'accord de réciprocité entre le Burkina et la France en matière de visas.\" Piège : confondre avec \"égalité\" (qui peut être unilatérale) — la réciprocité implique un échange bilatéral."
+      "x": "On dit « plier quelqu'un à une règle » : le pronom « se » est COD et le participe s'accorde avec le sujet féminin singulier. « À cette procédure » est un complément indirect du verbe, non le pronom. On écrit de même « ils se sont pliés aux exigences du service ».",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"_______ les circonstances, le directeur a fait preuve d'une remarquable _______ .\" Choisissez la meilleure combinaison pour le sens \"malgré la difficulté des circonstances, il a conservé son calme\".",
-      "o": [
-        "Malgré / sérénité",
-        "Face à / fermeté",
-        "En dépit de / pondération",
-        "A et C sont équivalents selon la nuance voulue"
-      ],
-      "r": 3,
-      "x": "\"Malgré les circonstances, il a fait preuve de sérénité\" et \"En dépit des circonstances, il a fait preuve de pondération\" expriment tous deux la même idée de calme face à la difficulté. Les nuances : \"sérénité\" (calme intérieur) vs \"pondération\" (mesure dans les réactions). \"Fermeté\" est différent (résolution). Piège : ne connaître qu'une combinaison et rejeter l'autre équivalente."
-    },
-    {
-      "q": "\"Le _______ de ce dossier a été constaté : plusieurs pièces sont manquantes.\" Choisissez le terme administratif correct.",
-      "o": [
-        "caractère lacunaire",
-        "déficit",
-        "manque",
-        "vide"
-      ],
-      "r": 0,
-      "x": "\"Le caractère lacunaire du dossier\" est la formulation administrative soutenue pour désigner l'incomplétude d'un dossier. \"Lacunaire\" (= incomplet, présentant des lacunes) est l'adjectif administratif approprié. \"Déficit\" s'emploie en matière financière. \"Manque\" et \"vide\" sont trop familiers pour un style administratif de haut niveau. Piège : employer des termes trop généraux dans un contexte où la précision administrative est attendue."
-    },
-    {
-      "q": "\"La présente décision _______ à compter de sa notification.\" Choisissez la formule administrative correcte pour signifier \"prend effet\".",
-      "o": [
-        "entre en vigueur",
-        "s'applique",
-        "commence",
-        "A et B sont acceptés"
-      ],
-      "r": 3,
-      "x": "\"Entrer en vigueur\" et \"s'appliquer à compter de\" sont deux formulations administratives correctes pour exprimer la prise d'effet d'un texte. \"Entrer en vigueur\" est la formule la plus consacrée dans les actes officiels. \"S'appliquer à compter de\" est également admise. \"Commence\" est trop informel pour un document officiel. Piège : croire qu'une seule formule est correcte dans ce contexte."
-    },
-    {
-      "q": "\"Elle s'est _______ la main lors de la cérémonie.\" Choisissez le PP correct de \"se blesser\" dans ce contexte particulier.",
-      "o": [
-        "blessé",
-        "blessée",
-        "blessés",
-        "blessée ou blessé selon la construction"
-      ],
-      "r": 0,
-      "x": "\"Se blesser la main\" : \"la main\" est le COD du verbe \"blesser\" (placé APRÈS). Le pronom \"se\" est COI (elle blesse sa propre main = blesse la main à elle-même). COD postposé → pas d'accord. PP invariable : \"blessé\". Règle : quand un pronom réfléchi est COI (car un COD est exprimé) → PP invariable. Piège : accorder avec le sujet féminin \"elle\" → \"blessée\" — faute très courante sur ce type de construction."
-    },
-    {
-      "q": "\"Le rapport _______ plusieurs recommandations.\" Choisissez la forme correcte du verbe \"formuler\" au passé.",
-      "o": [
-        "a formulés",
-        "a formulé",
-        "formule",
-        "a formulées"
-      ],
-      "r": 1,
-      "x": "\"Formuler des recommandations\" : le COD \"plusieurs recommandations\" est placé APRÈS le verbe → pas d'accord avec l'auxiliaire \"avoir\". \"A formulé\" reste invariable. Piège : accorder avec \"recommandations\" (féminin pluriel) placé après le verbe et écrire \"a formulées\" — l'accord du PP avec \"avoir\" ne se fait que si le COD est ANTÉPOSÉ."
-    },
-    {
-      "q": "La \"redevabilité\" en gouvernance désigne :",
-      "o": [
-        "Les dettes financières d'une collectivité",
-        "La capacité d'une institution à générer des revenus",
-        "L'obligation de rendre compte de sa gestion aux parties prenantes",
-        "Le droit des citoyens à l'information administrative"
-      ],
-      "r": 2,
-      "x": "La \"redevabilité\" (traduction de l'anglais \"accountability\") = l'obligation pour un responsable de rendre compte de ses actions, décisions et résultats aux personnes ou institutions envers qui il est responsable. Terme incontournable dans le lexique de la bonne gouvernance. Piège : confondre avec \"responsabilité\" (plus large) ou \"transparence\" (un aspect de la redevabilité)."
-    },
-    {
-      "q": "\"_______ sa décision, il a tenu compte de l'avis de ses agents.\" Choisissez la bonne locution signifiant \"au moment de prendre\".",
-      "o": [
-        "Pour prendre",
-        "En prenant",
-        "Avant de prendre",
-        "B et C selon la nuance temporelle"
-      ],
-      "r": 3,
-      "x": "\"En prenant sa décision\" (gérondif : simultanéité) = au moment même de décider. \"Avant de prendre sa décision\" (antériorité) = avant de décider. Les deux expriment des nuances temporelles différentes mais les deux sont grammaticalement corrects. Le contexte précis détermine la forme exacte. Piège : croire qu'une seule des deux formules est correcte."
-    },
-    {
-      "q": "\"Cet acte est _______ de la compétence du tribunal administratif.\" Choisissez le bon terme signifiant \"dans le ressort de\".",
-      "o": [
-        "en dehors",
-        "du ressort",
-        "hors",
-        "sous la juridiction"
-      ],
-      "r": 1,
-      "x": "\"Relever du ressort de\" = être de la compétence de, dépendre de l'autorité de. \"Cette affaire est du ressort du tribunal administratif.\" Terme juridique fondamental. \"Sous la juridiction\" est également correct mais plus général. Piège : employer \"hors de la compétence\" pour signifier \"dans la compétence\" — sens inversé."
-    },
-    {
-      "q": "\"Mutatis mutandis\" est une locution latine employée en droit signifiant :",
-      "o": [
-        "En toute légalité",
-        "Sans réserve ni condition",
-        "En faisant les changements nécessaires, compte tenu des différences",
-        "En vigueur jusqu'à nouvel avis"
-      ],
-      "r": 2,
-      "x": "\"Mutatis mutandis\" (= les choses devant être changées ayant été changées) signifie \"en apportant les modifications nécessaires\", \"en tenant compte des adaptations requises\". Exemple : \"Ce principe s'applique, mutatis mutandis, à la procédure de concours.\" Piège : le confondre avec d'autres locutions latines comme \"ad hoc\" (pour cela) ou \"ipso facto\" (par le fait même)."
-    },
-    {
-      "q": "\"Le nombre d'agents _______ considérablement depuis dix ans.\" Choisissez la bonne forme.",
+      "q": "Dans « Le nombre d'agents _______ depuis dix ans », la forme correcte est :",
       "o": [
         "a augmenté",
         "ont augmenté",
@@ -3775,131 +2497,1415 @@ const QUESTIONS = {
         "a augmentés"
       ],
       "r": 0,
-      "x": "\"Le nombre de + nom pluriel\" : le verbe s'accorde avec \"le nombre\" (singulier) et non avec \"agents\" (pluriel). \"Le nombre a augmenté.\" À distinguer de \"un grand nombre de\" où l'accord peut se faire avec le complément pluriel. Piège : accorder au pluriel avec \"agents\" par proximité — faute d'attraction classique."
+      "x": "Avec « le nombre de », le verbe s'accorde avec « le nombre », singulier. Il en irait autrement avec « un grand nombre de », qui admet le pluriel. Avec « la plupart de », le verbe s'accorde au contraire avec le complément : la plupart des agents ont voté.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"Ipso facto\" est une locution latine signifiant :",
+      "q": "Dans « Même si tu _______ des efforts, je ne changerai pas d'avis », la forme correcte est :",
       "o": [
-        "En fait, en réalité",
-        "Par le fait même, automatiquement, de par la nature du fait",
-        "En dehors de tout cadre légal",
-        "Par hypothèse, en supposant que"
+        "fasses",
+        "ferais",
+        "fais",
+        "feras"
+      ],
+      "r": 2,
+      "x": "« Même si » se construit avec l'indicatif, jamais avec le conditionnel ni le subjonctif. C'est « quand bien même » qui appelle le conditionnel. « Même si » admet aussi l'imparfait suivi du conditionnel : même si tu faisais des efforts, je ne changerais pas d'avis.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « C'est lui qui a pris la décision », la tournure « c'est… qui » est :",
+      "o": [
+        "Une proposition infinitive",
+        "Une proposition participiale",
+        "Une mise en relief",
+        "Une interrogation indirecte"
+      ],
+      "r": 2,
+      "x": "La mise en relief par extraction (« c'est… qui », « c'est… que ») isole un élément pour le souligner. Ici elle met en valeur le sujet « lui ». Avec un pronom pluriel, la langue soutenue emploie « ce sont… qui » : ce sont eux qui ont décidé.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Travailler, c'est sa seule passion », l'infinitif « travailler » est :",
+      "o": [
+        "Complément circonstanciel",
+        "Sujet",
+        "Complément d'objet direct",
+        "Attribut du sujet"
       ],
       "r": 1,
-      "x": "\"Ipso facto\" (= par le fait lui-même) désigne ce qui découle automatiquement et nécessairement d'un fait, sans qu'il soit besoin d'une décision supplémentaire. Exemple : \"La promulgation de la loi entraîne ipso facto l'abrogation des textes contraires.\" Piège : confondre avec \"de facto\" (= dans les faits, en pratique, par opposition à \"de jure\")."
+      "x": "L'infinitif peut remplir la fonction de sujet comme un nom ; il est ici repris par « c' ». « Sa seule passion » est l'attribut de ce sujet. L'infinitif peut aussi être COD : il aime travailler.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"La _______ entre ces deux textes juridiques doit être résolue par le juge.\" Choisissez le terme désignant le conflit entre deux règles.",
+      "q": "Dans « Ce faisant, il a évité bien des erreurs », « ce faisant » signifie :",
       "o": [
-        "contradiction",
-        "antinomie",
-        "divergence",
-        "A, B ou C selon la nature du conflit"
+        "Par conséquent",
+        "Malgré cela",
+        "Au même moment",
+        "En agissant ainsi"
+      ],
+      "r": 3,
+      "x": "« Ce faisant » est une locution figée et invariable qui exprime le moyen : en agissant de cette façon. Elle ne marque ni la conséquence ni l'opposition. Elle appartient au registre soutenu et se place généralement en tête de phrase.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Il marchait _______ dans le sable », la forme correcte est :",
+      "o": [
+        "nus-pieds",
+        "nu-pied",
+        "nu-pieds",
+        "nus pieds"
+      ],
+      "r": 2,
+      "x": "Placé devant le nom et relié par un trait d'union, « nu » reste invariable : nu-pieds, nu-tête. Placé après le nom, il s'accorde : « pieds nus ». Dans la langue juridique, « nue-propriété » fait exception : « nu » s'y accorde devant le nom.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « En tant que directeur, il signe les arrêtés », « en tant que » exprime :",
+      "o": [
+        "La cause",
+        "La qualité",
+        "La comparaison",
+        "La concession"
       ],
       "r": 1,
-      "x": "\"Antinomie\" (du grec \"anti\" = contre + \"nomos\" = loi) désigne spécifiquement la contradiction entre deux lois, deux règles ou deux principes juridiques. C'est le terme technique exact en droit. \"Contradiction\" est plus général. \"Divergence\" suggère des positions différentes sans opposition directe. Piège : employer \"contradiction\" qui est correct mais moins précis que \"antinomie\" dans un contexte juridique de concours."
+      "x": "« En tant que » introduit la qualité ou la fonction en vertu de laquelle on agit. Il équivaut à « en sa qualité de ». On ne l'emploie pas pour une simple comparaison : on dit « comme un directeur » si la personne n'occupe pas ce poste.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"Cet agent a fait preuve d'une grande _______ dans l'accomplissement de sa mission.\" Choisissez le terme qui désigne le dévouement rigoureux au service.",
+      "q": "Le gérondif dans « Il lit en marchant » exprime une action :",
       "o": [
-        "zèle",
-        "ardeur",
-        "véhémence",
-        "A et B sont corrects"
-      ],
-      "r": 3,
-      "x": "\"Zèle\" = ardeur et dévouement dans l'accomplissement de sa mission, avec une légère connotation d'excès possible. \"Ardeur\" = enthousiasme intense. Dans ce contexte positif administratif, \"zèle\" et \"ardeur\" sont tous deux corrects. \"Véhémence\" = intensité des émotions ou de la parole — connotation moins positive dans un contexte administratif. Piège : rejeter \"zèle\" parce que \"trop de zèle\" peut être péjoratif — ici le contexte est positif (\"grande\")."
-    },
-    {
-      "q": "La \"caducité\" d'un acte administratif désigne :",
-      "o": [
-        "Son ancienneté excessive",
-        "Son illégalité pour défaut de base juridique",
-        "Sa suspension provisoire",
-        "Sa perte d'effet par disparition de la condition ou de l'objet qui lui donnait sa raison d'être"
-      ],
-      "r": 3,
-      "x": "Un acte \"caduc\" = un acte qui perd ses effets non par illégalité mais parce que son objet a disparu ou que sa condition n'est plus remplie. Exemple : \"L'autorisation est devenue caduque faute d'avoir été utilisée dans le délai.\" Piège : confondre \"caducité\" (perte d'effet par disparition de l'objet) et \"illégalité\" (non-conformité au droit) — deux causes différentes de l'inefficacité d'un acte."
-    },
-    {
-      "q": "\"Ces deux mesures sont _______ : l'une renforce l'autre.\" Choisissez le bon adjectif.",
-      "o": [
-        "complémentaires",
-        "redondantes",
-        "contradictoires",
-        "antinomiques"
+        "Simultanée",
+        "Antérieure",
+        "Postérieure",
+        "Hypothétique"
       ],
       "r": 0,
-      "x": "\"Complémentaires\" = qui se complètent mutuellement, dont les effets s'ajoutent et se renforcent. \"Redondantes\" = qui se répètent inutilement. \"Contradictoires\" = qui s'opposent. \"Antinomiques\" = termes juridiques désignant des règles en conflit. \"Complémentaires\" est le seul terme qui correspond au sens de la phrase (\"l'une renforce l'autre\"). Piège : choisir \"compatibles\" (qui peuvent coexister) sans saisir l'idée de renforcement mutuel."
+      "x": "Le gérondif (en + participe présent) marque une action qui se déroule en même temps que celle du verbe principal. Il doit normalement avoir le même sujet que ce verbe. Un gérondif dont le sujet diffère de celui du verbe principal est fautif : « en attendant le bus, la pluie tomba ».",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"L'agent a été _______ de la nécessité de respecter les délais.\" Choisissez le verbe correct signifiant \"averti, informé formellement\".",
+      "q": "Dans « Quitte à déplaire, il a dit la vérité », « quitte à » exprime :",
       "o": [
-        "notifié",
-        "rappelé",
-        "averti",
-        "A et C sont corrects"
+        "Le refus d'un risque",
+        "La condition d'un succès",
+        "La recherche d'un but",
+        "L'acceptation d'un risque"
       ],
       "r": 3,
-      "x": "\"Notifier quelqu'un de quelque chose\" = l'informer formellement et officiellement (acte administratif). \"Avertir quelqu'un de quelque chose\" = l'informer, le prévenir. Les deux sont corrects. \"Notifier\" a une portée plus formelle et juridique. \"Rappelé à\" (rappeler à quelqu'un = lui rappeler une obligation) est différent. En concours, \"notifié\" et \"averti\" sont tous deux acceptés. Piège : croire que seul \"notifié\" est correct dans le style administratif."
+      "x": "« Quitte à + infinitif » signifie « au risque de » : on accepte un inconvénient possible. La tournure est courante à l'écrit comme à l'oral. « Quitte » reste invariable dans cette locution : quitte à déplaire, ils ont parlé.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "Un poème de 14 vers composé de 2 quatrains et 2 tercets s'appelle :",
+      "q": "Dans « Il a _______ plusieurs erreurs dans ce texte », la forme correcte est :",
+      "o": [
+        "décelé",
+        "décelés",
+        "décelée",
+        "décelées"
+      ],
+      "r": 0,
+      "x": "Avec « avoir », le participe ne s'accorde qu'avec un COD placé avant le verbe. Ici « plusieurs erreurs » est placé après : le participe reste invariable. On écrirait en revanche « les erreurs qu'il a décelées ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Combien d'agents _______ cette épreuve ? », la forme correcte est :",
+      "o": [
+        "a réussi",
+        "ont réussi",
+        "ont réussis",
+        "a réussie"
+      ],
+      "r": 1,
+      "x": "Avec « combien de + nom », le verbe s'accorde avec le nom, ici « agents » au pluriel. Le participe reste invariable car « réussir » n'a pas de COD placé avant. Le participe s'accorde si « combien de » introduit un COD placé avant : combien d'erreurs a-t-il corrigées ?",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "En langue soutenue, dans « _______ eux qui ont rédigé ce rapport », la forme correcte est :",
+      "o": [
+        "Ce sont",
+        "C'est",
+        "Ce fut",
+        "C'était"
+      ],
+      "r": 0,
+      "x": "Devant un pronom de la 3e personne du pluriel (eux, elles), la langue soutenue emploie « ce sont ». « C'est eux » relève du registre familier. « C'est eux » reste admis dans la langue courante, et « c'est nous », « c'est vous » s'écrivent toujours au singulier.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Il a beau travailler, il échoue », la tournure « avoir beau + infinitif » exprime :",
+      "o": [
+        "Une réussite",
+        "Un effort vain",
+        "Une facilité",
+        "Un talent"
+      ],
+      "r": 1,
+      "x": "« Avoir beau + infinitif » marque la concession : malgré l'effort, le résultat n'est pas atteint. La phrase équivaut à « bien qu'il travaille, il échoue ». La tournure se construit sans négation : on écrit « il a beau dire », jamais « il n'a beau dire ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « J'entends chanter les oiseaux », le groupe « les oiseaux » est :",
+      "o": [
+        "Sujet de « j'entends »",
+        "COD de « chanter »",
+        "Complément du nom",
+        "Sujet de « chanter »"
+      ],
+      "r": 3,
+      "x": "C'est une proposition infinitive : après un verbe de perception, l'infinitif a son propre sujet, ici « les oiseaux ». On peut vérifier : les oiseaux chantent. La proposition infinitive suit les verbes de perception (voir, entendre, sentir, regarder) et le verbe « laisser ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Elle s'est _______ les mains avant d'entrer », la forme correcte est :",
+      "o": [
+        "lavée",
+        "lavés",
+        "lavé",
+        "lavées"
+      ],
+      "r": 2,
+      "x": "Le COD est « les mains », placé après le verbe, et « se » est COI : le participe reste invariable. Sans COD exprimé, on écrirait « elle s'est lavée ». Le participe s'accorderait si le COD était placé avant : les mains qu'elle s'est lavées.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Il faut de la méthode, voire de la rigueur », « voire » signifie :",
+      "o": [
+        "Cependant",
+        "C'est-à-dire",
+        "Et même",
+        "Sauf si"
+      ],
+      "r": 2,
+      "x": "« Voire » introduit un élément plus fort que le précédent. « Voire même » est un pléonasme à éviter à l'écrit. « Voire » s'écrit avec un e final, contrairement au verbe « voir ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « De là à dire qu'il a menti, il y a un pas », « de là à » exprime :",
+      "o": [
+        "Une conclusion jugée excessive",
+        "Une cause directe",
+        "Une conséquence certaine",
+        "Une condition nécessaire à l'action"
+      ],
+      "r": 0,
+      "x": "« De là à + infinitif » signale que le locuteur refuse de franchir le pas vers une conclusion trop hâtive. Il marque une réserve, non une conséquence. À l'inverse, « de là à…, il n'y a qu'un pas » suggère que la conclusion est proche.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Soudain retentit un coup de tonnerre », le sujet de « retentit » est :",
+      "o": [
+        "un coup de tonnerre",
+        "soudain",
+        "tonnerre",
+        "un « il » sous-entendu"
+      ],
+      "r": 0,
+      "x": "Le sujet « un coup de tonnerre » est placé après le verbe : c'est une inversion, fréquente après un adverbe en tête de phrase. On le retrouve en posant la question « qu'est-ce qui retentit ? ». L'inversion du sujet est aussi fréquente après « ainsi », « peut-être » ou « sans doute ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Soit qu'il parte, _______ qu'il reste, peu importe », la forme correcte est :",
+      "o": [
+        "sinon",
+        "bien",
+        "soit",
+        "encore"
+      ],
+      "r": 2,
+      "x": "La corrélation « soit que… soit que » présente deux éventualités équivalentes et se construit avec le subjonctif. Elle équivaut à « qu'il parte ou qu'il reste ». On emploie aussi « soit… soit » devant des noms : soit le directeur, soit son adjoint.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Travaillant sans relâche, elle réussit », le participe présent exprime :",
+      "o": [
+        "L'opposition",
+        "La condition",
+        "La cause",
+        "La conséquence"
+      ],
+      "r": 2,
+      "x": "La phrase équivaut à « parce qu'elle travaillait sans relâche, elle réussit ». La valeur du participe (cause, temps, condition) se déduit du sens de la phrase. Le participe présent reste invariable, contrairement à l'adjectif verbal : des agents travaillant dur.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « À peine _______-il entré que le téléphone sonna », la forme correcte est :",
+      "o": [
+        "avait",
+        "a",
+        "était",
+        "eut"
+      ],
+      "r": 2,
+      "x": "« Entrer » se conjugue avec l'auxiliaire être : « il était entré ». Après « à peine » en tête de phrase, la langue soutenue inverse le sujet. Le passé antérieur « à peine fut-il entré » serait également correct en style littéraire.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Elle a _______ toute la nuit pour finir à temps », la forme correcte est :",
+      "o": [
+        "travaillée",
+        "travaillés",
+        "travaillé",
+        "travaillées"
+      ],
+      "r": 2,
+      "x": "« Travailler » n'a pas ici de COD : « toute la nuit » est un complément de temps. Sans COD placé avant, le participe conjugué avec « avoir » reste invariable. Avec un vrai COD placé avant, l'accord se fait : les dossiers qu'elle a travaillés.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Les leçons qu'ils ont _______ », la forme correcte est :",
+      "o": [
+        "récitées",
+        "récité",
+        "récités",
+        "réciter"
+      ],
+      "r": 0,
+      "x": "Le COD « que », mis pour « les leçons », est placé avant le verbe : le participe s'accorde au féminin pluriel. Sans antéposition, on écrirait « ils ont récité leurs leçons ». Avec l'auxiliaire avoir, le participe ne s'accorde jamais avec le sujet.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Elle s'est _______ à cette décision sans protester », la forme correcte est :",
+      "o": [
+        "soumis",
+        "soumises",
+        "soumit",
+        "soumise"
+      ],
+      "r": 3,
+      "x": "On dit « soumettre quelqu'un à » : le pronom « se » est COD et le participe s'accorde avec le sujet féminin singulier. « Soumit » est un passé simple. On écrit de même « ils se sont soumis à l'autorité ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Elle s'est _______ sans raison », la forme correcte est :",
+      "o": [
+        "plaint",
+        "plaints",
+        "plaintes",
+        "plainte"
+      ],
+      "r": 3,
+      "x": "Dans « se plaindre », le pronom fait corps avec le verbe et le participe s'accorde avec le sujet féminin singulier. Avec un sujet masculin, on écrirait « il s'est plaint ». Au pluriel, on écrit de même « elles se sont plaintes ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Les résultats se sont _______ prometteurs », la forme correcte est :",
+      "o": [
+        "révélés",
+        "révélé",
+        "révélées",
+        "révélée"
+      ],
+      "r": 0,
+      "x": "Dans « se révéler » suivi d'un attribut, le participe s'accorde avec le sujet masculin pluriel. L'attribut « prometteurs » s'accorde lui aussi avec ce sujet. Il en va de même pour « se montrer » suivi d'un attribut : elles se sont montrées efficaces.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Ils se sont _______ de leur erreur », la forme correcte est :",
+      "o": [
+        "aperçu",
+        "aperçus",
+        "aperçues",
+        "aperçue"
+      ],
+      "r": 1,
+      "x": "« S'apercevoir de » a un sens propre (prendre conscience) : le pronom fait corps avec le verbe et le participe s'accorde avec le sujet. On écrit de même « elles se sont aperçues de leur erreur ». Sans « de », « s'apercevoir » retrouve le sens de « se voir » : elles se sont aperçues dans le miroir.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Nul ne peut ignorer la loi », le mot « nul » est :",
+      "o": [
+        "Un adjectif qualificatif",
+        "Un adverbe",
+        "Un déterminant",
+        "Un pronom indéfini"
+      ],
+      "r": 3,
+      "x": "Ici « nul » signifie « personne » et occupe la fonction de sujet : c'est un pronom indéfini. Devant un nom (« nul doute »), il serait déterminant. Employé comme pronom, « nul » est toujours au singulier et se construit avec « ne ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le mot « acrimonie » désigne :",
+      "o": [
+        "L'aigreur dans les propos",
+        "Une grande bienveillance",
+        "Une passion artistique",
+        "Un accord enthousiaste"
+      ],
+      "r": 0,
+      "x": "L'acrimonie est une amertume agressive dans le ton ou le caractère : répondre avec acrimonie. Elle porte sur la manière de s'exprimer, alors que l'animosité désigne une hostilité envers quelqu'un. L'adjectif correspondant est « acrimonieux ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un rapport « circonstancié » est un rapport :",
+      "o": [
+        "Détaillé et précis",
+        "Vague et approximatif",
+        "Non autorisé",
+        "Rédigé à la hâte"
+      ],
+      "r": 0,
+      "x": "Est circonstancié ce qui expose toutes les circonstances avec précision : un rapport circonstancié sur les faits. Le mot ne signifie pas « lié aux circonstances ». Ne pas le confondre avec « circonspect », qui signifie prudent.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "En français, l'adjectif « versatile » signifie :",
+      "o": [
+        "Inconstant",
+        "Polyvalent",
+        "Dynamique",
+        "Expérimenté"
+      ],
+      "r": 0,
+      "x": "« Versatile » désigne celui qui change facilement d'avis, comme une girouette. Le sens « polyvalent » est un faux ami emprunté à l'anglais « versatile ». Pour traduire l'anglais « versatile », on emploie « polyvalent ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « _______ les retards accumulés, le projet a été livré à temps », la forme correcte est :",
+      "o": [
+        "En effet",
+        "Nonobstant",
+        "Grâce à",
+        "En vertu de"
+      ],
+      "r": 1,
+      "x": "« Nonobstant » signifie « malgré, en dépit de » et appartient au registre juridique et administratif. « Grâce à » introduirait une cause favorable, ce qui contredit l'idée de retard. Le mot est aussi employé dans la tournure juridique « ce nonobstant ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le mot « judicieux » a pour synonyme :",
+      "o": [
+        "Rigide",
+        "Brutal",
+        "Avisé",
+        "Réticent"
+      ],
+      "r": 2,
+      "x": "Est judicieux ce qui témoigne d'un bon jugement : une décision judicieuse. Ne pas le confondre avec « judiciaire », relatif à la justice. On dit de même « un choix judicieux » ou « une remarque judicieuse ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La rémunération d'un avocat ou d'un médecin libéral s'appelle :",
+      "o": [
+        "Le traitement",
+        "La solde",
+        "Les émoluments",
+        "Les honoraires"
+      ],
+      "r": 3,
+      "x": "Les honoraires rémunèrent les professions libérales. Le fonctionnaire perçoit un traitement, le militaire une solde, et les émoluments désignent surtout la rémunération des officiers publics comme les notaires. Le mot « honoraires » s'emploie toujours au pluriel dans ce sens.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un agent « diligent » est un agent :",
+      "o": [
+        "Distrait et lent",
+        "Zélé et prompt",
+        "Strict et inflexible",
+        "Discret et effacé"
+      ],
+      "r": 1,
+      "x": "Diligent qualifie celui qui accomplit ses tâches avec soin et rapidité. Ne pas le confondre avec « intelligent » : le mot porte sur l'ardeur, non sur les capacités intellectuelles. Le nom correspondant est « diligence » ; « faire diligence » signifie se hâter.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La locution « en vertu de » signifie :",
+      "o": [
+        "En contradiction avec",
+        "En application de",
+        "Malgré",
+        "En l'absence de"
+      ],
+      "r": 1,
+      "x": "« En vertu de » invoque le texte ou le principe qui fonde une décision : en vertu de l'article 15. Elle se distingue de « en raison de », qui introduit une simple cause de fait. Elle est fréquente dans les textes juridiques : en vertu des pouvoirs qui me sont conférés.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "L'adjectif « pérenne » qualifie ce qui est :",
+      "o": [
+        "Récent",
+        "Fragile",
+        "Durable",
+        "Ancien"
+      ],
+      "r": 2,
+      "x": "Pérenne, du latin « perennis » (qui dure toute l'année), qualifie ce qui dure longtemps. Le verbe correspondant est « pérenniser », rendre durable. Le nom correspondant est « pérennité ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « conjoncture » désigne :",
+      "o": [
+        "Une règle administrative fixe",
+        "Un mot de liaison",
+        "La situation à un moment donné",
+        "Un accord entre parties"
+      ],
+      "r": 2,
+      "x": "La conjoncture est l'ensemble des circonstances économiques, politiques ou sociales du moment. Elle s'oppose à la structure, qui désigne l'organisation durable. Ne pas confondre avec « conjecture », qui désigne une supposition.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "L'« ostracisme » désigne :",
+      "o": [
+        "Un discours d'éloge",
+        "L'exclusion d'une personne",
+        "Un vote secret",
+        "Un engagement collectif"
+      ],
+      "r": 1,
+      "x": "À Athènes, on votait l'exil d'un citoyen en écrivant son nom sur un tesson (« ostrakon »). Le mot désigne aujourd'hui la mise à l'écart d'une personne par un groupe. On dit « être frappé d'ostracisme » pour être exclu d'un groupe.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "« Promulguer » une loi signifie :",
+      "o": [
+        "La proposer au débat",
+        "La rejeter",
+        "La modifier",
+        "La rendre exécutoire"
+      ],
+      "r": 3,
+      "x": "La promulgation est l'acte par lequel le chef de l'État authentifie une loi votée et ordonne son exécution. Elle vient après l'adoption par le Parlement et précède la publication au Journal officiel. Il ne faut pas confondre promulguer et voter : le vote appartient au Parlement.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Avoir reçu le pouvoir légal d'accomplir un acte, c'est être :",
+      "o": [
+        "Habitué",
+        "Habile",
+        "Enclin",
+        "Habilité"
+      ],
+      "r": 3,
+      "x": "Être habilité, c'est avoir reçu une autorisation officielle (une habilitation) pour agir. « Habile » désigne une adresse et « habitué » une accoutumance. Le verbe correspondant est « habiliter » : être habilité à signer.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « _______ vouloir être le meilleur, il a négligé l'essentiel », la forme correcte est :",
+      "o": [
+        "Afin de",
+        "Quitte à",
+        "Faute de",
+        "À"
+      ],
+      "r": 3,
+      "x": "« À + infinitif » peut exprimer la cause : c'est parce qu'il a voulu être le meilleur qu'il a négligé l'essentiel. « Afin de » exprimerait le but, ce qui n'a pas de sens ici. La tournure « à + infinitif » peut aussi exprimer la condition : à le voir, on le croirait malade.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « laïcité » désigne :",
+      "o": [
+        "Le refus de toute croyance",
+        "La pratique d'une religion",
+        "La tolérance mutuelle entre toutes les religions",
+        "La séparation de l'État et des religions"
+      ],
+      "r": 3,
+      "x": "La laïcité garantit la neutralité de l'État à l'égard des cultes et la liberté de conscience de chacun. Elle ne se confond pas avec l'athéisme, qui est le refus de toute croyance. L'adjectif s'écrit « laïc » ou « laïque » au masculin, mais seulement « laïque » au féminin.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un rapport « succinct » est un rapport :",
+      "o": [
+        "Confidentiel",
+        "Exhaustif",
+        "Élégant",
+        "Bref"
+      ],
+      "r": 3,
+      "x": "Succinct qualifie ce qui est court, sans développement superflu, parfois avec une idée d'insuffisance. Il s'oppose à « exhaustif », qui couvre tous les aspects. Au sens figuré, un repas succinct est un repas peu copieux.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « candeur » désigne :",
+      "o": [
+        "Une ruse habile",
+        "Une franchise brutale",
+        "Une timidité maladive",
+        "Une pureté sincère"
+      ],
+      "r": 3,
+      "x": "La candeur, du latin « candor » (blancheur), est une sincérité sans arrière-pensée. Elle a une nuance plus positive que la naïveté, qui suppose un manque de discernement. L'adjectif correspondant est « candide ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « dans toute l'_______ du terme », le mot correct est :",
+      "o": [
+        "acceptation",
+        "acception",
+        "exception",
+        "accession"
+      ],
+      "r": 1,
+      "x": "L'acception est chacun des sens d'un mot. L'acceptation est le fait d'accepter : les deux mots sont souvent confondus. L'expression « dans toute l'acception du terme » signifie « au sens plein du mot ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un texte « prescriptif » est un texte qui :",
+      "o": [
+        "Décrit une réalité",
+        "Raconte une histoire",
+        "Commente un texte",
+        "Impose des règles"
+      ],
+      "r": 3,
+      "x": "Un texte prescriptif dit ce qu'il faut faire : règlement, loi, mode d'emploi. Il s'oppose au texte descriptif, qui montre ce qui est. On dit aussi texte « injonctif » dans le même sens.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "« Abroger » une loi signifie :",
+      "o": [
+        "La modifier",
+        "La supprimer",
+        "La renforcer",
+        "La voter"
+      ],
+      "r": 1,
+      "x": "Abroger une loi, c'est mettre fin à son application pour l'avenir, totalement ou partiellement. Amender, c'est le modifier partiellement ; on abroge une loi mais on abolit une institution ou une peine. L'abrogation vaut pour l'avenir, alors que l'annulation par le juge fait disparaître l'acte depuis son origine.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « prégnance » d'une idée désigne :",
+      "o": [
+        "Sa fragilité",
+        "Son caractère obscur et flou",
+        "Son ancienneté",
+        "Sa force d'impression"
+      ],
+      "r": 3,
+      "x": "Est prégnant ce qui s'impose fortement à l'esprit et le marque durablement. Le mot vient du latin « praegnans » (plein, enceinte), mais seul le sens figuré est attendu ici. L'adjectif « prégnant » se dit aussi d'une image ou d'un souvenir qui s'impose à l'esprit.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un terme « univoque » est un terme :",
+      "o": [
+        "À un seul sens",
+        "À plusieurs sens",
+        "D'une seule langue",
+        "Très spécialisé"
+      ],
+      "r": 0,
+      "x": "Univoque qualifie ce qui n'admet qu'une seule interprétation. Son contraire est « équivoque », qui prête à plusieurs sens. Les textes juridiques recherchent des termes univoques pour éviter les interprétations divergentes.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un délit « flagrant » est un délit :",
+      "o": [
+        "Particulièrement grave et violent",
+        "Constaté pendant qu'il se commet",
+        "Commis en bande",
+        "Déjà prescrit"
+      ],
+      "r": 1,
+      "x": "Le flagrant délit est celui qui se commet ou vient de se commettre sous les yeux de témoins. « Flagrant » porte sur l'évidence, non sur la gravité. Au sens courant, « flagrant » signifie évident : une injustice flagrante.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « _______ instructions du directeur, le service a vérifié les dossiers », la forme correcte est :",
+      "o": [
+        "Suite aux",
+        "Rapport aux",
+        "En conformité des",
+        "Conformément aux"
+      ],
+      "r": 3,
+      "x": "« Conformément à » signifie « en accord avec » et convient au style administratif. « Suite à » est critiqué dans la langue soignée et « rapport à » relève du registre familier. On peut aussi écrire « selon les instructions » ou « en application des instructions ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "« Amender » un texte de loi signifie :",
+      "o": [
+        "Le supprimer",
+        "Le promulguer officiellement",
+        "Le modifier partiellement",
+        "Le sanctionner"
+      ],
+      "r": 2,
+      "x": "Amender, c'est apporter des modifications à un texte ; la modification proposée s'appelle un amendement. L'« amende » vient du même verbe, mais désigne aujourd'hui une sanction pécuniaire. On amende aussi un sol en l'enrichissant pour le rendre plus fertile.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La locution juridique « en l'espèce » signifie :",
+      "o": [
+        "En argent liquide",
+        "En général",
+        "Dans le cas examiné",
+        "Par hypothèse"
+      ],
+      "r": 2,
+      "x": "« En l'espèce » désigne le cas concret dont il est question, par opposition au principe général. Elle est proche de « en l'occurrence » ; payer « en espèces », c'est payer en argent liquide. Attention à l'orthographe : « en l'espèce » au singulier, « en espèces » au pluriel.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le terme administratif « susmentionné » signifie :",
+      "o": [
+        "Cité plus loin",
+        "Officiellement reconnu",
+        "Contesté",
+        "Cité plus haut"
+      ],
+      "r": 3,
+      "x": "« Susmentionné », comme « précité » ou « susdit », renvoie à un élément déjà évoqué dans le document. Le décret susmentionné est celui dont on a parlé plus haut. Le mot s'écrit en un seul mot, sans trait d'union.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La locution « à proprement parler » signifie :",
+      "o": [
+        "Pour être tout à fait franc",
+        "Au sens exact du terme",
+        "En termes polis",
+        "En résumé"
+      ],
+      "r": 1,
+      "x": "« À proprement parler » indique qu'on emploie un mot dans son sens strict. « Pour être franc » correspond plutôt à « à vrai dire ». On l'emploie souvent à la forme négative : ce n'est pas, à proprement parler, une faute.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le mot « impécunieux » qualifie une personne :",
+      "o": [
+        "Sans scrupules",
+        "Sans argent",
+        "Sans méthode",
+        "Sans ambition"
+      ],
+      "r": 1,
+      "x": "Impécunieux vient du latin « pecunia » (argent) : c'est un synonyme soutenu de « pauvre ». On retrouve la même racine dans « pécuniaire ». Le mot est rare et appartient à la langue soutenue.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Une mesure prise « à titre conservatoire » vise à :",
+      "o": [
+        "Récompenser un agent",
+        "Archiver des décisions",
+        "Préserver une situation en attendant",
+        "Conserver des documents administratifs"
+      ],
+      "r": 2,
+      "x": "Une mesure conservatoire empêche un préjudice en attendant une décision définitive, comme la suspension d'un agent pendant une enquête. Le mot n'a rien à voir avec la conservation des archives. On parle aussi de saisie conservatoire pour bloquer des biens en attendant un jugement.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "L'« assiduité » d'un agent désigne :",
+      "o": [
+        "Sa présence régulière",
+        "Son assurance",
+        "Son sacrifice pour le service",
+        "Sa vivacité"
+      ],
+      "r": 0,
+      "x": "L'assiduité est la régularité de présence et d'application au travail, critère courant des évaluations. Le sacrifice de soi s'appelle l'abnégation. L'adjectif correspondant est « assidu » : un élève assidu.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "L'obligation de « motiver » une décision administrative impose d'en indiquer :",
+      "o": [
+        "La date d'entrée en vigueur",
+        "Les raisons de droit et de fait",
+        "Le nom du signataire",
+        "Le coût prévisible de la mesure"
+      ],
+      "r": 1,
+      "x": "Motiver une décision, c'est en exposer les motifs, c'est-à-dire les raisons qui la justifient. Une sanction non motivée peut être annulée par le juge. Le mot « motif » désigne ici la raison qui fonde la décision, et non l'envie d'agir.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « ratification » d'un traité est :",
+      "o": [
+        "Sa suppression",
+        "Sa négociation entre les États",
+        "Sa confirmation officielle",
+        "Sa traduction"
+      ],
+      "r": 2,
+      "x": "Par la ratification, l'autorité compétente confirme un traité déjà signé et le rend obligatoire pour l'État. La promulgation, elle, concerne les lois nationales. Dans la plupart des États, la ratification de certains traités doit être autorisée par une loi.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un fait « patent » est un fait :",
+      "o": [
+        "Secret",
+        "Douteux",
+        "Évident",
+        "Ancien"
+      ],
+      "r": 2,
+      "x": "Patent qualifie ce qui est manifeste et incontestable. Il se distingue de « flagrant », qui insiste sur le fait d'être constaté sur le vif. Le mot vient du latin « patens » (ouvert).",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "L'« abnégation » désigne :",
+      "o": [
+        "L'entêtement",
+        "La négation d'un fait",
+        "Le refus d'obéir",
+        "Le sacrifice de soi"
+      ],
+      "r": 3,
+      "x": "L'abnégation est le renoncement à ses intérêts au profit d'une cause ou d'autrui : servir l'État avec abnégation. La ressemblance avec « négation » est trompeuse. On dit « faire preuve d'abnégation ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Des résultats « probants » sont des résultats :",
+      "o": [
+        "Convaincants",
+        "Probables",
+        "Approuvés",
+        "Honnêtes"
+      ],
+      "r": 0,
+      "x": "Probant, du latin « probare » (prouver), qualifie ce qui constitue une preuve. Il ne faut pas le confondre avec « probable » (vraisemblable mais non prouvé) ni avec « probe » (honnête). On parle de « force probante » pour la valeur de preuve d'un document.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "En droit administratif, l'« illégalité » d'un acte désigne :",
+      "o": [
+        "Sa non-conformité au droit",
+        "Son manque de légitimité",
+        "Son ancienneté",
+        "Son caractère secret"
+      ],
+      "r": 0,
+      "x": "Un acte est illégal lorsqu'il méconnaît une règle de droit ; il peut alors être annulé. L'illégitimité relève du jugement moral ou politique, non du droit. Le juge administratif peut annuler un acte illégal à la suite d'un recours pour excès de pouvoir.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "L'adjectif « omnipotent » signifie :",
+      "o": [
+        "Présent partout",
+        "Tout-puissant",
+        "Qui sait tout",
+        "Très fréquent"
+      ],
+      "r": 1,
+      "x": "Omnipotent associe « omni » (tout) et « potens » (puissant). Celui qui sait tout est omniscient et celui qui est partout est omniprésent. Le préfixe « omni- » se retrouve aussi dans « omnivore », qui mange de tout.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "En droit, la « forclusion » désigne :",
+      "o": [
+        "Une décision finale",
+        "Une sanction disciplinaire",
+        "Une suspension provisoire",
+        "La perte d'un droit hors délai"
+      ],
+      "r": 3,
+      "x": "La forclusion prive de son droit celui qui ne l'a pas exercé dans le délai fixé, par exemple un recours déposé trop tard. Elle se distingue de la prescription, extinction d'un droit par l'écoulement du temps. On dit qu'un candidat est forclos lorsqu'il a laissé passer le délai.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le responsable révoqué de son poste est dit :",
+      "o": [
+        "Démis de ses fonctions",
+        "Licencié de ses fonctions",
+        "Congédié de ses fonctions",
+        "Suspendu de ses fonctions"
+      ],
+      "r": 0,
+      "x": "« Être démis de ses fonctions » est la formule administrative de la révocation. Le licenciement relève du droit du travail privé et la suspension n'est que provisoire. On dit aussi « relevé de ses fonctions » dans un sens voisin.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « réciprocité » dans un accord international désigne :",
+      "o": [
+        "L'équivalence des engagements",
+        "Une décision unilatérale",
+        "La durée de l'accord",
+        "L'arbitrage des litiges"
+      ],
+      "r": 0,
+      "x": "Par la réciprocité, chaque État accorde à l'autre les mêmes droits qu'il reçoit de lui. Elle est le fondement de nombreux accords bilatéraux. Le principe de réciprocité s'applique notamment en matière de visas.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « redevabilité » en gouvernance désigne :",
+      "o": [
+        "Les dettes d'une commune",
+        "L'obligation de rendre compte",
+        "La capacité à lever l'impôt",
+        "Le droit à l'information"
+      ],
+      "r": 1,
+      "x": "La redevabilité (de l'anglais « accountability ») oblige un responsable à rendre compte de sa gestion à ceux qui l'ont mandaté. Elle est l'un des piliers de la bonne gouvernance. On parle aussi de « reddition des comptes » dans un sens voisin.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Une affaire qui « relève du ressort » d'un tribunal :",
+      "o": [
+        "Échappe à sa compétence",
+        "A déjà été jugée",
+        "Est en appel",
+        "Est de sa compétence"
+      ],
+      "r": 3,
+      "x": "Le ressort désigne l'étendue de la compétence d'une juridiction, territoriale ou matérielle. Dire qu'une affaire en relève, c'est dire que ce tribunal peut en connaître. Au sens figuré, « ce n'est pas de mon ressort » signifie que ce n'est pas de ma compétence.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « La _______ de l'accord n'a pas encore été publiée », le mot désignant le contenu exact est :",
+      "o": [
+        "tenue",
+        "texture",
+        "teneur",
+        "tenure"
+      ],
+      "r": 2,
+      "x": "La teneur d'un texte est son contenu exact, ce qu'il dit mot pour mot. « Tenue » désigne un comportement ou un vêtement. « Tenure » est un terme d'histoire désignant une terre concédée par un seigneur.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La locution latine « mutatis mutandis » signifie :",
+      "o": [
+        "Dans le strict respect de la loi",
+        "En faisant les changements nécessaires",
+        "Sans rien changer à la règle",
+        "Jusqu'à décision contraire"
+      ],
+      "r": 1,
+      "x": "« Mutatis mutandis » signifie que l'on transpose une règle à un autre cas en l'adaptant. Exemple : ce principe s'applique, mutatis mutandis, aux concours professionnels. Comme les autres locutions latines, elle s'écrit en italique dans un texte imprimé.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La locution latine « ipso facto » signifie :",
+      "o": [
+        "Dans les faits",
+        "Hors de tout cadre légal",
+        "Par hypothèse",
+        "Par le fait même"
+      ],
+      "r": 3,
+      "x": "« Ipso facto » désigne une conséquence automatique, sans décision supplémentaire. Il ne faut pas le confondre avec « de facto », qui signifie « dans les faits ». « De jure » signifie au contraire « en droit ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Une « antinomie » entre deux textes juridiques est :",
+      "o": [
+        "Une contradiction entre deux règles",
+        "Une simple divergence de style",
+        "Un accord parfait entre deux règles",
+        "Une traduction"
+      ],
+      "r": 0,
+      "x": "Antinomie vient du grec « anti » (contre) et « nomos » (loi) : c'est le conflit entre deux règles applicables à la même situation. Le juge doit alors déterminer laquelle prévaut. L'adjectif correspondant est « antinomique ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « caducité » d'un acte administratif désigne :",
+      "o": [
+        "Sa perte d'effet",
+        "Son illégalité",
+        "Sa suspension",
+        "Son ancienneté"
+      ],
+      "r": 0,
+      "x": "Un acte devient caduc quand il perd ses effets parce que son objet a disparu ou qu'un délai n'a pas été respecté. La caducité ne suppose aucune illégalité. L'adjectif « caduc » fait « caduque » au féminin : une loi caduque.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Ces deux mesures sont _______ : l'une renforce l'autre », le mot correct est :",
+      "o": [
+        "redondantes",
+        "contradictoires",
+        "antinomiques",
+        "complémentaires"
+      ],
+      "r": 3,
+      "x": "Des mesures complémentaires s'ajoutent et se renforcent mutuellement. Des mesures redondantes, au contraire, se répètent inutilement. Des mesures contradictoires, elles, s'opposent l'une à l'autre.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le mot « incongru » qualifie ce qui est :",
+      "o": [
+        "Illogique",
+        "Complexe",
+        "Contradictoire",
+        "Déplacé"
+      ],
+      "r": 3,
+      "x": "Incongru, du latin « incongruus » (qui ne s'accorde pas), désigne ce qui est hors de propos ou contraire aux convenances. Exemple : une remarque incongrue lors d'une cérémonie. Le nom correspondant est « incongruité ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le mot « naguère » signifie :",
+      "o": [
+        "Il y a très longtemps",
+        "Il y a peu de temps",
+        "Dans peu de temps",
+        "À une date inconnue"
+      ],
+      "r": 1,
+      "x": "« Naguère » vient de « n'a guère » (il n'y a pas longtemps). Il s'oppose à « jadis », qui désigne un passé lointain : les confondre est une faute fréquente. « Naguère » est souvent employé à tort au sens de « autrefois » ; dans une copie, on le réserve à un passé récent.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La locution « force est de constater » signifie :",
+      "o": [
+        "Il est interdit de constater",
+        "Il est difficile de constater",
+        "On est obligé de constater",
+        "On peut constater"
+      ],
+      "r": 2,
+      "x": "« Force est de + infinitif » exprime une contrainte : on ne peut faire autrement. La tournure appartient à la langue soutenue et administrative. Dans cette tournure, « force » s'emploie sans article et reste invariable.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un argument « fallacieux » est un argument :",
+      "o": [
+        "Obscur",
+        "Rigoureux",
+        "Trompeur",
+        "Trop bref"
+      ],
+      "r": 2,
+      "x": "Fallacieux, du latin « fallax » (trompeur), qualifie ce qui vise à induire en erreur. Il est proche de « spécieux », qui insiste plutôt sur l'apparence séduisante. On parle de promesses fallacieuses pour des promesses faites pour tromper.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un discours « laudatif » est un discours qui :",
+      "o": [
+        "Fait l'éloge",
+        "Accuse avec force",
+        "Ennuie",
+        "Menace"
+      ],
+      "r": 0,
+      "x": "Laudatif vient du latin « laus » (louange). Son contraire est « dépréciatif » ou « péjoratif ». Le nom « louange » appartient à la même famille.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un article « tendancieux » est un article :",
+      "o": [
+        "Fidèle aux faits",
+        "Partial",
+        "À la mode",
+        "Équilibré"
+      ],
+      "r": 1,
+      "x": "Est tendancieux ce qui présente les faits de manière orientée pour influencer le lecteur. Le mot n'a pas de lien avec la « tendance » au sens de mode. On parle aussi d'une question tendancieuse, qui oriente la réponse.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un défaut « rédhibitoire » est un défaut :",
+      "o": [
+        "Insurmontable",
+        "Facile à corriger",
+        "Purement formel",
+        "Peu visible"
+      ],
+      "r": 0,
+      "x": "En droit, le vice rédhibitoire permet d'annuler une vente. Par extension, est rédhibitoire ce qui fait obstacle de manière définitive. Le mot s'écrit avec un h après le d : rédhibitoire.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Une « sinécure » est :",
+      "o": [
+        "Un poste sans effort",
+        "Un poste épuisant",
+        "Un traitement médical",
+        "Une mesure d'urgence"
+      ],
+      "r": 0,
+      "x": "Sinécure vient du latin « sine cura » (sans souci) : c'est un emploi rémunéré qui demande peu de travail. « Ce n'est pas une sinécure » signifie donc que la tâche est difficile. Le mot est féminin : une sinécure.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un argument « spécieux » est un argument :",
+      "o": [
+        "Très spécialisé",
+        "Bien documenté",
+        "Rigoureux et démontré",
+        "Séduisant mais faux"
+      ],
+      "r": 3,
+      "x": "Spécieux, du latin « speciosus » (beau à voir), qualifie ce qui a l'apparence de la vérité sans en avoir le fond. Il ne signifie ni « spécial » ni « spécifique ». Un raisonnement spécieux est proche d'un raisonnement captieux, conçu pour tromper.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un « panégyrique » est :",
+      "o": [
+        "Un éloge solennel",
+        "Un réquisitoire",
+        "Une critique sévère",
+        "Un compte rendu"
+      ],
+      "r": 0,
+      "x": "Le panégyrique est un discours qui célèbre une personne ou une institution. Ses contraires sont le réquisitoire et la diatribe. Le mot est masculin : un panégyrique.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Une personne « vindicative » est une personne qui :",
+      "o": [
+        "Défend la justice",
+        "Pardonne facilement",
+        "Cherche à se venger",
+        "Parle franchement"
+      ],
+      "r": 2,
+      "x": "Vindicatif vient du latin « vindicta » (vengeance). Il ne faut pas le confondre avec « revendicatif », qui qualifie celui qui réclame des droits. Le nom « vindicte » se retrouve dans l'expression « la vindicte populaire ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Des précisions « superfétatoires » sont des précisions :",
+      "o": [
+        "Indispensables",
+        "Urgentes",
+        "Superflues",
+        "Bénéfiques"
+      ],
+      "r": 2,
+      "x": "Est superfétatoire ce qui s'ajoute inutilement à ce qui suffisait déjà. Le mot est un synonyme soutenu de « superflu ». Le mot appartient au registre soutenu et convient bien dans une copie.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un compte rendu « édulcoré » est un compte rendu :",
+      "o": [
+        "Très technique",
+        "Brutal",
+        "Adouci",
+        "Illustré"
+      ],
+      "r": 2,
+      "x": "Édulcorer, c'est au sens propre sucrer : un texte édulcoré a été débarrassé de ce qui pouvait choquer. Le mot suggère souvent une vérité affaiblie. On appelle « édulcorant » une substance qui donne un goût sucré.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un texte « abscons » est un texte :",
+      "o": [
+        "Obscur",
+        "Limpide",
+        "Lacunaire",
+        "Redondant"
+      ],
+      "r": 0,
+      "x": "Abscons, du latin « absconditus » (caché), qualifie un texte difficile à comprendre. Il est proche d'« abstrus » et d'« hermétique ». Le mot appartient au registre soutenu et a une valeur critique.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Faire « volte-face » signifie :",
+      "o": [
+        "Avouer une faute",
+        "Changer brusquement d'avis",
+        "Refuser un compromis",
+        "Rester sur ses positions"
+      ],
+      "r": 1,
+      "x": "Au sens propre, faire volte-face, c'est se retourner complètement ; au sens figuré, c'est changer brusquement d'opinion ou de camp. Son contraire est « rester sur ses positions ». Le mot est invariable : des volte-face.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Une personne « stoïque » est une personne qui :",
+      "o": [
+        "Change souvent d'avis",
+        "Recherche le plaisir",
+        "Refuse tout compromis avec les autres",
+        "Supporte les épreuves sans faiblir"
+      ],
+      "r": 3,
+      "x": "Le mot vient du stoïcisme, philosophie grecque de la maîtrise de soi. Il se distingue d'« impassible », qui décrit seulement l'absence d'émotion visible. Le nom correspondant est « stoïcisme ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un « galimatias » est :",
+      "o": [
+        "Un discours limpide",
+        "Un parler de groupe",
+        "Un discours confus",
+        "Une liste technique"
+      ],
+      "r": 2,
+      "x": "Le galimatias est un propos embrouillé et incohérent. Il se distingue du jargon, langue technique compréhensible par les spécialistes. Le mot est masculin : un galimatias.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un projet « chimérique » est un projet :",
+      "o": [
+        "Illusoire",
+        "Rigoureux",
+        "Réalisable",
+        "Mythologique"
+      ],
+      "r": 0,
+      "x": "Le mot vient de la Chimère, monstre de la mythologie grecque : est chimérique ce qui n'a aucune réalité. Il est plus négatif qu'« utopique », qui peut désigner un idéal stimulant. Le nom « chimère » désigne une idée irréalisable : poursuivre des chimères.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un texte « apocryphe » est un texte :",
+      "o": [
+        "Écrit en langue morte",
+        "Traduit puis adapté",
+        "D'authenticité douteuse",
+        "Interdit par la loi"
+      ],
+      "r": 2,
+      "x": "Apocryphe vient du grec « apokruphos » (caché) : le texte est faussement attribué à un auteur ou d'origine incertaine. Le terme est courant en histoire des textes religieux. Les Évangiles apocryphes sont ceux que l'Église n'a pas retenus dans la Bible.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Une personne « pragmatique » est une personne qui :",
+      "o": [
+        "Défend une idéologie",
+        "S'adapte aux réalités",
+        "Refuse tout compromis",
+        "Théorise beaucoup"
+      ],
+      "r": 1,
+      "x": "Pragmatique, du grec « pragma » (action), qualifie celui qui privilégie l'efficacité concrète. Son contraire est « idéaliste » ou « dogmatique ». Le nom correspondant est « pragmatisme ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un style « emphatique » est un style :",
+      "o": [
+        "Simple et direct",
+        "Sans conviction",
+        "Exagérément amplifié",
+        "Fondé sur des chiffres"
+      ],
+      "r": 2,
+      "x": "L'emphase est l'exagération dans le ton ou l'expression. Le mot a souvent une connotation péjorative : le style emphatique manque de naturel. En grammaire, une tournure emphatique met un élément en relief : c'est lui qui a parlé.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un ton « sentencieux » est un ton :",
+      "o": [
+        "Bienveillant et doux",
+        "Concis et sec",
+        "Moralisateur et pompeux",
+        "Ironique et léger"
+      ],
+      "r": 2,
+      "x": "Est sentencieux celui qui s'exprime par maximes avec un air de sagesse affecté. La connotation est péjorative. Une sentence est une maxime, mais aussi une décision de justice.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Une personne « sagace » est une personne :",
+      "o": [
+        "Perspicace",
+        "Impulsive",
+        "Secrète",
+        "Prudente"
+      ],
+      "r": 0,
+      "x": "Sagace, du latin « sagax » (qui a du flair), désigne celui qui saisit vite ce qui échappe aux autres. Le nom correspondant est « sagacité ». Il est proche de « perspicace », mais insiste sur la finesse du jugement.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un discours « prolixe » est un discours :",
+      "o": [
+        "Obscur",
+        "Trop long",
+        "Rigoureux",
+        "Concis"
+      ],
+      "r": 1,
+      "x": "Est prolixe celui qui parle ou écrit plus qu'il n'est nécessaire. Ses contraires sont « concis » et « succinct ». Le nom correspondant est « prolixité ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un renseignement « erroné » est un renseignement :",
+      "o": [
+        "Mensonger",
+        "Invérifiable",
+        "Inexact",
+        "Archaïque"
+      ],
+      "r": 2,
+      "x": "Erroné signifie qui contient une erreur, sans intention de tromper. Un renseignement mensonger, lui, est faux volontairement. Le mot s'écrit avec deux r et un seul n.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un acte « délibéré » est un acte :",
+      "o": [
+        "Collectif",
+        "Intentionnel",
+        "Unanime",
+        "Hésitant"
+      ],
+      "r": 1,
+      "x": "Délibéré signifie voulu, accompli en connaissance de cause ; « de propos délibéré » veut dire exprès. Le mot ne renvoie pas ici à une délibération collective. L'adverbe « délibérément » signifie « volontairement » : il a délibérément ignoré l'ordre.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un texte « hermétique » est un texte :",
+      "o": [
+        "Accessible à tous les lecteurs",
+        "Réservé aux initiés",
+        "Très bref",
+        "Officiel"
+      ],
+      "r": 1,
+      "x": "Le mot vient d'Hermès Trismégiste, figure des sciences occultes : est hermétique ce qui reste fermé à la compréhension ordinaire. Il est proche d'« abscons ». Au sens propre, un récipient hermétique est parfaitement fermé.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Une démarche « œcuménique » est une démarche qui :",
+      "o": [
+        "Concerne l'économie",
+        "Cherche à rassembler",
+        "Relève d'une seule Église",
+        "Touche l'environnement"
+      ],
+      "r": 1,
+      "x": "Œcuménique vient du grec « oikoumenê » (la terre habitée) et désigne ce qui vise l'unité. Le terme s'emploie surtout pour le dialogue entre les confessions chrétiennes. Le Conseil œcuménique des Églises réunit de nombreuses confessions chrétiennes.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le mot « manuscrit » vient du latin « manu scriptus », qui signifie :",
+      "o": [
+        "Écrit à la main",
+        "Signé à la main",
+        "Copié mot à mot",
+        "Écrit avec soin"
+      ],
+      "r": 0,
+      "x": "« Manu » signifie « avec la main » et « scriptus » « écrit ». La même racine se retrouve dans « manuel » et « manufacture ». On parle d'une signature manuscrite par opposition à une signature électronique.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Une mesure « rétrograde » est une mesure qui :",
+      "o": [
+        "Fait progresser",
+        "Avance par étapes",
+        "Revient en arrière",
+        "Suit la modernité"
+      ],
+      "r": 2,
+      "x": "Rétrograde, du latin « retrogradus » (qui marche à reculons), qualifie ce qui s'oppose au progrès. Son contraire est « progressiste ». Le mot s'emploie aussi en astronomie pour un mouvement apparent en sens inverse.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « déontologie » désigne :",
+      "o": [
+        "Les règles d'une profession",
+        "La morale d'une civilisation",
+        "Les droits naturels",
+        "Les valeurs personnelles"
+      ],
+      "r": 0,
+      "x": "La déontologie, du grec « deon » (devoir), est l'ensemble des obligations propres à un métier : médecins, avocats, fonctionnaires. L'éthique est plus large et concerne les principes moraux en général. Le code de déontologie fixe les devoirs des membres d'une profession.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un raisonnement « nébuleux » est un raisonnement :",
+      "o": [
+        "Lumineux",
+        "Confus",
+        "Concis",
+        "Rigoureux"
+      ],
+      "r": 1,
+      "x": "Nébuleux, du latin « nebula » (brouillard), qualifie ce qui manque de clarté. On parle d'un projet nébuleux ou d'explications nébuleuses. En astronomie, une nébuleuse est un nuage de gaz et de poussières.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Une institution « vénérable » est une institution :",
+      "o": [
+        "Redoutable",
+        "Corruptible",
+        "Religieuse",
+        "Respectable"
+      ],
+      "r": 3,
+      "x": "Vénérable qualifie ce qui mérite le respect par son âge ou sa valeur. Il ne faut pas le confondre avec « vénal », qui signifie corruptible. Le verbe correspondant est « vénérer ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le « jargon » désigne :",
+      "o": [
+        "Le parler des jeunes",
+        "Un registre familier",
+        "La langue d'une profession",
+        "Un dialecte régional"
+      ],
+      "r": 2,
+      "x": "Le jargon est le vocabulaire technique d'un métier : jargon juridique, jargon médical. L'argot est le parler particulier d'un groupe social. Le mot devient péjoratif quand il désigne un langage incompréhensible pour les non-spécialistes.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un poème de 14 vers composé de deux quatrains et deux tercets est :",
       "o": [
         "Une ballade",
         "Une élégie",
-        "Un sonnet",
-        "Une ode"
-      ],
-      "r": 2,
-      "x": "Le sonnet est la forme fixe la plus connue de la poésie française classique. Structure canonique : 2 quatrains (ABBA ABBA) + 2 tercets (CCD EDE ou CCD EED)."
-    },
-    {
-      "q": "La coupe qui divise l'alexandrin en deux groupes de 6 syllabes s'appelle :",
-      "o": [
-        "La diérèse",
-        "La rime",
-        "L'enjambement",
-        "La césure"
+        "Une ode",
+        "Un sonnet"
       ],
       "r": 3,
-      "x": "La césure est la pause rythmique obligatoire à l'intérieur du vers, notamment après la 6e syllabe dans l'alexandrin classique. Les deux groupes de 6 syllabes s'appellent hémistiches."
+      "x": "Le sonnet est la forme fixe la plus célèbre de la poésie française. Ses quatrains riment souvent en ABBA ABBA et ses tercets en CCD EED ou CCD EDE.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "Le schéma de rimes ABBA est dit :",
+      "q": "La pause qui partage l'alexandrin classique en deux groupes de 6 syllabes est :",
       "o": [
-        "Croisé",
-        "Embrassé",
-        "Plat",
-        "Alterné"
+        "La césure",
+        "La diérèse",
+        "La rime",
+        "L'enjambement"
       ],
-      "r": 1,
-      "x": "Rimes embrassées : la rime B est \"embrassée\" par les deux rimes A. ABAB = rimes croisées. AABB = rimes plates ou suivies."
+      "r": 0,
+      "x": "La césure se place après la 6e syllabe de l'alexandrin classique. Les deux moitiés du vers s'appellent des hémistiches.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "L'enjambement est le fait que :",
+      "q": "Le schéma de rimes ABBA est appelé :",
       "o": [
-        "Deux vers consécutifs partagent une même rime",
-        "La syntaxe d'une phrase déborde sur le vers suivant",
-        "Un vers comporte une syllabe de trop",
-        "Le poète alterne vers courts et vers longs"
+        "Rimes embrassées",
+        "Rimes croisées",
+        "Rimes plates",
+        "Rimes riches"
       ],
-      "r": 1,
-      "x": "L'enjambement crée un effet de fluidité ou de tension en refusant la pause en fin de vers. Le mot rejeté au vers suivant est appelé \"rejet\"."
+      "r": 0,
+      "x": "Dans ABBA, la rime B est « embrassée » par la rime A. ABAB correspond aux rimes croisées et AABB aux rimes plates.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "La diérèse, en versification, consiste à :",
+      "q": "Le schéma de rimes AABB est appelé :",
+      "o": [
+        "Rimes croisées",
+        "Rimes embrassées",
+        "Rimes pauvres",
+        "Rimes plates"
+      ],
+      "r": 3,
+      "x": "Les rimes plates, ou suivies, se succèdent deux par deux. Elles produisent un effet de régularité, fréquent dans la tragédie classique.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "L'« enjambement » est le fait que :",
+      "o": [
+        "Deux vers partagent une rime",
+        "Un vers a une syllabe de trop",
+        "La phrase déborde sur le vers suivant",
+        "Le poète alterne les mètres"
+      ],
+      "r": 2,
+      "x": "Il y a enjambement quand la syntaxe ne s'arrête pas en fin de vers et continue sur le suivant. Il crée un effet de fluidité ou de tension.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le « rejet » en versification désigne :",
+      "o": [
+        "Un vers refusé par l'éditeur",
+        "Un son répété en tête",
+        "Un mot reporté au vers suivant",
+        "Un vers privé de sa rime"
+      ],
+      "r": 2,
+      "x": "Le rejet est un élément bref, rattaché par le sens au vers précédent, placé au début du vers suivant pour le mettre en valeur. Le contre-rejet est l'inverse : un élément placé en fin de vers qui appartient au vers suivant.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « diérèse » consiste à :",
       "o": [
         "Fusionner deux voyelles en une seule syllabe",
-        "Scander deux voyelles contiguës en deux syllabes distinctes",
-        "Supprimer le \"e\" muet devant une voyelle",
-        "Couper un vers en deux parties inégales"
+        "Supprimer le e muet",
+        "Couper le vers en deux",
+        "Prononcer deux voyelles en deux syllabes"
       ],
-      "r": 1,
-      "x": "Exemple : La diérèse consiste à prononcer séparément deux voyelles normalement réunies. \"vi-o-lon\" = 3 syllabes avec diérèse ; \"vio-lon\" = 2 syllabes avec synérèse. La synérèse est l'inverse de la diérèse."
+      "r": 3,
+      "x": "Avec la diérèse, « vi-o-lon » compte 3 syllabes au lieu de 2. L'opération inverse, qui réunit les deux voyelles en une syllabe, s'appelle la synérèse.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "Un distique est une strophe composée de :",
+      "q": "Un « distique » est une strophe de :",
       "o": [
         "Deux vers",
         "Trois vers",
@@ -3907,1110 +3913,11 @@ const QUESTIONS = {
         "Six vers"
       ],
       "r": 0,
-      "x": "Distique = 2 vers. Tercet = 3 vers. Quatrain = 4 vers. Sizain = 6 vers. Huitain = 8 vers. Dizain = 10 vers."
+      "x": "Le distique compte 2 vers, le tercet 3, le quatrain 4 et le sizain 6. On parle ensuite de huitain (8 vers) et de dizain (10 vers).",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "La rime est dite \"riche\" lorsque les deux mots rimants partagent :",
-      "o": [
-        "Uniquement la voyelle tonique finale",
-        "La voyelle tonique et une consonne",
-        "Trois sons communs ou plus",
-        "La même consonne initiale seulement"
-      ],
-      "r": 2,
-      "x": "Rime pauvre = 1 son commun. Rime suffisante = 2 sons communs. Rime riche = 3 sons communs ou plus. Exemple de rime riche : \"chante / enchante\"."
-    },
-    {
-      "q": "L'octosyllabe est un vers de :",
-      "o": [
-        "Six syllabes",
-        "Huit syllabes",
-        "Dix syllabes",
-        "Douze syllabes"
-      ],
-      "r": 1,
-      "x": "Vers fréquent dans la poésie médiévale et dans les Fables de La Fontaine. À mémoriser : octo = 8, déca = 10, alexandrin = 12."
-    },
-    {
-      "q": "La fable est caractérisée par :",
-      "o": [
-        "Un récit en prose suivi d'un épilogue",
-        "Un long poème épique en alexandrins",
-        "Un court récit versifié ou en prose suivi d'une morale",
-        "Un dialogue entre personnages nobles"
-      ],
-      "r": 2,
-      "x": "La fable met en scène des animaux ou des personnages allégoriques et se termine par une morale explicite ou implicite. La Fontaine a porté ce genre à son apogée."
-    },
-    {
-      "q": "Le \"rejet\" en versification désigne :",
-      "o": [
-        "Un vers refusé par l'éditeur",
-        "Un son répété en tête de plusieurs vers",
-        "Le premier élément d'un vers appartenant syntaxiquement au vers précédent",
-        "Un poème dont les rimes sont supprimées"
-      ],
-      "r": 2,
-      "x": "Le rejet est le fragment de phrase \"rejeté\" au début du vers suivant, créant un effet de surprise ou d'emphase. Il s'oppose à la \"contre-rejet\" qui projette un élément en fin de vers avant une pause."
-    },
-    {
-      "q": "\"Il voit le jour\" pour dire \"il naît\" est un exemple de :",
-      "o": [
-        "Métaphore",
-        "Antithèse",
-        "Synecdoque",
-        "Périphrase"
-      ],
-      "r": 3,
-      "x": "La périphrase remplace un mot par une expression détournée. À ne pas confondre avec la métonymie (relation de contiguïté) ou la métaphore (comparaison implicite)."
-    },
-    {
-      "q": "La répétition d'une même consonne dans des mots rapprochés s'appelle :",
-      "o": [
-        "Assonance",
-        "Anaphore",
-        "Allitération",
-        "Épiphore"
-      ],
-      "r": 2,
-      "x": "Allitération = répétition de consonnes. Assonance = répétition de voyelles. Anaphore = répétition d'un mot en tête de groupe. \"Pour qui sont ces serpents qui sifflent sur vos têtes\" (Racine) : allitération en [s]."
-    },
-    {
-      "q": "La répétition d'une même voyelle dans des mots rapprochés s'appelle :",
-      "o": [
-        "Allitération",
-        "Assonance",
-        "Homéotéleute",
-        "Anaphore"
-      ],
-      "r": 1,
-      "x": "Assonance = répétition de la même voyelle tonique. Exemple : \"Les sanglots longs des violons\" (Verlaine) — répétition du son [ɔ̃]. Fréquente en poésie pour créer une musicalité."
-    },
-    {
-      "q": "\"Homme libre, toujours tu chériras la mer !\" : le terme \"Homme libre\" est une :",
-      "o": [
-        "Épithète détachée",
-        "Apposition",
-        "Apostrophe",
-        "Métaphore"
-      ],
-      "r": 2,
-      "x": "L'apostrophe est l'interpellation directe d'une personne, d'un animal ou d'une chose abstraite. Ici, le poète s'adresse à \"l'homme libre\" pour lui parler de la mer. Figure caractéristique de la poésie lyrique."
-    },
-    {
-      "q": "\"La mort, c'est une nuit éternelle\" est un exemple de :",
-      "o": [
-        "Comparaison",
-        "Métaphore",
-        "Allégorie",
-        "Périphrase"
-      ],
-      "r": 1,
-      "x": "Métaphore : identification implicite sans outil comparatif. \"La mort = une nuit éternelle\" sans \"comme\". Si on avait \"la mort est comme une nuit éternelle\", ce serait une comparaison."
-    },
-    {
-      "q": "\"Dieu, que la guerre est jolie !\" quand l'auteur pense le contraire est :",
-      "o": [
-        "Une litote",
-        "Une hyperbole",
-        "Une antiphrase",
-        "Un euphémisme"
-      ],
-      "r": 2,
-      "x": "L'antiphrase dit le contraire de sa pensée sur un ton ironique. La litote dit moins pour suggérer plus. L'euphémisme atténue une réalité déplaisante sans ironie nécessaire."
-    },
-    {
-      "q": "\"Un doux parfum d'amertume\" est un exemple de :",
-      "o": [
-        "Antithèse",
-        "Oxymore",
-        "Hyperbole",
-        "Métonymie"
-      ],
-      "r": 1,
-      "x": "L'oxymore unit deux termes contradictoires dans un même groupe nominal. L'antithèse oppose deux idées dans deux propositions distinctes."
-    },
-    {
-      "q": "\"Il vit, il vit encore, il vivra éternellement\" est un exemple de :",
-      "o": [
-        "Anaphore",
-        "Accumulation",
-        "Gradation",
-        "Épizeuxe"
-      ],
-      "r": 2,
-      "x": "Gradation ascendante : intensité croissante de terme en terme. Ici : présent → présent renforcé → futur éternel. L'accumulation liste des éléments de même niveau sans progression d'intensité."
-    },
-    {
-      "q": "La figure qui consiste à croiser les éléments de deux groupes parallèles s'appelle :",
-      "o": [
-        "Anaphore",
-        "Chiasme",
-        "Parataxe",
-        "Épiphore"
-      ],
-      "r": 1,
-      "x": "Chiasme (structure AB/BA) : \"Il faut manger pour vivre et non vivre pour manger.\" Les éléments se croisent comme les deux barres du X grec (chi). Fréquent dans les proverbes et les formules mémorables."
-    },
-    {
-      "q": "\"Je le vis, je rougis, je pâlis à sa vue\" : la suppression des conjonctions entre les propositions s'appelle :",
-      "o": [
-        "Polysyndète",
-        "Zeugme",
-        "Asyndète",
-        "Parataxe"
-      ],
-      "r": 2,
-      "x": "Asyndète = juxtaposition sans conjonction, créant un effet de rapidité. La polysyndète est l'inverse : répétition excessive de conjonctions. La parataxe est plus générale (juxtaposition de phrases)."
-    },
-    {
-      "q": "\"Il perdit son argent et la tête\" unit deux COD dont l'un s'emploie au sens propre et l'autre au sens figuré. Cette figure s'appelle :",
-      "o": [
-        "Syllepse",
-        "Zeugme",
-        "Antithèse",
-        "Oxymore"
-      ],
-      "r": 1,
-      "x": "Le zeugme unit syntaxiquement deux éléments de nature incompatible sous un même verbe. Produit un effet comique ou expressif par la disparité des régimes."
-    },
-    {
-      "q": "\"Ô temps, suspends ton vol !\" (Lamartine) : cette adresse au Temps est :",
-      "o": [
-        "Une personnification",
-        "Une apostrophe",
-        "Les deux à la fois",
-        "Un euphémisme"
-      ],
-      "r": 2,
-      "x": "Apostrophe = interpellation directe du Temps. Personnification = le Temps est personnifié puisqu'il est présenté comme un être auquel on peut s'adresser et donner un ordre. Ces deux figures coexistent souvent dans la poésie romantique."
-    },
-    {
-      "q": "La prétérition consiste à :",
-      "o": [
-        "Répéter la même idée avec des mots différents",
-        "Dire qu'on ne va pas parler d'un sujet tout en en parlant",
-        "Employer un mot dans son sens étymologique",
-        "Omettre volontairement une partie de la phrase"
-      ],
-      "r": 1,
-      "x": "Exemple : \"Je ne mentionnerai pas ses nombreux échecs, ses dettes, sa lâcheté...\" La prétérition est une figure rhétorique paradoxale très utilisée dans les plaidoiries et les discours politiques."
-    },
-    {
-      "q": "\"La plume est plus forte que l'épée\" : \"la plume\" désigne l'écriture et \"l'épée\" la guerre. Cette figure est :",
-      "o": [
-        "Une synecdoque",
-        "Une métaphore",
-        "Une métonymie",
-        "Une allégorie"
-      ],
-      "r": 2,
-      "x": "Métonymie : l'instrument désigne l'activité qui l'utilise. La synecdoque désigne un tout par une de ses parties. La métaphore implique une ressemblance."
-    },
-    {
-      "q": "\"La Seine coule à Paris, mais Paris coule dans la Seine aussi.\" Le jeu syntaxique AB/BA est :",
-      "o": [
-        "Une anaphore",
-        "Un chiasme",
-        "Une gradation",
-        "Une épanalepse"
-      ],
-      "r": 1,
-      "x": "Chiasme : les termes \"la Seine\" et \"Paris\" sont croisés selon la structure AB / BA. Figure rhétorique très appréciée pour ses effets de symétrie et de paradoxe."
-    },
-    {
-      "q": "\"Même si tu insistes, je ne changerai pas d'avis.\" Le verbe de la subordonnée est :",
-      "o": [
-        "Au subjonctif présent",
-        "Au conditionnel présent",
-        "À l'indicatif présent",
-        "À l'imparfait de l'indicatif"
-      ],
-      "r": 2,
-      "x": "\"Même si\" + indicatif (contrairement à \"quand bien même\" + conditionnel). \"Même si\" introduit une hypothèse concédée à l'indicatif. \"Quand bien même il insistât/insisterait...\" serait plus soutenu avec conditionnel."
-    },
-    {
-      "q": "\"À peine avait-il terminé qu'on l'interrompit.\" L'inversion du sujet après \"à peine\" est :",
-      "o": [
-        "Facultative et stylistique",
-        "Obligatoire en langue soutenue",
-        "Uniquement possible à l'oral",
-        "Réservée au passé simple"
-      ],
-      "r": 1,
-      "x": "Après \"à peine\" en tête de phrase, l'inversion sujet-verbe est normalement exigée en langue soutenue. La construction signifie \"il avait à peine terminé que...\". Piège : omettre l'inversion en langue courante."
-    },
-    {
-      "q": "\"C'est lui qui a pris la décision.\" Cette tournure est :",
-      "o": [
-        "Une proposition relative attribut",
-        "Une mise en relief par extraction",
-        "Une proposition participiale",
-        "Une proposition infinitive"
-      ],
-      "r": 1,
-      "x": "La mise en relief par extraction (\"c'est... qui/que\") permet de focaliser sur un élément de la phrase. \"C'est lui qui\" extrait le sujet ; \"c'est lui que\" extrairait le COD. Construction très fréquente à l'oral."
-    },
-    {
-      "q": "\"Travailler, c'est sa seule passion.\" L'infinitif \"travailler\" est ici :",
-      "o": [
-        "Un complément circonstanciel",
-        "Un attribut du sujet",
-        "Le sujet de la phrase",
-        "Un COD du verbe \"c'est\""
-      ],
-      "r": 2,
-      "x": "L'infinitif peut être sujet en français. \"Travailler\" = sujet de \"c'est\". La structure \"infinitif + c'est + attribut\" est une construction nominale fréquente dans la langue soutenue."
-    },
-    {
-      "q": "\"Ce faisant, il a évité bien des erreurs.\" \"Ce faisant\" est :",
-      "o": [
-        "Un gérondif accordé avec le COD",
-        "Une locution adverbiale signifiant \"en agissant ainsi\"",
-        "Un pronom démonstratif suivi d'un participe",
-        "Un participe présent accordé avec le sujet"
-      ],
-      "r": 1,
-      "x": "\"Ce faisant\" = locution figée invariable signifiant « en agissant ainsi ». Elle exprime la simultanéité ou le moyen. Toujours invariable quelle que soit la construction de la phrase."
-    },
-    {
-      "q": "\"Nu-pieds dans le sable\" : l'accord de \"nu\" est :",
-      "o": [
-        "Accordé avec \"pieds\" au pluriel",
-        "Invariable car adverbe avant un nom",
-        "Invariable car placé avant le nom",
-        "Accordé en genre avec le nom le plus proche"
-      ],
-      "r": 2,
-      "x": "\"Nu\" placé avant un nom avec trait d'union est un préfixe invariable. En revanche, après le nom sans trait d'union, il s'accorde : \"les pieds nus\"."
-    },
-    {
-      "q": "\"Garde-à-vous\" au pluriel s'écrit :",
-      "o": [
-        "gardes-à-vous",
-        "gardes-à-voux",
-        "garde-à-vous",
-        "gardes-à-vousses"
-      ],
-      "r": 2,
-      "x": "\"Garde-à-vous\" est une locution nominale figée qui ne prend pas la marque du pluriel. Les mots composés figés avec trait d'union ont souvent un pluriel invariable quand ils fonctionnent comme interjections ou injonctions."
-    },
-    {
-      "q": "\"La moitié des agents étaient absents.\" Cet accord du verbe au pluriel est :",
-      "o": [
-        "Obligatoirement fautif",
-        "Justifié par le sens",
-        "Possible uniquement à l'oral",
-        "Réservé au conditionnel"
-      ],
-      "r": 1,
-      "x": "Avec \"la moitié de + nom pluriel\", l'accord peut se faire au singulier (avec \"la moitié\") ou au pluriel (avec \"des agents\") selon qu'on insiste sur la fraction ou sur les personnes. Les deux sont tolérés."
-    },
-    {
-      "q": "\"Force est de constater que la situation évolue.\" \"Force est de\" signifie :",
-      "o": [
-        "Il est interdit de",
-        "Il est possible de",
-        "Il est impossible de ne pas",
-        "Il est fortement déconseillé de"
-      ],
-      "r": 2,
-      "x": "\"Force est de + infinitif\" = on ne peut pas éviter de, on est contraint de. Locution impersonnelle de la langue soutenue et administrative. Équivalent de \"il faut bien reconnaître que\"."
-    },
-    {
-      "q": "\"Jadis\" se distingue de \"naguère\" en ce que :",
-      "o": [
-        "\"Jadis\" désigne un passé récent ; \"naguère\" un passé lointain",
-        "\"Jadis\" désigne un passé lointain ; \"naguère\" un passé récent",
-        "Les deux désignent un passé indéterminé",
-        "\"Naguère\" désigne l'avenir proche"
-      ],
-      "r": 1,
-      "x": "\"Jadis\" = il y a très longtemps (passé lointain). \"Naguère\" = il n'y a guère (= pas longtemps), donc passé récent. Confusion fréquente dans les copies : \"naguère\" vient de \"n'a guère\", soit \"il y a peu de temps\"."
-    },
-    {
-      "q": "\"En tant que directeur, il signe les arrêtés.\" \"En tant que\" exprime :",
-      "o": [
-        "La cause",
-        "La comparaison",
-        "La qualité",
-        "La concession"
-      ],
-      "r": 2,
-      "x": "\"En tant que\" introduit une qualité, un titre ou une fonction. Équivalent de \"en sa qualité de\", \"dans l'exercice de ses fonctions de\". À distinguer de \"comme\" qui peut avoir d'autres valeurs."
-    },
-    {
-      "q": "Le gérondif \"en travaillant\" indique que l'action est :",
-      "o": [
-        "Simultanée à celle du verbe principal",
-        "Postérieure à celle du verbe principal",
-        "Antérieure à celle du verbe principal",
-        "Hypothétique par rapport au verbe principal"
-      ],
-      "r": 0,
-      "x": "Le gérondif exprime la simultanéité avec l'action du verbe principal. Il peut aussi exprimer la cause, le moyen ou la condition selon le contexte. Il est toujours invariable et a le même sujet que le verbe principal."
-    },
-    {
-      "q": "\"Quitte à déplaire, il a dit la vérité.\" \"Quitte à\" exprime :",
-      "o": [
-        "L'acceptation d'un risque",
-        "La condition nécessaire à une action",
-        "La cause directe d'une action",
-        "L'opposition entre deux actions"
-      ],
-      "r": 0,
-      "x": "\"Quitte à + infinitif\" = au risque de, même si cela implique tel inconvénient. Construction idiomatique de la langue courante et soutenue."
-    },
-    {
-      "q": "\"Il a _______ plusieurs erreurs dans ce texte.\" Choisissez le PP correct de \"déceler\".",
-      "o": [
-        "décelés",
-        "décelée",
-        "déceler",
-        "décelé"
-      ],
-      "r": 3,
-      "x": "\"Plusieurs erreurs\" est COD féminin pluriel, mais il est placé APRÈS le verbe → PP invariable avec \"avoir\". Piège : croire que \"plusieurs erreurs\" est antéposé alors qu'il est postposé."
-    },
-    {
-      "q": "\"Combien d'agents ont réussi cette épreuve ?\" Le verbe s'accorde :",
-      "o": [
-        "Toujours au singulier avec \"combien de\"",
-        "Avec le nom qui suit \"de\" quand il est sujet réel",
-        "Obligatoirement au pluriel",
-        "Avec le pronom \"combien\" uniquement"
-      ],
-      "r": 1,
-      "x": "\"Combien de + nom\" : le verbe s'accorde avec le nom complément, sujet logique de la phrase. \"Combien d'agents ont réussi\" → accord au pluriel avec \"agents\"."
-    },
-    {
-      "q": "\"Ce sont eux qui ont rédigé ce rapport.\" \"Ce sont\" est utilisé car :",
-      "o": [
-        "Le sujet réel \"eux\" est à la troisième personne du pluriel",
-        "\"Ce\" est toujours suivi de \"sont\" avant un pronom",
-        "\"Eux\" est toujours précédé de \"ce sont\"",
-        "La mise en relief le commande systématiquement"
-      ],
-      "r": 0,
-      "x": "Règle : \"c'est\" + singulier ou \"c'est\" + pronom singulier ; \"ce sont\" + pluriel nominal ou \"ce sont\" + pronom pluriel de la 3e personne. \"Eux\" est pluriel → \"ce sont eux\"."
-    },
-    {
-      "q": "L'apostrophe comme figure de style désigne :",
-      "o": [
-        "L'interpellation directe",
-        "Un signe de ponctuation marquant l'élision",
-        "La répétition d'un même mot en tête de phrase",
-        "Un terme technique de la versification française"
-      ],
-      "r": 0,
-      "x": "L'apostrophe grammaticale = mise en relief d'un terme par interpellation directe. Elle correspond aussi à la figure de style apostrophe. Ne pas confondre avec l'apostrophe typographique (signe ')."
-    },
-    {
-      "q": "\"Avoir beau + infinitif\" exprime :",
-      "o": [
-        "Une action particulièrement bien accomplie",
-        "Une belle occasion qui se présente",
-        "Une action menée sans résultat, en vain",
-        "Une aptitude ou une capacité particulière"
-      ],
-      "r": 2,
-      "x": "\"Il a beau travailler, il ne réussit pas\" = bien qu'il travaille, sans résultat. Construction idiomatique concessive importante pour les épreuves de transformation de phrases."
-    },
-    {
-      "q": "\"Il parte ou qu'il reste, peu importe.\" Pour compléter correctement, la locution corrélative est :",
-      "o": [
-        "Soit que... soit que",
-        "Que... que",
-        "Soit que... ou que",
-        "Bien que... bien que"
-      ],
-      "r": 0,
-      "x": "\"Soit que... soit que + subjonctif\" exprime l'alternative concessive. \"Soit qu'il parte, soit qu'il reste...\" Les deux propositions doivent être au subjonctif."
-    },
-    {
-      "q": "\"La proposition infinitive\" dans \"J'entends chanter les oiseaux\" implique que :",
-      "o": [
-        "\"Chanter\" est attribut du COD",
-        "\"Les oiseaux\" est sujet de \"chanter\" et COD de \"j'entends\"",
-        "\"Chanter les oiseaux\" est un groupe nominal sujet",
-        "\"Chanter\" est un COD de \"j'entends\" sans sujet propre"
-      ],
-      "r": 1,
-      "x": "Proposition infinitive : verbe de perception + infinitif + sujet propre de l'infinitif. \"Les oiseaux\" est à la fois sujet de \"chanter\" et COD de \"j'entends\". Construction fréquente avec : voir, entendre, sentir, regarder, écouter."
-    },
-    {
-      "q": "\"Il _______ les mains avant d'entrer.\" PP de \"se laver\" dans cette construction.",
-      "o": [
-        "s'est lavé",
-        "s'est lavée",
-        "s'est lavés",
-        "s'est lavées"
-      ],
-      "r": 0,
-      "x": "\"Se laver les mains\" : \"les mains\" = COD postposé. Le pronom \"se\" = COI. PP invariable : \"lavé\". Règle: quand un COD nominal suit le verbe pronominal, le PP ne s'accorde pas."
-    },
-    {
-      "q": "\"Elle s'est _______ les mains avant d'entrer.\" PP de \"se laver\" si le sujet est féminin.",
-      "o": [
-        "lavée",
-        "lavé",
-        "lavées",
-        "lavis"
-      ],
-      "r": 1,
-      "x": "COD \"les mains\" est postposé, donc PP invariable \"lavé\" quel que soit le genre du sujet. Piège classique d'accord du PP pronominal avec COD nominal."
-    },
-    {
-      "q": "\"Voire\" dans \"il faut de la méthode, voire de la rigueur\" signifie :",
-      "o": [
-        "Cependant, néanmoins",
-        "C'est-à-dire, en d'autres termes",
-        "Et même, et plus encore",
-        "À moins que, sauf si"
-      ],
-      "r": 2,
-      "x": "\"Voire\" = renforcement qui introduit un élément supérieur ou plus fort encore. Souvent confondu avec \"voire même\" (pléonasme à éviter). Proche de \"et même\" ou \"et davantage encore\"."
-    },
-    {
-      "q": "\"De là à dire qu'il a menti...\" exprime :",
-      "o": [
-        "Une cause directe",
-        "Un passage logique difficile à franchir",
-        "Une conséquence inévitable",
-        "Une condition hypothétique"
-      ],
-      "r": 1,
-      "x": "\"De là à + infinitif\" signifie \"franchir le pas d'affirmer que...\". Implique une réserve : ce n'est pas une conclusion automatique mais une inférence jugée excessive par le locuteur."
-    },
-    {
-      "q": "La phrase \"Soudain retentit un coup de tonnerre.\" présente :",
-      "o": [
-        "Un verbe au passif",
-        "Un sujet postposé avec inversion",
-        "Un adverbe attribut du sujet",
-        "Un complément circonstanciel antéposé avec ellipse"
-      ],
-      "r": 1,
-      "x": "Inversion du sujet \"un coup de tonnerre\" après le verbe. Fréquent avec les verbes intransitifs de mouvement ou de survenance quand un adverbe ou complément ouvre la phrase. Style littéraire soutenu."
-    },
-    {
-      "q": "\"Fallacieux\" qualifie un argument :",
-      "o": [
-        "Difficile à comprendre sans aide",
-        "Trompeur, à l'apparence de vérité mais fondé sur l'erreur",
-        "Particulièrement rigoureux et logique",
-        "Exprimé de façon trop brève"
-      ],
-      "r": 1,
-      "x": "\"Fallacieux\" (du latin \"fallax\" = trompeur). Proche de \"spécieux\" mais \"fallacieux\" insiste sur l'intention de tromper, \"spécieux\" sur la belle apparence sans substance."
-    },
-    {
-      "q": "Un discours \"laudatif\" est un discours :",
-      "o": [
-        "Qui célèbre et fait l'éloge de quelqu'un",
-        "Difficile à comprendre sans culture particulière",
-        "Qui accuse et condamne sévèrement",
-        "Qui exprime la colère de l'orateur"
-      ],
-      "r": 0,
-      "x": "\"Laudatif\" (du latin \"laudare\" = louer). Proche de \"panégyrique\" mais plus courant. Antonyme : \"dépréciatif\", \"péjoratif\", \"critique\"."
-    },
-    {
-      "q": "\"Tendancieux\" qualifie ce qui :",
-      "o": [
-        "Représente fidèlement la réalité observée",
-        "Présente les faits de manière orientée pour influencer",
-        "Exprime une tendance nouvelle prometteuse",
-        "Propose une synthèse exhaustive et équilibrée"
-      ],
-      "r": 1,
-      "x": "\"Tendancieux\" = partial, orienté, qui déforme la vérité dans un sens préétabli. À distinguer de \"partial\" (qui prend parti) et de \"partisan\" (qui sert un parti)."
-    },
-    {
-      "q": "\"Rédhibitoire\" signifie :",
-      "o": [
-        "Qui peut être corrigé sans grande difficulté",
-        "Qui est relatif à la rédaction administrative",
-        "Qui constitue un obstacle insurmontable à une décision",
-        "Qui manque de clarté dans son expression"
-      ],
-      "r": 2,
-      "x": "\"Rédhibitoire\" (du latin \"reddhibere\" = retourner la marchandise) : se dit d'un défaut ou d'une condition qui empêche définitivement une chose. \"Un vice rédhibitoire\" en droit annule la vente."
-    },
-    {
-      "q": "La \"sinécure\" désigne :",
-      "o": [
-        "Un poste très exigeant et mal rémunéré",
-        "Un traitement urgent pour une maladie grave",
-        "Une mesure d'urgence prise à titre conservatoire",
-        "Un emploi bien rémunéré sans grande exigence réelle"
-      ],
-      "r": 3,
-      "x": "\"Sinécure\" (du latin \"sine cura\" = sans souci) : poste facile offrant des revenus sans travail effectif. \"Ce n'est pas une sinécure\" signifie que la tâche est difficile."
-    },
-    {
-      "q": "\"Spécieux\" qualifie ce qui :",
-      "o": [
-        "Concerne un domaine très spécialisé",
-        "A une apparence de vérité mais est faux en réalité",
-        "Est particulièrement précis et bien documenté",
-        "Traite des espèces végétales ou animales"
-      ],
-      "r": 1,
-      "x": "\"Spécieux\" (du latin \"speciosus\" = beau à voir) = ce qui semble valide en apparence mais ne l'est pas. Proche de \"fallacieux\" mais sans nécessairement l'intention de tromper."
-    },
-    {
-      "q": "Un panégyrique est :",
-      "o": [
-        "Un discours de mise en accusation devant un tribunal",
-        "Une analyse critique sévère d'une œuvre ou d'une action",
-        "Un éloge solennel d'une personne ou d'une institution",
-        "Un texte officiel résumant les décisions d'un organe"
-      ],
-      "r": 2,
-      "x": "\"Panégyrique\" (du grec \"paneguris\" = assemblée de tout le peuple). Antonyme : \"réquisitoire\" (accusation), \"diatribe\" (attaque violente)."
-    },
-    {
-      "q": "\"Vindicatif\" qualifie quelqu'un qui :",
-      "o": [
-        "Défend avec ardeur les causes de la justice",
-        "Pardonne facilement les torts qu'on lui a causés",
-        "Cherche à se venger des offenses reçues",
-        "Exprime franchement et directement ses opinions"
-      ],
-      "r": 2,
-      "x": "\"Vindicatif\" (du latin \"vindicta\" = vengeance). Ne pas confondre avec \"revendicatif\" (qui revendique des droits) — faux amis partiels."
-    },
-    {
-      "q": "\"Superfétatoire\" désigne ce qui est :",
-      "o": [
-        "Absolument indispensable et urgent",
-        "Très difficile à accomplir dans les délais",
-        "Superflu, inutile parce qu'en surplus de ce qui suffit",
-        "Particulièrement bénéfique dans ce contexte"
-      ],
-      "r": 2,
-      "x": "\"Superfétatoire\" (du latin \"superfetare\" = concevoir par-dessus). Ce mot s'emploie pour une redondance inutile ou un ornement superflu. Exemple : \"Ces précisions sont superfétatoires.\""
-    },
-    {
-      "q": "\"Édulcoré\" qualifie un discours ou un texte :",
-      "o": [
-        "Adouci, atténué, expurgé de ses éléments choquants",
-        "Très technique et réservé aux spécialistes",
-        "Particulièrement direct et sans nuance",
-        "Enrichi de nombreux exemples concrets"
-      ],
-      "r": 0,
-      "x": "\"Édulcoré\" (de \"édulcorer\" = adoucir avec du sucre). Qualifie un propos dont on a supprimé les aspects trop forts ou choquants. Connotation parfois péjorative de dénaturation de la vérité."
-    },
-    {
-      "q": "\"Abscons\" qualifie :",
-      "o": [
-        "Un texte très clair et d'accès immédiat",
-        "Un texte comportant de nombreuses lacunes",
-        "Un texte obscur et difficile à comprendre",
-        "Un texte excessivement long et redondant"
-      ],
-      "r": 2,
-      "x": "\"Abscons\" (du latin \"absconditus\" = caché). Proche de \"abstrus\" mais \"abscons\" implique davantage une obscurité voulue ou hermétique. Moins courant qu'\"abstrus\"."
-    },
-    {
-      "q": "La \"palinodie\" désigne :",
-      "o": [
-        "Un poème à refrain chanté par un chœur",
-        "La rétractation de ce qu'on avait soutenu",
-        "Un discours d'éloge solennel d'un grand homme",
-        "Un récit allégorique à portée morale"
-      ],
-      "r": 1,
-      "x": "\"Palinodie\" (du grec \"palin\" = en arrière + \"ode\" = chant). Désigne le fait de dire le contraire de ce qu'on avait affirmé. Chanter sa palinodie = se rétracter publiquement."
-    },
-    {
-      "q": "\"Stoïque\" qualifie quelqu'un qui :",
-      "o": [
-        "Varie constamment de position et d'opinion",
-        "Recherche avant tout le confort et le plaisir",
-        "Supporte les épreuves avec impassibilité",
-        "Refuse systématiquement tout compromis"
-      ],
-      "r": 2,
-      "x": "\"Stoïque\" fait référence au stoïcisme, philosophie grecque prônant la maîtrise des passions. Proche d'\"impassible\" mais \"stoïque\" insiste sur la résistance à la souffrance."
-    },
-    {
-      "q": "\"Galimatias\" désigne :",
-      "o": [
-        "Un discours confus et incompréhensible",
-        "Un registre linguistique propre à un groupe social",
-        "Un discours très clair et bien structuré",
-        "Une liste de termes techniques spécialisés"
-      ],
-      "r": 0,
-      "x": "\"Galimatias\" = charabia, propos embrouillés et sans suite logique. Proche de \"charabia\" et de \"jargon\" mais \"galimatias\" insiste sur l'absence de sens, non sur la spécialisation."
-    },
-    {
-      "q": "\"Chimérique\" qualifie ce qui est :",
-      "o": [
-        "Irréel, utopique ou purement imaginaire",
-        "Réalisable à court terme selon les conditions actuelles",
-        "Fondé sur des données scientifiques rigoureuses",
-        "Relatif aux récits mythologiques de l'Antiquité"
-      ],
-      "r": 0,
-      "x": "\"Chimérique\" vient de la Chimère, monstre mythologique. Qualifie un projet irréalisable ou une idée sans fondement dans la réalité. Proche d'\"utopique\" mais avec une connotation d'illusion plus marquée."
-    },
-    {
-      "q": "\"Apocryphe\" désigne un texte :",
-      "o": [
-        "Très ancien et rédigé dans une langue morte",
-        "Traduit d'une langue étrangère puis adapté",
-        "Dont l'authenticité ou la paternité est douteuse",
-        "Officiellement interdit par les autorités compétentes"
-      ],
-      "r": 2,
-      "x": "\"Apocryphe\" (du grec \"apokruphos\" = caché). Un texte apocryphe est attribué par erreur à un auteur ou dont l'authenticité n'est pas établie. Terme courant en histoire des textes religieux et littéraires."
-    },
-    {
-      "q": "\"Pragmatique\" qualifie celui qui :",
-      "o": [
-        "Défend des positions idéologiques avec fermeté",
-        "Refuse tout compromis dans ses principes moraux",
-        "Adapte ses décisions aux réalités concrètes",
-        "Développe des théories abstraites et complexes"
-      ],
-      "r": 2,
-      "x": "\"Pragmatique\" (du grec \"pragma\" = action). S'intéresse aux résultats pratiques plutôt qu'aux principes abstraits. Synonyme courant : \"réaliste\", \"pratique\". Antonyme : \"idéaliste\", \"dogmatique\"."
-    },
-    {
-      "q": "Un discours \"emphatique\" est un discours :",
-      "o": [
-        "Simple, direct et dépouillé de tout ornement",
-        "Qui amplifie excessivement son ton et ses effets",
-        "Qui manque de conviction dans son expression",
-        "Qui s'appuie sur des données chiffrées"
-      ],
-      "r": 1,
-      "x": "\"Emphatique\" (du grec \"emphasis\" = intensité). Qualifie un style qui recourt à des effets exagérés. Connotation souvent péjorative : le discours emphatique manque de naturel."
-    },
-    {
-      "q": "\"Sentencieux\" qualifie celui qui :",
-      "o": [
-        "Écoute avec bienveillance avant de répondre",
-        "Exprime ses idées avec une grande concision",
-        "Émet des jugements moraux sur un ton solennel et pompeux",
-        "Critique les autres avec une ironie mordante"
-      ],
-      "r": 2,
-      "x": "\"Sentencieux\" : qui parle par sentences, par maximes, avec un air de sagesse affecté. Connotation péjorative de prétention moralisatrice."
-    },
-    {
-      "q": "\"Sagace\" qualifie quelqu'un qui :",
-      "o": [
-        "Discerne avec perspicacité et pénétration d'esprit",
-        "Refuse de partager ses connaissances avec autrui",
-        "Parle avec beaucoup de prudence et de réserve",
-        "Agit spontanément et sans analyse préalable"
-      ],
-      "r": 0,
-      "x": "\"Sagace\" (du latin \"sagax\" = qui a du flair). Proche de \"perspicace\" et \"clairvoyant\". \"La sagacité\" désigne la finesse d'esprit qui permet de saisir ce qui échappe aux autres."
-    },
-    {
-      "q": "La tragédie classique française respecte la règle des trois unités. Lesquelles ?",
-      "o": [
-        "Unité de style, de personnage et de langue",
-        "Unité d'action, de lieu et de temps",
-        "Unité de registre, de versification et de dénouement",
-        "Unité de scène, de décor et d'interprétation"
-      ],
-      "r": 1,
-      "x": "Popularisées dans le classicisme français notamment par Boileau dans l'Art poétique. Une action, un lieu, un jour (24 heures). Ces contraintes visent à maintenir la vraisemblance et la cohérence de l'œuvre dramatique classique."
-    },
-    {
-      "q": "La \"didascalie\" dans un texte théâtral désigne :",
-      "o": [
-        "Le discours le plus long d'un personnage principal",
-        "Une réplique prononcée à voix basse sur scène",
-        "Une indication scénique rédigée par l'auteur",
-        "Le texte récité en ouverture d'une pièce"
-      ],
-      "r": 2,
-      "x": "Les didascalies précisent les décors, les costumes, les déplacements, les tons. Elles sont généralement en italique dans les éditions imprimées. Terme essentiel de l'analyse dramatique."
-    },
-    {
-      "q": "L'\"aparté\" se distingue du \"monologue\" en ce que :",
-      "o": [
-        "L'aparté est entendu par tous les personnages présents",
-        "Le monologue est court ; l'aparté est toujours long",
-        "L'aparté s'adresse au public mais pas aux autres personnages",
-        "Le monologue est réservé aux personnages secondaires"
-      ],
-      "r": 2,
-      "x": "L'aparté est une convention théâtrale : le personnage parle sans que les autres présents l'entendent, mais le public l'entend. Le monologue est un discours qu'un personnage tient longuement sans interlocuteur véritable."
-    },
-    {
-      "q": "Le registre \"épique\" se caractérise par :",
-      "o": [
-        "L'expression des émotions personnelles de l'auteur",
-        "La recherche du comique par des situations absurdes",
-        "L'exaltation d'actions héroïques, grandioses et collectives",
-        "La dénonciation ironique des travers de la société"
-      ],
-      "r": 2,
-      "x": "Registre épique : grandeur des personnages, des événements, du style. Hyperboles, accumulations, amplifications. Présent dans les épopées (L'Iliade, La Chanson de Roland) et dans la prose (Hugo, Michelet)."
-    },
-    {
-      "q": "Le registre \"lyrique\" se reconnaît à :",
-      "o": [
-        "La description neutre et objective de faits précis",
-        "L'expression exaltée des sentiments et émotions personnels",
-        "L'invitation au rire par des procédés comiques",
-        "L'évocation de grandes batailles et d'exploits héroïques"
-      ],
-      "r": 1,
-      "x": "Registre lyrique : \"moi\", émotions, sentiment, musicalité du langage. Associé à la poésie amoureuse, à la mélancolie, au romantisme. Verlaine, Rimbaud, Lamartine sont des poètes lyriques."
-    },
-    {
-      "q": "Un narrateur \"omniscient\" est un narrateur qui :",
-      "o": [
-        "Raconte uniquement ce qu'il observe de l'extérieur",
-        "Participe lui-même à l'histoire qu'il raconte",
-        "Connaît les pensées et les sentiments de tous les personnages",
-        "Alterne constamment entre plusieurs points de vue"
-      ],
-      "r": 2,
-      "x": "Narrateur omniscient (3e personne) = voit tout, sait tout. Narrateur interne = participe à l'histoire (1re personne). Narrateur externe = observe sans connaître les pensées (3e personne limitée)."
-    },
-    {
-      "q": "La nouvelle se distingue du roman principalement par :",
-      "o": [
-        "L'absence de tout personnage principal identifiable",
-        "Sa forme versifiée contrairement au roman",
-        "La brièveté et la concentration autour d'un seul événement",
-        "L'absence totale de dialogues entre les personnages"
-      ],
-      "r": 2,
-      "x": "La nouvelle est un genre court centré sur un événement unique, un personnage ou une situation. Le roman développe une intrigue plus complexe sur une durée plus longue."
-    },
-    {
-      "q": "L'\"épopée\" est :",
-      "o": [
-        "Un long récit glorifiant des actions héroïques ou fondatrices",
-        "Un court poème lyrique sur l'amour courtois",
-        "Un court récit en prose à portée morale",
-        "Un dialogue versifié entre deux personnages"
-      ],
-      "r": 0,
-      "x": "L'épopée (Iliade, Odyssée, Énéide, Chanson de Roland) célèbre les hauts faits d'un héros. Elle mêle le merveilleux au réel et participe à la construction d'une identité collective."
-    },
-    {
-      "q": "L'\"élégie\" est un genre poétique qui exprime :",
-      "o": [
-        "La joie et la célébration des victoires militaires",
-        "La satire des comportements humains",
-        "L'éloge des grands personnages de l'histoire",
-        "La plainte, la tristesse et la mélancolie"
-      ],
-      "r": 3,
-      "x": "Élégie = poème de deuil, de plainte amoureuse ou de mélancolie existentielle. \"L'élégie\" de Lamartine, \"Les Nuits\" de Musset en est un exemple célèbre."
-    },
-    {
-      "q": "Un \"pamphlet\" est :",
-      "o": [
-        "Un texte d'éloge destiné à célébrer une institution",
-        "Un recueil de poèmes à thème pastoral",
-        "Un court texte virulent qui attaque des personnes ou des idées",
-        "Un compte rendu officiel de séance"
-      ],
-      "r": 2,
-      "x": "Le pamphlet est un texte polémique, souvent anonyme, qui attaque avec violence une personne, une institution ou une idée. Proche du libelle et du brûlot. Figure importante dans l'histoire littéraire et politique."
-    },
-    {
-      "q": "Le Symbolisme poétique (Baudelaire, Verlaine, Rimbaud) privilégie :",
-      "o": [
-        "La description réaliste et précise de la société",
-        "L'engagement politique direct dans les œuvres",
-        "Les correspondances entre sensations, couleurs et idées",
-        "La narration d'événements historiques documentés"
-      ],
-      "r": 2,
-      "x": "Baudelaire forge le concept de \"correspondances\" : les sens se répondent les uns aux autres. Le Symbolisme cherche à suggérer plutôt qu'à décrire, à évoquer une réalité intérieure par les symboles."
-    },
-    {
-      "q": "La \"versification libre\" ou \"vers libres\" se définit par :",
-      "o": [
-        "L'absence totale de tout procédé poétique",
-        "Le refus de la rime mais le maintien d'une mesure fixe",
-        "L'abandon des contraintes de nombre de syllabes et de rime",
-        "L'utilisation d'alexandrins sans rime obligatoire"
-      ],
-      "r": 2,
-      "x": "Le vers libre rompt avec la versification régulière : ni rime obligatoire, ni mesure fixe. Inauguré par Whitman, adopté par Verlaine, Claudel, Apollinaire. Ne pas confondre avec \"prose poétique\" (absence totale de structure versifiée)."
-    },
-    {
-      "q": "Le mot « prolixe » qualifie une personne ou un texte qui est :",
-      "o": [
-        "Excessivement long et abondant en paroles ou en détails",
-        "Particulièrement obscur et difficile à comprendre",
-        "Très rigoureux dans son raisonnement",
-        "Très bref et concis"
-      ],
-      "r": 0,
-      "x": "« Prolixe » désigne quelqu'un qui parle ou écrit beaucoup, souvent plus qu'il ne le faut. Son contraire est « concis » ou « succinct ». Exemple : « Son rapport est prolixe mais manque de précision. »"
-    },
-    {
-      "q": "Le registre \"satirique\" vise à :",
-      "o": [
-        "Émouvoir le lecteur par des scènes pathétiques",
-        "Dénoncer les vices et les travers par la moquerie et l'ironie",
-        "Exalter les grandes figures héroïques de l'histoire",
-        "Exprimer les états d'âme et sentiments de l'auteur"
-      ],
-      "r": 1,
-      "x": "Registre satirique : arme de la critique sociale et politique. La Fontaine (fables), Molière (comédies), Voltaire (contes) utilisent l'ironie et l'humour pour corriger les mœurs."
-    },
-    {
-      "q": "La \"rhétorique\" est l'art de :",
-      "o": [
-        "Décoder les messages cachés dans les textes littéraires",
-        "Composer des poèmes selon des règles formelles précises",
-        "Persuader par la maîtrise du discours et de l'argumentation",
-        "Analyser la structure grammaticale des phrases"
-      ],
-      "r": 2,
-      "x": "Rhétorique (du grec \"rhetor\" = orateur) : art de bien parler et d'argumenter pour convaincre. Elle comprend l'inventio (trouver les arguments), la dispositio (les organiser) et l'elocutio (les formuler)."
-    },
-    {
-      "q": "\"Erroné\" qualifie ce qui est :",
-      "o": [
-        "Volontairement faux et destiné à tromper",
-        "Difficile à vérifier avec les moyens disponibles",
-        "Simplement incorrect, qui contient une erreur",
-        "Rédigé dans un style dépassé et archaïque"
-      ],
-      "r": 2,
-      "x": "\"Erroné\" = qui contient une erreur, sans nécessairement d'intention. À distinguer de \"mensonger\" (intentionnellement faux) et de \"fallacieux\" (trompeur avec intention)."
-    },
-    {
-      "q": "\"Délibéré\" comme adjectif signifie :",
-      "o": [
-        "Intentionnel, voulu et accompli en connaissance de cause",
-        "Soumis à l'examen d'une commission compétente",
-        "Résultant d'une longue délibération collective",
-        "Issu d'une décision prise à l'unanimité"
-      ],
-      "r": 0,
-      "x": "\"De manière délibérée\" = intentionnellement, volontairement. \"De propos délibéré\" est la locution adverbiale consacrée en droit. Piège : confondre avec \"délibération\" (processus collectif)."
-    },
-    {
-      "q": "\"Hermétique\" qualifie un texte :",
-      "o": [
-        "D'une clarté et d'une limpidité exemplaires",
-        "Très bref et condensé dans ses formulations",
-        "Accessible uniquement aux initiés ou aux spécialistes",
-        "Officiel et soumis à une diffusion restreinte"
-      ],
-      "r": 2,
-      "x": "\"Hermétique\" (d'Hermès Trismégiste, maître des sciences occultes) = fermé à la compréhension ordinaire, réservé aux initiés. Proche d'\"abstrus\" et d'\"abscons\"."
-    },
-    {
-      "q": "\"Œcuménique\" qualifie ce qui :",
-      "o": [
-        "Vise à rassembler des communautés dans un esprit universel",
-        "Appartient au patrimoine de l'Église catholique",
-        "Concerne exclusivement les questions économiques",
-        "Traite des questions environnementales mondiales"
-      ],
-      "r": 0,
-      "x": "\"Œcuménique\" (du grec \"oikoumene\" = la terre habitée). Désigne ce qui cherche à réunir, à dépasser les divisions. Utilisé en théologie (dialogue interreligieux) et en politique (rassemblement des peuples)."
-    },
-    {
-      "q": "Le mot \"manuscrit\" vient du latin \"manu scriptus\" signifiant :",
-      "o": [
-        "Texte à caractère officiel",
-        "Document certifié et authentifié",
-        "Texte traduit en langue vernaculaire",
-        "Écrit de la main"
-      ],
-      "r": 3,
-      "x": "\"Manu\" = main, \"scriptus\" = écrit. Connaissance étymologique utile en concours. Autres exemples : \"omniscient\" (omni = tout + sciens = sachant), \"bilingue\" (bi = deux + lingua = langue)."
-    },
-    {
-      "q": "\"Rétrograde\" qualifie ce qui :",
-      "o": [
-        "Progresse à grande vitesse vers l'avant",
-        "Avance prudemment et par étapes progressives",
-        "Cherche à revenir à des formes passées dépassées",
-        "Va dans le sens des évolutions modernes"
-      ],
-      "r": 2,
-      "x": "\"Rétrograde\" (du latin \"retrogradus\" = qui marche en arrière). Qualifie une position, une idée ou une mesure qui va à l'encontre du progrès. Antonyme : \"progressiste\", \"avant-gardiste\"."
-    },
-    {
-      "q": "\"Éthique\" et \"déontologie\" : la déontologie désigne plus précisément :",
-      "o": [
-        "L'ensemble des valeurs morales d'une civilisation",
-        "La philosophie des droits naturels de l'homme",
-        "Les règles de conduite propres à une profession",
-        "Le code de valeurs personnelles de l'individu"
-      ],
-      "r": 2,
-      "x": "La déontologie (du grec \"deon\" = devoir) = ensemble des obligations et règles professionnelles. L'éthique est plus large : elle désigne les principes moraux généraux. La déontologie est l'application de l'éthique à un cadre professionnel."
-    },
-    {
-      "q": "\"Nébuleux\" qualifie un raisonnement :",
-      "o": [
-        "Brillant, lumineux et d'une clarté parfaite",
-        "Très court et ramassé dans ses formulations",
-        "Parfaitement logique mais difficile d'accès",
-        "Confus, vague et difficile à saisir"
-      ],
-      "r": 3,
-      "x": "\"Nébuleux\" (du latin \"nebula\" = nuage, brouillard). Qualifie ce qui manque de clarté, ce qui est flou et mal défini. Plus général qu'\"obscur\" qui peut suggérer une profondeur."
-    },
-    {
-      "q": "\"Vénérable\" qualifie ce qui :",
-      "o": [
-        "Mérite admiration et respect du fait de son âge ou de sa valeur",
-        "Mérite d'être redouté et craint",
-        "Doit être rendu public et mis en valeur",
-        "Appartient à une autorité religieuse reconnue"
-      ],
-      "r": 0,
-      "x": "\"Vénérable\" (du latin \"venerabilis\" = qui mérite d'être vénéré). Qualifie une personne âgée ou une institution ancienne digne de respect. À ne pas confondre avec \"respectable\" (neutre) ou \"admirable\" (pour des qualités)."
-    },
-    {
-      "q": "\"Ce projet _______ plusieurs années pour aboutir.\" PP de \"nécessiter\".",
-      "o": [
-        "a nécessités",
-        "a nécessitées",
-        "nécessitait",
-        "a nécessité"
-      ],
-      "r": 3,
-      "x": "\"Plusieurs années\" = COD féminin pluriel postposé → PP invariable avec \"avoir\". \"A nécessité\" est donc la seule forme correcte. \"Nécessitait\" (imparfait) est possible selon le temps voulu mais ne répond pas à la question du PP."
-    },
-    {
-      "q": "\"Jargon\" et \"argot\" : le jargon désigne :",
-      "o": [
-        "Un langage oral uniquement pratiqué par les jeunes",
-        "Le langage codé d'un groupe social particulier",
-        "La langue spécialisée d'un domaine ou d'une profession",
-        "Un registre de langue intermédiaire entre courant et soutenu"
-      ],
-      "r": 2,
-      "x": "Jargon administratif, jargon médical, jargon juridique : vocabulaire technique d'une profession. L'argot est un vocabulaire particulier employé par un groupe social (argot des prisons, des banlieues)."
-    },
-    {
-      "q": "\"L'administration a _______ ce dossier pendant six mois.\" PP de \"instruire\".",
-      "o": [
-        "instruite",
-        "instruits",
-        "instruites",
-        "instruit"
-      ],
-      "r": 3,
-      "x": "\"Ce dossier\" = COD masculin singulier postposé → PP invariable \"instruit\". \"L'instruction d'un dossier\" est le terme administratif désignant son examen préalable."
-    },
-    {
-      "q": "\"Délibéré\" dans l'expression \"de propos délibéré\" signifie :",
-      "o": [
-        "Après consultation de toutes les parties concernées",
-        "Suite à une longue hésitation puis à une décision",
-        "Intentionnellement, en pleine conscience et volonté",
-        "Dans le cadre d'une procédure légalement encadrée"
-      ],
-      "r": 2,
-      "x": "\"De propos délibéré\" = intentionnellement. Locution adverbiale juridique figée. \"Il a agi de propos délibéré\" = il l'a fait exprès. Synonyme de \"délibérément\" et \"intentionnellement\"."
-    },
-    {
-      "q": "\"Pragmatique\" s'oppose à :",
-      "o": [
-        "Réaliste et concret dans ses approches",
-        "Pratique et orienté vers les résultats",
-        "Idéaliste et attaché aux principes abstraits",
-        "Méthodique et rigoureux dans ses analyses"
-      ],
-      "r": 2,
-      "x": "\"Pragmatique\" (grec \"pragma\" = action) = attaché aux résultats concrets. Son opposé est \"idéaliste\" ou \"dogmatique\" (qui sacrifie les résultats aux principes). Terme fondamental en philosophie et en sciences politiques."
-    },
-    {
-      "q": "Le registre \"polémique\" vise à :",
-      "o": [
-        "Émouvoir le lecteur par des récits tragiques",
-        "Informer objectivement sur des faits vérifiés",
-        "Attaquer vivement des idées ou des personnes adverses",
-        "Raconter des événements héroïques avec grandeur"
-      ],
-      "r": 2,
-      "x": "Registre polémique : ton agressif et combatif, arguments chargés d'émotion, visée persuasive partisane. Fréquent dans les pamphlets, les tribunes, les discours politiques engagés."
-    },
-    {
-      "q": "La versification française est dite \"syllabique\" car elle repose sur :",
-      "o": [
-        "Le nombre d'accents toniques dans le vers",
-        "La durée longue ou brève de chaque syllabe",
-        "Le nombre de syllabes dans le vers",
-        "La quantité de consonnes par hémistiche"
-      ],
-      "r": 2,
-      "x": "Contrairement à la versification latine (quantitative : longues/brèves), le vers français compte les syllabes. Le \"e\" muet compte ou non selon sa position et ce qui suit."
-    },
-    {
-      "q": "Un \"dizain\" est une strophe composée de :",
-      "o": [
-        "Cinq vers",
-        "Six vers",
-        "Huit vers",
-        "Dix vers"
-      ],
-      "r": 3,
-      "x": "Dizain = 10 vers. Huitain = 8 vers. Quintil = 5 vers. Sizain = 6 vers. Ces formes sont fréquentes dans la poésie de la Renaissance française (Marot, Du Bellay)."
-    },
-    {
-      "q": "Le schéma de rimes AABB est dit :",
-      "o": [
-        "Plat ou suivi",
-        "Croisé",
-        "Embrassé",
-        "Alterné"
-      ],
-      "r": 0,
-      "x": "Rimes plates ou suivies : les rimes se suivent par paires. ABAB = croisées. ABBA = embrassées. Les rimes plates créent un effet de regularité, parfois monotone."
-    },
-    {
-      "q": "La \"synérèse\" est l'opération inverse de la diérèse. Elle consiste à :",
-      "o": [
-        "Scander deux voyelles contiguës en deux syllabes",
-        "Fusionner deux voyelles contiguës en une seule syllabe",
-        "Couper le vers en deux hémistiches inégaux",
-        "Supprimer la rime dans un poème classique"
-      ],
-      "r": 1,
-      "x": "Synérèse = fusion (ex. \"lion\" = 1 syllabe en synérèse, 2 en diérèse \"li-on\"). Le poète choisit selon les besoins du mètre. Maîtriser diérèse/synérèse est essentiel pour analyser un poème."
-    },
-    {
-      "q": "Un \"hémistiche\" est :",
-      "o": [
-        "La moitié d'un vers, notamment d'un alexandrin",
-        "Un poème de deux strophes symétriques",
-        "Un type de strophe à six vers",
-        "Un vers comportant une seule rime riche"
-      ],
-      "r": 0,
-      "x": "Hémistiche = moitié de vers (grec \"hemi\" = demi). Dans l'alexandrin classique, la césure sépare deux hémistiches de 6 syllabes chacun. L'hémistiche est lui-même un groupe rythmique autonome."
-    },
-    {
-      "q": "\"Pour qui sont ces serpents qui sifflent sur vos têtes ?\" La figure dominante est :",
-      "o": [
-        "Une anaphore",
-        "Une allitération",
-        "Une métaphore",
-        "Une personnification"
-      ],
-      "r": 1,
-      "x": "Répétition du son [s] dans \"sont / ces / serpents / sifflent / sur\" → allitération. Ce vers de Racine (Andromaque) imite phonétiquement le sifflement des serpents. Exemple canonique de versification expressive."
-    },
-    {
-      "q": "Le \"quintil\" est une strophe de :",
+      "q": "Un « quintil » est une strophe de :",
       "o": [
         "Quatre vers",
         "Cinq vers",
@@ -5018,1030 +3925,6548 @@ const QUESTIONS = {
         "Sept vers"
       ],
       "r": 1,
-      "x": "Quintil = 5 vers. À mémoriser avec les autres formes : distique (2), tercet (3), quatrain (4), quintil (5), sizain (6), huitain (8), dizain (10)."
+      "x": "Le quintil compte 5 vers, entre le quatrain (4) et le sizain (6). Il n'impose pas de schéma de rimes unique.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "L'élégie se distingue de l'ode en ce que :",
+      "q": "Un « dizain » est une strophe de :",
       "o": [
-        "L'élégie exprime la plainte mélancolique ; l'ode célèbre et exalte",
-        "L'ode est toujours plus longue que l'élégie",
-        "L'élégie est toujours en vers libres ; l'ode en vers réguliers",
-        "L'ode s'adresse à des personnes ; l'élégie à des abstractions"
+        "Cinq vers",
+        "Six vers",
+        "Huit vers",
+        "Dix vers"
       ],
-      "r": 0,
-      "x": "Élégie = plainte, mélancolie, deuil. Ode = hymne de célébration. Horace, Ronsard, Hugo ont écrit des odes. Lamartine, Musset ont écrit des élégies romantiques."
+      "r": 3,
+      "x": "Le dizain compte 10 vers et le huitain 8. Il était très prisé des poètes de la Renaissance, comme Marot et Scève.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "Le \"décasyllabe\" est le vers de référence de :",
+      "q": "L'« octosyllabe » est un vers de :",
       "o": [
-        "La poésie symboliste de Verlaine",
-        "La tragédie classique de Racine",
-        "La poésie médiévale épique",
-        "La fable classique de La Fontaine"
-      ],
-      "r": 2,
-      "x": "Le décasyllabe est le vers principal de la Chanson de Roland. Les tragédies de Racine utilisent l'alexandrin. La Fontaine varie les mètres selon les effets. Verlaine préfère des vers impairs."
-    },
-    {
-      "q": "Un \"quintil\" peut avoir le schéma de rimes :",
-      "o": [
-        "AABBA ou AABAB",
-        "AABB uniquement",
-        "ABAB uniquement",
-        "ABBA uniquement"
-      ],
-      "r": 0,
-      "x": "Le quintil (5 vers) admet plusieurs schémas : AABBA, AABAB, AABBB, etc. Aucun schéma unique ne s'impose, contrairement au quatrain qui a des schémas plus codifiés (ABAB, ABBA, AABB)."
-    },
-    {
-      "q": "La métonymie se distingue de la synecdoque en ce que :",
-      "o": [
-        "La métonymie s'emploie uniquement en prose ; la synecdoque en poésie",
-        "La synecdoque désigne un tout par une partie ou vice-versa ; la métonymie repose sur d'autres liens de contiguïté",
-        "La métonymie désigne une partie par le tout ; la synecdoque l'inverse",
-        "Les deux figures sont identiques et interchangeables"
+        "Six syllabes",
+        "Huit syllabes",
+        "Dix syllabes",
+        "Douze syllabes"
       ],
       "r": 1,
-      "x": "Synecdoque = relation partie/tout (\"voile\" pour \"bateau\"). Métonymie = relation de contiguïté diverse : cause/effet, contenant/contenu, instrument/activité (\"boire un verre\", \"lire Voltaire\")."
+      "x": "L'octosyllabe compte 8 syllabes, le décasyllabe 10 et l'alexandrin 12. L'octosyllabe est l'un des mètres les plus anciens et les plus utilisés dans la poésie française médiévale.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "La \"prosopopée\" consiste à :",
+      "q": "Une rime est dite « riche » lorsque les mots rimants partagent :",
       "o": [
-        "Faire parler un absent, un mort ou une abstraction personnifiée",
-        "Répéter le même mot en tête de vers successifs",
-        "Interrompre un discours pour revenir à un sujet antérieur",
-        "Employer un terme dans un sens opposé à son sens habituel"
-      ],
-      "r": 0,
-      "x": "La prosopopée donne la parole à une entité absente ou inanimée. Exemple : Rousseau faisant parler la nature. Proche de la personnification, mais la prosopopée implique que la chose absente prend effectivement la parole."
-    },
-    {
-      "q": "La \"gradation descendante\" dans \"il cria, parla, murmura\" :",
-      "o": [
-        "Exprime une progression croissante d'intensité",
-        "Exprime une progression décroissante d'intensité",
-        "Liste des actions de même niveau d'intensité",
-        "Oppose deux idées contradictoires"
-      ],
-      "r": 1,
-      "x": "Gradation descendante : intensité décroissante. Ici : crier (fort) → parler (modéré) → murmurer (faible). La gradation ascendante inverse le mouvement."
-    },
-    {
-      "q": "L'anaphore est la répétition :",
-      "o": [
-        "Du même son vocalique dans des mots proches",
-        "Du même mot ou groupe de mots à la fin de phrases successives",
-        "Du même mot ou groupe de mots en tête de phrases successives",
-        "Du même mot immédiatement, sans interruption"
+        "Un seul son",
+        "Deux sons",
+        "Trois sons ou plus",
+        "La même consonne initiale"
       ],
       "r": 2,
-      "x": "Anaphore = en tête (grec \"ana\" = en haut). Épiphore = en fin (grec \"epi\" = sur). Épizeuxe = répétition immédiate sans aucun mot entre les deux. Fréquent dans les discours politiques et religieux."
+      "x": "La rime pauvre partage un son, la rime suffisante deux et la rime riche au moins trois. Exemple de rime riche : « chante / enchante ».",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"L'astre de la nuit se lève sur les plaines\" : la figure employée pour désigner la lune est :",
+      "q": "La versification française est dite « syllabique » car elle repose sur :",
       "o": [
-        "Une métaphore",
+        "Le nombre d'accents",
+        "Le nombre de syllabes du vers",
+        "La durée des syllabes",
+        "Le nombre de consonnes de chaque vers"
+      ],
+      "r": 1,
+      "x": "Le vers français se mesure au nombre de syllabes, le e muet comptant ou non selon sa position. La versification latine, elle, reposait sur la durée longue ou brève des syllabes.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un « hémistiche » est :",
+      "o": [
+        "Une strophe de six vers",
+        "Un poème à deux strophes",
+        "Un vers à rime riche",
+        "La moitié d'un vers"
+      ],
+      "r": 3,
+      "x": "Hémistiche vient du grec « hêmi » (demi) et « stikhos » (vers). Dans l'alexandrin classique, la césure sépare deux hémistiches de 6 syllabes.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le « décasyllabe » est le vers principal de :",
+      "o": [
+        "La tragédie de Racine",
+        "La Chanson de Roland",
+        "La poésie de Verlaine",
+        "La fable moderne"
+      ],
+      "r": 1,
+      "x": "La Chanson de Roland, épopée du XIe siècle, est écrite en décasyllabes, vers de 10 syllabes. La tragédie classique de Racine emploie l'alexandrin.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « fable » se caractérise par :",
+      "o": [
+        "Un long poème épique",
+        "Un dialogue entre deux nobles personnages",
+        "Un récit sans morale",
+        "Un récit court suivi d'une morale"
+      ],
+      "r": 3,
+      "x": "La fable met souvent en scène des animaux et se termine par une morale explicite ou implicite. La Fontaine en a fait un genre majeur de la littérature française.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "« Il voit le jour » pour dire « il naît » est :",
+      "o": [
+        "Une hyperbole",
+        "Une antithèse",
         "Une synecdoque",
-        "Une métonymie",
         "Une périphrase"
       ],
       "r": 3,
-      "x": "\"L'astre de la nuit\" = la lune, désignée par une expression détournée → périphrase. La métaphore implique une ressemblance directe. La métonymie repose sur la contiguïté."
+      "x": "La périphrase remplace un mot par une expression plus longue qui le désigne indirectement. L'hyperbole, elle, exagère pour frapper l'esprit.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"Elle a _______ les recommandations de la commission.",
+      "q": "La répétition d'une même consonne dans des mots rapprochés s'appelle :",
       "o": [
-        "suivi",
-        "suivis",
-        "suivie",
-        "suivies"
+        "Une allitération",
+        "Une assonance",
+        "Une anaphore",
+        "Une épiphore"
       ],
       "r": 0,
-      "x": "Le COD est \"les recommandations\". Il est placé APRÈS le participe passé. Donc pas d'accord. La règle fondamentale est : le participe passé conjugué avec l'auxiliaire avoir s'accorde avec le COD uniquement si celui-ci est placé avant le verbe."
+      "x": "L'allitération répète un son consonne, comme le [s] dans « Pour qui sont ces serpents qui sifflent sur vos têtes ? » (Racine). L'assonance répète, elle, un son voyelle.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"Ces deux responsables _______ très bien.",
+      "q": "La répétition d'une même voyelle dans des mots rapprochés s'appelle :",
       "o": [
-        "se sont entendu",
-        "s'est entendu",
-        "se sont entendus",
-        "se sont entendues"
-      ],
-      "r": 2,
-      "x": "\"S'entendre\" réciproque : \"se\" = COD → accord avec le sujet \"ces deux responsables\" (masc. plur.) → \"entendus\". Si les deux responsables étaient féminins : \"entendues\"."
-    },
-    {
-      "q": "\"La construction 'avoir beau + infinitif' exprime :",
-      "o": [
-        "Une action parfaitement bien accomplie",
-        "Une action accomplie en vain, sans résultat",
-        "Une action facile à réaliser",
-        "Une action accomplie avec beaucoup de talent"
-      ],
-      "r": 1,
-      "x": "\"Avoir beau travailler\" = \"bien qu'il travaille, sans résultat\". Construction concessive idiomatique. Souvent attendue dans les exercices de transformation à l'épreuve écrite de français."
-    },
-    {
-      "q": "\"Ne fût-ce qu'un instant, il hésita.\" \"Ne fût-ce que\" est :",
-      "o": [
-        "Une négation totale à valeur restrictive",
-        "Une locution signifiant \"même seulement\"",
-        "Un conditionnel passé à valeur de reproche",
-        "Un subjonctif imparfait à valeur hypothétique"
-      ],
-      "r": 1,
-      "x": "\"Ne fût-ce que\" = \"ne serait-ce que\" (forme littéraire soutenue). Signifie \"même seulement, si minime soit la durée\". Attendu aux concours de niveau licence."
-    },
-    {
-      "q": "\"Soit qu'il parte, _______ qu'il reste, peu importe.\" Choisissez la bonne conjonction corrélative.",
-      "o": [
-        "soit que",
-        "bien que",
-        "encore que",
-        "pour peu que"
-      ],
-      "r": 0,
-      "x": "\"Soit que... soit que + subjonctif\" = structure corrélative alternative exprimant l'indifférence face à deux éventualités. Les deux propositions sont au subjonctif. Équivalent de \"qu'il parte ou qu'il reste\"."
-    },
-    {
-      "q": "\"Force lui _______ de reconnaître son erreur.\" Choisissez la forme correcte.",
-      "o": [
-        "est",
-        "fut",
-        "sera",
-        "A et B sont corrects selon le contexte"
-      ],
-      "r": 3,
-      "x": "\"Force est de + infinitif\" (présent) et \"force lui fut de + infinitif\" (passé) sont deux constructions impersonnelles soutenues signifiant \"il ne put faire autrement que de\". Les deux temps sont corrects selon le contexte."
-    },
-    {
-      "q": "\"Travaillant sans relâche, elle réussit.\" Le participe présent \"travaillant\" exprime ici :",
-      "o": [
-        "La cause de l'action principale",
-        "La condition nécessaire de l'action principale",
-        "L'opposition à l'action principale",
-        "La conséquence de l'action principale"
-      ],
-      "r": 0,
-      "x": "Participe présent à valeur causale : \"parce qu'elle travaillait sans relâche, elle réussit.\" La valeur causale ou temporelle du participe présent dépend du contexte logique de la phrase."
-    },
-    {
-      "q": "\"Voici venir la saison froide.\" La construction \"voici + infinitif\" exprime :",
-      "o": [
-        "Un infinitif sujet de la phrase",
-        "Un infinitif complément de \"voici\"",
-        "Un infinitif attribut du sujet \"la saison\"",
-        "Un infinitif en apposition au sujet"
-      ],
-      "r": 1,
-      "x": "\"Voici + infinitif\" = présentation d'une action ou d'un événement imminent. L'infinitif est complément de \"voici\". Construction littéraire et solennelle, fréquente dans la poésie et la prose classiques."
-    },
-    {
-      "q": "\"Il _______ de longues heures sur ce dossier.\" Choisissez le PP correct de \"se pencher\".",
-      "o": [
-        "s'est penché",
-        "s'est penchée",
-        "s'est penchés",
-        "s'est penchées"
-      ],
-      "r": 0,
-      "x": "\"Se pencher\" : \"se\" = COD réfléchi → accord avec \"il\" (masc. sing.) → \"penché\". Si le sujet était féminin singulier : \"penchée\". Accord du PP pronominal avec le sujet quand \"se\" est COD."
-    },
-    {
-      "q": "\"Elle s'est _______ un tabouret pour s'asseoir.\" Choisissez le PP correct de \"se fabriquer\".",
-      "o": [
-        "fabriquée",
-        "fabriqués",
-        "fabriqué",
-        "fabriquer"
-      ],
-      "r": 2,
-      "x": "\"Se fabriquer un tabouret\" : \"un tabouret\" = COD postposé. \"Se\" = COI. PP invariable : \"fabriqué\". Règle : COD nominal postposé → PP invariable quel que soit le genre du sujet."
-    },
-    {
-      "q": "\"Quitte à déplaire, elle a dit ce qu'elle pensait.\" \"Quitte à\" exprime :",
-      "o": [
-        "La cause directe de l'action principale",
-        "La condition préalable à l'action",
-        "L'opposition à l'action principale",
-        "L'acceptation délibérée d'un risque ou d'un inconvénient"
-      ],
-      "r": 3,
-      "x": "\"Quitte à + infinitif\" = au risque de. Acceptation consciente d'un inconvénient possible. Proche de \"dût-elle déplaire\" dans la langue soutenue."
-    },
-    {
-      "q": "\"Naguère il vivait ici.\" \"Naguère\" signifie :",
-      "o": [
-        "Depuis très longtemps",
-        "Il y a peu de temps, autrefois dans un passé récent",
-        "Dans très longtemps",
-        "À une époque indéterminée et lointaine"
-      ],
-      "r": 1,
-      "x": "\"Naguère\" = \"n'a guère\" = il n'y a guère de temps. Désigne un passé relativement proche. \"Jadis\" désigne un passé beaucoup plus lointain. Confusion des deux est très pénalisée en concours."
-    },
-    {
-      "q": "\"La moitié des candidats _______ réussi.\" Les deux accords possibles sont :",
-      "o": [
-        "\"a réussi\" uniquement",
-        "\"ont réussi\" uniquement",
-        "\"a réussi\" ou \"ont réussi\" selon la mise en relief",
-        "\"avaient réussi\" uniquement"
-      ],
-      "r": 2,
-      "x": "\"La moitié de + nom pluriel\" : accord au singulier si on insiste sur la fraction (la moitié a réussi), au pluriel si on insiste sur les individus (les candidats ont réussi). Les deux sont grammaticalement défendables."
-    },
-    {
-      "q": "\"À peine _______-il entré que le téléphone sonna.\" Choisissez la forme correcte.",
-      "o": [
-        "avait",
-        "eut",
-        "a",
-        "était"
-      ],
-      "r": 3,
-      "x": "Le verbe \"entrer\" (employé ici de manière intransitive) se conjugue obligatoirement avec l'auxiliaire être. Au plus-que-parfait, à la 3e personne du singulier, on écrit donc \"il était entré\". La locution \"À peine... que\" introduit une idée de simultanéité immédiate entre deux actions au passé et impose une inversion du sujet (\"était-il\")."
-    },
-    {
-      "q": "\"Elle _______ toute la nuit pour finir à temps.\" PP de \"travailler\" avec \"avoir\".",
-      "o": [
-        "a travaillée",
-        "a travaillés",
-        "a travaillé",
-        "a travaillées"
-      ],
-      "r": 2,
-      "x": "\"Travailler\" est un verbe intransitif (pas de COD). PP avec \"avoir\" sans COD → toujours invariable. \"A travaillé\" : aucun accord possible. Piège : accorder par assimilation avec d'autres PP."
-    },
-    {
-      "q": "\"Abscons\" et \"abstrus\" sont deux synonymes. Lequel insiste davantage sur l'obscurité délibérément hermétique ?",
-      "o": [
-        "Abstrus dans tous les contextes",
-        "Abscons dans tous les contextes",
-        "Abscons pour la difficulté inhérente ; abstrus pour l'hermétisme voulu",
-        "Abscons pour l'hermétisme voulu ; abstrus pour la difficulté inhérente"
-      ],
-      "r": 3,
-      "x": "\"Abscons\" = fermé, caché, délibérément obscur. \"Abstrus\" = difficile à comprendre par sa profondeur ou complexité, sans nécessairement de volonté de cacher. Nuance attendue au concours."
-    },
-    {
-      "q": "\"Incongru\" qualifie ce qui :",
-      "o": [
-        "Manque de logique interne",
-        "Est déplacé, qui ne convient pas à la situation",
-        "Est particulièrement difficile à analyser",
-        "Contient de nombreuses contradictions"
-      ],
-      "r": 1,
-      "x": "\"Incongru\" (du latin \"incongruus\" = qui ne s'accorde pas). Désigne ce qui est hors de propos, qui choque par son inadéquation. Exemple : \"Une remarque incongrue dans ce contexte solennel.\""
-    },
-    {
-      "q": "\"Fallacieux\" se distingue de \"spécieux\" en ce que :",
-      "o": [
-        "Les deux sont parfaitement identiques",
-        "\"Fallacieux\" implique une intention de tromper ; \"spécieux\" une belle apparence sans fond",
-        "\"Spécieux\" est plus péjoratif que \"fallacieux\"",
-        "\"Fallacieux\" est plus courant à l'oral ; \"spécieux\" plus littéraire"
-      ],
-      "r": 1,
-      "x": "\"Fallacieux\" (du latin \"fallax\" = trompeur) insiste sur l'intention délibérée de tromper. \"Spécieux\" (du latin \"speciosus\" = beau) insiste sur l'apparence trompeuse sans nécessairement d'intention malveillante."
-    },
-    {
-      "q": "\"Laudatif\" s'oppose à :",
-      "o": [
-        "Prolixe",
-        "Dépréciatif",
-        "Sibyllin",
-        "Emphatique"
-      ],
-      "r": 1,
-      "x": "\"Laudatif\" = qui fait l'éloge (du latin \"laus\" = louange). Antonyme exact : \"dépréciatif\" ou \"péjoratif\" (qui dévalorise). \"Prolixe\" concerne la longueur, \"sibyllin\" l'obscurité, \"emphatique\" le ton amplifié."
-    },
-    {
-      "q": "\"Chimérique\" se distingue d'\"utopique\" en ce que :",
-      "o": [
-        "\"Utopique\" est toujours plus péjoratif que \"chimérique\"",
-        "\"Chimérique\" porte sur les projets ; \"utopique\" sur les idées",
-        "\"Chimérique\" insiste sur l'illusion ; \"utopique\" sur l'idéal irréalisable",
-        "Les deux sont parfaitement interchangeables"
-      ],
-      "r": 2,
-      "x": "\"Chimérique\" = purement illusoire, sans réalité. \"Utopique\" = idéal souhaitable mais irréalisable dans les conditions actuelles. L'utopie peut avoir une valeur positive (idéal moteur), la chimère non."
-    },
-    {
-      "q": "\"Délibéré\", \"intentionnel\" et \"volontaire\" : lequel implique le plus une préméditation ?",
-      "o": [
-        "Volontaire",
-        "Intentionnel",
-        "Délibéré",
-        "Les trois sont parfaitement équivalents"
-      ],
-      "r": 2,
-      "x": "\"Délibéré\" = après mûre réflexion, avec préméditation (\"de propos délibéré\"). \"Intentionnel\" = voulu, avec intention. \"Volontaire\" = accompli librement. \"Délibéré\" est le plus fort en termes de préméditation, surtout dans le langage juridique."
-    },
-    {
-      "q": "\"Spécieux\" est proche de :",
-      "o": [
-        "D'une apparence de vérité mais vide de fond",
-        "Réservé à des spécialistes",
-        "Particulier et spécifique",
-        "Très précis dans ses formulations"
-      ],
-      "r": 0,
-      "x": "\"Spécieux\" : qui a l'air fondé mais ne l'est pas. Ne pas confondre avec \"spécial\" ou \"spécifique\". Exemple : \"Un argument spécieux qui convainc en apparence seulement.\""
-    },
-    {
-      "q": "\"Ériger quelque chose en règle générale\" signifie :",
-      "o": [
-        "Remettre en cause une règle existante",
-        "Appliquer une règle à un cas particulier",
-        "Construire physiquement un dispositif réglementaire",
-        "Élever un cas particulier au rang de principe général"
-      ],
-      "r": 3,
-      "x": "\"Ériger en\" = transformer, élever au statut de. \"Ériger en règle\" = faire d'un cas particulier un principe applicable à tous. Locution courante dans le discours argumentatif et administratif."
-    },
-    {
-      "q": "\"Péremptoire\" et \"catégorique\" : lequel implique davantage l'impossibilité de répliquer ?",
-      "o": [
-        "Catégorique dans tous les cas",
-        "Les deux sont identiques dans leur sens",
-        "Péremptoire, qui coupe court à toute discussion",
-        "Catégorique, qui exprime l'affirmation la plus forte"
-      ],
-      "r": 2,
-      "x": "\"Péremptoire\" (du latin \"peremptorius\" = qui supprime) : coupe court à toute réplique ou discussion. \"Catégorique\" = affirmatif et sans réserve, mais n'implique pas forcément de clôture au débat. Nuance fine attendue en concours avancé."
-    },
-    {
-      "q": "\"Impécunieux\" qualifie quelqu'un qui :",
-      "o": [
-        "Manque de scrupules dans ses affaires",
-        "Manque de ressources financières",
-        "Manque de méthode dans son travail",
-        "Manque d'ambition dans sa carrière"
-      ],
-      "r": 1,
-      "x": "\"Impécunieux\" (du latin \"pecunia\" = argent). Synonyme élégant de \"pauvre\" ou \"sans ressources\". Mot classique attendu dans les épreuves de vocabulaire des concours avancés."
-    },
-    {
-      "q": "\"Superfétatoire\" et \"redondant\" : lequel insiste sur le surplus par excès de quantité ?",
-      "o": [
-        "Redondant dans tous les cas",
-        "Superfétatoire dans tous les cas",
-        "\"Redondant\" insiste sur la répétition inutile ; \"superfétatoire\" sur l'excès de quantité",
-        "Les deux sont toujours interchangeables"
-      ],
-      "r": 2,
-      "x": "\"Redondant\" = dit deux fois la même chose. \"Superfétatoire\" = ajouté en surplus de ce qui suffisait. Un argument superfétatoire est en trop ; un argument redondant répète un argument déjà formulé."
-    },
-    {
-      "q": "\"Panégyrique\" est l'antonyme de :",
-      "o": [
-        "Diatribe ou réquisitoire",
-        "Plaidoyer",
-        "Mémoire",
-        "Discours solennel"
-      ],
-      "r": 0,
-      "x": "Panégyrique = éloge total. Diatribe = attaque violente. Réquisitoire = accusation sévère. Ces termes sont structurellement opposés dans les épreuves de synonymes et d'antonymes."
-    },
-    {
-      "q": "\"Apocryphe\" peut s'appliquer à :",
-      "o": [
-        "Une décision dont l'auteur est inconnu",
-        "Un texte dont l'authenticité est douteuse",
-        "Un document officiel à diffusion restreinte",
-        "Un manuscrit traduit d'une langue étrangère"
-      ],
-      "r": 1,
-      "x": "\"Apocryphe\" = d'authenticité douteuse, attribué faussement à un auteur. Terme utilisé en histoire des textes (textes apocryphes de la Bible, lettres apocryphes de grands auteurs)."
-    },
-    {
-      "q": "\"Sentencieux\" est proche de :",
-      "o": [
-        "Rapide et efficace dans ses décisions",
-        "Pompeux et moralisateur dans son expression",
-        "Sincère et direct dans ses interventions",
-        "Sobre et concis dans ses formulations"
-      ],
-      "r": 1,
-      "x": "\"Sentencieux\" = qui parle par maximes sur un ton de suffisance. La connotation est négative : l'excès de sentences morales nuit à la sincérité et à la clarté."
-    },
-    {
-      "q": "\"Galimatias\" se distingue de \"jargon\" en ce que :",
-      "o": [
-        "Le jargon est incompréhensible par nature ; le galimatias est technique",
-        "Le galimatias est un discours confus et incohérent ; le jargon est une langue technique codifiée",
-        "Le jargon est oral ; le galimatias uniquement écrit",
-        "Les deux désignent la même réalité linguistique"
-      ],
-      "r": 1,
-      "x": "Galimatias = propos confus, sans structure ni logique. Jargon = vocabulaire spécialisé d'une profession, compréhensible par les initiés. La différence est entre incohérence (galimatias) et spécialisation (jargon)."
-    },
-    {
-      "q": "\"Rétrograde\" peut désigner une loi ou une mesure qui :",
-      "o": [
-        "Introduit de nouvelles avancées dans un domaine",
-        "Remet en cause des droits ou des acquis antérieurs",
-        "Codifie des pratiques anciennement admises",
-        "Accélère la mise en œuvre d'une réforme"
-      ],
-      "r": 1,
-      "x": "\"Mesure rétrograde\" = qui recule par rapport à un état antérieur. Dans le discours juridique et politique, le terme désigne une régression des droits ou une limitation de libertés acquises."
-    },
-    {
-      "q": "La \"palinodie\" dans le discours politique désigne :",
-      "o": [
-        "La rétractation publique d'une position antérieure",
-        "Un long discours répétant plusieurs fois le même argument",
-        "Un plaidoyer en faveur d'une cause difficile à défendre",
-        "Un discours célébrant les actions d'un parti politique"
-      ],
-      "r": 0,
-      "x": "\"Chanter sa palinodie\" = se rétracter publiquement, dire le contraire de ce qu'on avait affirmé. Connotation de manque de constance ou de retournement opportuniste."
-    },
-    {
-      "q": "\"Édulcoré\" et \"atténué\" : lequel implique une transformation de la réalité pour l'embellir ?",
-      "o": [
-        "Atténué dans tous les cas",
-        "Édulcoré, qui adoucit et embellit la réalité",
-        "Atténué, qui diminue l'intensité d'un phénomène",
-        "Les deux sont toujours interchangeables"
-      ],
-      "r": 1,
-      "x": "\"Édulcoré\" (de \"édulcorer\" = sucrer) = rendre plus agréable en supprimant ce qui choque. \"Atténué\" = rendu moins fort, moins intense, sans nécessairement d'embellissement. Un compte rendu édulcoré cache des aspects négatifs ; un son atténué est simplement plus faible."
-    },
-    {
-      "q": "\"Stoïque\" et \"impassible\" : la nuance est :",
-      "o": [
-        "\"Impassible\" implique une résistance active à la souffrance",
-        "\"Stoïque\" est plus fort et insiste sur la résistance aux épreuves",
-        "Les deux sont parfaitement synonymes sans nuance",
-        "\"Impassible\" s'emploie uniquement pour les personnes"
-      ],
-      "r": 1,
-      "x": "\"Stoïque\" = qui supporte activement les épreuves selon une philosophie de maîtrise de soi. \"Impassible\" = qui ne laisse rien paraître de ses émotions, sans nécessairement de combat intérieur. \"Stoïque\" implique une résistance, \"impassible\" une neutralité extérieure."
-    },
-    {
-      "q": "\"Sagace\" est proche de :",
-      "o": [
-        "Circonspect et prudent dans ses décisions",
-        "Persévérant malgré les obstacles rencontrés",
-        "Perspicace et pénétrant dans ses analyses",
-        "Modéré et mesuré dans ses jugements"
-      ],
-      "r": 2,
-      "x": "\"Sagace\" = qui discerne avec acuité ce qui échappe aux autres. Proche de \"perspicace\" mais \"sagace\" a une connotation de flair quasi-instinctif. \"Pondéré\" et \"circonspect\" concernent l'attitude, non la finesse intellectuelle."
-    },
-    {
-      "q": "Le registre \"tragique\" se caractérise par :",
-      "o": [
-        "La recherche du comique par des situations ridicules",
-        "La dénonciation satirique des travers de la société",
-        "L'exaltation des actions héroïques et grandioses",
-        "La fatalité, la souffrance et l'impossibilité d'échapper au destin"
-      ],
-      "r": 3,
-      "x": "Registre tragique : fatalité, destin inexorable, souffrance, mort. Présent dans la tragédie antique (Sophocle) et classique (Racine). À distinguer du registre pathétique (émotion, pitié) et épique (grandeur héroïque)."
-    },
-    {
-      "q": "La \"catharsis\" dans la tragédie antique désigne :",
-      "o": [
-        "Le dénouement heureux d'une pièce de théâtre",
-        "La purgation des passions par la pitié et la terreur",
-        "La morale explicite à la fin d'une pièce",
-        "L'unité d'action dans la tragédie classique"
-      ],
-      "r": 1,
-      "x": "Concept d'Aristote (Poétique) : le spectateur de tragédie éprouve pitié et terreur, ce qui purifie et libère ses propres passions. Terme fondamental en esthétique théâtrale."
-    },
-    {
-      "q": "Une \"tirade\" au théâtre est :",
-      "o": [
-        "Un long discours prononcé par un seul personnage",
-        "Une indication scénique adressée aux acteurs",
-        "Un bref échange de répliques courtes entre deux personnages",
-        "Un aparté adressé au public seul"
-      ],
-      "r": 0,
-      "x": "La tirade est un long monologue d'un personnage au cours d'un dialogue. Elle développe une idée, un sentiment ou une argumentation. À distinguer de la stichomythie (échange de vers courts) et de l'aparté."
-    },
-    {
-      "q": "Le mouvement \"Parnasse\" du XIXe siècle se caractérise par :",
-      "o": [
-        "La recherche d'un art pur et l'impassibilité formelle",
-        "L'expression débridée des émotions personnelles",
-        "L'engagement politique direct dans la littérature",
-        "La représentation réaliste et documentée du monde ouvrier"
-      ],
-      "r": 0,
-      "x": "Le Parnasse (Leconte de Lisle, Heredia) réagit contre le lyrisme romantique en prônant l'\"art pour l'art\" : perfection formelle, impassibilité, impersonnalité. \"Sculpte, lime, cisèle\" (Gautier)."
-    },
-    {
-      "q": "Le \"Naturalisme\" de Zola se distingue du \"Réalisme\" principalement par :",
-      "o": [
-        "Le Naturalisme décrit la vie de la haute bourgeoisie",
-        "Le Naturalisme applique une méthode scientifique à l'observation sociale",
-        "Le Réalisme exclut tout document ou enquête préalable",
-        "Le Réalisme concerne la poésie ; le Naturalisme uniquement le roman"
-      ],
-      "r": 1,
-      "x": "Zola théorise le roman expérimental : le romancier naturaliste observe et expérimente comme un scientifique. Il étudie l'influence de l'hérédité et du milieu sur les individus. Le Réalisme (Balzac, Flaubert) ne pousse pas aussi loin la démarche scientifique."
-    },
-    {
-      "q": "La \"stichomythie\" dans une pièce de théâtre désigne :",
-      "o": [
-        "Un long discours d'un seul personnage",
-        "Une scène sans dialogue ni paroles",
-        "Un échange rapide de répliques courtes alternées",
-        "Une indication scénique sur le rythme du discours"
-      ],
-      "r": 2,
-      "x": "La stichomythie crée un effet de tension, de duel verbal ou d'urgence dramatique. Elle alterne une réplique par personnage, vers par vers ou phrase par phrase. Très fréquente dans la tragédie classique."
-    },
-    {
-      "q": "Le \"Surréalisme\" se caractérise notamment par :",
-      "o": [
-        "La description réaliste et précise de la réalité quotidienne",
-        "L'application de méthodes scientifiques à la création artistique",
-        "L'exploration de l'inconscient et du rêve par l'écriture automatique",
-        "La célébration de l'histoire nationale et des valeurs traditionnelles"
-      ],
-      "r": 2,
-      "x": "Breton, Aragon, Éluard : le Surréalisme libère l'écriture des contraintes de la raison et du conscient. L'écriture automatique, le rêve et l'inconscient sont les principales sources d'inspiration."
-    },
-    {
-      "q": "La \"focalisation interne\" dans un récit signifie que :",
-      "o": [
-        "Le narrateur voit tout et connaît tout",
-        "Le lecteur en sait moins que les personnages",
-        "Le narrateur adopte le point de vue d'un personnage précis",
-        "La narration se fait à la troisième personne du pluriel"
-      ],
-      "r": 2,
-      "x": "Focalisation interne = on voit le monde à travers les yeux d'un personnage (ses pensées, ses perceptions). Focalisation zéro = narrateur omniscient. Focalisation externe = narrateur voit les actes sans les pensées."
-    },
-    {
-      "q": "La \"focalisation externe\" (ou \"vision du dehors\") signifie que :",
-      "o": [
-        "Le narrateur connaît les pensées de tous les personnages",
-        "Le narrateur voit les actes mais ne connaît pas les pensées",
-        "L'histoire est racontée par un personnage qui y participe",
-        "La narration adopte le point de vue d'un seul personnage"
-      ],
-      "r": 1,
-      "x": "Focalisation externe : le narrateur observe de l'extérieur comme une caméra sans accès aux pensées. Effet de mystère et d'objectivité. Employée par Hemingway, Robbe-Grillet."
-    },
-    {
-      "q": "Un texte \"didactique\" a pour fonction principale de :",
-      "o": [
-        "Émouvoir le lecteur par des effets pathétiques",
-        "Divertir par des effets comiques ou narratifs",
-        "Transmettre un savoir ou une morale",
-        "Persuader par des arguments polémiques"
-      ],
-      "r": 2,
-      "x": "Texte didactique (du grec \"didaskein\" = enseigner) : vise à instruire, à transmettre une connaissance ou un enseignement. Les fables, les essais philosophiques, les manuels relèvent du registre didactique."
-    },
-    {
-      "q": "\"Diatribe\" désigne :",
-      "o": [
-        "Un long plaidoyer en faveur d'une cause défendue",
-        "Un texte officiel d'une autorité administrative",
-        "Une critique violente et agressive contre une personne ou une idée",
-        "Un genre poétique caractérisé par la plainte mélancolique"
-      ],
-      "r": 2,
-      "x": "\"Diatribe\" (du grec \"diatribé\" = discussion). Désigne un discours ou un texte d'une grande violence verbale, visant à détruire une réputation ou une idée. Proche du pamphlet."
-    },
-    {
-      "q": "L'\"hypotypose\" est une figure qui consiste à :",
-      "o": [
-        "Décrire une scène de façon si vive qu'elle semble présente",
-        "Répéter un terme au début de plusieurs propositions",
-        "Employer un terme dans son sens contraire",
-        "Atténuer une réalité par une formule indirecte"
-      ],
-      "r": 0,
-      "x": "L'hypotypose = description vivante et animée qui fait voir les choses comme si elles se passaient sous les yeux. Figure du registre épique et du discours judiciaire. Proche de l'enargeia rhétorique."
-    },
-    {
-      "q": "L'\"ironie socratique\" (maïeutique) se distingue de l'ironie rhétorique en ce qu'elle :",
-      "o": [
-        "Feint l'ignorance pour amener l'interlocuteur à découvrir lui-même la vérité",
-        "Dit clairement le contraire de ce que l'on pense",
-        "Attaque violemment une position adverse",
-        "Emploie des figures d'atténuation pour critiquer"
-      ],
-      "r": 0,
-      "x": "Socrate feignait de ne rien savoir (\"je sais que je ne sais rien\") pour amener l'autre à construire lui-même sa réponse. La maïeutique = \"art d'accoucher les esprits\". L'ironie rhétorique dit le contraire de sa pensée."
-    },
-    {
-      "q": "\"Le registre comique\" englobe :",
-      "o": [
-        "Uniquement les comédies et les farces",
-        "L'humour, la satire, l'ironie et le registre burlesque",
-        "Toutes les formes d'écriture légère et distrayantes",
-        "Uniquement les œuvres destinées à un public populaire"
-      ],
-      "r": 1,
-      "x": "Le registre comique recouvre plusieurs nuances : humour (bienveillant), ironie (distance critique), satire (moquerie sociale), burlesque (comique par l'absurde ou l'excès). Il vise à provoquer le rire ou le sourire."
-    },
-    {
-      "q": "Une \"antithèse\" et un \"oxymore\" diffèrent en ce que :",
-      "o": [
-        "L'antithèse est une figure de son ; l'oxymore une figure de sens",
-        "L'oxymore unit des contraires dans un même groupe ; l'antithèse les oppose dans des propositions distinctes",
-        "L'antithèse est toujours plus longue que l'oxymore",
-        "L'oxymore n'existe qu'en poésie ; l'antithèse en prose seulement"
-      ],
-      "r": 1,
-      "x": "Oxymore = \"obscure clarté\" (contraires dans le même groupe). Antithèse = \"Je vis, je souffre, j'aime et je mourrai bientôt\" (opposition entre propositions). L'oxymore est une contradiction interne ; l'antithèse une opposition externe."
-    },
-    {
-      "q": "\"Elle _______ ce poème depuis des années.\" PP de \"réciter\" en contexte.",
-      "o": [
-        "a récité",
-        "a récitées",
-        "a récités",
-        "a réciter"
-      ],
-      "r": 0,
-      "x": "\"Ce poème\" = COD masculin singulier postposé → PP invariable \"récité\". Le PP avec \"avoir\" est invariable quand le COD est postposé. Règle fondamentale constamment vérifiée en concours."
-    },
-    {
-      "q": "\"Elle s'est _______ à cette décision sans protester.\" PP de \"se soumettre\".",
-      "o": [
-        "soumise",
-        "soumis",
-        "soumirent",
-        "soumises"
-      ],
-      "r": 0,
-      "x": "\"Se soumettre\" : \"soumettre quelqu'un\" est transitif direct. \"Se\" = COD → accord avec \"elle\" (fém. sing.) → \"soumise\". À distinguer des verbes à COI où le PP est invariable."
-    },
-    {
-      "q": "\"Il _______ le soin de rédiger ce rapport.\" PP de \"se voir confier\".",
-      "o": [
-        "s'est vu confier",
-        "s'est vue confier",
-        "s'est vus confier",
-        "s'est vu confié"
-      ],
-      "r": 0,
-      "x": "\"Se voir + infinitif\" → PP \"vu\" est toujours invariable. \"Confier\" reste à l'infinitif. Pour les verbes de perception comme voir ou entendre, le participe passé s'accorde si et seulement si deux conditions sont réunies :le COD doit être placé avant le verbe et le COD doit faire lui-même l'action exprimée par l'infinitif."
-    },
-    {
-      "q": "\"Ces agents _______  mutuellement.\" PP de \"s'entraider\".",
-      "o": [
-        "se sont entraidés",
-        "s'est entraidé",
-        "se sont entraidé",
-        "se sont entraidées"
-      ],
-      "r": 0,
-      "x": "\"S'entraider\" = verbe réciproque, \"se\" est COD → accord avec \"ces agents\" (masc. plur.) → \"entraidés\". Verbe essentiellement pronominal : son PP s'accorde avec le sujet."
-    },
-    {
-      "q": "\"Elles se sont _______ en chemin.\" PP de \"se perdre\".",
-      "o": [
-        "perdu",
-        "perdue",
-        "perdus",
-        "perdues"
-      ],
-      "r": 3,
-      "x": "\"Se perdre\" : \"perdre\" est transitif direct. \"Se\" = COD → accord avec \"elles\" (fém. plur.) → \"perdues\". Accord classique du PP des verbes pronominaux réfléchis directs."
-    },
-    {
-      "q": "\"Il _______ sans raison.\" PP de \"se plaindre\".",
-      "o": [
-        "s'est plaint",
-        "s'est plaint ou s'est plaintif selon le sens",
-        "s'est plaindu",
-        "s'est plainte"
-      ],
-      "r": 0,
-      "x": "\"Se plaindre\" fait partie des verbes pronominaux où le pronom \"se\" est COD (on plaint quelqu'un). Le participe passé s'accorde donc en genre et en nombre avec ce COD placé avant le verbe (qui renvoie au sujet). Comme le sujet est \"Il\" (masculin singulier), on écrit \"plaint\". Si le sujet avait été féminin (\"Elle\"), on aurait écrit \"s'est plainte\"."
-    },
-    {
-      "q": "\"Les résultats _______ prometteurs.\" PP de \"se révéler\".",
-      "o": [
-        "se sont révélés",
-        "se sont révélé",
-        "se sont révélées",
-        "se sont révélé ou révélés selon le sens"
-      ],
-      "r": 0,
-      "x": "\"Se révéler\" = verbe pronominal. \"Se\" est COD → accord avec le sujet \"les résultats\" (masc. plur.) → \"révélés\". Lorsque \"se révéler\" est suivi d'un attribut, l'attribut s'accorde aussi avec le sujet."
-    },
-    {
-      "q": "\"Ils _______ de cette erreur.\" PP de \"s'apercevoir\".",
-      "o": [
-        "se sont aperçus",
-        "se sont aperçu",
-        "se sont aperçus ou aperçu selon le sens",
-        "se sont aperçues"
-      ],
-      "r": 1,
-      "x": "\"S'apercevoir de\" : \"apercevoir\" + de → COI. \"Se\" = COI → PP invariable : \"aperçu\". Règle : verbes pronominaux à COI (s'apercevoir de, se souvenir de, se douter de) → PP invariable."
-    },
-    {
-      "q": "\"Elle _______ à cette tâche sans rechigner.\" PP de \"se consacrer\".",
-      "o": [
-        "s'est consacrée",
-        "s'est consacrés",
-        "s'est consacré",
-        "s'est consacrées"
-      ],
-      "r": 0,
-      "x": "On dit \"consacrer quelqu'un à quelque chose\". Le pronom \"se\" est donc COD et placé avant le verbe. Le participe passé s'accorde en genre et en nombre avec ce COD qui renvoie au sujet \"Elle\" (féminin singulier), d'où la forme \"consacrée\". À distinguer de \"se conformer à\", qui a \"à\" → COI → PP invariable."
-    },
-    {
-      "q": "\"Ces mesures _______ à la situation.\" PP de \"s'adapter\".",
-      "o": [
-        "se sont adapté",
-        "se sont adaptées",
-        "se sont adaptés",
-        "se sont adaptée"
-      ],
-      "r": 1,
-      "x": "On dit \"adapter quelque chose à une situation\". Le pronom \"se\" est donc COD et placé avant le verbe. Le participe passé s'accorde en genre et en nombre avec ce COD qui renvoie au sujet \"Ces mesures\" (féminin pluriel), d'où la forme \"adaptées\"."
-    },
-    {
-      "q": "\"Il _______ une longue carrière.\" PP de \"se forger\".",
-      "o": [
-        "s'est forgée",
-        "s'est forgé",
-        "s'est forgés",
-        "s'est forgées"
-      ],
-      "r": 1,
-      "x": "\"Se forger une longue carrière\" : \"une longue carrière\" = COD postposé. \"Se\" = COI. PP invariable : \"forgé\". Règle : COD postposé → PP invariable, quel que soit le genre du sujet."
-    },
-    {
-      "q": "L'\"exégèse\" est :",
-      "o": [
-        "La composition d'un texte fondateur dans une tradition",
-        "L'analyse et l'interprétation approfondie d'un texte",
-        "La traduction d'un texte d'une langue ancienne",
-        "La censure d'un texte jugé contraire aux bonnes mœurs"
-      ],
-      "r": 1,
-      "x": "\"Exégèse\" (du grec \"exegeisthai\" = interpréter). Désigne l'étude critique et rigoureuse d'un texte (biblique, juridique, littéraire). L'exégète = celui qui pratique l'exégèse."
-    },
-    {
-      "q": "\"Hermétisme\" désigne en littérature :",
-      "o": [
-        "Un style très clair et transparent",
-        "Un style délibérément obscur et réservé aux initiés",
-        "Un style concis et dépouillé de tout ornement",
-        "Un style amplifié par l'usage excessif des figures"
-      ],
-      "r": 1,
-      "x": "L'hermétisme littéraire (poésie hermétique de Mallarmé, Celan) cherche à dépasser le sens immédiat par un langage voilé, destiné à créer une expérience plutôt qu'à transmettre un message clair."
-    },
-    {
-      "q": "L'\"ode\" se distingue de l'\"hymne\" principalement par :",
-      "o": [
-        "L'ode est toujours en vers libres ; l'hymne en vers réguliers",
-        "L'hymne s'adresse à une collectivité ; l'ode peut être adressée à une personne ou une chose",
-        "L'ode est toujours plus courte que l'hymne",
-        "L'hymne est toujours chanté ; l'ode uniquement récité"
-      ],
-      "r": 1,
-      "x": "L'hymne célèbre une collectivité, une nation, une divinité. L'ode (Pindare, Ronsard, Hugo) peut s'adresser à un individu, une saison, un sentiment. La distinction n'est pas absolue mais cette nuance est classiquement attendue."
-    },
-    {
-      "q": "La \"paronomase\" est une figure qui rapproche :",
-      "o": [
-        "Des mots de sens contraires dans la même phrase",
-        "Des mots de sonorités proches mais de sens différents",
-        "Des mots répétés en tête de phrases successives",
-        "Des mots dont les lettres sont les mêmes mais dans un ordre différent"
-      ],
-      "r": 1,
-      "x": "Paronomase = rapprochement de mots de sonorités voisines aux sens différents. Exemple : \"Qui se ressemble s'assemble.\" Crée un effet musical et sémantique. Proche du calembour mais plus soutenu."
-    },
-    {
-      "q": "La \"polyphonie\" dans un texte littéraire désigne :",
-      "o": [
-        "L'emploi d'un seul point de vue dominant",
-        "La présence de plusieurs voix et perspectives différentes",
-        "La répétition d'un même thème musical",
-        "L'alternance entre prose et poésie"
-      ],
-      "r": 1,
-      "x": "Polyphonie (du grec \"polus\" = nombreux + \"phoné\" = voix). Bakhtine désigne par ce terme la coexistence de plusieurs voix autonomes dans un roman. Présente notamment chez Dostoïevski."
-    },
-    {
-      "q": "\"Intertextualité\" désigne :",
-      "o": [
-        "La traduction d'un texte dans plusieurs langues",
-        "La relation qu'un texte entretient avec d'autres textes",
-        "La polémique entre deux auteurs contemporains",
-        "L'étude comparée des textes d'une même époque"
-      ],
-      "r": 1,
-      "x": "L'intertextualité (Julia Kristeva, Gérard Genette) = ensemble des relations qu'un texte entretient avec d'autres textes (citations, allusions, parodie, pastiche). Tout texte est \"tissu de citations\" (Barthes)."
-    },
-    {
-      "q": "La \"paraphrase\" se distingue du \"commentaire\" en ce que :",
-      "o": [
-        "La paraphrase développe des idées personnelles ; le commentaire résume",
-        "La paraphrase reformule sans ajouter de sens ; le commentaire analyse et interprète",
-        "Le commentaire est toujours plus long que la paraphrase",
-        "La paraphrase s'emploie uniquement pour les textes poétiques"
-      ],
-      "r": 1,
-      "x": "La paraphrase = \"dire la même chose autrement\", sans ajout d'analyse. Le commentaire (ou explication de texte) analyse, interprète, met en relation forme et fond. La paraphrase est à éviter dans les exercices de commentaire littéraire."
-    },
-    {
-      "q": "L'\"ironie\" est proche de la \"dérision\" mais :",
-      "o": [
-        "L'ironie est plus violente que la dérision",
-        "L'ironie peut être légère ou fine ; la dérision tourne en ridicule de façon méprisante",
-        "La dérision peut être bienveillante ; l'ironie est toujours destructrice",
-        "Les deux sont parfaitement identiques en littérature"
-      ],
-      "r": 1,
-      "x": "L'ironie = décalage entre ce qui est dit et ce qui est pensé (peut être fine, subtile, légère). La dérision = tourner en dérision, ridiculiser avec un mépris plus marqué. La dérision est souvent une ironie blessante et dévalorisante."
-    },
-    {
-      "q": "La \"parataxe\" se distingue de l'\"hypotaxe\" en ce que :",
-      "o": [
-        "La parataxe multiplie les subordonnées ; l'hypotaxe les juxtapose",
-        "La parataxe juxtapose des propositions ; l'hypotaxe les subordonne",
-        "L'hypotaxe est propre à la poésie ; la parataxe à la prose",
-        "Les deux désignent le même phénomène syntaxique"
-      ],
-      "r": 1,
-      "x": "Parataxe = phrases juxtaposées sans conjonction de subordination (style simple, rapide, oral). Hypotaxe = phrases liées par des subordonnées (style complexe, élaboré, écrit). César : \"Veni, vidi, vici\" = parataxe."
-    },
-    {
-      "q": "Le verbe \"réciter\" est transitif direct. \"Ils ont récité leurs leçons.\" Si on antépose le COD : \"Les leçons qu'ils ont _______ .\"",
-      "o": [
-        "récité",
-        "récités",
-        "récitées",
-        "réciter"
-      ],
-      "r": 2,
-      "x": "\"Les leçons\" = COD féminin pluriel antéposé via \"que\" → accord \"récitées\". Règle : PP avec \"avoir\" s'accorde avec le COD SEULEMENT s'il précède le verbe."
-    },
-    {
-      "q": "\"Le Romantisme\" réagit contre les contraintes du :",
-      "o": [
-        "Naturalisme",
-        "Réalisme",
-        "Classicisme",
-        "Symbolisme"
-      ],
-      "r": 2,
-      "x": "Le Romantisme (Hugo, Lamartine, Musset) réagit contre la rigueur formelle et les règles du Classicisme (unités dramatiques, bienséance, hiérarchie des genres). Il prône la liberté créatrice et l'expression du \"moi\"."
-    },
-    {
-      "q": "La \"catharsis\" et le \"deus ex machina\" : le second désigne :",
-      "o": [
-        "Un personnage divin introduit pour résoudre artificiellement l'intrigue",
-        "Le dénouement tragique et inévitable d'une pièce",
-        "L'unité d'action dans la tragédie classique",
-        "La purification des passions par la pitié et la terreur"
-      ],
-      "r": 0,
-      "x": "\"Deus ex machina\" (le dieu descendant sur scène par une machine) = résolution artificielle d'une situation inextricable par un élément extérieur imprévu. Critiqué par Aristote car contraire à la vraisemblance."
-    },
-    {
-      "q": "Le \"discours indirect libre\" se caractérise par :",
-      "o": [
-        "L'emploi d'un verbe introducteur suivi de \"que\"",
-        "La fusion du discours du narrateur et de celui du personnage",
-        "La citation exacte des paroles d'un personnage entre guillemets",
-        "La narration des paroles d'un personnage à la troisième personne avec \"que\""
-      ],
-      "r": 1,
-      "x": "Discours indirect libre : ni guillemets, ni verbe introducteur. Les paroles ou pensées du personnage sont intégrées au tissu narratif avec les temps et personnes du narrateur. Exemple : \"Il partait. La vie était trop injuste.\""
-    },
-    {
-      "q": "\"Nul ne peut ignorer la loi\" emploie \"nul\" comme :",
-      "o": [
-        "Pronom indéfini sujet à valeur négative",
-        "Adjectif qualificatif attribut du sujet",
-        "Adverbe de négation renforcée",
-        "Déterminant indéfini sujet"
-      ],
-      "r": 0,
-      "x": "\"Nul\" = pronom indéfini négatif (= personne). Construit avec \"ne\" : \"Nul ne peut...\" Peut aussi être adjectif (\"nul résultat\") ou attribut (\"ce résultat est nul\"). Ici pronom sujet à valeur négative totale."
-    },
-    {
-      "q": "\"Il s'est _______ de cette responsabilité.\" PP de \"s'acquitter\".",
-      "o": [
-        "acquittée",
-        "acquittés",
-        "acquitté",
-        "acquittées"
-      ],
-      "r": 2,
-      "x": "\"S'acquitter de\" : \"acquitter\" + de → COI. \"Se\" = COI → PP invariable \"acquitté\", quel que soit le genre ou le nombre du sujet. Règle des pronominaux à COI : PP toujours invariable."
-    },
-    {
-      "q": "\"Elle s'est _______ à ses nouvelles fonctions.\" PP de \"s'habituer\".",
-      "o": [
-        "habituée",
-        "habitué",
-        "habituées",
-        "habitués"
-      ],
-      "r": 0,
-      "x": "\"S'habituer à\" : \"habituer quelqu'un à\" → transitif direct. \"Se\" = COD → accord avec \"elle\" (fém. sing.) → \"habituée\". À distinguer des verbes à COI où le PP reste invariable."
-    },
-    {
-      "q": "\"La paronomase\" rapproche des mots à sonorités proches. La phrase \"Qui se ressemble s'assemble\" est :",
-      "o": [
-        "Une allitération uniquement",
-        "Une assonance uniquement",
-        "Une paronomase et une anaphore",
+        "Une assonance",
+        "Une allitération",
+        "Une anaphore",
         "Une paronomase"
       ],
+      "r": 0,
+      "x": "L'assonance répète un son voyelle, comme le son [ɔ̃] dans « Les sanglots longs des violons » (Verlaine). Elle crée un effet musical.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Homme libre, toujours tu chériras la mer ! », « Homme libre » est :",
+      "o": [
+        "Une apostrophe",
+        "Une apposition",
+        "Une épithète détachée",
+        "Une métaphore"
+      ],
+      "r": 0,
+      "x": "L'apostrophe interpelle directement une personne ou une chose. Ici, Baudelaire s'adresse à « l'homme libre » ; le groupe est isolé par une virgule.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "« La mort est une nuit éternelle » est :",
+      "o": [
+        "Une comparaison",
+        "Une métaphore",
+        "Une allégorie",
+        "Une périphrase"
+      ],
+      "r": 1,
+      "x": "La métaphore rapproche deux réalités sans outil de comparaison. Avec « comme » ou « tel », on aurait une comparaison.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "« Dieu, que la guerre est jolie ! », quand l'auteur pense le contraire, est :",
+      "o": [
+        "Une litote",
+        "Une antiphrase",
+        "Une hyperbole",
+        "Un euphémisme"
+      ],
+      "r": 1,
+      "x": "L'antiphrase dit le contraire de ce que l'on pense, dans une intention ironique. La litote dit moins pour suggérer plus.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "« Cette obscure clarté qui tombe des étoiles » (Corneille) contient :",
+      "o": [
+        "Une antithèse",
+        "Une hyperbole",
+        "Un oxymore",
+        "Une métonymie"
+      ],
+      "r": 2,
+      "x": "L'oxymore unit deux termes contradictoires dans un même groupe de mots : « obscure clarté ». L'antithèse oppose deux idées dans des propositions distinctes.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "« Va, cours, vole, et nous venge » (Corneille) est :",
+      "o": [
+        "Une accumulation",
+        "Une anaphore",
+        "Une antithèse",
+        "Une gradation"
+      ],
       "r": 3,
-      "x": "\"Ressemble\" et \"assemble\" ont des sonorités très proches → paronomase. Il n'y a pas d'anaphore (pas de répétition en tête). Les deux mots riment presque, créant un effet mémorable de sentence."
+      "x": "La gradation présente des termes d'intensité croissante : aller, courir, voler. L'accumulation énumère des éléments de même niveau, sans progression.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "L'\"incipit\" désigne :",
+      "q": "« Il faut manger pour vivre et non vivre pour manger » est :",
       "o": [
-        "La dernière phrase ou le dernier paragraphe d'une œuvre",
-        "Les premiers mots ou la première partie d'une œuvre",
-        "La dédicace placée au début d'un texte",
-        "Le résumé placé en quatrième de couverture"
-      ],
-      "r": 1,
-      "x": "\"Incipit\" (du latin \"incipere\" = commencer). Désigne l'ouverture d'un texte. L'excipit est la fin. L'incipit est fondamental en analyse littéraire car il établit le pacte de lecture et le ton de l'œuvre."
-    },
-    {
-      "q": "L'\"excipit\" désigne :",
-      "o": [
-        "Les premiers mots d'un texte fondateurs du pacte de lecture",
-        "La dédicace placée avant le titre de l'œuvre",
-        "Les derniers mots ou la dernière partie d'une œuvre",
-        "La note de bas de page explicative d'un terme obscur"
+        "Une anaphore",
+        "Une parataxe",
+        "Un chiasme",
+        "Une épiphore"
       ],
       "r": 2,
-      "x": "L'excipit est la clôture du texte. Il peut confirmer ou subvertir les attentes créées par l'incipit. \"Excipit\" et \"incipit\" sont les deux pôles structurants de l'analyse des romans et nouvelles."
+      "x": "Le chiasme croise deux groupes selon la structure AB / BA, comme la lettre grecque khi (X). Il produit un effet de symétrie souvent mémorable.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "La \"prolepse\" narrative est :",
+      "q": "« Je le vis, je rougis, je pâlis à sa vue » (Racine) : l'absence de mots de liaison s'appelle :",
       "o": [
-        "Un retour en arrière dans la chronologie du récit",
-        "Une anticipation d'un événement futur dans le récit",
-        "Le ralentissement du rythme narratif par les descriptions",
-        "L'accélération du rythme par les ellipses"
+        "Une asyndète",
+        "Une polysyndète",
+        "Un zeugme",
+        "Une anaphore"
+      ],
+      "r": 0,
+      "x": "L'asyndète supprime les conjonctions entre les éléments et crée un effet de rapidité. La polysyndète, à l'inverse, multiplie les conjonctions.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "« Il perdit son argent et la tête » est :",
+      "o": [
+        "Un zeugme",
+        "Une syllepse",
+        "Une antithèse",
+        "Un oxymore"
+      ],
+      "r": 0,
+      "x": "Le zeugme rattache à un même verbe deux compléments de nature différente, l'un au sens propre et l'autre au sens figuré. L'effet est souvent comique.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dire qu'on ne parlera pas d'un sujet tout en en parlant s'appelle :",
+      "o": [
+        "Une périphrase",
+        "Une prétérition",
+        "Une ellipse",
+        "Une litote"
       ],
       "r": 1,
-      "x": "Prolepse = anticipation (anachronie narrative). Analepse = retour en arrière (flashback). Ces deux notions structurelles sont essentielles dans l'analyse des récits modernes (Genette, Figures III)."
+      "x": "Exemple : « Je ne parlerai pas de ses nombreux échecs… ». La prétérition est fréquente dans les plaidoiries et les discours politiques.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "L'\"analepse\" narrative est :",
+      "q": "« La plume est plus forte que l'épée » : « la plume » pour l'écriture est :",
       "o": [
-        "Une anticipation d'un événement futur dans le récit",
-        "Une accélération soudaine du rythme narratif",
-        "Un retour en arrière dans la chronologie du récit",
-        "Une pause descriptive interrompant l'action"
+        "Une synecdoque",
+        "Une métaphore",
+        "Une métonymie",
+        "Une allégorie"
       ],
       "r": 2,
-      "x": "Analepse = flashback (retour en arrière). Prolepse = flash-forward (anticipation). Ces termes de Gérard Genette sont fondamentaux en narratologie et régulièrement testés dans les concours de niveau licence."
+      "x": "La métonymie désigne une chose par un élément qui lui est lié, ici l'instrument pour l'activité. La synecdoque désigne un tout par une de ses parties.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "La \"vraisemblance\" dans le classicisme désigne :",
+      "q": "« Une voile à l'horizon » pour désigner un bateau est :",
       "o": [
-        "La représentation exacte et documentée de la réalité",
-        "Ce qui paraît vrai et acceptable aux yeux du public",
-        "La conformité absolue aux faits historiques attestés",
-        "L'absence totale d'éléments merveilleux ou fantastiques"
+        "Une personnification",
+        "Une métaphore",
+        "Une périphrase",
+        "Une synecdoque"
+      ],
+      "r": 3,
+      "x": "La synecdoque désigne le tout par une de ses parties, ici le bateau par sa voile. La métonymie repose sur d'autres liens, comme le contenant pour le contenu (« boire un verre »).",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « prosopopée » consiste à :",
+      "o": [
+        "Répéter un mot en tête de vers",
+        "Faire parler un absent ou un objet",
+        "Revenir à un sujet antérieur",
+        "Dire le contraire de sa pensée"
       ],
       "r": 1,
-      "x": "La vraisemblance classique n'est pas la vérité mais ce qui semble vrai, ce que le public peut croire. \"Il faut que la vérité semble vraie\" (Boileau). À distinguer de la \"bienséance\" (conformité aux bonnes mœurs)."
+      "x": "La prosopopée donne la parole à un mort, un absent ou une abstraction. Elle va plus loin que la personnification, qui prête seulement des traits humains.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "La \"bienséance\" dans le théâtre classique impose :",
+      "q": "L'« anaphore » est la répétition d'un mot :",
       "o": [
-        "Que les pièces durent exactement 24 heures",
-        "Que le dénouement soit toujours heureux",
-        "Que les actes choquants ne soient pas représentés sur scène",
-        "Que la pièce comporte exactement cinq actes"
+        "En fin de phrases successives",
+        "En tête de phrases successives",
+        "Immédiatement redoublé",
+        "Avec un sens différent"
+      ],
+      "r": 1,
+      "x": "L'anaphore répète un mot ou un groupe au début de plusieurs phrases ou vers. La répétition en fin de phrase s'appelle l'épiphore.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « paronomase » rapproche des mots :",
+      "o": [
+        "De sons proches et de sens différents",
+        "De sens contraires dans une même phrase",
+        "Répétés en tête de phrase",
+        "Formés des mêmes lettres dans un autre ordre"
+      ],
+      "r": 0,
+      "x": "Exemple : « Qui se ressemble s'assemble ». Les mots formés des mêmes lettres dans un autre ordre sont des anagrammes.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « personnification » consiste à :",
+      "o": [
+        "Comparer avec « comme »",
+        "Prêter des traits humains à une chose",
+        "Répéter un mot en tête de phrase",
+        "Atténuer une réalité déplaisante"
+      ],
+      "r": 1,
+      "x": "Dans « Le vent hurle dans la nuit », on prête au vent un comportement humain. La comparaison, elle, rapproche deux réalités à l'aide d'un outil comme « comme ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « parataxe » consiste à :",
+      "o": [
+        "Juxtaposer des propositions",
+        "Multiplier les subordonnées",
+        "Répéter les conjonctions",
+        "Inverser le sujet"
+      ],
+      "r": 0,
+      "x": "La parataxe place les propositions côte à côte, sans subordination : « Je suis venu, j'ai vu, j'ai vaincu ». L'hypotaxe, à l'inverse, relie les propositions par des subordonnées.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "L'« ironie socratique » consiste à :",
+      "o": [
+        "Attaquer violemment l'adversaire",
+        "Dire le contraire de sa pensée",
+        "Atténuer une critique pour ne pas blesser",
+        "Feindre l'ignorance pour faire réfléchir"
+      ],
+      "r": 3,
+      "x": "Socrate feignait de ne rien savoir pour amener son interlocuteur à découvrir lui-même la vérité. L'ironie prépare ainsi la maïeutique, « l'art d'accoucher les esprits ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le registre « tragique » se caractérise par :",
+      "o": [
+        "La recherche du rire",
+        "La satire sociale et politique",
+        "La fatalité et la souffrance",
+        "L'exaltation héroïque"
       ],
       "r": 2,
-      "x": "La bienséance classique interdit de montrer sur scène la violence, la mort, l'amour trop explicite. Ces actes doivent se dérouler hors scène et être rapportés par un personnage. Contrainte dramaturgique liée à la vraisemblance et aux convenances sociales."
+      "x": "Le registre tragique montre des personnages écrasés par un destin auquel ils ne peuvent échapper. L'exaltation des exploits héroïques relève du registre épique.",
+      "_batchId": "francais/2026-11-19/LOT2"
     },
     {
-      "q": "\"L'épopée\", \"la tragédie\" et \"la comédie\" sont trois genres définis par Aristote dans :",
+      "q": "Le registre « épique » se caractérise par :",
       "o": [
-        "L'Art poétique",
+        "L'expression des sentiments",
+        "L'exaltation d'exploits héroïques",
+        "La recherche du comique",
+        "La dénonciation ironique"
+      ],
+      "r": 1,
+      "x": "Le registre épique grandit les personnages et les événements par l'hyperbole et l'amplification. On le trouve dans l'Iliade, la Chanson de Roland ou chez Hugo.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le registre « lyrique » se reconnaît à :",
+      "o": [
+        "La description objective",
+        "La recherche du rire",
+        "L'expression des sentiments personnels",
+        "Le récit de batailles et d'exploits guerriers"
+      ],
+      "r": 2,
+      "x": "Le registre lyrique exprime les émotions du « je » avec une grande musicalité. Lamartine, Musset et Verlaine en sont des représentants.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le registre « satirique » vise à :",
+      "o": [
+        "Dénoncer les travers par la moquerie",
+        "Émouvoir par la pitié",
+        "Exalter les héros et leurs grands exploits",
+        "Exprimer ses états d'âme"
+      ],
+      "r": 0,
+      "x": "La satire critique les mœurs et les institutions par l'ironie et l'humour. Molière, La Fontaine et Voltaire l'ont pratiquée.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le registre « polémique » vise à :",
+      "o": [
+        "Émouvoir par le tragique",
+        "Informer objectivement",
+        "Attaquer vivement un adversaire",
+        "Raconter des exploits"
+      ],
+      "r": 2,
+      "x": "Le registre polémique, du grec « polemos » (guerre), se reconnaît à un ton combatif et à des arguments chargés d'émotion. On le trouve dans les pamphlets et les tribunes.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un texte « didactique » a pour fonction principale de :",
+      "o": [
+        "Transmettre un savoir",
+        "Émouvoir par des scènes tragiques",
+        "Divertir",
+        "Attaquer"
+      ],
+      "r": 0,
+      "x": "Didactique vient du grec « didaskein » (enseigner). Les manuels, les traités et les fables à visée morale relèvent de ce registre.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « catharsis » dans la tragédie antique désigne :",
+      "o": [
+        "La purgation des passions",
+        "Le dénouement heureux de l'intrigue",
+        "La morale finale",
+        "L'unité d'action"
+      ],
+      "r": 0,
+      "x": "Selon Aristote, le spectateur éprouve pitié et terreur, ce qui purifie ses propres passions. La notion est exposée dans la Poétique.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le « deus ex machina » désigne :",
+      "o": [
+        "Un dénouement artificiel",
+        "Un dénouement tragique",
+        "Le prologue d'une pièce",
+        "La purgation des passions"
+      ],
+      "r": 0,
+      "x": "À l'origine, un dieu descendait sur scène grâce à une machine pour résoudre une situation inextricable. L'expression désigne tout dénouement imprévu et peu vraisemblable.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Les trois unités de la tragédie classique sont celles :",
+      "o": [
+        "De style, de ton et de langue",
+        "De registre, de vers et de dénouement",
+        "D'action, de lieu et de temps",
+        "De scène, de décor et de jeu"
+      ],
+      "r": 2,
+      "x": "Une seule action, en un seul lieu, en une journée : ces règles visent la vraisemblance. Boileau les résume dans son Art poétique (1674).",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Une « tirade » au théâtre est :",
+      "o": [
+        "Un échange de répliques courtes",
+        "Une longue réplique",
+        "Une indication scénique",
+        "Une parole adressée au public"
+      ],
+      "r": 1,
+      "x": "La tirade est un long discours prononcé d'un seul tenant par un personnage face à d'autres. L'échange rapide de répliques courtes s'appelle la stichomythie.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « stichomythie » désigne :",
+      "o": [
+        "Un long discours prononcé par un seul personnage",
+        "Un échange rapide de répliques courtes",
+        "Une scène muette jouée sans aucune parole",
+        "Une indication de rythme"
+      ],
+      "r": 1,
+      "x": "Dans la stichomythie, les personnages se répondent vers par vers ou phrase par phrase. Elle crée un effet de duel verbal et de tension.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « didascalie » dans un texte théâtral est :",
+      "o": [
+        "La plus longue réplique",
+        "Une réplique à voix basse",
+        "Le prologue",
+        "Une indication scénique"
+      ],
+      "r": 3,
+      "x": "Les didascalies précisent les décors, les gestes, les déplacements et les tons. Elles sont généralement imprimées en italique.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "L'« aparté » au théâtre est une réplique :",
+      "o": [
+        "Entendue de tous",
+        "Toujours très longue",
+        "Réservée aux rôles secondaires",
+        "Entendue du seul public"
+      ],
+      "r": 3,
+      "x": "Par convention, les autres personnages présents n'entendent pas l'aparté, mais le public, lui, l'entend. Le monologue est un discours tenu par un personnage seul en scène.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « vraisemblance » dans le théâtre classique désigne :",
+      "o": [
+        "L'exactitude historique",
+        "La copie du réel",
+        "Ce que le public peut croire",
+        "L'absence de merveilleux"
+      ],
+      "r": 2,
+      "x": "La vraisemblance classique n'est pas la vérité mais ce qui paraît crédible au spectateur. Boileau affirme d'ailleurs que « le vrai peut quelquefois n'être pas vraisemblable ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « bienséance » dans le théâtre classique impose :",
+      "o": [
+        "Une durée de 24 heures",
+        "Un dénouement toujours heureux pour le héros",
+        "Cinq actes exactement",
+        "De ne pas montrer les actes choquants"
+      ],
+      "r": 3,
+      "x": "La bienséance interdit de représenter sur scène la violence, la mort ou ce qui heurte les mœurs. Ces actes sont racontés par un personnage, souvent dans un récit.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "L'ouvrage d'Aristote qui théorise la tragédie et l'épopée est :",
+      "o": [
         "La Rhétorique",
         "La Poétique",
+        "L'Art poétique",
         "L'Éthique à Nicomaque"
       ],
+      "r": 1,
+      "x": "La Poétique d'Aristote est le premier grand traité de théorie littéraire de l'Antiquité. L'Art poétique est l'œuvre de Boileau (1674).",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un narrateur « omniscient » est un narrateur qui :",
+      "o": [
+        "Ne voit que l'extérieur",
+        "Participe à l'histoire",
+        "Change sans cesse de point de vue",
+        "Connaît les pensées de tous"
+      ],
+      "r": 3,
+      "x": "Le narrateur omniscient sait tout de ses personnages : on parle de focalisation zéro. Le narrateur qui participe à l'histoire est un narrateur personnage.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « focalisation interne » signifie que le récit adopte :",
+      "o": [
+        "Le point de vue de tous",
+        "Le point de vue d'un personnage",
+        "Un regard extérieur neutre",
+        "La troisième personne du pluriel"
+      ],
+      "r": 1,
+      "x": "En focalisation interne, le lecteur perçoit les événements à travers les pensées et les sensations d'un personnage. En focalisation zéro, le narrateur est omniscient.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « focalisation externe » signifie que le narrateur :",
+      "o": [
+        "Connaît toutes les pensées",
+        "Participe à l'action",
+        "Adopte le regard d'un personnage",
+        "Voit les actes sans les pensées"
+      ],
+      "r": 3,
+      "x": "En focalisation externe, le narrateur observe comme une caméra, sans accès à l'intériorité des personnages. Ce procédé crée un effet d'objectivité ou de mystère.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le « discours indirect libre » se caractérise par :",
+      "o": [
+        "L'absence de verbe introducteur",
+        "L'emploi des guillemets",
+        "Un verbe suivi de « que »",
+        "La citation exacte des paroles prononcées"
+      ],
+      "r": 0,
+      "x": "Les paroles ou pensées du personnage se fondent dans le récit, sans guillemets ni verbe introducteur, aux temps du narrateur. Exemple : « Il partait. La vie était trop injuste. ». Les choix B et D caractérisent le discours direct, et le choix C le discours indirect classique.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « prolepse » dans un récit est :",
+      "o": [
+        "Un retour en arrière",
+        "Une pause descriptive",
+        "Une anticipation",
+        "Une accélération"
+      ],
       "r": 2,
-      "x": "La \"Poétique\" d'Aristote est le premier traité systématique de théorie littéraire. Il définit la tragédie (imitation d'une action sérieuse), la comédie (imitation d'hommes inférieurs) et les règles de la mimèsis. Référence fondamentale des concours de licence de lettres."
+      "x": "La prolepse annonce un événement qui se produira plus tard dans l'histoire. Le retour en arrière s'appelle l'analepse.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "L'« analepse » dans un récit est :",
+      "o": [
+        "Une anticipation",
+        "Un retour en arrière",
+        "Une accélération",
+        "Une pause descriptive"
+      ],
+      "r": 1,
+      "x": "L'analepse correspond au retour en arrière (« flash-back »). Ces notions ont été définies par Gérard Genette dans Figures III (1972).",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "L'« incipit » désigne :",
+      "o": [
+        "La fin d'une œuvre",
+        "La dédicace",
+        "La quatrième de couverture",
+        "Le début d'une œuvre"
+      ],
+      "r": 3,
+      "x": "L'incipit, du latin « incipere » (commencer), installe le ton et le pacte de lecture. La fin d'une œuvre s'appelle l'excipit.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « nouvelle » se distingue du roman par :",
+      "o": [
+        "Sa forme versifiée",
+        "L'absence de héros",
+        "Sa brièveté",
+        "L'absence de dialogues"
+      ],
+      "r": 2,
+      "x": "La nouvelle est un récit court, concentré sur un événement ou une situation unique. Le roman développe une intrigue plus ample sur une durée plus longue.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "L'« épopée » est :",
+      "o": [
+        "Un long récit d'exploits héroïques",
+        "Un court poème amoureux",
+        "Un récit moral en prose",
+        "Un dialogue versifié entre deux bergers"
+      ],
+      "r": 0,
+      "x": "L'épopée (Iliade, Odyssée, Chanson de Roland) célèbre les hauts faits d'un héros et mêle souvent le merveilleux au réel. Elle contribue à forger une identité collective.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "L'« élégie » est un poème qui exprime :",
+      "o": [
+        "La joie d'une victoire",
+        "La satire des mœurs",
+        "L'éloge d'un grand homme",
+        "La plainte et la mélancolie"
+      ],
+      "r": 3,
+      "x": "L'élégie exprime le deuil, la plainte amoureuse ou la mélancolie. L'ode, au contraire, célèbre et exalte.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Un « pamphlet » est :",
+      "o": [
+        "Un texte d'éloge",
+        "Un court texte virulent",
+        "Un recueil pastoral",
+        "Un compte rendu officiel"
+      ],
+      "r": 1,
+      "x": "Le pamphlet attaque avec violence une personne, une institution ou une idée. Il est proche du libelle et de la diatribe.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Une « diatribe » est :",
+      "o": [
+        "Un plaidoyer",
+        "Un texte administratif",
+        "Une critique violente",
+        "Une plainte mélancolique"
+      ],
+      "r": 2,
+      "x": "La diatribe est un discours ou un écrit d'une grande violence contre une personne ou une idée. Elle est le contraire du panégyrique.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « rhétorique » est l'art de :",
+      "o": [
+        "Décoder les textes",
+        "Composer des poèmes",
+        "Analyser la grammaire",
+        "Persuader par le discours"
+      ],
+      "r": 3,
+      "x": "La rhétorique comprend la recherche des arguments (inventio), leur organisation (dispositio) et leur formulation (elocutio). Elle a été théorisée dès l'Antiquité par Aristote et Cicéron.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le « Romantisme » réagit contre les règles du :",
+      "o": [
+        "Naturalisme",
+        "Classicisme",
+        "Réalisme",
+        "Symbolisme"
+      ],
+      "r": 1,
+      "x": "Le Romantisme (Hugo, Lamartine, Musset) rejette les contraintes classiques comme les trois unités et la séparation des genres. Il revendique la liberté créatrice et l'expression du « moi ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le « Parnasse » se caractérise par :",
+      "o": [
+        "L'épanchement des émotions",
+        "L'engagement politique",
+        "La recherche de l'art pour l'art",
+        "La peinture du monde ouvrier"
+      ],
+      "r": 2,
+      "x": "Le Parnasse (Leconte de Lisle, Heredia, Gautier) réagit contre le lyrisme romantique et prône la perfection formelle et l'impersonnalité. Son mot d'ordre est « l'art pour l'art ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le « Naturalisme » de Zola se distingue du Réalisme par :",
+      "o": [
+        "La peinture de l'aristocratie",
+        "Le refus de toute enquête",
+        "L'usage exclusif du vers",
+        "Une méthode inspirée des sciences"
+      ],
+      "r": 3,
+      "x": "Zola veut étudier, comme un savant, l'influence de l'hérédité et du milieu sur les individus : c'est le « roman expérimental ». Le Réalisme de Balzac et Flaubert ne pousse pas aussi loin la démarche scientifique.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le « Symbolisme » privilégie :",
+      "o": [
+        "La description réaliste",
+        "L'engagement politique",
+        "La suggestion et les correspondances",
+        "Le récit historique précis et documenté"
+      ],
+      "r": 2,
+      "x": "Annoncé par les « Correspondances » de Baudelaire, le Symbolisme (Verlaine, Mallarmé) cherche à suggérer plutôt qu'à décrire. Les sensations, les couleurs et les idées s'y répondent.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le « Surréalisme » se caractérise par :",
+      "o": [
+        "L'exploration du rêve et de l'inconscient",
+        "La description du quotidien",
+        "L'application rigoureuse de la méthode scientifique",
+        "La célébration des traditions"
+      ],
+      "r": 0,
+      "x": "Fondé par André Breton, avec Aragon et Éluard, le Surréalisme libère l'écriture du contrôle de la raison. Il pratique notamment l'écriture automatique.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Le « vers libre » se définit par :",
+      "o": [
+        "L'absence de tout procédé poétique",
+        "La rime sans mètre fixe",
+        "L'abandon du mètre fixe et de la rime",
+        "L'emploi exclusif de l'alexandrin non rimé"
+      ],
+      "r": 2,
+      "x": "Apparu à la fin du XIXe siècle (avec Rimbaud, Laforgue puis Apollinaire), le vers libre rejette les règles classiques de la versification en s'affranchissant de la rime et de la longueur régulière des vers (mètre fixe). Il conserve toutefois un rythme propre basé sur les sonorités, les répétitions et la mise en page. Le choix D désigne le « vers blanc ».",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "La « polyphonie » dans un roman désigne :",
+      "o": [
+        "Un point de vue unique",
+        "La présence de plusieurs voix",
+        "La répétition d'un thème",
+        "L'alternance prose et vers"
+      ],
+      "r": 1,
+      "x": "La notion a été définie par le critique Mikhaïl Bakhtine à propos des romans de Dostoïevski. Plusieurs voix et points de vue y coexistent sans qu'aucun ne domine.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "L'« intertextualité » désigne :",
+      "o": [
+        "Les relations entre textes",
+        "La traduction d'un texte",
+        "Une querelle d'auteurs",
+        "L'étude d'une époque"
+      ],
+      "r": 0,
+      "x": "L'intertextualité recouvre les citations, allusions, parodies et pastiches qui relient un texte à d'autres. Le terme a été forgé par Julia Kristeva dans les années 1960.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "L'« exégèse » est :",
+      "o": [
+        "La composition d'un texte",
+        "La traduction d'un texte",
+        "L'interprétation approfondie d'un texte",
+        "La censure d'un texte jugé contraire aux mœurs"
+      ],
+      "r": 2,
+      "x": "L'exégèse, du grec « exêgeisthai » (expliquer), est l'étude critique d'un texte religieux, juridique ou littéraire. Celui qui la pratique s'appelle un exégète.",
+      "_batchId": "francais/2026-11-19/LOT2"
+    },
+    {
+      "q": "Dans « Un _______ danger menace la région », le mot correct est :",
+      "o": [
+        "imminent",
+        "éminent",
+        "immanent",
+        "prééminent"
+      ],
+      "r": 0,
+      "x": "« Imminent » qualifie ce qui va se produire très prochainement. « Éminent » signifie remarquable par sa valeur et « immanent » (terme philosophique) inhérent à une chose. Le nom « imminence » désigne la proximité d'un danger : l'imminence d'une attaque.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Cet _______ haut fonctionnaire a été décoré », le mot correct est :",
+      "o": [
+        "éminent",
+        "imminent",
+        "immanent",
+        "prééminent"
+      ],
+      "r": 0,
+      "x": "« Éminent » qualifie une personne qui se distingue par sa valeur ou son rang. « Imminent » s'applique à un événement sur le point d'arriver. On dit « une éminence » pour un personnage important, et « une éminence grise » pour un conseiller influent qui agit dans l'ombre.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Sa _______ sur l'issue du scrutin s'est révélée inexacte », le mot correct est :",
+      "o": [
+        "conjoncture",
+        "conjecture",
+        "concurrence",
+        "congruence"
+      ],
+      "r": 1,
+      "x": "Une conjecture est une supposition fondée sur des indices, non vérifiée. La conjoncture désigne la situation économique ou sociale d'un moment. On dit « se perdre en conjectures » pour multiplier les suppositions.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « La police a constaté une entrée par _______ », le mot correct est :",
+      "o": [
+        "infraction",
+        "effraction",
+        "abstraction",
+        "distraction"
+      ],
+      "r": 1,
+      "x": "L'effraction est le bris d'une serrure ou d'une clôture pour pénétrer dans un lieu. L'infraction est la violation d'une règle de droit. On parle aussi de « vol avec effraction », circonstance aggravante du vol.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Commettre une _______ au code de la route expose à une amende », le mot correct est :",
+      "o": [
+        "effraction",
+        "attraction",
+        "infraction",
+        "fraction"
+      ],
+      "r": 2,
+      "x": "L'infraction est la violation d'une loi ou d'un règlement. L'effraction désigne un bris matériel pour entrer quelque part. En droit pénal, les infractions sont classées en contraventions, délits et crimes.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « La _______ d'un médicament relève du médecin », le mot correct est :",
+      "o": [
+        "prescription",
+        "proscription",
+        "conscription",
+        "inscription"
+      ],
+      "r": 0,
+      "x": "La prescription est l'ordonnance du médecin ; en droit, c'est aussi le délai au-delà duquel un droit s'éteint. La proscription est une interdiction ou un bannissement. On dit d'une action en justice qu'elle est prescrite lorsque le délai pour l'exercer est écoulé.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « La _______ de ces pratiques dangereuses est désormais effective », le mot correct est :",
+      "o": [
+        "proscription",
+        "prescription",
+        "conscription",
+        "inscription"
+      ],
+      "r": 0,
+      "x": "Proscrire, c'est interdire formellement : la proscription est donc une interdiction. La conscription désigne l'appel des jeunes gens au service militaire. Le verbe « proscrire » se conjugue comme « écrire » : il proscrit, il a proscrit.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Les manifestants ont fait _______ dans la salle », le mot correct est :",
+      "o": [
+        "éruption",
+        "corruption",
+        "irruption",
+        "interruption"
+      ],
+      "r": 2,
+      "x": "Faire irruption, c'est entrer brusquement et souvent violemment dans un lieu. L'éruption désigne le jaillissement d'un volcan ou l'apparition de boutons sur la peau. On écrit « irruption » avec deux r et « éruption » avec un seul.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « La vipère est un animal _______ », le mot correct est :",
+      "o": [
+        "vénéneux",
+        "virulent",
+        "venimeux",
+        "véhément"
+      ],
+      "r": 2,
+      "x": "Est venimeux l'animal qui inocule un venin par morsure ou piqûre. Est vénéneux le champignon ou la plante toxique lorsqu'on l'ingère. Pour retenir : l'animal venimeux attaque, la plante vénéneuse se mange.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Ce champignon _______ peut être mortel », le mot correct est :",
+      "o": [
+        "venimeux",
+        "virulent",
+        "véhément",
+        "vénéneux"
+      ],
+      "r": 3,
+      "x": "Est vénéneux ce qui empoisonne quand on le mange : plante, champignon, baie. « Venimeux » s'applique aux animaux qui mordent ou piquent. On dit donc « un serpent venimeux », mais « une baie vénéneuse ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « L'administration cherche à _______ les créances impayées », le mot correct est :",
+      "o": [
+        "recouvrer",
+        "recouvrir",
+        "recourir",
+        "recueillir"
+      ],
+      "r": 0,
+      "x": "Recouvrer, c'est récupérer ce qu'on a perdu ou ce qui est dû : une créance, la santé, la liberté. Recouvrir, c'est couvrir de nouveau ou entièrement. Le nom « recouvrement » sert aux deux verbes : le recouvrement des impôts vient de « recouvrer ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Il faut _______ aux jeunes agents le sens du service public », le mot correct est :",
+      "o": [
+        "inculper",
+        "inculquer",
+        "inciter",
+        "invoquer"
+      ],
+      "r": 1,
+      "x": "Inculquer, c'est faire entrer durablement une idée dans l'esprit par l'enseignement. Inculper, c'est accuser officiellement quelqu'un d'une infraction. On inculque quelque chose à quelqu'un, mais on inculpe quelqu'un d'un délit.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Ces criminels ont _______ un attentat », le mot correct est :",
+      "o": [
+        "perpétué",
+        "perpétré",
+        "préservé",
+        "pérennisé"
+      ],
+      "r": 1,
+      "x": "Perpétrer, c'est commettre un acte criminel. Perpétuer, c'est faire durer, transmettre d'une génération à l'autre. Le nom correspondant est « perpétration » : la perpétration d'un crime.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Les chefs traditionnels ont su _______ leurs coutumes », le mot correct est :",
+      "o": [
+        "perpétrer",
+        "pervertir",
+        "perpétuer",
+        "permuter"
+      ],
+      "r": 2,
+      "x": "Perpétuer, c'est faire durer dans le temps, transmettre. Perpétrer ne s'emploie que pour un crime ou un délit. L'adjectif « perpétuel » appartient à la même famille : une rente perpétuelle.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Une _______ entre entreprises concurrentes fausse le marché », le mot correct est :",
+      "o": [
+        "collision",
+        "confusion",
+        "conclusion",
+        "collusion"
+      ],
+      "r": 3,
+      "x": "La collusion est une entente secrète et illicite entre des parties qui devraient s'opposer. La collision est un choc entre deux corps. On parle de collusion entre un agent public et une entreprise lors d'un marché truqué.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Le jury va _______ le premier prix au meilleur candidat », le mot correct est :",
+      "o": [
+        "décerner",
+        "discerner",
+        "désigner",
+        "dessiner"
+      ],
+      "r": 0,
+      "x": "Décerner, c'est attribuer officiellement un prix ou une distinction. Discerner, c'est distinguer par l'esprit. Dans la langue juridique, on dit aussi « décerner un mandat d'arrêt ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « L'expérience permet de _______ le vrai du faux », le mot correct est :",
+      "o": [
+        "décerner",
+        "désigner",
+        "dessiner",
+        "discerner"
+      ],
+      "r": 3,
+      "x": "Discerner, c'est percevoir une différence, distinguer avec finesse. Décerner, c'est remettre une récompense. Le nom « discernement » désigne la capacité de bien juger.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Cette action viole délibérément les règles morales : elle est _______ », le mot correct est :",
+      "o": [
+        "amorale",
+        "immorale",
+        "normale",
+        "marginale"
+      ],
+      "r": 1,
+      "x": "Est immoral ce qui s'oppose à la morale. Est amoral ce qui se situe en dehors de toute considération morale, sans la contester. Le préfixe « a- » est privatif (sans morale), alors que « im- » marque l'opposition (contre la morale).",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "« Proroger » un délai signifie :",
+      "o": [
+        "L'annuler",
+        "L'avancer",
+        "Le respecter",
+        "Le prolonger"
+      ],
+      "r": 3,
+      "x": "Proroger est le terme juridique pour prolonger la durée d'un délai, d'un mandat ou d'une session. Il ne faut pas le confondre avec « proscrire » ni avec « abroger ». On parle aussi de « la prorogation d'un mandat » pour sa prolongation.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Le tribunal a décidé de _______ sa décision », le mot signifiant « remettre à plus tard » est :",
+      "o": [
+        "déférer",
+        "différer",
+        "délibérer",
+        "déclarer"
+      ],
+      "r": 1,
+      "x": "Différer, c'est reporter à plus tard. Déférer, c'est soumettre une affaire à un tribunal ou obéir par respect à une autorité. Le participe présent « différant » vient de « différer », à ne pas confondre avec l'adjectif « différent ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Le comité chargé d'_______ les comptes a rendu ses conclusions », le mot correct est :",
+      "o": [
+        "épurer",
+        "apurer",
+        "explorer",
+        "ausculter"
+      ],
+      "r": 1,
+      "x": "Apurer un compte, c'est le vérifier et l'arrêter définitivement. Épurer, c'est débarrasser de ce qui est impur ou indésirable. Le nom correspondant est « apurement » : l'apurement des comptes publics.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Les termites ont commencé à _______ les archives », le mot correct est :",
+      "o": [
+        "infecter",
+        "infester",
+        "infirmer",
+        "intégrer"
+      ],
+      "r": 1,
+      "x": "Infester, c'est envahir en grand nombre de façon nuisible : des insectes infestent un lieu. Infecter, c'est contaminer par des microbes. Une plaie s'infecte, mais une région est infestée de moustiques.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « L'_______ d'une ère nouvelle a transformé la vie politique », le mot correct est :",
+      "o": [
+        "événement",
+        "achèvement",
+        "avènement",
+        "avancement"
+      ],
+      "r": 2,
+      "x": "L'avènement est l'arrivée au pouvoir ou le début d'une période nouvelle. L'événement est simplement un fait marquant. On parle de l'avènement d'un roi pour son accession au trône.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Chaque matin, il révisait ses notes », l'imparfait exprime :",
+      "o": [
+        "Une action unique",
+        "Une hypothèse",
+        "Une politesse",
+        "Une habitude passée"
+      ],
+      "r": 3,
+      "x": "L'imparfait d'habitude décrit une action répétée dans le passé. Il est souvent accompagné d'indicateurs comme « chaque », « toujours » ou « souvent ». L'imparfait sert aussi à décrire le décor d'un récit : il faisait chaud.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Je voulais vous demander un renseignement, Monsieur le Directeur », l'imparfait exprime :",
+      "o": [
+        "Une habitude passée",
+        "Une action antérieure",
+        "Une atténuation polie",
+        "Une hypothèse irréelle"
+      ],
+      "r": 2,
+      "x": "L'imparfait de politesse adoucit une demande qui porte en réalité sur le présent. Il joue le même rôle que le conditionnel « je voudrais ». Cette valeur convient aussi bien à l'oral qu'à un courrier poli.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « En 1984, la Haute-Volta devient le Burkina Faso », le présent exprime :",
+      "o": [
+        "Une vérité générale et permanente",
+        "Un fait passé rendu vivant",
+        "Une habitude",
+        "Un futur proche"
+      ],
+      "r": 1,
+      "x": "C'est le présent de narration, ou présent historique : il rapporte un fait passé comme s'il se déroulait sous nos yeux. Le changement de nom date du 4 août 1984. Le présent de narration rend le récit plus vivant, notamment dans les textes historiques.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « L'eau bout à cent degrés », le présent exprime :",
+      "o": [
+        "Une vérité générale",
+        "Un fait passé",
+        "Une action en cours",
+        "Un futur proche"
+      ],
+      "r": 0,
+      "x": "Le présent de vérité générale énonce un fait valable en tout temps. On l'emploie dans les définitions, les lois scientifiques et les proverbes. On l'appelle aussi présent gnomique dans les maximes et les proverbes.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Tu remettras ce rapport avant vendredi, sans faute », le futur exprime :",
+      "o": [
+        "Un ordre",
+        "Une probabilité",
+        "Une politesse",
+        "Une hypothèse"
+      ],
+      "r": 0,
+      "x": "Le futur peut remplacer l'impératif pour donner un ordre ferme. On le trouve dans les règlements et les consignes. Selon le contexte, il peut aussi exprimer une promesse ou une prédiction.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Le chef de l'État aurait signé le décret hier soir », le conditionnel exprime :",
+      "o": [
+        "Un reproche sur une action passée",
+        "Un souhait poli adressé à quelqu'un",
+        "Une information non confirmée",
+        "Une hypothèse irréelle dans le passé"
+      ],
+      "r": 2,
+      "x": "Le conditionnel journalistique rapporte un fait sans en garantir la véracité. Il est courant dans la presse pour signaler une information à confirmer. Dans un écrit officiel, cette valeur invite à la prudence : l'information reste à vérifier.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Tu aurais pu me prévenir ! », le conditionnel passé exprime :",
+      "o": [
+        "Une information douteuse",
+        "Une politesse",
+        "Un reproche",
+        "Un fait futur"
+      ],
+      "r": 2,
+      "x": "Le conditionnel passé de reproche indique ce qui aurait dû être fait et ne l'a pas été. Aucune subordonnée en « si » n'est exprimée. Le conditionnel passé exprime aussi le regret : j'aurais aimé venir.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Le lendemain, il quittait définitivement le village », l'imparfait exprime :",
+      "o": [
+        "Une habitude",
+        "Une description du décor de la scène",
+        "Un événement ponctuel mis en relief",
+        "Une politesse"
+      ],
+      "r": 2,
+      "x": "C'est l'imparfait narratif, ou de rupture : il présente un fait unique, généralement daté, comme un tableau. Il remplace le passé simple attendu pour produire un effet de style. Il est fréquent dans les récits journalistiques et les biographies.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Si vous partiez maintenant, vous arriveriez à temps », l'imparfait exprime :",
+      "o": [
+        "Une habitude passée",
+        "Une hypothèse sur le présent",
+        "Une action passée interrompue",
+        "Une action unique"
+      ],
+      "r": 1,
+      "x": "Après « si », l'imparfait n'a pas de valeur passée : il exprime une hypothèse portant sur le présent ou l'avenir. La principale se met alors au conditionnel présent. Après « si » de condition, on n'emploie jamais le conditionnel : « si vous partiriez » est fautif.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Dès qu'il eut remis son rapport, il quitta les lieux », le passé antérieur exprime :",
+      "o": [
+        "Une antériorité immédiate",
+        "Une habitude",
+        "Une hypothèse",
+        "Une action en cours de déroulement"
+      ],
+      "r": 0,
+      "x": "Le passé antérieur marque une action achevée juste avant une autre action au passé simple. On le trouve après « dès que », « quand », « lorsque » ou « à peine ». Il appartient à la langue écrite soutenue, car il accompagne le passé simple.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « L'agent _______ encore son rapport quand le directeur entra », la forme correcte est :",
+      "o": [
+        "rédigea",
+        "a rédigé",
+        "aura rédigé",
+        "rédigeait"
+      ],
+      "r": 3,
+      "x": "L'imparfait présente l'action en cours, en arrière-plan, sur laquelle survient un événement ponctuel au passé simple. C'est l'opposition classique entre imparfait et passé simple. Le passé simple « rédigea » présenterait l'action comme achevée, ce qui contredit « encore ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Il n'est pas arrivé ; il aura raté son vol », le futur antérieur exprime :",
+      "o": [
+        "Un ordre",
+        "Une certitude",
+        "Une antériorité future",
+        "Une supposition"
+      ],
+      "r": 3,
+      "x": "Le futur antérieur peut exprimer une hypothèse sur un fait déjà accompli : « il a probablement raté son vol ». C'est une valeur modale, non temporelle. Cette valeur se reconnaît au fait que l'action est déjà passée au moment où l'on parle.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Je vous informe que la réunion est reportée », le présent exprime :",
+      "o": [
+        "Une habitude",
+        "Un fait historique rendu vivant",
+        "Une vérité générale",
+        "Un acte accompli en le disant"
+      ],
+      "r": 3,
+      "x": "C'est le présent performatif : dire « je vous informe », c'est informer. Il est fréquent dans les formules administratives. On le retrouve dans « je vous remercie », « je déclare la séance ouverte » ou « je vous prie d'agréer ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Je souhaiterais solliciter votre avis », le conditionnel exprime :",
+      "o": [
+        "Une demande polie",
+        "Un souhait irréalisable",
+        "Une information douteuse",
+        "Un reproche"
+      ],
+      "r": 0,
+      "x": "Le conditionnel d'atténuation rend une demande moins directe et donc plus courtoise. Il est attendu dans la correspondance administrative. L'imparfait de politesse produit le même effet : je voulais solliciter votre avis.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Qu'il se présente immédiatement à mon bureau ! », le subjonctif exprime :",
+      "o": [
+        "Un ordre",
+        "Un doute",
+        "Une hypothèse",
+        "Une concession"
+      ],
+      "r": 0,
+      "x": "Dans une proposition indépendante introduite par « que », le subjonctif exprime un ordre ou un souhait. Il remplace l'impératif, qui n'existe pas à la 3e personne. On le trouve aussi dans les souhaits : que la paix soit avec vous.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Le président part en visite officielle demain », le présent exprime :",
+      "o": [
+        "Un futur proche",
+        "Une vérité générale",
+        "Un acte performatif",
+        "Une habitude"
+      ],
+      "r": 0,
+      "x": "Le présent peut désigner un fait futur proche et considéré comme certain. L'adverbe « demain » indique ici cette valeur. Le présent peut aussi désigner un passé récent : il sort à l'instant du bureau.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Si les agents avaient été formés, ils auraient fait moins d'erreurs », le plus-que-parfait exprime :",
+      "o": [
+        "Une habitude passée",
+        "Une hypothèse irréalisée",
+        "Une action interrompue",
+        "Un fait certain"
+      ],
+      "r": 1,
+      "x": "Après « si », le plus-que-parfait exprime l'irréel du passé : les agents n'ont pas été formés. La principale se met alors au conditionnel passé. Avec l'imparfait, on exprimerait l'irréel du présent : s'ils étaient formés, ils feraient moins d'erreurs.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Je viens de recevoir votre rapport », la tournure « venir de + infinitif » exprime :",
+      "o": [
+        "Un futur proche",
+        "Une habitude",
+        "Un passé récent",
+        "Un acte performatif"
+      ],
+      "r": 2,
+      "x": "« Venir de + infinitif » indique qu'une action vient tout juste de s'accomplir. Son pendant est « aller + infinitif », qui exprime le futur proche. Ces semi-auxiliaires se conjuguent à plusieurs temps : il venait de partir.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Il n'est pas au bureau ; il sera en réunion », le futur exprime :",
+      "o": [
+        "Un ordre",
+        "Une certitude",
+        "Une promesse",
+        "Une supposition"
+      ],
+      "r": 3,
+      "x": "Le futur de probabilité exprime une hypothèse sur un fait présent : « il est probablement en réunion ». Le futur antérieur joue le même rôle pour un fait passé. Cette valeur suppose un contexte qui exclut le sens futur, comme « il n'est pas au bureau ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Le règlement interdit les modifications tardives. Or, la demande a été déposée hors délai », « or » introduit :",
+      "o": [
+        "Une explication",
+        "Une conséquence",
+        "Une concession",
+        "Un fait nouveau"
+      ],
+      "r": 3,
+      "x": "« Or » introduit un élément nouveau qui relance ou oriente le raisonnement, souvent avant une conclusion. Il ne signifie ni « donc » ni « car ». Le syllogisme classique enchaîne une règle, un fait introduit par « or », puis une conclusion introduite par « donc ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Les ressources manquent ; partant, le projet est compromis », « partant » exprime :",
+      "o": [
+        "La conséquence",
+        "L'opposition",
+        "L'addition",
+        "La justification"
+      ],
+      "r": 0,
+      "x": "« Partant » est un synonyme soutenu de « par conséquent ». On le rencontre surtout dans les écrits juridiques et administratifs. Il ne faut pas le confondre avec le participe présent de « partir » : en partant.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « La loi a été promulguée ; dès lors, toute infraction sera sanctionnée », « dès lors » exprime :",
+      "o": [
+        "L'opposition",
+        "La conséquence",
+        "La justification",
+        "L'addition"
+      ],
+      "r": 1,
+      "x": "« Dès lors » signifie « à partir de ce moment » et « par voie de conséquence ». Il marque une conséquence qui prend effet immédiatement. Suivi de « que », « dès lors que » exprime une condition suffisante : dès lors qu'il signe, il est responsable.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Les délais sont serrés ; aussi le directeur a-t-il convoqué l'équipe », « aussi » exprime :",
+      "o": [
+        "La conséquence",
+        "L'addition",
+        "La concession",
+        "La restriction"
+      ],
+      "r": 0,
+      "x": "En tête de proposition, « aussi » signifie « c'est pourquoi » et entraîne l'inversion du sujet. Au sens de « également », il ne provoque pas d'inversion. Sans inversion, la phrase reste compréhensible mais relève d'un registre moins soigné.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « L'oral a été difficile ; en revanche, l'écrit s'est bien passé », « en revanche » exprime :",
+      "o": [
+        "Une cause",
+        "Une conséquence",
+        "Une opposition",
+        "Une addition"
+      ],
+      "r": 2,
+      "x": "« En revanche » oppose deux faits en compensant l'un par l'autre. « Par contre » a le même sens mais est déconseillé dans un écrit soutenu. L'Académie française déconseille « par contre », que de grands écrivains ont pourtant employé ; dans une copie, « en revanche » reste plus sûr.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Certes, le rapport est long, mais il est exhaustif », « certes » exprime :",
+      "o": [
+        "Une concession",
+        "Une réfutation",
+        "Une conséquence",
+        "Une addition"
+      ],
+      "r": 0,
+      "x": "« Certes » accorde un point à l'adversaire avant d'opposer un argument plus fort introduit par « mais ». Cette structure est très utile en dissertation. « Certes » peut aussi renforcer une affirmation : certes, il a raison.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "« Puisque » se distingue de « parce que » car il présente une cause :",
+      "o": [
+        "Connue de l'interlocuteur",
+        "Nouvelle pour l'interlocuteur",
+        "Hypothétique",
+        "Contraire à l'effet"
+      ],
+      "r": 0,
+      "x": "« Puisque » introduit une cause évidente ou déjà admise : « puisque vous refusez, nous saisissons le tribunal ». « Parce que » apporte une explication nouvelle. « Puisque » ne répond pas à la question « pourquoi », contrairement à « parce que ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Tous sont soumis à la règle ; a fortiori les responsables », « a fortiori » signifie :",
+      "o": [
+        "En sens contraire",
+        "Par exception",
+        "À plus forte raison",
+        "Sans conséquence"
+      ],
+      "r": 2,
+      "x": "« A fortiori » (latin) indique que ce qui est vrai dans un cas l'est encore plus dans un autre. Le raisonnement inverse s'exprime par « a contrario ». La locution s'écrit sans accent sur le a et en italique dans un texte imprimé.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Le règlement réserve la prime aux agents présents ; a contrario, les absents n'y ont pas droit », « a contrario » signifie :",
+      "o": [
+        "À plus forte raison",
+        "Par voie de simple conséquence",
+        "En d'autres termes",
+        "Par le raisonnement inverse"
+      ],
+      "r": 3,
+      "x": "« A contrario » tire une conclusion du cas opposé à celui qu'on vient d'énoncer. L'expression est fréquente dans le raisonnement juridique. Il ne faut pas le confondre avec « a fortiori », qui renforce au lieu d'inverser.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Le texte vise une catégorie précise de collectivités, en l'occurrence les communes rurales », « en l'occurrence » signifie :",
+      "o": [
+        "Par exception à la règle",
+        "En général",
+        "Dans le cas présent",
+        "Par conséquent"
+      ],
+      "r": 2,
+      "x": "« En l'occurrence » précise le cas particulier dont il s'agit. Il est proche de la locution juridique « en l'espèce ». On écrit « occurrence » avec deux c et deux r.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « La réforme améliore le budget. Par ailleurs, elle renforce le contrôle », « par ailleurs » exprime :",
+      "o": [
+        "Un ajout",
+        "Une conséquence",
+        "Une opposition",
+        "Une cause"
+      ],
+      "r": 0,
+      "x": "« Par ailleurs » ajoute un élément portant sur un autre aspect du sujet. Il est plus neutre que « de surcroît ». « De surcroît » et « en outre » ajoutent aussi un élément, avec plus d'insistance.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Le quorum n'est pas atteint ; de ce fait, la réunion est ajournée », « de ce fait » exprime :",
+      "o": [
+        "Un fait nouveau",
+        "La cause",
+        "La concession",
+        "La conséquence"
+      ],
+      "r": 3,
+      "x": "« De ce fait » signifie « par suite de cela » et introduit une conséquence directe. Il est proche de « par conséquent ». Il ne faut pas le confondre avec « du fait que », qui introduit une cause.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « La décision est prise ; toutefois, des recours restent possibles », « toutefois » exprime :",
+      "o": [
+        "Une conséquence",
+        "Une restriction",
+        "Une cause",
+        "Un ajout"
+      ],
+      "r": 1,
+      "x": "« Toutefois » nuance ou limite ce qui vient d'être affirmé, comme « cependant » ou « néanmoins ». Il appartient au registre soutenu. Il peut aussi se placer après le verbe : la décision reste toutefois susceptible de recours.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Il a agi non pas par intérêt, mais par conviction », la tournure exprime :",
+      "o": [
+        "Une gradation",
+        "Une rectification",
+        "Une concession",
+        "Une addition"
+      ],
+      "r": 1,
+      "x": "« Non pas… mais » écarte une interprétation pour lui en substituer une autre. Cette structure corrective est efficace dans l'argumentation. On peut aussi écrire plus simplement « non par intérêt, mais par conviction ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Le budget est insuffisant, d'où les difficultés de trésorerie », « d'où » exprime :",
+      "o": [
+        "La conséquence",
+        "La cause",
+        "L'opposition",
+        "La concession"
+      ],
+      "r": 0,
+      "x": "« D'où » introduit le résultat découlant du fait précédent, comme « c'est pourquoi ». Il est souvent suivi d'un simple groupe nominal. « D'où » peut aussi être suivi d'une proposition : d'où il résulte que le budget est déficitaire.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Le rapport est incomplet ; en effet, trois annexes manquent », « en effet » introduit :",
+      "o": [
+        "Une justification",
+        "Une conséquence",
+        "Une opposition",
+        "Une concession"
+      ],
+      "r": 0,
+      "x": "« En effet » apporte la preuve ou l'explication de ce qui précède. « Effectivement », lui, confirme ce qui vient d'être dit. En réponse, « en effet » peut aussi confirmer : vous avez raison, en effet.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Dès lors qu'il a signé le document, il peut déposer sa feuille », « dès lors que » exprime :",
+      "o": [
+        "Une opposition",
+        "Une concession",
+        "Une condition suffisante",
+        "Un moment précis et lointain"
+      ],
+      "r": 2,
+      "x": "« Dès lors que » signifie « du moment que » : la signature suffit à entraîner le dépôt de sa feuille . La locution est très courante dans les textes juridiques. Employé seul, « dès lors » exprime la conséquence : il a signé ; dès lors, il peut déposer sa feuille.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « À défaut d'un accord amiable, le tribunal sera saisi », « à défaut de » signifie :",
+      "o": [
+        "Grâce à",
+        "En considération de",
+        "En l'absence de",
+        "Malgré"
+      ],
+      "r": 2,
+      "x": "« À défaut de » introduit une solution de remplacement si la première fait défaut. Elle est fréquente dans les contrats et les règlements. On emploie aussi « à défaut » seul : demandez l'original ou, à défaut, une copie certifiée.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Cette décision est applicable sous réserve de validation ministérielle », « sous réserve de » exprime :",
+      "o": [
+        "Une cause",
+        "Une conséquence",
+        "Une opposition",
+        "Une condition"
+      ],
+      "r": 3,
+      "x": "« Sous réserve de » soumet l'application d'une décision à une condition. Tant que la validation n'est pas obtenue, la décision ne produit pas tous ses effets. On écrit aussi « sous réserve que » suivi du subjonctif : sous réserve que le ministre valide.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "La Négritude, née dans les années 1930, est un mouvement qui :",
+      "o": [
+        "Prône l'assimilation occidentale",
+        "Réclame l'indépendance armée",
+        "Revendique l'identité culturelle noire",
+        "Rejette la langue française"
+      ],
+      "r": 2,
+      "x": "La Négritude affirme la valeur des cultures et civilisations noires face à l'assimilation coloniale. C'est d'abord un mouvement culturel et littéraire, écrit en français.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Les trois fondateurs de la Négritude sont Senghor, Césaire et :",
+      "o": [
+        "Chinua Achebe",
+        "Birago Diop",
+        "Léon-Gontran Damas",
+        "Ahmadou Kourouma"
+      ],
+      "r": 2,
+      "x": "Léopold Sédar Senghor (Sénégal), Aimé Césaire (Martinique) et Léon-Gontran Damas (Guyane) se rencontrent à Paris dans les années 1930. Chinua Achebe est un romancier nigérian anglophone.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "« Cahier d'un retour au pays natal » (1939) est l'œuvre de :",
+      "o": [
+        "Léopold Sédar Senghor",
+        "Léon-Gontran Damas",
+        "Birago Diop",
+        "Aimé Césaire"
+      ],
+      "r": 3,
+      "x": "Ce long poème d'Aimé Césaire est considéré comme l'acte de naissance littéraire de la Négritude. Césaire y affirme avec force l'identité noire.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "La revue fondée à Paris en 1935 par Césaire, Senghor et Damas s'appelle :",
+      "o": [
+        "Présence africaine",
+        "L'Étudiant noir",
+        "Tropiques",
+        "Afrique nouvelle"
+      ],
+      "r": 1,
+      "x": "« L'Étudiant noir » est la revue fondatrice de la Négritude. « Tropiques » est fondée par Césaire en Martinique en 1941 et « Présence africaine » par Alioune Diop en 1947.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "« Pigments » (1937) et « Névralgies » sont deux recueils de :",
+      "o": [
+        "Aimé Césaire",
+        "Léon-Gontran Damas",
+        "Birago Diop",
+        "Léopold Sédar Senghor"
+      ],
+      "r": 1,
+      "x": "Léon-Gontran Damas, poète guyanais, est le troisième fondateur de la Négritude. « Pigments » est un recueil virulent contre la colonisation et l'assimilation.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Léopold Sédar Senghor est notamment associé au concept de :",
+      "o": [
+        "Civilisation de l'universel",
+        "Oraliture",
+        "Créolité",
+        "Roman expérimental naturaliste"
+      ],
+      "r": 0,
+      "x": "Senghor développe une Négritude humaniste, ouverte au dialogue des cultures : la « civilisation de l'universel ». « Chants d'ombre » (1945) et « Éthiopiques » (1956) comptent parmi ses recueils.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "« L'Aventure ambiguë » de Cheikh Hamidou Kane traite du :",
+      "o": [
+        "Combat armé anticolonial",
+        "Déchirement entre deux cultures",
+        "Désenchantement postcolonial",
+        "Amour impossible"
+      ],
+      "r": 1,
+      "x": "Ce roman (1961) suit Samba Diallo, jeune Peul partagé entre l'école coranique et l'école française. Il pose la question de l'aliénation culturelle.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'écriture d'Ahmadou Kourouma se distingue par :",
+      "o": [
+        "Un français strictement académique",
+        "L'absence de critique politique",
+        "L'emploi exclusif du vers",
+        "Un français marqué par le malinké"
+      ],
+      "r": 3,
+      "x": "Kourouma intègre au français des tournures, des images et des proverbes du malinké. Il inaugure ce procédé dans « Les Soleils des Indépendances » (1968).",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "« Les Soleils des Indépendances » d'Ahmadou Kourouma évoque :",
+      "o": [
+        "La gloire des indépendances",
+        "L'émigration en Europe",
+        "La résistance précoloniale",
+        "La désillusion postcoloniale"
+      ],
+      "r": 3,
+      "x": "Le roman raconte la déchéance de Fama, prince malinké incapable de trouver sa place dans l'Afrique indépendante. Il dénonce le parti unique et la trahison des espoirs nés des indépendances.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Les « Contes d'Amadou Koumba » de Birago Diop illustrent :",
+      "o": [
+        "La satire anticoloniale",
+        "Le désenchantement postcolonial",
+        "La valorisation de la tradition orale",
+        "La lutte pour l'indépendance"
+      ],
+      "r": 2,
+      "x": "Birago Diop transcrit les récits du griot de sa famille, Amadou Koumba. Il fait entrer la parole orale africaine dans la littérature écrite.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Bernard Dadié, écrivain ivoirien, est l'auteur de :",
+      "o": [
+        "« Les Soleils des Indépendances »",
+        "« L'Aventure ambiguë »",
+        "« Pigments » et « Névralgies »",
+        "« Climbié » et « Un nègre à Paris »"
+      ],
+      "r": 3,
+      "x": "« Climbié » (1956) est un roman autobiographique sur l'école coloniale et « Un nègre à Paris » (1959) une chronique satirique. Dadié fut aussi poète et dramaturge.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'œuvre de Mongo Beti se distingue par :",
+      "o": [
+        "L'éloge des traditions et des chefferies anciennes",
+        "Une critique du colonialisme et des missions",
+        "La poésie amoureuse et le chant de la nature",
+        "La transcription de contes"
+      ],
+      "r": 1,
+      "x": "Le Camerounais Mongo Beti dénonce la colonisation et l'action des missionnaires, notamment dans « Le Pauvre Christ de Bomba » (1956). Son œuvre est résolument engagée.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "« L'Étrange Destin de Wangrin » d'Amadou Hampâté Bâ raconte l'histoire :",
+      "o": [
+        "D'un griot du Sahel",
+        "D'un chef de guerre peul",
+        "D'un instituteur africain",
+        "D'un interprète colonial rusé"
+      ],
+      "r": 3,
+      "x": "Wangrin, interprète de l'administration coloniale, trompe à la fois les colons et les chefs traditionnels. Le récit (1973) mêle humour et observation fine de la société coloniale.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "« Les Bouts de bois de Dieu » de Sembène Ousmane relate :",
+      "o": [
+        "La vie des pêcheurs",
+        "La grève des cheminots du Dakar-Niger",
+        "Le combat des femmes pour le droit de vote",
+        "La résistance des griots"
+      ],
+      "r": 1,
+      "x": "Ce roman (1960) raconte la grève des cheminots de la ligne Dakar-Niger en 1947-1948. Il célèbre la lutte collective, notamment le rôle des femmes.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "« La Grève des bàttu » d'Aminata Sow Fall dénonce :",
+      "o": [
+        "L'exploitation minière",
+        "La condition des femmes dans le mariage",
+        "La corruption électorale",
+        "L'hypocrisie envers les mendiants"
+      ],
+      "r": 3,
+      "x": "Dans ce roman (1979), une ville chasse ses mendiants, puis découvre qu'elle en a besoin pour faire l'aumône exigée par la religion. Aminata Sow Fall y dénonce l'hypocrisie sociale.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "La revue « Présence africaine », fondée à Paris en 1947, est l'œuvre de :",
+      "o": [
+        "Alioune Diop",
+        "Aimé Césaire",
+        "Léopold Sédar Senghor",
+        "Léon-Gontran Damas"
+      ],
+      "r": 0,
+      "x": "Le Sénégalais Alioune Diop fonde la revue, puis la maison d'édition du même nom. Elle devient le principal lieu de diffusion des écrivains africains.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "« Les Damnés de la terre » (1961) de Frantz Fanon est :",
+      "o": [
+        "Un recueil de poèmes",
+        "Un roman sur l'exil",
+        "Un essai sur la décolonisation",
+        "Un manifeste de la Négritude"
+      ],
+      "r": 2,
+      "x": "Fanon y analyse la violence coloniale et les conditions de la libération des peuples colonisés. L'ouvrage, préfacé par Sartre, est un texte majeur de la pensée anticoloniale.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Le Congolais Sony Labou Tansi est connu pour :",
+      "o": [
+        "Un réalisme documentaire",
+        "La transcription de contes traditionnels",
+        "Un style baroque contre les dictatures",
+        "Des récits précoloniaux"
+      ],
+      "r": 2,
+      "x": "Sony Labou Tansi invente des régimes imaginaires et grotesques pour dénoncer les dictatures africaines. « La Vie et demie » (1979) est son roman le plus célèbre.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans la tradition ouest-africaine, le griot est avant tout :",
+      "o": [
+        "Le gardien de la mémoire",
+        "Le chef religieux du village",
+        "Le guérisseur du village",
+        "Le chef des chasseurs"
+      ],
+      "r": 0,
+      "x": "Le griot conserve et transmet par la parole les généalogies, les épopées et l'histoire des familles. C'est le griot Mamadou Kouyaté qui a transmis l'épopée de Soundjata.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Cheikh Anta Diop est connu pour sa thèse sur :",
+      "o": [
+        "L'origine africaine de l'Égypte ancienne",
+        "Les romans postcoloniaux",
+        "Le théâtre de résistance",
+        "La poésie engagée de la Négritude et de l'exil"
+      ],
+      "r": 0,
+      "x": "Dans « Nations nègres et culture » (1954), l'historien sénégalais soutient que les anciens Égyptiens étaient des Africains noirs. Son œuvre a profondément renouvelé l'histoire de l'Afrique.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Le mouvement de la « Créolité », associé à Patrick Chamoiseau, revendique :",
+      "o": [
+        "La pureté du français",
+        "Le métissage culturel antillais",
+        "Le retour à l'Afrique",
+        "L'héritage exclusif de Césaire"
+      ],
+      "r": 1,
+      "x": "La Créolité défend la langue créole et la diversité des héritages antillais. Son manifeste, « Éloge de la créolité » (1989), est signé par Bernabé, Chamoiseau et Confiant.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Werewere Liking est connue pour :",
+      "o": [
+        "Des romans policiers",
+        "Un théâtre rituel inspiré des traditions",
+        "Une poésie de la Négritude",
+        "Des contes transcrits de la bouche du griot"
+      ],
+      "r": 1,
+      "x": "Werewere Liking, artiste camerounaise installée en Côte d'Ivoire, a fondé à Abidjan le village Ki-Yi Mbock. Elle y développe un théâtre rituel inspiré des cérémonies traditionnelles.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Un thème majeur de la littérature africaine des années 1950-1960 est :",
+      "o": [
+        "L'aliénation culturelle",
+        "La nostalgie coloniale",
+        "Le rejet de l'oralité",
+        "L'éloge des nouveaux régimes"
+      ],
+      "r": 0,
+      "x": "Les écrivains de cette période interrogent le tiraillement entre tradition africaine et modernité occidentale. C'est le thème central de « L'Aventure ambiguë » de Cheikh Hamidou Kane.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "La romancière camerounaise Calixthe Beyala aborde surtout :",
+      "o": [
+        "L'histoire précoloniale",
+        "Les contes initiatiques",
+        "La condition des femmes africaines",
+        "La politique internationale et la diplomatie"
+      ],
+      "r": 2,
+      "x": "Calixthe Beyala explore la violence faite aux femmes, leur désir d'émancipation et la vie de la diaspora africaine en France. Elle a reçu le Grand prix du roman de l'Académie française en 1996.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Selon Amadou Hampâté Bâ, « En Afrique, quand un vieillard meurt, c'est… » :",
+      "o": [
+        "une page qui se tourne",
+        "une bibliothèque qui brûle",
+        "une tradition qui disparaît",
+        "un témoin qui s'efface"
+      ],
+      "r": 1,
+      "x": "Cette formule résume l'importance de la mémoire orale : les anciens détiennent un savoir irremplaçable. Hampâté Bâ en a fait un plaidoyer pour la collecte des traditions orales.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Une personne « loquace » est une personne qui :",
+      "o": [
+        "Parle beaucoup",
+        "Se tait toujours",
+        "Pèse ses mots",
+        "Évite les sujets"
+      ],
+      "r": 0,
+      "x": "Loquace vient du latin « loquax » (bavard). Son contraire est « taciturne » ; « prolixe », lui, s'applique à un discours trop long. Le nom correspondant est « loquacité ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Un « dilettante » est une personne qui :",
+      "o": [
+        "Maîtrise plusieurs disciplines",
+        "Refuse toute évaluation",
+        "Pratique une activité en amateur",
+        "Se spécialise à l'extrême"
+      ],
+      "r": 2,
+      "x": "Le dilettante s'adonne à une activité pour son plaisir, sans rigueur ni engagement. Le mot a souvent une nuance péjorative de légèreté. Le mot vient de l'italien « dilettare », qui signifie « divertir ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Une personne « inconséquente » est une personne qui :",
+      "o": [
+        "Tire les leçons de ses actes",
+        "Agit contre ses principes",
+        "Manque de courage",
+        "Refuse le dialogue"
+      ],
+      "r": 1,
+      "x": "Est inconséquent celui dont les actes ne s'accordent pas avec ses idées. Le mot qualifie aussi celui qui agit à la légère. Ne pas le confondre avec « inconsistant », qui signifie sans solidité.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Une mesure « coercitive » est une mesure qui :",
+      "o": [
+        "Contraint par la force",
+        "Propose des avantages",
+        "Laisse le libre choix",
+        "Est négociée"
+      ],
+      "r": 0,
+      "x": "Coercitif vient du latin « coercere » (contraindre). Les mesures coercitives imposent un comportement sous la menace d'une sanction. Le nom correspondant est « coercition ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "La « duplicité » désigne :",
+      "o": [
+        "La franchise",
+        "Le double jeu",
+        "La polyvalence",
+        "La répétition"
+      ],
+      "r": 1,
+      "x": "La duplicité est le caractère de celui qui trompe en affectant la bonne foi. Ses contraires sont la sincérité et la loyauté. Le mot vient du latin « duplex » (double).",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "La « désinvolture » désigne :",
+      "o": [
+        "Un soin excessif",
+        "Une grande discrétion",
+        "Une rigueur inhabituelle",
+        "Un manque de sérieux"
+      ],
+      "r": 3,
+      "x": "La désinvolture est une légèreté d'attitude qui peut aller jusqu'à l'impertinence. Traiter quelqu'un avec désinvolture, c'est lui manquer d'égards. L'adjectif correspondant est « désinvolte ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Une « injonction » est :",
+      "o": [
+        "Une demande polie",
+        "Un ordre formel",
+        "Une simple recommandation",
+        "Une sanction disciplinaire"
+      ],
+      "r": 1,
+      "x": "L'injonction est un commandement qui a valeur d'obligation. En droit, l'injonction de faire ou de ne pas faire peut être assortie de sanctions. Le verbe correspondant est « enjoindre » : enjoindre à quelqu'un de partir.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Un « moratoire » est :",
+      "o": [
+        "Un accord définitif",
+        "Une suspension temporaire",
+        "Une exécution forcée",
+        "Une amende de retard"
+      ],
+      "r": 1,
+      "x": "Moratoire vient du latin « morari » (retarder) : c'est un délai qui suspend une obligation, par exemple le paiement d'une dette. Le mot s'emploie aussi pour la suspension d'une activité. Employé comme adjectif, le mot qualifie ce qui est dû pour un retard : des intérêts moratoires.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Le « quorum » désigne :",
+      "o": [
+        "L'ordre du jour",
+        "Le nombre minimum de présents requis",
+        "La durée de la session",
+        "La liste officielle des membres présents"
+      ],
+      "r": 1,
+      "x": "Le quorum est le seuil de membres présents ou représentés nécessaire pour qu'une assemblée délibère valablement. S'il n'est pas atteint, la séance est reportée. On dit que le quorum est atteint lorsque ce seuil est réuni.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "La « récusation » est la procédure qui permet :",
+      "o": [
+        "D'écarter un juge suspect de partialité",
+        "De révoquer un agent pour faute grave",
+        "De refuser une promotion",
+        "De contester une loi devant le juge"
+      ],
+      "r": 0,
+      "x": "Une partie peut récuser un juge, un expert ou un arbitre lorsqu'elle craint qu'il ne soit pas impartial. C'est une garantie du procès équitable. Le verbe « récuser » signifie aussi refuser d'admettre : récuser un argument.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "La « turpitude » désigne :",
+      "o": [
+        "Une grande bassesse morale",
+        "Une excellence morale",
+        "Une timidité excessive",
+        "Une maladresse verbale"
+      ],
+      "r": 0,
+      "x": "Turpitude vient du latin « turpis » (honteux). Le mot désigne une conduite ignoble ou déshonorante. Le mot appartient au registre soutenu et a une forte valeur péjorative.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'« incurie » d'un responsable désigne :",
+      "o": [
+        "Son excès de zèle",
+        "Sa curiosité déplacée",
+        "Sa rigueur",
+        "Sa négligence grave"
+      ],
+      "r": 3,
+      "x": "L'incurie, du latin « incuria » (absence de soin), est un manque de soin coupable dans l'exercice d'une charge. Le terme est fort et suppose une faute sérieuse. On dénonce par exemple l'incurie d'une administration qui laisse se dégrader les biens publics.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "La « propédeutique » désigne :",
+      "o": [
+        "Un enseignement avancé",
+        "Un enseignement préparatoire",
+        "Une méthode pratique",
+        "Un diplôme de doctorat"
+      ],
+      "r": 1,
+      "x": "Propédeutique vient du grec « pro » (avant) et « paideuein » (instruire). C'est l'enseignement qui prépare à l'étude approfondie d'une discipline. Le mot peut être nom ou adjectif : un cours propédeutique.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "La « casuistique » est l'art de :",
+      "o": [
+        "Comparer des systèmes juridiques",
+        "Calculer des probabilités",
+        "Résoudre des cas particuliers",
+        "Réciter des textes"
+      ],
+      "r": 2,
+      "x": "La casuistique, du latin « casus » (cas), applique des principes généraux à des cas concrets. Le mot peut prendre un sens péjoratif de raisonnement trop subtil qui justifie tout. On dit « faire de la casuistique » pour critiquer des raisonnements trop subtils.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Un droit « imprescriptible » est un droit qui :",
+      "o": [
+        "S'éteint après un délai fixé par la loi",
+        "Ne s'éteint jamais avec le temps",
+        "Peut être cédé",
+        "Doit être renouvelé"
+      ],
+      "r": 1,
+      "x": "Est imprescriptible ce qui échappe à la prescription, c'est-à-dire à l'extinction par l'écoulement du temps. Les crimes contre l'humanité sont imprescriptibles. Il ne faut pas le confondre avec « inaliénable », qui qualifie ce qu'on ne peut céder.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'« impunité » désigne :",
+      "o": [
+        "Une totale liberté d'agir",
+        "Une remise de peine",
+        "Une interdiction d'exercer",
+        "L'absence de sanction"
+      ],
+      "r": 3,
+      "x": "Agir en toute impunité, c'est commettre des fautes sans en subir les conséquences. La lutte contre l'impunité est un enjeu central de la bonne gouvernance. L'adjectif correspondant est « impuni ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "La « carence » d'une autorité administrative désigne :",
+      "o": [
+        "Son inaction fautive",
+        "Son excès de zèle",
+        "Son abus de pouvoir",
+        "Son incompétence légale"
+      ],
+      "r": 0,
+      "x": "La carence est l'absence de ce qui était dû ou attendu. La carence de l'administration, c'est son abstention là où elle avait l'obligation d'agir. Au sens courant, la carence désigne aussi un manque : une carence en vitamines.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Les « subsides » désignent :",
+      "o": [
+        "Des aides financières",
+        "Des cotisations",
+        "Des pénalités financières",
+        "Des dettes"
+      ],
+      "r": 0,
+      "x": "Subsides vient du latin « subsidium » (secours) : ce sont des fonds versés par une autorité pour soutenir une personne ou un organisme. Le mot est proche de « subvention ». Le mot s'emploie surtout au pluriel : vivre de subsides.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "En droit, le « préjudice » désigne :",
+      "o": [
+        "Une faute volontaire",
+        "Un avantage indu obtenu par fraude",
+        "Un dommage ouvrant droit à réparation",
+        "Un recours administratif contre une décision"
+      ],
+      "r": 2,
+      "x": "Le préjudice est le dommage subi par une victime, qui peut obtenir réparation par des dommages-intérêts. Il peut être matériel, corporel ou moral. L'adjectif correspondant est « préjudiciable ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "En droit des contrats, la « lésion » désigne :",
+      "o": [
+        "Une erreur de procédure lors de la signature",
+        "Une blessure au travail",
+        "Une clause abusive dans le contrat",
+        "Un déséquilibre entre les prestations"
+      ],
+      "r": 3,
+      "x": "La lésion est le déséquilibre excessif entre ce que donne chaque partie à un contrat. Dans certains cas prévus par la loi, elle permet d'annuler ou de réviser le contrat. Au sens courant, une lésion désigne une blessure d'un tissu ou d'un organe.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "« Déférer à une demande » signifie :",
+      "o": [
+        "Y accéder",
+        "La rejeter",
+        "La reporter",
+        "La transmettre"
+      ],
+      "r": 0,
+      "x": "Déférer à une demande ou à un ordre, c'est s'y conformer par respect. « Déférer quelqu'un à la justice », en revanche, c'est le traduire devant un tribunal. Le verbe s'écrit avec deux accents aigus à l'infinitif : déférer, il défère.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "« Entériner » une décision signifie :",
+      "o": [
+        "La ratifier officiellement",
+        "La contester devant le juge",
+        "La suspendre",
+        "La transmettre à la hiérarchie"
+      ],
+      "r": 0,
+      "x": "Entériner, c'est donner une validité officielle et définitive à une décision ou à un usage. L'assemblée qui entérine une décision la rend définitive. Le mot vient de l'ancien français « enterin », qui signifie complet, entier.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "« Commuer » une peine signifie :",
+      "o": [
+        "L'aggraver",
+        "L'exécuter",
+        "La suspendre",
+        "L'adoucir"
+      ],
+      "r": 3,
+      "x": "La commutation de peine remplace une sanction par une autre moins sévère. Elle relève souvent du droit de grâce du chef de l'État. Il ne faut pas le confondre avec « commuter », qui signifie permuter ou basculer.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "« Rescinder » un contrat signifie :",
+      "o": [
+        "Le renouveler",
+        "Le modifier",
+        "L'annuler pour lésion ou vice",
+        "Le renégocier entre les parties"
+      ],
+      "r": 2,
+      "x": "Rescinder, du latin « rescindere » (couper), c'est annuler un contrat pour lésion ou vice. L'acte correspondant s'appelle la rescision. Le mot appartient au vocabulaire juridique et s'écrit avec « sc ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « _______ les agents en mission, tous doivent être présents », la forme correcte est :",
+      "o": [
+        "Exceptés",
+        "Exceptées",
+        "Exceptée",
+        "Excepté"
+      ],
+      "r": 3,
+      "x": "Placé devant le nom, « excepté » joue le rôle de préposition et reste invariable. Placé après le nom, il s'accorde : « les agents en mission exceptés ». Employé devant le nom, « excepté » a le sens de « sauf » : excepté les agents en mission.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « _______ les circonstances, une dérogation peut être accordée », la forme correcte est :",
+      "o": [
+        "Vue",
+        "Vus",
+        "Vu",
+        "Vues"
+      ],
+      "r": 2,
+      "x": "Placé devant le nom, « vu » signifie « étant donné » : c'est une préposition invariable. C'est aussi la formule qui introduit les visas d'un arrêté ou d'un décret. « Étant donné » suit la même règle, mais l'accord est aussi admis en tête de phrase : étant données les circonstances.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Les orages qu'il y a _______ cette nuit », la forme correcte est :",
+      "o": [
+        "eus",
+        "eue",
+        "eues",
+        "eu"
+      ],
+      "r": 3,
+      "x": "Le participe passé des verbes conjugués à la forme impersonnelle reste toujours invariable. Dans la tournure « il y a eu », le pronom « que » (remplaçant les orages) est considéré comme un faux complément d'objet direct ou une séquence impersonnelle, ce qui bloque tout accord avec le sujet apparent.Il en va de même pour « fait » dans « les chaleurs qu'il a fait ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Elles se sont _______ convaincre par leurs collègues », la forme correcte est :",
+      "o": [
+        "laissé",
+        "laissées",
+        "laissés",
+        "laissée"
+      ],
+      "r": 0,
+      "x": "Ce sont les collègues qui convainquent, non les personnes désignées par « elles » : « laissé » reste invariable. Depuis les rectifications de 1990, « laissé » suivi d'un infinitif est d'ailleurs toujours invariable. Avant 1990, on accordait « laissé » quand le sujet faisait l'action : elles se sont laissées tomber.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Les risques qu'il a _______ au cours de sa carrière », la forme correcte est :",
+      "o": [
+        "couru",
+        "courue",
+        "courus",
+        "courues"
+      ],
+      "r": 2,
+      "x": "« Courir des risques » est transitif : le COD « que », mis pour « les risques », est placé avant, d'où l'accord. Dans « les dix kilomètres qu'il a couru », le complément mesure une distance et le participe reste invariable. On applique la même analyse à « coûter », « valoir » et « peser ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Les épreuves qu'il a _______ en brousse l'ont forgé », la forme correcte est :",
+      "o": [
+        "vécues",
+        "vécu",
+        "vécus",
+        "vécue"
+      ],
+      "r": 0,
+      "x": "Employé au sens transitif (« traverser une expérience »), le verbe vivre s'accorde avec son COD « que » (les épreuves) placé avant l'auxiliaire avoir : vécues. En revanche, lorsqu'il indique une durée (« les dix ans qu'il a vécu »), le complément est circonstanciel et le participe passé reste invariable.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Les colis que l'agent a _______ dépassent la limite », la forme correcte est :",
+      "o": [
+        "pesé",
+        "pesés",
+        "pesées",
+        "pesée"
+      ],
+      "r": 1,
+      "x": "« Peser des colis » signifie en mesurer le poids : « que » est COD et le participe s'accorde au masculin pluriel. Dans « les soixante kilos qu'elle a pesé », il n'y a pas de COD et le participe reste invariable. Le même raisonnement vaut pour « mesurer » : les murs qu'il a mesurés, mais les deux mètres que le mur a mesuré.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Elles se sont _______ dès l'entrée du directeur », la forme correcte est :",
+      "o": [
+        "tues",
+        "tu",
+        "tue",
+        "tait"
+      ],
+      "r": 0,
+      "x": "Le participe passé de « taire » est « tu » ; dans « se taire », il s'accorde avec le sujet féminin pluriel. « Tait » est une forme du présent de l'indicatif. À l'inverse, « se plaire » et « se déplaire » restent invariables : elles se sont plu.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Elle s'est _______ à son nouveau poste », la forme correcte est :",
+      "o": [
+        "adapté",
+        "adaptée",
+        "adaptés",
+        "adaptées"
+      ],
+      "r": 1,
+      "x": "On dit « adapter quelqu'un ou quelque chose à » : le pronom « se » est COD et le participe s'accorde avec le sujet féminin singulier. « À son nouveau poste » est un complément indirect. On écrit de même « ils se sont adaptés aux nouvelles règles ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans la hiérarchie des normes, l'arrêté est :",
+      "o": [
+        "Supérieur au décret",
+        "Égal à la loi",
+        "Supérieur à la loi",
+        "Inférieur au décret"
+      ],
+      "r": 3,
+      "x": "Le décret est pris par le chef de l'État ou le Premier ministre ; l'arrêté par un ministre, un gouverneur ou un maire. L'arrêté doit donc respecter les décrets. Le décret, à son tour, doit respecter la loi.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Une « ordonnance » est un acte pris par le gouvernement :",
+      "o": [
+        "Dans le domaine judiciaire, sur décision du juge",
+        "Au niveau communal, par le maire",
+        "Sans aucune autorisation du Parlement",
+        "Dans le domaine de la loi, sur habilitation"
+      ],
+      "r": 3,
+      "x": "Le gouvernement peut, avec l'autorisation du Parlement, prendre des mesures qui relèvent normalement de la loi. Une fois ratifiée, l'ordonnance a valeur législative. Ne pas confondre avec l'ordonnance du juge ou celle du médecin, qui sont d'autres sens du mot.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Une « circulaire » est un texte par lequel une autorité :",
+      "o": [
+        "Sanctionne un agent pour faute",
+        "Nomme un fonctionnaire à un poste de direction",
+        "Donne des instructions à ses services",
+        "Juge un litige entre deux agents"
+      ],
+      "r": 2,
+      "x": "La circulaire, souvent ministérielle, explique aux services comment interpréter et appliquer les textes. La note de service règle des questions internes à un service. Une circulaire ne peut pas ajouter de règle nouvelle au texte qu'elle explique.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Le document qui constate officiellement des faits et a valeur probante est :",
+      "o": [
+        "Le compte rendu",
+        "La note de synthèse",
+        "Le procès-verbal",
+        "Le rapport d'activité"
+      ],
+      "r": 2,
+      "x": "Le procès-verbal établit officiellement un fait ou le déroulement d'une séance et peut servir de preuve. Le compte rendu est un document de travail plus souple. Les procès-verbaux dressés par certains agents font foi jusqu'à preuve contraire.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "La « suscription » d'une lettre administrative désigne :",
+      "o": [
+        "La formule de politesse placée à la fin de la lettre",
+        "La signature et le cachet",
+        "L'indication de l'expéditeur et du destinataire",
+        "L'objet et les références"
+      ],
+      "r": 2,
+      "x": "La suscription indique qui écrit à qui : « Le Directeur général des impôts à Monsieur le Gouverneur de la région du Centre ». C'est une mention propre à la lettre administrative. Elle se place en haut de la lettre, avant l'objet et les références.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans une lettre au Directeur général, la formule d'appel correcte est :",
+      "o": [
+        "Cher Directeur général,",
+        "Monsieur le Directeur général,",
+        "Monsieur le Directeur,",
+        "Cher Monsieur le Directeur général,"
+      ],
+      "r": 1,
+      "x": "La formule d'appel reprend le titre exact et complet du destinataire. « Cher Directeur général » est trop familier pour une lettre officielle. On reprend ce titre dans la formule finale : veuillez agréer, Monsieur le Directeur général, l'expression de ma haute considération.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'« ampliation » d'un acte administratif est :",
+      "o": [
+        "Une copie certifiée conforme",
+        "L'original signé",
+        "Un résumé de l'acte",
+        "Une annexe technique jointe à l'acte"
+      ],
+      "r": 0,
+      "x": "L'ampliation est la copie officielle d'un acte adressée aux services concernés pour exécution. La liste des destinataires figure sous la mention « Ampliation ». La mention « Pour ampliation » précède la signature de l'agent qui certifie la copie.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans une lettre administrative, l'abréviation « N/Réf. » signifie :",
+      "o": [
+        "Numéro de référence",
+        "Nouvelle référence",
+        "Notre référence",
+        "Note de référence"
+      ],
+      "r": 2,
+      "x": "« N/Réf. » rappelle le numéro d'enregistrement de notre courrier. « V/Réf. » renvoie à la référence de la lettre de notre correspondant. Ces références facilitent le classement et le suivi des échanges.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans une lettre administrative, l'abréviation « S/C » signifie :",
+      "o": [
+        "Service central",
+        "Sans commentaire",
+        "Sous couvert",
+        "Sous contrôle"
+      ],
+      "r": 2,
+      "x": "« S/C » indique que la lettre passe par l'autorité hiérarchique intermédiaire avant d'atteindre son destinataire. Exemple : « S/C de Monsieur le Directeur régional ». Ne pas confondre avec « P/O » (par ordre), qui indique qu'un agent signe pour son supérieur.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans un arrêté ou un décret, la mention « Vu » sert à :",
+      "o": [
+        "Désigner le rédacteur",
+        "Attester une relecture",
+        "Constater un fait matériel sur le terrain",
+        "Citer les textes qui fondent l'acte"
+      ],
+      "r": 3,
+      "x": "Les visas (« Vu la Constitution, vu la loi n°… ») énumèrent les textes qui fondent la compétence de l'autorité. Ils précèdent le dispositif de l'acte. Après les visas viennent le mot « Arrête » ou « Décrète », puis les articles.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans une décision de justice, la mention « Attendu que » introduit :",
+      "o": [
+        "Le dispositif final",
+        "La liste des parties",
+        "La date de l'audience",
+        "Les motifs de la décision"
+      ],
+      "r": 3,
+      "x": "Chaque « attendu que » expose un élément du raisonnement qui justifie la décision. Le dispositif, introduit par « Par ces motifs », vient ensuite. Seul le dispositif tranche le litige et s'impose aux parties.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans une note de service, l'objet est placé :",
+      "o": [
+        "En bas, près de la signature",
+        "En tête, avant le corps du texte",
+        "Après la formule finale",
+        "En annexe, après la signature du chef"
+      ],
+      "r": 1,
+      "x": "L'objet résume en quelques mots la question traitée et figure en tête, après les références. Il facilite le classement et le traitement du document. L'objet se rédige sous la forme d'un groupe nominal court : « Objet : congés annuels ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "La mention « Pour le Ministre et par délégation » signifie que :",
+      "o": [
+        "Le ministre refuse de signer",
+        "L'acte attend son approbation",
+        "Le ministre est remplacé par un intérimaire",
+        "Un subordonné signe au nom du ministre"
+      ],
+      "r": 3,
+      "x": "La délégation de signature autorise un agent à signer au nom du ministre, dans les limites fixées par un texte. Le ministre reste juridiquement l'auteur de l'acte. Elle se distingue de la délégation de pouvoir, qui transfère la compétence elle-même.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "La formule « En foi de quoi » dans un acte officiel sert à :",
+      "o": [
+        "Réserver une validation",
+        "Rappeler les instructions",
+        "Citer les textes applicables",
+        "Attester l'authenticité de l'acte"
+      ],
+      "r": 3,
+      "x": "« En foi de quoi » précède la signature et la date pour certifier ce qui précède. On rencontre aussi « En témoignage de quoi », souvent suivi de « pour servir et valoir ce que de droit ». La formule appartient au style des attestations et des certificats.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans une procédure contentieuse, le « mémoire » est :",
+      "o": [
+        "Le compte rendu d'une réunion",
+        "L'exposé écrit des arguments d'une partie",
+        "Une note de synthèse interne",
+        "Un rapport d'activité annuel rédigé par le service"
+      ],
+      "r": 1,
+      "x": "Le mémoire présente les moyens et arguments d'une partie : mémoire en défense, mémoire en réplique. Il ne faut pas le confondre avec le rapport ni avec le compte rendu. Au masculin, « un mémoire » est aussi un travail universitaire ; au féminin, « la mémoire » est la faculté de se souvenir.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans la hiérarchie des normes, l'acte supérieur au décret est :",
+      "o": [
+        "L'arrêté ministériel",
+        "La loi organique",
+        "La circulaire",
+        "La note de service"
+      ],
+      "r": 1,
+      "x": "L'ordre est le suivant : Constitution, traités et accords internationaux, lois organiques, lois ordinaires, décrets, arrêtés. Les circulaires et notes de service sont des actes d'organisation interne. Chaque norme doit respecter celles qui lui sont supérieures.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "La mention « Fait à… le… » dans un acte officiel indique :",
+      "o": [
+        "La date d'entrée en vigueur",
+        "La date de publication",
+        "La date d'expiration",
+        "Le lieu et la date de signature"
+      ],
+      "r": 3,
+      "x": "« Fait à Ouagadougou, le… » précise où et quand l'acte a été signé. Cette date peut différer de celle de la publication ou de l'entrée en vigueur. La formule se place à la fin de l'acte, juste avant la signature.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte du verbe signifiant « donner son accord » est :",
+      "o": [
+        "acquiescer",
+        "acquièscer",
+        "aquiescer",
+        "acquiesser"
+      ],
+      "r": 0,
+      "x": "« Acquiescer » s'écrit avec « cqu », puis « i » et « e » sans accent, et « sc ». On conjugue : j'acquiesce, nous acquiesçons. Le verbe se construit avec « à » : acquiescer à une demande.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte du mot désignant une division administrative est :",
+      "o": [
+        "circonscrition",
+        "circonsription",
+        "circonscription",
+        "circonscripsion"
+      ],
+      "r": 2,
+      "x": "« Circonscription » vient du latin « circumscribere » (tracer autour). Il garde le « p » de « scription », comme « inscription » et « prescription ». La circonscription électorale est le territoire dans lequel on élit un ou plusieurs représentants.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte du mot désignant une ingérence est :",
+      "o": [
+        "immixion",
+        "immission",
+        "immixtion",
+        "immiction"
+      ],
+      "r": 2,
+      "x": "« Immixtion » s'écrit avec « xt » ; on dit « s'immiscer dans les affaires d'autrui ». « Immission » est un autre mot. Le mot se prononce « i-mik-sion ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte de l'adjectif signifiant « simultané » est :",
+      "o": [
+        "concommitant",
+        "concomittant",
+        "concomitant",
+        "concomitent"
+      ],
+      "r": 2,
+      "x": "« Concomitant » s'écrit avec un seul « m » au milieu et un seul « t ». L'adverbe correspondant est « concomitamment ». Le nom correspondant est « concomitance ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte de l'adjectif signifiant « empreint de gravité » est :",
+      "o": [
+        "solemnel",
+        "sollennel",
+        "solenel",
+        "solennel"
+      ],
+      "r": 3,
+      "x": "« Solennel » s'écrit avec un seul « l » au début et deux « n ». Il se prononce « so-la-nel ». On écrit de même « solennité », avec deux n.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte du mot signifiant « mauvais fonctionnement » est :",
+      "o": [
+        "dysfontionnement",
+        "dysfonctionnement",
+        "dysfonctionement",
+        "disfontionnement"
+      ],
+      "r": 1,
+      "x": "Le préfixe grec « dys- » signifie « mal » et s'écrit avec un « y » ; « fonctionnement » prend deux « n ». On écrit de même « dyslexie ». Ne pas confondre « dys- » (mal) avec « dis- » (séparation) : disjoindre, dissocier.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte du mot désignant une personne relevant d'un État est :",
+      "o": [
+        "ressortissant",
+        "résortissant",
+        "resortissant",
+        "ressortisant"
+      ],
+      "r": 0,
+      "x": "« Ressortissant » vient de « ressortir à » (relever de) et s'écrit avec deux fois « ss ». On parle des ressortissants burkinabè vivant à l'étranger. Au sens de « relever de », « ressortir » se conjugue comme « finir » : cette affaire ressortit au tribunal.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte de l'adjectif signifiant « qui ne peut être réfuté » est :",
+      "o": [
+        "iréfutable",
+        "irréfutable",
+        "irréffutable",
+        "irréfuttable"
+      ],
+      "r": 1,
+      "x": "Le préfixe « in- » devient « ir- » devant un « r », d'où les deux « r ». « Réfutable » ne prend qu'un « f » et un « t ». On écrit de même « irrégulier », « irresponsable » et « irréversible ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "Dans « Le _______ entre les deux parties a été soumis à l'arbitrage », l'orthographe correcte est :",
+      "o": [
+        "différent",
+        "différend",
+        "différant",
+        "différand"
+      ],
+      "r": 1,
+      "x": "Le nom « différend » (désaccord, litige) s'écrit avec un « d ». « Différent » est l'adjectif et « différant » le participe présent de « différer ». On dit « régler un différend » entre deux parties.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte de l'adjectif est :",
+      "o": [
+        "paralèle",
+        "parrallèle",
+        "parallelle",
+        "parallèle"
+      ],
+      "r": 3,
+      "x": "« Parallèle » s'écrit avec un seul « r », deux « l » au milieu, un accent grave, puis un seul « l ». On écrit de même « parallélisme ». Moyen mnémotechnique : les deux « l » du milieu sont parallèles.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte du mot désignant une demande d'explication officielle est :",
+      "o": [
+        "interpelation",
+        "interpélation",
+        "interpellation",
+        "intrepellation"
+      ],
+      "r": 2,
+      "x": "« Interpellation » s'écrit avec deux « l », comme « appellation ». Le verbe s'écrit « interpeller » ou, selon les rectifications de 1990, « interpeler ». En orthographe traditionnelle, le verbe garde deux l dans toute sa conjugaison : j'interpelle, nous interpellons.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte de l'adjectif signifiant « qui ne peut être nié » est :",
+      "o": [
+        "indéniable",
+        "indeniable",
+        "indenniable",
+        "indénniable"
+      ],
+      "r": 0,
+      "x": "« Indéniable » prend un accent aigu et un seul « n » après le « é ». Il vient de « nier », précédé de « in- » et « dé- ». L'adverbe correspondant est « indéniablement ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte du mot désignant un soutien officiel est :",
+      "o": [
+        "parrainage",
+        "parainage",
+        "parrainnage",
+        "parainnage"
+      ],
+      "r": 0,
+      "x": "« Parrainage » prend deux « r », comme « parrain ». Il se termine par le suffixe « -age ». On écrit de même « parrainer » et « marraine », avec deux r.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte de l'adjectif signifiant « qui travaille avec soin » est :",
+      "o": [
+        "conscientieux",
+        "consciensieux",
+        "concientieux",
+        "consciencieux"
+      ],
+      "r": 3,
+      "x": "« Consciencieux » se forme sur « conscience », d'où « -cieux ». « Conscientieux » est une faute due à l'influence de « conscient ». On écrit en revanche « consciemment », car l'adverbe se forme sur « conscient ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte du mot désignant les absences répétées au travail est :",
+      "o": [
+        "absantéisme",
+        "absentéïsme",
+        "absentéisme",
+        "absenteisme"
+      ],
+      "r": 2,
+      "x": "« Absentéisme » s'écrit avec « en », comme « absent », et un accent aigu sur le « e » de « -éisme ». Il ne prend pas de tréma. On écrit de même « absent » et « absence », avec « en ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte de l'adjectif signifiant « qui cause un tort » est :",
+      "o": [
+        "préjudicable",
+        "préjudisciable",
+        "préjudiciabble",
+        "préjudiciable"
+      ],
+      "r": 3,
+      "x": "« Préjudiciable » se forme sur « préjudice », dont il garde le « ci ». Une décision préjudiciable cause un tort à quelqu'un. Une mesure préjudiciable aux usagers leur cause un dommage.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte du verbe signifiant « accorder une aide financière » est :",
+      "o": [
+        "subventioner",
+        "subventionner",
+        "subvantionner",
+        "subvantioner"
+      ],
+      "r": 1,
+      "x": "« Subventionner » prend deux « n », comme « mentionner » et « sélectionner ». Il se forme sur « subvention », écrit avec « en ». Les verbes en -tionner prennent presque toujours deux n : fonctionner, actionner.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte du mot désignant l'aptitude légale d'une autorité est :",
+      "o": [
+        "compétance",
+        "compétense",
+        "compétence",
+        "compétanse"
+      ],
+      "r": 2,
+      "x": "« Compétence » s'écrit avec « -ence », comme « compétent ». On écrit de même « évident, évidence » et « présent, présence ». En droit administratif, l'incompétence de l'auteur d'un acte est un motif d'annulation.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte de l'adjectif signifiant « qu'on ne peut démêler » est :",
+      "o": [
+        "inextiquable",
+        "inéxtricable",
+        "inextricable",
+        "inestricable"
+      ],
+      "r": 2,
+      "x": "« Inextricable » vient du latin « extricare » (démêler). Il ne prend pas d'accent sur le premier « e ». Le mot se prononce « i-nek-stri-kable ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte du mot désignant la résolution d'une intrigue est :",
+      "o": [
+        "dénoument",
+        "dénouament",
+        "dénouement",
+        "dénouemant"
+      ],
+      "r": 2,
+      "x": "« Dénouement » vient de « dénouer » et garde le « e » muet. Il ne faut pas le confondre avec « dénuement », qui désigne l'extrême pauvreté. On écrit de même « dévouement » et « remerciement », avec le e de leur verbe.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte du mot désignant les replis du cerveau est :",
+      "o": [
+        "circumvolution",
+        "circonvollution",
+        "circonvolusion",
+        "circonvolution"
+      ],
+      "r": 3,
+      "x": "« Circonvolution » s'écrit avec « circon- », comme « circonscription » et « circonstance ». Il désigne un enroulement ou les replis du cerveau. Le préfixe « circon- » vient du latin « circum », autour.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte de l'adjectif signifiant « qui ne peut faillir » est :",
+      "o": [
+        "indéféctible",
+        "indéfectile",
+        "indeféctible",
+        "indéfectible"
+      ],
+      "r": 3,
+      "x": "« Indéfectible » ne prend qu'un accent, sur le premier « é ». On parle d'une amitié ou d'un soutien indéfectible. Le mot est formé de « défectible » (qui peut faire défaut) et du préfixe privatif « in- ».",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "L'orthographe correcte du mot désignant la transmission des caractères des parents aux enfants est :",
+      "o": [
+        "heredité",
+        "hérédité",
+        "héréditté",
+        "hérrédité"
+      ],
+      "r": 1,
+      "x": "« Hérédité » prend trois accents aigus et un seul « t ». On écrit de même « héréditaire » et « héritier ». En biologie, l'hérédité est étudiée par la génétique.",
+      "_batchId": "francais/2026-11-19/LOT3"
+    },
+    {
+      "q": "En orthographe traditionnelle, le nombre 80 s'écrit :",
+      "o": [
+        "quatre-vingt",
+        "quatres-vingts",
+        "quatre vingts",
+        "quatre-vingts"
+      ],
+      "r": 3,
+      "x": "« Vingt » prend un s lorsqu'il est multiplié (quatre fois vingt) et qu'il termine le nombre : quatre-vingts, mais quatre-vingt-cinq. Il reste invariable quand il indique un rang : la page quatre-vingt, l'an mil neuf cent quatre-vingt. Devant « million » ou « milliard », qui sont des noms, il garde son s : quatre-vingts millions.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "En orthographe traditionnelle, le nombre 85 s'écrit :",
+      "o": [
+        "quatre-vingt-cinq",
+        "quatre-vingts-cinq",
+        "quatre-vingts cinq",
+        "quatre vingt cinq"
+      ],
+      "r": 0,
+      "x": "Suivi d'un autre nombre, « vingt » perd son s : quatre-vingt-cinq. Il ne garde le s que s'il termine le nombre, comme dans « quatre-vingts ». Il en va de même pour « cent » : deux cents, mais deux cent cinq.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "En orthographe traditionnelle, le nombre 81 s'écrit :",
+      "o": [
+        "quatre-vingts-un",
+        "quatre-vingt-un",
+        "quatre-vingt et un",
+        "quatre-vingts et un"
+      ],
+      "r": 1,
+      "x": "On n'emploie pas « et » après « quatre-vingt » : quatre-vingt-un, quatre-vingt-onze. « Et » ne s'emploie que dans vingt et un, trente et un… jusqu'à soixante et onze. La même règle vaut pour « cent un » et « mille un », qui s'écrivent sans « et ».",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "En orthographe traditionnelle, le nombre 71 s'écrit :",
+      "o": [
+        "soixante-onze",
+        "soixante et onze",
+        "soixante-dix-un",
+        "soixante-dix et un"
+      ],
+      "r": 1,
+      "x": "La tradition écrit « soixante et onze », sans trait d'union, avec « et ». Les rectifications de 1990 admettent aussi « soixante-et-onze ». Seuls les nombres en « et un » (de vingt et un à soixante et un) et « soixante et onze » s'écrivent avec « et ».",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "En orthographe traditionnelle, le nombre 99 s'écrit :",
+      "o": [
+        "quatre-vingts-dix-neuf",
+        "quatre-vingt-dix-neuf",
+        "quatre-vingt-dix neuf",
+        "quatre-vingts dix-neuf"
+      ],
+      "r": 1,
+      "x": "« Vingt » est suivi de « dix-neuf » : il ne prend donc pas de s. Les éléments inférieurs à cent sont reliés par des traits d'union. En Belgique et en Suisse, on dit « nonante-neuf », forme correcte mais régionale.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "En orthographe traditionnelle, dans « _______ agents ont été recrutés » (200), la forme correcte est :",
+      "o": [
+        "Deux cent",
+        "Deux cents",
+        "Deux-cent",
+        "Deux-cents"
+      ],
+      "r": 1,
+      "x": "« Cent » prend un s lorsqu'il est multiplié et qu'il termine le nombre : deux cents agents. Suivi d'un autre nombre, il reste invariable : deux cent cinquante. Il reste aussi invariable quand il indique un rang : la page deux cent.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "En orthographe traditionnelle, le nombre 250 s'écrit :",
+      "o": [
+        "deux cent cinquante",
+        "deux cents cinquante",
+        "deux-cents cinquante",
+        "deux cents-cinquante"
+      ],
+      "r": 0,
+      "x": "« Cent » perd son s lorsqu'il est suivi d'un autre nombre. On écrit donc « deux cent cinquante », mais « deux cents » tout court. Les rectifications de 1990 admettent aussi « deux-cent-cinquante », avec des traits d'union entre tous les éléments.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "En orthographe traditionnelle, le nombre 180 s'écrit :",
+      "o": [
+        "cent quatre-vingt",
+        "cents quatre-vingts",
+        "cents quatre-vingt",
+        "cent quatre-vingts"
+      ],
+      "r": 3,
+      "x": "« Cent » n'est pas multiplié ici et reste invariable. « Quatre-vingts » termine le nombre et garde donc son s. Il faut donc distinguer « cent quatre-vingts » (180) de « deux cents » (200), où « cent » est multiplié.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "En orthographe traditionnelle, le nombre 1 200 s'écrit :",
+      "o": [
+        "mille deux cent",
+        "milles deux cents",
+        "milles deux cent",
+        "mille deux cents"
+      ],
+      "r": 3,
+      "x": "L'adjectif numéral « mille » est toujours invariable, et « deux cents » prend un s car il termine le nombre. Il ne faut pas le confondre avec le nom « mille », unité de distance, qui s'accorde : des milles marins. Dans les dates, on peut aussi écrire « mil » : l'an mil neuf cent soixante.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "En orthographe traditionnelle, le nombre 300 000 s'écrit :",
+      "o": [
+        "trois cent mille",
+        "trois cents mille",
+        "trois cents milles",
+        "trois cent milles"
+      ],
+      "r": 0,
+      "x": "« Cent » est suivi de « mille », qui est un adjectif numéral : il perd donc son s. « Mille » reste lui-même invariable. Devant « millier », « million » ou « milliard », qui sont des noms, « cent » garderait son s : trois cents millions.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "En orthographe traditionnelle, 1 500 000 FCFA s'écrit :",
+      "o": [
+        "un million cinq cents mille francs",
+        "un millions cinq cent mille francs",
+        "un million cinq cent mille francs",
+        "un million cinq cent milles francs"
+      ],
+      "r": 2,
+      "x": "« Cent » est suivi de « mille » et reste donc invariable. « Million » est un nom : il s'accorde seulement au pluriel (deux millions). Cette règle est essentielle pour écrire un montant en lettres sur un chèque ou une facture.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "En orthographe traditionnelle, 1 280 000 FCFA s'écrit :",
+      "o": [
+        "un million deux cents quatre-vingts mille francs",
+        "un million deux cent quatre-vingts mille francs",
+        "un million deux cent quatre-vingt mille francs",
+        "un million deux cents quatre-vingt mille francs"
+      ],
+      "r": 2,
+      "x": "« Cent » et « vingt » sont suivis d'un autre adjectif numéral (« quatre-vingt », puis « mille ») : ils restent invariables. C'est un piège fréquent dans la rédaction des montants. Pour éviter l'erreur, on découpe le nombre : un million / deux cent quatre-vingt mille.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "En orthographe traditionnelle, 80 000 000 s'écrit :",
+      "o": [
+        "quatre-vingt millions",
+        "quatre-vingts million",
+        "quatre-vingts millions",
+        "quatre-vingt million"
+      ],
+      "r": 2,
+      "x": "« Million » est un nom et non un adjectif numéral : « vingt » garde donc son s devant lui. Avec « mille », adjectif numéral, on écrirait « quatre-vingt mille ». « Milliard » se comporte comme « million » : quatre-vingts milliards.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "En orthographe traditionnelle, 200 000 000 s'écrit :",
+      "o": [
+        "deux cent millions",
+        "deux cents millions",
+        "deux cents million",
+        "deux cent million"
+      ],
+      "r": 1,
+      "x": "« Million » étant un nom, « cent » qui le précède garde son s. On écrit de même « deux cents milliards ». En revanche, il reste invariable devant « mille » : deux cent mille.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "En orthographe traditionnelle, l'année 1984 s'écrit :",
+      "o": [
+        "mille neuf cents quatre-vingt-quatre",
+        "mil neuf cents quatre-vingts-quatre",
+        "mille neuf cent quatre-vingt-quatre",
+        "mille neuf cent quatre-vingts-quatre"
+      ],
+      "r": 2,
+      "x": "« Cent » et « vingt » sont suivis d'autres nombres et restent invariables. Pour une date, on peut aussi écrire « mil » : mil neuf cent quatre-vingt-quatre. Les rectifications de 1990 admettent aussi « mille-neuf-cent-quatre-vingt-quatre », avec des traits d'union partout.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Ces travaux ont coûté trois _______ francs », la forme correcte est :",
+      "o": [
+        "mille",
+        "milles",
+        "mil",
+        "milliers"
+      ],
+      "r": 0,
+      "x": "L'adjectif numéral « mille » est toujours invariable : trois mille francs. « Millier » est un nom et s'accorde : des milliers de francs. La forme « mil » ne s'emploie que dans les dates, jamais pour une somme d'argent.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Des _______ de candidats se sont inscrits », la forme correcte est :",
+      "o": [
+        "mille",
+        "milliers",
+        "milles",
+        "millier"
+      ],
+      "r": 1,
+      "x": "Contrairement à l'adjectif numéral « mille » qui est toujours invariable, « millier » est un nom commun : précédé de l'article « des », il prend donc la marque du pluriel (milliers), tout comme « des dizaines » ou « des centaines ». Le verbe et le participe passé s'accordent logiquement au masculin pluriel.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Ouvrez votre manuel à la page _______ » (200), la forme correcte est :",
+      "o": [
+        "deux cents",
+        "deux centième",
+        "deux cent",
+        "deux-cents"
+      ],
+      "r": 2,
+      "x": "Employé comme ordinal (= deux-centième), le nombre reste invariable : page deux cent, l'an mille huit cent. « Deux cents » s'emploie pour une quantité. Le piège est d'écrire « page deux cents » par analogie avec la quantité « deux cents pages ».",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "En orthographe traditionnelle, le nombre 31 s'écrit :",
+      "o": [
+        "trente-et-un",
+        "trente et un",
+        "trente-un",
+        "trente et-un"
+      ],
+      "r": 1,
+      "x": "La tradition écrit « trente et un » sans trait d'union. Les rectifications de 1990, qui relient tous les nombres composés par des traits d'union, admettent « trente-et-un ». Les deux graphies sont acceptées, mais la forme traditionnelle reste la plus sûre dans une copie.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Selon les rectifications orthographiques de 1990, le nombre 21 peut s'écrire :",
+      "o": [
+        "vingt-un",
+        "vingt et-un",
+        "vingt-et-un",
+        "vingts-et-un"
+      ],
+      "r": 2,
+      "x": "Les rectifications de 1990 relient par un trait d'union tous les éléments d'un nombre composé, y compris « et ». La forme traditionnelle « vingt et un » reste correcte. Selon ces mêmes rectifications, on écrit aussi « deux-cent-un » et « mille-deux-cents ».",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "L'abréviation correcte de « vingt et unième siècle » est :",
+      "o": [
+        "XXIème siècle",
+        "XXIè siècle",
+        "XXIe siècle",
+        "XXI° siècle"
+      ],
+      "r": 2,
+      "x": "L'abréviation d'un ordinal s'écrit avec un « e » en exposant : XXIe, 2e, 3e. Les formes « ème », « è » et « ° » sont fautives en typographie. On écrit de même « 2e » pour deuxième, mais « 1er » pour premier et « 1re » pour première.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "L'abréviation correcte de « première » est :",
+      "o": [
+        "1ère",
+        "1ière",
+        "1e",
+        "1re"
+      ],
+      "r": 3,
+      "x": "Selon les règles typographiques, on abrège « premier » en « 1er » et « première » en « 1re ». « 1ère » est très répandu mais déconseillé dans les documents officiels. Au pluriel, on écrit « 1ers » et « 1res ».",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "En chiffres romains, MCMLX correspond à :",
+      "o": [
+        "1910",
+        "1940",
+        "1960",
+        "1990"
+      ],
+      "r": 2,
+      "x": "M = 1000, CM = 900, L = 50 et X = 10, soit 1960. C'est l'année de l'indépendance de la Haute-Volta, le 5 août 1960. Une lettre placée avant une lettre plus forte se retranche : CM = 1000 − 100, XC = 100 − 10.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "En chiffres romains, l'année 2026 s'écrit :",
+      "o": [
+        "MMXXIV",
+        "MMXVI",
+        "MCMXXVI",
+        "MMXXVI"
+      ],
+      "r": 3,
+      "x": "MM = 2000, XX = 20 et VI = 6, soit MMXXVI. MMXXIV correspond à 2024 et MMXVI à 2016. On ne répète jamais plus de trois fois la même lettre : 4 s'écrit IV et non IIII, sauf sur certains cadrans d'horloge.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "En orthographe traditionnelle, le nombre 92 s'écrit :",
+      "o": [
+        "quatre-vingts-douze",
+        "quatre-vingt douze",
+        "quatre-vingts douze",
+        "quatre-vingt-douze"
+      ],
+      "r": 3,
+      "x": "« Vingt », suivi d'un nombre, ne prend pas de s : quatre-vingt-douze. Tous les éléments inférieurs à cent sont reliés par des traits d'union. Comme pour « quatre-vingt-un », on n'emploie jamais « et » dans ce nombre.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Il _______ remis son rapport _______ temps », la bonne combinaison est :",
+      "o": [
+        "à / a",
+        "a / a",
+        "à / à",
+        "a / à"
+      ],
+      "r": 3,
+      "x": "« A » est le verbe avoir : on peut le remplacer par « avait ». « À » est une préposition, qu'on ne peut pas remplacer par « avait ». Selon les règles typographiques, « à » garde son accent même en majuscule : À demain.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Le dossier _______ complet _______ signé », la bonne combinaison est :",
+      "o": [
+        "et / est",
+        "est / est",
+        "est / et",
+        "et / et"
+      ],
+      "r": 2,
+      "x": "« Est » est le verbe être : on peut le remplacer par « était ». « Et » est une conjonction de coordination qui relie deux éléments. Le piège est fréquent dans les phrases courtes : le dossier est complet et signé.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Dites-moi _______ vous travaillez, ici _______ ailleurs », la bonne combinaison est :",
+      "o": [
+        "ou / où",
+        "où / ou",
+        "où / où",
+        "ou / ou"
+      ],
+      "r": 1,
+      "x": "« Où », avec accent, indique le lieu : dites-moi où vous travaillez. « Ou », sans accent, signifie « ou bien » et marque un choix. « Où » s'emploie aussi pour le temps : le jour où il est venu.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Il _______ est allé _______ prévenir personne », la bonne combinaison est :",
+      "o": [
+        "s'en / sans",
+        "sans / s'en",
+        "s'en / s'en",
+        "sans / sans"
+      ],
+      "r": 0,
+      "x": "« S'en » associe le pronom « se » et le pronom « en » devant un verbe (s'en aller). « Sans » est une préposition qui marque l'absence. Pour vérifier, on remplace « sans » par « avec », ce qui est impossible pour « s'en ».",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « _______ à moi, je reste à mon poste », la forme correcte est :",
+      "o": [
+        "Quant",
+        "Quand",
+        "Qu'en",
+        "Camp"
+      ],
+      "r": 0,
+      "x": "« Quant à » signifie « en ce qui concerne ». « Quand » marque le temps et « qu'en » associe « que » et « en ». On écrit « quant à » et « quant au », jamais « quand à », faute très fréquente dans les copies.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « _______ pensez-vous ? », la forme correcte est :",
+      "o": [
+        "Quand",
+        "Quant",
+        "Qu'an",
+        "Qu'en"
+      ],
+      "r": 3,
+      "x": "« Qu'en » associe « que » et le pronom « en », qui signifie ici « de cela ». « Quand » interroge sur le moment, et « quant » ne s'emploie que dans « quant à ». Pour vérifier, on remplace par « que pensez-vous de cela » : si le sens est conservé, on écrit « qu'en ».",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Il _______ réussir s'il travaille un _______ plus », la bonne combinaison est :",
+      "o": [
+        "peut / peu",
+        "peu / peut",
+        "peut / peut",
+        "peux / peu"
+      ],
+      "r": 0,
+      "x": "« Peut » est le verbe pouvoir : on peut le remplacer par « pouvait ». « Peu » est un adverbe de quantité, contraire de « beaucoup ». Attention : « peux » s'emploie avec « je » et « tu », et « peut » avec « il », « elle » ou « on ».",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Il est arrivé _______ que prévu », la forme correcte est :",
+      "o": [
+        "plus tôt",
+        "plutôt",
+        "plus-tôt",
+        "plutot"
+      ],
+      "r": 0,
+      "x": "« Plus tôt », en deux mots, s'oppose à « plus tard ». « Plutôt », en un mot, signifie « de préférence ». Dans « il est plutôt grand », « plutôt » signifie « assez » : c'est un autre emploi du mot en un seul mot.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « _______ que de se plaindre, il a agi », la forme correcte est :",
+      "o": [
+        "Plus tôt",
+        "Plutot",
+        "Plutôt",
+        "Plus-tôt"
+      ],
+      "r": 2,
+      "x": "« Plutôt », en un mot, exprime une préférence : au lieu de se plaindre. « Plus tôt » s'emploierait pour une indication de temps. On écrit indifféremment « plutôt que de se plaindre » ou « plutôt que se plaindre ».",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Il passe _______ au bureau le samedi » (= parfois), la forme correcte est :",
+      "o": [
+        "quelquefois",
+        "quelques fois",
+        "quelque fois",
+        "quelques-fois"
+      ],
+      "r": 0,
+      "x": "« Quelquefois », en un mot, signifie « parfois ». « Quelques fois » s'emploie pour un nombre de fois : je l'ai vu quelques fois. Pour vérifier, on remplace par « parfois » : si le sens est conservé, on écrit « quelquefois » en un seul mot.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Cette lettre, il _______ envoyée hier », la forme correcte est :",
+      "o": [
+        "l'a",
+        "la",
+        "là",
+        "l'as"
+      ],
+      "r": 0,
+      "x": "« L'a » associe le pronom « l' » (la lettre) et le verbe avoir : on peut dire « il l'avait envoyée ». « Là » indique un lieu et « la » est un article ou un pronom. Le participe « envoyée » s'accorde avec « l' », mis pour « la lettre », placé avant l'auxiliaire avoir.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Ce bureau ? Il _______ rend chaque matin », la forme correcte est :",
+      "o": [
+        "si",
+        "s'en",
+        "y",
+        "s'y"
+      ],
+      "r": 3,
+      "x": "« S'y » associe le pronom « se » et le pronom « y » (à cet endroit). « Si » est une conjonction ou un adverbe. Pour vérifier, on remplace par « il se rend là-bas » : si le sens est conservé, on écrit « s'y ».",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Il ne _______ pas encore s'il sera admis », la forme correcte est :",
+      "o": [
+        "sait",
+        "sais",
+        "c'est",
+        "s'est"
+      ],
+      "r": 0,
+      "x": "« Sait » est le verbe savoir à la 3e personne du singulier. « Sais » correspond à « je » ou « tu », et « c'est » est un présentatif. « S'est » (se + être) ne s'emploie que devant un participe passé : il s'est trompé.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Je pense _______ réussira son concours », la forme correcte est :",
+      "o": [
+        "qu'elle",
+        "quelle",
+        "quel",
+        "qu'elles"
+      ],
+      "r": 0,
+      "x": "« Qu'elle » associe la conjonction « que » et le pronom « elle » : on peut dire « qu'il réussira ». « Quelle » est un déterminant interrogatif ou exclamatif. « Quelle » s'accorde en genre et en nombre avec le nom : quelle décision, quelles décisions.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Il a _______ travaillé qu'il est épuisé », la forme correcte est :",
+      "o": [
+        "temps",
+        "t'en",
+        "tant",
+        "tan"
+      ],
+      "r": 2,
+      "x": "« Tant » est un adverbe d'intensité, ici dans la corrélation « tant… que ». « Temps » est un nom et « t'en » associe deux pronoms. On écrit de même « tant mieux », « tant pis » et « tant de travail ».",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Il refuse _______ parler à la presse », la forme correcte est :",
+      "o": [
+        "dans",
+        "en",
+        "s'en",
+        "d'en"
+      ],
+      "r": 3,
+      "x": "« D'en » associe la préposition « de » et le pronom « en » (de cela). « Dans » est une préposition de lieu ou de temps. Pour vérifier, on remplace par « de parler de cela » : il refuse de parler de cela à la presse.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Le dossier est _______ à être signé », la forme correcte est :",
+      "o": [
+        "près",
+        "prêt",
+        "prés",
+        "prêts"
+      ],
+      "r": 1,
+      "x": "« Prêt » est un adjectif qui signifie « préparé » et se construit avec « à ». « Près », adverbe, signifie « à côté » et se construit avec « de ». Attention : « près de » suivi d'un infinitif signifie « sur le point de » (il est près de partir), alors que « prêt à » signifie « préparé à ».",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Le candidat est _______ arriver à 8 heures », la forme correcte est :",
+      "o": [
+        "censé",
+        "sensé",
+        "censer",
+        "sensés"
+      ],
+      "r": 0,
+      "x": "« Censé » signifie « supposé » : il est censé arriver. « Sensé » signifie « raisonnable » : une décision sensée. « Censé » est presque toujours suivi d'un infinitif, alors que « sensé » qualifie une personne ou une chose.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « J'ai encore beaucoup de travail _______ », la forme correcte est :",
+      "o": [
+        "affaire",
+        "à fair",
+        "a faire",
+        "à faire"
+      ],
+      "r": 3,
+      "x": "« À faire », en deux mots, signifie « qui doit être fait ». « Affaire » est un nom : une affaire urgente. Pour vérifier, on remplace par « à accomplir » : j'ai encore beaucoup de travail à accomplir.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « _______ jamais trop prudent », la forme correcte est :",
+      "o": [
+        "On n'est",
+        "On est",
+        "Ont n'est",
+        "On naît"
+      ],
+      "r": 0,
+      "x": "Avec « jamais », la négation complète exige « ne » : on n'est jamais trop prudent. À l'oral, la liaison masque le « n' », d'où la faute fréquente « on est jamais ». Pour vérifier, on remplace « on » par « il » : il n'est jamais trop prudent.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « _______, le dossier est arrivé _______ délai », la bonne combinaison est :",
+      "o": [
+        "Or / hors",
+        "Hors / or",
+        "Or / or",
+        "Hors / hors"
+      ],
+      "r": 0,
+      "x": "« Or » est une conjonction qui introduit un fait nouveau dans un raisonnement. « Hors » signifie « en dehors de » : hors délai, hors service. « Hors » se construit aussi avec « de » : hors de danger, hors de question.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Chaque agent doit accomplir sa _______ », la forme correcte est :",
+      "o": [
+        "tache",
+        "tâches",
+        "taches",
+        "tâche"
+      ],
+      "r": 3,
+      "x": "« Tâche », avec un accent circonflexe, désigne un travail à faire. « Tache », sans accent, désigne une salissure. La différence se retrouve dans les verbes : « tâcher » signifie s'efforcer, « tacher » signifie salir.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Le texte a été adopté à l'unanimité des _______ », la forme correcte est :",
+      "o": [
+        "voies",
+        "voix",
+        "voie",
+        "vois"
+      ],
+      "r": 1,
+      "x": "« Voix » désigne ici le suffrage exprimé lors d'un vote. « Voie » désigne un chemin ou un moyen : la voie hiérarchique. On écrit donc « de vive voix » et « mettre aux voix », mais « par voie de presse » et « pays en voie de développement ».",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Il a agi dans le _______ de nuire », la forme correcte est :",
+      "o": [
+        "dessein",
+        "dessin",
+        "dessain",
+        "desseins"
+      ],
+      "r": 0,
+      "x": "« Dessein » signifie « intention, projet » : à dessein = exprès. « Dessin » désigne une représentation graphique. Au pluriel, « desseins » désigne des projets : les desseins du gouvernement.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Le directeur exige qu'on lui rende _______ », la forme correcte est :",
+      "o": [
+        "conte",
+        "comte",
+        "comptes",
+        "compte"
+      ],
+      "r": 3,
+      "x": "« Rendre compte », c'est faire un rapport, d'où le compte rendu. « Conte » est un récit et « comte » un titre de noblesse. On écrit « un compte rendu », sans trait d'union, et au pluriel « des comptes rendus ».",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « résoudre » au passé simple, 3e personne du singulier, est :",
+      "o": [
+        "il résolva",
+        "il résouda",
+        "il résolut",
+        "il résolvit"
+      ],
+      "r": 2,
+      "x": "« Résoudre » fait au passé simple : je résolus, il résolut, ils résolurent. Les formes en -a ou en -it n'existent pas pour ce verbe. Le participe passé est « résolu » : le problème est résolu.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « résoudre » au présent, 1re personne du singulier, est :",
+      "o": [
+        "je résous",
+        "je résouds",
+        "je résoud",
+        "je résolve"
+      ],
+      "r": 0,
+      "x": "Les verbes en -soudre perdent le d au présent : je résous, il résout. « Je résolve » est une forme du subjonctif. Attention : « coudre » et « moudre » gardent au contraire le d : je couds, je mouds.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « acquérir » au futur, 1re personne du singulier, est :",
+      "o": [
+        "j'acquérirai",
+        "j'acquerrai",
+        "j'acquèrerai",
+        "j'acquiérai"
+      ],
+      "r": 1,
+      "x": "Au futur, « acquérir » prend deux r et perd l'accent : j'acquerrai, nous acquerrons. On conjugue de même « conquérir » et « requérir ». Le participe passé est « acquis » (un droit acquis), à ne pas confondre avec le nom « acquit » (par acquit de conscience).",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « vaincre » au présent, 3e personne du singulier, est :",
+      "o": [
+        "il vaint",
+        "il vainct",
+        "il vainc",
+        "il vaincs"
+      ],
+      "r": 2,
+      "x": "« Vaincre » garde le c au présent et ne prend pas de t à la 3e personne : il vainc, il convainc. Le pluriel est « ils vainquent ». À la forme interrogative, on intercale un t : vainc-t-il ?",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « cueillir » au futur, 1re personne du singulier, est :",
+      "o": [
+        "je cueillirai",
+        "je cueillerai",
+        "je ceuillerai",
+        "je cueillrai"
+      ],
+      "r": 1,
+      "x": "« Cueillir » se conjugue comme un verbe en -er au présent et au futur : je cueille, je cueillerai. On conjugue de même « accueillir » : j'accueillerai. Le groupe « ue » après le c garde le son « k » : cueillir, accueil, recueil.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « envoyer » au futur, 3e personne du singulier, est :",
+      "o": [
+        "il envoiera",
+        "il enverra",
+        "il envoyera",
+        "il envoira"
+      ],
+      "r": 1,
+      "x": "« Envoyer » a un futur irrégulier : j'enverrai, il enverra. Il en va de même pour « renvoyer » : il renverra. Les autres verbes en -oyer sont réguliers au futur : j'emploierai, je nettoierai.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « appeler » au présent, 3e personne du pluriel, est :",
+      "o": [
+        "ils appelent",
+        "ils appellent",
+        "ils apellent",
+        "ils appèlent"
+      ],
+      "r": 1,
+      "x": "« Appeler » double le l devant un e muet : j'appelle, ils appellent. Les rectifications de 1990 permettent d'écrire la plupart des verbes en -eler et -eter avec un accent grave : il ruissèle, il étiquète. « Appeler », « jeter » et leurs composés font exception et gardent le doublement : ils rappellent, ils rejettent.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « acheter » au présent, 1re personne du singulier, est :",
+      "o": [
+        "j'achette",
+        "j'achéte",
+        "j'achete",
+        "j'achète"
+      ],
+      "r": 3,
+      "x": "« Acheter » ne double pas le t : il prend un accent grave devant un e muet (j'achète, ils achètent). Il se conjugue comme « geler » et « peler ». Les rectifications de 1990 étendent ce modèle à la plupart des verbes en -eler et -eter, sauf « appeler » et « jeter ».",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "À l'impératif, « aller » suivi du pronom « y » s'écrit :",
+      "o": [
+        "Va-y",
+        "Vas y",
+        "Vas-y",
+        "Va-z-y"
+      ],
+      "r": 2,
+      "x": "Devant « y » ou « en », la 2e personne de l'impératif reprend un s pour faciliter la liaison : vas-y. Sans pronom, on écrit « va ». Ce s disparaît si « y » dépend de l'infinitif qui suit : va y travailler.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "À l'impératif, « donner » suivi du pronom « en » s'écrit :",
+      "o": [
+        "Donne-en",
+        "Donnes en",
+        "Donnes-en",
+        "Donne-s-en"
+      ],
+      "r": 2,
+      "x": "À l'impératif, la 2e personne du singulier terminée par -e prend un s devant « en » ou « y » : donnes-en, penses-y, cueilles-en ; « va » fait de même (vas-y). Ce s n'apparaît pas si « en » ou « y » dépend de l'infinitif qui suit : ose en parler, va y travailler. Sans pronom, l'impératif s'écrit sans s : donne, pense.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « _______ ponctuel à l'examen ! », l'impératif correct de « être » est :",
+      "o": [
+        "Soit",
+        "Sois",
+        "Soie",
+        "Sois-tu"
+      ],
+      "r": 1,
+      "x": "L'impératif de « être » est : sois, soyons, soyez. « Soit » est une forme du subjonctif à la 3e personne : qu'il soit. L'impératif « sois » ne prend jamais de t, même s'il se prononce comme « soit ».",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « avoir » au subjonctif présent, 3e personne du singulier, est :",
+      "o": [
+        "qu'il aie",
+        "qu'il est",
+        "qu'il a",
+        "qu'il ait"
+      ],
+      "r": 3,
+      "x": "Au subjonctif présent : que j'aie, que tu aies, qu'il ait. « Aie » s'emploie avec « que j' » et à l'impératif (aie confiance) ; « est » est le verbe être. Seuls « être » (qu'il soit) et « avoir » (qu'il ait) ont un subjonctif terminé par -t au singulier.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « croire » au subjonctif présent, 1re personne du pluriel, est :",
+      "o": [
+        "que nous croyons",
+        "que nous croyions",
+        "que nous croiions",
+        "que nous croyiions"
+      ],
+      "r": 1,
+      "x": "Au subjonctif, la 1re personne du pluriel se termine par -ions : que nous croyions, avec y puis i. « Nous croyons » est la forme de l'indicatif présent. Le même piège touche « voir » et « rire » : que nous voyions, que nous riions.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « étudier » à l'imparfait, 1re personne du pluriel, est :",
+      "o": [
+        "nous étudiions",
+        "nous étudions",
+        "nous étudiyons",
+        "nous étudiâmes"
+      ],
+      "r": 0,
+      "x": "À l'imparfait, on ajoute -ions au radical « étudi- », d'où deux i : nous étudiions. « Nous étudions » est le présent et « étudiâmes » le passé simple. Il en va de même pour « crier » ou « oublier » : nous criions, nous oubliions.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « peindre » au passé simple, 3e personne du singulier, est :",
+      "o": [
+        "il peindit",
+        "il peigna",
+        "il peignit",
+        "il pegnit"
+      ],
+      "r": 2,
+      "x": "Les verbes en -indre font au passé simple -gnit : il peignit, il craignit, il joignit. « Il peigna » est le passé simple de « peigner ». Le participe passé est « peint » : le mur est peint.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « naître » au passé simple, 3e personne du singulier, est :",
+      "o": [
+        "il naissa",
+        "il nacquit",
+        "il naquit",
+        "il naîtit"
+      ],
+      "r": 2,
+      "x": "« Naître » a un passé simple irrégulier : je naquis, il naquit, ils naquirent. Le participe passé est « né ». Les rectifications de 1990 permettent d'omettre l'accent circonflexe sur le i : il nait, naitre.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « mourir » au futur, 1re personne du singulier, est :",
+      "o": [
+        "je mourrai",
+        "je mourirai",
+        "je mourerai",
+        "je mourai"
+      ],
+      "r": 0,
+      "x": "« Mourir » prend deux r au futur et au conditionnel : je mourrai, je mourrais. On conjugue de même « courir » : je courrai. Le double r permet de distinguer le futur (je mourrai) de l'imparfait (je mourais).",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « courir » au conditionnel présent, 3e personne du singulier, est :",
+      "o": [
+        "il courrait",
+        "il courirait",
+        "il courerait",
+        "il courait"
+      ],
+      "r": 0,
+      "x": "Au conditionnel, « courir » prend deux r : il courrait. « Il courait », avec un seul r, est l'imparfait. Le même piège se retrouve avec « mourir » : il mourrait au conditionnel, il mourait à l'imparfait.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « coudre » au présent, 3e personne du singulier, est :",
+      "o": [
+        "il cout",
+        "il cous",
+        "il coud",
+        "il coude"
+      ],
+      "r": 2,
+      "x": "« Coudre » garde le d à la 3e personne du singulier : il coud. Au pluriel, le radical change : ils cousent. On conjugue de même « découdre » et « recoudre » : il découd, il recoud.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « valoir » au présent, 3e personne du singulier, est :",
+      "o": [
+        "il vaud",
+        "il vaut",
+        "il vault",
+        "il vaux"
+      ],
+      "r": 1,
+      "x": "« Valoir » fait au présent : je vaux, tu vaux, il vaut. « Vaux » ne correspond qu'à « je » et « tu ». Le futur est également irrégulier : je vaudrai, il vaudra.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « prévoir » au futur, 1re personne du singulier, est :",
+      "o": [
+        "je préverrai",
+        "je prévoirai",
+        "je prévoierai",
+        "je prévoyerai"
+      ],
+      "r": 1,
+      "x": "Contrairement à « voir » (je verrai), « prévoir » garde son infinitif au futur : je prévoirai. « Pourvoir » suit la même règle : je pourvoirai. « Revoir », lui, se conjugue comme « voir » : je reverrai.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Le poste vacant a été _______ », la forme correcte est :",
+      "o": [
+        "pourvut",
+        "pourvus",
+        "pourvoyé",
+        "pourvu"
+      ],
+      "r": 3,
+      "x": "Le participe passé de « pourvoir » est « pourvu » : on pourvoit un poste en y nommant quelqu'un. « Pourvut » est le passé simple et « pourvoyé » n'existe pas. On dit « pourvoir un poste » (le doter d'un titulaire) et « pourvoir à un besoin » (y répondre).",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « contredire » au présent, 2e personne du pluriel, est :",
+      "o": [
+        "vous contredisez",
+        "vous contredites",
+        "vous contredissez",
+        "vous contredîtes"
+      ],
+      "r": 0,
+      "x": "Seuls « dire » et « redire » font « vous dites » et « vous redites ». Les composés « contredire », « interdire », « médire » et « prédire » font « vous contredisez », « vous interdisez ». Le piège est d'appliquer « vous dites » par analogie : on écrit « vous interdisez », jamais « vous interdites ».",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « conclure » au passé simple, 3e personne du pluriel, est :",
+      "o": [
+        "ils conclûrent",
+        "ils conclusirent",
+        "ils concluèrent",
+        "ils conclurent"
+      ],
+      "r": 3,
+      "x": "« Conclure » fait au passé simple : il conclut, ils conclurent. L'accent circonflexe n'apparaît qu'aux 1re et 2e personnes du pluriel : nous conclûmes, vous conclûtes. Il ne faut pas confondre avec le participe passé « conclu », sans s au masculin : l'accord est conclu.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le verbe « employer » au futur, 1re personne du singulier, est :",
+      "o": [
+        "j'employerai",
+        "j'emploirai",
+        "j'emploiyerai",
+        "j'emploierai"
+      ],
+      "r": 3,
+      "x": "Les verbes en -oyer changent le y en i devant un e muet : j'emploie, j'emploierai. « Envoyer » et « renvoyer » font exception au futur : j'enverrai. Les verbes en -ayer admettent les deux formes : je paierai ou je payerai.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Le directeur est satisfait », le mot « satisfait » est :",
+      "o": [
+        "Épithète",
+        "Complément d'objet direct",
+        "Attribut du sujet",
+        "Apposition"
+      ],
+      "r": 2,
+      "x": "« Satisfait » est relié au sujet par le verbe d'état « être » : c'est un attribut du sujet. Les principaux verbes d'état sont être, paraître, sembler, devenir, demeurer, rester. On reconnaît l'attribut au fait qu'on peut le remplacer par le pronom « le » : il l'est.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Un agent compétent a été recruté », l'adjectif « compétent » est :",
+      "o": [
+        "Attribut du sujet",
+        "Apposition",
+        "Complément du nom",
+        "Épithète"
+      ],
+      "r": 3,
+      "x": "L'épithète est placée directement à côté du nom qu'elle qualifie, sans verbe ni virgule. Séparé par une virgule, l'adjectif serait apposé. L'épithète peut aussi précéder le nom : un grand bureau, une nouvelle loi.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Ouagadougou, capitale du Burkina Faso, accueille le FESPACO », le groupe « capitale du Burkina Faso » est :",
+      "o": [
+        "Un attribut du sujet",
+        "Une apposition",
+        "Un complément du nom",
+        "Un complément circonstanciel"
+      ],
+      "r": 1,
+      "x": "L'apposition, détachée par des virgules, apporte une précision sur le nom « Ouagadougou ». On peut la supprimer sans rendre la phrase incorrecte. L'apposition peut aussi être un adjectif ou un participe détaché : fatigué, l'agent s'assit.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « La lettre a été rédigée par le secrétaire », le groupe « par le secrétaire » est :",
+      "o": [
+        "Un complément d'objet indirect",
+        "Un complément circonstanciel de moyen",
+        "Un complément d'agent",
+        "Un complément du nom"
+      ],
+      "r": 2,
+      "x": "Dans une phrase passive, le complément d'agent désigne celui qui fait l'action ; il est introduit par « par » ou « de ». À la voix active, il devient sujet : le secrétaire a rédigé la lettre. Le complément d'agent est introduit par « de » surtout après des verbes de sentiment : il est aimé de tous.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Il parle à son chef », le groupe « à son chef » est :",
+      "o": [
+        "Un complément d'objet indirect",
+        "Un complément d'objet direct",
+        "Un complément circonstanciel de lieu",
+        "Un complément d'agent"
+      ],
+      "r": 0,
+      "x": "Le COI complète le verbe par l'intermédiaire d'une préposition (à, de) : on parle à quelqu'un. Il répond à la question « à qui ? ». Attention : dans « aller à Bobo-Dioulasso », le groupe introduit par « à » est un complément de lieu, et non un COI.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Ce dossier, je le connais bien », le pronom « le » est :",
+      "o": [
+        "Sujet",
+        "Complément d'objet direct",
+        "Complément d'objet indirect",
+        "Attribut du sujet"
+      ],
+      "r": 1,
+      "x": "« Le » reprend « ce dossier » et complète directement le verbe « connaître » : c'est un COD. On le vérifie en posant la question « je connais quoi », dont la réponse est « ce dossier ». Placé avant le verbe, ce pronom COD entraîne l'accord du participe passé : cette lettre, je l'ai lue.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Il lui a remis le dossier », le pronom « lui » est :",
+      "o": [
+        "Complément d'objet direct",
+        "Complément d'objet indirect",
+        "Complément circonstanciel de lieu",
+        "Attribut du sujet"
+      ],
+      "r": 1,
+      "x": "« Lui » signifie « à lui » ou « à elle » : on remet quelque chose à quelqu'un. Le COD de la phrase est « le dossier ». Attention : après une préposition ou en tête de phrase, « lui » est un pronom tonique : je pense à lui ; lui, il travaille.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Le dossier que j'ai lu est complet », le mot « que » est :",
+      "o": [
+        "Un pronom relatif",
+        "Une conjonction de subordination",
+        "Un adverbe exclamatif",
+        "Un pronom interrogatif"
+      ],
+      "r": 0,
+      "x": "« Que » reprend son antécédent « le dossier » et introduit une proposition relative : c'est un pronom relatif. Il est COD de « ai lu ». Pour le distinguer de la conjonction, on vérifie qu'il reprend un nom.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Je crois que tu réussiras », le mot « que » est :",
+      "o": [
+        "Un pronom relatif",
+        "Une conjonction de coordination",
+        "Un pronom interrogatif",
+        "Une conjonction de subordination"
+      ],
+      "r": 3,
+      "x": "Ici « que » ne reprend aucun nom : il relie le verbe « crois » à la proposition qui le complète. C'est une conjonction de subordination qui introduit une complétive. « Que » peut aussi être un adverbe exclamatif : que c'est beau !",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Il est arrivé en retard parce qu'il pleuvait », la proposition « parce qu'il pleuvait » est :",
+      "o": [
+        "Une circonstancielle de conséquence",
+        "Une complétive",
+        "Une circonstancielle de but",
+        "Une circonstancielle de cause"
+      ],
+      "r": 3,
+      "x": "La proposition introduite par « parce que » indique la cause de l'action principale. Le but serait introduit par « pour que » ou « afin que ». La cause peut aussi être introduite par « puisque », « comme » ou « étant donné que ».",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Le candidat qui a réussi sera reçu », la proposition « qui a réussi » est :",
+      "o": [
+        "Une relative",
+        "Une complétive",
+        "Une circonstancielle de cause",
+        "Une indépendante"
+      ],
+      "r": 0,
+      "x": "La relative est introduite par un pronom relatif (qui, que, dont, où) et complète un nom, ici « le candidat ». Elle joue le rôle d'un adjectif. Placée entre virgules, la relative est explicative et peut être supprimée ; sans virgules, elle est déterminative et indispensable au sens.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Je pense qu'il viendra », la proposition « qu'il viendra » est :",
+      "o": [
+        "Une relative",
+        "Une circonstancielle de temps",
+        "Une principale",
+        "Une complétive"
+      ],
+      "r": 3,
+      "x": "La complétive, introduite par la conjonction « que », est ici COD du verbe « penser ». On peut la remplacer par « cela » : je pense cela. La complétive peut aussi être sujet : qu'il vienne me surprend.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Bien qu'il soit malade, il travaille », la proposition « bien qu'il soit malade » exprime :",
+      "o": [
+        "La cause",
+        "La condition",
+        "La conséquence",
+        "La concession"
+      ],
+      "r": 3,
+      "x": "« Bien que » introduit une opposition entre deux faits : malgré la maladie, il travaille. La cause serait introduite par « parce que » et la condition par « si ». « Bien que » et « quoique » sont toujours suivis du subjonctif : bien qu'il soit malade.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Le travail achevé, il partit », le groupe « le travail achevé » est :",
+      "o": [
+        "Une proposition relative",
+        "Une apposition au sujet",
+        "Une proposition participiale",
+        "Un complément d'objet"
+      ],
+      "r": 2,
+      "x": "La proposition participiale a pour noyau un participe (« achevé ») et possède son propre sujet (« le travail »), distinct de celui du verbe principal (« il »). Elle exprime ici l'antériorité temporelle (une fois le travail achevé), mais peut aussi exprimer la cause : « Le directeur étant absent, la réunion fut reportée. »",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Il travaille pour réussir », le groupe « pour réussir » est :",
+      "o": [
+        "Un complément d'objet direct",
+        "Un complément circonstanciel de cause",
+        "Un attribut du sujet",
+        "Un complément circonstanciel de but"
+      ],
+      "r": 3,
+      "x": "Introduit par « pour », l'infinitif indique le but de l'action. Il équivaut à « afin de réussir ». Le but s'exprime aussi par « afin de », « en vue de » ou « de peur de ».",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Hier, il a plu sur Ouagadougou », le mot « hier » est :",
+      "o": [
+        "Un nom",
+        "Un adjectif",
+        "Un adverbe",
+        "Une préposition"
+      ],
+      "r": 2,
+      "x": "« Hier » est un adverbe de temps et sa fonction est complément circonstanciel de temps. Il est invariable comme tous les adverbes. Le même mot peut devenir nom : hier était un jour de fête.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Il agit pour le bien de tous », le mot « bien » est :",
+      "o": [
+        "Un nom",
+        "Un adverbe",
+        "Un adjectif",
+        "Une interjection"
+      ],
+      "r": 0,
+      "x": "Précédé de l'article « le », « bien » est ici un nom. Dans « il travaille bien », le même mot serait un adverbe. « Bien » peut aussi être adjectif invariable : ce sont des gens bien.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Je leur ai parlé hier », le mot « leur » est :",
+      "o": [
+        "Un déterminant possessif",
+        "Un pronom personnel",
+        "Un pronom possessif",
+        "Un adjectif qualificatif"
+      ],
+      "r": 1,
+      "x": "Placé devant un verbe, « leur » est un pronom personnel invariable, mis pour « à eux ». Devant un nom (« leur bureau »), il est déterminant possessif. Le pronom « leur » ne prend jamais de s : je leur ai parlé, jamais « je leurs ai parlé ».",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Ils ont remis leur rapport », le mot « leur » est :",
+      "o": [
+        "Un pronom personnel",
+        "Un pronom possessif",
+        "Un déterminant démonstratif",
+        "Un déterminant possessif"
+      ],
+      "r": 3,
+      "x": "Placé devant le nom « rapport », « leur » est un déterminant possessif ; il prend un s devant un nom pluriel. Le pronom possessif serait « le leur ». On écrit « leurs » quand chacun possède plusieurs objets ou quand le nom est pluriel : ils ont remis leurs rapports.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Il est parti à l'aube », le groupe « à l'aube » est :",
+      "o": [
+        "Un complément d'objet indirect",
+        "Un complément circonstanciel de temps",
+        "Un complément circonstanciel de lieu",
+        "Un complément du nom"
+      ],
+      "r": 1,
+      "x": "« À l'aube » répond à la question « quand ? » : c'est un complément circonstanciel de temps. Il peut être déplacé ou supprimé. Le temps s'exprime aussi par un adverbe (hier), une subordonnée (quand il partit) ou un gérondif (en partant).",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « La maison de mon père », le groupe « de mon père » est :",
+      "o": [
+        "Un complément d'objet indirect",
+        "Un complément du nom",
+        "Un complément d'agent",
+        "Un complément circonstanciel"
+      ],
+      "r": 1,
+      "x": "Le complément du nom précise un nom, ici « maison », le plus souvent à l'aide d'une préposition. Il ne dépend pas du verbe. Le complément du nom peut aussi être introduit par « à » ou « en » : une tasse à café, une montre en or.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Je trouve ce rapport excellent », l'adjectif « excellent » est :",
+      "o": [
+        "Complément d'objet direct",
+        "Attribut du sujet",
+        "Attribut du complément d'objet",
+        "Complément circonstanciel de manière"
+      ],
+      "r": 2,
+      "x": "« Excellent » qualifie le COD « ce rapport » par l'intermédiaire du verbe « trouver » : c'est un attribut du COD. On le reconnaît car on peut dire « ce rapport est excellent ». Les verbes « trouver », « juger », « rendre », « nommer » et « élire » introduisent souvent un attribut du COD.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Il est fier de son fils », le groupe « de son fils » est :",
+      "o": [
+        "Un complément du nom",
+        "Un complément de l'adjectif",
+        "Un complément d'objet indirect",
+        "Un complément d'agent"
+      ],
+      "r": 1,
+      "x": "« De son fils » complète l'adjectif « fier » : c'est un complément de l'adjectif. Il ne dépend ni du verbe ni d'un nom. Le complément de l'adjectif peut aussi être introduit par « à » : il est apte au travail.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Dans « Il a marché trois heures », le groupe « trois heures » est :",
+      "o": [
+        "Un complément d'objet direct",
+        "Un attribut du sujet",
+        "Un complément circonstanciel de temps",
+        "Un complément circonstanciel de moyen"
+      ],
+      "r": 2,
+      "x": "« Trois heures » indique une durée et répond à la question « combien de temps ? » : ce n'est pas un COD. Le participe passé ne s'accorde donc pas : les trois heures qu'il a marché. Mais avec « coûter », « valoir » ou « peser » au sens figuré, le complément devient un COD et l'accord se fait : les efforts que ce concours m'a coûtés.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "La phrase « Il pleuvait, nous sommes restés, car nous étions fatigués » compte :",
+      "o": [
+        "Une proposition",
+        "Deux propositions",
+        "Trois propositions",
+        "Quatre propositions"
+      ],
+      "r": 2,
+      "x": "On compte en général autant de propositions que de verbes conjugués : pleuvait, sommes restés, étions. Il y a donc trois propositions, deux juxtaposées et une coordonnée par « car ». Attention : les propositions infinitives et participiales comptent aussi, même si leur verbe n'est pas conjugué.",
+      "_batchId": "francais/2026-11-19/LOT4"
+    },
+    {
+      "q": "Le premier roman burkinabè s'intitule :",
+      "o": [
+        "Dessein contraire",
+        "Les Dieux délinquants",
+        "Adama ou la force des choses",
+        "Crépuscule des temps anciens"
+      ],
+      "r": 3,
+      "x": "« Crépuscule des temps anciens » de Nazi Boni, paru en 1962, est considéré comme le premier roman burkinabè. Sous-titré « Chronique du Bwamu », il fait revivre l'histoire et les traditions du peuple bwa avant la colonisation. « Dessein contraire » de Roger Nikiéma (1967) est le deuxième roman du pays.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Crépuscule des temps anciens » est l'œuvre de :",
+      "o": [
+        "Nazi Boni",
+        "Roger Nikiéma",
+        "Kollin Noaga",
+        "Augustin-Sondé Coulibaly"
+      ],
+      "r": 0,
+      "x": "Nazi Boni (1909-1969), formé à l'École normale William-Ponty, publie ce roman en 1962. Député de la Haute-Volta à l'Assemblée nationale française à partir de 1948, il devient ensuite opposant et connaît l'exil à Dakar. Son roman fait revivre les traditions du Bwamu, sa région natale.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Crépuscule des temps anciens » de Nazi Boni est une chronique du :",
+      "o": [
+        "Moogo",
+        "Gulmu",
+        "Lobi",
+        "Bwamu"
+      ],
+      "r": 3,
+      "x": "Le sous-titre du roman est « Chronique du Bwamu », le pays des Bwaba, à l'ouest du Burkina Faso. Nazi Boni, né à Bwan dans cette région, y décrit les rites, les initiations et la vie sociale de son peuple. C'est pourquoi on qualifie souvent ce livre de roman ethnographique.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Crépuscule des temps anciens » de Nazi Boni a été publié en :",
+      "o": [
+        "1957",
+        "1960",
+        "1962",
+        "1967"
+      ],
+      "r": 2,
+      "x": "Le roman paraît en 1962, deux ans après l'indépendance de la Haute-Volta, proclamée le 5 août 1960. Son auteur, Nazi Boni, est alors un homme politique d'opposition. L'année 1967 correspond à « Dessein contraire » de Roger Nikiéma, deuxième roman burkinabè.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "Le deuxième roman burkinabè, « Dessein contraire » (1967), est l'œuvre de :",
+      "o": [
+        "Nazi Boni",
+        "Étienne Sawadogo",
+        "Roger Nikiéma",
+        "Norbert Zongo"
+      ],
+      "r": 2,
+      "x": "Roger Nikiéma publie « Dessein contraire » en 1967, cinq ans après « Crépuscule des temps anciens » de Nazi Boni. Il est ainsi l'auteur du deuxième roman burkinabè. Ces deux pionniers ouvrent la voie aux romanciers des années 1970, comme Augustin-Sondé Coulibaly, Kollin Noaga et Étienne Sawadogo.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Maximes, pensées et devinettes mossi » (1934), qui recueille la tradition orale moaga, est l'œuvre de :",
+      "o": [
+        "Augustin-Sondé Coulibaly",
+        "Titinga Pacéré",
+        "Joseph Ki-Zerbo",
+        "Dim-Dolobsom Ouédraogo"
+      ],
+      "r": 3,
+      "x": "Dim-Dolobsom Ouédraogo (1897-1940) publie ce recueil en 1934, en pleine période coloniale. L'ouvrage rassemble des proverbes, des pensées et des devinettes issus de la tradition orale du royaume moaga. C'est l'une des premières œuvres écrites du territoire burkinabè, et Titinga Pacéré lui a rendu hommage en 2008.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Ça tire sous le Sahel » (1976) est un recueil de poèmes de :",
+      "o": [
+        "Titinga Frédéric Pacéré",
+        "Jacques Prosper Bazié",
+        "Augustin-Sondé Coulibaly",
+        "Patrick Ilboudo"
+      ],
+      "r": 0,
+      "x": "Titinga Frédéric Pacéré (1943-2024), avocat et poète burkinabè, publie en 1976 « Ça tire sous le Sahel », « Refrains sous le Sahel » et « Quand s'envolent les grues couronnées ». Sa poésie s'inspire de la parole des griots et du langage du tambour. Il obtient en 1982 le Grand prix littéraire d'Afrique noire.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "En 1982, Titinga Frédéric Pacéré reçoit :",
+      "o": [
+        "Le Grand prix littéraire d'Afrique noire",
+        "Le prix Renaudot des lycéens",
+        "Le prix Goncourt",
+        "Le prix des cinq continents"
+      ],
+      "r": 0,
+      "x": "Pacéré est récompensé pour « Poèmes pour l'Angola » et « La Poésie des griots ». Ce prix est décerné par l'Association des écrivains de langue française (ADELF). Il devient ainsi le premier Burkinabè lauréat, suivi de Patrick Ilboudo en 1992.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "La « bendrologie », discipline fondée par Titinga Pacéré, est l'étude :",
+      "o": [
+        "Des masques sacrés",
+        "Des langues écrites",
+        "Des chants funéraires",
+        "Du langage tambouriné"
+      ],
+      "r": 3,
+      "x": "Le nom vient de « bendré », le tambour en mooré : la bendrologie étudie les messages transmis par le tambour. Pacéré l'a définie comme la « science du langage tambouriné ». Il a notamment publié « Le Langage des tam-tams et des masques en Afrique » (1992).",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "Le musée fondé par Titinga Frédéric Pacéré se trouve à :",
+      "o": [
+        "Ziniaré",
+        "Kaya",
+        "Koudougou",
+        "Manéga"
+      ],
+      "r": 3,
+      "x": "Pacéré a créé et dirigé le musée de Manéga, consacré aux traditions, aux masques et à la bendrologie du pays moaga. Le site est situé au nord de Ouagadougou. Avocat, poète et griot, Pacéré est mort en 2024.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Le Parachutage » est un roman de :",
+      "o": [
+        "Monique Ilboudo",
+        "Patrick Ilboudo",
+        "Norbert Zongo",
+        "Jacques Prosper Bazié"
+      ],
+      "r": 2,
+      "x": "Norbert Zongo (1949-1998), journaliste et écrivain burkinabè, publie « Le Parachutage » en 1988. Ce roman satirique raconte la chute de Gouama, dictateur d'un pays imaginaire renversé par un coup d'État, et dénonce l'influence de l'ancienne puissance coloniale. Fondateur de l'hebdomadaire « L'Indépendant », Zongo est assassiné en 1998 près de Sapouy.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "L'hebdomadaire fondé par Norbert Zongo en 1993 s'appelle :",
+      "o": [
+        "Sidwaya",
+        "L'Observateur Paalga",
+        "L'Indépendant",
+        "Le Pays"
+      ],
+      "r": 2,
+      "x": "Norbert Zongo fonde l'hebdomadaire « L'Indépendant » en juin 1993 et y publie des enquêtes sur la corruption. Il y signe certains articles du pseudonyme d'Henri Sebgo. « Sidwaya » est, lui, le quotidien public burkinabè.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "Norbert Zongo est assassiné le 13 décembre 1998 près de :",
+      "o": [
+        "Koudougou",
+        "Sapouy",
+        "Léo",
+        "Pô"
+      ],
+      "r": 1,
+      "x": "Le journaliste est tué avec trois compagnons près de Sapouy, dans la province du Ziro. Il enquêtait alors sur la mort de David Ouédraogo, chauffeur du frère du président de l'époque. Né en 1949 dans la région de Koudougou, il est aussi l'auteur des romans « Le Parachutage » et « Rougbêinga ».",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "Norbert Zongo signait certains de ses écrits sous le pseudonyme de :",
+      "o": [
+        "Kollin Noaga",
+        "Ki Sebgo",
+        "Henri Sebgo",
+        "Moussa Sebgo"
+      ],
+      "r": 2,
+      "x": "Norbert Zongo utilisait le pseudonyme « Henri Sebgo », notamment dans « L'Indépendant », qu'il fonde en 1993. Il est aussi l'auteur des romans « Le Parachutage » (1988) et « Rougbêinga ». « Kollin Noaga » est, lui, le nom de plume du romancier Ernest Nongma Ouédraogo.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Le Mal de peau » (1992) est un roman de :",
+      "o": [
+        "Sandra Pierrette Kanzié",
+        "Monique Ilboudo",
+        "Bernadette Dao",
+        "Suzy Henrique Nikiéma"
+      ],
+      "r": 1,
+      "x": "Monique Ilboudo, juriste burkinabè née en 1959 à Ouagadougou, est souvent présentée comme la première romancière du Burkina Faso grâce à ce livre. Le roman suit Sibila et sa fille Cathy, née d'un viol, rejetée à cause de son métissage dans un pays imaginaire nommé Tanga. Récompensé par le premier prix national du meilleur roman, il ouvre une œuvre consacrée aux droits des femmes.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "Le roman « Murekatete » de Monique Ilboudo traite du :",
+      "o": [
+        "Coup d'État de 1983",
+        "Exil des Burkinabè en Côte d'Ivoire",
+        "Génocide des Tutsi au Rwanda",
+        "Travail forcé colonial"
+      ],
+      "r": 2,
+      "x": "Monique Ilboudo publie « Murekatete » en 2000, dans le cadre du projet « Rwanda, écrire par devoir de mémoire ». Ce projet a réuni des écrivains africains après le génocide de 1994. Le Sénégalais Boubacar Boris Diop y a participé avec « Murambi, le livre des ossements ».",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "En 2002, Monique Ilboudo est nommée :",
+      "o": [
+        "Ministre de la Culture",
+        "Ministre de la Justice",
+        "Ministre des Droits humains",
+        "Ministre de l'Éducation"
+      ],
+      "r": 2,
+      "x": "Après avoir été secrétaire d'État en 2000, Monique Ilboudo devient ministre de la Promotion des droits humains en 2002. Elle a ensuite été ambassadrice dans les pays nordiques et baltes. Juriste de formation, elle est aussi l'autrice des romans « Le Mal de peau » (1992) et « Murekatete » (2000).",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Le Héraut têtu » est un roman de :",
+      "o": [
+        "Patrick G. Ilboudo",
+        "Pierre-Claver Ilboudo",
+        "Monique Ilboudo",
+        "Norbert Zongo"
+      ],
+      "r": 0,
+      "x": "Patrick Gomdaogo Ilboudo (1951-1994), romancier burkinabè, obtient pour ce roman le Grand prix littéraire d'Afrique noire en 1992. Il est aussi l'auteur des « Toilettes » (1983), du « Procès du muet » (1986) et du « Vertige du trône » (1990). Il ne faut pas le confondre avec Pierre-Claver Ilboudo, auteur d'« Adama ou la force des choses ».",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Les Dieux délinquants » (1974) est un roman de :",
+      "o": [
+        "Kollin Noaga",
+        "Augustin-Sondé Coulibaly",
+        "Étienne Sawadogo",
+        "Titinga Frédéric Pacéré"
+      ],
+      "r": 1,
+      "x": "Augustin-Sondé Coulibaly (1933-2017) publie « Les Dieux délinquants » en 1974. Il fait partie de la génération des romanciers burkinabè des années 1970, avec Kollin Noaga et Étienne Sawadogo. Son roman paraît après ceux des pionniers Nazi Boni (1962) et Roger Nikiéma (1967).",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Le Retour au village » est un roman de :",
+      "o": [
+        "Nazi Boni",
+        "Augustin-Sondé Coulibaly",
+        "Kollin Noaga",
+        "Jacques Prosper Bazié"
+      ],
+      "r": 2,
+      "x": "Kollin Noaga est le nom de plume d'Ernest Nongma Ouédraogo, né en 1944. Il appartient, avec Augustin-Sondé Coulibaly et Étienne Sawadogo, à la génération des romanciers burkinabè des années 1970. Il ne faut pas le confondre avec Norbert Zongo, qui signait du pseudonyme d'Henri Sebgo.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« La Défaite de Yargha » (1977) est un roman de :",
+      "o": [
+        "Roger Nikiéma",
+        "Étienne Sawadogo",
+        "Kollin Noaga",
+        "Patrick Ilboudo"
+      ],
+      "r": 1,
+      "x": "Étienne Sawadogo publie « La Défaite de Yargha » en 1977. Il fait partie, avec Augustin-Sondé Coulibaly et Kollin Noaga, des romanciers burkinabè des années 1970. Ces auteurs prolongent l'œuvre des pionniers Nazi Boni (1962) et Roger Nikiéma (1967).",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« La Saga des Immortels » (1987) est l'œuvre de :",
+      "o": [
+        "Titinga Pacéré",
+        "Pierre-Claver Ilboudo",
+        "Norbert Zongo",
+        "Jacques Prosper Bazié"
+      ],
+      "r": 3,
+      "x": "Jacques Prosper Bazié (1955-2014) publie « La Saga des Immortels » en 1987. Il appartient à la génération des écrivains burkinabè apparus dans les années 1980. Comme Patrick Ilboudo ou Norbert Zongo, il succède aux romanciers des années 1970.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Adama ou la force des choses » est un roman de :",
+      "o": [
+        "Patrick G. Ilboudo",
+        "Monique Ilboudo",
+        "Étienne Sawadogo",
+        "Pierre-Claver Ilboudo"
+      ],
+      "r": 3,
+      "x": "Pierre-Claver Ilboudo est l'auteur d'« Adama ou la force des choses » et de « Madame la ministre et moi ». Il figure parmi les romanciers burkinabè révélés après la génération des années 1970. Trois écrivains burkinabè portent le nom d'Ilboudo : Pierre-Claver, Patrick et Monique.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Les Tombes qui pleurent » (1987) est l'œuvre de :",
+      "o": [
+        "Monique Ilboudo",
+        "Sandra Pierrette Kanzié",
+        "Bernadette Dao",
+        "Angèle Bassolé-Ouédraogo"
+      ],
+      "r": 1,
+      "x": "Sandra Pierrette Kanzié publie en 1987 « Les Tombes qui pleurent », un recueil de poèmes paru à Ouagadougou. Elle fait partie des premières femmes écrivaines burkinabè publiées dans les années 1980. Elle a ouvert la voie à de nombreuses autrices, comme Bernadette Sanou Dao et Monique Ilboudo.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "L'ouvrage « La littérature burkinabè : l'histoire, les hommes, les œuvres » (2000) est l'œuvre de :",
+      "o": [
+        "Salaka Sanou",
+        "Joseph Ki-Zerbo",
+        "Titinga Pacéré",
+        "Jean-Pierre Guingané"
+      ],
+      "r": 0,
+      "x": "Le professeur Salaka Sanou publie cet ouvrage en 2000. Il y dresse un panorama de la littérature du Burkina Faso, de la tradition orale aux auteurs contemporains. C'est un ouvrage de référence pour les candidats qui préparent les questions de littérature burkinabè.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "L'historien burkinabè auteur d'« Histoire de l'Afrique noire » (1972) est :",
+      "o": [
+        "Joseph Ki-Zerbo",
+        "Salaka Sanou",
+        "Nazi Boni",
+        "Cheikh Anta Diop"
+      ],
+      "r": 0,
+      "x": "Joseph Ki-Zerbo (1922-2006), historien burkinabè, publie en 1972 « Histoire de l'Afrique noire », synthèse écrite d'un point de vue africain. Premier Africain agrégé d'histoire, il reçoit en 1997 le Right Livelihood Award, souvent appelé « prix Nobel alternatif ». Il ne faut pas le confondre avec le Sénégalais Cheikh Anta Diop, auteur de « Nations nègres et culture ».",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "L'Atelier Théâtre Burkinabè (ATB), pionnier du théâtre-forum, a été fondé en 1978 par :",
+      "o": [
+        "Jean-Pierre Guingané",
+        "Prosper Kompaoré",
+        "Étienne Minoungou",
+        "Norbert Zongo"
+      ],
+      "r": 1,
+      "x": "Prosper Kompaoré, homme de théâtre burkinabè, fonde l'ATB en 1978. La troupe utilise le théâtre pour sensibiliser les populations à la santé, à la citoyenneté et aux droits. Dans le théâtre-forum, le public intervient pour modifier le cours de la pièce.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "Le Théâtre de la Fraternité, créé en 1975, a été fondé par :",
+      "o": [
+        "Jean-Pierre Guingané",
+        "Prosper Kompaoré",
+        "Titinga Pacéré",
+        "Patrick Ilboudo"
+      ],
+      "r": 0,
+      "x": "Jean-Pierre Guingané (1947-2011), dramaturge et professeur d'arts dramatiques, fonde le Théâtre de la Fraternité en 1975. Il crée aussi l'Espace culturel Gambidi à Ouagadougou en 1996. Une école supérieure de théâtre de Ouagadougou porte aujourd'hui son nom.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "La Semaine nationale de la culture (SNC) a été créée en :",
+      "o": [
+        "1980",
+        "1983",
+        "1987",
+        "1990"
+      ],
+      "r": 1,
+      "x": "La SNC est créée en 1983 et sa première édition se tient à Ouagadougou en décembre de la même année. Depuis 1990, elle a lieu à Bobo-Dioulasso, tous les deux ans. Elle met en compétition des artistes de toutes les régions du pays pour le Grand prix national des arts et des lettres.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "Depuis 1990, la Semaine nationale de la culture se tient à :",
+      "o": [
+        "Ouagadougou",
+        "Bobo-Dioulasso",
+        "Koudougou",
+        "Ouahigouya"
+      ],
+      "r": 1,
+      "x": "La SNC est biennale et alterne avec le FESPACO, organisé à Ouagadougou. Elle se déroule à Bobo-Dioulasso, deuxième ville du pays, depuis 1990. Chronologie SNC : la première édition, « Ouaga 83 », s’est déroulée du 20 au 30 décembre 1983 ; la deuxième a eu lieu à Gaoua en 1984 ; la troisième s’est tenue à Bobo-Dioulasso en 1986 et la quatrième a eu lieu à Koudougou en 1988.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "Le concours organisé lors de la Semaine nationale de la culture s'appelle :",
+      "o": [
+        "Le Grand prix littéraire d'Afrique noire",
+        "Le Grand prix national des arts et des lettres",
+        "L'Étalon d'or de Yennenga",
+        "Le prix Kouroukan Fouga"
+      ],
+      "r": 1,
+      "x": "Le Grand prix national des arts et des lettres (GPNAL) récompense, à chaque SNC, les meilleurs artistes et écrivains dans plusieurs catégories. Des écrivaines comme Sophie Heidi Kam y ont été primées. L'Étalon d'or de Yennenga est, lui, la récompense suprême du FESPACO.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "La Foire internationale du livre de Ouagadougou (FILO) a tenu sa première édition en :",
+      "o": [
+        "1996",
+        "2000",
+        "2004",
+        "2010"
+      ],
+      "r": 1,
+      "x": "La FILO a été lancée en 2000 à Ouagadougou. Elle réunit éditeurs, auteurs et lecteurs autour de la promotion du livre. Elle décerne aussi des prix, comme le grand prix attribué en 2021 à Sophie Heidi Kam pour « Mémoires vivantes ».",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« L'Enfant noir » (1953), récit autobiographique d'enfance, est l'œuvre de :",
+      "o": [
+        "Ferdinand Oyono",
+        "Camara Laye",
+        "Seydou Badian",
+        "Abdoulaye Sadji"
+      ],
+      "r": 1,
+      "x": "Le Guinéen Camara Laye (1928-1980) publie ce récit en 1953 chez Plon. Il y raconte son enfance à Kouroussa, en Guinée, puis son départ pour la France. Le livre reçoit le prix Charles-Veillon en 1954 et a été adapté au cinéma par Laurent Chevallier en 1995.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "Camara Laye, auteur de « L'Enfant noir », est originaire de :",
+      "o": [
+        "Mali",
+        "Sénégal",
+        "Côte d'Ivoire",
+        "Guinée"
+      ],
+      "r": 3,
+      "x": "Camara Laye est né en 1928 à Kouroussa, en Haute-Guinée, ville qu'il évoque dans « L'Enfant noir » (1953). Il est aussi l'auteur du « Regard du roi » (1954). Dans « Le Maître de la parole » (1978), il transcrit l'épopée de Soundjata racontée par un griot.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Une vie de boy » (1956), journal du jeune Toundi, est l'œuvre de :",
+      "o": [
+        "Mongo Beti",
+        "Camara Laye",
+        "Ferdinand Oyono",
+        "Guillaume Oyono Mbia"
+      ],
+      "r": 2,
+      "x": "Le Camerounais Ferdinand Oyono (1929-2010) publie ce roman en 1956 chez Julliard, à Paris. À travers le journal de Toundi, domestique d'un commandant blanc, il dénonce l'hypocrisie et la brutalité de la société coloniale. Il ne faut pas le confondre avec son compatriote Guillaume Oyono Mbia, auteur de la comédie « Trois prétendants… un mari ».",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Le Vieux Nègre et la médaille » est un roman de :",
+      "o": [
+        "Ferdinand Oyono",
+        "Mongo Beti",
+        "Bernard Dadié",
+        "Sembène Ousmane"
+      ],
+      "r": 0,
+      "x": "Ferdinand Oyono publie ce roman en 1956, la même année qu'« Une vie de boy ». Il y suit Meka, vieux paysan camerounais décoré par l'administration coloniale, qui découvre peu à peu le mépris des colons. Oyono deviendra ensuite diplomate et ministre dans son pays.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Une si longue lettre » (1979) de Mariama Bâ est un roman :",
+      "o": [
+        "Épique",
+        "Policier",
+        "Épistolaire",
+        "Historique"
+      ],
+      "r": 2,
+      "x": "La Sénégalaise Mariama Bâ (1929-1981) publie ce roman en 1979. Il prend la forme d'une longue lettre que Ramatoulaye, devenue veuve, adresse à son amie Aïssatou, et aborde la polygamie et la condition des femmes. Le livre obtient le prix Noma en 1980.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "En 1980, « Une si longue lettre » de Mariama Bâ reçoit :",
+      "o": [
+        "Le prix Goncourt",
+        "Le prix Renaudot",
+        "Le prix Noma",
+        "Le prix Nobel"
+      ],
+      "r": 2,
+      "x": "Le prix Noma récompensait des œuvres publiées en Afrique ; Mariama Bâ en est la première lauréate. Son roman décrit, sous forme de lettre, la condition des femmes face à la polygamie au Sénégal. Elle meurt en 1981, avant la parution de son second roman, « Un chant écarlate ».",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Soundjata ou l'épopée mandingue » (1960) a été transcrit par :",
+      "o": [
+        "Amadou Hampâté Bâ",
+        "Djibril Tamsir Niane",
+        "Cheikh Hamidou Kane",
+        "Seydou Badian"
+      ],
+      "r": 1,
+      "x": "L'historien guinéen Djibril Tamsir Niane publie en 1960 ce récit transcrit de la parole du griot Mamadou Kouyaté. L'épopée raconte la vie de Soundjata Keïta, fondateur de l'empire du Mali au XIIIe siècle. C'est l'un des textes les plus étudiés de la tradition orale africaine.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "Dans l'épopée mandingue, Soundjata Keïta triomphe du roi du Sosso :",
+      "o": [
+        "Samory Touré",
+        "Soni Ali Ber",
+        "El Hadj Omar",
+        "Soumaoro Kanté"
+      ],
+      "r": 3,
+      "x": "La victoire de Soundjata sur Soumaoro Kanté, roi du Sosso, à Kirina vers 1235, fonde l'empire du Mali. Selon la tradition, l'organisation du nouvel empire est fixée par la charte de Kouroukan Fouga. Samory Touré est, lui, un résistant à la colonisation au XIXe siècle.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Sous l'orage », roman sur le conflit entre tradition et modernité, est l'œuvre de :",
+      "o": [
+        "Camara Laye",
+        "Massa Makan Diabaté",
+        "Seydou Badian",
+        "Yambo Ouologuem"
+      ],
+      "r": 2,
+      "x": "Le Malien Seydou Badian Kouyaté (1928-2018) publie « Sous l'orage » en 1957. Il y raconte l'histoire de Kany, jeune fille qui refuse un mariage arrangé, et met en scène le conflit entre générations. Il a aussi écrit les paroles de l'hymne national du Mali.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "L'écrivain malien qui a écrit les paroles de l'hymne national du Mali est :",
+      "o": [
+        "Amadou Hampâté Bâ",
+        "Yambo Ouologuem",
+        "Massa Makan Diabaté",
+        "Seydou Badian"
+      ],
+      "r": 3,
+      "x": "Seydou Badian Kouyaté (1928-2018), médecin et écrivain, a écrit les paroles de l'hymne « Le Mali ». Il a été ministre sous la présidence de Modibo Keïta. Il est aussi l'auteur du roman « Sous l'orage » (1957), sur le refus d'un mariage arrangé.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Le Devoir de violence », prix Renaudot 1968, est l'œuvre de :",
+      "o": [
+        "Yambo Ouologuem",
+        "Ahmadou Kourouma",
+        "Seydou Badian",
+        "Tierno Monénembo"
+      ],
+      "r": 0,
+      "x": "Le Malien Yambo Ouologuem (1940-2017) devient avec ce roman le premier écrivain africain lauréat du prix Renaudot. Le livre retrace l'histoire violente du Nakem, pays imaginaire, de 1202 à 1947, et bouscule l'image idéalisée de l'Afrique précoloniale. Accusé ensuite de plagiat, Ouologuem a inspiré « La Plus Secrète Mémoire des hommes » de Mohamed Mbougar Sarr, prix Goncourt 2021.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Allah n'est pas obligé », roman sur un enfant-soldat, prix Renaudot 2000, est l'œuvre de :",
+      "o": [
+        "Alain Mabanckou",
+        "Tierno Monénembo",
+        "Sony Labou Tansi",
+        "Ahmadou Kourouma"
+      ],
+      "r": 3,
+      "x": "L'Ivoirien Ahmadou Kourouma (1927-2003) obtient pour ce roman le prix Renaudot et le Goncourt des lycéens en 2000. Le narrateur, Birahima, est un enfant-soldat pris dans les guerres du Liberia et de la Sierra Leone. Kourouma est aussi l'auteur des « Soleils des Indépendances » (1968).",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Batouala », premier roman d'un écrivain noir à recevoir le prix Goncourt (1921), est l'œuvre de :",
+      "o": [
+        "Léopold Sédar Senghor",
+        "René Maran",
+        "Aimé Césaire",
+        "Camara Laye"
+      ],
+      "r": 1,
+      "x": "René Maran (1887-1960), né à Fort-de-France de parents guyanais et administrateur colonial, reçoit le Goncourt en 1921. Sous-titré « Véritable roman nègre », son livre décrit la vie en Oubangui-Chari, l'actuelle Centrafrique. Sa préface dénonce les abus de la colonisation, ce qui lui vaut de vives critiques.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "Le Sénégalais Mohamed Mbougar Sarr reçoit le prix Goncourt 2021 pour :",
+      "o": [
+        "Le Ventre de l'Atlantique",
+        "Mémoires de porc-épic",
+        "La Plus Secrète Mémoire des hommes",
+        "En attendant le vote des bêtes sauvages"
+      ],
+      "r": 2,
+      "x": "Mohamed Mbougar Sarr, né en 1990, devient avec ce roman le premier écrivain d'Afrique subsaharienne lauréat du prix Goncourt. Le narrateur, un jeune écrivain sénégalais, enquête sur Elimane, auteur africain d'un livre célèbre paru en 1938 puis tombé dans l'oubli. Ce personnage s'inspire du destin de Yambo Ouologuem, accusé de plagiat après son prix Renaudot de 1968.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "Le premier écrivain d'Afrique noire à recevoir le prix Nobel de littérature, en 1986, est :",
+      "o": [
+        "Chinua Achebe",
+        "Ngugi wa Thiong'o",
+        "Léopold Sédar Senghor",
+        "Wole Soyinka"
+      ],
+      "r": 3,
+      "x": "Le Nigérian Wole Soyinka, né en 1934, dramaturge et poète de langue anglaise, reçoit le prix Nobel en 1986. Il est notamment l'auteur de la pièce « La Mort et l'Écuyer du roi ». Son compatriote Chinua Achebe, auteur du « Monde s'effondre », n'a jamais obtenu ce prix.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "Le roman « Le monde s'effondre » (« Things Fall Apart », 1958) est l'œuvre de :",
+      "o": [
+        "Chinua Achebe",
+        "Wole Soyinka",
+        "Ngugi wa Thiong'o",
+        "Ben Okri"
+      ],
+      "r": 0,
+      "x": "Le Nigérian Chinua Achebe (1930-2013) publie ce roman en 1958. Il y décrit la chute d'Okonkwo et la désagrégation d'une société igbo à l'arrivée des colons et des missionnaires. C'est l'un des romans africains les plus lus et les plus traduits au monde.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "En 2021, le prix Nobel de littérature est attribué à l'écrivain tanzanien :",
+      "o": [
+        "Abdulrazak Gurnah",
+        "Ngugi wa Thiong'o",
+        "Wole Soyinka",
+        "Nuruddin Farah"
+      ],
+      "r": 0,
+      "x": "Abdulrazak Gurnah, né en 1948 à Zanzibar et écrivant en anglais, est récompensé pour son œuvre sur la colonisation et l'exil. Il vit et enseigne au Royaume-Uni depuis la fin des années 1960. Son roman « Paradis » (1994) avait été sélectionné pour le Booker Prize.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "L'écrivain kényan qui a renoncé à l'anglais pour écrire en gikuyu est :",
+      "o": [
+        "Ngugi wa Thiong'o",
+        "Meja Mwangi",
+        "Binyavanga Wainaina",
+        "Margaret Ogola"
+      ],
+      "r": 0,
+      "x": "Ngugi wa Thiong'o (1938-2025) a d'abord publié ses romans en anglais avant d'écrire en gikuyu. Emprisonné sans procès en 1978, il défend ensuite les langues africaines dans son essai « Décoloniser l'esprit » (1986). Il est aussi l'auteur de « Pétales de sang » (1977).",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Mémoires de porc-épic », prix Renaudot 2006, est un roman de :",
+      "o": [
+        "Alain Mabanckou",
+        "Sony Labou Tansi",
+        "Henri Lopes",
+        "Emmanuel Dongala"
+      ],
+      "r": 0,
+      "x": "Le Congolais Alain Mabanckou, né en 1966 à Pointe-Noire, reçoit le Renaudot en 2006 pour ce roman. Il s'y inspire d'une croyance selon laquelle chaque homme a un double animal. Il est aussi l'auteur de « Verre cassé » (2005).",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Le Roi de Kahel », prix Renaudot 2008, est un roman de :",
+      "o": [
+        "Camara Laye",
+        "Alain Mabanckou",
+        "Williams Sassine",
+        "Tierno Monénembo"
+      ],
+      "r": 3,
+      "x": "Le Guinéen Tierno Monénembo, né en 1947, y retrace l'aventure d'Aimé Olivier de Sanderval, explorateur français au Fouta-Djalon au XIXe siècle. Le roman obtient le Renaudot en 2008. Avant lui, Ouologuem (1968), Kourouma (2000) et Mabanckou (2006) avaient reçu ce prix.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« La Saison de l'ombre », prix Femina 2013, est un roman de :",
+      "o": [
+        "Léonora Miano",
+        "Calixthe Beyala",
+        "Fatou Diome",
+        "Véronique Tadjo"
+      ],
+      "r": 0,
+      "x": "La Camerounaise Léonora Miano, née en 1973 à Douala, reçoit le prix Femina en 2013 pour ce roman. Elle y évoque la traite négrière du point de vue des Africains restés sur le continent. Le Femina est un prix littéraire français décerné par un jury exclusivement féminin.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Le Ventre de l'Atlantique » (2003) est un roman de :",
+      "o": [
+        "Mariama Bâ",
+        "Aminata Sow Fall",
+        "Fatou Diome",
+        "Ken Bugul"
+      ],
+      "r": 2,
+      "x": "La Sénégalaise Fatou Diome, née en 1968 sur l'île de Niodior, publie ce premier roman en 2003. Elle y traite du rêve d'émigration vers l'Europe des jeunes de son île natale. Le roman montre le décalage entre ce rêve et la réalité de l'exil.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Le Baobab fou » (1982) est un récit autobiographique de :",
+      "o": [
+        "Fatou Diome",
+        "Ken Bugul",
+        "Mariama Bâ",
+        "Aminata Sow Fall"
+      ],
+      "r": 1,
+      "x": "Ken Bugul, nom de plume de la Sénégalaise Mariètou Mbaye, née en 1947, publie ce récit en 1982. Elle y raconte son déracinement pendant ses études en Belgique. Son pseudonyme signifie en wolof « personne n'en veut ».",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Amkoullel, l'enfant peul » (1991) est le premier tome des mémoires de :",
+      "o": [
+        "Amadou Hampâté Bâ",
+        "Cheikh Hamidou Kane",
+        "Camara Laye",
+        "Djibril Tamsir Niane"
+      ],
+      "r": 0,
+      "x": "Le Malien Amadou Hampâté Bâ (1901-1991) y raconte son enfance au début du XXe siècle. Le livre paraît en 1991, l'année de sa mort, et le second tome, « Oui mon commandant ! », en 1994. Il est aussi l'auteur de « L'Étrange Destin de Wangrin » (1973).",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Le Pagne noir » (1955) est un recueil de contes de :",
+      "o": [
+        "Birago Diop",
+        "Amadou Hampâté Bâ",
+        "Ferdinand Oyono",
+        "Bernard Dadié"
+      ],
+      "r": 3,
+      "x": "L'Ivoirien Bernard Binlin Dadié (1916-2019) publie ce recueil en 1955. Il y reprend des contes de la tradition orale, dont ceux de l'araignée Kacou Ananzè. Il est aussi l'auteur du roman autobiographique « Climbié » (1956).",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Trois prétendants… un mari », comédie sur la dot et le mariage forcé, est l'œuvre de :",
+      "o": [
+        "Ferdinand Oyono",
+        "Mongo Beti",
+        "Bernard Binlin Dadié",
+        "Guillaume Oyono Mbia"
+      ],
+      "r": 3,
+      "x": "Le Camerounais Guillaume Oyono Mbia, né en 1939, y fait la satire d'une famille qui veut marier sa fille au plus offrant. Très jouée en Afrique francophone, cette comédie dénonce la dot transformée en marchandage. Il ne faut pas le confondre avec Ferdinand Oyono, auteur d'« Une vie de boy ».",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "Le roman « Maïmouna », histoire d'une jeune fille attirée par la ville de Dakar, est l'œuvre de :",
+      "o": [
+        "Abdoulaye Sadji",
+        "Ousmane Socé",
+        "Cheikh Hamidou Kane",
+        "Birago Diop"
+      ],
+      "r": 0,
+      "x": "Le Sénégalais Abdoulaye Sadji (1910-1961) y décrit l'exode d'une jeune fille de la campagne vers Dakar et ses désillusions. Il est aussi l'auteur de « Nini, mulâtresse du Sénégal ». Il a écrit avec Senghor le livre de lecture « La Belle Histoire de Leuk-le-Lièvre ».",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "Le Grand prix littéraire d'Afrique noire est décerné par :",
+      "o": [
+        "L'Académie Goncourt",
+        "L'ADELF",
+        "L'UNESCO",
+        "L'Union africaine"
+      ],
+      "r": 1,
+      "x": "L'Association des écrivains de langue française (ADELF) a créé ce prix en 1960. Son premier lauréat est l'Ivoirien Aké Loba, en 1961, pour « Kocoumbo, l'étudiant noir ». Deux Burkinabè l'ont obtenu : Titinga Pacéré en 1982 et Patrick Ilboudo en 1992.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "Le premier lauréat du Grand prix littéraire d'Afrique noire (1961) est :",
+      "o": [
+        "Camara Laye",
+        "Bernard Dadié",
+        "Aké Loba",
+        "Seydou Badian"
+      ],
+      "r": 2,
+      "x": "L'Ivoirien Aké Loba (1927-2012) est récompensé pour « Kocoumbo, l'étudiant noir », qui raconte la vie difficile d'un étudiant africain à Paris. Il a ensuite mené une carrière politique en Côte d'Ivoire. Le Burkinabè Titinga Pacéré obtiendra ce prix en 1982.",
+      "_batchId": "francais/2026-11-19/LOT5"
+    },
+    {
+      "q": "« Burkina blues » (2000) est un recueil de poèmes de :",
+      "o": [
+        "Sophie Heidi Kam",
+        "Bernadette Sanou Dao",
+        "Sandra Pierrette Kanzié",
+        "Angèle Bassolé-Ouédraogo"
+      ],
+      "r": 3,
+      "x": "Angèle Bassolé-Ouédraogo, poétesse burkinabè née en 1967, a passé son enfance et sa jeunesse à Abidjan. Installée au Canada depuis 1992 et docteure en lettres de l'université d'Ottawa, elle y publie l'essentiel de son œuvre. « Burkina blues », paru au Québec en 2000, est son premier recueil.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Le recueil « Avec tes mots » d'Angèle Bassolé-Ouédraogo a été récompensé par :",
+      "o": [
+        "Le prix Trillium",
+        "Le prix Goncourt",
+        "Le prix Renaudot",
+        "Le prix Noma"
+      ],
+      "r": 0,
+      "x": "Le prix Trillium, décerné dans la province canadienne de l'Ontario, a récompensé ce recueil de poésie de langue française. Angèle Bassolé-Ouédraogo vit au Canada depuis 1992, où elle a soutenu son doctorat à l'université d'Ottawa. Le Goncourt et le Renaudot sont, eux, des prix français.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Le recueil « Yennenga » (2012) d'Angèle Bassolé-Ouédraogo porte le nom de la princesse considérée comme :",
+      "o": [
+        "La fondatrice de Bobo-Dioulasso",
+        "La reine du Gulmu",
+        "La mère du peuple moaga",
+        "L'épouse de Soundjata"
+      ],
+      "r": 2,
+      "x": "Selon la tradition, la princesse Yennenga est la mère de Ouédraogo, ancêtre des Mossi. Angèle Bassolé-Ouédraogo lui consacre un recueil en 2012, après « Burkina blues » (2000) et « Avec tes mots ». Son nom a aussi été donné à l'Étalon d'or de Yennenga, trophée du FESPACO.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Le recueil « Mémoires vivantes » de Sophie Heidi Kam a reçu en 2021 :",
+      "o": [
+        "Le prix Ahmadou-Kourouma",
+        "Le grand prix de la FILO",
+        "Le Grand prix littéraire d'Afrique noire",
+        "Le prix Renaudot"
+      ],
+      "r": 1,
+      "x": "La Foire internationale du livre de Ouagadougou a décerné son grand prix à ce recueil en 2021. Sophie Heidi Kam, née en 1968 à Ouagadougou, est poétesse, dramaturge et romancière. Elle a aussi été primée à plusieurs reprises au Grand prix national des arts et des lettres.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« Et le soleil sourira à la mer » (2008) est une pièce de théâtre de :",
+      "o": [
+        "Angèle Bassolé-Ouédraogo",
+        "Monique Ilboudo",
+        "Bernadette Sanou Dao",
+        "Sophie Heidi Kam"
+      ],
+      "r": 3,
+      "x": "Sophie Heidi Kam, née en 1968 à Ouagadougou, est poétesse, dramaturge et romancière. Elle reçoit son premier prix de poésie au Grand prix national des arts et des lettres en 2000. En 2021, son recueil « Mémoires vivantes » obtient le grand prix de la FILO.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "La Burkinabè Malika Ouattara, née en 1993, s'est illustrée dans :",
+      "o": [
+        "Le roman",
+        "Le théâtre-forum",
+        "Le slam",
+        "Le conte"
+      ],
+      "r": 2,
+      "x": "Surnommée « Malika la Slameuse », Malika Ouattara est devenue une figure majeure du slam en Afrique de l'Ouest. Le slam est une poésie déclamée, souvent sur scène et parfois sans musique. En 2019, elle crée la Fondation Slamazone, qu'elle préside.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Le premier album de Malika Ouattara, « Slamazone » (2016), s'est vendu à plus de :",
+      "o": [
+        "1 000 exemplaires",
+        "2 000 exemplaires",
+        "5 000 exemplaires",
+        "10 000 exemplaires"
+      ],
+      "r": 2,
+      "x": "L'album « Slamazone », sorti en 2016, a dépassé les 5 000 exemplaires vendus, un chiffre élevé pour le marché burkinabè. Sa sortie avait été retardée par l'attentat de Ouagadougou de janvier 2016. Malika Ouattara a ensuite créé la Fondation Slamazone en 2019.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Le festival de théâtre des Récréâtrales a été créé à Ouagadougou en :",
+      "o": [
+        "1998",
+        "2002",
+        "2006",
+        "2010"
+      ],
+      "r": 1,
+      "x": "Les Récréâtrales ont été lancées en 2002 à l'initiative de la compagnie Falinga d'Étienne Minoungou. Le festival transforme les cours familiales du secteur de Bougsemtenga en lieux de création et de spectacle. Il a lieu tous les deux ans.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Les Récréâtrales ont été fondées par le comédien et metteur en scène :",
+      "o": [
+        "Étienne Minoungou",
+        "Prosper Kompaoré",
+        "Jean-Pierre Guingané",
+        "Aristide Tarnagda"
+      ],
+      "r": 0,
+      "x": "Étienne Minoungou, comédien, metteur en scène et responsable de la compagnie Falinga, lance le festival en 2002. Il en a assuré la direction artistique lors des premières éditions. Cette direction a ensuite été confiée à l'auteur et metteur en scène Aristide Tarnagda.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Depuis la 9e édition, la direction artistique des Récréâtrales est assurée par :",
+      "o": [
+        "Prosper Kompaoré",
+        "Aristide Tarnagda",
+        "Jean-Pierre Guingané",
+        "Norbert Zongo"
+      ],
+      "r": 1,
+      "x": "Aristide Tarnagda, auteur et metteur en scène, prend la direction artistique du festival au milieu des années 2010. Il est aussi l'auteur de « Sank ou la patience des morts ». Il a écrit le texte de « Musika », créé en 2018 dans une mise en scène d'Odile Sankara.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Les Récréâtrales se déroulent dans le quartier ouagalais de :",
+      "o": [
+        "Dapoya",
+        "Gounghin",
+        "Tanghin",
+        "Pissy"
+      ],
+      "r": 1,
+      "x": "Le festival investit le secteur de Bougsemtenga, dans le quartier de Gounghin, dont les cours familiales deviennent des scènes. Ce choix rapproche le théâtre des habitants. Biennal, le festival est né en 2002 à l'initiative d'Étienne Minoungou.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« Sank ou la patience des morts » (2016) est l'œuvre de :",
+      "o": [
+        "Étienne Minoungou",
+        "Jacques Prosper Bazié",
+        "Aristide Tarnagda",
+        "Patrick G. Ilboudo"
+      ],
+      "r": 2,
+      "x": "Aristide Tarnagda, né en 1983, est auteur dramatique et metteur en scène. Il appartient à la nouvelle génération du théâtre burkinabè. Il assure aussi la direction artistique des Récréâtrales, festival de théâtre de Ouagadougou.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« Le Miel amer » est un roman de l'écrivain burkinabè :",
+      "o": [
+        "Maxime Z. Somé",
+        "Malidoma Patrice Somé",
+        "Roger Nikiéma",
+        "Jean-Baptiste Somé"
+      ],
+      "r": 3,
+      "x": "Jean-Baptiste Somé est l'auteur du roman Le Miel amer, publié pour la première fois en 1985 chez Naaman, à Sherbrooke, au Canada. Une troisième édition paraît à Ouagadougou chez La Muse en 2014. Il ne faut pas le confondre avec Malidoma Patrice Somé, connu pour ses ouvrages sur la spiritualité africaine.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« Une flamme dans le noir » est un roman de :",
+      "o": [
+        "Augustin-Sondé Coulibaly",
+        "Kollin Noaga",
+        "Étienne Sawadogo",
+        "Ansomwin Ignace Hien"
+      ],
+      "r": 3,
+      "x": "Ansomwin Ignace Hien, né en 1952, est romancier, poète et conteur burkinabè. Ce roman se déroule en grande partie en Côte d'Ivoire. Il appartient à la même génération d'écrivains que Jean-Baptiste Somé et Jacques Prosper Bazié.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« La Femme de diable » (2003), recueil de nouvelles, est l'œuvre de :",
+      "o": [
+        "Monique Ilboudo",
+        "Bernadette Sanou Dao",
+        "Sophie Heidi Kam",
+        "Suzy Henrique Nikiéma"
+      ],
+      "r": 1,
+      "x": "Bernadette Sanou Dao, née en 1952, est poétesse, autrice pour la jeunesse et femme politique ; elle a été ministre de la Culture en 1986-1987. « La Femme de diable et autres histoires » paraît en 2003 à Ouagadougou, après un premier recueil de nouvelles, « La Dernière Épouse » (1997). Elle a aussi reçu le prix Jean Cocteau en 1995 pour son recueil de poèmes « Quote-Part ».",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« L'Homme à la bagnole rouge » (2001) est un roman de :",
+      "o": [
+        "Roger Nikiéma",
+        "Monique Ilboudo",
+        "Sandra Pierrette Kanzié",
+        "Suzy Henrique Nikiéma"
+      ],
+      "r": 3,
+      "x": "Suzy Henrique Nikiéma, née en 1983 à Ouagadougou, publie ce roman chez L'Harmattan à seulement 18 ans. Une BMW rouge y suit une adolescente, Pamela Sanfo, et dévoile des secrets de famille, des amours malheureuses et un meurtre. Il ne faut pas la confondre avec Roger Nikiéma, auteur de « Dessein contraire » (1967).",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "En 1992, le Grand prix littéraire d'Afrique noire est attribué au Burkinabè Patrick G. Ilboudo pour :",
+      "o": [
+        "Le Procès du muet",
+        "Le Héraut têtu",
+        "Le Vertige du trône",
+        "Les Toilettes"
+      ],
+      "r": 1,
+      "x": "Patrick Ilboudo (1951-1994) devient le deuxième Burkinabè lauréat de ce prix, dix ans après Titinga Pacéré (1982). Il est aussi l'auteur des « Toilettes » (1983), du « Procès du muet » (1986) et du « Vertige du trône » (1990). Il meurt en 1994, deux ans après cette distinction.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Le deuxième roman de Norbert Zongo, paru après « Le Parachutage », s'intitule :",
+      "o": [
+        "Rougbêinga",
+        "Le Retour au village",
+        "Dessein contraire",
+        "La Saga des Immortels"
+      ],
+      "r": 0,
+      "x": "Norbert Zongo publie « Rougbêinga » en 1990, environ deux ans après « Le Parachutage » (1988). Ce roman satirique sur l'exercice du pouvoir se déroule à l'époque coloniale. Zongo se consacre ensuite au journalisme et fonde « L'Indépendant » en 1993.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "En 2001, l'ONG Transparency International a décerné à titre posthume à Norbert Zongo :",
+      "o": [
+        "Son prix de l'intégrité",
+        "Le prix Nobel de la paix",
+        "Le prix Goncourt",
+        "Le prix Sakharov"
+      ],
+      "r": 0,
+      "x": "Le prix de l'intégrité de Transparency International honore son combat contre la corruption. Norbert Zongo avait été assassiné le 13 décembre 1998 près de Sapouy. Il avait fondé l'hebdomadaire « L'Indépendant » en 1993.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Titinga Frédéric Pacéré exerçait la profession de :",
+      "o": [
+        "Médecin",
+        "Avocat",
+        "Instituteur",
+        "Journaliste"
+      ],
+      "r": 1,
+      "x": "Maître Titinga Frédéric Pacéré (1943-2024) était avocat, poète et griot. Il a mené de front sa carrière juridique et son œuvre littéraire, couronnée en 1982 par le Grand prix littéraire d'Afrique noire. Il a aussi fondé le musée de Manéga et créé la bendrologie, science du langage tambouriné.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "L'ouvrage « Dimdolobsom, l'homme, l'hommage » (2008) de Titinga Pacéré est consacré à :",
+      "o": [
+        "Nazi Boni",
+        "Dim-Dolobsom Ouédraogo",
+        "Joseph Ki-Zerbo",
+        "Augustin-Sondé Coulibaly"
+      ],
+      "r": 1,
+      "x": "Pacéré rend hommage à Dim-Dolobsom Ouédraogo (1897-1940), auteur de « Maximes, pensées et devinettes mossi » (1934). Cet intellectuel est l'un des pionniers de l'écrit au Burkina Faso. L'ouvrage s'ajoute à l'abondante production de Pacéré, poète, avocat et fondateur du musée de Manéga.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "La comédie de mœurs « L'Avare moaga », pièce burkinabè des années 1960, est l'œuvre de :",
+      "o": [
+        "Pierre Dabiré",
+        "Ouamdégré Ouédraogo",
+        "Moussa Savadogo",
+        "Jean-Pierre Guingané"
+      ],
+      "r": 1,
+      "x": "Ouamdégré Ouédraogo est l'un des dramaturges burkinabè des années 1960, avec Pierre Dabiré et Moussa Savadogo. Sa pièce, sous-titrée « comédie de mœurs », transpose le thème de l'avarice dans la société moaga. Les pièces de cette époque adaptent souvent des modèles classiques, comme « L'Avare » de Molière, aux réalités locales.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "La pièce « Sansoa », du théâtre burkinabè des années 1960, est l'œuvre de :",
+      "o": [
+        "Pierre Dabiré",
+        "Ouamdégré Ouédraogo",
+        "Moussa Savadogo",
+        "Prosper Kompaoré"
+      ],
+      "r": 0,
+      "x": "Pierre Dabiré fait partie des dramaturges burkinabè des années 1960, avec Ouamdégré Ouédraogo et Moussa Savadogo. Ce dernier est l'auteur de « L'Oracle » et de « La Fille de la Volta ». Ouamdégré Ouédraogo a, lui, écrit la comédie de mœurs « L'Avare moaga ».",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Joseph Ki-Zerbo a dirigé, pour l'UNESCO, le volume I de :",
+      "o": [
+        "L'Encyclopédie de l'islam",
+        "L'Atlas du Sahel",
+        "L'Histoire générale de l'Afrique",
+        "La Charte de Kouroukan Fouga"
+      ],
+      "r": 2,
+      "x": "Le volume I de l'Histoire générale de l'Afrique, consacré à la méthodologie et à la préhistoire, a été dirigé par Joseph Ki-Zerbo. Ce grand projet de l'UNESCO visait à écrire l'histoire de l'Afrique d'un point de vue africain. Ki-Zerbo est aussi l'auteur d'« Histoire de l'Afrique noire » (1972).",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« À quand l'Afrique ? » (2003), livre d'entretiens, est l'œuvre de l'historien burkinabè :",
+      "o": [
+        "Salaka Sanou",
+        "Cheikh Anta Diop",
+        "Titinga Pacéré",
+        "Joseph Ki-Zerbo"
+      ],
+      "r": 3,
+      "x": "Dans ce livre d'entretiens avec René Holenstein, Joseph Ki-Zerbo (1922-2006) réfléchit au développement de l'Afrique par elle-même. Il y défend l'idée qu'« on ne développe pas, on se développe ». Il est aussi l'auteur d'« Histoire de l'Afrique noire » (1972).",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Le mot « négritude » est employé pour la première fois par :",
+      "o": [
+        "Aimé Césaire",
+        "Léopold Sédar Senghor",
+        "Léon-Gontran Damas",
+        "Alioune Diop"
+      ],
+      "r": 0,
+      "x": "Aimé Césaire forge le mot dans les années 1930 et l'emploie notamment dans le « Cahier d'un retour au pays natal » (1939). Avec Senghor et Léon-Gontran Damas, il fonde à Paris la revue « L'Étudiant noir » en 1935. Senghor devient ensuite le grand théoricien de la Négritude.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« Discours sur le colonialisme » (1950) est un essai de :",
+      "o": [
+        "Frantz Fanon",
+        "Aimé Césaire",
+        "Albert Memmi",
+        "Cheikh Anta Diop"
+      ],
+      "r": 1,
+      "x": "Le Martiniquais Aimé Césaire publie ce texte en 1950. Il y dénonce la colonisation comme une entreprise de déshumanisation, pour les colonisés comme pour les colonisateurs. Frantz Fanon (« Les Damnés de la terre ») et Albert Memmi (« Portrait du colonisé ») ont écrit d'autres essais anticoloniaux majeurs.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "La pièce « Une saison au Congo » d'Aimé Césaire a pour héros :",
+      "o": [
+        "Thomas Sankara",
+        "Mobutu Sese Seko",
+        "Patrice Lumumba",
+        "Kwame Nkrumah"
+      ],
+      "r": 2,
+      "x": "Aimé Césaire publie cette pièce en 1966 et y retrace le destin tragique de Patrice Lumumba, Premier ministre du Congo indépendant, assassiné en 1961. Il est aussi l'auteur de « La Tragédie du roi Christophe », sur Haïti. Ces pièces font du poète de la Négritude un dramaturge majeur.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Le premier Africain élu à l'Académie française, en 1983, est :",
+      "o": [
+        "Aimé Césaire",
+        "Mohamed Mbougar Sarr",
+        "Léopold Sédar Senghor",
+        "Cheikh Hamidou Kane"
+      ],
+      "r": 2,
+      "x": "Poète et premier président du Sénégal (1960-1980), Léopold Sédar Senghor entre à l'Académie française en 1983. Il est l'un des grands promoteurs de la Francophonie et le théoricien de la Négritude. Parmi ses recueils figurent « Chants d'ombre » (1945) et « Éthiopiques » (1956).",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« Hosties noires » (1948) est un recueil de poèmes de :",
+      "o": [
+        "Aimé Césaire",
+        "Cheikh Hamidou Kane",
+        "Léon-Gontran Damas",
+        "Léopold Sédar Senghor"
+      ],
+      "r": 3,
+      "x": "Léopold Sédar Senghor publie ce recueil en 1948, l'année de son « Anthologie de la nouvelle poésie nègre et malgache ». Il y rend hommage notamment aux tirailleurs sénégalais morts pendant les guerres mondiales. Son premier recueil, « Chants d'ombre », date de 1945.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "La préface « Orphée noir », placée en tête de l'« Anthologie de la nouvelle poésie nègre et malgache » de Senghor (1948), est signée :",
+      "o": [
+        "André Breton",
+        "Albert Camus",
+        "Jean-Paul Sartre",
+        "François Mauriac"
+      ],
+      "r": 2,
+      "x": "Dans « Orphée noir », Jean-Paul Sartre présente la Négritude au public français. Il la décrit comme un « racisme antiraciste », formule restée célèbre. André Breton, lui, a préfacé le « Cahier d'un retour au pays natal » de Césaire.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Le poème « Femme noire » (« Femme nue, femme noire ») est l'œuvre de :",
+      "o": [
+        "Léopold Sédar Senghor",
+        "Aimé Césaire",
+        "David Diop",
+        "Léon-Gontran Damas"
+      ],
+      "r": 0,
+      "x": "Ce poème célèbre de Léopold Sédar Senghor paraît dans « Chants d'ombre » (1945). Il exalte la beauté de la femme africaine et, à travers elle, l'Afrique tout entière. Il est souvent étudié comme un texte emblématique de la Négritude.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Le poème « Souffles » (« Ceux qui sont morts ne sont jamais partis ») est l'œuvre de :",
+      "o": [
+        "Léopold Sédar Senghor",
+        "David Diop",
+        "Bernard Dadié",
+        "Birago Diop"
+      ],
+      "r": 3,
+      "x": "Ce poème de Birago Diop paraît d'abord dans les « Contes d'Amadou Koumba » (1947), avant d'être repris dans « Leurres et lueurs » (1960). Il exprime la croyance africaine en la présence des ancêtres dans la nature. Vétérinaire sénégalais, Birago Diop est l'un des grands transcripteurs de contes africains.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« Coups de pilon » (1956), recueil de poésie engagée, est l'œuvre de :",
+      "o": [
+        "Birago Diop",
+        "Léopold Sédar Senghor",
+        "David Diop",
+        "Tchicaya U Tam'si"
+      ],
+      "r": 2,
+      "x": "Le poète David Diop publie ce recueil en 1956. Il y dénonce la colonisation avec violence, notamment dans le poème « Afrique ». Il meurt en 1960 dans un accident d'avion, à 33 ans.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Le poème « Prière d'un petit enfant nègre » est l'œuvre du Guadeloupéen :",
+      "o": [
+        "Guy Tirolien",
+        "Aimé Césaire",
+        "Léon-Gontran Damas",
+        "Jacques Roumain"
+      ],
+      "r": 0,
+      "x": "Guy Tirolien (1917-1988) publie ce poème dans le recueil « Balles d'or » (1961). Un enfant y refuse d'aller à l'école des Blancs pour rester libre dans la nature. Le poème dénonce l'aliénation par l'école coloniale.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« Gouverneurs de la rosée » (1944), roman paysan, est l'œuvre de l'Haïtien :",
+      "o": [
+        "Aimé Césaire",
+        "René Maran",
+        "Jacques Roumain",
+        "Guy Tirolien"
+      ],
+      "r": 2,
+      "x": "L'Haïtien Jacques Roumain (1907-1944) achève ce roman peu avant sa mort ; il paraît en 1944. Il raconte le retour de Manuel dans son village assoiffé et sa quête de l'eau. Le roman célèbre la solidarité paysanne.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Mongo Beti est le pseudonyme de l'écrivain camerounais :",
+      "o": [
+        "Ferdinand Oyono",
+        "Guillaume Oyono Mbia",
+        "Francis Bebey",
+        "Alexandre Biyidi Awala"
+      ],
+      "r": 3,
+      "x": "Alexandre Biyidi Awala (1932-2001) a publié sous le nom de Mongo Beti, après un premier roman signé Eza Boto. Il est notamment l'auteur du « Pauvre Christ de Bomba » (1956), satire des missions catholiques. Son œuvre est une critique sévère du colonialisme et des dictatures.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Le roman « Ville cruelle » (1954) a été publié sous le pseudonyme d'Eza Boto par :",
+      "o": [
+        "Ferdinand Oyono",
+        "Mongo Beti",
+        "Camara Laye",
+        "Sembène Ousmane"
+      ],
+      "r": 1,
+      "x": "« Ville cruelle » est le premier roman de Mongo Beti, publié en 1954 sous le pseudonyme d'Eza Boto. Il raconte la découverte de la ville coloniale par un jeune paysan, Banda. L'auteur adopte ensuite le nom de Mongo Beti avec « Le Pauvre Christ de Bomba » (1956).",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« Force-Bonté » (1926), considéré comme l'un des premiers romans africains de langue française, est l'œuvre de :",
+      "o": [
+        "Ousmane Socé",
+        "Bakary Diallo",
+        "Paul Hazoumé",
+        "Félix Couchoro"
+      ],
+      "r": 1,
+      "x": "Le Sénégalais Bakary Diallo, ancien tirailleur, publie ce récit en 1926. Il y raconte son parcours pendant la Première Guerre mondiale. Le livre reste marqué par l'admiration pour la France coloniale, ce qui l'oppose aux écrivains de la Négritude.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Le roman « L'Esclave » (1929) est l'œuvre de :",
+      "o": [
+        "Bakary Diallo",
+        "Paul Hazoumé",
+        "Félix Couchoro",
+        "Ousmane Socé"
+      ],
+      "r": 2,
+      "x": "Félix Couchoro, né au Dahomey et installé au Togo, publie « L'Esclave » en 1929. Ce premier roman fait de lui l'un des pionniers du roman africain francophone. Il a ensuite publié de nombreux romans en feuilleton dans la presse togolaise.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« Doguicimi » (1938), roman historique sur le royaume d'Abomey, est l'œuvre de :",
+      "o": [
+        "Félix Couchoro",
+        "Paul Hazoumé",
+        "Olympe Bhêly-Quenum",
+        "Jean Pliya"
+      ],
+      "r": 1,
+      "x": "Le Dahoméen Paul Hazoumé publie ce roman en 1938. Il y décrit la cour du roi Guézo d'Abomey au XIXe siècle, à travers l'héroïne Doguicimi, fidèle à son époux prisonnier. Ce livre est l'un des premiers grands romans historiques africains.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« Karim, roman sénégalais » (1935) est l'œuvre de :",
+      "o": [
+        "Abdoulaye Sadji",
+        "Bakary Diallo",
+        "Birago Diop",
+        "Ousmane Socé"
+      ],
+      "r": 3,
+      "x": "Le Sénégalais Ousmane Socé publie ce roman en 1935. Il y montre un jeune Sénégalais partagé entre les traditions et les attraits de la ville, à Saint-Louis puis à Dakar. C'est l'un des premiers romans sénégalais.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Outre ses romans, Sembène Ousmane est considéré comme :",
+      "o": [
+        "Le père du cinéma africain",
+        "Le fondateur de la Négritude",
+        "Le premier académicien africain",
+        "Le fondateur de Présence africaine"
+      ],
+      "r": 0,
+      "x": "Le Sénégalais Sembène Ousmane (1923-2007) publie d'abord des romans comme « Le Docker noir » (1956) et « Les Bouts de bois de Dieu » (1960). Il réalise ensuite de nombreux films, dont « La Noire de… » (1966), « Xala » et « Moolaadé ». Il a souvent adapté ses propres livres à l'écran.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Le premier roman d'Aminata Sow Fall, paru en 1976, s'intitule :",
+      "o": [
+        "La Grève des bàttu",
+        "Une si longue lettre",
+        "Le Revenant",
+        "Le Baobab fou"
+      ],
+      "r": 2,
+      "x": "« Le Revenant » est l'un des premiers romans publiés par une Sénégalaise. Aminata Sow Fall, née en 1941, obtient ensuite le Grand prix littéraire d'Afrique noire (1980) pour « La Grève des bàttu ». Ce dernier roman dénonce l'hypocrisie d'une ville qui chasse ses mendiants.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Refusé par les éditeurs français, « Les Soleils des Indépendances » d'Ahmadou Kourouma a d'abord été publié :",
+      "o": [
+        "Au Canada",
+        "En Belgique",
+        "Au Sénégal",
+        "En Suisse"
+      ],
+      "r": 0,
+      "x": "Le roman paraît en 1968 aux Presses de l'Université de Montréal, puis au Seuil, à Paris, en 1970. Il raconte la déchéance de Fama, prince malinké déclassé par les indépendances. Il a reçu le Prix de la revue Études françaises en 1968 (au Québec) et le Prix Maillé-Latour-Landry de l'Académie française en 1970.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "En 1990, Ahmadou Kourouma reçoit le Grand prix littéraire d'Afrique noire pour :",
+      "o": [
+        "Monnè, outrages et défis",
+        "Allah n'est pas obligé",
+        "Les Soleils des Indépendances",
+        "En attendant le vote des bêtes sauvages"
+      ],
+      "r": 0,
+      "x": "Ahmadou Kourouma remporte ce prix prestigieux en 1990 pour « Monnè, outrages et défis », un roman qui retrace un siècle d'humiliations coloniales à travers le regard du roi Djigui. L'écrivain ivoirien recevra également le prix Renaudot et le prix Goncourt des lycéens en 2000 pour « Allah n'est pas obligé ».",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« La Carte d'identité », Grand prix littéraire d'Afrique noire 1981, est l'œuvre de l'Ivoirien :",
+      "o": [
+        "Bernard Dadié",
+        "Ahmadou Kourouma",
+        "Maurice Bandaman",
+        "Jean-Marie Adiaffi"
+      ],
+      "r": 3,
+      "x": "L'Ivoirien Jean-Marie Adiaffi (1941-1999) publie ce roman en 1980. Le héros, un prince humilié par un administrateur colonial, part à la recherche de sa carte d'identité perdue. Le roman pose avec humour la question de l'identité africaine.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« Le Fils d'Agatha Moudio » (1967) est un roman du Camerounais :",
+      "o": [
+        "Francis Bebey",
+        "Mongo Beti",
+        "Ferdinand Oyono",
+        "Guillaume Oyono Mbia"
+      ],
+      "r": 0,
+      "x": "Francis Bebey (1929-2001), écrivain et musicien camerounais, reçoit pour ce roman le Grand prix littéraire d'Afrique noire. Le livre raconte avec humour l'histoire de Mbenda, partagé entre un mariage arrangé et son attirance pour la belle Agatha Moudio. Bebey est aussi connu pour ses chansons et ses compositions pour guitare.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« Le Pleurer-Rire » (1982), satire d'une dictature africaine, est l'œuvre du Congolais :",
+      "o": [
+        "Sony Labou Tansi",
+        "Emmanuel Dongala",
+        "Alain Mabanckou",
+        "Henri Lopes"
+      ],
+      "r": 3,
+      "x": "Henri Lopes (1937-2023), qui fut Premier ministre du Congo-Brazzaville, y raconte le règne d'un dictateur à travers le regard de son maître d'hôtel. Il avait reçu le Grand prix littéraire d'Afrique noire en 1972 pour le recueil de nouvelles « Tribaliques ». Il fut ensuite longtemps ambassadeur de son pays en France.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« Johnny chien méchant » (2002), roman sur les enfants-soldats, est l'œuvre de :",
+      "o": [
+        "Ahmadou Kourouma",
+        "Henri Lopes",
+        "Emmanuel Dongala",
+        "Sony Labou Tansi"
+      ],
+      "r": 2,
+      "x": "Le Congolais Emmanuel Dongala, né en 1941, y fait alterner les voix de Johnny, enfant-soldat, et de Laokolé, adolescente qui fuit la guerre. Le roman a été adapté au cinéma sous le titre « Johnny Mad Dog » (2008). Kourouma a traité le même thème dans « Allah n'est pas obligé ».",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« Murambi, le livre des ossements » (2000), roman sur le génocide des Tutsi, est l'œuvre de :",
+      "o": [
+        "Tierno Monénembo",
+        "Véronique Tadjo",
+        "Boubacar Boris Diop",
+        "Monique Ilboudo"
+      ],
+      "r": 2,
+      "x": "Le Sénégalais Boubacar Boris Diop l'écrit dans le cadre du projet « Rwanda : écrire par devoir de mémoire ». Le titre renvoie au mémorial de Murambi, où reposent les restes de milliers de victimes. La Burkinabè Monique Ilboudo a participé au même projet avec « Murekatete ».",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« L'Ombre d'Imana » (2000), récit de voyage au Rwanda après le génocide, est l'œuvre de :",
+      "o": [
+        "Véronique Tadjo",
+        "Fatou Diome",
+        "Léonora Miano",
+        "Calixthe Beyala"
+      ],
+      "r": 0,
+      "x": "L'Ivoirienne Véronique Tadjo, née en 1955, l'écrit elle aussi dans le cadre du projet « Rwanda : écrire par devoir de mémoire ». Imana est le nom de Dieu dans la culture rwandaise. Tadjo est aussi poétesse et autrice de livres pour la jeunesse.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« Verre cassé » (2005) est un roman du Congolais :",
+      "o": [
+        "Henri Lopes",
+        "Emmanuel Dongala",
+        "Sony Labou Tansi",
+        "Alain Mabanckou"
+      ],
+      "r": 3,
+      "x": "Le narrateur, client d'un bar de Pointe-Noire, raconte la vie du quartier dans un texte presque sans points. Alain Mabanckou publie ce roman en 2005. Il obtient le prix Renaudot en 2006 pour « Mémoires de porc-épic ».",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« Petit Pays », Goncourt des lycéens 2016, raconte la guerre civile au :",
+      "o": [
+        "Rwanda",
+        "Congo",
+        "Liberia",
+        "Burundi"
+      ],
+      "r": 3,
+      "x": "Gaël Faye, chanteur et écrivain franco-rwandais né en 1982 au Burundi, y raconte l'enfance de Gabriel pendant la guerre civile et le génocide voisin au Rwanda. Le roman obtient le Goncourt des lycéens en 2016. Il a été adapté au cinéma en 2020.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« Les Impatientes », Goncourt des lycéens 2020, est un roman de la Camerounaise :",
+      "o": [
+        "Djaïli Amadou Amal",
+        "Léonora Miano",
+        "Calixthe Beyala",
+        "Werewere Liking"
+      ],
+      "r": 0,
+      "x": "Djaïli Amadou Amal, née en 1975, y raconte le destin de trois femmes peules soumises au mariage forcé et à la polygamie dans le nord du Cameroun. Le roman obtient le Goncourt des lycéens en 2020. L'autrice milite pour les droits des femmes à travers son association Femmes du Sahel.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« Notre-Dame du Nil », prix Renaudot 2012, est un roman de la Rwandaise :",
+      "o": [
+        "Véronique Tadjo",
+        "Scholastique Mukasonga",
+        "Fatou Diome",
+        "Yolande Mukagasana"
+      ],
+      "r": 1,
+      "x": "Le roman se déroule dans un lycée de jeunes filles au Rwanda des années 1970 et montre la montée de la haine contre les Tutsi. Scholastique Mukasonga, née en 1956, a perdu une grande partie de sa famille lors du génocide. Elle est aussi l'autrice du récit autobiographique « Inyenzi ou les Cafards » (2006).",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Le Marocain Tahar Ben Jelloun reçoit le prix Goncourt 1987 pour :",
+      "o": [
+        "Nedjma",
+        "Le Passé simple",
+        "L'Enfant de sable",
+        "La Nuit sacrée"
+      ],
+      "r": 3,
+      "x": "Tahar Ben Jelloun est le premier écrivain maghrébin à recevoir le Goncourt, pour cette suite de « L'Enfant de sable » (1985). Le roman raconte la libération de Zahra, élevée comme un garçon par son père. « Nedjma » est un roman de l'Algérien Kateb Yacine et « Le Passé simple » du Marocain Driss Chraïbi.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "« Nedjma » (1956), roman majeur de la littérature algérienne, est l'œuvre de :",
+      "o": [
+        "Mohammed Dib",
+        "Kateb Yacine",
+        "Albert Memmi",
+        "Tahar Ben Jelloun"
+      ],
+      "r": 1,
+      "x": "L'Algérien Kateb Yacine (1929-1989) publie ce roman en 1956, pendant la guerre d'indépendance. Nedjma, femme insaisissable aimée de quatre jeunes hommes, symbolise l'Algérie en quête d'elle-même. Le roman bouleverse la narration par sa structure éclatée.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "L'écrivain égyptien qui reçoit le prix Nobel de littérature en 1988 est :",
+      "o": [
+        "Naguib Mahfouz",
+        "Taha Hussein",
+        "Tahar Ben Jelloun",
+        "Wole Soyinka"
+      ],
+      "r": 0,
+      "x": "Naguib Mahfouz (1911-2006) est le premier écrivain de langue arabe récompensé par le prix Nobel. Il est célèbre pour sa « Trilogie du Caire », qui suit une famille sur plusieurs générations. Wole Soyinka l'avait précédé en 1986 comme premier lauréat d'Afrique noire.",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Le roman « Chaka », écrit en sesotho et publié en 1925, est l'œuvre de :",
+      "o": [
+        "Chinua Achebe",
+        "Amos Tutuola",
+        "Thomas Mofolo",
+        "Ngugi wa Thiong'o"
+      ],
+      "r": 2,
+      "x": "L'écrivain du Lesotho Thomas Mofolo (1876-1948) y retrace la vie du chef zoulou Chaka. Écrit en sesotho, c'est l'un des premiers grands romans africains en langue africaine. Senghor a repris ce personnage dans son poème dramatique « Chaka ».",
+      "_batchId": "francais/2026-11-19/LOT6"
+    },
+    {
+      "q": "Parmi ces noms, le seul qui est féminin est :",
+      "o": [
+        "apogée",
+        "armistice",
+        "oasis",
+        "pétale"
+      ],
+      "r": 2,
+      "x": "On dit « une oasis ». « Apogée », « armistice » et « pétale » sont masculins : un apogée, l'armistice signé, un pétale fané. En cas de doute, on vérifie avec un adjectif ou un article : une oasis verdoyante.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Parmi ces noms, le seul qui est masculin est :",
+      "o": [
+        "orbite",
+        "interview",
+        "épithète",
+        "tentacule"
+      ],
+      "r": 3,
+      "x": "On dit « un tentacule ». « Orbite », « interview » et « épithète » sont féminins : une orbite, une interview, une épithète. Un nom terminé par -ule n'est pas forcément féminin : un tentacule, un véhicule, un globule.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Parmi ces noms, le seul qui est féminin est :",
+      "o": [
+        "éloge",
+        "amiante",
+        "espèce",
+        "astérisque"
+      ],
+      "r": 2,
+      "x": "On dit « une espèce de… », même devant un nom masculin : « un espèce d'idiot » est une faute. « Éloge », « amiante » et « astérisque » sont masculins. « Astérisque » et « éloge » sont souvent mis à tort au féminin : un astérisque, un vibrant éloge.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Parmi ces noms, le seul qui est masculin est :",
+      "o": [
+        "hémisphère",
+        "autoroute",
+        "algèbre",
+        "anagramme"
+      ],
+      "r": 0,
+      "x": "On dit « l'hémisphère Nord », au masculin. « Autoroute », « algèbre » et « anagramme » sont féminins. Le genre peut varier dans une même famille de mots : un hémisphère, un planisphère, mais une sphère.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Parmi ces noms, le seul qui est féminin est :",
+      "o": [
+        "acné",
+        "emblème",
+        "abîme",
+        "aparté"
+      ],
+      "r": 0,
+      "x": "On dit « une acné sévère ». « Emblème », « abîme » et « aparté » sont masculins, malgré leur finale en -e. La plupart des noms terminés par -é sont masculins (un café, un fossé), ce qui rend « acné » piégeux.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« La solde », au féminin, désigne :",
+      "o": [
+        "Le reste à payer sur un compte",
+        "Une vente au rabais",
+        "La rémunération des militaires",
+        "Une dette ancienne"
+      ],
+      "r": 2,
+      "x": "La solde est la paie du militaire. Au masculin, « le solde » désigne la différence entre le crédit et le débit d'un compte, ou ce qui reste à payer. Dans le commerce, « les soldes » (marchandises vendues au rabais) sont aussi masculins.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Un manœuvre », au masculin, désigne :",
+      "o": [
+        "Un ouvrier sans qualification",
+        "Une opération militaire",
+        "Un mouvement de véhicule",
+        "Une intrigue habile"
+      ],
+      "r": 0,
+      "x": "Au masculin, un manœuvre est un ouvrier qui exécute des travaux simples. Au féminin, une manœuvre est une opération, un mouvement ou une intrigue. Ces noms à double genre sont fréquents en concours : un ou une aide, un ou une garde, un ou une mémoire.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Dans « Ces mets sont de _______ délices », la forme correcte est :",
+      "o": [
+        "grands",
+        "grande",
+        "grandes",
+        "grand"
+      ],
+      "r": 2,
+      "x": "« Délices » est féminin au pluriel : de grandes délices. Au singulier, le mot est masculin : un vrai délice. Il reste masculin dans « un de mes plus grands délices », où il garde un sens singulier.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "La série de pluriels correcte est :",
+      "o": [
+        "bijous, clous, genoux",
+        "bijoux, cloux, genoux",
+        "bijoux, clous, genous",
+        "bijoux, clous, genoux"
+      ],
+      "r": 3,
+      "x": "Sept noms en -ou prennent un x au pluriel : bijoux, cailloux, choux, genoux, hiboux, joujoux, poux. Les autres prennent un s : des clous, des trous. Les rectifications de 1990 n'ont pas modifié ces sept exceptions.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Parmi ces noms en -ou, celui qui fait son pluriel en -s est :",
+      "o": [
+        "trou",
+        "caillou",
+        "genou",
+        "hibou"
+      ],
+      "r": 0,
+      "x": "On écrit « des trous ». « Caillou », « genou » et « hibou » font partie des sept noms en -ou qui prennent un x au pluriel. Pour retenir la liste, on emploie souvent la phrase : « Viens mon chou, mon bijou, mon joujou, sur mes genoux, et jette des cailloux à ce hibou plein de poux ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Le pluriel de « vitrail » est :",
+      "o": [
+        "vitrails",
+        "vitrals",
+        "vitraux",
+        "vitreaux"
+      ],
+      "r": 2,
+      "x": "Quelques noms en -ail font leur pluriel en -aux : bail, corail, émail, soupirail, travail, vantail, vitrail. Les autres prennent un s : des détails, des éventails. « Travail » fait « travaux », mais « travails » désigne l'appareil servant à immobiliser les animaux pour les ferrer ou les soigner.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Dans « Les _______ commerciaux ont été renouvelés », la forme correcte est :",
+      "o": [
+        "bails",
+        "bailles",
+        "baux",
+        "baus"
+      ],
+      "r": 2,
+      "x": "« Bail » fait « baux » au pluriel. Le mot est courant dans la langue juridique et administrative : un bail à loyer, des baux commerciaux. Le piège est d'écrire « bails » par analogie avec « détails ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Parmi ces noms en -ail, celui qui fait son pluriel en -s est :",
+      "o": [
+        "détail",
+        "corail",
+        "émail",
+        "soupirail"
+      ],
+      "r": 0,
+      "x": "On écrit « des détails ». « Corail », « émail » et « soupirail » font « coraux », « émaux » et « soupiraux ». « Ail » fait « aulx » ou, plus couramment, « ails ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "La série de pluriels correcte est :",
+      "o": [
+        "pneux, jeux, bleus",
+        "pneus, jeus, bleus",
+        "pneus, jeux, bleux",
+        "pneus, jeux, bleus"
+      ],
+      "r": 3,
+      "x": "Les noms en -eu prennent normalement un x (des jeux, des cheveux), mais « pneu », « bleu » et « émeu » font exception avec un s. Il en va de même pour l'adjectif : des yeux bleus. « Landau » et « sarrau » font aussi leur pluriel en -s, contrairement à « tuyau » ou « bateau ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Dans « Nos _______ ont fondé ce royaume » (= nos ancêtres), la forme correcte est :",
+      "o": [
+        "aïeuls",
+        "aïeux",
+        "aïeules",
+        "aïeus"
+      ],
+      "r": 1,
+      "x": "Au sens d'« ancêtres », « aïeul » fait « aïeux ». Le pluriel « aïeuls » désigne les grands-parents : « ses deux aïeuls paternels ». Au féminin, « aïeule » fait toujours « aïeules ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Dans « J'ai rencontré les _______ » (la famille Dupont), la forme correcte est :",
+      "o": [
+        "Duponts",
+        "Dupons",
+        "Dupont",
+        "Dupont's"
+      ],
+      "r": 2,
+      "x": "Le nom de famille reste invariable : les Dupont, les Ouédraogo. Seuls les noms de dynasties célèbres prennent parfois la marque du pluriel : les Bourbons. Les noms de peuples, en revanche, prennent la marque du pluriel : les Français, les Sénégalais.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Le pluriel de « chef-d'œuvre » est :",
+      "o": [
+        "chef-d'œuvres",
+        "chefs-d'œuvres",
+        "chef-d'œuvre",
+        "chefs-d'œuvre"
+      ],
+      "r": 3,
+      "x": "Dans un nom composé formé d'un nom, d'une préposition et d'un nom, seul le premier nom prend la marque du pluriel. On écrit de même « des arcs-en-ciel ». On écrit de même « des pommes de terre », sans trait d'union.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Le pluriel de « arc-en-ciel » est :",
+      "o": [
+        "arc-en-ciels",
+        "arcs-en-ciels",
+        "arcs-en-ciel",
+        "arc-en-ciel"
+      ],
+      "r": 2,
+      "x": "Seul le premier nom varie : des arcs dans le ciel. Le complément « ciel », introduit par « en », reste invariable. Il en va de même pour « des chefs-d'œuvre » et « des pots-de-vin ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Le pluriel de « procès-verbal » est :",
+      "o": [
+        "procès-verbals",
+        "procès-verbales",
+        "procès-verbaux",
+        "procès-verbal"
+      ],
+      "r": 2,
+      "x": "« Procès » ne change pas au pluriel, et l'adjectif « verbal » fait « verbaux ». Le mot est très courant dans la langue administrative. On écrit de même « des procès-verbaux de délibération », souvent abrégés en « PV ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Le pluriel de « pot-de-vin » est :",
+      "o": [
+        "pot-de-vins",
+        "pots-de-vins",
+        "pot-de-vin",
+        "pots-de-vin"
+      ],
+      "r": 3,
+      "x": "Comme « chef-d'œuvre », ce nom composé formé avec « de » ne met au pluriel que le premier nom. Un pot-de-vin est une somme versée pour corrompre. Ne pas confondre avec « un pot de vin », sans trait d'union, qui désigne un récipient contenant du vin.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Dans « Les _______ du défunt ont été convoqués », la forme correcte est :",
+      "o": [
+        "ayant droits",
+        "ayants droit",
+        "ayants droits",
+        "ayant droit"
+      ],
+      "r": 1,
+      "x": "« Ayant » est ici un nom et prend un s ; « droit » reste invariable car il signifie « ayant un droit ». On écrit sans trait d'union : des ayants droit, des ayants cause. Au singulier, on écrit « un ayant droit », sans s ni trait d'union.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Le pluriel de « chef-lieu » est :",
+      "o": [
+        "chef-lieux",
+        "chefs-lieux",
+        "chefs-lieu",
+        "chef-lieu"
+      ],
+      "r": 1,
+      "x": "Les deux éléments sont des noms juxtaposés : ils prennent tous les deux la marque du pluriel. On parle des chefs-lieux de région. Il en va de même pour « des oiseaux-mouches » ou « des wagons-lits ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Le pluriel de « nouveau-né » est :",
+      "o": [
+        "nouveaux-nés",
+        "nouveaux-né",
+        "nouveau-nés",
+        "nouveau-né"
+      ],
+      "r": 2,
+      "x": "Dans « nouveau-né », « nouveau » a la valeur d'un adverbe (= nouvellement) et reste invariable : des nouveau-nés. Seul « né » prend la marque du pluriel. Ce cas est une exception : devant d'autres participes, « nouveau » s'accorde, comme dans « les nouveaux venus » ou « les nouveaux mariés ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Le pluriel de « haut-parleur » est :",
+      "o": [
+        "haut-parleurs",
+        "hauts-parleurs",
+        "hauts-parleur",
+        "haut-parleur"
+      ],
+      "r": 0,
+      "x": "« Haut » est ici un adverbe (qui parle haut) et reste invariable. Seul le nom « parleur » prend un s. En revanche, quand « haut » est adjectif, il s'accorde : des hauts fourneaux.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Le pluriel de « laissez-passer » est :",
+      "o": [
+        "laissez-passers",
+        "laissez-passer",
+        "laissés-passer",
+        "laissez-passés"
+      ],
+      "r": 1,
+      "x": "Formé de deux verbes, ce nom composé reste invariable : des laissez-passer. Aucun de ses éléments n'est un nom. Il en va de même pour « des savoir-faire » et « des savoir-vivre ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Parmi ces expressions, celle qui constitue un pléonasme est :",
+      "o": [
+        "monter à l'étage",
+        "descendre au sous-sol",
+        "sortir de la salle",
+        "monter en haut"
+      ],
+      "r": 3,
+      "x": "Le pléonasme répète inutilement une idée déjà contenue dans un mot : on ne peut monter qu'en haut. On dira simplement « monter ». Certains pléonasmes sont toutefois admis pour insister : « je l'ai vu de mes propres yeux ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Parmi ces expressions, celle qui constitue un pléonasme est :",
+      "o": [
+        "au jour d'aujourd'hui",
+        "à ce jour",
+        "de nos jours",
+        "à l'heure où nous parlons"
+      ],
+      "r": 0,
+      "x": "« Aujourd'hui » contient déjà « au jour d'hui », c'est-à-dire « en ce jour ». « Au jour d'aujourd'hui » est un pléonasme à éviter dans une copie. On écrira simplement « aujourd'hui » ou « à ce jour ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Parmi ces expressions, celle qui constitue un pléonasme est :",
+      "o": [
+        "prévoir à l'avance",
+        "prévoir un budget",
+        "prévoir des renforts",
+        "prévoir une réunion"
+      ],
+      "r": 0,
+      "x": "« Prévoir » signifie déjà « voir à l'avance ». On écrit donc simplement « prévoir ». On évite de même « anticiper à l'avance » ou « planifier à l'avance ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Parmi ces expressions, celle qui est jugée pléonastique est :",
+      "o": [
+        "s'avérer vrai",
+        "se révéler exact",
+        "s'avérer utile",
+        "se révéler faux"
+      ],
+      "r": 0,
+      "x": "Dans son sens traditionnel, « s'avérer » signifie « se révéler vrai » ; l'expression « s'avérer vrai » est donc considérée comme pléonastique par les puristes. Dans l'usage actuel, le verbe signifie aussi « se révéler » ou « se montrer » : « s'avérer utile » est ainsi correct. Pour éviter toute discussion, on peut écrire « se révéler exact ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Parmi ces expressions, celle qui constitue un pléonasme est :",
+      "o": [
+        "collaborer à un projet",
+        "collaborer ensemble",
+        "travailler ensemble",
+        "coopérer avec lui"
+      ],
+      "r": 1,
+      "x": "« Collaborer » signifie déjà « travailler avec » : « ensemble » est superflu. « Travailler ensemble » est en revanche correct. « Collaborer avec » reste correct pour désigner le partenaire : collaborer avec un collègue.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "L'expression « panacée universelle » est fautive car :",
+      "o": [
+        "« Panacée » est un mot masculin",
+        "« Panacée » est un mot du registre familier",
+        "« Panacée » ne s'emploie qu'au pluriel",
+        "« Panacée » signifie déjà remède universel"
+      ],
+      "r": 3,
+      "x": "Une panacée est un remède à tous les maux : l'adjectif « universelle » répète cette idée. On dit simplement « une panacée ». On évite de même « une panacée à tous les maux ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Parmi ces expressions, celle qui constitue un pléonasme est :",
+      "o": [
+        "s'aider mutuellement",
+        "s'entraider mutuellement",
+        "s'entraider souvent",
+        "se soutenir entre collègues"
+      ],
+      "r": 1,
+      "x": "« S'entraider » contient déjà l'idée de réciprocité grâce au préfixe « entre- » : « mutuellement » est superflu. Avec « s'aider », en revanche, « mutuellement » précise que l'aide est réciproque. On évite de même « s'entraider les uns les autres ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Parmi ces expressions, celle qui constitue un pléonasme est :",
+      "o": [
+        "reculer d'un pas",
+        "avancer prudemment",
+        "revenir sur ses pas",
+        "reculer en arrière"
+      ],
+      "r": 3,
+      "x": "On ne peut reculer qu'en arrière : la précision est inutile. On dira « reculer » ou « reculer d'un pas ». On évite de même « monter en haut » et « descendre en bas ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Parmi ces tournures, celle qui constitue un pléonasme est :",
+      "o": [
+        "par exemple",
+        "comme par exemple",
+        "comme le montre l'exemple",
+        "notamment"
+      ],
+      "r": 1,
+      "x": "« Comme » et « par exemple » introduisent tous deux un exemple : il faut choisir l'un ou l'autre. On écrit « comme les fonctionnaires » ou « par exemple les fonctionnaires ». En revanche, « comme » suivi d'un exemple, sans « par exemple », est correct : des pays comme le Mali.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Parmi ces tournures, celle qui constitue un pléonasme est :",
+      "o": [
+        "car",
+        "car en effet",
+        "en effet",
+        "c'est pourquoi"
+      ],
+      "r": 1,
+      "x": "« Car » et « en effet » expriment tous deux la justification. On emploie l'un ou l'autre, jamais les deux à la suite. On écrit donc « car il pleuvait » ou « il pleuvait, en effet ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Parmi ces tournures, celle qui constitue un pléonasme est :",
+      "o": [
+        "puis ensuite",
+        "puis",
+        "ensuite",
+        "par la suite"
+      ],
+      "r": 0,
+      "x": "« Puis » et « ensuite » indiquent tous deux la succession. Les associer est redondant. En revanche, « puis » peut être suivi de « enfin » pour marquer la dernière étape : d'abord, puis, enfin.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Parmi ces expressions, celle qui constitue un pléonasme est :",
+      "o": [
+        "importer du riz",
+        "exporter du coton",
+        "acheter à l'étranger",
+        "importer de l'étranger"
+      ],
+      "r": 3,
+      "x": "« Importer » signifie faire entrer dans un pays des produits provenant de l'étranger. L'expression « importer de l'étranger » est généralement considérée comme redondante. On peut simplement dire « importer des marchandises » ou préciser leur origine : « importer du riz du Ghana ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "La phrase correcte est :",
+      "o": [
+        "Je me rappelle de cet incident.",
+        "Je m'en rappelle de cet incident.",
+        "Je me rappelle à cet incident.",
+        "Je me rappelle cet incident."
+      ],
+      "r": 3,
+      "x": "On dit « se rappeler quelque chose », sans « de », mais « se souvenir de quelque chose » : « se rappeler de » mélange les deux constructions. La construction avec « de » est toutefois admise devant un pronom personnel désignant une personne : te rappelles-tu de moi ? Devant un nom comme « cet incident », seule la forme sans « de » est correcte.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "La phrase correcte est :",
+      "o": [
+        "Je vais au coiffeur.",
+        "Je vais chez le coiffeur.",
+        "Je vais à le coiffeur.",
+        "Je vais à chez le coiffeur."
+      ],
+      "r": 1,
+      "x": "Devant un nom de personne, on emploie « chez » : chez le coiffeur, chez le médecin. « Au » s'emploie devant un nom de lieu : à la mairie, au marché. L'usage familier dit souvent « aller au coiffeur », mais cette tournure reste fautive à l'écrit.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Dans un écrit soutenu, le verbe à préférer à « solutionner » est :",
+      "o": [
+        "résoudre",
+        "résilier",
+        "dissoudre",
+        "absoudre"
+      ],
+      "r": 0,
+      "x": "« Solutionner » est jugé lourd et critiqué par l'Académie française : on lui préfère « résoudre » ou « régler ». « Résilier » signifie mettre fin à un contrat et « absoudre » pardonner. « Solutionner » figure dans les dictionnaires, mais il reste déconseillé dans une copie de concours.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Dans un écrit soutenu, la phrase correcte est :",
+      "o": [
+        "Le président débute la réunion.",
+        "Il a débuté son discours.",
+        "Nous débuterons la séance.",
+        "La réunion débute à 9 heures."
+      ],
+      "r": 3,
+      "x": "« Débuter » s'emploie traditionnellement sans complément d'objet direct : « La réunion débute à 9 heures ». L'emploi transitif (« débuter une réunion ») est répandu, mais reste déconseillé dans une rédaction soignée. Dans une copie de concours, on préférera « commencer la réunion ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Dans « Il viendra définitivement », l'anglicisme « définitivement » doit être remplacé par :",
+      "o": [
+        "finalement",
+        "provisoirement",
+        "rarement",
+        "assurément"
+      ],
+      "r": 3,
+      "x": "En français, « définitivement » signifie « de façon définitive, pour toujours ». Le sens « certainement » est calqué sur l'anglais « definitely ». « Définitivement » reste correct dans son sens propre : il a quitté le pays définitivement.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Dans « Il a réalisé son erreur », le verbe « réaliser » est un anglicisme pour :",
+      "o": [
+        "accomplir",
+        "regretter amèrement",
+        "corriger",
+        "se rendre compte de"
+      ],
+      "r": 3,
+      "x": "En français, « réaliser » signifie « rendre réel, accomplir » : réaliser un projet. Le sens « prendre conscience » est emprunté à l'anglais « to realize ». Ce sens anglais est répandu et enregistré par certains dictionnaires, mais il reste critiqué à l'écrit soutenu.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Dans « Il supporte l'équipe nationale », le verbe correct en français est :",
+      "o": [
+        "subit",
+        "tolère",
+        "endure",
+        "soutient"
+      ],
+      "r": 3,
+      "x": "En français, « supporter » signifie « endurer » ou « porter un poids ». Le sens « encourager » est un anglicisme : on dit « soutenir » une équipe. Le nom « supporter » (partisan d'une équipe) est en revanche admis ; l'Académie recommande la forme « supporteur ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Dans « Le ministère a initié un nouveau projet », le verbe à préférer est :",
+      "o": [
+        "lancé",
+        "initialisé",
+        "induit",
+        "imité"
+      ],
+      "r": 0,
+      "x": "En français, « initier quelqu'un » signifie l'introduire à un savoir ou à un rite. Le sens « commencer, lancer » est calqué sur l'anglais « to initiate ». On peut aussi dire « engager » ou « entreprendre » un projet.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Dans « la transformation digitale de l'administration », le terme français recommandé est :",
+      "o": [
+        "numéral",
+        "numérique",
+        "digitalisé",
+        "manuel"
+      ],
+      "r": 1,
+      "x": "En français, « digital » se rapporte aux doigts : les empreintes digitales. Pour l'informatique, on emploie « numérique ». « Digital » est très répandu dans le marketing, mais « numérique » reste la forme recommandée à l'écrit soutenu.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Dans « Il a reçu une somme conséquente », l'emploi critiqué de « conséquente » doit être remplacé par :",
+      "o": [
+        "logique",
+        "suivante",
+        "importante",
+        "prudente"
+      ],
+      "r": 2,
+      "x": "« Conséquent » signifie « qui agit avec logique » : un homme conséquent avec lui-même. Le sens « important, considérable » est une impropriété. Cet emploi est répandu et certains dictionnaires l'enregistrent comme familier, mais il reste à éviter à l'écrit soutenu.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Une boutique « achalandée » est, au sens propre, une boutique :",
+      "o": [
+        "Bien approvisionnée",
+        "Récemment ouverte",
+        "Qui a beaucoup de clients",
+        "Mal située dans le quartier"
+      ],
+      "r": 2,
+      "x": "Le « chaland » est le client : une boutique achalandée attire beaucoup de clients. L'emploi au sens de « bien fournie en marchandises » est critiqué. Ce sens critiqué est aujourd'hui enregistré par certains dictionnaires, mais en concours on retient le sens propre.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Dans « Il rencontre des difficultés _______ », la forme correcte est :",
+      "o": [
+        "pécunières",
+        "pécuniaires",
+        "pécuniaire",
+        "pécunaires"
+      ],
+      "r": 1,
+      "x": "L'adjectif est « pécuniaire », de même forme au masculin et au féminin : un problème pécuniaire, des difficultés pécuniaires. « Pécunier » est un barbarisme. Il est de la même famille que « pécule », petite somme d'argent économisée.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "L'orthographe correcte du mot désignant le salaire est :",
+      "o": [
+        "rénumération",
+        "rémunèration",
+        "rémunération",
+        "rémmunération"
+      ],
+      "r": 2,
+      "x": "« Rémunération » vient du latin « munus » (cadeau, charge), d'où la suite « mu-né ». « Rénumération » est un barbarisme dû à l'influence de « numéro ». Le verbe s'écrit de même : rémunérer, et non « rénumérer ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "La racine grecque « -cratie », dans « démocratie », signifie :",
+      "o": [
+        "Peuple",
+        "Pouvoir",
+        "Loi",
+        "Ville"
+      ],
+      "r": 1,
+      "x": "« -cratie » vient du grec « kratos » (pouvoir) : la démocratie est le pouvoir du peuple (« dêmos »). On la retrouve dans « bureaucratie » et « théocratie ». « Dêmos » se retrouve aussi dans « démographie » et « épidémie ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "La racine grecque « -phile », dans « bibliophile », signifie :",
+      "o": [
+        "Qui craint",
+        "Qui écrit",
+        "Qui aime",
+        "Qui étudie"
+      ],
+      "r": 2,
+      "x": "« -phile » vient du grec « philos » (ami) : le bibliophile aime les livres, le francophile aime la France. Son contraire est « -phobe ». On la trouve aussi en début de mot : la philosophie est l'amour de la sagesse.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "La racine latine « -cide », dans « homicide », signifie :",
+      "o": [
+        "Qui soigne",
+        "Qui protège",
+        "Qui nourrit",
+        "Qui tue"
+      ],
+      "r": 3,
+      "x": "« -cide » vient du latin « caedere » (tuer) : homicide, insecticide, génocide. Un pesticide tue les parasites des cultures. « Génocide » associe le grec « genos » (peuple, race) à ce suffixe latin.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "La racine grecque « anthropo- », dans « anthropologie », signifie :",
+      "o": [
+        "Homme",
+        "Animal",
+        "Plante",
+        "Terre"
+      ],
+      "r": 0,
+      "x": "« Anthrôpos » signifie « être humain » en grec. Le philanthrope aime les hommes et le misanthrope les fuit. L'anthropologie est donc l'étude de l'être humain et des sociétés.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "La racine grecque « hydro- », dans « hydraulique », signifie :",
+      "o": [
+        "Feu",
+        "Eau",
+        "Air",
+        "Terre"
+      ],
+      "r": 1,
+      "x": "« Hudôr » signifie « eau » en grec : hydraulique, hydrographie, hydroélectrique. Le barrage de Bagré produit de l'électricité d'origine hydraulique. On la retrouve dans « déshydratation », la perte d'eau du corps.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "La racine grecque « -logie », dans « biologie », signifie :",
+      "o": [
+        "Étude, science",
+        "Mesure",
+        "Écriture, dessin",
+        "Pouvoir"
+      ],
+      "r": 0,
+      "x": "« -logie » vient du grec « logos » (parole, raison) et désigne une science ou un discours : géologie, sociologie. L'écriture se dit « -graphie ». Un mot en -logue désigne le spécialiste : un géologue, un sociologue.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "La racine grecque « chrono- », dans « chronologie », signifie :",
+      "o": [
+        "Couleur",
+        "Distance",
+        "Vitesse",
+        "Temps"
+      ],
+      "r": 3,
+      "x": "« Khronos » signifie « temps » en grec : chronologie, chronomètre, anachronisme. Une maladie chronique dure longtemps. Un anachronisme place un fait à une époque qui n'est pas la sienne.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Le préfixe grec « poly- », dans « polyvalent », signifie :",
+      "o": [
+        "Un seul",
+        "Autour",
+        "Contre",
+        "Plusieurs"
+      ],
+      "r": 3,
+      "x": "« Polus » signifie « nombreux » en grec : polyvalent, polygone, polygamie. Le préfixe « mono- » signifie au contraire « un seul ». La polygamie est ainsi le fait d'avoir plusieurs conjoints, la monogamie celui d'en avoir un seul.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "La racine grecque « bio- », dans « biographie », signifie :",
+      "o": [
+        "Corps",
+        "Vie",
+        "Mort",
+        "Livre"
+      ],
+      "r": 1,
+      "x": "« Bios » signifie « vie » en grec : la biographie est le récit d'une vie, la biologie l'étude du vivant. « Biblio- » signifie « livre ». L'autobiographie est le récit qu'une personne fait de sa propre vie.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "La racine grecque « -phobe », dans « xénophobe », signifie :",
+      "o": [
+        "Qui craint ou rejette",
+        "Qui aime",
+        "Qui accueille ou protège",
+        "Qui voyage"
+      ],
+      "r": 0,
+      "x": "« Phobos » signifie « peur » en grec : le xénophobe rejette les étrangers (« xenos »). Son contraire est « -phile ». Le suffixe désigne aussi des peurs : un claustrophobe craint les espaces clos.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Avoir maille à partir avec quelqu'un » signifie :",
+      "o": [
+        "Partager ses biens avec lui",
+        "Voyager avec lui",
+        "Avoir un différend avec lui",
+        "Lui devoir de l'argent"
+      ],
+      "r": 2,
+      "x": "La maille était une petite pièce de monnaie impossible à partager (« partir » = diviser). Avoir maille à partir, c'est donc avoir un litige. Le verbe « partir » a gardé ce sens ancien de « partager » dans l'expression, d'où la confusion avec le verbe de mouvement.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Prendre le taureau par les cornes » signifie :",
+      "o": [
+        "Agir avec violence",
+        "Affronter résolument une difficulté",
+        "Contourner prudemment une difficulté",
+        "Diriger un troupeau"
+      ],
+      "r": 1,
+      "x": "L'expression invite à attaquer un problème de face plutôt que de l'éviter. Elle s'emploie souvent face à une situation délicate. Elle s'oppose à « tourner autour du pot », qui consiste à éviter le sujet.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Être sur la sellette » signifie :",
+      "o": [
+        "Être récompensé",
+        "Être mis en cause",
+        "Être en vacances",
+        "Être à cheval"
+      ],
+      "r": 1,
+      "x": "La sellette était le petit siège où l'on faisait asseoir l'accusé pendant son interrogatoire. Être sur la sellette, c'est être l'objet de critiques ou d'un examen. On dit aussi « mettre quelqu'un sur la sellette » pour le soumettre à un examen serré.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Faire long feu » signifie :",
+      "o": [
+        "Durer longtemps",
+        "Échouer, ne pas aboutir",
+        "Réussir brillamment",
+        "Se mettre en colère"
+      ],
+      "r": 1,
+      "x": "Une cartouche qui faisait long feu brûlait lentement sans partir : le tir manquait son but. Le sens « durer longtemps » est un contresens, et « ne pas faire long feu » signifie « ne pas durer ». Ainsi, « ce projet a fait long feu » signifie qu'il a échoué.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Avoir voix au chapitre » signifie :",
+      "o": [
+        "Chanter dans une chorale",
+        "Avoir le droit de donner son avis",
+        "Écrire un livre",
+        "Lire à voix haute devant une assemblée"
+      ],
+      "r": 1,
+      "x": "Le chapitre était l'assemblée des chanoines ou des moines, où seuls certains membres pouvaient voter. Avoir voix au chapitre, c'est avoir le droit d'être consulté. On l'emploie souvent à la forme négative : il n'a pas voix au chapitre.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Mettre la charrue avant les bœufs » signifie :",
+      "o": [
+        "Travailler avec acharnement",
+        "Faire les choses dans le mauvais ordre",
+        "Labourer son champ avant la saison des pluies",
+        "Préparer soigneusement"
+      ],
+      "r": 1,
+      "x": "L'image est celle d'une charrue placée devant les bœufs qui doivent la tirer. On l'emploie quand on commence par ce qui devrait venir à la fin. On rencontre aussi la variante « mettre la charrue devant les bœufs », de même sens.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Tomber de Charybde en Scylla » signifie :",
+      "o": [
+        "Échapper de justesse à un danger",
+        "Changer de pays",
+        "Aller d'un danger à un pire",
+        "Retrouver le calme"
+      ],
+      "r": 2,
+      "x": "Charybde et Scylla sont deux monstres de la mythologie grecque qui gardaient un détroit : en évitant l'un, les marins tombaient sur l'autre. L'expression désigne une aggravation. Attention à l'orthographe : « Charybde » s'écrit avec un y et « Scylla » avec deux l.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Avoir les coudées franches » signifie :",
+      "o": [
+        "Être blessé au bras",
+        "Être très pressé par le temps",
+        "Manquer de place",
+        "Avoir toute liberté d'agir"
+      ],
+      "r": 3,
+      "x": "Avoir de la place pour bouger les coudes, c'est pouvoir agir sans gêne. Le directeur qui a les coudées franches décide librement. La coudée était une ancienne mesure de longueur, du coude au bout des doigts.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Le proverbe « Qui ne dit mot consent » signifie :",
+      "o": [
+        "Se taire, c'est approuver",
+        "Parler, c'est mentir",
+        "Le silence est d'or",
+        "Il faut savoir écouter"
+      ],
+      "r": 0,
+      "x": "Celui qui ne proteste pas est réputé d'accord. En droit, le silence ne vaut pourtant pas toujours acceptation. Le proverbe vient d'une maxime latine du droit de l'Église : « qui tacet consentire videtur ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Le proverbe « Pierre qui roule n'amasse pas mousse » signifie :",
+      "o": [
+        "Les voyages forment la jeunesse",
+        "L'instabilité empêche de prospérer",
+        "La patience vient à bout de tout",
+        "Le travail paie toujours"
+      ],
+      "r": 1,
+      "x": "La pierre qui roule ne reste jamais assez longtemps en place pour se couvrir de mousse. Celui qui change sans cesse de métier ou de lieu n'accumule rien. On l'emploie pour conseiller la stabilité dans un emploi ou un projet.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Le proverbe « L'habit ne fait pas le moine » signifie :",
+      "o": [
+        "Il faut bien s'habiller",
+        "Les apparences sont trompeuses",
+        "Les moines sont modestes",
+        "Le travail fait l'homme"
+      ],
+      "r": 1,
+      "x": "On ne doit pas juger quelqu'un sur sa seule apparence. Un costume ne suffit pas à faire un bon fonctionnaire. Le proverbe vient du latin médiéval « cucullus non facit monachum » : le capuchon ne fait pas le moine.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Le proverbe « Petit à petit, l'oiseau fait son nid » signifie :",
+      "o": [
+        "Il faut se méfier des petits",
+        "Les oiseaux sont patients",
+        "La persévérance mène au but",
+        "Mieux vaut rester chez soi"
+      ],
+      "r": 2,
+      "x": "Comme l'oiseau qui construit son nid brindille après brindille, on réussit par des efforts répétés. Le proverbe s'applique bien à la préparation d'un concours. Un proverbe proche dit : « Rome ne s'est pas faite en un jour ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Le proverbe « Il ne faut pas vendre la peau de l'ours avant de l'avoir tué » signifie :",
+      "o": [
+        "Il ne faut pas se réjouir trop tôt",
+        "Il faut chasser avec prudence",
+        "Il faut vendre au bon prix",
+        "Il faut protéger les animaux"
+      ],
+      "r": 0,
+      "x": "On ne doit pas disposer d'un avantage qu'on n'a pas encore obtenu. Un candidat ne doit pas fêter son admission avant les résultats. Le proverbe vient d'une fable de La Fontaine, « L'Ours et les Deux Compagnons ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Le proverbe « À l'œuvre on connaît l'artisan » signifie :",
+      "o": [
+        "Les artisans sont modestes",
+        "On juge quelqu'un à ses réalisations",
+        "Il faut admirer les œuvres d'art",
+        "Le travail manuel est noble"
+      ],
+      "r": 1,
+      "x": "C'est par ce qu'il produit qu'on reconnaît la valeur d'une personne. Les paroles comptent moins que les actes. On dit de même : « C'est au pied du mur qu'on voit le maçon ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Le proverbe « Qui sème le vent récolte la tempête » signifie :",
+      "o": [
+        "Qui provoque le désordre en subit les pires effets",
+        "Il faut semer par temps calme",
+        "Le vent annonce toujours la pluie qui vient",
+        "Le travail agricole dépend toujours du temps qu'il fait"
+      ],
+      "r": 0,
+      "x": "Celui qui crée des tensions s'expose à des conséquences bien plus graves que ce qu'il a provoqué. Le proverbe vient de la Bible (livre d'Osée). On l'emploie pour avertir qu'une provocation peut se retourner contre son auteur.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Les Misérables » (1862) est un roman de :",
+      "o": [
+        "Victor Hugo",
+        "Honoré de Balzac",
+        "Émile Zola",
+        "Alexandre Dumas"
+      ],
+      "r": 0,
+      "x": "Victor Hugo y raconte la rédemption de l'ancien forçat Jean Valjean. Il est aussi l'auteur de « Notre-Dame de Paris » (1831).",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Le Cid » (1637), tragi-comédie, est l'œuvre de :",
+      "o": [
+        "Pierre Corneille",
+        "Jean Racine",
+        "Molière",
+        "Jean de La Fontaine"
+      ],
+      "r": 0,
+      "x": "Rodrigue doit y choisir entre son amour pour Chimène et l'honneur de sa famille, d'où l'expression « dilemme cornélien ». La pièce a suscité une vive querelle littéraire.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "La tragédie « Phèdre » (1677) est l'œuvre de :",
+      "o": [
+        "Pierre Corneille",
+        "Molière",
+        "Jean Racine",
+        "Voltaire"
+      ],
+      "r": 2,
+      "x": "Racine y peint la passion coupable de Phèdre pour son beau-fils Hippolyte. Ses tragédies respectent strictement la règle des trois unités.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "La comédie « Tartuffe », qui dénonce l'hypocrisie religieuse, est l'œuvre de :",
+      "o": [
+        "Jean Racine",
+        "Beaumarchais",
+        "Marivaux",
+        "Molière"
+      ],
+      "r": 3,
+      "x": "Tartuffe, faux dévot, abuse de la confiance d'Orgon. La pièce fut interdite pendant plusieurs années avant d'être autorisée en 1669.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Le conte philosophique « Candide » (1759) est l'œuvre de :",
+      "o": [
+        "Voltaire",
+        "Jean-Jacques Rousseau",
+        "Denis Diderot",
+        "Montesquieu"
+      ],
+      "r": 0,
+      "x": "Voltaire y fait la satire de l'optimisme à travers les malheurs de Candide. Le conte se termine par la formule « il faut cultiver notre jardin ».",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Germinal » (1885), roman sur une grève de mineurs, est l'œuvre de :",
+      "o": [
+        "Victor Hugo",
+        "Guy de Maupassant",
+        "Gustave Flaubert",
+        "Émile Zola"
+      ],
+      "r": 3,
+      "x": "Ce roman appartient au cycle des « Rougon-Macquart », où Zola applique la méthode naturaliste. Il décrit la misère et la révolte des mineurs du nord de la France.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Madame Bovary » (1857) est un roman de :",
+      "o": [
+        "Gustave Flaubert",
+        "Stendhal",
+        "Honoré de Balzac",
+        "Émile Zola"
+      ],
+      "r": 0,
+      "x": "Flaubert y raconte la vie d'Emma Bovary, qui rêve d'une existence romanesque loin de sa vie de province. Le roman lui valut en 1857 un procès pour atteinte aux bonnes mœurs, dont il sortit acquitté.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Les Fleurs du mal » (1857) est un recueil de :",
+      "o": [
+        "Paul Verlaine",
+        "Arthur Rimbaud",
+        "Stéphane Mallarmé",
+        "Charles Baudelaire"
+      ],
+      "r": 3,
+      "x": "Baudelaire y oppose le « spleen » à l'idéal. Il fut condamné en 1857 pour outrage à la morale publique, alors que Flaubert, poursuivi la même année, avait été acquitté.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« L'Étranger » (1942) est un roman de :",
+      "o": [
+        "Albert Camus",
+        "Jean-Paul Sartre",
+        "André Malraux",
+        "Antoine de Saint-Exupéry"
+      ],
+      "r": 0,
+      "x": "Le narrateur, Meursault, tue un homme sur une plage d'Algérie et semble indifférent à tout. Camus y illustre sa réflexion sur l'absurde ; il reçoit le prix Nobel en 1957.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Le Rouge et le Noir » (1830) est un roman de :",
+      "o": [
+        "Gustave Flaubert",
+        "Honoré de Balzac",
+        "Stendhal",
+        "Victor Hugo"
+      ],
+      "r": 2,
+      "x": "Stendhal y suit l'ascension et la chute de Julien Sorel, jeune homme ambitieux d'origine modeste. Stendhal est le pseudonyme d'Henri Beyle.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Le Père Goriot » appartient au vaste ensemble romanesque intitulé :",
+      "o": [
+        "Les Rougon-Macquart",
+        "La Comédie humaine",
+        "À la recherche du temps perdu",
+        "Les Thibault"
+      ],
+      "r": 1,
+      "x": "« La Comédie humaine » réunit environ quatre-vingt-dix romans, nouvelles et études de Balzac qui peignent la société française. « Les Rougon-Macquart » est le cycle de Zola.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Les Essais », œuvre majeure de l'humanisme au XVIe siècle, sont l'œuvre de :",
+      "o": [
+        "Rabelais",
+        "Ronsard",
+        "Montaigne",
+        "Pascal"
+      ],
+      "r": 2,
+      "x": "Montaigne s'y peint lui-même et réfléchit à la condition humaine. Sa devise « Que sais-je ? » résume son esprit de doute.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Gargantua » et « Pantagruel », récits comiques de géants, sont l'œuvre de :",
+      "o": [
+        "François Rabelais",
+        "Michel de Montaigne",
+        "Joachim du Bellay",
+        "Pierre de Ronsard"
+      ],
+      "r": 0,
+      "x": "Rabelais, humaniste du XVIe siècle, y mêle le rire et la réflexion sur l'éducation et la religion. L'adjectif « gargantuesque » vient de son géant.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Défense et illustration de la langue française » (1549), manifeste de la Pléiade, est l'œuvre de :",
+      "o": [
+        "Pierre de Ronsard",
+        "Clément Marot",
+        "Joachim du Bellay",
+        "Michel de Montaigne"
+      ],
+      "r": 2,
+      "x": "Du Bellay y défend l'usage du français contre le latin dans la poésie. Ronsard est l'autre grand poète de la Pléiade.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Du contrat social » (1762) est l'œuvre de :",
+      "o": [
+        "Voltaire",
+        "Charles de Montesquieu",
+        "Denis Diderot",
+        "Jean-Jacques Rousseau"
+      ],
+      "r": 3,
+      "x": "Rousseau y fonde la légitimité du pouvoir sur la volonté générale du peuple. L'ouvrage a influencé la Révolution française et les constitutions modernes.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« De l'esprit des lois » (1748), qui théorise la séparation des pouvoirs, est l'œuvre de :",
+      "o": [
+        "Jean-Jacques Rousseau",
+        "Montesquieu",
+        "Voltaire",
+        "Denis Diderot"
+      ],
+      "r": 1,
+      "x": "Montesquieu y distingue les pouvoirs législatif, exécutif et judiciaire, qui doivent être séparés pour éviter le despotisme. Ce principe fonde la plupart des constitutions, dont celle du Burkina Faso.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« L'Encyclopédie », grande œuvre du siècle des Lumières, a été dirigée par :",
+      "o": [
+        "Voltaire et Rousseau",
+        "Montesquieu et Buffon",
+        "Hugo et Lamartine",
+        "Diderot et d'Alembert"
+      ],
+      "r": 3,
+      "x": "Publiée de 1751 à 1772, l'Encyclopédie entend rassembler et diffuser toutes les connaissances de son temps. Elle a été plusieurs fois interdite.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "Le siècle des Lumières correspond en France au :",
+      "o": [
+        "XVIe siècle",
+        "XVIIe siècle",
+        "XVIIIe siècle",
+        "XIXe siècle"
+      ],
+      "r": 2,
+      "x": "Le XVIIIe siècle est celui de Voltaire, Rousseau, Montesquieu et Diderot, qui défendent la raison et la liberté. Le XVIIe siècle est celui du classicisme.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Bel-Ami » (1885) est un roman de :",
+      "o": [
+        "Émile Zola",
+        "Gustave Flaubert",
+        "Alphonse Daudet",
+        "Guy de Maupassant"
+      ],
+      "r": 3,
+      "x": "Maupassant y raconte l'ascension sociale sans scrupules de Georges Duroy dans le monde du journalisme. Il fut le disciple de Flaubert.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« À la recherche du temps perdu » est l'œuvre de :",
+      "o": [
+        "Marcel Proust",
+        "André Gide",
+        "Albert Camus",
+        "Louis-Ferdinand Céline"
+      ],
+      "r": 0,
+      "x": "Ce long roman en sept volumes, publiés de 1913 à 1927, explore la mémoire et le temps. L'épisode de la madeleine en est le passage le plus célèbre.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Le Petit Prince » (1943) est l'œuvre de :",
+      "o": [
+        "Albert Camus",
+        "Louis-Ferdinand Céline",
+        "Antoine de Saint-Exupéry",
+        "Jean de La Fontaine"
+      ],
+      "r": 2,
+      "x": "Aviateur et écrivain, Saint-Exupéry y raconte la rencontre d'un pilote et d'un petit prince venu d'un astéroïde. C'est l'une des œuvres les plus traduites au monde.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« La Condition humaine », prix Goncourt 1933, est un roman de :",
+      "o": [
+        "Albert Camus",
+        "Jean-Paul Sartre",
+        "André Malraux",
+        "Louis Aragon"
+      ],
+      "r": 2,
+      "x": "Le roman se déroule en Chine lors de l'insurrection de Shanghai en 1927. Malraux fut ensuite ministre de la Culture du général de Gaulle.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« En attendant Godot », pièce majeure du théâtre de l'absurde, est l'œuvre de :",
+      "o": [
+        "Eugène Ionesco",
+        "Jean Anouilh",
+        "Jean Genet",
+        "Samuel Beckett"
+      ],
+      "r": 3,
+      "x": "Deux personnages y attendent en vain un certain Godot qui ne vient jamais. Eugène Ionesco, auteur de « La Cantatrice chauve », est l'autre grand représentant du théâtre de l'absurde.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "« Le Discours de la méthode » (1637), où figure la formule « Je pense, donc je suis », est l'œuvre de :",
+      "o": [
+        "Blaise Pascal",
+        "René Descartes",
+        "Michel de Montaigne",
+        "Voltaire"
+      ],
+      "r": 1,
+      "x": "Descartes y expose une méthode fondée sur le doute et la raison. Le mot « cartésien » désigne un esprit logique et méthodique.",
+      "_batchId": "francais/2026-11-19/LOT7"
+    },
+    {
+      "q": "La pièce « Huis clos » (1944), où figure la réplique « L'enfer, c'est les autres », est l'œuvre de :",
+      "o": [
+        "Albert Camus",
+        "Samuel Beckett",
+        "Jean-Paul Sartre",
+        "Jean Anouilh"
+      ],
+      "r": 2,
+      "x": "Trois personnages morts sont enfermés ensemble pour l'éternité et se torturent par le regard qu'ils portent les uns sur les autres. Sartre refusa le prix Nobel en 1964.",
+      "_batchId": "francais/2026-11-19/LOT7"
     }
   ],
   "maths_bepc": [
