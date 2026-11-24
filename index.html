@@ -7024,7 +7024,7 @@ const App = {
             ${this.state.lastConcoursId === c.id ? '<span class="concours-badge-reprendre">Reprendre</span>' : ''}
           </div>
           <div class="concours-meta">
-            <span>📚 ${c.matieres.length} matières</span>
+            <span>📚 ${this.getEffectiveMatieres(c).length} matières</span>
             <span>🎓 ${c.niveau}</span>
             ${c.postes ? `<span>👥 ${c.postes} postes</span>` : ''}
             ${c.epreuvesPhysiques ? '<span>🏃 Tests physiques</span>' : ''}
@@ -8572,11 +8572,25 @@ const App = {
       return true;
     });
 
-    return matieres;
+    // V64.27 : masquer les matières qui n'ont pas encore assez de questions
+    return matieres.filter(m => this.matiereAssezFournie(m));
+  },
+
+  // V64.27 : une matière est affichée si elle atteint le seuil de questions
+  //   (data/concours.js, AFFICHAGE_MATIERES) ou si elle est dans les exceptions.
+  matiereAssezFournie(matiereId) {
+    const cfg = window.AFFICHAGE_MATIERES;
+    if (!cfg) return true;
+    if ((cfg.toujoursVisibles || []).includes(matiereId)) return true;
+    const nb = ((window.QUESTIONS || {})[matiereId] || []).length;
+    return nb >= (cfg.seuil || 0);
   },
 
   // Vérifier si une matière est grisée dans un concours
   isMatiereGreyed(concoursId, matiereId) {
+    // V64.27 : une matière qui atteint le seuil n'est plus « Bientôt disponible »
+    const cfg = window.AFFICHAGE_MATIERES;
+    if (cfg && ((window.QUESTIONS || {})[matiereId] || []).length >= (cfg.seuil || 0)) return false;
     const allOverrides = this.loadConcoursOverrides();
     const overrides = allOverrides[concoursId] || {};
     return (overrides.greyed || []).includes(matiereId);
@@ -13727,6 +13741,12 @@ const App = {
       if (window.AnnalesHelper && window.AnnalesHelper.loadCustomAnnales) {
         window.AnnalesHelper.loadCustomAnnales();
       }
+
+      // V64.28 : nom vu par le candidat (ex. « SVT » au lieu de « SVT — Cycle B »).
+      //   L'admin, qui ne passe pas ici, garde le nom précis de chaque matière.
+      Object.values(window.MATIERES_CATALOG || {}).forEach(m => {
+        if (m && m.nomAffiche) m.nom = m.nomAffiche;
+      });
 
       // 1. Modifications des matières (renommage, icônes, etc.)
       const editedMatieres = JSON.parse(localStorage.getItem('bara_edited_matieres') || '{}');
