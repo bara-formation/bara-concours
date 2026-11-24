@@ -1,6 +1,6 @@
 // Bara Concours - Base de questions QCM
-// Mis à jour le 2026-11-19 - Matiere Francais entierement remplacee (872 questions, 7 lots) ; Histoire (600) et Geographie (600) ajoutees ; histgeo retiree
-// Total : 9245 questions réparties sur 38 matières
+// Mis à jour le 2026-11-24 - Matieres Actualite (349 questions, 4 lots) et Comptabilite (610, 4 series) entierement remplacees ; Francais (872) le 2026-11-19
+// Total : 9714 questions réparties sur 38 matières
 
 const QUESTIONS = {
   "francais": [
@@ -58065,2314 +58065,7324 @@ const QUESTIONS = {
   ],
   "comptabilite": [
     {
-      "q": "Le bilan est :",
+      "q": "Le SYSCOHADA révisé est entré en vigueur pour les comptes personnels des entités le :",
       "o": [
-        "Photo financière à un moment donné",
-        "Évolution du chiffre d'affaires",
-        "Liste des factures",
-        "Plan d'investissement"
+        "1er janvier 2017",
+        "1er janvier 2018",
+        "1er janvier 2019",
+        "1er janvier 2020"
       ],
-      "r": 0,
-      "x": "Le bilan est la photographie du patrimoine à une date donnée : actifs (ce qu'on possède) = passifs (ce qu'on doit) + capitaux propres."
+      "r": 1,
+      "x": "L'Acte uniforme relatif au droit comptable et à l'information financière (AUDCIF), adopté le 26 janvier 2017, s'applique aux comptes personnels depuis le 1er janvier 2018. La date du 1er janvier 2019 concerne les comptes consolidés, les comptes combinés et les états financiers en normes IFRS. L'année 2017 est seulement celle de l'adoption du texte.",
+      "_batchId": "comptabilite/2026-11-24/SERIE1"
     },
     {
-      "q": "Le compte de résultat indique :",
+      "q": "Le traité instituant l'Organisation pour l'harmonisation en Afrique du droit des affaires (OHADA) a été signé le 17 octobre 1993 à :",
       "o": [
-        "Le patrimoine",
-        "Les contrats",
-        "La trésorerie",
-        "La rentabilité (produits − charges)"
-      ],
-      "r": 3,
-      "x": "Le compte de résultat = Produits − Charges = Bénéfice ou Perte. Il mesure la performance économique sur une période."
-    },
-    {
-      "q": "Le SYSCOHADA s'applique :",
-      "o": [
-        "En France",
-        "Au Royaume-Uni",
-        "Dans les pays OHADA",
-        "Aux USA"
+        "Abidjan",
+        "Brazzaville",
+        "Port-Louis",
+        "Yaoundé"
       ],
       "r": 2,
-      "x": "Le SYSCOHADA (Système Comptable OHADA) s'applique dans les 17 pays de l'OHADA, dont le Burkina Faso. Il harmonise la comptabilité africaine."
+      "x": "Le traité de l'OHADA a été signé à Port-Louis (île Maurice) le 17 octobre 1993, puis révisé à Québec le 17 octobre 2008. Yaoundé abrite le Secrétariat permanent et Abidjan la Cour commune de justice et d'arbitrage (CCJA). Brazzaville est la ville où le SYSCOHADA révisé a été adopté en 2017.",
+      "_batchId": "comptabilite/2026-11-24/SERIE1"
     },
     {
-      "q": "Le « débit » est inscrit :",
+      "q": "Dans le plan de comptes du SYSCOHADA révisé, la classe 5 regroupe :",
       "o": [
-        "À droite",
-        "En bas",
-        "En haut",
-        "À gauche"
-      ],
-      "r": 3,
-      "x": "En comptabilité, le débit s'inscrit à GAUCHE et le crédit à DROITE. Toute écriture comptable comporte un débit et un crédit (partie double)."
-    },
-    {
-      "q": "L'amortissement permet de :",
-      "o": [
-        "Financer un projet",
-        "Constater l'usure d'un bien sur sa durée",
-        "Augmenter le bénéfice",
-        "Embaucher du personnel"
-      ],
-      "r": 1,
-      "x": "L'amortissement constate la dépréciation d'une immobilisation (machine, véhicule…) due à l'usage et au temps. C'est une charge non décaissée."
-    },
-    {
-      "q": "Une facture est :",
-      "o": [
-        "Un document fiscal",
-        "Un courrier officiel",
-        "Un contrat de travail",
-        "Un document commercial attestant une vente"
-      ],
-      "r": 3,
-      "x": "La facture est un document commercial qui prouve la vente de biens/services. Elle indique : émetteur, client, montant HT, TVA, TTC."
-    },
-    {
-      "q": "Les capitaux propres comprennent :",
-      "o": [
-        "Les dettes",
-        "Les créances clients",
-        "Les stocks",
-        "Le capital + réserves + résultat"
-      ],
-      "r": 3,
-      "x": "Capitaux propres = Capital social + Réserves + Résultat net. Ils représentent ce que les actionnaires ont mis ou laissé dans l'entreprise."
-    },
-    {
-      "q": "TVA collectée − TVA déductible = :",
-      "o": [
-        "Marge brute",
-        "Chiffre d'affaires",
-        "Bénéfice",
-        "TVA à payer"
-      ],
-      "r": 3,
-      "x": "TVA à payer = TVA facturée aux clients (collectée) − TVA payée aux fournisseurs (déductible). Reversée à l'État."
-    },
-    {
-      "q": "Le journal comptable enregistre :",
-      "o": [
-        "Les opérations chronologiquement",
-        "Les actualités",
-        "Les contrats seulement",
-        "Les paies"
+        "Les comptes de trésorerie",
+        "Les comptes de tiers",
+        "Les comptes de stocks",
+        "Les comptes de ressources durables"
       ],
       "r": 0,
-      "x": "Le journal est un livre comptable obligatoire qui enregistre toutes les opérations dans l'ordre chronologique de leur survenance."
+      "x": "La classe 5 regroupe les comptes de trésorerie, comme le 521 Banques et le 571 Caisse. Les comptes de tiers (fournisseurs, clients, État) forment la classe 4 et les stocks la classe 3. Les ressources durables, dont le capital, relèvent de la classe 1.",
+      "_batchId": "comptabilite/2026-11-24/SERIE1"
     },
     {
-      "q": "Une « créance » est :",
+      "q": "Une entreprise de Ouagadougou achète à crédit des marchandises de 500 000 FCFA HT, avec une TVA de 18 %. Le compte 401 Fournisseurs est crédité de :",
       "o": [
-        "Une somme due par un tiers",
-        "Une dette",
-        "Un bien matériel",
-        "Un salaire"
-      ],
-      "r": 0,
-      "x": "Une créance est une somme qu'un tiers (client, débiteur) doit à l'entreprise. À l'inverse, une dette est ce qu'on doit."
-    },
-    {
-      "q": "Quel principe comptable impose d'enregistrer les charges et produits dans l'exercice auquel ils se rapportent, indépendamment de la date de paiement ?",
-      "o": [
-        "Principe de prudence",
-        "Principe de permanence des méthodes",
-        "Principe de spécialisation des exercices",
-        "Principe de continuité de l'exploitation"
-      ],
-      "r": 2,
-      "x": "Le principe de spécialisation des exercices exige que chaque exercice supporte les charges et produits qui lui sont propres. Il justifie les régularisations de fin d'exercice (charges à payer, produits à recevoir, charges constatées d'avance, etc.)."
-    },
-    {
-      "q": "Selon le principe de prudence, comment doit-on traiter une perte probable mais non encore réalisée ?",
-      "o": [
-        "Ne pas l'enregistrer car elle n'est pas certaine",
-        "La mentionner uniquement dans l'annexe",
-        "Attendre la réalisation effective pour l'enregistrer",
-        "L'enregistrer immédiatement sous forme de provision"
+        "90 000 FCFA",
+        "410 000 FCFA",
+        "500 000 FCFA",
+        "590 000 FCFA"
       ],
       "r": 3,
-      "x": "Le principe de prudence impose de comptabiliser toute perte probable dès qu'elle est connue, même si elle n'est pas encore réalisée, par le biais d'une provision. En revanche, un gain probable ne doit pas être comptabilisé avant sa réalisation effective."
+      "x": "Le fournisseur est crédité du montant TTC : 500 000 + (500 000 × 18 %) = 590 000 FCFA. Les 90 000 FCFA représentent la seule TVA récupérable, débitée au compte 4452. Le montant HT de 500 000 FCFA est débité au compte 601 Achats de marchandises.",
+      "_batchId": "comptabilite/2026-11-24/SERIE1"
     },
     {
-      "q": "Le principe de permanence des méthodes signifie que :",
-      "o": [
-        "Les méthodes comptables doivent être identiques d'un exercice à l'autre",
-        "Les charges doivent rester constantes d'une année à l'autre",
-        "L'entreprise doit toujours utiliser les mêmes fournisseurs",
-        "Les taux d'amortissement ne peuvent jamais changer"
-      ],
-      "r": 0,
-      "x": "Ce principe garantit la comparabilité des états financiers dans le temps. Une entreprise peut changer de méthode, mais doit le justifier, l'indiquer dans l'annexe et en mesurer l'impact sur le résultat."
-    },
-    {
-      "q": "Quel principe comptable est mis en œuvre lorsqu'une entreprise enregistre ses biens à leur coût d'acquisition plutôt qu'à leur valeur de marché ?",
-      "o": [
-        "Principe de prudence",
-        "Principe de continuité de l'exploitation",
-        "Principe du coût historique",
-        "Principe d'importance significative"
-      ],
-      "r": 2,
-      "x": "Le principe du coût historique (ou coût d'acquisition) stipule que les actifs sont enregistrés à leur valeur d'entrée dans le patrimoine. Ce principe garantit l'objectivité et la vérifiabilité des enregistrements comptables."
-    },
-    {
-      "q": "Selon le principe de continuité de l'exploitation, on suppose que :",
-      "o": [
-        "L'entreprise continuera ses activités dans un avenir prévisible",
-        "L'entreprise réalisera toujours des bénéfices",
-        "Les prix resteront stables dans le temps",
-        "Les dettes seront toujours remboursées à échéance"
-      ],
-      "r": 0,
-      "x": "Ce principe postule que l'entreprise n'a ni l'intention ni la nécessité de se liquider dans un avenir prévisible. Il justifie la valeur des actifs au coût historique et non à la valeur de liquidation."
-    },
-    {
-      "q": "Lequel de ces éléments constitue une application du principe d'importance significative (ou de signification) ?",
-      "o": [
-        "Enregistrer les petits matériels de bureau directement en charges",
-        "Amortir toutes les immobilisations sans exception",
-        "Publier les états financiers chaque trimestre",
-        "Enregistrer les achats uniquement en fin de mois"
-      ],
-      "r": 0,
-      "x": "Le principe de signification permet de traiter en charges (plutôt qu'en immobilisations) les biens de faible valeur dont l'importance est jugée non significative. Cela simplifie la gestion comptable sans altérer l'image fidèle des états financiers."
-    },
-    {
-      "q": "L'image fidèle des états financiers signifie que :",
-      "o": [
-        "Les états financiers doivent être présentés en couleur",
-        "Les états financiers reflètent fidèlement la réalité économique et financière de l'entreprise",
-        "Les états financiers doivent être certifiés par un notaire",
-        "Les états financiers doivent présenter uniquement des résultats positifs"
-      ],
-      "r": 1,
-      "x": "L'objectif fondamental de la comptabilité SYSCOHADA est de donner une image fidèle du patrimoine, de la situation financière et du résultat de l'entreprise. En cas de conflit entre une règle et l'image fidèle, la règle peut être écartée (dérogation justifiée)."
-    },
-    {
-      "q": "Le principe de dualité (ou partie double) stipule que :",
-      "o": [
-        "Chaque écriture comptable doit être enregistrée deux fois",
-        "Tout emploi correspond à une ressource de même montant",
-        "Chaque compte doit avoir deux soldes opposés",
-        "Chaque exercice doit comporter deux bilans"
-      ],
-      "r": 1,
-      "x": "La partie double est le fondement de la comptabilité : tout emploi (débit) trouve sa contrepartie dans une ressource (crédit) du même montant. La somme des débits est toujours égale à la somme des crédits dans une écriture."
-    },
-    {
-      "q": "Un produit est constaté d'avance lorsque :",
-      "o": [
-        "Il a été encaissé mais ne concerne pas encore l'exercice en cours",
-        "Il sera encaissé l'exercice prochain",
-        "Il n'a pas encore été facturé au client",
-        "Il a été enregistré mais annulé ensuite"
-      ],
-      "r": 0,
-      "x": "Les produits constatés d'avance sont des produits encaissés ou comptabilisés au cours de l'exercice, mais qui concernent un exercice futur. Ils sont retranchés des produits de l'exercice et portés au passif du bilan (compte 487)."
-    },
-    {
-      "q": "Une charge à payer est :",
-      "o": [
-        "Une charge payée d'avance pour l'exercice suivant",
-        "Une charge certaine dans son montant mais non encore facturée ou payée à la clôture",
-        "Une charge provisionnée pour risque futur",
-        "Une charge annulée en fin d'exercice"
-      ],
-      "r": 1,
-      "x": "Les charges à payer (ou charges payables) concernent l'exercice en cours mais n'ont pas encore été facturées ni payées à la date de clôture. Exemple : intérêts courus non échus, factures de téléphone non reçues. Elles sont enregistrées au passif (compte 408)."
-    },
-    {
-      "q": "Selon le SYSCOHADA révisé, la comptabilité doit être tenue en :",
-      "o": [
-        "Unité monétaire locale uniquement (FCFA)",
-        "Euros pour les entreprises importatrices",
-        "La monnaie du pays d'implantation",
-        "Toute monnaie étrangère acceptée par les banques"
-      ],
-      "r": 2,
-      "x": "La comptabilité est tenue dans la monnaie du pays d'implantation de l'entreprise. Pour le Burkina Faso, c'est le Franc CFA (FCFA). Les opérations en devises étrangères doivent être converties en monnaie nationale."
-    },
-    {
-      "q": "Quel principe justifie la comptabilisation d'une provision pour litige en cours ?",
-      "o": [
-        "Principe de permanence des méthodes",
-        "Principe de prudence",
-        "Principe de coût historique",
-        "Principe de continuité de l'exploitation"
-      ],
-      "r": 1,
-      "x": "Le principe de prudence impose d'anticiper toutes les pertes probables même si elles ne sont pas encore réalisées. Un litige en cours représente un risque probable qui doit être provisionné dès qu'il est identifié et chiffrable."
-    },
-    {
-      "q": "La balance de vérification permet de contrôler que :",
-      "o": [
-        "Les marchandises sont bien en stock",
-        "La somme des débits est égale à la somme des crédits",
-        "Les clients ont bien payé leurs dettes",
-        "Les immobilisations sont correctement évaluées"
-      ],
-      "r": 1,
-      "x": "La balance générale est un tableau récapitulatif de tous les comptes qui vérifie l'égalité Totaux débit = Totaux crédit, conformément au principe de la partie double. Elle ne garantit pas l'absence d'erreurs (ex. : erreur d'imputation)."
-    },
-    {
-      "q": "Les états financiers annuels selon le SYSCOHADA révisé comprennent obligatoirement :",
-      "o": [
-        "Le bilan, le compte de résultat et le grand livre",
-        "Le bilan, le compte de résultat et la balance des comptes",
-        "Seulement le bilan et le compte de résultat",
-        "Le bilan, le compte de résultat, le tableau des flux de trésorerie, le tableau des variations des capitaux propres et les notes annexes"
-      ],
-      "r": 3,
-      "x": "Le SYSCOHADA révisé impose cinq états financiers : (1) le Bilan, (2) le Compte de résultat, (3) le Tableau des flux de trésorerie, (4) le Tableau des variations des capitaux propres, et (5) les Notes annexes. Le grand livre et la balance sont des documents internes, non publiables."
-    },
-    {
-      "q": "Le concept de \"juste valeur\" introduit par le SYSCOHADA révisé s'oppose principalement au principe de :",
-      "o": [
-        "Prudence",
-        "Continuité de l'exploitation",
-        "Spécialisation des exercices",
-        "Coût historique"
-      ],
-      "r": 3,
-      "x": "La juste valeur est le prix auquel un actif pourrait être échangé entre parties bien informées. Elle s'oppose au coût historique qui retient le prix d'acquisition initial. Le SYSCOHADA révisé autorise la juste valeur pour certains instruments financiers et immeubles de placement."
-    },
-    {
-      "q": "Qu'est-ce que le \"résultat de l'exercice\" dans le SYSCOHADA révisé ?",
-      "o": [
-        "La différence entre les encaissements et les décaissements",
-        "La différence entre tous les produits et toutes les charges de l'exercice",
-        "La différence entre l'actif et le passif du bilan",
-        "Le bénéfice distribuable aux actionnaires"
-      ],
-      "r": 1,
-      "x": "Le résultat de l'exercice = Total des produits − Total des charges. Il peut être un bénéfice (si produits > charges) ou une perte (si charges > produits). Il apparaît dans le compte de résultat et est repris dans les capitaux propres du bilan."
-    },
-    {
-      "q": "Selon le principe de non-compensation, une entreprise :",
-      "o": [
-        "Peut compenser une dette fournisseur avec une créance client",
-        "Peut ne pas enregistrer les opérations dont les effets se neutralisent",
-        "Peut soustraire les charges des produits avant de les enregistrer",
-        "Ne peut pas compenser des postes d'actif avec des postes de passif"
-      ],
-      "r": 3,
-      "x": "Le principe de non-compensation interdit de compenser un élément d'actif avec un élément de passif ou une charge avec un produit. Chaque élément doit être présenté de façon distincte. Cela évite de masquer des informations importantes pour les lecteurs des états financiers."
-    },
-    {
-      "q": "Dans quel document comptable retrouve-t-on le premier enregistrement chronologique des opérations ?",
-      "o": [
-        "Le grand livre",
-        "La balance",
-        "Le journal",
-        "Le livre d'inventaire"
-      ],
-      "r": 2,
-      "x": "Le journal est le livre comptable de base où toutes les opérations sont enregistrées chronologiquement et de façon détaillée. Les écritures sont ensuite reportées dans le grand livre (par compte). Le journal a une valeur juridique probante."
-    },
-    {
-      "q": "Le grand livre est :",
-      "o": [
-        "Un registre des immobilisations de l'entreprise",
-        "Un fichier reprenant l'ensemble des comptes et leurs mouvements",
-        "Un tableau récapitulatif des soldes de tous les comptes",
-        "Le registre des procès-verbaux de l'assemblée générale"
-      ],
-      "r": 1,
-      "x": "Le grand livre regroupe l'ensemble des comptes ouverts par l'entreprise avec le détail de tous leurs mouvements (débits et crédits) et leur solde. Il permet de suivre l'évolution de chaque compte individuellement."
-    },
-    {
-      "q": "Quel est le rôle de l'annexe dans les états financiers SYSCOHADA ?",
-      "o": [
-        "Remplacer le bilan en cas d'absence de données",
-        "Compléter et expliquer les informations contenues dans les autres états financiers",
-        "Récapituler uniquement les immobilisations de l'entreprise",
-        "Présenter les prévisions budgétaires de l'exercice suivant"
-      ],
-      "r": 1,
-      "x": "L'annexe est un état financier à part entière qui fournit toutes les informations nécessaires à la compréhension et à l'interprétation des autres états. Elle précise les méthodes comptables utilisées, les changements de méthodes, les engagements hors bilan, etc."
-    },
-    {
-      "q": "Selon le SYSCOHADA révisé, l'exercice comptable a une durée de :",
-      "o": [
-        "24 mois pour les grandes entreprises",
-        "18 mois maximum pour les nouvelles entreprises",
-        "12 mois, sauf exception justifiée",
-        "6 mois obligatoirement"
-      ],
-      "r": 2,
-      "x": "L'exercice comptable a normalement une durée de 12 mois. Toutefois, lors de la création d'une entreprise ou d'un changement de date de clôture, la durée peut être différente de 12 mois, sous réserve de justification."
-    },
-    {
-      "q": "Quel est l'objectif principal de la normalisation comptable OHADA ?",
-      "o": [
-        "Uniformiser les pratiques comptables dans les États membres pour faciliter la lisibilité des états financiers",
-        "Imposer la langue française dans tous les documents comptables africains",
-        "Remplacer les experts-comptables par des logiciels automatisés",
-        "Obliger toutes les entreprises à tenir une comptabilité analytique"
-      ],
-      "r": 0,
-      "x": "L'OHADA (Organisation pour l'Harmonisation en Afrique du Droit des Affaires) vise à harmoniser les règles comptables dans ses 17 États membres, dont le Burkina Faso, afin de favoriser la transparence financière, les investissements et les échanges commerciaux."
-    },
-    {
-      "q": "Le système comptable SYSCOHADA révisé a été adopté en :",
-      "o": [
-        "1997",
-        "2000",
-        "2017",
-        "2021"
-      ],
-      "r": 2,
-      "x": "Le SYSCOHADA révisé a été adopté le 26 janvier 2017 par le Conseil des Ministres de l'OHADA. Il remplace le SYSCOA/SYSCOHADA de 1997 et apporte des innovations importantes : nouvelles normes d'évaluation, états financiers enrichis, prise en compte des IFRS."
-    },
-    {
-      "q": "Dans le SYSCOHADA révisé, les entreprises sont classées selon leur taille. Quel système est réservé aux \"très petites entreprises\" (TPE) ?",
-      "o": [
-        "Système normal",
-        "Système allégé",
-        "Système minimal de trésorerie (SMT)",
-        "Système intermédiaire"
-      ],
-      "r": 2,
-      "x": "Le SYSCOHADA révisé prévoit trois systèmes : le système normal (grandes et moyennes entreprises), le système allégé (petites entreprises) et le système minimal de trésorerie — SMT — (très petites entreprises dont le chiffre d'affaires est inférieur à un seuil fixé)."
-    },
-    {
-      "q": "La comptabilité d'engagement enregistre les opérations :",
-      "o": [
-        "À la date de paiement effectif",
-        "À la date de naissance du droit ou de l'obligation",
-        "Uniquement en fin d'exercice",
-        "À la date de réception de la facture uniquement"
-      ],
-      "r": 1,
-      "x": "La comptabilité d'engagement (ou comptabilité de droits constatés) enregistre les charges et produits à la date de leur réalisation juridique (livraison, facturation), indépendamment du règlement. C'est la méthode obligatoire dans le SYSCOHADA (opposée à la comptabilité de caisse)."
-    },
-    {
-      "q": "Dans le plan comptable OHADA, quelle classe regroupe les comptes de ressources durables (capitaux propres et dettes financières à long terme) ?",
-      "o": [
-        "Classe 1",
-        "Classe 2",
-        "Classe 4",
-        "Classe 5"
-      ],
-      "r": 0,
-      "x": "La classe 1 regroupe les \"Comptes de ressources durables\" : capital (10), réserves (11-13), résultat (13), subventions (14), provisions réglementées (15), emprunts et dettes financières (16), etc."
-    },
-    {
-      "q": "Le compte 21 dans le SYSCOHADA correspond à :",
-      "o": [
-        "Stocks de marchandises",
-        "Immobilisations financières",
-        "Immobilisations corporelles",
-        "Immobilisations incorporelles"
-      ],
-      "r": 3,
-      "x": "Le compte 21 \"Immobilisations incorporelles\" comprend les brevets, licences, fonds de commerce, logiciels, etc. Le compte 22 concerne les terrains, le 23 les bâtiments et le 24-25 les matériels et équipements."
-    },
-    {
-      "q": "Dans quelle classe du plan comptable OHADA trouve-t-on les comptes de tiers (clients, fournisseurs) ?",
-      "o": [
-        "Classe 2",
-        "Classe 3",
-        "Classe 4",
-        "Classe 5"
-      ],
-      "r": 2,
-      "x": "La classe 4 regroupe les \"Comptes de tiers\" : fournisseurs (40), clients (41), personnel (42), organismes sociaux (43), État et collectivités (44), associés (46), débiteurs et créditeurs divers (47), etc."
-    },
-    {
-      "q": "Le compte 52 dans le SYSCOHADA désigne :",
-      "o": [
-        "Les titres de placement",
-        "Les effets à recevoir",
-        "Les créances sur l'État",
-        "Les banques et établissements financiers"
-      ],
-      "r": 3,
-      "x": "La classe 5 regroupe les \"Comptes de trésorerie\". Le compte 52 \"Banques\" enregistre les opérations bancaires. Le compte 51 concerne les titres de placement, le 53 les établissements financiers et assimilés, le 57 la caisse."
-    },
-    {
-      "q": "Quel numéro de compte est utilisé pour les \"Achats de marchandises\" dans le SYSCOHADA ?",
+      "q": "Dans le SYSCOHADA révisé, une vente de marchandises s'enregistre au crédit du compte :",
       "o": [
         "601",
         "701",
-        "401",
-        "321"
+        "702",
+        "706"
+      ],
+      "r": 1,
+      "x": "Le compte 701 Ventes de marchandises enregistre la revente en l'état des biens achetés. Le compte 702 sert aux ventes de produits finis fabriqués par l'entreprise et le 706 aux services vendus. Le compte 601 enregistre, au débit, les achats de marchandises.",
+      "_batchId": "comptabilite/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un matériel de 6 000 000 FCFA, amorti en linéaire sur 5 ans, est mis en service le 1er avril N. La dotation de l'exercice N, clos le 31 décembre, est de :",
+      "o": [
+        "300 000 FCFA",
+        "900 000 FCFA",
+        "1 200 000 FCFA",
+        "1 500 000 FCFA"
+      ],
+      "r": 1,
+      "x": "L'annuité pleine est de 6 000 000 × 20 % = 1 200 000 FCFA, ramenée à 9 mois d'utilisation : 1 200 000 × 9/12 = 900 000 FCFA. Le montant de 1 200 000 FCFA oublie le prorata temporis et celui de 300 000 FCFA ne compte que 3 mois. La dotation se passe au débit du compte 681 et au crédit d'un compte 28 Amortissements.",
+      "_batchId": "comptabilite/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Dans le SYSCOHADA révisé, le Tableau financier des ressources et des emplois (TAFIRE) est remplacé par :",
+      "o": [
+        "Le tableau des soldes de gestion",
+        "Le tableau de formation du résultat",
+        "Le tableau des flux de trésorerie",
+        "Le tableau de variation des capitaux"
+      ],
+      "r": 2,
+      "x": "La réforme de 2017 a supprimé le TAFIRE et l'a remplacé par le tableau des flux de trésorerie (TFT). Avec le bilan, le compte de résultat et les notes annexes, le TFT forme les états financiers annuels du système normal. Les soldes intermédiaires de gestion apparaissent, eux, directement dans le compte de résultat présenté en cascade.",
+      "_batchId": "comptabilite/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le principe comptable qui impose d'enregistrer les pertes probables mais pas les gains probables est celui de :",
+      "o": [
+        "la prudence",
+        "la permanence des méthodes",
+        "la continuité d'exploitation",
+        "l'intangibilité du bilan d'ouverture"
       ],
       "r": 0,
-      "x": "Le compte 601 \"Achats de marchandises\" enregistre les achats de marchandises destinées à être revendues en l'état. Le compte 701 est le compte de \"Ventes de marchandises\". La distinction 601/701 est un piège classique des concours."
+      "x": "La prudence consiste à apprécier raisonnablement les faits pour ne pas reporter sur l'avenir des incertitudes présentes. C'est pourquoi une perte probable donne lieu à une dépréciation ou à une provision, alors qu'un gain probable n'est pas comptabilisé. La permanence des méthodes interdit, elle, de changer de méthode d'un exercice à l'autre sans justification.",
+      "_batchId": "comptabilite/2026-11-24/SERIE1"
     },
     {
-      "q": "Le compte 70 dans le SYSCOHADA regroupe :",
+      "q": "En fin de mois, une entreprise a une TVA facturée de 1 800 000 FCFA et une TVA récupérable de 1 100 000 FCFA. La TVA due à l'État est de :",
       "o": [
-        "Les achats et variations de stocks",
-        "Les amortissements et provisions",
-        "Les charges de personnel",
-        "Les ventes et produits annexes"
+        "700 000 FCFA",
+        "1 100 000 FCFA",
+        "1 800 000 FCFA",
+        "2 900 000 FCFA"
+      ],
+      "r": 0,
+      "x": "La TVA due est égale à la TVA facturée moins la TVA récupérable : 1 800 000 − 1 100 000 = 700 000 FCFA. Ce montant est porté au crédit du compte 4441 État, TVA due, avant son paiement à la Direction générale des impôts (DGI). Les 2 900 000 FCFA résultent d'une addition erronée des deux TVA.",
+      "_batchId": "comptabilite/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un client règle sa facture par chèque, déposé le jour même à la banque. L'écriture correcte est :",
+      "o": [
+        "Débit 411 / Crédit 521",
+        "Débit 571 / Crédit 411",
+        "Débit 411 / Crédit 571",
+        "Débit 521 / Crédit 411"
       ],
       "r": 3,
-      "x": "La classe 7 \"Comptes de produits\" comprend : ventes de marchandises (701), ventes de produits fabriqués (702), travaux et services vendus (703), produits accessoires (704), subventions d'exploitation (71), reprises de provisions (79), etc."
+      "x": "La banque (521) est débitée car elle reçoit l'argent, et le client (411) est crédité car sa dette envers l'entreprise s'éteint. L'écriture inverse, débit 411 et crédit 521, correspondrait à une sortie d'argent vers le client. Le compte 571 Caisse ne s'utilise que pour les règlements en espèces.",
+      "_batchId": "comptabilite/2026-11-24/SERIE1"
     },
     {
-      "q": "Dans le SYSCOHADA, le compte 681 correspond à :",
+      "q": "L'Acte uniforme relatif au droit comptable et à l'information financière (AUDCIF) a été adopté à Brazzaville le :",
       "o": [
-        "Reprises sur amortissements",
-        "Dotations aux amortissements",
-        "Provisions pour risques et charges",
-        "Pertes sur créances irrécouvrables"
+        "24 mars 2000",
+        "17 octobre 2008",
+        "26 janvier 2017",
+        "1er janvier 2018"
+      ],
+      "r": 2,
+      "x": "L'AUDCIF a été adopté le 26 janvier 2017 à Brazzaville et a remplacé l'Acte uniforme comptable du 24 mars 2000. Le 1er janvier 2018 est sa date d'entrée en vigueur pour les comptes personnels des entités. Le 17 octobre 2008 correspond à la révision du traité de l'OHADA à Québec.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'Organisation pour l'harmonisation en Afrique du droit des affaires (OHADA) compte aujourd'hui :",
+      "o": [
+        "14 États parties",
+        "15 États parties",
+        "16 États parties",
+        "17 États parties"
+      ],
+      "r": 3,
+      "x": "L'OHADA regroupe 17 États parties, dont le Burkina Faso, qui appliquent les mêmes actes uniformes. Le traité de 1993 avait été signé à l'origine par 14 États. La République démocratique du Congo est le dernier État à avoir rejoint l'organisation, en 2012.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Selon l'AUDCIF, une entité de négoce peut tenir le système minimal de trésorerie (SMT) si son chiffre d'affaires annuel hors taxes ne dépasse pas :",
+      "o": [
+        "30 millions de FCFA",
+        "40 millions de FCFA",
+        "60 millions de FCFA",
+        "100 millions de FCFA"
+      ],
+      "r": 2,
+      "x": "Le seuil du SMT est de 60 millions de FCFA pour les entités de négoce. Il est de 40 millions pour les entités artisanales et de 30 millions pour les entités de services. Le seuil de 100 millions concernait l'ancien système allégé, qui n'existe plus.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans le SYSCOHADA révisé, l'ancien système allégé destiné aux petites et moyennes entités a été :",
+      "o": [
+        "supprimé du référentiel",
+        "étendu aux entités de services",
+        "rendu obligatoire pour les PME",
+        "réservé aux entités artisanales"
+      ],
+      "r": 0,
+      "x": "Le SYSCOHADA révisé ne prévoit plus que deux systèmes : le système normal et le système minimal de trésorerie. Le système allégé a donc été supprimé. Les entités qui dépassent les seuils du SMT appliquent le système normal.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Selon l'AUDCIF, les livres comptables et les pièces justificatives doivent être conservés pendant :",
+      "o": [
+        "cinq ans",
+        "dix ans",
+        "quinze ans",
+        "trente ans"
       ],
       "r": 1,
-      "x": "Le compte 681 \"Dotations aux amortissements\" est une charge calculée non décaissable enregistrée en débit. Son pendant en produit est le compte 781 \"Reprises sur amortissements\". Ces comptes sont fondamentaux pour les travaux d'inventaire."
+      "x": "Les livres comptables et les pièces justificatives sont conservés pendant dix ans. Cette durée permet les contrôles fiscaux, judiciaires et ceux des commissaires aux comptes. Cinq ans est une durée souvent citée à tort, qui vient d'autres règles de prescription.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
     },
     {
-      "q": "Le compte 411 \"Clients\" présente normalement un solde :",
+      "q": "Selon l'AUDCIF, les états financiers annuels doivent être arrêtés au plus tard dans un délai, après la clôture de l'exercice, de :",
       "o": [
-        "Créditeur, car le client doit de l'argent à l'entreprise",
-        "Débiteur, car le client doit de l'argent à l'entreprise",
-        "Nul en permanence",
-        "Créditeur ou débiteur selon les cas sans règle fixe"
+        "deux mois",
+        "trois mois",
+        "quatre mois",
+        "six mois"
+      ],
+      "r": 2,
+      "x": "Les états financiers annuels sont arrêtés au plus tard quatre mois après la clôture de l'exercice. Le délai de six mois correspond à la tenue de l'assemblée qui approuve les comptes dans les sociétés commerciales. Pour un exercice clos le 31 décembre, l'arrêté doit donc intervenir avant le 30 avril.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Selon l'AUDCIF, les livres comptables obligatoires sont le livre-journal, le grand-livre, la balance générale des comptes et :",
+      "o": [
+        "le livre d'inventaire",
+        "le livre de paie",
+        "le registre du personnel",
+        "le brouillard de caisse"
+      ],
+      "r": 0,
+      "x": "Le livre d'inventaire complète la liste des livres obligatoires. Il récapitule le relevé des éléments d'actif et de passif établi à la clôture. Le livre de paie et le registre du personnel relèvent du droit du travail, pas du droit comptable.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Sauf cas particulier du premier exercice, l'exercice comptable a une durée de :",
+      "o": [
+        "six mois",
+        "douze mois",
+        "dix-huit mois",
+        "vingt-quatre mois"
       ],
       "r": 1,
-      "x": "Le compte 411 \"Clients\" est un compte d'actif. Il présente un solde débiteur représentant les créances que l'entreprise détient sur ses clients. Il diminue lors des encaissements et augmente lors des ventes à crédit."
+      "x": "L'exercice comptable dure douze mois et coïncide en principe avec l'année civile. Il commence le 1er janvier et se termine le 31 décembre. Le premier exercice d'une entité nouvelle peut toutefois être plus court ou plus long.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
     },
     {
-      "q": "Quel compte enregistre les salaires bruts dus au personnel ?",
+      "q": "Selon le principe de la partie double, chaque opération est enregistrée :",
+      "o": [
+        "uniquement au débit du compte de trésorerie concerné",
+        "deux fois de suite au journal pour éviter les erreurs",
+        "au débit d'au moins un compte et au crédit d'au moins un autre",
+        "au crédit du compte de charges et au débit du résultat"
+      ],
+      "r": 2,
+      "x": "Toute opération touche au moins deux comptes, l'un débité et l'autre crédité, pour un même montant total. C'est pourquoi le total des débits est toujours égal au total des crédits. Enregistrer deux fois au journal serait une erreur de doublon, pas la partie double.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans un bilan, le total de l'actif est égal :",
+      "o": [
+        "au total des capitaux propres",
+        "au total des dettes",
+        "au résultat net de l'exercice",
+        "au total du passif"
+      ],
+      "r": 3,
+      "x": "Le bilan est équilibré : le total de l'actif égale le total du passif. Le passif comprend à la fois les capitaux propres et les dettes, ce qui écarte ces deux réponses prises seules. Le résultat net n'est qu'une composante des capitaux propres.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un compte d'actif, comme le compte 521 Banques, augmente lorsqu'il est :",
+      "o": [
+        "crédité",
+        "débité",
+        "soldé",
+        "extourné"
+      ],
+      "r": 1,
+      "x": "Les comptes d'actif augmentent au débit et diminuent au crédit. À l'inverse, les comptes de passif augmentent au crédit. Un compte est soldé lorsqu'on rend son solde nul, ce qui n'est pas une augmentation.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un compte de charges, comme le compte 601 Achats de marchandises, présente normalement un solde :",
+      "o": [
+        "débiteur",
+        "créditeur",
+        "nul en cours d'exercice",
+        "négatif"
+      ],
+      "r": 0,
+      "x": "Les charges s'enregistrent au débit, leur solde est donc normalement débiteur. Les comptes de produits ont au contraire un solde créditeur. En fin d'exercice, charges et produits sont soldés pour déterminer le résultat.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans le plan de comptes SYSCOHADA, le bénéfice net de l'exercice est inscrit au compte :",
+      "o": [
+        "121",
+        "129",
+        "131",
+        "139"
+      ],
+      "r": 2,
+      "x": "Le compte 131 Résultat net : bénéfice enregistre le bénéfice de l'exercice. La perte s'inscrit au compte 139 Résultat net : perte. Le compte 121 enregistre le report à nouveau créditeur, c'est-à-dire des bénéfices antérieurs non distribués.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le capital social d'une société anonyme est crédité au compte :",
+      "o": [
+        "101",
+        "104",
+        "111",
+        "161"
+      ],
+      "r": 0,
+      "x": "Le compte 101 Capital social enregistre les apports des associés d'une société. Le compte 104 est le compte de l'exploitant individuel et le 111 enregistre la réserve légale. Le compte 161 sert aux emprunts obligataires.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans les sociétés commerciales de l'espace OHADA, la dotation à la réserve légale cesse d'être obligatoire lorsque cette réserve atteint :",
+      "o": [
+        "le dixième du capital social",
+        "le cinquième du capital social",
+        "le quart du capital social",
+        "la moitié du capital social"
+      ],
+      "r": 1,
+      "x": "L'Acte uniforme sur les sociétés commerciales impose une dotation d'au moins un dixième du bénéfice, jusqu'à ce que la réserve atteigne le cinquième du capital. Le plafond du dixième du capital est celui du droit français, souvent confondu avec la règle OHADA. Toute décision prise en violation de cette règle est nulle.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une SARL au capital de 50 000 000 FCFA, sans pertes antérieures, réalise un bénéfice de 8 000 000 FCFA ; sa réserve légale s'élève déjà à 9 400 000 FCFA. La dotation obligatoire est de :",
+      "o": [
+        "400 000 FCFA",
+        "600 000 FCFA",
+        "800 000 FCFA",
+        "1 600 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Le plafond est de 50 000 000 × 1/5 = 10 000 000 FCFA, il ne reste donc que 600 000 FCFA à doter. Le dixième du bénéfice, soit 800 000 FCFA, dépasserait ce plafond. Une fois le plafond atteint, la dotation n'est plus obligatoire.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans le bilan, le compte 401 Fournisseurs est classé dans :",
+      "o": [
+        "l'actif circulant",
+        "les capitaux propres",
+        "la trésorerie-passif",
+        "le passif circulant"
+      ],
+      "r": 3,
+      "x": "Le compte 401 enregistre les dettes envers les fournisseurs, qui font partie du passif circulant. Il est crédité lors de l'achat et débité lors du règlement. Le compte 411 Clients, lui, figure dans l'actif circulant.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans le SYSCOHADA révisé, la classe 8 regroupe :",
+      "o": [
+        "les charges des activités ordinaires",
+        "les produits des activités ordinaires",
+        "les autres charges et les autres produits",
+        "les comptes de stocks et d'en-cours"
+      ],
+      "r": 2,
+      "x": "La classe 8 enregistre les autres charges et autres produits, notamment les opérations hors activités ordinaires (HAO) et l'impôt sur le résultat. Les charges des activités ordinaires sont en classe 6 et les produits en classe 7. Les stocks relèvent de la classe 3.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans le plan de comptes SYSCOHADA, la classe 9 est réservée :",
+      "o": [
+        "aux charges et produits hors activités ordinaires",
+        "aux comptes de trésorerie et de placements",
+        "aux dettes et créances à long terme",
+        "aux engagements hors bilan et à la comptabilité analytique"
+      ],
+      "r": 3,
+      "x": "La classe 9 regroupe les engagements hors bilan et la comptabilité analytique de gestion. Les opérations hors activités ordinaires relèvent de la classe 8. La trésorerie est en classe 5.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le document comptable qui enregistre les opérations dans l'ordre chronologique est :",
+      "o": [
+        "le livre-journal",
+        "le grand-livre",
+        "la balance générale",
+        "le livre d'inventaire"
+      ],
+      "r": 0,
+      "x": "Le livre-journal enregistre les opérations jour après jour, dans l'ordre où elles se produisent. Le grand-livre reprend ensuite ces écritures compte par compte. La balance récapitule les totaux et les soldes de tous les comptes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le document qui regroupe tous les comptes de l'entité avec le détail de leurs mouvements est :",
+      "o": [
+        "le grand-livre",
+        "le livre-journal",
+        "le livre d'inventaire",
+        "le journal auxiliaire"
+      ],
+      "r": 0,
+      "x": "Le grand-livre rassemble l'ensemble des comptes, avec pour chacun ses débits, ses crédits et son solde. Le livre-journal suit l'ordre chronologique et non l'ordre des comptes. Le livre d'inventaire ne concerne que la situation à la clôture.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Pour l'acheteur, la facture reçue d'un fournisseur constitue :",
+      "o": [
+        "une pièce justificative d'origine interne",
+        "un livre comptable obligatoire",
+        "un état financier de synthèse",
+        "une pièce justificative d'origine externe"
+      ],
+      "r": 3,
+      "x": "La facture d'achat vient d'un tiers, c'est donc une pièce justificative externe. Une pièce interne est établie par l'entité elle-même, comme un bulletin de paie ou un bon de sortie. Toute écriture doit s'appuyer sur une pièce justificative datée et conservée.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le principe comptable qui suppose que l'entité poursuivra normalement ses activités dans un avenir prévisible est :",
+      "o": [
+        "la permanence des méthodes",
+        "la spécialisation des exercices",
+        "l'importance significative",
+        "la continuité d'exploitation"
+      ],
+      "r": 3,
+      "x": "La continuité d'exploitation suppose que l'entité n'a ni l'intention ni l'obligation de cesser son activité. C'est ce principe qui justifie l'évaluation des biens à leur coût et non à leur valeur de liquidation. La permanence des méthodes concerne, elle, la stabilité des règles d'un exercice à l'autre.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le principe qui interdit de modifier, au début d'un exercice, les soldes arrêtés à la fin de l'exercice précédent est :",
+      "o": [
+        "l'intangibilité du bilan d'ouverture",
+        "la spécialisation des exercices",
+        "la prééminence de la réalité",
+        "la permanence des méthodes"
+      ],
+      "r": 0,
+      "x": "L'intangibilité du bilan d'ouverture impose que le bilan d'ouverture soit identique au bilan de clôture précédent. Aucune correction ne peut donc être imputée directement sur les soldes d'ouverture. La spécialisation des exercices rattache, elle, les charges et produits à l'exercice qui les concerne.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le principe qui impose de rattacher à une période comptable les seules charges et produits qui la concernent est :",
+      "o": [
+        "le coût historique des biens",
+        "la continuité d'exploitation",
+        "la transparence de l'information",
+        "la spécialisation des exercices"
+      ],
+      "r": 3,
+      "x": "La spécialisation, ou indépendance, des exercices exige de rattacher chaque charge et chaque produit à l'exercice concerné. Elle justifie les écritures de régularisation comme les charges constatées d'avance. Le coût historique porte sur l'évaluation des biens, non sur leur rattachement.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Selon le principe du coût historique, un bien acquis est enregistré à l'actif :",
+      "o": [
+        "à son coût d'acquisition à la date d'entrée",
+        "à sa valeur de marché à la date de clôture",
+        "à son coût de remplacement estimé",
+        "à son prix de revente probable"
+      ],
+      "r": 0,
+      "x": "Le coût historique impose d'enregistrer un bien à son coût d'acquisition au jour de son entrée. Ce coût n'est pas réévalué chaque année en fonction des prix du marché. La valeur de marché sert seulement à vérifier s'il faut constater une dépréciation.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le principe qui fait comptabiliser une opération selon sa substance économique plutôt que selon sa forme juridique est :",
+      "o": [
+        "la transparence et la sincérité des comptes",
+        "l'importance significative de l'information",
+        "la permanence des méthodes comptables",
+        "la prééminence de la réalité sur l'apparence"
+      ],
+      "r": 3,
+      "x": "La prééminence de la réalité sur l'apparence fait enregistrer une opération selon sa substance économique. C'est ce principe qui conduit à inscrire à l'actif un bien pris en location-acquisition. La transparence vise surtout la clarté et la sincérité de l'information.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans le SYSCOHADA révisé, un matériel pris en location-acquisition (crédit-bail) est inscrit :",
+      "o": [
+        "à l'actif du preneur, en contrepartie d'une dette",
+        "en charges de location chez le preneur uniquement",
+        "dans les seuls engagements hors bilan du preneur",
+        "au passif du bailleur, en contrepartie d'une créance"
+      ],
+      "r": 0,
+      "x": "Le preneur inscrit le bien en immobilisation et constate une dette au compte 17 Dettes de location-acquisition. Chaque loyer est ensuite décomposé entre remboursement de la dette et intérêts. Contrairement aux comptes individuels du plan comptable français qui comptabilisent les loyers en charges, le SYSCOHADA applique la prééminence de la réalité économique.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans le SYSCOHADA révisé, les frais de constitution d'une société (honoraires, droits d'enregistrement) sont :",
+      "o": [
+        "inscrits en immobilisations incorporelles",
+        "inscrits en charges immobilisées à l'actif",
+        "déduits directement du capital social",
+        "comptabilisés en charges de l'exercice"
+      ],
+      "r": 3,
+      "x": "La réforme a supprimé les charges immobilisées : les frais de constitution passent en charges selon leur nature. Les honoraires vont par exemple au compte 6324 et les droits d'enregistrement au compte 646. L'ancien SYSCOHADA les inscrivait à l'actif au compte 201 Frais d'établissement.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans le plan de comptes SYSCOHADA, le premier chiffre du numéro d'un compte indique :",
+      "o": [
+        "le numéro du journal auxiliaire",
+        "la classe du compte",
+        "l'exercice de l'enregistrement",
+        "la nature de la pièce justificative"
+      ],
+      "r": 1,
+      "x": "Le premier chiffre désigne la classe, de 1 à 9 : par exemple 6 pour les charges des activités ordinaires. Les chiffres suivants précisent le compte principal, puis les subdivisions. Ainsi 601 appartient à la classe 6 et au compte principal 60 Achats.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le capital apporté par un commerçant à son entreprise individuelle lors de sa création est crédité au compte :",
+      "o": [
+        "101",
+        "102",
+        "103",
+        "104"
+      ],
+      "r": 2,
+      "x": "Le compte 103 Capital personnel enregistre l'apport initial de l'exploitant individuel. Le compte 104 Compte de l'exploitant suit les apports et retraits courants de l'année. Le compte 101 est réservé au capital social des sociétés.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le retrait d'espèces par l'exploitant individuel pour ses dépenses personnelles est débité au compte :",
+      "o": [
+        "103",
+        "104",
+        "421",
+        "658"
+      ],
+      "r": 1,
+      "x": "Les prélèvements personnels de l'exploitant se débitent au compte 104 Compte de l'exploitant. Ils ne constituent pas une charge de l'entreprise, ce qui exclut le compte 658. Le compte 421 concerne les avances faites au personnel salarié.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un emprunt bancaire de 10 000 000 FCFA remboursable sur 5 ans est crédité, lors de son obtention, au compte :",
+      "o": [
+        "162",
+        "165",
+        "521",
+        "561"
+      ],
+      "r": 0,
+      "x": "Le compte 162 Emprunts et dettes auprès des établissements de crédit est crédité, et le compte 521 Banques débité. Le compte 561 concerne les crédits de trésorerie à court terme. Le compte 165 enregistre les dépôts et cautionnements reçus.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une annuité d'emprunt de 1 500 000 FCFA comprend 400 000 FCFA d'intérêts. Le compte 162 est débité de :",
+      "o": [
+        "400 000 FCFA",
+        "1 100 000 FCFA",
+        "1 500 000 FCFA",
+        "1 900 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Seule la part de capital, soit 1 500 000 − 400 000 = 1 100 000 FCFA, réduit la dette au compte 162. Les 400 000 FCFA d'intérêts sont une charge débitée au compte 671 Intérêts des emprunts. Le compte 521 est crédité de la totalité, soit 1 500 000 FCFA.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans une société anonyme de l'espace OHADA, le contrôle légal des comptes est assuré par :",
+      "o": [
+        "l'expert-comptable de la société",
+        "le conseil d'administration",
+        "l'inspecteur des impôts",
+        "le commissaire aux comptes"
+      ],
+      "r": 3,
+      "x": "Le commissaire aux comptes certifie que les états financiers sont réguliers, sincères et donnent une image fidèle. L'expert-comptable peut tenir ou superviser la comptabilité, mais il n'est pas le contrôleur légal. Le conseil d'administration arrête les comptes, il ne les certifie pas.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Les journaux auxiliaires (achats, ventes, caisse, banque) servent principalement à :",
+      "o": [
+        "remplacer le grand-livre dans les petites entités",
+        "établir directement le bilan de fin d'exercice",
+        "enregistrer séparément les opérations de même nature",
+        "calculer le résultat de chaque mois"
+      ],
+      "r": 2,
+      "x": "Les journaux auxiliaires regroupent les opérations répétitives de même nature, ce qui facilite la répartition du travail. Leurs totaux sont ensuite centralisés au journal général. Ils ne remplacent ni le grand-livre ni les états financiers.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le principe selon lequel les états financiers doivent révéler toute information pouvant influencer le jugement de leurs utilisateurs est :",
+      "o": [
+        "l'importance significative",
+        "le coût historique",
+        "la continuité d'exploitation",
+        "la spécialisation des exercices"
+      ],
+      "r": 0,
+      "x": "L'importance significative impose de mentionner tout élément susceptible d'influencer les décisions des lecteurs des états financiers. À l'inverse, les éléments sans importance peuvent être regroupés. Le coût historique est une règle d'évaluation, sans lien avec ce critère.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans le plan de comptes SYSCOHADA, la fraction du capital souscrit par les associés mais non encore appelée est inscrite au compte :",
+      "o": [
+        "101",
+        "104",
+        "109",
+        "4613"
+      ],
+      "r": 2,
+      "x": "Le compte 109 Apporteurs, capital souscrit non appelé enregistre la part du capital que la société n'a pas encore demandée. Il vient en diminution du capital au passif du bilan. Le compte 4613 concerne le capital appelé mais non encore versé.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une écriture erronée déjà enregistrée au journal est corrigée :",
+      "o": [
+        "en supprimant l'écriture tant que l'exercice n'est pas clos",
+        "par une simple mention dans les notes annexes",
+        "en modifiant seulement le solde au grand-livre",
+        "par une écriture de contre-passation ou d'extourne"
+      ],
+      "r": 3,
+      "x": "Une écriture validée ne peut être ni supprimée ni effacée, même avant la clôture : on l'annule par une écriture inverse, puis on passe l'écriture correcte. Cette règle garantit l'irréversibilité et la traçabilité des enregistrements. Corriger seulement le grand-livre créerait un écart avec le journal.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans le plan de comptes SYSCOHADA, un emprunt bancaire à long terme relève de la classe :",
+      "o": [
+        "1",
+        "4",
+        "5",
+        "6"
+      ],
+      "r": 0,
+      "x": "La classe 1 regroupe les ressources durables : capitaux propres, emprunts et dettes financières. La classe 4 concerne les tiers à court terme et la classe 5 la trésorerie. Les intérêts de l'emprunt, eux, sont des charges de la classe 6.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Les biens destinés à rester durablement dans l'entité, comme les bâtiments et le matériel, sont enregistrés dans la classe :",
+      "o": [
+        "1",
+        "2",
+        "3",
+        "6"
+      ],
+      "r": 1,
+      "x": "La classe 2 enregistre l'actif immobilisé : immobilisations incorporelles, corporelles et financières. La classe 3 concerne les stocks, qui sont destinés à être vendus ou consommés. La classe 1 correspond aux ressources durables au passif.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une perte d'un exercice antérieur, non encore absorbée, figure au compte :",
+      "o": [
+        "121",
+        "129",
+        "131",
+        "139"
+      ],
+      "r": 1,
+      "x": "Le compte 129 Report à nouveau débiteur enregistre les pertes antérieures en attente d'imputation. Le compte 139 n'enregistre que la perte de l'exercice en cours, avant son affectation. Le compte 121 correspond au report à nouveau créditeur.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le compte de résultat présente :",
+      "o": [
+        "le patrimoine de l'entité à une date donnée",
+        "les entrées et sorties de trésorerie",
+        "la liste détaillée des créances et des dettes",
+        "les charges et les produits de l'exercice"
+      ],
+      "r": 3,
+      "x": "Le compte de résultat récapitule les charges et les produits de l'exercice et fait apparaître le résultat. Le patrimoine à une date donnée est décrit par le bilan. Les entrées et sorties de trésorerie relèvent du tableau des flux de trésorerie.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans une balance générale correcte, le total des soldes débiteurs est :",
+      "o": [
+        "supérieur au total des soldes créditeurs",
+        "égal au résultat net de l'exercice",
+        "égal au total des soldes créditeurs",
+        "égal au total de l'actif du bilan"
+      ],
+      "r": 2,
+      "x": "La partie double garantit l'égalité des totaux des débits et des crédits, donc des soldes débiteurs et créditeurs. Un écart signale une erreur d'enregistrement ou de report. Le total de l'actif ne retient que les comptes de bilan, pas les charges et produits.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La réparation courante d'un véhicule de livraison, qui n'allonge pas sa durée d'utilisation, est enregistrée :",
+      "o": [
+        "en immobilisation au compte 245",
+        "en stock au compte 33",
+        "en amortissement au compte 28",
+        "en charge au compte 624"
+      ],
+      "r": 3,
+      "x": "Une dépense d'entretien courant est une charge de l'exercice, au compte 624 Entretien, réparations et maintenance. Elle ne s'inscrit à l'actif que si elle augmente la valeur ou la durée d'utilisation du bien. Le compte 245 Matériel de transport enregistre l'achat du véhicule lui-même.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une vente au comptant réglée en espèces fait débiter le compte :",
+      "o": [
+        "411",
+        "521",
+        "571",
+        "701"
+      ],
+      "r": 2,
+      "x": "Les espèces reçues augmentent la caisse, le compte 571 Caisse est donc débité. Le compte 701 est crédité du montant hors taxes de la vente. Le compte 411 ne serait utilisé que pour une vente à crédit.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le livre d'inventaire récapitule, à la clôture de l'exercice :",
+      "o": [
+        "les écritures passées au journal pendant le dernier mois",
+        "les totaux des débits et des crédits de chaque compte",
+        "les encaissements et décaissements de l'exercice",
+        "le relevé et l'évaluation des éléments d'actif et de passif"
+      ],
+      "r": 3,
+      "x": "Le livre d'inventaire reprend le recensement et l'évaluation des biens, créances et dettes à la date de clôture. Il sert de base à l'établissement du bilan. La balance récapitule les totaux des comptes et le tableau des flux de trésorerie les encaissements et décaissements.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le compte 411 Clients est débité lorsque :",
+      "o": [
+        "le client règle sa facture par chèque",
+        "l'entreprise reçoit un avoir d'un fournisseur",
+        "le client verse une avance sur commande",
+        "l'entreprise vend à crédit à un client"
+      ],
+      "r": 3,
+      "x": "Une vente à crédit crée une créance sur le client, ce qui débite le compte 411. Le règlement du client crédite au contraire ce compte. L'avance reçue d'un client est enregistrée au compte 4191 et non au débit du 411.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Selon l'AUDCIF, les états financiers annuels du système normal comprennent le bilan, le compte de résultat, le tableau des flux de trésorerie et :",
+      "o": [
+        "les notes annexes",
+        "le livre d'inventaire",
+        "la balance générale",
+        "le rapport de gestion"
+      ],
+      "r": 0,
+      "x": "Les notes annexes complètent les trois autres états et forment avec eux un tout indissociable. Le livre d'inventaire et la balance sont des documents comptables, pas des états financiers. Le rapport de gestion est établi par les dirigeants, en dehors des états financiers.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une réduction accordée sur le prix en raison d'un défaut de qualité ou de conformité de la marchandise livrée est :",
+      "o": [
+        "un rabais",
+        "une remise",
+        "une ristourne",
+        "un escompte"
+      ],
+      "r": 0,
+      "x": "Le rabais compense un défaut de qualité, de conformité ou un retard de livraison. La remise récompense l'importance de la commande et la ristourne le volume d'affaires réalisé sur une période. L'escompte, lui, est une réduction financière pour paiement rapide.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une réduction accordée en raison de l'importance des quantités commandées en une seule fois est :",
+      "o": [
+        "un rabais",
+        "une ristourne",
+        "un escompte",
+        "une remise"
+      ],
+      "r": 3,
+      "x": "La remise est liée à l'importance de la commande ou à la qualité du client. Elle figure en général directement sur la facture. Le rabais suppose au contraire un défaut constaté sur la marchandise.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une réduction calculée sur le chiffre d'affaires réalisé avec un client au cours d'une période est :",
+      "o": [
+        "une remise",
+        "une ristourne",
+        "un rabais",
+        "un escompte"
+      ],
+      "r": 1,
+      "x": "La ristourne est accordée périodiquement en fonction du volume d'affaires réalisé, souvent en fin d'année. Elle donne généralement lieu à une facture d'avoir. Une remise porte au contraire sur une commande précise.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'escompte de règlement est une réduction :",
+      "o": [
+        "financière accordée pour un paiement anticipé",
+        "commerciale accordée pour un défaut de qualité",
+        "commerciale liée à l'importance de la commande",
+        "fiscale accordée par l'administration des impôts"
+      ],
+      "r": 0,
+      "x": "L'escompte récompense un paiement comptant ou avant l'échéance prévue : c'est une réduction financière. Il est donc enregistré dans les comptes financiers, en charge chez le vendeur et en produit chez l'acheteur. Le rabais et la remise sont, eux, des réductions commerciales.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une facture affiche un montant brut de 2 000 000 FCFA, une remise de 10 % puis un rabais de 5 %. Le net commercial est de :",
+      "o": [
+        "1 700 000 FCFA",
+        "1 710 000 FCFA",
+        "1 800 000 FCFA",
+        "1 900 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Les réductions s'appliquent en cascade : 2 000 000 × 0,90 = 1 800 000, puis 1 800 000 × 0,95 = 1 710 000 FCFA. Le montant de 1 700 000 FCFA additionne à tort les deux taux en appliquant 15 % au brut. Le montant de 1 800 000 FCFA oublie le rabais.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une facture affiche un net commercial de 1 000 000 FCFA, un escompte de 2 % et une TVA de 18 %. Le montant de la TVA facturée est de :",
+      "o": [
+        "160 000 FCFA",
+        "176 400 FCFA",
+        "180 000 FCFA",
+        "183 600 FCFA"
+      ],
+      "r": 1,
+      "x": "La TVA se calcule sur le net financier : 1 000 000 × 0,98 = 980 000, puis 980 000 × 18 % = 176 400 FCFA. Le montant de 180 000 FCFA est calculé à tort sur le net commercial et celui de 160 000 FCFA retranche l'escompte du taux de TVA. Le montant de 183 600 FCFA majore la TVA de 2 % au lieu de la réduire.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans le SYSCOHADA, l'escompte obtenu d'un fournisseur pour paiement comptant est crédité au compte :",
+      "o": [
+        "671",
+        "673",
+        "773",
+        "776"
+      ],
+      "r": 2,
+      "x": "L'escompte obtenu est un produit financier enregistré au compte 773 Escomptes obtenus. Chez le fournisseur, le même escompte est une charge au compte 673 Escomptes accordés. Le compte 776 enregistre les gains de change financiers.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Sur une facture, l'escompte de règlement est calculé sur :",
+      "o": [
+        "le montant brut hors taxes",
+        "le montant toutes taxes comprises",
+        "le montant de la TVA facturée",
+        "le net commercial hors taxes"
+      ],
+      "r": 3,
+      "x": "L'escompte s'applique après les réductions commerciales, donc sur le net commercial. On obtient ainsi le net financier, sur lequel est ensuite calculée la TVA. Calculer l'escompte sur le brut ou sur le TTC est une erreur fréquente.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une facture d'achat de marchandises comporte une remise. Le compte 601 Achats de marchandises est débité du montant :",
+      "o": [
+        "brut hors taxes avant remise",
+        "toutes taxes comprises",
+        "de la remise seulement",
+        "net commercial hors taxes"
+      ],
+      "r": 3,
+      "x": "Les réductions commerciales figurant sur la facture initiale ne sont pas enregistrées séparément : l'achat est comptabilisé net. La TVA récupérable est débitée à part au compte 4452. Le montant TTC est crédité au compte 401 Fournisseurs.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un rabais hors taxes obtenu d'un fournisseur après réception de la facture, sans être rattaché à un achat précis, est crédité au compte :",
+      "o": [
+        "401",
+        "773",
+        "6019",
+        "7019"
+      ],
+      "r": 2,
+      "x": "Le compte 6019 Rabais, remises et ristournes obtenus (non ventilés) enregistre les réductions reçues après facturation. Le compte 401 est débité du montant TTC de l'avoir. Le compte 7019 concerne au contraire les réductions accordées aux clients.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une ristourne hors taxes accordée à un client après facturation est débitée chez le vendeur au compte :",
+      "o": [
+        "673",
+        "701",
+        "773",
+        "7019"
+      ],
+      "r": 3,
+      "x": "Le compte 7019 Rabais, remises et ristournes accordés (non ventilés) enregistre les réductions accordées après facturation. Il vient en diminution des ventes, sans modifier directement le compte 701. Le compte 673 est réservé aux escomptes, qui sont des réductions financières.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le document par lequel un fournisseur accorde une réduction ou annule une partie d'une facture déjà émise est :",
+      "o": [
+        "le bon de commande",
+        "le bon de livraison",
+        "la facture pro forma",
+        "la facture d'avoir"
+      ],
+      "r": 3,
+      "x": "La facture d'avoir constate une réduction, un retour ou une erreur au profit du client. Elle réduit la dette de l'acheteur et la créance du vendeur. La facture pro forma n'est qu'un devis et ne donne lieu à aucune écriture.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une vente au comptant de 200 000 FCFA HT, avec une TVA de 18 %, se traduit au crédit par :",
+      "o": [
+        "701 pour 236 000 sans TVA séparée",
+        "571 pour 200 000 et 4431 pour 36 000",
+        "701 pour 200 000 et 4452 pour 36 000",
+        "701 pour 200 000 et 4431 pour 36 000"
+      ],
+      "r": 3,
+      "x": "Le compte 701 est crédité du montant hors taxes et le compte 4431 TVA facturée sur ventes de la TVA. Le compte de trésorerie est débité des 236 000 FCFA encaissés. Le compte 4452 enregistre la TVA récupérable sur achats, pas la TVA facturée.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'achat de marchandises payé en espèces se traduit par l'écriture :",
+      "o": [
+        "Débit 601 et 4452 / Crédit 571",
+        "Débit 571 / Crédit 601 et 4452",
+        "Débit 601 et 4452 / Crédit 401",
+        "Débit 601 / Crédit 571 et 4452"
+      ],
+      "r": 0,
+      "x": "L'achat est débité au compte 601 et la TVA récupérable au compte 4452, tandis que la caisse est créditée. L'écriture inverse correspondrait à un remboursement reçu. Créditer le compte 401 supposerait un achat à crédit.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La TVA récupérable sur l'achat d'une machine de production est débitée au compte :",
+      "o": [
+        "4431",
+        "4451",
+        "4452",
+        "4454"
+      ],
+      "r": 1,
+      "x": "Le compte 4451 TVA récupérable sur immobilisations enregistre la TVA payée sur les biens d'investissement. Le compte 4452 concerne la TVA sur achats de biens et le compte 4454 la TVA sur services extérieurs. Le compte 4431 enregistre la TVA facturée aux clients.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "En fin de mois, une entreprise a une TVA facturée de 900 000 FCFA et une TVA récupérable de 1 250 000 FCFA. Sa situation est :",
+      "o": [
+        "une TVA due de 350 000 FCFA",
+        "une TVA due de 2 150 000 FCFA",
+        "un crédit de TVA de 2 150 000 FCFA",
+        "un crédit de TVA de 350 000 FCFA"
+      ],
+      "r": 3,
+      "x": "La TVA récupérable dépasse la TVA facturée de 1 250 000 − 900 000 = 350 000 FCFA : c'est un crédit de TVA. Ce crédit est reporté sur les déclarations suivantes au compte 4449 État, crédit de TVA à reporter. Une TVA due n'existe que lorsque la TVA facturée est la plus élevée.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La TVA facturée aux clients sur les ventes est créditée au compte :",
+      "o": [
+        "4431",
+        "4441",
+        "4449",
+        "4452"
+      ],
+      "r": 0,
+      "x": "Le compte 4431 TVA facturée sur ventes enregistre la TVA collectée pour le compte de l'État. Le compte 4441 sert à constater la TVA due à verser après déduction. Le compte 4452 enregistre la TVA récupérable sur achats.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Au Burkina Faso, le taux réduit de TVA de 10 % s'applique notamment :",
+      "o": [
+        "aux ventes de produits pétroliers à la pompe",
+        "aux opérations de crédit des banques locales",
+        "à l'hébergement et la restauration en hôtel agréé",
+        "aux ventes de marchandises au détail"
+      ],
+      "r": 2,
+      "x": "Le Code général des impôts réduit le taux à 10 % pour l'hébergement et la restauration des hôtels et restaurants agréés. Depuis le 1er janvier 2025, ce taux s'applique aussi aux transports aériens nationaux. Les ventes de marchandises au détail restent soumises au taux normal.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une facture d'achat s'élève à 2 360 000 FCFA TTC, avec une TVA de 18 %. Le montant hors taxes est de :",
+      "o": [
+        "1 935 200 FCFA",
+        "2 000 000 FCFA",
+        "2 360 000 FCFA",
+        "2 784 800 FCFA"
+      ],
+      "r": 1,
+      "x": "Le montant HT s'obtient en divisant le TTC par 1,18 : 2 360 000 ÷ 1,18 = 2 000 000 FCFA. Le montant de 1 935 200 FCFA résulte de l'erreur qui retire 18 % du TTC. La TVA de la facture est donc de 360 000 FCFA.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le transport facturé par un transporteur pour acheminer des marchandises achetées est débité au compte :",
+      "o": [
+        "611",
+        "612",
+        "614",
+        "616"
+      ],
+      "r": 0,
+      "x": "Le compte 611 Transports sur achats enregistre les frais d'acheminement des achats. Le compte 612 concerne les transports sur ventes et le compte 614 le transport du personnel. Le compte 616 enregistre les transports de plis.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La facture d'électricité de la Société nationale d'électricité du Burkina (SONABEL) est débitée au compte :",
+      "o": [
+        "6051",
+        "6052",
+        "6053",
+        "6055"
+      ],
+      "r": 1,
+      "x": "Le compte 6052 Fournitures non stockables – électricité enregistre la consommation d'électricité. Le compte 6053 concerne les autres énergies non stockées. Le compte 6055 concerne les fournitures de bureau non stockables.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le loyer mensuel du magasin occupé par une entreprise est débité au compte :",
+      "o": [
+        "622",
+        "624",
+        "625",
+        "627"
+      ],
+      "r": 0,
+      "x": "Le compte 622 Locations et charges locatives enregistre les loyers, notamment ceux des bâtiments au sous-compte 6222. Le compte 624 concerne l'entretien et les réparations. Le compte 625 enregistre les primes d'assurance.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La facture mensuelle de téléphone et d'internet d'une entreprise est débitée au compte :",
+      "o": [
+        "624",
+        "625",
+        "627",
+        "628"
+      ],
+      "r": 3,
+      "x": "Le compte 628 Frais de télécommunications enregistre les dépenses de téléphone et d'internet. Le compte 627 concerne la publicité et le compte 625 les assurances. Le compte 624 enregistre l'entretien et les réparations.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le coût d'une campagne publicitaire sponsorisée sur Facebook est débité au compte :",
+      "o": [
+        "622",
+        "625",
+        "627",
+        "632"
+      ],
+      "r": 2,
+      "x": "Le compte 627 Publicité, publications, relations publiques enregistre les dépenses de promotion, y compris en ligne. Le compte 632 concerne les rémunérations d'intermédiaires et de conseils. Le compte 622 enregistre les locations.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Les frais de tenue de compte prélevés par la banque sont débités au compte :",
+      "o": [
+        "631",
+        "671",
+        "675",
+        "773"
+      ],
+      "r": 0,
+      "x": "Le compte 631 Frais bancaires enregistre les commissions et frais de tenue de compte. Le compte 671 concerne les intérêts des emprunts et le compte 675 les escomptes des effets de commerce. Le compte 773 est un compte de produits.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Les honoraires versés à un cabinet d'expertise comptable sont débités au compte :",
+      "o": [
+        "622",
+        "627",
+        "632",
+        "661"
+      ],
+      "r": 2,
+      "x": "Le compte 632 Rémunérations d'intermédiaires et de conseils enregistre les honoraires, notamment au sous-compte 6324 pour les professions réglementées. Le compte 661 concerne les salaires du personnel de l'entreprise. Le compte 627 enregistre la publicité.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La contribution des patentes payée par un commerçant est débitée au compte :",
+      "o": [
+        "441",
+        "641",
+        "647",
+        "891"
+      ],
+      "r": 1,
+      "x": "La patente est un impôt direct lié à l'activité, enregistré au compte 641 Impôts et taxes directs. Le compte 891 est réservé à l'impôt sur le résultat. Le compte 647 enregistre les pénalités et amendes fiscales.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une amende payée pour dépôt tardif d'une déclaration fiscale est débitée au compte :",
+      "o": [
+        "641",
+        "646",
+        "647",
+        "658"
+      ],
+      "r": 2,
+      "x": "Le compte 647 Pénalités et amendes fiscales enregistre les sanctions infligées par l'administration fiscale. Le compte 646 concerne les droits d'enregistrement. Le compte 641 enregistre les impôts directs normalement dus.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La prime annuelle d'assurance d'un véhicule de livraison est débitée au compte :",
+      "o": [
+        "622",
+        "624",
+        "625",
+        "628"
+      ],
+      "r": 2,
+      "x": "Le compte 625 Primes d'assurance enregistre les cotisations versées aux compagnies d'assurance. Le compte 624 concerne l'entretien du véhicule et le compte 622 les locations. Si la prime couvre l'exercice suivant, une partie sera reportée en charges constatées d'avance.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'achat de rames de papier et de stylos non stockés pour l'administration est débité au compte :",
+      "o": [
+        "6051",
+        "6052",
+        "6054",
+        "6055"
+      ],
+      "r": 3,
+      "x": "Le compte 6055 Fournitures de bureau non stockables enregistre les petites fournitures consommées directement. Le compte 6054 concerne les fournitures d'entretien non stockables. Les comptes 6051 et 6052 enregistrent l'eau et l'électricité.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une entreprise de bâtiment et travaux publics facture des travaux de construction à un client. Le montant HT est crédité au compte :",
+      "o": [
+        "702",
+        "704",
+        "705",
+        "706"
+      ],
+      "r": 2,
+      "x": "Le compte 705 Travaux facturés enregistre les travaux réalisés pour des clients. Le compte 706 concerne les services vendus et le compte 702 les ventes de produits finis. Le compte 704 enregistre les ventes de produits résiduels.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une subvention reçue de l'État pour compenser le prix de vente plafonné d'un produit est créditée au compte :",
+      "o": [
+        "14",
+        "71",
+        "75",
+        "82"
+      ],
+      "r": 1,
+      "x": "Le compte 71 Subventions d'exploitation enregistre les aides destinées à compenser l'insuffisance de certains produits. Le compte 14 est réservé aux subventions d'investissement qui financent des immobilisations. Le compte 82 enregistre les produits des cessions d'immobilisations.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une avance versée à un fournisseur à la commande de marchandises est débitée au compte :",
+      "o": [
+        "401",
+        "408",
+        "4091",
+        "4098"
+      ],
+      "r": 2,
+      "x": "Le compte 4091 Fournisseurs, avances et acomptes versés sur commandes enregistre les sommes payées avant livraison. Cette avance sera imputée sur la facture définitive. Le compte 408 concerne les factures non parvenues.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une avance reçue d'un client à la commande est créditée au compte :",
+      "o": [
+        "411",
+        "418",
+        "4191",
+        "4198"
+      ],
+      "r": 2,
+      "x": "Le compte 4191 Clients, avances et acomptes reçus sur commandes enregistre les sommes reçues avant livraison. Il constitue une dette envers le client tant que la vente n'est pas réalisée. Le compte 418 concerne les produits à recevoir.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Les emballages consignés facturés à un client sont enregistrés par le vendeur :",
+      "o": [
+        "au crédit du compte de ventes de marchandises",
+        "au débit d'un compte de stocks d'emballages",
+        "au crédit du compte de produits accessoires",
+        "au crédit d'un compte de dettes envers le client"
+      ],
+      "r": 3,
+      "x": "La consignation crée une dette envers le client, car le vendeur devra le rembourser au retour des emballages. Elle s'enregistre au compte 4194 Clients, dettes pour emballages et matériel consignés. Ce n'est pas une vente tant que les emballages ne sont pas définitivement conservés par le client.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un client retourne des marchandises défectueuses facturées. Le vendeur enregistre :",
+      "o": [
+        "Débit 411 / Crédit 701 et 4431",
+        "Débit 601 et 4452 / Crédit 411",
+        "Débit 411 / Crédit 6019",
+        "Débit 701 et 4431 / Crédit 411"
+      ],
+      "r": 3,
+      "x": "Le retour annule la vente : le compte 701 et la TVA facturée sont débités, et la créance client est réduite au crédit du compte 411. L'écriture inverse correspondrait à une nouvelle vente. Les comptes 601 et 6019 concernent les achats, pas les ventes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le montant net à payer d'une facture comportant des réductions commerciales et un escompte est égal :",
+      "o": [
+        "au net commercial augmenté de la TVA",
+        "au montant brut augmenté de la TVA",
+        "au net financier diminué de la TVA",
+        "au net financier augmenté de la TVA"
+      ],
+      "r": 3,
+      "x": "Le net à payer correspond au net financier, après réductions et escompte, augmenté de la TVA calculée sur ce net. Retenir le net commercial oublierait l'escompte. Diminuer le net financier de la TVA n'a aucun sens, la TVA s'ajoute toujours au prix.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'achat d'emballages perdus, vendus avec la marchandise sans être repris, est débité au compte :",
+      "o": [
+        "601",
+        "604",
+        "608",
+        "611"
+      ],
+      "r": 2,
+      "x": "Le compte 608 Achats d'emballages enregistre les emballages qui accompagnent la marchandise. Le compte 601 concerne les marchandises elles-mêmes et le compte 611 les transports sur achats. Le compte 604 enregistre les achats stockés de matières et fournitures consommables.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une usine d'égrenage achète du coton graine destiné à être transformé. L'achat est débité au compte :",
+      "o": [
+        "601",
+        "602",
+        "604",
+        "605"
+      ],
+      "r": 1,
+      "x": "Le compte 602 Achats de matières premières et fournitures liées enregistre les matières destinées à la transformation. Le compte 601 est réservé aux marchandises revendues en l'état. Le compte 605 regroupe les autres achats comme l'eau et l'électricité.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un client réalise avec son fournisseur 40 000 000 FCFA de chiffre d'affaires annuel ; la ristourne est de 2 % sur la tranche dépassant 30 000 000 FCFA. Elle s'élève à :",
+      "o": [
+        "200 000 FCFA",
+        "600 000 FCFA",
+        "800 000 FCFA",
+        "1 400 000 FCFA"
+      ],
+      "r": 0,
+      "x": "La ristourne ne porte que sur la tranche excédentaire : (40 000 000 − 30 000 000) × 2 % = 200 000 FCFA. Le montant de 800 000 FCFA applique à tort le taux à tout le chiffre d'affaires. Le montant de 600 000 FCFA applique le taux à la tranche de 30 000 000 FCFA.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une marchandise expédiée « port dû » signifie que le transport est :",
+      "o": [
+        "payé par le vendeur et inclus dans le prix",
+        "offert gratuitement par le transporteur",
+        "partagé à parts égales entre les parties",
+        "payé par l'acheteur à la réception"
+      ],
+      "r": 3,
+      "x": "En port dû, l'acheteur paie lui-même le transport à l'arrivée de la marchandise. En port payé, c'est le vendeur qui règle le transport, souvent refacturé au client. La mention figure sur le bon de livraison et la facture.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La facture pro forma est :",
+      "o": [
+        "une facture définitive enregistrée au journal des ventes",
+        "un avoir accordé après un retour de marchandises",
+        "un devis qui ne donne lieu à aucune écriture comptable",
+        "une facture établie après la livraison des biens"
+      ],
+      "r": 2,
+      "x": "La facture pro forma présente une offre de prix avant la vente, sans créer de créance ni de dette. Elle sert souvent à obtenir un financement ou une autorisation d'achat. Seule la facture définitive est enregistrée en comptabilité.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un fournisseur adresse un avoir de 100 000 FCFA HT, TVA de 18 % en plus. Le compte 401 Fournisseurs est débité de :",
+      "o": [
+        "82 000 FCFA",
+        "100 000 FCFA",
+        "118 000 FCFA",
+        "136 000 FCFA"
+      ],
+      "r": 2,
+      "x": "L'avoir réduit la dette du montant TTC : 100 000 + 18 000 = 118 000 FCFA. Le compte 6019 est crédité de 100 000 FCFA et le compte 4452 de 18 000 FCFA. La TVA récupérable initiale est ainsi diminuée de la TVA de l'avoir.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le vendeur qui accorde un escompte de règlement à un client débite le compte :",
+      "o": [
+        "631",
+        "673",
+        "675",
+        "773"
+      ],
+      "r": 1,
+      "x": "L'escompte accordé est une charge financière au compte 673 Escomptes accordés. Le compte 675 concerne l'escompte des effets de commerce négociés en banque. Le compte 773 enregistre au contraire l'escompte obtenu.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une vente de marchandises de 1 000 000 FCFA brut, avec une remise de 8 %, est créditée au compte 701 pour :",
+      "o": [
+        "80 000 FCFA",
+        "920 000 FCFA",
+        "1 000 000 FCFA",
+        "1 080 000 FCFA"
+      ],
+      "r": 1,
+      "x": "La remise figurant sur la facture est déduite directement : 1 000 000 × 0,92 = 920 000 FCFA. Le compte 701 enregistre donc le net commercial hors taxes. Les 80 000 FCFA représentent le montant de la remise elle-même.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le transport payé par le vendeur pour livrer les marchandises à ses clients est débité au compte :",
+      "o": [
+        "611",
+        "612",
+        "618",
+        "707"
+      ],
+      "r": 1,
+      "x": "Le compte 612 Transports sur ventes enregistre les frais de livraison supportés par le vendeur. Le compte 611 concerne les transports sur achats. Le compte 707 est un compte de produits accessoires, pas de charges.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "En matière de TVA au Burkina Faso, les exportations de biens sont :",
+      "o": [
+        "taxées au taux de 18 %",
+        "taxées au taux réduit de 10 %",
+        "taxées au double du taux normal",
+        "exonérées de TVA"
+      ],
+      "r": 3,
+      "x": "Les exportations sont exonérées afin de ne pas renchérir les produits burkinabè sur les marchés étrangers. L'exportateur peut en revanche récupérer la TVA payée sur ses achats. Le taux de 18 % s'applique aux ventes taxables réalisées sur le territoire.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Pour une vente de marchandises, le fait générateur de la TVA est :",
+      "o": [
+        "l'encaissement du prix de vente",
+        "la signature du bon de commande",
+        "l'établissement du devis",
+        "la livraison des marchandises"
+      ],
+      "r": 3,
+      "x": "Pour les livraisons de biens, la TVA devient exigible au moment de la livraison. Le bon de commande et le devis n'entraînent aucune exigibilité. Le Code général des impôts fixe des règles particulières pour les prestations de services et les acomptes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La TVA supportée sur un achat n'est déductible que si, notamment, l'achat est :",
+      "o": [
+        "payé en espèces dans le mois de la livraison",
+        "réalisé auprès d'un fournisseur établi à l'étranger",
+        "enregistré au compte 601 Achats de marchandises",
+        "destiné à une activité taxable et justifié par une facture"
+      ],
+      "r": 3,
+      "x": "La déduction exige que le bien ou le service serve à des opérations soumises à la TVA et qu'une facture régulière le justifie. Le mode de paiement ne conditionne pas le droit à déduction. Les achats de services ou d'immobilisations ouvrent aussi droit à déduction.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le document par lequel un client demande officiellement la livraison de marchandises à un fournisseur est :",
+      "o": [
+        "le bon de livraison",
+        "la facture d'avoir",
+        "la facture définitive",
+        "le bon de commande"
+      ],
+      "r": 3,
+      "x": "Le bon de commande, établi par l'acheteur, précise les quantités, les prix et les conditions demandés. Le bon de livraison accompagne ensuite la marchandise expédiée par le fournisseur. La facture définitive est établie après la livraison.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'eau consommée par une entreprise et facturée par l'Office national de l'eau et de l'assainissement (ONEA) est débitée au compte :",
+      "o": [
+        "6051",
+        "6052",
+        "6054",
+        "6056"
+      ],
+      "r": 0,
+      "x": "Le compte 6051 Fournitures non stockables – eau enregistre la consommation d'eau. Le compte 6054 concerne les fournitures d'entretien non stockables. Le compte 6056 enregistre les achats de petit matériel et outillage.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans une lettre de change, le tiré est :",
+      "o": [
+        "le créancier qui crée et signe l'effet",
+        "la banque qui escompte l'effet",
+        "le débiteur qui doit payer à l'échéance",
+        "le bénéficiaire qui reçoit le paiement"
+      ],
+      "r": 2,
+      "x": "Le tiré est le débiteur à qui l'ordre de payer est donné. Le tireur est le créancier qui crée la lettre de change. Le bénéficiaire est la personne au profit de laquelle le paiement sera fait, souvent le tireur lui-même.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le billet à ordre est un effet de commerce établi par :",
+      "o": [
+        "le créancier, appelé tireur",
+        "la banque domiciliataire de l'effet",
+        "le bénéficiaire, appelé porteur",
+        "le débiteur, appelé souscripteur"
+      ],
+      "r": 3,
+      "x": "Dans le billet à ordre, c'est le débiteur qui s'engage lui-même à payer : il en est le souscripteur. La lettre de change est au contraire créée par le créancier, appelé tireur. Les deux effets peuvent ensuite être escomptés en banque.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Chez le créancier, l'acceptation par un client d'une lettre de change tirée sur lui se traduit par :",
+      "o": [
+        "Débit 412 / Crédit 411",
+        "Débit 411 / Crédit 412",
+        "Débit 412 / Crédit 701",
+        "Débit 521 / Crédit 412"
+      ],
+      "r": 0,
+      "x": "La créance ordinaire devient une créance représentée par un effet : on débite le compte 412 Clients, effets à recevoir et on crédite le compte 411. La vente a déjà été enregistrée, le compte 701 n'intervient donc pas. Le compte 521 ne sera débité qu'à l'encaissement de l'effet.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Chez le débiteur, l'acceptation d'une lettre de change tirée par un fournisseur se traduit par :",
+      "o": [
+        "Débit 401 / Crédit 402",
+        "Débit 402 / Crédit 401",
+        "Débit 402 / Crédit 521",
+        "Débit 601 / Crédit 402"
+      ],
+      "r": 0,
+      "x": "La dette ordinaire devient une dette représentée par un effet : le compte 401 est débité et le compte 402 Fournisseurs, effets à payer crédité. Le compte 521 ne sera crédité qu'au paiement à l'échéance. L'achat ayant déjà été enregistré, le compte 601 n'est pas mouvementé.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un effet de 1 800 000 FCFA est escompté 60 jours avant son échéance au taux de 9 % (année de 360 jours). L'escompte est de :",
+      "o": [
+        "13 500 FCFA",
+        "27 000 FCFA",
+        "54 000 FCFA",
+        "162 000 FCFA"
+      ],
+      "r": 1,
+      "x": "L'escompte se calcule par la formule valeur nominale × taux × jours ÷ 36 000 : 1 800 000 × 9 × 60 ÷ 36 000 = 27 000 FCFA. Le montant de 162 000 FCFA correspond à un an d'intérêt. Les commissions bancaires s'ajoutent à l'escompte pour former l'agio.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Chez le tireur, l'escompte retenu par la banque sur un effet négocié est débité au compte :",
+      "o": [
+        "631",
+        "671",
+        "675",
+        "773"
+      ],
+      "r": 2,
+      "x": "Le compte 675 Escomptes des effets de commerce enregistre l'intérêt retenu par la banque. Les commissions de la banque vont au compte 631 Frais bancaires. Le compte 671 est réservé aux intérêts des emprunts.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Des effets à recevoir remis à la banque pour être encaissés à leur échéance sont transférés au compte :",
+      "o": [
+        "412",
+        "511",
+        "512",
+        "521"
+      ],
+      "r": 2,
+      "x": "Le compte 512 Effets à l'encaissement enregistre les effets confiés à la banque jusqu'à leur paiement. Le compte 511 Effets à encaisser recense les effets en portefeuille autres que ceux des clients, suivis au compte 412. Le compte 521 ne sera débité qu'après l'encaissement effectif.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un retrait d'espèces à la banque pour alimenter la caisse peut transiter par le compte de liaison :",
+      "o": [
+        "521",
+        "571",
+        "581",
+        "585"
+      ],
+      "r": 3,
+      "x": "Le compte 585 Virements de fonds évite d'enregistrer deux fois la même opération dans le journal de banque et le journal de caisse. Il est débité par le crédit du compte 521 puis crédité par le débit du compte 571. Son solde doit être nul après les deux enregistrements.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'état de rapprochement bancaire sert à :",
+      "o": [
+        "calculer les agios d'escompte des effets de commerce",
+        "déterminer le chiffre d'affaires mensuel encaissé",
+        "vérifier le nombre de billets présents en caisse",
+        "expliquer l'écart entre le compte 521 et le relevé bancaire"
+      ],
+      "r": 3,
+      "x": "Le rapprochement compare le compte Banque de l'entreprise et le compte de l'entreprise tenu par la banque. Les écarts viennent d'opérations enregistrées par l'un mais pas encore par l'autre. Il permet de passer les écritures manquantes et de détecter les erreurs.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le compte 521 présente un solde débiteur de 2 450 000 FCFA. Le relevé montre un virement client de 300 000 FCFA et des frais de 15 000 FCFA non enregistrés par l'entreprise. Le solde rectifié du compte 521 est de :",
+      "o": [
+        "2 135 000 FCFA",
+        "2 435 000 FCFA",
+        "2 735 000 FCFA",
+        "2 765 000 FCFA"
+      ],
+      "r": 2,
+      "x": "L'entreprise doit ajouter le virement reçu et retirer les frais : 2 450 000 + 300 000 − 15 000 = 2 735 000 FCFA. Le montant de 2 765 000 FCFA ajoute les frais au lieu de les retirer. Ces deux opérations sont ensuite enregistrées dans le journal de banque.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le solde du compte 571 Caisse est :",
+      "o": [
+        "toujours créditeur",
+        "débiteur ou créditeur selon les mois",
+        "égal au solde du compte 521",
+        "débiteur ou nul"
+      ],
+      "r": 3,
+      "x": "On ne peut pas sortir de la caisse plus d'argent qu'elle n'en contient : le solde de la caisse ne peut donc pas être créditeur. Un solde créditeur révèle une erreur ou une sortie non justifiée. Le compte 521 peut, lui, devenir créditeur en cas de découvert.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un salarié perçoit un salaire brut de 300 000 FCFA. La retenue salariale CNSS de l'exercice est de 5,5 % et l'IUTS retenu de 12 000 FCFA. Son salaire net est de :",
+      "o": [
+        "271 500 FCFA",
+        "283 500 FCFA",
+        "288 000 FCFA",
+        "300 000 FCFA"
+      ],
+      "r": 0,
+      "x": "Le net s'obtient en retirant du brut la cotisation salariale et l'impôt : 300 000 − 16 500 − 12 000 = 271 500 FCFA. Le montant de 283 500 FCFA oublie l'IUTS et celui de 288 000 FCFA oublie la cotisation CNSS. Les cotisations patronales ne sont jamais retenues sur le salaire.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le salaire brut du personnel national est débité au compte :",
+      "o": [
+        "422",
+        "431",
+        "661",
+        "664"
+      ],
+      "r": 2,
+      "x": "Le compte 661 Rémunérations directes versées au personnel national enregistre la charge de salaire brut. Le compte 422 Personnel, rémunérations dues est crédité du salaire net à payer. Le compte 664 enregistre les charges sociales patronales.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La part patronale des cotisations sociales est débitée au compte :",
+      "o": [
+        "431",
+        "447",
+        "661",
+        "664"
+      ],
+      "r": 3,
+      "x": "Le compte 664 Charges sociales enregistre les cotisations supportées par l'employeur. En contrepartie, le compte 431 Sécurité sociale est crédité. Le compte 447 concerne les impôts retenus à la source, comme l'IUTS.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'impôt unique sur les traitements et salaires (IUTS) retenu sur les salaires est crédité au compte :",
+      "o": [
+        "422",
+        "431",
+        "441",
+        "447"
+      ],
+      "r": 3,
+      "x": "L'employeur collecte l'IUTS pour le compte de l'État et le crédite au compte 447 État, impôts retenus à la source. Le compte 441 est réservé à l'impôt sur les bénéfices de l'entreprise. Le compte 431 enregistre les cotisations sociales.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La cotisation sociale retenue sur le salaire d'un employé est créditée au compte :",
       "o": [
         "421",
         "431",
-        "661",
-        "641"
+        "447",
+        "664"
       ],
-      "r": 2,
-      "x": "Le compte 661 \"Rémunérations du personnel\" (charge) enregistre les salaires bruts. En contrepartie, on crédite le compte 421 \"Personnel, rémunérations dues\". Les cotisations sociales sont enregistrées séparément (compte 431 et 664)."
+      "r": 1,
+      "x": "La retenue salariale est due à l'organisme de sécurité sociale, d'où le crédit du compte 431 Sécurité sociale. Le compte 664 enregistre uniquement la part patronale. Le compte 421 concerne les avances et acomptes au personnel.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
     },
     {
-      "q": "Le compte 164 dans le SYSCOHADA correspond à :",
+      "q": "Un acompte sur salaire versé en espèces à un employé le 15 du mois est débité au compte :",
       "o": [
-        "Emprunts auprès des établissements de crédit",
-        "Dettes de loyer",
-        "Avances reçues sur commandes",
-        "Obligations émises"
+        "421",
+        "422",
+        "431",
+        "661"
       ],
       "r": 0,
-      "x": "Le compte 164 \"Emprunts auprès des établissements de crédit\" enregistre les dettes financières contractées auprès des banques. Le compte 161 concerne les emprunts obligataires et le compte 165 les dettes de crédit-bail."
+      "x": "Le compte 421 Personnel, avances et acomptes enregistre les sommes versées avant le jour de paie. Cet acompte sera déduit du salaire net en fin de mois. Le compte 661 n'est mouvementé qu'à la constatation du salaire brut.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
     },
     {
-      "q": "Dans le plan comptable OHADA, les immobilisations incorporelles comprennent :",
-      "o": [
-        "Les terrains et bâtiments",
-        "Les brevets, licences, fonds commercial et logiciels",
-        "Les titres de participation",
-        "Les stocks de matières premières"
-      ],
-      "r": 1,
-      "x": "Les immobilisations incorporelles (compte 21) comprennent : frais de développement (211), brevets, licences, logiciels (212), fonds commercial (213), droit au bail (214). Ce sont des actifs non monétaires sans substance physique."
-    },
-    {
-      "q": "Le compte 44 dans le SYSCOHADA regroupe :",
-      "o": [
-        "Les comptes du personnel",
-        "Les comptes de l'État et collectivités publiques",
-        "Les comptes des fournisseurs",
-        "Les comptes des associés"
-      ],
-      "r": 1,
-      "x": "Le compte 44 \"État et collectivités publiques\" regroupe : TVA (4452, 4454, 4456), impôts et taxes (447), subventions à recevoir (449), etc. C'est un compte de classe 4 (tiers) particulièrement important dans les concours."
-    },
-    {
-      "q": "Le compte 57 \"Caisse\" présente normalement un solde :",
-      "o": [
-        "Créditeur",
-        "Débiteur ou nul (jamais créditeur)",
-        "Variable sans règle particulière",
-        "Toujours nul en fin d'exercice"
-      ],
-      "r": 1,
-      "x": "Le compte Caisse ne peut logiquement pas être créditeur car on ne peut pas décaisser plus d'argent qu'on en a en caisse. Un solde créditeur de caisse serait une anomalie (erreur d'enregistrement ou caisse fictive). Il est débiteur ou nul."
-    },
-    {
-      "q": "Les \"charges constatées d'avance\" sont enregistrées dans le compte :",
-      "o": [
-        "476",
-        "486",
-        "487",
-        "481"
-      ],
-      "r": 1,
-      "x": "Le compte 486 \"Charges constatées d'avance\" est un compte d'actif du bilan. Il enregistre la quote-part des charges de l'exercice qui correspond à des prestations futures (ex : loyer payé d'avance, prime d'assurance). Symétrique : 487 pour les produits."
-    },
-    {
-      "q": "Dans quel compte enregistre-t-on le capital souscrit et versé lors de la création d'une SA ?",
-      "o": [
-        "101",
-        "106",
-        "111",
-        "131"
-      ],
-      "r": 0,
-      "x": "Le compte 101 \"Capital social\" enregistre le capital social des sociétés de capitaux (SA, SARL, SAS). Pour les sociétés de personnes, on utilise le compte 102 \"Capital personnel\". Le compte 106 concerne les réserves libres."
-    },
-    {
-      "q": "Le compte 31 dans le SYSCOHADA désigne :",
-      "o": [
-        "Stocks de produits finis",
-        "Stocks de marchandises",
-        "Stocks de matières premières et fournitures",
-        "Encours de production"
-      ],
-      "r": 2,
-      "x": "La classe 3 \"Comptes de stocks\" est organisée ainsi : 31 Matières premières et fournitures, 32 Autres approvisionnements, 33 Encours de production de biens, 35 Stocks de produits, 37 Stocks de marchandises."
-    },
-    {
-      "q": "Dans le SYSCOHADA, les \"produits financiers\" figurent dans la classe :",
-      "o": [
-        "6",
-        "5",
-        "8",
-        "7"
-      ],
-      "r": 3,
-      "x": "Les produits financiers sont en classe 7 : compte 77 \"Revenus financiers et assimilés\" (intérêts reçus, dividendes, gains de change, etc.). Les charges financières sont en classe 6 : compte 67 \"Frais financiers et charges assimilées\"."
-    },
-    {
-      "q": "Le compte 421 \"Personnel, rémunérations dues\" présente normalement un solde :",
-      "o": [
-        "Débiteur",
-        "Créditeur",
-        "Nul en permanence",
-        "Débiteur ou créditeur selon le mois"
-      ],
-      "r": 1,
-      "x": "Le compte 421 est un compte de passif (dette envers les salariés). Il présente un solde créditeur représentant les salaires nets à payer. Il est débité lors des versements de salaires et crédité lors du calcul des bulletins de paie."
-    },
-    {
-      "q": "Quel compte est utilisé pour enregistrer la \"plus-value de cession d'actif\" dans le SYSCOHADA ?",
-      "o": [
-        "754",
-        "654",
-        "477",
-        "673"
-      ],
-      "r": 0,
-      "x": "Le compte 754 \"Produits sur cessions d'immobilisations\" (ou 82 \"Produits des cessions d'immobilisations\" selon le système) enregistre le prix de cession de l'actif vendu. La valeur nette comptable est enregistrée en charges (compte 654 ou 81), et la différence constitue la plus ou moins-value."
-    },
-    {
-      "q": "Dans le plan comptable OHADA, la classe 6 regroupe :",
-      "o": [
-        "Les comptes de produits d'exploitation",
-        "Les comptes de stocks",
-        "Les comptes de tiers",
-        "Les comptes de charges"
-      ],
-      "r": 3,
-      "x": "La classe 6 \"Comptes de charges\" comprend : achats (60), transports (61), services extérieurs (62), autres services extérieurs (63), impôts et taxes (64), charges de personnel (66), charges financières (67), dotations (68), etc."
-    },
-    {
-      "q": "Quel compte enregistre la \"Taxe sur la Valeur Ajoutée déductible sur achats courants\" ?",
-      "o": [
-        "4452",
-        "4454",
-        "4456",
-        "4431"
-      ],
-      "r": 2,
-      "x": "Le compte 4456 \"TVA déductible sur achats courants\" enregistre la TVA récupérable sur les achats de biens et services. Le compte 4454 concerne la TVA déductible sur immobilisations. Le compte 4452 est la TVA facturée (collectée) sur ventes."
-    },
-    {
-      "q": "Le compte 13 dans le SYSCOHADA enregistre :",
-      "o": [
-        "Le capital social",
-        "Les subventions d'investissement",
-        "Les réserves légales",
-        "Le résultat net de l'exercice"
-      ],
-      "r": 3,
-      "x": "Le compte 13 \"Résultat net de l'exercice\" accueille le bénéfice (solde créditeur) ou la perte (solde débiteur) dégagé par l'activité de l'entreprise. En début d'exercice suivant, il est soldé pour être affecté (réserves, dividendes, report à nouveau)."
-    },
-    {
-      "q": "Dans quel compte sont enregistrés les \"effets à payer\" (traites tirées par les fournisseurs) ?",
-      "o": [
-        "413",
-        "405",
-        "403",
-        "512"
-      ],
-      "r": 2,
-      "x": "Le compte 403 \"Fournisseurs, effets à payer\" enregistre les lettres de change et billets à ordre acceptés par l'entreprise en règlement de ses dettes fournisseurs. Le compte 413 \"Clients, effets à recevoir\" est son symétrique côté clients."
-    },
-    {
-      "q": "Les frais préliminaires (frais de constitution, frais d'augmentation de capital) sont enregistrés dans le compte :",
-      "o": [
-        "211",
-        "201",
-        "213",
-        "481"
-      ],
-      "r": 1,
-      "x": "Le compte 201 \"Frais d'établissement\" enregistre les frais préliminaires (constitution, augmentation de capital, publicité, prospection). Dans le SYSCOHADA révisé, il est recommandé de les immobiliser puis de les amortir sur 5 ans maximum, ou de les passer directement en charges."
-    },
-    {
-      "q": "Le compte 6611 \"Appointements et salaires\" est un compte de :",
-      "o": [
-        "Classe 4 — compte de tiers",
-        "Classe 7 — compte de produits",
-        "Classe 6 — compte de charges",
-        "Classe 5 — compte de trésorerie"
-      ],
-      "r": 2,
-      "x": "Le compte 6611 \"Appointements et salaires\" appartient à la classe 6 (charges). Il enregistre les rémunérations brutes du personnel (traitement de base). C'est une charge de l'exercice qui affecte le résultat."
-    },
-    {
-      "q": "Une entreprise vend des marchandises à crédit pour 800 000 FCFA HT, TVA 18%. Quel est le montant total TTC facturé au client ?",
-      "o": [
-        "800 000 FCFA",
-        "944 000 FCFA",
-        "880 000 FCFA",
-        "818 000 FCFA"
-      ],
-      "r": 1,
-      "x": "Montant TTC = HT × (1 + taux TVA) = 800 000 × 1,18 = 944 000 FCFA. La TVA collectée = 800 000 × 0,18 = 144 000 FCFA. L'écriture : Débit 411 (944 000) / Crédit 701 (800 000) / Crédit 4452 (144 000)."
-    },
-    {
-      "q": "Une entreprise achète des marchandises au comptant pour 300 000 FCFA. Quelle est l'écriture correcte au journal ?",
-      "o": [
-        "Débit 401 / Crédit 601",
-        "Débit 601 / Crédit 401",
-        "Débit 601 / Crédit 521",
-        "Débit 521 / Crédit 601"
-      ],
-      "r": 2,
-      "x": "Achat au comptant = règlement immédiat par banque. L'écriture est : Débit 601 \"Achats de marchandises\" (charge) / Crédit 521 \"Banque\" (trésorerie). Si c'était à crédit, on aurait crédité le compte 401 \"Fournisseurs\"."
-    },
-    {
-      "q": "Le 15 mars, l'entreprise SONABEL reçoit une facture d'électricité de 150 000 FCFA HT + TVA 18%. Comment enregistrer cette opération ?",
-      "o": [
-        "Débit 624 (150 000) + Débit 4456 (27 000) / Crédit 401 (177 000)",
-        "Débit 624 (177 000) / Crédit 401 (177 000)",
-        "Débit 624 (150 000) / Crédit 401 (150 000)",
-        "Débit 401 (177 000) / Crédit 624 (150 000) + Crédit 4452 (27 000)"
-      ],
-      "r": 0,
-      "x": "Facture d'eau et électricité (service reçu) : Débit 624 \"Énergie\" (150 000 HT) + Débit 4456 \"TVA déductible\" (27 000) / Crédit 401 \"Fournisseurs\" (177 000 TTC). La TVA déductible est récupérable sur la déclaration TVA."
-    },
-    {
-      "q": "Un client règle par chèque une créance de 500 000 FCFA. Comment enregistrer cet encaissement ?",
-      "o": [
-        "Débit 411 / Crédit 521",
-        "Débit 521 / Crédit 411",
-        "Débit 521 / Crédit 701",
-        "Débit 411 / Crédit 701"
-      ],
-      "r": 1,
-      "x": "L'encaissement d'une créance client : Débit 521 \"Banque\" (ressource, la trésorerie augmente) / Crédit 411 \"Clients\" (la créance diminue). Attention : si la vente et l'encaissement sont simultanés, on peut sauter le compte 411 et créditer directement 521."
-    },
-    {
-      "q": "L'entreprise verse les salaires du mois pour un montant net de 1 200 000 FCFA. Comment enregistrer ce paiement ?",
+      "q": "Le paiement par virement des salaires nets du mois se traduit par :",
       "o": [
         "Débit 661 / Crédit 521",
-        "Débit 661 / Crédit 421",
-        "Débit 521 / Crédit 421",
-        "Débit 421 / Crédit 521"
+        "Débit 521 / Crédit 422",
+        "Débit 422 / Crédit 521",
+        "Débit 422 / Crédit 661"
       ],
-      "r": 3,
-      "x": "Le versement des salaires est enregistré : Débit 421 \"Personnel, rémunérations dues\" (extinction de la dette) / Crédit 521 \"Banque\" (décaissement). L'écriture D/ 661 / C/ 421 a été faite lors du calcul des bulletins de paie en début de mois."
+      "r": 2,
+      "x": "Le paiement éteint la dette envers le personnel au compte 422 et diminue la banque au compte 521. La charge au compte 661 a déjà été constatée lors de la liquidation de la paie. Débiter le compte 661 au paiement compterait la charge deux fois.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
     },
     {
-      "q": "L'entreprise SOGEA achète un véhicule utilitaire 6 000 000 FCFA HT, TVA 18%, réglé par virement bancaire. Quelle est l'écriture correcte ?",
+      "q": "Une machine est achetée 8 000 000 FCFA HT avec une remise de 5 %. Le transport coûte 200 000 FCFA et l'installation 300 000 FCFA. Son coût d'acquisition est de :",
       "o": [
-        "Débit 2452 (6 000 000) + Débit 4454 (1 080 000) / Crédit 521 (7 080 000)",
-        "Débit 2452 (7 080 000) / Crédit 521 (7 080 000)",
-        "Débit 601 (6 000 000) + Débit 4456 (1 080 000) / Crédit 521 (7 080 000)",
-        "Débit 2452 (6 000 000) / Crédit 521 (6 000 000)"
+        "7 600 000 FCFA",
+        "8 000 000 FCFA",
+        "8 100 000 FCFA",
+        "8 500 000 FCFA"
+      ],
+      "r": 2,
+      "x": "Le coût d'acquisition comprend le prix net et les frais nécessaires à la mise en service : 7 600 000 + 200 000 + 300 000 = 8 100 000 FCFA. Le montant de 8 500 000 FCFA oublie la remise. La TVA récupérable n'entre pas dans le coût.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Parmi les dépenses suivantes, celle qui n'entre pas dans le coût d'acquisition d'une machine est :",
+      "o": [
+        "la formation du personnel à son utilisation",
+        "le transport de la machine jusqu'à l'usine",
+        "les frais d'installation et de montage",
+        "les droits de douane non récupérables"
       ],
       "r": 0,
-      "x": "L'achat d'une immobilisation est enregistré au coût HT dans le compte d'immobilisation (2452 Matériel de transport). La TVA sur immobilisation est déductible via le compte 4454 (non 4456). Le total TTC est payé à la banque."
+      "x": "La formation du personnel est une charge de l'exercice, même si elle porte sur la nouvelle machine. Le transport, l'installation et les droits non récupérables sont nécessaires à la mise en état d'utilisation. Ils s'ajoutent donc au prix d'achat.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
     },
     {
-      "q": "Un avoir fournisseur de 80 000 FCFA est reçu suite au retour de marchandises défectueuses. Quelle est l'écriture ?",
+      "q": "Un matériel est amorti selon le mode linéaire sur une durée de 8 ans. Son taux d'amortissement est de :",
       "o": [
-        "Débit 401 / Crédit 601",
-        "Débit 601 / Crédit 401",
-        "Débit 401 (80 000) / Crédit 601 (67 797) + Crédit 4456 (12 203)",
-        "Débit 401 (80 000) / Crédit 601 (80 000)"
+        "8 %",
+        "10 %",
+        "12,5 %",
+        "15 %"
       ],
       "r": 2,
-      "x": "L'avoir fournisseur annule partiellement la dette et la charge : Débit 401 \"Fournisseurs\" (80 000 TTC) / Crédit 601 \"Achats de marchandises\" (HT) / Crédit 4456 \"TVA déductible\" (TVA à régulariser). L'avoir réduit à la fois la dette et la charge d'achat."
+      "x": "Le taux linéaire est égal à 100 % divisé par la durée : 100 ÷ 8 = 12,5 %. Un taux de 10 % correspondrait à une durée de 10 ans. L'annuité est la même chaque année, sauf la première et la dernière en cas de prorata.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
     },
     {
-      "q": "L'entreprise encaisse des intérêts bancaires de 25 000 FCFA portés au crédit de son compte bancaire. Comment enregistrer cette opération ?",
+      "q": "Un matériel acquis 10 000 000 FCFA le 1er janvier N-3 est amorti en linéaire sur 10 ans. Sa valeur nette comptable au 31 décembre N est de :",
       "o": [
-        "Débit 672 / Crédit 521",
-        "Débit 772 / Crédit 521",
-        "Débit 521 / Crédit 671",
-        "Débit 521 / Crédit 772"
-      ],
-      "r": 3,
-      "x": "Les intérêts créditeurs (produits financiers) reçus de la banque : Débit 521 \"Banque\" (encaissement) / Crédit 772 \"Revenus des comptes bancaires et assimilés\" (produit financier). Règle : les produits sont enregistrés au crédit des comptes de classe 7."
-    },
-    {
-      "q": "L'entreprise verse une avance de 200 000 FCFA à un fournisseur avant livraison. Quelle est l'écriture ?",
-      "o": [
-        "Débit 401 / Crédit 521",
-        "Débit 521 / Crédit 401",
-        "Débit 4094 / Crédit 521",
-        "Débit 4191 / Crédit 521"
-      ],
-      "r": 2,
-      "x": "Une avance versée à un fournisseur est une créance sur ce fournisseur (pas encore une charge). On débite le compte 4094 \"Fournisseurs — avances et acomptes versés\" (actif circulant) / Crédit 521. Lors de la livraison, l'avance sera imputée sur la dette fournisseur."
-    },
-    {
-      "q": "L'entreprise souscrit un emprunt bancaire de 5 000 000 FCFA crédité sur son compte bancaire. Comment enregistrer ?",
-      "o": [
-        "Débit 521 / Crédit 164",
-        "Débit 164 / Crédit 521",
-        "Débit 521 / Crédit 101",
-        "Débit 164 / Crédit 101"
-      ],
-      "r": 0,
-      "x": "La réception d'un emprunt bancaire : Débit 521 \"Banque\" (la trésorerie augmente) / Crédit 164 \"Emprunts auprès des établissements de crédit\" (dette financière à long terme). L'emprunt est une ressource externe qui augmente l'endettement de l'entreprise."
-    },
-    {
-      "q": "L'entreprise constate une perte sur créance irrécouvrable pour un client qui ne peut pas payer sa dette de 120 000 FCFA (HT 101 695 FCFA + TVA 18 305 FCFA). Quelle est l'écriture ?",
-      "o": [
-        "Débit 654 (120 000) / Crédit 411 (120 000)",
-        "Débit 654 (120 000) / Crédit 411 (101 695) + Crédit 4452 (18 305)",
-        "Débit 654 (101 695) + Débit 4452 (18 305) / Crédit 411 (120 000)",
-        "Débit 411 / Crédit 654"
-      ],
-      "r": 2,
-      "x": "La perte sur créance irrécouvrable annule la créance TTC et récupère la TVA collectée (puisque la vente ne sera finalement pas encaissée) : Débit 654 \"Pertes sur créances irrécouvrables\" (HT) + Débit 4452 \"TVA facturée\" (TVA à régulariser) / Crédit 411 \"Clients\" (TTC)."
-    },
-    {
-      "q": "Une dotation aux amortissements de 400 000 FCFA est constatée en fin d'exercice. Quelle est l'écriture ?",
-      "o": [
-        "Débit 28 / Crédit 681",
-        "Débit 21 / Crédit 68",
-        "Débit 68 / Crédit 21",
-        "Débit 681 / Crédit 28"
-      ],
-      "r": 3,
-      "x": "La dotation aux amortissements : Débit 681 \"Dotations aux amortissements\" (charge) / Crédit 28 \"Amortissements des immobilisations\" (compte correcteur d'actif). Les comptes 28 viennent en déduction de la valeur brute au bilan pour donner la valeur nette comptable."
-    },
-    {
-      "q": "L'entreprise règle une dette fournisseur de 350 000 FCFA par traite (effet de commerce). Comment enregistrer la création de la traite ?",
-      "o": [
-        "Débit 401 / Crédit 403",
-        "Débit 403 / Crédit 401",
-        "Débit 401 / Crédit 521",
-        "Débit 521 / Crédit 401"
-      ],
-      "r": 0,
-      "x": "Lors de l'acceptation d'une traite fournisseur : Débit 401 \"Fournisseurs\" (extinction de la dette commerciale) / Crédit 403 \"Fournisseurs, effets à payer\" (nouvelle dette sous forme d'effet). La dette change de nature mais reste au passif. Le paiement effectif interviendra à l'échéance."
-    },
-    {
-      "q": "L'entreprise reçoit un dividende de 150 000 FCFA d'une filiale, crédité sur son compte bancaire. Comment enregistrer ?",
-      "o": [
-        "Débit 521 / Crédit 761",
-        "Débit 761 / Crédit 521",
-        "Débit 521 / Crédit 675",
-        "Débit 521 / Crédit 101"
-      ],
-      "r": 0,
-      "x": "La réception d'un dividende : Débit 521 \"Banque\" (encaissement) / Crédit 761 \"Revenus de participations\" (produit financier). Les dividendes reçus d'une société dans laquelle l'entreprise détient une participation sont des produits financiers (compte 761)."
-    },
-    {
-      "q": "L'entreprise paie une prime d'assurance annuelle de 240 000 FCFA le 1er octobre. Quelle est l'écriture initiale ?",
-      "o": [
-        "Débit 625 (240 000) / Crédit 521 (240 000)",
-        "Débit 625 (180 000) + Débit 486 (60 000) / Crédit 521 (240 000)",
-        "Débit 625 (240 000) / Crédit 486 (60 000) + Crédit 521 (180 000)",
-        "Débit 486 (240 000) / Crédit 521 (240 000)"
-      ],
-      "r": 0,
-      "x": "Au moment du paiement, on enregistre la totalité de la prime en charges : Débit 625 \"Primes d'assurance\" (240 000) / Crédit 521. C'est en fin d'exercice (31/12) qu'on effectuera la régularisation pour les 9 mois de l'année suivante (60 000 en charges constatées d'avance — compte 486)."
-    },
-    {
-      "q": "L'entreprise ZAKA reçoit une subvention d'exploitation de 500 000 FCFA de l'État, versée sur son compte bancaire. Comment enregistrer ?",
-      "o": [
-        "Débit 521 / Crédit 71",
-        "Débit 521 / Crédit 141",
-        "Débit 71 / Crédit 521",
-        "Débit 521 / Crédit 101"
-      ],
-      "r": 0,
-      "x": "La subvention d'exploitation reçue : Débit 521 \"Banque\" / Crédit 71 \"Subventions d'exploitation reçues\" (produit d'exploitation). À distinguer de la subvention d'investissement (compte 141), qui est une ressource stable inscrite au passif du bilan."
-    },
-    {
-      "q": "L'entreprise vend un équipement usagé (valeur nette comptable : 300 000 FCFA) pour 400 000 FCFA, encaissé par banque. Quelle est la valeur de la plus-value de cession ?",
-      "o": [
-        "400 000 FCFA",
-        "300 000 FCFA",
-        "100 000 FCFA",
-        "700 000 FCFA"
-      ],
-      "r": 2,
-      "x": "Plus-value = Prix de cession − Valeur nette comptable = 400 000 − 300 000 = 100 000 FCFA. L'écriture complète : Débit 521 (400 000) / Crédit 754 (400 000) pour le produit, et Débit 654 (300 000) / Crédit 24... (300 000) pour la sortie du bien. Le résultat net = 100 000 FCFA de plus-value."
-    },
-    {
-      "q": "Comment enregistre-t-on la constitution d'une provision pour dépréciation d'une créance douteuse de 200 000 FCFA ?",
-      "o": [
-        "Débit 411 / Crédit 491",
-        "Débit 791 / Crédit 491",
-        "Débit 491 / Crédit 6911",
-        "Débit 6911 / Crédit 491"
-      ],
-      "r": 3,
-      "x": "La dotation pour dépréciation de créance : Débit 6911 \"Dotations aux provisions pour dépréciation des actifs circulants\" / Crédit 491 \"Provisions pour dépréciation des comptes clients\". L'année suivante, si la créance est recouvrée, la provision est reprise : Débit 491 / Crédit 7911."
-    },
-    {
-      "q": "L'entreprise effectue un virement bancaire pour payer la TVA déclarée de 320 000 FCFA. Quelle est l'écriture ?",
-      "o": [
-        "Débit 4456 / Crédit 521",
-        "Débit 4431 / Crédit 521",
-        "Débit 521 / Crédit 4431",
-        "Débit 4452 / Crédit 521"
-      ],
-      "r": 1,
-      "x": "Après la déclaration TVA, le solde à payer (TVA nette = TVA collectée − TVA déductible) est porté au compte 4431 \"TVA due\" (ou 4445). Lors du paiement : Débit 4431 / Crédit 521 \"Banque\". Cette écriture solde la dette envers l'État."
-    },
-    {
-      "q": "L'entreprise emprunte 10 000 000 FCFA. Au 31/12, 2 000 000 FCFA sont remboursables dans moins d'un an. Comment présenter cet emprunt au bilan ?",
-      "o": [
-        "10 000 000 FCFA en dettes financières à long terme",
-        "8 000 000 FCFA en dettes financières + 2 000 000 FCFA en dettes à court terme",
-        "10 000 000 FCFA en dettes à court terme",
-        "2 000 000 FCFA en charges à payer"
-      ],
-      "r": 1,
-      "x": "Au bilan, les dettes financières sont ventilées selon leur échéance : la fraction remboursable dans moins d'un an (2 000 000) est classée en dettes à court terme (compte 164 — partie courante ou 501), et le reste (8 000 000) reste en dettes financières à long terme. C'est le principe de la présentation selon l'échéance."
-    },
-    {
-      "q": "L'entreprise reçoit en décembre une facture de 600 000 FCFA HT pour des services qui seront rendus en janvier N+1. Comment traiter cette opération au 31/12 ?",
-      "o": [
-        "Enregistrer la charge normalement en décembre",
-        "Ne rien enregistrer et attendre janvier",
-        "Enregistrer en charge et régulariser par une charge constatée d'avance",
-        "Enregistrer une provision pour charge"
-      ],
-      "r": 2,
-      "x": "La charge est d'abord enregistrée au débit du compte de charge (ex : 621), puis une régularisation crée une \"charge constatée d'avance\" : Débit 486 / Crédit 621 pour 600 000 FCFA. Cela neutralise la charge jusqu'à l'exercice suivant, conformément au principe de spécialisation."
-    },
-    {
-      "q": "L'entreprise reçoit une facture de transport de 75 000 FCFA. Le transporteur applique une remise commerciale de 10%. Quel est le montant net à enregistrer ?",
-      "o": [
-        "75 000 FCFA",
-        "7 500 FCFA",
-        "67 500 FCFA",
-        "82 500 FCFA"
-      ],
-      "r": 2,
-      "x": "Montant net = 75 000 × (1 − 10%) = 75 000 × 0,90 = 67 500 FCFA. Les remises, rabais et ristournes (RRR) hors facture ou sur facture réduisent le prix net de la facture. Dans le SYSCOHADA, on enregistre directement le montant net (la remise ne fait pas l'objet d'une écriture séparée)."
-    },
-    {
-      "q": "Quelle écriture correspond à la clôture du compte de résultat (virement du bénéfice) en fin d'exercice ?",
-      "o": [
-        "Débit 13 / Crédit 70 et 60",
-        "Débit 12 / Crédit 131",
-        "Débit des comptes de produits / Crédit des comptes de charges",
-        "Débit des comptes de charges et Crédit des comptes de produits (par solde au compte 13)"
-      ],
-      "r": 3,
-      "x": "En fin d'exercice, tous les comptes de charges (classe 6) sont soldés par le crédit, et tous les comptes de produits (classe 7) sont soldés par le débit. La différence est portée au compte 13 \"Résultat net de l'exercice\" (crédit si bénéfice, débit si perte). Cette opération marque la clôture de l'exercice."
-    },
-    {
-      "q": "L'entreprise achète des fournitures de bureau pour 45 000 FCFA payées en espèces. Dans quel compte enregistre-t-on cette dépense ?",
-      "o": [
-        "Compte 605",
-        "Compte 2480",
-        "Compte 6322",
-        "Compte 601"
-      ],
-      "r": 2,
-      "x": "Les fournitures de bureau sont des consommables enregistrés en charges au compte 6322 \"Fournitures de bureau\" (ou 6324 selon la nature). Le compte 605 concerne les autres achats. Ce ne sont pas des immobilisations (bien que la notion de seuil de signification s'applique)."
-    },
-    {
-      "q": "Un matériel informatique est acquis le 1er janvier N pour 1 800 000 FCFA. Il est amorti linéairement sur 3 ans. Quelle est la VNC au 31 décembre N+1 ?",
-      "o": [
-        "1 200 000 FCFA",
-        "900 000 FCFA",
-        "600 000 FCFA",
-        "1 800 000 FCFA"
-      ],
-      "r": 2,
-      "x": "Dotation annuelle = 1 800 000 / 3 = 600 000 FCFA. Après 2 ans (N et N+1), amortissements cumulés = 2 × 600 000 = 1 200 000 FCFA. VNC = 1 800 000 − 1 200 000 = 600 000 FCFA. La VNC baisse de 600 000 chaque année."
-    },
-    {
-      "q": "Un véhicule est acquis le 1er avril N pour 4 800 000 FCFA. Taux d'amortissement linéaire : 25%. Quelle est la dotation de la première année (exercice calendaire du 1/01 au 31/12) ?",
-      "o": [
-        "1 200 000 FCFA",
-        "1 800 000 FCFA",
-        "600 000 FCFA",
-        "900 000 FCFA"
-      ],
-      "r": 3,
-      "x": "En amortissement linéaire proratisé, la dotation de la 1ère année tient compte de la date d'acquisition. Durée = du 1er avril au 31 décembre = 9 mois = 9/12 de l'année. Dotation = 4 800 000 × 25% × 9/12 = 1 200 000 × 9/12 = 900 000 FCFA."
-    },
-    {
-      "q": "L'amortissement dégressif se distingue de l'amortissement linéaire par le fait que :",
-      "o": [
-        "Le montant de la dotation augmente chaque année",
-        "Il ne s'applique qu'aux biens incorporels",
-        "Le bien n'est jamais totalement amorti",
-        "Le taux d'amortissement est appliqué à la valeur nette comptable résiduelle"
-      ],
-      "r": 3,
-      "x": "En amortissement dégressif, le taux est appliqué chaque année à la VNC (valeur nette comptable) restante, ce qui génère des dotations décroissantes. Les premières années voient des dotations élevées, avantageuses fiscalement. Le basculement vers le linéaire est effectué quand le linéaire devient plus avantageux."
-    },
-    {
-      "q": "Quel est le taux d'amortissement linéaire pour un matériel amorti sur 5 ans ?",
-      "o": [
-        "5%",
-        "10%",
-        "20%",
-        "25%"
-      ],
-      "r": 2,
-      "x": "Taux linéaire = 100% / Durée d'utilisation = 100% / 5 = 20%. Ce taux, constant, est appliqué chaque année à la valeur d'acquisition (coût historique). Pour 4 ans → 25%, pour 10 ans → 10%, pour 20 ans → 5%."
-    },
-    {
-      "q": "Une machine industrielle est acquise le 1er janvier N pour 9 600 000 FCFA, amortie sur 8 ans en linéaire. Quel est le montant des amortissements cumulés au 31/12/N+3 ?",
-      "o": [
-        "1 200 000 FCFA",
-        "3 600 000 FCFA",
-        "4 800 000 FCFA",
-        "6 000 FCFA"
-      ],
-      "r": 2,
-      "x": "Dotation annuelle = 9 600 000 / 8 = 1 200 000 FCFA. Au 31/12/N+3, on a 4 années pleines (N, N+1, N+2, N+3). Amortissements cumulés = 4 × 1 200 000 = 4 800 000 FCFA. VNC = 9 600 000 − 4 800 000 = 4 800 000 FCFA."
-    },
-    {
-      "q": "Dans quel compte sont inscrits les amortissements cumulés au bilan ?",
-      "o": [
-        "En actif, dans le compte 21 directement",
-        "En passif, comme provision réglementée",
-        "En actif, dans les comptes 28 (comptes correcteurs d'actif)",
-        "En charges, dans le compte 681"
-      ],
-      "r": 2,
-      "x": "Les amortissements cumulés figurent dans les comptes 28 \"Amortissements des immobilisations\" qui sont des comptes soustractifs d'actif. Ils sont présentés au bilan en déduction de la valeur brute des immobilisations pour obtenir la valeur nette comptable."
-    },
-    {
-      "q": "La dépréciation d'une immobilisation se distingue de l'amortissement car :",
-      "o": [
-        "Elle est définitive et irréversible",
-        "Elle remplace l'amortissement pour les biens non amortissables",
-        "Elle s'applique uniquement aux biens incorporels",
-        "Elle est réversible et liée à une perte de valeur non planifiée"
-      ],
-      "r": 3,
-      "x": "L'amortissement est une dépréciation irréversible et planifiée (usure normale). La dépréciation (ou provision pour dépréciation) est liée à une perte de valeur accidentelle ou conjoncturelle, réversible (si la valeur remonte, on reprend la provision). Elle concerne aussi bien les immobilisations amortissables que non amortissables."
-    },
-    {
-      "q": "Un terrain acquis pour 5 000 000 FCFA voit sa valeur de marché tomber à 3 500 000 FCFA au 31/12. Comment traiter cette situation ?",
-      "o": [
-        "Constater une provision pour dépréciation de 1 500 000 FCFA",
-        "Amortir le terrain sur 20 ans",
-        "Réévaluer le terrain à 3 500 000 FCFA dans le bilan",
-        "Ne rien faire, les terrains ne se déprécient jamais"
-      ],
-      "r": 0,
-      "x": "Les terrains ne s'amortissent pas (durée d'utilisation illimitée). Mais si leur valeur de marché est inférieure à leur valeur comptable, on constate une provision pour dépréciation : Débit 6812 \"Dotations aux dépréciations des immobilisations\" / Crédit 291 \"Provisions pour dépréciation des terrains\" (1 500 000 FCFA)."
-    },
-    {
-      "q": "Une provision pour risques et charges est constituée pour faire face à :",
-      "o": [
-        "Une charge certaine déjà facturée mais non payée",
-        "Un amortissement non encore calculé",
-        "Une perte sur stock déjà constatée",
-        "Une charge probable dont le montant ou l'échéance est incertain"
-      ],
-      "r": 3,
-      "x": "Les provisions pour risques et charges couvrent des obligations probables envers des tiers dont le montant ou l'échéance est incertain (litiges, garanties données, restructuration). Exemple : provision pour litige prud'homal. Si la charge est certaine et déterminée, c'est une charge à payer, pas une provision."
-    },
-    {
-      "q": "L'entreprise constate une provision pour litige de 800 000 FCFA. L'année suivante, le litige se règle pour 600 000 FCFA. Quel est le résultat net de ces deux opérations sur 2 ans ?",
-      "o": [
-        "Charge nette de 800 000 FCFA",
-        "Charge nette de 600 000 FCFA",
-        "Produit net de 200 000 FCFA",
-        "Aucun impact sur le résultat"
-      ],
-      "r": 1,
-      "x": "Année N : Dotation de 800 000 FCFA (charge). Année N+1 : Reprise de provision 800 000 FCFA (produit) + Règlement effectif 600 000 FCFA (charge). Résultat net N+1 = + 800 000 − 600 000 = + 200 000. Sur 2 ans : − 800 000 + 200 000 = − 600 000. L'impact total = charge nette de 600 000 FCFA (montant réel du litige)."
-    },
-    {
-      "q": "Un bien acquis à 3 000 000 FCFA est amorti à 80% à la date de cession. Son prix de cession est de 700 000 FCFA. Calculez la plus ou moins-value de cession.",
-      "o": [
-        "Plus-value de 700 000 FCFA",
-        "Moins-value de 300 000 FCFA",
-        "Plus-value de 100 000 FCFA",
-        "Moins-value de 2 300 000 FCFA"
-      ],
-      "r": 2,
-      "x": "Amortissements cumulés = 3 000 000 × 80% = 2 400 000 FCFA. VNC = 3 000 000 − 2 400 000 = 600 000 FCFA. Plus-value = Prix de cession − VNC = 700 000 − 600 000 = 100 000 FCFA (résultat positif = plus-value)."
-    },
-    {
-      "q": "Quelle est la différence entre une \"provision réglementée\" et une \"provision pour risques et charges\" ?",
-      "o": [
-        "La provision réglementée est une charge décaissable, l'autre non",
-        "La provision réglementée concerne uniquement les stocks",
-        "La provision réglementée est un mécanisme fiscal optionnel, classée dans les capitaux propres",
-        "La provision pour risques est obligatoire, l'autre est facultative"
-      ],
-      "r": 2,
-      "x": "Les provisions réglementées (compte 15) sont des provisions à caractère purement fiscal (amortissements dérogatoires, provisions pour hausse des prix, etc.). Elles figurent dans les capitaux propres du bilan. Les provisions pour risques et charges (compte 19) représentent des obligations probables envers des tiers."
-    },
-    {
-      "q": "L'entreprise détient des titres de placement achetés à 2 000 000 FCFA. Au 31/12, leur valeur de marché est de 1 700 000 FCFA. Que doit-elle faire ?",
-      "o": [
-        "Rien, les titres de placement ne se déprécient pas",
-        "Vendre immédiatement les titres pour constater la perte",
-        "Reclasser les titres en immobilisations financières",
-        "Constater une provision pour dépréciation de 300 000 FCFA"
-      ],
-      "r": 3,
-      "x": "Les titres de placement (classe 5) doivent être évalués à la valeur du marché à la clôture. Si la valeur de marché < valeur d'acquisition, on constate une provision : Débit 6781 / Crédit 591 \"Provisions pour dépréciation des titres de placement\" pour 300 000 FCFA."
-    },
-    {
-      "q": "Qu'entend-on par \"durée d'amortissement\" d'un bien ?",
-      "o": [
-        "La durée légale fixée par la loi fiscale",
-        "La durée de vie physique maximale du bien",
-        "La durée d'utilisation prévue par l'entreprise, selon la nature du bien et l'usage",
-        "La durée du contrat de financement (crédit-bail ou emprunt)"
-      ],
-      "r": 2,
-      "x": "La durée d'amortissement est la durée d'utilisation probable du bien, estimée par l'entreprise. Elle peut différer de la durée fiscale. Le SYSCOHADA recommande d'utiliser la durée économique réelle. Des durées types : bâtiments 20 ans, matériel 5-10 ans, véhicules 4-5 ans, logiciels 3 ans."
-    },
-    {
-      "q": "Un bâtiment acquis le 1er janvier N pour 12 000 000 FCFA est amorti sur 20 ans. Quelle est sa valeur nette comptable à la fin de l'exercice N+9 ?",
-      "o": [
+        "4 000 000 FCFA",
         "6 000 000 FCFA",
-        "7 200 000 FCFA",
-        "4 800 000 FCFA",
-        "8 400 000 FCFA"
-      ],
-      "r": 0,
-      "x": "Dotation annuelle = 12 000 000 / 20 = 600 000 FCFA. Après 10 ans (N à N+9), amortissements cumulés = 10 × 600 000 = 6 000 000 FCFA. VNC = 12 000 000 − 6 000 000 = 6 000 000 FCFA. Le bâtiment est amorti à 50% après 10 ans."
-    },
-    {
-      "q": "L'entreprise cède un bien pour 0 FCFA (mise au rebut). Sa valeur nette comptable est de 150 000 FCFA. Quel est l'impact sur le résultat ?",
-      "o": [
-        "Aucun impact, la cession est nulle",
-        "Perte de 150 000 FCFA (moins-value)",
-        "Gain de 150 000 FCFA (plus-value)",
-        "Provision de 150 000 FCFA"
+        "7 000 000 FCFA",
+        "9 000 000 FCFA"
       ],
       "r": 1,
-      "x": "La mise au rebut est une cession à prix nul. Prix de cession = 0 FCFA. VNC = 150 000 FCFA. Moins-value = 0 − 150 000 = −150 000 FCFA. Écriture : Débit 654 \"Pertes sur cessions d'immobilisations\" (150 000) / Crédit 24... (compte d'immobilisation, 150 000)."
+      "x": "De N-3 à N, le matériel a été amorti pendant 4 ans, soit 4 × 1 000 000 = 4 000 000 FCFA. La valeur nette comptable est donc de 10 000 000 − 4 000 000 = 6 000 000 FCFA. Le montant de 7 000 000 FCFA ne compte que trois années.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
     },
     {
-      "q": "Quelle est la nature d'un compte d'amortissement (compte 28) au bilan ?",
+      "q": "Un véhicule de 12 000 000 FCFA, dont la valeur résiduelle est estimée à 2 000 000 FCFA, est amorti en linéaire sur 5 ans. L'annuité est de :",
       "o": [
-        "Actif positif",
-        "Passif (dette)",
-        "Actif négatif (compte soustractif)",
-        "Charge de l'exercice"
-      ],
-      "r": 2,
-      "x": "Les comptes 28 \"Amortissements\" sont des comptes soustractifs d'actif (aussi appelés comptes de déduction). Ils figurent à l'actif avec un signe négatif (en déduction de la valeur brute). Valeur nette = Valeur brute − Amortissements cumulés."
-    },
-    {
-      "q": "Une provision pour dépréciation de stock est constituée pour 500 000 FCFA. L'exercice suivant, les marchandises se vendent normalement. Quelle écriture enregistre la reprise de provision ?",
-      "o": [
-        "Débit 6594 / Crédit 39",
-        "Débit 7594 / Crédit 39",
-        "Débit 39 / Crédit 6594",
-        "Débit 39 / Crédit 7594"
-      ],
-      "r": 3,
-      "x": "La reprise de provision pour dépréciation de stock : Débit 39 \"Provisions pour dépréciation des stocks\" / Crédit 7594 \"Reprises de provisions pour dépréciation des actifs circulants\" (produit). Cette écriture inverse la provision initiale et améliore le résultat de l'exercice."
-    },
-    {
-      "q": "Comment appelle-t-on la différence entre la dotation aux amortissements comptable et la dotation fiscale admise ?",
-      "o": [
-        "Amortissement dérogatoire",
-        "Provision réglementée",
-        "Surplus d'amortissement",
-        "Dépréciation exceptionnelle"
-      ],
-      "r": 0,
-      "x": "L'amortissement dérogatoire (compte 151) est la différence entre l'amortissement fiscal (souvent plus rapide, comme le dégressif fiscal) et l'amortissement comptable (linéaire économique). La fraction excédentaire est une provision réglementée, classée en capitaux propres."
-    },
-    {
-      "q": "Lors de la cession d'une immobilisation, quelle est la première écriture à enregistrer ?",
-      "o": [
-        "Enregistrer le prix de vente",
-        "Enregistrer la TVA sur la cession",
-        "Calculer la plus ou moins-value",
-        "Annuler la valeur brute et les amortissements cumulés du bien cédé"
-      ],
-      "r": 3,
-      "x": "La méthodologie de cession d'immobilisation comporte plusieurs étapes : (1) Calculer la dotation complémentaire jusqu'à la date de cession, (2) Annuler la valeur brute (Crédit compte d'immobilisation) et les amortissements cumulés (Débit compte 28), (3) Enregistrer le prix de cession, (4) Calculer la plus ou moins-value."
-    },
-    {
-      "q": "Quel est le traitement comptable d'une immobilisation totalement amortie mais encore utilisée ?",
-      "o": [
-        "Elle doit être immédiatement cédée ou mise au rebut",
-        "Elle reste au bilan à sa valeur brute avec les amortissements cumulés correspondants (VNC = 0)",
-        "Elle est réévaluée à sa valeur de remplacement",
-        "Elle est transférée hors bilan dans un registre spécial"
-      ],
-      "r": 1,
-      "x": "Une immobilisation totalement amortie (VNC = 0) reste inscrite au bilan à sa valeur brute, avec les amortissements cumulés égaux à cette valeur brute (VNC = 0). Elle peut continuer à être utilisée. Son coût de détention est nul (plus de dotation). Elle sort du bilan lors de sa cession ou mise au rebut."
-    },
-    {
-      "q": "Au Burkina Faso, quel est le taux standard de la TVA applicable aux opérations courantes ?",
-      "o": [
-        "15%",
-        "18%",
-        "20%",
-        "25%"
-      ],
-      "r": 1,
-      "x": "Le taux standard de TVA au Burkina Faso est de 18%. Ce taux s'applique à la grande majorité des opérations commerciales (ventes de biens, prestations de services). Certains produits bénéficient d'exonérations ou de taux réduits (médicaments, produits alimentaires de base)."
-    },
-    {
-      "q": "La TVA due à l'État est calculée selon la formule :",
-      "o": [
-        "TVA collectée + TVA déductible",
-        "(TVA collectée × TVA déductible) / 100",
-        "TVA déductible − TVA collectée",
-        "TVA collectée − TVA déductible"
-      ],
-      "r": 3,
-      "x": "TVA nette due = TVA collectée (sur ventes) − TVA déductible (sur achats). Si le résultat est positif, l'entreprise verse la différence à l'État. Si négatif (crédit de TVA), elle peut le reporter sur le mois suivant ou en demander le remboursement sous conditions."
-    },
-    {
-      "q": "Une entreprise réalise des ventes TTC de 3 540 000 FCFA (TVA 18%). Quel est le montant HT de ces ventes ?",
-      "o": [
-        "3 000 000 FCFA",
-        "2 754 000 FCFA",
-        "2 966 102 FCFA",
-        "4 177 200 FCFA"
-      ],
-      "r": 0,
-      "x": "Montant HT = Montant TTC / (1 + taux TVA) = 3 540 000 / 1,18 = 3 000 000 FCFA. La TVA correspondante = 3 540 000 − 3 000 000 = 540 000 FCFA. Vérification : 3 000 000 × 18% = 540 000 FCFA. ✓"
-    },
-    {
-      "q": "Quelle est la TVA déductible sur l'achat d'un véhicule de tourisme pour l'usage personnel du directeur ?",
-      "o": [
-        "Intégralement déductible à 18%",
-        "Déductible à 50%",
-        "Non déductible",
-        "Déductible au prorata du chiffre d'affaires taxable"
-      ],
-      "r": 2,
-      "x": "Au Burkina Faso, la TVA sur les véhicules de tourisme à usage privé (voitures de direction, véhicules de représentation) n'est pas déductible. En revanche, les véhicules utilitaires (camions, camionnettes) ouvrent droit à déduction de la TVA."
-    },
-    {
-      "q": "L'entreprise ZABA achète des marchandises HT pour 1 500 000 FCFA (TVA 18%) et les revend TTC pour 2 360 000 FCFA. Calculez la TVA nette due à l'État.",
-      "o": [
-        "270 000 FCFA",
-        "30 000 FCFA",
-        "360 000 FCFA",
-        "90 000 FCFA"
-      ],
-      "r": 3,
-      "x": "TVA collectée = 2 360 000 / 1,18 × 18% = 2 000 000 × 18% = 360 000 FCFA. TVA déductible = 1 500 000 × 18% = 270 000 FCFA. TVA nette due = 360 000 − 270 000 = 90 000 FCFA. L'entreprise reverse 90 000 FCFA à l'État."
-    },
-    {
-      "q": "Qu'est-ce qu'un \"crédit de TVA\" ?",
-      "o": [
-        "Un emprunt auprès de l'administration fiscale",
-        "Un taux préférentiel accordé aux petites entreprises",
-        "Une réduction accordée par l'État sur la TVA due",
-        "La situation où la TVA déductible est supérieure à la TVA collectée"
-      ],
-      "r": 3,
-      "x": "Le crédit de TVA survient quand la TVA déductible (sur achats) dépasse la TVA collectée (sur ventes). C'est fréquent pour les exportateurs ou les entreprises ayant fait de gros investissements. Ce crédit peut être reporté sur la période suivante ou remboursé sous conditions par l'administration fiscale."
-    },
-    {
-      "q": "La TVA sur les services rendus par un prestataire étranger sans établissement stable au Burkina Faso est soumise à :",
-      "o": [
-        "La retenue à la source",
-        "La TVA du pays du prestataire",
-        "L'exonération totale de TVA",
-        "L'autoliquidation par le client assujetti"
-      ],
-      "r": 3,
-      "x": "Le mécanisme d'autoliquidation (ou reverse charge) impose au client assujetti burkinabè de déclarer et payer la TVA due sur les services importés, en lieu et place du prestataire étranger non établi. Il peut simultanément déduire cette TVA si les conditions de déductibilité sont remplies."
-    },
-    {
-      "q": "Une réduction commerciale figurant sur la facture initiale s'appelle :",
-      "o": [
-        "Ristourne",
-        "Escompte",
-        "Remise",
-        "Avoir"
-      ],
-      "r": 2,
-      "x": "Les réductions commerciales sont : la remise (réduction immédiate sur facture, souvent en pourcentage), le rabais (réduction pour non-conformité ou retard) et la ristourne (réduction accordée en fin de période sur un volume d'achats). L'escompte est une réduction financière pour paiement rapide, pas une réduction commerciale."
-    },
-    {
-      "q": "Quel est le traitement comptable d'un escompte de règlement accordé à un client qui paie avant l'échéance ?",
-      "o": [
-        "Il réduit le chiffre d'affaires",
-        "C'est une charge financière pour le vendeur, enregistrée au compte 673",
-        "Il est enregistré comme une remise commerciale dans le compte 601",
-        "Il réduit le solde du compte client (411)"
-      ],
-      "r": 1,
-      "x": "L'escompte accordé est une charge financière pour le vendeur : Débit 673 \"Escomptes accordés\" / Crédit 411. Pour l'acheteur, c'est un produit financier : Débit 401 / Crédit 773 \"Escomptes obtenus\". À distinguer des remises commerciales qui s'imputent sur les comptes d'achat/vente."
-    },
-    {
-      "q": "L'entreprise vend à l'export (hors UEMOA) pour 5 000 000 FCFA. Quel est le traitement TVA applicable ?",
-      "o": [
-        "TVA 18% collectée normalement",
-        "TVA au taux réduit de 5%",
-        "Exonération de TVA (vente taxée à 0%)",
-        "TVA du pays de destination applicable"
-      ],
-      "r": 2,
-      "x": "Les exportations hors zone UEMOA/CEDEAO sont exonérées de TVA (taux 0%). Cette exonération donne droit au remboursement du crédit de TVA lié aux achats afférents aux exportations. C'est une mesure de compétitivité des exportations."
-    },
-    {
-      "q": "L'entreprise paie sa patente annuelle de 180 000 FCFA. Comment enregistrer cette charge ?",
-      "o": [
-        "Débit 646 / Crédit 521",
-        "Débit 521 / Crédit 646",
-        "Débit 646 / Crédit 447",
-        "Débit 645 / Crédit 521"
-      ],
-      "r": 0,
-      "x": "La patente est un impôt et taxe professionnel enregistré au débit du compte 646 \"Droits d'enregistrement et de timbre\" ou 6451 selon la nomenclature locale. Crédit 521 \"Banque\" si payée immédiatement. Si non encore payée : Crédit 447 \"État, impôts et taxes divers\"."
-    },
-    {
-      "q": "Le fait générateur de la TVA sur les ventes de biens est :",
-      "o": [
-        "La date de commande",
-        "La date de signature du contrat",
-        "La date d'encaissement du prix",
-        "La date de livraison du bien"
-      ],
-      "r": 3,
-      "x": "Pour les ventes de biens, le fait générateur de la TVA est la livraison (transfert de propriété). La TVA est alors exigible à cette date, même si le paiement est différé. Pour les prestations de services, le fait générateur est la date d'exécution de la prestation."
-    },
-    {
-      "q": "L'entreprise achète des marchandises à crédit pour 590 000 FCFA TTC (TVA 18%). Quel est le montant HT à enregistrer dans le compte 601 ?",
-      "o": [
-        "590 000 FCFA",
-        "106 200 FCFA",
-        "695 000 FCFA",
-        "500 000 FCFA"
-      ],
-      "r": 3,
-      "x": "Montant HT = 590 000 / 1,18 = 500 000 FCFA. TVA = 590 000 − 500 000 = 90 000 FCFA. Écriture : Débit 601 (500 000) + Débit 4456 (90 000) / Crédit 401 (590 000). Dans le SYSCOHADA, les achats sont enregistrés HT dans les comptes de charges."
-    },
-    {
-      "q": "Qu'est-ce qu'une facture proforma ?",
-      "o": [
-        "Une facture définitive exigeant paiement immédiat",
-        "Un document commercial préliminaire indicatif, sans valeur comptable",
-        "Une facture établie après encaissement",
-        "Une note de débit adressée au fournisseur"
-      ],
-      "r": 1,
-      "x": "La facture proforma est un devis présenté sous forme de facture. Elle n'engage pas juridiquement les parties et n'a aucune valeur comptable. Elle n'est pas enregistrée en comptabilité. Seule la facture définitive (facture normale) est un document comptable à enregistrer."
-    },
-    {
-      "q": "Comment appelle-t-on la réduction accordée par un fournisseur en fin de mois ou d'année, sur le volume total d'achats réalisés ?",
-      "o": [
-        "Remise",
-        "Rabais",
-        "Ristourne",
-        "Escompte"
-      ],
-      "r": 2,
-      "x": "La ristourne est une réduction commerciale accordée a posteriori, sur une période (mois, trimestre, année), calculée sur le volume total des transactions. Elle donne lieu à un avoir (note de crédit). À distinguer : la remise est accordée sur facture immédiate, le rabais pour défaut de qualité."
-    },
-    {
-      "q": "L'entreprise reçoit une facture TTC de 826 000 FCFA. La TVA est au taux de 18%. Quel est le montant de la TVA déductible ?",
-      "o": [
-        "148 680 FCFA",
-        "144 000 FCFA",
-        "130 000 FCFA",
-        "126 000 FCFA"
-      ],
-      "r": 3,
-      "x": "TVA = TTC − HT = 826 000 − (826 000 / 1,18) = 826 000 − 700 000 = 126 000 FCFA. Vérification : 700 000 × 18% = 126 000 FCFA. Le montant HT = 826 000 / 1,18 = 700 000 FCFA."
-    },
-    {
-      "q": "L'entreprise BURKI reçoit une note d'honoraires d'un cabinet d'expertise comptable de 300 000 FCFA HT (TVA 18%). Quel compte de charge est débité ?",
-      "o": [
-        "6225",
-        "6231",
-        "6325",
-        "6215"
-      ],
-      "r": 0,
-      "x": "Le compte 6225 \"Rémunérations d'intermédiaires et honoraires\" (ou similaire selon la codification nationale) enregistre les honoraires versés aux professionnels libéraux (expert-comptable, avocat, consultant). Le compte 621 regroupe les \"Rémunérations d'intermédiaires et honoraires\"."
-    },
-    {
-      "q": "La TVA sur les frais de représentation (cadeaux d'affaires, repas d'affaires) est-elle déductible ?",
-      "o": [
-        "Oui, intégralement",
-        "Non, ces dépenses sont exclues du droit à déduction",
-        "Oui, à 50%",
-        "Oui, uniquement si le montant unitaire est inférieur à 10 000 FCFA"
-      ],
-      "r": 1,
-      "x": "Les frais de représentation (cadeaux, réceptions, repas d'affaires) sont généralement exclus du droit à déduction de la TVA au Burkina Faso, car présumés à usage mixte ou personnel. Cette règle vise à éviter que des dépenses privées soient financées par le mécanisme de la TVA déductible."
-    },
-    {
-      "q": "En cas de non-paiement d'une créance client dont la TVA a déjà été collectée, l'entreprise peut-elle récupérer la TVA versée à l'État ?",
-      "o": [
-        "Non, la TVA versée est définitivement perdue",
-        "Oui, uniquement pour les créances supérieures à 1 000 000 FCFA",
-        "Oui, automatiquement après 3 mois de non-paiement",
-        "Oui, sous conditions (créance irrécouvrable avérée, client insolvable)"
-      ],
-      "r": 3,
-      "x": "L'entreprise peut récupérer la TVA sur les créances irrécouvrables sous conditions : l'insolvabilité du débiteur doit être établie (jugement de liquidation, etc.) et l'entreprise doit adresser une facture rectificative au client ou produire des justificatifs. La récupération se fait par imputation sur la prochaine déclaration TVA."
-    },
-    {
-      "q": "L'entreprise verse 500 000 FCFA à titre d'acompte sur impôt sur les bénéfices. Comment enregistrer cette opération ?",
-      "o": [
-        "Débit 691 / Crédit 521",
-        "Débit 447 / Crédit 521",
-        "Débit 521 / Crédit 4422",
-        "Débit 4422 / Crédit 521"
-      ],
-      "r": 3,
-      "x": "Les acomptes sur impôts sont des créances sur l'État. On débite le compte 4422 \"Acomptes provisionnels sur impôts et taxes\" (créance sur l'État) / Crédit 521 \"Banque\". En fin d'exercice, lors de la liquidation de l'impôt définitif, les acomptes sont imputés sur le solde d'impôt restant dû."
-    },
-    {
-      "q": "Au bilan SYSCOHADA, l'actif est classé selon :",
-      "o": [
-        "L'ordre croissant de liquidité (du moins liquide au plus liquide)",
-        "L'ordre décroissant de liquidité",
-        "L'ordre alphabétique des comptes",
-        "L'ordre d'acquisition des biens"
-      ],
-      "r": 0,
-      "x": "Dans le SYSCOHADA, l'actif est classé de bas en haut en termes de liquidité : les immobilisations (actif immobilisé, le moins liquide) apparaissent en haut, suivies de l'actif circulant (stocks, créances), puis de la trésorerie (la plus liquide). C'est l'ordre croissant de liquidité."
-    },
-    {
-      "q": "Dans le bilan SYSCOHADA, où figurent les capitaux propres ?",
-      "o": [
-        "À l'actif, parce que c'est une ressource de l'entreprise",
-        "Au passif, en haut (ressources stables)",
-        "Au passif, en bas (dettes à court terme)",
-        "Dans un état séparé annexé au bilan"
-      ],
-      "r": 1,
-      "x": "Les capitaux propres (classe 1 : capital, réserves, résultat) figurent en haut du passif, dans les \"Ressources durables\". Ils représentent les ressources apportées par les actionnaires et les bénéfices non distribués, disponibles de façon permanente pour l'entreprise."
-    },
-    {
-      "q": "Comment calcule-t-on le fonds de roulement net global (FRNG) ?",
-      "o": [
-        "Actif circulant − Passif circulant",
-        "Ressources stables − Actif immobilisé",
-        "Trésorerie actif − Trésorerie passif",
-        "Capitaux propres − Dettes financières"
-      ],
-      "r": 1,
-      "x": "FRNG = Ressources stables (Capitaux propres + Dettes financières à long terme) − Actif immobilisé net. Un FRNG positif signifie que les ressources stables financent l'intégralité de l'actif immobilisé ET une partie de l'actif circulant. C'est un signe de santé financière."
-    },
-    {
-      "q": "Le besoin en fonds de roulement (BFR) est calculé ainsi :",
-      "o": [
-        "(Stocks + Créances) − Dettes fournisseurs et autres dettes d'exploitation",
-        "Actif circulant − Passif circulant",
-        "Ressources stables − Actif immobilisé",
-        "Trésorerie nette / Chiffre d'affaires"
-      ],
-      "r": 0,
-      "x": "BFR = (Stocks + Créances clients et autres créances d'exploitation) − (Dettes fournisseurs et autres dettes d'exploitation). Il représente le besoin de financement lié au cycle d'exploitation. Plus le BFR est élevé, plus l'entreprise a besoin de ressources pour financer son cycle opérationnel."
-    },
-    {
-      "q": "La trésorerie nette (TN) est égale à :",
-      "o": [
-        "FRNG + BFR",
-        "FRNG − BFR",
-        "Actif circulant − Dettes financières",
-        "Capitaux propres / Dettes totales"
-      ],
-      "r": 1,
-      "x": "Trésorerie nette = FRNG − BFR. Si TN > 0 : l'entreprise a des excédents de trésorerie. Si TN < 0 : l'entreprise a recours aux concours bancaires courants. La relation fondamentale : Trésorerie = FRNG − BFR est un outil clé d'analyse financière."
-    },
-    {
-      "q": "Dans le compte de résultat SYSCOHADA, la \"valeur ajoutée\" est calculée comme suit :",
-      "o": [
-        "Production de l'exercice − Consommations en provenance des tiers",
-        "Chiffre d'affaires − Charges de personnel",
-        "Résultat d'exploitation + Dotations aux amortissements",
-        "Chiffre d'affaires − Coût des marchandises vendues"
-      ],
-      "r": 0,
-      "x": "VA = Production de l'exercice (CA + variation de stocks produits + production immobilisée) − Consommations en provenance des tiers (achats + variation de stocks de matières + autres charges externes). La VA mesure la richesse créée par l'entreprise."
-    },
-    {
-      "q": "L'excédent brut d'exploitation (EBE) correspond à :",
-      "o": [
-        "Valeur ajoutée − Charges de personnel − Impôts et taxes",
-        "Résultat net + Dotations aux amortissements",
-        "Chiffre d'affaires − Charges variables",
-        "Résultat d'exploitation + Charges financières"
-      ],
-      "r": 0,
-      "x": "EBE = Valeur Ajoutée (VA) + Subventions d'exploitation − Charges de personnel − Impôts et taxes professionnels. L'EBE mesure la performance opérationnelle avant les politiques d'amortissement et de financement. C'est un indicateur proche de la capacité d'autofinancement brute."
-    },
-    {
-      "q": "Dans le bilan, quelle est l'équation fondamentale qui doit toujours être vérifiée ?",
-      "o": [
-        "Actif = Passif + Capitaux propres",
-        "Actif immobilisé = Capitaux propres",
-        "Total Actif = Total Passif (y compris capitaux propres)",
-        "Stocks + Créances = Dettes fournisseurs"
-      ],
-      "r": 2,
-      "x": "L'équation fondamentale du bilan : Total Actif = Total Passif. Le passif comprend à la fois les capitaux propres et les dettes (financières, fournisseurs, fiscales, sociales, etc.). Cette égalité découle directement du principe de la partie double."
-    },
-    {
-      "q": "Comment se calcule la capacité d'autofinancement (CAF) à partir du résultat net ?",
-      "o": [
-        "CAF = Résultat net + Dotations aux amortissements et provisions − Reprises",
-        "CAF = Résultat net + Dotations − Reprises + Plus-values − Moins-values",
-        "CAF = EBE − Impôts sur les bénéfices",
-        "CAF = Résultat net / Chiffre d'affaires × 100"
-      ],
-      "r": 0,
-      "x": "CAF = Résultat net + Charges calculées (amortissements, provisions) − Produits calculés (reprises) ± Moins-values/Plus-values sur cessions. La CAF mesure la capacité de l'entreprise à générer des ressources internes pour financer ses investissements, rembourser ses dettes et distribuer des dividendes."
-    },
-    {
-      "q": "Le ratio de solvabilité générale est calculé ainsi :",
-      "o": [
-        "Capitaux propres / Total Actif",
-        "Actif circulant / Passif circulant",
-        "Résultat net / Capital social",
-        "Total Actif / Total Dettes"
-      ],
-      "r": 3,
-      "x": "Solvabilité = Total Actif / Total Dettes. Un ratio > 1 indique que l'entreprise peut rembourser ses dettes en liquidant ses actifs. Plus il est élevé, plus l'entreprise est solvable. Un ratio < 1 signifie un passif supérieur à l'actif (situation négative des capitaux propres — difficile)."
-    },
-    {
-      "q": "Le ratio de liquidité générale est :",
-      "o": [
-        "Actif circulant / Dettes à court terme",
-        "Trésorerie / Dettes à court terme",
-        "Capitaux propres / Dettes à long terme",
-        "Résultat net / Total Actif"
-      ],
-      "r": 0,
-      "x": "Liquidité générale = Actif circulant (stocks + créances + trésorerie) / Dettes à court terme. Un ratio ≥ 1 est généralement considéré comme sain. Il mesure la capacité à faire face aux échéances à court terme avec les actifs circulants disponibles."
-    },
-    {
-      "q": "Dans le compte de résultat SYSCOHADA, le résultat d'exploitation est obtenu par :",
-      "o": [
-        "Produits d'exploitation − Charges d'exploitation",
-        "Chiffre d'affaires − Charges de personnel",
-        "Produits totaux − Charges totales",
-        "EBE − Dotations aux amortissements"
-      ],
-      "r": 0,
-      "x": "Résultat d'exploitation = Total des produits d'exploitation (classe 7, comptes 70 à 75) − Total des charges d'exploitation (classe 6, comptes 60 à 65 et 68). Il mesure la performance de l'activité principale, indépendamment des éléments financiers et exceptionnels."
-    },
-    {
-      "q": "Le résultat financier est défini comme :",
-      "o": [
-        "Les charges financières uniquement",
-        "Résultat net avant impôts − Résultat d'exploitation",
-        "Résultat d'exploitation + Résultat exceptionnel",
-        "Produits financiers − Charges financières"
-      ],
-      "r": 3,
-      "x": "Résultat financier = Produits financiers (compte 77 : intérêts reçus, dividendes, gains de change) − Charges financières (compte 67 : intérêts payés, pertes de change, agios). Il mesure l'impact des opérations financières sur le résultat global."
-    },
-    {
-      "q": "L'affectation du résultat bénéficiaire d'une SA est décidée par :",
-      "o": [
-        "Le directeur général",
-        "Le conseil d'administration seul",
-        "L'assemblée générale ordinaire des actionnaires",
-        "Le commissaire aux comptes"
-      ],
-      "r": 2,
-      "x": "L'affectation du résultat (dotation à la réserve légale, distributions de dividendes, report à nouveau) est une prérogative exclusive de l'assemblée générale ordinaire (AGO) des actionnaires. Elle intervient généralement dans les 6 mois suivant la clôture de l'exercice."
-    },
-    {
-      "q": "La réserve légale dans une SA représente :",
-      "o": [
-        "5% du bénéfice net jusqu'à atteindre 10% du capital social",
-        "10% du bénéfice net jusqu'à atteindre 20% du capital social",
-        "20% du bénéfice net chaque année",
-        "Un montant fixe déterminé par les statuts"
-      ],
-      "r": 0,
-      "x": "Dans le droit OHADA, la SA est obligée de doter chaque année 5% du bénéfice net à la réserve légale, jusqu'à ce que celle-ci atteigne 10% du capital social. Cette obligation cesse une fois ce plafond atteint. C'est une protection pour les créanciers."
-    },
-    {
-      "q": "L'entreprise enregistre 2 000 000 FCFA de charges d'exploitation et 2 500 000 FCFA de produits d'exploitation. Quel est le résultat d'exploitation ?",
-      "o": [
-        "−500 000 FCFA (perte)",
-        "4 500 000 FCFA",
-        "500 000 FCFA (bénéfice)",
-        "2 000 000 FCFA"
-      ],
-      "r": 2,
-      "x": "Résultat d'exploitation = Produits − Charges = 2 500 000 − 2 000 000 = 500 000 FCFA. C'est un bénéfice d'exploitation (résultat positif). Si les charges avaient été supérieures, on aurait eu une perte d'exploitation."
-    },
-    {
-      "q": "Quel poste du bilan représente les actifs non remboursables au sens des ressources permanentes ?",
-      "o": [
-        "Les dettes financières à long terme",
-        "Les provisions pour risques",
-        "Les capitaux propres",
-        "Les concours bancaires courants"
-      ],
-      "r": 2,
-      "x": "Les capitaux propres (capital + réserves + résultat) représentent des ressources permanentes non remboursables à l'extérieur (sauf en cas de liquidation ou réduction de capital). Contrairement aux dettes, ils appartiennent aux actionnaires et constituent le \"filet de sécurité\" de l'entreprise."
-    },
-    {
-      "q": "Qu'est-ce que le \"report à nouveau\" au bilan ?",
-      "o": [
-        "Le montant des bénéfices à distribuer aux actionnaires",
-        "La fraction du résultat non affectée, reportée à l'exercice suivant",
-        "Les pertes comptabilisées en charge de l'exercice",
-        "Le cumul des amortissements non encore comptabilisés"
-      ],
-      "r": 1,
-      "x": "Le report à nouveau (compte 12) est la fraction du résultat antérieur que l'AGO a décidé de ne pas affecter (ni en réserves, ni en dividendes). Il peut être positif (bénéfices non distribués) ou négatif (pertes accumulées non apurées). Il s'accumule d'exercice en exercice."
-    },
-    {
-      "q": "Le tableau des flux de trésorerie (TFT) classe les flux en trois catégories. Lesquelles ?",
-      "o": [
-        "Flux d'exploitation, flux d'investissement, flux de financement",
-        "Flux entrants, flux sortants, flux neutres",
-        "Flux courants, flux exceptionnels, flux de trésorerie",
-        "Flux en FCFA, flux en devises, flux interbancaires"
-      ],
-      "r": 0,
-      "x": "Le TFT classe les flux en : (1) Flux liés aux activités opérationnelles (exploitation), (2) Flux liés aux activités d'investissement (acquisitions/cessions d'immobilisations), (3) Flux liés aux activités de financement (emprunts, dividendes, augmentation de capital). C'est un état financier obligatoire du SYSCOHADA révisé."
-    },
-    {
-      "q": "L'entreprise a un chiffre d'affaires de 15 000 000 FCFA, des charges totales de 12 000 000 FCFA et un impôt sur les bénéfices de 900 000 FCFA (taux 30%). Quel est le résultat net ?",
-      "o": [
-        "3 000 000 FCFA",
-        "12 900 000 FCFA",
-        "900 000 FCFA",
-        "2 100 000 FCFA"
-      ],
-      "r": 3,
-      "x": "Résultat avant impôts = 15 000 000 − 12 000 000 = 3 000 000 FCFA. Impôt = 3 000 000 × 30% = 900 000 FCFA. Résultat net = 3 000 000 − 900 000 = 2 100 000 FCFA. Le résultat net est le bénéfice après impôt, disponible pour l'affectation (dividendes, réserves)."
-    },
-    {
-      "q": "Les travaux de fin d'exercice comprennent, dans le bon ordre :",
-      "o": [
-        "Clôture des comptes, inventaire physique, régularisations",
-        "Régularisations comptables, inventaire, établissement des états financiers, clôture",
-        "Inventaire physique et comptable, régularisations, établissement des états financiers",
-        "Établissement du bilan, puis du compte de résultat, puis de l'annexe"
-      ],
-      "r": 2,
-      "x": "Les travaux de fin d'exercice suivent cet ordre : (1) Inventaire physique (comptage des stocks) et inventaire comptable (balance avant inventaire), (2) Régularisations (amortissements, provisions, charges et produits à régulariser), (3) Balance après inventaire, (4) Établissement des états financiers (bilan, CR, TFT, etc.)."
-    },
-    {
-      "q": "Lors des travaux de fin d'exercice, l'abonnement téléphonique mensuel de 50 000 FCFA de décembre n'a pas encore été facturé. Comment régulariser ?",
-      "o": [
-        "Ne rien faire, attendre la facture de janvier",
-        "Constituer une provision de 50 000 FCFA",
-        "Débit 408 / Crédit 626",
-        "Débit 626 (50 000) / Crédit 408 \"Fournisseurs, factures non parvenues\" (50 000)"
-      ],
-      "r": 3,
-      "x": "La facture de téléphone de décembre non reçue est une \"charge à payer\". Régularisation au 31/12 : Débit 626 \"Télécommunications\" / Crédit 408 \"Fournisseurs — Factures non parvenues\". En début d'exercice N+1, cette écriture est contre-passée, et la vraie facture est enregistrée normalement."
-    },
-    {
-      "q": "Au 31/12, un intérêt couru sur un emprunt bancaire représente 120 000 FCFA pour la période juillet–décembre, mais ne sera payé qu'en mars N+1. Comment traiter cette situation ?",
-      "o": [
-        "Enregistrer la charge d'intérêt en N+1 lors du paiement",
-        "Débiter 671 / Créditer 1681 pour 120 000 FCFA",
-        "Constituer une provision pour risque de taux",
-        "Ne rien faire car le paiement est prévu"
-      ],
-      "r": 1,
-      "x": "Les intérêts courus non échus sont des charges à payer rattachées à l'exercice N. Régularisation : Débit 671 \"Intérêts des emprunts\" / Crédit 1681 \"Intérêts courus\" (ou 166 selon codification) pour 120 000 FCFA. En N+1, lors du paiement effectif, on débite 1681 et 671 (pour la part de N+1) et on crédite 521."
-    },
-    {
-      "q": "L'inventaire physique des stocks révèle un stock réel de 800 000 FCFA alors que le stock comptable théorique est de 900 000 FCFA. Comment traiter cet écart ?",
-      "o": [
-        "Ignorer l'écart car il est inférieur à 10%",
-        "Enregistrer une perte de 100 000 FCFA sur les stocks",
-        "Débiter 603 \"Variation de stocks\" / Créditer 31 pour régulariser",
-        "Créditer 31 / Débiter 603 pour ramener le stock comptable au stock réel"
-      ],
-      "r": 3,
-      "x": "La variation de stocks est enregistrée par la différence SI − SF. Ici, SF réel = 800 000 < SI = 900 000. Écriture : Débit 603 \"Variation des stocks de matières\" pour 100 000 (augmentation des charges) / Crédit 31 (diminution du stock). Cela aligne le stock comptable sur le stock réel."
-    },
-    {
-      "q": "La contre-passation (ou extourne) des charges à payer effectuée en début d'exercice N+1 a pour but :",
-      "o": [
-        "D'annuler définitivement les charges de l'exercice N",
-        "De simplifier l'enregistrement des factures correspondantes lors de leur réception",
-        "De doubler les charges à payer pour N+1",
-        "De corriger les erreurs d'inventaire"
-      ],
-      "r": 1,
-      "x": "La contre-passation en début N+1 annule les écritures de régularisation du 31/12. Quand la vraie facture arrive, on l'enregistre normalement sans risque de double comptabilisation. Sans contre-passation, le comptable devrait analyser chaque facture pour vérifier si elle a déjà été provisionnée."
-    },
-    {
-      "q": "Un loyer de 360 000 FCFA est payé le 1er octobre N pour l'année octobre N – septembre N+1. Quel est le montant à régulariser en charge constatée d'avance au 31/12/N ?",
-      "o": [
-        "360 000 FCFA",
-        "120 000 FCFA",
-        "90 000 FCFA",
-        "270 000 FCFA"
-      ],
-      "r": 3,
-      "x": "La période future (janvier–septembre N+1) représente 9 mois sur 12. Charge constatée d'avance = 360 000 × 9/12 = 270 000 FCFA. Cette somme correspond aux 9 mois qui concernent N+1 et doit être exclue des charges de N. Écriture : Débit 486 / Crédit 613 (ou 622) pour 270 000 FCFA."
-    },
-    {
-      "q": "Lors de l'inventaire de fin d'exercice, on constate que des marchandises ont une valeur nette de réalisation (VNR) inférieure à leur coût d'entrée. Que faut-il faire ?",
-      "o": [
-        "Rien, les stocks sont toujours évalués au coût d'entrée",
-        "Vendre immédiatement ces marchandises",
-        "Réévaluer les stocks à la VNR et constater une provision pour dépréciation",
-        "Mettre les marchandises au rebut"
-      ],
-      "r": 2,
-      "x": "Conformément au principe de prudence, les stocks sont évalués au plus faible du coût d'entrée et de la valeur nette de réalisation (VNR). Si VNR < coût, on constate une provision pour dépréciation : Débit 6594 / Crédit 39. Cela anticipe la perte probable."
-    },
-    {
-      "q": "Qu'est-ce que la \"balance après inventaire\" ?",
-      "o": [
-        "La balance des comptes avant les travaux d'inventaire",
-        "Le document récapitulatif des amortissements de l'exercice",
-        "Le tableau des stocks après inventaire physique",
-        "La balance des comptes après régularisations d'inventaire, servant de base aux états financiers"
-      ],
-      "r": 3,
-      "x": "La balance après inventaire (ou balance de clôture) est établie après toutes les régularisations (amortissements, provisions, charges/produits à régulariser). Elle reflète fidèlement la situation de l'entreprise à la date de clôture et sert de base directe à l'établissement du bilan et du compte de résultat."
-    },
-    {
-      "q": "Un produit financier de 80 000 FCFA acquis mais non encore encaissé au 31/12 doit être :",
-      "o": [
-        "Enregistré en \"produit à recevoir\" pour 80 000 FCFA",
-        "Ignoré jusqu'à son encaissement en N+1",
-        "Provisionné en charge pour risque de non-encaissement",
-        "Comptabilisé en N+1 lors de l'encaissement"
-      ],
-      "r": 0,
-      "x": "Conformément au principe de spécialisation, les produits acquis au cours de l'exercice doivent être rattachés à cet exercice, même si non encaissés. Régularisation : Débit 477 \"Produits à recevoir\" / Crédit 772 \"Revenus des comptes bancaires\" (80 000 FCFA)."
-    },
-    {
-      "q": "La réévaluation des immobilisations permet de :",
-      "o": [
-        "Augmenter les amortissements comptabilisés",
-        "Mettre les valeurs d'actif en adéquation avec les valeurs actuelles de marché",
-        "Réduire la valeur fiscale des biens amortissables",
-        "Calculer une nouvelle dotation aux provisions"
-      ],
-      "r": 1,
-      "x": "La réévaluation légale (ou libre dans le SYSCOHADA révisé) permet de remplacer les valeurs historiques des actifs par des valeurs actuelles. L'écart de réévaluation est inscrit en capitaux propres (compte 105). Cela améliore l'image fidèle mais génère des amortissements futurs plus élevés."
-    },
-    {
-      "q": "Les \"charges hors activités ordinaires\" (HAO) dans le compte de résultat SYSCOHADA comprennent :",
-      "o": [
-        "Les charges de personnel et les loyers",
-        "Les charges financières bancaires",
-        "Les dotations aux amortissements",
-        "Les événements exceptionnels non liés à l'activité courante (catastrophe, opération de restructuration)"
-      ],
-      "r": 3,
-      "x": "Les charges HAO (Hors Activités Ordinaires) regroupent les opérations exceptionnelles, non récurrentes, qui ne relèvent pas de l'activité ordinaire de l'entreprise : incendie, inondation, restructuration exceptionnelle, amende exceptionnelle. Elles sont présentées séparément pour ne pas altérer l'analyse de la performance ordinaire."
-    },
-    {
-      "q": "L'entreprise décide de constituer une provision pour dépréciation de 150 000 FCFA sur un stock de produits finis. L'écriture correcte au 31/12 est :",
-      "o": [
-        "Débit 397 / Crédit 6594",
-        "Débit 6594 / Crédit 7594",
-        "Débit 6594 / Crédit 397",
-        "Débit 397 / Crédit 7594"
-      ],
-      "r": 2,
-      "x": "Provision pour dépréciation de stocks de produits finis : Débit 6594 \"Dotations aux provisions pour dépréciation des stocks\" / Crédit 397 \"Provisions pour dépréciation des produits finis\" (ou 391 selon le type de stock). Le compte 7594 serait utilisé pour une reprise (sens inverse)."
-    },
-    {
-      "q": "Pourquoi effectue-t-on un inventaire physique des stocks en fin d'exercice ?",
-      "o": [
-        "Pour calculer le chiffre d'affaires de l'exercice",
-        "Pour vérifier la concordance entre les stocks comptables et les stocks réels, et corriger les écarts",
-        "Pour établir le tableau des flux de trésorerie",
-        "Pour déterminer les amortissements des immobilisations"
-      ],
-      "r": 1,
-      "x": "L'inventaire physique consiste à dénombrer et évaluer réellement les stocks présents à la date de clôture. Il permet de corriger les écarts avec les stocks théoriques (vol, casse, erreurs de saisie), d'ajuster les comptes de stocks, et d'évaluer les provisions pour dépréciation éventuelles."
-    },
-    {
-      "q": "Lors de la clôture d'exercice, les comptes de la classe 6 (charges) sont soldés par :",
-      "o": [
-        "Un crédit pour vider leur solde débiteur",
-        "Un débit au compte 13 \"Résultat net\"",
-        "Un virement au compte de report à nouveau",
-        "Un transfert direct au bilan"
-      ],
-      "r": 0,
-      "x": "À la clôture, les comptes de charges (soldes débiteurs) sont soldés par un crédit, et leur total est viré au débit du compte 13 \"Résultat net de l'exercice\". Symétriquement, les comptes de produits (soldes créditeurs) sont soldés par un débit et virés au crédit du compte 13."
-    },
-    {
-      "q": "La comptabilité analytique se distingue de la comptabilité générale en ce qu'elle :",
-      "o": [
-        "Est obligatoire pour toutes les entreprises selon le SYSCOHADA",
-        "Analyse les coûts par produit, activité ou centre de responsabilité",
-        "Enregistre uniquement les charges décaissables",
-        "Remplace le compte de résultat dans les grandes entreprises"
-      ],
-      "r": 1,
-      "x": "La comptabilité analytique (ou comptabilité de gestion) est un outil de pilotage interne. Elle vise à calculer les coûts par produit, activité ou département, et à analyser la rentabilité de chaque segment. Elle est facultative selon le SYSCOHADA mais fortement recommandée pour les entreprises industrielles."
-    },
-    {
-      "q": "Le coût de revient d'un produit comprend :",
-      "o": [
-        "Uniquement les charges directement liées à la fabrication",
-        "Les charges directes + les charges indirectes réparties",
-        "Uniquement les matières premières consommées",
-        "Les charges de vente et de distribution uniquement"
-      ],
-      "r": 1,
-      "x": "Le coût de revient complet = Charges directes (matières, main-d'œuvre directe) + Quote-part de charges indirectes (frais généraux répartis via les centres d'analyse). La méthode des coûts complets répartit TOUTES les charges de l'entreprise sur les produits fabriqués."
-    },
-    {
-      "q": "Le seuil de rentabilité (ou chiffre d'affaires critique) est le niveau d'activité pour lequel :",
-      "o": [
-        "Le résultat est maximum",
-        "Le résultat est nul (charges = produits)",
-        "La marge sur coûts variables est maximale",
-        "Les charges fixes sont entièrement remboursées par les ventes"
-      ],
-      "r": 1,
-      "x": "Le seuil de rentabilité (SR) est le CA pour lequel le résultat = 0. SR = Charges fixes / Taux de marge sur coûts variables. En dessous du SR, l'entreprise est déficitaire. Au-delà, elle réalise un bénéfice. C'est un outil fondamental de gestion prévisionnelle."
-    },
-    {
-      "q": "La marge sur coûts variables est calculée ainsi :",
-      "o": [
-        "Chiffre d'affaires − Charges fixes",
-        "Chiffre d'affaires − Charges variables",
-        "Résultat net + Charges fixes",
-        "Charges fixes − Charges variables"
-      ],
-      "r": 1,
-      "x": "Marge sur coûts variables (MCV) = Chiffre d'affaires − Charges variables. La MCV doit couvrir les charges fixes pour dégager un bénéfice. Le taux de MCV = MCV / CA × 100. Exemple : CA = 1 000 000, CV = 600 000 → MCV = 400 000, taux = 40%."
-    },
-    {
-      "q": "Une entreprise a des charges fixes de 2 000 000 FCFA et un taux de marge sur coûts variables de 40%. Quel est son seuil de rentabilité ?",
-      "o": [
-        "5 000 000 FCFA",
-        "800 000 FCFA",
+        "2 000 000 FCFA",
+        "2 400 000 FCFA",
         "2 800 000 FCFA",
         "3 000 000 FCFA"
       ],
       "r": 0,
-      "x": "Seuil de rentabilité = Charges fixes / Taux de MCV = 2 000 000 / 0,40 = 5 000 000 FCFA. L'entreprise doit réaliser au minimum 5 000 000 FCFA de CA pour ne pas être déficitaire. Au-delà, chaque franc de CA supplémentaire génère 0,40 FCFA de bénéfice."
+      "x": "Le SYSCOHADA révisé déduit la valeur résiduelle de la base : (12 000 000 − 2 000 000) ÷ 5 = 2 000 000 FCFA. Le montant de 2 400 000 FCFA ignore la valeur résiduelle. La valeur résiduelle n'est déduite que si elle est significative et mesurable.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
     },
     {
-      "q": "Les charges directes d'un produit sont :",
-      "o": [
-        "Des charges que l'on peut affecter directement et sans ambiguïté au produit concerné",
-        "Des charges réparties entre plusieurs produits selon une clé de répartition",
-        "Des charges payées immédiatement (décaissables)",
-        "Des charges liées à l'administration générale"
-      ],
-      "r": 0,
-      "x": "Les charges directes sont rattachées sans calcul intermédiaire à un produit (ex : matières premières incorporées, main-d'œuvre directe de fabrication). Les charges indirectes (loyer, électricité, salaires de direction) concernent plusieurs produits et nécessitent une clé de répartition pour être imputées."
-    },
-    {
-      "q": "La méthode des \"coûts partiels\" (ou direct costing) se concentre sur :",
-      "o": [
-        "Le calcul du coût complet de chaque produit",
-        "La prise en compte des seules charges variables dans le coût des produits",
-        "L'analyse des charges d'amortissement uniquement",
-        "La répartition des charges indirectes par centres de profit"
-      ],
-      "r": 1,
-      "x": "Le direct costing n'inclut que les charges variables dans le coût des produits. Les charges fixes sont traitées comme des charges de période (non incorporées dans le coût de revient). Cette méthode facilite l'analyse de la rentabilité et les décisions à court terme (seuil de rentabilité, abandon de produit)."
-    },
-    {
-      "q": "Qu'est-ce qu'un \"centre d'analyse\" (ou section homogène) en comptabilité analytique ?",
-      "o": [
-        "Un département qui analyse les états financiers",
-        "Un logiciel de comptabilité analytique",
-        "Un groupe de clients segmenté pour l'analyse commerciale",
-        "Une division fictive de l'entreprise qui regroupe des charges indirectes homogènes pour les répartir sur les produits"
-      ],
-      "r": 3,
-      "x": "Un centre d'analyse est une subdivision comptable de l'entreprise où sont regroupées des charges indirectes de même nature (ex : centre \"Approvisionnement\", centre \"Production\", centre \"Distribution\"). Les coûts de chaque centre sont répartis sur les produits via des unités d'œuvre (heure-machine, heure de travail, kg produit, etc.)."
-    },
-    {
-      "q": "Le \"coût d'opportunité\" en comptabilité de gestion désigne :",
-      "o": [
-        "Le coût de production d'une opportunité commerciale",
-        "Le manque à gagner résultant d'un choix, c'est-à-dire la valeur de la meilleure option sacrifiée",
-        "Les charges fixes supplémentaires liées à une augmentation de production",
-        "Le coût des matières premières de rechange"
-      ],
-      "r": 1,
-      "x": "Le coût d'opportunité est la valeur de la meilleure alternative sacrifiée lors d'un choix. Exemple : une entreprise qui utilise ses locaux pour sa production renonce à les louer. Le loyer potentiel perdu est un coût d'opportunité. C'est une notion fondamentale pour les décisions d'investissement et de production."
-    },
-    {
-      "q": "La \"marge bénéficiaire nette\" d'une entreprise est calculée comme suit :",
-      "o": [
-        "(Résultat net / Chiffre d'affaires) × 100",
-        "(Résultat brut / Total Actif) × 100",
-        "(Capitaux propres / Dettes) × 100",
-        "(Résultat d'exploitation / Charges totales) × 100"
-      ],
-      "r": 0,
-      "x": "Marge bénéficiaire nette = (Résultat net / Chiffre d'affaires) × 100. Elle exprime le pourcentage du CA transformé en bénéfice net après toutes charges (exploitation, financières, impôts). Exemple : CA = 10 000 000, Résultat net = 800 000 → Marge nette = 8%."
-    },
-    {
-      "q": "L'entreprise SOGEBA vend 500 unités à 20 000 FCFA l'unité. Les charges variables unitaires sont de 12 000 FCFA et les charges fixes totales sont de 2 400 000 FCFA. Quel est le résultat ?",
-      "o": [
-        "2 400 000 FCFA",
-        "4 000 000 FCFA",
-        "1 600 000 FCFA",
-        "0 FCFA"
-      ],
-      "r": 2,
-      "x": "CA = 500 × 20 000 = 10 000 000 FCFA. Charges variables = 500 × 12 000 = 6 000 000 FCFA. MCV = 10 000 000 − 6 000 000 = 4 000 000 FCFA. Résultat = MCV − CF = 4 000 000 − 2 400 000 = 1 600 000 FCFA. Vérification SR = 2 400 000 / 0,40 = 6 000 000 FCFA (CA > SR → bénéfice)."
-    },
-    {
-      "q": "Quel est le principal avantage de la comptabilité analytique pour le gestionnaire d'une entreprise burkinabè ?",
-      "o": [
-        "Elle permet de prendre des décisions éclairées sur les prix, les coûts et la rentabilité par produit ou activité",
-        "Elle remplace la comptabilité générale obligatoire",
-        "Elle simplifie la déclaration fiscale annuelle",
-        "Elle évite de devoir tenir une balance comptable"
-      ],
-      "r": 0,
-      "x": "La comptabilité analytique est un outil d'aide à la décision : elle permet de connaître le coût réel de chaque produit ou service, d'identifier les activités rentables et déficitaires, de fixer des prix de vente cohérents et d'optimiser les ressources. Pour les entreprises concourant aux marchés publics au Burkina Faso, elle est essentielle pour établir des prix compétitifs et rentables."
-    },
-    {
-      "q": "Une entreprise achète un ordinateur à 450 000 FCFA. Elle le classe directement en charges (compte 604). Cette décision est-elle correcte selon le SYSCOHADA ?",
-      "o": [
-        "Oui, tous les matériels informatiques sont des charges",
-        "Non, tout bien acquis doit obligatoirement être immobilisé",
-        "Oui, si l'entreprise juge le montant non significatif (principe de signification)",
-        "Non, seuls les biens supérieurs à 1 000 000 FCFA sont immobilisés"
-      ],
-      "r": 2,
-      "x": "PIÈGE CLASSIQUE. Le SYSCOHADA ne fixe pas de seuil légal universel. En vertu du principe d'importance significative, une entreprise peut passer en charges des biens de faible valeur dont l'immobilisation n'apporterait pas d'information significative. Ce seuil est défini en interne (souvent 500 000 ou 1 000 000 FCFA selon l'entreprise)."
-    },
-    {
-      "q": "L'entreprise KOBI solde son compte 401 en débitant 401 / Créditant 521 pour 1 200 000 FCFA. Un peu plus tard, elle reçoit un avoir de 200 000 FCFA du même fournisseur. Comment enregistre-t-elle cet avoir ?",
-      "o": [
-        "Débit 601 / Crédit 401 pour 200 000 FCFA",
-        "Débit 401 / Crédit 601 pour 200 000 FCFA",
-        "Débit 521 / Crédit 601 pour 200 000 FCFA",
-        "Débit 401 / Crédit 521 pour 200 000 FCFA"
-      ],
-      "r": 1,
-      "x": "Un avoir fournisseur reçu APRÈS paiement donne lieu à une créance sur le fournisseur : Débit 401 / Crédit 601 (réduction de la charge d'achat). Cette créance sera déduite de la prochaine facture fournisseur. Si le remboursement est en espèces : Débit 521 / Crédit 401."
-    },
-    {
-      "q": "Le capital social d'une SA est de 10 000 000 FCFA divisé en 1 000 actions. Un actionnaire détient 250 actions. Quel est son pourcentage de participation ?",
-      "o": [
-        "10%",
-        "15%",
-        "25%",
-        "40%"
-      ],
-      "r": 2,
-      "x": "Participation = (Nombre d'actions détenues / Nombre total d'actions) × 100 = (250 / 1 000) × 100 = 25%. Cet actionnaire détient donc 1/4 du capital. Sa quote-part dans les dividendes distribués sera également de 25%."
-    },
-    {
-      "q": "Lors d'une augmentation de capital en numéraire, les actionnaires versent 5 000 000 FCFA dont 2 000 000 FCFA de prime d'émission. Quelle est l'écriture correcte ?",
-      "o": [
-        "Débit 521 (5 000 000) / Crédit 101 (3 000 000) + Crédit 105 (2 000 000)",
-        "Débit 521 (5 000 000) / Crédit 101 (5 000 000)",
-        "Débit 521 (5 000 000) / Crédit 101 (3 000 000) + Crédit 11 (2 000 000)",
-        "Débit 521 (5 000 000) / Crédit 101 (2 000 000) + Crédit 105 (3 000 000)"
-      ],
-      "r": 0,
-      "x": "Lors d'une augmentation de capital avec prime : la valeur nominale des nouvelles actions va au compte 101 \"Capital social\" et la prime d'émission va au compte 105 \"Prime liée au capital\". Ici : 101 reçoit la valeur nominale (5 000 000 − 2 000 000 = 3 000 000) et 105 reçoit la prime (2 000 000)."
-    },
-    {
-      "q": "L'entreprise accorde à son client une remise de 5%, un rabais de 2% et un escompte de 1%. Le prix catalogue est de 1 000 000 FCFA. Quel est le net financier à payer ?",
-      "o": [
-        "921 140 FCFA",
-        "929 076 FCFA",
-        "930 000 FCFA",
-        "920 000 FCFA"
-      ],
-      "r": 0,
-      "x": "Net commercial : 1 000 000 × (1 − 5%) = 950 000. Après rabais : 950 000 × (1 − 2%) = 931 000. Net financier : 931 000 × (1 − 1%) = 921 140 FCFA. PIÈGE : les réductions se calculent en cascade (successivement), pas additionnées (5+2+1 = 8% ≠ bonne réponse)."
-    },
-    {
-      "q": "Une facture fournisseur de 472 000 FCFA TTC (TVA 18%) est réglée par chèque avec un escompte de règlement de 2%. Quel est le net à payer ?",
-      "o": [
-        "462 560 FCFA",
-        "463 760 FCFA",
-        "472 000 FCFA",
-        "400 000 FCFA"
-      ],
-      "r": 0,
-      "x": "HT = 472 000 / 1,18 = 400 000 FCFA. TVA = 72 000 FCFA. Escompte = 400 000 × 2% = 8 000 FCFA (appliqué sur le HT). Net à payer = 472 000 − 8 000 − (TVA sur escompte: 8 000 × 18% = 1 440) = 472 000 − 9 440 = 462 560. Attention : l'escompte réduit aussi la TVA déductible."
-    },
-    {
-      "q": "L'entreprise paie des intérêts sur découvert bancaire de 45 000 FCFA. Dans quel compte enregistre-t-on cette charge ?",
-      "o": [
-        "Compte 772",
-        "Compte 521",
-        "Compte 6712",
-        "Compte 673"
-      ],
-      "r": 2,
-      "x": "Les intérêts sur découverts bancaires (agios) sont enregistrés au débit du compte 6712 \"Intérêts des découverts et crédits de trésorerie\" (sous-compte du 671 \"Intérêts des emprunts\"). Le compte 773 est utilisé pour les escomptes OBTENUS (produit), et le compte 673 pour les escomptes ACCORDÉS (charge)."
-    },
-    {
-      "q": "Un bien est acquis en crédit-bail (leasing) pour une durée de 5 ans avec une option d'achat. Comment est-il enregistré pendant la période de location selon le SYSCOHADA révisé ?",
-      "o": [
-        "Les loyers sont enregistrés en charges (compte 623) ; le bien figure hors bilan avec mention en annexe",
-        "Immédiatement en immobilisation au bilan",
-        "La moitié du bien est immobilisée, l'autre en charge",
-        "Uniquement en hors bilan, sans mention en charges"
-      ],
-      "r": 0,
-      "x": "Selon le SYSCOHADA, pendant la période de crédit-bail, les redevances sont des charges (compte 623 \"Redevances de crédit-bail\"). Le bien n'est PAS inscrit au bilan du preneur (contrairement aux IFRS qui imposent la capitalisation). À la levée de l'option d'achat, le bien est immobilisé à son prix résiduel."
-    },
-    {
-      "q": "L'entreprise reçoit une subvention d'investissement de 3 000 000 FCFA pour financer l'achat d'un équipement de 10 000 000 FCFA. Comment est traitée cette subvention dans le SYSCOHADA ?",
-      "o": [
-        "En produit d'exploitation immédiat",
-        "En capitaux propres (compte 141), puis reprise au compte de résultat proportionnellement aux amortissements",
-        "En réduction du coût d'acquisition de l'équipement",
-        "En dette remboursable à l'État"
-      ],
-      "r": 1,
-      "x": "La subvention d'investissement est inscrite au passif en capitaux propres (compte 141 \"Subventions d'investissement\"). Elle est reprise en produits (compte 865 ou 849 selon le système) au même rythme que l'amortissement de l'équipement financé. Cela étale la subvention dans le temps, symétriquement à la charge d'amortissement."
-    },
-    {
-      "q": "L'entreprise BANKA réalise un chiffre d'affaires annuel de 36 000 000 FCFA. Quel est son chiffre d'affaires mensuel moyen ?",
-      "o": [
-        "3 000 000 FCFA",
-        "3 600 000 FCFA",
-        "4 000 000 FCFA",
-        "2 500 000 FCFA"
-      ],
-      "r": 0,
-      "x": "CA mensuel moyen = CA annuel / 12 = 36 000 000 / 12 = 3 000 000 FCFA. Ce calcul simple est souvent utilisé pour estimer les délais de rotation (délai clients = créances clients / CA mensuel), ou pour projeter un seuil de rentabilité mensuel."
-    },
-    {
-      "q": "Le taux de marge brute sur marchandises est calculé ainsi :",
-      "o": [
-        "(Marge brute / Coût d'achat) × 100",
-        "(Marge brute / Chiffre d'affaires) × 100",
-        "(Chiffre d'affaires / Achats) × 100",
-        "(Résultat net / Achats) × 100"
-      ],
-      "r": 1,
-      "x": "Taux de marge (commerciale) = (Marge brute / CA HT) × 100. La marge brute = CA − Coût des marchandises vendues. Exemple : CA = 5 000 000, CMV = 3 500 000, Marge = 1 500 000 → Taux = 1 500 000 / 5 000 000 × 100 = 30%."
-    },
-    {
-      "q": "L'entreprise achète 200 kg de matières premières à 5 000 FCFA/kg et les stocke. La production de l'exercice en consomme 150 kg. Quelle est la valeur du stock final ?",
+      "q": "Un matériel de 5 000 000 FCFA, mis en service le 1er janvier, est amorti en dégressif sur 5 ans avec un coefficient de 2. La première annuité est de :",
       "o": [
         "1 000 000 FCFA",
-        "250 000 FCFA",
-        "750 000 FCFA",
-        "500 000 FCFA"
-      ],
-      "r": 1,
-      "x": "Stock initial = 0. Achats = 200 kg × 5 000 = 1 000 000 FCFA. Consommation = 150 kg × 5 000 = 750 000 FCFA. Stock final = 1 000 000 − 750 000 = 250 000 FCFA (50 kg × 5 000 FCFA/kg). Cette écriture est régularisée via le compte 603 \"Variation de stocks de matières\"."
-    },
-    {
-      "q": "L'entreprise DIALLO dispose d'un FRNG de 4 000 000 FCFA et d'un BFR de 5 500 000 FCFA. Quelle est sa trésorerie nette ?",
-      "o": [
-        "9 500 000 FCFA",
         "1 500 000 FCFA",
-        "−1 500 000 FCFA",
-        "−9 500 000 FCFA"
+        "2 000 000 FCFA",
+        "2 500 000 FCFA"
       ],
       "r": 2,
-      "x": "Trésorerie nette = FRNG − BFR = 4 000 000 − 5 500 000 = −1 500 000 FCFA. La trésorerie est NÉGATIVE : l'entreprise recourt à des concours bancaires courants (découvert). Son FRNG est insuffisant pour financer son BFR. Elle doit améliorer sa gestion du BFR ou renforcer ses capitaux permanents."
+      "x": "Le taux dégressif est égal au taux linéaire multiplié par le coefficient : 20 % × 2 = 40 %. La première annuité est donc de 5 000 000 × 40 % = 2 000 000 FCFA. Le montant de 1 000 000 FCFA correspond à l'annuité linéaire.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
     },
     {
-      "q": "Dans un bilan, l'actif total est de 25 000 000 FCFA, les dettes totales de 15 000 000 FCFA. Quel est le montant des capitaux propres ?",
+      "q": "Dans le SYSCOHADA révisé, l'approche par composants consiste à :",
       "o": [
-        "40 000 000 FCFA",
-        "15 000 000 FCFA",
-        "10 000 000 FCFA",
-        "25 000 000 FCFA"
-      ],
-      "r": 2,
-      "x": "Équation du bilan : Actif = Capitaux propres + Dettes. Donc : Capitaux propres = Actif − Dettes = 25 000 000 − 15 000 000 = 10 000 000 FCFA. Le ratio d'autonomie financière = 10 000 000 / 25 000 000 = 40%, ce qui est relativement sain."
-    },
-    {
-      "q": "Un client règle par chèque une créance de 500 000 FCFA, bénéficiant d'un escompte de 1%. Quel est le montant encaissé ?",
-      "o": [
-        "500 000 FCFA",
-        "5 000 FCFA",
-        "495 000 FCFA",
-        "505 000 FCFA"
-      ],
-      "r": 2,
-      "x": "Escompte accordé = 500 000 × 1% = 5 000 FCFA. Net encaissé = 500 000 − 5 000 = 495 000 FCFA. Écriture : Débit 521 (495 000) + Débit 673 \"Escomptes accordés\" (5 000) / Crédit 411 \"Clients\" (500 000). L'escompte est une charge financière pour le vendeur."
-    },
-    {
-      "q": "L'entreprise souscrit un billet de trésorerie (effet) de 800 000 FCFA à 60 jours. Le taux d'escompte bancaire est de 12%. Calculez les agios (intérêts) à payer à la banque.",
-      "o": [
-        "96 000 FCFA",
-        "8 000 FCFA",
-        "48 000 FCFA",
-        "16 000 FCFA"
-      ],
-      "r": 3,
-      "x": "Agios = Valeur nominale × Taux × Durée / 360 = 800 000 × 12% × 60/360 = 800 000 × 0,12 × 1/6 = 16 000 FCFA. La banque versera la valeur actuelle = 800 000 − 16 000 = 784 000 FCFA. Les agios sont une charge financière (compte 6711)."
-    },
-    {
-      "q": "L'entreprise réalise les opérations suivantes en janvier : Achats HT 2 000 000 FCFA (TVA 18%), Ventes HT 3 500 000 FCFA (TVA 18%). Quel est le montant de la TVA nette à verser à l'État ?",
-      "o": [
-        "270 000 FCFA",
-        "630 000 FCFA",
-        "360 000 FCFA",
-        "990 000 FCFA"
+        "amortir séparément les éléments d'un bien ayant des durées différentes",
+        "regrouper toutes les immobilisations dans un seul compte d'actif",
+        "amortir le terrain et le bâtiment ensemble sur la même durée",
+        "passer en charges toutes les pièces de rechange importantes"
       ],
       "r": 0,
-      "x": "TVA collectée = 3 500 000 × 18% = 630 000 FCFA. TVA déductible = 2 000 000 × 18% = 360 000 FCFA. TVA nette due = 630 000 − 360 000 = 270 000 FCFA. C'est le montant à verser à la DGI lors de la déclaration mensuelle de TVA."
+      "x": "Lorsqu'une immobilisation comporte des éléments significatifs aux durées d'utilité différentes, chacun est amorti sur sa propre durée. Par exemple, la toiture d'un bâtiment peut être amortie plus vite que la structure. Le terrain, lui, n'est pas amorti.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
     },
     {
-      "q": "Lequel des éléments suivants constitue un actif incorporel dans le bilan SYSCOHADA ?",
+      "q": "La dotation aux amortissements d'un camion de livraison est créditée au compte :",
       "o": [
-        "Une machine de production",
-        "Une créance client",
-        "Un stock de produits finis",
-        "Un brevet d'invention"
-      ],
-      "r": 3,
-      "x": "Les immobilisations incorporelles (compte 21) comprennent les brevets, licences, marques, fonds commercial, logiciels et frais de développement. Ce sont des actifs sans substance physique mais ayant une valeur économique. Les machines sont des immobilisations corporelles (compte 24)."
-    },
-    {
-      "q": "Quelle est la durée légale de conservation des documents comptables au Burkina Faso selon l'Acte uniforme OHADA ?",
-      "o": [
-        "3 ans",
-        "5 ans",
-        "10 ans",
-        "20 ans"
-      ],
-      "r": 2,
-      "x": "Selon l'Acte uniforme OHADA relatif au droit commercial général, les livres comptables obligatoires (journal, grand livre, livre d'inventaire) et les pièces justificatives doivent être conservés pendant 10 ans. Cette règle s'applique dans tous les États membres de l'OHADA, dont le Burkina Faso."
-    },
-    {
-      "q": "Quelle est la différence entre un \"produit d'exploitation\" et un \"produit financier\" ?",
-      "o": [
-        "Le produit financier est plus important que le produit d'exploitation",
-        "Le produit d'exploitation provient de l'activité principale de l'entreprise ; le produit financier provient des opérations de financement et de placement",
-        "Le produit d'exploitation est taxable, le produit financier est exonéré",
-        "Il n'y a aucune différence, ils sont regroupés dans le même compte"
+        "245",
+        "2845",
+        "2945",
+        "681"
       ],
       "r": 1,
-      "x": "Les produits d'exploitation (compte 70-75) résultent de l'activité ordinaire : ventes, prestations, subventions d'exploitation. Les produits financiers (compte 77) proviennent des placements et des opérations de financement : intérêts reçus, dividendes, gains de change. Cette distinction est essentielle pour analyser la performance."
+      "x": "Le compte 2845 Amortissements du matériel de transport est crédité, et le compte 681 Dotations aux amortissements d'exploitation débité. Le compte 2945 enregistre les dépréciations, non les amortissements. Le compte 245 enregistre la valeur d'origine du camion, qui ne change pas.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
     },
     {
-      "q": "L'entreprise KADI reçoit une avance d'un client de 500 000 FCFA avant livraison de la commande. Comment enregistrer cette avance reçue ?",
+      "q": "Un matériel acquis 9 000 000 FCFA, amorti à hauteur de 6 000 000 FCFA, est cédé pour 4 000 000 FCFA. La cession dégage :",
       "o": [
-        "Débit 411 / Crédit 521",
-        "Débit 4191 / Crédit 521",
-        "Débit 521 / Crédit 701",
-        "Débit 521 / Crédit 4191"
-      ],
-      "r": 3,
-      "x": "Une avance reçue d'un client est une dette envers ce client (obligation de livrer ou de rembourser). Écriture : Débit 521 \"Banque\" / Crédit 4191 \"Clients, avances et acomptes reçus\". Lors de la livraison effective et de la facturation, on solde le compte 4191 par le débit et on enregistre la vente normalement."
-    },
-    {
-      "q": "Une entreprise possède un stock de 100 unités valorisées à 10 000 FCFA l'unité selon le CMUP (coût moyen unitaire pondéré). Elle achète ensuite 50 unités supplémentaires à 12 000 FCFA l'unité. Quel est le nouveau CMUP ?",
-      "o": [
-        "10 667 FCFA",
-        "11 000 FCFA",
-        "12 000 FCFA",
-        "11 500 FCFA"
+        "une plus-value de 1 000 000 FCFA",
+        "une moins-value de 1 000 000 FCFA",
+        "une plus-value de 4 000 000 FCFA",
+        "une moins-value de 5 000 000 FCFA"
       ],
       "r": 0,
-      "x": "CMUP = (Valeur stock initial + Valeur des achats) / (Quantité initiale + Quantité achetée). CMUP = (100 × 10 000 + 50 × 12 000) / (100 + 50) = (1 000 000 + 600 000) / 150 = 1 600 000 / 150 = 10 666,67 FCFA ≈ 10 667 FCFA."
+      "x": "La valeur nette comptable est de 9 000 000 − 6 000 000 = 3 000 000 FCFA. Le prix de cession de 4 000 000 FCFA la dépasse de 1 000 000 FCFA : c'est une plus-value. Le montant de 4 000 000 FCFA est le prix de cession, pas le résultat de la cession.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
     },
     {
-      "q": "L'entreprise dégage un bénéfice de 6 000 000 FCFA. L'AGO décide : réserve légale 5%, réserve statutaire 10%, dividendes 60%, report à nouveau le reste. Quel est le montant du report à nouveau ?",
+      "q": "Lors d'une cession d'immobilisation corporelle enregistrée en hors activités ordinaires (HAO), la valeur comptable du bien cédé est débitée au compte :",
       "o": [
-        "1 200 000 FCFA",
-        "1 500 000 FCFA",
+        "681",
+        "812",
+        "822",
+        "841"
+      ],
+      "r": 1,
+      "x": "Le compte 812 Valeurs comptables des cessions d'immobilisations corporelles enregistre la valeur nette du bien qui sort. Le prix de cession est crédité au compte 822 Produits des cessions d'immobilisations corporelles. La comparaison des deux comptes donne la plus-value ou la moins-value.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Lors de la sortie d'une immobilisation cédée, les amortissements cumulés sont :",
+      "o": [
+        "débités au compte 28 pour solder l'immobilisation",
+        "crédités au compte 28 pour compléter la dotation",
+        "virés au compte 131 Résultat net : bénéfice",
+        "repris en produits au compte 791"
+      ],
+      "r": 0,
+      "x": "La sortie du bien exige de solder à la fois le compte d'immobilisation et les amortissements correspondants. On débite donc le compte 28 et on crédite le compte d'immobilisation, la différence allant au compte 812. Une dotation complémentaire peut être passée avant, jusqu'à la date de cession.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un acompte versé à un fournisseur pour la commande d'un équipement industriel est débité au compte :",
+      "o": [
+        "23",
+        "25",
+        "27",
+        "48"
+      ],
+      "r": 1,
+      "x": "Le compte 25 Avances et acomptes versés sur immobilisations enregistre les sommes payées avant la livraison d'un bien d'investissement. L'acompte sera soldé à la réception de la facture définitive. Le compte 27 concerne les autres immobilisations financières.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une machine achetée à crédit fait créditer le compte :",
+      "o": [
+        "401",
+        "402",
+        "481",
+        "521"
+      ],
+      "r": 2,
+      "x": "Les dettes nées de l'achat d'immobilisations s'enregistrent au compte 481 Fournisseurs d'investissements, séparément des fournisseurs d'exploitation. Le compte 401 est réservé aux achats de biens et services courants. Cette séparation facilite l'analyse du besoin en fonds de roulement.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La caution versée à la SONABEL lors de l'ouverture d'un abonnement électrique est débitée au compte :",
+      "o": [
+        "251",
+        "275",
+        "476",
+        "625"
+      ],
+      "r": 1,
+      "x": "Le compte 275 Dépôts et cautionnements versés enregistre les sommes bloquées qui seront remboursées en fin de contrat. Il s'agit d'une immobilisation financière, pas d'une charge. Le compte 476 concerne les charges constatées d'avance.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une entreprise qui construit elle-même un hangar pour ses propres besoins enregistre son coût de production au crédit du compte :",
+      "o": [
+        "70",
+        "72",
+        "73",
+        "78"
+      ],
+      "r": 1,
+      "x": "Le compte 72 Production immobilisée constate la création par l'entreprise d'un bien qu'elle garde à son actif. Les charges engagées restent en classe 6 et ce produit les neutralise. Le compte 73 enregistre les variations de stocks de biens produits.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une subvention reçue de l'État pour financer l'achat d'un équipement est créditée au compte :",
+      "o": [
+        "14",
+        "71",
+        "75",
+        "88"
+      ],
+      "r": 0,
+      "x": "Le compte 14 Subventions d'investissement figure dans les capitaux propres et ressources assimilées. Elle est ensuite rapportée progressivement au résultat au rythme de l'amortissement du bien financé. Le compte 88 enregistre les subventions d'équilibre.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Parmi les immobilisations suivantes, celle qui n'est normalement pas amortissable est :",
+      "o": [
+        "un bâtiment administratif",
+        "un véhicule de livraison",
+        "un terrain nu",
+        "un logiciel de gestion"
+      ],
+      "r": 2,
+      "x": "Un terrain nu ne s'use pas et a une durée d'utilisation illimitée : il n'est donc pas amorti. Il peut en revanche faire l'objet d'une dépréciation en cas de perte de valeur. Les bâtiments, véhicules et logiciels sont amortis sur leur durée d'utilité.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un découvert bancaire figure au bilan dans :",
+      "o": [
+        "la trésorerie-actif",
+        "les dettes financières",
+        "la trésorerie-passif",
+        "les capitaux propres"
+      ],
+      "r": 2,
+      "x": "Le découvert est un financement à très court terme de la banque, classé en trésorerie-passif. La trésorerie-actif regroupe au contraire les disponibilités en banque et en caisse. Les dettes financières concernent les emprunts à plus d'un an.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans l'état de rapprochement, un chèque émis par l'entreprise mais pas encore présenté à la banque est porté :",
+      "o": [
+        "en diminution du solde du compte 521",
+        "en augmentation du solde du relevé bancaire",
+        "en augmentation du solde du compte 521",
+        "en diminution du solde du relevé bancaire"
+      ],
+      "r": 3,
+      "x": "L'entreprise a déjà enregistré ce chèque, mais la banque ne l'a pas encore payé : c'est donc le solde de la banque qu'il faut corriger. Aucune écriture n'est à passer dans la comptabilité de l'entreprise. Le chèque apparaîtra sur un prochain relevé.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'encaissement à l'échéance d'un effet remis à l'encaissement se traduit par :",
+      "o": [
+        "Débit 521 / Crédit 512",
+        "Débit 512 / Crédit 521",
+        "Débit 412 / Crédit 521",
+        "Débit 521 / Crédit 411"
+      ],
+      "r": 0,
+      "x": "À l'encaissement, la banque est débitée et le compte 512 Effets à l'encaissement est soldé au crédit. Le compte 411 avait déjà été soldé lors de l'acceptation de l'effet. Les frais d'encaissement sont débités à part au compte 631.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le mode d'amortissement qui pratique des annuités plus fortes les premières années est :",
+      "o": [
+        "l'amortissement dégressif",
+        "l'amortissement linéaire",
+        "l'amortissement progressif",
+        "l'amortissement exceptionnel"
+      ],
+      "r": 0,
+      "x": "L'amortissement dégressif applique un taux constant à une valeur nette qui diminue, d'où des annuités décroissantes. L'amortissement linéaire répartit le coût en annuités égales. L'amortissement progressif fait au contraire croître les annuités.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une baisse de valeur d'une immobilisation, qui n'est pas due à l'usage et n'est pas définitive, est constatée par :",
+      "o": [
+        "un amortissement au compte 28",
+        "une provision pour risques au compte 19",
+        "une réduction directe du capital",
+        "une dépréciation au compte 29"
+      ],
+      "r": 3,
+      "x": "Une perte de valeur non définitive se constate par une dépréciation, inscrite à un compte 29. L'amortissement, au compte 28, traduit au contraire la consommation du bien par l'usage. La dépréciation peut être reprise si la valeur se rétablit.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Les intérêts annuels d'un emprunt bancaire sont débités au compte :",
+      "o": [
+        "631",
+        "671",
+        "675",
+        "676"
+      ],
+      "r": 1,
+      "x": "Le compte 671 Intérêts des emprunts enregistre le coût de l'argent emprunté. Le compte 631 concerne les frais bancaires et le compte 675 l'escompte des effets. Le compte 676 enregistre les pertes de change financières.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une perte de change constatée lors du règlement d'un fournisseur étranger est débitée au compte :",
+      "o": [
+        "631",
+        "646",
+        "656",
+        "676"
+      ],
+      "r": 2,
+      "x": "Dans le SYSCOHADA révisé, le compte 656 Pertes de change sur créances et dettes commerciales enregistre l'écart défavorable constaté au règlement d'un fournisseur. Le compte 676 est réservé aux pertes de change financières, par exemple sur un emprunt en devises. Un écart favorable sur une opération commerciale serait crédité au compte 756.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "À la clôture, une perte de change latente sur une dette en devises non encore réglée est inscrite au compte :",
+      "o": [
+        "476",
+        "477",
+        "478",
+        "479"
+      ],
+      "r": 2,
+      "x": "Le compte 478 Écarts de conversion – actif constate la perte latente née de l'évolution du cours de la devise. Par prudence, elle donne lieu en plus à une provision pour risque de change. Le compte 479 enregistre au contraire les gains latents.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Des actions achetées dans le but de les revendre à court terme sont inscrites au compte :",
+      "o": [
+        "26",
+        "27",
+        "50",
+        "52"
+      ],
+      "r": 2,
+      "x": "Le compte 50 Titres de placement enregistre les titres acquis pour en tirer un revenu ou une plus-value à court terme. Le compte 26 Titres de participation concerne les titres détenus durablement pour exercer une influence. Le compte 52 enregistre les comptes bancaires.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un prêt accordé à un salarié et remboursable sur trois ans est débité au compte :",
+      "o": [
+        "25",
+        "26",
+        "27",
+        "42"
+      ],
+      "r": 2,
+      "x": "Un prêt à plus d'un an constitue une immobilisation financière enregistrée au compte 27 Autres immobilisations financières. Le compte 42 est réservé aux opérations courantes avec le personnel, comme les acomptes sur salaire. Le compte 26 concerne les titres de participation.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le versement en banque d'espèces prélevées sur la caisse se traduit, sans compte de liaison, par :",
+      "o": [
+        "Débit 571 / Crédit 521",
+        "Débit 521 / Crédit 411",
+        "Débit 571 / Crédit 585",
+        "Débit 521 / Crédit 571"
+      ],
+      "r": 3,
+      "x": "La banque augmente au débit et la caisse diminue au crédit. L'écriture inverse correspondrait à un retrait d'espèces à la banque. Le compte 411 ne serait concerné que si l'argent venait d'un client.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le règlement d'une dette fournisseur par virement bancaire se traduit par :",
+      "o": [
+        "Débit 521 / Crédit 401",
+        "Débit 601 / Crédit 521",
+        "Débit 401 / Crédit 601",
+        "Débit 401 / Crédit 521"
+      ],
+      "r": 3,
+      "x": "Le règlement éteint la dette au débit du compte 401 et diminue la banque au crédit du compte 521. L'achat ayant déjà été enregistré, le compte 601 n'intervient pas. L'écriture inverse correspondrait à un remboursement reçu du fournisseur.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans le SYSCOHADA révisé, la dette née d'un contrat de location-acquisition chez le preneur est inscrite au compte :",
+      "o": [
+        "16",
+        "17",
+        "18",
+        "19"
+      ],
+      "r": 1,
+      "x": "Le compte 17 Dettes de location-acquisition enregistre l'engagement du preneur envers le bailleur. Le compte 16 concerne les emprunts et dettes assimilées et le compte 19 les provisions pour risques et charges. La dette diminue à chaque loyer de la part de capital remboursée.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La date à laquelle un effet de commerce doit être payé s'appelle :",
+      "o": [
+        "l'échéance",
+        "la date de création",
+        "la date d'acceptation",
+        "la date de valeur"
+      ],
+      "r": 0,
+      "x": "L'échéance est le jour où le tiré ou le souscripteur doit payer le montant de l'effet. La date de création est celle de l'émission de l'effet. Le nombre de jours entre la négociation et l'échéance sert au calcul de l'escompte.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un effet à recevoir est endossé au profit d'un fournisseur pour régler une dette. Chez l'endosseur, l'écriture est :",
+      "o": [
+        "Débit 401 / Crédit 412",
+        "Débit 412 / Crédit 401",
+        "Débit 402 / Crédit 412",
+        "Débit 401 / Crédit 402"
+      ],
+      "r": 0,
+      "x": "L'endossement transmet l'effet au fournisseur : la dette au compte 401 est éteinte et l'effet sort du portefeuille au compte 412. Aucun mouvement de trésorerie n'a lieu. Le compte 402 ne concerne que les effets que l'entreprise doit elle-même payer.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La facture d'un cabinet chargé de former les comptables de l'entreprise à un nouveau logiciel est débitée au compte :",
+      "o": [
+        "632",
+        "633",
+        "661",
+        "664"
+      ],
+      "r": 1,
+      "x": "Le compte 633 Frais de formation du personnel enregistre les formations confiées à des organismes extérieurs. Le compte 632 concerne les honoraires et rémunérations de conseils. Les comptes 661 et 664 enregistrent les salaires et charges sociales du personnel.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "En inventaire intermittent, le stock initial de marchandises est de 1 200 000 FCFA et le stock final de 1 500 000 FCFA. Le compte 6031 Variations des stocks de marchandises présente :",
+      "o": [
+        "un solde débiteur de 300 000 FCFA",
+        "un solde créditeur de 2 700 000 FCFA",
+        "un solde débiteur de 2 700 000 FCFA",
+        "un solde créditeur de 300 000 FCFA"
+      ],
+      "r": 3,
+      "x": "Le stock initial est débité au compte 6031 et le stock final y est crédité : 1 200 000 − 1 500 000 donne un solde créditeur de 300 000 FCFA. Ce solde traduit une augmentation du stock, qui vient diminuer les charges. Les 2 700 000 FCFA additionnent à tort les deux stocks.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Achats de marchandises : 6 000 000 FCFA ; stock initial : 800 000 FCFA ; stock final : 1 100 000 FCFA. Le coût d'achat des marchandises vendues est de :",
+      "o": [
+        "5 700 000 FCFA",
+        "6 000 000 FCFA",
+        "6 300 000 FCFA",
+        "7 900 000 FCFA"
+      ],
+      "r": 0,
+      "x": "Le coût d'achat des marchandises vendues est égal aux achats plus le stock initial moins le stock final : 6 000 000 + 800 000 − 1 100 000 = 5 700 000 FCFA. Le montant de 6 300 000 FCFA inverse les deux stocks. Le montant de 7 900 000 FCFA additionne à tort les deux stocks.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Ventes de marchandises : 12 000 000 FCFA ; achats de marchandises : 7 500 000 FCFA ; variation des stocks de marchandises : solde débiteur de 500 000 FCFA. La marge commerciale est de :",
+      "o": [
+        "3 500 000 FCFA",
+        "4 000 000 FCFA",
+        "4 500 000 FCFA",
+        "5 000 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Le coût d'achat des marchandises vendues est de 7 500 000 + 500 000 = 8 000 000 FCFA, car un solde débiteur traduit une baisse du stock. La marge commerciale vaut donc 12 000 000 − 8 000 000 = 4 000 000 FCFA. Le montant de 5 000 000 FCFA retranche à tort la variation au lieu de l'ajouter.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Stock initial : 100 unités à 2 000 FCFA ; entrée : 300 unités à 2 400 FCFA. Le coût moyen unitaire pondéré (CMUP) après l'entrée est de :",
+      "o": [
+        "2 200 FCFA",
+        "2 300 FCFA",
+        "2 400 FCFA",
+        "2 600 FCFA"
+      ],
+      "r": 1,
+      "x": "Le CMUP est égal à la valeur totale divisée par la quantité totale : (200 000 + 720 000) ÷ 400 = 2 300 FCFA. Le montant de 2 200 FCFA est une simple moyenne des deux prix, qui ne tient pas compte des quantités. Le CMUP est l'une des deux méthodes admises avec le PEPS.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Stock initial : 100 unités à 2 000 FCFA ; entrée : 300 unités à 2 400 FCFA. Selon la méthode du premier entré, premier sorti (PEPS), une sortie de 150 unités est évaluée à :",
+      "o": [
+        "300 000 FCFA",
+        "320 000 FCFA",
+        "345 000 FCFA",
+        "360 000 FCFA"
+      ],
+      "r": 1,
+      "x": "On sort d'abord les 100 unités les plus anciennes, puis 50 unités du lot suivant : 200 000 + 50 × 2 400 = 320 000 FCFA. Le montant de 345 000 FCFA correspond à une évaluation au CMUP de 2 300 FCFA. Le montant de 360 000 FCFA valorise à tort toute la sortie au dernier prix.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans le SYSCOHADA révisé, la méthode d'évaluation des sorties de stocks qui n'est pas admise est :",
+      "o": [
+        "le premier entré, premier sorti (PEPS)",
+        "le coût moyen pondéré après chaque entrée",
+        "le coût moyen pondéré de la période",
+        "le dernier entré, premier sorti (DEPS)"
+      ],
+      "r": 3,
+      "x": "Seules sont admises la méthode PEPS et celle du coût moyen pondéré, calculé après chaque entrée ou sur la période. La méthode DEPS est interdite car elle sous-évalue les stocks en période de hausse des prix. Les stocks gardent ainsi une valeur proche des prix récents.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'inventaire permanent des stocks consiste à :",
+      "o": [
+        "suivre en continu les entrées et sorties en quantités et en valeur",
+        "compter physiquement les stocks seulement à la clôture",
+        "constater la variation des stocks une fois par an au compte 603",
+        "évaluer les stocks au prix de vente du jour de l'inventaire"
+      ],
+      "r": 0,
+      "x": "L'inventaire permanent tient à jour une fiche de stock pour chaque article, ce qui donne le stock théorique à tout moment. Il ne dispense pas de l'inventaire physique annuel, qui permet de détecter les écarts. En inventaire intermittent, le stock n'est connu qu'à la clôture.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "À la clôture, un stock de marchandises coûte 2 000 000 FCFA alors que sa valeur nette de réalisation n'est que de 1 650 000 FCFA. La dépréciation à constater est de :",
+      "o": [
+        "150 000 FCFA",
+        "350 000 FCFA",
+        "1 650 000 FCFA",
+        "2 000 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Le stock est évalué au plus faible du coût et de la valeur nette de réalisation, d'où une dépréciation de 2 000 000 − 1 650 000 = 350 000 FCFA. Cette application du principe de prudence ne modifie pas le coût inscrit au compte 31. Le montant de 1 650 000 FCFA correspond à la valeur du stock après dépréciation.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La dépréciation d'un stock de marchandises est créditée à un compte de la série :",
+      "o": [
+        "29",
+        "39",
+        "49",
+        "59"
+      ],
+      "r": 1,
+      "x": "Le compte 39 Dépréciations des stocks enregistre les pertes de valeur sur les stocks. Les comptes 29 concernent les immobilisations, 49 les comptes de tiers et 59 la trésorerie. Toutes ces dépréciations viennent en diminution de l'actif correspondant.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans le plan de comptes SYSCOHADA, le stock de marchandises à la clôture est inscrit au compte :",
+      "o": [
+        "31",
+        "32",
+        "36",
+        "38"
+      ],
+      "r": 0,
+      "x": "Le compte 31 Marchandises enregistre les biens achetés pour être revendus en l'état. Le compte 32 concerne les matières premières et le compte 36 les produits finis. Le compte 38 enregistre les stocks en cours de route ou en dépôt.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une créance sur un client en difficulté, dont le recouvrement devient incertain, est transférée au compte :",
+      "o": [
+        "411",
+        "412",
+        "416",
+        "418"
+      ],
+      "r": 2,
+      "x": "Le compte 416 Créances clients litigieuses ou douteuses isole les créances dont le paiement est incertain. Ce transfert prépare la constatation d'une dépréciation. Le compte 418 concerne les produits à recevoir.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une créance douteuse de 1 180 000 FCFA TTC (TVA de 18 %) présente un risque de perte estimé à 40 %. La dépréciation à constater est de :",
+      "o": [
+        "400 000 FCFA",
+        "472 000 FCFA",
+        "600 000 FCFA",
+        "708 000 FCFA"
+      ],
+      "r": 0,
+      "x": "La dépréciation se calcule sur le montant hors taxes, car la TVA sera récupérée si la perte devient définitive : 1 000 000 × 40 % = 400 000 FCFA. Le montant de 472 000 FCFA applique à tort le taux au montant TTC. Le montant de 600 000 FCFA correspond à la part qui reste recouvrable.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La dépréciation d'une créance client douteuse est créditée au compte :",
+      "o": [
+        "416",
+        "491",
+        "499",
+        "791"
+      ],
+      "r": 1,
+      "x": "Le compte 491 Dépréciations des comptes clients enregistre la perte probable sur les créances ; il est crédité en contrepartie du débit du compte 659, et le compte 499 concerne les provisions pour risques à court terme. Si la dépréciation devient sans objet, elle sera reprise au compte 759, et non au compte 791.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une créance client devenue définitivement irrécouvrable est débitée, pour son montant hors taxes, au compte :",
+      "o": [
+        "416",
+        "491",
+        "651",
+        "659"
+      ],
+      "r": 2,
+      "x": "Le compte 651 Pertes sur créances clients enregistre la perte devenue définitive. La TVA correspondante est récupérée, et la dépréciation antérieure éventuelle est reprise. Le compte 491 enregistre une perte seulement probable, pas une perte définitive.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une dépréciation d'une immobilisation corporelle, constatée en exploitation et devenue sans objet, est reprise au crédit du compte :",
+      "o": [
+        "759",
+        "781",
+        "791",
+        "797"
+      ],
+      "r": 2,
+      "x": "Le compte 791 Reprises de provisions et dépréciations d'exploitation reçoit la reprise des dépréciations d'immobilisations (comptes 29) et des provisions du compte 19. Le compte 759 est réservé aux reprises de dépréciations des stocks et des créances et des provisions à court terme. Le compte 797 enregistre les reprises de nature financière.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une provision constituée pour un litige avec un ancien salarié, dont l'issue est attendue dans plus d'un an, est créditée au compte :",
+      "o": [
+        "15",
+        "19",
+        "29",
+        "39"
+      ],
+      "r": 1,
+      "x": "Le compte 19 Provisions pour risques et charges enregistre les risques à plus d'un an. Si l'issue était attendue dans moins d'un an, la provision serait inscrite au compte 499. Le compte 15 concerne les provisions réglementées, qui obéissent à des règles fiscales.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une prime d'assurance annuelle de 1 200 000 FCFA, couvrant douze mois, est payée le 1er octobre N. Au 31 décembre N, les charges constatées d'avance s'élèvent à :",
+      "o": [
+        "300 000 FCFA",
+        "600 000 FCFA",
         "900 000 FCFA",
+        "1 200 000 FCFA"
+      ],
+      "r": 2,
+      "x": "Seuls trois mois, d'octobre à décembre, concernent l'exercice N, soit 300 000 FCFA. Les neuf mois restants, soit 900 000 FCFA, se rattachent à N+1 et sont reportés. Le montant de 300 000 FCFA est la charge de N, non la charge constatée d'avance.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une charge payée en N mais qui concerne l'exercice N+1 est inscrite, au 31 décembre N, au débit du compte :",
+      "o": [
+        "408",
+        "476",
+        "477",
+        "478"
+      ],
+      "r": 1,
+      "x": "Le compte 476 Charges constatées d'avance retire de l'exercice N la part de charge qui concerne N+1. Le compte 477 enregistre au contraire les produits constatés d'avance. Le compte 408 concerne les factures non parvenues.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un loyer de 600 000 FCFA pour six mois est reçu d'un locataire le 1er septembre N. Au 31 décembre N, les produits constatés d'avance s'élèvent à :",
+      "o": [
+        "100 000 FCFA",
+        "200 000 FCFA",
+        "400 000 FCFA",
         "600 000 FCFA"
       ],
-      "r": 2,
-      "x": "Réserve légale = 6 000 000 × 5% = 300 000. Réserve statutaire = 6 000 000 × 10% = 600 000. Dividendes = 6 000 000 × 60% = 3 600 000. Total affecté = 300 000 + 600 000 + 3 600 000 = 4 500 000. Report à nouveau = 6 000 000 − 4 500 000 = 1 500 000 FCFA. (Correction : 100% − 5% − 10% − 60% = 25% → 6 000 000 × 25% = 1 500 000). Réponse B."
+      "r": 1,
+      "x": "De septembre à décembre, quatre mois sur six concernent N, soit 400 000 FCFA. Les deux mois de janvier et février N+1, soit 200 000 FCFA, sont reportés au compte 477. Le montant de 400 000 FCFA correspond au produit acquis en N.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
     },
     {
-      "q": "Dans quel document comptable est enregistrée la décision d'affectation du résultat ?",
+      "q": "Des marchandises livrées en décembre N dont la facture n'arrive qu'en janvier N+1 donnent lieu, au 31 décembre N, au crédit du compte :",
       "o": [
-        "Le journal des ventes",
-        "Le journal des opérations diverses (OD)",
-        "Le journal de banque",
-        "Le livre de paie"
+        "401",
+        "408",
+        "418",
+        "476"
       ],
       "r": 1,
-      "x": "L'affectation du résultat est une opération diverse (non commerciale) enregistrée dans le journal des opérations diverses (OD). Les écritures types : Débit 13 \"Résultat\" / Crédit 111 \"Réserve légale\", Crédit 118 \"Dividendes à payer\", Crédit 12 \"Report à nouveau\", selon les décisions de l'AGO."
+      "x": "Le compte 408 Fournisseurs, factures non parvenues constate la dette en l'absence de facture. L'achat est ainsi rattaché à l'exercice N, conformément à la spécialisation des exercices. Le compte 418 concerne au contraire les produits à recevoir des clients.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
     },
     {
-      "q": "Quel ratio mesure la capacité de l'entreprise à rembourser ses dettes financières grâce à sa capacité d'autofinancement ?",
+      "q": "Une prestation réalisée pour un client en décembre N mais facturée en janvier N+1 donne lieu, au 31 décembre N, au débit du compte :",
       "o": [
-        "Dettes financières / CAF",
-        "CAF / Chiffre d'affaires",
-        "Résultat net / Capitaux propres",
-        "Actif circulant / Dettes à court terme"
-      ],
-      "r": 0,
-      "x": "Le ratio d'endettement net = Dettes financières / CAF. Il exprime en années le nombre d'exercices nécessaires pour rembourser les dettes financières avec la CAF générée. Un ratio inférieur à 3 ans est généralement considéré comme acceptable par les banquiers."
-    },
-    {
-      "q": "L'entreprise SANA constate que sa caisse présente un solde créditeur de 50 000 FCFA. Quelle explication est la plus probable ?",
-      "o": [
-        "Il y a une erreur d'enregistrement comptable (excès de décaissements saisis ou encaissements omis)",
-        "L'entreprise a trop encaissé",
-        "La caisse est excédentaire par rapport aux prévisions",
-        "Le solde créditeur est normal en fin d'exercice"
-      ],
-      "r": 0,
-      "x": "PIÈGE CLASSIQUE. Un solde créditeur de caisse est théoriquement impossible (on ne peut pas décaisser plus qu'on n'a en caisse). Ce solde révèle obligatoirement une erreur comptable : un décaissement enregistré en double, un encaissement omis, ou une imputation erronée. Il faut immédiatement investiguer et rectifier."
-    },
-    {
-      "q": "L'entreprise prend en location un local commercial pour 5 ans à 600 000 FCFA/an, payable trimestriellement d'avance. Quel est le loyer trimestriel ?",
-      "o": [
-        "120 000 FCFA",
-        "50 000 FCFA",
-        "200 000 FCFA",
-        "150 000 FCFA"
-      ],
-      "r": 3,
-      "x": "Loyer annuel = 600 000 FCFA. Trimestriel = 600 000 / 4 = 150 000 FCFA. La mention \"payable d'avance\" signifie que le loyer du trimestre est réglé en début de trimestre. Des régularisations (charges constatées d'avance) seront nécessaires en fin d'exercice si un trimestre chevauche deux exercices."
-    },
-    {
-      "q": "Qu'est-ce qu'une \"facture d'avoir\" (note de crédit) en comptabilité ?",
-      "o": [
-        "Un document émis par le fournisseur pour annuler partiellement ou totalement une facture initiale",
-        "Une facture d'achat avec un taux de TVA réduit",
-        "Une facture payée à l'avance",
-        "Une facture relative à des prestations futures"
-      ],
-      "r": 0,
-      "x": "La facture d'avoir (ou note de crédit) est émise par le fournisseur pour réduire la dette du client : en cas de retour de marchandises, de remise a posteriori, ou d'erreur de facturation. Elle entraîne une réduction de la créance fournisseur et de la charge d'achat chez le client."
-    },
-    {
-      "q": "L'entreprise effectue une vente de 1 180 000 FCFA TTC (TVA 18%) et encaisse simultanément par banque. Quels comptes sont mouvementés ?",
-      "o": [
-        "Débit 521 (1 180 000) / Crédit 701 (1 180 000)",
-        "Débit 521 (1 000 000) + Débit 4452 (180 000) / Crédit 701 (1 180 000)",
-        "Débit 411 (1 180 000) / Crédit 701 (1 000 000) + Crédit 4452 (180 000)",
-        "Débit 521 (1 180 000) / Crédit 701 (1 000 000) + Crédit 4452 (180 000)"
-      ],
-      "r": 3,
-      "x": "Vente encaissée comptant : Débit 521 \"Banque\" (1 180 000 TTC) / Crédit 701 \"Ventes de marchandises\" (1 000 000 HT) + Crédit 4452 \"TVA facturée\" (180 000). Le chiffre d'affaires est toujours enregistré hors taxes. La TVA collectée est une dette envers l'État."
-    },
-    {
-      "q": "Quelle est la règle d'évaluation des stocks selon le SYSCOHADA révisé ?",
-      "o": [
-        "Valeur de remplacement uniquement",
-        "Coût d'entrée (coût d'achat ou de production), évalué selon CMUP ou FIFO",
-        "Valeur de marché à la date de clôture",
-        "Prix de vente diminué de la marge habituelle"
-      ],
-      "r": 1,
-      "x": "Les stocks sont évalués au coût d'entrée (coût d'achat pour les marchandises, coût de production pour les produits finis). Les méthodes de sortie autorisées par le SYSCOHADA sont le CMUP (coût moyen unitaire pondéré) et le FIFO (premier entré, premier sorti — PEPS). La méthode LIFO (dernier entré, premier sorti) n'est pas admise."
-    },
-    {
-      "q": "Quel est le traitement comptable d'un chèque sans provision reçu d'un client et retourné impayé par la banque ?",
-      "o": [
-        "Débiter 654 / Créditer 521",
-        "Débiter 411 / Créditer 521",
-        "Débiter 416 / Créditer 521",
-        "Débiter 521 / Créditer 411"
-      ],
-      "r": 1,
-      "x": "Lors du retour d'un chèque impayé, on recrée la créance client : Débit 411 \"Clients\" / Crédit 521 \"Banque\" (pour réinscrire la créance que l'on croyait éteinte). Si le client est douteux, on peut ensuite virer en 416 \"Clients douteux\" : Débit 416 / Crédit 411, puis constituer une provision."
-    },
-    {
-      "q": "Le taux d'imposition sur les bénéfices des sociétés au Burkina Faso est de :",
-      "o": [
-        "35%",
-        "30%",
-        "27,5%",
-        "25%"
+        "408",
+        "411",
+        "418",
+        "477"
       ],
       "r": 2,
-      "x": "Au Burkina Faso, le taux de l'Impôt sur les Sociétés (IS) est de 27,5% sur les bénéfices nets imposables. Des acomptes provisionnels sont versés trimestriellement, et le solde est liquidé lors du dépôt de la liasse fiscale annuelle."
+      "x": "Le compte 418 Clients, produits à recevoir constate la créance née de la prestation déjà réalisée. Le produit est ainsi rattaché à l'exercice N. Le compte 411 ne sera débité qu'à l'émission de la facture définitive.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
     },
     {
-      "q": "Lors de l'établissement du bilan, si l'entreprise a des pertes cumulées supérieures à la moitié du capital social, quelle procédure doit-elle déclencher selon le droit OHADA ?",
+      "q": "Au début de l'exercice suivant, les écritures de régularisation de charges à payer et de produits à recevoir sont généralement :",
       "o": [
-        "Dissolution immédiate et obligatoire",
-        "Nomination d'un administrateur judiciaire",
-        "Augmentation obligatoire du capital dans les 30 jours",
-        "Consultation de l'assemblée générale extraordinaire pour décider de la continuation ou de la dissolution"
+        "contre-passées",
+        "supprimées du journal",
+        "virées au compte de résultat",
+        "reportées sans changement"
+      ],
+      "r": 0,
+      "x": "La contre-passation annule les régularisations de l'exercice précédent pour que les pièces définitives soient enregistrées normalement. Sans elle, la charge ou le produit serait compté deux fois. Une écriture validée ne peut jamais être supprimée du journal.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans le bilan du SYSCOHADA révisé, un emprunt bancaire remboursable sur cinq ans figure dans :",
+      "o": [
+        "les dettes financières et ressources assimilées",
+        "les dettes du passif circulant",
+        "les concours de la trésorerie-passif",
+        "les capitaux propres et ressources assimilées"
+      ],
+      "r": 0,
+      "x": "Les emprunts à plus d'un an font partie des dettes financières et ressources assimilées, avec les dettes de location-acquisition. Le passif circulant regroupe les dettes d'exploitation comme les fournisseurs. Les capitaux propres comprennent le capital, les réserves et le résultat.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans le compte de résultat du SYSCOHADA révisé, le premier solde intermédiaire calculé est :",
+      "o": [
+        "la valeur ajoutée",
+        "l'excédent brut d'exploitation",
+        "le résultat d'exploitation",
+        "la marge commerciale"
       ],
       "r": 3,
-      "x": "Selon l'Acte uniforme OHADA sur les sociétés commerciales, si les pertes ramènent les capitaux propres en dessous de la moitié du capital social, les dirigeants doivent convoquer une AGE dans les délais légaux pour décider : soit de la dissolution anticipée, soit de la continuation avec reconstitution des capitaux propres dans un délai maximum de 2 exercices."
+      "x": "Le compte de résultat en cascade commence par la marge commerciale, repérée par le code XA. Viennent ensuite le chiffre d'affaires, la valeur ajoutée, l'excédent brut d'exploitation et le résultat d'exploitation. Le dernier solde est le résultat net, repéré par le code XI.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
     },
     {
-      "q": "L'entreprise émet 1 000 actions nouvelles d'une valeur nominale de 10 000 FCFA à un prix d'émission de 13 000 FCFA. Quel est le montant de la prime d'émission totale ?",
+      "q": "Une entreprise dégage une valeur ajoutée de 15 000 000 FCFA et supporte 6 000 000 FCFA de charges de personnel. Son excédent brut d'exploitation (EBE) est de :",
       "o": [
-        "10 000 000 FCFA",
-        "13 000 000 FCFA",
+        "6 000 000 FCFA",
+        "9 000 000 FCFA",
+        "15 000 000 FCFA",
+        "21 000 000 FCFA"
+      ],
+      "r": 1,
+      "x": "L'EBE est égal à la valeur ajoutée diminuée des charges de personnel : 15 000 000 − 6 000 000 = 9 000 000 FCFA. Il mesure la ressource dégagée par l'exploitation avant amortissements et provisions. Le montant de 21 000 000 FCFA ajoute à tort les charges de personnel.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "EBE : 12 000 000 FCFA ; dotations aux amortissements et provisions d'exploitation : 3 000 000 FCFA ; reprises d'exploitation : 400 000 FCFA. Le résultat d'exploitation est de :",
+      "o": [
+        "8 600 000 FCFA",
+        "9 000 000 FCFA",
+        "9 400 000 FCFA",
+        "15 400 000 FCFA"
+      ],
+      "r": 2,
+      "x": "Le résultat d'exploitation s'obtient ainsi : 12 000 000 − 3 000 000 + 400 000 = 9 400 000 FCFA. Le montant de 8 600 000 FCFA retranche à tort les reprises au lieu de les ajouter. Le montant de 9 000 000 FCFA oublie les reprises.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Revenus financiers : 1 200 000 FCFA ; frais financiers : 1 900 000 FCFA. Le résultat financier est :",
+      "o": [
+        "négatif de 700 000 FCFA",
+        "positif de 700 000 FCFA",
+        "négatif de 3 100 000 FCFA",
+        "positif de 3 100 000 FCFA"
+      ],
+      "r": 0,
+      "x": "Le résultat financier est égal aux revenus financiers moins les frais financiers : 1 200 000 − 1 900 000 = −700 000 FCFA. Les frais financiers étant plus élevés, le résultat est négatif. Les 3 100 000 FCFA additionnent à tort charges et produits.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Au Burkina Faso, le taux normal de l'impôt sur les sociétés (IS) est de :",
+      "o": [
+        "25 %",
+        "27,5 %",
+        "30 %",
+        "35 %"
+      ],
+      "r": 1,
+      "x": "Le taux de droit commun de l'IS au Burkina Faso est de 27,5 % du bénéfice imposable. Le Bénin applique, à titre de comparaison, un taux de 30 %. Un impôt minimum calculé sur le chiffre d'affaires s'applique même en cas de perte.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'impôt sur le bénéfice de l'exercice d'une société est débité au compte :",
+      "o": [
+        "441",
+        "641",
+        "891",
+        "895"
+      ],
+      "r": 2,
+      "x": "Le compte 891 Impôts sur les bénéfices de l'exercice enregistre la charge d'impôt, en contrepartie du compte 441 État, impôt sur les bénéfices. Le compte 641 concerne les impôts et taxes d'exploitation, comme la patente. L'impôt sur le résultat est ainsi isolé en classe 8.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une entreprise dispose de 40 000 000 FCFA de ressources stables pour 32 000 000 FCFA d'actif immobilisé. Son fonds de roulement est de :",
+      "o": [
+        "8 000 000 FCFA",
+        "32 000 000 FCFA",
+        "40 000 000 FCFA",
+        "72 000 000 FCFA"
+      ],
+      "r": 0,
+      "x": "Le fonds de roulement est égal aux ressources stables moins les emplois stables : 40 000 000 − 32 000 000 = 8 000 000 FCFA. Un fonds de roulement positif signifie que les ressources durables financent tout l'actif immobilisé. L'excédent sert à financer une partie de l'actif circulant.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une entreprise présente un actif circulant de 18 000 000 FCFA, hors trésorerie, et un passif circulant de 11 000 000 FCFA. Son besoin en fonds de roulement est de :",
+      "o": [
+        "4 000 000 FCFA",
+        "7 000 000 FCFA",
+        "11 000 000 FCFA",
+        "29 000 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Le besoin en fonds de roulement est égal à l'actif circulant moins le passif circulant : 18 000 000 − 11 000 000 = 7 000 000 FCFA. Il mesure le financement nécessaire au cycle d'exploitation, stocks et créances. Les 29 000 000 FCFA additionnent à tort les deux masses.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une entreprise a un fonds de roulement de 5 000 000 FCFA et un besoin en fonds de roulement de 6 500 000 FCFA. Sa trésorerie nette est :",
+      "o": [
+        "positive de 1 500 000 FCFA",
+        "positive de 11 500 000 FCFA",
+        "négative de 11 500 000 FCFA",
+        "négative de 1 500 000 FCFA"
+      ],
+      "r": 3,
+      "x": "La trésorerie nette est égale au fonds de roulement moins le besoin en fonds de roulement : 5 000 000 − 6 500 000 = −1 500 000 FCFA. L'entreprise doit donc recourir à des concours bancaires à court terme. Une trésorerie nette positive supposerait un fonds de roulement supérieur au besoin.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une entreprise présente un actif circulant de 24 000 000 FCFA et un passif circulant de 16 000 000 FCFA. Son ratio de liquidité générale est de :",
+      "o": [
+        "0,67",
+        "1,50",
+        "1,67",
+        "2,00"
+      ],
+      "r": 1,
+      "x": "Le ratio de liquidité générale est égal à l'actif circulant divisé par le passif circulant : 24 000 000 ÷ 16 000 000 = 1,50. Un ratio supérieur à 1 indique que les actifs à court terme couvrent les dettes à court terme. Le résultat de 0,67 inverse le numérateur et le dénominateur.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Résultat net : 4 000 000 FCFA ; dotations aux amortissements et provisions : 2 500 000 FCFA ; reprises : 500 000 FCFA ; aucune cession. La capacité d'autofinancement (CAF) est de :",
+      "o": [
+        "4 000 000 FCFA",
+        "6 000 000 FCFA",
+        "6 500 000 FCFA",
+        "7 000 000 FCFA"
+      ],
+      "r": 1,
+      "x": "La CAF ajoute au résultat les charges sans décaissement et retranche les produits sans encaissement : 4 000 000 + 2 500 000 − 500 000 = 6 000 000 FCFA. Le montant de 6 500 000 FCFA oublie de retirer les reprises. Le montant de 7 000 000 FCFA ajoute à tort les reprises.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le tableau des flux de trésorerie (TFT) du SYSCOHADA révisé classe les flux en trois catégories :",
+      "o": [
+        "activités d'exploitation, hors exploitation et fiscales",
+        "activités courantes, exceptionnelles et financières",
+        "activités commerciales, industrielles et bancaires",
+        "activités opérationnelles, d'investissement et de financement"
+      ],
+      "r": 3,
+      "x": "Le TFT distingue les flux des activités opérationnelles, d'investissement et de financement. La somme des trois explique la variation de la trésorerie nette de l'exercice. Les termes d'exploitation et hors exploitation appartiennent à d'autres présentations.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans le tableau des flux de trésorerie, le remboursement d'un emprunt bancaire figure parmi les flux :",
+      "o": [
+        "des activités de financement",
+        "des activités opérationnelles",
+        "des activités d'investissement",
+        "hors activités ordinaires"
+      ],
+      "r": 0,
+      "x": "Les remboursements d'emprunts, comme les nouveaux emprunts et les apports en capital, sont des flux de financement. L'achat d'une immobilisation serait au contraire un flux d'investissement. Le paiement des intérêts relève, lui, des activités opérationnelles.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Les dividendes votés par l'assemblée générale et non encore payés aux associés sont crédités au compte :",
+      "o": [
+        "111",
+        "121",
+        "465",
+        "661"
+      ],
+      "r": 2,
+      "x": "Le compte 465 Associés, dividendes à payer enregistre la dette envers les associés après l'affectation du résultat. Le compte 111 reçoit la dotation à la réserve légale et le compte 121 le report à nouveau créditeur. Le paiement débitera ensuite le compte 465.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un bénéfice de 10 000 000 FCFA est affecté à 1 000 000 FCFA de réserve légale et à 6 000 000 FCFA de dividendes, sans autre réserve. Le report à nouveau est de :",
+      "o": [
         "3 000 000 FCFA",
-        "1 000 000 FCFA"
-      ],
-      "r": 2,
-      "x": "Prime d'émission unitaire = Prix d'émission − Valeur nominale = 13 000 − 10 000 = 3 000 FCFA. Prime totale = 3 000 × 1 000 = 3 000 000 FCFA. Le capital augmente de 10 000 000 FCFA (valeur nominale) et la prime d'émission de 3 000 000 FCFA est inscrite au compte 105."
-    },
-    {
-      "q": "Qu'entend-on par \"principe de l'entité\" en comptabilité SYSCOHADA ?",
-      "o": [
-        "L'entreprise doit avoir une seule entité juridique",
-        "La comptabilité de l'entreprise est distincte de celle de ses propriétaires ou associés",
-        "Toutes les entités du groupe doivent tenir une comptabilité consolidée",
-        "L'entreprise ne peut exercer qu'une seule activité à la fois"
-      ],
-      "r": 1,
-      "x": "Le principe de l'entité (ou autonomie) stipule que l'entreprise est une entité économique distincte de ses propriétaires. Leurs patrimoines respectifs ne doivent pas être confondus. Ainsi, les dépenses personnelles de l'exploitant ne doivent pas figurer dans la comptabilité de l'entreprise."
-    },
-    {
-      "q": "Une entreprise enregistre 800 000 FCFA de dotations aux amortissements. Quel est l'impact de cette écriture sur la trésorerie de l'exercice ?",
-      "o": [
-        "La trésorerie diminue de 800 000 FCFA",
-        "La trésorerie augmente de 800 000 FCFA",
-        "La trésorerie n'est pas affectée",
-        "La trésorerie diminue de 400 000 FCFA"
-      ],
-      "r": 2,
-      "x": "PIÈGE CLASSIQUE. Les dotations aux amortissements sont des charges CALCULÉES (non décaissables). Elles réduisent le résultat comptable mais n'entraînent AUCUN décaissement de trésorerie. C'est pourquoi on les réintègre dans le calcul de la CAF (Résultat net + Amortissements). Leur impact sur la trésorerie est nul."
-    },
-    {
-      "q": "L'entreprise BAMA effectue un virement interne de 2 000 000 FCFA de sa caisse à son compte bancaire. Quelle est l'écriture correcte ?",
-      "o": [
-        "Débit 521 (2 000 000) / Crédit 57 (2 000 000)",
-        "Débit 57 (2 000 000) / Crédit 521 (2 000 000)",
-        "Débit 521 (2 000 000) / Crédit 521 (2 000 000)",
-        "Aucune écriture, c'est un mouvement interne sans impact"
+        "4 000 000 FCFA",
+        "6 000 000 FCFA",
+        "9 000 000 FCFA"
       ],
       "r": 0,
-      "x": "Le virement de caisse à banque : Débit 521 \"Banque\" (la banque reçoit les fonds) / Crédit 57 \"Caisse\" (la caisse se vide). Le compte 58 \"Virements internes\" peut être utilisé comme transit si les deux mouvements ne sont pas simultanés. Ces deux comptes sont dans la même classe 5 (trésorerie)."
+      "x": "Le report à nouveau correspond au solde non affecté : 10 000 000 − 1 000 000 − 6 000 000 = 3 000 000 FCFA. Ce montant est crédité au compte 121 Report à nouveau créditeur. Le montant de 4 000 000 FCFA oublie la réserve légale.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
     },
     {
-      "q": "Quelle est la définition d'un \"actif\" selon le SYSCOHADA révisé ?",
+      "q": "Les notes annexes aux états financiers ont pour rôle :",
       "o": [
-        "Tout bien appartenant à l'entreprise, inscrit au bilan",
-        "Un bien physique figurant dans les stocks de l'entreprise",
-        "Tout bien immobilisé acquis au cours de l'exercice",
-        "Une ressource contrôlée par l'entité, résultant d'événements passés, dont des avantages économiques futurs sont attendus"
+        "de présenter le rapport de gestion des dirigeants",
+        "de détailler les encaissements et décaissements",
+        "de récapituler les soldes de tous les comptes",
+        "de compléter et commenter les autres états financiers"
       ],
       "r": 3,
-      "x": "Selon le cadre conceptuel du SYSCOHADA révisé (inspiré des IFRS), un actif est une ressource : (1) contrôlée par l'entité (pas nécessairement propriétaire légal), (2) résultant d'un événement passé, (3) dont des avantages économiques futurs (flux de trésorerie) sont attendus. Cette définition moderne est plus large que la simple notion de propriété."
+      "x": "Les notes annexes précisent les méthodes comptables et détaillent les postes des états financiers. Elles sont indispensables à la compréhension des chiffres présentés. Elles ne remplacent aucun autre état et ne servent pas à enregistrer les opérations.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
     },
     {
-      "q": "Un expert-comptable relève dans la balance de l'entreprise KINDO que le compte 401 présente un solde débiteur de 300 000 FCFA. Quelle est l'interprétation correcte ?",
+      "q": "L'inventaire physique des biens, créances et dettes doit être réalisé au moins :",
       "o": [
-        "L'entreprise doit 300 000 FCFA à ses fournisseurs",
-        "Les fournisseurs doivent 300 000 FCFA à l'entreprise (avances ou avoirs non comptabilisés)",
-        "Il y a une erreur : le compte 401 ne peut jamais être débiteur",
-        "Le compte 401 présente un solde normal qui sera corrigé à la clôture"
+        "une fois par exercice",
+        "une fois par mois",
+        "une fois tous les deux ans",
+        "une seule fois, à la création"
+      ],
+      "r": 0,
+      "x": "L'entité doit procéder au moins une fois par exercice, à la clôture, au recensement et à l'évaluation de ses éléments d'actif et de passif. Les résultats sont reportés au livre d'inventaire. Un inventaire plus fréquent reste possible pour mieux contrôler les stocks.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La valeur ajoutée produite par une entreprise mesure :",
+      "o": [
+        "la richesse créée par son activité au cours de l'exercice",
+        "le montant total des ventes encaissées dans l'année",
+        "le bénéfice net revenant aux seuls associés",
+        "la valeur de revente de ses immobilisations"
+      ],
+      "r": 0,
+      "x": "La valeur ajoutée correspond à la production de l'exercice diminuée des consommations venant des tiers. Elle sert à rémunérer le personnel, l'État, les prêteurs, les associés et l'entreprise elle-même. Le chiffre d'affaires mesure seulement le volume des ventes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Stock initial de marchandises : 800 000 FCFA ; stock final : 1 200 000 FCFA ; coût d'achat des marchandises vendues : 12 000 000 FCFA (année de 360 jours). La durée moyenne de stockage est de :",
+      "o": [
+        "15 jours",
+        "30 jours",
+        "36 jours",
+        "60 jours"
       ],
       "r": 1,
-      "x": "PIÈGE CLASSIQUE. Normalement, le compte 401 \"Fournisseurs\" est créditeur (dette). Un solde débiteur signifie que l'entreprise a trop payé son fournisseur (avance non encore imputée sur facture, ou avoir non enregistré). Ce n'est pas une erreur impossible, mais une situation à analyser et clarifier. Le compte 401 débiteur représente une créance sur le fournisseur."
+      "x": "Le stock moyen est de (800 000 + 1 200 000) ÷ 2 = 1 000 000 FCFA, ce qui donne une rotation de 12 000 000 ÷ 1 000 000 = 12 fois par an. La durée moyenne de stockage est donc de 360 ÷ 12 = 30 jours. Le résultat de 36 jours utilise à tort le stock final au lieu du stock moyen.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Les créances clients s'élèvent à 3 540 000 FCFA TTC pour un chiffre d'affaires annuel TTC de 42 480 000 FCFA (année de 360 jours). Le délai moyen de recouvrement des clients est de :",
+      "o": [
+        "30 jours",
+        "36 jours",
+        "45 jours",
+        "60 jours"
+      ],
+      "r": 0,
+      "x": "Le délai client est égal aux créances clients divisées par le chiffre d'affaires TTC, multipliées par 360 : 3 540 000 ÷ 42 480 000 × 360 = 30 jours. Le chiffre d'affaires est pris TTC parce que les créances incluent la TVA. Un délai plus court améliore la trésorerie de l'entreprise.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Chiffre d'affaires : 50 000 000 FCFA ; charges variables : 30 000 000 FCFA ; charges fixes : 12 000 000 FCFA. Le seuil de rentabilité est de :",
+      "o": [
+        "12 000 000 FCFA",
+        "20 000 000 FCFA",
+        "30 000 000 FCFA",
+        "42 000 000 FCFA"
+      ],
+      "r": 2,
+      "x": "La marge sur coût variable est de 20 000 000 FCFA, soit un taux de 40 % du chiffre d'affaires. Le seuil de rentabilité est égal aux charges fixes divisées par ce taux : 12 000 000 ÷ 0,40 = 30 000 000 FCFA. Le montant de 20 000 000 FCFA correspond à la marge sur coût variable.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "En comptabilité analytique, le loyer mensuel d'un magasin, comparé au volume des ventes, est une charge :",
+      "o": [
+        "variable",
+        "semi-variable",
+        "supplétive",
+        "fixe"
+      ],
+      "r": 3,
+      "x": "Le loyer ne varie pas avec le volume des ventes : c'est une charge fixe, ou charge de structure. Une charge variable évolue au contraire avec l'activité, comme les achats consommés. Une charge supplétive est une charge fictive ajoutée en analytique, comme la rémunération de l'exploitant.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "En comptabilité analytique, le coût de revient d'un produit vendu est égal :",
+      "o": [
+        "au coût d'achat des matières premières consommées et de la main-d'œuvre",
+        "au prix de vente diminué du bénéfice souhaité par l'entreprise",
+        "au coût de production de l'ensemble des produits fabriqués",
+        "au coût de production des produits vendus plus les coûts hors production"
+      ],
+      "r": 3,
+      "x": "Le coût de revient ajoute au coût de production des produits vendus les coûts de distribution et d'administration. Il se compare au prix de vente pour obtenir le résultat analytique. Le coût d'achat des matières n'est qu'une étape du calcul du coût de production.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Résultat des activités ordinaires : 6 000 000 FCFA ; résultat HAO : 500 000 FCFA ; impôt sur le résultat : 1 750 000 FCFA ; pas de participation. Le résultat net est de :",
+      "o": [
+        "4 250 000 FCFA",
+        "4 750 000 FCFA",
+        "6 000 000 FCFA",
+        "6 500 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Le résultat net est égal au résultat des activités ordinaires plus le résultat HAO, moins l'impôt : 6 000 000 + 500 000 − 1 750 000 = 4 750 000 FCFA. Le montant de 4 250 000 FCFA oublie le résultat HAO. Le montant de 6 500 000 FCFA correspond au résultat avant impôt.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans le compte de résultat du SYSCOHADA révisé, le chiffre d'affaires comprend :",
+      "o": [
+        "les ventes de biens et de services et les produits accessoires",
+        "les seules ventes de marchandises réalisées au comptant",
+        "les ventes de marchandises et les subventions d'exploitation",
+        "l'ensemble des produits, y compris les produits financiers"
+      ],
+      "r": 0,
+      "x": "Le chiffre d'affaires regroupe les ventes de marchandises, de produits fabriqués, de travaux et services, ainsi que les produits accessoires. Les subventions d'exploitation et les produits financiers n'en font pas partie. Il se calcule hors taxes, après déduction des réductions accordées.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une provision pour risque devenue sans objet à la clôture est :",
+      "o": [
+        "maintenue au bilan par prudence",
+        "virée directement aux réserves",
+        "reprise en produits",
+        "transférée aux provisions réglementées"
+      ],
+      "r": 2,
+      "x": "Lorsque le risque disparaît, la provision est annulée par une reprise en produits : compte 791 ou 797 pour une provision du compte 19, compte 759 pour une provision à court terme, compte 86 si elle est HAO. Conserver une provision injustifiée fausserait l'image fidèle du résultat. Elle ne peut être ni virée directement aux réserves ni reclassée en provision réglementée.",
+      "_batchId": "comptabilite/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'Acte uniforme révisé relatif au droit des sociétés commerciales et du groupement d'intérêt économique (AUSCGIE) a été adopté le 30 janvier 2014 à :",
+      "o": [
+        "Abidjan",
+        "Brazzaville",
+        "Ouagadougou",
+        "Yaoundé"
+      ],
+      "r": 2,
+      "x": "L'AUSCGIE révisé a été adopté le 30 janvier 2014 à Ouagadougou par le Conseil des ministres de l'OHADA. Brazzaville est la ville où a été adopté l'Acte uniforme comptable de 2017. Yaoundé abrite le Secrétariat permanent de l'OHADA.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "L'AUSCGIE révisé, adopté par le Conseil des ministres de l'OHADA en janvier 2014, est entré en vigueur le :",
+      "o": [
+        "30 janvier 2014",
+        "4 février 2014",
+        "5 mai 2014",
+        "1er janvier 2015"
+      ],
+      "r": 2,
+      "x": "L'Acte uniforme est entré en vigueur 90 jours après sa publication au Journal officiel du 4 février 2014, soit le 5 mai 2014. Les sociétés déjà existantes ont disposé de deux ans pour mettre leurs statuts en harmonie. Le 30 janvier 2014 est seulement la date de son adoption.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Selon l'AUSCGIE révisé, le capital social minimum d'une société anonyme est de :",
+      "o": [
+        "1 000 000 FCFA",
+        "5 000 000 FCFA",
+        "10 000 000 FCFA",
+        "50 000 000 FCFA"
+      ],
+      "r": 2,
+      "x": "Le capital d'une société anonyme doit être d'au moins 10 000 000 FCFA. Le montant de 1 000 000 FCFA est le minimum prévu par l'Acte uniforme pour la SARL, sauf disposition nationale contraire. Les sociétés faisant appel public à l'épargne doivent avoir un capital plus élevé, d'au moins 100 000 000 FCFA.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Au Burkina Faso, depuis le décret n°2016-314 du 3 mai 2016, le capital social d'une SARL est :",
+      "o": [
+        "fixé à 100 000 FCFA au minimum",
+        "fixé librement par les associés",
+        "fixé à 1 000 000 FCFA au minimum",
+        "fixé à 10 000 000 FCFA au minimum"
+      ],
+      "r": 1,
+      "x": "Le décret de 2016 a supprimé le plancher de 100 000 FCFA fixé en 2014 : le capital est librement fixé par les associés. Une SARL peut ainsi être créée avec une seule part de 5 000 FCFA, nominal minimal prévu par l'Acte uniforme. Le montant de 1 000 000 FCFA est le minimum de l'Acte uniforme, qui s'applique sauf disposition nationale contraire.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Selon l'AUSCGIE révisé, la valeur nominale d'une part sociale de SARL ne peut être inférieure à :",
+      "o": [
+        "1 000 FCFA",
+        "5 000 FCFA",
+        "10 000 FCFA",
+        "50 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Le capital de la SARL est divisé en parts sociales égales d'au moins 5 000 FCFA chacune. Ce minimum s'applique même lorsque l'État laisse le capital librement fixé. Au Burkina Faso, une SARL peut donc être créée avec une seule part de 5 000 FCFA.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dans une société anonyme, les actions de numéraire doivent être libérées, lors de la souscription, d'au moins :",
+      "o": [
+        "le quart de leur valeur nominale",
+        "la moitié de leur valeur nominale",
+        "les trois quarts de leur valeur nominale",
+        "la totalité de leur valeur nominale"
+      ],
+      "r": 0,
+      "x": "Les actions de numéraire sont libérées d'un quart au moins de leur nominal à la souscription. Le reste est appelé ensuite par le conseil d'administration ou l'administrateur général. La totalité est exigée, en revanche, pour les actions d'apport en nature.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dans une société anonyme, la libération du surplus des actions de numéraire doit intervenir, à compter de l'immatriculation, dans un délai maximal de :",
+      "o": [
+        "un an",
+        "deux ans",
+        "trois ans",
+        "cinq ans"
+      ],
+      "r": 2,
+      "x": "Le surplus doit être libéré dans les trois ans suivant l'immatriculation au registre du commerce et du crédit mobilier. Les appels de fonds sont décidés par le conseil d'administration. Le délai de deux ans concerne la libération des parts de SARL.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dans une SARL régie par l'AUSCGIE révisé, les apports en numéraire doivent être libérés, à la souscription, d'au moins :",
+      "o": [
+        "le quart",
+        "la moitié",
+        "les trois quarts",
+        "la totalité"
+      ],
+      "r": 1,
+      "x": "La réforme de 2014 permet de ne libérer que la moitié des apports en numéraire à la constitution d'une SARL. Le solde doit être versé dans un délai de deux ans. Avant 2014, les parts de SARL devaient être intégralement libérées.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dans une société anonyme, les actions représentant des apports en nature sont libérées :",
+      "o": [
+        "intégralement dès leur émission",
+        "du quart au moins lors de la souscription",
+        "de moitié dans un délai de deux ans",
+        "selon un calendrier fixé par le conseil"
+      ],
+      "r": 0,
+      "x": "Les actions d'apport sont intégralement libérées dès leur émission, car le bien apporté est transmis en une seule fois. Seules les actions de numéraire peuvent être libérées en plusieurs fois. Leur valeur fait l'objet d'un contrôle particulier avant la constitution de la société.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dans une société anonyme de l'espace OHADA, les apports en industrie :",
+      "o": [
+        "ne peuvent pas être représentés par des actions",
+        "sont libérés du quart lors de la souscription",
+        "sont libérés intégralement dans les trois ans",
+        "donnent droit à des actions à dividende prioritaire"
+      ],
+      "r": 0,
+      "x": "L'AUSCGIE interdit que des actions représentent des apports en industrie, c'est-à-dire du travail ou un savoir-faire. Le capital d'une SA ne peut être formé que d'apports en numéraire ou en nature. L'apport en industrie est en revanche admis dans d'autres formes de sociétés.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Selon l'AUSCGIE, le commissaire aux comptes désigné par l'assemblée générale ordinaire exerce ses fonctions pendant :",
+      "o": [
+        "deux exercices",
+        "trois exercices",
+        "six exercices",
+        "neuf exercices"
+      ],
+      "r": 2,
+      "x": "Le commissaire aux comptes nommé par l'assemblée générale ordinaire est désigné pour six exercices sociaux. Celui qui est désigné dans les statuts ou par l'assemblée constitutive n'est nommé que pour deux exercices. Le remplaçant d'un commissaire ne reste en fonction que jusqu'à la fin du mandat de son prédécesseur.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le premier commissaire aux comptes d'une société anonyme, désigné dans les statuts, est nommé pour une durée de :",
+      "o": [
+        "un exercice",
+        "deux exercices",
+        "trois exercices",
+        "six exercices"
+      ],
+      "r": 1,
+      "x": "Les premiers commissaires aux comptes, désignés dans les statuts ou par l'assemblée constitutive, sont nommés pour deux exercices. Les nominations suivantes par l'assemblée générale ordinaire valent pour six exercices. Cette règle permet de revoir rapidement le choix fait à la création.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une société anonyme faisant publiquement appel à l'épargne doit désigner au moins :",
+      "o": [
+        "un commissaire aux comptes et un suppléant",
+        "trois commissaires aux comptes sans suppléant",
+        "deux commissaires aux comptes et deux suppléants",
+        "un commissaire aux comptes sans suppléant"
+      ],
+      "r": 2,
+      "x": "Les sociétés anonymes faisant appel public à l'épargne désignent au moins deux commissaires aux comptes et deux suppléants. Les autres sociétés anonymes en désignent au moins un, avec un suppléant. Le suppléant remplace le titulaire en cas d'empêchement.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "À la constitution d'une SA, la souscription du capital pour sa part non encore appelée se traduit par :",
+      "o": [
+        "Débit 1011 / Crédit 109",
+        "Débit 4613 / Crédit 1012",
+        "Débit 109 / Crédit 1011",
+        "Débit 521 / Crédit 1013"
+      ],
+      "r": 2,
+      "x": "La promesse d'apport non encore exigée est inscrite au débit du compte 109 Apporteurs, capital souscrit non appelé. En contrepartie, le sous-compte 1011 Capital souscrit, non appelé est crédité. Au bilan, le compte 109 vient en diminution du capital.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Lorsque le conseil d'administration appelle une nouvelle fraction du capital, la créance sur les actionnaires est débitée au compte :",
+      "o": [
+        "109",
+        "521",
+        "1012",
+        "4613"
+      ],
+      "r": 3,
+      "x": "L'appel rend la somme exigible : on débite le compte 4613 Apporteurs, capital appelé, non versé et on crédite le compte 109. Parallèlement, le capital passe du sous-compte 1011 au sous-compte 1012. Le compte 521 ne sera débité qu'au versement effectif.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le versement par les actionnaires des sommes appelées se traduit par :",
+      "o": [
+        "Débit 4613 / Crédit 521",
+        "Débit 521 / Crédit 109",
+        "Débit 521 / Crédit 4613",
+        "Débit 109 / Crédit 4613"
+      ],
+      "r": 2,
+      "x": "Les fonds reçus augmentent la banque, et la créance sur les actionnaires est soldée au crédit du compte 4613. Le capital passe ensuite du sous-compte 1012 au sous-compte 1013 Capital souscrit, appelé, versé. Le compte 109 a déjà été soldé lors de l'appel.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Lors d'une augmentation de capital, la prime d'émission correspond :",
+      "o": [
+        "à la différence entre valeur réelle et valeur nominale des anciennes actions",
+        "aux frais d'augmentation de capital supportés par la société",
+        "au dividende supplémentaire versé aux nouveaux actionnaires",
+        "à l'excédent du prix d'émission sur la valeur nominale"
+      ],
+      "r": 3,
+      "x": "La prime d'émission est la part du prix payé au-delà du nominal par les nouveaux actionnaires. Elle compense l'avantage qu'ils tirent des réserves accumulées avant leur entrée. Elle s'inscrit dans les capitaux propres, à côté du capital.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une société émet 5 000 actions nouvelles de nominal 10 000 FCFA au prix de 12 500 FCFA. La prime d'émission totale est de :",
+      "o": [
+        "2 500 000 FCFA",
+        "12 500 000 FCFA",
+        "50 000 000 FCFA",
+        "62 500 000 FCFA"
+      ],
+      "r": 1,
+      "x": "La prime par action est de 12 500 − 10 000 = 2 500 FCFA, soit 5 000 × 2 500 = 12 500 000 FCFA. L'augmentation du capital nominal est de 50 000 000 FCFA. Les 62 500 000 FCFA correspondent au total des fonds levés.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dans le plan de comptes SYSCOHADA, la prime d'émission est créditée à un compte de la série :",
+      "o": [
+        "104",
+        "105",
+        "106",
+        "111"
+      ],
+      "r": 1,
+      "x": "Le compte 105 Primes liées au capital social regroupe notamment les primes d'émission, d'apport et de fusion. Le compte 106 enregistre les écarts de réévaluation. Le compte 111 reçoit la réserve légale.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "La plus-value constatée lors d'une réévaluation des immobilisations est inscrite, dans les capitaux propres, au compte :",
+      "o": [
+        "105",
+        "106",
+        "111",
+        "151"
+      ],
+      "r": 1,
+      "x": "Le compte 106 Écarts de réévaluation enregistre la différence entre la valeur réévaluée et la valeur nette comptable. Cet écart n'est pas un bénéfice distribuable. Le compte 151 concerne les amortissements dérogatoires, qui sont des provisions réglementées.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Les réserves dont la constitution est imposée par les statuts de la société sont créditées au compte :",
+      "o": [
+        "111",
+        "112",
+        "113",
+        "118"
+      ],
+      "r": 1,
+      "x": "Le compte 112 Réserves statutaires ou contractuelles reçoit les réserves prévues par les statuts. Le compte 111 enregistre la réserve légale imposée par l'Acte uniforme et le compte 118 les autres réserves libres. Le compte 113 concerne les réserves réglementées.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une augmentation de capital par incorporation de réserves :",
+      "o": [
+        "augmente la trésorerie de la société",
+        "augmente les capitaux propres du montant incorporé",
+        "réduit les dettes envers les actionnaires",
+        "ne modifie pas le montant total des capitaux propres"
+      ],
+      "r": 3,
+      "x": "L'opération transfère des réserves vers le capital, à l'intérieur même des capitaux propres. Aucun fonds nouveau n'entre dans la société. Elle se traduit souvent par l'attribution d'actions gratuites aux actionnaires.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une augmentation de capital par conversion d'une dette fournisseur en actions a pour effet de :",
+      "o": [
+        "réduire les dettes et augmenter les capitaux propres",
+        "augmenter à la fois les dettes et la trésorerie",
+        "réduire la trésorerie et les capitaux propres",
+        "laisser les capitaux propres inchangés"
+      ],
+      "r": 0,
+      "x": "Le créancier devient actionnaire : la dette disparaît et le capital augmente du même montant. La trésorerie n'est pas modifiée, aucun fonds n'étant versé. L'endettement de la société diminue donc au profit de ses fonds propres.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une société dont les capitaux propres s'élèvent à 60 000 000 FCFA compte 4 000 actions. La valeur mathématique de l'action est de :",
+      "o": [
+        "10 000 FCFA",
+        "12 500 FCFA",
+        "15 000 FCFA",
+        "20 000 FCFA"
+      ],
+      "r": 2,
+      "x": "La valeur mathématique est égale aux capitaux propres divisés par le nombre d'actions : 60 000 000 ÷ 4 000 = 15 000 FCFA. Elle diffère de la valeur nominale, qui sert seulement à calculer le capital. Elle sert de base pour fixer le prix d'émission d'actions nouvelles.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Lors d'une augmentation de capital en numéraire, le droit préférentiel de souscription permet aux anciens actionnaires :",
+      "o": [
+        "de souscrire en priorité aux actions nouvelles",
+        "de recevoir un dividende prioritaire chaque année",
+        "d'être remboursés avant les créanciers en cas de faillite",
+        "de disposer d'un double droit de vote en assemblée"
+      ],
+      "r": 0,
+      "x": "Le droit préférentiel de souscription réserve en priorité les actions nouvelles aux actionnaires existants, au prorata de leurs actions. Il les protège contre la dilution de leur part dans le capital. Ce droit est négociable et l'assemblée peut le supprimer dans certaines conditions.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une réduction du capital social destinée à absorber des pertes antérieures se traduit par :",
+      "o": [
+        "Débit 101 / Crédit 129",
+        "Débit 129 / Crédit 101",
+        "Débit 101 / Crédit 521",
+        "Débit 111 / Crédit 101"
+      ],
+      "r": 0,
+      "x": "Le capital est diminué au débit du compte 101 et le report à nouveau débiteur est soldé au crédit du compte 129. Aucun remboursement n'est versé aux actionnaires, la trésorerie n'est donc pas touchée. Les capitaux propres restent globalement inchangés par cette écriture.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Lorsque les capitaux propres d'une société anonyme deviennent inférieurs à la moitié du capital social, l'AUSCGIE impose :",
+      "o": [
+        "de dissoudre immédiatement la société par décision du conseil",
+        "de doubler le capital social dans le délai d'un mois",
+        "de suspendre le paiement de toutes les dettes fournisseurs",
+        "de consulter les actionnaires sur une éventuelle dissolution anticipée"
+      ],
+      "r": 3,
+      "x": "Les actionnaires doivent être réunis en assemblée extraordinaire pour décider s'il y a lieu de dissoudre la société avant son terme. S'ils refusent la dissolution, la situation doit être régularisée dans un délai fixé par l'Acte uniforme. La dissolution n'est donc pas automatique.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Un emprunt obligataire émis par une société anonyme est crédité au compte :",
+      "o": [
+        "161",
+        "162",
+        "165",
+        "168"
+      ],
+      "r": 0,
+      "x": "Le compte 161 Emprunts obligataires enregistre les fonds levés auprès du public sous forme d'obligations. Le compte 162 concerne les emprunts auprès des établissements de crédit. Le compte 165 enregistre les dépôts et cautionnements reçus.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une société a émis 2 000 obligations de 50 000 FCFA de nominal au taux de 8 %. Les intérêts annuels s'élèvent à :",
+      "o": [
+        "800 000 FCFA",
+        "4 000 000 FCFA",
+        "8 000 000 FCFA",
+        "10 000 000 FCFA"
+      ],
+      "r": 2,
+      "x": "Le nominal total est de 2 000 × 50 000 = 100 000 000 FCFA, et 8 % de ce montant donnent 8 000 000 FCFA. Les intérêts se calculent sur la valeur nominale, même si l'obligation a été émise à un autre prix. Ils sont débités au compte 671 Intérêts des emprunts.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dans le SYSCOHADA révisé, un emprunt obligataire émis au-dessous du pair est inscrit au passif :",
+      "o": [
+        "pour le montant effectivement perçu par l'entité",
+        "pour sa valeur de remboursement à l'échéance",
+        "pour sa valeur nominale, la prime figurant à l'actif",
+        "pour le seul montant des intérêts à payer"
+      ],
+      "r": 0,
+      "x": "La réforme a supprimé l'inscription à l'actif des primes de remboursement : l'emprunt est enregistré pour le montant reçu. La différence avec la valeur de remboursement est ensuite rattachée à l'emprunt sur sa durée. L'ancien SYSCOHADA inscrivait cette prime en charges immobilisées.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Les amortissements dérogatoires, pratiqués pour des raisons fiscales au-delà de l'amortissement économique, sont inscrits parmi :",
+      "o": [
+        "les provisions réglementées",
+        "les amortissements de l'actif immobilisé",
+        "les provisions pour risques et charges",
+        "les dépréciations des immobilisations"
+      ],
+      "r": 0,
+      "x": "Les amortissements dérogatoires relèvent du compte 151 et figurent dans les capitaux propres et ressources assimilées. Ils ne correspondent à aucune usure réelle du bien. Ils permettent de bénéficier d'un avantage fiscal sans fausser l'amortissement économique.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dans les comptes consolidés, une filiale contrôlée de manière exclusive est consolidée selon la méthode :",
+      "o": [
+        "de l'intégration proportionnelle",
+        "de la mise en équivalence",
+        "du coût historique",
+        "de l'intégration globale"
+      ],
+      "r": 3,
+      "x": "Le contrôle exclusif conduit à reprendre la totalité des actifs, passifs, charges et produits de la filiale, en isolant la part des minoritaires. La mise en équivalence s'applique aux entités sous influence notable. Le coût historique est une règle d'évaluation, pas une méthode de consolidation.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "En consolidation, une entité sur laquelle le groupe exerce une influence notable est intégrée selon la méthode :",
+      "o": [
+        "de l'intégration globale",
+        "de l'intégration proportionnelle",
+        "de la valeur de marché",
+        "de la mise en équivalence"
+      ],
+      "r": 3,
+      "x": "La mise en équivalence remplace la valeur des titres par la quote-part des capitaux propres de l'entité, résultat compris. L'influence notable est présumée lorsque le groupe détient au moins 20 % des droits de vote. L'intégration globale est réservée aux entités contrôlées de manière exclusive.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "L'Acte uniforme relatif au système comptable des entités à but non lucratif (SYCEBNL) a été adopté à Niamey le :",
+      "o": [
+        "30 janvier 2014",
+        "26 janvier 2017",
+        "23 novembre 2017",
+        "22 décembre 2022"
+      ],
+      "r": 3,
+      "x": "Le SYCEBNL a été adopté lors de la 53e session du Conseil des ministres de l'OHADA, tenue à Niamey les 21 et 22 décembre 2022. Il est entré en vigueur le 1er janvier 2024. Le 23 novembre 2017 correspond à l'adoption de l'Acte uniforme sur la médiation, à Conakry.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le système comptable des entités à but non lucratif de l'OHADA s'applique depuis le :",
+      "o": [
+        "1er janvier 2018",
+        "1er janvier 2019",
+        "1er janvier 2023",
+        "1er janvier 2024"
+      ],
+      "r": 3,
+      "x": "Le SYCEBNL s'applique depuis le 1er janvier 2024 dans les 17 États parties. Le 1er janvier 2018 est la date d'entrée en vigueur du SYSCOHADA révisé pour les comptes personnels. Le 1er janvier 2019 concerne les comptes consolidés des entreprises.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Parmi les entités suivantes, celle qui relève du SYCEBNL est :",
+      "o": [
+        "une association de développement local",
+        "une société anonyme de distribution",
+        "une banque commerciale agréée",
+        "une compagnie d'assurance"
+      ],
+      "r": 0,
+      "x": "Le SYCEBNL vise les associations, fondations, ordres professionnels et projets de développement. Les sociétés commerciales appliquent le SYSCOHADA révisé. Les banques et les assurances relèvent de référentiels comptables particuliers.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le SYCEBNL impose à toute entité à but non lucratif de tenir :",
+      "o": [
+        "un registre du commerce et du crédit mobilier",
+        "un registre des titres nominatifs d'actions",
+        "un registre des donateurs coté et paraphé",
+        "un registre des obligataires de l'entité"
+      ],
+      "r": 2,
+      "x": "Le SYCEBNL rend obligatoire un registre des donateurs coté et paraphé, qui retrace l'origine des dons reçus. Cette exigence renforce la transparence sur les ressources des associations et ONG. Le registre du commerce concerne les commerçants et les sociétés.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une entité à but non lucratif soumise aux règles de la comptabilité publique applique :",
+      "o": [
+        "le SYCEBNL, qui prime sur la comptabilité publique",
+        "les règles de la comptabilité publique, et non le SYCEBNL",
+        "le SYSCOHADA révisé des entreprises commerciales",
+        "aucune règle comptable particulière"
+      ],
+      "r": 1,
+      "x": "Le SYCEBNL ne s'applique pas aux entités à but non lucratif soumises à la comptabilité publique ou à un régime comptable particulier. Il vise les associations, fondations, ordres professionnels et projets de développement relevant du droit privé. Le SYSCOHADA révisé est réservé aux entités à but lucratif.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le premier exposé imprimé de la comptabilité en partie double, la Summa de arithmetica de Luca Pacioli, a été publié en :",
+      "o": [
+        "1453",
+        "1494",
+        "1673",
+        "1807"
+      ],
+      "r": 1,
+      "x": "La Summa de arithmetica a été imprimée à Venise en 1494 et contient le premier exposé publié de la partie double. Pacioli décrivait une pratique déjà utilisée par les marchands vénitiens, qu'il n'a pas inventée. L'année 1673 correspond à l'ordonnance de Colbert sur le commerce et 1807 au Code de commerce français.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une assemblée décide de distribuer 6 000 000 FCFA de dividendes à 1 200 actions. Le dividende par action est de :",
+      "o": [
+        "2 000 FCFA",
+        "5 000 FCFA",
+        "6 000 FCFA",
+        "12 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Le dividende unitaire est égal au montant distribué divisé par le nombre d'actions : 6 000 000 ÷ 1 200 = 5 000 FCFA. Ce montant est brut, avant la retenue de l'impôt sur les revenus des capitaux mobiliers. La dette envers les actionnaires est créditée au compte 465.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Les statuts prévoient un intérêt statutaire de 5 % sur un capital libéré de 20 000 000 FCFA. Le premier dividende est de :",
+      "o": [
+        "500 000 FCFA",
+        "1 000 000 FCFA",
+        "2 000 000 FCFA",
+        "5 000 000 FCFA"
+      ],
+      "r": 1,
+      "x": "L'intérêt statutaire se calcule sur le capital libéré : 20 000 000 × 5 % = 1 000 000 FCFA. Il est versé en priorité, avant la répartition du superdividende. Il ne peut être payé que s'il existe un bénéfice distribuable suffisant.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Lors du paiement des dividendes, l'impôt retenu à la source par la société sur ces dividendes est crédité au compte :",
+      "o": [
+        "441",
+        "447",
+        "465",
+        "641"
+      ],
+      "r": 1,
+      "x": "La société collecte cet impôt pour le compte de l'État et le crédite au compte 447 État, impôts retenus à la source. Seul le dividende net est versé aux actionnaires. Le compte 441 est réservé à l'impôt sur les bénéfices de la société elle-même.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le bénéfice distribuable d'une société est constitué par le bénéfice de l'exercice :",
+      "o": [
+        "augmenté des pertes antérieures et des réserves obligatoires, diminué du report bénéficiaire",
+        "diminué seulement de l'impôt sur les sociétés et des dividendes déjà votés",
+        "augmenté de toutes les réserves libres et du capital non encore appelé",
+        "diminué des pertes antérieures et des réserves obligatoires, augmenté du report bénéficiaire"
+      ],
+      "r": 3,
+      "x": "Le bénéfice distribuable tient compte des pertes à combler et des réserves que la loi ou les statuts imposent. Le report à nouveau bénéficiaire des exercices antérieurs vient s'y ajouter. Distribuer au-delà constituerait une distribution de dividendes fictifs.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Selon l'AUSCGIE, le groupement d'intérêt économique (GIE) a pour but :",
+      "o": [
+        "de réaliser des bénéfices pour son propre compte",
+        "de remplacer ses membres dans l'ensemble de leurs activités",
+        "de collecter et gérer l'épargne du public",
+        "de faciliter ou développer l'activité économique de ses membres"
+      ],
+      "r": 3,
+      "x": "Le GIE prolonge l'activité de ses membres, par exemple pour des achats groupés ou une logistique commune. Il n'a pas pour objet de réaliser des bénéfices pour lui-même. Ses membres restent indépendants et poursuivent leur propre activité.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Selon l'AUSCGIE révisé, le nombre minimum d'actionnaires d'une société anonyme est de :",
+      "o": [
+        "un",
+        "deux",
+        "sept",
+        "dix"
+      ],
+      "r": 0,
+      "x": "L'Acte uniforme admet la société anonyme unipersonnelle, constituée par un seul actionnaire. Le minimum de sept actionnaires est une règle du droit français, que l'OHADA n'a pas retenue. L'actionnaire unique exerce alors les pouvoirs de l'assemblée générale.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Selon l'AUSCGIE, une société anonyme est administrée soit par un conseil d'administration, soit par :",
+      "o": [
+        "un administrateur général",
+        "un gérant statutaire",
+        "un directoire",
+        "un comité de direction"
+      ],
+      "r": 0,
+      "x": "Les statuts choisissent entre la SA avec conseil d'administration et la SA avec administrateur général. Le gérant est l'organe de direction de la SARL. Le directoire est une forme d'administration du droit français, non prévue pour la SA de l'OHADA.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une société à responsabilité limitée (SARL) est dirigée par :",
+      "o": [
+        "un ou plusieurs gérants",
+        "un conseil d'administration",
+        "un administrateur général",
+        "un président du directoire"
+      ],
+      "r": 0,
+      "x": "La gérance de la SARL est confiée à une ou plusieurs personnes physiques, associées ou non. Le conseil d'administration et l'administrateur général sont propres à la société anonyme. Les gérants sont nommés par les statuts ou par les associés.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dans une société en nom collectif (SNC), les associés répondent des dettes sociales :",
+      "o": [
+        "dans la limite de leurs apports",
+        "seulement en cas de faute de gestion",
+        "à hauteur du quart du capital social",
+        "indéfiniment et solidairement"
+      ],
+      "r": 3,
+      "x": "Les associés de la SNC ont tous la qualité de commerçant et répondent des dettes sur leur patrimoine personnel. Un créancier peut réclamer la totalité de la dette à l'un d'eux. La responsabilité limitée aux apports caractérise la SARL et la SA.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Depuis la réforme de l'AUSCGIE de 2014, la valeur nominale des actions d'une société anonyme est :",
+      "o": [
+        "d'au moins 10 000 FCFA",
+        "d'au moins 5 000 FCFA",
+        "d'au moins 1 000 FCFA",
+        "fixée librement par les statuts"
+      ],
+      "r": 3,
+      "x": "L'Acte uniforme révisé laisse aux statuts le choix du montant nominal des actions. L'ancien texte imposait un nominal d'au moins 10 000 FCFA. Le minimum de 5 000 FCFA concerne les parts sociales de SARL.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dans une société anonyme, les apports en nature sont évalués, sous sa responsabilité, par :",
+      "o": [
+        "un commissaire aux apports",
+        "le commissaire aux comptes de la société",
+        "l'expert-comptable chargé de la comptabilité",
+        "le greffier du tribunal de commerce"
+      ],
+      "r": 0,
+      "x": "Le commissaire aux apports apprécie la valeur des biens apportés et rédige un rapport destiné aux actionnaires. Il protège les autres associés et les créanciers contre une surévaluation des apports. Le commissaire aux comptes contrôle, lui, les comptes annuels de la société.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "La comptabilité analytique de gestion a pour objectif principal :",
+      "o": [
+        "de calculer les coûts et d'analyser la rentabilité des produits ou activités",
+        "d'établir le bilan et le compte de résultat destinés aux tiers",
+        "de déterminer le montant de l'impôt sur les sociétés à payer",
+        "d'enregistrer chronologiquement toutes les opérations avec les tiers"
+      ],
+      "r": 0,
+      "x": "La comptabilité analytique est un outil interne qui calcule les coûts par produit, par activité ou par fonction. Elle aide les dirigeants à fixer les prix et à choisir les activités rentables. Les états financiers destinés aux tiers relèvent de la comptabilité générale.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dans l'espace OHADA, la tenue d'une comptabilité analytique de gestion est :",
+      "o": [
+        "obligatoire pour toutes les entités commerciales",
+        "facultative, selon les besoins de l'entité",
+        "obligatoire pour les seules sociétés anonymes",
+        "obligatoire pour les seules entités du système normal"
+      ],
+      "r": 1,
+      "x": "Le droit comptable OHADA rend obligatoire la comptabilité générale, mais laisse l'analytique au choix de l'entité. Le plan de comptes réserve à cet usage les comptes de la classe 9. Chaque entité organise donc son analytique selon ses besoins de gestion.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Parmi les charges suivantes, celle qui est normalement non incorporable aux coûts est :",
+      "o": [
+        "le loyer de l'atelier de fabrication",
+        "le salaire des ouvriers de production",
+        "l'électricité consommée par les machines",
+        "une amende fiscale"
+      ],
+      "r": 3,
+      "x": "Une amende fiscale ne correspond pas à l'activité normale de production : elle est exclue des coûts. Il en va de même des charges hors activités ordinaires. Le loyer, les salaires et l'énergie de l'atelier entrent au contraire dans le coût de production.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "En comptabilité analytique, la rémunération du travail de l'exploitant individuel, qui n'apparaît pas en comptabilité générale, est une charge :",
+      "o": [
+        "non incorporable",
+        "supplétive",
+        "directe variable",
+        "hors activités ordinaires"
+      ],
+      "r": 1,
+      "x": "Une charge supplétive est ajoutée aux coûts alors qu'elle ne figure pas en comptabilité générale. Elle permet de comparer les coûts d'une entreprise individuelle avec ceux d'une société qui paie ses dirigeants. La rémunération des capitaux propres est un autre exemple classique.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Charges de la comptabilité générale : 40 000 000 FCFA ; charges non incorporables : 1 200 000 FCFA ; charges supplétives : 2 000 000 FCFA. Les charges incorporées aux coûts s'élèvent à :",
+      "o": [
+        "36 800 000 FCFA",
+        "38 800 000 FCFA",
+        "40 800 000 FCFA",
+        "43 200 000 FCFA"
+      ],
+      "r": 2,
+      "x": "On retire les charges non incorporables et on ajoute les charges supplétives : 40 000 000 − 1 200 000 + 2 000 000 = 40 800 000 FCFA. Le montant de 36 800 000 FCFA retranche à tort les charges supplétives. Le montant de 43 200 000 FCFA ajoute à tort les charges non incorporables.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Un centre d'analyse dont les prestations servent surtout aux autres centres, comme l'entretien ou l'énergie, est un centre :",
+      "o": [
+        "auxiliaire",
+        "principal",
+        "de production",
+        "de distribution"
+      ],
+      "r": 0,
+      "x": "Les centres auxiliaires travaillent pour les autres centres et leurs coûts sont ensuite répartis sur eux. Les centres principaux, comme l'approvisionnement, la production ou la distribution, imputent leurs coûts directement aux produits. Cette distinction structure le tableau de répartition des charges indirectes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dans le tableau de répartition des charges indirectes, la répartition primaire consiste à :",
+      "o": [
+        "transférer les centres auxiliaires vers les centres principaux",
+        "imputer le coût des centres principaux aux produits",
+        "calculer le résultat analytique de chaque produit",
+        "ventiler les charges indirectes entre tous les centres d'analyse"
+      ],
+      "r": 3,
+      "x": "La répartition primaire distribue les charges indirectes entre centres auxiliaires et principaux, à l'aide de clés de répartition. La répartition secondaire vide ensuite les centres auxiliaires dans les centres principaux. L'imputation aux produits se fait enfin grâce aux unités d'œuvre.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "La répartition secondaire des charges indirectes consiste à :",
+      "o": [
+        "ventiler les charges par nature entre tous les centres",
+        "répartir le total des centres auxiliaires sur les centres principaux",
+        "affecter les charges directes aux produits fabriqués",
+        "calculer le coût de l'unité d'œuvre de chaque centre auxiliaire"
+      ],
+      "r": 1,
+      "x": "Après la répartition secondaire, les centres auxiliaires ont un total nul, leurs coûts étant reportés sur les centres principaux. Seuls les centres principaux portent alors des charges à imputer aux produits. La ventilation des charges par nature correspond à la répartition primaire.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "L'unité qui mesure l'activité d'un centre principal et sert à imputer son coût aux produits, comme l'heure-machine, est :",
+      "o": [
+        "l'assiette de frais",
+        "la clé de répartition primaire",
+        "l'unité d'œuvre",
+        "le coût unitaire de revient"
+      ],
+      "r": 2,
+      "x": "L'unité d'œuvre est une unité physique, comme l'heure-machine ou le kilogramme traité, qui mesure l'activité du centre. Lorsque l'activité est mesurée en valeur, on parle plutôt d'assiette de frais. Les clés de répartition servent aux répartitions primaire et secondaire, tandis que l'unité d'œuvre impute le coût des centres principaux aux produits.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le centre Usinage totalise 4 800 000 FCFA après répartition secondaire, pour 1 600 heures-machine. Le coût de l'unité d'œuvre est de :",
+      "o": [
+        "1 500 FCFA",
+        "3 000 FCFA",
+        "4 800 FCFA",
+        "6 400 FCFA"
+      ],
+      "r": 1,
+      "x": "Le coût de l'unité d'œuvre est égal au total du centre divisé par le nombre d'unités : 4 800 000 ÷ 1 600 = 3 000 FCFA. Chaque produit reçoit ensuite 3 000 FCFA par heure-machine consommée. Le montant de 1 500 FCFA divise à tort par le double des heures.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le centre Distribution totalise 1 200 000 FCFA ; son assiette est le chiffre d'affaires de 40 000 000 FCFA. Le taux de frais est de :",
+      "o": [
+        "0,3 %",
+        "3 %",
+        "30 %",
+        "33 %"
+      ],
+      "r": 1,
+      "x": "Le taux de frais est égal au coût du centre divisé par l'assiette : 1 200 000 ÷ 40 000 000 = 3 %. Chaque produit supporte donc 3 FCFA de frais de distribution pour 100 FCFA vendus. Les taux de 0,3 % et 30 % résultent d'une erreur de virgule.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le centre Entretien totalise 700 000 FCFA et reçoit 20 % du centre Énergie ; le centre Énergie totalise 1 250 000 FCFA et reçoit 25 % du centre Entretien. Après prestations réciproques, le total du centre Entretien est de :",
+      "o": [
+        "700 000 FCFA",
+        "950 000 FCFA",
+        "1 000 000 FCFA",
+        "1 500 000 FCFA"
+      ],
+      "r": 2,
+      "x": "On résout le système E = 700 000 + 0,20 N et N = 1 250 000 + 0,25 E, qui donne E = 1 000 000 FCFA et N = 1 500 000 FCFA. Le montant de 950 000 FCFA oublie la réciprocité en ajoutant seulement 20 % de 1 250 000 FCFA. Le montant de 1 500 000 FCFA correspond au total du centre Énergie.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une entreprise achète 2 000 kg de matières pour 5 000 000 FCFA ; les frais d'approvisionnement imputés s'élèvent à 400 000 FCFA. Le coût d'achat unitaire est de :",
+      "o": [
+        "2 500 FCFA",
+        "2 600 FCFA",
+        "2 700 FCFA",
+        "2 900 FCFA"
+      ],
+      "r": 2,
+      "x": "Le coût d'achat comprend le prix d'achat et les frais d'approvisionnement : (5 000 000 + 400 000) ÷ 2 000 = 2 700 FCFA. Le montant de 2 500 FCFA oublie les frais d'approvisionnement. Ce coût sert à évaluer les entrées en stock de matières.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le coût de production d'un produit comprend notamment :",
+      "o": [
+        "le prix de vente, les remises accordées et la TVA facturée",
+        "les frais de distribution, de publicité et de livraison aux clients",
+        "les seules charges fixes de l'atelier et les dotations aux amortissements",
+        "les matières consommées, la main-d'œuvre directe et les charges indirectes de production"
+      ],
+      "r": 3,
+      "x": "Le coût de production comprend les matières consommées, la main-d'œuvre directe et les charges indirectes de production. Les frais de distribution sont exclus du coût de production et interviennent dans le calcul du coût de revient. La TVA récupérable est exclue des coûts, contrairement à la TVA non récupérable qui peut être incorporée au coût d'acquisition.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Matières consommées : 6 000 000 FCFA ; main-d'œuvre directe : 3 000 000 FCFA ; centres de production : 2 500 000 FCFA ; en-cours initial : 500 000 FCFA ; en-cours final : 800 000 FCFA. Le coût de production des produits terminés est de :",
+      "o": [
+        "10 700 000 FCFA",
+        "11 200 000 FCFA",
+        "11 500 000 FCFA",
+        "11 800 000 FCFA"
+      ],
+      "r": 1,
+      "x": "On ajoute l'en-cours initial et on retire l'en-cours final : 6 000 000 + 3 000 000 + 2 500 000 + 500 000 − 800 000 = 11 200 000 FCFA. Le montant de 11 500 000 FCFA ignore les en-cours. Le montant de 11 800 000 FCFA inverse les deux en-cours.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Coût de production des produits vendus : 15 000 000 FCFA ; coûts de distribution : 2 000 000 FCFA ; chiffre d'affaires : 20 000 000 FCFA. Le résultat analytique est de :",
+      "o": [
+        "2 000 000 FCFA",
+        "3 000 000 FCFA",
+        "5 000 000 FCFA",
+        "17 000 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Le coût de revient est de 15 000 000 + 2 000 000 = 17 000 000 FCFA, d'où un résultat analytique de 20 000 000 − 17 000 000 = 3 000 000 FCFA. Le montant de 5 000 000 FCFA oublie les coûts de distribution. Le montant de 17 000 000 FCFA correspond au coût de revient.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Résultat analytique : 5 000 000 FCFA ; charges non incorporables : 300 000 FCFA ; charges supplétives : 800 000 FCFA. Le résultat de la comptabilité générale est de :",
+      "o": [
+        "3 900 000 FCFA",
+        "4 500 000 FCFA",
+        "5 500 000 FCFA",
+        "6 100 000 FCFA"
+      ],
+      "r": 2,
+      "x": "Le résultat général est égal au résultat analytique, plus les charges supplétives, moins les charges non incorporables : 5 000 000 + 800 000 − 300 000 = 5 500 000 FCFA. Les charges supplétives ont réduit le résultat analytique sans exister en comptabilité générale. Le montant de 4 500 000 FCFA inverse les deux corrections.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une entreprise réalise un chiffre d'affaires de 32 000 000 FCFA pour 24 000 000 FCFA de charges variables. Son taux de marge sur coût variable est de :",
+      "o": [
+        "25 %",
+        "33,3 %",
+        "66,7 %",
+        "75 %"
+      ],
+      "r": 0,
+      "x": "La marge sur coût variable est de 32 000 000 − 24 000 000 = 8 000 000 FCFA, soit 8 000 000 ÷ 32 000 000 = 25 % du chiffre d'affaires. Le taux de 33,3 % rapporte à tort la marge aux charges variables. Le taux de 75 % correspond à la part des charges variables.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le seuil de rentabilité est de 18 000 000 FCFA pour un chiffre d'affaires annuel de 24 000 000 FCFA, réalisé régulièrement à partir du 1er janvier. Le point mort est atteint le :",
+      "o": [
+        "31 juillet",
+        "31 août",
+        "30 septembre",
+        "31 octobre"
+      ],
+      "r": 2,
+      "x": "Le seuil représente 18 000 000 ÷ 24 000 000 = 0,75 de l'année, soit 0,75 × 12 = 9 mois. Le point mort est donc atteint à la fin du neuvième mois, le 30 septembre. Au-delà de cette date, chaque vente dégage un bénéfice.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une entreprise réalise un chiffre d'affaires de 40 000 000 FCFA pour un seuil de rentabilité de 30 000 000 FCFA. Sa marge de sécurité est de :",
+      "o": [
+        "7 500 000 FCFA",
+        "10 000 000 FCFA",
+        "13 333 333 FCFA",
+        "70 000 000 FCFA"
+      ],
+      "r": 1,
+      "x": "La marge de sécurité est égale au chiffre d'affaires moins le seuil de rentabilité : 40 000 000 − 30 000 000 = 10 000 000 FCFA. Elle mesure la baisse des ventes que l'entreprise peut supporter avant de subir une perte. Le montant de 70 000 000 FCFA additionne à tort les deux montants.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une entreprise réalise 50 000 000 FCFA de chiffre d'affaires avec une marge de sécurité de 10 000 000 FCFA. Son indice de sécurité est de :",
+      "o": [
+        "16,7 %",
+        "20 %",
+        "25 %",
+        "80 %"
+      ],
+      "r": 1,
+      "x": "L'indice de sécurité rapporte la marge de sécurité au chiffre d'affaires : 10 000 000 ÷ 50 000 000 = 20 %. Les ventes peuvent donc baisser de 20 % avant que l'entreprise ne perde de l'argent. Le taux de 80 % correspond à la part du seuil de rentabilité dans le chiffre d'affaires.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une entreprise dégage une marge sur coût variable de 12 000 000 FCFA et un résultat de 3 000 000 FCFA. Son levier opérationnel est de :",
+      "o": [
+        "0,25",
+        "3",
+        "4",
+        "9"
+      ],
+      "r": 2,
+      "x": "Le levier opérationnel est égal à la marge sur coût variable divisée par le résultat : 12 000 000 ÷ 3 000 000 = 4. Une hausse de 10 % du chiffre d'affaires entraîne alors une hausse de 40 % du résultat. Plus les charges fixes sont élevées, plus ce levier est fort.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "En comptabilité analytique, les matières premières consommées pour chaque unité produite sont des charges :",
+      "o": [
+        "fixes",
+        "supplétives",
+        "de structure",
+        "variables"
+      ],
+      "r": 3,
+      "x": "La consommation de matières augmente avec le nombre d'unités produites : c'est une charge variable. Les charges de structure, comme les loyers, sont au contraire fixes à court terme. Une charge supplétive n'existe pas en comptabilité générale.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une charge affectée sans calcul intermédiaire au coût d'un seul produit est une charge :",
+      "o": [
+        "indirecte",
+        "supplétive",
+        "non incorporable",
+        "directe"
+      ],
+      "r": 3,
+      "x": "Une charge directe se rattache immédiatement à un produit, comme la matière utilisée pour le fabriquer. Une charge indirecte concerne plusieurs produits et doit passer par les centres d'analyse. Les charges supplétives et non incorporables relèvent d'une autre distinction.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Charges fixes : 10 000 000 FCFA ; activité réelle : 900 heures ; activité normale : 1 000 heures. En imputation rationnelle, le coût de sous-activité est de :",
+      "o": [
+        "100 000 FCFA",
+        "900 000 FCFA",
+        "1 000 000 FCFA",
+        "9 000 000 FCFA"
+      ],
+      "r": 2,
+      "x": "Le coefficient d'imputation rationnelle est de 900 ÷ 1 000 = 0,9, d'où 9 000 000 FCFA de charges fixes imputées aux coûts. Les 10 000 000 − 9 000 000 = 1 000 000 FCFA restants constituent le coût de sous-activité. Ce coût est supporté par l'entreprise et non par les produits.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "En comptabilité de gestion, le coût marginal est :",
+      "o": [
+        "le coût de production d'une unité supplémentaire",
+        "le coût moyen de toutes les unités produites",
+        "le total des charges fixes de l'exercice",
+        "la différence entre prix de vente et coût de revient"
+      ],
+      "r": 0,
+      "x": "Le coût marginal mesure le supplément de charges entraîné par la dernière unité produite. Il aide à décider s'il est rentable d'accepter une commande supplémentaire. La différence entre prix de vente et coût de revient correspond au résultat unitaire.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Prévision : 1 000 kg de matières à 2 000 FCFA ; réalisation : 1 050 kg à 1 900 FCFA. L'écart sur prix des matières est :",
+      "o": [
+        "défavorable de 105 000 FCFA",
+        "favorable de 100 000 FCFA",
+        "favorable de 105 000 FCFA",
+        "défavorable de 100 000 FCFA"
+      ],
+      "r": 2,
+      "x": "L'écart sur prix se calcule sur la quantité réelle : (1 900 − 2 000) × 1 050 = −105 000 FCFA, soit un écart favorable. L'écart sur quantité est de (1 050 − 1 000) × 2 000 = 100 000 FCFA défavorable. Les deux écarts réunis donnent un écart global favorable de 5 000 FCFA.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Prévision : 500 heures de main-d'œuvre à 1 500 FCFA l'heure ; réalisation : 480 heures. L'écart sur quantité de main-d'œuvre est :",
+      "o": [
+        "défavorable de 30 000 FCFA",
+        "favorable de 30 000 FCFA",
+        "favorable de 750 000 FCFA",
+        "défavorable de 720 000 FCFA"
+      ],
+      "r": 1,
+      "x": "L'écart sur quantité se calcule au taux préétabli : (480 − 500) × 1 500 = −30 000 FCFA, soit un écart favorable. Moins d'heures ont été utilisées que prévu pour la même production. Les montants de 720 000 et 750 000 FCFA valorisent les heures réelles et prévues au taux préétabli.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "La méthode des coûts à base d'activités (méthode ABC) répartit les charges indirectes en fonction :",
+      "o": [
+        "du seul volume de production de chaque produit",
+        "des activités consommées et de leurs inducteurs de coûts",
+        "du prix de vente de chaque produit fabriqué",
+        "du nombre de salariés présents dans chaque centre"
+      ],
+      "r": 1,
+      "x": "La méthode ABC regroupe les charges par activités, puis les impute aux produits selon des inducteurs, comme le nombre de commandes ou de lots. Elle corrige les distorsions des répartitions fondées sur le seul volume. Elle convient aux entreprises qui fabriquent beaucoup de produits différents.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Un commerçant applique un taux de marque de 20 % sur un article dont le coût d'achat est de 8 000 FCFA. Le prix de vente hors taxes est de :",
+      "o": [
+        "9 600 FCFA",
+        "10 000 FCFA",
+        "12 000 FCFA",
+        "16 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Le taux de marque se calcule sur le prix de vente : PV = 8 000 ÷ (1 − 0,20) = 10 000 FCFA. Le montant de 9 600 FCFA applique à tort 20 % au coût d'achat, ce qui correspond à un taux de marge. La marge unitaire est donc de 2 000 FCFA.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Un article acheté 12 000 FCFA HT est revendu 15 000 FCFA HT. Le taux de marge est de :",
+      "o": [
+        "20 %",
+        "25 %",
+        "80 %",
+        "125 %"
+      ],
+      "r": 1,
+      "x": "Le taux de marge rapporte la marge au coût d'achat : (15 000 − 12 000) ÷ 12 000 = 25 %. Le taux de 20 % rapporte la marge au prix de vente : c'est le taux de marque. Les deux taux ne doivent pas être confondus.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Un article coûte 10 000 FCFA HT à l'achat et se vend 14 160 FCFA TTC, avec une TVA de 18 %. Le coefficient multiplicateur est de :",
+      "o": [
+        "1,18",
+        "1,20",
+        "1,416",
+        "1,60"
+      ],
+      "r": 2,
+      "x": "Le coefficient multiplicateur fait passer du coût d'achat HT au prix de vente TTC : 14 160 ÷ 10 000 = 1,416. Le prix de vente HT est de 14 160 ÷ 1,18 = 12 000 FCFA. Le coefficient de 1,20 ne tient pas compte de la TVA.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le coût de sous-activité correspond :",
+      "o": [
+        "aux charges variables supplémentaires d'une activité supérieure à la normale",
+        "aux charges supplétives ajoutées aux coûts de l'exercice",
+        "aux charges non incorporables exclues des coûts de l'exercice",
+        "aux charges fixes non absorbées en raison d'une activité inférieure à la normale"
+      ],
+      "r": 3,
+      "x": "Quand l'activité réelle est inférieure à l'activité normale, une partie des charges fixes n'est pas imputée aux produits. Cette partie constitue le coût de sous-activité, qui traduit un gaspillage de capacité. Une activité supérieure à la normale donne au contraire un boni de suractivité.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "En gestion des stocks, le stock d'alerte est le niveau de stock qui déclenche :",
+      "o": [
+        "l'arrêt immédiat de toutes les ventes de l'article",
+        "le passage d'une nouvelle commande au fournisseur",
+        "la constatation d'une dépréciation du stock",
+        "l'inventaire physique de fin d'exercice"
+      ],
+      "r": 1,
+      "x": "Le stock d'alerte tient compte de la consommation pendant le délai de livraison, augmentée du stock de sécurité. Quand le stock descend à ce niveau, il faut commander pour éviter la rupture. La dépréciation et l'inventaire de fin d'exercice relèvent de la comptabilité générale.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "En gestion, le budget est :",
+      "o": [
+        "le relevé des opérations réalisées au cours de l'exercice écoulé",
+        "la liste des immobilisations figurant à l'actif du bilan",
+        "une prévision chiffrée des recettes et des dépenses d'une période future",
+        "le document de synthèse publié après la clôture des comptes"
+      ],
+      "r": 2,
+      "x": "Le budget traduit en chiffres les objectifs de l'entreprise pour une période à venir, souvent l'année. Il sert ensuite de référence pour mesurer les écarts avec les réalisations. Le relevé des opérations passées relève de la comptabilité générale.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Les ventes de janvier s'élèvent à 1 000 000 FCFA TTC, encaissées pour 40 % au comptant et pour 60 % à 30 jours. Dans le budget de trésorerie, les encaissements de février provenant de ces ventes s'élèvent à :",
+      "o": [
+        "400 000 FCFA",
+        "600 000 FCFA",
+        "1 000 000 FCFA",
+        "1 180 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Les 60 % payés à 30 jours sont encaissés le mois suivant : 1 000 000 × 60 % = 600 000 FCFA en février. Les 400 000 FCFA payés comptant sont encaissés dès janvier. Le budget de trésorerie retient les montants TTC, car c'est ce que le client paie réellement.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le contrôle budgétaire consiste à :",
+      "o": [
+        "enregistrer les factures dans les journaux auxiliaires",
+        "vérifier la régularité des comptes pour le compte des actionnaires",
+        "comparer les réalisations aux prévisions et analyser les écarts",
+        "établir la déclaration annuelle de l'impôt sur les sociétés"
+      ],
+      "r": 2,
+      "x": "Le contrôle budgétaire mesure les écarts entre ce qui était prévu et ce qui s'est réellement passé. Il permet d'en chercher les causes et de prendre des mesures correctrices. La vérification des comptes pour les actionnaires est la mission du commissaire aux comptes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Charges fixes : 6 000 000 FCFA ; prix de vente unitaire : 5 000 FCFA ; coût variable unitaire : 3 000 FCFA. Le seuil de rentabilité en quantité est de :",
+      "o": [
+        "1 200 unités",
+        "2 000 unités",
+        "3 000 unités",
+        "6 000 unités"
+      ],
+      "r": 2,
+      "x": "La marge sur coût variable unitaire est de 5 000 − 3 000 = 2 000 FCFA, d'où un seuil de 6 000 000 ÷ 2 000 = 3 000 unités. Le résultat de 1 200 unités divise à tort par le prix de vente. Le résultat de 2 000 unités divise à tort par le coût variable unitaire.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Prix de vente unitaire : 8 000 FCFA ; coût variable unitaire : 5 000 FCFA ; charges fixes : 9 000 000 FCFA ; quantité vendue : 4 000 unités. Le résultat est de :",
+      "o": [
+        "3 000 000 FCFA",
+        "12 000 000 FCFA",
+        "23 000 000 FCFA",
+        "32 000 000 FCFA"
+      ],
+      "r": 0,
+      "x": "La marge sur coût variable est de 4 000 × (8 000 − 5 000) = 12 000 000 FCFA, d'où un résultat de 12 000 000 − 9 000 000 = 3 000 000 FCFA. Le montant de 12 000 000 FCFA oublie les charges fixes. Le montant de 32 000 000 FCFA correspond au chiffre d'affaires.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une charge dont une partie est fixe et l'autre varie avec l'activité, comme une facture d'électricité avec abonnement, est une charge :",
+      "o": [
+        "semi-variable",
+        "supplétive",
+        "non incorporable",
+        "directe fixe"
+      ],
+      "r": 0,
+      "x": "La charge semi-variable combine une partie fixe, l'abonnement, et une partie variable, la consommation. En analytique, on la décompose pour séparer ces deux éléments. Cette décomposition est indispensable pour calculer le seuil de rentabilité.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "La méthode des coûts complets consiste à :",
+      "o": [
+        "incorporer aux coûts l'ensemble des charges, directes et indirectes",
+        "n'imputer aux produits que les charges variables",
+        "n'imputer aux produits que les charges directes",
+        "exclure des coûts toutes les charges de production"
+      ],
+      "r": 0,
+      "x": "Les coûts complets intègrent toutes les charges incorporables, qu'elles soient directes ou indirectes, fixes ou variables. Ils permettent de comparer le coût de revient au prix de vente. La méthode du coût variable n'impute au contraire que les charges variables.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "La méthode du coût variable, ou direct costing simple, impute aux produits :",
+      "o": [
+        "l'ensemble des charges fixes et variables",
+        "les seules charges fixes de structure",
+        "les seules charges supplétives",
+        "les seules charges variables"
+      ],
+      "r": 3,
+      "x": "Le direct costing n'impute que les charges variables et traite les charges fixes globalement, en bloc. Il fait apparaître la marge sur coût variable de chaque produit. Cette marge doit ensuite couvrir l'ensemble des charges fixes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dans la méthode ABC, le nombre de commandes passées aux fournisseurs est un exemple :",
+      "o": [
+        "de charge directe du produit vendu",
+        "de charge supplétive de l'exercice",
+        "de clé de répartition du chiffre d'affaires",
+        "d'inducteur de coût de l'activité achats"
+      ],
+      "r": 3,
+      "x": "L'inducteur explique la consommation de ressources d'une activité : plus il y a de commandes, plus l'activité achats coûte cher. Le coût de l'activité est divisé par le nombre d'inducteurs pour obtenir un coût unitaire. Chaque produit supporte ensuite ce coût selon les commandes qu'il génère.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le coût de production total d'une série de 3 200 unités s'élève à 9 600 000 FCFA. Le coût de production unitaire est de :",
+      "o": [
+        "2 800 FCFA",
+        "3 000 FCFA",
+        "3 200 FCFA",
+        "3 400 FCFA"
+      ],
+      "r": 1,
+      "x": "Le coût unitaire est égal au coût total divisé par la quantité : 9 600 000 ÷ 3 200 = 3 000 FCFA. Ce coût sert à valoriser l'entrée des produits finis en stock. Il est comparé au prix de vente pour juger de la rentabilité.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le prix de cession interne est :",
+      "o": [
+        "le prix de vente pratiqué auprès des clients extérieurs",
+        "le prix de revente d'une immobilisation sortie de l'actif",
+        "le prix d'achat payé aux fournisseurs étrangers",
+        "le prix auquel une division vend un bien ou un service à une autre division"
+      ],
+      "r": 3,
+      "x": "Le prix de cession interne valorise les échanges entre centres d'une même entreprise. Il permet de mesurer la performance de chaque division comme si elle était autonome. Il n'entraîne aucune facturation à un tiers extérieur.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Un centre de responsabilité dont le responsable est jugé sur la différence entre ses produits et ses charges est :",
+      "o": [
+        "un centre de profit",
+        "un centre de coûts",
+        "un centre auxiliaire",
+        "un centre de répartition"
+      ],
+      "r": 0,
+      "x": "Le responsable d'un centre de profit maîtrise à la fois ses ventes et ses charges, et répond de leur différence. Le responsable d'un centre de coûts n'est jugé que sur les charges qu'il engage. Le centre auxiliaire est une notion du calcul des coûts, pas du contrôle de gestion.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le tableau de bord de gestion est :",
+      "o": [
+        "un ensemble d'indicateurs clés suivis régulièrement par les responsables",
+        "le livre où sont enregistrées les écritures de fin d'exercice",
+        "la liste des comptes utilisés dans le plan comptable de l'entité",
+        "l'état financier qui détaille les flux de trésorerie de l'exercice"
+      ],
+      "r": 0,
+      "x": "Le tableau de bord rassemble quelques indicateurs essentiels, comme le chiffre d'affaires, la marge ou les délais de paiement. Il permet de piloter l'activité rapidement, sans attendre les comptes annuels. Il est adapté à chaque responsable et à ses objectifs.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Les résultats analytiques de trois produits sont : A, +2 500 000 FCFA ; B, −700 000 FCFA ; C, +1 200 000 FCFA. Le résultat analytique global est de :",
+      "o": [
+        "1 600 000 FCFA",
+        "3 000 000 FCFA",
+        "3 700 000 FCFA",
+        "4 400 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Le résultat global est la somme algébrique des résultats : 2 500 000 − 700 000 + 1 200 000 = 3 000 000 FCFA. Le montant de 4 400 000 FCFA ajoute à tort la perte du produit B. Un produit déficitaire n'est pas forcément à abandonner s'il dégage une marge sur coût variable positive.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Les commissions versées aux représentants sur les ventes réalisées font partie :",
+      "o": [
+        "du coût d'achat des matières",
+        "du coût de distribution",
+        "du coût de production",
+        "des charges non incorporables"
+      ],
+      "r": 1,
+      "x": "Les commissions sur ventes sont liées à la vente des produits, elles relèvent donc du coût de distribution. Elles s'ajoutent au coût de production pour former le coût de revient. Elles sont en outre variables, puisqu'elles suivent le chiffre d'affaires.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le coût de revient complet d'un produit sert principalement à :",
+      "o": [
+        "déterminer le coût d'achat des matières consommées",
+        "valoriser les stocks de produits finis",
+        "calculer la marge sur coût variable de chaque produit",
+        "comparer le coût total d'un produit à son prix de vente"
+      ],
+      "r": 3,
+      "x": "En rapprochant coût de revient et prix de vente, l'entreprise mesure le résultat de chaque produit. Elle peut ainsi ajuster ses prix ou réduire ses coûts. Le coût d'achat et le coût de production ne sont que des étapes du calcul.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Un capital de 1 200 000 FCFA est placé à intérêts simples au taux annuel de 9 % pendant 120 jours (année de 360 jours). L'intérêt produit est de :",
+      "o": [
+        "12 000 FCFA",
+        "36 000 FCFA",
+        "108 000 FCFA",
+        "1 236 000 FCFA"
+      ],
+      "r": 1,
+      "x": "L'intérêt simple se calcule par la formule C × t × n ÷ 36 000 : 1 200 000 × 9 × 120 ÷ 36 000 = 36 000 FCFA. Le montant de 108 000 FCFA correspond à une année entière. Le montant de 1 236 000 FCFA est la valeur acquise, capital compris.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Un capital de 500 000 FCFA est placé à intérêts simples au taux annuel de 6 % pendant 8 mois. Sa valeur acquise est de :",
+      "o": [
+        "520 000 FCFA",
+        "530 000 FCFA",
+        "540 000 FCFA",
+        "560 000 FCFA"
+      ],
+      "r": 0,
+      "x": "L'intérêt est de 500 000 × 6 % × 8 ÷ 12 = 20 000 FCFA, d'où une valeur acquise de 520 000 FCFA. Le montant de 530 000 FCFA correspond à un an de placement. La valeur acquise réunit le capital placé et les intérêts produits.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Un capital est déposé le 15 mars et retiré le 15 mai de la même année. En comptant le jour du retrait mais pas celui du dépôt, la durée du placement est de :",
+      "o": [
+        "59 jours",
+        "60 jours",
+        "61 jours",
+        "62 jours"
+      ],
+      "r": 2,
+      "x": "On compte 16 jours en mars, du 16 au 31, puis 30 jours en avril et 15 jours en mai, soit 61 jours. Le résultat de 60 jours suppose à tort des mois de 30 jours. En pratique bancaire, la durée se compte en jours réels.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le taux mensuel proportionnel à un taux annuel de 12 % est de :",
+      "o": [
+        "0,95 %",
+        "1 %",
+        "1,2 %",
+        "12 %"
+      ],
+      "r": 1,
+      "x": "Le taux proportionnel s'obtient en divisant le taux annuel par le nombre de périodes : 12 % ÷ 12 = 1 % par mois. Il s'utilise en intérêts simples. En intérêts composés, on utilise plutôt le taux équivalent, légèrement inférieur.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Un capital de 1 000 000 FCFA est placé à intérêts composés au taux annuel de 10 % pendant 2 ans. Sa valeur acquise est de :",
+      "o": [
+        "1 200 000 FCFA",
+        "1 210 000 FCFA",
+        "1 221 000 FCFA",
+        "1 331 000 FCFA"
+      ],
+      "r": 1,
+      "x": "La valeur acquise est de 1 000 000 × 1,10² = 1 210 000 FCFA. Le montant de 1 200 000 FCFA correspond à des intérêts simples, sans capitalisation. Le montant de 1 331 000 FCFA correspond à trois années de placement.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une somme de 1 102 500 FCFA est payable dans 2 ans. Au taux annuel de 5 % en intérêts composés, sa valeur actuelle est de :",
+      "o": [
+        "992 250 FCFA",
+        "1 000 000 FCFA",
+        "1 050 000 FCFA",
+        "1 157 625 FCFA"
+      ],
+      "r": 1,
+      "x": "La valeur actuelle s'obtient en divisant par 1,05² : 1 102 500 ÷ 1,1025 = 1 000 000 FCFA. Le montant de 1 050 000 FCFA n'actualise que sur un an. Le montant de 1 157 625 FCFA capitalise à tort au lieu d'actualiser.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "En intérêts composés, les intérêts produits à la fin de chaque période :",
+      "o": [
+        "s'ajoutent au capital et produisent à leur tour des intérêts",
+        "sont versés au prêteur et ne produisent plus d'intérêts",
+        "sont calculés uniquement sur le capital initial",
+        "sont déduits du capital pour la période suivante"
+      ],
+      "r": 0,
+      "x": "La capitalisation ajoute les intérêts au capital, qui grossit d'une période à l'autre. Les intérêts produisent donc eux-mêmes des intérêts. Les intérêts simples, au contraire, ne portent que sur le capital initial.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "En intérêts composés, le taux semestriel équivalent à un taux annuel de 21 % est de :",
+      "o": [
+        "9,5 %",
+        "10 %",
+        "10,5 %",
+        "11 %"
+      ],
+      "r": 1,
+      "x": "Le taux équivalent vérifie (1 + i)² = 1,21, ce qui donne i = 10 % par semestre. Deux semestres à 10 % capitalisés produisent bien 21 % sur l'année. Le taux de 10,5 % est le taux proportionnel, qui ne tient pas compte de la capitalisation.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "L'escompte commercial d'un effet de commerce est calculé sur :",
+      "o": [
+        "la valeur actuelle de l'effet",
+        "la valeur nominale de l'effet",
+        "le montant net reçu par le tireur",
+        "le montant des commissions bancaires"
+      ],
+      "r": 1,
+      "x": "L'escompte commercial applique le taux à la valeur nominale, pour la durée restant à courir. L'escompte rationnel est calculé, lui, sur la valeur actuelle de l'effet. L'escompte commercial est donc légèrement supérieur à l'escompte rationnel.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Deux effets de 400 000 FCFA à 30 jours et de 600 000 FCFA à 80 jours sont remplacés par un effet unique de 1 000 000 FCFA. Son échéance moyenne est à :",
+      "o": [
+        "50 jours",
+        "55 jours",
+        "60 jours",
+        "65 jours"
+      ],
+      "r": 2,
+      "x": "L'échéance moyenne est la moyenne des durées pondérée par les nominaux : (400 000 × 30 + 600 000 × 80) ÷ 1 000 000 = 60 jours. Le résultat de 55 jours est une simple moyenne des deux durées, sans pondération. Cette méthode s'applique lorsque la valeur nominale de l'effet unique égale la somme des nominaux remplacés.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Deux effets de commerce sont équivalents à une date donnée lorsque :",
+      "o": [
+        "ils ont la même valeur nominale",
+        "ils ont la même date d'échéance",
+        "ils ont été tirés sur le même débiteur",
+        "ils ont la même valeur actuelle à cette date"
+      ],
+      "r": 3,
+      "x": "L'équivalence compare les valeurs actuelles des effets, escomptées au même taux, à une même date. Elle sert à remplacer un effet par un autre, par exemple pour reporter une échéance. Deux effets de même nominal mais d'échéances différentes ne sont pas équivalents.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Un emprunt de 10 000 000 FCFA au taux de 10 % est remboursable par 2 annuités constantes de fin d'année. L'annuité est d'environ :",
+      "o": [
+        "5 238 095 FCFA",
+        "5 500 000 FCFA",
+        "5 761 905 FCFA",
+        "6 050 000 FCFA"
+      ],
+      "r": 2,
+      "x": "L'annuité constante vaut C × i ÷ (1 − (1 + i)⁻ⁿ), soit 1 000 000 ÷ 0,173554 ≈ 5 761 905 FCFA. Avec un amortissement constant, les annuités seraient de 6 000 000 FCFA puis de 5 500 000 FCFA. Le montant de 5 238 095 FCFA correspond à des annuités de début de période.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Un emprunt de 12 000 000 FCFA au taux de 8 % est remboursé par amortissements constants sur 4 ans. La première annuité est de :",
+      "o": [
+        "3 000 000 FCFA",
+        "3 240 000 FCFA",
+        "3 960 000 FCFA",
+        "4 200 000 FCFA"
+      ],
+      "r": 2,
+      "x": "L'amortissement annuel est de 12 000 000 ÷ 4 = 3 000 000 FCFA, et les intérêts de la première année de 12 000 000 × 8 % = 960 000 FCFA. La première annuité est donc de 3 960 000 FCFA. Les annuités suivantes diminuent, car les intérêts portent sur un capital restant dû plus faible.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dans un emprunt remboursable par annuités constantes, la part de capital remboursée chaque année :",
+      "o": [
+        "diminue d'une année à l'autre",
+        "augmente d'une année à l'autre",
+        "reste la même chaque année",
+        "est nulle la première année"
+      ],
+      "r": 1,
+      "x": "L'annuité étant fixe et les intérêts diminuant avec le capital restant dû, la part d'amortissement augmente chaque année. C'est en amortissement constant que la part de capital reste identique. Les intérêts sont, eux, les plus élevés la première année.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "L'agio prélevé par la banque lors de l'escompte d'un effet comprend :",
+      "o": [
+        "l'escompte et les commissions bancaires, avec les taxes qui s'y rapportent",
+        "la seule valeur nominale de l'effet escompté par la banque",
+        "les intérêts de retard payés par le client à l'échéance",
+        "la TVA calculée sur la valeur nominale de l'effet"
+      ],
+      "r": 0,
+      "x": "L'agio réunit l'escompte, calculé sur la valeur nominale, et les commissions de la banque. Il est retenu sur le montant versé au tireur. La valeur nominale elle-même n'est pas un coût, elle sera payée par le tiré à l'échéance.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le bilan fonctionnel classe les emplois et les ressources selon :",
+      "o": [
+        "les cycles d'investissement, de financement et d'exploitation",
+        "leur degré de liquidité et d'exigibilité à moins d'un an",
+        "leur valeur de liquidation en cas de faillite",
+        "l'ordre de leur numéro dans le plan de comptes"
+      ],
+      "r": 0,
+      "x": "Le bilan fonctionnel regroupe les postes selon leur rôle dans l'activité : investir, financer, exploiter. Il sert à calculer le fonds de roulement, le besoin en fonds de roulement et la trésorerie. Le classement par liquidité et exigibilité est celui du bilan financier.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dans le bilan financier, les éléments d'actif sont classés selon :",
+      "o": [
+        "leur degré de liquidité",
+        "leur coût historique d'acquisition",
+        "leur date d'entrée dans l'entreprise",
+        "leur fonction dans le cycle d'exploitation"
+      ],
+      "r": 0,
+      "x": "Le bilan financier, établi du point de vue des créanciers, classe les actifs selon la rapidité de leur transformation en argent. Les passifs y sont classés selon leur exigibilité. Le classement par fonction est celui du bilan fonctionnel.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une entreprise réalise un résultat net de 6 000 000 FCFA avec 40 000 000 FCFA de capitaux propres. Sa rentabilité financière est de :",
+      "o": [
+        "6,7 %",
+        "12 %",
+        "15 %",
+        "20 %"
+      ],
+      "r": 2,
+      "x": "La rentabilité financière rapporte le résultat net aux capitaux propres : 6 000 000 ÷ 40 000 000 = 15 %. Elle mesure ce que rapportent les fonds apportés par les associés. Elle se compare au rendement d'autres placements.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une entreprise dégage un résultat d'exploitation de 10 000 000 FCFA pour un actif économique de 80 000 000 FCFA. Sa rentabilité économique est de :",
+      "o": [
+        "8 %",
+        "12,5 %",
+        "15 %",
+        "25 %"
+      ],
+      "r": 1,
+      "x": "La rentabilité économique rapporte le résultat d'exploitation aux capitaux engagés dans l'exploitation : 10 000 000 ÷ 80 000 000 = 12,5 %. Elle mesure la performance de l'outil économique, quel que soit son mode de financement. Le taux de 8 % inverse le rapport et l'exprime à tort en pourcentage.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "L'effet de levier financier est positif lorsque :",
+      "o": [
+        "le coût de l'endettement dépasse la rentabilité économique",
+        "l'entreprise n'a aucune dette financière",
+        "les capitaux propres sont inférieurs à la moitié du capital",
+        "la rentabilité économique dépasse le coût de l'endettement"
+      ],
+      "r": 3,
+      "x": "Quand l'argent emprunté rapporte plus qu'il ne coûte, l'endettement augmente la rentabilité financière. Si le coût de la dette dépasse la rentabilité économique, l'effet de levier devient négatif. Sans dette, il n'y a pas d'effet de levier.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une entreprise a 30 000 000 FCFA de dettes financières et 50 000 000 FCFA de capitaux propres. Son ratio d'endettement (dettes financières / capitaux propres) est de :",
+      "o": [
+        "0,4",
+        "0,5",
+        "0,6",
+        "1,67"
+      ],
+      "r": 2,
+      "x": "Le ratio vaut 30 000 000 ÷ 50 000 000 = 0,6 : les dettes financières représentent 60 % des capitaux propres. Le résultat de 1,67 inverse le numérateur et le dénominateur. Un ratio trop élevé réduit la capacité d'emprunt de l'entreprise.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le ratio capitaux propres / total du bilan mesure principalement :",
+      "o": [
+        "la rentabilité commerciale de l'entreprise",
+        "la rotation des stocks de l'entreprise",
+        "le délai de paiement des clients",
+        "l'autonomie financière de l'entreprise"
+      ],
+      "r": 3,
+      "x": "Ce ratio indique la part de l'actif financée par les associés plutôt que par les créanciers. Plus il est élevé, plus l'entreprise est indépendante de ses prêteurs. La rentabilité commerciale rapporte au contraire le résultat au chiffre d'affaires.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une entreprise présente un actif total de 90 000 000 FCFA et des dettes totales de 60 000 000 FCFA. Son ratio de solvabilité générale (actif total / dettes totales) est de :",
+      "o": [
+        "0,67",
+        "1",
+        "1,25",
+        "1,5"
+      ],
+      "r": 3,
+      "x": "Le ratio vaut 90 000 000 ÷ 60 000 000 = 1,5 : l'actif couvre une fois et demie les dettes. Un ratio supérieur à 1 signifie que l'entreprise pourrait rembourser toutes ses dettes en vendant ses actifs. Le résultat de 0,67 inverse le rapport.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Actif circulant : 20 000 000 FCFA, dont 8 000 000 FCFA de stocks ; passif circulant : 10 000 000 FCFA. Le ratio de liquidité réduite est de :",
+      "o": [
+        "0,8",
+        "1",
+        "1,2",
+        "2"
+      ],
+      "r": 2,
+      "x": "La liquidité réduite exclut les stocks : (20 000 000 − 8 000 000) ÷ 10 000 000 = 1,2. Le résultat de 2 correspond à la liquidité générale, stocks compris. Les stocks sont écartés car leur transformation en argent est plus lente et plus incertaine.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Disponibilités : 3 000 000 FCFA ; passif circulant : 12 000 000 FCFA. Le ratio de liquidité immédiate est de :",
+      "o": [
+        "0,25",
+        "0,4",
+        "2,5",
+        "4"
+      ],
+      "r": 0,
+      "x": "La liquidité immédiate rapporte les seules disponibilités aux dettes à court terme : 3 000 000 ÷ 12 000 000 = 0,25. L'entreprise peut donc payer immédiatement le quart de ses dettes à court terme. Le résultat de 4 inverse le rapport.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dettes fournisseurs : 3 540 000 FCFA TTC ; achats annuels TTC : 28 320 000 FCFA (année de 360 jours). Le délai moyen de paiement des fournisseurs est de :",
+      "o": [
+        "30 jours",
+        "36 jours",
+        "45 jours",
+        "60 jours"
+      ],
+      "r": 2,
+      "x": "Le délai fournisseurs vaut 3 540 000 ÷ 28 320 000 × 360 = 45 jours. Les achats sont pris TTC, car les dettes fournisseurs incluent la TVA. Un délai fournisseurs plus long que le délai clients soulage la trésorerie.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Production vendue : 50 000 000 FCFA ; production stockée : 2 000 000 FCFA ; production immobilisée : 3 000 000 FCFA. La production de l'exercice est de :",
+      "o": [
+        "50 000 000 FCFA",
+        "53 000 000 FCFA",
+        "55 000 000 FCFA",
+        "57 000 000 FCFA"
+      ],
+      "r": 2,
+      "x": "La production de l'exercice réunit la production vendue, stockée et immobilisée : 50 000 000 + 2 000 000 + 3 000 000 = 55 000 000 FCFA. Le montant de 53 000 000 FCFA oublie la production immobilisée. La production stockée mesure la variation du stock de produits fabriqués.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Production de l'exercice : 40 000 000 FCFA ; marge commerciale : 6 000 000 FCFA ; consommations en provenance des tiers : 21 000 000 FCFA. La valeur ajoutée est de :",
+      "o": [
+        "19 000 000 FCFA",
+        "25 000 000 FCFA",
+        "46 000 000 FCFA",
+        "67 000 000 FCFA"
+      ],
+      "r": 1,
+      "x": "La valeur ajoutée est égale à la marge commerciale plus la production, moins les consommations venant des tiers : 6 000 000 + 40 000 000 − 21 000 000 = 25 000 000 FCFA. Le montant de 19 000 000 FCFA oublie la marge commerciale. Le montant de 46 000 000 FCFA oublie les consommations.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Parmi les éléments suivants, celui qui ne fait pas partie des consommations de l'exercice en provenance des tiers est :",
+      "o": [
+        "les charges de personnel",
+        "les achats de matières premières",
+        "les loyers des locaux",
+        "les frais de transport"
+      ],
+      "r": 0,
+      "x": "Les charges de personnel rémunèrent le travail des salariés : elles sont payées sur la valeur ajoutée, non retranchées pour la calculer. Les achats, les loyers et les transports sont des consommations venant de tiers. Ils sont déduits de la production pour obtenir la valeur ajoutée.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dans le compte de résultat du SYSCOHADA révisé, les impôts et taxes sont déduits :",
+      "o": [
+        "avant le calcul de la valeur ajoutée",
+        "après le calcul de l'excédent brut d'exploitation",
+        "après le calcul du résultat financier",
+        "avec l'impôt sur le résultat, en fin de tableau"
+      ],
+      "r": 0,
+      "x": "Dans le compte de résultat en cascade, les impôts et taxes font partie des éléments retranchés pour obtenir la valeur ajoutée. Les charges de personnel sont déduites ensuite pour obtenir l'excédent brut d'exploitation. L'impôt sur le résultat n'apparaît qu'à la fin, avant le résultat net.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Selon la méthode soustractive, la capacité d'autofinancement (CAF) se calcule à partir :",
+      "o": [
+        "du résultat net de l'exercice",
+        "du chiffre d'affaires hors taxes",
+        "de l'excédent brut d'exploitation",
+        "de la trésorerie de fin d'exercice"
+      ],
+      "r": 2,
+      "x": "La méthode soustractive part de l'EBE et ajoute ou retranche les produits encaissables et les charges décaissables restants. La méthode additive part, elle, du résultat net. Les deux méthodes doivent aboutir au même montant.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une entreprise dispose d'une capacité d'autofinancement de 8 000 000 FCFA et distribue 3 000 000 FCFA de dividendes. Son autofinancement est de :",
+      "o": [
+        "3 000 000 FCFA",
+        "5 000 000 FCFA",
+        "8 000 000 FCFA",
+        "11 000 000 FCFA"
+      ],
+      "r": 1,
+      "x": "L'autofinancement est égal à la CAF diminuée des dividendes : 8 000 000 − 3 000 000 = 5 000 000 FCFA. C'est la ressource que l'entreprise garde pour investir ou rembourser ses dettes. Le montant de 11 000 000 FCFA ajoute à tort les dividendes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dans le tableau des flux de trésorerie, l'achat d'un nouveau camion payé comptant figure parmi les flux :",
+      "o": [
+        "des activités d'investissement",
+        "des activités opérationnelles",
+        "des activités de financement",
+        "hors activités ordinaires"
+      ],
+      "r": 0,
+      "x": "Les acquisitions et cessions d'immobilisations sont des flux d'investissement. Les flux opérationnels concernent les encaissements et décaissements liés à l'activité courante. Les flux de financement concernent les emprunts et les apports.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Flux des activités opérationnelles : +12 000 000 FCFA ; d'investissement : −15 000 000 FCFA ; de financement : +5 000 000 FCFA. La trésorerie nette de l'exercice a varié :",
+      "o": [
+        "d'une hausse de 2 000 000 FCFA",
+        "d'une baisse de 2 000 000 FCFA",
+        "d'une hausse de 8 000 000 FCFA",
+        "d'une hausse de 32 000 000 FCFA"
+      ],
+      "r": 0,
+      "x": "La variation de trésorerie est la somme des trois flux : 12 000 000 − 15 000 000 + 5 000 000 = +2 000 000 FCFA. Les investissements ont été financés en partie par l'activité et en partie par de nouveaux financements. Le montant de 32 000 000 FCFA additionne à tort tous les flux en valeur absolue.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Trésorerie-actif : 7 000 000 FCFA ; trésorerie-passif : 4 000 000 FCFA. La trésorerie nette est de :",
+      "o": [
+        "3 000 000 FCFA",
+        "4 000 000 FCFA",
+        "7 000 000 FCFA",
+        "11 000 000 FCFA"
+      ],
+      "r": 0,
+      "x": "La trésorerie nette est égale à la trésorerie-actif moins la trésorerie-passif : 7 000 000 − 4 000 000 = 3 000 000 FCFA. Elle mesure les disponibilités réelles après déduction des concours bancaires courants. Le montant de 11 000 000 FCFA additionne à tort les deux éléments.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une entreprise réalise un chiffre d'affaires de 120 000 000 FCFA avec un actif total de 80 000 000 FCFA. Le taux de rotation de son actif est de :",
+      "o": [
+        "0,67",
+        "1,5",
+        "2",
+        "40"
+      ],
+      "r": 1,
+      "x": "Le taux de rotation de l'actif rapporte le chiffre d'affaires au total de l'actif : 120 000 000 ÷ 80 000 000 = 1,5. Chaque franc investi génère donc 1,5 franc de ventes dans l'année. Le résultat de 0,67 inverse le rapport.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Un besoin en fonds de roulement négatif signifie que :",
+      "o": [
+        "les actifs d'exploitation dépassent les dettes d'exploitation",
+        "l'entreprise ne possède aucun stock",
+        "les dettes d'exploitation dépassent les actifs d'exploitation",
+        "les capitaux propres sont négatifs"
+      ],
+      "r": 2,
+      "x": "Un BFR négatif apparaît quand les fournisseurs et autres dettes courantes financent plus que les stocks et créances. C'est fréquent dans le commerce de détail, où les clients paient comptant et les fournisseurs à terme. Le cycle d'exploitation dégage alors une ressource de trésorerie.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Selon la règle de l'équilibre financier minimum, les emplois stables doivent être financés par :",
+      "o": [
+        "des ressources stables",
+        "des concours bancaires courants",
+        "des dettes fournisseurs",
+        "des avances reçues des clients"
+      ],
+      "r": 0,
+      "x": "Un actif durable doit être financé par une ressource durable, comme les capitaux propres ou les emprunts à long terme. Financer un investissement par un découvert expose l'entreprise à un risque de crise de trésorerie. Cette règle explique l'importance d'un fonds de roulement positif.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le chiffre d'affaires d'une entreprise passe de 45 000 000 FCFA à 54 000 000 FCFA. Son taux de croissance est de :",
+      "o": [
+        "9 %",
+        "16,7 %",
+        "20 %",
+        "25 %"
+      ],
+      "r": 2,
+      "x": "Le taux de croissance se calcule sur l'année de départ : (54 000 000 − 45 000 000) ÷ 45 000 000 = 20 %. Le taux de 16,7 % rapporte à tort l'écart au chiffre d'affaires final. La croissance s'analyse en tenant compte de l'inflation.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une entreprise a 24 000 000 FCFA de dettes financières et une capacité d'autofinancement annuelle de 6 000 000 FCFA. Sa capacité de remboursement est de :",
+      "o": [
+        "0,25 an",
+        "2 ans",
+        "4 ans",
+        "6 ans"
+      ],
+      "r": 2,
+      "x": "La capacité de remboursement rapporte les dettes financières à la CAF : 24 000 000 ÷ 6 000 000 = 4 ans. Il faudrait donc quatre années de CAF pour rembourser toutes les dettes financières. Les banques jugent souvent excessif un ratio supérieur à trois ou quatre ans.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une entreprise réalise un résultat net de 3 000 000 FCFA pour un chiffre d'affaires de 60 000 000 FCFA. Sa rentabilité commerciale est de :",
+      "o": [
+        "2 %",
+        "5 %",
+        "20 %",
+        "50 %"
+      ],
+      "r": 1,
+      "x": "La rentabilité commerciale rapporte le résultat net au chiffre d'affaires : 3 000 000 ÷ 60 000 000 = 5 %. L'entreprise gagne donc 5 FCFA pour 100 FCFA vendus. Le chiffre de 20 % inverse le rapport et l'exprime à tort en pourcentage.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une société distribue 3 000 000 FCFA de dividendes sur un résultat net de 6 000 000 FCFA. Son taux de distribution est de :",
+      "o": [
+        "20 %",
+        "33 %",
+        "50 %",
+        "200 %"
+      ],
+      "r": 2,
+      "x": "Le taux de distribution rapporte les dividendes au résultat net : 3 000 000 ÷ 6 000 000 = 50 %. L'autre moitié du résultat reste dans l'entreprise, en réserves ou en report à nouveau. Le taux de 200 % inverse le rapport.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Capitaux propres : 30 000 000 FCFA ; actif immobilisé : 35 000 000 FCFA. Le fonds de roulement propre est :",
+      "o": [
+        "positif de 5 000 000 FCFA",
+        "positif de 65 000 000 FCFA",
+        "négatif de 5 000 000 FCFA",
+        "négatif de 65 000 000 FCFA"
+      ],
+      "r": 2,
+      "x": "Le fonds de roulement propre est égal aux capitaux propres moins l'actif immobilisé : 30 000 000 − 35 000 000 = −5 000 000 FCFA. Les capitaux propres ne suffisent donc pas à financer les immobilisations. Le complément doit venir des emprunts à long terme.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Un capital de 800 000 FCFA placé à intérêts simples pendant 6 mois rapporte 24 000 FCFA. Le taux annuel est de :",
+      "o": [
+        "3 %",
+        "4 %",
+        "6 %",
+        "12 %"
+      ],
+      "r": 2,
+      "x": "Le taux se déduit de la formule : 24 000 = 800 000 × t × 6 ÷ 12, d'où t = 24 000 ÷ 400 000 = 6 %. Le taux de 3 % correspond au taux semestriel. Le taux de 12 % double à tort le résultat.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Un capital de 1 500 000 FCFA placé à intérêts simples au taux annuel de 8 % rapporte 30 000 FCFA (année de 360 jours). La durée du placement est de :",
+      "o": [
+        "60 jours",
+        "90 jours",
+        "120 jours",
+        "180 jours"
+      ],
+      "r": 1,
+      "x": "La durée se déduit de la formule : n = 30 000 × 36 000 ÷ (1 500 000 × 8) = 90 jours. En un an, le placement rapporterait 120 000 FCFA. Les 30 000 FCFA représentent donc le quart d'une année.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Un placement à intérêts simples au taux annuel de 9 % rapporte 45 000 FCFA en 60 jours (année de 360 jours). Le capital placé est de :",
+      "o": [
+        "300 000 FCFA",
+        "750 000 FCFA",
+        "3 000 000 FCFA",
+        "4 500 000 FCFA"
+      ],
+      "r": 2,
+      "x": "Le capital se déduit de la formule : C = 45 000 × 36 000 ÷ (9 × 60) = 3 000 000 FCFA. Sur 60 jours, le taux effectif est de 9 % × 60 ÷ 360 = 1,5 %. On vérifie que 3 000 000 × 1,5 % = 45 000 FCFA.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Un capital de 2 000 000 FCFA est placé à intérêts composés au taux annuel de 5 % pendant 3 ans. Sa valeur acquise est de :",
+      "o": [
+        "2 300 000 FCFA",
+        "2 315 250 FCFA",
+        "2 331 000 FCFA",
+        "2 431 013 FCFA"
+      ],
+      "r": 1,
+      "x": "La valeur acquise est de 2 000 000 × 1,05³ = 2 000 000 × 1,157625 = 2 315 250 FCFA. Le montant de 2 300 000 FCFA correspond à des intérêts simples. Le montant de 2 431 013 FCFA correspond à quatre années de placement.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dans une suite d'annuités de fin de période, chaque versement intervient :",
+      "o": [
+        "à la fin de chaque période",
+        "au début de chaque période",
+        "une seule fois, à la fin du contrat",
+        "au milieu de chaque période"
+      ],
+      "r": 0,
+      "x": "Les annuités de fin de période, dites à terme échu, sont versées à la fin de chaque période. C'est le cas le plus courant pour le remboursement des emprunts. Les annuités de début de période sont dites à terme à échoir.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "En intérêts simples, la valeur acquise d'un capital placé est égale :",
+      "o": [
+        "au capital initial diminué des intérêts produits",
+        "aux seuls intérêts produits pendant le placement",
+        "au capital initial multiplié par la durée",
+        "au capital initial augmenté des intérêts produits"
+      ],
+      "r": 3,
+      "x": "La valeur acquise réunit le capital placé et les intérêts qu'il a rapportés pendant la durée du placement. Les intérêts seuls ne constituent qu'une partie de la valeur acquise. En intérêts composés, les intérêts s'ajoutent en plus au capital à chaque période.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le ratio de couverture des emplois stables (ressources stables / emplois stables) est satisfaisant lorsqu'il est :",
+      "o": [
+        "inférieur à 0,5",
+        "compris entre 0,5 et 0,9",
+        "compris entre 0,9 et 1",
+        "supérieur à 1"
+      ],
+      "r": 3,
+      "x": "Un ratio supérieur à 1 signifie que les ressources durables financent la totalité des emplois durables. Il correspond à un fonds de roulement positif. Un ratio inférieur à 1 révèle un financement d'immobilisations par des ressources à court terme.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "La loi organique relative aux lois de finances (LOLF) du Burkina Faso est la loi n° :",
+      "o": [
+        "004-2015/CNT",
+        "039-2016/AN",
+        "058-2017/AN",
+        "073-2015/CNT"
+      ],
+      "r": 3,
+      "x": "La LOLF du Burkina Faso est la loi organique n°073-2015/CNT du 6 novembre 2015, adoptée par le Conseil national de la transition. La loi n°058-2017/AN porte Code général des impôts. La loi n°039-2016/AN réglemente la commande publique.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "La loi organique relative aux lois de finances (LOLF) du Burkina Faso a été adoptée le :",
+      "o": [
+        "3 mars 2015",
+        "22 juillet 2015",
+        "6 novembre 2015",
+        "29 décembre 2015"
+      ],
+      "r": 2,
+      "x": "La LOLF a été adoptée le 6 novembre 2015, pendant la Transition. Elle transpose la directive de l'UEMOA relative aux lois de finances. Le 3 mars 2015 correspond à la loi de prévention et de répression de la corruption.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "La loi portant code de transparence dans la gestion des finances publiques au Burkina Faso a été adoptée en :",
+      "o": [
+        "2009",
+        "2013",
+        "2015",
+        "2016"
+      ],
+      "r": 1,
+      "x": "Il s'agit de la loi n°008-2013/AN du 23 avril 2013. Elle transpose la directive de l'UEMOA de 2009 portant code de transparence. Elle impose notamment la publication des informations budgétaires.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Au Burkina Faso, le décret n°2016-598 du 8 juillet 2016 porte :",
+      "o": [
+        "règlement général sur la comptabilité publique",
+        "régime juridique applicable aux comptables publics",
+        "réglementation générale de la commande publique",
+        "code général des impôts du Burkina Faso"
+      ],
+      "r": 0,
+      "x": "Le décret n°2016-598 fixe le règlement général sur la comptabilité publique, en application de la directive de l'UEMOA de 2009. Le même jour, le décret n°2016-599 a fixé le régime juridique des comptables publics. La commande publique et le Code général des impôts relèvent de lois distinctes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "La directive de l'UEMOA portant règlement général sur la comptabilité publique est la directive n° :",
+      "o": [
+        "06/2009/CM/UEMOA",
+        "07/2009/CM/UEMOA",
+        "08/2009/CM/UEMOA",
+        "09/2009/CM/UEMOA"
+      ],
+      "r": 1,
+      "x": "La directive n°07/2009/CM/UEMOA du 26 juin 2009 fixe le règlement général sur la comptabilité publique. La directive n°06/2009 porte sur les lois de finances. La directive n°08/2009 porte nomenclature budgétaire de l'État.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "La directive de l'UEMOA portant plan comptable de l'État est la directive n° :",
+      "o": [
+        "06/2009/CM/UEMOA",
+        "07/2009/CM/UEMOA",
+        "08/2009/CM/UEMOA",
+        "09/2009/CM/UEMOA"
+      ],
+      "r": 3,
+      "x": "La directive n°09/2009/CM/UEMOA du 26 juin 2009 porte plan comptable de l'État. La directive n°08/2009 concerne la nomenclature budgétaire de l'État. La directive n°10/2009 porte sur le tableau des opérations financières de l'État.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "La directive n°01/2009/CM/UEMOA, adoptée en mars 2009, porte :",
+      "o": [
+        "code de transparence des finances publiques",
+        "règlement général sur la comptabilité publique",
+        "plan comptable de l'État au sein de l'Union",
+        "tableau des opérations financières de l'État"
+      ],
+      "r": 0,
+      "x": "La directive n°01/2009 du 27 mars 2009 fixe le code de transparence dans la gestion des finances publiques. Elle a été suivie, le 26 juin 2009, par les autres directives du cadre harmonisé. Au Burkina Faso, elle a été transposée par la loi n°008-2013/AN.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le budget de l'État burkinabè est préparé, voté et exécuté en mode budget-programme depuis le :",
+      "o": [
+        "1er janvier 2015",
+        "1er janvier 2016",
+        "1er janvier 2017",
+        "1er janvier 2018"
+      ],
+      "r": 2,
+      "x": "Le basculement au budget-programme est intervenu le 1er janvier 2017, échéance fixée par les directives de l'UEMOA de 2009. Les crédits sont depuis présentés par programmes, avec des objectifs et des indicateurs de performance. Le budget de 2017 a été le premier exécuté selon cette logique.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le principe budgétaire selon lequel le budget est voté et exécuté pour une année civile est :",
+      "o": [
+        "l'unité",
+        "l'universalité",
+        "la spécialité",
+        "l'annualité"
+      ],
+      "r": 3,
+      "x": "L'annualité impose que le budget soit autorisé chaque année par le Parlement, pour une année civile. L'unité exige que toutes les recettes et dépenses figurent dans un document unique. L'universalité interdit la compensation et l'affectation des recettes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le principe budgétaire qui interdit de compenser les recettes et les dépenses et d'affecter une recette à une dépense particulière est :",
+      "o": [
+        "l'universalité",
+        "l'annualité",
+        "la spécialité",
+        "l'unité"
+      ],
+      "r": 0,
+      "x": "L'universalité exige que toutes les recettes et toutes les dépenses figurent pour leur montant brut, sans compensation. Elle interdit aussi, sauf exceptions, d'affecter une recette à une dépense donnée. Les comptes spéciaux du Trésor constituent une exception encadrée.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le principe budgétaire qui impose de regrouper toutes les recettes et toutes les dépenses de l'État dans un document unique est :",
+      "o": [
+        "l'unité",
+        "l'universalité",
+        "l'annualité",
+        "la sincérité"
+      ],
+      "r": 0,
+      "x": "L'unité facilite le contrôle du Parlement, qui dispose d'une vue d'ensemble dans un seul document. Les budgets annexes et les comptes spéciaux constituent des aménagements à ce principe. La sincérité porte, elle, sur l'exactitude des prévisions.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Selon les directives de l'UEMOA de 2009, les crédits budgétaires sont spécialisés par :",
+      "o": [
+        "programme",
+        "chapitre budgétaire",
+        "nature de la recette",
+        "trimestre d'exécution"
+      ],
+      "r": 0,
+      "x": "Le principe de spécialité impose que les crédits soient votés et utilisés pour un objet précis : en budget-programme, cet objet est le programme. Un crédit ouvert sur un programme ne peut pas financer librement un autre programme. Les mouvements de crédits sont strictement encadrés.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le principe budgétaire qui impose que les lois de finances présentent de façon exacte l'ensemble des ressources et des charges de l'État est :",
+      "o": [
+        "l'annualité",
+        "l'unité",
+        "la sincérité",
+        "la spécialité"
+      ],
+      "r": 2,
+      "x": "La sincérité interdit de sous-estimer les dépenses ou de surestimer les recettes pour présenter un budget artificiellement équilibré. Elle s'apprécie au regard des informations disponibles au moment de l'élaboration. Ce principe a été consacré par les directives de 2009.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le principe fondamental de la comptabilité publique qui interdit à une même personne d'ordonner une dépense et de la payer est :",
+      "o": [
+        "la séparation des ordonnateurs et des comptables",
+        "l'unité de caisse du Trésor public",
+        "la spécialité des crédits budgétaires",
+        "l'annualité de l'autorisation budgétaire"
+      ],
+      "r": 0,
+      "x": "L'ordonnateur décide de la dépense, tandis que le comptable public en vérifie la régularité et la paie. Les deux fonctions sont incompatibles afin de limiter les risques de fraude. Ce principe est souvent présenté comme une séparation des pouvoirs appliquée aux finances publiques.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "La phase de l'exécution de la dépense publique réalisée par le comptable public est :",
+      "o": [
+        "l'engagement",
+        "la liquidation",
+        "l'ordonnancement",
+        "le paiement"
+      ],
+      "r": 3,
+      "x": "Le paiement est la phase comptable qui libère l'État de sa dette envers le créancier. L'engagement, la liquidation et l'ordonnancement forment la phase administrative, réalisée par l'ordonnateur. Le comptable contrôle la régularité de la dépense avant de payer.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "L'acte par lequel un organisme public crée ou constate une obligation de laquelle résultera une charge est :",
+      "o": [
+        "l'engagement",
+        "la liquidation",
+        "l'ordonnancement",
+        "le paiement"
+      ],
+      "r": 0,
+      "x": "L'engagement est la première phase de la dépense, par exemple la signature d'un bon de commande ou d'un marché. Il doit rester dans la limite des crédits disponibles. La liquidation vient ensuite vérifier le service fait et arrêter le montant dû.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dans l'exécution de la dépense publique, la liquidation consiste à :",
+      "o": [
+        "donner l'ordre au comptable de payer le créancier",
+        "réserver les crédits nécessaires avant toute commande",
+        "remettre les fonds au créancier de l'État",
+        "vérifier la réalité de la dette et arrêter son montant exact"
+      ],
+      "r": 3,
+      "x": "La liquidation vérifie que le service a bien été fait et calcule le montant exact à payer. Elle s'appuie sur les pièces justificatives, comme la facture et le procès-verbal de réception. L'ordre de payer donné au comptable correspond à l'ordonnancement.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "L'ordonnancement de la dépense publique se matérialise par :",
+      "o": [
+        "le versement des fonds par le comptable public",
+        "la signature du bon de commande par le service",
+        "le contrôle de la Cour des comptes",
+        "l'émission d'un mandat de paiement par l'ordonnateur"
+      ],
+      "r": 3,
+      "x": "L'ordonnancement est l'acte par lequel l'ordonnateur donne au comptable l'ordre de payer, en émettant un mandat. Il intervient après l'engagement et la liquidation. Le versement des fonds correspond au paiement, réalisé par le comptable.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "L'ordre chronologique des phases d'exécution d'une dépense publique est :",
+      "o": [
+        "liquidation, engagement, paiement, ordonnancement",
+        "ordonnancement, engagement, liquidation, paiement",
+        "engagement, ordonnancement, liquidation, paiement",
+        "engagement, liquidation, ordonnancement, paiement"
+      ],
+      "r": 3,
+      "x": "On engage d'abord la dépense, on liquide après le service fait, on ordonnance, puis le comptable paie. Les trois premières phases sont administratives et la dernière est comptable. Certaines dépenses limitativement énumérées peuvent toutefois être payées avant ordonnancement, puis régularisées.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "La dernière phase de l'exécution d'une recette publique, assurée par le comptable, est :",
+      "o": [
+        "la constatation",
+        "la liquidation",
+        "l'émission du titre de recette",
+        "le recouvrement"
+      ],
+      "r": 3,
+      "x": "Une recette passe par la constatation, la liquidation, l'ordonnancement par émission d'un titre, puis le recouvrement. Le recouvrement, qui fait entrer l'argent dans les caisses publiques, relève du comptable. Les phases précédentes sont de la compétence de l'ordonnateur.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le comptable public est, sur ses deniers propres, responsable des opérations dont il a la charge : cette responsabilité est dite :",
+      "o": [
+        "collective et morale",
+        "personnelle et pécuniaire",
+        "limitée au montant de son salaire",
+        "partagée avec l'ordonnateur"
+      ],
+      "r": 1,
+      "x": "Le comptable public répond personnellement des manquants de caisse et des paiements irréguliers. Il peut être contraint de rembourser les sommes en cause sur ses biens propres. C'est pourquoi il doit souvent constituer des garanties avant d'entrer en fonction.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "La décision qui oblige un comptable public à reverser une somme manquante ou indûment payée est :",
+      "o": [
+        "le quitus",
+        "la décharge de gestion",
+        "le mandat de paiement",
+        "la mise en débet"
+      ],
+      "r": 3,
+      "x": "La mise en débet constate la dette du comptable envers l'organisme public et l'oblige à reverser la somme. Le quitus déclare au contraire que le comptable est quitte de sa gestion. Le mandat de paiement est un acte de l'ordonnateur.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le quitus délivré à un comptable public signifie que :",
+      "o": [
+        "il est libéré de sa responsabilité pour cette gestion",
+        "il doit reverser une somme manquante dans sa caisse",
+        "il est autorisé à engager de nouvelles dépenses au nom de l'État",
+        "il devient ordonnateur délégué du budget de l'État"
+      ],
+      "r": 0,
+      "x": "Le quitus est accordé lorsque les comptes du comptable ont été jugés réguliers. Il le libère de sa responsabilité pour la gestion concernée. Un comptable mis en débet n'obtient son quitus qu'après avoir apuré sa dette.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "La personne qui manie des fonds publics sans avoir la qualité de comptable public est :",
+      "o": [
+        "un régisseur d'avances",
+        "un ordonnateur délégué",
+        "un contrôleur financier",
+        "un comptable de fait"
+      ],
+      "r": 3,
+      "x": "La gestion de fait sanctionne toute personne qui encaisse ou paie des fonds publics sans y être habilitée. Le comptable de fait est soumis aux mêmes obligations et responsabilités qu'un comptable public. Le régisseur d'avances, lui, est régulièrement habilité.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le régisseur d'avances est un agent habilité à :",
+      "o": [
+        "ordonnancer l'ensemble des dépenses de son ministère",
+        "juger en appel les comptes des comptables publics",
+        "voter chaque année les crédits du budget de l'État",
+        "payer certaines menues dépenses pour le compte d'un comptable public"
+      ],
+      "r": 3,
+      "x": "La régie d'avances permet de régler rapidement de petites dépenses urgentes, à l'aide d'une avance de fonds. Le régisseur agit pour le compte du comptable public, auquel il rend compte. Le jugement des comptes relève de la Cour des comptes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Au Burkina Faso, l'institution qui juge les comptes des comptables publics est :",
+      "o": [
+        "le Conseil d'État",
+        "l'ASCE-LC",
+        "la Cour des comptes",
+        "l'Inspection générale des finances"
+      ],
+      "r": 2,
+      "x": "La Cour des comptes est la juridiction financière qui juge les comptes des comptables publics. Elle déclare la conformité entre les comptes des comptables et le compte général de l'ordonnateur. L'ASCE-LC et l'Inspection générale des finances sont des organes de contrôle, non des juges des comptes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "La loi qui constate les résultats financiers de chaque année et approuve les différences avec les prévisions de la loi de finances est :",
+      "o": [
+        "la loi de règlement de l'exercice",
+        "la loi de finances initiale",
+        "la loi de finances rectificative",
+        "la loi organique sur les finances"
+      ],
+      "r": 0,
+      "x": "La loi de règlement permet au Parlement de contrôler l'exécution du budget de l'année écoulée. Elle est accompagnée de la déclaration de conformité de la Cour des comptes. La loi de finances rectificative modifie au contraire le budget en cours d'année.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une loi de finances adoptée en cours d'année pour modifier les prévisions de la loi de finances initiale est :",
+      "o": [
+        "une loi de finances rectificative",
+        "une loi de règlement de l'exercice",
+        "une loi organique relative aux finances",
+        "une loi de programmation pluriannuelle"
+      ],
+      "r": 0,
+      "x": "La loi de finances rectificative ajuste en cours d'exercice les recettes ou les crédits votés dans la loi de finances initiale. Elle répond par exemple à une baisse des recettes ou à une dépense imprévue. La loi de règlement intervient après la clôture de l'exercice.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Les autorisations d'engagement (AE) constituent :",
+      "o": [
+        "la limite supérieure des dépenses pouvant être juridiquement engagées au cours de l'exercice",
+        "la limite supérieure des dépenses pouvant être payées au cours de l'exercice",
+        "le montant des recettes fiscales attendues au cours de l'exercice",
+        "le plafond des emplois rémunérés par l'État au cours de l'exercice"
+      ],
+      "r": 0,
+      "x": "Les AE fixent le montant des engagements juridiques, comme la signature d'un marché pluriannuel, que l'on peut prendre dans l'année. Les crédits de paiement fixent, eux, ce que l'on peut payer dans l'année. Ce couple permet de gérer les investissements qui s'étalent sur plusieurs années.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Les crédits de paiement (CP) constituent :",
+      "o": [
+        "la limite supérieure des engagements juridiques pluriannuels de l'année",
+        "le montant des emprunts que l'État peut contracter dans l'année",
+        "le montant des recettes non fiscales attendues dans l'année",
+        "la limite supérieure des dépenses pouvant être ordonnancées ou payées pendant l'année"
+      ],
+      "r": 3,
+      "x": "Les CP couvrent les paiements de l'année, y compris ceux qui découlent d'engagements pris les années précédentes. Pour un marché pluriannuel, l'AE est consommée à la signature et les CP au fur et à mesure des paiements. Les deux plafonds sont votés par le Parlement.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Selon les directives de l'UEMOA de 2009, les crédits d'un programme sont présentés par nature en crédits de personnel, de biens et services, d'investissement et de :",
+      "o": [
+        "transferts",
+        "remboursement de la dette",
+        "fonctionnement",
+        "réserve"
+      ],
+      "r": 0,
+      "x": "Les crédits de chaque programme se décomposent en personnel, biens et services, investissement et transferts. Les crédits de personnel sont en outre assortis de plafonds d'emplois rémunérés par l'État. La notion de crédits de fonctionnement relevait de l'ancienne présentation du budget.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Les comptes d'affectation spéciale (CAS) font partie :",
+      "o": [
+        "des budgets annexes de l'État",
+        "des budgets des collectivités territoriales",
+        "des comptes des sociétés d'État",
+        "des comptes spéciaux du Trésor"
+      ],
+      "r": 3,
+      "x": "Les comptes d'affectation spéciale sont une catégorie de comptes spéciaux du Trésor. Ils retracent des recettes affectées au financement de dépenses précises, par exception au principe d'universalité. Leur résultat est présenté séparément dans la loi de règlement.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Au Burkina Faso, la structure chargée de tenir la comptabilité de l'État et de gérer sa trésorerie est :",
+      "o": [
+        "la Direction générale du budget (DGB)",
+        "la Direction générale des impôts (DGI)",
+        "la Direction générale de l'économie et de la planification (DGEP)",
+        "la Direction générale du Trésor et de la comptabilité publique (DGTCP)"
+      ],
+      "r": 3,
+      "x": "La DGTCP regroupe les comptables publics du Trésor, qui tiennent la comptabilité de l'État et gèrent sa trésorerie. La DGB prépare et suit le budget, tandis que la DGI établit et recouvre les impôts. Ces structures relèvent toutes du ministère chargé des finances.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Selon la directive de l'UEMOA relative aux lois de finances, le document de programmation budgétaire et économique pluriannuelle (DPBEP) couvre une période minimale de :",
+      "o": [
+        "deux ans",
+        "trois ans",
+        "cinq ans",
+        "dix ans"
+      ],
+      "r": 1,
+      "x": "Le DPBEP présente l'évolution des recettes, des dépenses et du solde budgétaire sur au moins trois ans. Il sert de cadre à l'élaboration de la loi de finances de l'année. Il fait l'objet d'un débat d'orientation budgétaire au Parlement.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Selon les directives de l'UEMOA de 2009, la comptabilité générale de l'État est tenue :",
+      "o": [
+        "uniquement en encaissements et décaissements",
+        "sans aucun enregistrement des biens de l'État",
+        "selon le SYSCOHADA révisé des entreprises",
+        "en droits constatés, selon une logique patrimoniale"
+      ],
+      "r": 3,
+      "x": "La comptabilité générale de l'État enregistre les droits et obligations au moment où ils naissent, et non au seul moment du paiement. Elle permet d'établir un bilan de l'État retraçant son patrimoine. Elle s'appuie sur le plan comptable de l'État et non sur le SYSCOHADA.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Les biens meubles de l'État, comme le mobilier de bureau et les véhicules administratifs, sont suivis par :",
+      "o": [
+        "la comptabilité budgétaire des recettes",
+        "la comptabilité analytique des entreprises",
+        "la comptabilité des matières",
+        "la seule comptabilité de trésorerie"
+      ],
+      "r": 2,
+      "x": "La comptabilité des matières suit l'entrée, l'utilisation et la sortie des biens appartenant à l'État. Elle est tenue par des comptables des matières à l'aide de documents comme les bordereaux d'affectation. Elle protège le patrimoine public contre les pertes et les détournements.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Au Burkina Faso, le sigle IFU désigne :",
+      "o": [
+        "l'Impôt forfaitaire unique",
+        "l'Indice fiscal unifié",
+        "l'Imposition foncière urbaine",
+        "l'Identifiant financier unique"
+      ],
+      "r": 3,
+      "x": "L'Identifiant financier unique est le numéro attribué à chaque contribuable par l'administration fiscale. Il doit figurer sur les factures et les déclarations. Il permet de suivre l'ensemble des obligations fiscales d'une entreprise.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Au Burkina Faso, le minimum d'impôt sur les sociétés dû même en cas de perte est calculé sur le chiffre d'affaires au taux de :",
+      "o": [
+        "0,25 %",
+        "0,5 %",
+        "1 %",
+        "3 %"
+      ],
+      "r": 1,
+      "x": "Ce minimum d'imposition est égal à 0,5 % du chiffre d'affaires, avec un montant plancher. Il s'applique lorsque l'impôt calculé sur le bénéfice est plus faible ou en cas de perte. Le taux normal de l'impôt sur les sociétés reste de 27,5 % du bénéfice.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Au Burkina Faso, l'impôt unique sur les traitements et salaires (IUTS) est :",
+      "o": [
+        "payé par l'employeur sur ses propres bénéfices",
+        "déclaré et payé une fois par an par le salarié seul",
+        "calculé sur le chiffre d'affaires de l'entreprise",
+        "retenu à la source par l'employeur sur le salaire"
+      ],
+      "r": 3,
+      "x": "L'employeur calcule l'IUTS sur le salaire de chaque employé, le retient lors de la paie et le reverse à l'administration fiscale. Il intervient donc comme collecteur pour le compte de l'État. L'impôt reste supporté par le salarié.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "La taxe sur la valeur ajoutée (TVA) est un impôt :",
+      "o": [
+        "indirect, supporté par le consommateur final",
+        "direct, supporté par l'entreprise sur ses bénéfices",
+        "direct, calculé sur les salaires versés",
+        "local, perçu au profit des communes"
+      ],
+      "r": 0,
+      "x": "La TVA est collectée par les entreprises à chaque étape, mais elle est finalement supportée par le consommateur. Chaque entreprise ne reverse que la différence entre la TVA facturée et la TVA récupérable. Elle est la principale recette fiscale de nombreux États de la sous-région.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Parmi les impôts suivants, celui qui est un impôt direct est :",
+      "o": [
+        "l'impôt sur les sociétés",
+        "la taxe sur la valeur ajoutée",
+        "les droits de douane",
+        "les droits d'accises"
+      ],
+      "r": 0,
+      "x": "L'impôt sur les sociétés frappe directement le bénéfice de l'entreprise qui le paie. La TVA, les droits de douane et les droits d'accises sont des impôts indirects, incorporés au prix des biens. Ils sont finalement supportés par l'acheteur.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Dans le Code général des impôts du Burkina Faso, le sigle RNI désigne :",
+      "o": [
+        "le revenu national imposable",
+        "la retenue nationale sur investissements",
+        "le registre national des impôts",
+        "le régime normal d'imposition"
+      ],
+      "r": 3,
+      "x": "Le régime normal d'imposition s'applique aux entreprises dont le chiffre d'affaires dépasse les seuils des régimes simplifiés. Il impose la tenue d'une comptabilité complète et des déclarations détaillées. Les petites entreprises relèvent d'autres régimes, plus légers.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Au Burkina Faso, les loyers perçus par un particulier qui loue une maison sont soumis :",
+      "o": [
+        "à l'impôt sur le revenu des capitaux mobiliers (IRCM)",
+        "à l'impôt unique sur les traitements et salaires (IUTS)",
+        "à l'impôt sur les revenus fonciers (IRF)",
+        "à l'impôt sur les sociétés (IS)"
+      ],
+      "r": 2,
+      "x": "Les revenus tirés de la location d'immeubles par les particuliers relèvent de l'impôt sur les revenus fonciers. L'IRCM frappe les revenus de valeurs mobilières, comme les dividendes. L'IUTS concerne les salaires.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Au Burkina Faso, les dividendes distribués aux actionnaires sont soumis :",
+      "o": [
+        "à l'impôt sur les revenus fonciers (IRF)",
+        "à l'impôt unique sur les traitements et salaires (IUTS)",
+        "à la taxe sur la valeur ajoutée (TVA)",
+        "à l'impôt sur le revenu des capitaux mobiliers (IRCM)"
+      ],
+      "r": 3,
+      "x": "Les dividendes sont des revenus de capitaux mobiliers et supportent l'IRCM, retenu à la source par la société. Les revenus fonciers concernent la location d'immeubles. Les dividendes ne sont pas soumis à la TVA.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Au Burkina Faso, le sigle TPA désigne la taxe :",
+      "o": [
+        "sur la production agricole",
+        "sur les prestations administratives",
+        "patronale et d'apprentissage",
+        "de promotion de l'artisanat"
+      ],
+      "r": 2,
+      "x": "La taxe patronale et d'apprentissage est due par les employeurs et calculée sur les salaires versés. Elle reste à la charge de l'employeur et n'est pas retenue sur le salaire. Elle se distingue de l'IUTS, qui est supporté par le salarié.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le visa du contrôle financier sur une dépense publique intervient principalement :",
+      "o": [
+        "après le paiement, au titre du jugement des comptes",
+        "lors du vote de la loi de finances au Parlement",
+        "au moment de l'adoption de la loi de règlement",
+        "avant l'engagement, au titre d'un contrôle a priori"
+      ],
+      "r": 3,
+      "x": "Le contrôle financier vérifie, avant l'engagement, la disponibilité des crédits et la régularité de la dépense projetée. Il prévient les engagements irréguliers au lieu de les sanctionner après coup. Le jugement des comptes, après paiement, relève de la Cour des comptes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Au Burkina Faso, l'exercice budgétaire de l'État s'étend :",
+      "o": [
+        "du 1er juillet au 30 juin",
+        "du 1er octobre au 30 septembre",
+        "du 1er avril au 31 mars",
+        "du 1er janvier au 31 décembre"
+      ],
+      "r": 3,
+      "x": "L'exercice budgétaire coïncide avec l'année civile, conformément au principe d'annualité. La loi de finances doit donc être votée avant le 1er janvier. Les exercices décalés existent dans d'autres pays, comme celui d'avril à mars.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Avant de payer une dépense, le comptable public doit notamment contrôler :",
+      "o": [
+        "l'opportunité de la dépense décidée par l'ordonnateur",
+        "le choix du fournisseur retenu par le ministère",
+        "la qualité de l'ordonnateur et la validité de la créance",
+        "le niveau des dépenses prévues pour l'année suivante"
+      ],
+      "r": 2,
+      "x": "Le comptable vérifie la qualité de l'ordonnateur, la validité de la créance (service fait, exacte liquidation, pièces justificatives) et le caractère libératoire du règlement. La disponibilité des crédits est contrôlée en amont par le contrôleur financier. Le comptable ne contrôle pas l'opportunité, qui relève de l'ordonnateur.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Le principe d'unité de caisse signifie que :",
+      "o": [
+        "chaque ministère dispose de sa propre trésorerie",
+        "chaque comptable conserve les recettes qu'il encaisse",
+        "les collectivités gèrent la trésorerie de l'État",
+        "toutes les ressources de l'État sont centralisées par le Trésor public"
+      ],
+      "r": 3,
+      "x": "Toutes les disponibilités de l'État sont centralisées par le Trésor public, notamment dans le compte unique du Trésor. Cette centralisation améliore le suivi de la trésorerie et réduit le coût des emprunts à court terme. Elle évite la dispersion des fonds dans de nombreux comptes bancaires.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Au Burkina Faso, la retraite des fonctionnaires de l'État est gérée par :",
+      "o": [
+        "la Caisse nationale de sécurité sociale (CNSS)",
+        "la Caisse nationale d'assurance maladie universelle (CNAMU)",
+        "la Caisse autonome de retraite des fonctionnaires (CARFO)",
+        "la Société nationale des postes (SONAPOST)"
+      ],
+      "r": 2,
+      "x": "La CARFO gère les pensions des fonctionnaires et agents de l'État. La CNSS couvre les travailleurs du secteur privé. La CNAMU est chargée de l'assurance maladie universelle.",
+      "_batchId": "comptabilite/2026-11-24/SERIE3"
+    },
+    {
+      "q": "Une créance de 10 000 dollars a été comptabilisée au cours de 600 FCFA. À la clôture, le dollar vaut 580 FCFA. La perte de change latente est de :",
+      "o": [
+        "100 000 FCFA",
+        "200 000 FCFA",
+        "5 800 000 FCFA",
+        "6 000 000 FCFA"
+      ],
+      "r": 1,
+      "x": "La créance valait 6 000 000 FCFA et ne vaut plus que 5 800 000 FCFA, soit une perte latente de 200 000 FCFA. Elle est inscrite au compte 478 Écarts de conversion – actif. Le montant de 5 800 000 FCFA est la nouvelle valeur de la créance, non la perte.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Tant que la parité fixe 1 euro = 655,957 FCFA s'applique, une dette de 10 000 euros présente à la clôture un écart de conversion :",
+      "o": [
+        "nul",
+        "égal à 655 957 FCFA",
+        "égal à 6 559 570 FCFA",
+        "égal à 10 000 FCFA"
+      ],
+      "r": 0,
+      "x": "La parité entre l'euro et le franc CFA est fixe : la valeur en FCFA d'une dette en euros ne varie donc pas. Aucun écart de conversion n'est à constater. Les écarts de change concernent les monnaies à cours flottant, comme le dollar ou le yuan.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "À la clôture, un gain de change latent sur une dette en dollars non encore réglée :",
+      "o": [
+        "est inscrit au compte 479 sans être enregistré en produit",
+        "est enregistré immédiatement en produit au compte 756 Gains de change commerciaux",
+        "est viré directement au compte de capital",
+        "n'est inscrit nulle part dans les comptes"
+      ],
+      "r": 0,
+      "x": "Par prudence, le gain latent n'est pas un produit tant que la dette n'est pas réglée : il est porté au compte 479 Écarts de conversion – passif. Il ne deviendra un gain réel qu'au règlement. La perte latente est au contraire provisionnée.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Une créance de 10 000 dollars, comptabilisée à 600 FCFA, est encaissée au cours de 615 FCFA. Le gain de change réalisé est de :",
+      "o": [
+        "50 000 FCFA",
+        "150 000 FCFA",
+        "6 000 000 FCFA",
+        "6 150 000 FCFA"
+      ],
+      "r": 1,
+      "x": "L'encaissement rapporte 6 150 000 FCFA pour une créance inscrite à 6 000 000 FCFA, soit un gain de 150 000 FCFA. Ce gain réalisé sur une créance commerciale est crédité au compte 756 Gains de change sur créances et dettes commerciales, le compte 776 étant réservé aux gains de change financiers. Le montant de 6 150 000 FCFA correspond à la somme encaissée.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Une perte de change latente constatée à la clôture sur une créance en devises donne lieu, en plus de l'écart de conversion, à :",
+      "o": [
+        "un gain de change enregistré en produit",
+        "une augmentation du capital social",
+        "une annulation de la créance",
+        "une provision pour risque de change"
+      ],
+      "r": 3,
+      "x": "Le principe de prudence impose de provisionner la perte probable, en plus de l'inscription au compte 478. La provision pèse ainsi sur le résultat de l'exercice. Le gain latent sur une créance ou une dette, lui, n'est pas comptabilisé en produit.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Un vendeur consigne 100 emballages à 2 000 FCFA l'unité. Le client en rend 80 et conserve les autres. Le montant à rembourser au client est de :",
+      "o": [
+        "40 000 FCFA",
+        "160 000 FCFA",
+        "180 000 FCFA",
+        "200 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Seuls les 80 emballages rendus sont remboursés : 80 × 2 000 = 160 000 FCFA. Les 20 emballages conservés, soit 40 000 FCFA, sont considérés comme vendus. Le montant de 200 000 FCFA correspond à la consignation totale.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Les emballages consignés que le client décide de conserver sont considérés :",
+      "o": [
+        "comme perdus, sans aucune écriture comptable",
+        "comme prêtés, le client restant débiteur sans fin",
+        "comme détruits, le vendeur constatant une charge",
+        "comme vendus, le vendeur constatant un produit"
+      ],
+      "r": 3,
+      "x": "Lorsque le client garde les emballages, la consignation se transforme en vente. Le vendeur solde sa dette de consignation et constate un produit. Il en sort les emballages de son stock.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Des titres de placement achetés 2 500 000 FCFA sont revendus 2 800 000 FCFA. Le résultat de la cession est :",
+      "o": [
+        "une perte de 300 000 FCFA",
+        "un gain de 300 000 FCFA",
+        "un gain de 2 800 000 FCFA",
+        "un gain de 5 300 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Le résultat de cession est la différence entre le prix de vente et le coût d'achat : 2 800 000 − 2 500 000 = 300 000 FCFA. Il s'agit d'un gain de nature financière. Le montant de 2 800 000 FCFA est le prix de cession, pas le résultat.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Les dividendes reçus d'une filiale dont l'entreprise détient des titres de participation sont crédités au compte :",
+      "o": [
+        "771",
+        "772",
+        "773",
+        "776"
+      ],
+      "r": 1,
+      "x": "Le compte 772 Revenus de participations enregistre les dividendes perçus sur les titres de participation. Le compte 773 concerne les escomptes obtenus et le compte 776 les gains de change financiers. Le compte 771 enregistre les intérêts de prêts.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Un prêt de 6 000 000 FCFA au taux de 10 % est accordé le 1er octobre N ; les intérêts sont payables chaque 30 septembre. Au 31 décembre N, les intérêts courus à recevoir sont de :",
+      "o": [
+        "50 000 FCFA",
+        "150 000 FCFA",
+        "450 000 FCFA",
+        "600 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Les intérêts annuels sont de 600 000 FCFA et trois mois concernent l'exercice N : 600 000 × 3 ÷ 12 = 150 000 FCFA. Ce produit acquis mais non encore encaissé est rattaché à l'exercice N. Le montant de 450 000 FCFA correspond aux neuf mois de N+1.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Les intérêts d'un emprunt bancaire courus mais non échus à la clôture sont crédités au compte :",
+      "o": [
+        "166",
+        "476",
+        "477",
+        "671"
+      ],
+      "r": 0,
+      "x": "Le compte 166 Intérêts courus enregistre la dette d'intérêts, rattachée à l'emprunt. En contrepartie, la charge est débitée au compte 671 Intérêts des emprunts. Les comptes 476 et 477 concernent les charges et produits constatés d'avance.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon le code du travail de 2026, un salarié qui a accompli 8 mois de service effectif depuis son dernier congé a acquis un droit à congé payé de :",
+      "o": [
+        "16 jours",
+        "18 jours",
+        "20 jours",
+        "24 jours"
+      ],
+      "r": 2,
+      "x": "La loi n°013-2026/ALP accorde 2 jours et demi calendaires par mois de service effectif : 8 × 2,5 = 20 jours. Le résultat de 16 jours applique à tort 2 jours par mois ; le code de 2008 prévoyait déjà 2,5 jours calendaires par mois. Ces droits acquis doivent être provisionnés à la clôture.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "À la clôture, l'indemnité de congés payés acquise par les salariés mais non encore prise est créditée au compte :",
+      "o": [
+        "422",
+        "428",
+        "431",
+        "499"
+      ],
+      "r": 1,
+      "x": "Le compte 428 Personnel, charges à payer et produits à recevoir enregistre notamment les dettes provisionnées pour congés à payer. En contrepartie, la charge est débitée en classe 6. Le compte 422 enregistre les rémunérations déjà liquidées et dues.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le compte 571 Caisse présente un solde de 250 000 FCFA, alors que l'inventaire de la caisse ne trouve que 248 000 FCFA. L'entreprise doit constater :",
+      "o": [
+        "un manquant de 2 000 FCFA, enregistré en charge",
+        "un excédent de 2 000 FCFA, enregistré en produit",
+        "un manquant de 248 000 FCFA, enregistré en charge",
+        "aucune écriture, l'écart étant négligeable"
+      ],
+      "r": 0,
+      "x": "L'inventaire révèle 2 000 FCFA de moins que le solde comptable : c'est un manquant de caisse. Après recherche de sa cause, il est passé en charge et le compte 571 est crédité. Même minime, l'écart doit être régularisé pour que la comptabilité reflète la réalité.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Un effet de 500 000 FCFA escompté revient impayé ; la banque prélève 5 000 FCFA de frais, que le tireur refacture à son client. Le compte 411 du client est débité de :",
+      "o": [
+        "495 000 FCFA",
+        "500 000 FCFA",
+        "505 000 FCFA",
+        "510 000 FCFA"
+      ],
+      "r": 2,
+      "x": "Le tireur reporte sur son client le montant de l'effet et les frais d'impayé : 500 000 + 5 000 = 505 000 FCFA. La banque, de son côté, débite le compte de l'entreprise du même montant. Le client redevient débiteur au compte 411.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Un client obtient le renouvellement d'un effet de 1 000 000 FCFA pour 60 jours, avec des intérêts de 9 % (année de 360 jours). Le nouvel effet est de :",
+      "o": [
+        "1 000 000 FCFA",
+        "1 015 000 FCFA",
+        "1 030 000 FCFA",
+        "1 090 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Les intérêts de retard sont de 1 000 000 × 9 × 60 ÷ 36 000 = 15 000 FCFA, ajoutés au nominal du nouvel effet. L'ancien effet est annulé et remplacé par celui-ci. Le montant de 1 090 000 FCFA applique à tort le taux annuel entier.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Un contrat de construction de 100 000 000 FCFA a un coût total estimé de 80 000 000 FCFA ; 32 000 000 FCFA de coûts sont engagés à la clôture. Selon la méthode à l'avancement, le chiffre d'affaires à constater est de :",
+      "o": [
+        "32 000 000 FCFA",
+        "40 000 000 FCFA",
+        "48 000 000 FCFA",
+        "100 000 000 FCFA"
+      ],
+      "r": 1,
+      "x": "Le degré d'avancement est de 32 000 000 ÷ 80 000 000 = 40 %, d'où un chiffre d'affaires de 100 000 000 × 40 % = 40 000 000 FCFA. La marge dégagée sur l'exercice est donc de 8 000 000 FCFA. Le montant de 100 000 000 FCFA correspond au prix total du contrat.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Lorsqu'un contrat pluriannuel laisse prévoir une perte à son achèvement, l'entreprise doit :",
+      "o": [
+        "provisionner dès que possible la totalité de la perte prévue",
+        "attendre la fin du contrat pour enregistrer toute la perte",
+        "répartir la perte également sur toutes les années du contrat",
+        "ne comptabiliser cette perte qu'au paiement final du client"
+      ],
+      "r": 0,
+      "x": "Le principe de prudence impose de provisionner la perte à terminaison dès qu'elle est probable. Elle est constatée en totalité, sans attendre la fin des travaux. Seuls les bénéfices sont constatés au fur et à mesure de l'avancement.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Dans un contrat de location simple, le preneur :",
+      "o": [
+        "passe les loyers en charges sans inscrire le bien à l'actif",
+        "inscrit le bien à l'actif et constate une dette de location",
+        "amortit le bien loué sur sa durée d'utilité estimée",
+        "enregistre les loyers versés en immobilisations corporelles"
+      ],
+      "r": 0,
+      "x": "En location simple, le preneur n'a pas la maîtrise économique du bien : il passe seulement les loyers en charges, au compte 622. Seule la location-acquisition entraîne l'inscription du bien à l'actif. Le bien reste à l'actif du bailleur, qui l'amortit.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Un terrain d'une valeur nette comptable de 20 000 000 FCFA est réévalué à 35 000 000 FCFA. L'écart de réévaluation est de :",
+      "o": [
+        "15 000 000 FCFA",
+        "20 000 000 FCFA",
+        "35 000 000 FCFA",
+        "55 000 000 FCFA"
+      ],
+      "r": 0,
+      "x": "L'écart de réévaluation est égal à la valeur réévaluée moins la valeur nette comptable : 35 000 000 − 20 000 000 = 15 000 000 FCFA. Il est inscrit dans les capitaux propres et n'est pas distribuable. Le montant de 55 000 000 FCFA additionne à tort les deux valeurs.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Une subvention d'investissement de 6 000 000 FCFA finance un équipement amorti en linéaire sur 5 ans. La quote-part annuelle virée au résultat est de :",
+      "o": [
+        "600 000 FCFA",
+        "1 200 000 FCFA",
+        "1 500 000 FCFA",
+        "6 000 000 FCFA"
+      ],
+      "r": 1,
+      "x": "La subvention est rapportée au résultat au même rythme que l'amortissement du bien : 6 000 000 ÷ 5 = 1 200 000 FCFA par an. Cette reprise compense la charge d'amortissement du bien subventionné. La subvention n'est donc jamais rapportée en totalité la première année.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Une machine acquise 3 000 000 FCFA et amortie à hauteur de 2 400 000 FCFA est mise au rebut sans prix de cession. La perte constatée est de :",
+      "o": [
+        "0 FCFA",
+        "600 000 FCFA",
+        "2 400 000 FCFA",
+        "3 000 000 FCFA"
+      ],
+      "r": 1,
+      "x": "La valeur nette comptable restante, soit 3 000 000 − 2 400 000 = 600 000 FCFA, est perdue. Elle est passée en charge lors de la sortie du bien. Les amortissements cumulés et la valeur d'origine sont soldés.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Un rabais obtenu en décembre N dont l'avoir n'arrivera qu'en janvier N+1 est constaté, au 31 décembre N, au débit du compte :",
+      "o": [
+        "408",
+        "4091",
+        "4098",
+        "6019"
+      ],
+      "r": 2,
+      "x": "Le compte 4098 Fournisseurs, rabais, remises, ristournes et autres avoirs à obtenir constate la créance en attente de l'avoir. En contrepartie, le compte 6019 est crédité pour réduire les achats de l'exercice. Le compte 408 concerne les factures non parvenues.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Une ristourne accordée à un client pour l'exercice N, dont l'avoir ne sera établi qu'en N+1, est constatée au crédit du compte :",
+      "o": [
+        "418",
+        "4191",
+        "4198",
+        "7019"
+      ],
+      "r": 2,
+      "x": "Le compte 4198 Clients, rabais, remises, ristournes et autres avoirs à accorder constate la dette envers le client. En contrepartie, le compte 7019 est débité pour réduire les ventes de l'exercice N. Le compte 4191 enregistre les avances reçues des clients.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Un chèque barré ne peut être payé :",
+      "o": [
+        "qu'en espèces, au guichet de la banque tirée",
+        "qu'après le visa du commissaire aux comptes",
+        "qu'à un banquier, par versement sur un compte",
+        "qu'à la personne qui l'a elle-même émis"
+      ],
+      "r": 2,
+      "x": "Le barrement oblige à encaisser le chèque par l'intermédiaire d'une banque, ce qui permet d'identifier le bénéficiaire. Il réduit le risque en cas de perte ou de vol. Un chèque non barré peut être payé en espèces au guichet.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Un chèque certifié est un chèque :",
+      "o": [
+        "qui ne peut être encaissé qu'après un délai de trois mois",
+        "qui doit être signé par deux dirigeants de l'entreprise",
+        "qui n'est payable qu'auprès d'une banque située à l'étranger",
+        "dont la banque bloque la provision au profit du bénéficiaire"
+      ],
+      "r": 3,
+      "x": "La banque garantit l'existence de la provision et la bloque jusqu'à l'encaissement. Le bénéficiaire est ainsi assuré d'être payé. Ce type de chèque est souvent exigé pour les paiements importants.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La provision d'un chèque, qui doit être suffisante et disponible, doit exister :",
+      "o": [
+        "seulement le jour de son encaissement",
+        "à la fin du mois de l'émission",
+        "dans les huit jours suivant l'émission",
+        "au moment de l'émission du chèque"
+      ],
+      "r": 3,
+      "x": "Le tireur doit disposer d'une provision suffisante et disponible dès qu'il émet le chèque. Émettre un chèque sans provision l'expose à des sanctions bancaires et pénales. La banque peut alors lui interdire d'émettre des chèques.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le virement bancaire est une opération par laquelle :",
+      "o": [
+        "la banque escompte un effet de commerce avant la date de son échéance",
+        "des fonds passent d'un compte à un autre sur ordre du titulaire",
+        "un client remet des espèces au guichet de son agence",
+        "un débiteur accepte une lettre de change tirée sur lui"
+      ],
+      "r": 1,
+      "x": "Le virement est un ordre donné à la banque de débiter un compte pour en créditer un autre. Il ne nécessite aucune manipulation d'espèces. Il peut être ponctuel ou permanent, comme pour le paiement mensuel des salaires.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le crédit documentaire est une technique de paiement international par laquelle :",
+      "o": [
+        "la banque de l'importateur paie l'exportateur contre remise des documents",
+        "l'exportateur accorde un long délai de paiement sans aucune garantie",
+        "l'importateur paie la totalité à la commande, en espèces, sans document",
+        "l'État garantit tous les achats que les entreprises font à l'étranger"
+      ],
+      "r": 0,
+      "x": "Le crédit documentaire sécurise l'opération : l'exportateur est payé dès qu'il présente les documents prévus, comme le connaissement. L'importateur est assuré que la marchandise a bien été expédiée. Il est très utilisé dans le commerce international, notamment pour les importations.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "L'affacturage consiste pour une entreprise à :",
+      "o": [
+        "acheter des marchandises à crédit auprès d'un fournisseur étranger",
+        "céder ses créances clients à un factor qui en assure le recouvrement",
+        "louer un matériel avec une option d'achat en fin de contrat",
+        "émettre des obligations auprès du public pour se financer"
+      ],
+      "r": 1,
+      "x": "Le factor avance à l'entreprise le montant des créances cédées, moins une commission, et se charge de leur recouvrement. L'entreprise améliore ainsi rapidement sa trésorerie. La location avec option d'achat correspond au crédit-bail.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le crédit de campagne est un crédit à court terme destiné à financer :",
+      "o": [
+        "l'achat d'un terrain destiné à construire le futur siège social de l'entreprise",
+        "le remboursement anticipé des emprunts obligataires",
+        "les besoins saisonniers, comme la commercialisation d'une récolte",
+        "l'augmentation du capital social d'une société anonyme"
+      ],
+      "r": 2,
+      "x": "Le crédit de campagne finance les besoins temporaires liés à une saison, par exemple la collecte et la vente du coton ou de l'anacarde. Il est remboursé à la fin de la campagne grâce aux ventes réalisées. Un terrain doit au contraire être financé par des ressources durables.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La facilité de caisse accordée par une banque est destinée à couvrir :",
+      "o": [
+        "le financement des immobilisations sur plusieurs années",
+        "la constitution du capital social lors de la création",
+        "des décalages de trésorerie de quelques jours, en fin de mois",
+        "les pertes accumulées au cours des exercices antérieurs"
+      ],
+      "r": 2,
+      "x": "La facilité de caisse permet à l'entreprise d'être débitrice quelques jours, par exemple au moment de la paie. Elle se distingue du découvert, qui dure plus longtemps. Ces deux concours figurent en trésorerie-passif.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Une provision pour les réparations gratuites promises aux clients pendant la période de garantie est :",
+      "o": [
+        "une dépréciation des stocks",
+        "une dépréciation des créances clients",
+        "une provision pour risques et charges",
+        "un amortissement dérogatoire"
+      ],
+      "r": 2,
+      "x": "La garantie crée une obligation envers les clients, dont le coût futur est probable : elle donne lieu à une provision pour charges. Elle est évaluée d'après l'expérience des réparations passées. Une dépréciation constate au contraire la perte de valeur d'un actif.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Des titres de placement achetés 2 000 000 FCFA ne valent plus que 1 700 000 FCFA à la clôture. La dépréciation à constater est de :",
+      "o": [
+        "0 FCFA",
+        "300 000 FCFA",
+        "1 700 000 FCFA",
+        "2 000 000 FCFA"
+      ],
+      "r": 1,
+      "x": "La perte de valeur est de 2 000 000 − 1 700 000 = 300 000 FCFA, constatée par prudence. Les titres restent inscrits à leur coût d'achat, la dépréciation venant en déduction. Si le cours remonte, la dépréciation sera reprise.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "À la clôture de l'exercice, les comptes de charges et de produits sont :",
+      "o": [
+        "reportés tels quels, sans modification, sur l'exercice suivant",
+        "soldés pour déterminer le résultat de l'exercice",
+        "virés au compte de capital social",
+        "supprimés de la comptabilité sans écriture"
+      ],
+      "r": 1,
+      "x": "Les comptes de gestion sont soldés en fin d'exercice, et leur différence donne le bénéfice ou la perte. Ils repartent ensuite à zéro pour le nouvel exercice. Seuls les comptes de bilan sont repris à l'ouverture.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "À l'ouverture d'un nouvel exercice, on reprend dans la comptabilité :",
+      "o": [
+        "les soldes de tous les comptes, y compris de gestion",
+        "les seuls soldes des comptes de charges",
+        "les soldes des seuls comptes de bilan",
+        "aucun solde, la comptabilité repartant de zéro"
+      ],
+      "r": 2,
+      "x": "Les comptes de bilan, actif et passif, sont repris par l'écriture de réouverture. Les comptes de charges et de produits, déjà soldés, repartent à zéro. Cette continuité traduit l'intangibilité du bilan d'ouverture.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La balance après inventaire est établie :",
+      "o": [
+        "avant toute écriture courante de l'exercice comptable",
+        "après les écritures de régularisation de fin d'exercice",
+        "avant l'enregistrement des amortissements et provisions",
+        "au premier jour de l'exercice comptable suivant"
+      ],
+      "r": 1,
+      "x": "La balance après inventaire intègre les amortissements, provisions et régularisations de fin d'exercice. Elle sert de base à l'établissement des états financiers. La balance avant inventaire ne reflète que les opérations courantes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le remboursement par une compagnie d'assurance d'une charge d'exploitation déjà comptabilisée peut être enregistré au compte :",
+      "o": [
+        "706",
+        "771",
+        "781",
+        "791"
+      ],
+      "r": 2,
+      "x": "Le compte 781 Transferts de charges d'exploitation permet de neutraliser une charge prise en charge par un tiers. Le compte 791 concerne les reprises de provisions et le compte 706 les services vendus. La charge initiale reste ainsi enregistrée selon sa nature.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Dans le SYSCOHADA révisé, une charge non significative concernant un exercice antérieur, qui n'a pu être prise en compte avant sa clôture, est enregistrée :",
+      "o": [
+        "directement en diminution des capitaux propres",
+        "obligatoirement en charges hors activités ordinaires de l'exercice",
+        "dans un compte d'attente jusqu'à la liquidation",
+        "selon sa nature, parmi les charges de l'exercice en cours"
+      ],
+      "r": 3,
+      "x": "L'Acte uniforme prévoit que les charges et produits concernant des exercices antérieurs sont enregistrés, selon leur nature, comme ceux de l'exercice en cours. Le bilan d'ouverture n'est donc pas modifié. En revanche, la correction d'une erreur significative d'un exercice antérieur se fait par ajustement du report à nouveau.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Des marchandises achetées, dont l'entreprise est déjà propriétaire mais qui sont encore en cours de transport à la clôture, sont inscrites au compte :",
+      "o": [
+        "31",
+        "38",
+        "401",
+        "408"
+      ],
+      "r": 1,
+      "x": "Le compte 38 Stocks en cours de route, en consignation ou en dépôt enregistre les biens appartenant à l'entreprise mais non encore reçus. Le transfert de propriété, et non la réception physique, détermine leur inscription. Ils seront transférés au compte 31 à leur arrivée.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Des marchandises reçues en dépôt d'un fournisseur, et non encore achetées par l'entreprise, sont à la clôture :",
+      "o": [
+        "incluses dans le stock de l'entreprise dépositaire",
+        "inscrites en immobilisations de l'entreprise",
+        "exclues du stock de l'entreprise dépositaire",
+        "enregistrées en charges de l'exercice"
+      ],
+      "r": 2,
+      "x": "Les biens en dépôt restent la propriété du fournisseur : ils figurent dans son stock, pas dans celui du dépositaire. L'inventaire physique doit donc les isoler. Ils n'entreront dans les comptes du dépositaire qu'au moment de l'achat.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Des chèques reçus des clients le 31 décembre et remis à la banque le 2 janvier figurent, à la clôture, au compte :",
+      "o": [
+        "511",
+        "512",
+        "513",
+        "521"
+      ],
+      "r": 2,
+      "x": "Le compte 513 Chèques à encaisser enregistre les chèques reçus et non encore remis ou crédités par la banque. Ils seront transférés au compte 514 Chèques à l'encaissement lors de leur remise à la banque, puis au compte 521 une fois crédités. Le compte 512 concerne les effets remis à l'encaissement.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le protêt est un acte qui :",
+      "o": [
+        "constate officiellement le non-paiement d'un effet à l'échéance",
+        "autorise une banque à escompter un effet de commerce",
+        "transfère la propriété d'un effet de commerce à un nouveau porteur",
+        "prolonge automatiquement l'échéance d'un effet impayé"
+      ],
+      "r": 0,
+      "x": "Le protêt, dressé par un huissier ou un notaire, prouve que l'effet n'a pas été payé. Il permet au porteur d'exercer ses recours contre les signataires. Le transfert de l'effet à un autre porteur se fait par endossement.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "L'aval d'un effet de commerce est :",
+      "o": [
+        "l'ordre de payer donné par le tireur au tiré de l'effet",
+        "la remise de l'effet à la banque pour son encaissement",
+        "l'engagement d'un tiers de payer si le débiteur ne paie pas",
+        "la date à laquelle l'effet doit être payé par le tiré"
+      ],
+      "r": 2,
+      "x": "L'avaliste se porte garant du paiement de l'effet à la place du débiteur défaillant. L'aval renforce la confiance du créancier. Il est souvent donné par une banque ou un associé du débiteur.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La domiciliation d'un effet de commerce indique :",
+      "o": [
+        "la banque où l'effet sera présenté au paiement",
+        "l'adresse du domicile personnel du tireur",
+        "le montant des frais d'escompte de la banque",
+        "le nom du commissaire aux comptes du tiré"
+      ],
+      "r": 0,
+      "x": "La domiciliation désigne l'établissement qui paiera l'effet à l'échéance, en débitant le compte du tiré. Elle facilite le recouvrement par voie bancaire. Elle figure sur l'effet lui-même.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Dans la méthode à l'achèvement, appliquée à un contrat pluriannuel, le chiffre d'affaires et la marge sont constatés :",
+      "o": [
+        "au fur et à mesure de l'avancement des travaux",
+        "à la fin des travaux, lors de la livraison",
+        "à la signature du contrat, en totalité",
+        "au paiement de la première avance"
+      ],
+      "r": 1,
+      "x": "La méthode à l'achèvement ne constate le résultat qu'à la fin du contrat. Pendant les travaux, les coûts engagés sont inscrits en stocks de travaux en cours. La méthode à l'avancement répartit au contraire le résultat sur la durée du contrat.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le paiement par carte bancaire chez un commerçant entraîne :",
+      "o": [
+        "un débit du compte bancaire du porteur de la carte",
+        "un débit du compte bancaire du commerçant",
+        "un crédit du compte bancaire du porteur de la carte",
+        "un débit du compte du porteur en fin d'année seulement"
+      ],
+      "r": 0,
+      "x": "La carte bancaire permet de payer sans espèces : la banque débite le compte du porteur et crédite celui du commerçant. Le commerçant supporte en général une commission. Le paiement est ainsi tracé et sécurisé.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le prélèvement automatique est une opération par laquelle :",
+      "o": [
+        "un débiteur remet chaque mois un chèque à son créancier",
+        "la banque prête de l'argent au créancier sans aucune garantie",
+        "le débiteur paie en espèces au guichet de son créancier",
+        "un créancier autorisé fait débiter le compte de son débiteur"
+      ],
+      "r": 3,
+      "x": "Le débiteur signe une autorisation qui permet au créancier de prélever les sommes dues, par exemple pour l'électricité. Le paiement intervient automatiquement à chaque échéance. Le débiteur peut révoquer cette autorisation.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La note de débit est un document qui sert à :",
+      "o": [
+        "accorder au client une réduction après la facture initiale",
+        "commander des marchandises auprès d'un fournisseur",
+        "constater la livraison des marchandises chez le client",
+        "réclamer au client des frais oubliés, sans nouvelle livraison"
+      ],
+      "r": 3,
+      "x": "La note de débit augmente la dette du client, par exemple pour des frais de transport oubliés ou des intérêts de retard. La facture d'avoir a l'effet inverse et réduit la dette. La livraison est constatée par le bon de livraison.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Lorsque le cours de titres de placement précédemment dépréciés remonte à la clôture suivante, la dépréciation devenue sans objet est :",
+      "o": [
+        "maintenue pour son montant initial",
+        "transformée en amortissement",
+        "virée au compte de capital",
+        "reprise en produits"
+      ],
+      "r": 3,
+      "x": "La dépréciation ne doit refléter que la perte de valeur existant à la clôture. Si le cours remonte, elle est reprise, totalement ou partiellement, en produits financiers. Cette reprise ne peut pas faire dépasser le coût d'achat des titres.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "L'audit légal des comptes se distingue de l'audit contractuel parce qu'il est :",
+      "o": [
+        "demandé librement par la direction à un consultant",
+        "réalisé uniquement par les services d'audit internes de l'entité contrôlée",
+        "imposé par la loi et réalisé par le commissaire aux comptes",
+        "limité au contrôle des stocks de fin d'exercice"
+      ],
+      "r": 2,
+      "x": "L'audit légal est obligatoire pour les sociétés visées par la loi et confié au commissaire aux comptes. L'audit contractuel est décidé librement par l'entité, par exemple avant une cession. L'audit interne est mené par un service de l'entité elle-même.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Lorsque le commissaire aux comptes relève une anomalie significative limitée à un seul poste des comptes, il émet :",
+      "o": [
+        "une certification sans réserve",
+        "un refus de certifier",
+        "une certification avec réserve",
+        "une impossibilité de certifier"
+      ],
+      "r": 2,
+      "x": "La réserve signale un désaccord ou une limitation précis, qui ne remet pas en cause l'ensemble des comptes. Si les anomalies étaient généralisées, il refuserait de certifier. En l'absence d'anomalie significative, il certifie sans réserve.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le commissaire aux comptes refuse de certifier les comptes lorsqu'il constate :",
+      "o": [
+        "une simple erreur de calcul déjà corrigée par la société",
+        "l'absence d'une signature sur un bon de commande interne",
+        "des anomalies significatives à l'effet généralisé sur les comptes",
+        "un retard de quelques jours dans le paiement d'un fournisseur"
+      ],
+      "r": 2,
+      "x": "Le refus de certifier traduit un désaccord majeur : les comptes ne donnent pas une image fidèle de la situation. Une anomalie limitée et non généralisée conduit seulement à une réserve. Les erreurs corrigées ne justifient aucune réserve.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon l'AUSCGIE, la procédure d'alerte est déclenchée par le commissaire aux comptes lorsqu'il relève :",
+      "o": [
+        "des faits de nature à compromettre la continuité de l'exploitation",
+        "une hausse importante et durable du chiffre d'affaires de la société",
+        "le départ volontaire d'un administrateur en cours de mandat",
+        "un transfert du siège social dans une autre ville du pays"
+      ],
+      "r": 0,
+      "x": "Le commissaire aux comptes demande des explications aux dirigeants lorsque la continuité de l'exploitation est menacée. Si les réponses sont insuffisantes, il informe les organes sociaux, puis l'assemblée. La procédure vise à prévenir les difficultés avant qu'elles ne deviennent irrémédiables.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Lorsque le commissaire aux comptes découvre des faits délictueux dans la société qu'il contrôle, il doit :",
+      "o": [
+        "les garder secrets au nom du secret professionnel",
+        "en informer seulement le directeur général",
+        "démissionner sans fournir d'explication",
+        "les révéler au ministère public"
+      ],
+      "r": 3,
+      "x": "L'AUSCGIE impose au commissaire aux comptes de révéler au procureur les faits délictueux dont il a connaissance. Le secret professionnel ne peut pas lui être opposé dans ce cas. Il n'engage pas sa responsabilité pour cette révélation.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Pour garantir son indépendance, le commissaire aux comptes d'une société ne peut pas être :",
+      "o": [
+        "inscrit au tableau de l'ordre professionnel",
+        "titulaire d'un diplôme d'expertise comptable",
+        "salarié ou administrateur de cette même société",
+        "commissaire aux comptes d'une autre société"
+      ],
+      "r": 2,
+      "x": "Les incompatibilités interdisent au commissaire aux comptes d'avoir un lien de dépendance avec la société contrôlée. Il ne peut donc être ni dirigeant, ni administrateur, ni salarié de celle-ci. Il peut en revanche contrôler plusieurs sociétés différentes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Les normes internationales d'audit (ISA) sont élaborées par :",
+      "o": [
+        "l'IAASB (International Auditing and Assurance Standards Board)",
+        "l'IASB, organisme qui élabore les normes comptables IFRS",
+        "la Commission bancaire de l'Union monétaire ouest-africaine",
+        "le Conseil des ministres de l'OHADA réuni en session ordinaire"
+      ],
+      "r": 0,
+      "x": "L'International Auditing and Assurance Standards Board (IAASB) élabore les normes internationales d'audit (ISA), diffusées notamment via la Fédération internationale des comptables (IFAC). L'IASB élabore, lui, les normes comptables IFRS. Les deux organismes ne doivent pas être confondus.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "L'Ordre national des experts-comptables et des comptables agréés du Burkina Faso (ONECCA-BF) est membre associé de :",
+      "o": [
+        "la Fédération internationale des comptables (IFAC)",
+        "l'International Accounting Standards Board (IASB)",
+        "la Banque ouest-africaine de développement (BOAD)",
+        "l'Autorité de régulation de la commande publique (ARCOP)"
+      ],
+      "r": 0,
+      "x": "L'ONECCA-BF est membre associé de l'IFAC depuis 2015. L'IFAC regroupe les organisations professionnelles comptables du monde entier. L'IASB est un organisme de normalisation, pas une fédération d'ordres professionnels.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La loi qui impose aux experts-comptables et aux comptables agréés d'être inscrits à l'ONECCA-BF est la loi n° :",
+      "o": [
+        "028-2008/AN",
+        "048-2005/AN",
+        "055-2004/AN",
+        "058-2017/AN"
+      ],
+      "r": 1,
+      "x": "La loi n°048-2005/AN, qui a modifié le texte de 1996 créant l'Ordre, réglemente la profession et impose l'inscription à l'ONECCA-BF pour exercer. La loi n°058-2017/AN porte Code général des impôts. La loi n°055-2004/AN était l'ancien Code général des collectivités territoriales.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le commissaire aux comptes est tenu au secret professionnel, ce qui signifie qu'il :",
+      "o": [
+        "ne peut pas divulguer les informations obtenues lors de sa mission",
+        "peut révéler ses constatations aux actionnaires qui l'interrogent hors assemblée",
+        "peut renseigner librement les banques de la société sur ses constatations",
+        "n'est pas obligé de rendre compte de sa mission à l'assemblée"
+      ],
+      "r": 0,
+      "x": "Le secret professionnel protège les informations confidentielles de la société contrôlée. Il cède seulement devant les obligations légales, comme la révélation des faits délictueux. Le commissaire aux comptes rend compte de sa mission dans ses rapports à l'assemblée.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Parmi les principes fondamentaux du code d'éthique des professionnels comptables de l'IFAC figure :",
+      "o": [
+        "la rentabilité du cabinet",
+        "la fidélité absolue au dirigeant",
+        "la confidentialité",
+        "la rapidité d'exécution"
+      ],
+      "r": 2,
+      "x": "Le code d'éthique retient cinq principes : intégrité, objectivité, compétence et diligence, confidentialité, comportement professionnel. La rentabilité et la rapidité ne sont pas des principes éthiques. La fidélité au dirigeant compromettrait au contraire l'objectivité.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le contrôle interne est un processus mis en œuvre par l'entité pour fournir :",
+      "o": [
+        "une garantie absolue contre toute erreur et toute fraude",
+        "une assurance raisonnable sur la réalisation de ses objectifs",
+        "un bénéfice minimum garanti à la fin de chaque exercice",
+        "une exonération partielle de l'impôt sur les sociétés"
+      ],
+      "r": 1,
+      "x": "Le contrôle interne vise la fiabilité de l'information, l'efficacité des opérations et le respect des lois. Il ne peut fournir qu'une assurance raisonnable, car il dépend des personnes et peut être contourné. Il ne garantit ni l'absence totale de fraude, ni la rentabilité.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Parmi les composantes du contrôle interne selon le référentiel COSO figure :",
+      "o": [
+        "l'évaluation des risques",
+        "la distribution des dividendes",
+        "la fixation du prix de vente",
+        "le choix de la forme juridique"
+      ],
+      "r": 0,
+      "x": "Le référentiel COSO distingue cinq composantes : environnement de contrôle, évaluation des risques, activités de contrôle, information et communication, pilotage. La distribution des dividendes relève de l'assemblée des associés. Le prix de vente est une décision commerciale.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon le principe de séparation des tâches, la personne qui tient la caisse ne devrait pas :",
+      "o": [
+        "recevoir les espèces versées par les clients",
+        "remettre les fonds encaissés à la banque",
+        "enregistrer elle-même les opérations de caisse",
+        "compter les espèces devant un contrôleur"
+      ],
+      "r": 2,
+      "x": "Séparer la détention des fonds et leur enregistrement évite qu'une même personne puisse détourner de l'argent et masquer le détournement. Les tâches incompatibles sont la garde des actifs, l'autorisation et l'enregistrement. Cette mesure est l'une des bases du contrôle interne.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "L'exigence de deux signatures pour les chèques dépassant un certain montant est :",
+      "o": [
+        "une obligation fiscale imposée par la loi de finances",
+        "une règle de présentation des états financiers annuels",
+        "une technique de calcul du coût de revient des produits",
+        "une mesure de contrôle interne contre les détournements"
+      ],
+      "r": 3,
+      "x": "La double signature fait intervenir deux personnes pour les paiements importants. Elle réduit le risque de fraude et d'erreur. Elle s'ajoute à d'autres contrôles, comme le rapprochement bancaire mensuel.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La piste d'audit, dans une comptabilité, permet :",
+      "o": [
+        "de calculer automatiquement tous les impôts dus par l'entreprise",
+        "de supprimer les écritures anciennes devenues inutiles à la gestion",
+        "de fixer les prix de vente des produits à partir des coûts réels",
+        "de relier chaque montant des états financiers à sa pièce justificative"
+      ],
+      "r": 3,
+      "x": "La piste d'audit relie la pièce justificative, l'écriture, le compte et les états financiers, dans les deux sens. Elle permet aux contrôleurs de vérifier chaque opération. Une comptabilité informatisée doit garantir cette traçabilité.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "L'assertion d'audit selon laquelle toutes les opérations réalisées ont bien été enregistrées est :",
+      "o": [
+        "l'existence",
+        "l'évaluation",
+        "la présentation",
+        "l'exhaustivité"
+      ],
+      "r": 3,
+      "x": "L'exhaustivité vérifie qu'aucune opération n'a été oubliée, par exemple une facture fournisseur non enregistrée. L'existence vérifie au contraire que ce qui est enregistré est réel. L'évaluation porte sur l'exactitude des montants retenus.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "En assistant à l'inventaire physique des stocks, l'auditeur vérifie principalement :",
+      "o": [
+        "l'exhaustivité des ventes enregistrées au cours de l'exercice",
+        "la régularité des contrats de travail",
+        "le calcul de l'impôt sur les sociétés",
+        "l'existence des stocks inscrits en comptabilité"
+      ],
+      "r": 3,
+      "x": "Le comptage physique permet de s'assurer que les stocks enregistrés existent réellement. L'auditeur contrôle aussi l'état des biens, ce qui renseigne sur leur évaluation. Les ventes et les contrats de travail font l'objet d'autres contrôles.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La circularisation est une technique d'audit qui consiste à :",
+      "o": [
+        "obtenir de tiers la confirmation directe des soldes de leurs comptes",
+        "recalculer les amortissements de toutes les immobilisations de l'actif",
+        "compter physiquement les espèces présentes dans la caisse principale",
+        "comparer les ratios financiers de deux exercices successifs"
+      ],
+      "r": 0,
+      "x": "L'auditeur écrit aux clients, fournisseurs ou banques pour qu'ils lui confirment directement les soldes. Cette confirmation externe est un élément probant de grande valeur. Elle permet de vérifier l'existence des créances et l'exhaustivité des dettes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le risque d'audit résulte de la combinaison du risque inhérent, du risque lié au contrôle et :",
+      "o": [
+        "du risque de change",
+        "du risque de taux d'intérêt",
+        "du risque commercial",
+        "du risque de non-détection"
+      ],
+      "r": 3,
+      "x": "Le risque inhérent tient à la nature des opérations et le risque lié au contrôle à la faiblesse du contrôle interne. Le risque de non-détection est celui que l'auditeur ne découvre pas une anomalie. L'auditeur ajuste ses travaux pour réduire ce dernier risque.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le seuil de signification, en audit, correspond :",
+      "o": [
+        "au montant d'anomalie qui peut influencer le jugement des lecteurs des comptes",
+        "au montant minimal du capital social exigé pour une société anonyme",
+        "au plafond des dépenses qu'un caissier peut payer seul sans visa",
+        "au chiffre d'affaires à partir duquel l'audit légal devient obligatoire pour une SARL"
+      ],
+      "r": 0,
+      "x": "Le seuil de signification guide l'auditeur dans le choix et l'étendue de ses contrôles. Une anomalie inférieure à ce seuil est en général considérée comme non significative. Il est souvent fixé à partir du résultat, du chiffre d'affaires ou des capitaux propres.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La lettre de mission, en audit contractuel, est un document qui :",
+      "o": [
+        "certifie la régularité et la sincérité des comptes de l'exercice",
+        "confirme le solde d'un compte client à une date donnée",
+        "annonce le déclenchement d'une procédure d'alerte par l'auditeur",
+        "précise l'objet, l'étendue et les conditions de la mission"
+      ],
+      "r": 3,
+      "x": "La lettre de mission formalise l'accord entre l'auditeur et l'entité sur les travaux à réaliser. Elle évite les malentendus sur les responsabilités de chacun. La certification des comptes fait l'objet d'un rapport distinct.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La lettre d'affirmation remise à l'auditeur en fin de mission est signée par :",
+      "o": [
+        "la direction de l'entité auditée",
+        "le commissaire aux comptes lui-même",
+        "un client de l'entité auditée",
+        "le greffier du tribunal de commerce"
+      ],
+      "r": 0,
+      "x": "Par la lettre d'affirmation, la direction confirme par écrit des informations importantes données à l'auditeur, comme l'exhaustivité des dettes. Elle rappelle que les comptes relèvent de la responsabilité des dirigeants. Elle ne remplace pas les autres éléments probants.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le dossier permanent de l'auditeur contient principalement :",
+      "o": [
+        "les seules pièces de caisse du dernier mois contrôlé par l'auditeur",
+        "le détail des travaux réalisés sur l'exercice en cours de contrôle",
+        "les documents utiles sur plusieurs exercices, comme les statuts",
+        "les factures de vente émises au cours de la dernière semaine"
+      ],
+      "r": 2,
+      "x": "Le dossier permanent rassemble les documents durables : statuts, contrats importants, organigramme, procédures. Le dossier annuel, ou dossier de travail, contient les contrôles propres à chaque exercice. Les deux dossiers prouvent les diligences de l'auditeur.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "En audit, une fraude se distingue d'une erreur par :",
+      "o": [
+        "le caractère intentionnel de l'acte",
+        "le montant de l'anomalie constatée",
+        "la date à laquelle elle est découverte",
+        "le service où elle s'est produite"
+      ],
+      "r": 0,
+      "x": "L'erreur est involontaire, alors que la fraude suppose l'intention de tromper ou de détourner. Une petite fraude reste une fraude, quel que soit son montant. Cette distinction influence les procédures de l'auditeur et les suites données.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "L'audit interne est en principe exercé par :",
+      "o": [
+        "un service de l'entité rattaché à la direction générale",
+        "le commissaire aux comptes nommé par l'assemblée générale",
+        "les services de contrôle de l'administration fiscale",
+        "les principaux clients de l'entité réunis en assemblée"
+      ],
+      "r": 0,
+      "x": "L'audit interne évalue en permanence le contrôle interne et la gestion des risques pour le compte des dirigeants. Il est indépendant des services qu'il contrôle grâce à son rattachement élevé. L'audit légal est, lui, confié à un commissaire aux comptes extérieur.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon l'AUSCGIE révisé, une société anonyme dont les titres sont cotés en bourse doit se doter :",
+      "o": [
+        "d'un comité de crédit",
+        "d'un administrateur général adjoint",
+        "d'un conseil de surveillance",
+        "d'un comité d'audit"
+      ],
+      "r": 3,
+      "x": "La réforme de 2014 impose un comité d'audit aux sociétés anonymes cotées. Ce comité suit notamment l'élaboration de l'information financière et l'efficacité du contrôle interne. Il renforce la gouvernance des sociétés faisant appel au marché.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "L'IASB, qui élabore les normes comptables internationales IFRS, a remplacé l'IASC en :",
+      "o": [
+        "1973",
+        "1994",
+        "2001",
+        "2017"
+      ],
+      "r": 2,
+      "x": "L'International Accounting Standards Board (IASB) a succédé en 2001 à l'IASC, créé en 1973. Ses normes s'appellent IFRS, les anciennes normes IAS restant applicables tant qu'elles ne sont pas remplacées. L'année 2017 correspond à l'adoption du SYSCOHADA révisé.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le sigle IFRS désigne :",
+      "o": [
+        "les normes internationales d'information financière",
+        "les normes internationales d'audit des comptes",
+        "le plan comptable de l'État dans l'UEMOA",
+        "le système comptable des entités à but non lucratif"
+      ],
+      "r": 0,
+      "x": "IFRS signifie International Financial Reporting Standards, ou normes internationales d'information financière. Les normes d'audit sont les ISA. Le système comptable des entités à but non lucratif est le SYCEBNL.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon l'AUDCIF, les entités dont les titres sont inscrits à une bourse de valeurs établissent leurs états financiers consolidés selon :",
+      "o": [
+        "les normes IFRS",
+        "le système minimal de trésorerie",
+        "le plan comptable de l'État",
+        "le SYCEBNL"
+      ],
+      "r": 0,
+      "x": "L'Acte uniforme impose les normes IFRS pour les comptes consolidés des entités cotées ou faisant appel public à l'épargne. Elles établissent en outre, à côté de leurs états financiers SYSCOHADA, des états financiers annuels selon les IFRS. Cette obligation s'applique depuis le 1er janvier 2019.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "En normes IFRS, la juste valeur d'un actif correspond :",
+      "o": [
+        "au coût historique d'acquisition diminué des amortissements cumulés",
+        "à la valeur nominale qui figure sur la facture d'achat du bien",
+        "au montant total de l'impôt payé lors de l'acquisition du bien",
+        "au prix qui serait reçu pour sa vente lors d'une transaction normale"
+      ],
+      "r": 3,
+      "x": "La juste valeur est une valeur de marché, appréciée à la date d'évaluation. Elle se distingue du coût historique, qui reste figé au prix d'origine. Elle est utilisée notamment pour certains instruments financiers.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon le cadre conceptuel des IFRS, les deux caractéristiques qualitatives fondamentales de l'information financière sont la pertinence et :",
+      "o": [
+        "la rentabilité financière",
+        "la rapidité de publication",
+        "la confidentialité des données",
+        "la représentation fidèle"
+      ],
+      "r": 3,
+      "x": "Une information utile doit être pertinente, c'est-à-dire capable d'influencer les décisions, et donner une représentation fidèle de la réalité. La comparabilité, la vérifiabilité, la rapidité et la compréhensibilité renforcent ensuite cette utilité. La confidentialité est un principe éthique, non une qualité de l'information.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La révision du SYSCOHADA adoptée en 2017 visait notamment à :",
+      "o": [
+        "interdire l'usage des normes IFRS dans tous les États de l'espace OHADA",
+        "supprimer l'obligation d'établir un bilan",
+        "revenir aux règles du plan comptable de 1957",
+        "rapprocher le référentiel comptable OHADA des normes IFRS"
+      ],
+      "r": 3,
+      "x": "Le SYSCOHADA révisé reprend plusieurs solutions des IFRS, comme l'approche par composants ou la location-acquisition à l'actif. Il améliore ainsi la comparabilité internationale des comptes. Les entités cotées appliquent en outre les IFRS pour leurs comptes consolidés.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Dans une comptabilité informatisée, une écriture validée :",
+      "o": [
+        "peut être effacée librement jusqu'à la fin de l'année",
+        "doit être ressaisie chaque mois",
+        "est automatiquement transmise aux clients",
+        "ne peut plus être modifiée ni supprimée"
+      ],
+      "r": 3,
+      "x": "La validation rend l'écriture définitive, comme l'inscription à l'encre dans un livre-journal papier. Une erreur se corrige alors par une écriture d'annulation, puis par l'écriture correcte. Cette irréversibilité garantit la fiabilité de la comptabilité.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La sauvegarde régulière des données comptables vise principalement à :",
+      "o": [
+        "réduire le montant de la TVA à payer chaque mois",
+        "éviter leur perte en cas de panne, de vol ou de virus",
+        "remplacer l'inventaire physique de fin d'exercice",
+        "accélérer le paiement des factures par les clients"
+      ],
+      "r": 1,
+      "x": "Les données comptables doivent être conservées dix ans : une perte serait grave pour l'entreprise et pour les contrôles. La sauvegarde doit être faite régulièrement et conservée sur un support distinct. Elle fait partie des mesures de contrôle interne informatique.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Un progiciel de gestion intégré (ERP) est :",
+      "o": [
+        "un tableur réservé au seul calcul des amortissements",
+        "un registre papier tenu à la main par le comptable",
+        "un logiciel unique qui relie les fonctions de l'entreprise",
+        "un logiciel destiné uniquement à la gestion de la paie"
+      ],
+      "r": 2,
+      "x": "L'ERP partage une même base de données entre la comptabilité, les achats, les ventes, les stocks et la paie. Une donnée saisie une seule fois alimente tous les modules concernés. Il réduit les doubles saisies et les incohérences.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le lettrage d'un compte de tiers dans un logiciel comptable consiste à :",
+      "o": [
+        "imprimer les lettres de relance aux clients",
+        "attribuer une lettre de l'alphabet à chaque classe de comptes du plan",
+        "rapprocher les factures et les règlements qui se compensent",
+        "calculer les intérêts de retard des fournisseurs"
+      ],
+      "r": 2,
+      "x": "Le lettrage associe chaque facture au règlement qui la solde, ce qui fait apparaître les montants restant dus. Il facilite le suivi des créances et des dettes. Les éléments non lettrés signalent des impayés ou des erreurs.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La plupart des logiciels comptables refusent d'enregistrer une écriture :",
+      "o": [
+        "dont le total des débits diffère du total des crédits",
+        "qui mouvemente plus de deux comptes à la fois",
+        "passée le dernier jour ouvrable du mois en cours",
+        "qui concerne un compte de charges de la classe 6"
+      ],
+      "r": 0,
+      "x": "Le logiciel applique automatiquement la règle de la partie double : une écriture déséquilibrée est rejetée. Une écriture peut en revanche mouvementer plusieurs comptes. Cette contrainte garantit l'équilibre de la balance.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La gestion des droits d'accès dans un logiciel comptable permet :",
+      "o": [
+        "de supprimer librement les écritures déjà validées",
+        "de modifier le plan de comptes à chaque nouvelle saisie",
+        "de calculer automatiquement le résultat analytique",
+        "de limiter chaque utilisateur aux tâches de sa fonction"
+      ],
+      "r": 3,
+      "x": "Chaque utilisateur reçoit un identifiant et des droits adaptés à son poste, par exemple la saisie sans la validation. Cette mesure applique la séparation des tâches dans l'environnement informatique. Elle permet aussi de savoir qui a saisi chaque écriture.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La clôture d'un exercice dans un logiciel comptable a pour effet :",
+      "o": [
+        "de supprimer définitivement toutes les écritures de l'exercice clôturé",
+        "de remettre à zéro les comptes de bilan",
+        "d'annuler les écritures de régularisation",
+        "d'interdire toute nouvelle saisie sur l'exercice clôturé"
+      ],
+      "r": 3,
+      "x": "Une fois l'exercice clôturé, ses écritures sont figées et ne peuvent plus être modifiées. Les soldes des comptes de bilan sont reportés à l'ouverture de l'exercice suivant. Cette étape garantit l'intangibilité des comptes arrêtés.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le paramétrage du plan de comptes dans un logiciel consiste à :",
+      "o": [
+        "choisir le taux de TVA applicable à chaque client de l'entité",
+        "créer les comptes de l'entité, conformément au plan SYSCOHADA",
+        "fixer le salaire de chaque employé pour l'année à venir",
+        "calculer le seuil de rentabilité de l'entreprise chaque mois"
+      ],
+      "r": 1,
+      "x": "Avant toute saisie, l'entité crée dans le logiciel les comptes et sous-comptes dont elle a besoin. Ces comptes doivent respecter la codification du plan de comptes SYSCOHADA. Un bon paramétrage facilite ensuite la production automatique des états financiers.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon l'AUSCGIE révisé, une SARL doit désigner un commissaire aux comptes lorsqu'elle remplit au moins deux des trois conditions suivantes : capital supérieur à 10 000 000 FCFA, chiffre d'affaires annuel supérieur à 250 000 000 FCFA, et effectif permanent supérieur à :",
+      "o": [
+        "20 personnes",
+        "50 personnes",
+        "100 personnes",
+        "250 personnes"
+      ],
+      "r": 1,
+      "x": "Une SARL qui dépasse deux de ces trois seuils doit nommer un commissaire aux comptes. Les autres SARL peuvent en désigner un volontairement. Les sociétés anonymes doivent, elles, toujours en désigner un.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Les conventions conclues entre une société anonyme et l'un de ses administrateurs font l'objet :",
+      "o": [
+        "d'un rapport spécial du commissaire aux comptes",
+        "d'une simple mention portée dans le livre-journal",
+        "d'une déclaration à l'administration fiscale uniquement",
+        "d'aucune formalité particulière prévue par la loi"
+      ],
+      "r": 0,
+      "x": "Ces conventions, dites réglementées, doivent être autorisées par le conseil d'administration et présentées à l'assemblée. Le commissaire aux comptes établit sur elles un rapport spécial. Cette procédure protège la société contre les conflits d'intérêts.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Un événement survenu entre la clôture et l'arrêté des comptes, qui éclaire une situation existant déjà à la clôture, doit :",
+      "o": [
+        "être ignoré, car il est postérieur à la clôture",
+        "être reporté au compte de résultat de l'exercice suivant",
+        "être inscrit directement au capital",
+        "être pris en compte dans les comptes de l'exercice clos"
+      ],
+      "r": 3,
+      "x": "Par exemple, la faillite d'un client connue en janvier confirme une créance déjà douteuse au 31 décembre : on la déprécie dans les comptes clos. Un événement nouveau, sans lien avec la situation à la clôture, est seulement mentionné dans les notes annexes. Cette règle assure l'image fidèle des comptes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La comparaison des ratios d'un exercice à ceux de l'exercice précédent, pour repérer des variations anormales, est une technique d'audit appelée :",
+      "o": [
+        "la circularisation",
+        "le lettrage",
+        "l'inventaire physique",
+        "la revue analytique"
+      ],
+      "r": 3,
+      "x": "La revue analytique compare des montants et des ratios pour identifier des évolutions inhabituelles à examiner. Elle oriente l'auditeur vers les zones de risque. La circularisation consiste à obtenir des confirmations de tiers.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Un sondage, en audit, consiste à :",
+      "o": [
+        "contrôler un échantillon pour conclure sur l'ensemble de la population",
+        "vérifier exhaustivement toutes les écritures passées dans l'exercice",
+        "interroger les salariés sur leur satisfaction au travail dans l'entité",
+        "demander aux clients de confirmer directement leurs soldes"
+      ],
+      "r": 0,
+      "x": "L'auditeur ne peut pas tout vérifier : il sélectionne un échantillon représentatif. Les résultats de l'échantillon sont ensuite étendus à l'ensemble de la population. Le choix de l'échantillon peut être statistique ou fondé sur le jugement.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le commissaire aux comptes exprime son opinion sur les comptes annuels dans :",
+      "o": [
+        "son rapport général à l'assemblée",
+        "le rapport de gestion du conseil",
+        "les notes annexes aux états financiers",
+        "le livre d'inventaire de la société"
+      ],
+      "r": 0,
+      "x": "Le rapport général présente la certification, avec ou sans réserve, ou le refus de certifier. Le rapport de gestion est établi par les dirigeants, non par le commissaire aux comptes. Les conventions réglementées font l'objet d'un rapport spécial distinct.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le rapprochement bancaire mensuel, effectué par une personne qui ne tient ni la caisse ni la banque, constitue :",
+      "o": [
+        "un état financier de synthèse",
+        "une écriture de clôture d'exercice",
+        "une opération de placement de trésorerie",
+        "une activité de contrôle interne"
+      ],
+      "r": 3,
+      "x": "Confier le rapprochement à une personne indépendante permet de détecter les erreurs et les détournements sur la trésorerie. C'est une application concrète de la séparation des tâches. Il fait partie des activités de contrôle du référentiel COSO.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Un incendie détruit un entrepôt en février N+1, après la clôture du 31 décembre N mais avant l'arrêté des comptes. Cet événement doit :",
+      "o": [
+        "être enregistré comme une perte exceptionnelle dans les comptes de l'exercice N",
+        "être ignoré, car il est postérieur à la clôture",
+        "entraîner l'annulation des comptes de l'exercice N",
+        "être signalé dans les notes annexes, sans modifier les comptes de N"
+      ],
+      "r": 3,
+      "x": "L'incendie ne révèle pas une situation existant au 31 décembre : il ne modifie donc pas les comptes de N. S'il est significatif, il doit cependant être mentionné dans les notes annexes. La perte sera enregistrée dans les comptes de N+1.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Les informations recueillies par l'auditeur pour fonder son opinion sont appelées :",
+      "o": [
+        "éléments probants",
+        "assertions d'audit",
+        "inducteurs de coûts",
+        "risques inhérents"
+      ],
+      "r": 0,
+      "x": "Les éléments probants proviennent des documents, des confirmations, des observations et des calculs de l'auditeur. Ils doivent être suffisants et appropriés. Les assertions sont, elles, les affirmations de la direction que l'auditeur cherche à vérifier.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le traité instituant l'Union économique et monétaire ouest-africaine (UEMOA) a été signé à Dakar le :",
+      "o": [
+        "12 mai 1962",
+        "14 novembre 1973",
+        "10 janvier 1994",
+        "18 décembre 1996"
+      ],
+      "r": 2,
+      "x": "Le traité de l'UEMOA a été signé à Dakar le 10 janvier 1994, à la veille de la dévaluation du franc CFA du 12 janvier 1994. Il complète l'union monétaire par une union économique. L'Union monétaire ouest-africaine (UMOA) date du traité du 12 mai 1962, refondu le 14 novembre 1973.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le siège de la Commission de l'Union économique et monétaire ouest-africaine (UEMOA) se trouve à :",
+      "o": [
+        "Abidjan",
+        "Dakar",
+        "Lomé",
+        "Ouagadougou"
+      ],
+      "r": 3,
+      "x": "La Commission de l'UEMOA, organe exécutif de l'Union, siège à Ouagadougou. Dakar abrite le siège de la BCEAO et Lomé celui de la BOAD. Abidjan accueille la BRVM.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le siège de la Banque centrale des États de l'Afrique de l'Ouest (BCEAO) se trouve à :",
+      "o": [
+        "Abidjan",
+        "Dakar",
+        "Lomé",
+        "Ouagadougou"
+      ],
+      "r": 1,
+      "x": "La BCEAO a son siège à Dakar, au Sénégal, et dispose d'une agence principale dans chaque État membre. L'agence principale du Burkina Faso se trouve à Ouagadougou. Lomé abrite la BOAD.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le siège de la Banque ouest-africaine de développement (BOAD) se trouve à :",
+      "o": [
+        "Abidjan",
+        "Dakar",
+        "Lomé",
+        "Niamey"
+      ],
+      "r": 2,
+      "x": "La BOAD, banque de développement de l'UMOA, siège à Lomé, au Togo. Elle finance des projets d'infrastructures et de développement dans les États membres. Dakar est le siège de la BCEAO.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La Bourse régionale des valeurs mobilières (BRVM) a démarré ses activités le :",
+      "o": [
+        "17 décembre 1993",
+        "16 septembre 1998",
+        "24 mars 1999",
+        "16 septembre 2013"
+      ],
+      "r": 1,
+      "x": "La BRVM a démarré ses activités le 16 septembre 1998, en remplacement de la Bourse des valeurs d'Abidjan. Le 17 décembre 1993 correspond à la décision de créer un marché financier régional. Le 16 septembre 2013 marque le passage à la cotation en continu.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La Bourse régionale des valeurs mobilières (BRVM), dont le siège est à Abidjan, a été constituée en société anonyme en décembre 1996 à :",
+      "o": [
+        "Bamako",
+        "Cotonou",
+        "Dakar",
+        "Lomé"
+      ],
+      "r": 1,
+      "x": "La BRVM et le Dépositaire central/Banque de règlement ont été créés à Cotonou, au Bénin, le 18 décembre 1996. Leur siège a ensuite été fixé à Abidjan. La BRVM dispose d'antennes nationales dans les États de l'Union.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le 12 janvier 1994, le franc CFA a été dévalué de :",
+      "o": [
+        "25 %",
+        "50 %",
+        "75 %",
+        "100 %"
+      ],
+      "r": 1,
+      "x": "La parité est passée de 1 franc français pour 50 FCFA à 1 franc français pour 100 FCFA, soit une dévaluation de 50 % du franc CFA. Cette mesure visait à restaurer la compétitivité des économies de la zone. Elle est intervenue deux jours après la signature du traité de l'UEMOA, le 10 janvier 1994.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Depuis l'introduction de l'euro, la parité fixe du franc CFA est de :",
+      "o": [
+        "1 euro = 500 FCFA",
+        "1 euro = 600 FCFA",
+        "1 euro = 655,957 FCFA",
+        "1 euro = 700 FCFA"
+      ],
+      "r": 2,
+      "x": "La parité de 655,957 FCFA pour un euro découle de l'ancienne parité de 100 FCFA pour un franc français. Elle est fixe, ce qui supprime le risque de change entre le franc CFA et l'euro. Les autres devises, comme le dollar, ont un cours variable.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "L'institut d'émission commun aux États de l'Union monétaire ouest-africaine (UMOA) est :",
+      "o": [
+        "la BOAD",
+        "la BRVM",
+        "la Commission bancaire",
+        "la BCEAO"
+      ],
+      "r": 3,
+      "x": "La BCEAO émet la monnaie commune et conduit la politique monétaire de l'Union. La BOAD finance le développement et la BRVM organise le marché boursier. La Commission bancaire supervise les banques.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La Banque ouest-africaine de développement (BOAD) a pour mission principale de :",
+      "o": [
+        "émettre les billets et les pièces en franc CFA",
+        "organiser la cotation des actions des sociétés",
+        "contrôler l'activité de toutes les banques commerciales de l'Union",
+        "financer des projets de développement dans les États membres"
+      ],
+      "r": 3,
+      "x": "La BOAD accorde des prêts pour des projets d'infrastructures, d'énergie ou d'agriculture. L'émission monétaire relève de la BCEAO et la cotation des titres de la BRVM. Le contrôle des banques revient à la Commission bancaire.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "L'organe chargé de la supervision des banques et des établissements financiers de l'UMOA est :",
+      "o": [
+        "la Bourse régionale des valeurs mobilières",
+        "la Commission bancaire de l'UMOA",
+        "la Banque ouest-africaine de développement",
+        "la Commission de l'UEMOA"
+      ],
+      "r": 1,
+      "x": "La Commission bancaire veille au respect de la réglementation bancaire et peut sanctionner les établissements défaillants. Elle siège à Abidjan. La Commission de l'UEMOA est l'organe exécutif de l'Union économique.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le Dépositaire central/Banque de règlement (DC/BR) du marché financier régional assure :",
+      "o": [
+        "la conservation des titres et le règlement des opérations",
+        "l'émission des billets de banque en franc CFA dans l'Union",
+        "le financement des grands projets d'infrastructures publiques",
+        "le contrôle légal des comptes des sociétés cotées en bourse"
+      ],
+      "r": 0,
+      "x": "Le DC/BR tient les comptes de titres et règle les opérations conclues à la BRVM. Il garantit la livraison des titres contre paiement. Le contrôle des comptes des sociétés relève des commissaires aux comptes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Une obligation est :",
+      "o": [
+        "un titre de propriété qui donne droit à un dividende variable chaque année",
+        "un billet de banque émis par la banque centrale",
+        "un contrat d'assurance contre le risque de change",
+        "un titre de créance qui donne droit au paiement d'un intérêt"
+      ],
+      "r": 3,
+      "x": "Le porteur d'une obligation prête de l'argent à l'émetteur et reçoit un intérêt, puis le remboursement du capital. L'action est au contraire un titre de propriété, qui donne droit au dividende et au vote. L'obligataire est un créancier, l'actionnaire un associé.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Une action donne à son détenteur :",
+      "o": [
+        "une part du capital, un droit au dividende et un droit de vote",
+        "un intérêt fixe et le remboursement à une date déterminée",
+        "la garantie d'être remboursé avant tous les créanciers",
+        "un droit de propriété sur un bien précis de la société"
+      ],
+      "r": 0,
+      "x": "L'actionnaire est copropriétaire de la société : il vote en assemblée et reçoit une part des bénéfices distribués. Son dividende varie selon les résultats. En cas de liquidation, il n'est remboursé qu'après les créanciers.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le revenu périodique versé au détenteur d'une obligation s'appelle :",
+      "o": [
+        "le dividende",
+        "la plus-value",
+        "le nominal",
+        "le coupon"
+      ],
+      "r": 3,
+      "x": "Le coupon correspond aux intérêts versés régulièrement à l'obligataire. Le dividende est le revenu de l'action. Le nominal est la valeur sur laquelle les intérêts sont calculés.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Pour acheter des actions cotées à la BRVM, un investisseur doit passer par :",
+      "o": [
+        "une société de gestion et d'intermédiation (SGI)",
+        "les services de la Commission de l'UEMOA",
+        "la Banque ouest-africaine de développement",
+        "l'administration fiscale de son pays de résidence"
+      ],
+      "r": 0,
+      "x": "Les SGI sont les intermédiaires agréés qui transmettent les ordres de bourse et tiennent les comptes de titres de leurs clients. Elles ont le monopole de la négociation des titres à la BRVM. La BOAD et la Commission de l'UEMOA n'interviennent pas dans les ordres des particuliers.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Les taux directeurs de la BCEAO sont fixés par :",
+      "o": [
+        "le Conseil des ministres de l'OHADA",
+        "la Commission bancaire de l'UMOA",
+        "le Comité de politique monétaire",
+        "l'assemblée générale de la BRVM"
+      ],
+      "r": 2,
+      "x": "Le Comité de politique monétaire, présidé par le gouverneur de la BCEAO, définit la politique monétaire de l'Union. Il fixe notamment les taux directeurs et le coefficient des réserves obligatoires. La Commission bancaire est un organe de supervision.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Les réserves obligatoires sont :",
+      "o": [
+        "des dépôts que les banques doivent garder à la banque centrale",
+        "les bénéfices mis en réserve par une société commerciale",
+        "les stocks de sécurité constitués par les entreprises industrielles",
+        "les impôts annuels versés par les banques commerciales à l'État"
+      ],
+      "r": 0,
+      "x": "La banque centrale impose aux banques de conserver auprès d'elle une fraction de leurs dépôts. En modifiant ce coefficient, elle influence la quantité de crédit distribuée. Il ne faut pas les confondre avec la réserve légale des sociétés.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "L'inflation désigne :",
+      "o": [
+        "la hausse du prix d'un seul produit pendant une semaine",
+        "l'augmentation du nombre d'entreprises dans un pays",
+        "la baisse générale et durable du niveau des prix",
+        "une hausse générale et durable du niveau des prix"
+      ],
+      "r": 3,
+      "x": "L'inflation réduit le pouvoir d'achat de la monnaie. Elle se mesure en général par l'indice des prix à la consommation. La baisse générale et durable des prix s'appelle la déflation.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Dans l'UMOA, les institutions de microfinance sont désignées sous le nom de :",
+      "o": [
+        "sociétés de gestion et d'intermédiation (SGI)",
+        "établissements publics à caractère administratif",
+        "systèmes financiers décentralisés (SFD)",
+        "groupements d'intérêt économique (GIE)"
+      ],
+      "r": 2,
+      "x": "Les SFD collectent l'épargne et accordent de petits crédits, notamment aux populations peu servies par les banques. Les caisses populaires en sont un exemple répandu au Burkina Faso. Les SGI sont des intermédiaires boursiers.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Les services de paiement par téléphone mobile sont notamment fournis par :",
+      "o": [
+        "des établissements de monnaie électronique agréés par la BCEAO",
+        "les commissaires aux comptes des opérateurs de téléphonie mobile du pays",
+        "les sociétés de gestion et d'intermédiation de la BRVM",
+        "les services des impôts de chaque État"
+      ],
+      "r": 0,
+      "x": "La monnaie électronique est émise par des établissements agréés et supervisés par la BCEAO. Elle est devenue un canal majeur d'inclusion financière dans l'Union. Les sommes déposées doivent être couvertes par des fonds placés en banque.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La fonction principale d'une banque commerciale est de :",
+      "o": [
+        "collecter des dépôts et accorder des crédits",
+        "émettre les billets de banque de l'Union",
+        "fixer les taux directeurs de l'Union",
+        "certifier les comptes des entreprises clientes"
+      ],
+      "r": 0,
+      "x": "La banque commerciale transforme les dépôts de ses clients en crédits aux ménages et aux entreprises. Elle gère aussi les moyens de paiement. L'émission des billets et la fixation des taux directeurs relèvent de la BCEAO.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Dans l'espace OHADA, les banques établissent leurs comptes selon :",
+      "o": [
+        "le système minimal de trésorerie de l'OHADA",
+        "le système comptable des entités à but non lucratif",
+        "le plan comptable bancaire de l'UMOA",
+        "le plan comptable de l'État de l'UEMOA"
+      ],
+      "r": 2,
+      "x": "L'AUDCIF exclut les établissements de crédit du champ du SYSCOHADA, car ils obéissent à un référentiel propre. Dans l'UMOA, ce référentiel est le plan comptable bancaire. Les compagnies d'assurance appliquent de même un plan comptable spécifique.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le secteur des assurances des États africains de la zone franc est régi par le code de la :",
+      "o": [
+        "Commission bancaire de l'Union monétaire ouest-africaine (UMOA)",
+        "Bourse régionale des valeurs mobilières (BRVM)",
+        "Conférence interafricaine des marchés d'assurances (CIMA)",
+        "Banque ouest-africaine de développement (BOAD)"
+      ],
+      "r": 2,
+      "x": "Le code CIMA fixe les règles applicables aux compagnies d'assurance des États membres, y compris leur plan comptable. Il assure la protection des assurés et la solidité des compagnies. La Commission bancaire supervise, elle, les banques.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le produit intérieur brut (PIB) mesure :",
+      "o": [
+        "le montant total des impôts collectés par l'État dans l'année",
+        "la richesse produite sur le territoire au cours d'une année",
+        "la valeur totale des exportations du pays au cours d'une année",
+        "le patrimoine accumulé par les ménages depuis leur installation"
+      ],
+      "r": 1,
+      "x": "Le PIB additionne les valeurs ajoutées produites par tous les agents résidents sur le territoire pendant une année. Il est l'indicateur principal de la production d'un pays. Sa variation en volume donne le taux de croissance économique.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le produit national brut (PNB) se distingue du PIB parce qu'il :",
+      "o": [
+        "exclut toute la production agricole réalisée dans le pays",
+        "ne compte que la production des administrations de l'État",
+        "se calcule uniquement en devises étrangères et non en FCFA",
+        "retient la production des nationaux, y compris à l'étranger"
+      ],
+      "r": 3,
+      "x": "Le PNB ajoute au PIB les revenus des facteurs reçus de l'étranger et retranche ceux versés à l'étranger. Il mesure ainsi la richesse produite par les nationaux, où qu'ils soient. Le PIB se limite à la production réalisée sur le territoire.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Consommation : 6 000 ; investissement : 1 500 ; dépenses publiques : 1 200 ; exportations : 2 000 ; importations : 2 700 (en milliards de FCFA). Selon l'optique des dépenses, le PIB est de :",
+      "o": [
+        "6 700 milliards",
+        "8 000 milliards",
+        "9 400 milliards",
+        "13 400 milliards"
+      ],
+      "r": 1,
+      "x": "Le PIB est égal à C + I + G + (X − M) : 6 000 + 1 500 + 1 200 + (2 000 − 2 700) = 8 000 milliards. Les importations sont retranchées car elles sont produites à l'étranger. Le montant de 13 400 milliards additionne à tort les importations.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Un pays exporte pour 2 000 milliards de FCFA et importe pour 2 700 milliards de FCFA. Sa balance commerciale présente :",
+      "o": [
+        "un excédent de 700 milliards de FCFA",
+        "un déficit de 700 milliards de FCFA",
+        "un déficit de 4 700 milliards de FCFA",
+        "un excédent de 4 700 milliards de FCFA"
+      ],
+      "r": 1,
+      "x": "La balance commerciale est égale aux exportations moins les importations : 2 000 − 2 700 = −700 milliards. Le pays achète donc plus à l'étranger qu'il ne lui vend. Ce déficit doit être financé par d'autres flux, comme les transferts ou les emprunts.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La balance des paiements d'un pays enregistre :",
+      "o": [
+        "les seules recettes fiscales et douanières encaissées par l'État au cours de l'année",
+        "la liste des entreprises cotées à la bourse nationale",
+        "les dépenses des collectivités territoriales",
+        "l'ensemble des opérations entre ses résidents et le reste du monde"
+      ],
+      "r": 3,
+      "x": "La balance des paiements retrace les échanges de biens, de services, de revenus et de capitaux avec l'extérieur. La balance commerciale n'en est qu'une partie. Au Burkina Faso, elle est établie par la BCEAO.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "En comptabilité nationale, l'agent dont la fonction principale est de produire des biens et services marchands non financiers est :",
+      "o": [
+        "les ménages",
+        "les administrations publiques",
+        "les institutions financières",
+        "les sociétés non financières"
+      ],
+      "r": 3,
+      "x": "Les sociétés non financières produisent des biens et services destinés à la vente. Les ménages consomment principalement et les administrations publiques fournissent des services non marchands. Les institutions financières collectent et prêtent des fonds.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Un ménage dispose d'un revenu disponible de 500 000 FCFA et consomme 420 000 FCFA. Son taux d'épargne est de :",
+      "o": [
+        "8 %",
+        "16 %",
+        "19 %",
+        "84 %"
+      ],
+      "r": 1,
+      "x": "L'épargne est égale à 500 000 − 420 000 = 80 000 FCFA, soit un taux de 80 000 ÷ 500 000 = 16 %. Le taux de 84 % correspond à la part consommée du revenu. Le taux de 19 % rapporte à tort l'épargne à la consommation.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le statut de l'entreprenant a été créé par l'Acte uniforme portant sur le droit commercial général du :",
+      "o": [
+        "17 avril 1997",
+        "15 décembre 2010",
+        "30 janvier 2014",
+        "26 janvier 2017"
+      ],
+      "r": 1,
+      "x": "L'Acte uniforme révisé du 15 décembre 2010 a créé le statut de l'entreprenant, destiné aux très petites activités. Il remplace l'Acte uniforme du 17 avril 1997. Le 30 janvier 2014 correspond à la révision du droit des sociétés commerciales.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "L'entreprenant est dispensé d'immatriculation au registre du commerce et du crédit mobilier (RCCM), mais il doit :",
+      "o": [
+        "obtenir l'autorisation de la BCEAO",
+        "déclarer son activité au registre",
+        "faire certifier ses comptes chaque année",
+        "constituer une société anonyme"
+      ],
+      "r": 1,
+      "x": "L'entreprenant effectue une simple déclaration d'activité au RCCM, plus légère que l'immatriculation du commerçant. Ce statut vise à faire entrer les petites activités informelles dans le cadre légal. Il n'impose pas la certification des comptes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Au titre de ses obligations comptables, l'entreprenant doit tenir notamment :",
+      "o": [
+        "un livre chronologique des recettes encaissées",
+        "un grand-livre et une balance mensuelle certifiés",
+        "un bilan consolidé établi selon les normes IFRS",
+        "un registre des donateurs coté et paraphé"
+      ],
+      "r": 0,
+      "x": "L'entreprenant tient un livre où il inscrit au jour le jour l'origine et le montant de ses recettes. S'il vend des marchandises, il tient aussi un registre de ses achats. Le registre des donateurs concerne les entités à but non lucratif.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon l'AUDCG, est commerçant celui qui :",
+      "o": [
+        "réalise un seul acte de commerce au cours de sa vie",
+        "possède des actions d'une société commerciale cotée",
+        "travaille comme salarié dans une boutique de la ville",
+        "fait des actes de commerce par nature sa profession"
+      ],
+      "r": 3,
+      "x": "La qualité de commerçant suppose l'exercice habituel et professionnel d'actes de commerce par nature. Un acte isolé ne suffit pas. Le salarié d'une boutique n'est pas commerçant, car il agit pour le compte de son employeur.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le sigle RCCM désigne :",
+      "o": [
+        "le registre du commerce et du crédit mobilier",
+        "le registre central des comptes mensuels",
+        "la retenue commerciale sur les crédits mobiliers",
+        "le répertoire des commerçants et des chefs de ménage"
+      ],
+      "r": 0,
+      "x": "Le RCCM reçoit l'immatriculation des commerçants et des sociétés, ainsi que l'inscription des sûretés mobilières. Il est tenu par le greffe de la juridiction compétente. Son numéro doit figurer sur les documents commerciaux.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon l'AUDCG, le fonds de commerce comprend nécessairement :",
+      "o": [
+        "les bâtiments et les terrains de l'entreprise",
+        "les dettes fournisseurs et les créances clients",
+        "le capital social et les réserves",
+        "la clientèle et l'enseigne ou le nom commercial"
+      ],
+      "r": 3,
+      "x": "La clientèle et l'enseigne ou le nom commercial constituent les éléments obligatoires du fonds de commerce. D'autres éléments, comme le droit au bail ou le matériel, peuvent s'y ajouter. Les immeubles ne font pas partie du fonds.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon l'AUDCG, les obligations nées à l'occasion de leur commerce entre commerçants se prescrivent en principe par :",
+      "o": [
+        "deux ans",
+        "trois ans",
+        "cinq ans",
+        "dix ans"
+      ],
+      "r": 2,
+      "x": "La prescription commerciale de droit commun est de cinq ans. Passé ce délai, le créancier ne peut plus agir en justice pour obtenir le paiement. La durée de dix ans concerne la conservation des documents comptables.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Est un acte de commerce par nature :",
+      "o": [
+        "l'achat de biens en vue de leur revente",
+        "la consultation donnée par un médecin",
+        "la vente de sa récolte par un agriculteur",
+        "la leçon donnée par un enseignant"
+      ],
+      "r": 0,
+      "x": "L'achat pour revendre est l'acte de commerce type. Les professions libérales et l'agriculture relèvent d'activités civiles. Le cultivateur qui vend sa propre récolte n'est donc pas commerçant.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Un placement rapporte un taux d'intérêt nominal de 8 % alors que l'inflation est de 3 %. Le taux d'intérêt réel est d'environ :",
+      "o": [
+        "3 %",
+        "5 %",
+        "8 %",
+        "11 %"
+      ],
+      "r": 1,
+      "x": "Le taux réel est approximativement égal au taux nominal moins l'inflation : 8 % − 3 % = 5 %. Il mesure le gain réel de pouvoir d'achat de l'épargnant. Le résultat de 11 % ajoute à tort l'inflation.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "L'agrégat monétaire M1 comprend :",
+      "o": [
+        "les seuls billets et pièces conservés dans les caisses de la banque centrale",
+        "l'ensemble des actions cotées en bourse",
+        "la monnaie fiduciaire en circulation et les dépôts à vue",
+        "les réserves de change en devises de l'Union"
+      ],
+      "r": 2,
+      "x": "M1 regroupe les moyens de paiement immédiatement utilisables : billets, pièces et dépôts à vue. Les agrégats plus larges ajoutent l'épargne et les dépôts à terme. Les actions ne sont pas de la monnaie.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La monnaie fiduciaire est constituée :",
+      "o": [
+        "des dépôts à vue dans les banques",
+        "des actions et des obligations",
+        "des chèques et des cartes bancaires",
+        "des billets et des pièces"
+      ],
+      "r": 3,
+      "x": "La monnaie fiduciaire repose sur la confiance accordée à l'institut d'émission. Les dépôts à vue forment la monnaie scripturale. Les chèques et cartes sont des instruments qui font circuler la monnaie scripturale, non de la monnaie.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La monnaie scripturale est constituée :",
+      "o": [
+        "des billets de banque émis par la banque centrale",
+        "des pièces de monnaie en circulation dans l'Union",
+        "des stocks d'or et de devises détenus par l'État",
+        "des dépôts à vue, utilisables par chèque ou virement"
+      ],
+      "r": 3,
+      "x": "La monnaie scripturale existe sous forme d'écritures dans les comptes bancaires. Elle circule par chèque, virement ou carte. Elle représente la plus grande part de la masse monétaire.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le tarif extérieur commun (TEC) de l'Union économique et monétaire ouest-africaine (UEMOA) est appliqué depuis le :",
+      "o": [
+        "1er janvier 1994",
+        "1er janvier 1998",
+        "1er janvier 2000",
+        "1er janvier 2015"
+      ],
+      "r": 2,
+      "x": "Le TEC de l'UEMOA, entré en vigueur le 1er janvier 2000, applique les mêmes droits de douane aux importations venant de pays tiers. Il fait de l'Union une union douanière. La date de 2015 correspond au TEC de la CEDEAO.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon le pacte de convergence de l'UEMOA, le taux d'inflation annuel moyen ne doit pas dépasser :",
+      "o": [
+        "2 %",
+        "3 %",
+        "5 %",
+        "10 %"
+      ],
+      "r": 1,
+      "x": "Le critère de convergence fixe un plafond de 3 % pour l'inflation annuelle moyenne. Il vise à préserver la stabilité de la monnaie commune. D'autres critères portent sur le déficit budgétaire et l'endettement public.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon le pacte de convergence de l'UEMOA, l'encours de la dette publique ne doit pas dépasser :",
+      "o": [
+        "50 % du PIB",
+        "60 % du PIB",
+        "70 % du PIB",
+        "100 % du PIB"
+      ],
+      "r": 2,
+      "x": "Le plafond d'endettement public est fixé à 70 % du PIB nominal. Le taux de 60 % est celui retenu par l'Union européenne. Ce critère vise à garantir la soutenabilité des finances publiques des États.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La Banque ouest-africaine de développement (BOAD) a été créée par un accord signé le :",
+      "o": [
+        "12 mai 1962",
+        "14 novembre 1973",
+        "10 janvier 1994",
+        "18 décembre 1996"
+      ],
+      "r": 1,
+      "x": "La BOAD a été créée le 14 novembre 1973, le même jour que la signature du traité de l'UMOA. Elle est devenue opérationnelle en 1976. Le 10 janvier 1994 correspond au traité de l'UEMOA.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Dans un chèque, le tiré est :",
+      "o": [
+        "la personne qui signe et émet le chèque",
+        "la personne qui reçoit le paiement",
+        "la banque qui tient le compte du tireur",
+        "le commissaire aux comptes de l'entreprise"
+      ],
+      "r": 2,
+      "x": "Le tireur émet le chèque, le tiré, c'est-à-dire sa banque, paie, et le bénéficiaire reçoit les fonds. Dans la lettre de change, le tiré est au contraire le débiteur de l'opération. Il ne faut pas confondre les deux instruments.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Au Burkina Faso, la structure chargée de produire les statistiques officielles, dont l'indice des prix à la consommation, est :",
+      "o": [
+        "l'Institut national de la statistique et de la démographie (INSD)",
+        "la Direction générale de l'économie et de la planification (DGEP)",
+        "la Banque centrale des États de l'Afrique de l'Ouest (BCEAO)",
+        "l'Autorité de régulation de la commande publique (ARCOP)"
+      ],
+      "r": 0,
+      "x": "L'INSD collecte et publie les principales statistiques du pays, dont l'indice des prix et les comptes nationaux. Ces données servent à mesurer l'inflation et la croissance. La DGEP est chargée des études et de la planification économiques, et l'ARCOP de la régulation de la commande publique.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La formation brute de capital fixe (FBCF), en comptabilité nationale, correspond :",
+      "o": [
+        "aux achats de biens de consommation courante des ménages",
+        "aux impôts sur les bénéfices prélevés sur les entreprises",
+        "aux investissements en biens durables des agents économiques",
+        "aux exportations de matières premières vers l'étranger"
+      ],
+      "r": 2,
+      "x": "La FBCF mesure l'acquisition de biens durables, comme les bâtiments, les machines ou les routes. Elle prépare la production future de l'économie. Les achats des ménages pour leurs besoins courants relèvent de la consommation finale.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Au Burkina Faso, la commande publique est actuellement régie par la loi n° :",
+      "o": [
+        "039-2016/AN",
+        "032-2021/AN",
+        "020-2024/ALT",
+        "005-2024/ALT"
+      ],
+      "r": 3,
+      "x": "La loi n°005-2024/ALT porte réglementation générale de la commande publique et a remplacé la loi n°039-2016/AN. La loi n°032-2021/AN fixe le régime du partenariat public-privé. La loi n°020-2024/ALT a modifié ce régime du partenariat public-privé.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La loi en vigueur portant réglementation générale de la commande publique au Burkina Faso a été adoptée par l'Assemblée législative de Transition le :",
+      "o": [
+        "2 décembre 2016",
+        "20 avril 2024",
+        "2 août 2024",
+        "30 décembre 2025"
+      ],
+      "r": 1,
+      "x": "La loi a été votée à l'unanimité des 59 députés présents le 20 avril 2024. Elle renforce notamment l'indépendance de l'Autorité de régulation de la commande publique et la cohérence des sanctions. Le 2 décembre 2016 est la date de l'ancienne loi, aujourd'hui remplacée.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Au Burkina Faso, l'organe chargé de la régulation de la commande publique est :",
+      "o": [
+        "la Direction générale du budget (DGB)",
+        "la Cour des comptes du Burkina Faso",
+        "l'Autorité de régulation de la commande publique (ARCOP)",
+        "l'Institut national de la statistique et de la démographie (INSD)"
+      ],
+      "r": 2,
+      "x": "L'ARCOP veille au respect des règles de la commande publique, forme les acteurs et examine les recours. La Cour des comptes juge les comptes des comptables publics. La DGB prépare et suit le budget de l'État.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Au Burkina Faso, les recours non juridictionnels des candidats contre les résultats d'une procédure de passation sont examinés par :",
+      "o": [
+        "l'organe de règlement des différends (ORD) de l'ARCOP",
+        "la Direction générale du contrôle des marchés publics et des engagements financiers",
+        "la commission d'attribution de l'autorité contractante",
+        "la Cour des comptes, statuant en matière budgétaire"
+      ],
+      "r": 0,
+      "x": "L'organe de règlement des différends de l'ARCOP rend des décisions sur les contestations des candidats. Ce recours non juridictionnel permet de régler rapidement les litiges. La commission d'attribution est celle dont la décision est contestée.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Parmi les principes fondamentaux de la commande publique figure :",
+      "o": [
+        "la préférence accordée au candidat le plus ancien",
+        "la confidentialité totale des résultats d'attribution",
+        "l'égalité de traitement des candidats",
+        "le libre choix du titulaire par le ministre"
+      ],
+      "r": 2,
+      "x": "La commande publique repose sur la liberté d'accès, l'égalité de traitement des candidats et la transparence des procédures. Ces principes garantissent le bon usage des deniers publics. Les résultats d'attribution doivent au contraire être publiés.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Dans la commande publique, l'autorité contractante est :",
+      "o": [
+        "la personne publique ou assimilée qui conclut le marché",
+        "l'entreprise qui exécute les travaux commandés",
+        "la banque qui garantit l'offre du candidat",
+        "le fournisseur étranger qui livre l'entreprise titulaire du marché"
+      ],
+      "r": 0,
+      "x": "L'autorité contractante est l'État, une collectivité, un établissement public ou un autre organisme soumis à la réglementation, qui passe le marché. L'entreprise retenue est appelée titulaire du marché. La banque intervient seulement pour les garanties.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le mode de passation de droit commun des marchés publics est :",
+      "o": [
+        "l'entente directe",
+        "la demande de cotation",
+        "l'appel d'offres ouvert",
+        "l'appel d'offres restreint"
+      ],
+      "r": 2,
+      "x": "L'appel d'offres ouvert permet à tout candidat intéressé de soumissionner : c'est la règle. Les autres procédures ne sont utilisées que dans les cas prévus par la réglementation. L'entente directe reste une procédure exceptionnelle.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La procédure par entente directe, ou gré à gré, est :",
+      "o": [
+        "la procédure normale pour tous les marchés passés par l'État",
+        "une procédure réservée aux seuls marchés de faible montant",
+        "une procédure interdite en toute circonstance par la loi",
+        "une procédure exceptionnelle, admise dans les seuls cas prévus"
+      ],
+      "r": 3,
+      "x": "L'entente directe consiste à négocier avec un seul fournisseur sans mise en concurrence. Elle déroge aux principes de concurrence et n'est donc admise que dans des cas limités et contrôlés. La règle générale reste l'appel d'offres ouvert.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Dans un appel d'offres restreint, peuvent remettre une offre :",
+      "o": [
+        "tous les candidats qui le souhaitent, sans aucune limite",
+        "uniquement les entreprises étrangères spécialisées",
+        "un seul candidat désigné à l'avance par le ministre",
+        "les seuls candidats invités par l'autorité contractante"
+      ],
+      "r": 3,
+      "x": "L'appel d'offres restreint limite la concurrence aux candidats que l'autorité contractante consulte directement. Il est réservé aux cas prévus par la réglementation, par exemple pour des prestations très spécialisées. L'appel d'offres ouvert est accessible à tous.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Dans la commande publique, le sigle DAO désigne :",
+      "o": [
+        "le dossier d'appel d'offres",
+        "la déclaration annuelle des opérations",
+        "la direction des achats ordinaires",
+        "le décompte d'avance obligatoire"
+      ],
+      "r": 0,
+      "x": "Le dossier d'appel d'offres réunit toutes les informations nécessaires aux candidats : objet du marché, conditions, critères d'évaluation et modèles de documents. Il garantit que tous les candidats disposent des mêmes informations. Il est mis à disposition après publication de l'avis.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La garantie de soumission exigée d'un candidat à un appel d'offres a pour but :",
+      "o": [
+        "d'assurer le sérieux de l'offre jusqu'à la signature du marché",
+        "de financer le démarrage des travaux par le candidat qui sera retenu",
+        "de payer les impôts dus par le candidat retenu",
+        "de rembourser les frais de publication de l'avis"
+      ],
+      "r": 0,
+      "x": "La garantie de soumission protège l'autorité contractante contre un candidat qui retirerait son offre ou refuserait de signer. Elle est restituée aux candidats non retenus. Le titulaire fournit ensuite une garantie de bonne exécution.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La garantie de bonne exécution est fournie par :",
+      "o": [
+        "l'autorité contractante, avant la publication de l'avis",
+        "chacun des candidats non retenus",
+        "l'ARCOP au profit des entreprises",
+        "le titulaire du marché, après l'attribution"
+      ],
+      "r": 3,
+      "x": "La garantie de bonne exécution couvre l'autorité contractante si le titulaire n'exécute pas correctement le marché. Elle est libérée après la bonne fin des prestations. La garantie de soumission intervient, elle, au stade de l'offre.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "L'avance de démarrage versée au titulaire d'un marché est en principe garantie par :",
+      "o": [
+        "une caution de remboursement de l'avance",
+        "une hypothèque sur les biens de l'État",
+        "une retenue sur le salaire des agents publics",
+        "une subvention de la Banque ouest-africaine de développement"
+      ],
+      "r": 0,
+      "x": "L'avance aide le titulaire à commencer les travaux, mais elle doit être couverte par une caution bancaire de remboursement. Elle est ensuite récupérée par retenues sur les paiements suivants. La caution protège l'autorité contractante si le titulaire est défaillant.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "L'ordre de service, dans l'exécution d'un marché public, est le document par lequel :",
+      "o": [
+        "le candidat transmet son offre technique et financière",
+        "l'autorité contractante notifie une instruction au titulaire",
+        "l'ARCOP annule une procédure de passation irrégulière",
+        "la banque garantit le remboursement de l'avance versée"
+      ],
+      "r": 1,
+      "x": "L'ordre de service fixe notamment la date de début d'exécution, à partir de laquelle courent les délais. Il peut aussi ordonner une suspension ou une reprise des travaux. Il doit être écrit, daté et notifié au titulaire.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Entre la réception provisoire et la réception définitive d'un ouvrage s'écoule :",
+      "o": [
+        "le délai de soumission des offres",
+        "la période d'essai du personnel",
+        "le délai de garantie",
+        "le délai de paiement des impôts"
+      ],
+      "r": 2,
+      "x": "Pendant le délai de garantie, le titulaire doit réparer les défauts constatés sur l'ouvrage. La réception définitive libère ensuite le titulaire de ses obligations contractuelles de garantie. Elle permet aussi de restituer les retenues ou cautions encore détenues.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le plan de passation des marchés est un document qui :",
+      "o": [
+        "liste les entreprises interdites de soumissionner pendant l'année",
+        "présente le bilan annuel des entreprises titulaires des marchés",
+        "programme les marchés prévus par l'autorité contractante pour l'année",
+        "fixe le salaire des agents de l'administration pour l'année"
+      ],
+      "r": 2,
+      "x": "Le plan de passation recense les marchés prévus, leur mode de passation et leur calendrier. Il améliore la prévisibilité et la transparence de la commande publique. Il doit être cohérent avec les crédits budgétaires disponibles.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La publication de l'avis d'appel d'offres vise principalement à :",
+      "o": [
+        "réduire le montant des impôts de l'autorité contractante",
+        "choisir d'avance le titulaire du marché",
+        "garantir la transparence et l'égal accès des candidats",
+        "remplacer le contrôle de l'ARCOP"
+      ],
+      "r": 2,
+      "x": "La publicité permet à toutes les entreprises intéressées de connaître le marché et d'y participer. Elle est la condition d'une véritable mise en concurrence. Une procédure sans publicité suffisante peut être annulée.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le contrat par lequel une personne publique confie à un partenaire privé le financement, la construction et l'exploitation d'un ouvrage public est :",
+      "o": [
+        "un partenariat public-privé (PPP)",
+        "un appel d'offres restreint",
+        "une garantie de bonne exécution du marché",
+        "un ordre de service"
+      ],
+      "r": 0,
+      "x": "Dans un PPP, le partenaire privé finance et réalise l'ouvrage, puis se rémunère sur une longue durée. Au Burkina Faso, le régime du PPP est fixé par la loi n°032-2021/AN, modifiée en 2024. L'appel d'offres restreint est un mode de passation, non un type de contrat.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le contrat par lequel une personne publique confie la gestion d'un service public à un délégataire, rémunéré principalement par l'exploitation du service, est :",
+      "o": [
+        "un marché de fournitures",
+        "une délégation de service public",
+        "une subvention d'exploitation de l'État",
+        "un contrat de travail"
+      ],
+      "r": 1,
+      "x": "Le délégataire assume le risque d'exploitation et se rémunère auprès des usagers, par exemple pour un réseau d'eau. Dans un marché public, le titulaire est au contraire payé par l'autorité contractante. La délégation relève aussi de la commande publique.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Un agent public membre d'une commission d'attribution, qui détient des intérêts dans une entreprise candidate, doit :",
+      "o": [
+        "rester membre en s'abstenant seulement lors du vote final",
+        "signaler oralement ce lien au président et continuer à siéger",
+        "demander à l'entreprise de retirer son offre avant l'ouverture des plis",
+        "déclarer ce conflit d'intérêts et se retirer de la commission"
+      ],
+      "r": 3,
+      "x": "Le conflit d'intérêts compromet l'impartialité de la procédure : l'agent doit le déclarer et ne plus siéger. S'abstenir au seul vote final ne suffit pas, car il aurait influencé l'examen des offres. Ces règles protègent l'égalité de traitement des candidats.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Au Burkina Faso, le Code général des collectivités territoriales actuellement en vigueur est la loi n° :",
+      "o": [
+        "055-2004/AN",
+        "005-2024/ALT",
+        "015-2025/ALT",
+        "024-2025/ALT"
+      ],
+      "r": 3,
+      "x": "La loi n°024-2025/ALT du 30 décembre 2025 porte Code général des collectivités territoriales. Elle remplace la loi n°055-2004/AN du 21 décembre 2004. La loi n°015-2025/ALT porte réorganisation agraire et foncière.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le Code général des collectivités territoriales adopté le 30 décembre 2025 comporte :",
+      "o": [
+        "236 articles",
+        "444 articles",
+        "512 articles",
+        "1 113 articles"
+      ],
+      "r": 1,
+      "x": "Le nouveau Code compte 444 articles, répartis en 28 chapitres et 5 livres, adoptés à l'unanimité des 69 votants. Il introduit plus de quarante innovations pour la décentralisation. Le chiffre de 1 113 articles correspond au Code des personnes et de la famille adopté en 2025.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Au Burkina Faso, les collectivités territoriales sont :",
+      "o": [
+        "la commune et la région",
+        "la province et le département",
+        "le village et le secteur",
+        "la province et la commune"
+      ],
+      "r": 0,
+      "x": "Le Code général des collectivités territoriales répartit les compétences entre les communes et les régions. La province et le département sont des circonscriptions administratives de l'État. Le couple province et commune correspond à une organisation antérieure de la décentralisation.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le comptable d'une commune est :",
+      "o": [
+        "un comptable public du Trésor, le receveur municipal",
+        "le maire ou le président de la délégation spéciale",
+        "le secrétaire général de la mairie de la commune",
+        "un expert-comptable privé choisi par le conseil"
+      ],
+      "r": 0,
+      "x": "La séparation des ordonnateurs et des comptables s'applique aussi aux collectivités territoriales. L'exécutif de la commune ordonne les dépenses, et le receveur, comptable du Trésor, les paie et encaisse les recettes. Un expert-comptable privé ne peut pas tenir ce rôle.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Parmi les ressources propres d'une commune figurent notamment :",
+      "o": [
+        "l'intégralité de la taxe sur la valeur ajoutée collectée par les entreprises de son territoire",
+        "l'ensemble des droits de douane perçus aux frontières",
+        "l'impôt sur les sociétés payé par les entreprises nationales",
+        "les taxes et redevances locales, comme celles des marchés et des gares routières"
+      ],
+      "r": 3,
+      "x": "Les communes perçoivent des taxes et redevances liées aux services et équipements locaux, comme les marchés ou le stationnement. Les grands impôts, comme la TVA, l'impôt sur les sociétés ou les droits de douane, reviennent à l'État. Les collectivités reçoivent aussi des dotations et des transferts de l'État.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le transfert de compétences de l'État aux collectivités territoriales doit s'accompagner :",
+      "o": [
+        "de la suppression des services de l'État concernés",
+        "du transfert des ressources correspondantes",
+        "d'une augmentation automatique des impôts locaux",
+        "de la dissolution des conseils de collectivités"
+      ],
+      "r": 1,
+      "x": "Une collectivité ne peut exercer une compétence nouvelle sans les moyens financiers, humains et matériels nécessaires. Les décrets de transfert précisent donc aussi les ressources transférées. Ils ont été adoptés domaine par domaine, comme la santé ou l'éducation.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le contrôle exercé par l'État sur la légalité des actes des collectivités territoriales est appelé :",
+      "o": [
+        "la tutelle",
+        "le pouvoir hiérarchique",
+        "la déconcentration",
+        "la commande publique"
+      ],
+      "r": 0,
+      "x": "La tutelle permet à l'État de vérifier que les actes des collectivités respectent la loi, sans se substituer à elles. Le pouvoir hiérarchique s'exerce au contraire sur des agents subordonnés. Les collectivités restent juridiquement autonomes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La décentralisation consiste à :",
+      "o": [
+        "déléguer la signature d'un ministre à ses directeurs centraux",
+        "regrouper tous les services publics de l'État dans la capitale du pays",
+        "privatiser les entreprises publiques et les sociétés d'État du pays",
+        "transférer des compétences et des moyens à des collectivités autonomes"
+      ],
+      "r": 3,
+      "x": "La décentralisation crée des collectivités autonomes, administrées par leurs propres organes. La déconcentration, au contraire, délègue des pouvoirs à des représentants locaux de l'État, comme les gouverneurs. Les deux mouvements rapprochent l'administration des populations.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "La déconcentration consiste à :",
+      "o": [
+        "créer des collectivités autonomes dotées de budgets et d'organes propres",
+        "céder les biens de l'État à des entreprises privées par appel d'offres",
+        "confier des pouvoirs de décision à des représentants locaux de l'État",
+        "supprimer toutes les circonscriptions administratives du territoire"
+      ],
+      "r": 2,
+      "x": "Dans la déconcentration, les décisions sont prises localement mais au nom de l'État, par ses agents hiérarchiquement soumis. Le gouverneur de région en est un exemple. Elle se distingue de la décentralisation, qui crée des collectivités autonomes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le document par lequel l'ordonnateur d'une collectivité territoriale rend compte de l'exécution du budget est :",
+      "o": [
+        "le compte de gestion",
+        "le compte administratif",
+        "le budget primitif",
+        "le plan de passation des marchés"
+      ],
+      "r": 1,
+      "x": "Le compte administratif retrace l'exécution du budget par l'ordonnateur, en recettes et en dépenses. Il doit concorder avec le compte de gestion établi par le comptable. Le budget primitif est le budget initial voté pour l'année.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le compte de gestion d'une collectivité territoriale est établi par :",
+      "o": [
+        "le comptable public de la collectivité",
+        "l'ordonnateur de la collectivité territoriale",
+        "le gouverneur de la région administrative",
+        "le commissaire aux comptes de la commune"
+      ],
+      "r": 0,
+      "x": "Le compte de gestion retrace les opérations réellement encaissées et payées par le comptable. Il est rapproché du compte administratif de l'ordonnateur. Les deux documents doivent présenter les mêmes résultats.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le document qui modifie en cours d'année les prévisions du budget primitif d'une collectivité est :",
+      "o": [
+        "le compte administratif",
+        "le compte de gestion",
+        "le budget supplémentaire",
+        "le plan de passation des marchés"
+      ],
+      "r": 2,
+      "x": "Le budget supplémentaire ajuste les prévisions initiales, par exemple pour reprendre les résultats de l'exercice précédent. Il est adopté selon les mêmes règles que le budget primitif. Le compte administratif intervient après la fin de l'exercice.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le code du travail adopté le 6 mai 2026 abroge expressément la loi n° :",
+      "o": [
+        "055-2004/AN",
+        "058-2017/AN",
+        "039-2016/AN",
+        "028-2008/AN"
+      ],
+      "r": 3,
+      "x": "Par son article 440, la loi n°013-2026/ALP abroge la loi n°028-2008/AN du 13 mai 2008 portant code du travail. La loi n°055-2004/AN était l'ancien Code des collectivités territoriales et la loi n°039-2016/AN l'ancienne loi sur la commande publique. La loi n°058-2017/AN porte Code général des impôts.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le code du travail adopté le 6 mai 2026 compte :",
+      "o": [
+        "257 articles",
+        "312 articles",
+        "441 articles",
+        "1 113 articles"
+      ],
+      "r": 2,
+      "x": "Le nouveau code du travail comprend 441 articles répartis en 10 titres. Son article 440 abroge le code du travail de 2008. Les employeurs disposent d'un délai de six mois pour se conformer à ses dispositions.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon le code du travail de 2026, la durée légale du travail dans les établissements non agricoles est fixée à :",
+      "o": [
+        "35 heures par semaine",
+        "40 heures par semaine",
+        "45 heures par semaine",
+        "48 heures par semaine"
+      ],
+      "r": 1,
+      "x": "La durée légale reste fixée à 40 heures par semaine. Les heures effectuées au-delà sont des heures supplémentaires, payées avec majoration. Une durée annuelle particulière est prévue pour les exploitations agricoles.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon le code du travail de 2026, la durée légale du travail dans les exploitations agricoles est fixée à :",
+      "o": [
+        "2 000 heures par an",
+        "2 080 heures par an",
+        "2 400 heures par an",
+        "2 600 heures par an"
+      ],
+      "r": 2,
+      "x": "Les exploitations agricoles appliquent une durée annuelle de 2 400 heures, adaptée au caractère saisonnier des travaux. Elle permet de concentrer le travail pendant les périodes de récolte. Les autres établissements restent soumis à 40 heures par semaine.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon le code du travail de 2026, le repos hebdomadaire est d'au moins :",
+      "o": [
+        "12 heures consécutives",
+        "24 heures consécutives",
+        "36 heures consécutives",
+        "48 heures consécutives"
+      ],
+      "r": 1,
+      "x": "Le repos hebdomadaire minimum est de 24 heures consécutives, pris en principe le dimanche. Il garantit au travailleur une journée complète de récupération. Des dérogations existent pour certaines activités continues.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon le code du travail de 2026, la durée maximale d'un contrat à durée déterminée, sauf terme imprécis, est de :",
+      "o": [
+        "un an",
+        "deux ans",
+        "trois ans",
+        "cinq ans"
+      ],
+      "r": 1,
+      "x": "Le contrat à durée déterminée ne peut pas dépasser deux ans, sauf lorsque son terme est imprécis, comme pour le remplacement d'un salarié absent. Il doit obligatoirement être écrit. Au-delà, la relation de travail se transforme en contrat à durée indéterminée.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon le code du travail de 2026, un contrat à durée déterminée peut être renouvelé au maximum :",
+      "o": [
+        "une fois",
+        "deux fois",
+        "trois fois",
+        "sans limite"
+      ],
+      "r": 1,
+      "x": "Le CDD peut être renouvelé deux fois et l'employeur ne peut pas en conclure plus de trois avec le même travailleur. Le code de 2008 permettait au contraire des renouvellements sans limitation, sauf abus apprécié par le juge. Ces limites évitent de remplacer durablement un emploi permanent par des contrats précaires.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon le code du travail de 2026, un contrat à durée déterminée conclu sans écrit est :",
+      "o": [
+        "nul et sans effet pour les deux parties",
+        "réputé conclu pour une durée d'un mois",
+        "valable seulement pendant la période d'essai",
+        "réputé être un contrat à durée indéterminée"
+      ],
+      "r": 3,
+      "x": "L'écrit est obligatoire pour le CDD : à défaut, le contrat est réputé à durée indéterminée. Cette règle protège le salarié contre les contrats précaires non formalisés. Le CDD doit en outre préciser son terme ou son objet.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon le code du travail de 2026, la période d'essai d'un cadre est au maximum de :",
+      "o": [
+        "huit jours",
+        "un mois",
+        "trois mois",
+        "six mois"
+      ],
+      "r": 2,
+      "x": "La période d'essai est de trois mois pour les cadres, agents de maîtrise et techniciens, et d'un mois pour les autres salariés mensualisés. Elle est de huit jours pour les salariés payés à l'heure ou à la journée. Elle ne peut être renouvelée qu'une seule fois.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le code du travail de 2026 consacre pour la première fois dans la loi burkinabè :",
+      "o": [
+        "le repos hebdomadaire",
+        "le congé payé annuel",
+        "la durée légale de 40 heures",
+        "le télétravail"
+      ],
+      "r": 3,
+      "x": "Le télétravail est défini et encadré par les articles 157 à 159, notamment en cas de crise sanitaire ou de force majeure. Le repos hebdomadaire, le congé payé et la durée légale existaient déjà dans le code de 2008. Le harcèlement sexuel, lui, était déjà interdit par le code de 2008.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le code du travail de 2026 inscrit désormais dans la liste générale des motifs de discrimination interdits de son article 4 :",
+      "o": [
+        "l'ancienneté du salarié dans l'entreprise",
+        "la qualification professionnelle du candidat",
+        "le statut sérologique à VIH, réel ou supposé",
+        "les résultats obtenus au travail"
+      ],
+      "r": 2,
+      "x": "Le statut sérologique à VIH rejoint la race, le sexe, la religion ou le handicap dans la liste de l'article 4. Le code de 2008 interdisait déjà cette discrimination, mais dans un article distinct. L'ancienneté, la qualification et les résultats sont des critères professionnels légitimes.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le code du travail de 2026 ne s'applique pas :",
+      "o": [
+        "à l'agent public régi par un statut",
+        "aux apprentis en formation",
+        "aux stagiaires en entreprise",
+        "aux travailleurs à temps partiel du secteur privé"
+      ],
+      "r": 0,
+      "x": "Les agents publics et les travailleurs régis par une loi spécifique sont exclus du champ du code. Le nouveau texte inclut en revanche expressément les apprentis et les stagiaires. Il s'applique à tous les salariés des employeurs privés installés au Burkina Faso.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon le code du travail de 2026, la durée du congé payé est majorée de deux jours pour le salarié qui compte une ancienneté d'au moins :",
+      "o": [
+        "10 ans",
+        "15 ans",
+        "20 ans",
+        "25 ans"
+      ],
+      "r": 2,
+      "x": "Le congé est majoré de 2 jours après 20 ans d'ancienneté, de 4 jours après 25 ans et de 6 jours après 30 ans. Cette majoration récompense la fidélité du salarié. Elle s'ajoute aux 2 jours et demi calendaires acquis par mois de service.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Un salarié payé 1 500 FCFA de l'heure effectue 6 heures supplémentaires majorées de 15 %. Le montant brut de ces heures est de :",
+      "o": [
+        "9 000 FCFA",
+        "10 350 FCFA",
+        "11 250 FCFA",
+        "13 500 FCFA"
+      ],
+      "r": 1,
+      "x": "Le taux horaire majoré est de 1 500 × 1,15 = 1 725 FCFA, soit 6 × 1 725 = 10 350 FCFA. Le montant de 9 000 FCFA oublie la majoration. Les taux de majoration applicables sont fixés par la réglementation du travail.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "En comptabilité, les heures supplémentaires payées à un salarié sont enregistrées :",
+      "o": [
+        "dans le salaire brut, au compte 661",
+        "en charges exceptionnelles hors activités ordinaires",
+        "en immobilisations incorporelles",
+        "au compte 664 des charges sociales patronales"
+      ],
+      "r": 0,
+      "x": "Les heures supplémentaires font partie de la rémunération du salarié et s'ajoutent au salaire de base dans le brut. Elles supportent donc les mêmes retenues sociales et fiscales. Le compte 664 ne concerne que les cotisations à la charge de l'employeur.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Une salariée de moins de 22 ans bénéficie, selon le code du travail de 2026, d'un congé supplémentaire pour chaque enfant à charge de :",
+      "o": [
+        "un jour ouvrable",
+        "deux jours ouvrables",
+        "trois jours ouvrables",
+        "cinq jours ouvrables"
+      ],
+      "r": 1,
+      "x": "Le code accorde aux salariées de moins de 22 ans deux jours ouvrables de congé supplémentaire par enfant à charge. Cette mesure tient compte des charges familiales des jeunes mères. Elle s'ajoute au congé payé normal.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Le code du travail de 2026 accorde aux employeurs et aux travailleurs, pour se conformer à ses dispositions, un délai de :",
+      "o": [
+        "trois mois",
+        "six mois",
+        "douze mois",
+        "vingt-quatre mois"
+      ],
+      "r": 1,
+      "x": "L'article 438 accorde un délai de six mois pour la mise en conformité. Pendant cette période, les entreprises adaptent leurs contrats et leurs pratiques au nouveau texte. Le code abroge par ailleurs la loi n°028-2008/AN.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
+    },
+    {
+      "q": "Selon les dispositions transitoires du code du travail de 2026, les conventions collectives conclues avant son adoption :",
+      "o": [
+        "sont toutes abrogées",
+        "doivent être renégociées sous un mois",
+        "restent en vigueur",
+        "deviennent facultatives pour les employeurs"
+      ],
+      "r": 2,
+      "x": "L'article 439 maintient les conventions collectives antérieures en vigueur. Cette règle évite un vide juridique dans les branches professionnelles. Elles devront toutefois respecter les dispositions impératives du nouveau code.",
+      "_batchId": "comptabilite/2026-11-24/SERIE4"
     }
   ],
   "pedagogie": [
@@ -84730,3084 +89740,4192 @@ const QUESTIONS = {
   ],
   "actualite": [
     {
-      "q": "Combien de régions administratives compte actuellement le Burkina Faso depuis la réorganisation territoriale ?",
+      "q": "La Charte de la Révolution, qui remplace la Charte de la Transition, a été adoptée par l'Assemblée législative le :",
       "o": [
-        "13 régions",
-        "15 régions",
-        "17 régions",
-        "45 provinces"
-      ],
-      "r": 2,
-      "x": "Depuis la réorganisation territoriale de la Transition, le Burkina Faso compte 17 régions avec des noms endogènes (locaux)."
-    },
-    {
-      "q": "Combien de provinces compte le Burkina Faso depuis la réorganisation territoriale ?",
-      "o": [
-        "45",
-        "47",
-        "49",
-        "30"
+        "19 février 2026",
+        "27 mars 2026",
+        "11 avril 2026",
+        "6 mai 2026"
       ],
       "r": 1,
-      "x": "Le Burkina Faso compte 47 provinces depuis la réorganisation territoriale de la Transition."
+      "x": "La Charte de la Révolution a été adoptée le 27 mars 2026 à l'unanimité des 70 députés votants. Elle remplace la Charte de la Transition du 14 octobre 2022 (révisée le 25 mai 2024) et renomme l'ALT en Assemblée législative du Peuple (ALP).",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Quelle est la monnaie utilisée actuellement au Burkina Faso ?",
+      "q": "Le Burkina Faso a officiellement rompu ses relations diplomatiques avec la France le :",
       "o": [
-        "Le franc CFA (XOF)",
-        "L'ECO",
-        "Le franc burkinabè",
-        "Le naira"
+        "26 juin 2026",
+        "3 juillet 2026",
+        "10 juillet 2026",
+        "17 juillet 2026"
       ],
       "r": 0,
-      "x": "Le Burkina Faso utilise toujours le franc CFA (XOF), monnaie commune de l'UEMOA."
+      "x": "Le Gouvernement a annoncé par communiqué la rupture des relations diplomatiques avec la France à compter du 26 juin 2026, en accusant Paris d'agir contre les intérêts du pays. Les dernières troupes françaises avaient quitté le Burkina Faso en février 2023.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Quel est le nom officiel du Burkina Faso avant 1984 ?",
+      "q": "Le coût global du Plan national de développement (PND) 2026-2030, dénommé Plan RELANCE, est estimé à :",
       "o": [
-        "Haute-Côte d'Ivoire",
-        "Haute-Volta",
-        "Sud-Mali",
-        "République du Mossi"
-      ],
-      "r": 1,
-      "x": "Le Burkina Faso s'appelait République de Haute-Volta jusqu'en août 1984, où Thomas Sankara l'a rebaptisé Burkina Faso ('Pays des hommes intègres')."
-    },
-    {
-      "q": "Qui est le Directeur Général de la RTB (Radiodiffusion Télévision du Burkina) ?",
-      "o": [
-        "Atéridar Galip Some",
-        "Geoffroy Vaha",
-        "Issouf Saré",
-        "Ismaël Ouédraogo"
-      ],
-      "r": 0,
-      "x": "La RTB (Radiodiffusion Télévision du Burkina) est la plus ancienne télévision nationale, créée le 5 août 1963. Son slogan est \"La chaîne au cœur des grands évènements\" et son DG actuel est Atéridar Galip Some."
-    },
-    {
-      "q": "Quel est le slogan d'Omega TV au Burkina Faso ?",
-      "o": [
-        "\"L'info en temps réel\"",
-        "\"Omega, l'heure exacte pour la vie\"",
-        "\"La télé interactive\"",
-        "\"La télévision des nouvelles idées\""
-      ],
-      "r": 0,
-      "x": "Omega TV est une chaîne privée burkinabè créée en 2011. Son slogan est \"L'info en temps réel\"."
-    },
-    {
-      "q": "En quelle année BF1 a-t-elle été créée et qui en est le DG ?",
-      "o": [
-        "18 août 2010, DG : Issoufou Saré",
-        "3 mai 2015, DG : Issoufou Saré",
-        "5 août 2008, DG : Geoffroy Vaha",
-        "23 mai 2016, DG : Adam's Kaled Ouédraogo"
-      ],
-      "r": 0,
-      "x": "BF1 a été créée le 18 août 2010. Son slogan est \"Au cœur de nos défis\" et son DG est Issoufou Saré. C'est l'une des chaînes privées les plus regardées du Burkina Faso."
-    },
-    {
-      "q": "Qui est le DG de la chaîne 3TV et quel est son slogan ?",
-      "o": [
-        "Issouf Saré, \"Au cœur de nos défis\"",
-        "Edmond Coulibaly, \"La télévision du royaume des cieux\"",
-        "Ismaël Ouédraogo, \"Notre chaîne, notre identité\"",
-        "Geoffroy Vaha, \"La télé interactive\""
+        "10 955,3 milliards FCFA",
+        "12 494,9 milliards FCFA",
+        "23 126,0 milliards FCFA",
+        "36 190,7 milliards FCFA"
       ],
       "r": 3,
-      "x": "3TV a été créée le 23 mai 2016. Son slogan est \"La télé interactive\" et son DG est Geoffroy Vaha. Elle est connue pour ses émissions interactives et ses débats citoyens."
+      "x": "Le PND 2026-2030 « RELANCE » coûte 36 190,7 milliards FCFA, dont près de 64 % sur ressources nationales. Les 12 494,9 milliards correspondent aux dépenses d'investissement et les 10 955,3 milliards au besoin de financement additionnel.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Quel est le slogan de Savane TV et qui en est le DG ?",
+      "q": "Le décret portant dissolution des partis et formations politiques au Burkina Faso a été adopté en Conseil des ministres le :",
       "o": [
-        "\"La télé interactive\", DG : Geoffroy Vaha",
-        "\"La télévision du royaume des cieux\", DG : Edmond Coulibaly",
-        "\"La télévision des nouvelles idées\", DG : Issaka Sourwema",
-        "\"Au cœur de nos défis\", DG : Issoufou Saré"
-      ],
-      "r": 2,
-      "x": "Savane TV a été créée en 2018. Son slogan est \"La télévision des nouvelles idées\" et son DG est Issaka Sourwema, aussi connu sous le nom de Naaba Boalga. Le fondateur est El Hadj Aboubacar Zida, dit « Sidnaaba »."
-    },
-    {
-      "q": "Qui est le DG d'Impact TV et quel est son slogan ?",
-      "o": [
-        "Ismaël Ouédraogo, \"Notre chaîne, notre identité\"",
-        "Edmond Coulibaly, \"La télévision du royaume des cieux\"",
-        "Issaka Sourwema, \"La télévision des nouvelles idées\"",
-        "Geoffroy Vaha, \"La télé interactive\""
-      ],
-      "r": 1,
-      "x": "Impact TV a été créée en juin 2010. Son slogan est \"La télévision du royaume des cieux\" et son DG est Edmond Coulibaly. C'est une chaîne à orientation chrétienne."
-    },
-    {
-      "q": "En quelle année Burkina Info TV a-t-elle été créée et qui en est le DG ?",
-      "o": [
-        "20 août 2010, DG : Issouf Saré",
-        "23 mai 2016, DG : Geoffroy Vaha",
-        "3 mai 2015, DG : Ismaël Ouédraogo",
-        "2018, DG : Issaka Sourwema"
-      ],
-      "r": 2,
-      "x": "Burkina Info TV a été créée le 3 mai 2015, date coïncidant avec la Journée mondiale de la liberté de la presse. Son DG est Ismaël Ouédraogo. Elle est spécialisée dans l'information en continu."
-    },
-    {
-      "q": "Quel est le rôle du Ouidi Naaba dans la cour du Mogho Naaba ?",
-      "o": [
-        "Ministre de l'infanterie",
-        "Ministre des tombes royales",
-        "Porte-parole de l'Empereur",
-        "Ministre de la cavalerie"
-      ],
-      "r": 3,
-      "x": "La cour du Mogho Naaba (roi des Mossi) est organisée avec 5 ministres traditionnels. Le Ouidi Naaba est le Ministre de la cavalerie, l'un des dignitaires les plus influents."
-    },
-    {
-      "q": "Quel est le rôle du Goungha Naaba dans la cour du Mogho Naaba ?",
-      "o": [
-        "Ministre de la cavalerie",
-        "Ministre de la jeunesse",
-        "Ministre de l'intendance",
-        "Ministre de l'infanterie"
-      ],
-      "r": 3,
-      "x": "La cour du Mogho Naaba comporte 5 ministres. Le Goungha Naaba est le Ministre de l'infanterie, commandant les soldats à pied et supervisant la garde royale terrestre."
-    },
-    {
-      "q": "Quel est le rôle du Baloum Naaba dans la cour du Mogho Naaba ?",
-      "o": [
-        "Ministre de l'intendance",
-        "Ministre de la cavalerie",
-        "Ministre des tombes royales",
-        "Ministre de la jeunesse"
-      ],
-      "r": 0,
-      "x": "Le Baloum Naaba cumule deux fonctions : Ministre de l'intendance et porte-parole officiel du Mogho Naaba. Il gère les affaires intérieures du palais et transmet la parole royale."
-    },
-    {
-      "q": "Quel est le rôle du Larlé Naaba dans la cour du Mogho Naaba ?",
-      "o": [
-        "Ministre de la jeunesse",
-        "Ministre des tombes royales",
-        "Ministre de l'infanterie",
-        "Ministre de l'intendance"
-      ],
-      "r": 1,
-      "x": "Le Larlé Naaba est le Ministre des tombes royales. Il préside aux cérémonies funéraires liées à la famille royale Mossi et veille sur les sépultures royales ancestrales."
-    },
-    {
-      "q": "Quel est le rôle du Kamsonghin Naaba dans la cour du Mogho Naaba ?",
-      "o": [
-        "Ministre de l'infanterie",
-        "Ministre des tombes royales",
-        "Porte-parole de l'Empereur",
-        "Ministre de la jeunesse"
-      ],
-      "r": 3,
-      "x": "Le Kamsonghin Naaba est le Ministre de la jeunesse du Mogho Naaba. Il supervise les activités liées à la jeunesse et aux initiations traditionnelles dans le royaume Mossi."
-    },
-    {
-      "q": "En quelle année l'Université de Ouagadougou a-t-elle été rebaptisée pour porter le nom du Professeur Joseph Ki-Zerbo ?",
-      "o": [
-        "2012",
-        "2015",
-        "2017",
-        "2020"
-      ],
-      "r": 1,
-      "x": "L'Université Joseph Ki-Zerbo (ancien nom : Université de Ouagadougou) a été fondée le 1er avril 1974 et rebaptisée en 2015. Son slogan est \"Populi Sapientia Populo\" et son président actuel est le Pr Antoine Bere (nommé en janvier 2026)."
-    },
-    {
-      "q": "Quelle est la devise de l'Université Thomas Sankara ?",
-      "o": [
-        "\"Populi Sapientia Populo\"",
-        "\"Savoir-Agir-Servir\"",
-        "\"Science-intégrité-société\"",
-        "\"Connaissance-Progrès-Paix\""
-      ],
-      "r": 2,
-      "x": "L'Université Thomas Sankara (ancien nom : Université Ouaga II) a été créée le 12 décembre 2007 et rebaptisée le 15 octobre 2020. Sa devise est \"Science-intégrité-société\" et son président est le Pr Tibi Didier Zoungrana (nommé le 13 mai 2026)."
-    },
-    {
-      "q": "Qui est la présidente de l'Université Norbert Zongo de Koudougou ?",
-      "o": [
-        "Pr Aminata Zerbo/Sabane",
-        "Pr Passowendé Pélagie Kabre",
-        "Pr Fatoumata Bako",
-        "Pr Windkouni Haoua Eugénie Maiga"
-      ],
-      "r": 3,
-      "x": "L'Université Norbert Zongo (ancien nom : Université de Koudougou) a été créée le 31 août 2005 et rebaptisée le 21 juillet 2017. Son slogan est \"Exceller par le Savoir pour mieux servir\" et sa présidente est le Pr Windkouni Haoua Eugénie Maiga (nommée le 2 avril 2025)."
-    },
-    {
-      "q": "Quel est l'ancien nom de l'Université Nazi Boni et quand a-t-elle été rebaptisée ?",
-      "o": [
-        "Université des Hauts Bassins, rebaptisée le 08 mai 2019",
-        "Université Polytechnique de Bobo-Dioulasso, rebaptisée le 8 mai 2017",
-        "Université de l'Ouest, rebaptisée en avril 2016",
-        "Université des Sciences de Bobo, rebaptisée le 08 mai 2018"
-      ],
-      "r": 1,
-      "x": "L'Université Nazi Boni (ancien nom : Université Polytechnique de Bobo-Dioulasso), créée le 19 septembre 1995, a été rebaptisée le 8 mai 2017. Son slogan est \"Savoir-Compétence-Innovation\" et son président est le Pr Hassan Bismarck Nacro."
-    },
-    {
-      "q": "Quel est le nouveau nom de l'Université de Dédougou depuis le 4 avril 2024 ?",
-      "o": [
-        "Université Lédéa Bernard Ouédraogo (ULBO)",
-        "Université Yembila Abdoulaye Toguyeni (UYAT)",
-        "Université Daniel Ouézzin Coulibaly (UDOC)",
-        "Université Sourou Migan Apithy"
-      ],
-      "r": 2,
-      "x": "L'Université Daniel Ouézzin Coulibaly (UDOC), ancien nom Université de Dédougou, a été créée le 30 décembre 2017 et rebaptisée le 4 avril 2024. Son slogan est \"La science au service de l'humanité\" et son président est le Pr Adama Ouédraogo."
-    },
-    {
-      "q": "Quel est le nouveau nom de l'Université de Ouahigouya depuis le 8 novembre 2024 ?",
-      "o": [
-        "Université Daniel Ouézzin Coulibaly (UDOC)",
-        "Université Lédéa Bernard Ouédraogo (ULBO)",
-        "Université Yembila Abdoulaye Toguyeni (UYAT)",
-        "Université Naaba Kango de Ouahigouya"
-      ],
-      "r": 1,
-      "x": "L'Université Lédéa Bernard Ouédraogo (ULBO), ancien nom Université de Ouahigouya, a été créée le 30 décembre 2017 et rebaptisée le 8 novembre 2024. Son slogan est \"Savoir-Agir-Servir\" et son président est le Pr Adama Ouéda."
-    },
-    {
-      "q": "Quel est le nouveau nom attribué à l'Université de Fada N'Gourma lors de sa rebaptisation du 16 décembre 2024 ?",
-      "o": [
-        "Université Yembila Abdoulaye Toguyeni (UYAT)",
-        "Université Lédéa Bernard Ouédraogo (ULBO)",
-        "Université Daniel Ouézzin Coulibaly (UDOC)",
-        "Université Norbert Zongo (UNZ)"
-      ],
-      "r": 0,
-      "x": "L'Université de Fada N'Gourma a été rebaptisée Université Yembila Abdoulaye Toguyeni (UYAT) le 16 décembre 2024 en hommage à cette personnalité de l'Est du Burkina Faso. son président actuel est le Pr David Yemboini Kader Toguyeni."
-    },
-    {
-      "q": "Qui est le président de l'Université Virtuelle du Burkina Faso ?",
-      "o": [
-        "Oumarou Zallé",
-        "Pr Adjima Thombiano",
-        "Pr Pam Zahonogo",
-        "Pr Antoine Bere"
-      ],
-      "r": 0,
-      "x": "L'Université Virtuelle du Burkina Faso a été officiellement créée en 2019. Son président est Oumarou Zallé (en fonction depuis le 2 mai 2025). Elle offre des formations entièrement en ligne."
-    },
-    {
-      "q": "Qui est le Ministre d'Etat chargé de la Guerre et de la Défense Patriotique ?",
-      "o": [
-        "Commandant Ismaël Sombie",
-        "Emile Zerbo",
-        "Mahamadou Sana",
-        "Célestin Simporé"
-      ],
-      "r": 3,
-      "x": "Le gouvernement du 08 décembre 2024, dirigé par Jean Rimtalba Emmanuel Ouédraogo, compte 22 ministres dont 3 ministres d'État. Le Général de Division Célestin Simporé est le 1er Ministre d'État, chargé de la Guerre et de la Défense Patriotique."
-    },
-    {
-      "q": "Qui est le Ministre d'Etat chargé de l'Agriculture, de l'Eau, des Ressources animales et halieutiques ?",
-      "o": [
-        "Général Célestin Simporé",
-        "Commandant Ismaël Sombie",
-        "Emile Zerbo",
-        "Amadou Dicko"
-      ],
-      "r": 1,
-      "x": "Le Commandant Ismaël Sombie est le 2e Ministre d'État du gouvernement du 08 décembre 2024. Il est chargé de l'Agriculture, de l'Eau, des Ressources animales et halieutiques."
-    },
-    {
-      "q": "Qui est le Ministre d'Etat chargé de l'Administration territoriale et de la Mobilité ?",
-      "o": [
-        "Emile Zerbo",
-        "Mathias Traoré",
-        "Mahamadou Sana",
-        "Karamoko Jean Marie Traoré"
-      ],
-      "r": 0,
-      "x": "Monsieur Emile Zerbo est le 3e Ministre d'État du gouvernement du 08 décembre 2024. Il est chargé de l'Administration territoriale et de la Mobilité, supervisant l'organisation administrative du territoire national."
-    },
-    {
-      "q": "Qui est le Ministre de l'Economie et des Finances ?",
-      "o": [
-        "Aboubakar Nacanabo",
-        "Yacouba Zabré Gouba",
-        "Fatoumata Bako/Traoré",
-        "Serge Gnaniodem Poda"
-      ],
-      "r": 0,
-      "x": "Monsieur Aboubakar Nacanabo est le Ministre de l'Économie et des Finances du gouvernement du 08 décembre 2024. Il est chargé de la politique fiscale, du budget et de la gestion des finances publiques."
-    },
-    {
-      "q": "Qui est le Ministre de la Sécurité dans le gouvernement du 08 décembre 2024 ?",
-      "o": [
-        "Edasso Rodrigue Bayala",
-        "Mahamadou Sana",
-        "Emile Zerbo",
-        "Karamoko Jean Marie Traoré"
-      ],
-      "r": 1,
-      "x": "Le Commissaire divisionnaire de Police Mahamadou Sana est le Ministre de la Sécurité. Il supervise la Police nationale, la sécurité intérieure et la lutte contre la criminalité au Burkina Faso."
-    },
-    {
-      "q": "Qui est le Ministre des Affaires étrangères du Burkina Faso ?",
-      "o": [
-        "Emile Zerbo",
-        "Mathias Traoré",
-        "Karamoko Jean Marie Traoré",
-        "Bebgnasgnan Stella Eldine Kabre"
-      ],
-      "r": 2,
-      "x": "Monsieur Karamoko Jean Marie Traoré est le Ministre des Affaires étrangères. Il représente le Burkina Faso dans ses relations diplomatiques internationales, notamment au sein de l'AES et auprès des partenaires bilatéraux."
-    },
-    {
-      "q": "Qui est le Ministre des serviteurs du Peuple ?",
-      "o": [
-        "Adjima Thombiano",
-        "Moumouni Zoungrana",
-        "Mikaïlou Sidibé",
-        "Mathias Traoré"
-      ],
-      "r": 3,
-      "x": "Monsieur Mathias Traoré est le Ministre des serviteurs du Peuple. Ce portefeuille unique au Burkina Faso est chargé de la fonction publique et de la réforme de l'administration au service des citoyens."
-    },
-    {
-      "q": "Qui est le Ministre de la Communication, de la Culture, des Arts et du Tourisme, porte-parole du gouvernement ?",
-      "o": [
-        "Pingdwendé Gilbert Ouédraogo",
-        "Moumouni Zoungrana",
-        "Jacques Sosthène Dingara",
-        "Adjima Thombiano"
-      ],
-      "r": 0,
-      "x": "Monsieur Pingdwendé Gilbert Ouédraogo est le Ministre de la Communication, de la Culture, des Arts et du Tourisme et porte-parole officiel du gouvernement. Il coordonne la politique de communication de l'État burkinabè."
-    },
-    {
-      "q": "Qui est la Ministre de la Famille et de la Solidarité ?",
-      "o": [
-        "Aminata Zerbo/Sabane",
-        "Fatoumata Bako/Traoré",
-        "Passowendé Pélagie Kabre/Kabore",
-        "Annick Lydie Djouma Pikbougoum"
-      ],
-      "r": 2,
-      "x": "Le Lieutenant-Colonel Passowendé Pélagie Kabre/Kabore dirige ce département, appelé Ministère de l'Action humanitaire et de la Solidarité nationale jusqu'au remaniement du 12 janvier 2026, date à laquelle il est devenu Ministère de la Famille et de la Solidarité."
-    },
-    {
-      "q": "Qui est le Ministre de la Justice dans le gouvernement du 08 décembre 2024 ?",
-      "o": [
-        "Mahamadou Sana",
-        "Karamoko Jean Marie Traoré",
-        "Edasso Rodrigue Bayala",
-        "Blaise B. Bazie"
-      ],
-      "r": 2,
-      "x": "Monsieur Edasso Rodrigue Bayala est le Ministre de la Justice et des Droits Humains, Garde des Sceaux du Burkina Faso. Il est chargé du système judiciaire, de la politique pénitentiaire et de la réforme de la justice au Burkina Faso."
-    },
-    {
-      "q": "Qui est le Ministre de la Santé du Burkina Faso ?",
-      "o": [
-        "Adjima Thombiano",
-        "Robert Lucien Jean-Claude Kargougou",
-        "Yacouba Zabré Gouba",
-        "Moumouni Zoungrana"
-      ],
-      "r": 1,
-      "x": "Monsieur Robert Lucien Jean-Claude Kargougou est le Ministre de la Santé. Il supervise la politique sanitaire nationale, notamment la lutte contre le paludisme, la malnutrition et la couverture sanitaire universelle."
-    },
-    {
-      "q": "Qui est la Ministre de la Transition digitale, des Postes et des Communications électroniques ?",
-      "o": [
-        "Fatoumata Bako/Traoré",
-        "Bebgnasgnan Stella Eldine Kabre",
-        "Passowendé Pélagie Kabre",
-        "Aminata Zerbo/Sabane"
-      ],
-      "r": 3,
-      "x": "Madame Aminata Zerbo/Sabane est la Ministre de la Transition digitale, des Postes et des Communications électroniques. Elle supervise la transformation numérique du pays, notamment le déploiement de la 4G et les plateformes e-gouvernement."
-    },
-    {
-      "q": "Qui est le Ministre de l'Industrie, du Commerce et de l'Artisanat ?",
-      "o": [
-        "Mathias Traoré",
-        "Mikaïlou Sidibé",
-        "Amadou Dicko",
-        "Serge Gnaniodem Poda"
-      ],
-      "r": 3,
-      "x": "Monsieur Serge Gnaniodem Poda est le Ministre de l'Industrie, du Commerce et de l'Artisanat. Il supervise le développement industriel, les échanges commerciaux et la valorisation de l'artisanat burkinabè (dont les 5 produits labellisés)."
-    },
-    {
-      "q": "Qui est le Ministre de la construction de la Patrie ?",
-      "o": [
-        "Yacouba Zabré Gouba",
-        "Adjima Thombiano",
-        "Mikaïlou Sidibé",
-        "Moumouni Zoungrana"
-      ],
-      "r": 2,
-      "x": "Monsieur Mikaïlou Sidibé est le Ministre de la construction de la Patrie. Ce portefeuille singulier regroupe les compétences liées à l'urbanisme, à l'habitat, à la construction et à l'aménagement du territoire."
-    },
-    {
-      "q": "Qui est le Ministre de l'Energie, des Mines et des Carrières ?",
-      "o": [
-        "Aboubakar Nacanabo",
-        "Serge Gnaniodem Poda",
-        "Emile Zerbo",
-        "Yacouba Zabré Gouba"
-      ],
-      "r": 3,
-      "x": "Monsieur Yacouba Zabré Gouba est le Ministre de l'Énergie, des Mines et des Carrières. Il supervise l'exploitation de l'or (principale ressource du pays), la politique énergétique nationale et le projet de centrale nucléaire."
-    },
-    {
-      "q": "Qui est le Ministre de l'Enseignement de base, de l'Alphabétisation et de la Promotion des langues nationales ?",
-      "o": [
-        "Moumouni Zoungrana",
-        "Adjima Thombiano",
-        "Jacques Sosthène Dingara",
-        "Pingdwendé Gilbert Ouédraogo"
-      ],
-      "r": 2,
-      "x": "Monsieur Jacques Sosthène Dingara est le Ministre de l'Enseignement de base, de l'Alphabétisation et de la Promotion des langues nationales. Il supervise les 7 langues d'enseignement officiellement adoptées au Burkina Faso."
-    },
-    {
-      "q": "Qui est le Ministre de l'Enseignement secondaire, de la Formation professionnelle et technique ?",
-      "o": [
-        "Adjima Thombiano",
-        "Jacques Sosthène Dingara",
-        "Mikaïlou Sidibé",
-        "Moumouni Zoungrana"
-      ],
-      "r": 3,
-      "x": "Monsieur Moumouni Zoungrana est le Ministre de l'Enseignement secondaire, de la Formation professionnelle et technique. Il supervise les lycées, collèges et centres de formation professionnelle sur l'ensemble du territoire."
-    },
-    {
-      "q": "Qui est le Ministre de l'Enseignement supérieur, de la Recherche et de l'Innovation ?",
-      "o": [
-        "Adjima Thiombiano",
-        "Moumouni Zoungrana",
-        "Robert Kargougou",
-        "Serge Gnaniodem Poda"
-      ],
-      "r": 0,
-      "x": "Monsieur Adjima Thiombiano est le Ministre de l'Enseignement supérieur, de la Recherche et de l'Innovation. Il supervise les 7 universités publiques et les institutions de recherche scientifique du Burkina Faso."
-    },
-    {
-      "q": "Qui est la Ministre des Sports, de la Jeunesse et de l'Emploi ?",
-      "o": [
-        "Aminata Zerbo/Sabane",
-        "Passowendé Pélagie Kabre",
-        "Bebgnasgnan Stella Eldine Kabre",
-        "Annick Lydie Djouma Pikbougoum/Zingue Ouatara"
-      ],
-      "r": 3,
-      "x": "Madame Annick Lydie Djouma Pikbougoum/Zingue Ouatara est la Ministre des Sports, de la Jeunesse et de l'Emploi. Elle supervise les politiques sportives (Tour du Faso, Iron Biby) et les programmes d'insertion professionnelle des jeunes."
-    },
-    {
-      "q": "Qui est le Ministre délégué auprès du Ministre d'Etat chargé de l'Agriculture et de l'Eau ?",
-      "o": [
-        "Serge Gnaniodem Poda",
-        "Mikaïlou Sidibé",
-        "Mathias Traoré",
-        "Amadou Dicko"
-      ],
-      "r": 3,
-      "x": "Monsieur Amadou Dicko est le Ministre délégué auprès du Ministre d'État chargé de l'Agriculture, de l'Eau, des Ressources animales et halieutiques. Il appuie le Commandant Ismaël Sombie dans la gestion de ce portefeuille stratégique."
-    },
-    {
-      "q": "Qui est la Ministre déléguée auprès du Ministre de l'Economie et des Finances ?",
-      "o": [
-        "Aminata Zerbo/Sabane",
-        "Bebgnasgnan Stella Eldine Kabre",
-        "Fatoumata Bako/Traoré",
-        "Annick Lydie Djouma"
-      ],
-      "r": 2,
-      "x": "Madame Fatoumata Bako/Traoré est la Ministre déléguée auprès du Ministre de l'Économie et des Finances. Elle est l'une des 5 femmes du gouvernement du 08 décembre 2024 qui compte 22 membres au total."
-    },
-    {
-      "q": "Qui est la Ministre délégué auprès du Ministre des Affaires étrangères ?",
-      "o": [
-        "Fatoumata Bako/Traoré",
-        "Aminata Zerbo/Sabane",
-        "Annick Lydie Djouma",
-        "Bebgnasgnan Stella Eldine Kabre/Kabore"
-      ],
-      "r": 3,
-      "x": "Madame Bebgnasgnan Stella Eldine Kabre/Kabore est la Ministre délégué auprès du Ministre des Affaires étrangères. Elle est la 5e et dernière femme du gouvernement Rimtalba Jean Emmanuel Ouédraogo."
-    },
-    {
-      "q": "En combien de nouvelles régions la région de la Boucle du Mouhoun a-t-elle été divisée lors de la réforme de juillet 2025 ?",
-      "o": [
-        "1 nouvelle région : Bankui",
-        "2 nouvelles régions : Sourou et Bankui",
-        "3 nouvelles régions : Sourou, Bankui et Mouhoun",
-        "Elle a conservé le même nom"
-      ],
-      "r": 1,
-      "x": "La Boucle du Mouhoun a donné naissance à 2 régions : le Bankui (chef-lieu Dédougou ; provinces Mouhoun/Dédougou, Balé/Boromo, Bamwa/Solenzo) et la nouvelle région du Sourou (chef-lieu Tougan ; provinces Sourou/Tougan, Kossi/Nouna, Nayala/Toma)."
-    },
-    {
-      "q": "Quelle est la nouvelle appellation de la région des Hauts Bassins ?",
-      "o": [
-        "Tannounyan",
-        "Guiriko",
-        "Djoro",
-        "Yaadga"
-      ],
-      "r": 1,
-      "x": "La région des Hauts Bassins a été renommée région du Guiriko. Elle comprend 3 provinces : Houet (chef-lieu : Bobo-Dioulasso), Kénédougou (Orodara) et Tuy (Houndé)."
-    },
-    {
-      "q": "Quelle est la nouvelle appellation de la région des Cascades ?",
-      "o": [
-        "Tannounyan",
-        "Djoro",
-        "Guiriko",
-        "Nando"
-      ],
-      "r": 0,
-      "x": "La région des Cascades a été renommée région du Tannounyan. Elle comprend 2 provinces : Comoé (chef-lieu : Banfora) et Léraba (chef-lieu : Sindou)."
-    },
-    {
-      "q": "Quelle est la nouvelle appellation de la région du Sud-Ouest ?",
-      "o": [
-        "Tannounyan",
-        "Yaadga",
-        "Nando",
-        "Djoro"
-      ],
-      "r": 3,
-      "x": "La région du Sud-Ouest a été renommée région du Djoro. Elle comprend 4 provinces : Bougouriba (Diébougou), Ioba (Dano), Noumbiel (Batié) et Poni (Gaoua)."
-    },
-    {
-      "q": "Quelle est la nouvelle appellation de la région du Nord ?",
-      "o": [
-        "Kuilse",
-        "Yaadga",
-        "Djoro",
-        "Oubri"
-      ],
-      "r": 1,
-      "x": "La région du Nord a été renommée région du Yaadga. Elle comprend 4 provinces : Loroum (Titao), Passoré (Yako), Yatenga (Ouahigouya) et Zondoma (Gourcy)."
-    },
-    {
-      "q": "Quelle est la nouvelle appellation de la région du Centre-Ouest ?",
-      "o": [
-        "Kuilse",
-        "Nazinon",
-        "Oubri",
-        "Nando"
-      ],
-      "r": 3,
-      "x": "La région du Centre-Ouest a été renommée région du Nando. Elle comprend 4 provinces : Boulkiemdé (Koudougou), Sanguié (Réo), Sissili (Léo) et Ziro (Sapouy)."
-    },
-    {
-      "q": "Quelle est la nouvelle appellation de la région du Centre-Nord ?",
-      "o": [
-        "Oubri",
-        "Nakambe",
-        "Kuilse",
-        "Nazinon"
-      ],
-      "r": 2,
-      "x": "La région du Centre-Nord a été renommée région du Kuilse. Elle comprend 3 provinces : Bam (Kongoussi), Namentenga (Boulsa) et Sanmatenga (Kaya)."
-    },
-    {
-      "q": "Quelle est la nouvelle appellation de la région du Plateau Central ?",
-      "o": [
-        "Kuilse",
-        "Nazinon",
-        "Nakambe",
-        "Oubri"
-      ],
-      "r": 3,
-      "x": "La région du Plateau Central a été renommée région de l'Oubri. Elle comprend 3 provinces : Bassitenga (Ziniaré), Ganzourgou (Zorgho) et Kourwéogo (Boussé)."
-    },
-    {
-      "q": "Quelle est la nouvelle appellation de la région du Centre ?",
-      "o": [
-        "Nazinon",
-        "Nakambe",
-        "Kadiogo",
-        "Oubri"
-      ],
-      "r": 2,
-      "x": "La région du Centre a été renommée région du Kadiogo. Elle comprend une seule province, le Kadiogo, dont le chef-lieu est Ouagadougou, la capitale nationale et la ville la plus peuplée du pays."
-    },
-    {
-      "q": "Quelle est la nouvelle appellation de la région du Centre-Sud ?",
-      "o": [
-        "Nakambe",
-        "Nazinon",
-        "Kuilse",
-        "Oubri"
-      ],
-      "r": 1,
-      "x": "La région du Centre-Sud a été renommée région du Nazinon. Elle comprend 3 provinces : Bazèga (Kombissiri), Nahouri (Pô) et Zounwéogo (Manga)."
-    },
-    {
-      "q": "Quelle est la nouvelle appellation de la région du Centre-Est ?",
-      "o": [
-        "Oubri",
-        "Kuilse",
-        "Nazinon",
-        "Nakambe"
-      ],
-      "r": 3,
-      "x": "La région du Centre-Est a été renommée région du Nakambe. Elle comprend 3 provinces : Boulgou (Tenkodogo), Koulpelego (Ouargaye) et Kourittenga (Koupela)."
-    },
-    {
-      "q": "En combien de nouvelles régions la région du Sahel a-t-elle été divisée lors de la réforme de juillet 2025 ?",
-      "o": [
-        "Elle a conservé le même nom",
-        "3 nouvelles régions",
-        "2 nouvelles régions : Soum et Liptako",
-        "2 nouvelles régions : Soum et Nakambe"
-      ],
-      "r": 2,
-      "x": "La région du Sahel a été divisée en 2 nouvelles régions : la région du Soum (2 provinces : Djelgodji/Djibo et Karo-Peli/Arbinda) et la région du Liptako (3 provinces : Oudalan/Gorom-Gorom, Séno/Dori et Yagha/Sebba)."
-    },
-    {
-      "q": "En combien de nouvelles régions la région de l'Est a-t-elle été divisée lors de la réforme de juillet 2025 ?",
-      "o": [
-        "2 nouvelles régions",
-        "3 nouvelles régions",
-        "Elle a conservé son nom",
-        "4 nouvelles régions"
-      ],
-      "r": 1,
-      "x": "La région de l'Est a été divisée en 3 nouvelles régions : Goulmou (Gourma/Fada N'Gourma, Kompienga/Pama), Tapoa (Dyamongou/Kantchari, Gognangou/Diapaga) et Sirba (Gnagna/Bogandé, Komondjari/Gayéri)."
-    },
-    {
-      "q": "Quel est le surnom de la ville de Banfora ?",
-      "o": [
-        "La cité de Sya",
-        "La cité de Naaba Kango",
-        "La cité de Numadu",
-        "La cité du paysan noir"
-      ],
-      "r": 3,
-      "x": "Banfora est surnommée \"La cité du paysan noir\". Chef-lieu de la province de la Comoé (région du Tannounyan), elle est connue pour ses cascades de Karfiguéla, son lac Tengrela et son industrie sucrière (SOCUCO)."
-    },
-    {
-      "q": "Quel est le surnom de la ville de Batié ?",
-      "o": [
-        "La cité de Damar",
-        "La cité de Bafoudji",
-        "La cité du cavalier rouge",
-        "La cité de Massaco"
-      ],
-      "r": 0,
-      "x": "Batié est surnommée \"La cité de Damar\". Chef-lieu de la province du Noumbiel dans la région du Djoro (ancienne région du Sud-Ouest)."
-    },
-    {
-      "q": "Quel est le surnom de Bobo-Dioulasso ?",
-      "o": [
-        "La cité de Bankuy",
-        "La cité de Yendabri",
-        "La cité de Sya",
-        "La cité des cuirs et peaux"
-      ],
-      "r": 2,
-      "x": "Bobo-Dioulasso est surnommée \"La cité de Sya\", du nom de son fondateur légendaire. Deuxième ville du Burkina Faso, chef-lieu de la province du Houet (région du Guiriko), elle abrite l'Université Nazi Boni."
-    },
-    {
-      "q": "Quel est le surnom de la ville de Dédougou ?",
-      "o": [
-        "La cité de Bankuy",
-        "La cité de Rialé",
-        "La cité de Damar",
-        "La cité de Sya"
-      ],
-      "r": 0,
-      "x": "Dédougou est surnommée \"La cité de Bankuy\". Chef-lieu de la province du Mouhoun et de la région du Bankui, elle abrite l'Université Daniel Ouézzin Coulibaly (UDOC) et le Festival International des Masques et des Arts (FESTIMA)."
-    },
-    {
-      "q": "Quel est le surnom de la ville de Fada N'Gourma ?",
-      "o": [
-        "La cité de Bafoudji",
-        "La cité de surba",
-        "La cité de Massaco",
-        "La cité de Yendabri"
-      ],
-      "r": 3,
-      "x": "Fada N'Gourma est surnommée \"La cité de Yendabri\". Chef-lieu de la province du Gourma (région du Goulmou), elle abrite l'Université Yembila Abdoulaye Toguyeni (UYAT)."
-    },
-    {
-      "q": "Quel est le surnom de la ville de Gaoua ?",
-      "o": [
-        "La cité de Damar",
-        "La cité de Bafoudji",
-        "La cité des collines blanches",
-        "La cité de Massaco"
-      ],
-      "r": 1,
-      "x": "Gaoua est surnommée \"La cité de Bafoudji\". Chef-lieu de la province du Poni (région du Djoro), elle est connue pour son musée ethnographique des Lobi et ses paysages de savane."
-    },
-    {
-      "q": "Quel est le surnom de la ville de Gnagna (Bogandé) ?",
-      "o": [
-        "La cité de Phacochère",
-        "La cité des collines blanches",
-        "La cité de Bafoudji",
-        "La cité de Surba"
-      ],
-      "r": 3,
-      "x": "Gnagna (dont le chef-lieu est Bogandé) est surnommée \"La cité de surba\". Province de la nouvelle région du Sirba (ancienne région de l'Est)."
-    },
-    {
-      "q": "Quel est le surnom de la ville de Gorom-Gorom ?",
-      "o": [
-        "La cité de Phacochère",
-        "La cité de Surba",
-        "La cité des collines blanches",
-        "La cité du haricot vert"
-      ],
-      "r": 2,
-      "x": "Gorom-Gorom est surnommée \"La cité des collines blanches\". Chef-lieu de la province de l'Oudalan (région du Liptako), elle est réputée pour son marché hebdomadaire traditionnel très animé."
-    },
-    {
-      "q": "Quel est le surnom de la ville de Kaya ?",
-      "o": [
-        "La cité des cuirs et peaux",
-        "La cité du cavalier rouge",
-        "La cité du haricot vert",
-        "La cité de Naaba Kango"
-      ],
-      "r": 0,
-      "x": "Kaya est surnommée \"La cité des cuirs et peaux\". Chef-lieu de la province du Sanmatenga (région du Kuilse), elle est un important centre d'artisanat du cuir et un nœud routier majeur du Centre-Nord."
-    },
-    {
-      "q": "Quel est le surnom de la ville de Kongoussi ?",
-      "o": [
-        "La cité des cuirs et peaux",
-        "La cité du haricot vert",
-        "La cité du cavalier rouge",
-        "La cité de Numadu"
-      ],
-      "r": 1,
-      "x": "Kongoussi est surnommée \"La cité du haricot vert\". Chef-lieu de la province du Bam (région du Kuilse), elle est bordée par le lac Bam, important réservoir d'eau du Burkina Faso."
-    },
-    {
-      "q": "Quel est le surnom de la ville de Koudougou ?",
-      "o": [
-        "La cité de Bankuy",
-        "La cité du haricot vert",
-        "La cité du cavalier rouge",
-        "La cité des cuirs et peaux"
-      ],
-      "r": 2,
-      "x": "Koudougou est surnommée \"La cité du cavalier rouge\". Troisième ville du Burkina Faso, chef-lieu de la province du Boulkiemdé (région du Nando), elle abrite l'Université Norbert Zongo et les Nuits Atypiques de Koudougou (NAK, créées en 1996)."
-    },
-    {
-      "q": "Quel est le surnom de la ville de Loropéni ?",
-      "o": [
-        "La cité de massaco",
-        "La cité de Bafoudji",
-        "La cité de Surba",
-        "La cité de Damar"
-      ],
-      "r": 0,
-      "x": "Loropéni est surnommée \"La cité de massaco\". Loropéni est une commune rurale de la province du Poni dans la région du Djôrô. Elle est connue pour ses ruines nommée \"les Ruines de Loropéni\", site archéologique inscrit au patrimoine mondial de l'UNESCO en 2009."
-    },
-    {
-      "q": "Quel est le surnom de la ville de Manga ?",
-      "o": [
-        "La cité de l'Épervier",
-        "La cité de Rialé",
-        "La cité de massaco",
-        "La cité de Phacochère"
-      ],
-      "r": 0,
-      "x": "Manga est surnommée \"La cité de l'Épervier\". Chef-lieu de la province du Zounwéogo (région du Nazinon), elle est un centre agricole important du Centre-Sud du Burkina Faso."
-    },
-    {
-      "q": "Quel est le surnom de la ville de Niangoloko ?",
-      "o": [
-        "La cité de Rialé",
-        "La cité de Santa",
-        "La cité de Massaco",
-        "La cité de Damar"
-      ],
-      "r": 1,
-      "x": "Niangoloko est surnommée \"La cité de santa\". Commune de la province de la Comoé (région du Tannounyan), elle est un carrefour commercial proche de la frontière avec la Côte d'Ivoire."
-    },
-    {
-      "q": "Quel est le surnom de la ville de Nouna ?",
-      "o": [
-        "La cité de Numadu",
-        "La cité du haricot vert",
-        "La cité de Bankuy",
-        "La cité de Sya"
-      ],
-      "r": 0,
-      "x": "Nouna est surnommée \"La cité de Numadu\". Chef-lieu de la province de la Kossi, elle appartient à la nouvelle région du Sourou, dont le chef-lieu est Tougan."
-    },
-    {
-      "q": "Quel est le surnom de la ville d'Orodara ?",
-      "o": [
-        "La cité de Naaba Kango",
-        "La cité du verger",
-        "La cité de Sya",
-        "La cité de Bankuy"
-      ],
-      "r": 1,
-      "x": "Orodara est surnommée \"La cité du verger\" en raison de sa production fruitière (mangues notamment). Chef-lieu de la province du Kénédougou dans la région du Guiriko (ancienne région des Hauts Bassins)."
-    },
-    {
-      "q": "Quel est le surnom de la ville de Ouahigouya ?",
-      "o": [
-        "La cité des cuirs et peaux",
-        "La cité du haricot vert",
-        "La cité de Phacochère",
-        "La cité de Naaba Kango"
-      ],
-      "r": 3,
-      "x": "Ouahigouya est surnommée \"La cité de Naaba Kango\". Quatrième ville du Burkina Faso, chef-lieu de la province du Yatenga (région du Yaadga), elle abrite l'Université Lédéa Bernard Ouédraogo (ULBO)."
-    },
-    {
-      "q": "Quel est le surnom de la ville de Pô ?",
-      "o": [
-        "La cité de Rialé",
-        "La cité de la Révolution",
-        "La cité de Massaco",
-        "La cité de Damar"
-      ],
-      "r": 1,
-      "x": "Pô est surnommée \"La cité de la Révolution\", Ce surnom historique lui a été attribué car c'est de sa garnison militaire que sont parties les troupes qui ont renversé le gouvernement en août 1983 pour porter Thomas Sankara au pouvoir."
-    },
-    {
-      "q": "Quel est le surnom de la ville de Saponé ?",
-      "o": [
-        "La cité de Phacochère",
-        "La cité de Rialé",
-        "La cité de Chapeaux majestueux",
-        "La cité du haricot vert"
-      ],
-      "r": 2,
-      "x": "Saponé est surnommée \"La cité de Chapeaux majestueux\" en référence à sa production artisanale de chapeaux en paille. Le chapeau de Saponé est l'un des 5 produits officiellement labellisés du Burkina Faso."
-    },
-    {
-      "q": "Quel est le surnom de la ville de Tenkodogo ?",
-      "o": [
-        "La cité de Phacochère",
-        "La cité de Murba",
-        "La cité de Massaco",
-        "La cité de Rialé"
-      ],
-      "r": 3,
-      "x": "Tenkodogo est surnommée \"La cité de Rialé\". Chef-lieu de la province du Boulgou (région du Nakambe), elle est l'un des plus anciens royaumes Mossi historiques du Burkina Faso."
-    },
-    {
-      "q": "Quel est le surnom de la ville de Titao ?",
-      "o": [
-        "La cité de Naaba Kango",
-        "La cité de Phacochère",
-        "La cité de Massaco",
-        "La cité du haricot vert"
-      ],
-      "r": 1,
-      "x": "Titao est surnommée \"La cité de Phacochère\". Chef-lieu de la province du Loroum (région du Yaadga), le phacochère est un animal emblématique de la savane burkinabè."
-    },
-    {
-      "q": "Quel est le surnom de la ville de Tyou ?",
-      "o": [
-        "La cité de Rialé",
-        "La cité de Naaba Koudoumier",
-        "La cité de Massaco",
-        "La cité de Surba"
-      ],
-      "r": 1,
-      "x": "Tyou est surnommée \"La cité de Naaba Koudoumier\", en référence à un chef traditionnel historique de la royauté Mossi. Commune de la région du Nazinon (ancienne région du Centre-Sud)."
-    },
-    {
-      "q": "Qui dirige l'Agence burkinabè de la cinématographie et de l'audiovisuel (ABCA), structure qui organise désormais le FESPACO ?",
-      "o": [
-        "Éric Bassolé",
-        "Noufo Enok Kindo",
-        "Christiane Sanou/Coulibaly",
-        "Moussa Alex Sawadogo"
-      ],
-      "r": 3,
-      "x": "Créée en novembre 2024, l'ABCA a absorbé la Délégation générale du FESPACO. Elle est dirigée par Moussa Alex Sawadogo, ancien délégué général du FESPACO. Le FESPACO, créé en 1969, se tient aux années impaires ; sa 30e édition est prévue en 2027."
-    },
-    {
-      "q": "Qui est le DG du SIAO et quel est son slogan ?",
-      "o": [
-        "Moussa Alex Sawadogo, \"La Patrie ou la Mort\"",
-        "Éric Bassolé, \"La vitrine de l'artisan africain\"",
-        "Christiane Sanou, \"L'artisanat pour la paix\"",
-        "Ibrahim Saba, \"Vous faciliter la vie\""
-      ],
-      "r": 1,
-      "x": "Le SIAO (Salon International de l'Artisanat de Ouagadougou) a été créé en juin 1988. Son slogan est \"La vitrine de l'artisan africain\" et son DG est Éric Bassolé. Il se tient à Ouagadougou aux années paires ; la 18e édition est prévue du 30 octobre au 8 novembre 2026."
-    },
-    {
-      "q": "Qui est la Directrice Générale de la SNC et en quelle année a-t-elle été créée ?",
-      "o": [
-        "Éric Bassolé, 1983",
-        "Moussa Alex Sawadogo, 1983",
-        "Noufo Enok Kindo, 1984",
-        "Christiane Sanou/Coulibaly, 1983"
-      ],
-      "r": 3,
-      "x": "La SNC (Semaine Nationale de la Culture) a été créée en 1983. Sa DG est Christiane Sanou/Coulibaly. Elle se tient à Bobo-Dioulasso aux années paires. La 22e édition de 2026 a pour thème \"Culture, jeunesse et transmission des valeurs sociales\"."
-    },
-    {
-      "q": "Qui est le DG de la LONAB et quel est son slogan ?",
-      "o": [
-        "Ibrahim Saba",
-        "Ibrahim Ben Harouna Zarani",
-        "Flandin Idrissa Sourabié",
-        "Boureima Ouattara"
-      ],
-      "r": 1,
-      "x": "La LONAB (Loterie Nationale Burkinabè) a été créée le 10 mai 1967. Son slogan est \"Les lots aux heureux gagnants et les bénéfices à la nation tout entière\" et son DG est Ibrahim Ben Harouna Zarani."
-    },
-    {
-      "q": "Qui est le DG de l'ONEA et quel est son slogan ?",
-      "o": [
-        "Souleymane Ouédraogo, \" être au service d'une grande ambition\"",
-        "Aime Wendpenga Nongkouni, \"L'eau pour tous\"",
-        "Flandin Idrissa Sourabié, \" votre bien-être, notre raison de vivre\"",
-        "Braima Barro, \"Résilience, innovation, solidarité, excellence\""
-      ],
-      "r": 2,
-      "x": "L'ONEA (Office National de l'Eau et de l'Assainissement) a été créé le 22 juin 1985. Son slogan est \"votre bien-être, notre raison de vivre\" et son DG est Flandin Idrissa Sourabié. Il gère l'eau potable et l'assainissement en milieu urbain."
-    },
-    {
-      "q": "Qui est le DG de la SONABEL et quel est son slogan ?",
-      "o": [
-        "Flandin Idrissa Sourabié, \"ONEA, votre bien-être\"",
-        "Souleymane Ouédraogo, \"la SONABEL, être au service d'une grande ambition\"",
-        "Aime Wendpenga Nongkouni, \"L'énergie pour tous\"",
-        "Braima Barro, \"Résilience, innovation, solidarité, excellence\""
-      ],
-      "r": 1,
-      "x": "La SONABEL (Société Nationale Burkinabè de l'Électricité) a été créée en août 1984. Son slogan est \"SONABEL, être au service d'une grande ambition\" et son DG est Souleymane Ouédraogo. Elle assure la production et la distribution de l'électricité au Burkina Faso."
-    },
-    {
-      "q": "Qui est le DG de la SONABHY et en quelle année a-t-elle été créée ?",
-      "o": [
-        "Souleymane Ouédraogo, 9 octobre 1984",
-        "Braima Barro, 22 juin 1984",
-        "Flandin Idrissa Sourabié, 22 juin 1985",
-        "Patrice Forogo, 9 octobre 1985"
-      ],
-      "r": 3,
-      "x": "La SONABHY (Société Nationale Burkinabè des Hydrocarbures) a été créée le 9 octobre 1985. Son DG est Patrice Forogo (nommé le 25/06/2026). Elle assure l'importation, le stockage et la distribution des produits pétroliers (carburant, gaz) au Burkina Faso."
-    },
-    {
-      "q": "Qui est le DG de la SOFITEX et quel est son slogan ?",
-      "o": [
-        "Souleymane Ouédraogo, \"SONABEL, être au service d'une grande ambition\"",
-        "Noufo Enok Kindo, \"Toute info en temps réel\"",
-        "Braima Barro, \"Résilience, innovation, solidarité, excellence\"",
-        "Ibrahim Saba, \"Vous faciliter la vie\""
-      ],
-      "r": 2,
-      "x": "La SOFITEX (Société de Filature du Coton et du Textile) a pour DG Braima Barro et pour slogan \"Résilience, innovation, solidarité, excellence\". C'est le principal acteur de la filière coton au Burkina Faso, premier exportateur agricole du pays."
-    },
-    {
-      "q": "Qui est le Secrétaire général du Conseil Africain et Malgache pour l'Enseignement Supérieur (CAMES) ?",
-      "o": [
-        "Pr Bertrand Mbatchi",
-        "Pr Abou Napon",
-        "Pr Souleymane Konaté",
-        "Pr Adjima Thiombiano"
-      ],
-      "r": 2,
-      "x": "Le Secrétaire général du CAMES est le Pr Souleymane Konaté, en fonction depuis le 9 janvier 2023. Il est le 7ᵉ secrétaire général de l'institution."
-    },
-    {
-      "q": "Qui est le Secrétaire permanent de l'OHADA ?",
-      "o": [
-        "Pr Souleymane Konaté",
-        "Mahamat Idriss Deby Itno",
-        "Mayatta Ndiaye Mbaye",
-        "Patrice Talon"
-      ],
-      "r": 2,
-      "x": "L'OHADA (Organisation pour l'Harmonisation en Afrique du Droit des Affaires) a été créée le 17 octobre 1993. Son Secrétaire permanent est  Mayatta Ndiaye Mbaye. Elle s'applique dans 17 pays africains."
-    },
-    {
-      "q": "Qui est le fondateur des NAK (Nuits Atypiques de Koudougou) et en quelle année ont-elles été créées ?",
-      "o": [
-        "Moussa Alex Sawadogo, 1969",
-        "Éric Bassolé, 1988",
-        "Koudbi Koala, 1996",
-        "Christiane Sanou, 1983"
-      ],
-      "r": 2,
-      "x": "Les NAK (Nuits Atypiques de Koudougou) ont été créées en 1996 par Koudbi Koala (fondateur de l'association Bénebnooma). Ce festival culturel annuel se tient à Koudougou et promeut les musiques du monde et la culture africaine."
-    },
-    {
-      "q": "Qui est le DG de la SONAGESS et en quelle année a-t-elle été créée ?",
-      "o": [
-        "Ibrahim Saba, 28 avril 1997",
-        "Boureima Ouattara, 1997",
-        "Stéphane Gildas Tiendrebeogo, 13 juin 1994",
-        "Flandin Idrissa Sourabié, 22 juin 1985"
-      ],
-      "r": 2,
-      "x": "La SONAGESS (Société Nationale de Gestion du Stock et de Sécurité alimentaire) a été créée le 13 juin 1994. Son slogan est \"Sécurité alimentaire, la SONAGESS au service des populations\" et son DG est Stéphane Gildas Tiendrebeogo."
-    },
-    {
-      "q": "Qui est le DG de la SONAPOSTE et quel est son slogan ?",
-      "o": [
-        "Boureima Ouattara, \"Bâtir dans un cadre sécurisé\"",
-        "Ibrahim Saba, \"Vous faciliter la vie\"",
-        "Flandin Idrissa Sourabié, \"Votre bien-être\"",
-        "Aime Wendpenga Nongkouni, \"L'eau pour tous\""
-      ],
-      "r": 1,
-      "x": "La SONAPOSTE (Société Nationale de la Poste Burkinabè) a été créée le 28 avril 1997. Son slogan est \"Vous faciliter la vie\" et son DG est Ibrahim Saba. Elle est en cours de transformation en BPBF (Banque Postale du Burkina Faso), lancée le 7 octobre 2024."
-    },
-    {
-      "q": "Qui est le DG de l'AIB (Agence d'Information du Burkina) et quel est son slogan ?",
-      "o": [
-        "Moussa Alex Sawadogo, \"La Patrie ou la Mort\"",
-        "Éric Bassolé, \"La vitrine africaine\"",
-        "Noufo Enok Kindo, \"Toute l'info en temps réel\"",
-        "Stéphane Tiendrebeogo, \"Informer pour développer\""
-      ],
-      "r": 2,
-      "x": "L'AIB (Agence d'Information du Burkina) a été créée le 27 mai 1964. Son slogan est \"Toute l'info en temps réel\" et son DG est Noufo Enok Kindo. C'est l'agence de presse officielle de l'État burkinabè."
-    },
-    {
-      "q": "Qui est le DG de la SONATUR et quel est son slogan ?",
-      "o": [
-        "Flandin Idrissa Sourabié, \"L'eau pour tous\"",
-        "Ibrahim Saba, \"Vous faciliter la vie\"",
-        "Aime Wendpenga Nongkouni, \"L'énergie pour tous\"",
-        "Boureima Ouattara, \"Bâtir dans un cadre sécurisé\""
-      ],
-      "r": 3,
-      "x": "La SONATUR (Société Nationale d'Aménagement des Terrains Urbains) a été créée en 1997. Son slogan est \"Bâtir dans un cadre sécurisé\" et son DG est Boureima Ouattara. Elle est chargée du lotissement des terrains urbains au Burkina Faso."
-    },
-    {
-      "q": "Qui a été désigné meilleur joueur de la CAN Maroc 2025 ?",
-      "o": [
-        "Achraf Hakimi",
-        "Brahim Diaz",
-        "Yacine Bounou",
-        "Sadio Mané"
-      ],
-      "r": 3,
-      "x": "Sadio Mané (al Nasr FC) a été désigné meilleur joueur de la CAN Maroc 2025. Brahim Diaz (Real Madrid FC) a été le meilleur buteur et Yassine Bounou (Al Hilal FC) le meilleur gardien de la compétition."
-    },
-    {
-      "q": "Qui a été désigné meilleur gardien de la CAN Maroc 2025 ?",
-      "o": [
-        "André Onana",
-        "Yahia Fofana",
-        "Yassine Bounou",
-        "Edouard Mendy"
-      ],
-      "r": 2,
-      "x": "Le Marocain Yassine Bounou (Bono) a été désigné meilleur gardien de la CAN Maroc 2025. Il a effectué 5 matchs sans encaisser de but sur les 7 rencontres disputées. Il a encaissé seulement 2 buts sur toute la compétition."
-    },
-    {
-      "q": "Quel pays représentait Trygve Lie, 1er Secrétaire Général de l'ONU ?",
-      "o": [
-        "Suède",
-        "Norvège",
-        "Danemark",
-        "Finlande"
-      ],
-      "r": 1,
-      "x": "Trygve Lie (Norvège) était le 1er SG de l'ONU. Il a pris ses fonctions le 1er février 1946 et les a quittées le 10 avril 1953. Il a dirigé l'ONU lors de ses premières années, notamment pendant la guerre de Corée."
-    },
-    {
-      "q": "Quel pays représentait Dag Hammarskjöld, 2e Secrétaire Général de l'ONU ?",
-      "o": [
-        "Norvège",
-        "Danemark",
-        "Suède",
-        "Finlande"
-      ],
-      "r": 2,
-      "x": "Dag Hammarskjöld (Suède) était le 2e SG de l'ONU (10 avril 1953 – 18 septembre 1961). Il est mort dans un accident d'avion en mission en Afrique et a reçu le Prix Nobel de la Paix à titre posthume."
-    },
-    {
-      "q": "Quel pays représentait U Thant, 3e Secrétaire Général de l'ONU ?",
-      "o": [
-        "Thaïlande",
-        "Cambodge",
-        "Vietnam du Sud",
-        "Birmanie"
-      ],
-      "r": 3,
-      "x": "U Thant (Birmanie/Myanmar) était le 3e SG de l'ONU. D'abord intérimaire en 1961, il a été officiellement nommé le 30 novembre 1962 et a exercé jusqu'au 31 décembre 1971. Il a géré la crise des missiles de Cuba."
-    },
-    {
-      "q": "Quel pays représentait Kurt Waldheim, 4e Secrétaire Général de l'ONU ?",
-      "o": [
-        "Allemagne",
-        "Suisse",
-        "Liechtenstein",
-        "Autriche"
-      ],
-      "r": 3,
-      "x": "Kurt Waldheim (Autriche) était le 4e SG de l'ONU (1er janvier 1972 – 31 décembre 1981). Il est devenu ensuite président de l'Autriche (1986-1992). Son passé pendant la Seconde Guerre mondiale a été controversé."
-    },
-    {
-      "q": "Quel pays représentait Javier Pérez de Cuéllar, 5e Secrétaire Général de l'ONU ?",
-      "o": [
-        "Argentine",
-        "Chili",
-        "Colombie",
-        "Pérou"
-      ],
-      "r": 3,
-      "x": "Javier Pérez de Cuéllar (Pérou) était le 5e SG de l'ONU (1er janvier 1982 – 31 décembre 1991). Il a joué un rôle crucial dans la résolution de plusieurs conflits, notamment la guerre des Malouines et la question namibienne."
-    },
-    {
-      "q": "Quel pays représentait Boutros Boutros-Ghali, 6e Secrétaire Général de l'ONU ?",
-      "o": [
-        "Maroc",
-        "Tunisie",
-        "Algérie",
-        "Égypte"
-      ],
-      "r": 3,
-      "x": "Boutros Boutros-Ghali (Égypte) était le 6e SG de l'ONU (1er janvier 1992 – 31 décembre 1996). Premier Africain et premier Arabe à ce poste, il a géré la crise en ex-Yougoslavie et le génocide rwandais. Son 2e mandat a été bloqué par les États-Unis."
-    },
-    {
-      "q": "Quel pays représentait Kofi Annan, 7e Secrétaire Général de l'ONU ?",
-      "o": [
-        "Nigeria",
-        "Sénégal",
-        "Côte d'Ivoire",
-        "Ghana"
-      ],
-      "r": 3,
-      "x": "Kofi Annan (Ghana) était le 7e SG de l'ONU (1er janvier 1997 – 31 décembre 2006). Il a reçu le Prix Nobel de la Paix en 2001 conjointement avec l'ONU. Deuxième Africain à diriger l'organisation (après Boutros-Ghali), il a initié les Objectifs du Millénaire pour le Développement."
-    },
-    {
-      "q": "Quel pays représentait Ban Ki-moon, 8e Secrétaire Général de l'ONU ?",
-      "o": [
-        "Japon",
-        "Chine",
-        "Corée du Sud",
-        "Vietnam"
-      ],
-      "r": 2,
-      "x": "Ban Ki-moon (Corée du Sud) était le 8e SG de l'ONU (1er janvier 2007 – 31 décembre 2016). Il a supervisé la négociation de l'Accord de Paris sur le climat (2015) et la création des Objectifs de Développement Durable (ODD)."
-    },
-    {
-      "q": "Quel pays représente António Guterres, 9e et actuel Secrétaire Général de l'ONU ?",
-      "o": [
-        "Espagne",
-        "Italie",
-        "France",
-        "Portugal"
-      ],
-      "r": 3,
-      "x": "António Guterres (Portugal) est le 9e et actuel SG de l'ONU depuis le 1er janvier 2017. Ancien Premier ministre du Portugal (1995-2002), il était Haut-Commissaire de l'ONU aux réfugiés (2005-2015) avant de prendre ce poste.  Son second mandat s'achève le 31 décembre 2026."
-    },
-    {
-      "q": "Qui est l'actuel Premier ministre du Burkina Faso installé le 07 décembre 2024 ?",
-      "o": [
-        "Albert Ouédraogo",
-        "Jean Rimtalba Emmanuel Ouédraogo",
-        "Apollinaire Kyelem de Tambèla",
-        "Mahamadou Sana"
-      ],
-      "r": 1,
-      "x": "Jean Rimtalba Emmanuel Ouédraogo a été nommé et installé dans ses fonctions de Premier ministre du Burkina Faso le 07 décembre 2024, sous la présidence du Capitaine Ibrahim Traoré."
-    },
-    {
-      "q": "Qui est le président du Conseil national de sécurité de l'État au Burkina Faso ?",
-      "o": [
-        "Général Célestin Simporé",
-        "Commandant Ismaël Sombie",
-        "Commandant Oumarou Yabré",
-        "Colonel Hamed Herman Roumba"
-      ],
-      "r": 2,
-      "x": "Le Commandant Oumarou Yabré préside le Conseil national de sécurité de l'État (CNSE) du Burkina Faso. Cette instance est chargée d'orienter et de coordonner la politique nationale en matière de défense et de sécurité."
-    },
-    {
-      "q": "Quel est le nouveau nom de la société sucrière SN-SOSUCO depuis le 16 octobre 2025 ?",
-      "o": [
-        "SUCOBF",
-        "SOSUCO-BF",
-        "SOCUCO",
-        "SUGAFASO"
-      ],
-      "r": 2,
-      "x": "La Société Nouvelle de la Sucrerie de la Comoé (SN-SOSUCO) a été renommée SOCUCO le 16 octobre 2025. Cette entreprise est l'unique producteur de sucre industriel du Burkina Faso, implantée dans la région des Cascades."
-    },
-    {
-      "q": "Quand et où s'est tenu le Sommet du G20 en novembre 2025 ?",
-      "o": [
-        "Du 22 au 23 novembre 2025 à Johannesburg",
-        "Du 15 au 16 novembre 2025 à Rio de Janeiro",
-        "Du 18 au 19 novembre 2025 à New Delhi",
-        "Du 25 au 26 novembre 2025 au Caire"
-      ],
-      "r": 0,
-      "x": "Le Sommet du G20 s'est tenu les 22 et 23 novembre 2025 à Johannesburg, en Afrique du Sud. C'était la première fois que l'Afrique du Sud accueillait le G20, marquant la présidence africaine de ce forum économique mondial."
-    },
-    {
-      "q": "Quel est le premier pays africain à avoir lancé le projet de taxi aérien et quel est le modèle utilisé ?",
-      "o": [
-        "Nigeria, modèle Airbus Vahana",
-        "Afrique du Sud, modèle Joby Aviation",
-        "Rwanda, modèle Éhang EH 216-S",
-        "Kenya, modèle Volocopter"
-      ],
-      "r": 2,
-      "x": "Le Rwanda est le premier pays africain à avoir lancé le taxi aérien, utilisant le modèle Éhang EH 216-S. Le premier vol a été effectué le 4 septembre 2025, faisant du Rwanda un pionnier en matière de mobilité aérienne urbaine sur le continent africain."
-    },
-    {
-      "q": "À quelle date a été créée l'initiative présidentielle FASO MÊBO au Burkina Faso ?",
-      "o": [
-        "4 août 2024",
-        "16 octobre 2024",
-        "29 octobre 2024",
-        "16 décembre 2024"
-      ],
-      "r": 1,
-      "x": "L'initiative FASO MÊBO (littéralement \"construction de notre Faso\" en Mooré) a été lancée le 16 octobre 2024. Elle vise à encourager la souveraineté nationale, elle est très présente dans la construction des infrastructures étatiques."
-    },
-    {
-      "q": "Dans quel pays un espace public a-t-il été officiellement baptisé 'Parc Thomas Sankara' ?",
-      "o": [
-        "France",
-        "Allemagne",
-        "Italie",
-        "Canada"
-      ],
-      "r": 2,
-      "x": "Un parc a été officiellement baptisé \"Parc Thomas Sankara\" en Italie, en hommage au président-révolutionnaire burkinabè assassiné le 15 octobre 1987. Cet acte témoigne du rayonnement international de l'héritage de Sankara."
-    },
-    {
-      "q": "Quel est le taux de reconquête du territoire national burkinabè annoncé le 27 juillet 2026 ?",
-      "o": [
-        "72,70 %",
-        "73,60 %",
-        "74,53 %",
-        "80,15 %"
-      ],
-      "r": 2,
-      "x": "Le 27 juillet 2026, le Ministre d'État Célestin Simporé a annoncé un taux de reconquête de 74,53 % du territoire, contre 73,56 % en décembre 2025. Ce chiffre désigne les zones reconquises, sécurisées et où l'administration revient progressivement."
-    },
-    {
-      "q": "Qui est le président de la Confédération de l'AES pour la période 2025-2026 ?",
-      "o": [
-        "Colonel Assimi Goïta",
-        "Général Abdourahamane Tiani",
-        "Général Daouda Traoré",
-        "Capitaine Ibrahim Traoré"
-      ],
-      "r": 3,
-      "x": "Le Capitaine Ibrahim Traoré, Président de la Transition du Burkina Faso, a été désigné président en exercice de la Confédération de l'Alliance des États du Sahel (AES) pour la période 2025-2026. Cette présidence tournante symbolise la solidarité entre les trois pays membres."
-    },
-    {
-      "q": "Quelle est la devise officielle de l'Alliance des États du Sahel (AES) ?",
-      "o": [
-        "\"Liberté, Égalité, Solidarité\"",
-        "\"La Patrie avant tout\"",
-        "\"Unité, Progrès, Justice\"",
-        "\"Un espace, un peuple, un destin\""
-      ],
-      "r": 3,
-      "x": "La devise de l'Alliance des États du Sahel est « Un espace, un peuple, un destin ». Elle reflète la vision d'intégration politique, économique et culturelle des trois pays fondateurs : le Burkina Faso, le Mali et le Niger."
-    },
-    {
-      "q": "Que signifie le sigle AES et à quelle date cette organisation a-t-elle été créée ?",
-      "o": [
-        "Association des États Sahariens, créée le 16 juillet 2023",
-        "Alliance des États du Sahel, créée le 16 septembre 2023",
-        "Autorité des États du Sahel, créée le 28 janvier 2024",
-        "Alliance Économique du Sahel, créée le 6 juillet 2024"
-      ],
-      "r": 1,
-      "x": "L'AES (Alliance des États du Sahel) a été créée le 16 septembre 2023, par la signature de la Charte du Liptako-Gourma entre le Burkina Faso, le Mali et le Niger. Elle a officiellement accédé au statut de confédération le 6 juillet 2024."
-    },
-    {
-      "q": "À quelle date le retrait du Burkina Faso, du Mali et du Niger de la CEDEAO est-il devenu effectif ?",
-      "o": [
-        "29 janvier 2025",
-        "28 janvier 2024",
-        "6 juillet 2024",
-        "15 décembre 2024"
-      ],
-      "r": 0,
-      "x": "Annoncé le 28 janvier 2024, le retrait des trois pays de l'AES est devenu effectif le 29 janvier 2025, à l'expiration du délai d'un an prévu par l'article 91 du Traité révisé de la CEDEAO. Le 6 juillet 2024 correspond à la création de la Confédération AES."
-    },
-    {
-      "q": "Combien d'articles comporte la Charte de l'AES, et comment est-elle appelée ?",
-      "o": [
-        "12 articles, Charte du Liptako-Gourma",
-        "17 articles, Charte du Liptako-Gourma",
-        "21 articles, Charte de Niamey",
-        "25 articles, Charte de Bamako"
-      ],
-      "r": 1,
-      "x": "La Charte de l'AES, appelée Charte du Liptako-Gourma, comporte 17 articles. Elle définit les principes, objectifs et organes de la Confédération des États du Sahel : défense collective, développement économique intégré et souveraineté partagée."
-    },
-    {
-      "q": "Comment s'appelle l'hymne de l'Alliance des États du Sahel (AES) et quel est son compositeur ?",
-      "o": [
-        "\"Sahel Uni\", composé par Amadou Diallo",
-        "\"Sahel Benka\", composé par Abdoul Alim Ouédraogo",
-        "\"Liptako Gourma\", composé par Boubacar Traoré",
-        "\"Sahel Debout\", composé par Seydou Coulibaly"
-      ],
-      "r": 1,
-      "x": "L'hymne de l'AES s'appelle \"Sahel Benka\" (qui signifie \"l'entente du Sahel\" en langue Bamanakan). Il a été composé par Abdoul Alim Ouédraogo et comporte 3 strophes. Il a été officiellement adopté lors de la création de la Confédération."
-    },
-    {
-      "q": "Quelle est la date de lancement officiel du drapeau de l'AES ?",
-      "o": [
-        "22 février 2025",
-        "6 juillet 2024",
-        "16 septembre 2023",
-        "30 décembre 2024"
-      ],
-      "r": 0,
-      "x": "Le drapeau de l'AES a été officiellement lancé le 22 février 2025. Le logo du drapeau a été dévoilé le 30 décembre 2024. Il est composé d'un cercle orange, d'un baobab, de silhouettes de personnages et de 3 étoiles représentant les trois pays membres."
-    },
-    {
-      "q": "Quels sont les pays membres de l'AES ?",
-      "o": [
-        "Burkina Faso, Mali et Niger",
-        "Burkina Faso, Sénégal et Mali",
-        "Burkina Faso, Mauritanie et Niger",
-        "Mali, Tchad et Niger"
-      ],
-      "r": 0,
-      "x": "La Confédération des États du Sahel (AES) regroupe le Burkina Faso, le Mali et le Niger. Ces trois pays ont annoncé leur retrait de la CEDEAO le 28 janvier 2024, retrait devenu effectif le 29 janvier 2025."
-    },
-    {
-      "q": "À quelle date les passeports de l'AES ont-ils été mis en circulation ?",
-      "o": [
-        "29 janvier 2025",
-        "4 août 2024",
-        "16 septembre 2023",
-        "22 février 2025"
-      ],
-      "r": 0,
-      "x": "Les passeports communs de l'Alliance des États du Sahel ont été officiellement mis en circulation le 29 janvier 2025. Ce document symbolise l'intégration des trois pays et vise à faciliter la libre circulation des ressortissants du Burkina Faso, du Mali et du Niger."
-    },
-    {
-      "q": "Comment s'appelle la radio officielle de l'AES et dans quel pays est-elle basée ?",
-      "o": [
-        "Sahel FM, basée au Mali",
-        "Daandé Liptako, basée au Burkina Faso",
-        "Radio AES, basée au Niger",
-        "Liptako Radio, basée au Burkina Faso"
-      ],
-      "r": 1,
-      "x": "La radio officielle de l'AES s'appelle \"Daandé Liptako\" (qui signifie \"la voix du Liptako\" en fulfulde) et est basée au Burkina Faso. Elle diffuse en plusieurs langues de la zone sahélienne pour renforcer l'intégration et l'information dans l'espace AES."
-    },
-    {
-      "q": "Quelle est la date à laquelle le Burkina Faso s'est retiré de l'Organisation Internationale de la Francophonie (OIF) ?",
-      "o": [
-        "28 février 2025",
-        "21 novembre 2024",
-        "29 octobre 2024",
-        "18 mars 2025"
-      ],
-      "r": 0,
-      "x": "Le Burkina Faso a officiellement quitté l'OIF (Organisation Internationale de la Francophonie) le 28 février 2025. Le Mali a suivi le 18 mars 2025. Ces retraits marquent une rupture avec certaines organisations multilatérales perçues comme liées à l'influence occidentale."
-    },
-    {
-      "q": "Quelle est la date à laquelle l'AES a officiellement retiré ses États membres de la CPI ?",
-      "o": [
-        "28 janvier 2024",
-        "6 juillet 2024",
-        "22 septembre 2025",
-        "30 décembre 2024"
-      ],
-      "r": 2,
-      "x": "L'Alliance des États du Sahel (AES) a officiellement notifié son retrait de la Cour Pénale Internationale (CPI) le 22 septembre 2025. Cette décision s'inscrit dans le cadre de l'affirmation de souveraineté nationale des pays de l'AES."
-    },
-    {
-      "q": "Quelle est la date d'investiture du Capitaine Ibrahim Traoré comme Président de la Transition ?",
-      "o": [
-        "30 septembre 2022",
-        "14 octobre 2022",
-        "21 octobre 2022",
-        "7 décembre 2022"
-      ],
-      "r": 2,
-      "x": "Le Capitaine Ibrahim Traoré a officiellement prêté serment et été investi Président de la Transition du Burkina Faso le 21 octobre 2022, soit trois semaines après le coup d'État du 30 septembre 2022 qui avait renversé le lieutenant-colonel Paul-Henri Sandaogo Damiba."
-    },
-    {
-      "q": "Quelle est la devise actuelle du Burkina Faso depuis le 21 novembre 2024 ?",
-      "o": [
-        "Unité-Progrès-Justice",
-        "La Patrie ou la Mort nous Vaincrons",
-        "Un peuple, un but, une foi",
-        "Liberté, Égalité, Fraternité"
-      ],
-      "r": 1,
-      "x": "La devise nationale du Burkina Faso \"La Patrie ou la Mort, nous Vaincrons\" a été officiellement promulguée le 21 novembre 2024 par le Capitaine Ibrahim Traoré. Elle a été adoptée par l'ALT par un vote unanime de 71 voix sur 71 le 29 octobre 2024, remplaçant \"Unité-Progrès-Justice\"."
-    },
-    {
-      "q": "À quelle date l'ALT a-t-elle adopté la révision constitutionnelle portant sur les articles 101, 143 et 144 ?",
-      "o": [
-        "20 janvier 2026",
-        "29 octobre 2024",
-        "25 mai 2024",
-        "27 novembre 2026"
-      ],
-      "r": 0,
-      "x": "Le 20 janvier 2026, l'ALT a adopté la révision des articles 101, 143 et 144 de la Constitution. Elle crée un organe unique de régulation des communications et de protection des données (fusion CSC/CIL) et remplace l'ASCE-LC par une nouvelle structure de contrôle. Le 27 mars 2026 est la date d'adoption de la Charte de la Révolution."
-    },
-    {
-      "q": "Quel est le numéro vert de la Brigade Laabal au Burkina Faso ?",
-      "o": [
-        "50 30 0505",
-        "50 40 0504",
-        "80 40 0500",
-        "50 20 0510"
-      ],
-      "r": 1,
-      "x": "Le numéro vert de la Brigade Laabal (brigade anti-corruption) est le 50 40 0504. Cette brigade, dont le nom signifie \"droiture, honnêteté, probité\" en langue Fulfuldé, a été mise en marche le 18 juin 2024 pour lutter contre la corruption au Burkina Faso."
-    },
-    {
-      "q": "Qui est le directeur général actuel de Faso Rail au Burkina Faso, nommé le 3 avril 2025 ?",
-      "o": [
-        "Edward Kabore",
-        "Boureima Ouattara",
-        "Ismaël Sombie",
-        "Ibrahim Saba"
-      ],
-      "r": 0,
-      "x": "Edward Kabore a été nommé directeur général de Faso Rail le 3 avril 2025. Faso Rail est la société nationale burkinabè chargée de la gestion et du développement du réseau ferroviaire national, qui s'étend sur environ 617 km."
-    },
-    {
-      "q": "Quelle est la longueur de la voie ferrée au Burkina Faso ?",
-      "o": [
-        "517 km",
-        "617 km",
-        "717 km",
-        "817 km"
-      ],
-      "r": 1,
-      "x": "Le réseau ferroviaire du Burkina Faso s'étend sur environ 617 km. Il relie Ouagadougou à la frontière avec le Ghana et à la Côte d'Ivoire (ligne Abidjan-Niger). Ce réseau est exploité par Faso Rail sous la supervision du gouvernement burkinabè."
-    },
-    {
-      "q": "Quelle est la date de lancement de l'autoroute Ouaga-Bobo et quelle est sa longueur ?",
-      "o": [
-        "16 décembre 2025, 250 km",
-        "16 décembre 2025, 322 km",
-        "24 décembre 2025, 300 km",
-        "11 janvier 2026, 322 km"
-      ],
-      "r": 1,
-      "x": "L'autoroute reliant Ouagadougou à Bobo-Dioulasso a été officiellement lancée le 16 décembre 2025. Elle mesure 322 km et constitue la première autoroute du Burkina Faso, un projet stratégique visant à désenclaver les régions et faciliter les échanges économiques entre les deux principales villes du pays."
-    },
-    {
-      "q": "À quelle date le gouvernement burkinabè a-t-il adopté un projet de loi visant à réintroduire la peine de mort dans la législation nationale ?",
-      "o": [
-        "4 décembre 2025",
-        "15 août 2025",
-        "23 septembre 2025",
-        "10 janvier 2026"
-      ],
-      "r": 0,
-      "x": "Le 4 décembre 2025, le Conseil des ministres a adopté un projet de loi visant à réintroduire la peine de mort dans l'arsenal juridique burkinabè. Cette adoption gouvernementale ne signifie pas automatiquement l'entrée en vigueur de la mesure, celle-ci devant suivre la procédure législative prévue."
-    },
-    {
-      "q": "Quelle est la date de la deuxième session confédérale du Conseil des ministres de l'AES ?",
-      "o": [
-        "6 au 7 juillet 2025",
-        "20 au 23 décembre 2025",
-        "22 au 25 novembre 2025",
-        "14 au 17 janvier 2026"
-      ],
-      "r": 1,
-      "x": "La deuxième session confédérale du Conseil des ministres de l'AES s'est tenue du 20 au 23 décembre 2025. Ces réunions ministérielles permettent de coordonner les politiques communes des trois États membres dans les domaines de la défense, de l'économie et de la diplomatie."
-    },
-    {
-      "q": "Qui est le premier Burkinabè à avoir conquis le mont Kilimandjaro, et à quelle date ?",
-      "o": [
-        "Iron Biby, le 12 juillet 2025",
-        "Paul Daumond, le 9 août 2025",
-        "Julio Lucrèce Bazi, le 9 juillet 2025",
-        "Kevin Mossé, le 15 juin 2025"
-      ],
-      "r": 2,
-      "x": "Julio Lucrèce Bazi est le premier Burkinabè à avoir gravi le mont Kilimandjaro (5 895 m, Tanzanie), le 9 juillet 2025. Cet exploit représente une fierté nationale et illustre la résilience et le dépassement de soi des Burkinabè."
-    },
-    {
-      "q": "Qui est le président de l'ordre des notaires du Burkina Faso ?",
-      "o": [
-        "Yacouba Dembelé",
-        "Blaise B. Bazie",
-        "Adama Ouédraogo",
-        "Idrissa Nassa"
-      ],
-      "r": 0,
-      "x": "Yacouba Dembelé préside l'ordre des notaires du Burkina Faso. Les notaires sont des officiers ministériels qui ont pour mission de rédiger et d'authentifier les actes juridiques, notamment les contrats de vente immobilière, les testaments et les actes de société."
-    },
-    {
-      "q": "À quelle date le premier pontage du cœur a-t-il été réalisé au CHU de Tengandogo au Burkina Faso ?",
-      "o": [
-        "Octobre 2024",
-        "Novembre 2024",
-        "Décembre 2024",
-        "Janvier 2025"
-      ],
-      "r": 2,
-      "x": "Le premier pontage coronarien (opération à cœur ouvert) a été réalisé au CHU de Tengandogo de Ouagadougou en décembre 2024. Cette avancée médicale majeure marque un tournant dans la chirurgie cardiaque au Burkina Faso, réduisant la dépendance aux évacuations sanitaires à l'étranger."
-    },
-    {
-      "q": "Qu'est-ce que la BPBF et quand ses activités ont-elles été lancées ?",
-      "o": [
-        "Banque Postale du Burkina Faso, lancée le 7 octobre 2024",
-        "Banque Publique du Burkina Faso, lancée le 7 octobre 2024",
-        "Banque Populaire du Burkina Faso, lancée le 7 novembre 2024",
-        "Banque Panafricaine du Burkina Faso, lancée le 1er octobre 2024"
-      ],
-      "r": 0,
-      "x": "La BPBF (Banque Postale du Burkina Faso) a officiellement lancé ses activités le 7 octobre 2024. Née de la transformation de la SONAPOSTE, elle vise à offrir des services bancaires et postaux accessibles à l'ensemble de la population burkinabè, notamment dans les zones rurales."
-    },
-    {
-      "q": "Qui est le directeur général de la plus grande mine du Burkina Faso, la mine Iam Gold Essakane ?",
-      "o": [
-        "Serge August Bayala",
-        "Karim Traoré",
-        "Didier Sanon",
-        "Tidiane Barry"
-      ],
-      "r": 3,
-      "x": "Tidiane Barry est le directeur général de la mine Iam Gold Essakane, la plus grande mine d'or industrielle du Burkina Faso. Située dans la région du Sahel (province de l'Oudalan), elle est l'une des plus importantes mines d'or d'Afrique de l'Ouest."
-    },
-    {
-      "q": "Quel mois est considéré comme le \"mois du consommons local\" au Burkina Faso ?",
-      "o": [
-        "Août",
-        "Septembre",
-        "Octobre",
-        "Novembre"
-      ],
-      "r": 2,
-      "x": "Octobre est le mois officiellement dédié à la consommation des produits locaux au Burkina Faso, dans le cadre de la promotion de la production nationale. Cette initiative vise à encourager les Burkinabè à consommer les produits fabriqués localement plutôt que les produits importés."
-    },
-    {
-      "q": "Quand a été créée la Commission nationale de confédération des États du Sahel (CN-CES) ?",
-      "o": [
-        "16 septembre 2023",
-        "6 juillet 2024",
-        "22 février 2025",
-        "6 novembre 2024"
-      ],
-      "r": 3,
-      "x": "La Commission nationale de confédération des États du Sahel (CN-CES) a été créée le 6 novembre 2024. Cette commission nationale est chargée de coordonner au niveau du Burkina Faso les activités liées à la mise en œuvre de la Confédération de l'AES."
-    },
-    {
-      "q": "Combien de ministres compte le gouvernement Rimtalba Jean Emmanuel Ouédraogo après le remaniement du 12 janvier 2026 ?",
-      "o": [
-        "24 ministres",
-        "23 ministres",
-        "22 ministres",
-        "21ministres"
-      ],
-      "r": 2,
-      "x": "Le décret du 12 janvier 2026 a ramené le gouvernement de 24 à 22 ministres, par la fusion de plusieurs départements. Les 3 ministres d'État sont le Général Célestin Simporé (Guerre et Défense patriotique), le Commandant Ismaël Sombié (Agriculture, Eau, Ressources animales et halieutiques) et Emile Zerbo (Administration territoriale et Mobilité)."
-    },
-    {
-      "q": "Qui est le Ministre de l'Économie et des Finances du gouvernement Ouédraogo (08 décembre 2024) ?",
-      "o": [
-        "Karamoko Jean Marie Traore",
-        "Aboubakar Nacanabo",
-        "Adjima Thombiano",
-        "Yacouba Zabré Gouba"
-      ],
-      "r": 1,
-      "x": "Monsieur Aboubakar Nacanabo est le Ministre de l'Économie et des Finances du gouvernement formé le 08 décembre 2024. Ce portefeuille stratégique est chargé de la gestion des finances publiques, du budget de l'État et de la politique économique nationale."
-    },
-    {
-      "q": "Quel est le nom actuel de l'organe législatif du Burkina Faso ?",
-      "o": [
-        "Assemblée Législative du Peuple",
-        "Assemblée Nationale",
-        "Parlement de la Transition",
-        "Assemblée Législative de la Transition"
-      ],
-      "r": 0,
-      "x": "La Charte de la Révolution, adoptée à l'unanimité le 27 mars 2026, a transformé l'Assemblée Législative de Transition (ALT) en Assemblée Législative du Peuple (ALP). Les lois portent désormais le suffixe /ALP, par exemple la loi n°013-2026/ALP portant code du travail."
-    },
-    {
-      "q": "Qui est le président de l'Assemblée Législative du Peuple (ALP) du Burkina Faso ?",
-      "o": [
-        "Adama Ouédraogo",
-        "Edasso Rodrigue Bayala",
-        "Ousmane Bougma",
-        "Basolma Bazie"
-      ],
-      "r": 2,
-      "x": "Ousmane Bougouma préside l'organe législatif depuis 2022 : d'abord l'Assemblée Législative de Transition (ALT), puis l'Assemblée Législative du Peuple (ALP) depuis la Charte de la Révolution du 27 mars 2026. Edasso Rodrigue Bayala est ministre de la Justice."
-    },
-    {
-      "q": "Qui est l'actuel procureur du Faso au Burkina Faso ?",
-      "o": [
-        "Blaise B. Bazie",
-        "Adama Ouédraogo",
-        "Edasso Rodrigue Bayala",
-        "Sagado Nacanabo"
-      ],
-      "r": 0,
-      "x": "Blaise B. Bazie occupe la fonction de procureur du Faso au Burkina Faso. Le procureur du Faso est le chef du ministère public et représente la société dans les affaires pénales devant les juridictions nationales."
-    },
-    {
-      "q": "Qui est le président national de la Confédération de l'AES au niveau burkinabè, installé le 13 janvier 2025 ?",
-      "o": [
-        "Oumarou Yabré",
-        "Basolma Bazie",
-        "Blaise B. Bazie",
-        "Hamed Herman Roumba"
-      ],
-      "r": 1,
-      "x": "Basolma Bazie a été installé le 13 janvier 2025 comme président national de la Confédération des États du Sahel (CES) pour le Burkina Faso. Il coordonne au niveau national les activités liées à l'intégration confédérale avec le Mali et le Niger."
-    },
-    {
-      "q": "À quelle date le Burkina Faso a-t-il mis fin aux activités de l'ONG Target Malaria sur son territoire ?",
-      "o": [
-        "15 juin 2025",
-        "22 juillet 2025",
-        "22 août 2025",
-        "15 septembre 2025"
-      ],
-      "r": 2,
-      "x": "Le Burkina Faso a officiellement mis fin aux activités de Target Malaria sur son territoire le 22 août 2025. Cette ONG financée notamment par Bill Gates menait des recherches sur des moustiques génétiquement modifiés pour lutter contre le paludisme. La décision s'inscrit dans la politique de souveraineté nationale sur les questions sanitaires."
-    },
-    {
-      "q": "Qui a été désigné meilleur policier de l'année 2025 au Burkina Faso ?",
-      "o": [
-        "Commissaire Mahamadou Sana",
-        "Inspecteur Thierry Dofizouho Tuina",
-        "Sergent Paguindamba Thiombiano",
-        "Capitaine San Polycarpe Traoré"
-      ],
-      "r": 2,
-      "x": "Le Sergent de police Paguindamba Thiombiano a été nommé meilleur policier de l'année 2025 au Burkina Faso. Cette distinction annuelle récompense l'excellence, le dévouement et les performances remarquables d'un agent de la Police nationale burkinabè."
-    },
-    {
-      "q": "Quel est le montant total collecté par le Fonds de Soutien Patriotique (FSP) en 2025 ?",
-      "o": [
-        "105,500 milliards F CFA",
-        "157,830 milliards F CFA",
-        "212,860 milliards F CFA",
-        "285,400 milliards F CFA"
-      ],
-      "r": 2,
-      "x": "Le Fonds de Soutien Patriotique (FSP) du Burkina Faso a collecté 212,860 milliards de francs CFA en 2025. Ce fonds, lancé le 22 janvier 2023, mobilise des ressources financières citoyennes pour soutenir les Forces de Défense et de Sécurité dans leur lutte contre le terrorisme."
-    },
-    {
-      "q": "Quel est le plus haut sommet de l'AES et où se situe-t-il ?",
-      "o": [
-        "Mont Indoukat-n-Taglès au Niger",
-        "Mont Hombori Tondo au Mali",
-        "Mont Tenakourou au Burkina Faso",
-        "Mont Bagzan au Niger"
-      ],
-      "r": 0,
-      "x": "Le Mont Indoukat-n-Taglès, situé au Niger dans le massif de l'Aïr, culmine à 2 022 mètres d'altitude. C'est le plus haut sommet de l'espace AES. Le Niger possède une géographie variée avec des massifs montagneux dans sa partie nord."
-    },
-    {
-      "q": "Quelle est la superficie totale du territoire de la Confédération de l'AES ?",
-      "o": [
-        "1 850 000 km²",
-        "2 350 000 km²",
-        "2 781 200 km²",
-        "3 100 000 km²"
-      ],
-      "r": 2,
-      "x": "La Confédération des États du Sahel couvre une superficie totale de 2 781 200 km². Ce vaste territoire regroupe le Burkina Faso (274 200 km²), le Mali (1 240 000 km²) et le Niger (1 267 000 km²), faisant de l'AES l'une des plus grandes entités territoriales d'Afrique de l'Ouest."
-    },
-    {
-      "q": "À quelle date Thomas Sankara a-t-il été officiellement élevé au rang de héros de la Nation burkinabè ?",
-      "o": [
-        "15 octobre 2022",
-        "15 octobre 2023",
-        "4 octobre 2023",
-        "3 octobre 2024"
-      ],
-      "r": 2,
-      "x": "Le Conseil des ministres du 4 octobre 2023 a adopté le décret conférant à Thomas Sankara le statut de héros de la Nation. Ce statut avait été créé par une loi adoptée en juin 2022. Sankara a été assassiné le 15 octobre 1987."
-    },
-    {
-      "q": "Quand le Boulevard Charles de Gaulle de Ouagadougou a-t-il été rebaptisé Boulevard Thomas Sankara ?",
-      "o": [
-        "15 octobre 2022",
-        "15 octobre 2023",
-        "15 octobre 2024",
-        "3 octobre 2024"
-      ],
-      "r": 1,
-      "x": "Le Boulevard Charles de Gaulle de Ouagadougou a été officiellement rebaptisé Boulevard Thomas Sankara le 15 octobre 2023, date anniversaire de son assassinat en 1987. Ce changement symbolique s'inscrit dans le processus de réhabilitation de la mémoire du président révolutionnaire."
-    },
-    {
-      "q": "Quel est le nom de l'opération militaire qui a permis la destruction de la plus grande base terroriste dans la province de la Banwa ?",
-      "o": [
-        "Opération Faso",
-        "Opération Liptako",
-        "Opération Tourbillon",
-        "Opération Koudbiiga"
-      ],
-      "r": 2,
-      "x": "L'Opération Tourbillon est le nom de l'opération militaire qui a permis la destruction de la plus grande base des terroristes dans la province de la Banwa, au Burkina Faso. Ces opérations s'inscrivent dans le cadre de la reconquête du territoire national par les Forces de Défense et de Sécurité."
-    },
-    {
-      "q": "À quelle date et par qui a été lancée la chaîne RTB3 ?",
-      "o": [
-        "25 décembre 2022, par Ibrahim Traoré",
-        "9 décembre 2023, présidé par Apollinaire Kyelem de Tambèla",
-        "4 août 2023, par Albert Ouédraogo",
-        "5 janvier 2024, par Rimtalba Jean Emmanuel Ouédraogo"
-      ],
-      "r": 1,
-      "x": "RTB3 a été officiellement lancée le 9 décembre 2023, sous la présidence de Me Apollinaire Kyelem de Tambèla (alors Premier ministre). Son slogan est \"Notre chaine, notre identité\". RTB3 diffuse en 12 langues nationales du Burkina Faso, en plus du français."
-    },
-    {
-      "q": "Combien de trésors humains vivants (THV) compte le Burkina Faso ?",
-      "o": [
-        "15 THV",
-        "18 THV",
-        "21 THV",
-        "25 THV"
-      ],
-      "r": 2,
-      "x": "Le Burkina Faso compte 21 Trésors Humains Vivants (THV). Ce programme, inspiré de la Convention UNESCO pour la sauvegarde du patrimoine culturel immatériel, reconnaît et valorise les dépositaires des savoir-faire traditionnels exceptionnels (tisserands, griots, forgerons, etc.)."
-    },
-    {
-      "q": "Qui est la première femme pilote militaire au Burkina Faso ?",
-      "o": [
-        "Sous-lieutenant Maryse Traoré",
-        "Capitaine Pélagie Kabre",
-        "Lieutenant Aminata Zerbo",
-        "Sergent Rachida Ouédraogo"
-      ],
-      "r": 0,
-      "x": "Le Sous-lieutenant Maryse Traoré est la première femme pilote militaire du Burkina Faso. Elle représente une fierté nationale et illustre la place croissante des femmes dans les Forces Armées Nationales du Burkina Faso (FANB)."
-    },
-    {
-      "q": "Qui dirige la Force unifiée de l'AES ?",
-      "o": [
-        "Général Célestin Simporé",
-        "Général Daouda Traoré",
-        "Colonel Hamed Herman Roumba",
-        "Général Moussa Traoré"
-      ],
-      "r": 1,
-      "x": "Le Général Daouda Traoré commande la Force unifiée de l'Alliance des États du Sahel. Cette force militaire conjointe est composée de soldats des trois pays membres (Burkina Faso, Mali, Niger) et a pour mission la lutte coordonnée contre le terrorisme dans l'espace sahélien."
-    },
-    {
-      "q": "Combien de personnes ont exercé la fonction de chef de l'État au Burkina Faso depuis l'indépendance en 1960 jusqu'en 2026 ?",
-      "o": [
-        "10",
-        "11",
-        "12",
-        "13"
-      ],
-      "r": 2,
-      "x": "Depuis l'indépendance du 5 août 1960 jusqu'en 2026, le Burkina Faso a connu 12 chefs d'État : Maurice Yaméogo, Sangoulé Lamizana, Saye Zerbo, Jean-Baptiste Ouédraogo, Thomas Sankara, Blaise Compaoré, Yacouba Isaac Zida, Michel Kafando, Gilbert Diendéré, Roch Marc Christian Kaboré, Paul-Henri Sandaogo Damiba et Ibrahim Traoré."
-    },
-    {
-      "q": "Quel est le plus grand centre d'affaires du Burkina Faso ?",
-      "o": [
-        "Centre Commercial de Ouaga 2000",
-        "Burkindi Business Center",
-        "Centre d'Affaires de Bobo-Dioulasso",
-        "Faso Plaza"
-      ],
-      "r": 1,
-      "x": "Le Burkindi Business Center est le plus grand centre d'affaires du Burkina Faso. Il constitue un pôle majeur de l'économie formelle burkinabè, abritant des bureaux d'entreprises, des salles de conférences et diverses infrastructures d'accueil pour les investisseurs nationaux et internationaux."
-    },
-    {
-      "q": "Quelles sont les dates et le thème de la SNC 2026 ?",
-      "o": [
-        "1er au 10 mai 2026, thème : \"Culture burkinabè et développement des savoir-faire traditionnels\"",
-        "25 avril au 2 mai 2026, thème : \"Culture, jeunesse et transmission des valeurs sociales\"",
-        "15 au 25 avril 2026, thème : \"Traditions et modernité\"",
-        "30 avril au 8 mai 2026, thème : \"Arts et identité nationale\""
-      ],
-      "r": 1,
-      "x": "La 22e édition de la Semaine Nationale de la Culture (SNC) se tient du 25 avril au 2 mai 2026 à Bobo-Dioulasso. Son thème est \"Culture, jeunesse et transmission des valeurs sociales\". Le Ghana est le pays invité d'honneur et la Russie l'invité spécial."
-    },
-    {
-      "q": "Quel film a représenté le Burkina Faso pour l'Étalon d'or de Yennenga au FESPACO 2025 et qui en est le réalisateur ?",
-      "o": [
-        "\"Katanga, la danse des scorpions\" de Dani Kouyaté",
-        "\"Sira\" de Apolline Traoré",
-        "\"Tasuma\" de S. Pierre Yameogo",
-        "\"Buud Yam\" de Gaston Kaboré"
-      ],
-      "r": 0,
-      "x": "Le film \"Katanga, la danse des scorpions\" du réalisateur burkinabè Dani Kouyaté a remporté l'Étalon d'or de Yennenga au FESPACO 2025. Dani Kouyaté est le 3e Burkinabè à remporter ce prix suprême, après Idrissa Ouédraogo (1991) et Gaston Kaboré (1997)."
-    },
-    {
-      "q": "Combien de Burkinabè ont remporté l'Étalon d'or de Yennenga, et qui sont-ils ?",
-      "o": [
-        "2 Burkinabè : Idrissa Ouédraogo et Gaston Kaboré",
-        "3 Burkinabè : Idrissa Ouédraogo, Gaston Kaboré et Dani Kouyaté",
-        "4 Burkinabè : incluant Gaston Kaboré et Idrissa Ouédraogo deux fois chacun",
-        "1 Burkinabè : Dani Kouyaté (2025)"
-      ],
-      "r": 1,
-      "x": "Trois Burkinabè ont remporté l'Étalon d'or de Yennenga : Idrissa Ouédraogo en 1991 (pour \"Tilaï\"), Gaston Kaboré en 1997 (pour \"Buud Yam\") et Dani Kouyaté en 2025 (pour \"Katanga, la danse des scorpions\"). La 30e édition du FESPACO est prévue en 2027."
-    },
-    {
-      "q": "Qui est le directeur général de la police nationale du Burkina Faso ?",
-      "o": [
-        "Commissaire divisionnaire Mahamadou Sana",
-        "Inspecteur Général de Police Thierry Dofizouho Tuina",
-        "Capitaine San Polycarpe Traoré",
-        "Commandant Oumarou Yabré"
-      ],
-      "r": 1,
-      "x": "L'Inspecteur Général de Police Thierry Dofizouho Tuina est le directeur général de la police nationale du Burkina Faso. Il succède à l'Inspecteur Général de Police Wennélebsida Jean-Alexandre Darga."
-    },
-    {
-      "q": "Quel est le vainqueur du Tour du Faso 2025 ?",
-      "o": [
-        "Lamoussa Zoungrana",
-        "Paul Daumont",
-        "Kevin Mossé",
-        "Souleymane Koné"
-      ],
-      "r": 1,
-      "x": "Paul Daumont a remporté le Tour du Faso 2025, la 36e édition de cette course cycliste internationale. La compétition s'est déroulée du 24 octobre au 2 novembre 2025 sur une distance totale de 1 155,07 km, avec un top départ donné à Ouagadougou-Koudougou."
-    },
-    {
-      "q": "Quelle est la date de la dissolution de la CENI au Burkina Faso ?",
-      "o": [
-        "29 octobre 2024",
-        "21 novembre 2024",
-        "4 décembre 2025",
-        "28 octobre 2025"
-      ],
-      "r": 3,
-      "x": "La Commission Électorale Nationale Indépendante (CENI) du Burkina Faso a été officiellement dissoute le 28 octobre 2025. Cette dissolution s'inscrit dans le contexte de la période de Transition, où les élections ont été suspendues jusqu'au retour à l'ordre constitutionnel."
-    },
-    {
-      "q": "Quelles sont les dates de la première et de la deuxième phase des Journées nationales d'engagement patriotique et de participation citoyenne (JEPPC) ?",
-      "o": [
-        "Phase 1 : 26 mars au 9 avril ; Phase 2 : 2 au 16 octobre",
-        "Phase 1 : 1er au 15 mars ; Phase 2 : 1er au 15 octobre",
-        "Phase 1 : 15 au 30 avril ; Phase 2 : 15 au 31 octobre",
-        "Phase 1 : 5 au 20 mars ; Phase 2 : 5 au 20 octobre"
-      ],
-      "r": 0,
-      "x": "Les Journées nationales d'engagement patriotique et de participation citoyenne (JEPPC) se déroulent en deux phases : la première phase du 26 mars au 9 avril, et la deuxième phase du 2 au 16 octobre. Ces journées visent à renforcer la mobilisation citoyenne pour l'effort de guerre et le développement national."
-    },
-    {
-      "q": "Qui est le DGIH (Directeur général des infrastructures hydrauliques) du Burkina Faso ?",
-      "o": [
-        "Flandin Idrissa Sourabié",
-        "Souleymane Ouédraogo",
-        "Tidiane Nikiema",
-        "Samoura Alassane"
-      ],
-      "r": 2,
-      "x": "Tidiane Nikiema est le Directeur Général des Infrastructures Hydrauliques (DGIH) du Burkina Faso. Cette direction est chargée de planifier, de coordonner et de superviser la réalisation des ouvrages hydrauliques (barrages, retenues d'eau, périmètres irrigués) sur l'ensemble du territoire."
-    },
-    {
-      "q": "Quel animal est le symbole de la Réserve de Nazinga au Burkina Faso ?",
-      "o": [
-        "Le lion",
-        "L'hippopotame",
-        "Le buffle",
-        "L'éléphant"
-      ],
-      "r": 3,
-      "x": "L'éléphant d'Afrique est le mammifère emblématique de la Réserve de Nazinga, située dans la région du Centre-Sud au Burkina Faso (province du Nahouri). Cette réserve animalière abrite l'une des plus importantes populations d'éléphants en Afrique de l'Ouest."
-    },
-    {
-      "q": "Quelle est la date de création du musée national du Burkina Faso ?",
-      "o": [
-        "15 octobre 1955",
-        "5 août 1960",
-        "13 novembre 1962",
-        "11 août 1984"
-      ],
-      "r": 2,
-      "x": "Le musée national du Burkina Faso a été créé le 13 novembre 1962, sous la République de Haute-Volta. Il est situé à Ouagadougou et conserve des collections représentatives du patrimoine culturel et artistique burkinabè : masques, sculptures, objets rituels, tenues traditionnelles."
-    },
-    {
-      "q": "Combien de produits burkinabè ont été officiellement labellisés et quels sont-ils ?",
-      "o": [
-        "3 produits : Faso Danfani, beurre de karité et néré",
-        "5 produits : Faso Danfani, kôkô donda, chapeau de Saponé, beurre de karité, poulet bicyclette",
-        "4 produits : Faso Danfani, beurre de karité, soumbala et dolo",
-        "6 produits : incluant le dâ et la bière de mil"
-      ],
-      "r": 1,
-      "x": "Le Burkina Faso a officiellement labellisé 5 produits artisanaux et agroalimentaires : le Faso Danfani (tissu traditionnel), le kôkô donda (légume vert), le chapeau de Saponé, le beurre de karité et le poulet bicyclette. Ces labels garantissent l'authenticité et la qualité de ces produits d'origine burkinabè."
-    },
-    {
-      "q": "Combien d'universités publiques et assimilées compte le Burkina Faso et laquelle est la plus ancienne ?",
-      "o": [
-        "7 universités, Université Norbert Zongo fondée en 1974",
-        "8 universités, Université Nazi Boni fondée en 1993",
-        "7 universités, Université Thomas Sankara fondée en 2007",
-        "8 universités, Université Joseph Ki-Zerbo fondée en 1974"
-      ],
-      "r": 3,
-      "x": "Le Burkina Faso compte 8 universités publiques : Joseph Ki-Zerbo (Ouaga, 1974), Thomas Sankara (Ouaga 2, 2007), Norbert Zongo (Koudougou, 2005), Nazi Boni (Bobo-Dioulasso, 1995), Daniel Ouézzin Coulibaly (Dédougou, 2017), Lédéa Bernard Ouédraogo (Ouahigouya, 2017), Yembila Abdoulaye Toguyeni (Fada N'Gourma, 2017) et l'Université Virtuelle (2019)."
-    },
-    {
-      "q": "Quel est le thème de la JEPPC 2026 lancée du 26 mars au 9 avril 2026 ?",
-      "o": [
-        "\"Ensemble pour la paix et la sécurité\"",
-        "\"Produisons burkinabè, consommons burkinabè : notre assiette, notre fierté\"",
-        "\"Patriotisme et résilience face aux défis sécuritaires\"",
-        "\"Pour un Burkina Faso souverain et prospère\""
-      ],
-      "r": 1,
-      "x": "Le thème des Journées nationales d'engagement patriotique et de participation citoyenne (JEPPC) lancées le 26 mars 2026 est : \"Produisons burkinabè, consommons burkinabè : notre assiette, notre fierté\". Ce thème souligne la priorité accordée à la souveraineté alimentaire et à la promotion des produits locaux."
-    },
-    {
-      "q": "Quel est le pays qui a le plus de ressortissants dans la diaspora burkinabè ?",
-      "o": [
-        "La France",
-        "La Côte d'Ivoire",
-        "Le Ghana",
-        "L'Italie"
-      ],
-      "r": 1,
-      "x": "La diaspora burkinabè est estimée à environ 16 millions de personnes, dont la majorité réside en Côte d'Ivoire. Cette diaspora joue un rôle économique important à travers les transferts de fonds, qui représentent une source significative de revenus pour l'économie burkinabè."
-    },
-    {
-      "q": "Qui était le dernier gouverneur de la Haute-Volta avant l'indépendance en 1960 ?",
-      "o": [
-        "Henri Louveau",
-        "Gérard Kango Ouédraogo",
-        "Roland Pré",
-        "Max Berhet (juillet 1958 – décembre 1958)"
-      ],
-      "r": 3,
-      "x": "Max Berhet fut le dernier gouverneur de la Haute-Volta, en poste de juillet à décembre 1958. Après le referendum du 28 septembre 1958 et la proclamation de la République le 11 décembre 1958, la Haute-Volta accédait à l'autonomie, puis à l'indépendance le 5 août 1960."
-    },
-    {
-      "q": "Quelles sont les Retro résultats du BAC, BEPC et CEP burkinabè 2025 ?",
-      "o": [
-        "CEP : 89,68 % ; BEPC : 48,55 % ; BAC : 56,45 %",
-        "CEP : 78,50 % ; BEPC : 52,30 % ; BAC : 61,20 %",
-        "CEP : 92,10 % ; BEPC : 45,80 % ; BAC : 53,70 %",
-        "CEP : 85,40 % ; BEPC : 50,15 % ; BAC : 58,90 %"
-      ],
-      "r": 0,
-      "x": "Les résultats des examens nationaux 2025 au Burkina Faso sont : CEP (Certificat d'Études Primaires) : 89,68 % ; BEPC (Brevet d'Études du Premier Cycle) : 48,55 % ; Baccalauréat : 56,45 %. Ces résultats reflètent les défis éducatifs liés à la crise sécuritaire affectant de nombreuses écoles."
-    },
-    {
-      "q": "Quelle est la date de dissolution du gouvernement Kyelem de Tambèla mettant fin à son mandat de Premier ministre ?",
-      "o": [
-        "30 septembre 2024",
-        "6 décembre 2024",
-        "7 décembre 2024",
-        "28 décembre 2024"
-      ],
-      "r": 1,
-      "x": "Le gouvernement de Me Apollinaire Kyelem de Tambèla a été dissous le 6 décembre 2024, mettant fin à son mandat de Premier ministre. Il a été remplacé par Jean Rimtalba Emmanuel Ouédraogo, nommé et installé le 7 décembre 2024."
-    },
-    {
-      "q": "À quelle date a été inaugurée la Nouvelle Brasserie du Faso (SN-BF) à Komsilga ?",
-      "o": [
-        "25 juillet 2025",
-        "25 octobre 2025",
-        "25 novembre 2025",
-        "25 décembre 2025"
-      ],
-      "r": 2,
-      "x": "La Nouvelle Brasserie du Faso (SN-BF) a été inaugurée à Komsilga, près de Ouagadougou, le 25 novembre 2025. Cette unité industrielle contribue à la production locale de boissons et à la création d'emplois dans la capitale économique burkinabè."
-    },
-    {
-      "q": "Quel est le champion de lutte traditionnelle burkinabè 2025 ?",
-      "o": [
-        "Iron Biby",
-        "Zan Bady",
-        "Paul Daumond",
-        "Kevin Mossé"
-      ],
-      "r": 3,
-      "x": "Kevin Mossé a été sacré champion de lutte traditionnelle burkinabè en 2025. La lutte traditionnelle (la lutte \"Burkina\") est l'un des sports les plus populaires au Burkina Faso et fait partie des compétitions des Jeux Olympiques Africains."
-    },
-    {
-      "q": "Combien de pays africains bordent la mer Méditerranée et quels sont-ils ?",
-      "o": [
-        "4 pays : Maroc, Algérie, Tunisie et Égypte",
-        "3 pays : Maroc, Algérie et Tunisie",
-        "6 pays : Maroc, Algérie, Tunisie, Libye, Égypte et Mauritanie",
-        "5 pays : Maroc, Algérie, Tunisie, Libye et Égypte"
-      ],
-      "r": 3,
-      "x": "Cinq pays africains bordent la mer Méditerranée : le Maroc, l'Algérie, la Tunisie, la Libye et l'Égypte. Ces pays forment l'Afrique du Nord ou Maghreb élargi. La Méditerranée constitue une voie maritime stratégique reliant l'Afrique, l'Europe et le Moyen-Orient."
-    },
-    {
-      "q": "Qui est le premier Premier ministre de la Haute-Volta après l'indépendance ?",
-      "o": [
-        "Gérard Kango Ouédraogo",
-        "Sangoulé Lamizana",
-        "Maurice Yaméogo",
-        "Albert Ouédraogo"
-      ],
-      "r": 0,
-      "x": "Gérard Kango Ouédraogo est devenu le premier Premier ministre de la Haute-Volta indépendante le 13 février 1971, sous la présidence de Sangoulé Lamizana. Maurice Yaméogo avait été président du Conseil de gouvernement (1958) puis premier Président de la République (1960), mais pas Premier ministre."
-    },
-    {
-      "q": "Dans quelle ville est implantée la Base aérienne 511 du Burkina Faso ?",
-      "o": [
-        "Ouagadougou",
-        "Fada N'Gourma",
-        "Kaya",
-        "Dori"
-      ],
-      "r": 0,
-      "x": "Le Burkina Faso possède quatre bases aériennes militaires : la Base aérienne 210 à Bobo-Dioulasso, la Base aérienne 511 à Ouagadougou, la Base aérienne 134 à Kaya et la Base aérienne 111 à Fada N'Gourma."
-    },
-    {
-      "q": "Qui est l'actuel président en exercice de la CEDEAO ?",
-      "o": [
-        "Patrice Talon",
-        "Alassane Ouattara",
-        "Julius Maada Bio",
-        "Bassirou Diomaye Faye"
-      ],
-      "r": 3,
-      "x": "Le chef de l'État sénégalais Bassirou Diomaye Faye a été officiellement porté à la tête de la Conférence des chefs d'État et de gouvernement de l'organisation le 19 juillet 2026 lors du 69e sommet ordinaire à Lungi, en Sierra Leone, succédant au président sierra-léonais Julius Maada Bio."
-    },
-    {
-      "q": "Quels sont les organes officiels du pouvoir au Burkina Faso selon la Charte de la Révolution de 2026 ?",
-      "o": [
-        "Président du Faso, Assemblée Législative du Peuple et Gouvernement du Peuple",
-        "Président, gouvernement, assemblée nationale et Sénat",
-        "Président, Premier ministre, Conseil des ministres et Cour constitutionnelle",
-        "Président, Conseil militaire, gouvernement et Cour suprême"
-      ],
-      "r": 0,
-      "x": "La Charte de la Révolution, adoptée le 27 mars 2026 (datée du 1er avril 2026 dans les visas officiels), a remplacé la Charte de la Transition. L'ALT est devenue l'Assemblée Législative du Peuple (ALP) et le gouvernement de Transition le Gouvernement du Peuple."
-    },
-    {
-      "q": "À quelle date s'est tenue la deuxième session ordinaire du Collège des Chefs d'État de la Confédération des États du Sahel (AES) ?",
-      "o": [
-        "20 décembre 2025",
-        "21 décembre 2025",
-        "23 décembre 2025",
-        "25 décembre 2025"
-      ],
-      "r": 2,
-      "x": "La deuxième session ordinaire du Collège des Chefs d'État de la Confédération des États du Sahel (AES) s'est tenue le 23 décembre 2025 à Bamako (Mali). À l'issue de cette session, le Capitaine Ibrahim Traoré a notamment reçu la présidence tournante de la Confédération AES."
-    },
-    {
-      "q": "À quelle date a lieu la signature de l'accord de la centrale nucléaire au Burkina Faso ?",
-      "o": [
-        "26 mars 2024",
-        "4 août 2024",
-        "16 décembre 2024",
-        "26 mars 2025"
-      ],
-      "r": 0,
-      "x": "La feuille de route pour la construction d'une centrale nucléaire a été signée le 26 mars 2024. Cette décision illustre le choix souverain du Burkina Faso en matière énergétique."
-    },
-    {
-      "q": "Quel Burkinabè est surnommé \"l'Homme au 3000 baobabs\" et où réside-t-il ?",
-      "o": [
-        "Iron Biby, réside à Ouagadougou",
-        "Laurent Bado, réside à Koudougou",
-        "Silvère Salga, réside à Bobo-Dioulasso",
-        "El Hadj Salifou Ouédraogo, réside à Solenzo"
-      ],
-      "r": 3,
-      "x": "El Hadj Salifou Ouédraogo est surnommé \"l'Homme au 3000 baobabs\". Il réside à Solenzo dans la province des Banwa, dans la région de la Boucle du Mouhoun. Sa démarche de plantation massive de baobabs illustre l'engagement citoyen pour la préservation de l'environnement et la lutte contre la désertification."
-    },
-    {
-      "q": "À quelle date le Sommet des BRICS 2025 a-t-il eu lieu et de quelle édition s'agissait-il ?",
-      "o": [
-        "6 au 7 juin 2025 à Brasilia, 16e sommet",
-        "5 au 6 septembre 2025 à Pékin, 18e sommet",
-        "22 au 23 novembre 2025 à Johannesburg, 17e sommet",
-        "6 au 7 juillet 2025 à Rio de Janeiro, 17e sommet"
-      ],
-      "r": 3,
-      "x": "Le Sommet des BRICS 2025 (17e sommet) s'est tenu du 6 au 7 juillet 2025 à Rio de Janeiro, au Brésil. C'était le premier sommet depuis l'élargissement du groupe (incluant l'Indonésie qui a rejoint en janvier 2025)."
-    },
-    {
-      "q": "Quel est le PASD et sur combien de piliers stratégiques s'articule-t-il ?",
-      "o": [
-        "Plan d'Action pour la Sécurité et le Développement, 3 piliers",
-        "Plan d'Action pour la Stabilisation et le Développement, 4 piliers",
-        "Programme d'Action pour la Souveraineté et le Développement, 5 piliers",
-        "Plan d'Appui à la Stabilité et au Développement, 6 piliers"
-      ],
-      "r": 1,
-      "x": "Le PASD (Plan d'Action pour la Stabilisation et le Développement) a été adopté le 25 janvier 2023. Il s'articule sur 4 piliers stratégiques : (1) Sécurité et défense du territoire ; (2) Gouvernance politique et économique ; (3) Réconciliation nationale et cohésion sociale ; (4) Développement économique et social."
-    },
-    {
-      "q": "Qui assure la présidence du Conseil des ministres statutaire de l'UEMOA depuis octobre 2025 ?",
-      "o": [
-        "Adama Coulibaly",
-        "Romuald Wadagni",
-        "Abdoulaye Diop",
-        "Aboubakar Nacanabo"
-      ],
-      "r": 3,
-      "x": "Le Burkinabè Dr Aboubakar Nacanabo, ministre de l'Économie et des Finances, a été désigné président du Conseil des ministres statutaire de l'UEMOA le 6 octobre 2025 à Dakar. Il succède à l'Ivoirien Adama Coulibaly pour un mandat de deux ans"
-    },
-    {
-      "q": "Quel est le premier Africain élu député à l'Assemblée nationale française et en quelle année ?",
-      "o": [
-        "Léopold Sédar Senghor, élu en 1945",
-        "Blaise Diagne, élu en 1914",
-        "Lamine Guèye, élu en 1945",
-        "Félix Houphouët-Boigny, élu en 1945"
-      ],
-      "r": 1,
-      "x": "Blaise Diagne (1872-1931), originaire de Gorée (Sénégal), a été le premier Africain élu député à l'Assemblée nationale française en 1914. Il représentait les Quatre Communes du Sénégal et a joué un rôle important dans la mobilisation des troupes africaines durant la Première Guerre mondiale."
-    },
-    {
-      "q": "Quel Burkinabè est reconnu comme le principal investigateur du vaccin RTS contre le paludisme ?",
-      "o": [
-        "Pr Halidou Tinto",
-        "Pr Hamidou Kindo",
-        "Pr Souleymane Konaté",
-        "Pr Hassan Bismarck Nacro"
-      ],
-      "r": 0,
-      "x": "Le Professeur Halidou Tinto est le principal investigateur burkinabè du vaccin RTS,S contre le paludisme. Il dirige le Centre de Recherche en Santé de Nanoro (CRSN) qui a joué un rôle clé dans les essais cliniques de ce vaccin désormais recommandé par l'OMS."
-    },
-    {
-      "q": "À quelles dates s'est tenu le deuxième Sommet Russie–Afrique ?",
-      "o": [
-        "24 et 25 octobre 2022",
-        "15 et 16 juin 2023",
-        "27 et 28 juillet 2023",
-        "10 et 11 septembre 2023"
-      ],
-      "r": 2,
-      "x": "Le deuxième Sommet Russie–Afrique s'est tenu les 27 et 28 juillet 2023 à Saint-Pétersbourg (Russie). Il a réuni des dirigeants russes et africains afin de renforcer la coopération politique, économique et sécuritaire entre la Russie et les pays africains."
-    },
-    {
-      "q": "Qui est l'actuel président de la Commission de l'Union africaine (CUA) ?",
-      "o": [
-        "Moussa Faki Mahamat",
-        "João Lourenço",
-        "Mahmoud Ali Youssouf",
-        "Raila Odinga"
-      ],
-      "r": 2,
-      "x": "Le Djiboutien Mahmoud Ali Youssouf est le président de la Commission de l'Union africaine depuis mars 2025. Ancien ministre des Affaires étrangères de Djibouti, il a été élu lors du sommet de l'Union africaine tenu à Addis-Abeba en février 2025"
-    },
-    {
-      "q": "Qui est l'actuel président en exercice de l'UEMOA ?",
-      "o": [
-        "Alassane Ouattara",
-        "Abdoulaye Diop",
-        "Patrice Talon",
-        "Aboubakar Nacanabo"
-      ],
-      "r": 0,
-      "x": "Le Président de la République de Côte d'Ivoire, Alassane Ouattara, est le Président en exercice de la Conférence des Chefs d'État et de Gouvernement de l'UEMOA en 2026. Il ne faut pas le confondre avec Abdoulaye Diop, qui est le Président de la Commission de l'UEMOA"
-    },
-    {
-      "q": "Que signifie l'acronyme SITHO ?",
-      "o": [
-        "Salon International du Tourisme et de l'Hôtellerie de Ouagadougou",
-        "Salon International du Transport et de l'Hôtellerie de Ouagadougou",
-        "Salon International du Tourisme, de l'Hôtellerie et de la Restauration de Ouagadougou",
-        "Salon International du Tourisme et de l'Hébergement de Ouagadougou"
-      ],
-      "r": 0,
-      "x": "Le SITHO signifie Salon International du Tourisme et de l'Hôtellerie de Ouagadougou. Il constitue l'un des principaux rendez-vous de promotion du tourisme et de l'hôtellerie au Burkina Faso et en Afrique."
-    },
-    {
-      "q": "À quelles dates s'est tenue la 15ᵉ édition du SITHO en 2025 ?",
-      "o": [
-        "Du 25 au 28 septembre 2025",
-        "Du 2 au 5 octobre 2025",
-        "Du 30 octobre au 2 novembre 2025",
-        "Du 20 au 23 novembre 2025"
-      ],
-      "r": 0,
-      "x": "La 15ᵉ édition du SITHO s'est tenue à Ouagadougou du 25 au 28 septembre 2025, sous le thème « Tourisme et intégration des peuples du Sahel »."
-    },
-    {
-      "q": "À quelle date le Capitaine Ibrahim Traoré a-t-il été décoré de la Médaille des BRICS ?",
-      "o": [
-        "24 janvier 2023",
-        "12 juin 2023",
-        "27 juillet 2023",
-        "30 septembre 2023"
-      ],
-      "r": 1,
-      "x": "Le Capitaine Ibrahim Traoré a reçu la Médaille des BRICS le 12 juin 2023 des mains de Mme Larisa Zelentsova, présidente de l'Alliance internationale des projets stratégiques BRICS, pour son engagement en faveur de la souveraineté du Burkina Faso."
-    },
-    {
-      "q": "Qui est le président en exercice de l'Union africaine (UA) en 2026 ?",
-      "o": [
-        "João Lourenço",
-        "Mahmoud Ali Youssouf",
-        "Évariste Ndayishimiye",
-        "Paul Kagame"
-      ],
-      "r": 2,
-      "x": "Le président burundais Évariste Ndayishimiye assure la présidence tournante de l'Union africaine pour l'année 2026. Il a été élu lors du 39ᵉ Sommet de l'UA à Addis-Abeba et a succédé au président angolais João Lourenço."
-    },
-    {
-      "q": "Qui a remporté le Super Galian 2025 lors de la 28e édition des Prix Galian ?",
-      "o": [
-        "Hervé Kaboré de la RTB Radio",
-        "Jeanne Coulibaly, journaliste senior",
-        "Daouda Zongo de Wakat Séra",
-        "Liradan Philippe Ada de la RTB Télé"
-      ],
-      "r": 3,
-      "x": "Liradan Philippe Ada, journaliste à la RTB Télé, a remporté le Super Galian 2025 lors de la 28e édition de la Nuit des Galian (13 juin 2025, CENASA, Ouagadougou). C'est son 2e Super Galian, le premier ayant été décroché en 2022. Contrairement à l'édition 2024 qui était infructueuse, le jury n'a pas hésité cette fois à décerner la plus haute distinction."
-    },
-    {
-      "q": "Quelle était la numérotation de l'édition des Prix Galian remportée par Liradan Philippe Ada en 2025 ?",
-      "o": [
-        "La 28e édition",
-        "La 26e édition",
-        "La 29e édition",
-        "La 27e édition"
-      ],
-      "r": 0,
-      "x": "La 28e édition de la Nuit des Galian s'est tenue le vendredi 13 juin 2025 au CENASA (Centre National des Arts, des Spectacles et de l'Audiovisuel) à Ouagadougou. La cérémonie était placée sous le patronage du Président de l'ALT, Dr Ousmane Bougouma, et présidée par le ministre Pingdwendé Gilbert Ouédraogo."
-    },
-    {
-      "q": "Où s'est tenue la 28e édition de la Nuit des Galian 2025 ?",
-      "o": [
-        "Palais des Sports de Ouagadougou",
-        "Salle des Banquets de Ouagadougou",
-        "CENASA, Ouagadougou",
-        "Maison de la Culture de Bobo-Dioulasso"
-      ],
-      "r": 2,
-      "x": "La 28e Nuit des Galian s'est tenue au CENASA (Centre National des Arts, des Spectacles et de l'Audiovisuel) à Ouagadougou le vendredi 13 juin 2025. La cérémonie a regroupé des professionnels des médias, des responsables institutionnels et de nombreux partenaires."
-    },
-    {
-      "q": "Quelle note Liradan Philippe Ada a-t-il obtenue pour décrocher le Super Galian 2025 ?",
-      "o": [
-        "18,5/20",
-        "17,2/20",
-        "16,8/20",
-        "15,9/20"
-      ],
-      "r": 1,
-      "x": "Liradan Philippe Ada a obtenu la note de 17,2/20 pour ses deux reportages réalisés sur le front ouest du Burkina Faso. Sa dotation comprend : un trophée, une attestation, une enveloppe de 3 millions de FCFA, une villa d'une valeur de 18,5 millions de FCFA offerte par le Groupe Kastor Africa, et un bon d'assurance Sunu Assurances."
-    },
-    {
-      "q": "Combien de fois Liradan Philippe Ada a-t-il remporté le Super Galian au total, et en quelles années ?",
-      "o": [
-        "3 fois : 2019, 2022 et 2025",
-        "1 fois : uniquement en 2025",
-        "2 fois : 2020 et 2025",
-        "2 fois : 2022 et 2025"
-      ],
-      "r": 3,
-      "x": "Liradan Philippe Ada a remporté le Super Galian 2 fois : en 2022 (1ère fois) et en 2025 (2e fois). Cette double consécration le hisse parmi les figures les plus marquantes du paysage médiatique burkinabè. Il a dédié son trophée aux Forces de défense et de sécurité (FDS) et aux Volontaires pour la Défense de la Patrie (VDP)."
-    },
-    {
-      "q": "Avec quelles œuvres Liradan Philippe Ada a-t-il concouru pour le Super Galian 2025 ?",
-      "o": [
-        "\"Grand-Ouest, le tournant décisif\" et \"Le Kiaarima 2 : voyage au bout d'une mission à haut risque\"",
-        "\"Les FDS dans le Sahel : le prix de la liberté\" et \"Sur le front du Liptako\"",
-        "\"Reconquête de Kidal : victoire ou illusion ?\" et \"Le Sahel résiste\"",
-        "\"Opération Tourbillon : la bataille de la Banwa\" et \"Retour dans les zones libérées\""
-      ],
-      "r": 0,
-      "x": "Liradan Philippe Ada a concouru avec deux reportages réalisés dans des conditions extrêmes sur le front ouest du Burkina : \"Grand-Ouest, le tournant décisif\" et \"Le Kiaarima 2 : voyage au bout d'une mission à haut risque\". Il a obtenu la note de 17,2/20 et décroché aussi le Prix du meilleur grand reportage en catégorie télévision."
-    },
-    {
-      "q": "La dotation accordée au Super Galian 2025 comprenait:",
-      "o": [
-        "Trophée, attestation, 5 millions de FCFA, un véhicule",
-        "Trophée, attestation, 2 millions de FCFA, un véhicule",
-        "Trophée, attestation, 3 millions de FCFA, une villa",
-        "Trophée, attestation, 1 millions de FCFA, une villa"
-      ],
-      "r": 2,
-      "x": "La dotation du Super Galian 2025 comprenait : un trophée, une attestation signée par le Président du Faso, une enveloppe de 3 millions de FCFA, une villa d'une valeur de 18,5 millions de FCFA offerte par le Groupe Kastor Africa (parrain de l'édition) et un bon d'assurance de la société Sunu Assurances."
-    },
-    {
-      "q": "Qui était la présidente d'honneur de la 28e édition des Prix Galian 2025 ?",
-      "o": [
-        "Aïcha Diombélé/Kabré, journaliste RTB",
-        "Jeanne Coulibaly, journaliste senior",
-        "Nadège Sawadogo, journaliste Sidwaya",
-        "Pierrette Carine Zongo, journaliste Filinfo.net"
-      ],
-      "r": 1,
-      "x": "La journaliste Jeanne Coulibaly a été la présidente d'honneur de la 28e édition des Prix Galian 2025. Dans son discours, elle a invité la jeune génération à s'inscrire dans la dynamique de responsabilité journalistique : \"Le Burkina Faso a plus que jamais besoin d'une presse forte, lucide, constructive et patriote\"."
-    },
-    {
-      "q": "Combien d'œuvres ont été soumises lors de la 28e édition des Prix Galian 2025 ?",
-      "o": [
-        "268 œuvres",
-        "420 œuvres",
-        "368 œuvres",
-        "378 œuvres"
-      ],
-      "r": 3,
-      "x": "La 28e édition des Prix Galian a enregistré 378 œuvres soumises dans toutes les catégories (presse écrite, presse en ligne, radio, télévision et langues nationales). Au total, 25 prix officiels, une trentaine de prix spéciaux et un Super Galian ont été décernés. Les Éditions Sidwaya ont raflé 15 prix dont 3 officiels."
-    },
-    {
-      "q": "Qui a remporté le prix spécial de la Présidence du Faso en langues nationales lors des Galian 2025 ?",
-      "o": [
-        "Lassina Coulibaly de la RTB Sud-Ouest, en langue jula",
-        "Ahmed Kam Ouédraogo de Savane FM/Bobo, pour une production en dioula",
-        "Aïcha Diombélé/Kabré de la RTB Radio, en mooré",
-        "Hervé Kaboré de la RTB Radio, pour un reportage en langue nationale"
-      ],
-      "r": 0,
-      "x": "Lassina Coulibaly de la RTB Sud-Ouest a remporté le prix spécial de la Présidence du Faso en langues nationales pour son reportage \"VDP, acteur de la cohésion sociale\", diffusé en langue nationale jula le 16 août 2024. Les 5 prix spéciaux de la Présidence du Faso ont été remis par M. Ousmane Sandwidi (Chef de cabinet du Président du Faso) et M. Sougrinoma Ibrahim Guigma (Directeur de la Communication)."
-    },
-    {
-      "q": "Au Burkina Faso, le concours annuel des « Prix Galian » est organisé par :",
-      "o": [
-        "Le Ministère chargé de la Communication et de la Culture",
-        "Le Conseil Supérieur de la Communication (CSC)",
-        "L'Association des Journalistes du Burkina (AJB)",
-        "Le Ministère chargé de la Transition Numérique et des Postes"
-      ],
-      "r": 0,
-      "x": "Créés en 1997, les Prix Galian sont la plus haute distinction nationale décernée aux professionnels des médias (presse écrite, radio, télévision, presse en ligne). Ils sont placés sous la tutelle et l'organisation directe du Ministère de la Communication, de la Culture, des Arts et du Tourisme, qui décerne chaque année le trophée du « Super Galian »."
-    },
-    {
-      "q": "Qui a remporté le Super Galian 2026 lors de la 29e édition des Prix Galian ?",
-      "o": [
-        "Françoise Tougry du média QueenMafa",
-        "Nadège Sawadogo des Éditions Sidwaya",
-        "Liradan Philippe Ada de la RTB télé",
-        "Aïcha Diombélé/Kabré de la RTB Radio"
-      ],
-      "r": 3,
-      "x": "Aïcha Diombélé/Kabré, journaliste à la RTB Radio en langues nationales, est la lauréate du Super Galian 2026 lors de la 29e édition des Prix Galian (19 juin 2026, Ouagadougou). Elle devient ainsi la première femme à remporter cette distinction suprême du journalisme burkinabè depuis la création du concours."
-    },
-    {
-      "q": "Quelle note Aïcha Diombélé/Kabré a-t-elle obtenue pour décrocher le Super Galian 2026 ?",
-      "o": [
-        "16,50/20",
-        "18,00/20",
-        "15,75/20",
-        "17,22/20"
-      ],
-      "r": 3,
-      "x": "Aïcha Diombélé/Kabré a obtenu la note de 17,22/20, la meilleure de toute la 29e édition. Elle a concouru dans la catégorie magazine de la section production radio sonore en langue nationale. Sa dotation comprend un trophée, un chèque de 3 millions de FCFA et une villa offerte par le parrain de l'édition."
-    },
-    {
-      "q": "Quelle édition de la Nuit des Galian s'est tenue le 19 juin 2026 à Ouagadougou ?",
-      "o": [
-        "La 29e édition",
-        "La 27e édition",
-        "La 28e édition",
-        "La 30e édition"
-      ],
-      "r": 0,
-      "x": "La 29e édition de la Nuit des Galian s'est tenue le vendredi 19 juin 2026 à Ouagadougou. Elle a été organisée par le ministère de la Communication, de la Culture, des Arts et du Tourisme sous la direction de Pingdwendé Gilbert Ouédraogo. La 28e édition avait eu lieu le 13 juin 2025 et la Super Galian avait été remportée par Liradan Philippe Ada de la RTB."
-    },
-    {
-      "q": "À quelle date s'est tenue la 29e édition de la Nuit des Galian 2026 ?",
-      "o": [
-        "Samedi 20 juin 2026",
-        "Vendredi 19 juin 2026",
-        "Vendredi 13 juin 2025",
-        "Samedi 21 juin 2026"
-      ],
-      "r": 1,
-      "x": "La 29e édition de la Nuit des Galian s'est tenue le vendredi 19 juin 2026 à Ouagadougou. La cérémonie a regroupé des professionnels des médias, des responsables institutionnels et des partenaires autour de la célébration du mérite journalistique burkinabè."
-    },
-    {
-      "q": "Dans quelle catégorie Aïcha Diombélé/Kabré a-t-elle remporté le Super Galian 2026 ?",
-      "o": [
-        "Meilleur reportage en presse écrite",
-        "Meilleure émission télévisée en langue nationale",
-        "Magazine de la production radio sonore en langue nationale",
-        "Meilleur documentaire radiophonique en français"
-      ],
-      "r": 2,
-      "x": "Aïcha Diombélé/Kabré a remporté le Super Galian dans la catégorie magazine de la section production radio sonore en langue nationale. Ses deux œuvres primées étaient : \"Mankan : paralysie cérébrale des enfants, naître sous l'accusation\" (sept-oct 2025) et \"Koumankan : enfant en conflit avec la loi, l'enfant en sursis\" (15 sept - 1er oct 2025)."
-    },
-    {
-      "q": "Quelle première historique la victoire d'Aïcha Diombélé/Kabré représente-t-elle pour le Super Galian ?",
-      "o": [
-        "Première femme à remporter le Super Galian",
-        "Première journaliste de la RTB à remporter le Super Galian",
-        "Première journaliste de la région du Yaadga à remporter le Super Galian",
-        "Première journaliste de Ouagadougou à remporter le Super  Galian"
-      ],
-      "r": 0,
-      "x": "Aïcha Diombélé/Kabré est devenue en 2026 la première femme à remporter le Super Galian, la plus haute distinction des Prix Galian."
-    },
-    {
-      "q": "Quelle est la dotation accordée à la lauréate du Super Galian 2026 ?",
-      "o": [
-        "Un trophée, un chèque de 3 millions de FCFA et une villa",
-        "Un trophée et un chèque de 1 million de FCFA",
-        "Un trophée, un chèque de 5 millions de FCFA et une voiture",
-        "Un trophée, une médaille d'or et un chèque de 2 millions de FCFA"
-      ],
-      "r": 0,
-      "x": "La Super Galian 2026 Aïcha Diombélé/Kabré a reçu : un trophée, une enveloppe financière de 3 millions de FCFA et une villa offerte par le parrain de la 29e édition, en reconnaissance de son talent, de son professionnalisme et de son engagement au service de l'information."
-    },
-    {
-      "q": "Combien de candidatures et d'œuvres la 29e édition des Prix Galian 2026 a-t-elle enregistrées ?",
-      "o": [
-        "120 candidatures pour 210 œuvres",
-        "150 candidatures pour 300 œuvres",
-        "134 candidatures pour 268 œuvres",
-        "100 candidatures pour 180 œuvres"
-      ],
-      "r": 2,
-      "x": "La 29e édition des Prix Galian a enregistré 134 candidatures pour 268 œuvres. Ces productions étaient réparties entre 5 catégories : œuvres en presse écrite, radiodiffusion sonore, télévision, presse en ligne et langues nationales."
-    },
-    {
-      "q": "Qui est le Président d'honneur de la 29e édition des Prix Galian 2026 ?",
-      "o": [
-        "Pingdwendé Gilbert Ouédraogo, Ministre de la Communication",
-        "Hamado Ouangrawa, Président de l'Observatoire Burkinabè des Médias (OBM)",
-        "Dr Ousmane Bougouma, Président de l'ALT",
-        "Capitaine Martha Céleste Anderson Dekomwin Médah, Directeur de cabinet du Président"
-      ],
-      "r": 1,
-      "x": "Hamado Ouangrawa, Président de l'Observatoire Burkinabè des Médias (OBM), a été le Président d'honneur de la 29e édition des Prix Galian. Il a qualifié la presse burkinabè de \"résiliente\" malgré le contexte sécuritaire difficile et encouragé les journalistes dans leur mission d'information."
-    },
-    {
-      "q": "Qui a remis les prix spéciaux de la Présidence du Faso lors de la Nuit des Galian 2026 ?",
-      "o": [
-        "Pingdwendé Gilbert Ouédraogo, Ministre de la Communication",
-        "Dr Ousmane Bougouma, Président de l'ALT",
-        "Capitaine Martha Céleste Anderson Dekomwin Médah",
-        "Hamado Ouangrawa, Président de l'OBM"
-      ],
-      "r": 2,
-      "x": "Le Capitaine Martha Céleste Anderson Dekomwin Médah, Ministre Directeur de cabinet du Président du Faso, a remis les 5 prix spéciaux de la Présidence du Faso lors de la Nuit des Galian 2026. Ces prix récompensaient des œuvres journalistiques traitant des initiatives présidentielles."
-    },
-    {
-      "q": "Qui a remporté le prix spécial de la Présidence du Faso en catégorie langues nationales lors des Galian 2026 ?",
-      "o": [
-        "Ahmed Kam Ouédraogo de la radio Savane FM/Bobo, en langue dioula",
-        "Aïcha Diombélé/Kabré de la RTB Radio, en mooré",
-        "Frédéric Tensaba de la RTB radio Bobo, en fulfuldé",
-        "Karim Bikienga de la RTB télé, en dioula"
-      ],
-      "r": 0,
-      "x": "Ahmed Kam Ouédraogo de la radio Savane FM/Bobo a remporté le prix spécial de la Présidence du Faso en catégorie langues nationales avec sa production \"Les avantages/bienfaits des innovations technologiques agricoles\" diffusée en langue dioula. Ce prix était doté d'un trophée, une attestation et un chèque d'un million de FCFA."
-    },
-    {
-      "q": "Qui a reçu le prix spécial de l'ONASER (Office national de la sécurité routière) lors des Galian 2026 ?",
-      "o": [
-        "Nadège Sawadogo (Éditions Sidwaya)",
-        "Farida Thiombiano (Lefaso.net)",
-        "Françoise Tougry (QueenMafa)",
-        "Assétou Maïga (QueenMafa)"
-      ],
-      "r": 0,
-      "x": "Nadège Sawadogo, journaliste aux Éditions Sidwaya, a reçu le prix spécial de l'ONASER (Office national de la sécurité routière) lors des Galian 2026. Ce prix spécial récompense les productions journalistiques qui ont traité de la sécurité routière au Burkina Faso."
-    },
-    {
-      "q": "Qui a proclamé le nom de la lauréate du Super Galian 2026 lors de la cérémonie de clôture ?",
-      "o": [
-        "Dr Ousmane Bougouma, Président de l'ALT",
-        "Pingdwendé Gilbert Ouédraogo, Ministre de la Communication",
-        "Hamado Ouangrawa, Président de l'OBM",
-        "Capitaine Martha Céleste Anderson Dekomwin Médah"
-      ],
-      "r": 0,
-      "x": "Dr Ousmane Bougouma, Président de l'Assemblée législative de transition (ALT), a proclamé le nom de la lauréate du Super Galian 2026 lors de la cérémonie de clôture. C'est lui qui a officiellement sacré Aïcha Diombélé/Kabré, journaliste de la RTB Radio en langues nationales."
-    },
-    {
-      "q": "Quel ministère a organisé la 29e édition des Prix Galian en 2026 et quel ministre en assurait la direction ?",
-      "o": [
-        "Le ministère de la Culture, assuré par Me Apollinaire Kyelem de Tambèla",
-        "Le ministère de l'Éducation, assuré par Jacques Sosthène Dingara",
-        "Le ministère de l'Enseignement supérieur, assuré par Adjima Thombiano",
-        "Le ministère de la Communication, de la Culture, des Arts et du Tourisme, assuré par Pingdwendé Gilbert Ouédraogo"
-      ],
-      "r": 3,
-      "x": "Les Prix Galian sont organisés chaque année par le ministère en charge de la Communication. En 2026, c'est Pingdwendé Gilbert Ouédraogo, Ministre de la Communication, de la Culture, des Arts et du Tourisme et porte-parole du gouvernement, qui a présidé la 29e édition."
-    },
-    {
-      "q": "Quel est le montant total du Plan RELANCE 2026-2030, nouveau référentiel national de développement du Burkina Faso ?",
-      "o": [
-        "18 000 milliards FCFA",
-        "28 500 milliards FCFA",
-        "36 000 milliards FCFA",
-        "45 000 milliards FCFA"
-      ],
-      "r": 2,
-      "x": "Le Plan RELANCE 2026-2030, adopté en Conseil des ministres le 29 janvier 2026, est évalué à 36 000 milliards de FCFA. Près de deux tiers de ce financement doivent provenir des ressources souveraines, selon le Ministre de l'Économie Dr Aboubakar Nacanabo."
-    },
-    {
-      "q": "Sur combien de piliers stratégiques repose le Plan RELANCE 2026-2030 du Burkina Faso ?",
-      "o": [
-        "4 piliers",
-        "3 piliers",
-        "5 piliers",
-        "6 piliers"
-      ],
-      "r": 0,
-      "x": "Le Plan RELANCE 2026-2030 repose sur 4 piliers : (1) consolidation de la sécurité, cohésion sociale et paix ; (2) refondation de l'État et amélioration de la gouvernance ; (3) développement du capital humain ; (4) transformation économique. Il vise notamment à réduire le taux de pauvreté de 42% à 35% et à améliorer l'espérance de vie de 61 à 68 ans."
-    },
-    {
-      "q": "À quelle date les partis et formations politiques ont-ils été dissous au Burkina Faso ?",
-      "o": [
-        "4 décembre 2025",
+        "22 janvier 2026",
         "29 janvier 2026",
-        "26 mars 2026",
-        "20 juin 2026"
+        "5 février 2026",
+        "9 février 2026"
       ],
       "r": 1,
-      "x": "Un décret portant dissolution des partis et formations politiques au Burkina Faso a été adopté en Conseil des ministres le 29 janvier 2026. Ce même Conseil a adopté un projet de loi portant abrogation des lois encadrant leur fonctionnement, leur financement et le statut du Chef de file de l'opposition."
+      "x": "Le Conseil des ministres du 29 janvier 2026 a adopté ce décret, qui transfère à l'État le patrimoine des partis dissous ; le répertoire comptait 209 partis et 12 formations politiques en 2022. Le 9 février 2026, l'Assemblée législative de Transition (ALT) a adopté à l'unanimité la loi abrogeant la charte des partis de 2001 et la loi de 2009 sur leur financement.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "À quelle date Célestin Simporé a-t-il été promu au grade de Général de division ?",
+      "q": "La loi relative aux libertés religieuses a été adoptée par l'Assemblée législative du Peuple (ALP) le :",
       "o": [
-        "21 octobre 2025",
-        "11 décembre 2025",
-        "4 décembre 2025",
+        "9 mai 2026",
+        "20 juin 2026",
+        "25 juillet 2026",
+        "14 août 2026"
+      ],
+      "r": 1,
+      "x": "La loi relative aux libertés religieuses a été adoptée à l'unanimité le 20 juin 2026. Elle encadre notamment les lieux de culte et l'activité des prédicateurs.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le remaniement du gouvernement opéré le 12 janvier 2026 résulte du décret :",
+      "o": [
+        "n°2025-1545/PF/PRIM",
+        "n°2026-0001/PF/PRIM",
+        "n°2026-0006/PF/PRIM",
+        "n°2026-0007/PF/PRIM"
+      ],
+      "r": 2,
+      "x": "Le décret n°2026-0006/PF/PRIM du 12 janvier 2026 porte remaniement du gouvernement ; le décret n°2026-0007 signé le même jour nomme Ousmane Ouattara ministre, Secrétaire général du Gouvernement et du Conseil des ministres. Le décret n°2025-1545/PF/PRIM du 1er décembre 2025 porte, lui, organisation-type des départements ministériels.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "À l'issue du remaniement du 12 janvier 2026, le gouvernement de Rimtalba Jean Emmanuel Ouédraogo compte :",
+      "o": [
+        "20 ministres",
+        "22 ministres",
+        "24 ministres",
+        "25 ministres"
+      ],
+      "r": 1,
+      "x": "Le gouvernement remanié le 12 janvier 2026 compte 22 ministres, dont cinq femmes et trois ministres délégués, contre 24 départements auparavant. La réduction résulte notamment de la suppression des ministères de l'Environnement et des Infrastructures, fondus dans d'autres départements.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Depuis le remaniement du 12 janvier 2026, le ministère chargé de la Fonction publique porte le nom de :",
+      "o": [
+        "Ministère des Serviteurs du Peuple",
+        "Ministère de la Refondation de l'État",
+        "Ministère du Travail et de l'Engagement",
+        "Ministère de la Fonction publique patriotique"
+      ],
+      "r": 0,
+      "x": "L'ancien ministère de la Fonction publique, du Travail et de la Protection sociale s'appelle désormais ministère des Serviteurs du Peuple, toujours dirigé par Mathias Traoré. Le même remaniement a transformé le ministère de la Défense et des Anciens combattants en ministère de la Guerre et de la Défense patriotique.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Depuis le remaniement du 12 janvier 2026, le département qui regroupe l'Urbanisme, l'Habitat et les Infrastructures s'appelle :",
+      "o": [
+        "Ministère de l'Aménagement souverain",
+        "Ministère de la Construction de la Patrie",
+        "Ministère du Cadre de vie patriotique",
+        "Ministère de l'Habitat et du Bâti national"
+      ],
+      "r": 1,
+      "x": "Le ministère de la Construction de la Patrie, confié à Mikaïlou Sidibé, est né de la fusion des ministères des Infrastructures et du Désenclavement et de l'Habitat et de l'Urbanisme. L'Agriculture et l'Environnement ont de leur côté été réunis dans le ministère de l'Agriculture, de l'Eau, des Ressources animales et halieutiques.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Les deux personnalités entrées au gouvernement lors du remaniement du 12 janvier 2026 sont :",
+      "o": [
+        "Annick Pikbougoum et Moumouni Zoungrana",
+        "Roland Somda et Boubacar Savadogo",
+        "Fatoumata Bako/Traoré et Amadou Dicko",
+        "Stella Kabré/Kaboré et Mikaïlou Sidibé"
+      ],
+      "r": 0,
+      "x": "Annick Lydie Djouma Pikbougoum/Zingué Ouattara prend les Sports, la Jeunesse et l'Emploi, et Moumouni Zoungrana l'Enseignement secondaire et la Formation professionnelle et technique. Ils remplacent respectivement Roland Somda et Boubacar Savadogo, sortis du gouvernement.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Célestin Simporé, ministre d'État chargé de la Guerre et de la Défense patriotique, a été promu général de division par décret du :",
+      "o": [
+        "27 octobre 2023",
+        "1er novembre 2023",
+        "8 décembre 2024",
         "30 décembre 2025"
       ],
       "r": 3,
-      "x": "Célestin Simporé a été promu au grade de Général de division par un décret présidentiel signé le 30 décembre 2025, avec une prise d'effet officielle fixée au 1ᵉʳ janvier 2026. Il occupe actuellement le poste de Ministre d'État, Ministre de la Guerre et de la Défense patriotique au sein du gouvernement burkinabè."
+      "x": "Le décret du 30 décembre 2025 élève Célestin Simporé au grade de général de division ; il a reçu ses attributs des mains du Président du Faso le 8 janvier 2026. Le décret du 27 octobre 2023 l'avait nommé général de brigade, avec effet au 1er novembre 2023.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Combien d'articles et de titres comporte la loi sur les libertés religieuses adoptée en 2026 ?",
+      "q": "L'Assemblée législative du Peuple (ALP), nouvelle appellation de l'ALT depuis 2026, est présidée par :",
       "o": [
-        "80 articles répartis en 4 titres",
-        "95 articles répartis en 5 titres",
-        "112 articles répartis en 6 titres",
-        "120 articles répartis en 7 titres"
-      ],
-      "r": 2,
-      "x": "La loi sur les libertés religieuses, adoptée le 20 juin 2026, comporte 112 articles répartis en 6 titres. Elle marque une étape importante dans la volonté des autorités de mieux réguler les activités religieuses au Burkina Faso dans un contexte sécuritaire marqué par l'instrumentalisation religieuse."
-    },
-    {
-      "q": "À quelle date l'Assemblée Législative du Peuple (ALP) du Burkina Faso a-t-elle adopté la loi sur les libertés religieuses ?",
-      "o": [
-        "20 juin 2026",
-        "7 mai 2026",
-        "26 mars 2026",
-        "29 janvier 2026"
+        "Ousmane Bougouma",
+        "Edasso Rodrigue Bayala",
+        "Émile Zerbo",
+        "Mathias Traoré"
       ],
       "r": 0,
-      "x": "L'ALP (Assemblée Législative du Peuple, ancien nom : ALT) a adopté à l'unanimité la loi sur les libertés religieuses le 20 juin 2026, lors d'une séance plénière présidée par le Camarade Dr Ousmane Bougouma. Ce texte de 112 articles répartis en 6 titres constitue un cadre juridique inédit au Burkina Faso."
+      "x": "Ousmane Bougouma préside le Parlement de transition depuis 2022, d'abord sous le nom d'ALT puis d'ALP après l'adoption de la Charte de la Révolution. Edasso Rodrigue Bayala est le ministre de la Justice qui a défendu cette Charte devant les députés.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Quel objectif le Gouvernement s'est-il fixé en matière de réservistes militaires d'ici fin 2026 ?",
+      "q": "La Commission électorale nationale indépendante (CENI) a été dissoute par l'Assemblée législative de Transition le :",
       "o": [
-        "50 000 réservistes",
-        "200 000 réservistes",
-        "75 000 réservistes",
-        "100 000 réservistes"
+        "14 octobre 2025",
+        "28 octobre 2025",
+        "21 novembre 2025",
+        "9 décembre 2025"
+      ],
+      "r": 1,
+      "x": "L'ALT a adopté à l'unanimité, le 28 octobre 2025, la loi portant dissolution de la CENI, qui organisait jusque-là les élections. Le gouvernement a invoqué la rationalisation des institutions et la réduction des charges de fonctionnement.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "La révision constitutionnelle adoptée par l'ALT le 20 janvier 2026 prévoit la fusion :",
+      "o": [
+        "du CSC et de la CIL",
+        "de l'ASCE-LC et de la Cour des comptes",
+        "du Médiateur du Faso et du CES",
+        "de la CENI et du Conseil constitutionnel"
+      ],
+      "r": 0,
+      "x": "Adoptée par 69 voix pour, 1 contre et 1 abstention, cette révision fusionne le Conseil supérieur de la communication (CSC) et la Commission de l'informatique et des libertés (CIL) en un organe unique de régulation de la communication et de protection des données. Elle prévoit aussi un nouvel organe en remplacement de l'ASCE-LC.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "L'Assemblée législative de Transition (ALT) a adopté la révision constitutionnelle instituant la devise « La Patrie ou la Mort, nous Vaincrons » le :",
+      "o": [
+        "25 mai 2024",
+        "2 août 2024",
+        "29 octobre 2024",
+        "21 novembre 2024"
+      ],
+      "r": 2,
+      "x": "Le 29 octobre 2024, les 71 députés de l'ALT ont adopté à l'unanimité la révision de l'article 34 de la Constitution instituant cette devise. Elle remplace « Unité – Progrès – Justice », en vigueur depuis 1997.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le capitaine Ibrahim Traoré a été investi Président du Faso, chef de l'État, le :",
+      "o": [
+        "30 septembre 2022",
+        "6 octobre 2022",
+        "21 octobre 2022",
+        "4 novembre 2022"
+      ],
+      "r": 2,
+      "x": "Le capitaine Ibrahim Traoré a prêté serment le 21 octobre 2022 devant le Conseil constitutionnel. Il avait pris le pouvoir le 30 septembre 2022 en renversant le lieutenant-colonel Paul-Henri Sandaogo Damiba.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le Code des personnes et de la famille adopté le 1er septembre 2025 (loi n°012-2025/ALT) comporte :",
+      "o": [
+        "441 articles",
+        "474 articles",
+        "933 articles",
+        "1 113 articles"
       ],
       "r": 3,
-      "x": "Suite à l'adoption de la loi précisant le statut de la réserve militaire par l'Assemblée législative, le ministre de la Guerre a fixé l'objectif de compter 100 000 réservistes avant la fin 2026. Cette loi vise à élargir la base de défense nationale au-delà des effectifs réguliers des FANB."
+      "x": "Adopté par les 71 députés de l'ALT et promulgué le 25 septembre 2025, ce Code compte 1 113 articles répartis en 3 parties, 17 titres et 56 chapitres. Les 474 articles sont ceux du Code des douanes de 2025 et les 933 ceux du nouveau Code pénal.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Combien d'agents le Conseil des ministres du 5 mars 2026 a-t-il prévu de recruter par concours professionnels et concours directs au Burkina Faso ?",
+      "q": "Le Code des personnes et de la famille de 2025 fixe l'âge légal du mariage à :",
       "o": [
-        "10 500 agents",
-        "12 300 agents",
-        "18 000 agents",
+        "17 ans pour les filles et 20 ans pour les garçons",
+        "18 ans pour les filles comme pour les garçons",
+        "16 ans pour les filles et 18 ans pour les garçons",
+        "18 ans pour les filles et 21 ans pour les garçons"
+      ],
+      "r": 1,
+      "x": "Adopté le 1er septembre 2025 (loi n° 012-2025/ALT, entrée en vigueur le 1er octobre 2025), le nouveau Code des personnes et de la famille harmonise la majorité civile et l'âge légal du mariage à 18 ans pour les deux sexes, abrogeant l'ancien seuil de 17 ans (filles) et 20 ans (garçons). Une dispense judiciaire à 16 ans reste possible pour motifs graves.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le Code des douanes adopté par l'ALT le 24 mars 2025 remplace un code des douanes datant de :",
+      "o": [
+        "1962",
+        "1984",
+        "1998",
+        "2008"
+      ],
+      "r": 0,
+      "x": "Le nouveau Code (loi n°003-2025/ALT) compte 474 articles en 15 titres et remplace la loi n°24/62/AN du 22 juin 1962, seul code des douanes du pays jusque-là. Ce texte de 1962 n'avait connu que des amendements, le dernier datant de 1998.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le nouveau Code pénal, qui réintroduit la peine de mort, a été adopté par l'Assemblée législative du Peuple (ALP) le :",
+      "o": [
+        "4 décembre 2025",
+        "15 avril 2026",
+        "17 septembre 2026",
+        "20 octobre 2026"
+      ],
+      "r": 3,
+      "x": "Les 71 membres de l'ALP ont adopté à l'unanimité, le 20 octobre 2026, ce Code pénal qui rétablit la peine de mort, notamment pour terrorisme, espionnage et trahison. Le 4 décembre 2025 est la date d'adoption du projet en Conseil des ministres ; la peine capitale avait été supprimée du Code pénal en 2018.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Selon le Code du travail adopté le 6 mai 2026, le congé payé s'acquiert à raison de :",
+      "o": [
+        "2 jours ouvrables par mois de service",
+        "2 jours et demi calendaires par mois",
+        "2 jours et demi ouvrables par mois",
+        "3 jours calendaires par mois de service"
+      ],
+      "r": 1,
+      "x": "Le Code du travail de 2026 (loi n°013-2026/ALP, article 180) fixe le congé payé à 2 jours et demi calendaires par mois de service effectif. Cette règle reprend celle du code de 2008 (article 156), abrogé par la nouvelle loi.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Selon le Code du travail de 2026, un contrat à durée déterminée (CDD) peut être renouvelé au maximum :",
+      "o": [
+        "Une seule fois",
+        "Deux fois",
+        "Trois fois",
+        "Quatre fois"
+      ],
+      "r": 1,
+      "x": "L'article 59 du nouveau Code du travail (loi n° 013-2026/ALP du 6 mai 2026) limite le CDD à deux renouvellements maximum avec un même travailleur, soit trois contrats au total (1 initial + 2 renouvellements) dans la même entreprise. La durée maximale des contrats ne doit pas dépasser 2 ans sauf terme imprécis.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le Code du travail de 2026 fixe la durée légale du travail dans les exploitations agricoles à :",
+      "o": [
+        "1 920 heures par an",
+        "2 080 heures par an",
+        "2 200 heures par an",
+        "2 400 heures par an"
+      ],
+      "r": 3,
+      "x": "L'article 154 fixe la durée légale à 40 heures par semaine et à 2 400 heures par an dans les exploitations agricoles. Les heures effectuées au-delà sont des heures supplémentaires, payées avec majoration.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "En application de la loi n°011-2025/ALT du 17 juillet 2025 portant liberté d'association, le gouvernement a déclaré dissoutes le 15 avril 2026 :",
+      "o": [
+        "118 associations",
+        "205 associations",
+        "245 associations",
+        "359 associations"
+      ],
+      "r": 0,
+      "x": "Le communiqué du 15 avril 2026 du ministre Émile Zerbo a déclaré 118 associations dissoutes pour non-conformité à la loi de 2025. Les chiffres de 359, 205 et 245 correspondent aux vagues de suspensions prononcées ensuite pour non-renouvellement des instances dirigeantes.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le projet de loi adopté en Conseil des ministres le 25 juin 2026 réduit le délai d'entrée en vigueur des lois après leur publication au Journal officiel à :",
+      "o": [
+        "3 jours au lieu de 8",
+        "5 jours au lieu de 10",
+        "7 jours au lieu de 15",
+        "10 jours au lieu de 20"
+      ],
+      "r": 0,
+      "x": "Le projet de loi ramène à 3 jours, au lieu de 8, le délai d'entrée en vigueur des lois, ordonnances et actes réglementaires après leur publication au Journal officiel du Faso. Il révise l'ordonnance n°75-23/PRES du 6 mai 1975 qui régissait jusque-là l'application des textes.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "La loi portant statut de la réserve militaire, adoptée le 26 mai 2026, accompagne l'objectif de constituer d'ici fin 2026 :",
+      "o": [
+        "50 000 réservistes",
+        "75 000 réservistes",
+        "100 000 réservistes",
+        "150 000 réservistes"
+      ],
+      "r": 2,
+      "x": "La loi n°019-2026/ALP du 26 mai 2026 (61 articles, 5 titres) organise une réserve de premier ordre (anciens militaires, policiers et VDP) et une réserve de second ordre (volontaires et anciens appelés du Service national patriotique). Plus de 86 000 personnes s'étaient inscrites en moins d'un mois, selon le ministre de la Guerre.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Les Forces armées nationales (FAN) du Burkina Faso célèbrent leur anniversaire chaque :",
+      "o": [
+        "3 janvier",
+        "5 août",
+        "1er novembre",
+        "11 décembre"
+      ],
+      "r": 2,
+      "x": "Créées par la loi du 3 août 1960, les FAN célèbrent leur anniversaire le 1er novembre, date du transfert du commandement militaire aux autorités voltaïques en 1960. Le 5 août rappelle l'indépendance de 1960 et le 11 décembre est la fête nationale.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Au titre de l'année 2026, le Conseil des ministres du 5 mars 2026 a autorisé le recrutement par concours de :",
+      "o": [
+        "11 404 agents",
+        "12 995 agents",
+        "14 210 agents",
         "15 512 agents"
       ],
       "r": 3,
-      "x": "Le Conseil des ministres du 5 mars 2026 a prévu le recrutement de 15 512 agents par concours professionnels et concours directs dans la fonction publique burkinabè. Ces recrutements concernent plusieurs ministères, notamment les secteurs de l'éducation, de la santé et de la sécurité."
+      "x": "Le Conseil a autorisé 15 512 recrutements : 2 517 par concours professionnels et 12 995 par concours directs. En 2025, 11 404 postes avaient été ouverts (4 348 professionnels et 7 056 directs).",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Quel est le nouveau nom de l'Assemblée Législative de Transition (ALT) du Burkina Faso ?",
+      "q": "La loi de finances pour l'exécution du budget de l'État, exercice 2026, prévoit des recettes globales de :",
       "o": [
-        "Assemblée Nationale du Peuple Burkinabè",
-        "Parlement de la Révolution Progressiste",
-        "Assemblée Législative du Peuple",
-        "Conseil Législatif National Populaire"
-      ],
-      "r": 2,
-      "x": "L'Assemblée Législative de Transition (ALT) du Burkina Faso a été rebaptisée Assemblée Législative du Peuple (ALP). Cette dénomination reflète l'ancrage populaire de la Révolution Progressiste Populaire (RPP) portée par le Président Ibrahim Traoré. L'ALP est présidée par le Dr Ousmane Bougouma et compte 71 membres."
-    },
-    {
-      "q": "Quelle distinction le Ministre burkinabè de l'Économie et des Finances, Dr Aboubakar Nacanabo, a-t-il obtenue au sein d'une organisation financière internationale ?",
-      "o": [
-        "Élu président du Conseil des gouverneurs de la BID",
-        "Nommé vice-président de la Banque Mondiale",
-        "Désigné représentant du FMI pour l'Afrique de l'Ouest",
-        "Élu au Conseil d'administration de la BCEAO"
-      ],
-      "r": 0,
-      "x": "Dr Aboubakar Nacanabo, Ministre de l'Économie et des Finances du Burkina Faso, a été élu président du Conseil des gouverneurs de la Banque Islamique de Développement (BID) en marge des assemblées annuelles du Groupe BID. Cette distinction illustre le rayonnement du Burkina Faso au sein des institutions financières islamiques."
-    },
-    {
-      "q": "En quelle période la société SOCOMA a-t-elle suspendu ses activités ?",
-      "o": [
-        "Octobre 2024",
-        "Juillet 2025",
-        "Décembre 2025",
-        "Mars 2026"
+        "3 149,8 milliards FCFA",
+        "3 431,5 milliards FCFA",
+        "3 918,3 milliards FCFA",
+        "4 090,5 milliards FCFA"
       ],
       "r": 1,
-      "x": "SOCOMA (Société Cotonnière du Gourma) a suspendu ses activités en juillet 2025. Cette fermeture a impacté la production cotonnière nationale dans un contexte déjà affecté par la baisse des cours mondiaux du coton et les défis sécuritaires."
+      "x": "La loi de finances 2026 (loi n°021-2025/ALT du 27 décembre 2025) prévoit 3 431,5 milliards FCFA de recettes pour 3 918,3 milliards de dépenses, soit un déficit de 486,8 milliards. Les 3 149,8 milliards correspondent aux recettes de la loi de finances initiale 2025.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Quand est entrée en production la mine d'or de Kiaka au Burkina Faso ?",
+      "q": "La loi de finances rectificative 2026, adoptée par l'ALP le 23 septembre 2026, prévoit des recettes supplémentaires de :",
       "o": [
-        "Janvier 2025",
-        "Avril 2025",
-        "Octobre 2025",
-        "Juin 2025"
+        "186 milliards FCFA",
+        "245 milliards FCFA",
+        "278 milliards FCFA",
+        "301 milliards FCFA"
       ],
       "r": 3,
-      "x": "La mine d'or de Kiaka est entrée en production à la fin du mois de juin 2025. Cette entrée en production renforce la capacité nationale de production d'or. L'or reste la principale ressource d'exportation du Burkina Faso, représentant environ 70 à 80% des recettes d'exportation."
+      "x": "Selon le ministre Aboubakar Nacanabo, la loi de finances rectificative 2026 ouvre 301 milliards FCFA de recettes supplémentaires. Au 30 juin 2026, les recettes mobilisées atteignaient 1 972,85 milliards FCFA, pour un taux d'exécution global de 47,30 %.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Quelle est la mission principale de la Société Faso Transit et Logistique (FTL) créée par l'État burkinabè ?",
+      "q": "Le Plan national de développement (PND) 2026-2030 « RELANCE » s'articule autour de :",
       "o": [
-        "Gérer les importations d'hydrocarbures au profit de la SONABHY",
-        "Assurer le transport du coton de la SOFITEX vers les ports",
-        "Maîtriser des circuits d'approvisionnement et d'écoulement",
-        "Coordonner les achats groupés de l'État burkinabè à l'international"
-      ],
-      "r": 2,
-      "x": "Faso Transit et Logistique (FTL) a été créée pour contribuer à la maîtrise des circuits d'approvisionnement et d'écoulement de certains produits stratégiques. Elle s'inscrit dans la dynamique de reconquête de l'intégralité du territoire national et de quête de souveraineté économique de l'État burkinabè."
-    },
-    {
-      "q": "Quel montant la Banque Ouest-Africaine de Développement (BOAD) a-t-elle alloué au Burkina Faso dans le cadre du Projet de Promotion de la Finance Inclusive (PPFIP), 3e phase ?",
-      "o": [
-        "12,250 milliards de FCFA",
-        "25,500 milliards de FCFA",
-        "8,750 milliards de FCFA",
-        "18,000 milliards de FCFA"
+        "4 axes stratégiques",
+        "5 axes stratégiques",
+        "6 axes stratégiques",
+        "7 axes stratégiques"
       ],
       "r": 0,
-      "x": "La BOAD (Banque Ouest-Africaine de Développement) a alloué 12,250 milliards de FCFA au Burkina Faso dans le cadre du PPFIP (Projet de Promotion de la Finance Inclusive), 3e phase. Le coût global du projet s'élève à plus de 44 milliards de FCFA. Ce financement, ratifié par le Conseil des ministres du 19 février 2026, vise à renforcer l'inclusion financière des populations burkinabè."
+      "x": "Le Plan RELANCE repose sur quatre axes stratégiques pour la période 2026-2030. Il a été présenté à l'Assemblée législative du Peuple le 8 mai 2026.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "À quelle date la LONAB (Loterie Nationale Burkinabè) a-t-elle été certifiée ISO 9001:2015 ?",
+      "q": "La facture électronique certifiée (FEC), qui remplace progressivement la facture normalisée papier de 2017, a été officiellement lancée le :",
       "o": [
-        "4 août 2025",
-        "2 juin 2026",
-        "11 décembre 2025",
-        "29 janvier 2026"
+        "6 janvier 2026",
+        "3 février 2026",
+        "1er juillet 2026",
+        "7 septembre 2026"
+      ],
+      "r": 0,
+      "x": "Le ministre de l'Économie et des Finances, Aboubakar Nacanabo, a officiellement lancé la FEC le 6 janvier 2026 à Ouagadougou. Le 3 février 2026, la 11e Rentrée fiscale de la Direction générale des impôts (DGI) était placée sous le thème de son adoption.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Les décrets adoptés en Conseil des ministres le 20 novembre 2025 ont ramené le nombre de fonds nationaux de :",
+      "o": [
+        "14 à 4 fonds",
+        "16 à 6 fonds",
+        "18 à 5 fonds",
+        "20 à 7 fonds"
+      ],
+      "r": 0,
+      "x": "Les quatre décrets du 20 novembre 2025 regroupent 14 fonds nationaux en 4 structures, dont le FBDES « Tõogo ». La réforme vise la rationalisation des instruments publics de financement et le soutien au secteur privé national.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le Fonds burkinabè de développement économique et social (FBDES) « Tõogo » est issu de la fusion de :",
+      "o": [
+        "4 fonds nationaux",
+        "5 fonds nationaux",
+        "6 fonds nationaux",
+        "7 fonds nationaux"
+      ],
+      "r": 3,
+      "x": "Le FBDES « Tõogo » réunit sept fonds : AFP-PME, FAARF, FDCT, FBDES, FONADR, Faso Kuna-Wili et Dumu Kafa. Le nom « Tõogo » est tiré de la langue nationale mooré.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le fonds « Wassa Bondo », issu de la réforme des fonds nationaux, est destiné au soutien :",
+      "o": [
+        "du sport et de la presse privée",
+        "de la culture et du tourisme",
+        "de la formation et de la recherche",
+        "de la solidarité et de l'assistance judiciaire"
+      ],
+      "r": 0,
+      "x": "Le fonds « Wassa Bondo » fusionne le Fonds national de promotion du sport et des loisirs et le Fonds d'appui à la presse privée ; sa directrice générale, Ida Ouédraogo, a été installée le 12 février 2026. La formation et la recherche relèvent du FOSER, la solidarité et l'assistance judiciaire du fonds « Seenimin ».",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Avant la nationalisation de la Société burkinabè des fibres textiles (SOFITEX), décidée le 16 avril 2026, les actionnaires privés détenaient :",
+      "o": [
+        "5 % du capital",
+        "6 % du capital",
+        "11 % du capital",
+        "15 % du capital"
       ],
       "r": 1,
-      "x": "La LONAB (Loterie Nationale Burkinabè) a obtenu la certification ISO 9001:2015 le 2 juin 2026. Cette certification internationale atteste de la conformité du système de management de la qualité de la LONAB aux normes internationales d'excellence."
+      "x": "Le capital de 19,5 milliards FCFA de la SOFITEX était détenu à 89 % par l'État, 5 % par des démembrements de l'État et 6 % par des privés. Le rachat de ces 6 % fait de l'État l'unique actionnaire de la société.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "De combien a augmenté la production maraîchère au Burkina Faso lors de la saison agricole 2025-2026 par rapport à la campagne précédente ?",
+      "q": "Selon le bilan présenté en Conseil des ministres le 25 juin 2026, la production de coton graine de la campagne 2025-2026 s'élève à :",
       "o": [
-        "8,2%",
-        "11,5%",
-        "20,3%",
-        "14,4%"
-      ],
-      "r": 3,
-      "x": "La production maraîchère au Burkina Faso a augmenté de 14,4% lors de la saison agricole 2025-2026 par rapport à la campagne précédente. Cette hausse témoigne des efforts de l'État dans le cadre de l'Initiative présidentielle pour la Production agricole et l'Autosuffisance alimentaire."
-    },
-    {
-      "q": "Dans le cadre de quelle loi s'inscrit le projet d'exploitation industrielle de la grande mine d'or de la société NORDGOLD NIOU SA au Burkina Faso ?",
-      "o": [
-        "Loi n°024-2019/AN du 22 mai 2019 portant Code minier",
-        "Loi n°008-2020/AN du 26 mars 2020 portant Code des investissements",
-        "Loi n°016-2024/ALT du 18 juillet 2024 portant Code minier du Burkina Faso",
-        "Décret n°2023-1120/PRES du 15 décembre 2023 sur les ressources minières"
-      ],
-      "r": 2,
-      "x": "Le projet d'exploitation industrielle de la grande mine d'or de NORDGOLD NIOU SA s'inscrit dans le cadre de la loi n°016-2024/ALT du 18 juillet 2024 portant Code minier du Burkina Faso. Ce nouveau Code minier vise à renforcer la souveraineté de l'État sur les ressources minières et à maximiser les retombées économiques pour le pays."
-    },
-    {
-      "q": "Combien d'enfants mineurs de militaires et agents de sécurité tombés au combat ont été adoptés en qualité de pupilles de la Nation lors du Conseil des ministres du 24 avril 2025 ?",
-      "o": [
-        "158 enfants",
-        "120 enfants",
-        "200 enfants",
-        "85 enfants"
-      ],
-      "r": 0,
-      "x": "Le Conseil des ministres du 24 avril 2025 a adopté 158 enfants mineurs d'éléments des Forces de défense et de sécurité disparus ou tombés sur le champ d'honneur, d'un agent des Douanes et d'un inspecteur de l'enseignement, en qualité de pupilles de la Nation. Ce geste traduit la reconnaissance de l'État envers les familles des soldats sacrifiés."
-    },
-    {
-      "q": "Quel est le taux de succès global au BEPC au Burkina Faso en 2026 ?",
-      "o": [
-        "48,55%",
-        "54,06%",
-        "55,30%",
-        "43,70%"
+        "294 507 tonnes",
+        "314 293 tonnes",
+        "383 144 tonnes",
+        "534 250 tonnes"
       ],
       "r": 1,
-      "x": "Le taux de succès global au BEPC 2026 au Burkina Faso est de 54,06%. Ce taux marque une légère amélioration par rapport au BEPC 2025 (48,55%)."
+      "x": "La campagne 2025-2026 a produit 314 293 tonnes de coton graine, contre 294 507 tonnes la campagne précédente, soit une hausse de 7 %. Les 534 250 tonnes représentent l'objectif fixé pour la campagne 2026-2027.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Quel est le thème de la 7e édition de la Journée Nationale de l'Arbre (JNA) 2025 au Burkina Faso ?",
+      "q": "L'accord intergouvernemental conclu avec la Russie pour la construction d'une centrale nucléaire au Burkina Faso a été signé le :",
       "o": [
-        "\"L'arbre, rempart contre la désertification au Sahel\"",
-        "\"Verdissons le Burkina pour un avenir souverain\"",
-        "\"Réconcilier l'homme avec son environnement naturel\"",
-        "\"Plantes médicinales : source de résilience sanitaire et climatique des communautés\""
-      ],
-      "r": 3,
-      "x": "La 7e édition de la Journée Nationale de l'Arbre (JNA) a eu lieu le 21 juin 2025 dans la région du Centre-Sud. Son thème était \"Plantes médicinales : source de résilience sanitaire et climatique des communautés\"."
-    },
-    {
-      "q": "À quelle date le Président béninois a-t-il effectué une visite d'amitié et de travail au Burkina Faso ?",
-      "o": [
-        "15 juin 2026",
-        "7 mai 2026",
-        "2 juin 2026",
-        "26 mars 2026"
-      ],
-      "r": 2,
-      "x": "Le Président du Bénin a effectué une visite d'amitié et de travail au Burkina Faso le 2 juin 2026. Cette visite diplomatique s'est tenue dans un contexte de renforcement des relations bilatérales entre les deux pays voisins."
-    },
-    {
-      "q": "Quand les ministres chargés du Commerce des pays de l'AES ont-ils tenu leur réunion stratégique autour des orientations du Capitaine Ibrahim Traoré ?",
-      "o": [
-        "15 juin 2026",
-        "2 juin 2026",
-        "20 juin 2026",
-        "7 mai 2026"
+        "19 juin 2025",
+        "6 juillet 2025",
+        "21 novembre 2025",
+        "4 décembre 2025"
       ],
       "r": 0,
-      "x": "Les ministres chargés du Commerce des trois pays de l'AES (Burkina Faso, Mali, Niger) ont tenu une réunion stratégique le 15 juin 2026 pour affiner leur stratégie commune de commerce, conformément aux orientations du Président en exercice de l'AES, le Capitaine Ibrahim Traoré."
+      "x": "L'accord a été signé le 19 juin 2025 à Saint-Pétersbourg par le ministre Yacouba Zabré Gouba et le directeur général de Rosatom, Alexeï Likhatchev. L'ALT en a autorisé la ratification le 21 novembre 2025.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Quelle artiste burkinabè a remporté le Kundé d'or 2026 ?",
+      "q": "L'autoroute Ouagadougou–Bobo-Dioulasso, dont les travaux ont été lancés le 16 décembre 2025 à Yimdi, est conçue en :",
       "o": [
-        "Smarty",
-        "Reman Yolchido",
-        "Privat 4.5",
+        "2 x 2 voies",
+        "2 x 3 voies",
+        "2 x 4 voies",
+        "2 x 5 voies"
+      ],
+      "r": 2,
+      "x": "L'autoroute comporte quatre voies par sens sur une emprise de 100 mètres, avec l'Agence Faso Mêbo comme maître d'ouvrage et un financement sur fonds propres. La future autoroute Koudougou–Yako est, elle, prévue en 2 x 2 voies.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "L'Initiative présidentielle « Faso Mêbo », consacrée au désenclavement et à l'urbanisation, a été adoptée en Conseil des ministres le :",
+      "o": [
+        "16 octobre 2024",
+        "21 novembre 2024",
+        "7 décembre 2024",
+        "27 mars 2025"
+      ],
+      "r": 0,
+      "x": "Le Conseil des ministres du 16 octobre 2024 a adopté le décret lançant l'Initiative présidentielle « Faso Mêbo », qui mise sur les ressources et la mobilisation locales. Le 27 mars 2025, le Président du Faso lui a remis un premier lot de plus de 900 engins.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Les activités de la Banque postale du Burkina Faso (BPBF) ont été officiellement lancées par le Président du Faso le :",
+      "o": [
+        "3 avril 2023",
+        "7 octobre 2024",
+        "2 décembre 2024",
+        "14 mars 2025"
+      ],
+      "r": 1,
+      "x": "Le capitaine Ibrahim Traoré a officiellement lancé les activités de la BPBF le 7 octobre 2024 à Ouagadougou. La banque, au capital de 15 milliards FCFA, avait ouvert ses guichets au public dès le 3 avril 2023.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "De 2023 à 2025, le Fonds de soutien patriotique (FSP) a mobilisé au total :",
+      "o": [
+        "496,966 milliards FCFA",
+        "528,412 milliards FCFA",
+        "575,030 milliards FCFA",
+        "612,700 milliards FCFA"
+      ],
+      "r": 0,
+      "x": "Institué le 23 janvier 2023, le FSP a mobilisé 496,966 milliards FCFA de 2023 à 2025, pour un besoin global de 400 milliards, soit un taux de réalisation de 124,24 %. Pour la seule année 2025, la collecte a atteint 222,242 milliards FCFA.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Selon le bilan présenté le 24 juillet 2026, le taux de reconquête du territoire national au 30 juin 2026 est de :",
+      "o": [
+        "70,89 %",
+        "72,70 %",
+        "73,56 %",
+        "74,53 %"
+      ],
+      "r": 3,
+      "x": "Le ministre Célestin Simporé a annoncé un taux de reconquête de 74,53 % au 30 juin 2026, contre 73,56 % en décembre 2025. Ce taux désigne les zones reconquises et sécurisées où populations et administration reviennent progressivement.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le communiqué conjoint annonçant le retrait du Burkina Faso, du Mali et du Niger de l'Organisation internationale de la Francophonie (OIF) est daté du :",
+      "o": [
+        "28 février 2025",
+        "18 mars 2025",
+        "20 mars 2025",
+        "22 avril 2025"
+      ],
+      "r": 1,
+      "x": "Le communiqué conjoint des trois États, daté du 18 mars 2025, notifie leur retrait de l'OIF en application de l'article 10 de sa Charte ; le Niger avait rendu sa décision publique dès le 17 mars. Le 20 mars correspond à la Journée internationale de la Francophonie.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Les États de l'AES ont annoncé leur retrait de la Cour pénale internationale (CPI) le :",
+      "o": [
+        "16 septembre 2025",
+        "22 septembre 2025",
+        "1er octobre 2025",
+        "6 novembre 2025"
+      ],
+      "r": 1,
+      "x": "Le communiqué conjoint du 22 septembre 2025, date du 65e anniversaire de l'indépendance du Mali, annonce le retrait du Statut de Rome avec effet immédiat. En droit, un retrait de la CPI ne prend effet qu'un an après sa notification au Secrétaire général de l'ONU.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "La Charte du Liptako-Gourma, signée à Bamako le 16 septembre 2023 et instituant l'Alliance des États du Sahel (AES), comporte :",
+      "o": [
+        "11 articles",
+        "13 articles",
+        "15 articles",
+        "17 articles"
+      ],
+      "r": 3,
+      "x": "La Charte du Liptako-Gourma comporte un préambule et 17 articles et vise une défense collective et une assistance mutuelle. Son article 6 considère toute atteinte à la souveraineté d'un État partie comme une agression contre les autres.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le traité instituant la Confédération des États du Sahel (AES) a été signé à Niamey le :",
+      "o": [
+        "28 janvier 2024",
+        "25 mai 2024",
+        "6 juillet 2024",
+        "30 décembre 2024"
+      ],
+      "r": 2,
+      "x": "Le traité a été signé à Niamey le 6 juillet 2024, lors du premier sommet des chefs d'État de l'AES. Le 25 mai 2024 correspond à la révision de la Charte de la Transition au Burkina Faso.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le retrait du Burkina Faso, du Mali et du Niger de la Communauté économique des États de l'Afrique de l'Ouest (CEDEAO) est devenu effectif le :",
+      "o": [
+        "28 janvier 2024",
+        "15 décembre 2024",
+        "29 janvier 2025",
+        "29 juillet 2025"
+      ],
+      "r": 2,
+      "x": "Annoncé le 28 janvier 2024, le retrait est devenu effectif le 29 janvier 2025, à l'expiration du délai d'un an prévu par l'article 91 du Traité révisé de la CEDEAO. Le 29 juillet 2025 marquait la fin de la période de transition accordée par l'organisation.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le drapeau de la Confédération AES, lancé à Bamako le 22 février 2025, présente :",
+      "o": [
+        "un fond vert portant le logo de l'AES en son centre",
+        "un fond orange orné d'un baobab et de trois étoiles",
+        "trois bandes verticales verte, jaune et rouge",
+        "un fond blanc frappé de trois étoiles dorées"
+      ],
+      "r": 0,
+      "x": "Selon le Premier ministre malien Abdoulaye Maïga, le drapeau est rectangulaire, sur fond vert, et porte en son centre le logo de la Confédération. Les trois bandes verticales verte, jaune et rouge évoquent plutôt des drapeaux nationaux, comme celui du Mali.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "La devise de la Confédération des États du Sahel (AES) est :",
+      "o": [
+        "« Unité, Souveraineté, Progrès »",
+        "« Un espace, un peuple, un destin »",
+        "« Liberté, Solidarité, Sahel »",
+        "« Un Sahel uni, fort et souverain »"
+      ],
+      "r": 1,
+      "x": "La devise de l'AES est « Un espace, un peuple, un destin », adoptée avec le drapeau, le logo et le passeport commun. « La Patrie ou la Mort, nous Vaincrons » est, elle, la devise nationale du Burkina Faso.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "L'hymne de la Confédération AES, exécuté simultanément dans les trois pays le 9 juin 2025, s'intitule :",
+      "o": [
+        "« Sahel Benkan »",
+        "« Liptako Debout »",
+        "« La Confédérale »",
+        "« L'Alliance sahélienne »"
+      ],
+      "r": 0,
+      "x": "« Sahel Benkan » signifie « l'entente du Sahel » en bamanakan ; « La Confédérale » n'est qu'un nom repris sur les réseaux sociaux. L'hymne a été validé à Bamako les 9 et 10 mai 2025 par les ministres de la Culture des trois pays.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "La radio confédérale de l'AES, dont l'accord de création a été examiné en Conseil des ministres le 24 avril 2026, est dénommée :",
+      "o": [
+        "« Sahel FM »",
+        "« Radio Confédérale »",
+        "« Liptako-Gourma Info »",
+        "« Daandé Liptako »"
+      ],
+      "r": 3,
+      "x": "La radio confédérale porte le nom de « Daandé Liptako », en langue fulfuldé. Le même Conseil des ministres a examiné l'accord portant création de la Télévision confédérale de l'AES.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le commandant de la Force unifiée de l'AES nommé fin mai 2026 est le général :",
+      "o": [
+        "Daouda Traoré",
+        "Éric Dabiré",
+        "Makan Alassane Diarra",
+        "Moussa Salaou Barmou"
+      ],
+      "r": 2,
+      "x": "Le général de brigade malien Makan Alassane Diarra succède au général burkinabè Daouda Traoré. Il commande cette force inaugurée le 20 décembre 2025 à Bamako.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Lors de la 2e session ordinaire du Collège des chefs d'État de l'AES, tenue à Bamako le 23 décembre 2025, le capitaine Ibrahim Traoré a été désigné :",
+      "o": [
+        "président de la Confédération pour un mandat d'un an",
+        "président de la Confédération pour un mandat de deux ans",
+        "président de la session confédérale des Parlements",
+        "commandant en chef de la Force unifiée de l'AES"
+      ],
+      "r": 0,
+      "x": "Le capitaine Ibrahim Traoré succède au général Assimi Goïta à la présidence de la Confédération pour un an. La même session a adopté quatre protocoles additionnels au traité : défense et sécurité, coordination diplomatique, coordination du développement et sessions confédérales des Parlements.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le premier président de la Commission nationale de la Confédération des États du Sahel (CN-CES) du Burkina Faso, installé le 13 janvier 2025, est :",
+      "o": [
+        "Émile Zerbo",
+        "Karamoko Jean Marie Traoré",
+        "Sibidi Emmanuel Darankoum",
+        "Bassolma Bazié"
+      ],
+      "r": 3,
+      "x": "Nommé par décret du 9 décembre 2024, l'ancien ministre d'État Bassolma Bazié dirige la CN-CES, créée par décret le 6 novembre 2024 et rattachée à la Présidence du Faso. Sibidi Emmanuel Darankoum en est le vice-président chargé des questions de diplomatie.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Depuis la 69e session ordinaire tenue à Lungi le 19 juillet 2026, la Conférence des chefs d'État et de gouvernement de la CEDEAO est présidée par :",
+      "o": [
+        "Julius Maada Bio",
+        "John Dramani Mahama",
+        "Bassirou Diomaye Faye",
+        "Joseph Boakai"
+      ],
+      "r": 2,
+      "x": "Le président sénégalais Bassirou Diomaye Faye a été élu pour un mandat d'un an, succédant au Sierra-Léonais Julius Maada Bio. Le Sénégalais Birame Diop a été nommé président de la Commission de la CEDEAO pour la période 2026-2030.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le 6 octobre 2025 au siège de la BCEAO à Dakar, le ministre Aboubakar Nacanabo a été désigné président :",
+      "o": [
+        "du Conseil des ministres statutaire de l'UEMOA",
+        "de la Commission de l'UEMOA pour quatre ans",
+        "de la Conférence des chefs d'État de l'UEMOA",
+        "du Conseil d'administration de la BOAD"
+      ],
+      "r": 0,
+      "x": "Aboubakar Nacanabo préside le Conseil des ministres statutaire de l'UEMOA pour deux ans, succédant à l'Ivoirien Adama Coulibaly. La Commission de l'UEMOA est présidée par Abdoulaye Diop.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le ministre Aboubakar Nacanabo a été élu président du Conseil des gouverneurs de la Banque islamique de développement (BID) le 19 juin 2026 à :",
+      "o": [
+        "Alger",
+        "Djeddah",
+        "Tachkent",
+        "Bakou"
+      ],
+      "r": 3,
+      "x": "L'élection a eu lieu à Bakou (Azerbaïdjan), lors des 51es Assemblées annuelles du Groupe de la BID, pour un mandat d'un an. Djeddah, en Arabie saoudite, est le siège de la BID.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Lors du 39e sommet de l'Union africaine (UA), tenu les 14 et 15 février 2026, la présidence en exercice pour 2026 a été confiée à :",
+      "o": [
+        "João Lourenço",
+        "Évariste Ndayishimiye",
+        "John Dramani Mahama",
+        "Mahmoud Ali Youssouf"
+      ],
+      "r": 1,
+      "x": "Le président burundais Évariste Ndayishimiye succède à l'Angolais João Lourenço à la présidence tournante de l'UA. Le Djiboutien Mahmoud Ali Youssouf préside, lui, la Commission de l'UA depuis 2025.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le second mandat d'António Guterres, 9e Secrétaire général de l'Organisation des Nations unies (ONU), prend fin le :",
+      "o": [
+        "31 décembre 2025",
+        "30 juin 2026",
+        "31 décembre 2026",
+        "31 décembre 2027"
+      ],
+      "r": 2,
+      "x": "En fonction depuis le 1er janvier 2017, António Guterres achève son second mandat le 31 décembre 2026 ; son successeur, 10e Secrétaire général, doit entrer en fonction le 1er janvier 2027. Le Secrétaire général est nommé par l'Assemblée générale sur recommandation du Conseil de sécurité (article 97 de la Charte).",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Kofi Annan, 7e Secrétaire général de l'ONU de 1997 à 2006, était de nationalité :",
+      "o": [
+        "nigériane",
+        "sénégalaise",
+        "ghanéenne",
+        "ivoirienne"
+      ],
+      "r": 2,
+      "x": "Le Ghanéen Kofi Annan a reçu le prix Nobel de la paix en 2001 conjointement avec l'ONU. Il a été le deuxième Africain à diriger l'Organisation.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Boutros Boutros-Ghali, premier Africain à occuper le poste de Secrétaire général de l'ONU, était de nationalité :",
+      "o": [
+        "algérienne",
+        "égyptienne",
+        "marocaine",
+        "tunisienne"
+      ],
+      "r": 1,
+      "x": "L'Égyptien Boutros Boutros-Ghali a été le 6e Secrétaire général de l'ONU, de 1992 à 1996. Les États-Unis ont bloqué son second mandat.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le sommet du G20 des 22 et 23 novembre 2025, premier organisé sur le sol africain, s'est tenu à :",
+      "o": [
+        "Le Cap",
+        "Durban",
+        "Pretoria",
+        "Johannesburg"
+      ],
+      "r": 3,
+      "x": "Le sommet s'est tenu à Johannesburg sous présidence sud-africaine. Pretoria est la capitale administrative de l'Afrique du Sud et Le Cap sa capitale parlementaire.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le 17e sommet des BRICS s'est tenu les 6 et 7 juillet 2025 à :",
+      "o": [
+        "Brasilia",
+        "Kazan",
+        "Rio de Janeiro",
+        "São Paulo"
+      ],
+      "r": 2,
+      "x": "Le 17e sommet des BRICS s'est tenu à Rio de Janeiro sous présidence brésilienne. Le 16e sommet avait été accueilli à Kazan, en Russie, en octobre 2024.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le président de la République du Bénin qui a effectué une visite d'amitié et de travail à Ouagadougou le 2 juin 2026 est :",
+      "o": [
+        "Romuald Wadagni",
+        "Patrice Talon",
+        "Olushegun Adjadi Bakari",
+        "Abdoulaye Bio Tchané"
+      ],
+      "r": 0,
+      "x": "Le nouveau président béninois Romuald Wadagni s'est rendu à Ouagadougou après une étape à Niamey, pour relancer la coopération sécuritaire et économique. Il a invité le capitaine Ibrahim Traoré à effectuer une visite officielle au Bénin.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le Super Galian 2026 (29e édition), attribué pour la première fois à une femme, a été remporté par :",
+      "o": [
+        "Nadège Sawadogo",
+        "Françoise Tougry",
+        "Aïcha Diombélé/Kabré",
+        "Farida Thiombiano"
+      ],
+      "r": 2,
+      "x": "Journaliste à la RTB Radio en langues nationales, Aïcha Diombélé/Kabré a obtenu 17,22/20 pour un magazine sur la paralysie cérébrale des enfants, lors de la Nuit des Galian du 19 juin 2026. Elle a reçu un trophée, 3 millions FCFA et une villa.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Liradan Philippe Ada, Super Galian 2025, avait remporté son premier Super Galian en :",
+      "o": [
+        "2018",
+        "2019",
+        "2020",
+        "2022"
+      ],
+      "r": 3,
+      "x": "Liradan Philippe Ada a remporté son premier Super Galian le 16 décembre 2022 avec Oméga TV, puis le second le 13 juin 2025 avec la RTB Télé, avec 17,2/20. L'édition 2024 n'avait pas décerné de Super Galian, faute d'œuvres jugées suffisantes.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le Kundé d'or 2026, décerné le 8 mai 2026, est revenu à :",
+      "o": [
+        "Floby",
+        "Reman",
+        "Privat",
         "Tanya"
       ],
       "r": 3,
-      "x": "Tanya a remporté le Kundé d'or 2026, la distinction musicale la plus prestigieuse du Burkina Faso. Elle s'est imposée lors de la 24e édition du Kundé d'or (8 mai 2026) face à Reman Yolchido et Privat 4.5. Tanya a enchaîné les distinctions en 2026, s'imposant également à la 13e édition des Faso Music Awards."
+      "x": "Tanya (Douti Tani Bikienga) devient la troisième femme lauréate du Kundé d'or, après Amity Méria (2004) et Awa Boussim (2018). Elle succède à Floby, Kundé d'or 2025.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Quelles distinctions Tanya a-t-elle remportées à la 13e édition des Faso Music Awards 2026 ?",
+      "q": "L'Étalon d'or de Yennenga du FESPACO 2025 (29e édition) a récompensé le film :",
       "o": [
-        "Album de l'année (avec \"Gondal\") et Artiste de l'année",
-        "Meilleure artiste révélation et meilleur concert",
-        "Meilleure artiste féminine et meilleure chanson",
-        "Prix de la chanson patriotique et Prix du public"
+        "« Katanga, la danse des scorpions »",
+        "« Les Invertueuses »",
+        "« Le Village aux portes du paradis »",
+        "« On Becoming a Guinea Fowl »"
       ],
       "r": 0,
-      "x": "Tanya a remporté deux trophées à la 13e édition des Faso Music Awards : l'Album de l'année avec \"Gondal\" et le titre d'Artiste de l'année. Après son Kundé d'or 2026, cette double consécration récompense ses performances artistiques en 2026."
+      "x": "Le film du Burkinabè Dani Kouyaté a reçu l'Étalon d'or le 1er mars 2025, offrant au pays son troisième sacre après Idrissa Ouédraogo (1991) et Gaston Kaboré (1997). « Le Village aux portes du paradis » du Somalien Mo Harawe a obtenu l'Étalon d'argent.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Qui est l'actuel Directeur général des douanes burkinabè ?",
+      "q": "La 22e Semaine nationale de la culture (SNC), tenue à Bobo-Dioulasso du 25 avril au 2 mai 2026, avait pour thème :",
       "o": [
-        "Dr Yves Kafando",
-        "Tidiane Nikiema",
-        "Edward Kaboré",
-        "Sagado Nacanabo"
-      ],
-      "r": 0,
-      "x": "Le Dr Yves Kafando (inspecteur divisionnaire des douanes) a été nommé Directeur général des douanes burkinabè en Conseil des ministres le 18 juin 2025, succédant à Adama Ilboudo. Avant de prendre la tête de l'institution, il occupait le poste de coordonnateur national de la lutte contre la fraude (CNLF)."
-    },
-    {
-      "q": "À quelle date la mission habitée Artemis II, transportant les astronautes à bord de la capsule Orion, a-t-elle été lancée vers la Lune ?",
-      "o": [
-        "16 novembre 2024",
-        "1ᵉʳ avril 2026",
-        "12 mai 2026",
-        "20 juin 2026"
-      ],
-      "r": 1,
-      "x": "La mission Artemis II a été lancée avec succès le 1ᵉʳ avril 2026 depuis le Centre spatial Kennedy (Floride). Cette mission habitée, d'une durée d'environ dix jours, a constitué le premier vol d'astronautes autour de la Lune depuis la mission Apollo 17 en 1972."
-    },
-    {
-      "q": "Dans quel océan la capsule Orion de la mission Artemis II a-t-elle amerri à l'issue de son vol ?",
-      "o": [
-        "Dans l'océan Atlantique",
-        "Dans l'océan Indien",
-        "Dans l'océan Pacifique",
-        "Dans le golfe du Mexique"
+        "« Culture, patrimoine et renforcement de la cohésion sociale »",
+        "« Culture, résilience et souveraineté des peuples du Sahel »",
+        "« Culture, jeunesse et transmission des valeurs sociales »",
+        "« Culture, femmes et promotion du développement endogène »"
       ],
       "r": 2,
-      "x": "E : La capsule Orion a achevé sa mission le 10 avril 2026 en amerrissant dans l'océan Pacifique, où elle a été récupérée par les équipes de la NASA et de l'US Navy après le retour en toute sécurité des quatre astronautes."
+      "x": "La 22e SNC a été ouverte le 25 avril 2026 par le capitaine Ibrahim Traoré sur le thème « Culture, jeunesse et transmission des valeurs sociales ». Le Ghana en était le pays invité d'honneur et la Russie l'invité spécial.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Dans quelle ville s'est tenue la cérémonie officielle de la 8ᵉ Journée nationale de l'Arbre (JNA) le 20 juin 2026 ?",
+      "q": "La 18e édition du Salon international de l'artisanat de Ouagadougou (SIAO) s'est tenue :",
       "o": [
-        "À Bobo-Dioulasso",
-        "À Kaya",
-        "À Koudougou",
-        "À Ouagadougou"
-      ],
-      "r": 3,
-      "x": "La 8e édition de la Journée nationale de l'arbre s'est déroulée à Ouagadougou le samedi 20 juin 2026 sous la présidence du chef de l'État, le capitaine Ibrahim Traoré. Cette journée a marqué le lancement de la campagne de reforestation sur l'ensemble du territoire national."
-    },
-    {
-      "q": "Quel objectif national a été fixé dans le cadre de l'Heure patriotique pour reverdir le Faso ?",
-      "o": [
-        "Mettre en terre 500 000 plants médicinaux",
-        "Mettre en terre 5 millions de plants",
-        "Créer une forêt classée par commune rurale",
-        "Reforester uniquement les camps militaires"
-      ],
-      "r": 1,
-      "x": "À l'occasion de la 8ᵉ Journée nationale de l'Arbre, le Président du Faso a lancé une opération patriotique visant à mettre en terre 5 millions de plants en une heure sur l'ensemble du territoire national."
-    },
-    {
-      "q": "Quel a été le thème central retenu pour la Journée nationale de l'arbre 2026 au Burkina Faso ?",
-      "o": [
-        "Ma concession, mon arbre",
-        "Préservation de la biodiversité : notre engagement citoyen pour la patrie",
-        "Restauration des terres dégradées pour une souveraineté alimentaire durable",
-        "Planter des arbres pour reverdir le Sahel et sécuriser nos villages"
-      ],
-      "r": 0,
-      "x": "Ce thème vise à encourager chaque ménage à planter et à entretenir au moins un arbre dans sa concession afin de contribuer durablement au reverdissement du pays. À cette occasion, une opération patriotique de mise en terre de 5 millions de plants en une heure a également été organisée."
-    },
-    {
-      "q": "À quelle date l'Assemblée Législative du Peuple (ALP) du Burkina Faso a-t-elle adopté la Charte de la Révolution (RPP) ?",
-      "o": [
-        "29 janvier 2026",
-        "27 mars 2026",
-        "16 avril 2026",
-        "7 mai 2026"
-      ],
-      "r": 1,
-      "x": "La Charte de la Révolution a été adoptée le 27 mars 2026 à l'unanimité des 70 votants de l'ALP. Elle remplace la Charte de la Transition et officialise la Révolution Progressiste Populaire (RPP). Elle consacre notamment le renommage du \"Gouvernement de la Transition\" en \"Gouvernement du peuple\" et de l'ALT en \"Assemblée Législative du Peuple (ALP)\"."
-    },
-    {
-      "q": "Quels sont le numéro et la date du décret portant remaniement du Gouvernement burkinabè en janvier 2026 ?",
-      "o": [
-        "Décret n°2026-0006/PF/PRIM du 12 janvier 2026",
-        "Décret n°2026-0001/PF/PRIM du 7 janvier 2026",
-        "Décret n°2025-1600/PF/PRIM du 28 décembre 2025",
-        "Décret n°2026-0012/PF/PRIM du 29 janvier 2026"
-      ],
-      "r": 0,
-      "x": "Le remaniement gouvernemental de 2026 a été opéré par le Décret n°2026-0006/PF/PRIM du 12 janvier 2026. Ce décret a restructuré la composition du gouvernement burkinabè dont la formation initiale datait du 8 décembre 2024."
-    },
-    {
-      "q": "À quelle date le Burkina Faso a rompu ses relations diplomatiques avec la France ?",
-      "o": [
-        "15 juin 2026",
-        "20 juin 2026",
-        "26 juin 2026",
-        "30 juin 2026"
+        "du 16 au 25 octobre 2026",
+        "du 27 octobre au 5 novembre 2026",
+        "du 30 octobre au 8 novembre 2026",
+        "du 6 au 15 novembre 2026"
       ],
       "r": 2,
-      "x": "Le Burkina Faso a officiellement annoncé la rupture de ses relations diplomatiques avec la France le vendredi 26 juin 2026. Cette décision historique a été communiquée via un communiqué officiel par le gouvernement burkinabè. Elle intervient dans le contexte de la réorientation diplomatique du pays vers de nouveaux partenaires."
+      "x": "La 18e édition du SIAO s'est tenue du 30 octobre au 8 novembre 2026, avec le Ghana comme pays invité d'honneur. La 19e édition est annoncée du 27 octobre au 5 novembre 2028.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Combien de protocoles additionnels au Traité de l'AES ont été signés à Bamako le 23 décembre 2025 ?",
+      "q": "La 8e Journée nationale de l'arbre (JNA), célébrée le 20 juin 2026, avait pour thème :",
       "o": [
-        "3 protocoles",
-        "5 protocoles",
-        "2 protocoles",
-        "4 protocoles"
-      ],
-      "r": 3,
-      "x": "Le 23 décembre 2025 à Bamako (Mali), 4 protocoles additionnels au Traité de la Confédération des États du Sahel (AES) ont été signés : sessions confédérales des Parlements, défense et sécurité, coordination de l'action diplomatique et coordination des actions de développement. Ils ont été ratifiés lors du Conseil des ministres du 22 janvier 2026."
-    },
-    {
-      "q": "Quelle innovation majeure introduit le nouveau Code des douanes du Burkina Faso (loi n°003-2025/ALT du 24 mars 2025) ?",
-      "o": [
-        "La création d'une police des frontières unifiée",
-        "L'institution du droit de transaction douanière",
-        "L'instauration d'un régime spécial pour les marchandises de l'AES",
-        "La suppression des postes de douane aux frontières intérieures de l'UEMOA"
+        "« Une institution, un bosquet »",
+        "« Ma concession, mon arbre »",
+        "« Un citoyen, un arbre »",
+        "« Mon école, ma forêt verte »"
       ],
       "r": 1,
-      "x": "Le nouveau Code des douanes (loi n°003-2025/ALT du 24 mars 2025) institue le droit de transaction, qui permet à l'administration douanière de conclure un accord avec les contrevenants pour mettre fin aux poursuites. Ce mécanisme accélère le règlement des litiges, désencombre les tribunaux et améliore le recouvrement des créances douanières."
+      "x": "La JNA 2026 visait 5 millions de plants mis en terre en une heure sur l'ensemble du territoire. « Une institution, un bosquet » est le thème de la campagne nationale de reforestation 2026, qui vise 15 millions d'arbres.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Quelle loi adoptée le 1er septembre 2025 concerne l'état civil et la vie privée des personnes au Burkina Faso ?",
+      "q": "Le taux national de succès au BEPC 2026 au Burkina Faso est de :",
       "o": [
-        "Loi n°012-2025/ALT du 1er septembre 2025",
-        "Loi n°010-2025/ALT du 1er septembre 2025",
-        "Loi n°014-2025/ALT du 1er septembre 2025",
-        "Loi n°009-2025/ALT du 1er septembre 2025"
-      ],
-      "r": 0,
-      "x": "La loi n°012-2025/ALT du 1er septembre 2025 porte Code des personnes et de la famille au Burkina Faso. Ce texte régit notamment l'état civil, le mariage, les successions et les droits des personnes."
-    },
-    {
-      "q": "Quelle loi encadre le fonctionnement des associations au Burkina Faso ?",
-      "o": [
-        "Loi n°011-2025/ALT du 17 juillet 2025",
-        "Loi n°013-2025/ALT du 17 juillet 2025",
-        "Loi n°009-2025/ALT du 17 juillet 2025",
-        "Loi n°015-2025/ALT du 17 juillet 2025"
-      ],
-      "r": 0,
-      "x": "La loi n°011-2025/ALT du 17 juillet 2025 portant liberté d'association au Burkina Faso encadre la création, le fonctionnement et la dissolution des associations. C'est sur la base de cette loi que 118 associations ont été dissoutes le 15 avril 2026 pour non-conformité aux nouvelles exigences légales, par décision du Ministre d'État Emile Zerbo."
-    },
-    {
-      "q": "Selon le projet de loi adopté en Conseil des ministres du 25 juin 2026, à combien de jours est réduit le délai d'entrée en vigueur des lois et actes réglementaires au Burkina Faso ?",
-      "o": [
-        "5 jours (au lieu de 15 jours)",
-        "7 jours (au lieu de 10 jours)",
-        "2 jours (au lieu de 5 jours)",
-        "3 jours (au lieu de 8 jours)"
+        "48,10 %",
+        "50,21 %",
+        "52,17 %",
+        "54,06 %"
       ],
       "r": 3,
-      "x": "Le projet de loi adopté le 25 juin 2026 réduit le délai d'entrée en vigueur des lois, ordonnances et actes réglementaires à 3 jours (au lieu de 8 jours) après leur publication au Journal Officiel. Il prévoit également la possibilité de publier les textes par voie numérique (TIC) et de notifier les actes administratifs individuels par voie électronique."
+      "x": "Le BEPC 2026 affiche un taux national de 54,06 %, présenté par les autorités comme le meilleur des cinquante dernières années. Le taux de 52,17 % est celui du BEPC 2026 en Côte d'Ivoire.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "À quel ministère la Société burkinabè de télédiffusion (SBT) a-t-elle été rattachée lors du Conseil des ministres du 25 juin 2026 ?",
+      "q": "Le gouvernement a annoncé la fin de toutes les activités du projet Target Malaria sur le territoire national le :",
       "o": [
-        "Ministère de la Transition digitale, des Postes et des Communications électroniques",
-        "Ministère de la Communication, de la Culture, des Arts et du Tourisme",
-        "Ministère de la Construction de la Patrie",
-        "Ministère de l'Industrie, du Commerce et de l'Artisanat"
-      ],
-      "r": 0,
-      "x": "La Société burkinabè de télédiffusion (SBT) a été rattachée au ministère de la Transition digitale, des Postes et des Communications électroniques, dirigé par Madame Aminata Zerbo/Sabane. Ce rattachement fait suite à la révision de l'organisation du ministère de la Communication, conformément au Décret n°2025-1545/PF/PRIM du 1er décembre 2025 portant organisation-type des départements ministériels."
-    },
-    {
-      "q": "Quel montant de recettes globales la Loi de finances pour l'exercice 2026 du Burkina Faso prévoit-elle ?",
-      "o": [
-        "2 800 milliards FCFA",
-        "3 431,5 milliards FCFA",
-        "4 000 milliards FCFA",
-        "2 500 milliards FCFA"
-      ],
-      "r": 1,
-      "x": "La Loi de finances 2026, adoptée par l'ALT le 27 décembre 2025, prévoit des recettes globales de 3 431,5 milliards FCFA (dont 3 216,5 milliards de recettes ordinaires, en hausse de 3,4%, et 215 milliards de recettes extraordinaires). Cette hausse est soutenue par la facture électronique certifiée et le projet Smart Douane."
-    },
-    {
-      "q": "De combien de fonds nationaux le FBDES Tõogo (Fonds Burkinabè de Développement Économique et Social) est-il issu et quand a-t-il été créé ?",
-      "o": [
-        "Fusion de 5 fonds, créé le 4 décembre 2025",
-        "Fusion de 10 fonds, créé le 22 janvier 2026",
-        "Fusion de 7 fonds, créé le 17 décembre 2025",
-        "Fusion de 3 fonds, créé le 29 janvier 2026"
+        "11 août 2025",
+        "18 août 2025",
+        "22 août 2025",
+        "29 août 2025"
       ],
       "r": 2,
-      "x": "Le FBDES Tõogo a été créé le 17 décembre 2025 par la fusion de 7 fonds nationaux. Il dispose d'un effectif de 409 agents. Son DG est Ahmadé Nour Guenda. Par ailleurs, le Fonds d'appui à la presse privée (FAPP) a été fusionné dans le Fonds Wassa Bondo (sport et presse privée) et le FDCT dans le FBDES Tõogo."
+      "x": "Le ministère de l'Enseignement supérieur, de la Recherche et de l'Innovation a mis fin le 22 août 2025 à ce projet de moustiques génétiquement modifiés. Les enceintes de moustiques avaient été placées sous scellés le 18 août 2025, après un lâcher contesté à Souroukoudingan.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Qui est le premier Directeur Général du FBDES Tõogo (Fonds Burkinabè de Développement Économique et Social) ?",
+      "q": "Depuis la réforme adoptée en Conseil des ministres le 2 juillet 2025, le Burkina Faso compte :",
       "o": [
-        "Braïma Barro",
-        "Aboubakar Nacanabo",
-        "Serge Gnaniodem Poda",
-        "Ahmadé Nour Guenda"
+        "13 régions et 45 provinces",
+        "15 régions et 45 provinces",
+        "15 régions et 47 provinces",
+        "17 régions et 47 provinces"
       ],
       "r": 3,
-      "x": "Ahmadé Nour Guenda, Économiste (Mle 204 606 J, 2e classe, 6e échelon), est le premier DG du FBDES Tõogo. Il a été nommé lors du Conseil des ministres du 22 janvier 2026. Le FBDES Tõogo, issu de la fusion de 7 fonds nationaux, vise à financer le développement économique et social du Burkina Faso."
+      "x": "La réforme porte le pays à 17 régions et 47 provinces, contre 13 régions et 45 provinces auparavant, avec des noms endogènes. Les quatre nouvelles régions sont le Soum, la Sirba, la Tapoa et le Sourou.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Quel pourcentage du capital de la SOFITEX l'État burkinabè a-t-il racheté pour nationaliser la société en avril 2026 ?",
+      "q": "La région dont le chef-lieu est Bobo-Dioulasso porte désormais le nom de :",
       "o": [
-        "10% du capital",
-        "5,537% du capital",
-        "25,25% du capital",
-        "49,525% du capital"
+        "Tannounyan",
+        "Bankui",
+        "Nando",
+        "Guiriko"
       ],
-      "r": 1,
-      "x": "L'État a racheté les 5,537 % du capital détenus par les actionnaires privés, devenant ainsi l'unique actionnaire de la SOFITEX (le reste appartenant déjà à l'État). Le nouveau DG de la SOFITEX est Braïma Barro, nommé le 22 janvier 2026."
+      "r": 3,
+      "x": "L'ex-région des Hauts-Bassins est devenue le Guiriko, avec Bobo-Dioulasso pour chef-lieu. Le Tannounyan correspond aux ex-Cascades (Banfora) et le Nando à l'ex-Centre-Ouest (Koudougou).",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Dans quelle localité et quelle commune est implantée la société TEXFORCES-BF ?",
+      "q": "La région du Djôrô, ex-région du Sud-Ouest, a pour chef-lieu :",
       "o": [
-        "Logofourousso, commune urbaine de Bobo-Dioulasso",
-        "Gampéla, commune de Saaba (Ouagadougou)",
-        "Komsilga, périphérie de Ouagadougou",
-        "Peni, commune de Bobo-Dioulasso"
+        "Diébougou",
+        "Dano",
+        "Gaoua",
+        "Batié"
+      ],
+      "r": 2,
+      "x": "Le Djôrô a pour chef-lieu Gaoua. Diébougou, Dano et Batié sont des chefs-lieux de provinces de la même région.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "La région du Sourou, créée lors de la réforme territoriale de juillet 2025, a pour chef-lieu :",
+      "o": [
+        "Tougan",
+        "Nouna",
+        "Toma",
+        "Dédougou"
       ],
       "r": 0,
-      "x": "La société TEXFORCES-BF  (Textile des Forces du Burkina Faso) est implantée à Logofourousso, commune urbaine de Bobo-Dioulasso. Sa déclaration d'utilité publique urgente a été adoptée en Conseil des ministres le 25 juin 2026."
+      "x": "La région du Sourou, issue de la scission de l'ancienne Boucle du Mouhoun, a pour chef-lieu Tougan. Dédougou reste le chef-lieu de la région du Bankui.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Quelle est la production totale de coton graine au Burkina Faso lors de la campagne cotonnière 2025-2026 ?",
+      "q": "L'ancienne région du Centre-Nord, dont le chef-lieu est Kaya, s'appelle désormais :",
       "o": [
-        "294 507 tonnes, en baisse de 5%",
-        "250 000 tonnes, en baisse de 10%",
-        "380 000 tonnes, en hausse de 15%",
-        "314 293 tonnes, en hausse de 7%"
+        "Oubri",
+        "Nazinon",
+        "Nakambé",
+        "Kuilsé"
       ],
       "r": 3,
-      "x": "La campagne cotonnière 2025-2026 a produit 314 293 tonnes de coton graine (conventionnel et biologique), contre 294 507 tonnes lors de la campagne précédente, soit une hausse de 7%. Ce bilan a été présenté en Conseil des ministres le 25 juin 2026 par le Ministre Serge Gnaniodem Poda."
+      "x": "L'ex-Centre-Nord s'appelle désormais Kuilsé. L'Oubri correspond à l'ex-Plateau central (Ziniaré), le Nazinon à l'ex-Centre-Sud (Manga) et le Nakambé à l'ex-Centre-Est (Tenkodogo).",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "Quelle superficie a été emblavée lors de la campagne cotonnière 2025-2026 au Burkina Faso ?",
+      "q": "Depuis le Conseil des ministres du 4 avril 2024, l'université publique de Ouahigouya est devenue :",
       "o": [
-        "310 000 ha, en hausse de 3%",
-        "346 778 ha, en hausse de 0%",
-        "450 000 ha, en hausse de 20%",
-        "391 407 ha, en hausse de 13%"
+        "Université Daniel Ouezzin Coulibaly",
+        "Université Lédéa Bernard Ouédraogo",
+        "Université Yembila Abdoulaye Toguyeni",
+        "Université Norbert Zongo"
+      ],
+      "r": 1,
+      "x": "Le décret du 4 avril 2024 a renommé l'université de Ouahigouya « Lédéa Bernard Ouédraogo » (ULBO), celle de Dédougou « Daniel Ouezzin Coulibaly » (UDOC) et celle de Fada N'Gourma « Yembila Abdoulaye Toguyeni » (UYAT). L'Université Norbert Zongo se trouve à Koudougou.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le Conseil des ministres a élevé Thomas Sankara à la dignité de héros de la Nation le :",
+      "o": [
+        "15 octobre 2022",
+        "4 octobre 2023",
+        "15 octobre 2023",
+        "15 octobre 2024"
+      ],
+      "r": 1,
+      "x": "Le Conseil des ministres du 4 octobre 2023 a conféré à Thomas Sankara la dignité de héros de la Nation, officiellement célébrée le 15 octobre 2023. Ce même jour, le boulevard Charles de Gaulle de Ouagadougou a été rebaptisé boulevard Thomas Sankara.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Le directeur général de la Société nationale burkinabè d'hydrocarbures (SONABHY) nommé en Conseil des ministres le 25 juin 2026 est :",
+      "o": [
+        "Souleymane Ouédraogo",
+        "Flandin Idrissa Sourabié",
+        "Patrice Forogo",
+        "Ibrahim Ben Harouna Zarani"
+      ],
+      "r": 2,
+      "x": "Le Dr Patrice Forogo dirigeait jusque-là la Banque commerciale du Burkina (BCB) avant d'être placé à la tête de la SONABHY. Le Conseil des ministres du 25 juin 2026 a également adopté le bilan de la campagne cotonnière 2025-2026.",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "Vainqueur du 36e Tour du Faso en 2025, Paul Daumont avait déjà remporté l'épreuve en :",
+      "o": [
+        "2018",
+        "2019",
+        "2021",
+        "2023"
       ],
       "r": 3,
-      "x": "La campagne cotonnière 2025-2026 a emblavé 391 407 hectares, contre 346 778 ha lors de la campagne précédente, soit une hausse de 13%. Pour la campagne 2026-2027, le gouvernement a fixé le prix de cession à crédit des engrais à 17 500 FCFA le sac de 50 kg."
+      "x": "Paul Daumont, vainqueur en 2023, a remporté le 36e Tour du Faso le 2 novembre 2025 avec quatre victoires d'étape. Il rejoint Ernest Zongo et le Marocain Abdelatif Saadoune parmi les doubles vainqueurs de l'épreuve.",
+      "_batchId": "actualite/2026-11-24/LOT1"
     },
     {
-      "q": "À quelle date la facture électronique certifiée (FEC) a-t-elle été officiellement lancée au Burkina Faso ?",
+      "q": "Les Journées nationales d'engagement patriotique et de participation citoyenne (JEPPC), dont la 3e édition s'est tenue en 2026, ont été instituées par décret le :",
       "o": [
-        "5 Octobre 2025",
+        "13 juin 2023",
+        "3 avril 2024",
+        "18 septembre 2024",
+        "26 mars 2026"
+      ],
+      "r": 1,
+      "x": "Instituées par décret le 3 avril 2024, les JEPPC se déroulent en deux phases annuelles de 15 jours, du 26 mars au 9 avril et du 2 au 16 octobre. L'édition 2026 avait pour slogan « Produisons burkinabè, consommons burkinabè : notre assiette, notre fierté ! ».",
+      "_batchId": "actualite/2026-11-24/LOT1"
+    },
+    {
+      "q": "La loi Faso Bu Kaooré, adoptée à l'unanimité par l'Assemblée législative de Transition (ALT) le 14 janvier 2026, organise :",
+      "o": [
+        "la médiation des litiges commerciaux devant les tribunaux",
+        "les chambres régionales de contrôle de la Cour des comptes",
+        "les conseils de discipline des agents de la fonction publique",
+        "les instances traditionnelles de règlement des différends"
+      ],
+      "r": 3,
+      "x": "La loi institue, dans les villages et les secteurs des villes, des instances traditionnelles chargées d'une justice de proximité. Elles ne peuvent prononcer ni peine de prison ni amende et privilégient la réparation et le dialogue.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "La région retenue comme phase pilote pour l'installation des instances traditionnelles prévues par la loi Faso Bu Kaooré est :",
+      "o": [
+        "le Yaadga",
+        "le Kadiogo",
+        "le Guiriko",
+        "le Nando"
+      ],
+      "r": 1,
+      "x": "Les instances de la région du Kadiogo ont été officiellement installées le 22 mai 2026 à Ouagadougou, à l'issue d'une formation des acteurs coutumiers. Le Yaadga n'a accueilli sa session de formation préalable qu'en juin 2026, à Ouahigouya.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "La loi portant statut de la chefferie coutumière et traditionnelle, adoptée le 14 janvier 2026, porte le numéro :",
+      "o": [
+        "002-2026/ALT",
+        "004-2026/ALT",
+        "006-2026/ALT",
+        "009-2026/ALT"
+      ],
+      "r": 0,
+      "x": "La loi n°002-2026/ALT a été adoptée le même jour que la loi Faso Bu Kaooré. Elle fixe le statut, les droits et les devoirs des chefs coutumiers et traditionnels.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le projet de loi portant statut de la chefferie coutumière et traditionnelle avait été adopté en Conseil des ministres le :",
+      "o": [
+        "9 octobre 2024",
+        "4 décembre 2024",
+        "12 février 2025",
+        "17 juillet 2025"
+      ],
+      "r": 2,
+      "x": "Adopté en Conseil des ministres le 12 février 2025, le texte n'a été voté par l'ALT que le 14 janvier 2026. Il consacre la neutralité politique et syndicale des chefs coutumiers .",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le décret fixant le contenu du registre des chefs coutumiers et traditionnels a été adopté en Conseil des ministres le :",
+      "o": [
+        "25 juin 2026",
+        "9 juillet 2026",
+        "23 juillet 2026",
+        "30 juillet 2026"
+      ],
+      "r": 3,
+      "x": "Le Conseil des ministres du 30 juillet 2026 a adopté ce décret, pris en application de la loi n°002-2026/ALT portant statut de la chefferie coutumière et traditionnelle. Le 25 juin 2026 correspond notamment au projet de loi réduisant à 3 jours le délai d'entrée en vigueur des lois.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le Code général des collectivités territoriales adopté par l'Assemblée législative de Transition (ALT) le 30 décembre 2025 comporte :",
+      "o": [
+        "236 articles en 18 chapitres et 3 livres",
+        "318 articles en 22 chapitres et 4 livres",
+        "444 articles en 28 chapitres et 5 livres",
+        "512 articles en 34 chapitres et 6 livres"
+      ],
+      "r": 2,
+      "x": "Ce Code de 444 articles a été adopté à l'unanimité des 69 votants. Il remplace la loi n°055-2004/AN du 21 décembre 2004 et définit les compétences des communes et des régions.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le Code de l'urbanisme et de la construction, adopté à l'unanimité par l'Assemblée législative de Transition (ALT) le 3 mars 2026, compte :",
+      "o": [
+        "257 articles",
+        "312 articles",
+        "368 articles",
+        "425 articles"
+      ],
+      "r": 0,
+      "x": "Ce Code de 257 articles remplace le texte en vigueur depuis 2006 et simplifie les autorisations administratives de construire. Il précise les responsabilités des maîtres d'ouvrage, des maîtres d'œuvre, des entrepreneurs et des bureaux de suivi-contrôle.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "La loi portant identification unique électronique de la personne physique, adoptée le 11 octobre 2024, comprend :",
+      "o": [
+        "18 articles répartis en 4 chapitres",
+        "24 articles répartis en 6 chapitres",
+        "30 articles répartis en 8 chapitres",
+        "34 articles répartis en 10 chapitres"
+      ],
+      "r": 3,
+      "x": "Adoptée par les 69 votants de l'ALT, la loi compte 34 articles après la suppression de deux articles du projet initial. Elle crée un identifiant unique, numéro aléatoire attribué à chaque personne à partir de ses données biographiques ou biométriques.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "La plateforme nationale de signature électronique « FasoSign » a été officiellement lancée par le Premier ministre le :",
+      "o": [
         "6 janvier 2026",
-        "5 Juillet 2026",
-        "6 Avril 2026"
+        "15 septembre 2026",
+        "13 octobre 2026",
+        "27 octobre 2026"
       ],
       "r": 1,
-      "x": "La Facture électronique certifiée (FEC) a été officiellement lancée le 6 janvier 2026 à Ouagadougou par le ministre de l’Économie et des Finances. Elle vise notamment à moderniser la facturation, sécuriser les recettes fiscales et lutter contre la fraude."
+      "x": "Présentée par l'Agence nationale de sécurité des systèmes d'information (ANSSI), FasoSign donne à la signature électronique des autorités la même valeur que la signature manuscrite, en application de la loi n°045-2009 du 10 novembre 2009. Le 6 janvier 2026 correspond au lancement de la facture électronique certifiée.",
+      "_batchId": "actualite/2026-11-24/LOT2"
     },
     {
-      "q": "Dans quelle fusion le Fonds d'Appui à la Presse Privée (FAPP) a-t-il été intégré en 2026 ?",
+      "q": "La société anonyme Yennenga Holding Burkina Faso, créée en Conseil des ministres le 12 mars 2026, dispose d'un capital de :",
       "o": [
-        "Fusionné dans le Fonds Wassa Bondo (Fonds d'appui au sport et à la presse privée)",
-        "Fusionné dans le FBDES Tõogo",
-        "Fusionné dans le Fonds d'appui au développement culturel",
-        "Fusionné dans le FDCT (Fonds de développement culturel et touristique)"
+        "5 milliards FCFA",
+        "10 milliards FCFA",
+        "15 milliards FCFA",
+        "25 milliards FCFA"
+      ],
+      "r": 1,
+      "x": "Le capital est détenu à 51 % par l'État et à 49 % par ses démembrements, dont la CNSS, la CARFO, la LONAB et La Poste. Elle regroupe les parts publiques dans trois banques et une société de réassurance.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Yennenga Holding Burkina Faso a été créée pour porter les participations de l'État dans :",
+      "o": [
+        "deux banques et deux compagnies d'assurance",
+        "quatre banques et une société de crédit-bail",
+        "une banque et trois institutions de microfinance",
+        "trois banques et une société de réassurance"
+      ],
+      "r": 3,
+      "x": "La holding regroupe les parts publiques dans la BCB, la BADF, la Banque postale et Faso Réassurance. Elle doit aussi servir d'instrument de financement des projets structurants de l'État.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Lors du Conseil des ministres tenu à Bobo-Dioulasso le 10 septembre 2026, le Service national pour le développement (SND) a été transformé en :",
+      "o": [
+        "Agence Faso Sanya",
+        "Agence Faso Yaar",
+        "Agence Faso Mêbo",
+        "Agence Faso Boolé"
+      ],
+      "r": 3,
+      "x": "La nouvelle agence est chargée de l'organisation et de la gestion du Service national patriotique. Le Conseil a relu à cette fin le décret de 1999 qui avait érigé le SND en établissement public.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Depuis le décret adopté en Conseil des ministres le 12 février 2026, le Service national pour le développement (SND) est rattaché au ministère :",
+      "o": [
+        "de la Guerre et de la Défense patriotique",
+        "des Serviteurs du Peuple",
+        "de l'Économie et des Finances",
+        "de l'Administration territoriale et de la Mobilité"
       ],
       "r": 0,
-      "x": "Le FAPP (Fonds d'Appui à la Presse Privée) a été fusionné dans le Fonds Wassa Bondo (Fonds d'appui au sport et à la presse privée), lors de la réorganisation du ministère de la Communication du 25 juin 2026. Parallèlement, le FDCT (Fonds de développement culturel et touristique) a été fusionné dans le FBDES Tõogo."
+      "x": "Le Conseil du 12 février 2026 a retiré le SND de la Primature pour le rattacher à ce ministère, dans le décret portant organisation de ce département. Le même texte prend en compte la création de l'Institut supérieur de l'aéronautique de Bobo-Dioulasso.",
+      "_batchId": "actualite/2026-11-24/LOT2"
     },
     {
-      "q": "Combien de patients atteints d'hydrocèle ont été pris en charge chirurgicalement gratuitement en 2025 au Burkina Faso ?",
+      "q": "La structure publique créée en Conseil des ministres le 24 septembre 2026 pour assurer la maintenance des bâtiments de l'État s'appelle :",
       "o": [
-        "1 200 patients dans 10 régions sanitaires",
-        "3 500 patients dans 13 régions sanitaires",
-        "2 519 patients dans 16 régions sanitaires",
-        "800 patients dans 8 régions sanitaires"
+        "Faso Arzeka",
+        "Faso Sanya",
+        "Faso Yaar",
+        "Faso Kuna-Wili"
+      ],
+      "r": 1,
+      "x": "Faso Sanya, établissement public à caractère administratif, prend en charge le nettoyage, la plomberie, l'électricité et la climatisation des édifices publics. Faso Kuna-Wili est un ancien fonds fusionné dans le FBDES « Tõogo » par les décrets du 20 novembre 2025.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Selon le Conseil des ministres du 24 septembre 2026, l'État a consacré en 2025 au gardiennage, à la propreté et aux travaux sur ses bâtiments :",
+      "o": [
+        "6,2 milliards FCFA",
+        "9,5 milliards FCFA",
+        "12,4 milliards FCFA",
+        "18,8 milliards FCFA"
+      ],
+      "r": 3,
+      "x": "Ce montant de 18,8 milliards FCFA, joint au constat d'un mauvais entretien généralisé dû aux lourdeurs administratives, a motivé la création d'une structure dédiée. Celle-ci doit s'appuyer sur la Maison des compétences Burkina Suudu Bawdè.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Selon les décrets adoptés le 24 septembre 2026, la part minimale du budget global qu'une ONG doit consacrer aux investissements directs est de :",
+      "o": [
+        "70 %",
+        "80 %",
+        "85 %",
+        "90 %"
+      ],
+      "r": 1,
+      "x": "Les ONG déjà actives disposent d'un délai pour se conformer à cette règle, qui conditionne désormais le statut d'ONG à un accord avec l'État. La mesure vise à limiter la part des ressources absorbée par les frais de fonctionnement.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "L'Inspection générale des ressources humaines (IGRH), chargée du contrôle de la gestion du personnel de l'Administration publique, a été créée en Conseil des ministres le :",
+      "o": [
+        "3 septembre 2026",
+        "17 septembre 2026",
+        "1er octobre 2026",
+        "15 octobre 2026"
+      ],
+      "r": 1,
+      "x": "Le décret a été présenté par le ministre des Serviteurs du Peuple, Mathias Traoré ; l'IGRH doit notamment établir avec précision les effectifs de l'Administration et contribuer à la lutte contre la corruption. Le même Conseil a adopté un décret encadrant la conclusion des accords de siège.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Selon le décret de septembre 2026 réglementant les accords de siège, toute demande d'accord de siège doit désormais être :",
+      "o": [
+        "ratifiée par l'Assemblée législative du Peuple",
+        "validée par le Conseil constitutionnel du Faso",
+        "soumise au Conseil des ministres pour approbation",
+        "approuvée par le Collège des chefs d'État de l'AES"
       ],
       "r": 2,
-      "x": "En 2025, 2 519 patients atteints d'hydrocèle ont été pris en charge chirurgicalement dans 16 régions sanitaires du Burkina Faso. Le suivi post-opératoire indique une évolution favorable. Ces résultats illustrent les efforts du gouvernement pour réduire la charge de la filariose lymphatique à travers la prise en charge chirurgicale gratuite."
+      "x": "Le décret impose la soumission des dossiers au Conseil des ministres et oblige toute entité bénéficiaire à contribuer au développement national. Un accord de siège fixe les conditions d'installation d'une organisation internationale sur le territoire.",
+      "_batchId": "actualite/2026-11-24/LOT2"
     },
     {
-      "q": "Combien de personnes déplacées internes (PDI) ont regagné leurs localités d'origine au Burkina Faso en mars 2025 ?",
+      "q": "Un décret adopté en septembre 2026 au titre du ministère des Serviteurs du Peuple encadre de manière stricte :",
       "o": [
-        "300 000 PDI dans 200 localités",
-        "500 000 PDI dans 400 localités",
-        "750 000 PDI dans 600 localités",
-        "1 million de PDI dans 700 localités"
+        "le montant du salaire minimum interprofessionnel garanti",
+        "la durée maximale du travail dans les mines",
+        "les activités de placement et le travail temporaire",
+        "les conditions d'octroi du congé de maternité"
       ],
-      "r": 3,
-      "x": "En mars 2025, plus d'un million de personnes déplacées internes (PDI) ont été réinstallées dans environ 700 localités de leur région d'origine au Burkina Faso. Ce résultat est lié aux opérations de reconquête territoriale menées par les FANB et les VDP. Le pays avait recensé 2,01 millions de PDI au 30 mars 2023."
+      "r": 2,
+      "x": "Le décret encadre strictement le placement de travailleurs et le recours au travail temporaire. Le cadre général de ces activités est fixé par le Code du travail adopté le 6 mai 2026 (loi n°013-2026/ALP).",
+      "_batchId": "actualite/2026-11-24/LOT2"
     },
     {
-      "q": "Qui a été sacrée Super Enseignante de l'Année 2025 lors de la Journée de l'Excellence Scolaire au Burkina Faso ?",
+      "q": "Malegdibkièta Saturnin Théophile Bikyenga, installé le 10 octobre 2025, est le premier directeur général :",
       "o": [
-        "Mahaoua Baoula/Kanyoulou",
-        "Windkouni Haoua Eugénie Maiga",
-        "Fatoumata Bako/Traoré",
-        "Passowendé Pélagie Kabre/Kabore"
+        "de la Société des aéroports du Faso (SAFA)",
+        "de la Société burkinabè de télédiffusion (SBT)",
+        "de la société Faso Transit et Logistique (FTL)",
+        "de la Société nationale des postes (SONAPOST)"
       ],
       "r": 0,
-      "x": "Mahaoua Baoula/Kanyoulou a été sacrée Super Enseignante de l'Année 2025 lors de la Journée de l'Excellence Scolaire organisée par le MEBAPLN (Ministère de l'Enseignement de Base, de l'Alphabétisation et de la Promotion des Langues Nationales), dirigé par le Ministre Jacques Sosthène Dingara."
+      "x": "Nommé en Conseil des ministres le 18 septembre 2025, il dirige la SAFA, née de la fusion de trois structures du secteur aérien. La société pilote notamment l'achèvement de l'aéroport international de Ouagadougou-Donsin.",
+      "_batchId": "actualite/2026-11-24/LOT2"
     },
     {
-      "q": "Quelle nouvelle exigence s'impose désormais aux Burkinabè souhaitant poursuivre des études supérieures à l'étranger ?",
+      "q": "La Maison de l'Entreprise du Burkina Faso, jusque-là association reconnue d'utilité publique, a été transformée en établissement public de l'État à caractère professionnel lors du Conseil des ministres du :",
       "o": [
-        "Obtenir une caution bancaire auprès du Trésor public",
-        "Présenter un casier judiciaire vierge à la représentation diplomatique burkinabè",
-        "Justifier d'une bourse d'études officielle burkinabè ou étrangère",
-        "Obtenir une autorisation préalable du ministère de l'Enseignement supérieur"
+        "29 janvier 2025",
+        "5 mars 2025",
+        "26 mars 2025",
+        "9 avril 2025"
       ],
-      "r": 3,
-      "x": "Les Burkinabè souhaitant poursuivre des études supérieures à l'étranger doivent désormais obtenir une autorisation préalable du ministère de l'Enseignement supérieur, de la Recherche et de l'Innovation (dirigé par Adjima Thombiano). Cette mesure vise à mieux encadrer les flux estudiantins vers l'étranger et à maintenir les compétences au service du développement national."
+      "r": 1,
+      "x": "Le Conseil du 5 mars 2025 a dissous sans liquidation l'ancienne association et créé l'établissement public, doté d'une assemblée consulaire appelée « Club des entrepreneurs du Burkina Faso ». Le Club des entrepreneurs représente les opérateurs économiques auprès de l'État.",
+      "_batchId": "actualite/2026-11-24/LOT2"
     },
     {
-      "q": "Lors du Conseil des ministres du 25 juin 2026, quel décret majeur a été adopté concernant les bourses d'études de l'enseignement supérieur ?",
+      "q": "L'Institut de formation agropastorale du Burkina Faso (IFAP-BF), créé en Conseil des ministres le 8 octobre 2026, résulte de la fusion :",
       "o": [
-        "Suppression des bourses pour les filières non prioritaires",
-        "Doublement des montants des bourses nationales",
-        "Création de nouvelles bourses d'excellence pour les meilleurs étudiants",
-        "Révision du régime des bourses d'études de l'enseignement supérieur et de la recherche"
+        "de l'ENAFA de Matourkou et de l'ENESA",
+        "de l'ENAM et de l'IDR de l'université Nazi Boni",
+        "de l'ENESA et de l'École nationale des eaux et forêts",
+        "de l'ENAFA et de l'INERA de Kamboinsé"
+      ],
+      "r": 0,
+      "x": "L'IFAP-BF réunit l'École nationale de formation agricole (ENAFA) de Matourkou et l'École nationale de l'élevage et de la santé animale (ENESA). L'INERA est un institut de recherche agricole, non une école de formation des agents.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le Centre hospitalier universitaire (CHU) de Pala, à Bobo-Dioulasso, a été inauguré par le Président du Faso le :",
+      "o": [
+        "20 octobre 2025",
+        "24 décembre 2025",
+        "15 janvier 2026",
+        "26 février 2026"
+      ],
+      "r": 1,
+      "x": "Le CHU a été mis en service après environ trois ans et huit mois de travaux effectifs. Son centre de radiothérapie a été inauguré le même jour.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le CHU de Pala, à Bobo-Dioulasso, dispose d'une capacité de :",
+      "o": [
+        "250 lits",
+        "350 lits",
+        "500 lits",
+        "750 lits"
+      ],
+      "r": 2,
+      "x": "L'hôpital compte 500 lits et 90 salles de consultation. Il a été construit avec l'appui de la Chine.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le coût de réalisation du CHU de Pala, financé par la République populaire de Chine, dépasse :",
+      "o": [
+        "70 milliards FCFA",
+        "90 milliards FCFA",
+        "110 milliards FCFA",
+        "150 milliards FCFA"
+      ],
+      "r": 0,
+      "x": "Le CHU de Pala a coûté plus de 70 milliards FCFA, dans le cadre de la coopération sino-burkinabè. L'ambassadeur de Chine l'a présenté comme un cadeau pour le 65e anniversaire de l'indépendance du Burkina Faso.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Après l'inauguration du CHU de Pala, le Président du Faso a annoncé neuf autres CHU de même standing, dont le premier chantier doit être lancé à :",
+      "o": [
+        "Ouahigouya",
+        "Kaya",
+        "Dédougou",
+        "Fada N'Gourma"
       ],
       "r": 3,
-      "x": "Le Conseil des ministres du 25 juin 2026 a adopté un décret portant révision du régime des bourses d'études de l'enseignement supérieur et de la recherche, présenté par le Ministre Adjima Thombiano. Il s'agit d'une relecture du décret de 2021 visant à adapter le régime des bourses aux nouvelles orientations de l'enseignement supérieur."
+      "x": "Le capitaine Ibrahim Traoré a cité Fada N'Gourma comme premier site de ces neuf nouveaux CHU, conçus sur le modèle de Pala. Le programme vise à rapprocher les soins spécialisés des populations et à limiter les évacuations sanitaires.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le complexe industriel Textile des Forces du Burkina Faso (TEXFORCES-BF), inauguré le 9 septembre 2026, est implanté à :",
+      "o": [
+        "Péni, dans la province du Houet",
+        "Kossodo, zone industrielle de Ouagadougou",
+        "Komsilga, dans la province du Kadiogo",
+        "Logofourousso, près de Bobo-Dioulasso"
+      ],
+      "r": 3,
+      "x": "Le complexe occupe un site de 30 hectares à Logofourousso, secteur 29 de Bobo-Dioulasso. Il doit habiller les Forces de défense et de sécurité ainsi que les populations civiles avec du coton burkinabè.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "L'investissement consenti pour le complexe TEXFORCES-BF, inauguré le 9 septembre 2026, est d'environ :",
+      "o": [
+        "17 milliards FCFA",
+        "24 milliards FCFA",
+        "32 milliards FCFA",
+        "45 milliards FCFA"
+      ],
+      "r": 0,
+      "x": "Le complexe a coûté environ 17 milliards FCFA et vise à terme la transformation de 50 000 tonnes de coton par an. Ses unités couvrent la filature, le tissage, la finition et la confection.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le barrage de Pô-Kapro, inauguré par le Président du Faso le 25 juillet 2026, a été réalisé par l'Office national des barrages et des aménagements hydro-agricoles (ONBAH) en :",
+      "o": [
+        "cinq mois",
+        "huit mois",
+        "onze mois",
+        "quatorze mois"
+      ],
+      "r": 1,
+      "x": "Réalisé sur fonds propres de l'État, l'ouvrage stocke environ 1 038 000 m³ d'eau dans la province du Nahouri, région du Nazinon. Les populations attendaient ce barrage depuis les années 1960.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Sur la période 2026-2030, l'Office national des barrages et des aménagements hydro-agricoles (ONBAH) prévoit la construction de :",
+      "o": [
+        "5 nouveaux barrages",
+        "11 nouveaux barrages",
+        "24 nouveaux barrages",
+        "40 nouveaux barrages"
+      ],
+      "r": 1,
+      "x": "L'ONBAH prévoit 11 nouveaux barrages, la réhabilitation de 24 ouvrages et l'aménagement de près de 1 800 hectares de périmètres irrigués. L'Office avait reçu en mars 2025 des équipements d'une valeur de 13 milliards FCFA.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Mis en eau par le Premier ministre le 1er août 2026, le barrage reconstruit de Goulouré, dans la commune de Kokologho, a vu sa capacité passer de 80 000 m³ à environ :",
+      "o": [
+        "520 000 m³",
+        "820 000 m³",
+        "1 020 000 m³",
+        "1 520 000 m³"
+      ],
+      "r": 2,
+      "x": "Reconstruit en neuf mois par l'ONBAH sur fonds propres de l'État, le barrage de Goulouré dépasse désormais 1 020 000 m³. Le même jour, le Premier ministre a remis en eau le barrage réhabilité de Kokologho.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le projet de loi de finances pour l'exercice 2027, adopté en Conseil des ministres le 8 octobre 2026, prévoit des recettes de :",
+      "o": [
+        "3 431,5 milliards FCFA",
+        "3 728,5 milliards FCFA",
+        "4 220,4 milliards FCFA",
+        "4 610,0 milliards FCFA"
+      ],
+      "r": 2,
+      "x": "Les recettes progressent de 491,9 milliards FCFA (+13,2 %) par rapport aux prévisions révisées de 2026, arrêtées à 3 728,5 milliards ; la synthèse du Conseil les arrondit à 4 200 milliards. Les 3 431,5 milliards étaient les recettes de la loi de finances initiale 2026.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le déficit budgétaire prévu par le projet de loi de finances 2027 s'élève à :",
+      "o": [
+        "486,8 milliards FCFA",
+        "619 milliards FCFA",
+        "742 milliards FCFA",
+        "815 milliards FCFA"
+      ],
+      "r": 1,
+      "x": "Ce déficit représente 2,9 % du PIB, sous le plafond de 3 % fixé par le pacte de convergence de l'UEMOA. Les 486,8 milliards correspondaient au déficit de la loi de finances 2026.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "L'initiative présidentielle pour l'accès de tous à l'électricité, créée par décret en Conseil des ministres le 22 octobre 2026, est dénommée :",
+      "o": [
+        "Faso Wa-Fulu",
+        "Faso Yaar",
+        "Faso Arzeka",
+        "Faso Kuna-Wili"
+      ],
+      "r": 0,
+      "x": "Faso Wa-Fulu, nom tiré de la langue san, vise l'accès universel à l'électricité à l'horizon 2030. Faso Arzeka est, elle, la plateforme nationale de paiement électronique.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le coût de l'initiative présidentielle pour l'accès de tous à l'électricité, adoptée le 22 octobre 2026, est estimé sur dix ans à :",
+      "o": [
+        "800 milliards FCFA",
+        "1 400 milliards FCFA",
+        "2 800 milliards FCFA",
+        "4 200 milliards FCFA"
+      ],
+      "r": 2,
+      "x": "Le programme de plus de 2 800 milliards FCFA prévoit notamment 44 brigades d'électrification (BRIGEL) employant 1 208 techniciens. Il vise l'électrification de 6 700 nouvelles localités.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le Conseil des ministres du 22 octobre 2026 a créé une société chargée de produire du vin au Burkina Faso, dénommée :",
+      "o": [
+        "SOBIMAP",
+        "BRAFASO",
+        "SOCUCO",
+        "SOVIB"
+      ],
+      "r": 3,
+      "x": "La Société viticole du Burkina Faso (SOVIB), au capital initial d'un milliard FCFA, associe l'État (45 %), la Nouvelle Brasserie du Faso (BRAFASO, 10 %) et le privé national (45 %). La SOBIMAP est la société d'État des intrants et matériels agropastoraux.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Selon l'Annuaire statistique 2025 du ministère des Mines, publié en juillet 2026, la production totale d'or du Burkina Faso, artisanat compris, a atteint en 2025 :",
+      "o": [
+        "60,8 tonnes",
+        "76,2 tonnes",
+        "90,8 tonnes",
+        "105,4 tonnes"
+      ],
+      "r": 2,
+      "x": "La production passe de 60,8 tonnes en 2024 à 90,8 tonnes en 2025, soit une hausse de 49,4 %, dont environ 39 tonnes pour l'artisanat. Le ministre avait avancé le chiffre provisoire de plus de 94 tonnes en février 2026.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Selon les résultats provisoires de la campagne agricole 2025-2026, la production de riz s'établit à :",
+      "o": [
+        "675 460 tonnes",
+        "884 953 tonnes",
+        "1 008 737 tonnes",
+        "2 686 531 tonnes"
+      ],
+      "r": 2,
+      "x": "En hausse de 49,34 %, la production rizicole franchit pour la première fois le million de tonnes, pour une production céréalière totale de 7 142 484 tonnes. Les 2 686 531 tonnes correspondent au maïs et les 884 953 tonnes au niébé.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le taux national de réussite au Certificat d'études primaires (CEP), session 2026, est de :",
+      "o": [
+        "82,16 %",
+        "87,40 %",
+        "91,15 %",
+        "95,23 %"
+      ],
+      "r": 3,
+      "x": "Sur 333 900 candidats, 317 982 ont obtenu le CEP 2026. Le taux de 82,16 % était celui de la session 2024.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "La session 2026 de l'immersion patriotique obligatoire des nouveaux bacheliers a été officiellement lancée par le Premier ministre, le 28 juillet 2026, à :",
+      "o": [
+        "Koupéla",
+        "Ziniaré",
+        "Gaoua",
+        "Kaya"
+      ],
+      "r": 0,
+      "x": "Lancée au lycée Saint-Philippe de Koupéla, cette session de 30 jours s'est déroulée du 27 juillet au 26 août 2026. Gaoua a accueilli le même jour un lancement régional présidé par le gouverneur du Djôrô.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Les épreuves écrites sur table des concours directs de la fonction publique, session 2026, ont été officiellement lancées le 15 juillet 2026 à :",
+      "o": [
+        "Dori",
+        "Kaya",
+        "Djibo",
+        "Fada N'Gourma"
+      ],
+      "r": 2,
+      "x": "Le ministre des Serviteurs du Peuple, Mathias Traoré, a lancé les compositions au lycée provincial de Djibo, qui accueillait pour la première fois un centre de composition de ces concours. Les épreuves en ligne s'étaient déroulées du 4 au 12 juillet 2026.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "La campagne de chimio-prévention du paludisme saisonnier plus (CPS+) 2026 cible les enfants âgés de :",
+      "o": [
+        "0 à 11 mois",
+        "3 à 59 mois",
+        "6 à 23 mois",
+        "5 à 14 ans"
+      ],
+      "r": 1,
+      "x": "La CPS+ 2026 visait près de 5 millions d'enfants en cinq passages, de juin à octobre ; le premier passage concernait 24 districts prioritaires, les suivants les 70 districts sanitaires. Elle s'étend aussi aux enfants de 5 à 9 ans dans les zones à forte incidence.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le Service d'aide médicale urgente (SAMU) de Ouagadougou, joignable au numéro gratuit 15, a été officiellement lancé le :",
+      "o": [
+        "12 février 2025",
+        "10 avril 2025",
+        "24 avril 2025",
+        "2 mai 2025"
+      ],
+      "r": 1,
+      "x": "Les activités du SAMU ont été lancées le 10 avril 2025 par le ministre d'État Célestin Simporé, avant l'ouverture de l'antenne de Bobo-Dioulasso le 8 novembre 2025. Le 15 est le numéro d'urgence médicale gratuit.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le centre pénitentiaire agricole de Baporo, visité le 22 avril 2026 par le Président du Faso, se trouve dans la province :",
+      "o": [
+        "du Boulkiemdé",
+        "de la Sissili",
+        "du Ziro",
+        "du Sanguié"
+      ],
+      "r": 3,
+      "x": "Situé dans la région du Nando, ce centre en milieu ouvert, où les détenus pratiquent l'agriculture et l'élevage, a produit 240 tonnes en 2025. La visite d'une prison par un chef d'État en exercice était une première dans l'histoire du pays.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le Conseil supérieur de la communication (CSC) a interdit la diffusion de TV5 Monde au Burkina Faso par une décision datée du :",
+      "o": [
+        "5 mai 2026",
+        "9 juin 2026",
+        "23 juillet 2026",
+        "10 septembre 2026"
+      ],
+      "r": 0,
+      "x": "La décision n°2026-018/CSC reproche à la chaîne des faits de désinformation et d'apologie du terrorisme, notamment dans sa couverture des attaques du 25 avril 2026 au Mali. TV5 Monde avait déjà été suspendue temporairement en 2024.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le 12 juin 2026, le Conseil supérieur de la communication (CSC) a infligé à Canal+ International, pour non-diffusion en clair des chaînes de la RTB, une amende de :",
+      "o": [
+        "10 millions FCFA",
+        "25 millions FCFA",
+        "50 millions FCFA",
+        "100 millions FCFA"
+      ],
+      "r": 2,
+      "x": "Le CSC reproche à l'opérateur de ne pas avoir rendu effective la diffusion « en clair » des chaînes de la Radiodiffusion télévision du Burkina (RTB), malgré un ultimatum fixé au 11 juin 2026. La décision est signée du président du CSC, Wendingoudi Louis Modeste Ouédraogo.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le ministère de la Communication, de la Culture, des Arts et du Tourisme a suspendu tous les concours de beauté sur le territoire national par communiqué du :",
+      "o": [
+        "8 juin 2026",
+        "20 juin 2026",
+        "6 juillet 2026",
+        "24 août 2026"
+      ],
+      "r": 0,
+      "x": "La suspension court jusqu'à l'adoption de nouveaux textes réglementaires destinés à mieux encadrer ces concours. Elle a été suivie par le lancement d'un concours scientifique réservé aux jeunes filles.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Après la suspension des concours de beauté, les autorités ont lancé en septembre 2026 un concours scientifique réservé aux jeunes filles, dénommé :",
+      "o": [
+        "Mousso d'Or",
+        "Faso Mousso",
+        "Hakili Mousso",
+        "Wassa Mousso"
+      ],
+      "r": 2,
+      "x": "Hakili Mousso a réuni 84 jeunes filles en mathématiques, en physique et en chimie. La finale et la remise des prix ont eu lieu le 19 septembre 2026.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le premier Conseil d'orientation de l'Institut des peuples noirs-Farafina (IPN-Farafina), installé le 30 juin 2026, est présidé par :",
+      "o": [
+        "Claude Aimé Tassembedo",
+        "Apollinaire Kyélem de Tambèla",
+        "Pingdwendé Gilbert Ouédraogo",
+        "Serge Théophile Balima"
+      ],
+      "r": 0,
+      "x": "Claude Aimé Tassembedo préside ce conseil, installé par le Premier ministre et chargé de définir les grandes orientations de l'Institut. L'ancien Premier ministre Apollinaire Kyélem de Tambèla préside, lui, l'Institut lui-même.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "L'Institut des peuples noirs-Farafina (IPN-Farafina) a été recréé par décret adopté en Conseil des ministres le :",
+      "o": [
+        "14 mai 2025",
+        "18 juin 2025",
+        "15 octobre 2025",
+        "27 novembre 2025"
+      ],
+      "r": 0,
+      "x": "Le décret du 14 mai 2025 restaure l'ancien Institut des peuples noirs comme structure panafricaine à vocation scientifique, idéologique, diplomatique et culturelle. L'ancien Premier ministre Apollinaire Kyélem de Tambèla en assure la présidence.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "À la 48e session des Comités consultatifs interafricains (CCI) du Conseil africain et malgache pour l'enseignement supérieur (CAMES), en 2026, le Burkina Faso a obtenu un taux de réussite de :",
+      "o": [
+        "89,72 %",
+        "92,47 %",
+        "95,81 %",
+        "96,95 %"
+      ],
+      "r": 2,
+      "x": "Sur 430 candidatures burkinabè examinées, 412 enseignants et chercheurs ont été inscrits sur les listes d'aptitude. Le taux de 96,95 % était celui du pays à la 47e session.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "La 48e session des Comités consultatifs interafricains (CCI) du Conseil africain et malgache pour l'enseignement supérieur (CAMES) s'est tenue du 29 au 31 juillet 2026 en :",
+      "o": [
+        "République du Congo",
+        "Guinée équatoriale",
+        "Tchad",
+        "Gabon"
+      ],
+      "r": 1,
+      "x": "Les travaux de validation se sont déroulés en Guinée équatoriale ; la 47e session s'était tenue à N'Djamena, au Tchad. Le CAMES, créé en 1968, a son siège à Ouagadougou.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le référentiel des formations prioritaires de l'enseignement supérieur, adopté par arrêté du 18 août 2025, comprend :",
+      "o": [
+        "210 spécialités",
+        "290 spécialités",
+        "360 spécialités",
+        "485 spécialités"
+      ],
+      "r": 3,
+      "x": "Ce référentiel accompagne la carte universitaire, entrée en vigueur à la rentrée 2025-2026 pour spécialiser chaque université selon les atouts de sa région. Les 360 correspondent au nombre de nouvelles offres de formation créées, 30 autres étant fermées.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le Cadre de partenariat pays (CPP) 2026-2031 entre le Burkina Faso et le Groupe de la Banque mondiale a été officiellement lancé à Ouagadougou le :",
+      "o": [
+        "7 avril 2026",
+        "15 juin 2026",
+        "2 octobre 2026",
+        "14 octobre 2026"
+      ],
+      "r": 2,
+      "x": "Le lancement s'est déroulé en présence du vice-président Ousmane Diagana, six mois après la présentation du cadre au Conseil d'administration de la Banque, le 7 avril 2026. Le portefeuille de la Banque au Burkina Faso compte 29 projets pour près de 4 milliards de dollars.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Au 3e Sommet Russie-Afrique, tenu à Moscou les 28 et 29 octobre 2026, le Burkina Faso était représenté par :",
+      "o": [
+        "le Président du Faso, Ibrahim Traoré",
+        "le Premier ministre, Rimtalba Jean Emmanuel Ouédraogo",
+        "le ministre des Affaires étrangères, Karamoko Jean Marie Traoré",
+        "le président de l'ALP, Ousmane Bougouma"
+      ],
+      "r": 1,
+      "x": "Le Premier ministre y a délivré le message du capitaine Ibrahim Traoré lors du panel de haut niveau du 29 octobre. Les deux éditions précédentes s'étaient tenues à Sotchi en 2019 et à Saint-Pétersbourg en 2023.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "L'accord sur les fondements des relations entre le Burkina Faso et la Fédération de Russie a été signé à Moscou le :",
+      "o": [
+        "27 juillet 2023",
+        "19 juin 2025",
+        "12 février 2026",
+        "23 septembre 2026"
+      ],
+      "r": 2,
+      "x": "L'accord a été signé lors de la visite de travail d'une délégation conduite par le ministre des Affaires étrangères, les 12 et 13 février 2026. Le 19 juin 2025 correspond à l'accord intergouvernemental sur la centrale nucléaire, signé à Saint-Pétersbourg.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le coût du Hadj 2027 pour les pèlerins burkinabè, restauration comprise, a été fixé le 3 novembre 2026 à :",
+      "o": [
+        "3 261 500 FCFA",
+        "3 285 000 FCFA",
+        "3 474 000 FCFA",
+        "3 630 000 FCFA"
+      ],
+      "r": 3,
+      "x": "Ce montant n'inclut pas l'achat du mouton, facultatif . Le Hadj 2026 coûtait 3 285 000 FCFA et le Hadj 2025, restauration non comprise, 3 261 500 FCFA.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Lors de l'évaluation à mi-parcours des contrats d'objectifs 2026, le ministère de la Sécurité affichait au 30 juin 2026 un taux d'exécution de :",
+      "o": [
+        "47,47 %",
+        "53,14 %",
+        "62,81 %",
+        "75,10 %"
+      ],
+      "r": 2,
+      "x": "Le ministre Mahamadou Sana a présenté un contrat structuré en six objectifs et dix-sept actions prioritaires. Les 75,10 % sont le taux du ministère de la Justice.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le Tour du Faso 2026, 37e édition achevée le 8 novembre à Ouagadougou, a été remporté par :",
+      "o": [
+        "Paul Daumont",
+        "Gustav Basson",
+        "Saturnin Yaméogo",
+        "Hamza Amari"
+      ],
+      "r": 0,
+      "x": "Paul Daumont signe sa troisième victoire et devient le premier coureur à remporter trois fois l'épreuve. Le Sud-Africain Gustav Basson, longtemps porteur du maillot jaune, a terminé sur le podium.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "L'étape la plus longue du Tour du Faso 2026, d'environ 167 km, reliait :",
+      "o": [
+        "Ouagadougou à Kaya",
+        "Bobo-Dioulasso à Banfora",
+        "Koudougou à Boromo",
+        "Tenkodogo à Ziniaré"
+      ],
+      "r": 3,
+      "x": "Cette 9e étape a été remportée par Hamza Amari en 3 h 54 min 20 s. Paul Daumont y a conservé le maillot jaune.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le stade du 4-Août de Ouagadougou, suspendu par la Confédération africaine de football (CAF) en 2021, a été homologué pour les matchs internationaux le :",
+      "o": [
+        "1er juillet 2025",
+        "4 août 2025",
+        "9 septembre 2025",
+        "2 novembre 2025"
+      ],
+      "r": 0,
+      "x": "La CAF a notifié l'homologation à la Fédération burkinabè de football par courrier du 1er juillet 2025, après plus de quatre ans de travaux. La réouverture officielle a eu lieu le 4 août 2025, en présence du Président du Faso.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "L'Agence Faso Mêbo, issue de la transformation de l'Initiative présidentielle Faso Mêbo, a été créée en Conseil des ministres le :",
+      "o": [
+        "16 octobre 2024",
+        "22 janvier 2026",
+        "5 février 2026",
+        "19 mars 2026"
+      ],
+      "r": 1,
+      "x": "Le Conseil du 22 janvier 2026 a créé cet établissement public chargé de reprendre les missions de l'Initiative lancée le 16 octobre 2024. L'Agence est maître d'ouvrage de l'autoroute Ouagadougou–Bobo-Dioulasso.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le stade du 4-Août, rouvert en août 2025 après rénovation, avait été inauguré pour la première fois en :",
+      "o": [
+        "1984",
+        "1987",
+        "1990",
+        "1993"
+      ],
+      "r": 0,
+      "x": "Construit avec la coopération chinoise, le stade a été inauguré le 18 juillet 1984 sous la présidence de Thomas Sankara, et nommé en référence à la révolution du 4 août 1983. L'année 1987 est celle de l'assassinat de Thomas Sankara.",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le nombre de nouveaux bacheliers concernés par la session 2026 de l'immersion patriotique obligatoire est d'environ :",
+      "o": [
+        "25 000",
+        "40 000",
+        "50 000",
+        "65 000"
+      ],
+      "r": 3,
+      "x": "Plus de 65 000 nouveaux bacheliers ont pris part à cette deuxième édition, contre environ 60 000 lors de la première, lancée en août 2025. L'immersion relève de l'Initiative présidentielle pour une éducation de qualité pour tous (IPEQ).",
+      "_batchId": "actualite/2026-11-24/LOT2"
+    },
+    {
+      "q": "Le coureur classé deuxième du classement général final du Tour du Faso 2026 est le Marocain :",
+      "o": [
+        "Adil Jelloul",
+        "Mohcine El Kouraji",
+        "Salah Eddine Mraouni",
+        "Youssef Bdadou"
+      ],
+      "r": 3,
+      "x": "Youssef Bdadou monte sur la deuxième marche du podium final. Mraouni et Jelloul sont d'anciens vainqueurs marocains de l'épreuve, en 2017 et 2007.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "L'écart qui sépare le vainqueur du deuxième au classement général final du Tour du Faso 2026 est de :",
+      "o": [
+        "9 secondes",
+        "25 secondes",
+        "1 minute 12 secondes",
+        "2 minutes 40 secondes"
+      ],
+      "r": 1,
+      "x": "Paul Daumont devance son dauphin de 25 secondes. Le troisième du classement termine à 26 secondes du vainqueur.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Gustav Basson, troisième du Tour du Faso 2026 et ancien porteur du maillot jaune, est un coureur :",
+      "o": [
+        "namibien",
+        "sud-africain",
+        "rwandais",
+        "érythréen"
+      ],
+      "r": 1,
+      "x": "Gustav Basson est sud-africain. Il a perdu le maillot jaune au profit de Paul Daumont lors de la 8e étape.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Paul Daumont s'est emparé du maillot jaune du Tour du Faso 2026 à l'arrivée de la 8e étape, à :",
+      "o": [
+        "Koupéla",
+        "Kaya",
+        "Fada N'Gourma",
+        "Tenkodogo"
+      ],
+      "r": 0,
+      "x": "La 8e étape, Ouagadougou-Koupéla, longue d'environ 153 kilomètres, a permis à Daumont de prendre la tête du classement. Il ne l'a plus quittée jusqu'à l'arrivée finale.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La dixième et dernière étape du Tour du Faso 2026, arrivée à Ouagadougou, a été remportée au sprint par l'Algérien :",
+      "o": [
+        "Azzedine Lagab",
+        "Yacine Hamza",
+        "Abderrahmane Mansouri",
+        "Nassim Saïdi"
+      ],
+      "r": 0,
+      "x": "Azzedine Lagab a gagné la dernière étape au sprint. Plusieurs autres victoires d'étape de cette édition sont revenues à des coureurs algériens.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La dernière étape du Tour du Faso 2026, longue de 111,4 kilomètres, est partie de :",
+      "o": [
+        "Ziniaré",
+        "Kombissiri",
+        "Dapélogo",
+        "Loumbila"
+      ],
+      "r": 2,
+      "x": "L'étape finale reliait Dapélogo à Ouagadougou sur 111,4 kilomètres. L'arrivée a été jugée sur le boulevard Thomas-Sankara.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Sur les 80 coureurs au départ du Tour du Faso 2026, le nombre de coureurs encore en course au départ de la dernière étape était de :",
+      "o": [
+        "38",
+        "47",
+        "54",
+        "61"
+      ],
+      "r": 3,
+      "x": "Soixante et un coureurs ont pris le départ de la 10e étape, entre Dapélogo et Ouagadougou. Les abandons se sont répartis au fil de l'épreuve.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le maillot blanc du meilleur jeune du Tour du Faso 2026 a été remporté par le Burkinabè :",
+      "o": [
+        "Souleymane Koné",
+        "Harouna Ilboudo",
+        "Mathias Sorgho",
+        "Soumaïla Ilboudo"
+      ],
+      "r": 3,
+      "x": "Soumaïla Ilboudo s'adjuge le maillot blanc. Harouna Ilboudo et Mathias Sorgho sont d'anciens vainqueurs burkinabè du Tour, en 2016 et 2018.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "L'enveloppe globale des primes du Tour du Faso 2026, triplées sur décision du Président du Faso, s'élevait à :",
+      "o": [
+        "19 085 000 FCFA",
+        "28 627 500 FCFA",
+        "38 170 000 FCFA",
+        "57 255 000 FCFA"
+      ],
+      "r": 3,
+      "x": "Les primes ont atteint 57 255 000 FCFA, soit trois fois le montant initialement prévu. Le triplement s'appliquait aussi aux primes d'étape et au classement général.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La prime versée au vainqueur final du Tour du Faso 2026, après le triplement des récompenses, était de :",
+      "o": [
+        "1 600 000 FCFA",
+        "2 400 000 FCFA",
+        "3 200 000 FCFA",
+        "4 800 000 FCFA"
+      ],
+      "r": 3,
+      "x": "Le vainqueur final a perçu 4 800 000 FCFA. Ce montant résulte du triplement d'une prime initiale de 1 600 000 FCFA.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La prime attribuée pour chaque victoire d'étape du Tour du Faso 2026, après le triplement des récompenses, était de :",
+      "o": [
+        "300 000 FCFA",
+        "500 000 FCFA",
+        "700 000 FCFA",
+        "900 000 FCFA"
+      ],
+      "r": 3,
+      "x": "Chaque victoire d'étape rapportait 900 000 FCFA, contre 300 000 FCFA avant le triplement. Cette mesure a été décidée par le Président du Faso.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La distance de course chronométrée prévue au programme de la 37e édition du Tour du Faso était de :",
+      "o": [
+        "988 kilomètres",
+        "1 399,97 kilomètres",
+        "1 712,40 kilomètres",
+        "2 387,97 kilomètres"
+      ],
+      "r": 1,
+      "x": "Le programme prévoyait 1 399,97 kilomètres de course. S'y ajoutaient 988 kilomètres de transbordement entre certaines villes étapes.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La 5e étape du Tour du Faso 2026, partie de Bobo-Dioulasso, avait pour ville d'arrivée :",
+      "o": [
+        "Pâ",
+        "Banfora",
+        "Houndé",
+        "Orodara"
+      ],
+      "r": 0,
+      "x": "La 5e étape reliait Bobo-Dioulasso à Pâ, au lendemain d'une étape en circuit dans la capitale économique. Banfora et Orodara ne figuraient pas au parcours.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "L'édition 2021 du Tour du Faso a été remportée par Daniel Bichlmann, coureur de nationalité :",
+      "o": [
+        "néerlandaise",
+        "allemande",
+        "française",
+        "belge"
+      ],
+      "r": 1,
+      "x": "L'Allemand Daniel Bichlmann a gagné l'édition 2021. L'édition suivante, prévue en 2022, n'a pas eu lieu.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "L'édition 2022 du Tour du Faso n'a pas été organisée en raison :",
+      "o": [
+        "de la situation sécuritaire",
+        "de la pandémie de Covid-19",
+        "d'un manque de financement",
+        "du boycott des équipes"
+      ],
+      "r": 0,
+      "x": "L'édition 2022 a été annulée pour des raisons de sécurité. L'épreuve a repris en 2023 avec la victoire de Paul Daumont.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Parmi les infractions suivantes, celle que le Code pénal d'octobre 2026 rend de nouveau passible de la peine de mort est :",
+      "o": [
+        "le vol aggravé",
+        "l'escroquerie",
+        "le parricide",
+        "la corruption"
+      ],
+      "r": 2,
+      "x": "La peine de mort est rétablie notamment pour le parricide, le terrorisme, l'espionnage et la trahison. Elle vise aussi l'importation de produits périmés ou interdits ayant causé la mort.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Dans le Code pénal d'octobre 2026, certains détournements de deniers publics sont punis de la perpétuité et d'une amende pouvant atteindre :",
+      "o": [
+        "le montant détourné",
+        "le double du montant détourné",
+        "le triple du montant détourné",
+        "dix fois le montant détourné"
+      ],
+      "r": 2,
+      "x": "L'amende peut atteindre le triple des sommes détournées. Elle s'ajoute à la réclusion criminelle à perpétuité.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le ministre qui a défendu le nouveau Code pénal devant l'Assemblée législative du peuple (ALP) en octobre 2026 est :",
+      "o": [
+        "Bassolma Bazié",
+        "Jacques Sosthène Dingara",
+        "Émile Zerbo",
+        "Edasso Rodrigue Bayala"
+      ],
+      "r": 3,
+      "x": "Edasso Rodrigue Bayala, ministre de la Justice, a porté le texte devant les députés. Il a aussi défendu la loi sur le travail d'intérêt général adoptée le même mois.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La peine de mort, réintroduite en octobre 2026, avait été abolie au Burkina Faso lors de la réforme pénale de :",
+      "o": [
+        "2012",
+        "2015",
+        "2018",
+        "2022"
+      ],
+      "r": 2,
+      "x": "La réforme pénale de 2018 avait supprimé la peine de mort. Le gouvernement avait annoncé son rétablissement dès décembre 2025.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La loi révisant le travail d'intérêt général (TIG) a été adoptée par l'Assemblée législative du peuple (ALP) le :",
+      "o": [
+        "9 octobre 2026",
+        "14 octobre 2026",
+        "20 octobre 2026",
+        "28 octobre 2026"
+      ],
+      "r": 1,
+      "x": "La loi sur le TIG a été votée le 14 octobre 2026 par les 71 députés votants. Le texte élargit le recours au TIG comme alternative à l'emprisonnement.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le nombre de personnes ayant bénéficié du travail d'intérêt général (TIG) entre le 8 novembre 2024 et le 30 septembre 2026 est d'environ :",
+      "o": [
+        "1 000",
+        "2 500",
+        "4 000",
+        "6 500"
+      ],
+      "r": 2,
+      "x": "Près de 4 000 personnes ont exécuté un TIG sur cette période. Plus de 2 000 d'entre eux sont des détenus dont la peine a été commuée.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La production céréalière cumulée des établissements pénitentiaires du Burkina Faso de 2020 à 2025 s'élève à :",
+      "o": [
+        "260 tonnes",
+        "510 tonnes",
+        "723 tonnes",
+        "1 050 tonnes"
+      ],
+      "r": 2,
+      "x": "Selon le bilan officiel du ministère de la Justice (octobre 2026), les établissements pénitentiaires ont produit exactement 722,93 tonnes de céréales (soit près de 723 tonnes) entre 2020 et 2025, dont 350 tonnes pour la seule année 2025.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le Faso Center for Disease Control (Faso CDC), créé le 5 novembre 2026, regroupe le service de surveillance épidémiologique et :",
+      "o": [
+        "le Centre national de transfusion sanguine",
+        "le Secrétariat technique One Health",
+        "la Centrale d'achat des médicaments (CAMEG)",
+        "le Laboratoire national de santé publique"
+      ],
+      "r": 1,
+      "x": "Le Faso CDC naît de la fusion du Secrétariat technique One Health et du service de surveillance épidémiologique. Le même décret supprime l'Institut national de santé publique (INSP).",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "L'Agence burkinabè de médecine traditionnelle et alternative (ABMTA), créée le 5 novembre 2026, absorbe la direction chargée de cette médecine et :",
+      "o": [
+        "l'Institut de recherche en sciences de la santé",
+        "le Centre de médecine traditionnelle et de soins intégrés",
+        "la Direction générale de la pharmacie et du médicament",
+        "l'Agence nationale de régulation pharmaceutique"
+      ],
+      "r": 1,
+      "x": "L'ABMTA fusionne la Direction de la médecine traditionnelle et alternative et le Centre de médecine traditionnelle et de soins intégrés. Elle est chargée de promouvoir et d'encadrer cette médecine.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Après la dissolution du Secrétariat permanent du Conseil national de lutte contre le sida et les IST (SP/CNLS-IST), en novembre 2026, ses missions sont transférées :",
+      "o": [
+        "au ministère de la Santé",
+        "à la Primature",
+        "au ministère de la Solidarité",
+        "à la Présidence du Faso"
+      ],
+      "r": 0,
+      "x": "Les missions du SP/CNLS-IST reviennent au ministère de la Santé. La même séance a dissous la Société de gestion de l'équipement et de la maintenance biomédicale (SOGEMAB).",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le capital de la société d'État FASO SANU, créée le 5 novembre 2026, est détenu à 50 % par le Trésor public et à 50 % par :",
+      "o": [
+        "la Caisse des dépôts et consignations du Burkina (CDC-BF)",
+        "la Société de participation minière du Burkina (SOPAMIB)",
+        "la Société nationale d'électricité du Burkina (SONABEL)",
+        "la Société nationale des substances précieuses (SONASP)"
+      ],
+      "r": 3,
+      "x": "FASO SANU est détenue à parts égales par l'État, via le Trésor, et par la SONASP. Elle intervient dans la filière de l'or.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Dans la société d'économie mixte TADJI DU FASO, créée en novembre 2026 pour les produits pétroliers, la Société nationale burkinabè d'hydrocarbures (SONABHY) détient :",
+      "o": [
+        "25 % du capital",
+        "40 % du capital",
+        "51 % du capital",
+        "60 % du capital"
+      ],
+      "r": 3,
+      "x": "La SONABHY détient 60 % du capital, soit 600 millions de FCFA. La société doit sécuriser l'approvisionnement du pays en produits pétroliers.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "L'Office national de régulation des cultes, créé le 5 novembre 2026, est placé sous la tutelle du ministère en charge :",
+      "o": [
+        "de la Justice",
+        "des Droits humains",
+        "de la Solidarité nationale",
+        "de l'Administration territoriale"
+      ],
+      "r": 3,
+      "x": "L'Office naît de la réorganisation du ministère de l'Administration territoriale et de la Mobilité. Il remplace la Direction générale des affaires religieuses.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le système d'identification de base (système fID), créé en novembre 2026, met en application la loi :",
+      "o": [
+        "n°041-2024/ALT du 20 décembre 2024",
+        "n°012-2025/ALT du 1er septembre 2025",
+        "n°050-2019/AN du 21 novembre 2019",
+        "n°027-2024/ALT du 11 octobre 2024"
+      ],
+      "r": 3,
+      "x": "Le système fID applique la loi n°027-2024/ALT du 11 octobre 2024 sur l'identification. Il tient le registre de l'identifiant unique des personnes.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Selon le décret du 5 novembre 2026 sur la dévolution du nom, un enfant peut porter comme nom de famille, en plus de celui du clan ou de la lignée :",
+      "o": [
+        "le nom de sa marraine",
+        "le nom de sa commune",
+        "le nom de sa mère",
+        "un nom choisi librement"
+      ],
+      "r": 2,
+      "x": "Le décret admet le nom de la mère, un prénom du père ou une déclinaison du nom de famille. Il applique le Code des personnes et de la famille issu de la loi n°012-2025/ALT.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le projet de loi sur les activités physiques et sportives transmis en novembre 2026 à l'Assemblée législative du peuple relit la loi :",
+      "o": [
+        "n°025-2018/AN",
+        "n°050-2019/AN",
+        "n°041-2024/ALT",
+        "n°027-2024/ALT"
+      ],
+      "r": 1,
+      "x": "Le texte relit la loi n°050-2019/AN du 21 novembre 2019 sur le sport. Le nouveau texte doit être examiné par l'Assemblée législative du peuple.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le projet du ministère de la Transition digitale adopté le 5 novembre 2026 prévoit de connecter au réseau administratif (RESINA) :",
+      "o": [
+        "120 bâtiments",
+        "150 bâtiments",
+        "180 bâtiments",
+        "210 bâtiments"
+      ],
+      "r": 0,
+      "x": "Le projet raccorde 120 bâtiments administratifs au Réseau informatique national de l'administration (RESINA). Il fait partie d'un ensemble de projets numériques d'environ 15,46 milliards de FCFA.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La tour prévue au Mémorial Thomas Sankara de Ouagadougou culminera à :",
+      "o": [
+        "57 mètres",
+        "67 mètres",
+        "77 mètres",
+        "87 mètres"
+      ],
+      "r": 3,
+      "x": "La tour du mémorial atteindra 87 mètres. Le site comprendra aussi un musée et un téléphérique.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le téléphérique prévu au Mémorial Thomas Sankara reliera le site :",
+      "o": [
+        "à la place de la Nation",
+        "au parc urbain Bangr-Weogo",
+        "au barrage n°3 de Tanghin",
+        "au rond-point des Nations unies"
+      ],
+      "r": 1,
+      "x": "Le téléphérique rejoindra le parc urbain Bangr-Weogo, voisin du mémorial. L'ensemble doit être achevé à l'horizon 2028.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La superficie du musée prévu au Mémorial Thomas Sankara est de :",
+      "o": [
+        "1 180 m²",
+        "2 360 m²",
+        "3 540 m²",
+        "4 720 m²"
+      ],
+      "r": 1,
+      "x": "Le musée couvrira 2 360 m². Le domaine du mémorial s'étend sur plus de 14 hectares.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le complexe industriel de verre déclaré d'utilité publique le 5 novembre 2026 sera implanté à Bobo-Dioulasso, sur le site de :",
+      "o": [
+        "Kotédougou",
+        "Bama",
+        "Léguéma",
+        "Darsalamy"
+      ],
+      "r": 2,
+      "x": "La verrerie s'installera à Léguéma sur environ 60 hectares. L'usine de FASO CIMENT, elle, sera bâtie entre Kotédougou et Niamadougou.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le programme du Bureau national des grands projets du Burkina (BN-GPB) adopté en novembre 2026 prévoit à Nagrin la construction de :",
+      "o": [
+        "1 464 logements",
+        "2 196 logements",
+        "2 928 logements",
+        "3 660 logements"
+      ],
+      "r": 2,
+      "x": "Le programme prévoit 89 immeubles abritant 2 928 logements de type F3 et F4. Il vise à réduire le déficit de logements à Ouagadougou.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le directeur général de Faso Tourisme nommé lors du Conseil des ministres du 5 novembre 2026 est :",
+      "o": [
+        "Elvis Kapioko",
+        "Saturnin Parou",
+        "Cheick Oumar Zouré",
+        "Sibidé Geoffroy Leman"
+      ],
+      "r": 3,
+      "x": "Sibidé Geoffroy Leman prend la tête de Faso Tourisme. Kapioko dirige FASO SANYA et Parou est directeur général adjoint de FASO YAAR.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La « Ligue de la Souveraineté », instituée en Conseil des ministres le 8 octobre 2026, est :",
+      "o": [
+        "un championnat de football des régions",
+        "un fonds de garantie pour les PME",
+        "un mouvement de soutien à la Transition",
+        "un réseau d'associations de jeunesse"
+      ],
+      "r": 0,
+      "x": "La Ligue de la Souveraineté est un championnat de football inter-régions. Elle relève de l'Initiative présidentielle pour la relève et la promotion de l'élite sportive.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Les projets de l'Initiative présidentielle pour la santé (IPS) inscrits le 8 octobre 2026 représentent un montant global d'environ :",
+      "o": [
+        "28,5 milliards de FCFA",
+        "45,3 milliards de FCFA",
+        "56,4 milliards de FCFA",
+        "67,1 milliards de FCFA"
+      ],
+      "r": 3,
+      "x": "Le montant s'élève à 67 082 339 166 FCFA, sur le budget 2026. Il finance des centres médicaux, des maternités, des blocs opératoires et un Institut du cœur.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le nombre de maternités modernes prévues par l'Initiative présidentielle pour la santé (IPS) en octobre 2026 est de :",
+      "o": [
+        "20",
+        "25",
+        "30",
+        "40"
+      ],
+      "r": 0,
+      "x": "L'IPS prévoit 20 maternités modernes et 20 centres médicaux communaux. Quatre blocs opératoires sont prévus à l'hôpital militaire Halassane Coulibaly.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le financement additionnel du Projet d'urgence, de développement territorial et de résilience (PUDTR) adopté en octobre 2026 est d'environ :",
+      "o": [
+        "55 milliards de FCFA",
+        "70 milliards de FCFA",
+        "85 milliards de FCFA",
+        "100 milliards de FCFA"
+      ],
+      "r": 0,
+      "x": "Le financement additionnel atteint environ 100 millions de dollars, soit 55 milliards de FCFA. Il est apporté par l'État et l'Association internationale de développement.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "En octobre 2026, le gouvernement a estimé la croissance du produit intérieur brut (PIB) réel du Burkina Faso pour 2026 à :",
+      "o": [
+        "4,8 %",
+        "5,3 %",
+        "6,0 %",
+        "6,7 %"
+      ],
+      "r": 2,
+      "x": "La croissance 2026 est estimée à 6,0 %, contre 5,7 % prévus en mars. Elle est tirée surtout par le secteur tertiaire.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le taux d'inflation du Burkina Faso estimé pour 2026, présenté en Conseil des ministres le 8 octobre 2026, est de :",
+      "o": [
+        "0,3 %",
+        "1,4 %",
+        "2,1 %",
+        "3,2 %"
+      ],
+      "r": 0,
+      "x": "L'inflation 2026 est estimée à 0,3 % par le gouvernement. Elle reste très en dessous du plafond communautaire de 3 %.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le président de l'Académie nationale des sciences, des arts et des lettres du Burkina Faso (ANSAL-BF), nommé le 8 octobre 2026, est :",
+      "o": [
+        "Stanislas Ouaro",
+        "Arouna Ouédraogo",
+        "Filiga Michel Sawadogo",
+        "Joseph Paré"
+      ],
+      "r": 1,
+      "x": "Arouna Ouédraogo est nommé président pour un premier mandat de trois ans. Ouaro, Paré et Sawadogo figurent parmi les vice-présidents.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le projet de loi sur les entreprises à caractère stratégique, adopté en Conseil des ministres le 8 octobre 2026, relit la loi :",
+      "o": [
+        "n°041-2024/ALT du 20 décembre 2024",
+        "n°14/91/ADP du 24 janvier 1991",
+        "n°025-2018/AN du 31 mai 2018",
+        "n°53/93/ADP du 20 décembre 1993"
+      ],
+      "r": 3,
+      "x": "Le texte relit la loi n°53/93/ADP du 20 décembre 1993. Il interdit notamment la privatisation des entreprises publiques stratégiques.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "L'objectif de la campagne Octobre Rose 2026 au Burkina Faso est l'accès aux services de lutte contre le cancer du sein pour au moins :",
+      "o": [
+        "500 000 femmes",
+        "1 million de femmes",
+        "2 millions de femmes",
+        "3 millions de femmes"
+      ],
+      "r": 2,
+      "x": "La campagne vise au moins 2 millions de femmes. Elle a été présentée par le ministre de la Santé au Conseil des ministres du 8 octobre 2026.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le décret d'organisation du ministère des Serviteurs du Peuple adopté le 22 octobre 2026 intègre l'Inspection générale des ressources humaines (IGRH) et supprime :",
+      "o": [
+        "l'Inspection technique des services (ITS)",
+        "la Direction générale de la fonction publique",
+        "l'École nationale d'administration et de magistrature",
+        "le Conseil national du travail"
+      ],
+      "r": 0,
+      "x": "L'IGRH remplace l'Inspection technique des services dans l'organigramme du ministère. Le décret crée aussi une Direction générale de la réforme de l'administration.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Dans le Conseil d'orientation du Fonds de soutien patriotique (FSP), la composante des partis politiques dissous est remplacée, depuis octobre 2026, par des organisations :",
+      "o": [
+        "syndicales",
+        "de la société civile",
+        "confessionnelles",
+        "patronales"
+      ],
+      "r": 1,
+      "x": "Le décret du 22 octobre 2026 retire les partis dissous du Conseil d'orientation. Ils sont remplacés par des organisations majoritairement issues de la société civile.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La Société des aéroports du Faso (SAFA) a été autorisée en octobre 2026 à prendre, dans AéroMed Industrie SA, une participation de :",
+      "o": [
+        "15 %",
+        "25 %",
+        "35 %",
+        "45 %"
+      ],
+      "r": 0,
+      "x": "La SAFA entre à hauteur de 15 % au capital d'AéroMed Industrie SA. Cette société produit des équipements aéronautiques.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le Projet PARPS, ratifié par ordonnance le 22 octobre 2026 pour 120 millions de dollars de l'Association internationale de développement (IDA), cible :",
+      "o": [
+        "60 000 ménages",
+        "90 000 ménages",
+        "120 000 ménages",
+        "150 000 ménages"
+      ],
+      "r": 2,
+      "x": "Le projet doit organiser 120 000 ménages pauvres en 4 800 coopératives communautaires. Il s'étale sur cinq ans.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Les projets de santé adoptés le 22 octobre 2026, d'un coût d'environ 28,5 milliards de FCFA, équipent notamment le futur Centre de haut niveau en neurochirurgie de :",
+      "o": [
+        "Bogodogo",
+        "Tengandogo",
+        "Pala",
+        "Yalgado"
+      ],
+      "r": 1,
+      "x": "Les fonds équipent le centre de neurochirurgie de Tengandogo. Ils servent aussi au CHU de Pala, au cyclotron et au CHU de Bogodogo.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le projet Silmiougou de la Caisse nationale de sécurité sociale (CNSS), inscrit le 22 octobre 2026, prévoit à Bassinko la construction de :",
+      "o": [
+        "186 appartements",
+        "372 appartements",
+        "558 appartements",
+        "744 appartements"
+      ],
+      "r": 1,
+      "x": "La cité comptera 25 bâtiments R+3, 372 appartements et 32 boutiques. Elle est financée par la CNSS sur fonds propres, pour plus de 20 milliards de FCFA.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Les déclarations d'utilité publique de la Rocade Nord et de la RN2 à Ouagadougou, adoptées le 22 octobre 2026, portent sur une bande de part et d'autre de l'emprise de :",
+      "o": [
+        "30 mètres",
+        "50 mètres",
+        "70 mètres",
+        "90 mètres"
+      ],
+      "r": 2,
+      "x": "Les deux déclarations portent sur une bande de 70 mètres de chaque côté. Les projets sont conduits par la Société nationale d'aménagement des terrains urbains (SONATUR).",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La 9e édition du Forum national de l'intégration s'est tenue du 19 au 24 octobre 2026 à :",
+      "o": [
+        "Dori",
+        "Tenkodogo",
+        "Kaya",
+        "Gaoua"
+      ],
+      "r": 3,
+      "x": "Le Forum s'est déroulé à Gaoua. Il a été présenté en Conseil des ministres par le ministre des Affaires étrangères.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le premier directeur général de l'Institut de formation agropastorale du Burkina Faso (IFAP-BF), nommé le 22 octobre 2026, est :",
+      "o": [
+        "Moussa Simporé",
+        "Abroulaye Sanfo",
+        "Cheick Oumar Zouré",
+        "Wétian Blaise Zaoua"
+      ],
+      "r": 2,
+      "x": "Cheick Oumar Zouré est nommé à la tête de l'IFAP-BF. Moussa Simporé dirige depuis le 8 octobre la direction des écoles de formation agropastorale.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Les encaissements cumulés du Fonds de soutien patriotique (FSP) au 29 septembre 2026 s'élèvent à environ :",
+      "o": [
+        "142,6 milliards de FCFA",
+        "162,4 milliards de FCFA",
+        "200,0 milliards de FCFA",
+        "250,2 milliards de FCFA"
+      ],
+      "r": 3,
+      "x": "Le montant collecté au 29 septembre 2026 est en hausse de 75 % sur un an. À la même date en 2025, le FSP n'en comptait que 142,6 milliards.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le taux de réalisation de l'objectif annuel de 200 milliards de FCFA du Fonds de soutien patriotique (FSP), au 29 septembre 2026, est de :",
+      "o": [
+        "81,19 %",
+        "98,40 %",
+        "112,75 %",
+        "125,08 %"
+      ],
+      "r": 3,
+      "x": "Le FSP atteint 125,08 % de son objectif annuel dès fin septembre. Au 28 juin 2026, le taux n'était que de 81,19 %.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "L'opération d'aménagement hydroagricole lancée le 20 octobre 2026 dans la région du Nakambé vise l'irrigation de :",
+      "o": [
+        "10 000 hectares",
+        "25 000 hectares",
+        "35 000 hectares",
+        "50 000 hectares"
+      ],
+      "r": 3,
+      "x": "L'opération vise 50 000 hectares irrigués supplémentaires d'ici octobre 2027. Son coût dépasse 254 milliards de FCFA.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "L'opération commando d'aménagement irrigué du Nakambé a été lancée le 20 octobre 2026 à :",
+      "o": [
+        "Garango",
+        "Béguédo",
+        "Niaogho",
+        "Tenkodogo"
+      ],
+      "r": 2,
+      "x": "Le lancement a eu lieu à Niaogho, dans la soirée du 20 octobre 2026. Le même jour, une rizerie publique a été inaugurée à Bagré.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le nombre de Volontaires pour la défense de la patrie (VDP) agricoles mobilisés pour l'aménagement hydroagricole du Nakambé est d'environ :",
+      "o": [
+        "8 000",
+        "10 000",
+        "12 000",
+        "15 000"
+      ],
+      "r": 0,
+      "x": "Environ 8 000 VDP agricoles participent aux travaux. Ils travaillent aux côtés du Génie militaire, de la SONATER et de l'ONBAH.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La capacité journalière de la rizerie publique inaugurée à Bagré le 20 octobre 2026 est de :",
+      "o": [
+        "25 tonnes de paddy",
+        "50 tonnes de paddy",
+        "100 tonnes de paddy",
+        "200 tonnes de paddy"
+      ],
+      "r": 2,
+      "x": "La rizerie décortique 100 tonnes de riz paddy par jour. Elle est gérée par la société d'État Faso Agropôles.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La première session ministérielle du dialogue entre la Confédération des États du Sahel (AES) et la Communauté économique des États de l'Afrique de l'Ouest (CEDEAO) s'est tenue le 17 octobre 2026 à :",
+      "o": [
+        "Dakar",
+        "Abuja",
+        "Lomé",
+        "Accra"
+      ],
+      "r": 0,
+      "x": "La session s'est déroulée à Dakar. Elle a été coprésidée par le ministre sénégalais Cheikh Niang pour la CEDEAO.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le ministre burkinabè qui a coprésidé, pour l'AES, la session ministérielle AES-CEDEAO d'octobre 2026 est :",
+      "o": [
+        "Bassolma Bazié",
+        "Célestin Simporé",
+        "Mahamadou Sana",
+        "Karamoko Jean-Marie Traoré"
+      ],
+      "r": 3,
+      "x": "Karamoko Jean-Marie Traoré, ministre des Affaires étrangères, préside le comité ministériel de l'AES. Il a conduit la délégation confédérale à cette session.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le mécanisme retenu en octobre 2026 pour préparer un accord-cadre de coopération entre l'AES et la CEDEAO consiste en :",
+      "o": [
+        "un médiateur de l'Union africaine",
+        "un sommet extraordinaire des chefs d'État",
+        "des groupes de travail thématiques conjoints",
+        "un secrétariat permanent installé à Niamey"
+      ],
+      "r": 2,
+      "x": "Les deux parties ont créé des groupes de travail thématiques conjoints. Ils rendront compte aux ministres avant une prochaine session.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La session ministérielle AES-CEDEAO d'octobre 2026 prolongeait des consultations entamées le 22 mai 2025 à :",
+      "o": [
+        "Niamey",
+        "Ouagadougou",
+        "Abidjan",
+        "Bamako"
+      ],
+      "r": 3,
+      "x": "Les premières consultations formelles s'étaient tenues à Bamako le 22 mai 2025. La date de la prochaine session sera fixée par voie diplomatique.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La décision guinéenne interdisant l'orpaillage dans plusieurs zones de Siguiri, à l'origine du retour massif de Burkinabè, date du :",
+      "o": [
+        "18 octobre 2026",
+        "2 novembre 2026",
+        "9 novembre 2026",
+        "16 novembre 2026"
+      ],
+      "r": 1,
+      "x": "Le 2 novembre 2026, la Guinée a interdit l'orpaillage dans les lits de cours d'eau, les forêts classées et les aires protégées de Siguiri. Des milliers d'orpailleurs maliens et burkinabè ont dû quitter les sites.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le poste frontalier malien par lequel ont transité la plupart des orpailleurs refoulés de Guinée en novembre 2026 est :",
+      "o": [
+        "Kourémalé",
+        "Kadiolo",
+        "Diboli",
+        "Hèrèmakono"
+      ],
+      "r": 0,
+      "x": "Les arrivées se sont concentrées à Kourémalé, à la frontière guinéo-malienne. Le Premier ministre malien Abdoulaye Maïga s'y est rendu le 8 novembre.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le premier convoi de Burkinabè revenus de Guinée est arrivé dans la nuit du 6 au 7 novembre 2026 à :",
+      "o": [
+        "Ouagadougou",
+        "Banfora",
+        "Orodara",
+        "Bobo-Dioulasso"
+      ],
+      "r": 3,
+      "x": "Le premier convoi, d'environ 3 400 personnes, a été accueilli au stade omnisport de la ville. L'accueil est géré par le Conseil régional de secours d'urgence (CORESUR) du Guiriko.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Selon le Conseil national de secours d'urgence et de réhabilitation (CONASUR), le nombre de Burkinabè revenus de Guinée et accueillis au 10 novembre 2026 est de :",
+      "o": [
+        "9 408",
+        "17 216",
+        "26 624",
+        "35 832"
+      ],
+      "r": 2,
+      "x": "Le CONASUR a recensé 26 624 rapatriés au 10 novembre 2026. Ils sont arrivés en cinq convois à bord de 153 cars et 44 camions.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La session du Conseil des ministres de la Confédération des États du Sahel (AES) tenue à Ouagadougou les 11 et 12 novembre 2026 a examiné la mise en œuvre de la feuille de route de :",
+      "o": [
+        "l'An I",
+        "l'An II",
+        "l'An III",
+        "la Vision 2063"
+      ],
+      "r": 1,
+      "x": "Les ministres ont fait le point de la feuille de route de l'An II. Ils préparent la prochaine session du Collège des chefs d'État.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La cérémonie d'ouverture du Conseil des ministres de l'AES de novembre 2026 à Ouagadougou a été présidée par :",
+      "o": [
+        "Karamoko Jean-Marie Traoré",
+        "Célestin Simporé",
+        "Rimtalba Jean Emmanuel Ouédraogo",
+        "Bassolma Bazié"
+      ],
+      "r": 1,
+      "x": "Le Général Célestin Simporé, ministre d'État chargé de la Guerre, a présidé l'ouverture. Bassolma Bazié, président de la Commission nationale AES, y assistait.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le nombre de personnes inscrites à la réserve militaire en neuf mois, annoncé lors du 66e anniversaire des Forces armées nationales, est d'environ :",
+      "o": [
+        "26 000",
+        "46 000",
+        "66 000",
+        "86 000"
+      ],
+      "r": 3,
+      "x": "Environ 86 000 personnes se sont inscrites en neuf mois, selon le commandant de la première région militaire. La réserve militaire était le thème de ce 66e anniversaire.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le 66e anniversaire des Forces armées nationales, célébré en novembre 2026, rappelle que l'armée burkinabè a été créée en :",
+      "o": [
+        "1958",
+        "1960",
+        "1962",
+        "1966"
+      ],
+      "r": 1,
+      "x": "Les Forces armées nationales ont été créées le 1er novembre 1960. Le 1er novembre 2026 marque donc leur 66e anniversaire.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le discours d'ouverture du SIAO 2026, prononcé au nom du Président du Faso, a été lu par le ministre en charge de l'artisanat :",
+      "o": [
+        "Serge Gnaniodem Poda",
+        "Gilbert Ouédraogo",
+        "Jacques Sosthène Dingara",
+        "Aboubakar Nacanabo"
+      ],
+      "r": 0,
+      "x": "Serge Gnaniodem Poda a lu le discours du Capitaine Ibrahim Traoré. Le Ghana y était le pays invité d'honneur.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La journée dédiée au Mali et au Niger, invités spéciaux du SIAO 2026, s'est tenue le :",
+      "o": [
+        "1er novembre 2026",
+        "2 novembre 2026",
+        "4 novembre 2026",
+        "7 novembre 2026"
+      ],
+      "r": 2,
+      "x": "La journée Mali-Niger a eu lieu le 4 novembre 2026, au nom de la fraternité sahélienne. Le Niger y était représenté par 200 artisans répartis sur 54 stands.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le nombre d'exposants attendus à la 18e édition du SIAO, en 2026, était de plus de :",
+      "o": [
+        "6 000",
+        "9 000",
+        "12 000",
+        "15 000"
+      ],
+      "r": 0,
+      "x": "Les organisateurs attendaient plus de 6 000 exposants. Ils prévoyaient aussi environ 800 000 visiteurs.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le pays invité d'honneur de la 2e édition de la foire virtuelle Le Faso Digital, en octobre 2026, est :",
+      "o": [
+        "le Rwanda",
+        "le Kenya",
+        "le Maroc",
+        "le Sénégal"
+      ],
+      "r": 0,
+      "x": "Le Rwanda était à l'honneur de cette 2e édition, close le 24 octobre 2026. La foire est organisée par Lefaso.net.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La solution numérique lauréate du premier prix de l'Autorité de régulation des communications électroniques et des postes (ARCEP) au Faso Digital 2026 est :",
+      "o": [
+        "EduBF",
+        "Faso Parking",
+        "MU-POL",
+        "Jinkasan"
+      ],
+      "r": 2,
+      "x": "MU-POL a remporté le premier prix de l'ARCEP, doté d'un million de FCFA. EduBF a reçu le prix du public.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le colloque international annoncé par Lefaso.net pour 2028, après une pause du Faso Digital en 2027, portera sur :",
+      "o": [
+        "l'intelligence artificielle en Afrique",
+        "le financement des start-up sahéliennes",
+        "la cybersécurité des administrations",
+        "les 30 ans de la presse en ligne en Afrique de l'Ouest"
+      ],
+      "r": 3,
+      "x": "Le colloque fera le bilan de trente ans de presse en ligne en Afrique de l'Ouest. Le Faso Digital fera une pause en 2027.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le nombre de solutions numériques présentées à la 2e édition du Faso Digital, en octobre 2026, est de :",
+      "o": [
+        "95",
+        "148",
+        "201",
+        "263"
+      ],
+      "r": 2,
+      "x": "Organisée du 17 au 24 octobre 2026 par Lefaso.net sous le thème « Inclusion, souveraineté, innovation : vers un Burkina digital pour tous » (avec le Rwanda comme pays invité d'honneur), la 2e édition de la foire virtuelle Le Faso Digital a présenté 201 solutions numériques retenues (sur 208 candidatures enregistrées, contre 34 lors de la 1re édition).",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le documentaire « Kiidiga, le cri des 333 collines », présenté en octobre 2026, retrace la résistance du royaume de :",
+      "o": [
+        "Yatenga",
+        "Tenkodogo",
+        "Boussouma",
+        "Gourma"
+      ],
+      "r": 2,
+      "x": "Le film raconte la résistance du royaume de Boussouma à la conquête coloniale française. Son avant-première a eu lieu le 18 octobre 2026 à Ouagadougou.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La colonne coloniale française combattue en octobre 1896, évoquée dans le documentaire « Kiidiga », est :",
+      "o": [
+        "la colonne Monteil",
+        "la colonne Voulet-Chanoine",
+        "la colonne Archinard",
+        "la colonne Crozat"
+      ],
+      "r": 1,
+      "x": "Les troupes de la colonne Voulet-Chanoine ont livré bataille à Kiidiga le 17 octobre 1896. Les combats se sont poursuivis le lendemain sur les collines de Namsiguia.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le terme « Kiidiga », titre d'un documentaire présenté en octobre 2026, désigne :",
+      "o": [
+        "un bras du fleuve Nakambé",
+        "une colline sacrée de Mané",
+        "le palais royal de Boussouma",
+        "un chant de guerre moaga"
+      ],
+      "r": 0,
+      "x": "Projeté en avant-première le 18 octobre 2026 pour commémorer les 130 ans des batailles d'octobre 1896, le documentaire « Kiidiga, le cri des 333 collines » d'Ismaël Compaoré tire son nom d'un bras du fleuve Nakambé passant par Mané (signifiant « là où il y a eu beaucoup de morts »). Il retrace l'héroïque résistance du royaume de Boussouma face à la colonne coloniale Voulet-Chanoine.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le réalisateur du documentaire « Kiidiga, le cri des 333 collines » est :",
+      "o": [
+        "Apolline Traoré",
+        "Boubakar Diallo",
+        "Ismaël Compaoré",
+        "Michel Zongo"
+      ],
+      "r": 2,
+      "x": "Ismaël Compaoré signe ce documentaire historique. Il avait déjà présenté le film « Foulsaré » au FESPACO 2025.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Les 2es Jeux de la Confédération des États du Sahel (AES), tenus à Ouagadougou en septembre 2026, comptaient au programme :",
+      "o": [
+        "7 disciplines",
+        "9 disciplines",
+        "11 disciplines",
+        "13 disciplines"
+      ],
+      "r": 2,
+      "x": "Les Jeux ont réuni 11 disciplines sportives du 7 au 16 septembre 2026. Le Burkina Faso a terminé en tête du tableau des médailles.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le nombre d'athlètes attendus aux 2es Jeux de la Confédération des États du Sahel (AES), en septembre 2026, était de :",
+      "o": [
+        "376",
+        "456",
+        "536",
+        "616"
+      ],
+      "r": 0,
+      "x": "Les trois pays ont engagé 376 athlètes. La compétition s'est achevée au Palais des sports de Ouaga 2000.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La 3e édition des Jeux de la Confédération des États du Sahel (AES), prévue en 2027, se tiendra à :",
+      "o": [
+        "Niamey",
+        "Bamako",
+        "Bobo-Dioulasso",
+        "Tombouctou"
+      ],
+      "r": 0,
+      "x": "Le Burkina Faso a passé le flambeau au Niger lors de la clôture du 16 septembre 2026. Les Jeux de 2027 auront lieu à Niamey.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La 31e Conférence des Parties sur les changements climatiques (COP31) s'est ouverte le 9 novembre 2026 à :",
+      "o": [
+        "Antalya",
+        "Istanbul",
+        "Sydney",
+        "Bonn"
+      ],
+      "r": 0,
+      "x": "La COP31 se tient à Antalya, en Turquie, du 9 au 20 novembre 2026. La COP30 avait eu lieu à Belém, au Brésil.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le pays qui conduit les négociations de la COP31, organisée en Turquie, est :",
+      "o": [
+        "le Brésil",
+        "la Nouvelle-Zélande",
+        "l'Azerbaïdjan",
+        "l'Australie"
+      ],
+      "r": 3,
+      "x": "Un accord a confié à l'Australie la conduite des négociations, la Turquie accueillant la conférence. La Turquie revendique toutefois la décision finale.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le président de la COP31, ministre turc de l'Environnement, de l'Urbanisme et du Changement climatique, est :",
+      "o": [
+        "Hakan Fidan",
+        "Murat Kurum",
+        "Mehmet Şimşek",
+        "Cevdet Yılmaz"
+      ],
+      "r": 1,
+      "x": "Murat Kurum préside la COP31. Hakan Fidan est ministre des Affaires étrangères et Mehmet Şimşek ministre des Finances.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le pays qui n'envoie pas de délégation officielle à la COP31 de novembre 2026 est :",
+      "o": [
+        "les États-Unis",
+        "l'Inde",
+        "la Chine",
+        "la Russie"
+      ],
+      "r": 0,
+      "x": "Pour la deuxième année consécutive, le gouvernement des États-Unis (administration Trump) n'a envoyé aucune délégation officielle à la COP31 réunie du 9 au 20 novembre 2026 à Antalya, en Turquie, à la suite de son retrait effectif de l'Accord de Paris en janvier 2026. Ils sont pourtant le deuxième émetteur mondial de gaz à effet de serre, après la Chine.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "L'ancien président sénégalais Macky Sall a retiré sa candidature au poste de Secrétaire général de l'Organisation des Nations unies (ONU) le :",
+      "o": [
+        "2 mars 2026",
+        "18 septembre 2026",
+        "17 octobre 2026",
+        "9 novembre 2026"
+      ],
+      "r": 2,
+      "x": "L'ancien président sénégalais Macky Sall a officiellement retiré sa candidature le 17 octobre 2026, au lendemain d'un vote indicatif défavorable au Conseil de sécurité de l'ONU. Cette décision visait à favoriser une candidature consensuelle, les votes privilégiant l'Amérique latine et les Caraïbes.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La candidature de Macky Sall au poste de Secrétaire général de l'ONU avait été présentée par :",
+      "o": [
+        "le Sénégal",
+        "le Burundi",
+        "le Maroc",
+        "l'Union africaine"
+      ],
+      "r": 1,
+      "x": "C'est le Burundi qui a officiellement déposé la candidature de Macky Sall, le 2 mars 2026. Sept candidats restaient en lice lors du vote informel du Conseil de sécurité du 16 octobre 2026.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le 15 octobre 2026, le Burkina Faso a commémoré l'assassinat du Président Thomas Sankara, survenu :",
+      "o": [
+        "34 ans plus tôt",
+        "39 ans plus tôt",
+        "44 ans plus tôt",
+        "49 ans plus tôt"
+      ],
+      "r": 1,
+      "x": "Thomas Sankara a été assassiné le 15 octobre 1987. L'année 2026 marquait donc le 39e anniversaire de sa mort.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "Le 31 octobre 2026, le Burkina Faso a rendu hommage aux victimes de l'insurrection populaire survenue en octobre :",
+      "o": [
+        "2011",
+        "2014",
+        "2015",
+        "2022"
+      ],
+      "r": 1,
+      "x": "L'insurrection populaire des 30 et 31 octobre 2014 a conduit à la chute de Blaise Compaoré. La tentative de putsch de septembre 2015 est un événement distinct.",
+      "_batchId": "actualite/2026-11-24/LOT3"
+    },
+    {
+      "q": "La loi sur les jours fériés adoptée le 9 janvier 2026 ramène le nombre de jours chômés et payés au Burkina Faso de 15 à :",
+      "o": [
+        "11",
+        "9",
+        "12",
+        "13"
+      ],
+      "r": 0,
+      "x": "La loi retient 11 jours chômés et payés au lieu de 15. Plusieurs anciennes fêtes deviennent des journées de commémoration non chômées.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Parmi les dates suivantes, celle qui figure parmi les jours chômés et payés retenus par la loi du 9 janvier 2026 est :",
+      "o": [
+        "le 4 août",
+        "le 15 mai",
+        "le 15 octobre",
+        "le 31 octobre"
+      ],
+      "r": 1,
+      "x": "Le 15 mai, journée des coutumes et traditions, reste chômé et payé. Le 4 août et le 15 octobre deviennent des journées commémoratives non chômées.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Avec la loi du 9 janvier 2026, le 5 août, date de la proclamation de l'indépendance, devient :",
+      "o": [
+        "une journée de commémoration non chômée",
+        "une fête chômée et payée",
+        "une demi-journée chômée",
+        "une fête supprimée du calendrier"
+      ],
+      "r": 0,
+      "x": "Le 5 août figure désormais parmi les journées de commémoration non chômées. La fête nationale du 11 décembre reste chômée.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La loi relative aux jours chômés et payés adoptée le 9 janvier 2026 porte le numéro :",
+      "o": [
+        "n°012-2025/ALT",
+        "n°001-2026/ALT",
+        "n°015-2025/ALT",
+        "n°027-2024/ALT"
+      ],
+      "r": 1,
+      "x": "Il s'agit de la loi n°001-2026/ALT, première loi de l'année 2026. Elle abroge la loi de 2015 sur les fêtes légales.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "L'économie annuelle attendue de la réduction du nombre de jours chômés et payés, adoptée en janvier 2026, est estimée à environ :",
+      "o": [
+        "6,9 milliards de FCFA",
+        "11,9 milliards de FCFA",
+        "16,9 milliards de FCFA",
+        "21,9 milliards de FCFA"
+      ],
+      "r": 2,
+      "x": "Le gouvernement estime le gain à environ 16,9 milliards de FCFA par an. Ce chiffre a été avancé lors de l'adoption de la loi par l'Assemblée législative de Transition.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "L'Agence burkinabè pour l'emploi (ABPE), créée le 29 janvier 2026, résulte de la fusion de l'Agence nationale pour l'emploi (ANPE) et de :",
+      "o": [
+        "le Fonds d'appui à la formation professionnelle (FAFPA)",
+        "l'Observatoire national de l'emploi et de la formation (ONEF)",
+        "l'Agence nationale de la promotion de l'emploi des jeunes",
+        "le Fonds d'appui aux initiatives des jeunes (FAIJ)"
+      ],
+      "r": 1,
+      "x": "L'ABPE regroupe l'ANPE et l'ONEF. Le FAFPA a été fondu, en mai 2026, dans le Fonds de soutien à l'éducation et à la recherche.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le Conseil des ministres du 29 janvier 2026 a créé une agence chargée :",
+      "o": [
+        "de la sécurité routière",
+        "de l'entretien des pistes rurales",
+        "du contrôle technique automobile",
+        "de la gestion du péage"
+      ],
+      "r": 3,
+      "x": "Le Conseil a créé l'Agence de gestion du péage (AGP) et approuvé ses statuts. Elle doit professionnaliser la collecte des recettes de péage.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "L'Institut supérieur de l'aéronautique créé par le Conseil des ministres du 29 janvier 2026 est implanté à :",
+      "o": [
+        "Ouagadougou",
+        "Koudougou",
+        "Bobo-Dioulasso",
+        "Ouahigouya"
+      ],
+      "r": 2,
+      "x": "L'Institut supérieur de l'aéronautique de Bobo-Dioulasso (ISAB) forme aux métiers de l'aviation militaire et civile. Il complète l'offre de formation aéronautique du pays.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La part du capital d'Air Burkina cédée par un particulier à l'État pour un franc symbolique, régularisée en janvier 2026, représente :",
+      "o": [
+        "1 %",
+        "5 %",
+        "10 %",
+        "15 %"
+      ],
+      "r": 0,
+      "x": "Les 111 dernières actions privées, soit 1 % du capital, ont été cédées pour un franc symbolique. L'État est ainsi devenu actionnaire unique d'Air Burkina.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le fonds dissous par le Conseil des ministres du 29 janvier 2026, dont la mission est transférée au ministère de l'Économie et des Finances, est :",
+      "o": [
+        "le Fonds d'appui à la presse privée",
+        "le Fonds de l'eau et de l'équipement rural",
+        "le Fonds national de solidarité",
+        "le Fonds spécial routier"
+      ],
+      "r": 3,
+      "x": "Le Fonds spécial routier du Burkina (FSR-B) a été dissous. Ses missions de financement de l'entretien routier sont reprises par le ministère de l'Économie.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le nouveau référentiel de développement adopté le 29 janvier 2026 pour la période 2026-2030 est :",
+      "o": [
+        "le Plan RELANCE",
+        "le PA-SD",
+        "le PNDES",
+        "la SCADD"
+      ],
+      "r": 0,
+      "x": "Le Plan RELANCE 2026-2030 repose sur quatre piliers. Le PA-SD était le plan de la Transition, le PNDES et la SCADD des référentiels antérieurs.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le ministère de la Construction de la Patrie, créé lors du remaniement du 12 janvier 2026, regroupe les anciens ministères en charge :",
+      "o": [
+        "des Infrastructures et de l'Urbanisme",
+        "de l'Énergie et des Mines",
+        "de l'Industrie et du Commerce",
+        "de l'Agriculture et de l'Eau"
+      ],
+      "r": 0,
+      "x": "Ce ministère fusionne le ministère des Infrastructures et du Désenclavement et celui de l'Urbanisme et de l'Habitat. Sa nouvelle organisation a été adoptée le 29 janvier 2026.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La Société Faso Agropôle (SOFA), créée le 5 février 2026, coordonne cinq agropôles. Le site qui n'en fait pas partie est :",
+      "o": [
+        "le Yatenga",
+        "Samendéni",
+        "le Sourou",
+        "la Comoé"
+      ],
+      "r": 0,
+      "x": "Les cinq agropôles sont le Sourou, le Nakambé, Samendéni, la Comoé et le Liptako-Gourma. Le Yatenga n'en fait pas partie.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le premier directeur général de la Société Faso Agropôle (SOFA), nommé le 19 février 2026, est :",
+      "o": [
+        "Modeste Yaméogo",
+        "Amed Sory",
+        "Oula Damien Ouattara",
+        "Yacouba Guigma"
+      ],
+      "r": 2,
+      "x": "Oula Damien Ouattara dirige la SOFA, holding des cinq agropôles. Il a été nommé deux semaines après la création de la société.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le Centre universitaire de Gaoua, érigé en université le 5 février 2026, porte désormais le nom de :",
+      "o": [
+        "Université SIB Sié Faustin",
+        "Université Nazi Boni",
+        "Université Daniel Ouezzin Coulibaly",
+        "Université Thomas Sankara"
+      ],
+      "r": 0,
+      "x": "Il devient l'Université SIB Sié Faustin (U2SF). Nazi Boni, Daniel Ouezzin Coulibaly et Thomas Sankara donnent leur nom à d'autres universités publiques.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Entre 2017 et 2025, les effectifs étudiants du Centre universitaire de Gaoua sont passés de 165 à :",
+      "o": [
+        "1 166",
+        "1 466",
+        "1 766",
+        "2 066"
+      ],
+      "r": 0,
+      "x": "Le centre est passé de 165 à 1 166 étudiants en huit ans. Ses enseignants permanents sont passés de 2 à 37.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Selon le décret adopté le 12 février 2026, une entreprise doit construire ou acquérir son siège social au Burkina Faso lorsque son chiffre d'affaires moyen annuel atteint :",
+      "o": [
+        "1 milliard de FCFA",
+        "5 milliards de FCFA",
+        "10 milliards de FCFA",
+        "20 milliards de FCFA"
+      ],
+      "r": 1,
+      "x": "L'obligation vise les entreprises dont le chiffre d'affaires moyen annuel hors taxes atteint 5 milliards de FCFA sur trois ans. Le délai court à compter de l'approbation du projet immobilier.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le délai accordé aux grandes entreprises pour se doter d'un siège social, selon le décret du 12 février 2026, est de :",
+      "o": [
+        "12 mois",
+        "24 mois",
+        "30 mois",
+        "36 mois"
+      ],
+      "r": 3,
+      "x": "Les entreprises concernées disposent de 36 mois pour construire ou acquérir leur siège. Le délai part de l'approbation de leur projet immobilier.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Depuis la réforme adoptée le 12 février 2026, le commerce de détail au Burkina Faso est réservé aux nationaux, aux ressortissants des pays africains accordant la réciprocité et aux ressortissants :",
+      "o": [
+        "de la CEDEAO",
+        "de l'AES",
+        "de l'UEMOA",
+        "de l'Union africaine"
+      ],
+      "r": 1,
+      "x": "Les ressortissants de la Confédération des États du Sahel sont assimilés aux nationaux pour le commerce de détail. Les achats « bord champ » sont interdits aux étrangers.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le nombre de Martyrs de la Nation reconnus par le Conseil des ministres du 12 février 2026 est de :",
+      "o": [
+        "315",
+        "360",
+        "405",
+        "454"
+      ],
+      "r": 3,
+      "x": "Le Conseil a reconnu 454 Martyrs de la Nation. Ce statut honore les personnes tombées pour la défense de la patrie.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le nombre d'Invalides de la Nation reconnus lors du Conseil des ministres du 12 février 2026 est de :",
+      "o": [
+        "47",
+        "87",
+        "127",
+        "167"
+      ],
+      "r": 1,
+      "x": "Quatre-vingt-sept personnes ont reçu le statut d'Invalide de la Nation. Ce statut ouvre droit à une prise en charge par l'État.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La baisse des prix des médicaments essentiels génériques de la Centrale d'achat (CAMEG), annoncée en février 2026, est entrée en vigueur le :",
+      "o": [
+        "1er mars 2026",
+        "1er avril 2026",
+        "1er mai 2026",
+        "1er juin 2026"
+      ],
+      "r": 0,
+      "x": "Les nouveaux prix s'appliquent depuis le 1er mars 2026. Les baisses atteignent 53,47 % pour les injectables et 20 % pour les sirops.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La baisse des prix appliquée en 2026 à certaines formes de comprimés de la CAMEG atteint :",
+      "o": [
+        "20,00 %",
+        "53,47 %",
+        "67,27 %",
+        "72,73 %"
+      ],
+      "r": 2,
+      "x": "Certains comprimés baissent de 67,27 %. La baisse maximale, 72,73 %, concerne certains consommables médicaux.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "L'Institut de l'enseignement militaire supérieur, rattaché en février 2026 à l'État-major général des Armées, porte le nom de :",
+      "o": [
+        "Naaba Kango",
+        "Tiéfo Amoro",
+        "Babatou",
+        "Samory Touré"
+      ],
+      "r": 1,
+      "x": "Tiéfo Amoro, roi des Tiéfo, a résisté aux troupes de Samory à Noumoudara en 1897. Le nom honore cette figure de la résistance.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le coût global des projets énergétiques adoptés pour l'année 2026 par le Conseil des ministres du 19 février 2026 est d'environ :",
+      "o": [
+        "104,0 milliards de FCFA",
+        "249,3 milliards de FCFA",
+        "312,6 milliards de FCFA",
+        "418,7 milliards de FCFA"
+      ],
+      "r": 1,
+      "x": "Les projets énergétiques 2026 coûtent environ 249,3 milliards de FCFA TTC. Ils sont financés par l'État, la SONABEL, des promoteurs privés et des partenaires.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Selon le décret du 19 février 2026 sur les délégations spéciales des collectivités territoriales, sont exclus de ces délégations :",
+      "o": [
+        "les enseignants et les infirmiers",
+        "les militaires et les paramilitaires",
+        "les commerçants et les artisans",
+        "les députés et les autorités coutumières"
+      ],
+      "r": 3,
+      "x": "Le décret écarte les députés ainsi que les autorités coutumières, traditionnelles et religieuses. Il retire aussi les chefs de circonscription administrative.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "En février 2026, la participation de l'État dans la société minière KIAKA SA a été portée de 15 % à :",
+      "o": [
+        "30 %",
+        "35 %",
+        "40 %",
+        "50 %"
+      ],
+      "r": 2,
+      "x": "L'État acquiert 25 % supplémentaires et passe de 15 % à 40 % du capital de KIAKA SA. Le permis d'exploitation couvre 54,02 km².",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le Projet d'appui à l'enseignement supérieur (PAESR), approuvé en février 2026 pour 60 milliards de FCFA, prévoit notamment :",
+      "o": [
+        "500 bourses de doctorat",
+        "750 bourses de doctorat",
+        "1 000 bourses de doctorat",
+        "1 500 bourses de doctorat"
+      ],
+      "r": 0,
+      "x": "Le projet finance 500 bourses de doctorat sur cinq ans. Il prévoit aussi des ordinateurs pour 40 000 étudiants.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le taux de pertes d'eau sur le réseau de l'Office national de l'eau et de l'assainissement (ONEA), présenté en février 2026, est de :",
+      "o": [
+        "11,3 %",
+        "18,3 %",
+        "24,3 %",
+        "31,3 %"
+      ],
+      "r": 3,
+      "x": "Près d'un tiers de l'eau produite est perdu, soit 31,3 %. Un plan d'urgence a été adopté pour réduire ces pertes et accroître la production.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le coût du plan d'urgence adopté en février 2026 pour améliorer l'approvisionnement en eau de l'ONEA est de :",
+      "o": [
+        "14,6 milliards de FCFA",
+        "19,6 milliards de FCFA",
+        "24,6 milliards de FCFA",
+        "29,6 milliards de FCFA"
+      ],
+      "r": 0,
+      "x": "Le plan coûte 14,6 milliards de FCFA. Il vise à ajouter plus de 180 000 m³ par jour à une production de 390 410 m³.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Selon le bilan présenté au Conseil des ministres du 19 février 2026, les décès dus au paludisme au Burkina Faso ont baissé entre 2024 et 2025 de :",
+      "o": [
+        "12,45 %",
+        "26,18 %",
+        "32,17 %",
+        "43,83 %"
+      ],
+      "r": 3,
+      "x": "Les décès sont passés de 3 523 à 1 979, soit une baisse de 43,83 %. Les cas ont reculé de 32,17 % sur la même période.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Selon le même bilan de février 2026, le nombre de cas de paludisme enregistrés en 2025 au Burkina Faso est d'environ :",
+      "o": [
+        "3,5 millions",
+        "7,3 millions",
+        "10,8 millions",
+        "14,8 millions"
+      ],
+      "r": 1,
+      "x": "Les cas sont passés de 10 805 020 en 2024 à 7 329 278 en 2025. Le recul est imputé à la prévention et à la prise en charge précoce.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La réforme foncière adoptée le 5 mars 2026 porte le délai de mise en valeur des parcelles à usage d'habitation de 5 à :",
+      "o": [
+        "6 ans",
+        "7 ans",
+        "8 ans",
+        "10 ans"
+      ],
+      "r": 2,
+      "x": "Le délai passe à huit ans. Les décrets fonciers adoptés appliquent la loi n°015-2025/ALT du 21 octobre 2025 portant réorganisation agraire et foncière.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le nombre total de recrutements autorisés dans la fonction publique pour l'année 2026, par le Conseil des ministres du 5 mars 2026, est de :",
+      "o": [
+        "9 512",
+        "12 995",
+        "15 512",
+        "18 495"
+      ],
+      "r": 2,
+      "x": "Le gouvernement a autorisé 15 512 recrutements en 2026. Ce volume couvre à la fois les concours directs et les concours professionnels.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Sur les recrutements autorisés pour 2026 dans la fonction publique, le nombre de postes ouverts aux concours directs est de :",
+      "o": [
+        "2 517",
+        "8 714",
+        "12 995",
+        "14 260"
+      ],
+      "r": 2,
+      "x": "Les concours directs offrent 12 995 places en 2026. Les concours professionnels en comptent 2 517.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La Faso Food and Drug Administration (Faso FDA), créée le 12 mars 2026, résulte de la fusion de l'Agence nationale de régulation pharmaceutique (ANRP) et de :",
+      "o": [
+        "la CAMEG",
+        "l'ANSSEAT",
+        "le LNSP",
+        "l'INSP"
+      ],
+      "r": 1,
+      "x": "La Faso FDA fusionne l'ANRP et l'Agence nationale pour la sécurité sanitaire de l'environnement, de l'alimentation, du travail et des produits de santé (ANSSEAT). Elle contrôle médicaments et aliments.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le directeur général d'Air Burkina nommé le 12 mars 2026, après sa transformation en société d'État, est :",
+      "o": [
+        "Wendkuni Serge Frédéric Zombré",
+        "Taba Doyé",
+        "Harouna Sawadogo",
+        "Elvis Kapioko"
+      ],
+      "r": 0,
+      "x": "Wendkuni Serge Frédéric Zombré prend la direction de la compagnie nationale. Sa nomination suit la transformation d'Air Burkina en société d'État.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La 47e session des Comités consultatifs interafricains du Conseil africain et malgache pour l'enseignement supérieur (CAMES), où le Burkina Faso s'est classé premier, s'est tenue à :",
+      "o": [
+        "Niamey",
+        "Lomé",
+        "Libreville",
+        "N'Djamena"
+      ],
+      "r": 3,
+      "x": "La session s'est déroulée à N'Djamena, au Tchad. Le Burkina Faso y a obtenu la première place au classement général.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le taux de réussite du Burkina Faso à la 47e session des comités consultatifs du CAMES, présenté en mars 2026, est de :",
+      "o": [
+        "86,95 %",
+        "90,15 %",
+        "93,40 %",
+        "96,95 %"
+      ],
+      "r": 3,
+      "x": "Le pays a réussi à 96,95 %, avec 318 candidats inscrits sur les listes d'aptitude sur 328 présentés. Le gouvernement a ensuite autorisé 300 emplois d'enseignants-chercheurs.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le tarif du mètre cube d'eau de la première tranche, unifié en ville et en campagne par la réforme du 2 avril 2026, est de :",
+      "o": [
+        "188 FCFA",
+        "250 FCFA",
+        "325 FCFA",
+        "410 FCFA"
+      ],
+      "r": 0,
+      "x": "Le mètre cube de la première tranche coûte 188 FCFA partout. L'ONEA devient le distributeur unique d'eau potable en ville comme en campagne.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Avant la réforme du 2 avril 2026, le prix du mètre cube d'eau potable en milieu rural était d'environ :",
+      "o": [
+        "200 FCFA",
+        "300 FCFA",
+        "400 FCFA",
+        "500 FCFA"
+      ],
+      "r": 3,
+      "x": "Le mètre cube coûtait 500 FCFA en milieu rural. La baisse dépasse donc 60 %.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le passif social de l'Agence nationale de gestion des soins de santé primaires (AGSP), dont l'apurement a été décidé le 2 avril 2026, s'élève à environ :",
+      "o": [
+        "15 milliards de FCFA",
+        "25 milliards de FCFA",
+        "35 milliards de FCFA",
+        "45 milliards de FCFA"
+      ],
+      "r": 2,
+      "x": "Le passif atteint 35,4 milliards de FCFA à fin 2025. Les gardes doivent être payées en avril et le reste d'ici fin octobre 2026.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le fonds souverain minier créé par le Conseil des ministres du 21 mai 2026 porte le nom de :",
+      "o": [
+        "Faso Sanya",
+        "Faso Boolé",
+        "Siniyan-Sigui",
+        "Wassa Bondo"
+      ],
+      "r": 2,
+      "x": "Le Fonds souverain minier d'investissements du Burkina Faso (FSMIB) s'appelle « Siniyan-Sigui » (Fonds souverain minier d'investissements du Burkina Faso). Il doit transformer la rente aurifère en levier de développement.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La création du fonds souverain minier, en mai 2026, intervient alors que le cours de l'once d'or dépasse :",
+      "o": [
+        "2 000 dollars",
+        "2 500 dollars",
+        "3 000 dollars",
+        "4 000 dollars"
+      ],
+      "r": 3,
+      "x": "Créé en Conseil des ministres le 21 mai 2026 sous le nom de « Siniyan-Sigui », ce dispositif intervient alors que le cours de l'once d'or a franchi le seuil historique de 4 000 dollars américains. Alimenté par les recettes minières excédentaires, il finance des infrastructures stratégiques et constitue une épargne pour les générations futures.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La longueur de voie ferrée à régénérer, selon la déclaration d'utilité publique du 21 mai 2026, est de :",
+      "o": [
+        "622 km",
+        "722 km",
+        "822 km",
+        "922 km"
+      ],
+      "r": 0,
+      "x": "La régénération intégrale porte sur 622 km de voie. Elle doit permettre une vitesse moyenne de 100 km/h.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le projet de régénération ferroviaire déclaré d'utilité publique en mai 2026 porte la charge admissible par essieu de 17 à :",
+      "o": [
+        "18 tonnes",
+        "20 tonnes",
+        "22 tonnes",
+        "25 tonnes"
+      ],
+      "r": 1,
+      "x": "La charge par essieu passera de 17 à 20 tonnes. Le trafic de marchandises lourdes en sera facilité.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le taux de croissance économique du Burkina Faso en 2025, communiqué en Conseil des ministres le 21 mai 2026, est de :",
+      "o": [
+        "4,8 %",
+        "5,3 %",
+        "6,0 %",
+        "6,5 %"
+      ],
+      "r": 1,
+      "x": "La croissance a atteint 5,3 % en 2025, contre 4,8 % en 2024. Pour 2026, elle était alors projetée à 5,7 %, et à 7,7 % avec le Plan RELANCE.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le taux d'inflation enregistré au Burkina Faso en 2025, selon le Conseil des ministres du 21 mai 2026, est de :",
+      "o": [
+        "-0,5 %",
+        "0,8 %",
+        "2,1 %",
+        "4,2 %"
+      ],
+      "r": 0,
+      "x": "L'inflation est négative en 2025, à -0,5 %. Elle recule de 4,7 points par rapport à 2024.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le taux de recouvrement des recettes budgétaires au premier trimestre 2026, par rapport à l'objectif trimestriel, est de :",
+      "o": [
+        "92,71 %",
+        "98,40 %",
+        "107,88 %",
+        "112,05 %"
+      ],
+      "r": 2,
+      "x": "L'État a recouvré 807,56 milliards de FCFA pour un objectif de 748,60 milliards au 31 mars 2026. Le taux dépasse donc 100 %.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le nombre total de candidats aux examens scolaires de 2026 au Burkina Faso, annoncé en mai 2026, est d'environ :",
+      "o": [
+        "459 174",
+        "559 174",
+        "659 174",
+        "759 174"
+      ],
+      "r": 3,
+      "x": "Les examens 2026 réunissent 759 174 candidats. Le ministère de l'Éducation de base en compte 385 543 et celui du secondaire 373 631.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La 30e édition du Festival panafricain du cinéma et de la télévision de Ouagadougou (FESPACO) se tiendra :",
+      "o": [
+        "du 20 au 27 mars 2027",
+        "du 22 au 29 février 2027",
+        "du 25 février au 4 mars 2027",
+        "du 6 au 13 mars 2027"
+      ],
+      "r": 0,
+      "x": "La 30e édition est programmée du 20 au 27 mars 2027. Elle a été présentée en Conseil des ministres le 21 mai 2026.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le thème retenu pour la 30e édition du FESPACO est :",
+      "o": [
+        "« Cinémas d'Afrique et développement endogène »",
+        "« Cinémas d'Afrique et identités culturelles »",
+        "« Cinémas d'Afrique et souveraineté numérique »",
+        "« Cinémas d'Afrique et mémoire des peuples »"
+      ],
+      "r": 0,
+      "x": "Le thème associe le cinéma africain au développement endogène. Créé en 1969, le FESPACO se tient tous les deux ans à Ouagadougou.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le décret du 21 mai 2026 réglemente l'abattage, les mouvements et l'exportation des ânes, des chevaux et :",
+      "o": [
+        "des chèvres",
+        "des porcs",
+        "des bœufs",
+        "des chameaux"
+      ],
+      "r": 3,
+      "x": "Le décret vise les asins, les équins et les camélins. Il institue un agrément de commerçant et la saisie des animaux en cas d'infraction.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le projet de loi sur les infractions en matière de métrologie, adopté le 21 mai 2026, remplace une zatu datant de :",
+      "o": [
+        "1976",
+        "1986",
+        "1996",
+        "2006"
+      ],
+      "r": 1,
+      "x": "Le texte en vigueur était la zatu n°86-021/CNR/PRES du 24 mars 1986. La réforme s'aligne sur un règlement de l'UEMOA de 2014.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La Société industrielle burkinabè de matériels hydrauliques (SOCIMAH), créée le 29 mai 2026, a pour mission principale de fabriquer :",
+      "o": [
+        "des pompes solaires pour forages",
+        "des compteurs d'eau intelligents à prépaiement",
+        "des tuyaux en PVC pour l'irrigation",
+        "des châteaux d'eau préfabriqués"
+      ],
+      "r": 1,
+      "x": "La SOCIMAH fabrique et assemble des compteurs d'eau intelligents à prépaiement. L'ONEA importe aujourd'hui plus de 130 000 compteurs par an.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La part de l'État dans le capital d'un milliard de FCFA de la SOCIMAH, société d'économie mixte créée en mai 2026, est de :",
+      "o": [
+        "51 %",
+        "60 %",
+        "70 %",
+        "80 %"
+      ],
+      "r": 2,
+      "x": "L'État détient 70 % du capital et le secteur privé 30 %. Le capital social est d'un milliard de FCFA.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le capital de la Grande Imprimerie du Faso (GIF), société d'État créée le 29 mai 2026, est de :",
+      "o": [
+        "1 milliard de FCFA",
+        "2 milliards de FCFA",
+        "3 milliards de FCFA",
+        "5 milliards de FCFA"
+      ],
+      "r": 3,
+      "x": "Le capital de la GIF est entièrement détenu par l'État. Elle imprime les documents administratifs officiels et les manuels scolaires.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le Fonds de soutien à l'éducation et à la recherche « Bângr Baoobo » (FOSER) résulte de la fusion de :",
+      "o": [
+        "deux fonds",
+        "trois fonds",
+        "quatre fonds",
+        "cinq fonds"
+      ],
+      "r": 1,
+      "x": "Le FOSER regroupe le FONER, le FONRID et le FAFPA. Il finance les études, la recherche et la formation professionnelle.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le décret du 29 mai 2026 ramène le délai de traitement des demandes d'avis sur les évaluations environnementales de 122 jours à :",
+      "o": [
+        "16 jours",
+        "26 jours",
+        "36 jours",
+        "46 jours"
+      ],
+      "r": 1,
+      "x": "Le délai des avis passe de 122 à 26 jours. Celui des audits environnementaux passe de 60 à 16 jours.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le nombre de membres de l'Observatoire national de biosécurité, réduit par le décret du 29 mai 2026, passe de 33 à :",
+      "o": [
+        "15",
+        "22",
+        "25",
+        "28"
+      ],
+      "r": 1,
+      "x": "L'Observatoire compte désormais 22 membres. Ses sessions sont limitées à deux jours au maximum.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le directeur général de Yennenga Holding SA, nommé le 29 mai 2026, est :",
+      "o": [
+        "Abdoulaye Bengaly",
+        "Edmond Hien",
+        "Maxime Compaoré",
+        "Abdoul Kader Koné"
+      ],
+      "r": 0,
+      "x": "L'économiste Abdoulaye Bengaly prend la tête de Yennenga Holding. La holding gère les parts de l'État dans des banques et une société de réassurance.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le nombre d'œuvres en compétition à la 29e édition des Prix Galian, dont le palmarès a été proclamé le 19 juin 2026, est de :",
+      "o": [
+        "134",
+        "178",
+        "224",
+        "268"
+      ],
+      "r": 3,
+      "x": "La 29e édition a enregistré 134 candidatures pour 268 œuvres. Les Prix Galian récompensent les meilleurs journalistes burkinabè.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Parmi les filières suivantes, celle qui figure au programme de l'Académie technologique du Faso (ATF), créée le 2 juillet 2026, est :",
+      "o": [
+        "la comptabilité",
+        "le droit des affaires",
+        "le nucléaire",
+        "la sociologie"
+      ],
+      "r": 2,
+      "x": "L'ATF forme notamment aux métiers du nucléaire. Elle vise les technologies de pointe et accueille des élèves sélectionnés sur concours.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "L'Agence nationale des bassins hydrographiques (ANABH) résulte de la fusion de :",
+      "o": [
+        "deux agences de l'eau",
+        "trois agences de l'eau",
+        "quatre agences de l'eau",
+        "cinq agences de l'eau"
+      ],
+      "r": 3,
+      "x": "Adoptée en Conseil des ministres le 2 juillet 2026, la création de l'Agence nationale des bassins hydrographiques (ANABH) fusionne les cinq agences de l'eau du pays (Nakambé, Mouhoun, Cascades, Gourma et Liptako) en une seule entité. Placée sous la tutelle du ministère chargé de l'Eau, elle optimise la gestion intégrée des ressources hydriques nationales.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le premier directeur général de l'Agence nationale des bassins hydrographiques (ANABH), nommé le 9 juillet 2026, est :",
+      "o": [
+        "Pascal Thiombiano",
+        "Patindé Belem",
+        "Boukaré Sabo",
+        "Frédéric Kaboré"
+      ],
+      "r": 2,
+      "x": "Boukaré Sabo dirige la nouvelle agence, chargée de la gestion intégrée des ressources en eau. Il a été nommé une semaine après sa création.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La capacité nationale de production de ciment, citée lors de la création de CIM-SAHEL en juillet 2026, est de :",
+      "o": [
+        "1 à 2 millions de tonnes par an",
+        "3 à 4 millions de tonnes par an",
+        "4 à 5 millions de tonnes par an",
+        "6 à 7 millions de tonnes par an"
+      ],
+      "r": 3,
+      "x": "Le pays peut produire entre 6 et 7 millions de tonnes de ciment par an. CIM-SAHEL doit garantir la disponibilité du produit et créer 413 emplois directs.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le statut juridique de CIM-SAHEL, créée le 2 juillet 2026, est celui :",
+      "o": [
+        "de société d'État",
+        "d'établissement public",
+        "de société d'économie mixte",
+        "de groupement d'intérêt public"
+      ],
+      "r": 2,
+      "x": "CIM-SAHEL est une société d'économie mixte à participation publique majoritaire. Elle associe des partenaires privés à la production de ciment.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Depuis la réforme adoptée le 2 juillet 2026, les bulletins n°1 et n°2 du casier judiciaire sont :",
+      "o": [
+        "délivrés en ligne seulement",
+        "valables un an",
+        "supprimés",
+        "payants"
+      ],
+      "r": 3,
+      "x": "Le décret supprime la gratuité de ces bulletins. Le montant des frais n'est pas précisé dans le compte rendu.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le nombre de visiteurs du Musée national pendant la 4e édition du Mois du patrimoine burkinabè, en 2026, est de :",
+      "o": [
+        "17 953",
+        "26 516",
+        "36 749",
+        "45 120"
+      ],
+      "r": 2,
+      "x": "Le Musée national a reçu 36 749 visiteurs, contre 17 953 l'année précédente. L'édition s'est tenue du 17 avril au 18 mai 2026.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La mine d'or de Bouboulou, dont le permis d'exploitation a été accordé le 9 juillet 2026, est située dans la commune de :",
+      "o": [
+        "Kaya",
+        "Yako",
+        "Houndé",
+        "Gaoua"
+      ],
+      "r": 1,
+      "x": "La mine se trouve à Yako, dans la province du Passoré. Elle est exploitée par une société entièrement publique.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La production totale d'or attendue de la mine de Bouboulou, sur ses 15 ans d'exploitation, est de :",
+      "o": [
+        "7,27 tonnes",
+        "9,27 tonnes",
+        "12,27 tonnes",
+        "15,27 tonnes"
+      ],
+      "r": 0,
+      "x": "La mine doit produire 7,27 tonnes d'or en 15 ans. Elle créera 1 272 emplois.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La société qui exploite la mine d'or de Bouboulou, détenue par l'État, est :",
+      "o": [
+        "Faso Sanu SA",
+        "SOPAMIB Bouboulou SA",
+        "SONASP Bouboulou",
+        "Orezone Bouboulou SA"
+      ],
+      "r": 1,
+      "x": "La mine est exploitée par SOPAMIB Bouboulou SA, filiale de la Société de participation minière du Burkina. C'est la première mine d'or industrielle entièrement publique.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Selon la loi de règlement de l'exercice 2025, le déficit budgétaire du Burkina Faso s'établit à environ :",
+      "o": [
+        "333,8 milliards de FCFA",
+        "486,8 milliards de FCFA",
+        "619,0 milliards de FCFA",
+        "856,3 milliards de FCFA"
+      ],
+      "r": 0,
+      "x": "Le déficit 2025 est de 333,8 milliards de FCFA, contre 856,3 milliards en 2024. Il a donc été réduit de plus de 500 milliards.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le taux d'exécution des dépenses du budget de l'État en 2025, selon la loi de règlement adoptée en juillet 2026, est de :",
+      "o": [
+        "94,31 %",
+        "96,80 %",
+        "98,55 %",
+        "99,50 %"
+      ],
+      "r": 3,
+      "x": "Les dépenses ont été exécutées à 99,50 % en 2025, contre 98,55 % en 2024. Les recettes ont dépassé les prévisions.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Selon la loi de finances rectificative 2026 adoptée en Conseil des ministres le 23 juillet 2026, le déficit budgétaire par rapport à la loi de finances initiale :",
+      "o": [
+        "baisse de moitié",
+        "reste inchangé",
+        "augmente de 297 milliards",
+        "devient un excédent"
+      ],
+      "r": 1,
+      "x": "Le déficit reste à 486,8 milliards de FCFA, car recettes et dépenses augmentent du même montant. Les recettes passent de 3 431,5 à 3 728,5 milliards.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le Salon confédéral de l'emploi et de l'entrepreneuriat de l'AES (SCEE-AES), annoncé en juillet 2026, est prévu à Ouagadougou :",
+      "o": [
+        "du 9 au 14 août 2026",
+        "du 14 au 19 septembre 2026",
+        "du 30 octobre au 8 novembre 2026",
+        "du 18 au 20 novembre 2026"
+      ],
+      "r": 3,
+      "x": "Le salon est programmé du 18 au 20 novembre 2026 avec plus de 3 000 participants attendus. Il vise l'emploi des jeunes dans l'espace confédéral.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le coût des 2 lycées professionnels spécialisés et 17 complexes scolaires adoptés le 23 juillet 2026 s'élève à environ :",
+      "o": [
+        "17,95 milliards de FCFA",
+        "27,95 milliards de FCFA",
+        "37,95 milliards de FCFA",
+        "47,95 milliards de FCFA"
+      ],
+      "r": 2,
+      "x": "Le programme coûte 37,95 milliards de FCFA TTC sur le budget 2026. Il comprend aussi des écoles préscolaires et primaires.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le bénéfice net de la Caisse des dépôts et d'investissements du Burkina Faso (CDI-BF) en 2025 est d'environ :",
+      "o": [
+        "544 millions de FCFA",
+        "844 millions de FCFA",
+        "916 millions de FCFA",
+        "1,2 milliard de FCFA"
+      ],
+      "r": 1,
+      "x": "Le résultat net 2025 est de 844 millions de FCFA, en baisse par rapport aux 916 millions de 2024. Le capital libéré atteint 27,35 milliards.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La superficie du site du technopôle pharmaceutique de Kokologho, déclaré d'utilité publique en juillet 2026, est de :",
+      "o": [
+        "36,25 hectares",
+        "57,92 hectares",
+        "77,92 hectares",
+        "97,92 hectares"
+      ],
+      "r": 2,
+      "x": "Le site s'étend sur 77,92 hectares. Une servitude de 36,25 hectares l'accompagne.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le coordonnateur du Service d'information du Gouvernement (SIG), nommé le 23 juillet 2026, est :",
+      "o": [
+        "Salifou Ouédraogo",
+        "Simplice Baro",
+        "Kandayinga Yaméogo",
+        "Askadar Housmane Sanou"
+      ],
+      "r": 1,
+      "x": "Simplice Baro est nommé coordonnateur du SIG. Ce service gère la communication gouvernementale.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le montant total levé par les Diaspora Bonds du Burkina Faso, entrés à la Bourse régionale des valeurs mobilières (BRVM) le 3 septembre 2026, est de :",
+      "o": [
+        "101,5 milliards de FCFA",
+        "125,0 milliards de FCFA",
+        "151,5 milliards de FCFA",
+        "175,0 milliards de FCFA"
+      ],
+      "r": 2,
+      "x": "Les deux emprunts (2026-2031 et 2026-2033) ont levé 151,5 milliards de FCFA, pour un objectif de 125 milliards. Le taux de souscription atteint 121,2 %.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La vidéo-verbalisation des infractions routières est entrée en vigueur à Ouagadougou le :",
+      "o": [
+        "1er mai 2026",
+        "1er juin 2026",
+        "1er juillet 2026",
+        "1er août 2026"
+      ],
+      "r": 3,
+      "x": "Le dispositif est en vigueur depuis le 1er août 2026. Plus d'un millier d'infractions ont été relevées dès les premières heures.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le Pacte « Nékré » pour la refondation de l'école burkinabè a été lancé le 17 octobre 2026 à :",
+      "o": [
+        "Gaoua",
+        "Ouahigouya",
+        "Koudougou",
+        "Kaya"
+      ],
+      "r": 3,
+      "x": "Le pacte a été lancé à Kaya sous la présidence du Premier ministre. Les acteurs de l'éducation y ont signé des déclarations d'engagement.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le Pacte Nékré a été lancé 40 ans jour pour jour après un appel de Thomas Sankara en faveur de l'école, lancé le 17 octobre 1986 à :",
+      "o": [
+        "Dori",
+        "Gaoua",
+        "Fada N'Gourma",
+        "Tenkodogo"
+      ],
+      "r": 1,
+      "x": "L'Appel de Gaoua date du 17 octobre 1986. Il invitait à bâtir une école adaptée aux réalités du pays.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La première session ordinaire du Parlement de la Confédération des États du Sahel (AES) s'est tenue en août 2026 à :",
+      "o": [
+        "Niamey",
+        "Ouagadougou",
+        "Bamako",
+        "Tillabéri"
+      ],
+      "r": 0,
+      "x": "Réunissant les députés confédéraux du Burkina Faso, du Mali et du Niger, la session inaugurale et la première session ordinaire des Sessions confédérales des Parlements de l'AES se sont tenues du 24 au 29 août 2026 à Niamey (Niger). Les travaux étaient présidés par le Dr Ousmane Bougouma, président de l'Assemblée législative du peuple (ALP) du Burkina Faso.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le nombre de députés confédéraux installés lors de la première session du Parlement de l'AES, en août 2026, est de :",
+      "o": [
+        "30",
+        "45",
+        "60",
+        "75"
+      ],
+      "r": 1,
+      "x": "Quarante-cinq députés confédéraux ont été installés pour les trois pays membres. Le Parlement est l'un des organes prévus par le traité de la Confédération.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La lauréate du classement général de la première édition du Tour cycliste féminin Yennenga, en avril 2026, est la Burkinabè :",
+      "o": [
+        "Awa Bamogo",
+        "Lamoussa Zoungrana",
+        "Elvine Yaméogo",
+        "Marthe Koala"
+      ],
+      "r": 0,
+      "x": "Victorieuse des trois premières étapes, la cycliste burkinabè Awa Bamogo a remporté le classement général (maillot « Lwili Pendé ») de la 1re édition du Tour cycliste féminin Yennenga le 18 avril 2026 à Bobo-Dioulasso. Elle a devancé sa compatriote Lamoussa Zoungrana (2e, lauréate le lendemain du Grand Prix Yennenga) et la Nigériane Osaretin Grace Godwin.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Lors de la Coupe d'Afrique des nations (CAN) 2025 disputée au Maroc, les Étalons du Burkina Faso ont été éliminés en huitièmes de finale par :",
+      "o": [
+        "la Côte d'Ivoire",
+        "le Sénégal",
+        "l'Égypte",
+        "le Mali"
+      ],
+      "r": 0,
+      "x": "Les Éléphants de Côte d'Ivoire ont battu les Étalons 3-0, le 6 janvier 2026. Ils ont ensuite rejoint l'Égypte en quarts de finale.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La finale de la CAN 2025, disputée le 18 janvier 2026 à Rabat, a été remportée par :",
+      "o": [
+        "le Maroc",
+        "le Sénégal",
+        "le Nigeria",
+        "l'Égypte"
+      ],
+      "r": 1,
+      "x": "Le Sénégal a battu le Maroc, pays hôte, et a remporté sa deuxième CAN après 2021. La finale a été marquée par de vives tensions.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le joueur désigné meilleur joueur de la CAN 2025 est :",
+      "o": [
+        "Victor Osimhen",
+        "Achraf Hakimi",
+        "Mohamed Salah",
+        "Sadio Mané"
+      ],
+      "r": 3,
+      "x": "Sadio Mané a été élu meilleur joueur de la compétition. Il a été récompensé à l'issue de la finale du 18 janvier 2026.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le dirigeant vénézuélien capturé par les forces américaines le 3 janvier 2026 est :",
+      "o": [
+        "Nicolás Maduro",
+        "Hugo Chávez",
+        "Diosdado Cabello",
+        "Juan Guaidó"
+      ],
+      "r": 0,
+      "x": "Nicolás Maduro a été capturé lors d'une opération militaire américaine. Hugo Chávez, son prédécesseur, est mort en 2013.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La personnalité qui a assuré l'intérim à la tête du Venezuela après la capture du président par les forces américaines, en janvier 2026, est :",
+      "o": [
+        "María Corina Machado",
+        "Edmundo González",
+        "Diosdado Cabello",
+        "Delcy Rodríguez"
+      ],
+      "r": 3,
+      "x": "La vice-présidente Delcy Rodríguez a pris l'intérim sur décision de la Cour suprême. María Corina Machado est une figure de l'opposition.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le pays devenu le 21e membre de la zone euro le 1er janvier 2026 est :",
+      "o": [
+        "la Roumanie",
+        "la Hongrie",
+        "la Bulgarie",
+        "la Pologne"
+      ],
+      "r": 2,
+      "x": "La Bulgarie a adopté l'euro le 1er janvier 2026. La Croatie l'avait précédée en 2023.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le score de Mamadi Doumbouya à l'élection présidentielle guinéenne du 28 décembre 2025, validé par la Cour suprême, est de :",
+      "o": [
+        "66,72 %",
+        "76,72 %",
+        "86,72 %",
+        "96,72 %"
+      ],
+      "r": 2,
+      "x": "Mamadi Doumbouya a été élu avec 86,72 % des voix. La Cour suprême a confirmé ce résultat début janvier 2026.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La durée du mandat présidentiel de Mamadi Doumbouya, investi président de la Guinée en janvier 2026, est de :",
+      "o": [
+        "4 ans",
+        "5 ans",
+        "6 ans",
+        "7 ans"
+      ],
+      "r": 3,
+      "x": "La Constitution guinéenne de 2025 fixe le mandat présidentiel à sept ans. Doumbouya dirigeait le pays depuis le coup d'État de septembre 2021.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Ali Khamenei, Guide suprême de l'Iran mort au début de l'année 2026, exerçait cette fonction depuis :",
+      "o": [
+        "1979",
+        "1989",
+        "1997",
+        "2005"
+      ],
+      "r": 1,
+      "x": "Ali Khamenei avait succédé à l'ayatollah Khomeini en 1989. Il était le deuxième Guide suprême de la République islamique.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le nouveau Guide suprême de l'Iran, désigné le 8 mars 2026 par l'Assemblée des experts, est :",
+      "o": [
+        "Ebrahim Raïssi",
+        "Hassan Rohani",
+        "Massoud Pezeshkian",
+        "Mojtaba Khamenei"
+      ],
+      "r": 3,
+      "x": "Mojtaba Khamenei, fils d'Ali Khamenei, devient le troisième Guide suprême. Massoud Pezeshkian est le président de la République.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Les XXVe Jeux olympiques d'hiver, organisés du 6 au 22 février 2026, se sont déroulés en :",
+      "o": [
+        "Italie",
+        "Suisse",
+        "France",
+        "Autriche"
+      ],
+      "r": 0,
+      "x": "Les Jeux se sont tenus à Milan et Cortina d'Ampezzo, en Italie. Les Jeux d'hiver de 2030 auront lieu dans les Alpes françaises.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le thème de l'Union africaine (UA) pour l'année 2026 porte sur :",
+      "o": [
+        "l'eau et l'assainissement",
+        "l'éducation et la jeunesse",
+        "la justice et les réparations",
+        "le commerce intra-africain"
+      ],
+      "r": 0,
+      "x": "L'UA a placé 2026 sous le signe de l'accès durable à l'eau et à l'assainissement. Le thème de 2025 portait sur la justice et les réparations.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le président de la République du Bénin élu au premier tour en avril 2026 est :",
+      "o": [
+        "Patrice Talon",
+        "Lionel Zinsou",
+        "Romuald Wadagni",
+        "Abdoulaye Bio Tchané"
+      ],
+      "r": 2,
+      "x": "Romuald Wadagni, ancien ministre de l'Économie, succède à Patrice Talon. La Cour constitutionnelle a confirmé sa victoire avec plus de 94 % des voix.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La finale de la Coupe du monde de football 2026, disputée le 19 juillet 2026, a été remportée par l'Espagne face à :",
+      "o": [
+        "la France",
+        "le Brésil",
+        "l'Argentine",
+        "l'Angleterre"
+      ],
+      "r": 2,
+      "x": "L'Espagne a battu l'Argentine 1-0 et remporte sa deuxième Coupe du monde après 2010. La finale s'est jouée près de New York.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La Coupe du monde 2026 était coorganisée par les États-Unis, le Mexique et :",
+      "o": [
+        "le Panama",
+        "le Costa Rica",
+        "Cuba",
+        "le Canada"
+      ],
+      "r": 3,
+      "x": "Organisée du 11 juin au 19 juillet 2026, cette première Coupe du monde à 48 équipes a été conjointement accueillie par les États-Unis (11 villes), le Mexique (3 villes) et le Canada (Toronto et Vancouver). Il s'agissait de la première édition de l'histoire répartie sur trois pays hôtes.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "La Coupe d'Afrique des nations féminine 2026, disputée au Maroc, a été remportée pour la première fois par :",
+      "o": [
+        "le Nigeria",
+        "l'Afrique du Sud",
+        "le Cameroun",
+        "le Ghana"
+      ],
+      "r": 2,
+      "x": "Les Lionnes indomptables du Cameroun décrochent leur premier titre continental. Elles ont éliminé le Maroc, pays hôte, en demi-finale.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "L'équipe qui a perdu la finale de la CAN féminine 2026 sur le score de 3-0 est :",
+      "o": [
+        "le Mali",
+        "la Zambie",
+        "le Malawi",
+        "le Maroc"
+      ],
+      "r": 2,
+      "x": "Lors de la finale disputée le 16 août 2026 à Rabat (Maroc), le Malawi, qui atteignait ce stade dès sa toute première participation, s'est incliné 3-0 face au Cameroun (doublé de Marie-Gisèle Ngah Manga et but de Naomie Eto). Les Lionnes indomptables ont ainsi remporté la première CAN féminine de leur histoire après trois finales perdues.",
+      "_batchId": "actualite/2026-11-24/LOT4"
+    },
+    {
+      "q": "Le président en exercice de la Centrafrique, réélu pour un troisième mandat lors du scrutin de décembre 2025, est :",
+      "o": [
+        "François Bozizé",
+        "Michel Djotodia",
+        "Faustin-Archange Touadéra",
+        "Catherine Samba-Panza"
+      ],
+      "r": 2,
+      "x": "Faustin-Archange Touadéra, au pouvoir depuis 2016, a obtenu un troisième mandat. Une révision constitutionnelle de 2023 avait levé la limite de mandats.",
+      "_batchId": "actualite/2026-11-24/LOT4"
     }
   ],
   "halieutique": [

@@ -36,7 +36,7 @@ const MATIERES_CATALOG = {
   police: { nom: 'Sécurité Publique', icone: '🚓', couleur: '#1e40af', desc: 'Code de la route, sécurité' },
   militaire: { nom: 'Connaissances Militaires', icone: '🎖️', couleur: '#0F5132', desc: 'Histoire militaire, grades, défense' },
   fiscalite: { nom: 'Fiscalité', icone: '💰', couleur: '#ca8a04', desc: 'TVA, impôts, code général des impôts' },
-  comptabilite: { nom: 'Comptabilité', icone: '📊', couleur: '#0891b2', desc: 'Plan comptable SYSCOA, bilan' },
+  comptabilite: { nom: 'Comptabilité', icone: '📊', couleur: '#0891b2', desc: 'SYSCOHADA révisé, comptabilité analytique, finances publiques, fiscalité, audit' },
   pedagogie: { nom: 'Pédagogie', icone: '🎓', couleur: '#1e40af', desc: 'Didactique, méthodes d\'enseignement' },
   santepub: { nom: 'Santé Publique', icone: '⚕️', couleur: '#dc2626', desc: 'Épidémiologie, prévention, OMS' },
   anatomie: { nom: 'Anatomie-Physiologie', icone: '🫁', couleur: '#dc2626', desc: 'Corps humain, organes, systèmes' },
