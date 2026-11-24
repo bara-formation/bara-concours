@@ -1,6 +1,6 @@
 // Bara Concours - Base de questions QCM
-// Mis à jour le 2026-11-24 - Matieres Actualite (349 questions, 4 lots) et Comptabilite (610, 4 series) entierement remplacees ; Francais (872) le 2026-11-19
-// Total : 9714 questions réparties sur 38 matières
+// Mis à jour le 2026-11-24 - PC Cycle B (400), Actualite (349) et Comptabilite (610) entierement remplacees ; Francais (872) le 2026-11-19
+// Total : 9933 questions réparties sur 38 matières
 
 const QUESTIONS = {
   "francais": [
@@ -46776,1995 +46776,4804 @@ const QUESTIONS = {
   ],
   "pc_bac": [
     {
-      "q": "Un objet de masse 2 kg est lancé verticalement vers le haut avec une vitesse initiale de 10 m/s. Quelle est la hauteur maximale atteinte ? (g = 10 m/s²)",
+      "q": "Un projectile est lancé horizontalement à 20 m/s depuis une hauteur de 45 m (g = 10 m/s², frottements négligés). Sa portée horizontale est :",
+      "o": [
+        "30 m",
+        "60 m",
+        "90 m",
+        "180 m"
+      ],
+      "r": 1,
+      "x": "La durée de chute vaut t = √(2h / g) = √(2 × 45 / 10) = 3 s, d'où une portée x = v0 × t = 20 × 3 = 60 m. La valeur 90 m résulte d'une durée de 4,5 s, obtenue en oubliant la racine carrée. Le mouvement horizontal est uniforme et le mouvement vertical une chute libre, les deux étant indépendants.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un mobile a pour équation horaire x(t) = 2t² + 3t + 1 (unités SI). Sa vitesse à la date t = 2 s est :",
+      "o": [
+        "7 m/s",
+        "8 m/s",
+        "11 m/s",
+        "15 m/s"
+      ],
+      "r": 2,
+      "x": "La vitesse est la dérivée de la position : v(t) = 4t + 3, d'où v(2) = 4 × 2 + 3 = 11 m/s. La valeur 15 correspond à la position x(2) en mètres, et 7 m/s à une dérivée erronée 2t + 3. L'accélération, dérivée de la vitesse, vaut 4 m/s² : le mouvement est rectiligne uniformément accéléré.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un mobile animé d'un mouvement uniformément accéléré passe de 4 m/s à 10 m/s avec une accélération de 2 m/s². La distance parcourue pendant cette phase est :",
+      "o": [
+        "9 m",
+        "16 m",
+        "21 m",
+        "25 m"
+      ],
+      "r": 2,
+      "x": "La relation indépendante du temps v² – v0² = 2 × a × d donne d = (100 – 16) / 4 = 21 m. La valeur 25 m résulte de l'oubli de la vitesse initiale, et 9 m de l'emploi erroné de (v – v0)². Cette relation évite de calculer d'abord la durée, ici égale à (10 – 4) / 2 = 3 s.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La vitesse d'un satellite en orbite circulaire autour de la Terre :",
+      "o": [
+        "diminue quand l'altitude de l'orbite augmente",
+        "augmente quand l'altitude de l'orbite augmente",
+        "augmente avec la masse du satellite",
+        "reste la même quelle que soit l'altitude"
+      ],
+      "r": 0,
+      "x": "La vitesse orbitale vaut v = √(G × M / r), où M est la masse de la Terre et r le rayon de l'orbite : elle diminue quand l'altitude augmente et ne dépend pas de la masse du satellite. La Station spatiale internationale, vers 400 km d'altitude, file à environ 7,7 km/s, contre 3,1 km/s pour un satellite géostationnaire.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'intensité de la pesanteur vaut 9,8 N/kg à la surface de la Terre. À une altitude égale au rayon terrestre, elle vaut :",
+      "o": [
+        "1,2 N/kg",
+        "2,45 N/kg",
+        "4,9 N/kg",
+        "9,8 N/kg"
+      ],
+      "r": 1,
+      "x": "Le champ de gravitation varie comme 1 / r² : à l'altitude h = R, la distance au centre double et g est divisé par 4, soit 9,8 / 4 = 2,45 N/kg. La valeur 4,9 N/kg suppose à tort une variation en 1 / r. On écrit en général g = g0 × R² / (R + h)², relation valable pour toute altitude.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La période propre d'un oscillateur élastique de masse 0,4 kg et de raideur 40 N/m est d'environ :",
+      "o": [
+        "0,1 s",
+        "0,2 s",
+        "0,31 s",
+        "0,63 s"
+      ],
+      "r": 3,
+      "x": "T0 = 2π × √(m / k) = 2π × √(0,4 / 40) = 2π × 0,1 ≈ 0,63 s. La valeur 0,1 s correspond à √(m / k) sans le facteur 2π, et 0,31 s à l'emploi de π au lieu de 2π. Cette période ne dépend pas de l'amplitude des oscillations, tant que l'on reste dans le domaine élastique du ressort.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un solide glisse sans frottement sur un plan incliné de 30° sur l'horizontale (g = 10 m/s²). Son accélération vaut :",
+      "o": [
+        "0,5 m/s²",
+        "2,5 m/s²",
+        "5 m/s²",
+        "8,7 m/s²"
+      ],
+      "r": 2,
+      "x": "La relation fondamentale de la dynamique projetée sur le plan donne a = g × sin α = 10 × 0,5 = 5 m/s². La valeur 8,7 m/s² provient de l'emploi erroné du cosinus de l'angle. La réaction du plan, perpendiculaire au mouvement en l'absence de frottements, ne contribue pas à l'accélération et l'on constate que le résultat ne dépend pas de la masse.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un solide de 2 kg lancé à 6 m/s sur un sol horizontal est freiné par une force de frottement constante de 4 N. La distance parcourue avant l'arrêt est :",
+      "o": [
+        "3 m",
+        "4,5 m",
+        "9 m",
+        "18 m"
+      ],
+      "r": 2,
+      "x": "Le théorème de l'énergie cinétique donne 0 – ½ × m × v0² = – f × d, d'où d = (½ × 2 × 36) / 4 = 9 m. La valeur 18 m résulte de l'oubli du facteur ½ dans l'énergie cinétique. Le poids et la réaction normale, perpendiculaires au déplacement, ne travaillent pas et n'interviennent donc pas dans ce bilan.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un wagonnet de 2 kg roulant à 3 m/s heurte un wagonnet de 1 kg immobile et s'y accroche. La vitesse de l'ensemble juste après le choc est :",
+      "o": [
+        "2 m/s",
+        "3 m/s",
+        "4,5 m/s",
+        "6 m/s"
+      ],
+      "r": 0,
+      "x": "La quantité de mouvement du système isolé se conserve : 2 × 3 = (2 + 1) × v, d'où v = 6 / 3 = 2 m/s. La valeur 6 correspond à la quantité de mouvement en kg·m/s et non à une vitesse. Lors de ce choc mou, l'énergie cinétique passe de 9 J à 6 J : une partie est dissipée en déformation et en chaleur.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La poussée d'Archimède exercée par l'eau (ρ = 1 000 kg/m³, g = 10 N/kg) sur un corps totalement immergé de volume 2 dm³ vaut :",
+      "o": [
+        "0,2 N",
+        "2 N",
+        "20 N",
+        "200 N"
+      ],
+      "r": 2,
+      "x": "FA = ρ × V × g = 1 000 × 0,002 × 10 = 20 N, car 2 dm³ valent 0,002 m³. La valeur 200 N résulte d'une erreur de conversion du volume. La poussée d'Archimède est égale au poids du liquide déplacé ; elle est verticale, dirigée vers le haut, et ne dépend pas de la matière du corps immergé.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La période de révolution d'un satellite géostationnaire est d'environ :",
+      "o": [
+        "24 heures",
+        "48 heures",
+        "27,3 jours",
+        "365 jours"
+      ],
+      "r": 0,
+      "x": "Un satellite géostationnaire tourne dans le plan de l'équateur, dans le même sens que la Terre et avec la même période de rotation, environ 24 heures, ce qui le fait paraître immobile depuis le sol. Il orbite à environ 36 000 km d'altitude. La durée de 27,3 jours est la période de révolution de la Lune autour de la Terre.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Une personne de 60 kg est debout dans un ascenseur qui démarre vers le haut avec une accélération de 2 m/s² (g = 10 m/s²). La réaction du plancher vaut :",
+      "o": [
+        "480 N",
+        "600 N",
+        "620 N",
+        "720 N"
+      ],
+      "r": 3,
+      "x": "La relation fondamentale de la dynamique donne R – m × g = m × a, d'où R = 60 × (10 + 2) = 720 N. La valeur 480 N correspond à un démarrage vers le bas, où R = m × (g – a). Un pèse-personne placé dans cet ascenseur indiquerait donc 72 kg, alors que la masse réelle de la personne reste de 60 kg.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un véhicule aborde un virage plat de rayon 50 m. Le coefficient d'adhérence vaut 0,8 (g = 10 m/s²). La vitesse maximale sans dérapage est :",
+      "o": [
+        "10 m/s",
+        "20 m/s",
+        "40 m/s",
+        "400 m/s"
+      ],
+      "r": 1,
+      "x": "Les frottements fournissent la force centripète : m × v² / R ≤ μ × m × g, d'où vmax = √(μ × g × R) = √(0,8 × 10 × 50) = 20 m/s, soit 72 km/h. La valeur 400 correspond à v² sans la racine carrée. Sur route mouillée, μ diminue et la vitesse limite baisse, d'où la nécessité de ralentir avant les virages.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La pression due à l'eau à 10 m de profondeur (ρ = 1 000 kg/m³, g = 10 N/kg) vaut :",
+      "o": [
+        "1 000 Pa",
+        "10 000 Pa",
+        "100 000 Pa",
+        "1 000 000 Pa"
+      ],
+      "r": 2,
+      "x": "La pression hydrostatique vaut p = ρ × g × h = 1 000 × 10 × 10 = 100 000 Pa, soit environ 1 bar. Les autres valeurs proviennent de l'oubli ou de l'ajout d'un facteur dix. Un plongeur à 10 m de profondeur subit donc une pression totale d'environ 2 bars, en ajoutant la pression atmosphérique qui s'exerce à la surface.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le travail d'une force de 50 N dont le point d'application se déplace de 4 m dans sa direction et son sens est :",
+      "o": [
+        "12,5 J",
+        "54 J",
+        "200 J",
+        "2 000 J"
+      ],
+      "r": 2,
+      "x": "W = F × d = 50 × 4 = 200 J lorsque la force et le déplacement ont même direction et même sens. La valeur 12,5 J résulte d'une division au lieu d'un produit. Si la force est perpendiculaire au déplacement, son travail est nul ; si elle s'oppose au mouvement, comme les frottements, son travail est négatif et dit résistant.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un élève de 50 kg monte un escalier de 3 m de hauteur (g = 10 N/kg). Le travail de son poids est :",
+      "o": [
+        "– 1 500 J",
+        "– 150 J",
+        "150 J",
+        "1 500 J"
+      ],
+      "r": 0,
+      "x": "Le poids s'oppose à la montée, son travail est donc résistant : W = – m × g × h = – 50 × 10 × 3 = – 1 500 J. La valeur positive de 1 500 J correspondrait à une descente de la même hauteur. Le travail du poids ne dépend que de la différence d'altitude entre le départ et l'arrivée, et non du chemin suivi.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Une machine effectue un travail de 6 000 J en 2 minutes. Sa puissance est :",
+      "o": [
+        "50 W",
+        "300 W",
+        "3 000 W",
+        "12 000 W"
+      ],
+      "r": 0,
+      "x": "P = W / t = 6 000 / 120 = 50 W, car 2 minutes valent 120 secondes. La valeur 3 000 W résulte de l'oubli de la conversion des minutes en secondes. Le watt correspond à un joule par seconde ; l'ancienne unité appelée cheval-vapeur (ch) vaut environ 736 W et sert encore à exprimer la puissance des moteurs.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'énergie cinétique d'un corps de 2 kg se déplaçant à 3 m/s est :",
+      "o": [
+        "3 J",
+        "6 J",
+        "9 J",
+        "18 J"
+      ],
+      "r": 2,
+      "x": "Ec = ½ × m × v² = ½ × 2 × 3² = 9 J. La valeur 18 J correspond à l'oubli du facteur ½, et 6 J à l'oubli du carré de la vitesse. Comme l'énergie cinétique dépend du carré de la vitesse, doubler la vitesse d'un véhicule multiplie par quatre son énergie et allonge fortement sa distance de freinage.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'énergie potentielle de pesanteur d'une pierre de 3 kg placée à 5 m du sol (g = 10 N/kg) est :",
+      "o": [
+        "15 J",
+        "30 J",
+        "50 J",
+        "150 J"
+      ],
+      "r": 3,
+      "x": "Ep = m × g × h = 3 × 10 × 5 = 150 J, le sol étant pris comme niveau de référence. La valeur 15 J résulte de l'oubli de l'intensité de la pesanteur g. Lors d'une chute libre sans frottements, cette énergie potentielle se transforme progressivement en énergie cinétique, l'énergie mécanique restant constante.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Une bille lâchée sans vitesse initiale tombe de 5 m (g = 10 N/kg) sans frottements. Sa vitesse en arrivant au sol est :",
+      "o": [
+        "2,5 m/s",
+        "5 m/s",
+        "7,1 m/s",
+        "10 m/s"
+      ],
+      "r": 3,
+      "x": "La conservation de l'énergie mécanique donne m × g × h = ½ × m × v², d'où v = √(2gh) = √(2 × 10 × 5) = 10 m/s. La valeur 7,1 m/s, soit √50, résulte de l'oubli du facteur 2 dans la formule. Le résultat ne dépend pas de la masse : sans frottements, tous les corps tombent de la même façon.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Une voiture roule à vitesse constante de 25 m/s ; la force motrice vaut 2 000 N. La puissance développée par le moteur est :",
+      "o": [
+        "80 W",
+        "50 000 W",
+        "180 000 W",
+        "500 000 W"
+      ],
+      "r": 1,
+      "x": "La puissance d'une force colinéaire à la vitesse vaut P = F × v = 2 000 × 25 = 50 000 W, soit 50 kW. La valeur 80 W résulte de la division F / v, et 180 000 W de l'emploi de la vitesse en km/h, soit 90 au lieu de 25. À vitesse constante, cette force motrice compense exactement l'ensemble des forces résistantes.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Deux forces de 30 N et 40 N, perpendiculaires et appliquées au même point, ont une résultante de :",
+      "o": [
+        "10 N",
+        "25 N",
+        "35 N",
+        "50 N"
+      ],
+      "r": 3,
+      "x": "Pour deux forces perpendiculaires, la résultante se calcule par le théorème de Pythagore : √(30² + 40²) = √2 500 = 50 N. La valeur 10 N n'est valable que si les forces sont de sens opposés, et 35 N correspond à leur simple moyenne. La résultante est toujours comprise entre la différence et la somme des deux forces, ici entre 10 N et 70 N.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un solide soumis à deux forces est en équilibre si ces forces ont :",
+      "o": [
+        "même droite d'action, même valeur et des sens opposés",
+        "même droite d'action, même valeur et le même sens",
+        "des droites perpendiculaires et la même valeur",
+        "des droites parallèles et des valeurs différentes"
+      ],
+      "r": 0,
+      "x": "Deux forces s'équilibrent si elles ont la même droite d'action, la même valeur et des sens contraires, leur somme vectorielle étant alors nulle. Deux forces de même sens s'additionnent et mettent le solide en mouvement. Un livre posé sur une table illustre ce cas : son poids est exactement compensé par la réaction verticale de la table.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le moment d'une force de 20 N par rapport à un axe situé à 0,5 m de sa droite d'action vaut :",
+      "o": [
+        "0,025 N·m",
+        "2,5 N·m",
+        "5 N·m",
+        "10 N·m"
+      ],
+      "r": 3,
+      "x": "M = F × d = 20 × 0,5 = 10 N·m, d étant la distance entre l'axe et la droite d'action de la force. La valeur 0,025 N·m résulte de la division d / F au lieu du produit. Plus le bras de levier est long, plus l'effet de rotation est grand, ce qui explique qu'on pousse une porte loin de ses gonds.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un levier en équilibre porte une charge de 600 N à 0,2 m de l'axe. La force à exercer à 1,2 m de l'axe vaut :",
+      "o": [
+        "100 N",
+        "120 N",
+        "600 N",
+        "3 600 N"
+      ],
+      "r": 0,
+      "x": "À l'équilibre, les moments s'égalisent : 600 × 0,2 = F × 1,2, d'où F = 120 / 1,2 = 100 N. La valeur 120 N correspond au moment de la charge et non à la force cherchée. Ce principe du levier explique l'utilité de la brouette, du pied-de-biche ou de la pince, qui démultiplient l'effort humain.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un pendule simple de 1 m de longueur est lâché sans vitesse depuis un angle de 60° avec la verticale (g = 10 m/s²). Sa vitesse au passage par la position d'équilibre est d'environ :",
+      "o": [
+        "2,2 m/s",
+        "3,2 m/s",
+        "4,5 m/s",
+        "10 m/s"
+      ],
+      "r": 1,
+      "x": "La hauteur de chute vaut h = L × (1 – cos 60°) = 0,5 m, et la conservation de l'énergie mécanique donne v = √(2 × g × h) = √10 ≈ 3,2 m/s. La valeur 4,5 m/s prend à tort toute la longueur du fil comme hauteur de chute. La tension du fil, toujours perpendiculaire à la vitesse, ne travaille pas.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un ressort de raideur 50 N/m est allongé de 4 cm. La tension du ressort vaut :",
+      "o": [
+        "0,02 N",
+        "0,2 N",
+        "1,25 N",
+        "2 N"
+      ],
+      "r": 3,
+      "x": "T = k × Δl = 50 × 0,04 = 2 N, l'allongement de 4 cm valant 0,04 m. La valeur 0,2 N provient d'une conversion erronée de 4 cm en 0,004 m. Cette relation, appelée loi de Hooke, n'est valable que dans le domaine élastique, où le ressort reprend sa longueur initiale après suppression de la force.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un véhicule passe de 0 à 20 m/s en 8 s. Son accélération moyenne est :",
+      "o": [
+        "0,4 m/s²",
+        "1,6 m/s²",
+        "2 m/s²",
+        "2,5 m/s²"
+      ],
+      "r": 3,
+      "x": "a = Δv / Δt = (20 – 0) / 8 = 2,5 m/s². La valeur 0,4 m/s² résulte de l'inversion du rapport Δt / Δv. Une accélération de 2,5 m/s² signifie que la vitesse augmente de 2,5 m/s chaque seconde, soit environ 9 km/h de plus par seconde, ce qui correspond à l'accélération d'une voiture ordinaire au démarrage.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un solide de 3 kg posé sur une table horizontale sans frottement est relié, par un fil passant sur une poulie, à une masse de 1 kg qui pend (g = 10 m/s²). L'accélération du système est :",
+      "o": [
+        "2,5 m/s²",
+        "3,3 m/s²",
+        "7,5 m/s²",
+        "10 m/s²"
+      ],
+      "r": 0,
+      "x": "Le poids de la masse suspendue met en mouvement l'ensemble des deux masses : a = m2 × g / (m1 + m2) = 10 / 4 = 2,5 m/s². La valeur 3,3 m/s² oublie l'inertie de la masse suspendue elle-même. La tension du fil vaut alors T = m1 × a = 7,5 N, inférieure au poids de 10 N de la masse qui descend.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Selon le principe de l'inertie, un corps soumis à des forces qui se compensent :",
+      "o": [
+        "s'arrête obligatoirement au bout d'un moment",
+        "reste au repos ou garde un mouvement rectiligne uniforme",
+        "prend un mouvement circulaire de vitesse constante",
+        "accélère jusqu'à atteindre une vitesse maximale"
+      ],
+      "r": 1,
+      "x": "Le principe de l'inertie, ou première loi de Newton, affirme qu'un corps soumis à des forces qui se compensent reste immobile ou conserve un mouvement rectiligne uniforme. Un mouvement circulaire exige au contraire une force dirigée vers le centre. Ce principe explique pourquoi les passagers d'un bus sont projetés vers l'avant lors d'un freinage brusque.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Selon le principe des actions réciproques, si un corps A exerce sur un corps B une force de 10 N, B exerce sur A une force :",
+      "o": [
+        "de 5 N et de même sens",
+        "de 10 N et de même sens",
+        "de 10 N et de sens opposé",
+        "de 20 N et de sens opposé"
+      ],
+      "r": 2,
+      "x": "Le principe des actions réciproques, ou troisième loi de Newton, impose deux forces de même droite d'action, de même valeur, ici 10 N, et de sens opposés. Ces deux forces s'appliquent sur deux corps différents et ne se compensent donc pas. La propulsion d'une fusée, qui éjecte des gaz vers l'arrière pour avancer, illustre ce principe.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La période de rotation d'une roue qui effectue 20 tours en 4 secondes est :",
+      "o": [
+        "0,2 s",
+        "4 s",
+        "5 s",
+        "80 s"
+      ],
+      "r": 0,
+      "x": "La période est la durée d'un tour : T = 4 / 20 = 0,2 s. La valeur 5 correspond en réalité à la fréquence, exprimée en hertz, soit 5 tours par seconde. Période et fréquence sont inverses l'une de l'autre, selon la relation f = 1 / T, et caractérisent tout phénomène qui se répète régulièrement dans le temps.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un objet décrit un cercle de rayon 2 m à la vitesse constante de 4 m/s. Sa vitesse angulaire est :",
+      "o": [
+        "0,5 rad/s",
+        "1 rad/s",
+        "1,5 rad/s",
+        "2 rad/s"
+      ],
+      "r": 3,
+      "x": "La vitesse angulaire se déduit de v = ω × R, soit ω = v / R = 4 / 2 = 2 rad/s. La valeur 0,5 rad/s provient de l'inversion du rapport R / v. Le radian est l'unité d'angle du Système international, un tour complet valant 2π radians, soit environ 6,28 rad.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un corps de masse 4 kg est soumis à une force résultante de 20 N. Son accélération vaut :",
+      "o": [
+        "0,2 m/s²",
+        "2,5 m/s²",
+        "4 m/s²",
+        "5 m/s²"
+      ],
+      "r": 3,
+      "x": "D'après F = m × a, a = F / m = 20 / 4 = 5 m/s². La valeur 0,2 m/s² résulte de l'inversion du rapport m / F. À force égale, un corps deux fois plus lourd accélère deux fois moins, ce qui explique qu'un camion chargé démarre plus lentement qu'à vide.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le rendement d'un moteur qui reçoit 2 000 J et fournit 1 500 J de travail utile est :",
+      "o": [
+        "25 %",
+        "50 %",
+        "75 %",
+        "133 %"
+      ],
+      "r": 2,
+      "x": "Le rendement vaut η = énergie utile / énergie reçue = 1 500 / 2 000 = 0,75, soit 75 %. La valeur de 133 % résulte de l'inversion du rapport ; un rendement ne dépasse jamais 100 %. Les 25 % restants, soit 500 J, sont perdus, principalement sous forme de chaleur due aux frottements et à l'échauffement du moteur.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Une pompe solaire élève 3 000 L d'eau à 12 m de hauteur (g = 10 N/kg). Le travail minimal fourni est :",
+      "o": [
+        "36 000 J",
+        "360 000 J",
+        "3 600 000 J",
+        "36 000 000 J"
+      ],
+      "r": 1,
+      "x": "Les 3 000 L d'eau ont une masse de 3 000 kg, donc W = m × g × h = 3 000 × 10 × 12 = 360 000 J, soit 360 kJ. Les autres valeurs proviennent d'erreurs de conversion entre litres et kilogrammes. Ce calcul sert à dimensionner les pompes solaires qui alimentent les forages des villages burkinabè.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un solide se déplace de 10 m sur un sol horizontal sous l'action d'une force de 100 N faisant un angle de 60° avec le déplacement. Le travail de cette force est :",
+      "o": [
+        "500 J",
+        "866 J",
+        "1 000 J",
+        "1 732 J"
+      ],
+      "r": 0,
+      "x": "Le travail vaut W = F × d × cos α = 100 × 10 × cos 60° = 100 × 10 × 0,5 = 500 J. La valeur 866 J correspond à l'emploi erroné du sinus de l'angle. Seule la composante de la force parallèle au déplacement travaille : plus l'angle augmente, plus le travail diminue, jusqu'à s'annuler à 90°.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Une grue soulève une charge de 500 kg de 20 m en 40 s (g = 10 N/kg). Sa puissance utile est :",
+      "o": [
+        "250 W",
+        "2 500 W",
+        "25 000 W",
+        "100 000 W"
+      ],
+      "r": 1,
+      "x": "Le travail vaut W = m × g × h = 500 × 10 × 20 = 100 000 J, d'où P = W / t = 100 000 / 40 = 2 500 W. La valeur de 100 000 correspond au travail, exprimé en joules, et non à la puissance. Une puissance de 2 500 W équivaut à 2,5 kW, soit environ 3,4 chevaux-vapeur.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un ballon est lancé depuis le sol à 20 m/s sous un angle de 30° avec l'horizontale (g = 10 m/s²). La hauteur maximale atteinte est :",
+      "o": [
+        "1,25 m",
+        "2,5 m",
+        "5 m",
+        "20 m"
+      ],
+      "r": 2,
+      "x": "Seule la composante verticale v0 × sin α = 10 m/s intervient : hmax = (v0 sin α)² / (2g) = 100 / 20 = 5 m. La valeur 20 m correspond à un lancer vertical à 20 m/s. La composante horizontale, constante et égale à v0 × cos α ≈ 17,3 m/s, est la vitesse du ballon au sommet de sa trajectoire.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un projectile est lancé depuis le sol à 10 m/s sous un angle de 45° (g = 10 m/s², frottements négligés). Sa portée est :",
+      "o": [
+        "10 m",
+        "14,1 m",
+        "20 m",
+        "100 m"
+      ],
+      "r": 0,
+      "x": "La portée vaut P = v0² × sin 2α / g = 100 × 1 / 10 = 10 m, valeur maximale obtenue pour un angle de 45°. La valeur 14,1 m résulte de l'emploi erroné de 2 × sin α au lieu de sin 2α, et 100 m de l'oubli de la division par g. Deux angles complémentaires, comme 30° et 60°, donnent la même portée pour une même vitesse initiale.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'énergie mécanique d'un système est la somme :",
+      "o": [
+        "de l'énergie cinétique et de l'énergie potentielle",
+        "de l'énergie thermique et de l'énergie chimique",
+        "de l'énergie électrique et de l'énergie lumineuse",
+        "de l'énergie nucléaire et de l'énergie cinétique"
+      ],
+      "r": 0,
+      "x": "L'énergie mécanique est la somme de l'énergie cinétique, liée à la vitesse, et de l'énergie potentielle, liée à la position. En l'absence de frottements, elle se conserve au cours du mouvement. Avec des frottements, une partie se transforme en énergie thermique, ce qui explique l'échauffement des freins d'un véhicule après une longue descente.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Une centrale hydroélectrique reçoit un débit de 10 m³/s tombant d'une hauteur de 20 m (g = 10 N/kg). La puissance hydraulique disponible est :",
+      "o": [
+        "0,2 MW",
+        "2 MW",
+        "20 MW",
+        "200 MW"
+      ],
+      "r": 1,
+      "x": "Chaque seconde, 10 000 kg d'eau tombent de 20 m : P = ρ × Q × g × h = 1 000 × 10 × 10 × 20 = 2 × 10⁶ W, soit 2 MW. Les autres valeurs résultent d'erreurs d'un facteur dix sur la masse d'eau. Avec un rendement global de 80 %, la centrale fournirait au réseau une puissance électrique de 1,6 MW.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un solide est lancé à 6 m/s vers le haut d'un plan incliné à 30°, sans frottement (g = 10 m/s²). La distance parcourue sur le plan avant l'arrêt est :",
+      "o": [
+        "1,8 m",
+        "3,6 m",
+        "7,2 m",
+        "36 m"
+      ],
+      "r": 1,
+      "x": "La décélération vaut g × sin α = 5 m/s², d'où d = v0² / (2 × g × sin α) = 36 / 10 = 3,6 m. La valeur 1,8 m correspond à un lancer vertical, sans tenir compte de l'inclinaison, et 7,2 m à l'oubli du facteur 2. Le solide redescend ensuite et repasse au point de départ avec sa vitesse initiale de 6 m/s.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un mobile part du repos avec une accélération constante de 2 m/s². La distance parcourue au bout de 5 s est :",
       "o": [
         "5 m",
         "10 m",
         "20 m",
-        "2,5 m"
-      ],
-      "r": 0,
-      "x": "Méthode : v²=v₀²-2gh → h=v₀²/(2g)=100/20=5 m. Formule : v²=v₀²-2gh. Piège : oublier le facteur 2 au dénominateur donne 10 m (choix B)."
-    },
-    {
-      "q": "Une résistance de 100 Ω est soumise à une tension de 220 V. Quelle est la puissance dissipée ?",
-      "o": [
-        "2,2 W",
-        "22 W",
-        "484 W",
-        "48,4 W"
-      ],
-      "r": 2,
-      "x": "Méthode : P=U²/R=220²/100=48400/100=484 W. Formule : P=U²/R. Piège : utiliser P=U/R sans carré donne 2,2 W (choix A)."
-    },
-    {
-      "q": "Un rayon lumineux passe de l'eau (n=1,33) dans l'air (n=1) avec un angle d'incidence de 30°. Quel est l'angle de réfraction ?",
-      "o": [
-        "22,1°",
-        "48,6°",
-        "30°",
-        "41,7°"
+        "25 m"
       ],
       "r": 3,
-      "x": "Méthode : Snell-Descartes n₁sinθ₁=n₂sinθ₂ → sinθ₂=1,33×sin30°=0,665 → θ₂=41,7°. Piège : inverser n₁ et n₂ donne 22,1° (choix A)."
+      "x": "Pour un mouvement uniformément accéléré partant du repos, d = ½ × a × t² = ½ × 2 × 5² = 25 m. La valeur 10 m confond la distance avec la vitesse atteinte, a × t = 10 m/s. Dans ce type de mouvement, la distance parcourue croît comme le carré du temps écoulé : elle est multipliée par quatre quand la durée double.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Un gaz parfait occupe un volume de 4 L à 27°C et 1 atm. Quel volume occupe-t-il à 127°C et même pression ?",
+      "q": "Pour doubler la période propre d'un oscillateur élastique, il faut multiplier la masse suspendue par :",
       "o": [
-        "5,33 L",
-        "3 L",
-        "8 L",
-        "4,75 L"
-      ],
-      "r": 0,
-      "x": "Méthode : loi de Charles V₁/T₁=V₂/T₂ → V₂=4×400/300=5,33 L. T en Kelvin (T₁=300 K, T₂=400 K). Piège : calcul en Celsius donne des résultats faux."
-    },
-    {
-      "q": "La réaction de combustion complète du méthane CH₄ produit :",
-      "o": [
-        "CO + H₂O",
-        "CO₂ + H₂",
-        "CO₂ + H₂O",
-        "C + H₂O"
-      ],
-      "r": 2,
-      "x": "Méthode : CH₄ + 2O₂ → CO₂ + 2H₂O (combustion complète avec excès d'O₂). Piège : combustion incomplète (manque O₂) donne CO (choix A)."
-    },
-    {
-      "q": "Un panneau solaire de 200 W fonctionne 6 heures par jour à Ouagadougou. Quelle énergie produit-il en 30 jours ?",
-      "o": [
-        "36 kWh",
-        "3,6 kWh",
-        "360 kWh",
-        "1200 kWh"
-      ],
-      "r": 0,
-      "x": "Méthode : E=P×t=0,2 kW×180 h=36 kWh. Formule : E(kWh)=P(kW)×t(h). Piège : oublier de convertir W en kW conduit à une erreur de facteur 1000."
-    },
-    {
-      "q": "Un condensateur de capacité C=100 µF est chargé sous une tension U=50 V. Quelle énergie emmagasine-t-il ?",
-      "o": [
-        "0,25 J",
-        "2,5 J",
-        "25 J",
-        "0,125 J"
-      ],
-      "r": 3,
-      "x": "Méthode : E=½CU²=½×100×10⁻⁶×2500=0,125 J. Formule : E=½CU². Piège : oublier le ½ donne 0,25 J (choix A)."
-    },
-    {
-      "q": "Quelle est la formule semi-développée de l'éthanol ?",
-      "o": [
-        "CH₃-CO-CH₃",
-        "CH₃-O-CH₃",
-        "CH₃-CHO",
-        "CH₃-CH₂-OH"
-      ],
-      "r": 3,
-      "x": "Méthode : éthanol = alcool en C2, groupe fonctionnel -OH. CH₃-CHO est l'éthanal, CH₃-CO-CH₃ est l'acétone, CH₃-O-CH₃ est le méthoxyméthane."
-    },
-    {
-      "q": "Un fil de cuivre de longueur L=2 m et de section S=1 mm² a une résistivité ρ=1,7×10⁻⁸ Ω·m. Sa résistance vaut :",
-      "o": [
-        "34 mΩ",
-        "3,4 mΩ",
-        "0,034 Ω",
-        "3,4 Ω"
-      ],
-      "r": 0,
-      "x": "Méthode : R=ρL/S=1,7×10⁻⁸×2/10⁻⁶=3,4×10⁻²Ω=34 mΩ. Piège : ne pas convertir S (1 mm²=10⁻⁶ m²) multiplie le résultat par 10⁶."
-    },
-    {
-      "q": "Un corps de masse m=500 g est posé sur un plan incliné à 30°. Quelle est la composante du poids parallèle au plan ? (g=10 m/s²)",
-      "o": [
-        "2,5 N",
-        "4,33 N",
-        "5 N",
-        "8,66 N"
-      ],
-      "r": 0,
-      "x": "Méthode : P∥=mg×sin30°=0,5×10×0,5=2,5 N. Formules : P∥=mgsinθ ; P⊥=mgcosθ. Piège : utiliser cosθ au lieu de sinθ donne 4,33 N (choix B)."
-    },
-    {
-      "q": "La vitesse du son dans l'air à 20°C est environ 340 m/s. Quelle est la longueur d'onde d'un son de fréquence 170 Hz ?",
-      "o": [
-        "57 800 m",
-        "5 m",
-        "2 m",
-        "0,5 m"
-      ],
-      "r": 2,
-      "x": "Méthode : λ=v/f=340/170=2 m. Formule : λ=v/f. Piège : inverser la formule (f/v) donne 0,5 m (choix D)."
-    },
-    {
-      "q": "Quelle est la charge électrique d'un électron ?",
-      "o": [
-        "+1,6×10⁻¹⁹ C",
-        "+9,1×10⁻³¹ C",
-        "-9,1×10⁻³¹ C",
-        "-1,6×10⁻¹⁹ C"
-      ],
-      "r": 3,
-      "x": "L'électron porte une charge négative e=-1,6×10⁻¹⁹ C. 9,1×10⁻³¹ kg est la masse de l'électron, non sa charge. Piège : confondre masse et charge de l'électron."
-    },
-    {
-      "q": "Un atome de carbone possède 6 protons. Combien d'électrons possède l'ion C⁴⁺ ?",
-      "o": [
-        "10",
-        "6",
-        "2",
-        "4"
-      ],
-      "r": 2,
-      "x": "Méthode : C neutre a 6 électrons. C⁴⁺ a perdu 4 électrons → 6-4=2 électrons. Piège : ajouter des électrons au lieu d'en retirer (C⁴⁻ aurait 10 électrons)."
-    },
-    {
-      "q": "La loi d'Ohm s'écrit :",
-      "o": [
-        "U = R/I",
-        "U = R × I",
-        "I = R × U",
-        "R = U × I"
-      ],
-      "r": 1,
-      "x": "La loi d'Ohm : U=RI, donc la tension (V) = résistance (Ω) × intensité (A). Formule : U=RI. Piège : inverser R et I conduit aux choix A ou C."
-    },
-    {
-      "q": "Quelle est la masse molaire du dioxyde de carbone CO₂ ? (M_C=12, M_O=16 g/mol)",
-      "o": [
-        "28 g/mol",
-        "40 g/mol",
-        "32 g/mol",
-        "44 g/mol"
-      ],
-      "r": 3,
-      "x": "Méthode : M(CO₂)=M_C+2×M_O=12+2×16=12+32=44 g/mol. Piège : oublier le coefficient 2 devant O donne 28 g/mol (choix A)."
-    },
-    {
-      "q": "Un mobile parcourt 120 km en 1h30min. Quelle est sa vitesse moyenne en km/h ?",
-      "o": [
-        "60 km/h",
-        "75 km/h",
-        "90 km/h",
-        "80 km/h"
-      ],
-      "r": 3,
-      "x": "Méthode : v=d/t=120/1,5=80 km/h. Convertir 1h30min = 1,5 h. Piège : utiliser t=1,3 h (lecture décimale incorrecte) donne environ 92 km/h."
-    },
-    {
-      "q": "Quelle est la valeur du pH d'une solution neutre à 25°C ?",
-      "o": [
-        "0",
-        "7",
-        "14",
-        "1"
-      ],
-      "r": 1,
-      "x": "À 25°C, une solution neutre a [H₃O⁺]=[OH⁻]=10⁻⁷ mol/L → pH=-log(10⁻⁷)=7. pH=0 correspond à [H₃O⁺]=1 mol/L (très acide)."
-    },
-    {
-      "q": "Quelle est l'unité SI de la force ?",
-      "o": [
-        "Joule",
-        "Watt",
-        "Newton",
-        "Pascal"
-      ],
-      "r": 2,
-      "x": "La force se mesure en Newton (N=kg·m/s²). Le Joule est l'unité d'énergie, le Watt de puissance, le Pascal de pression. Formule : F=ma."
-    },
-    {
-      "q": "Un ressort de constante k=200 N/m est comprimé de 5 cm. Quelle est l'énergie potentielle élastique stockée ?",
-      "o": [
-        "0,25 J",
-        "10 J",
-        "5 J",
-        "0,5 J"
-      ],
-      "r": 0,
-      "x": "Méthode : Ep=½kx²=½×200×(0,05)²=100×0,0025=0,25 J. Formule : Ep=½kx². Piège : ne pas convertir cm en m donne 25 J."
-    },
-    {
-      "q": "Quelle est la formule chimique de l'acide sulfurique ?",
-      "o": [
-        "HCl",
-        "H₂SO₃",
-        "H₂SO₄",
-        "H₂S"
-      ],
-      "r": 2,
-      "x": "L'acide sulfurique est H₂SO₄. HCl est l'acide chlorhydrique, H₂SO₃ est l'acide sulfureux, H₂S est le sulfure d'hydrogène. À mémoriser par le degré d'oxydation du soufre (+VI dans H₂SO₄)."
-    },
-    {
-      "q": "Un pendule simple de longueur L=1 m oscille sur Terre (g=9,8 m/s²). Quelle est sa période approximative ?",
-      "o": [
-        "1 s",
-        "3,14 s",
-        "0,5 s",
-        "2 s"
-      ],
-      "r": 3,
-      "x": "Méthode : T=2π√(L/g)=2π√(1/9,8)=2π×0,319≈2 s. Formule : T=2π√(L/g). Piège : oublier la racine carrée conduit à T=2π/9,8≈0,64 s."
-    },
-    {
-      "q": "Deux résistances R₁=30 Ω et R₂=60 Ω sont montées en parallèle. Quelle est la résistance équivalente ?",
-      "o": [
-        "90 Ω",
-        "45 Ω",
-        "20 Ω",
-        "15 Ω"
-      ],
-      "r": 2,
-      "x": "Méthode : 1/Req=1/R₁+1/R₂=1/30+1/60=2/60+1/60=3/60 → Req=20 Ω. Piège : addition directe (choix A) correspond au montage en série."
-    },
-    {
-      "q": "La réaction de saponification est la réaction d'un ester avec :",
-      "o": [
-        "Un acide",
-        "Une base forte en solution aqueuse",
-        "Un alcool",
-        "L'eau"
-      ],
-      "r": 1,
-      "x": "La saponification = hydrolyse basique d'un ester par une base forte (NaOH ou KOH) → donne un alcool + un savon (sel d'acide gras). L'hydrolyse acide est réversible, la saponification est totale."
-    },
-    {
-      "q": "Un corps de masse m=2 kg tombe librement depuis une hauteur h=20 m. Quelle est sa vitesse au moment de toucher le sol ? (g=10 m/s²)",
-      "o": [
-        "10 m/s",
-        "200 m/s",
-        "14 m/s",
-        "20 m/s"
-      ],
-      "r": 3,
-      "x": "Méthode : v²=2gh=2×10×20=400 → v=20 m/s. Formule : v=√(2gh). Piège : oublier la racine carrée donne 400 m/s ; utiliser v=gh (sans 2) donne 14 m/s."
-    },
-    {
-      "q": "En chimie organique, la fonction ester est caractérisée par le groupe :",
-      "o": [
-        "-OH",
-        "-CHO",
-        "-COO-",
-        "-COOH"
-      ],
-      "r": 2,
-      "x": "Le groupe ester est -COO- (ou -CO-O-). -OH est le groupe alcool, -CHO est l'aldéhyde, -COOH est l'acide carboxylique. Méthode : ester = acide + alcool - H₂O."
-    },
-    {
-      "q": "Quelle est la quantité de matière de 88 g de CO₂ ? (M=44 g/mol)",
-      "o": [
-        "1 mol",
-        "0,5 mol",
-        "4 mol",
-        "2 mol"
-      ],
-      "r": 3,
-      "x": "Méthode : n=m/M=88/44=2 mol. Formule : n=m/M. Piège : inverser la formule (M/m) donne 0,5 mol (choix B)."
-    },
-    {
-      "q": "La loi de Mariotte (gaz parfait à température constante) s'énonce :",
-      "o": [
-        "P×V = constante",
-        "P/V = constante",
-        "P×T = constante",
-        "V/T = constante"
-      ],
-      "r": 0,
-      "x": "Loi de Mariotte (isotherme) : PV=constante → P₁V₁=P₂V₂. V/T=constante est la loi de Charles (isobare). P×T=constante n'est pas une loi classique des gaz."
-    },
-    {
-      "q": "Quelle est la force exercée par un champ électrique E=500 V/m sur une charge q=2×10⁻⁶ C ?",
-      "o": [
-        "250 N",
-        "0,001 N",
-        "1 000 N",
-        "1×10⁻³ N"
-      ],
-      "r": 3,
-      "x": "Méthode : F=qE=2×10⁻⁶×500=1×10⁻³ N=1 mN. Formule : F=qE. Piège : inverser F=E/q donne 2,5×10⁸ N (absurde)."
-    },
-    {
-      "q": "Le nombre d'Avogadro vaut :",
-      "o": [
-        "6,02×10²³ mol⁻¹",
-        "6,02×10²² mol⁻¹",
-        "8,314 J/(mol·K)",
-        "1,38×10⁻²³ J/K"
-      ],
-      "r": 0,
-      "x": "NA=6,02×10²³ mol⁻¹ (nombre de particules par mole). 8,314 J/(mol·K) est la constante des gaz parfaits R ; 1,38×10⁻²³ J/K est la constante de Boltzmann k."
-    },
-    {
-      "q": "Une lampe de 60 W fonctionne pendant 2 heures. Quelle énergie consomme-t-elle en kWh ?",
-      "o": [
-        "0,12 kWh",
-        "120 kWh",
-        "1,2 kWh",
-        "30 kWh"
-      ],
-      "r": 0,
-      "x": "Méthode : E=P×t=0,06 kW×2 h=0,12 kWh. Formule : E=Pt. Piège : utiliser P en W sans conversion donne 120 (en Wh, non kWh)."
-    },
-    {
-      "q": "Quel est le pH d'une solution de HCl à 0,01 mol/L ? (HCl est un acide fort)",
-      "o": [
-        "2",
-        "12",
-        "1",
-        "0,01"
-      ],
-      "r": 0,
-      "x": "Méthode : HCl fort → [H₃O⁺]=C=0,01=10⁻² mol/L → pH=-log(10⁻²)=2. Piège : pH=12 correspond au pOH=2 (solution basique de même concentration)."
-    },
-    {
-      "q": "Quelle est l'hybridation du carbone dans l'éthylène CH₂=CH₂ ?",
-      "o": [
-        "sp²",
-        "sp³",
-        "sp",
-        "s"
-      ],
-      "r": 0,
-      "x": "Dans l'éthylène, chaque C forme une double liaison (1σ+1π) → 3 liaisons σ → hybridation sp². sp³ = 4 liaisons simples (alcanes) ; sp = triple liaison (alcynes)."
-    },
-    {
-      "q": "Un transformateur idéal a 500 spires au primaire et 100 spires au secondaire. Si la tension primaire est 220 V, quelle est la tension secondaire ?",
-      "o": [
-        "1100 V",
-        "44 V",
-        "22 V",
-        "110 V"
-      ],
-      "r": 1,
-      "x": "Méthode : U₂/U₁=N₂/N₁ → U₂=220×100/500=44 V. Formule : U₁/U₂=N₁/N₂. Piège : inverser le rapport donne 1100 V (choix A)."
-    },
-    {
-      "q": "La réaction entre un acide et une base s'appelle :",
-      "o": [
-        "Estérification",
-        "Neutralisation",
-        "Oxydoréduction",
-        "Saponification"
-      ],
-      "r": 1,
-      "x": "Acide + Base → sel + eau = réaction de neutralisation. L'estérification = acide + alcool ; l'oxydoréduction implique un transfert d'électrons ; la saponification = ester + base forte."
-    },
-    {
-      "q": "Un objet de masse 5 kg est soulevé de 3 m. Quel est le travail effectué contre la pesanteur ? (g=10 m/s²)",
-      "o": [
-        "15 J",
-        "150 J",
-        "1,5 J",
-        "50 J"
-      ],
-      "r": 1,
-      "x": "Méthode : W=mgh=5×10×3=150 J. Formule : W=mgh. Piège : utiliser m+g+h (addition) au lieu de multiplication."
-    },
-    {
-      "q": "Quelle est la vitesse de la lumière dans le vide ?",
-      "o": [
-        "3×10⁶ m/s",
-        "3×10⁵ km/s",
-        "3×10⁸ m/s",
-        "3×10⁸ km/s"
-      ],
-      "r": 2,
-      "x": "c=3×10⁸ m/s dans le vide. Attention : 3×10⁵ km/s = 3×10⁸ m/s (même valeur, unité différente) mais l'unité SI est m/s. Le choix C est le plus rigoureux."
-    },
-    {
-      "q": "Quelle est la formule moléculaire du butane ?",
-      "o": [
-        "C₃H₈",
-        "C₅H₁₂",
-        "C₄H₈",
-        "C₄H₁₀"
-      ],
-      "r": 3,
-      "x": "Alcanes : CₙH₂ₙ₊₂. Pour n=4 : C₄H₁₀. C₃H₈=propane, C₄H₈=butène (alcène), C₅H₁₂=pentane. Méthode : mémoriser la formule générale des alcanes."
-    },
-    {
-      "q": "Le phénomène de diffraction de la lumière prouve que la lumière a un caractère :",
-      "o": [
-        "Corpusculaire",
-        "Ondulatoire",
-        "Électrique",
-        "Magnétique"
-      ],
-      "r": 1,
-      "x": "La diffraction est un phénomène purement ondulatoire (déviation autour d'un obstacle). L'effet photoélectrique prouve le caractère corpusculaire (photons). La lumière a une dualité onde-corpuscule."
-    },
-    {
-      "q": "Un gaz parfait est à T=300 K, P=2 atm et V=10 L. Quelle est la quantité de matière ? (R=0,082 L·atm/(mol·K))",
-      "o": [
-        "0,82 mol",
-        "8,2 mol",
-        "0,41 mol",
-        "4,1 mol"
-      ],
-      "r": 0,
-      "x": "Méthode : PV=nRT → n=PV/RT=2×10/(0,082×300)=20/24,6≈0,813 mol. Piège : utiliser R=8,314 J/(mol·K) sans changer les unités (V en m³, P en Pa)."
-    },
-    {
-      "q": "Quelle est la masse d'un atome de fer ? (M_Fe=56 g/mol, NA=6×10²³)",
-      "o": [
-        "9,3×10⁻²³ g",
-        "56 g",
-        "9,3×10⁻²⁶ g",
-        "3,36×10²⁵ g"
-      ],
-      "r": 0,
-      "x": "Méthode : m=M/NA=56/(6×10²³)=9,33×10⁻²³ g. Formule : m_atome=M/NA. Piège : confondre g et kg → en kg ce serait 9,3×10⁻²⁶ kg (choix C)."
-    },
-    {
-      "q": "Dans un circuit RC en charge, la constante de temps τ représente :",
-      "o": [
-        "Le temps pour que la tension atteigne 63% de la tension finale",
-        "Le temps pour que le condensateur soit chargé à 100%",
-        "La moitié du temps de charge complet",
-        "Le temps pour que le courant s'annule"
-      ],
-      "r": 0,
-      "x": "τ=RC est la constante de temps. À t=τ, U_C=U₀(1-e⁻¹)≈0,63U₀ (63% de la charge finale). La charge complète est théoriquement infinie (5τ en pratique)."
-    },
-    {
-      "q": "Quelle est la valence du carbone dans les composés organiques ?",
-      "o": [
+        "√2",
         "2",
         "3",
+        "4"
+      ],
+      "r": 3,
+      "x": "La période T0 = 2π × √(m / k) est proportionnelle à la racine carrée de la masse : pour la doubler, il faut multiplier m par 2² = 4. Doubler la masse ne multiplie la période que par √2 ≈ 1,41. À l'inverse, remplacer le ressort par un ressort quatre fois plus raide divise la période par deux.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un corps lâché dans le vide tombe avec une accélération égale à :",
+      "o": [
+        "une valeur nulle",
+        "la moitié de g",
+        "l'intensité de la pesanteur g",
+        "le double de g"
+      ],
+      "r": 2,
+      "x": "Dans le vide, un corps en chute libre n'est soumis qu'à son poids et son accélération est égale à g, soit environ 9,8 m/s² à la surface de la Terre. Cette accélération ne dépend pas de la masse. Galilée l'a établi, et l'astronaute David Scott l'a confirmé en 1971 sur la Lune en lâchant simultanément un marteau et une plume.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "D'après la troisième loi de Kepler, si le rayon de l'orbite d'un satellite est multiplié par 4, sa période de révolution est multipliée par :",
+      "o": [
+        "2",
         "4",
-        "6"
+        "8",
+        "16"
       ],
       "r": 2,
-      "x": "Le carbone a 4 électrons de valence → valence = 4 (forme 4 liaisons covalentes). C'est ce qui lui permet de former des chaînes et des structures complexes en chimie organique."
+      "x": "La troisième loi de Kepler établit que T² / r³ est constant pour tous les satellites d'un même astre : T est proportionnelle à r^(3/2), soit (4)^(3/2) = 8. La valeur 16 correspond à une proportionnalité erronée entre T et r². Cette loi permet de calculer l'altitude des satellites géostationnaires à partir de leur période de 24 heures.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Un bateau flotte sur l'eau. La poussée d'Archimède est égale :",
+      "q": "Une bille est lancée verticalement vers le haut à 15 m/s (g = 10 m/s², frottements négligés). La durée de la montée est :",
       "o": [
-        "Au poids du bateau",
-        "Au volume du bateau",
-        "Au poids du fluide déplacé",
-        "À la masse volumique de l'eau"
-      ],
-      "r": 2,
-      "x": "Poussée d'Archimède = poids du fluide déplacé = ρ_fluide × V_immergé × g. Si le bateau flotte, la poussée = poids du bateau (condition d'équilibre). Les choix A et C sont vrais à l'équilibre, mais C est la définition générale."
-    },
-    {
-      "q": "Quelle est l'énergie cinétique d'un objet de 2 kg se déplaçant à 10 m/s ?",
-      "o": [
-        "20 J",
-        "10 J",
-        "200 J",
-        "100 J"
-      ],
-      "r": 3,
-      "x": "Méthode : Ec=½mv²=½×2×100=100 J. Formule : Ec=½mv². Piège : oublier le ½ donne 200 J (choix C) ; utiliser mv sans carré donne 20 J (choix A)."
-    },
-    {
-      "q": "La formule de la loi de Coulomb est :",
-      "o": [
-        "F=Gm₁m₂/r²",
-        "F=kq₁q₂/r",
-        "F=kq₁q₂/r²",
-        "F=q₁q₂/(kr²)"
-      ],
-      "r": 2,
-      "x": "Loi de Coulomb : F=kq₁q₂/r² avec k=9×10⁹ N·m²/C². La loi de gravitation est F=Gm₁m₂/r² (même forme mais pour les masses). Piège : confondre les deux lois en force."
-    },
-    {
-      "q": "Quel est l'état d'hybridation du carbone dans le dioxyde de carbone O=C=O ?",
-      "o": [
-        "sp³",
-        "sp²",
-        "sp",
-        "Non hybridé"
-      ],
-      "r": 2,
-      "x": "Dans CO₂, le carbone forme 2 doubles liaisons → 2 liaisons σ → hybridation sp. La géométrie est linéaire (angle 180°). sp² → géométrie plane trigonale (3 liaisons σ)."
-    },
-    {
-      "q": "Un objet est en chute libre. Après 3 secondes, quelle est sa vitesse ? (g=10 m/s²)",
-      "o": [
-        "10 m/s",
-        "45 m/s",
-        "15 m/s",
-        "30 m/s"
-      ],
-      "r": 3,
-      "x": "Méthode : v=g×t=10×3=30 m/s (vitesse initiale nulle). Formule : v=v₀+gt. Piège : diviser g par t donne 3,3 m/s ; utiliser v=½gt donne 15 m/s (erreur liée à la formule de la distance)."
-    },
-    {
-      "q": "Combien de liaisons σ et π y a-t-il dans la molécule de propyne CH≡C-CH₃ ?",
-      "o": [
-        "6σ et 1π",
-        "6σ et 2π",
-        "8σ et 2π",
-        "5σ et 2π"
+        "0,67 s",
+        "1,5 s",
+        "3 s",
+        "11,25 s"
       ],
       "r": 1,
-      "x": "CH≡C-CH₃ : triple liaison = 1σ+2π, liaison C-C simple = 1σ, liaisons C-H (1+3)=4σ. Total : 1+1+4=6σ et 2π. Méthode : toute liaison simple = σ, double = 1σ+1π, triple = 1σ+2π."
+      "x": "La vitesse s'annule au sommet : v = v0 – g × t = 0, d'où t = v0 / g = 15 / 10 = 1,5 s. La valeur 3 s correspond à la durée totale de l'aller-retour, la descente durant autant que la montée. La hauteur maximale atteinte vaut v0² / (2g) = 11,25 m, valeur qui ne doit pas être confondue avec une durée.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Quelle est la pression exercée par une colonne d'eau de 10 m de hauteur ? (ρ_eau=1000 kg/m³, g=10 m/s²)",
+      "q": "Le travail d'une force est nul lorsque :",
       "o": [
-        "100 000 Pa",
-        "1000 Pa",
-        "10 Pa",
-        "100 Pa"
+        "la force est perpendiculaire au déplacement",
+        "la force a le même sens que le déplacement",
+        "la force s'oppose au sens du déplacement",
+        "la force fait un angle de 30° avec le déplacement"
       ],
       "r": 0,
-      "x": "Méthode : P=ρgh=1000×10×10=100 000 Pa = 1 bar. Formule : P=ρgh. Piège : oublier g (utiliser P=ρh) donne 10 000 Pa."
+      "x": "Le travail W = F × d × cos α s'annule pour α = 90°, car cos 90° = 0 : une force perpendiculaire au déplacement ne travaille pas. Une force de même sens fournit un travail moteur et une force opposée un travail résistant. Le poids d'une valise transportée horizontalement ne travaille donc pas, même si le porteur se fatigue.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "L'électrolyse de l'eau produit à la cathode :",
+      "q": "Un moteur de 1,5 kW fonctionne pendant 2 heures. L'énergie qu'il consomme est :",
       "o": [
-        "Du dioxygène O₂",
-        "Du dihydrogène H₂",
-        "De l'eau oxygénée H₂O₂",
-        "Des ions OH⁻"
+        "0,75 kWh",
+        "3 kWh",
+        "30 kWh",
+        "180 kWh"
       ],
       "r": 1,
-      "x": "À la cathode (pôle -) : réduction → 2H₂O + 2e⁻ → H₂ + 2OH⁻ (production de H₂). À l'anode (pôle +) : oxydation → production de O₂. Mémo : cathode = réduction = H₂."
+      "x": "E = P × t = 1,5 × 2 = 3 kWh, soit 3 × 3,6 = 10,8 MJ. La valeur 180 kWh résulte de l'expression du temps en minutes au lieu d'heures. Le kilowattheure est l'unité qui figure sur les factures d'électricité ; il correspond à l'énergie consommée par un appareil de 1 000 W fonctionnant pendant une heure.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Quelle est la masse de 0,5 mol d'acide sulfurique H₂SO₄ ? (M=98 g/mol)",
+      "q": "Un condensateur de 100 µF se charge à travers un résistor de 10 kΩ. La constante de temps du circuit est :",
       "o": [
-        "196 g",
-        "49 g",
-        "98 g",
-        "24,5 g"
-      ],
-      "r": 1,
-      "x": "Méthode : m=n×M=0,5×98=49 g. Formule : m=nM. Piège : utiliser n=2 au lieu de 0,5 donne 196 g ; confondre avec n=1 donne 98 g."
-    },
-    {
-      "q": "Deux charges +2 µC et +3 µC sont séparées de 3 cm. Quelle est la force d'interaction ? (k=9×10⁹)",
-      "o": [
-        "60 N",
-        "6 N",
-        "0,6 N",
-        "600 N"
-      ],
-      "r": 0,
-      "x": "Méthode : F=kq₁q₂/r²=9×10⁹×2×10⁻⁶×3×10⁻⁶/(0,03)²=54×10⁻³/9×10⁻⁴=60 N. Piège : ne pas convertir cm en m multiplie le résultat par 10⁴."
-    },
-    {
-      "q": "La réaction de combustion complète du propane C₃H₈ est :",
-      "o": [
-        "C₃H₈ + 4O₂ → 3CO₂ + 4H₂O",
-        "C₃H₈ + 5O₂ → 3CO + 4H₂O",
-        "C₃H₈ + 3O₂ → 3CO₂ + 4H₂O",
-        "C₃H₈ + 5O₂ → 3CO₂ + 4H₂O"
-      ],
-      "r": 3,
-      "x": "Méthode : C₃H₈ + 5O₂ → 3CO₂ + 4H₂O. Vérification : C : 3=3 ✓ ; H : 8=8 ✓ ; O : 10=6+4=10 ✓. Piège : mal équilibrer O₂ est l'erreur la plus fréquente."
-    },
-    {
-      "q": "Dans un circuit RLC série à résonance, l'impédance est :",
-      "o": [
-        "Maximale",
-        "Nulle",
-        "Minimale et égale à R",
-        "Infinie"
-      ],
-      "r": 2,
-      "x": "À résonance (ω₀=1/√LC), les réactances XL et XC se compensent → Z=R (minimum). Le courant est maximal. Piège : confondre avec un circuit RLC parallèle où c'est l'impédance qui est maximale."
-    },
-    {
-      "q": "Quel est le rendement d'une machine thermique fonctionnant entre 500 K et 300 K ?",
-      "o": [
-        "60%",
-        "40%",
-        "50%",
-        "80%"
-      ],
-      "r": 1,
-      "x": "Rendement de Carnot : η=1-T_froide/T_chaude=1-300/500=1-0,6=0,4=40%. Formule : η=1-Tf/Tc. Piège : calculer 500-300=200 puis 200/500=40% (même résultat ici mais par voie incorrecte)."
-    },
-    {
-      "q": "Un acide α-aminé possède à la fois :",
-      "o": [
-        "Un groupe -OH et un groupe -COOH",
-        "Un groupe -NH₂ et un groupe -COOH",
-        "Un groupe -NH₂ et un groupe -OH",
-        "Un groupe -CHO et un groupe -COOH"
-      ],
-      "r": 1,
-      "x": "Les α-aminoacides ont un groupe amine -NH₂ et un groupe acide carboxylique -COOH sur le même carbone α. Ce sont les briques de base des protéines. Structure : H₂N-CH(R)-COOH."
-    },
-    {
-      "q": "Quelle est l'intensité traversant une résistance de 50 Ω sous 25 V ?",
-      "o": [
-        "0,5 A",
-        "2 A",
-        "1 250 A",
-        "5 A"
-      ],
-      "r": 0,
-      "x": "Méthode : I=U/R=25/50=0,5 A. Loi d'Ohm : U=RI → I=U/R. Piège : inverser U et R donne R/U=2 A (choix B) ; calculer U×R=1250 (choix C)."
-    },
-    {
-      "q": "Quelle est la valence de l'oxygène dans les composés courants ?",
-      "o": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "r": 1,
-      "x": "L'oxygène possède 6 électrons de valence, il lui manque 2 électrons pour compléter sa couche → valence = 2. Dans H₂O : O forme 2 liaisons avec H. Exception : dans O₂, chaque O forme une double liaison."
-    },
-    {
-      "q": "Un son de fréquence 1000 Hz a une période de :",
-      "o": [
-        "1000 s",
-        "100 s",
+        "0,001 s",
         "0,01 s",
-        "0,001 s"
-      ],
-      "r": 3,
-      "x": "Méthode : T=1/f=1/1000=10⁻³ s=1 ms. Formule : T=1/f. Piège : confondre T=f donne 1000 s ; utiliser T=f² ou f/1000 conduit aux autres erreurs."
-    },
-    {
-      "q": "L'indice de réfraction d'un milieu est défini par :",
-      "o": [
-        "n = v/c",
-        "n = f×v",
-        "n = λ/λ₀",
-        "n = c/v"
-      ],
-      "r": 3,
-      "x": "n=c/v où c=vitesse de la lumière dans le vide, v=vitesse dans le milieu. n≥1 toujours (sauf milieux spéciaux). Pour l'eau : n≈1,33 → v=c/1,33≈2,26×10⁸ m/s."
-    },
-    {
-      "q": "Dans une réaction d'oxydoréduction, l'oxydant :",
-      "o": [
-        "Perd des électrons",
-        "Perd des protons",
-        "Gagne des protons",
-        "Gagne des électrons"
-      ],
-      "r": 3,
-      "x": "Mémo : LÉON dit GER → L'oxydant accepte les électrons (Gain Électrons = Réduction). Le réducteur cède des électrons (Perte Électrons = Oxydation). LÉON = LEo (perd) GERn (gagne)."
-    },
-    {
-      "q": "Un moteur de voiture consomme 5 L d'essence pour 100 km. Sachant que 1 L d'essence dégage 35 MJ, quelle énergie est consommée pour 100 km ?",
-      "o": [
-        "7 MJ",
-        "35 MJ",
-        "175 MJ",
-        "70 MJ"
-      ],
-      "r": 2,
-      "x": "Méthode : E=5×35=175 MJ. Simple multiplication. Piège : utiliser 1 L pour 100 km (E=35 MJ) ou diviser au lieu de multiplier."
-    },
-    {
-      "q": "Quelle est la formule de la loi de Faraday pour l'induction électromagnétique ?",
-      "o": [
-        "e = B × l × v",
-        "e = L × dI/dt",
-        "e = -dΦ/dt",
-        "F = BIl"
-      ],
-      "r": 2,
-      "x": "Loi de Faraday : e=-dΦ/dt (la FEM induite est opposée à la variation de flux). e=Blv est la FEM d'un conducteur se déplaçant dans B. e=L×dI/dt est la FEM d'auto-induction. F=BIl est la force de Laplace."
-    },
-    {
-      "q": "La géométrie de la molécule d'eau H₂O est :",
-      "o": [
-        "Linéaire",
-        "Trigonale plane",
-        "Coudée (angulaire)",
-        "Tétraédrique"
-      ],
-      "r": 2,
-      "x": "H₂O : 2 doublets liants + 2 doublets non liants sur O → VSEPR AX₂E₂ → géométrie coudée (angle 104,5°). CO₂ est linéaire (AX₂), BF₃ est trigonal plan (AX₃), CH₄ est tétraédrique (AX₄)."
-    },
-    {
-      "q": "Quelle est la concentration molaire d'une solution obtenue en dissolvant 4 g de NaOH dans 500 mL d'eau ? (M_NaOH=40 g/mol)",
-      "o": [
-        "0,1 mol/L",
-        "0,2 mol/L",
-        "8 mol/L",
-        "0,4 mol/L"
-      ],
-      "r": 1,
-      "x": "n=m/M=4/40=0,1 mol. C=n/V=0,1/0,5=0,2 mol/L. Piège : utiliser V=500 sans convertir en litres (0,5 L) donne 0,0002 mol/L ; utiliser m/V directement donne 0,008."
-    },
-    {
-      "q": "Quel est le type de liaison dans le sel de cuisine NaCl ?",
-      "o": [
-        "Liaison covalente",
-        "Liaison hydrogène",
-        "Liaison métallique",
-        "Liaison ionique"
-      ],
-      "r": 3,
-      "x": "NaCl est formé par transfert d'électron de Na vers Cl → liaison ionique (Na⁺ et Cl⁻). La liaison covalente = partage d'électrons (ex : H₂O). La liaison métallique est dans les métaux purs."
-    },
-    {
-      "q": "La puissance mécanique est définie par :",
-      "o": [
-        "P = F/v",
-        "P = F × d",
-        "P = m × v",
-        "P = F × v"
-      ],
-      "r": 3,
-      "x": "P=F×v (force × vitesse) ou P=W/t (travail/temps). F×d=W est le travail, non la puissance. Unités : P en Watts, F en Newtons, v en m/s. Mémo : puissance = travail par unité de temps."
-    },
-    {
-      "q": "En spectrométrie de masse, la séparation des ions est basée sur :",
-      "o": [
-        "Leur charge uniquement",
-        "Leur masse uniquement",
-        "Leur rapport masse/charge (m/z)",
-        "Leur vitesse de migration dans un gel"
-      ],
-      "r": 2,
-      "x": "La spectrométrie de masse sépare les ions selon leur rapport m/z (masse sur charge). L'électrophorèse sépare selon la charge dans un gel. La chromatographie sépare selon l'affinité avec les phases."
-    },
-    {
-      "q": "Quelle est la valeur de la constante gravitationnelle G ?",
-      "o": [
-        "6,67×10⁻¹¹ N·m²/kg²",
-        "9,8 m/s²",
-        "6,02×10²³ mol⁻¹",
-        "1,38×10⁻²³ J/K"
-      ],
-      "r": 0,
-      "x": "G=6,67×10⁻¹¹ N·m²/kg² (constante gravitationnelle universelle). g=9,8 m/s² est l'accélération de pesanteur (locale, surface Terre). NA=6,02×10²³ mol⁻¹, k=1,38×10⁻²³ J/K."
-    },
-    {
-      "q": "Le phénomène de résonance magnétique nucléaire (RMN) exploite :",
-      "o": [
-        "La diffraction des rayons X",
-        "La réfraction de la lumière visible",
-        "L'émission de photons par les électrons excités",
-        "L'absorption de rayonnements par les noyaux dans un champ magnétique"
-      ],
-      "r": 3,
-      "x": "La RMN (¹H-NMR) détecte l'absorption de radiofréquences par les noyaux H dans un champ magnétique. Elle permet d'identifier les groupes fonctionnels et la structure des molécules organiques."
-    },
-    {
-      "q": "Un transformateur abaisseur de tension a un rapport N₁/N₂=5. Si I₁=2 A, quelle est l'intensité au secondaire (transformateur idéal) ?",
-      "o": [
-        "10 A",
-        "0,4 A",
-        "2 A",
-        "40 A"
-      ],
-      "r": 0,
-      "x": "Méthode : I₁/I₂=N₂/N₁=1/5 → I₂=5×I₁=5×2=10 A. Formule : I₁N₁=I₂N₂. Le rapport des intensités est l'inverse du rapport des spires. Piège : appliquer le même rapport que pour les tensions."
-    },
-    {
-      "q": "Quelle est la différence entre une réaction exothermique et endothermique ?",
-      "o": [
-        "Exothermique libère de la chaleur, endothermique en absorbe",
-        "Exothermique absorbe de la chaleur, endothermique en libère",
-        "Exothermique est rapide, endothermique est lente",
-        "Exothermique est irréversible, endothermique est réversible"
-      ],
-      "r": 0,
-      "x": "Exo = sort (latin : exo=dehors) → libère de la chaleur (ΔH<0). Endo = entre → absorbe de la chaleur (ΔH>0). Ex : combustion = exothermique ; photosynthèse = endothermique."
-    },
-    {
-      "q": "Quel est le nombre d'oxydation du soufre dans SO₄²⁻ ?",
-      "o": [
-        "+4",
-        "+2",
-        "-2",
-        "+6"
-      ],
-      "r": 3,
-      "x": "Dans SO₄²⁻ : soit x le n.o. de S. x+4×(-2)=-2 → x-8=-2 → x=+6. Méthode : O a toujours n.o.=-2 (sauf peroxydes). Piège : oublier la charge globale de l'ion (-2) donne x=+8."
-    },
-    {
-      "q": "Une onde se propage à 6 m/s avec une fréquence de 3 Hz. Quelle est la longueur d'onde ?",
-      "o": [
-        "18 m",
-        "0,5 m",
-        "2 m",
-        "3 m"
-      ],
-      "r": 2,
-      "x": "λ=v/f=6/3=2 m. Formule : v=λ×f → λ=v/f. Piège : utiliser λ=v×f donne 18 m (choix A) ; inverser donne f/v=0,5 m (choix B)."
-    },
-    {
-      "q": "Quelle est la formule générale des alcènes ?",
-      "o": [
-        "CₙH₂ₙ₊₂",
-        "CₙH₂ₙ",
-        "CₙH₂ₙ₋₂",
-        "CₙHₙ"
-      ],
-      "r": 1,
-      "x": "Alcènes = 1 double liaison → formule CₙH₂ₙ. CₙH₂ₙ₊₂ = alcanes (saturés). CₙH₂ₙ₋₂ = alcynes ou diènes (2 insaturations). Exemple : éthylène C₂H₄ (2×2=4 ✓)."
-    },
-    {
-      "q": "Quelle est la pression atmosphérique standard en Pa ?",
-      "o": [
-        "1013 Pa",
-        "101 300 Pa",
-        "1 013 000 Pa",
-        "100 Pa"
-      ],
-      "r": 1,
-      "x": "P_atm=101 325 Pa ≈ 101 300 Pa = 1 atm = 1013 hPa = 760 mmHg. Piège fréquent : confondre Pa et hPa → 1013 hPa ≠ 1013 Pa (facteur 100 d'erreur)."
-    },
-    {
-      "q": "Un électron dans l'état fondamental de l'atome d'hydrogène a une énergie de -13,6 eV. L'énergie d'ionisation est :",
-      "o": [
-        "-13,6 eV",
-        "0 eV",
-        "27,2 eV",
-        "13,6 eV"
-      ],
-      "r": 3,
-      "x": "L'ionisation = amener l'électron à E=0 (état libre) → Eionisation = 0 - (-13,6) = +13,6 eV. L'énergie d'ionisation est toujours positive (énergie fournie). Piège : oublier le signe."
-    },
-    {
-      "q": "Quelle est la géométrie de la molécule de méthane CH₄ ?",
-      "o": [
-        "Plane carrée",
-        "Pyramidale",
-        "Tétraédrique",
-        "Linéaire"
-      ],
-      "r": 2,
-      "x": "CH₄ : C au centre avec 4 liaisons C-H équivalentes → VSEPR AX₄ → tétraédrique avec angle 109,5°. Pyramidale = NH₃ (AX₃E). Linéaire = CO₂, C₂H₂. Plane carrée = XeF₄."
-    },
-    {
-      "q": "L'unité de la capacité électrique est :",
-      "o": [
-        "Henry (H)",
-        "Farad (F)",
-        "Ohm (Ω)",
-        "Tesla (T)"
-      ],
-      "r": 1,
-      "x": "La capacité se mesure en Farad (F=C/V). Henry = unité d'inductance (L). Ohm = résistance. Tesla = induction magnétique. Dans les circuits, on utilise souvent µF ou nF (très grandes valeurs)."
-    },
-    {
-      "q": "Un gaz subit une transformation adiabatique. Cela signifie que :",
-      "o": [
-        "La pression reste constante",
-        "Le volume reste constant",
-        "La température reste constante",
-        "Il n'y a pas d'échange de chaleur avec l'extérieur"
-      ],
-      "r": 3,
-      "x": "Adiabatique → Q=0 (pas d'échange de chaleur). Isobare = P constante ; isochore = V constant ; isotherme = T constante. Pour un gaz adiabatique : PV^γ = constante (γ=Cp/Cv)."
-    },
-    {
-      "q": "Un pH-mètre indique pH=3 pour une solution. Cette solution est :",
-      "o": [
-        "Basique",
-        "Neutre",
-        "Acide",
-        "Amphotère"
-      ],
-      "r": 2,
-      "x": "pH<7 → acide ; pH=7 → neutre ; pH>7 → basique (à 25°C). pH=3 → [H₃O⁺]=10⁻³ mol/L (acidité forte). Piège : confondre pH faible = peu acide (au contraire, pH faible = très acide)."
-    },
-    {
-      "q": "Quel est l'agent oxydant dans la réaction : Fe + CuSO₄ → FeSO₄ + Cu ?",
-      "o": [
-        "Cu²⁺",
-        "Fe",
-        "SO₄²⁻",
-        "Fe²⁺"
-      ],
-      "r": 0,
-      "x": "Cu²⁺ gagne 2 électrons (Cu²⁺ + 2e⁻ → Cu) → c'est l'oxydant (réduit). Fe cède 2 électrons (Fe → Fe²⁺ + 2e⁻) → c'est le réducteur (oxydé). Mémo : l'oxydant est réduit = LÉON."
-    },
-    {
-      "q": "La force de Laplace sur un conducteur de longueur L portant un courant I dans un champ B est :",
-      "o": [
-        "F = B + I + L",
-        "F = B × I × L × sinθ",
-        "F = B/(I×L)",
-        "F = I²×B×L"
-      ],
-      "r": 1,
-      "x": "Loi de Laplace : F=BIL sinθ (θ = angle entre courant et B). Si I ⊥ B (θ=90°), F=BIL (maximum). Formule vectorielle : F=IL∧B. Règle des trois doigts ou de la main droite pour la direction."
-    },
-    {
-      "q": "Quelle est la formule moléculaire de l'acide acétique (vinaigre) ?",
-      "o": [
-        "C₂H₄O₂",
-        "CH₂O",
-        "C₂H₆O",
-        "CH₄O"
-      ],
-      "r": 0,
-      "x": "Acide acétique = CH₃COOH = C₂H₄O₂. C₂H₆O = éthanol. CH₂O = formaldéhyde. CH₄O = méthanol. Piège : confondre acide acétique (C₂H₄O₂) et éthanol (C₂H₆O) qui ont le même nombre de C."
-    },
-    {
-      "q": "Un photon de longueur d'onde λ=500 nm a une énergie de : (h=6,63×10⁻³⁴ J·s, c=3×10⁸ m/s)",
-      "o": [
-        "3,98×10⁻¹⁹ J",
-        "3,98×10⁻²⁸ J",
-        "9,95×10⁻²⁷ J",
-        "4,2 eV"
-      ],
-      "r": 0,
-      "x": "Méthode : E=hc/λ=6,63×10⁻³⁴×3×10⁸/500×10⁻⁹=3,98×10⁻¹⁹ J. Piège : ne pas convertir nm en m (×10⁻⁹). En eV : 3,98×10⁻¹⁹/1,6×10⁻¹⁹≈2,48 eV."
-    },
-    {
-      "q": "La distillation fractionnée permet de séparer des mélanges en exploitant :",
-      "o": [
-        "Les différences de solubilité",
-        "Les différences de point d'ébullition",
-        "Les différences de densité",
-        "Les différences de point de fusion"
-      ],
-      "r": 1,
-      "x": "La distillation fractionnée sépare des liquides miscibles selon leurs températures d'ébullition différentes. La décantation exploite les densités, la recristallisation les solubilités, la fusion exploite les points de fusion."
-    },
-    {
-      "q": "Un satellite orbite à 400 km d'altitude (R_Terre=6400 km, g=9,8 m/s²). Sa vitesse orbitale est environ :",
-      "o": [
-        "7670 m/s",
-        "11 200 m/s",
-        "3600 m/s",
-        "400 m/s"
-      ],
-      "r": 0,
-      "x": "Méthode : v=√(g'R') avec R'=6800 km=6,8×10⁶ m et g'≈8,7 m/s². v=√(8,7×6,8×10⁶)≈7700 m/s. La vitesse de libération est √2 fois plus grande (≈11 200 m/s = choix B)."
-    },
-    {
-      "q": "La réaction de polymérisation du styrène C₆H₅-CH=CH₂ donne :",
-      "o": [
-        "Un alcane",
-        "Un acide carboxylique",
-        "Un ester",
-        "Le polystyrène"
-      ],
-      "r": 3,
-      "x": "La polymérisation par addition de styrène (monomère avec double liaison) donne le polystyrène : n(C₆H₅-CH=CH₂) → (-CH(C₆H₅)-CH₂-)n. C'est un polymère thermoplastique largement utilisé."
-    },
-    {
-      "q": "En électrolyse, la masse déposée à l'électrode est donnée par la loi de Faraday :",
-      "o": [
-        "m = M×I×t/(n×F)",
-        "m = n×F/(M×I×t)",
-        "m = M×n×F/(I×t)",
-        "m = I×t/(n×F×M)"
-      ],
-      "r": 0,
-      "x": "Loi de Faraday : m=M×I×t/(n×F). M=masse molaire, I=intensité, t=durée, n=nombre d'e⁻ échangés, F=96500 C/mol. Méthode : calculer d'abord la charge Q=I×t puis n_mol=Q/(n×F) puis m=n_mol×M."
-    },
-    {
-      "q": "Quelle est la relation entre la fréquence, la longueur d'onde et la vitesse d'une onde électromagnétique ?",
-      "o": [
-        "c = λ - f",
-        "c = λ/f",
-        "c = λ × f",
-        "c = f²/λ"
-      ],
-      "r": 2,
-      "x": "c=λ×f (vitesse = longueur d'onde × fréquence). Formule universelle pour toutes les ondes. Pour la lumière : c=3×10⁸ m/s. Piège : inverser λ et f dans la formule conduit à λ=c/f ou f=c/λ."
-    },
-    {
-      "q": "La chaleur massique de l'eau est 4 200 J/(kg·K). Quelle énergie faut-il pour chauffer 2 kg d'eau de 10°C à 60°C ?",
-      "o": [
-        "84 000 J",
-        "420 000 J",
-        "8 400 J",
-        "42 000 J"
-      ],
-      "r": 1,
-      "x": "Méthode : Q=mCΔT=2×4200×50=420 000 J=420 kJ. ΔT=60-10=50°C=50 K. Piège : utiliser ΔT=60 (oublier la soustraction) donne 504 000 J ; oublier m=2 donne 210 000 J."
-    },
-    {
-      "q": "Quel est le nombre d'oxydation du manganèse dans KMnO₄ ?",
-      "o": [
-        "+4",
-        "+6",
-        "+7",
-        "+2"
-      ],
-      "r": 2,
-      "x": "Dans KMnO₄ : K=+1, O=-2 (×4=-8). +1+x-8=0 → x=+7. MnO₂ : Mn=+4 ; MnSO₄ : Mn=+2. Le permanganate de potassium (KMnO₄) est un oxydant puissant utilisé en chimie analytique."
-    },
-    {
-      "q": "La tension aux bornes d'un condensateur en régime permanent (courant continu) est :",
-      "o": [
-        "Nulle",
-        "Égale à la FEM de la source",
-        "Supérieure à la FEM",
-        "Oscillante"
-      ],
-      "r": 1,
-      "x": "En régime permanent DC, le condensateur est totalement chargé → courant I=0, la chute de tension sur R est 0 → U_C=E (FEM). Piège : penser que U_C=0 (vrai en régime transitoire initial)."
-    },
-    {
-      "q": "La liaison peptidique est formée entre :",
-      "o": [
-        "Un groupe amine et un alcool",
-        "Deux groupes acides carboxyliques",
-        "Un groupe amine et un groupe acide carboxylique",
-        "Deux groupes amines"
-      ],
-      "r": 2,
-      "x": "Liaison peptidique : -CO-NH- formée par condensation entre -COOH d'un acide aminé et -NH₂ du suivant, avec élimination de H₂O. C'est la liaison qui unit les acides aminés dans les protéines."
-    },
-    {
-      "q": "L'équation de l'état gazeux parfait est :",
-      "o": [
-        "PV = nT",
-        "PV² = nRT",
-        "P = nRT/V²",
-        "PV = nRT"
-      ],
-      "r": 3,
-      "x": "PV=nRT : P=pression (Pa), V=volume (m³), n=quantité de matière (mol), R=8,314 J/(mol·K), T=température (K). Valable pour les gaz à basse pression et haute température."
-    },
-    {
-      "q": "Lors d'une réaction d'estérification entre le méthanol et l'acide éthanoïque, le produit organique formé est :",
-      "o": [
-        "Le méthanoate de méthyle",
-        "L'éthanoate de méthyle",
-        "Le méthanoate d'éthyle",
-        "L'éthanoate d'éthyle"
-      ],
-      "r": 1,
-      "x": "Méthode : ester = acide + alcool. Acide éthanoïque (CH₃COOH) + méthanol (CH₃OH) → éthanoate de méthyle (CH₃COOCH₃) + H₂O. Nomenclature : nom de l'ester = alcanoate d'alkyle."
-    },
-    {
-      "q": "Quelle est l'énergie d'une liaison O-H dans l'eau si la dissociation de H₂O nécessite 918 kJ/mol ?",
-      "o": [
-        "918 kJ/mol",
-        "459 kJ/mol",
-        "1836 kJ/mol",
-        "229,5 kJ/mol"
-      ],
-      "r": 1,
-      "x": "H₂O possède 2 liaisons O-H. Énergie par liaison = 918/2 = 459 kJ/mol. Méthode : diviser l'énergie totale par le nombre de liaisons identiques. Piège : confondre énergie totale et énergie par liaison."
-    },
-    {
-      "q": "Un condensateur de 10 µF se charge à travers une résistance de 100 kΩ. La constante de temps est :",
-      "o": [
-        "10 ms",
-        "10 s",
         "0,1 s",
         "1 s"
       ],
       "r": 3,
-      "x": "τ=RC=100×10³×10×10⁻⁶=100×10³×10⁻⁵=1 s. Formule : τ=RC. Piège : erreur de conversion d'unités (µF→F, kΩ→Ω) est la source d'erreur la plus fréquente."
+      "x": "La constante de temps vaut τ = R × C = 10 000 × 100 × 10⁻⁶ = 1 s. Les autres valeurs proviennent d'erreurs de conversion des kiloohms ou des microfarads. On considère en pratique que le condensateur est complètement chargé au bout de 5τ, soit 5 s ici, la tension tendant vers celle du générateur selon une loi exponentielle.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "La vitesse de propagation d'une onde transversale sur une corde est :",
+      "q": "Un condensateur initialement déchargé est chargé sous une tension E = 10 V à travers un résistor. À la date t = τ, la tension à ses bornes vaut environ :",
       "o": [
-        "Indépendante de la tension de la corde",
-        "Proportionnelle à la racine carrée de la tension",
-        "Proportionnelle au carré de la tension",
-        "Inversement proportionnelle à la fréquence"
-      ],
-      "r": 1,
-      "x": "v=√(T/μ) avec T=tension de la corde (N) et μ=masse linéique (kg/m). Plus la corde est tendue, plus l'onde se propage vite. Idem pour les cordes de guitare accordées à Ouagadougou."
-    },
-    {
-      "q": "Le dioxygène dissous dans l'eau provient :",
-      "o": [
-        "Uniquement de la photosynthèse des plantes aquatiques",
-        "De la dissolution de l'O₂ atmosphérique et de la photosynthèse",
-        "De la décomposition de l'H₂O par les microorganismes",
-        "Uniquement des précipitations"
-      ],
-      "r": 1,
-      "x": "L'O₂ dissous provient de deux sources : dissolution de l'O₂ de l'air à la surface (équilibre gaz-liquide) et production par photosynthèse des végétaux aquatiques. Il est vital pour les organismes aquatiques."
-    },
-    {
-      "q": "Quelle est la configuration électronique de l'oxygène (Z=8) ?",
-      "o": [
-        "1s²2s²2p⁶",
-        "1s²2s²2p⁴",
-        "1s²2s⁴2p²",
-        "1s²2p⁶"
-      ],
-      "r": 1,
-      "x": "O (Z=8) : remplissage 1s²(2)2s²(4)2p⁴(8) → configuration 1s²2s²2p⁴. Ne (Z=10) a 1s²2s²2p⁶. O n'a pas de couche complète → 2 électrons manquants → valence 2 → forme 2 liaisons."
-    },
-    {
-      "q": "Dans un spectre d'émission, les raies correspondent à :",
-      "o": [
-        "L'absorption de photons par les électrons",
-        "L'émission de photons lors des transitions électroniques vers des niveaux inférieurs",
-        "La diffusion de la lumière blanche",
-        "La réflexion de certaines longueurs d'onde"
-      ],
-      "r": 1,
-      "x": "Spectre d'émission : électron excité (niveau n→m avec n>m) → émission d'un photon hf=E_n-E_m. Spectre d'absorption : inverse (photon absorbé, électron monte). Les deux sont caractéristiques des éléments."
-    },
-    {
-      "q": "Un alternateur produit une tension sinusoïdale de valeur maximale U_max=311 V. Quelle est la valeur efficace ?",
-      "o": [
-        "220 V",
-        "311 V",
-        "440 V",
-        "156 V"
-      ],
-      "r": 0,
-      "x": "Méthode : U_eff=U_max/√2=311/1,414≈220 V. Formule : U_eff=U_max/√2. La valeur efficace 220 V est celle utilisée dans les foyers burkinabè. Piège : diviser par 2 donne 155,5 V (choix D)."
-    },
-    {
-      "q": "Quel est le produit de l'oxydation du propan-1-ol en milieu acide ?",
-      "o": [
-        "Propanone",
-        "Acide propanoïque",
-        "Propane-1,2-diol",
-        "Propanal"
-      ],
-      "r": 3,
-      "x": "L'oxydation ménagée d'un alcool primaire (propan-1-ol) donne un aldéhyde (propanal CH₃CH₂CHO). L'oxydation poussée donne l'acide propanoïque. La propanone vient d'un alcool secondaire (propan-2-ol)."
-    },
-    {
-      "q": "La loi de Stefan-Boltzmann (rayonnement d'un corps noir) est :",
-      "o": [
-        "P = σT²",
-        "P = σ×T",
-        "P = σ/T⁴",
-        "P = σT⁴"
-      ],
-      "r": 3,
-      "x": "Loi de Stefan-Boltzmann : P=σT⁴ par unité de surface, avec σ=5,67×10⁻⁸ W/(m²·K⁴). Très importante en climatologie et pour l'étude du rayonnement solaire en zone sahélienne."
-    },
-    {
-      "q": "Quelle est la formule de la chaleur latente de vaporisation ?",
-      "o": [
-        "Q = mCΔT",
-        "Q = nRT",
-        "Q = Lv/m",
-        "Q = mLv"
-      ],
-      "r": 3,
-      "x": "Chaleur latente : Q=mLv (pas de changement de température pendant la transition). Q=mCΔT est la chaleur sensible (avec changement de température). Lv(eau)=2 257 kJ/kg."
-    },
-    {
-      "q": "Deux lentilles convergentes de focales f₁=10 cm et f₂=20 cm sont accolées. La focale équivalente est :",
-      "o": [
-        "30 cm",
-        "15 cm",
-        "6,67 cm",
-        "200 cm"
+        "3,7 V",
+        "5 V",
+        "6,3 V",
+        "10 V"
       ],
       "r": 2,
-      "x": "Méthode : 1/f=1/f₁+1/f₂=1/10+1/20=2/20+1/20=3/20 → f=20/3≈6,67 cm. Piège : additionner les focales (f=30 cm) correspond à des lentilles séparées d'une distance f₁+f₂."
+      "x": "Lors de la charge, uC(t) = E × (1 – e^(–t/τ)) ; pour t = τ, uC = 10 × (1 – 0,37) ≈ 6,3 V, soit 63 % de E. La valeur 3,7 V correspond à la tension restante lors d'une décharge au même instant. Cette propriété permet de déterminer graphiquement la constante de temps sur la courbe de charge.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Quelle est l'unité de l'inductance ?",
+      "q": "La période propre d'un circuit oscillant formé d'une bobine de 0,1 H et d'un condensateur de 10 µF est d'environ :",
       "o": [
-        "Farad (F)",
-        "Ohm (Ω)",
-        "Henry (H)",
-        "Weber (Wb)"
-      ],
-      "r": 2,
-      "x": "L'inductance se mesure en Henry (H=V·s/A=Ω·s). Le Farad est la capacité, l'Ohm la résistance, le Weber le flux magnétique (Wb=T·m²). Formule : e_L=-L×dI/dt."
-    },
-    {
-      "q": "Un prisme de verre sépare la lumière blanche en ses composantes (dispersion). Cela est dû au fait que :",
-      "o": [
-        "L'indice de réfraction est identique pour toutes les longueurs d'onde",
-        "L'indice de réfraction dépend de la longueur d'onde",
-        "Le prisme absorbe certaines couleurs",
-        "Les photons de différentes couleurs ont des charges différentes"
-      ],
-      "r": 1,
-      "x": "La dispersion est due à la dépendance de n avec λ (n plus grand pour le violet que pour le rouge → angle de réfraction plus grand pour le violet). C'est le principe de l'arc-en-ciel."
-    },
-    {
-      "q": "Quelle est la valeur de la permittivité du vide ε₀ ?",
-      "o": [
-        "8,85×10⁻¹² F/m",
-        "4π×10⁻⁷ H/m",
-        "1,6×10⁻¹⁹ C",
-        "9×10⁹ N·m²/C²"
-      ],
-      "r": 0,
-      "x": "ε₀=8,85×10⁻¹² F/m (permittivité du vide). μ₀=4π×10⁻⁷ H/m est la perméabilité du vide. k=1/(4πε₀)=9×10⁹ N·m²/C². La relation c=1/√(ε₀μ₀) lie les deux constantes."
-    },
-    {
-      "q": "Dans le spectre électromagnétique, lequel a la longueur d'onde la plus courte ?",
-      "o": [
-        "Ondes radio",
-        "Infrarouge",
-        "Rayons gamma",
-        "Ultraviolet"
-      ],
-      "r": 2,
-      "x": "Ordre croissant de longueur d'onde : γ < X < UV < visible < IR < micro-ondes < radio. Les rayons gamma (λ<10⁻¹² m) ont la plus courte longueur d'onde et la plus haute énergie (E=hf)."
-    },
-    {
-      "q": "La règle de l'octet stipule que :",
-      "o": [
-        "Chaque atome forme 8 liaisons covalentes",
-        "Les 8 premiers éléments sont les plus stables",
-        "Chaque molécule contient 8 atomes",
-        "Les atomes cherchent à avoir 8 électrons dans leur couche de valence"
+        "0,1 ms",
+        "1 ms",
+        "3,14 ms",
+        "6,28 ms"
       ],
       "r": 3,
-      "x": "La règle de l'octet : les atomes des 2e et 3e périodes (sauf H, He) tendent à acquérir 8 électrons en couche externe (configuration des gaz nobles). Exception : BF₃ (6 e⁻), PCl₅ (10 e⁻)."
+      "x": "La période propre vaut T0 = 2π × √(L × C) = 2π × √(10⁻⁶) = 2π × 10⁻³ s ≈ 6,28 ms. La valeur 1 ms correspond à √(LC) sans le facteur 2π. Dans un circuit LC idéal, l'énergie s'échange périodiquement entre le condensateur et la bobine sans aucune perte, ce qui entretient indéfiniment les oscillations.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Lors de l'addition de HBr sur le propène CH₃-CH=CH₂, selon la règle de Markovnikov, le produit majoritaire est :",
+      "q": "Deux condensateurs de 2 µF et 3 µF montés en parallèle équivalent à un condensateur de capacité :",
       "o": [
-        "CH₃-CHBr-CH₃",
-        "CH₃-CH₂-CH₂Br",
-        "CH₂Br-CH₂-CH₃",
-        "CH₂=CBr-CH₃"
-      ],
-      "r": 0,
-      "x": "Règle de Markovnikov : H s'ajoute sur le C le plus hydrogéné de la double liaison. Dans propène, C₁ a 2H et C₂ a 1H → H va sur C₁ (=CH₂) et Br sur C₂ → 2-bromopropane (CH₃-CHBr-CH₃)."
-    },
-    {
-      "q": "La constante de Planck vaut :",
-      "o": [
-        "6,63×10⁻³⁴ J",
-        "6,63×10⁻³⁴ J·s",
-        "6,63×10⁻³⁴ m/s",
-        "6,02×10²³ J·s"
-      ],
-      "r": 1,
-      "x": "h=6,63×10⁻³⁴ J·s (Joule×seconde). C'est une constante fondamentale de la mécanique quantique. Formule : E=hf (énergie d'un photon). Ne pas confondre avec NA=6,02×10²³ mol⁻¹."
-    },
-    {
-      "q": "Un écran est placé à 60 cm d'une lentille convergente de focale f=20 cm. L'objet est à quelle distance de la lentille pour que l'image soit nette ?",
-      "o": [
-        "30 cm",
-        "40 cm",
-        "20 cm",
-        "15 cm"
-      ],
-      "r": 0,
-      "x": "Méthode : relation conjugaison 1/v-1/u=1/f. Ici v=60 cm, f=20 cm → 1/u=1/v-1/f=1/60-1/20=1/60-3/60=-2/60 → u=-30 cm (objet réel à 30 cm). Piège : signe de la convention algébrique."
-    },
-    {
-      "q": "Quelle est la différence entre la fusion et la vaporisation ?",
-      "o": [
-        "La fusion est un passage solide→liquide, la vaporisation liquide→gaz",
-        "La fusion est un passage liquide→gaz, la vaporisation solide→liquide",
-        "Les deux sont des passages solide→gaz",
-        "La fusion concerne les métaux, la vaporisation les liquides"
-      ],
-      "r": 0,
-      "x": "Les changements d'état : solide→liquide=fusion ; liquide→gaz=vaporisation ou ébullition ; solide→gaz=sublimation. La solidification (liquide→solide) est l'inverse de la fusion."
-    },
-    {
-      "q": "Un ballon météorologique au-dessus du Sahel contient de l'hélium à T=20°C et P=1 atm, V=2 m³. Si T monte à 50°C à même pression, le nouveau volume est :",
-      "o": [
-        "2,2 m³",
-        "3,4 m³",
-        "5 m³",
-        "2,05 m³"
-      ],
-      "r": 0,
-      "x": "Loi de Charles : V₁/T₁=V₂/T₂ → V₂=2×323/293≈2,205 m³. Attention : T₁=293 K, T₂=323 K. Le résultat le plus proche est 2,2 m³ (choix A) car T₂/T₁=323/293=1,102."
-    },
-    {
-      "q": "La couleur complémentaire du rouge est :",
-      "o": [
-        "Le bleu",
-        "Le vert",
-        "Le cyan",
-        "Le jaune"
-      ],
-      "r": 2,
-      "x": "Les couleurs complémentaires s'opposent sur le cercle chromatique : rouge↔cyan, vert↔magenta, bleu↔jaune. Mélanger rouge et cyan donne du blanc (lumière). Application : filtres optiques en photographie."
-    },
-    {
-      "q": "Quel est le produit de l'oxydation du glucose C₆H₁₂O₆ lors de la respiration cellulaire ?",
-      "o": [
-        "C₆H₁₂O₆ → CO + H₂O",
-        "C₆H₁₂O₆ + H₂O → 6CO₂ + 12H₂",
-        "C₆H₁₂O₆ → C₂H₅OH + CO₂",
-        "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O"
+        "1,2 µF",
+        "2,5 µF",
+        "3 µF",
+        "5 µF"
       ],
       "r": 3,
-      "x": "Respiration cellulaire complète : C₆H₁₂O₆+6O₂→6CO₂+6H₂O+énergie. Vérification : C:6=6 ✓, H:12=12 ✓, O:6+6=12+6 ✓. Choix C est la fermentation alcoolique (sans O₂)."
+      "x": "En parallèle, les capacités s'additionnent : Céq = 2 + 3 = 5 µF. La valeur 1,2 µF correspond au montage en série, où 1/Céq = 1/2 + 1/3. Les règles d'association des condensateurs sont donc inverses de celles des résistors, pour lesquels ce sont les résistances en série qui s'additionnent.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Le coefficient de dilatation thermique linéaire α d'un solide est utilisé dans la formule :",
+      "q": "Deux résistors de 30 Ω et 60 Ω montés en dérivation ont une résistance équivalente de :",
       "o": [
-        "ΔL = L₀ × α × ΔT²",
-        "ΔL = L₀ / (α × ΔT)",
-        "ΔL = α × ΔT / L₀",
-        "ΔL = L₀ × α × ΔT"
-      ],
-      "r": 3,
-      "x": "Dilatation linéaire : ΔL=L₀αΔT → L=L₀(1+αΔT). Application : rails de chemin de fer, ponts, câbles électriques. En Afrique sahélienne, les amplitudes thermiques importantes rendent ce calcul crucial."
-    },
-    {
-      "q": "Quelle est la résistance interne d'une pile idéale ?",
-      "o": [
-        "Très grande (→ ∞)",
-        "Variable selon le courant",
-        "Égale à la résistance externe",
-        "Très petite (→ 0)"
-      ],
-      "r": 3,
-      "x": "Une pile idéale a une résistance interne r=0 → la tension aux bornes U=E-r×I=E (constante). Une pile réelle a r>0 → U<E en charge. En pratique, r de quelques dizaines de mΩ pour les bonnes piles."
-    },
-    {
-      "q": "Quelle est la densité de courant dans un fil de section 2 mm² traversé par 4 A ?",
-      "o": [
-        "2×10⁶ A/m²",
-        "2 A/m²",
-        "8×10⁶ A/m²",
-        "0,5 A/mm²"
-      ],
-      "r": 0,
-      "x": "j=I/S=4/(2×10⁻⁶)=2×10⁶ A/m². Conversion : 2 mm²=2×10⁻⁶ m². Piège : oublier la conversion mm²→m² donne j=2 A/m². Choix D : 4/2=2 A/mm² (unité non SI mais numériquement différent)."
-    },
-    {
-      "q": "Quel type de réaction est la chloration du méthane CH₄ sous UV ?",
-      "o": [
-        "Addition",
-        "Élimination",
-        "Substitution radicalaire",
-        "Substitution nucléophile"
-      ],
-      "r": 2,
-      "x": "CH₄+Cl₂ →(UV) CH₃Cl+HCl. Mécanisme radicalaire (radicaux Cl• formés sous UV). Ce n'est pas une addition (pas de double liaison). Les alcanes réagissent par substitution radicalaire, contrairement aux alcènes (addition électrophile)."
-    },
-    {
-      "q": "Quel est le principe de conservation de l'énergie mécanique (sans frottement) ?",
-      "o": [
-        "Ec + Ep = constante",
-        "Ec - Ep = constante",
-        "Ec × Ep = constante",
-        "Ec / Ep = constante"
-      ],
-      "r": 0,
-      "x": "Conservation de l'énergie mécanique : Em=Ec+Ep=constante (sans frottement). En présence de frottements : ΔEm=W_frottements<0 (l'énergie mécanique diminue). Formule : ½mv²+mgh=constante."
-    },
-    {
-      "q": "Qu'est-ce que la capillarité ?",
-      "o": [
-        "La montée ou descente d'un liquide dans un tube étroit par interactions moléculaires",
-        "La dissolution d'un solide dans un liquide",
-        "L'évaporation d'un liquide à la surface libre",
-        "La diffusion d'ions dans une solution"
-      ],
-      "r": 0,
-      "x": "La capillarité est due aux forces de surface (tension superficielle et mouillage). L'eau monte dans un tube fin (verre hydrophile) ; le mercure descend (surface hydrophobe). Importante pour l'absorption de l'eau par les racines des plantes."
-    },
-    {
-      "q": "Quelle est la fréquence de la lumière verte (λ=550 nm) ?",
-      "o": [
-        "5,45×10¹⁴ Hz",
-        "5,45×10⁸ Hz",
-        "1,65×10⁻¹⁵ Hz",
-        "5,45×10²³ Hz"
-      ],
-      "r": 0,
-      "x": "f=c/λ=3×10⁸/550×10⁻⁹=5,45×10¹⁴ Hz. Piège : ne pas convertir nm→m (×10⁻⁹). La lumière visible est dans la gamme 4-8×10¹⁴ Hz. f=5,45×10⁸ Hz correspond aux UHF (radio), non à la lumière."
-    },
-    {
-      "q": "La loi de Hess stipule que :",
-      "o": [
-        "L'enthalpie d'une réaction dépend du chemin suivi",
-        "L'équilibre chimique favorise toujours les réactifs",
-        "La vitesse de réaction est proportionnelle à la température",
-        "L'enthalpie d'une réaction est indépendante du chemin suivi"
-      ],
-      "r": 3,
-      "x": "Loi de Hess : ΔH d'une réaction est identique qu'on la réalise en une étape ou en plusieurs étapes. C'est une conséquence du fait que H est une fonction d'état. Très utile pour calculer des enthalpies inaccessibles expérimentalement."
-    },
-    {
-      "q": "Dans un filtre RC passe-bas, la fréquence de coupure est :",
-      "o": [
-        "fc = 2πRC",
-        "fc = 1/(2πRC)",
-        "fc = RC/2π",
-        "fc = 1/(RC)"
-      ],
-      "r": 1,
-      "x": "Fréquence de coupure (à -3 dB) : fc=1/(2πRC). Pour f<fc le signal passe (passe-bas) ; pour f>fc il est atténué. Application : antiparasitage des signaux audio, filtrage secteur."
-    },
-    {
-      "q": "Quelle est la réactivité relative des halogènes ? (du plus au moins réactif)",
-      "o": [
-        "I > Br > Cl > F",
-        "F > Cl > Br > I",
-        "Cl > F > I > Br",
-        "Br > Cl > F > I"
-      ],
-      "r": 1,
-      "x": "Les halogènes sont classés F>Cl>Br>I en réactivité (électronégativité décroissante, potentiel de réduction décroissant). F est le non-métal le plus électronégatif et réactif de tous. Un halogène plus réactif déplace le moins réactif de ses sels."
-    },
-    {
-      "q": "Un objet est placé à 15 cm d'une lentille convergente de focale f=10 cm. Où se forme l'image ?",
-      "o": [
-        "À 30 cm de la lentille",
-        "À 6 cm de la lentille",
-        "À l'infini",
-        "À -30 cm de la lentille"
-      ],
-      "r": 0,
-      "x": "1/v=1/f+1/u=1/10+1/(-15)=3/30-2/30=1/30 → v=30 cm (image réelle et renversée). Convention : objet réel à gauche u=-15 cm. Piège : utiliser 1/v=1/f-1/u avec u positif."
-    },
-    {
-      "q": "Le sulfate de cuivre CuSO₄ anhydre est de couleur :",
-      "o": [
-        "Bleue",
-        "Verte",
-        "Blanche/incolore",
-        "Rouge"
-      ],
-      "r": 2,
-      "x": "CuSO₄ anhydre = blanc/incolore. CuSO₄·5H₂O (pentahydraté) = bleu. Réaction utilisée pour détecter l'eau : CuSO₄ anhydre + H₂O → CuSO₄·5H₂O (devient bleu). Test de reconnaissance de l'eau."
-    },
-    {
-      "q": "Quelle est la tension de claquage d'un condensateur sous-entendu dans la pratique ?",
-      "o": [
-        "La tension maximale avant destruction irréversible du diélectrique",
-        "La tension minimale pour le charger",
-        "La tension d'équilibre du condensateur",
-        "La tension efficace en alternatif"
-      ],
-      "r": 0,
-      "x": "La tension de claquage (ou de rupture diélectrique) est la tension maximale admissible. Si dépassée, le diélectrique entre les armatures se détériore irréversiblement. Précision cruciale lors du dimensionnement de circuits électroniques."
-    },
-    {
-      "q": "Parmi les suivants, quel composé est un alcyne ?",
-      "o": [
-        "C₂H₄",
-        "C₃H₄",
-        "C₄H₁₀",
-        "C₂H₆"
-      ],
-      "r": 1,
-      "x": "Alcynes : CₙH₂ₙ₋₂, avec triple liaison C≡C. C₃H₄ : 2×3-2=4 ✓ (propyne CH≡C-CH₃). C₂H₄ est un alcène (éthylène), C₄H₁₀ est un alcane (butane), C₂H₆ est un alcane (éthane)."
-    },
-    {
-      "q": "La valeur de l'accélération de pesanteur à la surface de la Lune est environ :",
-      "o": [
-        "9,8 m/s²",
-        "1,6 m/s²",
-        "0,98 m/s²",
-        "3,7 m/s²"
-      ],
-      "r": 1,
-      "x": "g_Lune≈1,6 m/s² ≈ g_Terre/6. g_Terre=9,8 m/s². g_Mars≈3,7 m/s². Un astronaute de 70 kg pèse 686 N sur Terre et 112 N sur la Lune. Conséquence : les sauts y sont 6 fois plus hauts."
-    },
-    {
-      "q": "La réaction de fermentation alcoolique du glucose donne :",
-      "o": [
-        "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O",
-        "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂",
-        "C₆H₁₂O₆ → 3CH₃COOH",
-        "C₆H₁₂O₆ + H₂ → 2C₃H₇OH"
-      ],
-      "r": 1,
-      "x": "Fermentation alcoolique (levures, sans O₂) : C₆H₁₂O₆→2C₂H₅OH+2CO₂. Base de la fabrication du dolo (bière de mil) au Burkina Faso. Le choix A est la respiration aérobie complète."
-    },
-    {
-      "q": "Quel est le principe de fonctionnement d'un sonar ?",
-      "o": [
-        "Émission et réception de lumière ultraviolette",
-        "Diffraction de rayons X dans l'eau",
-        "Utilisation du champ magnétique terrestre",
-        "Émission et réception d'ultrasons pour mesurer des distances"
-      ],
-      "r": 3,
-      "x": "Sonar = Sound Navigation And Ranging. Émet des ultrasons (f>20 000 Hz), mesure le temps d'écho → distance=v×t/2 (v≈1500 m/s dans l'eau). Utilisation : bathymétrie, localisation de poissons, sous-marins."
-    },
-    {
-      "q": "Quelle est la masse molaire de l'éthanol C₂H₅OH ? (H=1, C=12, O=16 g/mol)",
-      "o": [
-        "46 g/mol",
-        "28 g/mol",
-        "44 g/mol",
-        "32 g/mol"
-      ],
-      "r": 0,
-      "x": "M(C₂H₅OH)=2×12+6×1+16=24+6+16=46 g/mol. Attention : C₂H₅OH contient 2C, 6H (5+1 du OH), 1O. Piège : oublier le H du groupe -OH donne 45 ; confondre avec C₂H₄ (éthylène, M=28 g/mol)."
-    },
-    {
-      "q": "Un filament de lampe incandescente à 2500 K rayonne principalement dans :",
-      "o": [
-        "L'ultraviolet",
-        "Les micro-ondes",
-        "Les rayons X",
-        "Le visible et l'infrarouge"
-      ],
-      "r": 3,
-      "x": "Loi de Wien : λ_max=b/T=2,9×10⁻³/2500=1160 nm (infrarouge proche). Le filament rayonne aussi dans le visible mais surtout IR → rendement lumineux faible (~5%). Les LED et néons sont plus efficaces."
-    },
-    {
-      "q": "Quelle est la concentration en ions OH⁻ dans une solution de pH=11 à 25°C ?",
-      "o": [
-        "11 mol/L",
-        "10³ mol/L",
-        "10⁻³ mol/L",
-        "10⁻¹¹ mol/L"
-      ],
-      "r": 2,
-      "x": "À 25°C : pH+pOH=14 → pOH=14-11=3 → [OH⁻]=10⁻³ mol/L. Formule : [OH⁻]=10⁻(14-pH). Piège : utiliser [OH⁻]=10⁻pH=10⁻¹¹ (confondre avec [H₃O⁺])."
-    },
-    {
-      "q": "Le phénomène de fluorescence se produit quand :",
-      "o": [
-        "Un atome absorbe un photon et réémet un photon de plus haute énergie",
-        "La lumière est diffractée par un réseau",
-        "Un corps chaud émet un rayonnement continu",
-        "Un atome absorbe un photon UV et réémet de la lumière visible de plus basse énergie"
-      ],
-      "r": 3,
-      "x": "Fluorescence : absorption UV → émission lumière visible (λ plus grande, E plus faible). Phosphorescence : même processus mais avec délai. Application : néons, marqueurs fluorescents, tenues haute visibilité (gilets jaunes)."
-    },
-    {
-      "q": "Quelle est la résistance totale de 3 résistances de 30 Ω chacune montées en parallèle ?",
-      "o": [
-        "90 Ω",
+        "20 Ω",
         "30 Ω",
-        "10 Ω",
-        "3 Ω"
-      ],
-      "r": 2,
-      "x": "1/Req=1/30+1/30+1/30=3/30=1/10 → Req=10 Ω. Règle générale : n résistances identiques R en parallèle → Req=R/n=30/3=10 Ω. Piège : additionner directement donne 90 Ω (montage série)."
-    },
-    {
-      "q": "La densité relative d'un corps est définie par rapport à :",
-      "o": [
-        "L'air à 0°C",
-        "L'eau à 4°C",
-        "L'eau à 100°C",
-        "Le mercure à 20°C"
-      ],
-      "r": 1,
-      "x": "La densité (ou masse volumique relative) = ρ_corps/ρ_eau (à 4°C où ρ_eau=1000 kg/m³ maximum). Si d>1 : le corps coule dans l'eau ; si d<1 : il flotte. Ex : d(Fe)=7,8 ; d(bois)≈0,6."
-    },
-    {
-      "q": "Quel est le signe du travail de la pesanteur lorsqu'un corps monte ?",
-      "o": [
-        "Positif",
-        "Nul",
-        "Négatif",
-        "Variable selon la masse"
-      ],
-      "r": 2,
-      "x": "W_pesanteur=mg(z₁-z₂)=mgh₁-mgh₂. Quand le corps monte (z₂>z₁) → W_pesanteur<0 (travail résistant). Quand il descend → W_pesanteur>0 (travail moteur). La pesanteur s'oppose au mouvement ascendant."
-    },
-    {
-      "q": "Quelle est la formule du carbonate de calcium (calcaire) ?",
-      "o": [
-        "CaCl₂",
-        "CaO",
-        "CaCO₃",
-        "Ca(OH)₂"
-      ],
-      "r": 2,
-      "x": "CaCO₃ = calcaire, craie, marbre. CaO = oxyde de calcium (chaux vive), Ca(OH)₂ = hydroxyde de calcium (chaux éteinte), CaCl₂ = chlorure de calcium (sel de déneigement). Réaction : CaCO₃+HCl → CaCl₂+H₂O+CO₂."
-    },
-    {
-      "q": "Quel est le principe de la chromatographie sur couche mince (CCM) ?",
-      "o": [
-        "Séparation selon les points d'ébullition",
-        "Séparation selon les affinités différentes avec les phases stationnaire et mobile",
-        "Séparation selon la masse molaire",
-        "Séparation selon la charge électrique"
-      ],
-      "r": 1,
-      "x": "CCM : les composés migrent différemment selon leurs affinités relative avec la phase stationnaire (silice) et la phase mobile (éluant). Rf=distance migré/distance éluant (0<Rf<1). Très utilisée pour identifier et contrôler la pureté des produits organiques."
-    },
-    {
-      "q": "Quel est le courant dans un fil conducteur traversé par 6×10²⁰ électrons en 5 secondes ? (e=1,6×10⁻¹⁹ C)",
-      "o": [
-        "19,2 A",
-        "1,92 A",
-        "192 A",
-        "0,192 A"
+        "45 Ω",
+        "90 Ω"
       ],
       "r": 0,
-      "x": "Q=N×e=6×10²⁰×1,6×10⁻¹⁹=96 C. I=Q/t=96/5=19,2 A. Formule : I=Q/t=N×e/t. Piège : confondre 6×10²⁰ et 6×10²³ (Avogadro) qui donnerait un courant 1000 fois plus grand."
+      "x": "En dérivation, 1/Req = 1/30 + 1/60 = 3/60, d'où Req = 20 Ω, ce qui revient aussi à calculer (30 × 60) / (30 + 60). La valeur 90 Ω correspond au montage en série. Dans les habitations, les appareils sont branchés en dérivation afin de recevoir tous la même tension de 220 V et de fonctionner indépendamment.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Dans quelle condition un gaz réel se comporte-t-il comme un gaz parfait ?",
+      "q": "Deux plaques parallèles distantes de 4 cm sont soumises à une tension de 200 V. L'intensité du champ électrique uniforme entre elles vaut :",
       "o": [
-        "À haute pression et basse température",
-        "À basse pression et haute température",
-        "À pression et température normales uniquement",
-        "Jamais, les deux sont toujours différents"
+        "50 V/m",
+        "5 000 V/m",
+        "50 000 V/m",
+        "500 000 V/m"
       ],
       "r": 1,
-      "x": "Un gaz réel tend vers le comportement idéal à basse pression (interactions moléculaires négligeables) et haute température (agitation thermique > interactions). L'équation de Van der Waals corrige l'équation d'état des gaz réels."
+      "x": "Le champ électrique uniforme vaut E = U / d = 200 / 0,04 = 5 000 V/m. La valeur 50 V/m résulte de l'emploi de la distance en centimètres sans conversion. Ce champ est perpendiculaire aux plaques et orienté de la plaque positive vers la plaque négative ; il exerce sur une charge q la force F = q × E.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Quel est le facteur de puissance cos φ d'un circuit purement résistif en régime sinusoïdal ?",
+      "q": "La force électrique subie par un électron (e = 1,6 × 10⁻¹⁹ C) placé dans un champ électrique uniforme de 10⁴ V/m vaut :",
       "o": [
-        "0",
-        "0,5",
-        "1",
-        "-1"
+        "1,6 × 10⁻²³ N",
+        "1,6 × 10⁻¹⁹ N",
+        "1,6 × 10⁻¹⁵ N",
+        "1,6 × 10⁴ N"
       ],
       "r": 2,
-      "x": "Dans un circuit purement résistif, la tension et le courant sont en phase (φ=0°) → cosφ=cos(0°)=1. Pour un circuit inductif pur, φ=+90° → cosφ=0 (puissance nulle). Pour un condensateur pur : φ=-90° → cosφ=0."
+      "x": "F = |q| × E = 1,6 × 10⁻¹⁹ × 10⁴ = 1,6 × 10⁻¹⁵ N. La valeur 1,6 × 10⁻²³ N résulte d'une division au lieu d'un produit. Comme la charge de l'électron est négative, la force est de sens opposé au champ, et ce mouvement est exploité dans les tubes cathodiques et les accélérateurs de particules.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Quelle est la relation entre l'énergie d'un photon et sa fréquence ?",
+      "q": "L'énergie cinétique acquise par un électron accéléré sans vitesse initiale sous une tension de 1 000 V est :",
       "o": [
-        "E = h/f",
-        "E = f/h",
-        "E = hc",
-        "E = hf"
+        "1,6 × 10⁻²² J",
+        "1,6 × 10⁻¹⁹ J",
+        "1,6 × 10⁻¹⁷ J",
+        "1,6 × 10⁻¹⁶ J"
       ],
       "r": 3,
-      "x": "Formule de Planck : E=hf=hc/λ. h=6,63×10⁻³⁴ J·s. Plus la fréquence est élevée, plus le photon est énergétique (UV plus énergétiques que l'IR). Application : effet photoélectrique."
+      "x": "Le théorème de l'énergie cinétique donne Ec = e × U = 1,6 × 10⁻¹⁹ × 1 000 = 1,6 × 10⁻¹⁶ J, soit 1 000 eV. La valeur 1,6 × 10⁻¹⁹ J correspond à l'électronvolt, énergie acquise sous une tension de 1 V seulement. Cette énergie est indépendante de la distance entre les plaques accélératrices.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "L'oxydation du fer en présence d'eau et d'oxygène donne :",
+      "q": "Un solénoïde de 0,5 m de longueur comporte 1 000 spires parcourues par un courant de 2 A (μ0 = 4π × 10⁻⁷ SI). Le champ magnétique en son centre vaut environ :",
       "o": [
-        "FeO",
-        "Fe₃O₄",
-        "Fe₂O₃·nH₂O",
-        "FeCl₃"
+        "2,5 × 10⁻³ T",
+        "5 × 10⁻³ T",
+        "1 × 10⁻² T",
+        "2,5 T"
+      ],
+      "r": 1,
+      "x": "B = μ0 × (N / L) × I = 4π × 10⁻⁷ × 2 000 × 2 ≈ 5 × 10⁻³ T. La valeur 2,5 × 10⁻³ T oublie de diviser le nombre de spires par la longueur du solénoïde. À l'intérieur d'un long solénoïde, le champ est uniforme et ses lignes sont parallèles à l'axe de la bobine.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un ventilateur de 75 W fonctionne 8 heures par jour pendant 30 jours. L'énergie consommée est :",
+      "o": [
+        "0,6 kWh",
+        "2,25 kWh",
+        "18 kWh",
+        "600 kWh"
       ],
       "r": 2,
-      "x": "La rouille = Fe₂O₃·nH₂O (oxyde de fer hydraté). La corrosion du fer est une oxydoréduction : Fe → Fe²⁺ (oxydation) puis Fe³⁺, avec O₂ et H₂O comme oxydants. Fe₃O₄ = magnétite (oxyde ferroso-ferrique)."
+      "x": "E = P × t = 75 W × 240 h = 18 000 Wh, soit 18 kWh. La valeur 0,6 kWh correspond à la consommation d'une seule journée. Pour calculer une facture, on multiplie cette énergie par le prix du kilowattheure fixé par la SONABEL, ce qui montre l'intérêt d'éteindre les appareils inutilisés.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Quelle est la vitesse d'un électron accéléré par une ddp de 1000 V ? (m_e=9,1×10⁻³¹ kg, e=1,6×10⁻¹⁹ C)",
+      "q": "Le kilowattheure (kWh) équivaut à :",
       "o": [
-        "1,88×10⁷ m/s",
-        "3×10⁸ m/s",
-        "5,6×10⁵ m/s",
-        "1,88×10¹⁴ m/s"
+        "1 000 J",
+        "3 600 J",
+        "360 000 J",
+        "3 600 000 J"
+      ],
+      "r": 3,
+      "x": "1 kWh = 1 000 W × 3 600 s = 3 600 000 J, soit 3,6 MJ. La valeur de 3 600 J correspond à un wattheure (Wh) et non à un kilowattheure. Le kilowattheure est préféré au joule pour l'énergie électrique domestique, car le joule est une unité trop petite pour les consommations quotidiennes.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un conducteur ohmique de 50 Ω est parcouru par un courant de 2 A. La puissance dissipée par effet Joule est :",
+      "o": [
+        "25 W",
+        "100 W",
+        "200 W",
+        "5 000 W"
+      ],
+      "r": 2,
+      "x": "P = R × I² = 50 × 2² = 200 W. La valeur 100 W résulte de l'oubli du carré de l'intensité. L'effet Joule, qui transforme l'énergie électrique en chaleur, est exploité dans les fers à repasser, les chauffe-eau et les plaques chauffantes, mais il constitue une perte dans les lignes électriques.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un proton pénètre perpendiculairement aux lignes d'un champ magnétique uniforme. Sa trajectoire dans le champ est :",
+      "o": [
+        "une droite parcourue à vitesse constante",
+        "un cercle parcouru à vitesse constante",
+        "une parabole parcourue à vitesse croissante",
+        "une spirale parcourue à vitesse croissante"
+      ],
+      "r": 1,
+      "x": "La force de Lorentz, perpendiculaire à la vitesse, ne travaille pas : la valeur de la vitesse reste constante et la trajectoire est un cercle de rayon R = m × v / (|q| × B). Une trajectoire parabolique caractérise au contraire le mouvement dans un champ électrique uniforme. Ce principe est exploité dans les spectrographes de masse.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le flux magnétique à travers chacune des 100 spires d'une bobine varie de 0,02 Wb en 0,1 s. La force électromotrice induite moyenne vaut :",
+      "o": [
+        "0,2 V",
+        "20 V",
+        "200 V",
+        "2 000 V"
+      ],
+      "r": 1,
+      "x": "D'après la loi de Faraday, |e| = N × ΔΦ / Δt = 100 × 0,02 / 0,1 = 20 V. La valeur 0,2 V oublie le nombre de spires, chaque spire ajoutant sa propre force électromotrice. Plus la variation du flux est rapide, plus la tension induite est grande, d'où l'intérêt de faire tourner vite le rotor des alternateurs.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La valeur maximale d'une tension alternative sinusoïdale de valeur efficace 220 V est d'environ :",
+      "o": [
+        "110 V",
+        "156 V",
+        "220 V",
+        "311 V"
+      ],
+      "r": 3,
+      "x": "Pour une tension sinusoïdale, Umax = Ueff × √2 = 220 × 1,414 ≈ 311 V. La valeur 156 V résulte d'une division par √2 au lieu d'une multiplication. Le voltmètre en mode alternatif indique la valeur efficace, tandis que l'oscilloscope permet de lire directement la valeur maximale sur l'écran.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un transformateur a 500 spires au primaire et 50 spires au secondaire. Alimenté sous 220 V, il délivre une tension de :",
+      "o": [
+        "2,2 V",
+        "22 V",
+        "110 V",
+        "2 200 V"
+      ],
+      "r": 1,
+      "x": "Pour un transformateur, U2 / U1 = N2 / N1, d'où U2 = 220 × 50 / 500 = 22 V. La valeur de 2 200 V correspond à l'inversion du rapport des nombres de spires. Ce transformateur est un abaisseur de tension ; il ne fonctionne qu'en courant alternatif, comme dans les anciens adaptateurs secteur.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Une bobine de 50 spires de surface 20 cm² est placée dans un champ magnétique uniforme de 0,1 T, perpendiculaire à ses spires. Le flux total qui la traverse vaut :",
+      "o": [
+        "1 × 10⁻⁴ Wb",
+        "2 × 10⁻⁴ Wb",
+        "1 × 10⁻² Wb",
+        "100 Wb"
+      ],
+      "r": 2,
+      "x": "Φ = N × B × S × cos θ = 50 × 0,1 × 20 × 10⁻⁴ × 1 = 10⁻² Wb. La valeur 2 × 10⁻⁴ Wb ne correspond qu'au flux à travers une seule spire, et 100 Wb à l'oubli de la conversion des cm² en m². Si la bobine tourne de 90°, ses spires deviennent parallèles au champ et le flux s'annule.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le courant traversant une bobine d'inductance 0,5 H passe de 0 à 2 A en 0,1 s. La valeur de la force électromotrice d'auto-induction est :",
+      "o": [
+        "1 V",
+        "10 V",
+        "20 V",
+        "100 V"
+      ],
+      "r": 1,
+      "x": "|e| = L × Δi / Δt = 0,5 × 2 / 0,1 = 10 V. La valeur 1 V oublie de diviser par la durée de la variation du courant. Cette tension s'oppose à la variation du courant, ce qui explique les étincelles observées à l'ouverture d'un circuit contenant une bobine, lorsque le courant chute brutalement.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Une plaque chauffante de 2 000 W fonctionne pendant 30 min. L'énergie consommée est :",
+      "o": [
+        "0,5 kWh",
+        "1 kWh",
+        "4 kWh",
+        "60 kWh"
+      ],
+      "r": 1,
+      "x": "E = P × t = 2 kW × 0,5 h = 1 kWh. La valeur de 60 kWh résulte de l'emploi de la durée en minutes au lieu d'heures. Exprimée en joules, cette énergie vaut 3 600 000 J, et une plaque chauffante de cette puissance figure parmi les appareils qui pèsent le plus sur une facture d'électricité.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'intensité du courant qui traverse une ampoule de 60 W branchée sous 220 V est d'environ :",
+      "o": [
+        "0,27 A",
+        "3,7 A",
+        "160 A",
+        "13 200 A"
       ],
       "r": 0,
-      "x": "eU=½m_ev² → v=√(2eU/m_e)=√(2×1,6×10⁻¹⁹×1000/9,1×10⁻³¹)=√(3,51×10¹⁴)≈1,88×10⁷ m/s. Piège : ne pas multiplier par 2 dans la racine donne v=1,33×10⁷ m/s."
+      "x": "I = P / U = 60 / 220 ≈ 0,27 A. La valeur 3,7 A résulte de l'inversion du rapport U / P. Une lampe à LED de 9 W fournissant une lumière comparable ne consommerait qu'environ 0,04 A, ce qui explique les économies importantes réalisées en remplaçant les anciennes ampoules à incandescence.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Dans la notation IUPAC, comment nomme-t-on CH₃-CH₂-CH₂-OH ?",
+      "q": "Un dipôle dont la caractéristique U = f(I) est une droite passant par l'origine est :",
       "o": [
-        "Éthanol",
-        "1-propanol (non IUPAC)",
-        "Propan-2-ol",
-        "Propan-1-ol"
+        "une diode",
+        "un conducteur ohmique",
+        "une lampe à filament",
+        "une photorésistance"
+      ],
+      "r": 1,
+      "x": "La caractéristique d'un conducteur ohmique est une droite passant par l'origine, ce qui traduit la proportionnalité U = R × I. La diode ne laisse passer le courant que dans un sens et possède une caractéristique non linéaire. La pente de cette droite donne directement la valeur de la résistance en ohms.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'énergie emmagasinée dans une bobine d'inductance 0,2 H parcourue par un courant de 3 A est :",
+      "o": [
+        "0,9 J",
+        "1,8 J",
+        "3,6 J",
+        "9 J"
+      ],
+      "r": 0,
+      "x": "L'énergie magnétique vaut E = ½ × L × I² = ½ × 0,2 × 9 = 0,9 J. La valeur 1,8 J résulte de l'oubli du facteur ½. Cette énergie est restituée lorsque le courant s'annule, ce qui est exploité dans les bobines d'allumage des moteurs à essence pour produire les étincelles des bougies.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le courant électrique dans un métal est dû au déplacement :",
+      "o": [
+        "des protons",
+        "des neutrons",
+        "des ions positifs",
+        "des électrons libres"
       ],
       "r": 3,
-      "x": "Chaîne de 3 carbones (propan-) avec -OH sur le C1 (→ propan-1-ol). Propan-2-ol = CH₃-CHOH-CH₃ (alcool secondaire). La nomenclature IUPAC précise la position de la fonction. Choix B est une écriture ancienne non officielle."
+      "x": "Dans les métaux, le courant est un déplacement d'électrons libres, qui circulent de la borne négative vers la borne positive du générateur. Le sens conventionnel du courant est donc l'inverse du sens réel de déplacement des électrons. Dans les solutions, le courant est dû au déplacement des ions positifs et négatifs.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Quelle est la résistance équivalente de 4 résistances de 20 Ω chacune, montées en série ?",
+      "q": "La résistance d'un fil conducteur augmente lorsque :",
+      "o": [
+        "sa longueur augmente",
+        "sa section augmente",
+        "sa longueur diminue",
+        "sa température diminue"
+      ],
+      "r": 0,
+      "x": "La résistance d'un fil est proportionnelle à sa longueur et inversement proportionnelle à sa section : R = ρ × L / S. Un fil plus long ou plus fin résiste donc davantage au passage du courant. C'est pour limiter les pertes par effet Joule que les lignes de transport d'électricité utilisent des câbles épais en aluminium ou en cuivre.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La quantité d'électricité transportée par un courant de 2 A pendant 5 min est :",
+      "o": [
+        "10 C",
+        "120 C",
+        "300 C",
+        "600 C"
+      ],
+      "r": 3,
+      "x": "Q = I × t = 2 × 300 = 600 C, la durée de 5 min valant 300 s. La valeur 10 C résulte de l'emploi de la durée en minutes. Le coulomb est l'unité de charge électrique ; la capacité des batteries s'exprime souvent en ampèreheures (Ah), 1 Ah correspondant à 3 600 coulombs.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Une batterie de 12 V et 100 Ah, comme celles des installations solaires domestiques, stocke une énergie de :",
+      "o": [
+        "0,12 kWh",
+        "0,6 kWh",
+        "1,2 kWh",
+        "12 kWh"
+      ],
+      "r": 2,
+      "x": "E = U × Q = 12 V × 100 Ah = 1 200 Wh, soit 1,2 kWh. La valeur 12 kWh provient d'une erreur de conversion entre Wh et kWh. En pratique, on ne décharge pas complètement une batterie au plomb, afin de prolonger sa durée de vie, et l'énergie réellement utilisable est souvent limitée à environ la moitié, soit 0,6 kWh.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "À la résonance d'intensité d'un circuit RLC série alimenté par une tension sinusoïdale :",
+      "o": [
+        "l'intensité efficace est maximale",
+        "l'impédance du circuit est maximale",
+        "la tension et l'intensité sont en quadrature",
+        "le circuit ne dissipe aucune énergie"
+      ],
+      "r": 0,
+      "x": "À la résonance, obtenue pour f0 = 1 / (2π√(LC)), l'impédance est minimale et égale à R : l'intensité efficace est donc maximale et en phase avec la tension. La puissance dissipée par effet Joule dans le résistor est alors elle aussi maximale. Ce phénomène est utilisé pour sélectionner une station dans un récepteur radio.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le disjoncteur différentiel d'une installation domestique protège principalement :",
+      "o": [
+        "les personnes contre l'électrocution",
+        "les appareils contre la foudre",
+        "le compteur contre la fraude",
+        "les lampes contre la surtension"
+      ],
+      "r": 0,
+      "x": "Le disjoncteur différentiel coupe le courant dès qu'il détecte une fuite vers la terre, par exemple lorsqu'une personne touche une partie sous tension. Il protège ainsi les personnes contre l'électrocution, tandis que fusibles et disjoncteurs classiques protègent surtout les circuits contre les surintensités. Il doit être associé à une prise de terre efficace.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La réactance d'une bobine parfaite de 0,1 H alimentée sous une fréquence de 50 Hz est d'environ :",
       "o": [
         "5 Ω",
-        "20 Ω",
-        "80 Ω",
-        "40 Ω"
+        "31,4 Ω",
+        "50 Ω",
+        "314 Ω"
       ],
-      "r": 2,
-      "x": "En série : Req=R₁+R₂+R₃+R₄=4×20=80 Ω. En parallèle, les mêmes résistances donneraient Req=20/4=5 Ω (choix A). Mémo : série = additionner, parallèle = inverses."
+      "r": 1,
+      "x": "XL = L × ω = L × 2π × f = 0,1 × 314 ≈ 31,4 Ω. La valeur 314 correspond à la pulsation ω, en rad/s, et non à la réactance. La réactance d'une bobine augmente avec la fréquence, ce qui fait qu'elle laisse passer facilement le courant continu mais s'oppose de plus en plus aux courants de haute fréquence.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "La radioactivité α consiste en l'émission :",
+      "q": "Dans un circuit RLC série, R = 30 Ω et la différence des réactances (Lω – 1/Cω) vaut 40 Ω. L'impédance du circuit est :",
       "o": [
-        "D'un photon γ de haute énergie",
-        "D'un électron rapide",
-        "D'un noyau d'hélium (2 protons + 2 neutrons)",
-        "D'un neutron libre"
-      ],
-      "r": 2,
-      "x": "Rayonnement α = noyau d'hélium ⁴₂He (2p+2n). Rayonnement β⁻ = électron (e⁻). Rayonnement β⁺ = positron (e⁺). Rayonnement γ = photon haute énergie (souvent accompagne α et β). Pouvoir ionisant : α>β>γ."
-    },
-    {
-      "q": "Quelle est la tension efficace produite par un alternateur de tension maximale 311 V ?",
-      "o": [
-        "311 V",
-        "155,5 V",
-        "220 V",
-        "440 V"
-      ],
-      "r": 2,
-      "x": "Ueff=Umax/√2=311/1,414≈220 V. C'est la tension du réseau EDF/SONABEL au Burkina Faso. Piège : diviser par 2 donne 155,5 V ; multiplier par √2 donne 440 V (tension maximale d'un réseau 380V)."
-    },
-    {
-      "q": "Qu'est-ce que la spectroscopie infrarouge (IR) permet de détecter en chimie organique ?",
-      "o": [
-        "La masse molaire de la molécule",
-        "Le nombre d'insaturations de la molécule",
-        "La configuration spatiale des atomes",
-        "Les groupes fonctionnels par absorption de rayonnement IR"
+        "10 Ω",
+        "35 Ω",
+        "40 Ω",
+        "50 Ω"
       ],
       "r": 3,
-      "x": "La spectroscopie IR détecte les vibrations des liaisons chimiques à des fréquences caractéristiques (ex : O-H vers 3300 cm⁻¹, C=O vers 1700 cm⁻¹). Très utilisée pour identifier les fonctions chimiques (alcool, acide, amine...)."
+      "x": "Z = √(R² + (Lω – 1/Cω)²) = √(900 + 1 600) = √2 500 = 50 Ω. La valeur 10 Ω résulte d'une simple soustraction, et une addition aurait donné 70 Ω : les deux termes se combinent selon Pythagore. Le facteur de puissance vaut ici cos φ = R / Z = 30 / 50 = 0,6.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Lors de la décharge d'un condensateur dans une résistance, le courant :",
+      "q": "Un moteur alimenté sous 220 V efficaces absorbe 5 A efficaces avec un facteur de puissance de 0,8. Sa puissance active est :",
       "o": [
-        "Reste constant",
-        "Augmente exponentiellement",
-        "Diminue exponentiellement",
-        "Oscille sinusoïdalement"
-      ],
-      "r": 2,
-      "x": "Décharge RC : i(t)=i₀×e^(-t/τ) avec τ=RC. Le courant (et la tension) décroissent exponentiellement. À t=5τ, le condensateur est pratiquement déchargé (99,3%). Piège : confondre avec un circuit LC qui lui oscille."
-    },
-    {
-      "q": "La thermochimie étudie :",
-      "o": [
-        "La vitesse des réactions chimiques",
-        "Les équilibres acido-basiques",
-        "La structure électronique des molécules",
-        "Les échanges de chaleur lors des réactions chimiques"
+        "176 W",
+        "440 W",
+        "800 W",
+        "880 W"
       ],
       "r": 3,
-      "x": "La thermochimie étudie les chaleurs de réaction (ΔH) : enthalpie de formation, combustion, neutralisation. La cinétique chimique étudie les vitesses. La thermodynamique inclut la thermochimie mais est plus générale."
+      "x": "P = U × I × cos φ = 220 × 5 × 0,8 = 880 W. La valeur 176 W oublie l'intensité, tandis que le produit U × I = 1 100 VA représente la puissance apparente. Un facteur de puissance faible oblige le réseau à fournir une intensité plus grande pour la même puissance utile, ce qui augmente les pertes en ligne.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Un noyau radioactif ²²⁶₈₈Ra émet une particule α. Quel est le noyau fils ?",
+      "q": "Un chauffe-eau électrique de 1 500 W fonctionne 2 h par jour. Au prix fictif de 100 FCFA le kWh, le coût de l'énergie consommée en 30 jours est :",
       "o": [
-        "²²²₈₆Rn",
-        "²²⁴₈₆Rn",
-        "²²⁶₈₉Ac",
-        "²²²₈₈Ra"
+        "300 FCFA",
+        "3 000 FCFA",
+        "9 000 FCFA",
+        "90 000 FCFA"
+      ],
+      "r": 2,
+      "x": "L'énergie vaut 1,5 kW × 2 h × 30 = 90 kWh, d'où un coût de 90 × 100 = 9 000 FCFA. La valeur 300 FCFA correspond au coût d'une seule journée. Le prix de 100 FCFA est un prix d'exercice, la grille tarifaire réelle dépendant de la tranche de consommation et du type d'abonnement.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Dans une alimentation stabilisée, le condensateur placé après le pont de diodes sert à :",
+      "o": [
+        "lisser la tension redressée",
+        "doubler la fréquence du courant",
+        "inverser la polarité de la tension",
+        "élever la tension efficace"
       ],
       "r": 0,
-      "x": "Émission α : Z diminue de 2, A diminue de 4. Ra : Z=88, A=226 → fils : Z=86 (Rn), A=222 → ²²²₈₆Rn (radon). Vérification : conservation de Z (88=86+2 ✓) et de A (226=222+4 ✓)."
+      "x": "Le condensateur se charge pendant les pointes de tension et se décharge lentement entre elles : il réduit l'ondulation et rend la tension presque continue. C'est le pont de diodes, et non le condensateur, qui redresse la tension et double la fréquence de l'ondulation. Plus la capacité est grande, plus le lissage est efficace.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Le théorème de Bernoulli pour un fluide parfait en écoulement stationnaire exprime :",
+      "q": "L'alternateur d'une centrale électrique produit du courant grâce :",
       "o": [
-        "La conservation de la masse",
-        "La conservation de l'énergie par unité de volume",
-        "La conservation de la quantité de mouvement",
-        "La conservation de la charge électrique"
-      ],
-      "r": 1,
-      "x": "Bernoulli : P+½ρv²+ρgh=constante (conservation de l'énergie par unité de volume). Application : portance des ailes d'avion, atomiseur, carburateur. Plus v augmente, plus P diminue (inversement)."
-    },
-    {
-      "q": "Quelle est la formule développée de l'acide propanoïque ?",
-      "o": [
-        "CH₃-CH₂-CHO",
-        "HOOC-CH₂-COOH",
-        "CH₃-CO-CH₃",
-        "CH₃-CH₂-COOH"
-      ],
-      "r": 3,
-      "x": "Acide propanoïque : chaîne de 3 carbones avec groupe acide -COOH → CH₃-CH₂-COOH. CH₃-CH₂-CHO = propanal (aldéhyde), CH₃-CO-CH₃ = propanone (cétone), HOOC-CH₂-COOH = acide malonique."
-    },
-    {
-      "q": "Quelle est la valeur du travail effectué par une force perpendiculaire au déplacement ?",
-      "o": [
-        "W = F × d",
-        "W = -F × d",
-        "W = F × d × sin(90°) = Fd",
-        "W = F × d × cos(90°) = 0"
-      ],
-      "r": 3,
-      "x": "W=F·d·cosθ. Si F ⊥ d → θ=90° → cos90°=0 → W=0. Exemple : la réaction normale d'un plan horizontal ne travaille pas (perpendiculaire au déplacement horizontal). La force de Lorentz sur une charge ne travaille pas."
-    },
-    {
-      "q": "Un corps est en équilibre statique. La somme des moments des forces par rapport à tout point est :",
-      "o": [
-        "Maximale",
-        "Égale au poids du corps",
-        "Nulle",
-        "Égale à la résultante des forces"
-      ],
-      "r": 2,
-      "x": "Conditions d'équilibre statique : (1) ΣF=0 (résultante nulle) et (2) Σ(moments)=0 (moment résultant nul). Les deux conditions sont nécessaires et suffisantes. Application : calcul des réactions d'appui des poutres."
-    },
-    {
-      "q": "La vitesse du son est plus grande dans :",
-      "o": [
-        "L'air",
-        "Un gaz rare",
-        "Le vide",
-        "L'eau"
-      ],
-      "r": 3,
-      "x": "v_son : vide=0 (pas de propagation), air≈340 m/s, eau≈1480 m/s, acier≈5100 m/s. Plus le milieu est dense et rigide, plus le son se propage vite. Dans le vide, le son ne se propage pas (pas de matière)."
-    },
-    {
-      "q": "Quel est le pH d'une solution tampon acide acétique/acétate de sodium (pKa=4,75) quand [AcOH]=[AcO⁻] ?",
-      "o": [
-        "pH = 7",
-        "pH = 2,375",
-        "pH = 9,5",
-        "pH = 4,75"
-      ],
-      "r": 3,
-      "x": "Équation d'Henderson-Hasselbalch : pH=pKa+log([A⁻]/[AH]). Si [AcO⁻]=[AcOH], log(1)=0 → pH=pKa=4,75. C'est la définition même du pKa : pH à demi-neutralisation."
-    },
-    {
-      "q": "En quel type de réaction sont transformés les alcènes sous l'action d'un réactif électrophile ?",
-      "o": [
-        "Substitution radicalaire",
-        "Élimination",
-        "Addition électrophile",
-        "Substitution nucléophile"
-      ],
-      "r": 2,
-      "x": "Les alcènes (riches en électrons autour de la double liaison C=C) réagissent préférentiellement par addition électrophile (AE). Ex : HBr + CH₂=CH₂ → CH₃CH₂Br. Contrairement aux alcanes (SR) et aux dérivés halogénés (SN)."
-    },
-    {
-      "q": "L'enthalpie standard de formation d'un corps simple dans son état le plus stable est :",
-      "o": [
-        "Toujours positive",
-        "Toujours négative",
-        "Nulle par convention",
-        "Égale à celle de sa combustion"
-      ],
-      "r": 2,
-      "x": "Par convention thermochimique, ΔfH°(corps simple dans son état le plus stable)=0. Ex : ΔfH°(O₂,g)=0 ; ΔfH°(C,graphite)=0 ; ΔfH°(Fe,s)=0. C'est la référence pour calculer les enthalpies de réaction."
-    },
-    {
-      "q": "Un moteur électrique de puissance nominale 1,5 kW tourne pendant 2 heures. Quelle est l'énergie consommée en MJ ?",
-      "o": [
-        "10,8 MJ",
-        "3 MJ",
-        "0,3 MJ",
-        "108 MJ"
+        "à la rotation d'un aimant devant des bobines",
+        "à une réaction chimique entre deux métaux",
+        "à l'éclairage d'une cellule photovoltaïque",
+        "au chauffage d'une résistance électrique"
       ],
       "r": 0,
-      "x": "E=P×t=1500 W×7200 s=10 800 000 J=10,8 MJ. Ou : E=1,5 kW×2h=3 kWh=3×3,6 MJ=10,8 MJ (1 kWh=3,6 MJ). Piège : utiliser t=2 h sans conversion en secondes donne 3000 (sans unité cohérente)."
+      "x": "Un alternateur produit une tension alternative par induction électromagnétique : la rotation d'un aimant, ou d'un électroaimant, devant des bobines fait varier le champ magnétique qui les traverse. La réaction chimique est le principe de la pile. La dynamo d'une bicyclette fonctionne sur le même principe, à beaucoup plus petite échelle.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Quel est le produit principal de la déshydratation de l'éthanol en présence d'H₂SO₄ concentré à 170°C ?",
+      "q": "Dans un condensateur parfait alimenté par une tension sinusoïdale, l'intensité est :",
       "o": [
-        "Acide éthanoïque",
-        "Diéthyléther",
-        "Éthylène (éthène)",
-        "Éthane"
-      ],
-      "r": 2,
-      "x": "À 170°C avec H₂SO₄ conc. : élimination de H₂O → CH₂=CH₂ (éthylène). À 130°C : déshydratation intermoléculaire → C₂H₅-O-C₂H₅ (éther). La température contrôle le mécanisme. Piège : confondre les deux températures."
-    },
-    {
-      "q": "Qu'appelle-t-on demi-vie (ou période radioactive) T₁/₂ ?",
-      "o": [
-        "Le temps pour que l'activité double",
-        "Le temps pour que la moitié des noyaux radioactifs se désintègrent",
-        "Le temps pour qu'un photon traverse le noyau",
-        "La durée de vie d'un noyau individuel"
-      ],
-      "r": 1,
-      "x": "T₁/₂ = temps au bout duquel N₀/2 noyaux restent non désintégrés. Loi : N(t)=N₀×(1/2)^(t/T₁/₂). Relation : T₁/₂=ln2/λ (λ=constante de désintégration). La durée de vie d'un noyau individuel est aléatoire."
-    },
-    {
-      "q": "Quelle est la loi de Beer-Lambert en spectrophotométrie ?",
-      "o": [
-        "A = log(I₀/I) = ε × l × c",
-        "A = I₀/I × ε × c",
-        "A = ε/(l × c)",
-        "A = l × c/ε"
+        "en avance de π/2 sur la tension",
+        "en retard de π/2 sur la tension",
+        "en phase avec la tension",
+        "en opposition de phase avec la tension"
       ],
       "r": 0,
-      "x": "Loi de Beer-Lambert : A=ε×l×c. A=absorbance (sans unité), ε=coefficient d'extinction molaire (L/(mol·cm)), l=longueur du trajet optique (cm), c=concentration (mol/L). Permet le dosage colorimétrique."
+      "x": "Pour un condensateur, i = C × du/dt : l'intensité est en avance de π/2, soit d'un quart de période, sur la tension. Dans une bobine parfaite, l'intensité est au contraire en retard de π/2, tandis que dans un résistor elle est en phase avec la tension. Ces déphasages se visualisent à l'oscilloscope en mode bicourbe.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "La réaction entre l'acide chlorhydrique HCl et l'hydroxyde de sodium NaOH donne :",
+      "q": "La résistance équivalente de trois résistors identiques de 12 Ω montés en dérivation est :",
       "o": [
-        "Na + Cl₂ + H₂O",
-        "NaCl + H₂O",
-        "NaClO + H₂",
-        "Na₂O + HCl + H₂"
+        "4 Ω",
+        "12 Ω",
+        "24 Ω",
+        "36 Ω"
+      ],
+      "r": 0,
+      "x": "Pour n résistors identiques en dérivation, Req = R / n = 12 / 3 = 4 Ω. La valeur 36 Ω correspond au montage en série, où les résistances s'additionnent. Ajouter des branches en dérivation diminue la résistance équivalente et augmente donc l'intensité totale fournie par le générateur, ce qui peut surcharger une multiprise.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un condensateur déchargé est relié, à t = 0, à un générateur de 12 V à travers un résistor de 1 kΩ. L'intensité initiale du courant de charge est :",
+      "o": [
+        "12 mA",
+        "24 mA",
+        "120 mA",
+        "12 A"
+      ],
+      "r": 0,
+      "x": "À t = 0, le condensateur déchargé a une tension nulle : toute la tension est aux bornes du résistor et i(0) = E / R = 12 / 1 000 = 12 mA. La valeur 12 A résulte de l'oubli de la conversion des kiloohms. L'intensité décroît ensuite exponentiellement et s'annule lorsque le condensateur est complètement chargé.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'oscilloscope permet principalement de :",
+      "o": [
+        "mesurer la masse d'un objet",
+        "visualiser une tension en fonction du temps",
+        "mesurer la résistance d'un fil",
+        "mesurer l'intensité lumineuse"
       ],
       "r": 1,
-      "x": "HCl + NaOH → NaCl + H₂O (réaction de neutralisation). C'est une réaction totale (acide fort + base forte). Le sel formé NaCl est neutre (pH=7). Application : dosages acido-basiques en laboratoire."
+      "x": "L'oscilloscope affiche l'évolution d'une tension en fonction du temps, ce qui permet d'en déterminer la période, la fréquence et la valeur maximale. Il se branche en dérivation, comme un voltmètre. Sur l'écran, la période se lit en multipliant le nombre de divisions horizontales d'un motif par la valeur du balayage, exprimée en ms par division.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Dans un champ magnétique uniforme B, une charge q se déplaçant à vitesse v perpendiculairement à B subit :",
+      "q": "Une tension alternative observée à l'oscilloscope a une période de 4 divisions avec un balayage de 5 ms/div. Sa fréquence est :",
       "o": [
-        "Une force dans le sens de v",
-        "Une force de Lorentz perpendiculaire à v et B",
-        "Aucune force",
-        "Une force parallèle à B"
+        "20 Hz",
+        "50 Hz",
+        "200 Hz",
+        "1 250 Hz"
       ],
       "r": 1,
-      "x": "Force de Lorentz : F=qv∧B (produit vectoriel). Si v⊥B, |F|=qvB et F est ⊥ au plan (v,B). Cette force ne travaille pas (⊥ au déplacement) → la vitesse reste constante en norme : mouvement circulaire uniforme."
+      "x": "La période vaut T = 4 × 5 = 20 ms = 0,02 s, d'où f = 1 / T = 1 / 0,02 = 50 Hz. La valeur 20 correspond à la période exprimée en millisecondes, et non à la fréquence. On retrouve ainsi la fréquence du réseau électrique national, observée lorsqu'on visualise la tension délivrée par un transformateur abaisseur.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Quel est le pH d'une solution de NaOH à 10⁻² mol/L à 25°C ?",
+      "q": "La puissance d'un fer à souder de résistance 484 Ω branché sous 220 V est :",
       "o": [
-        "2",
-        "12",
+        "0,45 W",
+        "2,2 W",
+        "100 W",
+        "106 480 W"
+      ],
+      "r": 2,
+      "x": "P = U² / R = 220² / 484 = 48 400 / 484 = 100 W. La valeur 0,45 correspond au quotient U / R, qui donne l'intensité en ampères et non la puissance. Cette relation se déduit de P = U × I en remplaçant I par U / R, grâce à la loi d'Ohm.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un proton (m = 1,67 × 10⁻²⁷ kg ; q = 1,6 × 10⁻¹⁹ C) entre à 10⁶ m/s perpendiculairement à un champ magnétique de 0,1 T. Le rayon de sa trajectoire est d'environ :",
+      "o": [
+        "1 cm",
+        "10 cm",
+        "1 m",
+        "10 m"
+      ],
+      "r": 1,
+      "x": "R = m × v / (q × B) = (1,67 × 10⁻²⁷ × 10⁶) / (1,6 × 10⁻¹⁹ × 0,1) ≈ 0,10 m, soit 10 cm. Les autres valeurs proviennent d'erreurs sur les puissances de dix. Des ions de même charge et de même vitesse mais de masses différentes décrivent des cercles de rayons différents, ce qui permet de séparer les isotopes.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Selon la loi de Lenz, le courant induit :",
+      "o": [
+        "a toujours le même sens que le courant inducteur",
+        "ne dépend pas de la variation du flux magnétique",
+        "s'oppose par ses effets à la cause qui l'a produit",
+        "augmente indéfiniment au cours du temps"
+      ],
+      "r": 2,
+      "x": "La loi de Lenz stipule que le courant induit a un sens tel que ses effets s'opposent à la cause qui lui donne naissance, par exemple au déplacement d'un aimant. Il n'existe que pendant la variation du flux. Les ralentisseurs électromagnétiques des camions et des cars exploitent ce freinage par courants de Foucault.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Pour un éclairage équivalent, une lampe LED de 10 W remplace une lampe à incandescence de 60 W. L'économie réalisée en 1 000 heures est :",
+      "o": [
+        "6 kWh",
+        "10 kWh",
+        "40 kWh",
+        "50 kWh"
+      ],
+      "r": 3,
+      "x": "L'économie vaut (60 – 10) × 1 000 = 50 000 Wh, soit 50 kWh. La valeur 10 kWh correspond à la consommation de la seule lampe à LED, et 6 au simple rapport des deux puissances. Les lampes à LED convertissent bien plus d'énergie en lumière, alors que les lampes à incandescence en perdent la majeure partie en chaleur.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un générateur (E = 12 V, r = 1 Ω) alimente un résistor de 5 Ω. D'après la loi de Pouillet, l'intensité du courant vaut :",
+      "o": [
+        "2 A",
+        "2,4 A",
+        "12 A",
+        "72 A"
+      ],
+      "r": 0,
+      "x": "La loi de Pouillet s'écrit I = E / (R + r) = 12 / (5 + 1) = 2 A. La valeur 2,4 A résulte de l'oubli de la résistance interne r du générateur. Cette résistance interne explique que la tension aux bornes d'une pile diminue lorsqu'elle débite un courant important : ici, U = E – r × I = 12 – 2 = 10 V.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un condensateur de 2 µF chargé sous 10 V se décharge dans une bobine parfaite de 0,02 H. L'intensité maximale du courant est :",
+      "o": [
+        "0,01 A",
+        "0,1 A",
+        "1 A",
+        "10 A"
+      ],
+      "r": 1,
+      "x": "L'énergie se conserve : ½ × C × U² = ½ × L × Im², d'où Im = U × √(C / L) = 10 × √(10⁻⁴) = 0,1 A. La valeur 0,01 A correspond à √(C / L) sans multiplication par la tension. Cette intensité maximale est atteinte quand le condensateur est entièrement déchargé, toute l'énergie étant alors stockée dans la bobine.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'énergie transformée en chaleur par un résistor de 100 Ω traversé par un courant de 2 A pendant 10 s est :",
+      "o": [
+        "200 J",
+        "400 J",
+        "2 000 J",
+        "4 000 J"
+      ],
+      "r": 3,
+      "x": "D'après la loi de Joule, W = R × I² × t = 100 × 2² × 10 = 4 000 J. La valeur 2 000 J résulte de l'oubli du carré de l'intensité. Cette énergie suffirait à élever d'environ 1 °C la température d'un litre d'eau, dont la capacité thermique massique vaut 4 180 J/(kg·°C).",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Dans un circuit RLC série en régime libre, la résistance est responsable :",
+      "o": [
+        "de l'augmentation de l'amplitude des oscillations",
+        "de la conservation de l'énergie totale",
+        "de l'amortissement des oscillations",
+        "de l'annulation de la période propre"
+      ],
+      "r": 2,
+      "x": "La résistance dissipe de l'énergie par effet Joule : l'amplitude des oscillations décroît, on parle de régime pseudo-périodique. Si la résistance est très grande, le régime devient apériodique et le condensateur se décharge sans osciller. Pour entretenir les oscillations, on doit compenser ces pertes par un dispositif électronique d'entretien.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un électron (m = 9,1 × 10⁻³¹ kg ; e = 1,6 × 10⁻¹⁹ C) est accéléré sans vitesse initiale sous une tension de 100 V. Sa vitesse finale est d'environ :",
+      "o": [
+        "5,9 × 10⁴ m/s",
+        "5,9 × 10⁵ m/s",
+        "5,9 × 10⁶ m/s",
+        "3,5 × 10¹³ m/s"
+      ],
+      "r": 2,
+      "x": "½ × m × v² = e × U donne v = √(2eU / m) = √(2 × 1,6 × 10⁻¹⁹ × 100 / 9,1 × 10⁻³¹) ≈ 5,9 × 10⁶ m/s. La valeur 3,5 × 10¹³ correspond à v², sans extraction de la racine carrée. Cette vitesse reste nettement inférieure à celle de la lumière, ce qui justifie l'emploi de la mécanique classique.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un générateur de 12 V alimente en série deux résistors de 4 Ω et 8 Ω. La tension aux bornes du résistor de 8 Ω est :",
+      "o": [
+        "1 V",
+        "4 V",
+        "6 V",
+        "8 V"
+      ],
+      "r": 3,
+      "x": "L'intensité vaut I = U / (R1 + R2) = 12 / 12 = 1 A, donc la tension aux bornes du résistor de 8 Ω est U2 = 8 × 1 = 8 V. Celle du résistor de 4 Ω vaut 4 V, et leur somme redonne bien les 12 V du générateur. En série, la plus grande résistance reçoit toujours la plus grande tension.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un appareil marqué « 220 V – 2 200 W » est branché sur une prise protégée par un fusible de 6 A. On constate que :",
+      "o": [
+        "l'appareil fonctionne, car l'intensité vaut 1 A",
+        "l'appareil fonctionne, car l'intensité vaut 6 A",
+        "le fusible fond, car l'intensité atteint 10 A",
+        "le fusible fond, car la tension atteint 440 V"
+      ],
+      "r": 2,
+      "x": "L'intensité absorbée vaut I = P / U = 2 200 / 220 = 10 A, ce qui dépasse le calibre de 6 A : le fusible fond et coupe le circuit. Ce n'est pas la tension qui change, elle reste fixée à 220 V par le réseau. Ce type d'appareil doit être branché sur un circuit protégé par un calibre supérieur, par exemple 16 A.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Une onde se propage à 2 m/s le long d'une corde. Un point situé à 3 m de la source reproduit le mouvement de celle-ci avec un retard de :",
+      "o": [
+        "0,67 s",
+        "1 s",
+        "1,5 s",
+        "6 s"
+      ],
+      "r": 2,
+      "x": "Le retard vaut τ = d / v = 3 / 2 = 1,5 s : le point M reproduit à la date t le mouvement qu'avait la source à la date t – τ. La valeur 0,67 s résulte de l'inversion du rapport v / d. Lors de la propagation, il y a transport d'énergie sans transport de matière, chaque point de la corde vibrant sur place.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un vibreur de fréquence 50 Hz crée une onde progressive qui se propage à 10 m/s sur une corde. La longueur d'onde est :",
+      "o": [
+        "0,2 m",
+        "0,5 m",
+        "5 m",
+        "500 m"
+      ],
+      "r": 0,
+      "x": "λ = v / f = 10 / 50 = 0,2 m, soit 20 cm. La valeur 5 résulte de l'inversion du rapport f / v, et 500 m du produit v × f. La longueur d'onde est la distance parcourue par l'onde pendant une période ; c'est aussi la plus petite distance séparant deux points de la corde qui vibrent en phase.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Deux points d'une corde, parcourue par une onde sinusoïdale de longueur d'onde λ, sont distants de 3λ/2. Ils vibrent :",
+      "o": [
+        "en phase",
+        "en opposition de phase",
+        "en quadrature de phase",
+        "avec des fréquences différentes"
+      ],
+      "r": 1,
+      "x": "Deux points séparés par un nombre impair de demi-longueurs d'onde, d = (2k + 1) × λ/2, vibrent en opposition de phase. Ils vibreraient en phase pour une distance égale à un multiple entier de λ. Tous les points du milieu vibrent à la même fréquence, celle imposée par la source, quelle que soit leur distance.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Dans l'expérience des fentes de Young, λ = 600 nm, la distance entre les fentes vaut 1 mm et l'écran est à 2 m. L'interfrange est :",
+      "o": [
+        "1,2 mm",
+        "2,4 mm",
+        "6 mm",
+        "12 mm"
+      ],
+      "r": 0,
+      "x": "L'interfrange vaut i = λ × D / a = 600 × 10⁻⁹ × 2 / 10⁻³ = 1,2 × 10⁻³ m, soit 1,2 mm. La valeur 2,4 mm correspond au double de l'interfrange, c'est-à-dire à la distance entre une frange brillante et la deuxième suivante. Ces franges prouvent le caractère ondulatoire de la lumière.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Une lumière de longueur d'onde 500 nm traverse une fente de 0,1 mm de largeur. L'écart angulaire de diffraction θ = λ / a vaut :",
+      "o": [
+        "5 × 10⁻⁴ rad",
+        "5 × 10⁻³ rad",
+        "5 × 10⁻² rad",
+        "2 × 10² rad"
+      ],
+      "r": 1,
+      "x": "θ = λ / a = 500 × 10⁻⁹ / 10⁻⁴ = 5 × 10⁻³ rad. La valeur 2 × 10² résulte de l'inversion du rapport a / λ. Plus la fente est étroite, plus la diffraction est marquée et plus la tache centrale est large ; ce phénomène n'est notable que si la largeur de l'ouverture est proche de la longueur d'onde.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'énergie d'un photon de longueur d'onde 600 nm dans le vide (h = 6,63 × 10⁻³⁴ J·s ; c = 3 × 10⁸ m/s) est d'environ :",
+      "o": [
+        "4,0 × 10⁻⁴⁰ J",
+        "3,3 × 10⁻¹⁹ J",
+        "3,3 × 10⁻¹⁶ J",
+        "2,1 J"
+      ],
+      "r": 1,
+      "x": "E = h × c / λ = 6,63 × 10⁻³⁴ × 3 × 10⁸ / 6 × 10⁻⁷ ≈ 3,3 × 10⁻¹⁹ J, soit environ 2,1 eV. La valeur 4,0 × 10⁻⁴⁰ J correspond au produit erroné h × λ, et 2,1 J à une confusion entre joule et électronvolt. L'énergie d'un photon augmente quand sa longueur d'onde diminue.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'indice de réfraction d'un milieu dans lequel la lumière se propage à 200 000 km/s est :",
+      "o": [
+        "0,67",
+        "1,33",
+        "1,5",
+        "2"
+      ],
+      "r": 2,
+      "x": "n = c / v = 300 000 / 200 000 = 1,5, valeur caractéristique du verre ordinaire. La valeur 0,67 résulte de l'inversion du rapport : un indice de réfraction est toujours supérieur ou égal à 1. L'eau a un indice d'environ 1,33, ce qui signifie que la lumière y voyage à environ 225 000 km/s.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le travail d'extraction d'un métal vaut 2 eV (hc = 1 240 eV·nm). La longueur d'onde seuil de l'effet photoélectrique pour ce métal est :",
+      "o": [
+        "310 nm",
+        "620 nm",
+        "1 240 nm",
+        "2 480 nm"
+      ],
+      "r": 1,
+      "x": "λ0 = h × c / W0 = 1 240 / 2 = 620 nm. La valeur 1 240 nm oublie la division par le travail d'extraction. Seules les radiations de longueur d'onde inférieure à 620 nm, donc de fréquence supérieure à la fréquence seuil, peuvent arracher des électrons à ce métal, quelle que soit l'intensité du faisceau.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La vergence d'une lentille de distance focale 25 cm est :",
+      "o": [
+        "0,04 δ",
+        "0,25 δ",
+        "4 δ",
+        "25 δ"
+      ],
+      "r": 2,
+      "x": "La vergence vaut C = 1 / f, avec f en mètres : C = 1 / 0,25 = 4 dioptries. La valeur 0,04 δ résulte de l'emploi de la distance focale en centimètres sans conversion. Une lentille convergente a une vergence positive et une lentille divergente une vergence négative ; plus la vergence est grande, plus la lentille dévie fortement la lumière.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un objet placé à 30 cm d'une lentille convergente de distance focale 10 cm donne une image située à :",
+      "o": [
+        "7,5 cm",
+        "10 cm",
+        "12 cm",
+        "15 cm"
+      ],
+      "r": 3,
+      "x": "La relation de conjugaison 1/OA' – 1/OA = 1/f donne 1/OA' = 1/10 – 1/30 = 2/30, d'où OA' = 15 cm. La valeur 7,5 cm résulte d'une addition des inverses au lieu d'une soustraction. L'image obtenue est réelle, renversée et deux fois plus petite que l'objet, le grandissement valant – 15 / 30 = – 0,5.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'œil myope se corrige à l'aide de :",
+      "o": [
+        "lentilles convergentes",
+        "lentilles divergentes",
+        "verres teintés",
+        "miroirs plans"
+      ],
+      "r": 1,
+      "x": "L'œil myope est trop convergent : l'image d'un objet lointain se forme en avant de la rétine, et le myope voit mal de loin. On le corrige avec des lentilles divergentes, de vergence négative. L'hypermétrope et le presbyte, qui voient mal de près, portent au contraire des verres convergents, de vergence positive, qui renforcent la convergence de l'œil.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'effet photoélectrique ne se produit que si :",
+      "o": [
+        "l'intensité lumineuse dépasse une valeur seuil",
+        "la fréquence de la lumière dépasse la fréquence seuil du métal",
+        "le métal a été préalablement chauffé",
+        "la longueur d'onde dépasse la longueur d'onde seuil"
+      ],
+      "r": 1,
+      "x": "L'électron n'est arraché que si l'énergie h × ν d'un seul photon dépasse le travail d'extraction : la fréquence doit dépasser la fréquence seuil. Une lumière intense mais de fréquence trop faible reste sans effet. Einstein expliqua ce phénomène en 1905 par la notion de photon, ce qui lui valut le prix Nobel de physique de 1921.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un photon de 3 eV frappe un métal dont le travail d'extraction vaut 2,2 eV. L'énergie cinétique maximale de l'électron émis est :",
+      "o": [
+        "0,8 eV",
+        "1,4 eV",
+        "2,2 eV",
+        "5,2 eV"
+      ],
+      "r": 0,
+      "x": "D'après la relation d'Einstein, Ec max = h × ν – W0 = 3 – 2,2 = 0,8 eV. La valeur 5,2 eV résulte d'une addition au lieu d'une soustraction. L'énergie du photon sert d'abord à extraire l'électron du métal, le reste lui étant communiqué sous forme d'énergie cinétique.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Les niveaux d'énergie de l'atome d'hydrogène sont donnés par En = – 13,6 / n² (en eV). L'énergie d'ionisation de l'atome pris dans son état fondamental est :",
+      "o": [
+        "1,51 eV",
+        "3,4 eV",
+        "10,2 eV",
+        "13,6 eV"
+      ],
+      "r": 3,
+      "x": "L'ionisation fait passer l'électron du niveau fondamental E1 = – 13,6 eV au niveau E∞ = 0 : il faut donc fournir 13,6 eV. La valeur 10,2 eV correspond à la transition du niveau 1 au niveau 2, et 3,4 eV à l'ionisation depuis le premier état excité. Ces niveaux quantifiés expliquent les spectres de raies.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'énergie du photon émis lors de la transition de l'atome d'hydrogène du niveau n = 3 au niveau n = 2 (En = – 13,6 / n² en eV) est d'environ :",
+      "o": [
+        "0,66 eV",
+        "1,13 eV",
+        "1,51 eV",
+        "1,89 eV"
+      ],
+      "r": 3,
+      "x": "ΔE = E3 – E2 = – 1,51 – (– 3,40) ≈ 1,89 eV, ce qui correspond à une longueur d'onde de 1 240 / 1,89 ≈ 656 nm. La valeur 1,51 eV n'est que la valeur absolue de E3. Cette raie rouge, appelée Hα, appartient à la série de Balmer, visible dans le spectre de l'hydrogène.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'existence de spectres de raies d'émission et d'absorption montre que l'énergie d'un atome :",
+      "o": [
+        "varie de façon continue",
+        "est quantifiée",
+        "est toujours nulle",
+        "ne dépend que de la température"
+      ],
+      "r": 1,
+      "x": "Un atome ne peut posséder que certaines valeurs d'énergie bien déterminées, appelées niveaux d'énergie : il n'émet ou n'absorbe que des photons d'énergie égale à l'écart entre deux niveaux. Une énergie continue produirait un spectre continu. Chaque élément possède ainsi ses raies caractéristiques, véritable empreinte qui permet de l'identifier.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le carbone 14 a une demi-vie de 5 730 ans. Sa constante radioactive λ = ln 2 / T vaut environ :",
+      "o": [
+        "1,2 × 10⁻⁵ an⁻¹",
+        "8,7 × 10⁻⁵ an⁻¹",
+        "1,21 × 10⁻⁴ an⁻¹",
+        "1,75 × 10⁻⁴ an⁻¹"
+      ],
+      "r": 2,
+      "x": "λ = ln 2 / T = 0,693 / 5 730 ≈ 1,21 × 10⁻⁴ an⁻¹. La valeur 1,75 × 10⁻⁴ an⁻¹ correspond à 1 / T, sans le facteur ln 2. La loi de décroissance radioactive s'écrit N(t) = N0 × e^(–λt), où N0 est le nombre initial de noyaux et N(t) le nombre de noyaux restant à la date t.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un échantillon contient 10²⁰ noyaux radioactifs de constante radioactive 10⁻⁶ s⁻¹. Son activité est :",
+      "o": [
+        "10⁶ Bq",
+        "10¹⁴ Bq",
+        "10²⁰ Bq",
+        "10²⁶ Bq"
+      ],
+      "r": 1,
+      "x": "L'activité vaut A = λ × N = 10⁻⁶ × 10²⁰ = 10¹⁴ Bq, soit 10¹⁴ désintégrations par seconde. La valeur 10²⁶ Bq résulte de la division N / λ au lieu du produit. L'activité décroît au cours du temps selon la même loi exponentielle que le nombre de noyaux, A(t) = A0 × e^(–λt).",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "D'après la relation d'Einstein E = Δm × c², l'énergie libérée par une perte de masse de 1 g (c = 3 × 10⁸ m/s) est :",
+      "o": [
+        "3 × 10⁵ J",
+        "9 × 10⁷ J",
+        "9 × 10¹⁰ J",
+        "9 × 10¹³ J"
+      ],
+      "r": 3,
+      "x": "E = Δm × c² = 10⁻³ × (3 × 10⁸)² = 9 × 10¹³ J. La valeur 9 × 10⁷ J résulte de l'emploi de c en km/s, et 3 × 10⁵ J de l'oubli du carré. Cette énergie équivaut à celle libérée par l'explosion d'environ 20 000 tonnes de TNT, ce qui montre la puissance des réactions nucléaires.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Dans la désintégration ²³⁸₉₂U → ²³⁴₉₀Th + X, la particule X est :",
+      "o": [
+        "un électron",
+        "un positon",
+        "un noyau d'hélium",
+        "un neutron"
+      ],
+      "r": 2,
+      "x": "Les lois de conservation de Soddy imposent A = 238 – 234 = 4 et Z = 92 – 90 = 2 : X est un noyau d'hélium ⁴₂He, il s'agit d'une désintégration alpha. Un électron, de nombre de charge – 1, correspondrait à une désintégration bêta moins. Ces lois de conservation permettent d'équilibrer toutes les équations de réactions nucléaires.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La célérité d'une onde le long d'une corde tendue vaut v = √(F / μ). Pour une tension F = 40 N et une masse linéique μ = 0,01 kg/m, elle vaut :",
+      "o": [
+        "20 m/s",
+        "63 m/s",
+        "400 m/s",
+        "4 000 m/s"
+      ],
+      "r": 1,
+      "x": "v = √(F / μ) = √(40 / 0,01) = √4 000 ≈ 63 m/s. La valeur 4 000 correspond au rapport F / μ sans la racine carrée. La célérité dépend donc des caractéristiques du milieu, tension et masse linéique, et non de l'amplitude de la perturbation : on accorde ainsi une guitare en ajustant la tension des cordes.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Une lame vibre à 100 Hz. La plus grande fréquence d'éclairage stroboscopique qui la fait paraître immobile, avec une seule image, est :",
+      "o": [
+        "25 Hz",
+        "50 Hz",
+        "100 Hz",
+        "200 Hz"
+      ],
+      "r": 2,
+      "x": "L'immobilité apparente est obtenue lorsque la fréquence du mouvement est un multiple entier de celle des éclairs ; la plus grande est fe = f = 100 Hz. À 200 Hz, la lame est éclairée deux fois par période et l'on observe deux images. Les fréquences 50 Hz et 25 Hz donnent aussi une immobilité apparente, mais ne sont pas les plus grandes.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Une température de 300 K correspond à :",
+      "o": [
+        "– 273 °C",
+        "– 27 °C",
+        "0 °C",
+        "27 °C"
+      ],
+      "r": 3,
+      "x": "La relation entre les deux échelles est θ(°C) = T(K) – 273, d'où 300 – 273 = 27 °C. La valeur – 27 °C résulte d'une erreur de signe dans la soustraction. Le zéro absolu, 0 K, soit – 273 °C, est la température la plus basse possible, à laquelle l'agitation des particules est minimale.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'énergie nécessaire pour élever de 20 °C la température de 2 kg d'eau (c = 4 180 J/kg·°C) est :",
+      "o": [
+        "4 180 J",
+        "83 600 J",
+        "167 200 J",
+        "334 400 J"
+      ],
+      "r": 2,
+      "x": "Q = m × c × Δθ = 2 × 4 180 × 20 = 167 200 J, soit environ 167 kJ. La valeur 83 600 J correspond à une masse d'un seul kilogramme. La capacité thermique massique élevée de l'eau explique qu'elle chauffe et refroidisse lentement, d'où son emploi dans les circuits de refroidissement des moteurs de voiture.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'eau contenue dans un canari en terre cuite reste fraîche grâce :",
+      "o": [
+        "à l'évaporation de l'eau à travers les parois poreuses",
+        "à la conduction de la chaleur de l'eau vers le sol",
+        "au rayonnement solaire absorbé par l'argile cuite",
+        "à la condensation de la vapeur sur les parois"
+      ],
+      "r": 0,
+      "x": "L'eau qui suinte à travers les parois poreuses du canari s'évapore, et ce changement d'état absorbe de la chaleur prise à l'eau restante, qui se refroidit. La condensation produirait au contraire un dégagement de chaleur. Le même principe explique la sensation de fraîcheur ressentie lorsque la sueur s'évapore de la peau.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Une roue tourne à 50 tours par seconde et est éclairée par un stroboscope de fréquence 49 Hz. On observe un mouvement apparent ralenti de fréquence :",
+      "o": [
+        "1 Hz",
+        "49 Hz",
+        "50 Hz",
+        "99 Hz"
+      ],
+      "r": 0,
+      "x": "La fréquence du mouvement apparent vaut f – fe = 50 – 49 = 1 Hz, dans le sens réel de rotation. Si la fréquence des éclairs était légèrement supérieure à 50 Hz, le mouvement apparent se ferait en sens inverse. Ce phénomène explique que les roues des véhicules semblent parfois tourner à l'envers dans les films.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "À la surface de l'eau, deux sources synchrones et en phase créent des interférences. L'amplitude est maximale aux points où la différence de marche est :",
+      "o": [
+        "un multiple entier de la longueur d'onde",
+        "un multiple impair de la demi-longueur d'onde",
+        "toujours strictement nulle",
+        "égale à la distance entre les sources"
+      ],
+      "r": 0,
+      "x": "Les ondes arrivent en phase lorsque la différence de marche δ = d2 – d1 vaut k × λ : elles s'ajoutent et l'amplitude est maximale. Pour δ = (2k + 1) × λ/2, elles arrivent en opposition de phase et le point reste immobile. Ces points se répartissent sur des lignes en forme d'hyperboles appelées franges d'interférence.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Dans une expérience d'interférences lumineuses (λ = 500 nm), un point de l'écran correspond à une différence de marche de 1,5 µm. Il se trouve sur :",
+      "o": [
+        "une frange brillante d'ordre 3",
+        "une frange sombre d'ordre 3",
+        "une frange brillante d'ordre 1,5",
+        "une frange sombre d'ordre 1,5"
+      ],
+      "r": 0,
+      "x": "L'ordre d'interférence vaut p = δ / λ = 1,5 × 10⁻⁶ / 5 × 10⁻⁷ = 3 : c'est un entier, le point appartient donc à une frange brillante. Un ordre demi-entier, comme 2,5 ou 3,5, correspondrait à une frange sombre. L'ordre d'une frange brillante est toujours un nombre entier, la frange centrale ayant l'ordre 0.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Une barre d'acier de 10 m (coefficient de dilatation linéique 1,2 × 10⁻⁵ /°C) chauffée de 40 °C s'allonge de :",
+      "o": [
+        "0,048 mm",
+        "0,48 mm",
+        "4,8 mm",
+        "48 mm"
+      ],
+      "r": 2,
+      "x": "ΔL = L0 × λ × Δθ = 10 × 1,2 × 10⁻⁵ × 40 = 4,8 × 10⁻³ m, soit 4,8 mm. Les autres valeurs résultent d'erreurs de puissance de dix lors de la conversion en millimètres. Bien que faible, cet allongement suffit à déformer des rails ou des ponts mal conçus, d'où la présence de joints de dilatation.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La chaleur latente de fusion de la glace vaut 334 kJ/kg. L'énergie nécessaire pour faire fondre 500 g de glace à 0 °C est :",
+      "o": [
+        "0,67 kJ",
+        "66,8 kJ",
+        "167 kJ",
+        "668 kJ"
+      ],
+      "r": 2,
+      "x": "Q = m × Lf = 0,5 × 334 = 167 kJ. La valeur 668 kJ résulte d'une division par la masse au lieu d'une multiplication. Pendant la fusion, toute l'énergie reçue sert au changement d'état, et la température du mélange d'eau et de glace reste constante à 0 °C jusqu'à la disparition du dernier glaçon.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La lumière est une onde de nature :",
+      "o": [
+        "électromagnétique",
+        "mécanique",
+        "sonore",
+        "sismique"
+      ],
+      "r": 0,
+      "x": "La lumière est une onde électromagnétique, qui peut se propager dans le vide, contrairement aux ondes mécaniques comme le son ou les ondes sismiques. La lumière visible n'occupe qu'une petite partie du spectre électromagnétique, qui comprend aussi les ondes radio, les infrarouges, les ultraviolets et les rayons X, tous se propageant dans le vide à la même vitesse de 300 000 km/s.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Les longueurs d'onde de la lumière visible dans le vide sont comprises approximativement entre :",
+      "o": [
+        "4 nm et 8 nm",
+        "40 nm et 80 nm",
+        "400 nm et 800 nm",
+        "4 µm et 8 µm"
+      ],
+      "r": 2,
+      "x": "La lumière visible correspond aux longueurs d'onde comprises entre 400 nm, pour le violet, et 800 nm, pour le rouge. Au-delà du rouge se situent les infrarouges, en deçà du violet les ultraviolets. Les ultraviolets du Soleil, invisibles, provoquent les coups de soleil et peuvent endommager les yeux et la peau.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Une onde a une fréquence de 50 Hz et une longueur d'onde de 6,8 m. Sa célérité est :",
+      "o": [
+        "0,136 m/s",
+        "7,35 m/s",
+        "56,8 m/s",
+        "340 m/s"
+      ],
+      "r": 3,
+      "x": "La célérité vaut v = λ × f = 6,8 × 50 = 340 m/s, ce qui correspond à un son dans l'air. La valeur 7,35 m/s résulte de la division f / λ au lieu du produit. La relation v = λ × f, ou λ = v × T, est valable pour toutes les ondes périodiques, qu'elles soient mécaniques ou électromagnétiques.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La loupe donne d'un petit objet placé entre la lentille et son foyer objet une image :",
+      "o": [
+        "réelle et renversée",
+        "virtuelle, droite et agrandie",
+        "réelle, droite et réduite",
+        "virtuelle, renversée et réduite"
+      ],
+      "r": 1,
+      "x": "Lorsque l'objet est placé entre la lentille convergente et son foyer objet, l'image est virtuelle, droite et plus grande que l'objet : c'est le principe de la loupe. Si l'objet est placé au-delà du foyer, l'image devient réelle et renversée, et peut être recueillie sur un écran, comme dans un projecteur.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Dans le modèle de l'œil réduit, le cristallin joue le rôle :",
+      "o": [
+        "d'un miroir plan",
+        "d'une lentille convergente",
+        "d'une lentille divergente",
+        "d'un écran"
+      ],
+      "r": 1,
+      "x": "Dans le modèle de l'œil réduit, le cristallin joue le rôle d'une lentille convergente et la rétine celui de l'écran sur lequel se forme l'image. L'iris règle la quantité de lumière comme le diaphragme d'un appareil photo. Le cristallin se déforme pour accommoder, ce qui permet de voir nettement des objets proches ou éloignés.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'année-lumière est une unité de :",
+      "o": [
+        "temps",
+        "vitesse",
+        "distance",
+        "luminosité"
+      ],
+      "r": 2,
+      "x": "L'année-lumière est une unité de distance : c'est la longueur parcourue par la lumière dans le vide en une année, soit environ 9 460 milliards de kilomètres. Malgré son nom, elle ne mesure pas une durée. Elle sert en astronomie, l'étoile la plus proche du Soleil, Proxima du Centaure, se trouvant à environ 4,2 années-lumière.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un rayon passe de l'air (n = 1) dans l'eau (n = 1,33) avec un angle d'incidence de 30°. L'angle de réfraction est d'environ :",
+      "o": [
+        "22°",
+        "30°",
+        "40°",
+        "60°"
+      ],
+      "r": 0,
+      "x": "La loi de Snell-Descartes donne n1 × sin i = n2 × sin r, d'où sin r = 0,5 / 1,33 ≈ 0,376 et r ≈ 22°. La valeur 40° correspondrait à un passage de l'eau vers l'air sous la même incidence. En passant dans un milieu plus réfringent, le rayon se rapproche toujours de la normale, d'où un angle de réfraction plus petit.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le phénomène de réflexion totale de la lumière est exploité dans :",
+      "o": [
+        "les fibres optiques",
+        "les lentilles de contact",
+        "les panneaux solaires",
+        "les ampoules à LED"
+      ],
+      "r": 0,
+      "x": "Dans une fibre optique, la lumière subit une succession de réflexions totales sur la paroi et reste piégée dans le cœur de la fibre. Ce phénomène se produit lorsque la lumière passe d'un milieu vers un milieu moins réfringent sous une incidence suffisamment grande. Les fibres optiques transportent ainsi les données internet sur de très longues distances.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Pour élever la température de 5 L d'eau de 25 °C à 85 °C (c = 4 180 J/kg·°C), l'énergie à fournir est :",
+      "o": [
+        "522 500 J",
+        "1 254 000 J",
+        "1 776 500 J",
+        "6 270 000 J"
+      ],
+      "r": 1,
+      "x": "Q = m × c × Δθ = 5 × 4 180 × (85 – 25) = 1 254 000 J, soit environ 1,25 MJ. La valeur 1 776 500 J résulte de l'emploi de la température finale à la place de la variation de température. Le fort ensoleillement du Burkina Faso rend les chauffe-eau solaires particulièrement adaptés pour fournir cette énergie gratuitement.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Sous pression constante, le changement d'état d'un corps pur se fait toujours :",
+      "o": [
+        "à température constante",
+        "avec une baisse de masse",
+        "sans échange d'énergie",
+        "avec une hausse de volume"
+      ],
+      "r": 0,
+      "x": "Sous pression constante, le changement d'état d'un corps pur s'effectue à température constante, ce qui se traduit par un palier sur la courbe de température. La masse se conserve, alors que le volume peut varier : l'eau gèle en augmentant de volume. Un mélange, comme l'eau salée, ne présente pas de palier net lors de son changement d'état.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "On accole une lentille convergente de distance focale 20 cm et une lentille divergente de distance focale – 50 cm. La vergence du système est :",
+      "o": [
+        "– 3 δ",
+        "1,4 δ",
+        "2,5 δ",
+        "3 δ"
+      ],
+      "r": 3,
+      "x": "Les vergences de lentilles accolées s'additionnent : C = 1/0,2 + 1/(– 0,5) = 5 – 2 = 3 δ, système convergent de distance focale 33 cm environ. La valeur 1,4 δ résulte de l'addition erronée des distances focales, et – 3 δ d'une inversion des signes. Ce principe sert à corriger les aberrations dans les objectifs.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un objet de 2 cm est placé à 15 cm devant une lentille convergente de distance focale 10 cm. La taille de son image est :",
+      "o": [
+        "1 cm",
+        "2 cm",
+        "3 cm",
+        "4 cm"
+      ],
+      "r": 3,
+      "x": "La relation de conjugaison donne 1/OA' = 1/10 – 1/15 = 1/30, d'où OA' = 30 cm et un grandissement γ = 30 / (– 15) = – 2 : l'image mesure 4 cm. Elle est réelle et renversée. Une image de même taille que l'objet n'est obtenue que lorsque l'objet est placé à deux fois la distance focale, ici à 20 cm.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'angle limite de réfraction pour la lumière passant du verre (n = 1,5) à l'air est d'environ :",
+      "o": [
+        "30,0°",
+        "33,7°",
+        "38,5°",
+        "41,8°"
+      ],
+      "r": 3,
+      "x": "L'angle limite vérifie sin λ = n2 / n1 = 1 / 1,5 ≈ 0,667, d'où λ ≈ 41,8°. Au-delà de cet angle d'incidence, la lumière ne sort plus du verre et subit une réflexion totale. Pour l'eau, d'indice 1,33, l'angle limite vaut environ 49°, ce qui explique l'éclat particulier des bulles d'air vues sous l'eau.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un laser de puissance 1 mW émet une lumière dont chaque photon transporte 3 × 10⁻¹⁹ J. Le nombre de photons émis par seconde est d'environ :",
+      "o": [
+        "3 × 10⁻¹⁹",
+        "3,3 × 10⁹",
+        "3,3 × 10¹²",
+        "3,3 × 10¹⁵"
+      ],
+      "r": 3,
+      "x": "N = P / E = 10⁻³ / 3 × 10⁻¹⁹ ≈ 3,3 × 10¹⁵ photons par seconde. La valeur 3,3 × 10¹² résulte de l'emploi de 1 µW au lieu de 1 mW. Ce nombre gigantesque explique que l'aspect corpusculaire de la lumière passe inaperçu à l'échelle humaine, où elle se comporte comme une onde continue.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La célérité d'une onde mécanique progressive dépend principalement :",
+      "o": [
+        "de l'amplitude de la source",
+        "de la durée de l'émission",
+        "de l'énergie fournie par la source",
+        "des propriétés du milieu de propagation"
+      ],
+      "r": 3,
+      "x": "La célérité d'une onde mécanique est fixée par le milieu : tension et masse linéique pour une corde, température et nature du gaz pour le son. Elle ne dépend ni de l'amplitude ni de la durée de la perturbation. C'est pourquoi le son se propage plus vite dans l'eau que dans l'air, et plus vite dans l'air chaud que dans l'air froid.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Sur une corde parcourue par des ondes stationnaires de longueur d'onde 60 cm, la distance entre deux nœuds consécutifs est :",
+      "o": [
+        "7,5 cm",
+        "15 cm",
+        "20 cm",
+        "30 cm"
+      ],
+      "r": 3,
+      "x": "Deux nœuds de vibration consécutifs sont séparés d'une demi-longueur d'onde, soit 60 / 2 = 30 cm. La valeur 15 cm, égale à λ/4, correspond à la distance entre un nœud et le ventre voisin. Dans l'expérience de la corde de Melde, on observe ainsi des fuseaux de 30 cm de longueur entre des points totalement immobiles.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le photon est une particule :",
+      "o": [
+        "de masse nulle, se déplaçant à la vitesse de la lumière",
+        "chargée négativement et très légère",
+        "de masse égale à celle de l'électron",
+        "présente uniquement dans les noyaux atomiques"
+      ],
+      "r": 0,
+      "x": "Le photon, quantum d'énergie lumineuse, a une masse nulle, ne porte aucune charge et se déplace à la vitesse de la lumière ; il transporte l'énergie E = h × ν. Il ne doit pas être confondu avec l'électron, particule chargée et massive. La lumière présente ainsi une double nature, à la fois ondulatoire et corpusculaire.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le mirage observé au-dessus d'une route goudronnée très chaude s'explique par :",
+      "o": [
+        "la courbure de la lumière dans un air d'indice variable",
+        "la réflexion de la lumière sur une flaque d'eau réelle",
+        "la diffraction de la lumière sur les grains de goudron",
+        "l'émission de lumière visible par la route surchauffée"
+      ],
+      "r": 0,
+      "x": "Au-dessus d'une route chaude, l'air a un indice de réfraction qui varie avec la température : la lumière du ciel s'y courbe progressivement et remonte vers l'œil. L'observateur croit voir une flaque d'eau, qui n'est en réalité qu'une image du ciel. Ce phénomène de réfraction est fréquent dans les régions sahéliennes pendant la saison sèche.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La distance focale d'une lentille de vergence – 2 δ est :",
+      "o": [
+        "– 5 m",
+        "– 2 m",
+        "– 0,5 m",
+        "0,5 m"
+      ],
+      "r": 2,
+      "x": "La distance focale est l'inverse de la vergence : f = 1 / C = 1 / (– 2) = – 0,5 m, soit – 50 cm. Le signe négatif indique une lentille divergente, et la valeur positive de 0,5 m correspondrait à une lentille convergente de + 2 δ. Ce type de verre peut corriger une myopie légère.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le spectre de la lumière émise par le filament d'une lampe à incandescence est :",
+      "o": [
+        "un spectre de raies d'émission",
+        "un spectre d'absorption",
+        "un spectre continu",
+        "un spectre limité au rouge"
+      ],
+      "r": 2,
+      "x": "Un corps chaud, comme le filament d'une lampe à incandescence, émet un spectre continu, qui s'enrichit en radiations bleues et violettes lorsque la température augmente. Les spectres de raies d'émission sont produits par des gaz chauds sous faible pression, comme dans les lampes à vapeur de sodium. Chaque élément chimique possède ses raies caractéristiques.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Lors du dosage d'un acide faible par une base forte, le pH à la demi-équivalence est égal :",
+      "o": [
+        "à 7 exactement",
+        "au pKa du couple acide/base",
+        "au pH obtenu à l'équivalence",
+        "à la moitié du pKa"
+      ],
+      "r": 1,
+      "x": "À la demi-équivalence, la moitié de l'acide a réagi : [AH] = [A⁻], et la relation pH = pKa + log([A⁻]/[AH]) donne pH = pKa. Cette méthode permet de déterminer expérimentalement le pKa d'un couple, environ 4,8 pour l'acide éthanoïque. Au voisinage de ce point, le pH varie peu : la solution joue le rôle de tampon.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Lors du dosage d'un acide faible par une base forte, le pH à l'équivalence est :",
+      "o": [
+        "inférieur à 7",
+        "supérieur à 7",
+        "toujours égal à 7",
+        "égal à 14"
+      ],
+      "r": 1,
+      "x": "À l'équivalence, la solution contient la base conjuguée de l'acide faible, par exemple l'ion éthanoate, qui confère au milieu un caractère basique : le pH est supérieur à 7. Il n'est égal à 7 que pour un dosage acide fort-base forte. On choisit donc un indicateur dont la zone de virage est située en milieu basique, comme la phénolphtaléine.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La structure électronique de l'atome de magnésium (Z = 12) est :",
+      "o": [
+        "(K)² (L)⁸ (M)²",
+        "(K)² (L)¹⁰",
+        "(K)² (L)⁶ (M)⁴",
+        "(K)⁸ (L)⁴"
+      ],
+      "r": 0,
+      "x": "Les électrons remplissent d'abord la couche K, qui en accepte au maximum 2, puis la couche L, qui en accepte 8 : le magnésium s'écrit (K)² (L)⁸ (M)². La structure (K)² (L)¹⁰ est impossible, car la couche L ne peut contenir plus de 8 électrons. Avec 2 électrons externes, le magnésium tend à former l'ion Mg²⁺.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La constante d'acidité du couple acide éthanoïque/ion éthanoate vaut Ka = 1,6 × 10⁻⁵. Son pKa est d'environ :",
+      "o": [
+        "– 4,8",
+        "0,2",
+        "1,6",
+        "4,8"
+      ],
+      "r": 3,
+      "x": "pKa = – log Ka = – log(1,6 × 10⁻⁵) ≈ 4,8. La valeur – 4,8 résulte de l'oubli du signe moins dans la définition. Plus le pKa est faible, plus l'acide est fort : l'acide méthanoïque, de pKa 3,8, est ainsi plus fort que l'acide éthanoïque, qui l'est lui-même davantage que l'ion ammonium, de pKa 9,2.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le nombre de neutrons dans le noyau de l'atome de carbone 14 (Z = 6) est :",
+      "o": [
+        "6",
+        "8",
+        "14",
+        "20"
+      ],
+      "r": 1,
+      "x": "Le nombre de neutrons vaut N = A – Z = 14 – 6 = 8. Le carbone 14 est un isotope du carbone 12, qui ne possède que 6 neutrons : les isotopes ont le même nombre de protons mais un nombre de neutrons différent. Le carbone 14, radioactif, sert à dater des restes organiques anciens.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le pH d'une solution d'acide éthanoïque (pKa = 4,8) de concentration 0,1 mol/L est d'environ :",
+      "o": [
+        "1",
+        "2,4",
+        "2,9",
+        "4,8"
+      ],
+      "r": 2,
+      "x": "Pour un acide faible peu dissocié, pH = ½ × (pKa – log c) = ½ × (4,8 + 1) = 2,9. La valeur 1 serait le pH d'un acide fort de même concentration, totalement dissocié. Cette différence montre qu'à concentration égale, un acide faible libère beaucoup moins d'ions hydronium qu'un acide fort, comme l'acide chlorhydrique.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La quantité de matière contenue dans 88 g de dioxyde de carbone CO2 (C = 12 ; O = 16 g/mol) est :",
+      "o": [
+        "0,5 mol",
+        "1 mol",
+        "2 mol",
+        "4 mol"
+      ],
+      "r": 2,
+      "x": "M(CO2) = 12 + 2 × 16 = 44 g/mol, d'où n = m / M = 88 / 44 = 2 mol. La valeur de 0,5 mol résulte de l'inversion du rapport M / m. La quantité de matière, exprimée en moles, permet de compter les entités chimiques : une mole en contient environ 6,02 × 10²³, nombre appelé constante d'Avogadro.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le volume occupé par 0,5 mol de gaz, dans des conditions où le volume molaire vaut 24 L/mol, est :",
+      "o": [
+        "2 L",
+        "12 L",
+        "24 L",
+        "48 L"
+      ],
+      "r": 1,
+      "x": "V = n × Vm = 0,5 × 24 = 12 L. La valeur 48 L résulte de la division Vm / n au lieu du produit. Dans des conditions données de température et de pression, une mole de n'importe quel gaz occupe le même volume, environ 22,4 L à 0 °C et 24 L à 20 °C sous la pression atmosphérique normale.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "On dissout 0,2 mol de sel dans de l'eau pour obtenir 500 mL de solution. La concentration molaire est :",
+      "o": [
+        "0,1 mol/L",
+        "0,4 mol/L",
+        "2,5 mol/L",
+        "100 mol/L"
+      ],
+      "r": 1,
+      "x": "c = n / V = 0,2 / 0,5 = 0,4 mol/L, le volume de 500 mL valant 0,5 L. La valeur 0,1 mol/L résulte d'un produit n × V au lieu d'un quotient, et 2,5 mol/L de l'inversion du rapport. Le volume doit toujours être converti en litres avant le calcul d'une concentration molaire.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "On dissout 10 g de sucre dans de l'eau pour obtenir 250 mL de solution. La concentration massique est :",
+      "o": [
+        "2,5 g/L",
+        "25 g/L",
+        "40 g/L",
+        "2 500 g/L"
+      ],
+      "r": 2,
+      "x": "Cm = m / V = 10 / 0,25 = 40 g/L. La valeur 2 500 g/L provient d'un produit avec le volume en millilitres, et 2,5 g/L d'un produit avec le volume en litres. La concentration massique relie la masse de soluté au volume de solution, et non au volume du solvant utilisé.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Pour préparer 200 mL d'une solution à 0,1 mol/L à partir d'une solution mère à 1 mol/L, il faut prélever :",
+      "o": [
+        "2 mL",
+        "10 mL",
+        "20 mL",
+        "100 mL"
+      ],
+      "r": 2,
+      "x": "Lors d'une dilution, la quantité de soluté se conserve : C1 × V1 = C2 × V2, d'où V1 = 0,1 × 200 / 1 = 20 mL. On complète ensuite avec de l'eau distillée jusqu'au trait de jauge d'une fiole de 200 mL. La solution a été diluée dix fois, ce que traduit le rapport C1 / C2 = 10.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le 2-méthylpropan-2-ol, de formule (CH3)3C–OH, est un alcool :",
+      "o": [
+        "primaire",
+        "secondaire",
+        "tertiaire",
+        "aromatique"
+      ],
+      "r": 2,
+      "x": "Le carbone qui porte le groupe –OH est lié à trois autres atomes de carbone : l'alcool est tertiaire. Un alcool primaire, comme l'éthanol, a son carbone fonctionnel lié à un seul carbone, et un alcool secondaire à deux. Les alcools tertiaires ne subissent pas d'oxydation ménagée, contrairement aux alcools primaires et secondaires.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'indicateur coloré qui vire au rose en milieu basique est :",
+      "o": [
+        "la phénolphtaléine",
+        "le bleu de bromothymol",
+        "l'hélianthine",
+        "le papier pH"
+      ],
+      "r": 0,
+      "x": "La phénolphtaléine est incolore en milieu acide et neutre, et devient rose en milieu basique, au-delà d'un pH d'environ 8,2. Le bleu de bromothymol est jaune en milieu acide, vert en milieu neutre et bleu en milieu basique. L'hélianthine passe du rouge en milieu acide au jaune en milieu basique.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'oxydation ménagée du propan-2-ol par le dichromate de potassium en milieu acide conduit à :",
+      "o": [
+        "le propanal",
+        "la propanone",
+        "l'acide propanoïque",
+        "le propène"
+      ],
+      "r": 1,
+      "x": "Le propan-2-ol est un alcool secondaire : son oxydation ménagée donne une cétone, la propanone, appelée aussi acétone. Le propanal et l'acide propanoïque proviennent de l'oxydation du propan-1-ol, alcool primaire. Le propène s'obtiendrait par déshydratation de l'alcool, réaction qui n'est pas une oxydation mais une élimination d'eau en présence d'acide sulfurique.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le volume de soude à 0,1 mol/L nécessaire pour neutraliser 20 mL d'acide chlorhydrique à 0,05 mol/L est :",
+      "o": [
+        "5 mL",
+        "10 mL",
+        "20 mL",
+        "40 mL"
+      ],
+      "r": 1,
+      "x": "À l'équivalence, les quantités d'acide et de base sont égales : Ca × Va = Cb × Vb, d'où Vb = 0,05 × 20 / 0,1 = 10 mL. La valeur 40 mL résulte de l'inversion des concentrations dans le calcul. On repère l'équivalence par le virage d'un indicateur coloré ou par un saut brusque du pH.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'équation équilibrée de la combustion complète du méthane est :",
+      "o": [
+        "CH4 + O2 → CO2 + H2O",
+        "CH4 + 2 O2 → CO2 + 2 H2O",
+        "CH4 + 3 O2 → CO2 + 2 H2O",
+        "2 CH4 + O2 → 2 CO2 + H2O"
+      ],
+      "r": 1,
+      "x": "L'équation CH4 + 2 O2 → CO2 + 2 H2O conserve tous les atomes : 1 carbone, 4 hydrogènes et 4 oxygènes de chaque côté. L'équation sans coefficients n'est équilibrée ni en hydrogène ni en oxygène. Le méthane, principal constituant du biogaz produit à partir des déjections animales, brûle selon cette réaction en dégageant de la chaleur.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La combustion incomplète du charbon de bois dans une pièce fermée est dangereuse, car elle produit :",
+      "o": [
+        "du dioxygène",
+        "du diazote",
+        "de la vapeur d'eau",
+        "du monoxyde de carbone"
+      ],
+      "r": 3,
+      "x": "Un manque de dioxygène provoque une combustion incomplète qui produit du monoxyde de carbone CO, gaz incolore, inodore et mortel. Il se fixe sur l'hémoglobine du sang à la place du dioxygène et provoque des intoxications parfois fatales. Il ne faut donc jamais utiliser un réchaud à charbon dans une chambre fermée.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un composé organique donne un précipité jaune avec la 2,4-DNPH mais ne réagit pas avec la liqueur de Fehling. Il s'agit :",
+      "o": [
+        "d'un aldéhyde",
+        "d'un alcool primaire",
+        "d'une cétone",
+        "d'un acide carboxylique"
+      ],
+      "r": 2,
+      "x": "La 2,4-DNPH révèle le groupe carbonyle, présent à la fois dans les aldéhydes et les cétones. La liqueur de Fehling, qui donne un précipité rouge brique d'oxyde de cuivre I, ne réagit qu'avec les aldéhydes, réducteurs. Un composé positif au premier test et négatif au second est donc une cétone.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "On mélange une mole d'acide éthanoïque et une mole d'éthanol. À l'équilibre, le rendement de l'estérification est d'environ :",
+      "o": [
+        "5 %",
+        "33 %",
+        "67 %",
+        "100 %"
+      ],
+      "r": 2,
+      "x": "Pour un mélange équimolaire d'acide carboxylique et d'alcool primaire, l'estérification est limitée et le rendement plafonne vers 67 %, soit deux tiers. Il est d'environ 60 % avec un alcool secondaire et de 5 % avec un alcool tertiaire. On l'améliore en utilisant un réactif en excès ou en éliminant l'eau formée.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'ester de formule CH3–COO–CH2–CH3 se nomme :",
+      "o": [
+        "éthanoate d'éthyle",
+        "éthanoate de méthyle",
+        "méthanoate d'éthyle",
+        "propanoate de méthyle"
+      ],
+      "r": 0,
+      "x": "Le nom d'un ester combine la partie issue de l'acide, ici l'éthanoate CH3COO–, et le groupe issu de l'alcool, ici l'éthyle –CH2CH3. Le propanoate de méthyle, CH3CH2COOCH3, est un isomère de même formule brute C4H8O2. L'éthanoate d'éthyle, à l'odeur fruitée, sert de solvant dans les colles et certains dissolvants.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Pour une réaction chimique donnée, une élévation de la température :",
+      "o": [
+        "diminue la vitesse de réaction",
+        "augmente la vitesse de réaction",
+        "modifie toujours l'état final d'une réaction totale",
+        "annule l'action du catalyseur"
+      ],
+      "r": 1,
+      "x": "La température est un facteur cinétique : en augmentant l'agitation des molécules, elle multiplie les chocs efficaces et accélère la réaction. Pour stopper une réaction lors d'un suivi cinétique, on pratique au contraire une trempe en refroidissant brutalement le milieu. Le réfrigérateur ralentit de même les réactions de dégradation des aliments.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'équation-bilan de la combustion du fer dans le dioxygène, qui produit l'oxyde magnétique, est :",
+      "o": [
+        "3 Fe + 2 O2 → Fe3O4",
+        "Fe + O2 → FeO2",
+        "2 Fe + O2 → Fe2O",
+        "4 Fe + O2 → 2 Fe2O"
+      ],
+      "r": 0,
+      "x": "La combustion vive du fer dans le dioxygène produit l'oxyde magnétique Fe3O4, selon l'équation équilibrée 3 Fe + 2 O2 → Fe3O4. Les formules FeO2 et Fe2O ne correspondent à aucun oxyde de fer usuel. Cette expérience se réalise en plongeant de la laine de fer incandescente dans un flacon de dioxygène, où elle brûle en projetant des étincelles.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le gaz qui se dégage à la cathode lors de l'électrolyse de l'eau est :",
+      "o": [
+        "le dioxygène",
+        "le dihydrogène",
+        "le diazote",
+        "le dichlore"
+      ],
+      "r": 1,
+      "x": "Lors de l'électrolyse de l'eau, du dihydrogène se dégage à la cathode, reliée à la borne négative, et du dioxygène à l'anode. Le volume de dihydrogène recueilli est le double de celui du dioxygène, conformément à la formule H2O. Cette réaction décompose l'eau grâce à l'énergie électrique et constitue une voie de production d'hydrogène.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un alcane comportant 4 atomes de carbone a pour formule brute :",
+      "o": [
+        "C4H6",
+        "C4H8",
+        "C4H10",
+        "C4H12"
+      ],
+      "r": 2,
+      "x": "Les alcanes ont pour formule générale CnH2n+2 : pour n = 4, on obtient C4H10, le butane, utilisé dans les bouteilles de gaz domestique. C4H8 correspond à un alcène, qui possède une double liaison. La formule C4H12 est impossible, car le carbone ne peut former que quatre liaisons ; le butane est donc l'alcane qui suit le propane C3H8 dans la série.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La masse molaire du butane C4H10 (C = 12 ; H = 1 g/mol) est :",
+      "o": [
+        "48 g/mol",
+        "52 g/mol",
+        "56 g/mol",
+        "58 g/mol"
+      ],
+      "r": 3,
+      "x": "M(C4H10) = 4 × 12 + 10 × 1 = 58 g/mol. La valeur 48 g/mol correspond aux seuls atomes de carbone, et 56 g/mol à la masse molaire du butène C4H8. Une charge de 6 kg de butane contient ainsi environ 6 000 / 58 ≈ 103 moles de ce gaz.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "À 25 °C, le pH d'une solution d'hydroxyde de sodium de concentration 10⁻³ mol/L est :",
+      "o": [
+        "3",
         "7",
-        "10"
+        "10",
+        "11"
       ],
-      "r": 1,
-      "x": "NaOH fort → [OH⁻]=10⁻² mol/L → pOH=2 → pH=14-pOH=12. Formule : pH=14+log([OH⁻]) pour bases fortes. Piège : utiliser directement pH=-log([OH⁻])=2 (confusion [H₃O⁺] et [OH⁻])."
+      "r": 3,
+      "x": "La soude est une base forte : [OH⁻] = 10⁻³ mol/L, d'où [H3O⁺] = 10⁻¹⁴ / 10⁻³ = 10⁻¹¹ mol/L et pH = 11. La valeur 3 correspond à une solution acide de même concentration. Le produit ionique de l'eau, Ke = 10⁻¹⁴ à 25 °C, relie toujours les concentrations des ions hydronium et hydroxyde.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Quel est le principe de Le Chatelier pour les équilibres chimiques ?",
+      "q": "Un catalyseur est une espèce chimique qui :",
       "o": [
-        "Un système à l'équilibre déplacé vers les produits si T augmente toujours",
-        "Tout équilibre perturbé évolue dans le sens qui tend à réduire la perturbation",
-        "La constante d'équilibre varie avec la pression",
-        "Un équilibre ne peut pas être perturbé par un catalyseur"
+        "accélère une réaction sans être consommée",
+        "augmente le rendement final d'un équilibre",
+        "est consommée comme un réactif",
+        "déplace l'équilibre chimique vers les produits"
       ],
-      "r": 1,
-      "x": "Principe de Le Chatelier (ou modération) : si un équilibre subit une perturbation (T, P, concentration), il se déplace pour contrer cette perturbation. Ex : N₂+3H₂⇌2NH₃ (ΔH<0) : si T↑, équilibre se déplace vers les réactifs."
+      "r": 0,
+      "x": "Un catalyseur accélère une réaction et se retrouve intact à la fin ; il n'apparaît pas dans l'équation-bilan. Il ne modifie ni l'état final ni le rendement d'un équilibre, qu'il permet seulement d'atteindre plus vite. Les enzymes sont des catalyseurs biologiques, comme celles des levures qui assurent la fermentation du dolo.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Un réfrigérateur pompe 200 J de chaleur de la source froide et rejette 280 J à la source chaude. Quel est son coefficient de performance (COP) ?",
+      "q": "Dans la classification périodique moderne, les éléments sont rangés par ordre croissant :",
       "o": [
-        "1,4",
-        "2,5",
-        "0,71",
-        "3,5"
+        "de leur numéro atomique",
+        "de leur masse volumique",
+        "de leur nombre de neutrons",
+        "de leur date de découverte"
       ],
-      "r": 1,
-      "x": "COP_réfrigérateur=Q_froide/W=Q_froide/(Q_chaude-Q_froide)=200/(280-200)=200/80=2,5. W=travail fourni=80 J. Piège : utiliser COP=Q_chaude/W=280/80=3,5 (c'est le COP d'une pompe à chaleur)."
+      "r": 0,
+      "x": "La classification périodique moderne range les éléments par numéro atomique Z croissant, en lignes appelées périodes. Les éléments d'une même colonne, ou famille, ont le même nombre d'électrons sur leur couche externe et des propriétés chimiques voisines. Dmitri Mendeleïev en proposa la première version en 1869, en classant les éléments par masse atomique.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Lequel de ces matériaux est un semi-conducteur ?",
+      "q": "Les gaz nobles, comme l'hélium et le néon, sont chimiquement :",
       "o": [
-        "Cuivre",
-        "PVC",
-        "Silicium",
-        "Caoutchouc"
+        "très réactifs",
+        "inertes",
+        "radioactifs",
+        "toxiques"
+      ],
+      "r": 1,
+      "x": "Les gaz nobles, situés dans la dernière colonne de la classification, possèdent une couche externe saturée qui leur confère une grande stabilité chimique : ils sont pratiquement inertes. Les autres atomes tendent à acquérir cette structure en formant des ions ou des liaisons. Le néon sert dans les enseignes lumineuses et l'hélium dans les ballons.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La liaison covalente entre deux atomes résulte :",
+      "o": [
+        "de la mise en commun d'électrons",
+        "du transfert d'un proton",
+        "de l'attraction de deux noyaux",
+        "de l'échange de neutrons"
+      ],
+      "r": 0,
+      "x": "Une liaison covalente se forme par la mise en commun d'une paire d'électrons entre deux atomes, comme dans la molécule de dihydrogène H2. Le transfert d'électrons d'un atome à un autre conduit au contraire à des ions liés par une liaison ionique. Dans la molécule d'eau, l'atome d'oxygène établit deux liaisons covalentes avec deux atomes d'hydrogène.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La quantité de dioxygène nécessaire pour brûler complètement 2 mol de méthane est :",
+      "o": [
+        "1 mol",
+        "2 mol",
+        "3 mol",
+        "4 mol"
+      ],
+      "r": 3,
+      "x": "D'après l'équation CH4 + 2 O2 → CO2 + 2 H2O, une mole de méthane réagit avec deux moles de dioxygène : il en faut donc 2 × 2 = 4 mol. La valeur 2 mol ignore le coefficient stœchiométrique du dioxygène. Cette combustion produit aussi 2 mol de dioxyde de carbone et 4 mol d'eau.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La masse d'eau produite par la combustion complète de 16 g de méthane (C = 12 ; H = 1 ; O = 16 g/mol) est :",
+      "o": [
+        "9 g",
+        "16 g",
+        "18 g",
+        "36 g"
+      ],
+      "r": 3,
+      "x": "16 g de méthane représentent 16 / 16 = 1 mol, qui produit 2 mol d'eau, soit 2 × 18 = 36 g. La valeur 18 g ne tient pas compte du coefficient 2 de l'eau dans l'équation. La loi de Lavoisier se vérifie : 16 g de méthane et 64 g de dioxygène donnent 44 g de CO2 et 36 g d'eau, soit 80 g de chaque côté.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le temps de demi-réaction d'une transformation chimique est la durée au bout de laquelle :",
+      "o": [
+        "l'avancement atteint la moitié de sa valeur finale",
+        "la réaction est entièrement terminée",
+        "la vitesse de réaction est maximale",
+        "la moitié du catalyseur a été consommée"
+      ],
+      "r": 0,
+      "x": "Le temps de demi-réaction t½ est la durée nécessaire pour que l'avancement atteigne la moitié de sa valeur finale ; il se lit sur la courbe x = f(t). Il permet de comparer la rapidité de deux réactions. La vitesse de réaction, égale à la pente de la tangente à cette courbe, est au contraire maximale au début et diminue avec le temps.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un métal attaqué par l'acide chlorhydrique dilué avec dégagement de dihydrogène est :",
+      "o": [
+        "l'or",
+        "le cuivre",
+        "l'argent",
+        "le zinc"
+      ],
+      "r": 3,
+      "x": "Le zinc est attaqué par l'acide chlorhydrique avec dégagement de dihydrogène et formation d'ions zinc Zn²⁺. L'or, le cuivre et l'argent ne sont pas attaqués par cet acide dilué : ce sont des métaux peu réducteurs. Le fer et l'aluminium réagissent aussi, ce qui interdit de conserver des solutions acides dans des récipients faits de ces métaux.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Dans la réaction Zn + Cu²⁺ → Zn²⁺ + Cu, le zinc subit :",
+      "o": [
+        "une réduction",
+        "une neutralisation",
+        "une oxydation",
+        "une hydrolyse"
       ],
       "r": 2,
-      "x": "Semi-conducteurs : Si, Ge, GaAs (conductivité intermédiaire, fortement dépendante de T et du dopage). Cuivre = conducteur (ρ=1,7×10⁻⁸ Ω·m). PVC et caoutchouc = isolants. Le silicium est la base des circuits intégrés et cellules photovoltaïques."
+      "x": "Le zinc perd deux électrons pour devenir l'ion Zn²⁺ : il subit une oxydation et joue le rôle de réducteur. Les ions cuivre II gagnent ces électrons et sont réduits en cuivre métallique. Une oxydoréduction est un transfert d'électrons du réducteur vers l'oxydant, l'oxydation et la réduction se produisant toujours simultanément.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "La force gravitationnelle entre la Terre (M=6×10²⁴ kg) et la Lune (m=7,4×10²² kg) séparées de 3,8×10⁸ m est : (G=6,67×10⁻¹¹)",
+      "q": "L'ion responsable de la couleur bleue d'une solution de sulfate de cuivre est :",
       "o": [
-        "2,05×10²⁰ N",
-        "2,05×10³⁰ N",
-        "1,97×10²⁰ N",
-        "9,8×10²² N"
-      ],
-      "r": 0,
-      "x": "F=GM₁M₂/r²=6,67×10⁻¹¹×6×10²⁴×7,4×10²²/(3,8×10⁸)²=2,96×10³⁷/1,444×10¹⁷≈2,05×10²⁰ N. Piège : erreur d'exposant dans r² (oublier le carré de 10⁸)."
-    },
-    {
-      "q": "Quelle est la composition volumique approximative de l'air sec ?",
-      "o": [
-        "50% N₂, 48% O₂, 2% autres",
-        "78% N₂, 21% O₂, 1% autres",
-        "90% N₂, 10% O₂",
-        "60% N₂, 39% O₂, 1% autres"
+        "SO4²⁻",
+        "Cu²⁺",
+        "Fe³⁺",
+        "Na⁺"
       ],
       "r": 1,
-      "x": "Air sec : ≈78% N₂, ≈21% O₂, ≈0,9% Ar, ≈0,04% CO₂, traces d'autres gaz. L'azote est le composant majoritaire (inerte biologiquement à l'état moléculaire). L'O₂ est indispensable à la respiration et à la combustion."
+      "x": "La couleur bleue de la solution de sulfate de cuivre est due aux ions cuivre II, Cu²⁺. Les ions sulfate SO4²⁻ et sodium Na⁺ sont incolores, tandis que les ions fer III donnent une teinte orangée. Avec la soude, les ions Cu²⁺ forment un précipité bleu d'hydroxyde de cuivre, qui permet de les identifier.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "En mécanique des fluides, la viscosité dynamique μ d'un fluide :",
+      "q": "Le test à la soude des ions fer II donne un précipité de couleur :",
       "o": [
-        "Augmente avec la température pour les liquides",
-        "Diminue avec la température pour les liquides",
-        "Est indépendante de la température",
-        "Augmente avec la température pour tous les fluides"
+        "blanche",
+        "bleue",
+        "rouille",
+        "verte"
       ],
-      "r": 1,
-      "x": "Pour les liquides, μ diminue avec T (le miel chaud coule mieux). Pour les gaz, μ augmente avec T (agitation moléculaire accrue). L'eau de forage au Sahel est moins visqueuse en saison chaude → pompage plus facile."
+      "r": 3,
+      "x": "En présence de soude, les ions fer II forment un précipité vert d'hydroxyde de fer II, alors que les ions fer III donnent un précipité de couleur rouille. Le précipité bleu caractérise les ions cuivre II, et le précipité blanc les ions zinc ou aluminium. Ces tests permettent d'identifier les ions métalliques présents dans une solution.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
     },
     {
-      "q": "Qu'est-ce que l'isomère de position ?",
+      "q": "Le nitrate d'argent permet d'identifier les ions chlorure, car il forme avec eux un précipité :",
       "o": [
-        "Des molécules de même formule brute mais de formule développée différente par position d'un substituant",
-        "Des molécules de formule brute différente",
-        "Des molécules de même formule développée mais de masse différente",
-        "Des stéréoisomères optiquement actifs"
+        "blanc qui noircit à la lumière",
+        "bleu qui se dissout dans l'eau",
+        "vert qui rougit à l'air libre",
+        "rouge qui jaunit à la chaleur"
       ],
       "r": 0,
-      "x": "Isomères de position : même formule brute, même squelette, même groupe fonctionnel mais positionné différemment. Ex : propan-1-ol (OH sur C1) et propan-2-ol (OH sur C2). Distinct de l'isomère de chaîne (squelette différent) et de fonction (groupes différents)."
+      "x": "Les ions argent Ag⁺ forment avec les ions chlorure Cl⁻ un précipité blanc de chlorure d'argent, qui noircit à la lumière. Ce test permet par exemple de mettre en évidence le chlorure présent dans l'eau de mer ou dans l'eau du robinet. La sensibilité des sels d'argent à la lumière était exploitée dans les anciennes pellicules photographiques.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La formule de l'éthanol, alcool présent dans les boissons fermentées, est :",
+      "o": [
+        "CH3OH",
+        "C2H5OH",
+        "C3H7OH",
+        "C2H6"
+      ],
+      "r": 1,
+      "x": "L'éthanol a pour formule C2H5OH : il comporte deux atomes de carbone et un groupe hydroxyle –OH caractéristique des alcools. CH3OH est le méthanol, un alcool très toxique, et C2H6 l'éthane, un alcane sans groupe –OH. L'éthanol est produit par fermentation des sucres, comme dans la fabrication du dolo à partir du sorgho.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La fermentation alcoolique du glucose produit de l'éthanol et :",
+      "o": [
+        "du dioxyde de carbone",
+        "du dioxygène",
+        "du méthane",
+        "du dihydrogène"
+      ],
+      "r": 0,
+      "x": "Sous l'action des levures, le glucose se transforme en éthanol et en dioxyde de carbone, selon l'équation C6H12O6 → 2 C2H5OH + 2 CO2. C'est ce gaz qui forme les bulles dans les boissons fermentées et qui fait lever la pâte à pain. Cette réaction se déroule en l'absence de dioxygène.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La glycine, de formule H2N–CH2–COOH, possède les groupes fonctionnels :",
+      "o": [
+        "alcool et cétone",
+        "amide et ester",
+        "aldéhyde et amine",
+        "amine et acide carboxylique"
+      ],
+      "r": 3,
+      "x": "La glycine est un acide α-aminé : elle porte un groupe amine –NH2 et un groupe carboxyle –COOH fixés sur le même carbone. C'est le seul acide α-aminé naturel dépourvu de carbone asymétrique, donc non chiral. Les acides α-aminés s'unissent par des liaisons peptidiques pour former les protéines.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La masse de sel nécessaire pour préparer 2 L d'une solution de chlorure de sodium à 0,5 mol/L (M = 58,5 g/mol) est :",
+      "o": [
+        "14,6 g",
+        "29,25 g",
+        "58,5 g",
+        "117 g"
+      ],
+      "r": 2,
+      "x": "La quantité de matière vaut n = c × V = 0,5 × 2 = 1 mol, d'où m = n × M = 1 × 58,5 = 58,5 g. La valeur 29,25 g ne tient pas compte du volume de 2 L, et 117 g résulte d'une concentration doublée par erreur. Il faut dissoudre ce sel dans une partie de l'eau, puis compléter jusqu'à 2 L.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La liaison peptidique qui unit deux acides α-aminés dans une protéine est un groupe :",
+      "o": [
+        "ester –COO–",
+        "éther –O–",
+        "amide –CO–NH–",
+        "amine –NH2"
+      ],
+      "r": 2,
+      "x": "La liaison peptidique est un groupe amide –CO–NH– formé par condensation du groupe carboxyle d'un acide α-aminé avec le groupe amine d'un autre, avec élimination d'une molécule d'eau. Avec deux acides α-aminés différents, on peut obtenir deux dipeptides distincts selon l'ordre d'enchaînement. Les protéines comportent des centaines de ces liaisons.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La polymérisation de l'éthylène produit :",
+      "o": [
+        "le polyéthylène",
+        "le polystyrène",
+        "le nylon",
+        "le PVC"
+      ],
+      "r": 0,
+      "x": "La polymérisation de l'éthylène C2H4, par addition de nombreuses molécules les unes aux autres, produit le polyéthylène, matière plastique des sachets et bidons. Très polluants, les sachets plastiques non biodégradables ont été interdits au Burkina Faso dès 2014, puis prohibés plus largement (y compris à usage unique) par la loi de décembre 2024.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "La constante d'Avogadro vaut environ :",
+      "o": [
+        "1,66 × 10⁻²⁴ mol⁻¹",
+        "6,02 × 10²² mol⁻¹",
+        "3,01 × 10²³ mol⁻¹",
+        "6,02 × 10²³ mol⁻¹"
+      ],
+      "r": 3,
+      "x": "La constante d'Avogadro vaut environ 6,02 × 10²³ mol⁻¹ : une mole contient ce nombre d'entités chimiques. Son inverse vaut environ 1,66 × 10⁻²⁴ mol. À titre de comparaison, une unité de masse atomique correspond à environ 1,66 × 10⁻²⁴ g. Une mole d'eau, soit environ 18 g, contient ainsi approximativement 6,02 × 10²³ molécules.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'équation équilibrée de la combustion complète du propane C3H8 est :",
+      "o": [
+        "C3H8 + 3 O2 → 3 CO2 + 4 H2O",
+        "C3H8 + 4 O2 → 3 CO2 + 4 H2O",
+        "C3H8 + 5 O2 → 3 CO2 + 4 H2O",
+        "C3H8 + 5 O2 → 3 CO2 + 8 H2O"
+      ],
+      "r": 2,
+      "x": "L'équation C3H8 + 5 O2 → 3 CO2 + 4 H2O compte 3 carbones, 8 hydrogènes et 10 oxygènes de chaque côté. Avec 4 O2, on n'aurait que 8 atomes d'oxygène dans les réactifs. On équilibre d'abord le carbone, puis l'hydrogène, et l'oxygène en dernier, car il figure dans les deux produits.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Une solution d'acide fort de pH égal à 3 est diluée dix fois. Son nouveau pH vaut :",
+      "o": [
+        "0,3",
+        "2",
+        "3,3",
+        "4"
+      ],
+      "r": 3,
+      "x": "Pour un acide fort, diluer dix fois divise la concentration en ions H3O⁺ par dix, ce qui augmente le pH d'une unité : il passe de 3 à 4. La valeur 2 correspondrait à une concentration multipliée par dix. La dilution rapproche toujours le pH d'une solution acide de 7, sans jamais le dépasser.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le minerai à partir duquel on extrait l'aluminium est :",
+      "o": [
+        "la bauxite",
+        "l'hématite",
+        "la galène",
+        "la blende"
+      ],
+      "r": 0,
+      "x": "L'aluminium est extrait de la bauxite, minerai riche en alumine Al2O3, par électrolyse. L'hématite est un minerai de fer, la galène un minerai de plomb et la blende un minerai de zinc. La production d'aluminium consomme beaucoup d'énergie électrique, d'où l'intérêt de recycler les canettes et les ustensiles usagés, ce qui ne demande qu'environ 5 % de l'énergie nécessaire à sa première production.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "L'or se rencontre souvent à l'état natif, en paillettes ou en pépites, parce qu'il :",
+      "o": [
+        "s'oxyde très facilement à l'air",
+        "réagit fortement avec l'eau",
+        "se dissout dans les acides dilués",
+        "est très peu réactif chimiquement"
+      ],
+      "r": 3,
+      "x": "L'or est un métal noble, très peu réactif : il ne s'oxyde pas à l'air et n'est pas attaqué par les acides dilués, ce qui explique qu'on le trouve à l'état natif. L'eau régale, mélange d'acides nitrique et chlorhydrique concentrés, parvient à le dissoudre. Son inaltérabilité en fait un métal précieux, utilisé en bijouterie et en électronique.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Le mercure employé sur certains sites d'orpaillage est dangereux, car il :",
+      "o": [
+        "est un métal léger et inflammable",
+        "se solidifie à température ambiante",
+        "fait exploser l'or à son contact",
+        "est toxique et pollue sols et eaux"
+      ],
+      "r": 3,
+      "x": "Le mercure, seul métal liquide à température ambiante, forme avec l'or un amalgame, mais ses vapeurs et ses rejets sont très toxiques pour l'homme et l'environnement. Il s'accumule dans les sols, l'eau et la chaîne alimentaire. Le Burkina Faso est partie à la Convention de Minamata sur le mercure, qui vise à en réduire l'usage, notamment dans l'orpaillage.",
+      "_batchId": "pc_bac/2026-11-24/SERIE1"
+    },
+    {
+      "q": "Un camion roulant à 72 km/h s'arrête en 5 s. Sa décélération moyenne vaut :",
+      "o": [
+        "2 m/s²",
+        "4 m/s²",
+        "14,4 m/s²",
+        "20 m/s²"
+      ],
+      "r": 1,
+      "x": "La vitesse initiale vaut 72 / 3,6 = 20 m/s, d'où a = Δv / Δt = 20 / 5 = 4 m/s² en valeur absolue. La valeur 14,4 m/s² provient de l'emploi de la vitesse en km/h sans conversion. Une décélération signifie que la vitesse diminue : l'accélération est alors de sens opposé au mouvement et s'écrit avec un signe négatif.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une pierre lâchée sans vitesse initiale tombe pendant 3 s (g = 10 m/s², frottements négligés). Sa vitesse est alors de :",
+      "o": [
+        "3,3 m/s",
+        "10 m/s",
+        "15 m/s",
+        "30 m/s"
+      ],
+      "r": 3,
+      "x": "En chute libre sans vitesse initiale, v = g × t = 10 × 3 = 30 m/s, soit 108 km/h. La valeur 15 m/s correspond à la vitesse moyenne sur la durée de la chute, et non à la vitesse finale. Pendant ces 3 s, la pierre a parcouru d = ½ × g × t² = ½ × 10 × 9 = 45 m.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La distance parcourue par un objet en chute libre pendant 2 s, sans vitesse initiale (g = 10 m/s²), est :",
+      "o": [
+        "20 m",
+        "40 m",
+        "100 m",
+        "200 m"
+      ],
+      "r": 0,
+      "x": "Pour une chute libre sans vitesse initiale, d = ½ × g × t² = ½ × 10 × 2² = 20 m. La valeur 40 m correspond à l'oubli du facteur ½ dans la formule. La distance parcourue croît comme le carré du temps : en 4 s, l'objet tomberait de 80 m, soit quatre fois plus qu'en 2 s.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un mobile a une vitesse initiale de 5 m/s et une accélération constante de 2 m/s². Sa vitesse au bout de 4 s est :",
+      "o": [
+        "8 m/s",
+        "10 m/s",
+        "13 m/s",
+        "21 m/s"
+      ],
+      "r": 2,
+      "x": "La loi des vitesses s'écrit v = v0 + a × t = 5 + 2 × 4 = 13 m/s. La valeur 8 m/s oublie la vitesse initiale, et 21 m/s résulte d'un calcul avec t² au lieu de t. Dans un mouvement uniformément accéléré, la vitesse augmente de la même quantité à chaque seconde, ici de 2 m/s.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La quantité de mouvement d'une moto de 150 kg roulant à 20 m/s vaut :",
+      "o": [
+        "7,5 kg·m/s",
+        "170 kg·m/s",
+        "3 000 kg·m/s",
+        "30 000 kg·m/s"
+      ],
+      "r": 2,
+      "x": "La quantité de mouvement vaut p = m × v = 150 × 20 = 3 000 kg·m/s. La valeur 30 000 correspond à l'énergie cinétique ½ × m × v², exprimée en joules, qu'il ne faut pas confondre avec la quantité de mouvement. Pour un système isolé, la quantité de mouvement totale se conserve, ce qui explique le recul d'un fusil lors du tir.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un solide de 4 kg descend à vitesse constante un plan incliné de 30° (g = 10 N/kg). La force de frottement qui s'exerce sur lui vaut :",
+      "o": [
+        "20 N",
+        "34,6 N",
+        "40 N",
+        "80 N"
+      ],
+      "r": 0,
+      "x": "À vitesse constante, les forces se compensent : la force de frottement équilibre la composante du poids parallèle au plan, f = m × g × sin α = 4 × 10 × 0,5 = 20 N. La valeur 34,6 N correspond à la composante perpendiculaire m × g × cos α, compensée par la réaction normale. Sans frottement, le solide accélérerait à 5 m/s².",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un solide de poids 200 N est posé sur un plan incliné à 30°. La composante du poids perpendiculaire au plan vaut environ :",
+      "o": [
+        "50 N",
+        "100 N",
+        "115 N",
+        "173 N"
+      ],
+      "r": 3,
+      "x": "La composante perpendiculaire au plan vaut P × cos α = 200 × cos 30° ≈ 200 × 0,866 ≈ 173 N. La valeur 100 N correspond à la composante parallèle au plan, P × sin α, qui tend à faire glisser le solide vers le bas. Plus l'inclinaison augmente, plus la composante parallèle grandit et plus il est difficile de retenir l'objet.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Les composantes du vecteur vitesse d'un mobile dans un repère plan sont vx = 3 m/s et vy = 4 m/s. La valeur de sa vitesse est :",
+      "o": [
+        "1 m/s",
+        "5 m/s",
+        "7 m/s",
+        "25 m/s"
+      ],
+      "r": 1,
+      "x": "La norme du vecteur vitesse vaut v = √(vx² + vy²) = √(9 + 16) = 5 m/s. La valeur 7 m/s résulte de la simple addition des composantes, et 25 de l'oubli de la racine carrée. Le vecteur vitesse est toujours tangent à la trajectoire et orienté dans le sens du mouvement.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une presse hydraulique a un petit piston de 10 cm² et un grand piston de 500 cm². Une force de 100 N sur le petit piston produit sur le grand une force de :",
+      "o": [
+        "2 N",
+        "50 N",
+        "500 N",
+        "5 000 N"
+      ],
+      "r": 3,
+      "x": "D'après le principe de Pascal, la pression se transmet intégralement : F2 = F1 × S2 / S1 = 100 × 500 / 10 = 5 000 N. La valeur 2 N résulte de l'inversion du rapport des surfaces. Ce principe est utilisé dans les crics hydrauliques des garages, qui permettent de soulever une voiture avec un effort modéré.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un gaz occupe 6 L sous 1 bar. À température constante, son volume sous 3 bars devient :",
+      "o": [
+        "0,5 L",
+        "2 L",
+        "9 L",
+        "18 L"
+      ],
+      "r": 1,
+      "x": "D'après la loi de Boyle-Mariotte, P × V reste constant à température constante : V2 = 1 × 6 / 3 = 2 L. La valeur 18 L résulte d'une multiplication au lieu d'une division. Quand on comprime un gaz, son volume diminue et sa pression augmente, comme on le ressent en bouchant avec le doigt la sortie d'une pompe à vélo.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une balle est lancée horizontalement à 15 m/s depuis une hauteur de 20 m (g = 10 m/s², frottements négligés). Sa vitesse en touchant le sol est :",
+      "o": [
+        "15 m/s",
+        "20 m/s",
+        "25 m/s",
+        "35 m/s"
+      ],
+      "r": 2,
+      "x": "La composante verticale à l'arrivée vaut vy = √(2gh) = 20 m/s, la composante horizontale restant de 15 m/s : v = √(15² + 20²) = 25 m/s. La valeur 35 m/s résulte de l'addition directe des composantes. On retrouve ce résultat par conservation de l'énergie, v² = v0² + 2gh = 225 + 400 = 625.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Sans frottements, la trajectoire d'un projectile lancé obliquement dans le champ de pesanteur uniforme est :",
+      "o": [
+        "une portion de parabole",
+        "une portion de droite",
+        "un arc de cercle",
+        "une portion d'hyperbole"
+      ],
+      "r": 0,
+      "x": "En éliminant le temps entre x(t) = v0 cos α × t et y(t) = – ½ g t² + v0 sin α × t, on obtient une équation de la forme y = a x² + b x : la trajectoire est une parabole. Elle n'est rectiligne que pour un lancer vertical. La résistance de l'air déforme cette parabole et réduit la portée réelle.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un objet flotte avec les trois quarts de son volume immergés dans l'eau. Sa masse volumique est :",
+      "o": [
+        "750 kg/m³",
+        "1 000 kg/m³",
+        "1 333 kg/m³",
+        "1 750 kg/m³"
+      ],
+      "r": 0,
+      "x": "À l'équilibre, le poids du corps égale la poussée d'Archimède : ρcorps × V = ρeau × ¾ V, d'où ρcorps = 0,75 × 1 000 = 750 kg/m³. La valeur 1 333 kg/m³ résulte de l'inversion du rapport. La fraction immergée d'un corps flottant est toujours égale au rapport de sa masse volumique à celle du liquide.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un athlète de 70 kg monte 10 m d'escaliers en 14 s (g = 10 N/kg). Sa puissance moyenne est :",
+      "o": [
+        "50 W",
+        "98 W",
+        "500 W",
+        "7 000 W"
+      ],
+      "r": 2,
+      "x": "Le travail vaut W = m × g × h = 70 × 10 × 10 = 7 000 J, d'où P = W / t = 7 000 / 14 = 500 W. La valeur 7 000 correspond au travail en joules et non à la puissance. Plus l'athlète monte vite, plus sa puissance est grande, alors que le travail fourni reste le même pour une hauteur donnée.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La vitesse d'un point situé à la périphérie d'une roue de rayon 0,3 m tournant à 10 tours par seconde est d'environ :",
+      "o": [
+        "3 m/s",
+        "18,8 m/s",
+        "30 m/s",
+        "60 m/s"
+      ],
+      "r": 1,
+      "x": "La vitesse vaut v = 2π × R × f = 2 × 3,14 × 0,3 × 10 ≈ 18,8 m/s, soit environ 68 km/h. La valeur 3 m/s oublie le facteur 2π, qui convertit les tours en longueur parcourue. À chaque tour, un point de la périphérie parcourt une distance égale au périmètre de la roue, soit 2πR.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un couple de forces appliqué à un volant est formé de deux forces de 15 N dont les droites d'action sont distantes de 0,4 m. Son moment vaut :",
+      "o": [
+        "3 N·m",
+        "3,75 N·m",
+        "4 N·m",
+        "6 N·m"
+      ],
+      "r": 3,
+      "x": "Le moment d'un couple vaut M = F × d = 15 × 0,4 = 6 N·m, d étant la distance entre les droites d'action des deux forces. La valeur 3 N·m ne prend en compte que l'une des deux forces, agissant à 0,2 m de l'axe. Un couple de forces fait tourner un objet sans le déplacer, comme lorsqu'on manœuvre un volant ou une clé en croix.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un corps de 5 kg est lancé verticalement vers le haut à 20 m/s (g = 10 N/kg, frottements négligés). La hauteur maximale atteinte est :",
+      "o": [
+        "2 m",
+        "20 m",
+        "40 m",
+        "100 m"
+      ],
+      "r": 1,
+      "x": "Toute l'énergie cinétique se transforme en énergie potentielle : ½ × m × v² = m × g × h, d'où h = v² / (2g) = 400 / 20 = 20 m. La valeur 40 m correspond à l'oubli du facteur 2 au dénominateur. Le résultat ne dépend pas de la masse du corps, qui se simplifie dans l'égalité des énergies.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une voiture de 1 000 kg roulant à 20 m/s freine jusqu'à l'arrêt sur une route horizontale. L'énergie dissipée sous forme de chaleur vaut :",
+      "o": [
+        "10 000 J",
+        "20 000 J",
+        "40 000 J",
+        "200 000 J"
+      ],
+      "r": 3,
+      "x": "Toute l'énergie cinétique est dissipée : Ec = ½ × m × v² = ½ × 1 000 × 20² = 200 000 J, soit 200 kJ. La valeur 10 000 J résulte de l'oubli du carré de la vitesse. Cette énergie est convertie en chaleur dans les freins, ce qui explique leur échauffement important lors des freinages répétés en descente.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La vitesse angulaire de rotation de la Terre sur elle-même est d'environ :",
+      "o": [
+        "7,3 × 10⁻⁵ rad/s",
+        "4,4 × 10⁻³ rad/s",
+        "0,26 rad/s",
+        "6,28 rad/s"
+      ],
+      "r": 0,
+      "x": "La Terre effectue un tour, soit 2π rad, en environ 86 160 s : ω = 2π / 86 160 ≈ 7,3 × 10⁻⁵ rad/s. La valeur 0,26 rad/s résulte de l'emploi de la durée en heures, et 4,4 × 10⁻³ rad/s de son emploi en minutes. Un point de l'équateur se déplace ainsi à environ 465 m/s.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Avec G = 6,67 × 10⁻¹¹ SI, une masse terrestre de 6 × 10²⁴ kg et un rayon de 6,4 × 10⁶ m, l'intensité de la pesanteur à la surface de la Terre vaut environ :",
+      "o": [
+        "0,98 N/kg",
+        "4,9 N/kg",
+        "9,8 N/kg",
+        "6,3 × 10⁷ N/kg"
+      ],
+      "r": 2,
+      "x": "g0 = G × M / R² = 6,67 × 10⁻¹¹ × 6 × 10²⁴ / (6,4 × 10⁶)² ≈ 9,8 N/kg. La valeur 6,3 × 10⁷ N/kg résulte d'une division par R au lieu de R². Cette relation montre que g dépend de la masse et du rayon de l'astre, d'où une pesanteur environ six fois plus faible sur la Lune.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un ballon de 0,5 kg, initialement au repos, est frappé avec une force moyenne de 100 N pendant 0,05 s. Il acquiert une vitesse de :",
+      "o": [
+        "2,5 m/s",
+        "5 m/s",
+        "10 m/s",
+        "50 m/s"
+      ],
+      "r": 2,
+      "x": "La variation de quantité de mouvement égale l'impulsion de la force : m × v = F × Δt = 100 × 0,05 = 5 kg·m/s, d'où v = 5 / 0,5 = 10 m/s. La valeur 5 correspond à la quantité de mouvement elle-même et non à la vitesse. Prolonger la durée du contact, comme en accompagnant le ballon, augmente la vitesse transmise.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'énergie mécanique d'un objet qui glisse avec frottements sur un plan :",
+      "o": [
+        "diminue au cours du mouvement",
+        "augmente au cours du mouvement",
+        "reste rigoureusement constante",
+        "devient immédiatement nulle"
+      ],
+      "r": 0,
+      "x": "Les frottements effectuent un travail résistant qui transforme progressivement l'énergie mécanique en énergie thermique : celle-ci diminue donc au cours du mouvement. L'énergie mécanique ne reste constante qu'en l'absence de frottements. L'énergie totale, elle, se conserve toujours : elle change seulement de forme, ce qu'exprime le principe de conservation de l'énergie.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un enfant pousse une charrette avec une force de 150 N sur 20 m en 1 min. La puissance moyenne développée est :",
+      "o": [
+        "2,5 W",
+        "7,5 W",
+        "25 W",
+        "50 W"
+      ],
+      "r": 3,
+      "x": "Le travail vaut W = F × d = 150 × 20 = 3 000 J, d'où P = W / t = 3 000 / 60 = 50 W. Utiliser la durée en minutes donnerait à tort 3 000 W. Cette puissance est faible comparée à celle d'un moteur, ce qui explique l'intérêt des animaux de trait et des engins motorisés pour les travaux agricoles.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un oscillateur élastique (k = 100 N/m ; m = 1 kg) oscille avec une amplitude de 5 cm. Sa vitesse maximale est :",
+      "o": [
+        "0,05 m/s",
+        "0,5 m/s",
+        "5 m/s",
+        "50 m/s"
+      ],
+      "r": 1,
+      "x": "La pulsation vaut ω0 = √(k / m) = 10 rad/s, d'où vmax = ω0 × Xm = 10 × 0,05 = 0,5 m/s. La valeur 5 m/s résulte de l'emploi de l'amplitude en centimètres. La vitesse est maximale au passage par la position d'équilibre, tandis que l'accélération y est nulle et devient maximale aux extrémités.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une balle est lancée horizontalement depuis une hauteur de 5 m (g = 10 m/s², frottements négligés). La durée de sa chute est :",
+      "o": [
+        "0,1 s",
+        "0,25 s",
+        "0,5 s",
+        "1 s"
+      ],
+      "r": 3,
+      "x": "Le mouvement vertical est une chute libre : h = ½ × g × t², d'où t = √(2h / g) = √(2 × 5 / 10) = 1 s. La valeur 0,5 s résulte du calcul h / g, sans racine ni facteur 2. Cette durée ne dépend pas de la vitesse horizontale : lancée ou simplement lâchée, la balle touche le sol au même instant.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'énergie potentielle élastique d'un ressort de raideur 200 N/m comprimé de 10 cm est :",
+      "o": [
+        "0,1 J",
+        "1 J",
+        "2 J",
+        "10 000 J"
+      ],
+      "r": 1,
+      "x": "L'énergie élastique vaut Ep = ½ × k × x² = ½ × 200 × 0,1² = 1 J, la compression de 10 cm valant 0,1 m. La valeur 2 J correspond à l'oubli du facteur ½, et 10 000 J à l'emploi de la compression en centimètres. Cette énergie emmagasinée est restituée lorsque le ressort se détend, comme dans un lance-pierre.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La pulsation propre d'un oscillateur formé d'un ressort de raideur 80 N/m et d'une masse de 0,2 kg est :",
+      "o": [
+        "0,05 rad/s",
+        "3,2 rad/s",
+        "20 rad/s",
+        "400 rad/s"
+      ],
+      "r": 2,
+      "x": "ω0 = √(k / m) = √(80 / 0,2) = √400 = 20 rad/s. La valeur 400 oublie la racine carrée, et 3,2 correspond à la fréquence propre f0 = ω0 / 2π, exprimée en hertz. La période propre vaut alors T0 = 2π / ω0 ≈ 0,31 s.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un cric soulève une voiture de 10 000 N de 0,2 m pendant que l'opérateur exerce une force de 100 N sur une distance totale de 25 m. Le rendement du cric est :",
+      "o": [
+        "80 %",
+        "90 %",
+        "125 %",
+        "200 %"
+      ],
+      "r": 0,
+      "x": "Le travail utile vaut 10 000 × 0,2 = 2 000 J et le travail fourni 100 × 25 = 2 500 J, d'où un rendement de 2 000 / 2 500 = 0,8, soit 80 %. La valeur 125 % résulte de l'inversion du rapport, impossible pour un rendement. La différence de 500 J est perdue sous forme de chaleur par les frottements internes du cric.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'équation différentielle du mouvement d'un oscillateur élastique horizontal non amorti s'écrit :",
+      "o": [
+        "ẍ + (k/m) x = 0",
+        "ẍ – (k/m) x = 0",
+        "ẋ + (k/m) x = 0",
+        "ẍ + (m/k) x = 0"
+      ],
+      "r": 0,
+      "x": "La relation fondamentale de la dynamique donne m × ẍ = – k × x, soit ẍ + (k/m) x = 0. Ses solutions sont sinusoïdales, x(t) = Xm cos(ω0 t + φ), avec ω0 = √(k/m). Un signe moins entre les deux termes conduirait à une solution exponentielle, sans oscillation.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La force d'attraction gravitationnelle entre deux corps :",
+      "o": [
+        "augmente avec la distance qui les sépare",
+        "ne dépend pas des masses en présence",
+        "diminue avec le carré de la distance",
+        "n'existe qu'à la surface de la Terre"
+      ],
+      "r": 2,
+      "x": "Selon la loi de la gravitation universelle, F = G × m × m' / d² : la force est proportionnelle aux masses et inversement proportionnelle au carré de la distance. Si la distance double, la force est divisée par quatre. C'est cette force qui maintient la Lune en orbite autour de la Terre et les planètes autour du Soleil.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un satellite en orbite circulaire autour de la Terre est principalement soumis :",
+      "o": [
+        "à aucune force",
+        "à l'attraction terrestre",
+        "à la poussée de ses moteurs",
+        "à la résistance de l'air"
+      ],
+      "r": 1,
+      "x": "Un satellite en orbite circulaire n'est soumis qu'à l'attraction gravitationnelle de la Terre, dirigée vers le centre de la planète. Cette force courbe sa trajectoire sans le faire tomber, grâce à sa grande vitesse tangentielle. Ses moteurs ne servent qu'à corriger l'orbite, et la résistance de l'air est quasi nulle à ces altitudes.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un objet de 2 kg tourne sur un cercle de rayon 0,5 m à la vitesse de 3 m/s. La force centripète nécessaire vaut :",
+      "o": [
+        "3 N",
+        "6 N",
+        "12 N",
+        "36 N"
+      ],
+      "r": 3,
+      "x": "La force centripète vaut F = m × v² / R = 2 × 3² / 0,5 = 36 N. La valeur 12 N résulte de l'oubli du carré de la vitesse. Cette force, dirigée vers le centre, est indispensable au mouvement circulaire : dans un virage, ce sont les frottements des pneus sur la route qui la fournissent au véhicule.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un ascenseur monte à vitesse constante. La tension du câble est alors :",
+      "o": [
+        "inférieure au poids de la cabine",
+        "égale au poids de la cabine",
+        "supérieure au poids de la cabine",
+        "nulle pendant toute la montée"
+      ],
+      "r": 1,
+      "x": "À vitesse constante, le mouvement est rectiligne uniforme et, d'après le principe de l'inertie, les forces se compensent : la tension égale le poids. La tension n'est supérieure au poids que pendant la phase de démarrage vers le haut, lorsque l'ascenseur accélère. Elle devient inférieure au poids lors du freinage en fin de montée.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une force de 40 N agit perpendiculairement sur une surface de 8 cm². La pression exercée vaut :",
+      "o": [
+        "5 Pa",
+        "320 Pa",
+        "5 000 Pa",
+        "50 000 Pa"
+      ],
+      "r": 3,
+      "x": "La surface vaut 8 cm² = 8 × 10⁻⁴ m², d'où p = F / S = 40 / 0,0008 = 50 000 Pa, soit 0,5 bar. La valeur 5 Pa résulte de l'emploi de la surface en cm² sans conversion. Il faut retenir que 1 cm² = 10⁻⁴ m², car un mètre carré contient 100 × 100 = 10 000 centimètres carrés.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un corps de 3 kg passe de 2 m/s à 6 m/s. La variation de son énergie cinétique est :",
+      "o": [
+        "48 J",
+        "54 J",
+        "96 J",
+        "108 J"
+      ],
+      "r": 0,
+      "x": "ΔEc = ½ × m × (v2² – v1²) = ½ × 3 × (36 – 4) = 48 J. La valeur 54 J correspond à l'énergie cinétique finale seule, et 96 J à l'oubli du facteur ½. D'après le théorème de l'énergie cinétique, cette variation est égale à la somme des travaux des forces appliquées au corps.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le théorème de l'énergie cinétique affirme que la variation d'énergie cinétique d'un solide est égale :",
+      "o": [
+        "à sa quantité de mouvement",
+        "au produit de sa masse par g",
+        "à la somme des travaux des forces",
+        "au double de son énergie potentielle"
+      ],
+      "r": 2,
+      "x": "Le théorème de l'énergie cinétique énonce que ΔEc est égale à la somme des travaux de toutes les forces extérieures appliquées au solide. Un travail moteur augmente l'énergie cinétique, un travail résistant la diminue. Ce théorème permet par exemple de calculer une distance de freinage à partir de la force de frottement exercée par la route.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un satellite tourne à 600 km d'altitude (R = 6 400 km ; g0 = 9,8 m/s²). Sa vitesse, donnée par v = R × √(g0 / (R + h)), est d'environ :",
+      "o": [
+        "0,8 km/s",
+        "3,1 km/s",
+        "7,6 km/s",
+        "11,2 km/s"
+      ],
+      "r": 2,
+      "x": "v = 6,4 × 10⁶ × √(9,8 / 7,0 × 10⁶) ≈ 7,6 × 10³ m/s, soit 7,6 km/s. La valeur 11,2 km/s est la vitesse de libération, nécessaire pour échapper à l'attraction terrestre, et 3,1 km/s la vitesse d'un satellite géostationnaire. À cette vitesse, le satellite fait le tour de la Terre en environ 1 h 37 min.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans un mouvement rectiligne uniforme, la représentation de la distance parcourue en fonction du temps est :",
+      "o": [
+        "une droite passant par l'origine",
+        "une parabole",
+        "une droite horizontale",
+        "une hyperbole"
+      ],
+      "r": 0,
+      "x": "Dans un mouvement rectiligne uniforme, la distance est proportionnelle au temps, d = v × t : sa représentation est une droite passant par l'origine, dont la pente est la vitesse. Une parabole correspond à un mouvement uniformément accéléré partant du repos. Une droite horizontale représenterait, sur ce graphique, un mobile immobile.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un plongeur se trouve à 20 m de profondeur. Sachant que la pression atmosphérique vaut 1 bar et que l'eau ajoute 1 bar tous les 10 m, la pression totale qu'il subit est :",
+      "o": [
+        "0,5 bar",
+        "1 bar",
+        "2 bars",
+        "3 bars"
+      ],
+      "r": 3,
+      "x": "La pression de l'eau vaut 2 bars à 20 m, à laquelle s'ajoute 1 bar de pression atmosphérique, soit 3 bars au total. La valeur 2 bars oublie la pression atmosphérique qui s'exerce à la surface. Les plongeurs doivent remonter lentement pour que les gaz dissous dans leur sang s'éliminent sans danger.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La masse d'un cube de bois de 20 cm d'arête et de masse volumique 600 kg/m³ est :",
+      "o": [
+        "1,2 kg",
+        "4,8 kg",
+        "12 kg",
+        "4 800 kg"
+      ],
+      "r": 1,
+      "x": "Le volume vaut 0,2³ = 0,008 m³, d'où m = ρ × V = 600 × 0,008 = 4,8 kg. La valeur 12 kg résulte d'un calcul avec l'arête au lieu du volume, et 4 800 kg d'une erreur de conversion. Ce bois, moins dense que l'eau, flotterait avec 60 % de son volume immergé.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un solide part du repos en haut d'un plan incliné de 10 m de longueur faisant 30° avec l'horizontale (g = 10 m/s², sans frottement). Sa vitesse en bas du plan est :",
+      "o": [
+        "5 m/s",
+        "7,1 m/s",
+        "8,7 m/s",
+        "10 m/s"
+      ],
+      "r": 3,
+      "x": "La dénivellation vaut h = L × sin α = 5 m, et la conservation de l'énergie donne v = √(2gh) = √100 = 10 m/s. La valeur 7,1 m/s, soit √50, provient de l'oubli du facteur 2. Le résultat ne dépend que de la hauteur de chute, et serait le même pour une chute verticale de 5 m.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le travail nécessaire pour remonter un seau de 15 kg d'eau d'un puits de 12 m (g = 10 N/kg) est :",
+      "o": [
+        "180 J",
+        "1 800 J",
+        "18 000 J",
+        "180 000 J"
+      ],
+      "r": 1,
+      "x": "W = m × g × h = 15 × 10 × 12 = 1 800 J. Les valeurs 180 J et 18 000 J proviennent d'erreurs d'un facteur dix. Utiliser une poulie fixe ne réduit pas ce travail, mais permet de tirer vers le bas en s'aidant de son propre poids, ce qui rend l'effort plus confortable pour ceux qui puisent l'eau.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un ressort s'allonge de 3 cm lorsqu'on y suspend une masse de 300 g (g = 10 N/kg). Sa raideur est :",
+      "o": [
+        "1 N/m",
+        "10 N/m",
+        "100 N/m",
+        "1 000 N/m"
+      ],
+      "r": 2,
+      "x": "La force appliquée vaut P = m × g = 0,3 × 10 = 3 N, d'où k = F / Δl = 3 / 0,03 = 100 N/m. Les valeurs 1 N/m et 1 000 N/m résultent d'erreurs de conversion sur la masse ou sur l'allongement. Une raideur élevée caractérise un ressort dur, qui s'allonge peu sous une force donnée.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un solide animé d'un mouvement circulaire uniforme possède une accélération :",
+      "o": [
+        "dirigée vers le centre du cercle",
+        "nulle, car sa vitesse est constante",
+        "tangente à la trajectoire",
+        "dirigée vers l'extérieur du cercle"
+      ],
+      "r": 0,
+      "x": "Dans un mouvement circulaire uniforme, la valeur de la vitesse est constante mais sa direction change : l'accélération, dite centripète, est dirigée vers le centre et vaut v² / R. Elle n'est donc pas nulle. La force centrifuge ressentie dans un virage est une force apparente, liée au référentiel du véhicule.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une bille de 0,5 kg tombe sans vitesse initiale d'une hauteur de 20 m et arrive au sol à 18 m/s (g = 10 N/kg). Le travail des forces de frottement vaut :",
+      "o": [
+        "– 19 J",
+        "– 10 J",
+        "19 J",
+        "81 J"
+      ],
+      "r": 0,
+      "x": "Le travail des frottements est égal à la variation de l'énergie mécanique : ½ × 0,5 × 18² – 0,5 × 10 × 20 = 81 – 100 = – 19 J. La valeur 81 J correspond à la seule énergie cinétique finale, et 19 J à une erreur de signe. Ce travail est négatif, car les frottements s'opposent toujours au mouvement.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Pour de petites oscillations, la période d'un pendule simple dépend principalement :",
+      "o": [
+        "de la masse suspendue",
+        "de la matière de la masse",
+        "de la longueur du fil",
+        "de la couleur du fil"
+      ],
+      "r": 2,
+      "x": "Pour de petites oscillations, la période d'un pendule simple vaut T = 2π × √(L / g) : elle dépend de la longueur du fil et de l'intensité de la pesanteur, mais pas de la masse. Quadrupler la longueur du fil double la période. Cette régularité fut exploitée pour fabriquer les horloges à balancier.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un pendule simple de 1 m de longueur (g = 9,8 m/s²) a une période d'environ :",
+      "o": [
+        "1 s",
+        "2 s",
+        "3,1 s",
+        "6,3 s"
+      ],
+      "r": 1,
+      "x": "T = 2π × √(L / g) = 2 × 3,14 × √(1 / 9,8) ≈ 2,0 s. La valeur 6,3 s correspond au seul facteur 2π, sans la racine carrée. Un pendule d'un mètre « bat la seconde » : chaque aller ou chaque retour dure environ une seconde, ce qui en faisait autrefois un étalon de temps.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un véhicule de 1 200 kg accélère de 0 à 25 m/s en 10 s. La force motrice moyenne, frottements négligés, vaut :",
+      "o": [
+        "120 N",
+        "480 N",
+        "2 500 N",
+        "3 000 N"
+      ],
+      "r": 3,
+      "x": "L'accélération vaut a = 25 / 10 = 2,5 m/s², d'où F = m × a = 1 200 × 2,5 = 3 000 N. La valeur 480 N résulte de la division m / a au lieu du produit. En pratique, le moteur doit fournir une force plus grande, car il doit aussi vaincre la résistance de l'air et les frottements de roulement.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un référentiel galiléen est un référentiel dans lequel :",
+      "o": [
+        "le principe de l'inertie est vérifié",
+        "tous les corps sont immobiles",
+        "le poids des corps est nul",
+        "la vitesse de la lumière est infinie"
+      ],
+      "r": 0,
+      "x": "Un référentiel est galiléen si un corps soumis à des forces qui se compensent y est immobile ou en mouvement rectiligne uniforme. Le référentiel terrestre est considéré comme galiléen pour des expériences de courte durée. On utilise le référentiel géocentrique pour étudier les satellites et le référentiel héliocentrique pour les planètes.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une voiture roulant à 20 m/s freine avec une décélération constante de 5 m/s². Sa distance de freinage est :",
+      "o": [
+        "4 m",
+        "20 m",
+        "40 m",
+        "80 m"
+      ],
+      "r": 2,
+      "x": "La relation v² – v0² = – 2 × a × d donne d = v0² / (2a) = 400 / 10 = 40 m. La valeur 80 m résulte de l'oubli du facteur 2. La distance de freinage étant proportionnelle au carré de la vitesse, elle serait quadruplée, soit 160 m, si la voiture roulait deux fois plus vite.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La résistance d'un fil de cuivre (ρ = 1,7 × 10⁻⁸ Ω·m) de 100 m de long et de 1 mm² de section est :",
+      "o": [
+        "0,17 Ω",
+        "1,7 Ω",
+        "17 Ω",
+        "1 700 Ω"
+      ],
+      "r": 1,
+      "x": "R = ρ × L / S = 1,7 × 10⁻⁸ × 100 / 10⁻⁶ = 1,7 Ω, la section de 1 mm² valant 10⁻⁶ m². Les autres valeurs proviennent d'erreurs de conversion de la section. Le cuivre, très bon conducteur grâce à sa faible résistivité, est le métal le plus utilisé pour les câbles électriques domestiques.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un résistor de 10 Ω est monté en série avec deux résistors de 20 Ω associés en dérivation. La résistance équivalente de l'ensemble est :",
+      "o": [
+        "5 Ω",
+        "10 Ω",
+        "15 Ω",
+        "20 Ω"
+      ],
+      "r": 3,
+      "x": "Les deux résistors de 20 Ω en dérivation équivalent à 20 / 2 = 10 Ω, auxquels s'ajoutent en série les 10 Ω restants : Req = 10 + 10 = 20 Ω. Additionner les trois résistances donnerait à tort 50 Ω. Pour un montage mixte, on remplace d'abord chaque groupe en dérivation par sa résistance équivalente, puis on additionne les éléments en série.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un diviseur de tension est formé de deux résistors de 2 kΩ et 8 kΩ en série alimentés sous 10 V. La tension aux bornes du résistor de 2 kΩ est :",
+      "o": [
+        "2 V",
+        "2,5 V",
+        "5 V",
+        "8 V"
+      ],
+      "r": 0,
+      "x": "L'intensité vaut I = 10 / 10 000 = 1 mA, d'où U1 = 2 000 × 0,001 = 2 V, ce qui revient à U1 = U × R1 / (R1 + R2). La valeur 2,5 V résulte d'une division par 8 kΩ au lieu de la résistance totale. Les 8 V restants se retrouvent aux bornes du résistor de 8 kΩ.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La capacité d'un condensateur s'exprime en :",
+      "o": [
+        "henrys",
+        "ohms",
+        "farads",
+        "teslas"
+      ],
+      "r": 2,
+      "x": "La capacité d'un condensateur s'exprime en farads (F), du nom du physicien britannique Michael Faraday ; on utilise plutôt le microfarad ou le nanofarad. Le henry mesure l'inductance d'une bobine, l'ohm la résistance et le tesla l'intensité d'un champ magnétique. Un condensateur emmagasine des charges électriques sur deux armatures séparées par un isolant.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La charge portée par un condensateur de 100 µF soumis à une tension de 12 V est :",
+      "o": [
+        "1,2 × 10⁻⁵ C",
+        "1,2 × 10⁻⁴ C",
+        "1,2 × 10⁻³ C",
+        "1,2 C"
+      ],
+      "r": 2,
+      "x": "Q = C × U = 100 × 10⁻⁶ × 12 = 1,2 × 10⁻³ C, soit 1,2 mC. Les autres valeurs proviennent d'une mauvaise conversion du microfarad, qui vaut 10⁻⁶ F. La charge d'un condensateur est proportionnelle à la tension appliquée, le coefficient de proportionnalité étant précisément sa capacité.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'énergie stockée dans un condensateur de 1 000 µF chargé sous 10 V est :",
+      "o": [
+        "0,05 J",
+        "0,1 J",
+        "5 J",
+        "50 J"
+      ],
+      "r": 0,
+      "x": "L'énergie vaut E = ½ × C × U² = ½ × 10⁻³ × 10² = 0,05 J. La valeur 0,1 J correspond à l'oubli du facteur ½. Cette énergie, restituée très rapidement lors de la décharge, est exploitée dans le flash des appareils photo et dans les défibrillateurs cardiaques.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un générateur de f.é.m. 24 V et de résistance interne 2 Ω débite un courant de 3 A. La tension à ses bornes est :",
+      "o": [
+        "6 V",
+        "8 V",
+        "12 V",
+        "18 V"
+      ],
+      "r": 3,
+      "x": "La tension aux bornes d'un générateur vaut U = E – r × I = 24 – 2 × 3 = 18 V. La valeur 6 V correspond à la chute de tension due à la résistance interne, et non à la tension disponible. Plus le générateur débite, plus sa tension diminue, ce qui explique la baisse d'éclairage des phares au démarrage d'un véhicule.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le rendement d'un générateur de f.é.m. 12 V qui délivre une tension de 10,8 V est :",
+      "o": [
+        "80 %",
+        "90 %",
+        "111 %",
+        "120 %"
+      ],
+      "r": 1,
+      "x": "Le rendement d'un générateur vaut η = U / E = 10,8 / 12 = 0,9, soit 90 %. La valeur 111 % résulte de l'inversion du rapport, impossible pour un rendement. Les 10 % restants sont dissipés par effet Joule dans la résistance interne, ce qui explique l'échauffement des batteries qui débitent un courant intense.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un fil conducteur parcouru par un courant et placé dans un champ magnétique subit :",
+      "o": [
+        "une force électrostatique",
+        "une force de gravitation",
+        "une poussée d'Archimède",
+        "une force de Laplace"
+      ],
+      "r": 3,
+      "x": "Un conducteur parcouru par un courant et placé dans un champ magnétique subit la force de Laplace, de valeur F = I × L × B lorsque le fil est perpendiculaire au champ. Son sens dépend du sens du courant et de celui du champ. Cette force est à l'origine de la rotation des moteurs électriques et de la vibration des haut-parleurs.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un fil de 0,2 m parcouru par un courant de 5 A est perpendiculaire à un champ magnétique de 0,1 T. La force de Laplace vaut :",
+      "o": [
+        "0,01 N",
+        "0,1 N",
+        "1 N",
+        "10 N"
+      ],
+      "r": 1,
+      "x": "F = I × L × B = 5 × 0,2 × 0,1 = 0,1 N lorsque le fil est perpendiculaire au champ magnétique. Les valeurs 0,01 N et 1 N résultent d'erreurs dans le produit des trois grandeurs. Si le fil était parallèle aux lignes de champ, la force de Laplace serait nulle.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le phénomène d'induction électromagnétique se produit lorsque :",
+      "o": [
+        "un aimant immobile est placé près d'une bobine",
+        "une bobine est traversée par un courant constant",
+        "le champ magnétique traversant une bobine varie",
+        "un fil de cuivre est chauffé fortement"
+      ],
+      "r": 2,
+      "x": "L'induction électromagnétique apparaît lorsque le champ magnétique qui traverse un circuit varie, par exemple quand on approche ou éloigne un aimant d'une bobine. Un aimant immobile ne produit aucun courant induit. Découvert par Michael Faraday en 1831, ce phénomène est à la base des alternateurs, des transformateurs et des plaques à induction.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'électricité est transportée sur de longues distances sous haute tension afin :",
+      "o": [
+        "de réduire les pertes par effet Joule",
+        "d'augmenter l'intensité du courant",
+        "de rendre le courant continu",
+        "de diminuer la fréquence du courant"
+      ],
+      "r": 0,
+      "x": "Pour une même puissance transportée, élever la tension diminue l'intensité, et donc les pertes par effet Joule, proportionnelles au carré de l'intensité. Des transformateurs élévateurs augmentent la tension au départ des centrales, puis des transformateurs abaisseurs la ramènent à 220 V près des habitations. La fréquence de 50 Hz reste inchangée tout au long du trajet.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une ligne électrique de résistance 5 Ω transporte un courant de 100 A. La puissance perdue par effet Joule est :",
+      "o": [
+        "50 kW",
+        "100 kW",
+        "250 kW",
+        "500 kW"
+      ],
+      "r": 0,
+      "x": "P = R × I² = 5 × 100² = 50 000 W, soit 50 kW. Si l'intensité doublait, ces pertes seraient multipliées par quatre, d'où l'intérêt de transporter l'énergie sous très haute tension et faible intensité. C'est pourquoi les grandes lignes d'interconnexion entre pays fonctionnent à des tensions de plus de 200 000 volts.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une lampe porte l'indication « 6 V – 3 W ». Sa résistance en fonctionnement normal est :",
+      "o": [
+        "0,5 Ω",
+        "2 Ω",
+        "12 Ω",
+        "18 Ω"
+      ],
+      "r": 2,
+      "x": "R = U² / P = 6² / 3 = 12 Ω, l'intensité nominale valant I = P / U = 0,5 A. La valeur 0,5 correspond à cette intensité en ampères, et non à la résistance. Alimentée sous une tension supérieure à 6 V, la lampe serait en surtension et risquerait de griller rapidement.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un moteur absorbe une puissance électrique de 500 W et fournit une puissance mécanique de 400 W. Son rendement est :",
+      "o": [
+        "20 %",
+        "80 %",
+        "100 %",
+        "125 %"
+      ],
+      "r": 1,
+      "x": "Le rendement vaut η = Putile / Pabsorbée = 400 / 500 = 0,8, soit 80 %. La valeur 20 % correspond à la part de l'énergie perdue, essentiellement sous forme de chaleur par effet Joule et par frottements. Un rendement supérieur à 100 % est impossible, car un moteur ne peut fournir plus d'énergie qu'il n'en reçoit.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Lors de l'électrolyse d'une solution de sulfate de cuivre, il se dépose sur la cathode :",
+      "o": [
+        "du soufre",
+        "de l'oxygène",
+        "du zinc",
+        "du cuivre"
+      ],
+      "r": 3,
+      "x": "Les ions Cu²⁺, attirés par la cathode reliée à la borne négative, y gagnent des électrons et se déposent sous forme de cuivre métallique. Ce principe est exploité dans la galvanoplastie pour recouvrir des objets d'une fine couche de métal, ainsi que dans la purification industrielle du cuivre. L'électrolyse transforme de l'énergie électrique en énergie chimique.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un électron pénètre entre deux plaques chargées avec une vitesse perpendiculaire aux lignes d'un champ électrique uniforme. Sa trajectoire entre les plaques est :",
+      "o": [
+        "rectiligne",
+        "parabolique",
+        "circulaire",
+        "hélicoïdale"
+      ],
+      "r": 1,
+      "x": "L'électron subit une force constante F = q × E, perpendiculaire à sa vitesse initiale : comme un projectile dans le champ de pesanteur, il décrit une parabole. Une trajectoire circulaire caractérise au contraire le mouvement dans un champ magnétique uniforme. Cette déviation électrostatique est utilisée dans les oscilloscopes à tube cathodique.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une bobine parcourue par un courant se comporte comme :",
+      "o": [
+        "un condensateur",
+        "une résistance pure",
+        "une pile",
+        "un aimant droit"
+      ],
+      "r": 3,
+      "x": "Une bobine parcourue par un courant crée un champ magnétique semblable à celui d'un aimant droit, avec une face nord et une face sud. Le sens du champ dépend du sens du courant et s'inverse avec lui. Introduire un noyau de fer doux dans la bobine renforce fortement ce champ : on obtient alors un électroaimant.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La puissance maximale qu'une prise protégée par un disjoncteur de 16 A sous 220 V peut alimenter est :",
+      "o": [
+        "3 520 W",
+        "5 000 W",
+        "7 040 W",
+        "35 200 W"
+      ],
+      "r": 0,
+      "x": "La puissance maximale vaut P = U × I = 220 × 16 = 3 520 W. Brancher simultanément sur cette prise un fer à repasser et une plaque chauffante dépasserait cette valeur et provoquerait le déclenchement du disjoncteur. C'est pourquoi les appareils de forte puissance doivent être répartis sur des circuits différents.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un condensateur de 1 000 µF est chargé par un courant constant de 2 mA pendant 5 s. La tension à ses bornes atteint :",
+      "o": [
+        "0,4 V",
+        "2 V",
+        "10 V",
+        "10 000 V"
+      ],
+      "r": 2,
+      "x": "La charge vaut q = I × t = 2 × 10⁻³ × 5 = 10⁻² C, d'où U = q / C = 10⁻² / 10⁻³ = 10 V. La valeur 10 000 V résulte de la prise de 1 µF au lieu de 1 000 µF. À courant constant, la tension croît linéairement avec le temps, contrairement à la charge à travers un résistor, qui suit une loi exponentielle.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La tension efficace d'une tension sinusoïdale de valeur maximale 14,1 V est d'environ :",
+      "o": [
+        "5 V",
+        "7 V",
+        "10 V",
+        "20 V"
+      ],
+      "r": 2,
+      "x": "Ueff = Umax / √2 = 14,1 / 1,414 ≈ 10 V. La valeur 20 V résulte d'une multiplication par √2 au lieu d'une division, et 7 V d'une division par 2. La valeur efficace d'une tension alternative est celle d'une tension continue qui produirait le même effet thermique dans un résistor.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un transformateur élévateur est un transformateur dont :",
+      "o": [
+        "le secondaire a plus de spires que le primaire",
+        "le primaire a plus de spires que le secondaire",
+        "les deux bobines ont le même nombre de spires",
+        "le secondaire ne comporte aucune spire"
+      ],
+      "r": 0,
+      "x": "Un transformateur est élévateur lorsque son secondaire compte plus de spires que son primaire, car U2 / U1 = N2 / N1 > 1. Lorsque le primaire compte plus de spires, la tension est abaissée. Les transformateurs élévateurs équipent les centrales électriques pour porter la tension à des valeurs très élevées avant le transport de l'énergie.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La fréquence d'une tension alternative de période 2,5 ms est :",
+      "o": [
+        "0,4 Hz",
+        "2,5 Hz",
+        "40 Hz",
+        "400 Hz"
+      ],
+      "r": 3,
+      "x": "La fréquence est l'inverse de la période : f = 1 / T = 1 / 0,0025 = 400 Hz. La valeur 0,4 Hz résulte de l'emploi de la période en millisecondes sans conversion. Une fréquence de 400 Hz correspond à 400 oscillations par seconde, soit huit fois plus que les 50 Hz du réseau électrique.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une bobine d'inductance 0,5 H est montée en série avec un résistor de 100 Ω. La constante de temps du circuit est :",
+      "o": [
+        "0,5 ms",
+        "5 ms",
+        "50 ms",
+        "200 s"
+      ],
+      "r": 1,
+      "x": "La constante de temps d'un circuit RL vaut τ = L / R = 0,5 / 100 = 5 × 10⁻³ s, soit 5 ms. La valeur 200 résulte de l'inversion du rapport R / L. Le courant atteint 63 % de sa valeur finale au bout de τ, la bobine retardant l'établissement du courant dans le circuit.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La quantité d'électricité nécessaire pour déposer une mole de cuivre à partir d'ions Cu²⁺ est (1 faraday = 96 500 C) :",
+      "o": [
+        "48 250 C",
+        "96 500 C",
+        "144 750 C",
+        "193 000 C"
+      ],
+      "r": 3,
+      "x": "Chaque ion Cu²⁺ doit gagner deux électrons : il faut donc 2 moles d'électrons, soit 2 × 96 500 = 193 000 C. La valeur 96 500 C ne correspond qu'à une mole d'électrons, suffisante pour un ion de charge 1+, comme l'ion argent Ag⁺. Le faraday représente la charge d'une mole d'électrons.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La fréquence propre d'un circuit formé d'une bobine de 0,4 H et d'un condensateur de 25 µF est d'environ :",
+      "o": [
+        "0,02 Hz",
+        "50 Hz",
+        "316 Hz",
+        "2 000 Hz"
+      ],
+      "r": 1,
+      "x": "f0 = 1 / (2π × √(L × C)) = 1 / (2π × √10⁻⁵) ≈ 50 Hz. La valeur 316 correspond à la pulsation propre ω0 = 1 / √(LC), exprimée en rad/s, et 0,02 à la période propre en secondes. Alimenté à cette fréquence, un circuit RLC série comprenant ces composants serait à la résonance.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un circuit RLC série (R = 20 Ω) est parcouru par un courant d'intensité efficace 3 A. La puissance moyenne qu'il consomme est :",
+      "o": [
+        "60 W",
+        "120 W",
+        "180 W",
+        "360 W"
+      ],
+      "r": 2,
+      "x": "Seul le résistor consomme de la puissance en moyenne : P = R × I² = 20 × 3² = 180 W. La valeur 60 W oublie le carré de l'intensité. La bobine et le condensateur parfaits échangent de l'énergie avec le générateur sans en dissiper, ce qui explique que cette puissance s'écrive aussi P = U × I × cos φ.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un téléviseur consomme 5 W en veille. Laissé en veille 20 h par jour pendant 30 jours, il consomme :",
+      "o": [
+        "3 kWh",
+        "30 kWh",
+        "60 kWh",
+        "300 kWh"
+      ],
+      "r": 0,
+      "x": "En veille, E = 5 W × 20 h × 30 = 3 000 Wh, soit 3 kWh. La valeur 30 kWh résulte d'une erreur d'un facteur dix dans la conversion des wattheures. Bien que modeste, la consommation en veille de plusieurs appareils s'additionne sur une année, d'où l'intérêt de les débrancher complètement.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans un circuit en dérivation, la branche de plus faible résistance est parcourue par :",
+      "o": [
+        "l'intensité la plus élevée",
+        "l'intensité la plus faible",
+        "aucun courant électrique",
+        "la même intensité que les autres"
+      ],
+      "r": 0,
+      "x": "En dérivation, toutes les branches ont la même tension : d'après I = U / R, la branche de plus faible résistance est traversée par l'intensité la plus élevée. Un fil sans résistance placé en dérivation détourne donc presque tout le courant, ce qui constitue un court-circuit. Les intensités des branches s'additionnent pour donner le courant principal.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un pont de diodes réalise le redressement double alternance d'une tension sinusoïdale de 50 Hz. La fréquence de la tension redressée est :",
+      "o": [
+        "25 Hz",
+        "50 Hz",
+        "100 Hz",
+        "200 Hz"
+      ],
+      "r": 2,
+      "x": "Le pont de Graetz, formé de quatre diodes, redresse les deux alternances : chaque période du signal d'entrée donne deux arches de même signe, d'où une fréquence de 100 Hz. Un redressement simple alternance, avec une seule diode, conserverait la fréquence de 50 Hz. Un condensateur de lissage complète ensuite le montage.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La puissance électrique totale produite par un générateur de f.é.m. 12 V qui débite 2 A est :",
+      "o": [
+        "6 W",
+        "24 W",
+        "48 W",
+        "144 W"
+      ],
+      "r": 1,
+      "x": "La puissance électrique totale produite par le générateur vaut P = E × I = 12 × 2 = 24 W. La valeur 6 W résulte d'une division au lieu d'un produit. Une partie de cette puissance est perdue dans la résistance interne du générateur, le reste étant fourni au circuit extérieur.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La résistance d'une photorésistance :",
+      "o": [
+        "augmente quand l'éclairement augmente",
+        "reste constante quel que soit l'éclairement",
+        "devient infinie en plein soleil",
+        "diminue quand l'éclairement augmente"
+      ],
+      "r": 3,
+      "x": "La résistance d'une photorésistance diminue lorsque l'éclairement qu'elle reçoit augmente. Ce capteur est utilisé dans les dispositifs d'éclairage public automatique, qui allument les lampadaires à la tombée de la nuit. De même, la résistance d'une thermistance varie avec la température, ce qui permet de l'utiliser dans les thermostats.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'unité de l'induction magnétique B est :",
+      "o": [
+        "Le weber",
+        "Le tesla",
+        "Le farad",
+        "Le volt"
+      ],
+      "r": 1,
+      "x": "L'induction magnétique B s'exprime en teslas (T), du nom du physicien Nikola Tesla. Elle caractérise l'intensité et l'orientation du champ magnétique en un point. Le weber est l'unité du flux magnétique, le farad celle de la capacité électrique et le volt celle de la tension électrique.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une tige conductrice de 0,2 m se déplace à 4 m/s perpendiculairement à un champ magnétique de 0,5 T. La force électromotrice induite à ses bornes vaut :",
+      "o": [
+        "0,025 V",
+        "0,1 V",
+        "0,2 V",
+        "0,4 V"
+      ],
+      "r": 3,
+      "x": "La tige balaie une surface qui augmente de L × v par seconde : e = B × L × v = 0,5 × 0,2 × 4 = 0,4 V. La valeur 0,1 V oublie la vitesse de la tige. Si les rails sont reliés par un circuit fermé, le courant induit crée une force de Laplace qui freine la tige, conformément à la loi de Lenz.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un courant de 30 mA traversant le corps humain peut être :",
+      "o": [
+        "mortel par fibrillation cardiaque",
+        "totalement imperceptible",
+        "bénéfique pour la santé",
+        "sans effet sur les muscles"
+      ],
+      "r": 0,
+      "x": "Un courant d'environ 30 mA traversant le corps humain peut provoquer une paralysie respiratoire et une fibrillation cardiaque mortelle. C'est pourquoi les disjoncteurs différentiels domestiques sont calibrés à 30 mA. Un courant de 1 mA est à peine perceptible, alors que dès 10 mA environ, la contraction musculaire peut empêcher la victime de lâcher le conducteur.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La résistance équivalente de deux résistors de 6 Ω et 3 Ω montés en dérivation est :",
+      "o": [
+        "0,5 Ω",
+        "1 Ω",
+        "2 Ω",
+        "9 Ω"
+      ],
+      "r": 2,
+      "x": "Req = (R1 × R2) / (R1 + R2) = (6 × 3) / (6 + 3) = 18 / 9 = 2 Ω. La valeur 9 Ω correspond au montage en série. En dérivation, la résistance équivalente est toujours inférieure à la plus petite des résistances, ici 3 Ω, ce qui permet de vérifier rapidement la vraisemblance du résultat.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une batterie de téléphone de 3,7 V et 4 000 mAh stocke une énergie d'environ :",
+      "o": [
+        "1,08 Wh",
+        "4 Wh",
+        "14,8 Wh",
+        "14 800 Wh"
+      ],
+      "r": 2,
+      "x": "E = U × Q = 3,7 V × 4 Ah = 14,8 Wh, la capacité de 4 000 mAh valant 4 Ah. La valeur 14 800 Wh résulte de l'oubli de la conversion des milliampèreheures. Cette énergie, d'environ 53 000 J, suffit à faire fonctionner un téléphone pendant une journée d'utilisation normale.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le sens du champ magnétique à l'intérieur d'une bobine parcourue par un courant dépend :",
+      "o": [
+        "du sens du courant",
+        "de la couleur du fil",
+        "de la matière de l'isolant",
+        "de la longueur des fils de connexion"
+      ],
+      "r": 0,
+      "x": "Le sens du champ magnétique créé par une bobine dépend du sens du courant qui la traverse : inverser le courant inverse les faces nord et sud. On le détermine avec la règle de la main droite ou en observant l'orientation d'une petite boussole. L'intensité du champ dépend, elle, de l'intensité du courant et du nombre de spires par mètre.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une lampe à LED de 7 W éclaire autant qu'une lampe à incandescence de 60 W. La lampe à incandescence consomme environ :",
+      "o": [
+        "1,2 fois plus",
+        "4 fois plus",
+        "7 fois plus",
+        "8,6 fois plus"
+      ],
+      "r": 3,
+      "x": "Le rapport des puissances vaut 60 / 7 ≈ 8,6 : la lampe à incandescence consomme environ 8,6 fois plus que la lampe à LED pour le même éclairage. La valeur 7 confond ce rapport avec la puissance de la lampe à LED. Cette économie importante explique le remplacement progressif des anciennes lampes dans l'éclairage public et domestique.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Lorsqu'on approche le pôle nord d'un aimant d'une bobine reliée à un galvanomètre, l'aiguille :",
+      "o": [
+        "reste immobile",
+        "dévie pendant le mouvement",
+        "dévie en permanence",
+        "dévie seulement à l'arrêt"
+      ],
+      "r": 1,
+      "x": "Le déplacement de l'aimant fait varier le champ magnétique dans la bobine, ce qui crée un courant induit révélé par la déviation de l'aiguille. Dès que l'aimant s'immobilise, le champ ne varie plus et le courant s'annule. En éloignant l'aimant, l'aiguille dévie dans l'autre sens, car le courant induit change de sens.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un chauffe-eau de 2 000 W fonctionne pendant 30 min. Au prix fictif de 120 FCFA le kWh, le coût de l'opération est :",
+      "o": [
+        "40 FCFA",
+        "60 FCFA",
+        "100 FCFA",
+        "120 FCFA"
+      ],
+      "r": 3,
+      "x": "L'énergie consommée vaut E = 2 kW × 0,5 h = 1 kWh, d'où un coût de 1 × 120 = 120 FCFA. La valeur 60 FCFA correspond à une énergie de 0,5 kWh, obtenue en oubliant que la puissance vaut 2 kW. Le prix de 120 FCFA est un prix d'exercice, distinct de la grille tarifaire réelle.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "On place l'interrupteur d'une lampe sur la phase plutôt que sur le neutre afin de :",
+      "o": [
+        "augmenter la puissance de la lampe",
+        "mettre la douille hors tension à l'ouverture",
+        "réduire la facture d'électricité",
+        "transformer le courant en courant continu"
+      ],
+      "r": 1,
+      "x": "Placé sur la phase, l'interrupteur coupe l'arrivée de la tension : la douille de la lampe n'est plus sous tension lorsqu'il est ouvert, ce qui permet de changer l'ampoule plus sûrement. Placé sur le neutre, il éteindrait la lampe mais laisserait la douille sous tension. La puissance et la consommation ne sont pas modifiées par ce choix.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'électrolyse de l'eau produit 20 mL de dihydrogène. Le volume de dioxygène recueilli dans le même temps est :",
+      "o": [
+        "2,5 mL",
+        "5 mL",
+        "10 mL",
+        "40 mL"
+      ],
+      "r": 2,
+      "x": "L'équation 2 H2O → 2 H2 + O2 montre qu'il se forme deux fois moins de dioxygène que de dihydrogène : 20 / 2 = 10 mL. La valeur 40 mL résulte de l'inversion du rapport. Ce rapport de volumes de 2 pour 1 confirme la formule de l'eau, qui contient deux atomes d'hydrogène pour un atome d'oxygène.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans un circuit LC idéal, au cours des oscillations électriques, l'énergie totale :",
+      "o": [
+        "reste constante",
+        "diminue exponentiellement",
+        "augmente linéairement",
+        "s'annule à chaque demi-période"
+      ],
+      "r": 0,
+      "x": "En l'absence de résistance, aucune énergie n'est dissipée : l'énergie totale, somme de l'énergie électrique ½Cu² et de l'énergie magnétique ½Li², reste constante. Elle passe alternativement du condensateur à la bobine, deux fois par période propre. Dans un circuit réel, la résistance des fils provoque au contraire un amortissement.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La réactance d'un condensateur de 100 µF alimenté sous une fréquence de 50 Hz est d'environ :",
+      "o": [
+        "31,8 Ω",
+        "200 Ω",
+        "318 Ω",
+        "3 180 Ω"
+      ],
+      "r": 0,
+      "x": "XC = 1 / (C × ω) = 1 / (10⁻⁴ × 314) ≈ 31,8 Ω. La valeur 200 Ω résulte de l'oubli du facteur 2π, en utilisant f au lieu de ω. La réactance d'un condensateur diminue quand la fréquence augmente : il bloque le courant continu mais laisse passer facilement les courants de haute fréquence.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'énergie dissipée par un résistor de 20 Ω soumis à une tension de 10 V pendant 1 min est :",
+      "o": [
+        "5 J",
+        "50 J",
+        "300 J",
+        "12 000 J"
+      ],
+      "r": 2,
+      "x": "La puissance vaut P = U² / R = 100 / 20 = 5 W, d'où W = P × t = 5 × 60 = 300 J. La valeur 5 J oublie de multiplier la puissance par la durée de 60 secondes. Dans un résistor, toute l'énergie électrique reçue est convertie en chaleur par effet Joule.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un moteur absorbe 1 500 W sous 220 V efficaces avec une intensité efficace de 8 A. Son facteur de puissance est d'environ :",
+      "o": [
+        "0,15",
+        "0,85",
+        "1,17",
+        "1,76"
+      ],
+      "r": 1,
+      "x": "cos φ = P / (U × I) = 1 500 / (220 × 8) = 1 500 / 1 760 ≈ 0,85. La valeur 1,17 résulte de l'inversion du rapport ; un facteur de puissance ne dépasse jamais 1. Les moteurs, qui contiennent des bobines, ont un facteur de puissance inférieur à 1, ce qui augmente l'intensité appelée pour une même puissance utile.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un fusible de 10 A protège un circuit alimenté sous 220 V. La puissance totale maximale des appareils branchés est :",
+      "o": [
+        "22 W",
+        "220 W",
+        "1 000 W",
+        "2 200 W"
+      ],
+      "r": 3,
+      "x": "P = U × I = 220 × 10 = 2 200 W : au-delà, l'intensité dépasse 10 A et le fusible fond. La valeur 22 W résulte de la division U / I, qui donne une résistance et non une puissance. Il convient de vérifier que la somme des puissances des appareils branchés simultanément reste inférieure à cette limite.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un proton (q = 1,6 × 10⁻¹⁹ C) se déplace à 2 × 10⁶ m/s perpendiculairement à un champ magnétique de 0,5 T. La force de Lorentz qu'il subit vaut :",
+      "o": [
+        "1,6 × 10⁻¹⁹ N",
+        "1,6 × 10⁻¹³ N",
+        "6,4 × 10⁻¹³ N",
+        "1,6 × 10⁻⁷ N"
+      ],
+      "r": 1,
+      "x": "F = |q| × v × B = 1,6 × 10⁻¹⁹ × 2 × 10⁶ × 0,5 = 1,6 × 10⁻¹³ N. La valeur 6,4 × 10⁻¹³ N résulte d'une division par B au lieu d'une multiplication. Perpendiculaire à la vitesse, cette force ne modifie que la direction du mouvement et ne travaille pas.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Lorsqu'on double la tension aux bornes d'un conducteur ohmique, la puissance dissipée :",
+      "o": [
+        "reste constante",
+        "est divisée par deux",
+        "est multipliée par deux",
+        "est multipliée par quatre"
+      ],
+      "r": 3,
+      "x": "La puissance dissipée vaut P = U² / R : doubler la tension multiplie donc la puissance par 2² = 4. L'intensité, elle, n'est multipliée que par deux, conformément à la loi d'Ohm. C'est pourquoi un appareil prévu pour 110 V, branché par erreur sur 220 V, reçoit quatre fois sa puissance nominale et se détériore rapidement.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un objet de 2 cm placé devant une lentille convergente donne une image de 6 cm. Le grandissement en valeur absolue est :",
+      "o": [
+        "0,33",
+        "3",
+        "4",
+        "12"
+      ],
+      "r": 1,
+      "x": "Le grandissement vaut |γ| = A'B' / AB = 6 / 2 = 3 : l'image est trois fois plus grande que l'objet. La valeur 0,33 résulte de l'inversion du rapport, qui correspondrait à une image réduite. Le grandissement se calcule aussi par le rapport des distances OA' / OA, les deux méthodes devant donner le même résultat.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un objet est placé au foyer objet d'une lentille convergente. Son image se forme :",
+      "o": [
+        "sur la lentille",
+        "au foyer image",
+        "au double de la distance focale",
+        "à l'infini"
+      ],
+      "r": 3,
+      "x": "Un objet placé au foyer objet d'une lentille convergente donne une image rejetée à l'infini : les rayons émergents sont parallèles. C'est le principe des projecteurs et des lampes torches. Inversement, un objet situé à l'infini, comme une étoile, donne une image située au foyer image de la lentille.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans un appareil photographique, l'objectif joue le rôle :",
+      "o": [
+        "d'une lentille convergente",
+        "d'une lentille divergente",
+        "d'un miroir plan",
+        "d'un prisme"
+      ],
+      "r": 0,
+      "x": "L'objectif d'un appareil photographique se comporte comme une lentille convergente qui forme une image réelle et renversée sur le capteur. La mise au point consiste à régler la distance entre l'objectif et le capteur pour obtenir une image nette. Le diaphragme, comme l'iris de l'œil, règle la quantité de lumière qui entre dans l'appareil.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'œil hypermétrope est un œil :",
+      "o": [
+        "trop convergent",
+        "parfaitement normal",
+        "pas assez convergent",
+        "incapable de voir les couleurs"
+      ],
+      "r": 2,
+      "x": "L'œil hypermétrope n'est pas assez convergent : sans accommodation, l'image d'un objet se forme en arrière de la rétine. Il se corrige avec des verres convergents, de vergence positive. L'œil trop convergent est l'œil myope, et l'incapacité à distinguer certaines couleurs correspond au daltonisme, qui n'est pas un défaut optique.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le punctum proximum d'un œil normal d'adulte jeune est situé à environ :",
+      "o": [
+        "1 cm",
+        "10 cm",
+        "25 cm",
+        "5 m"
+      ],
+      "r": 2,
+      "x": "Le punctum proximum, point le plus proche vu nettement en accommodant au maximum, se situe à environ 25 cm pour un œil normal d'adulte jeune. Le punctum remotum, point le plus éloigné vu sans accommoder, est à l'infini. Avec l'âge, le cristallin perd sa souplesse et le punctum proximum s'éloigne : c'est la presbytie.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans un prisme, une radiation lumineuse est d'autant plus déviée que :",
+      "o": [
+        "sa longueur d'onde est courte",
+        "sa longueur d'onde est longue",
+        "sa couleur tend vers le rouge",
+        "sa vitesse dans le verre est grande"
+      ],
+      "r": 0,
+      "x": "L'indice du verre augmente quand la longueur d'onde diminue : le violet, de courte longueur d'onde, est donc le plus dévié, et le rouge le moins dévié. C'est cette différence de déviation qui étale la lumière blanche en spectre. Une radiation plus déviée se propage aussi plus lentement dans le verre.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une radiation de fréquence 6 × 10¹⁴ Hz a dans le vide une longueur d'onde de :",
+      "o": [
+        "0,5 nm",
+        "5 nm",
+        "50 nm",
+        "500 nm"
+      ],
+      "r": 3,
+      "x": "λ = c / f = 3 × 10⁸ / 6 × 10¹⁴ = 5 × 10⁻⁷ m, soit 500 nm. Les autres valeurs proviennent d'erreurs dans la manipulation des puissances de dix. Cette longueur d'onde, comprise entre 400 et 800 nm, appartient au domaine visible et correspond à une lumière de couleur bleu-vert.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Les ondes utilisées par la radio, la télévision et le téléphone portable sont :",
+      "o": [
+        "des ondes sonores",
+        "des ondes électromagnétiques",
+        "des ondes sismiques",
+        "des ondes mécaniques"
+      ],
+      "r": 1,
+      "x": "La radio, la télévision et la téléphonie mobile utilisent des ondes électromagnétiques, qui se propagent dans le vide et dans l'air à la vitesse de la lumière. Les ondes sonores, mécaniques, sont beaucoup trop lentes et ne se propagent pas dans le vide. Les satellites de télécommunication relaient ces ondes sur de très grandes distances.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le sonar d'un navire émet un ultrason qui revient après 0,4 s. La vitesse du son dans l'eau étant de 1 500 m/s, la profondeur du fond est :",
+      "o": [
+        "75 m",
+        "150 m",
+        "200 m",
+        "300 m"
+      ],
+      "r": 3,
+      "x": "L'onde parcourt l'aller et le retour : la profondeur vaut d = v × t / 2 = 1 500 × 0,4 / 2 = 300 m. Oublier de diviser par 2 donnerait à tort 600 m, soit la distance totale parcourue. Ce principe d'écho permet aux navires de mesurer la profondeur des fonds marins et aux pêcheurs de repérer les bancs de poissons.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un écho est entendu 2 s après un cri lancé face à une falaise. Le son se propageant à 340 m/s, la falaise se trouve à :",
+      "o": [
+        "170 m",
+        "340 m",
+        "680 m",
+        "1 360 m"
+      ],
+      "r": 1,
+      "x": "Le son parcourt l'aller et le retour en 2 s : la distance vaut d = 340 × 2 / 2 = 340 m. La valeur 680 m correspond à la distance totale parcourue par le son, sans division par deux. Pour que l'écho soit perçu distinctement du son direct, l'obstacle doit se trouver à au moins 17 m environ.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "On mélange 2 kg d'eau à 80 °C et 2 kg d'eau à 20 °C. En négligeant les pertes, la température d'équilibre est :",
+      "o": [
+        "30 °C",
+        "40 °C",
+        "50 °C",
+        "100 °C"
+      ],
+      "r": 2,
+      "x": "Les masses étant égales, la chaleur cédée par l'eau chaude égale la chaleur reçue par l'eau froide, et la température finale est la moyenne : (80 + 20) / 2 = 50 °C. La valeur 100 °C, obtenue en additionnant les températures, est absurde. Si les masses étaient différentes, la température finale serait plus proche de celle de la masse la plus grande.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'énergie nécessaire pour vaporiser 2 kg d'eau à 100 °C (Lv = 2 260 kJ/kg) est :",
+      "o": [
+        "4 520 kJ",
+        "9 040 kJ",
+        "45 200 kJ",
+        "452 000 kJ"
+      ],
+      "r": 0,
+      "x": "Q = m × Lv = 2 × 2 260 = 4 520 kJ, soit environ 4,5 MJ. Les autres valeurs résultent d'erreurs d'un facteur dix ou d'un doublement de la masse. La vaporisation demande beaucoup plus d'énergie que la fusion, ce qui explique la forte sensation de fraîcheur lors de l'évaporation de la transpiration.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Lorsqu'on chauffe un gaz enfermé dans un récipient rigide, sa pression :",
+      "o": [
+        "augmente",
+        "diminue",
+        "reste constante",
+        "s'annule"
+      ],
+      "r": 0,
+      "x": "À volume constant, la pression d'un gaz augmente avec sa température, car l'agitation de ses molécules et leurs chocs contre les parois deviennent plus intenses. C'est pourquoi il ne faut jamais jeter une bombe aérosol au feu, même vide. Pour la même raison, on vérifie la pression des pneus à froid, avant de rouler.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une lumière de 400 nm éclaire un métal de travail d'extraction 1,9 eV (hc = 1 240 eV·nm). Le potentiel d'arrêt des électrons émis est d'environ :",
+      "o": [
+        "0,6 V",
+        "1,0 V",
+        "1,2 V",
+        "3,1 V"
+      ],
+      "r": 2,
+      "x": "Le photon transporte 1 240 / 400 = 3,1 eV ; l'énergie cinétique maximale vaut 3,1 – 1,9 = 1,2 eV, d'où un potentiel d'arrêt U0 = 1,2 V, puisque e × U0 = Ec max. La valeur 3,1 V oublie le travail d'extraction. Mesurer U0 pour plusieurs fréquences permet de déterminer la constante de Planck.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La radioactivité est une transformation qui concerne :",
+      "o": [
+        "les électrons des couches externes",
+        "le noyau des atomes",
+        "les molécules d'un gaz",
+        "les liaisons entre atomes"
+      ],
+      "r": 1,
+      "x": "La radioactivité est une transformation spontanée du noyau d'un atome instable, qui se désintègre en émettant un rayonnement. Les réactions chimiques, au contraire, ne concernent que les électrons externes et ne modifient pas les noyaux. Le phénomène fut découvert en 1896 par Henri Becquerel, puis étudié par Pierre et Marie Curie.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La demi-vie d'un élément radioactif est de 8 jours. Au bout de 24 jours, la fraction restante d'un échantillon est :",
+      "o": [
+        "1/2",
+        "1/3",
+        "1/4",
+        "1/8"
+      ],
+      "r": 3,
+      "x": "24 jours représentent trois demi-vies : la quantité est divisée par 2 trois fois, soit par 2³ = 8, et il reste 1/8 de l'échantillon. La fraction 1/3 résulte du raisonnement erroné selon lequel la quantité diminuerait proportionnellement au temps. L'iode 131, utilisé en médecine, a justement une demi-vie d'environ 8 jours.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le rayonnement radioactif constitué de noyaux d'hélium est :",
+      "o": [
+        "le rayonnement gamma",
+        "le rayonnement alpha",
+        "le rayonnement bêta moins",
+        "le rayonnement X"
+      ],
+      "r": 1,
+      "x": "Le rayonnement alpha est formé de noyaux d'hélium, composés de deux protons et deux neutrons ; il est arrêté par une simple feuille de papier. Le rayonnement bêta moins est constitué d'électrons, et le rayonnement gamma d'ondes électromagnétiques très énergétiques, qui nécessitent d'épaisses parois de plomb ou de béton pour être arrêtées.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La réaction nucléaire au cours de laquelle un noyau lourd se scinde en deux noyaux plus légers est :",
+      "o": [
+        "la fusion",
+        "la combustion",
+        "l'électrolyse",
+        "la fission"
+      ],
+      "r": 3,
+      "x": "La fission est la cassure d'un noyau lourd, comme l'uranium 235, en deux noyaux plus légers sous l'impact d'un neutron, avec libération d'une énergie considérable. Elle est exploitée dans les centrales nucléaires. La fusion, au contraire, réunit des noyaux légers en un noyau plus lourd : c'est la source d'énergie du Soleil et des étoiles.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'énergie rayonnée par le Soleil provient principalement :",
+      "o": [
+        "de la fusion de noyaux d'hydrogène",
+        "de la combustion du charbon",
+        "de la fission de l'uranium",
+        "de réactions chimiques d'oxydation"
+      ],
+      "r": 0,
+      "x": "Au cœur du Soleil, à plusieurs millions de degrés, des noyaux d'hydrogène fusionnent pour former des noyaux d'hélium en libérant une énorme énergie. Ce n'est en aucun cas une combustion chimique, qui aurait épuisé le Soleil en quelques milliers d'années. Cette énergie nous parvient sous forme de rayonnement, exploité par les panneaux solaires.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La longueur d'onde du photon émis lors de la transition de l'atome d'hydrogène du niveau n = 2 au niveau n = 1 (En = – 13,6 / n² en eV ; hc = 1 240 eV·nm) est d'environ :",
+      "o": [
+        "91 nm",
+        "103 nm",
+        "122 nm",
+        "656 nm"
+      ],
+      "r": 2,
+      "x": "ΔE = 13,6 × (1 – 1/4) = 10,2 eV, d'où λ = 1 240 / 10,2 ≈ 122 nm, dans l'ultraviolet. La valeur 656 nm correspond à la transition de 3 vers 2, dans le visible, et 103 nm à celle de 3 vers 1. Les transitions aboutissant au niveau fondamental forment la série de Lyman.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'activité en carbone 14 d'un bois ancien vaut le quart de celle d'un bois vivant. Sachant que la demi-vie du carbone 14 est de 5 730 ans, l'âge de ce bois est d'environ :",
+      "o": [
+        "1 433 ans",
+        "2 865 ans",
+        "11 460 ans",
+        "22 920 ans"
+      ],
+      "r": 2,
+      "x": "L'activité est divisée par 2 à chaque demi-vie : un quart correspond à deux demi-vies, soit 2 × 5 730 = 11 460 ans. La valeur 22 920 ans correspond à quatre demi-vies, ce qui donnerait une activité réduite au seizième. Cette méthode de datation s'applique aux restes organiques jusqu'à environ 50 000 ans.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Les noyaux les plus stables sont ceux dont l'énergie de liaison par nucléon est :",
+      "o": [
+        "la plus élevée",
+        "la plus faible",
+        "nulle",
+        "négative"
+      ],
+      "r": 0,
+      "x": "Plus l'énergie de liaison par nucléon est élevée, plus il faut d'énergie pour dissocier le noyau : les plus stables, comme le fer 56, se situent au sommet de la courbe d'Aston, vers 8,8 MeV par nucléon. La fission des noyaux lourds et la fusion des noyaux légers rapprochent les produits de cette zone, d'où la libération d'énergie.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La quantité de chaleur cédée par 500 g d'eau qui se refroidit de 90 °C à 30 °C (c = 4 180 J/kg·°C) est :",
+      "o": [
+        "2 090 J",
+        "12 540 J",
+        "62 700 J",
+        "125 400 J"
+      ],
+      "r": 3,
+      "x": "Q = m × c × Δθ = 0,5 × 4 180 × (90 – 30) = 125 400 J, soit environ 125 kJ. La valeur 62 700 J résulte de l'emploi de la température finale à la place de la variation de température. Cette chaleur cédée est égale à celle qu'il faudrait fournir pour réchauffer l'eau de 30 °C à 90 °C.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La fission d'un noyau d'uranium 235 libère environ 200 MeV. Cette énergie vaut en joules :",
+      "o": [
+        "3,2 × 10⁻¹⁷ J",
+        "3,2 × 10⁻¹¹ J",
+        "3,2 × 10⁻⁵ J",
+        "1,25 × 10¹⁵ J"
+      ],
+      "r": 1,
+      "x": "1 MeV = 10⁶ × 1,6 × 10⁻¹⁹ = 1,6 × 10⁻¹³ J, d'où E = 200 × 1,6 × 10⁻¹³ = 3,2 × 10⁻¹¹ J. La valeur 3,2 × 10⁻¹⁷ J correspond à 200 eV seulement, et 1,25 × 10¹⁵ à une division au lieu d'une multiplication. La fission d'un gramme d'uranium 235 libère ainsi près de 8 × 10¹⁰ J.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La vitesse de la lumière dans un milieu d'indice de réfraction 1,25 est :",
+      "o": [
+        "120 000 km/s",
+        "180 000 km/s",
+        "225 000 km/s",
+        "240 000 km/s"
+      ],
+      "r": 3,
+      "x": "v = c / n = 300 000 / 1,25 = 240 000 km/s. Multiplier par l'indice donnerait 375 000 km/s, valeur impossible puisque rien ne dépasse la vitesse de la lumière dans le vide. Plus l'indice de réfraction d'un milieu est élevé, plus la lumière s'y propage lentement.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Les rayonnements invisibles de la lumière solaire responsables des coups de soleil sont :",
+      "o": [
+        "les infrarouges",
+        "les ultraviolets",
+        "les ondes radio",
+        "les micro-ondes"
+      ],
+      "r": 1,
+      "x": "Les rayonnements ultraviolets, de longueur d'onde inférieure à 400 nm, sont responsables des coups de soleil et favorisent les cancers de la peau en cas d'exposition prolongée. Les infrarouges, de longueur d'onde supérieure à 800 nm, sont surtout ressentis comme de la chaleur. La couche d'ozone de l'atmosphère filtre une grande partie des ultraviolets solaires.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une caméra thermique détecte principalement :",
+      "o": [
+        "les ultraviolets",
+        "les rayons X",
+        "les infrarouges",
+        "les ondes sonores"
+      ],
+      "r": 2,
+      "x": "Tout corps chaud émet des infrarouges, d'autant plus intensément que sa température est élevée : la caméra thermique les détecte et les convertit en image. Elle permet de voir des personnes dans l'obscurité ou de repérer des pertes de chaleur dans un bâtiment. Les rayons X, beaucoup plus énergétiques, servent à la radiographie médicale.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Les rayons X utilisés en radiographie médicale traversent facilement :",
+      "o": [
+        "les tissus mous",
+        "les os",
+        "les plaques de plomb",
+        "les parois de béton épais"
+      ],
+      "r": 0,
+      "x": "Les rayons X traversent facilement les tissus mous, comme la peau et les muscles, mais sont davantage absorbés par les os, riches en calcium, qui apparaissent en blanc sur le cliché. Le plomb et le béton épais les arrêtent, d'où leur usage pour protéger les manipulateurs. Ils furent découverts par Wilhelm Röntgen en 1895.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La couleur d'une lumière monochromatique est caractérisée par :",
+      "o": [
+        "sa longueur d'onde dans le vide",
+        "son intensité lumineuse",
+        "la distance qu'elle a parcourue",
+        "la taille de la source"
+      ],
+      "r": 0,
+      "x": "Une lumière monochromatique est caractérisée par sa fréquence, ou par sa longueur d'onde dans le vide, qui détermine sa couleur : environ 400 nm pour le violet et 800 nm pour le rouge. L'intensité lumineuse modifie seulement la luminosité perçue. Le laser est une source de lumière pratiquement monochromatique, utilisée dans les lecteurs et les pointeurs.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une lumière de 600 nm traverse une fente de 0,2 mm ; l'écran est à 2 m. La largeur de la tache centrale de diffraction, égale à 2λD/a, est :",
+      "o": [
+        "3 mm",
+        "6 mm",
+        "12 mm",
+        "24 mm"
+      ],
+      "r": 2,
+      "x": "L = 2 × λ × D / a = 2 × 6 × 10⁻⁷ × 2 / 2 × 10⁻⁴ = 1,2 × 10⁻² m, soit 12 mm. La valeur 6 mm oublie le facteur 2 et ne correspond qu'à la demi-largeur. Remplacer la lumière rouge par une lumière bleue, de longueur d'onde plus courte, rétrécirait la tache centrale.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Pour obtenir des interférences lumineuses, les deux sources doivent être :",
+      "o": [
+        "de couleurs nettement différentes",
+        "cohérentes et de même fréquence",
+        "éloignées de plusieurs mètres",
+        "d'intensités très différentes"
+      ],
+      "r": 1,
+      "x": "Deux sources ne produisent des interférences stables que si elles sont cohérentes : même fréquence et déphasage constant. On les obtient en pratique en divisant la lumière d'une source unique, comme dans les fentes de Young, au début du XIXe siècle. Deux lampes indépendantes ne donnent jamais de franges, leurs émissions étant désordonnées.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une corde de guitare vibre 440 fois par seconde. La période de sa vibration est d'environ :",
+      "o": [
+        "0,227 ms",
+        "0,44 ms",
+        "1,14 ms",
+        "2,27 ms"
+      ],
+      "r": 3,
+      "x": "La période est l'inverse de la fréquence : T = 1 / 440 ≈ 0,00227 s, soit 2,27 ms. La valeur 0,227 ms provient d'une erreur de puissance de dix. Une fréquence de 440 Hz correspond à la note « la » utilisée comme référence pour accorder les instruments de musique.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un gaz froid traversé par de la lumière blanche absorbe les radiations :",
+      "o": [
+        "de toutes les longueurs d'onde",
+        "qu'il serait capable d'émettre s'il était chaud",
+        "situées uniquement dans l'infrarouge",
+        "de couleur rouge uniquement"
+      ],
+      "r": 1,
+      "x": "Un gaz absorbe exactement les radiations qu'il émet lorsqu'il est excité : son spectre d'absorption présente des raies noires aux mêmes longueurs d'onde que ses raies d'émission. Les raies sombres du spectre solaire révèlent ainsi la composition de l'atmosphère du Soleil. L'hélium a d'ailleurs été découvert dans le Soleil, en 1868, avant de l'être sur Terre.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Lors de la solidification d'un corps pur sous pression constante, il y a :",
+      "o": [
+        "absorption de chaleur et baisse de température",
+        "absorption de chaleur à température constante",
+        "dégagement de chaleur et hausse de température",
+        "dégagement de chaleur à température constante"
+      ],
+      "r": 3,
+      "x": "La solidification d'un corps pur libère de la chaleur, à température constante, ce qui se traduit par un palier sur la courbe de refroidissement. C'est le changement d'état inverse de la fusion, qui absorbe la même quantité d'énergie. Dans les régions froides, on arrose parfois les vergers avant une gelée, car l'eau qui gèle libère de la chaleur et protège les bourgeons.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "En altitude, la température d'ébullition de l'eau est :",
+      "o": [
+        "inférieure à 100 °C",
+        "égale à 100 °C",
+        "supérieure à 100 °C",
+        "égale à 0 °C"
+      ],
+      "r": 0,
+      "x": "En altitude, la pression atmosphérique est plus faible et l'eau bout à une température inférieure à 100 °C, environ 85 °C au sommet du mont Blanc. Les aliments y cuisent donc plus lentement. À l'inverse, l'autocuiseur augmente la pression au-dessus de l'eau, ce qui élève sa température d'ébullition et accélère la cuisson.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'unité de la capacité thermique massique est :",
+      "o": [
+        "le J/kg",
+        "le J/°C",
+        "le J/(kg·°C)",
+        "le W/kg"
+      ],
+      "r": 2,
+      "x": "La capacité thermique massique s'exprime en joules par kilogramme et par degré Celsius, J/(kg·°C), ou J/(kg·K). Elle représente l'énergie nécessaire pour élever de 1 °C la température d'un kilogramme de substance. L'unité J/kg est celle des chaleurs latentes de changement d'état, qui ne font pas intervenir de variation de température.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le rayonnement gamma est :",
+      "o": [
+        "un flux d'électrons rapides",
+        "un flux de noyaux d'hélium",
+        "une onde électromagnétique très énergétique",
+        "un faisceau de protons lents"
+      ],
+      "r": 2,
+      "x": "Le rayonnement gamma est une onde électromagnétique de très haute énergie, émise par des noyaux excités lors des désintégrations radioactives. Il n'est pas constitué de particules chargées, contrairement aux rayonnements alpha et bêta. Très pénétrant, il exige des protections épaisses en plomb ou en béton, et sert aussi à stériliser le matériel médical.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'unité d'activité d'une source radioactive est :",
+      "o": [
+        "le becquerel",
+        "le gray",
+        "le sievert",
+        "le coulomb"
+      ],
+      "r": 0,
+      "x": "L'activité d'une source radioactive s'exprime en becquerels (Bq), un becquerel correspondant à une désintégration par seconde. Le gray mesure la dose absorbée par la matière et le sievert la dose efficace, qui tient compte des effets biologiques sur l'organisme. Cette unité rend hommage à Henri Becquerel, découvreur de la radioactivité.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le noyau d'uranium 235 (Z = 92) contient un nombre de neutrons égal à :",
+      "o": [
+        "92",
+        "118",
+        "135",
+        "143"
+      ],
+      "r": 3,
+      "x": "N = A – Z = 235 – 92 = 143 neutrons. La valeur 92 correspond au nombre de protons. L'uranium 235 est l'isotope fissile utilisé dans les centrales nucléaires ; il ne représente qu'environ 0,7 % de l'uranium naturel, le reste étant surtout composé d'uranium 238, qui compte trois neutrons de plus.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans la réaction de fusion ²₁H + ³₁H → ⁴₂He + X, la particule X est :",
+      "o": [
+        "un proton",
+        "un neutron",
+        "un électron",
+        "un noyau d'hélium 3"
+      ],
+      "r": 1,
+      "x": "La conservation du nombre de masse donne A = 2 + 3 – 4 = 1, et celle du nombre de charge Z = 1 + 1 – 2 = 0 : X est un neutron. Un proton aurait un nombre de charge égal à 1. Cette fusion du deutérium et du tritium, qui libère environ 17,6 MeV, est étudiée pour produire de l'électricité dans les futurs réacteurs.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Lors d'une désintégration bêta moins, le noyau émet :",
+      "o": [
+        "un noyau d'hélium",
+        "un proton",
+        "un neutron",
+        "un électron"
+      ],
+      "r": 3,
+      "x": "Lors d'une désintégration bêta moins, un neutron du noyau se transforme en proton en émettant un électron : le numéro atomique augmente d'une unité, le nombre de masse restant inchangé. L'émission d'un noyau d'hélium correspond à la désintégration alpha. Le carbone 14 se désintègre ainsi en azote 14 par radioactivité bêta moins.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La distance focale d'une lentille de vergence + 5 δ est :",
+      "o": [
+        "5 cm",
+        "20 cm",
+        "50 cm",
+        "5 m"
+      ],
+      "r": 1,
+      "x": "f = 1 / C = 1 / 5 = 0,2 m, soit 20 cm. La valeur 5 m confond la vergence et la distance focale. Une lentille de + 5 δ est convergente ; elle peut servir de loupe, à condition de placer l'objet à moins de 20 cm de la lentille, entre celle-ci et son foyer objet.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'image d'un objet très éloigné donnée par une lentille convergente se forme :",
+      "o": [
+        "sur la lentille elle-même",
+        "au foyer objet",
+        "dans le plan focal image",
+        "à l'infini"
+      ],
+      "r": 2,
+      "x": "Les rayons provenant d'un objet très éloigné arrivent pratiquement parallèles et convergent dans le plan focal image de la lentille, où se forme une image réelle et renversée. C'est le principe utilisé pour concentrer les rayons du Soleil avec une loupe. L'image à l'infini est obtenue au contraire pour un objet placé au foyer objet.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un miroir concave est notamment utilisé pour :",
+      "o": [
+        "concentrer les rayons du soleil en un point",
+        "élargir le champ de vision des rétroviseurs",
+        "donner une image parfaitement symétrique",
+        "disperser la lumière blanche en couleurs"
+      ],
+      "r": 0,
+      "x": "Un miroir concave fait converger les rayons parallèles en son foyer : il sert à concentrer l'énergie solaire dans les cuiseurs et fours solaires, ou à réaliser des projecteurs. Les miroirs convexes, qui élargissent le champ de vision, équipent les rétroviseurs et les carrefours dangereux. La décomposition de la lumière blanche est l'effet d'un prisme.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "En synthèse additive, la couleur complémentaire du bleu est :",
+      "o": [
+        "le jaune",
+        "le rouge",
+        "le vert",
+        "le cyan"
+      ],
+      "r": 0,
+      "x": "Deux couleurs sont complémentaires lorsque leur superposition donne du blanc : le bleu et le jaune, ce dernier étant la somme du rouge et du vert, sont complémentaires. De même, le rouge est complémentaire du cyan et le vert du magenta. Ces associations permettent de comprendre la couleur des objets et le fonctionnement des filtres colorés.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans l'expérience des fentes de Young, si l'on rapproche les deux fentes, l'interfrange :",
+      "o": [
+        "diminue",
+        "reste inchangé",
+        "augmente",
+        "s'annule"
+      ],
+      "r": 2,
+      "x": "L'interfrange vaut i = λ × D / a : il est inversement proportionnel à la distance a entre les fentes, et augmente donc quand on les rapproche. Il augmente aussi avec la longueur d'onde et la distance de l'écran. Pour une même expérience, les franges obtenues en lumière rouge sont ainsi plus espacées qu'en lumière bleue.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La chaleur latente de fusion de la glace vaut 334 kJ/kg. L'énergie libérée par la solidification de 3 kg d'eau à 0 °C est :",
+      "o": [
+        "111 kJ",
+        "1 002 kJ",
+        "3 340 kJ",
+        "10 020 kJ"
+      ],
+      "r": 1,
+      "x": "La solidification libère la même énergie que celle absorbée par la fusion : Q = m × Lf = 3 × 334 = 1 002 kJ. La valeur 111 kJ résulte d'une division au lieu d'une multiplication. Ce dégagement de chaleur explique qu'un lac gèle lentement, l'eau qui se solidifie réchauffant légèrement son environnement.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le son est une onde :",
+      "o": [
+        "électromagnétique transversale",
+        "lumineuse visible",
+        "qui se propage dans le vide",
+        "mécanique longitudinale"
+      ],
+      "r": 3,
+      "x": "Le son est une onde mécanique longitudinale : les couches d'air sont alternativement comprimées et dilatées dans la direction de propagation. Contrairement aux ondes électromagnétiques, il ne se propage pas dans le vide. Une vague à la surface de l'eau ou une onde le long d'une corde sont au contraire des ondes transversales.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le phénomène qui permet d'entendre un son derrière un mur par une porte ouverte est principalement :",
+      "o": [
+        "la diffraction",
+        "la réfraction",
+        "la dispersion",
+        "l'absorption"
+      ],
+      "r": 0,
+      "x": "Lorsqu'une onde traverse une ouverture de taille comparable à sa longueur d'onde, elle s'étale dans toutes les directions : c'est la diffraction. Les sons, de longueurs d'onde de quelques centimètres à quelques mètres, contournent ainsi facilement les obstacles. La lumière, de longueur d'onde beaucoup plus courte, ne se diffracte de façon visible qu'à travers de très petites fentes.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Par temps clair, en milieu de journée au Sahel, le rayonnement solaire reçu au sol atteint environ :",
+      "o": [
+        "1 W/m²",
+        "100 W/m²",
+        "1 000 W/m²",
+        "100 000 W/m²"
+      ],
+      "r": 2,
+      "x": "Par temps clair, le rayonnement solaire reçu au sol atteint environ 1 000 W/m² en milieu de journée, valeur de référence utilisée pour caractériser les panneaux photovoltaïques. Un panneau de 1 m² d'un rendement de 20 % fournit donc environ 200 W. Le fort ensoleillement des pays sahéliens en fait des zones très favorables à l'énergie solaire.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le nombre d'isomères de constitution correspondant à la formule brute C4H10 est :",
+      "o": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "r": 1,
+      "x": "La formule C4H10 correspond à deux isomères : le butane, à chaîne linéaire, et le 2-méthylpropane, à chaîne ramifiée. Les isomères ont la même formule brute mais des formules développées et des propriétés différentes. Le nombre d'isomères croît vite avec le nombre de carbones : C5H12 en compte trois.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La distillation sépare les constituants d'un mélange grâce à leurs différences de :",
+      "o": [
+        "couleur",
+        "masse volumique",
+        "solubilité dans l'eau",
+        "température d'ébullition"
+      ],
+      "r": 3,
+      "x": "Lors d'une distillation, le constituant le plus volatil, de température d'ébullition la plus basse, se vaporise le premier, puis se condense dans le réfrigérant. On recueille ainsi l'eau pure à partir d'eau salée ou l'alcool à partir d'un liquide fermenté. La différence de masse volumique est exploitée, elle, par la décantation.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le nom de l'alcane de formule CH3–CH(CH3)–CH2–CH3 est :",
+      "o": [
+        "2-méthylbutane",
+        "3-méthylbutane",
+        "2-éthylpropane",
+        "pentane"
+      ],
+      "r": 0,
+      "x": "La chaîne carbonée la plus longue comporte quatre carbones, et le groupe méthyle est porté par le carbone 2 en numérotant de façon à obtenir le plus petit indice : 2-méthylbutane. Le nom 3-méthylbutane résulte d'une mauvaise numérotation. Ce composé est un isomère du pentane, de même formule brute C5H12.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La chromatographie sur papier permet :",
+      "o": [
+        "de mesurer la masse d'une substance",
+        "de déterminer le pH d'une solution",
+        "de séparer et identifier les constituants d'un mélange",
+        "de purifier l'eau des puits"
+      ],
+      "r": 2,
+      "x": "La chromatographie sépare les constituants d'un mélange, comme les colorants d'une encre, grâce à leurs vitesses de migration différentes sur le papier, entraînés par un solvant. Chaque constituant forme une tache à une hauteur caractéristique. En comparant ces taches à celles de substances connues, on identifie les constituants du mélange.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un corps pur se reconnaît au fait que :",
+      "o": [
+        "il est toujours de couleur blanche",
+        "il est forcément solide à 20 °C",
+        "ses températures de changement d'état sont fixes",
+        "il contient au moins deux constituants"
+      ],
+      "r": 2,
+      "x": "Un corps pur ne contient qu'une seule espèce chimique et possède des températures de fusion et d'ébullition fixes, sous une pression donnée. Un mélange présente au contraire des changements d'état qui s'étalent sur un intervalle de température. L'eau pure fond à 0 °C et bout à 100 °C sous la pression normale, ce qui permet de contrôler sa pureté.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La solubilité du sel dans l'eau est d'environ 360 g/L à 20 °C. Si l'on ajoute 400 g de sel dans 1 L d'eau à 20 °C :",
+      "o": [
+        "environ 40 g restent non dissous",
+        "tout le sel se dissout",
+        "360 g restent non dissous",
+        "l'eau s'évapore aussitôt"
+      ],
+      "r": 0,
+      "x": "Un litre d'eau ne peut dissoudre qu'environ 360 g de sel à 20 °C : la solution est alors saturée et les 400 – 360 = 40 g restants se déposent au fond. La solubilité varie avec la température et dépend de la nature du soluté et du solvant. Les marais salants exploitent l'évaporation de l'eau pour faire cristalliser le sel.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La masse molaire de l'acide sulfurique H2SO4 (H = 1 ; S = 32 ; O = 16 g/mol) est :",
+      "o": [
+        "49 g/mol",
+        "82 g/mol",
+        "97 g/mol",
+        "98 g/mol"
+      ],
+      "r": 3,
+      "x": "M(H2SO4) = 2 × 1 + 32 + 4 × 16 = 98 g/mol. La valeur 97 g/mol correspond à l'ion hydrogénosulfate HSO4⁻, auquel il manque un hydrogène, et 82 g/mol à l'acide sulfureux H2SO3. L'acide sulfurique, très corrosif, est l'électrolyte des batteries de voiture au plomb et doit être manipulé avec des gants et des lunettes de protection.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La masse de 0,25 mol de carbonate de calcium CaCO3 (Ca = 40 ; C = 12 ; O = 16 g/mol) est :",
+      "o": [
+        "4 g",
+        "25 g",
+        "100 g",
+        "400 g"
+      ],
+      "r": 1,
+      "x": "M(CaCO3) = 40 + 12 + 3 × 16 = 100 g/mol, d'où m = n × M = 0,25 × 100 = 25 g. La valeur 400 g résulte de la division M / n au lieu du produit. Le carbonate de calcium est le constituant principal du calcaire, de la craie et des coquilles d'œufs.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "On fait réagir 2 mol de dihydrogène avec 2 mol de dioxygène selon 2 H2 + O2 → 2 H2O. Le réactif limitant est :",
+      "o": [
+        "le dioxygène",
+        "l'eau formée",
+        "l'azote de l'air",
+        "le dihydrogène"
+      ],
+      "r": 3,
+      "x": "Les 2 mol de dihydrogène ne réagissent qu'avec 1 mol de dioxygène : le dihydrogène est entièrement consommé et constitue le réactif limitant, tandis qu'il reste 1 mol de dioxygène en excès. La réaction produit 2 mol d'eau. Le réactif limitant est celui qui détermine la quantité maximale de produit formé.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une synthèse devait produire 50 g de produit et n'en fournit que 40 g. Le rendement est :",
+      "o": [
+        "20 %",
+        "80 %",
+        "90 %",
+        "125 %"
+      ],
+      "r": 1,
+      "x": "Le rendement vaut η = masse obtenue / masse théorique = 40 / 50 = 0,8, soit 80 %. La valeur 125 % résulte de l'inversion du rapport, impossible pour un rendement. Les pertes s'expliquent par une réaction incomplète, des réactions parasites ou des pertes de matière lors des étapes de filtration et de purification.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'alcane de formule C3H8 est :",
+      "o": [
+        "le méthane",
+        "l'éthane",
+        "le propane",
+        "le butane"
+      ],
+      "r": 2,
+      "x": "Le propane, C3H8, est l'alcane à trois atomes de carbone, utilisé comme gaz combustible. Les quatre premiers alcanes sont le méthane CH4, l'éthane C2H6, le propane C3H8 et le butane C4H10 ; à partir de cinq carbones, les noms dérivent du grec : pentane, hexane, heptane. Tous répondent à la formule générale CnH2n+2.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La formule générale des alcènes est :",
+      "o": [
+        "CnH2n",
+        "CnH2n+2",
+        "CnH2n–2",
+        "CnHn"
+      ],
+      "r": 0,
+      "x": "Les alcènes, hydrocarbures possédant une double liaison carbone-carbone, ont pour formule générale CnH2n, comme l'éthylène C2H4. La formule CnH2n+2 est celle des alcanes, qui n'ont que des liaisons simples, et CnH2n–2 celle des alcynes, qui possèdent une triple liaison. La double liaison rend les alcènes plus réactifs que les alcanes.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La réaction des alcènes avec le dibrome, qui décolore l'eau de brome, est une réaction :",
+      "o": [
+        "d'addition",
+        "de substitution",
+        "de combustion",
+        "de neutralisation"
+      ],
+      "r": 0,
+      "x": "Le dibrome s'additionne sur la double liaison d'un alcène, qui disparaît : c'est une réaction d'addition, révélée par la décoloration de l'eau de brome orangée. Les alcanes, sans double liaison, ne décolorent pas l'eau de brome à froid et dans l'obscurité. Ce test permet donc de distinguer un alcène d'un alcane.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le groupe caractéristique des acides carboxyliques est :",
+      "o": [
+        "–OH",
+        "–NH2",
+        "–COOH",
+        "–CHO"
+      ],
+      "r": 2,
+      "x": "Les acides carboxyliques possèdent le groupe carboxyle –COOH, comme l'acide éthanoïque CH3COOH, principal constituant du vinaigre. Le groupe –OH caractérise les alcools, –NH2 les amines et –CHO les aldéhydes. Les acides carboxyliques sont des acides faibles qui réagissent avec les alcools pour former des esters, souvent responsables de l'odeur des fruits.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'acide présent dans le vinaigre est :",
+      "o": [
+        "l'acide chlorhydrique",
+        "l'acide éthanoïque",
+        "l'acide sulfurique",
+        "l'acide nitrique"
+      ],
+      "r": 1,
+      "x": "Le vinaigre contient de l'acide éthanoïque, aussi appelé acide acétique, de formule CH3COOH, à une concentration d'environ 6 à 8 %. Il se forme par oxydation de l'éthanol sous l'action de bactéries, ce qui explique qu'une boisson alcoolisée laissée à l'air devienne aigre. Les acides chlorhydrique, sulfurique et nitrique sont des acides forts minéraux.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La réaction entre un acide carboxylique et un alcool produit :",
+      "o": [
+        "un alcane et de l'eau",
+        "un sel et du dihydrogène",
+        "un aldéhyde et du dioxygène",
+        "un ester et de l'eau"
+      ],
+      "r": 3,
+      "x": "L'estérification est la réaction entre un acide carboxylique et un alcool, qui forme un ester et de l'eau ; elle est lente et limitée. Les esters ont souvent des odeurs fruitées et sont utilisés comme arômes et parfums. La réaction inverse, qui décompose un ester par l'eau, s'appelle l'hydrolyse.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La saponification d'un corps gras par la soude produit :",
+      "o": [
+        "de l'éthanol et du sel",
+        "du savon et du glycérol",
+        "du vinaigre et de l'eau",
+        "du biogaz et du charbon"
+      ],
+      "r": 1,
+      "x": "La saponification est la réaction d'un corps gras avec une base forte, comme la soude, qui produit du savon et du glycérol. Le beurre de karité, abondant au Burkina Faso, est ainsi transformé en savon artisanal par de nombreuses coopératives de femmes. Cette réaction, contrairement à l'estérification, est totale.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Les engrais NPK apportent aux plantes les éléments :",
+      "o": [
+        "sodium, phosphore et potassium",
+        "azote, plomb et potassium",
+        "nickel, phosphore et krypton",
+        "azote, phosphore et potassium"
+      ],
+      "r": 3,
+      "x": "Les lettres N, P et K désignent respectivement l'azote, le phosphore et le potassium, trois éléments nutritifs majeurs des plantes. L'azote favorise notamment la croissance végétative, le phosphore contribue au développement des racines et à la floraison, tandis que le potassium participe à la résistance et à la qualité des récoltes. Un engrais 15-15-15 contient conventionnellement 15 % d'azote (N), 15 % de phosphate exprimé en P₂O₅ et 15 % de potasse exprimée en K₂O.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'urée, engrais azoté, a pour formule CO(NH2)2. Sa masse molaire (C = 12 ; O = 16 ; N = 14 ; H = 1 g/mol) est :",
+      "o": [
+        "60 g/mol",
+        "62 g/mol",
+        "74 g/mol",
+        "88 g/mol"
+      ],
+      "r": 0,
+      "x": "M = 12 + 16 + 2 × (14 + 2 × 1) = 12 + 16 + 32 = 60 g/mol. Les autres valeurs résultent d'erreurs dans l'application des indices des groupes NH2. L'urée contient environ 46 % d'azote en masse, soit 28 / 60, ce qui en fait l'un des engrais azotés les plus concentrés et les plus utilisés.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Une eau est dite dure lorsqu'elle contient beaucoup d'ions :",
+      "o": [
+        "sodium et chlorure",
+        "fer et cuivre",
+        "calcium et magnésium",
+        "potassium et nitrate"
+      ],
+      "r": 2,
+      "x": "La dureté d'une eau est due à sa richesse en ions calcium Ca²⁺ et magnésium Mg²⁺. Une eau dure mousse difficilement avec le savon et forme du tartre dans les bouilloires et les chauffe-eau. Elle n'est pas dangereuse pour la santé, mais elle augmente la consommation de savon et réduit la durée de vie des appareils.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Pour désinfecter l'eau de boisson, on utilise couramment :",
+      "o": [
+        "du sulfate de cuivre",
+        "de l'acide sulfurique",
+        "du chlore ou de l'eau de javel",
+        "du nitrate d'argent"
+      ],
+      "r": 2,
+      "x": "Le chlore et ses dérivés, comme l'hypochlorite de sodium contenu dans l'eau de javel, détruisent les microbes responsables de maladies comme le choléra ou la typhoïde. Une à deux gouttes d'eau de javel par litre, suivies d'une attente d'environ trente minutes, peuvent suffire à désinfecter l'eau d'un puits. Le sulfate de cuivre et l'acide sulfurique sont toxiques.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'électrolyse d'une solution concentrée de chlorure de sodium produit à l'anode :",
+      "o": [
+        "du dichlore",
+        "du dihydrogène",
+        "du sodium",
+        "du dioxygène pur"
+      ],
+      "r": 0,
+      "x": "Lors de l'électrolyse du chlorure de sodium en solution, les ions chlorure s'oxydent à l'anode en dichlore Cl2, tandis que du dihydrogène se dégage à la cathode. La solution s'enrichit en soude. Ce procédé industriel, appelé électrolyse chlore-soude, fournit le chlore utilisé pour traiter l'eau et fabriquer l'eau de javel.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Dans une pile zinc-cuivre, le pôle négatif est :",
+      "o": [
+        "l'électrode de cuivre",
+        "la solution de sulfate de cuivre",
+        "le pont salin",
+        "l'électrode de zinc"
+      ],
+      "r": 3,
+      "x": "Dans la pile Daniell, le zinc, plus réducteur, s'oxyde en libérant des électrons : il constitue le pôle négatif. Les électrons circulent dans le circuit extérieur vers l'électrode de cuivre, pôle positif, où les ions Cu²⁺ sont réduits. Le pont salin assure la neutralité électrique des solutions et ferme le circuit.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'aluminium, bien que plus réducteur que le fer, résiste à la corrosion car :",
+      "o": [
+        "il ne réagit jamais avec le dioxygène",
+        "il se couvre d'une couche d'alumine protectrice",
+        "il est toujours recouvert de peinture",
+        "il contient beaucoup de cuivre"
+      ],
+      "r": 1,
+      "x": "Au contact de l'air, l'aluminium se recouvre d'une fine couche d'alumine Al2O3, imperméable et adhérente, qui protège le métal en profondeur. La rouille du fer, au contraire, est poreuse et laisse l'oxydation se poursuivre. Cette propriété, avec sa légèreté, explique l'usage de l'aluminium pour les marmites, les cadres de fenêtres et les canettes.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La formule de l'ion sulfate est :",
+      "o": [
+        "SO3²⁻",
+        "S²⁻",
+        "HSO3⁻",
+        "SO4²⁻"
+      ],
+      "r": 3,
+      "x": "L'ion sulfate a pour formule SO4²⁻ ; on le trouve dans le sulfate de cuivre CuSO4 et dans l'acide sulfurique. SO3²⁻ est l'ion sulfite et S²⁻ l'ion sulfure. On identifie les ions sulfate grâce au chlorure de baryum, qui forme avec eux un précipité blanc de sulfate de baryum.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La formule de l'ion nitrate est :",
+      "o": [
+        "NH4⁺",
+        "NO3⁻",
+        "NO2⁻",
+        "N³⁻"
+      ],
+      "r": 1,
+      "x": "L'ion nitrate a pour formule NO3⁻ ; présent dans de nombreux engrais, il est absorbé par les racines et fournit de l'azote aux plantes. NH4⁺ est l'ion ammonium et NO2⁻ l'ion nitrite. Un excès de nitrates dans les eaux, dû aux engrais, peut les rendre impropres à la consommation et favoriser la prolifération des algues.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le gaz ammoniac a pour formule :",
+      "o": [
+        "NO2",
+        "N2O",
+        "NH3",
+        "HNO3"
+      ],
+      "r": 2,
+      "x": "L'ammoniac a pour formule NH3 ; c'est un gaz à l'odeur piquante, très soluble dans l'eau, dont la solution est basique. Il est fabriqué industriellement par le procédé Haber-Bosch, à partir du diazote de l'air et du dihydrogène, et sert surtout à produire des engrais azotés. HNO3 est la formule de l'acide nitrique.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un oxyde métallique, comme l'oxyde de sodium Na2O, dissous dans l'eau donne une solution :",
+      "o": [
+        "basique",
+        "acide",
+        "neutre",
+        "saturée en dihydrogène"
+      ],
+      "r": 0,
+      "x": "Les oxydes métalliques solubles réagissent avec l'eau pour former des solutions basiques : Na2O donne de la soude NaOH. Les oxydes de non-métaux, comme le dioxyde de carbone ou le dioxyde de soufre, donnent au contraire des solutions acides. C'est ce qui explique les pluies acides, dues aux oxydes de soufre et d'azote rejetés par les industries.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le pH d'un sol trop acide pour les cultures peut être relevé en apportant :",
+      "o": [
+        "de la chaux ou du calcaire broyé",
+        "de l'acide sulfurique dilué",
+        "du sel de cuisine en quantité",
+        "du vinaigre de cuisine"
+      ],
+      "r": 0,
+      "x": "La chaux et le calcaire broyé sont des produits basiques qui neutralisent l'acidité du sol : c'est le chaulage. Un sol trop acide limite l'absorption des éléments nutritifs par les plantes et réduit les rendements. L'acide sulfurique et le vinaigre accentueraient au contraire l'acidité, tandis que le sel nuirait aux cultures.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le nombre de molécules contenues dans 0,5 mol d'eau est d'environ (NA = 6,02 × 10²³ mol⁻¹) :",
+      "o": [
+        "6,02 × 10²²",
+        "1,2 × 10²³",
+        "3,01 × 10²³",
+        "1,2 × 10²⁴"
+      ],
+      "r": 2,
+      "x": "N = n × NA = 0,5 × 6,02 × 10²³ = 3,01 × 10²³ molécules. La valeur 1,2 × 10²⁴ résulte d'une division par 0,5 au lieu d'une multiplication. Ce nombre colossal de molécules dans seulement 9 g d'eau montre à quel point les molécules sont petites.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La combustion complète d'un hydrocarbure produit :",
+      "o": [
+        "du monoxyde de carbone et du dihydrogène",
+        "du dioxyde de carbone et de l'eau",
+        "du carbone et du dioxygène",
+        "du méthane et du diazote"
+      ],
+      "r": 1,
+      "x": "La combustion complète d'un hydrocarbure dans un excès de dioxygène produit du dioxyde de carbone et de l'eau, en libérant de la chaleur. Si le dioxygène manque, la combustion est incomplète et produit du monoxyde de carbone toxique et des particules de carbone, la suie. Une flamme bleue indique une combustion complète, une flamme jaune une combustion incomplète.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le biogaz produit par la fermentation des déchets organiques est principalement constitué de :",
+      "o": [
+        "dioxygène",
+        "butane",
+        "dihydrogène",
+        "méthane"
+      ],
+      "r": 3,
+      "x": "Le biogaz, obtenu par fermentation sans air des déjections animales et des déchets végétaux dans un biodigesteur, contient surtout du méthane, accompagné de dioxyde de carbone. Il sert à la cuisson et à l'éclairage, et le résidu de fermentation constitue un excellent engrais. Le Burkina Faso promeut les biodigesteurs domestiques en milieu rural.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le gaz à effet de serre rejeté en grande quantité par les combustions est :",
+      "o": [
+        "le dioxygène",
+        "le dioxyde de carbone",
+        "le diazote",
+        "l'argon"
+      ],
+      "r": 1,
+      "x": "Le dioxyde de carbone, rejeté par la combustion du bois, du charbon, du pétrole et du gaz, est le principal gaz à effet de serre d'origine humaine. Il retient une partie du rayonnement infrarouge émis par la Terre, ce qui réchauffe l'atmosphère. Le méthane et la vapeur d'eau sont aussi des gaz à effet de serre, contrairement au dioxygène et au diazote.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'équation équilibrée de la réaction du sodium avec l'eau est :",
+      "o": [
+        "Na + H2O → NaOH + H2",
+        "Na + 2 H2O → NaOH + H2",
+        "2 Na + H2O → 2 NaOH + H2",
+        "2 Na + 2 H2O → 2 NaOH + H2"
+      ],
+      "r": 3,
+      "x": "L'équation 2 Na + 2 H2O → 2 NaOH + H2 compte 2 sodiums, 4 hydrogènes et 2 oxygènes de chaque côté. Sans coefficients, l'hydrogène n'est pas équilibré, car la molécule H2 en contient deux. Cette réaction est violente : le sodium, très réducteur, se conserve sous le pétrole pour éviter tout contact avec l'humidité de l'air.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "À 25 °C, le pH d'une solution d'acide chlorhydrique de concentration 10⁻⁴ mol/L est :",
+      "o": [
+        "4",
+        "7",
+        "10",
+        "14"
+      ],
+      "r": 0,
+      "x": "L'acide chlorhydrique est un acide fort totalement dissocié : [H3O⁺] = 10⁻⁴ mol/L, d'où pH = – log 10⁻⁴ = 4. La valeur 10 correspondrait à une solution de soude de même concentration. Le pH est d'autant plus bas que la solution est concentrée en ions hydronium, et donc plus acide.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "À 25 °C, une solution contient des ions H3O⁺ à la concentration de 10⁻⁹ mol/L. Elle est :",
+      "o": [
+        "acide",
+        "neutre",
+        "basique",
+        "fortement acide"
+      ],
+      "r": 2,
+      "x": "Le pH vaut – log 10⁻⁹ = 9, valeur supérieure à 7 : la solution est basique. Dans une solution basique, la concentration en ions hydroxyde OH⁻, ici 10⁻⁵ mol/L, dépasse celle des ions hydronium. Une solution neutre à 25 °C contient autant d'ions H3O⁺ que d'ions OH⁻, soit 10⁻⁷ mol/L de chacun.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Le métal qui conduit le mieux le courant électrique est :",
+      "o": [
+        "le fer",
+        "l'aluminium",
+        "l'argent",
+        "le plomb"
+      ],
+      "r": 2,
+      "x": "L'argent est le meilleur conducteur électrique, suivi du cuivre, de l'or et de l'aluminium. Son prix élevé limite son emploi aux contacts électriques de précision. Le cuivre, presque aussi bon conducteur et bien moins cher, est le métal le plus utilisé pour les fils électriques, tandis que l'aluminium, plus léger, équipe les lignes aériennes.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'alliage de cuivre et de zinc s'appelle :",
+      "o": [
+        "le laiton",
+        "le bronze",
+        "l'acier",
+        "la fonte"
+      ],
+      "r": 0,
+      "x": "Le laiton est un alliage de cuivre et de zinc, utilisé pour les robinets, les serrures et les instruments de musique. Le bronze est un alliage de cuivre et d'étain, employé notamment par les bronziers burkinabè pour les statuettes réalisées à la cire perdue. L'acier et la fonte sont des alliages de fer et de carbone.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'acier est un alliage composé principalement :",
+      "o": [
+        "de cuivre et d'étain",
+        "de cuivre et de zinc",
+        "d'aluminium et de magnésium",
+        "de fer et de carbone"
+      ],
+      "r": 3,
+      "x": "L'acier est un alliage de fer contenant moins de 2 % de carbone environ, ce qui le rend à la fois dur et résistant. Au-delà de cette teneur, l'alliage fer-carbone devient de la fonte, plus cassante. L'acier inoxydable contient en plus du chrome et du nickel, qui le protègent de la rouille.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La masse de dioxyde de carbone produite par la combustion complète de 24 g de carbone (C = 12 ; O = 16 g/mol) est :",
+      "o": [
+        "44 g",
+        "88 g",
+        "96 g",
+        "132 g"
+      ],
+      "r": 1,
+      "x": "24 g de carbone représentent 24 / 12 = 2 mol, et l'équation C + O2 → CO2 montre que chaque mole de carbone donne une mole de CO2 : on obtient 2 × 44 = 88 g. La valeur 44 g correspond à la combustion d'une seule mole de carbone. La masse de CO2 dépasse celle du carbone, car elle inclut l'oxygène pris à l'air.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un composé du sodium placé dans une flamme la colore en :",
+      "o": [
+        "vert",
+        "violet",
+        "rouge",
+        "jaune orangé"
+      ],
+      "r": 3,
+      "x": "Les composés du sodium donnent à la flamme une couleur jaune orangé intense, comme lorsqu'un peu de sel tombe sur une flamme de gaz. Le cuivre colore la flamme en vert, le potassium en violet et le lithium en rouge. Ces couleurs caractéristiques sont exploitées dans les feux d'artifice et pour identifier certains éléments.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Un indicateur coloré naturel peut être préparé à partir :",
+      "o": [
+        "du sel de cuisine",
+        "du jus de chou rouge ou de bissap",
+        "de l'huile d'arachide",
+        "de la farine de mil"
+      ],
+      "r": 1,
+      "x": "Les pigments du chou rouge ou des fleurs d'hibiscus utilisées pour le bissap changent de couleur selon le pH : rouges en milieu acide, ils virent vers le vert ou le bleu en milieu basique. Ce sont donc des indicateurs colorés naturels, utiles pour des expériences simples. Le sel, l'huile et la farine ne présentent pas cette propriété.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "En solution aqueuse, les amines présentent un caractère :",
+      "o": [
+        "acide",
+        "neutre",
+        "basique",
+        "oxydant"
+      ],
+      "r": 2,
+      "x": "L'atome d'azote d'une amine possède un doublet libre qui capte un ion H⁺ : les amines sont des bases faibles, comme la méthylamine du couple CH3NH3⁺/CH3NH2, de pKa voisin de 10,7. Leur solution aqueuse a donc un pH supérieur à 7. Les amines de faible masse ont souvent une odeur caractéristique de poisson.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La combustion du magnésium dans l'air produit :",
+      "o": [
+        "de l'oxyde de magnésium et une lumière éblouissante",
+        "du dihydrogène et une épaisse fumée noire",
+        "du dioxyde de carbone et de la vapeur d'eau",
+        "de l'hydroxyde de magnésium et du dioxygène"
+      ],
+      "r": 0,
+      "x": "Le magnésium brûle dans l'air avec une flamme blanche éblouissante en formant une poudre blanche d'oxyde de magnésium, selon 2 Mg + O2 → 2 MgO. Cette lumière intense était utilisée dans les premiers flashs photographiques et l'est encore dans les feux d'artifice. Il faut éviter de regarder directement la flamme, très riche en ultraviolets.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Lorsqu'on dilue une solution, la quantité de soluté :",
+      "o": [
+        "reste la même",
+        "augmente",
+        "diminue de moitié",
+        "devient nulle"
+      ],
+      "r": 0,
+      "x": "Lors d'une dilution, on ajoute seulement du solvant : la quantité de soluté reste inchangée, mais elle se répartit dans un volume plus grand, et la concentration diminue. C'est pourquoi on écrit C1 × V1 = C2 × V2. Pour diluer un acide concentré, on verse toujours l'acide dans l'eau, et jamais l'eau dans l'acide, pour éviter les projections.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La masse molaire de l'hydroxyde de sodium NaOH (Na = 23 ; O = 16 ; H = 1 g/mol) est :",
+      "o": [
+        "24 g/mol",
+        "39 g/mol",
+        "40 g/mol",
+        "56 g/mol"
+      ],
+      "r": 2,
+      "x": "M(NaOH) = 23 + 16 + 1 = 40 g/mol. La valeur 56 g/mol correspond à l'hydroxyde de potassium KOH, autre base forte, et 24 g/mol à l'oubli de l'oxygène. Pour préparer 1 L de soude à 0,1 mol/L, il faut donc dissoudre 0,1 × 40 = 4 g de pastilles d'hydroxyde de sodium.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'action de l'acide chlorhydrique sur le calcaire produit un gaz qui est :",
+      "o": [
+        "du dihydrogène",
+        "du dioxyde de carbone",
+        "du dichlore",
+        "du dioxygène"
+      ],
+      "r": 1,
+      "x": "L'acide chlorhydrique attaque le carbonate de calcium avec effervescence en libérant du dioxyde de carbone, qui trouble l'eau de chaux. Cette réaction permet de reconnaître les roches calcaires sur le terrain, en y déposant une goutte d'acide. Elle explique aussi l'action des détartrants acides sur le tartre des bouilloires.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "L'éthanol brûle selon C2H5OH + 3 O2 → 2 CO2 + 3 H2O. La combustion de 2 mol d'éthanol produit une quantité de CO2 de :",
+      "o": [
+        "1 mol",
+        "2 mol",
+        "3 mol",
+        "4 mol"
+      ],
+      "r": 3,
+      "x": "D'après l'équation, une mole d'éthanol produit deux moles de dioxyde de carbone : 2 mol d'éthanol en produisent donc 2 × 2 = 4 mol. La valeur 2 mol ne tient pas compte du coefficient du CO2 dans l'équation. Cette combustion consomme aussi 6 mol de dioxygène et produit 6 mol d'eau.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "Pour réaliser une estérification rapide et totale, on remplace l'acide carboxylique par :",
+      "o": [
+        "un aldéhyde",
+        "un anhydride d'acide",
+        "une cétone",
+        "un alcane"
+      ],
+      "r": 1,
+      "x": "Avec un anhydride d'acide, ou un chlorure d'acyle, la réaction avec un alcool est rapide et totale, contrairement à l'estérification classique, lente et limitée. L'aspirine est ainsi synthétisée à partir de l'acide salicylique et de l'anhydride éthanoïque. Aldéhydes, cétones et alcanes ne permettent pas de former un ester.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
+    },
+    {
+      "q": "La formule de l'ion ammonium est :",
+      "o": [
+        "NH3",
+        "NO3⁻",
+        "NH2⁻",
+        "NH4⁺"
+      ],
+      "r": 3,
+      "x": "L'ion ammonium a pour formule NH4⁺ ; il se forme lorsque la molécule d'ammoniac NH3 capte un ion H⁺. On le trouve dans plusieurs engrais, comme le nitrate d'ammonium ou le sulfate d'ammonium. NO3⁻ est l'ion nitrate, autre source d'azote pour les plantes, et NH3 la molécule d'ammoniac, qui n'est pas un ion.",
+      "_batchId": "pc_bac/2026-11-24/SERIE2"
     }
   ],
   "psycho": [

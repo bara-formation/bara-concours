@@ -23,9 +23,10 @@ const MATIERES_CATALOG = {
   // V64.20 : « Histoire-Géographie » (histgeo, 10 questions, rattachée à aucun concours) retirée :
   //   remplacée par les matières Histoire et Géographie.
   svt: { nom: 'SVT (générique)', icone: '🌱', couleur: '#16a34a', desc: 'SVT — utilisé en cas de niveau non précisé' },
-  svt_bepc: { nom: 'SVT — Cycle C', icone: '🌱', couleur: '#16a34a', desc: 'Reproduction, alimentation, écosystèmes (niveau BEPC ou Cycle C)' },
-  svt_bac: { nom: 'SVT — Cycle B', icone: '🧬', couleur: '#15803d', desc: 'Génétique, immunologie, géologie (niveau BAC ou Cycle B)' },
-  svt_licence: { nom: 'SVT — Cycle A', icone: '🔬', couleur: '#0e7d3a', desc: 'Biochimie, biologie cellulaire, écologie avancée (niveau Licence ou Cycle A)' },
+  // V64.28 : nomAffiche = nom vu par le candidat (l'admin garde le nom précis)
+  svt_bepc: { nom: 'SVT — Cycle C', nomAffiche: 'SVT', icone: '🌱', couleur: '#16a34a', desc: 'Reproduction, alimentation, écosystèmes (niveau BEPC ou Cycle C)' },
+  svt_bac: { nom: 'SVT — Cycle B', nomAffiche: 'SVT', icone: '🧬', couleur: '#15803d', desc: 'Génétique, immunologie, géologie (niveau BAC ou Cycle B)' },
+  svt_licence: { nom: 'SVT — Cycle A', nomAffiche: 'SVT', icone: '🔬', couleur: '#0e7d3a', desc: 'Biochimie, biologie cellulaire, écologie avancée (niveau Licence ou Cycle A)' },
   pc: { nom: 'Physique-Chimie (générique)', icone: '⚗️', couleur: '#0891b2', desc: 'PC — utilisé en cas de niveau non précisé' },
   pc_bepc: { nom: 'PC — Cycle C', icone: '⚗️', couleur: '#0891b2', desc: 'Mécanique simple, optique, chimie élémentaire (niveau BEPC ou Cycle C)' },
   pc_bac: { nom: 'PC — Cycle B', icone: '🔭', couleur: '#0c7a9e', desc: 'Mécanique, électricité, ondes, chimie organique (niveau BAC ou Cycle B)' },
@@ -158,8 +159,8 @@ const CONCOURS = [
   { id: 'cons_droits_humains', nom: 'Conseiller en Droits Humains', sigle: 'C-DH', categorie: 'administration', niveau: 'LICENCE', postes: 10, ministere: 'Droits Humains', description: 'Promotion et protection des droits humains', matieres: ['francais', 'droitshumains', 'droitconst', 'cg', 'redaction', 'psycho'], session2026: true, jour: 2, numeroConcours: 15 },
 
   // ============== JOUR 3 ==============
-  { id: 'ifpb_cycle_b', nom: 'IFPB CYCLE B (ex ENAREF Cycle B)', sigle: 'IFPB-B', categorie: 'administration', niveau: 'BAC', postes: 198, ministere: 'Économie et Finances', description: 'Contrôleurs des impôts, du trésor, des douanes (cycle B)', matieres: ['francais', 'finpub', 'economie', 'comptabilite', 'maths_bac', 'psycho'], session2026: true, jour: 3, numeroConcours: 16 },
-  { id: 'ifpb_cycle_c', nom: 'IFPB CYCLE C (ex ENAREF Cycle C)', sigle: 'IFPB-C', categorie: 'administration', niveau: 'BEPC', postes: 192, ministere: 'Économie et Finances', description: 'Agents des impôts, du trésor, des douanes (cycle C)', matieres: ['francais', 'maths_bepc', 'cg', 'comptabilite', 'redaction', 'psycho'], session2026: true, jour: 3.5, numeroConcours: 17 },
+  { id: 'ifpb_cycle_b', nom: 'IFPB CYCLE B (ex ENAREF Cycle B)', sigle: 'IFPB-B', categorie: 'administration', niveau: 'BAC', postes: 198, ministere: 'Économie et Finances', description: 'Contrôleurs des impôts, du trésor, des douanes (cycle B)', matieres: ['francais', 'finpub', 'economie', 'maths_bac', 'psycho'], session2026: true, jour: 3, numeroConcours: 16 },
+  { id: 'ifpb_cycle_c', nom: 'IFPB CYCLE C (ex ENAREF Cycle C)', sigle: 'IFPB-C', categorie: 'administration', niveau: 'BEPC', postes: 192, ministere: 'Économie et Finances', description: 'Agents des impôts, du trésor, des douanes (cycle C)', matieres: ['francais', 'maths_bepc', 'cg', 'redaction', 'psycho'], session2026: true, jour: 3.5, numeroConcours: 17 },
 
   // ============== JOUR 4 ==============
   { id: 'ifpb_cycle_a', nom: 'IFPB CYCLE A (ex ENAREF Cycle A)', sigle: 'IFPB-A', categorie: 'administration', niveau: 'LICENCE', postes: 145, ministere: 'Économie et Finances', description: 'Inspecteurs des impôts, du trésor, des douanes (cycle A)', matieres: ['francais', 'finpub', 'economie', 'droitadmin', 'comptabilite', 'psycho'], session2026: true, jour: 4, numeroConcours: 18 },
@@ -173,7 +174,7 @@ const CONCOURS = [
   // ============== JOUR 5 ==============
   { id: 'cons_affaires_eco', nom: 'Conseiller des Affaires Économiques', sigle: 'CAE', categorie: 'administration', niveau: 'LICENCE', postes: 55, ministere: 'Économie', description: 'Politique économique', matieres: ['francais', 'economie', 'statistique', 'cg', 'droitadmin', 'psycho'], session2026: true, jour: 5, numeroConcours: 25 },
   { id: 'assist_affaires_eco', nom: 'Assistant des Affaires Économiques', sigle: 'A-AE', categorie: 'administration', niveau: 'BAC', postes: 36, ministere: 'Économie', description: 'Appui aux affaires économiques', matieres: ['francais', 'economie', 'cg', 'maths_bac', 'redaction', 'psycho'], session2026: true, jour: 5, numeroConcours: 26 },
-  { id: 'adj_affaires_eco', nom: 'Adjoint des Affaires Économiques', sigle: 'AdAE', categorie: 'administration', niveau: 'BEPC', postes: 37, ministere: 'Économie', description: 'Personnel d\'appui aux affaires économiques', matieres: ['francais', 'maths_bepc', 'cg', 'redaction', 'comptabilite', 'psycho'], session2026: true, jour: 5, numeroConcours: 27 },
+  { id: 'adj_affaires_eco', nom: 'Adjoint des Affaires Économiques', sigle: 'AdAE', categorie: 'administration', niveau: 'BEPC', postes: 37, ministere: 'Économie', description: 'Personnel d\'appui aux affaires économiques', matieres: ['francais', 'maths_bepc', 'cg', 'redaction', 'psycho'], session2026: true, jour: 5, numeroConcours: 27 },
   { id: 'cons_affaires_etrangeres', nom: 'Conseiller des Affaires Étrangères', sigle: 'CAE-MAE', categorie: 'administration', niveau: 'LICENCE', postes: 20, ministere: 'Affaires Étrangères', description: 'Diplomatie', matieres: ['francais', 'diplo', 'geopolitique', 'cg', 'droitconst', 'psycho'], session2026: true, jour: 5, numeroConcours: 28 },
   { id: 'secretaire_affaires_etrangeres', nom: 'Secrétaire des Affaires Étrangères', sigle: 'S-AE', categorie: 'administration', niveau: 'BAC', postes: 20, ministere: 'Affaires Étrangères', description: 'Secrétariat de la diplomatie', matieres: ['francais', 'secretariat', 'diplo', 'cg', 'redaction', 'psycho'], session2026: true, jour: 5, numeroConcours: 29 },
   { id: 'adjoint_chancellerie', nom: 'Adjoint de Chancellerie', sigle: 'AdC', categorie: 'administration', niveau: 'BEPC', postes: 30, ministere: 'Affaires Étrangères', description: 'Personnel d\'appui à la chancellerie', matieres: ['francais', 'maths_bepc', 'cg', 'redaction', 'secretariat', 'psycho'], session2026: true, jour: 5, numeroConcours: 30 },
@@ -208,7 +209,7 @@ const CONCOURS = [
   { id: 'tech_assistance_orthophonie', nom: 'Tech. Sup. Assistance Médicale (Orthophonie)', sigle: 'TSTAM-O', categorie: 'sante', niveau: 'BAC', postes: 20, ministere: 'Santé', description: 'Technologie d\'assistance médicale option Orthophonie — BAC C, D', matieres: ['francais', 'anatomie', 'svt_bac', 'santepub', 'psychologie', 'psycho'], session2026: true, jour: 7, numeroConcours: 55 },
   { id: 'tech_assistance_reeducation', nom: 'Tech. Sup. Assistance Médicale (Rééducation)', sigle: 'TSTAM-R', categorie: 'sante', niveau: 'BAC', postes: 30, ministere: 'Santé', description: 'Technologie d\'assistance médicale option Rééducation — BAC C, D', matieres: ['francais', 'anatomie', 'svt_bac', 'santepub', 'eps', 'psycho'], session2026: true, jour: 7, numeroConcours: 56 },
   { id: 'psychotechniciens', nom: 'Psychotechnicien', sigle: 'PSY-T', categorie: 'sante', niveau: 'BAC', postes: 30, ministere: 'Santé', description: 'Tests psychotechniques — BAC A, C ou D', matieres: ['francais', 'psycho', 'psychologie', 'cg', 'maths_bac'], session2026: true, jour: 7, numeroConcours: 57 },
-  { id: 'gestionnaire_sante', nom: 'Gestionnaire des Services de Santé', sigle: 'GSS', categorie: 'sante', niveau: 'BAC', postes: 60, ministere: 'Santé', description: 'Gestion administrative des services de santé', matieres: ['francais', 'santepub', 'comptabilite', 'cg', 'rh', 'psycho'], session2026: true, jour: 7, numeroConcours: 58 },
+  { id: 'gestionnaire_sante', nom: 'Gestionnaire des Services de Santé', sigle: 'GSS', categorie: 'sante', niveau: 'BAC', postes: 60, ministere: 'Santé', description: 'Gestion administrative des services de santé', matieres: ['francais', 'santepub', 'cg', 'rh', 'psycho'], session2026: true, jour: 7, numeroConcours: 58 },
   { id: 'admin_services_sante', nom: 'Administrateur des Services de Santé', sigle: 'ASS', categorie: 'sante', niveau: 'LICENCE', postes: 60, ministere: 'Santé', description: 'Administration des services de santé', matieres: ['francais', 'santepub', 'droitadmin', 'cg', 'rh', 'psycho'], session2026: true, jour: 7, numeroConcours: 59 },
 
   // ============== JOUR 8 ==============
@@ -268,7 +269,7 @@ const CONCOURS = [
   { id: 'cons_admin_scolaire', nom: 'Conseiller d\'Administration Scolaire et Universitaire', sigle: 'CASU', categorie: 'enseignement', niveau: 'LICENCE', postes: 30, ministere: 'Éducation', description: 'Administration des établissements scolaires/universitaires', matieres: ['francais', 'scieduc', 'droitadmin', 'cg', 'rh', 'psycho'], session2026: true, jour: 13, numeroConcours: 103 },
   { id: 'cons_intendance', nom: 'Conseiller d\'Intendance Scolaire et Universitaire', sigle: 'CISU', categorie: 'enseignement', niveau: 'LICENCE', postes: 25, ministere: 'Éducation', description: 'Gestion matérielle et financière des établissements', matieres: ['francais', 'intendance', 'finpub', 'cg', 'comptabilite', 'psycho'], session2026: true, jour: 13, numeroConcours: 104 },
   { id: 'attache_admin_scolaire', nom: 'Attaché d\'Administration Scolaire et Universitaire', sigle: 'AASU', categorie: 'enseignement', niveau: 'BAC', postes: 50, ministere: 'Éducation', description: 'Cadre intermédiaire administration scolaire', matieres: ['francais', 'scieduc', 'droitadmin', 'cg', 'redaction', 'psycho'], session2026: true, jour: 13, numeroConcours: 105 },
-  { id: 'attache_intendance', nom: 'Attaché d\'Intendance Scolaire et Universitaire', sigle: 'AISU', categorie: 'enseignement', niveau: 'BAC', postes: 35, ministere: 'Éducation', description: 'Cadre intendance scolaire', matieres: ['francais', 'intendance', 'comptabilite', 'cg', 'redaction', 'psycho'], session2026: true, jour: 13, numeroConcours: 106 },
+  { id: 'attache_intendance', nom: 'Attaché d\'Intendance Scolaire et Universitaire', sigle: 'AISU', categorie: 'enseignement', niveau: 'BAC', postes: 35, ministere: 'Éducation', description: 'Cadre intendance scolaire', matieres: ['francais', 'intendance', 'cg', 'redaction', 'psycho'], session2026: true, jour: 13, numeroConcours: 106 },
   { id: 'agent_liaison', nom: 'Agent de Liaison', sigle: 'AL', categorie: 'administration', niveau: 'CEPE', postes: 180, ministere: 'Fonction Publique', description: 'Personnel de liaison administratif — CEPE', matieres: ['francais', 'cg', 'redaction', 'maths_bepc', 'secretariat', 'psycho'], session2026: true, jour: 13, numeroConcours: 107 },
   { id: 'chauffeur', nom: 'Chauffeur', sigle: 'CHAUFF', categorie: 'administration', niveau: 'CEPE', postes: 171, ministere: 'Fonction Publique', description: 'Chauffeur de l\'administration — CEPE + permis B, C, D, E', matieres: ['francais', 'code_route', 'transport', 'cg', 'maths_bepc', 'psycho'], session2026: true, jour: 13, numeroConcours: 108 },
 
@@ -420,14 +421,39 @@ window.DEFAULT_CONCOURS_OVERRIDES = DEFAULT_CONCOURS_OVERRIDES;
 // L'ordre du tableau est l'ordre d'affichage, après les matières propres au concours.
 // Dans l'admin, une matière commune peut toujours être masquée ou grisée
 // concours par concours.
-const MATIERES_COMMUNES = ['actualite', 'histoire', 'geographie'];
+// V64.25 : cg et psycho ajoutées — tout concours direct comporte un test
+//   psychotechnique et une épreuve de culture générale.
+// V64.27 : SVT dans tous les concours, au niveau du concours (comme les maths).
+//   Un concours qui a déjà une SVT garde la sienne.
+// V64.28 : les niveaux CEPE, BEPC et CAP reçoivent la SVT Cycle B (niveau jugé
+//   adapté) ; la SVT Cycle C (10 questions) est remplacée par la Cycle B dans
+//   les concours qui l'avaient. Pour revenir à la Cycle C quand elle sera
+//   complétée, remettre 'svt_bepc' ci-dessous et vider SVT_REMPLACEE.
+const SVT_PAR_NIVEAU = { CEPE: 'svt_bac', BEPC: 'svt_bac', CAP: 'svt_bac', BAC: 'svt_bac', LICENCE: 'svt_licence' };
+const SVT_REMPLACEE = { svt_bepc: 'svt_bac' };
+const MATIERES_SVT = ['svt', 'svt_bepc', 'svt_bac', 'svt_licence'];
+const MATIERES_COMMUNES = ['cg', 'psycho', 'actualite', 'histoire', 'geographie'];
 CONCOURS.forEach(c => {
   if (!Array.isArray(c.matieres)) c.matieres = [];
+  c.matieres = c.matieres.map(m => SVT_REMPLACEE[m] || m);
+  const svt = SVT_PAR_NIVEAU[c.niveau];
+  if (svt && !c.matieres.some(m => MATIERES_SVT.includes(m))) c.matieres.push(svt);
   MATIERES_COMMUNES.forEach(m => {
     if (!c.matieres.includes(m)) c.matieres.push(m);
   });
 });
 window.MATIERES_COMMUNES = MATIERES_COMMUNES;
+
+// V64.27 : affichage des matières côté candidat.
+//   Une matière n'apparaît dans un concours que si elle compte au moins `seuil`
+//   questions. Dès qu'elle atteint le seuil, elle réapparaît toute seule.
+//   `toujoursVisibles` : matières affichées même sous le seuil.
+//   Les questions restent dans la base ; seul l'affichage change. L'admin voit tout.
+const AFFICHAGE_MATIERES = {
+  seuil: 200,
+  toujoursVisibles: ['maths_licence']
+};
+window.AFFICHAGE_MATIERES = AFFICHAGE_MATIERES;
 
 window.CONCOURS = CONCOURS;
 window.MATIERES_CATALOG = MATIERES_CATALOG;
