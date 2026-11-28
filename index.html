@@ -160,6 +160,53 @@ img { max-width: 100%; display: block; }
   z-index: 2;
   animation: splashFade 0.8s 0.4s both;
 }
+/* V64.30 : écran de chargement initial (dans #app, avant les scripts) */
+.chargement-roue {
+  width: 34px; height: 34px;
+  border: 3px solid rgba(255,255,255,0.25);
+  border-top-color: var(--gold-bf);
+  border-radius: 50%;
+  animation: chargementTourne 0.9s linear infinite;
+  position: relative; z-index: 2;
+}
+@keyframes chargementTourne { to { transform: rotate(360deg); } }
+.chargement-texte {
+  color: #fff; font-weight: 600; font-size: 0.95rem;
+  margin-top: 1rem; position: relative; z-index: 2;
+}
+.chargement-aide {
+  color: rgba(255,255,255,0.7); font-size: 0.78rem; line-height: 1.5;
+  margin-top: 0.6rem; max-width: 18rem; position: relative; z-index: 2;
+}
+/* V64.30 : promesse et chiffres clés sur l'écran d'ouverture */
+.splash-promesse {
+  color: #fff;
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  text-align: center;
+  max-width: 20rem;
+  margin: -1.6rem 0 1rem;
+  position: relative;
+  z-index: 2;
+  animation: splashFade 0.8s 0.5s both;
+}
+.splash-chiffres {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.8rem;
+  position: relative;
+  z-index: 2;
+  animation: splashFade 0.8s 0.6s both;
+}
+.splash-chiffre {
+  color: rgba(255,255,255,0.92);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-align: center;
+}
+.splash-chiffre strong { color: var(--gold-bf); }
 .splash-cta {
   background: var(--gold-bf);
   color: var(--green-bf-dark);
@@ -3698,7 +3745,19 @@ img { max-width: 100%; display: block; }
 </head>
 <body>
 
-<div id="app"></div>
+<div id="app">
+  <!-- V64.30 : écran de chargement affiché tout de suite, pendant que les
+       questions se téléchargent (avant : écran blanc jusqu'à 37 s en 3G lente).
+       Le premier affichage de l'application le remplace. -->
+  <div class="splash">
+    <img src="icons/icon-192.png" alt="Bara Concours" class="splash-logo">
+    <div class="splash-name">Bara <span>Concours</span></div>
+    <div class="splash-tagline" style="margin-bottom:1.6rem">Préparation aux concours du Burkina Faso</div>
+    <div class="chargement-roue" aria-hidden="true"></div>
+    <div class="chargement-texte">Chargement des questions…</div>
+    <div class="chargement-aide">La première ouverture prend quelques secondes.<br>Les fois suivantes, l'application s'ouvre tout de suite.</div>
+  </div>
+</div>
 
 <!-- V63.72 : barre de retour flottante, visible des que l'en-tete a defile -->
 <div id="sticky-back" role="button" aria-label="Retour">
@@ -4170,7 +4229,7 @@ const App = {
           <div class="bio-prompt-desc">
             Tu as répondu à <strong>${this.FreemiumManager.getActuLimit(this.state.user)} questions d'actualité aujourd'hui</strong>.<br><br>
             Les actualités sont mises à jour à chaque événement majeur — un travail de veille quotidien.<br><br>
-            <strong>Reviens demain</strong> pour ${this.FreemiumManager.getActuLimit(this.state.user)} nouvelles questions OU passe Premium pour un accès illimité.
+            <strong>Reviens demain</strong> pour ${this.FreemiumManager.getActuLimit(this.state.user)} nouvelles questions OU choisis une formule pour en faire davantage.
           </div>
 
           <div class="bio-prompt-benefits">
@@ -4180,9 +4239,6 @@ const App = {
             <div class="bio-prompt-benefit">📚 Annales corrigées</div>
           </div>
 
-          <div style="background:#fef3c7; padding:0.7rem 1rem; border-radius:10px; margin-bottom:1rem; text-align:center; font-size:0.85rem; color:#854d0e">
-            🎯 <strong>Session 2027 + Accompagnement Final : 15 000 FCFA</strong>
-          </div>
 
           <button class="bio-prompt-accept" onclick="App.goToPremiumFromActu()">
             ⭐ Voir les formules
@@ -4231,13 +4287,20 @@ const App = {
         <img src="icons/icon-512.png" alt="Bara Concours" class="splash-logo">
         <div class="splash-name">Bara <span>Concours</span></div>
         <div class="splash-tagline">Préparation aux concours du Burkina Faso</div>
+        <!-- V64.30 : promesse + chiffres clés (le visiteur sait ce qu'il trouvera) -->
+        <div class="splash-promesse">Entraîne-toi sur les vraies questions des concours</div>
+        <div class="splash-chiffres">
+          <div class="splash-chiffre">✅ <strong>Plus de 10 000 QCM</strong> corrigés et expliqués</div>
+          <div class="splash-chiffre">🎯 <strong>Plus de 1 000 questions</strong> réellement tombées aux concours</div>
+          <div class="splash-chiffre">📚 <strong>115 concours</strong> de la fonction publique</div>
+        </div>
         <button class="splash-cta" onclick="App.navigate('${ctaTarget}')">
           📱 Créer un compte / Se connecter
         </button>
         <button onclick="App.continueWithoutAccount()" style="background:transparent; color:rgba(255,255,255,0.85); padding:0.8rem 1.5rem; border-radius:999px; font-weight:600; font-size:0.92rem; margin-top:0.6rem; text-decoration:underline; border:none; cursor:pointer; position:relative; z-index:2; animation:splashFade 0.8s 0.7s both">
           Continuer sans compte →
         </button>
-        <div class="splash-foot">Édité par Bara Formation • Tél : 04 04 34 04</div>
+        <div class="splash-foot">Édité par Bara Formation • Tél : +226 04 04 34 04</div>
       </div>
     `;
   },
@@ -4422,6 +4485,14 @@ const App = {
     let icon = bonus ? '🎁' : '✨';
     let message = `<strong>${remaining}</strong> question${remaining > 1 ? 's' : ''} restante${remaining > 1 ? 's' : ''} aujourd'hui`
       + (bonus ? ' <span style="color:var(--ink-mute)">· bonus de bienvenue</span>' : '');
+    // V64.30 : avant la première question, un message d'accueil plutôt
+    //   qu'une alerte (« ⚠️ Plus que 5 questions » s'affichait d'emblée).
+    if (used === 0) {
+      icon = '🎁';
+      message = niveau === 'visiteur'
+        ? `<strong>${limit} questions offertes</strong> pour découvrir, sans compte`
+        : `<strong>${limit} questions</strong> t'attendent aujourd'hui` + (bonus ? ' <span style="color:var(--ink-mute)">· bonus de bienvenue</span>' : '');
+    }
     let cible = 'premium';
 
     if (remaining === 0) {
@@ -4430,7 +4501,7 @@ const App = {
       message = niveau === 'visiteur'
         ? `Questions d'essai terminées • <strong>Crée ton compte gratuit</strong>`
         : `Limite atteinte • Reviens demain ou découvre les <strong>formules</strong>`;
-    } else if (remaining <= 5) {
+    } else if (used > 0 && remaining <= 3) {
       color = 'var(--gold-bf-dark)';
       icon = '⚠️';
       message = `Plus que <strong>${remaining}</strong> question${remaining > 1 ? 's' : ''} aujourd'hui`;
@@ -5246,7 +5317,7 @@ const App = {
                 Débloquer l'Accompagnement Final →
               </button>
               <div style="margin-top:0.7rem; font-size:0.78rem; opacity:0.85">
-                Inclus dans tous les abonnements Premium
+                Inclus dès la formule Essentiel
               </div>
             </div>
 
@@ -5256,38 +5327,10 @@ const App = {
             </div>
           ` : ''}
 
-          <!-- V63.32 : Placeholder "Accompagnement 2026 — Bientôt" (header section refondu) -->
-          ${(() => {
-            const has2026 = sessions.some(s => (s.date || '').startsWith('2026'));
-            if (has2026) return '';
-            return `
-              <div style="margin-top:0.4rem; margin-bottom:1.5rem">
-                <!-- HEADER DE SECTION (style "rubrique" — pas une carte) -->
-                <div class="year-header year-header-soon">
-                  <div class="year-header-line"></div>
-                  <div class="year-header-content">
-                    <div class="year-header-badge year-header-badge-soon">À VENIR</div>
-                    <div class="year-header-title">Accompagnement Final <span style="color:#9ca3af">2026</span></div>
-                    <div class="year-header-sub">🔒 Bientôt disponible • Sessions Premium en préparation</div>
-                  </div>
-                  <div class="year-header-line"></div>
-                </div>
-                <!-- Cartes grisées factices pour donner envie -->
-                <div style="display:flex; flex-direction:column; gap:0.5rem; margin-top:0.8rem">
-                  ${[1, 2, 3].map(n => `
-                    <div style="background:#fafaf9; border:1.5px dashed #e5e7eb; border-radius:12px; padding:0.7rem 0.9rem; display:flex; gap:0.7rem; align-items:center; opacity:0.65; filter:saturate(0.5); cursor:not-allowed">
-                      <div style="background:#e5e7eb; color:#9ca3af; font-family:'Instrument Serif',serif; font-size:1rem; font-weight:700; width:40px; height:40px; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0">N°${n}</div>
-                      <div style="flex:1; min-width:0">
-                        <div style="font-weight:600; font-size:0.88rem; color:#737373">Session N°${n} de 2026</div>
-                        <div style="font-size:0.74rem; color:#a3a3a3; margin-top:0.1rem">À venir prochainement</div>
-                      </div>
-                      <div style="color:#a3a3a3; font-size:1.2rem">🔒</div>
-                    </div>
-                  `).join('')}
-                </div>
-              </div>
-            `;
-          })()}
+          <!-- V64.30 : le bloc « Accompagnement Final 2026 : Bientôt disponible »
+               est supprimé. Les sessions 2026 sont publiées dans Firestore ;
+               le bloc s'affichait pendant leur chargement (ou si le réseau
+               était mauvais) et faisait croire à une promesse non tenue. -->
 
           <!-- V63.32 : Sessions groupées par année avec HEADERS DE SECTION refondus -->
           ${(() => {
@@ -7508,7 +7551,7 @@ const App = {
                 <div style="background:var(--cream); border:1.5px solid var(--line); padding:0.7rem 0.7rem; border-radius:8px; font-weight:700; font-size:0.9rem; color:var(--ink-soft)">+226</div>
                 <input type="tel" id="signup-phone" placeholder="70 12 34 56" value="${a.signupPhone || ''}" oninput="App.state.auth.signupPhone = this.value" style="flex:1; padding:0.7rem 0.9rem; border:1.5px solid var(--line); border-radius:8px; font-size:0.95rem; box-sizing:border-box">
               </div>
-              <div style="font-size:0.72rem; color:var(--ink-mute); margin-top:0.25rem">Pour t'envoyer les codes Premium par WhatsApp</div>
+              <div style="font-size:0.72rem; color:var(--ink-mute); margin-top:0.25rem">Pour t'envoyer ton code d'activation par WhatsApp</div>
             </div>
 
             <!-- Ville -->
@@ -7982,6 +8025,10 @@ const App = {
     // V64.01 : le candidat créait son compte pour activer un code —
     //   on le ramène à l'écran Premium avec son code déjà saisi.
     if (this.reprendreActivationEnAttente()) return;
+
+    // V64.30 : un visiteur avait choisi une formule avant de créer son compte →
+    //   on le ramène au paiement de cette formule.
+    if (this.reprendreAchatEnAttente()) return;
 
     // Naviguer selon le contexte
     if (isNewUser) {
@@ -9422,7 +9469,7 @@ const App = {
                   <div>📚 Les sujets réellement tombés, corrigés</div>
                 </div>
                 <span style="display:inline-block; background:var(--gold-bf); color:var(--green-bf-dark); padding:0.55rem 1.2rem; border-radius:999px; font-weight:700; font-size:0.85rem">
-                  Découvrir Premium →
+                  Voir les formules →
                 </span>
               </div>
             </div>
@@ -9714,9 +9761,9 @@ const App = {
           ${!u.isPremium ? `
             <div class="premium-banner" onclick="App.navigate('premium')">
               <div class="premium-icon">⭐</div>
-              <div class="premium-title">Passez Premium</div>
-              <div class="premium-desc">Mode examen, QCM avancés, sessions d'accompagnement et plus encore</div>
-              <button class="premium-cta">Découvrir Premium →</button>
+              <div class="premium-title">Choisis ta formule</div>
+              <div class="premium-desc">Mode examen, plus de questions par jour, questions réellement tombées aux concours</div>
+              <button class="premium-cta">Voir les formules →</button>
             </div>
           ` : ''}
 
@@ -9773,11 +9820,11 @@ const App = {
               <div class="menu-text">Contacter via WhatsApp</div>
               <div class="menu-arrow">›</div>
             </a>
-            <div class="menu-item" onclick="App.navigate('forum')">
+            ${this.FORUM_ACTIF ? `<div class="menu-item" onclick="App.navigate('forum')">
               <div class="menu-icon">👥</div>
               <div class="menu-text">Forum des étudiants</div>
               <div class="menu-arrow">›</div>
-            </div>
+            </div>` : ''}
           </div>
         </div>
       </div>
@@ -9991,38 +10038,11 @@ const App = {
 
         <div class="content mt-overlap">
 
-          <!-- V51 : SECTION "J'AI UN CODE D'ACTIVATION" -->
-          <div style="background:linear-gradient(135deg, #fef3c7, #fde68a); border:2px solid #f59e0b; border-radius:var(--radius-lg); padding:1.1rem 1rem; margin-bottom:1.2rem">
-            <div style="display:flex; gap:0.6rem; align-items:center; margin-bottom:0.7rem">
-              <div style="font-size:1.5rem">🎫</div>
-              <div style="flex:1">
-                <div style="font-weight:800; font-size:0.98rem; color:#78350f">J'ai déjà un code d'activation</div>
-                <div style="font-size:0.78rem; color:#92400e">Reçu après ton paiement par WhatsApp</div>
-              </div>
-            </div>
-            ${this.estCompteAnonyme() ? `
-              <!-- V64.01 : prévenir avant le paiement, pas au moment du refus -->
-              <div style="background:white; border:1px solid #f59e0b; border-radius:8px; padding:0.6rem 0.8rem; margin-bottom:0.7rem; font-size:0.8rem; color:#78350f; line-height:1.5">
-                ℹ️ Un compte est nécessaire pour activer un code : c'est lui qui
-                conserve ton abonnement si tu changes de téléphone.
-                <span onclick="App.demanderCompteAvantActivation('')" style="color:var(--green-bf); font-weight:700; text-decoration:underline; cursor:pointer">Créer mon compte</span>
-              </div>
-            ` : ''}
-            <div style="display:flex; gap:0.5rem">
-              <input type="text" id="activation-code-input" placeholder="BARA-COMP-A3F7K9" maxlength="20" style="flex:1; padding:0.7rem 0.9rem; border:1.5px solid #f59e0b; border-radius:8px; font-size:0.95rem; font-weight:700; font-family:monospace; letter-spacing:0.05em; text-transform:uppercase; background:white" oninput="this.value = this.value.toUpperCase()">
-              <button onclick="App.activateWithCode()" style="background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.7rem 1.1rem; border-radius:8px; font-weight:800; font-size:0.88rem; cursor:pointer; white-space:nowrap">Activer</button>
-            </div>
-          </div>
-
-          <div style="text-align:center; margin:1rem 0; font-size:0.82rem; color:var(--ink-mute); position:relative">
-            <span style="background:var(--cream); padding:0 0.7rem; position:relative; z-index:1">OU choisis ta formule ci-dessous</span>
-            <div style="border-top:1px solid var(--line); position:absolute; top:50%; left:0; right:0; z-index:0"></div>
-          </div>
-
-          <div style="font-size:0.8rem; color:var(--ink-soft); text-align:center; margin-bottom:0.9rem">
-            Compte gratuit : ${quotaGratuit} questions par jour et la correction détaillée de chaque question.
-          </div>
-
+          <!-- V64.30 : le bloc « J'ai déjà un code » est descendu en bas de page,
+               replié (il ne concerne pas un nouvel acheteur), et la phrase
+               « Compte gratuit : 10 questions par jour et la correction
+               détaillée… » est retirée : elle rappelait, juste au-dessus des
+               prix, que le gratuit suffit. -->
           <div class="plans-grid" style="display:flex; flex-direction:column; gap:0.9rem">
             ${plans.map(p => {
               const epuise = p.placesLimitees && PS.premiumEpuise();
@@ -10077,7 +10097,7 @@ const App = {
             <div style="display:flex; flex-direction:column; gap:0.7rem; font-size:0.85rem; color:var(--ink-soft); line-height:1.5">
               <div style="display:flex; gap:0.7rem; align-items:flex-start">
                 <span style="font-size:1.1rem; flex-shrink:0">📱</span>
-                <span>Tu paies par <strong>Orange Money</strong> ou <strong>Moov Money</strong>, depuis ton téléphone.</span>
+                <span>Tu paies par <strong>Orange Money</strong>, <strong>Moov Money</strong> ou <strong>Wave</strong>, depuis ton téléphone.</span>
               </div>
               <div style="display:flex; gap:0.7rem; align-items:flex-start">
                 <span style="font-size:1.1rem; flex-shrink:0">🎫</span>
@@ -10093,6 +10113,24 @@ const App = {
               </div>
             </div>
           </div>
+
+          <!-- V51 : SECTION "J'AI UN CODE D'ACTIVATION" (V64.30 : en bas, repliée) -->
+          <details id="bloc-code-activation" ${this.state.codeEnAttente ? 'open' : ''} style="background:linear-gradient(135deg, #fef3c7, #fde68a); border:2px solid #f59e0b; border-radius:var(--radius-lg); padding:0.9rem 1rem; margin-bottom:1.2rem">
+            <summary style="cursor:pointer; font-weight:800; font-size:0.95rem; color:#78350f; list-style-position:inside">🎫 J'ai déjà un code d'activation</summary>
+            <div style="font-size:0.78rem; color:#92400e; margin:0.4rem 0 0.7rem">Reçu après ton paiement par WhatsApp</div>
+            ${this.estCompteAnonyme() ? `
+              <!-- V64.01 : prévenir avant le paiement, pas au moment du refus -->
+              <div style="background:white; border:1px solid #f59e0b; border-radius:8px; padding:0.6rem 0.8rem; margin-bottom:0.7rem; font-size:0.8rem; color:#78350f; line-height:1.5">
+                ℹ️ Un compte est nécessaire pour activer un code : c'est lui qui
+                conserve ton abonnement si tu changes de téléphone.
+                <span onclick="App.demanderCompteAvantActivation('')" style="color:var(--green-bf); font-weight:700; text-decoration:underline; cursor:pointer">Créer mon compte</span>
+              </div>
+            ` : ''}
+            <div style="display:flex; gap:0.5rem">
+              <input type="text" id="activation-code-input" placeholder="BARA-COMP-A3F7K9" maxlength="20" style="flex:1; padding:0.7rem 0.9rem; border:1.5px solid #f59e0b; border-radius:8px; font-size:0.95rem; font-weight:700; font-family:monospace; letter-spacing:0.05em; text-transform:uppercase; background:white" oninput="this.value = this.value.toUpperCase()">
+              <button onclick="App.activateWithCode()" style="background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.7rem 1.1rem; border-radius:8px; font-weight:800; font-size:0.88rem; cursor:pointer; white-space:nowrap">Activer</button>
+            </div>
+          </details>
         </div>
       </div>
     `;
@@ -10105,9 +10143,16 @@ const App = {
   },
 
   proceedToPayment() {
+    // V64.30 : le visiteur sans compte garde sa formule. Elle est mémorisée,
+    //   et il revient directement au paiement une fois son compte créé
+    //   (avant : renvoyé à l'accueil, il devait tout recommencer).
     if (!this.state.user.isLoggedIn) {
-      this.toast('🔒 Crée un compte pour passer Premium');
-      setTimeout(() => this.navigate(window.FirebaseAuth && window.FirebaseAuth.USE_FIREBASE_AUTH ? 'auth-welcome' : 'auth-phone'), 800);
+      const choix = this.state.premiumSelection?.plan;
+      if (choix) {
+        try { localStorage.setItem('bara_formule_en_attente', JSON.stringify({ plan: choix, t: Date.now() })); } catch(e) {}
+      }
+      this.toast('🔒 Crée ton compte : tu reviendras directement au paiement');
+      setTimeout(() => this.navigate(window.FirebaseAuth && window.FirebaseAuth.USE_FIREBASE_AUTH ? 'auth-welcome' : 'auth-phone'), 900);
       return;
     }
     // V64.18 : formule par défaut = Complet (la vedette de la grille 2027).
@@ -10146,7 +10191,7 @@ const App = {
         <header class="header">
           <div class="header-bar">
             <button class="header-back" onclick="App.navigate('premium')">←</button>
-            <div class="header-title-row">Paiement Premium</div>
+            <div class="header-title-row">Paiement</div>
             <div class="header-spacer"></div>
           </div>
         </header>
@@ -10154,7 +10199,7 @@ const App = {
         <div class="content mt-overlap">
           <div style="background:white; border-radius:var(--radius-lg); padding:1.2rem; margin-bottom:1rem; border:1px solid var(--line-soft); display:flex; align-items:center; justify-content:space-between">
             <div>
-              <div style="font-size:0.78rem; color:var(--ink-mute); margin-bottom:0.2rem">Plan choisi</div>
+              <div style="font-size:0.78rem; color:var(--ink-mute); margin-bottom:0.2rem">Formule choisie</div>
               <div style="font-size:1rem; font-weight:700">${plan.icon} ${plan.name}</div>
               <div style="font-size:0.78rem; color:var(--ink-soft); margin-top:0.2rem">${plan.durationLabel}</div>
             </div>
@@ -10259,6 +10304,12 @@ const App = {
     `;
   },
 
+  // V64.30 : paiement en 2 étapes au lieu de 4.
+  //   Avant : 1) code USSD, 2) « envoie X F au numéro » (répétait l'étape 1),
+  //   3) « conserve cette référence » (déjà dans le message WhatsApp),
+  //   4) preuve WhatsApp. Désormais : 1) paie, 2) envoie la preuve.
+  //   Le numéro qui a payé est demandé dans un champ (il sert à retrouver le
+  //   paiement), au lieu d'un « (à renseigner) » à compléter dans WhatsApp.
   renderPaymentInstructions(plan, operatorId) {
     const op = window.PremiumService.OPERATORS[operatorId];
     if (!op) return '';
@@ -10268,125 +10319,89 @@ const App = {
     }
     const ref = this.state.premiumSelection.reference;
     const baraNum = window.PremiumService.BARA_NUMBERS[operatorId] || window.PremiumService.BARA_NUMBERS.orange;
+    const baraNumNoSpaces = baraNum.replace(/\s/g, '');
     const u = this.state.user;
     const userPhone = u.phoneNumber && window.FirebaseAuth?.formatPhone ? window.FirebaseAuth.formatPhone(u.phoneNumber) : (u.phoneNumber || '');
-    const waLink = window.PremiumService.getWhatsAppLink(plan.id, operatorId, userPhone, u.name, ref);
+    const prix = window.PremiumService.formatPrice(plan.price);
 
-    // V51 : Codes USSD pré-remplis (montant + numéro Bara) pour faciliter le paiement
-    const baraNumNoSpaces = (window.PremiumService.BARA_NUMBERS[operatorId] || '').replace(/\s/g, '');
-    const ussdOrange = `*144*10*${baraNumNoSpaces}*${plan.price}#`;
-    // V52 : Format Moov corrigé : *555*2*1*NUMERO*MONTANT#
-    const ussdMoov = `*555*2*1*${baraNumNoSpaces}*${plan.price}#`;
-    // tel: nécessite # encodé en %23
-    const telUssdOrange = `tel:${encodeURIComponent(ussdOrange)}`;
-    const telUssdMoov = `tel:${encodeURIComponent(ussdMoov)}`;
+    // Codes USSD pré-remplis (montant + numéro Bara)
+    const ussd = operatorId === 'orange' ? `*144*10*${baraNumNoSpaces}*${plan.price}#`
+               : operatorId === 'moov'   ? `*555*2*1*${baraNumNoSpaces}*${plan.price}#`
+               : '';
+    const telUssd = ussd ? `tel:${encodeURIComponent(ussd)}` : '';
+    const couleur = operatorId === 'orange' ? { fort: '#FF6600', fonce: '#9a3412', fond: '#fff4e6', texte: '#7c2d12' }
+                  : operatorId === 'moov'   ? { fort: '#0066CC', fonce: '#1e40af', fond: '#dbeafe', texte: '#1e3a8a' }
+                  : { fort: '#1DC9F5', fonce: '#0e7490', fond: '#e0f7fb', texte: '#155e75' };
+    const beneficiaire = operatorId === 'moov' ? 'Issoufou' : 'Issoufou OUEDRAOGO';
 
-    let opSpecific = '';
-    if (operatorId === 'orange') {
-      opSpecific = `<div class="payment-step">
-        <div class="payment-step-num">1</div>
-        <div class="payment-step-body">
-          <strong>Compose ce code USSD Orange Money :</strong>
+    const etape1 = ussd ? `
+          <strong>Paie ${prix} avec ce code ${op.name} :</strong>
           <div style="margin-top:0.5rem; display:flex; gap:0.5rem; align-items:stretch; flex-wrap:wrap">
-            <code style="flex:1; min-width:180px; background:#fff; padding:0.5rem 0.7rem; border-radius:8px; border:1.5px solid #FF6600; display:flex; align-items:center; font-size:1rem; font-weight:700; color:#9a3412; word-break:break-all">${ussdOrange}</code>
-            <button onclick="window.location.href='${telUssdOrange}'" style="background:linear-gradient(135deg, #FF6600, #c2410c); color:white; border:none; padding:0.5rem 0.9rem; border-radius:8px; font-weight:700; font-size:0.82rem; cursor:pointer; white-space:nowrap">📞 Composer</button>
-            <button onclick="App.copyToClipboard('${ussdOrange}', this)" style="background:white; color:#9a3412; border:1.5px solid #FF6600; padding:0.5rem 0.7rem; border-radius:8px; font-weight:700; font-size:0.82rem; cursor:pointer">📋 Copier</button>
+            <code style="flex:1; min-width:180px; background:#fff; padding:0.5rem 0.7rem; border-radius:8px; border:1.5px solid ${couleur.fort}; display:flex; align-items:center; font-size:1rem; font-weight:700; color:${couleur.fonce}; word-break:break-all">${ussd}</code>
+            <button onclick="window.location.href='${telUssd}'" style="background:${couleur.fort}; color:white; border:none; padding:0.5rem 0.9rem; border-radius:8px; font-weight:700; font-size:0.82rem; cursor:pointer; white-space:nowrap">📞 Composer</button>
+            <button onclick="App.copyToClipboard('${ussd}', this)" style="background:white; color:${couleur.fonce}; border:1.5px solid ${couleur.fort}; padding:0.5rem 0.7rem; border-radius:8px; font-weight:700; font-size:0.82rem; cursor:pointer">📋 Copier</button>
           </div>
-
-          <!-- V53 : Notice rassurance "Issoufou OUEDRAOGO" pour les paiements Orange -->
-          <div style="margin-top:0.6rem; padding:0.5rem 0.7rem; background:#fff4e6; border-left:3px solid #FF6600; border-radius:6px; font-size:0.78rem; color:#7c2d12; line-height:1.5">
-            ℹ️ <strong>Au moment du dépôt</strong>, le nom <strong>"Issoufou OUEDRAOGO"</strong> s'affichera comme bénéficiaire. C'est bien le compte Bara Formation, tu peux confirmer en toute confiance.
-          </div>
-
           <div style="font-size:0.75rem; color:var(--ink-mute); margin-top:0.5rem; line-height:1.5">
-            ✅ Le <strong>numéro Bara Orange</strong> (${baraNumNoSpaces}) et le <strong>montant</strong> (${plan.price} F) sont déjà pré-remplis.<br>
-            Ou utilise l'app <strong>Max It</strong> (Play Store) → "Transfert" → "Vers Orange Money".
-          </div>
-        </div>
-      </div>`;
-    } else if (operatorId === 'moov') {
-      opSpecific = `<div class="payment-step">
-        <div class="payment-step-num">1</div>
-        <div class="payment-step-body">
-          <strong>Compose ce code USSD Moov Money :</strong>
-          <div style="margin-top:0.5rem; display:flex; gap:0.5rem; align-items:stretch; flex-wrap:wrap">
-            <code style="flex:1; min-width:180px; background:#fff; padding:0.5rem 0.7rem; border-radius:8px; border:1.5px solid #0066CC; display:flex; align-items:center; font-size:1rem; font-weight:700; color:#1e40af; word-break:break-all">${ussdMoov}</code>
-            <button onclick="window.location.href='${telUssdMoov}'" style="background:linear-gradient(135deg, #0066CC, #1e40af); color:white; border:none; padding:0.5rem 0.9rem; border-radius:8px; font-weight:700; font-size:0.82rem; cursor:pointer; white-space:nowrap">📞 Composer</button>
-            <button onclick="App.copyToClipboard('${ussdMoov}', this)" style="background:white; color:#1e40af; border:1.5px solid #0066CC; padding:0.5rem 0.7rem; border-radius:8px; font-weight:700; font-size:0.82rem; cursor:pointer">📋 Copier</button>
-          </div>
-
-          <!-- V52 : Notice rassurance "Issoufou" pour les paiements Moov -->
-          <div style="margin-top:0.6rem; padding:0.5rem 0.7rem; background:#dbeafe; border-left:3px solid #2563eb; border-radius:6px; font-size:0.78rem; color:#1e3a8a; line-height:1.5">
-            ℹ️ <strong>Au moment du dépôt</strong>, le nom <strong>"Issoufou"</strong> s'affichera comme bénéficiaire. C'est bien le compte Bara Formation, tu peux confirmer en toute confiance.
-          </div>
-
-          <div style="font-size:0.75rem; color:var(--ink-mute); margin-top:0.5rem; line-height:1.5">
-            ✅ Le <strong>numéro Bara Moov</strong> (${baraNumNoSpaces}) et le <strong>montant</strong> (${plan.price} F) sont déjà pré-remplis.<br>
-            Ou utilise l'app <strong>Moov Money</strong> (Play Store).
-          </div>
-        </div>
-      </div>`;
-    } else {
-      opSpecific = `<div class="payment-step">
-        <div class="payment-step-num">1</div>
-        <div class="payment-step-body">
-          <strong>Ouvre l'application <span style="color:#1DC9F5">Wave</span></strong>
-          <div style="font-size:0.78rem; color:var(--ink-mute); margin-top:0.4rem; line-height:1.5">
-            Téléchargeable gratuitement sur Play Store.<br>
-            Clique sur "Envoyer" → "À un numéro de téléphone".
-          </div>
-        </div>
-      </div>`;
-    }
+            Le numéro et le montant sont déjà dans le code. Sinon, envoie ${prix} au
+            <span class="payment-number" onclick="App.copyToClipboard('${baraNumNoSpaces}', this)">${baraNum} 📋</span>
+          </div>` : `
+          <strong>Envoie ${prix} avec l'application Wave</strong> au numéro Bara Formation :
+          <span class="payment-number" onclick="App.copyToClipboard('${baraNumNoSpaces}', this)">${baraNum} 📋</span>
+          <div style="font-size:0.75rem; color:var(--ink-mute); margin-top:0.4rem; line-height:1.5">
+            Dans Wave : « Envoyer » → « À un numéro de téléphone ». Touche le numéro pour le copier.
+          </div>`;
 
     return `
-      <div class="section-title" style="margin-top:1.2rem">2. Effectue le paiement</div>
+      <div class="section-title" style="margin-top:1.2rem">2. Paie et envoie la preuve</div>
 
       <div class="payment-instructions">
-        ${opSpecific}
+        <div class="payment-step">
+          <div class="payment-step-num">1</div>
+          <div class="payment-step-body">
+            ${etape1}
+            <div style="margin-top:0.6rem; padding:0.5rem 0.7rem; background:${couleur.fond}; border-left:3px solid ${couleur.fort}; border-radius:6px; font-size:0.78rem; color:${couleur.texte}; line-height:1.5">
+              ℹ️ Le nom <strong>« ${beneficiaire} »</strong> s'affichera comme bénéficiaire : c'est le fondateur de Bara Formation. Tu peux confirmer.
+            </div>
+          </div>
+        </div>
 
         <div class="payment-step">
           <div class="payment-step-num">2</div>
           <div class="payment-step-body">
-            <strong>Envoie ${window.PremiumService.formatPrice(plan.price)}</strong> au numéro Bara Formation :
-            <span class="payment-number" onclick="App.copyToClipboard('${baraNum.replace(/\s/g,'')}', this)">${baraNum} 📋</span>
-            <span style="font-size:0.72rem; color:var(--ink-mute); display:block; margin-top:0.3rem">Touche pour copier</span>
-          </div>
-        </div>
-
-        <div class="payment-step">
-          <div class="payment-step-num">3</div>
-          <div class="payment-step-body">
-            <strong>Conserve cette référence :</strong>
+            <strong>Envoie la preuve sur WhatsApp</strong><br>
+            <span style="font-size:0.8rem; color:var(--ink-soft); line-height:1.5">Joins la capture du SMS de confirmation. Ton code d'activation te revient sur WhatsApp, en général sous 30 minutes.</span>
+            <label for="numero-payeur" style="display:block; font-size:0.78rem; font-weight:600; color:var(--ink-soft); margin-top:0.7rem">Numéro qui a payé</label>
+            <input id="numero-payeur" type="tel" inputmode="tel" value="${this.escapeHTML(userPhone)}" placeholder="Ex. 70 12 34 56"
+              style="width:100%; margin-top:0.3rem; padding:0.6rem 0.7rem; border:1.5px solid var(--line-soft); border-radius:8px; font-size:0.95rem; box-sizing:border-box">
           </div>
         </div>
       </div>
 
-      <div class="payment-ref-box">
-        <div class="payment-ref-label">Ta référence de paiement</div>
-        <div class="payment-ref-code" onclick="App.copyToClipboard('${ref}', this)">${ref}</div>
-        <div style="font-size:0.7rem; color:rgba(255,255,255,0.6); margin-top:0.3rem">Touche pour copier</div>
-      </div>
+      <button class="whatsapp-cta" style="width:100%; border:none; cursor:pointer; font-family:inherit" onclick="App.envoyerPreuveWhatsApp()">
+        💬 Envoyer la preuve sur WhatsApp
+      </button>
 
-      <div class="payment-instructions" style="margin-top:1rem">
-        <div class="payment-step">
-          <div class="payment-step-num">4</div>
-          <div class="payment-step-body">
-            <strong>Envoie-nous une preuve via WhatsApp</strong><br>
-            Le bouton ci-dessous prépare automatiquement un message avec ta référence. Bara Formation activera ton Premium dans les 30 minutes.
-          </div>
-        </div>
-      </div>
-
-      <a class="whatsapp-cta" href="${waLink}" target="_blank" rel="noopener">
-        💬 Envoyer la preuve via WhatsApp
-      </a>
-
-      <div style="text-align:center; font-size:0.75rem; color:var(--ink-mute); padding:0.5rem 1rem 1rem; line-height:1.5">
-        ⏱ Activation manuelle sous 30 min en moyenne<br>
-        En cas de problème : appel direct au <strong style="color:var(--green-bf)">${window.PremiumService.BARA_NUMBERS.whatsapp.replace('+22','+22 ')}</strong>
+      <div style="text-align:center; font-size:0.75rem; color:var(--ink-mute); padding:0.5rem 1rem 1rem; line-height:1.6">
+        Référence de ton paiement : <strong>${ref}</strong> (déjà dans le message)<br>
+        En cas de problème : appelle le <strong style="color:var(--green-bf)">+226 04 04 34 04</strong>
       </div>
     `;
+  },
+
+  // V64.30 : ouvre WhatsApp avec le message de preuve, numéro du payeur compris
+  envoyerPreuveWhatsApp() {
+    const sel = this.state.premiumSelection || {};
+    const plan = window.PremiumService.PLANS[sel.plan];
+    if (!plan) { this.toast('Choisis d\'abord une formule', 'danger'); return; }
+    const champ = document.getElementById('numero-payeur');
+    const numero = champ ? champ.value.trim() : '';
+    if (!numero) {
+      this.toast('📱 Indique le numéro qui a payé', 'danger');
+      if (champ) champ.focus();
+      return;
+    }
+    const lien = window.PremiumService.getWhatsAppLink(plan.id, sel.operator || 'orange', numero, this.state.user.name, sel.reference);
+    window.open(lien, '_blank', 'noopener');
   },
 
   selectOperator(id) {
@@ -10465,7 +10480,7 @@ const App = {
           </div>
 
           <div class="bio-prompt-benefits">
-            <div class="bio-prompt-benefit">🔄 Ton Premium te suit sur tout appareil</div>
+            <div class="bio-prompt-benefit">🔄 Ta formule te suit sur tout appareil</div>
             <div class="bio-prompt-benefit">💾 Ta progression est sauvegardée</div>
             <div class="bio-prompt-benefit">🆘 Nous pouvons t'aider en cas de souci</div>
           </div>
@@ -10502,6 +10517,20 @@ const App = {
    * Après création du compte, on remet le candidat sur l'écran Premium avec
    * son code déjà saisi. Appelé depuis _handleAuthSuccess.
    */
+  // V64.30 : reprise d'un achat commencé sans compte (valable 24 h)
+  reprendreAchatEnAttente() {
+    let attente = null;
+    try { attente = JSON.parse(localStorage.getItem('bara_formule_en_attente') || 'null'); } catch(e) {}
+    try { localStorage.removeItem('bara_formule_en_attente'); } catch(e) {}
+    if (!attente || !attente.plan || (Date.now() - (attente.t || 0)) > 24 * 3600 * 1000) return false;
+    const PS = window.PremiumService;
+    if (!PS || !PS.PLANS[attente.plan]) return false;
+    this.state.premiumSelection = { plan: attente.plan };
+    this.proceedToPayment();
+    setTimeout(() => this.toast('✅ Compte créé ! Ta formule ' + PS.PLANS[attente.plan].name + ' t\'attend'), 300);
+    return true;
+  },
+
   reprendreActivationEnAttente() {
     let code = null;
     try { code = localStorage.getItem('bara_code_en_attente'); } catch(e) {}
@@ -10510,6 +10539,8 @@ const App = {
     try { localStorage.removeItem('bara_code_en_attente'); } catch(e) {}
     this.navigate('premium');
     setTimeout(() => {
+      const bloc = document.getElementById('bloc-code-activation');
+      if (bloc) bloc.open = true;
       const input = document.getElementById('activation-code-input');
       if (input) {
         input.value = code;
@@ -10606,7 +10637,7 @@ const App = {
         console.warn('[V63.79] Sync premium :', e);
       }
     } else {
-      this.toast('⚠️ Premium activé hors ligne. Connecte-toi à internet pour le sauvegarder.', 'danger');
+      this.toast('⚠️ Formule activée hors ligne. Connecte-toi à internet pour la sauvegarder.', 'danger');
     }
 
     // V64.18 : on nomme la formule obtenue (une montée « Essentiel → Complet »
@@ -11697,10 +11728,10 @@ const App = {
               <div style="font-size:1.8rem">🔒</div>
               <h3 style="font-family:'Instrument Serif',serif; color:#854d0e; margin:0.4rem 0; font-size:1.15rem">Tu vois seulement le Top 10</h3>
               <p style="color:#78350f; margin:0 0 0.9rem; font-size:0.85rem; line-height:1.5">
-                Premium te donne accès au classement complet (${total} participants), ta position exacte, et l'analyse comparative.
+                Dès la formule Essentiel, tu vois le classement complet (${total} participants), ta position exacte et l'analyse comparative.
               </p>
               <button onclick="App.navigate('premium')" style="background:linear-gradient(135deg, #d97706, #b45309); color:white; border:none; padding:0.7rem 1.3rem; border-radius:8px; font-weight:800; cursor:pointer; font-size:0.88rem">
-                ⭐ Devenir Premium
+                ⭐ Voir les formules
               </button>
             </div>
           ` : ''}
@@ -13188,6 +13219,10 @@ const App = {
     this.openTopic(newTopic.id);
   },
 
+  // V64.30 : forum masqué en attendant qu'il ait des participants. Le code
+  //   reste en place : passer à true pour le réafficher (barre du bas + profil).
+  FORUM_ACTIF: false,
+
   // === BOTTOM NAV ===
   renderBottomNav() {
     const cur = this.state.currentScreen;
@@ -13197,15 +13232,15 @@ const App = {
     const isProfile = ['profile', 'edit-profile', 'about', 'premium', 'premium-payment', 'premium-renew'].includes(cur);
 
     return `
-      <nav class="bottom-nav">
+      <nav class="bottom-nav" style="${this.FORUM_ACTIF ? '' : 'grid-template-columns: repeat(3, 1fr)'}">
         <button class="nav-item ${isHome ? 'active' : ''}" onclick="App.navigate('home')">
           <div class="nav-icon">🏠</div>
           <div>Accueil</div>
         </button>
-        <button class="nav-item ${isForum ? 'active' : ''}" onclick="App.navigate('forum')">
+        ${this.FORUM_ACTIF ? `<button class="nav-item ${isForum ? 'active' : ''}" onclick="App.navigate('forum')">
           <div class="nav-icon">💬</div>
           <div>Forum</div>
-        </button>
+        </button>` : ''}
         <button class="nav-item ${isStats ? 'active' : ''}" onclick="App.navigate('stats')">
           <div class="nav-icon">📊</div>
           <div>Stats</div>
