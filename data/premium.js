@@ -390,15 +390,16 @@ const PremiumService = {
   // quota       : QCM par jour (première réponse à une question)
   // quotaBonus  : quota des 24 premières heures après la création du compte
   // quotaAffiche: ce que voit le candidat, quand il diffère du vrai plafond.
-  //   Premium affiche « Illimité » mais garde un plafond technique de 300 :
+  //   Premium affiche « Illimité » mais garde un plafond technique de 600
+  //   (V64.31 : 300 → 600, un abonné honnête l'avait atteint) :
   //   personne ne l'atteint honnêtement, et il protège le quota Firestore
   //   partagé contre un compte prêté à tout un groupe, ou un bug.
   TIERS: {
     visiteur:  { rang: -1, nom: 'Visiteur',  quota: 5 },
     gratuit:   { rang: 0,  nom: 'Gratuit',   quota: 10, quotaBonus: 30 },
-    essentiel: { rang: 1,  nom: 'Essentiel', quota: 30 },
-    complet:   { rang: 2,  nom: 'Complet',   quota: 75 },
-    premium:   { rang: 3,  nom: 'Premium',   quota: 300, quotaAffiche: 'Illimité' }
+    essentiel: { rang: 1,  nom: 'Essentiel', quota: 40 },   // V64.32 : 30 → 40
+    complet:   { rang: 2,  nom: 'Complet',   quota: 150 },  // V64.32 : 75 → 150
+    premium:   { rang: 3,  nom: 'Premium',   quota: 600, quotaAffiche: 'Illimité' }
   },
 
   // Droit → niveau minimum. Une seule table : modifier une ligne ici change
