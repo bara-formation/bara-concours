@@ -160,6 +160,47 @@ img { max-width: 100%; display: block; }
   z-index: 2;
   animation: splashFade 0.8s 0.4s both;
 }
+/* V64.33 : écran d'ouverture défilable (petits téléphones) + témoignages */
+.splash.splash-accueil { overflow-y: auto; justify-content: flex-start; }
+.splash-accueil .splash-foot { position: static; transform: none; margin-top: 1.4rem; padding-bottom: 0.5rem; }
+.splash-contenu {
+  margin: auto 0; width: 100%; max-width: 24rem;
+  display: flex; flex-direction: column; align-items: center;
+  position: relative; z-index: 2;
+}
+@media (max-height: 760px) {
+  .splash-accueil .splash-logo { width: 84px; height: 84px; border-radius: 22px; margin-bottom: 1rem; }
+  .splash-accueil .splash-name { font-size: 2.3rem; }
+  .splash-accueil .splash-promesse { margin-top: -1rem; }
+  .splash-accueil .splash-chiffres { margin-bottom: 1rem; }
+}
+.temoin-splash {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 14px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.3rem;
+  width: 100%;
+  min-height: 6.4rem;
+  box-sizing: border-box;
+  transition: opacity 0.35s;
+  animation: splashFade 0.8s 0.7s both;
+}
+.temoin-splash-texte { color: #fff; font-size: 0.86rem; line-height: 1.45; font-style: italic; }
+.temoin-splash-auteur { color: var(--gold-bf); font-size: 0.78rem; font-weight: 700; margin-top: 0.45rem; }
+.temoin-splash-auteur span { color: rgba(255,255,255,0.75); font-weight: 500; }
+.temoins-titre { font-weight: 800; font-size: 0.95rem; color: var(--ink); margin: 0.2rem 0 0.6rem; }
+.temoins-bande { display: flex; gap: 0.7rem; overflow-x: auto; padding-bottom: 0.4rem; margin-bottom: 1.1rem; scroll-snap-type: x mandatory; }
+.temoin-carte {
+  flex: 0 0 82%; scroll-snap-align: start;
+  background: #fff; border: 1px solid var(--line-soft); border-left: 4px solid var(--gold-bf);
+  border-radius: 12px; padding: 0.8rem 0.9rem; box-sizing: border-box;
+}
+.temoin-carte-texte { font-size: 0.85rem; line-height: 1.5; color: var(--ink); font-style: italic; }
+.temoin-carte-auteur { margin-top: 0.5rem; font-size: 0.78rem; font-weight: 700; color: var(--green-bf); }
+.temoin-carte-detail { font-size: 0.72rem; color: var(--ink-mute); margin-top: 0.15rem; line-height: 1.4; }
+.temoin-appli { display: inline-block; margin-top: 0.35rem; font-size: 0.68rem; font-weight: 700; color: #065f46; background: #d1fae5; border-radius: 999px; padding: 0.1rem 0.5rem; }
+
 /* V64.30 : écran de chargement initial (dans #app, avant les scripts) */
 .chargement-roue {
   width: 34px; height: 34px;
@@ -3756,8 +3797,33 @@ img { max-width: 100%; display: block; }
     <div class="chargement-roue" aria-hidden="true"></div>
     <div class="chargement-texte">Chargement des questions…</div>
     <div class="chargement-aide">La première ouverture prend quelques secondes.<br>Les fois suivantes, l'application s'ouvre tout de suite.</div>
+    <button id="chargement-secours" onclick="baraRechargerPropre()" style="display:none; margin-top:1.2rem; background:var(--gold-bf); color:var(--green-bf-dark); border:none; padding:0.75rem 1.4rem; border-radius:999px; font-weight:800; font-size:0.95rem; cursor:pointer; position:relative; z-index:2">🔄 Recharger</button>
   </div>
 </div>
+<script>
+  // V64.33 : filet de sécurité. Si l'application n'a pas démarré après 20 s
+  //   (mémoire hors ligne coincée pendant une mise à jour), on propose de
+  //   recharger en vidant cette mémoire. Le compte et la progression,
+  //   enregistrés à part, ne sont pas touchés.
+  function baraRechargerPropre() {
+    var fin = function () { location.reload(); };
+    try {
+      var p = [];
+      if ('serviceWorker' in navigator) p.push(navigator.serviceWorker.getRegistrations().then(function (rs) { return Promise.all(rs.map(function (r) { return r.unregister(); })); }));
+      if (window.caches) p.push(caches.keys().then(function (ks) { return Promise.all(ks.map(function (k) { return caches.delete(k); })); }));
+      Promise.all(p).then(fin, fin);
+      setTimeout(fin, 4000);
+    } catch (e) { fin(); }
+  }
+  setTimeout(function () {
+    if (document.querySelector('#app .chargement-roue')) {
+      var b = document.getElementById('chargement-secours');
+      var t = document.querySelector('#app .chargement-texte');
+      if (t) t.textContent = 'Le chargement prend plus de temps que prévu.';
+      if (b) b.style.display = 'inline-block';
+    }
+  }, 20000);
+</script>
 
 <!-- V63.72 : barre de retour flottante, visible des que l'en-tete a defile -->
 <div id="sticky-back" role="button" aria-label="Retour">
@@ -4277,13 +4343,74 @@ const App = {
   },
 
   // === SPLASH ===
+  // V64.33 : témoignages de candidats (accord donné par chacun, novembre 2026).
+  //   Leurs mots, orthographe corrigée seulement. `appli` = a préparé avec
+  //   l'application. Pour en ajouter : une ligne de plus, même forme.
+  TEMOIGNAGES: [
+    { nom: 'Rahimatou B.', resultat: 'Admise à 2 concours', appli: true,
+      detail: "Assistant de jeunesse en emploi et formation professionnelle · Assistant en aménagement du territoire et développement local",
+      texte: "Merci pour tout ce que vous avez fait pour moi pendant ma préparation. Je suis admise à deux concours. On vous doit tout." },
+    { nom: 'Daouda S.', resultat: 'Admis à 3 concours', appli: true,
+      detail: 'Attaché administratif · Technicien supérieur en agriculture · Contrôleur des eaux et forêts',
+      texte: 'Concours validés, par la grâce de Dieu et vos efforts.' },
+    { nom: 'Hamad S.', resultat: 'Admis', appli: true,
+      detail: 'Éducateur de la petite enfance',
+      texte: 'Le concours des Éducateurs de la petite enfance a marché. Vraiment, merci beaucoup.' },
+    { nom: 'Mme Kaboré', resultat: 'Admise', appli: false,
+      detail: 'Professeur des écoles',
+      texte: "Je viens d'être admise au concours des professeurs des écoles." },
+    { nom: 'Hamado S.', resultat: 'Candidat', appli: false, preuve: true,
+      detail: 'Concours des greffiers',
+      texte: 'Ces questions sont tombées au concours des greffiers.' }
+  ],
+
+  // V64.33 : fait défiler un témoignage toutes les 5,5 s sur l'écran d'ouverture
+  demarrerTemoignagesSplash() {
+    if (this._temoinTimer) clearInterval(this._temoinTimer);
+    let i = 0;
+    this._temoinTimer = setInterval(() => {
+      const bloc = document.getElementById('temoin-splash');
+      if (!bloc) { clearInterval(this._temoinTimer); this._temoinTimer = null; return; }
+      i = (i + 1) % this.TEMOIGNAGES.length;
+      bloc.style.opacity = '0';
+      setTimeout(() => {
+        const t = this.TEMOIGNAGES[i];
+        bloc.innerHTML = this.htmlTemoinSplash(t);
+        bloc.style.opacity = '1';
+      }, 350);
+    }, 5500);
+  },
+
+  htmlTemoinSplash(t) {
+    return `<div class="temoin-splash-texte">«&nbsp;${t.texte}&nbsp;»</div>
+      <div class="temoin-splash-auteur">${t.nom} <span>· ${t.resultat}${t.detail && t.detail.indexOf('·') < 0 ? ' · ' + t.detail : ''}</span></div>`;
+  },
+
+  // V64.33 : bande de témoignages (page des formules)
+  htmlBandeTemoignages() {
+    const liste = this.TEMOIGNAGES.filter(t => !t.preuve);
+    return `
+      <div class="temoins-titre">🏆 Ils ont réussi avec Bara</div>
+      <div class="temoins-bande">
+        ${liste.map(t => `
+          <div class="temoin-carte">
+            <div class="temoin-carte-texte">«&nbsp;${t.texte}&nbsp;»</div>
+            <div class="temoin-carte-auteur">${t.nom} · ${t.resultat}</div>
+            <div class="temoin-carte-detail">${t.detail}</div>
+            ${t.appli ? '<span class="temoin-appli">📱 A préparé avec l\'application</span>' : ''}
+          </div>`).join('')}
+      </div>`;
+  },
+
   renderSplash() {
     // V57 : Router vers le bon écran selon le flag Firebase
     const useFirebase = window.FirebaseAuth && window.FirebaseAuth.USE_FIREBASE_AUTH;
     const ctaTarget = useFirebase ? 'auth-welcome' : 'auth-phone';
 
+    setTimeout(() => this.demarrerTemoignagesSplash(), 0);
     return `
-      <div class="splash">
+      <div class="splash splash-accueil">
+       <div class="splash-contenu">
         <img src="icons/icon-512.png" alt="Bara Concours" class="splash-logo">
         <div class="splash-name">Bara <span>Concours</span></div>
         <div class="splash-tagline">Préparation aux concours du Burkina Faso</div>
@@ -4294,13 +4421,16 @@ const App = {
           <div class="splash-chiffre">🎯 <strong>Plus de 1 000 questions</strong> réellement tombées aux concours</div>
           <div class="splash-chiffre">📚 <strong>115 concours</strong> de la fonction publique</div>
         </div>
+        <!-- V64.33 : un témoignage de candidat admis, qui change toutes les 5,5 s -->
+        <div class="temoin-splash" id="temoin-splash">${this.htmlTemoinSplash(this.TEMOIGNAGES[0])}</div>
         <button class="splash-cta" onclick="App.navigate('${ctaTarget}')">
           📱 Créer un compte / Se connecter
         </button>
         <button onclick="App.continueWithoutAccount()" style="background:transparent; color:rgba(255,255,255,0.85); padding:0.8rem 1.5rem; border-radius:999px; font-weight:600; font-size:0.92rem; margin-top:0.6rem; text-decoration:underline; border:none; cursor:pointer; position:relative; z-index:2; animation:splashFade 0.8s 0.7s both">
           Continuer sans compte →
         </button>
-        <div class="splash-foot">Édité par Bara Formation • Tél : +226 04 04 34 04</div>
+        <div class="splash-foot">Édité par Bara Formation • Tél&nbsp;:&nbsp;+226&nbsp;04&nbsp;04&nbsp;34&nbsp;04</div>
+       </div>
       </div>
     `;
   },
@@ -5313,6 +5443,11 @@ const App = {
                 <div class="premium-paywall-benefit">✅ Comprends chaque erreur, pas seulement la bonne réponse</div>
                 <div class="premium-paywall-benefit">✅ Prépare-toi sur ce qui tombe vraiment, pas sur des questions inventées</div>
               </div>
+              <!-- V64.33 : la preuve par un candidat -->
+              ${(() => { const t = this.TEMOIGNAGES.find(x => x.preuve); return t ? `
+              <div style="background:rgba(255,255,255,0.14); border-radius:10px; padding:0.6rem 0.8rem; margin:0.2rem 0 0.9rem; font-size:0.85rem; line-height:1.45">
+                <em>«&nbsp;${t.texte}&nbsp;»</em><br><strong style="font-size:0.78rem">${t.nom}, ${t.detail.toLowerCase()}</strong>
+              </div>` : ''; })()}
               <button class="premium-paywall-cta" onclick="App.navigate('premium')">
                 Débloquer l'Accompagnement Final →
               </button>
@@ -10043,6 +10178,8 @@ const App = {
                « Compte gratuit : 10 questions par jour et la correction
                détaillée… » est retirée : elle rappelait, juste au-dessus des
                prix, que le gratuit suffit. -->
+          <!-- V64.33 : témoignages juste avant les prix -->
+          ${this.htmlBandeTemoignages()}
           <div class="plans-grid" style="display:flex; flex-direction:column; gap:0.9rem">
             ${plans.map(p => {
               const epuise = p.placesLimitees && PS.premiumEpuise();
