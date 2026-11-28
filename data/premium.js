@@ -18,7 +18,7 @@ const PremiumService = {
     essentiel: {
       id: 'essentiel',
       name: 'Essentiel',
-      price: 5000,
+      price: 4900,  // V64.30 : 5000 → 4900
       tier: 'essentiel',
       finSaison: true,
       duration: null,
@@ -33,7 +33,7 @@ const PremiumService = {
     complet: {
       id: 'complet',
       name: 'Complet',
-      price: 10000,
+      price: 9900,  // V64.30 : 10000 → 9900
       tier: 'complet',
       finSaison: true,
       duration: null,
@@ -49,7 +49,7 @@ const PremiumService = {
     premium: {
       id: 'premium',
       name: 'Premium',
-      price: 15000,
+      price: 14900,  // V64.30 : 15000 → 14900
       tier: 'premium',
       finSaison: true,
       duration: null,
@@ -70,7 +70,7 @@ const PremiumService = {
     sprint: {
       id: 'sprint',
       name: 'Sprint',
-      price: 6000,
+      price: 5900,  // V64.30 : 6000 → 5900
       tier: 'complet',
       finSaison: true,
       sprint: true,
@@ -697,9 +697,8 @@ J'ai effectué un paiement :
 📋 Référence : ${reference}
 📦 Formule : ${planObj.name} (${this.formatPrice(planObj.price)})
 💳 Opérateur : ${opObj.name}
-📱 Mon numéro : ${userPhone || '(à renseigner)'}
-👤 Mon nom : ${userName || '(à renseigner)'}
-
+${userPhone ? '📱 Numéro qui a payé : ' + userPhone + '\n' : ''}${userName ? '👤 Mon nom : ' + userName + '\n' : ''}
+Je joins la capture du SMS de confirmation.
 Merci de bien vouloir m'envoyer mon code d'activation. 🙏`;
 
     return encodeURIComponent(text);
