@@ -9465,7 +9465,7 @@ const App = {
                 </div>
                 <div style="display:flex; flex-direction:column; gap:0.35rem; font-size:0.85rem; opacity:0.95; margin-bottom:0.9rem">
                   <div>⏱️ Le mode examen, dans les conditions du concours</div>
-                  <div>⚡ De 30 à 75 questions par jour, sans limite en Premium</div>
+                  <div>⚡ De ${window.PremiumService?.TIERS?.essentiel?.quota || 30} à ${window.PremiumService?.TIERS?.complet?.quota || 75} questions par jour, sans limite en Premium</div>
                   <div>📚 Les sujets réellement tombés, corrigés</div>
                 </div>
                 <span style="display:inline-block; background:var(--gold-bf); color:var(--green-bf-dark); padding:0.55rem 1.2rem; border-radius:999px; font-weight:700; font-size:0.85rem">
