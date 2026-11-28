@@ -468,6 +468,17 @@ img { max-width: 100%; display: block; }
   padding: 0.2rem 0;
 }
 .cat-tabs::-webkit-scrollbar { display: none; }
+.niveau-tabs { flex-wrap: wrap; overflow-x: visible; }
+/* V64.35 : recherche de concours */
+.recherche-concours { position: relative; display: flex; align-items: center; background: #fff; border: 1.5px solid rgba(0,0,0,0.12); border-radius: 14px; padding: 0 0.4rem 0 0.85rem; margin-bottom: 0.4rem; }
+.recherche-concours:focus-within { border-color: var(--green-bf, #0f5132); box-shadow: 0 0 0 3px rgba(15,81,50,0.12); }
+.recherche-concours .recherche-icone { font-size: 1rem; opacity: 0.6; }
+.recherche-concours input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; font: inherit; font-size: 16px; padding: 0.8rem 0.6rem; color: inherit; }
+.recherche-concours input::-webkit-search-cancel-button { display: none; }
+.recherche-effacer { border: 0; background: rgba(0,0,0,0.07); width: 30px; height: 30px; border-radius: 50%; align-items: center; justify-content: center; font-size: 0.8rem; cursor: pointer; color: inherit; }
+.recherche-resultat { font-size: 0.9rem; opacity: 0.75; margin: 0.6rem 0.2rem 0.8rem; }
+.niveau-tabs .cat-tab { padding: 0.4rem 0.85rem; }
+.niveau-tabs .cat-tab.active { background: var(--gold-bf); color: var(--green-bf-dark); border-color: var(--gold-bf); }
 .cat-tab {
   padding: 0.5rem 0.95rem;
   border-radius: 999px;
@@ -3866,6 +3877,8 @@ const App = {
     currentMode: 'train',
     // V63.74 : on repart sur la derniere categorie consultee
     currentTab: (function(){ try { return localStorage.getItem('bara_last_tab') || 'enseignement'; } catch(e) { return 'enseignement'; } })(),
+    // V64.34 : filtre des concours par niveau requis ('' = tous), mémorisé
+    niveauFiltre: (function(){ try { return localStorage.getItem('bara_niveau_filtre') || ''; } catch(e) { return ''; } })(),
     lastConcoursId: (function(){ try { return localStorage.getItem('bara_last_concours') || null; } catch(e) { return null; } })(),
     // V63.75 : meme reperage pour les matieres et les sessions
     lastMatiereId: (function(){ try { return localStorage.getItem('bara_last_matiere') || null; } catch(e) { return null; } })(),
@@ -4613,15 +4626,18 @@ const App = {
 
     let color = 'var(--green-bf)';
     let icon = bonus ? '🎁' : '✨';
-    let message = `<strong>${remaining}</strong> question${remaining > 1 ? 's' : ''} restante${remaining > 1 ? 's' : ''} aujourd'hui`
+    // V64.34 : « gratuite(s) » quand le quota est celui d'un visiteur ou d'un compte gratuit
+    const gratuit = niveau === 'visiteur' || niveau === 'gratuit';
+    const gr = (n) => gratuit ? (n > 1 ? ' gratuites' : ' gratuite') : '';
+    let message = `<strong>${remaining}</strong> question${remaining > 1 ? 's' : ''}${gr(remaining)} restante${remaining > 1 ? 's' : ''} aujourd'hui`
       + (bonus ? ' <span style="color:var(--ink-mute)">· bonus de bienvenue</span>' : '');
     // V64.30 : avant la première question, un message d'accueil plutôt
     //   qu'une alerte (« ⚠️ Plus que 5 questions » s'affichait d'emblée).
     if (used === 0) {
       icon = '🎁';
       message = niveau === 'visiteur'
-        ? `<strong>${limit} questions offertes</strong> pour découvrir, sans compte`
-        : `<strong>${limit} questions</strong> t'attendent aujourd'hui` + (bonus ? ' <span style="color:var(--ink-mute)">· bonus de bienvenue</span>' : '');
+        ? `<strong>${limit} questions gratuites</strong> pour découvrir, sans compte`
+        : `<strong>${limit} questions${gr(limit)}</strong> t'attendent aujourd'hui` + (bonus ? ' <span style="color:var(--ink-mute)">· bonus de bienvenue</span>' : '');
     }
     let cible = 'premium';
 
@@ -4634,7 +4650,7 @@ const App = {
     } else if (used > 0 && remaining <= 3) {
       color = 'var(--gold-bf-dark)';
       icon = '⚠️';
-      message = `Plus que <strong>${remaining}</strong> question${remaining > 1 ? 's' : ''} aujourd'hui`;
+      message = `Plus que <strong>${remaining}</strong> question${remaining > 1 ? 's' : ''}${gr(remaining)} aujourd'hui`;
     }
     if (niveau === 'visiteur') {
       cible = (window.FirebaseAuth && window.FirebaseAuth.USE_FIREBASE_AUTH) ? 'auth-welcome' : 'auth-phone';
@@ -4803,7 +4819,7 @@ const App = {
         <div class="annales-card-content">
           <div class="annales-card-title">Accompagnement <span>Final</span></div>
           <div class="annales-card-desc">
-            Toutes les questions <strong>réellement tombées</strong> aux concours, corrigées et expliquées
+            Uniquement des questions <strong>réellement tombées</strong> aux concours, corrigées et expliquées
           </div>
           <div class="annales-card-stats">
             <span class="annales-stat">${nbSessions} sessions</span>
@@ -4811,7 +4827,7 @@ const App = {
             <span class="annales-stat">📅 2025 et 2026</span>
           </div>
           <div class="annales-card-benefits">
-            <div class="benefit-line">✅ Les vraies épreuves, pas des questions inventées</div>
+            <div class="benefit-line">✅ Les questions déjà tombées aux concours</div>
             <div class="benefit-line">✅ Chaque réponse expliquée en détail</div>
             <div class="benefit-line">✅ Prépare-toi sur ce qui tombe vraiment</div>
           </div>
@@ -5441,7 +5457,7 @@ const App = {
               <div class="premium-paywall-benefits">
                 <div class="premium-paywall-benefit">✅ Vérifie tes réponses avant les résultats officiels</div>
                 <div class="premium-paywall-benefit">✅ Comprends chaque erreur, pas seulement la bonne réponse</div>
-                <div class="premium-paywall-benefit">✅ Prépare-toi sur ce qui tombe vraiment, pas sur des questions inventées</div>
+                <div class="premium-paywall-benefit">✅ Prépare-toi sur ce qui tombe vraiment</div>
               </div>
               <!-- V64.33 : la preuve par un candidat -->
               ${(() => { const t = this.TEMOIGNAGES.find(x => x.preuve); return t ? `
@@ -7120,7 +7136,6 @@ const App = {
       practiceUnit = 'h';
     }
 
-    const concoursForCat = CONCOURS.filter(c => c.categorie === this.state.currentTab);
 
     return `
       <div class="page">
@@ -7172,11 +7187,68 @@ const App = {
             </div>
           ` : ''}
 
+          <!-- V64.35 : recherche d'un concours par mot-clé -->
+          <div class="section-title">Trouve ton concours</div>
+          <div class="recherche-concours">
+            <span class="recherche-icone">🔍</span>
+            <input id="recherche-concours" type="search" enterkeyhint="search" autocomplete="off"
+              placeholder="Ex. : infirmier, douane, professeur…"
+              value="${this.escapeHTML(this.state.rechercheConcours || '')}"
+              oninput="App.rechercherConcours(this.value)"
+              onkeydown="if(event.key==='Enter'){this.blur();}">
+            <button type="button" class="recherche-effacer" id="recherche-effacer" aria-label="Effacer"
+              style="display:${this.state.rechercheConcours ? 'flex' : 'none'}"
+              onclick="App.rechercherConcours(''); const i=document.getElementById('recherche-concours'); if(i){i.value='';i.focus();}">✕</button>
+          </div>
+
+          <div id="zone-concours">${this.htmlZoneConcours()}</div>
+        </div>
+      </div>
+    `;
+  },
+
+  // V64.35 : zone sous la barre de recherche. Sans recherche : filtres niveau +
+  //   catégories + liste. Avec recherche : résultats sur TOUS les concours.
+  //   Mise à jour sans re-render complet, pour que le clavier reste ouvert.
+  htmlZoneConcours() {
+    const q = (this.state.rechercheConcours || '').trim();
+    if (q) {
+      const res = this.chercherConcours(q);
+      return `
+        <div class="recherche-resultat">${res.length
+          ? `${res.length} concours trouvé${res.length > 1 ? 's' : ''}`
+          : `Aucun concours ne correspond à « ${this.escapeHTML(q)} ». Vérifie l'orthographe ou essaie un autre mot (santé, professeur, douane…). Ce concours n'est peut-être pas encore dans l'application.`}</div>
+        <div class="concours-list">${res.map(c => this.renderConcoursCard(c)).join('')}</div>`;
+    }
+
+    // V64.34 : filtre par niveau. Si la catégorie ouverte n'a aucun concours
+    //   à ce niveau, on bascule sur la première catégorie qui en a.
+    const NIVEAUX_FILTRE = [['CEPE', 'CEP'], ['BEPC', 'BEPC'], ['CAP', 'CAP'], ['BAC', 'BAC'], ['LICENCE', 'Licence']]
+      .filter(([n]) => CONCOURS.some(c => c.niveau === n));
+    const nivF = this.state.niveauFiltre || '';
+    const auNiveau = c => !nivF || c.niveau === nivF;
+    const nbParCat = {};
+    CONCOURS.forEach(c => { if (auNiveau(c)) nbParCat[c.categorie] = (nbParCat[c.categorie] || 0) + 1; });
+    if (nivF && !nbParCat[this.state.currentTab]) {
+      const premiere = Object.keys(CATEGORIES_CONCOURS).find(id => nbParCat[id]);
+      if (premiere) this.state.currentTab = premiere;
+    }
+    const concoursForCat = CONCOURS.filter(c => c.categorie === this.state.currentTab && auNiveau(c));
+
+    return `
+          <div class="section-title">Ton niveau</div>
+          <div class="cat-tabs niveau-tabs">
+            <button class="cat-tab ${!nivF ? 'active' : ''}" onclick="App.setNiveauFiltre('')">Tous</button>
+            ${NIVEAUX_FILTRE.map(([n, libelle]) => `
+              <button class="cat-tab ${nivF === n ? 'active' : ''}" onclick="App.setNiveauFiltre('${n}')">${libelle}</button>
+            `).join('')}
+          </div>
+
           <div class="section-title">Catégories de concours</div>
           <div class="cat-tabs">
-            ${Object.entries(CATEGORIES_CONCOURS).map(([id, cat]) => `
+            ${Object.entries(CATEGORIES_CONCOURS).filter(([id]) => !nivF || nbParCat[id]).map(([id, cat]) => `
               <button class="cat-tab ${this.state.currentTab === id ? 'active' : ''}" onclick="App.setTab('${id}')">
-                ${cat.icone} ${cat.nom}
+                ${cat.icone} ${cat.nom}${nivF ? ` <span style="opacity:0.7">(${nbParCat[id]})</span>` : ''}
               </button>
             `).join('')}
           </div>
@@ -7184,9 +7256,53 @@ const App = {
           <div class="concours-list">
             ${concoursForCat.map(c => this.renderConcoursCard(c)).join('')}
           </div>
-        </div>
-      </div>
     `;
+  },
+
+  // V64.35 : recherche tolérante (sans accents, majuscules, pluriels, petits mots)
+  _normRecherche(t) {
+    return String(t || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  },
+
+  chercherConcours(q) {
+    const VIDES = ['de','du','des','la','le','les','l','d','et','en','a','au','aux','un','une','concours','pour'];
+    const mots = this._normRecherche(q).split(' ').filter(m => m && !VIDES.includes(m));
+    if (!mots.length) return [];
+    // Mots courants qui ne figurent pas tels quels dans les noms des concours
+    const SYNONYMES = { enseignant: 'enseign', enseignants: 'enseign', enseignante: 'enseign', enseignantes: 'enseign',
+      instituteur: 'ecoles', institutrice: 'ecoles', maitre: 'ecoles', maitresse: 'ecoles', militaire: 'forces', paramilitaire: 'forces' };
+    const variantes = m => {
+      const v = [m];
+      if (SYNONYMES[m]) v.push(SYNONYMES[m]);
+      let r = m;
+      if (r.length > 3 && /[sx]$/.test(r)) { r = r.slice(0, -1); v.push(r); }   // pluriel
+      if (r.length > 4 && /e$/.test(r)) v.push(r.slice(0, -1));               // féminin : infirmière → infirmier
+      return v;
+    };
+    // Un mot cherché doit être le début d'un mot du concours ; les mots de
+    //   1-2 lettres (sigles comme « PE ») doivent correspondre exactement.
+    const trouve = (m, liste) => variantes(m).some(v => liste.some(w => m.length <= 2 ? w === v : w.startsWith(v)));
+    const res = [];
+    CONCOURS.forEach((c, i) => {
+      const cat = CATEGORIES_CONCOURS[c.categorie] || {};
+      const titre = this._normRecherche(c.nom + ' ' + (c.sigle || '')).split(' ');
+      const tout = this._normRecherche([c.nom, c.sigle, c.ministere, c.description, c.niveau, cat.nom].join(' ')).split(' ');
+      if (!mots.every(m => trouve(m, tout))) return;
+      const score = mots.filter(m => trouve(m, titre)).length;
+      res.push({ c, score, i });
+    });
+    res.sort((a, b) => b.score - a.score || a.i - b.i);
+    return res.map(r => r.c);
+  },
+
+  rechercherConcours(q) {
+    this.state.rechercheConcours = q || '';
+    const zone = document.getElementById('zone-concours');
+    const eff = document.getElementById('recherche-effacer');
+    if (eff) eff.style.display = this.state.rechercheConcours ? 'flex' : 'none';
+    if (zone) zone.innerHTML = this.htmlZoneConcours();
+    else this.render();
   },
 
   renderConcoursCard(c) {
@@ -7204,13 +7320,20 @@ const App = {
           <div class="concours-meta">
             <span>📚 ${this.getEffectiveMatieres(c).length} matières</span>
             <span>🎓 ${c.niveau}</span>
-            ${c.postes ? `<span>👥 ${c.postes} postes</span>` : ''}
+            ${c.postes ? `<span>👥 ${c.postes} postes en 2026</span>` : ''}
             ${c.epreuvesPhysiques ? '<span>🏃 Tests physiques</span>' : ''}
           </div>
         </div>
         <div class="concours-arrow">›</div>
       </div>
     `;
+  },
+
+  // V64.34 : filtre des concours par niveau
+  setNiveauFiltre(n) {
+    this.state.niveauFiltre = n || '';
+    try { localStorage.setItem('bara_niveau_filtre', this.state.niveauFiltre); } catch(e) {}
+    this.render();
   },
 
   setTab(t) {
@@ -8689,7 +8812,7 @@ const App = {
             <div class="concours-hero-tags">
               <span class="tag green">🏛️ ${c.ministere}</span>
               <span class="tag gold">🎓 Niveau ${c.niveau}</span>
-              ${c.postes ? `<span class="tag blue">👥 ${c.postes} postes</span>` : ''}
+              ${c.postes ? `<span class="tag blue">👥 ${c.postes} postes en 2026</span>` : ''}
               ${c.epreuvesPhysiques ? '<span class="tag red">🏃 Tests physiques</span>' : ''}
             </div>
           </div>
